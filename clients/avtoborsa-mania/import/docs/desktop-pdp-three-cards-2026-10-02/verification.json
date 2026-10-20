@@ -1,0 +1,151 @@
+{
+	"desktop": [
+		{
+			"cardCount": 3,
+			"cards": [
+				{
+					"height": 294,
+					"overflow": false,
+					"title": "Основни данни",
+					"width": 349
+				},
+				{
+					"height": 234,
+					"overflow": false,
+					"title": "Детайли",
+					"width": 349
+				},
+				{
+					"height": 362,
+					"overflow": false,
+					"title": "Оборудване",
+					"width": 349
+				}
+			],
+			"equipmentColumns": "299px",
+			"factColumns": "349px",
+			"factCount": 9,
+			"overflow": false,
+			"scrollY": 852,
+			"visibleEquipment": 6,
+			"width": 768
+		},
+		{
+			"cardCount": 3,
+			"cards": [
+				{
+					"height": 270,
+					"overflow": false,
+					"title": "Основни данни",
+					"width": 543
+				},
+				{
+					"height": 234,
+					"overflow": false,
+					"title": "Детайли",
+					"width": 543
+				},
+				{
+					"height": 362,
+					"overflow": false,
+					"title": "Оборудване",
+					"width": 543
+				}
+			],
+			"equipmentColumns": "493px",
+			"factColumns": "543px",
+			"factCount": 9,
+			"overflow": false,
+			"scrollY": 843,
+			"visibleEquipment": 6,
+			"width": 1024
+		},
+		{
+			"cardCount": 3,
+			"cards": [
+				{
+					"height": 270,
+					"overflow": false,
+					"title": "Основни данни",
+					"width": 447
+				},
+				{
+					"height": 270,
+					"overflow": false,
+					"title": "Детайли",
+					"width": 447
+				},
+				{
+					"height": 254,
+					"overflow": false,
+					"title": "Оборудване",
+					"width": 918
+				}
+			],
+			"equipmentColumns": "422px 422px",
+			"factColumns": "447px 447px",
+			"factCount": 9,
+			"overflow": false,
+			"scrollY": 815,
+			"visibleEquipment": 6,
+			"width": 1920
+		}
+	],
+	"desktop1440": {
+		"width": 1440,
+		"height": 1000,
+		"scrollY": 808,
+		"cardCount": 3,
+		"factCount": 9,
+		"previewCount": 6,
+		"expandedCount": 18,
+		"equalFactsCardHeight": 270,
+		"disclosureControlsMatches": true
+	},
+	"mobile": [
+		{
+			"desktopInformationCards": 0,
+			"mobilePdp": 1,
+			"overflow": false,
+			"scrollY": 0,
+			"width": 320
+		},
+		{
+			"desktopInformationCards": 0,
+			"mobilePdp": 1,
+			"overflow": false,
+			"scrollY": 0,
+			"width": 390
+		}
+	],
+	"navigation": {
+		"cards": 3,
+		"equipmentPreview": 6,
+		"expanded": "false",
+		"facts": [
+			"123 000 км",
+			"2020",
+			"Бензин",
+			"3000 куб.см / 510 к.с.",
+			"Автомат",
+			"Зелен",
+			"Пловдив, гр. Пловдив",
+			"По запитване",
+			"21778068579001193"
+		],
+		"financePrice": "43500",
+		"headingCount": 1,
+		"title": "BMW X4 M Competition",
+		"url": "/bg/inventory/21778068579001193"
+	},
+	"english": {
+		"headings": ["Vehicle details", "Details", "Equipment"],
+		"previewCount": 6,
+		"expandedCount": 18,
+		"spaceKey": true
+	},
+	"console": {
+		"errors": 0,
+		"warnings": 0
+	}
+}

@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-reviewed-modern-bilingual-copy-input",
+  "dealer": "richicar-varna",
+  "sourceCommit": "d9594c2979f668831b78609e4e990640259aee81",
+  "baselineTree": "f13cb2f40440baf0a0a40b86792ec84e1c6713c5",
+  "inputSha256": "048c1e1168869de8b11a6798f2e34d9c71cb00b47181200ca9b9f0d792f888fd",
+  "modernInputRowsSha256": "67157651b00820ef9a678f6f38988d90501b8a8a401e691c5159f0d8a73f6687",
+  "listingCount": 1,
+  "profileInputs": [
+    {
+      "path": "dealer.json",
+      "gitBlob": "64f725d78eadd2c84c82771b9f96a30398a1f9e0",
+      "sha256": "f13092cbdcd4db68d7604d104f7e6b056f7ef8a62d8b2e361333a1a962af863b",
+      "bytes": 4374
+    },
+    {
+      "path": "business-facts.json",
+      "gitBlob": "4355b7b2fd688d959b27e6ca9a606fa8e2d960f8",
+      "sha256": "18e0e53245f97b5db36918dd1b55ae0949341ff0c609b6721360cd63a469ddaa",
+      "bytes": 1783
+    },
+    {
+      "path": "stock.json",
+      "gitBlob": "9a99472e698b691d6cab0b229e662f52e4f27c40",
+      "sha256": "2ccc52cb1243f49b4611387ed63f589bb5f39983bc7e703f11b19d5b6ba0f064",
+      "bytes": 10244
+    }
+  ],
+  "reviewedGeneratorHelper": {
+    "path": "scripts/lib/modern-dealer-inventory-copy.mjs",
+    "sha256": "cbdbaa28dc07911cfe913b4e627671b6556fc25d3bfe59364e29c5ca5a29072b",
+    "sourceCommit": "14d86f67c160699c18a6ec5658197cc4d9011e0b"
+  },
+  "review": {
+    "displayCopyOnly": true,
+    "exactSourceDescriptionKeys": true,
+    "listingFactsUnchanged": true,
+    "imageUrlsUnchanged": true,
+    "imageAltsPreserved": true,
+    "interpolationTokensUnchanged": true,
+    "reviewedBy": "Codex, authorized final-template rollout",
+    "reviewedAt": "2026-10-14T20:04:09.134Z",
+    "notes": "Reuse exact existing native or reviewed registered companions for every actual current row; no new translation/factual source edits."
+  },
+  "reviewedCopy": {
+    "seat-leon-2014-11738763051346766": {
+      "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "en": {
+        "description": "Dated sample from a published listing. Confirm the condition, price and availability directly with the dealership.",
+        "imageAlts": [
+          "Seat Leon",
+          "Seat Leon"
+        ]
+      },
+      "bg": {
+        "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+        "imageAlts": [
+          "Seat Leon",
+          "Seat Leon"
+        ]
+      }
+    }
+  }
+}

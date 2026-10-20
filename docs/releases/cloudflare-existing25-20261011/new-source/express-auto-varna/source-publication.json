@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-source-publication",
+  "reviewed": true,
+  "reviewedAt": "2026-10-13T14:42:48.703Z",
+  "dealer": "express-auto-varna",
+  "dealerId": "express-auto-varna",
+  "repository": "darkapoparka/cars-express-auto-varna",
+  "sourceOwnership": "cars-canonical",
+  "request": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/batch-4-qualified23-request.json",
+    "sha256": "dcdd093f40a04d9187d5ddaa8cbdbb0006b0fed9ff01722a2d9179278d548f29"
+  },
+  "proposal": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/express-auto-varna/source-proposal.json",
+    "sha256": "1b4a8645cab98bf2836d45824d90e25b329100189d853a81f1d41191646f5e0f"
+  },
+  "preparation": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/express-auto-varna/source-preparation.json",
+    "sha256": "51e9352603f3987cbbfce6655b416a3a5006d46ee78c4e4f060942477aa7ad5c"
+  },
+  "inputMapping": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/express-auto-varna/input-mapping.json",
+    "sha256": "59ef7ab03927aee2bcd1238b5c0f7b0082f58e9b998e3150393917a1efa4f835"
+  },
+  "sourcePublication": {
+    "repository": "darkapoparka/cars",
+    "commit": "328c0102d7ed151781c4358033eae12102697bd4",
+    "sourceTree": "25a8e5e1d20d0076d0db7d42af294af781974738",
+    "ref": "refs/heads/main",
+    "publishedAt": "2026-10-13T14:41:00.838Z",
+    "evidence": "https://github.com/darkapoparka/cars/commit/328c0102d7ed151781c4358033eae12102697bd4"
+  }
+}

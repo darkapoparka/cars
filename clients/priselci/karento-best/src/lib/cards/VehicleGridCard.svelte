@@ -86,7 +86,7 @@
           ]}
           href={locale.href(destination)}
           aria-label={locale.t("action.viewVehicle", { vehicle: card.title })}
-          >{card.title}</a
+          title={card.title}>{card.title}</a
         ></div
       >
       <div class="card-program">
@@ -183,12 +183,11 @@
     }
 
     .card-title a {
-      display: -webkit-box;
-      -webkit-box-orient: vertical;
-      -webkit-line-clamp: 2;
-      line-clamp: 2;
+      display: block;
+      max-width: 100%;
       overflow: hidden;
-      white-space: normal !important;
+      text-overflow: ellipsis;
+      white-space: nowrap !important;
     }
 
     .card-journey-small

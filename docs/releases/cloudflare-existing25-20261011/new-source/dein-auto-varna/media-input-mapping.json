@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "dealer": "dein-auto-varna",
+  "media": [
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/dein-auto-varna/media/11786124378124232-1.webp",
+      "sha256": "8fd9be0d0630884ab7de0f09a0777faec82875fac7559110d94ec5b2d4ef7c16",
+      "bytes": 233372,
+      "destination": "dealer-stock/11786124378124232-1.webp"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/dein-auto-varna/media/11786124378124232-2.webp",
+      "sha256": "09e4a651cf7b7c52029f711c994eab0823af452b97df8a14448f71e4f488ebbf",
+      "bytes": 153046,
+      "destination": "dealer-stock/11786124378124232-2.webp"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/dein-auto-varna/media/11790325495830727-1.webp",
+      "sha256": "cada6a92aa81825fa544f80a18e0f98cd0b46ca5ec6ad4604eeb0fd3944ea7b4",
+      "bytes": 776982,
+      "destination": "dealer-stock/11790325495830727-1.webp"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/dein-auto-varna/media/11790325495830727-2.webp",
+      "sha256": "6880a0c720a35e1bece8a67d43f2b73d927ed990cf7b28b1755ba5a3d50613fc",
+      "bytes": 635560,
+      "destination": "dealer-stock/11790325495830727-2.webp"
+    }
+  ]
+}

@@ -1,0 +1,229 @@
+{
+  "strategy": "USE GENERATED CANDIDATE",
+  "identityStatus": "Improved demo/proposal identity based on qualified primary name and preserved source evidence; material redesign, not official or owner-approved.",
+  "publishedBranding": "Current primary and About headings СТЕФАН КАР; old cover-photo БАЛКАН КАР2 signage linkage unconfirmed, not borrowed",
+  "sourceUrls": [
+    "https://stefancar.mobile.bg/",
+    "https://stefancar.mobile.bg/about"
+  ],
+  "sourceLimitations": "generated improved demo/proposal identity; not official or approved",
+  "originalReceiptPath": "L:/CODEX/cars/leads/branding/fleet-20261011/stefancar-varna/receipt.json",
+  "generatedPath": "C:/Users/radev/.codex/generated_images/01a12a34-d2d7-7571-930a-1ed37e54ff8e/exec-4e643c62-6937-4f5e-9b8e-4534af96a272.png",
+  "imageGeneration": {
+    "tool": "image_gen.imagegen",
+    "reference": "exec-4e643c62-6937-4f5e-9b8e-4534af96a272",
+    "transparent_background": true,
+    "prompt": "Improve reference1 into a clearly disclosed dealer demo proposal, reference2 is customized automotive lettering direction only, never copy its name/emblem. Exact ONLY name \"СТЕФАН КАР\". Create an individual linked Cyrillic СК racing emblem left with a curved С and two red angular K strokes. Custom forward-slant strong automotive Cyrillic lettering, СТЕФАН charcoal and КАР red. Palette charcoal and red. Strict one horizontal row: compact individual emblem LEFT beside prominent full name on one baseline. Strong expressive automotive lettering with restrained forward slant, purposeful end cuts, distinct letter forms, broad clean strokes and open counters. No generic stock sans or thin serifs, caption, subtitle, slogan, text above/below, roof above, underline, badge, plate, shadow, gradient, white fill, texture, noisy edges, residue or stray pixels. Flat solid clean inks and genuine RGBA transparent background/gaps/counters with safe padding. Exact spelling/script/case/spaces/punctuation, readable at 120px total width.",
+    "referenced_image_paths": [
+      "L:/CODEX/cars/leads/branding/fleet-20261011/stefancar-varna/branding/logo-master.png",
+      "L:/CODEX/cars/leads/branding/fleet-20261011/style-revision/single-row/biemaauto-varna/branding/logo-master.png"
+    ],
+    "outputPath": "C:/Users/radev/.codex/generated_images/01a12a34-d2d7-7571-930a-1ed37e54ff8e/exec-4e643c62-6937-4f5e-9b8e-4534af96a272.png",
+    "modelVersion": "not exposed by tool",
+    "referenceMetadata": [
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/stefancar-varna/branding/logo-master.png",
+        "sha256": "ce690a71736c5d8b240e4c658aaf1230155e4ba42e470ac2f7e18491bc4207b3",
+        "bytes": 156006,
+        "width": 1496,
+        "height": 308,
+        "format": "png",
+        "hasAlpha": true,
+        "role": "Prior dealer treatment or preceding candidate; identity/source history preserved separately."
+      },
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/style-revision/single-row/biemaauto-varna/branding/logo-master.png",
+        "sha256": "dc84d9283929362bd17d0b765c1ab219eb3c093ccb52e4d3c05ada2ddfcb37ce",
+        "bytes": 142920,
+        "width": 1496,
+        "height": 240,
+        "format": "png",
+        "hasAlpha": true,
+        "role": "Style direction only; no name or emblem borrowed."
+      }
+    ]
+  },
+  "variantDerivation": {
+    "onLight": "Existing raster exporter crops/scales the real ImageGen master preserving colored ink and alpha.",
+    "onDark": "Existing raster exporter derives white ink from same master alpha; not independently generated.",
+    "onAccent": "Existing raster exporter derives white ink from same master alpha; not independently generated."
+  },
+  "selectionStatus": "Preferred technically selected single-row candidate; owner style acceptance pending",
+  "ownerApproved": false,
+  "visualAccepted": true,
+  "surfaceReviewPath": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/stefancar-varna/surface-review.png",
+  "visualChecks": {
+    "spelling": "Exact qualified main name; no captions",
+    "surfaces": [
+      "#ffffff",
+      "#30343b",
+      "#17191c",
+      "#202023",
+      "#19171d",
+      "#171717",
+      "#b00020",
+      "#405ff2"
+    ],
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "result": "Compact one-row individualized mark beside expressive name; clear counters, no clipping, opaque background or residue observed. Owner style acceptance pending."
+  },
+  "schemaVersion": 1,
+  "dealer": "stefancar-varna",
+  "state": "asset-verified",
+  "generated": {
+    "path": "C:/Users/radev/.codex/generated_images/01a12a34-d2d7-7571-930a-1ed37e54ff8e/exec-4e643c62-6937-4f5e-9b8e-4534af96a272.png",
+    "sha256": "33610a44a7a6637e45f830877ca164653766b8824907ca510ff79c297afec63a",
+    "bytes": 387436,
+    "format": "png",
+    "width": 2171,
+    "height": 724,
+    "hasAlpha": true,
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparentRatio": 0.8180784627090909,
+      "opaqueRatio": 0.1602139961471023
+    },
+    "visibleBounds": {
+      "x": 62,
+      "y": 195,
+      "width": 2052,
+      "height": 297
+    }
+  },
+  "assets": {
+    "onLight": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/stefancar-varna/dealer-brand/logo-on-light.webp",
+      "sha256": "d62da7c9840b81d27030fd3e8b9e5adc25cbe36ef281a400115e9ae5ffc5c611",
+      "bytes": 55246,
+      "format": "webp",
+      "width": 1496,
+      "height": 276,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.6749496241184221,
+        "opaqueRatio": 0.2814776602340541
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 36,
+        "width": 1400,
+        "height": 203
+      },
+      "publicPath": "/dealer-brand/logo-on-light.webp"
+    },
+    "onDark": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/stefancar-varna/dealer-brand/logo-on-dark.webp",
+      "sha256": "9f9eca281fe271963f4891267a3cf54e4be584f89266696dfb6c05c609937c79",
+      "bytes": 31794,
+      "format": "webp",
+      "width": 1496,
+      "height": 276,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.6749496241184221,
+        "opaqueRatio": 0.2814776602340541
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 36,
+        "width": 1400,
+        "height": 203
+      },
+      "publicPath": "/dealer-brand/logo-on-dark.webp"
+    },
+    "onAccent": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/stefancar-varna/dealer-brand/logo-on-accent.webp",
+      "sha256": "9f9eca281fe271963f4891267a3cf54e4be584f89266696dfb6c05c609937c79",
+      "bytes": 31794,
+      "format": "webp",
+      "width": 1496,
+      "height": 276,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.6749496241184221,
+        "opaqueRatio": 0.2814776602340541
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 36,
+        "width": 1400,
+        "height": 203
+      },
+      "publicPath": "/dealer-brand/logo-on-accent.webp"
+    }
+  },
+  "master": {
+    "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/stefancar-varna/branding/logo-master.png",
+    "sha256": "7feb34c78980184f0ac7d6d9b53847b6aa9623ec08dbe4e777278e3f41af4dd4",
+    "bytes": 151001,
+    "format": "png",
+    "width": 1496,
+    "height": 276,
+    "hasAlpha": true,
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparentRatio": 0.6749496241184221,
+      "opaqueRatio": 0.2814776602340541
+    },
+    "visibleBounds": {
+      "x": 48,
+      "y": 36,
+      "width": 1400,
+      "height": 203
+    }
+  },
+  "technicalAcceptance": {
+    "spelling": "Exact qualified main name; no captions",
+    "surfaces": [
+      "#ffffff",
+      "#30343b",
+      "#17191c",
+      "#202023",
+      "#19171d",
+      "#171717",
+      "#b00020",
+      "#405ff2"
+    ],
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "result": "Compact one-row individualized mark beside expressive name; clear counters, no clipping, opaque background or residue observed. Owner style acceptance pending."
+  },
+  "integrationVerified": false,
+  "hostedVerified": false,
+  "exportTool": "docs/logo-refresh/2026-09-18/tools/build-approved-logo-pack.mjs",
+  "exportToolSha256": "7fab60c4000210eff6bbb91f9c35e869bad90834d3bdd09d282a9a51835f0dbc",
+  "exportIsolation": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/style-new-a-export",
+  "updatedAt": "2026-10-11T11:36:18.358Z",
+  "sourceEvidence": {
+    "originalReceipt": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/stefancar-varna/receipt.json",
+      "sha256": "19e1f42b00557925955e25e9a5df502496b2361281cf437063673f9a38505dc5"
+    },
+    "originalMaster": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/stefancar-varna/branding/logo-master.png",
+      "sha256": "ce690a71736c5d8b240e4c658aaf1230155e4ba42e470ac2f7e18491bc4207b3"
+    },
+    "publishedBranding": "Current primary and About headings СТЕФАН КАР; old cover-photo БАЛКАН КАР2 signage linkage unconfirmed, not borrowed",
+    "sourceUrls": [
+      "https://stefancar.mobile.bg/",
+      "https://stefancar.mobile.bg/about"
+    ],
+    "sourceLimitation": "generated improved demo/proposal identity; not official or approved",
+    "sourceEvidenceDirectory": "L:/CODEX/cars/leads/branding/fleet-20261011/stefancar-varna/source"
+  }
+}

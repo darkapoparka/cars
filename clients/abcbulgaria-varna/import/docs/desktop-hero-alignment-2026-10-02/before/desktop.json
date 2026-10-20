@@ -1,0 +1,440 @@
+[
+	{
+		"route": "",
+		"width": 1440,
+		"actions": {
+			"height": 214,
+			"width": 1320,
+			"x": 52.5,
+			"y": 187.1875
+		},
+		"description": null,
+		"font": {
+			"color": "rgb(255, 255, 255)",
+			"family": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+			"lineHeight": "48.384px",
+			"size": "43.2px",
+			"weight": "600"
+		},
+		"heading": {
+			"height": 48.375,
+			"width": 294.9375,
+			"x": 565.03125,
+			"y": 122.8125
+		},
+		"hero": {
+			"height": 400,
+			"width": 1425,
+			"x": 0,
+			"y": 94
+		},
+		"noOverflow": true,
+		"title": "Купи автомобил"
+	},
+	{
+		"route": "inventory",
+		"width": 1440,
+		"actions": {
+			"height": 162,
+			"width": 1320,
+			"x": 52.5,
+			"y": 265.578125
+		},
+		"description": {
+			"height": 24.796875,
+			"width": 457.90625,
+			"x": 483.546875,
+			"y": 224.78125
+		},
+		"font": {
+			"color": "rgb(255, 255, 255)",
+			"family": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+			"lineHeight": "48.384px",
+			"size": "43.2px",
+			"weight": "600"
+		},
+		"heading": {
+			"height": 48.375,
+			"width": 378.921875,
+			"x": 523.03125,
+			"y": 160.40625
+		},
+		"hero": {
+			"height": 400,
+			"width": 1425,
+			"x": 0,
+			"y": 94
+		},
+		"noOverflow": true,
+		"title": "Налични автомобили"
+	},
+	{
+		"route": "services",
+		"width": 1440,
+		"actions": {
+			"height": 162,
+			"width": 1320,
+			"x": 52.5,
+			"y": 265.578125
+		},
+		"description": {
+			"height": 24.796875,
+			"width": 383.015625,
+			"x": 520.984375,
+			"y": 224.78125
+		},
+		"font": {
+			"color": "rgb(255, 255, 255)",
+			"family": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+			"lineHeight": "48.384px",
+			"size": "43.2px",
+			"weight": "600"
+		},
+		"heading": {
+			"height": 48.375,
+			"width": 474.78125,
+			"x": 475.109375,
+			"y": 160.40625
+		},
+		"hero": {
+			"height": 400,
+			"width": 1425,
+			"x": 0,
+			"y": 94
+		},
+		"noOverflow": true,
+		"title": "Услуги за твоя автомобил"
+	},
+	{
+		"route": "about",
+		"width": 1440,
+		"actions": {
+			"height": 90,
+			"width": 1320,
+			"x": 52.5,
+			"y": 301.578125
+		},
+		"description": {
+			"height": 24.796875,
+			"width": 511.703125,
+			"x": 456.640625,
+			"y": 260.78125
+		},
+		"font": {
+			"color": "rgb(255, 255, 255)",
+			"family": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+			"lineHeight": "48.384px",
+			"size": "43.2px",
+			"weight": "600"
+		},
+		"heading": {
+			"height": 48.375,
+			"width": 111.078125,
+			"x": 656.953125,
+			"y": 196.40625
+		},
+		"hero": {
+			"height": 400,
+			"width": 1425,
+			"x": 0,
+			"y": 94
+		},
+		"noOverflow": true,
+		"title": "За нас"
+	},
+	{
+		"route": "contact",
+		"width": 1440,
+		"actions": {
+			"height": 90,
+			"width": 1320,
+			"x": 52.5,
+			"y": 301.578125
+		},
+		"description": {
+			"height": 24.796875,
+			"width": 248.390625,
+			"x": 588.296875,
+			"y": 260.78125
+		},
+		"font": {
+			"color": "rgb(255, 255, 255)",
+			"family": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+			"lineHeight": "48.384px",
+			"size": "43.2px",
+			"weight": "600"
+		},
+		"heading": {
+			"height": 48.375,
+			"width": 192.546875,
+			"x": 616.21875,
+			"y": 196.40625
+		},
+		"hero": {
+			"height": 400,
+			"width": 1425,
+			"x": 0,
+			"y": 94
+		},
+		"noOverflow": true,
+		"title": "Контакти"
+	},
+	{
+		"route": "sell-your-car",
+		"width": 1440,
+		"actions": null,
+		"description": {
+			"height": 24.796875,
+			"width": 705.265625,
+			"x": 359.859375,
+			"y": 311.78125
+		},
+		"font": {
+			"color": "rgb(255, 255, 255)",
+			"family": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+			"lineHeight": "48.384px",
+			"size": "43.2px",
+			"weight": "600"
+		},
+		"heading": {
+			"height": 48.375,
+			"width": 772.75,
+			"x": 326.125,
+			"y": 251.40625
+		},
+		"hero": {
+			"height": 400,
+			"width": 1425,
+			"x": 0,
+			"y": 94
+		},
+		"noOverflow": true,
+		"title": "Продай автомобила си"
+	},
+	{
+		"route": "import",
+		"width": 1440,
+		"actions": null,
+		"description": {
+			"height": 24.796875,
+			"width": 705.265625,
+			"x": 359.859375,
+			"y": 311.78125
+		},
+		"font": {
+			"color": "rgb(255, 255, 255)",
+			"family": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+			"lineHeight": "48.384px",
+			"size": "43.2px",
+			"weight": "600"
+		},
+		"heading": {
+			"height": 48.375,
+			"width": 772.75,
+			"x": 326.125,
+			"y": 251.40625
+		},
+		"hero": {
+			"height": 400,
+			"width": 1425,
+			"x": 0,
+			"y": 94
+		},
+		"noOverflow": true,
+		"title": "Внос на автомобил"
+	},
+	{
+		"route": "financing",
+		"width": 1440,
+		"actions": null,
+		"description": {
+			"height": 24.796875,
+			"width": 608,
+			"x": 408.5,
+			"y": 311.78125
+		},
+		"font": {
+			"color": "rgb(255, 255, 255)",
+			"family": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+			"lineHeight": "48.384px",
+			"size": "43.2px",
+			"weight": "600"
+		},
+		"heading": {
+			"height": 48.375,
+			"width": 691.1875,
+			"x": 366.90625,
+			"y": 251.40625
+		},
+		"hero": {
+			"height": 400,
+			"width": 1425,
+			"x": 0,
+			"y": 94
+		},
+		"noOverflow": true,
+		"title": "Финансиране на автомобил"
+	},
+	{
+		"route": "blog",
+		"width": 1440,
+		"actions": null,
+		"description": null,
+		"font": {
+			"color": "rgb(23, 25, 28)",
+			"family": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+			"lineHeight": "48.384px",
+			"size": "43.2px",
+			"weight": "600"
+		},
+		"heading": {
+			"height": 48.375,
+			"width": 627.859375,
+			"x": 52.5,
+			"y": 148
+		},
+		"hero": {
+			"height": 156.375,
+			"width": 1425,
+			"x": 0,
+			"y": 94
+		},
+		"noOverflow": true,
+		"title": "Полезно за автомобила"
+	},
+	{
+		"route": "faqs",
+		"width": 1440,
+		"actions": null,
+		"description": null,
+		"font": {
+			"color": "rgb(23, 25, 28)",
+			"family": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+			"lineHeight": "48.384px",
+			"size": "43.2px",
+			"weight": "600"
+		},
+		"heading": {
+			"height": 48.375,
+			"width": 627.859375,
+			"x": 52.5,
+			"y": 148
+		},
+		"hero": {
+			"height": 156.375,
+			"width": 1425,
+			"x": 0,
+			"y": 94
+		},
+		"noOverflow": true,
+		"title": "Често задавани въпроси"
+	},
+	{
+		"route": "reviews",
+		"width": 1440,
+		"actions": null,
+		"description": null,
+		"font": {
+			"color": "rgb(23, 25, 28)",
+			"family": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+			"lineHeight": "48.384px",
+			"size": "43.2px",
+			"weight": "600"
+		},
+		"heading": {
+			"height": 48.375,
+			"width": 627.859375,
+			"x": 52.5,
+			"y": 148
+		},
+		"hero": {
+			"height": 156.375,
+			"width": 1425,
+			"x": 0,
+			"y": 94
+		},
+		"noOverflow": true,
+		"title": "Клиентски отзиви"
+	},
+	{
+		"route": "calculator",
+		"width": 1440,
+		"actions": null,
+		"description": null,
+		"font": {
+			"color": "rgb(23, 25, 28)",
+			"family": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+			"lineHeight": "48.384px",
+			"size": "43.2px",
+			"weight": "600"
+		},
+		"heading": {
+			"height": 48.375,
+			"width": 627.859375,
+			"x": 52.5,
+			"y": 148
+		},
+		"hero": {
+			"height": 156.375,
+			"width": 1425,
+			"x": 0,
+			"y": 94
+		},
+		"noOverflow": true,
+		"title": "Калкулатор за внос"
+	},
+	{
+		"route": "compare",
+		"width": 1440,
+		"actions": null,
+		"description": null,
+		"font": {
+			"color": "rgb(23, 25, 28)",
+			"family": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+			"lineHeight": "48.384px",
+			"size": "43.2px",
+			"weight": "600"
+		},
+		"heading": {
+			"height": 48.375,
+			"width": 627.859375,
+			"x": 52.5,
+			"y": 148
+		},
+		"hero": {
+			"height": 156.375,
+			"width": 1425,
+			"x": 0,
+			"y": 94
+		},
+		"noOverflow": true,
+		"title": "Сравни автомобили"
+	},
+	{
+		"route": "account/favorites",
+		"width": 1440,
+		"actions": null,
+		"description": null,
+		"font": {
+			"color": "rgb(23, 25, 28)",
+			"family": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+			"lineHeight": "48.384px",
+			"size": "43.2px",
+			"weight": "600"
+		},
+		"heading": {
+			"height": 48.375,
+			"width": 627.859375,
+			"x": 52.5,
+			"y": 148
+		},
+		"hero": {
+			"height": 156.375,
+			"width": 1425,
+			"x": 0,
+			"y": 94
+		},
+		"noOverflow": true,
+		"title": "Любими автомобили"
+	}
+]

@@ -71,7 +71,7 @@
 
 			<div bind:this={threadElement} class="daynight-messages-mobile__thread" aria-live="polite">
 				<p class="daynight-messages-mobile__date">
-					{english ? 'Conversation with Day Night Auto' : 'Разговор с Day Night Auto'}
+					{english ? 'Conversation with Promosale Varna' : 'Разговор с Promosale Varna'}
 				</p>
 				{#each visibleMessages as message (message.id)}
 					<div class={['daynight-messages-mobile__message', message.sent && 'is-sent']}>

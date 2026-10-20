@@ -1,0 +1,50 @@
+diff --git a/templates/auto-best/src/lib/components/company/AboutHero.svelte b/templates/auto-best/src/lib/components/company/AboutHero.svelte
+index 6ba5abda25b4bbd9f34c32f8990724d4bbd49a34..4830693edfcc50ddf33be0b3248182755bcb94a5 100644
+--- a/templates/auto-best/src/lib/components/company/AboutHero.svelte
++++ b/templates/auto-best/src/lib/components/company/AboutHero.svelte
+@@ -4,7 +4,6 @@
+   const i18n = getI18n();
+ 
+   import { resolve } from '$app/paths';
+-  import { brand } from '$config/brand';
+   import { leadSite } from '$config/lead-site';
+   import { page } from '$app/state';
+   import { resolveCompanyHero } from '$lib/ui/company-hero';
+diff --git a/templates/auto-best/src/lib/components/home/VideoSection.svelte b/templates/auto-best/src/lib/components/home/VideoSection.svelte
+index 0447976ead25d188e681bb88f060f2d0a5fac4fc..c6d38d1734d54d9cb4323f332d9744754db72674 100644
+--- a/templates/auto-best/src/lib/components/home/VideoSection.svelte
++++ b/templates/auto-best/src/lib/components/home/VideoSection.svelte
+@@ -48,11 +48,11 @@
+                 class="dn-video-card__play"
+                 type="button"
+                 hidden={activeVideo === video.id}
+-                aria-label={i18n.t("m_c55e478d087b", { p0: i18n.text(video.title) })}
++                aria-label={i18n.t("m_c55e478d087b", { p0: video.title })}
+                 onclick={(event) => play(video.id, event)}
+               >
+                 <img src={video.thumbnail} alt="" width="720" height="404" loading="lazy" decoding="async" />
+-                <span class="dn-video-card__title" aria-hidden="true"><span>{i18n.text(video.title)}</span></span>
++                <span class="dn-video-card__title" aria-hidden="true"><span>{video.title}</span></span>
+                 <span class="dn-video-card__play-icon" aria-hidden="true">
+                   <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z" /></svg>
+                 </span>
+@@ -61,16 +61,16 @@
+               {#if activeVideo === video.id}
+                 <iframe
+                   src={`https://www.youtube-nocookie.com/embed/${video.id}?autoplay=1&rel=0&playsinline=1`}
+-                  title={i18n.text(video.title)}
++                  title={video.title}
+                   allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
+                   allowfullscreen
+                   referrerpolicy="strict-origin-when-cross-origin"
+                   {@attach (element) => { element.focus(); }}
+                 ></iframe>
+-                <button class="dn-video-card__close dn-icon-button" type="button" onclick={stop} aria-label={i18n.t("m_1d77cbbb4297", { p0: i18n.text(video.title) })}><Icon name="x" size={20} /></button>
++                <button class="dn-video-card__close dn-icon-button" type="button" onclick={stop} aria-label={i18n.t("m_1d77cbbb4297", { p0: video.title })}><Icon name="x" size={20} /></button>
+               {/if}
+             </div>
+-            <h3 class="dn-sr-only">{i18n.text(video.title)}</h3>
++            <h3 class="dn-sr-only">{video.title}</h3>
+           </article>
+         {/each}
+         <a class="dn-videos__all-card" href={i18n.href(brand.youtubeUrl)} target="_blank" rel="noopener noreferrer">

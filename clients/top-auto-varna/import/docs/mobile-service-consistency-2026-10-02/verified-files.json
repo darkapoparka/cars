@@ -1,0 +1,26 @@
+[
+	{
+		"path": "src/lib/components/common/MobileSearchControl.svelte",
+		"sha256": "77eee2759baaeaa0f80fef76e78c95de1946f78e47b67330dcec3957ea788781"
+	},
+	{
+		"path": "src/lib/components/home/HomeFiveHero.svelte",
+		"sha256": "ae8845684ddc725c7b65f32c1b3b3b314c038cc1f3e869e26ff49e7333185804"
+	},
+	{
+		"path": "src/lib/components/services/ServiceCard.svelte",
+		"sha256": "cd8bbf0a88eab1604b7c4ec3b55d90c37b728596d784ca9ead21561453aa7422"
+	},
+	{
+		"path": "src/lib/content/service-directory.ts",
+		"sha256": "3f17ee5724ed8b3d18dec260b005cfa55aa8383e02023204c69fbae7abe60cbe"
+	},
+	{
+		"path": "src/routes/(site)/services/+page.svelte",
+		"sha256": "5cbd79a16cf5fd44beb18edfba22250a56066ab1f613b08d3bfd2751bfdc5974"
+	},
+	{
+		"path": "tests/mobile-secondary.e2e.ts",
+		"sha256": "09b15edbf73ea12909729f08bd04e91bafdb6054e4dcec6ccbb43451fd812dc2"
+	}
+]

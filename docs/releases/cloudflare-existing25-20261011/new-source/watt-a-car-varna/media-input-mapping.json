@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "dealer": "watt-a-car-varna",
+  "media": [
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/watt-a-car-varna/media/demo-estate.webp",
+      "sha256": "d2d3deacbc9f566a22783f2a5eab6335473bf2e47c627261e8895dbff6fece70",
+      "bytes": 58860,
+      "destination": "dealer-stock/demo-estate.webp"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/watt-a-car-varna/media/demo-suv.webp",
+      "sha256": "5c0c6062ef8af622fd852a7a43b2dfc989d6836f1528698b51d88f9352640f2f",
+      "bytes": 65004,
+      "destination": "dealer-stock/demo-suv.webp"
+    }
+  ]
+}

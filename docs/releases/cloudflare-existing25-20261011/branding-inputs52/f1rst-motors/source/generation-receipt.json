@@ -1,0 +1,196 @@
+{
+  "generatedPath": "C:/Users/radev/.codex/generated_images/01a12a34-3dcd-7920-8e75-5eb5eac386bd/exec-c4235782-5cb9-4bf2-a632-f8d9fdca2e16.png",
+  "strategy": "REFINE OFFICIAL LOGO",
+  "identityStatus": "Published F1RST MOTORS black/red italic identity refined; not dealer approved.",
+  "sourceUrls": [
+    "https://f1rstmotors.com/"
+  ],
+  "sourceLogoUrl": "https://f1rstmotors.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ffm-logo-dark.3c22a71c.png&w=3840&q=75",
+  "workingLogoPath": "leads/branding/fleet-20261011/f1rst-motors/source/published-logo.png",
+  "publishedBranding": {
+    "observedAt": "2026-10-11",
+    "visualReference": "CUA official site header and saved published source."
+  },
+  "imageGeneration": {
+    "reference": "exec-c4235782-5cb9-4bf2-a632-f8d9fdca2e16",
+    "tool": "image_gen.imagegen",
+    "transparent_background": true,
+    "referenced_image_paths": [
+      "L:/CODEX/cars/leads/branding/fleet-20261011/f1rst-motors/source/published-logo.png"
+    ],
+    "prompt": "Refine this exact published F1RST MOTORS logo into transparent RGBA high-resolution raster. Preserve EXACT black italic futuristic wide wordmark and exact spelling F1RST MOTORS, with its existing taller red numeral 1 inserted after F. Preserve letter shapes, proportions, spacing, leaning angle and red/black colors. Do not turn numeral into I, do not add a car icon, slogan, shield or embellishment. Source already has transparency; clean antialiased edges and provide real transparent alpha around and inside every counter. Crisp complete wide compact mark with modest transparent padding, no shadow/halo/plaque/background/checkerboard.",
+    "output_hint": "Generated images are saved to C:\\Users\\radev\\.codex\\generated_images\\01a12a34-3dcd-7920-8e75-5eb5eac386bd as C:\\Users\\radev\\.codex\\generated_images\\01a12a34-3dcd-7920-8e75-5eb5eac386bd\\exec-c4235782-5cb9-4bf2-a632-f8d9fdca2e16.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+  },
+  "visualAccepted": true,
+  "surfaceReviewPath": "L:/CODEX/cars/leads/branding/fleet-20261011/f1rst-motors/surface-review.png",
+  "visualChecks": {
+    "heightLimit": 76,
+    "geometry": "Italic published letter geometry and open counters verified",
+    "spelling": "Exact F1RST MOTORS; tall numeral 1 retained",
+    "scope": "Isolated asset surfaces only; dealer, owner, integration and hosted acceptance pending",
+    "residue": "No material halo, plaque, fill or clipping visible at compact widths",
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "treatments": "Published black/red onLight, geometry-preserving white onDark/onAccent"
+  },
+  "schemaVersion": 1,
+  "dealer": "f1rst-motors",
+  "state": "asset-verified",
+  "generated": {
+    "path": "C:/Users/radev/.codex/generated_images/01a12a34-3dcd-7920-8e75-5eb5eac386bd/exec-c4235782-5cb9-4bf2-a632-f8d9fdca2e16.png",
+    "sha256": "d24c689ab65609cd0c690b991c39f792fed1e7b6d92879fca6b6b1247bf6c247",
+    "bytes": 185942,
+    "format": "png",
+    "width": 2172,
+    "height": 724,
+    "hasAlpha": true,
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparentRatio": 0.8760912365312414,
+      "opaqueRatio": 0.10793257735315365
+    },
+    "visibleBounds": {
+      "x": 17,
+      "y": 242,
+      "width": 2138,
+      "height": 230
+    }
+  },
+  "assets": {
+    "onLight": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/f1rst-motors/dealer-brand/logo-on-light.webp",
+      "sha256": "20d80de087cd002ef7d08e11be83ade8d297de4926cf08fbd9b458af767e630f",
+      "bytes": 25536,
+      "format": "webp",
+      "width": 1496,
+      "height": 224,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.7426530271199389,
+        "opaqueRatio": 0.2149750525210084
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 36,
+        "width": 1400,
+        "height": 152
+      },
+      "publicPath": "/dealer-brand/logo-on-light.webp"
+    },
+    "onDark": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/f1rst-motors/dealer-brand/logo-on-dark.webp",
+      "sha256": "03635ebbf1cee8fb50720300a033bd61d10f2b47f9634bb7e935bfe24c126d46",
+      "bytes": 22886,
+      "format": "webp",
+      "width": 1496,
+      "height": 224,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.7426530271199389,
+        "opaqueRatio": 0.2149750525210084
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 36,
+        "width": 1400,
+        "height": 152
+      },
+      "publicPath": "/dealer-brand/logo-on-dark.webp"
+    },
+    "onAccent": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/f1rst-motors/dealer-brand/logo-on-accent.webp",
+      "sha256": "03635ebbf1cee8fb50720300a033bd61d10f2b47f9634bb7e935bfe24c126d46",
+      "bytes": 22886,
+      "format": "webp",
+      "width": 1496,
+      "height": 224,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.7426530271199389,
+        "opaqueRatio": 0.2149750525210084
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 36,
+        "width": 1400,
+        "height": 152
+      },
+      "publicPath": "/dealer-brand/logo-on-accent.webp"
+    }
+  },
+  "master": {
+    "path": "L:/CODEX/cars/leads/branding/fleet-20261011/f1rst-motors/branding/logo-master.png",
+    "sha256": "977674e5ad8077bc81f29b5f16197fc90ef56eef103beebf7892ed12989b6dc8",
+    "bytes": 46178,
+    "format": "png",
+    "width": 1496,
+    "height": 224,
+    "hasAlpha": true,
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparentRatio": 0.7426530271199389,
+      "opaqueRatio": 0.2149750525210084
+    },
+    "visibleBounds": {
+      "x": 48,
+      "y": 36,
+      "width": 1400,
+      "height": 152
+    }
+  },
+  "technicalAcceptance": {
+    "heightLimit": 76,
+    "geometry": "Italic published letter geometry and open counters verified",
+    "spelling": "Exact F1RST MOTORS; tall numeral 1 retained",
+    "scope": "Isolated asset surfaces only; dealer, owner, integration and hosted acceptance pending",
+    "residue": "No material halo, plaque, fill or clipping visible at compact widths",
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "treatments": "Published black/red onLight, geometry-preserving white onDark/onAccent"
+  },
+  "integrationVerified": false,
+  "hostedVerified": false,
+  "ownerApproved": false,
+  "exportTool": "docs/logo-refresh/2026-09-18/tools/build-approved-logo-pack.mjs",
+  "exportToolSha256": "7fab60c4000210eff6bbb91f9c35e869bad90834d3bdd09d282a9a51835f0dbc",
+  "exportIsolation": "L:/CODEX/cars/runtime/fleet-logo-20261011/existing-export",
+  "updatedAt": "2026-10-11T09:35:33.892Z",
+  "sourceEvidence": [
+    {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/f1rst-motors/source/published-logo.png",
+      "sha256": "90633816cfb0b6f0cc70b7f520706c060973b72a6e9730275a8016567d0b618b",
+      "bytes": 2611,
+      "format": "png",
+      "width": 384,
+      "height": 47,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.6026706560283688,
+        "opaqueRatio": 0.25526374113475175
+      },
+      "visibleBounds": {
+        "x": 3,
+        "y": 3,
+        "width": 378,
+        "height": 41
+      }
+    }
+  ],
+  "provenanceFile": "L:/CODEX/cars/leads/branding/fleet-20261011/f1rst-motors/provenance.json"
+}

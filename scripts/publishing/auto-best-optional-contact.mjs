@@ -50,9 +50,10 @@ export function guardAutoBestUnavailablePhoneActions(source,{name,expected}){
  for(const edit of edits.reverse())after=after.slice(0,edit.start)+'{#if '+condition+'}'+after.slice(edit.start,edit.end)+'{/if}'+after.slice(edit.end);
  return {source:after,telephoneActions:edits.length};
 }
-/** A normalized, explicitly absent UK telephone stays absent in every Auto consumer. */
-export function applyAutoBestOptionalContactFallback(files,manifest,{profile}={}){
- if(profile?.business?.countryCode!=='GB')return {schemaVersion:1,dealer:manifest.slug,applied:false,reason:'Other market source preserved'};
+/** A normalized absent telephone stays absent in every reviewed Auto consumer.
+ * Existing GB callers retain their behavior; other markets require pack opt-in. */
+export function applyAutoBestOptionalContactFallback(files,manifest,{profile,factPolicy}={}){
+ if(profile?.business?.countryCode!=='GB'&&factPolicy!=='dealer-pack-optional-v1')return {schemaVersion:1,dealer:manifest.slug,applied:false,reason:'Other market source preserved'};
  const b=profile.business,phone=[b.phoneDisplay,b.phoneHref,b.phoneE164];
  if(phone.some(value=>typeof value!=='string'))throw Error('Expected normalized Auto telephone facts');
  if(phone.some(Boolean)){

@@ -1,0 +1,197 @@
+{
+  "beforeStates": 54,
+  "afterStates": 120,
+  "failures": [],
+  "desktop": [
+    {
+      "id": "home-bg-1440",
+      "titleShift": 24,
+      "heroFrameUnchanged": true,
+      "titleSizeUnchanged": true
+    },
+    {
+      "id": "home-finance-bg-1440",
+      "titleShift": 24,
+      "heroFrameUnchanged": true,
+      "titleSizeUnchanged": true
+    },
+    {
+      "id": "home-sell-bg-1440",
+      "titleShift": 24,
+      "heroFrameUnchanged": true,
+      "titleSizeUnchanged": true
+    },
+    {
+      "id": "home-import-bg-1440",
+      "titleShift": 24,
+      "heroFrameUnchanged": true,
+      "titleSizeUnchanged": true
+    },
+    {
+      "id": "inventory-bg-1440",
+      "titleShift": 24,
+      "heroFrameUnchanged": true,
+      "titleSizeUnchanged": true
+    },
+    {
+      "id": "services-bg-1440",
+      "titleShift": 24,
+      "heroFrameUnchanged": true,
+      "titleSizeUnchanged": true
+    },
+    {
+      "id": "about-bg-1440",
+      "titleShift": 24,
+      "heroFrameUnchanged": true,
+      "titleSizeUnchanged": true
+    },
+    {
+      "id": "contact-bg-1440",
+      "titleShift": 24,
+      "heroFrameUnchanged": true,
+      "titleSizeUnchanged": true
+    },
+    {
+      "id": "sell-your-car-bg-1440",
+      "titleShift": 24,
+      "heroFrameUnchanged": true,
+      "titleSizeUnchanged": true
+    },
+    {
+      "id": "financing-bg-1440",
+      "titleShift": 24,
+      "heroFrameUnchanged": true,
+      "titleSizeUnchanged": true
+    },
+    {
+      "id": "import-bg-1440",
+      "titleShift": 24,
+      "heroFrameUnchanged": true,
+      "titleSizeUnchanged": true
+    },
+    {
+      "id": "home-en-1440",
+      "titleShift": 24,
+      "heroFrameUnchanged": true,
+      "titleSizeUnchanged": true
+    },
+    {
+      "id": "home-finance-en-1440",
+      "titleShift": 24,
+      "heroFrameUnchanged": true,
+      "titleSizeUnchanged": true
+    },
+    {
+      "id": "home-sell-en-1440",
+      "titleShift": 24,
+      "heroFrameUnchanged": true,
+      "titleSizeUnchanged": true
+    },
+    {
+      "id": "home-import-en-1440",
+      "titleShift": 24,
+      "heroFrameUnchanged": true,
+      "titleSizeUnchanged": true
+    },
+    {
+      "id": "inventory-en-1440",
+      "titleShift": 24,
+      "heroFrameUnchanged": true,
+      "titleSizeUnchanged": true
+    },
+    {
+      "id": "services-en-1440",
+      "titleShift": 24,
+      "heroFrameUnchanged": true,
+      "titleSizeUnchanged": true
+    },
+    {
+      "id": "about-en-1440",
+      "titleShift": 24,
+      "heroFrameUnchanged": true,
+      "titleSizeUnchanged": true
+    },
+    {
+      "id": "contact-en-1440",
+      "titleShift": 24,
+      "heroFrameUnchanged": true,
+      "titleSizeUnchanged": true
+    },
+    {
+      "id": "sell-your-car-en-1440",
+      "titleShift": 24,
+      "heroFrameUnchanged": true,
+      "titleSizeUnchanged": true
+    },
+    {
+      "id": "financing-en-1440",
+      "titleShift": 24,
+      "heroFrameUnchanged": true,
+      "titleSizeUnchanged": true
+    },
+    {
+      "id": "import-en-1440",
+      "titleShift": 24,
+      "heroFrameUnchanged": true,
+      "titleSizeUnchanged": true
+    }
+  ],
+  "homeAnchors": [
+    {
+      "locale": "bg",
+      "width": 768,
+      "modes": 4,
+      "titleY": 189,
+      "stable": true
+    },
+    {
+      "locale": "bg",
+      "width": 1024,
+      "modes": 4,
+      "titleY": 189,
+      "stable": true
+    },
+    {
+      "locale": "bg",
+      "width": 1440,
+      "modes": 4,
+      "titleY": 150,
+      "stable": true
+    },
+    {
+      "locale": "bg",
+      "width": 1920,
+      "modes": 4,
+      "titleY": 150,
+      "stable": true
+    },
+    {
+      "locale": "en",
+      "width": 768,
+      "modes": 4,
+      "titleY": 189,
+      "stable": true
+    },
+    {
+      "locale": "en",
+      "width": 1024,
+      "modes": 4,
+      "titleY": 189,
+      "stable": true
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "modes": 4,
+      "titleY": 150,
+      "stable": true
+    },
+    {
+      "locale": "en",
+      "width": 1920,
+      "modes": 4,
+      "titleY": 150,
+      "stable": true
+    }
+  ]
+}

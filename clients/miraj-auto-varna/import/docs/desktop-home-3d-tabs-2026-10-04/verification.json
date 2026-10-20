@@ -1,0 +1,378 @@
+{
+	"date": "2026-10-04",
+	"responsive": {
+		"before": {
+			"states": 24,
+			"failures": 0,
+			"path": "L:/CODEX/cars/templates/import/runtime/desktop-home-3d-tabs-2026-10-04/evidence/before-matrix.json",
+			"sha256": "d7dfaf7f81c3349058176143e8532b18b0e3f4d02660f6f879d77334a216e479"
+		},
+		"after": {
+			"states": 48,
+			"failures": 0,
+			"path": "L:/CODEX/cars/templates/import/runtime/desktop-home-3d-tabs-2026-10-04/evidence/after-matrix.json",
+			"sha256": "b3d4c007f3b65a03928b0342971243962067cd822bdea0427f6ea4bc0bfa47ef"
+		},
+		"production": {
+			"states": 8,
+			"failures": 0,
+			"path": "L:/CODEX/cars/templates/import/runtime/desktop-home-3d-tabs-2026-10-04/evidence/production-matrix.json",
+			"sha256": "f6f18fa681bd2b3e4f1bc42bfa065a7f2830ac18d494c588cca2b15ebde4956c"
+		}
+	},
+	"mobile": {
+		"matched": 16,
+		"pixelsIdentical": true,
+		"presentationIdentical": true,
+		"routes": ["home", "sell-your-car", "import", "about"],
+		"widths": [320, 390],
+		"locales": ["bg", "en"],
+		"path": "L:/CODEX/cars/templates/import/runtime/desktop-home-3d-tabs-2026-10-04/evidence/mobile-comparison.json",
+		"sha256": "3454d2e92bb36e575e290013ed5fa0f95a9b6d65d0726290bd2a16c31aa704b4"
+	},
+	"productionProbe": {
+		"modeStates": 32,
+		"keyboardCases": 32,
+		"accessibility": 8,
+		"noJavaScript": 2,
+		"mobileArtworkRequests": [
+			{
+				"locale": "bg",
+				"width": 320,
+				"requested": []
+			},
+			{
+				"locale": "bg",
+				"width": 390,
+				"requested": []
+			},
+			{
+				"locale": "en",
+				"width": 320,
+				"requested": []
+			},
+			{
+				"locale": "en",
+				"width": 390,
+				"requested": []
+			}
+		],
+		"failures": 0,
+		"path": "L:/CODEX/cars/templates/import/runtime/desktop-home-3d-tabs-2026-10-04/evidence/probe.json",
+		"sha256": "7e4d0f6399e30cab271cf8f9fdfda74f32a107072362272d4029e376c2072b37"
+	},
+	"browser": {
+		"startTime": "2026-10-03T23:00:13.634Z",
+		"duration": 12010.355,
+		"expected": 5,
+		"skipped": 3,
+		"unexpected": 0,
+		"flaky": 0
+	},
+	"gallery": {
+		"states": 36,
+		"failures": 0,
+		"path": "L:/CODEX/cars/templates/import/runtime/desktop-home-3d-tabs-2026-10-04/evidence/gallery.json",
+		"sha256": "56d71a1d6922d99abb16d8906854326e57fe4238217d9a3ffab4571824885144"
+	},
+	"gates": [
+		{
+			"name": "svelte",
+			"exitCode": 0,
+			"log": "L:/CODEX/cars/templates/import/runtime/desktop-home-3d-tabs-2026-10-04/qa/runtime/svelte.log",
+			"logSha256": "622cb5ed0fd30c7ce02b0e630579852562c8f065d33dec51cb5b699ea510c6b1"
+		},
+		{
+			"name": "scoped-format",
+			"exitCode": 0,
+			"log": "L:/CODEX/cars/templates/import/runtime/desktop-home-3d-tabs-2026-10-04/qa/runtime/scoped-format.log",
+			"logSha256": "17aa973d3f004560237d9a95171210b0671deff23d61628eecf7322ff5938f20"
+		},
+		{
+			"name": "full-format",
+			"exitCode": 1,
+			"log": "L:/CODEX/cars/templates/import/runtime/desktop-home-3d-tabs-2026-10-04/qa/runtime/full-format.log",
+			"logSha256": "f190e6f90f0c2369386737332d8993b118c41ef3f37fe55be3d9e268f13d28c2"
+		},
+		{
+			"name": "full-lint",
+			"exitCode": 0,
+			"log": "L:/CODEX/cars/templates/import/runtime/desktop-home-3d-tabs-2026-10-04/qa/runtime/full-lint.log",
+			"logSha256": "ddefde2c1fec4a2f883d2deed235be018316249ceaa26b8412c8718b4e19fb56"
+		},
+		{
+			"name": "architecture",
+			"exitCode": 0,
+			"log": "L:/CODEX/cars/templates/import/runtime/desktop-home-3d-tabs-2026-10-04/qa/runtime/architecture.log",
+			"logSha256": "8fa1e36a40640167c8c47f239147570688c88beec18cce162a4799d5d5a73a54"
+		},
+		{
+			"name": "assets",
+			"exitCode": 0,
+			"log": "L:/CODEX/cars/templates/import/runtime/desktop-home-3d-tabs-2026-10-04/qa/runtime/assets.log",
+			"logSha256": "8afcd43fe41d19ee3aae69db38486278776a5179a2c9e7d20a3c6d1c9be31456"
+		},
+		{
+			"name": "build",
+			"exitCode": 0,
+			"log": "L:/CODEX/cars/templates/import/runtime/desktop-home-3d-tabs-2026-10-04/qa/runtime/build.log",
+			"logSha256": "17fd51192445323b92b624d54a82ddd03790e40061119525fb5829f7a646bec7"
+		}
+	],
+	"screenshots": [
+		{
+			"path": "before-buy.png",
+			"source": "L:/CODEX/cars/templates/import/runtime/desktop-home-3d-tabs-2026-10-04/evidence/before/box-buy-bg.png",
+			"sha256": "db5262ead5aabae776d83118cfcea1be3725f4e6e6d4d1f8be8b9663b76df601"
+		},
+		{
+			"path": "after-buy.png",
+			"source": "L:/CODEX/cars/templates/import/runtime/desktop-home-3d-tabs-2026-10-04/evidence/production/box-buy-bg.png",
+			"sha256": "de17b7ebaa83007015111866af90c7b73e6bceb719a1eb17c0bce0782bc71aea"
+		},
+		{
+			"path": "before-finance.png",
+			"source": "L:/CODEX/cars/templates/import/runtime/desktop-home-3d-tabs-2026-10-04/evidence/before/box-finance-bg.png",
+			"sha256": "69ea8e3e1194fcad4d3f0cf42f102ccbd7fadc39047cf4cba968e60045f745ba"
+		},
+		{
+			"path": "after-finance.png",
+			"source": "L:/CODEX/cars/templates/import/runtime/desktop-home-3d-tabs-2026-10-04/evidence/production/box-finance-bg.png",
+			"sha256": "02dc394ff4a3ba22f85fbe3ef4a26284993acb41761c7c33f6bf66a9e6997f48"
+		},
+		{
+			"path": "before-home.png",
+			"source": "L:/CODEX/cars/templates/import/runtime/desktop-home-3d-tabs-2026-10-04/evidence/before/home-buy-bg-1440.png",
+			"sha256": "56758d18d8a7a17bede553357e3793f4e62ea64f7405096c7032fefdba5ca6d9"
+		},
+		{
+			"path": "after-home.png",
+			"source": "L:/CODEX/cars/templates/import/runtime/desktop-home-3d-tabs-2026-10-04/evidence/production/home-buy-bg-1440.png",
+			"sha256": "e20bfaa47e01025cd062a66e8c32f42bdfa9842840a1662ea44865fbd15e113f"
+		}
+	],
+	"assets": {
+		"count": 4,
+		"bytes": 43676,
+		"hasAlpha": true,
+		"provenance": "../assets/HOME-MODE-3D-2026-10-04.md"
+	},
+	"unitTests": "Not repeated for this decorative artwork/markup follow-up; domain/content/query rules remain intact.",
+	"qaRoot": "L:/CODEX/cars/templates/import/runtime/desktop-home-3d-tabs-2026-10-04/qa",
+	"heroAnchors": {
+		"path": "runtime/desktop-home-3d-tabs-2026-10-04/evidence/anchors.json",
+		"sha256": "75efde700a644e3a3257bbe06b0f96b4417faecb71f75b2dd2dfc2e872002fc2",
+		"states": 32,
+		"matchedBefore": 8,
+		"failures": 0,
+		"records": [
+			{
+				"id": "home-buy-bg-768",
+				"top": 189,
+				"stationary": true
+			},
+			{
+				"id": "home-finance-bg-768",
+				"top": 189,
+				"stationary": true
+			},
+			{
+				"id": "home-sell-bg-768",
+				"top": 189,
+				"stationary": true
+			},
+			{
+				"id": "home-import-bg-768",
+				"top": 189,
+				"stationary": true
+			},
+			{
+				"id": "home-buy-bg-1024",
+				"top": 189,
+				"stationary": true
+			},
+			{
+				"id": "home-finance-bg-1024",
+				"top": 189,
+				"stationary": true
+			},
+			{
+				"id": "home-sell-bg-1024",
+				"top": 189,
+				"stationary": true
+			},
+			{
+				"id": "home-import-bg-1024",
+				"top": 189,
+				"stationary": true
+			},
+			{
+				"id": "home-buy-bg-1440",
+				"top": 150,
+				"stationary": true,
+				"beforeTop": 150
+			},
+			{
+				"id": "home-finance-bg-1440",
+				"top": 150,
+				"stationary": true,
+				"beforeTop": 150
+			},
+			{
+				"id": "home-sell-bg-1440",
+				"top": 150,
+				"stationary": true,
+				"beforeTop": 150
+			},
+			{
+				"id": "home-import-bg-1440",
+				"top": 150,
+				"stationary": true,
+				"beforeTop": 150
+			},
+			{
+				"id": "home-buy-bg-1920",
+				"top": 150,
+				"stationary": true
+			},
+			{
+				"id": "home-finance-bg-1920",
+				"top": 150,
+				"stationary": true
+			},
+			{
+				"id": "home-sell-bg-1920",
+				"top": 150,
+				"stationary": true
+			},
+			{
+				"id": "home-import-bg-1920",
+				"top": 150,
+				"stationary": true
+			},
+			{
+				"id": "home-buy-en-768",
+				"top": 189,
+				"stationary": true
+			},
+			{
+				"id": "home-finance-en-768",
+				"top": 189,
+				"stationary": true
+			},
+			{
+				"id": "home-sell-en-768",
+				"top": 189,
+				"stationary": true
+			},
+			{
+				"id": "home-import-en-768",
+				"top": 189,
+				"stationary": true
+			},
+			{
+				"id": "home-buy-en-1024",
+				"top": 189,
+				"stationary": true
+			},
+			{
+				"id": "home-finance-en-1024",
+				"top": 189,
+				"stationary": true
+			},
+			{
+				"id": "home-sell-en-1024",
+				"top": 189,
+				"stationary": true
+			},
+			{
+				"id": "home-import-en-1024",
+				"top": 189,
+				"stationary": true
+			},
+			{
+				"id": "home-buy-en-1440",
+				"top": 150,
+				"stationary": true,
+				"beforeTop": 150
+			},
+			{
+				"id": "home-finance-en-1440",
+				"top": 150,
+				"stationary": true,
+				"beforeTop": 150
+			},
+			{
+				"id": "home-sell-en-1440",
+				"top": 150,
+				"stationary": true,
+				"beforeTop": 150
+			},
+			{
+				"id": "home-import-en-1440",
+				"top": 150,
+				"stationary": true,
+				"beforeTop": 150
+			},
+			{
+				"id": "home-buy-en-1920",
+				"top": 150,
+				"stationary": true
+			},
+			{
+				"id": "home-finance-en-1920",
+				"top": 150,
+				"stationary": true
+			},
+			{
+				"id": "home-sell-en-1920",
+				"top": 150,
+				"stationary": true
+			},
+			{
+				"id": "home-import-en-1920",
+				"top": 150,
+				"stationary": true
+			}
+		]
+	},
+	"servedAssets": {
+		"path": "runtime/desktop-home-3d-tabs-2026-10-04/evidence/served-assets.json",
+		"sha256": "20a7a8c92401bd7f6841e0d118e76f0d4c5835fbe7f13a02c468701c31c1b646",
+		"matched": 4,
+		"records": [
+			{
+				"key": "buy",
+				"status": 200,
+				"sha256": "a2a117603b0bf73a7183c42268d660f34dd00381abbc8023f250ae275e9c5296",
+				"bytes": 10442,
+				"type": "image/webp"
+			},
+			{
+				"key": "finance",
+				"status": 200,
+				"sha256": "c91a301997ead89242de32f370f8bf67d0a1618abfa8bd8fda311d5ff798fdf2",
+				"bytes": 14542,
+				"type": "image/webp"
+			},
+			{
+				"key": "sell",
+				"status": 200,
+				"sha256": "056967541f4a38154ae79e2c1f3bb0de375fd52d29057ba41b930bcaeee58d16",
+				"bytes": 7864,
+				"type": "image/webp"
+			},
+			{
+				"key": "import",
+				"status": 200,
+				"sha256": "1bee2c67dd908b8d7e20b5bf6f7e0b1dfc8c573d7ed0d75f337471e102ae7258",
+				"bytes": 10828,
+				"type": "image/webp"
+			}
+		]
+	},
+	"qaHelperCorrection": {
+		"issue": "The first added mobile request check waited on undecoded offscreen lazy images. The own probe was stopped after validating its exact command, then the helper eagerly loaded images before decoding and passed its full rerun.",
+		"evidence": "runtime/desktop-home-3d-tabs-2026-10-04/evidence/probe-initial-wait.txt"
+	}
+}

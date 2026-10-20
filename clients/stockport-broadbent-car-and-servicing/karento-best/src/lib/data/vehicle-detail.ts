@@ -102,6 +102,12 @@ export const referenceSpecifications: readonly DetailSpecification[] = [
     "labelKey": "vehicle.field.mileage",
     "valueNumber": 119000,
     "unit": "mi"
+  },
+  {
+    "id": "year",
+    "icon": "/assets/imgs/template/icons/calendar.svg",
+    "value": "2017",
+    "labelKey": "vehicle.field.year"
   }
 ];
 
@@ -127,7 +133,7 @@ export const referenceReviews: readonly DetailReview[] = [];
 export const referenceSeller: DetailSeller = {
   "name": "Broadbent Car and Servicing",
   "location": "Oldmoor Road, Bredbury, Stockport SK6 2QE",
-  "avatar": "/dealer-brand/logo.webp",
+  "avatar": "/dealer-brand/v2-cf2c5199092708bd/logo-on-light.webp",
   "mobile": "07398 540293",
   "email": "transitsellers2020@gmail.com",
   "whatsapp": "",

@@ -1,0 +1,213 @@
+{
+  "strategy": "REFINE OFFICIAL LOGO",
+  "identityStatus": "Image Gen refinement of visually inspected published identity; demo treatment, not dealership approval",
+  "generatedPath": "C:/Users/radev/.codex/generated_images/01a12a0e-8374-7732-9e28-580ceda2a0fc/exec-d97d8769-1d3f-407b-86c0-60217eace1a7.png",
+  "sourceUrls": [
+    "https://lionauto1.mobile.bg",
+    "https://cdn2.focus.bg/mobile/images/houseslogos/h15566181495309443.pic"
+  ],
+  "sourceReference": "leads/branding/fleet-20261011/lionauto1-varna/source/published-logo.jpg",
+  "imageGeneration": {
+    "tool": "image_gen.imagegen",
+    "reference": "exec-d97d8769-1d3f-407b-86c0-60217eace1a7",
+    "prompt": "Refine the actual supplied ЛИОН АУТО dealership logo into a clean transparent raster for light website headers. Preserve exact bold italic angular Cyrillic spelling ЛИОН АУТО, the thin swept green car-roof outline above, and the pair of diagonal green parallel slashes at the left. Retain relative geometry and layout. Use dark charcoal lettering as a faithful light-surface version of the white source lettering, with the same recognizable green strokes in a medium/deep green legible on white. Remove only the dark rectangular backdrop. All letter counters, spaces between stripes and open car-roof regions fully transparent. Crisp flat opaque strokes, no photographic texture, shadows, glow or flecks. No extra word, no English replacement, no new icon. One complete wide landscape logo with modest transparent padding. True RGBA alpha background.",
+    "referenced_image_paths": [
+      "L:/CODEX/cars/leads/branding/fleet-20261011/lionauto1-varna/source/published-logo.jpg"
+    ],
+    "transparent_background": true,
+    "outputPath": "C:/Users/radev/.codex/generated_images/01a12a0e-8374-7732-9e28-580ceda2a0fc/exec-d97d8769-1d3f-407b-86c0-60217eace1a7.png"
+  },
+  "surfaceDerivation": "Existing approved-logo-pack original onLight and matching white onDark/onAccent; pending individual compact review",
+  "visualAccepted": true,
+  "surfaceReviewPath": "L:/CODEX/cars/leads/branding/fleet-20261011/lionauto1-varna/surface-review.png",
+  "visualChecks": {
+    "scope": "Isolated raster acceptance; actual applications and owner review pending",
+    "sourceReview": "2026-10-11 CUA rendered primary dealer profile and retained published-logo.jpg inspected",
+    "spelling": "ЛИОН АУТО",
+    "identity": "Published layout/lettering/strokes retained; source factual descriptor is historical branding rather than new service availability claim",
+    "headerWidths": [
+      120,
+      180,
+      320
+    ],
+    "backgrounds": [
+      "#ffffff",
+      "#30343b",
+      "#17191c",
+      "#202023",
+      "#19171d",
+      "#171717",
+      "#b00020",
+      "#405ff2"
+    ],
+    "contrast": "Name readable on tested canvases; counters and roof/window gaps retained",
+    "remainingAcceptance": "Six actual consumers, favicon/touch icons, owner review and deployment pending"
+  },
+  "schemaVersion": 1,
+  "dealer": "lionauto1-varna",
+  "state": "asset-verified",
+  "generated": {
+    "path": "C:/Users/radev/.codex/generated_images/01a12a0e-8374-7732-9e28-580ceda2a0fc/exec-d97d8769-1d3f-407b-86c0-60217eace1a7.png",
+    "sha256": "84337f8bfe115e0782de6af7e948709166e672c6da22320b89504ce4e79a7aa1",
+    "bytes": 500879,
+    "format": "png",
+    "width": 2167,
+    "height": 726,
+    "hasAlpha": true,
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparentRatio": 0.7878870510703375,
+      "opaqueRatio": 0.17805080210164742
+    },
+    "visibleBounds": {
+      "x": 23,
+      "y": 159,
+      "width": 2112,
+      "height": 416
+    }
+  },
+  "assets": {
+    "onLight": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/lionauto1-varna/dealer-brand/logo-on-light.webp",
+      "sha256": "28fda24cfa87dc485f6588e3863824b7a07dc00a270ce943f5fb07d9ceca32cc",
+      "bytes": 88086,
+      "format": "webp",
+      "width": 1496,
+      "height": 349,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.7171655455618038,
+        "opaqueRatio": 0.2342406876790831
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 36,
+        "width": 1400,
+        "height": 277
+      },
+      "publicPath": "/dealer-brand/logo-on-light.webp"
+    },
+    "onDark": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/lionauto1-varna/dealer-brand/logo-on-dark.webp",
+      "sha256": "ea9e719fef34873fb9b7b0097aad3e8c87d1eacab18bce126bef5a6aa157269b",
+      "bytes": 44850,
+      "format": "webp",
+      "width": 1496,
+      "height": 349,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.7171655455618038,
+        "opaqueRatio": 0.2342406876790831
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 36,
+        "width": 1400,
+        "height": 277
+      },
+      "publicPath": "/dealer-brand/logo-on-dark.webp"
+    },
+    "onAccent": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/lionauto1-varna/dealer-brand/logo-on-accent.webp",
+      "sha256": "ea9e719fef34873fb9b7b0097aad3e8c87d1eacab18bce126bef5a6aa157269b",
+      "bytes": 44850,
+      "format": "webp",
+      "width": 1496,
+      "height": 349,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.7171655455618038,
+        "opaqueRatio": 0.2342406876790831
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 36,
+        "width": 1400,
+        "height": 277
+      },
+      "publicPath": "/dealer-brand/logo-on-accent.webp"
+    }
+  },
+  "master": {
+    "path": "L:/CODEX/cars/leads/branding/fleet-20261011/lionauto1-varna/branding/logo-master.png",
+    "sha256": "624452e460276c4ac904f6123ba1fbd9866e6d88bc813ab59580b955ece34821",
+    "bytes": 210272,
+    "format": "png",
+    "width": 1496,
+    "height": 349,
+    "hasAlpha": true,
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparentRatio": 0.7171655455618038,
+      "opaqueRatio": 0.2342406876790831
+    },
+    "visibleBounds": {
+      "x": 48,
+      "y": 36,
+      "width": 1400,
+      "height": 277
+    }
+  },
+  "technicalAcceptance": {
+    "scope": "Isolated raster acceptance; actual applications and owner review pending",
+    "sourceReview": "2026-10-11 CUA rendered primary dealer profile and retained published-logo.jpg inspected",
+    "spelling": "ЛИОН АУТО",
+    "identity": "Published layout/lettering/strokes retained; source factual descriptor is historical branding rather than new service availability claim",
+    "headerWidths": [
+      120,
+      180,
+      320
+    ],
+    "backgrounds": [
+      "#ffffff",
+      "#30343b",
+      "#17191c",
+      "#202023",
+      "#19171d",
+      "#171717",
+      "#b00020",
+      "#405ff2"
+    ],
+    "contrast": "Name readable on tested canvases; counters and roof/window gaps retained",
+    "remainingAcceptance": "Six actual consumers, favicon/touch icons, owner review and deployment pending"
+  },
+  "integrationVerified": false,
+  "hostedVerified": false,
+  "ownerApproved": false,
+  "exportTool": "docs/logo-refresh/2026-09-18/tools/build-approved-logo-pack.mjs",
+  "exportToolSha256": "7fab60c4000210eff6bbb91f9c35e869bad90834d3bdd09d282a9a51835f0dbc",
+  "exportIsolation": "L:/CODEX/cars/runtime/fleet-logo-20261011/export",
+  "updatedAt": "2026-10-11T09:19:10.936Z",
+  "sourceEvidence": [
+    {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/lionauto1-varna/source/published-logo.jpg",
+      "sha256": "d02faa306e5eac57f6cae0586d8a79870167c041990213948fdfd8379eb84545",
+      "bytes": 1511,
+      "format": "jpeg",
+      "width": 100,
+      "height": 27,
+      "hasAlpha": false,
+      "alpha": {
+        "min": 255,
+        "max": 255,
+        "transparentRatio": 0,
+        "opaqueRatio": 1
+      },
+      "visibleBounds": {
+        "x": 0,
+        "y": 0,
+        "width": 100,
+        "height": 27
+      }
+    }
+  ],
+  "provenanceFile": "L:/CODEX/cars/leads/branding/fleet-20261011/lionauto1-varna/provenance.json"
+}

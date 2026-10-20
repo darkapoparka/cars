@@ -1,4 +1,5 @@
 'use client';
+import {displayMake} from '@/lib/inventory-labels';
 import {assetPath, browserPath} from '@/lib/paths';
 import {useCopy, useLocale} from '@/lib/locale';
 import {useEffect, useMemo, useRef, useState} from 'react';
@@ -6,10 +7,10 @@ import * as stylex from '@stylexjs/stylex';
 import {Share2, Star} from 'lucide-react';
 import PageHeader from '@/components/PageHeader';
 import IconButton from '@/components/IconButton';
-import LoginSheet from '@/components/DealerEnquirySheet';
+import DealerEnquirySheet from '@/components/DealerEnquirySheet';
 import VehiclePhotoViewer from '@/components/VehiclePhotoViewer';
 import {vehicleGallery, type GalleryCategory,type GalleryPhoto} from '@/lib/vehicle-gallery';
-import type {Vehicle} from '@/lib/data';
+import type {Vehicle} from '@/lib/vehicle';
 import {media, tokens as $} from '@/app/tokens.stylex';
 
 const categories: GalleryCategory[] = ['Exteriors', 'Interiors', 'Features'];
@@ -22,7 +23,7 @@ export default function VehicleGallery({vehicle, initialCategory = 'Exteriors',c
   const available = categories.filter(item => photos.some(photo => photo.category === item));
   const [category, setCategory] = useState<GalleryCategory>(available.includes(initialCategory) ? initialCategory : available[0]);
   const [selected, setSelected] = useState<number | null>(null);
-  const [login, setLogin] = useState(false);
+  const [enquiryOpen, setEnquiryOpen] = useState(false);
   const [message, setMessage] = useState('');
   const content = useRef<HTMLDivElement>(null);
   useEffect(() => {
@@ -44,7 +45,7 @@ export default function VehicleGallery({vehicle, initialCategory = 'Exteriors',c
   async function share() {
     try {
       const url = `${location.origin}${browserPath(`/cars/${vehicle.slug}`, locale)}`;
-      if (navigator.share) await navigator.share({title: `${vehicle.year} ${vehicle.make} ${vehicle.model}`, url});
+      if (navigator.share) await navigator.share({title: `${vehicle.year} ${displayMake(vehicle.make)} ${vehicle.model}`, url});
       else if (navigator.clipboard) {await navigator.clipboard.writeText(url); setMessage('Link copied');}
       else setMessage(url);
     } catch (error) {if (!(error instanceof DOMException && error.name === 'AbortError')) setMessage('Sharing is unavailable in this browser.');}
@@ -52,11 +53,11 @@ export default function VehicleGallery({vehicle, initialCategory = 'Exteriors',c
   return <main aria-label={tx("Vehicle photo gallery")} {...stylex.props(s.page)}>
     <PageHeader title={tx("Photos")} backHref={`/cars/${vehicle.slug}`} backLabel={tx("Back to vehicle details")} action={<IconButton icon={Share2} label={tx('Share car')} onClick={share}/>}/>
     <nav aria-label={tx("Vehicle photo categories")} {...stylex.props(s.tabs)}>{available.map(item => <button type="button" key={item} aria-pressed={item === category} onClick={() => choose(item)} {...stylex.props(s.tab, item === category && s.activeTab)}>{tx(captions[item])}</button>)}</nav>
-    <div ref={content} {...stylex.props(s.images)}>{photos.map((photo, index) => <button type="button" key={`${photo.src}-${index}`} data-photo-index={index} data-photo-category={photo.category} aria-label={tx(`Zoom ${photo.label} photo`)} onClick={() => setSelected(index)} {...stylex.props(s.photoButton)}><img src={assetPath(photo.src)} width={1200} height={625} alt={`${vehicle.make} ${vehicle.model}: ${tx(photo.label)}`} loading={index < 2 ? 'eager' : 'lazy'} {...stylex.props(s.photo, vehicle.imagePlaceholder && s.placeholderPhoto)} /><span {...stylex.props(s.photoCaption)}><Star size={12} fill="currentColor" />{tx(photo.label)}</span></button>)}</div>
-    <footer {...stylex.props(s.footer)}><button type="button" onClick={() => setLogin(true)} {...stylex.props(s.book)}>{tx("Ask about a viewing")}</button></footer>
+    <div ref={content} {...stylex.props(s.images)}>{photos.map((photo, index) => <button type="button" key={`${photo.src}-${index}`} data-photo-index={index} data-photo-category={photo.category} aria-label={tx(`Zoom ${photo.label} photo`)} onClick={() => setSelected(index)} {...stylex.props(s.photoButton)}><img src={assetPath(photo.src)} width={1200} height={625} alt={`${displayMake(vehicle.make)} ${vehicle.model}: ${tx(photo.label)}`} loading={index < 2 ? 'eager' : 'lazy'} {...stylex.props(s.photo, vehicle.imagePlaceholder && s.placeholderPhoto)} /><span {...stylex.props(s.photoCaption)}><Star size={12} fill="currentColor" />{tx(photo.label)}</span></button>)}</div>
+    <footer data-desktop-page-bar {...stylex.props(s.footer)}><button type="button" onClick={() => setEnquiryOpen(true)} {...stylex.props(s.book)}>{tx("Ask about a viewing")}</button></footer>
     {message ? <button type="button" role="status" onClick={() => setMessage('')} {...stylex.props(s.message)}>{tx(message)}</button> : null}
     {selected !== null ? <VehiclePhotoViewer photos={photos} initialIndex={selected} onClose={() => setSelected(null)} /> : null}
-    <LoginSheet vehicleTitle={`${vehicle.year} ${vehicle.make} ${vehicle.model}`} open={login} onClose={() => setLogin(false)} />
+    <DealerEnquirySheet vehicleTitle={`${vehicle.year} ${displayMake(vehicle.make)} ${vehicle.model}`} open={enquiryOpen} onClose={() => setEnquiryOpen(false)} />
   </main>;
 }
 const s = stylex.create({
@@ -69,7 +70,7 @@ const s = stylex.create({
   photo: {display: 'block', width: '100%', height: 'auto', aspectRatio: '1.92', objectFit: 'cover'},
   placeholderPhoto: {objectFit: 'contain', padding: 32, backgroundColor: '#f0f2f4'},
   photoCaption: {position: 'absolute', right: 22, bottom: 8, display: 'inline-flex', alignItems: 'center', gap: 4, maxWidth: 'calc(100% - 44px)', padding: '7px 9px', overflow: 'hidden', color: '#fff', fontSize: 12, fontWeight: 600, lineHeight: '17px', whiteSpace: 'nowrap', textOverflow: 'ellipsis', borderRadius: 3, backgroundColor: 'rgba(8,24,53,.8)'},
-  footer: {position: 'fixed', left: 0, right: 0, bottom: 0, zIndex: 110, padding: '8px 18px calc(12px + env(safe-area-inset-bottom))', backgroundColor: '#fff'},
+  footer: {position: 'fixed', left: {[media.desktop]:$.desktopShellInset,default:0}, right: {[media.desktop]:$.desktopShellInset,default:0}, bottom: 0, zIndex: 110, padding: '8px 18px calc(12px + env(safe-area-inset-bottom))', backgroundColor: '#fff'},
   book: {display: 'block', width: '100%', maxWidth: 924, marginInline: 'auto', minHeight: 48, padding: '10px 15px', color: '#fff', fontSize: 16, fontWeight: 600, borderWidth: 0, borderRadius: 7, backgroundColor: $.violet, cursor: 'pointer'},
   message: {position: 'fixed', left: '50%', bottom: 95, transform: 'translateX(-50%)', zIndex: 120, padding: '12px 18px', color: '#fff', fontSize: 13, borderWidth: 0, borderRadius: 10, backgroundColor: '#202024', cursor: 'pointer'},
 });

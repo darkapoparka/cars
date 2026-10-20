@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "slug": "elegantcar-varna",
+  "name": "Елегант кар",
+  "shortName": "Елегант кар",
+  "city": "Варна",
+  "country": "BG",
+  "countryCode": "BG",
+  "locale": "bg-BG",
+  "currency": "EUR",
+  "distanceUnit": "km",
+  "phone": "0877910051",
+  "phoneDisplay": "0877910051",
+  "phoneE164": "+359877910051",
+  "phones": [
+    "0877910051",
+    "0888554972"
+  ],
+  "addressLine": "бул. Цар Освободител разклона за Владиславово",
+  "address": "бул. Цар Освободител разклона за Владиславово, Варна, България",
+  "hours": "Потвърдете работното време директно с автокъщата.",
+  "email": "",
+  "sourceUrl": "https://elegantcar.mobile.bg/",
+  "stockUrl": "https://elegantcar.mobile.bg/",
+  "contactSourceUrl": "https://elegantcar.mobile.bg/contacts",
+  "observedAt": "2026-10-11T11:48:32.756Z",
+  "inventoryNotice": "Датирана извадка от публични обяви, не складова система в реално време. Потвърдете цената, ДДС и наличността.",
+  "previewNotice": "Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация.",
+  "services": [],
+  "socialLinks": {}
+}

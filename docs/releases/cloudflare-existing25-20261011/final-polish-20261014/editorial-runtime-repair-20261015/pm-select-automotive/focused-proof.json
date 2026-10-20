@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-focused-exact-source-editorial-repair-proof",
+  "dealer": "pm-select-automotive",
+  "baseSourceCommit": "a2380472efe5c2c331b5fa79e06eebd218aa5c95",
+  "baseSourceTree": "ed72034deb12f1886f7e62523614dfaac49ea54a",
+  "sourceModuleProof": {
+    "dealer": "pm-select-automotive",
+    "sourceCommit": "a2380472efe5c2c331b5fa79e06eebd218aa5c95",
+    "sourceTree": "ed72034deb12f1886f7e62523614dfaac49ea54a",
+    "scope": "clients/pm-select-automotive/import/src/lib/content/extra-localized.ts",
+    "baseBlob": "8a33d1722b00a70ca24b2127cc0c28ef1b0fa508",
+    "candidateBlob": "1f816ac4e8198c80c909ca0c762663cb6e33a1f1",
+    "candidate": {
+      "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/cf-import-editorial/candidates/pm-select-automotive/extra-localized.ts",
+      "sha256": "a28c48041718766b773e6e34f0afca679ed470e679ac7eaeef0e8ea46e14e102"
+    },
+    "patch": {
+      "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/cf-import-editorial/candidates/pm-select-automotive/explicit-editorial.patch",
+      "sha256": "5905c9cfc2d37b13be2b0f2f8c716e9f6da2e8cf9359e1c07aad55a9aa34e41b"
+    },
+    "addedEntries": [
+      {
+        "bg": "Датирана извадка от публични обяви, не складова система в реално време. Потвърдете цената, ДДС и наличността. Обявите за очакван внос не означават наличен автомобил във Варна.",
+        "en": "Dated sample of public listings, not a live stock system. Confirm the price, VAT and availability. Listings for expected imports do not mean the vehicle is available in Varna."
+      }
+    ],
+    "beforeError": "Missing English editorial catalog entry: Датирана извадка от публични обяви, не складова система в реално време. Потвърдете цената, ДДС и наличността. Обявите за очакван внос не означават наличен автомобил във Варна.",
+    "after": {
+      "slug": "confirm-current-availability",
+      "title": "How to confirm current availability at PM SELECT AUTOMOTIVE",
+      "category": "Dealer information",
+      "date": "2026-10-10",
+      "image": "/assets/daynight/codex-generated-v2/blog/blog-cover-import-check-v2.webp",
+      "excerpt": "Dated sample of public listings, not a live stock system. Confirm the price, VAT and availability. Listings for expected imports do not mean the vehicle is available in Varna.",
+      "content": [
+        "Contact the dealership on 0887083275 and identify the exact vehicle before visiting.",
+        "Independent demonstration preview. Forms do not send messages or create a reservation."
+      ]
+    },
+    "checks": {
+      "exactRetainedSource": true,
+      "beforeFailureReproduced": true,
+      "afterEnglishPostsPassed": true,
+      "bgBehaviorUnchanged": true,
+      "dateSlugAndImageUnchanged": true,
+      "allExistingCatalogEntriesUnchanged": true,
+      "unknownEditorialStillThrows": true
+    },
+    "modulesRead": [
+      {
+        "path": "import/src/lib/content/localized.ts",
+        "blob": "287cb119087cca8f91723dd58365f5e71b2578e6"
+      },
+      {
+        "path": "import/src/lib/content/extra-localized.ts",
+        "blob": "8a33d1722b00a70ca24b2127cc0c28ef1b0fa508"
+      },
+      {
+        "path": "import/src/lib/config/site.ts",
+        "blob": "553f3ae74725bc538b14fc13c8c4e450858dad76"
+      },
+      {
+        "path": "import/src/lib/config/dealer.ts",
+        "blob": "42d4fb924b6feba56463669a6c7588d824438384"
+      },
+      {
+        "path": "import/src/lib/config/cars-locale.ts",
+        "blob": "27eeb6292275baa013f62ffab1c7f43020a5c733"
+      },
+      {
+        "path": "import/src/lib/data/blog.ts",
+        "blob": "ef2187a90233c8fc174cb70df2cc3de4571fd56c"
+      }
+    ]
+  },
+  "originalProof": {
+    "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/cf-import-editorial/candidates/remaining-editorial-repair-proof.json",
+    "sha256": "03d21b50d19be0e5938bd4dc6c10c1dabad8cf539f423b125e2f114619ed6cc1"
+  },
+  "compiled": false,
+  "newCiRun": null,
+  "providerWrites": 0
+}

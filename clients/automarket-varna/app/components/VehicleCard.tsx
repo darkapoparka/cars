@@ -23,7 +23,7 @@ const factKeys: Record<string, string> = {
 function factOverflow(element: HTMLElement) {
   return (element.scrollLeft > 1 ? 1 : 0) | (element.scrollLeft + element.clientWidth < element.scrollWidth - 1 ? 2 : 0);
 }
-function VehicleCard({vehicle, showDiscount = false, desktopTile = false, imagePriority = false, headingLevel = 3, finance, importListing, onRemoveSaved}: {vehicle: Vehicle; showDiscount?: boolean; desktopTile?: boolean; imagePriority?: boolean; headingLevel?: 2 | 3; finance?: {monthly: number; onCalculate: () => void}; importListing?: {country: string; onEnquire: () => void}; onRemoveSaved?: (event: MouseEvent<HTMLButtonElement>) => void}) {
+function VehicleCard({vehicle, showDiscount = false, desktopTile = false, mobileFlat = false, imagePriority = false, headingLevel = 3, finance, importListing, onRemoveSaved}: {vehicle: Vehicle; showDiscount?: boolean; desktopTile?: boolean; mobileFlat?: boolean; imagePriority?: boolean; headingLevel?: 2 | 3; finance?: {monthly: number; onCalculate: () => void}; importListing?: {country: string; onEnquire: () => void}; onRemoveSaved?: (event: MouseEvent<HTMLButtonElement>) => void}) {
   const tx = useCopy();
   const Heading = headingLevel === 2 ? 'h2' : 'h3';
   const factRow = useRef<HTMLDivElement>(null);
@@ -58,15 +58,15 @@ function VehicleCard({vehicle, showDiscount = false, desktopTile = false, imageP
     <Heading title={`${tx(vehicle.year)} ${tx(vehicle.model)}`} {...stylex.props(s.title, desktopTile && s.tileTitle, importListing && s.importText)}>{tx(vehicle.year)} {tx(vehicle.model)}</Heading>
     {vehicle.trim ? <p {...stylex.props(s.trim)}>{tx(vehicle.trim)}</p> : null}
     <div {...stylex.props(s.priceRow)}><strong {...stylex.props(s.price, vehicle.priceOnRequest && s.priceOnRequest)}>{vehicle.priceOnRequest ? tx('Price on request') : <><CurrencyLabel size={18} />{tx(formatPrice(vehicle.price))}</>}</strong>{showDiscount && discount > 0 ? <span {...stylex.props(s.discount)}>{tx(formatPrice(discount))} {tx(" OFF")}</span> : null}</div>
-    {!finance && hasPublishedMonthlyPayment(vehicle) ? <p {...stylex.props(s.monthly)}><span {...stylex.props(s.monthlyPrice)}><CurrencyLabel size={11} />{tx(formatPrice(vehicle.monthly))}{tx("/mo*")}</span><span {...stylex.props(s.monthlyNote)}>{tx("est.")}</span></p> : null}
+    {!finance && hasPublishedMonthlyPayment(vehicle) ? <p {...stylex.props(s.monthly)}><span {...stylex.props(s.monthlyPrice)}><span {...stylex.props(s.srOnly)}><CurrencyLabel size={11}/></span>{tx(formatPrice(vehicle.monthly))}{tx("/mo*")}</span><span {...stylex.props(s.monthlyNote)}>{tx("est.")}</span></p> : null}
   </>;
-  return <article aria-label={tx(`${vehicle.year} ${displayMake(vehicle.make)} ${vehicle.model}`)} data-desktop-tile={desktopTile || undefined} data-price={vehicle.price} data-mileage={vehicle.mileage} data-monthly={vehicle.monthly} {...stylex.props(s.card)}>
+  return <article aria-label={tx(`${vehicle.year} ${displayMake(vehicle.make)} ${vehicle.model}`)} data-desktop-tile={desktopTile || undefined} data-price={vehicle.price} data-mileage={vehicle.mileage} data-monthly={vehicle.monthly} {...stylex.props(s.card, mobileFlat && s.mobileFlatCard)}>
     <div {...stylex.props(s.main, desktopTile && s.tileMain)}>
       {importListing ? <button type="button" aria-haspopup="dialog" aria-label={importAction} onClick={importListing.onEnquire} {...stylex.props(s.photo,desktopTile && s.tilePhoto,s.importAction)}>{photo}</button> : <Link href={href} aria-label={tx(`View ${vehicle.year} ${displayMake(vehicle.make)} ${vehicle.model}`)} {...stylex.props(s.photo,desktopTile && s.tilePhoto)}>{photo}</Link>}
       <div {...stylex.props(s.info, desktopTile && s.tileInfo)}>
         {importListing ? <button type="button" data-import-listing-action aria-haspopup="dialog" aria-label={importAction} onClick={importListing.onEnquire} {...stylex.props(s.details,s.importAction)}>{details}</button> : <Link href={href} {...stylex.props(s.details)}>{details}</Link>}
         <div {...stylex.props(s.facts)}><div ref={factRow} data-vehicle-facts role="group" tabIndex={0} aria-label={tx('Specifications')} onScroll={event => setOverflow(factOverflow(event.currentTarget))} {...stylex.props(s.meta)}>{facts.map((item, index) => <span key={`${item}-${index}`} title={tx(factKeys[item] || item)} {...stylex.props(s.pill, index === 2 && s.equipment)}>{factKeys[item] ? <><span title={tx(factKeys[item])} {...stylex.props(s.phoneFact)}>{tx(factKeys[item])}</span><span {...stylex.props(s.wideFact)}>{tx(factKeys[item])}</span></> : index === 1 && item === 'Automatic' ? tx('Auto') : tx(item)}</span>)}</div>{overflow & 1 ? <span aria-hidden="true" {...stylex.props(s.factCue, s.factCueLeft)}/> : null}{overflow & 2 ? <span aria-hidden="true" {...stylex.props(s.factCue, s.factCueRight)}/> : null}</div>
-        {benefits.length ? <div {...stylex.props(s.benefits)}><span {...stylex.props(s.benefitLabel)}>{tx('Example benefits')}</span><div {...stylex.props(s.benefitRow)}>{benefits.map(item => <span key={item} {...stylex.props(s.benefitChip)}>{tx(item)}</span>)}</div></div> : null}
+        {benefits.length ? <div {...stylex.props(s.benefits)}><span {...stylex.props(s.benefitLabel)}>{tx('Example benefits')}</span><div data-vehicle-benefits role="group" tabIndex={0} aria-label={tx('Example benefits')} {...stylex.props(s.benefitRow)}>{benefits.map(item => <span key={item} {...stylex.props(s.benefitChip)}>{tx(item)}</span>)}</div></div> : null}
       </div>
       {!importListing ? <button type="button" data-saved-remove={onRemoveSaved && saved ? '' : undefined} onClick={onRemoveSaved && saved ? onRemoveSaved : toggle} aria-pressed={saved} aria-label={tx(saved ? `Remove ${displayMake(vehicle.make)} ${vehicle.model} from saved cars` : `Save ${displayMake(vehicle.make)} ${vehicle.model}`)} {...stylex.props(s.heart, desktopTile && s.tileHeart, saved && s.heartSaved)}><Heart size={22} strokeWidth={1.3} fill={saved ? 'currentColor' : '#fafafa'} /></button> : null}
     </div>
@@ -78,9 +78,10 @@ export default memo(VehicleCard);
 
 const s = stylex.create({
   card: {position: 'relative', minWidth: 0, overflow: 'hidden', borderColor: $.surfaceBorder, borderStyle: 'solid', borderWidth: 1, borderRadius: 17, backgroundColor: $.surface, boxShadow: $.shadowSoft},
-  main: {position: 'relative', display: 'grid', gridTemplateColumns: {[media.mobile]: '44% minmax(0,1fr)', default: 'minmax(140px,39%) minmax(0,1fr)'}, gap: 10, padding: {[media.mobile]: 10, default: 12}},
+  mobileFlatCard: {boxShadow: {[media.mobile]: 'none', default: $.shadowSoft}},
+  main: {position: 'relative', display: 'grid', gridTemplateColumns: {[media.mobile]: '44% minmax(0,1fr)', default: 'minmax(140px,39%) minmax(0,1fr)'}, gap: {[media.mobile]: 8, default: 10}, padding: {[media.mobile]: 8, default: 12}},
   photo: {position: 'relative', alignSelf: 'stretch', display: 'block', overflow: 'hidden', borderRadius: 10},
-  tileMain: {gridTemplateColumns: {[media.mobile]: '44% minmax(0,1fr)', [media.desktop]: 'minmax(0,1fr)', default: 'minmax(140px,39%) minmax(0,1fr)'}, gap: {[media.desktop]: 0, default: 10}, padding: {[media.mobile]: 10, [media.desktop]: 0, default: 12}},
+  tileMain: {gridTemplateColumns: {[media.mobile]: '44% minmax(0,1fr)', [media.desktop]: 'minmax(0,1fr)', default: 'minmax(140px,39%) minmax(0,1fr)'}, gap: {[media.mobile]: 8, [media.desktop]: 0, default: 10}, padding: {[media.mobile]: 8, [media.desktop]: 0, default: 12}},
   tilePhoto: {aspectRatio: {[media.desktop]: '16 / 9', default: 'auto'}, borderRadius: {[media.desktop]: 0, default: 10}},
   tileInfo: {padding: {[media.desktop]: 12, default: 0}},
   tileText: {paddingRight: {[media.mobile]: 0, [media.desktop]: 0, default: 28}},
@@ -99,20 +100,21 @@ const s = stylex.create({
   make: {overflow: 'hidden', paddingRight: {[media.mobile]: 0, default: 28}, color: $.muted, fontSize: {[media.desktop]: $.desktopLabelSize, default: 11}, fontWeight: 400, lineHeight: {[media.desktop]: '18px', default: '14px'}, whiteSpace: 'nowrap', textOverflow: 'ellipsis'},
   title: {overflow: 'hidden', paddingRight: {[media.mobile]: 0, default: 22}, fontSize: {[media.mobile]: 15, default: 16}, fontWeight: 400, lineHeight: {[media.desktop]: '24px', default: '21px'}, display: {[media.mobile]: 'block', default: '-webkit-box'}, whiteSpace: {[media.mobile]: 'nowrap', default: 'normal'}, textOverflow: 'ellipsis', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical'},
   trim: {overflow: 'hidden', marginTop: 1, color: $.muted, fontSize: {[media.desktop]: $.desktopSupportSize, default: 13}, fontWeight: 400, lineHeight: {[media.desktop]: '20px', default: '18px'}, whiteSpace: 'nowrap', textOverflow: 'ellipsis'},
-  priceRow: {display: 'flex', flexWrap: 'wrap', alignItems: 'baseline', gap: 5, marginTop: 5},
+  priceRow: {display: 'flex', flexWrap: 'wrap', alignItems: 'baseline', gap: 5, marginTop: {[media.mobile]: 3, default: 5}},
   price: {display: 'inline-flex', flexWrap: 'wrap', alignItems: 'baseline', gap: 1, maxWidth: '100%', fontSize: {[media.desktop]: 22, default: 20}, fontWeight: 700, lineHeight: {[media.desktop]: '28px', default: '26px'}, letterSpacing: '-.025em'},
   priceOnRequest: {fontSize: {[media.desktop]: $.desktopTextSize, default: 15}, fontWeight: 600, lineHeight: {[media.desktop]: '24px', default: '22px'}, letterSpacing: 0},
   discount: {paddingInline: 4, color: '#008c36', fontSize: {[media.desktop]: $.desktopLabelSize, default: 11}, fontWeight: 500, lineHeight: {[media.desktop]: '18px', default: '16px'}, whiteSpace: 'nowrap', borderRadius: 12, backgroundColor: '#effbf1'},
   monthly: {display: 'flex', alignItems: 'center', gap: 4, marginTop: 1, whiteSpace: 'nowrap', lineHeight: {[media.desktop]: '20px', default: '18px'}},
-  monthlyPrice: {display: 'inline-flex', alignItems: 'center', gap: 2, fontSize: {[media.desktop]: $.desktopSupportSize, default: 13}, fontWeight: 400},
+  monthlyPrice: {display: 'inline-flex', alignItems: 'center', gap: 2, color: $.muted, fontSize: {[media.desktop]: $.desktopSupportSize, default: 13}, fontWeight: 400},
   monthlyNote: {overflow: 'hidden', color: $.muted, fontSize: 12, fontWeight: 400, textOverflow: 'ellipsis'},
-  benefits: {marginTop: 6},
+  srOnly: {position: 'absolute', width: 1, height: 1, padding: 0, margin: -1, overflow: 'hidden', clipPath: 'inset(50%)', whiteSpace: 'nowrap', borderWidth: 0},
+  benefits: {marginTop: {[media.mobile]: 4, default: 6}},
   benefitLabel: {display: 'block', marginBottom: 3, color: '#7a8087', fontSize: {[media.desktop]: $.desktopLabelSize, default: 8}, fontWeight: 700, lineHeight: {[media.desktop]: '18px', default: '11px'}, letterSpacing: '.04em', textTransform: 'uppercase'},
-  benefitRow: {display: 'flex', flexWrap: 'wrap', gap: 3},
-  benefitChip: {maxWidth: '100%', padding: '2px 5px', color: '#34383d', fontSize: {[media.desktop]: $.desktopLabelSize, default: 9}, fontWeight: 600, lineHeight: {[media.desktop]: '18px', default: '13px'}, overflowWrap: 'anywhere', borderRadius: 8, backgroundColor: '#eef0f2'},
+  benefitRow: {display: 'flex', flexWrap: {[media.mobile]: 'nowrap', default: 'wrap'}, gap: 3, minWidth: 0, maxWidth: '100%', overflowX: {[media.mobile]: 'auto', default: 'visible'}, overscrollBehaviorX: 'contain', scrollbarWidth: 'none', outline: {default: 'none', ':focus-visible': '2px solid #242428'}, outlineOffset: 2},
+  benefitChip: {flexShrink: {[media.mobile]: 0, default: 1}, maxWidth: {[media.mobile]: 'none', default: '100%'}, padding: '2px 5px', color: '#34383d', fontSize: {[media.desktop]: $.desktopLabelSize, default: 9}, fontWeight: 600, lineHeight: {[media.desktop]: '18px', default: '13px'}, whiteSpace: {[media.mobile]: 'nowrap', default: 'normal'}, overflowWrap: {[media.mobile]: 'normal', default: 'anywhere'}, borderRadius: 8, backgroundColor: '#eef0f2'},
   heart: {position: 'absolute', top: 3, right: 1, display: {[media.mobile]: 'none', default: 'grid'}, placeItems: 'center', width: 44, height: 44, padding: 0, color: '#727272', borderWidth: 0, backgroundColor: 'transparent', cursor: 'pointer'},
   heartSaved: {color: $.ink},
-  facts: {position: 'relative', minWidth: 0, marginTop: 8},
+  facts: {position: 'relative', minWidth: 0, marginTop: {[media.mobile]: 4, default: 8}},
   factCue: {display: {[media.mobile]: 'block', [media.desktop]: 'block', default: 'none'}, position: 'absolute', top: 0, bottom: 0, width: 14, pointerEvents: 'none'},
   factCueLeft: {left: 0, backgroundImage: 'linear-gradient(to right, #fff, rgba(255,255,255,0))'},
   factCueRight: {right: 0, backgroundImage: 'linear-gradient(to left, #fff, rgba(255,255,255,0))'},

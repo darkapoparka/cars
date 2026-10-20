@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-18",
+  "auditChat": "https://chatgpt.com/g/g-p-6ad50d1984288191ac4837b83b50233b/c/6ad50daa-9614-83ed-9811-c6a3cfe701f4",
+  "auditBaseline": "8243539369bbe74419214505f375586e06be0d91",
+  "reconciliationBaseline": "23911ca0e6731033a12a129eb0dcfefd5a410191",
+  "changes": [
+    "Replace an existing WhatsApp text query parameter while preserving fragment, recipient and unrelated parameters.",
+    "Prefill optional whole-unit import budget only from a published integer price.",
+    "Reuse existing make-identity normalization for both sidebar predicates.",
+    "Recognize the supported spaced Mercedes Benz spelling using the existing emblem.",
+    "Correct stale README claims; preserve style tokens and all artwork."
+  ],
+  "supersededProducerPatch": "Excluded. Preserve025c0a4 strict-schema and timezone-aware aggregate-date fix.",
+  "exactIntegration": "All six occupied files matched their published baseline blobs before editing. The recovered zero-context patch passed git apply --unidiff-zero --check, applied, and every resulting file byte-matched its independently reconstructed remote-only candidate.",
+  "coordinatorValidation": {
+    "runtime": "Node v22.20.0, retained dependencies",
+    "unit": {
+      "command": "node scripts/test.mjs",
+      "passed": 150,
+      "suites": 15,
+      "failed": 0,
+      "skipped": 0
+    },
+    "types": {
+      "command": "node node_modules/typescript/bin/tsc --noEmit --incremental false",
+      "exitCode": 0
+    },
+    "lint": {
+      "command": "node node_modules/eslint/bin/eslint.js components/DealerEnquirySheet.tsx components/ImportCountryPicker.tsx components/InventoryClient.tsx lib/brand-logos.ts tests/domain.test.ts",
+      "exitCode": 0
+    },
+    "componentProbes": {
+      "passed": 24,
+      "failed": 0,
+      "command": "node component-logic-local.cjs L:/CODEX/cars/templates/app",
+      "scope": "Actual retained TSX/component logic transpiled with mocked hooks/JSX; no browser or network"
+    }
+  },
+  "originalAstraValidation": {
+    "runtime": "Node22.20.0 / npm11.3.0",
+    "check": "lint/types/150 unit tests/config validation/production build passed",
+    "routes": "50/50 HTTP200",
+    "componentProbes": "24 passed",
+    "css": "byte-identical75,435 bytes",
+    "browser": "No local browser execution: Chromium unavailable after invalid download archives. Historical2 image-wait timeouts unresolved; same-SHA canonical retry passed, cause not proved."
+  },
+  "releaseState": {
+    "templatesLockChanged": false,
+    "assetsChanged": false,
+    "stylesChanged": false,
+    "dealerChanged": false,
+    "coordinatorProductionBuild": false,
+    "browserAcceptance": false,
+    "combinedWorkerAcceptance": false,
+    "deployed": false
+  },
+  "archiveAcquisition": {
+    "path": "C:/Users/radev/Downloads/cars-app-final-audit.zip",
+    "bytes": 518862,
+    "extraction": "Six compact allowlisted evidence files; original probe inspected before execution. Local copy changed only app-root argument and report output name."
+  }
+}

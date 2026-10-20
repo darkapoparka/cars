@@ -10,26 +10,30 @@ export const vehicleTaxonomySelectClassName =
 
 export const vehicleTaxonomyPickerCopy = {
   bg: {
+    clear: "Изчисти търсенето",
     close: "Затвори",
     makeDescription: "Потърсете или изберете марка от списъка.",
     makeGroup: "Марки",
     makePlaceholder: "Търсете марка…",
-    makeTitle: "Изберете марка",
+    makeTitle: "Марка",
     modelDescription: "Изберете модел или въведете друг.",
     modelGroup: "Модели",
     modelPlaceholder: "Търсете модел…",
+    modelTitle: "Модел",
     noMatch: "Няма съвпадение.",
     use: "Използвайте",
   },
   en: {
+    clear: "Clear search",
     close: "Close",
     makeDescription: "Search or choose a make from the list.",
     makeGroup: "Makes",
     makePlaceholder: "Search makes…",
-    makeTitle: "Choose a make",
+    makeTitle: "Make",
     modelDescription: "Choose a model or enter another one.",
     modelGroup: "Models",
     modelPlaceholder: "Search models…",
+    modelTitle: "Model",
     noMatch: "No match found.",
     use: "Use",
   },
@@ -61,8 +65,8 @@ export const getRequiredVehicleTaxonomyField = (
   make: string,
   model: string
 ): VehicleTaxonomyPickerKind | null => {
-  if (!make) {
+  if (!make.trim()) {
     return "make";
   }
-  return model ? null : "model";
+  return model.trim() ? null : "model";
 };

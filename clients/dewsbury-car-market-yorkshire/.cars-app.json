@@ -3,32 +3,32 @@
   "dealer": "dewsbury-car-market-yorkshire",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "4e184777567849a2c5b4a9e4a3e652252179c29c",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "path": "templates/app",
-    "digest": "fad0067e48d7bd7e1c5177c5e91e2bc5767352e2c16621cb458d18a081f7c541",
-    "tree": "749512ff762c25272d1474225ff653dd4c88f0fe"
+    "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1",
+    "tree": "7f3d3ffa40546635377e6c5225194fe06fead291"
   },
-  "appDigest": "694555bfbca368c8c3cb6d6e619a8852bd5980163c81fcf840693d7238a1881c",
+  "appDigest": "76841e4e9cee76eff1402b98cc51ce4283afcf094f37d07422c69f15cee68269",
   "provenance": {
     "schemaVersion": 1,
     "dealer": "dewsbury-car-market-yorkshire",
     "profile": "auto-best/src/lib/data/dealer-profile.json",
-    "profileSha256": "755f20202946804ca9c85de756cccd6526821f99b3ab4e118f32a2a16b394d0e",
+    "profileSha256": "3ce9f388d69fa9b3845be14f059c06f83cea37d82bcfffcf31811be1cd2c7964",
     "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
     "vehicles": 6,
     "currency": "GBP",
     "observedAt": "2026-10-10",
     "assets": [
       {
-        "source": "auto-best/static/dealer-brand/logo.webp",
-        "output": "public/dealer-app/logo-light-cadb9c07122892749d4b.webp",
-        "sha256": "cadb9c07122892749d4b0ff128ba3ac51f6b0e15e3f17fe8c56ece5dbf177f46",
+        "source": "auto-best/static/dealer-brand/v2-c52eb17295e48be5/logo-on-light.webp",
+        "output": "public/dealer-app/logo-light-9270bf32fa476305db99.webp",
+        "sha256": "9270bf32fa476305db99b2a0c40c009f08ace890436f97c8ecc0fdfc6ccd919b",
         "role": "logo-light"
       },
       {
-        "source": "auto-best/static/dealer-brand/logo.webp",
-        "output": "public/dealer-app/logo-dark-cadb9c07122892749d4b.webp",
-        "sha256": "cadb9c07122892749d4b0ff128ba3ac51f6b0e15e3f17fe8c56ece5dbf177f46",
+        "source": "auto-best/static/dealer-brand/v2-c52eb17295e48be5/logo-on-dark.webp",
+        "output": "public/dealer-app/logo-dark-6131d3edda336eabf2bf.webp",
+        "sha256": "6131d3edda336eabf2bf0367fed55a13a02d1937ad17eb80d63f2252c99a75b2",
         "role": "logo-dark"
       },
       {
@@ -127,5 +127,5 @@
   },
   "needsDealerQA": true,
   "readyToPublish": false,
-  "refreshedAt": "2026-10-10T21:33:02.543Z"
+  "refreshedAt": "2026-10-15T02:17:39.184Z"
 }

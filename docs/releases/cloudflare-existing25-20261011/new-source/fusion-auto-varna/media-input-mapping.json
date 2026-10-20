@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "dealer": "fusion-auto-varna",
+  "media": [
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/fusion-auto-varna/media/11790662447767037-1.webp",
+      "sha256": "684880cd11fa3955df0d2c135623cef0a9f6f67b1a5e260d9fbabbdc212d583f",
+      "bytes": 364320,
+      "destination": "dealer-stock/11790662447767037-1.webp"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/fusion-auto-varna/media/11790662447767037-2.webp",
+      "sha256": "005db4106a617371b098e8df88c4a75f386a53765eddd9f2d9b2b3ca81a84014",
+      "bytes": 307690,
+      "destination": "dealer-stock/11790662447767037-2.webp"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/fusion-auto-varna/media/21780841001174707-1.webp",
+      "sha256": "a6442d0f4ba409cb1ca15a15bf214173107eedae96681464daad929e29be0aac",
+      "bytes": 340866,
+      "destination": "dealer-stock/21780841001174707-1.webp"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/fusion-auto-varna/media/21780841001174707-2.webp",
+      "sha256": "ad72b9cb4fb5e4a685301be39d69718f3c6eb7bbb36cbcdfaa845364140bdca0",
+      "bytes": 380994,
+      "destination": "dealer-stock/21780841001174707-2.webp"
+    }
+  ]
+}

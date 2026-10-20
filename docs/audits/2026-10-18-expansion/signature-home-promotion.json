@@ -1,0 +1,539 @@
+{
+  "ref": "f540b1f10e7e81ba75205662a422b9a41051770c",
+  "publicationSourceScope": 25,
+  "runtimeSourceFiles": 14,
+  "added": 12,
+  "modified": 4,
+  "deleted": 9,
+  "sourceBytes": 106341,
+  "changes": [
+    {
+      "path": "templates/karento-best/src/lib/routes.ts",
+      "status": "modified",
+      "before": {
+        "gitBlob": "a8f30021d8dc03f113020b79fd75817a079e3f42",
+        "sha256": "392fd6a493242400af3dc144acbed0c1c8239cafab37226190921cd33902b856",
+        "bytes": 2221
+      },
+      "after": {
+        "gitBlob": "17b77238600545b12aa327a14e4f8b570263e735",
+        "sha256": "be677012213d6afc5c7b78d36a111bc479d5db4ae19b1bc2550535a8167ff0db",
+        "bytes": 2251
+      },
+      "maintainedPresent": true,
+      "maintainedMatchesCandidate": true
+    },
+    {
+      "path": "templates/karento-best/src/lib/components/Header.svelte",
+      "status": "modified",
+      "before": {
+        "gitBlob": "0a9f81052b464d022d068f9639768f56e73041ff",
+        "sha256": "f92d65f62a46808dfd82cb76232f4d43f3b2be511298626863b8e4444bd016a7",
+        "bytes": 29041
+      },
+      "after": {
+        "gitBlob": "86b76125deb668a78694821631ca93c70e857a19",
+        "sha256": "2d338846268e6bdf09d045c19c832557aea0b2c462378f931fcd6f8c0ecc2b14",
+        "bytes": 29071
+      },
+      "maintainedPresent": true,
+      "maintainedMatchesCandidate": true
+    },
+    {
+      "path": "templates/karento-best/src/lib/components/MobileNavigation.svelte",
+      "status": "modified",
+      "before": {
+        "gitBlob": "3d2be4613e374f0d5b2268e3c0544e139887d286",
+        "sha256": "967910c6299431cf68508245f26e91f80c4e899d1c03ab77a59d429ee07ebc15",
+        "bytes": 2954
+      },
+      "after": {
+        "gitBlob": "89d7d1da4dba214267715bd1e296d25bb28464da",
+        "sha256": "303488f812e700fb2adc45ce1cc215f457108ec759e5664d10ec8c0c90d77fff",
+        "bytes": 2974
+      },
+      "maintainedPresent": true,
+      "maintainedMatchesCandidate": true
+    },
+    {
+      "path": "templates/karento-best/AGENTS.md",
+      "status": "modified",
+      "before": {
+        "gitBlob": "be515d63d29bde8b6811919edb8b4eb727c639b0",
+        "sha256": "9416fed3653ea7522b5aba7ec8a08ada02ba14f986409dcfcb2f02d67db6af2f",
+        "bytes": 4259
+      },
+      "after": {
+        "gitBlob": "31c6e3dd50cacffd2ba9177e81f972627b5b1534",
+        "sha256": "40221b1f63299e4d1d88dc56c5cebbcf68df7859da903351ead4edfcc59507f3",
+        "bytes": 4586
+      },
+      "maintainedPresent": true,
+      "maintainedMatchesCandidate": true
+    },
+    {
+      "path": "templates/karento-best/src/routes/+page.svelte",
+      "status": "added",
+      "before": null,
+      "after": {
+        "gitBlob": "6383db78e17a0d54a61b976a7f30f2b1ff4e27f6",
+        "sha256": "ab01bd06af1f16510056e797965c5b746a2efb83263895ba21dbdd1424dbb3f4",
+        "bytes": 237
+      },
+      "maintainedPresent": true,
+      "maintainedMatchesCandidate": true
+    },
+    {
+      "path": "templates/karento-best/src/routes/+page.server.ts",
+      "status": "added",
+      "before": null,
+      "after": {
+        "gitBlob": "fad39ec345218d295494e96be33a5c32a7588d36",
+        "sha256": "23878367bd43ce4ae9ac08d4e404434c29ad26286204cae401591f96f3ad9746",
+        "bytes": 371
+      },
+      "maintainedPresent": true,
+      "maintainedMatchesCandidate": true
+    },
+    {
+      "path": "templates/karento-best/src/routes/2/+server.ts",
+      "status": "added",
+      "before": null,
+      "after": {
+        "gitBlob": "527172229f83dfb56b8fdb559c16f4039398aa68",
+        "sha256": "f65e12d03ebd4842d5110485150dfd7122f57534845013806b64e5c525945e5e",
+        "bytes": 309
+      },
+      "maintainedPresent": true,
+      "maintainedMatchesCandidate": true
+    },
+    {
+      "path": "templates/karento-best/src/lib/pages/marketplace-home.svelte",
+      "status": "added",
+      "before": null,
+      "after": {
+        "gitBlob": "093e5a9fe11f7b9f729d45c69f2b6d7767960b53",
+        "sha256": "c45d8dd2ac09159b1ac297574f48a8f89d37a82b45888a6e84fbf4557ae864a5",
+        "bytes": 5360
+      },
+      "maintainedPresent": true,
+      "maintainedMatchesCandidate": true
+    },
+    {
+      "path": "templates/karento-best/src/lib/discovery/DiscoveryBrowse.svelte",
+      "status": "added",
+      "before": null,
+      "after": {
+        "gitBlob": "a12d3a961eae360bfd715a04bdb305b20cfa98c3",
+        "sha256": "aa1f41be693ff687abdb29314778ada72d48cc7f005d5f3289d6d661b1159e6e",
+        "bytes": 7793
+      },
+      "maintainedPresent": true,
+      "maintainedMatchesCandidate": true
+    },
+    {
+      "path": "templates/karento-best/src/lib/discovery/DiscoveryCard.svelte",
+      "status": "added",
+      "before": null,
+      "after": {
+        "gitBlob": "286c0b02159514f0bf6910aa2a7cc6e7d514b2e5",
+        "sha256": "4f8fbc204f149a29c31ff0a2c62d0a1c388f7b4b6f690eef1877a8368b9f7d6d",
+        "bytes": 2589
+      },
+      "maintainedPresent": true,
+      "maintainedMatchesCandidate": true
+    },
+    {
+      "path": "templates/karento-best/src/lib/discovery/DiscoveryDetail.svelte",
+      "status": "added",
+      "before": null,
+      "after": {
+        "gitBlob": "80db714834f28bf59d96ccd215867b52265dc85b",
+        "sha256": "e08aa49cbfe2ea81abee369ef043cd709741cd5d8b869f2df61cfd44117274fd",
+        "bytes": 4425
+      },
+      "maintainedPresent": true,
+      "maintainedMatchesCandidate": true
+    },
+    {
+      "path": "templates/karento-best/src/lib/discovery/DiscoveryHome.svelte",
+      "status": "added",
+      "before": null,
+      "after": {
+        "gitBlob": "0d0d3b2978756254272d052e2c8bec395c9d081e",
+        "sha256": "31de3f48d8fb600886e166b28512860e697df3559580904dfe2d23f3304ca281",
+        "bytes": 4766
+      },
+      "maintainedPresent": true,
+      "maintainedMatchesCandidate": true
+    },
+    {
+      "path": "templates/karento-best/src/lib/discovery/DiscoveryNavigation.svelte",
+      "status": "added",
+      "before": null,
+      "after": {
+        "gitBlob": "7b3e283bf354db055c53462d4300ff7ee4b32890",
+        "sha256": "daf7045212a80ae11b9a623852ff84aa72f0770739874c9cc0da8d0697b8e2b2",
+        "bytes": 1933
+      },
+      "maintainedPresent": true,
+      "maintainedMatchesCandidate": true
+    },
+    {
+      "path": "templates/karento-best/src/lib/discovery/DiscoverySearch.svelte",
+      "status": "added",
+      "before": null,
+      "after": {
+        "gitBlob": "2720f9ae54f41f13d91e97d6ca18685ad05aa6ff",
+        "sha256": "205b486f3b9c9b64270c6ae15accd615cc8c4c9a28f0c39216993b122c699a2e",
+        "bytes": 20115
+      },
+      "maintainedPresent": true,
+      "maintainedMatchesCandidate": true
+    },
+    {
+      "path": "templates/karento-best/src/lib/discovery/discovery.ts",
+      "status": "added",
+      "before": null,
+      "after": {
+        "gitBlob": "d013b58ab43f891d0ad9c643feb2193a151aa6c7",
+        "sha256": "e24742e0fe06775932528e103232fa3bf5468a727d4103863e27ed6f53205a0e",
+        "bytes": 17343
+      },
+      "maintainedPresent": true,
+      "maintainedMatchesCandidate": true
+    },
+    {
+      "path": "templates/karento-best/tests/discovery-routing.test.ts",
+      "status": "added",
+      "before": null,
+      "after": {
+        "gitBlob": "e40a3eb24f516e24620f5d7b2402c4fd2c15d910",
+        "sha256": "023472d1c6dc14994febb6dcbb1a8e80135b1160a978b7a7cf11db101684d2a2",
+        "bytes": 2218
+      },
+      "maintainedPresent": true,
+      "maintainedMatchesCandidate": true
+    },
+    {
+      "path": "templates/karento-best/src/routes/2/+page.server.ts",
+      "status": "deleted",
+      "before": {
+        "gitBlob": "fad39ec345218d295494e96be33a5c32a7588d36",
+        "sha256": "23878367bd43ce4ae9ac08d4e404434c29ad26286204cae401591f96f3ad9746",
+        "bytes": 371
+      },
+      "after": null,
+      "maintainedPresent": false,
+      "maintainedMatchesCandidate": true
+    },
+    {
+      "path": "templates/karento-best/src/routes/2/+page.svelte",
+      "status": "deleted",
+      "before": {
+        "gitBlob": "657dfa2046fed5b545b6646a6dd6ccc80c2cf1c7",
+        "sha256": "c5d3cac3e25202817093c9079f341dbd93c3a937e1a901aa2b9c8c714737610b",
+        "bytes": 5326
+      },
+      "after": null,
+      "maintainedPresent": false,
+      "maintainedMatchesCandidate": true
+    },
+    {
+      "path": "templates/karento-best/src/routes/2/DiscoveryBrowse.svelte",
+      "status": "deleted",
+      "before": {
+        "gitBlob": "f392acd52a582b43aef8e4c89e657d7e7da097f9",
+        "sha256": "85aa2cea423e9a7700b4c6bc71468300a603eca7a30b4a43a4ec5543824855a4",
+        "bytes": 7796
+      },
+      "after": null,
+      "maintainedPresent": false,
+      "maintainedMatchesCandidate": true
+    },
+    {
+      "path": "templates/karento-best/src/routes/2/DiscoveryCard.svelte",
+      "status": "deleted",
+      "before": {
+        "gitBlob": "286c0b02159514f0bf6910aa2a7cc6e7d514b2e5",
+        "sha256": "4f8fbc204f149a29c31ff0a2c62d0a1c388f7b4b6f690eef1877a8368b9f7d6d",
+        "bytes": 2589
+      },
+      "after": null,
+      "maintainedPresent": false,
+      "maintainedMatchesCandidate": true
+    },
+    {
+      "path": "templates/karento-best/src/routes/2/DiscoveryDetail.svelte",
+      "status": "deleted",
+      "before": {
+        "gitBlob": "3cb24bc0bc07de12abd0753386e291622ca615f1",
+        "sha256": "96906cea222078f367174823a9f808f399f2636a12d6b293e3210fe8cead6da6",
+        "bytes": 4426
+      },
+      "after": null,
+      "maintainedPresent": false,
+      "maintainedMatchesCandidate": true
+    },
+    {
+      "path": "templates/karento-best/src/routes/2/DiscoveryHome.svelte",
+      "status": "deleted",
+      "before": {
+        "gitBlob": "3d1aeddb28099188ba1d3d6f433a58f3e4694061",
+        "sha256": "e485f7a30d3e8713d2da641962e8c8e58c0b3195d43b1724fe1c989ca6321f7d",
+        "bytes": 4768
+      },
+      "after": null,
+      "maintainedPresent": false,
+      "maintainedMatchesCandidate": true
+    },
+    {
+      "path": "templates/karento-best/src/routes/2/DiscoveryNavigation.svelte",
+      "status": "deleted",
+      "before": {
+        "gitBlob": "36d8462e34f6734119165ecc52bdcc484aa666fd",
+        "sha256": "e8624474e9b683f6e0da2b12a7498f66b4b48f78f740d407df968c89d4d45484",
+        "bytes": 1936
+      },
+      "after": null,
+      "maintainedPresent": false,
+      "maintainedMatchesCandidate": true
+    },
+    {
+      "path": "templates/karento-best/src/routes/2/DiscoverySearch.svelte",
+      "status": "deleted",
+      "before": {
+        "gitBlob": "2720f9ae54f41f13d91e97d6ca18685ad05aa6ff",
+        "sha256": "205b486f3b9c9b64270c6ae15accd615cc8c4c9a28f0c39216993b122c699a2e",
+        "bytes": 20115
+      },
+      "after": null,
+      "maintainedPresent": false,
+      "maintainedMatchesCandidate": true
+    },
+    {
+      "path": "templates/karento-best/src/routes/2/discovery.ts",
+      "status": "deleted",
+      "before": {
+        "gitBlob": "74fe1e7f4b748c0e8a91f924fa83546a1bbe3c3c",
+        "sha256": "a56136e75d0c8bc4b135e86c8bf237bbf11e1e97c052fcef61e7b35bcdc2f4b0",
+        "bytes": 17283
+      },
+      "after": null,
+      "maintainedPresent": false,
+      "maintainedMatchesCandidate": true
+    }
+  ],
+  "patch": {
+    "path": "J:\\cars-generated\\expansion-20261018\\template-candidates\\signature-home\\signature-home.patch",
+    "bytes": 146600,
+    "sha256": "2ccf3d1706fb9e06028419c04e42d3bc4590a1b1077ec6e4896d1c5e52b2e532",
+    "exactCanonicalApply": "passed",
+    "whitespace": "passed"
+  },
+  "scope": "Approved16Oct phone Home promotion only; preserved39source routes/Home3desktop/index-3/List2/Details3. No template lock update, dealer generation or provider changes.",
+  "canonicalEvidence": {
+    "retained": "canonical-retained.json",
+    "sourceTree": "canonical-source-tree.json",
+    "hunks": "replay.json",
+    "allBeforeBlobsVerified": true,
+    "APIReads": "Only missing immutable source metadata/blobs; no Git fetch/download."
+  },
+  "directUnchangedDependencies": [
+    {
+      "path": "templates/karento-best/src/lib/i18n/context.svelte.ts",
+      "canonicalGitBlob": "b6d84a0163a4dcd5a4a3938dbd83b195d48e0eb8",
+      "maintainedGitBlob": "b6d84a0163a4dcd5a4a3938dbd83b195d48e0eb8",
+      "matches": true
+    },
+    {
+      "path": "templates/karento-best/src/lib/preview.svelte.ts",
+      "canonicalGitBlob": "dd092cf01730a8ed837174574d6f968d2397eca3",
+      "maintainedGitBlob": "dd092cf01730a8ed837174574d6f968d2397eca3",
+      "matches": true
+    },
+    {
+      "path": "templates/karento-best/src/lib/attachments.svelte.ts",
+      "canonicalGitBlob": "c378a8f0b28a7b6c8324799409b08517cba41ab6",
+      "maintainedGitBlob": "c378a8f0b28a7b6c8324799409b08517cba41ab6",
+      "matches": true
+    },
+    {
+      "path": "templates/karento-best/src/lib/content.ts",
+      "canonicalGitBlob": "b768741e8c0531b5b4258894487dc6799a94ce05",
+      "maintainedGitBlob": "b768741e8c0531b5b4258894487dc6799a94ce05",
+      "matches": true
+    },
+    {
+      "path": "templates/karento-best/src/lib/vendor.ts",
+      "canonicalGitBlob": "bb39cb9fb3be854059d46ed92ef7c5da5659cde8",
+      "maintainedGitBlob": "bb39cb9fb3be854059d46ed92ef7c5da5659cde8",
+      "matches": true
+    },
+    {
+      "path": "templates/karento-best/src/lib/components/mobile/MobileIcon.svelte",
+      "canonicalGitBlob": "e3baf23a1a19728263f611e1ce1c96a6cd67927b",
+      "maintainedGitBlob": "e3baf23a1a19728263f611e1ce1c96a6cd67927b",
+      "matches": true
+    },
+    {
+      "path": "templates/karento-best/src/lib/components/mobile/BottomNavigationIcon.svelte",
+      "canonicalGitBlob": "43a7bfa9afdc6837f257b45d0c3e53509db0fc86",
+      "maintainedGitBlob": "542777798f422f033d3d6e075bc3ec2393266713",
+      "matches": false
+    },
+    {
+      "path": "templates/karento-best/src/lib/components/PageMetadata.svelte",
+      "canonicalGitBlob": "ced17932b39d8feb90e0afc0762fbf6789db8739",
+      "maintainedGitBlob": "ced17932b39d8feb90e0afc0762fbf6789db8739",
+      "matches": true
+    },
+    {
+      "path": "templates/karento-best/src/lib/pages/index-3.svelte",
+      "canonicalGitBlob": "552326f85fbfe75e6a62cf79a87c386019e35c06",
+      "maintainedGitBlob": "552326f85fbfe75e6a62cf79a87c386019e35c06",
+      "matches": true
+    },
+    {
+      "path": "templates/karento-best/src/lib/components/mobile/MobilePill.svelte",
+      "canonicalGitBlob": "61fb5742774d687f53d125260dd61cf5f8a11a86",
+      "maintainedGitBlob": "61fb5742774d687f53d125260dd61cf5f8a11a86",
+      "matches": true
+    },
+    {
+      "path": "templates/karento-best/src/lib/components/mobile/MobilePillRail.svelte",
+      "canonicalGitBlob": "5eafcdb1f87beb8d1fbda20731d523170f3bf08a",
+      "maintainedGitBlob": "5eafcdb1f87beb8d1fbda20731d523170f3bf08a",
+      "matches": true
+    },
+    {
+      "path": "templates/karento-best/src/lib/i18n/vehicle.ts",
+      "canonicalGitBlob": "3453bc983a47a80c1b0131ec17ceb1891d362374",
+      "maintainedGitBlob": "3453bc983a47a80c1b0131ec17ceb1891d362374",
+      "matches": true
+    },
+    {
+      "path": "templates/karento-best/src/lib/sections/HomeVehicleCarousel.svelte",
+      "canonicalGitBlob": "0f5487b2aab799200a8f9f8614e651785e4cf7e9",
+      "maintainedGitBlob": "0f5487b2aab799200a8f9f8614e651785e4cf7e9",
+      "matches": true
+    },
+    {
+      "path": "templates/karento-best/src/lib/components/mobile/MobileSectionHeading.svelte",
+      "canonicalGitBlob": "d4600e50880450bcad9d6d9fe03e45450b306857",
+      "maintainedGitBlob": "d4600e50880450bcad9d6d9fe03e45450b306857",
+      "matches": true
+    },
+    {
+      "path": "templates/karento-best/src/lib/horizontal-scroll.ts",
+      "canonicalGitBlob": "ac673975b85b307eacd4853b57751e67bf9242cf",
+      "maintainedGitBlob": "ac673975b85b307eacd4853b57751e67bf9242cf",
+      "matches": true
+    },
+    {
+      "path": "templates/karento-best/src/lib/components/MobileSheet.svelte",
+      "canonicalGitBlob": "f26d25ff7bce94842fd5cbf2be00d16a0288b1a3",
+      "maintainedGitBlob": "f26d25ff7bce94842fd5cbf2be00d16a0288b1a3",
+      "matches": true
+    },
+    {
+      "path": "templates/karento-best/src/lib/components/mobile/MobileSearchField.svelte",
+      "canonicalGitBlob": "01da04ae23d0d1fa6f85ba29296b841171b23168",
+      "maintainedGitBlob": "01da04ae23d0d1fa6f85ba29296b841171b23168",
+      "matches": true
+    },
+    {
+      "path": "templates/karento-best/src/lib/components/mobile/MobileChoicePicker.svelte",
+      "canonicalGitBlob": "09462273101ce158013a3193a704ac51d5829bca",
+      "maintainedGitBlob": "09462273101ce158013a3193a704ac51d5829bca",
+      "matches": true
+    },
+    {
+      "path": "templates/karento-best/src/lib/data/mobile-catalog.ts",
+      "canonicalGitBlob": "c0b698ddf7d16a52eb796242e9a63b696aad08c7",
+      "maintainedGitBlob": "c0b698ddf7d16a52eb796242e9a63b696aad08c7",
+      "matches": true
+    }
+  ],
+  "preservedArtwork": {
+    "renderer": {
+      "path": "templates/karento-best/src/lib/components/mobile/BottomNavigationIcon.svelte",
+      "gitBlob": "43a7bfa9afdc6837f257b45d0c3e53509db0fc86",
+      "sha256": "feccf2ebd408aa6ab04904c117f436fd650921ae5a81376a435d6a1aacbd2afa"
+    },
+    "assets": [
+      {
+        "path": "templates/karento-best/static/assets/icons/signature-graphite/home.png",
+        "bytes": 13578,
+        "sha256": "117e797428bbd42dda3345f04458e4fc31a1af8a567d312d171d837e4142f9fd",
+        "recoveryReceiptContainsHash": true
+      },
+      {
+        "path": "templates/karento-best/static/assets/icons/signature-graphite/vehicles.png",
+        "bytes": 11627,
+        "sha256": "0474e4b2192bcb8abf7812b6132a710e2d1a886dba0ca175da884e683177d905",
+        "recoveryReceiptContainsHash": true
+      },
+      {
+        "path": "templates/karento-best/static/assets/icons/signature-graphite/services.png",
+        "bytes": 9098,
+        "sha256": "95ba21aa5b5567a59aa13da57fa655066519c636cf0f735ab7c52e9c3e45a3ad",
+        "recoveryReceiptContainsHash": true
+      },
+      {
+        "path": "templates/karento-best/static/assets/icons/signature-graphite/shop.png",
+        "bytes": 12844,
+        "sha256": "cbef5721ea4ce8d8af0034d16a26580ddeaa0ccabf37871fb7b2ec1091dfa4ee",
+        "recoveryReceiptContainsHash": true
+      },
+      {
+        "path": "templates/karento-best/static/assets/icons/signature-graphite/menu.png",
+        "bytes": 12330,
+        "sha256": "0af1a9aaf8233df0722ce827932f75cd359707328129ce3856314228ac11358f",
+        "recoveryReceiptContainsHash": true
+      }
+    ],
+    "exclude": [
+      "static/assets/icons/signature-graphite-refined/*",
+      "provenance/signature-graphite-refined-source-2026-10-16.png",
+      "provenance/signature-graphite-refinement-2026-10-16.json",
+      "local BottomNavigationIcon.svelte one-line refined folder change"
+    ]
+  },
+  "tests": {
+    "node": "v26.10.0",
+    "focusedCandidateCases": 5,
+    "sourceContractCases": 1,
+    "pass": 6,
+    "fail": 0,
+    "autofixer": {
+      "componentFiles": 10,
+      "issues": 0,
+      "suggestions": 0,
+      "offline": true
+    },
+    "maintainedSvelteTypes": {
+      "command": "node node_modules/svelte-check/bin/svelte-check --tsconfig ./tsconfig.json --output machine",
+      "cwd": "L:/CODEX/cars/templates/karento-best",
+      "files": 893,
+      "errors": 0,
+      "warnings": 0,
+      "scope": "Maintained source; all14candidate runtime files exactly match maintained bytes. Canonical preserved renderer differs only in original/refined asset folder selection."
+    },
+    "typeRefresh": {
+      "command": "node node_modules/@sveltejs/kit/svelte-kit.js sync",
+      "physicalCwd": "L:/CODEX/cars/templates/karento-best",
+      "passed": true,
+      "priorFailure": "J: junction invocation joined physical and alias paths; direct physical path fixed generated route types without source changes."
+    },
+    "notAcceptance": "No new browser, production build or hosted acceptance. Existing16Oct Home-promotion evidence is retained historical evidence only; its mixed pending icon artwork is excluded."
+  },
+  "remaining": [
+    "Final exact combined-source build and mounted six-template pilot are pending.",
+    "Old /2 bookmarks redirect307; package-dealer second-Home selector sees no /2/+page.svelte. Do not force a duplicate Home. Six-family FAB remains separate.",
+    "Historical320/390Home geometry evidence is not fresh browser acceptance of the canonical artwork selection."
+  ],
+  "published": false,
+  "sourceCreated": false,
+  "hosted": false
+}

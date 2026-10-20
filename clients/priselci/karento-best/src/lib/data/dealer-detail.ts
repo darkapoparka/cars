@@ -36,6 +36,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "valueKey": "fuel.gasoline"
       },
       {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2007",
+        "labelKey": "vehicle.field.year"
+      },
+      {
         "id": "lit",
         "icon": "/assets/imgs/page/car/lit.svg",
         "value": "140 hp",
@@ -125,7 +131,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Автокъща Приселци",
       "location": "бул. „Цар Освободител“ 285",
-      "avatar": "/dealer-brand/logo-on-light-20260919.webp",
+      "avatar": "/dealer-brand/v2-7b937c05859b3290/logo-on-light.webp",
       "mobile": "0886 251 705",
       "email": "",
       "whatsapp": "",
@@ -175,6 +181,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Petrol",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.gasoline"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2010",
+        "labelKey": "vehicle.field.year"
       },
       {
         "id": "lit",
@@ -273,7 +285,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Автокъща Приселци",
       "location": "бул. „Цар Освободител“ 285",
-      "avatar": "/dealer-brand/logo-on-light-20260919.webp",
+      "avatar": "/dealer-brand/v2-7b937c05859b3290/logo-on-light.webp",
       "mobile": "0886 251 705",
       "email": "",
       "whatsapp": "",
@@ -323,6 +335,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Diesel",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.diesel"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2008",
+        "labelKey": "vehicle.field.year"
       },
       {
         "id": "lit",
@@ -414,7 +432,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Автокъща Приселци",
       "location": "бул. „Цар Освободител“ 285",
-      "avatar": "/dealer-brand/logo-on-light-20260919.webp",
+      "avatar": "/dealer-brand/v2-7b937c05859b3290/logo-on-light.webp",
       "mobile": "0886 251 705",
       "email": "",
       "whatsapp": "",
@@ -464,6 +482,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Petrol",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.gasoline"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2010",
+        "labelKey": "vehicle.field.year"
       },
       {
         "id": "lit",
@@ -534,7 +558,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Автокъща Приселци",
       "location": "бул. „Цар Освободител“ 285",
-      "avatar": "/dealer-brand/logo-on-light-20260919.webp",
+      "avatar": "/dealer-brand/v2-7b937c05859b3290/logo-on-light.webp",
       "mobile": "0886 251 705",
       "email": "",
       "whatsapp": "",
@@ -584,6 +608,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Diesel",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.diesel"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2010",
+        "labelKey": "vehicle.field.year"
       },
       {
         "id": "lit",
@@ -678,7 +708,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Автокъща Приселци",
       "location": "бул. „Цар Освободител“ 285",
-      "avatar": "/dealer-brand/logo-on-light-20260919.webp",
+      "avatar": "/dealer-brand/v2-7b937c05859b3290/logo-on-light.webp",
       "mobile": "0886 251 705",
       "email": "",
       "whatsapp": "",
@@ -689,10 +719,10 @@ export const dealerDetails: readonly DealerDetail[] = [
       "pickUp": "",
       "dropOff": "",
       "extras": [],
-      "subtotal": "44299 EUR",
+      "subtotal": "4299 EUR",
       "discount": "",
-      "total": "44299 EUR",
-      "priceAmount": 44299,
+      "total": "4299 EUR",
+      "priceAmount": 4299,
       "currency": "EUR"
     }
   },
@@ -728,6 +758,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Petrol",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.gasoline"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2006",
+        "labelKey": "vehicle.field.year"
       },
       {
         "id": "lit",
@@ -822,7 +858,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Автокъща Приселци",
       "location": "бул. „Цар Освободител“ 285",
-      "avatar": "/dealer-brand/logo-on-light-20260919.webp",
+      "avatar": "/dealer-brand/v2-7b937c05859b3290/logo-on-light.webp",
       "mobile": "0886 251 705",
       "email": "",
       "whatsapp": "",
@@ -872,6 +908,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Diesel",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.diesel"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2009",
+        "labelKey": "vehicle.field.year"
       },
       {
         "id": "lit",
@@ -973,7 +1015,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Автокъща Приселци",
       "location": "бул. „Цар Освободител“ 285",
-      "avatar": "/dealer-brand/logo-on-light-20260919.webp",
+      "avatar": "/dealer-brand/v2-7b937c05859b3290/logo-on-light.webp",
       "mobile": "0886 251 705",
       "email": "",
       "whatsapp": "",
@@ -1023,6 +1065,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Diesel",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.diesel"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2011",
+        "labelKey": "vehicle.field.year"
       },
       {
         "id": "lit",
@@ -1122,7 +1170,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Автокъща Приселци",
       "location": "бул. „Цар Освободител“ 285",
-      "avatar": "/dealer-brand/logo-on-light-20260919.webp",
+      "avatar": "/dealer-brand/v2-7b937c05859b3290/logo-on-light.webp",
       "mobile": "0886 251 705",
       "email": "",
       "whatsapp": "",
@@ -1172,6 +1220,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Diesel",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.diesel"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2004",
+        "labelKey": "vehicle.field.year"
       },
       {
         "id": "lit",
@@ -1267,7 +1321,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Автокъща Приселци",
       "location": "бул. „Цар Освободител“ 285",
-      "avatar": "/dealer-brand/logo-on-light-20260919.webp",
+      "avatar": "/dealer-brand/v2-7b937c05859b3290/logo-on-light.webp",
       "mobile": "0886 251 705",
       "email": "",
       "whatsapp": "",
@@ -1317,6 +1371,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Diesel",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.diesel"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2010",
+        "labelKey": "vehicle.field.year"
       },
       {
         "id": "lit",
@@ -1411,7 +1471,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Автокъща Приселци",
       "location": "бул. „Цар Освободител“ 285",
-      "avatar": "/dealer-brand/logo-on-light-20260919.webp",
+      "avatar": "/dealer-brand/v2-7b937c05859b3290/logo-on-light.webp",
       "mobile": "0886 251 705",
       "email": "",
       "whatsapp": "",
@@ -1461,6 +1521,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Diesel",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.diesel"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2009",
+        "labelKey": "vehicle.field.year"
       },
       {
         "id": "lit",
@@ -1558,7 +1624,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Автокъща Приселци",
       "location": "бул. „Цар Освободител“ 285",
-      "avatar": "/dealer-brand/logo-on-light-20260919.webp",
+      "avatar": "/dealer-brand/v2-7b937c05859b3290/logo-on-light.webp",
       "mobile": "0886 251 705",
       "email": "",
       "whatsapp": "",
@@ -1608,6 +1674,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Petrol",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.gasoline"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2009",
+        "labelKey": "vehicle.field.year"
       },
       {
         "id": "lit",
@@ -1698,7 +1770,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Автокъща Приселци",
       "location": "бул. „Цар Освободител“ 285",
-      "avatar": "/dealer-brand/logo-on-light-20260919.webp",
+      "avatar": "/dealer-brand/v2-7b937c05859b3290/logo-on-light.webp",
       "mobile": "0886 251 705",
       "email": "",
       "whatsapp": "",
@@ -1748,6 +1820,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Diesel",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.diesel"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2012",
+        "labelKey": "vehicle.field.year"
       },
       {
         "id": "lit",
@@ -1845,7 +1923,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Автокъща Приселци",
       "location": "бул. „Цар Освободител“ 285",
-      "avatar": "/dealer-brand/logo-on-light-20260919.webp",
+      "avatar": "/dealer-brand/v2-7b937c05859b3290/logo-on-light.webp",
       "mobile": "0886 251 705",
       "email": "",
       "whatsapp": "",
@@ -1895,6 +1973,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Diesel",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.diesel"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2007",
+        "labelKey": "vehicle.field.year"
       },
       {
         "id": "lit",
@@ -1984,7 +2068,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Автокъща Приселци",
       "location": "бул. „Цар Освободител“ 285",
-      "avatar": "/dealer-brand/logo-on-light-20260919.webp",
+      "avatar": "/dealer-brand/v2-7b937c05859b3290/logo-on-light.webp",
       "mobile": "0886 251 705",
       "email": "",
       "whatsapp": "",
@@ -1995,10 +2079,10 @@ export const dealerDetails: readonly DealerDetail[] = [
       "pickUp": "",
       "dropOff": "",
       "extras": [],
-      "subtotal": "44399 EUR",
+      "subtotal": "4399 EUR",
       "discount": "",
-      "total": "44399 EUR",
-      "priceAmount": 44399,
+      "total": "4399 EUR",
+      "priceAmount": 4399,
       "currency": "EUR"
     }
   },
@@ -2034,6 +2118,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Diesel",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.diesel"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2012",
+        "labelKey": "vehicle.field.year"
       },
       {
         "id": "lit",
@@ -2129,7 +2219,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Автокъща Приселци",
       "location": "бул. „Цар Освободител“ 285",
-      "avatar": "/dealer-brand/logo-on-light-20260919.webp",
+      "avatar": "/dealer-brand/v2-7b937c05859b3290/logo-on-light.webp",
       "mobile": "0886 251 705",
       "email": "",
       "whatsapp": "",
@@ -2179,6 +2269,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Diesel",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.diesel"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2005",
+        "labelKey": "vehicle.field.year"
       },
       {
         "id": "lit",
@@ -2276,7 +2372,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Автокъща Приселци",
       "location": "бул. „Цар Освободител“ 285",
-      "avatar": "/dealer-brand/logo-on-light-20260919.webp",
+      "avatar": "/dealer-brand/v2-7b937c05859b3290/logo-on-light.webp",
       "mobile": "0886 251 705",
       "email": "",
       "whatsapp": "",
@@ -2287,10 +2383,10 @@ export const dealerDetails: readonly DealerDetail[] = [
       "pickUp": "",
       "dropOff": "",
       "extras": [],
-      "subtotal": "64100 EUR",
+      "subtotal": "4100 EUR",
       "discount": "",
-      "total": "64100 EUR",
-      "priceAmount": 64100,
+      "total": "4100 EUR",
+      "priceAmount": 4100,
       "currency": "EUR"
     }
   }

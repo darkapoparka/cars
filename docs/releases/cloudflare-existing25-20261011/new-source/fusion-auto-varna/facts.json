@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 1,
+  "slug": "fusion-auto-varna",
+  "dealerId": "fusion-auto-varna",
+  "business": {
+    "schemaVersion": 1,
+    "slug": "fusion-auto-varna",
+    "name": "ФЮЖЪН АУТО",
+    "shortName": "ФЮЖЪН АУТО",
+    "city": "Варна",
+    "country": "BG",
+    "countryCode": "BG",
+    "locale": "bg-BG",
+    "currency": "EUR",
+    "distanceUnit": "km",
+    "phone": "0879888461",
+    "phoneDisplay": "0879888461\r\n0883374712",
+    "phoneE164": "+359879888461",
+    "phones": [
+      "+359879888461",
+      "+359883374712"
+    ],
+    "addressLine": "Пътя за село Тополи, 200 м след Темпо Бетони в ляво, зад Автосервиз и ГТП Тандем",
+    "address": "Пътя за село Тополи, 200 м след Темпо Бетони в ляво, зад Автосервиз и ГТП Тандем, Варна, България",
+    "hours": "Потвърдете работното време директно с автокъщата.",
+    "email": "",
+    "sourceUrl": "https://fusionauto.mobile.bg/",
+    "stockUrl": "https://fusionauto.mobile.bg/",
+    "contactSourceUrl": "https://fusionauto.mobile.bg/contacts",
+    "observedAt": "2026-10-12T10:44:18.726Z",
+    "inventoryNotice": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "previewNotice": "Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация.",
+    "services": [],
+    "socialLinks": {},
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png",
+    "modernInventoryCopy": {
+      "fusion-auto-varna-11790662447767037": {
+        "sourceDescription": "Audi A7 Bi-TDI S-Line от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+        "en": {
+          "description": "Audi A7 Bi-TDI S-Line from a dated public advert. Confirm condition, price and availability directly with the dealership.",
+          "imageAlts": [
+            "Audi A7 Bi-TDI S-Line — dated public advert photo 1",
+            "Audi A7 Bi-TDI S-Line — dated public advert photo 2"
+          ]
+        },
+        "bg": {
+          "description": "Audi A7 Bi-TDI S-Line от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+          "imageAlts": [
+            "Audi A7 Bi-TDI S-Line — снимка от датирана публична обява 1",
+            "Audi A7 Bi-TDI S-Line — снимка от датирана публична обява 2"
+          ]
+        }
+      },
+      "fusion-auto-varna-21780841001174707": {
+        "sourceDescription": "Mercedes-Benz G 500 LPG от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+        "en": {
+          "description": "Mercedes-Benz G 500 LPG from a dated public advert. Confirm condition, price and availability directly with the dealership.",
+          "imageAlts": [
+            "Mercedes-Benz G 500 LPG — dated public advert photo 1",
+            "Mercedes-Benz G 500 LPG — dated public advert photo 2"
+          ]
+        },
+        "bg": {
+          "description": "Mercedes-Benz G 500 LPG от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+          "imageAlts": [
+            "Mercedes-Benz G 500 LPG — снимка от датирана публична обява 1",
+            "Mercedes-Benz G 500 LPG — снимка от датирана публична обява 2"
+          ]
+        }
+      }
+    }
+  },
+  "research": {
+    "website": {
+      "status": "workbook-reported-not-confirmed",
+      "url": "https://fusionauto.bg/"
+    },
+    "publicIdentityKey": "mobile-profile:fusionauto.mobile.bg",
+    "profileAdvertCount": 23,
+    "availabilityConfirmed": false,
+    "legalEntityOwnershipVerified": false,
+    "addressExactness": "public-contact-as-published",
+    "caveats": [],
+    "sourceProof": [
+      {
+        "url": "https://fusionauto.mobile.bg/",
+        "finalUrl": "https://fusionauto.mobile.bg/",
+        "observedAt": "2026-10-12T10:44:18.794Z",
+        "status": 200,
+        "bytes": 129151,
+        "sha256": "0a276627519354a3bbb862546e7af138fca275c02485c2a5466148c5d5fa5337"
+      },
+      {
+        "url": "https://fusionauto.mobile.bg/contacts",
+        "finalUrl": "https://fusionauto.mobile.bg/contacts",
+        "observedAt": "2026-10-12T10:44:18.726Z",
+        "status": 200,
+        "bytes": 42223,
+        "sha256": "e97e98fa7147f9307ebcada71fd27d8dedb39d0007200b815a0853a4bdcdfc3b"
+      },
+      {
+        "url": "https://fusionauto.mobile.bg/about",
+        "finalUrl": "https://fusionauto.mobile.bg/about",
+        "observedAt": "2026-10-12T10:44:18.718Z",
+        "status": 200,
+        "bytes": 6088,
+        "sha256": "a19afe023b2616055b79791f6789b668592be5278d407fb5eacdb7e6f160f823"
+      }
+    ],
+    "sourceAction": "new-absent-cars-source-after-wrapper-identity-recheck",
+    "existingSourceTree": null,
+    "inventoryModeSelection": "dated-listing-snapshot",
+    "productionAssetInputsComplete": true,
+    "stockSnapshotScope": "Two retained public adverts, not a complete/live inventory",
+    "stockMediaAuthority": "Owner-authorized public dated demo scope; original source bytes and watermarks retained"
+  }
+}

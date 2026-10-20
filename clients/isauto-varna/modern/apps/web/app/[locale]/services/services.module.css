@@ -78,14 +78,14 @@
 }
 .pills button[aria-pressed="true"],
 .empty button {
-  color: var(--brand-foreground);
-  background: var(--brand);
-  border-color: var(--brand);
+  color: var(--primary-foreground);
+  background: var(--primary);
+  border-color: var(--primary);
 }
 .clearSearch:focus-visible,
 .pills button:focus-visible,
 .empty button:focus-visible {
-  outline: var(--desktop-focus-width) solid var(--brand);
+  outline: var(--desktop-focus-width) solid var(--primary);
   outline-offset: var(--desktop-focus-offset);
 }
 .result {
@@ -250,13 +250,13 @@
     padding: 0 calc(var(--spacing) * 4);
     font-size: var(--text-desktop-control);
     line-height: var(--text-desktop-control--line-height);
-    color: var(--brand-foreground);
-    background: var(--brand);
+    color: var(--primary-foreground);
+    background: var(--primary);
     border-radius: var(--radius-pill);
     transition: background-color var(--duration-interaction);
   }
   .card:hover .action {
-    background: var(--lead-site-accent-hover);
+    background: var(--primary-hover);
   }
   .services {
     gap: var(--desktop-page-grid-gap);
@@ -308,7 +308,7 @@
   .mobileQuickFilters {
     position: relative;
     display: block;
-    padding: calc(var(--spacing) * 3) calc(var(--spacing) * 4) 0;
+    padding: calc(var(--spacing) * 2.5) calc(var(--spacing) * 4) 0;
     margin-top: calc(var(--spacing) * -3);
     background: var(--canvas);
     border-radius: calc(var(--spacing) * 4) calc(var(--spacing) * 4) 0 0;
@@ -317,7 +317,7 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: calc(var(--spacing) * 3);
     max-width: 32rem;
-    margin-block: calc(var(--spacing) * 3) calc(var(--spacing) * 6);
+    margin-block: calc(var(--spacing) * 2.5) calc(var(--spacing) * 6);
   }
   .card {
     position: relative;

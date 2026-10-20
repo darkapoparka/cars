@@ -1,20 +1,25 @@
 <script lang="ts">
+
+
+  import { getI18n } from '$lib/locale/context';
+  const i18n = getI18n();
+
   import { demoContentLabel, demoPartnerIntro, demoPartners } from '$data/demo-content';
 </script>
 
 <section class="dn-about-partners" aria-labelledby="about-partners-title" data-demo-content="true">
   <div class="container">
     <header class="dn-about-partners__heading">
-      <h2 id="about-partners-title">Партньори</h2>
-      <p><span class="dn-about-demo-note">{demoContentLabel}</span> · {demoPartnerIntro}</p>
+      <h2 id="about-partners-title">{i18n.t("m_98b74d2477ce")}</h2>
+      <p><span class="dn-about-demo-note">{i18n.text(demoContentLabel)}</span> · {i18n.text(demoPartnerIntro)}</p>
     </header>
 
-    <ul class="dn-about-partners__grid" aria-label="Демо партньорски лога">
+    <ul class="dn-about-partners__grid" aria-label={i18n.t("m_da4e16436b2c")}>
       {#each demoPartners as partner (partner.id)}
         <li>
           <img
             src={partner.image}
-            alt={`Демо лого: ${partner.name}`}
+            alt={i18n.t("m_c935e8bcbcc8", { p0: partner.name })}
             width="180"
             height="80"
             loading="lazy"
@@ -44,15 +49,15 @@
     text-align: center;
   }
 
-  .dn-about-demo-note { font-weight: 600; }
+  .dn-about-demo-note { font-weight: var(--dn-weight-semibold); }
 
   .dn-about-partners__heading h2 {
     margin: 0;
     color: #111;
-    font-size: clamp(30px, 3vw, 42px);
-    font-weight: 650;
-    line-height: 1.1;
-    letter-spacing: -0.035em;
+    font-size: var(--dn-text-fluid-section);
+    font-weight: var(--dn-weight-semibold);
+    line-height: var(--dn-leading-section);
+    letter-spacing: var(--dn-tracking-heading);
   }
 
   .dn-about-partners__heading p {
@@ -100,8 +105,8 @@
       background: var(--dn-mobile-canvas);
     }
     .dn-about-partners__heading { justify-items: start; text-align: left; }
-    .dn-about-partners__heading h2 { margin-top: 12px; font-size: 22px; }
-    .dn-about-partners__heading p { margin-top: 8px; font-size: 14px; line-height: 1.5; }
+    .dn-about-partners__heading h2 { margin-top: 12px; font-size: var(--dn-text-subheading); }
+    .dn-about-partners__heading p { margin-top: 8px; font-size: var(--dn-text-body); line-height: var(--dn-leading-body); }
 
     .dn-about-partners > .container {
       width: min(100% - 24px, 1296px);
@@ -116,7 +121,7 @@
     .dn-about-partners__grid li {
       min-height: 72px;
       padding: 8px 12px;
-      border-radius: 12px;
+      border-radius: var(--dn-radius-control);
       background: #fff;
     }
 

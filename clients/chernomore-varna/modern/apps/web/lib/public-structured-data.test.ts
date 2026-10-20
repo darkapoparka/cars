@@ -44,7 +44,7 @@ describe("public structured data contracts", () => {
     expect(offer.itemOffered).toEqual({ "@id": `${listingUrl}#vehicle` });
   });
 
-  it("localizes listing breadcrumb names without changing canonical paths", () => {
+  it("localizes breadcrumb names and preserves explicit canonical locales", () => {
     expect(listing).toBeTruthy();
     if (!listing) {
       throw new Error("Expected deterministic marketplace fixture");

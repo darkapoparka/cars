@@ -39,5 +39,6 @@ const logos: Record<string, BrandArtwork> = {
 };
 
 export function brandLogo(make: string): BrandArtwork | undefined {
-  return logos[make.trim().toLowerCase()];
+  const key = make.trim().toLowerCase();
+  return logos[key === 'vw' ? 'volkswagen' : key];
 }

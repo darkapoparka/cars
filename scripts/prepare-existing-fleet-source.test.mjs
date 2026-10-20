@@ -1,8 +1,9 @@
 import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import path from 'node:path';import {spawnSync} from 'node:child_process';
 import {sha256} from './lib/workflow.mjs';import {tinyArea,writeFixture} from './test-fixtures/fleet-single-worker.mjs';
-import {gitObjectId,gitTreeId,createSourcePatch,verifySourcePatch,validateSourceRequest,sourceCiContext,readBrandingInputs,bindPreparedShareLogo,sourceQualificationFiles,assertPreparedMountOwnership,SOURCE_CAMPAIGN,sourceRequestMode,resolveSourceRequest,sourceMatrix,assertNewSourceBootstrap} from './prepare-existing-fleet-source.mjs';
+import {gitObjectId,gitTreeId,createSourcePatch,verifySourcePatch,validateSourceRequest,sourceCiContext,readBrandingInputs,bindPreparedShareLogo,sourceQualificationFiles,assertPreparedMountOwnership,SOURCE_CAMPAIGN,sourceRequestMode,resolveSourceRequest,sourceMatrix,newSourceQualificationCheckoutPins,assertNewSourceBootstrap} from './prepare-existing-fleet-source.mjs';
 import {QUALIFICATION_LOCK_PATH} from './build-existing-fleet-cloudflare.mjs';import {planSixDesignSelection} from './lib/six-design-release.mjs';
 import {sourcePreparationPlanArgs,assertSourceFactualRefresh} from './prepare-existing-fleet-source.mjs';
+import {validateLogoContractResealRequest,assertLogoResealPreservation,bindLogoResealBrandingProof} from './prepare-existing-fleet-source.mjs';
 
 test('canonical source preparation opts into all-six factual targets while registered adoption keeps its authenticated seam',()=>{
  const input={source:'dealer',root:'cars',lockFile:'lock',qualificationFile:'qualification',runDirectory:'run',assetPool:'pool',resolutionsFile:'reviewed-resolutions'};
@@ -21,6 +22,37 @@ test('source preparation refuses stale-profile reseals, incomplete factual consu
  const forged=structuredClone(review);forged.factualRefresh.consumerHashes[0].sha256='d'.repeat(64);assert.throws(()=>assertSourceFactualRefresh({...input,review:forged}),/Original plan/);
  const finalStage=structuredClone(proof);finalStage.stage='final-branded-source';assert.throws(()=>assertSourceFactualRefresh({...input,metadata:{...metadata,factualRefresh:finalStage},review:{factualRefresh:finalStage}}),/original preparation stage/);
  const missingStage=structuredClone(proof);delete missingStage.stage;assert.throws(()=>assertSourceFactualRefresh({...input,metadata:{...metadata,factualRefresh:missingStage},review:{factualRefresh:missingStage}}),/original preparation stage/);
+});
+
+test('exact pilot logo continuation requires original tree and hash-pinned prepared receipt while opt-out remains absent',()=>{
+ const request={schemaVersion:1,dealers:['priselci'],sourceRevision:'b1f0f5609c7c249cfd0649c122849ff2cbb8dfde',logoContractReseal:{schemaVersion:1,kind:'cars-existing-source-derived-logo-reseal',sourceTree:'9b5ad1a83b3442a4f1453169517195afb6fe5a4b',sourceReceipt:{path:SOURCE_CAMPAIGN+'/pilot-logo-reseal/prior-source-preparation-receipt.json',sha256:'a'.repeat(64)}}};
+ assert.deepEqual(validateLogoContractResealRequest(request),request.logoContractReseal);
+ const ordinary=structuredClone(request);delete ordinary.logoContractReseal;assert.equal(validateLogoContractResealRequest(ordinary),null);
+ for(const mutate of [r=>r.dealers.push('another'),r=>r.mode='registered-adoption',r=>r.sourceRevision='b'.repeat(40),r=>r.logoContractReseal.sourceTree='c'.repeat(40),r=>r.logoContractReseal.extra=true,r=>r.logoContractReseal.sourceReceipt.path='../escape.json',r=>r.logoContractReseal.sourceReceipt.sha256='bad',r=>r.logoContractReseal=null]){const bad=structuredClone(request);mutate(bad);assert.throws(()=>validateLogoContractResealRequest(bad),/reseal|receipt|pilot/);}
+});
+
+test('logo continuation binds final branding ledger hashes and retains the original historical before hashes',()=>{
+ const names=['auto-best/src/lib/data/dealer-profile.json','import/src/lib/data/dealer-profile.json','modern/packages/marketplace-domain/testing/dealer-profile.json'],rows=names.map((path,i)=>({path,beforeSha256:String(i+1).repeat(64),afterSha256:String(i+4).repeat(64)})),branding={facts:{'stock.json':'a'.repeat(64),[names[0]]:rows[0].beforeSha256},changes:[{path:'retained-component.ts',before:'b'.repeat(64),after:'c'.repeat(64)},{path:names[1],before:'d'.repeat(64),after:rows[1].beforeSha256},{path:names[2],before:'e'.repeat(64),after:rows[2].beforeSha256}]},original=structuredClone(branding);
+ bindLogoResealBrandingProof(branding,rows);assert.deepEqual(branding.derivedProfileLogoBindings,rows);assert.equal(branding.facts[names[0]],rows[0].afterSha256);assert.equal(branding.facts['stock.json'],original.facts['stock.json']);assert.deepEqual(branding.changes[0],original.changes[0]);
+ for(const i of [1,2]){assert.equal(branding.changes[i].before,original.changes[i].before);assert.equal(branding.changes[i].after,rows[i].afterSha256);}assert.deepEqual(branding.changes.at(-1),{path:names[0],before:rows[0].beforeSha256,after:rows[0].afterSha256});
+ const stale=structuredClone(original);stale.changes[1].after='f'.repeat(64);assert.throws(()=>bindLogoResealBrandingProof(stale,rows),/ledger is stale/);
+ const duplicate=structuredClone(original);duplicate.changes.push({...duplicate.changes[1]});assert.throws(()=>bindLogoResealBrandingProof(duplicate,rows),/Duplicate original/);
+ const wrongFact=structuredClone(original);wrongFact.facts[names[0]]='f'.repeat(64);assert.throws(()=>bindLogoResealBrandingProof(wrongFact,rows),/factual hash/);
+});
+
+test('logo continuation preservation rejects changes to stock, components, rasters, inventory and file ownership',()=>{
+ const names=['auto-best/src/lib/data/dealer-profile.json','import/src/lib/data/dealer-profile.json','modern/packages/marketplace-domain/testing/dealer-profile.json'],before=new Map();
+ for(const name of names)before.set(name,Buffer.from(JSON.stringify({business:{logo:'/old-light.webp',logoLight:'/old-light.webp',logoDark:'/old-dark.webp',name:'Original factual business'},logoContract:{assets:Object.fromEntries(['onLight','onDark','onAccent'].map(surface=>[surface,{publicPath:'/old.webp',sha256:'a'.repeat(64),bytes:11,source:'original-reviewed-source'}]))},listings:[{id:'retained-stock-id',price:23456,currency:'EUR',mileage:123456,images:['/retained-vehicle.webp']}],custom:{retained:true}},null,2)+'\n'));
+ before.set('stock.json',Buffer.from('{"source":"original"}'));before.set('modern/apps/web/app/[locale]/services/page.tsx',Buffer.from('original native component'));before.set('branding/reviewed-surfaces/on-light.png',Buffer.from([0,255,9,7]));
+ const after=new Map(before),rows=[];
+ for(const name of names){const value=JSON.parse(before.get(name));for(const field of ['logo','logoLight','logoDark'])value.business[field]='/dealer-brand/v2-f18b62d1138c7fae/logo-on-light.webp';for(const surface of ['onLight','onDark','onAccent'])Object.assign(value.logoContract.assets[surface],{publicPath:'/dealer-brand/v2-f18b62d1138c7fae/logo-on-light.webp',sha256:'b'.repeat(64),bytes:22});after.set(name,Buffer.from(JSON.stringify(value,null,2)+'\n'));rows.push({path:name,beforeSha256:sha256(before.get(name)),afterSha256:sha256(after.get(name)),factualFieldsUnchanged:true});}
+ assert.equal(assertLogoResealPreservation(before,after,rows).rastersAndComponentsByteIdentical,true);
+ for(const name of ['stock.json','modern/apps/web/app/[locale]/services/page.tsx','branding/reviewed-surfaces/on-light.png']){const changed=new Map(after);changed.set(name,Buffer.from('unapproved drift'));assert.throws(()=>assertLogoResealPreservation(before,changed,rows),/unrelated source/);}
+ const inventory=new Map(after),changed=JSON.parse(inventory.get(names[0]));changed.listings[0].mileage=999999;inventory.set(names[0],Buffer.from(JSON.stringify(changed)));assert.throws(()=>assertLogoResealPreservation(before,inventory,rows),/non-logo profile facts/);
+ const expanded=new Map(after);expanded.set('new-source.ts',Buffer.from('unreviewed'));assert.throws(()=>assertLogoResealPreservation(before,expanded,rows),/file inventory/);
+ assert.throws(()=>assertLogoResealPreservation(before,after,rows.slice(1)),/three derived/);
+ assert.throws(()=>assertLogoResealPreservation(before,after,rows.map((row,index)=>index?row:{...row,afterSha256:'c'.repeat(64)})),/transition proof/);
+ assert.deepEqual(before.get('stock.json'),Buffer.from('{"source":"original"}'));
 });
 
 function baseline(){const files=new Map([['business-facts.json',Buffer.from('{"dealer":"truthful"}')],['scripts/run.mjs',Buffer.from('#!/usr/bin/env node\nold();\n')],['branding/original.png',Buffer.from([0,1,2,255])],['.client/recovery.json',Buffer.from('{"retain":true}')]]),entries=[...files].map(([path,bytes])=>({path,mode:path==='scripts/run.mjs'?'100755':'100644',blob:gitObjectId('blob',bytes)}));return {commit:'1'.repeat(40),files,entries,tree:gitTreeId(entries)};}
@@ -88,9 +120,11 @@ test('sharing follows the new reviewed pack rather than a retained old logo alia
  assert.throws(()=>bindPreparedShareLogo(files,manifest,{reviewedSurfaceVariants:{surfaces:{onLight:{sha256:'b'.repeat(64)}}}}),/exact reviewed/);
 });
 test('source workflow bounds historical Git read authentication to preparation with one request trigger',()=>{
- const yaml=fs.readFileSync(new URL('../.github/workflows/existing-fleet-source.yml',import.meta.url),'utf8');assert.match(yaml,/branches: \[main\]/);assert.match(yaml,/paths: \[docs\/releases\/cloudflare-existing25-20261011\/source-request\.json\]/);assert.match(yaml,/fetch-depth: 0/);assert.match(yaml,/prepare-existing-fleet-source\.mjs prepare/);assert.match(yaml,/max-parallel: 1/);assert.doesNotMatch(yaml,/workflow_dispatch|secrets\.|CLOUDFLARE_API_TOKEN|git (?:commit|add|push)|wrangler deploy|update-dealer-template\.mjs install/);
+ const yaml=fs.readFileSync(new URL('../.github/workflows/existing-fleet-source.yml',import.meta.url),'utf8');assert.match(yaml,/branches: \[main\]/);assert.match(yaml,/paths: \[docs\/releases\/cloudflare-existing25-20261011\/source-request\.json\]/);assert.match(yaml,/fetch-depth: 0/);assert.match(yaml,/prepare-existing-fleet-source\.mjs prepare/);assert.match(yaml.split('  prepare_source:')[1],/max-parallel: 8/);assert.doesNotMatch(yaml,/workflow_dispatch|secrets\.|CLOUDFLARE_API_TOKEN|git (?:commit|add|push)|wrangler deploy|update-dealer-template\.mjs install/);
  const plan=yaml.split('  prepare_source:')[0],prepare=yaml.split('  prepare_source:')[1];assert.match(plan,/persist-credentials: false/);assert.match(prepare,/persist-credentials: true/);assert.match(yaml,/contents: read/);
  const compileAt=prepare.indexOf('prepare-existing-fleet-source.mjs prepare'),cleanupAt=prepare.indexOf('End historical-source Git read authentication'),uploadAt=prepare.indexOf('uses: actions\/upload-artifact@');assert(compileAt<cleanupAt&&cleanupAt<uploadAt);
+ assert.match(yaml,/concurrency:\n  group: cars-existing25-source-preparation\n  cancel-in-progress: false/);assert.match(prepare,/needs: plan/);assert.match(prepare,/runs-on: ubuntu-24\.04/);assert.match(prepare,/fail-fast: false/);assert.match(prepare,/matrix: \$\{\{ fromJSON\(needs\.plan\.outputs\.matrix\) \}\}/);
+ assert.match(prepare,/DEALER_SLUG: \$\{\{ matrix\.slug \}\}/);assert.match(prepare,/name: existing-cf-source-\$\{\{ matrix\.slug \}\}-\$\{\{ github\.run_id \}\}-\$\{\{ github\.run_attempt \}\}/);assert.match(prepare,/\$\{\{ github\.run_id \}\}-\$\{\{ github\.run_attempt \}\}\/\$\{\{ matrix\.slug \}\}\/output\//);
  assert.match(prepare,/if: always\(\) && steps\.source_checkout\.outcome == 'success'/);assert.match(prepare,/git config --local --no-includes --get/);assert.match(prepare,/\$RUNNER_TEMP/);assert.match(prepare,/git config --file "\$credentials_config" --unset-all http\.https:\/\/github\.com\/\.extraheader/);assert.doesNotMatch(prepare,/--get-all.*extraheader|cat .*credentials_config|echo .*credentials_config/);
 });
 
@@ -116,11 +150,12 @@ test('new envelope rejects physical aliases, duplicate JSON keys, inventory drif
  f.write('docs/DEPLOYMENT-INVENTORY.json',{...f.registry,aliases:{[f.slug]:'preserved'}});await assert.rejects(()=>resolveSourceRequest(f.request,{root:f.root}),/bytes changed/);f.write('docs/DEPLOYMENT-INVENTORY.json',f.registry);
  const branding=f.write(f.prefix+'/branding.json',{master:{path:f.prefix+'/*.png',sha256:'d'.repeat(64)}}),nested=structuredClone(f.nested);nested.dealers[0].inputs.branding=branding;const request={...f.request,newSourceRequest:f.write(f.request.newSourceRequest.path,nested)};await assert.rejects(()=>sourceMatrix(request,{root:f.root}),/exact literals/);
 });
-test('legacy source matrix remains unchanged and new bootstrap rejects detached, shallow, stale and credentialed CI',async()=>{
+test('legacy source matrix remains unchanged and new bootstrap pins the event and rejects detached, shallow and credentialed CI',async t=>{
  const slug='priselci',request={schemaVersion:1,sourceRevision:'a'.repeat(40),approvedParentLockDigest:'b'.repeat(64),dealers:[slug],inputs:{[slug]:Object.fromEntries(['candidateLock','qualification','sourceDeltaReview','branding'].map(k=>[k,{path:SOURCE_CAMPAIGN+'/'+k+'.json',sha256:'c'.repeat(64)}]))}},leads=[{slug,proposedRepository:'darkapoparka/cars-priselci'}],registry={dealers:[{slug,repository:leads[0].proposedRepository}]};
- assert.equal(sourceRequestMode(request),'existing-migration');assert.deepEqual(await sourceMatrix(request,{leads,registry}),{include:[{slug}]});assert.deepEqual(await sourceMatrix({...request,mode:'existing-migration'},{leads,registry}),{include:[{slug}]});
+ const root=tinyArea(t),branding=Buffer.from(JSON.stringify({master:{path:'clients/'+slug+'/branding/master.png',sha256:'d'.repeat(64)},surfaces:{onLight:{path:SOURCE_CAMPAIGN+'/branding/light.png',sha256:'e'.repeat(64)}}}));writeFixture(path.join(root,request.inputs[slug].branding.path),branding);request.inputs[slug].branding.sha256=sha256(branding);
+ assert.equal(sourceRequestMode(request),'existing-migration');assert.deepEqual(await sourceMatrix(request,{root,leads,registry}),{include:[{slug}]});assert.deepEqual(await sourceMatrix({...request,mode:'existing-migration'},{root,leads,registry}),{include:[{slug}]});
  const env={GITHUB_ACTIONS:'true',GITHUB_EVENT_NAME:'push',GITHUB_REPOSITORY:'darkapoparka/cars',GITHUB_REF:'refs/heads/main',GITHUB_SHA:'a'.repeat(40),GITHUB_RUN_ID:'123',GITHUB_RUN_ATTEMPT:'1'},responses={'rev-parse HEAD':env.GITHUB_SHA,'remote get-url origin':'https://github.com/darkapoparka/cars.git','branch --show-current':'main','rev-parse --is-shallow-repository':'false','ls-remote --exit-code origin refs/heads/main':env.GITHUB_SHA+'\trefs/heads/main'},checkCi=options=>sourceCiContext({...options,platform:'linux',version:'v26.10.0'}),readGit=(_root,args)=>responses[args.join(' ')];
- assert.equal(assertNewSourceBootstrap({env,readGit,checkCi}).commit,env.GITHUB_SHA);for(const [key,value]of [['branch --show-current',''],['rev-parse --is-shallow-repository','true'],['ls-remote --exit-code origin refs/heads/main','b'.repeat(40)]])assert.throws(()=>assertNewSourceBootstrap({env,readGit:(_r,args)=>args.join(' ')===key?value:readGit(_r,args),checkCi}),/actual main|event SHA/);assert.throws(()=>assertNewSourceBootstrap({env:{...env,CF_API_TOKEN:'fixture-only'},readGit,checkCi}),/credentials/);
+ assert.equal(assertNewSourceBootstrap({env,readGit,checkCi}).commit,env.GITHUB_SHA);for(const [key,value]of [['branch --show-current',''],['rev-parse --is-shallow-repository','true']])assert.throws(()=>assertNewSourceBootstrap({env,readGit:(_r,args)=>args.join(' ')===key?value:readGit(_r,args),checkCi}),/actual main|event SHA/);assert.throws(()=>assertNewSourceBootstrap({env:{...env,CF_API_TOKEN:'fixture-only'},readGit,checkCi}),/credentials/);
 });
 test('source and build workflows establish history before work and end read authentication before uploads',()=>{
  const source=fs.readFileSync(new URL('../.github/workflows/existing-fleet-source.yml',import.meta.url),'utf8'),build=fs.readFileSync(new URL('../.github/workflows/existing-fleet-cloudflare.yml',import.meta.url),'utf8'),prepare=source.split('  prepare_source:')[1],compile=build.split('  compile:')[1].split('  delivery_artifacts:')[0],plan=build.split('  compile:')[0];
@@ -134,4 +169,44 @@ test('registered adoption is an explicit envelope and cannot forge preserved mou
  assert.equal(sourceRequestMode({}),'existing-migration');
  assert.throws(()=>assertPreparedMountOwnership({slug:'retained',variants:[]},baseline(),{}),/validated unmodified/);
  assert.throws(()=>validateSourceRequest({schemaVersion:1,mode:'registered-adoption',sourceRevision:'1'.repeat(40),approvedParentLockDigest:'2'.repeat(64),dealers:['retained'],inputs:{retained:{}}},{}, {dealers:[]}),/existing|request|dealer|mode|fields/i);
+});
+
+ test('each qualified source checkout physically includes every peer context read before dealer selection',async(t)=>{
+ const {readNewSourceInput}=await import('./prepare-new-dealer-source.mjs');
+ const root=tinyArea(t),prefix=SOURCE_CAMPAIGN+'/new-source',write=(name,value)=>{
+  const bytes=Buffer.from(JSON.stringify(value)+'\n');writeFixture(path.join(root,name),bytes);return {path:name,sha256:sha256(bytes)};
+ };
+ const contexts=Object.fromEntries(['alpha-dealer','beta-dealer','gamma-dealer'].map(slug=>[slug,write(prefix+'/'+slug+'/qualification-context.json',{dealer:slug,nativeApproval:false})]));
+ const candidateLock=write(prefix+'/qualification-lock.json',{schemaVersion:1}),request={qualification:{candidateLock,contexts}};
+ const sparse=path.join(root,'sparse-source-job');
+ for(const pin of newSourceQualificationCheckoutPins(request))writeFixture(path.join(sparse,pin.path),fs.readFileSync(path.join(root,pin.path)));
+ // The actual bounded reader must be able to fetch peer contexts as well as this job's context.
+ for(const [slug,pin]of Object.entries(contexts))assert.equal(JSON.parse(readNewSourceInput(sparse,pin,{prefix:prefix+'/'+slug}).bytes).dealer,slug);
+ assert.deepEqual(newSourceQualificationCheckoutPins({}),[]);
+ assert.equal(sha256(readNewSourceInput(sparse,candidateLock,{prefix}).bytes),candidateLock.sha256);
+ });
+
+test('immutable bootstrap does not reject unrelated main publication or perform a duplicate live-main check',()=>{
+ const env={GITHUB_ACTIONS:'true',GITHUB_EVENT_NAME:'push',GITHUB_REPOSITORY:'darkapoparka/cars',GITHUB_REF:'refs/heads/main',GITHUB_SHA:'a'.repeat(40),GITHUB_RUN_ID:'123',GITHUB_RUN_ATTEMPT:'1'};
+ const readGit=(_root,args)=>{if(args[0]==='ls-remote')throw Error('bootstrap must delegate live input leases');return {'rev-parse HEAD':env.GITHUB_SHA,'remote get-url origin':'https://github.com/darkapoparka/cars.git','branch --show-current':'main','rev-parse --is-shallow-repository':'false'}[args.join(' ')];};
+ assert.equal(assertNewSourceBootstrap({env,readGit,checkCi:o=>sourceCiContext({...o,platform:'linux',version:'v26.10.0'})}).commit,env.GITHUB_SHA);
+});
+
+function sparseBrandingMatrixFixture(t){
+ const root=tinyArea(t),slug='priselci',leads=[{slug,proposedRepository:'darkapoparka/cars-priselci'}],registry={dealers:[{slug,repository:leads[0].proposedRepository}]};
+ const request={schemaVersion:1,sourceRevision:'a'.repeat(40),approvedParentLockDigest:'b'.repeat(64),dealers:[slug],inputs:{[slug]:Object.fromEntries(['candidateLock','qualification','sourceDeltaReview','branding'].map(k=>[k,{path:SOURCE_CAMPAIGN+'/'+k+'.json',sha256:'c'.repeat(64)}]))}};
+ const pin=name=>({path:'docs/logo-polish-2026-10-14/final-raster-inputs/'+name,sha256:'d'.repeat(64)}),record={sourceMode:'retained-or-mixed-raster',master:pin('light.png'),mark:pin('mark.png'),surfaces:{onLight:pin('light.png'),onDark:pin('dark.png'),onAccent:pin('accent.png')},assets:{'app-icon.png':pin('icon.png'),'favicon.ico':pin('favicon.ico')}};
+ const write=value=>{const bytes=Buffer.from(JSON.stringify(value));writeFixture(path.join(root,request.inputs[slug].branding.path),bytes);request.inputs[slug].branding.sha256=sha256(bytes);};write(record);return {root,slug,leads,registry,request,record,write};
+}
+test('existing source matrix checks out each exact reviewed master, mark, surface and icon once',async t=>{
+ const f=sparseBrandingMatrixFixture(t),matrix=await sourceMatrix(f.request,f),paths=matrix.include[0].sourceInputs.split('\n');
+ assert.deepEqual(matrix.include,[{slug:f.slug,sourceInputs:['accent.png','dark.png','favicon.ico','icon.png','light.png','mark.png'].map(n=>'/docs/logo-polish-2026-10-14/final-raster-inputs/'+n).join('\n')}]);
+ assert.equal(paths.length,new Set(paths).size);assert(paths.every(p=>!p.endsWith('/')));assert.deepEqual(await sourceMatrix({...f.request,mode:'existing-migration'},f),matrix);
+});
+test('existing branding sparse inputs reject patterns, escapes, wrong hashes and conflicting role pins',async t=>{
+ const f=sparseBrandingMatrixFixture(t);
+ for(const path of ['docs/logo-polish-2026-10-14/*.png','docs/logo-polish-2026-10-14/a\nb.png','docs/logo-polish-2026-10-14/../outside.png','/docs/logo-polish-2026-10-14/a.png','C:/logo.png','docs/logo-polish-2026-10-14/a[1].png','other/logo.png']){const record=structuredClone(f.record);record.master.path=path;f.write(record);await assert.rejects(()=>sourceMatrix(f.request,f),/literal|boundary|pin/);}
+ const badHash=structuredClone(f.record);badHash.mark.sha256='no';f.write(badHash);await assert.rejects(()=>sourceMatrix(f.request,f),/hash-pinned/);
+ const conflict=structuredClone(f.record);conflict.surfaces.onLight.sha256='e'.repeat(64);f.write(conflict);await assert.rejects(()=>sourceMatrix(f.request,f),/Conflicting/);
+ f.write(f.record);f.request.inputs[f.slug].branding.sha256='f'.repeat(64);await assert.rejects(()=>sourceMatrix(f.request,f),/JSON bytes changed/);
 });

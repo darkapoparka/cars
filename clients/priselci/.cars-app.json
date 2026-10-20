@@ -3,32 +3,32 @@
   "dealer": "priselci",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "4e184777567849a2c5b4a9e4a3e652252179c29c",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "path": "templates/app",
-    "digest": "fad0067e48d7bd7e1c5177c5e91e2bc5767352e2c16621cb458d18a081f7c541",
-    "tree": "749512ff762c25272d1474225ff653dd4c88f0fe"
+    "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1",
+    "tree": "7f3d3ffa40546635377e6c5225194fe06fead291"
   },
-  "appDigest": "cc09ec397f5fdac3ac0fbbe5da8c84db0e134a66a0b353aaadb256eb89b83e27",
+  "appDigest": "a2958d1670fa6f6285ebc3fe4c8db68d794429b8570135451d0428b279863a15",
   "provenance": {
     "schemaVersion": 1,
     "dealer": "priselci",
     "profile": "auto-best/src/lib/data/dealer-profile.json",
-    "profileSha256": "a31e8701cf1f204e9ec1cbe5534c5d814410e12f21bd397bfc0098abd7bb9d56",
+    "profileSha256": "5869e1337980091e843365d43f6d4968bf29e8c7783d659059372e154433677a",
     "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
     "vehicles": 16,
     "currency": "EUR",
     "observedAt": "2026-09-07",
     "assets": [
       {
-        "source": "auto-best/static/dealer-brand/logo-on-light-20260919.webp",
-        "output": "public/dealer-app/logo-light-c6427ddf1f5c073cd1a5.webp",
-        "sha256": "c6427ddf1f5c073cd1a54333a305364ca8c3814295c3f9ec52428d69dd8667b8",
+        "source": "auto-best/static/dealer-brand/v2-7b937c05859b3290/logo-on-light.webp",
+        "output": "public/dealer-app/logo-light-1d6128e53c349b8dc5ef.webp",
+        "sha256": "1d6128e53c349b8dc5efb86466c6fa240f9e28fbceac5d5407e6cf91a84baf47",
         "role": "logo-light"
       },
       {
-        "source": "auto-best/static/dealer-brand/logo-on-dark-20260919.webp",
-        "output": "public/dealer-app/logo-dark-ac80f7e7b14ecc7ad9ec.webp",
-        "sha256": "ac80f7e7b14ecc7ad9ec63bfaba962c2381071d5f7f7da823a95b2ec84db029d",
+        "source": "auto-best/static/dealer-brand/v2-7b937c05859b3290/logo-on-dark.webp",
+        "output": "public/dealer-app/logo-dark-1517a218e600326a1332.webp",
+        "sha256": "1517a218e600326a13320e8da8b0a2cd4131ae1a2bf97da9a7b41e99483d8394",
         "role": "logo-dark"
       },
       {
@@ -415,13 +415,107 @@
         "sha256": "73fcd9b21db95093a3f47cd3b25dae21d9301daf248f99680353cdb7824915e0",
         "role": "vehicle"
       }
+    ],
+    "mileageFacts": [
+      {
+        "slug": "vw-golf-1-4-2007-11784527405061757",
+        "sourceValue": 235193,
+        "sourceUnit": "km",
+        "canonicalKm": 235193
+      },
+      {
+        "slug": "vw-passat-1-4-2010-11758270885113337",
+        "sourceValue": 179848,
+        "sourceUnit": "km",
+        "canonicalKm": 179848
+      },
+      {
+        "slug": "vw-passat-2-0tdi-commonrail-2008-11753962633467246",
+        "sourceValue": 210534,
+        "sourceUnit": "km",
+        "canonicalKm": 210534
+      },
+      {
+        "slug": "seat-ibiza-1-2-2010-11784527857493559",
+        "sourceValue": 175532,
+        "sourceUnit": "km",
+        "canonicalKm": 175532
+      },
+      {
+        "slug": "renault-koleos-2-0-4-4-2010-21754395406651747",
+        "sourceValue": 181246,
+        "sourceUnit": "km",
+        "canonicalKm": 181246
+      },
+      {
+        "slug": "peugeot-307-cc-2006-11781856640282742",
+        "sourceValue": 205664,
+        "sourceUnit": "km",
+        "canonicalKm": 205664
+      },
+      {
+        "slug": "ford-mondeo-2-0-dizel-2009-11759747090481666",
+        "sourceValue": 235788,
+        "sourceUnit": "km",
+        "canonicalKm": 235788
+      },
+      {
+        "slug": "peugeot-5008-2-0hdi-150-2011-11776863022154449",
+        "sourceValue": 210452,
+        "sourceUnit": "km",
+        "canonicalKm": 210452
+      },
+      {
+        "slug": "mercedes-benz-c-200-2-2-cdi-2004-11751891575433302",
+        "sourceValue": 218432,
+        "sourceUnit": "km",
+        "canonicalKm": 218432
+      },
+      {
+        "slug": "citroen-c3-picasso-1-6hdi-90-2010-11787126157294169",
+        "sourceValue": 185783,
+        "sourceUnit": "km",
+        "canonicalKm": 185783
+      },
+      {
+        "slug": "audi-a3-1-9-tdi-105ps-2009-11784638939574277",
+        "sourceValue": 253746,
+        "sourceUnit": "km",
+        "canonicalKm": 253746
+      },
+      {
+        "slug": "dacia-sandero-1-4-2009-11779190417819998",
+        "sourceValue": 136016,
+        "sourceUnit": "km",
+        "canonicalKm": 136016
+      },
+      {
+        "slug": "renault-grand-scenic-1-5dci-2012-11770812815337634",
+        "sourceValue": 199811,
+        "sourceUnit": "km",
+        "canonicalKm": 199811
+      },
+      {
+        "slug": "bmw-x3-2-0-4-4-2007-21786691566300206",
+        "sourceValue": 207195,
+        "sourceUnit": "km",
+        "canonicalKm": 207195
+      },
+      {
+        "slug": "nissan-qashqai-1-5-dci-2012-21787900875118991",
+        "sourceValue": 192641,
+        "sourceUnit": "km",
+        "canonicalKm": 192641
+      },
+      {
+        "slug": "mercedes-benz-e-280-3-0cdi-v6-2005-11763969547989753",
+        "sourceValue": 208357,
+        "sourceUnit": "km",
+        "canonicalKm": 208357
+      }
     ]
   },
-  "baseDeployment": {
-    "id": "dpl_9YZJVviuYC2w8xv7vxNP6fPXjdNk",
-    "url": "https://cars-priselci.vercel.app/",
-    "checkedAt": "2026-09-28T02:25:55.298Z"
-  },
-  "baseReceiptSha256": "c793bf349c7feae7cab0fcc9891617a370856c723990da8d6312887bd533d19c",
-  "refreshedAt": "2026-10-10T23:06:21.413Z"
+  "needsDealerQA": true,
+  "readyToPublish": false,
+  "refreshedAt": "2026-10-15T02:37:17.795Z"
 }

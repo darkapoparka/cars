@@ -27,9 +27,9 @@
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=AS%20Motor%20Group%2C%20Unit%202-3%20Chopdat%20Industrial%20Estate%2C%20Soothill%20Lane%2C%20Batley%20WF17%205SS",
     "mapsEmbedUrl": "https://maps.google.com/maps?q=AS%20Motor%20Group%2C%20Unit%202-3%20Chopdat%20Industrial%20Estate%2C%20Soothill%20Lane%2C%20Batley%20WF17%205SS&z=16&output=embed",
     "accent": "#A57F4D",
-    "logo": "/dealer-brand/logo.webp",
-    "logoLight": "/dealer-brand/logo.webp",
-    "logoDark": "/dealer-brand/logo.webp",
+    "logo": "/dealer-brand/v2-f2490e1cd4aba515/logo-on-light.webp",
+    "logoLight": "/dealer-brand/v2-f2490e1cd4aba515/logo-on-light.webp",
+    "logoDark": "/dealer-brand/v2-f2490e1cd4aba515/logo-on-dark.webp",
     "socialLinks": {
       "facebook": "",
       "instagram": "",
@@ -855,25 +855,31 @@
     "approvalStatus": "independent_design_proposal_not_dealer_approved",
     "assets": {
       "onLight": {
-        "publicPath": "/dealer-brand/logo.webp",
-        "sha256": "6caa1b29976e04784a567581823d517af961510c2e8c4aad4453b51c66db6df1",
-        "width": 1024,
-        "height": 341,
-        "background": "opaque_white"
+        "publicPath": "/dealer-brand/v2-f2490e1cd4aba515/logo-on-light.webp",
+        "sha256": "d4ac664155d177555206531213d412c77620b4da7c9aa8649e68ade671fbfa5b",
+        "width": 1002,
+        "height": 151,
+        "background": "transparent",
+        "foreground": "dark",
+        "bytes": 7000
       },
       "onDark": {
-        "publicPath": "/dealer-brand/logo.webp",
-        "sha256": "6caa1b29976e04784a567581823d517af961510c2e8c4aad4453b51c66db6df1",
-        "width": 1024,
-        "height": 341,
-        "background": "opaque_white"
+        "publicPath": "/dealer-brand/v2-f2490e1cd4aba515/logo-on-dark.webp",
+        "sha256": "653e13aa7deafa9c0a67f823d2252b7ae0d86f81763eddde5bcb70a8570fc9f4",
+        "width": 1002,
+        "height": 151,
+        "background": "transparent",
+        "foreground": "white",
+        "bytes": 7000
       },
       "onAccent": {
-        "publicPath": "/dealer-brand/logo.webp",
-        "sha256": "6caa1b29976e04784a567581823d517af961510c2e8c4aad4453b51c66db6df1",
-        "width": 1024,
-        "height": 341,
-        "background": "opaque_white"
+        "publicPath": "/dealer-brand/v2-f2490e1cd4aba515/logo-on-accent.webp",
+        "sha256": "653e13aa7deafa9c0a67f823d2252b7ae0d86f81763eddde5bcb70a8570fc9f4",
+        "width": 1002,
+        "height": 151,
+        "background": "transparent",
+        "foreground": "white",
+        "bytes": 7000
       }
     },
     "icon": {
@@ -909,6 +915,15 @@
       "deliveryEncoding": "Proportional size and delivery-format encoding only; no crop, recolouring or compositing.",
       "visualInspection": "Original reference where available, full business-name spelling, emblem completeness, white surface and square icon checked in generated output. Application consumers await browser QA.",
       "dealerApproval": false
-    }
+    },
+    "surfacePreparation": {
+      "width": 1002,
+      "height": 151,
+      "sourceSha256": "6caa1b29976e04784a567581823d517af961510c2e8c4aad4453b51c66db6df1",
+      "foregroundPixels": 49379,
+      "method": "Exact retained emblem and lettering; deterministic white-background alpha separation and monochrome raster encoding. No new generative model call succeeded or is claimed.",
+      "preparedAt": "2026-10-10T23:43:00.832Z"
+    },
+    "rules": "Use exact dark mark on light surfaces; exact white mark on dark and neutral accent surfaces. Never use CSS inversion, white plates or crop the emblem."
   }
 }

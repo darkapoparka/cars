@@ -1,0 +1,241 @@
+{
+  "strategy": "USE GENERATED CANDIDATE",
+  "identityStatus": "generated improved demo/proposal identity; not official or approved",
+  "publishedBranding": "Authoritative primary profile heading МИРАЖ АУТО supports identity; low-resolution poster final glyph is ambiguous, fresh proposal does not claim official spelling reproduction",
+  "sourceUrls": [
+    "https://miraj_auto.mobile.bg/"
+  ],
+  "sourceLogoUrl": null,
+  "workingLogoPath": null,
+  "generatedPath": "C:/Users/radev/.codex/generated_images/01a12a34-d2d7-7571-930a-1ed37e54ff8e/exec-0ce5035b-8dc4-4fbb-ac73-3f2887bce5e4.png",
+  "imageGeneration": {
+    "tool": "image_gen.imagegen",
+    "reference": "exec-0ce5035b-8dc4-4fbb-ac73-3f2887bce5e4",
+    "transparent_background": true,
+    "prompt": "Create a clearly disclosed improved demo proposal for Bulgarian dealer МИРАЖ АУТО. Exact Cyrillic uppercase МИРАЖ АУТО, bold subtly italic modern geometric sans. Main МИРАЖ charcoal, АУТО deep red. Small restrained angular M road monogram left in charcoal with one red stroke, no detailed car. Clean horizontal lockup, generous counters. No other text, tiny caption, promises or manufacturer logos. Genuine transparent background and gaps, flat crisp raster modest padding no shadow/glow/border.",
+    "referenced_image_paths": [],
+    "outputPath": "C:/Users/radev/.codex/generated_images/01a12a34-d2d7-7571-930a-1ed37e54ff8e/exec-0ce5035b-8dc4-4fbb-ac73-3f2887bce5e4.png",
+    "modelVersion": "not exposed by tool"
+  },
+  "surfaceReviewPath": "L:/CODEX/cars/leads/branding/fleet-20261011/miraj-auto-varna/surface-review.png",
+  "visualAccepted": true,
+  "visualChecks": {
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "surfaces": [
+      "white",
+      "#30343b",
+      "#17191c",
+      "#202023",
+      "#19171d",
+      "#171717",
+      "#b00020",
+      "#405ff2"
+    ],
+    "result": "Fresh disclosed proposal inspected: exact dealer lettering, clear open counters/monogram gaps, no backdrop residue/clipping, readable and contrasting on all current palette surfaces."
+  },
+  "authorization": "Owner 11 October 2026 approved fresh disclosed proposals for weak/cluttered source logos; preserve strong marks.",
+  "schemaVersion": 1,
+  "dealer": "miraj-auto-varna",
+  "state": "asset-verified",
+  "generated": {
+    "path": "C:/Users/radev/.codex/generated_images/01a12a34-d2d7-7571-930a-1ed37e54ff8e/exec-0ce5035b-8dc4-4fbb-ac73-3f2887bce5e4.png",
+    "sha256": "5de67b5ad2a19721f87bfbfc4c26d121bc25c6c951b8793f797ef9a4b70dc376",
+    "bytes": 389585,
+    "format": "png",
+    "width": 2172,
+    "height": 724,
+    "hasAlpha": true,
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparentRatio": 0.8334999440391523,
+      "opaqueRatio": 0.14514208967980222
+    },
+    "visibleBounds": {
+      "x": 37,
+      "y": 226,
+      "width": 2096,
+      "height": 236
+    }
+  },
+  "assets": {
+    "onLight": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/miraj-auto-varna/dealer-brand/logo-on-light.webp",
+      "sha256": "74f3c65e6c8bf654de808607a3006ac404072ab44822f6504c095e7530029373",
+      "bytes": 57794,
+      "format": "webp",
+      "width": 1496,
+      "height": 231,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.6580781072759683,
+        "opaqueRatio": 0.2924016714123666
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 36,
+        "width": 1400,
+        "height": 159
+      },
+      "publicPath": "/dealer-brand/logo-on-light.webp"
+    },
+    "onDark": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/miraj-auto-varna/dealer-brand/logo-on-dark.webp",
+      "sha256": "5566e0075b76f0488e1fdc0e247fce4fd9573914ca33c4303a73f41345919866",
+      "bytes": 33282,
+      "format": "webp",
+      "width": 1496,
+      "height": 231,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.6580781072759683,
+        "opaqueRatio": 0.2924016714123666
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 36,
+        "width": 1400,
+        "height": 159
+      },
+      "publicPath": "/dealer-brand/logo-on-dark.webp"
+    },
+    "onAccent": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/miraj-auto-varna/dealer-brand/logo-on-accent.webp",
+      "sha256": "5566e0075b76f0488e1fdc0e247fce4fd9573914ca33c4303a73f41345919866",
+      "bytes": 33282,
+      "format": "webp",
+      "width": 1496,
+      "height": 231,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.6580781072759683,
+        "opaqueRatio": 0.2924016714123666
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 36,
+        "width": 1400,
+        "height": 159
+      },
+      "publicPath": "/dealer-brand/logo-on-accent.webp"
+    }
+  },
+  "master": {
+    "path": "L:/CODEX/cars/leads/branding/fleet-20261011/miraj-auto-varna/branding/logo-master.png",
+    "sha256": "580af9aeb3d1e34a522bbaa71172e4b567b24555f73b48391b89d3dacee2d3d2",
+    "bytes": 160153,
+    "format": "png",
+    "width": 1496,
+    "height": 231,
+    "hasAlpha": true,
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparentRatio": 0.6580781072759683,
+      "opaqueRatio": 0.2924016714123666
+    },
+    "visibleBounds": {
+      "x": 48,
+      "y": 36,
+      "width": 1400,
+      "height": 159
+    }
+  },
+  "technicalAcceptance": {
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "surfaces": [
+      "white",
+      "#30343b",
+      "#17191c",
+      "#202023",
+      "#19171d",
+      "#171717",
+      "#b00020",
+      "#405ff2"
+    ],
+    "result": "Fresh disclosed proposal inspected: exact dealer lettering, clear open counters/monogram gaps, no backdrop residue/clipping, readable and contrasting on all current palette surfaces."
+  },
+  "integrationVerified": false,
+  "hostedVerified": false,
+  "ownerApproved": false,
+  "exportTool": "docs/logo-refresh/2026-09-18/tools/build-approved-logo-pack.mjs",
+  "exportToolSha256": "7fab60c4000210eff6bbb91f9c35e869bad90834d3bdd09d282a9a51835f0dbc",
+  "exportIsolation": "L:/CODEX/cars/runtime/fleet-logo-20261011/new-a-export",
+  "updatedAt": "2026-10-11T09:47:41.329Z",
+  "preservedSourceOriginal": {
+    "originalPath": "C:/Users/radev/Downloads/h11815718266160990.pic",
+    "path": "L:/CODEX/cars/leads/branding/fleet-20261011/miraj-auto-varna/source/published-original.pic",
+    "sha256": "5547491d7bbcf5ebcebdfae39c5ca0c4ed242cb7c65fa66767582f4986422ae5",
+    "bytes": 4141,
+    "width": 244,
+    "height": 93,
+    "format": "jpeg"
+  },
+  "exportSurfaceReviewPath": "L:/CODEX/cars/runtime/fleet-logo-20261011/new-a-export/miraj-auto-varna-review.png",
+  "retention": {
+    "finalQASheet": "L:/CODEX/cars/leads/branding/fleet-20261011/miraj-auto-varna/surface-review.png",
+    "toolOriginals": "Preserved on C: at exact recorded paths",
+    "sourceOriginal": "Preserved when available; screenshots and source limitations retained",
+    "scratch": "Owned inactive exporter outputs eligible for retirement; no live consumer binding",
+    "priorAcceptance": null
+  },
+  "sourceEvidence": [
+    {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/miraj-auto-varna/source/profile.png",
+      "sha256": "7ff5fcb4b1e1338ad1d0ad391e7e547db5c20d2f22214c00ed53709852d90c75",
+      "bytes": 90956,
+      "format": "jpeg",
+      "width": 1265,
+      "height": 712,
+      "hasAlpha": false,
+      "alpha": {
+        "min": 255,
+        "max": 255,
+        "transparentRatio": 0,
+        "opaqueRatio": 1
+      },
+      "visibleBounds": {
+        "x": 0,
+        "y": 0,
+        "width": 1265,
+        "height": 712
+      }
+    },
+    {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/miraj-auto-varna/source/published-original.pic",
+      "sha256": "5547491d7bbcf5ebcebdfae39c5ca0c4ed242cb7c65fa66767582f4986422ae5",
+      "bytes": 4141,
+      "format": "jpeg",
+      "width": 244,
+      "height": 93,
+      "hasAlpha": false,
+      "alpha": {
+        "min": 255,
+        "max": 255,
+        "transparentRatio": 0,
+        "opaqueRatio": 1
+      },
+      "visibleBounds": {
+        "x": 0,
+        "y": 0,
+        "width": 244,
+        "height": 93
+      }
+    }
+  ],
+  "provenanceFile": "L:/CODEX/cars/leads/branding/fleet-20261011/miraj-auto-varna/provenance.json"
+}

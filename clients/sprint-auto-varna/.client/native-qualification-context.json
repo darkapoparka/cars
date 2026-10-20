@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-native-source-qualification-context",
+  "id": "fleet-final-polish-20261014",
+  "dealer": "sprint-auto-varna",
+  "scope": "existing-dealer-pilot",
+  "sourceCommit": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+  "reviewed": true,
+  "reviewedAt": "2026-10-15T09:37:13.403Z",
+  "qualificationOnly": true,
+  "approved": false,
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "globalReleaseApproval": false,
+  "approvedLockSha256": "ecdfaf9599fbcbeadebc24de3b9aa1c7615a9a49e29d338e5e9a23427d405e26",
+  "candidateLockSha256": "04633129df9e75d6cd62deeac9125b279957789d75f57cdb0b243ef61bfc3e7e",
+  "sourceDeltaReview": {
+    "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-delta-review.json",
+    "sha256": "43cb6876e815a2a6b866f1dadd304236de4ae58c05fe65c2ab62a23506ee7ce9",
+    "reviewedAt": "2026-10-14T23:55:37.398Z"
+  },
+  "sourceReview": {
+    "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-review.json",
+    "sha256": "27c6ce5dd17ee6e1b9f6a5b059a95d5e1dbe4200f61264fc50addeb7af89d984"
+  },
+  "dealerSourceRepair": {
+    "kind": "explicit-selected-mobile-signature-logo-consumers",
+    "parentContextSha256": "52d074b2b5ccec30dfedc070ee4b8572cc3fb915ae5f87106aef7de5d1e5726f",
+    "baseSourceCommit": "b1efa579a6de24cb1efcd630ace63364d8198e99",
+    "baseSourceTree": "0d432b6f4b8e5a010eae3bf14265439052bbcffa",
+    "path": "mobile/src/lib/showroom-config.ts",
+    "beforeBlob": "1ba8901ae240d79aefdc5f381044c9f6f731ee00",
+    "afterBlob": "205e436a09c0032bd4ec4721af5aca314989e6e6",
+    "changedDesigns": [
+      "mobile",
+      "karento-best"
+    ],
+    "companionPaths": [
+      {
+        "path": "mobile/src/lib/showroom-config.ts",
+        "beforeBlob": "1ba8901ae240d79aefdc5f381044c9f6f731ee00",
+        "afterBlob": "205e436a09c0032bd4ec4721af5aca314989e6e6"
+      },
+      {
+        "path": "mobile/src/lib/dealers.ts",
+        "beforeBlob": "6e67037acffef0f0ad4ee788253c23533ec40104",
+        "afterBlob": "dac37e5cbb4ce121a1e32695cf7fd57689a85120"
+      },
+      {
+        "path": "karento-best/src/lib/content.ts",
+        "beforeBlob": "3ec3c01e7e39c5062e73d5ee91bb60109ff5ff31",
+        "afterBlob": "9be94738b063069c3bf51f33f93661313cffa836"
+      },
+      {
+        "path": "karento-best/src/lib/data/dealer-detail.ts",
+        "beforeBlob": "43bd31aa968deff25fa4d64833ca9f87556ccae0",
+        "afterBlob": "f55dfee0229b915a7df7d6593377903fa9b7ae4f"
+      },
+      {
+        "path": "karento-best/src/lib/data/vehicle-detail.ts",
+        "beforeBlob": "c34f80a1043d56e66a10899a7c07ec9dd216a6d8",
+        "afterBlob": "7a5349e41903218bb0c10e6d685ff8e9cfd56a81"
+      },
+      {
+        "path": ".cars-branding.json",
+        "beforeBlob": "244f5109d905f8057ff4aa4d3e998f75a7046a78",
+        "afterBlob": "a2f89c0229bc3fe90163ef361d5b6bdfda2d7e90"
+      }
+    ],
+    "receiptReseals": [
+      {
+        "path": ".cars-mobile.json",
+        "family": "mobile",
+        "beforeBlob": "ad0ee0e8c29f4d460c44aab3da152abae987358a",
+        "profileSha256Preserved": "3c741b9fb7e4dcf85f976055b9da87dd23222cf75a28eb1aecf3ea71765bfb07"
+      },
+      {
+        "path": ".cars-signature.json",
+        "family": "karento-best",
+        "beforeBlob": "b1335fb84d2d582facc7fa753a4415b4069fa509",
+        "profileSha256Preserved": "3c741b9fb7e4dcf85f976055b9da87dd23222cf75a28eb1aecf3ea71765bfb07"
+      }
+    ],
+    "immediateParentOverlay": {
+      "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-native/native-wave-015/published-ten-source-successors.json",
+      "sha256": "e7b40a66d73cd941b85be64ddef3093ee285df288a885fc5709c5627eb6c8c96"
+    },
+    "proof": {
+      "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/selected-webp-consumer-repair-20261015/sprint-auto-varna/focused-proof.json",
+      "sha256": "81e9af074fec5b6c0ecbbaa796b80d2128688bcc75c06e30b5a6b6c28af5639d"
+    },
+    "evidenceReuse": "Original immutable six-template QA and source preparation remain provenance; focused exact-source selected Mobile and Signature logo consumer proof covers this new dealer edit. No new CI, build, native or hosted success is asserted."
+  }
+}

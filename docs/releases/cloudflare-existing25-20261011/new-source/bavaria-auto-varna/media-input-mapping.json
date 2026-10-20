@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "dealer": "bavaria-auto-varna",
+  "media": [
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/bavaria-auto-varna/media/11789996935203115-1.webp",
+      "sha256": "3cc609c7561da319bfbe83f68ed7f50ff6dcb73bae621ffdc4b657837df0b5bf",
+      "bytes": 321746,
+      "destination": "dealer-stock/11789996935203115-1.webp"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/bavaria-auto-varna/media/11789996935203115-2.webp",
+      "sha256": "478bf23e96fad6b4de0aea8bfd0b5af6bf19290f2a2504349bb97e496bd4f4dd",
+      "bytes": 328164,
+      "destination": "dealer-stock/11789996935203115-2.webp"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/bavaria-auto-varna/media/11787839012622133-1.webp",
+      "sha256": "425b664ad1c51ecf08c0823745dce8bd276721828e9a2fa14f6a9d5519632392",
+      "bytes": 344480,
+      "destination": "dealer-stock/11787839012622133-1.webp"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/bavaria-auto-varna/media/11787839012622133-2.webp",
+      "sha256": "9e59317d8ece9a49c92ec0086f7792e1c0a0c77330ca2541acdbb4209b20e463",
+      "bytes": 258528,
+      "destination": "dealer-stock/11787839012622133-2.webp"
+    }
+  ]
+}

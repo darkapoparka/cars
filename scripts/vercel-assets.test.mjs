@@ -64,6 +64,33 @@ test('public byte and route budgets fail closed without changing any input', () 
   assert.throws(() => applyVercelAssets(files, { maxRoutes: 1 }), /route budget/);
   assert.deepEqual([...files], before);
 });
+test('route pressure retains tiny duplicate originals and preserves every existing route', () => {
+  const files = fixture(), manifest = JSON.parse(files.get('dealer.json'));
+  for (const {key} of manifest.variants) files.set(PUBLIC_ROOTS[key] + 'tiny.png', b('x'));
+  const config = JSON.parse(files.get('vercel.json'));
+  config.rewrites.unshift({source:'/legacy/car',destination:{service:'modern',path:'/inventory/car'}});
+  config.headers = [{source:'/existing/(.*)',headers:[{key:'X-Existing',value:'kept'}]}];
+  config.redirects = [{source:'/old',destination:'/en',permanent:true}];
+  files.set('vercel.json',b(config));
+  const original = new Map(files), plan = applyVercelAssets(files,{maxRoutes:10});
+  assert.equal(plan.summary.routes,10); assert.equal(plan.objects.length,1); assert.equal(plan.aliases.length,4);
+  assert.ok(plan.objects[0].from.endsWith('stock/car.webp'));
+  assert.equal(plan.removals.some(row=>row.relative==='tiny.png'),false);
+  const applied = JSON.parse(files.get('vercel.json'));
+  assert.deepEqual(applied.rewrites.slice(plan.aliases.length),config.rewrites);
+  assert.deepEqual(applied.redirects,config.redirects); assert.deepEqual(applied.headers.slice(0,-1),config.headers);
+  for(const [name,bytes] of original) if(name!=='vercel.json') assert.deepEqual(files.get(name),bytes);
+  assert.equal(plan.summary.inputBytes,plan.summary.outputBytes+plan.summary.localDuplicateBytesAvoided);
+  clearVercelAssetPlan(files); assert.deepEqual(JSON.parse(files.get('vercel.json')),config);
+  assert.deepEqual(applyVercelAssets(files,{maxRoutes:10}),plan);
+});
+test('route relief never bypasses the public byte budget or drops original media', () => {
+  const files = fixture(), manifest = JSON.parse(files.get('dealer.json'));
+  for(const {key} of manifest.variants) files.set(PUBLIC_ROOTS[key]+'tiny.png',b('x'));
+  const allPooled = planVercelAssets(files), before = [...files];
+  assert.throws(()=>applyVercelAssets(files,{maxRoutes:7,maxPublicBytes:allPooled.summary.outputBytes}),/Public asset budget exceeded/);
+  assert.deepEqual([...files],before);
+});
 test('Next service removes generated copies before Vercel captures public and preserves other services', t => {
   const files = fixture(); applyVercelAssets(files); seal(files); const root = directory(t, files);
   for (const key of ['modern', 'app']) {

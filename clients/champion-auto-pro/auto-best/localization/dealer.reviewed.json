@@ -24,6 +24,22 @@
     "notes": "Dealer-owned appointment and opening-hours guidance."
   },
   {
+    "key": "dealer.addressShort",
+    "source": "бул. „Цар Освободител“ 302 / Автомивка Izgi Europe Motor",
+    "en": "302 Tsar Osvoboditel Blvd. / Izgi Europe Motor car wash",
+    "bg": "бул. „Цар Освободител“ 302 / Автомивка Izgi Europe Motor",
+    "disposition": "translate",
+    "notes": "Native short-address consumer uses the recorded dealer address line."
+  },
+  {
+    "key": "dealer.appointmentShort",
+    "source": "Понеделник – петък: 09:30–18:00; Събота: 10:00–15:00; Неделя: почивен ден",
+    "en": "Monday–Friday: 09:30–18:00; Saturday: 10:00–15:00; Sunday: closed",
+    "bg": "Понеделник – петък: 09:30–18:00; Събота: 10:00–15:00; Неделя: почивен ден",
+    "disposition": "translate",
+    "notes": "Native short-hours consumer uses the same factual appointment guidance."
+  },
+  {
     "key": "m_159520cd7f28",
     "source": "Най-желаната кола в България | Lamborghini Urus",
     "en": "The most sought-after car in Bulgaria | Lamborghini Urus",

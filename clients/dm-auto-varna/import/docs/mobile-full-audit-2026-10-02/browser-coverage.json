@@ -1,0 +1,1037 @@
+[
+	{
+		"name": "home-320-short",
+		"url": "http://127.0.0.1:6790/bg",
+		"geometry": {
+			"bodyOverflow": "visible",
+			"dialogs": [],
+			"documentHeight": 3734,
+			"height": 568,
+			"overflow": false,
+			"scrollY": 0,
+			"width": 320
+		}
+	},
+	{
+		"name": "home-filters-top-320",
+		"url": "http://127.0.0.1:6790/bg",
+		"geometry": {
+			"bodyOverflow": "hidden",
+			"dialogs": [
+				{
+					"bottom": 568,
+					"clientHeight": 568,
+					"label": "bits-c26",
+					"scrollHeight": 1704,
+					"scrollTop": 0,
+					"top": 0
+				}
+			],
+			"documentHeight": 3734,
+			"height": 568,
+			"overflow": false,
+			"scrollY": 0,
+			"width": 320
+		}
+	},
+	{
+		"name": "home-filters-bottom-320",
+		"url": "http://127.0.0.1:6790/bg",
+		"geometry": {
+			"bodyOverflow": "hidden",
+			"dialogs": [
+				{
+					"bottom": 568,
+					"clientHeight": 568,
+					"label": "bits-c26",
+					"scrollHeight": 1704,
+					"scrollTop": 0,
+					"top": 0
+				}
+			],
+			"documentHeight": 3734,
+			"height": 568,
+			"overflow": false,
+			"scrollY": 0,
+			"width": 320
+		}
+	},
+	{
+		"name": "inventory-empty-320",
+		"url": "http://127.0.0.1:6790/bg/inventory?q=zzzz-nothing",
+		"geometry": {
+			"bodyOverflow": "visible",
+			"dialogs": [],
+			"documentHeight": 626,
+			"height": 568,
+			"overflow": false,
+			"scrollY": 0,
+			"width": 320
+		}
+	},
+	{
+		"name": "inventory-sort-320",
+		"url": "http://127.0.0.1:6790/bg/inventory",
+		"geometry": {
+			"bodyOverflow": "hidden",
+			"dialogs": [
+				{
+					"bottom": 568,
+					"clientHeight": 390,
+					"label": "bits-c36",
+					"scrollHeight": 1170,
+					"scrollTop": 0,
+					"top": 178
+				}
+			],
+			"documentHeight": 2386,
+			"height": 568,
+			"overflow": false,
+			"scrollY": 0,
+			"width": 320
+		}
+	},
+	{
+		"name": "inventory-brand-320",
+		"url": "http://127.0.0.1:6790/bg/inventory?sort=lowest-price",
+		"geometry": {
+			"bodyOverflow": "hidden",
+			"dialogs": [
+				{
+					"bottom": 568,
+					"clientHeight": 265,
+					"label": "bits-c38",
+					"scrollHeight": 795,
+					"scrollTop": 31,
+					"top": 303
+				}
+			],
+			"documentHeight": 2386,
+			"height": 568,
+			"overflow": false,
+			"scrollY": 0,
+			"width": 320
+		}
+	},
+	{
+		"name": "inventory-selected-320",
+		"url": "http://127.0.0.1:6790/bg/inventory?sort=lowest-price&brand=Mercedes-Benz&q=GLA",
+		"geometry": {
+			"bodyOverflow": "visible",
+			"dialogs": [],
+			"documentHeight": 626,
+			"height": 568,
+			"overflow": false,
+			"scrollY": 0,
+			"width": 320
+		}
+	},
+	{
+		"name": "inventory-year-320",
+		"url": "http://127.0.0.1:6790/bg/inventory?sort=lowest-price&brand=Mercedes-Benz&q=GLA",
+		"geometry": {
+			"bodyOverflow": "hidden",
+			"dialogs": [
+				{
+					"bottom": 568,
+					"clientHeight": 234,
+					"label": "bits-c44",
+					"scrollHeight": 702,
+					"scrollTop": 0,
+					"top": 334
+				}
+			],
+			"documentHeight": 626,
+			"height": 568,
+			"overflow": false,
+			"scrollY": 0,
+			"width": 320
+		}
+	},
+	{
+		"name": "inventory-search-320",
+		"url": "http://127.0.0.1:6790/bg/inventory?sort=lowest-price&brand=Mercedes-Benz&q=GLA",
+		"geometry": {
+			"bodyOverflow": "visible",
+			"dialogs": [
+				{
+					"bottom": 568,
+					"clientHeight": 568,
+					"label": "Намери автомобил",
+					"scrollHeight": 568,
+					"scrollTop": 0,
+					"top": 0
+				}
+			],
+			"documentHeight": 626,
+			"height": 568,
+			"overflow": false,
+			"scrollY": 0,
+			"width": 320
+		}
+	},
+	{
+		"name": "inventory-search-bottom-320",
+		"url": "http://127.0.0.1:6790/bg/inventory?sort=lowest-price&brand=Mercedes-Benz&q=GLA",
+		"geometry": {
+			"bodyOverflow": "visible",
+			"dialogs": [
+				{
+					"bottom": 568,
+					"clientHeight": 568,
+					"label": "Намери автомобил",
+					"scrollHeight": 568,
+					"scrollTop": 0,
+					"top": 0
+				}
+			],
+			"documentHeight": 626,
+			"height": 568,
+			"overflow": false,
+			"scrollY": 58,
+			"width": 320
+		}
+	},
+	{
+		"name": "import-country-320",
+		"url": "http://127.0.0.1:6790/bg/import",
+		"geometry": {
+			"bodyOverflow": "hidden",
+			"dialogs": [
+				{
+					"bottom": 568,
+					"clientHeight": 406,
+					"label": "bits-c58",
+					"scrollHeight": 1218,
+					"scrollTop": 0,
+					"top": 162
+				}
+			],
+			"documentHeight": 853,
+			"height": 568,
+			"overflow": false,
+			"scrollY": 0,
+			"width": 320
+		}
+	},
+	{
+		"name": "import-type-bottom-320",
+		"url": "http://127.0.0.1:6790/bg/import?origin=DE",
+		"geometry": {
+			"bodyOverflow": "hidden",
+			"dialogs": [
+				{
+					"bottom": 568,
+					"clientHeight": 523,
+					"label": "bits-c60",
+					"scrollHeight": 1568,
+					"scrollTop": 0,
+					"top": 45.453125
+				}
+			],
+			"documentHeight": 917,
+			"height": 568,
+			"overflow": false,
+			"scrollY": 0,
+			"width": 320
+		}
+	},
+	{
+		"name": "import-brand-bottom-320",
+		"url": "http://127.0.0.1:6790/bg/import?origin=DE&bodyType=Pickup+Truck",
+		"geometry": {
+			"bodyOverflow": "hidden",
+			"dialogs": [
+				{
+					"bottom": 568,
+					"clientHeight": 523,
+					"label": "bits-c62",
+					"scrollHeight": 1568,
+					"scrollTop": 0,
+					"top": 45.453125
+				}
+			],
+			"documentHeight": 609,
+			"height": 568,
+			"overflow": false,
+			"scrollY": 0,
+			"width": 320
+		}
+	},
+	{
+		"name": "import-how-320",
+		"url": "http://127.0.0.1:6790/bg/import?origin=DE&bodyType=Pickup+Truck&make=Volvo&model=XC60",
+		"geometry": {
+			"bodyOverflow": "hidden",
+			"dialogs": [
+				{
+					"bottom": 568,
+					"clientHeight": 523,
+					"label": "bits-c66",
+					"scrollHeight": 1568,
+					"scrollTop": 0,
+					"top": 45.453125
+				}
+			],
+			"documentHeight": 609,
+			"height": 568,
+			"overflow": false,
+			"scrollY": 0,
+			"width": 320
+		}
+	},
+	{
+		"name": "import-how-bottom-320",
+		"url": "http://127.0.0.1:6790/bg/import?origin=DE&bodyType=Pickup+Truck&make=Volvo&model=XC60",
+		"geometry": {
+			"bodyOverflow": "hidden",
+			"dialogs": [
+				{
+					"bottom": 568,
+					"clientHeight": 523,
+					"label": "bits-c66",
+					"scrollHeight": 1568,
+					"scrollTop": 0,
+					"top": 45.453125
+				}
+			],
+			"documentHeight": 609,
+			"height": 568,
+			"overflow": false,
+			"scrollY": 0,
+			"width": 320
+		}
+	},
+	{
+		"name": "import-source-step1-bottom-320",
+		"url": "http://127.0.0.1:6790/bg/import?origin=DE&bodyType=Pickup+Truck&make=Volvo&model=XC60",
+		"geometry": {
+			"bodyOverflow": "hidden",
+			"dialogs": [
+				{
+					"bottom": 568,
+					"clientHeight": 568,
+					"label": "bits-c68",
+					"scrollHeight": 568,
+					"scrollTop": 0,
+					"top": 0
+				}
+			],
+			"documentHeight": 609,
+			"height": 568,
+			"overflow": false,
+			"scrollY": 41,
+			"width": 320
+		}
+	},
+	{
+		"name": "import-requirements-320",
+		"url": "http://127.0.0.1:6790/bg/import?origin=DE&bodyType=Pickup+Truck&make=Volvo&model=XC60",
+		"geometry": {
+			"bodyOverflow": "hidden",
+			"dialogs": [
+				{
+					"bottom": 568,
+					"clientHeight": 568,
+					"label": "bits-c68",
+					"scrollHeight": 568,
+					"scrollTop": 0,
+					"top": 0
+				}
+			],
+			"documentHeight": 609,
+			"height": 568,
+			"overflow": false,
+			"scrollY": 41,
+			"width": 320
+		}
+	},
+	{
+		"name": "import-contact-step3-320",
+		"url": "http://127.0.0.1:6790/bg/import?origin=DE&bodyType=Pickup+Truck&make=Volvo&model=XC60",
+		"geometry": {
+			"bodyOverflow": "hidden",
+			"dialogs": [
+				{
+					"bottom": 568,
+					"clientHeight": 568,
+					"label": "bits-c68",
+					"scrollHeight": 568,
+					"scrollTop": 0,
+					"top": 0
+				}
+			],
+			"documentHeight": 609,
+			"height": 568,
+			"overflow": false,
+			"scrollY": 41,
+			"width": 320
+		}
+	},
+	{
+		"name": "import-contact-validation-320",
+		"url": "http://127.0.0.1:6790/bg/import?origin=DE&bodyType=Pickup+Truck&make=Volvo&model=XC60",
+		"geometry": {
+			"bodyOverflow": "hidden",
+			"dialogs": [
+				{
+					"bottom": 568,
+					"clientHeight": 568,
+					"label": "bits-c68",
+					"scrollHeight": 568,
+					"scrollTop": 0,
+					"top": 0
+				}
+			],
+			"documentHeight": 609,
+			"height": 568,
+			"overflow": false,
+			"scrollY": 41,
+			"width": 320
+		}
+	},
+	{
+		"name": "sell-manual-step1-320",
+		"url": "http://127.0.0.1:6790/bg/sell-your-car",
+		"geometry": {
+			"bodyOverflow": "hidden",
+			"dialogs": [
+				{
+					"bottom": 568,
+					"clientHeight": 568,
+					"label": "bits-c80",
+					"scrollHeight": 568,
+					"scrollTop": 0,
+					"top": 0
+				}
+			],
+			"documentHeight": 878,
+			"height": 568,
+			"overflow": false,
+			"scrollY": 0,
+			"width": 320
+		}
+	},
+	{
+		"name": "sell-manual-step1-bottom-320",
+		"url": "http://127.0.0.1:6790/bg/sell-your-car",
+		"geometry": {
+			"bodyOverflow": "hidden",
+			"dialogs": [
+				{
+					"bottom": 568,
+					"clientHeight": 568,
+					"label": "bits-c80",
+					"scrollHeight": 568,
+					"scrollTop": 0,
+					"top": 0
+				}
+			],
+			"documentHeight": 878,
+			"height": 568,
+			"overflow": false,
+			"scrollY": 0,
+			"width": 320
+		}
+	},
+	{
+		"name": "sell-contact-bottom-320",
+		"url": "http://127.0.0.1:6790/bg/sell-your-car",
+		"geometry": {
+			"bodyOverflow": "hidden",
+			"dialogs": [
+				{
+					"bottom": 568,
+					"clientHeight": 568,
+					"label": "bits-c80",
+					"scrollHeight": 568,
+					"scrollTop": 0,
+					"top": 0
+				}
+			],
+			"documentHeight": 878,
+			"height": 568,
+			"overflow": false,
+			"scrollY": 0,
+			"width": 320
+		}
+	},
+	{
+		"name": "sell-location-320",
+		"url": "http://127.0.0.1:6790/bg/sell-your-car",
+		"geometry": {
+			"bodyOverflow": "hidden",
+			"dialogs": [
+				{
+					"bottom": 568,
+					"clientHeight": 523,
+					"label": "bits-c81",
+					"scrollHeight": 1568,
+					"scrollTop": 0,
+					"top": 45.453125
+				}
+			],
+			"documentHeight": 878,
+			"height": 568,
+			"overflow": false,
+			"scrollY": 0,
+			"width": 320
+		}
+	},
+	{
+		"name": "menu-bottom-320",
+		"url": "http://127.0.0.1:6790/bg/sell-your-car",
+		"geometry": {
+			"bodyOverflow": "visible",
+			"dialogs": [
+				{
+					"bottom": 568,
+					"clientHeight": 523,
+					"label": "bits-c83",
+					"scrollHeight": 1568,
+					"scrollTop": 0,
+					"top": 45.453125
+				}
+			],
+			"documentHeight": 878,
+			"height": 568,
+			"overflow": false,
+			"scrollY": 0,
+			"width": 320
+		}
+	},
+	{
+		"name": "services-before-390",
+		"url": "http://127.0.0.1:6790/bg/services",
+		"geometry": {
+			"bodyOverflow": "visible",
+			"dialogs": [],
+			"documentHeight": 1643,
+			"height": 844,
+			"overflow": false,
+			"scrollY": 0,
+			"width": 390
+		}
+	},
+	{
+		"name": "services-lower-before-390",
+		"url": "http://127.0.0.1:6790/bg/services",
+		"geometry": {
+			"bodyOverflow": "visible",
+			"dialogs": [],
+			"documentHeight": 1643,
+			"height": 844,
+			"overflow": false,
+			"scrollY": 799,
+			"width": 390
+		}
+	},
+	{
+		"name": "services-desktop-before",
+		"url": "http://127.0.0.1:6795/bg/services",
+		"geometry": {
+			"bodyOverflow": "visible",
+			"dialogs": [],
+			"documentHeight": 2237,
+			"height": 1000,
+			"overflow": false,
+			"scrollY": 0,
+			"width": 1440
+		}
+	},
+	{
+		"name": "contact-before-390",
+		"url": "http://127.0.0.1:6790/bg/contact",
+		"geometry": {
+			"bodyOverflow": "visible",
+			"dialogs": [],
+			"documentHeight": 902,
+			"height": 844,
+			"overflow": false,
+			"scrollY": 0,
+			"width": 390
+		}
+	},
+	{
+		"name": "contact-form-bottom-320",
+		"url": "http://127.0.0.1:6790/bg/contact",
+		"geometry": {
+			"bodyOverflow": "hidden",
+			"dialogs": [
+				{
+					"bottom": 568,
+					"clientHeight": 523,
+					"label": "bits-c6",
+					"scrollHeight": 1568,
+					"scrollTop": 0,
+					"top": 45.453125
+				}
+			],
+			"documentHeight": 842,
+			"height": 568,
+			"overflow": false,
+			"scrollY": 274,
+			"width": 320
+		}
+	},
+	{
+		"name": "contact-validation-320",
+		"url": "http://127.0.0.1:6790/bg/contact",
+		"geometry": {
+			"bodyOverflow": "hidden",
+			"dialogs": [
+				{
+					"bottom": 568,
+					"clientHeight": 523,
+					"label": "bits-c6",
+					"scrollHeight": 1568,
+					"scrollTop": 0,
+					"top": 45.453125
+				}
+			],
+			"documentHeight": 842,
+			"height": 568,
+			"overflow": false,
+			"scrollY": 274,
+			"width": 320
+		}
+	},
+	{
+		"name": "compare-picker-bottom-320",
+		"url": "http://127.0.0.1:6790/bg/compare",
+		"geometry": {
+			"bodyOverflow": "hidden",
+			"dialogs": [
+				{
+					"bottom": 568,
+					"clientHeight": 523,
+					"label": "bits-c13",
+					"scrollHeight": 1568,
+					"scrollTop": 0,
+					"top": 45.453125
+				}
+			],
+			"documentHeight": 568,
+			"height": 568,
+			"overflow": false,
+			"scrollY": 0,
+			"width": 320
+		}
+	},
+	{
+		"name": "compare-two-cars-320",
+		"url": "http://127.0.0.1:6790/bg/compare?ids=21754658377544573%2C21775141376627460",
+		"geometry": {
+			"bodyOverflow": "visible",
+			"dialogs": [],
+			"documentHeight": 893,
+			"height": 568,
+			"overflow": false,
+			"scrollY": 0,
+			"width": 320
+		}
+	},
+	{
+		"name": "compare-table-scrolled-320",
+		"url": "http://127.0.0.1:6790/bg/compare?ids=21754658377544573%2C21775141376627460",
+		"geometry": {
+			"bodyOverflow": "visible",
+			"dialogs": [],
+			"documentHeight": 893,
+			"height": 568,
+			"overflow": false,
+			"scrollY": 0,
+			"width": 320
+		}
+	},
+	{
+		"name": "pdp-specs-bottom-320",
+		"url": "http://127.0.0.1:6790/bg/inventory/21754658377544573",
+		"geometry": {
+			"bodyOverflow": "hidden",
+			"dialogs": [
+				{
+					"bottom": 761.1199951171875,
+					"clientHeight": 568,
+					"label": "bits-c18",
+					"scrollHeight": 1704,
+					"scrollTop": 0,
+					"top": 193.1199951171875
+				}
+			],
+			"documentHeight": 568,
+			"height": 568,
+			"overflow": false,
+			"scrollY": 0,
+			"width": 320
+		}
+	},
+	{
+		"name": "pdp-features-320",
+		"url": "http://127.0.0.1:6790/bg/inventory/21754658377544573",
+		"geometry": {
+			"bodyOverflow": "hidden",
+			"dialogs": [
+				{
+					"bottom": 761.1199951171875,
+					"clientHeight": 568,
+					"label": "bits-c18",
+					"scrollHeight": 1704,
+					"scrollTop": 0,
+					"top": 193.1199951171875
+				}
+			],
+			"documentHeight": 568,
+			"height": 568,
+			"overflow": false,
+			"scrollY": 0,
+			"width": 320
+		}
+	},
+	{
+		"name": "pdp-handle-drag-320",
+		"url": "http://127.0.0.1:6790/bg/inventory/21754658377544573",
+		"geometry": {
+			"bodyOverflow": "hidden",
+			"dialogs": [
+				{
+					"bottom": 761.1199951171875,
+					"clientHeight": 568,
+					"label": "bits-c18",
+					"scrollHeight": 1704,
+					"scrollTop": 0,
+					"top": 193.1199951171875
+				}
+			],
+			"documentHeight": 568,
+			"height": 568,
+			"overflow": false,
+			"scrollY": 0,
+			"width": 320
+		}
+	},
+	{
+		"name": "pdp-features-bottom-320",
+		"url": "http://127.0.0.1:6790/bg/inventory/21754658377544573",
+		"geometry": {
+			"bodyOverflow": "hidden",
+			"dialogs": [
+				{
+					"bottom": 761.1199951171875,
+					"clientHeight": 568,
+					"label": "bits-c18",
+					"scrollHeight": 1704,
+					"scrollTop": 0,
+					"top": 193.1199951171875
+				}
+			],
+			"documentHeight": 568,
+			"height": 568,
+			"overflow": false,
+			"scrollY": 0,
+			"width": 320
+		}
+	},
+	{
+		"name": "pdp-gallery-320",
+		"url": "http://127.0.0.1:6790/bg/inventory/21754658377544573",
+		"geometry": {
+			"bodyOverflow": "hidden",
+			"dialogs": [
+				{
+					"bottom": 761.1199951171875,
+					"clientHeight": 568,
+					"label": "bits-c18",
+					"scrollHeight": 1704,
+					"scrollTop": 0,
+					"top": 193.1199951171875
+				}
+			],
+			"documentHeight": 568,
+			"height": 568,
+			"overflow": false,
+			"scrollY": 0,
+			"width": 320
+		}
+	},
+	{
+		"name": "pdp-gallery-open-320",
+		"url": "http://127.0.0.1:6790/bg/inventory/21754658377544573",
+		"geometry": {
+			"bodyOverflow": "hidden",
+			"dialogs": [
+				{
+					"bottom": 761.1199951171875,
+					"clientHeight": 568,
+					"label": "bits-c2",
+					"scrollHeight": 1704,
+					"scrollTop": 0,
+					"top": 193.1199951171875
+				},
+				{
+					"bottom": 568,
+					"clientHeight": 568,
+					"label": "bits-c15",
+					"scrollHeight": 568,
+					"scrollTop": 0,
+					"top": 0
+				}
+			],
+			"documentHeight": 568,
+			"height": 568,
+			"overflow": false,
+			"scrollY": 0,
+			"width": 320
+		}
+	},
+	{
+		"name": "pdp-enquiry-bottom-320",
+		"url": "http://127.0.0.1:6790/bg/inventory/21754658377544573",
+		"geometry": {
+			"bodyOverflow": "hidden",
+			"dialogs": [
+				{
+					"bottom": 761.1199951171875,
+					"clientHeight": 568,
+					"label": "bits-c2",
+					"scrollHeight": 1704,
+					"scrollTop": 0,
+					"top": 193.1199951171875
+				},
+				{
+					"bottom": 568,
+					"clientHeight": 523,
+					"label": "bits-c16",
+					"scrollHeight": 1568,
+					"scrollTop": 0,
+					"top": 45.453125
+				}
+			],
+			"documentHeight": 568,
+			"height": 568,
+			"overflow": false,
+			"scrollY": 0,
+			"width": 320
+		}
+	},
+	{
+		"name": "account-top-320",
+		"url": "http://127.0.0.1:6790/account",
+		"geometry": {
+			"bodyOverflow": "auto",
+			"dialogs": [],
+			"documentHeight": 1500,
+			"height": 568,
+			"overflow": false,
+			"scrollY": 0,
+			"width": 320
+		}
+	},
+	{
+		"name": "account-bottom-320",
+		"url": "http://127.0.0.1:6790/account",
+		"geometry": {
+			"bodyOverflow": "auto",
+			"dialogs": [],
+			"documentHeight": 1500,
+			"height": 568,
+			"overflow": false,
+			"scrollY": 932,
+			"width": 320
+		}
+	},
+	{
+		"name": "account-listings-empty-320",
+		"url": "http://127.0.0.1:6790/account/listings",
+		"geometry": {
+			"bodyOverflow": "auto",
+			"dialogs": [],
+			"documentHeight": 924,
+			"height": 568,
+			"overflow": false,
+			"scrollY": 0,
+			"width": 320
+		}
+	},
+	{
+		"name": "account-edit-320",
+		"url": "http://127.0.0.1:6790/account/listings/edit/submission-seed-1",
+		"geometry": {
+			"bodyOverflow": "auto",
+			"dialogs": [],
+			"documentHeight": 6769,
+			"height": 568,
+			"overflow": false,
+			"scrollY": 0,
+			"width": 320
+		}
+	},
+	{
+		"name": "account-edit-bottom-320",
+		"url": "http://127.0.0.1:6790/account/listings/edit/submission-seed-1",
+		"geometry": {
+			"bodyOverflow": "auto",
+			"dialogs": [],
+			"documentHeight": 6769,
+			"height": 568,
+			"overflow": false,
+			"scrollY": 6201,
+			"width": 320
+		}
+	},
+	{
+		"name": "account-profile-top-320",
+		"url": "http://127.0.0.1:6790/account/profile",
+		"geometry": {
+			"bodyOverflow": "auto",
+			"dialogs": [],
+			"documentHeight": 1177,
+			"height": 568,
+			"overflow": false,
+			"scrollY": 0,
+			"width": 320
+		}
+	},
+	{
+		"name": "account-profile-bottom-320",
+		"url": "http://127.0.0.1:6790/account/profile",
+		"geometry": {
+			"bodyOverflow": "auto",
+			"dialogs": [],
+			"documentHeight": 1177,
+			"height": 568,
+			"overflow": false,
+			"scrollY": 609,
+			"width": 320
+		}
+	},
+	{
+		"name": "account-messages-320",
+		"url": "http://127.0.0.1:6790/account/messages",
+		"geometry": {
+			"bodyOverflow": "visible",
+			"dialogs": [],
+			"documentHeight": 568,
+			"height": 568,
+			"overflow": false,
+			"scrollY": 0,
+			"width": 320
+		}
+	},
+	{
+		"name": "account-message-preview-320",
+		"url": "http://127.0.0.1:6790/account/messages",
+		"geometry": {
+			"bodyOverflow": "visible",
+			"dialogs": [],
+			"documentHeight": 568,
+			"height": 568,
+			"overflow": false,
+			"scrollY": 0,
+			"width": 320
+		}
+	},
+	{
+		"name": "locale-settings-320",
+		"url": "http://127.0.0.1:6790/account/messages",
+		"geometry": {
+			"bodyOverflow": "visible",
+			"dialogs": [],
+			"documentHeight": 568,
+			"height": 568,
+			"overflow": false,
+			"scrollY": 0,
+			"width": 320
+		}
+	},
+	{
+		"name": "locale-settings-page-320",
+		"url": "http://127.0.0.1:6790/bg/locale-settings?returnTo=%2Faccount%2Fmessages",
+		"geometry": {
+			"bodyOverflow": "visible",
+			"dialogs": [],
+			"documentHeight": 850,
+			"height": 568,
+			"overflow": false,
+			"scrollY": 0,
+			"width": 320
+		}
+	},
+	{
+		"name": "services-after-390",
+		"url": "http://127.0.0.1:6795/bg/services",
+		"geometry": {
+			"bodyOverflow": "visible",
+			"dialogs": [],
+			"documentHeight": 1643,
+			"height": 844,
+			"overflow": false,
+			"scrollY": 0,
+			"width": 390
+		}
+	},
+	{
+		"name": "services-lower-after-390",
+		"url": "http://127.0.0.1:6795/bg/services",
+		"geometry": {
+			"bodyOverflow": "visible",
+			"dialogs": [],
+			"documentHeight": 1643,
+			"height": 844,
+			"overflow": false,
+			"scrollY": 799,
+			"width": 390
+		}
+	},
+	{
+		"name": "contact-after-390",
+		"url": "http://127.0.0.1:6795/bg/contact",
+		"geometry": {
+			"bodyOverflow": "visible",
+			"dialogs": [],
+			"documentHeight": 902,
+			"height": 844,
+			"overflow": false,
+			"scrollY": 0,
+			"width": 390
+		}
+	},
+	{
+		"name": "contact-after-390",
+		"url": "http://127.0.0.1:6795/bg/contact",
+		"geometry": {
+			"bodyOverflow": "visible",
+			"dialogs": [],
+			"documentHeight": 902,
+			"height": 844,
+			"overflow": false,
+			"scrollY": 0,
+			"width": 390
+		}
+	},
+	{
+		"name": "services-desktop-after",
+		"url": "http://127.0.0.1:6795/bg/services",
+		"geometry": {
+			"bodyOverflow": "visible",
+			"dialogs": [],
+			"documentHeight": 2237,
+			"height": 1000,
+			"overflow": false,
+			"scrollY": 0,
+			"width": 1440
+		}
+	},
+	{
+		"name": "account-locale-fixed-320",
+		"url": "http://127.0.0.1:6795/account/messages",
+		"geometry": {
+			"bodyOverflow": "visible",
+			"documentHeight": 568,
+			"height": 568,
+			"overflow": false,
+			"scrollY": 0,
+			"width": 320
+		}
+	}
+]

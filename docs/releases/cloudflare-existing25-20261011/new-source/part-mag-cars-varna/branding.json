@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "dealer": "part-mag-cars-varna",
+  "reviewed": true,
+  "reviewedAt": "2026-10-12T11:22:38.953Z",
+  "generation": {
+    "tool": "image_gen",
+    "generationId": "exec-8c0ddbd8-ffa3-4abc-88cd-2d4d34d7ac16",
+    "modelVersion": null,
+    "sourceFileSha256": "bbf40482332aefadda5c54a9ac3ee5809af5227e019f4991d8289137cfbe71c9",
+    "sourceFileMeaning": "Exact text generation brief supplied to ImageGen; no official original logo was identified in the observed source views",
+    "sourceReference": "docs/releases/cloudflare-existing25-20261011/new-source/part-mag-cars-varna/generation-brief.json",
+    "sourceLogoUrl": null,
+    "creationMethod": "generated-demo-proposal",
+    "approvalStatus": "not-dealer-approved",
+    "nativeOutput": {
+      "path": "C:\\Users\\radev\\.codex\\generated_images\\01a12d64-9c2d-7b03-85e1-619a359e6894\\exec-8c0ddbd8-ffa3-4abc-88cd-2d4d34d7ac16.png",
+      "sha256": "2e8f541a825cd76aab8a3ca784c94c2503779658e0535f00c10924764de51a43",
+      "crop": {
+        "left": 29,
+        "top": 206,
+        "width": 2116,
+        "height": 270
+      },
+      "width": 2172,
+      "height": 724,
+      "transparentPixels": 1384408,
+      "opaquePixels": 152182
+    },
+    "visualReference": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/part-mag-cars-varna/source-profile-reference.jpg",
+      "sha256": "71675abdef0d8353c396cbbcdef459823979ebadc22a42f2dc968095b42125ff",
+      "bytes": 89756,
+      "usage": "Inspected for identity research; not passed as an ImageGen edit target"
+    }
+  },
+  "master": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/part-mag-cars-varna/branding/generated-master.png",
+    "sha256": "9a1e99312d16b5362fa6277e502d8e98537beb8ded0130cb69dc98c3e2fbde0c"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/part-mag-cars-varna/branding/on-light.png",
+      "sha256": "9a1e99312d16b5362fa6277e502d8e98537beb8ded0130cb69dc98c3e2fbde0c",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/new-source/part-mag-cars-varna/generation-brief.json",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-8c0ddbd8-ffa3-4abc-88cd-2d4d34d7ac16",
+        "modelVersion": null
+      }
+    },
+    "onDark": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/part-mag-cars-varna/branding/on-dark.png",
+      "sha256": "ee5b9861f1739fb69c562a0d8138d87d76bcb078c6d48fe3cd3f03f1d92e4b84",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/new-source/part-mag-cars-varna/branding/generated-master.png",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-fa33b9e5-7301-422b-b3c8-c7a5be21b71a",
+        "modelVersion": null
+      }
+    },
+    "onAccent": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/part-mag-cars-varna/branding/on-accent.png",
+      "sha256": "ee5b9861f1739fb69c562a0d8138d87d76bcb078c6d48fe3cd3f03f1d92e4b84",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/new-source/part-mag-cars-varna/branding/generated-master.png",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-fa33b9e5-7301-422b-b3c8-c7a5be21b71a",
+        "modelVersion": null
+      }
+    }
+  },
+  "provenance": {
+    "publishedBranding": "Only plain business headings/default marketplace avatar observed; not proof of no identity elsewhere",
+    "sourceLogoUrl": null,
+    "workingLogoPath": "docs/releases/cloudflare-existing25-20261011/new-source/part-mag-cars-varna/branding/generated-master.png",
+    "creationMethod": "ImageGen generated demo proposal + ImageGen matched white edit",
+    "approvalStatus": "proposal-not-official-or-dealer-approved",
+    "nativeWhiteOutput": {
+      "path": "C:\\Users\\radev\\.codex\\generated_images\\01a12d64-9c2d-7b03-85e1-619a359e6894\\exec-fa33b9e5-7301-422b-b3c8-c7a5be21b71a.png",
+      "sha256": "274c2a2279b95ebe9d27fa5aa9a168134451e431ca311cdd7f1d9856af25eacd",
+      "crop": {
+        "left": 28,
+        "top": 199,
+        "width": 2094,
+        "height": 267
+      },
+      "width": 2172,
+      "height": 724,
+      "transparentPixels": 1308210,
+      "opaquePixels": 153257
+    },
+    "whiteEditInput": {
+      "path": "C:\\Users\\radev\\.codex\\generated_images\\01a12d64-9c2d-7b03-85e1-619a359e6894\\exec-8c0ddbd8-ffa3-4abc-88cd-2d4d34d7ac16.png",
+      "sha256": "2e8f541a825cd76aab8a3ca784c94c2503779658e0535f00c10924764de51a43",
+      "usage": "Exact native dark output passed as referenced_image_paths to the matched white ImageGen edit; generated-master is a later lossless crop"
+    },
+    "exports": "Lossless PNG canvas crop only; original tool files retained. No repaint or shape editing.",
+    "sameWhiteArtworkUsedOnDarkAndAccent": true,
+    "mark": "full-reviewed-logo-contained fallback from maintained lead-branding tool",
+    "surfaceReviewScope": "Standalone proofs on exact selected B1 Modern and Import accents plus representative light/dark backgrounds; actual six app integration/consumer QA pending"
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "dealer": "nottingham-s-a-motors",
+  "reviewed": true,
+  "reviewedAt": "2026-10-11T13:30:47.484Z",
+  "reviewScope": "Hash-identical selected current raster inputs and retained genuine surface-review provenance only; actual dealer integration, native and hosted checks pending.",
+  "officialDealerArtwork": false,
+  "dealerApproval": false,
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "generation": {
+    "tool": "image_gen",
+    "generationId": "functions.exec cell54 image_gen.imagegen output exec-c46abff5-1b18-4a68-a0fe-47cd12a2684d",
+    "modelVersion": null,
+    "sourceSha256": "d55cbbb4796122eebde6de42260d909c5eed2aa19a8b7504ed9b4fab0d39a1c3",
+    "sourceRole": "Native ImageGen output behind exact retained selected raster; no new generation or claimed model version.",
+    "nativeOutput": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/nottingham-s-a-motors/source/native-onLight.png",
+      "sha256": "d55cbbb4796122eebde6de42260d909c5eed2aa19a8b7504ed9b4fab0d39a1c3"
+    },
+    "originalGenerationReceipt": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/nottingham-s-a-motors/source/generation-receipt.json",
+      "sha256": "dac466e5de514a5bcb1049629b5335b3abd8f673dad352763d28a7170924c037"
+    },
+    "derivation": "one ImageGen master exported to context raster"
+  },
+  "master": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/nottingham-s-a-motors/branding/master.png",
+    "sha256": "53105fddae0daec0a5c4b74b91ea0dc58f58e4378ca7cf8f13f4cf0af4592739"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/nottingham-s-a-motors/branding/onLight.png",
+      "sha256": "53105fddae0daec0a5c4b74b91ea0dc58f58e4378ca7cf8f13f4cf0af4592739",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/nottingham-s-a-motors/source/generation-receipt.json#sha256=dac466e5de514a5bcb1049629b5335b3abd8f673dad352763d28a7170924c037; exact selected handoff b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "functions.exec cell54 image_gen.imagegen output exec-c46abff5-1b18-4a68-a0fe-47cd12a2684d",
+        "modelVersion": null,
+        "sourceSha256": "d55cbbb4796122eebde6de42260d909c5eed2aa19a8b7504ed9b4fab0d39a1c3",
+        "sourceRole": "Native ImageGen output behind exact retained selected raster; no new generation or claimed model version.",
+        "nativeOutput": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/nottingham-s-a-motors/source/native-onLight.png",
+          "sha256": "d55cbbb4796122eebde6de42260d909c5eed2aa19a8b7504ed9b4fab0d39a1c3"
+        },
+        "originalGenerationReceipt": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/nottingham-s-a-motors/source/generation-receipt.json",
+          "sha256": "dac466e5de514a5bcb1049629b5335b3abd8f673dad352763d28a7170924c037"
+        },
+        "derivation": "one ImageGen master exported to context raster"
+      }
+    },
+    "onDark": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/nottingham-s-a-motors/branding/onDark.png",
+      "sha256": "c7b797695b6fb31f21b8d0ee2547b74492b9b946e95ba1ed3daa38748bc96df7",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/nottingham-s-a-motors/source/generation-receipt.json#sha256=dac466e5de514a5bcb1049629b5335b3abd8f673dad352763d28a7170924c037; exact selected handoff b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "functions.exec cell54 image_gen.imagegen output exec-c46abff5-1b18-4a68-a0fe-47cd12a2684d",
+        "modelVersion": null,
+        "sourceSha256": "d55cbbb4796122eebde6de42260d909c5eed2aa19a8b7504ed9b4fab0d39a1c3",
+        "sourceRole": "Native ImageGen output behind exact retained selected raster; no new generation or claimed model version.",
+        "nativeOutput": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/nottingham-s-a-motors/source/native-onDark.png",
+          "sha256": "d55cbbb4796122eebde6de42260d909c5eed2aa19a8b7504ed9b4fab0d39a1c3"
+        },
+        "originalGenerationReceipt": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/nottingham-s-a-motors/source/generation-receipt.json",
+          "sha256": "dac466e5de514a5bcb1049629b5335b3abd8f673dad352763d28a7170924c037"
+        },
+        "derivation": "one ImageGen master exported to context raster"
+      }
+    },
+    "onAccent": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/nottingham-s-a-motors/branding/onAccent.png",
+      "sha256": "c7b797695b6fb31f21b8d0ee2547b74492b9b946e95ba1ed3daa38748bc96df7",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/nottingham-s-a-motors/source/generation-receipt.json#sha256=dac466e5de514a5bcb1049629b5335b3abd8f673dad352763d28a7170924c037; exact selected handoff b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "functions.exec cell54 image_gen.imagegen output exec-c46abff5-1b18-4a68-a0fe-47cd12a2684d",
+        "modelVersion": null,
+        "sourceSha256": "d55cbbb4796122eebde6de42260d909c5eed2aa19a8b7504ed9b4fab0d39a1c3",
+        "sourceRole": "Native ImageGen output behind exact retained selected raster; no new generation or claimed model version.",
+        "nativeOutput": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/nottingham-s-a-motors/source/native-onAccent.png",
+          "sha256": "d55cbbb4796122eebde6de42260d909c5eed2aa19a8b7504ed9b4fab0d39a1c3"
+        },
+        "originalGenerationReceipt": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/nottingham-s-a-motors/source/generation-receipt.json",
+          "sha256": "dac466e5de514a5bcb1049629b5335b3abd8f673dad352763d28a7170924c037"
+        },
+        "derivation": "one ImageGen master exported to context raster"
+      }
+    }
+  },
+  "originalGenerationReceipt": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/nottingham-s-a-motors/source/generation-receipt.json",
+    "sha256": "dac466e5de514a5bcb1049629b5335b3abd8f673dad352763d28a7170924c037"
+  },
+  "acceptedLogoManifest": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/evidence/final-logo-handoff.json",
+    "sha256": "b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a"
+  },
+  "assetReview": {
+    "status": "completed",
+    "owner": "existing",
+    "proof": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/nottingham-s-a-motors/surface-review.png",
+      "sha256": "6cead48945844564d424a48a95a6796820874501c5a5f75e0ef1d068d4ac372a",
+      "bytes": 130796,
+      "width": 740,
+      "height": 864,
+      "format": "png",
+      "hasAlpha": true
+    },
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "scope": "Actual master and compact native-palette swatches inspected; retained pixels remain identical.",
+    "report": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/final-existing-review.json"
+  },
+  "sourceOwnershipUnchanged": true
+}

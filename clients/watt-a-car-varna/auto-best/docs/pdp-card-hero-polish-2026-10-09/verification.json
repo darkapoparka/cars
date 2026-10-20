@@ -1,0 +1,5567 @@
+{
+  "passed": true,
+  "cases": 30,
+  "mobileCardsPreserved": true,
+  "blog": {
+    "gradient": "radial-gradient(at 50% 24%, rgb(32, 35, 41) 0%, rgb(21, 24, 29) 68%)",
+    "cars": 2,
+    "overflow": -15
+  },
+  "rows": [
+    {
+      "locale": "en",
+      "width": 320,
+      "surface": "home",
+      "state": {
+        "overflow": -15,
+        "pdp": null,
+        "hero": null,
+        "controls": [],
+        "cards": [
+          {
+            "id": "vehicle-1",
+            "width": 224,
+            "height": 258.625,
+            "x": 12,
+            "y": 936.015625,
+            "title": {
+              "size": 16,
+              "weight": 500,
+              "width": 198,
+              "height": 20.796875,
+              "x": 25,
+              "y": 1093.046875
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 198,
+              "height": 28.796875,
+              "x": 25,
+              "y": 1121.84375
+            },
+            "padding": "12px 12px 8px",
+            "pricePadding": "0px",
+            "specPadding": "0px",
+            "specMargin": "8px",
+            "facts": [
+              {
+                "width": 53.359375,
+                "height": 23,
+                "x": 25,
+                "y": 1158.640625
+              },
+              {
+                "width": 84.953125,
+                "height": 23,
+                "x": 80.359375,
+                "y": 1158.640625
+              },
+              {
+                "width": 55.6875,
+                "height": 23,
+                "x": 167.3125,
+                "y": 1158.640625
+              }
+            ]
+          },
+          {
+            "id": "vehicle-2",
+            "width": 224,
+            "height": 258.625,
+            "x": 246,
+            "y": 936.015625,
+            "title": {
+              "size": 16,
+              "weight": 500,
+              "width": 198,
+              "height": 20.796875,
+              "x": 259,
+              "y": 1093.046875
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 198,
+              "height": 28.796875,
+              "x": 259,
+              "y": 1121.84375
+            },
+            "padding": "12px 12px 8px",
+            "pricePadding": "0px",
+            "specPadding": "0px",
+            "specMargin": "8px",
+            "facts": [
+              {
+                "width": 52.734375,
+                "height": 23,
+                "x": 259,
+                "y": 1158.640625
+              },
+              {
+                "width": 84.34375,
+                "height": 23,
+                "x": 313.734375,
+                "y": 1158.640625
+              },
+              {
+                "width": 56.921875,
+                "height": 23,
+                "x": 400.078125,
+                "y": 1158.640625
+              }
+            ]
+          },
+          {
+            "id": "vehicle-3",
+            "width": 224,
+            "height": 258.625,
+            "x": 480,
+            "y": 936.015625,
+            "title": {
+              "size": 16,
+              "weight": 500,
+              "width": 198,
+              "height": 20.796875,
+              "x": 493,
+              "y": 1093.046875
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 198,
+              "height": 28.796875,
+              "x": 493,
+              "y": 1121.84375
+            },
+            "padding": "12px 12px 8px",
+            "pricePadding": "0px",
+            "specPadding": "0px",
+            "specMargin": "8px",
+            "facts": [
+              {
+                "width": 53.359375,
+                "height": 23,
+                "x": 493,
+                "y": 1158.640625
+              },
+              {
+                "width": 84.953125,
+                "height": 23,
+                "x": 548.359375,
+                "y": 1158.640625
+              },
+              {
+                "width": 55.6875,
+                "height": 23,
+                "x": 635.3125,
+                "y": 1158.640625
+              }
+            ]
+          },
+          {
+            "id": "vehicle-4",
+            "width": 224,
+            "height": 258.625,
+            "x": 714,
+            "y": 936.015625,
+            "title": {
+              "size": 16,
+              "weight": 500,
+              "width": 198,
+              "height": 20.796875,
+              "x": 727,
+              "y": 1093.046875
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 198,
+              "height": 28.796875,
+              "x": 727,
+              "y": 1121.84375
+            },
+            "padding": "12px 12px 8px",
+            "pricePadding": "0px",
+            "specPadding": "0px",
+            "specMargin": "8px",
+            "facts": [
+              {
+                "width": 52.734375,
+                "height": 23,
+                "x": 727,
+                "y": 1158.640625
+              },
+              {
+                "width": 84.34375,
+                "height": 23,
+                "x": 781.734375,
+                "y": 1158.640625
+              },
+              {
+                "width": 56.921875,
+                "height": 23,
+                "x": 868.078125,
+                "y": 1158.640625
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "locale": "en",
+      "width": 320,
+      "surface": "cars",
+      "state": {
+        "overflow": -15,
+        "pdp": null,
+        "hero": null,
+        "controls": [],
+        "cards": [
+          {
+            "id": "vehicle-1",
+            "width": 281,
+            "height": 135,
+            "x": 12,
+            "y": 112,
+            "title": {
+              "size": 16,
+              "weight": 500,
+              "width": 133.75,
+              "height": 20.796875,
+              "x": 151.25,
+              "y": 144.78125
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 97.09375,
+              "height": 28.796875,
+              "x": 151.25,
+              "y": 173.578125
+            },
+            "padding": "0px",
+            "pricePadding": "0px",
+            "specPadding": "0px",
+            "specMargin": "12px",
+            "facts": [
+              {
+                "width": 43.640625,
+                "height": 23,
+                "x": 20,
+                "y": 216
+              },
+              {
+                "width": 75.25,
+                "height": 23,
+                "x": 65.640625,
+                "y": 216
+              },
+              {
+                "width": 45.96875,
+                "height": 23,
+                "x": 142.890625,
+                "y": 216
+              },
+              {
+                "width": 39.484375,
+                "height": 23,
+                "x": 190.859375,
+                "y": 216
+              },
+              {
+                "width": 52.65625,
+                "height": 23,
+                "x": 232.34375,
+                "y": 216
+              }
+            ]
+          },
+          {
+            "id": "vehicle-2",
+            "width": 281,
+            "height": 135,
+            "x": 12,
+            "y": 259,
+            "title": {
+              "size": 16,
+              "weight": 500,
+              "width": 133.75,
+              "height": 20.796875,
+              "x": 151.25,
+              "y": 291.78125
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 96.96875,
+              "height": 28.796875,
+              "x": 151.25,
+              "y": 320.578125
+            },
+            "padding": "0px",
+            "pricePadding": "0px",
+            "specPadding": "0px",
+            "specMargin": "12px",
+            "facts": [
+              {
+                "width": 46.265625,
+                "height": 23,
+                "x": 20,
+                "y": 363
+              },
+              {
+                "width": 77.875,
+                "height": 23,
+                "x": 68.265625,
+                "y": 363
+              },
+              {
+                "width": 50.4375,
+                "height": 23,
+                "x": 148.140625,
+                "y": 363
+              },
+              {
+                "width": 42.109375,
+                "height": 23,
+                "x": 200.578125,
+                "y": 363
+              },
+              {
+                "width": 40.3125,
+                "height": 23,
+                "x": 244.6875,
+                "y": 363
+              }
+            ]
+          },
+          {
+            "id": "vehicle-3",
+            "width": 281,
+            "height": 135,
+            "x": 12,
+            "y": 406,
+            "title": {
+              "size": 16,
+              "weight": 500,
+              "width": 133.75,
+              "height": 20.796875,
+              "x": 151.25,
+              "y": 438.78125
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 93.34375,
+              "height": 28.796875,
+              "x": 151.25,
+              "y": 467.578125
+            },
+            "padding": "0px",
+            "pricePadding": "0px",
+            "specPadding": "0px",
+            "specMargin": "12px",
+            "facts": [
+              {
+                "width": 46.625,
+                "height": 23,
+                "x": 20,
+                "y": 510
+              },
+              {
+                "width": 78.234375,
+                "height": 23,
+                "x": 68.625,
+                "y": 510
+              },
+              {
+                "width": 48.96875,
+                "height": 23,
+                "x": 148.859375,
+                "y": 510
+              },
+              {
+                "width": 42.484375,
+                "height": 23,
+                "x": 199.828125,
+                "y": 510
+              },
+              {
+                "width": 40.6875,
+                "height": 23,
+                "x": 244.3125,
+                "y": 510
+              }
+            ]
+          },
+          {
+            "id": "vehicle-4",
+            "width": 281,
+            "height": 135,
+            "x": 12,
+            "y": 553,
+            "title": {
+              "size": 16,
+              "weight": 500,
+              "width": 133.75,
+              "height": 20.796875,
+              "x": 151.25,
+              "y": 585.78125
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 95.71875,
+              "height": 28.796875,
+              "x": 151.25,
+              "y": 614.578125
+            },
+            "padding": "0px",
+            "pricePadding": "0px",
+            "specPadding": "0px",
+            "specMargin": "12px",
+            "facts": [
+              {
+                "width": 46.265625,
+                "height": 23,
+                "x": 20,
+                "y": 657
+              },
+              {
+                "width": 77.875,
+                "height": 23,
+                "x": 68.265625,
+                "y": 657
+              },
+              {
+                "width": 50.4375,
+                "height": 23,
+                "x": 148.140625,
+                "y": 657
+              },
+              {
+                "width": 42.109375,
+                "height": 23,
+                "x": 200.578125,
+                "y": 657
+              },
+              {
+                "width": 40.3125,
+                "height": 23,
+                "x": 244.6875,
+                "y": 657
+              }
+            ]
+          },
+          {
+            "id": "vehicle-6",
+            "width": 281,
+            "height": 135,
+            "x": 12,
+            "y": 700,
+            "title": {
+              "size": 16,
+              "weight": 500,
+              "width": 133.75,
+              "height": 20.796875,
+              "x": 151.25,
+              "y": 732.78125
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 91.265625,
+              "height": 28.796875,
+              "x": 151.25,
+              "y": 761.578125
+            },
+            "padding": "0px",
+            "pricePadding": "0px",
+            "specPadding": "0px",
+            "specMargin": "12px",
+            "facts": [
+              {
+                "width": 39.796875,
+                "height": 23,
+                "x": 20,
+                "y": 804
+              },
+              {
+                "width": 71.40625,
+                "height": 23,
+                "x": 61.796875,
+                "y": 804
+              },
+              {
+                "width": 42.125,
+                "height": 23,
+                "x": 135.203125,
+                "y": 804
+              },
+              {
+                "width": 35.640625,
+                "height": 23,
+                "x": 179.328125,
+                "y": 804
+              },
+              {
+                "width": 68.03125,
+                "height": 23,
+                "x": 216.96875,
+                "y": 804
+              }
+            ]
+          },
+          {
+            "id": "vehicle-7",
+            "width": 281,
+            "height": 135,
+            "x": 12,
+            "y": 847,
+            "title": {
+              "size": 16,
+              "weight": 500,
+              "width": 133.75,
+              "height": 20.796875,
+              "x": 151.25,
+              "y": 879.78125
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 94.859375,
+              "height": 28.796875,
+              "x": 151.25,
+              "y": 908.578125
+            },
+            "padding": "0px",
+            "pricePadding": "0px",
+            "specPadding": "0px",
+            "specMargin": "12px",
+            "facts": [
+              {
+                "width": 46.265625,
+                "height": 23,
+                "x": 20,
+                "y": 951
+              },
+              {
+                "width": 77.875,
+                "height": 23,
+                "x": 68.265625,
+                "y": 951
+              },
+              {
+                "width": 50.4375,
+                "height": 23,
+                "x": 148.140625,
+                "y": 951
+              },
+              {
+                "width": 42.109375,
+                "height": 23,
+                "x": 200.578125,
+                "y": 951
+              },
+              {
+                "width": 40.3125,
+                "height": 23,
+                "x": 244.6875,
+                "y": 951
+              }
+            ]
+          },
+          {
+            "id": "vehicle-8",
+            "width": 281,
+            "height": 135,
+            "x": 12,
+            "y": 994,
+            "title": {
+              "size": 16,
+              "weight": 500,
+              "width": 133.75,
+              "height": 20.796875,
+              "x": 151.25,
+              "y": 1026.78125
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 90.09375,
+              "height": 28.796875,
+              "x": 151.25,
+              "y": 1055.578125
+            },
+            "padding": "0px",
+            "pricePadding": "0px",
+            "specPadding": "0px",
+            "specMargin": "12px",
+            "facts": [
+              {
+                "width": 44.109375,
+                "height": 23,
+                "x": 20,
+                "y": 1098
+              },
+              {
+                "width": 75.71875,
+                "height": 23,
+                "x": 66.109375,
+                "y": 1098
+              },
+              {
+                "width": 46.453125,
+                "height": 23,
+                "x": 143.828125,
+                "y": 1098
+              },
+              {
+                "width": 39.96875,
+                "height": 23,
+                "x": 192.28125,
+                "y": 1098
+              },
+              {
+                "width": 50.75,
+                "height": 23,
+                "x": 234.25,
+                "y": 1098
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "locale": "en",
+      "width": 320,
+      "surface": "pdp",
+      "state": {
+        "overflow": -15,
+        "pdp": {
+          "title": {
+            "size": 20,
+            "weight": 500,
+            "width": 273,
+            "height": 22.390625,
+            "x": 16,
+            "y": 222.75
+          },
+          "price": {
+            "size": 24,
+            "weight": 600,
+            "width": 273,
+            "height": 26.875,
+            "x": 16,
+            "y": 253.140625
+          },
+          "gap": 8
+        },
+        "hero": null,
+        "controls": [
+          {
+            "width": 44,
+            "height": 44,
+            "x": 12,
+            "y": 12,
+            "clip": "content-box",
+            "shadow": "none",
+            "icon": {
+              "width": 20,
+              "height": 20,
+              "x": 24,
+              "y": 24
+            }
+          },
+          {
+            "width": 44,
+            "height": 44,
+            "x": 198,
+            "y": 12,
+            "clip": "content-box",
+            "shadow": "none",
+            "icon": {
+              "width": 20,
+              "height": 20,
+              "x": 210,
+              "y": 24
+            }
+          },
+          {
+            "width": 44,
+            "height": 44,
+            "x": 249,
+            "y": 12,
+            "clip": "content-box",
+            "shadow": "none",
+            "icon": {
+              "width": 20,
+              "height": 20,
+              "x": 261,
+              "y": 24
+            }
+          }
+        ],
+        "cards": []
+      }
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "surface": "home",
+      "state": {
+        "overflow": -15,
+        "pdp": null,
+        "hero": null,
+        "controls": [],
+        "cards": [
+          {
+            "id": "vehicle-1",
+            "width": 250,
+            "height": 273.25,
+            "x": 12,
+            "y": 936.015625,
+            "title": {
+              "size": 16,
+              "weight": 500,
+              "width": 224,
+              "height": 20.796875,
+              "x": 25,
+              "y": 1107.671875
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 224,
+              "height": 28.796875,
+              "x": 25,
+              "y": 1136.46875
+            },
+            "padding": "12px 12px 8px",
+            "pricePadding": "0px",
+            "specPadding": "0px",
+            "specMargin": "8px",
+            "facts": [
+              {
+                "width": 62.015625,
+                "height": 23,
+                "x": 25,
+                "y": 1173.265625
+              },
+              {
+                "width": 93.625,
+                "height": 23,
+                "x": 89.015625,
+                "y": 1173.265625
+              },
+              {
+                "width": 64.359375,
+                "height": 23,
+                "x": 184.640625,
+                "y": 1173.265625
+              }
+            ]
+          },
+          {
+            "id": "vehicle-2",
+            "width": 250,
+            "height": 273.25,
+            "x": 272,
+            "y": 936.015625,
+            "title": {
+              "size": 16,
+              "weight": 500,
+              "width": 224,
+              "height": 20.796875,
+              "x": 285,
+              "y": 1107.671875
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 224,
+              "height": 28.796875,
+              "x": 285,
+              "y": 1136.46875
+            },
+            "padding": "12px 12px 8px",
+            "pricePadding": "0px",
+            "specPadding": "0px",
+            "specMargin": "8px",
+            "facts": [
+              {
+                "width": 61.40625,
+                "height": 23,
+                "x": 285,
+                "y": 1173.265625
+              },
+              {
+                "width": 93.015625,
+                "height": 23,
+                "x": 348.40625,
+                "y": 1173.265625
+              },
+              {
+                "width": 65.578125,
+                "height": 23,
+                "x": 443.421875,
+                "y": 1173.265625
+              }
+            ]
+          },
+          {
+            "id": "vehicle-3",
+            "width": 250,
+            "height": 273.25,
+            "x": 532,
+            "y": 936.015625,
+            "title": {
+              "size": 16,
+              "weight": 500,
+              "width": 224,
+              "height": 20.796875,
+              "x": 545,
+              "y": 1107.671875
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 224,
+              "height": 28.796875,
+              "x": 545,
+              "y": 1136.46875
+            },
+            "padding": "12px 12px 8px",
+            "pricePadding": "0px",
+            "specPadding": "0px",
+            "specMargin": "8px",
+            "facts": [
+              {
+                "width": 62.015625,
+                "height": 23,
+                "x": 545,
+                "y": 1173.265625
+              },
+              {
+                "width": 93.625,
+                "height": 23,
+                "x": 609.015625,
+                "y": 1173.265625
+              },
+              {
+                "width": 64.359375,
+                "height": 23,
+                "x": 704.640625,
+                "y": 1173.265625
+              }
+            ]
+          },
+          {
+            "id": "vehicle-4",
+            "width": 250,
+            "height": 273.25,
+            "x": 792,
+            "y": 936.015625,
+            "title": {
+              "size": 16,
+              "weight": 500,
+              "width": 224,
+              "height": 20.796875,
+              "x": 805,
+              "y": 1107.671875
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 224,
+              "height": 28.796875,
+              "x": 805,
+              "y": 1136.46875
+            },
+            "padding": "12px 12px 8px",
+            "pricePadding": "0px",
+            "specPadding": "0px",
+            "specMargin": "8px",
+            "facts": [
+              {
+                "width": 61.40625,
+                "height": 23,
+                "x": 805,
+                "y": 1173.265625
+              },
+              {
+                "width": 93.015625,
+                "height": 23,
+                "x": 868.40625,
+                "y": 1173.265625
+              },
+              {
+                "width": 65.578125,
+                "height": 23,
+                "x": 963.421875,
+                "y": 1173.265625
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "surface": "cars",
+      "state": {
+        "overflow": -15,
+        "pdp": null,
+        "hero": null,
+        "controls": [],
+        "cards": [
+          {
+            "id": "vehicle-1",
+            "width": 351,
+            "height": 135,
+            "x": 12,
+            "y": 112,
+            "title": {
+              "size": 16,
+              "weight": 500,
+              "width": 172.25,
+              "height": 20.796875,
+              "x": 182.75,
+              "y": 144.78125
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 97.09375,
+              "height": 28.796875,
+              "x": 182.75,
+              "y": 173.578125
+            },
+            "padding": "0px",
+            "pricePadding": "0px",
+            "specPadding": "0px",
+            "specMargin": "12px",
+            "facts": [
+              {
+                "width": 57.640625,
+                "height": 23,
+                "x": 20,
+                "y": 216
+              },
+              {
+                "width": 89.25,
+                "height": 23,
+                "x": 79.640625,
+                "y": 216
+              },
+              {
+                "width": 59.96875,
+                "height": 23,
+                "x": 170.890625,
+                "y": 216
+              },
+              {
+                "width": 53.484375,
+                "height": 23,
+                "x": 232.859375,
+                "y": 216
+              },
+              {
+                "width": 66.65625,
+                "height": 23,
+                "x": 288.34375,
+                "y": 216
+              }
+            ]
+          },
+          {
+            "id": "vehicle-2",
+            "width": 351,
+            "height": 135,
+            "x": 12,
+            "y": 259,
+            "title": {
+              "size": 16,
+              "weight": 500,
+              "width": 172.25,
+              "height": 20.796875,
+              "x": 182.75,
+              "y": 291.78125
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 96.96875,
+              "height": 28.796875,
+              "x": 182.75,
+              "y": 320.578125
+            },
+            "padding": "0px",
+            "pricePadding": "0px",
+            "specPadding": "0px",
+            "specMargin": "12px",
+            "facts": [
+              {
+                "width": 60.265625,
+                "height": 23,
+                "x": 20,
+                "y": 363
+              },
+              {
+                "width": 91.875,
+                "height": 23,
+                "x": 82.265625,
+                "y": 363
+              },
+              {
+                "width": 64.4375,
+                "height": 23,
+                "x": 176.140625,
+                "y": 363
+              },
+              {
+                "width": 56.109375,
+                "height": 23,
+                "x": 242.578125,
+                "y": 363
+              },
+              {
+                "width": 54.3125,
+                "height": 23,
+                "x": 300.6875,
+                "y": 363
+              }
+            ]
+          },
+          {
+            "id": "vehicle-3",
+            "width": 351,
+            "height": 135,
+            "x": 12,
+            "y": 406,
+            "title": {
+              "size": 16,
+              "weight": 500,
+              "width": 172.25,
+              "height": 20.796875,
+              "x": 182.75,
+              "y": 438.78125
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 93.34375,
+              "height": 28.796875,
+              "x": 182.75,
+              "y": 467.578125
+            },
+            "padding": "0px",
+            "pricePadding": "0px",
+            "specPadding": "0px",
+            "specMargin": "12px",
+            "facts": [
+              {
+                "width": 60.625,
+                "height": 23,
+                "x": 20,
+                "y": 510
+              },
+              {
+                "width": 92.234375,
+                "height": 23,
+                "x": 82.625,
+                "y": 510
+              },
+              {
+                "width": 62.96875,
+                "height": 23,
+                "x": 176.859375,
+                "y": 510
+              },
+              {
+                "width": 56.484375,
+                "height": 23,
+                "x": 241.828125,
+                "y": 510
+              },
+              {
+                "width": 54.6875,
+                "height": 23,
+                "x": 300.3125,
+                "y": 510
+              }
+            ]
+          },
+          {
+            "id": "vehicle-4",
+            "width": 351,
+            "height": 135,
+            "x": 12,
+            "y": 553,
+            "title": {
+              "size": 16,
+              "weight": 500,
+              "width": 172.25,
+              "height": 20.796875,
+              "x": 182.75,
+              "y": 585.78125
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 95.71875,
+              "height": 28.796875,
+              "x": 182.75,
+              "y": 614.578125
+            },
+            "padding": "0px",
+            "pricePadding": "0px",
+            "specPadding": "0px",
+            "specMargin": "12px",
+            "facts": [
+              {
+                "width": 60.265625,
+                "height": 23,
+                "x": 20,
+                "y": 657
+              },
+              {
+                "width": 91.875,
+                "height": 23,
+                "x": 82.265625,
+                "y": 657
+              },
+              {
+                "width": 64.4375,
+                "height": 23,
+                "x": 176.140625,
+                "y": 657
+              },
+              {
+                "width": 56.109375,
+                "height": 23,
+                "x": 242.578125,
+                "y": 657
+              },
+              {
+                "width": 54.3125,
+                "height": 23,
+                "x": 300.6875,
+                "y": 657
+              }
+            ]
+          },
+          {
+            "id": "vehicle-6",
+            "width": 351,
+            "height": 135,
+            "x": 12,
+            "y": 700,
+            "title": {
+              "size": 16,
+              "weight": 500,
+              "width": 172.25,
+              "height": 20.796875,
+              "x": 182.75,
+              "y": 732.78125
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 91.265625,
+              "height": 28.796875,
+              "x": 182.75,
+              "y": 761.578125
+            },
+            "padding": "0px",
+            "pricePadding": "0px",
+            "specPadding": "0px",
+            "specMargin": "12px",
+            "facts": [
+              {
+                "width": 53.796875,
+                "height": 23,
+                "x": 20,
+                "y": 804
+              },
+              {
+                "width": 85.40625,
+                "height": 23,
+                "x": 75.796875,
+                "y": 804
+              },
+              {
+                "width": 56.125,
+                "height": 23,
+                "x": 163.203125,
+                "y": 804
+              },
+              {
+                "width": 49.640625,
+                "height": 23,
+                "x": 221.328125,
+                "y": 804
+              },
+              {
+                "width": 82.03125,
+                "height": 23,
+                "x": 272.96875,
+                "y": 804
+              }
+            ]
+          },
+          {
+            "id": "vehicle-7",
+            "width": 351,
+            "height": 135,
+            "x": 12,
+            "y": 847,
+            "title": {
+              "size": 16,
+              "weight": 500,
+              "width": 172.25,
+              "height": 20.796875,
+              "x": 182.75,
+              "y": 879.78125
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 94.859375,
+              "height": 28.796875,
+              "x": 182.75,
+              "y": 908.578125
+            },
+            "padding": "0px",
+            "pricePadding": "0px",
+            "specPadding": "0px",
+            "specMargin": "12px",
+            "facts": [
+              {
+                "width": 60.265625,
+                "height": 23,
+                "x": 20,
+                "y": 951
+              },
+              {
+                "width": 91.875,
+                "height": 23,
+                "x": 82.265625,
+                "y": 951
+              },
+              {
+                "width": 64.4375,
+                "height": 23,
+                "x": 176.140625,
+                "y": 951
+              },
+              {
+                "width": 56.109375,
+                "height": 23,
+                "x": 242.578125,
+                "y": 951
+              },
+              {
+                "width": 54.3125,
+                "height": 23,
+                "x": 300.6875,
+                "y": 951
+              }
+            ]
+          },
+          {
+            "id": "vehicle-8",
+            "width": 351,
+            "height": 135,
+            "x": 12,
+            "y": 994,
+            "title": {
+              "size": 16,
+              "weight": 500,
+              "width": 172.25,
+              "height": 20.796875,
+              "x": 182.75,
+              "y": 1026.78125
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 90.09375,
+              "height": 28.796875,
+              "x": 182.75,
+              "y": 1055.578125
+            },
+            "padding": "0px",
+            "pricePadding": "0px",
+            "specPadding": "0px",
+            "specMargin": "12px",
+            "facts": [
+              {
+                "width": 58.109375,
+                "height": 23,
+                "x": 20,
+                "y": 1098
+              },
+              {
+                "width": 89.71875,
+                "height": 23,
+                "x": 80.109375,
+                "y": 1098
+              },
+              {
+                "width": 60.453125,
+                "height": 23,
+                "x": 171.828125,
+                "y": 1098
+              },
+              {
+                "width": 53.96875,
+                "height": 23,
+                "x": 234.28125,
+                "y": 1098
+              },
+              {
+                "width": 64.75,
+                "height": 23,
+                "x": 290.25,
+                "y": 1098
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "surface": "pdp",
+      "state": {
+        "overflow": -15,
+        "pdp": {
+          "title": {
+            "size": 20,
+            "weight": 500,
+            "width": 335,
+            "height": 22.390625,
+            "x": 20,
+            "y": 275.25
+          },
+          "price": {
+            "size": 24,
+            "weight": 600,
+            "width": 335,
+            "height": 26.875,
+            "x": 20,
+            "y": 305.640625
+          },
+          "gap": 8
+        },
+        "hero": null,
+        "controls": [
+          {
+            "width": 44,
+            "height": 44,
+            "x": 12,
+            "y": 12,
+            "clip": "content-box",
+            "shadow": "none",
+            "icon": {
+              "width": 20,
+              "height": 20,
+              "x": 24,
+              "y": 24
+            }
+          },
+          {
+            "width": 44,
+            "height": 44,
+            "x": 268,
+            "y": 12,
+            "clip": "content-box",
+            "shadow": "none",
+            "icon": {
+              "width": 20,
+              "height": 20,
+              "x": 280,
+              "y": 24
+            }
+          },
+          {
+            "width": 44,
+            "height": 44,
+            "x": 319,
+            "y": 12,
+            "clip": "content-box",
+            "shadow": "none",
+            "icon": {
+              "width": 20,
+              "height": 20,
+              "x": 331,
+              "y": 24
+            }
+          }
+        ],
+        "cards": []
+      }
+    },
+    {
+      "locale": "en",
+      "width": 767,
+      "surface": "home",
+      "state": {
+        "overflow": -15,
+        "pdp": null,
+        "hero": null,
+        "controls": [],
+        "cards": [
+          {
+            "id": "vehicle-1",
+            "width": 250,
+            "height": 273.25,
+            "x": 12,
+            "y": 936.015625,
+            "title": {
+              "size": 16,
+              "weight": 500,
+              "width": 224,
+              "height": 20.796875,
+              "x": 25,
+              "y": 1107.671875
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 224,
+              "height": 28.796875,
+              "x": 25,
+              "y": 1136.46875
+            },
+            "padding": "12px 12px 8px",
+            "pricePadding": "0px",
+            "specPadding": "0px",
+            "specMargin": "8px",
+            "facts": [
+              {
+                "width": 62.015625,
+                "height": 23,
+                "x": 25,
+                "y": 1173.265625
+              },
+              {
+                "width": 93.625,
+                "height": 23,
+                "x": 89.015625,
+                "y": 1173.265625
+              },
+              {
+                "width": 64.359375,
+                "height": 23,
+                "x": 184.640625,
+                "y": 1173.265625
+              }
+            ]
+          },
+          {
+            "id": "vehicle-2",
+            "width": 250,
+            "height": 273.25,
+            "x": 272,
+            "y": 936.015625,
+            "title": {
+              "size": 16,
+              "weight": 500,
+              "width": 224,
+              "height": 20.796875,
+              "x": 285,
+              "y": 1107.671875
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 224,
+              "height": 28.796875,
+              "x": 285,
+              "y": 1136.46875
+            },
+            "padding": "12px 12px 8px",
+            "pricePadding": "0px",
+            "specPadding": "0px",
+            "specMargin": "8px",
+            "facts": [
+              {
+                "width": 61.40625,
+                "height": 23,
+                "x": 285,
+                "y": 1173.265625
+              },
+              {
+                "width": 93.015625,
+                "height": 23,
+                "x": 348.40625,
+                "y": 1173.265625
+              },
+              {
+                "width": 65.578125,
+                "height": 23,
+                "x": 443.421875,
+                "y": 1173.265625
+              }
+            ]
+          },
+          {
+            "id": "vehicle-3",
+            "width": 250,
+            "height": 273.25,
+            "x": 532,
+            "y": 936.015625,
+            "title": {
+              "size": 16,
+              "weight": 500,
+              "width": 224,
+              "height": 20.796875,
+              "x": 545,
+              "y": 1107.671875
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 224,
+              "height": 28.796875,
+              "x": 545,
+              "y": 1136.46875
+            },
+            "padding": "12px 12px 8px",
+            "pricePadding": "0px",
+            "specPadding": "0px",
+            "specMargin": "8px",
+            "facts": [
+              {
+                "width": 62.015625,
+                "height": 23,
+                "x": 545,
+                "y": 1173.265625
+              },
+              {
+                "width": 93.625,
+                "height": 23,
+                "x": 609.015625,
+                "y": 1173.265625
+              },
+              {
+                "width": 64.359375,
+                "height": 23,
+                "x": 704.640625,
+                "y": 1173.265625
+              }
+            ]
+          },
+          {
+            "id": "vehicle-4",
+            "width": 250,
+            "height": 273.25,
+            "x": 792,
+            "y": 936.015625,
+            "title": {
+              "size": 16,
+              "weight": 500,
+              "width": 224,
+              "height": 20.796875,
+              "x": 805,
+              "y": 1107.671875
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 224,
+              "height": 28.796875,
+              "x": 805,
+              "y": 1136.46875
+            },
+            "padding": "12px 12px 8px",
+            "pricePadding": "0px",
+            "specPadding": "0px",
+            "specMargin": "8px",
+            "facts": [
+              {
+                "width": 61.40625,
+                "height": 23,
+                "x": 805,
+                "y": 1173.265625
+              },
+              {
+                "width": 93.015625,
+                "height": 23,
+                "x": 868.40625,
+                "y": 1173.265625
+              },
+              {
+                "width": 65.578125,
+                "height": 23,
+                "x": 963.421875,
+                "y": 1173.265625
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "locale": "en",
+      "width": 767,
+      "surface": "cars",
+      "state": {
+        "overflow": -15,
+        "pdp": null,
+        "hero": null,
+        "controls": [],
+        "cards": [
+          {
+            "id": "vehicle-1",
+            "width": 724,
+            "height": 135,
+            "x": 14,
+            "y": 112,
+            "title": {
+              "size": 16,
+              "weight": 500,
+              "width": 540,
+              "height": 20.796875,
+              "x": 190,
+              "y": 144.78125
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 97.09375,
+              "height": 28.796875,
+              "x": 190,
+              "y": 173.578125
+            },
+            "padding": "0px",
+            "pricePadding": "0px",
+            "specPadding": "0px",
+            "specMargin": "12px",
+            "facts": [
+              {
+                "width": 132.234375,
+                "height": 23,
+                "x": 22,
+                "y": 216
+              },
+              {
+                "width": 163.84375,
+                "height": 23,
+                "x": 156.234375,
+                "y": 216
+              },
+              {
+                "width": 134.5625,
+                "height": 23,
+                "x": 322.078125,
+                "y": 216
+              },
+              {
+                "width": 128.09375,
+                "height": 23,
+                "x": 458.640625,
+                "y": 216
+              },
+              {
+                "width": 141.265625,
+                "height": 23,
+                "x": 588.734375,
+                "y": 216
+              }
+            ]
+          },
+          {
+            "id": "vehicle-2",
+            "width": 724,
+            "height": 135,
+            "x": 14,
+            "y": 259,
+            "title": {
+              "size": 16,
+              "weight": 500,
+              "width": 540,
+              "height": 20.796875,
+              "x": 190,
+              "y": 291.78125
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 96.96875,
+              "height": 28.796875,
+              "x": 190,
+              "y": 320.578125
+            },
+            "padding": "0px",
+            "pricePadding": "0px",
+            "specPadding": "0px",
+            "specMargin": "12px",
+            "facts": [
+              {
+                "width": 134.859375,
+                "height": 23,
+                "x": 22,
+                "y": 363
+              },
+              {
+                "width": 166.46875,
+                "height": 23,
+                "x": 158.859375,
+                "y": 363
+              },
+              {
+                "width": 139.03125,
+                "height": 23,
+                "x": 327.328125,
+                "y": 363
+              },
+              {
+                "width": 130.71875,
+                "height": 23,
+                "x": 468.359375,
+                "y": 363
+              },
+              {
+                "width": 128.921875,
+                "height": 23,
+                "x": 601.078125,
+                "y": 363
+              }
+            ]
+          },
+          {
+            "id": "vehicle-3",
+            "width": 724,
+            "height": 135,
+            "x": 14,
+            "y": 406,
+            "title": {
+              "size": 16,
+              "weight": 500,
+              "width": 540,
+              "height": 20.796875,
+              "x": 190,
+              "y": 438.78125
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 93.34375,
+              "height": 28.796875,
+              "x": 190,
+              "y": 467.578125
+            },
+            "padding": "0px",
+            "pricePadding": "0px",
+            "specPadding": "0px",
+            "specMargin": "12px",
+            "facts": [
+              {
+                "width": 135.234375,
+                "height": 23,
+                "x": 22,
+                "y": 510
+              },
+              {
+                "width": 166.84375,
+                "height": 23,
+                "x": 159.234375,
+                "y": 510
+              },
+              {
+                "width": 137.5625,
+                "height": 23,
+                "x": 328.078125,
+                "y": 510
+              },
+              {
+                "width": 131.078125,
+                "height": 23,
+                "x": 467.640625,
+                "y": 510
+              },
+              {
+                "width": 129.28125,
+                "height": 23,
+                "x": 600.71875,
+                "y": 510
+              }
+            ]
+          },
+          {
+            "id": "vehicle-4",
+            "width": 724,
+            "height": 135,
+            "x": 14,
+            "y": 553,
+            "title": {
+              "size": 16,
+              "weight": 500,
+              "width": 540,
+              "height": 20.796875,
+              "x": 190,
+              "y": 585.78125
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 95.71875,
+              "height": 28.796875,
+              "x": 190,
+              "y": 614.578125
+            },
+            "padding": "0px",
+            "pricePadding": "0px",
+            "specPadding": "0px",
+            "specMargin": "12px",
+            "facts": [
+              {
+                "width": 134.859375,
+                "height": 23,
+                "x": 22,
+                "y": 657
+              },
+              {
+                "width": 166.46875,
+                "height": 23,
+                "x": 158.859375,
+                "y": 657
+              },
+              {
+                "width": 139.03125,
+                "height": 23,
+                "x": 327.328125,
+                "y": 657
+              },
+              {
+                "width": 130.71875,
+                "height": 23,
+                "x": 468.359375,
+                "y": 657
+              },
+              {
+                "width": 128.921875,
+                "height": 23,
+                "x": 601.078125,
+                "y": 657
+              }
+            ]
+          },
+          {
+            "id": "vehicle-6",
+            "width": 724,
+            "height": 135,
+            "x": 14,
+            "y": 700,
+            "title": {
+              "size": 16,
+              "weight": 500,
+              "width": 540,
+              "height": 20.796875,
+              "x": 190,
+              "y": 732.78125
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 91.265625,
+              "height": 28.796875,
+              "x": 190,
+              "y": 761.578125
+            },
+            "padding": "0px",
+            "pricePadding": "0px",
+            "specPadding": "0px",
+            "specMargin": "12px",
+            "facts": [
+              {
+                "width": 128.390625,
+                "height": 23,
+                "x": 22,
+                "y": 804
+              },
+              {
+                "width": 160,
+                "height": 23,
+                "x": 152.390625,
+                "y": 804
+              },
+              {
+                "width": 130.71875,
+                "height": 23,
+                "x": 314.390625,
+                "y": 804
+              },
+              {
+                "width": 124.25,
+                "height": 23,
+                "x": 447.109375,
+                "y": 804
+              },
+              {
+                "width": 156.640625,
+                "height": 23,
+                "x": 573.359375,
+                "y": 804
+              }
+            ]
+          },
+          {
+            "id": "vehicle-7",
+            "width": 724,
+            "height": 135,
+            "x": 14,
+            "y": 847,
+            "title": {
+              "size": 16,
+              "weight": 500,
+              "width": 540,
+              "height": 20.796875,
+              "x": 190,
+              "y": 879.78125
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 94.859375,
+              "height": 28.796875,
+              "x": 190,
+              "y": 908.578125
+            },
+            "padding": "0px",
+            "pricePadding": "0px",
+            "specPadding": "0px",
+            "specMargin": "12px",
+            "facts": [
+              {
+                "width": 134.859375,
+                "height": 23,
+                "x": 22,
+                "y": 951
+              },
+              {
+                "width": 166.46875,
+                "height": 23,
+                "x": 158.859375,
+                "y": 951
+              },
+              {
+                "width": 139.03125,
+                "height": 23,
+                "x": 327.328125,
+                "y": 951
+              },
+              {
+                "width": 130.71875,
+                "height": 23,
+                "x": 468.359375,
+                "y": 951
+              },
+              {
+                "width": 128.921875,
+                "height": 23,
+                "x": 601.078125,
+                "y": 951
+              }
+            ]
+          },
+          {
+            "id": "vehicle-8",
+            "width": 724,
+            "height": 135,
+            "x": 14,
+            "y": 994,
+            "title": {
+              "size": 16,
+              "weight": 500,
+              "width": 540,
+              "height": 20.796875,
+              "x": 190,
+              "y": 1026.78125
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 90.09375,
+              "height": 28.796875,
+              "x": 190,
+              "y": 1055.578125
+            },
+            "padding": "0px",
+            "pricePadding": "0px",
+            "specPadding": "0px",
+            "specMargin": "12px",
+            "facts": [
+              {
+                "width": 132.71875,
+                "height": 23,
+                "x": 22,
+                "y": 1098
+              },
+              {
+                "width": 164.328125,
+                "height": 23,
+                "x": 156.71875,
+                "y": 1098
+              },
+              {
+                "width": 135.046875,
+                "height": 23,
+                "x": 323.046875,
+                "y": 1098
+              },
+              {
+                "width": 128.5625,
+                "height": 23,
+                "x": 460.09375,
+                "y": 1098
+              },
+              {
+                "width": 139.34375,
+                "height": 23,
+                "x": 590.65625,
+                "y": 1098
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "locale": "en",
+      "width": 767,
+      "surface": "pdp",
+      "state": {
+        "overflow": -15,
+        "pdp": {
+          "title": {
+            "size": 20,
+            "weight": 500,
+            "width": 712,
+            "height": 22.390625,
+            "x": 20,
+            "y": 558
+          },
+          "price": {
+            "size": 24,
+            "weight": 600,
+            "width": 712,
+            "height": 26.875,
+            "x": 20,
+            "y": 588.390625
+          },
+          "gap": 8
+        },
+        "hero": null,
+        "controls": [
+          {
+            "width": 44,
+            "height": 44,
+            "x": 12,
+            "y": 12,
+            "clip": "content-box",
+            "shadow": "none",
+            "icon": {
+              "width": 20,
+              "height": 20,
+              "x": 24,
+              "y": 24
+            }
+          },
+          {
+            "width": 44,
+            "height": 44,
+            "x": 645,
+            "y": 12,
+            "clip": "content-box",
+            "shadow": "none",
+            "icon": {
+              "width": 20,
+              "height": 20,
+              "x": 657,
+              "y": 24
+            }
+          },
+          {
+            "width": 44,
+            "height": 44,
+            "x": 696,
+            "y": 12,
+            "clip": "content-box",
+            "shadow": "none",
+            "icon": {
+              "width": 20,
+              "height": 20,
+              "x": 708,
+              "y": 24
+            }
+          }
+        ],
+        "cards": []
+      }
+    },
+    {
+      "locale": "en",
+      "width": 992,
+      "surface": "home",
+      "state": {
+        "overflow": -15,
+        "pdp": null,
+        "hero": {
+          "background": "radial-gradient(at 50% 24%, rgb(32, 35, 41) 0%, rgb(21, 24, 29) 68%)",
+          "cars": [
+            {
+              "width": 207.25,
+              "height": 138.234375,
+              "x": -43.515625,
+              "y": 221.40625
+            },
+            {
+              "width": 207.25,
+              "height": 138.234375,
+              "x": 813.265625,
+              "y": 221.40625
+            }
+          ]
+        },
+        "controls": [],
+        "cards": [
+          {
+            "id": "vehicle-1",
+            "width": 428.5,
+            "height": 442.46875,
+            "x": 48,
+            "y": 1034,
+            "title": {
+              "size": 20,
+              "weight": 500,
+              "width": 396.5,
+              "height": 28,
+              "x": 64,
+              "y": 1357.671875
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 396.5,
+              "height": 36.796875,
+              "x": 64,
+              "y": 1423.671875
+            },
+            "padding": "16px",
+            "pricePadding": "8px",
+            "specPadding": "8px",
+            "specMargin": "0px",
+            "facts": []
+          },
+          {
+            "id": "vehicle-2",
+            "width": 428.5,
+            "height": 442.46875,
+            "x": 500.5,
+            "y": 1034,
+            "title": {
+              "size": 20,
+              "weight": 500,
+              "width": 396.5,
+              "height": 28,
+              "x": 516.5,
+              "y": 1357.671875
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 396.5,
+              "height": 36.796875,
+              "x": 516.5,
+              "y": 1423.671875
+            },
+            "padding": "16px",
+            "pricePadding": "8px",
+            "specPadding": "8px",
+            "specMargin": "0px",
+            "facts": []
+          },
+          {
+            "id": "vehicle-3",
+            "width": 428.5,
+            "height": 442.46875,
+            "x": 48,
+            "y": 1500.46875,
+            "title": {
+              "size": 20,
+              "weight": 500,
+              "width": 396.5,
+              "height": 28,
+              "x": 64,
+              "y": 1824.140625
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 396.5,
+              "height": 36.796875,
+              "x": 64,
+              "y": 1890.140625
+            },
+            "padding": "16px",
+            "pricePadding": "8px",
+            "specPadding": "8px",
+            "specMargin": "0px",
+            "facts": []
+          },
+          {
+            "id": "vehicle-4",
+            "width": 428.5,
+            "height": 442.46875,
+            "x": 500.5,
+            "y": 1500.46875,
+            "title": {
+              "size": 20,
+              "weight": 500,
+              "width": 396.5,
+              "height": 28,
+              "x": 516.5,
+              "y": 1824.140625
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 396.5,
+              "height": 36.796875,
+              "x": 516.5,
+              "y": 1890.140625
+            },
+            "padding": "16px",
+            "pricePadding": "8px",
+            "specPadding": "8px",
+            "specMargin": "0px",
+            "facts": []
+          }
+        ]
+      }
+    },
+    {
+      "locale": "en",
+      "width": 992,
+      "surface": "cars",
+      "state": {
+        "overflow": -15,
+        "pdp": null,
+        "hero": {
+          "background": "radial-gradient(at 50% 24%, rgb(32, 35, 41) 0%, rgb(21, 24, 29) 68%)",
+          "cars": [
+            {
+              "width": 202.421875,
+              "height": 135.015625,
+              "x": -41,
+              "y": 214.28125
+            },
+            {
+              "width": 202.421875,
+              "height": 135.015625,
+              "x": 815.578125,
+              "y": 214.28125
+            }
+          ]
+        },
+        "controls": [],
+        "cards": [
+          {
+            "id": "vehicle-1",
+            "width": 297.65625,
+            "height": 355.25,
+            "x": 24,
+            "y": 616,
+            "title": {
+              "size": 20,
+              "weight": 500,
+              "width": 265.65625,
+              "height": 28,
+              "x": 40,
+              "y": 852.453125
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 265.65625,
+              "height": 36.796875,
+              "x": 40,
+              "y": 918.453125
+            },
+            "padding": "16px",
+            "pricePadding": "8px",
+            "specPadding": "0px",
+            "specMargin": "8px",
+            "facts": []
+          },
+          {
+            "id": "vehicle-2",
+            "width": 297.671875,
+            "height": 355.25,
+            "x": 339.65625,
+            "y": 616,
+            "title": {
+              "size": 20,
+              "weight": 500,
+              "width": 265.671875,
+              "height": 28,
+              "x": 355.65625,
+              "y": 852.453125
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 265.671875,
+              "height": 36.796875,
+              "x": 355.65625,
+              "y": 918.453125
+            },
+            "padding": "16px",
+            "pricePadding": "8px",
+            "specPadding": "0px",
+            "specMargin": "8px",
+            "facts": []
+          },
+          {
+            "id": "vehicle-3",
+            "width": 297.65625,
+            "height": 355.25,
+            "x": 655.328125,
+            "y": 616,
+            "title": {
+              "size": 20,
+              "weight": 500,
+              "width": 265.65625,
+              "height": 28,
+              "x": 671.328125,
+              "y": 852.453125
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 265.65625,
+              "height": 36.796875,
+              "x": 671.328125,
+              "y": 918.453125
+            },
+            "padding": "16px",
+            "pricePadding": "8px",
+            "specPadding": "0px",
+            "specMargin": "8px",
+            "facts": []
+          },
+          {
+            "id": "vehicle-4",
+            "width": 297.65625,
+            "height": 355.25,
+            "x": 24,
+            "y": 989.25,
+            "title": {
+              "size": 20,
+              "weight": 500,
+              "width": 265.65625,
+              "height": 28,
+              "x": 40,
+              "y": 1225.703125
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 265.65625,
+              "height": 36.796875,
+              "x": 40,
+              "y": 1291.703125
+            },
+            "padding": "16px",
+            "pricePadding": "8px",
+            "specPadding": "0px",
+            "specMargin": "8px",
+            "facts": []
+          },
+          {
+            "id": "vehicle-6",
+            "width": 297.671875,
+            "height": 355.25,
+            "x": 339.65625,
+            "y": 989.25,
+            "title": {
+              "size": 20,
+              "weight": 500,
+              "width": 265.671875,
+              "height": 28,
+              "x": 355.65625,
+              "y": 1225.703125
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 265.671875,
+              "height": 36.796875,
+              "x": 355.65625,
+              "y": 1291.703125
+            },
+            "padding": "16px",
+            "pricePadding": "8px",
+            "specPadding": "0px",
+            "specMargin": "8px",
+            "facts": []
+          },
+          {
+            "id": "vehicle-7",
+            "width": 297.65625,
+            "height": 355.25,
+            "x": 655.328125,
+            "y": 989.25,
+            "title": {
+              "size": 20,
+              "weight": 500,
+              "width": 265.65625,
+              "height": 28,
+              "x": 671.328125,
+              "y": 1225.703125
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 265.65625,
+              "height": 36.796875,
+              "x": 671.328125,
+              "y": 1291.703125
+            },
+            "padding": "16px",
+            "pricePadding": "8px",
+            "specPadding": "0px",
+            "specMargin": "8px",
+            "facts": []
+          },
+          {
+            "id": "vehicle-8",
+            "width": 297.65625,
+            "height": 355.25,
+            "x": 24,
+            "y": 1362.5,
+            "title": {
+              "size": 20,
+              "weight": 500,
+              "width": 265.65625,
+              "height": 28,
+              "x": 40,
+              "y": 1598.953125
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 265.65625,
+              "height": 36.796875,
+              "x": 40,
+              "y": 1664.953125
+            },
+            "padding": "16px",
+            "pricePadding": "8px",
+            "specPadding": "0px",
+            "specMargin": "8px",
+            "facts": []
+          }
+        ]
+      }
+    },
+    {
+      "locale": "en",
+      "width": 992,
+      "surface": "pdp",
+      "state": {
+        "overflow": -15,
+        "pdp": {
+          "title": {
+            "size": 30,
+            "weight": 600,
+            "width": 414.59375,
+            "height": 36,
+            "x": 147.40625,
+            "y": 139
+          },
+          "price": {
+            "size": 32,
+            "weight": 600,
+            "width": 304,
+            "height": 48,
+            "x": 626,
+            "y": 166
+          },
+          "gap": -9
+        },
+        "hero": null,
+        "controls": [
+          {
+            "width": 44,
+            "height": 44,
+            "x": 33,
+            "y": 225,
+            "clip": "content-box",
+            "shadow": "none",
+            "icon": {
+              "width": 24,
+              "height": 24,
+              "x": 43,
+              "y": 235
+            }
+          }
+        ],
+        "cards": []
+      }
+    },
+    {
+      "locale": "en",
+      "width": 1280,
+      "surface": "home",
+      "state": {
+        "overflow": -15,
+        "pdp": null,
+        "hero": {
+          "background": "radial-gradient(at 50% 24%, rgb(32, 35, 41) 0%, rgb(21, 24, 29) 68%)",
+          "cars": [
+            {
+              "width": 420.03125,
+              "height": 280.15625,
+              "x": -283.96875,
+              "y": 282.078125
+            },
+            {
+              "width": 420.03125,
+              "height": 280.15625,
+              "x": 1128.9375,
+              "y": 282.078125
+            }
+          ]
+        },
+        "controls": [],
+        "cards": [
+          {
+            "id": "vehicle-1",
+            "width": 274.25,
+            "height": 339.640625,
+            "x": 48,
+            "y": 1034,
+            "title": {
+              "size": 20,
+              "weight": 500,
+              "width": 242.25,
+              "height": 28,
+              "x": 64,
+              "y": 1254.84375
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 242.25,
+              "height": 36.796875,
+              "x": 64,
+              "y": 1320.84375
+            },
+            "padding": "16px",
+            "pricePadding": "8px",
+            "specPadding": "8px",
+            "specMargin": "0px",
+            "facts": []
+          },
+          {
+            "id": "vehicle-2",
+            "width": 274.25,
+            "height": 339.640625,
+            "x": 346.25,
+            "y": 1034,
+            "title": {
+              "size": 20,
+              "weight": 500,
+              "width": 242.25,
+              "height": 28,
+              "x": 362.25,
+              "y": 1254.84375
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 242.25,
+              "height": 36.796875,
+              "x": 362.25,
+              "y": 1320.84375
+            },
+            "padding": "16px",
+            "pricePadding": "8px",
+            "specPadding": "8px",
+            "specMargin": "0px",
+            "facts": []
+          },
+          {
+            "id": "vehicle-3",
+            "width": 274.25,
+            "height": 339.640625,
+            "x": 644.5,
+            "y": 1034,
+            "title": {
+              "size": 20,
+              "weight": 500,
+              "width": 242.25,
+              "height": 28,
+              "x": 660.5,
+              "y": 1254.84375
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 242.25,
+              "height": 36.796875,
+              "x": 660.5,
+              "y": 1320.84375
+            },
+            "padding": "16px",
+            "pricePadding": "8px",
+            "specPadding": "8px",
+            "specMargin": "0px",
+            "facts": []
+          },
+          {
+            "id": "vehicle-4",
+            "width": 274.25,
+            "height": 339.640625,
+            "x": 942.75,
+            "y": 1034,
+            "title": {
+              "size": 20,
+              "weight": 500,
+              "width": 242.25,
+              "height": 28,
+              "x": 958.75,
+              "y": 1254.84375
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 242.25,
+              "height": 36.796875,
+              "x": 958.75,
+              "y": 1320.84375
+            },
+            "padding": "16px",
+            "pricePadding": "8px",
+            "specPadding": "8px",
+            "specMargin": "0px",
+            "facts": []
+          }
+        ]
+      }
+    },
+    {
+      "locale": "en",
+      "width": 1280,
+      "surface": "cars",
+      "state": {
+        "overflow": -15,
+        "pdp": null,
+        "hero": {
+          "background": "radial-gradient(at 50% 24%, rgb(32, 35, 41) 0%, rgb(21, 24, 29) 68%)",
+          "cars": [
+            {
+              "width": 410.25,
+              "height": 273.640625,
+              "x": -278.875,
+              "y": 267.625
+            },
+            {
+              "width": 410.25,
+              "height": 273.640625,
+              "x": 1133.625,
+              "y": 267.625
+            }
+          ]
+        },
+        "controls": [],
+        "cards": [
+          {
+            "id": "vehicle-1",
+            "width": 289.25,
+            "height": 349.640625,
+            "x": 24,
+            "y": 616,
+            "title": {
+              "size": 20,
+              "weight": 500,
+              "width": 257.25,
+              "height": 28,
+              "x": 40,
+              "y": 846.84375
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 257.25,
+              "height": 36.796875,
+              "x": 40,
+              "y": 912.84375
+            },
+            "padding": "16px",
+            "pricePadding": "8px",
+            "specPadding": "0px",
+            "specMargin": "8px",
+            "facts": []
+          },
+          {
+            "id": "vehicle-2",
+            "width": 289.25,
+            "height": 349.640625,
+            "x": 333.25,
+            "y": 616,
+            "title": {
+              "size": 20,
+              "weight": 500,
+              "width": 257.25,
+              "height": 28,
+              "x": 349.25,
+              "y": 846.84375
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 257.25,
+              "height": 36.796875,
+              "x": 349.25,
+              "y": 912.84375
+            },
+            "padding": "16px",
+            "pricePadding": "8px",
+            "specPadding": "0px",
+            "specMargin": "8px",
+            "facts": []
+          },
+          {
+            "id": "vehicle-3",
+            "width": 289.25,
+            "height": 349.640625,
+            "x": 642.5,
+            "y": 616,
+            "title": {
+              "size": 20,
+              "weight": 500,
+              "width": 257.25,
+              "height": 28,
+              "x": 658.5,
+              "y": 846.84375
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 257.25,
+              "height": 36.796875,
+              "x": 658.5,
+              "y": 912.84375
+            },
+            "padding": "16px",
+            "pricePadding": "8px",
+            "specPadding": "0px",
+            "specMargin": "8px",
+            "facts": []
+          },
+          {
+            "id": "vehicle-4",
+            "width": 289.25,
+            "height": 349.640625,
+            "x": 951.75,
+            "y": 616,
+            "title": {
+              "size": 20,
+              "weight": 500,
+              "width": 257.25,
+              "height": 28,
+              "x": 967.75,
+              "y": 846.84375
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 257.25,
+              "height": 36.796875,
+              "x": 967.75,
+              "y": 912.84375
+            },
+            "padding": "16px",
+            "pricePadding": "8px",
+            "specPadding": "0px",
+            "specMargin": "8px",
+            "facts": []
+          },
+          {
+            "id": "vehicle-6",
+            "width": 289.25,
+            "height": 349.640625,
+            "x": 24,
+            "y": 985.640625,
+            "title": {
+              "size": 20,
+              "weight": 500,
+              "width": 257.25,
+              "height": 28,
+              "x": 40,
+              "y": 1216.484375
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 257.25,
+              "height": 36.796875,
+              "x": 40,
+              "y": 1282.484375
+            },
+            "padding": "16px",
+            "pricePadding": "8px",
+            "specPadding": "0px",
+            "specMargin": "8px",
+            "facts": []
+          },
+          {
+            "id": "vehicle-7",
+            "width": 289.25,
+            "height": 349.640625,
+            "x": 333.25,
+            "y": 985.640625,
+            "title": {
+              "size": 20,
+              "weight": 500,
+              "width": 257.25,
+              "height": 28,
+              "x": 349.25,
+              "y": 1216.484375
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 257.25,
+              "height": 36.796875,
+              "x": 349.25,
+              "y": 1282.484375
+            },
+            "padding": "16px",
+            "pricePadding": "8px",
+            "specPadding": "0px",
+            "specMargin": "8px",
+            "facts": []
+          },
+          {
+            "id": "vehicle-8",
+            "width": 289.25,
+            "height": 349.640625,
+            "x": 642.5,
+            "y": 985.640625,
+            "title": {
+              "size": 20,
+              "weight": 500,
+              "width": 257.25,
+              "height": 28,
+              "x": 658.5,
+              "y": 1216.484375
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 257.25,
+              "height": 36.796875,
+              "x": 658.5,
+              "y": 1282.484375
+            },
+            "padding": "16px",
+            "pricePadding": "8px",
+            "specPadding": "0px",
+            "specMargin": "8px",
+            "facts": []
+          }
+        ]
+      }
+    },
+    {
+      "locale": "en",
+      "width": 1280,
+      "surface": "pdp",
+      "state": {
+        "overflow": -15,
+        "pdp": {
+          "title": {
+            "size": 30,
+            "weight": 600,
+            "width": 660.59375,
+            "height": 36,
+            "x": 151.40625,
+            "y": 145
+          },
+          "price": {
+            "size": 32,
+            "weight": 600,
+            "width": 330,
+            "height": 48,
+            "x": 886,
+            "y": 164
+          },
+          "gap": -17
+        },
+        "hero": null,
+        "controls": [
+          {
+            "width": 44,
+            "height": 44,
+            "x": 33,
+            "y": 237,
+            "clip": "content-box",
+            "shadow": "none",
+            "icon": {
+              "width": 24,
+              "height": 24,
+              "x": 43,
+              "y": 247
+            }
+          }
+        ],
+        "cards": []
+      }
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "surface": "home",
+      "state": {
+        "overflow": -15,
+        "pdp": null,
+        "hero": {
+          "background": "radial-gradient(at 50% 24%, rgb(32, 35, 41) 0%, rgb(21, 24, 29) 68%)",
+          "cars": [
+            {
+              "width": 472.53125,
+              "height": 315.171875,
+              "x": -255.53125,
+              "y": 256.078125
+            },
+            {
+              "width": 472.53125,
+              "height": 315.171875,
+              "x": 1208,
+              "y": 256.078125
+            }
+          ]
+        },
+        "controls": [],
+        "cards": [
+          {
+            "id": "vehicle-1",
+            "width": 310,
+            "height": 363.46875,
+            "x": 56.5,
+            "y": 1034,
+            "title": {
+              "size": 20,
+              "weight": 500,
+              "width": 278,
+              "height": 28,
+              "x": 72.5,
+              "y": 1278.671875
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 278,
+              "height": 36.796875,
+              "x": 72.5,
+              "y": 1344.671875
+            },
+            "padding": "16px",
+            "pricePadding": "8px",
+            "specPadding": "8px",
+            "specMargin": "0px",
+            "facts": []
+          },
+          {
+            "id": "vehicle-2",
+            "width": 310,
+            "height": 363.46875,
+            "x": 390.5,
+            "y": 1034,
+            "title": {
+              "size": 20,
+              "weight": 500,
+              "width": 278,
+              "height": 28,
+              "x": 406.5,
+              "y": 1278.671875
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 278,
+              "height": 36.796875,
+              "x": 406.5,
+              "y": 1344.671875
+            },
+            "padding": "16px",
+            "pricePadding": "8px",
+            "specPadding": "8px",
+            "specMargin": "0px",
+            "facts": []
+          },
+          {
+            "id": "vehicle-3",
+            "width": 310,
+            "height": 363.46875,
+            "x": 724.5,
+            "y": 1034,
+            "title": {
+              "size": 20,
+              "weight": 500,
+              "width": 278,
+              "height": 28,
+              "x": 740.5,
+              "y": 1278.671875
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 278,
+              "height": 36.796875,
+              "x": 740.5,
+              "y": 1344.671875
+            },
+            "padding": "16px",
+            "pricePadding": "8px",
+            "specPadding": "8px",
+            "specMargin": "0px",
+            "facts": []
+          },
+          {
+            "id": "vehicle-4",
+            "width": 310,
+            "height": 363.46875,
+            "x": 1058.5,
+            "y": 1034,
+            "title": {
+              "size": 20,
+              "weight": 500,
+              "width": 278,
+              "height": 28,
+              "x": 1074.5,
+              "y": 1278.671875
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 278,
+              "height": 36.796875,
+              "x": 1074.5,
+              "y": 1344.671875
+            },
+            "padding": "16px",
+            "pricePadding": "8px",
+            "specPadding": "8px",
+            "specMargin": "0px",
+            "facts": []
+          }
+        ]
+      }
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "surface": "cars",
+      "state": {
+        "overflow": -15,
+        "pdp": null,
+        "hero": {
+          "background": "radial-gradient(at 50% 24%, rgb(32, 35, 41) 0%, rgb(21, 24, 29) 68%)",
+          "cars": [
+            {
+              "width": 461.53125,
+              "height": 307.84375,
+              "x": -249.796875,
+              "y": 239.828125
+            },
+            {
+              "width": 461.53125,
+              "height": 307.84375,
+              "x": 1213.265625,
+              "y": 239.828125
+            }
+          ]
+        },
+        "controls": [],
+        "cards": [
+          {
+            "id": "vehicle-1",
+            "width": 259.1875,
+            "height": 329.609375,
+            "x": 32.5,
+            "y": 616,
+            "title": {
+              "size": 20,
+              "weight": 500,
+              "width": 227.1875,
+              "height": 28,
+              "x": 48.5,
+              "y": 826.796875
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 227.1875,
+              "height": 36.796875,
+              "x": 48.5,
+              "y": 892.796875
+            },
+            "padding": "16px",
+            "pricePadding": "8px",
+            "specPadding": "0px",
+            "specMargin": "8px",
+            "facts": []
+          },
+          {
+            "id": "vehicle-2",
+            "width": 259.203125,
+            "height": 329.609375,
+            "x": 307.6875,
+            "y": 616,
+            "title": {
+              "size": 20,
+              "weight": 500,
+              "width": 227.203125,
+              "height": 28,
+              "x": 323.6875,
+              "y": 826.8125
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 227.203125,
+              "height": 36.796875,
+              "x": 323.6875,
+              "y": 892.8125
+            },
+            "padding": "16px",
+            "pricePadding": "8px",
+            "specPadding": "0px",
+            "specMargin": "8px",
+            "facts": []
+          },
+          {
+            "id": "vehicle-3",
+            "width": 259.203125,
+            "height": 329.609375,
+            "x": 582.890625,
+            "y": 616,
+            "title": {
+              "size": 20,
+              "weight": 500,
+              "width": 227.203125,
+              "height": 28,
+              "x": 598.890625,
+              "y": 826.8125
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 227.203125,
+              "height": 36.796875,
+              "x": 598.890625,
+              "y": 892.8125
+            },
+            "padding": "16px",
+            "pricePadding": "8px",
+            "specPadding": "0px",
+            "specMargin": "8px",
+            "facts": []
+          },
+          {
+            "id": "vehicle-4",
+            "width": 259.203125,
+            "height": 329.609375,
+            "x": 858.09375,
+            "y": 616,
+            "title": {
+              "size": 20,
+              "weight": 500,
+              "width": 227.203125,
+              "height": 28,
+              "x": 874.09375,
+              "y": 826.8125
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 227.203125,
+              "height": 36.796875,
+              "x": 874.09375,
+              "y": 892.8125
+            },
+            "padding": "16px",
+            "pricePadding": "8px",
+            "specPadding": "0px",
+            "specMargin": "8px",
+            "facts": []
+          },
+          {
+            "id": "vehicle-6",
+            "width": 259.203125,
+            "height": 329.609375,
+            "x": 1133.296875,
+            "y": 616,
+            "title": {
+              "size": 20,
+              "weight": 500,
+              "width": 227.203125,
+              "height": 28,
+              "x": 1149.296875,
+              "y": 826.8125
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 227.203125,
+              "height": 36.796875,
+              "x": 1149.296875,
+              "y": 892.8125
+            },
+            "padding": "16px",
+            "pricePadding": "8px",
+            "specPadding": "0px",
+            "specMargin": "8px",
+            "facts": []
+          },
+          {
+            "id": "vehicle-7",
+            "width": 259.1875,
+            "height": 329.609375,
+            "x": 32.5,
+            "y": 961.609375,
+            "title": {
+              "size": 20,
+              "weight": 500,
+              "width": 227.1875,
+              "height": 28,
+              "x": 48.5,
+              "y": 1172.40625
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 227.1875,
+              "height": 36.796875,
+              "x": 48.5,
+              "y": 1238.40625
+            },
+            "padding": "16px",
+            "pricePadding": "8px",
+            "specPadding": "0px",
+            "specMargin": "8px",
+            "facts": []
+          },
+          {
+            "id": "vehicle-8",
+            "width": 259.203125,
+            "height": 329.609375,
+            "x": 307.6875,
+            "y": 961.609375,
+            "title": {
+              "size": 20,
+              "weight": 500,
+              "width": 227.203125,
+              "height": 28,
+              "x": 323.6875,
+              "y": 1172.421875
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 227.203125,
+              "height": 36.796875,
+              "x": 323.6875,
+              "y": 1238.421875
+            },
+            "padding": "16px",
+            "pricePadding": "8px",
+            "specPadding": "0px",
+            "specMargin": "8px",
+            "facts": []
+          }
+        ]
+      }
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "surface": "pdp",
+      "state": {
+        "overflow": -15,
+        "pdp": {
+          "title": {
+            "size": 30,
+            "weight": 600,
+            "width": 763.59375,
+            "height": 36,
+            "x": 179.90625,
+            "y": 145
+          },
+          "price": {
+            "size": 32,
+            "weight": 600,
+            "width": 330,
+            "height": 48,
+            "x": 1017.5,
+            "y": 164
+          },
+          "gap": -17
+        },
+        "hero": null,
+        "controls": [
+          {
+            "width": 44,
+            "height": 44,
+            "x": 61.5,
+            "y": 237,
+            "clip": "content-box",
+            "shadow": "none",
+            "icon": {
+              "width": 24,
+              "height": 24,
+              "x": 71.5,
+              "y": 247
+            }
+          }
+        ],
+        "cards": []
+      }
+    },
+    {
+      "locale": "en",
+      "width": 1920,
+      "surface": "home",
+      "state": {
+        "overflow": -15,
+        "pdp": null,
+        "hero": {
+          "background": "radial-gradient(at 50% 24%, rgb(32, 35, 41) 0%, rgb(21, 24, 29) 68%)",
+          "cars": [
+            {
+              "width": 543,
+              "height": 362.171875,
+              "x": -124.71875,
+              "y": 221.203125
+            },
+            {
+              "width": 543,
+              "height": 362.171875,
+              "x": 1486.71875,
+              "y": 221.203125
+            }
+          ]
+        },
+        "controls": [],
+        "cards": [
+          {
+            "id": "vehicle-1",
+            "width": 310,
+            "height": 363.46875,
+            "x": 296.5,
+            "y": 1034,
+            "title": {
+              "size": 20,
+              "weight": 500,
+              "width": 278,
+              "height": 28,
+              "x": 312.5,
+              "y": 1278.671875
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 278,
+              "height": 36.796875,
+              "x": 312.5,
+              "y": 1344.671875
+            },
+            "padding": "16px",
+            "pricePadding": "8px",
+            "specPadding": "8px",
+            "specMargin": "0px",
+            "facts": []
+          },
+          {
+            "id": "vehicle-2",
+            "width": 310,
+            "height": 363.46875,
+            "x": 630.5,
+            "y": 1034,
+            "title": {
+              "size": 20,
+              "weight": 500,
+              "width": 278,
+              "height": 28,
+              "x": 646.5,
+              "y": 1278.671875
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 278,
+              "height": 36.796875,
+              "x": 646.5,
+              "y": 1344.671875
+            },
+            "padding": "16px",
+            "pricePadding": "8px",
+            "specPadding": "8px",
+            "specMargin": "0px",
+            "facts": []
+          },
+          {
+            "id": "vehicle-3",
+            "width": 310,
+            "height": 363.46875,
+            "x": 964.5,
+            "y": 1034,
+            "title": {
+              "size": 20,
+              "weight": 500,
+              "width": 278,
+              "height": 28,
+              "x": 980.5,
+              "y": 1278.671875
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 278,
+              "height": 36.796875,
+              "x": 980.5,
+              "y": 1344.671875
+            },
+            "padding": "16px",
+            "pricePadding": "8px",
+            "specPadding": "8px",
+            "specMargin": "0px",
+            "facts": []
+          },
+          {
+            "id": "vehicle-4",
+            "width": 310,
+            "height": 363.46875,
+            "x": 1298.5,
+            "y": 1034,
+            "title": {
+              "size": 20,
+              "weight": 500,
+              "width": 278,
+              "height": 28,
+              "x": 1314.5,
+              "y": 1278.671875
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 278,
+              "height": 36.796875,
+              "x": 1314.5,
+              "y": 1344.671875
+            },
+            "padding": "16px",
+            "pricePadding": "8px",
+            "specPadding": "8px",
+            "specMargin": "0px",
+            "facts": []
+          }
+        ]
+      }
+    },
+    {
+      "locale": "en",
+      "width": 1920,
+      "surface": "cars",
+      "state": {
+        "overflow": -15,
+        "pdp": null,
+        "hero": {
+          "background": "radial-gradient(at 50% 24%, rgb(32, 35, 41) 0%, rgb(21, 24, 29) 68%)",
+          "cars": [
+            {
+              "width": 530.359375,
+              "height": 353.75,
+              "x": -118.140625,
+              "y": 202.53125
+            },
+            {
+              "width": 530.359375,
+              "height": 353.75,
+              "x": 1492.78125,
+              "y": 202.53125
+            }
+          ]
+        },
+        "controls": [],
+        "cards": [
+          {
+            "id": "vehicle-1",
+            "width": 259.1875,
+            "height": 329.609375,
+            "x": 272.5,
+            "y": 616,
+            "title": {
+              "size": 20,
+              "weight": 500,
+              "width": 227.1875,
+              "height": 28,
+              "x": 288.5,
+              "y": 826.796875
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 227.1875,
+              "height": 36.796875,
+              "x": 288.5,
+              "y": 892.796875
+            },
+            "padding": "16px",
+            "pricePadding": "8px",
+            "specPadding": "0px",
+            "specMargin": "8px",
+            "facts": []
+          },
+          {
+            "id": "vehicle-2",
+            "width": 259.203125,
+            "height": 329.609375,
+            "x": 547.6875,
+            "y": 616,
+            "title": {
+              "size": 20,
+              "weight": 500,
+              "width": 227.203125,
+              "height": 28,
+              "x": 563.6875,
+              "y": 826.8125
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 227.203125,
+              "height": 36.796875,
+              "x": 563.6875,
+              "y": 892.8125
+            },
+            "padding": "16px",
+            "pricePadding": "8px",
+            "specPadding": "0px",
+            "specMargin": "8px",
+            "facts": []
+          },
+          {
+            "id": "vehicle-3",
+            "width": 259.203125,
+            "height": 329.609375,
+            "x": 822.890625,
+            "y": 616,
+            "title": {
+              "size": 20,
+              "weight": 500,
+              "width": 227.203125,
+              "height": 28,
+              "x": 838.890625,
+              "y": 826.8125
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 227.203125,
+              "height": 36.796875,
+              "x": 838.890625,
+              "y": 892.8125
+            },
+            "padding": "16px",
+            "pricePadding": "8px",
+            "specPadding": "0px",
+            "specMargin": "8px",
+            "facts": []
+          },
+          {
+            "id": "vehicle-4",
+            "width": 259.203125,
+            "height": 329.609375,
+            "x": 1098.09375,
+            "y": 616,
+            "title": {
+              "size": 20,
+              "weight": 500,
+              "width": 227.203125,
+              "height": 28,
+              "x": 1114.09375,
+              "y": 826.8125
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 227.203125,
+              "height": 36.796875,
+              "x": 1114.09375,
+              "y": 892.8125
+            },
+            "padding": "16px",
+            "pricePadding": "8px",
+            "specPadding": "0px",
+            "specMargin": "8px",
+            "facts": []
+          },
+          {
+            "id": "vehicle-6",
+            "width": 259.203125,
+            "height": 329.609375,
+            "x": 1373.296875,
+            "y": 616,
+            "title": {
+              "size": 20,
+              "weight": 500,
+              "width": 227.203125,
+              "height": 28,
+              "x": 1389.296875,
+              "y": 826.8125
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 227.203125,
+              "height": 36.796875,
+              "x": 1389.296875,
+              "y": 892.8125
+            },
+            "padding": "16px",
+            "pricePadding": "8px",
+            "specPadding": "0px",
+            "specMargin": "8px",
+            "facts": []
+          },
+          {
+            "id": "vehicle-7",
+            "width": 259.1875,
+            "height": 329.609375,
+            "x": 272.5,
+            "y": 961.609375,
+            "title": {
+              "size": 20,
+              "weight": 500,
+              "width": 227.1875,
+              "height": 28,
+              "x": 288.5,
+              "y": 1172.40625
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 227.1875,
+              "height": 36.796875,
+              "x": 288.5,
+              "y": 1238.40625
+            },
+            "padding": "16px",
+            "pricePadding": "8px",
+            "specPadding": "0px",
+            "specMargin": "8px",
+            "facts": []
+          },
+          {
+            "id": "vehicle-8",
+            "width": 259.203125,
+            "height": 329.609375,
+            "x": 547.6875,
+            "y": 961.609375,
+            "title": {
+              "size": 20,
+              "weight": 500,
+              "width": 227.203125,
+              "height": 28,
+              "x": 563.6875,
+              "y": 1172.421875
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 227.203125,
+              "height": 36.796875,
+              "x": 563.6875,
+              "y": 1238.421875
+            },
+            "padding": "16px",
+            "pricePadding": "8px",
+            "specPadding": "0px",
+            "specMargin": "8px",
+            "facts": []
+          }
+        ]
+      }
+    },
+    {
+      "locale": "en",
+      "width": 1920,
+      "surface": "pdp",
+      "state": {
+        "overflow": -15,
+        "pdp": {
+          "title": {
+            "size": 30,
+            "weight": 600,
+            "width": 763.59375,
+            "height": 36,
+            "x": 419.90625,
+            "y": 145
+          },
+          "price": {
+            "size": 32,
+            "weight": 600,
+            "width": 330,
+            "height": 48,
+            "x": 1257.5,
+            "y": 164
+          },
+          "gap": -17
+        },
+        "hero": null,
+        "controls": [
+          {
+            "width": 44,
+            "height": 44,
+            "x": 301.5,
+            "y": 237,
+            "clip": "content-box",
+            "shadow": "none",
+            "icon": {
+              "width": 24,
+              "height": 24,
+              "x": 311.5,
+              "y": 247
+            }
+          }
+        ],
+        "cards": []
+      }
+    },
+    {
+      "locale": "bg",
+      "width": 320,
+      "surface": "home",
+      "state": {
+        "overflow": -15,
+        "pdp": null,
+        "hero": null,
+        "controls": [],
+        "cards": [
+          {
+            "id": "vehicle-1",
+            "width": 224,
+            "height": 258.625,
+            "x": 12,
+            "y": 936.015625,
+            "title": {
+              "size": 16,
+              "weight": 500,
+              "width": 198,
+              "height": 20.796875,
+              "x": 25,
+              "y": 1093.046875
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 198,
+              "height": 28.796875,
+              "x": 25,
+              "y": 1121.84375
+            },
+            "padding": "12px 12px 8px",
+            "pricePadding": "0px",
+            "specPadding": "0px",
+            "specMargin": "8px",
+            "facts": [
+              {
+                "width": 50.359375,
+                "height": 23,
+                "x": 25,
+                "y": 1158.640625
+              },
+              {
+                "width": 81.953125,
+                "height": 23,
+                "x": 77.359375,
+                "y": 1158.640625
+              },
+              {
+                "width": 61.6875,
+                "height": 23,
+                "x": 161.3125,
+                "y": 1158.640625
+              }
+            ]
+          },
+          {
+            "id": "vehicle-2",
+            "width": 224,
+            "height": 258.625,
+            "x": 246,
+            "y": 936.015625,
+            "title": {
+              "size": 16,
+              "weight": 500,
+              "width": 198,
+              "height": 20.796875,
+              "x": 259,
+              "y": 1093.046875
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 198,
+              "height": 28.796875,
+              "x": 259,
+              "y": 1121.84375
+            },
+            "padding": "12px 12px 8px",
+            "pricePadding": "0px",
+            "specPadding": "0px",
+            "specMargin": "8px",
+            "facts": [
+              {
+                "width": 52.046875,
+                "height": 23,
+                "x": 259,
+                "y": 1158.640625
+              },
+              {
+                "width": 83.65625,
+                "height": 23,
+                "x": 313.046875,
+                "y": 1158.640625
+              },
+              {
+                "width": 58.296875,
+                "height": 23,
+                "x": 398.703125,
+                "y": 1158.640625
+              }
+            ]
+          },
+          {
+            "id": "vehicle-3",
+            "width": 224,
+            "height": 258.625,
+            "x": 480,
+            "y": 936.015625,
+            "title": {
+              "size": 16,
+              "weight": 500,
+              "width": 198,
+              "height": 20.796875,
+              "x": 493,
+              "y": 1093.046875
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 198,
+              "height": 28.796875,
+              "x": 493,
+              "y": 1121.84375
+            },
+            "padding": "12px 12px 8px",
+            "pricePadding": "0px",
+            "specPadding": "0px",
+            "specMargin": "8px",
+            "facts": [
+              {
+                "width": 50.359375,
+                "height": 23,
+                "x": 493,
+                "y": 1158.640625
+              },
+              {
+                "width": 81.953125,
+                "height": 23,
+                "x": 545.359375,
+                "y": 1158.640625
+              },
+              {
+                "width": 61.6875,
+                "height": 23,
+                "x": 629.3125,
+                "y": 1158.640625
+              }
+            ]
+          },
+          {
+            "id": "vehicle-4",
+            "width": 224,
+            "height": 258.625,
+            "x": 714,
+            "y": 936.015625,
+            "title": {
+              "size": 16,
+              "weight": 500,
+              "width": 198,
+              "height": 20.796875,
+              "x": 727,
+              "y": 1093.046875
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 198,
+              "height": 28.796875,
+              "x": 727,
+              "y": 1121.84375
+            },
+            "padding": "12px 12px 8px",
+            "pricePadding": "0px",
+            "specPadding": "0px",
+            "specMargin": "8px",
+            "facts": [
+              {
+                "width": 52.046875,
+                "height": 23,
+                "x": 727,
+                "y": 1158.640625
+              },
+              {
+                "width": 83.65625,
+                "height": 23,
+                "x": 781.046875,
+                "y": 1158.640625
+              },
+              {
+                "width": 58.296875,
+                "height": 23,
+                "x": 866.703125,
+                "y": 1158.640625
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "locale": "bg",
+      "width": 320,
+      "surface": "cars",
+      "state": {
+        "overflow": -15,
+        "pdp": null,
+        "hero": null,
+        "controls": [],
+        "cards": [
+          {
+            "id": "vehicle-1",
+            "width": 281,
+            "height": 135,
+            "x": 12,
+            "y": 112,
+            "title": {
+              "size": 16,
+              "weight": 500,
+              "width": 133.75,
+              "height": 20.796875,
+              "x": 151.25,
+              "y": 144.78125
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 103.21875,
+              "height": 28.796875,
+              "x": 151.25,
+              "y": 173.578125
+            },
+            "padding": "0px",
+            "pricePadding": "0px",
+            "specPadding": "0px",
+            "specMargin": "12px",
+            "facts": [
+              {
+                "width": 37.46875,
+                "height": 23,
+                "x": 20,
+                "y": 216
+              },
+              {
+                "width": 69.0625,
+                "height": 23,
+                "x": 59.46875,
+                "y": 216
+              },
+              {
+                "width": 48.796875,
+                "height": 23,
+                "x": 130.53125,
+                "y": 216
+              },
+              {
+                "width": 56.46875,
+                "height": 23,
+                "x": 181.328125,
+                "y": 216
+              },
+              {
+                "width": 45.203125,
+                "height": 23,
+                "x": 239.796875,
+                "y": 216
+              }
+            ]
+          },
+          {
+            "id": "vehicle-2",
+            "width": 281,
+            "height": 135,
+            "x": 12,
+            "y": 259,
+            "title": {
+              "size": 16,
+              "weight": 500,
+              "width": 133.75,
+              "height": 20.796875,
+              "x": 151.25,
+              "y": 291.78125
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 102.375,
+              "height": 28.796875,
+              "x": 151.25,
+              "y": 320.578125
+            },
+            "padding": "0px",
+            "pricePadding": "0px",
+            "specPadding": "0px",
+            "specMargin": "12px",
+            "facts": [
+              {
+                "width": 41.21875,
+                "height": 23,
+                "x": 20,
+                "y": 363
+              },
+              {
+                "width": 72.828125,
+                "height": 23,
+                "x": 63.21875,
+                "y": 363
+              },
+              {
+                "width": 47.453125,
+                "height": 23,
+                "x": 138.046875,
+                "y": 363
+              },
+              {
+                "width": 60.234375,
+                "height": 23,
+                "x": 187.5,
+                "y": 363
+              },
+              {
+                "width": 35.265625,
+                "height": 23,
+                "x": 249.734375,
+                "y": 363
+              }
+            ]
+          },
+          {
+            "id": "vehicle-3",
+            "width": 281,
+            "height": 135,
+            "x": 12,
+            "y": 406,
+            "title": {
+              "size": 16,
+              "weight": 500,
+              "width": 133.75,
+              "height": 20.796875,
+              "x": 151.25,
+              "y": 438.78125
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 101.1875,
+              "height": 28.796875,
+              "x": 151.25,
+              "y": 467.578125
+            },
+            "padding": "0px",
+            "pricePadding": "0px",
+            "specPadding": "0px",
+            "specMargin": "12px",
+            "facts": [
+              {
+                "width": 40.203125,
+                "height": 23,
+                "x": 20,
+                "y": 510
+              },
+              {
+                "width": 71.8125,
+                "height": 23,
+                "x": 62.203125,
+                "y": 510
+              },
+              {
+                "width": 51.53125,
+                "height": 23,
+                "x": 136.015625,
+                "y": 510
+              },
+              {
+                "width": 59.203125,
+                "height": 23,
+                "x": 189.546875,
+                "y": 510
+              },
+              {
+                "width": 34.25,
+                "height": 23,
+                "x": 250.75,
+                "y": 510
+              }
+            ]
+          },
+          {
+            "id": "vehicle-4",
+            "width": 281,
+            "height": 135,
+            "x": 12,
+            "y": 553,
+            "title": {
+              "size": 16,
+              "weight": 500,
+              "width": 133.75,
+              "height": 20.796875,
+              "x": 151.25,
+              "y": 585.78125
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 101.328125,
+              "height": 28.796875,
+              "x": 151.25,
+              "y": 614.578125
+            },
+            "padding": "0px",
+            "pricePadding": "0px",
+            "specPadding": "0px",
+            "specMargin": "12px",
+            "facts": [
+              {
+                "width": 41.21875,
+                "height": 23,
+                "x": 20,
+                "y": 657
+              },
+              {
+                "width": 72.828125,
+                "height": 23,
+                "x": 63.21875,
+                "y": 657
+              },
+              {
+                "width": 47.453125,
+                "height": 23,
+                "x": 138.046875,
+                "y": 657
+              },
+              {
+                "width": 60.234375,
+                "height": 23,
+                "x": 187.5,
+                "y": 657
+              },
+              {
+                "width": 35.265625,
+                "height": 23,
+                "x": 249.734375,
+                "y": 657
+              }
+            ]
+          },
+          {
+            "id": "vehicle-6",
+            "width": 281,
+            "height": 135,
+            "x": 12,
+            "y": 700,
+            "title": {
+              "size": 16,
+              "weight": 500,
+              "width": 133.75,
+              "height": 20.796875,
+              "x": 151.25,
+              "y": 732.78125
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 97.171875,
+              "height": 28.796875,
+              "x": 151.25,
+              "y": 761.578125
+            },
+            "padding": "0px",
+            "pricePadding": "0px",
+            "specPadding": "0px",
+            "specMargin": "12px",
+            "facts": [
+              {
+                "width": 33.765625,
+                "height": 23,
+                "x": 20,
+                "y": 804
+              },
+              {
+                "width": 65.375,
+                "height": 23,
+                "x": 55.765625,
+                "y": 804
+              },
+              {
+                "width": 45.109375,
+                "height": 23,
+                "x": 123.140625,
+                "y": 804
+              },
+              {
+                "width": 52.78125,
+                "height": 23,
+                "x": 170.25,
+                "y": 804
+              },
+              {
+                "width": 59.96875,
+                "height": 23,
+                "x": 225.03125,
+                "y": 804
+              }
+            ]
+          },
+          {
+            "id": "vehicle-7",
+            "width": 281,
+            "height": 135,
+            "x": 12,
+            "y": 847,
+            "title": {
+              "size": 16,
+              "weight": 500,
+              "width": 133.75,
+              "height": 20.796875,
+              "x": 151.25,
+              "y": 879.78125
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 100.921875,
+              "height": 28.796875,
+              "x": 151.25,
+              "y": 908.578125
+            },
+            "padding": "0px",
+            "pricePadding": "0px",
+            "specPadding": "0px",
+            "specMargin": "12px",
+            "facts": [
+              {
+                "width": 41.21875,
+                "height": 23,
+                "x": 20,
+                "y": 951
+              },
+              {
+                "width": 72.828125,
+                "height": 23,
+                "x": 63.21875,
+                "y": 951
+              },
+              {
+                "width": 47.453125,
+                "height": 23,
+                "x": 138.046875,
+                "y": 951
+              },
+              {
+                "width": 60.234375,
+                "height": 23,
+                "x": 187.5,
+                "y": 951
+              },
+              {
+                "width": 35.265625,
+                "height": 23,
+                "x": 249.734375,
+                "y": 951
+              }
+            ]
+          },
+          {
+            "id": "vehicle-8",
+            "width": 281,
+            "height": 135,
+            "x": 12,
+            "y": 994,
+            "title": {
+              "size": 16,
+              "weight": 500,
+              "width": 133.75,
+              "height": 20.796875,
+              "x": 151.25,
+              "y": 1026.78125
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 95.375,
+              "height": 28.796875,
+              "x": 151.25,
+              "y": 1055.578125
+            },
+            "padding": "0px",
+            "pricePadding": "0px",
+            "specPadding": "0px",
+            "specMargin": "12px",
+            "facts": [
+              {
+                "width": 39.453125,
+                "height": 23,
+                "x": 20,
+                "y": 1098
+              },
+              {
+                "width": 71.0625,
+                "height": 23,
+                "x": 61.453125,
+                "y": 1098
+              },
+              {
+                "width": 50.78125,
+                "height": 23,
+                "x": 134.515625,
+                "y": 1098
+              },
+              {
+                "width": 58.46875,
+                "height": 23,
+                "x": 187.296875,
+                "y": 1098
+              },
+              {
+                "width": 37.234375,
+                "height": 23,
+                "x": 247.765625,
+                "y": 1098
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "locale": "bg",
+      "width": 320,
+      "surface": "pdp",
+      "state": {
+        "overflow": -15,
+        "pdp": {
+          "title": {
+            "size": 20,
+            "weight": 500,
+            "width": 273,
+            "height": 22.390625,
+            "x": 16,
+            "y": 222.75
+          },
+          "price": {
+            "size": 24,
+            "weight": 600,
+            "width": 273,
+            "height": 26.875,
+            "x": 16,
+            "y": 253.140625
+          },
+          "gap": 8
+        },
+        "hero": null,
+        "controls": [
+          {
+            "width": 44,
+            "height": 44,
+            "x": 12,
+            "y": 12,
+            "clip": "content-box",
+            "shadow": "none",
+            "icon": {
+              "width": 20,
+              "height": 20,
+              "x": 24,
+              "y": 24
+            }
+          },
+          {
+            "width": 44,
+            "height": 44,
+            "x": 198,
+            "y": 12,
+            "clip": "content-box",
+            "shadow": "none",
+            "icon": {
+              "width": 20,
+              "height": 20,
+              "x": 210,
+              "y": 24
+            }
+          },
+          {
+            "width": 44,
+            "height": 44,
+            "x": 249,
+            "y": 12,
+            "clip": "content-box",
+            "shadow": "none",
+            "icon": {
+              "width": 20,
+              "height": 20,
+              "x": 261,
+              "y": 24
+            }
+          }
+        ],
+        "cards": []
+      }
+    },
+    {
+      "locale": "bg",
+      "width": 390,
+      "surface": "home",
+      "state": {
+        "overflow": -15,
+        "pdp": null,
+        "hero": null,
+        "controls": [],
+        "cards": [
+          {
+            "id": "vehicle-1",
+            "width": 250,
+            "height": 273.25,
+            "x": 12,
+            "y": 936.015625,
+            "title": {
+              "size": 16,
+              "weight": 500,
+              "width": 224,
+              "height": 20.796875,
+              "x": 25,
+              "y": 1107.671875
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 224,
+              "height": 28.796875,
+              "x": 25,
+              "y": 1136.46875
+            },
+            "padding": "12px 12px 8px",
+            "pricePadding": "0px",
+            "specPadding": "0px",
+            "specMargin": "8px",
+            "facts": [
+              {
+                "width": 59.015625,
+                "height": 23,
+                "x": 25,
+                "y": 1173.265625
+              },
+              {
+                "width": 90.625,
+                "height": 23,
+                "x": 86.015625,
+                "y": 1173.265625
+              },
+              {
+                "width": 70.359375,
+                "height": 23,
+                "x": 178.640625,
+                "y": 1173.265625
+              }
+            ]
+          },
+          {
+            "id": "vehicle-2",
+            "width": 250,
+            "height": 273.25,
+            "x": 272,
+            "y": 936.015625,
+            "title": {
+              "size": 16,
+              "weight": 500,
+              "width": 224,
+              "height": 20.796875,
+              "x": 285,
+              "y": 1107.671875
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 224,
+              "height": 28.796875,
+              "x": 285,
+              "y": 1136.46875
+            },
+            "padding": "12px 12px 8px",
+            "pricePadding": "0px",
+            "specPadding": "0px",
+            "specMargin": "8px",
+            "facts": [
+              {
+                "width": 60.71875,
+                "height": 23,
+                "x": 285,
+                "y": 1173.265625
+              },
+              {
+                "width": 92.328125,
+                "height": 23,
+                "x": 347.71875,
+                "y": 1173.265625
+              },
+              {
+                "width": 66.953125,
+                "height": 23,
+                "x": 442.046875,
+                "y": 1173.265625
+              }
+            ]
+          },
+          {
+            "id": "vehicle-3",
+            "width": 250,
+            "height": 273.25,
+            "x": 532,
+            "y": 936.015625,
+            "title": {
+              "size": 16,
+              "weight": 500,
+              "width": 224,
+              "height": 20.796875,
+              "x": 545,
+              "y": 1107.671875
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 224,
+              "height": 28.796875,
+              "x": 545,
+              "y": 1136.46875
+            },
+            "padding": "12px 12px 8px",
+            "pricePadding": "0px",
+            "specPadding": "0px",
+            "specMargin": "8px",
+            "facts": [
+              {
+                "width": 59.015625,
+                "height": 23,
+                "x": 545,
+                "y": 1173.265625
+              },
+              {
+                "width": 90.625,
+                "height": 23,
+                "x": 606.015625,
+                "y": 1173.265625
+              },
+              {
+                "width": 70.359375,
+                "height": 23,
+                "x": 698.640625,
+                "y": 1173.265625
+              }
+            ]
+          },
+          {
+            "id": "vehicle-4",
+            "width": 250,
+            "height": 273.25,
+            "x": 792,
+            "y": 936.015625,
+            "title": {
+              "size": 16,
+              "weight": 500,
+              "width": 224,
+              "height": 20.796875,
+              "x": 805,
+              "y": 1107.671875
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 224,
+              "height": 28.796875,
+              "x": 805,
+              "y": 1136.46875
+            },
+            "padding": "12px 12px 8px",
+            "pricePadding": "0px",
+            "specPadding": "0px",
+            "specMargin": "8px",
+            "facts": [
+              {
+                "width": 60.71875,
+                "height": 23,
+                "x": 805,
+                "y": 1173.265625
+              },
+              {
+                "width": 92.328125,
+                "height": 23,
+                "x": 867.71875,
+                "y": 1173.265625
+              },
+              {
+                "width": 66.953125,
+                "height": 23,
+                "x": 962.046875,
+                "y": 1173.265625
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "locale": "bg",
+      "width": 390,
+      "surface": "cars",
+      "state": {
+        "overflow": -15,
+        "pdp": null,
+        "hero": null,
+        "controls": [],
+        "cards": [
+          {
+            "id": "vehicle-1",
+            "width": 351,
+            "height": 135,
+            "x": 12,
+            "y": 112,
+            "title": {
+              "size": 16,
+              "weight": 500,
+              "width": 172.25,
+              "height": 20.796875,
+              "x": 182.75,
+              "y": 144.78125
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 103.21875,
+              "height": 28.796875,
+              "x": 182.75,
+              "y": 173.578125
+            },
+            "padding": "0px",
+            "pricePadding": "0px",
+            "specPadding": "0px",
+            "specMargin": "12px",
+            "facts": [
+              {
+                "width": 51.46875,
+                "height": 23,
+                "x": 20,
+                "y": 216
+              },
+              {
+                "width": 83.0625,
+                "height": 23,
+                "x": 73.46875,
+                "y": 216
+              },
+              {
+                "width": 62.796875,
+                "height": 23,
+                "x": 158.53125,
+                "y": 216
+              },
+              {
+                "width": 70.46875,
+                "height": 23,
+                "x": 223.328125,
+                "y": 216
+              },
+              {
+                "width": 59.203125,
+                "height": 23,
+                "x": 295.796875,
+                "y": 216
+              }
+            ]
+          },
+          {
+            "id": "vehicle-2",
+            "width": 351,
+            "height": 135,
+            "x": 12,
+            "y": 259,
+            "title": {
+              "size": 16,
+              "weight": 500,
+              "width": 172.25,
+              "height": 20.796875,
+              "x": 182.75,
+              "y": 291.78125
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 102.375,
+              "height": 28.796875,
+              "x": 182.75,
+              "y": 320.578125
+            },
+            "padding": "0px",
+            "pricePadding": "0px",
+            "specPadding": "0px",
+            "specMargin": "12px",
+            "facts": [
+              {
+                "width": 55.21875,
+                "height": 23,
+                "x": 20,
+                "y": 363
+              },
+              {
+                "width": 86.828125,
+                "height": 23,
+                "x": 77.21875,
+                "y": 363
+              },
+              {
+                "width": 61.453125,
+                "height": 23,
+                "x": 166.046875,
+                "y": 363
+              },
+              {
+                "width": 74.234375,
+                "height": 23,
+                "x": 229.5,
+                "y": 363
+              },
+              {
+                "width": 49.265625,
+                "height": 23,
+                "x": 305.734375,
+                "y": 363
+              }
+            ]
+          },
+          {
+            "id": "vehicle-3",
+            "width": 351,
+            "height": 135,
+            "x": 12,
+            "y": 406,
+            "title": {
+              "size": 16,
+              "weight": 500,
+              "width": 172.25,
+              "height": 20.796875,
+              "x": 182.75,
+              "y": 438.78125
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 101.1875,
+              "height": 28.796875,
+              "x": 182.75,
+              "y": 467.578125
+            },
+            "padding": "0px",
+            "pricePadding": "0px",
+            "specPadding": "0px",
+            "specMargin": "12px",
+            "facts": [
+              {
+                "width": 54.203125,
+                "height": 23,
+                "x": 20,
+                "y": 510
+              },
+              {
+                "width": 85.8125,
+                "height": 23,
+                "x": 76.203125,
+                "y": 510
+              },
+              {
+                "width": 65.53125,
+                "height": 23,
+                "x": 164.015625,
+                "y": 510
+              },
+              {
+                "width": 73.203125,
+                "height": 23,
+                "x": 231.546875,
+                "y": 510
+              },
+              {
+                "width": 48.25,
+                "height": 23,
+                "x": 306.75,
+                "y": 510
+              }
+            ]
+          },
+          {
+            "id": "vehicle-4",
+            "width": 351,
+            "height": 135,
+            "x": 12,
+            "y": 553,
+            "title": {
+              "size": 16,
+              "weight": 500,
+              "width": 172.25,
+              "height": 20.796875,
+              "x": 182.75,
+              "y": 585.78125
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 101.328125,
+              "height": 28.796875,
+              "x": 182.75,
+              "y": 614.578125
+            },
+            "padding": "0px",
+            "pricePadding": "0px",
+            "specPadding": "0px",
+            "specMargin": "12px",
+            "facts": [
+              {
+                "width": 55.21875,
+                "height": 23,
+                "x": 20,
+                "y": 657
+              },
+              {
+                "width": 86.828125,
+                "height": 23,
+                "x": 77.21875,
+                "y": 657
+              },
+              {
+                "width": 61.453125,
+                "height": 23,
+                "x": 166.046875,
+                "y": 657
+              },
+              {
+                "width": 74.234375,
+                "height": 23,
+                "x": 229.5,
+                "y": 657
+              },
+              {
+                "width": 49.265625,
+                "height": 23,
+                "x": 305.734375,
+                "y": 657
+              }
+            ]
+          },
+          {
+            "id": "vehicle-6",
+            "width": 351,
+            "height": 135,
+            "x": 12,
+            "y": 700,
+            "title": {
+              "size": 16,
+              "weight": 500,
+              "width": 172.25,
+              "height": 20.796875,
+              "x": 182.75,
+              "y": 732.78125
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 97.171875,
+              "height": 28.796875,
+              "x": 182.75,
+              "y": 761.578125
+            },
+            "padding": "0px",
+            "pricePadding": "0px",
+            "specPadding": "0px",
+            "specMargin": "12px",
+            "facts": [
+              {
+                "width": 47.765625,
+                "height": 23,
+                "x": 20,
+                "y": 804
+              },
+              {
+                "width": 79.375,
+                "height": 23,
+                "x": 69.765625,
+                "y": 804
+              },
+              {
+                "width": 59.109375,
+                "height": 23,
+                "x": 151.140625,
+                "y": 804
+              },
+              {
+                "width": 66.78125,
+                "height": 23,
+                "x": 212.25,
+                "y": 804
+              },
+              {
+                "width": 73.96875,
+                "height": 23,
+                "x": 281.03125,
+                "y": 804
+              }
+            ]
+          },
+          {
+            "id": "vehicle-7",
+            "width": 351,
+            "height": 135,
+            "x": 12,
+            "y": 847,
+            "title": {
+              "size": 16,
+              "weight": 500,
+              "width": 172.25,
+              "height": 20.796875,
+              "x": 182.75,
+              "y": 879.78125
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 100.921875,
+              "height": 28.796875,
+              "x": 182.75,
+              "y": 908.578125
+            },
+            "padding": "0px",
+            "pricePadding": "0px",
+            "specPadding": "0px",
+            "specMargin": "12px",
+            "facts": [
+              {
+                "width": 55.21875,
+                "height": 23,
+                "x": 20,
+                "y": 951
+              },
+              {
+                "width": 86.828125,
+                "height": 23,
+                "x": 77.21875,
+                "y": 951
+              },
+              {
+                "width": 61.453125,
+                "height": 23,
+                "x": 166.046875,
+                "y": 951
+              },
+              {
+                "width": 74.234375,
+                "height": 23,
+                "x": 229.5,
+                "y": 951
+              },
+              {
+                "width": 49.265625,
+                "height": 23,
+                "x": 305.734375,
+                "y": 951
+              }
+            ]
+          },
+          {
+            "id": "vehicle-8",
+            "width": 351,
+            "height": 135,
+            "x": 12,
+            "y": 994,
+            "title": {
+              "size": 16,
+              "weight": 500,
+              "width": 172.25,
+              "height": 20.796875,
+              "x": 182.75,
+              "y": 1026.78125
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 95.375,
+              "height": 28.796875,
+              "x": 182.75,
+              "y": 1055.578125
+            },
+            "padding": "0px",
+            "pricePadding": "0px",
+            "specPadding": "0px",
+            "specMargin": "12px",
+            "facts": [
+              {
+                "width": 53.453125,
+                "height": 23,
+                "x": 20,
+                "y": 1098
+              },
+              {
+                "width": 85.0625,
+                "height": 23,
+                "x": 75.453125,
+                "y": 1098
+              },
+              {
+                "width": 64.78125,
+                "height": 23,
+                "x": 162.515625,
+                "y": 1098
+              },
+              {
+                "width": 72.46875,
+                "height": 23,
+                "x": 229.296875,
+                "y": 1098
+              },
+              {
+                "width": 51.234375,
+                "height": 23,
+                "x": 303.765625,
+                "y": 1098
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "locale": "bg",
+      "width": 390,
+      "surface": "pdp",
+      "state": {
+        "overflow": -15,
+        "pdp": {
+          "title": {
+            "size": 20,
+            "weight": 500,
+            "width": 335,
+            "height": 22.390625,
+            "x": 20,
+            "y": 275.25
+          },
+          "price": {
+            "size": 24,
+            "weight": 600,
+            "width": 335,
+            "height": 26.875,
+            "x": 20,
+            "y": 305.640625
+          },
+          "gap": 8
+        },
+        "hero": null,
+        "controls": [
+          {
+            "width": 44,
+            "height": 44,
+            "x": 12,
+            "y": 12,
+            "clip": "content-box",
+            "shadow": "none",
+            "icon": {
+              "width": 20,
+              "height": 20,
+              "x": 24,
+              "y": 24
+            }
+          },
+          {
+            "width": 44,
+            "height": 44,
+            "x": 268,
+            "y": 12,
+            "clip": "content-box",
+            "shadow": "none",
+            "icon": {
+              "width": 20,
+              "height": 20,
+              "x": 280,
+              "y": 24
+            }
+          },
+          {
+            "width": 44,
+            "height": 44,
+            "x": 319,
+            "y": 12,
+            "clip": "content-box",
+            "shadow": "none",
+            "icon": {
+              "width": 20,
+              "height": 20,
+              "x": 331,
+              "y": 24
+            }
+          }
+        ],
+        "cards": []
+      }
+    },
+    {
+      "locale": "bg",
+      "width": 1440,
+      "surface": "home",
+      "state": {
+        "overflow": -15,
+        "pdp": null,
+        "hero": {
+          "background": "radial-gradient(at 50% 24%, rgb(32, 35, 41) 0%, rgb(21, 24, 29) 68%)",
+          "cars": [
+            {
+              "width": 472.53125,
+              "height": 315.171875,
+              "x": -255.53125,
+              "y": 256.078125
+            },
+            {
+              "width": 472.53125,
+              "height": 315.171875,
+              "x": 1208,
+              "y": 256.078125
+            }
+          ]
+        },
+        "controls": [],
+        "cards": [
+          {
+            "id": "vehicle-1",
+            "width": 310,
+            "height": 363.46875,
+            "x": 56.5,
+            "y": 1034,
+            "title": {
+              "size": 20,
+              "weight": 500,
+              "width": 278,
+              "height": 28,
+              "x": 72.5,
+              "y": 1278.671875
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 278,
+              "height": 36.796875,
+              "x": 72.5,
+              "y": 1344.671875
+            },
+            "padding": "16px",
+            "pricePadding": "8px",
+            "specPadding": "8px",
+            "specMargin": "0px",
+            "facts": []
+          },
+          {
+            "id": "vehicle-2",
+            "width": 310,
+            "height": 363.46875,
+            "x": 390.5,
+            "y": 1034,
+            "title": {
+              "size": 20,
+              "weight": 500,
+              "width": 278,
+              "height": 28,
+              "x": 406.5,
+              "y": 1278.671875
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 278,
+              "height": 36.796875,
+              "x": 406.5,
+              "y": 1344.671875
+            },
+            "padding": "16px",
+            "pricePadding": "8px",
+            "specPadding": "8px",
+            "specMargin": "0px",
+            "facts": []
+          },
+          {
+            "id": "vehicle-3",
+            "width": 310,
+            "height": 363.46875,
+            "x": 724.5,
+            "y": 1034,
+            "title": {
+              "size": 20,
+              "weight": 500,
+              "width": 278,
+              "height": 28,
+              "x": 740.5,
+              "y": 1278.671875
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 278,
+              "height": 36.796875,
+              "x": 740.5,
+              "y": 1344.671875
+            },
+            "padding": "16px",
+            "pricePadding": "8px",
+            "specPadding": "8px",
+            "specMargin": "0px",
+            "facts": []
+          },
+          {
+            "id": "vehicle-4",
+            "width": 310,
+            "height": 363.46875,
+            "x": 1058.5,
+            "y": 1034,
+            "title": {
+              "size": 20,
+              "weight": 500,
+              "width": 278,
+              "height": 28,
+              "x": 1074.5,
+              "y": 1278.671875
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 278,
+              "height": 36.796875,
+              "x": 1074.5,
+              "y": 1344.671875
+            },
+            "padding": "16px",
+            "pricePadding": "8px",
+            "specPadding": "8px",
+            "specMargin": "0px",
+            "facts": []
+          }
+        ]
+      }
+    },
+    {
+      "locale": "bg",
+      "width": 1440,
+      "surface": "cars",
+      "state": {
+        "overflow": -15,
+        "pdp": null,
+        "hero": {
+          "background": "radial-gradient(at 50% 24%, rgb(32, 35, 41) 0%, rgb(21, 24, 29) 68%)",
+          "cars": [
+            {
+              "width": 461.53125,
+              "height": 307.84375,
+              "x": -249.796875,
+              "y": 239.828125
+            },
+            {
+              "width": 461.53125,
+              "height": 307.84375,
+              "x": 1213.265625,
+              "y": 239.828125
+            }
+          ]
+        },
+        "controls": [],
+        "cards": [
+          {
+            "id": "vehicle-1",
+            "width": 259.1875,
+            "height": 329.609375,
+            "x": 32.5,
+            "y": 616,
+            "title": {
+              "size": 20,
+              "weight": 500,
+              "width": 227.1875,
+              "height": 28,
+              "x": 48.5,
+              "y": 826.796875
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 227.1875,
+              "height": 36.796875,
+              "x": 48.5,
+              "y": 892.796875
+            },
+            "padding": "16px",
+            "pricePadding": "8px",
+            "specPadding": "0px",
+            "specMargin": "8px",
+            "facts": []
+          },
+          {
+            "id": "vehicle-2",
+            "width": 259.203125,
+            "height": 329.609375,
+            "x": 307.6875,
+            "y": 616,
+            "title": {
+              "size": 20,
+              "weight": 500,
+              "width": 227.203125,
+              "height": 28,
+              "x": 323.6875,
+              "y": 826.8125
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 227.203125,
+              "height": 36.796875,
+              "x": 323.6875,
+              "y": 892.8125
+            },
+            "padding": "16px",
+            "pricePadding": "8px",
+            "specPadding": "0px",
+            "specMargin": "8px",
+            "facts": []
+          },
+          {
+            "id": "vehicle-3",
+            "width": 259.203125,
+            "height": 329.609375,
+            "x": 582.890625,
+            "y": 616,
+            "title": {
+              "size": 20,
+              "weight": 500,
+              "width": 227.203125,
+              "height": 28,
+              "x": 598.890625,
+              "y": 826.8125
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 227.203125,
+              "height": 36.796875,
+              "x": 598.890625,
+              "y": 892.8125
+            },
+            "padding": "16px",
+            "pricePadding": "8px",
+            "specPadding": "0px",
+            "specMargin": "8px",
+            "facts": []
+          },
+          {
+            "id": "vehicle-4",
+            "width": 259.203125,
+            "height": 329.609375,
+            "x": 858.09375,
+            "y": 616,
+            "title": {
+              "size": 20,
+              "weight": 500,
+              "width": 227.203125,
+              "height": 28,
+              "x": 874.09375,
+              "y": 826.8125
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 227.203125,
+              "height": 36.796875,
+              "x": 874.09375,
+              "y": 892.8125
+            },
+            "padding": "16px",
+            "pricePadding": "8px",
+            "specPadding": "0px",
+            "specMargin": "8px",
+            "facts": []
+          },
+          {
+            "id": "vehicle-6",
+            "width": 259.203125,
+            "height": 329.609375,
+            "x": 1133.296875,
+            "y": 616,
+            "title": {
+              "size": 20,
+              "weight": 500,
+              "width": 227.203125,
+              "height": 28,
+              "x": 1149.296875,
+              "y": 826.8125
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 227.203125,
+              "height": 36.796875,
+              "x": 1149.296875,
+              "y": 892.8125
+            },
+            "padding": "16px",
+            "pricePadding": "8px",
+            "specPadding": "0px",
+            "specMargin": "8px",
+            "facts": []
+          },
+          {
+            "id": "vehicle-7",
+            "width": 259.1875,
+            "height": 329.609375,
+            "x": 32.5,
+            "y": 961.609375,
+            "title": {
+              "size": 20,
+              "weight": 500,
+              "width": 227.1875,
+              "height": 28,
+              "x": 48.5,
+              "y": 1172.40625
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 227.1875,
+              "height": 36.796875,
+              "x": 48.5,
+              "y": 1238.40625
+            },
+            "padding": "16px",
+            "pricePadding": "8px",
+            "specPadding": "0px",
+            "specMargin": "8px",
+            "facts": []
+          },
+          {
+            "id": "vehicle-8",
+            "width": 259.203125,
+            "height": 329.609375,
+            "x": 307.6875,
+            "y": 961.609375,
+            "title": {
+              "size": 20,
+              "weight": 500,
+              "width": 227.203125,
+              "height": 28,
+              "x": 323.6875,
+              "y": 1172.421875
+            },
+            "price": {
+              "size": 24,
+              "weight": 600,
+              "width": 227.203125,
+              "height": 36.796875,
+              "x": 323.6875,
+              "y": 1238.421875
+            },
+            "padding": "16px",
+            "pricePadding": "8px",
+            "specPadding": "0px",
+            "specMargin": "8px",
+            "facts": []
+          }
+        ]
+      }
+    },
+    {
+      "locale": "bg",
+      "width": 1440,
+      "surface": "pdp",
+      "state": {
+        "overflow": -15,
+        "pdp": {
+          "title": {
+            "size": 30,
+            "weight": 600,
+            "width": 754.296875,
+            "height": 36,
+            "x": 189.203125,
+            "y": 145
+          },
+          "price": {
+            "size": 32,
+            "weight": 600,
+            "width": 330,
+            "height": 48,
+            "x": 1017.5,
+            "y": 164
+          },
+          "gap": -17
+        },
+        "hero": null,
+        "controls": [
+          {
+            "width": 44,
+            "height": 44,
+            "x": 61.5,
+            "y": 237,
+            "clip": "content-box",
+            "shadow": "none",
+            "icon": {
+              "width": 24,
+              "height": 24,
+              "x": 71.5,
+              "y": 247
+            }
+          }
+        ],
+        "cards": []
+      }
+    }
+  ]
+}

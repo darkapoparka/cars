@@ -1,12 +1,17 @@
 "use server";
 
+import { createPublicDealerInquiry } from "@repo/database/dealer-inquiries";
 import { getReliableEmailDelivery } from "@repo/email";
 import { ContactTemplate } from "@repo/email/templates/contact";
+import { leadSite } from "@repo/marketplace";
+import { publicSite } from "@repo/marketplace/site-config";
 import { log } from "@repo/observability/log";
 import { headers } from "next/headers";
 import { env } from "@/env";
 import { isPublicContactSubmissionAvailable } from "@/lib/public-contact-readiness";
+import { getCurrentPublicDataMode } from "@/lib/public-data-policy";
 import { getPublicRequestContext } from "@/lib/public-form-security";
+import { getPublicDealerBinding } from "@/lib/public-site-binding";
 import { enforcePublicSupportRateLimit } from "@/lib/public-support-rate-limit";
 import {
   type PublicSupportRequest,
@@ -42,12 +47,12 @@ const getCopy = (isBg: boolean, isImportRequest: boolean) => {
         ),
     notConfigured: isImportRequest
       ? localized(
-          "Формата е готова, но каналът за съобщения още не е конфигуриран. Обадете се директно на Day & Night.",
-          "The form is ready, but message delivery is not configured yet. Call Day & Night directly."
+          `Формата е готова, но каналът за съобщения още не е конфигуриран. Обадете се директно на ${leadSite.shortName}.`,
+          `The form is ready, but message delivery is not configured yet. Call ${leadSite.shortName} directly.`
         )
       : localized(
-          "Каналът за съобщения още не е конфигуриран. Обадете се директно на Day & Night.",
-          "Message delivery is not configured yet. Call Day & Night directly."
+          `Каналът за съобщения още не е конфигуриран. Обадете се директно на ${leadSite.shortName}.`,
+          `Message delivery is not configured yet. Call ${leadSite.shortName} directly.`
         ),
     rateLimited: localized(
       "Достигнахте лимита за запитвания. Опитайте отново по-късно.",
@@ -59,9 +64,9 @@ const getCopy = (isBg: boolean, isImportRequest: boolean) => {
     ),
     success: localized(
       isImportRequest
-        ? "Заявката е изпратена до екипа на Day & Night."
-        : "Запитването е изпратено до екипа на Day & Night.",
-      "Your request has been sent to the Day & Night team."
+        ? `Заявката е изпратена до екипа на ${leadSite.shortName}.`
+        : `Запитването е изпратено до екипа на ${leadSite.shortName}.`,
+      `Your request has been sent to the ${leadSite.shortName} team.`
     ),
   };
 };
@@ -145,8 +150,52 @@ export const submitContactRequest = async (
   const copy = getCopy(isBg, isImportRequest);
   const requestHeaders = await headers();
   const requestContext = getPublicRequestContext(requestHeaders);
+  const dealerOrgId =
+    getCurrentPublicDataMode() === "database"
+      ? getPublicDealerBinding()
+      : undefined;
   const result = await submitPublicSupportRequest(formData, requestContext, {
     available: isPublicContactSubmissionAvailable(),
+    isRequestAllowed: (request) => {
+      if (
+        (request.context === "import-request" ||
+          request.context === "listing-delivery") &&
+        !publicSite.services.imports
+      ) {
+        return false;
+      }
+      if (request.intent === "finance" && !publicSite.services.lease) {
+        return false;
+      }
+      if (request.intent === "trade_in" && !publicSite.services.sell) {
+        return false;
+      }
+      return true;
+    },
+    notify: Boolean(env.RESEND_FROM && env.RESEND_TOKEN),
+    persist: dealerOrgId
+      ? (request, context) =>
+          createPublicDealerInquiry(
+            dealerOrgId,
+            {
+              name: request.name,
+              email: request.email,
+              phone: request.phone,
+              message: getContactDetailLines(
+                request,
+                request.locale === "bg"
+              ).join("\n"),
+              locale: request.locale,
+              listingSlug: request.listing,
+              source:
+                request.context === "import-request"
+                  ? "import"
+                  : "dealer_profile",
+              intent: request.intent ?? "general",
+            },
+            context.idempotencyKey
+          )
+      : undefined,
     deliver: async (request, context) => {
       if (!env.RESEND_FROM) {
         throw new Error("Email provider is not configured");
@@ -168,14 +217,18 @@ export const submitContactRequest = async (
             />
           ),
           ...(request.email ? { replyTo: request.email } : {}),
-          subject: `Day & Night: ${topic.en}`,
+          subject: `${leadSite.shortName}: ${topic.en}`,
           to: env.RESEND_FROM,
         },
       });
     },
     rateLimit: enforcePublicSupportRateLimit,
     report: (event, fields) => {
-      if (event.endsWith("_sent") || event.endsWith("_suppressed")) {
+      if (
+        event.endsWith("_sent") ||
+        event.endsWith("_suppressed") ||
+        event.endsWith("_received")
+      ) {
         log.info(event, fields);
       } else if (
         event.endsWith("_rejected") ||
@@ -188,6 +241,14 @@ export const submitContactRequest = async (
     },
   });
 
+  if (result.status === "received") {
+    return {
+      message: isBg
+        ? "Запитването е получено от екипа. Ще се свържем с Вас."
+        : "Your enquiry has been received by the team. We will contact you.",
+      status: "success",
+    };
+  }
   if (result.status === "sent" || result.status === "suppressed") {
     return { message: copy.success, status: "success" };
   }

@@ -1,0 +1,170 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-focused-dealer-editorial-source-repair",
+  "dealer": "dynamic-auto-varna",
+  "repository": "darkapoparka/cars-dynamicautovarna",
+  "canonicalSourceRepository": "darkapoparka/cars",
+  "canonicalBaseline": {
+    "commit": "5d384d03d8fdd709a7e122a4292831b4e1d24277",
+    "tree": "1793c3e0560cb75121b0a48f535989678e99aa29"
+  },
+  "preparedTree": "03547d49354c6a24540bb10f6d4fbbee8e3f5ecc",
+  "sourceRevision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+  "originalCiProvenance": {
+    "sourceRun": {
+      "id": 38664523343,
+      "attempt": 1,
+      "head": "3afa156475e8b99bf5e3a74aceb08f486de898bd",
+      "workflow": ".github/workflows/existing-fleet-source.yml"
+    },
+    "sourceArtifact": {
+      "id": 11940359754,
+      "name": "existing-cf-source-dynamic-auto-varna-38664523343-1",
+      "bytes": 6714405,
+      "digest": "sha256:6a4a77edbe4c0f03cf14aa06ea82075a25a668cfd54c5e45f3231fc1f7c08568"
+    },
+    "proposalSha256": "0e091faade1a5214f989c7b86c162c9863eb92ab0958d63294b8e1a75530f41d",
+    "sourceReceiptSha256": "2f4f17933221a2998e2953ab685b257086b5bfe76c78b4e8627729c5f10c8b9e",
+    "finalReviewSha256": "2315d23658a5513f251ee3ba1c39bd5e5dceb488e83b7b8db9fce2707e99f576"
+  },
+  "newCiRun": null,
+  "originalCiReusedAsNewSuccess": false,
+  "originalSourcePreparationReexecuted": false,
+  "focusedProof": {
+    "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/editorial-runtime-repair-20261015/dynamic-auto-varna/focused-proof.json",
+    "sha256": "eaf7a4dbb9b8325becdd5771678383f20d6bd543ea9db0f7fc6a4cc7b5f8c9d7"
+  },
+  "patch": {
+    "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/cf-import-editorial/reseals-b/dynamic-auto-varna/source-patch.json",
+    "sha256": "d488c2cc65da83a51f39a061ead1439b871d2aaa117ee0e0985b1beeb67ef691"
+  },
+  "nativeInputBefore": {
+    "digest": "7703b8f90e499dc1f474fa18f8228665d17545876282093024b833f393d471dc",
+    "files": 9232
+  },
+  "nativeInput": {
+    "digest": "319bddfacec89050970985c3b0c541463d028094d79e626a3056ba0c8705a516",
+    "files": 9232
+  },
+  "qualificationContext": {
+    "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/contexts/dynamic-auto-varna.json",
+    "sha256": "48c9ebb6fd8425acd12fcf84b25be96cf68008c45060c32d78a2615ef543b983"
+  },
+  "nativeQualification": {
+    "contextFileSha256": "48c9ebb6fd8425acd12fcf84b25be96cf68008c45060c32d78a2615ef543b983",
+    "qualificationLockSha256": "04633129df9e75d6cd62deeac9125b279957789d75f57cdb0b243ef61bfc3e7e",
+    "contextDigest": "5cb91a22b06d205680d1cac50f45ad45ab0ba70c5dc3c1d39b063b49886d1b29",
+    "receiptSha256": "7cdbc3c10e671c6606745f0f47d3700884d3f1a3800d9f96208c4854b49d7d1e",
+    "nativeInput": {
+      "digest": "319bddfacec89050970985c3b0c541463d028094d79e626a3056ba0c8705a516",
+      "files": 9232
+    },
+    "pendingNativeChecks": [
+      "catalog-completeness",
+      "hardcoded-ui",
+      "native-routing",
+      "standalone-journeys",
+      "mounted-journeys",
+      "public-journeys",
+      "preferences-no-js",
+      "preferences-storage-disabled",
+      "preferences-races",
+      "request-isolation",
+      "security-write-blocking",
+      "assets-preserved"
+    ]
+  },
+  "preparedCandidateDigest": "ee4ab0e799d46d90c8d0de464a1661e8562c20ed374864ba27f0adfb49a77b17",
+  "templateSources": {
+    "auto-best": {
+      "repository": "darkapoparka/cars",
+      "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+      "path": "templates/auto-best",
+      "digest": "2fc9c3cfc9cf1976dbe30c08592776362e5bcc6b09e8b06620e57c4406df58a5",
+      "tree": "78fa1a82eca14816449f9588283260840ee94f52"
+    },
+    "modern": {
+      "repository": "darkapoparka/cars",
+      "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+      "path": "templates/modern",
+      "digest": "30e1a99f857cc25e4d78c9459cfb4394a9f70c5b114196a5ca6325ff38823b4b",
+      "tree": "01eac7390fa6ba951d4b8d4c26159a9be150f6c8"
+    },
+    "import": {
+      "repository": "darkapoparka/cars",
+      "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+      "path": "templates/import",
+      "digest": "c7d6c93214e859aa2747af8f5e068b6a0b8ca095d6328c807728a4d531d688f8",
+      "tree": "d841ddfe5bec918bf6b2c19fd6971fecd6b8e54d"
+    },
+    "app": {
+      "repository": "darkapoparka/cars",
+      "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+      "path": "templates/app",
+      "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1",
+      "tree": "7f3d3ffa40546635377e6c5225194fe06fead291"
+    },
+    "mobile": {
+      "repository": "darkapoparka/cars",
+      "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+      "path": "templates/mobile",
+      "digest": "f5a3e541a7c648a4c2899ad3893e22a3806027a9f66d95fa4e8c74b2226635b6",
+      "tree": "792bfdd1d8eb22aabd90c7e3a0c0779a6c1c36f3"
+    },
+    "karento-best": {
+      "repository": "darkapoparka/cars",
+      "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+      "path": "templates/karento-best",
+      "digest": "be17ef365e3272753df6e50826b139a45bfc32b8fef54ddcb86d977ad16280a9",
+      "tree": "8c5ac869c7fd15e19a80c660343fc64b20a2bad9"
+    }
+  },
+  "catalogAuditTransition": {
+    "before": {
+      "descriptor": {
+        "format": "typescript-source-map",
+        "path": "src/lib/content/extra-localized.ts",
+        "export": "extraEnglish"
+      },
+      "keys": 93,
+      "contentDigest": "adaa76d71f40de0db501eef8b8a39d889382ee3cf6b4f888204679925722bb72"
+    },
+    "after": {
+      "descriptor": {
+        "format": "typescript-source-map",
+        "path": "src/lib/content/extra-localized.ts",
+        "export": "extraEnglish"
+      },
+      "keys": 94,
+      "contentDigest": "add87c716d026bc9d208e092e46b75d16e93cc30e1004fe58e2eb3018d3e1d68"
+    },
+    "otherDeclaredCatalogsUnchanged": true
+  },
+  "pathsChanged": 4,
+  "changedPaths": [
+    "import/src/lib/content/extra-localized.ts",
+    ".client/cloudflare-existing-source.json",
+    ".client/native-qualification-context.json",
+    "localization/adoption.json"
+  ],
+  "authoritativeFactsUnchanged": true,
+  "stockUnchanged": true,
+  "allRasterAssetBytesUnchanged": true,
+  "sourcePinsUnchanged": true,
+  "otherFiveDesignBytesUnchanged": true,
+  "maintainedChecks": {
+    "nativeQualification": "PASS",
+    "app": "PASS",
+    "extended": "PASS",
+    "branding": "PASS",
+    "sourcePatch": "PASS"
+  },
+  "reviewed": true,
+  "ready": true,
+  "published": false,
+  "compiled": false,
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "globalReleaseApproval": false,
+  "createdAt": "2026-10-15T04:18:59.189Z"
+}

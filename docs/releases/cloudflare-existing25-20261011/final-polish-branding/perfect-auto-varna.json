@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "dealer": "perfect-auto-varna",
+  "reviewed": true,
+  "reviewedAt": "2026-10-14T11:31:43.352Z",
+  "sourceMode": "retained-or-mixed-raster",
+  "master": {
+    "path": "docs/logo-polish-2026-10-14/parallel/vercel/perfect-auto-varna/logo-on-light.png",
+    "sha256": "d4f1b45d6000e89bdf24924a0f2cf8ca824ad05929d87224b7bc10ee021bc784"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "docs/logo-polish-2026-10-14/parallel/vercel/perfect-auto-varna/logo-on-light.png",
+      "sha256": "d4f1b45d6000e89bdf24924a0f2cf8ca824ad05929d87224b7bc10ee021bc784",
+      "sourceReference": "L:\\CODEX\\cars\\docs\\logo-polish-2026-10-14\\parallel\\vercel\\perfect-auto-varna\\logo-on-light.png",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "L:\\CODEX\\cars\\docs\\logo-polish-2026-10-14\\live-assets\\f14f8fd14fcb86890633c6548ca774a2a7a7639493a09b21d4113db4f57adfd0.webp",
+        "sha256": "f14f8fd14fcb86890633c6548ca774a2a7a7639493a09b21d4113db4f57adfd0",
+        "reviewReference": "docs/logo-polish-2026-10-14/final-selection.json",
+        "reviewSha256": "6e396eef77195ab7f44d6b055c1936fa079a8195a428a95151fdfd7f3f5d1a16"
+      }
+    },
+    "onDark": {
+      "path": "docs/logo-polish-2026-10-14/parallel/vercel/perfect-auto-varna/logo-on-dark.png",
+      "sha256": "08c746e8ab7330bd8494a83470e62cfc97a3d47ca7ad4364f8f5bd01757633ac",
+      "sourceReference": "C:\\Users\\radev\\.codex\\generated_images\\01a13a10-d6a7-7ae1-9379-360e66482a5d\\exec-429fb72e-e637-45f1-97c3-aa356bf82dca.png",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-429fb72e-e637-45f1-97c3-aa356bf82dca",
+        "modelVersion": null
+      }
+    },
+    "onAccent": {
+      "path": "docs/logo-polish-2026-10-14/parallel/vercel/perfect-auto-varna/logo-on-accent.png",
+      "sha256": "427a6b57d7ed4fc4a8d026b14853a739c4affedb1ad5dd48fef45afcc187be34",
+      "sourceReference": "L:\\CODEX\\cars\\docs\\logo-polish-2026-10-14\\parallel\\vercel\\perfect-auto-varna\\logo-on-accent.png",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "L:/CODEX/cars/clients/perfect-auto-varna/dealer-brand/logo-on-accent.webp",
+        "sha256": "2c8b639a77d77c1c5038b0201308e418125621165949a0a5ca0e85ce8409aefc",
+        "reviewReference": "docs/logo-polish-2026-10-14/final-selection.json",
+        "reviewSha256": "6e396eef77195ab7f44d6b055c1936fa079a8195a428a95151fdfd7f3f5d1a16"
+      }
+    }
+  }
+}

@@ -1,0 +1,144 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-registered-dealer-source-adoption",
+  "dealer": "prestige-varna",
+  "reviewed": true,
+  "reviewedAt": "2026-10-13T17:45:17.735Z",
+  "canonicalSourceRepository": "darkapoparka/cars",
+  "baseline": {
+    "commit": "1e8dd75243b8e47f22583444ea43d4f23ea173fa",
+    "tree": "0857553d20a7de35171cd5347ca4e60a4356300a"
+  },
+  "identity": {
+    "dealerId": "prestige-varna",
+    "repository": "darkapoparka/cars-prestige-varna",
+    "workerName": "cars-prestige-varna",
+    "publicOrigin": "https://cars-prestige-varna.darkapoparka1.workers.dev",
+    "sources": [
+      {
+        "url": "https://prestige.mobile.bg/",
+        "observedAt": "2026-09-09"
+      }
+    ]
+  },
+  "layout": {
+    "kind": "raw-unmounted-applications",
+    "reviewed": true,
+    "proofs": [
+      {
+        "path": "auto-best/svelte.config.js",
+        "sha256": "12c428bb7348c6beb2af9f896b9d4607510b2e3a8bb22b6b68a9ad2fd809fe69"
+      },
+      {
+        "path": "carwow/svelte.config.js",
+        "sha256": "6f9f2e467afe235ca6bdcf14bdef6260b0b7060d92aa311dbff09445e0912bc8"
+      },
+      {
+        "path": "modern/apps/web/next.config.ts",
+        "sha256": "dd47e165bfbfae56740a33cff2e3d5ba2a4b62ef490731586c02de9aedd54476"
+      }
+    ]
+  },
+  "variants": [
+    {
+      "key": "auto-best",
+      "base": "",
+      "entry": "/"
+    },
+    {
+      "key": "modern",
+      "base": "/variant-2",
+      "entry": "/variant-2/cars"
+    },
+    {
+      "key": "carwow",
+      "base": "/variant-3",
+      "entry": "/variant-3/"
+    }
+  ],
+  "applications": {
+    "auto-best": "526767a17e7e6ae189a0f0fd9df1bba7d2e55535",
+    "carwow": "cc2e793e1a8f929462315ef20cdcacf8acad8600",
+    "modern": "1adbcd8394e960f5cf46fcf9eaf90f805ddfd8cf"
+  },
+  "templateSources": {
+    "auto-best": {
+      "repository": "darkapoparka/cars",
+      "revision": "faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca",
+      "path": "templates/auto-best",
+      "tree": "97833980ab127f6de8f675ac1a188e4b7f717976"
+    },
+    "carwow": {
+      "repository": "darkapoparka/cars",
+      "revision": "faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca",
+      "path": "templates/carwow",
+      "tree": "d4a08817e87cf84d08c4db1c08a515937245f2dd"
+    },
+    "modern": {
+      "repository": "darkapoparka/cars",
+      "revision": "faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca",
+      "path": "templates/modern",
+      "tree": "66bfb8196bbce18832ada6b34b02dda97baba25b"
+    }
+  },
+  "provenance": {
+    "auto-best": {
+      "metadata": {
+        "path": "auto-best/.client/project.json",
+        "sha256": "b5e17cd4ca81464e536d21963a71b189d78721cc5ed13f6633e81c433adada83"
+      },
+      "copyReceipt": {
+        "path": "auto-best/.template/source-manifest.json",
+        "sha256": "170efcc9cd0fc6763706a5d69edd53ee970e31280c9aee8871c7e8d61431294b"
+      }
+    },
+    "carwow": {
+      "metadata": {
+        "path": "carwow/.client/project.json",
+        "sha256": "97602a268775a7fe51a4141c03a0b0e01b49ea4ce5697cd9d42a166e80bebb8f"
+      },
+      "copyReceipt": {
+        "path": "carwow/.template/source-manifest.json",
+        "sha256": "04d8b78666b0eae0454d81cabb8f10c935a6eaff2c00293ee38b3c8f8e2ddbed"
+      }
+    },
+    "modern": {
+      "metadata": {
+        "path": "modern/.client/project.json",
+        "sha256": "c5e6efbae5656f207722364ff3141be16f0e45916e03cac48b2014641b2710bb"
+      },
+      "copyReceipt": {
+        "path": "modern/.template/source-manifest.json",
+        "sha256": "925b0f64041e7c0ccd38f853a84ad0d9b0c250cd97abd80b79043b26d3cd216b"
+      }
+    }
+  },
+  "personalization": {
+    "path": "docs/releases/cloudflare-existing25-20261011/registered-source/prestige-varna/reviewed-personalization.json",
+    "sha256": "11b2079e7b061cef693096e9a40b540ab413ad3bbae74c6af45c352da4b9d30f"
+  },
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "globalReleaseApproval": false,
+  "templateRefresh": {
+    "schemaVersion": 1,
+    "kind": "cars-owner-directed-pinned-template-refresh",
+    "reviewed": true,
+    "reviewedAt": "2026-10-13T19:14:36.469Z",
+    "dealer": "prestige-varna",
+    "baseline": {
+      "commit": "1e8dd75243b8e47f22583444ea43d4f23ea173fa",
+      "tree": "0857553d20a7de35171cd5347ca4e60a4356300a"
+    },
+    "families": [
+      "auto-best",
+      "modern",
+      "import",
+      "app",
+      "mobile",
+      "karento-best"
+    ],
+    "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "preserveOriginalSourceInGit": true
+  }
+}

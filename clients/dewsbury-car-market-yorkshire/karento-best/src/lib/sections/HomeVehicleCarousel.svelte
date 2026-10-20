@@ -7,9 +7,49 @@
   import DemoActionLink from "#lib/components/DemoActionLink.svelte";
   import { slider } from "#lib/vendor.ts";
   import { dealer } from "#lib/content.ts";
-  import { MediaQuery } from "svelte/reactivity";
-  const phone = new MediaQuery("(max-width: 767.98px)");
 </script>
+
+{#snippet heroTitle()}
+  {#if dealer.businessPreview}
+    {locale.t("dealer.home.heading")}
+  {:else}
+    <span class="home-hero-mobile"
+      >{dealer.contentStatus === "reference-demo"
+        ? locale.t("ui.home-vehicle-carousel.find-your-next-car")
+        : (dealer.copy["home.hero.mobile"] ??
+          locale.t("ui.home-vehicle-carousel.find-your-next-car"))}</span
+    >
+    <span class="home-hero-desktop"
+      >{dealer.contentStatus === "reference-demo"
+        ? locale.t("ui.home-vehicle-carousel.discover-your-next-car-today")
+        : (dealer.copy["home.hero"] ??
+          locale.t(
+            "ui.home-vehicle-carousel.discover-your-next-car-today",
+          ))}</span
+    >
+  {/if}
+{/snippet}
+
+{#snippet heroIntro()}
+  {#if dealer.businessPreview}
+    {locale.t(
+      dealer.businessPreview.mode === "illustrative-not-dealer-stock"
+        ? "dealer.home.illustrativeIntro"
+        : "dealer.home.intro",
+    )}
+  {:else}
+    <span class="home-hero-mobile"
+      >{locale.t("ui.home-vehicle-carousel.explore-cars-find-your-fit")}</span
+    >
+    <span class="home-hero-desktop"
+      >{locale.t(
+        "ui.home-vehicle-carousel.explore-our-wide-selection-and-experience-a-smooth-buying",
+      )} <br class="d-none d-md-block" />{locale.t(
+        "ui.home-vehicle-carousel.with-personalized-support-at-every-stage",
+      )}</span
+    >
+  {/if}
+{/snippet}
 
 <section class="box-section block-banner-home3 position-relative">
   <div class="container-banner-home3 position-relative">
@@ -26,43 +66,11 @@
                     : locale.t("demo.stockCount")}</span
                 >
                 <h1 class="mt-20 mb-20 color-white desktop-type-hero"
-                  >{dealer.businessPreview
-                    ? locale.t("dealer.home.heading")
-                    : ((phone.current
-                        ? dealer.contentStatus === "reference-demo"
-                          ? locale.t(
-                              "ui.home-vehicle-carousel.find-your-next-car",
-                            )
-                          : (dealer.copy["home.hero.mobile"] ??
-                            locale.t(
-                              "ui.home-vehicle-carousel.find-your-next-car",
-                            ))
-                        : dealer.contentStatus === "reference-demo"
-                          ? locale.t(
-                              "ui.home-vehicle-carousel.discover-your-next-car-today",
-                            )
-                          : dealer.copy["home.hero"]) ??
-                      locale.t(
-                        "ui.home-vehicle-carousel.discover-your-next-car-today",
-                      ))}</h1
+                  >{@render heroTitle()}</h1
                 >
-                <h6 class="color-white heading-6-medium desktop-type-lead">
-                  {#if dealer.businessPreview}{locale.t(
-                      dealer.businessPreview.mode ===
-                        "illustrative-not-dealer-stock"
-                        ? "dealer.home.illustrativeIntro"
-                        : "dealer.home.intro",
-                    )}{:else if phone.current}{locale.t(
-                      "ui.home-vehicle-carousel.explore-cars-find-your-fit",
-                    )}{:else}
-                    {locale.t(
-                      "ui.home-vehicle-carousel.explore-our-wide-selection-and-experience-a-smooth-buying",
-                    )} <br class="d-none d-md-block" />
-                    {locale.t(
-                      "ui.home-vehicle-carousel.with-personalized-support-at-every-stage",
-                    )}
-                  {/if}
-                </h6>
+                <h6 class="color-white heading-6-medium desktop-type-lead"
+                  >{@render heroIntro()}</h6
+                >
                 <div
                   class="d-flex align-items-center justify-content-center pt-60 flex-wrap"
                 >
@@ -115,40 +123,11 @@
                     : locale.t("demo.stockCount")}</span
                 >
                 <h1 class="mt-20 mb-20 color-white desktop-type-hero"
-                  >{dealer.businessPreview
-                    ? locale.t("dealer.home.heading")
-                    : ((phone.current
-                        ? dealer.contentStatus === "reference-demo"
-                          ? locale.t(
-                              "ui.home-vehicle-carousel.find-your-next-car",
-                            )
-                          : (dealer.copy["home.hero.mobile"] ??
-                            locale.t(
-                              "ui.home-vehicle-carousel.find-your-next-car",
-                            ))
-                        : dealer.contentStatus === "reference-demo"
-                          ? locale.t(
-                              "ui.home-vehicle-carousel.discover-your-next-car-today",
-                            )
-                          : dealer.copy["home.hero"]) ??
-                      locale.t(
-                        "ui.home-vehicle-carousel.discover-your-next-car-today",
-                      ))}</h1
+                  >{@render heroTitle()}</h1
                 >
-                <h6 class="color-white heading-6-medium desktop-type-lead">
-                  {#if dealer.businessPreview}{locale.t(
-                      "dealer.home.intro",
-                    )}{:else if phone.current}{locale.t(
-                      "ui.home-vehicle-carousel.explore-cars-find-your-fit",
-                    )}{:else}
-                    {locale.t(
-                      "ui.home-vehicle-carousel.explore-our-wide-selection-and-experience-a-smooth-buying",
-                    )} <br class="d-none d-md-block" />
-                    {locale.t(
-                      "ui.home-vehicle-carousel.with-personalized-support-at-every-stage",
-                    )}
-                  {/if}
-                </h6>
+                <h6 class="color-white heading-6-medium desktop-type-lead"
+                  >{@render heroIntro()}</h6
+                >
                 <div
                   class="d-flex align-items-center justify-content-center pt-60 flex-wrap"
                 >
@@ -244,3 +223,21 @@
     </div>
   </div>
 </section>
+
+<style>
+  /* Both copies travel with Swiper clones; CSS selects the current viewport. */
+  .home-hero-mobile {
+    display: none;
+  }
+  @media (max-width: 767.98px) {
+    .home-hero-mobile {
+      display: inline;
+    }
+    .home-hero-desktop {
+      display: none;
+    }
+    h1 {
+      text-wrap: balance;
+    }
+  }
+</style>

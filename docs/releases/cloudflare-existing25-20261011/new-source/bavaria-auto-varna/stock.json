@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "dealer": "bavaria-auto-varna",
+  "kind": "dated-listing-snapshot",
+  "records": [
+    {
+      "title": "VW Touran 1.6 LPG/Petrol",
+      "make": "Volkswagen",
+      "model": "Touran",
+      "year": 2010,
+      "priceAmount": 3790,
+      "mileageValue": 160000,
+      "fuel": "LPG",
+      "transmission": "Manual",
+      "body": "Van",
+      "description": "VW Touran 1.6 LPG/Petrol от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+      "sourceFieldProof": {
+        "source": "https://bavaria.mobile.bg/obiava-11789996935203115-vw-touran-1-6-gaz-benzin",
+        "year": "Дата на производство януари 2010",
+        "price": "3 790 €,",
+        "mileage": "Пробег [км] 160000 км",
+        "fuel": "Двигател Газ",
+        "transmission": "Скоростна кутия Ръчна",
+        "body": "Категория Ван"
+      },
+      "sourceCaveats": [],
+      "id": "11789996935203115",
+      "slug": "bavaria-auto-varna-11789996935203115",
+      "currency": "EUR",
+      "priceOnRequest": false,
+      "mileageOnRequest": false,
+      "mileageUnit": "km",
+      "condition": "used",
+      "images": [
+        "/dealer-stock/11789996935203115-1.webp",
+        "/dealer-stock/11789996935203115-2.webp"
+      ],
+      "sourceUrl": "https://bavaria.mobile.bg/obiava-11789996935203115-vw-touran-1-6-gaz-benzin",
+      "observedAt": "2026-10-12T12:05:57.082Z",
+      "availability": "Датирана обява; потвърдете цената и наличността директно с автокъщата.",
+      "sourceProof": {
+        "sha256": "db272bf4fd9f3f62b0d38788caaa5bb145c6d1becfd3b0a90595cc742273f642",
+        "originalPhotoBytesUnchanged": true,
+        "watermarksPreserved": true
+      }
+    },
+    {
+      "title": "Dacia Lodgy 1.5 dCi",
+      "make": "Dacia",
+      "model": "Lodgy",
+      "year": 2016,
+      "priceAmount": 6699,
+      "mileageValue": 199000,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "body": "MPV",
+      "description": "Dacia Lodgy 1.5 dCi от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+      "sourceFieldProof": {
+        "source": "https://bavaria.mobile.bg/obiava-11787839012622133-dacia-lodgy-1-5-dci-6-1-mecta",
+        "year": "Дата на производство май 2016",
+        "price": "6 699 €,",
+        "mileage": "Пробег [км] 199000 км",
+        "fuel": "Двигател Дизелов",
+        "transmission": "Скоростна кутия Ръчна",
+        "body": "Категория Миниван"
+      },
+      "sourceCaveats": [],
+      "id": "11787839012622133",
+      "slug": "bavaria-auto-varna-11787839012622133",
+      "currency": "EUR",
+      "priceOnRequest": false,
+      "mileageOnRequest": false,
+      "mileageUnit": "km",
+      "condition": "used",
+      "images": [
+        "/dealer-stock/11787839012622133-1.webp",
+        "/dealer-stock/11787839012622133-2.webp"
+      ],
+      "sourceUrl": "https://bavaria.mobile.bg/obiava-11787839012622133-dacia-lodgy-1-5-dci-6-1-mecta",
+      "observedAt": "2026-10-12T12:05:57.082Z",
+      "availability": "Датирана обява; потвърдете цената и наличността директно с автокъщата.",
+      "sourceProof": {
+        "sha256": "b0b2f7f9a4319f5adc40e8ca945a7a823547dc23fd3d3a2348819c7e50901200",
+        "originalPhotoBytesUnchanged": true,
+        "watermarksPreserved": true
+      }
+    }
+  ],
+  "disclosure": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+  "disclosureEn": "Dated listing samples; confirm price and availability directly with the dealership.",
+  "availabilityConfirmed": false,
+  "completeInventory": false
+}

@@ -1,0 +1,126 @@
+{
+  "schemaVersion": 1,
+  "dealer": "tonyem4m-varna",
+  "reviewed": true,
+  "reviewedAt": "2026-10-11T13:01:13.451Z",
+  "reviewScope": "Exact final accepted logo assets and prior genuine surface review retained; actual six-template integration and hosted acceptance remain pending.",
+  "identityStatus": "Disclosed proposed improvement of Тони Ем under owner single-row direction; recognizable source palette/name retained. Not official dealer rebrand or owner approval.",
+  "officialDealerArtwork": false,
+  "dealerApproval": false,
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "generation": {
+    "tool": "image_gen",
+    "generationId": "exec-90255ba8-224a-43ba-95c4-3c07af149295",
+    "modelVersion": null,
+    "sourceSha256": "8a2ad192b9d968c2b7bde213dcd10946d70f3a1f4b15dd1b2584b01bbf4b7896",
+    "sourceRole": "native ImageGen output used to derive this exact retained reviewed raster; not asserted to be an image-edit input",
+    "nativeOutput": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/tonyem4m-varna/source/native-onLight.png",
+      "sha256": "8a2ad192b9d968c2b7bde213dcd10946d70f3a1f4b15dd1b2584b01bbf4b7896"
+    },
+    "originalGenerationReceipt": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/tonyem4m-varna/source/generation-receipt.json",
+      "sha256": "60cabde36df29bf674abd6b0bcb08b3cf6d0a56255add55892dec677ccbecd22"
+    },
+    "derivation": "one ImageGen master exported to context raster"
+  },
+  "master": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/tonyem4m-varna/branding/master.png",
+    "sha256": "286cf6b57d64a1699f9bd3c4e1e2a75a7af49b45d782a7ac15338bf8c6fafcba"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/tonyem4m-varna/branding/onLight.png",
+      "sha256": "286cf6b57d64a1699f9bd3c4e1e2a75a7af49b45d782a7ac15338bf8c6fafcba",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/new-source/tonyem4m-varna/source/generation-receipt.json#sha256=60cabde36df29bf674abd6b0bcb08b3cf6d0a56255add55892dec677ccbecd22; reviewed onLight PNG from exact accepted final logo manifest b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-90255ba8-224a-43ba-95c4-3c07af149295",
+        "modelVersion": null,
+        "sourceSha256": "8a2ad192b9d968c2b7bde213dcd10946d70f3a1f4b15dd1b2584b01bbf4b7896",
+        "sourceRole": "native ImageGen output used to derive this exact retained reviewed raster; not asserted to be an image-edit input",
+        "nativeOutput": {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/tonyem4m-varna/source/native-onLight.png",
+          "sha256": "8a2ad192b9d968c2b7bde213dcd10946d70f3a1f4b15dd1b2584b01bbf4b7896"
+        },
+        "originalGenerationReceipt": {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/tonyem4m-varna/source/generation-receipt.json",
+          "sha256": "60cabde36df29bf674abd6b0bcb08b3cf6d0a56255add55892dec677ccbecd22"
+        },
+        "derivation": "one ImageGen master exported to context raster"
+      }
+    },
+    "onDark": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/tonyem4m-varna/branding/onDark.png",
+      "sha256": "c52d824580894a889cfb5afe80470e187525a95fd93cb03f40156cb38a0731b3",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/new-source/tonyem4m-varna/source/generation-receipt.json#sha256=60cabde36df29bf674abd6b0bcb08b3cf6d0a56255add55892dec677ccbecd22; reviewed onDark PNG from exact accepted final logo manifest b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-90255ba8-224a-43ba-95c4-3c07af149295",
+        "modelVersion": null,
+        "sourceSha256": "8a2ad192b9d968c2b7bde213dcd10946d70f3a1f4b15dd1b2584b01bbf4b7896",
+        "sourceRole": "native ImageGen output used to derive this exact retained reviewed raster; not asserted to be an image-edit input",
+        "nativeOutput": {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/tonyem4m-varna/source/native-onDark.png",
+          "sha256": "8a2ad192b9d968c2b7bde213dcd10946d70f3a1f4b15dd1b2584b01bbf4b7896"
+        },
+        "originalGenerationReceipt": {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/tonyem4m-varna/source/generation-receipt.json",
+          "sha256": "60cabde36df29bf674abd6b0bcb08b3cf6d0a56255add55892dec677ccbecd22"
+        },
+        "derivation": "one ImageGen master exported to context raster"
+      }
+    },
+    "onAccent": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/tonyem4m-varna/branding/onAccent.png",
+      "sha256": "c52d824580894a889cfb5afe80470e187525a95fd93cb03f40156cb38a0731b3",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/new-source/tonyem4m-varna/source/generation-receipt.json#sha256=60cabde36df29bf674abd6b0bcb08b3cf6d0a56255add55892dec677ccbecd22; reviewed onAccent PNG from exact accepted final logo manifest b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-90255ba8-224a-43ba-95c4-3c07af149295",
+        "modelVersion": null,
+        "sourceSha256": "8a2ad192b9d968c2b7bde213dcd10946d70f3a1f4b15dd1b2584b01bbf4b7896",
+        "sourceRole": "native ImageGen output used to derive this exact retained reviewed raster; not asserted to be an image-edit input",
+        "nativeOutput": {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/tonyem4m-varna/source/native-onAccent.png",
+          "sha256": "8a2ad192b9d968c2b7bde213dcd10946d70f3a1f4b15dd1b2584b01bbf4b7896"
+        },
+        "originalGenerationReceipt": {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/tonyem4m-varna/source/generation-receipt.json",
+          "sha256": "60cabde36df29bf674abd6b0bcb08b3cf6d0a56255add55892dec677ccbecd22"
+        },
+        "derivation": "one ImageGen master exported to context raster"
+      }
+    }
+  },
+  "originalGenerationReceipt": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/tonyem4m-varna/source/generation-receipt.json",
+    "sha256": "60cabde36df29bf674abd6b0bcb08b3cf6d0a56255add55892dec677ccbecd22"
+  },
+  "acceptedLogoManifest": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/evidence/final-logo-handoff.json",
+    "sha256": "b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a"
+  },
+  "assetReview": {
+    "status": "completed",
+    "owner": "new-a",
+    "proof": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/tonyem4m-varna/surface-review.png",
+      "sha256": "8292195e67c1139852d5376e94423938a505184393c3ed902c95a10daae83cfb",
+      "bytes": 111727,
+      "width": 740,
+      "height": 864,
+      "format": "png",
+      "hasAlpha": true
+    },
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "scope": "Actual master and compact native-palette swatches inspected; retained pixels remain identical.",
+    "report": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/final-new-a-review.json"
+  },
+  "identityHeld": false
+}

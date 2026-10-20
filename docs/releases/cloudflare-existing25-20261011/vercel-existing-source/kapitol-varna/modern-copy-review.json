@@ -1,0 +1,88 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-reviewed-modern-bilingual-copy-input",
+  "dealer": "kapitol-varna",
+  "sourceCommit": "d9594c2979f668831b78609e4e990640259aee81",
+  "baselineTree": "e1ce5554694fa7d584c82145f57910df396dfeb9",
+  "inputSha256": "3986315e7a72b0c278992b1c2716659e2cf927915d05ec6beb5b290e4ab2cbcb",
+  "modernInputRowsSha256": "f8bcc74e06afe8cd23b7fb725ce0cf09c2cee73b8955aa1f93ff5c760c149dc1",
+  "listingCount": 2,
+  "profileInputs": [
+    {
+      "path": "dealer.json",
+      "gitBlob": "45fc9c76b8f762413c351132d86d3eec2174a5e3",
+      "sha256": "5bb808c675d67a56ff50c4b04d5f3c8297c1e0e6ab63b448de8a7cef6bcb42a0",
+      "bytes": 4781
+    },
+    {
+      "path": ".client/registered-source-adoption.json",
+      "gitBlob": "74dc3edb543e4da18f14c6e5463516b70c80b973",
+      "sha256": "0d63e007e2a9fb65be8572c5a5bb0b590cf98df3ac0edc8c95bf7c5f95a241fb",
+      "bytes": 4444
+    },
+    {
+      "path": ".client/registered-personalization.json",
+      "gitBlob": "6a2ae59e100547622da4405c91a0f30d73084bd8",
+      "sha256": "618e0693df3164643d18747106b7716aff49f9d6d86633f2aaceddbfbb98264e",
+      "bytes": 18477
+    },
+    {
+      "path": "business-facts.json",
+      "gitBlob": "c806e7875e1296d49d95b8c140373595ea6675e5",
+      "sha256": "557e835a1419e7097af5dd02fa792eb88cee779c795163a15f9b1c120689c38d",
+      "bytes": 10766
+    }
+  ],
+  "reviewedGeneratorHelper": {
+    "path": "scripts/lib/modern-dealer-inventory-copy.mjs",
+    "sha256": "cbdbaa28dc07911cfe913b4e627671b6556fc25d3bfe59364e29c5ca5a29072b",
+    "sourceCommit": "14d86f67c160699c18a6ec5658197cc4d9011e0b"
+  },
+  "review": {
+    "displayCopyOnly": true,
+    "exactSourceDescriptionKeys": true,
+    "listingFactsUnchanged": true,
+    "imageUrlsUnchanged": true,
+    "imageAltsPreserved": true,
+    "interpolationTokensUnchanged": true,
+    "reviewedBy": "Codex, authorized final-template rollout",
+    "reviewedAt": "2026-10-14T20:04:09.150Z",
+    "notes": "Reuse exact existing native or reviewed registered companions for every actual current row; no new translation/factual source edits."
+  },
+  "reviewedCopy": {
+    "kapitol-varna-21791385455711977": {
+      "sourceDescription": "Mercedes-Benz GLB 200 D AMG Line от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+      "en": {
+        "description": "Mercedes-Benz GLB 200 D AMG Line from a dated public listing. Confirm condition, price and availability directly with the dealership.",
+        "imageAlts": [
+          "Mercedes-Benz GLB 200 D AMG Line",
+          "Mercedes-Benz GLB 200 D AMG Line"
+        ]
+      },
+      "bg": {
+        "description": "Mercedes-Benz GLB 200 D AMG Line от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+        "imageAlts": [
+          "Mercedes-Benz GLB 200 D AMG Line",
+          "Mercedes-Benz GLB 200 D AMG Line"
+        ]
+      }
+    },
+    "kapitol-varna-21791028313582431": {
+      "sourceDescription": "Kia Sportage HEV 1.6 T-GDI от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+      "en": {
+        "description": "Kia Sportage HEV 1.6 T-GDI from a dated public listing. Confirm condition, price and availability directly with the dealership.",
+        "imageAlts": [
+          "Kia Sportage HEV 1.6 T-GDI",
+          "Kia Sportage HEV 1.6 T-GDI"
+        ]
+      },
+      "bg": {
+        "description": "Kia Sportage HEV 1.6 T-GDI от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+        "imageAlts": [
+          "Kia Sportage HEV 1.6 T-GDI",
+          "Kia Sportage HEV 1.6 T-GDI"
+        ]
+      }
+    }
+  }
+}

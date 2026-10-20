@@ -63,7 +63,8 @@
         ><a
           class="heading-6 neutral-1000 desktop-type-card"
           href={locale.href(destination)}
-          aria-label={card.titleLabel}>{card.title}</a
+          aria-label={card.titleLabel}
+          title={card.title}>{card.title}</a
         ></div
       >
       <div class="card-program">
@@ -145,6 +146,13 @@
     }
     .card-property.card-flight.card-hotel .card-info .card-title {
       margin-bottom: var(--karento-desktop-card-gap);
+    }
+    .card-title a {
+      display: block;
+      max-width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }
     .card-flight .card-location {
       margin-bottom: var(--karento-desktop-card-gap) !important;

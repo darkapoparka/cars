@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "wadishee-used-cars",
+  "previousSlug": "wadishee-used-cars",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-19T18:53:06.425Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 4,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-sharjah-wadishee-used-cars",
+    "position": 390
+  },
+  "before": {
+    "files": 37,
+    "bytes": 4416804
+  },
+  "afterBeforeReview": {
+    "files": 21,
+    "bytes": 2600008
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 72539,
+      "sha256": "0d71e936c048d9391e76be3c7c29fcc7141fd5a71f707256cc264f53acf3ed1e"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 70254,
+      "sha256": "545253dc40cb84257777d17b434af184e20bdbe431ec808239d34c3849c18c0e"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 72539,
+      "sha256": "0d71e936c048d9391e76be3c7c29fcc7141fd5a71f707256cc264f53acf3ed1e"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 170836,
+      "sha256": "c78eb42397f78e6617b7bc0dd014c7e65d4d29063827271ed9594d9ec1dd00c8"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 145976,
+      "sha256": "3c99cca9f6128d18ce5f044e81081efd440ca4407e18b69af24b7147acba8c0f"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 145976,
+      "sha256": "3c99cca9f6128d18ce5f044e81081efd440ca4407e18b69af24b7147acba8c0f"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 170836,
+      "sha256": "c78eb42397f78e6617b7bc0dd014c7e65d4d29063827271ed9594d9ec1dd00c8"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 72539,
+      "sha256": "0d71e936c048d9391e76be3c7c29fcc7141fd5a71f707256cc264f53acf3ed1e"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 7093,
+      "sha256": "57c7740e7fcf882ac826fa2de95f4903c08c0005491070434b7d128944dd49c6"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 145976,
+      "sha256": "3c99cca9f6128d18ce5f044e81081efd440ca4407e18b69af24b7147acba8c0f"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 103948,
+      "sha256": "3a14940e7034392242a91c22b00a269b11d9d650e5494d2c9a8c496a1d7a5f90"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 145976,
+      "sha256": "3c99cca9f6128d18ce5f044e81081efd440ca4407e18b69af24b7147acba8c0f"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 103948,
+      "sha256": "3a14940e7034392242a91c22b00a269b11d9d650e5494d2c9a8c496a1d7a5f90"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 170836,
+      "sha256": "c78eb42397f78e6617b7bc0dd014c7e65d4d29063827271ed9594d9ec1dd00c8"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 118892,
+      "sha256": "e946b8efa672abbeaf26e20fcadbb3594caf9ed52d16ac5b4fb2a1cc4fa95977"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 46744,
+      "sha256": "a056f94806c39841a2d31d0228a7f8e165a116a873e29c424bb367a21ecfc962"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 55704,
+      "sha256": "055c256f544b608723690a72fbae02330d543ce387da02b7c2f9c97247085c53"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 12,
+    "bytes": 2530237,
+    "inventorySha256": "919a226d8d5023ce2588a270798693a3f6219cb20d2bee1051d4b9b5656dc687",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "wadishee-used-cars",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 40,
+    "report": "dealers/wadishee-used-cars/input-review.json"
+  },
+  "after": {
+    "files": 23,
+    "bytes": 2608881
+  }
+}

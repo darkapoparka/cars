@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "dealer": "miraj-auto-varna",
+  "kind": "personalized-source-candidate-not-an-approved-release",
+  "sourceRevision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+  "candidateSourceDigest": "f4b554f22af163cdd2b8697ab1fe10c6ad47a421e1c0a0b9e2c14ac9aeaf0da1",
+  "qualificationContextPath": ".client/native-qualification-context.json",
+  "qualificationContextSha256": "4f4ea0790097605bdd5a562f24f74b35e10b0204a667048859bba83dfa977735",
+  "qualificationLockPath": ".client/native-qualification-lock.json",
+  "qualificationLockSha256": "04633129df9e75d6cd62deeac9125b279957789d75f57cdb0b243ef61bfc3e7e",
+  "sourceDeltaReview": {
+    "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-delta-review.json",
+    "sha256": "43cb6876e815a2a6b866f1dadd304236de4ae58c05fe65c2ab62a23506ee7ce9",
+    "reviewedAt": "2026-10-14T23:55:37.398Z"
+  },
+  "nativeApproval": false,
+  "hostedApproval": false
+}

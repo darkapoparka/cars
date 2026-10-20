@@ -1,0 +1,21 @@
+{
+	"baselineImportCommit": "40eff0d42ea1f735e2467f9c760c6c293f9fbf46",
+	"baselineRepositoryCommit": "7a82a6333376caa8d5526c53b97c255ba1368e1f",
+	"frozenPathCount": 1679,
+	"frozenManifestSha256": "f6ee836b2aa7f1a1a29b38fe538bdfb2cbc64f18fb1e131a6ac7395afeaadae5",
+	"frozenManifest": "L:/CODEX/cars/templates/import/runtime/desktop-home-tab-polish-2026-10-04/evidence/source-manifest.json",
+	"lockfile": {
+		"path": "package-lock.json",
+		"sha256": "aa596db7046c3f226ce50b488e283e30121eb49122d5006c60035ef57a952e1c"
+	},
+	"changedSource": [
+		{
+			"path": "src/lib/components/common/MobileModeTabs.svelte",
+			"sha256": "0c4c08c0bde6157caa5814f9daa73703f4b799372b82fb67a5779bcdf0e1926e"
+		},
+		{
+			"path": "src/lib/components/home/DesktopHomeHero.svelte",
+			"sha256": "9d520cfec2164a68cb097a6466ebdc9ef0ce5ecf5f2d60304c509420ee923a59"
+		}
+	]
+}

@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-14",
+  "preview": "http://127.0.0.1:6461/en/contact?topic=import",
+  "changes": [
+    "Save preferences -> Save; localized Bulgarian -> Запази",
+    "Country and website-language select arrows centered with 16px inline-end inset and 42px reserved text padding",
+    "Native select semantics retained; forced-colors uses the native arrow",
+    "Mobile chevron uses the existing Fluent renderer and pinned upstream revision"
+  ],
+  "checks": {
+    "viewports": [
+      "320x667 EN",
+      "390x844 BG",
+      "1440x900 EN"
+    ],
+    "arrowInsetPx": 16,
+    "verticalCenterDeltaPx": 0,
+    "fieldHeightPx": 48,
+    "keyboardLanguageSelection": "passed",
+    "saveAndReturnTopic": "passed in EN and BG; topic=import preserved",
+    "svelteAutofixer": "no issues; existing bind:this suggestion retained",
+    "localeCatalog": "passed",
+    "cssPolicy": "passed",
+    "tokens": "passed",
+    "visualSystem": "passed",
+    "gitDiffWhitespace": "passed",
+    "console": "no captured warnings or errors"
+  },
+  "evidence": [
+    "selector-before-320.jpg",
+    "selector-after-320.jpg",
+    "selector-before-1440.jpg",
+    "selector-after-1440.jpg"
+  ],
+  "sourceFiles": [
+    "src/lib/locale/LocalePreferences.svelte",
+    "localization/common.json",
+    "src/lib/locale/catalog.ts",
+    "localization/generated-manifest.json",
+    "src/lib/components/layout/fluent-mobile.ts",
+    "provenance/fluent-icons.json",
+    "provenance/fluent-icons.md"
+  ],
+  "preserved": "Existing title focus changes and unrelated shared checkout work",
+  "scope": "Local preview polish; no production build, commit, deployment or template promotion"
+}

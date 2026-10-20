@@ -118,6 +118,12 @@ export const referenceSpecifications: readonly DetailSpecification[] = [
     "valueKey": "fuel.gasoline"
   },
   {
+    "id": "year",
+    "icon": "/assets/imgs/template/icons/calendar.svg",
+    "value": "2007",
+    "labelKey": "vehicle.field.year"
+  },
+  {
     "id": "lit",
     "icon": "/assets/imgs/page/car/lit.svg",
     "value": "140 hp",
@@ -170,7 +176,7 @@ export const referenceReviews: readonly DetailReview[] = [];
 export const referenceSeller: DetailSeller = {
   "name": "Автокъща Приселци",
   "location": "бул. „Цар Освободител“ 285",
-  "avatar": "/dealer-brand/logo-on-light-20260919.webp",
+  "avatar": "/dealer-brand/v2-7b937c05859b3290/logo-on-light.webp",
   "mobile": "0886 251 705",
   "email": "",
   "whatsapp": "",

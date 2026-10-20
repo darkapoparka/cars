@@ -1,0 +1,51 @@
+{
+	"qa": "C:/Users/radev/.codex/tmp/cars-import-inventory-type-inside-2026-10-05-qa",
+	"baselineCommit": "bc20f2e453dbc9fb625cfc8fad9252504547a93b",
+	"baselineCaptureSource": "docs/desktop-inventory-type-outline-2026-10-05/*-after.jpg",
+	"node": "v24.21.0",
+	"lockfile": "aa596db7046c3f226ce50b488e283e30121eb49122d5006c60035ef57a952e1c",
+	"taskSources": [
+		{
+			"path": "src/lib/components/inventory/InventoryPage.svelte",
+			"sha256": "a78a5cac47b29c73dc672f96400b741dfb49a4b3d9082843ef362a1693410795"
+		}
+	],
+	"dependencies": {
+		"svelte": "5.57.1",
+		"@sveltejs/kit": "2.70.3",
+		"vite": "8.3.0"
+	},
+	"canonicalTaskSourcesMatchFrozenQa": true,
+	"compiled": [
+		{
+			"path": ".svelte-kit/output/server/index.js",
+			"sha256": "5ceaf3d256f7e98e530180c594f3c037627a11281f358f43b34752f957efa7bd"
+		},
+		{
+			"path": ".svelte-kit/output/client/.vite/manifest.json",
+			"sha256": "6720f8b535668cafd15409211ec5c3cba4524ff6287af248d296ba13a4b8b18e"
+		}
+	],
+	"productionBuild": "Passed, including retained adapter and public asset packaging, from frozen QA source.",
+	"browserChecks": {
+		"passed": 2,
+		"baseUrl": "http://127.0.0.1:6793",
+		"project": "desktop",
+		"filter": "inventory type pills|desktop catalogue"
+	},
+	"finalPreview": "http://127.0.0.1:6790/bg/inventory",
+	"capture": {
+		"viewport": {
+			"width": 1440,
+			"height": 1000
+		},
+		"nativeCanvas": {
+			"width": 1425,
+			"height": 990
+		}
+	},
+	"mobilePresentationMatches": true,
+	"frameworkCheck": "Zero Svelte errors and warnings.",
+	"scopedEslint": "Passed with the retained ignore configuration copied into frozen QA.",
+	"architectureAndAssets": "Passed: 57 native routes, 232 reachable modules, 976 local images."
+}

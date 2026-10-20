@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "dealer": "vvcars-varna",
+  "reviewed": true,
+  "reviewedAt": "2026-10-14T11:56:24.553Z",
+  "sourceMode": "retained-or-mixed-raster",
+  "master": {
+    "path": "docs/logo-polish-2026-10-14/final-raster-inputs/39982581e7ad84c8026e9eaea280958c6c0a6646824f291ecd8ed79487066cbc.png",
+    "sha256": "39982581e7ad84c8026e9eaea280958c6c0a6646824f291ecd8ed79487066cbc"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "docs/logo-polish-2026-10-14/final-raster-inputs/39982581e7ad84c8026e9eaea280958c6c0a6646824f291ecd8ed79487066cbc.png",
+      "sha256": "39982581e7ad84c8026e9eaea280958c6c0a6646824f291ecd8ed79487066cbc",
+      "sourceReference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/live-assets/0696620dc87f3036dcebc43b86e1df0eaa9eae6cfe8f40c7abfd7c56c51d3f9e.webp",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/live-assets/0696620dc87f3036dcebc43b86e1df0eaa9eae6cfe8f40c7abfd7c56c51d3f9e.webp",
+        "sha256": "0696620dc87f3036dcebc43b86e1df0eaa9eae6cfe8f40c7abfd7c56c51d3f9e",
+        "reviewReference": "docs/logo-polish-2026-10-14/final-selection.json",
+        "reviewSha256": "6e396eef77195ab7f44d6b055c1936fa079a8195a428a95151fdfd7f3f5d1a16"
+      }
+    },
+    "onDark": {
+      "path": "docs/logo-polish-2026-10-14/final-raster-inputs/315f9ce009bb2a2d9b390a1fdd2a99a4b1fb2007739073a411b3de6ad3aca42f.png",
+      "sha256": "315f9ce009bb2a2d9b390a1fdd2a99a4b1fb2007739073a411b3de6ad3aca42f",
+      "sourceReference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/live-assets/65802830424e954401796be9de664406e60ded9af1fc5ac58c03399fc64c57e6.webp",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/live-assets/65802830424e954401796be9de664406e60ded9af1fc5ac58c03399fc64c57e6.webp",
+        "sha256": "65802830424e954401796be9de664406e60ded9af1fc5ac58c03399fc64c57e6",
+        "reviewReference": "docs/logo-polish-2026-10-14/final-selection.json",
+        "reviewSha256": "6e396eef77195ab7f44d6b055c1936fa079a8195a428a95151fdfd7f3f5d1a16"
+      }
+    },
+    "onAccent": {
+      "path": "docs/logo-polish-2026-10-14/final-raster-inputs/5e2a279d02d8545cd614e069609c3178953735fb21ae02287a33f5f3af5c9dc1.png",
+      "sha256": "5e2a279d02d8545cd614e069609c3178953735fb21ae02287a33f5f3af5c9dc1",
+      "sourceReference": "L:/CODEX/cars/leads/branding/fleet-20261011/vvcars-varna/dealer-brand/logo-on-accent.webp",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "L:/CODEX/cars/leads/branding/fleet-20261011/vvcars-varna/dealer-brand/logo-on-accent.webp",
+        "sha256": "77dafee8ca2827dc12c1f7e894e97960d0e697a432fbc11e21180374749ab79b",
+        "reviewReference": "docs/logo-polish-2026-10-14/final-selection.json",
+        "reviewSha256": "6e396eef77195ab7f44d6b055c1936fa079a8195a428a95151fdfd7f3f5d1a16"
+      }
+    }
+  }
+}

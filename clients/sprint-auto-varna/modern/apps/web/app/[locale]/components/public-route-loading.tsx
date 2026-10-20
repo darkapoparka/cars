@@ -1,3 +1,33 @@
+import { cn } from "@repo/design-system/lib/utils";
+import {
+  leadSite,
+  type MarketplaceSearchParams,
+  parseMarketplaceSearchParams,
+} from "@repo/marketplace";
+import { isDealershipSite } from "@repo/marketplace/site-config";
+import {
+  DealerMobileBrandBar,
+  LeadSiteMark,
+  MobileDealerChrome,
+  mobileDealerContentClassName,
+} from "@repo/marketplace-ui";
+import { DealerDesktopHeader } from "@repo/marketplace-ui/components/dealer-desktop-header";
+import { DealerDesktopHero } from "@repo/marketplace-ui/components/dealer-desktop-hero";
+import { DealerDesktopToolbar } from "@repo/marketplace-ui/components/dealer-desktop-toolbar";
+import { getMobileDiscoveryTitle } from "@repo/marketplace-ui/lib/mobile-dealer-title";
+import { mobileSearchFieldHeightClassName } from "@repo/marketplace-ui/lib/mobile-form-control";
+import {
+  mobileVehicleCardClassName,
+  mobileVehicleCardContentClassName,
+  mobileVehicleCardFactsClassName,
+  mobileVehicleCardInfoClassName,
+  mobileVehicleCardMediaClassName,
+  mobileVehicleCardPriceSummaryClassName,
+  mobileVehicleCardTitleClassName,
+} from "@repo/marketplace-ui/lib/mobile-vehicle-card-layout";
+import { locale as getRootLocale } from "next/root-params";
+import { MobileDealerServiceHero } from "./mobile-dealer-service-hero";
+
 const loadingCards = [
   "one",
   "two",
@@ -19,6 +49,7 @@ const loadingFilters = [
 ] as const;
 
 interface PublicRouteLoadingProps {
+  category?: MarketplaceSearchParams["category"];
   mobileTone?: "leasing";
   variant?: "discovery" | "results";
 }
@@ -35,40 +66,58 @@ const LoadingCardContent = () => (
   </div>
 );
 
-const MobileLoadingHeader = ({ mobileTone }: { mobileTone?: "leasing" }) => (
+const MobileLoadingHeader = ({
+  category,
+  mobileTone,
+  locale,
+}: {
+  category?: MarketplaceSearchParams["category"];
+  mobileTone?: "leasing";
+  locale: string;
+}) => (
   <div className="lg:hidden">
     {mobileTone ? (
       <MobileDealerServiceHero
         helpAction={<div className="size-11" />}
         imageSrc=""
-        locale="bg"
+        locale={locale === "bg" ? "bg" : "en"}
+        title={locale === "bg" ? "Лизинг на автомобил" : "Vehicle financing"}
         tone={mobileTone}
       >
-        <div className="h-[52px] rounded-full bg-white" />
+        <div
+          className={`${mobileSearchFieldHeightClassName} rounded-full bg-white`}
+        />
       </MobileDealerServiceHero>
     ) : (
-      <div className="bg-zinc-950">
+      <div className="bg-brand text-white">
         <MobileDealerChrome
           brandRow={
             <div className="grid h-11 grid-cols-[2.75rem_minmax(0,1fr)_2.75rem] items-center gap-3">
               <div className="size-11" />
-              <DealerMobileBrandBar isBg tone="clean" />
+              <DealerMobileBrandBar
+                isBg={locale === "bg"}
+                locale={locale}
+                tone="clean"
+              />
               <div className="size-11" />
             </div>
           }
+          title={getMobileDiscoveryTitle(category ?? "car", locale === "bg")}
         >
-          <div className="h-[52px] rounded-full bg-white" />
+          <div
+            className={`${mobileSearchFieldHeightClassName} rounded-full bg-white`}
+          />
         </MobileDealerChrome>
       </div>
     )}
     <div
-      className={`${mobileDealerContentClassName} pb-3`}
+      className={cn(mobileDealerContentClassName, "pt-2.5 pb-2.5")}
       data-slot="mobile-dealer-content"
     >
       <div className="flex gap-2 overflow-hidden">
         {loadingFilters.slice(0, 5).map((filter) => (
           <div
-            className="h-11 w-24 shrink-0 rounded-full bg-zinc-200"
+            className="h-11 w-24 shrink-0 rounded-full border-transparent border-y-2 bg-zinc-200 bg-clip-padding"
             key={filter}
           />
         ))}
@@ -77,12 +126,29 @@ const MobileLoadingHeader = ({ mobileTone }: { mobileTone?: "leasing" }) => (
   </div>
 );
 
+/** Keep the dealership masthead stable while route data resolves. */
+const DealerLoadingHeader = ({ locale }: { locale: string }) => (
+  <div className="hidden lg:block" data-slot="dealer-desktop-loading">
+    <DealerDesktopHeader activeMode={null} locale={locale} />
+    <DealerDesktopHero
+      loading
+      title={locale === "bg" ? "Зареждане" : "Loading"}
+      variant="landing"
+    />
+  </div>
+);
+
 const DesktopLoadingHeader = ({
   variant,
+  locale,
 }: {
+  locale: string;
   variant: "discovery" | "results";
 }) => {
   const isResults = variant === "results";
+  if (isDealershipSite) {
+    return <DealerLoadingHeader locale={locale} />;
+  }
 
   return (
     <div className="hidden lg:block">
@@ -136,7 +202,13 @@ const DesktopLoadingHeader = ({
 };
 
 const DesktopDiscoveryCards = () => (
-  <div className="hidden grid-cols-3 gap-5 lg:grid xl:grid-cols-4 2xl:grid-cols-5">
+  <div
+    className={
+      isDealershipSite
+        ? "hidden grid-cols-3 gap-6 lg:grid min-[1440px]:grid-cols-4"
+        : "hidden grid-cols-3 gap-5 lg:grid xl:grid-cols-4 2xl:grid-cols-5"
+    }
+  >
     {loadingCards.map((card) => (
       <div
         className="flex overflow-hidden rounded-lg border border-border bg-card"
@@ -165,143 +237,203 @@ const DesktopResultRows = () => (
   </div>
 );
 
-export const PublicRouteLoading = ({
+export const PublicRouteLoading = async ({
   variant = "discovery",
   mobileTone,
-}: PublicRouteLoadingProps) => (
-  <div aria-busy="true" className="min-h-screen bg-background text-foreground">
-    <MobileLoadingHeader mobileTone={mobileTone} />
-    <DesktopLoadingHeader variant={variant} />
-
+  category,
+}: PublicRouteLoadingProps) => {
+  const locale = await getRootLocale();
+  return (
     <div
-      className="mx-auto max-w-[96rem] px-4 pb-3 lg:px-6 lg:pt-3 xl:px-10"
-      data-slot="public-route-loading-content"
+      aria-busy="true"
+      className="min-h-screen bg-background text-foreground"
     >
-      <output className="sr-only">Loading {leadSite.name}</output>
-      <div className="mb-3 hidden h-10 animate-pulse items-center justify-between motion-reduce:animate-none lg:flex">
-        <div className="h-4 w-32 rounded bg-secondary" />
-        <div className="h-8 w-24 rounded-lg bg-secondary" />
-      </div>
-
-      <div className="animate-pulse space-y-2 motion-reduce:animate-none lg:hidden">
-        {loadingCards.slice(0, 2).map((card) => (
-          <div className="flex overflow-hidden rounded-xl bg-card" key={card}>
-            <div className="h-[7.5rem] w-[7.5rem] shrink-0 bg-secondary" />
-            <div className="flex min-w-0 flex-1 flex-col justify-center gap-1.5 px-3 py-2.5">
-              <div className="space-y-1">
-                <div className="h-5 w-3/5 rounded bg-secondary" />
-                <div className="h-3 w-4/5 rounded bg-secondary" />
-                <div className="h-3 w-2/5 rounded bg-secondary" />
-              </div>
-              <div className="space-y-1">
-                <div className="h-5 w-2/5 rounded bg-secondary" />
-                <div className="h-3 w-1/3 rounded bg-secondary" />
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      {variant === "results" ? (
-        <DesktopResultRows />
+      <MobileLoadingHeader
+        category={category}
+        locale={locale}
+        mobileTone={mobileTone}
+      />
+      {isDealershipSite && category ? (
+        <div aria-hidden="true" className="hidden lg:block" inert>
+          <DealerDesktopHeader activeMode="buy" locale={locale}>
+            <DealerDesktopToolbar
+              filters={{ ...parseMarketplaceSearchParams({}), category }}
+              loading
+              locale={locale}
+            />
+          </DealerDesktopHeader>
+        </div>
       ) : (
-        <DesktopDiscoveryCards />
+        <DesktopLoadingHeader locale={locale} variant={variant} />
       )}
-    </div>
-  </div>
-);
 
-const ListingDetailLoadingHeader = () => (
-  <header className="hidden bg-card lg:block">
-    <div className="mx-auto grid h-24 max-w-[96rem] grid-cols-[1fr_auto_1fr] items-center gap-5 px-6 xl:px-10">
-      <div className="flex items-center gap-2.5">
-        <LeadSiteMark />
-        <span className="font-semibold text-xl tracking-tight">
-          {leadSite.name}
-        </span>
-      </div>
-      <div className="flex animate-pulse items-center gap-4 motion-reduce:animate-none">
-        {loadingCards.slice(0, 3).map((item) => (
-          <div className="h-20 w-28 rounded-lg bg-secondary" key={item} />
-        ))}
-      </div>
-      <div className="ml-auto flex animate-pulse items-center gap-2 motion-reduce:animate-none">
-        <div className="h-10 w-28 rounded-xl bg-secondary" />
-        <div className="size-10 rounded-full bg-secondary" />
-        <div className="size-10 rounded-full bg-secondary" />
-      </div>
-    </div>
-  </header>
-);
-
-export const ListingDetailLoading = () => (
-  <div
-    aria-busy="true"
-    className="min-h-screen bg-background pb-[calc(6rem+env(safe-area-inset-bottom))] text-foreground lg:pb-10"
-  >
-    <output className="sr-only">Loading vehicle listing</output>
-    <ListingDetailLoadingHeader />
-    <div
-      className="mx-auto max-w-[86rem] lg:grid lg:grid-cols-[minmax(0,1fr)_20rem] lg:gap-6 lg:px-6 lg:py-4 xl:gap-8"
-      data-slot="listing-detail-loading-content"
-    >
-      <div className="min-w-0">
-        <div className="relative h-[min(75vw,360px)] animate-pulse bg-secondary motion-reduce:animate-none lg:aspect-[16/9] lg:h-auto lg:rounded-lg">
-          <div className="absolute inset-x-4 top-4 flex justify-between lg:hidden">
-            <div className="size-10 rounded-full bg-card/80" />
-            <div className="flex gap-2">
-              <div className="size-10 rounded-full bg-card/80" />
-              <div className="size-10 rounded-full bg-card/80" />
-            </div>
-          </div>
+      <div
+        className="mx-auto max-w-[96rem] px-4 pb-3 lg:px-6 lg:pt-3 xl:px-10"
+        data-slot="public-route-loading-content"
+      >
+        <output className="sr-only">
+          {locale === "bg" ? "Зареждане" : "Loading"} {leadSite.name}
+        </output>
+        <div className="mb-3 hidden h-10 animate-pulse items-center justify-between motion-reduce:animate-none lg:flex">
+          <div className="h-4 w-32 rounded bg-secondary" />
+          <div className="h-8 w-24 rounded-lg bg-secondary" />
         </div>
-        <div className="animate-pulse space-y-6 px-4 py-5 motion-reduce:animate-none lg:px-0 lg:py-6">
-          <div className="space-y-3 lg:hidden">
-            <div className="h-7 w-2/5 rounded bg-secondary" />
-            <div className="h-6 w-4/5 rounded bg-secondary" />
-            <div className="h-4 w-1/2 rounded bg-secondary" />
-          </div>
-          <section className="space-y-4">
-            <div className="h-5 w-44 rounded bg-secondary" />
-            <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 xl:grid-cols-6">
-              {loadingFilters.map((filter) => (
-                <div className="space-y-2" key={filter}>
-                  <div className="h-3 w-16 rounded bg-secondary" />
-                  <div className="h-4 w-24 max-w-full rounded bg-secondary" />
+
+        <div className="animate-pulse space-y-2 motion-reduce:animate-none lg:hidden">
+          {loadingCards.slice(0, 3).map((card) => (
+            <div
+              className={cn(
+                mobileVehicleCardClassName,
+                "overflow-hidden rounded-xl bg-card"
+              )}
+              key={card}
+            >
+              <div className={mobileVehicleCardMediaClassName} />
+              <div className={mobileVehicleCardContentClassName}>
+                <div className={mobileVehicleCardInfoClassName}>
+                  <div
+                    className={cn(mobileVehicleCardTitleClassName, "h-[1lh]")}
+                  >
+                    <div className="h-4 w-4/5 rounded bg-secondary" />
+                  </div>
+                  <div className={mobileVehicleCardPriceSummaryClassName}>
+                    <div className="h-6 w-3/4 rounded bg-secondary" />
+                    <div className="h-4 w-4/5 rounded bg-secondary" />
+                  </div>
                 </div>
-              ))}
+                <div className={mobileVehicleCardFactsClassName}>
+                  <div className="grid grid-cols-[max-content_minmax(0,1fr)] gap-1">
+                    <div className="h-6 w-8 rounded-md bg-secondary" />
+                    <div className="h-6 w-16 rounded-md bg-secondary" />
+                    <div className="h-6 w-10 rounded-md bg-secondary" />
+                    <div className="h-6 w-16 rounded-md bg-secondary" />
+                  </div>
+                </div>
+              </div>
             </div>
-          </section>
-          <section className="space-y-3 border-border lg:border-t lg:pt-8">
-            <div className="h-5 w-28 rounded bg-secondary" />
-            <div className="h-4 w-full max-w-3xl rounded bg-secondary" />
-            <div className="h-4 w-5/6 max-w-3xl rounded bg-secondary" />
-            <div className="h-4 w-3/5 max-w-3xl rounded bg-secondary" />
-          </section>
+          ))}
+        </div>
+
+        {variant === "results" && !(isDealershipSite && category) ? (
+          <DesktopResultRows />
+        ) : (
+          <DesktopDiscoveryCards />
+        )}
+      </div>
+    </div>
+  );
+};
+
+const ListingDetailLoadingHeader = ({ locale }: { locale: string }) =>
+  isDealershipSite ? (
+    <DealerDesktopHeader activeMode={null} locale={locale} />
+  ) : (
+    <header className="hidden bg-card lg:block">
+      <div className="mx-auto grid h-24 max-w-[96rem] grid-cols-[1fr_auto_1fr] items-center gap-5 px-6 xl:px-10">
+        <div className="flex items-center gap-2.5">
+          <LeadSiteMark />
+          <span className="font-semibold text-xl tracking-tight">
+            {leadSite.name}
+          </span>
+        </div>
+        <div className="flex animate-pulse items-center gap-4 motion-reduce:animate-none">
+          {loadingCards.slice(0, 3).map((item) => (
+            <div className="h-20 w-28 rounded-lg bg-secondary" key={item} />
+          ))}
+        </div>
+        <div className="ml-auto flex animate-pulse items-center gap-2 motion-reduce:animate-none">
+          <div className="h-10 w-28 rounded-xl bg-secondary" />
+          <div className="size-10 rounded-full bg-secondary" />
+          <div className="size-10 rounded-full bg-secondary" />
         </div>
       </div>
-      <aside className="hidden lg:block">
-        <div className="sticky top-20 animate-pulse space-y-4 rounded-xl bg-card p-5 shadow-panel motion-reduce:animate-none">
-          <div className="h-7 w-2/3 rounded bg-secondary" />
-          <div className="h-5 w-full rounded bg-secondary" />
-          <div className="h-4 w-1/2 rounded bg-secondary" />
-          <div className="h-11 w-full rounded-lg bg-secondary" />
-          <div className="border-border border-t pt-5">
-            <div className="h-3 w-20 rounded bg-secondary" />
-            <div className="mt-2 h-5 w-3/4 rounded bg-secondary" />
-            <div className="mt-2 h-4 w-1/2 rounded bg-secondary" />
+    </header>
+  );
+
+export const ListingDetailLoading = async () => {
+  const locale = await getRootLocale();
+  return (
+    <div
+      aria-busy="true"
+      className="min-h-screen bg-background pb-[calc(6rem+env(safe-area-inset-bottom))] text-foreground lg:pb-10"
+    >
+      <output className="sr-only">
+        {locale === "bg" ? "Зареждане на обявата" : "Loading vehicle listing"}
+      </output>
+      <ListingDetailLoadingHeader locale={locale} />
+      <div
+        className="mx-auto max-w-[86rem] lg:grid lg:grid-cols-[minmax(0,1fr)_20rem] lg:gap-6 lg:px-6 lg:py-4 xl:gap-8"
+        data-slot="listing-detail-loading-content"
+      >
+        <div className="min-w-0">
+          <div className="relative h-[min(75vw,360px)] animate-pulse bg-secondary motion-reduce:animate-none lg:aspect-[16/9] lg:h-auto lg:rounded-lg">
+            <div className="absolute inset-x-4 top-4 flex justify-between lg:hidden">
+              <div className="size-10 rounded-full bg-card/80" />
+              <div className="flex gap-2">
+                <div className="size-10 rounded-full bg-card/80" />
+                <div className="size-10 rounded-full bg-card/80" />
+              </div>
+            </div>
+          </div>
+          <div className="animate-pulse space-y-6 px-4 py-5 motion-reduce:animate-none lg:px-0 lg:py-6">
+            <div className="space-y-3 lg:hidden">
+              <div className="flex items-end justify-between gap-4">
+                <div className="h-7 w-2/5 rounded bg-secondary" />
+                <div className="h-4 w-1/3 rounded bg-secondary" />
+              </div>
+              <div className="h-6 w-4/5 rounded bg-secondary" />
+              <div className="grid grid-cols-2 gap-1">
+                <div className="h-6 rounded-md bg-secondary" />
+                <div className="h-6 rounded-md bg-secondary" />
+                <div className="h-6 rounded-md bg-secondary" />
+                <div className="h-6 rounded-md bg-secondary" />
+              </div>
+              <div className="h-12 w-full rounded-xl bg-secondary" />
+            </div>
+            <section className="lg:hidden">
+              <div className="grid grid-cols-2 border-zinc-200 border-b">
+                <div className="mx-3 h-12 border-[var(--lead-site-accent)] border-b-2" />
+                <div className="mx-3 h-12" />
+              </div>
+              <div className="space-y-3 pt-4">
+                <div className="h-4 w-full rounded bg-secondary" />
+                <div className="h-4 w-5/6 rounded bg-secondary" />
+                <div className="h-4 w-3/5 rounded bg-secondary" />
+              </div>
+            </section>
+            <section className="hidden space-y-4 lg:block">
+              <div className="h-5 w-44 rounded bg-secondary" />
+              <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 xl:grid-cols-6">
+                {loadingFilters.map((filter) => (
+                  <div className="space-y-2" key={filter}>
+                    <div className="h-3 w-16 rounded bg-secondary" />
+                    <div className="h-4 w-24 max-w-full rounded bg-secondary" />
+                  </div>
+                ))}
+              </div>
+            </section>
+            <section className="hidden space-y-3 border-border lg:block lg:border-t lg:pt-8">
+              <div className="h-5 w-28 rounded bg-secondary" />
+              <div className="h-4 w-full max-w-3xl rounded bg-secondary" />
+              <div className="h-4 w-5/6 max-w-3xl rounded bg-secondary" />
+              <div className="h-4 w-3/5 max-w-3xl rounded bg-secondary" />
+            </section>
           </div>
         </div>
-      </aside>
+        <aside className="hidden lg:block">
+          <div className="sticky top-20 animate-pulse space-y-4 rounded-xl bg-card p-5 shadow-panel motion-reduce:animate-none">
+            <div className="h-7 w-2/3 rounded bg-secondary" />
+            <div className="h-5 w-full rounded bg-secondary" />
+            <div className="h-4 w-1/2 rounded bg-secondary" />
+            <div className="h-11 w-full rounded-lg bg-secondary" />
+            <div className="border-border border-t pt-5">
+              <div className="h-3 w-20 rounded bg-secondary" />
+              <div className="mt-2 h-5 w-3/4 rounded bg-secondary" />
+              <div className="mt-2 h-4 w-1/2 rounded bg-secondary" />
+            </div>
+          </div>
+        </aside>
+      </div>
     </div>
-  </div>
-);
-
-import { leadSite } from "@repo/marketplace";
-import {
-  DealerMobileBrandBar,
-  LeadSiteMark,
-  MobileDealerChrome,
-  mobileDealerContentClassName,
-} from "@repo/marketplace-ui";
-import { MobileDealerServiceHero } from "./mobile-dealer-service-hero";
+  );
+};

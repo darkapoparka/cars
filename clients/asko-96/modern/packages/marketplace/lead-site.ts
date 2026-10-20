@@ -1,5 +1,6 @@
 import { carsLocale } from './cars-locale';
 import type {
+  PublicInventoryFilterLayout,
   PublicSiteArtwork,
   PublicSiteConfig,
 } from "@repo/marketplace-domain/site-config";
@@ -41,6 +42,16 @@ export interface LeadSiteConfig {
   readonly country: string;
   readonly countryCode: string;
   readonly currency: LeadSiteCurrency;
+  readonly desktopAccent?: string;
+  readonly desktopInventoryFilterLayout?: PublicInventoryFilterLayout;
+  /** Source-bound master identity; dealer adaptation changes the slug and disables it. */
+  readonly desktopPreviewIdentity?: {
+    readonly sourceSlug: string;
+    readonly label: string;
+    readonly wordmark: string;
+    readonly markArtwork?: string;
+    readonly copy: Readonly<Record<"bg" | "en", string>>;
+  };
   readonly district: { readonly bg: string; readonly en: string };
   readonly email: string;
   readonly financingArtworkPath: string;
@@ -62,6 +73,8 @@ export interface LeadSiteConfig {
   readonly logoOnAccent: string;
   readonly mapsEmbedUrl: string;
   readonly mapsUrl: string;
+  readonly mobileFinancingArtworkPath?: string;
+  readonly mobileShowroomArtworkPath?: string;
   readonly name: string;
   readonly phoneDisplay: string;
   readonly phoneHref: string;
@@ -101,8 +114,20 @@ export const leadSite: LeadSiteConfig = {
     "tagline": "ASKO96 — vehicles and dealer support in София."
   }
 },
-  accent: "#d7ae35",
-  address: "ул. „Атанас Манчев“ 18, София",
+  accent: "#09090b",
+  desktopAccent: "#09090b",
+  desktopInventoryFilterLayout: "quick",
+  desktopPreviewIdentity: {
+    sourceSlug: "day-night-auto-group",
+    label: "Modern",
+    wordmark: "Modern",
+    markArtwork: "/images/brand/modern-logo-v2.webp",
+    copy: {
+      bg: "Открийте следващия си автомобил.",
+      en: "Find your next car.",
+    },
+  },
+  address: "бул. „Ботевградско шосе“ 300",
   city: "София",
   district: { bg: "София", en: "София" },
   sellCategoryAssets: {
@@ -112,6 +137,9 @@ export const leadSite: LeadSiteConfig = {
     van: "/lead-sell-van-v1.png",
   },
   financingArtworkPath: "/images/services/leasing-red-suv-v2.webp",
+  mobileFinancingArtworkPath: "/images/lease/mobile-pdp-finance-studio-v2.webp",
+  mobileShowroomArtworkPath:
+    "/images/lease/mobile-pdp-showroom-blue-hour-v1.webp",
   contactUrl: "tel:+359899769696",
   country: "България",
   countryCode: carsLocale.dealerCountry,
@@ -119,10 +147,11 @@ export const leadSite: LeadSiteConfig = {
   email: "askogroup@abv.bg",
   heroPath: "/lead-hero.jpg",
   locale: "bg-BG",
-  logoPath: "/dealer-brand/logo-on-dark.webp",
-  logoOnLight: "/dealer-brand/logo-on-light.webp",
-  logoOnDark: "/dealer-brand/logo-on-dark.webp",
-  logoOnAccent: "/dealer-brand/logo-on-accent.webp",
+  logoPath: "/dealer-brand/v2-39c85dfe8dcecd9c/logo-on-light.webp",
+  logoInversePath: "/dealer-brand/v2-39c85dfe8dcecd9c/logo-on-dark.webp",
+  logoOnLight: "/dealer-brand/v2-39c85dfe8dcecd9c/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/v2-39c85dfe8dcecd9c/logo-on-dark.webp",
+  logoOnAccent: "/dealer-brand/v2-39c85dfe8dcecd9c/logo-on-dark.webp",
   mapsEmbedUrl:
     "https://maps.google.com/maps?q=%D0%90%D0%A1%D0%9A%D0%9E%2096%2C%20%D0%91%D0%BE%D1%82%D0%B5%D0%B2%D0%B3%D1%80%D0%B0%D0%B4%D1%81%D0%BA%D0%BE%20%D1%88%D0%BE%D1%81%D0%B5%20300%2C%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F&output=embed",
   mapsUrl:
@@ -134,6 +163,6 @@ export const leadSite: LeadSiteConfig = {
   slug: "asko-96",
   socialLinks: {"facebook":"https://www.facebook.com/p/Asko96-100050328800477/","youtube":"https://www.youtube.com/@asko96bulgaria"},
   staticDemoMode: true,
-  tagline: "Премиум автомобили, внос и собствен лизинг в София.",
+  tagline: "АСКО 96 — автомобили и съдействие в София.",
 };
 // LEAD_SITE_CONFIG_END

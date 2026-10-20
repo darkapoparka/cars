@@ -3,32 +3,32 @@
   "dealer": "promosale-varna",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "4e184777567849a2c5b4a9e4a3e652252179c29c",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "path": "templates/app",
-    "digest": "fad0067e48d7bd7e1c5177c5e91e2bc5767352e2c16621cb458d18a081f7c541",
-    "tree": "749512ff762c25272d1474225ff653dd4c88f0fe"
+    "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1",
+    "tree": "7f3d3ffa40546635377e6c5225194fe06fead291"
   },
-  "appDigest": "3f4d4af301f1cbfdf46ee8b368ee8066dc8452e5376611cac54fd0c6fbca8185",
+  "appDigest": "312a028db3f9a5f3aea1f0a03354fab284df23f0a4d953baee891cb73631a2bb",
   "provenance": {
     "schemaVersion": 1,
     "dealer": "promosale-varna",
     "profile": "auto-best/src/lib/data/dealer-profile.json",
-    "profileSha256": "d3377a1cb930be27418cf9e27918d9d6fa0fed81c13efa44db7c043c6a8c34e3",
+    "profileSha256": "8771bb1b522dbdee65a2198bfee04151cd03a7a237b985f069bc1f965ce3774c",
     "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
     "vehicles": 6,
     "currency": "EUR",
     "observedAt": "2026-09-09T19:17:27.878450+00:00",
     "assets": [
       {
-        "source": "auto-best/static/dealer-brand/logo-on-light.webp",
-        "output": "public/dealer-app/logo-light-66b9f788b14b096b007d.webp",
-        "sha256": "66b9f788b14b096b007d85fba75cc5e15cf929d5d4ebd337824534bea3543dd1",
+        "source": "auto-best/static/dealer-brand/v2-c1ee2ba0a30e97da/logo-on-light.webp",
+        "output": "public/dealer-app/logo-light-814910e30a7420a29090.webp",
+        "sha256": "814910e30a7420a290900a0193de96030b137abe58a44801e44b6d6d296d1452",
         "role": "logo-light"
       },
       {
-        "source": "auto-best/static/dealer-brand/logo-on-dark.webp",
-        "output": "public/dealer-app/logo-dark-0bfec3e1f4c57c2932a1.webp",
-        "sha256": "0bfec3e1f4c57c2932a1d5ea6e6f5f8795221b07ebdbdabb82a79dcc2deed928",
+        "source": "auto-best/static/dealer-brand/v2-c1ee2ba0a30e97da/logo-on-dark.webp",
+        "output": "public/dealer-app/logo-dark-0f4c6ff41fb82f48458e.webp",
+        "sha256": "0f4c6ff41fb82f48458ea3d3badb325d81ff6ee3b0d85989390e3936d1e22be5",
         "role": "logo-dark"
       },
       {
@@ -139,13 +139,47 @@
         "sha256": "81b1e1bc04ac84058a28250ec5e01abcf9eee92157da2ef865e152e40524ec1e",
         "role": "vehicle"
       }
+    ],
+    "mileageFacts": [
+      {
+        "slug": "mercedes-benz-eqe-350-burmester-2022-21788787563552939",
+        "sourceValue": 294900,
+        "sourceUnit": "km",
+        "canonicalKm": 294900
+      },
+      {
+        "slug": "peugeot-2008-gt-full-pano-2021-11787906058256951",
+        "sourceValue": 19900,
+        "sourceUnit": "km",
+        "canonicalKm": 19900
+      },
+      {
+        "slug": "bmw-740-i-long-m-sport-full-individual-2020-11786461174971809",
+        "sourceValue": 149000,
+        "sourceUnit": "km",
+        "canonicalKm": 149000
+      },
+      {
+        "slug": "porsche-panamera-4s-matrix-nappa-bose-sportchrono-2017-11786375334835370",
+        "sourceValue": 179000,
+        "sourceUnit": "km",
+        "canonicalKm": 179000
+      },
+      {
+        "slug": "audi-a1-s-line-tfsi-ultra-alcantara-carplay-2017-11786370554050885",
+        "sourceValue": 150300,
+        "sourceUnit": "km",
+        "canonicalKm": 150300
+      },
+      {
+        "slug": "mercedes-benz-eqb-amg-7-2023-11786106091652576",
+        "sourceValue": 140900,
+        "sourceUnit": "km",
+        "canonicalKm": 140900
+      }
     ]
   },
-  "baseDeployment": {
-    "id": "dpl_N4jjAebRW6s76dsNnfSzwxTExJGG",
-    "url": "https://cars-promosalevarna.vercel.app/",
-    "checkedAt": "2026-09-28T02:25:55.038Z"
-  },
-  "baseReceiptSha256": "9b0c9431292d973f54e0c4eb850700f5be7848050f7fd2fa1ea608e63346a94b",
-  "refreshedAt": "2026-10-10T18:07:55.700Z"
+  "needsDealerQA": true,
+  "readyToPublish": false,
+  "refreshedAt": "2026-10-15T02:24:47.606Z"
 }

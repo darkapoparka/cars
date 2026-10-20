@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "dealer": "astracar",
+  "reviewed": true,
+  "reviewedAt": "2026-10-14T11:31:43.352Z",
+  "sourceMode": "retained-or-mixed-raster",
+  "master": {
+    "path": "docs/logo-polish-2026-10-14/parallel/vercel/astracar/logo-on-light.png",
+    "sha256": "49eefb4f28b3b676ade46d5c518d9d3fa158a1d3fd776c08cf7080566b11691a"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "docs/logo-polish-2026-10-14/parallel/vercel/astracar/logo-on-light.png",
+      "sha256": "49eefb4f28b3b676ade46d5c518d9d3fa158a1d3fd776c08cf7080566b11691a",
+      "sourceReference": "L:\\CODEX\\cars\\docs\\logo-polish-2026-10-14\\parallel\\vercel\\astracar\\logo-on-light.png",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "L:\\CODEX\\cars\\docs\\logo-polish-2026-10-14\\live-assets\\63eea9725a30b10d27fb06561ca43e24b500a7c133f86dfdabb1b389a27d8915.webp",
+        "sha256": "63eea9725a30b10d27fb06561ca43e24b500a7c133f86dfdabb1b389a27d8915",
+        "reviewReference": "docs/logo-polish-2026-10-14/final-selection.json",
+        "reviewSha256": "6e396eef77195ab7f44d6b055c1936fa079a8195a428a95151fdfd7f3f5d1a16"
+      }
+    },
+    "onDark": {
+      "path": "docs/logo-polish-2026-10-14/parallel/vercel/astracar/logo-on-dark.png",
+      "sha256": "c457f7eb8d1e085a21275b08276cfbb69eda6ee50315114f236b570399275886",
+      "sourceReference": "L:\\CODEX\\cars\\docs\\logo-polish-2026-10-14\\parallel\\vercel\\astracar\\logo-on-dark.png",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "L:\\CODEX\\cars\\docs\\logo-polish-2026-10-14\\live-assets\\72b447964c4690cd280180978c8d2d3107983b2f8118a3d67e6872717fddc50c.webp",
+        "sha256": "72b447964c4690cd280180978c8d2d3107983b2f8118a3d67e6872717fddc50c",
+        "reviewReference": "docs/logo-polish-2026-10-14/final-selection.json",
+        "reviewSha256": "6e396eef77195ab7f44d6b055c1936fa079a8195a428a95151fdfd7f3f5d1a16"
+      }
+    },
+    "onAccent": {
+      "path": "docs/logo-polish-2026-10-14/parallel/vercel/astracar/logo-on-dark.png",
+      "sha256": "c457f7eb8d1e085a21275b08276cfbb69eda6ee50315114f236b570399275886",
+      "sourceReference": "L:\\CODEX\\cars\\docs\\logo-polish-2026-10-14\\parallel\\vercel\\astracar\\logo-on-dark.png",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "L:\\CODEX\\cars\\docs\\logo-polish-2026-10-14\\live-assets\\72b447964c4690cd280180978c8d2d3107983b2f8118a3d67e6872717fddc50c.webp",
+        "sha256": "72b447964c4690cd280180978c8d2d3107983b2f8118a3d67e6872717fddc50c",
+        "reviewReference": "docs/logo-polish-2026-10-14/final-selection.json",
+        "reviewSha256": "6e396eef77195ab7f44d6b055c1936fa079a8195a428a95151fdfd7f3f5d1a16"
+      }
+    }
+  }
+}

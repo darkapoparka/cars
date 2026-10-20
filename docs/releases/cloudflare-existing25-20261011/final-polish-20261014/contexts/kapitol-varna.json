@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-native-source-qualification-context",
+  "id": "fleet-final-polish-20261014",
+  "dealer": "kapitol-varna",
+  "scope": "existing-dealer-pilot",
+  "sourceCommit": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+  "reviewed": true,
+  "reviewedAt": "2026-10-15T11:03:48.559Z",
+  "qualificationOnly": true,
+  "approved": false,
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "globalReleaseApproval": false,
+  "approvedLockSha256": "ecdfaf9599fbcbeadebc24de3b9aa1c7615a9a49e29d338e5e9a23427d405e26",
+  "candidateLockSha256": "04633129df9e75d6cd62deeac9125b279957789d75f57cdb0b243ef61bfc3e7e",
+  "sourceDeltaReview": {
+    "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-delta-review.json",
+    "sha256": "43cb6876e815a2a6b866f1dadd304236de4ae58c05fe65c2ab62a23506ee7ce9",
+    "reviewedAt": "2026-10-14T23:55:37.398Z"
+  },
+  "sourceReview": {
+    "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-review.json",
+    "sha256": "27c6ce5dd17ee6e1b9f6a5b059a95d5e1dbe4200f61264fc50addeb7af89d984"
+  },
+  "dealerSourceRepair": {
+    "kind": "explicit-local-modern-selected-logo-alias-and-reference-correction",
+    "parentContextSha256": "9a386610421073ce340b2e5614c4d68a2468e25d03d089b92127e009343b9fd3",
+    "originalLocalRecovery": {
+      "file": "C:/Users/radev/AppData/Local/Temp/cars-cf-native-final-polish-20261014/local-source-recovery/exports/kapitol-varna/local-recovery-receipt.json",
+      "sha256": "44a4ceca3fe3681dac53c8c553982f8ba662f85c25f995b2f28491578e563fe7"
+    },
+    "baseSourceCommit": "03b7a9f8c3e8238f91eea3a43be92901f9e9982b",
+    "baseSourceTree": "83069bae5f4083f61d7203cdbeeb45a4e326b1ef",
+    "baseTreeIsUnpublishedLocalCandidate": true,
+    "changedDesigns": [
+      "modern"
+    ],
+    "editorialProof": null,
+    "logoProof": {
+      "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/native13-modern-runtime/local-four-logo-companions/kapitol-varna/modern-only-companion-proof.json",
+      "sha256": "f048420a0775a44c2721afe54c0760c47d8c875cc195bf15baecaddb10036b0e"
+    },
+    "companionPaths": [
+      {
+        "path": "modern/packages/marketplace/lead-site.ts",
+        "beforeBlob": "722005c4aa6a347800339ef0da1bfe5db907d600",
+        "afterBlob": "b4b8ddee101054e3a4858bd108d82dda6da4e1ee"
+      },
+      {
+        "path": ".cars-branding.json",
+        "beforeBlob": "90d1178948720e18e2525ab37ed4d5fb2a513691",
+        "afterBlob": "0c3b7a22b11bd230721040a7165c2499002de5db"
+      }
+    ],
+    "receiptReseals": [],
+    "originalExecutionRemainsLocal": true,
+    "noCiArtifactOrSuccessClaim": true
+  }
+}

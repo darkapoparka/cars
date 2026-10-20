@@ -1,7 +1,8 @@
 /**
  * Narrow compatibility fixes for the reviewed UK native dealer boundaries.
  * Modern: quote the factual city property after native text personalization.
- * Import: permit an honestly absent telephone pair and hide unavailable calls.
+ * Import: permit an honestly absent telephone pair and hide unavailable calls;
+ * the same retained consumers support an explicit dealer-pack fact policy.
  * Original template sources and factual profile/stock records are never edited.
  */
 export const UK_MODERN_CARD_CITY_PATHS = Object.freeze([
@@ -160,22 +161,23 @@ function wrapCalls(source, [name, expression, condition, count]) {
   return source;
 }
 
-/** No phone facts are synthesized; known-phone and other-market source is untouched. */
-export function repairImportUkOptionalPhone(files, profile) {
-  if (profile?.business?.countryCode !== 'GB') return [];
+/** No phone facts are synthesized. Known phones and legacy non-GB callers stay
+ * unchanged; an explicit dealer-pack policy reuses the same reviewed controls. */
+export function repairImportUkOptionalPhone(files, profile, {factPolicy} = {}) {
+  if (profile?.business?.countryCode !== 'GB' && factPolicy !== 'dealer-pack-optional-v1') return [];
   const business = profile.business;
   const fields = [business.phoneDisplay, business.phoneHref, business.phoneE164];
-  if (fields.some(value => typeof value !== 'string')) throw Error('Expected normalized UK telephone facts.');
+  if (fields.some(value => typeof value !== 'string')) throw Error('Expected normalized Import telephone facts.');
   if (fields.some(Boolean)) {
-    if (!fields.every(Boolean) || !/^tel:\+?[0-9 -]+$/.test(business.phoneHref)) throw Error('Incomplete published UK telephone facts.');
+    if (!fields.every(Boolean) || !/^tel:\+?[0-9 -]+$/.test(business.phoneHref)) throw Error('Incomplete published Import telephone facts.');
     return [];
   }
   const dealer = text(files, 'src/lib/config/dealer.ts');
   const contacts = [...dealer.matchAll(/export const daynightContact = (\{[\s\S]*?\n\}) as const;/g)];
-  if (contacts.length !== 1) throw Error('UK Import dealer contact boundary changed.');
+  if (contacts.length !== 1) throw Error('Import dealer contact boundary changed.');
   const contact = JSON.parse(contacts[0][1]);
   for (const key of ['primaryPhoneLabel','primaryPhoneHref','marketplacePhoneLabel','marketplacePhoneHref']) {
-    if (contact[key] !== '') throw Error('UK Import absent phone differs from factual profile: ' + key);
+    if (contact[key] !== '') throw Error('Import absent phone differs from factual profile: ' + key);
   }
   const updates = new Map(), siteName = 'src/lib/config/site.ts';
   const required = "\tif (!/^tel:[+]?[0-9 -]+$/.test(config.contact.phoneHref))\n\t\tthrow new Error('A valid telephone link is required');";
@@ -227,7 +229,7 @@ export function repairImportUkOptionalPhone(files, profile) {
     const needle = JSON.stringify(before);
     if (blog.includes(needle)) { blog = once(blog, needle, JSON.stringify(after), blogName); found++; }
   }
-  if (found !== 1) throw Error('UK Import missing-phone guidance boundary changed.');
+  if (found !== 1) throw Error('Import missing-phone guidance boundary changed.');
   updates.set(blogName, blog);
   return commit(files, updates);
 }

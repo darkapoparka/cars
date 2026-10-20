@@ -3,7 +3,6 @@
   import { localeHref } from '$lib/locale/core';
   import LocalePreferences from '$lib/locale/LocalePreferences.svelte';
 
-  import '@fontsource-variable/onest';
   import { template, canIndex } from '$config/template';
   import '../app.css';
   import { page } from '$app/state';

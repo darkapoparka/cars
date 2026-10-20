@@ -1,9 +1,10 @@
 const cell = value => String(value ?? 'Not recorded').replaceAll('|', '/').replaceAll('\n', ' ');
 export function clientSourceGuide(registry) {
   const deployed = registry.dealers.filter(d => d.delivery?.url).sort((a,b)=>a.slug.localeCompare(b.slug));
+  const hasPacks = deployed.some(d => d.sourceFormat === 'dealer-pack');
   const lines = [
     '# Where the dealer projects live', '',
-    'All current dealer source folders are under `L:/CODEX/cars/clients/<slug>/`. This includes prospect demos; the word clients does not mean that the business has bought a site.', '',
+    (hasPacks ? 'Existing dealer application folders are under `L:/CODEX/cars/clients/<slug>/`. Compact expansion packs are under `dealers/<slug>/`; their published source links and displayed details use the exact deployment receipt commit.' : 'All current dealer source folders are under `L:/CODEX/cars/clients/<slug>/`.') + ' This includes prospect demos; the word clients does not mean that the business has bought a site.', '',
     '## Navara example', '',
     '`clients/navara-car/` contains `auto-best/`, `modern/`, `carwow/`, `app/`, the dealer manifest and shared branding assets. The folder name is **navara-car**, while its publishing repository and Vercel project use **cars-navaracar**.', '',
     '`Cars clients/navara-car source -> reviewed package/export -> darkapoparka/cars-navaracar -> Vercel cars-navaracar`', '',
@@ -15,10 +16,15 @@ export function clientSourceGuide(registry) {
     '`L:/CODEX/cars` is the canonical Cars workspace. `J:/cars` is a compatibility junction to it. Former `J:/template-repos` copies are recovery material; current template masters live under `templates/` in Cars.', '',
     '## Registered public dealer projects', '',
     `The registry contains ${deployed.length} dealer public aliases below. These rows are generated from ../docs/DEPLOYMENT-INVENTORY.json; they are a source-location guide, not a fresh visual acceptance report.`, '',
-    '| Dealer / local folder | Source ownership | Publishing repository | Vercel project | Public website |',
+    hasPacks ? '| Dealer / source folder | Source ownership | Published source | Hosting project / Worker | Public website |' : '| Dealer / local folder | Source ownership | Publishing repository | Vercel project | Public website |',
     '| --- | --- | --- | --- | --- |'
   ];
   for (const d of deployed) {
+    if (d.sourceFormat === 'dealer-pack') {
+      const published = 'https://github.com/' + d.canonicalSourceRepository + '/tree/' + d.canonicalSourceCommit + '/' + d.sourcePath + '/';
+      lines.push(`| ${cell(d.name)} — \`${cell(d.sourcePath)}/\` | Cars dealer pack | [${cell(d.canonicalSourceRepository)} @ ${d.canonicalSourceCommit.slice(0, 12)}](${published}) | \`${cell(d.delivery.workerName)}\` | [${cell(new URL(d.delivery.url).hostname)}](${d.delivery.url}) |`);
+      continue;
+    }
     const repo = d.hostingObservation?.repository || d.delivery.gitRepository || d.repository;
     const own = d.sourceOwnership === 'independent-repository' ? 'Own Git repository (not tracked by Cars)' : 'Cars repository';
     lines.push(`| ${cell(d.name)} — \`${cell(d.slug)}/\` | ${own} | [${cell(repo)}](https://github.com/${repo}) | \`${cell(d.delivery.projectName)}\` | [${cell(new URL(d.delivery.url).hostname)}](${d.delivery.url}) |`);

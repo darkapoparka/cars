@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-input-mapping",
+  "dealer": "autobora-varna",
+  "inputs": {
+    "facts": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/autobora-varna/facts.json",
+      "sha256": "fe65e350e32d0ce3ab6777bed8dd9d4d2e6b6f16dce5637707ffcac34efb449d"
+    },
+    "stock": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/autobora-varna/stock.json",
+      "sha256": "6abfaccfb093f81349924217850e21bfbfbc2f9182900e99f8a5fd3bb3b99f43"
+    },
+    "locale": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/autobora-varna/locale.json",
+      "sha256": "85a198ef39b2521b7b3c0aaff30bc48e977eecbd6bea257e12f5ea78e87a8514"
+    },
+    "branding": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/autobora-varna/branding.json",
+      "sha256": "c4cb5949785ff5ad61abd4d3a110dc60992f3b079d8d228165a8f86cc5550db1"
+    }
+  },
+  "sources": [
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/autobora-varna/identity-repository-corrected-additional100.json",
+      "sha256": "fdaeae6b742562e616575b8a7d429e4babe61623f317c7defe0d803d4f26cf63"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/autobora-varna/facts.json",
+      "sha256": "fe65e350e32d0ce3ab6777bed8dd9d4d2e6b6f16dce5637707ffcac34efb449d"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/autobora-varna/stock.json",
+      "sha256": "6abfaccfb093f81349924217850e21bfbfbc2f9182900e99f8a5fd3bb3b99f43"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/autobora-varna/locale.json",
+      "sha256": "85a198ef39b2521b7b3c0aaff30bc48e977eecbd6bea257e12f5ea78e87a8514"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/autobora-varna/branding.json",
+      "sha256": "c4cb5949785ff5ad61abd4d3a110dc60992f3b079d8d228165a8f86cc5550db1"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/autobora-varna/media/11738733943918557-1.webp",
+      "sha256": "11f8fc1dd1dc91cca7e36e0c623a62d66d2f001fd356e2aeda730955c39da384"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/autobora-varna/media/11738733943918557-2.webp",
+      "sha256": "633157a5c228a339b9181edb9d23d16770f2445e44a28ea25f7a446a0f63c4bc"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/autobora-varna/copy-review-additional100.json",
+      "sha256": "d8f4e94e73f7211a0879e0b6f87693a2e155b10e995b745fc69e9f25232dc02f"
+    }
+  ]
+}

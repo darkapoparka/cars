@@ -1,6 +1,14 @@
 import type { Locale } from '$lib/locale/core';
 /** Dealer-owned listing descriptions and specification labels. Source facts are not mutated. */
 export const inventoryCopy = {
+	bmw740RearWheelSteering: {
+		bg: 'BMW 740 Завиващ заден мост',
+		en: 'BMW 740 Rear-wheel steering'
+	},
+	rearWheelSteering: {
+		bg: 'Завиващ заден мост',
+		en: 'Rear-wheel steering'
+	},
 	term0: {
 		bg: '4(5) Врати',
 		en: '4(5) doors'
@@ -477,8 +485,80 @@ export const inventoryCopy = {
 		bg: 'Автомобилът е с пълна сервизна история в Порше. Може да се провери във всяко представителство на марката. Sport Chrono пакет. Абсолютно автентичен вид както е излезнал от завода. Регистриран с каско, гражданска, данък, винетка. Без бартер. Само сериозни обаждания.',
 		en: 'Full Porsche service history. Can be checked at any dealership for the brand. Sport Chrono package. Entirely original factory appearance. Registered, with comprehensive insurance, third-party liability insurance, tax and vignette. No trade-ins. Serious inquiries only.'
 	}
+,
+	"dealerStock_a0832b399f2c889f4f53539116767296f69ca7560bf758f6a68667085e19bb18": {
+		"bg": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+		"en": "Dated listing snapshot; confirm the price and availability directly with the dealership."
+	},
+	"dealerStock_d04158cef66af6e9e3f19f4ce98231c23c015950501b3f5dbb03611b9cab275b": {
+		"bg": "360 камера / задна камера",
+		"en": "360 camera / rear camera"
+	},
+	"dealerStock_6e6c280e9623093cd1633e5d0c6a87eb298b3264443fe9e868238fb954ed0dbb": {
+		"bg": "Apple CarPlay / Android Auto",
+		"en": "Apple CarPlay / Android Auto"
+	},
+	"dealerStock_a361d0a678da8d08851a6de6afed2cc99e145a910b1d5408495969c8b433ca16": {
+		"bg": "Bluetooth / handsfree система",
+		"en": "Bluetooth / hands-free system"
+	},
+	"dealerStock_3b3d9186b800a052121e5858cb8e81c6e882694ee34fe58db4e4cba9393ecf17": {
+		"bg": "Обратно изкупуване",
+		"en": "Buy back"
+	},
+	"dealerStock_0184fe75300fc233b182c53220cc314715a7247d92f167e8a0a6335f4391b6cb": {
+		"bg": "Аудио / видео",
+		"en": "Audio / video"
+	},
+	"dealerStock_f258769daf4cedc0e0f4ac711c2fe5090299dd941db55faefab350b88ca23ab1": {
+		"bg": "IN / AUX изводи",
+		"en": "IN / AUX inputs"
+	},
+	"dealerStock_48b06561777df6aac3646cf2f92b50a3b3f1254254853f01b5b267433e95211c": {
+		"bg": "Бартер",
+		"en": "Part exchange"
+	},
+	"dealerStock_73550b5bf27360e0294a55212cc910228b75393999750841a8559399fe2ca18c": {
+		"bg": "Безключово палене",
+		"en": "Keyless start"
+	},
+	"dealerStock_e8b8a518e15b0fc1c361f1691b4a21d156427eaa36fce311b8a0a970af578dba": {
+		"bg": "Лизинг",
+		"en": "Leasing"
+	},
+	"dealerStock_cf84999173a681fc2fad0fdf1c83390587a272e61c50e9242a6d6b2fcb81b71c": {
+		"bg": "Велурен салон",
+		"en": "Velour interior"
+	},
+	"dealerStock_e5d30d390775b99a4c2473a617b54fe1f63c00bfa5f1b9bc59c3ba2c00d82bea": {
+		"bg": "Светъл салон",
+		"en": "Light-coloured interior"
+	},
+	"dealerStock_a5f88de5a473a2b747f8c4685b672d9c59138b6db95e6b08a8baca3faf2bc13d": {
+		"bg": "Термопомпа",
+		"en": "Heat pump"
+	},
+	"dealerStock_2bfda40e9faa65e6a3bc0902b934df650e047739ec29056b9c4ca2f1454d0e28": {
+		"bg": "Дълга база",
+		"en": "Long wheelbase"
+	},
+	"dealerStock_2fa7c8de831a2febb1dd4d325ada35d2afa5aa085ad14c18fa892bf5af8d808d": {
+		"bg": "Тунинг",
+		"en": "Tuning"
+	},
+	"dealerStock_6902ccf063b8ae1e654b8e7fcdf65de868c983239c35e8ecebcf5104aeaeccbc": {
+		"bg": "Хладилна жабка",
+		"en": "Cooled glove box"
+	},
+	"dealerStock_4a8f03be7e6cce181554ba97c33f1f2cc39b2379236345618c909014ac72eda3": {
+		"bg": "Тъмно сив",
+		"en": "Dark grey"
+	}
+
 } satisfies Record<string, Record<Locale, string>>;
 export const inventorySourceKeys: Readonly<Record<string, keyof typeof inventoryCopy>> = {
+	'BMW 740 Завиващ заден мост': 'bmw740RearWheelSteering',
+	'Завиващ заден мост': 'rearWheelSteering',
 	'4(5) Врати': 'term0',
 	'4x4': 'term1',
 	'Auto Start Stop function': 'term2',
@@ -630,6 +710,25 @@ export const inventorySourceKeys: Readonly<Record<string, keyof typeof inventory
 		'description30',
 	'Автомобилът е с пълна сервизна история в Порше. Може да се провери във всяко представителство на марката. Sport Chrono пакет. Абсолютно автентичен вид както е излезнал от завода. Регистриран с каско, гражданска, данък, винетка. Без бартер. Само сериозни обаждания.':
 		'description31'
+,
+	"Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.": "dealerStock_a0832b399f2c889f4f53539116767296f69ca7560bf758f6a68667085e19bb18",
+	"360 camera \\ Задна камера": "dealerStock_d04158cef66af6e9e3f19f4ce98231c23c015950501b3f5dbb03611b9cab275b",
+	"Apple CarPlay \\ Android Auto": "dealerStock_6e6c280e9623093cd1633e5d0c6a87eb298b3264443fe9e868238fb954ed0dbb",
+	"Bluetooth \\ handsfree система": "dealerStock_a361d0a678da8d08851a6de6afed2cc99e145a910b1d5408495969c8b433ca16",
+	"Buy back": "dealerStock_3b3d9186b800a052121e5858cb8e81c6e882694ee34fe58db4e4cba9393ecf17",
+	"audio\\video": "dealerStock_0184fe75300fc233b182c53220cc314715a7247d92f167e8a0a6335f4391b6cb",
+	"IN\\AUX изводи": "dealerStock_f258769daf4cedc0e0f4ac711c2fe5090299dd941db55faefab350b88ca23ab1",
+	"Бартер": "dealerStock_48b06561777df6aac3646cf2f92b50a3b3f1254254853f01b5b267433e95211c",
+	"Безключово палене ": "dealerStock_73550b5bf27360e0294a55212cc910228b75393999750841a8559399fe2ca18c",
+	"Лизинг": "dealerStock_e8b8a518e15b0fc1c361f1691b4a21d156427eaa36fce311b8a0a970af578dba",
+	"Велурен салон": "dealerStock_cf84999173a681fc2fad0fdf1c83390587a272e61c50e9242a6d6b2fcb81b71c",
+	"Светъл салон": "dealerStock_e5d30d390775b99a4c2473a617b54fe1f63c00bfa5f1b9bc59c3ba2c00d82bea",
+	"Термопомпа": "dealerStock_a5f88de5a473a2b747f8c4685b672d9c59138b6db95e6b08a8baca3faf2bc13d",
+	"Дълга база": "dealerStock_2bfda40e9faa65e6a3bc0902b934df650e047739ec29056b9c4ca2f1454d0e28",
+	"Тунинг": "dealerStock_2fa7c8de831a2febb1dd4d325ada35d2afa5aa085ad14c18fa892bf5af8d808d",
+	"Хладилна жабка": "dealerStock_6902ccf063b8ae1e654b8e7fcdf65de868c983239c35e8ecebcf5104aeaeccbc",
+	"Тъмно сив": "dealerStock_4a8f03be7e6cce181554ba97c33f1f2cc39b2379236345618c909014ac72eda3"
+
 };
 export function inventoryText(locale: Locale, value: string): string {
 	const key = inventorySourceKeys[value];

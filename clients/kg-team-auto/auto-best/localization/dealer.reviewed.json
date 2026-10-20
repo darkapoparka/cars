@@ -24,6 +24,22 @@
     "notes": "Dealer-owned appointment and opening-hours guidance."
   },
   {
+    "key": "dealer.addressShort",
+    "source": "Индустриална зона – Юг, Околовръстен път срещу хотел Чиирите",
+    "en": "South Industrial Zone, Ring Road opposite Chiirite Hotel",
+    "bg": "Индустриална зона – Юг, Околовръстен път срещу хотел Чиирите",
+    "disposition": "translate",
+    "notes": "Native short-address consumer uses the recorded dealer address line."
+  },
+  {
+    "key": "dealer.appointmentShort",
+    "source": "Работното време не е публикувано. Потвърдете по телефона преди посещение.",
+    "en": "Opening hours are not published. Confirm by phone before visiting.",
+    "bg": "Работното време не е публикувано. Потвърдете по телефона преди посещение.",
+    "disposition": "translate",
+    "notes": "Native short-hours consumer uses the same factual appointment guidance."
+  },
+  {
     "key": "m_159520cd7f28",
     "source": "Най-желаната кола в България | Lamborghini Urus",
     "en": "The most sought-after car in Bulgaria | Lamborghini Urus",

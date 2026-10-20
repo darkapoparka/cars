@@ -88,7 +88,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "OUTLETCARS.BG — Варна",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-5c0d2d99cd366a51/logo-on-light.webp"
     },
     "publishedAt": "2026-09-09T09:00:00.000Z",
     "promoted": true
@@ -179,7 +179,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "OUTLETCARS.BG — Варна",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-5c0d2d99cd366a51/logo-on-light.webp"
     },
     "publishedAt": "2026-09-09T09:00:00.000Z",
     "promoted": true
@@ -270,7 +270,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "OUTLETCARS.BG — Варна",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-5c0d2d99cd366a51/logo-on-light.webp"
     },
     "publishedAt": "2026-09-09T09:00:00.000Z",
     "promoted": true
@@ -361,7 +361,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "OUTLETCARS.BG — Варна",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-5c0d2d99cd366a51/logo-on-light.webp"
     },
     "publishedAt": "2026-09-09T09:00:00.000Z",
     "promoted": false
@@ -452,7 +452,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "OUTLETCARS.BG — Варна",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-5c0d2d99cd366a51/logo-on-light.webp"
     },
     "publishedAt": "2026-09-09T09:00:00.000Z",
     "promoted": false
@@ -543,7 +543,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "OUTLETCARS.BG — Варна",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-5c0d2d99cd366a51/logo-on-light.webp"
     },
     "publishedAt": "2026-09-09T09:00:00.000Z",
     "promoted": false
@@ -634,7 +634,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "OUTLETCARS.BG — Варна",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-5c0d2d99cd366a51/logo-on-light.webp"
     },
     "publishedAt": "2026-09-09T09:00:00.000Z",
     "promoted": false
@@ -725,553 +725,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "OUTLETCARS.BG — Варна",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
-    },
-    "publishedAt": "2026-09-09T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1004",
-    "slug": "audi-q5-mild-hybrid-s-line-quattro-1-2021-21780566866553359",
-    "category": "car",
-    "dealerOrgId": "dealer-outletcars-varna",
-    "status": "active",
-    "title": "Audi Q5 Mild Hybrid/S-line/quattro 1 ГОДИНА ГАРАНЦИЯ",
-    "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
-    "price": {
-      "amount": 39500,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/dealer/inventory/21780566866553359-1.webp",
-        "alt": "Audi Q5 Mild Hybrid/S-line/quattro 1 ГОДИНА ГАРАНЦИЯ"
-      },
-      {
-        "url": "/dealer/inventory/21780566866553359-2.webp",
-        "alt": "Audi Q5 Mild Hybrid/S-line/quattro 1 ГОДИНА ГАРАНЦИЯ"
-      },
-      {
-        "url": "/dealer/inventory/21780566866553359-3.webp",
-        "alt": "Audi Q5 Mild Hybrid/S-line/quattro 1 ГОДИНА ГАРАНЦИЯ"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Варна",
-      "region": "Варна",
-      "country": "BG"
-    },
-    "features": [
-      {
-        "bg": "360 camera \\ Задна камера",
-        "en": "360 camera \\ Задна камера"
-      },
-      {
-        "bg": "4(5) Врати",
-        "en": "4(5) Врати"
-      },
-      {
-        "bg": "4x4",
-        "en": "4x4"
-      },
-      {
-        "bg": "Auto Start Stop function",
-        "en": "Auto Start Stop function"
-      },
-      {
-        "bg": "Bluetooth \\ handsfree система",
-        "en": "Bluetooth \\ handsfree система"
-      },
-      {
-        "bg": "LED фарове",
-        "en": "LED фарове"
-      },
-      {
-        "bg": "Автоматично затваряне на багажника",
-        "en": "Автоматично затваряне на багажника"
-      },
-      {
-        "bg": "Адаптивни предни светлини",
-        "en": "Адаптивни предни светлини"
-      }
-    ],
-    "spec": {
-      "make": "Audi",
-      "model": "Q5 Mild Hybrid/S-line/quattro 1 ГОДИНА ГАРАНЦИЯ",
-      "year": 2021,
-      "bodyType": "suv",
-      "fuelType": "diesel",
-      "transmission": "automatic",
-      "mileageValue": 80037,
-      "mileageUnit": "km",
-      "colorExterior": "Тъмно син мет."
-    },
-    "seller": {
-      "id": "dealer-outletcars-varna",
-      "type": "dealer",
-      "displayName": "OUTLETCARS.BG — Варна",
-      "verificationStatus": "unverified",
-      "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
-    },
-    "publishedAt": "2026-09-09T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1005",
-    "slug": "citroen-c3-1-2-100hp-03-2027-2025-11780668057655036",
-    "category": "car",
-    "dealerOrgId": "dealer-outletcars-varna",
-    "status": "active",
-    "title": "Citroen C3 1.2 100hp ГАРАНЦИЯ ДО 03. 2027г.",
-    "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
-    "price": {
-      "amount": 15950,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/dealer/inventory/11780668057655036-1.webp",
-        "alt": "Citroen C3 1.2 100hp ГАРАНЦИЯ ДО 03. 2027г."
-      },
-      {
-        "url": "/dealer/inventory/11780668057655036-2.webp",
-        "alt": "Citroen C3 1.2 100hp ГАРАНЦИЯ ДО 03. 2027г."
-      },
-      {
-        "url": "/dealer/inventory/11780668057655036-3.webp",
-        "alt": "Citroen C3 1.2 100hp ГАРАНЦИЯ ДО 03. 2027г."
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Варна",
-      "region": "Варна",
-      "country": "BG"
-    },
-    "features": [
-      {
-        "bg": "4(5) Врати",
-        "en": "4(5) Врати"
-      },
-      {
-        "bg": "Auto Start Stop function",
-        "en": "Auto Start Stop function"
-      },
-      {
-        "bg": "Apple CarPlay \\ Android Auto",
-        "en": "Apple CarPlay \\ Android Auto"
-      },
-      {
-        "bg": "Bluetooth \\ handsfree система",
-        "en": "Bluetooth \\ handsfree система"
-      },
-      {
-        "bg": "Head up display",
-        "en": "Head up display"
-      },
-      {
-        "bg": "LED фарове",
-        "en": "LED фарове"
-      },
-      {
-        "bg": "USB",
-        "en": "USB"
-      },
-      {
-        "bg": "audio\\video",
-        "en": "audio\\video"
-      }
-    ],
-    "spec": {
-      "make": "Citroen",
-      "model": "C3 1.2 100hp ГАРАНЦИЯ ДО 03. 2027г.",
-      "year": 2025,
-      "bodyType": "hatchback",
-      "fuelType": "gasoline",
-      "transmission": "manual",
-      "mileageValue": 34393,
-      "mileageUnit": "km",
-      "colorExterior": "Бял"
-    },
-    "seller": {
-      "id": "dealer-outletcars-varna",
-      "type": "dealer",
-      "displayName": "OUTLETCARS.BG — Варна",
-      "verificationStatus": "unverified",
-      "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
-    },
-    "publishedAt": "2026-09-09T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1006",
-    "slug": "opel-corsa-edition-2024-11778766828983143",
-    "category": "car",
-    "dealerOrgId": "dealer-outletcars-varna",
-    "status": "active",
-    "title": "Opel Corsa Edition",
-    "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
-    "price": {
-      "amount": 14390,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/dealer/inventory/11778766828983143-1.webp",
-        "alt": "Opel Corsa Edition"
-      },
-      {
-        "url": "/dealer/inventory/11778766828983143-2.webp",
-        "alt": "Opel Corsa Edition"
-      },
-      {
-        "url": "/dealer/inventory/11778766828983143-3.webp",
-        "alt": "Opel Corsa Edition"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Варна",
-      "region": "Варна",
-      "country": "BG"
-    },
-    "features": [
-      {
-        "bg": "4(5) Врати",
-        "en": "4(5) Врати"
-      },
-      {
-        "bg": "Auto Start Stop function",
-        "en": "Auto Start Stop function"
-      },
-      {
-        "bg": "Apple CarPlay \\ Android Auto",
-        "en": "Apple CarPlay \\ Android Auto"
-      },
-      {
-        "bg": "Bluetooth \\ handsfree система",
-        "en": "Bluetooth \\ handsfree система"
-      },
-      {
-        "bg": "LED фарове",
-        "en": "LED фарове"
-      },
-      {
-        "bg": "USB",
-        "en": "USB"
-      },
-      {
-        "bg": "audio\\video",
-        "en": "audio\\video"
-      },
-      {
-        "bg": "IN\\AUX изводи",
-        "en": "IN\\AUX изводи"
-      }
-    ],
-    "spec": {
-      "make": "Opel",
-      "model": "Corsa Edition",
-      "year": 2024,
-      "bodyType": "hatchback",
-      "fuelType": "gasoline",
-      "transmission": "automatic",
-      "mileageValue": 73085,
-      "mileageUnit": "km",
-      "colorExterior": "Светло сив"
-    },
-    "seller": {
-      "id": "dealer-outletcars-varna",
-      "type": "dealer",
-      "displayName": "OUTLETCARS.BG — Варна",
-      "verificationStatus": "unverified",
-      "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
-    },
-    "publishedAt": "2026-09-09T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1007",
-    "slug": "vw-tiguan-1-5tsi-150hp-04-2028-2023-21779776692067869",
-    "category": "car",
-    "dealerOrgId": "dealer-outletcars-varna",
-    "status": "active",
-    "title": "VW Tiguan 1.5TSI 150hp Гаранция до 04.2028",
-    "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
-    "price": {
-      "amount": 23900,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/dealer/inventory/21779776692067869-1.webp",
-        "alt": "VW Tiguan 1.5TSI 150hp Гаранция до 04.2028"
-      },
-      {
-        "url": "/dealer/inventory/21779776692067869-2.webp",
-        "alt": "VW Tiguan 1.5TSI 150hp Гаранция до 04.2028"
-      },
-      {
-        "url": "/dealer/inventory/21779776692067869-3.webp",
-        "alt": "VW Tiguan 1.5TSI 150hp Гаранция до 04.2028"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Варна",
-      "region": "Варна",
-      "country": "BG"
-    },
-    "features": [
-      {
-        "bg": "4(5) Врати",
-        "en": "4(5) Врати"
-      },
-      {
-        "bg": "Auto Start Stop function",
-        "en": "Auto Start Stop function"
-      },
-      {
-        "bg": "Apple CarPlay \\ Android Auto",
-        "en": "Apple CarPlay \\ Android Auto"
-      },
-      {
-        "bg": "Bluetooth \\ handsfree система",
-        "en": "Bluetooth \\ handsfree система"
-      },
-      {
-        "bg": "LED фарове",
-        "en": "LED фарове"
-      },
-      {
-        "bg": "USB",
-        "en": "USB"
-      },
-      {
-        "bg": "audio\\video",
-        "en": "audio\\video"
-      },
-      {
-        "bg": "IN\\AUX изводи",
-        "en": "IN\\AUX изводи"
-      }
-    ],
-    "spec": {
-      "make": "VW",
-      "model": "Tiguan 1.5TSI 150hp Гаранция до 04.2028",
-      "year": 2023,
-      "bodyType": "suv",
-      "fuelType": "gasoline",
-      "transmission": "automatic",
-      "mileageValue": 97608,
-      "mileageUnit": "km",
-      "colorExterior": "Tъмно син"
-    },
-    "seller": {
-      "id": "dealer-outletcars-varna",
-      "type": "dealer",
-      "displayName": "OUTLETCARS.BG — Варна",
-      "verificationStatus": "unverified",
-      "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
-    },
-    "publishedAt": "2026-09-09T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1008",
-    "slug": "vw-arteon-r-line-04-2028-2023-11782296205813235",
-    "category": "car",
-    "dealerOrgId": "dealer-outletcars-varna",
-    "status": "active",
-    "title": "VW Arteon R-LINE Гаранция до 04.2028",
-    "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
-    "price": {
-      "amount": 23500,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/dealer/inventory/11782296205813235-1.webp",
-        "alt": "VW Arteon R-LINE Гаранция до 04.2028"
-      },
-      {
-        "url": "/dealer/inventory/11782296205813235-2.webp",
-        "alt": "VW Arteon R-LINE Гаранция до 04.2028"
-      },
-      {
-        "url": "/dealer/inventory/11782296205813235-3.webp",
-        "alt": "VW Arteon R-LINE Гаранция до 04.2028"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Варна",
-      "region": "Варна",
-      "country": "BG"
-    },
-    "features": [
-      {
-        "bg": "360 camera \\ Задна камера",
-        "en": "360 camera \\ Задна камера"
-      },
-      {
-        "bg": "4(5) Врати",
-        "en": "4(5) Врати"
-      },
-      {
-        "bg": "Auto Start Stop function",
-        "en": "Auto Start Stop function"
-      },
-      {
-        "bg": "Apple CarPlay \\ Android Auto",
-        "en": "Apple CarPlay \\ Android Auto"
-      },
-      {
-        "bg": "Bluetooth \\ handsfree система",
-        "en": "Bluetooth \\ handsfree система"
-      },
-      {
-        "bg": "LED фарове",
-        "en": "LED фарове"
-      },
-      {
-        "bg": "USB",
-        "en": "USB"
-      },
-      {
-        "bg": "audio\\video",
-        "en": "audio\\video"
-      }
-    ],
-    "spec": {
-      "make": "VW",
-      "model": "Arteon R-LINE Гаранция до 04.2028",
-      "year": 2023,
-      "bodyType": "sedan",
-      "fuelType": "diesel",
-      "transmission": "automatic",
-      "mileageValue": 115387,
-      "mileageUnit": "km",
-      "colorExterior": "Сив"
-    },
-    "seller": {
-      "id": "dealer-outletcars-varna",
-      "type": "dealer",
-      "displayName": "OUTLETCARS.BG — Варна",
-      "verificationStatus": "unverified",
-      "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
-    },
-    "publishedAt": "2026-09-09T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1009",
-    "slug": "peugeot-2008-gt-2024-11782392995192464",
-    "category": "car",
-    "dealerOrgId": "dealer-outletcars-varna",
-    "status": "active",
-    "title": "Peugeot 2008 GT",
-    "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
-    "price": {
-      "amount": 21200,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/dealer/inventory/11782392995192464-1.webp",
-        "alt": "Peugeot 2008 GT"
-      },
-      {
-        "url": "/dealer/inventory/11782392995192464-2.webp",
-        "alt": "Peugeot 2008 GT"
-      },
-      {
-        "url": "/dealer/inventory/11782392995192464-3.webp",
-        "alt": "Peugeot 2008 GT"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Варна",
-      "region": "Варна",
-      "country": "BG"
-    },
-    "features": [
-      {
-        "bg": "360 camera \\ Задна камера",
-        "en": "360 camera \\ Задна камера"
-      },
-      {
-        "bg": "4(5) Врати",
-        "en": "4(5) Врати"
-      },
-      {
-        "bg": "Auto Start Stop function",
-        "en": "Auto Start Stop function"
-      },
-      {
-        "bg": "Apple CarPlay \\ Android Auto",
-        "en": "Apple CarPlay \\ Android Auto"
-      },
-      {
-        "bg": "Bluetooth \\ handsfree система",
-        "en": "Bluetooth \\ handsfree система"
-      },
-      {
-        "bg": "LED фарове",
-        "en": "LED фарове"
-      },
-      {
-        "bg": "USB",
-        "en": "USB"
-      },
-      {
-        "bg": "audio\\video",
-        "en": "audio\\video"
-      }
-    ],
-    "spec": {
-      "make": "Peugeot",
-      "model": "2008 GT",
-      "year": 2024,
-      "bodyType": "suv",
-      "fuelType": "gasoline",
-      "transmission": "automatic",
-      "mileageValue": 75424,
-      "mileageUnit": "km",
-      "colorExterior": "Червен"
-    },
-    "seller": {
-      "id": "dealer-outletcars-varna",
-      "type": "dealer",
-      "displayName": "OUTLETCARS.BG — Варна",
-      "verificationStatus": "unverified",
-      "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-5c0d2d99cd366a51/logo-on-light.webp"
     },
     "publishedAt": "2026-09-09T09:00:00.000Z",
     "promoted": false

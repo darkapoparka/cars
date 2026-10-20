@@ -1,0 +1,79 @@
+{
+	"date": "2026-10-04",
+	"runtime": "L:/Toolchains/Node/24.21.0/node.exe",
+	"sourceCheckWorkspace": "C:/Users/radev/.codex/tmp/cars-import-desktop-continuation-2026-10-04-qa",
+	"sources": [
+		{
+			"path": "src/lib/content/home-discovery.ts",
+			"sha256": "13c4b385712af29cfe55a5c787b9a81be6394a529ce15c69d46bf692eaff41a4"
+		},
+		{
+			"path": "src/lib/components/common/MobileModeTabs.svelte",
+			"sha256": "995a06aedc506ae9cea825ab84bd06b15df8a9b3b30c36216e0b12abbfffb063"
+		}
+	],
+	"checks": [
+		{
+			"script": "check",
+			"exitCode": 0,
+			"seconds": 28
+		},
+		{
+			"script": "test:unit",
+			"exitCode": 0,
+			"seconds": 11
+		},
+		{
+			"script": "build",
+			"exitCode": 0,
+			"seconds": 69
+		}
+	],
+	"unitTests": {
+		"files": 18,
+		"passed": 124
+	},
+	"sourceChecks": {
+		"eslint": "passed for both changed source files",
+		"imageSignatures": 970,
+		"architecture": {
+			"nativeRoutes": 57,
+			"reachableModules": 230,
+			"tailwindEntries": 1
+		}
+	},
+	"browserTests": {
+		"baseURL": "http://127.0.0.1:4197",
+		"results": [
+			{
+				"name": "desktop-artwork",
+				"args": [
+					"tests/desktop-search.e2e.ts",
+					"--project=desktop",
+					"--grep",
+					"desktop artwork tabs"
+				],
+				"exitCode": 0,
+				"summary": ["  1 passed (18.7s)"]
+			},
+			{
+				"name": "mobile-preservation",
+				"args": [
+					"tests/commerce-banners.e2e.ts",
+					"--project=mobile",
+					"--grep",
+					"commerce banners and menu work"
+				],
+				"exitCode": 0,
+				"summary": ["  4 passed (19.9s)"]
+			}
+		]
+	},
+	"browserObservations": "browser.json",
+	"artworkMetadata": "assets.json",
+	"screenshots": "screenshot-comparison.json",
+	"standardDensityBytes": 6440,
+	"previousBytes": 43676,
+	"standardDensityReductionPercent": 85.3,
+	"scope": "Import source master; no release-lock update or dealer deployment"
+}

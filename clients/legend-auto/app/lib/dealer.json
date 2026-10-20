@@ -4,9 +4,9 @@
   "name": "LEGEND AUTO",
   "shortName": "LEGEND AUTO",
   "logo": {
-    "light": "/dealer-app/logo-light-393c8f05cb6020c8e443.webp",
-    "dark": "/dealer-app/logo-dark-3306a5e66871d4527cf4.webp",
-    "icon": "/dealer-app/icon.png"
+    "light": "/dealer-brand/v2-10a764fe9224b1a5/logo-on-light.webp",
+    "dark": "/dealer-brand/v2-10a764fe9224b1a5/logo-on-dark.webp",
+    "icon": "/dealer-brand/v2-10a764fe9224b1a5/app-icon.png"
   },
   "defaultLocale": "bg",
   "enabledLocales": [
@@ -42,13 +42,13 @@
       "url": ""
     }
   ],
+  "referenceClaimsApproved": false,
   "services": [
     "Продажба на автомобили",
     "Оглед с предварителна уговорка",
     "Транспорт до всяка точка на страната (според обявите)"
   ],
-  "referenceClaimsApproved": false,
   "observedAt": "2026-09-06T21:52:55.020Z, 2026-09-06T21:52:55.219Z, 2026-09-06T21:52:55.362Z, 2026-09-06T21:52:55.452Z, 2026-09-06T21:52:55.578Z, 2026-09-06T21:52:55.731Z, 2026-09-06T21:52:55.812Z, 2026-09-06T21:52:55.901Z, 2026-09-06T21:52:55.993Z, 2026-09-06T21:52:56.129Z, 2026-09-06T21:52:56.213Z, 2026-09-06T21:52:56.330Z, 2026-09-06T21:52:56.411Z, 2026-09-06T21:52:56.518Z",
-  "inventoryNotice": "Dated listing samples. Confirm price, availability and vehicle information with the dealer.",
+  "inventoryNotice": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
   "previewNotice": "Independent design preview. No purchase, reservation or message is submitted by this website."
 }

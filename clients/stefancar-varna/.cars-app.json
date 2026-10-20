@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "dealer": "stefancar-varna",
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+    "path": "templates/app",
+    "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1",
+    "tree": "7f3d3ffa40546635377e6c5225194fe06fead291"
+  },
+  "appDigest": "790c60efd32a76294f1abf62c855d5e23e335456a801654813989fe8442ccf15",
+  "provenance": {
+    "schemaVersion": 1,
+    "dealer": "stefancar-varna",
+    "profile": "auto-best/src/lib/data/dealer-profile.json",
+    "profileSha256": "dad544a471d8f6adbc9189b56f7df89c2a739409ea3e9752a9dd59d554872f8c",
+    "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
+    "vehicles": 1,
+    "currency": "EUR",
+    "observedAt": "2026-10-11T11:47:27.795Z",
+    "assets": [
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-light.png",
+        "output": "public/dealer-app/logo-light-87cc461564f219946040.png",
+        "sha256": "87cc461564f219946040641b96ff16f9032d2501675b85a944e16fb5ae205d18",
+        "role": "logo-light"
+      },
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-dark.png",
+        "output": "public/dealer-app/logo-dark-dc06da662e843cbf1cfa.png",
+        "sha256": "dc06da662e843cbf1cfa0aa40b75bbeef0dcf2652cb9185f5bae4f6088c8d93a",
+        "role": "logo-dark"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/11790858680832903-1.webp",
+        "output": "public/dealer-app/vehicle-416b2d4cac5e05dfde69.webp",
+        "sha256": "416b2d4cac5e05dfde69776edfa825be326d05564f6155aa926d10c8db9167fd",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/11790858680832903-2.webp",
+        "output": "public/dealer-app/vehicle-77007a102577437a8299.webp",
+        "sha256": "77007a102577437a829951bf1e1b823d547065ceb03185db7a2440ced2c8afe3",
+        "role": "vehicle"
+      }
+    ],
+    "mileageFacts": [
+      {
+        "slug": "hyundai-ioniq-5-2024-11790858680832903",
+        "sourceValue": 85000,
+        "sourceUnit": "km",
+        "canonicalKm": 85000
+      }
+    ]
+  },
+  "needsDealerQA": true,
+  "readyToPublish": false,
+  "refreshedAt": "2026-10-15T03:22:30.906Z"
+}

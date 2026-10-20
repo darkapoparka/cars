@@ -54,8 +54,8 @@
 		'Заявката е в опашка за преглед.': 'Vehicle submission queued for review.',
 		'Клиентският автомобил е подаден с VIN, снимки и сервизна история за преглед.':
 			'Client vehicle submitted with VIN, photos and service history for review.',
-		'Клиентът пита дали Day Night Auto може да подготви директна оферта или обява.':
-			'Customer asked whether Day Night Auto can prepare a direct offer or client listing.'
+		'Клиентът пита дали Promosale Varna може да подготви директна оферта или обява.':
+			'Customer asked whether Promosale Varna can prepare a direct offer or client listing.'
 	};
 	const display = (value: string) =>
 		english ? (translations[value] ?? value.replace(/^Град: /, 'City: ')) : value;

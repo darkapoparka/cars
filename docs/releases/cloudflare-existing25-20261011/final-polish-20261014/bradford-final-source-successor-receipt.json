@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-reviewed-existing-source-auto-ui-successor",
+  "scope": "owner-reviewed-auto-best-ui-source-successor",
+  "reviewed": true,
+  "dealer": "bradford-cherry-tree-cars",
+  "repository": "darkapoparka/cars-uk-bradford-cherry-tree-cars",
+  "canonicalSourceRepository": "darkapoparka/cars",
+  "canonicalBaseline": {
+    "commit": "b98f379062c417d71a289563aaa33680c5db4146",
+    "tree": "b570aa6c07a541a3966cb481a27c6414445b96e8"
+  },
+  "preparedTree": "8a644d6eb54708c51dff502748fc0904507083e7",
+  "sourceRevision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+  "personalizationMarker": {
+    "path": "src/lib/data/company.ts",
+    "beforeBlob": "4ce5516d46ddfb0457195721d4de56633a4a2564",
+    "afterBlob": "d5fef528dd9ecdc822318f8f1d58d551b16cda45",
+    "insertedDeclaration": "export const companyServicesCopyOwner = 'dealer' as const;",
+    "factualServiceFieldsUnchanged": true
+  },
+  "autoBestSource": {
+    "tree": "78fa1a82eca14816449f9588283260840ee94f52",
+    "digest": "2fc9c3cfc9cf1976dbe30c08592776362e5bcc6b09e8b06620e57c4406df58a5"
+  },
+  "stockRows": 8,
+  "authoritativeFactsUnchanged": true,
+  "allRasterAssetBytesUnchanged": true,
+  "otherFiveTemplateTreesUnchanged": true,
+  "changedAutoLeaves": [
+    {
+      "path": "auto-best/src/lib/components/company/AboutProcess.svelte",
+      "beforeBlob": "484fce2fe0da7c07b9a59c6b230b3f2b6a1d7f51",
+      "afterBlob": "4aa8e4598a521746954c479a81c4d371a06647f9"
+    },
+    {
+      "path": "auto-best/src/lib/components/company/AboutHero.svelte",
+      "beforeBlob": "208c8be30157232a8a62b7779888e7639c94debe",
+      "afterBlob": "6ba5abda25b4bbd9f34c32f8990724d4bbd49a34"
+    },
+    {
+      "path": "auto-best/src/lib/components/company/ContactHero.svelte",
+      "beforeBlob": "573af1e1f7460d0a8b6855c12cb72e4f9ca72105",
+      "afterBlob": "8048832682156959882b0fb072a3f43a10d6b3a6"
+    }
+  ],
+  "pathsChanged": 13,
+  "uniqueBlobBytes": 297715,
+  "brandingPackId": "c4d01a5862dcc9e1",
+  "nativeInput": {
+    "digest": "5de235deac0d45a5d5c850e630e14b1a5db763ebd0254081320b06123fa3d02c",
+    "files": 9127
+  },
+  "qualificationContextSha256": "2dd314d581b56ce28aab867ad77236095419ad9136186672d484c49805b7c90e",
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "globalReleaseApproval": false,
+  "originalSingletonVersion": "63494b31-cbd4-4e32-8c86-e2ded180f004",
+  "sourceOnly": true,
+  "published": false,
+  "actualPreparation": {
+    "native": "PASS",
+    "app": "PASS",
+    "extended": "PASS",
+    "branding": "PASS",
+    "sourcePatch": "PASS",
+    "localExecution": "session19215 exit0",
+    "companyMarkerOnlyInsertionProved": true,
+    "exactCurrentPathLeases": true,
+    "all8StockRowsAndFactsAndRasterBytesUnchanged": true
+  },
+  "priorSource": {
+    "commit": "b98f379062c417d71a289563aaa33680c5db4146",
+    "tree": "b570aa6c07a541a3966cb481a27c6414445b96e8",
+    "artifactProposalSha256": "441c60e6127b6d3e1e3b92c193415112ba432a26105c3b88158897b705f2430d"
+  },
+  "priorProduction": {
+    "provider": "cloudflare",
+    "worker": "cars-uk-bradford-cherry-tree-cars",
+    "versionId": "63494b31-cbd4-4e32-8c86-e2ded180f004",
+    "deploymentId": "2a1536a5-e8db-4e36-ba0d-5e287d13757f",
+    "receiptSha256": "bc2bad8d50b207af09f5bec30144495864b68dd9bbffcfb5e94c2cd906ffe200",
+    "hostedAccepted": false
+  }
+}

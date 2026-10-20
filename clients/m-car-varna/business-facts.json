@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "slug": "m-car-varna",
+  "dealerId": "m-car-varna",
+  "business": {
+    "schemaVersion": 1,
+    "slug": "m-car-varna",
+    "name": "M Car Varna",
+    "shortName": "M Car Varna",
+    "city": "Варна",
+    "country": "BG",
+    "countryCode": "BG",
+    "locale": "bg-BG",
+    "currency": "EUR",
+    "distanceUnit": "km",
+    "phone": "+359887246669",
+    "phoneDisplay": "+359887246669",
+    "phoneE164": "+359887246669",
+    "phones": [
+      "+359887246669"
+    ],
+    "addressLine": "бул. Владислав Варненчик 320",
+    "address": "бул. Владислав Варненчик 320, Варна, България",
+    "hours": "Потвърдете работното време директно с автокъщата.",
+    "email": "contact@bmw-mcarvarna.bg",
+    "sourceUrl": "https://mcarvarna.mobile.bg/",
+    "stockUrl": "https://mcarvarna.mobile.bg/",
+    "contactSourceUrl": "https://mcarvarna.mobile.bg/contacts",
+    "observedAt": "2026-10-12T10:44:18.497Z",
+    "inventoryNotice": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "previewNotice": "Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация.",
+    "services": [],
+    "socialLinks": {},
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png",
+    "modernInventoryCopy": {
+      "m-car-varna-11791525148007826": {
+        "sourceDescription": "BMW 540 xDrive от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+        "en": {
+          "description": "BMW 540 xDrive from a dated public advert. Confirm condition, price and availability directly with the dealership.",
+          "imageAlts": [
+            "BMW 540 xDrive — dated public advert photo 1",
+            "BMW 540 xDrive — dated public advert photo 2"
+          ]
+        },
+        "bg": {
+          "description": "BMW 540 xDrive от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+          "imageAlts": [
+            "BMW 540 xDrive — снимка от датирана публична обява 1",
+            "BMW 540 xDrive — снимка от датирана публична обява 2"
+          ]
+        }
+      },
+      "m-car-varna-11791452660881854": {
+        "sourceDescription": "BMW 750 xDrive от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+        "en": {
+          "description": "BMW 750 xDrive from a dated public advert. Confirm condition, price and availability directly with the dealership.",
+          "imageAlts": [
+            "BMW 750 xDrive — dated public advert photo 1",
+            "BMW 750 xDrive — dated public advert photo 2"
+          ]
+        },
+        "bg": {
+          "description": "BMW 750 xDrive от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+          "imageAlts": [
+            "BMW 750 xDrive — снимка от датирана публична обява 1",
+            "BMW 750 xDrive — снимка от датирана публична обява 2"
+          ]
+        }
+      }
+    }
+  },
+  "research": {
+    "website": {
+      "status": "confirmed-primary-own-site",
+      "url": "https://bmw-mcarvarna.bg/",
+      "phone": "+35952739860",
+      "email": "contact@bmw-mcarvarna.bg"
+    },
+    "publicIdentityKey": "mobile-profile:mcarvarna.mobile.bg",
+    "profileAdvertCount": 31,
+    "availabilityConfirmed": false,
+    "legalEntityOwnershipVerified": false,
+    "addressExactness": "public-contact-as-published",
+    "caveats": [],
+    "sourceProof": [
+      {
+        "url": "https://mcarvarna.mobile.bg/",
+        "finalUrl": "https://mcarvarna.mobile.bg/",
+        "observedAt": "2026-10-12T10:44:18.596Z",
+        "status": 200,
+        "bytes": 169368,
+        "sha256": "84ffe12cec4e953442046c3c8dd7fd5b3a8eff31ecf2728d30206939f7792ac7"
+      },
+      {
+        "url": "https://mcarvarna.mobile.bg/contacts",
+        "finalUrl": "https://mcarvarna.mobile.bg/contacts",
+        "observedAt": "2026-10-12T10:44:18.497Z",
+        "status": 200,
+        "bytes": 42709,
+        "sha256": "b7bdd21b171e9508895e7b3d48ff3f13ab7a75e5a1cc184ed97dfb4c204e1da5"
+      },
+      {
+        "url": "https://mcarvarna.mobile.bg/about",
+        "finalUrl": "https://mcarvarna.mobile.bg/about",
+        "observedAt": "2026-10-12T10:44:18.472Z",
+        "status": 200,
+        "bytes": 6539,
+        "sha256": "bfa6917ea941b15c4d2cff3c9be880ebbb11b6c014b19a69d041a0f3edc6d514"
+      }
+    ],
+    "sourceAction": "new-absent-cars-source-after-wrapper-identity-recheck",
+    "existingSourceTree": null,
+    "inventoryModeSelection": "dated-listing-snapshot",
+    "productionAssetInputsComplete": true,
+    "stockSnapshotScope": "Two retained public adverts, not a complete/live inventory",
+    "stockMediaAuthority": "Owner-authorized public dated demo scope; original source bytes and watermarks retained"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-source-publication",
+  "reviewed": true,
+  "reviewedAt": "2026-10-13T02:50:04.682Z",
+  "dealer": "biemaauto-varna",
+  "dealerId": "biemaauto-varna",
+  "repository": "darkapoparka/cars-biemaauto-varna",
+  "sourceOwnership": "cars-canonical",
+  "request": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/parallel-batch3-biema-pilot-request.json",
+    "sha256": "c670f848f3b29cbd2800e0143e2ee2fddde284f8de18632d608679ab06aa560d"
+  },
+  "preparation": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/biemaauto-varna/source-preparation.json",
+    "sha256": "455f259811f166ea26c49605bcc20fe54a35e5f99d96eaefd725f24c4d0ef815"
+  },
+  "proposal": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/biemaauto-varna/source-proposal.json",
+    "sha256": "c36741f4466b2eb089db8b110295244318e080a15e7ce36d471854c151af85c0"
+  },
+  "inputMapping": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/biemaauto-varna/input-mapping.json",
+    "sha256": "3222429eba1065692fa4a2776691a8301e3fe8c29789d57a10ac819b713c68ae"
+  },
+  "sourcePublication": {
+    "repository": "darkapoparka/cars",
+    "commit": "0c92ce9fbe3768f7f23b7dc556d0c711b09c7166",
+    "sourceTree": "19b857227e7981f9fce11b0f7eef801a1c58d24a",
+    "ref": "refs/heads/main",
+    "publishedAt": "2026-10-13T01:15:48Z",
+    "evidence": "https://github.com/darkapoparka/cars/commit/0c92ce9fbe3768f7f23b7dc556d0c711b09c7166"
+  }
+}

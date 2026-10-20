@@ -23,13 +23,17 @@ export const dealerLocalizedText = {
     "city": "Varna",
     "addressLine": "Yan Hunyadi Blvd., corner with Tsar Osvoboditel Blvd.",
     "address": "Yan Hunyadi Blvd., corner with Tsar Osvoboditel Blvd., Varna",
-    "appointment": "Monday–Friday: 08:30–19:00; Saturday: 09:00–18:00; Sunday: closed"
+    "appointment": "Monday–Friday: 08:30–19:00; Saturday: 09:00–18:00; Sunday: closed",
+    "addressShort": "Yan Hunyadi Blvd., corner with Tsar Osvoboditel Blvd.",
+    "appointmentShort": "Monday–Friday: 08:30–19:00; Saturday: 09:00–18:00; Sunday: closed"
   },
   "bg": {
     "city": "Варна",
     "addressLine": "бул. „Ян Хунияди“, ъгъла с бул. „Цар Освободител“",
     "address": "бул. „Ян Хунияди“, ъгъла с бул. „Цар Освободител“",
-    "appointment": "Понеделник – петък: 08:30–19:00; Събота: 09:00–18:00; Неделя: почивен ден"
+    "appointment": "Понеделник – петък: 08:30–19:00; Събота: 09:00–18:00; Неделя: почивен ден",
+    "addressShort": "бул. „Ян Хунияди“, ъгъла с бул. „Цар Освободител“",
+    "appointmentShort": "Понеделник – петък: 08:30–19:00; Събота: 09:00–18:00; Неделя: почивен ден"
   }
 } as const;
 

@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 1,
+  "slug": "bavaria-auto-varna",
+  "dealerId": "bavaria-auto-varna",
+  "business": {
+    "schemaVersion": 1,
+    "slug": "bavaria-auto-varna",
+    "name": "Бавария",
+    "shortName": "Бавария",
+    "city": "Варна",
+    "country": "BG",
+    "countryCode": "BG",
+    "locale": "bg-BG",
+    "currency": "EUR",
+    "distanceUnit": "km",
+    "phone": "0879030161",
+    "phoneDisplay": "0879030161",
+    "phoneE164": "+359879030161",
+    "phones": [
+      "+359879030161"
+    ],
+    "addressLine": "бул. Цар Освободител до светофара за Владиславово",
+    "address": "бул. Цар Освободител до светофара за Владиславово, Варна, България",
+    "hours": "Потвърдете работното време директно с автокъщата.",
+    "email": "",
+    "sourceUrl": "https://bavaria.mobile.bg/",
+    "stockUrl": "https://bavaria.mobile.bg/",
+    "contactSourceUrl": "https://bavaria.mobile.bg/contacts",
+    "observedAt": "2026-10-12T10:44:18.914Z",
+    "inventoryNotice": "Показаните демонстрационни автомобили са илюстративни и не представляват наличности на автокъщата. За действителните оферти и наличности се свържете директно с нея.",
+    "previewNotice": "Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация.",
+    "services": [],
+    "socialLinks": {},
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "research": {
+    "website": {
+      "status": "workbook-reported-not-confirmed",
+      "url": "https://bavaria-auto.autohop.bg/"
+    },
+    "publicIdentityKey": "mobile-profile:bavaria.mobile.bg",
+    "profileAdvertCount": 23,
+    "availabilityConfirmed": false,
+    "legalEntityOwnershipVerified": false,
+    "addressExactness": "public-contact-as-published",
+    "caveats": [],
+    "sourceProof": [
+      {
+        "url": "https://bavaria.mobile.bg/",
+        "finalUrl": "https://bavaria.mobile.bg/",
+        "observedAt": "2026-10-12T10:44:19.004Z",
+        "status": 200,
+        "bytes": 111819,
+        "sha256": "022c9c0a230e9e63ab2ed5139e8419282b9dbdfb8ce5d277534c267d0c0acb5e"
+      },
+      {
+        "url": "https://bavaria.mobile.bg/contacts",
+        "finalUrl": "https://bavaria.mobile.bg/contacts",
+        "observedAt": "2026-10-12T10:44:18.914Z",
+        "status": 200,
+        "bytes": 42437,
+        "sha256": "df4b1dded189e31e60f175b90cc865841500bb091dffeca1a940bcf42d448f5c"
+      },
+      {
+        "url": "https://bavaria.mobile.bg/about",
+        "finalUrl": "https://bavaria.mobile.bg/about",
+        "observedAt": "2026-10-12T10:44:18.904Z",
+        "status": 200,
+        "bytes": 6258,
+        "sha256": "abf893a4d430c967a7eccbe318b16a2545d29834960369d8e674607515a5aac0"
+      }
+    ],
+    "sourceAction": "new-absent-cars-source-after-wrapper-identity-recheck",
+    "existingSourceTree": null,
+    "inventoryModeSelection": "illustrative-not-dealer-stock",
+    "productionAssetInputsComplete": false
+  }
+}

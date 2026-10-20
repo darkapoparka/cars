@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "dealer": "vaen-cars-varna",
+  "media": [
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/vaen-cars-varna/media/11790770761188035-1.webp",
+      "sha256": "c0c2dafce4195afc79feebaa50ad45040931600d9318f0a25b143bd4fbbedaa4",
+      "bytes": 129086,
+      "destination": "dealer-stock/11790770761188035-1.webp"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/vaen-cars-varna/media/11790770761188035-2.webp",
+      "sha256": "28812e99e9832a23db82e98ea3408f9362851256c62cad37af296cebae1a9466",
+      "bytes": 134140,
+      "destination": "dealer-stock/11790770761188035-2.webp"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/vaen-cars-varna/media/11790767561385627-1.webp",
+      "sha256": "c0c2dafce4195afc79feebaa50ad45040931600d9318f0a25b143bd4fbbedaa4",
+      "bytes": 129086,
+      "destination": "dealer-stock/11790767561385627-1.webp"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/vaen-cars-varna/media/11790767561385627-2.webp",
+      "sha256": "28812e99e9832a23db82e98ea3408f9362851256c62cad37af296cebae1a9466",
+      "bytes": 134140,
+      "destination": "dealer-stock/11790767561385627-2.webp"
+    }
+  ]
+}

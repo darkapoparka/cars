@@ -3,19 +3,28 @@
 import { Button } from "@repo/design-system/components/ui/button";
 import { Input } from "@repo/design-system/components/ui/input";
 import { Label } from "@repo/design-system/components/ui/label";
+import { Textarea } from "@repo/design-system/components/ui/textarea";
 import { leadSite } from "@repo/marketplace";
 import {
   MobileMarketplaceOverlayCloseAction,
+  MobileMarketplaceOverlayField,
   MobileMarketplaceOverlayHeader,
   MobileMarketplaceOverlayShell,
-  mobileMarketplaceOverlayFieldClassName,
-  mobileMarketplaceOverlayInputClassName,
   mobileMarketplaceOverlayPrimaryActionClassName,
 } from "@repo/marketplace-ui/components/mobile-marketplace-overlay";
+import { mobileFormTextClassName } from "@repo/marketplace-ui/lib/mobile-form-control";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { useRef, useState } from "react";
-import { type MobileFormDraft, readMobileFormDraft } from "./mobile-form-draft";
+import {
+  parseSellVehicleDraft,
+  readSellVehicleDraft,
+  type SellVehicleDraft,
+  vehicleMileageMaximum,
+  vehicleYearMaximum,
+  vehicleYearMinimum,
+} from "../../../lib/sell-vehicle-draft";
+import { readMobileFormDraft } from "./mobile-form-draft";
 import { MobileSellCategoryField } from "./mobile-sell-category-field";
 import {
   isCompleteVehicleVin,
@@ -27,6 +36,7 @@ import { MobileVehicleTaxonomyFields } from "./mobile-vehicle-taxonomy-fields";
 
 export const MobileSellVehicleDetailsDrawer = ({
   focusVin = false,
+  initialDraft,
   onRestoreFocus,
   contactHref,
   locale,
@@ -36,6 +46,7 @@ export const MobileSellVehicleDetailsDrawer = ({
   vin,
 }: {
   focusVin?: boolean;
+  initialDraft: SellVehicleDraft;
   onRestoreFocus?: () => void;
   contactHref: string;
   locale: "bg" | "en";
@@ -46,9 +57,12 @@ export const MobileSellVehicleDetailsDrawer = ({
 }) => {
   const content = mobileSellVehicleCopy[locale];
   const hasCompleteVin = isCompleteVehicleVin(vin);
-  const [draft, setDraft] = useState<MobileFormDraft>({});
+  const [draft, setDraft] = useState(initialDraft);
+  const [resetKey, setResetKey] = useState(0);
+  const [confirmReset, setConfirmReset] = useState(false);
   const vinRef = useRef<HTMLInputElement>(null);
   const formRef = useRef<HTMLFormElement>(null);
+  const resetRef = useRef<HTMLButtonElement>(null);
 
   return (
     <MobileMarketplaceOverlayShell
@@ -60,20 +74,15 @@ export const MobileSellVehicleDetailsDrawer = ({
         }
       }}
       onOpenAutoFocus={(event) => {
-        event.preventDefault();
         if (focusVin) {
+          event.preventDefault();
           vinRef.current?.focus({ preventScroll: true });
-        } else {
-          document
-            .querySelector<HTMLElement>(
-              '[data-slot="mobile-sell-details-drawer"]'
-            )
-            ?.focus({ preventScroll: true });
         }
       }}
       onOpenChange={(nextOpen) => {
         if (!nextOpen && formRef.current) {
-          setDraft(readMobileFormDraft(formRef.current));
+          setDraft(readSellVehicleDraft(readMobileFormDraft(formRef.current)));
+          setConfirmReset(false);
         }
         onOpenChange(nextOpen);
       }}
@@ -91,34 +100,36 @@ export const MobileSellVehicleDetailsDrawer = ({
         action={contactHref}
         className="no-scrollbar min-h-0 flex-1 overflow-y-auto overscroll-contain px-4 pb-[calc(1rem+env(safe-area-inset-bottom))] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         data-slot="mobile-sell-details-form"
+        key={resetKey}
         method="get"
+        onInput={() => setConfirmReset(false)}
         ref={formRef}
       >
         <input name="intent" type="hidden" value="sell" />
-        <p className="mb-4 text-[14px] text-zinc-600 leading-5">
-          {content.formDescription}
-        </p>
-
         <div className="grid gap-1.5">
-          <Label className="font-medium text-[13px]" htmlFor="mobile-sell-vin">
+          <Label className="font-medium text-meta" htmlFor="mobile-sell-vin">
             {content.vinOptional}
           </Label>
-          <div className={mobileMarketplaceOverlayFieldClassName}>
-            <input
-              autoCapitalize="characters"
-              className={`${mobileMarketplaceOverlayInputClassName} uppercase placeholder:normal-case`}
-              id="mobile-sell-vin"
-              maxLength={17}
-              name="vin"
-              onChange={(event) =>
-                onVinChange(normalizeVehicleVin(event.target.value))
-              }
-              placeholder="WBA..."
-              ref={vinRef}
-              spellCheck={false}
-              value={vin}
-            />
-          </div>
+          <MobileMarketplaceOverlayField
+            autoCapitalize="characters"
+            id="mobile-sell-vin"
+            inputClassName="uppercase placeholder:normal-case"
+            inputRef={vinRef}
+            maxLength={17}
+            name="vin"
+            onChange={(event) =>
+              onVinChange(normalizeVehicleVin(event.target.value))
+            }
+            pattern="[A-HJ-NPR-Z0-9]{17}"
+            placeholder="WBA..."
+            spellCheck={false}
+            title={
+              locale === "bg"
+                ? "VIN трябва да съдържа 17 знака."
+                : "A VIN must contain 17 characters."
+            }
+            value={vin}
+          />
         </div>
 
         <div className="mt-3 grid grid-cols-2 gap-3">
@@ -136,7 +147,7 @@ export const MobileSellVehicleDetailsDrawer = ({
             makeLabel={content.make}
             makePlaceholder={content.make}
             modelLabel={content.model}
-            modelPlaceholder="X5"
+            modelPlaceholder={content.modelExample}
             required={!hasCompleteVin}
             variant="sell"
           />
@@ -144,10 +155,7 @@ export const MobileSellVehicleDetailsDrawer = ({
 
         <div className="mt-3 grid grid-cols-2 gap-3">
           <div className="grid gap-1.5">
-            <Label
-              className="font-medium text-[13px]"
-              htmlFor="mobile-sell-year"
-            >
+            <Label className="font-medium text-meta" htmlFor="mobile-sell-year">
               {content.year}
             </Label>
             <Input
@@ -155,17 +163,17 @@ export const MobileSellVehicleDetailsDrawer = ({
               defaultValue={draft.year}
               id="mobile-sell-year"
               inputMode="numeric"
-              max={2100}
-              min={1886}
+              max={vehicleYearMaximum}
+              min={vehicleYearMinimum}
               name="year"
-              placeholder="2022"
+              placeholder={content.yearExample}
               required={!hasCompleteVin}
               type="number"
             />
           </div>
           <div className="grid gap-1.5">
             <Label
-              className="font-medium text-[13px]"
+              className="font-medium text-meta"
               htmlFor="mobile-sell-mileage"
             >
               {content.mileage}
@@ -175,33 +183,96 @@ export const MobileSellVehicleDetailsDrawer = ({
               defaultValue={draft.mileage}
               id="mobile-sell-mileage"
               inputMode="numeric"
-              max={10_000_000}
+              max={vehicleMileageMaximum}
               min={0}
               name="mileage"
-              placeholder="62 000"
+              placeholder={content.mileageExample}
               required={!hasCompleteVin}
               type="number"
             />
           </div>
         </div>
 
+        <div className="mt-3 grid gap-1.5">
+          <Label className="font-medium text-meta" htmlFor="mobile-sell-notes">
+            {locale === "bg" ? "Бележки (по желание)" : "Notes (optional)"}
+          </Label>
+          <Textarea
+            className={`min-h-20 rounded-xl border-transparent bg-zinc-100 shadow-none ${mobileFormTextClassName}`}
+            defaultValue={draft.notes}
+            id="mobile-sell-notes"
+            maxLength={500}
+            name="notes"
+          />
+        </div>
         <div className="mt-6">
           <Button
-            className={`${mobileMarketplaceOverlayPrimaryActionClassName} gap-2 font-semibold text-[14px]`}
+            className={`${mobileMarketplaceOverlayPrimaryActionClassName} gap-2 font-semibold text-compact-control`}
             type="submit"
           >
             {content.submit}
             <ArrowRight aria-hidden="true" className="size-4" />
           </Button>
-          <p className="mt-2 text-center text-[13px] text-muted-foreground leading-5">
+          <p className="mt-2 text-center text-meta text-muted-foreground">
             {content.directCall}{" "}
             <Link
-              className="font-semibold text-foreground underline-offset-4 hover:underline"
+              className="inline-flex min-h-11 items-center px-2 font-semibold text-foreground underline-offset-4 hover:underline"
               href={leadSite.phoneHref}
             >
               {leadSite.phoneDisplay}
             </Link>
           </p>
+          <div className="mt-2 text-center">
+            {confirmReset ? (
+              <fieldset aria-label={content.clearTitle}>
+                <p className="text-meta text-zinc-600">
+                  {content.clearConfirm}
+                </p>
+                <button
+                  className="min-h-11 rounded-lg px-4 font-semibold text-compact-control text-red-700 focus-visible:outline-2 focus-visible:outline-ring"
+                  onClick={() => {
+                    const emptyDraft = parseSellVehicleDraft();
+                    setDraft(emptyDraft);
+                    onVinChange("");
+                    const url = new URL(window.location.href);
+                    for (const field of Object.keys(emptyDraft)) {
+                      url.searchParams.delete(field);
+                    }
+                    window.history.replaceState(
+                      window.history.state,
+                      "",
+                      `${url.pathname}${url.search}${url.hash}`
+                    );
+                    setResetKey((value) => value + 1);
+                    setConfirmReset(false);
+                    requestAnimationFrame(() => vinRef.current?.focus());
+                  }}
+                  type="button"
+                >
+                  {content.clearAction}
+                </button>
+                <button
+                  className="min-h-11 rounded-lg px-4 font-medium text-compact-control focus-visible:outline-2 focus-visible:outline-ring"
+                  onClick={() => {
+                    setConfirmReset(false);
+                    requestAnimationFrame(() => resetRef.current?.focus());
+                  }}
+                  type="button"
+                >
+                  {content.keepAction}
+                </button>
+              </fieldset>
+            ) : (
+              <button
+                className="min-h-11 rounded-lg px-4 text-meta text-zinc-600 underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-ring"
+                onClick={() => setConfirmReset(true)}
+                ref={resetRef}
+                type="button"
+              >
+                {content.resetAction}
+              </button>
+            )}
+          </div>
         </div>
       </form>
     </MobileMarketplaceOverlayShell>

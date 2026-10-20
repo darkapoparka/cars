@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "slug": "i1-auto-varna",
+  "dealerId": "i1-auto-varna",
+  "business": {
+    "schemaVersion": 1,
+    "slug": "i1-auto-varna",
+    "name": "i1 Auto ApS",
+    "shortName": "i1 Auto ApS",
+    "city": "Варна",
+    "country": "BG",
+    "countryCode": "BG",
+    "locale": "bg-BG",
+    "currency": "EUR",
+    "distanceUnit": "km",
+    "phone": "0899820525",
+    "phoneDisplay": "0899820525",
+    "phoneE164": "+359899820525",
+    "phones": [
+      "+359899820525"
+    ],
+    "addressLine": "срещу КАТ, бул. Ян Хуняди 518",
+    "address": "срещу КАТ, бул. Ян Хуняди 518, Варна, България",
+    "hours": "Потвърдете работното време директно с автокъщата.",
+    "email": "",
+    "sourceUrl": "https://i1autodk.mobile.bg/",
+    "stockUrl": "https://i1autodk.mobile.bg/",
+    "contactSourceUrl": "https://i1autodk.mobile.bg/contacts",
+    "observedAt": "2026-10-12T10:44:17.969Z",
+    "inventoryNotice": "Показаните демонстрационни автомобили са илюстративни и не представляват наличности на автокъщата. За действителните оферти и наличности се свържете директно с нея.",
+    "previewNotice": "Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация.",
+    "services": [],
+    "socialLinks": {},
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "research": {
+    "website": {
+      "status": "none-confirmed-in-bounded-check",
+      "url": null,
+      "notWebsiteGapProof": true
+    },
+    "publicIdentityKey": "mobile-profile:i1autodk.mobile.bg",
+    "profileAdvertCount": 2,
+    "availabilityConfirmed": false,
+    "legalEntityOwnershipVerified": false,
+    "addressExactness": "public-contact-as-published",
+    "caveats": [],
+    "sourceProof": [
+      {
+        "url": "https://i1autodk.mobile.bg/",
+        "finalUrl": "https://i1autodk.mobile.bg/",
+        "observedAt": "2026-10-12T10:44:17.970Z",
+        "status": 200,
+        "bytes": 42062,
+        "sha256": "52d3aa19d4d8635d25b1d6f87a8fa5a3ec1267394e669e8fa9758d1c55300f76"
+      },
+      {
+        "url": "https://i1autodk.mobile.bg/contacts",
+        "finalUrl": "https://i1autodk.mobile.bg/contacts",
+        "observedAt": "2026-10-12T10:44:17.969Z",
+        "status": 200,
+        "bytes": 41852,
+        "sha256": "a083fb89467f9ef4c18fa6d704b49438f479a553778bea871d6059270000788f"
+      },
+      {
+        "url": "https://i1autodk.mobile.bg/about",
+        "finalUrl": "https://i1autodk.mobile.bg/about",
+        "observedAt": "2026-10-12T10:44:17.959Z",
+        "status": 200,
+        "bytes": 6102,
+        "sha256": "f59231fd1560edca00fca39b81e3a500ceb4f8342e1cd996623a746ac06afd61"
+      }
+    ],
+    "sourceAction": "new-absent-cars-source-after-wrapper-identity-recheck",
+    "existingSourceTree": null,
+    "inventoryModeSelection": "illustrative-not-dealer-stock",
+    "productionAssetInputsComplete": false
+  }
+}

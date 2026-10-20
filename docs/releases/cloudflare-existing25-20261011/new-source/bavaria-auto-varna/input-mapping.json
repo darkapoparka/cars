@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-input-mapping",
+  "dealer": "bavaria-auto-varna",
+  "inputs": {
+    "facts": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/bavaria-auto-varna/facts.json",
+      "sha256": "c19443b12a339872d31c7be8add33c8944a3800e5e92b962e4873c090c51b4fb"
+    },
+    "stock": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/bavaria-auto-varna/stock.json",
+      "sha256": "a1f60fde6274eba40f37e684ce47887c80bd36c6e9a2b73b1bf75a476e6d66d0"
+    },
+    "locale": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/bavaria-auto-varna/locale.json",
+      "sha256": "8814aeace0ba4320c3440ddb2f6bab9dc9c98d02827a7b98e3ae6d694206e13b"
+    },
+    "branding": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/bavaria-auto-varna/branding.json",
+      "sha256": "c609e5499af4739f481ebb5608a0f12d2bbf12b1db204848f73e9d37ea6940bf"
+    }
+  },
+  "sources": [
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/bavaria-auto-varna/research-facts.json",
+      "sha256": "71abf2182075b3cdd16c2080145dc6e2f785f3036c1644f2929764f58b6b7abf"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/bavaria-auto-varna/identity.json",
+      "sha256": "44b8175eaaa117ea8c587f9e1011a5f4ed58269c9a1fdfb7330ff6108283e3a3"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/bavaria-auto-varna/locale.json",
+      "sha256": "8814aeace0ba4320c3440ddb2f6bab9dc9c98d02827a7b98e3ae6d694206e13b"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/bavaria-auto-varna/stock-research.json",
+      "sha256": "e73fa83de2be2fa058793503a180d03e517e5abba7aaed2c34355a4825674bb5"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/bavaria-auto-varna/branding.json",
+      "sha256": "c609e5499af4739f481ebb5608a0f12d2bbf12b1db204848f73e9d37ea6940bf"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/bavaria-auto-varna/branding/generated-master.png",
+      "sha256": "98f80088f2aae631d7382c01cd2e575e85fb78a08edeb69c47358360db13e1ed"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/bavaria-auto-varna/branding/on-accent.png",
+      "sha256": "c48c2c0ae96661f4716dd836a026f8dc93344c7367f25f62ed1028a05e0718eb"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/bavaria-auto-varna/branding/on-dark.png",
+      "sha256": "c48c2c0ae96661f4716dd836a026f8dc93344c7367f25f62ed1028a05e0718eb"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/bavaria-auto-varna/branding/on-light.png",
+      "sha256": "98f80088f2aae631d7382c01cd2e575e85fb78a08edeb69c47358360db13e1ed"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/bavaria-auto-varna/facts.json",
+      "sha256": "c19443b12a339872d31c7be8add33c8944a3800e5e92b962e4873c090c51b4fb"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/bavaria-auto-varna/generation-brief.json",
+      "sha256": "a56caffddf8a0f7e84ca1c346b854403bd11527efd8ca071a86985b37e3f428b"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/bavaria-auto-varna/media-input-mapping.json",
+      "sha256": "2ae5de55652d6ce30f1642f2bf34edadadc1e9c9beba2e77eaa5201cfd0d7c43"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/bavaria-auto-varna/media/11787839012622133-1.webp",
+      "sha256": "425b664ad1c51ecf08c0823745dce8bd276721828e9a2fa14f6a9d5519632392"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/bavaria-auto-varna/media/11787839012622133-2.webp",
+      "sha256": "9e59317d8ece9a49c92ec0086f7792e1c0a0c77330ca2541acdbb4209b20e463"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/bavaria-auto-varna/media/11789996935203115-1.webp",
+      "sha256": "3cc609c7561da319bfbe83f68ed7f50ff6dcb73bae621ffdc4b657837df0b5bf"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/bavaria-auto-varna/media/11789996935203115-2.webp",
+      "sha256": "478bf23e96fad6b4de0aea8bfd0b5af6bf19290f2a2504349bb97e496bd4f4dd"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/bavaria-auto-varna/reviewed-modern-inventory-copy.json",
+      "sha256": "013270bd5d3a46e0e70ee96e5e3b20f784454310bdb6f32b929a79fff742b9f9"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/bavaria-auto-varna/stock.json",
+      "sha256": "a1f60fde6274eba40f37e684ce47887c80bd36c6e9a2b73b1bf75a476e6d66d0"
+    }
+  ]
+}

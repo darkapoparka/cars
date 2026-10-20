@@ -1,0 +1,227 @@
+{
+  "strategy": "USE GENERATED CANDIDATE",
+  "identityStatus": "Improved demo/proposal identity based on qualified primary name and preserved source evidence; material redesign, not official or owner-approved.",
+  "publishedBranding": "Published КАЛО КАРС rough red script and small автосалон; prior accepted refinement provenance retained; fresh clean proposal removes caption and improves typography",
+  "sourceUrls": [
+    "https://kalokars.mobile.bg/"
+  ],
+  "sourceLimitations": "generated improved demo/proposal identity; not official or approved",
+  "originalReceiptPath": "L:/CODEX/cars/leads/branding/fleet-20261011/kalokars-varna/receipt.json",
+  "generatedPath": "C:/Users/radev/.codex/generated_images/01a12a34-d2d7-7571-930a-1ed37e54ff8e/exec-e5b33a97-9d48-4b02-a00d-f3be1bb0d912.png",
+  "imageGeneration": {
+    "tool": "image_gen.imagegen",
+    "reference": "exec-e5b33a97-9d48-4b02-a00d-f3be1bb0d912",
+    "transparent_background": true,
+    "prompt": "Create an improved clearly disclosed dealer demo proposal using reference1 for identity/color and reference2 ONLY for confident customized automotive lettering, never its text or emblem. Exact ONLY name \"КАЛО КАРС\". Create an individual two-part K-road emblem with a rounded outer turn, distinct from generic straight K; expressive square-round automotive forward-slant Cyrillic lettering. Colors charcoal and deep red. Strict ONE horizontal row, emblem LEFT beside full name on a single baseline. No subtitles, captions, slogans, text above/below, underline or car above. Individual distinctive emblem, not a generic letter pasted beside a generic font. Wide strong customized automotive lettering with restrained forward slant, angular ends, broad crisp strokes and genuinely open counters. Name prominent, emblem compact. Flat solid clean inks, no texture, residue, noise, gradient, shadows, white fill, badge or plate. RGBA transparent background and transparent gaps/counters with safe padding. Exact script/case/spaces/punctuation, readable at 120px total width.",
+    "referenced_image_paths": [
+      "L:/CODEX/cars/leads/branding/fleet-20261011/kalokars-varna/branding/logo-master.png",
+      "L:/CODEX/cars/leads/branding/fleet-20261011/style-revision/single-row/biemaauto-varna/branding/logo-master.png"
+    ],
+    "outputPath": "C:/Users/radev/.codex/generated_images/01a12a34-d2d7-7571-930a-1ed37e54ff8e/exec-e5b33a97-9d48-4b02-a00d-f3be1bb0d912.png",
+    "modelVersion": "not exposed by tool",
+    "referenceMetadata": [
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/kalokars-varna/branding/logo-master.png",
+        "sha256": "084dd3985314098aa7eee2b3105e236360cca42f10d8c0b8ca493e2c86c797a0",
+        "bytes": 158420,
+        "width": 1496,
+        "height": 333,
+        "format": "png",
+        "hasAlpha": true,
+        "role": "Prior dealer treatment or preceding candidate; identity/source history preserved separately."
+      },
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/style-revision/single-row/biemaauto-varna/branding/logo-master.png",
+        "sha256": "dc84d9283929362bd17d0b765c1ab219eb3c093ccb52e4d3c05ada2ddfcb37ce",
+        "bytes": 142920,
+        "width": 1496,
+        "height": 240,
+        "format": "png",
+        "hasAlpha": true,
+        "role": "Style direction only; no name or emblem borrowed."
+      }
+    ]
+  },
+  "variantDerivation": {
+    "onLight": "Existing raster exporter crops/scales the real ImageGen master preserving colored ink and alpha.",
+    "onDark": "Existing raster exporter derives white ink from same master alpha; not independently generated.",
+    "onAccent": "Existing raster exporter derives white ink from same master alpha; not independently generated."
+  },
+  "selectionStatus": "Preferred technically selected single-row candidate; owner style acceptance pending",
+  "ownerApproved": false,
+  "visualAccepted": true,
+  "surfaceReviewPath": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/kalokars-varna/surface-review.png",
+  "visualChecks": {
+    "spelling": "Exact qualified main name; no captions",
+    "surfaces": [
+      "#ffffff",
+      "#30343b",
+      "#17191c",
+      "#202023",
+      "#19171d",
+      "#171717",
+      "#b00020",
+      "#405ff2"
+    ],
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "result": "Compact one-row individualized mark beside expressive name; clear counters, no clipping, opaque background or residue observed. Owner style acceptance pending."
+  },
+  "schemaVersion": 1,
+  "dealer": "kalokars-varna",
+  "state": "asset-verified",
+  "generated": {
+    "path": "C:/Users/radev/.codex/generated_images/01a12a34-d2d7-7571-930a-1ed37e54ff8e/exec-e5b33a97-9d48-4b02-a00d-f3be1bb0d912.png",
+    "sha256": "7cf40f811de12308d4feea18036c3ac14914cfa9cb9126b5efd816737a2f8d2b",
+    "bytes": 380702,
+    "format": "png",
+    "width": 2171,
+    "height": 724,
+    "hasAlpha": true,
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparentRatio": 0.8250526147025965,
+      "opaqueRatio": 0.1546471443004344
+    },
+    "visibleBounds": {
+      "x": 39,
+      "y": 220,
+      "width": 2098,
+      "height": 281
+    }
+  },
+  "assets": {
+    "onLight": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/kalokars-varna/dealer-brand/logo-on-light.webp",
+      "sha256": "37dd44c87928545f5f8d0aef78cbd65d9a2e6c7054dc97f0586d4d5375b994ea",
+      "bytes": 44172,
+      "format": "webp",
+      "width": 1496,
+      "height": 261,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.6836032741205155,
+        "opaqueRatio": 0.2736057327842318
+      },
+      "visibleBounds": {
+        "x": 49,
+        "y": 36,
+        "width": 1399,
+        "height": 188
+      },
+      "publicPath": "/dealer-brand/logo-on-light.webp"
+    },
+    "onDark": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/kalokars-varna/dealer-brand/logo-on-dark.webp",
+      "sha256": "7d733e0a2382d8fc85ac02d982f6511b28747f1913e426f33bd14eb344151b90",
+      "bytes": 29838,
+      "format": "webp",
+      "width": 1496,
+      "height": 261,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.6836032741205155,
+        "opaqueRatio": 0.2736057327842318
+      },
+      "visibleBounds": {
+        "x": 49,
+        "y": 36,
+        "width": 1399,
+        "height": 188
+      },
+      "publicPath": "/dealer-brand/logo-on-dark.webp"
+    },
+    "onAccent": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/kalokars-varna/dealer-brand/logo-on-accent.webp",
+      "sha256": "7d733e0a2382d8fc85ac02d982f6511b28747f1913e426f33bd14eb344151b90",
+      "bytes": 29838,
+      "format": "webp",
+      "width": 1496,
+      "height": 261,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.6836032741205155,
+        "opaqueRatio": 0.2736057327842318
+      },
+      "visibleBounds": {
+        "x": 49,
+        "y": 36,
+        "width": 1399,
+        "height": 188
+      },
+      "publicPath": "/dealer-brand/logo-on-accent.webp"
+    }
+  },
+  "master": {
+    "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/kalokars-varna/branding/logo-master.png",
+    "sha256": "1eb7db7654b2b19d5dc4a0e0ce1ca4aff6f5e7dd83ff855f3223c25b9e94679c",
+    "bytes": 151341,
+    "format": "png",
+    "width": 1496,
+    "height": 261,
+    "hasAlpha": true,
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparentRatio": 0.6836032741205155,
+      "opaqueRatio": 0.2736057327842318
+    },
+    "visibleBounds": {
+      "x": 49,
+      "y": 36,
+      "width": 1399,
+      "height": 188
+    }
+  },
+  "technicalAcceptance": {
+    "spelling": "Exact qualified main name; no captions",
+    "surfaces": [
+      "#ffffff",
+      "#30343b",
+      "#17191c",
+      "#202023",
+      "#19171d",
+      "#171717",
+      "#b00020",
+      "#405ff2"
+    ],
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "result": "Compact one-row individualized mark beside expressive name; clear counters, no clipping, opaque background or residue observed. Owner style acceptance pending."
+  },
+  "integrationVerified": false,
+  "hostedVerified": false,
+  "exportTool": "docs/logo-refresh/2026-09-18/tools/build-approved-logo-pack.mjs",
+  "exportToolSha256": "7fab60c4000210eff6bbb91f9c35e869bad90834d3bdd09d282a9a51835f0dbc",
+  "exportIsolation": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/style-new-a-export",
+  "updatedAt": "2026-10-11T11:31:03.544Z",
+  "sourceEvidence": {
+    "originalReceipt": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/kalokars-varna/receipt.json",
+      "sha256": "f5614dab40f54c856c6b80aac90095fe355791901399bb34f69f2a48219c6be1"
+    },
+    "originalMaster": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/kalokars-varna/branding/logo-master.png",
+      "sha256": "084dd3985314098aa7eee2b3105e236360cca42f10d8c0b8ca493e2c86c797a0"
+    },
+    "publishedBranding": "Published КАЛО КАРС rough red script and small автосалон; prior accepted refinement provenance retained; fresh clean proposal removes caption and improves typography",
+    "sourceUrls": [
+      "https://kalokars.mobile.bg/"
+    ],
+    "sourceLimitation": "generated improved demo/proposal identity; not official or approved",
+    "sourceEvidenceDirectory": "L:/CODEX/cars/leads/branding/fleet-20261011/kalokars-varna/source"
+  }
+}

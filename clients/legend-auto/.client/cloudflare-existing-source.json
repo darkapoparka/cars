@@ -1,11 +1,18 @@
 {
   "schemaVersion": 1,
-  "kind": "personalized-source-candidate-not-an-approved-release",
   "dealer": "legend-auto",
-  "sourceCommit": "447bb8819725567887019e300ab136829181d2d0",
-  "sourceTree": "0aac7eb59de662dbc345df55670d387bf8cff45c",
-  "candidateSourceDigest": "e7cd36fb14ed3a23e00597122084849e1325eb5e1dfabf9ee8f4a65ed053ffcf",
-  "sourcePreparation": "Existing immutable six-design refresh with explicit source-bound resolution; original inputs, branding and stock retained",
+  "kind": "personalized-source-candidate-not-an-approved-release",
+  "sourceRevision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+  "candidateSourceDigest": "7aa5dab80fe0010eed1372a4936393725aa9d41f26c99c033d8d5c8688c3925f",
+  "qualificationContextPath": ".client/native-qualification-context.json",
+  "qualificationContextSha256": "c6ab8afe147bf2b42b64152e0efd9ce0e2d051f29e6e948ee3a1a1b4ce4e152c",
+  "qualificationLockPath": ".client/native-qualification-lock.json",
+  "qualificationLockSha256": "04633129df9e75d6cd62deeac9125b279957789d75f57cdb0b243ef61bfc3e7e",
+  "sourceDeltaReview": {
+    "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-delta-review.json",
+    "sha256": "43cb6876e815a2a6b866f1dadd304236de4ae58c05fe65c2ab62a23506ee7ce9",
+    "reviewedAt": "2026-10-14T23:55:37.398Z"
+  },
   "nativeApproval": false,
-  "hosted": false
+  "hostedApproval": false
 }

@@ -3,13 +3,36 @@ import { createElement } from "react";
 import { hugeiconsNavigation } from "../lib/icons/hugeicons-navigation";
 
 const navigationArtwork: Partial<
-  Record<keyof typeof hugeiconsNavigation, string>
+  Record<
+    keyof typeof hugeiconsNavigation,
+    { src: string; width: number; top: number }
+  >
 > = {
-  car: "/images/services/navigation-silver-car-v4.webp",
-  import: "/images/services/navigation-silver-import-v4.webp",
-  sell: "/images/services/navigation-silver-sell-v4.webp",
-  lease: "/images/services/navigation-silver-lease-v4.webp",
-  menu: "/images/services/navigation-silver-menu-v4.webp",
+  car: {
+    src: "/images/services/navigation-silver-car-v5.webp",
+    width: 34,
+    top: -3,
+  },
+  import: {
+    src: "/images/services/navigation-silver-import-v6.webp",
+    width: 27,
+    top: 0,
+  },
+  sell: {
+    src: "/images/services/navigation-silver-sell-v6.webp",
+    width: 26,
+    top: 1,
+  },
+  lease: {
+    src: "/images/services/navigation-silver-lease-v6.webp",
+    width: 26,
+    top: 1,
+  },
+  menu: {
+    src: "/images/services/navigation-silver-menu-v5.webp",
+    width: 32,
+    top: -2,
+  },
 };
 
 export function DealerBottomNavIcon({
@@ -24,16 +47,26 @@ export function DealerBottomNavIcon({
     return (
       <span
         aria-hidden="true"
-        className="block h-6 w-7.5 shrink-0"
+        className="relative block h-[26px] w-10 shrink-0"
         data-icon-family="generated-assets"
         data-nav-icon={name}
-        style={{
-          backgroundImage: `url(${withBasePath(artwork)})`,
-          backgroundSize: "contain",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-        }}
-      />
+      >
+        {active ? (
+          <span
+            className="absolute inset-0 rounded-full bg-zinc-100"
+            data-nav-selection="true"
+          />
+        ) : null}
+        <span
+          className="relative block size-full"
+          style={{
+            backgroundImage: `url(${withBasePath(artwork.src)})`,
+            backgroundSize: `${artwork.width}px auto`,
+            backgroundPosition: `center ${artwork.top}px`,
+            backgroundRepeat: "no-repeat",
+          }}
+        />
+      </span>
     );
   }
   return (

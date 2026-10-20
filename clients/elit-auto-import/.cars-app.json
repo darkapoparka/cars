@@ -3,32 +3,32 @@
   "dealer": "elit-auto-import",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "b66693e3a475ef563ab45f51e4297e7073830ec1",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "path": "templates/app",
-    "digest": "3344230cf8de012eb9c2daf1c962c4a3f189960b52f2026e1d049f2a6eae26ad",
-    "tree": "cd17d913dd597bf7dfb3e2244c2a3a2914ab3080"
+    "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1",
+    "tree": "7f3d3ffa40546635377e6c5225194fe06fead291"
   },
-  "appDigest": "0ff0650d92f6fc8bbb4d18e8301885c924a6b291f5dfb01ef59002ac91e396a2",
+  "appDigest": "aeb75f11d743b271d6d6c815ec4018609b0f1cb9e43cec7da07b336fbf1dbdaa",
   "provenance": {
     "schemaVersion": 1,
     "dealer": "elit-auto-import",
     "profile": "auto-best/src/lib/data/dealer-profile.json",
-    "profileSha256": "4b3a1e431b4b2b35126ae1ff7afa6cb45d93adc6569ea1968d35742d23fc7c6d",
+    "profileSha256": "d3e5e338119d3ff6731be0c6494e2516070a7895264d187d66ad4252b0181cf2",
     "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
     "vehicles": 15,
     "currency": "EUR",
     "observedAt": "2026-09-07",
     "assets": [
       {
-        "source": "auto-best/static/dealer-brand/logo-on-light.webp",
-        "output": "public/dealer-app/logo-light-90d3eb315513dab86943.webp",
-        "sha256": "90d3eb315513dab8694368a50c0361475e00711552b442c0182eae9305298896",
+        "source": "auto-best/static/dealer-brand/v2-8f7a5757c9331423/logo-on-light.webp",
+        "output": "public/dealer-app/logo-light-3fc65a8f561c8e09ce79.webp",
+        "sha256": "3fc65a8f561c8e09ce790230b436f895dd63b2e71078738d4c566d6391d4ea24",
         "role": "logo-light"
       },
       {
-        "source": "auto-best/static/dealer-brand/logo-on-dark.webp",
-        "output": "public/dealer-app/logo-dark-88b599aa9a8f3bf42a44.webp",
-        "sha256": "88b599aa9a8f3bf42a448be712b00505aa3c28bc5be4d7a74593a5cbd7e32a81",
+        "source": "auto-best/static/dealer-brand/v2-8f7a5757c9331423/logo-on-dark.webp",
+        "output": "public/dealer-app/logo-dark-300de50294973483fddc.webp",
+        "sha256": "300de50294973483fddca71893334ea0a60e3bc0f38be73fd4361d6e0e537d00",
         "role": "logo-dark"
       },
       {
@@ -481,13 +481,101 @@
         "sha256": "dcd4ed965a5dfe48e8cec2a4246f38e5e0514af427de7038195612d028b412d9",
         "role": "vehicle"
       }
+    ],
+    "mileageFacts": [
+      {
+        "slug": "mercedes-benz-gl-450-2010-21717056982373192",
+        "sourceValue": 184000,
+        "sourceUnit": "km",
+        "canonicalKm": 184000
+      },
+      {
+        "slug": "volvo-s60-2013-11700571967441521",
+        "sourceValue": 129000,
+        "sourceUnit": "km",
+        "canonicalKm": 129000
+      },
+      {
+        "slug": "toyota-prius-hybrid-2016-11529502627430878",
+        "sourceValue": 60950,
+        "sourceUnit": "km",
+        "canonicalKm": 60950
+      },
+      {
+        "slug": "subaru-xv-2-5-sport-4x4-2021-11694454110383951",
+        "sourceValue": 200,
+        "sourceUnit": "km",
+        "canonicalKm": 200
+      },
+      {
+        "slug": "subaru-xv-2-0-limited-4x4-2017-11694504370077664",
+        "sourceValue": 55000,
+        "sourceUnit": "km",
+        "canonicalKm": 55000
+      },
+      {
+        "slug": "subaru-xv-2-0-premium-4x4-2017-11752520414621839",
+        "sourceValue": 78400,
+        "sourceUnit": "km",
+        "canonicalKm": 78400
+      },
+      {
+        "slug": "subaru-xv-2-0-4-4-2017-11671399519745199",
+        "sourceValue": 36000,
+        "sourceUnit": "km",
+        "canonicalKm": 36000
+      },
+      {
+        "slug": "subaru-xv-2-0-limited-sti-2015-11752522269460399",
+        "sourceValue": 110000,
+        "sourceUnit": "km",
+        "canonicalKm": 110000
+      },
+      {
+        "slug": "subaru-outback-3-6r-limited-4-4-2017-11690723101506266",
+        "sourceValue": 19000,
+        "sourceUnit": "km",
+        "canonicalKm": 19000
+      },
+      {
+        "slug": "subaru-outback-3-6-touring-4x4-2017-11708792902908882",
+        "sourceValue": 82000,
+        "sourceUnit": "km",
+        "canonicalKm": 82000
+      },
+      {
+        "slug": "subaru-outback-3-6-limited-4x4-2017-11706466498517805",
+        "sourceValue": 48000,
+        "sourceUnit": "km",
+        "canonicalKm": 48000
+      },
+      {
+        "slug": "subaru-legacy-2-5-limited-4x4-2015-11693118990022696",
+        "sourceValue": 94000,
+        "sourceUnit": "km",
+        "canonicalKm": 94000
+      },
+      {
+        "slug": "subaru-legacy-2-5-4-4-2014-11655794958039551",
+        "sourceValue": 137000,
+        "sourceUnit": "km",
+        "canonicalKm": 137000
+      },
+      {
+        "slug": "mazda-6-2-5-skyactiv-2015-11722966256335346",
+        "sourceValue": 100789,
+        "sourceUnit": "km",
+        "canonicalKm": 100789
+      },
+      {
+        "slug": "hyundai-santa-fe-2013-21691652621240351",
+        "sourceValue": 58000,
+        "sourceUnit": "km",
+        "canonicalKm": 58000
+      }
     ]
   },
-  "baseDeployment": {
-    "id": "dpl_HmqSLeFo8AdyQRpCLGAnTna5VYU4",
-    "url": "https://cars-elitautoimport.vercel.app/",
-    "checkedAt": "2026-09-28T02:25:40.767Z"
-  },
-  "baseReceiptSha256": "19e5c7fb30953c65c30f59347921b84dd79e3ecc9d559be4b26e35c7e3b63846",
-  "refreshedAt": "2026-09-30T11:18:38.085Z"
+  "needsDealerQA": true,
+  "readyToPublish": false,
+  "refreshedAt": "2026-10-15T02:36:28.275Z"
 }

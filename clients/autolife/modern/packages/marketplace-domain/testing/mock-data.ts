@@ -93,7 +93,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Аутолайф",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
+      "logoUrl": "/dealer-brand/v2-b461deb6698b93fc/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": true
@@ -189,7 +189,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Аутолайф",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
+      "logoUrl": "/dealer-brand/v2-b461deb6698b93fc/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": true
@@ -285,7 +285,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Аутолайф",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
+      "logoUrl": "/dealer-brand/v2-b461deb6698b93fc/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": true
@@ -381,7 +381,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Аутолайф",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
+      "logoUrl": "/dealer-brand/v2-b461deb6698b93fc/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
@@ -477,7 +477,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Аутолайф",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
+      "logoUrl": "/dealer-brand/v2-b461deb6698b93fc/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
@@ -573,7 +573,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Аутолайф",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
+      "logoUrl": "/dealer-brand/v2-b461deb6698b93fc/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
@@ -669,7 +669,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Аутолайф",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
+      "logoUrl": "/dealer-brand/v2-b461deb6698b93fc/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
@@ -765,7 +765,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Аутолайф",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
+      "logoUrl": "/dealer-brand/v2-b461deb6698b93fc/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
@@ -861,7 +861,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Аутолайф",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
+      "logoUrl": "/dealer-brand/v2-b461deb6698b93fc/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
@@ -957,7 +957,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Аутолайф",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
+      "logoUrl": "/dealer-brand/v2-b461deb6698b93fc/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
@@ -1053,7 +1053,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Аутолайф",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
+      "logoUrl": "/dealer-brand/v2-b461deb6698b93fc/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
@@ -1149,7 +1149,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Аутолайф",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
+      "logoUrl": "/dealer-brand/v2-b461deb6698b93fc/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
@@ -1245,7 +1245,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Аутолайф",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
+      "logoUrl": "/dealer-brand/v2-b461deb6698b93fc/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
@@ -1341,7 +1341,199 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Аутолайф",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
+      "logoUrl": "/dealer-brand/v2-b461deb6698b93fc/logo-on-light.webp"
+    },
+    "publishedAt": "2026-09-07T09:00:00.000Z",
+    "promoted": false
+  },
+  {
+    "id": "dealer-8c150301813e38fc006a49ee",
+    "slug": "vw-passat-2-0tdi-140-2012-11787391986129616",
+    "category": "car",
+    "dealerOrgId": "dealer-autolife",
+    "status": "active",
+    "title": "VW Passat 2.0TDI-140",
+    "description": "VW Passat 2.0TDI-140, 2012 г., 237 000 км. Публикувана обява на Аутолайф. Потвърдете наличността, оборудването и цената по телефона.",
+    "price": {
+      "amount": 6300,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/assets/autolife/vehicle-15-1.webp",
+        "alt": "VW Passat 2.0TDI-140"
+      },
+      {
+        "url": "/assets/autolife/vehicle-15-2.webp",
+        "alt": "VW Passat 2.0TDI-140"
+      },
+      {
+        "url": "/assets/autolife/vehicle-15-3.webp",
+        "alt": "VW Passat 2.0TDI-140"
+      },
+      {
+        "url": "/assets/autolife/vehicle-15-4.webp",
+        "alt": "VW Passat 2.0TDI-140"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Варна",
+      "region": "Варна",
+      "country": "България"
+    },
+    "features": [
+      {
+        "bg": "4(5) Врати",
+        "en": "4(5) Врати"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "USB",
+        "en": "USB"
+      },
+      {
+        "bg": "audio\\video",
+        "en": "audio\\video"
+      },
+      {
+        "bg": "IN\\AUX изводи",
+        "en": "IN\\AUX изводи"
+      },
+      {
+        "bg": "Адаптивни предни светлини",
+        "en": "Адаптивни предни светлини"
+      },
+      {
+        "bg": "Аларма",
+        "en": "Аларма"
+      },
+      {
+        "bg": "Антиблокираща система",
+        "en": "Антиблокираща система"
+      }
+    ],
+    "spec": {
+      "make": "VW",
+      "model": "Passat 2.0TDI-140",
+      "year": 2012,
+      "bodyType": "wagon",
+      "fuelType": "diesel",
+      "transmission": "manual",
+      "mileageValue": 237000,
+      "mileageUnit": "km",
+      "enginePowerHp": 140,
+      "colorExterior": "Светло сив"
+    },
+    "seller": {
+      "id": "dealer-autolife",
+      "type": "dealer",
+      "displayName": "Аутолайф",
+      "verificationStatus": "unverified",
+      "city": "Варна",
+      "logoUrl": "/dealer-brand/v2-b461deb6698b93fc/logo-on-light.webp"
+    },
+    "publishedAt": "2026-09-07T09:00:00.000Z",
+    "promoted": false
+  },
+  {
+    "id": "dealer-a856ebfe54a57e9874942e5d",
+    "slug": "vw-polo-1-6-2020-11779369221509132",
+    "category": "car",
+    "dealerOrgId": "dealer-autolife",
+    "status": "active",
+    "title": "VW Polo 1.6",
+    "description": "VW Polo 1.6 TDI HIGHLINE DSG NAVI CAR PLAY ANDROID AUTO, 2020 г., 140 000 км. Публикувана обява на Аутолайф. Потвърдете наличността, оборудването и цената по телефона.",
+    "price": {
+      "amount": 9999,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/assets/autolife/vehicle-16-1.webp",
+        "alt": "VW Polo 1.6"
+      },
+      {
+        "url": "/assets/autolife/vehicle-16-2.webp",
+        "alt": "VW Polo 1.6"
+      },
+      {
+        "url": "/assets/autolife/vehicle-16-3.webp",
+        "alt": "VW Polo 1.6"
+      },
+      {
+        "url": "/assets/autolife/vehicle-16-4.webp",
+        "alt": "VW Polo 1.6"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Варна",
+      "region": "Варна",
+      "country": "България"
+    },
+    "features": [
+      {
+        "bg": "4(5) Врати",
+        "en": "4(5) Врати"
+      },
+      {
+        "bg": "Auto Start Stop function",
+        "en": "Auto Start Stop function"
+      },
+      {
+        "bg": "Apple CarPlay \\ Android Auto",
+        "en": "Apple CarPlay \\ Android Auto"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "DVD",
+        "en": "DVD"
+      },
+      {
+        "bg": "TV",
+        "en": "TV"
+      },
+      {
+        "bg": "GPS система за проследяване",
+        "en": "GPS система за проследяване"
+      },
+      {
+        "bg": "LED фарове",
+        "en": "LED фарове"
+      }
+    ],
+    "spec": {
+      "make": "VW",
+      "model": "Polo 1.6",
+      "year": 2020,
+      "bodyType": "hatchback",
+      "fuelType": "diesel",
+      "transmission": "automatic",
+      "mileageValue": 140000,
+      "mileageUnit": "km",
+      "enginePowerHp": 95,
+      "colorExterior": "Черен"
+    },
+    "seller": {
+      "id": "dealer-autolife",
+      "type": "dealer",
+      "displayName": "Аутолайф",
+      "verificationStatus": "unverified",
+      "city": "Варна",
+      "logoUrl": "/dealer-brand/v2-b461deb6698b93fc/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false

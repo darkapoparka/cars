@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "dealer": "fusion-auto-varna",
+  "copy": {
+    "fusion-auto-varna-11790662447767037": {
+      "sourceDescription": "Audi A7 Bi-TDI S-Line от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+      "en": {
+        "description": "Audi A7 Bi-TDI S-Line from a dated public advert. Confirm condition, price and availability directly with the dealership.",
+        "imageAlts": [
+          "Audi A7 Bi-TDI S-Line — dated public advert photo 1",
+          "Audi A7 Bi-TDI S-Line — dated public advert photo 2"
+        ]
+      },
+      "bg": {
+        "description": "Audi A7 Bi-TDI S-Line от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+        "imageAlts": [
+          "Audi A7 Bi-TDI S-Line — снимка от датирана публична обява 1",
+          "Audi A7 Bi-TDI S-Line — снимка от датирана публична обява 2"
+        ]
+      }
+    },
+    "fusion-auto-varna-21780841001174707": {
+      "sourceDescription": "Mercedes-Benz G 500 LPG от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+      "en": {
+        "description": "Mercedes-Benz G 500 LPG from a dated public advert. Confirm condition, price and availability directly with the dealership.",
+        "imageAlts": [
+          "Mercedes-Benz G 500 LPG — dated public advert photo 1",
+          "Mercedes-Benz G 500 LPG — dated public advert photo 2"
+        ]
+      },
+      "bg": {
+        "description": "Mercedes-Benz G 500 LPG от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+        "imageAlts": [
+          "Mercedes-Benz G 500 LPG — снимка от датирана публична обява 1",
+          "Mercedes-Benz G 500 LPG — снимка от датирана публична обява 2"
+        ]
+      }
+    }
+  },
+  "consumer": "facts.business.modernInventoryCopy",
+  "donorCopyRetained": false
+}

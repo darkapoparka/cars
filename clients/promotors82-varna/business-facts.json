@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "slug": "promotors82-varna",
+  "dealerId": "promotors82-varna",
+  "business": {
+    "schemaVersion": 1,
+    "slug": "promotors82-varna",
+    "name": "PRO MOTORS",
+    "shortName": "PRO MOTORS",
+    "city": "Варна",
+    "country": "BG",
+    "countryCode": "BG",
+    "locale": "bg-BG",
+    "currency": "EUR",
+    "distanceUnit": "km",
+    "phone": "0899519164",
+    "phoneDisplay": "0899519164",
+    "phoneE164": "+359899519164",
+    "phones": [
+      "0899519164"
+    ],
+    "addressLine": "бул. Христо Смирненски",
+    "address": "бул. Христо Смирненски, Варна, България",
+    "hours": "Потвърдете работното време директно с автокъщата.",
+    "email": "",
+    "sourceUrl": "https://promotors82.mobile.bg/",
+    "stockUrl": "https://promotors82.mobile.bg/",
+    "contactSourceUrl": "https://promotors82.mobile.bg/contacts",
+    "observedAt": "2026-10-11T11:46:40.804Z",
+    "inventoryNotice": "Датирана извадка от публични обяви, не складова система в реално време. Потвърдете цената, ДДС и наличността.",
+    "previewNotice": "Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация.",
+    "services": [],
+    "socialLinks": {},
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sourceFacts": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/promotors82-varna/source/business-facts.json",
+    "sha256": "6c60ab74b2d9ce81da8faccbeec809dca3096ed374239ceccd02b8cc10515022"
+  },
+  "originalBusinessLiteralsUnchanged": true
+}

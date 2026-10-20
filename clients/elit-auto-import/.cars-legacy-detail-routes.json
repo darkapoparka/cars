@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "dealer": "elit-auto-import",
+  "family": "import",
+  "base": "/variant-3",
+  "defaultLocale": "bg",
+  "source": {
+    "inventory": {
+      "path": "carwow/src/lib/data/daynight-current-inventory.ts",
+      "sha256": "217ae61b0381752342d3c42ba9297df58d54ab09292779354acf9ed176119ebf"
+    },
+    "vehicles": {
+      "path": "carwow/src/lib/data/daynight-vehicles.ts",
+      "sha256": "58507cc762f0d0763f6d521a86d8474729fd6cf112b7dd072170f350a2c11d84"
+    },
+    "routeFactorySha256": "094d5128ad5e689e41486a228b1de6d11c54efbe051ce0e75c0170709d8571c9"
+  },
+  "profileSha256": "45517c74048c1ed3e98da9677a2e17424c150865846ad0d2e17c90642d1417ea",
+  "entries": [
+    {
+      "sourceId": "21717056982373192",
+      "slug": "mercedes-benz-gl-373192",
+      "targetId": "21717056982373192"
+    },
+    {
+      "sourceId": "11700571967441521",
+      "slug": "volvo-s60-441521",
+      "targetId": "11700571967441521"
+    },
+    {
+      "sourceId": "11529502627430878",
+      "slug": "toyota-prius-hybrid-430878",
+      "targetId": "11529502627430878"
+    },
+    {
+      "sourceId": "11694454110383951",
+      "slug": "subaru-xv-2-5-383951",
+      "targetId": "11694454110383951"
+    },
+    {
+      "sourceId": "11694504370077664",
+      "slug": "subaru-xv-2-0-077664",
+      "targetId": "11694504370077664"
+    },
+    {
+      "sourceId": "11752520414621839",
+      "slug": "subaru-xv-2-0-621839",
+      "targetId": "11752520414621839"
+    },
+    {
+      "sourceId": "11671399519745199",
+      "slug": "subaru-xv-2-0-745199",
+      "targetId": "11671399519745199"
+    },
+    {
+      "sourceId": "11752522269460399",
+      "slug": "subaru-xv-2-0-460399",
+      "targetId": "11752522269460399"
+    },
+    {
+      "sourceId": "11690723101506266",
+      "slug": "subaru-outback-3-6r-506266",
+      "targetId": "11690723101506266"
+    },
+    {
+      "sourceId": "11708792902908882",
+      "slug": "subaru-outback-3-6-908882",
+      "targetId": "11708792902908882"
+    },
+    {
+      "sourceId": "11706466498517805",
+      "slug": "subaru-outback-3-6-517805",
+      "targetId": "11706466498517805"
+    },
+    {
+      "sourceId": "11693118990022696",
+      "slug": "subaru-legacy-2-5-022696",
+      "targetId": "11693118990022696"
+    },
+    {
+      "sourceId": "11655794958039551",
+      "slug": "subaru-legacy-2-5-039551",
+      "targetId": "11655794958039551"
+    },
+    {
+      "sourceId": "11722966256335346",
+      "slug": "mazda-6-2-5-335346",
+      "targetId": "11722966256335346"
+    },
+    {
+      "sourceId": "21691652621240351",
+      "slug": "hyundai-santa-fe-240351",
+      "targetId": "21691652621240351"
+    }
+  ],
+  "retired": []
+}

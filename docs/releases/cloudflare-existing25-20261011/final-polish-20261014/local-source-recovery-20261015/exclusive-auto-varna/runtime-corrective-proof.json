@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-explicit-local-combined-known-runtime-corrective-reseal-proof",
+  "checkedAt": "2026-10-15T11:07:41.608Z",
+  "dealer": "exclusive-auto-varna",
+  "sourceRevision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+  "originalLocalRecovery": {
+    "file": "C:/Users/radev/AppData/Local/Temp/cars-cf-native-final-polish-20261014/local-source-recovery/exports/exclusive-auto-varna/local-recovery-receipt.json",
+    "sha256": "e7c0d05283216d91fbf3e7b90c6528169eb8a46bdcaa038c66dccd69f06ca3b4"
+  },
+  "originalPreparedTree": "f3192891c1a845003da851cd6625370a8615e4df",
+  "preparedTree": "ebecb63c52bf4e3c4cfc5ad16a11d7c888181edd",
+  "originalFailedKnownRuntimeProofs": [
+    {
+      "file": "C:/Users/radev/AppData/Local/Temp/cars-cf-native-final-polish-20261014/local-source-recovery/exports/exclusive-auto-varna/pre-native-known-runtime-family-check.json",
+      "sha256": "03e0211f00cefcd8e4e7f4a3fd0dc0b6b049fb13ccae7d5ff35a6d2fd9383646"
+    },
+    {
+      "file": "C:/Users/radev/AppData/Local/Temp/cars-cf-native-final-polish-20261014/local-source-recovery/exports/exclusive-auto-varna/known-runtime-family-check.json",
+      "sha256": "ba0a1535407ac52f2968b3a83619e77bd444ed6d03b42dbbf8a457a604f04ca7"
+    },
+    {
+      "file": "C:/Users/radev/AppData/Local/Temp/cars-cf-native-final-polish-20261014/local-source-recovery/exports/exclusive-auto-varna/mobile-header-binding-check.json",
+      "sha256": "812a71ebca921d76fa180fa34a18bd6d9e2c8733de21d8025df572112fb642f7"
+    }
+  ],
+  "editorialProof": {
+    "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/final-recovery/local-source-publication/corrective-reseal/exclusive-auto-varna/editorial-correction-proof.json",
+    "sha256": "a74be5f01ef7f8b669b236aa97c37f1d93e3ac02fa11003791819cdedbde3758"
+  },
+  "logoProof": {
+    "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/native13-modern-runtime/local-four-logo-companions/exclusive-auto-varna/logo-companion-proof.json",
+    "sha256": "8b502f2c354e31f4afa90c1d739a8130b84f18f50e9f5b808e3ace235544ac7e"
+  },
+  "maintainedRecipe": {
+    "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-vercel-resume-20261015/wave-transport/prepare-editorial-source-reseals.mjs",
+    "sha256": "805d46d7357d66d91df4dc7ba73ad7ea1df5b787d05f2a56130574c1bc6d997d"
+  },
+  "maintainedChecks": {
+    "nativeQualification": true,
+    "app": true,
+    "extended": true,
+    "branding": true,
+    "sourcePatch": true
+  },
+  "sourcePathsChanged": [
+    ".cars-branding.json",
+    ".cars-mobile.json",
+    ".cars-signature.json",
+    ".client/cloudflare-existing-source.json",
+    ".client/native-qualification-context.json",
+    "import/src/lib/content/extra-localized.ts",
+    "karento-best/src/lib/content.ts",
+    "karento-best/src/lib/data/dealer-detail.ts",
+    "karento-best/src/lib/data/vehicle-detail.ts",
+    "localization/adoption.json",
+    "mobile/src/lib/dealers.ts",
+    "mobile/src/lib/showroom-config.ts",
+    "modern/packages/marketplace/lead-site.ts"
+  ],
+  "allOtherSourceEntriesAndBytesUnchanged": true,
+  "authoritativeFactsUnchanged": true,
+  "stockUnchanged": true,
+  "allRasterAssetBytesUnchanged": true,
+  "sixMasterLocatorsUnchanged": true,
+  "mobileHeaderAndModernLayoutUnchanged": true,
+  "originalPreparationAndFailedCiEvidenceUnchanged": true,
+  "originalLocalIoAdaptation": {
+    "loader": {
+      "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/final-recovery/failed-only-successor/restart-final-five/held-four-after-north-success/local-deduplicated-readonly-git-io-loader.mjs",
+      "sha256": "013eb946e31f6b1614ea5466c1d136646a162dfa26cd31c33d0db96386f8772d"
+    },
+    "originalModule": {
+      "path": "scripts/dealer-updates/pinned-template-source.mjs",
+      "blob": "f7c17ad9edf2ff6ab7667b1d9187fccc963239de",
+      "sha256": "ddebc01d008bf47407ee27756e78d15ddd4932f4361ac1706192fb7c148f04c3"
+    },
+    "adaptedModuleSha256": "1b5b5ecf036b8fa76a1cb28e203e7f03713fd98f56e039acea6f101b70496dff",
+    "before": "      files.set(entry.path, Buffer.from(bytes.subarray(start, end)));",
+    "after": "      const retained = globalThis.carsOrdinaryRamBlobCache?.get(objectId);\n      const body = bytes.subarray(start, end);\n      if (!Buffer.isBuffer(retained) || retained.length !== size || !retained.equals(body) || sha256(retained) !== sha256(body)) throw new Error(`Exact local immutable Git buffer differs: ${entry.path}`);\n      files.set(entry.path, retained);",
+    "onlyLocalGitIoAllocationChanged": true,
+    "initialAllOidBytesVerified": true,
+    "allGitEntryTypeSizeOidBatchAndTruncationChecksUnchanged": true,
+    "allSourceDigestChecksUnchanged": true,
+    "globalBufferUnmodified": true,
+    "originalSourceOidAuditBeforeExport": true
+  },
+  "originalInputOidAudit": {
+    "passed": true,
+    "objects": 14487
+  },
+  "nativeInputBefore": {
+    "digest": "0445551867020d7305c7784aefe3e0157d23ad810382ea0811b57365829f760b",
+    "files": 9184
+  },
+  "nativeInput": {
+    "digest": "23b17c1ec373e12f25b18abef67621198ce6700b12e8aa0e8dd56f06b00528e4",
+    "files": 9184
+  },
+  "contextBeforeSha256": "71a9fee4ad6197bc5c0fd57da49776658f4dadd0f0e9ad9dae9e9f92c955154c",
+  "contextSha256": "3a5f94c03b17a16b29e1547ca3163de655dcdd8cfe402a9c71f3062c933d38b2",
+  "sourcePatchSha256": "9d5dbeb60d61dc3c8231c14c3f568b399b48041f14da52281cc48f7c3feae2a0",
+  "candidateSourceDigest": "0bba6612da5268465cb984a97769a9f7bddab76e1df010c5abf383e71a0fa526",
+  "decodedUniqueRetainedBytes": 1688876033,
+  "gitObjectsRead": 12643,
+  "maximumDecodedBytes": 2147483648,
+  "fullOriginalMasterHydrations": 0,
+  "sourceCopies": 0,
+  "rasterCopies": 0,
+  "networkReads": 0,
+  "canonicalWorkspaceSourceWrites": 0,
+  "refWrites": 0,
+  "providerWrites": 0,
+  "builds": 0,
+  "firstAndSecondPreparationFinalizationsReexecuted": false,
+  "originalFactualRefreshSnapshotRetainedAsHistory": true,
+  "actualKnownFamilyPassStillRequired": true,
+  "ciExecution": false,
+  "sourceArtifact": null
+}

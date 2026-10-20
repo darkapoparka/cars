@@ -48,7 +48,7 @@ export const ListingDetailContent = ({
   const copy = getListingDetailCopy(locale);
   const desktopDescription = publicSite.identity.desktopPreview
     ? listing.description.replaceAll(
-        "Day & Night",
+        "LEGEND AUTO",
         publicSite.identity.desktopPreview.shortName
       )
     : listing.description;

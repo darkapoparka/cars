@@ -1,0 +1,20 @@
+{
+  "modelTabSelected": true,
+  "modelEscapeFocus": "Model: X3",
+  "initialSortChecked": true,
+  "sortEscape": {
+    "closed": true,
+    "focusRestored": true
+  },
+  "sortUrl": "http://127.0.0.1:6790/en/inventory?brand=BMW&q=X3&maxPrice=50000&view=4&lang=en&sort=lowest-price",
+  "sortSelection": "Lowest Price",
+  "choiceHiddenAfterSubmit": true,
+  "selectedSortChecked": true,
+  "onlyViewOpen": {
+    "sort": false,
+    "view": true
+  },
+  "viewEscapeFocus": true,
+  "outsideDismissed": true,
+  "consoleWarningsErrors": []
+}

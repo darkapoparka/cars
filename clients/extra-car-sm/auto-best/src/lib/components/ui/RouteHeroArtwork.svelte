@@ -1,37 +1,17 @@
 <script lang="ts">
-  let { variant = 'cars', theme = 'light' }: { variant?: 'cars' | 'keys' | 'guide' | 'about' | 'contact' | 'sell'; theme?: 'light' | 'red' | 'charcoal' | 'yellow' } = $props();
-  const images = {
-    cars: '/dealer/media-pending.svg',
-    keys: '/dealer/media-pending.svg',
-    guide: '/dealer/media-pending.svg',
-    silver: '/dealer/media-pending.svg',
-    graphite: '/dealer/media-pending.svg',
-    portrait: '/dealer/media-pending.svg',
-    phone: '/dealer/media-pending.svg',
-    showroom: '/dealer/media-pending.svg',
-    email: '/dealer/media-pending.svg'
-  };
-  const pairs = {
-    cars: ['silver', 'graphite'],
-    keys: ['cars', 'keys'],
-    guide: ['guide', 'keys'],
-    about: ['showroom', 'portrait'],
-    contact: ['phone', 'email'],
-    sell: ['portrait', 'keys']
-  } as const;
-  const coloredImages: Partial<Record<keyof typeof images, string>> = {
-    silver: '/dealer/media-pending.svg',
-    graphite: '/dealer/media-pending.svg',
-    showroom: '/dealer/media-pending.svg',
-    portrait: '/dealer/media-pending.svg',
-    guide: '/dealer/media-pending.svg',
-    keys: '/dealer/media-pending.svg',
-    phone: '/dealer/media-pending.svg',
-    email: '/dealer/media-pending.svg'
-  };
+  import { leadSite, type LeadRouteHeroAsset, type LeadRouteHeroVariant } from '$config/lead-site';
+
+  let { variant = 'cars', theme = 'light' }: {
+    variant?: LeadRouteHeroVariant;
+    theme?: 'light' | 'red' | 'charcoal' | 'yellow';
+  } = $props();
+  const routeArtwork = leadSite.artwork.routeHero;
+  const coloredArtwork: Partial<Record<LeadRouteHeroAsset, string>> = routeArtwork.colored;
 </script>
 
-{#each pairs[variant] as asset, index (asset)}
+{#each routeArtwork.pairs[variant] as asset, index (asset)}
+  <picture>
+  <source media="(min-width: 992px)" srcset={theme === 'light' ? routeArtwork.standard[asset] : coloredArtwork[asset] ?? routeArtwork.standard[asset]} />
   <img
     class="dn-route-hero__artwork"
     class:dn-route-hero__artwork--left={index === 0}
@@ -39,15 +19,17 @@
     class:dn-route-hero__artwork--portrait={asset === 'portrait' || asset === 'phone'}
     class:dn-route-hero__artwork--phone={asset === 'phone'}
     class:dn-route-hero__artwork--colored={theme !== 'light'}
-    src={theme === 'light' ? images[asset] : coloredImages[asset] ?? images[asset]}
+    src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
     alt=""
     width="900"
     height={asset === 'portrait' || asset === 'phone' ? 1350 : 600}
     decoding="async"
   />
+  </picture>
 {/each}
 
 <style>
+  picture { display: contents; }
   .dn-route-hero__artwork { display: none; }
   @media (min-width: 992px) {
     .dn-route-hero__artwork {

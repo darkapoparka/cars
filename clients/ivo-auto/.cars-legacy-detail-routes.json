@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "dealer": "ivo-auto",
+  "family": "import",
+  "base": "/variant-3",
+  "defaultLocale": "bg",
+  "source": {
+    "inventory": {
+      "path": "carwow/src/lib/data/daynight-current-inventory.ts",
+      "sha256": "42b5925c9b1bf4883c223152345f7f3a164a515c22db036b660dbbba7ebd9de3"
+    },
+    "vehicles": {
+      "path": "carwow/src/lib/data/daynight-vehicles.ts",
+      "sha256": "58507cc762f0d0763f6d521a86d8474729fd6cf112b7dd072170f350a2c11d84"
+    },
+    "routeFactorySha256": "094d5128ad5e689e41486a228b1de6d11c54efbe051ce0e75c0170709d8571c9"
+  },
+  "profileSha256": "43be61aa600b1629c73d309cef51295949d21259a2c9fc11cb9383463f0db7a5",
+  "entries": [
+    {
+      "sourceId": "11786049135297264",
+      "slug": "rolls-royce-ghost-297264",
+      "targetId": "11786049135297264"
+    },
+    {
+      "sourceId": "11784822971964926",
+      "slug": "audi-a4-964926",
+      "targetId": "11784822971964926"
+    },
+    {
+      "sourceId": "11775231551222536",
+      "slug": "porsche-panamera-turbo-222536",
+      "targetId": "11775231551222536"
+    },
+    {
+      "sourceId": "21784804233950248",
+      "slug": "dodge-durango-3-6-950248",
+      "targetId": "21784804233950248"
+    },
+    {
+      "sourceId": "11784710943679925",
+      "slug": "bmw-520-679925",
+      "targetId": "11784710943679925"
+    },
+    {
+      "sourceId": "11780924566736048",
+      "slug": "vw-touran-1-6tdi-736048",
+      "targetId": "11780924566736048"
+    },
+    {
+      "sourceId": "11778070752693531",
+      "slug": "vw-cc-2-0i-693531",
+      "targetId": "11778070752693531"
+    },
+    {
+      "sourceId": "21779453321117197",
+      "slug": "bmw-x5-117197",
+      "targetId": "21779453321117197"
+    },
+    {
+      "sourceId": "21779444147151936",
+      "slug": "bmw-x5-151936",
+      "targetId": "21779444147151936"
+    },
+    {
+      "sourceId": "11780659371731573",
+      "slug": "bmw-418-731573",
+      "targetId": "11780659371731573"
+    },
+    {
+      "sourceId": "21781871293573646",
+      "slug": "subaru-b9-tribeca-573646",
+      "targetId": "21781871293573646"
+    },
+    {
+      "sourceId": "21762959348847465",
+      "slug": "mercedes-benz-ml-847465",
+      "targetId": "21762959348847465"
+    },
+    {
+      "sourceId": "11774893593485843",
+      "slug": "mercedes-benz-s-500-485843",
+      "targetId": "11774893593485843"
+    },
+    {
+      "sourceId": "11756369185395904",
+      "slug": "bmw-730-395904",
+      "targetId": "11756369185395904"
+    },
+    {
+      "sourceId": "11775822194120541",
+      "slug": "bmw-m5-120541",
+      "targetId": "11775822194120541"
+    },
+    {
+      "sourceId": "11769186790854071",
+      "slug": "audi-a8-854071",
+      "targetId": "11769186790854071"
+    }
+  ],
+  "retired": []
+}

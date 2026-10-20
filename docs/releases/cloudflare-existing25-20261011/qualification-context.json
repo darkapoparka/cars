@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-native-source-qualification-context",
+  "id": "fleet-priselci-final-six-pilot-20261011",
+  "dealer": "priselci",
+  "scope": "existing-dealer-pilot",
+  "sourceCommit": "32ac4ebcbafff38df6306e9919ce6113b2d10503",
+  "draft": false,
+  "publishable": true,
+  "reviewed": true,
+  "reviewedAt": "2026-10-11T12:45:51.683Z",
+  "qualificationOnly": true,
+  "approved": false,
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "globalReleaseApproval": false,
+  "allSixFrozen": true,
+  "approvedLockSha256": "ecdfaf9599fbcbeadebc24de3b9aa1c7615a9a49e29d338e5e9a23427d405e26",
+  "candidateLockSha256": "8c656270f65688bd10b8ca3699ec2552c65671ba2089e245ee464ce83f239a23",
+  "sourceDeltaReview": {
+    "reference": "docs/releases/cloudflare-existing25-20261011/source-delta-review.json",
+    "sha256": "004baea237ee6702644791d7877a53f9bf5cf65add62624ac0f3900f32dbde04",
+    "reviewedAt": "2026-10-11T12:45:51.683Z"
+  },
+  "sourceReview": {
+    "reference": "docs/releases/cloudflare-existing25-20261011/source-review.json",
+    "sha256": "08b5b50b8afdea5e65860bfe6e1a7f0559f32405ad44e107c908f8ac55e1a5db"
+  },
+  "pending": [
+    "All twelve current native acceptance checks remain pending at the selected source.",
+    "Maintained source CI preservation plan, reviewed raster consumer checks, native qualification/App/extended reseals and provider compilation remain required.",
+    "Combined mounted/public browser pilot and owner visual acceptance of that hosted pilot remain pending. Global templates.lock.json is unchanged."
+  ],
+  "pendingNativeChecks": [
+    "catalog-completeness",
+    "hardcoded-ui",
+    "native-routing",
+    "standalone-journeys",
+    "mounted-journeys",
+    "public-journeys",
+    "preferences-no-js",
+    "preferences-storage-disabled",
+    "preferences-races",
+    "request-isolation",
+    "security-write-blocking",
+    "assets-preserved"
+  ]
+}

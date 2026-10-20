@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-input-mapping",
+  "dealer": "nunki-1-varna",
+  "inputs": {
+    "facts": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/nunki-1-varna/facts.json",
+      "sha256": "564be7e6af2dfd403fc8f898248043bf801b31cec6be3e3a95111f1f5ec9eba1"
+    },
+    "stock": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/nunki-1-varna/stock.json",
+      "sha256": "1335591d8e7a7b73c5de137afa11bec65b6e0f7fbbeede0a00ed0fe80268a39e"
+    },
+    "locale": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/nunki-1-varna/locale.json",
+      "sha256": "6e41d4dfeca1407e514923d2c7979b500e2668e85932653f3d3c9ac152baa686"
+    },
+    "branding": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/nunki-1-varna/branding.json",
+      "sha256": "151607082400fc611a3604c21153f5aedb189423b23140b1fddbfcc6c74ab961"
+    }
+  },
+  "sources": [
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/nunki-1-varna/facts.json",
+      "sha256": "564be7e6af2dfd403fc8f898248043bf801b31cec6be3e3a95111f1f5ec9eba1"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/nunki-1-varna/stock.json",
+      "sha256": "1335591d8e7a7b73c5de137afa11bec65b6e0f7fbbeede0a00ed0fe80268a39e"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/nunki-1-varna/locale.json",
+      "sha256": "6e41d4dfeca1407e514923d2c7979b500e2668e85932653f3d3c9ac152baa686"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/nunki-1-varna/branding.json",
+      "sha256": "151607082400fc611a3604c21153f5aedb189423b23140b1fddbfcc6c74ab961"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/nunki-1-varna/identity-repository-corrected-additional100.json",
+      "sha256": "50f34131578a55ceb3bd37f17d495612702f126fc5b78dd9bf8a0f503e32ae56"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/nunki-1-varna/copy-review-additional100.json",
+      "sha256": "5f9da0a28377383316a393046a4cb03cd77161d8dc43504cbc6d6d1ca928009b"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/nunki-1-varna/media/21765900702522886-1.webp",
+      "sha256": "b97aabfbf580251b67ad8cb918afc1b7c96e3d810c6ac248b7c65d9ac81bba07"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/nunki-1-varna/media/21765900702522886-2.webp",
+      "sha256": "2910e41a1d1d895591b46712b6f77c15e0df2e2243db5157b64cd3154bae78b6"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/nunki-1-varna/branding/master.png",
+      "sha256": "7d63c9b89ff48d739edfd56be6c1b6b3ad3a852264fd0ce24660b78ddb952913"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/nunki-1-varna/branding/onLight.png",
+      "sha256": "7d63c9b89ff48d739edfd56be6c1b6b3ad3a852264fd0ce24660b78ddb952913"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/nunki-1-varna/branding/onDark.png",
+      "sha256": "95e55e2dac94113f0f9ba2be35a4414b81bee4397ca8655c50966f154a7baa22"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/nunki-1-varna/branding/onAccent.png",
+      "sha256": "95e55e2dac94113f0f9ba2be35a4414b81bee4397ca8655c50966f154a7baa22"
+    }
+  ]
+}

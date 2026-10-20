@@ -23,13 +23,17 @@ export const dealerLocalizedText = {
     "city": "Stockton-on-Tees",
     "addressLine": "Stockton-on-Tees",
     "address": "Stockton-on-Tees",
-    "appointment": "Contact the dealership before visiting."
+    "appointment": "Contact the dealership before visiting.",
+    "addressShort": "Stockton-on-Tees",
+    "appointmentShort": "Contact the dealership before visiting."
   },
   "bg": {
     "city": "Stockton-on-Tees",
     "addressLine": "Stockton-on-Tees",
     "address": "Stockton-on-Tees",
-    "appointment": "Свържете се с автокъщата преди посещение."
+    "appointment": "Свържете се с автокъщата преди посещение.",
+    "addressShort": "Stockton-on-Tees",
+    "appointmentShort": "Свържете се с автокъщата преди посещение."
   }
 } as const;
 

@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "dealer": "transcar-varna",
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+    "path": "templates/app",
+    "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1",
+    "tree": "7f3d3ffa40546635377e6c5225194fe06fead291"
+  },
+  "appDigest": "e665fcf57ba251308cc2eb2bb4f36fc1b3336b3ce8f1561c832e4eab28df1813",
+  "provenance": {
+    "schemaVersion": 1,
+    "dealer": "transcar-varna",
+    "profile": "auto-best/src/lib/data/dealer-profile.json",
+    "profileSha256": "aba1099b2e5fab16d3dd90b6b221d283e7bc1f02c5190e4054676881e7386b7d",
+    "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
+    "vehicles": 1,
+    "currency": "EUR",
+    "observedAt": "2026-10-11T11:46:40.714Z",
+    "assets": [
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-light.png",
+        "output": "public/dealer-app/logo-light-25f80abfdbc14da5c680.png",
+        "sha256": "25f80abfdbc14da5c680871a0b884a65dc16f3f91e5e210951f12b3f2ab123f5",
+        "role": "logo-light"
+      },
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-dark.png",
+        "output": "public/dealer-app/logo-dark-9b76dd354296b82194aa.png",
+        "sha256": "9b76dd354296b82194aaa7168fcc1f4730297a52d85b73455aec93670a0cea1a",
+        "role": "logo-dark"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/11772031596218515-1.webp",
+        "output": "public/dealer-app/vehicle-2c212f01fdb22444c609.webp",
+        "sha256": "2c212f01fdb22444c6098e5bdfe6c67d528dfa1eeebe2c17dae0ea376f116aca",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/11772031596218515-2.webp",
+        "output": "public/dealer-app/vehicle-38e4bf34a754419b5bb4.webp",
+        "sha256": "38e4bf34a754419b5bb4780c2f8c4bbdcf32928788c59e3096b581cb7a47ab6c",
+        "role": "vehicle"
+      }
+    ],
+    "mileageFacts": [
+      {
+        "slug": "vw-passat-2012-11772031596218515",
+        "sourceValue": 220000,
+        "sourceUnit": "km",
+        "canonicalKm": 220000
+      }
+    ]
+  },
+  "needsDealerQA": true,
+  "readyToPublish": false,
+  "refreshedAt": "2026-10-15T03:22:11.937Z"
+}

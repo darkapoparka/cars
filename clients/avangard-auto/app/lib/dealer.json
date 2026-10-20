@@ -4,9 +4,9 @@
   "name": "AVANGARD AUTO",
   "shortName": "AVANGARD AUTO",
   "logo": {
-    "light": "/dealer-app/logo-light-50aaaad8c8bd39738a9c.webp",
-    "dark": "/dealer-app/logo-dark-8aded442df0d3a086651.webp",
-    "icon": "/dealer-app/icon.png"
+    "light": "/dealer-brand/v2-d2d110db50b48593/logo-on-light.webp",
+    "dark": "/dealer-brand/v2-d2d110db50b48593/logo-on-dark.webp",
+    "icon": "/dealer-brand/v2-d2d110db50b48593/app-icon.png"
   },
   "defaultLocale": "bg",
   "enabledLocales": [
@@ -27,11 +27,11 @@
   "socialLinks": [
     {
       "label": "Facebook",
-      "url": ""
+      "url": "https://www.facebook.com/avangardautovarna/"
     },
     {
       "label": "Instagram",
-      "url": ""
+      "url": "https://www.instagram.com/avangard_auto_varna/"
     },
     {
       "label": "Mobile.bg",
@@ -42,14 +42,14 @@
       "url": ""
     }
   ],
+  "referenceClaimsApproved": false,
   "services": [
     "Продажба на автомобили",
     "Съдействие при регистрация и транзитни номера в КАТ",
     "Транспорт в България",
     "Лизинг — условия по конкретна обява"
   ],
-  "referenceClaimsApproved": false,
   "observedAt": "2026-09-06T21:51:19.990Z",
-  "inventoryNotice": "Dated listing samples. Confirm price, availability and vehicle information with the dealer.",
+  "inventoryNotice": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
   "previewNotice": "Independent design preview. No purchase, reservation or message is submitted by this website."
 }

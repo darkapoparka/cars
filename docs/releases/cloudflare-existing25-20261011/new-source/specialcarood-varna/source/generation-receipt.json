@@ -1,0 +1,207 @@
+{
+  "slug": "specialcarood-varna",
+  "strategy": "USE GENERATED CANDIDATE",
+  "sourceReference": "leads/branding/fleet-20261011/specialcarood-varna/source/published-logo.jpg",
+  "sourceUrls": [
+    "https://specialcarood.mobile.bg",
+    "https://cdn2.focus.bg/mobile/images/housespicts/h14579723198123411.pic"
+  ],
+  "identityStatus": "Disclosed improved proposal of published СПЕЦИАЛ КАР red-roof/gray-wheel identity; cleaner horizontal hierarchy and no tiny generic descriptor, not official approval",
+  "generatedPath": "C:/Users/radev/.codex/generated_images/01a12a0e-8374-7732-9e28-580ceda2a0fc/exec-894ff64e-5739-4abb-857a-68b80aec984a.png",
+  "visualAccepted": true,
+  "imageGeneration": {
+    "tool": "image_gen.imagegen",
+    "reference": "exec-894ff64e-5739-4abb-857a-68b80aec984a",
+    "prompt": "Design a clear modern transparent improved proposal for the Bulgarian car dealer named exactly СПЕЦИАЛ КАР. Exact uppercase Cyrillic СПЕЦИАЛ КАР in confident dark graphite sans-serif, slightly forward-leaning but easily readable. Wide horizontal layout with a compact simple car profile at left: one deep red flowing roof stroke and two small open dark graphite wheel circles connected by a short flat lower body stroke. Preserve the actual source red-roof/two-wheel concept while refining it into clean minimal geometry; remove tiny Автокъща descriptor and awkward filled wheel wedges. No other words, claims or detailed vehicle art. Generous open letter counters and wheel centers entirely transparent. Flat uniform opaque ink only. No gray highlights, texture, glow, gradients, metallic effects, shadows or background panel. One complete landscape logo centered with modest transparent padding, true RGBA alpha.",
+    "transparent_background": true,
+    "outputPath": "C:/Users/radev/.codex/generated_images/01a12a0e-8374-7732-9e28-580ceda2a0fc/exec-894ff64e-5739-4abb-857a-68b80aec984a.png"
+  },
+  "surfaceReviewPath": "L:/CODEX/cars/leads/branding/fleet-20261011/specialcarood-varna/surface-review.png",
+  "surfaceDerivation": "Existing exporter contextual onLight and white onDark/onAccent; compact review passed",
+  "visualChecks": {
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "backgrounds": [
+      "#ffffff",
+      "#30343b",
+      "#17191c",
+      "#202023",
+      "#19171d",
+      "#171717",
+      "#b00020",
+      "#405ff2"
+    ],
+    "scope": "Isolated exported raster review; six-design consumers and favicon/touch integration remain pending",
+    "transparency": "True alpha, open letter counters and gaps; no visible matte/residue at compact widths",
+    "spelling": "Visible wordmark compared with retained published source, or named disclosed proposal",
+    "reviewedAt": "2026-10-11T10:09:17.340Z"
+  },
+  "schemaVersion": 1,
+  "dealer": "specialcarood-varna",
+  "state": "asset-verified",
+  "generated": {
+    "path": "C:/Users/radev/.codex/generated_images/01a12a0e-8374-7732-9e28-580ceda2a0fc/exec-894ff64e-5739-4abb-857a-68b80aec984a.png",
+    "sha256": "2291894223859847a391c8833f14760a2a33f041e726c59cf1ae041318e1283b",
+    "bytes": 316596,
+    "format": "png",
+    "width": 2172,
+    "height": 724,
+    "hasAlpha": true,
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparentRatio": 0.8748111321388236,
+      "opaqueRatio": 0.1033577780491031
+    },
+    "visibleBounds": {
+      "x": 32,
+      "y": 244,
+      "width": 2109,
+      "height": 253
+    }
+  },
+  "assets": {
+    "onLight": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/specialcarood-varna/dealer-brand/logo-on-light.webp",
+      "sha256": "75377bb39b49972f6fa9c4e24bddb15eced4ec95598f8ca7fd9c6e314f6ecf0f",
+      "bytes": 52886,
+      "format": "webp",
+      "width": 1496,
+      "height": 240,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.753793449197861,
+        "opaqueRatio": 0.1970950311942959
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 36,
+        "width": 1400,
+        "height": 168
+      },
+      "publicPath": "/dealer-brand/logo-on-light.webp"
+    },
+    "onDark": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/specialcarood-varna/dealer-brand/logo-on-dark.webp",
+      "sha256": "e5551601caee87cfa59028e9b91a7119eebba6a5c2b2870550d697ea9c9f83a3",
+      "bytes": 31290,
+      "format": "webp",
+      "width": 1496,
+      "height": 240,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.753793449197861,
+        "opaqueRatio": 0.1970950311942959
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 36,
+        "width": 1400,
+        "height": 168
+      },
+      "publicPath": "/dealer-brand/logo-on-dark.webp"
+    },
+    "onAccent": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/specialcarood-varna/dealer-brand/logo-on-accent.webp",
+      "sha256": "e5551601caee87cfa59028e9b91a7119eebba6a5c2b2870550d697ea9c9f83a3",
+      "bytes": 31290,
+      "format": "webp",
+      "width": 1496,
+      "height": 240,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.753793449197861,
+        "opaqueRatio": 0.1970950311942959
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 36,
+        "width": 1400,
+        "height": 168
+      },
+      "publicPath": "/dealer-brand/logo-on-accent.webp"
+    }
+  },
+  "master": {
+    "path": "L:/CODEX/cars/leads/branding/fleet-20261011/specialcarood-varna/branding/logo-master.png",
+    "sha256": "5dc7f91faee34a214a23158a6ce5163448a42eb7f08e00113e1fa5d828f49b24",
+    "bytes": 128464,
+    "format": "png",
+    "width": 1496,
+    "height": 240,
+    "hasAlpha": true,
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparentRatio": 0.753793449197861,
+      "opaqueRatio": 0.1970950311942959
+    },
+    "visibleBounds": {
+      "x": 48,
+      "y": 36,
+      "width": 1400,
+      "height": 168
+    }
+  },
+  "technicalAcceptance": {
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "backgrounds": [
+      "#ffffff",
+      "#30343b",
+      "#17191c",
+      "#202023",
+      "#19171d",
+      "#171717",
+      "#b00020",
+      "#405ff2"
+    ],
+    "scope": "Isolated exported raster review; six-design consumers and favicon/touch integration remain pending",
+    "transparency": "True alpha, open letter counters and gaps; no visible matte/residue at compact widths",
+    "spelling": "Visible wordmark compared with retained published source, or named disclosed proposal",
+    "reviewedAt": "2026-10-11T10:09:17.340Z"
+  },
+  "integrationVerified": false,
+  "hostedVerified": false,
+  "ownerApproved": false,
+  "exportTool": "docs/logo-refresh/2026-09-18/tools/build-approved-logo-pack.mjs",
+  "exportToolSha256": "7fab60c4000210eff6bbb91f9c35e869bad90834d3bdd09d282a9a51835f0dbc",
+  "exportIsolation": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/export",
+  "updatedAt": "2026-10-11T10:09:20.602Z",
+  "sourceEvidence": [
+    {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/specialcarood-varna/source/published-logo.jpg",
+      "sha256": "c865889fe7194e77a141b80a5af86dac0ea43c94b4be8424169905b105981ea5",
+      "bytes": 7828,
+      "format": "gif",
+      "width": 244,
+      "height": 122,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 255,
+        "max": 255,
+        "transparentRatio": 0,
+        "opaqueRatio": 1
+      },
+      "visibleBounds": {
+        "x": 0,
+        "y": 0,
+        "width": 244,
+        "height": 122
+      }
+    }
+  ],
+  "provenanceFile": "L:/CODEX/cars/leads/branding/fleet-20261011/specialcarood-varna/provenance.json"
+}

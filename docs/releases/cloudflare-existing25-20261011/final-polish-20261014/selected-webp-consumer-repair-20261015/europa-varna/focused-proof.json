@@ -1,0 +1,348 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-focused-current-published-selected-logo-consumer-repair-proof",
+  "dealer": "europa-varna",
+  "baseSourceCommit": "9a5bdba9d1e92604ed20402904d3f85892283efe",
+  "baseSourceTree": "f173420006195510fa001d6069d379567e524306",
+  "sourceModuleProof": {
+    "dealer": "europa-varna",
+    "sourceCommit": "9a5bdba9d1e92604ed20402904d3f85892283efe",
+    "sourceTree": "f173420006195510fa001d6069d379567e524306",
+    "actualSource": {
+      "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/reviewed-native-21f0c022edd009a4c9428f0de42a8fee26ee96906dbea0885343270b918dc746-receipt.json",
+      "sha256": "06871c29c66cfda901605c63d77b2fe071ea0a085b901f825728efc95489b89e",
+      "commit": "9a5bdba9d1e92604ed20402904d3f85892283efe",
+      "refUpdated": true,
+      "readbackVerified": true,
+      "checkedAt": "2026-10-15T08:48:20.610Z"
+    },
+    "sourceOverlay": {
+      "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-native/native-wave-015/published-ten-source-successors.json",
+      "sha256": "e7b40a66d73cd941b85be64ddef3093ee285df288a885fc5709c5627eb6c8c96"
+    },
+    "sourcePatch": {
+      "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/current-seven-simple-import-editorial/reseals-c/europa-varna/source-patch.json",
+      "sha256": "72165f7fee24e846cfb908a799cbc1cbfe3ec12cb54f8056d1b66788a3de311c"
+    },
+    "manifest": {
+      "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/run-38689980731-attempt-1/europa-varna-proposal-manifest.json",
+      "sha256": "47f132bfce66a553ea897af5472f48561850ec13e60c061956e604d295451d28"
+    },
+    "selected": {
+      "light": "/dealer-brand/v2-157161b8b9b6ab30/logo-on-light.webp",
+      "dark": "/dealer-brand/v2-157161b8b9b6ab30/logo-on-dark.webp",
+      "icon": "/dealer-brand/v2-157161b8b9b6ab30/app-icon.png"
+    },
+    "companionPatches": [
+      {
+        "path": "mobile/src/lib/showroom-config.ts",
+        "baseBlob": "acedaf6b70a53e759f5318a2627342387b681baa",
+        "baseSha256": "963f6770d093188b9cb9c8cb8516dfb55fd1c3615b95759352afe3e23672d4e7",
+        "candidateFile": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/native13-modern-runtime/seven-selected-extended-rebinds/europa-varna/mobile--src--lib--showroom-config.ts",
+        "candidateSha256": "69276398b6480eac0246e4c083396daa1ca6934fb172ab08e6fb986d37079847",
+        "candidateBlob": "e3c9481c618027db7abfed71d8ca86594794981e",
+        "bytes": 5911,
+        "onlyReviewedLogoLiteralsChanged": true,
+        "replacements": {
+          "onLight": 1,
+          "onDark": 0,
+          "faviconToSelectedAppIcon": 0
+        }
+      },
+      {
+        "path": "mobile/src/lib/dealers.ts",
+        "baseBlob": "1d58c41a743516d70727e12b7c00ad328e5d5280",
+        "baseSha256": "1e47d1e30391201728283018dd0f7b9c8fb188252e7feb8ef245c7b7e15c61c2",
+        "candidateFile": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/native13-modern-runtime/seven-selected-extended-rebinds/europa-varna/mobile--src--lib--dealers.ts",
+        "candidateSha256": "d35e91f37e51fa3b5cd50ddea06907cc96bf851ca1c4a2ad58f22f2248abd35a",
+        "candidateBlob": "0fb00e906405090e72682fbf967efac58667dc8c",
+        "bytes": 3903,
+        "onlyReviewedLogoLiteralsChanged": true,
+        "replacements": {
+          "onLight": 7,
+          "onDark": 0,
+          "faviconToSelectedAppIcon": 0
+        }
+      },
+      {
+        "path": "karento-best/src/lib/content.ts",
+        "baseBlob": "545bc28ab340632f495d7ebd2d6d958af17be483",
+        "baseSha256": "4b66dac6ff62105a334c43ed54ed8e9c64c2689bd6bce9d98eed3b7b6ecf06d0",
+        "candidateFile": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/native13-modern-runtime/seven-selected-extended-rebinds/europa-varna/karento-best--src--lib--content.ts",
+        "candidateSha256": "539a93cf69093e1dbb32e987ad865798ed262efcd3c83007b7989cdca4fae61b",
+        "candidateBlob": "742b53af673b0a15348185d4481f005f8ab610d5",
+        "bytes": 5285,
+        "onlyReviewedLogoLiteralsChanged": true,
+        "replacements": {
+          "onLight": 2,
+          "onDark": 2,
+          "faviconToSelectedAppIcon": 1
+        }
+      },
+      {
+        "path": "karento-best/src/lib/data/dealer-detail.ts",
+        "baseBlob": "bd62d48c960c632d7eb2ee245da98ce5da95ba43",
+        "baseSha256": "f3ee8e5f1c82c9e6e24711b23fa9435ae00768c500722e5b107d8586d98e1281",
+        "candidateFile": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/native13-modern-runtime/seven-selected-extended-rebinds/europa-varna/karento-best--src--lib--data--dealer-detail.ts",
+        "candidateSha256": "f8c31195b3f98d8fe560727c21e3f3264ad76cfeab107966b3a748a1d0b8d04f",
+        "candidateBlob": "4cad458dc9a45628d41f2113f5ba156e30e1becf",
+        "bytes": 19193,
+        "onlyReviewedLogoLiteralsChanged": true,
+        "replacements": {
+          "onLight": 7,
+          "onDark": 0,
+          "faviconToSelectedAppIcon": 0
+        }
+      },
+      {
+        "path": "karento-best/src/lib/data/vehicle-detail.ts",
+        "baseBlob": "32c96aac2d001d28adf265cfb9995d364519bccc",
+        "baseSha256": "7eff60405fe9d6e9f046b854ecd2aa9b55abcff4c1d0a1831e2481322ef4ec22",
+        "candidateFile": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/native13-modern-runtime/seven-selected-extended-rebinds/europa-varna/karento-best--src--lib--data--vehicle-detail.ts",
+        "candidateSha256": "a26f36f8a48b2db6fd8dc9d7de6c5387ed186d1282a0098c43d61ee0b8727fd2",
+        "candidateBlob": "184a6bce373d43aa779eec4d6cdccf21212b1c12",
+        "bytes": 11001,
+        "onlyReviewedLogoLiteralsChanged": true,
+        "replacements": {
+          "onLight": 1,
+          "onDark": 0,
+          "faviconToSelectedAppIcon": 0
+        }
+      },
+      {
+        "path": ".cars-branding.json",
+        "baseBlob": "2d4dae66a919da4a1de60ccad026479bca6e74ea",
+        "baseSha256": "e7dfedc5315a681a660331b66e12ee0f4d7a36ea75513fb097cf419d6740f1b8",
+        "candidateFile": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/native13-modern-runtime/seven-selected-extended-rebinds/europa-varna/cars-branding.json",
+        "candidateSha256": "08ee42878a31d42409fc4aacd0acda547e232209873d69b862f5ed84efb5ee43",
+        "candidateBlob": "6056b6afd737aba2fe9f82f4854c06b4a4731e0a",
+        "bytes": 45832,
+        "onlyConsumerReferencesAdded": true,
+        "addedConsumerReferences": [
+          {
+            "path": "karento-best/src/lib/content.ts",
+            "urls": [
+              "/dealer-brand/v2-157161b8b9b6ab30/logo-on-light.webp",
+              "/dealer-brand/v2-157161b8b9b6ab30/logo-on-dark.webp",
+              "/dealer-brand/v2-157161b8b9b6ab30/app-icon.png"
+            ]
+          },
+          {
+            "path": "karento-best/src/lib/data/dealer-detail.ts",
+            "urls": [
+              "/dealer-brand/v2-157161b8b9b6ab30/logo-on-light.webp"
+            ]
+          },
+          {
+            "path": "karento-best/src/lib/data/vehicle-detail.ts",
+            "urls": [
+              "/dealer-brand/v2-157161b8b9b6ab30/logo-on-light.webp"
+            ]
+          },
+          {
+            "path": "mobile/src/lib/dealers.ts",
+            "urls": [
+              "/dealer-brand/v2-157161b8b9b6ab30/logo-on-light.webp"
+            ]
+          },
+          {
+            "path": "mobile/src/lib/showroom-config.ts",
+            "urls": [
+              "/dealer-brand/v2-157161b8b9b6ab30/logo-on-light.webp"
+            ]
+          }
+        ]
+      }
+    ],
+    "requiredReceiptReseals": [
+      {
+        "path": ".cars-mobile.json",
+        "family": "mobile",
+        "baseBlob": "2f293a08a993e52c322deb064cd427f13aae0e42",
+        "baseSha256": "57c214174103f4a2391fa89333bd2afae1d5b60cfc0a2933a8c0298e603f3afe",
+        "sourceDigestBefore": "0992ac621669c32ac837e0191d34454c69b6766a8eeb63658eeaa47be0cc858a",
+        "requiredSourceDigest": "Recompute maintained extendedSourceDigest from the exact combined final source",
+        "profileSha256Preserved": "8deec45a6a58578d3df59ed59fe71ce2a30526488b1c87ce9d38d0c8bf802850",
+        "personalizationLogoPathsBefore": [
+          "/registered-branding/onLight.png",
+          "/registered-branding/onDark.png"
+        ],
+        "personalizationLogoPathsAfter": [
+          "/dealer-brand/v2-157161b8b9b6ab30/logo-on-light.webp",
+          "/dealer-brand/v2-157161b8b9b6ab30/logo-on-dark.webp"
+        ],
+        "allOtherReceiptFieldsUnchanged": true,
+        "factsStockTemplateMediaPreserved": true
+      },
+      {
+        "path": ".cars-signature.json",
+        "family": "karento-best",
+        "baseBlob": "05168dd4b12d15c1a439ed242624acc7ddfee13e",
+        "baseSha256": "403f3e1e86b2595254db9eb4922954ae4a4d3c2718e621815412fc78fcfd4d68",
+        "sourceDigestBefore": "e1343cc1c1f3f2cf538fc6688e3b0d418242a21b761d365e0c7842dd32201eed",
+        "requiredSourceDigest": "Recompute maintained extendedSourceDigest from the exact combined final source",
+        "profileSha256Preserved": "8deec45a6a58578d3df59ed59fe71ce2a30526488b1c87ce9d38d0c8bf802850",
+        "personalizationLogoPathsBefore": [
+          "/registered-branding/onLight.png",
+          "/registered-branding/onDark.png"
+        ],
+        "personalizationLogoPathsAfter": [
+          "/dealer-brand/v2-157161b8b9b6ab30/logo-on-light.webp",
+          "/dealer-brand/v2-157161b8b9b6ab30/logo-on-dark.webp"
+        ],
+        "allOtherReceiptFieldsUnchanged": true,
+        "factsStockTemplateMediaPreserved": true
+      }
+    ],
+    "unchangedSourceAssets": [
+      {
+        "family": "mobile",
+        "surface": "light",
+        "path": "mobile/public/dealer-brand/v2-157161b8b9b6ab30/logo-on-light.webp",
+        "url": "/dealer-brand/v2-157161b8b9b6ab30/logo-on-light.webp",
+        "blob": "373a274c15e4462eaef3bba52330de94319d4d60",
+        "mode": "100644",
+        "immutableSourceObjectIdentityVerified": true,
+        "bodyReadRequiredForLiteralOnlyRepair": false,
+        "unchanged": true
+      },
+      {
+        "family": "mobile",
+        "surface": "dark",
+        "path": "mobile/public/dealer-brand/v2-157161b8b9b6ab30/logo-on-dark.webp",
+        "url": "/dealer-brand/v2-157161b8b9b6ab30/logo-on-dark.webp",
+        "blob": "04cea63e76da17898daae9fc7683e35f6f613e7a",
+        "mode": "100644",
+        "immutableSourceObjectIdentityVerified": true,
+        "bodyReadRequiredForLiteralOnlyRepair": false,
+        "unchanged": true
+      },
+      {
+        "family": "mobile",
+        "surface": "icon",
+        "path": "mobile/public/dealer-brand/v2-157161b8b9b6ab30/app-icon.png",
+        "url": "/dealer-brand/v2-157161b8b9b6ab30/app-icon.png",
+        "blob": "9443a5cbe7043e2dc4e3751c854d681a2d7e2dc3",
+        "mode": "100644",
+        "immutableSourceObjectIdentityVerified": true,
+        "bodyReadRequiredForLiteralOnlyRepair": false,
+        "unchanged": true
+      },
+      {
+        "family": "karento-best",
+        "surface": "light",
+        "path": "karento-best/static/dealer-brand/v2-157161b8b9b6ab30/logo-on-light.webp",
+        "url": "/dealer-brand/v2-157161b8b9b6ab30/logo-on-light.webp",
+        "blob": "373a274c15e4462eaef3bba52330de94319d4d60",
+        "mode": "100644",
+        "immutableSourceObjectIdentityVerified": true,
+        "bodyReadRequiredForLiteralOnlyRepair": false,
+        "unchanged": true
+      },
+      {
+        "family": "karento-best",
+        "surface": "dark",
+        "path": "karento-best/static/dealer-brand/v2-157161b8b9b6ab30/logo-on-dark.webp",
+        "url": "/dealer-brand/v2-157161b8b9b6ab30/logo-on-dark.webp",
+        "blob": "04cea63e76da17898daae9fc7683e35f6f613e7a",
+        "mode": "100644",
+        "immutableSourceObjectIdentityVerified": true,
+        "bodyReadRequiredForLiteralOnlyRepair": false,
+        "unchanged": true
+      },
+      {
+        "family": "karento-best",
+        "surface": "icon",
+        "path": "karento-best/static/dealer-brand/v2-157161b8b9b6ab30/app-icon.png",
+        "url": "/dealer-brand/v2-157161b8b9b6ab30/app-icon.png",
+        "blob": "9443a5cbe7043e2dc4e3751c854d681a2d7e2dc3",
+        "mode": "100644",
+        "immutableSourceObjectIdentityVerified": true,
+        "bodyReadRequiredForLiteralOnlyRepair": false,
+        "unchanged": true
+      }
+    ],
+    "mobileHeader": {
+      "path": "mobile/src/components/Header.tsx",
+      "blob": "b6a2e92dd686a72ad3b18fa2e0a53d78be3232ef",
+      "sha256": "ce4609eeb0654797012ec73ebf056f8f9ca4008e4bbca96effa41c9e00b4d76d",
+      "unchanged": true,
+      "existingWebpDarkDerivationRestored": true,
+      "selectedDarkUrl": "/dealer-brand/v2-157161b8b9b6ab30/logo-on-dark.webp"
+    },
+    "inverseLiteralProof": true,
+    "allFiveTsSyntaxPass": true,
+    "allFactsStockAndOtherSourceBytesPreserved": true,
+    "componentsAndRasterBytesUnchanged": true,
+    "newNativeBuildRequired": true,
+    "newHostedVersionAndLoadedAssetsRequired": true,
+    "hostedAcceptance": false
+  },
+  "originalProof": {
+    "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/native13-modern-runtime/seven-selected-extended-rebinds/seven-selected-extended-rebind-proof.json",
+    "sha256": "444f64491c4b2fb593af99519d2670c2fa3664c5e063bc8e055a240e742e133a"
+  },
+  "currentPublishedBaseline": {
+    "dealer": "europa-varna",
+    "originalSourceCommit": "139e7e678d5649af3de43b504e338fbf35b285e0",
+    "originalSourceTree": "4e5cbea3dae9a6109dae1bb5ddb49af1cb7aa78e",
+    "currentPublishedCommit": "9a5bdba9d1e92604ed20402904d3f85892283efe",
+    "currentPublishedTree": "f173420006195510fa001d6069d379567e524306",
+    "exactPublishedPriorChangedPaths": [
+      ".client/cloudflare-existing-source.json",
+      ".client/native-qualification-context.json",
+      "import/src/lib/content/extra-localized.ts",
+      "localization/adoption.json",
+      "modern/packages/marketplace/lead-site.ts"
+    ],
+    "sourcePatch": {
+      "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/current-seven-simple-import-editorial/reseals-c/europa-varna/source-patch.json",
+      "sha256": "72165f7fee24e846cfb908a799cbc1cbfe3ec12cb54f8056d1b66788a3de311c"
+    },
+    "publicationSpec": {
+      "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/current-seven-simple-import-editorial/reseals-c/publication-spec.json",
+      "sha256": "21f0c022edd009a4c9428f0de42a8fee26ee96906dbea0885343270b918dc746",
+      "blob": "df7df42bd2e6087555fdbe4d6b6038b9cd1c67e1",
+      "bytes": 9234
+    },
+    "actualMainPublication": {
+      "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/reviewed-native-21f0c022edd009a4c9428f0de42a8fee26ee96906dbea0885343270b918dc746-receipt.json",
+      "sha256": "06871c29c66cfda901605c63d77b2fe071ea0a085b901f825728efc95489b89e",
+      "commit": "9a5bdba9d1e92604ed20402904d3f85892283efe",
+      "refUpdated": true,
+      "readbackVerified": true,
+      "checkedAt": "2026-10-15T08:48:20.610Z"
+    },
+    "sourceReview": {
+      "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/editorial-runtime-repair-20261015/europa-varna/source-review.json",
+      "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/current-seven-simple-import-editorial/reseals-c/europa-varna/source-review.json",
+      "sha256": "ea56dd8231d6f1d632af6eab7508a3a05950a8beba7c03a8baa24cb8efc68b7a",
+      "blob": "89c0362ffc82fa54c2397df8d86c1b91d14e336c"
+    },
+    "qualification": {
+      "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/contexts/europa-varna.json",
+      "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/current-seven-simple-import-editorial/reseals-c/europa-varna/qualification-context.json",
+      "sha256": "41914288cd7d848e7f8776286442130ac122c6866fdc5d5b0c785c8c1f8451d1"
+    },
+    "currentNativeInput": {
+      "digest": "e5151b079fe719d6f36cb781e961fdf661a442050c38e8d2fad9a65b42348998",
+      "files": 9146
+    },
+    "unchangedOtherSourceEntryBlobs": true,
+    "sourceCopies": 0,
+    "networkReads": 0,
+    "objectWrites": 0,
+    "refWrites": 0
+  },
+  "immediateParentOverlay": {
+    "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-native/native-wave-015/published-ten-source-successors.json",
+    "sha256": "e7b40a66d73cd941b85be64ddef3093ee285df288a885fc5709c5627eb6c8c96"
+  },
+  "changedDesigns": [
+    "mobile",
+    "karento-best"
+  ],
+  "compiled": false,
+  "newCiRun": null,
+  "providerWrites": 0
+}

@@ -27,9 +27,9 @@
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=North%20Norfolk%20Car%20Sales%2C%20Unit%203%20Midland%20Road%2C%20North%20Walsham%20NR28%209JR",
     "mapsEmbedUrl": "https://maps.google.com/maps?q=North%20Norfolk%20Car%20Sales%2C%20Unit%203%20Midland%20Road%2C%20North%20Walsham%20NR28%209JR&z=16&output=embed",
     "accent": "#DC0738",
-    "logo": "/dealer-brand/logo.webp",
-    "logoLight": "/dealer-brand/logo.webp",
-    "logoDark": "/dealer-brand/logo.webp",
+    "logo": "/dealer-brand/v2-1cd3fb6dc67c1653/logo-on-light.webp",
+    "logoLight": "/dealer-brand/v2-1cd3fb6dc67c1653/logo-on-light.webp",
+    "logoDark": "/dealer-brand/v2-1cd3fb6dc67c1653/logo-on-dark.webp",
     "socialLinks": {
       "facebook": "",
       "instagram": "",
@@ -585,25 +585,28 @@
     "approvalStatus": "independent_design_proposal_not_dealer_approved",
     "assets": {
       "onLight": {
-        "publicPath": "/dealer-brand/logo.webp",
-        "sha256": "0f70eadda345cc351592c2d1c705b1aab754aefa7cf1eeb05231add4c0d2420f",
+        "publicPath": "/dealer-brand/v2-1cd3fb6dc67c1653/logo-on-light.webp",
+        "sha256": "8c7308f756043f2ebd72b3c78a7f2b0d915b05815b948f5824e2c5a734a52010",
         "width": 400,
         "height": 79,
-        "background": "opaque_white"
+        "background": "opaque_white",
+        "bytes": 86492
       },
       "onDark": {
-        "publicPath": "/dealer-brand/logo.webp",
-        "sha256": "0f70eadda345cc351592c2d1c705b1aab754aefa7cf1eeb05231add4c0d2420f",
+        "publicPath": "/dealer-brand/v2-1cd3fb6dc67c1653/logo-on-dark.webp",
+        "sha256": "7120d1252bfdeecde9d0425ff2b6cd24e245a5be65731f2be326e917ea03730d",
         "width": 400,
         "height": 79,
-        "background": "opaque_white"
+        "background": "opaque_white",
+        "bytes": 35122
       },
       "onAccent": {
-        "publicPath": "/dealer-brand/logo.webp",
-        "sha256": "0f70eadda345cc351592c2d1c705b1aab754aefa7cf1eeb05231add4c0d2420f",
+        "publicPath": "/dealer-brand/v2-1cd3fb6dc67c1653/logo-on-accent.webp",
+        "sha256": "7120d1252bfdeecde9d0425ff2b6cd24e245a5be65731f2be326e917ea03730d",
         "width": 400,
         "height": 79,
-        "background": "opaque_white"
+        "background": "opaque_white",
+        "bytes": 35122
       }
     },
     "icon": {

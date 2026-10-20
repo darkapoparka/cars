@@ -1,0 +1,354 @@
+{
+	"desktop": [
+		{
+			"images": [
+				{
+					"contained": true,
+					"height": 48,
+					"loaded": true,
+					"source": "http://127.0.0.1:6790/assets/daynight/home-modes/buy-graphite-v2-48.webp",
+					"width": 48
+				},
+				{
+					"contained": true,
+					"height": 48,
+					"loaded": true,
+					"source": "http://127.0.0.1:6790/assets/daynight/home-modes/finance-graphite-v2-48.webp",
+					"width": 48
+				},
+				{
+					"contained": true,
+					"height": 48,
+					"loaded": true,
+					"source": "http://127.0.0.1:6790/assets/daynight/home-modes/sell-graphite-v2-48.webp",
+					"width": 48
+				},
+				{
+					"contained": true,
+					"height": 48,
+					"loaded": true,
+					"source": "http://127.0.0.1:6790/assets/daynight/home-modes/import-graphite-v2-48.webp",
+					"width": 48
+				}
+			],
+			"overflow": false,
+			"width": 768
+		},
+		{
+			"images": [
+				{
+					"contained": true,
+					"height": 48,
+					"loaded": true,
+					"source": "http://127.0.0.1:6790/assets/daynight/home-modes/buy-graphite-v2-48.webp",
+					"width": 48
+				},
+				{
+					"contained": true,
+					"height": 48,
+					"loaded": true,
+					"source": "http://127.0.0.1:6790/assets/daynight/home-modes/finance-graphite-v2-48.webp",
+					"width": 48
+				},
+				{
+					"contained": true,
+					"height": 48,
+					"loaded": true,
+					"source": "http://127.0.0.1:6790/assets/daynight/home-modes/sell-graphite-v2-48.webp",
+					"width": 48
+				},
+				{
+					"contained": true,
+					"height": 48,
+					"loaded": true,
+					"source": "http://127.0.0.1:6790/assets/daynight/home-modes/import-graphite-v2-48.webp",
+					"width": 48
+				}
+			],
+			"overflow": false,
+			"width": 1024
+		},
+		{
+			"images": [
+				{
+					"contained": true,
+					"height": 48,
+					"loaded": true,
+					"source": "http://127.0.0.1:6790/assets/daynight/home-modes/buy-graphite-v2-48.webp",
+					"width": 48
+				},
+				{
+					"contained": true,
+					"height": 48,
+					"loaded": true,
+					"source": "http://127.0.0.1:6790/assets/daynight/home-modes/finance-graphite-v2-48.webp",
+					"width": 48
+				},
+				{
+					"contained": true,
+					"height": 48,
+					"loaded": true,
+					"source": "http://127.0.0.1:6790/assets/daynight/home-modes/sell-graphite-v2-48.webp",
+					"width": 48
+				},
+				{
+					"contained": true,
+					"height": 48,
+					"loaded": true,
+					"source": "http://127.0.0.1:6790/assets/daynight/home-modes/import-graphite-v2-48.webp",
+					"width": 48
+				}
+			],
+			"overflow": false,
+			"width": 1440
+		},
+		{
+			"images": [
+				{
+					"contained": true,
+					"height": 48,
+					"loaded": true,
+					"source": "http://127.0.0.1:6790/assets/daynight/home-modes/buy-graphite-v2-48.webp",
+					"width": 48
+				},
+				{
+					"contained": true,
+					"height": 48,
+					"loaded": true,
+					"source": "http://127.0.0.1:6790/assets/daynight/home-modes/finance-graphite-v2-48.webp",
+					"width": 48
+				},
+				{
+					"contained": true,
+					"height": 48,
+					"loaded": true,
+					"source": "http://127.0.0.1:6790/assets/daynight/home-modes/sell-graphite-v2-48.webp",
+					"width": 48
+				},
+				{
+					"contained": true,
+					"height": 48,
+					"loaded": true,
+					"source": "http://127.0.0.1:6790/assets/daynight/home-modes/import-graphite-v2-48.webp",
+					"width": 48
+				}
+			],
+			"overflow": false,
+			"width": 1920
+		}
+	],
+	"englishDesktop": {
+		"art": [
+			{
+				"loaded": true,
+				"source": "http://127.0.0.1:6790/assets/daynight/home-modes/buy-graphite-v2-48.webp",
+				"width": 48
+			},
+			{
+				"loaded": true,
+				"source": "http://127.0.0.1:6790/assets/daynight/home-modes/finance-graphite-v2-48.webp",
+				"width": 48
+			},
+			{
+				"loaded": true,
+				"source": "http://127.0.0.1:6790/assets/daynight/home-modes/sell-graphite-v2-48.webp",
+				"width": 48
+			},
+			{
+				"loaded": true,
+				"source": "http://127.0.0.1:6790/assets/daynight/home-modes/import-graphite-v2-48.webp",
+				"width": 48
+			}
+		],
+		"overflow": false,
+		"tabs": [
+			{
+				"label": "Buy",
+				"width": 171.5
+			},
+			{
+				"label": "Finance",
+				"width": 171.5
+			},
+			{
+				"label": "Sell",
+				"width": 171.5
+			},
+			{
+				"label": "Import",
+				"width": 171.5
+			}
+		],
+		"width": 1440
+	},
+	"keyboard": [
+		{
+			"focused": "Лизинг",
+			"selected": "Лизинг",
+			"title": "Купи автомобил"
+		},
+		{
+			"focused": "Продай",
+			"selected": "Продай",
+			"title": "Купи автомобил"
+		},
+		{
+			"focused": "Внос",
+			"selected": "Внос",
+			"title": "Купи автомобил"
+		},
+		{
+			"focused": "Купи",
+			"selected": "Купи",
+			"title": "Купи автомобил"
+		}
+	],
+	"mobileBefore": [
+		{
+			"art": [
+				{
+					"source": "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=",
+					"width": 0
+				},
+				{
+					"source": "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=",
+					"width": 0
+				},
+				{
+					"source": "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=",
+					"width": 0
+				},
+				{
+					"source": "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=",
+					"width": 0
+				}
+			],
+			"height": 844,
+			"homeTitle": "Купи автомобил",
+			"overflow": false,
+			"width": 320
+		},
+		{
+			"art": [
+				{
+					"source": "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=",
+					"width": 0
+				},
+				{
+					"source": "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=",
+					"width": 0
+				},
+				{
+					"source": "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=",
+					"width": 0
+				},
+				{
+					"source": "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=",
+					"width": 0
+				}
+			],
+			"height": 844,
+			"homeTitle": "Купи автомобил",
+			"overflow": false,
+			"width": 390
+		}
+	],
+	"mobileAfter": [
+		{
+			"locale": "bg",
+			"art": [
+				{
+					"source": "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=",
+					"width": 0
+				},
+				{
+					"source": "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=",
+					"width": 0
+				},
+				{
+					"source": "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=",
+					"width": 0
+				},
+				{
+					"source": "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=",
+					"width": 0
+				}
+			],
+			"height": 844,
+			"overflow": false,
+			"width": 320
+		},
+		{
+			"locale": "bg",
+			"art": [
+				{
+					"source": "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=",
+					"width": 0
+				},
+				{
+					"source": "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=",
+					"width": 0
+				},
+				{
+					"source": "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=",
+					"width": 0
+				},
+				{
+					"source": "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=",
+					"width": 0
+				}
+			],
+			"height": 844,
+			"overflow": false,
+			"width": 390
+		},
+		{
+			"locale": "en",
+			"art": [
+				{
+					"source": "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=",
+					"width": 0
+				},
+				{
+					"source": "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=",
+					"width": 0
+				},
+				{
+					"source": "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=",
+					"width": 0
+				},
+				{
+					"source": "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=",
+					"width": 0
+				}
+			],
+			"height": 844,
+			"overflow": false,
+			"width": 320
+		},
+		{
+			"locale": "en",
+			"art": [
+				{
+					"source": "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=",
+					"width": 0
+				},
+				{
+					"source": "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=",
+					"width": 0
+				},
+				{
+					"source": "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=",
+					"width": 0
+				},
+				{
+					"source": "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=",
+					"width": 0
+				}
+			],
+			"height": 844,
+			"overflow": false,
+			"width": 390
+		}
+	]
+}

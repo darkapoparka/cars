@@ -111,9 +111,9 @@ a separately accepted submission integration and verified dealer contacts.
 
 The exact Cars source commit/tree/digest, test results, visual comparisons and
 standalone mirror receipt identify the engineering freeze. They do not select
-Mobile in `templates.lock.json`. The existing Cars release tool still excludes
-Mobile: dealer-data collection/adaptation, `/variant-5` assets/routes, the shared
-five-design selector and the versioned publisher need their own integration and
-mounted/hosted acceptance. Use that existing workflow; do not bypass the lock or
-replace the publisher with another generator. Existing dealer sites stay on their
-accepted source until an explicitly requested, tested update.
+new source in `templates.lock.json`. The lock already selects an approved Mobile
+source for `/variant-5` in the six-design fleet, with the shared Admin demo link.
+Subsequent changes use Cars' maintained dealer adapter, publisher and promotion
+workflow with their own integration and mounted/hosted acceptance. Do not bypass
+the lock or replace the publisher with another generator. Existing dealer sites
+stay on their accepted source until an explicitly requested, tested update.

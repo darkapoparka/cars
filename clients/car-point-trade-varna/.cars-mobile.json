@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "format": "mobile-preview-v1",
+  "dealer": "car-point-trade-varna",
+  "name": "CAR POINT TRADE LTD",
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+    "path": "templates/mobile",
+    "digest": "f5a3e541a7c648a4c2899ad3893e22a3806027a9f66d95fa4e8c74b2226635b6",
+    "tree": "792bfdd1d8eb22aabd90c7e3a0c0779a6c1c36f3"
+  },
+  "sourceDigest": "8e7090f4aa0f8b933dfb76f1d70cd9445a46bc1b05317e567df6ba5e326ef9a2",
+  "inventory": {
+    "mode": "dated-listing-snapshot",
+    "count": 8,
+    "observedAt": "2026-10-10T09:30:16.296Z"
+  },
+  "personalization": {
+    "profileSha256": "51359c8ddef19d962af936d0095d2ba4d8fedd9335bc70b2c575b0b0026bb355",
+    "logoPaths": [
+      "/dealer-brand/logo-on-light.webp",
+      "/dealer-brand/logo-on-dark.webp"
+    ],
+    "mediaPaths": [
+      "/assets/vehicles/11791184773376059/1.webp",
+      "/assets/vehicles/11791184773376059/2.webp",
+      "/assets/vehicles/11791184773376059/3.webp",
+      "/assets/vehicles/11791184773376059/4.webp",
+      "/assets/vehicles/11791183074371341/1.webp",
+      "/assets/vehicles/11791183074371341/2.webp",
+      "/assets/vehicles/11791183074371341/3.webp",
+      "/assets/vehicles/11791183074371341/4.webp",
+      "/assets/vehicles/11790856761277539/1.webp",
+      "/assets/vehicles/11790856761277539/2.webp",
+      "/assets/vehicles/11790856761277539/3.webp",
+      "/assets/vehicles/11790856761277539/4.webp",
+      "/assets/vehicles/21763647718712555/1.webp",
+      "/assets/vehicles/21763647718712555/2.webp",
+      "/assets/vehicles/21763647718712555/3.webp",
+      "/assets/vehicles/21763647718712555/4.webp",
+      "/assets/vehicles/11788508879567241/1.webp",
+      "/assets/vehicles/11788508879567241/2.webp",
+      "/assets/vehicles/11788508879567241/3.webp",
+      "/assets/vehicles/11788508879567241/4.webp",
+      "/assets/vehicles/11772557595522560/1.webp",
+      "/assets/vehicles/11772557595522560/2.webp",
+      "/assets/vehicles/11772557595522560/3.webp",
+      "/assets/vehicles/11772557595522560/4.webp",
+      "/assets/vehicles/11788861053896464/1.webp",
+      "/assets/vehicles/11788861053896464/2.webp",
+      "/assets/vehicles/11788861053896464/3.webp",
+      "/assets/vehicles/11788861053896464/4.webp",
+      "/assets/vehicles/11782721870640258/1.webp",
+      "/assets/vehicles/11782721870640258/2.webp",
+      "/assets/vehicles/11782721870640258/3.webp",
+      "/assets/vehicles/11782721870640258/4.webp"
+    ],
+    "mediaMappings": [],
+    "contentPaths": [
+      "mobile/src/lib/showroom-config.ts",
+      "mobile/src/lib/catalog.ts",
+      "mobile/src/lib/dealers.ts",
+      "mobile/src/lib/dealer-inventory.json",
+      "mobile/src/lib/locale.ts",
+      "mobile/src/lib/search.ts",
+      "mobile/src/components/NativeDealerCards.tsx",
+      "mobile/src/components/DealerScreens.tsx",
+      "mobile/src/components/VehicleCard.tsx",
+      "mobile/src/components/ShowroomVehicleCard.tsx",
+      "mobile/src/components/VehicleSections.tsx",
+      "mobile/src/lib/mobile-mileage.ts",
+      "mobile/src/lib/types.ts",
+      "mobile/src/components/DesktopVehicleSummary.tsx",
+      "mobile/src/components/NativeCarPark.tsx",
+      "mobile/src/components/ShowroomFilterSheet.tsx",
+      "mobile/src/lib/vehicle-copy.ts"
+    ]
+  },
+  "needsDealerQA": true,
+  "readyToPublish": false
+}

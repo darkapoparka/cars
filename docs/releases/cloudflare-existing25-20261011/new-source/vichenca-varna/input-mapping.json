@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-input-mapping",
+  "dealer": "vichenca-varna",
+  "inputs": {
+    "facts": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/vichenca-varna/facts.json",
+      "sha256": "7865b87839c5f3ec2e1cf9b986ab4c937e0f3eafb775c2df6ecbc380e2c358ec"
+    },
+    "stock": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/vichenca-varna/stock.json",
+      "sha256": "a637422fb92e78551840cafb6f4c8b8742ec482d33238ad99bfda090ec4e0662"
+    },
+    "locale": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/vichenca-varna/locale.json",
+      "sha256": "f63ec65d731c38d0375178d959800180331ff5d0ca3fad45336ec82765339924"
+    },
+    "branding": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/vichenca-varna/branding.json",
+      "sha256": "d4e34b36a8bc30959960a1cd173f306a01d9269247305ebbffe5a2c2fc1ac127"
+    }
+  },
+  "sources": [
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/vichenca-varna/source/business-facts.json",
+      "sha256": "7a8d5baa57dfef5ba32b6dc48a60eddf066363d75cfc004c66644ed3319f45a9"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/vichenca-varna/source/locale.json",
+      "sha256": "f63ec65d731c38d0375178d959800180331ff5d0ca3fad45336ec82765339924"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/vichenca-varna/source/stock.json",
+      "sha256": "c17e1f8b5a14b1c72a8cdc29b77e2429745001964b39f52af2405d5fa570d272"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/vichenca-varna/source/generation-receipt.json",
+      "sha256": "f16077095511d1f355a37929182702bffe6e22e67fc7bbfbce517e116e0225ff"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/vichenca-varna/source/native-onLight.png",
+      "sha256": "869a908364e0734625827e1c71b2a53a1cb0262de77d2f925230af2f199d2720"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/vichenca-varna/source/native-onDark.png",
+      "sha256": "869a908364e0734625827e1c71b2a53a1cb0262de77d2f925230af2f199d2720"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/vichenca-varna/source/native-onAccent.png",
+      "sha256": "869a908364e0734625827e1c71b2a53a1cb0262de77d2f925230af2f199d2720"
+    }
+  ],
+  "transformations": {
+    "facts": {
+      "source": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/vichenca-varna/source/business-facts.json",
+        "sha256": "7a8d5baa57dfef5ba32b6dc48a60eddf066363d75cfc004c66644ed3319f45a9"
+      },
+      "kind": "flat-original-facts-to-business-consumer",
+      "allOriginalEvidenceUnchanged": true,
+      "derivedNameDelta": null,
+      "otherFactsUnchanged": true
+    },
+    "stock": {
+      "source": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/vichenca-varna/source/stock.json",
+        "sha256": "c17e1f8b5a14b1c72a8cdc29b77e2429745001964b39f52af2405d5fa570d272"
+      },
+      "originalSourceRecordPreserved": true,
+      "sourceId": "11790920424243530",
+      "normalizer": "loadDealerProfile",
+      "retention": "retainDealerVariantAssets",
+      "sourceKind": "dated-marketplace-listing-sample",
+      "consumerKind": "dated-listing-snapshot",
+      "availabilityUnconfirmed": true,
+      "mediaRightsNotClaimed": true,
+      "mileageUnknownMeansOnRequest": true
+    },
+    "media": [
+      {
+        "sourceId": "11790920424243530",
+        "sourcePublicPath": "/assets/vehicles/11790920424243530/1.webp",
+        "publicPath": "/dealer-stock/11790920424243530-1.webp",
+        "destination": "dealer-stock/11790920424243530-1.webp",
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/vichenca-varna/media/11790920424243530-1.webp",
+        "sha256": "7088e48ff2b9f3e14340da4502dc4f2417d0f3fbb3b5e02c6be5cc719d6cca55",
+        "bytes": 198200
+      },
+      {
+        "sourceId": "11790920424243530",
+        "sourcePublicPath": "/assets/vehicles/11790920424243530/2.webp",
+        "publicPath": "/dealer-stock/11790920424243530-2.webp",
+        "destination": "dealer-stock/11790920424243530-2.webp",
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/vichenca-varna/media/11790920424243530-2.webp",
+        "sha256": "067f22b58d88b0d3093b7cfc26d2d5ba95b09d2b16f4a94b1fc0800196152eb9",
+        "bytes": 205824
+      }
+    ],
+    "branding": {
+      "acceptedManifest": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/evidence/final-logo-handoff.json",
+        "sha256": "b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a"
+      },
+      "originalGenerationReceipt": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/vichenca-varna/source/generation-receipt.json",
+        "sha256": "f16077095511d1f355a37929182702bffe6e22e67fc7bbfbce517e116e0225ff"
+      },
+      "noNewGeneration": true,
+      "modelVersion": null,
+      "pixelsUnchanged": true
+    },
+    "identity": null
+  }
+}

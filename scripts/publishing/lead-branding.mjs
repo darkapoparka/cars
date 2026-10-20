@@ -151,7 +151,7 @@ async function reviewedRasterPack(master,reviewedSurfaces,sharp){
 }
 const LEGACY_LOGO = /^\/(?:dealer-brand\/logo[^/]*\.(?:webp|png)|dealer-app\/logo[^/]*\.(?:webp|png)|branding\/logo-on-(?:light|dark|accent)\.(?:webp|png)|lead-logo(?:-inverse|-dark|-white)?\.png|brand\/daynight-wordmark\.svg)$/;
 const VERSIONED_BRAND_ASSET = /^((?:\/variant-[2-6])?)\/dealer-brand\/v2-[a-f0-9]{16}\/(logo-on-(?:light|dark)\.(?:png|webp)|logo-on-accent\.webp|mark-on-(?:light|dark)\.webp|app-icon\.png|apple-touch-icon\.png|favicon\.ico)$/;
-export function isBrandConsumerSource(name){return Object.keys(PUBLIC_ROOTS).some(key=>name.startsWith(key+'/'))&&/\.(?:json|ts|tsx|js|svelte|webmanifest|html)$/.test(name)&&!name.includes('/.template/')&&!name.includes('/.client/')&&!/\/dealer-brand\/v2-[a-f0-9]{16}\//.test(name)&&!/(?:^|\/)[^/]*(?:provenance|attribution|source-manifest)[^/]*\.json$/i.test(name);}
+export function isBrandConsumerSource(name){return Object.keys(PUBLIC_ROOTS).some(key=>name.startsWith(key+'/'))&&/\.(?:json|ts|tsx|js|svelte|webmanifest|html)$/.test(name)&&!name.includes('/.template/')&&!name.includes('/.client/')&&!/^[^/]+\/docs\//.test(name)&&!/\/dealer-brand\/v2-[a-f0-9]{16}\//.test(name)&&!/(?:^|\/)[^/]*(?:provenance|attribution|source-manifest)[^/]*\.json$/i.test(name);}
 function toneFor(path){return /on-accent/.test(path)?'on-accent':/(?:on-dark|logo-dark|inverse|white)/.test(path)?'on-dark':'on-light';}
 function currentBrandPath(old,publicBase){const versioned=old.match(VERSIONED_BRAND_ASSET);return versioned?versioned[1]+publicBase+'/'+versioned[2]:publicBase+'/logo-'+toneFor(old)+'.webp';}
 export async function applyLeadBranding(files,manifest,{master,sharp,readTemplate,generation,reviewedSurfaces}){

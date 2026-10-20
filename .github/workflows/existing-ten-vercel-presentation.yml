@@ -1,4 +1,4 @@
-name: Existing ten Vercel presentation release
+name: Existing Cars Vercel presentation release
 on:
   push:
     branches: [main]
@@ -15,46 +15,56 @@ jobs:
     outputs:
       dealers: ${{ steps.matrix.outputs.dealers }}
       pilots: ${{ steps.matrix.outputs.pilots }}
+      legacy_native: ${{ steps.matrix.outputs.legacy_native }}
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:
           persist-credentials: false
           sparse-checkout: |
             scripts
-            docs/releases/vercel-presentation-20261011
+            docs/releases
+            docs/DEPLOYMENT-INVENTORY.json
       - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
         with:
           node-version: '22.23.2'
           package-manager-cache: false
-      - run: node --test --test-concurrency=1 scripts/dealer-presentation.test.mjs scripts/dealer-contact-fallback.test.mjs scripts/client-logo-contract.test.mjs scripts/package-dealer.test.mjs scripts/six-design-release.test.mjs
+      - name: Focused runner and true native qualification admission checks
+        run: node --test --test-concurrency=1 scripts/vercel-refresh-runner.test.mjs scripts/vercel-preview-qualification.test.mjs
       - id: matrix
         shell: bash
         run: |
-          node --input-type=module <<'NODE' >> "$GITHUB_OUTPUT"
-          import fs from 'node:fs';
-          const r=JSON.parse(fs.readFileSync('docs/releases/vercel-presentation-20261011/request.json'));
-          if(r.dealers.length!==10||new Set(r.dealers.map(d=>d.slug)).size!==10)throw Error('Invalid ten-dealer scope');
-          console.log('dealers='+JSON.stringify({include:r.dealers.map(d=>({slug:d.slug}))}));
-          const nodes={'auto-best':'22.23.2',modern:'22.23.2',import:'24.21.0',app:'22.23.2',mobile:'22.23.2','karento-best':'24.21.0'};
-          console.log('pilots='+JSON.stringify({include:['promosale-varna','navara-car'].flatMap(slug=>Object.entries(nodes).map(([key,node])=>({slug,key,node})))}));
-          NODE
+          node scripts/prepare-vercel-presentation-release.mjs matrix >> "$GITHUB_OUTPUT"
   package:
     needs: plan
     runs-on: ubuntu-24.04
     timeout-minutes: 35
     strategy:
       fail-fast: false
-      max-parallel: 3
+      max-parallel: 2
       matrix: ${{ fromJSON(needs.plan.outputs.dealers) }}
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:
           persist-credentials: false
           filter: blob:none
+          fetch-depth: 0
           sparse-checkout: |
             scripts
             docs
             clients/${{ matrix.slug }}
+      - name: Exact registered independent source, never a Cars-owned copy
+        if: matrix.independent
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          repository: ${{ matrix.sourceRepository }}
+          ref: ${{ matrix.sourceCommit }}
+          token: ${{ secrets.CARS_PUBLISH_TOKEN }}
+          persist-credentials: false
+          path: runtime/independent-source/${{ matrix.slug }}
+      - name: Bound generated package capacity on this remote runner
+        run: |
+          free="$(df --output=avail -B1 "$GITHUB_WORKSPACE" | tail -n 1)"
+          [[ "$free" -ge 8589934592 ]] || { echo 'Remote runner has less than 8 GiB available'; exit 1; }
       - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
         with:
           node-version: '22.23.2'
@@ -68,7 +78,22 @@ jobs:
         env:
           NODE_PATH: ${{ github.workspace }}/runtime/vercel-tools/node_modules
           NODE_OPTIONS: --max-old-space-size=6144
+          CARS_PUBLISH_TOKEN: ${{ secrets.CARS_PUBLISH_TOKEN }}
+          GIT_AUTHOR_NAME: Cars release
+          GIT_AUTHOR_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
+          GIT_COMMITTER_NAME: Cars release
+          GIT_COMMITTER_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
         run: node scripts/prepare-vercel-presentation-release.mjs prepare '${{ matrix.slug }}'
+      - name: Retain exact error receipt without environment or credentials
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: vercel-diagnostic-${{ matrix.slug }}-${{ github.run_id }}
+          path: |
+            runtime/vercel-presentation/${{ matrix.slug }}/diagnostic.json
+            runtime/vercel-presentation/${{ matrix.slug }}/package-cli.log
+          if-no-files-found: ignore
+          retention-days: 3
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
           name: vercel-package-${{ matrix.slug }}-${{ github.run_id }}
@@ -77,6 +102,7 @@ jobs:
           retention-days: 7
           compression-level: 0
   native:
+    if: needs.plan.outputs.legacy_native == 'true'
     needs: [plan, package]
     runs-on: ubuntu-24.04
     timeout-minutes: 40

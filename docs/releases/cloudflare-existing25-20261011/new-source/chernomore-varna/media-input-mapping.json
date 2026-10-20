@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "dealer": "chernomore-varna",
+  "media": [
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/chernomore-varna/media/21771946973449498-1.webp",
+      "sha256": "67dbce48d2d5d888418025f7acdb35a17b33bf7143a23d10531f10d5f8b7887a",
+      "bytes": 379600,
+      "destination": "dealer-stock/21771946973449498-1.webp"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/chernomore-varna/media/21771946973449498-2.webp",
+      "sha256": "de8063c17612d20d97979c801a8e324dbb08658d9766313414fb4fb9e25f831b",
+      "bytes": 318232,
+      "destination": "dealer-stock/21771946973449498-2.webp"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/chernomore-varna/media/11779358576885782-1.webp",
+      "sha256": "b357bf8fe9988a1911687af7e49d3c221094e10b318455ace11c6581a038d658",
+      "bytes": 492922,
+      "destination": "dealer-stock/11779358576885782-1.webp"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/chernomore-varna/media/11779358576885782-2.webp",
+      "sha256": "bed431e8c84368d08d250c5768095ca9769f69ab40c93d3a2415460f92bfb3d6",
+      "bytes": 386692,
+      "destination": "dealer-stock/11779358576885782-2.webp"
+    }
+  ]
+}

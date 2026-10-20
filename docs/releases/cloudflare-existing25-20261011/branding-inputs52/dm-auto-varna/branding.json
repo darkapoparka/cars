@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "dealer": "dm-auto-varna",
+  "reviewed": true,
+  "reviewedAt": "2026-10-11T13:30:47.588Z",
+  "reviewScope": "Hash-identical selected current raster inputs and retained genuine surface-review provenance only; actual dealer integration, native and hosted checks pending.",
+  "officialDealerArtwork": false,
+  "dealerApproval": false,
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "generation": {
+    "tool": "image_gen",
+    "generationId": "exec-d7409a17-a2a9-4ee3-90a6-a651a8f8b56c",
+    "modelVersion": null,
+    "sourceSha256": "4d8e428c4bb1ba2ccb9a92bd6ea5f8b427d96ddbdd7aa69fbc8d536687f01349",
+    "sourceRole": "Native ImageGen output behind exact retained selected raster; no new generation or claimed model version.",
+    "nativeOutput": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/dm-auto-varna/source/native-onLight.png",
+      "sha256": "4d8e428c4bb1ba2ccb9a92bd6ea5f8b427d96ddbdd7aa69fbc8d536687f01349"
+    },
+    "originalGenerationReceipt": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/dm-auto-varna/source/generation-receipt.json",
+      "sha256": "40bf54c99d17c48efadf5b6d3e597e28e97caa1f0e88ac1762538c951f271b5b"
+    },
+    "derivation": "one ImageGen master exported to context raster"
+  },
+  "master": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/dm-auto-varna/branding/master.png",
+    "sha256": "a9bd8afe03d6c95ad737a9c27b11ff168dbbdd853b23e3a9ae00cc70c0f14874"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/dm-auto-varna/branding/onLight.png",
+      "sha256": "a9bd8afe03d6c95ad737a9c27b11ff168dbbdd853b23e3a9ae00cc70c0f14874",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/dm-auto-varna/source/generation-receipt.json#sha256=40bf54c99d17c48efadf5b6d3e597e28e97caa1f0e88ac1762538c951f271b5b; exact selected handoff b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-d7409a17-a2a9-4ee3-90a6-a651a8f8b56c",
+        "modelVersion": null,
+        "sourceSha256": "4d8e428c4bb1ba2ccb9a92bd6ea5f8b427d96ddbdd7aa69fbc8d536687f01349",
+        "sourceRole": "Native ImageGen output behind exact retained selected raster; no new generation or claimed model version.",
+        "nativeOutput": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/dm-auto-varna/source/native-onLight.png",
+          "sha256": "4d8e428c4bb1ba2ccb9a92bd6ea5f8b427d96ddbdd7aa69fbc8d536687f01349"
+        },
+        "originalGenerationReceipt": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/dm-auto-varna/source/generation-receipt.json",
+          "sha256": "40bf54c99d17c48efadf5b6d3e597e28e97caa1f0e88ac1762538c951f271b5b"
+        },
+        "derivation": "one ImageGen master exported to context raster"
+      }
+    },
+    "onDark": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/dm-auto-varna/branding/onDark.png",
+      "sha256": "835e3481cd2e5ae616f31f807789c3e7fcfa60b9e244040c1c8d31b916b5c39f",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/dm-auto-varna/source/generation-receipt.json#sha256=40bf54c99d17c48efadf5b6d3e597e28e97caa1f0e88ac1762538c951f271b5b; exact selected handoff b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-d7409a17-a2a9-4ee3-90a6-a651a8f8b56c",
+        "modelVersion": null,
+        "sourceSha256": "4d8e428c4bb1ba2ccb9a92bd6ea5f8b427d96ddbdd7aa69fbc8d536687f01349",
+        "sourceRole": "Native ImageGen output behind exact retained selected raster; no new generation or claimed model version.",
+        "nativeOutput": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/dm-auto-varna/source/native-onDark.png",
+          "sha256": "4d8e428c4bb1ba2ccb9a92bd6ea5f8b427d96ddbdd7aa69fbc8d536687f01349"
+        },
+        "originalGenerationReceipt": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/dm-auto-varna/source/generation-receipt.json",
+          "sha256": "40bf54c99d17c48efadf5b6d3e597e28e97caa1f0e88ac1762538c951f271b5b"
+        },
+        "derivation": "one ImageGen master exported to context raster"
+      }
+    },
+    "onAccent": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/dm-auto-varna/branding/onAccent.png",
+      "sha256": "835e3481cd2e5ae616f31f807789c3e7fcfa60b9e244040c1c8d31b916b5c39f",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/dm-auto-varna/source/generation-receipt.json#sha256=40bf54c99d17c48efadf5b6d3e597e28e97caa1f0e88ac1762538c951f271b5b; exact selected handoff b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-d7409a17-a2a9-4ee3-90a6-a651a8f8b56c",
+        "modelVersion": null,
+        "sourceSha256": "4d8e428c4bb1ba2ccb9a92bd6ea5f8b427d96ddbdd7aa69fbc8d536687f01349",
+        "sourceRole": "Native ImageGen output behind exact retained selected raster; no new generation or claimed model version.",
+        "nativeOutput": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/dm-auto-varna/source/native-onAccent.png",
+          "sha256": "4d8e428c4bb1ba2ccb9a92bd6ea5f8b427d96ddbdd7aa69fbc8d536687f01349"
+        },
+        "originalGenerationReceipt": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/dm-auto-varna/source/generation-receipt.json",
+          "sha256": "40bf54c99d17c48efadf5b6d3e597e28e97caa1f0e88ac1762538c951f271b5b"
+        },
+        "derivation": "one ImageGen master exported to context raster"
+      }
+    }
+  },
+  "originalGenerationReceipt": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/dm-auto-varna/source/generation-receipt.json",
+    "sha256": "40bf54c99d17c48efadf5b6d3e597e28e97caa1f0e88ac1762538c951f271b5b"
+  },
+  "acceptedLogoManifest": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/evidence/final-logo-handoff.json",
+    "sha256": "b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a"
+  },
+  "assetReview": {
+    "status": "completed",
+    "owner": "existing",
+    "proof": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/dm-auto-varna/surface-review.png",
+      "sha256": "293ee43817d9669c9670fb0deafd77fb110201c40cc8b2afc726c83f30ff10fb",
+      "bytes": 116715,
+      "width": 740,
+      "height": 864,
+      "format": "png",
+      "hasAlpha": true
+    },
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "scope": "Actual master and compact native-palette swatches inspected; retained pixels remain identical.",
+    "report": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/final-existing-review.json"
+  },
+  "sourceOwnershipUnchanged": true
+}

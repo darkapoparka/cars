@@ -24,7 +24,7 @@ export default function SellCarEntry({onClick, expanded}: {onClick: () => void; 
 const s = stylex.create({
   phone: {display: {[media.mobile]: 'block', default: 'none'}},
   wider: {display: {[media.mobile]: 'none', default: 'block'}},
-  entry: {display: 'flex', alignItems: 'center', gap: 12, width: '100%', minHeight: 76, padding: 12, color: $.ink, fontFamily: $.fontSans, textAlign: 'left', borderWidth: 0, borderRadius: 18, backgroundColor: {default: '#f4f4f5', ':hover': '#eaeaed'}, cursor: 'pointer', outline: {default: 'none', ':focus-visible': '2px solid #242428'}, outlineOffset: -4},
+  entry: {display: 'flex', alignItems: 'center', gap: 12, width: '100%', minHeight: 76, padding: 12, color: $.ink, fontFamily: $.fontSans, textAlign: 'left', borderWidth: 0, borderRadius: 18, backgroundColor: {default: $.surfaceAlt, ':hover': $.line}, cursor: 'pointer', outline: {default: 'none', ':focus-visible': '2px solid #242428'}, outlineOffset: -4},
   car: {flexShrink: 0, width: 32, color: $.muted},
   copy: {display: 'flex', flexDirection: 'column', flexGrow: 1, gap: 2, minWidth: 0},
   title: {fontSize: 16, fontWeight: 500, lineHeight: '22px'},

@@ -164,7 +164,7 @@ export function SellContactHandoff({
                 )}
                 <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
                   <a
-                    className="inline-flex min-h-11 items-center justify-center gap-2 rounded-lg bg-brand px-5 font-semibold text-brand-foreground text-sm transition-colors hover:bg-[var(--lead-site-accent-hover)] hover:text-[var(--brand-hover-foreground)] focus-visible:outline-2 focus-visible:outline-[var(--lead-site-accent)] focus-visible:outline-offset-3"
+                    className="inline-flex min-h-11 items-center justify-center gap-2 rounded-lg bg-primary px-5 font-semibold text-primary-foreground text-sm transition-colors hover:bg-[var(--primary-hover)] hover:text-[var(--primary-hover-foreground)] focus-visible:outline-2 focus-visible:outline-[var(--lead-site-accent)] focus-visible:outline-offset-3"
                     href={withBasePath(leadSite.phoneHref)}
                   >
                     <Phone aria-hidden="true" className="size-4" />

@@ -21,6 +21,7 @@ const logos: Record<string, BrandArtwork> = {
   jac: {src: '/brands/emblems/jac.png', sourceSize: [1920, 1080], symbolViewBox: '358 308 1204 464', wide: true},
   jeep: {src: '/brands/emblems/jeep.svg', sourceSize: [24, 24], symbolViewBox: '0 7 24 10', wide: true},
   kia: {src: '/reference-assets/sell-brand-8.png', presentation: 'framed', sourceSize: [249, 216], frameViewBox: '28.5 12 192 192', plainSymbolViewBox: '50 88 149 40'},
+  lamborghini: {src: '/brands/emblems/lamborghini-approved-b1.webp', sourceSize: [120, 120], symbolViewBox: '0 0 120 120'},
   'land rover': {src: '/brands/emblems/land-rover.svg', sourceSize: [227, 119], symbolViewBox: '0 0 227 119', wide: true},
   lexus: {src: '/brands/emblems/lexus.png', sourceSize: [1920, 1080], symbolViewBox: '675 207 568 406'},
   mazda: {src: '/brands/emblems/mazda.svg', sourceSize: [24, 24], symbolViewBox: '0 2 24 20'},
@@ -39,5 +40,7 @@ const logos: Record<string, BrandArtwork> = {
 };
 
 export function brandLogo(make: string): BrandArtwork | undefined {
-  return logos[make.trim().toLowerCase()];
+  const key = make.trim().toLowerCase();
+  // Retained dealer inventory spells Land Rover as make=Land; keep inventory/filter IDs intact.
+  return logos[key === 'land' ? 'land rover' : key];
 }

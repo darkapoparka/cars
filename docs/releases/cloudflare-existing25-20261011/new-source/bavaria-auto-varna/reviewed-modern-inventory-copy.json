@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "dealer": "bavaria-auto-varna",
+  "copy": {
+    "bavaria-auto-varna-11789996935203115": {
+      "sourceDescription": "VW Touran 1.6 LPG/Petrol от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+      "en": {
+        "description": "VW Touran 1.6 LPG/Petrol from a dated public advert. Confirm condition, price and availability directly with the dealership.",
+        "imageAlts": [
+          "VW Touran 1.6 LPG/Petrol — dated public advert photo 1",
+          "VW Touran 1.6 LPG/Petrol — dated public advert photo 2"
+        ]
+      },
+      "bg": {
+        "description": "VW Touran 1.6 LPG/Petrol от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+        "imageAlts": [
+          "VW Touran 1.6 LPG/Petrol — снимка от датирана публична обява 1",
+          "VW Touran 1.6 LPG/Petrol — снимка от датирана публична обява 2"
+        ]
+      }
+    },
+    "bavaria-auto-varna-11787839012622133": {
+      "sourceDescription": "Dacia Lodgy 1.5 dCi от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+      "en": {
+        "description": "Dacia Lodgy 1.5 dCi from a dated public advert. Confirm condition, price and availability directly with the dealership.",
+        "imageAlts": [
+          "Dacia Lodgy 1.5 dCi — dated public advert photo 1",
+          "Dacia Lodgy 1.5 dCi — dated public advert photo 2"
+        ]
+      },
+      "bg": {
+        "description": "Dacia Lodgy 1.5 dCi от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+        "imageAlts": [
+          "Dacia Lodgy 1.5 dCi — снимка от датирана публична обява 1",
+          "Dacia Lodgy 1.5 dCi — снимка от датирана публична обява 2"
+        ]
+      }
+    }
+  },
+  "consumer": "facts.business.modernInventoryCopy",
+  "donorCopyRetained": false
+}

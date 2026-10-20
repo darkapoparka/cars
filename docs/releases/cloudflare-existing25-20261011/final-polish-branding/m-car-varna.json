@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "dealer": "m-car-varna",
+  "reviewed": true,
+  "reviewedAt": "2026-10-14T11:56:24.553Z",
+  "sourceMode": "retained-or-mixed-raster",
+  "master": {
+    "path": "docs/logo-polish-2026-10-14/parallel/cf-last50/m-car-varna/logo-on-light.png",
+    "sha256": "1ba684252f80efe6fc1caca61e79942a2511d4445c2c06ba36ae3391da4ec512"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "docs/logo-polish-2026-10-14/parallel/cf-last50/m-car-varna/logo-on-light.png",
+      "sha256": "1ba684252f80efe6fc1caca61e79942a2511d4445c2c06ba36ae3391da4ec512",
+      "sourceReference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/parallel/cf-last50/m-car-varna/logo-on-light.png",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-e9d88377-36a7-47ab-9f0f-b728059b6e31",
+        "modelVersion": null
+      }
+    },
+    "onDark": {
+      "path": "docs/logo-polish-2026-10-14/parallel/cf-last50/m-car-varna/logo-on-dark.png",
+      "sha256": "c9f2fac5283cb0111840d8cf9b257ceee26f80d034c280f2dfc2c99bc425231c",
+      "sourceReference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/parallel/cf-last50/m-car-varna/logo-on-dark.png",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-e9d88377-36a7-47ab-9f0f-b728059b6e31",
+        "modelVersion": null
+      }
+    },
+    "onAccent": {
+      "path": "docs/logo-polish-2026-10-14/parallel/cf-last50/m-car-varna/logo-on-accent.png",
+      "sha256": "6a3d6f7894fa99765b85f1415d98c2f436a9f6ea7fa08733b5229778f879dd23",
+      "sourceReference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/parallel/cf-last50/m-car-varna/logo-on-accent.png",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-e9d88377-36a7-47ab-9f0f-b728059b6e31",
+        "modelVersion": null
+      }
+    }
+  },
+  "assets": {
+    "app-icon.png": {
+      "path": "docs/logo-polish-2026-10-14/parallel/cf-last50/m-car-varna/app-icon.png",
+      "sha256": "97cc217fc6b2185e4359e30b207b53b88de904c90d3fb7fa4a4258f8a3bb7624",
+      "sourceReference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/parallel/cf-last50/m-car-varna/app-icon.png",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/parallel/cf-last50/m-car-varna/app-icon.png",
+        "sha256": "97cc217fc6b2185e4359e30b207b53b88de904c90d3fb7fa4a4258f8a3bb7624",
+        "reviewReference": "docs/logo-polish-2026-10-14/parallel/cf-last50/m-car-varna/reviewed-pack.json",
+        "reviewSha256": "48841649ec23a9aa5d894ecf0cea62a9bbeb04a06c2a640998b5de73e21ac0e0"
+      }
+    },
+    "apple-touch-icon.png": {
+      "path": "docs/logo-polish-2026-10-14/parallel/cf-last50/m-car-varna/apple-touch-icon.png",
+      "sha256": "52745390e657e07605550a245a0eb2d233ba6c066b5133abf466c4d7ed12dfc0",
+      "sourceReference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/parallel/cf-last50/m-car-varna/apple-touch-icon.png",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/parallel/cf-last50/m-car-varna/apple-touch-icon.png",
+        "sha256": "52745390e657e07605550a245a0eb2d233ba6c066b5133abf466c4d7ed12dfc0",
+        "reviewReference": "docs/logo-polish-2026-10-14/parallel/cf-last50/m-car-varna/reviewed-pack.json",
+        "reviewSha256": "48841649ec23a9aa5d894ecf0cea62a9bbeb04a06c2a640998b5de73e21ac0e0"
+      }
+    },
+    "favicon.ico": {
+      "path": "docs/logo-polish-2026-10-14/parallel/cf-last50/m-car-varna/favicon.ico",
+      "sha256": "443249f940ee7f813dd63edde0b18965fda2ecde823a060660d608934d2b9302",
+      "sourceReference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/parallel/cf-last50/m-car-varna/favicon.ico",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/parallel/cf-last50/m-car-varna/favicon.ico",
+        "sha256": "443249f940ee7f813dd63edde0b18965fda2ecde823a060660d608934d2b9302",
+        "reviewReference": "docs/logo-polish-2026-10-14/parallel/cf-last50/m-car-varna/reviewed-pack.json",
+        "reviewSha256": "48841649ec23a9aa5d894ecf0cea62a9bbeb04a06c2a640998b5de73e21ac0e0"
+      }
+    },
+    "mark-on-dark.webp": {
+      "path": "docs/logo-polish-2026-10-14/parallel/cf-last50/m-car-varna/mark-on-dark.webp",
+      "sha256": "b924816b9903c787a0b61222bedb341f0995828d90993ecc71d457469408c436",
+      "sourceReference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/parallel/cf-last50/m-car-varna/mark-on-dark.webp",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/parallel/cf-last50/m-car-varna/mark-on-dark.webp",
+        "sha256": "b924816b9903c787a0b61222bedb341f0995828d90993ecc71d457469408c436",
+        "reviewReference": "docs/logo-polish-2026-10-14/parallel/cf-last50/m-car-varna/reviewed-pack.json",
+        "reviewSha256": "48841649ec23a9aa5d894ecf0cea62a9bbeb04a06c2a640998b5de73e21ac0e0"
+      }
+    },
+    "mark-on-light.webp": {
+      "path": "docs/logo-polish-2026-10-14/parallel/cf-last50/m-car-varna/mark-on-light.webp",
+      "sha256": "22b021b1de3ca1e0df1ace0f710dbabb9c9130ec257ea50908a23133973283c7",
+      "sourceReference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/parallel/cf-last50/m-car-varna/mark-on-light.webp",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/parallel/cf-last50/m-car-varna/mark-on-light.webp",
+        "sha256": "22b021b1de3ca1e0df1ace0f710dbabb9c9130ec257ea50908a23133973283c7",
+        "reviewReference": "docs/logo-polish-2026-10-14/parallel/cf-last50/m-car-varna/reviewed-pack.json",
+        "reviewSha256": "48841649ec23a9aa5d894ecf0cea62a9bbeb04a06c2a640998b5de73e21ac0e0"
+      }
+    }
+  },
+  "mark": {
+    "path": "docs/logo-polish-2026-10-14/parallel/cf-last50/m-car-varna/generated-mark.png",
+    "sha256": "4f03e68a7722504dd610b623149474b2c970ddf702d0c9845e7d488e9cfe5281",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-e9d88377-36a7-47ab-9f0f-b728059b6e31",
+      "modelVersion": null
+    }
+  }
+}

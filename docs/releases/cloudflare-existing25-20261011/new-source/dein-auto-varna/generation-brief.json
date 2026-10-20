@@ -1,0 +1,15 @@
+{
+  "slug": "dein-auto-varna",
+  "prompt": "Prepare a clean transparent light-surface treatment of this exact existing DeinAuto / BestAutos logo. Preserve the recognizable original rounded lettering and exact words 'DeinAuto' and 'BestAutos', with the original dark-blue primary and lighter-blue secondary colors. Improve only raster clarity and transparent background; compose a compact readable balanced horizontal lockup, preserving the existing identity rather than inventing a new emblem. Remove the white opaque panel and excess margins. No new slogans, manufacturer badges, phone, claims, shadows or gradient. True transparent RGBA background.",
+  "reference": "E:/Temp/cars-fleet-01a12a02-priselci-integration16-1/fleet-100-status/additional25-qualification/batch3/references/dein-auto-varna-original-logo.pic",
+  "dark": {
+    "generationId": "exec-4c761c9f-454e-4961-bb7f-687285c87f72",
+    "sourcePath": "C:/Users/radev/.codex/generated_images/01a12d64-9c2d-7b03-85e1-619a359e6894/exec-4c761c9f-454e-4961-bb7f-687285c87f72.png"
+  },
+  "referenceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h17165593662536988.pic",
+  "white": {
+    "generationId": "exec-58ec4c8b-c486-4d76-a0bc-8908543efc01",
+    "sourcePath": "C:/Users/radev/.codex/generated_images/01a12d64-9c2d-7b03-85e1-619a359e6894/exec-58ec4c8b-c486-4d76-a0bc-8908543efc01.png",
+    "prompt": "Edit this exact logo into its matched dark-surface treatment. Preserve all exact lettering, typography, proportions and geometry. Change dark lettering/artwork to pure white, preserving any original colored accent that remains clearly readable. No extra text, redesign, glow, shadow, fringe or backdrop. True transparent RGBA background."
+  }
+}

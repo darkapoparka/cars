@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "dealer": "elegantcar-varna",
+  "reviewed": true,
+  "reviewedAt": "2026-10-14T11:56:24.553Z",
+  "sourceMode": "retained-or-mixed-raster",
+  "master": {
+    "path": "docs/logo-polish-2026-10-14/final-raster-inputs/a8bd9ac35941d815bfa1f44fceddcf39d9fea9d6acdea588e4e52872ec5f6978.png",
+    "sha256": "a8bd9ac35941d815bfa1f44fceddcf39d9fea9d6acdea588e4e52872ec5f6978"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "docs/logo-polish-2026-10-14/final-raster-inputs/a8bd9ac35941d815bfa1f44fceddcf39d9fea9d6acdea588e4e52872ec5f6978.png",
+      "sha256": "a8bd9ac35941d815bfa1f44fceddcf39d9fea9d6acdea588e4e52872ec5f6978",
+      "sourceReference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/live-assets/09ffefb47eb9178fe60a99d6487286a4807965c22827c524f081c004cdc9bdbf.webp",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/live-assets/09ffefb47eb9178fe60a99d6487286a4807965c22827c524f081c004cdc9bdbf.webp",
+        "sha256": "09ffefb47eb9178fe60a99d6487286a4807965c22827c524f081c004cdc9bdbf",
+        "reviewReference": "docs/logo-polish-2026-10-14/final-selection.json",
+        "reviewSha256": "6e396eef77195ab7f44d6b055c1936fa079a8195a428a95151fdfd7f3f5d1a16"
+      }
+    },
+    "onDark": {
+      "path": "docs/logo-polish-2026-10-14/final-raster-inputs/d9aeebf807c99e0f5fe0508481c56dc2c31dea3e12ff878a4dabea58a059da6f.png",
+      "sha256": "d9aeebf807c99e0f5fe0508481c56dc2c31dea3e12ff878a4dabea58a059da6f",
+      "sourceReference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/live-assets/0def42d6ee58a9fbe33b336554e790c2a992eb9124169e0f2829a62d93e9d2a0.webp",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/live-assets/0def42d6ee58a9fbe33b336554e790c2a992eb9124169e0f2829a62d93e9d2a0.webp",
+        "sha256": "0def42d6ee58a9fbe33b336554e790c2a992eb9124169e0f2829a62d93e9d2a0",
+        "reviewReference": "docs/logo-polish-2026-10-14/final-selection.json",
+        "reviewSha256": "6e396eef77195ab7f44d6b055c1936fa079a8195a428a95151fdfd7f3f5d1a16"
+      }
+    },
+    "onAccent": {
+      "path": "docs/logo-polish-2026-10-14/final-raster-inputs/79848c59b40989af460904f05bb52dd3f8cda564578fcc7d565c667bc6e080ae.png",
+      "sha256": "79848c59b40989af460904f05bb52dd3f8cda564578fcc7d565c667bc6e080ae",
+      "sourceReference": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/elegantcar-varna/dealer-brand/logo-on-accent.webp",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/elegantcar-varna/dealer-brand/logo-on-accent.webp",
+        "sha256": "1314966d62c5f8c4ec6867e0c45949e6931e21a1231ad2ec29903bbd2501f86f",
+        "reviewReference": "docs/logo-polish-2026-10-14/final-selection.json",
+        "reviewSha256": "6e396eef77195ab7f44d6b055c1936fa079a8195a428a95151fdfd7f3f5d1a16"
+      }
+    }
+  }
+}

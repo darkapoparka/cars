@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "resolutions": {
+    "auto-best/localization/common.json": "template",
+    "auto-best/localization/generated-manifest.json": "template",
+    "auto-best/src/lib/components/vehicles/VehicleCard.svelte": "template",
+    "auto-best/src/lib/config/brand.ts": "template",
+    "auto-best/src/lib/config/locale.ts": "template",
+    "auto-best/src/lib/data/company.ts": "template",
+    "auto-best/src/lib/data/dealer-profile.json": "template",
+    "modern/apps/web/app/[locale]/layout.tsx": "template",
+    "modern/apps/web/app/[locale]/sell/page.tsx": "template",
+    "modern/packages/marketplace-domain/testing/dealer-profile.json": "template",
+    "modern/packages/marketplace-domain/testing/mock-data.ts": "template",
+    "modern/packages/marketplace-ui/components/dealer-mobile-brand-bar.tsx": "template",
+    "modern/packages/marketplace/content/inventory-copy.ts": "template",
+    "modern/packages/marketplace/lead-site.ts": "template",
+    "modern/packages/marketplace/mock-directory.ts": "template",
+    "import/src/lib/auxero/home-five.ts": "template",
+    "import/src/lib/config/dealer.ts": "template",
+    "import/src/lib/content/extra-localized.ts": "template",
+    "import/src/lib/data/dealer-profile.json": "template",
+    "import/src/lib/i18n/messages.ts": "template",
+    "import/src/routes/offer/+page.svelte": "template",
+    "app/components/VehicleCard.tsx": "template",
+    "app/components/VehicleDetailClient.tsx": "template",
+    "app/lib/dealer.json": "template",
+    "mobile/src/lib/dealer-inventory.json": "template",
+    "mobile/src/lib/dealers.ts": "template",
+    "mobile/src/lib/showroom-config.ts": "template",
+    "karento-best/src/lib/content.ts": "template",
+    "karento-best/src/lib/data/dealer-detail.ts": "template",
+    "karento-best/src/lib/data/vehicle-detail.ts": "template",
+    "auto-best/static/dealer-brand/app-icon.png": "template",
+    "auto-best/static/favicon.ico": "template",
+    "modern/apps/web/public/dealer-brand/app-icon.png": "template",
+    "modern/apps/web/public/lead-logo.png": "template",
+    "import/static/dealer-brand/app-icon.png": "template",
+    "app/public/dealer-brand/app-icon.png": "template",
+    "mobile/public/dealer-brand/app-icon.png": "template",
+    "karento-best/static/dealer-brand/app-icon.png": "template",
+    "auto-best/src/lib/components/company/AboutProcess.svelte": "template"
+  },
+  "factualConsumerResolutions": {
+    "schemaVersion": 1,
+    "kind": "cars-factual-consumer-classifications",
+    "reviewed": true,
+    "dealer": "motherwell-motors-castle",
+    "baseline": {
+      "commit": "623fb387bd45d41b953a491446448d391469c05b",
+      "tree": "199bd6aa4da3a71f90a626f06e46a97ffc9a8b20"
+    },
+    "targetSources": {
+      "auto-best": {
+        "repository": "darkapoparka/cars",
+        "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+        "path": "templates/auto-best",
+        "digest": "2fc9c3cfc9cf1976dbe30c08592776362e5bcc6b09e8b06620e57c4406df58a5",
+        "tree": "78fa1a82eca14816449f9588283260840ee94f52"
+      },
+      "modern": {
+        "repository": "darkapoparka/cars",
+        "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+        "path": "templates/modern",
+        "digest": "30e1a99f857cc25e4d78c9459cfb4394a9f70c5b114196a5ca6325ff38823b4b",
+        "tree": "01eac7390fa6ba951d4b8d4c26159a9be150f6c8"
+      },
+      "import": {
+        "repository": "darkapoparka/cars",
+        "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+        "path": "templates/import",
+        "digest": "c7d6c93214e859aa2747af8f5e068b6a0b8ca095d6328c807728a4d531d688f8",
+        "tree": "d841ddfe5bec918bf6b2c19fd6971fecd6b8e54d"
+      },
+      "app": {
+        "repository": "darkapoparka/cars",
+        "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+        "path": "templates/app",
+        "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1",
+        "tree": "7f3d3ffa40546635377e6c5225194fe06fead291"
+      },
+      "mobile": {
+        "repository": "darkapoparka/cars",
+        "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+        "path": "templates/mobile",
+        "digest": "f5a3e541a7c648a4c2899ad3893e22a3806027a9f66d95fa4e8c74b2226635b6",
+        "tree": "792bfdd1d8eb22aabd90c7e3a0c0779a6c1c36f3"
+      },
+      "karento-best": {
+        "repository": "darkapoparka/cars",
+        "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+        "path": "templates/karento-best",
+        "digest": "be17ef365e3272753df6e50826b139a45bfc32b8fef54ddcb86d977ad16280a9",
+        "tree": "8c5ac869c7fd15e19a80c660343fc64b20a2bad9"
+      }
+    },
+    "paths": [
+      {
+        "path": "modern/packages/marketplace-domain/site-config.ts",
+        "choice": "preserve-current",
+        "classification": "schema-policy",
+        "originalSha256": "8d91c2fb6450378b0700346e99dddc80c1bc6e2266dc30749afeee8b9fedf4a6",
+        "oldSha256": "f5ba81f7fd6ebd2c881804a95f88986673f5eb1f17222859041be9e68f4e8293",
+        "targetSha256": "52e948eabb639a7ae9cf80685daeb7603fc8828b300aee3426011f3c229e6b5f",
+        "mergedSha256": "8d91c2fb6450378b0700346e99dddc80c1bc6e2266dc30749afeee8b9fedf4a6"
+      }
+    ]
+  }
+}

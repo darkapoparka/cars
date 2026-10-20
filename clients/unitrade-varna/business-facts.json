@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "slug": "unitrade-varna",
+  "dealerId": "unitrade-varna",
+  "business": {
+    "schemaVersion": 1,
+    "slug": "unitrade-varna",
+    "name": "УНИТРЕЙД",
+    "shortName": "УНИТРЕЙД",
+    "city": "Варна",
+    "country": "BG",
+    "countryCode": "BG",
+    "locale": "bg-BG",
+    "currency": "EUR",
+    "distanceUnit": "km",
+    "phone": "0887479224",
+    "phoneDisplay": "0887479224",
+    "phoneE164": "+359887479224",
+    "phones": [
+      "0887479224"
+    ],
+    "addressLine": "бул. Цар Освободител-след последния светофар за Владиславово 200 метра вляво",
+    "address": "бул. Цар Освободител-след последния светофар за Владиславово 200 метра вляво, Варна, България",
+    "hours": "Потвърдете работното време директно с автокъщата.",
+    "email": "",
+    "sourceUrl": "https://unitrade.mobile.bg/",
+    "stockUrl": "https://unitrade.mobile.bg/",
+    "contactSourceUrl": "https://unitrade.mobile.bg/contacts",
+    "observedAt": "2026-10-11T11:54:04.294Z",
+    "inventoryNotice": "Датирана извадка от публични обяви, не складова система в реално време. Потвърдете цената, ДДС и наличността.",
+    "previewNotice": "Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация.",
+    "services": [],
+    "socialLinks": {},
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sourceFacts": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/unitrade-varna/source/business-facts.json",
+    "sha256": "c146e424765d1b631d694b308929750708240865904446926269ebc14c239da9"
+  },
+  "originalBusinessLiteralsUnchanged": true
+}

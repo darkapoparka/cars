@@ -1,0 +1,667 @@
+{
+  "schemaVersion": 1,
+  "type": "cars-m2-existing-worker-head-confirmation",
+  "startedAt": "2026-10-19T21:38:38.985279Z",
+  "finishedAt": "2026-10-19T21:38:41.744380Z",
+  "providerWrites": 0,
+  "existingWorkersChanged": false,
+  "transport": "urllib through the configured proxy with HTTPRedirectHandler.redirect_request returning None; explicit same-origin redirect loop recreates Request(method=originalMethod) at every hop",
+  "requestHeaders": {
+    "User-Agent": "Mozilla/5.0",
+    "Accept": "*/*",
+    "Accept-Encoding": "identity"
+  },
+  "scope": "Anonymous GET and HEAD requests to the three owner-named existing live origins only. No forms or write methods.",
+  "headBodyNote": "The HTTP client applies HEAD framing and records zero response-body bytes. Status is read directly at every hop before any explicit redirect.",
+  "priorTransportLimitation": "Direct TLS without the configured proxy could not resolve the three hostnames; that failed attempt yielded no HTTP observations.",
+  "observations": [
+    {
+      "slug": "kolarov-cars",
+      "method": "HEAD",
+      "origin": "https://kolarov-cars.webpreviews.site",
+      "startedAt": "2026-10-19T21:38:38.994910Z",
+      "hops": [
+        {
+          "url": "https://kolarov-cars.webpreviews.site/",
+          "method": "HEAD",
+          "checkedAt": "2026-10-19T21:38:39.892476Z",
+          "httpStatus": 307,
+          "statusText": "Temporary Redirect",
+          "headers": {
+            "location": "/bg",
+            "cache-control": "private, no-store",
+            "content-language": "bg",
+            "x-robots-tag": "noindex, nofollow",
+            "cf-ray": "a4d2ee523e005fe3-SJC",
+            "server": "envoy"
+          },
+          "observedBodyBytes": 0,
+          "bodyReadTruncated": false,
+          "elapsedMs": 885
+        },
+        {
+          "url": "https://kolarov-cars.webpreviews.site/bg",
+          "method": "HEAD",
+          "checkedAt": "2026-10-19T21:38:40.062959Z",
+          "httpStatus": 200,
+          "statusText": "OK",
+          "headers": {
+            "content-type": "text/html",
+            "cache-control": "private, no-store",
+            "content-language": "bg",
+            "vary": "Cookie, Accept-Language",
+            "x-robots-tag": "noindex, nofollow",
+            "cf-ray": "a4d2ee576b3acf1b-SJC",
+            "server": "envoy"
+          },
+          "observedBodyBytes": 0,
+          "bodyReadTruncated": false,
+          "elapsedMs": 170
+        }
+      ],
+      "success": true,
+      "httpStatus": 200,
+      "finalUrl": "https://kolarov-cars.webpreviews.site/bg",
+      "finishedAt": "2026-10-19T21:38:40.063021Z"
+    },
+    {
+      "slug": "kolarov-cars",
+      "method": "GET",
+      "origin": "https://kolarov-cars.webpreviews.site",
+      "startedAt": "2026-10-19T21:38:39.005173Z",
+      "hops": [
+        {
+          "url": "https://kolarov-cars.webpreviews.site/",
+          "method": "GET",
+          "checkedAt": "2026-10-19T21:38:39.898155Z",
+          "httpStatus": 307,
+          "statusText": "Temporary Redirect",
+          "headers": {
+            "location": "/bg",
+            "content-length": "0",
+            "cache-control": "private, no-store",
+            "content-language": "bg",
+            "x-robots-tag": "noindex, nofollow",
+            "cf-ray": "a4d2ee523a92cf1b-SJC",
+            "server": "envoy"
+          },
+          "observedBodyBytes": 0,
+          "bodyReadTruncated": false,
+          "elapsedMs": 863
+        },
+        {
+          "url": "https://kolarov-cars.webpreviews.site/bg",
+          "method": "GET",
+          "checkedAt": "2026-10-19T21:38:40.134726Z",
+          "httpStatus": 200,
+          "statusText": "OK",
+          "headers": {
+            "content-type": "text/html",
+            "cache-control": "private, no-store",
+            "content-language": "bg",
+            "vary": "Cookie, Accept-Language",
+            "x-robots-tag": "noindex, nofollow",
+            "cf-ray": "a4d2ee579a165fe3-SJC",
+            "server": "envoy"
+          },
+          "observedBodyBytes": 161294,
+          "bodyReadTruncated": false,
+          "elapsedMs": 236
+        }
+      ],
+      "success": true,
+      "httpStatus": 200,
+      "finalUrl": "https://kolarov-cars.webpreviews.site/bg",
+      "finishedAt": "2026-10-19T21:38:40.134885Z"
+    },
+    {
+      "slug": "centralauto-varna",
+      "method": "HEAD",
+      "origin": "https://centralauto-varna.webpreviews.site",
+      "startedAt": "2026-10-19T21:38:39.035733Z",
+      "hops": [
+        {
+          "url": "https://centralauto-varna.webpreviews.site/",
+          "method": "HEAD",
+          "checkedAt": "2026-10-19T21:38:40.080780Z",
+          "httpStatus": 307,
+          "statusText": "Temporary Redirect",
+          "headers": {
+            "location": "/bg",
+            "cache-control": "private, no-store",
+            "content-language": "bg",
+            "x-robots-tag": "noindex, nofollow",
+            "cf-ray": "a4d2ee52cf2b5fe3-SJC",
+            "server": "envoy"
+          },
+          "observedBodyBytes": 0,
+          "bodyReadTruncated": false,
+          "elapsedMs": 1017
+        },
+        {
+          "url": "https://centralauto-varna.webpreviews.site/bg",
+          "method": "HEAD",
+          "checkedAt": "2026-10-19T21:38:40.291624Z",
+          "httpStatus": 200,
+          "statusText": "OK",
+          "headers": {
+            "content-type": "text/html",
+            "cache-control": "private, no-store",
+            "content-language": "bg",
+            "vary": "Cookie, Accept-Language",
+            "x-robots-tag": "noindex, nofollow",
+            "cf-ray": "a4d2ee58dd175fe3-SJC",
+            "server": "envoy"
+          },
+          "observedBodyBytes": 0,
+          "bodyReadTruncated": false,
+          "elapsedMs": 211
+        }
+      ],
+      "success": true,
+      "httpStatus": 200,
+      "finalUrl": "https://centralauto-varna.webpreviews.site/bg",
+      "finishedAt": "2026-10-19T21:38:40.291705Z"
+    },
+    {
+      "slug": "centralauto-varna",
+      "method": "GET",
+      "origin": "https://centralauto-varna.webpreviews.site",
+      "startedAt": "2026-10-19T21:38:40.068362Z",
+      "hops": [
+        {
+          "url": "https://centralauto-varna.webpreviews.site/",
+          "method": "GET",
+          "checkedAt": "2026-10-19T21:38:40.989505Z",
+          "httpStatus": 307,
+          "statusText": "Temporary Redirect",
+          "headers": {
+            "location": "/bg",
+            "content-length": "0",
+            "cache-control": "private, no-store",
+            "content-language": "bg",
+            "x-robots-tag": "noindex, nofollow",
+            "cf-ray": "a4d2ee58efc0cf1b-SJC",
+            "server": "envoy"
+          },
+          "observedBodyBytes": 0,
+          "bodyReadTruncated": false,
+          "elapsedMs": 920
+        },
+        {
+          "url": "https://centralauto-varna.webpreviews.site/bg",
+          "method": "GET",
+          "checkedAt": "2026-10-19T21:38:41.238114Z",
+          "httpStatus": 200,
+          "statusText": "OK",
+          "headers": {
+            "content-type": "text/html",
+            "cache-control": "private, no-store",
+            "content-language": "bg",
+            "vary": "Cookie, Accept-Language",
+            "x-robots-tag": "noindex, nofollow",
+            "cf-ray": "a4d2ee5e4fa8cf1b-SJC",
+            "server": "envoy"
+          },
+          "observedBodyBytes": 149532,
+          "bodyReadTruncated": false,
+          "elapsedMs": 249
+        }
+      ],
+      "success": true,
+      "httpStatus": 200,
+      "finalUrl": "https://centralauto-varna.webpreviews.site/bg",
+      "finishedAt": "2026-10-19T21:38:41.238200Z"
+    },
+    {
+      "slug": "batley-as-motor-group",
+      "method": "HEAD",
+      "origin": "https://batley-as-motor-group.webpreviews.site",
+      "startedAt": "2026-10-19T21:38:40.134987Z",
+      "hops": [
+        {
+          "url": "https://batley-as-motor-group.webpreviews.site/",
+          "method": "HEAD",
+          "checkedAt": "2026-10-19T21:38:40.271506Z",
+          "httpStatus": 302,
+          "statusText": "Found",
+          "headers": {
+            "location": "https://batley-as-motor-group.webpreviews.site/en",
+            "cf-ray": "a4d2ee59184dcf1b-SJC",
+            "server": "envoy"
+          },
+          "observedBodyBytes": 0,
+          "bodyReadTruncated": false,
+          "elapsedMs": 135
+        },
+        {
+          "url": "https://batley-as-motor-group.webpreviews.site/en",
+          "method": "HEAD",
+          "checkedAt": "2026-10-19T21:38:41.712457Z",
+          "httpStatus": 200,
+          "statusText": "OK",
+          "headers": {
+            "content-type": "text/html",
+            "cache-control": "private, no-store",
+            "content-language": "en",
+            "vary": "Cookie, Accept-Language",
+            "x-robots-tag": "noindex, nofollow",
+            "cf-ray": "a4d2ee59efd65fe3-SJC",
+            "server": "envoy"
+          },
+          "observedBodyBytes": 0,
+          "bodyReadTruncated": false,
+          "elapsedMs": 1441
+        }
+      ],
+      "success": true,
+      "httpStatus": 200,
+      "finalUrl": "https://batley-as-motor-group.webpreviews.site/en",
+      "finishedAt": "2026-10-19T21:38:41.712604Z"
+    },
+    {
+      "slug": "batley-as-motor-group",
+      "method": "GET",
+      "origin": "https://batley-as-motor-group.webpreviews.site",
+      "startedAt": "2026-10-19T21:38:40.291755Z",
+      "hops": [
+        {
+          "url": "https://batley-as-motor-group.webpreviews.site/",
+          "method": "GET",
+          "checkedAt": "2026-10-19T21:38:40.434895Z",
+          "httpStatus": 302,
+          "statusText": "Found",
+          "headers": {
+            "location": "https://batley-as-motor-group.webpreviews.site/en",
+            "content-length": "0",
+            "cf-ray": "a4d2ee5a3bb3cf1b-SJC",
+            "server": "envoy"
+          },
+          "observedBodyBytes": 0,
+          "bodyReadTruncated": false,
+          "elapsedMs": 123
+        },
+        {
+          "url": "https://batley-as-motor-group.webpreviews.site/en",
+          "method": "GET",
+          "checkedAt": "2026-10-19T21:38:41.738983Z",
+          "httpStatus": 200,
+          "statusText": "OK",
+          "headers": {
+            "content-type": "text/html",
+            "cache-control": "private, no-store",
+            "content-language": "en",
+            "vary": "Cookie, Accept-Language",
+            "x-robots-tag": "noindex, nofollow",
+            "cf-ray": "a4d2ee5ac9e85fe3-SJC",
+            "server": "envoy"
+          },
+          "observedBodyBytes": 151269,
+          "bodyReadTruncated": false,
+          "elapsedMs": 1304
+        }
+      ],
+      "success": true,
+      "httpStatus": 200,
+      "finalUrl": "https://batley-as-motor-group.webpreviews.site/en",
+      "finishedAt": "2026-10-19T21:38:41.739055Z"
+    }
+  ],
+  "coldQueryProbe": {
+    "type": "head-first-unique-query-probe",
+    "startedAt": "2026-10-19T21:40:31.051112Z",
+    "finishedAt": "2026-10-19T21:40:32.490432Z",
+    "queryParameter": "cars_m2_head_probe",
+    "queryValue": "20261019T214031051057Z",
+    "requestHeaders": {
+      "User-Agent": "Mozilla/5.0",
+      "Accept": "*/*",
+      "Accept-Encoding": "identity"
+    },
+    "providerWrites": 0,
+    "cachePurges": 0,
+    "cacheGuaranteedCold": false,
+    "scope": "One new timestamped query per existing origin; the full HEAD chain completes before GET on the matching requested URL. Methods are retained on every manually followed same-origin redirect. Query uniqueness does not prove that any cache key includes the query or that the origin is cold.",
+    "dealers": [
+      {
+        "slug": "kolarov-cars",
+        "order": [
+          "HEAD",
+          "GET"
+        ],
+        "headFinishedBeforeGetStarted": true,
+        "observations": [
+          {
+            "slug": "kolarov-cars",
+            "method": "HEAD",
+            "origin": "https://kolarov-cars.webpreviews.site",
+            "requestedUrl": "https://kolarov-cars.webpreviews.site/?cars_m2_head_probe=20261019T214031051057Z",
+            "startedAt": "2026-10-19T21:40:31.052361Z",
+            "hops": [
+              {
+                "url": "https://kolarov-cars.webpreviews.site/?cars_m2_head_probe=20261019T214031051057Z",
+                "method": "HEAD",
+                "checkedAt": "2026-10-19T21:40:31.995479Z",
+                "httpStatus": 307,
+                "statusText": "Temporary Redirect",
+                "headers": {
+                  "location": "/bg?cars_m2_head_probe=20261019T214031051057Z",
+                  "cache-control": "private, no-store",
+                  "content-language": "bg",
+                  "x-robots-tag": "noindex, nofollow",
+                  "cf-ray": "a4d2f10e9ac55fe3-SJC",
+                  "server": "envoy"
+                },
+                "observedBodyBytes": 0,
+                "bodyReadTruncated": false,
+                "probeQueryPreserved": true,
+                "elapsedMs": 911
+              },
+              {
+                "url": "https://kolarov-cars.webpreviews.site/bg?cars_m2_head_probe=20261019T214031051057Z",
+                "method": "HEAD",
+                "checkedAt": "2026-10-19T21:40:32.105515Z",
+                "httpStatus": 200,
+                "statusText": "OK",
+                "headers": {
+                  "content-type": "text/html",
+                  "cache-control": "private, no-store",
+                  "content-language": "bg",
+                  "vary": "Cookie, Accept-Language",
+                  "x-robots-tag": "noindex, nofollow",
+                  "cf-ray": "a4d2f1141e9bcf1b-SJC",
+                  "server": "envoy"
+                },
+                "observedBodyBytes": 0,
+                "bodyReadTruncated": false,
+                "probeQueryPreserved": true,
+                "elapsedMs": 110
+              }
+            ],
+            "success": true,
+            "httpStatus": 200,
+            "finalUrl": "https://kolarov-cars.webpreviews.site/bg?cars_m2_head_probe=20261019T214031051057Z",
+            "finishedAt": "2026-10-19T21:40:32.105602Z"
+          },
+          {
+            "slug": "kolarov-cars",
+            "method": "GET",
+            "origin": "https://kolarov-cars.webpreviews.site",
+            "requestedUrl": "https://kolarov-cars.webpreviews.site/?cars_m2_head_probe=20261019T214031051057Z",
+            "startedAt": "2026-10-19T21:40:32.105615Z",
+            "hops": [
+              {
+                "url": "https://kolarov-cars.webpreviews.site/?cars_m2_head_probe=20261019T214031051057Z",
+                "method": "GET",
+                "checkedAt": "2026-10-19T21:40:32.237975Z",
+                "httpStatus": 307,
+                "statusText": "Temporary Redirect",
+                "headers": {
+                  "location": "/bg?cars_m2_head_probe=20261019T214031051057Z",
+                  "content-length": "0",
+                  "cache-control": "private, no-store",
+                  "content-language": "bg",
+                  "x-robots-tag": "noindex, nofollow",
+                  "cf-ray": "a4d2f114daa45fe3-SJC",
+                  "server": "envoy"
+                },
+                "observedBodyBytes": 0,
+                "bodyReadTruncated": false,
+                "probeQueryPreserved": true,
+                "elapsedMs": 131
+              },
+              {
+                "url": "https://kolarov-cars.webpreviews.site/bg?cars_m2_head_probe=20261019T214031051057Z",
+                "method": "GET",
+                "checkedAt": "2026-10-19T21:40:32.364005Z",
+                "httpStatus": 200,
+                "statusText": "OK",
+                "headers": {
+                  "content-type": "text/html",
+                  "cache-control": "private, no-store",
+                  "content-language": "bg",
+                  "vary": "Cookie, Accept-Language",
+                  "x-robots-tag": "noindex, nofollow",
+                  "cf-ray": "a4d2f115bc86cf1b-SJC",
+                  "server": "envoy"
+                },
+                "observedBodyBytes": 161274,
+                "bodyReadTruncated": false,
+                "probeQueryPreserved": true,
+                "elapsedMs": 126
+              }
+            ],
+            "success": true,
+            "httpStatus": 200,
+            "finalUrl": "https://kolarov-cars.webpreviews.site/bg?cars_m2_head_probe=20261019T214031051057Z",
+            "finishedAt": "2026-10-19T21:40:32.364082Z"
+          }
+        ]
+      },
+      {
+        "slug": "centralauto-varna",
+        "order": [
+          "HEAD",
+          "GET"
+        ],
+        "headFinishedBeforeGetStarted": true,
+        "observations": [
+          {
+            "slug": "centralauto-varna",
+            "method": "HEAD",
+            "origin": "https://centralauto-varna.webpreviews.site",
+            "requestedUrl": "https://centralauto-varna.webpreviews.site/?cars_m2_head_probe=20261019T214031051057Z",
+            "startedAt": "2026-10-19T21:40:31.063287Z",
+            "hops": [
+              {
+                "url": "https://centralauto-varna.webpreviews.site/?cars_m2_head_probe=20261019T214031051057Z",
+                "method": "HEAD",
+                "checkedAt": "2026-10-19T21:40:31.243099Z",
+                "httpStatus": 307,
+                "statusText": "Temporary Redirect",
+                "headers": {
+                  "location": "/bg?cars_m2_head_probe=20261019T214031051057Z",
+                  "cache-control": "private, no-store",
+                  "content-language": "bg",
+                  "x-robots-tag": "noindex, nofollow",
+                  "cf-ray": "a4d2f10eac4dcf1b-SJC",
+                  "server": "envoy"
+                },
+                "observedBodyBytes": 0,
+                "bodyReadTruncated": false,
+                "probeQueryPreserved": true,
+                "elapsedMs": 177
+              },
+              {
+                "url": "https://centralauto-varna.webpreviews.site/bg?cars_m2_head_probe=20261019T214031051057Z",
+                "method": "HEAD",
+                "checkedAt": "2026-10-19T21:40:31.362861Z",
+                "httpStatus": 200,
+                "statusText": "OK",
+                "headers": {
+                  "content-type": "text/html",
+                  "cache-control": "private, no-store",
+                  "content-language": "bg",
+                  "vary": "Cookie, Accept-Language",
+                  "x-robots-tag": "noindex, nofollow",
+                  "cf-ray": "a4d2f10f5ec4cf1b-SJC",
+                  "server": "envoy"
+                },
+                "observedBodyBytes": 0,
+                "bodyReadTruncated": false,
+                "probeQueryPreserved": true,
+                "elapsedMs": 120
+              }
+            ],
+            "success": true,
+            "httpStatus": 200,
+            "finalUrl": "https://centralauto-varna.webpreviews.site/bg?cars_m2_head_probe=20261019T214031051057Z",
+            "finishedAt": "2026-10-19T21:40:31.362932Z"
+          },
+          {
+            "slug": "centralauto-varna",
+            "method": "GET",
+            "origin": "https://centralauto-varna.webpreviews.site",
+            "requestedUrl": "https://centralauto-varna.webpreviews.site/?cars_m2_head_probe=20261019T214031051057Z",
+            "startedAt": "2026-10-19T21:40:31.362941Z",
+            "hops": [
+              {
+                "url": "https://centralauto-varna.webpreviews.site/?cars_m2_head_probe=20261019T214031051057Z",
+                "method": "GET",
+                "checkedAt": "2026-10-19T21:40:32.330599Z",
+                "httpStatus": 307,
+                "statusText": "Temporary Redirect",
+                "headers": {
+                  "location": "/bg?cars_m2_head_probe=20261019T214031051057Z",
+                  "content-length": "0",
+                  "cache-control": "private, no-store",
+                  "content-language": "bg",
+                  "x-robots-tag": "noindex, nofollow",
+                  "cf-ray": "a4d2f1101eb55fe3-SJC",
+                  "server": "envoy"
+                },
+                "observedBodyBytes": 0,
+                "bodyReadTruncated": false,
+                "probeQueryPreserved": true,
+                "elapsedMs": 967
+              },
+              {
+                "url": "https://centralauto-varna.webpreviews.site/bg?cars_m2_head_probe=20261019T214031051057Z",
+                "method": "GET",
+                "checkedAt": "2026-10-19T21:40:32.467023Z",
+                "httpStatus": 200,
+                "statusText": "OK",
+                "headers": {
+                  "content-type": "text/html",
+                  "cache-control": "private, no-store",
+                  "content-language": "bg",
+                  "vary": "Cookie, Accept-Language",
+                  "x-robots-tag": "noindex, nofollow",
+                  "cf-ray": "a4d2f1162dc6cf1b-SJC",
+                  "server": "envoy"
+                },
+                "observedBodyBytes": 149512,
+                "bodyReadTruncated": false,
+                "probeQueryPreserved": true,
+                "elapsedMs": 136
+              }
+            ],
+            "success": true,
+            "httpStatus": 200,
+            "finalUrl": "https://centralauto-varna.webpreviews.site/bg?cars_m2_head_probe=20261019T214031051057Z",
+            "finishedAt": "2026-10-19T21:40:32.467113Z"
+          }
+        ]
+      },
+      {
+        "slug": "batley-as-motor-group",
+        "order": [
+          "HEAD",
+          "GET"
+        ],
+        "headFinishedBeforeGetStarted": true,
+        "observations": [
+          {
+            "slug": "batley-as-motor-group",
+            "method": "HEAD",
+            "origin": "https://batley-as-motor-group.webpreviews.site",
+            "requestedUrl": "https://batley-as-motor-group.webpreviews.site/?cars_m2_head_probe=20261019T214031051057Z",
+            "startedAt": "2026-10-19T21:40:31.102501Z",
+            "hops": [
+              {
+                "url": "https://batley-as-motor-group.webpreviews.site/?cars_m2_head_probe=20261019T214031051057Z",
+                "method": "HEAD",
+                "checkedAt": "2026-10-19T21:40:31.213103Z",
+                "httpStatus": 302,
+                "statusText": "Found",
+                "headers": {
+                  "location": "https://batley-as-motor-group.webpreviews.site/en?cars_m2_head_probe=20261019T214031051057Z",
+                  "cf-ray": "a4d2f10eac62cf1b-SJC",
+                  "server": "envoy"
+                },
+                "observedBodyBytes": 0,
+                "bodyReadTruncated": false,
+                "probeQueryPreserved": true,
+                "elapsedMs": 109
+              },
+              {
+                "url": "https://batley-as-motor-group.webpreviews.site/en?cars_m2_head_probe=20261019T214031051057Z",
+                "method": "HEAD",
+                "checkedAt": "2026-10-19T21:40:32.248923Z",
+                "httpStatus": 200,
+                "statusText": "OK",
+                "headers": {
+                  "content-type": "text/html",
+                  "cache-control": "private, no-store",
+                  "content-language": "en",
+                  "vary": "Cookie, Accept-Language",
+                  "x-robots-tag": "noindex, nofollow",
+                  "cf-ray": "a4d2f10f4c7f5fe3-SJC",
+                  "server": "envoy"
+                },
+                "observedBodyBytes": 0,
+                "bodyReadTruncated": false,
+                "probeQueryPreserved": true,
+                "elapsedMs": 1036
+              }
+            ],
+            "success": true,
+            "httpStatus": 200,
+            "finalUrl": "https://batley-as-motor-group.webpreviews.site/en?cars_m2_head_probe=20261019T214031051057Z",
+            "finishedAt": "2026-10-19T21:40:32.249080Z"
+          },
+          {
+            "slug": "batley-as-motor-group",
+            "method": "GET",
+            "origin": "https://batley-as-motor-group.webpreviews.site",
+            "requestedUrl": "https://batley-as-motor-group.webpreviews.site/?cars_m2_head_probe=20261019T214031051057Z",
+            "startedAt": "2026-10-19T21:40:32.249092Z",
+            "hops": [
+              {
+                "url": "https://batley-as-motor-group.webpreviews.site/?cars_m2_head_probe=20261019T214031051057Z",
+                "method": "GET",
+                "checkedAt": "2026-10-19T21:40:32.352402Z",
+                "httpStatus": 302,
+                "statusText": "Found",
+                "headers": {
+                  "location": "https://batley-as-motor-group.webpreviews.site/en?cars_m2_head_probe=20261019T214031051057Z",
+                  "content-length": "0",
+                  "cf-ray": "a4d2f115ccaacf1b-SJC",
+                  "server": "envoy"
+                },
+                "observedBodyBytes": 0,
+                "bodyReadTruncated": false,
+                "probeQueryPreserved": true,
+                "elapsedMs": 78
+              },
+              {
+                "url": "https://batley-as-motor-group.webpreviews.site/en?cars_m2_head_probe=20261019T214031051057Z",
+                "method": "GET",
+                "checkedAt": "2026-10-19T21:40:32.483069Z",
+                "httpStatus": 200,
+                "statusText": "OK",
+                "headers": {
+                  "content-type": "text/html",
+                  "cache-control": "private, no-store",
+                  "content-language": "en",
+                  "vary": "Cookie, Accept-Language",
+                  "x-robots-tag": "noindex, nofollow",
+                  "cf-ray": "a4d2f1164e1b5fe3-SJC",
+                  "server": "envoy"
+                },
+                "observedBodyBytes": 151249,
+                "bodyReadTruncated": false,
+                "probeQueryPreserved": true,
+                "elapsedMs": 131
+              }
+            ],
+            "success": true,
+            "httpStatus": 200,
+            "finalUrl": "https://batley-as-motor-group.webpreviews.site/en?cars_m2_head_probe=20261019T214031051057Z",
+            "finishedAt": "2026-10-19T21:40:32.483158Z"
+          }
+        ]
+      }
+    ]
+  }
+}

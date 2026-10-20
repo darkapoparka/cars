@@ -1,0 +1,37 @@
+{
+  "fetchedAt": "2026-10-11",
+  "sources": {
+    "dealerInventory": "https://varnacarexpress.mobile.bg/",
+    "dealerContact": "https://varnacarexpress.mobile.bg/contacts"
+  },
+  "count": 1,
+  "listings": [
+    {
+      "badge": "ОБЯВА",
+      "category": "Джип",
+      "color": "",
+      "displacement": "",
+      "euroStandard": "",
+      "features": [],
+      "fuel": "Дизелов",
+      "gearbox": "Ръчна",
+      "href": "https://varnacarexpress.mobile.bg/obiava-21791619772327999-kia-sportage-2-0crdi-awd",
+      "id": "21791619772327999",
+      "image": "/dealer-stock/21791619772327999-1.webp",
+      "location": "Варна",
+      "mileage": "124 120 км",
+      "mileageKnown": true,
+      "mileageValue": 124120,
+      "mileageUnit": "km",
+      "photoCount": "2",
+      "power": "184 к.с.",
+      "price": "9 399 €",
+      "priceBgn": "",
+      "production": "2013 г.",
+      "rawPriceText": "9 399 €",
+      "shortDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "title": "Kia Sportage",
+      "vat": ""
+    }
+  ]
+}

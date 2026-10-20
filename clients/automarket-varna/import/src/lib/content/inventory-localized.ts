@@ -1,6 +1,14 @@
 import type { Locale } from '$lib/locale/core';
 /** Dealer-owned listing descriptions and specification labels. Source facts are not mutated. */
 export const inventoryCopy = {
+	bmw740RearWheelSteering: {
+		bg: 'BMW 740 Завиващ заден мост',
+		en: 'BMW 740 Rear-wheel steering'
+	},
+	rearWheelSteering: {
+		bg: 'Завиващ заден мост',
+		en: 'Rear-wheel steering'
+	},
 	term0: {
 		bg: '4(5) Врати',
 		en: '4(5) doors'
@@ -477,8 +485,140 @@ export const inventoryCopy = {
 		bg: 'Автомобилът е с пълна сервизна история в Порше. Може да се провери във всяко представителство на марката. Sport Chrono пакет. Абсолютно автентичен вид както е излезнал от завода. Регистриран с каско, гражданска, данък, винетка. Без бартер. Само сериозни обаждания.',
 		en: 'Full Porsche service history. Can be checked at any dealership for the brand. Sport Chrono package. Entirely original factory appearance. Registered, with comprehensive insurance, third-party liability insurance, tax and vignette. No trade-ins. Serious inquiries only.'
 	}
+,
+	"dealerStock_9817ad304cfadf4ab67df24b65a03ee56ed64e1e164ba29e77edb13140e74de7": {
+		"bg": "Ford Focus 1.6D 115HP, 2014 г., 249 000 км. Представителна обява към 07.09.2026 г. Потвърдете наличността и условията с Аутомаркет Варна.",
+		"en": "Ford Focus 1.6D 115HP, 2014, 249 000 km. Representative listing as of 07.09.2026. Confirm availability and terms with Automarket Varna."
+	},
+	"dealerStock_a361d0a678da8d08851a6de6afed2cc99e145a910b1d5408495969c8b433ca16": {
+		"bg": "Bluetooth / handsfree система",
+		"en": "Bluetooth / hands-free system"
+	},
+	"dealerStock_0184fe75300fc233b182c53220cc314715a7247d92f167e8a0a6335f4391b6cb": {
+		"bg": "Аудио / видео",
+		"en": "Audio / video"
+	},
+	"dealerStock_f258769daf4cedc0e0f4ac711c2fe5090299dd941db55faefab350b88ca23ab1": {
+		"bg": "IN / AUX изводи",
+		"en": "IN / AUX inputs"
+	},
+	"dealerStock_48b06561777df6aac3646cf2f92b50a3b3f1254254853f01b5b267433e95211c": {
+		"bg": "Бартер",
+		"en": "Part exchange"
+	},
+	"dealerStock_cf84999173a681fc2fad0fdf1c83390587a272e61c50e9242a6d6b2fcb81b71c": {
+		"bg": "Велурен салон",
+		"en": "Velour interior"
+	},
+	"dealerStock_e8b8a518e15b0fc1c361f1691b4a21d156427eaa36fce311b8a0a970af578dba": {
+		"bg": "Лизинг",
+		"en": "Leasing"
+	},
+	"dealerStock_2fa7c8de831a2febb1dd4d325ada35d2afa5aa085ad14c18fa892bf5af8d808d": {
+		"bg": "Тунинг",
+		"en": "Tuning"
+	},
+	"dealerStock_6902ccf063b8ae1e654b8e7fcdf65de868c983239c35e8ecebcf5104aeaeccbc": {
+		"bg": "Хладилна жабка",
+		"en": "Cooled glove box"
+	},
+	"dealerStock_1c34a1f2204b465e3163c845d707a8e778fd454b80f1b0faf5ce09dd10b82a6b": {
+		"bg": "Светло сив",
+		"en": "Light grey"
+	},
+	"dealerStock_cfd00adf56f76404a90bbde239789d208f5c2a6850fdf85efdf878e0a457450f": {
+		"bg": "Opel Astra 1.4i 90HP, 2006 г., 208 000 км. Представителна обява към 07.09.2026 г. Потвърдете наличността и условията с Аутомаркет Варна.",
+		"en": "Opel Astra 1.4i 90HP, 2006, 208 000 km. Representative listing as of 07.09.2026. Confirm availability and terms with Automarket Varna."
+	},
+	"dealerStock_c78cd581da3aa4de35d6919238c4713939f3b2cac47dd3159756d967f6fd7011": {
+		"bg": "Климатик",
+		"en": "Air conditioning"
+	},
+	"dealerStock_4807faef19a35446d6a4ebab85c6608e927c3e9b63dfa5113d0b8a6dcf23e695": {
+		"bg": "Графит",
+		"en": "Graphite"
+	},
+	"dealerStock_4148aaa50fa5e5057f16761d59be20f8cc494ed9e60e91eb97e06d3e73ebdff7": {
+		"bg": "Opel Corsa 1.2i 80HP GPL, 2009 г., 165 000 км. Представителна обява към 07.09.2026 г. Потвърдете наличността и условията с Аутомаркет Варна.",
+		"en": "Opel Corsa 1.2i 80HP GPL, 2009, 165 000 km. Representative listing as of 07.09.2026. Confirm availability and terms with Automarket Varna."
+	},
+	"dealerStock_ebd11ed39cdc65ddaf64e02ba613d1263d7952205c5d9c4d3a8fc6f4f3ffeee8": {
+		"bg": "Ford Fiesta 1.25i 82HP FACE LIFT, 2012 г., 227 000 км. Представителна обява към 07.09.2026 г. Потвърдете наличността и условията с Аутомаркет Варна.",
+		"en": "Ford Fiesta 1.25i 82HP FACE LIFT, 2012, 227 000 km. Representative listing as of 07.09.2026. Confirm availability and terms with Automarket Varna."
+	},
+	"dealerStock_5a1b4d8aaaa269c96a41d8ca820590dce2b341b5bc92b4223217b7e930548b08": {
+		"bg": "Honda Jazz 1.4 I-VTEC 99HP FACE LIFT, 2009 г., 197 000 км. Представителна обява към 07.09.2026 г. Потвърдете наличността и условията с Аутомаркет Варна.",
+		"en": "Honda Jazz 1.4 I-VTEC 99HP FACE LIFT, 2009, 197 000 km. Representative listing as of 07.09.2026. Confirm availability and terms with Automarket Varna."
+	},
+	"dealerStock_862f1f1754f55064a567cdf046480ad7b549e3310872977e8f9e33112a2ffd6d": {
+		"bg": "Opel Meriva 1.4 TURBO 120HP GPL, 2012 г., 156 000 км. Представителна обява към 07.09.2026 г. Потвърдете наличността и условията с Аутомаркет Варна.",
+		"en": "Opel Meriva 1.4 TURBO 120HP GPL, 2012, 156 000 km. Representative listing as of 07.09.2026. Confirm availability and terms with Automarket Varna."
+	},
+	"dealerStock_53faa84ce4bfdf043120c7617af523b6c4d2e73cfcc5536939bf014024afad8e": {
+		"bg": "VW Golf 1.6TDI 105HP DSG, 2010 г., 213 000 км. Представителна обява към 07.09.2026 г. Потвърдете наличността и условията с Аутомаркет Варна.",
+		"en": "VW Golf 1.6TDI 105HP DSG, 2010, 213 000 km. Representative listing as of 07.09.2026. Confirm availability and terms with Automarket Varna."
+	},
+	"dealerStock_2bfda40e9faa65e6a3bc0902b934df650e047739ec29056b9c4ca2f1454d0e28": {
+		"bg": "Дълга база",
+		"en": "Long wheelbase"
+	},
+	"dealerStock_8ad6e3ed669bd11837a8dd7324f031edf10c9b77b12e78e27e05e89afa7ab30b": {
+		"bg": "Nissan Qashqai 1.6i 117HP FACE LIFT, 2011 г., 223 000 км. Представителна обява към 07.09.2026 г. Потвърдете наличността и условията с Аутомаркет Варна.",
+		"en": "Nissan Qashqai 1.6i 117HP FACE LIFT, 2011, 223 000 km. Representative listing as of 07.09.2026. Confirm availability and terms with Automarket Varna."
+	},
+	"dealerStock_cb509d1aa8d52123826093611772b2fcaf0a158110fddcf1a3969af6131231b3": {
+		"bg": "Dacia Duster 1.5DCI 110HP AWD E5A, 2011 г., 232 000 км. Представителна обява към 07.09.2026 г. Потвърдете наличността и условията с Аутомаркет Варна.",
+		"en": "Dacia Duster 1.5DCI 110HP AWD E5A, 2011, 232 000 km. Representative listing as of 07.09.2026. Confirm availability and terms with Automarket Varna."
+	},
+	"dealerStock_5b775fabfef2be2fa4dd7f7afc79d7578945e23f8ab6a95875240edc7c9eed5a": {
+		"bg": "Пакет OFFROAD",
+		"en": "Off-road package"
+	},
+	"dealerStock_ec3a80cb9518a3800582a98e348678209274b079492f3da9cbf0f132e9501b80": {
+		"bg": "Mazda CX-3 1.5D SKYACTIV 105HP AWD AUTO, 2016 г., 155 000 км. Представителна обява към 07.09.2026 г. Потвърдете наличността и условията с Аутомаркет Варна.",
+		"en": "Mazda CX-3 1.5D SKYACTIV 105HP AWD AUTO, 2016, 155 000 km. Representative listing as of 07.09.2026. Confirm availability and terms with Automarket Varna."
+	},
+	"dealerStock_73550b5bf27360e0294a55212cc910228b75393999750841a8559399fe2ca18c": {
+		"bg": "Безключово палене",
+		"en": "Keyless start"
+	},
+	"dealerStock_e83351d1d5fd6c93237cb61159595c1ba86909a5a9920ffee248e2a49f524f50": {
+		"bg": "VW Passat 2.0TDI 190HP 4-Motion Keyless Go Automatic, 2016 г., 207 000 км. Представителна обява към 07.09.2026 г. Потвърдете наличността и условията с Аутомаркет Варна.",
+		"en": "VW Passat 2.0TDI 190HP 4-Motion Keyless Go Automatic, 2016, 207 000 km. Representative listing as of 07.09.2026. Confirm availability and terms with Automarket Varna."
+	},
+	"dealerStock_d50355bc7c418b96884b912eff1343c4e292e83c7bafeab70d6e1b5617a67ceb": {
+		"bg": "Suzuki Swift 1.2 HYBRID 83HP AUTOMATIC, 2021 г., 39 000 км. Представителна обява към 07.09.2026 г. Потвърдете наличността и условията с Аутомаркет Варна.",
+		"en": "Suzuki Swift 1.2 HYBRID 83HP AUTOMATIC, 2021, 39 000 km. Representative listing as of 07.09.2026. Confirm availability and terms with Automarket Varna."
+	},
+	"dealerStock_807390969be88c1246f3a1ae037a0dd286508d417aaf0e025ec64891502845a5": {
+		"bg": "Бързи / бавни скорости",
+		"en": "High / low range gears"
+	},
+	"dealerStock_18db3c3b47a3c7c91e78481fa2acc09530e07f5faf14b4b9e4b68db425c9ee53": {
+		"bg": "Бордо",
+		"en": "Burgundy"
+	},
+	"dealerStock_6a9c8d3ef8df3303b1604c0c0c9938c3b4eb8ca00599e05458439b23802948cf": {
+		"bg": "BMW X3 2.0 X-Drive 184HP, 2014 г., 249 000 км. Представителна обява към 07.09.2026 г. Потвърдете наличността и условията с Аутомаркет Варна.",
+		"en": "BMW X3 2.0 X-Drive 184HP, 2014, 249 000 km. Representative listing as of 07.09.2026. Confirm availability and terms with Automarket Varna."
+	},
+	"dealerStock_21c51f4af8f107fab42e5ab7c1920ca95ce04b1cba7ec29aa037b89594812a58": {
+		"bg": "VW Tiguan 2.0TDI 200HP ALLSPACE 4-Motion, 2023 г., 147 000 км. Представителна обява към 07.09.2026 г. Потвърдете наличността и условията с Аутомаркет Варна.",
+		"en": "VW Tiguan 2.0TDI 200HP ALLSPACE 4-Motion, 2023, 147 000 km. Representative listing as of 07.09.2026. Confirm availability and terms with Automarket Varna."
+	},
+	"dealerStock_9cb2923a921a34f929e99e9b34cf233668bb1d8737144eb48e321e06bd2956ad": {
+		"bg": "Mercedes-Benz GLC 2.2CDI 170HP 4-Matic Autonatic Navi, 2016 г., 165 000 км. Представителна обява към 07.09.2026 г. Потвърдете наличността и условията с Аутомаркет Варна.",
+		"en": "Mercedes-Benz GLC 2.2CDI 170HP 4-Matic Autonatic Navi, 2016, 165 000 km. Representative listing as of 07.09.2026. Confirm availability and terms with Automarket Varna."
+	},
+	"dealerStock_9c6d1c18b6e26abbc5121f04d74ce8923913e77f87fd337e5da179d4c7c603fc": {
+		"bg": "Audi A4 Allroad 3.0TDI 272HP AUTOMATIC QUATTRO DIGITAL, 2016 г., 218 000 км. Представителна обява към 07.09.2026 г. Потвърдете наличността и условията с Аутомаркет Варна.",
+		"en": "Audi A4 Allroad 3.0TDI 272HP AUTOMATIC QUATTRO DIGITAL, 2016, 218 000 km. Representative listing as of 07.09.2026. Confirm availability and terms with Automarket Varna."
+	}
+
 } satisfies Record<string, Record<Locale, string>>;
 export const inventorySourceKeys: Readonly<Record<string, keyof typeof inventoryCopy>> = {
+	'BMW 740 Завиващ заден мост': 'bmw740RearWheelSteering',
+	'Завиващ заден мост': 'rearWheelSteering',
 	'4(5) Врати': 'term0',
 	'4x4': 'term1',
 	'Auto Start Stop function': 'term2',
@@ -630,6 +770,40 @@ export const inventorySourceKeys: Readonly<Record<string, keyof typeof inventory
 		'description30',
 	'Автомобилът е с пълна сервизна история в Порше. Може да се провери във всяко представителство на марката. Sport Chrono пакет. Абсолютно автентичен вид както е излезнал от завода. Регистриран с каско, гражданска, данък, винетка. Без бартер. Само сериозни обаждания.':
 		'description31'
+,
+	"Ford Focus 1.6D 115HP, 2014 г., 249 000 км. Представителна обява към 07.09.2026 г. Потвърдете наличността и условията с Аутомаркет Варна.": "dealerStock_9817ad304cfadf4ab67df24b65a03ee56ed64e1e164ba29e77edb13140e74de7",
+	"Bluetooth \\ handsfree система": "dealerStock_a361d0a678da8d08851a6de6afed2cc99e145a910b1d5408495969c8b433ca16",
+	"audio\\video": "dealerStock_0184fe75300fc233b182c53220cc314715a7247d92f167e8a0a6335f4391b6cb",
+	"IN\\AUX изводи": "dealerStock_f258769daf4cedc0e0f4ac711c2fe5090299dd941db55faefab350b88ca23ab1",
+	"Бартер": "dealerStock_48b06561777df6aac3646cf2f92b50a3b3f1254254853f01b5b267433e95211c",
+	"Велурен салон": "dealerStock_cf84999173a681fc2fad0fdf1c83390587a272e61c50e9242a6d6b2fcb81b71c",
+	"Лизинг": "dealerStock_e8b8a518e15b0fc1c361f1691b4a21d156427eaa36fce311b8a0a970af578dba",
+	"Тунинг": "dealerStock_2fa7c8de831a2febb1dd4d325ada35d2afa5aa085ad14c18fa892bf5af8d808d",
+	"Хладилна жабка": "dealerStock_6902ccf063b8ae1e654b8e7fcdf65de868c983239c35e8ecebcf5104aeaeccbc",
+	"Светло сив": "dealerStock_1c34a1f2204b465e3163c845d707a8e778fd454b80f1b0faf5ce09dd10b82a6b",
+	"Opel Astra 1.4i 90HP, 2006 г., 208 000 км. Представителна обява към 07.09.2026 г. Потвърдете наличността и условията с Аутомаркет Варна.": "dealerStock_cfd00adf56f76404a90bbde239789d208f5c2a6850fdf85efdf878e0a457450f",
+	"Климатик": "dealerStock_c78cd581da3aa4de35d6919238c4713939f3b2cac47dd3159756d967f6fd7011",
+	"Графит": "dealerStock_4807faef19a35446d6a4ebab85c6608e927c3e9b63dfa5113d0b8a6dcf23e695",
+	"Opel Corsa 1.2i 80HP GPL, 2009 г., 165 000 км. Представителна обява към 07.09.2026 г. Потвърдете наличността и условията с Аутомаркет Варна.": "dealerStock_4148aaa50fa5e5057f16761d59be20f8cc494ed9e60e91eb97e06d3e73ebdff7",
+	"Ford Fiesta 1.25i 82HP FACE LIFT, 2012 г., 227 000 км. Представителна обява към 07.09.2026 г. Потвърдете наличността и условията с Аутомаркет Варна.": "dealerStock_ebd11ed39cdc65ddaf64e02ba613d1263d7952205c5d9c4d3a8fc6f4f3ffeee8",
+	"Honda Jazz 1.4 I-VTEC 99HP FACE LIFT, 2009 г., 197 000 км. Представителна обява към 07.09.2026 г. Потвърдете наличността и условията с Аутомаркет Варна.": "dealerStock_5a1b4d8aaaa269c96a41d8ca820590dce2b341b5bc92b4223217b7e930548b08",
+	"Opel Meriva 1.4 TURBO 120HP GPL, 2012 г., 156 000 км. Представителна обява към 07.09.2026 г. Потвърдете наличността и условията с Аутомаркет Варна.": "dealerStock_862f1f1754f55064a567cdf046480ad7b549e3310872977e8f9e33112a2ffd6d",
+	"VW Golf 1.6TDI 105HP DSG, 2010 г., 213 000 км. Представителна обява към 07.09.2026 г. Потвърдете наличността и условията с Аутомаркет Варна.": "dealerStock_53faa84ce4bfdf043120c7617af523b6c4d2e73cfcc5536939bf014024afad8e",
+	"Дълга база": "dealerStock_2bfda40e9faa65e6a3bc0902b934df650e047739ec29056b9c4ca2f1454d0e28",
+	"Nissan Qashqai 1.6i 117HP FACE LIFT, 2011 г., 223 000 км. Представителна обява към 07.09.2026 г. Потвърдете наличността и условията с Аутомаркет Варна.": "dealerStock_8ad6e3ed669bd11837a8dd7324f031edf10c9b77b12e78e27e05e89afa7ab30b",
+	"Dacia Duster 1.5DCI 110HP AWD E5A, 2011 г., 232 000 км. Представителна обява към 07.09.2026 г. Потвърдете наличността и условията с Аутомаркет Варна.": "dealerStock_cb509d1aa8d52123826093611772b2fcaf0a158110fddcf1a3969af6131231b3",
+	"OFFROAD пакет": "dealerStock_5b775fabfef2be2fa4dd7f7afc79d7578945e23f8ab6a95875240edc7c9eed5a",
+	"Mazda CX-3 1.5D SKYACTIV 105HP AWD AUTO, 2016 г., 155 000 км. Представителна обява към 07.09.2026 г. Потвърдете наличността и условията с Аутомаркет Варна.": "dealerStock_ec3a80cb9518a3800582a98e348678209274b079492f3da9cbf0f132e9501b80",
+	"Безключово палене ": "dealerStock_73550b5bf27360e0294a55212cc910228b75393999750841a8559399fe2ca18c",
+	"VW Passat 2.0TDI 190HP 4-Motion Keyless Go Automatic, 2016 г., 207 000 км. Представителна обява към 07.09.2026 г. Потвърдете наличността и условията с Аутомаркет Варна.": "dealerStock_e83351d1d5fd6c93237cb61159595c1ba86909a5a9920ffee248e2a49f524f50",
+	"Suzuki Swift 1.2 HYBRID 83HP AUTOMATIC, 2021 г., 39 000 км. Представителна обява към 07.09.2026 г. Потвърдете наличността и условията с Аутомаркет Варна.": "dealerStock_d50355bc7c418b96884b912eff1343c4e292e83c7bafeab70d6e1b5617a67ceb",
+	"Бързи \\ бавни скорости": "dealerStock_807390969be88c1246f3a1ae037a0dd286508d417aaf0e025ec64891502845a5",
+	"Бордо": "dealerStock_18db3c3b47a3c7c91e78481fa2acc09530e07f5faf14b4b9e4b68db425c9ee53",
+	"BMW X3 2.0 X-Drive 184HP, 2014 г., 249 000 км. Представителна обява към 07.09.2026 г. Потвърдете наличността и условията с Аутомаркет Варна.": "dealerStock_6a9c8d3ef8df3303b1604c0c0c9938c3b4eb8ca00599e05458439b23802948cf",
+	"VW Tiguan 2.0TDI 200HP ALLSPACE 4-Motion, 2023 г., 147 000 км. Представителна обява към 07.09.2026 г. Потвърдете наличността и условията с Аутомаркет Варна.": "dealerStock_21c51f4af8f107fab42e5ab7c1920ca95ce04b1cba7ec29aa037b89594812a58",
+	"Mercedes-Benz GLC 2.2CDI 170HP 4-Matic Autonatic Navi, 2016 г., 165 000 км. Представителна обява към 07.09.2026 г. Потвърдете наличността и условията с Аутомаркет Варна.": "dealerStock_9cb2923a921a34f929e99e9b34cf233668bb1d8737144eb48e321e06bd2956ad",
+	"Audi A4 Allroad 3.0TDI 272HP AUTOMATIC QUATTRO DIGITAL, 2016 г., 218 000 км. Представителна обява към 07.09.2026 г. Потвърдете наличността и условията с Аутомаркет Варна.": "dealerStock_9c6d1c18b6e26abbc5121f04d74ce8923913e77f87fd337e5da179d4c7c603fc"
+
 };
 export function inventoryText(locale: Locale, value: string): string {
 	const key = inventorySourceKeys[value];

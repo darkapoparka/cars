@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "dealer": "autofest-varna",
+  "kind": "personalized-source-candidate-not-an-approved-release",
+  "sourceRevision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+  "candidateSourceDigest": "0a1ab8bf54125add5d44216c55702d868e152cc8c945699739ae401e61883586",
+  "qualificationContextPath": ".client/native-qualification-context.json",
+  "qualificationContextSha256": "aabb4e9d1151afa1239e66aaa05bf901c6060ce4520e50a173ccb71968a7be05",
+  "qualificationLockPath": ".client/native-qualification-lock.json",
+  "qualificationLockSha256": "04633129df9e75d6cd62deeac9125b279957789d75f57cdb0b243ef61bfc3e7e",
+  "sourceDeltaReview": {
+    "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-delta-review.json",
+    "sha256": "43cb6876e815a2a6b866f1dadd304236de4ae58c05fe65c2ab62a23506ee7ce9",
+    "reviewedAt": "2026-10-14T23:55:37.398Z"
+  },
+  "nativeApproval": false,
+  "hostedApproval": false
+}

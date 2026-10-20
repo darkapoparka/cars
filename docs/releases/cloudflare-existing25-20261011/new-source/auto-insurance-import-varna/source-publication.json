@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-source-publication",
+  "reviewed": true,
+  "reviewedAt": "2026-10-13T03:11:39.869Z",
+  "dealer": "auto-insurance-import-varna",
+  "dealerId": "auto-insurance-import-varna",
+  "repository": "darkapoparka/cars-auto-insurance-import-varna",
+  "sourceOwnership": "cars-canonical",
+  "request": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/batch-4-qualified23-request.json",
+    "sha256": "dcdd093f40a04d9187d5ddaa8cbdbb0006b0fed9ff01722a2d9179278d548f29"
+  },
+  "preparation": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/auto-insurance-import-varna/source-preparation.json",
+    "sha256": "21da96346759caa46ef648678155d95c077bbd884717d73a07d932272de964ba"
+  },
+  "proposal": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/auto-insurance-import-varna/source-proposal.json",
+    "sha256": "371cfaa4724cbe03d000925db02d84f515e79638cd3456adddc1a646f08c2a46"
+  },
+  "inputMapping": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/auto-insurance-import-varna/input-mapping.json",
+    "sha256": "e4fd0bc837455bd673d86c5a425732af4c9fc1fab9bc8d550f9a32240314a79b"
+  },
+  "sourcePublication": {
+    "repository": "darkapoparka/cars",
+    "commit": "4849e1ed622017b2f41845f36e213a2c793184f4",
+    "sourceTree": "248f96bda97c22ca503154f93d4cdddc972bacd9",
+    "ref": "refs/heads/main",
+    "publishedAt": "2026-10-13T02:59:12.000Z",
+    "evidence": "https://github.com/darkapoparka/cars/commit/4849e1ed622017b2f41845f36e213a2c793184f4"
+  }
+}

@@ -1,0 +1,89 @@
+[
+  {
+    "key": "sell",
+    "source": "C:/Users/radev/.codex/generated_images/01a10004-b481-79f1-820e-bb1a4abc0500/exec-5fd0f3d5-9b19-467e-a059-96fcffa0a9f7.png",
+    "destination": "static/assets/images/template/service-valuation-silver-v2.webp",
+    "dimensions": [
+      800,
+      533
+    ],
+    "alphaRange": [
+      0,
+      255
+    ],
+    "crop": [
+      55,
+      33,
+      703,
+      453
+    ],
+    "bytes": 59480,
+    "sha256": "58e44439e383082828758b65b1d530a3ae89f95d8a13be87cbdc2db7e8522001",
+    "sourceSha256": "73c058f3fc2f0900130be48e37449ae9c576d53d9df4049adfb63b3852a13d4a",
+    "encoding": {
+      "resizeWidth": 800,
+      "quality": 90,
+      "alphaQuality": 100,
+      "effort": 6,
+      "preserveFullCanvas": true
+    }
+  },
+  {
+    "key": "finance",
+    "source": "C:/Users/radev/.codex/generated_images/01a10004-b481-79f1-820e-bb1a4abc0500/exec-e5b3fe53-ae41-4fba-b5d3-fc049355cfc6.png",
+    "destination": "static/assets/images/template/service-leasing-silver-v3.webp",
+    "dimensions": [
+      800,
+      532
+    ],
+    "alphaRange": [
+      0,
+      255
+    ],
+    "crop": [
+      66,
+      57,
+      709,
+      451
+    ],
+    "bytes": 67986,
+    "sha256": "55463a1b9220f15a154beddad2dac581d2c88d0350aa534ffbb4b9f29f53817f",
+    "sourceSha256": "1d4abaa5bd16012b19de3b9c71cf17cf4d2276f634bcf8f34e8bb137c65ecae9",
+    "encoding": {
+      "resizeWidth": 800,
+      "quality": 90,
+      "alphaQuality": 100,
+      "effort": 6,
+      "preserveFullCanvas": true
+    }
+  },
+  {
+    "key": "car",
+    "source": "C:/Users/radev/.codex/generated_images/01a10004-b481-79f1-820e-bb1a4abc0500/exec-cf2c069a-4791-40d3-8788-11ec7ddf3e5b.png",
+    "destination": "static/assets/images/template/service-car-silver-v2.webp",
+    "dimensions": [
+      800,
+      532
+    ],
+    "alphaRange": [
+      0,
+      255
+    ],
+    "crop": [
+      37,
+      164,
+      683,
+      331
+    ],
+    "bytes": 55164,
+    "sha256": "55f8442201aa1ff158a55f8687ce04f027d0b09d0189bd3081483de79113dfd3",
+    "sourceSha256": "addb5deb687c206553e8c53d22e34f94b26d279fb98b751ec568cfb7a2eec4d2",
+    "encoding": {
+      "resizeWidth": 800,
+      "quality": 90,
+      "alphaQuality": 100,
+      "effort": 6,
+      "preserveFullCanvas": true
+    }
+  }
+]

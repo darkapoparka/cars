@@ -1,0 +1,37 @@
+{
+  "fetchedAt": "2026-10-11",
+  "sources": {
+    "dealerInventory": "https://buscenter.mobile.bg/",
+    "dealerContact": "https://buscenter.mobile.bg/contacts"
+  },
+  "count": 1,
+  "listings": [
+    {
+      "badge": "ОБЯВА",
+      "category": "Комби",
+      "color": "",
+      "displacement": "",
+      "euroStandard": "",
+      "features": [],
+      "fuel": "Дизелов",
+      "gearbox": "Ръчна",
+      "href": "https://buscenter.mobile.bg/obiava-11786179380757560-vw-passat-1-6-tdi-variant",
+      "id": "11786179380757560",
+      "image": "/dealer-stock/11786179380757560-1.webp",
+      "location": "Тополи",
+      "mileage": "202 000 км",
+      "mileageKnown": true,
+      "mileageValue": 202000,
+      "mileageUnit": "km",
+      "photoCount": "2",
+      "power": "110 к.с.",
+      "price": "3 999 €",
+      "priceBgn": "",
+      "production": "2011 г.",
+      "rawPriceText": "3 999 €",
+      "shortDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "title": "VW Passat",
+      "vat": ""
+    }
+  ]
+}

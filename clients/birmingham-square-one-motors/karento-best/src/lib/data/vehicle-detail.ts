@@ -116,6 +116,12 @@ export const referenceSpecifications: readonly DetailSpecification[] = [
     "value": "Petrol",
     "labelKey": "vehicle.field.fuel",
     "valueKey": "fuel.gasoline"
+  },
+  {
+    "id": "year",
+    "icon": "/assets/imgs/template/icons/calendar.svg",
+    "value": "2015",
+    "labelKey": "vehicle.field.year"
   }
 ];
 
@@ -141,7 +147,7 @@ export const referenceReviews: readonly DetailReview[] = [];
 export const referenceSeller: DetailSeller = {
   "name": "Square One Motors",
   "location": "Tameside Way, Birmingham B42 2UB",
-  "avatar": "/dealer-brand/logo.webp",
+  "avatar": "/dealer-brand/v2-430f237b2ede396d/logo-on-light.webp",
   "mobile": "",
   "email": "",
   "whatsapp": "",

@@ -42,13 +42,9 @@
   {/if}
   <div class="container dn-contact-hero__content dn-route-hero__layout">
     <div class="dn-contact-hero__copy dn-route-hero__copy">
-      {#if topic.id === 'general'}
-        <span class="dn-company-hero__eyebrow">{i18n.t("m_2b5c3d26721a")}</span>
-      {/if}
       <h1 id="contact-title">
         {#if topic.id === 'general'}
-          <span class="dn-contact-hero__desktop-title dn-company-hero__title-line">{i18n.t('contact.hero.intro')}</span>
-          <span class="dn-contact-hero__desktop-title dn-company-hero__title-line">{i18n.t('contact.hero.subject')}</span>
+          <span class="dn-contact-hero__desktop-title">{i18n.t("m_2b5c3d26721a")}</span>
         {:else}
           <span class="dn-contact-hero__desktop-title">
             {topic.id === 'trade-in' ? i18n.t("m_3d25686c3130") : i18n.text(topic.title)}

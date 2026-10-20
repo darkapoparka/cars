@@ -1,200 +1,349 @@
 import type { DealerInventoryCopy } from "../lead-site";
-/** Reviewed text for the existing sample stock only. */
+/** Dealer-owned display copy from the exact personalized listing set. */
 export const inventoryCopy = {
-  "bmw-x5-m50d-sofia-2020": {
-    sourceDescription:
-      "Примерна обява за BMW X5 M50d с 360 камери, панорама, HUD и обдухване. Снимката е илюстративна; наличност и условия се потвърждават с автокъщата.",
-    bg: {
-      description:
-        "Примерна обява за BMW X5 M50d с 360 камери, панорама, HUD и обдухване. Снимката е илюстративна; наличност и условия се потвърждават с автокъщата.",
-      imageAlts: ["Черен BMW X5 SUV"],
+  "mini-cooper-1-6d-euro4-2009-11747499643415236": {
+    "sourceDescription": "Mini Cooper 1.6D EURO4, 2009 г., дизел, 143 100 км. Публикувана обява на Астракар. Наличността, оборудването и условията се потвърждават по телефона.",
+    "en": {
+      "description": "Mini Cooper 1.6D EURO4, 2009, diesel, 143 100 km. Published listing from Astracar. Confirm availability, equipment and terms by phone.",
+      "imageAlts": [
+        "Mini Cooper 1.6D EURO4",
+        "Mini Cooper 1.6D EURO4",
+        "Mini Cooper 1.6D EURO4",
+        "Mini Cooper 1.6D EURO4",
+        "Mini Cooper 1.6D EURO4"
+      ]
     },
-    en: {
-      description:
-        "Sample listing for a BMW X5 M50d with 360-degree cameras, panoramic roof, head-up display and ventilated seats. The image is illustrative; availability and terms must be confirmed with the dealership.",
-      imageAlts: ["Black BMW X5 SUV"],
-    },
+    "bg": {
+      "description": "Mini Cooper 1.6D EURO4, 2009 г., дизел, 143 100 км. Публикувана обява на Астракар. Наличността, оборудването и условията се потвърждават по телефона.",
+      "imageAlts": [
+        "Mini Cooper 1.6D EURO4",
+        "Mini Cooper 1.6D EURO4",
+        "Mini Cooper 1.6D EURO4",
+        "Mini Cooper 1.6D EURO4",
+        "Mini Cooper 1.6D EURO4"
+      ]
+    }
   },
-  "mercedes-benz-gls-400d-4matic-amg-sofia-2021": {
-    sourceDescription:
-      "GLS 400d 4MATIC AMG Line с Burmester и панорама. Голям семеен SUV от Астракар - наличен за оглед в Варна.",
-    bg: {
-      description:
-        "GLS 400d 4MATIC AMG Line с Burmester и панорама. Голям семеен SUV от {shortName} - наличен за оглед в {city}.",
-      imageAlts: ["Mercedes-Benz GLS 4MATIC AMG SUV"],
+  "renault-captur-0-9t-euro6b-2017-21755975324167565": {
+    "sourceDescription": "Renault Captur 0.9T EURO6B, 2017 г., бензин, 127 663 км. Публикувана обява на Астракар. Наличността, оборудването и условията се потвърждават по телефона.",
+    "en": {
+      "description": "Renault Captur 0.9T EURO6B, 2017, petrol, 127 663 km. Published listing from Astracar. Confirm availability, equipment and terms by phone.",
+      "imageAlts": [
+        "Renault Captur 0.9T EURO6B",
+        "Renault Captur 0.9T EURO6B",
+        "Renault Captur 0.9T EURO6B",
+        "Renault Captur 0.9T EURO6B",
+        "Renault Captur 0.9T EURO6B"
+      ]
     },
-    en: {
-      description:
-        "GLS 400d 4MATIC AMG Line with Burmester audio and a panoramic roof. A large family SUV from {shortName}, available to view in {city}.",
-      imageAlts: ["Mercedes-Benz GLS 4MATIC AMG SUV"],
-    },
+    "bg": {
+      "description": "Renault Captur 0.9T EURO6B, 2017 г., бензин, 127 663 км. Публикувана обява на Астракар. Наличността, оборудването и условията се потвърждават по телефона.",
+      "imageAlts": [
+        "Renault Captur 0.9T EURO6B",
+        "Renault Captur 0.9T EURO6B",
+        "Renault Captur 0.9T EURO6B",
+        "Renault Captur 0.9T EURO6B",
+        "Renault Captur 0.9T EURO6B"
+      ]
+    }
   },
-  "bmw-750e-xdrive-m-sport-sofia-2024": {
-    sourceDescription:
-      "Очакван внос: 7 Series plug-in hybrid с M Sport. Нисък пробег - Астракар организира доставка и оглед в Варна.",
-    bg: {
-      description:
-        "Очакван внос: 7 Series plug-in hybrid с M Sport. Нисък пробег - {shortName} организира доставка и оглед в {city}.",
-      imageAlts: ["BMW 7 Series"],
+  "bmw-535-xdrive-full-eu5b-2012-11737822623289964": {
+    "sourceDescription": "BMW 535 xDrive FULL EU5B, 2012 г., дизел, 177 390 км. Публикувана обява на Астракар. Наличността, оборудването и условията се потвърждават по телефона.",
+    "en": {
+      "description": "BMW 535 xDrive FULL EU5B, 2012, diesel, 177 390 km. Published listing from Astracar. Confirm availability, equipment and terms by phone.",
+      "imageAlts": [
+        "BMW 535 xDrive FULL EU5B",
+        "BMW 535 xDrive FULL EU5B",
+        "BMW 535 xDrive FULL EU5B",
+        "BMW 535 xDrive FULL EU5B",
+        "BMW 535 xDrive FULL EU5B"
+      ]
     },
-    en: {
-      description:
-        "Expected import: 7 Series plug-in hybrid with M Sport. Low mileage; {shortName} arranges delivery and viewing in {city}.",
-      imageAlts: ["BMW 7 Series"],
-    },
+    "bg": {
+      "description": "BMW 535 xDrive FULL EU5B, 2012 г., дизел, 177 390 км. Публикувана обява на Астракар. Наличността, оборудването и условията се потвърждават по телефона.",
+      "imageAlts": [
+        "BMW 535 xDrive FULL EU5B",
+        "BMW 535 xDrive FULL EU5B",
+        "BMW 535 xDrive FULL EU5B",
+        "BMW 535 xDrive FULL EU5B",
+        "BMW 535 xDrive FULL EU5B"
+      ]
+    }
   },
-  "mercedes-benz-e-63-s-amg-sofia-2021": {
-    sourceDescription:
-      "E 63 S AMG facelift с 360, HUD и Burmester. Спортна лимузина от Астракар.",
-    bg: {
-      description:
-        "E 63 S AMG facelift с 360, HUD и Burmester. Спортна лимузина от {dealer}.",
-      imageAlts: ["Mercedes-Benz E-Class седан"],
+  "audi-a3-2-0tdi-s-line-quattro-2006-11763446260159317": {
+    "sourceDescription": "Audi A3 2.0TDI S-LINE QUATTRO, 2006 г., дизел, 181 000 км. Публикувана обява на Астракар. Наличността, оборудването и условията се потвърждават по телефона.",
+    "en": {
+      "description": "Audi A3 2.0TDI S-LINE QUATTRO, 2006, diesel, 181 000 km. Published listing from Astracar. Confirm availability, equipment and terms by phone.",
+      "imageAlts": [
+        "Audi A3 2.0TDI S-LINE QUATTRO",
+        "Audi A3 2.0TDI S-LINE QUATTRO",
+        "Audi A3 2.0TDI S-LINE QUATTRO",
+        "Audi A3 2.0TDI S-LINE QUATTRO",
+        "Audi A3 2.0TDI S-LINE QUATTRO"
+      ]
     },
-    en: {
-      description:
-        "Facelift E 63 S AMG with 360-degree cameras, head-up display and Burmester audio. A sports saloon from {dealer}.",
-      imageAlts: ["Mercedes-Benz E-Class saloon"],
-    },
+    "bg": {
+      "description": "Audi A3 2.0TDI S-LINE QUATTRO, 2006 г., дизел, 181 000 км. Публикувана обява на Астракар. Наличността, оборудването и условията се потвърждават по телефона.",
+      "imageAlts": [
+        "Audi A3 2.0TDI S-LINE QUATTRO",
+        "Audi A3 2.0TDI S-LINE QUATTRO",
+        "Audi A3 2.0TDI S-LINE QUATTRO",
+        "Audi A3 2.0TDI S-LINE QUATTRO",
+        "Audi A3 2.0TDI S-LINE QUATTRO"
+      ]
+    }
   },
-  "mercedes-benz-cls-400d-4matic-sofia-2020": {
-    sourceDescription:
-      "CLS 400d 4MATIC AMG Line Designo с 360 камери. Елегантно купе-седан от Астракар в Варна.",
-    bg: {
-      description:
-        "CLS 400d 4MATIC AMG Line Designo с 360 камери. Елегантно купе-седан от {shortName} в {city}.",
-      imageAlts: ["Mercedes CLS"],
+  "audi-a5-2-0tfsi-euro5b-2010-11752951085157214": {
+    "sourceDescription": "Audi A5 2.0TFSI EURO5B, 2010 г., бензин, 165 170 км. Публикувана обява на Астракар. Наличността, оборудването и условията се потвърждават по телефона.",
+    "en": {
+      "description": "Audi A5 2.0TFSI EURO5B, 2010, petrol, 165 170 km. Published listing from Astracar. Confirm availability, equipment and terms by phone.",
+      "imageAlts": [
+        "Audi A5 2.0TFSI EURO5B",
+        "Audi A5 2.0TFSI EURO5B",
+        "Audi A5 2.0TFSI EURO5B",
+        "Audi A5 2.0TFSI EURO5B",
+        "Audi A5 2.0TFSI EURO5B"
+      ]
     },
-    en: {
-      description:
-        "CLS 400d 4MATIC AMG Line Designo with 360-degree cameras. An elegant four-door coupe from {shortName} in {city}.",
-      imageAlts: ["Mercedes CLS"],
-    },
+    "bg": {
+      "description": "Audi A5 2.0TFSI EURO5B, 2010 г., бензин, 165 170 км. Публикувана обява на Астракар. Наличността, оборудването и условията се потвърждават по телефона.",
+      "imageAlts": [
+        "Audi A5 2.0TFSI EURO5B",
+        "Audi A5 2.0TFSI EURO5B",
+        "Audi A5 2.0TFSI EURO5B",
+        "Audi A5 2.0TFSI EURO5B",
+        "Audi A5 2.0TFSI EURO5B"
+      ]
+    }
   },
-  "audi-q8-50-tdi-quattro-s-line-sofia-2021": {
-    sourceDescription:
-      "Очакван внос: Q8 50 TDI quattro S line Plus. Купе-SUV с quattro за клиенти на Астракар.",
-    bg: {
-      description:
-        "Очакван внос: Q8 50 TDI quattro S line Plus. Купе-SUV с quattro за клиенти на {shortName}.",
-      imageAlts: ["Audi Q8"],
+  "fiat-punto-1-4i-evo-euro4-2010-11762018600091690": {
+    "sourceDescription": "Fiat Punto 1.4i EVO EURO4, 2010 г., бензин, 139 800 км. Публикувана обява на Астракар. Наличността, оборудването и условията се потвърждават по телефона.",
+    "en": {
+      "description": "Fiat Punto 1.4i EVO EURO4, 2010, petrol, 139 800 km. Published listing from Astracar. Confirm availability, equipment and terms by phone.",
+      "imageAlts": [
+        "Fiat Punto 1.4i EVO EURO4",
+        "Fiat Punto 1.4i EVO EURO4",
+        "Fiat Punto 1.4i EVO EURO4",
+        "Fiat Punto 1.4i EVO EURO4",
+        "Fiat Punto 1.4i EVO EURO4"
+      ]
     },
-    en: {
-      description:
-        "Expected import: Q8 50 TDI quattro S line Plus. A coupe-SUV with quattro for {shortName} customers.",
-      imageAlts: ["Audi Q8"],
-    },
+    "bg": {
+      "description": "Fiat Punto 1.4i EVO EURO4, 2010 г., бензин, 139 800 км. Публикувана обява на Астракар. Наличността, оборудването и условията се потвърждават по телефона.",
+      "imageAlts": [
+        "Fiat Punto 1.4i EVO EURO4",
+        "Fiat Punto 1.4i EVO EURO4",
+        "Fiat Punto 1.4i EVO EURO4",
+        "Fiat Punto 1.4i EVO EURO4",
+        "Fiat Punto 1.4i EVO EURO4"
+      ]
+    }
   },
-  "mercedes-benz-gle-400d-coupe-sofia-2021": {
-    sourceDescription:
-      "GLE 400d Coupe 4MATIC AMG с 360 и Burmester. Наличен при Астракар - Варна.",
-    bg: {
-      description:
-        "GLE 400d Coupe 4MATIC AMG с 360 и Burmester. Наличен при {dealer} - {city}.",
-      imageAlts: ["Черен Mercedes-Benz GLE SUV"],
+  "audi-a3-1-6tdi-eu5b-sportbag-2015-11755359473275644": {
+    "sourceDescription": "Audi A3 1.6TDI EU5B SPORTBAG, 2015 г., дизел, 162 148 км. Публикувана обява на Астракар. Наличността, оборудването и условията се потвърждават по телефона.",
+    "en": {
+      "description": "Audi A3 1.6TDI EU5B SPORTBAG, 2015, diesel, 162 148 km. Published listing from Astracar. Confirm availability, equipment and terms by phone.",
+      "imageAlts": [
+        "Audi A3 1.6TDI EU5B SPORTBAG",
+        "Audi A3 1.6TDI EU5B SPORTBAG",
+        "Audi A3 1.6TDI EU5B SPORTBAG",
+        "Audi A3 1.6TDI EU5B SPORTBAG",
+        "Audi A3 1.6TDI EU5B SPORTBAG"
+      ]
     },
-    en: {
-      description:
-        "GLE 400d Coupe 4MATIC AMG with 360-degree cameras and Burmester audio. Available from {dealer} in {city}.",
-      imageAlts: ["Black Mercedes-Benz GLE SUV"],
-    },
+    "bg": {
+      "description": "Audi A3 1.6TDI EU5B SPORTBAG, 2015 г., дизел, 162 148 км. Публикувана обява на Астракар. Наличността, оборудването и условията се потвърждават по телефона.",
+      "imageAlts": [
+        "Audi A3 1.6TDI EU5B SPORTBAG",
+        "Audi A3 1.6TDI EU5B SPORTBAG",
+        "Audi A3 1.6TDI EU5B SPORTBAG",
+        "Audi A3 1.6TDI EU5B SPORTBAG",
+        "Audi A3 1.6TDI EU5B SPORTBAG"
+      ]
+    }
   },
-  "mercedes-benz-gle-53-amg-coupe-sofia-2022": {
-    sourceDescription:
-      "Очакван внос: GLE 53 AMG Coupe Night Pack. Астракар предлага собствен лизинг след оглед.",
-    bg: {
-      description:
-        "Очакван внос: GLE 53 AMG Coupe Night Pack. {shortName} предлага собствен лизинг след оглед.",
-      imageAlts: ["Бял Mercedes-Benz GLE AMG SUV"],
+  "mini-cooper-1-6d-euro5-2010-11766248164423161": {
+    "sourceDescription": "Mini Cooper 1.6D EURO5, 2010 г., дизел, 150 052 км. Публикувана обява на Астракар. Наличността, оборудването и условията се потвърждават по телефона.",
+    "en": {
+      "description": "Mini Cooper 1.6D EURO5, 2010, diesel, 150 052 km. Published listing from Astracar. Confirm availability, equipment and terms by phone.",
+      "imageAlts": [
+        "Mini Cooper 1.6D EURO5",
+        "Mini Cooper 1.6D EURO5",
+        "Mini Cooper 1.6D EURO5",
+        "Mini Cooper 1.6D EURO5",
+        "Mini Cooper 1.6D EURO5"
+      ]
     },
-    en: {
-      description:
-        "Expected import: GLE 53 AMG Coupe Night Pack. {shortName} offers in-house leasing after a viewing.",
-      imageAlts: ["White Mercedes-Benz GLE AMG SUV"],
-    },
+    "bg": {
+      "description": "Mini Cooper 1.6D EURO5, 2010 г., дизел, 150 052 км. Публикувана обява на Астракар. Наличността, оборудването и условията се потвърждават по телефона.",
+      "imageAlts": [
+        "Mini Cooper 1.6D EURO5",
+        "Mini Cooper 1.6D EURO5",
+        "Mini Cooper 1.6D EURO5",
+        "Mini Cooper 1.6D EURO5",
+        "Mini Cooper 1.6D EURO5"
+      ]
+    }
   },
-  "mercedes-benz-s-350d-long-amg-sofia-2019": {
-    sourceDescription:
-      "S 350d Long с S63 AMG оптика и пакет за шофьор. Представителна лимузина от Астракар.",
-    bg: {
-      description:
-        "S 350d Long с S63 AMG оптика и пакет за шофьор. Представителна лимузина от {shortName}.",
-      imageAlts: ["Mercedes-Benz S-Class седан"],
+  "audi-a6-2-0tdi-euro5b-2014-11780761931333448": {
+    "sourceDescription": "Audi A6 2.0TDI EURO5B, 2014 г., дизел, 159 400 км. Публикувана обява на Астракар. Наличността, оборудването и условията се потвърждават по телефона.",
+    "en": {
+      "description": "Audi A6 2.0TDI EURO5B, 2014, diesel, 159 400 km. Published listing from Astracar. Confirm availability, equipment and terms by phone.",
+      "imageAlts": [
+        "Audi A6 2.0TDI EURO5B",
+        "Audi A6 2.0TDI EURO5B",
+        "Audi A6 2.0TDI EURO5B",
+        "Audi A6 2.0TDI EURO5B",
+        "Audi A6 2.0TDI EURO5B"
+      ]
     },
-    en: {
-      description:
-        "S 350d Long with S63 AMG styling and a chauffeur package. An executive saloon from {shortName}.",
-      imageAlts: ["Mercedes-Benz S-Class saloon"],
-    },
+    "bg": {
+      "description": "Audi A6 2.0TDI EURO5B, 2014 г., дизел, 159 400 км. Публикувана обява на Астракар. Наличността, оборудването и условията се потвърждават по телефона.",
+      "imageAlts": [
+        "Audi A6 2.0TDI EURO5B",
+        "Audi A6 2.0TDI EURO5B",
+        "Audi A6 2.0TDI EURO5B",
+        "Audi A6 2.0TDI EURO5B",
+        "Audi A6 2.0TDI EURO5B"
+      ]
+    }
   },
-  "mercedes-benz-v-250d-vip-business-sofia-2018": {
-    sourceDescription:
-      "V 250d VIP Business с TV, обдухване и подгряване. Бизнес ван от Астракар.",
-    bg: {
-      description:
-        "V 250d VIP Business с TV, обдухване и подгряване. Бизнес ван от {dealer}.",
-      imageAlts: ["V-Class ван"],
+  "bmw-x7-3-0d-xdrive-eu6d-2020-21780733368439452": {
+    "sourceDescription": "BMW X7 3.0d xDrive EU6D, 2020 г., дизел, 190 000 км. Публикувана обява на Астракар. Наличността, оборудването и условията се потвърждават по телефона.",
+    "en": {
+      "description": "BMW X7 3.0d xDrive EU6D, 2020, diesel, 190 000 km. Published listing from Astracar. Confirm availability, equipment and terms by phone.",
+      "imageAlts": [
+        "BMW X7 3.0d xDrive EU6D",
+        "BMW X7 3.0d xDrive EU6D",
+        "BMW X7 3.0d xDrive EU6D",
+        "BMW X7 3.0d xDrive EU6D",
+        "BMW X7 3.0d xDrive EU6D"
+      ]
     },
-    en: {
-      description:
-        "V 250d VIP Business with TV, ventilated and heated seats. A business van from {dealer}.",
-      imageAlts: ["V-Class van"],
-    },
+    "bg": {
+      "description": "BMW X7 3.0d xDrive EU6D, 2020 г., дизел, 190 000 км. Публикувана обява на Астракар. Наличността, оборудването и условията се потвърждават по телефона.",
+      "imageAlts": [
+        "BMW X7 3.0d xDrive EU6D",
+        "BMW X7 3.0d xDrive EU6D",
+        "BMW X7 3.0d xDrive EU6D",
+        "BMW X7 3.0d xDrive EU6D",
+        "BMW X7 3.0d xDrive EU6D"
+      ]
+    }
   },
-  "range-rover-sport-svr-sofia-2021": {
-    sourceDescription:
-      "Range Rover Sport SVR 600 к.с. с панорама, 360 и Meridian. Висок клас SUV от Астракар.",
-    bg: {
-      description:
-        "Range Rover Sport SVR 600 к.с. с панорама, 360 и Meridian. Висок клас SUV от {shortName}.",
-      imageAlts: ["Range Rover Sport"],
+  "citroen-c3-1-2i-euro5b-2013-11773504878088103": {
+    "sourceDescription": "Citroen C3 1.2i EURO5B, 2013 г., бензин, 136 574 км. Публикувана обява на Астракар. Наличността, оборудването и условията се потвърждават по телефона.",
+    "en": {
+      "description": "Citroen C3 1.2i EURO5B, 2013, petrol, 136 574 km. Published listing from Astracar. Confirm availability, equipment and terms by phone.",
+      "imageAlts": [
+        "Citroen C3 1.2i EURO5B",
+        "Citroen C3 1.2i EURO5B",
+        "Citroen C3 1.2i EURO5B",
+        "Citroen C3 1.2i EURO5B",
+        "Citroen C3 1.2i EURO5B"
+      ]
     },
-    en: {
-      description:
-        "Range Rover Sport SVR, 600 hp, with a panoramic roof, 360-degree cameras and Meridian audio. A premium SUV from {shortName}.",
-      imageAlts: ["Range Rover Sport"],
-    },
+    "bg": {
+      "description": "Citroen C3 1.2i EURO5B, 2013 г., бензин, 136 574 км. Публикувана обява на Астракар. Наличността, оборудването и условията се потвърждават по телефона.",
+      "imageAlts": [
+        "Citroen C3 1.2i EURO5B",
+        "Citroen C3 1.2i EURO5B",
+        "Citroen C3 1.2i EURO5B",
+        "Citroen C3 1.2i EURO5B",
+        "Citroen C3 1.2i EURO5B"
+      ]
+    }
   },
-  "bmw-430i-xdrive-gran-coupe-sofia-2023": {
-    sourceDescription:
-      "430i xDrive Gran Coupe M Sport с digital кокпит и Harman Kardon. Астракар, Варна.",
-    bg: {
-      description:
-        "430i xDrive Gran Coupe M Sport с digital кокпит и Harman Kardon. {shortName}, {city}.",
-      imageAlts: ["BMW 4 Series"],
+  "hyundai-ix35-1-6gdi-euro5-2012-21783183116609383": {
+    "sourceDescription": "Hyundai IX35 1.6GDI EURO5, 2012 г., бензин, 56 178 км. Публикувана обява на Астракар. Наличността, оборудването и условията се потвърждават по телефона.",
+    "en": {
+      "description": "Hyundai IX35 1.6GDI EURO5, 2012, petrol, 56 178 km. Published listing from Astracar. Confirm availability, equipment and terms by phone.",
+      "imageAlts": [
+        "Hyundai IX35 1.6GDI EURO5",
+        "Hyundai IX35 1.6GDI EURO5",
+        "Hyundai IX35 1.6GDI EURO5",
+        "Hyundai IX35 1.6GDI EURO5",
+        "Hyundai IX35 1.6GDI EURO5"
+      ]
     },
-    en: {
-      description:
-        "430i xDrive Gran Coupe M Sport with a digital cockpit and Harman Kardon audio. {shortName}, {city}.",
-      imageAlts: ["BMW 4 Series"],
-    },
+    "bg": {
+      "description": "Hyundai IX35 1.6GDI EURO5, 2012 г., бензин, 56 178 км. Публикувана обява на Астракар. Наличността, оборудването и условията се потвърждават по телефона.",
+      "imageAlts": [
+        "Hyundai IX35 1.6GDI EURO5",
+        "Hyundai IX35 1.6GDI EURO5",
+        "Hyundai IX35 1.6GDI EURO5",
+        "Hyundai IX35 1.6GDI EURO5",
+        "Hyundai IX35 1.6GDI EURO5"
+      ]
+    }
   },
-  "bmw-m4-competition-sofia-2021": {
-    sourceDescription:
-      "BMW M4 Competition с M пакет, спортен салон и digital кокпит. Купе от портфолиото на Астракар.",
-    bg: {
-      description:
-        "BMW M4 Competition с M пакет, спортен салон и digital кокпит. Купе от портфолиото на {dealer}.",
-      imageAlts: ["Червено BMW M4 Competition пред модерен шоурум"],
+  "mercedes-benz-ml-350-3-0cdi-premium-eu6-2010-21783791992541606": {
+    "sourceDescription": "Mercedes-Benz ML 350 3.0CDI PREMIUM EU6, 2010 г., дизел, 182 887 км. Публикувана обява на Астракар. Наличността, оборудването и условията се потвърждават по телефона.",
+    "en": {
+      "description": "Mercedes-Benz ML 350 3.0CDI PREMIUM EU6, 2010, diesel, 182 887 km. Published listing from Astracar. Confirm availability, equipment and terms by phone.",
+      "imageAlts": [
+        "Mercedes-Benz ML 350 3.0CDI PREMIUM EU6",
+        "Mercedes-Benz ML 350 3.0CDI PREMIUM EU6",
+        "Mercedes-Benz ML 350 3.0CDI PREMIUM EU6",
+        "Mercedes-Benz ML 350 3.0CDI PREMIUM EU6",
+        "Mercedes-Benz ML 350 3.0CDI PREMIUM EU6"
+      ]
     },
-    en: {
-      description:
-        "BMW M4 Competition with M package, sports interior and digital cockpit. A coupe from the {dealer} collection.",
-      imageAlts: ["Red BMW M4 Competition in front of a modern showroom"],
-    },
+    "bg": {
+      "description": "Mercedes-Benz ML 350 3.0CDI PREMIUM EU6, 2010 г., дизел, 182 887 км. Публикувана обява на Астракар. Наличността, оборудването и условията се потвърждават по телефона.",
+      "imageAlts": [
+        "Mercedes-Benz ML 350 3.0CDI PREMIUM EU6",
+        "Mercedes-Benz ML 350 3.0CDI PREMIUM EU6",
+        "Mercedes-Benz ML 350 3.0CDI PREMIUM EU6",
+        "Mercedes-Benz ML 350 3.0CDI PREMIUM EU6",
+        "Mercedes-Benz ML 350 3.0CDI PREMIUM EU6"
+      ]
+    }
   },
-  "bmw-x5-xdrive40d-berlin-2022": {
-    sourceDescription:
-      "Крос-бордер демо наличност с оторизирани медии и право на доставка. Финалният транспорт, данъци и регистрация се уточняват с оферта от Астракар.",
-    bg: {
-      description:
-        "Крос-бордер демо наличност с оторизирани медии и право на доставка. Финалният транспорт, данъци и регистрация се уточняват с оферта от {shortName}.",
-      imageAlts: ["Черен BMW X5 SUV в градска среда"],
+  "peugeot-2008-1-2-puretech-eu6d-2022-11782577422662538": {
+    "sourceDescription": "Peugeot 2008 1.2 PureTech EU6D, 2022 г., бензин, 36 216 км. Публикувана обява на Астракар. Наличността, оборудването и условията се потвърждават по телефона.",
+    "en": {
+      "description": "Peugeot 2008 1.2 PureTech EU6D, 2022, petrol, 36 216 km. Published listing from Astracar. Confirm availability, equipment and terms by phone.",
+      "imageAlts": [
+        "Peugeot 2008 1.2 PureTech EU6D",
+        "Peugeot 2008 1.2 PureTech EU6D",
+        "Peugeot 2008 1.2 PureTech EU6D",
+        "Peugeot 2008 1.2 PureTech EU6D",
+        "Peugeot 2008 1.2 PureTech EU6D"
+      ]
     },
-    en: {
-      description:
-        "Cross-border demo inventory with authorized images and delivery rights. Final transport, tax and registration costs are confirmed in a quote from {shortName}.",
-      imageAlts: ["Black BMW X5 SUV in an urban setting"],
-    },
+    "bg": {
+      "description": "Peugeot 2008 1.2 PureTech EU6D, 2022 г., бензин, 36 216 км. Публикувана обява на Астракар. Наличността, оборудването и условията се потвърждават по телефона.",
+      "imageAlts": [
+        "Peugeot 2008 1.2 PureTech EU6D",
+        "Peugeot 2008 1.2 PureTech EU6D",
+        "Peugeot 2008 1.2 PureTech EU6D",
+        "Peugeot 2008 1.2 PureTech EU6D",
+        "Peugeot 2008 1.2 PureTech EU6D"
+      ]
+    }
   },
+  "citroen-jumpy-1-6hdi-l2h1eu6b-2017-11782575631736534": {
+    "sourceDescription": "Citroen Jumpy 1.6HDI L2H1EU6B, 2017 г., дизел, 186 586 км. Публикувана обява на Астракар. Наличността, оборудването и условията се потвърждават по телефона.",
+    "en": {
+      "description": "Citroen Jumpy 1.6HDI L2H1EU6B, 2017, diesel, 186 586 km. Published listing from Astracar. Confirm availability, equipment and terms by phone.",
+      "imageAlts": [
+        "Citroen Jumpy 1.6HDI L2H1EU6B",
+        "Citroen Jumpy 1.6HDI L2H1EU6B",
+        "Citroen Jumpy 1.6HDI L2H1EU6B",
+        "Citroen Jumpy 1.6HDI L2H1EU6B",
+        "Citroen Jumpy 1.6HDI L2H1EU6B"
+      ]
+    },
+    "bg": {
+      "description": "Citroen Jumpy 1.6HDI L2H1EU6B, 2017 г., дизел, 186 586 км. Публикувана обява на Астракар. Наличността, оборудването и условията се потвърждават по телефона.",
+      "imageAlts": [
+        "Citroen Jumpy 1.6HDI L2H1EU6B",
+        "Citroen Jumpy 1.6HDI L2H1EU6B",
+        "Citroen Jumpy 1.6HDI L2H1EU6B",
+        "Citroen Jumpy 1.6HDI L2H1EU6B",
+        "Citroen Jumpy 1.6HDI L2H1EU6B"
+      ]
+    }
+  }
 } satisfies DealerInventoryCopy;

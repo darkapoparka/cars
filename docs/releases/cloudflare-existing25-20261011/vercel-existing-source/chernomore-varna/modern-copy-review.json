@@ -1,0 +1,88 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-reviewed-modern-bilingual-copy-input",
+  "dealer": "chernomore-varna",
+  "sourceCommit": "d9594c2979f668831b78609e4e990640259aee81",
+  "baselineTree": "cb31732e89799898db3717570d69652791ad83fb",
+  "inputSha256": "87210b0a72dc0cb1f94b7d6e2be8a1fa1af6d3d5eef392ad06437027ac8af52e",
+  "modernInputRowsSha256": "e1fc13c58b30c6ed58272a30d673ce3cbb93853255138e23134208d27cabbbce",
+  "listingCount": 2,
+  "profileInputs": [
+    {
+      "path": "dealer.json",
+      "gitBlob": "8b2d56ece68f9c54ebbf19972b6d59ddd07c50ca",
+      "sha256": "5cfa45bcf5f763c16fef8293d8ea2376772005e614fc2fdf5d2269670916e3d6",
+      "bytes": 4801
+    },
+    {
+      "path": ".client/registered-source-adoption.json",
+      "gitBlob": "784abc3a8d1aeeda93081ae0bc14659bc95f09e7",
+      "sha256": "647e84e92537c5e582351952eae995eebbfd389e7a43a340c08eb63115993770",
+      "bytes": 4468
+    },
+    {
+      "path": ".client/registered-personalization.json",
+      "gitBlob": "3450a590a9f191ad736c13ea921f1dd7ef81b0e0",
+      "sha256": "4bd2e782c793078a0b82ccd841c3f7969ebb9e499873cd7179d5e54b1fb8a6ff",
+      "bytes": 19247
+    },
+    {
+      "path": "business-facts.json",
+      "gitBlob": "a8b32b02f8c2b8f3ad2ab6e83619d3b504955e0a",
+      "sha256": "48222f54daed16041a1605e31ec78667c658e64cba1e276794942a330251bc9f",
+      "bytes": 12699
+    }
+  ],
+  "reviewedGeneratorHelper": {
+    "path": "scripts/lib/modern-dealer-inventory-copy.mjs",
+    "sha256": "cbdbaa28dc07911cfe913b4e627671b6556fc25d3bfe59364e29c5ca5a29072b",
+    "sourceCommit": "14d86f67c160699c18a6ec5658197cc4d9011e0b"
+  },
+  "review": {
+    "displayCopyOnly": true,
+    "exactSourceDescriptionKeys": true,
+    "listingFactsUnchanged": true,
+    "imageUrlsUnchanged": true,
+    "imageAltsPreserved": true,
+    "interpolationTokensUnchanged": true,
+    "reviewedBy": "Codex, authorized final-template rollout",
+    "reviewedAt": "2026-10-14T20:04:09.151Z",
+    "notes": "Reuse exact existing native or reviewed registered companions for every actual current row; no new translation/factual source edits."
+  },
+  "reviewedCopy": {
+    "chernomore-varna-21771946973449498": {
+      "sourceDescription": "Audi Q8 50 TDI S-Line от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+      "en": {
+        "description": "Audi Q8 50 TDI S-Line from a dated public listing. Confirm condition, price and availability directly with the dealership.",
+        "imageAlts": [
+          "Audi Q8 50 TDI S-Line",
+          "Audi Q8 50 TDI S-Line"
+        ]
+      },
+      "bg": {
+        "description": "Audi Q8 50 TDI S-Line от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+        "imageAlts": [
+          "Audi Q8 50 TDI S-Line",
+          "Audi Q8 50 TDI S-Line"
+        ]
+      }
+    },
+    "chernomore-varna-11779358576885782": {
+      "sourceDescription": "Audi A5 Sportback 2.0 TFSI quattro от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+      "en": {
+        "description": "Audi A5 Sportback 2.0 TFSI quattro from a dated public listing. Confirm condition, price and availability directly with the dealership.",
+        "imageAlts": [
+          "Audi A5 Sportback 2.0 TFSI quattro",
+          "Audi A5 Sportback 2.0 TFSI quattro"
+        ]
+      },
+      "bg": {
+        "description": "Audi A5 Sportback 2.0 TFSI quattro от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+        "imageAlts": [
+          "Audi A5 Sportback 2.0 TFSI quattro",
+          "Audi A5 Sportback 2.0 TFSI quattro"
+        ]
+      }
+    }
+  }
+}

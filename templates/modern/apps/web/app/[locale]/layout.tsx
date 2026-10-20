@@ -28,6 +28,8 @@ import { MobileVisibleViewport } from "./components/mobile-visible-viewport";
 interface RootLayoutProperties {
   readonly children: ReactNode;
   readonly params: Promise<{ locale: string }>;
+  readonly nativePreferences?: Awaited<ReturnType<typeof getRequestPreferences>>;
+  readonly requestBootstrap?: boolean;
 }
 
 export const metadata: Metadata = {
@@ -48,13 +50,13 @@ export const metadata: Metadata = {
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
 
-const RootLayout = async ({ children, params }: RootLayoutProperties) => {
+const RootLayout = async ({ children, params, nativePreferences, requestBootstrap = false }: RootLayoutProperties) => {
   const { locale } = await params;
   if (!isLocale(locale)) {
     notFound();
   }
   const normalizedLocale = normalizeLocale(locale);
-  const preferences = await getRequestPreferences(normalizedLocale);
+  const preferences = nativePreferences ?? await getRequestPreferences(normalizedLocale);
   const desktopBrandTheme = Object.fromEntries(
     Object.entries(
       createBrandTheme(leadSite.desktopAccent ?? publicSite.theme.accent)
@@ -75,6 +77,9 @@ const RootLayout = async ({ children, params }: RootLayoutProperties) => {
       suppressHydrationWarning
     >
       <head>
+        {requestBootstrap ? (
+          <script type="application/json" id="cars-modern-native-preferences" suppressHydrationWarning dangerouslySetInnerHTML={{ __html: "null" }} />
+        ) : null}
         {isStaticPublicPreview() ? null : (
           <script id="analytics-consent-bootstrap">
             {analyticsConsentBootstrapScript}
@@ -94,7 +99,7 @@ const RootLayout = async ({ children, params }: RootLayoutProperties) => {
         </noscript>
         <MobileVisibleViewport />
         <ThemeProvider enableSystem={false} forcedTheme="light">
-          <LocalePreferencesProvider {...preferences}>
+          <LocalePreferencesProvider {...preferences} requestBootstrap={requestBootstrap}>
             {isStaticPublicPreview() ? (
               <TooltipProvider>{children}</TooltipProvider>
             ) : (

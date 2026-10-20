@@ -1,0 +1,126 @@
+{
+  "schemaVersion": 1,
+  "dealer": "kalchev-varna",
+  "reviewed": true,
+  "reviewedAt": "2026-10-11T13:01:13.451Z",
+  "reviewScope": "Exact final accepted logo assets and prior genuine surface review retained; actual six-template integration and hosted acceptance remain pending.",
+  "identityStatus": "Improved demo/proposal identity based on qualified primary name and preserved source evidence; material redesign, not official or owner-approved.",
+  "officialDealerArtwork": false,
+  "dealerApproval": false,
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "generation": {
+    "tool": "image_gen",
+    "generationId": "exec-18fc349e-a45d-459a-a851-f73d1e9735d3",
+    "modelVersion": null,
+    "sourceSha256": "362da73dbaf7e544cd859918ebc0571ef7f7ade647b760b244f9de19b1dfebc0",
+    "sourceRole": "native ImageGen output used to derive this exact retained reviewed raster; not asserted to be an image-edit input",
+    "nativeOutput": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/kalchev-varna/source/native-onLight.png",
+      "sha256": "362da73dbaf7e544cd859918ebc0571ef7f7ade647b760b244f9de19b1dfebc0"
+    },
+    "originalGenerationReceipt": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/kalchev-varna/source/generation-receipt.json",
+      "sha256": "c0a8770b0476eb55d3015a39c76dad05adaf7080309a2f5637d3a866a93aa2a1"
+    },
+    "derivation": "one ImageGen master exported to context raster"
+  },
+  "master": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/kalchev-varna/branding/master.png",
+    "sha256": "d3e1ad0df9b19308976ffaabfa476b72e27f98054f59793dd9a0beead58781be"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/kalchev-varna/branding/onLight.png",
+      "sha256": "d3e1ad0df9b19308976ffaabfa476b72e27f98054f59793dd9a0beead58781be",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/new-source/kalchev-varna/source/generation-receipt.json#sha256=c0a8770b0476eb55d3015a39c76dad05adaf7080309a2f5637d3a866a93aa2a1; reviewed onLight PNG from exact accepted final logo manifest b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-18fc349e-a45d-459a-a851-f73d1e9735d3",
+        "modelVersion": null,
+        "sourceSha256": "362da73dbaf7e544cd859918ebc0571ef7f7ade647b760b244f9de19b1dfebc0",
+        "sourceRole": "native ImageGen output used to derive this exact retained reviewed raster; not asserted to be an image-edit input",
+        "nativeOutput": {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/kalchev-varna/source/native-onLight.png",
+          "sha256": "362da73dbaf7e544cd859918ebc0571ef7f7ade647b760b244f9de19b1dfebc0"
+        },
+        "originalGenerationReceipt": {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/kalchev-varna/source/generation-receipt.json",
+          "sha256": "c0a8770b0476eb55d3015a39c76dad05adaf7080309a2f5637d3a866a93aa2a1"
+        },
+        "derivation": "one ImageGen master exported to context raster"
+      }
+    },
+    "onDark": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/kalchev-varna/branding/onDark.png",
+      "sha256": "e9fc2db45ca3252905cf7de01197adc32a2195e8f8a29b2ed02d19c2a0d9a3c3",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/new-source/kalchev-varna/source/generation-receipt.json#sha256=c0a8770b0476eb55d3015a39c76dad05adaf7080309a2f5637d3a866a93aa2a1; reviewed onDark PNG from exact accepted final logo manifest b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-18fc349e-a45d-459a-a851-f73d1e9735d3",
+        "modelVersion": null,
+        "sourceSha256": "362da73dbaf7e544cd859918ebc0571ef7f7ade647b760b244f9de19b1dfebc0",
+        "sourceRole": "native ImageGen output used to derive this exact retained reviewed raster; not asserted to be an image-edit input",
+        "nativeOutput": {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/kalchev-varna/source/native-onDark.png",
+          "sha256": "362da73dbaf7e544cd859918ebc0571ef7f7ade647b760b244f9de19b1dfebc0"
+        },
+        "originalGenerationReceipt": {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/kalchev-varna/source/generation-receipt.json",
+          "sha256": "c0a8770b0476eb55d3015a39c76dad05adaf7080309a2f5637d3a866a93aa2a1"
+        },
+        "derivation": "one ImageGen master exported to context raster"
+      }
+    },
+    "onAccent": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/kalchev-varna/branding/onAccent.png",
+      "sha256": "e9fc2db45ca3252905cf7de01197adc32a2195e8f8a29b2ed02d19c2a0d9a3c3",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/new-source/kalchev-varna/source/generation-receipt.json#sha256=c0a8770b0476eb55d3015a39c76dad05adaf7080309a2f5637d3a866a93aa2a1; reviewed onAccent PNG from exact accepted final logo manifest b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-18fc349e-a45d-459a-a851-f73d1e9735d3",
+        "modelVersion": null,
+        "sourceSha256": "362da73dbaf7e544cd859918ebc0571ef7f7ade647b760b244f9de19b1dfebc0",
+        "sourceRole": "native ImageGen output used to derive this exact retained reviewed raster; not asserted to be an image-edit input",
+        "nativeOutput": {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/kalchev-varna/source/native-onAccent.png",
+          "sha256": "362da73dbaf7e544cd859918ebc0571ef7f7ade647b760b244f9de19b1dfebc0"
+        },
+        "originalGenerationReceipt": {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/kalchev-varna/source/generation-receipt.json",
+          "sha256": "c0a8770b0476eb55d3015a39c76dad05adaf7080309a2f5637d3a866a93aa2a1"
+        },
+        "derivation": "one ImageGen master exported to context raster"
+      }
+    }
+  },
+  "originalGenerationReceipt": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/kalchev-varna/source/generation-receipt.json",
+    "sha256": "c0a8770b0476eb55d3015a39c76dad05adaf7080309a2f5637d3a866a93aa2a1"
+  },
+  "acceptedLogoManifest": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/evidence/final-logo-handoff.json",
+    "sha256": "b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a"
+  },
+  "assetReview": {
+    "status": "completed",
+    "owner": "root",
+    "proof": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/kalchev-varna/surface-review.png",
+      "sha256": "f6dcdd4f0ca4769411d2eaacfa52e47eabe4c8724abf54cdc6e76ec994ef6006",
+      "bytes": 112741,
+      "width": 740,
+      "height": 864,
+      "format": "png",
+      "hasAlpha": true
+    },
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "scope": "Current master and120/180 light/dark rendered contact sheets inspected; existing320/all-native-swatches review remains applicable to identical pixels.",
+    "report": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/final-root-review.json"
+  },
+  "identityHeld": false
+}

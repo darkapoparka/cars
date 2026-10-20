@@ -97,7 +97,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "ELIT AUTO IMPORT EXPORT",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-8f7a5757c9331423/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": true
@@ -197,7 +197,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "ELIT AUTO IMPORT EXPORT",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-8f7a5757c9331423/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": true
@@ -297,7 +297,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "ELIT AUTO IMPORT EXPORT",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-8f7a5757c9331423/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": true
@@ -397,7 +397,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "ELIT AUTO IMPORT EXPORT",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-8f7a5757c9331423/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
@@ -497,7 +497,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "ELIT AUTO IMPORT EXPORT",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-8f7a5757c9331423/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
@@ -597,7 +597,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "ELIT AUTO IMPORT EXPORT",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-8f7a5757c9331423/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
@@ -697,7 +697,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "ELIT AUTO IMPORT EXPORT",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-8f7a5757c9331423/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
@@ -797,7 +797,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "ELIT AUTO IMPORT EXPORT",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-8f7a5757c9331423/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
@@ -897,7 +897,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "ELIT AUTO IMPORT EXPORT",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-8f7a5757c9331423/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
@@ -997,7 +997,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "ELIT AUTO IMPORT EXPORT",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-8f7a5757c9331423/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
@@ -1097,7 +1097,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "ELIT AUTO IMPORT EXPORT",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-8f7a5757c9331423/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
@@ -1197,7 +1197,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "ELIT AUTO IMPORT EXPORT",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-8f7a5757c9331423/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
@@ -1297,7 +1297,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "ELIT AUTO IMPORT EXPORT",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-8f7a5757c9331423/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
@@ -1397,7 +1397,107 @@ export const mockListings: VehicleListing[] = [
       "displayName": "ELIT AUTO IMPORT EXPORT",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-8f7a5757c9331423/logo-on-light.webp"
+    },
+    "publishedAt": "2026-09-07T09:00:00.000Z",
+    "promoted": false
+  },
+  {
+    "id": "dealer-8b60558c0d9b80d49ac83dc4",
+    "slug": "hyundai-santa-fe-2013-21691652621240351",
+    "category": "car",
+    "dealerOrgId": "dealer-elit-auto-import",
+    "status": "active",
+    "title": "Hyundai Santa fe",
+    "description": "Hyundai Santa Fe 2. 0 GRDi 4х4 7 места В цената са калкулирани всички разходи(мито, ДДС, технотест).  Продажба с фактура и договор без разходи за нотариус Автомобилът е внос от Южна Корея. Постоянен внос от САЩ и Южна Корея на автомобили в перфектно техническо състояние и доказан пробег. Може да бъде проверен в сервиз по Ваш избор. Пакетни цени за търговци.  Мы говорим по-русски.  tel. /viber/whatsapp+359887777887",
+    "price": {
+      "amount": 14316.17,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/assets/elit/21691652621240351-0.webp",
+        "alt": "Hyundai Santa fe"
+      },
+      {
+        "url": "/assets/elit/21691652621240351-1.webp",
+        "alt": "Hyundai Santa fe"
+      },
+      {
+        "url": "/assets/elit/21691652621240351-2.webp",
+        "alt": "Hyundai Santa fe"
+      },
+      {
+        "url": "/assets/elit/21691652621240351-3.webp",
+        "alt": "Hyundai Santa fe"
+      },
+      {
+        "url": "/assets/elit/21691652621240351-4.webp",
+        "alt": "Hyundai Santa fe"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Варна",
+      "region": "Варна",
+      "country": "България"
+    },
+    "features": [
+      {
+        "bg": "4(5) Врати",
+        "en": "4(5) Врати"
+      },
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "7 места",
+        "en": "7 места"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "Аларма",
+        "en": "Аларма"
+      },
+      {
+        "bg": "Антиблокираща система",
+        "en": "Антиблокираща система"
+      },
+      {
+        "bg": "Безключово палене",
+        "en": "Безключово палене"
+      },
+      {
+        "bg": "Бордкомпютър",
+        "en": "Бордкомпютър"
+      }
+    ],
+    "spec": {
+      "make": "Hyundai",
+      "model": "Santa fe",
+      "year": 2013,
+      "bodyType": "suv",
+      "fuelType": "diesel",
+      "transmission": "automatic",
+      "mileageValue": 58000,
+      "mileageUnit": "km",
+      "enginePowerHp": 150,
+      "colorExterior": "Светло сив"
+    },
+    "seller": {
+      "id": "dealer-elit-auto-import",
+      "type": "dealer",
+      "displayName": "ELIT AUTO IMPORT EXPORT",
+      "verificationStatus": "unverified",
+      "city": "Варна",
+      "logoUrl": "/dealer-brand/v2-8f7a5757c9331423/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false

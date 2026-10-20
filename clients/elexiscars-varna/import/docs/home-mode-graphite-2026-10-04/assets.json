@@ -1,0 +1,180 @@
+{
+	"generator": "Built-in image_gen",
+	"optimization": "Sharp mechanical alpha crop, equalized visible area, Lanczos resampling and WebP encoding; no recoloring.",
+	"cssSize": 48,
+	"densities": [1, 2, 3],
+	"canvas": 288,
+	"quality": 90,
+	"alphaQuality": 100,
+	"totals": {
+		"48": 6440,
+		"96": 14222,
+		"144": 22790
+	},
+	"assets": [
+		{
+			"key": "buy",
+			"original": "C:/Users/radev/.codex/generated_images/01a10434-ddd7-7361-ae8e-48bd3e8da469/exec-66017723-ca30-4b4d-adbe-01f3f4fd099e.png",
+			"retained": "runtime/home-mode-graphite-2026-10-04/originals/buy-graphite-v2.png",
+			"originalWidth": 1254,
+			"originalHeight": 1254,
+			"originalSha256": "31b8b64ab2e22ec472ceaf3e123bae422e67d4a35e3f9a56ec37251e20d7f74b",
+			"bounds": {
+				"left": 132,
+				"top": 408,
+				"width": 1027,
+				"height": 510
+			},
+			"opticalScale": 0.23388101983002835,
+			"variants": [
+				{
+					"path": "static/assets/daynight/home-modes/buy-graphite-v2-48.webp",
+					"width": 48,
+					"height": 48,
+					"bytes": 1274,
+					"sha256": "73ad895fa310d5d267b3b4be4b50327dff70c84d4c7e7f3fc33fe3d6a0cd04c9",
+					"hasAlpha": true
+				},
+				{
+					"path": "static/assets/daynight/home-modes/buy-graphite-v2-96.webp",
+					"width": 96,
+					"height": 96,
+					"bytes": 2970,
+					"sha256": "6b1bb8146d270d57c124c68e8a1f2309d47080b2fa0d3773396588ed345e042e",
+					"hasAlpha": true
+				},
+				{
+					"path": "static/assets/daynight/home-modes/buy-graphite-v2-144.webp",
+					"width": 144,
+					"height": 144,
+					"bytes": 4846,
+					"sha256": "8877436366cae51c9bac1707e95afe5a036571c7047411c284e795e42b32a5ff",
+					"hasAlpha": true
+				}
+			]
+		},
+		{
+			"key": "finance",
+			"original": "C:/Users/radev/.codex/generated_images/01a10434-ddd7-7361-ae8e-48bd3e8da469/exec-49d99c94-0769-40d4-8c30-7ea5ddaa33a9.png",
+			"retained": "runtime/home-mode-graphite-2026-10-04/originals/finance-graphite-v2.png",
+			"originalWidth": 1254,
+			"originalHeight": 1254,
+			"originalSha256": "75f784038567dffabeb411df05f5523558080c4bb3948b80a79816c61aea86c0",
+			"bounds": {
+				"left": 108,
+				"top": 112,
+				"width": 1097,
+				"height": 1060
+			},
+			"opticalScale": 0.1951805447441612,
+			"variants": [
+				{
+					"path": "static/assets/daynight/home-modes/finance-graphite-v2-48.webp",
+					"width": 48,
+					"height": 48,
+					"bytes": 2218,
+					"sha256": "484c9b0c677446aa80d0c0849c1c920dc3182d53a6928e7dd5e1e2f985410e98",
+					"hasAlpha": true
+				},
+				{
+					"path": "static/assets/daynight/home-modes/finance-graphite-v2-96.webp",
+					"width": 96,
+					"height": 96,
+					"bytes": 4848,
+					"sha256": "1f347258ea784a5bf817892e05f8fa17d842d4364fce2a411c1554471319f189",
+					"hasAlpha": true
+				},
+				{
+					"path": "static/assets/daynight/home-modes/finance-graphite-v2-144.webp",
+					"width": 144,
+					"height": 144,
+					"bytes": 7570,
+					"sha256": "b39bef2bc13473816e4f9edd9727fa8e176550e80d6c476e3ba5dec004b84f5f",
+					"hasAlpha": true
+				}
+			]
+		},
+		{
+			"key": "sell",
+			"original": "C:/Users/radev/.codex/generated_images/01a10434-ddd7-7361-ae8e-48bd3e8da469/exec-c6412c9f-1080-4124-98cb-5c9823f0d59e.png",
+			"retained": "runtime/home-mode-graphite-2026-10-04/originals/sell-graphite-v2.png",
+			"originalWidth": 1254,
+			"originalHeight": 1254,
+			"originalSha256": "e36b552e63c87b280222e1c973192b6fafa2bf4de40e98eeb8880db2ca207244",
+			"bounds": {
+				"left": 122,
+				"top": 75,
+				"width": 1091,
+				"height": 1144
+			},
+			"opticalScale": 0.204259294307156,
+			"variants": [
+				{
+					"path": "static/assets/daynight/home-modes/sell-graphite-v2-48.webp",
+					"width": 48,
+					"height": 48,
+					"bytes": 1424,
+					"sha256": "acedb0cf657343b5f3b7afe74eecdfe355d680dba7ca9020a41db7a8a26792b4",
+					"hasAlpha": true
+				},
+				{
+					"path": "static/assets/daynight/home-modes/sell-graphite-v2-96.webp",
+					"width": 96,
+					"height": 96,
+					"bytes": 3002,
+					"sha256": "de5016df12e855ef4d99d123e1e9cf9c53485fa40d2f2097b23d60b77bb36c92",
+					"hasAlpha": true
+				},
+				{
+					"path": "static/assets/daynight/home-modes/sell-graphite-v2-144.webp",
+					"width": 144,
+					"height": 144,
+					"bytes": 4694,
+					"sha256": "39899b443c7f3340c3af96d6ff6f88cdfe1dcc1b806010ea008749977be3c097",
+					"hasAlpha": true
+				}
+			]
+		},
+		{
+			"key": "import",
+			"original": "C:/Users/radev/.codex/generated_images/01a10434-ddd7-7361-ae8e-48bd3e8da469/exec-842bf5a8-46e8-4951-bc37-f78f0b5bfb02.png",
+			"retained": "runtime/home-mode-graphite-2026-10-04/originals/import-graphite-v2.png",
+			"originalWidth": 1254,
+			"originalHeight": 1254,
+			"originalSha256": "e4a3f8dabd23b4ebf93902b0e0b0adb925e4b7cb4d69963aa15582727b94191c",
+			"bounds": {
+				"left": 101,
+				"top": 168,
+				"width": 1116,
+				"height": 918
+			},
+			"opticalScale": 0.1919574618994428,
+			"variants": [
+				{
+					"path": "static/assets/daynight/home-modes/import-graphite-v2-48.webp",
+					"width": 48,
+					"height": 48,
+					"bytes": 1524,
+					"sha256": "f3a21017b348c22f0cba95471cb93f6b01902a69e8782fb568a3057ec69319a5",
+					"hasAlpha": true
+				},
+				{
+					"path": "static/assets/daynight/home-modes/import-graphite-v2-96.webp",
+					"width": 96,
+					"height": 96,
+					"bytes": 3402,
+					"sha256": "76183d693fa7f9723e8a01ada1dda79dafa7780ea593f10dbac0a47cf0c25d54",
+					"hasAlpha": true
+				},
+				{
+					"path": "static/assets/daynight/home-modes/import-graphite-v2-144.webp",
+					"width": 144,
+					"height": 144,
+					"bytes": 5680,
+					"sha256": "55c6a7ebc786b97d1984f142885e0d59d2f05ee92b6fdc360c5fd51c1765462d",
+					"hasAlpha": true
+				}
+			]
+		}
+	]
+}

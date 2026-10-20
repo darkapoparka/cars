@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "mode": "existing-migration",
+  "sourceRevision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+  "dealers": [
+    "tesi-car-varna",
+    "exclusive-auto-varna",
+    "kapitol-varna",
+    "chernomore-varna"
+  ],
+  "targets": [
+    "auto-best",
+    "modern",
+    "import",
+    "app",
+    "mobile",
+    "karento-best",
+    "router"
+  ],
+  "composition": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-15T11:11:56.985Z",
+    "reviewScope": "Owner-authorized final six-template refresh of existing Cloudflare identities. All selected dealer source trees are actually published on Cars MAIN; preserve native palettes, factual stock/contacts/locales, selected logos, one existing Worker and its existing canonical exposure. Private source MAIN and hosted acceptance are recorded separately. These exact four dealer trees were recovered locally through the maintained preparer with its reviewed bounded IO adaptation after the recorded original source jobs failed. Their sourceArtifact is null and their local-* source identifiers do not claim GitHub CI success. Exact authenticated module provenance and any local execution adaptation are retained separately; this request does not claim byte-identical execution of all original modules. All four complete sources are actually published and read back on Cars MAIN. Fresh actual seven-target native CI and current-version canonical hosted verification remain required. This request changes no provider, Worker, canonical domain, selected raster, factual inventory or template selection.",
+    "canonicalCompositions": {
+      "tesi-car-varna": {
+        "canonicalOrigin": "https://tesi-car-varna.webpreviews.site",
+        "ukDefault": false
+      },
+      "exclusive-auto-varna": {
+        "canonicalOrigin": "https://exclusive-auto-varna.webpreviews.site",
+        "ukDefault": false
+      },
+      "kapitol-varna": {
+        "canonicalOrigin": "https://kapitol-varna.webpreviews.site",
+        "ukDefault": false
+      },
+      "chernomore-varna": {
+        "canonicalOrigin": "https://chernomore-varna.webpreviews.site",
+        "ukDefault": false
+      }
+    }
+  }
+}

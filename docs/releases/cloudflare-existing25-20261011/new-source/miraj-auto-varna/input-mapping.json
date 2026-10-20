@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-input-mapping",
+  "dealer": "miraj-auto-varna",
+  "inputs": {
+    "facts": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/miraj-auto-varna/facts.json",
+      "sha256": "aa2bd8894ab994ab277acf97140c5c5e8fa6dcfbf367faa71b6581d0f71b9eb1"
+    },
+    "stock": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/miraj-auto-varna/stock.json",
+      "sha256": "11693409e7fff8632e90cc98a5e87f4279c6a668ce80a84b5bd4809a623c8476"
+    },
+    "locale": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/miraj-auto-varna/locale.json",
+      "sha256": "8c68f5e85fb4b43bc975001d6bded87b73dc2609d2cb61f269610c61d8109d5b"
+    },
+    "branding": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/miraj-auto-varna/branding.json",
+      "sha256": "3b84b751669996df10719b560b526f3b20c80457fa93e46f00e0dfaef08b8773"
+    }
+  },
+  "sources": [
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/miraj-auto-varna/source/business-facts.json",
+      "sha256": "7ec60321a5a152d7cf9b1ea3a48dbfe4e1e6842a5b04292ff9eb46de5187aab0"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/miraj-auto-varna/source/locale.json",
+      "sha256": "8c68f5e85fb4b43bc975001d6bded87b73dc2609d2cb61f269610c61d8109d5b"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/miraj-auto-varna/source/stock.json",
+      "sha256": "c3d4a8744834902a7336cbdbb04fd53ce1871bc17c6f391e1ae49d2a29d79324"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/miraj-auto-varna/source/generation-receipt.json",
+      "sha256": "642307521a9c67c110aa32915276f9bbc2bc97959fc678098e01ede50155cd5e"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/miraj-auto-varna/source/native-onLight.png",
+      "sha256": "5de67b5ad2a19721f87bfbfc4c26d121bc25c6c951b8793f797ef9a4b70dc376"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/miraj-auto-varna/source/native-onDark.png",
+      "sha256": "5de67b5ad2a19721f87bfbfc4c26d121bc25c6c951b8793f797ef9a4b70dc376"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/miraj-auto-varna/source/native-onAccent.png",
+      "sha256": "5de67b5ad2a19721f87bfbfc4c26d121bc25c6c951b8793f797ef9a4b70dc376"
+    }
+  ],
+  "transformations": {
+    "facts": {
+      "source": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/miraj-auto-varna/source/business-facts.json",
+        "sha256": "7ec60321a5a152d7cf9b1ea3a48dbfe4e1e6842a5b04292ff9eb46de5187aab0"
+      },
+      "kind": "flat-original-facts-to-business-consumer",
+      "allOriginalEvidenceUnchanged": true,
+      "derivedNameDelta": null,
+      "otherFactsUnchanged": true
+    },
+    "stock": {
+      "source": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/miraj-auto-varna/source/stock.json",
+        "sha256": "c3d4a8744834902a7336cbdbb04fd53ce1871bc17c6f391e1ae49d2a29d79324"
+      },
+      "originalSourceRecordPreserved": true,
+      "sourceId": "21791636012392100",
+      "normalizer": "loadDealerProfile",
+      "retention": "retainDealerVariantAssets",
+      "sourceKind": "dated-marketplace-listing-sample",
+      "consumerKind": "dated-listing-snapshot",
+      "availabilityUnconfirmed": true,
+      "mediaRightsNotClaimed": true,
+      "mileageUnknownMeansOnRequest": true
+    },
+    "media": [
+      {
+        "sourceId": "21791636012392100",
+        "sourcePublicPath": "/assets/vehicles/21791636012392100/1.webp",
+        "publicPath": "/dealer-stock/21791636012392100-1.webp",
+        "destination": "dealer-stock/21791636012392100-1.webp",
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/miraj-auto-varna/media/21791636012392100-1.webp",
+        "sha256": "d6b54053212518882bba58444db79c1ead84e39365f59d426fe3ac8413903134",
+        "bytes": 291038
+      },
+      {
+        "sourceId": "21791636012392100",
+        "sourcePublicPath": "/assets/vehicles/21791636012392100/2.webp",
+        "publicPath": "/dealer-stock/21791636012392100-2.webp",
+        "destination": "dealer-stock/21791636012392100-2.webp",
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/miraj-auto-varna/media/21791636012392100-2.webp",
+        "sha256": "86f2f5645420e6cc490cfa18a4cc9f8b4c1eb29e2083ca62834cfe375647380a",
+        "bytes": 273692
+      }
+    ],
+    "branding": {
+      "acceptedManifest": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/evidence/final-logo-handoff.json",
+        "sha256": "b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a"
+      },
+      "originalGenerationReceipt": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/miraj-auto-varna/source/generation-receipt.json",
+        "sha256": "642307521a9c67c110aa32915276f9bbc2bc97959fc678098e01ede50155cd5e"
+      },
+      "noNewGeneration": true,
+      "modelVersion": null,
+      "pixelsUnchanged": true
+    },
+    "identity": null
+  }
+}

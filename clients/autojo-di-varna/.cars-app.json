@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "dealer": "autojo-di-varna",
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+    "path": "templates/app",
+    "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1",
+    "tree": "7f3d3ffa40546635377e6c5225194fe06fead291"
+  },
+  "appDigest": "6bf50886d1de558d635abc84a3a0c3cb3ba0910765dae8828631b9bd3299f3dc",
+  "provenance": {
+    "schemaVersion": 1,
+    "dealer": "autojo-di-varna",
+    "profile": "auto-best/src/lib/data/dealer-profile.json",
+    "profileSha256": "76f0cdc4caa6006a3d7f6bd86521d5fdd147309fbd7c8ab4acfba14e95a69ec7",
+    "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
+    "vehicles": 1,
+    "currency": "EUR",
+    "observedAt": "2026-10-11T11:54:04.950Z",
+    "assets": [
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-light.png",
+        "output": "public/dealer-app/logo-light-52ad7f03e419a7db7a4e.png",
+        "sha256": "52ad7f03e419a7db7a4e1ea0c47717439959da34ebd5c1cc0160137050e548b9",
+        "role": "logo-light"
+      },
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-dark.png",
+        "output": "public/dealer-app/logo-dark-9af391febe01f94db6dc.png",
+        "sha256": "9af391febe01f94db6dc1f819537c9f1f223a119efbca9638e21d6c74b6ee4dd",
+        "role": "logo-dark"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/21790429827660652-1.webp",
+        "output": "public/dealer-app/vehicle-8118f2ba70410db70b39.webp",
+        "sha256": "8118f2ba70410db70b395e0dcd72c0d87e6c9264dd99b49c505f73277ae5c9a4",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/21790429827660652-2.webp",
+        "output": "public/dealer-app/vehicle-c43065d5e30020baccc0.webp",
+        "sha256": "c43065d5e30020baccc09948fe02fba8a3377628ce0ad9be68d9d96fc63b03f1",
+        "role": "vehicle"
+      }
+    ],
+    "mileageFacts": [
+      {
+        "slug": "bmw-x1-2020-21790429827660652",
+        "sourceValue": 118000,
+        "sourceUnit": "km",
+        "canonicalKm": 118000
+      }
+    ]
+  },
+  "needsDealerQA": true,
+  "readyToPublish": false,
+  "refreshedAt": "2026-10-15T04:16:39.423Z"
+}

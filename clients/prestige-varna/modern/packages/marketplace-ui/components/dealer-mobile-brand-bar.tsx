@@ -1,28 +1,78 @@
 import { cn } from "@repo/design-system/lib/utils";
+import { withBasePath } from "@repo/internationalization/paths";
 import { leadSite } from "@repo/marketplace";
+import { publicSite } from "@repo/marketplace/site-config";
 import { MapPin, Phone } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
+import type { ReactNode } from "react";
 import { mobileHeaderIconActionClassName } from "../lib/mobile-header-icon-action";
 import { getLocalizedPublicPath } from "../lib/public-path";
+import { DealerDesktopLogo } from "./dealer-desktop-logo";
 import { DealerMobileHeaderIcon } from "./dealer-mobile-header-icon";
+import Image from "./public-image";
+
+type WordmarkTone = "original" | "light" | "dark";
+
+function DealerMobileWordmark({
+  clean,
+  wordmarkTone,
+}: {
+  clean: boolean;
+  wordmarkTone: WordmarkTone;
+}) {
+  if (publicSite.identity.desktopPreview) {
+    return (
+      <DealerDesktopLogo
+        className={cn(
+          "inline-flex h-11 max-w-[48vw] items-center justify-center",
+          (wordmarkTone === "light" || !clean) && "text-white",
+          wordmarkTone === "dark" && "text-zinc-950"
+        )}
+      />
+    );
+  }
+  // Tone is the painted logo surface, not the layout-only "clean" flag.
+  // Dark chrome and its black logo badge use the committed inverse raster.
+  const onDarkSurface =
+    wordmarkTone === "light" || (wordmarkTone === "original" && !clean);
+  const logoSrc = onDarkSurface
+    ? (leadSite.logoInversePath ?? leadSite.logoPath)
+    : leadSite.logoPath;
+
+  return (
+    <span className="relative block h-10 w-[176px] max-w-[48vw]">
+      <Image
+        alt={leadSite.name}
+        className="h-full w-full object-contain"
+        height={512}
+        priority
+        sizes="(max-width: 1023px) 176px, 0px"
+        src={logoSrc}
+        width={1780}
+      />
+    </span>
+  );
+}
 
 export const DealerMobileBrandBar = ({
   isBg,
   locale,
   tone = "dark",
-  wordmarkTone: _wordmarkTone = "original",
+  wordmarkTone = "original",
   onNavigate,
+  leadingAction,
+  trailingAction,
 }: {
   readonly isBg: boolean;
+  readonly leadingAction?: ReactNode;
+  readonly trailingAction?: ReactNode;
   readonly locale?: string;
   readonly tone?: "clean" | "dark" | "light";
-  readonly wordmarkTone?: "original" | "light" | "dark";
+  readonly wordmarkTone?: WordmarkTone;
   readonly onNavigate?: () => void;
 }) => {
   const light = tone === "light";
   const clean = tone === "clean";
-  const logoWidthClassName = "w-[144px] max-w-[48vw]";
 
   return (
     <div
@@ -31,20 +81,22 @@ export const DealerMobileBrandBar = ({
         !clean && (light ? "text-zinc-950" : "text-white"),
         clean
           ? "flex h-11 justify-center"
-          : "grid h-[54px] grid-cols-[44px_minmax(0,1fr)_44px]"
+          : "grid h-11 grid-cols-[44px_minmax(0,1fr)_44px]"
       )}
     >
-      {clean ? null : (
-        <a
-          aria-label={isBg ? "Отвори местоположението" : "Open location"}
-          className={mobileHeaderIconActionClassName}
-          href={leadSite.mapsUrl}
-          rel="noreferrer"
-          target="_blank"
-        >
-          <DealerMobileHeaderIcon icon={MapPin} kind="location" />
-        </a>
-      )}
+      {clean
+        ? null
+        : (leadingAction ?? (
+            <a
+              aria-label={isBg ? "Отвори местоположението" : "Open location"}
+              className={mobileHeaderIconActionClassName}
+              href={withBasePath(leadSite.mapsUrl)}
+              rel="noreferrer"
+              target="_blank"
+            >
+              <DealerMobileHeaderIcon icon={MapPin} kind="location" />
+            </a>
+          ))}
 
       <Link
         aria-label={isBg ? "Начало" : "Home"}
@@ -55,30 +107,20 @@ export const DealerMobileBrandBar = ({
         href={getLocalizedPublicPath(locale, "/")}
         onClick={onNavigate}
       >
-        <span
-          className={cn("relative block aspect-[1780/512]", logoWidthClassName)}
-        >
-          <Image
-            alt={leadSite.name}
-            className="h-full w-full object-contain"
-            height={512}
-            priority
-            sizes="(max-width: 1023px) 144px, 0px"
-            src={leadSite.logoPath}
-            width={1780}
-          />
-        </span>
+        <DealerMobileWordmark clean={clean} wordmarkTone={wordmarkTone} />
       </Link>
 
-      {clean ? null : (
-        <a
-          aria-label={`${isBg ? "Обадете се на" : "Call"} ${leadSite.phoneDisplay}`}
-          className={mobileHeaderIconActionClassName}
-          href={leadSite.phoneHref}
-        >
-          <DealerMobileHeaderIcon icon={Phone} kind="phone" />
-        </a>
-      )}
+      {clean
+        ? null
+        : (trailingAction ?? (
+            <a
+              aria-label={`${isBg ? "Обадете се на" : "Call"} ${leadSite.phoneDisplay}`}
+              className={mobileHeaderIconActionClassName}
+              href={withBasePath(leadSite.phoneHref)}
+            >
+              <DealerMobileHeaderIcon icon={Phone} kind="phone" />
+            </a>
+          ))}
     </div>
   );
 };

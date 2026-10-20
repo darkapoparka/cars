@@ -1,6 +1,5 @@
 import { formatPrice, localeContract, type Locale } from '$lib/locale/core';
 import { templateText } from '$lib/locale/messages';
-import { leadSite } from '$config/lead-site';
 
 export const vehicleTypes = ['car', 'motorbike', 'van', 'truck'] as const;
 export type VehicleType = typeof vehicleTypes[number];
@@ -34,6 +33,9 @@ export type Vehicle = {
   yearNumber: number;
   mileage: string;
   mileageKm: number;
+  mileageKnown?: boolean;
+  mileageValue?: number;
+  mileageUnit?: 'km' | 'mi';
   fuel: string;
   transmission: string;
   equipment: readonly VehicleEquipment[];
@@ -42,16 +44,11 @@ export type Vehicle = {
   href: `/listing-detail-v1/${number}`;
 };
 
-// Equipment facets are limited to recurring features published in Day & Night's
-// current adverts for these model families (daynight.mobile.bg, checked 2026-08-30).
-
-
-// Imported master fixtures are not VIN-verified stock. Preserve source media;
-// client promotion requires replacing and verifying each record, including reused photos.
 export const featuredVehicles: Vehicle[] = [
   {
     "id": 1,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://avangard-auto.mobile.bg/obiava-11785010475119627-vw-passat-alltrack-2-0tdi-190k-s-4h4",
     "image": "/assets/avangard/vehicle-01-1.webp",
     "category": "Wagon",
@@ -62,6 +59,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2018,
     "mileage": "220 000 км",
     "mileageKm": 220000,
+    "mileageKnown": true,
+    "mileageValue": 220000,
+    "mileageUnit": "km",
     "fuel": "Дизел",
     "transmission": "Автоматик",
     "equipment": [
@@ -72,12 +72,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 13500,
-    "href": "/listing-detail-v1/1",
-    "type": "car"
+    "href": "/listing-detail-v1/1"
   },
   {
     "id": 2,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://avangard-auto.mobile.bg/obiava-21783748809976935-volvo-xc40-2-0d-150k-s-4h4",
     "image": "/assets/avangard/vehicle-02-1.webp",
     "category": "SUV",
@@ -88,6 +88,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2019,
     "mileage": "166 000 км",
     "mileageKm": 166000,
+    "mileageKnown": true,
+    "mileageValue": 166000,
+    "mileageUnit": "km",
     "fuel": "Дизел",
     "transmission": "Автоматик",
     "equipment": [
@@ -99,12 +102,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 17999,
-    "href": "/listing-detail-v1/2",
-    "type": "car"
+    "href": "/listing-detail-v1/2"
   },
   {
     "id": 3,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://avangard-auto.mobile.bg/obiava-21766322242220471-volvo-xc40-t5-inscription-lizing-bez-parvonachalna-vnoska",
     "image": "/assets/avangard/vehicle-03-1.webp",
     "category": "SUV",
@@ -115,6 +118,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2019,
     "mileage": "278 000 км",
     "mileageKm": 278000,
+    "mileageKnown": true,
+    "mileageValue": 278000,
+    "mileageUnit": "km",
     "fuel": "Бензин",
     "transmission": "Автоматик",
     "equipment": [
@@ -128,12 +134,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 16900,
-    "href": "/listing-detail-v1/3",
-    "type": "car"
+    "href": "/listing-detail-v1/3"
   },
   {
     "id": 4,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://avangard-auto.mobile.bg/obiava-11782450720679744-peugeot-208-1-6hdi-facelift",
     "image": "/assets/avangard/vehicle-04-1.webp",
     "category": "Hatchback",
@@ -144,17 +150,20 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2016,
     "mileage": "214 000 км",
     "mileageKm": 214000,
+    "mileageKnown": true,
+    "mileageValue": 214000,
+    "mileageUnit": "km",
     "fuel": "Дизел",
     "transmission": "Ръчна",
     "equipment": [],
     "condition": "used",
     "priceEur": 5800,
-    "href": "/listing-detail-v1/4",
-    "type": "car"
+    "href": "/listing-detail-v1/4"
   },
   {
     "id": 5,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://avangard-auto.mobile.bg/obiava-11782462832415648-peugeot-2008-1-6hdi-92k-s-allure",
     "image": "/assets/avangard/vehicle-05-1.webp",
     "category": "Hatchback",
@@ -165,6 +174,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2013,
     "mileage": "216 000 км",
     "mileageKm": 216000,
+    "mileageKnown": true,
+    "mileageValue": 216000,
+    "mileageUnit": "km",
     "fuel": "Дизел",
     "transmission": "Ръчна",
     "equipment": [
@@ -174,12 +186,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 6999,
-    "href": "/listing-detail-v1/5",
-    "type": "car"
+    "href": "/listing-detail-v1/5"
   },
   {
     "id": 6,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://avangard-auto.mobile.bg/obiava-21776284342452600-nissan-qashqai-1-5dci-110k-s-facelift-tekna",
     "image": "/assets/avangard/vehicle-06-1.webp",
     "category": "SUV",
@@ -190,6 +202,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2018,
     "mileage": "175 000 км",
     "mileageKm": 175000,
+    "mileageKnown": true,
+    "mileageValue": 175000,
+    "mileageUnit": "km",
     "fuel": "Дизел",
     "transmission": "Ръчна",
     "equipment": [
@@ -200,12 +215,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 11500,
-    "href": "/listing-detail-v1/6",
-    "type": "car"
+    "href": "/listing-detail-v1/6"
   },
   {
     "id": 7,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://avangard-auto.mobile.bg/obiava-21773782041228539-mitsubishi-outlander-2-2di-d-150k-s-4h4",
     "image": "/assets/avangard/vehicle-07-1.webp",
     "category": "SUV",
@@ -216,6 +231,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2014,
     "mileage": "167 000 км",
     "mileageKm": 167000,
+    "mileageKnown": true,
+    "mileageValue": 167000,
+    "mileageUnit": "km",
     "fuel": "Дизел",
     "transmission": "Ръчна",
     "equipment": [
@@ -224,12 +242,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 9350,
-    "href": "/listing-detail-v1/7",
-    "type": "car"
+    "href": "/listing-detail-v1/7"
   },
   {
     "id": 8,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://avangard-auto.mobile.bg/obiava-21760385289842805-kia-sportage-1-7crdi-facelift",
     "image": "/assets/avangard/vehicle-08-1.webp",
     "category": "SUV",
@@ -240,6 +258,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2014,
     "mileage": "179 000 км",
     "mileageKm": 179000,
+    "mileageKnown": true,
+    "mileageValue": 179000,
+    "mileageUnit": "km",
     "fuel": "Дизел",
     "transmission": "Ръчна",
     "equipment": [
@@ -248,12 +269,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 8500,
-    "href": "/listing-detail-v1/8",
-    "type": "car"
+    "href": "/listing-detail-v1/8"
   },
   {
     "id": 9,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://avangard-auto.mobile.bg/obiava-21785012088488667-bmw-x1-2-0d-150k-s",
     "image": "/assets/avangard/vehicle-09-1.webp",
     "category": "SUV",
@@ -264,6 +285,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2016,
     "mileage": "138 000 км",
     "mileageKm": 138000,
+    "mileageKnown": true,
+    "mileageValue": 138000,
+    "mileageUnit": "km",
     "fuel": "Дизел",
     "transmission": "Автоматик",
     "equipment": [
@@ -274,12 +298,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 14500,
-    "href": "/listing-detail-v1/9",
-    "type": "car"
+    "href": "/listing-detail-v1/9"
   },
   {
     "id": 10,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://avangard-auto.mobile.bg/obiava-21746821020349714-bmw-x1-2-0d-177k-s-xdrive",
     "image": "/assets/avangard/vehicle-10-1.webp",
     "category": "SUV",
@@ -290,6 +314,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2010,
     "mileage": "187 000 км",
     "mileageKm": 187000,
+    "mileageKnown": true,
+    "mileageValue": 187000,
+    "mileageUnit": "km",
     "fuel": "Дизел",
     "transmission": "Ръчна",
     "equipment": [
@@ -298,12 +325,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 5999,
-    "href": "/listing-detail-v1/10",
-    "type": "car"
+    "href": "/listing-detail-v1/10"
   },
   {
     "id": 11,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://avangard-auto.mobile.bg/obiava-11754080933689299-bmw-320-i-184k-s",
     "image": "/assets/avangard/vehicle-11-1.webp",
     "category": "Wagon",
@@ -314,6 +341,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2013,
     "mileage": "187 000 км",
     "mileageKm": 187000,
+    "mileageKnown": true,
+    "mileageValue": 187000,
+    "mileageUnit": "km",
     "fuel": "Бензин",
     "transmission": "Ръчна",
     "equipment": [
@@ -322,12 +352,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 6300,
-    "href": "/listing-detail-v1/11",
-    "type": "car"
+    "href": "/listing-detail-v1/11"
   },
   {
     "id": 12,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://avangard-auto.mobile.bg/obiava-21779794798955793-audi-sq5-3-0v6t-zf-lizing-bez-parvonachalna-vnoska",
     "image": "/assets/avangard/vehicle-12-1.webp",
     "category": "SUV",
@@ -338,6 +368,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2018,
     "mileage": "197 000 км",
     "mileageKm": 197000,
+    "mileageKnown": true,
+    "mileageValue": 197000,
+    "mileageUnit": "km",
     "fuel": "Бензин",
     "transmission": "Автоматик",
     "equipment": [
@@ -351,12 +384,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 21999,
-    "href": "/listing-detail-v1/12",
-    "type": "car"
+    "href": "/listing-detail-v1/12"
   },
   {
     "id": 13,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://avangard-auto.mobile.bg/obiava-21786111867697018-audi-q7-premium-plus-lizing-bez-parvonachalna-vnoska",
     "image": "/assets/avangard/vehicle-13-1.webp",
     "category": "SUV",
@@ -367,6 +400,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2017,
     "mileage": "255 000 км",
     "mileageKm": 255000,
+    "mileageKnown": true,
+    "mileageValue": 255000,
+    "mileageUnit": "km",
     "fuel": "Бензин",
     "transmission": "Автоматик",
     "equipment": [
@@ -380,12 +416,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 20500,
-    "href": "/listing-detail-v1/13",
-    "type": "car"
+    "href": "/listing-detail-v1/13"
   },
   {
     "id": 14,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://avangard-auto.mobile.bg/obiava-21779802183945718-audi-q5-sq5-3-0v6t-lizing-bez-parvonachalna-vnoska",
     "image": "/assets/avangard/vehicle-14-1.webp",
     "category": "SUV",
@@ -396,6 +432,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2018,
     "mileage": "197 000 км",
     "mileageKm": 197000,
+    "mileageKnown": true,
+    "mileageValue": 197000,
+    "mileageUnit": "km",
     "fuel": "Бензин",
     "transmission": "Автоматик",
     "equipment": [
@@ -409,12 +448,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 21999,
-    "href": "/listing-detail-v1/14",
-    "type": "car"
+    "href": "/listing-detail-v1/14"
   },
   {
     "id": 15,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://avangard-auto.mobile.bg/obiava-21762503862293800-audi-q5-premium-plus-lizing-bez-parvonachalna-vnoska",
     "image": "/assets/avangard/vehicle-15-1.webp",
     "category": "SUV",
@@ -425,6 +464,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2018,
     "mileage": "206 000 км",
     "mileageKm": 206000,
+    "mileageKnown": true,
+    "mileageValue": 206000,
+    "mileageUnit": "km",
     "fuel": "Бензин",
     "transmission": "Автоматик",
     "equipment": [
@@ -438,12 +480,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 17999,
-    "href": "/listing-detail-v1/15",
-    "type": "car"
+    "href": "/listing-detail-v1/15"
   },
   {
     "id": 16,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://avangard-auto.mobile.bg/obiava-11787435697096424-audi-a4-2-0tdi-143k-s",
     "image": "/assets/avangard/vehicle-16-1.webp",
     "category": "Wagon",
@@ -454,6 +496,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2011,
     "mileage": "202 000 км",
     "mileageKm": 202000,
+    "mileageKnown": true,
+    "mileageValue": 202000,
+    "mileageUnit": "km",
     "fuel": "Дизел",
     "transmission": "Автоматик",
     "equipment": [
@@ -463,12 +508,14 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 6300,
-    "href": "/listing-detail-v1/16",
-    "type": "car"
+    "href": "/listing-detail-v1/16"
   }
 ];
 
-export const formatVehiclePrice = (amount: number, locale: Locale = localeContract.defaultLocale) => amount > 0 ? formatPrice(amount, locale) : templateText(locale, 'Price on request');
+export const formatVehiclePrice = (
+  amount: number,
+  locale: Locale = localeContract.defaultLocale
+) => amount > 0 ? formatPrice(amount, locale) : templateText(locale, 'Price on request');
 
 /** Allow a currency line break while preserving the locale's grouped digits. */
 export const formatVehiclePriceLabel = (amount: number, locale: Locale = localeContract.defaultLocale) =>

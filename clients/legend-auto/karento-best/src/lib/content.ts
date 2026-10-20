@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "LEGEND AUTO",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/logo-on-light.webp",
-    "footer": "/dealer-brand/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-10a764fe9224b1a5/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-10a764fe9224b1a5/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-10a764fe9224b1a5/logo-on-dark.webp",
     "alt": "LEGEND AUTO",
-    "favicon": "/dealer-brand/logo-on-light.webp",
+    "favicon": "/dealer-brand/v2-10a764fe9224b1a5/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {

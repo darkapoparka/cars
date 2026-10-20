@@ -1,0 +1,168 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-reviewed-modern-bilingual-copy-input",
+  "dealer": "bradford-cherry-tree-cars",
+  "sourceCommit": "d9594c2979f668831b78609e4e990640259aee81",
+  "baselineTree": "bbc1eee9a19839606981351b584cd2fbb18d9763",
+  "inputSha256": "1d551446613ec1ddb91de6185b54be56f1c91e291e55f5c3b46a6d0d1d651be6",
+  "modernInputRowsSha256": "13ce49f06cd7163a1f7d27173eea383f64b551d5d7a7cd6665e34010889140b7",
+  "listingCount": 8,
+  "profileInputs": [
+    {
+      "path": "dealer.json",
+      "gitBlob": "6e52fcf5e169c38f55e13dddd23e2e08fd5da95e",
+      "sha256": "7605650e0eee92bfbc8edcc3880ea3497be59e61df814e15dccffa603c1471ee",
+      "bytes": 4334
+    },
+    {
+      "path": "business-facts.json",
+      "gitBlob": "f4922a86b4d80b9ed8ab0d42374278180635571b",
+      "sha256": "7e251bada74c7d36374e30c540fb38b82bdab6ca469c967131808caa2368cfe7",
+      "bytes": 11116
+    },
+    {
+      "path": "stock.json",
+      "gitBlob": "afefe4a692bcf99ce2ff24aaf0368d3c6d8c53f7",
+      "sha256": "ecdbebb66ae38d7382f6839df9cdd120a11f7ba959fad0ab31eec1bce9d47078",
+      "bytes": 12377
+    }
+  ],
+  "reviewedGeneratorHelper": {
+    "path": "scripts/lib/modern-dealer-inventory-copy.mjs",
+    "sha256": "cbdbaa28dc07911cfe913b4e627671b6556fc25d3bfe59364e29c5ca5a29072b",
+    "sourceCommit": "14d86f67c160699c18a6ec5658197cc4d9011e0b"
+  },
+  "review": {
+    "displayCopyOnly": true,
+    "exactSourceDescriptionKeys": true,
+    "listingFactsUnchanged": true,
+    "imageUrlsUnchanged": true,
+    "imageAltsPreserved": true,
+    "interpolationTokensUnchanged": true,
+    "reviewedBy": "Codex, authorized final-template rollout",
+    "reviewedAt": "2026-10-14T20:04:09.098Z",
+    "notes": "Reuse exact existing native or reviewed registered companions for every actual current row; no new translation/factual source edits."
+  },
+  "reviewedCopy": {
+    "chrysler-sebring-2008-20722137": {
+      "sourceDescription": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "en": {
+        "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+        "imageAlts": [
+          "Chrysler Sebring 2.4 Limited Saloon 4dr Petrol Automatic (211 g/km, 167 bhp)"
+        ]
+      },
+      "bg": {
+        "description": "Илюстрация — не показва обявения автомобил. Това са датирани данни от обяви, наблюдавани на 10 октомври 2026 г. Потвърдете оригиналната обява, цената, състоянието и наличността с автокъщата.",
+        "imageAlts": [
+          "Chrysler Sebring 2.4 Limited Saloon 4dr Petrol Automatic (211 g/km, 167 bhp)"
+        ]
+      }
+    },
+    "land-rover-discovery-sport-2018-21144493": {
+      "sourceDescription": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "en": {
+        "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+        "imageAlts": [
+          "Land Rover Discovery Sport 2.0 TD4 HSE Black SUV 5dr Diesel Auto 4WD Euro 6 (s/s) (180 ps)"
+        ]
+      },
+      "bg": {
+        "description": "Илюстрация — не показва обявения автомобил. Това са датирани данни от обяви, наблюдавани на 10 октомври 2026 г. Потвърдете оригиналната обява, цената, състоянието и наличността с автокъщата.",
+        "imageAlts": [
+          "Land Rover Discovery Sport 2.0 TD4 HSE Black SUV 5dr Diesel Auto 4WD Euro 6 (s/s) (180 ps)"
+        ]
+      }
+    },
+    "mercedes-benz-r-class-2007-20977893": {
+      "sourceDescription": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "en": {
+        "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+        "imageAlts": [
+          "Mercedes-Benz R-Class 3.0 R320 CDI SE L MPV 5dr Diesel 7G-Tronic (246 g/km, 221 bhp)"
+        ]
+      },
+      "bg": {
+        "description": "Илюстрация — не показва обявения автомобил. Това са датирани данни от обяви, наблюдавани на 10 октомври 2026 г. Потвърдете оригиналната обява, цената, състоянието и наличността с автокъщата.",
+        "imageAlts": [
+          "Mercedes-Benz R-Class 3.0 R320 CDI SE L MPV 5dr Diesel 7G-Tronic (246 g/km, 221 bhp)"
+        ]
+      }
+    },
+    "audi-a4-2009-21086505": {
+      "sourceDescription": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "en": {
+        "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+        "imageAlts": [
+          "Audi A4 3.0 TDI SE Estate 5dr Diesel S Tronic quattro Euro 4 (240 ps)"
+        ]
+      },
+      "bg": {
+        "description": "Илюстрация — не показва обявения автомобил. Това са датирани данни от обяви, наблюдавани на 10 октомври 2026 г. Потвърдете оригиналната обява, цената, състоянието и наличността с автокъщата.",
+        "imageAlts": [
+          "Audi A4 3.0 TDI SE Estate 5dr Diesel S Tronic quattro Euro 4 (240 ps)"
+        ]
+      }
+    },
+    "renault-megane-2011-20877963": {
+      "sourceDescription": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "en": {
+        "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+        "imageAlts": [
+          "Renault Megane 1.5 dCi Expression Hatchback 5dr Diesel Manual Euro 5 (110 ps)"
+        ]
+      },
+      "bg": {
+        "description": "Илюстрация — не показва обявения автомобил. Това са датирани данни от обяви, наблюдавани на 10 октомври 2026 г. Потвърдете оригиналната обява, цената, състоянието и наличността с автокъщата.",
+        "imageAlts": [
+          "Renault Megane 1.5 dCi Expression Hatchback 5dr Diesel Manual Euro 5 (110 ps)"
+        ]
+      }
+    },
+    "hyundai-santa-fe-2013-21180529": {
+      "sourceDescription": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "en": {
+        "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+        "imageAlts": [
+          "Hyundai Santa Fe 2.2 CRDi Premium SE SUV 5dr Diesel Auto 4WD Euro 5 (7 seat) (194 bhp)"
+        ]
+      },
+      "bg": {
+        "description": "Илюстрация — не показва обявения автомобил. Това са датирани данни от обяви, наблюдавани на 10 октомври 2026 г. Потвърдете оригиналната обява, цената, състоянието и наличността с автокъщата.",
+        "imageAlts": [
+          "Hyundai Santa Fe 2.2 CRDi Premium SE SUV 5dr Diesel Auto 4WD Euro 5 (7 seat) (194 bhp)"
+        ]
+      }
+    },
+    "volvo-xc60-2010-21170923": {
+      "sourceDescription": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "en": {
+        "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+        "imageAlts": [
+          "Volvo XC60 2.4 D5 R-Design SUV 5dr Diesel Geartronic AWD Euro 5 (205 ps)"
+        ]
+      },
+      "bg": {
+        "description": "Илюстрация — не показва обявения автомобил. Това са датирани данни от обяви, наблюдавани на 10 октомври 2026 г. Потвърдете оригиналната обява, цената, състоянието и наличността с автокъщата.",
+        "imageAlts": [
+          "Volvo XC60 2.4 D5 R-Design SUV 5dr Diesel Geartronic AWD Euro 5 (205 ps)"
+        ]
+      }
+    },
+    "mini-hatchback-2014-20562332": {
+      "sourceDescription": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer. The source advert reports cosmetic imperfections to the bodywork.",
+      "en": {
+        "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer. The source advert reports cosmetic imperfections to the bodywork.",
+        "imageAlts": [
+          "MINI Hatchback 1.5 Cooper Hatchback 5dr Petrol Manual Euro 6 (s/s) (136 ps)"
+        ]
+      },
+      "bg": {
+        "description": "Илюстрация — не показва обявения автомобил. Това са датирани данни от обяви, наблюдавани на 10 октомври 2026 г. Потвърдете оригиналната обява, цената, състоянието и наличността с автокъщата. В оригиналната обява са посочени козметични дефекти по каросерията.",
+        "imageAlts": [
+          "MINI Hatchback 1.5 Cooper Hatchback 5dr Petrol Manual Euro 6 (s/s) (136 ps)"
+        ]
+      }
+    }
+  }
+}

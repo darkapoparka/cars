@@ -1,0 +1,963 @@
+[
+  {
+    "dealer": "kapitol-varna",
+    "identity": {
+      "dealerId": "kapitol-varna",
+      "repository": "darkapoparka/cars-kapitol-varna",
+      "workerName": "cars-kapitol-varna",
+      "publicOrigin": "https://cars-kapitol-varna.darkapoparka1.workers.dev",
+      "sources": [
+        {
+          "url": "https://kapitol.mobile.bg/",
+          "observedAt": "2026-10-12T10:44:18.555Z"
+        }
+      ]
+    },
+    "input": {
+      "schemaVersion": 1,
+      "kind": "cars-registered-dealer-derived-inputs",
+      "dealer": "kapitol-varna",
+      "reviewed": true,
+      "reviewedAt": "2026-10-12T12:51:16.402Z",
+      "facts": {
+        "schemaVersion": 1,
+        "slug": "kapitol-varna",
+        "dealerId": "kapitol-varna",
+        "business": {
+          "schemaVersion": 1,
+          "slug": "kapitol-varna",
+          "name": "Капитол",
+          "shortName": "Капитол",
+          "city": "Варна",
+          "country": "BG",
+          "countryCode": "BG",
+          "locale": "bg-BG",
+          "currency": "EUR",
+          "distanceUnit": "km",
+          "phone": "0878720052",
+          "phoneDisplay": "0878720052",
+          "phoneE164": "+359878720052",
+          "phones": [
+            "+359878720052"
+          ],
+          "addressLine": "бул. Цар Освободител 236",
+          "address": "бул. Цар Освободител 236, Варна, България",
+          "hours": "Потвърдете работното време директно с автокъщата.",
+          "email": "",
+          "sourceUrl": "https://kapitol.mobile.bg/",
+          "stockUrl": "https://kapitol.mobile.bg/",
+          "contactSourceUrl": "https://kapitol.mobile.bg/contacts",
+          "observedAt": "2026-10-12T10:44:18.555Z",
+          "inventoryNotice": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+          "previewNotice": "Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация.",
+          "services": [],
+          "socialLinks": {},
+          "logo": "/dealer-brand/logo-on-light.png",
+          "logoLight": "/dealer-brand/logo-on-light.png",
+          "logoDark": "/dealer-brand/logo-on-dark.png",
+          "modernInventoryCopy": {
+            "kapitol-varna-21791385455711977": {
+              "sourceDescription": "Mercedes-Benz GLB 200 D AMG Line от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+              "en": {
+                "description": "Mercedes-Benz GLB 200 D AMG Line from a dated public advert. Confirm condition, price and availability directly with the dealership.",
+                "imageAlts": [
+                  "Mercedes-Benz GLB 200 D AMG Line — dated public advert photo 1",
+                  "Mercedes-Benz GLB 200 D AMG Line — dated public advert photo 2"
+                ]
+              },
+              "bg": {
+                "description": "Mercedes-Benz GLB 200 D AMG Line от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+                "imageAlts": [
+                  "Mercedes-Benz GLB 200 D AMG Line — снимка от датирана публична обява 1",
+                  "Mercedes-Benz GLB 200 D AMG Line — снимка от датирана публична обява 2"
+                ]
+              }
+            },
+            "kapitol-varna-21791028313582431": {
+              "sourceDescription": "Kia Sportage HEV 1.6 T-GDI от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+              "en": {
+                "description": "Kia Sportage HEV 1.6 T-GDI from a dated public advert. Confirm condition, price and availability directly with the dealership.",
+                "imageAlts": [
+                  "Kia Sportage HEV 1.6 T-GDI — dated public advert photo 1",
+                  "Kia Sportage HEV 1.6 T-GDI — dated public advert photo 2"
+                ]
+              },
+              "bg": {
+                "description": "Kia Sportage HEV 1.6 T-GDI от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+                "imageAlts": [
+                  "Kia Sportage HEV 1.6 T-GDI — снимка от датирана публична обява 1",
+                  "Kia Sportage HEV 1.6 T-GDI — снимка от датирана публична обява 2"
+                ]
+              }
+            }
+          }
+        },
+        "research": {
+          "website": {
+            "status": "identity-not-confirmed",
+            "url": "https://kapitolia.com/",
+            "note": "Workbook URL resolves to Sofia contacts differing from Varna profile. Do not reuse that site's identity or contact facts."
+          },
+          "publicIdentityKey": "mobile-profile:kapitol.mobile.bg",
+          "profileAdvertCount": 42,
+          "availabilityConfirmed": false,
+          "legalEntityOwnershipVerified": false,
+          "addressExactness": "public-contact-as-published",
+          "caveats": [
+            "Preserve existing Cars-owned clients/kapitol-varna; not an absent new-client identity.",
+            "Workbook own-site URL points to a different city and phones; identity unconfirmed."
+          ],
+          "sourceProof": [
+            {
+              "url": "https://kapitol.mobile.bg/",
+              "finalUrl": "https://kapitol.mobile.bg/",
+              "observedAt": "2026-10-12T10:44:18.705Z",
+              "status": 200,
+              "bytes": 213527,
+              "sha256": "fe5a91f137e2e074ff8ae31daf47f41ce4a27a6b9bcab87221b77713e787ddf5"
+            },
+            {
+              "url": "https://kapitol.mobile.bg/contacts",
+              "finalUrl": "https://kapitol.mobile.bg/contacts",
+              "observedAt": "2026-10-12T10:44:18.555Z",
+              "status": 200,
+              "bytes": 42537,
+              "sha256": "bfa3498a861e6ce8fa50196f4a2a7021502b81ec8a7450ad3e5088d4bec698b9"
+            },
+            {
+              "url": "https://kapitol.mobile.bg/about",
+              "finalUrl": "https://kapitol.mobile.bg/about",
+              "observedAt": "2026-10-12T10:44:18.520Z",
+              "status": 200,
+              "bytes": 6443,
+              "sha256": "8a1a0d6a837a135d06faf27989619ee0dbed7271704cf6059279ff7bec44b452"
+            }
+          ],
+          "sourceAction": "preserve-existing-cars-source",
+          "existingSourceTree": "fb3d54604a33890b0e098aea12410f7463ecdffa",
+          "inventoryModeSelection": "dated-listing-snapshot",
+          "productionAssetInputsComplete": true,
+          "stockSnapshotScope": "Two retained public adverts, not a complete/live inventory",
+          "stockMediaAuthority": "Owner-authorized public dated demo scope; original source bytes and watermarks retained"
+        }
+      },
+      "stock": {
+        "kind": "dated-listing-snapshot",
+        "mode": "reviewed-public-listing-snapshot",
+        "previewOnly": true,
+        "actualDealerAvailability": false,
+        "disclosure": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+        "listings": [
+          {
+            "title": "Mercedes-Benz GLB 200 D AMG Line",
+            "make": "Mercedes-Benz",
+            "model": "GLB",
+            "year": 2025,
+            "priceAmount": 29790,
+            "mileageValue": 186000,
+            "fuel": "Diesel",
+            "transmission": "Automatic",
+            "body": "SUV",
+            "description": "Mercedes-Benz GLB 200 D AMG Line от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+            "sourceFieldProof": {
+              "source": "https://kapitol.mobile.bg/obiava-21791385455711977-mercedes-benz-glb-200-d-amg-line-night-pack-8-dct-150",
+              "year": "Дата на производство януари 2025",
+              "price": "29 790 €",
+              "mileage": "Пробег [км] 186000 км",
+              "fuel": "Двигател Дизелов",
+              "transmission": "Скоростна кутия Автоматична",
+              "body": "Категория Джип"
+            },
+            "sourceCaveats": [],
+            "id": "21791385455711977",
+            "slug": "kapitol-varna-21791385455711977",
+            "currency": "EUR",
+            "priceOnRequest": false,
+            "mileageOnRequest": false,
+            "mileageUnit": "km",
+            "condition": "used",
+            "images": [
+              "/dealer-stock/21791385455711977-1.webp",
+              "/dealer-stock/21791385455711977-2.webp"
+            ],
+            "sourceUrl": "https://kapitol.mobile.bg/obiava-21791385455711977-mercedes-benz-glb-200-d-amg-line-night-pack-8-dct-150",
+            "observedAt": "2026-10-12T11:55:24.101Z",
+            "availability": "Датирана обява; потвърдете цената и наличността директно с автокъщата.",
+            "sourceProof": {
+              "sha256": "d6bf991d86a81d4fd9ff4d737207410adfd220bfffe306bd0b17842a95ce2a20",
+              "originalPhotoBytesUnchanged": true,
+              "watermarksPreserved": true
+            },
+            "sourceRecord": {
+              "path": ".client/registered-reviewed-public-inputs/stock.json",
+              "sha256": "a6515c9aedc44c9d286670949e97c74c0ee64d48145fd5310d8eb2cdd9ecbc43",
+              "id": "21791385455711977"
+            }
+          },
+          {
+            "title": "Kia Sportage HEV 1.6 T-GDI",
+            "make": "Kia",
+            "model": "Sportage",
+            "year": 2023,
+            "priceAmount": 19000,
+            "mileageValue": 195000,
+            "fuel": "Hybrid",
+            "transmission": "Automatic",
+            "body": "SUV",
+            "description": "Kia Sportage HEV 1.6 T-GDI от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+            "sourceFieldProof": {
+              "source": "https://kapitol.mobile.bg/obiava-21791028313582431-kia-sportage-hev-1-6-t-gdi-active-230",
+              "year": "Дата на производство февруари 2023",
+              "price": "19 000 €",
+              "mileage": "Пробег [км] 195000 км",
+              "fuel": "Двигател Хибриден",
+              "transmission": "Скоростна кутия Автоматична",
+              "body": "Категория Джип"
+            },
+            "sourceCaveats": [],
+            "id": "21791028313582431",
+            "slug": "kapitol-varna-21791028313582431",
+            "currency": "EUR",
+            "priceOnRequest": false,
+            "mileageOnRequest": false,
+            "mileageUnit": "km",
+            "condition": "used",
+            "images": [
+              "/dealer-stock/21791028313582431-1.webp",
+              "/dealer-stock/21791028313582431-2.webp"
+            ],
+            "sourceUrl": "https://kapitol.mobile.bg/obiava-21791028313582431-kia-sportage-hev-1-6-t-gdi-active-230",
+            "observedAt": "2026-10-12T11:55:24.101Z",
+            "availability": "Датирана обява; потвърдете цената и наличността директно с автокъщата.",
+            "sourceProof": {
+              "sha256": "d483663a46fc1db448330ad65179f2a2df847fd62869506f04c0c3691adf0f1e",
+              "originalPhotoBytesUnchanged": true,
+              "watermarksPreserved": true
+            },
+            "sourceRecord": {
+              "path": ".client/registered-reviewed-public-inputs/stock.json",
+              "sha256": "a6515c9aedc44c9d286670949e97c74c0ee64d48145fd5310d8eb2cdd9ecbc43",
+              "id": "21791028313582431"
+            }
+          }
+        ]
+      },
+      "locale": {
+        "schemaVersion": 1,
+        "dealerId": "kapitol-varna",
+        "defaultLocale": "bg",
+        "enabledLocales": [
+          "bg",
+          "en"
+        ],
+        "dealerCountry": "BG",
+        "inventoryCurrency": "EUR"
+      },
+      "sourceEvidence": [
+        {
+          "path": "business-facts.json",
+          "sha256": "557e835a1419e7097af5dd02fa792eb88cee779c795163a15f9b1c120689c38d"
+        }
+      ],
+      "media": [
+        {
+          "publicPath": "/dealer-brand/logo-on-light.png",
+          "sourceKind": "reviewed-published-input",
+          "inputPath": "docs/releases/cloudflare-existing25-20261011/new-source/kapitol-varna/branding/on-light.png",
+          "sourcePath": ".client/registered-reviewed-public-inputs/branding/on-light.png",
+          "sha256": "2f3d29ca67c82334182f566297073b9b574fed044122f0f6c2fdbccc191a0ad9"
+        },
+        {
+          "publicPath": "/dealer-brand/logo-on-dark.png",
+          "sourceKind": "reviewed-published-input",
+          "inputPath": "docs/releases/cloudflare-existing25-20261011/new-source/kapitol-varna/branding/on-dark.png",
+          "sourcePath": ".client/registered-reviewed-public-inputs/branding/on-dark.png",
+          "sha256": "f05b318cc167498af5b780960ab0eda43d22c92544fac91330b538265e18153e"
+        },
+        {
+          "publicPath": "/dealer-stock/21791385455711977-1.webp",
+          "sourceKind": "reviewed-published-input",
+          "inputPath": "docs/releases/cloudflare-existing25-20261011/new-source/kapitol-varna/media/21791385455711977-1.webp",
+          "sourcePath": ".client/registered-reviewed-public-inputs/media/21791385455711977-1.webp",
+          "sha256": "9c5960d5a373c8f9d74148fe6be5328383ea84d65f2b5bd8d377708286f11631"
+        },
+        {
+          "publicPath": "/dealer-stock/21791385455711977-2.webp",
+          "sourceKind": "reviewed-published-input",
+          "inputPath": "docs/releases/cloudflare-existing25-20261011/new-source/kapitol-varna/media/21791385455711977-2.webp",
+          "sourcePath": ".client/registered-reviewed-public-inputs/media/21791385455711977-2.webp",
+          "sha256": "6abbbd513c1fc6da5ae72af7116eea06bd0df4519136898f07b7ffe45ca42827"
+        },
+        {
+          "publicPath": "/dealer-stock/21791028313582431-1.webp",
+          "sourceKind": "reviewed-published-input",
+          "inputPath": "docs/releases/cloudflare-existing25-20261011/new-source/kapitol-varna/media/21791028313582431-1.webp",
+          "sourcePath": ".client/registered-reviewed-public-inputs/media/21791028313582431-1.webp",
+          "sha256": "56c885634378d0a482bc4d4aa250c8d80dec0015ed5f4bdb8eedf58bdb834269"
+        },
+        {
+          "publicPath": "/dealer-stock/21791028313582431-2.webp",
+          "sourceKind": "reviewed-published-input",
+          "inputPath": "docs/releases/cloudflare-existing25-20261011/new-source/kapitol-varna/media/21791028313582431-2.webp",
+          "sourcePath": ".client/registered-reviewed-public-inputs/media/21791028313582431-2.webp",
+          "sha256": "c4e5c87cd47d2077b7559eb340726fcce0c903089567875984bcf68c93021d18"
+        }
+      ],
+      "publishedInputs": {
+        "schemaVersion": 1,
+        "kind": "cars-registered-reviewed-public-inputs",
+        "sourceCommit": null,
+        "facts": {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/kapitol-varna/facts.json",
+          "sha256": "9c57f0dfc86241e928d8a06a50d9f7f48ccd8199e343ce6a6e7b13cdf8b90769"
+        },
+        "stock": {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/kapitol-varna/stock.json",
+          "sha256": "a6515c9aedc44c9d286670949e97c74c0ee64d48145fd5310d8eb2cdd9ecbc43"
+        },
+        "branding": {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/kapitol-varna/branding.json",
+          "sha256": "a002ea5f30285c4b7c8a7afce302d8a97ead7891b1995cc6c6aaa10b8f35f063"
+        },
+        "media": [
+          {
+            "path": "docs/releases/cloudflare-existing25-20261011/new-source/kapitol-varna/media/21791385455711977-1.webp",
+            "sha256": "9c5960d5a373c8f9d74148fe6be5328383ea84d65f2b5bd8d377708286f11631",
+            "bytes": 396372,
+            "destination": "dealer-stock/21791385455711977-1.webp"
+          },
+          {
+            "path": "docs/releases/cloudflare-existing25-20261011/new-source/kapitol-varna/media/21791385455711977-2.webp",
+            "sha256": "6abbbd513c1fc6da5ae72af7116eea06bd0df4519136898f07b7ffe45ca42827",
+            "bytes": 376484,
+            "destination": "dealer-stock/21791385455711977-2.webp"
+          },
+          {
+            "path": "docs/releases/cloudflare-existing25-20261011/new-source/kapitol-varna/media/21791028313582431-1.webp",
+            "sha256": "56c885634378d0a482bc4d4aa250c8d80dec0015ed5f4bdb8eedf58bdb834269",
+            "bytes": 223296,
+            "destination": "dealer-stock/21791028313582431-1.webp"
+          },
+          {
+            "path": "docs/releases/cloudflare-existing25-20261011/new-source/kapitol-varna/media/21791028313582431-2.webp",
+            "sha256": "c4e5c87cd47d2077b7559eb340726fcce0c903089567875984bcf68c93021d18",
+            "bytes": 148546,
+            "destination": "dealer-stock/21791028313582431-2.webp"
+          }
+        ]
+      }
+    },
+    "receipt": {
+      "schemaVersion": 1,
+      "kind": "cars-registered-dealer-source-adoption",
+      "dealer": "kapitol-varna",
+      "reviewed": true,
+      "reviewedAt": "2026-10-12T12:51:16.404Z",
+      "canonicalSourceRepository": "darkapoparka/cars",
+      "baseline": {
+        "commit": "952ab9cb2fb26cd20f40b21646ebebfde112da14",
+        "tree": "fb3d54604a33890b0e098aea12410f7463ecdffa"
+      },
+      "identity": {
+        "dealerId": "kapitol-varna",
+        "repository": "darkapoparka/cars-kapitol-varna",
+        "workerName": "cars-kapitol-varna",
+        "publicOrigin": "https://cars-kapitol-varna.darkapoparka1.workers.dev",
+        "sources": [
+          {
+            "url": "https://kapitol.mobile.bg/",
+            "observedAt": "2026-10-12T10:44:18.555Z"
+          }
+        ]
+      },
+      "layout": {
+        "kind": "raw-unmounted-applications",
+        "reviewed": true,
+        "proofs": [
+          {
+            "path": "auto-best/svelte.config.js",
+            "sha256": "12c428bb7348c6beb2af9f896b9d4607510b2e3a8bb22b6b68a9ad2fd809fe69"
+          },
+          {
+            "path": "modern/apps/web/next.config.ts",
+            "sha256": "dd47e165bfbfae56740a33cff2e3d5ba2a4b62ef490731586c02de9aedd54476"
+          },
+          {
+            "path": "carwow/svelte.config.js",
+            "sha256": "6f9f2e467afe235ca6bdcf14bdef6260b0b7060d92aa311dbff09445e0912bc8"
+          }
+        ]
+      },
+      "variants": [
+        {
+          "key": "auto-best",
+          "base": "",
+          "entry": "/"
+        },
+        {
+          "key": "modern",
+          "base": "/variant-2",
+          "entry": "/variant-2/cars"
+        },
+        {
+          "key": "carwow",
+          "base": "/variant-3",
+          "entry": "/variant-3/"
+        }
+      ],
+      "applications": {
+        "auto-best": "9bcbf52705f99d379be160f4c189ff81b411d27c",
+        "carwow": "106df7257410569dde046f2dc6c350ea2f93ddb4",
+        "modern": "3849c14ebbee2ccd57046207b9d19da7a1234461"
+      },
+      "templateSources": {
+        "auto-best": {
+          "repository": "darkapoparka/cars",
+          "revision": "faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca",
+          "path": "templates/auto-best",
+          "tree": "97833980ab127f6de8f675ac1a188e4b7f717976"
+        },
+        "modern": {
+          "repository": "darkapoparka/cars",
+          "revision": "faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca",
+          "path": "templates/modern",
+          "tree": "66bfb8196bbce18832ada6b34b02dda97baba25b"
+        },
+        "carwow": {
+          "repository": "darkapoparka/cars",
+          "revision": "faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca",
+          "path": "templates/carwow",
+          "tree": "d4a08817e87cf84d08c4db1c08a515937245f2dd"
+        }
+      },
+      "provenance": {
+        "auto-best": {
+          "metadata": {
+            "path": "auto-best/.client/project.json",
+            "sha256": "1aab8e41d0f3f7f6f20fb96b25b46ec9f7f3ea70d5c4e1160f3c4bc2a46245f8"
+          },
+          "copyReceipt": {
+            "path": "auto-best/.template/source-manifest.json",
+            "sha256": "170efcc9cd0fc6763706a5d69edd53ee970e31280c9aee8871c7e8d61431294b"
+          }
+        },
+        "modern": {
+          "metadata": {
+            "path": "modern/.client/project.json",
+            "sha256": "a0c93ad600a188680b96270d106c0d26a585d9ba26f949e02aba7d692cd2a1cc"
+          },
+          "copyReceipt": {
+            "path": "modern/.template/source-manifest.json",
+            "sha256": "925b0f64041e7c0ccd38f853a84ad0d9b0c250cd97abd80b79043b26d3cd216b"
+          }
+        },
+        "carwow": {
+          "metadata": {
+            "path": "carwow/.client/project.json",
+            "sha256": "bd8c86e44677f7f5c46ecbb365f43568aaf8aedf04a591aafd5f3ad2e75b628d"
+          },
+          "copyReceipt": {
+            "path": "carwow/.template/source-manifest.json",
+            "sha256": "04d8b78666b0eae0454d81cabb8f10c935a6eaff2c00293ee38b3c8f8e2ddbed"
+          }
+        }
+      },
+      "personalization": {
+        "path": "docs/releases/cloudflare-existing25-20261011/registered-source/kapitol-varna/personalization-review.json",
+        "sha256": "8a99827b9f87b5c659dbc1b8ad41fcfd339a277b34b7169e5f154f672e68b0b5"
+      },
+      "nativeApproval": false,
+      "hostedApproval": false,
+      "globalReleaseApproval": false
+    },
+    "originalFacts": {
+      "path": "clients/kapitol-varna/business-facts.json",
+      "sha256": "557e835a1419e7097af5dd02fa792eb88cee779c795163a15f9b1c120689c38d"
+    }
+  },
+  {
+    "dealer": "chernomore-varna",
+    "identity": {
+      "dealerId": "chernomore-varna",
+      "repository": "darkapoparka/cars-chernomore-varna",
+      "workerName": "cars-chernomore-varna",
+      "publicOrigin": "https://cars-chernomore-varna.darkapoparka1.workers.dev",
+      "sources": [
+        {
+          "url": "https://chernomore.mobile.bg/",
+          "observedAt": "2026-10-12T10:44:18.739Z"
+        }
+      ]
+    },
+    "input": {
+      "schemaVersion": 1,
+      "kind": "cars-registered-dealer-derived-inputs",
+      "dealer": "chernomore-varna",
+      "reviewed": true,
+      "reviewedAt": "2026-10-12T12:51:16.406Z",
+      "facts": {
+        "schemaVersion": 1,
+        "slug": "chernomore-varna",
+        "dealerId": "chernomore-varna",
+        "business": {
+          "schemaVersion": 1,
+          "slug": "chernomore-varna",
+          "name": "Черно море",
+          "shortName": "Черно море",
+          "city": "Варна",
+          "country": "BG",
+          "countryCode": "BG",
+          "locale": "bg-BG",
+          "currency": "EUR",
+          "distanceUnit": "km",
+          "phone": "0888596963",
+          "phoneDisplay": "0888596963, 052/560733",
+          "phoneE164": "+359888596963",
+          "phones": [
+            "+359888596963",
+            "+35952560733"
+          ],
+          "addressLine": "Кръстовището на бул. Цар Освободител и бул. Константин и Фружин",
+          "address": "Кръстовището на бул. Цар Освободител и бул. Константин и Фружин, Варна, България",
+          "hours": "Потвърдете работното време директно с автокъщата.",
+          "email": "",
+          "sourceUrl": "https://chernomore.mobile.bg/",
+          "stockUrl": "https://chernomore.mobile.bg/",
+          "contactSourceUrl": "https://chernomore.mobile.bg/contacts",
+          "observedAt": "2026-10-12T10:44:18.739Z",
+          "inventoryNotice": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+          "previewNotice": "Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация.",
+          "services": [],
+          "socialLinks": {},
+          "logo": "/dealer-brand/logo-on-light.png",
+          "logoLight": "/dealer-brand/logo-on-light.png",
+          "logoDark": "/dealer-brand/logo-on-dark.png",
+          "modernInventoryCopy": {
+            "chernomore-varna-21771946973449498": {
+              "sourceDescription": "Audi Q8 50 TDI S-Line от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+              "en": {
+                "description": "Audi Q8 50 TDI S-Line from a dated public advert. Confirm condition, price and availability directly with the dealership.",
+                "imageAlts": [
+                  "Audi Q8 50 TDI S-Line — dated public advert photo 1",
+                  "Audi Q8 50 TDI S-Line — dated public advert photo 2"
+                ]
+              },
+              "bg": {
+                "description": "Audi Q8 50 TDI S-Line от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+                "imageAlts": [
+                  "Audi Q8 50 TDI S-Line — снимка от датирана публична обява 1",
+                  "Audi Q8 50 TDI S-Line — снимка от датирана публична обява 2"
+                ]
+              }
+            },
+            "chernomore-varna-11779358576885782": {
+              "sourceDescription": "Audi A5 Sportback 2.0 TFSI quattro от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+              "en": {
+                "description": "Audi A5 Sportback 2.0 TFSI quattro from a dated public advert. Confirm condition, price and availability directly with the dealership.",
+                "imageAlts": [
+                  "Audi A5 Sportback 2.0 TFSI quattro — dated public advert photo 1",
+                  "Audi A5 Sportback 2.0 TFSI quattro — dated public advert photo 2"
+                ]
+              },
+              "bg": {
+                "description": "Audi A5 Sportback 2.0 TFSI quattro от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+                "imageAlts": [
+                  "Audi A5 Sportback 2.0 TFSI quattro — снимка от датирана публична обява 1",
+                  "Audi A5 Sportback 2.0 TFSI quattro — снимка от датирана публична обява 2"
+                ]
+              }
+            }
+          }
+        },
+        "research": {
+          "website": {
+            "status": "confirmed-primary-own-site",
+            "url": "https://chernomoreauto.com/",
+            "phones": [
+              "+35952560733",
+              "+359888596963"
+            ]
+          },
+          "publicIdentityKey": "mobile-profile:chernomore.mobile.bg",
+          "profileAdvertCount": 30,
+          "availabilityConfirmed": false,
+          "legalEntityOwnershipVerified": false,
+          "addressExactness": "public-contact-as-published",
+          "caveats": [
+            "Preserve existing Cars-owned clients/chernomore-varna; not an absent new-client identity."
+          ],
+          "sourceProof": [
+            {
+              "url": "https://chernomore.mobile.bg/",
+              "finalUrl": "https://chernomore.mobile.bg/",
+              "observedAt": "2026-10-12T10:44:18.826Z",
+              "status": 200,
+              "bytes": 182287,
+              "sha256": "3a71c0e4cd06ec28a99b579d1b3b203ddce475356e4a78a07d0c45059c0a2382"
+            },
+            {
+              "url": "https://chernomore.mobile.bg/contacts",
+              "finalUrl": "https://chernomore.mobile.bg/contacts",
+              "observedAt": "2026-10-12T10:44:18.739Z",
+              "status": 200,
+              "bytes": 45386,
+              "sha256": "2d2767985bf2f1ccd3affb0da1c19011f21e8ece6d753047137b37d4a8fd9b58"
+            },
+            {
+              "url": "https://chernomore.mobile.bg/about",
+              "finalUrl": "https://chernomore.mobile.bg/about",
+              "observedAt": "2026-10-12T10:44:18.716Z",
+              "status": 200,
+              "bytes": 8421,
+              "sha256": "bc84e40e95179b1d25757c655dee1acdb7a5fa376b7feade479e06ed132dde3b"
+            }
+          ],
+          "sourceAction": "preserve-existing-cars-source",
+          "existingSourceTree": "3fc884818d7f079b6b60f290fd98856e78b3785d",
+          "inventoryModeSelection": "dated-listing-snapshot",
+          "productionAssetInputsComplete": true,
+          "stockSnapshotScope": "Two retained public adverts, not a complete/live inventory",
+          "stockMediaAuthority": "Owner-authorized public dated demo scope; original source bytes and watermarks retained"
+        }
+      },
+      "stock": {
+        "kind": "dated-listing-snapshot",
+        "mode": "reviewed-public-listing-snapshot",
+        "previewOnly": true,
+        "actualDealerAvailability": false,
+        "disclosure": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+        "listings": [
+          {
+            "title": "Audi Q8 50 TDI S-Line",
+            "make": "Audi",
+            "model": "Q8",
+            "year": 2021,
+            "priceAmount": 46900,
+            "mileageValue": 150000,
+            "fuel": "Diesel",
+            "transmission": "Automatic",
+            "body": "SUV",
+            "description": "Audi Q8 50 TDI S-Line от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+            "sourceFieldProof": {
+              "source": "https://chernomore.mobile.bg/obiava-21771946973449498-audi-q8-50tdi-3xs-line-maxton-desing",
+              "year": "Дата на производство ноември 2021",
+              "price": "46 900 €,",
+              "mileage": "Пробег [км] 150000 км",
+              "fuel": "Двигател Дизелов",
+              "transmission": "Скоростна кутия Автоматична",
+              "body": "Категория Джип"
+            },
+            "sourceCaveats": [
+              " Автосалон Черно море дава възможност за замяна на вашия стар, повреден или катастрофирал автомобил",
+              " Варна, Кайсиева градина Местоположение: Кръстовището на бул"
+            ],
+            "id": "21771946973449498",
+            "slug": "chernomore-varna-21771946973449498",
+            "currency": "EUR",
+            "priceOnRequest": false,
+            "mileageOnRequest": false,
+            "mileageUnit": "km",
+            "condition": "used",
+            "images": [
+              "/dealer-stock/21771946973449498-1.webp",
+              "/dealer-stock/21771946973449498-2.webp"
+            ],
+            "sourceUrl": "https://chernomore.mobile.bg/obiava-21771946973449498-audi-q8-50tdi-3xs-line-maxton-desing",
+            "observedAt": "2026-10-12T12:05:57.074Z",
+            "availability": "Датирана обява; потвърдете цената и наличността директно с автокъщата.",
+            "sourceProof": {
+              "sha256": "7c7ea99060c7bb218de466ac831e26c715ca9d34c3c636e23cbebfd079abd4c7",
+              "originalPhotoBytesUnchanged": true,
+              "watermarksPreserved": true
+            },
+            "sourceRecord": {
+              "path": ".client/registered-reviewed-public-inputs/stock.json",
+              "sha256": "12c1194f1eb6050f44fed3b8f59673fb02893ab9b72eb9c75891e0d9c51c5e8d",
+              "id": "21771946973449498"
+            }
+          },
+          {
+            "title": "Audi A5 Sportback 2.0 TFSI quattro",
+            "make": "Audi",
+            "model": "A5",
+            "year": 2019,
+            "priceAmount": 18900,
+            "mileageValue": 199000,
+            "fuel": "Petrol",
+            "transmission": "Automatic",
+            "body": "Hatchback",
+            "description": "Audi A5 Sportback 2.0 TFSI quattro от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+            "sourceFieldProof": {
+              "source": "https://chernomore.mobile.bg/obiava-11779358576885782-audi-a5-sportback-s-line-2-0tfsi-quattro-automatic",
+              "year": "Дата на производство януари 2019",
+              "price": "18 900 €,",
+              "mileage": "Пробег [км] 199000 км",
+              "fuel": "Двигател Бензинов",
+              "transmission": "Скоростна кутия Автоматична",
+              "body": "Категория Хечбек"
+            },
+            "sourceCaveats": [
+              " Автосалон Черно море дава възможност за замяна на вашия стар, повреден или катастрофирал автомобил",
+              " Варна, Кайсиева градина Местоположение: Кръстовището на бул"
+            ],
+            "id": "11779358576885782",
+            "slug": "chernomore-varna-11779358576885782",
+            "currency": "EUR",
+            "priceOnRequest": false,
+            "mileageOnRequest": false,
+            "mileageUnit": "km",
+            "condition": "used",
+            "images": [
+              "/dealer-stock/11779358576885782-1.webp",
+              "/dealer-stock/11779358576885782-2.webp"
+            ],
+            "sourceUrl": "https://chernomore.mobile.bg/obiava-11779358576885782-audi-a5-sportback-s-line-2-0tfsi-quattro-automatic",
+            "observedAt": "2026-10-12T12:05:57.075Z",
+            "availability": "Датирана обява; потвърдете цената и наличността директно с автокъщата.",
+            "sourceProof": {
+              "sha256": "00b4d3e32834da1f94ebc1b271a4ff8f2601cab9eb78237acdeca7cbbdeb0398",
+              "originalPhotoBytesUnchanged": true,
+              "watermarksPreserved": true
+            },
+            "sourceRecord": {
+              "path": ".client/registered-reviewed-public-inputs/stock.json",
+              "sha256": "12c1194f1eb6050f44fed3b8f59673fb02893ab9b72eb9c75891e0d9c51c5e8d",
+              "id": "11779358576885782"
+            }
+          }
+        ]
+      },
+      "locale": {
+        "schemaVersion": 1,
+        "dealerId": "chernomore-varna",
+        "defaultLocale": "bg",
+        "enabledLocales": [
+          "bg",
+          "en"
+        ],
+        "dealerCountry": "BG",
+        "inventoryCurrency": "EUR"
+      },
+      "sourceEvidence": [
+        {
+          "path": "business-facts.json",
+          "sha256": "48222f54daed16041a1605e31ec78667c658e64cba1e276794942a330251bc9f"
+        }
+      ],
+      "media": [
+        {
+          "publicPath": "/dealer-brand/logo-on-light.png",
+          "sourceKind": "reviewed-published-input",
+          "inputPath": "docs/releases/cloudflare-existing25-20261011/new-source/chernomore-varna/branding/on-light.png",
+          "sourcePath": ".client/registered-reviewed-public-inputs/branding/on-light.png",
+          "sha256": "37a14cb576c390e023f27b4dd1fd21e16fb15ca80556ea69e730d6a776ea2a48"
+        },
+        {
+          "publicPath": "/dealer-brand/logo-on-dark.png",
+          "sourceKind": "reviewed-published-input",
+          "inputPath": "docs/releases/cloudflare-existing25-20261011/new-source/chernomore-varna/branding/on-dark.png",
+          "sourcePath": ".client/registered-reviewed-public-inputs/branding/on-dark.png",
+          "sha256": "55c47593f8e9972aade71878cad7c29a2f23af582c5625a731162419deb48066"
+        },
+        {
+          "publicPath": "/dealer-stock/21771946973449498-1.webp",
+          "sourceKind": "reviewed-published-input",
+          "inputPath": "docs/releases/cloudflare-existing25-20261011/new-source/chernomore-varna/media/21771946973449498-1.webp",
+          "sourcePath": ".client/registered-reviewed-public-inputs/media/21771946973449498-1.webp",
+          "sha256": "67dbce48d2d5d888418025f7acdb35a17b33bf7143a23d10531f10d5f8b7887a"
+        },
+        {
+          "publicPath": "/dealer-stock/21771946973449498-2.webp",
+          "sourceKind": "reviewed-published-input",
+          "inputPath": "docs/releases/cloudflare-existing25-20261011/new-source/chernomore-varna/media/21771946973449498-2.webp",
+          "sourcePath": ".client/registered-reviewed-public-inputs/media/21771946973449498-2.webp",
+          "sha256": "de8063c17612d20d97979c801a8e324dbb08658d9766313414fb4fb9e25f831b"
+        },
+        {
+          "publicPath": "/dealer-stock/11779358576885782-1.webp",
+          "sourceKind": "reviewed-published-input",
+          "inputPath": "docs/releases/cloudflare-existing25-20261011/new-source/chernomore-varna/media/11779358576885782-1.webp",
+          "sourcePath": ".client/registered-reviewed-public-inputs/media/11779358576885782-1.webp",
+          "sha256": "b357bf8fe9988a1911687af7e49d3c221094e10b318455ace11c6581a038d658"
+        },
+        {
+          "publicPath": "/dealer-stock/11779358576885782-2.webp",
+          "sourceKind": "reviewed-published-input",
+          "inputPath": "docs/releases/cloudflare-existing25-20261011/new-source/chernomore-varna/media/11779358576885782-2.webp",
+          "sourcePath": ".client/registered-reviewed-public-inputs/media/11779358576885782-2.webp",
+          "sha256": "bed431e8c84368d08d250c5768095ca9769f69ab40c93d3a2415460f92bfb3d6"
+        }
+      ],
+      "publishedInputs": {
+        "schemaVersion": 1,
+        "kind": "cars-registered-reviewed-public-inputs",
+        "sourceCommit": null,
+        "facts": {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/chernomore-varna/facts.json",
+          "sha256": "ef42f0834d50b3afe9299971f872d5018fffd994002b323a2e7b81a520a740a3"
+        },
+        "stock": {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/chernomore-varna/stock.json",
+          "sha256": "12c1194f1eb6050f44fed3b8f59673fb02893ab9b72eb9c75891e0d9c51c5e8d"
+        },
+        "branding": {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/chernomore-varna/branding.json",
+          "sha256": "da3564594450abef915255c220fd87cf149914aa98fb40fa58961664bf366c35"
+        },
+        "media": [
+          {
+            "path": "docs/releases/cloudflare-existing25-20261011/new-source/chernomore-varna/media/21771946973449498-1.webp",
+            "sha256": "67dbce48d2d5d888418025f7acdb35a17b33bf7143a23d10531f10d5f8b7887a",
+            "bytes": 379600,
+            "destination": "dealer-stock/21771946973449498-1.webp"
+          },
+          {
+            "path": "docs/releases/cloudflare-existing25-20261011/new-source/chernomore-varna/media/21771946973449498-2.webp",
+            "sha256": "de8063c17612d20d97979c801a8e324dbb08658d9766313414fb4fb9e25f831b",
+            "bytes": 318232,
+            "destination": "dealer-stock/21771946973449498-2.webp"
+          },
+          {
+            "path": "docs/releases/cloudflare-existing25-20261011/new-source/chernomore-varna/media/11779358576885782-1.webp",
+            "sha256": "b357bf8fe9988a1911687af7e49d3c221094e10b318455ace11c6581a038d658",
+            "bytes": 492922,
+            "destination": "dealer-stock/11779358576885782-1.webp"
+          },
+          {
+            "path": "docs/releases/cloudflare-existing25-20261011/new-source/chernomore-varna/media/11779358576885782-2.webp",
+            "sha256": "bed431e8c84368d08d250c5768095ca9769f69ab40c93d3a2415460f92bfb3d6",
+            "bytes": 386692,
+            "destination": "dealer-stock/11779358576885782-2.webp"
+          }
+        ]
+      }
+    },
+    "receipt": {
+      "schemaVersion": 1,
+      "kind": "cars-registered-dealer-source-adoption",
+      "dealer": "chernomore-varna",
+      "reviewed": true,
+      "reviewedAt": "2026-10-12T12:51:16.408Z",
+      "canonicalSourceRepository": "darkapoparka/cars",
+      "baseline": {
+        "commit": "952ab9cb2fb26cd20f40b21646ebebfde112da14",
+        "tree": "3fc884818d7f079b6b60f290fd98856e78b3785d"
+      },
+      "identity": {
+        "dealerId": "chernomore-varna",
+        "repository": "darkapoparka/cars-chernomore-varna",
+        "workerName": "cars-chernomore-varna",
+        "publicOrigin": "https://cars-chernomore-varna.darkapoparka1.workers.dev",
+        "sources": [
+          {
+            "url": "https://chernomore.mobile.bg/",
+            "observedAt": "2026-10-12T10:44:18.739Z"
+          }
+        ]
+      },
+      "layout": {
+        "kind": "raw-unmounted-applications",
+        "reviewed": true,
+        "proofs": [
+          {
+            "path": "auto-best/svelte.config.js",
+            "sha256": "12c428bb7348c6beb2af9f896b9d4607510b2e3a8bb22b6b68a9ad2fd809fe69"
+          },
+          {
+            "path": "modern/apps/web/next.config.ts",
+            "sha256": "dd47e165bfbfae56740a33cff2e3d5ba2a4b62ef490731586c02de9aedd54476"
+          },
+          {
+            "path": "carwow/svelte.config.js",
+            "sha256": "6f9f2e467afe235ca6bdcf14bdef6260b0b7060d92aa311dbff09445e0912bc8"
+          }
+        ]
+      },
+      "variants": [
+        {
+          "key": "auto-best",
+          "base": "",
+          "entry": "/"
+        },
+        {
+          "key": "modern",
+          "base": "/variant-2",
+          "entry": "/variant-2/cars"
+        },
+        {
+          "key": "carwow",
+          "base": "/variant-3",
+          "entry": "/variant-3/"
+        }
+      ],
+      "applications": {
+        "auto-best": "d61ebb57842383992b01b55f1db6df48fe161891",
+        "carwow": "edaca25ec91f08851427e63f04515ddacd17125a",
+        "modern": "1f021742761993da56869c31615c2927e9ea0818"
+      },
+      "templateSources": {
+        "auto-best": {
+          "repository": "darkapoparka/cars",
+          "revision": "faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca",
+          "path": "templates/auto-best",
+          "tree": "97833980ab127f6de8f675ac1a188e4b7f717976"
+        },
+        "modern": {
+          "repository": "darkapoparka/cars",
+          "revision": "faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca",
+          "path": "templates/modern",
+          "tree": "66bfb8196bbce18832ada6b34b02dda97baba25b"
+        },
+        "carwow": {
+          "repository": "darkapoparka/cars",
+          "revision": "faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca",
+          "path": "templates/carwow",
+          "tree": "d4a08817e87cf84d08c4db1c08a515937245f2dd"
+        }
+      },
+      "provenance": {
+        "auto-best": {
+          "metadata": {
+            "path": "auto-best/.client/project.json",
+            "sha256": "b96e24bcacc9b847b16657803a1cde4e19b661076a0bdd8a458b94dbdb665576"
+          },
+          "copyReceipt": {
+            "path": "auto-best/.template/source-manifest.json",
+            "sha256": "170efcc9cd0fc6763706a5d69edd53ee970e31280c9aee8871c7e8d61431294b"
+          }
+        },
+        "modern": {
+          "metadata": {
+            "path": "modern/.client/project.json",
+            "sha256": "caad9b64c0620b1ebd6be7258bccbacd78fe6580bd7b6fd2c0448f236b093bf0"
+          },
+          "copyReceipt": {
+            "path": "modern/.template/source-manifest.json",
+            "sha256": "925b0f64041e7c0ccd38f853a84ad0d9b0c250cd97abd80b79043b26d3cd216b"
+          }
+        },
+        "carwow": {
+          "metadata": {
+            "path": "carwow/.client/project.json",
+            "sha256": "c5209a5eed8be3eca7abe6649f5dd581db21ec18ac44b61a12927adbc5493cf5"
+          },
+          "copyReceipt": {
+            "path": "carwow/.template/source-manifest.json",
+            "sha256": "04d8b78666b0eae0454d81cabb8f10c935a6eaff2c00293ee38b3c8f8e2ddbed"
+          }
+        }
+      },
+      "personalization": {
+        "path": "docs/releases/cloudflare-existing25-20261011/registered-source/chernomore-varna/personalization-review.json",
+        "sha256": "d7390556b7e996a1d87f993bd8c34dcb92713de9175cd2009d9137ca1ca931ef"
+      },
+      "nativeApproval": false,
+      "hostedApproval": false,
+      "globalReleaseApproval": false
+    },
+    "originalFacts": {
+      "path": "clients/chernomore-varna/business-facts.json",
+      "sha256": "48222f54daed16041a1605e31ec78667c658e64cba1e276794942a330251bc9f"
+    }
+  }
+]

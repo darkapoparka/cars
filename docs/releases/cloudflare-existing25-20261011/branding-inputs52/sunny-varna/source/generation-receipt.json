@@ -1,0 +1,242 @@
+{
+  "strategy": "REFINE OFFICIAL LOGO",
+  "identityStatus": "publishedBranding refined for demo; dealer/owner approval pending",
+  "publishedBranding": "Published custom black Cyrillic СЪНИ wordmark on lime backdrop",
+  "sourceUrls": [
+    "https://sunny.mobile.bg/"
+  ],
+  "sourceLogoUrl": "https://cdn2.focus.bg/mobile/images/housespicts/h11690476830498886.pic",
+  "workingLogoPath": "C:/Users/radev/Downloads/h11690476830498886.pic",
+  "generatedPath": "C:/Users/radev/.codex/generated_images/01a12a34-d2d7-7571-930a-1ed37e54ff8e/exec-b159150e-ef7a-41e8-8ca8-97d1b192c56f.png",
+  "imageGeneration": {
+    "tool": "image_gen.imagegen",
+    "reference": "exec-b159150e-ef7a-41e8-8ca8-97d1b192c56f",
+    "transparent_background": true,
+    "prompt": "Faithfully isolate and refine the published custom black Cyrillic СЪНИ wordmark from this reference. Keep exact spelling, thick geometric rounded lettering, joined/extended hard-sign shape and relative geometry. Remove lime rectangle completely to genuine transparent background. Black/charcoal face only, no added car/icon/text, no redesign, no shadow/glow/border. Transparent counters and gaps, crisp horizontal wordmark with modest transparent padding.",
+    "referenced_image_paths": [
+      "C:/Users/radev/Downloads/h11690476830498886.pic"
+    ],
+    "outputPath": "C:/Users/radev/.codex/generated_images/01a12a34-d2d7-7571-930a-1ed37e54ff8e/exec-b159150e-ef7a-41e8-8ca8-97d1b192c56f.png",
+    "modelVersion": "not exposed by tool"
+  },
+  "surfaceReviewPath": "L:/CODEX/cars/leads/branding/fleet-20261011/sunny-varna/surface-review.png",
+  "visualAccepted": true,
+  "visualChecks": {
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "surfaces": [
+      "white",
+      "#30343b",
+      "#17191c",
+      "#202023",
+      "#19171d",
+      "#171717",
+      "#b00020",
+      "#405ff2"
+    ],
+    "result": "Published lettering and hierarchy retained; inspected clear transparent counters, no residue/clipping, readable at all three widths and contextual swatches."
+  },
+  "schemaVersion": 1,
+  "dealer": "sunny-varna",
+  "state": "asset-verified",
+  "generated": {
+    "path": "C:/Users/radev/.codex/generated_images/01a12a34-d2d7-7571-930a-1ed37e54ff8e/exec-b159150e-ef7a-41e8-8ca8-97d1b192c56f.png",
+    "sha256": "c8e29d30303148ec8ec64306e2e1d15eb23eed2cbac8dffa90a3c94eb92a6aea",
+    "bytes": 174439,
+    "format": "png",
+    "width": 2170,
+    "height": 725,
+    "hasAlpha": true,
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparentRatio": 0.7781115525186716,
+      "opaqueRatio": 0.20858477673605594
+    },
+    "visibleBounds": {
+      "x": 184,
+      "y": 184,
+      "width": 1803,
+      "height": 325
+    }
+  },
+  "assets": {
+    "onLight": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/sunny-varna/dealer-brand/logo-on-light.webp",
+      "sha256": "5b7ccc042e5a1b50e49faaa03131a5d6c927bbbb0dc9608faf49eeb65bf704b9",
+      "bytes": 18616,
+      "format": "webp",
+      "width": 1496,
+      "height": 326,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.566418424592369,
+        "opaqueRatio": 0.40440356287523377
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 37,
+        "width": 1400,
+        "height": 252
+      },
+      "publicPath": "/dealer-brand/logo-on-light.webp"
+    },
+    "onDark": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/sunny-varna/dealer-brand/logo-on-dark.webp",
+      "sha256": "a0760bc05c136c0eb4faa69accfd9958110bc697e0ac5e665692399186f91cfa",
+      "bytes": 19184,
+      "format": "webp",
+      "width": 1496,
+      "height": 326,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.566418424592369,
+        "opaqueRatio": 0.40440356287523377
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 37,
+        "width": 1400,
+        "height": 252
+      },
+      "publicPath": "/dealer-brand/logo-on-dark.webp"
+    },
+    "onAccent": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/sunny-varna/dealer-brand/logo-on-accent.webp",
+      "sha256": "a0760bc05c136c0eb4faa69accfd9958110bc697e0ac5e665692399186f91cfa",
+      "bytes": 19184,
+      "format": "webp",
+      "width": 1496,
+      "height": 326,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.566418424592369,
+        "opaqueRatio": 0.40440356287523377
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 37,
+        "width": 1400,
+        "height": 252
+      },
+      "publicPath": "/dealer-brand/logo-on-accent.webp"
+    }
+  },
+  "master": {
+    "path": "L:/CODEX/cars/leads/branding/fleet-20261011/sunny-varna/branding/logo-master.png",
+    "sha256": "0012f9264cad31ab1dcad9b76fc6e5997a94d249f660bb2beef19272859d33d2",
+    "bytes": 33031,
+    "format": "png",
+    "width": 1496,
+    "height": 326,
+    "hasAlpha": true,
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparentRatio": 0.566418424592369,
+      "opaqueRatio": 0.40440356287523377
+    },
+    "visibleBounds": {
+      "x": 48,
+      "y": 37,
+      "width": 1400,
+      "height": 252
+    }
+  },
+  "technicalAcceptance": {
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "surfaces": [
+      "white",
+      "#30343b",
+      "#17191c",
+      "#202023",
+      "#19171d",
+      "#171717",
+      "#b00020",
+      "#405ff2"
+    ],
+    "result": "Published lettering and hierarchy retained; inspected clear transparent counters, no residue/clipping, readable at all three widths and contextual swatches."
+  },
+  "integrationVerified": false,
+  "hostedVerified": false,
+  "ownerApproved": false,
+  "exportTool": "docs/logo-refresh/2026-09-18/tools/build-approved-logo-pack.mjs",
+  "exportToolSha256": "7fab60c4000210eff6bbb91f9c35e869bad90834d3bdd09d282a9a51835f0dbc",
+  "exportIsolation": "L:/CODEX/cars/runtime/fleet-logo-20261011/new-a-export",
+  "updatedAt": "2026-10-11T09:36:38.964Z",
+  "preservedSourceOriginal": {
+    "originalPath": "C:/Users/radev/Downloads/h11690476830498886.pic",
+    "path": "L:/CODEX/cars/leads/branding/fleet-20261011/sunny-varna/source/published-original.pic",
+    "sha256": "8573cb252454282a4340c98aeaeab7918e9d217e55e3be6803d98005f1b2f909",
+    "bytes": 1460,
+    "width": 618,
+    "height": 202,
+    "format": "png"
+  },
+  "exportSurfaceReviewPath": "L:/CODEX/cars/runtime/fleet-logo-20261011/new-a-export/sunny-varna-review.png",
+  "retention": {
+    "finalQASheet": "L:/CODEX/cars/leads/branding/fleet-20261011/sunny-varna/surface-review.png",
+    "toolOriginals": "Preserved on C: at exact recorded paths",
+    "sourceOriginal": "Preserved when available; screenshots and source limitations retained",
+    "scratch": "Owned inactive exporter outputs eligible for retirement; no live consumer binding",
+    "priorAcceptance": null
+  },
+  "sourceEvidence": [
+    {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/sunny-varna/source/profile.png",
+      "sha256": "a43fda4057801d940da759f9d8f2d5f74b35850e56b63c12b893a54ed5885dc0",
+      "bytes": 79721,
+      "format": "jpeg",
+      "width": 1265,
+      "height": 712,
+      "hasAlpha": false,
+      "alpha": {
+        "min": 255,
+        "max": 255,
+        "transparentRatio": 0,
+        "opaqueRatio": 1
+      },
+      "visibleBounds": {
+        "x": 0,
+        "y": 0,
+        "width": 1265,
+        "height": 712
+      }
+    },
+    {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/sunny-varna/source/published-original.pic",
+      "sha256": "8573cb252454282a4340c98aeaeab7918e9d217e55e3be6803d98005f1b2f909",
+      "bytes": 1460,
+      "format": "png",
+      "width": 618,
+      "height": 202,
+      "hasAlpha": false,
+      "alpha": {
+        "min": 255,
+        "max": 255,
+        "transparentRatio": 0,
+        "opaqueRatio": 1
+      },
+      "visibleBounds": {
+        "x": 0,
+        "y": 0,
+        "width": 618,
+        "height": 202
+      }
+    }
+  ],
+  "provenanceFile": "L:/CODEX/cars/leads/branding/fleet-20261011/sunny-varna/provenance.json"
+}

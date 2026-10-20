@@ -1,0 +1,102 @@
+[
+	{
+		"name": "services",
+		"overflow": false,
+		"panel": {
+			"height": 162,
+			"width": 689
+		},
+		"pillOverflow": false,
+		"pillRows": 1,
+		"processColumns": null,
+		"processHeights": [],
+		"serviceColumns": 2,
+		"width": 768
+	},
+	{
+		"name": "services",
+		"overflow": false,
+		"panel": {
+			"height": 162,
+			"width": 880
+		},
+		"pillOverflow": false,
+		"pillRows": 1,
+		"processColumns": null,
+		"processHeights": [],
+		"serviceColumns": 4,
+		"width": 1024
+	},
+	{
+		"name": "services",
+		"overflow": false,
+		"panel": {
+			"height": 162,
+			"width": 880
+		},
+		"pillOverflow": false,
+		"pillRows": 1,
+		"processColumns": null,
+		"processHeights": [],
+		"serviceColumns": 4,
+		"width": 1440
+	},
+	{
+		"name": "services",
+		"overflow": false,
+		"panel": {
+			"height": 162,
+			"width": 880
+		},
+		"pillOverflow": false,
+		"pillRows": 1,
+		"processColumns": null,
+		"processHeights": [],
+		"serviceColumns": 4,
+		"width": 1920
+	},
+	{
+		"name": "about",
+		"overflow": false,
+		"panel": null,
+		"pillOverflow": false,
+		"pillRows": 0,
+		"processColumns": 2,
+		"processHeights": [173, 173, 173, 173],
+		"serviceColumns": null,
+		"width": 768
+	},
+	{
+		"name": "about",
+		"overflow": false,
+		"panel": null,
+		"pillOverflow": false,
+		"pillRows": 0,
+		"processColumns": 4,
+		"processHeights": [199, 199, 199, 199],
+		"serviceColumns": null,
+		"width": 1024
+	},
+	{
+		"name": "about",
+		"overflow": false,
+		"panel": null,
+		"pillOverflow": false,
+		"pillRows": 0,
+		"processColumns": 4,
+		"processHeights": [173, 173, 173, 173],
+		"serviceColumns": null,
+		"width": 1440
+	},
+	{
+		"name": "about",
+		"overflow": false,
+		"panel": null,
+		"pillOverflow": false,
+		"pillRows": 0,
+		"processColumns": 4,
+		"processHeights": [173, 173, 173, 173],
+		"serviceColumns": null,
+		"width": 1920
+	}
+]

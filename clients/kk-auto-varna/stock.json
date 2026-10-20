@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "dealer": "kk-auto-varna",
+  "kind": "illustrative-not-dealer-stock",
+  "dealerStock": false,
+  "disclosure": "Показаните демонстрационни автомобили са илюстративни и не представляват наличности на автокъщата. За действителните оферти и наличности се свържете директно с нея.",
+  "records": [
+    {
+      "id": "demo-estate",
+      "slug": "kk-auto-varna-demo-estate",
+      "title": "Demo Estate — illustration",
+      "make": "Demo",
+      "model": "Estate",
+      "year": 2026,
+      "currency": "EUR",
+      "priceAmount": 23900,
+      "priceOnRequest": false,
+      "mileageValue": 12000,
+      "mileageUnit": "km",
+      "mileageOnRequest": false,
+      "body": "Estate",
+      "fuel": "Petrol",
+      "transmission": "Automatic",
+      "condition": "used",
+      "color": "White",
+      "description": "Илюстративен демонстрационен автомобил с примерни характеристики и цена. Не е действителна оферта или наличност на автокъщата. Изображението е генерирана декоративна илюстрация.",
+      "images": [
+        "/dealer-stock/demo-estate.webp"
+      ],
+      "observedAt": "2026-10-12T11:35:26.668Z",
+      "sourceUrl": "https://github.com/darkapoparka/cars/blob/b1f0f5609c7c249cfd0649c122849ff2cbb8dfde/templates/modern/apps/web/public/desktop-boxcars/page-banner-art-provenance.md",
+      "availability": "Демонстрация; не е действителна оферта или наличен автомобил.",
+      "dealerStock": false,
+      "illustrativeFacts": {
+        "year": true,
+        "price": true,
+        "mileage": true,
+        "fuel": true,
+        "transmission": true,
+        "makeAndModel": true,
+        "meaning": "Explicitly authored fictional demonstration values, not observed dealer or vehicle facts"
+      },
+      "mediaProvenance": {
+        "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+        "path": "templates/modern/apps/web/public/desktop-boxcars/banner-estate-right.webp",
+        "gitBlob": "905e3d9153abe76f57798e19e839854eda4f9972",
+        "sha256": "d2d3deacbc9f566a22783f2a5eab6335473bf2e47c627261e8895dbff6fece70",
+        "generated": true,
+        "stockPhotography": false
+      }
+    },
+    {
+      "id": "demo-suv",
+      "slug": "kk-auto-varna-demo-suv",
+      "title": "Demo SUV — illustration",
+      "make": "Demo",
+      "model": "SUV",
+      "year": 2026,
+      "currency": "EUR",
+      "priceAmount": 28900,
+      "priceOnRequest": false,
+      "mileageValue": 8000,
+      "mileageUnit": "km",
+      "mileageOnRequest": false,
+      "body": "SUV",
+      "fuel": "Petrol",
+      "transmission": "Automatic",
+      "condition": "used",
+      "color": "Blue",
+      "description": "Илюстративен демонстрационен автомобил с примерни характеристики и цена. Не е действителна оферта или наличност на автокъщата. Изображението е генерирана декоративна илюстрация.",
+      "images": [
+        "/dealer-stock/demo-suv.webp"
+      ],
+      "observedAt": "2026-10-12T11:35:26.668Z",
+      "sourceUrl": "https://github.com/darkapoparka/cars/blob/b1f0f5609c7c249cfd0649c122849ff2cbb8dfde/templates/modern/apps/web/public/desktop-boxcars/page-banner-art-provenance.md",
+      "availability": "Демонстрация; не е действителна оферта или наличен автомобил.",
+      "dealerStock": false,
+      "illustrativeFacts": {
+        "year": true,
+        "price": true,
+        "mileage": true,
+        "fuel": true,
+        "transmission": true,
+        "makeAndModel": true,
+        "meaning": "Explicitly authored fictional demonstration values, not observed dealer or vehicle facts"
+      },
+      "mediaProvenance": {
+        "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+        "path": "templates/modern/apps/web/public/desktop-boxcars/banner-suv-left.webp",
+        "gitBlob": "61aa0e5810cbdf0abd4d84349bbd7135cdd9700f",
+        "sha256": "5c0c6062ef8af622fd852a7a43b2dfc989d6836f1528698b51d88f9352640f2f",
+        "generated": true,
+        "stockPhotography": false
+      }
+    }
+  ],
+  "examplePricesNotOffers": true,
+  "exampleSpecificationsNotDealerFacts": true,
+  "disclosureEn": "The demo vehicles shown are illustrative and do not represent dealership stock. Contact the dealership for actual offers and availability."
+}

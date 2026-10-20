@@ -1,0 +1,1007 @@
+{
+	"date": "2026-10-04",
+	"matrices": {
+		"before": {
+			"states": 28,
+			"failures": 0,
+			"manifestSha256": "a5e83902df52775353855ac3b3d2b4113051f432f573d6ef9aa7f380ad4fa123"
+		},
+		"after": {
+			"states": 28,
+			"failures": 0,
+			"manifestSha256": "27deb9f56263e48ca3c6706158ae900b764b53b8f8d1db1078a17e1333bff0dd"
+		},
+		"production": {
+			"states": 4,
+			"failures": 0,
+			"manifestSha256": "eafc84de4aa0d83fea04a7b8e53b71333b602d23f04681ba13ca9a2cff38ab02"
+		}
+	},
+	"mobile": [
+		{
+			"pixels": true,
+			"presentation": true,
+			"id": "home-bg-320"
+		},
+		{
+			"pixels": true,
+			"presentation": true,
+			"id": "reviews-bg-320"
+		},
+		{
+			"pixels": true,
+			"presentation": true,
+			"id": "about-bg-320"
+		},
+		{
+			"pixels": true,
+			"presentation": true,
+			"id": "home-bg-390"
+		},
+		{
+			"pixels": true,
+			"presentation": true,
+			"id": "reviews-bg-390"
+		},
+		{
+			"pixels": true,
+			"presentation": true,
+			"id": "about-bg-390"
+		},
+		{
+			"pixels": true,
+			"presentation": true,
+			"id": "home-en-320"
+		},
+		{
+			"pixels": true,
+			"presentation": true,
+			"id": "reviews-en-320"
+		},
+		{
+			"pixels": true,
+			"presentation": true,
+			"id": "about-en-320"
+		},
+		{
+			"pixels": true,
+			"presentation": true,
+			"id": "home-en-390"
+		},
+		{
+			"pixels": true,
+			"presentation": true,
+			"id": "reviews-en-390"
+		},
+		{
+			"pixels": true,
+			"presentation": true,
+			"id": "about-en-390"
+		}
+	],
+	"roles": {
+		"records": [
+			{
+				"locale": "bg",
+				"width": 768,
+				"route": "home",
+				"measure": [
+					{
+						"text": "Клиент",
+						"lines": 1,
+						"height": 21.59375,
+						"lineHeight": "21.6px",
+						"whiteSpace": "nowrap",
+						"readable": true
+					},
+					{
+						"text": "Внос",
+						"lines": 1,
+						"height": 21.59375,
+						"lineHeight": "21.6px",
+						"whiteSpace": "nowrap",
+						"readable": true
+					},
+					{
+						"text": "Продажба",
+						"lines": 1,
+						"height": 21.59375,
+						"lineHeight": "21.6px",
+						"whiteSpace": "nowrap",
+						"readable": true
+					}
+				],
+				"errors": []
+			},
+			{
+				"locale": "bg",
+				"width": 768,
+				"route": "reviews",
+				"measure": [
+					{
+						"text": "Клиент",
+						"lines": 1,
+						"height": 21.59375,
+						"lineHeight": "21.6px",
+						"whiteSpace": "nowrap",
+						"readable": true
+					},
+					{
+						"text": "Покупка",
+						"lines": 1,
+						"height": 21.59375,
+						"lineHeight": "21.6px",
+						"whiteSpace": "nowrap",
+						"readable": true
+					},
+					{
+						"text": "Покупка",
+						"lines": 1,
+						"height": 21.59375,
+						"lineHeight": "21.6px",
+						"whiteSpace": "nowrap",
+						"readable": true
+					},
+					{
+						"text": "Покупка",
+						"lines": 1,
+						"height": 21.59375,
+						"lineHeight": "21.6px",
+						"whiteSpace": "nowrap",
+						"readable": true
+					},
+					{
+						"text": "Доставка",
+						"lines": 1,
+						"height": 21.59375,
+						"lineHeight": "21.6px",
+						"whiteSpace": "nowrap",
+						"readable": true
+					},
+					{
+						"text": "Оглед",
+						"lines": 1,
+						"height": 21.59375,
+						"lineHeight": "21.6px",
+						"whiteSpace": "nowrap",
+						"readable": true
+					}
+				],
+				"errors": []
+			},
+			{
+				"locale": "bg",
+				"width": 1024,
+				"route": "home",
+				"measure": [
+					{
+						"text": "Клиент",
+						"lines": 1,
+						"height": 21.59375,
+						"lineHeight": "21.6px",
+						"whiteSpace": "nowrap",
+						"readable": true
+					},
+					{
+						"text": "Внос",
+						"lines": 1,
+						"height": 21.59375,
+						"lineHeight": "21.6px",
+						"whiteSpace": "nowrap",
+						"readable": true
+					},
+					{
+						"text": "Продажба",
+						"lines": 1,
+						"height": 21.59375,
+						"lineHeight": "21.6px",
+						"whiteSpace": "nowrap",
+						"readable": true
+					}
+				],
+				"errors": []
+			},
+			{
+				"locale": "bg",
+				"width": 1024,
+				"route": "reviews",
+				"measure": [
+					{
+						"text": "Клиент",
+						"lines": 1,
+						"height": 21.59375,
+						"lineHeight": "21.6px",
+						"whiteSpace": "nowrap",
+						"readable": true
+					},
+					{
+						"text": "Покупка",
+						"lines": 1,
+						"height": 21.59375,
+						"lineHeight": "21.6px",
+						"whiteSpace": "nowrap",
+						"readable": true
+					},
+					{
+						"text": "Покупка",
+						"lines": 1,
+						"height": 21.59375,
+						"lineHeight": "21.6px",
+						"whiteSpace": "nowrap",
+						"readable": true
+					},
+					{
+						"text": "Покупка",
+						"lines": 1,
+						"height": 21.59375,
+						"lineHeight": "21.6px",
+						"whiteSpace": "nowrap",
+						"readable": true
+					},
+					{
+						"text": "Доставка",
+						"lines": 1,
+						"height": 21.59375,
+						"lineHeight": "21.6px",
+						"whiteSpace": "nowrap",
+						"readable": true
+					},
+					{
+						"text": "Оглед",
+						"lines": 1,
+						"height": 21.59375,
+						"lineHeight": "21.6px",
+						"whiteSpace": "nowrap",
+						"readable": true
+					}
+				],
+				"errors": []
+			},
+			{
+				"locale": "bg",
+				"width": 1440,
+				"route": "home",
+				"measure": [
+					{
+						"text": "Клиент",
+						"lines": 1,
+						"height": 21.59375,
+						"lineHeight": "21.6px",
+						"whiteSpace": "nowrap",
+						"readable": true
+					},
+					{
+						"text": "Внос",
+						"lines": 1,
+						"height": 21.59375,
+						"lineHeight": "21.6px",
+						"whiteSpace": "nowrap",
+						"readable": true
+					},
+					{
+						"text": "Продажба",
+						"lines": 1,
+						"height": 21.59375,
+						"lineHeight": "21.6px",
+						"whiteSpace": "nowrap",
+						"readable": true
+					}
+				],
+				"errors": []
+			},
+			{
+				"locale": "bg",
+				"width": 1440,
+				"route": "reviews",
+				"measure": [
+					{
+						"text": "Клиент",
+						"lines": 1,
+						"height": 21.59375,
+						"lineHeight": "21.6px",
+						"whiteSpace": "nowrap",
+						"readable": true
+					},
+					{
+						"text": "Покупка",
+						"lines": 1,
+						"height": 21.59375,
+						"lineHeight": "21.6px",
+						"whiteSpace": "nowrap",
+						"readable": true
+					},
+					{
+						"text": "Покупка",
+						"lines": 1,
+						"height": 21.59375,
+						"lineHeight": "21.6px",
+						"whiteSpace": "nowrap",
+						"readable": true
+					},
+					{
+						"text": "Покупка",
+						"lines": 1,
+						"height": 21.59375,
+						"lineHeight": "21.6px",
+						"whiteSpace": "nowrap",
+						"readable": true
+					},
+					{
+						"text": "Доставка",
+						"lines": 1,
+						"height": 21.59375,
+						"lineHeight": "21.6px",
+						"whiteSpace": "nowrap",
+						"readable": true
+					},
+					{
+						"text": "Оглед",
+						"lines": 1,
+						"height": 21.59375,
+						"lineHeight": "21.6px",
+						"whiteSpace": "nowrap",
+						"readable": true
+					}
+				],
+				"errors": []
+			},
+			{
+				"locale": "bg",
+				"width": 1920,
+				"route": "home",
+				"measure": [
+					{
+						"text": "Клиент",
+						"lines": 1,
+						"height": 21.59375,
+						"lineHeight": "21.6px",
+						"whiteSpace": "nowrap",
+						"readable": true
+					},
+					{
+						"text": "Внос",
+						"lines": 1,
+						"height": 21.59375,
+						"lineHeight": "21.6px",
+						"whiteSpace": "nowrap",
+						"readable": true
+					},
+					{
+						"text": "Продажба",
+						"lines": 1,
+						"height": 21.59375,
+						"lineHeight": "21.6px",
+						"whiteSpace": "nowrap",
+						"readable": true
+					}
+				],
+				"errors": []
+			},
+			{
+				"locale": "bg",
+				"width": 1920,
+				"route": "reviews",
+				"measure": [
+					{
+						"text": "Клиент",
+						"lines": 1,
+						"height": 21.59375,
+						"lineHeight": "21.6px",
+						"whiteSpace": "nowrap",
+						"readable": true
+					},
+					{
+						"text": "Покупка",
+						"lines": 1,
+						"height": 21.59375,
+						"lineHeight": "21.6px",
+						"whiteSpace": "nowrap",
+						"readable": true
+					},
+					{
+						"text": "Покупка",
+						"lines": 1,
+						"height": 21.59375,
+						"lineHeight": "21.6px",
+						"whiteSpace": "nowrap",
+						"readable": true
+					},
+					{
+						"text": "Покупка",
+						"lines": 1,
+						"height": 21.59375,
+						"lineHeight": "21.6px",
+						"whiteSpace": "nowrap",
+						"readable": true
+					},
+					{
+						"text": "Доставка",
+						"lines": 1,
+						"height": 21.59375,
+						"lineHeight": "21.6px",
+						"whiteSpace": "nowrap",
+						"readable": true
+					},
+					{
+						"text": "Оглед",
+						"lines": 1,
+						"height": 21.59375,
+						"lineHeight": "21.6px",
+						"whiteSpace": "nowrap",
+						"readable": true
+					}
+				],
+				"errors": []
+			},
+			{
+				"locale": "en",
+				"width": 768,
+				"route": "home",
+				"measure": [
+					{
+						"text": "Customer",
+						"lines": 1,
+						"height": 21.59375,
+						"lineHeight": "21.6px",
+						"whiteSpace": "nowrap",
+						"readable": true
+					},
+					{
+						"text": "Import",
+						"lines": 1,
+						"height": 21.59375,
+						"lineHeight": "21.6px",
+						"whiteSpace": "nowrap",
+						"readable": true
+					},
+					{
+						"text": "Sale",
+						"lines": 1,
+						"height": 21.59375,
+						"lineHeight": "21.6px",
+						"whiteSpace": "nowrap",
+						"readable": true
+					}
+				],
+				"errors": []
+			},
+			{
+				"locale": "en",
+				"width": 768,
+				"route": "reviews",
+				"measure": [
+					{
+						"text": "Customer",
+						"lines": 1,
+						"height": 21.59375,
+						"lineHeight": "21.6px",
+						"whiteSpace": "nowrap",
+						"readable": true
+					},
+					{
+						"text": "Purchase",
+						"lines": 1,
+						"height": 21.59375,
+						"lineHeight": "21.6px",
+						"whiteSpace": "nowrap",
+						"readable": true
+					},
+					{
+						"text": "Purchase",
+						"lines": 1,
+						"height": 21.59375,
+						"lineHeight": "21.6px",
+						"whiteSpace": "nowrap",
+						"readable": true
+					},
+					{
+						"text": "Purchase",
+						"lines": 1,
+						"height": 21.59375,
+						"lineHeight": "21.6px",
+						"whiteSpace": "nowrap",
+						"readable": true
+					},
+					{
+						"text": "Delivery",
+						"lines": 1,
+						"height": 21.59375,
+						"lineHeight": "21.6px",
+						"whiteSpace": "nowrap",
+						"readable": true
+					},
+					{
+						"text": "Viewing",
+						"lines": 1,
+						"height": 21.59375,
+						"lineHeight": "21.6px",
+						"whiteSpace": "nowrap",
+						"readable": true
+					}
+				],
+				"errors": []
+			},
+			{
+				"locale": "en",
+				"width": 1024,
+				"route": "home",
+				"measure": [
+					{
+						"text": "Customer",
+						"lines": 1,
+						"height": 21.59375,
+						"lineHeight": "21.6px",
+						"whiteSpace": "nowrap",
+						"readable": true
+					},
+					{
+						"text": "Import",
+						"lines": 1,
+						"height": 21.59375,
+						"lineHeight": "21.6px",
+						"whiteSpace": "nowrap",
+						"readable": true
+					},
+					{
+						"text": "Sale",
+						"lines": 1,
+						"height": 21.59375,
+						"lineHeight": "21.6px",
+						"whiteSpace": "nowrap",
+						"readable": true
+					}
+				],
+				"errors": []
+			},
+			{
+				"locale": "en",
+				"width": 1024,
+				"route": "reviews",
+				"measure": [
+					{
+						"text": "Customer",
+						"lines": 1,
+						"height": 21.59375,
+						"lineHeight": "21.6px",
+						"whiteSpace": "nowrap",
+						"readable": true
+					},
+					{
+						"text": "Purchase",
+						"lines": 1,
+						"height": 21.59375,
+						"lineHeight": "21.6px",
+						"whiteSpace": "nowrap",
+						"readable": true
+					},
+					{
+						"text": "Purchase",
+						"lines": 1,
+						"height": 21.59375,
+						"lineHeight": "21.6px",
+						"whiteSpace": "nowrap",
+						"readable": true
+					},
+					{
+						"text": "Purchase",
+						"lines": 1,
+						"height": 21.59375,
+						"lineHeight": "21.6px",
+						"whiteSpace": "nowrap",
+						"readable": true
+					},
+					{
+						"text": "Delivery",
+						"lines": 1,
+						"height": 21.59375,
+						"lineHeight": "21.6px",
+						"whiteSpace": "nowrap",
+						"readable": true
+					},
+					{
+						"text": "Viewing",
+						"lines": 1,
+						"height": 21.59375,
+						"lineHeight": "21.6px",
+						"whiteSpace": "nowrap",
+						"readable": true
+					}
+				],
+				"errors": []
+			},
+			{
+				"locale": "en",
+				"width": 1440,
+				"route": "home",
+				"measure": [
+					{
+						"text": "Customer",
+						"lines": 1,
+						"height": 21.59375,
+						"lineHeight": "21.6px",
+						"whiteSpace": "nowrap",
+						"readable": true
+					},
+					{
+						"text": "Import",
+						"lines": 1,
+						"height": 21.59375,
+						"lineHeight": "21.6px",
+						"whiteSpace": "nowrap",
+						"readable": true
+					},
+					{
+						"text": "Sale",
+						"lines": 1,
+						"height": 21.59375,
+						"lineHeight": "21.6px",
+						"whiteSpace": "nowrap",
+						"readable": true
+					}
+				],
+				"errors": []
+			},
+			{
+				"locale": "en",
+				"width": 1440,
+				"route": "reviews",
+				"measure": [
+					{
+						"text": "Customer",
+						"lines": 1,
+						"height": 21.59375,
+						"lineHeight": "21.6px",
+						"whiteSpace": "nowrap",
+						"readable": true
+					},
+					{
+						"text": "Purchase",
+						"lines": 1,
+						"height": 21.59375,
+						"lineHeight": "21.6px",
+						"whiteSpace": "nowrap",
+						"readable": true
+					},
+					{
+						"text": "Purchase",
+						"lines": 1,
+						"height": 21.59375,
+						"lineHeight": "21.6px",
+						"whiteSpace": "nowrap",
+						"readable": true
+					},
+					{
+						"text": "Purchase",
+						"lines": 1,
+						"height": 21.59375,
+						"lineHeight": "21.6px",
+						"whiteSpace": "nowrap",
+						"readable": true
+					},
+					{
+						"text": "Delivery",
+						"lines": 1,
+						"height": 21.59375,
+						"lineHeight": "21.6px",
+						"whiteSpace": "nowrap",
+						"readable": true
+					},
+					{
+						"text": "Viewing",
+						"lines": 1,
+						"height": 21.59375,
+						"lineHeight": "21.6px",
+						"whiteSpace": "nowrap",
+						"readable": true
+					}
+				],
+				"errors": []
+			},
+			{
+				"locale": "en",
+				"width": 1920,
+				"route": "home",
+				"measure": [
+					{
+						"text": "Customer",
+						"lines": 1,
+						"height": 21.59375,
+						"lineHeight": "21.6px",
+						"whiteSpace": "nowrap",
+						"readable": true
+					},
+					{
+						"text": "Import",
+						"lines": 1,
+						"height": 21.59375,
+						"lineHeight": "21.6px",
+						"whiteSpace": "nowrap",
+						"readable": true
+					},
+					{
+						"text": "Sale",
+						"lines": 1,
+						"height": 21.59375,
+						"lineHeight": "21.6px",
+						"whiteSpace": "nowrap",
+						"readable": true
+					}
+				],
+				"errors": []
+			},
+			{
+				"locale": "en",
+				"width": 1920,
+				"route": "reviews",
+				"measure": [
+					{
+						"text": "Customer",
+						"lines": 1,
+						"height": 21.59375,
+						"lineHeight": "21.6px",
+						"whiteSpace": "nowrap",
+						"readable": true
+					},
+					{
+						"text": "Purchase",
+						"lines": 1,
+						"height": 21.59375,
+						"lineHeight": "21.6px",
+						"whiteSpace": "nowrap",
+						"readable": true
+					},
+					{
+						"text": "Purchase",
+						"lines": 1,
+						"height": 21.59375,
+						"lineHeight": "21.6px",
+						"whiteSpace": "nowrap",
+						"readable": true
+					},
+					{
+						"text": "Purchase",
+						"lines": 1,
+						"height": 21.59375,
+						"lineHeight": "21.6px",
+						"whiteSpace": "nowrap",
+						"readable": true
+					},
+					{
+						"text": "Delivery",
+						"lines": 1,
+						"height": 21.59375,
+						"lineHeight": "21.6px",
+						"whiteSpace": "nowrap",
+						"readable": true
+					},
+					{
+						"text": "Viewing",
+						"lines": 1,
+						"height": 21.59375,
+						"lineHeight": "21.6px",
+						"whiteSpace": "nowrap",
+						"readable": true
+					}
+				],
+				"errors": []
+			}
+		],
+		"labels": 72,
+		"noJavaScript": 4,
+		"accessibility": 4,
+		"failures": 0
+	},
+	"browser": {
+		"startTime": "2026-10-03T21:41:18.007Z",
+		"duration": 11710.377,
+		"expected": 2,
+		"skipped": 0,
+		"unexpected": 0,
+		"flaky": 0
+	},
+	"gates": [
+		{
+			"name": "verify",
+			"exitCode": 1,
+			"log": "C:\\Users\\radev\\.codex\\tmp\\cars-import-review-labels-2026-10-04\\qa/runtime/verify.log",
+			"logSha256": "f1b0559002bfabf6d5d2528f7df8b2287f6fd1a4898f1b1d0e43d6149e985ca6"
+		},
+		{
+			"name": "scoped-format",
+			"exitCode": 0,
+			"log": "C:\\Users\\radev\\.codex\\tmp\\cars-import-review-labels-2026-10-04\\qa/runtime/scoped-format.log",
+			"logSha256": "17aa973d3f004560237d9a95171210b0671deff23d61628eecf7322ff5938f20"
+		},
+		{
+			"name": "scoped-lint",
+			"exitCode": 0,
+			"log": "C:\\Users\\radev\\.codex\\tmp\\cars-import-review-labels-2026-10-04\\qa/runtime/scoped-lint.log",
+			"logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+		},
+		{
+			"name": "architecture",
+			"exitCode": 0,
+			"log": "C:\\Users\\radev\\.codex\\tmp\\cars-import-review-labels-2026-10-04\\qa/runtime/architecture.log",
+			"logSha256": "8fa1e36a40640167c8c47f239147570688c88beec18cce162a4799d5d5a73a54"
+		},
+		{
+			"name": "assets",
+			"exitCode": 0,
+			"log": "C:\\Users\\radev\\.codex\\tmp\\cars-import-review-labels-2026-10-04\\qa/runtime/assets.log",
+			"logSha256": "b98cbb4d013072e79e1bd8765db3905ed8c6f5fae74e56356eca4fd5a28ef995"
+		},
+		{
+			"name": "unit",
+			"exitCode": 0,
+			"log": "C:\\Users\\radev\\.codex\\tmp\\cars-import-review-labels-2026-10-04\\qa/runtime/unit.log",
+			"logSha256": "49e38bc3bf4aba7149d19bc4f83fd9653106c1fc95b2702026450d27ee3c3fbc"
+		},
+		{
+			"name": "full-lint",
+			"exitCode": 0,
+			"log": "C:\\Users\\radev\\.codex\\tmp\\cars-import-review-labels-2026-10-04\\qa/runtime/full-lint.log",
+			"logSha256": "ddefde2c1fec4a2f883d2deed235be018316249ceaa26b8412c8718b4e19fb56"
+		},
+		{
+			"name": "build",
+			"exitCode": 0,
+			"log": "L:\\CODEX\\cars\\templates\\import\\runtime\\desktop-review-labels-2026-10-04\\qa/runtime/build.log",
+			"logSha256": "356fd5f067d74b36514d320ea46aba5fd28fe1e4ebe10c301e4a8775106aa6d0"
+		}
+	],
+	"buildAttempts": {
+		"initial": {
+			"name": "build",
+			"args": ["L:/Toolchains/Node/24.21.0/node_modules/npm/bin/npm-cli.js", "run", "build"],
+			"started": "2026-10-03T21:29:48.605Z",
+			"completed": "2026-10-03T21:30:28.356Z",
+			"exitCode": 1,
+			"log": "C:/Users/radev/.codex/tmp/cars-import-review-labels-2026-10-04/qa/runtime/build-enospc.log",
+			"logSha256": "bcec4ed986e4280b86e189efbee7f25a089ac0dcdf57a4384d815726a0bc7e50"
+		},
+		"retry": {
+			"started": "2026-10-03T21:35:55.485Z",
+			"completed": "2026-10-03T21:36:47.632Z",
+			"exitCode": 1,
+			"log": "L:\\CODEX\\cars\\templates\\import\\runtime\\desktop-review-labels-2026-10-04\\qa/runtime/build-junction.log",
+			"logSha256": "eb4a9659a4033e7be6f420086bdc16d2bb4567f65b42c8a3d229c304baa1cb0d"
+		},
+		"reason": "Initial build failed copying static assets because C: ran out of space. Preserved the complete task-owned QA copy on L: and retained its original path through a junction. The junction-based retry encountered a C:/L: Vite manifest path mismatch. The final build runs directly from the physical L: QA directory.",
+		"qaPhysicalPath": "L:\\CODEX\\cars\\templates\\import\\runtime\\desktop-review-labels-2026-10-04\\qa",
+		"final": {
+			"started": "2026-10-03T21:37:47.133Z",
+			"completed": "2026-10-03T21:40:26.580Z",
+			"exitCode": 0,
+			"log": "L:\\CODEX\\cars\\templates\\import\\runtime\\desktop-review-labels-2026-10-04\\qa/runtime/build.log",
+			"logSha256": "356fd5f067d74b36514d320ea46aba5fd28fe1e4ebe10c301e4a8775106aa6d0",
+			"cwd": "L:\\CODEX\\cars\\templates\\import\\runtime\\desktop-review-labels-2026-10-04\\qa"
+		}
+	},
+	"screenshots": [
+		{
+			"path": "before-home.png",
+			"sha256": "e00883cea11ae04f6d82073bf6c35bf0f3a30fe379e03ccbb83bc996ef47840c",
+			"source": "C:/Users/radev/.codex/tmp/cars-import-review-labels-2026-10-04/evidence/before/reviews-home-bg.png"
+		},
+		{
+			"path": "after-home.png",
+			"sha256": "4a55a4e36b01ffe7c801ec9e581401d5842a312b48a1103dde65da48df927a9a",
+			"source": "C:/Users/radev/.codex/tmp/cars-import-review-labels-2026-10-04/evidence/production/reviews-home-bg.png"
+		},
+		{
+			"path": "before-reviews.png",
+			"sha256": "ad8a9004bc0dca5ee21c2fb8f3be2fcef79b2d8a533c2217f698bde3c149b17b",
+			"source": "C:/Users/radev/.codex/tmp/cars-import-review-labels-2026-10-04/evidence/before/reviews-reviews-bg.png"
+		},
+		{
+			"path": "after-reviews.png",
+			"sha256": "e711f018cc05482497c59533a857198e8a95bddfdccfba6f93f6b90ba742f4c2",
+			"source": "C:/Users/radev/.codex/tmp/cars-import-review-labels-2026-10-04/evidence/production/reviews-reviews-bg.png"
+		}
+	],
+	"qaRoot": "C:/Users/radev/.codex/tmp/cars-import-review-labels-2026-10-04/qa",
+	"rawEvidence": "C:/Users/radev/.codex/tmp/cars-import-review-labels-2026-10-04/evidence",
+	"gallery": {
+		"states": 12,
+		"failures": 0,
+		"records": [
+			{
+				"width": 390,
+				"route": "home",
+				"mode": "compare",
+				"images": 2,
+				"errors": []
+			},
+			{
+				"width": 390,
+				"route": "home",
+				"mode": "after",
+				"images": 1,
+				"errors": []
+			},
+			{
+				"width": 390,
+				"route": "home",
+				"mode": "before",
+				"images": 1,
+				"errors": []
+			},
+			{
+				"width": 390,
+				"route": "reviews",
+				"mode": "compare",
+				"images": 2,
+				"errors": []
+			},
+			{
+				"width": 390,
+				"route": "reviews",
+				"mode": "after",
+				"images": 1,
+				"errors": []
+			},
+			{
+				"width": 390,
+				"route": "reviews",
+				"mode": "before",
+				"images": 1,
+				"errors": []
+			},
+			{
+				"width": 1440,
+				"route": "home",
+				"mode": "compare",
+				"images": 2,
+				"errors": []
+			},
+			{
+				"width": 1440,
+				"route": "home",
+				"mode": "after",
+				"images": 1,
+				"errors": []
+			},
+			{
+				"width": 1440,
+				"route": "home",
+				"mode": "before",
+				"images": 1,
+				"errors": []
+			},
+			{
+				"width": 1440,
+				"route": "reviews",
+				"mode": "compare",
+				"images": 2,
+				"errors": []
+			},
+			{
+				"width": 1440,
+				"route": "reviews",
+				"mode": "after",
+				"images": 1,
+				"errors": []
+			},
+			{
+				"width": 1440,
+				"route": "reviews",
+				"mode": "before",
+				"images": 1,
+				"errors": []
+			}
+		]
+	},
+	"indexLockRecovery": {
+		"original": "L:\\CODEX\\cars\\.git\\index.lock",
+		"archive": "L:\\CODEX\\cars\\templates\\import\\runtime\\desktop-review-labels-2026-10-04\\index-lock-2026-10-04-002032.recovery",
+		"length": 0,
+		"lastWriteTime": "2026-10-04T00:20:32.3841828+03:00",
+		"indexSha256": "7CD600EE15DCD8BAC67D3DA56D923C6F0C72621CB9F921126F30B3E1F149843A",
+		"activeGitProcesses": {
+			"ProcessId": 14216,
+			"ParentProcessId": 8324,
+			"CommandLine": "L:\\Toolchains\\Git\\2.54.0\\mingw64\\libexec\\git-core\\git.exe credential-helper-selector store"
+		},
+		"reason": "Older unchanged zero-byte index lock with no active Git index writer. Recovery file is retained, not deleted."
+	}
+}

@@ -1,0 +1,200 @@
+{
+  "generatedPath": "C:/Users/radev/.codex/generated_images/01a12a34-877e-73a2-9a3d-346e546742c6/exec-c46abff5-1b18-4a68-a0fe-47cd12a2684d.png",
+  "strategy": "USE GENERATED CANDIDATE",
+  "identityStatus": "Generated S A Motors Nottingham proposal; primary profile and visual search found no same-business verified logo; Instagram popular aggregation Manchester Autocars and other cities rejected",
+  "sourceUrls": [
+    "https://showroom.ebaymotorspro.co.uk/S-A-motors?aboutUs=&page=2",
+    "https://www.google.com/search?q=S+A+Motors+Nottingham+Salisbury+Street+logo&udm=2"
+  ],
+  "publishedBranding": {
+    "profileUrl": "https://showroom.ebaymotorspro.co.uk/S-A-motors?aboutUs=&page=2",
+    "sourceLogoUrl": null,
+    "observedAt": "2026-10-11T09:31:24.918Z",
+    "visualEvidence": "Primary profile and focused Google Images screenshot inspected through CUA. No same-business recognizable logo verified; unrelated same-name sources rejected.",
+    "decision": "Generated proposal only; no claim of official identity or approval",
+    "retainedEvidence": [
+      "L:/CODEX/cars/leads/branding/fleet-20261011/nottingham-s-a-motors/source-evidence/visual-source.jpg"
+    ]
+  },
+  "imageGeneration": {
+    "tool": "image_gen.imagegen",
+    "reference": "functions.exec cell54 image_gen.imagegen output exec-c46abff5-1b18-4a68-a0fe-47cd12a2684d",
+    "outputPath": "C:/Users/radev/.codex/generated_images/01a12a34-877e-73a2-9a3d-346e546742c6/exec-c46abff5-1b18-4a68-a0fe-47cd12a2684d.png",
+    "transparent_background": true,
+    "modelVersion": "not exposed by tool",
+    "prompt": "Create an original clean PROPOSAL logo for exact dealer name S A Motors, Nottingham UK. Horizontal lockup: distinctive separated S A initials in dark charcoal with a narrow burgundy diagonal accent slash between, exact word Motors in confident modern sans-serif beside it. Compact readable at120px. No extra tagline, phone, location, car silhouette, seal, star, date, manufacturer icon, gradient, shadow or solid background. True transparent alpha with open counters and generous margin. Generated demo proposal only.",
+    "promptProvenance": {
+      "kind": "exact-original-tool-input",
+      "transcript": "C:/Users/radev/.codex/sessions/2026/10/11/rollout-2026-10-11T12-04-08-01a12a34-877e-73a2-9a3d-346e546742c6.jsonl",
+      "toolCallLine": 733,
+      "toolCallId": "call_1c7521ac82b34fb5a7dab81558789635",
+      "toolCallTimestamp": "2026-10-11T09:24:44.118Z",
+      "generationEventLine": 747,
+      "generationId": "exec-c46abff5-1b18-4a68-a0fe-47cd12a2684d",
+      "generationEventTimestamp": "2026-10-11T09:25:05.118Z",
+      "extraction": "JSON-decoded original prompt string literal; unchanged wording. Completed image_gen.generation revisedPrompt exactly matches it.",
+      "referencedImagesProvided": false
+    }
+  },
+  "visualAccepted": true,
+  "visualChecks": {
+    "reviewer": "baseline asset production agent",
+    "identity": "Exact assigned spelling; original generated proposal composition, no claim of official published logo",
+    "transparency": "True alpha; no plate, clipped strokes, filled counters or residue visible in compact sheet",
+    "surfaces": "CUA source identity plus local 120/180/320 width raster review on white, four current dark canvases, black/red/blue accent samples",
+    "approval": "Asset review only. Owner/dealer approval and all six actual consumers pending."
+  },
+  "schemaVersion": 1,
+  "dealer": "nottingham-s-a-motors",
+  "state": "asset-verified",
+  "generated": {
+    "path": "C:/Users/radev/.codex/generated_images/01a12a34-877e-73a2-9a3d-346e546742c6/exec-c46abff5-1b18-4a68-a0fe-47cd12a2684d.png",
+    "sha256": "d55cbbb4796122eebde6de42260d909c5eed2aa19a8b7504ed9b4fab0d39a1c3",
+    "bytes": 343451,
+    "format": "png",
+    "width": 2172,
+    "height": 724,
+    "hasAlpha": true,
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparentRatio": 0.8432097870435376,
+      "opaqueRatio": 0.13796320319892555
+    },
+    "visibleBounds": {
+      "x": 124,
+      "y": 207,
+      "width": 1919,
+      "height": 310
+    }
+  },
+  "assets": {
+    "onLight": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/nottingham-s-a-motors/dealer-brand/logo-on-light.webp",
+      "sha256": "db23a90cf9074f419fc91c9c5d8710e3db225f1fd426135abf8609c2c9087329",
+      "bytes": 46148,
+      "format": "webp",
+      "width": 1496,
+      "height": 298,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.7025311344794172,
+        "opaqueRatio": 0.2578150235078778
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 36,
+        "width": 1400,
+        "height": 226
+      },
+      "publicPath": "/dealer-brand/logo-on-light.webp"
+    },
+    "onDark": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/nottingham-s-a-motors/dealer-brand/logo-on-dark.webp",
+      "sha256": "3f4b0681ca7e003b2b9b8cd4472ac8e8d284fbe7ab329de41223c49562862c21",
+      "bytes": 33074,
+      "format": "webp",
+      "width": 1496,
+      "height": 298,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.7025311344794172,
+        "opaqueRatio": 0.2578150235078778
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 36,
+        "width": 1400,
+        "height": 226
+      },
+      "publicPath": "/dealer-brand/logo-on-dark.webp"
+    },
+    "onAccent": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/nottingham-s-a-motors/dealer-brand/logo-on-accent.webp",
+      "sha256": "3f4b0681ca7e003b2b9b8cd4472ac8e8d284fbe7ab329de41223c49562862c21",
+      "bytes": 33074,
+      "format": "webp",
+      "width": 1496,
+      "height": 298,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.7025311344794172,
+        "opaqueRatio": 0.2578150235078778
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 36,
+        "width": 1400,
+        "height": 226
+      },
+      "publicPath": "/dealer-brand/logo-on-accent.webp"
+    }
+  },
+  "master": {
+    "path": "L:/CODEX/cars/leads/branding/fleet-20261011/nottingham-s-a-motors/branding/logo-master.png",
+    "sha256": "53105fddae0daec0a5c4b74b91ea0dc58f58e4378ca7cf8f13f4cf0af4592739",
+    "bytes": 161172,
+    "format": "png",
+    "width": 1496,
+    "height": 298,
+    "hasAlpha": true,
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparentRatio": 0.7025311344794172,
+      "opaqueRatio": 0.2578150235078778
+    },
+    "visibleBounds": {
+      "x": 48,
+      "y": 36,
+      "width": 1400,
+      "height": 226
+    }
+  },
+  "technicalAcceptance": {
+    "reviewer": "baseline asset production agent",
+    "identity": "Exact assigned spelling; original generated proposal composition, no claim of official published logo",
+    "transparency": "True alpha; no plate, clipped strokes, filled counters or residue visible in compact sheet",
+    "surfaces": "CUA source identity plus local 120/180/320 width raster review on white, four current dark canvases, black/red/blue accent samples",
+    "approval": "Asset review only. Owner/dealer approval and all six actual consumers pending."
+  },
+  "integrationVerified": false,
+  "hostedVerified": false,
+  "ownerApproved": false,
+  "exportTool": "docs/logo-refresh/2026-09-18/tools/build-approved-logo-pack.mjs",
+  "exportToolSha256": "7fab60c4000210eff6bbb91f9c35e869bad90834d3bdd09d282a9a51835f0dbc",
+  "exportIsolation": "L:/CODEX/cars/runtime/fleet-logo-20261011/baseline-export",
+  "updatedAt": "2026-10-11T09:35:03.507Z",
+  "surfaceReviewPath": "L:/CODEX/cars/leads/branding/fleet-20261011/nottingham-s-a-motors/surface-review.png",
+  "exportScratchRetired": true,
+  "sourceEvidence": [
+    {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/nottingham-s-a-motors/source-evidence/visual-source.jpg",
+      "sha256": "1080d3b64b68eb9a74b1e50f9cc0caabce36427710608480f07784c038e2a3f0",
+      "bytes": 125111,
+      "format": "jpeg",
+      "width": 1265,
+      "height": 712,
+      "hasAlpha": false,
+      "alpha": {
+        "min": 255,
+        "max": 255,
+        "transparentRatio": 0,
+        "opaqueRatio": 1
+      },
+      "visibleBounds": {
+        "x": 0,
+        "y": 0,
+        "width": 1265,
+        "height": 712
+      }
+    }
+  ],
+  "provenanceFile": "L:/CODEX/cars/leads/branding/fleet-20261011/nottingham-s-a-motors/provenance.json"
+}

@@ -1,0 +1,357 @@
+{
+  "schemaVersion": 1,
+  "type": "cars-existing-fleet-single-worker-deployment",
+  "client": "priselci",
+  "repository": "darkapoparka/cars-priselci",
+  "sourcePublication": {
+    "repository": "darkapoparka/cars",
+    "commit": "4175d7b33a1dde15954e472d6b0c5c632ae4d943",
+    "sourceTree": "9b5ad1a83b3442a4f1453169517195afb6fe5a4b",
+    "ref": "refs/heads/main",
+    "publishedAt": "2026-10-11T22:40:51.686Z",
+    "evidence": "authenticated-github-connector",
+    "verifiedMainCommit": "3a38fd180c85ac546dabe2b8243f53635d3fb9ef"
+  },
+  "privatePublishingMirror": {
+    "repository": "darkapoparka/cars-priselci",
+    "state": "not-verified-by-this-bridge",
+    "verifiedByBridge": false
+  },
+  "accountId": "cb0007f242077bd759331f096eb75531",
+  "workerName": "cars-priselci",
+  "publicOrigin": "https://cars-priselci.darkapoparka1.workers.dev",
+  "sourceCommit": "4175d7b33a1dde15954e472d6b0c5c632ae4d943",
+  "sourceTree": "9b5ad1a83b3442a4f1453169517195afb6fe5a4b",
+  "inputDigest": "daf0101f79f21ee50d124dcd873b12c6a0a814a0a844836359ea6a2bfac39ca8",
+  "sourceReleases": {
+    "auto-best": {
+      "repository": "darkapoparka/cars",
+      "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+      "path": "templates/auto-best",
+      "digest": "dcbc59990928884006652677d3529020df3844029993895a71e5f6818ba7363c",
+      "tree": "5fb7a2164775050a47c1183371622295dbf63725"
+    },
+    "modern": {
+      "repository": "darkapoparka/cars",
+      "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+      "path": "templates/modern",
+      "digest": "ba263aac8f1863d133807d3e1bf3597d125cf315a7e0deba3f6e419b52434c25",
+      "tree": "3974380670eb388bb16182f94ade33be6d87b1c1"
+    },
+    "import": {
+      "repository": "darkapoparka/cars",
+      "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+      "path": "templates/import",
+      "digest": "f98a0934cdcc5adbda393c14c02eb2adc0175344ab2ac3f913afe4b0603366e5",
+      "tree": "6afc6901e2f95967fb7c72e9f75525d4d6fbf086"
+    },
+    "app": {
+      "repository": "darkapoparka/cars",
+      "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+      "path": "templates/app",
+      "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1",
+      "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76"
+    },
+    "mobile": {
+      "repository": "darkapoparka/cars",
+      "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+      "path": "templates/mobile",
+      "digest": "4e858bd9dbd3ef5b52cd904c4ed97bbfdc0f4cfe02b5a3840580f38026b867a0",
+      "tree": "2b02829e157071e305bfb2dff10ef18e85c8a35e"
+    },
+    "karento-best": {
+      "repository": "darkapoparka/cars",
+      "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+      "path": "templates/karento-best",
+      "digest": "83056967764a686f3737d74b86c5db51c1385a50184853f50ec4ade80c1dd44f",
+      "tree": "5f6eec8efb2f9e99819f7f0c2f743d18fff7b134"
+    }
+  },
+  "runId": 38180650445,
+  "attempt": 1,
+  "artifactId": 11716709914,
+  "archiveDigest": "sha256:dcce2137e749723e254958902329b58deb7d603f26d8de83068f345d28e805f2",
+  "artifactDigest": "71a54776da643651336777a0af31ae465f000aafce7ebbcdb8694952b92d3194",
+  "outputDigest": "1238824ed130ed4c031778a94376e2cf020d7eb3a2f7e9fd638022ac4bd5ef7f",
+  "applicationCount": 6,
+  "workerCount": 1,
+  "serviceBindings": [],
+  "deploymentMode": "update-existing",
+  "readyToDeploy": true,
+  "deployments": 1,
+  "hostedVerified": false,
+  "ownerAccepted": false,
+  "status": "deployed",
+  "versionId": "5139c933-7f9f-4eba-b18a-b0fe60aba37d",
+  "deploymentId": "12ca3f5c-95c9-4d88-bc3d-5e546fccadc6",
+  "versionTraffic": [
+    {
+      "version_id": "5139c933-7f9f-4eba-b18a-b0fe60aba37d",
+      "percentage": 100
+    }
+  ],
+  "liveBindings": [
+    {
+      "name": "ASSETS",
+      "type": "assets"
+    }
+  ],
+  "scriptCountSnapshot": {
+    "count": 101,
+    "allowed": 100,
+    "checkedAt": "2026-10-11T22:40:52.109Z",
+    "evidence": "authenticated-cloudflare-connector"
+  },
+  "scriptCountVerifiedAfter": false,
+  "rollback": {
+    "schemaVersion": 1,
+    "checkedAt": "2026-10-11T22:47:35.231Z",
+    "accountId": "cb0007f242077bd759331f096eb75531",
+    "workerName": "cars-priselci",
+    "publicOrigin": "https://cars-priselci.darkapoparka1.workers.dev",
+    "exists": true,
+    "workersDev": true,
+    "previewsEnabled": false,
+    "routes": [],
+    "domains": [],
+    "tailConsumers": [],
+    "schedules": [],
+    "bindings": [
+      {
+        "name": "ASSETS",
+        "type": "assets"
+      }
+    ],
+    "versionId": "31b65368-5bec-4deb-8592-18b1980ea895",
+    "deploymentId": "569d7c89-3501-477a-8adb-bd0d059443de",
+    "versionTraffic": [
+      {
+        "version_id": "31b65368-5bec-4deb-8592-18b1980ea895",
+        "percentage": 100
+      }
+    ],
+    "scriptCount": 101,
+    "allowedScripts": 100,
+    "evidence": "authenticated-cloudflare-connector",
+    "scriptInventory": {
+      "complete": true,
+      "endpoint": "/accounts/cb0007f242077bd759331f096eb75531/workers/scripts",
+      "names": [
+        "cars-autofestvarna",
+        "cars-autofestvarna-app",
+        "cars-autofestvarna-auto-best",
+        "cars-autofestvarna-import",
+        "cars-autofestvarna-mobile",
+        "cars-autofestvarna-modern",
+        "cars-autofestvarna-signature",
+        "cars-autoroadvarna",
+        "cars-autoroadvarna-app",
+        "cars-autoroadvarna-import",
+        "cars-autoroadvarna-mobile",
+        "cars-autoroadvarna-modern",
+        "cars-autoroadvarna-signature",
+        "cars-carpointtradevarna",
+        "cars-carpointtradevarna-app",
+        "cars-carpointtradevarna-auto-best",
+        "cars-carpointtradevarna-import",
+        "cars-carpointtradevarna-mobile",
+        "cars-carpointtradevarna-modern",
+        "cars-carpointtradevarna-signature",
+        "cars-cf-qualification-auto-best",
+        "cars-cf-qualification-mobile",
+        "cars-citycarsvarna",
+        "cars-citycarsvarna-app",
+        "cars-citycarsvarna-auto-best",
+        "cars-citycarsvarna-import",
+        "cars-citycarsvarna-mobile",
+        "cars-citycarsvarna-modern",
+        "cars-citycarsvarna-signature",
+        "cars-dmautovarna",
+        "cars-dmautovarna-app",
+        "cars-dmautovarna-auto-best",
+        "cars-dmautovarna-import",
+        "cars-dmautovarna-mobile",
+        "cars-dmautovarna-modern",
+        "cars-dmautovarna-signature",
+        "cars-dreamdrivevarna",
+        "cars-dreamdrivevarna-app",
+        "cars-dreamdrivevarna-auto-best",
+        "cars-dreamdrivevarna-import",
+        "cars-dreamdrivevarna-mobile",
+        "cars-dreamdrivevarna-modern",
+        "cars-dreamdrivevarna-signature",
+        "cars-dynamicautovarna",
+        "cars-dynamicautovarna-app",
+        "cars-dynamicautovarna-auto-best",
+        "cars-dynamicautovarna-import",
+        "cars-dynamicautovarna-mobile",
+        "cars-dynamicautovarna-modern",
+        "cars-dynamicautovarna-signature",
+        "cars-kolarovcars",
+        "cars-kolarovcars-app",
+        "cars-kolarovcars-auto-best",
+        "cars-kolarovcars-import",
+        "cars-kolarovcars-mobile",
+        "cars-kolarovcars-modern",
+        "cars-kolarovcars-signature",
+        "cars-navaracar",
+        "cars-navaracar-app",
+        "cars-navaracar-auto-best",
+        "cars-navaracar-import",
+        "cars-navaracar-mobile",
+        "cars-navaracar-modern",
+        "cars-navaracar-signature",
+        "cars-pmselectautomotive",
+        "cars-pmselectautomotive-app",
+        "cars-pmselectautomotive-auto-best",
+        "cars-pmselectautomotive-import",
+        "cars-pmselectautomotive-mobile",
+        "cars-pmselectautomotive-modern",
+        "cars-pmselectautomotive-signature",
+        "cars-primeautovarna",
+        "cars-primeautovarna-app",
+        "cars-primeautovarna-auto-best",
+        "cars-primeautovarna-import",
+        "cars-primeautovarna-mobile",
+        "cars-primeautovarna-modern",
+        "cars-primeautovarna-signature",
+        "cars-priselci",
+        "cars-priselci-app",
+        "cars-priselci-carwow",
+        "cars-priselci-modern",
+        "cars-promosalevarna",
+        "cars-promosalevarna-app",
+        "cars-promosalevarna-auto-best",
+        "cars-promosalevarna-import",
+        "cars-promosalevarna-mobile",
+        "cars-promosalevarna-modern",
+        "cars-promosalevarna-signature",
+        "cars-uk-batley-as-motor-group",
+        "cars-uk-birmingham-square-one-motors",
+        "cars-uk-birmingham-trade-car-sales-grasmere",
+        "cars-uk-motherwell-motors-castle",
+        "cars-uk-stockport-broadbent-car-and-servicing",
+        "day-and-night-autodeal",
+        "day-and-night-autodeal-app",
+        "day-and-night-autodeal-auto-best",
+        "day-and-night-autodeal-import",
+        "day-and-night-autodeal-mobile",
+        "day-and-night-autodeal-modern",
+        "day-and-night-autodeal-signature"
+      ]
+    },
+    "routesEvidence": {
+      "complete": true,
+      "accountId": "cb0007f242077bd759331f096eb75531",
+      "zones": []
+    },
+    "scriptCountVerifiedAfter": false,
+    "activeVersion": {
+      "id": "31b65368-5bec-4deb-8592-18b1980ea895",
+      "number": 4,
+      "createdOn": "2026-10-11T20:05:15.366164Z",
+      "script": {
+        "etag": "4a71be197c85cd681c314a92bbd8a990251ec574d3341d23de5d34d20182f4d6",
+        "handlers": [
+          "fetch"
+        ],
+        "last_deployed_from": "wrangler"
+      },
+      "compatibilityDate": "2026-10-10",
+      "compatibilityFlags": [
+        "nodejs_compat"
+      ]
+    },
+    "authenticatedEndpoints": [
+      {
+        "kind": "scripts",
+        "path": "/accounts/cb0007f242077bd759331f096eb75531/workers/scripts",
+        "status": 200,
+        "success": true
+      },
+      {
+        "kind": "settings",
+        "path": "/accounts/cb0007f242077bd759331f096eb75531/workers/scripts/cars-priselci/settings",
+        "status": 200,
+        "success": true
+      },
+      {
+        "kind": "deployments",
+        "path": "/accounts/cb0007f242077bd759331f096eb75531/workers/scripts/cars-priselci/deployments",
+        "status": 200,
+        "success": true,
+        "resultInfo": {
+          "page": 1,
+          "per_page": 10,
+          "count": 4,
+          "total_count": 4,
+          "total_pages": 1
+        }
+      },
+      {
+        "kind": "subdomain",
+        "path": "/accounts/cb0007f242077bd759331f096eb75531/workers/scripts/cars-priselci/subdomain",
+        "status": 200,
+        "success": true
+      },
+      {
+        "kind": "schedules",
+        "path": "/accounts/cb0007f242077bd759331f096eb75531/workers/scripts/cars-priselci/schedules",
+        "status": 200,
+        "success": true
+      },
+      {
+        "kind": "domains",
+        "path": "/accounts/cb0007f242077bd759331f096eb75531/workers/domains",
+        "status": 200,
+        "success": true,
+        "resultInfo": {
+          "page": 1,
+          "per_page": 0,
+          "count": 0,
+          "total_count": 0
+        }
+      },
+      {
+        "kind": "accountSubdomain",
+        "path": "/accounts/cb0007f242077bd759331f096eb75531/workers/subdomain",
+        "status": 200,
+        "success": true
+      },
+      {
+        "kind": "zones",
+        "path": "/zones",
+        "query": {
+          "account.id": "cb0007f242077bd759331f096eb75531",
+          "per_page": 50,
+          "page": 1
+        },
+        "status": 200,
+        "success": true,
+        "resultInfo": {
+          "page": 1,
+          "per_page": 50,
+          "total_pages": 0,
+          "count": 0,
+          "total_count": 0
+        }
+      },
+      {
+        "kind": "version",
+        "path": "/accounts/cb0007f242077bd759331f096eb75531/workers/scripts/cars-priselci/versions/31b65368-5bec-4deb-8592-18b1980ea895",
+        "status": 200,
+        "success": true
+      }
+    ],
+    "resourceSnapshotCheckedAt": "2026-10-11T22:40:52.109Z"
+  },
+  "reviewSha256": "a4b76ba7ee885a4e99045806c0c4e0829edc38f3f4d9e4cea71d3c9b10a82f01",
+  "tool": {
+    "node": "v26.10.0",
+    "version": "4.149.0",
+    "packageSha256": "a55b192868faa5aee1061ace714422a8824b30cd9e622aadb149a07305758d81",
+    "entrySha256": "31866b9a3686777254819158e60ebe4920d1d91141cde68846c62b52f75d7a66",
+    "authentication": "standard-wrangler-profile-or-environment"
+  },
+  "finishedAt": "2026-10-11T22:48:32.187Z"
+}

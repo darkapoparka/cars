@@ -6,7 +6,7 @@ import type {
 } from "@repo/marketplace-domain/site-config";
 import { inventoryCopy } from "./content/inventory-copy";
 
-export type LeadSiteCurrency = "AED" | "BGN" | "EUR" | "GBP" | "USD";
+export type LeadSiteCurrency = "AED" | "BGN" | "EUR" | "USD";
 
 export interface LeadSiteCopy {
   readonly address: string;
@@ -114,8 +114,8 @@ export const leadSite: LeadSiteConfig = {
     "tagline": "Broadbent Car and Servicing — vehicles and dealer support in Bredbury, Stockport."
   }
 },
-  accent: "#18181B",
-  desktopAccent: "#4b5057",
+  accent: "#09090b",
+  desktopAccent: "#09090b",
   desktopInventoryFilterLayout: "quick",
   desktopPreviewIdentity: {
     sourceSlug: "day-night-auto-group",
@@ -147,11 +147,11 @@ export const leadSite: LeadSiteConfig = {
   email: "transitsellers2020@gmail.com",
   heroPath: "/lead-hero.jpg",
   locale: "en-GB",
-  logoInversePath: "/dealer-brand/logo-on-dark-20261011.webp",
-  logoPath: "/dealer-brand/logo-on-light-20261011.webp",
-  logoOnLight: "/dealer-brand/logo-on-light-20261011.webp",
-  logoOnDark: "/dealer-brand/logo-on-dark-20261011.webp",
-  logoOnAccent: "/dealer-brand/logo-on-accent-20261011.webp",
+  logoPath: "/dealer-brand/v2-cf2c5199092708bd/logo-on-light.webp",
+  logoInversePath: "/dealer-brand/v2-cf2c5199092708bd/logo-on-dark.webp",
+  logoOnLight: "/dealer-brand/v2-cf2c5199092708bd/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/v2-cf2c5199092708bd/logo-on-dark.webp",
+  logoOnAccent: "/dealer-brand/v2-cf2c5199092708bd/logo-on-dark.webp",
   mapsEmbedUrl:
     "https://maps.google.com/maps?q=Broadbent%20Car%20and%20Servicing%2C%20Oldmoor%20Road%2C%20Bredbury%2C%20Stockport%20SK6%202QE&z=16&output=embed",
   mapsUrl:
@@ -163,6 +163,6 @@ export const leadSite: LeadSiteConfig = {
   slug: "stockport-broadbent-car-and-servicing",
   socialLinks: {},
   staticDemoMode: true,
-  tagline: "Explore cars and vans in Stockport.",
+  tagline: "Broadbent Car and Servicing — vehicles and dealer support in Bredbury, Stockport.",
 };
 // LEAD_SITE_CONFIG_END

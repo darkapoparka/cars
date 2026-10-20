@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-reviewed-modern-bilingual-copy-input",
+  "dealer": "north-norfolk-car-sales",
+  "sourceCommit": "d9594c2979f668831b78609e4e990640259aee81",
+  "baselineTree": "c3770f86b6a3f7e036e057b25c3836db750a675c",
+  "inputSha256": "eb2acf164d2fd85661b5f671c0408d2cad55bcb96aa9608f89c7a14707c3d6c0",
+  "modernInputRowsSha256": "932523af433685d67a52f75750c038f6e6b29124595065c70b9587455ee9a69a",
+  "listingCount": 2,
+  "profileInputs": [
+    {
+      "path": "dealer.json",
+      "gitBlob": "a522dd6d4aa4dbca4ea35c6706966a4ed43e31b3",
+      "sha256": "edf8ff3c6b676fde39d5512c753550f23da05532c02ce031be15ab975fe55dab",
+      "bytes": 4327
+    },
+    {
+      "path": "business-facts.json",
+      "gitBlob": "5bf8ff326b41b1bd1f57f23efa87ab6ab3567ff4",
+      "sha256": "7a1c5d7281ec894102e5efa70338609033181ae706c54eae35fee70f982d0826",
+      "bytes": 8782
+    },
+    {
+      "path": "stock.json",
+      "gitBlob": "4bdd26161140b9e36a168b42d8f5972646c3e87c",
+      "sha256": "e310adfc5caac3012068f2c367931608f4306d559b8feeb2b234bcbbfc3edeb4",
+      "bytes": 3350
+    }
+  ],
+  "reviewedGeneratorHelper": {
+    "path": "scripts/lib/modern-dealer-inventory-copy.mjs",
+    "sha256": "cbdbaa28dc07911cfe913b4e627671b6556fc25d3bfe59364e29c5ca5a29072b",
+    "sourceCommit": "14d86f67c160699c18a6ec5658197cc4d9011e0b"
+  },
+  "review": {
+    "displayCopyOnly": true,
+    "exactSourceDescriptionKeys": true,
+    "listingFactsUnchanged": true,
+    "imageUrlsUnchanged": true,
+    "imageAltsPreserved": true,
+    "interpolationTokensUnchanged": true,
+    "reviewedBy": "Codex, authorized final-template rollout",
+    "reviewedAt": "2026-10-14T20:06:46.658Z",
+    "notes": "Reuse native companion for1991Peugeot205. Add a faithful explicit BG companion for the exact2018Peugeot208 disclosure, preserving45500/45000mile source discrepancy and observed date; no factual fields changed."
+  },
+  "reviewedCopy": {
+    "peugeot-205-1991-1090": {
+      "sourceDescription": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "en": {
+        "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+        "imageAlts": [
+          "1991 Peugeot 205 1.9 GTI Phase 2"
+        ]
+      },
+      "bg": {
+        "description": "Илюстрация — не показва обявения автомобил. Това са датирани данни от обяви, наблюдавани на 10 октомври 2026 г. Потвърдете оригиналната обява, цената, състоянието и наличността с автокъщата.",
+        "imageAlts": [
+          "1991 Peugeot 205 1.9 GTI Phase 2"
+        ]
+      }
+    },
+    "peugeot-208-2018-1089": {
+      "sourceDescription": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer. The overview shows 45,500 miles; the prose rounds it to 45,000. This preview preserves the structured overview value.",
+      "en": {
+        "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer. The overview shows 45,500 miles; the prose rounds it to 45,000. This preview preserves the structured overview value.",
+        "imageAlts": [
+          "2018 Peugeot 208 GTI Prestige THP"
+        ]
+      },
+      "bg": {
+        "description": "Илюстрация — не показва обявения автомобил. Това са датирани данни от обяви, наблюдавани на 10 октомври 2026 г. Потвърдете оригиналната обява, цената, състоянието и наличността с автокъщата. В общите данни е посочен пробег 45 500 мили, а в описанието той е закръглен на 45 000 мили. Този преглед запазва стойността от структурираните общи данни.",
+        "imageAlts": [
+          "2018 Peugeot 208 GTI Prestige THP"
+        ]
+      }
+    }
+  }
+}

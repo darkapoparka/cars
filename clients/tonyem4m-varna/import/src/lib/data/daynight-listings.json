@@ -1,0 +1,37 @@
+{
+  "fetchedAt": "2026-10-11",
+  "sources": {
+    "dealerInventory": "https://tonyem4m.mobile.bg/",
+    "dealerContact": "https://tonyem4m.mobile.bg/contacts"
+  },
+  "count": 1,
+  "listings": [
+    {
+      "badge": "ОБЯВА",
+      "category": "Седан",
+      "color": "",
+      "displacement": "",
+      "euroStandard": "",
+      "features": [],
+      "fuel": "Дизелов",
+      "gearbox": "Автоматична",
+      "href": "https://tonyem4m.mobile.bg/obiava-11764766190100138-bmw-740-d-xdrive",
+      "id": "11764766190100138",
+      "image": "/dealer-stock/11764766190100138-1.webp",
+      "location": "Варна",
+      "mileage": "196 000 км",
+      "mileageKnown": true,
+      "mileageValue": 196000,
+      "mileageUnit": "km",
+      "photoCount": "2",
+      "power": "320 к.с.",
+      "price": "34 767 €",
+      "priceBgn": "",
+      "production": "2016 г.",
+      "rawPriceText": "34 767 €",
+      "shortDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "title": "BMW 740",
+      "vat": ""
+    }
+  ]
+}

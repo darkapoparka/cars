@@ -1,0 +1,124 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-existing-fleet-source-publication",
+  "reviewed": true,
+  "reviewedAt": "2026-10-13T23:36:49.890Z",
+  "dealer": "extra-car-sm",
+  "sourceOwnership": "cars-canonical",
+  "canonicalSourceRepository": "darkapoparka/cars",
+  "canonicalTarget": "clients/extra-car-sm",
+  "targetRef": "refs/heads/main",
+  "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+  "canonicalBaseline": {
+    "commit": "6c4609d628b6b6d13b93211334c6ffa5044dd565",
+    "tree": "fb6826c0c17ae4340c05efb39f6b1c54a7aa0bb3"
+  },
+  "preparedTree": "ef9ef5dda367e773f4fc926b6839e4036ae2c9e0",
+  "originalSourcePreparation": {
+    "runId": 38480947962,
+    "attempt": "1",
+    "artifact": {
+      "id": 11858071747,
+      "name": "existing-cf-source-extra-car-sm-38480947962-1",
+      "bytes": 1457338901,
+      "digest": "sha256:86b0dcf454adbdbfd586d914af0ac69a55e1a90a4089ba8e2735c8487c0b7a0a"
+    },
+    "patchSha256": "dd8a86e16f2ff36d8198206368baf242464ad17a1279f8b2db239851e8f8fab1",
+    "receiptSha256": "34c59ba83d4e0bcc02da92c8f6788edaed2740ff2989a00118b126264c400651",
+    "finalReviewSha256": "b212edf880095d648ada4b20aeb1b2a44f339d4f5190b3b0f2bb1a01d734b530",
+    "successfulJobs": {
+      "planJobId": 115583544684,
+      "sourceJobId": 115585065300
+    }
+  },
+  "transport": {
+    "run": {
+      "id": 38483751982,
+      "attempt": 1,
+      "sourceCommit": "4c6215922987aeab853d90bf62095ede24c9cb99"
+    },
+    "retainedArtifact": {
+      "id": 11857493558,
+      "digest": "sha256:100c3362782b91b4e371279b50b908c30857c4c3d66e2ed71db5deb22bd7a80b",
+      "bytes": 3913749
+    },
+    "reusedGitObjects": 10551,
+    "newBlobs": 224,
+    "wholeArchiveDownloaded": false,
+    "selectedEntryTransfer": {
+      "mode": "authenticated-zip-ranges",
+      "bytes": 30697075,
+      "totalBytes": 1457338901,
+      "metadataDigest": "sha256:86b0dcf454adbdbfd586d914af0ac69a55e1a90a4089ba8e2735c8487c0b7a0a",
+      "selectedEntryDigestsVerified": true
+    }
+  },
+  "inputs": {
+    "adoption": {
+      "path": "docs/releases/cloudflare-existing25-20261011/registered-source/extra-car-sm/reviewed-public-adoption.json",
+      "sha256": "b26be291dba8618a5be4860adcc403213d84ecf80e402b23a32ba978c427d17a"
+    },
+    "candidateLock": {
+      "path": "docs/releases/cloudflare-existing25-20261011/registered-source/extra-car-sm/qualification-lock.json",
+      "sha256": "688c0b18c9de145fe02831590b42f9062fb20e56921a89a45e6a8c08e52417e8"
+    },
+    "qualification": {
+      "path": "docs/releases/cloudflare-existing25-20261011/registered-source/extra-car-sm/qualification-context.json",
+      "sha256": "42758c1cf55e5f0387ffab6a979d0db3ef52acb43a9845002cdafd6f91c663a0"
+    },
+    "sourceDeltaReview": {
+      "path": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-delta-review.json",
+      "sha256": "cbdd14d8bc3d18a10c028134e33b47225a4fe2a52951b527b08f33cb55581975"
+    },
+    "branding": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/extra-car-sm/branding.json",
+      "sha256": "c418f8871dea4e713af6afbd7e286f72e0b7068606a108ac2efed268422db1d2"
+    }
+  },
+  "mountOwnership": {
+    "baseCommit": "6c4609d628b6b6d13b93211334c6ffa5044dd565",
+    "baseTree": "fb6826c0c17ae4340c05efb39f6b1c54a7aa0bb3",
+    "adoptionReceiptSha256": "b26be291dba8618a5be4860adcc403213d84ecf80e402b23a32ba978c427d17a",
+    "initialSelection": true,
+    "previousPublicRoutes": false,
+    "variants": [
+      {
+        "key": "auto-best",
+        "base": "",
+        "entry": "/"
+      },
+      {
+        "key": "modern",
+        "base": "/variant-2",
+        "entry": "/variant-2/cars"
+      },
+      {
+        "key": "import",
+        "base": "/variant-3",
+        "entry": "/variant-3/"
+      },
+      {
+        "key": "app",
+        "base": "/variant-4",
+        "entry": "/variant-4/"
+      },
+      {
+        "key": "mobile",
+        "base": "/variant-5",
+        "entry": "/variant-5/"
+      },
+      {
+        "key": "karento-best",
+        "base": "/variant-6",
+        "entry": "/variant-6/"
+      }
+    ]
+  },
+  "authoritativeFactsUnchanged": true,
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "privatePublishingMirror": {
+    "repository": "darkapoparka/cars-extra-car-sm",
+    "state": "not-published-by-source-preparation"
+  }
+}

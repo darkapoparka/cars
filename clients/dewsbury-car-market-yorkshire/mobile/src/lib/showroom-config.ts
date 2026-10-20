@@ -94,7 +94,7 @@ export function defineShowroom(config: ShowroomConfig): Readonly<ShowroomConfig>
 // A neutral template placeholder. Replace only with verified dealer details.
 export const showroom = defineShowroom({
   "name": "Car Market Yorkshire",
-  "logo": "/dealer-brand/logo.webp",
+  "logo": "/dealer-brand/v2-c52eb17295e48be5/logo-on-light.webp",
   "phone": null,
   "email": null,
   "address": null,

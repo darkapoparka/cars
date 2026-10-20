@@ -1,0 +1,102 @@
+{
+  "generatedAt": "2026-10-06T11:09:36.668Z",
+  "tool": "image_gen.imagegen",
+  "transparentBackground": true,
+  "treatment": "Matte white, charcoal and coral compact 3D illustrations matching the contact artwork.",
+  "status": "Complete set mapped to the eight mobile service overview cards; desktop photograph sources retained.",
+  "derivativeOperations": [
+    "resize",
+    "WebP encoding"
+  ],
+  "extends": "service-cutouts-20261006.json",
+  "assets": [
+    {
+      "id": "import",
+      "source": "exec-879e57f7-0173-4210-93d2-09e25ce4835e.png",
+      "concept": "Generic white car on a folded charcoal map with a coral location pin.",
+      "original": "C:\\Users\\radev\\.codex\\generated_images\\01a10aaf-2314-7de0-9b09-b5dfe4f3c810\\exec-879e57f7-0173-4210-93d2-09e25ce4835e.png",
+      "originalPreserved": true,
+      "width": 256,
+      "bytes": 8720,
+      "sha256": "ef3ff09ad70b78d1f0ef99cf86b0c31bfdf41513efef9e9d09b5aa8a6ac28ac1",
+      "publicPath": "/images/service-cutouts/import-20261006.webp"
+    },
+    {
+      "id": "sell",
+      "source": "exec-5030fc6c-0ed4-4628-a1f4-9cb6c2474d5d.png",
+      "concept": "Charcoal car key fob with a blank white valuation tag and coral corner.",
+      "original": "C:\\Users\\radev\\.codex\\generated_images\\01a10aaf-2314-7de0-9b09-b5dfe4f3c810\\exec-5030fc6c-0ed4-4628-a1f4-9cb6c2474d5d.png",
+      "originalPreserved": true,
+      "width": 256,
+      "bytes": 11326,
+      "sha256": "a0aa35ded05aeffc305bdc8622d19474ee2c30b70013dc2d2ba9478b232c04da",
+      "publicPath": "/images/service-cutouts/sell-20261006.webp"
+    },
+    {
+      "id": "servicing",
+      "source": "exec-ae0dd8d1-8fd6-4ed6-8cd0-16c470c81ae6.png",
+      "concept": "Charcoal spanner over a white gear with a coral hub.",
+      "original": "C:\\Users\\radev\\.codex\\generated_images\\01a10aaf-2314-7de0-9b09-b5dfe4f3c810\\exec-ae0dd8d1-8fd6-4ed6-8cd0-16c470c81ae6.png",
+      "originalPreserved": true,
+      "width": 256,
+      "bytes": 10056,
+      "sha256": "11e20fa281dd279f6cc0398c0c53956354a0306a3557dd18f99f1976557aecfd",
+      "publicPath": "/images/service-cutouts/servicing-20261006.webp"
+    },
+    {
+      "id": "viewing",
+      "source": "exec-e449cdfb-d33f-4689-8729-ee02af21dfe2.png",
+      "concept": "Matte charcoal steering wheel with white hub and coral center.",
+      "original": "C:\\Users\\radev\\.codex\\generated_images\\01a10aaf-2314-7de0-9b09-b5dfe4f3c810\\exec-e449cdfb-d33f-4689-8729-ee02af21dfe2.png",
+      "originalPreserved": true,
+      "width": 256,
+      "bytes": 13690,
+      "sha256": "8b20a9ada66fb38518f2fb9ba96175d173d6240548ddb0aed52bc93d4e6f5f16",
+      "publicPath": "/images/service-cutouts/viewing-20261006.webp"
+    },
+    {
+      "id": "trade-in",
+      "source": "exec-1b282c9b-238a-4696-bed0-346b8038021a.png",
+      "concept": "White and charcoal generic cars with coral exchange arrows.",
+      "original": "C:\\Users\\radev\\.codex\\generated_images\\01a10aaf-2314-7de0-9b09-b5dfe4f3c810\\exec-1b282c9b-238a-4696-bed0-346b8038021a.png",
+      "originalPreserved": true,
+      "width": 256,
+      "bytes": 13374,
+      "sha256": "892b0449f452d3858743ba83c27b4d0939837e475c3315acf676952f174b8a2b",
+      "publicPath": "/images/service-cutouts/trade-in-20261006.webp"
+    },
+    {
+      "id": "sourcing",
+      "source": "exec-a2e31a7f-2aa0-4a7e-8b7e-14f7911badd7.png",
+      "concept": "White generic car with charcoal magnifier and coral detail.",
+      "original": "C:\\Users\\radev\\.codex\\generated_images\\01a10aaf-2314-7de0-9b09-b5dfe4f3c810\\exec-a2e31a7f-2aa0-4a7e-8b7e-14f7911badd7.png",
+      "originalPreserved": true,
+      "width": 256,
+      "bytes": 9190,
+      "sha256": "0c927c484fd5a62810fc841b5213f3ffe010d2e05ed5d2e2e37215ab5205f651",
+      "publicPath": "/images/service-cutouts/sourcing-20261006.webp"
+    },
+    {
+      "id": "financing",
+      "source": "exec-e1770143-7b09-4fb8-b6e7-41f78c0231dd.png",
+      "concept": "Charcoal calculator with blank screen, white keys and coral key.",
+      "original": "C:\\Users\\radev\\.codex\\generated_images\\01a10aaf-2314-7de0-9b09-b5dfe4f3c810\\exec-e1770143-7b09-4fb8-b6e7-41f78c0231dd.png",
+      "originalPreserved": true,
+      "width": 256,
+      "bytes": 9524,
+      "sha256": "e4ecfae58b973b0275270bac6a8e08d97974497c45aec90a9476fb6e6b49aa49",
+      "publicPath": "/images/service-cutouts/financing-20261006.webp"
+    },
+    {
+      "id": "parts",
+      "source": "exec-09475c06-46d0-4918-8486-84523950ae75.png",
+      "concept": "Charcoal tire, white alloy wheel and white spark plug with coral accent.",
+      "original": "C:\\Users\\radev\\.codex\\generated_images\\01a10aaf-2314-7de0-9b09-b5dfe4f3c810\\exec-09475c06-46d0-4918-8486-84523950ae75.png",
+      "originalPreserved": true,
+      "width": 256,
+      "bytes": 14068,
+      "sha256": "2f0cd849774979b92ba2c4663fde548a5436a417e6bf30d20beec685f360508e",
+      "publicPath": "/images/service-cutouts/parts-20261006.webp"
+    }
+  ]
+}

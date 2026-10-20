@@ -23,13 +23,17 @@ export const dealerLocalizedText = {
     "city": "Sharjah",
     "addressLine": "Souk Al Haraj, showroom 353, Sharjah",
     "address": "Souk Al Haraj, showroom 353, Sharjah",
-    "appointment": "Please confirm opening hours and arrange your visit with the dealership."
+    "appointment": "Please confirm opening hours and arrange your visit with the dealership.",
+    "addressShort": "Souk Al Haraj, showroom 353, Sharjah",
+    "appointmentShort": "Please confirm opening hours and arrange your visit with the dealership."
   },
   "bg": {
     "city": "Шарджа",
     "addressLine": "Souk Al Haraj, Шоурум 353, Sharjah",
     "address": "Souk Al Haraj, Шоурум 353, Sharjah",
-    "appointment": "Потвърдете работното време и уговорете посещение с автокъщата."
+    "appointment": "Потвърдете работното време и уговорете посещение с автокъщата.",
+    "addressShort": "Souk Al Haraj, Шоурум 353, Sharjah",
+    "appointmentShort": "Потвърдете работното време и уговорете посещение с автокъщата."
   }
 } as const;
 

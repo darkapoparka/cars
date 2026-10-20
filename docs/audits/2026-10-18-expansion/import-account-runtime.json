@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-import-account-runtime-source-review",
+  "reviewedAt": "2026-10-18T21:43:11Z",
+  "repository": "darkapoparka/cars",
+  "base": "0692b0504faa17664c2a6e80ff09ac797d4c85e9",
+  "scope": "Account action authorization and unavailable outcomes, fallback form methods, and legacy runtime listener lifetime. No intended layout or asset change.",
+  "changes": [
+    "Live anonymous account actions reject before reading the body; configured-admin demo mutations return unavailable without parsing or saving credentials.",
+    "Profile/password pages and fallback forms disclose that changes are not saved; fallback password forms use POST.",
+    "Legacy runtime blocks profile/password requests before FormData/API calls and gives the same truthful outcome.",
+    "Each runtime effect cleans up only its captured controller; cancelled asynchronous replays cannot install a newer listener."
+  ],
+  "accountPatch": {
+    "bytes": 15644,
+    "sha256": "8e80b3366fea731e718c9f02cb7dc8958597d82ae3812c035e65a66c476aceef",
+    "focusedCases": 53,
+    "accountCases": 17
+  },
+  "runtimePatch": {
+    "bytes": 21754,
+    "sha256": "bd43f92684b223f1cfebcfa36909748d33b10a89c3e6fe0693f3afa3b698f0b0",
+    "uniqueFocusedCases": 30,
+    "runAccounting": "29 cases passed together; the final 11-case lifecycle run added one distinct direct-unmount regression. No claim of 30 tests in one run."
+  },
+  "validation": {
+    "exactCanonicalBeforeBlobs": true,
+    "typescript": "svelte-check: 0 errors, 0 warnings",
+    "scopedLintAndFormat": "passed",
+    "svelteAutofixer": "no issues",
+    "presentation": "Account native/fallback classes and styles preserved by focused source probes; actual rendered-browser acceptance pending.",
+    "beforeReproduction": "Actual original component and emitted handler retain a listener across legacy-to-account navigation and print success after non-success API responses."
+  },
+  "limits": [
+    "The separate original server pre-hydration wrapper remains unchanged. Arbitrary delayed original SSR bootstrap timing is not browser-verified.",
+    "Production build, browser navigation and hosted visual acceptance remain pending.",
+    "No deployment, release-lock selection, existing dealer migration or outreach follows from this source commit."
+  ],
+  "sourceFiles": [
+    {
+      "path": "templates/import/src/routes/account/profile/+page.server.ts",
+      "beforeBlob": "a8bb3d6f35422b7586bd5b6e55407fcce89ba71e",
+      "afterBlob": "9b7bf946a3571424bc6a7903cd1a420d30a01f84"
+    },
+    {
+      "path": "templates/import/src/routes/account/password/+page.server.ts",
+      "beforeBlob": "ef3bcdffead4ae5c7b1eada620a0397922162662",
+      "afterBlob": "b37869dedd4eca45c293cdad0fcf8e9d0c94575c"
+    },
+    {
+      "path": "templates/import/src/routes/account/profile/+page.svelte",
+      "beforeBlob": "2a233cdcc75e3c3f904c5a9cb4af7044d25c993a",
+      "afterBlob": "270d54a1ca80f46310e3dbcfe949cceebe0ccf41"
+    },
+    {
+      "path": "templates/import/src/routes/account/password/+page.svelte",
+      "beforeBlob": "c6046b2683a5c24dd62f396244457fb6d6f77c3d",
+      "afterBlob": "78bedfe0e9c66bbeaab4bc10f5b1e5758aaa7594"
+    },
+    {
+      "path": "templates/import/src/lib/components/account/AccountProfileForm.svelte",
+      "beforeBlob": "604e9bea2079aae35f9f8d696c5fa7c227bbdf3d",
+      "afterBlob": "e510d752fbee8e91da7789046a3d58f83a003fea"
+    },
+    {
+      "path": "templates/import/src/lib/components/account/AccountPasswordForm.svelte",
+      "beforeBlob": "14e4fc554972209a02888a58c45d9a062ab4f49b",
+      "afterBlob": "ddeb7b72db8263888a758ae5038a464906ce9455"
+    },
+    {
+      "path": "templates/import/src/lib/server/auxero-account-data.ts",
+      "beforeBlob": "6ca47c8b5c70004df6c6e422caf4b23a148c2517",
+      "afterBlob": "4bb3ef0631c67e7110d8daf7d4a02e4be473ad06"
+    },
+    {
+      "path": "templates/import/src/lib/server/account-actions-authorization.spec.ts",
+      "beforeBlob": null,
+      "afterBlob": "2c85e82180d69f62be5dce8595168e47a92a3b5b"
+    },
+    {
+      "path": "templates/import/src/lib/components/layout/AuxeroRuntimeScripts.svelte",
+      "beforeBlob": "f5d3fb89591e414ce0d856951ca43fefa60550f1",
+      "afterBlob": "68f071980ad750ddf1fa0cbf14e8ddb06acc8ece"
+    },
+    {
+      "path": "templates/import/src/lib/server/auxero-template.ts",
+      "beforeBlob": "a077399e42a40a94b33b1a414e06f3f3aa7ede96",
+      "afterBlob": "f3af22dce9eb6f817f6aaf27446344ad4cabcd1a"
+    },
+    {
+      "path": "templates/import/src/lib/server/auxero-runtime-lifecycle.spec.ts",
+      "beforeBlob": null,
+      "afterBlob": "34079ff82b54d0ae9e1d37140dbabebbf7470547"
+    }
+  ]
+}

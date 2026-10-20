@@ -89,7 +89,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Day & Night Auto Group",
       "location": "ул. „Атанас Манчев“ 18, Студентски град, София",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-73e1a1d090fcd1ea/logo-on-light.webp",
       "mobile": "0877 733 110",
       "email": "",
       "whatsapp": "",
@@ -194,7 +194,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Day & Night Auto Group",
       "location": "ул. „Атанас Манчев“ 18, Студентски град, София",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-73e1a1d090fcd1ea/logo-on-light.webp",
       "mobile": "0877 733 110",
       "email": "",
       "whatsapp": "",
@@ -299,7 +299,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Day & Night Auto Group",
       "location": "ул. „Атанас Манчев“ 18, Студентски град, София",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-73e1a1d090fcd1ea/logo-on-light.webp",
       "mobile": "0877 733 110",
       "email": "",
       "whatsapp": "",
@@ -404,7 +404,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Day & Night Auto Group",
       "location": "ул. „Атанас Манчев“ 18, Студентски град, София",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-73e1a1d090fcd1ea/logo-on-light.webp",
       "mobile": "0877 733 110",
       "email": "",
       "whatsapp": "",
@@ -509,7 +509,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Day & Night Auto Group",
       "location": "ул. „Атанас Манчев“ 18, Студентски град, София",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-73e1a1d090fcd1ea/logo-on-light.webp",
       "mobile": "0877 733 110",
       "email": "",
       "whatsapp": "",
@@ -614,7 +614,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Day & Night Auto Group",
       "location": "ул. „Атанас Манчев“ 18, Студентски град, София",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-73e1a1d090fcd1ea/logo-on-light.webp",
       "mobile": "0877 733 110",
       "email": "",
       "whatsapp": "",
@@ -719,7 +719,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Day & Night Auto Group",
       "location": "ул. „Атанас Манчев“ 18, Студентски град, София",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-73e1a1d090fcd1ea/logo-on-light.webp",
       "mobile": "0877 733 110",
       "email": "",
       "whatsapp": "",
@@ -824,7 +824,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Day & Night Auto Group",
       "location": "ул. „Атанас Манчев“ 18, Студентски град, София",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-73e1a1d090fcd1ea/logo-on-light.webp",
       "mobile": "0877 733 110",
       "email": "",
       "whatsapp": "",
@@ -929,7 +929,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Day & Night Auto Group",
       "location": "ул. „Атанас Манчев“ 18, Студентски град, София",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-73e1a1d090fcd1ea/logo-on-light.webp",
       "mobile": "0877 733 110",
       "email": "",
       "whatsapp": "",
@@ -1034,7 +1034,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Day & Night Auto Group",
       "location": "ул. „Атанас Манчев“ 18, Студентски град, София",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-73e1a1d090fcd1ea/logo-on-light.webp",
       "mobile": "0877 733 110",
       "email": "",
       "whatsapp": "",
@@ -1139,7 +1139,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Day & Night Auto Group",
       "location": "ул. „Атанас Манчев“ 18, Студентски град, София",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-73e1a1d090fcd1ea/logo-on-light.webp",
       "mobile": "0877 733 110",
       "email": "",
       "whatsapp": "",
@@ -1244,7 +1244,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Day & Night Auto Group",
       "location": "ул. „Атанас Манчев“ 18, Студентски град, София",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-73e1a1d090fcd1ea/logo-on-light.webp",
       "mobile": "0877 733 110",
       "email": "",
       "whatsapp": "",
@@ -1349,7 +1349,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Day & Night Auto Group",
       "location": "ул. „Атанас Манчев“ 18, Студентски град, София",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-73e1a1d090fcd1ea/logo-on-light.webp",
       "mobile": "0877 733 110",
       "email": "",
       "whatsapp": "",
@@ -1454,7 +1454,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Day & Night Auto Group",
       "location": "ул. „Атанас Манчев“ 18, Студентски град, София",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-73e1a1d090fcd1ea/logo-on-light.webp",
       "mobile": "0877 733 110",
       "email": "",
       "whatsapp": "",
@@ -1559,7 +1559,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Day & Night Auto Group",
       "location": "ул. „Атанас Манчев“ 18, Студентски град, София",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-73e1a1d090fcd1ea/logo-on-light.webp",
       "mobile": "0877 733 110",
       "email": "",
       "whatsapp": "",
@@ -1664,7 +1664,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Day & Night Auto Group",
       "location": "ул. „Атанас Манчев“ 18, Студентски град, София",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-73e1a1d090fcd1ea/logo-on-light.webp",
       "mobile": "0877 733 110",
       "email": "",
       "whatsapp": "",
@@ -1769,7 +1769,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Day & Night Auto Group",
       "location": "ул. „Атанас Манчев“ 18, Студентски град, София",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-73e1a1d090fcd1ea/logo-on-light.webp",
       "mobile": "0877 733 110",
       "email": "",
       "whatsapp": "",
@@ -1874,7 +1874,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Day & Night Auto Group",
       "location": "ул. „Атанас Манчев“ 18, Студентски град, София",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-73e1a1d090fcd1ea/logo-on-light.webp",
       "mobile": "0877 733 110",
       "email": "",
       "whatsapp": "",
@@ -1979,7 +1979,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Day & Night Auto Group",
       "location": "ул. „Атанас Манчев“ 18, Студентски град, София",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-73e1a1d090fcd1ea/logo-on-light.webp",
       "mobile": "0877 733 110",
       "email": "",
       "whatsapp": "",
@@ -2084,7 +2084,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Day & Night Auto Group",
       "location": "ул. „Атанас Манчев“ 18, Студентски град, София",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-73e1a1d090fcd1ea/logo-on-light.webp",
       "mobile": "0877 733 110",
       "email": "",
       "whatsapp": "",
@@ -2189,7 +2189,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Day & Night Auto Group",
       "location": "ул. „Атанас Манчев“ 18, Студентски град, София",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-73e1a1d090fcd1ea/logo-on-light.webp",
       "mobile": "0877 733 110",
       "email": "",
       "whatsapp": "",
@@ -2294,7 +2294,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Day & Night Auto Group",
       "location": "ул. „Атанас Манчев“ 18, Студентски град, София",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-73e1a1d090fcd1ea/logo-on-light.webp",
       "mobile": "0877 733 110",
       "email": "",
       "whatsapp": "",
@@ -2399,7 +2399,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Day & Night Auto Group",
       "location": "ул. „Атанас Манчев“ 18, Студентски град, София",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-73e1a1d090fcd1ea/logo-on-light.webp",
       "mobile": "0877 733 110",
       "email": "",
       "whatsapp": "",
@@ -2504,7 +2504,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Day & Night Auto Group",
       "location": "ул. „Атанас Манчев“ 18, Студентски град, София",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-73e1a1d090fcd1ea/logo-on-light.webp",
       "mobile": "0877 733 110",
       "email": "",
       "whatsapp": "",
@@ -2609,7 +2609,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Day & Night Auto Group",
       "location": "ул. „Атанас Манчев“ 18, Студентски град, София",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-73e1a1d090fcd1ea/logo-on-light.webp",
       "mobile": "0877 733 110",
       "email": "",
       "whatsapp": "",
@@ -2714,7 +2714,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Day & Night Auto Group",
       "location": "ул. „Атанас Манчев“ 18, Студентски град, София",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-73e1a1d090fcd1ea/logo-on-light.webp",
       "mobile": "0877 733 110",
       "email": "",
       "whatsapp": "",
@@ -2819,7 +2819,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Day & Night Auto Group",
       "location": "ул. „Атанас Манчев“ 18, Студентски град, София",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-73e1a1d090fcd1ea/logo-on-light.webp",
       "mobile": "0877 733 110",
       "email": "",
       "whatsapp": "",
@@ -2924,7 +2924,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Day & Night Auto Group",
       "location": "ул. „Атанас Манчев“ 18, Студентски град, София",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-73e1a1d090fcd1ea/logo-on-light.webp",
       "mobile": "0877 733 110",
       "email": "",
       "whatsapp": "",
@@ -3029,7 +3029,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Day & Night Auto Group",
       "location": "ул. „Атанас Манчев“ 18, Студентски град, София",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-73e1a1d090fcd1ea/logo-on-light.webp",
       "mobile": "0877 733 110",
       "email": "",
       "whatsapp": "",
@@ -3134,7 +3134,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Day & Night Auto Group",
       "location": "ул. „Атанас Манчев“ 18, Студентски град, София",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-73e1a1d090fcd1ea/logo-on-light.webp",
       "mobile": "0877 733 110",
       "email": "",
       "whatsapp": "",
@@ -3239,7 +3239,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Day & Night Auto Group",
       "location": "ул. „Атанас Манчев“ 18, Студентски град, София",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-73e1a1d090fcd1ea/logo-on-light.webp",
       "mobile": "0877 733 110",
       "email": "",
       "whatsapp": "",
@@ -3344,7 +3344,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Day & Night Auto Group",
       "location": "ул. „Атанас Манчев“ 18, Студентски град, София",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-73e1a1d090fcd1ea/logo-on-light.webp",
       "mobile": "0877 733 110",
       "email": "",
       "whatsapp": "",
@@ -3449,7 +3449,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Day & Night Auto Group",
       "location": "ул. „Атанас Манчев“ 18, Студентски град, София",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-73e1a1d090fcd1ea/logo-on-light.webp",
       "mobile": "0877 733 110",
       "email": "",
       "whatsapp": "",
@@ -3554,7 +3554,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Day & Night Auto Group",
       "location": "ул. „Атанас Манчев“ 18, Студентски град, София",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-73e1a1d090fcd1ea/logo-on-light.webp",
       "mobile": "0877 733 110",
       "email": "",
       "whatsapp": "",
@@ -3659,7 +3659,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Day & Night Auto Group",
       "location": "ул. „Атанас Манчев“ 18, Студентски град, София",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-73e1a1d090fcd1ea/logo-on-light.webp",
       "mobile": "0877 733 110",
       "email": "",
       "whatsapp": "",
@@ -3764,7 +3764,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Day & Night Auto Group",
       "location": "ул. „Атанас Манчев“ 18, Студентски град, София",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-73e1a1d090fcd1ea/logo-on-light.webp",
       "mobile": "0877 733 110",
       "email": "",
       "whatsapp": "",
@@ -3869,7 +3869,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Day & Night Auto Group",
       "location": "ул. „Атанас Манчев“ 18, Студентски град, София",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-73e1a1d090fcd1ea/logo-on-light.webp",
       "mobile": "0877 733 110",
       "email": "",
       "whatsapp": "",
@@ -3974,7 +3974,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Day & Night Auto Group",
       "location": "ул. „Атанас Манчев“ 18, Студентски град, София",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-73e1a1d090fcd1ea/logo-on-light.webp",
       "mobile": "0877 733 110",
       "email": "",
       "whatsapp": "",
@@ -4079,7 +4079,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Day & Night Auto Group",
       "location": "ул. „Атанас Манчев“ 18, Студентски град, София",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-73e1a1d090fcd1ea/logo-on-light.webp",
       "mobile": "0877 733 110",
       "email": "",
       "whatsapp": "",
@@ -4184,7 +4184,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Day & Night Auto Group",
       "location": "ул. „Атанас Манчев“ 18, Студентски град, София",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-73e1a1d090fcd1ea/logo-on-light.webp",
       "mobile": "0877 733 110",
       "email": "",
       "whatsapp": "",

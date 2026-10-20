@@ -94,7 +94,7 @@ export function defineShowroom(config: ShowroomConfig): Readonly<ShowroomConfig>
 // A neutral template placeholder. Replace only with verified dealer details.
 export const showroom = defineShowroom({
   "name": "North Norfolk Car Sales",
-  "logo": "/dealer-brand/logo.webp",
+  "logo": "/dealer-brand/v2-1cd3fb6dc67c1653/logo-on-light.webp",
   "phone": "+441263653055",
   "email": "sales@northnorfolkcarsales.co.uk",
   "address": "Unit 3 Midland Road, North Walsham NR28 9JR",

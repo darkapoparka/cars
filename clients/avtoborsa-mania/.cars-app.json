@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "dealer": "avtoborsa-mania",
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+    "path": "templates/app",
+    "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1",
+    "tree": "7f3d3ffa40546635377e6c5225194fe06fead291"
+  },
+  "appDigest": "f0a8d2da42b3477b437bea05daa90a6a623c0b4cde1ceb7d5ce6f47ecb41f45d",
+  "provenance": {
+    "schemaVersion": 1,
+    "dealer": "avtoborsa-mania",
+    "profile": "auto-best/src/lib/data/dealer-profile.json",
+    "profileSha256": "f3d98a6ba48c8ce316d00af243cfc1123035949417d93d918f02f3f02a7caf70",
+    "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
+    "vehicles": 7,
+    "currency": "EUR",
+    "observedAt": "",
+    "assets": [
+      {
+        "source": "auto-best/static/registered-branding/onLight.png",
+        "output": "public/dealer-app/logo-light-ba9ab3bbc61eeb37c104.png",
+        "sha256": "ba9ab3bbc61eeb37c104f67c91f7053d1082c09986743ee321290cc78f7c9c8c",
+        "role": "logo-light"
+      },
+      {
+        "source": "auto-best/static/registered-branding/onDark.png",
+        "output": "public/dealer-app/logo-dark-bd1ef8ee76b34205066c.png",
+        "sha256": "bd1ef8ee76b34205066c715ac50aea0d0d39a9d826df2fa013c9ea07de496d2f",
+        "role": "logo-dark"
+      },
+      {
+        "source": "auto-best/static/assets/images/lead/day-night-stock-04.webp",
+        "output": "public/dealer-app/vehicle-945e6864218ab3bd5fbd.webp",
+        "sha256": "945e6864218ab3bd5fbd415336b212ecfde645685033f8506836f906885d447c",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/images/lead/day-night-stock-01.webp",
+        "output": "public/dealer-app/vehicle-17689ab880bf47de81ef.webp",
+        "sha256": "17689ab880bf47de81ef467c34d639223f39f0c1ebe68c90d0aaf70e3dcc6333",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/images/lead/day-night-stock-06.webp",
+        "output": "public/dealer-app/vehicle-d644dec8e1ef280a702d.webp",
+        "sha256": "d644dec8e1ef280a702dccac267a2367f0ab823e40373e1299b156e7723b3b1f",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/images/lead/day-night-stock-02.webp",
+        "output": "public/dealer-app/vehicle-40d22530c50efb7d486f.webp",
+        "sha256": "40d22530c50efb7d486f12b394dbaebb821e368352492954966e19ba84910b7f",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/images/lead/day-night-stock-03.webp",
+        "output": "public/dealer-app/vehicle-a63e64bbdfcd7627da5e.webp",
+        "sha256": "a63e64bbdfcd7627da5e97e2a355efa7a6192d939d0cdeecc8f9b55a4dd25930",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/images/lead/day-night-stock-02.webp",
+        "output": "public/dealer-app/vehicle-40d22530c50efb7d486f.webp",
+        "sha256": "40d22530c50efb7d486f12b394dbaebb821e368352492954966e19ba84910b7f",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/images/lead/day-night-stock-03.webp",
+        "output": "public/dealer-app/vehicle-a63e64bbdfcd7627da5e.webp",
+        "sha256": "a63e64bbdfcd7627da5e97e2a355efa7a6192d939d0cdeecc8f9b55a4dd25930",
+        "role": "vehicle"
+      }
+    ],
+    "mileageFacts": [
+      {
+        "slug": "audi-2024-template-demo-auto-best-1",
+        "sourceValue": 99701,
+        "sourceUnit": "km",
+        "canonicalKm": 99701
+      },
+      {
+        "slug": "mercedes-benz-2021-template-demo-auto-best-2",
+        "sourceValue": 96865,
+        "sourceUnit": "km",
+        "canonicalKm": 96865
+      },
+      {
+        "slug": "audi-2021-template-demo-auto-best-3",
+        "sourceValue": 94709,
+        "sourceUnit": "km",
+        "canonicalKm": 94709
+      },
+      {
+        "slug": "bmw-2021-template-demo-auto-best-4",
+        "sourceValue": 62485,
+        "sourceUnit": "km",
+        "canonicalKm": 62485
+      },
+      {
+        "slug": "mercedes-benz-2020-template-demo-auto-best-6",
+        "sourceValue": 72812,
+        "sourceUnit": "km",
+        "canonicalKm": 72812
+      },
+      {
+        "slug": "bmw-2020-template-demo-auto-best-7",
+        "sourceValue": 76346,
+        "sourceUnit": "km",
+        "canonicalKm": 76346
+      },
+      {
+        "slug": "mercedes-benz-2023-template-demo-auto-best-8",
+        "sourceValue": 49584,
+        "sourceUnit": "km",
+        "canonicalKm": 49584
+      }
+    ]
+  },
+  "needsDealerQA": true,
+  "readyToPublish": false,
+  "refreshedAt": "2026-10-15T06:12:28.206Z"
+}

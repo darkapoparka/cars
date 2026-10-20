@@ -1,0 +1,213 @@
+{
+  "schemaVersion": 1,
+  "rejectedOutputs": [],
+  "slug": "autojo-di-varna",
+  "displayName": "АУТО ЖО-ДИ",
+  "strategy": "USE GENERATED CANDIDATE",
+  "identityStatus": "Disclosed proposed improvement of АУТО ЖО-ДИ under owner single-row direction; recognizable source palette/name retained. Not official dealer rebrand or owner approval.",
+  "sourceUrls": [
+    "https://autojo-di.mobile.bg",
+    "https://cdn2.focus.bg/mobile/images/housespicts/h13137545424954997.pic"
+  ],
+  "generatedPath": "C:/Users/radev/.codex/generated_images/01a12a0e-8374-7732-9e28-580ceda2a0fc/exec-18c4db63-20bd-4db9-9277-bd949db5447c.png",
+  "imageGeneration": {
+    "tool": "image_gen.imagegen",
+    "reference": "exec-18c4db63-20bd-4db9-9277-bd949db5447c",
+    "prompt": "Create one polished automotive proposal logo as an improvement of the referenced treatment. Keep a compact distinctive emblem at left, beside custom expressive lettering on exactly ONE horizontal text row; same baseline and substantial letter height. Logo should have coherent strong silhouette and precise designer-adjusted spacing, readable at 120px header width. No text underneath, no captions, no slogans, no location claims, no repeated variation. Flat opaque colors; all outside regions, open emblem gaps and letter counters fully transparent. No gradients, no bevels, shadows, glow, texture, mockup or background plaque. One complete wide landscape logo with modest transparent margins. True RGBA alpha. Preserve business spelling and recognizable palette; this is a disclosed proposed improvement, not an official rebrand. Exact Bulgarian Cyrillic АУТО ЖО-ДИ on ONE row, including the space and hyphen. Deep crimson #b41427 АУТО, charcoal #262a30 ЖО-ДИ. Evolve source roof concept into a compact unique left Ж/road monogram made of two crossing smooth red strokes and one angular charcoal return, about letter height. No roof over the name. Custom bold subtly italic automotive lettering with chamfered rounded strokes and open counters, clear Ж and Д, clean word gap and unmistakable hyphen.",
+    "referenced_image_paths": [
+      "L:/CODEX/cars/leads/branding/fleet-20261011/autojo-di-varna/branding/logo-master.png"
+    ],
+    "transparent_background": true,
+    "outputPath": "C:/Users/radev/.codex/generated_images/01a12a0e-8374-7732-9e28-580ceda2a0fc/exec-18c4db63-20bd-4db9-9277-bd949db5447c.png",
+    "toolOutputHint": "Generated images are saved to C:\\Users\\radev\\.codex\\generated_images\\01a12a0e-8374-7732-9e28-580ceda2a0fc as C:\\Users\\radev\\.codex\\generated_images\\01a12a0e-8374-7732-9e28-580ceda2a0fc\\exec-18c4db63-20bd-4db9-9277-bd949db5447c.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+    "modelVersion": "not exposed by tool"
+  },
+  "styleDirection": "Compact distinctive emblem beside expressive trading name on one row; no subtitle",
+  "styleSelectionStatus": "technically-selected-awaiting-owner-review",
+  "ownerApproved": false,
+  "integrated": false,
+  "hostedVerified": false,
+  "onLight": "original",
+  "onDark": "white",
+  "onAccent": "white",
+  "accentColor": "#b00020",
+  "surfaceReviewPath": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/autojo-di-varna/surface-review.png",
+  "supersededPack": "L:/CODEX/cars/leads/branding/fleet-20261011/autojo-di-varna",
+  "revisionReason": "Roof above trading name consolidated into compact left initial/road symbol, custom lettering and source red/charcoal retained.",
+  "surfaceDerivation": {
+    "onLight": "native ImageGen transparent master, fit/pad only",
+    "onDark": "contextual all-white raster export derived from the same native alpha",
+    "onAccent": "contextual all-white raster export derived from the same native alpha",
+    "nativeImageGenCalls": 1
+  },
+  "visualAccepted": true,
+  "visualChecks": {
+    "reviewedAt": "2026-10-11T11:40:00.559Z",
+    "reviewer": "root asset review",
+    "spelling": "passed visually",
+    "geometry": "complete single-row trading name; distinctive compact left emblem; no caption",
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "swatches": [
+      "#ffffff",
+      "#30343b",
+      "#17191c",
+      "#202023",
+      "#19171d",
+      "#171717",
+      "#b00020",
+      "#405ff2"
+    ],
+    "contrast": "light colored treatment and contextual white treatments clear across swatches",
+    "templateConsumers": "not integrated; rendered all six application surfaces remain rollout owner responsibility",
+    "ownerApproval": false
+  },
+  "dealer": "autojo-di-varna",
+  "state": "asset-verified",
+  "generated": {
+    "path": "C:/Users/radev/.codex/generated_images/01a12a0e-8374-7732-9e28-580ceda2a0fc/exec-18c4db63-20bd-4db9-9277-bd949db5447c.png",
+    "sha256": "f2b79b63b41708c34d296dace2feb17d19f8f0fecfac47ffe47c7a7cc97248ab",
+    "bytes": 393128,
+    "format": "png",
+    "width": 2171,
+    "height": 724,
+    "hasAlpha": true,
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparentRatio": 0.8331973961130014,
+      "opaqueRatio": 0.1438480879295383
+    },
+    "visibleBounds": {
+      "x": 43,
+      "y": 182,
+      "width": 2080,
+      "height": 299
+    }
+  },
+  "assets": {
+    "onLight": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/autojo-di-varna/dealer-brand/logo-on-light.webp",
+      "sha256": "441333a63e20d1e4fbc9350d5e50e23a6f55c9deb8ad719a651c7a8b0ebf11ad",
+      "bytes": 62948,
+      "format": "webp",
+      "width": 1496,
+      "height": 274,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.7076949724813615,
+        "opaqueRatio": 0.24767750497677504
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 36,
+        "width": 1399,
+        "height": 202
+      },
+      "publicPath": "/dealer-brand/logo-on-light.webp"
+    },
+    "onDark": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/autojo-di-varna/dealer-brand/logo-on-dark.webp",
+      "sha256": "74d691a16ae814fdb841708a70fb657e008bb2106886150fd1b2dd9cfc9318ca",
+      "bytes": 33460,
+      "format": "webp",
+      "width": 1496,
+      "height": 274,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.7076949724813615,
+        "opaqueRatio": 0.24767750497677504
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 36,
+        "width": 1399,
+        "height": 202
+      },
+      "publicPath": "/dealer-brand/logo-on-dark.webp"
+    },
+    "onAccent": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/autojo-di-varna/dealer-brand/logo-on-accent.webp",
+      "sha256": "74d691a16ae814fdb841708a70fb657e008bb2106886150fd1b2dd9cfc9318ca",
+      "bytes": 33460,
+      "format": "webp",
+      "width": 1496,
+      "height": 274,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.7076949724813615,
+        "opaqueRatio": 0.24767750497677504
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 36,
+        "width": 1399,
+        "height": 202
+      },
+      "publicPath": "/dealer-brand/logo-on-accent.webp"
+    }
+  },
+  "master": {
+    "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/autojo-di-varna/branding/logo-master.png",
+    "sha256": "6434775dfb390954ed03f9d6f6a3f4ba053d1393e980672a25ac7b40e982362d",
+    "bytes": 164118,
+    "format": "png",
+    "width": 1496,
+    "height": 274,
+    "hasAlpha": true,
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparentRatio": 0.7076949724813615,
+      "opaqueRatio": 0.24767750497677504
+    },
+    "visibleBounds": {
+      "x": 48,
+      "y": 36,
+      "width": 1399,
+      "height": 202
+    }
+  },
+  "technicalAcceptance": {
+    "reviewedAt": "2026-10-11T11:40:00.559Z",
+    "reviewer": "root asset review",
+    "spelling": "passed visually",
+    "geometry": "complete single-row trading name; distinctive compact left emblem; no caption",
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "swatches": [
+      "#ffffff",
+      "#30343b",
+      "#17191c",
+      "#202023",
+      "#19171d",
+      "#171717",
+      "#b00020",
+      "#405ff2"
+    ],
+    "contrast": "light colored treatment and contextual white treatments clear across swatches",
+    "templateConsumers": "not integrated; rendered all six application surfaces remain rollout owner responsibility",
+    "ownerApproval": false
+  },
+  "integrationVerified": false,
+  "exportTool": "docs/logo-refresh/2026-09-18/tools/build-approved-logo-pack.mjs",
+  "exportToolSha256": "7fab60c4000210eff6bbb91f9c35e869bad90834d3bdd09d282a9a51835f0dbc",
+  "exportIsolation": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/style-root-export",
+  "updatedAt": "2026-10-11T11:40:00.772Z",
+  "technicalCheck": "technical-check.json",
+  "preferredCandidate": true,
+  "selectionBasis": "Asset review only; owner and dealer acceptance not established",
+  "exportScratchState": "inactive; final asset bytes and compact exporter traces verified; generated input native path preserved"
+}

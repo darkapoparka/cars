@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "dealer": "chernomore-varna",
+  "kind": "dated-listing-snapshot",
+  "records": [
+    {
+      "title": "Audi Q8 50 TDI S-Line",
+      "make": "Audi",
+      "model": "Q8",
+      "year": 2021,
+      "priceAmount": 46900,
+      "mileageValue": 150000,
+      "fuel": "Diesel",
+      "transmission": "Automatic",
+      "body": "SUV",
+      "description": "Audi Q8 50 TDI S-Line от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+      "sourceFieldProof": {
+        "source": "https://chernomore.mobile.bg/obiava-21771946973449498-audi-q8-50tdi-3xs-line-maxton-desing",
+        "year": "Дата на производство ноември 2021",
+        "price": "46 900 €,",
+        "mileage": "Пробег [км] 150000 км",
+        "fuel": "Двигател Дизелов",
+        "transmission": "Скоростна кутия Автоматична",
+        "body": "Категория Джип"
+      },
+      "sourceCaveats": [
+        " Автосалон Черно море дава възможност за замяна на вашия стар, повреден или катастрофирал автомобил",
+        " Варна, Кайсиева градина Местоположение: Кръстовището на бул"
+      ],
+      "id": "21771946973449498",
+      "slug": "chernomore-varna-21771946973449498",
+      "currency": "EUR",
+      "priceOnRequest": false,
+      "mileageOnRequest": false,
+      "mileageUnit": "km",
+      "condition": "used",
+      "images": [
+        "/dealer-stock/21771946973449498-1.webp",
+        "/dealer-stock/21771946973449498-2.webp"
+      ],
+      "sourceUrl": "https://chernomore.mobile.bg/obiava-21771946973449498-audi-q8-50tdi-3xs-line-maxton-desing",
+      "observedAt": "2026-10-12T12:05:57.074Z",
+      "availability": "Датирана обява; потвърдете цената и наличността директно с автокъщата.",
+      "sourceProof": {
+        "sha256": "7c7ea99060c7bb218de466ac831e26c715ca9d34c3c636e23cbebfd079abd4c7",
+        "originalPhotoBytesUnchanged": true,
+        "watermarksPreserved": true
+      }
+    },
+    {
+      "title": "Audi A5 Sportback 2.0 TFSI quattro",
+      "make": "Audi",
+      "model": "A5",
+      "year": 2019,
+      "priceAmount": 18900,
+      "mileageValue": 199000,
+      "fuel": "Petrol",
+      "transmission": "Automatic",
+      "body": "Hatchback",
+      "description": "Audi A5 Sportback 2.0 TFSI quattro от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+      "sourceFieldProof": {
+        "source": "https://chernomore.mobile.bg/obiava-11779358576885782-audi-a5-sportback-s-line-2-0tfsi-quattro-automatic",
+        "year": "Дата на производство януари 2019",
+        "price": "18 900 €,",
+        "mileage": "Пробег [км] 199000 км",
+        "fuel": "Двигател Бензинов",
+        "transmission": "Скоростна кутия Автоматична",
+        "body": "Категория Хечбек"
+      },
+      "sourceCaveats": [
+        " Автосалон Черно море дава възможност за замяна на вашия стар, повреден или катастрофирал автомобил",
+        " Варна, Кайсиева градина Местоположение: Кръстовището на бул"
+      ],
+      "id": "11779358576885782",
+      "slug": "chernomore-varna-11779358576885782",
+      "currency": "EUR",
+      "priceOnRequest": false,
+      "mileageOnRequest": false,
+      "mileageUnit": "km",
+      "condition": "used",
+      "images": [
+        "/dealer-stock/11779358576885782-1.webp",
+        "/dealer-stock/11779358576885782-2.webp"
+      ],
+      "sourceUrl": "https://chernomore.mobile.bg/obiava-11779358576885782-audi-a5-sportback-s-line-2-0tfsi-quattro-automatic",
+      "observedAt": "2026-10-12T12:05:57.075Z",
+      "availability": "Датирана обява; потвърдете цената и наличността директно с автокъщата.",
+      "sourceProof": {
+        "sha256": "00b4d3e32834da1f94ebc1b271a4ff8f2601cab9eb78237acdeca7cbbdeb0398",
+        "originalPhotoBytesUnchanged": true,
+        "watermarksPreserved": true
+      }
+    }
+  ],
+  "disclosure": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+  "disclosureEn": "Dated listing samples; confirm price and availability directly with the dealership.",
+  "availabilityConfirmed": false,
+  "completeInventory": false
+}

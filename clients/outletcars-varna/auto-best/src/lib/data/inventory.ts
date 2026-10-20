@@ -1,6 +1,5 @@
 import { formatPrice, localeContract, type Locale } from '$lib/locale/core';
 import { templateText } from '$lib/locale/messages';
-import { leadSite } from '$config/lead-site';
 
 export const vehicleTypes = ['car', 'motorbike', 'van', 'truck'] as const;
 export type VehicleType = typeof vehicleTypes[number];
@@ -34,6 +33,9 @@ export type Vehicle = {
   yearNumber: number;
   mileage: string;
   mileageKm: number;
+  mileageKnown?: boolean;
+  mileageValue?: number;
+  mileageUnit?: 'km' | 'mi';
   fuel: string;
   transmission: string;
   equipment: readonly VehicleEquipment[];
@@ -42,16 +44,11 @@ export type Vehicle = {
   href: `/listing-detail-v1/${number}`;
 };
 
-// Equipment facets are limited to recurring features published in Day & Night's
-// current adverts for these model families (daynight.mobile.bg, checked 2026-08-30).
-
-
-// Imported master fixtures are not VIN-verified stock. Preserve source media;
-// client promotion requires replacing and verifying each record, including reused photos.
 export const featuredVehicles: Vehicle[] = [
   {
     "id": 1,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://outletcarsvarna.mobile.bg/obiava-21780566866553359-audi-q5-mild-hybrid-s-line-quattro-1-godina-garantsiya",
     "image": "/dealer/inventory/21780566866553359-1.webp",
     "category": "Джип",
@@ -62,6 +59,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2021,
     "mileage": "80 037 км",
     "mileageKm": 80037,
+    "mileageKnown": true,
+    "mileageValue": 80037,
+    "mileageUnit": "km",
     "fuel": "Дизелов",
     "transmission": "Автоматична",
     "equipment": [
@@ -74,12 +74,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 39500,
-    "href": "/listing-detail-v1/1",
-    "type": "car"
+    "href": "/listing-detail-v1/1"
   },
   {
     "id": 2,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://outletcarsvarna.mobile.bg/obiava-11780668057655036-citroen-c3-1-2-100hp-garantsiya-do-03-2027g",
     "image": "/dealer/inventory/11780668057655036-1.webp",
     "category": "Хечбек",
@@ -90,6 +90,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2025,
     "mileage": "34 393 км",
     "mileageKm": 34393,
+    "mileageKnown": true,
+    "mileageValue": 34393,
+    "mileageUnit": "km",
     "fuel": "Бензинов",
     "transmission": "Ръчна",
     "equipment": [
@@ -97,12 +100,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 15950,
-    "href": "/listing-detail-v1/2",
-    "type": "car"
+    "href": "/listing-detail-v1/2"
   },
   {
     "id": 3,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://outletcarsvarna.mobile.bg/obiava-11778766828983143-opel-corsa-edition",
     "image": "/dealer/inventory/11778766828983143-1.webp",
     "category": "Хечбек",
@@ -113,6 +116,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2024,
     "mileage": "73 085 км",
     "mileageKm": 73085,
+    "mileageKnown": true,
+    "mileageValue": 73085,
+    "mileageUnit": "km",
     "fuel": "Бензинов",
     "transmission": "Автоматична",
     "equipment": [
@@ -121,12 +127,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 14390,
-    "href": "/listing-detail-v1/3",
-    "type": "car"
+    "href": "/listing-detail-v1/3"
   },
   {
     "id": 4,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://outletcarsvarna.mobile.bg/obiava-21779776692067869-vw-tiguan-1-5tsi-150hp-garantsiya-do-04-2028",
     "image": "/dealer/inventory/21779776692067869-1.webp",
     "category": "Джип",
@@ -137,6 +143,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2023,
     "mileage": "97 608 км",
     "mileageKm": 97608,
+    "mileageKnown": true,
+    "mileageValue": 97608,
+    "mileageUnit": "km",
     "fuel": "Бензинов",
     "transmission": "Автоматична",
     "equipment": [
@@ -145,12 +154,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 23900,
-    "href": "/listing-detail-v1/4",
-    "type": "car"
+    "href": "/listing-detail-v1/4"
   },
   {
     "id": 5,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://outletcarsvarna.mobile.bg/obiava-11782296205813235-vw-arteon-r-line-garantsiya-do-04-2028",
     "image": "/dealer/inventory/11782296205813235-1.webp",
     "category": "Седан",
@@ -161,6 +170,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2023,
     "mileage": "115 387 км",
     "mileageKm": 115387,
+    "mileageKnown": true,
+    "mileageValue": 115387,
+    "mileageUnit": "km",
     "fuel": "Дизелов",
     "transmission": "Автоматична",
     "equipment": [
@@ -172,12 +184,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 23500,
-    "href": "/listing-detail-v1/5",
-    "type": "car"
+    "href": "/listing-detail-v1/5"
   },
   {
     "id": 6,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://outletcarsvarna.mobile.bg/obiava-11782392995192464-peugeot-2008-gt",
     "image": "/dealer/inventory/11782392995192464-1.webp",
     "category": "Джип",
@@ -188,6 +200,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2024,
     "mileage": "75 424 км",
     "mileageKm": 75424,
+    "mileageKnown": true,
+    "mileageValue": 75424,
+    "mileageUnit": "km",
     "fuel": "Бензинов",
     "transmission": "Автоматична",
     "equipment": [
@@ -198,12 +213,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 21200,
-    "href": "/listing-detail-v1/6",
-    "type": "car"
+    "href": "/listing-detail-v1/6"
   },
   {
     "id": 7,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://outletcarsvarna.mobile.bg/obiava-21786715209008072-audi-q7-4-2-tdi-v8-340-k-s-800-nm-feyslift",
     "image": "/dealer/inventory/21786715209008072-1.webp",
     "category": "Джип",
@@ -214,6 +229,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2010,
     "mileage": "315 000 км",
     "mileageKm": 315000,
+    "mileageKnown": true,
+    "mileageValue": 315000,
+    "mileageUnit": "km",
     "fuel": "Дизелов",
     "transmission": "Автоматична",
     "equipment": [
@@ -226,12 +244,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 11500,
-    "href": "/listing-detail-v1/7",
-    "type": "car"
+    "href": "/listing-detail-v1/7"
   },
   {
     "id": 8,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://outletcarsvarna.mobile.bg/obiava-11785245019997658-vw-arteon-r-line",
     "image": "/dealer/inventory/11785245019997658-1.webp",
     "category": "Комби",
@@ -242,6 +260,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2023,
     "mileage": "89 543 км",
     "mileageKm": 89543,
+    "mileageKnown": true,
+    "mileageValue": 89543,
+    "mileageUnit": "km",
     "fuel": "Дизелов",
     "transmission": "Автоматична",
     "equipment": [
@@ -253,12 +274,14 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 24500,
-    "href": "/listing-detail-v1/8",
-    "type": "car"
+    "href": "/listing-detail-v1/8"
   }
 ];
 
-export const formatVehiclePrice = (amount: number, locale: Locale = localeContract.defaultLocale) => amount > 0 ? formatPrice(amount, locale) : templateText(locale, 'Price on request');
+export const formatVehiclePrice = (
+  amount: number,
+  locale: Locale = localeContract.defaultLocale
+) => amount > 0 ? formatPrice(amount, locale) : templateText(locale, 'Price on request');
 
 /** Allow a currency line break while preserving the locale's grouped digits. */
 export const formatVehiclePriceLabel = (amount: number, locale: Locale = localeContract.defaultLocale) =>

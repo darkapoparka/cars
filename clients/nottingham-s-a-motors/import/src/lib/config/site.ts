@@ -134,7 +134,7 @@ export const site: SiteConfig = validateSiteConfig({
 		origin: `https://${daynightBrand.domain}`,
 		logo: daynightAssets.logoLight,
 		logoOnDark: daynightAssets.logoDark,
-		favicon: "/dealer-brand/app-icon.png"
+		favicon: '/brand/import-template-icon-v1.png'
 	},
 	contact: {
 		phone: daynightContact.primaryPhoneLabel,

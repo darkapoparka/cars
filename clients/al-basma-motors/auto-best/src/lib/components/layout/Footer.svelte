@@ -10,14 +10,14 @@
   import MobileNavIcon from './MobileNavIcon.svelte';
   import { brand } from '$config/brand';
 
-  let { showActions = true, showMobileFooter = false, observeFooter }: { showActions?: boolean; showMobileFooter?: boolean; observeFooter: Attachment<HTMLElement> } = $props();
+  let { showActions = true, hideDesktopActions = false, showMobileFooter = false, observeFooter }: { showActions?: boolean; hideDesktopActions?: boolean; showMobileFooter?: boolean; observeFooter: Attachment<HTMLElement> } = $props();
   const phoneLinkAttributes = { href: brand.phoneHref } as const;
 
   const actions = $derived([
     {
       title: i18n.t("m_dce64d6d5cf9"),
       description: i18n.t("m_26c39003300b"),
-      href: '/listing-grid',
+      href: '/cars',
       icon: 'car'
     },
     {
@@ -42,19 +42,24 @@
 </script>
 
 {#if showActions}
-  <section class="dn-footer-actions" aria-label={i18n.t("m_920d4a55469d")}>
-    <div class="container dn-footer-actions__grid">
-      {#each actions as action (action.href)}
-        <a href={i18n.href(resolve(action.href))}>
-          <span class="dn-footer-actions__icon" aria-hidden="true">
-            <OriginalActionIcon name={action.icon} />
-          </span>
-          <span>
-            <strong>{action.title}</strong>
-            <small>{action.description}</small>
-          </span>
-        </a>
-      {/each}
+  <section class="dn-footer-actions" class:dn-footer-actions--desktop-hidden={hideDesktopActions} aria-label={i18n.t("m_920d4a55469d")}>
+    <div class="container">
+      <div class="dn-footer-actions__panel">
+        <h2 class="dn-footer-actions__heading">{i18n.t("m_920d4a55469d")}</h2>
+        <div class="dn-footer-actions__grid">
+          {#each actions as action (action.href)}
+            <a href={i18n.href(resolve(action.href))}>
+              <span class="dn-footer-actions__icon" aria-hidden="true">
+                <OriginalActionIcon name={action.icon} />
+              </span>
+              <span>
+                <strong>{action.title}</strong>
+                <small>{action.description}</small>
+              </span>
+            </a>
+          {/each}
+        </div>
+      </div>
     </div>
   </section>
 {/if}
@@ -83,9 +88,9 @@
     </div>
     <nav class="dn-footer__vehicles" aria-label={i18n.t("m_9e499e4cdaf4")}>
       <strong>{i18n.t("m_9e499e4cdaf4")}</strong>
-      <a href={i18n.href(resolve('/listing-grid'))}>{i18n.t('footer.inventory.all')}</a>
-      <a href={i18n.href(resolve('/listing-grid?condition=used'))}>{i18n.t('footer.inventory.used')}</a>
-      <a href={i18n.href(resolve('/listing-grid?sort=newest'))}>{i18n.t('footer.inventory.latest')}</a>
+      <a href={i18n.href(resolve('/cars'))}>{i18n.t('footer.inventory.all')}</a>
+      <a href={i18n.href(resolve('/cars?condition=used'))}>{i18n.t('footer.inventory.used')}</a>
+      <a href={i18n.href(resolve('/cars?sort=newest'))}>{i18n.t('footer.inventory.latest')}</a>
     </nav>
     <nav class="dn-footer__company" aria-label={i18n.t("m_de4743c87973")}>
       <strong>{i18n.t("m_de4743c87973")}</strong>
@@ -99,14 +104,26 @@
 
 <style>
   .dn-footer-actions { padding-block: var(--dn-space-6); background: var(--dn-surface); color: var(--dn-ink); }
+  .dn-footer-actions__heading { display: none; }
   .dn-footer-actions__grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--dn-space-4); }
-  .dn-footer-actions__grid > a { display: grid; min-width: 0; min-height: 112px; grid-template-columns: 48px minmax(0, 1fr); align-items: center; gap: var(--dn-space-3); padding: var(--dn-space-4); border: 1px solid var(--dn-line); border-radius: var(--dn-radius); background: var(--dn-white); color: var(--dn-ink); text-decoration: none; }
+  .dn-footer-actions__grid > a { display: grid; min-width: 0; min-height: 112px; grid-template-columns: 48px minmax(0, 1fr); align-items: center; gap: var(--dn-space-3); padding: var(--dn-space-4); border: 1px solid var(--dn-line); border-radius: var(--dn-radius-card); background: var(--dn-white); color: var(--dn-ink); text-decoration: none; }
   .dn-footer-actions__icon { display: grid; width: 48px; height: 48px; place-items: center; color: var(--dn-red); }
   .dn-footer-actions__icon :global(svg) { display: block; width: 44px; height: 44px; }
   .dn-footer-actions strong { display: block; margin-bottom: var(--dn-space-1); font-size: var(--dn-text-body); font-weight: var(--dn-weight-medium); line-height: var(--dn-leading-body); }
   .dn-footer-actions small { display: block; color: var(--dn-muted); font-size: var(--dn-text-meta); line-height: var(--dn-leading-meta); }
   .dn-footer-actions a:hover strong { color: var(--dn-red); }
-  .dn-footer-actions a:focus-visible { outline: 2px solid var(--dn-focus); outline-offset: 3px; border-radius: var(--dn-radius); }
+  .dn-footer-actions a:focus-visible { outline: 2px solid var(--dn-focus); outline-offset: 3px; border-radius: var(--dn-radius-card); }
+  @media (min-width: 992px) {
+    .dn-footer-actions--desktop-hidden { display: none; }
+    .dn-footer-actions { padding-block: var(--dn-space-8); background: var(--dn-surface-canvas); }
+    .dn-footer-actions__panel { padding: var(--dn-space-8); border-radius: var(--dn-radius-lg); background: var(--dn-white); }
+    .dn-footer-actions__heading { display: block; margin: 0 0 var(--dn-space-6); font-size: var(--dn-text-subheading); font-weight: var(--dn-weight-semibold); line-height: var(--dn-leading-heading); letter-spacing: var(--dn-tracking-heading); text-align: center; }
+    .dn-footer-actions__grid > a { border: 0; background: var(--dn-surface-raised); box-shadow: var(--dn-card-shadow); }
+    .dn-footer-actions__grid > a:focus-visible { box-shadow: var(--dn-card-hover-shadow); }
+  }
+  @media (min-width: 992px) and (max-width: 1359px) {
+    .dn-footer-actions__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
   @media (min-width: 768px) and (hover: hover) {
     .dn-footer-actions__grid > a { transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease; }
     .dn-footer-actions__grid > a:hover { transform: translateY(-2px); border-color: var(--dn-line-strong); box-shadow: var(--dn-card-hover-shadow); }
@@ -148,7 +165,7 @@
       margin-top: var(--dn-space-8);
       padding-block: 64px var(--dn-space-6);
       border: 0;
-      border-radius: 40px 40px 0 0;
+      border-radius: var(--dn-radius-footer) var(--dn-radius-footer) 0 0;
       background:
         radial-gradient(ellipse at 87% 0%, rgb(var(--dn-theme-accent-rgb) / 18%), transparent 38%),
         var(--dn-ink-deep);
@@ -179,7 +196,7 @@
       margin-top: var(--dn-space-8);
       padding-block: var(--dn-space-6) max(var(--dn-space-6), env(safe-area-inset-bottom));
       border: 0;
-      border-radius: var(--dn-space-6) var(--dn-space-6) 0 0;
+      border-radius: var(--dn-radius-sheet) var(--dn-radius-sheet) 0 0;
       background: var(--dn-ink-deep);
       color: var(--dn-white);
     }

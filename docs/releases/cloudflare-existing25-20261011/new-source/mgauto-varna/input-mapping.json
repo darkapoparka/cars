@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-input-mapping",
+  "dealer": "mgauto-varna",
+  "inputs": {
+    "facts": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/mgauto-varna/facts.json",
+      "sha256": "dfccc44f883afe28c1c076209f99b8e054483d08b6e6b58577fec6ca0c444d10"
+    },
+    "stock": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/mgauto-varna/stock.json",
+      "sha256": "03524c4000017b6fb5a5f0494a510f6ce9e4972260ad22786fb464951972c3fa"
+    },
+    "locale": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/mgauto-varna/locale.json",
+      "sha256": "ae043cba741fca9c528fd70d2ff7ae5f73c719df608962e4c66609e6800b9ca0"
+    },
+    "branding": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/mgauto-varna/branding.json",
+      "sha256": "2c96d9bad2665056e2e12de505c2f4a9b2f78f2f694ac979c861eb3e6fe73ff5"
+    }
+  },
+  "sources": [
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/mgauto-varna/source/business-facts.json",
+      "sha256": "9ef9d8ccfa6ecabf74769f703f50e04c650ca72e21eb366635a81441a15276da"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/mgauto-varna/source/locale.json",
+      "sha256": "ae043cba741fca9c528fd70d2ff7ae5f73c719df608962e4c66609e6800b9ca0"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/mgauto-varna/source/stock.json",
+      "sha256": "ee02de28257eecb7cb817d322c456471f86d166d05f8cc00b8e90b2896c6703e"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/mgauto-varna/source/generation-receipt.json",
+      "sha256": "af7a80017adcdfe97b12a66b28b703ecb41f7bc92e9d9922f36fcfe15b497c8b"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/mgauto-varna/source/native-onLight.png",
+      "sha256": "a5217507c13ce0dd15310e6b929073b1d629889d66ae2c8847ff598015ee40bd"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/mgauto-varna/source/native-onDark.png",
+      "sha256": "a5217507c13ce0dd15310e6b929073b1d629889d66ae2c8847ff598015ee40bd"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/mgauto-varna/source/native-onAccent.png",
+      "sha256": "a5217507c13ce0dd15310e6b929073b1d629889d66ae2c8847ff598015ee40bd"
+    }
+  ],
+  "transformations": {
+    "facts": {
+      "source": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/mgauto-varna/source/business-facts.json",
+        "sha256": "9ef9d8ccfa6ecabf74769f703f50e04c650ca72e21eb366635a81441a15276da"
+      },
+      "kind": "flat-original-facts-to-business-consumer",
+      "allOriginalEvidenceUnchanged": true,
+      "derivedNameDelta": null,
+      "otherFactsUnchanged": true
+    },
+    "stock": {
+      "source": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/mgauto-varna/source/stock.json",
+        "sha256": "ee02de28257eecb7cb817d322c456471f86d166d05f8cc00b8e90b2896c6703e"
+      },
+      "originalSourceRecordPreserved": true,
+      "sourceId": "11730027667237293",
+      "normalizer": "loadDealerProfile",
+      "retention": "retainDealerVariantAssets",
+      "sourceKind": "dated-marketplace-listing-sample",
+      "consumerKind": "dated-listing-snapshot",
+      "availabilityUnconfirmed": true,
+      "mediaRightsNotClaimed": true,
+      "mileageUnknownMeansOnRequest": true
+    },
+    "media": [
+      {
+        "sourceId": "11730027667237293",
+        "sourcePublicPath": "/assets/vehicles/11730027667237293/1.webp",
+        "publicPath": "/dealer-stock/11730027667237293-1.webp",
+        "destination": "dealer-stock/11730027667237293-1.webp",
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/mgauto-varna/media/11730027667237293-1.webp",
+        "sha256": "0ab8dc224055bf3dc319ef6f9f10a753eb557ae61b0ac1091be647c9b2d2c74b",
+        "bytes": 115682
+      },
+      {
+        "sourceId": "11730027667237293",
+        "sourcePublicPath": "/assets/vehicles/11730027667237293/2.webp",
+        "publicPath": "/dealer-stock/11730027667237293-2.webp",
+        "destination": "dealer-stock/11730027667237293-2.webp",
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/mgauto-varna/media/11730027667237293-2.webp",
+        "sha256": "1a2887101365de827554138a1ba32dde7aa7416982661e519493203a1eafc549",
+        "bytes": 100146
+      }
+    ],
+    "branding": {
+      "acceptedManifest": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/evidence/final-logo-handoff.json",
+        "sha256": "b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a"
+      },
+      "originalGenerationReceipt": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/mgauto-varna/source/generation-receipt.json",
+        "sha256": "af7a80017adcdfe97b12a66b28b703ecb41f7bc92e9d9922f36fcfe15b497c8b"
+      },
+      "noNewGeneration": true,
+      "modelVersion": null,
+      "pixelsUnchanged": true
+    },
+    "identity": null
+  }
+}

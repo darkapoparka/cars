@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "client": "autoroad-varna",
+  "repository": "darkapoparka/cars-autoroadvarna",
+  "sourceBranch": "varna",
+  "workflowCommit": "bbfa4cfd0310fd68ffbc4611492dd8c50f4a9a62",
+  "designSet": "six",
+  "state": "candidate-personalized-needs-build",
+  "publicUrl": null,
+  "qa": {
+    "desktop": false,
+    "mobile": false,
+    "identity": false,
+    "contactPath": false
+  },
+  "crm": {
+    "leadId": "bg-varna-autoroad",
+    "demoProjectId": null,
+    "registered": false
+  },
+  "hosting": {
+    "provider": "vercel",
+    "status": "not-deployed"
+  },
+  "readyToPublish": false
+}

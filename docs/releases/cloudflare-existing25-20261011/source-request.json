@@ -1,0 +1,117 @@
+{
+  "schemaVersion": 1,
+  "sourceRevision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+  "approvedParentLockDigest": "ecdfaf9599fbcbeadebc24de3b9aa1c7615a9a49e29d338e5e9a23427d405e26",
+  "dealers": [
+    "tesi-car-varna",
+    "exclusive-auto-varna",
+    "kapitol-varna",
+    "chernomore-varna"
+  ],
+  "inputs": {
+    "tesi-car-varna": {
+      "candidateLock": {
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/candidate-lock.json",
+        "sha256": "04633129df9e75d6cd62deeac9125b279957789d75f57cdb0b243ef61bfc3e7e"
+      },
+      "qualification": {
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/contexts/tesi-car-varna.json",
+        "sha256": "f1b6281a607b441b122b6ea85fb39a093561b65fb810cce2372ba32e251dd610"
+      },
+      "sourceDeltaReview": {
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-delta-review.json",
+        "sha256": "43cb6876e815a2a6b866f1dadd304236de4ae58c05fe65c2ab62a23506ee7ce9"
+      },
+      "branding": {
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-branding/tesi-car-varna.json",
+        "sha256": "87d0c4f9dc2ea101e925b9f4fc3b38ffb7834bff2f8785ff0a5de61a5d91d7dc"
+      },
+      "modernCopyReview": {
+        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/tesi-car-varna/modern-copy-review.json",
+        "sha256": "f1f61efa6f8b0b300999454952bfd4da7a916c520e5d71f497beaccecafd2162"
+      },
+      "resolutions": {
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/resolutions/remaining/tesi-car-varna.json",
+        "sha256": "146fbd0b56098873c9f6c5dbc22173f94ae3a3e7507335d472d87dca502e1297"
+      }
+    },
+    "exclusive-auto-varna": {
+      "candidateLock": {
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/candidate-lock.json",
+        "sha256": "04633129df9e75d6cd62deeac9125b279957789d75f57cdb0b243ef61bfc3e7e"
+      },
+      "qualification": {
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/contexts/exclusive-auto-varna.json",
+        "sha256": "71a9fee4ad6197bc5c0fd57da49776658f4dadd0f0e9ad9dae9e9f92c955154c"
+      },
+      "sourceDeltaReview": {
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-delta-review.json",
+        "sha256": "43cb6876e815a2a6b866f1dadd304236de4ae58c05fe65c2ab62a23506ee7ce9"
+      },
+      "branding": {
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-branding/exclusive-auto-varna.json",
+        "sha256": "eace5f39888a13184bcfcc4b19e6855dc33825ef9e03ca1be708c22edf3a76b0"
+      },
+      "modernCopyReview": {
+        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/exclusive-auto-varna/modern-copy-review.json",
+        "sha256": "bdef2eada9056b0c0325b453e0d3fb5f3ec0afabb6bc4aac71f843731cf5afc8"
+      },
+      "resolutions": {
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/resolutions/remaining/exclusive-auto-varna.json",
+        "sha256": "2857270fbaca92f134241d692763169d658a11640cbf7e2bf2566f7c6696030b"
+      }
+    },
+    "kapitol-varna": {
+      "candidateLock": {
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/candidate-lock.json",
+        "sha256": "04633129df9e75d6cd62deeac9125b279957789d75f57cdb0b243ef61bfc3e7e"
+      },
+      "qualification": {
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/contexts/kapitol-varna.json",
+        "sha256": "9a386610421073ce340b2e5614c4d68a2468e25d03d089b92127e009343b9fd3"
+      },
+      "sourceDeltaReview": {
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-delta-review.json",
+        "sha256": "43cb6876e815a2a6b866f1dadd304236de4ae58c05fe65c2ab62a23506ee7ce9"
+      },
+      "branding": {
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-branding/kapitol-varna.json",
+        "sha256": "5aa64dd762c7f1b0ba13625dcbb5970d8f35ca50d4ab5b8903733184415e970d"
+      },
+      "modernCopyReview": {
+        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/kapitol-varna/modern-copy-review.json",
+        "sha256": "fe16e40f022ea225f2cff49ca1bcedd45b7e2ddcde5ecb8456e9f5533ae42786"
+      },
+      "resolutions": {
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/resolutions/remaining/kapitol-varna.json",
+        "sha256": "fbb0c927bfe0039bce91a5419e29f11a2091449550bf914fa24ce21928cd10ee"
+      }
+    },
+    "chernomore-varna": {
+      "candidateLock": {
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/candidate-lock.json",
+        "sha256": "04633129df9e75d6cd62deeac9125b279957789d75f57cdb0b243ef61bfc3e7e"
+      },
+      "qualification": {
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/contexts/chernomore-varna.json",
+        "sha256": "d78b2abac161f99ffe7b661ef279c30c2c965f7382d509ec2cb2d4ff4c289625"
+      },
+      "sourceDeltaReview": {
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-delta-review.json",
+        "sha256": "43cb6876e815a2a6b866f1dadd304236de4ae58c05fe65c2ab62a23506ee7ce9"
+      },
+      "branding": {
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-branding/chernomore-varna.json",
+        "sha256": "bc106c2e4f44a76235fe021e8830d5059380cfb5280eaa074de3e31ee27c3ffd"
+      },
+      "modernCopyReview": {
+        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/chernomore-varna/modern-copy-review.json",
+        "sha256": "f1ea143eed6be113e7ec625b1414af55cc2f896ce0a9c71e07506f473c1abc8a"
+      },
+      "resolutions": {
+        "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/resolutions/remaining/chernomore-varna.json",
+        "sha256": "6e94b049941d6124768823c0f05ecd3e1199895fc4e48eda962aae9799a0b1fe"
+      }
+    }
+  }
+}

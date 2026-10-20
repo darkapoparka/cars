@@ -1,5 +1,6 @@
 import { cn } from "@repo/design-system/lib/utils";
-import { type ListingViewMode, leadSite } from "@repo/marketplace";
+import type { ListingViewMode } from "@repo/marketplace";
+import { isDealershipSite } from "@repo/marketplace/site-config";
 import {
   marketplaceContentFrameClassName,
   marketplaceDiscoveryFrameClassName,
@@ -14,12 +15,12 @@ export const getMarketplaceResultsSectionClassName = (
       : marketplaceContentFrameClassName,
     "px-4 pt-0 pb-3",
     variant !== "discovery" && "lg:pt-2",
-    variant === "discovery" && (leadSite.staticDemoMode ? "lg:pt-0" : "lg:pt-8")
+    variant === "discovery" && (isDealershipSite ? "lg:pt-0" : "lg:pt-8")
   );
 
 export const shouldHideDesktopResultSummary = (
   variant: "discovery" | "results"
-) => leadSite.staticDemoMode && variant === "discovery";
+) => variant === "discovery";
 
 export const getMarketplaceListingGridClassName = ({
   listingCount,
@@ -46,7 +47,7 @@ export const getMarketplaceListingGridClassName = ({
   return cn(
     "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3",
     useDiscoveryInventoryGrid
-      ? "xl:grid-cols-4 min-[112rem]:grid-cols-5"
+      ? "min-[100rem]:grid-cols-5 min-[90rem]:grid-cols-4"
       : useWideInventoryGrid && "min-[85rem]:grid-cols-4"
   );
 };

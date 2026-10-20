@@ -1,0 +1,432 @@
+{
+	"route": "/bg/inventory/21778067767337633",
+	"screenshotViewport": {
+		"height": 1000,
+		"width": 1440
+	},
+	"screenshotScrollY": 808,
+	"dataUnchanged": true,
+	"desktop": [
+		{
+			"cards": 3,
+			"documentOverflow": false,
+			"icons": 9,
+			"panels": [
+				{
+					"headingSize": "20px",
+					"overflow": false,
+					"rows": [
+						{
+							"label": "Пробег",
+							"labelSize": "16px",
+							"overflow": false,
+							"overlap": false,
+							"value": "106 000 км",
+							"valueHeight": 24,
+							"valueRight": 352,
+							"valueSize": "16px"
+						},
+						{
+							"label": "Година",
+							"labelSize": "16px",
+							"overflow": false,
+							"overlap": false,
+							"value": "2021",
+							"valueHeight": 24,
+							"valueRight": 352,
+							"valueSize": "16px"
+						},
+						{
+							"label": "Гориво",
+							"labelSize": "16px",
+							"overflow": false,
+							"overlap": false,
+							"value": "Бензин",
+							"valueHeight": 24,
+							"valueRight": 352,
+							"valueSize": "16px"
+						},
+						{
+							"label": "Двигател",
+							"labelSize": "16px",
+							"overflow": false,
+							"overlap": false,
+							"value": "3000 куб.см / 354 к.с.",
+							"valueHeight": 24,
+							"valueRight": 352,
+							"valueSize": "16px"
+						},
+						{
+							"label": "Скорости",
+							"labelSize": "16px",
+							"overflow": false,
+							"overlap": false,
+							"value": "Автомат",
+							"valueHeight": 24,
+							"valueRight": 352,
+							"valueSize": "16px"
+						}
+					],
+					"title": "Основни данни"
+				},
+				{
+					"headingSize": "20px",
+					"overflow": false,
+					"rows": [
+						{
+							"label": "Цвят",
+							"labelSize": "16px",
+							"overflow": false,
+							"overlap": false,
+							"value": "Сив",
+							"valueHeight": 24,
+							"valueRight": 352,
+							"valueSize": "16px"
+						},
+						{
+							"label": "Локация",
+							"labelSize": "16px",
+							"overflow": false,
+							"overlap": false,
+							"value": "Пловдив, гр. Пловдив",
+							"valueHeight": 24,
+							"valueRight": 352,
+							"valueSize": "16px"
+						},
+						{
+							"label": "Интериор",
+							"labelSize": "16px",
+							"overflow": false,
+							"overlap": false,
+							"value": "По запитване",
+							"valueHeight": 24,
+							"valueRight": 352,
+							"valueSize": "16px"
+						},
+						{
+							"label": "Складов №",
+							"labelSize": "16px",
+							"overflow": false,
+							"overlap": false,
+							"value": "21778067767337633",
+							"valueHeight": 24,
+							"valueRight": 352,
+							"valueSize": "16px"
+						}
+					],
+					"title": "Детайли"
+				}
+			],
+			"width": 768
+		},
+		{
+			"cards": 3,
+			"documentOverflow": false,
+			"icons": 9,
+			"panels": [
+				{
+					"headingSize": "20px",
+					"overflow": false,
+					"rows": [
+						{
+							"label": "Пробег",
+							"labelSize": "16px",
+							"overflow": false,
+							"overlap": false,
+							"value": "106 000 км",
+							"valueHeight": 24,
+							"valueRight": 546,
+							"valueSize": "16px"
+						},
+						{
+							"label": "Година",
+							"labelSize": "16px",
+							"overflow": false,
+							"overlap": false,
+							"value": "2021",
+							"valueHeight": 24,
+							"valueRight": 546,
+							"valueSize": "16px"
+						},
+						{
+							"label": "Гориво",
+							"labelSize": "16px",
+							"overflow": false,
+							"overlap": false,
+							"value": "Бензин",
+							"valueHeight": 24,
+							"valueRight": 546,
+							"valueSize": "16px"
+						},
+						{
+							"label": "Двигател",
+							"labelSize": "16px",
+							"overflow": false,
+							"overlap": false,
+							"value": "3000 куб.см / 354 к.с.",
+							"valueHeight": 24,
+							"valueRight": 546,
+							"valueSize": "16px"
+						},
+						{
+							"label": "Скорости",
+							"labelSize": "16px",
+							"overflow": false,
+							"overlap": false,
+							"value": "Автомат",
+							"valueHeight": 24,
+							"valueRight": 546,
+							"valueSize": "16px"
+						}
+					],
+					"title": "Основни данни"
+				},
+				{
+					"headingSize": "20px",
+					"overflow": false,
+					"rows": [
+						{
+							"label": "Цвят",
+							"labelSize": "16px",
+							"overflow": false,
+							"overlap": false,
+							"value": "Сив",
+							"valueHeight": 24,
+							"valueRight": 546,
+							"valueSize": "16px"
+						},
+						{
+							"label": "Локация",
+							"labelSize": "16px",
+							"overflow": false,
+							"overlap": false,
+							"value": "Пловдив, гр. Пловдив",
+							"valueHeight": 24,
+							"valueRight": 546,
+							"valueSize": "16px"
+						},
+						{
+							"label": "Интериор",
+							"labelSize": "16px",
+							"overflow": false,
+							"overlap": false,
+							"value": "По запитване",
+							"valueHeight": 24,
+							"valueRight": 546,
+							"valueSize": "16px"
+						},
+						{
+							"label": "Складов №",
+							"labelSize": "16px",
+							"overflow": false,
+							"overlap": false,
+							"value": "21778067767337633",
+							"valueHeight": 24,
+							"valueRight": 546,
+							"valueSize": "16px"
+						}
+					],
+					"title": "Детайли"
+				}
+			],
+			"width": 1024
+		},
+		{
+			"cards": 3,
+			"documentOverflow": false,
+			"icons": 9,
+			"panels": [
+				{
+					"headingSize": "20px",
+					"overflow": false,
+					"rows": [
+						{
+							"label": "Пробег",
+							"labelSize": "16px",
+							"overflow": false,
+							"overlap": false,
+							"value": "106 000 км",
+							"valueHeight": 24,
+							"valueRight": 470.5,
+							"valueSize": "16px"
+						},
+						{
+							"label": "Година",
+							"labelSize": "16px",
+							"overflow": false,
+							"overlap": false,
+							"value": "2021",
+							"valueHeight": 24,
+							"valueRight": 470.5,
+							"valueSize": "16px"
+						},
+						{
+							"label": "Гориво",
+							"labelSize": "16px",
+							"overflow": false,
+							"overlap": false,
+							"value": "Бензин",
+							"valueHeight": 24,
+							"valueRight": 470.5,
+							"valueSize": "16px"
+						},
+						{
+							"label": "Двигател",
+							"labelSize": "16px",
+							"overflow": false,
+							"overlap": false,
+							"value": "3000 куб.см / 354 к.с.",
+							"valueHeight": 24,
+							"valueRight": 470.5,
+							"valueSize": "16px"
+						},
+						{
+							"label": "Скорости",
+							"labelSize": "16px",
+							"overflow": false,
+							"overlap": false,
+							"value": "Автомат",
+							"valueHeight": 24,
+							"valueRight": 470.5,
+							"valueSize": "16px"
+						}
+					],
+					"title": "Основни данни"
+				},
+				{
+					"headingSize": "20px",
+					"overflow": false,
+					"rows": [
+						{
+							"label": "Цвят",
+							"labelSize": "16px",
+							"overflow": false,
+							"overlap": false,
+							"value": "Сив",
+							"valueHeight": 24,
+							"valueRight": 941.5,
+							"valueSize": "16px"
+						},
+						{
+							"label": "Локация",
+							"labelSize": "16px",
+							"overflow": false,
+							"overlap": false,
+							"value": "Пловдив, гр. Пловдив",
+							"valueHeight": 24,
+							"valueRight": 941.5,
+							"valueSize": "16px"
+						},
+						{
+							"label": "Интериор",
+							"labelSize": "16px",
+							"overflow": false,
+							"overlap": false,
+							"value": "По запитване",
+							"valueHeight": 24,
+							"valueRight": 941.5,
+							"valueSize": "16px"
+						},
+						{
+							"label": "Складов №",
+							"labelSize": "16px",
+							"overflow": false,
+							"overlap": false,
+							"value": "21778067767337633",
+							"valueHeight": 24,
+							"valueRight": 941.5,
+							"valueSize": "16px"
+						}
+					],
+					"title": "Детайли"
+				}
+			],
+			"width": 1440
+		}
+	],
+	"english": {
+		"documentOverflow": false,
+		"rows": [
+			{
+				"label": "Mileage",
+				"overflow": false,
+				"overlap": false,
+				"value": "106,000 km"
+			},
+			{
+				"label": "Year",
+				"overflow": false,
+				"overlap": false,
+				"value": "2021"
+			},
+			{
+				"label": "Fuel",
+				"overflow": false,
+				"overlap": false,
+				"value": "Petrol"
+			},
+			{
+				"label": "Engine",
+				"overflow": false,
+				"overlap": false,
+				"value": "3000 cc / 354 hp"
+			},
+			{
+				"label": "Transmission",
+				"overflow": false,
+				"overlap": false,
+				"value": "Automatic"
+			},
+			{
+				"label": "Color",
+				"overflow": false,
+				"overlap": false,
+				"value": "Grey"
+			},
+			{
+				"label": "Location",
+				"overflow": false,
+				"overlap": false,
+				"value": "Пловдив, гр. Пловдив"
+			},
+			{
+				"label": "Interior",
+				"overflow": false,
+				"overlap": false,
+				"value": "On request"
+			},
+			{
+				"label": "Stock No.",
+				"overflow": false,
+				"overlap": false,
+				"value": "21778067767337633"
+			}
+		],
+		"titles": ["Vehicle details", "Details"],
+		"width": 768
+	},
+	"mobile": [
+		{
+			"desktopFacts": 0,
+			"documentOverflow": false,
+			"mobilePdp": 1,
+			"width": 320
+		},
+		{
+			"desktopFacts": 0,
+			"documentOverflow": false,
+			"mobilePdp": 1,
+			"width": 390
+		}
+	],
+	"mobileHistoricalScreenshotHashesMatch": false,
+	"mobileSourceModified": false,
+	"equipment": {
+		"expanded": 18,
+		"collapsed": 6
+	},
+	"freshLoadConsole": {
+		"errors": 0,
+		"warnings": 0
+	}
+}

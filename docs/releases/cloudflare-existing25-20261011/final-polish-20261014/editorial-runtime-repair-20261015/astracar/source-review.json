@@ -1,0 +1,170 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-focused-dealer-editorial-source-repair",
+  "dealer": "astracar",
+  "repository": "darkapoparka/cars-astracar",
+  "canonicalSourceRepository": "darkapoparka/cars",
+  "canonicalBaseline": {
+    "commit": "8fd19452a6c8e2ca8b4a4e03f6629fb26408503e",
+    "tree": "4e2781f933fe27b66eb5aae31b7c6c1fb8b1988f"
+  },
+  "preparedTree": "9f4e880fb763f931980494d7fc7391db4553f43b",
+  "sourceRevision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+  "originalCiProvenance": {
+    "sourceRun": {
+      "id": 38670293064,
+      "attempt": 1,
+      "head": "32ef02e6b8945ba66fbd0155a23192ec53b09628",
+      "workflow": ".github/workflows/existing-fleet-source.yml"
+    },
+    "sourceArtifact": {
+      "id": 11943523714,
+      "name": "existing-cf-source-astracar-38670293064-1",
+      "bytes": 6029113,
+      "digest": "sha256:ff2f3b626ad99b0f5016360c7546530359aa7ab35adf6ed75884775ddd756b11"
+    },
+    "proposalSha256": "de1fa90363a973979f613a0f71ac9dabf2224dacea722ac628feb371c37ed561",
+    "sourceReceiptSha256": "2d70d08e633e305c10bdaeef1105a26560764d3025379e15cc72113715fce0d4",
+    "finalReviewSha256": "352dd32f5332fc6c18386104e0afd0e36684be16a6de42861231c8ba999990ee"
+  },
+  "newCiRun": null,
+  "originalCiReusedAsNewSuccess": false,
+  "originalSourcePreparationReexecuted": false,
+  "focusedProof": {
+    "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/editorial-runtime-repair-20261015/astracar/focused-proof.json",
+    "sha256": "83d17694d44dba734bf06a161891636d7c619874bf110fc44ec5a7257b78ea7e"
+  },
+  "patch": {
+    "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-vercel-resume-20261015/wave-transport/editorial-source-reseals-remaining-a/astracar/source-patch.json",
+    "sha256": "d9213781fe417afd416fb25ead7ccf35d125adbfaba9ee71886ec52f9283da77"
+  },
+  "nativeInputBefore": {
+    "digest": "e724390c95ed559b42a19d445ab9686962b4d468e85492bfe911f953e7a95902",
+    "files": 9372
+  },
+  "nativeInput": {
+    "digest": "d1f0caa21c8e582623b7b31df0e7894c3266df6f219f14038295f4c87bd0250a",
+    "files": 9372
+  },
+  "qualificationContext": {
+    "reference": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/astracar/qualification-context.json",
+    "sha256": "eec6b22b1773eae982bd91b2672bb845ae3baf1a3fafad1985690cd47b876295"
+  },
+  "nativeQualification": {
+    "contextFileSha256": "eec6b22b1773eae982bd91b2672bb845ae3baf1a3fafad1985690cd47b876295",
+    "qualificationLockSha256": "04633129df9e75d6cd62deeac9125b279957789d75f57cdb0b243ef61bfc3e7e",
+    "contextDigest": "fa337e33ed48ea632bb7b3d27fff4f81fc9397a6a195b584373747e9f7c9363c",
+    "receiptSha256": "72c81408cbc325198e5ffde5c1d15e6a309b9250ae65ba9f5c1215dde501ca09",
+    "nativeInput": {
+      "digest": "d1f0caa21c8e582623b7b31df0e7894c3266df6f219f14038295f4c87bd0250a",
+      "files": 9372
+    },
+    "pendingNativeChecks": [
+      "catalog-completeness",
+      "hardcoded-ui",
+      "native-routing",
+      "standalone-journeys",
+      "mounted-journeys",
+      "public-journeys",
+      "preferences-no-js",
+      "preferences-storage-disabled",
+      "preferences-races",
+      "request-isolation",
+      "security-write-blocking",
+      "assets-preserved"
+    ]
+  },
+  "preparedCandidateDigest": "351e7e814486b6ff689f8c8d411b7a1065d626626d5faf4adc710e906709d646",
+  "templateSources": {
+    "auto-best": {
+      "repository": "darkapoparka/cars",
+      "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+      "path": "templates/auto-best",
+      "digest": "2fc9c3cfc9cf1976dbe30c08592776362e5bcc6b09e8b06620e57c4406df58a5",
+      "tree": "78fa1a82eca14816449f9588283260840ee94f52"
+    },
+    "modern": {
+      "repository": "darkapoparka/cars",
+      "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+      "path": "templates/modern",
+      "digest": "30e1a99f857cc25e4d78c9459cfb4394a9f70c5b114196a5ca6325ff38823b4b",
+      "tree": "01eac7390fa6ba951d4b8d4c26159a9be150f6c8"
+    },
+    "import": {
+      "repository": "darkapoparka/cars",
+      "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+      "path": "templates/import",
+      "digest": "c7d6c93214e859aa2747af8f5e068b6a0b8ca095d6328c807728a4d531d688f8",
+      "tree": "d841ddfe5bec918bf6b2c19fd6971fecd6b8e54d"
+    },
+    "app": {
+      "repository": "darkapoparka/cars",
+      "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+      "path": "templates/app",
+      "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1",
+      "tree": "7f3d3ffa40546635377e6c5225194fe06fead291"
+    },
+    "mobile": {
+      "repository": "darkapoparka/cars",
+      "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+      "path": "templates/mobile",
+      "digest": "f5a3e541a7c648a4c2899ad3893e22a3806027a9f66d95fa4e8c74b2226635b6",
+      "tree": "792bfdd1d8eb22aabd90c7e3a0c0779a6c1c36f3"
+    },
+    "karento-best": {
+      "repository": "darkapoparka/cars",
+      "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+      "path": "templates/karento-best",
+      "digest": "be17ef365e3272753df6e50826b139a45bfc32b8fef54ddcb86d977ad16280a9",
+      "tree": "8c5ac869c7fd15e19a80c660343fc64b20a2bad9"
+    }
+  },
+  "catalogAuditTransition": {
+    "before": {
+      "descriptor": {
+        "format": "typescript-source-map",
+        "path": "src/lib/content/extra-localized.ts",
+        "export": "extraEnglish"
+      },
+      "keys": 93,
+      "contentDigest": "0988ad20c32f59711c66ce17e73ff896d7ff0401676162d11a56d3c5e4e49582"
+    },
+    "after": {
+      "descriptor": {
+        "format": "typescript-source-map",
+        "path": "src/lib/content/extra-localized.ts",
+        "export": "extraEnglish"
+      },
+      "keys": 94,
+      "contentDigest": "e5f1c07b47c83bd6ddc3013682b049274698246bba0a73f239257462f35c790d"
+    },
+    "otherDeclaredCatalogsUnchanged": true
+  },
+  "pathsChanged": 4,
+  "changedPaths": [
+    "import/src/lib/content/extra-localized.ts",
+    "localization/adoption.json",
+    ".client/cloudflare-existing-source.json",
+    ".client/native-qualification-context.json"
+  ],
+  "authoritativeFactsUnchanged": true,
+  "stockUnchanged": true,
+  "allRasterAssetBytesUnchanged": true,
+  "sourcePinsUnchanged": true,
+  "otherFiveDesignBytesUnchanged": true,
+  "maintainedChecks": {
+    "nativeQualification": "PASS",
+    "app": "PASS",
+    "extended": "PASS",
+    "branding": "PASS",
+    "sourcePatch": "PASS"
+  },
+  "reviewed": true,
+  "ready": true,
+  "published": false,
+  "compiled": false,
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "globalReleaseApproval": false,
+  "createdAt": "2026-10-15T03:31:17.873Z"
+}

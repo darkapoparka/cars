@@ -1,0 +1,244 @@
+{
+  "generatedPath": "C:/Users/radev/.codex/generated_images/01a12a34-3dcd-7920-8e75-5eb5eac386bd/exec-86ceaa37-347a-4d2a-a18f-de3eef1f8ec7.png",
+  "strategy": "USE GENERATED CANDIDATE",
+  "identityStatus": "Separate final-polish proposal based on prior selected raster/name/colors; owner/dealer approval pending.",
+  "sourceUrls": [
+    "https://northnorfolkcarsales.co.uk/",
+    "https://northnorfolkcarsales.co.uk/uploads/logos/69571776159384.png"
+  ],
+  "sourceLogoUrl": null,
+  "workingLogoPath": null,
+  "derivation": {
+    "priorSelectedReceipt": "L:/CODEX/cars/leads/branding/fleet-20261011/north-norfolk-car-sales/receipt.json",
+    "priorSelectedMaster": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/north-norfolk-car-sales/branding/logo-master.png",
+      "sha256": "2e57fa4db9014eb7cc2e2d2b3f566f5c6ac08ef23a308d51d6f797c6bdbb4b93",
+      "bytes": 148833,
+      "width": 1496,
+      "height": 272,
+      "format": "png",
+      "hasAlpha": true
+    },
+    "priorSelectedGenerationReference": "functions.exec cell52 image_gen.imagegen output exec-07537095-b282-4fd5-8598-d0b4f0bfd5b8",
+    "priorSelectedGenerationOriginal": {
+      "path": "C:/Users/radev/.codex/generated_images/01a12a34-877e-73a2-9a3d-346e546742c6/exec-07537095-b282-4fd5-8598-d0b4f0bfd5b8.png",
+      "sha256": "51cb2402330afd0199fe0a349a8709e37d8bfb4a9d7030c7aa28fcbea87dd6bd",
+      "bytes": 336256,
+      "format": "png",
+      "width": 2172,
+      "height": 724,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.8661626374856283,
+        "opaqueRatio": 0.10514661742112064
+      },
+      "visibleBounds": {
+        "x": 52,
+        "y": 217,
+        "width": 2065,
+        "height": 293
+      }
+    },
+    "referenceFiles": [
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/north-norfolk-car-sales/branding/logo-master.png",
+        "sha256": "2e57fa4db9014eb7cc2e2d2b3f566f5c6ac08ef23a308d51d6f797c6bdbb4b93"
+      },
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/style-revision/single-row/biemaauto-varna/branding/logo-master.png",
+        "sha256": "dc84d9283929362bd17d0b765c1ab219eb3c093ccb52e4d3c05ada2ddfcb37ce"
+      }
+    ],
+    "styleReference": "L:/CODEX/cars/leads/branding/fleet-20261011/style-revision/single-row/biemaauto-varna/branding/logo-master.png",
+    "styleReferenceScope": "Automotive lettering character and compact composition only; no copied brand or palette.",
+    "publicSourceObservation": "Historical prior-source evidence retained; no fresh public-source verification claimed."
+  },
+  "imageGeneration": {
+    "reference": "exec-86ceaa37-347a-4d2a-a18f-de3eef1f8ec7",
+    "tool": "image_gen.imagegen",
+    "transparent_background": true,
+    "referenced_image_paths": [
+      "L:/CODEX/cars/leads/branding/fleet-20261011/north-norfolk-car-sales/branding/logo-master.png",
+      "L:/CODEX/cars/leads/branding/fleet-20261011/style-revision/single-row/biemaauto-varna/branding/logo-master.png"
+    ],
+    "prompt": "Final polish of reference1 for exact full name NORTH NORFOLK CAR SALES. Preserve recognizable circular manual gear-shift H/R emblem at left, simplify to crisp confident strokes with true transparent spaces, not a car silhouette. Full NORTH NORFOLK CAR SALES on exactly ONE name row. Remove previous tiny second line by integrating CAR SALES into same line at SAME cap height. Navy #07132d NORTH NORFOLK and controlled deep red #b40020 CAR SALES and gear-shift emblem. Emblem compact around cap height, at most12percent width. Custom bold gently forward-slanted automotive letters, modestly condensed for full name, purposeful chamfered corners and open generous counters, excellent readability at120px. Do not shorten name to NORTH NORFOLK. No descriptors, captions or slogan beneath. Reference2 only guides compact confident automotive lettering; do not copy BIEMA name, blue monogram, logo geometry or exact identity. Flat solid inks, no shadows, plaque, background, glow, gradients, chrome or excessive ornament. Complete unclipped exact text and emblem, modest transparent margin. True RGBA transparency including all counters and spaces. Separate improved proposal awaiting owner/dealer approval, original preserved.",
+    "output_hint": "Generated images are saved to C:\\Users\\radev\\.codex\\generated_images\\01a12a34-3dcd-7920-8e75-5eb5eac386bd as C:\\Users\\radev\\.codex\\generated_images\\01a12a34-3dcd-7920-8e75-5eb5eac386bd\\exec-86ceaa37-347a-4d2a-a18f-de3eef1f8ec7.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+  },
+  "onLight": "original",
+  "onDark": "white",
+  "onAccent": "white",
+  "visualAccepted": true,
+  "styleSelected": false,
+  "ownerApproved": false,
+  "selectionStatus": "technically-selected-final-polish-preferred-proposal-owner-dealer-approval-pending",
+  "surfaceReviewPath": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/final-polish-stage/north-norfolk-car-sales/surface-review.png",
+  "visualChecks": {
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "swatches": [
+      "#ffffff",
+      "#30343b",
+      "#17191c",
+      "#202023",
+      "#19171d",
+      "#171717",
+      "#b00020",
+      "#405ff2"
+    ],
+    "spelling": "NORTH NORFOLK CAR SALES",
+    "layout": "Exact full core name on one row; no caption beneath.",
+    "geometry": "Complete separate/letter-derived emblem, open counters and no clipping.",
+    "proportion": "Compact source gear-shift emblem preserves identity; full long name uses readable condensed custom capitals.",
+    "residue": "No material fringe, filled counters or opaque plaque visible at reviewed compact widths.",
+    "treatment": "Original color/monochrome ink on light; white geometry-preserving exporter treatment on dark/accent.",
+    "scope": "Asset-only final independent visual judgment; integration and hosted consumer checks not performed."
+  },
+  "schemaVersion": 1,
+  "dealer": "north-norfolk-car-sales",
+  "state": "asset-verified",
+  "generated": {
+    "path": "C:/Users/radev/.codex/generated_images/01a12a34-3dcd-7920-8e75-5eb5eac386bd/exec-86ceaa37-347a-4d2a-a18f-de3eef1f8ec7.png",
+    "sha256": "917081050757e49732d2f93226748ce1092d921e914e4549e22ff480507e9748",
+    "bytes": 297824,
+    "format": "png",
+    "width": 2171,
+    "height": 724,
+    "hasAlpha": true,
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparentRatio": 0.8842864631977015,
+      "opaqueRatio": 0.09186005379805624
+    },
+    "visibleBounds": {
+      "x": 47,
+      "y": 238,
+      "width": 2077,
+      "height": 230
+    }
+  },
+  "assets": {
+    "onLight": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/final-polish-stage/north-norfolk-car-sales/dealer-brand/logo-on-light.webp",
+      "sha256": "894c1f867c5cf6f1fc8bb4a7255f97c26578bf6ea9ddcd23695d1095691b9eb4",
+      "bytes": 59662,
+      "format": "webp",
+      "width": 1496,
+      "height": 228,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.7510231963598837,
+        "opaqueRatio": 0.18724493385871094
+      },
+      "visibleBounds": {
+        "x": 49,
+        "y": 37,
+        "width": 1399,
+        "height": 155
+      },
+      "publicPath": "/dealer-brand/logo-on-light.webp"
+    },
+    "onDark": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/final-polish-stage/north-norfolk-car-sales/dealer-brand/logo-on-dark.webp",
+      "sha256": "837d458af61b10737e4176171ab65b9573845bf469c9bb7f99b06a8711a467fc",
+      "bytes": 33338,
+      "format": "webp",
+      "width": 1496,
+      "height": 228,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.7510231963598837,
+        "opaqueRatio": 0.18724493385871094
+      },
+      "visibleBounds": {
+        "x": 49,
+        "y": 37,
+        "width": 1399,
+        "height": 155
+      },
+      "publicPath": "/dealer-brand/logo-on-dark.webp"
+    },
+    "onAccent": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/final-polish-stage/north-norfolk-car-sales/dealer-brand/logo-on-accent.webp",
+      "sha256": "837d458af61b10737e4176171ab65b9573845bf469c9bb7f99b06a8711a467fc",
+      "bytes": 33338,
+      "format": "webp",
+      "width": 1496,
+      "height": 228,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.7510231963598837,
+        "opaqueRatio": 0.18724493385871094
+      },
+      "visibleBounds": {
+        "x": 49,
+        "y": 37,
+        "width": 1399,
+        "height": 155
+      },
+      "publicPath": "/dealer-brand/logo-on-accent.webp"
+    }
+  },
+  "master": {
+    "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/final-polish-stage/north-norfolk-car-sales/branding/logo-master.png",
+    "sha256": "c23fdb0ef73c962a59829ed0682f9dddc6d34fd9aa8a74bd218c41f9bab4d587",
+    "bytes": 115418,
+    "format": "png",
+    "width": 1496,
+    "height": 228,
+    "hasAlpha": true,
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparentRatio": 0.7510231963598837,
+      "opaqueRatio": 0.18724493385871094
+    },
+    "visibleBounds": {
+      "x": 49,
+      "y": 37,
+      "width": 1399,
+      "height": 155
+    }
+  },
+  "technicalAcceptance": {
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "swatches": [
+      "#ffffff",
+      "#30343b",
+      "#17191c",
+      "#202023",
+      "#19171d",
+      "#171717",
+      "#b00020",
+      "#405ff2"
+    ],
+    "spelling": "NORTH NORFOLK CAR SALES",
+    "layout": "Exact full core name on one row; no caption beneath.",
+    "geometry": "Complete separate/letter-derived emblem, open counters and no clipping.",
+    "proportion": "Compact source gear-shift emblem preserves identity; full long name uses readable condensed custom capitals.",
+    "residue": "No material fringe, filled counters or opaque plaque visible at reviewed compact widths.",
+    "treatment": "Original color/monochrome ink on light; white geometry-preserving exporter treatment on dark/accent.",
+    "scope": "Asset-only final independent visual judgment; integration and hosted consumer checks not performed."
+  },
+  "integrationVerified": false,
+  "hostedVerified": false,
+  "exportTool": "docs/logo-refresh/2026-09-18/tools/build-approved-logo-pack.mjs",
+  "exportToolSha256": "7fab60c4000210eff6bbb91f9c35e869bad90834d3bdd09d282a9a51835f0dbc",
+  "exportIsolation": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/final-existing-export",
+  "updatedAt": "2026-10-11T11:57:17.507Z"
+}

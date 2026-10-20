@@ -1,0 +1,15 @@
+{
+  "slug": "kapitol-varna",
+  "prompt": "Prepare a transparent light-surface website treatment of this exact existing Bulgarian dealer Капитол logo. Preserve the recognizable thin car side/roof outline, exact Cyrillic word 'Капитол', italic lettering and original red initial К with remaining charcoal lettering. Remove white opaque background and improve only clarity/readability of the supplied low-resolution original; preserve the recognizable identity and make a balanced compact horizontal lockup. No new words, slogan, manufacturer badge, claims, shadows, gradients or bevels. True transparent RGBA background.",
+  "reference": "E:/Temp/cars-fleet-01a12a02-priselci-integration16-1/fleet-100-status/additional25-qualification/batch3/references/kapitol-varna-original-logo.pic",
+  "dark": {
+    "generationId": "exec-b96c9543-6f84-44bf-b661-7d9301726ec3",
+    "sourcePath": "C:/Users/radev/.codex/generated_images/01a12d64-9c2d-7b03-85e1-619a359e6894/exec-b96c9543-6f84-44bf-b661-7d9301726ec3.png"
+  },
+  "referenceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h11864774423254881.pic",
+  "white": {
+    "generationId": "exec-7fb6f9ec-572b-4653-baa8-95f78219eb97",
+    "sourcePath": "C:/Users/radev/.codex/generated_images/01a12d64-9c2d-7b03-85e1-619a359e6894/exec-7fb6f9ec-572b-4653-baa8-95f78219eb97.png",
+    "prompt": "Edit this exact logo into its matched dark-surface treatment. Preserve all exact lettering, typography, proportions and geometry. Change dark lettering/artwork to pure white, preserving any original colored accent that remains clearly readable. No extra text, redesign, glow, shadow, fringe or backdrop. True transparent RGBA background."
+  }
+}

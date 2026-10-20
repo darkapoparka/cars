@@ -114,8 +114,8 @@ export const leadSite: LeadSiteConfig = {
     "tagline": "Promosale Varna — vehicles and dealer support in Varna."
   }
 },
-  accent: "#c40101",
-  desktopAccent: "#4b5057",
+  accent: "#09090b",
+  desktopAccent: "#09090b",
   desktopInventoryFilterLayout: "quick",
   desktopPreviewIdentity: {
     sourceSlug: "day-night-auto-group",
@@ -127,7 +127,7 @@ export const leadSite: LeadSiteConfig = {
       en: "Find your next car.",
     },
   },
-  address: "ул. „Атанас Манчев“ 18, Варна",
+  address: "Морска гара Варна, Варна, България",
   city: "Варна",
   district: { bg: "Варна", en: "Varna" },
   sellCategoryAssets: {
@@ -141,16 +141,17 @@ export const leadSite: LeadSiteConfig = {
   mobileShowroomArtworkPath:
     "/images/lease/mobile-pdp-showroom-blue-hour-v1.webp",
   contactUrl: "tel:+359892020208",
-  country: "България",
+  country: "BG",
   countryCode: carsLocale.dealerCountry,
   currency: carsLocale.inventoryCurrency,
   email: "",
   heroPath: "/lead-hero.jpg",
   locale: "bg-BG",
-  logoPath: "/dealer-brand/logo-on-dark.webp",
-  logoOnLight: "/dealer-brand/logo-on-light.webp",
-  logoOnDark: "/dealer-brand/logo-on-dark.webp",
-  logoOnAccent: "/dealer-brand/logo-on-accent.webp",
+  logoPath: "/dealer-brand/v2-c1ee2ba0a30e97da/logo-on-light.webp",
+  logoInversePath: "/dealer-brand/v2-c1ee2ba0a30e97da/logo-on-dark.webp",
+  logoOnLight: "/dealer-brand/v2-c1ee2ba0a30e97da/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/v2-c1ee2ba0a30e97da/logo-on-dark.webp",
+  logoOnAccent: "/dealer-brand/v2-c1ee2ba0a30e97da/logo-on-dark.webp",
   mapsEmbedUrl:
     "https://maps.google.com/maps?q=Promosale%20Varna%2C%20%D0%9C%D0%BE%D1%80%D1%81%D0%BA%D0%B0%20%D0%B3%D0%B0%D1%80%D0%B0%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F&z=16&output=embed",
   mapsUrl:
@@ -162,6 +163,6 @@ export const leadSite: LeadSiteConfig = {
   slug: "promosale-varna",
   socialLinks: {},
   staticDemoMode: true,
-  tagline: "Премиум автомобили, внос и собствен лизинг в Варна.",
+  tagline: "Promosale Varna — автомобили и съдействие в Варна.",
 };
 // LEAD_SITE_CONFIG_END

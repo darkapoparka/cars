@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "kind": "dated-marketplace-listing-sample",
+  "candidate": true,
+  "observedAt": "2026-10-11T11:54:03.456Z",
+  "sourceProfile": "https://bora_car.mobile.bg/",
+  "sourcePageVisibleListingCount": 8,
+  "sourceProfileCountObservedAt": "2026-10-11T11:54:03.301Z",
+  "profileCountIsAvailableStock": false,
+  "profileCountIsClassifiedOrdinaryRetail": false,
+  "liveInventory": false,
+  "mediaPermission": "unconfirmed",
+  "localMediaReady": true,
+  "records": [
+    {
+      "id": "11746086011937446",
+      "sourceId": "11746086011937446",
+      "title": "Seat Ibiza",
+      "sourceTitleExact": "Seat Ibiza 1.6TDI-90К.С.",
+      "make": "Seat",
+      "model": "Ibiza",
+      "modelExtraction": "literal make/model prefix from exact primary advert title; canonical market normalization and trim not asserted",
+      "year": 2011,
+      "productionMonth": 7,
+      "priceEur": 4100,
+      "currency": "EUR",
+      "sourcePriceText": "4 100 €",
+      "priceVatNotice": "Не се начислява ДДС",
+      "mileageKm": 235000,
+      "sourceMileageText": "235000 км",
+      "fieldConflicts": [],
+      "body": "Комби",
+      "fuel": "Дизелов",
+      "transmission": "Ръчна",
+      "powerHp": 90,
+      "images": [
+        "/assets/vehicles/11746086011937446/1.webp",
+        "/assets/vehicles/11746086011937446/2.webp"
+      ],
+      "sourceUrl": "https://bora_car.mobile.bg/obiava-11746086011937446-seat-ibiza-1-6tdi-90k-s",
+      "sourceHtmlSha256": "193e6893bf948e4d80b721f9894178ee5f7542b775818bf49fc59c74758e38d9",
+      "sourcePublicationText": "Редактирана в 07:51 часа на 24.09.2026 год.",
+      "observedAt": "2026-10-11T11:54:03.456Z",
+      "availability": "unconfirmed",
+      "availabilityConfirmed": false,
+      "partsListing": false,
+      "conditionMarker": null,
+      "conditionIndependentlyConfirmed": false,
+      "arrivalNotice": null,
+      "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "mediaState": "not-collected; reviewed rights/reuse or explicit illustration decision pending",
+      "mediaPermission": "Not independently established",
+      "telHrefCandidates": [
+        "0896699974"
+      ],
+      "visibleSellerContact": "Контакти с продавача BORA CAR 00359896699974",
+      "sellerPhoneMatchesPrimary": true,
+      "telHrefMatchesPrimary": true,
+      "sampleRole": "dated published vehicle advert; dealer availability, condition and media reuse require confirmation",
+      "retailReadyForAssembly": false,
+      "sourcePhotoUrls": [
+        "https://mobistatic1.focus.bg/mobile/photosorg/446/1/big1/11746086011937446_Xo.webp",
+        "https://mobistatic1.focus.bg/mobile/photosorg/446/1/big1/11746086011937446_R0.webp",
+        "https://mobistatic1.focus.bg/mobile/photosorg/446/1/big1/11746086011937446_QI.webp",
+        "https://mobistatic1.focus.bg/mobile/photosorg/446/1/big1/11746086011937446_oc.webp",
+        "https://mobistatic1.focus.bg/mobile/photosorg/446/1/big1/11746086011937446_E4.webp",
+        "https://mobistatic1.focus.bg/mobile/photosorg/446/1/big1/11746086011937446_30.webp",
+        "https://mobistatic1.focus.bg/mobile/photosorg/446/1/big1/11746086011937446_nt.webp"
+      ],
+      "sourcePhotoEvidence": {
+        "sourceId": "11746086011937446",
+        "sourceUrl": "https://bora_car.mobile.bg/obiava-11746086011937446-seat-ibiza-1-6tdi-90k-s",
+        "observedAt": "2026-10-11T12:09:34.025Z",
+        "responseSha256": "1a916435f0309a58858a44f1cede880714ebd5f251f5a3ccc6dffd2c94cceaa9",
+        "association": "primary gallery URLs contain exact source listing ID",
+        "remoteBytesFetched": false
+      }
+    }
+  ],
+  "localMediaHydration": {
+    "candidateOnly": true,
+    "technicalRasterPresent": true,
+    "rightsApproved": false,
+    "availabilityConfirmed": false,
+    "assets": [
+      {
+        "publicPath": "/assets/vehicles/11746086011937446/1.webp",
+        "sourceUrl": "https://mobistatic1.focus.bg/mobile/photosorg/446/1/big1/11746086011937446_Xo.webp",
+        "sha256": "c1a807375220d57e4a33e26f4b57e7bd5e258510c8c6fc25dbf41499638f90a2",
+        "bytes": 116238,
+        "downloadObservedAt": "2026-10-11T12:20:40.675Z"
+      },
+      {
+        "publicPath": "/assets/vehicles/11746086011937446/2.webp",
+        "sourceUrl": "https://mobistatic1.focus.bg/mobile/photosorg/446/1/big1/11746086011937446_R0.webp",
+        "sha256": "494c78609dd8141157058bced0f9588b3940cc2cc8f1d0e4fa37f7454920fe20",
+        "bytes": 79232,
+        "downloadObservedAt": "2026-10-11T12:20:40.791Z"
+      }
+    ],
+    "sourceStockSha256": "c3b8429c7c1b5b20901f58e0fb790706f3e43018f7780d74e3e5256ed32bd78c"
+  }
+}

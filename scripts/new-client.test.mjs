@@ -6,7 +6,10 @@ import path from 'node:path';
 import { assertMainCheckout, planNewClient, createNewClient } from './new-client.mjs';
 import { copySource } from './copy-source.mjs';
 import { fingerprint, POLICY } from './lib/workflow.mjs';
-import { NATIVE_CHECKS } from './lib/native-localization.mjs';
+import vm from 'node:vm';
+import {createHash} from 'node:crypto';
+import {fileURLToPath} from 'node:url';
+import { validateNativeQualificationContext, validateTemplateQualification, parseCatalogJson, NATIVE_CHECKS } from './lib/native-localization.mjs';
 
 function fixture(t) {
   const root = fs.mkdtempSync(path.join(os.tmpdir(), 'cars-new-client-test-'));
@@ -211,4 +214,84 @@ test('build-output exclusions do not hide authored generated source or Prisma sc
 test('a publishing repository cannot be reused under another dealer name', t => {
   const f = fixture(t); f.put('docs/DEPLOYMENT-INVENTORY.json', { aliases: {}, dealers: [{ slug: 'original', repository: 'darkapoparka/CARS-SAMPLEDEALER' }] });
   assert.throws(() => f.plan(), /Publishing repository already belongs to original/);
+});
+
+
+function qualificationFixture(t) {
+  const f=fixture(t), hash=b=>createHash('sha256').update(b).digest('hex'),
+    oid=b=>createHash('sha1').update(Buffer.concat([Buffer.from('blob '+Buffer.byteLength(b)+'\0'),Buffer.from(b)])).digest('hex'),
+    prefix='docs/releases/source-qualification', encode=v=>Buffer.from(JSON.stringify(v)+'\n');
+  const delta={reference:prefix+'/delta.json',sha256:hash(encode({reviewed:true})),reviewedAt:'2026-10-12T00:00:00Z'};
+  const parent={status:'approved',commit:'b'.repeat(40),digest:'d'.repeat(64),qa:{evidence:prefix+'/parent.json',verifiedAt:delta.reviewedAt}};
+  const source={repository:'darkapoparka/cars',revision:'e'.repeat(40),path:'templates/app',tree:'f'.repeat(40),digest:'1'.repeat(64)};
+  const context={schemaVersion:1,kind:'cars-native-source-qualification-context',id:'new-wave-test',
+    dealer:'sample-dealer',scope:'new-dealer-source-proposal',reviewed:true,reviewedAt:delta.reviewedAt,
+    sourceCommit:source.revision,nativeApproval:false,hostedApproval:false,globalReleaseApproval:false,
+    approvedLockSha256:hash(fs.readFileSync(path.join(f.root,'templates.lock.json'))),candidateLockSha256:'2'.repeat(64),sourceDeltaReview:delta};
+  const release={status:'qualification',repository:source.repository,commit:source.revision,snapshotPath:source.path,
+    digest:source.digest,exportPolicy:POLICY,source,qualification:{contextId:context.id,sourceDeltaReview:delta,catalogs:[],
+      sourceQA:{approvedRelease:parent,releaseSha256:hash(JSON.stringify(parent)),reference:parent.qa.evidence,
+        sha256:'3'.repeat(64),verifiedAt:parent.qa.verifiedAt}}};
+  const candidate={schemaVersion:1,exportPolicy:POLICY,templates:{app:release}};
+  const lockPin={path:prefix+'/candidate.json',sha256:hash(encode(candidate))};
+  context.candidateLockSha256=lockPin.sha256;
+  const pins={candidateLock:lockPin,qualification:{path:prefix+'/context.json',sha256:hash(encode(context))}};
+  for(const [name,data] of [[lockPin.path,candidate],[pins.qualification.path,context],[delta.reference,{reviewed:true}]])f.put(name,encode(data));
+  const committed=new Map([lockPin.path,pins.qualification.path,delta.reference].map(name=>[name,oid(fs.readFileSync(path.join(f.root,name)))]));
+  const state={tree:source.tree,ancestor:'',read:0,ordinary:0};
+  const helperSource=fs.readFileSync(fileURLToPath(new URL('./new-client.mjs',import.meta.url)),'utf8');
+  const start=helperSource.indexOf('export function readNewClientQualification('),end=helperSource.indexOf('export function planNewClient(',start);
+  assert(start>=0&&end>start);
+  const helper=vm.runInNewContext(helperSource.slice(start,end).replaceAll('export function ','function ')+
+    '\n({readNewClientQualification,verifyNewClientRelease})',{fs,path,Buffer,TextDecoder,POLICY,
+      inside:(root,name)=>path.join(root,name),sha256:hash,parseCatalogJson,validateNativeQualificationContext,validateTemplateQualification,
+      git:(_root,args,options)=>args[0]==='hash-object'?oid(options.input):
+        args[0]==='merge-base'?state.ancestor:args[1].startsWith('HEAD:')?committed.get(args[1].slice(5)):state.tree,
+      verifyTemplate:()=>{state.ordinary++;return 'ordinary-approved-default';},
+      readPinnedTemplateTree:({source:s,expectedDigest})=>{state.read++;assert.deepEqual(JSON.parse(JSON.stringify(s)),source);assert.equal(expectedDigest,source.digest);}});
+  return {...f,helper,state,pins,context,release,candidate,encode,hash};
+}
+test('new source qualification pins require committed raw bytes and the exact dealer scope',t=>{
+ const f=qualificationFixture(t),read=()=>f.helper.readNewClientQualification(f.root,f.pins,'sample-dealer');
+ const q=read();assert.equal(q.context.scope,'new-dealer-source-proposal');assert.equal(q.context.nativeApproval,false);
+ fs.appendFileSync(path.join(f.root,f.pins.candidateLock.path),' ');assert.throws(read,/bytes changed/);
+ assert.deepEqual(fs.readdirSync(path.join(f.root,'clients')),[]);
+});
+test('candidate release keeps ordinary defaults and rejects wrong final tree, ancestor and false approval before copying',t=>{
+ const f=qualificationFixture(t),q=f.helper.readNewClientQualification(f.root,f.pins,'sample-dealer');
+ assert.equal(f.helper.verifyNewClientRelease(f.root,'app'),'ordinary-approved-default');assert.equal(f.state.ordinary,1);
+ assert.equal(f.helper.verifyNewClientRelease(f.root,'app',q).source.tree,f.release.source.tree);assert.equal(f.state.read,1);
+ f.state.tree='9'.repeat(40);assert.throws(()=>f.helper.verifyNewClientRelease(f.root,'app',q),/source tree/);assert.equal(f.state.read,1);
+ f.state.tree=f.release.source.tree;f.state.ancestor=null;assert.throws(()=>f.helper.verifyNewClientRelease(f.root,'app',q),/source tree/);
+ f.state.ancestor='';q.context.nativeApproval=true;assert.throws(()=>f.helper.verifyNewClientRelease(f.root,'app',q),/not native release approval/);
+ assert.deepEqual(fs.readdirSync(path.join(f.root,'clients')),[]);
+});
+test('new and existing source qualifications both retain false approval and reject unrelated scopes or dealers',t=>{
+ const f=qualificationFixture(t);
+ for(const scope of ['new-dealer-source-proposal','existing-dealer-pilot'])assert.equal(validateNativeQualificationContext({...f.context,scope},{dealer:'sample-dealer'}).scope,scope);
+ assert.throws(()=>validateNativeQualificationContext({...f.context,scope:'globally-approved'}),/not native release approval/);
+ assert.throws(()=>validateNativeQualificationContext(f.context,{dealer:'another-dealer'}),/not native release approval/);
+ for(const field of ['nativeApproval','hostedApproval','globalReleaseApproval'])assert.throws(()=>validateNativeQualificationContext({...f.context,[field]:true}),/not native release approval/);
+});
+
+test('immutable source creator allows only an actual published event and keeps ordinary local creation strict',t=>{
+ const f=fixture(t),head='a'.repeat(40),remote='b'.repeat(40),env={GITHUB_ACTIONS:'true',GITHUB_EVENT_NAME:'push',GITHUB_REPOSITORY:'darkapoparka/cars',GITHUB_REF:'refs/heads/main',GITHUB_SHA:head,GITHUB_RUN_ID:'123',GITHUB_RUN_ATTEMPT:'1'};
+ let current=remote;const calls=[];
+ const readGit=(_r,args)=>{calls.push(args);const op=args.join(' ');if(op==='rev-parse HEAD')return head;if(op==='rev-parse --is-shallow-repository')return 'false';if(args[0]==='ls-remote')return current+'\trefs/heads/main';if(args[0]==='merge-base')return head;if(args[0]==='cat-file')return '';return f.readGit(_r,args);};
+ const options={readGit,env,platform:'linux',eventCommit:head};
+ const proof=assertMainCheckout(f.root,options);assert.equal(proof.head,head);assert.equal(proof.remoteHead,remote);assert.equal(proof.eventCommit,head);
+ current='c'.repeat(40);assert.equal(assertMainCheckout(f.root,options).head,head);assert.equal(assertMainCheckout(f.root,options).remoteHead,current);
+ assert.throws(()=>assertMainCheckout(f.root,{...options,eventCommit:null}),/not synchronized/);
+ for(const altered of [{GITHUB_ACTIONS:'false'},{GITHUB_SHA:remote},{GITHUB_REF:'refs/heads/other'},{GITHUB_EVENT_NAME:'workflow_dispatch'},{GITHUB_REPOSITORY:'other/cars'},{GITHUB_RUN_ID:'0'},{GITHUB_RUN_ATTEMPT:'0'}])assert.throws(()=>assertMainCheckout(f.root,{...options,env:{...env,...altered}}),/actual complete/);
+ assert.throws(()=>assertMainCheckout(f.root,{...options,platform:'win32'}));
+ assert.throws(()=>assertMainCheckout(f.root,{...options,env:{...env,CF_API_TOKEN:'fixture-only'}}),/credentials/);
+ assert.throws(()=>assertMainCheckout(f.root,{...options,readGit:(r,a)=>a[0]==='merge-base'?remote:readGit(r,a)}),/ancestor/);
+ assert.throws(()=>assertMainCheckout(f.root,{...options,readGit:(r,a)=>a.join(' ')==='rev-parse HEAD'?remote:readGit(r,a)}),/actual complete/);
+ assert(!calls.some(a=>['switch','checkout','reset','update-ref','push'].includes(a[0])));
+});
+test('immutable creator missing remote metadata fetch is exact and does not move checkout or refs',t=>{
+ const f=fixture(t),head='a'.repeat(40),remote='b'.repeat(40),calls=[],env={GITHUB_ACTIONS:'true',GITHUB_EVENT_NAME:'push',GITHUB_REPOSITORY:'darkapoparka/cars',GITHUB_REF:'refs/heads/main',GITHUB_SHA:head,GITHUB_RUN_ID:'123',GITHUB_RUN_ATTEMPT:'1'};
+ const readGit=(r,a)=>{calls.push(a);if(a[0]==='cat-file')throw Error('missing exact commit');if(a[0]==='fetch')return '';if(a[0]==='merge-base')return head;if(a[0]==='ls-remote')return remote+'\trefs/heads/main';if(a.join(' ')==='rev-parse --is-shallow-repository')return 'false';return f.readGit(r,a);};
+ assert.equal(assertMainCheckout(f.root,{readGit,platform:'linux',env,eventCommit:head}).remoteHead,remote);
+ const fetch=calls.find(a=>a[0]==='fetch');assert.deepEqual(fetch,['fetch','--no-tags','--no-auto-maintenance','--no-write-fetch-head','--no-recurse-submodules','--refmap=','--filter=blob:none','origin',remote]);
 });

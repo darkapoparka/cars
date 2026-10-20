@@ -1,0 +1,335 @@
+{
+  "date": "2026-10-04",
+  "baselineHead": "32c1e85a04f5624282d5fa42bb4b2f44af62a508",
+  "reviewedHead": "19305130e54c49b1783e1f5e53c8d7b2db0a71c8",
+  "sourceHashes": {
+    "src/lib/styles/base.css": "44c32e4024a8582f983a33b4bfaa30e01905c763c8f5b3d999d0db86c8ab6ef3",
+    "src/lib/components/listing/QuickFilterSheet.svelte": "72877d9897cad5cabdd34f1fda7eccf55f2b50727fef393c7f985c1418eb9a1d"
+  },
+  "scope": "Mobile search-field focus, preserving selector and field geometry",
+  "sourceChecks": {
+    "cssPolicy": "passed",
+    "tokens": "passed",
+    "typography": "passed",
+    "pinnedVisualSystem": "passed",
+    "svelteErrors": 0,
+    "svelteWarnings": 1,
+    "diffCheck": "passed",
+    "productionBuild": {
+      "status": "blocked",
+      "reason": "Locale-source preflight flags unkeyed mileage unit in concurrent DesktopVehicleSearch.svelte draft",
+      "buildLog": "runtime/mobile-search-focus-20261004/build.log"
+    }
+  },
+  "measurements": [
+    {
+      "border": "0px",
+      "focusVisible": true,
+      "focused": true,
+      "inputOutline": "3px",
+      "inputShadow": "none",
+      "outline": {
+        "color": "rgb(20, 23, 29)",
+        "offset": "2px",
+        "style": "solid",
+        "width": "2px"
+      },
+      "overflow": false,
+      "phase": "before-quick-355",
+      "radius": "999px",
+      "rect": {
+        "bottom": 404,
+        "height": 44,
+        "left": 16,
+        "right": 339,
+        "top": 360,
+        "width": 323,
+        "x": 16,
+        "y": 360
+      },
+      "shadow": "none",
+      "url": "http://127.0.0.1:6461/bg/listing-grid#vehicle-4",
+      "viewport": [
+        355,
+        884
+      ]
+    },
+    {
+      "border": "0px",
+      "focusVisible": true,
+      "focused": true,
+      "inputOutline": "0px",
+      "inputShadow": "none",
+      "outline": {
+        "color": "rgb(20, 23, 29)",
+        "offset": "2px",
+        "style": "solid",
+        "width": "2px"
+      },
+      "overflow": false,
+      "phase": "before-home-320",
+      "radius": "12px",
+      "rect": {
+        "bottom": 114,
+        "height": 46,
+        "left": 16,
+        "right": 304,
+        "top": 68,
+        "width": 288,
+        "x": 16,
+        "y": 68
+      },
+      "shadow": "none",
+      "url": "http://127.0.0.1:6461/bg",
+      "viewport": [
+        320,
+        844
+      ]
+    },
+    {
+      "border": "0px",
+      "focusVisible": true,
+      "focused": true,
+      "inputOutline": "3px",
+      "inputShadow": "none",
+      "outline": {
+        "color": "rgb(20, 23, 29)",
+        "offset": "-1px",
+        "style": "solid",
+        "width": "1px"
+      },
+      "overflow": false,
+      "phase": "after-home-320",
+      "radius": "12px",
+      "rect": {
+        "bottom": 114,
+        "height": 46,
+        "left": 16,
+        "right": 304,
+        "top": 68,
+        "width": 288,
+        "x": 16,
+        "y": 68
+      },
+      "shadow": "none",
+      "url": "http://127.0.0.1:6461/bg",
+      "viewport": [
+        320,
+        844
+      ],
+      "inputOutlineStyle": "none"
+    },
+    {
+      "border": "0px",
+      "focusVisible": true,
+      "focused": true,
+      "inputOutline": "3px",
+      "inputShadow": "none",
+      "outline": {
+        "color": "rgb(20, 23, 29)",
+        "offset": "-1px",
+        "style": "solid",
+        "width": "1px"
+      },
+      "overflow": false,
+      "phase": "after-quick-355",
+      "radius": "999px",
+      "rect": {
+        "bottom": 404,
+        "height": 44,
+        "left": 16,
+        "right": 339,
+        "top": 360,
+        "width": 323,
+        "x": 16,
+        "y": 360
+      },
+      "shadow": "none",
+      "url": "http://127.0.0.1:6461/bg/listing-grid#vehicle-4",
+      "viewport": [
+        355,
+        884
+      ],
+      "inputOutlineStyle": "none"
+    },
+    {
+      "border": "0px",
+      "focusVisible": true,
+      "focused": true,
+      "inputOutline": "3px",
+      "inputShadow": "none",
+      "outline": {
+        "color": "rgb(20, 23, 29)",
+        "offset": "-1px",
+        "style": "solid",
+        "width": "1px"
+      },
+      "overflow": false,
+      "phase": "after-full-filter-355",
+      "radius": "12px",
+      "rect": {
+        "bottom": 112,
+        "height": 44,
+        "left": 16,
+        "right": 339,
+        "top": 68,
+        "width": 323,
+        "x": 16,
+        "y": 68
+      },
+      "shadow": "none",
+      "url": "http://127.0.0.1:6461/bg/listing-grid#vehicle-4",
+      "viewport": [
+        355,
+        884
+      ],
+      "inputOutlineStyle": "none"
+    },
+    {
+      "border": "0px",
+      "focusVisible": true,
+      "focused": true,
+      "inputOutline": "3px",
+      "inputShadow": "none",
+      "outline": {
+        "color": "rgb(20, 23, 29)",
+        "offset": "-1px",
+        "style": "solid",
+        "width": "1px"
+      },
+      "overflow": false,
+      "phase": "after-home-en-390",
+      "radius": "12px",
+      "rect": {
+        "bottom": 114,
+        "height": 46,
+        "left": 16,
+        "right": 374,
+        "top": 68,
+        "width": 358,
+        "x": 16,
+        "y": 68
+      },
+      "shadow": "none",
+      "url": "http://127.0.0.1:6461/en",
+      "viewport": [
+        390,
+        844
+      ]
+    },
+    {
+      "border": "0px",
+      "focusVisible": true,
+      "focused": true,
+      "inputOutline": "3px",
+      "inputShadow": "none",
+      "outline": {
+        "color": "rgb(20, 23, 29)",
+        "offset": "-1px",
+        "style": "solid",
+        "width": "1px"
+      },
+      "overflow": false,
+      "phase": "after-blog-en-390",
+      "radius": "12px",
+      "rect": {
+        "bottom": 112,
+        "height": 44,
+        "left": 16,
+        "right": 374,
+        "top": 68,
+        "width": 358,
+        "x": 16,
+        "y": 68
+      },
+      "shadow": "none",
+      "url": "http://127.0.0.1:6461/en/blog",
+      "viewport": [
+        390,
+        844
+      ]
+    },
+    {
+      "border": "1px",
+      "focusVisible": true,
+      "focused": true,
+      "inputOutline": "2px",
+      "inputShadow": "none",
+      "outline": {
+        "color": "rgb(11, 87, 208)",
+        "offset": "2px",
+        "style": "solid",
+        "width": "2px"
+      },
+      "overflow": false,
+      "phase": "desktop-blog-en-1440",
+      "radius": "999px",
+      "rect": {
+        "bottom": 418,
+        "height": 60,
+        "left": 250.5,
+        "right": 1174.5,
+        "top": 358,
+        "width": 924,
+        "x": 250.5,
+        "y": 358
+      },
+      "shadow": "none",
+      "url": "http://127.0.0.1:6461/en/blog",
+      "viewport": [
+        1440,
+        900
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "case": "bg-320-keyboard-return",
+      "focused": true,
+      "offset": "-2px",
+      "style": "solid",
+      "visible": true,
+      "width": "2px",
+      "passed": true
+    },
+    {
+      "case": "bg-filter-cancel-keeps-url",
+      "passed": true
+    },
+    {
+      "case": "en-390-search-count",
+      "passed": true
+    },
+    {
+      "case": "en-390-pointer-close",
+      "passed": true,
+      "style": "none"
+    },
+    {
+      "case": "desktop-focus-not-mobile-inset",
+      "passed": true
+    },
+    {
+      "case": "after-home-320-focus",
+      "passed": true
+    },
+    {
+      "case": "after-quick-355-focus",
+      "passed": true
+    },
+    {
+      "case": "after-full-filter-355-focus",
+      "passed": true
+    },
+    {
+      "case": "after-home-en-390-focus",
+      "passed": true
+    },
+    {
+      "case": "after-blog-en-390-focus",
+      "passed": true
+    }
+  ],
+  "preserved": "Unrelated desktop draft, dependencies, index ownership and shared dirty work",
+  "publication": "No dealer deployment or template release selection"
+}

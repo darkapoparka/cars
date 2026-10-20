@@ -1,200 +1,340 @@
 import type { DealerInventoryCopy } from "../lead-site";
-/** Reviewed text for the existing sample stock only. */
+/** Dealer-owned display copy from the exact personalized listing set. */
 export const inventoryCopy = {
-  "bmw-x5-m50d-sofia-2020": {
-    sourceDescription:
-      "Примерна обява за BMW X5 M50d с 360 камери, панорама, HUD и обдухване. Снимката е илюстративна; наличност и условия се потвърждават с автокъщата.",
-    bg: {
-      description:
-        "Примерна обява за BMW X5 M50d с 360 камери, панорама, HUD и обдухване. Снимката е илюстративна; наличност и условия се потвърждават с автокъщата.",
-      imageAlts: ["Черен BMW X5 SUV"],
+  "rolls-royce-ghost-2011-11786049135297264": {
+    "sourceDescription": "Rolls-Royce Ghost, 2011 г., 66 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона.",
+    "en": {
+      "description": "Rolls-Royce Ghost, 2011, 66 000 km. Published listing from IVO AUTO. Confirm availability, equipment and terms by phone.",
+      "imageAlts": [
+        "Rolls-Royce Ghost",
+        "Rolls-Royce Ghost",
+        "Rolls-Royce Ghost",
+        "Rolls-Royce Ghost"
+      ]
     },
-    en: {
-      description:
-        "Sample listing for a BMW X5 M50d with 360-degree cameras, panoramic roof, head-up display and ventilated seats. The image is illustrative; availability and terms must be confirmed with the dealership.",
-      imageAlts: ["Black BMW X5 SUV"],
-    },
+    "bg": {
+      "description": "Rolls-Royce Ghost, 2011 г., 66 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона.",
+      "imageAlts": [
+        "Rolls-Royce Ghost",
+        "Rolls-Royce Ghost",
+        "Rolls-Royce Ghost",
+        "Rolls-Royce Ghost"
+      ]
+    }
   },
-  "mercedes-benz-gls-400d-4matic-amg-sofia-2021": {
-    sourceDescription:
-      "GLS 400d 4MATIC AMG Line с Burmester и панорама. Голям семеен SUV от Иво Ауто - наличен за оглед в Варна.",
-    bg: {
-      description:
-        "GLS 400d 4MATIC AMG Line с Burmester и панорама. Голям семеен SUV от {shortName} - наличен за оглед в {city}.",
-      imageAlts: ["Mercedes-Benz GLS 4MATIC AMG SUV"],
+  "audi-a4-s-line-4x4-2-0t-2008-11784822971964926": {
+    "sourceDescription": "Audi A4 S-line 4x4 2.0T, 2008 г., 195 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона.",
+    "en": {
+      "description": "Audi A4 S-line 4x4 2.0T, 2008, 195 000 km. Published listing from IVO AUTO. Confirm availability, equipment and terms by phone.",
+      "imageAlts": [
+        "Audi A4 S-line 4x4 2.0T",
+        "Audi A4 S-line 4x4 2.0T",
+        "Audi A4 S-line 4x4 2.0T",
+        "Audi A4 S-line 4x4 2.0T"
+      ]
     },
-    en: {
-      description:
-        "GLS 400d 4MATIC AMG Line with Burmester audio and a panoramic roof. A large family SUV from {shortName}, available to view in {city}.",
-      imageAlts: ["Mercedes-Benz GLS 4MATIC AMG SUV"],
-    },
+    "bg": {
+      "description": "Audi A4 S-line 4x4 2.0T, 2008 г., 195 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона.",
+      "imageAlts": [
+        "Audi A4 S-line 4x4 2.0T",
+        "Audi A4 S-line 4x4 2.0T",
+        "Audi A4 S-line 4x4 2.0T",
+        "Audi A4 S-line 4x4 2.0T"
+      ]
+    }
   },
-  "bmw-750e-xdrive-m-sport-sofia-2024": {
-    sourceDescription:
-      "Очакван внос: 7 Series plug-in hybrid с M Sport. Нисък пробег - Иво Ауто организира доставка и оглед в Варна.",
-    bg: {
-      description:
-        "Очакван внос: 7 Series plug-in hybrid с M Sport. Нисък пробег - {shortName} организира доставка и оглед в {city}.",
-      imageAlts: ["BMW 7 Series"],
+  "porsche-panamera-turbo-4-8i-2010-11775231551222536": {
+    "sourceDescription": "Porsche Panamera Turbo 4.8i, 2010 г., 145 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона.",
+    "en": {
+      "description": "Porsche Panamera Turbo 4.8i, 2010, 145 000 km. Published listing from IVO AUTO. Confirm availability, equipment and terms by phone.",
+      "imageAlts": [
+        "Porsche Panamera Turbo 4.8i",
+        "Porsche Panamera Turbo 4.8i",
+        "Porsche Panamera Turbo 4.8i",
+        "Porsche Panamera Turbo 4.8i"
+      ]
     },
-    en: {
-      description:
-        "Expected import: 7 Series plug-in hybrid with M Sport. Low mileage; {shortName} arranges delivery and viewing in {city}.",
-      imageAlts: ["BMW 7 Series"],
-    },
+    "bg": {
+      "description": "Porsche Panamera Turbo 4.8i, 2010 г., 145 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона.",
+      "imageAlts": [
+        "Porsche Panamera Turbo 4.8i",
+        "Porsche Panamera Turbo 4.8i",
+        "Porsche Panamera Turbo 4.8i",
+        "Porsche Panamera Turbo 4.8i"
+      ]
+    }
   },
-  "mercedes-benz-e-63-s-amg-sofia-2021": {
-    sourceDescription:
-      "E 63 S AMG facelift с 360, HUD и Burmester. Спортна лимузина от Иво Ауто.",
-    bg: {
-      description:
-        "E 63 S AMG facelift с 360, HUD и Burmester. Спортна лимузина от {dealer}.",
-      imageAlts: ["Mercedes-Benz E-Class седан"],
+  "dodge-durango-3-6-face-lift-6-1-2015-21784804233950248": {
+    "sourceDescription": "Dodge Durango 3.6 Face Lift Газ.Инж. 6+ 1, 2015 г., 202 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона.",
+    "en": {
+      "description": "Dodge Durango 3.6 Face Lift Газ.Инж. 6+ 1, 2015, 202 000 km. Published listing from IVO AUTO. Confirm availability, equipment and terms by phone.",
+      "imageAlts": [
+        "Dodge Durango 3.6 Face Lift Газ.Инж. 6+ 1",
+        "Dodge Durango 3.6 Face Lift Газ.Инж. 6+ 1",
+        "Dodge Durango 3.6 Face Lift Газ.Инж. 6+ 1",
+        "Dodge Durango 3.6 Face Lift Газ.Инж. 6+ 1"
+      ]
     },
-    en: {
-      description:
-        "Facelift E 63 S AMG with 360-degree cameras, head-up display and Burmester audio. A sports saloon from {dealer}.",
-      imageAlts: ["Mercedes-Benz E-Class saloon"],
-    },
+    "bg": {
+      "description": "Dodge Durango 3.6 Face Lift Газ.Инж. 6+ 1, 2015 г., 202 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона.",
+      "imageAlts": [
+        "Dodge Durango 3.6 Face Lift Газ.Инж. 6+ 1",
+        "Dodge Durango 3.6 Face Lift Газ.Инж. 6+ 1",
+        "Dodge Durango 3.6 Face Lift Газ.Инж. 6+ 1",
+        "Dodge Durango 3.6 Face Lift Газ.Инж. 6+ 1"
+      ]
+    }
   },
-  "mercedes-benz-cls-400d-4matic-sofia-2020": {
-    sourceDescription:
-      "CLS 400d 4MATIC AMG Line Designo с 360 камери. Елегантно купе-седан от Иво Ауто в Варна.",
-    bg: {
-      description:
-        "CLS 400d 4MATIC AMG Line Designo с 360 камери. Елегантно купе-седан от {shortName} в {city}.",
-      imageAlts: ["Mercedes CLS"],
+  "bmw-520-m-digital-2018-11784710943679925": {
+    "sourceDescription": "BMW 520 M-пакет Digital, 2018 г., 165 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона.",
+    "en": {
+      "description": "BMW 520 M-пакет Digital, 2018, 165 000 km. Published listing from IVO AUTO. Confirm availability, equipment and terms by phone.",
+      "imageAlts": [
+        "BMW 520 M-пакет Digital",
+        "BMW 520 M-пакет Digital",
+        "BMW 520 M-пакет Digital",
+        "BMW 520 M-пакет Digital"
+      ]
     },
-    en: {
-      description:
-        "CLS 400d 4MATIC AMG Line Designo with 360-degree cameras. An elegant four-door coupe from {shortName} in {city}.",
-      imageAlts: ["Mercedes CLS"],
-    },
+    "bg": {
+      "description": "BMW 520 M-пакет Digital, 2018 г., 165 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона.",
+      "imageAlts": [
+        "BMW 520 M-пакет Digital",
+        "BMW 520 M-пакет Digital",
+        "BMW 520 M-пакет Digital",
+        "BMW 520 M-пакет Digital"
+      ]
+    }
   },
-  "audi-q8-50-tdi-quattro-s-line-sofia-2021": {
-    sourceDescription:
-      "Очакван внос: Q8 50 TDI quattro S line Plus. Купе-SUV с quattro за клиенти на Иво Ауто.",
-    bg: {
-      description:
-        "Очакван внос: Q8 50 TDI quattro S line Plus. Купе-SUV с quattro за клиенти на {shortName}.",
-      imageAlts: ["Audi Q8"],
+  "vw-touran-1-6tdi-6-1-2012-11780924566736048": {
+    "sourceDescription": "VW Touran 1.6TDI Автомат 6+ 1, 2012 г., 210 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона.",
+    "en": {
+      "description": "VW Touran 1.6TDI Автомат 6+ 1, 2012, 210 000 km. Published listing from IVO AUTO. Confirm availability, equipment and terms by phone.",
+      "imageAlts": [
+        "VW Touran 1.6TDI Автомат 6+ 1",
+        "VW Touran 1.6TDI Автомат 6+ 1",
+        "VW Touran 1.6TDI Автомат 6+ 1",
+        "VW Touran 1.6TDI Автомат 6+ 1"
+      ]
     },
-    en: {
-      description:
-        "Expected import: Q8 50 TDI quattro S line Plus. A coupe-SUV with quattro for {shortName} customers.",
-      imageAlts: ["Audi Q8"],
-    },
+    "bg": {
+      "description": "VW Touran 1.6TDI Автомат 6+ 1, 2012 г., 210 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона.",
+      "imageAlts": [
+        "VW Touran 1.6TDI Автомат 6+ 1",
+        "VW Touran 1.6TDI Автомат 6+ 1",
+        "VW Touran 1.6TDI Автомат 6+ 1",
+        "VW Touran 1.6TDI Автомат 6+ 1"
+      ]
+    }
   },
-  "mercedes-benz-gle-400d-coupe-sofia-2021": {
-    sourceDescription:
-      "GLE 400d Coupe 4MATIC AMG с 360 и Burmester. Наличен при Иво Ауто - Варна.",
-    bg: {
-      description:
-        "GLE 400d Coupe 4MATIC AMG с 360 и Burmester. Наличен при {dealer} - {city}.",
-      imageAlts: ["Черен Mercedes-Benz GLE SUV"],
+  "vw-cc-2-0i-2013-11778070752693531": {
+    "sourceDescription": "VW CC 2.0i, 2013 г., 214 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона.",
+    "en": {
+      "description": "VW CC 2.0i, 2013, 214 000 km. Published listing from IVO AUTO. Confirm availability, equipment and terms by phone.",
+      "imageAlts": [
+        "VW CC 2.0i",
+        "VW CC 2.0i",
+        "VW CC 2.0i",
+        "VW CC 2.0i"
+      ]
     },
-    en: {
-      description:
-        "GLE 400d Coupe 4MATIC AMG with 360-degree cameras and Burmester audio. Available from {dealer} in {city}.",
-      imageAlts: ["Black Mercedes-Benz GLE SUV"],
-    },
+    "bg": {
+      "description": "VW CC 2.0i, 2013 г., 214 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона.",
+      "imageAlts": [
+        "VW CC 2.0i",
+        "VW CC 2.0i",
+        "VW CC 2.0i",
+        "VW CC 2.0i"
+      ]
+    }
   },
-  "mercedes-benz-gle-53-amg-coupe-sofia-2022": {
-    sourceDescription:
-      "Очакван внос: GLE 53 AMG Coupe Night Pack. Иво Ауто предлага собствен лизинг след оглед.",
-    bg: {
-      description:
-        "Очакван внос: GLE 53 AMG Coupe Night Pack. {shortName} предлага собствен лизинг след оглед.",
-      imageAlts: ["Бял Mercedes-Benz GLE AMG SUV"],
+  "bmw-x5-4-0d-face-lift-8-2011-21779453321117197": {
+    "sourceDescription": "BMW X5 4.0D Face Lift 8ск., 2011 г., 196 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона.",
+    "en": {
+      "description": "BMW X5 4.0D Face Lift 8ск., 2011, 196 000 km. Published listing from IVO AUTO. Confirm availability, equipment and terms by phone.",
+      "imageAlts": [
+        "BMW X5 4.0D Face Lift 8ск.",
+        "BMW X5 4.0D Face Lift 8ск.",
+        "BMW X5 4.0D Face Lift 8ск.",
+        "BMW X5 4.0D Face Lift 8ск."
+      ]
     },
-    en: {
-      description:
-        "Expected import: GLE 53 AMG Coupe Night Pack. {shortName} offers in-house leasing after a viewing.",
-      imageAlts: ["White Mercedes-Benz GLE AMG SUV"],
-    },
+    "bg": {
+      "description": "BMW X5 4.0D Face Lift 8ск., 2011 г., 196 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона.",
+      "imageAlts": [
+        "BMW X5 4.0D Face Lift 8ск.",
+        "BMW X5 4.0D Face Lift 8ск.",
+        "BMW X5 4.0D Face Lift 8ск.",
+        "BMW X5 4.0D Face Lift 8ск."
+      ]
+    }
   },
-  "mercedes-benz-s-350d-long-amg-sofia-2019": {
-    sourceDescription:
-      "S 350d Long с S63 AMG оптика и пакет за шофьор. Представителна лимузина от Иво Ауто.",
-    bg: {
-      description:
-        "S 350d Long с S63 AMG оптика и пакет за шофьор. Представителна лимузина от {shortName}.",
-      imageAlts: ["Mercedes-Benz S-Class седан"],
+  "bmw-x5-3-0d-face-lift-2005-21779444147151936": {
+    "sourceDescription": "BMW X5 3.0D Face Lift, 2005 г., 195 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона.",
+    "en": {
+      "description": "BMW X5 3.0D Face Lift, 2005, 195 000 km. Published listing from IVO AUTO. Confirm availability, equipment and terms by phone.",
+      "imageAlts": [
+        "BMW X5 3.0D Face Lift",
+        "BMW X5 3.0D Face Lift",
+        "BMW X5 3.0D Face Lift",
+        "BMW X5 3.0D Face Lift"
+      ]
     },
-    en: {
-      description:
-        "S 350d Long with S63 AMG styling and a chauffeur package. An executive saloon from {shortName}.",
-      imageAlts: ["Mercedes-Benz S-Class saloon"],
-    },
+    "bg": {
+      "description": "BMW X5 3.0D Face Lift, 2005 г., 195 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона.",
+      "imageAlts": [
+        "BMW X5 3.0D Face Lift",
+        "BMW X5 3.0D Face Lift",
+        "BMW X5 3.0D Face Lift",
+        "BMW X5 3.0D Face Lift"
+      ]
+    }
   },
-  "mercedes-benz-v-250d-vip-business-sofia-2018": {
-    sourceDescription:
-      "V 250d VIP Business с TV, обдухване и подгряване. Бизнес ван от Иво Ауто.",
-    bg: {
-      description:
-        "V 250d VIP Business с TV, обдухване и подгряване. Бизнес ван от {dealer}.",
-      imageAlts: ["V-Class ван"],
+  "bmw-418-d-m-2017-11780659371731573": {
+    "sourceDescription": "BMW 418 D M-Пакет, 2017 г., 149 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона.",
+    "en": {
+      "description": "BMW 418 D M-Пакет, 2017, 149 000 km. Published listing from IVO AUTO. Confirm availability, equipment and terms by phone.",
+      "imageAlts": [
+        "BMW 418 D M-Пакет",
+        "BMW 418 D M-Пакет",
+        "BMW 418 D M-Пакет",
+        "BMW 418 D M-Пакет"
+      ]
     },
-    en: {
-      description:
-        "V 250d VIP Business with TV, ventilated and heated seats. A business van from {dealer}.",
-      imageAlts: ["V-Class van"],
-    },
+    "bg": {
+      "description": "BMW 418 D M-Пакет, 2017 г., 149 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона.",
+      "imageAlts": [
+        "BMW 418 D M-Пакет",
+        "BMW 418 D M-Пакет",
+        "BMW 418 D M-Пакет",
+        "BMW 418 D M-Пакет"
+      ]
+    }
   },
-  "range-rover-sport-svr-sofia-2021": {
-    sourceDescription:
-      "Range Rover Sport SVR 600 к.с. с панорама, 360 и Meridian. Висок клас SUV от Иво Ауто.",
-    bg: {
-      description:
-        "Range Rover Sport SVR 600 к.с. с панорама, 360 и Meridian. Висок клас SUV от {shortName}.",
-      imageAlts: ["Range Rover Sport"],
+  "subaru-b9-tribeca-3-0-2006-21781871293573646": {
+    "sourceDescription": "Subaru B9 tribeca 3.0 Газ.Инж., 2006 г., 170 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона.",
+    "en": {
+      "description": "Subaru B9 tribeca 3.0 Газ.Инж., 2006, 170 000 km. Published listing from IVO AUTO. Confirm availability, equipment and terms by phone.",
+      "imageAlts": [
+        "Subaru B9 tribeca 3.0 Газ.Инж.",
+        "Subaru B9 tribeca 3.0 Газ.Инж.",
+        "Subaru B9 tribeca 3.0 Газ.Инж.",
+        "Subaru B9 tribeca 3.0 Газ.Инж."
+      ]
     },
-    en: {
-      description:
-        "Range Rover Sport SVR, 600 hp, with a panoramic roof, 360-degree cameras and Meridian audio. A premium SUV from {shortName}.",
-      imageAlts: ["Range Rover Sport"],
-    },
+    "bg": {
+      "description": "Subaru B9 tribeca 3.0 Газ.Инж., 2006 г., 170 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона.",
+      "imageAlts": [
+        "Subaru B9 tribeca 3.0 Газ.Инж.",
+        "Subaru B9 tribeca 3.0 Газ.Инж.",
+        "Subaru B9 tribeca 3.0 Газ.Инж.",
+        "Subaru B9 tribeca 3.0 Газ.Инж."
+      ]
+    }
   },
-  "bmw-430i-xdrive-gran-coupe-sofia-2023": {
-    sourceDescription:
-      "430i xDrive Gran Coupe M Sport с digital кокпит и Harman Kardon. Иво Ауто, Варна.",
-    bg: {
-      description:
-        "430i xDrive Gran Coupe M Sport с digital кокпит и Harman Kardon. {shortName}, {city}.",
-      imageAlts: ["BMW 4 Series"],
+  "mercedes-benz-ml-250-amg-2014-21762959348847465": {
+    "sourceDescription": "Mercedes-Benz ML 250 AMG-Пакет, 2014 г., 130 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона.",
+    "en": {
+      "description": "Mercedes-Benz ML 250 AMG-Пакет, 2014, 130 000 km. Published listing from IVO AUTO. Confirm availability, equipment and terms by phone.",
+      "imageAlts": [
+        "Mercedes-Benz ML 250 AMG-Пакет",
+        "Mercedes-Benz ML 250 AMG-Пакет",
+        "Mercedes-Benz ML 250 AMG-Пакет",
+        "Mercedes-Benz ML 250 AMG-Пакет"
+      ]
     },
-    en: {
-      description:
-        "430i xDrive Gran Coupe M Sport with a digital cockpit and Harman Kardon audio. {shortName}, {city}.",
-      imageAlts: ["BMW 4 Series"],
-    },
+    "bg": {
+      "description": "Mercedes-Benz ML 250 AMG-Пакет, 2014 г., 130 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона.",
+      "imageAlts": [
+        "Mercedes-Benz ML 250 AMG-Пакет",
+        "Mercedes-Benz ML 250 AMG-Пакет",
+        "Mercedes-Benz ML 250 AMG-Пакет",
+        "Mercedes-Benz ML 250 AMG-Пакет"
+      ]
+    }
   },
-  "bmw-m4-competition-sofia-2021": {
-    sourceDescription:
-      "BMW M4 Competition с M пакет, спортен салон и digital кокпит. Купе от портфолиото на Иво Ауто.",
-    bg: {
-      description:
-        "BMW M4 Competition с M пакет, спортен салон и digital кокпит. Купе от портфолиото на {dealer}.",
-      imageAlts: ["Червено BMW M4 Competition пред модерен шоурум"],
+  "mercedes-benz-s-500-4matic-2007-11774893593485843": {
+    "sourceDescription": "Mercedes-Benz S 500 4Matic Газ.Инж, 2007 г., 290 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона.",
+    "en": {
+      "description": "Mercedes-Benz S 500 4Matic Газ.Инж, 2007, 290 000 km. Published listing from IVO AUTO. Confirm availability, equipment and terms by phone.",
+      "imageAlts": [
+        "Mercedes-Benz S 500 4Matic Газ.Инж",
+        "Mercedes-Benz S 500 4Matic Газ.Инж",
+        "Mercedes-Benz S 500 4Matic Газ.Инж",
+        "Mercedes-Benz S 500 4Matic Газ.Инж"
+      ]
     },
-    en: {
-      description:
-        "BMW M4 Competition with M package, sports interior and digital cockpit. A coupe from the {dealer} collection.",
-      imageAlts: ["Red BMW M4 Competition in front of a modern showroom"],
-    },
+    "bg": {
+      "description": "Mercedes-Benz S 500 4Matic Газ.Инж, 2007 г., 290 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона.",
+      "imageAlts": [
+        "Mercedes-Benz S 500 4Matic Газ.Инж",
+        "Mercedes-Benz S 500 4Matic Газ.Инж",
+        "Mercedes-Benz S 500 4Matic Газ.Инж",
+        "Mercedes-Benz S 500 4Matic Газ.Инж"
+      ]
+    }
   },
-  "bmw-x5-xdrive40d-berlin-2022": {
-    sourceDescription:
-      "Крос-бордер демо наличност с оторизирани медии и право на доставка. Финалният транспорт, данъци и регистрация се уточняват с оферта от Иво Ауто.",
-    bg: {
-      description:
-        "Крос-бордер демо наличност с оторизирани медии и право на доставка. Финалният транспорт, данъци и регистрация се уточняват с оферта от {shortName}.",
-      imageAlts: ["Черен BMW X5 SUV в градска среда"],
+  "bmw-730-d-m-2010-11756369185395904": {
+    "sourceDescription": "BMW 730 D M-Пакет, 2010 г., 214 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона.",
+    "en": {
+      "description": "BMW 730 D M-Пакет, 2010, 214 000 km. Published listing from IVO AUTO. Confirm availability, equipment and terms by phone.",
+      "imageAlts": [
+        "BMW 730 D M-Пакет",
+        "BMW 730 D M-Пакет",
+        "BMW 730 D M-Пакет",
+        "BMW 730 D M-Пакет"
+      ]
     },
-    en: {
-      description:
-        "Cross-border demo inventory with authorized images and delivery rights. Final transport, tax and registration costs are confirmed in a quote from {shortName}.",
-      imageAlts: ["Black BMW X5 SUV in an urban setting"],
-    },
+    "bg": {
+      "description": "BMW 730 D M-Пакет, 2010 г., 214 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона.",
+      "imageAlts": [
+        "BMW 730 D M-Пакет",
+        "BMW 730 D M-Пакет",
+        "BMW 730 D M-Пакет",
+        "BMW 730 D M-Пакет"
+      ]
+    }
   },
+  "bmw-m5-2008-11775822194120541": {
+    "sourceDescription": "BMW M5, 2008 г., 218 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона.",
+    "en": {
+      "description": "BMW M5, 2008, 218 000 km. Published listing from IVO AUTO. Confirm availability, equipment and terms by phone.",
+      "imageAlts": [
+        "BMW M5",
+        "BMW M5",
+        "BMW M5",
+        "BMW M5"
+      ]
+    },
+    "bg": {
+      "description": "BMW M5, 2008 г., 218 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона.",
+      "imageAlts": [
+        "BMW M5",
+        "BMW M5",
+        "BMW M5",
+        "BMW M5"
+      ]
+    }
+  },
+  "audi-a8-full-led-2013-11769186790854071": {
+    "sourceDescription": "Audi A8 Full Led, 2013 г., 215 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона.",
+    "en": {
+      "description": "Audi A8 Full Led, 2013, 215 000 km. Published listing from IVO AUTO. Confirm availability, equipment and terms by phone.",
+      "imageAlts": [
+        "Audi A8 Full Led",
+        "Audi A8 Full Led",
+        "Audi A8 Full Led",
+        "Audi A8 Full Led"
+      ]
+    },
+    "bg": {
+      "description": "Audi A8 Full Led, 2013 г., 215 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона.",
+      "imageAlts": [
+        "Audi A8 Full Led",
+        "Audi A8 Full Led",
+        "Audi A8 Full Led",
+        "Audi A8 Full Led"
+      ]
+    }
+  }
 } satisfies DealerInventoryCopy;

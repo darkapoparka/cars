@@ -1,0 +1,50 @@
+{
+  "mode": "dealer",
+  "id": "xcar-varna",
+  "name": "Х CAR",
+  "shortName": "Х CAR",
+  "logo": {
+    "light": "/dealer-brand/v2-70232141a1307631/logo-on-light.webp",
+    "dark": "/dealer-brand/v2-70232141a1307631/logo-on-dark.webp",
+    "icon": "/dealer-brand/v2-70232141a1307631/app-icon.png"
+  },
+  "defaultLocale": "bg",
+  "enabledLocales": [
+    "en",
+    "bg"
+  ],
+  "welcomeEnabled": true,
+  "country": "BG",
+  "currency": "EUR",
+  "city": "Варна",
+  "address": "Север, бул. Владислав Варненчик, Варна, България",
+  "phoneDisplay": "0988975522",
+  "phoneE164": "+359988975522",
+  "email": "",
+  "mapsUrl": "https://www.google.com/maps/search/?api=1&query=%D0%A5%20CAR%2C%20%D0%A1%D0%B5%D0%B2%D0%B5%D1%80%2C%20%D0%B1%D1%83%D0%BB.%20%D0%92%D0%BB%D0%B0%D0%B4%D0%B8%D1%81%D0%BB%D0%B0%D0%B2%20%D0%92%D0%B0%D1%80%D0%BD%D0%B5%D0%BD%D1%87%D0%B8%D0%BA%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F",
+  "website": "https://xcar.mobile.bg/",
+  "whatsappUrl": "",
+  "socialLinks": [
+    {
+      "label": "Facebook",
+      "url": ""
+    },
+    {
+      "label": "Instagram",
+      "url": ""
+    },
+    {
+      "label": "Mobile.bg",
+      "url": ""
+    },
+    {
+      "label": "Cars.bg",
+      "url": ""
+    }
+  ],
+  "referenceClaimsApproved": false,
+  "services": [],
+  "observedAt": "2026-10-11T11:47:28.687Z",
+  "inventoryNotice": "Датирана извадка от публични обяви, не складова система в реално време. Потвърдете цената, ДДС и наличността.",
+  "previewNotice": "Independent design preview. No purchase, reservation or message is submitted by this website."
+}

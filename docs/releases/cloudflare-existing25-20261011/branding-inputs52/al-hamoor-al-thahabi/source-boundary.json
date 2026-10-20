@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-existing-dealer-branding-input-boundary",
+  "dealer": "al-hamoor-al-thahabi",
+  "identityKey": "existing-slug:al-hamoor-al-thahabi",
+  "cohort": "existing-vercel25",
+  "ownership": "maintained-main",
+  "branding": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/al-hamoor-al-thahabi/branding.json",
+    "sha256": "7c7ef45db610e6e921eb62e2b5786c15021eb46be24b3e741b560f3530c00af6"
+  },
+  "originalManifest": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/al-hamoor-al-thahabi/source/original-dealer.json",
+    "sha256": "d137a4627c1bfcd4010b4af7640ba11489250a2525a968d42394929a68bc0219"
+  },
+  "originalManifestGitBlob": "04b9ac6b6908fa0f8bf1301250058644efff3174",
+  "originalRepository": "darkapoparka/cars-alhamooralthahabi",
+  "sourceRef": {
+    "ref": "main",
+    "commit": "c5c6b0da611a3bf2756c1be2ff9764f6903536ec",
+    "tree": "8081358029980924e9f273a4cd5564109f62605e"
+  },
+  "originalData": [
+    {
+      "path": "clients/al-hamoor-al-thahabi/business-facts.json",
+      "gitBlob": "8c427aaa279cbfdef7593ac83db45787e85bb5b1",
+      "bytes": 2778
+    },
+    {
+      "path": "clients/al-hamoor-al-thahabi/dealer.json",
+      "gitBlob": "04b9ac6b6908fa0f8bf1301250058644efff3174",
+      "bytes": 3058
+    },
+    {
+      "path": "clients/al-hamoor-al-thahabi/stock.json",
+      "gitBlob": "bb72edcb8e7150a728e4a74eed4b6f5629c2ea24",
+      "bytes": 14090
+    }
+  ],
+  "sourceProof": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/evidence/original-source-proof.json",
+    "sha256": "477c4eedc097eb2e105b1d50cf1bc3701b558679e8f6c3c3681a3ccd6626e08c"
+  },
+  "roster": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/evidence/accepted-roster.json",
+    "sha256": "c23c6c4ea10acaca9fdc8d09351fd64735a9e2245385fb12a0f95d71f9f0080d"
+  },
+  "sourceCreation": false,
+  "clientIntegration": false,
+  "buildApproval": false,
+  "hostedApproval": false,
+  "eligibleForExistingQualifiedRequest": true,
+  "holds": [
+    "Exact latest template/source-delta/pilot qualification and preservation-aware updater remain required."
+  ]
+}

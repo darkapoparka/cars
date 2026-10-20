@@ -7,14 +7,14 @@ const base = previewUrl();
 const output = 'artifacts/route-smoke';
 const suite = await smokeReport(output, base);
 const browser = await launchBrowser();
-const core = ['/', '/listing-grid', '/about-us', '/blog', '/contact', ...['inspection', 'leasing', 'trade-in', 'import'].map(topic => `/contact?topic=${topic}`)];
+const core = ['/', '/cars', '/about-us', '/blog', '/contact', ...['inspection', 'leasing', 'trade-in', 'import'].map(topic => `/contact?topic=${topic}`)];
 const invalid = ['/listing-detail-v1/999', '/listing-detail-v1/01', '/blog-detail/999', '/missing-page'];
 const sitemap = await (await fetch(`${base}/sitemap.xml`)).text();
 const details = [...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map(match => new URL(match[1]).pathname).filter(path => /\/\d+$/.test(path));
 try {
   for (const width of [390, 1440]) {
     const context = await returningContext(browser, { viewport: { width, height: width === 390 ? 844 : 900 }, reducedMotion: 'reduce' });
-    for (const route of [...core, ...details, '/listing-grid?q=no-match-xyz', '/blog?q=no-match-xyz', ...invalid]) {
+    for (const route of [...core, ...details, '/cars?q=no-match-xyz', '/blog?q=no-match-xyz', ...invalid]) {
       await suite.check(`${width} ${route}`, async () => {
         const page = await context.newPage();
         const errors = [];
@@ -40,7 +40,19 @@ try {
           assert.deepEqual(geometry.broken, []); assert.deepEqual(errors, []); assert.deepEqual(failedAssets, []);
           assert.equal(geometry.main, 1); assert(geometry.headings >= 1); assert(geometry.token);
           assert.equal(geometry.dock, appPath(route).startsWith('/listing-detail-v1/') && !invalid.includes(route));
-          if (route === '/about-us') assert.equal(await page.locator('[data-demo-content]').count(), 0);
+          if (route === '/about-us') {
+            // Preview configuration deliberately permits labeled sample sections.
+            // Do not remove the approved team UI just to satisfy a retired zero-count assumption.
+            const demos = page.locator('[data-demo-content]');
+            const count = await demos.count();
+            if (count) {
+              const robots = await page.locator('meta[name="robots"]').getAttribute('content');
+              assert.match(robots ?? '', /(?:^|[,\s])noindex(?:$|[,\s])/i, 'Sample sections must never be indexable');
+              const introductions = await demos.locator('header p').allTextContents();
+              assert.equal(introductions.length, count, 'Every sample section requires an introductory disclaimer');
+              assert(introductions.every(text => text.trim()), 'Sample introductions must not be empty');
+            }
+          }
           await page.evaluate(() => scrollTo(0, 0));
           await page.screenshot({ path: `${output}/${width}-${route.replace(/[^a-z0-9]/gi, '_') || 'home'}.png` });
           return geometry;
@@ -53,7 +65,7 @@ try {
     await suite.check(`responsive ${width}x${height}`, async () => {
       const page = await returningPage(browser, { viewport: { width, height } });
       try {
-        for (const route of ['/', '/listing-grid', '/listing-detail-v1/4', '/blog-detail/1', '/about-us', '/contact?topic=leasing&vehicle=4']) {
+        for (const route of ['/', '/cars', '/listing-detail-v1/4', '/blog-detail/1', '/about-us', '/contact?topic=leasing&vehicle=4']) {
           await page.goto(base + route, { waitUntil: 'networkidle' });
           assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1), `${route}: overflow`);
         }

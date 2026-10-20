@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-source-publication",
+  "reviewed": true,
+  "reviewedAt": "2026-10-13T14:15:52.717Z",
+  "dealer": "nunki-1-varna",
+  "dealerId": "nunki-1-varna",
+  "repository": "darkapoparka/cars-nunki-1-varna",
+  "sourceOwnership": "cars-canonical",
+  "request": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/batch-2-recovery-wave02-10-request.json",
+    "sha256": "c4d350dd16a9495c5f8db496d1931baee099849105b427a2928a7d171bcd5b9f"
+  },
+  "preparation": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/nunki-1-varna/source-38355305369/source-preparation.json",
+    "sha256": "8b985ba1fe8d2495b78516a4d363631be7d570ccd02b74435995f70827de06bc"
+  },
+  "proposal": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/nunki-1-varna/source-38355305369/source-proposal.json",
+    "sha256": "4c97f531be308213e726a284bf3cb95741451f24a0a2e06d5992c331cac65658"
+  },
+  "inputMapping": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/nunki-1-varna/source-38355305369/input-mapping.json",
+    "sha256": "b3869d05d967605e8ce25d93c37e471af5837863f24570d5ea89d7c63df7b34e"
+  },
+  "sourcePublication": {
+    "repository": "darkapoparka/cars",
+    "commit": "b6040ffc0aedd5858b5d47ece5f3f78eac699584",
+    "sourceTree": "01e824b42d4bdcc80fb9f7699581ac0801fd2562",
+    "ref": "refs/heads/main",
+    "publishedAt": "2026-10-13T07:47:19.708Z",
+    "evidence": "https://github.com/darkapoparka/cars/commit/b6040ffc0aedd5858b5d47ece5f3f78eac699584"
+  }
+}

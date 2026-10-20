@@ -17,6 +17,10 @@ import {
 } from "@repo/marketplace-domain";
 import type { Prisma } from "./generated/client";
 import { database } from "./index";
+import {
+  type PublicInventoryScope,
+  scopePublicInventory,
+} from "./public-site-scope";
 
 const LISTING_PAGE_SIZE = 24;
 const PRICE_MINOR_SCALE = 100;
@@ -160,6 +164,12 @@ const getOriginWhere = (
 const getRangeWhere = (
   filters: MarketplaceSearchParams
 ): Prisma.MarketplaceListingWhereInput => ({
+  ...(filters.powerMin !== undefined
+    ? { enginePowerHp: { gte: filters.powerMin } }
+    : {}),
+  // Equipment is not projected into database listings yet; unknown equipment
+  // must not be treated as a match for an explicit equipment filter.
+  ...(filters.extra ? { id: { in: [] } } : {}),
   ...(filters.priceMin !== undefined || filters.priceMax !== undefined
     ? {
         priceAmountMinor: {
@@ -629,21 +639,28 @@ const getCurrentPublicationTruthByOffer = async (
 };
 
 export const searchMarketplaceListings = async (
-  filters: MarketplaceSearchParams
+  filters: MarketplaceSearchParams,
+  scope: PublicInventoryScope = {}
 ): Promise<MarketplaceListingSearchResult> => {
   const now = new Date();
   const trustedSupplierOrgIds = await getCurrentTrustedSupplierOrgIds(now);
-  const where = getMarketplaceListingWhere(filters, now, trustedSupplierOrgIds);
-  const modelCountWhere = getMarketplaceListingWhere(
-    {
-      ...filters,
-      derivative: undefined,
-      make: undefined,
-      model: undefined,
-      trim: undefined,
-    },
-    now,
-    trustedSupplierOrgIds
+  const where = scopePublicInventory(
+    getMarketplaceListingWhere(filters, now, trustedSupplierOrgIds),
+    scope
+  );
+  const modelCountWhere = scopePublicInventory(
+    getMarketplaceListingWhere(
+      {
+        ...filters,
+        derivative: undefined,
+        make: undefined,
+        model: undefined,
+        trim: undefined,
+      },
+      now,
+      trustedSupplierOrgIds
+    ),
+    scope
   );
   const skip = (filters.page - 1) * LISTING_PAGE_SIZE;
 
@@ -702,6 +719,7 @@ export const getMarketplaceListingBySlug = async (
   options: {
     allowUnavailableDestination?: boolean;
     destinationCountryCode?: string;
+    dealerOrgId?: string;
   } = {}
 ) => {
   const now = new Date();
@@ -718,7 +736,7 @@ export const getMarketplaceListingBySlug = async (
           authorityDestinationCountryCode,
           trustedSupplierOrgIds
         ),
-        { slug },
+        scopePublicInventory({ slug }, options),
       ],
     },
   });
@@ -753,6 +771,7 @@ export const getMarketplaceListingsBySlugs = async (
   options: {
     allowUnavailableDestination?: boolean;
     destinationCountryCode?: string;
+    dealerOrgId?: string;
   } = {}
 ): Promise<VehicleListing[]> => {
   if (slugs.length === 0) {
@@ -778,7 +797,7 @@ export const getMarketplaceListingsBySlugs = async (
           authorityDestinationCountryCode,
           trustedSupplierOrgIds
         ),
-        { slug: { in: uniqueSlugs } },
+        scopePublicInventory({ slug: { in: uniqueSlugs } }, options),
       ],
     },
   });
@@ -816,7 +835,11 @@ export const getMarketplaceListingsBySlugs = async (
 
 export const getRelatedMarketplaceListings = async (
   listing: VehicleListing,
-  options: { destinationCountryCode?: string; limit?: number } = {}
+  options: {
+    destinationCountryCode?: string;
+    limit?: number;
+    dealerOrgId?: string;
+  } = {}
 ) => {
   const now = new Date();
   const trustedSupplierOrgIds = await getCurrentTrustedSupplierOrgIds(now);
@@ -827,12 +850,15 @@ export const getRelatedMarketplaceListings = async (
       { sellerVerificationStatus: "desc" },
       { publishedAt: "desc" },
     ],
-    take: options.limit ?? 3,
-    where: getRelatedListingWhere(
-      listing,
-      now,
-      options.destinationCountryCode,
-      trustedSupplierOrgIds
+    take: Math.min(Math.max(options.limit ?? 3, 1), 24),
+    where: scopePublicInventory(
+      getRelatedListingWhere(
+        listing,
+        now,
+        options.destinationCountryCode,
+        trustedSupplierOrgIds
+      ),
+      options
     ),
   });
 

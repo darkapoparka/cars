@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-reviewed-modern-bilingual-copy-input",
+  "dealer": "stefancar-varna",
+  "sourceCommit": "d9594c2979f668831b78609e4e990640259aee81",
+  "baselineTree": "5a33fe3e77214ed18e86712a24d6bbb1ad7ec08a",
+  "inputSha256": "f3ce6be5339fae3f2c89e8e51f2fbcbd38359fab7d18241d6858338e73f18c28",
+  "modernInputRowsSha256": "27eb12df5e017a5889fc16c119bdef8eb8ba63eea720130b22405bc5e503f6f3",
+  "listingCount": 1,
+  "profileInputs": [
+    {
+      "path": "dealer.json",
+      "gitBlob": "42473717da416acacede394d64c0c8b83882f797",
+      "sha256": "a80d0933d429b3330de4e03f5b91acb05c5d66803c639b7e25fbc03b506e3faa",
+      "bytes": 4440
+    },
+    {
+      "path": "business-facts.json",
+      "gitBlob": "0b94df9a6d9744218ab7c4b6937f42024c2bc3be",
+      "sha256": "cd224a3269e6f288abc6d0e50230582905bd53907bcb75df061289fb00a13b9e",
+      "bytes": 1998
+    },
+    {
+      "path": "stock.json",
+      "gitBlob": "aa365614f339896b9a56cb21d341375da2c68a84",
+      "sha256": "cf568ef3f2a3cc8c2805136ac9c5bf6806a5d660e63227dfe38fe156c020bef8",
+      "bytes": 10663
+    }
+  ],
+  "reviewedGeneratorHelper": {
+    "path": "scripts/lib/modern-dealer-inventory-copy.mjs",
+    "sha256": "cbdbaa28dc07911cfe913b4e627671b6556fc25d3bfe59364e29c5ca5a29072b",
+    "sourceCommit": "14d86f67c160699c18a6ec5658197cc4d9011e0b"
+  },
+  "review": {
+    "displayCopyOnly": true,
+    "exactSourceDescriptionKeys": true,
+    "listingFactsUnchanged": true,
+    "imageUrlsUnchanged": true,
+    "imageAltsPreserved": true,
+    "interpolationTokensUnchanged": true,
+    "reviewedBy": "Codex, authorized final-template rollout",
+    "reviewedAt": "2026-10-14T20:04:09.131Z",
+    "notes": "Reuse exact existing native or reviewed registered companions for every actual current row; no new translation/factual source edits."
+  },
+  "reviewedCopy": {
+    "hyundai-ioniq-5-2024-11790858680832903": {
+      "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "en": {
+        "description": "Dated sample from a published listing. Confirm the condition, price and availability directly with the dealership.",
+        "imageAlts": [
+          "Hyundai Ioniq 5",
+          "Hyundai Ioniq 5"
+        ]
+      },
+      "bg": {
+        "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+        "imageAlts": [
+          "Hyundai Ioniq 5",
+          "Hyundai Ioniq 5"
+        ]
+      }
+    }
+  }
+}

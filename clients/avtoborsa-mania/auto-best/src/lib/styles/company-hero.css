@@ -1,0 +1,40 @@
+/* Company pages reuse the registered circuit banner's photographic kerbs. */
+.dn-app-shell[data-company-hero='circuit'] .dn-route-hero--company {
+  background: var(--dn-theme-hero-surface-deep);
+  isolation: isolate;
+}
+.dn-app-shell[data-company-hero='circuit'] .dn-route-hero--company::before,
+.dn-app-shell[data-company-hero='circuit'] .dn-route-hero--company::after {
+  content: '';
+  position: absolute;
+  inset: var(--dn-route-hero-header-space) 0 0;
+  background-image: var(--dn-company-asphalt);
+  background-position: left bottom;
+  background-size: cover;
+  pointer-events: none;
+}
+/* Mirror the same photographed edge, preserving its scale and curvature. */
+.dn-app-shell[data-company-hero='circuit'] .dn-route-hero--company::after {
+  transform: scaleX(-1);
+  mask-image: linear-gradient(to right, var(--dn-ink) 0 13%, transparent 23%);
+}
+/* Desktop inherits the shared hero height and company copy spacing. */
+@media (max-width: 991px) {
+  .dn-app-shell[data-company-hero='circuit'] .dn-information-hero.dn-route-hero.dn-route-hero--company {
+    height: var(--dn-mobile-entry-hero-height);
+    min-height: var(--dn-mobile-entry-hero-height);
+    padding: 0;
+  }
+  .dn-app-shell[data-company-hero='circuit'] .dn-route-hero--company::before,
+  .dn-app-shell[data-company-hero='circuit'] .dn-route-hero--company::after {
+    inset: 52px 0 0;
+    background-image: var(--dn-company-mobile-asphalt);
+  }
+  .dn-app-shell[data-company-hero='circuit'] .dn-information-panel,
+  .dn-app-shell[data-company-hero='circuit'] .dn-contact-section--general {
+    margin-top: calc(-1 * var(--dn-mobile-entry-overlap));
+  }
+  .dn-app-shell[data-company-hero='circuit'] .dn-contact-section--general {
+    background: linear-gradient(to bottom, transparent var(--dn-mobile-entry-overlap), var(--dn-mobile-canvas) 0);
+  }
+}

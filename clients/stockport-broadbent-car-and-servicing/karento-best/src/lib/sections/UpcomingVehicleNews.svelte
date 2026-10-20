@@ -2,6 +2,7 @@
 
 <script lang="ts">
   import { useLocale } from "#lib/i18n/context.svelte.ts";
+  import { dealer } from "#lib/content.ts";
   const locale = useLocale();
   import "#lib/styles/home-section-headings.css";
   import { slider } from "#lib/vendor.ts";
@@ -36,7 +37,11 @@
           >
           <p
             class="text-lg-medium text-bold neutral-500 home-section-description desktop-type-lead"
-            >{locale.t("editorial.upcoming.summary")}</p
+            >{locale.t(
+              dealer.businessPreview && !dealer.news
+                ? "editorial.list.sampleSummary"
+                : "editorial.upcoming.summary",
+            )}</p
           >
         </div>
         <div class="col-md-3 position-relative mb-30 home-section-actions">

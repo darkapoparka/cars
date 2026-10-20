@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "dealer": "centralauto-varna",
+  "reviewed": true,
+  "reviewedAt": "2026-10-14T11:56:24.553Z",
+  "sourceMode": "retained-or-mixed-raster",
+  "master": {
+    "path": "docs/logo-polish-2026-10-14/final-raster-inputs/714999e8e68f90a67c70aee4fbdae6c64e3d1d7b531a163015d382c814d33194.png",
+    "sha256": "714999e8e68f90a67c70aee4fbdae6c64e3d1d7b531a163015d382c814d33194"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "docs/logo-polish-2026-10-14/final-raster-inputs/714999e8e68f90a67c70aee4fbdae6c64e3d1d7b531a163015d382c814d33194.png",
+      "sha256": "714999e8e68f90a67c70aee4fbdae6c64e3d1d7b531a163015d382c814d33194",
+      "sourceReference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/live-assets/515ec9c4f18f873487c8d7ab5114471794656a5b3ea57b8a2df2e5f083e58b26.webp",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/live-assets/515ec9c4f18f873487c8d7ab5114471794656a5b3ea57b8a2df2e5f083e58b26.webp",
+        "sha256": "515ec9c4f18f873487c8d7ab5114471794656a5b3ea57b8a2df2e5f083e58b26",
+        "reviewReference": "docs/logo-polish-2026-10-14/final-selection.json",
+        "reviewSha256": "6e396eef77195ab7f44d6b055c1936fa079a8195a428a95151fdfd7f3f5d1a16"
+      }
+    },
+    "onDark": {
+      "path": "docs/logo-polish-2026-10-14/final-raster-inputs/c28b2405f4fc12990c7775cfa1a8373bb81fb39f9db5e9b1023d5f81ff7dfb3d.png",
+      "sha256": "c28b2405f4fc12990c7775cfa1a8373bb81fb39f9db5e9b1023d5f81ff7dfb3d",
+      "sourceReference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/live-assets/2de792087da5a3ef1f1a3cd23ce265a1c6bbf0eecac084be56512fd43148050c.webp",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/live-assets/2de792087da5a3ef1f1a3cd23ce265a1c6bbf0eecac084be56512fd43148050c.webp",
+        "sha256": "2de792087da5a3ef1f1a3cd23ce265a1c6bbf0eecac084be56512fd43148050c",
+        "reviewReference": "docs/logo-polish-2026-10-14/final-selection.json",
+        "reviewSha256": "6e396eef77195ab7f44d6b055c1936fa079a8195a428a95151fdfd7f3f5d1a16"
+      }
+    },
+    "onAccent": {
+      "path": "docs/logo-polish-2026-10-14/final-raster-inputs/c4914f4373b06c92636dd0d8aa58a5def1c10b547fca8435f6785e253cb307dc.png",
+      "sha256": "c4914f4373b06c92636dd0d8aa58a5def1c10b547fca8435f6785e253cb307dc",
+      "sourceReference": "L:/CODEX/cars/leads/branding/fleet-20261011/centralauto-varna/dealer-brand/logo-on-accent.webp",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "L:/CODEX/cars/leads/branding/fleet-20261011/centralauto-varna/dealer-brand/logo-on-accent.webp",
+        "sha256": "bfabd9582fcb3404f53261ba3d56843d2eb3a9dad3aa64c3b583e507806cdb28",
+        "reviewReference": "docs/logo-polish-2026-10-14/final-selection.json",
+        "reviewSha256": "6e396eef77195ab7f44d6b055c1936fa079a8195a428a95151fdfd7f3f5d1a16"
+      }
+    }
+  }
+}

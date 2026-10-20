@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "AS Motor Group",
   "locale": "en-GB",
   "logo": {
-    "light": "/variant-6/dealer-brand/logo-on-light-20261011.webp",
-    "footer": "/variant-6/dealer-brand/logo-on-dark-20261011.webp",
-    "archivedDark": "/variant-6/dealer-brand/logo-on-dark-20261011.webp",
+    "light": "/dealer-brand/v2-f2490e1cd4aba515/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-f2490e1cd4aba515/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-f2490e1cd4aba515/logo-on-dark.webp",
     "alt": "AS Motor Group",
-    "favicon": "/dealer-brand/app-icon.png",
+    "favicon": "/dealer-brand/v2-f2490e1cd4aba515/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {

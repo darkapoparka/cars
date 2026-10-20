@@ -1,6 +1,14 @@
 import type { Locale } from '$lib/locale/core';
 /** Dealer-owned listing descriptions and specification labels. Source facts are not mutated. */
 export const inventoryCopy = {
+	bmw740RearWheelSteering: {
+		bg: 'BMW 740 Завиващ заден мост',
+		en: 'BMW 740 Rear-wheel steering'
+	},
+	rearWheelSteering: {
+		bg: 'Завиващ заден мост',
+		en: 'Rear-wheel steering'
+	},
 	term0: {
 		bg: '4(5) Врати',
 		en: '4(5) doors'
@@ -477,8 +485,20 @@ export const inventoryCopy = {
 		bg: 'Автомобилът е с пълна сервизна история в Порше. Може да се провери във всяко представителство на марката. Sport Chrono пакет. Абсолютно автентичен вид както е излезнал от завода. Регистриран с каско, гражданска, данък, винетка. Без бартер. Само сериозни обаждания.',
 		en: 'Full Porsche service history. Can be checked at any dealership for the brand. Sport Chrono package. Entirely original factory appearance. Registered, with comprehensive insurance, third-party liability insurance, tax and vignette. No trade-ins. Serious inquiries only.'
 	}
+,
+	"dealerStock_050dce71b9f7b52055e46b83cb2ac5d76e0bf0273cb0b45bd302d427793a2487": {
+		"bg": "Илюстрация — не показва обявения автомобил. Това са датирани данни от обяви, наблюдавани на 10 октомври 2026 г. Потвърдете оригиналната обява, цената, състоянието и наличността с автокъщата.",
+		"en": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer."
+	},
+	"dealerStock_e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855": {
+		"bg": "Не е посочен",
+		"en": "Not specified"
+	}
+
 } satisfies Record<string, Record<Locale, string>>;
 export const inventorySourceKeys: Readonly<Record<string, keyof typeof inventoryCopy>> = {
+	'BMW 740 Завиващ заден мост': 'bmw740RearWheelSteering',
+	'Завиващ заден мост': 'rearWheelSteering',
 	'4(5) Врати': 'term0',
 	'4x4': 'term1',
 	'Auto Start Stop function': 'term2',
@@ -630,6 +650,10 @@ export const inventorySourceKeys: Readonly<Record<string, keyof typeof inventory
 		'description30',
 	'Автомобилът е с пълна сервизна история в Порше. Може да се провери във всяко представителство на марката. Sport Chrono пакет. Абсолютно автентичен вид както е излезнал от завода. Регистриран с каско, гражданска, данък, винетка. Без бартер. Само сериозни обаждания.':
 		'description31'
+,
+	"Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.": "dealerStock_050dce71b9f7b52055e46b83cb2ac5d76e0bf0273cb0b45bd302d427793a2487",
+	"": "dealerStock_e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+
 };
 export function inventoryText(locale: Locale, value: string): string {
 	const key = inventorySourceKeys[value];

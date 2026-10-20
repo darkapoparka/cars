@@ -1,8 +1,14 @@
 import { Button } from "@repo/design-system/components/ui/button";
-import { formatMoney, leadSite, type VehicleListing } from "@repo/marketplace";
+import {
+  formatMoney,
+  getListingPath,
+  leadSite,
+  type VehicleListing,
+} from "@repo/marketplace";
 import { isDealershipSite } from "@repo/marketplace/site-config";
 import { ArrowLeft, ArrowUpRight, MapPin, ShieldCheck } from "lucide-react";
 import Link from "next/link";
+import { createDesktopSavedCar } from "../lib/desktop-saved-car";
 import { getListingDetailCopy } from "../lib/listing-detail-policy";
 import { formatListingMonthlyEstimate } from "../lib/listing-financing";
 import {
@@ -19,6 +25,10 @@ import {
   type ListingOrganizationRole,
 } from "../lib/listing-truth";
 import { getLocalizedMarketplaceCityName } from "../lib/marketplace-control-copy";
+import { mobileImageIconActionClassName } from "../lib/mobile-header-icon-action";
+import { getLocalizedPublicPath } from "../lib/public-path";
+import { getShowroomVehicleHeading } from "../lib/vehicle-card-policy";
+import { DesktopSaveCarButton } from "./desktop-saved-cars";
 import { ListingActions } from "./listing-actions";
 import { ListingBackLink } from "./listing-back-link";
 
@@ -37,6 +47,43 @@ export const DesktopListingSummaryHeader = ({
 }) => {
   const copy = getListingDetailCopy(locale);
   const physicalLocation = getPhysicalVehicleLocation(listing);
+
+  if (isDealershipSite) {
+    return (
+      <div className="hidden lg:block" data-slot="listing-summary-header">
+        <div data-slot="listing-utility-row">
+          <ListingBackLink data-slot="listing-desktop-back" href={backHref}>
+            <ArrowLeft aria-hidden size={18} />
+            {copy.backToSearch}
+          </ListingBackLink>
+        </div>
+        <header data-slot="listing-title-panel">
+          <div>
+            <h1>{listing.title}</h1>
+            <p>{getShowroomVehicleHeading(listing, locale).subtitle}</p>
+          </div>
+          <div data-slot="listing-title-actions">
+            <DesktopSaveCarButton
+              car={createDesktopSavedCar(
+                listing,
+                getLocalizedPublicPath(locale, getListingPath(listing)),
+                locale
+              )}
+              locale={locale}
+              showTooltip
+            />
+            <ListingActions
+              iconOnly
+              listingTitle={listing.title}
+              listingUrl={listingUrl}
+              locale={locale}
+              showPrint={false}
+            />
+          </div>
+        </header>
+      </div>
+    );
+  }
 
   return (
     <header
@@ -94,11 +141,14 @@ export const MobileListingGalleryActions = ({
   const copy = getListingDetailCopy(locale);
 
   return (
-    <div className="absolute inset-x-0 top-0 z-20 flex items-center justify-between px-3 pt-[calc(0.75rem+env(safe-area-inset-top))] pb-3 lg:hidden min-[360px]:px-4 min-[360px]:pt-[calc(1rem+env(safe-area-inset-top))] min-[360px]:pb-4">
+    <div
+      className="absolute inset-x-0 top-0 z-20 flex items-center justify-between px-4 pt-[max(0.75rem,env(safe-area-inset-top))] pb-3 lg:hidden"
+      data-slot="listing-mobile-gallery-actions"
+    >
       <Button
         aria-label={copy.backToSearch}
         asChild
-        className="size-11 rounded-full border border-border/70 bg-card/95 shadow-sm backdrop-blur"
+        className={mobileImageIconActionClassName}
         size="icon"
         variant="secondary"
       >

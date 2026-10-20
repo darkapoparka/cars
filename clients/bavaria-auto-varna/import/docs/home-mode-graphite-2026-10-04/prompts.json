@@ -1,0 +1,39 @@
+{
+	"date": "2026-10-04",
+	"tool": "Built-in image_gen",
+	"mode": "precise-object-edit",
+	"requests": [
+		{
+			"key": "buy",
+			"prompt": "Use case: precise-object-edit.\nAsset type: a premium 3D transparent cutout used at 48 x 48 CSS pixels in automotive website navigation.\nInput image 1 is the edit target. Preserve its single recognizable object, angle, proportions, realistic dimensional rendering and tidy silhouette. Make a fresh high resolution studio-quality version with flawless materials and clean edges.\nMaterials and light: rich near-black graphite, polished silver bevels and restrained chrome details; a soft large key light from upper left and subtle edge light. Black must remain legible on a white webpage, with elegant midtone reflections and clear dimensional form.\nComposition: one isolated object, centered optically on a square canvas. The complete object including its ring or loop must fit within the same 80% maximum width/height; consistent breathing room on every side. No enlargement beyond the canvas and no cropping. Very subtle transparent contact shadow only.\nBackground: genuine transparent alpha, no background or tile. No text, letters, branding, watermark, additional props, colored glow, or graphic decoration.\nSubject: the same realistic modern sporty sedan in the same front-left three-quarter view, glossy graphite-black paint instead of red; silver wheels, smoked glass, clear headlights. Every body panel is black or charcoal; absolutely no red paint. Keep the body and wheel proportions realistic and preserve the same direction.",
+			"referenced_image_paths": [
+				"L:/CODEX/cars/templates/import/static/assets/daynight/home-modes/buy-3d-v1.webp"
+			],
+			"transparent_background": true
+		},
+		{
+			"key": "finance",
+			"prompt": "Use case: precise-object-edit.\nAsset type: a premium 3D transparent cutout used at 48 x 48 CSS pixels in automotive website navigation.\nInput image 1 is the edit target. Preserve its single recognizable object, angle, proportions, realistic dimensional rendering and tidy silhouette. Make a fresh high resolution studio-quality version with flawless materials and clean edges.\nMaterials and light: rich near-black graphite, polished silver bevels and restrained chrome details; a soft large key light from upper left and subtle edge light. Black must remain legible on a white webpage, with elegant midtone reflections and clear dimensional form.\nComposition: one isolated object, centered optically on a square canvas. The complete object including its ring or loop must fit within the same 80% maximum width/height; consistent breathing room on every side. No enlargement beyond the canvas and no cropping. Very subtle transparent contact shadow only.\nBackground: genuine transparent alpha, no background or tile. No text, letters, branding, watermark, additional props, colored glow, or graphic decoration.\nSubject: the same sculptural three-dimensional percent symbol, keeping both round holes and the diagonal bar. Make the front surfaces polished graphite-black with brushed silver edge bevels. Add only a thin deep-red accent strip on the side edge of the diagonal bar, at most 8% of the visible object. Both circles and most of the bar remain black. This is the only red accent in the four-icon family.",
+			"referenced_image_paths": [
+				"L:/CODEX/cars/templates/import/static/assets/daynight/home-modes/finance-3d-v1.webp"
+			],
+			"transparent_background": true
+		},
+		{
+			"key": "sell",
+			"prompt": "Use case: precise-object-edit.\nAsset type: a premium 3D transparent cutout used at 48 x 48 CSS pixels in automotive website navigation.\nInput image 1 is the edit target. Preserve its single recognizable object, angle, proportions, realistic dimensional rendering and tidy silhouette. Make a fresh high resolution studio-quality version with flawless materials and clean edges.\nMaterials and light: rich near-black graphite, polished silver bevels and restrained chrome details; a soft large key light from upper left and subtle edge light. Black must remain legible on a white webpage, with elegant midtone reflections and clear dimensional form.\nComposition: one isolated object, centered optically on a square canvas. The complete object including its ring or loop must fit within the same 80% maximum width/height; consistent breathing room on every side. No enlargement beyond the canvas and no cropping. Very subtle transparent contact shadow only.\nBackground: genuine transparent alpha, no background or tile. No text, letters, branding, watermark, additional props, colored glow, or graphic decoration.\nSubject: the same thick blank price tag tilted in the same direction, with its black loop and silver metal eyelet. Front face is elegant graphite-black instead of red, subtly reflective, brushed silver side bevel. Keep it completely blank with no writing or marks. Include the entire loop, no red anywhere.",
+			"referenced_image_paths": [
+				"L:/CODEX/cars/templates/import/static/assets/daynight/home-modes/sell-3d-v1.webp"
+			],
+			"transparent_background": true
+		},
+		{
+			"key": "import",
+			"prompt": "Use case: precise-object-edit.\nAsset type: a premium 3D transparent cutout used at 48 x 48 CSS pixels in automotive website navigation.\nInput image 1 is the edit target. Preserve its single recognizable object, angle, proportions, realistic dimensional rendering and tidy silhouette. Make a fresh high resolution studio-quality version with flawless materials and clean edges.\nMaterials and light: rich near-black graphite, polished silver bevels and restrained chrome details; a soft large key light from upper left and subtle edge light. Black must remain legible on a white webpage, with elegant midtone reflections and clear dimensional form.\nComposition: one isolated object, centered optically on a square canvas. The complete object including its ring or loop must fit within the same 80% maximum width/height; consistent breathing room on every side. No enlargement beyond the canvas and no cropping. Very subtle transparent contact shadow only.\nBackground: genuine transparent alpha, no background or tile. No text, letters, branding, watermark, additional props, colored glow, or graphic decoration.\nSubject: the same sculptural globe with its orbit ring, in the same three-quarter viewpoint. Deep graphite-black oceans instead of red, detailed polished silver continents and a restrained silver orbit ring. All elements black, charcoal and silver only, no red anywhere. Preserve the single clean globe silhouette and complete orbit ring.",
+			"referenced_image_paths": [
+				"L:/CODEX/cars/templates/import/static/assets/daynight/home-modes/import-3d-v1.webp"
+			],
+			"transparent_background": true
+		}
+	]
+}

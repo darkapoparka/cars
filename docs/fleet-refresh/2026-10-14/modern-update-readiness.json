@@ -1,0 +1,593 @@
+{
+  "checkedAt": "2026-10-14T12:08:06.850Z",
+  "sourceCandidate": {
+    "repository": "darkapoparka/cars",
+    "commit": "478070acb3511ef3d3f8d0ba90ecdb769e7633a0",
+    "path": "templates/modern",
+    "approvedRelease": false,
+    "dealerRolloutPerformed": false,
+    "sourceTree": "2c70a8d0fd0c52d95ba6f648841cae849128f1e2",
+    "commitUrl": "https://github.com/darkapoparka/cars/commit/478070acb3511ef3d3f8d0ba90ecdb769e7633a0",
+    "validation": {
+      "lint": "35 changed code files passed Biome",
+      "whitespace": "passed",
+      "focusedPreview": "passed; see templates/modern/docs/UI-POLISH-2026-10-14.md",
+      "productionBuild": "not rerun for this source-only checkpoint",
+      "approvedRelease": false
+    }
+  },
+  "projects": [
+    {
+      "project": "cars-perfectauto",
+      "projectId": "prj_sqN8Xc2fs7g2Y2pSs0qeSeYJgVZR",
+      "origin": "https://cars-perfectauto.vercel.app",
+      "deploymentId": "dpl_9yBMrPuFtutkxHVBSFRtLZmg1PRX",
+      "state": "READY",
+      "target": "production",
+      "deployedCommit": "8500c16e76e876b2707efdab972b6d6503924067",
+      "repository": "darkapoparka/cars-perfectauto",
+      "aliases": [
+        "cars-perfectauto.vercel.app",
+        "cars-perfectauto-tyj5.vercel.app",
+        "cars-perfectauto-git-main-tyj5.vercel.app"
+      ],
+      "publicCheck": {
+        "status": 200,
+        "finalUrl": "https://cars-perfectauto.vercel.app/bg",
+        "title": "Перфект Ауто — Концепция за шоурум в Варна",
+        "protectedRedirect": false,
+        "checkedAt": "2026-10-14T12:08:55.221Z"
+      }
+    },
+    {
+      "project": "cars-f1rstmotors",
+      "projectId": "prj_mavqUXCj6hSEg8EvBJW8G3XJlihm",
+      "origin": "https://cars-f1rstmotors.vercel.app",
+      "deploymentId": "dpl_DdabUcFU3kecdTSqHqQBUraFg25P",
+      "state": "READY",
+      "target": "production",
+      "deployedCommit": "6e0184b856858fa4f9d0b158f64b4edef44f0e83",
+      "repository": "darkapoparka/cars-f1rstmotors",
+      "aliases": [
+        "cars-f1rstmotors.vercel.app",
+        "cars-f1rstmotors-tyj5.vercel.app",
+        "cars-f1rstmotors-git-main-tyj5.vercel.app"
+      ],
+      "publicCheck": {
+        "status": 200,
+        "finalUrl": "https://cars-f1rstmotors.vercel.app/bg",
+        "title": "F1rst Motors — Концепция за шоурум в Дубай",
+        "protectedRedirect": false,
+        "checkedAt": "2026-10-14T12:08:55.346Z"
+      }
+    },
+    {
+      "project": "cars-automarketvarna",
+      "projectId": "prj_5H4OESlQ0KpNM5mJvbIEmlUgaMcP",
+      "origin": "https://cars-automarketvarna.vercel.app",
+      "deploymentId": "dpl_211DcBnRuAFXY9NL528y7JyQQ3bc",
+      "state": "READY",
+      "target": "production",
+      "deployedCommit": "75a4d903992227fe225e83a036c57447e4aa3e19",
+      "repository": "darkapoparka/cars-automarketvarna",
+      "aliases": [
+        "cars-automarketvarna.vercel.app",
+        "cars-automarketvarna-tyj5.vercel.app",
+        "cars-automarketvarna-git-main-tyj5.vercel.app"
+      ],
+      "publicCheck": {
+        "status": 200,
+        "finalUrl": "https://cars-automarketvarna.vercel.app/bg",
+        "title": "Аутомаркет Варна — Концепция за шоурум в Варна",
+        "protectedRedirect": false,
+        "checkedAt": "2026-10-14T12:08:55.088Z"
+      }
+    },
+    {
+      "project": "cars-outletcarsvarna",
+      "projectId": "prj_1KYEEcbBwAd5iCtAvDGM59INQLe7",
+      "origin": "https://cars-outletcarsvarna.vercel.app",
+      "deploymentId": "dpl_BWpUbiWNkro1974dzeqVQy7ZJXrL",
+      "state": "READY",
+      "target": "production",
+      "deployedCommit": "18842412938aaeae6f5ad307a5fcaca95ada0610",
+      "repository": "darkapoparka/cars-outletcarsvarna",
+      "aliases": [
+        "cars-outletcarsvarna.vercel.app",
+        "cars-outletcarsvarna-tyj5.vercel.app",
+        "cars-outletcarsvarna-git-main-tyj5.vercel.app"
+      ],
+      "publicCheck": {
+        "status": 200,
+        "finalUrl": "https://cars-outletcarsvarna.vercel.app/bg",
+        "title": "OUTLETCARS.BG — Варна — Концепция за шоурум в Варна",
+        "protectedRedirect": false,
+        "checkedAt": "2026-10-14T12:08:54.906Z"
+      }
+    },
+    {
+      "project": "cars-eliqauto",
+      "projectId": "prj_0aDYGRa0LI91M3AJRY4dlGssLUF3",
+      "origin": "https://cars-eliqauto.vercel.app",
+      "deploymentId": "dpl_5cn3P15nBUs4DoVWuLdnmE2Dvz9T",
+      "state": "READY",
+      "target": "production",
+      "deployedCommit": "4bf0424056976622b79f1ad5e397248c07a7d745",
+      "repository": "darkapoparka/cars-eliqauto",
+      "aliases": [
+        "cars-eliqauto.vercel.app",
+        "cars-eliqauto-tyj5.vercel.app",
+        "cars-eliqauto-git-main-tyj5.vercel.app"
+      ],
+      "publicCheck": {
+        "status": 200,
+        "finalUrl": "https://cars-eliqauto.vercel.app/bg",
+        "title": "ELIQ AUTO — Концепция за шоурум в Пазарджик",
+        "protectedRedirect": false,
+        "checkedAt": "2026-10-14T12:08:55.156Z"
+      }
+    },
+    {
+      "project": "cars-texasdriveauto",
+      "projectId": "prj_0BoiQdp4HpS0QcfH425hy9ns536V",
+      "origin": "https://cars-texasdriveauto.vercel.app",
+      "deploymentId": "dpl_5fEAgLkZfonuwzPeHGGsLdvnyg5H",
+      "state": "READY",
+      "target": "production",
+      "deployedCommit": "9ec58af4dfef44e16733e0eff30cfd346e18919b",
+      "repository": "darkapoparka/cars-texasdriveauto",
+      "aliases": [
+        "cars-texasdriveauto.vercel.app",
+        "cars-texasdriveauto-tyj5.vercel.app",
+        "cars-texasdriveauto-git-main-tyj5.vercel.app"
+      ],
+      "publicCheck": {
+        "status": 200,
+        "finalUrl": "https://cars-texasdriveauto.vercel.app/bg",
+        "title": "Texas Drive Auto — Концепция за шоурум в Далас",
+        "protectedRedirect": false,
+        "checkedAt": "2026-10-14T12:08:57.419Z"
+      }
+    },
+    {
+      "project": "cars-kgteamauto",
+      "projectId": "prj_IALzfkjBAv5N4YJfNB1sEliOaNBg",
+      "origin": "https://cars-kgteamauto.vercel.app",
+      "deploymentId": "dpl_HuqDNQQLhsdHVYJAhr2r4Qi8Uq8X",
+      "state": "READY",
+      "target": "production",
+      "deployedCommit": "8ad119b04ca78ac4ed663ebaebf0974697c004fb",
+      "repository": "darkapoparka/cars-kgteamauto",
+      "aliases": [
+        "cars-kgteamauto.vercel.app",
+        "cars-kgteamauto-tyj5.vercel.app",
+        "cars-kgteamauto-git-main-tyj5.vercel.app"
+      ],
+      "publicCheck": {
+        "status": 200,
+        "finalUrl": "https://cars-kgteamauto.vercel.app/bg",
+        "title": "K-G Team Auto — Концепция за шоурум в Пловдив",
+        "protectedRedirect": false,
+        "checkedAt": "2026-10-14T12:08:57.471Z"
+      }
+    },
+    {
+      "project": "excellent-cars",
+      "projectId": "prj_dhANzY6pxcqK1hO06ar9ZTk0k4eq",
+      "origin": "https://excellent-cars.vercel.app",
+      "deploymentId": "dpl_BJJhUHLCR1ZhZBSj7xtqNUn7sJ1G",
+      "state": "READY",
+      "target": "production",
+      "deployedCommit": "5f2a88f09bc8edb437e1dae2c58cb8d3e78d66dd",
+      "repository": "darkapoparka/excellent-cars",
+      "aliases": [
+        "excellent-cars.vercel.app",
+        "excellent-cars-tyj5.vercel.app",
+        "excellent-cars-git-main-tyj5.vercel.app"
+      ],
+      "publicCheck": {
+        "status": 200,
+        "finalUrl": "https://excellent-cars.vercel.app/bg",
+        "title": "Excellent Cars — Концепция за шоурум в Варна",
+        "protectedRedirect": false,
+        "checkedAt": "2026-10-14T12:08:57.578Z"
+      }
+    },
+    {
+      "project": "cars-ivoauto",
+      "projectId": "prj_bruM9mopofyBcgwxkKFG9tQFZBMN",
+      "origin": "https://cars-ivoauto.vercel.app",
+      "deploymentId": "dpl_A2evZWopyounvF3ZBgayZvomMFYa",
+      "state": "READY",
+      "target": "production",
+      "deployedCommit": "12195dd08bd7d2100e7904b9d80349b3d04d20fe",
+      "repository": "darkapoparka/cars-ivoauto",
+      "aliases": [
+        "cars-ivoauto.vercel.app",
+        "cars-ivoauto-tyj5.vercel.app",
+        "cars-ivoauto-git-main-tyj5.vercel.app"
+      ],
+      "publicCheck": {
+        "status": 200,
+        "finalUrl": "https://cars-ivoauto.vercel.app/bg",
+        "title": "Иво Ауто — Концепция за шоурум в Варна",
+        "protectedRedirect": false,
+        "checkedAt": "2026-10-14T12:08:57.413Z"
+      }
+    },
+    {
+      "project": "cars-thedealerspoint",
+      "projectId": "prj_tzUK5hufsHiC8aJ7uyxZF5qCii07",
+      "origin": "https://cars-thedealerspoint.vercel.app",
+      "deploymentId": "dpl_6onDWaVebzkYufkPxBDsKxiGeAJG",
+      "state": "READY",
+      "target": "production",
+      "deployedCommit": "0654ac0a443969690c5f84ece5d4c2350f196bb7",
+      "repository": "darkapoparka/cars-thedealerspoint",
+      "aliases": [
+        "cars-thedealerspoint.vercel.app",
+        "cars-thedealerspoint-tyj5.vercel.app",
+        "cars-thedealerspoint-git-main-tyj5.vercel.app"
+      ],
+      "publicCheck": {
+        "status": 200,
+        "finalUrl": "https://cars-thedealerspoint.vercel.app/bg",
+        "title": "The Dealers Point — Концепция за шоурум в Дубай",
+        "protectedRedirect": false,
+        "checkedAt": "2026-10-14T12:08:57.331Z"
+      }
+    },
+    {
+      "project": "cars-legendauto",
+      "projectId": "prj_kdnDQxZaPh8xgKBiIXyb9uODrXZw",
+      "origin": "https://cars-legendauto.vercel.app",
+      "deploymentId": "dpl_4nrFgcSKHvqbJt7vzVHttJGxoUsZ",
+      "state": "READY",
+      "target": "production",
+      "deployedCommit": "f96ba187d35a2ce03f4777e970d8bf59a434886a",
+      "repository": "darkapoparka/cars-legendauto",
+      "aliases": [
+        "cars-legendauto.vercel.app",
+        "cars-legendauto-tyj5.vercel.app",
+        "cars-legendauto-git-main-tyj5.vercel.app"
+      ],
+      "publicCheck": {
+        "status": 200,
+        "finalUrl": "https://cars-legendauto.vercel.app/bg",
+        "title": "LEGEND AUTO — Концепция за шоурум в Варна",
+        "protectedRedirect": false,
+        "checkedAt": "2026-10-14T12:08:59.579Z"
+      }
+    },
+    {
+      "project": "cars-isautovarna",
+      "projectId": "prj_8k5z9l4jyDCcoEfaaLBiyH1GbRVv",
+      "origin": "https://cars-isautovarna.vercel.app",
+      "deploymentId": "dpl_E1iVUnsvPUJHtrks655wz3fpTLSS",
+      "state": "READY",
+      "target": "production",
+      "deployedCommit": "0f61e1c13edb1a0b82f9cc82ed6ee0e5f4a1d271",
+      "repository": "darkapoparka/cars-isautovarna",
+      "aliases": [
+        "cars-isautovarna.vercel.app",
+        "cars-isautovarna-tyj5.vercel.app",
+        "cars-isautovarna-git-main-tyj5.vercel.app"
+      ],
+      "publicCheck": {
+        "status": 200,
+        "finalUrl": "https://cars-isautovarna.vercel.app/bg",
+        "title": "IS AUTO Varna — Концепция за шоурум в Варна",
+        "protectedRedirect": false,
+        "checkedAt": "2026-10-14T12:08:59.476Z"
+      }
+    },
+    {
+      "project": "cars-avangardauto",
+      "projectId": "prj_QqFCB2Zllc60dfPVIo6aJ8P4wlKc",
+      "origin": "https://cars-avangardauto.vercel.app",
+      "deploymentId": "dpl_s2AQPYn4yNPs3ndL7Kp4ZTHjfLCy",
+      "state": "READY",
+      "target": "production",
+      "deployedCommit": "1829c141f4f351304b7ba28143881f743b0db9d4",
+      "repository": "darkapoparka/cars-avangardauto",
+      "aliases": [
+        "cars-avangardauto.vercel.app",
+        "cars-avangardauto-tyj5.vercel.app",
+        "cars-avangardauto-git-main-tyj5.vercel.app"
+      ],
+      "publicCheck": {
+        "status": 200,
+        "finalUrl": "https://cars-avangardauto.vercel.app/bg",
+        "title": "AVANGARD AUTO — Концепция за шоурум в Варна",
+        "protectedRedirect": false,
+        "checkedAt": "2026-10-14T12:08:59.580Z"
+      }
+    },
+    {
+      "project": "cars-alreefusedcars",
+      "projectId": "prj_r5Vaw6NQh5iTxi5jjfrtuP9GFTNm",
+      "origin": "https://cars-alreefusedcars.vercel.app",
+      "deploymentId": "dpl_4foCVxPpJfja4xqE6B5KkyVpqBc5",
+      "state": "READY",
+      "target": "production",
+      "deployedCommit": "fc41ae21a210b8b21ea6663524a77b876f59663b",
+      "repository": "darkapoparka/cars-alreefusedcars",
+      "aliases": [
+        "cars-alreefusedcars.vercel.app",
+        "cars-alreefusedcars-tyj5.vercel.app",
+        "cars-alreefusedcars-git-main-tyj5.vercel.app"
+      ],
+      "publicCheck": {
+        "status": 200,
+        "finalUrl": "https://cars-alreefusedcars.vercel.app/bg",
+        "title": "Al Reef Used Cars — Концепция за шоурум в Шарджа",
+        "protectedRedirect": false,
+        "checkedAt": "2026-10-14T12:08:59.500Z"
+      }
+    },
+    {
+      "project": "cars-navaracar",
+      "projectId": "prj_WIHXMoyCM4BIwvUsrbTosvNXYXwr",
+      "origin": "https://cars-navaracar.vercel.app",
+      "deploymentId": "dpl_G59tgQ5nqkYT1sj2R3bSCgfBenzz",
+      "state": "READY",
+      "target": "production",
+      "deployedCommit": "7144c9a2ce5fddc71cefe95ee1f574861bebeeca",
+      "repository": "darkapoparka/cars-navaracar",
+      "aliases": [
+        "cars-navaracar.vercel.app",
+        "cars-navaracar-tyj5.vercel.app",
+        "cars-navaracar-git-main-tyj5.vercel.app"
+      ],
+      "publicCheck": {
+        "status": 200,
+        "finalUrl": "https://cars-navaracar.vercel.app/bg",
+        "title": "Навара кар — Концепция за шоурум в Варна",
+        "protectedRedirect": false,
+        "checkedAt": "2026-10-14T12:08:58.582Z"
+      }
+    },
+    {
+      "project": "cars-albasmamotors",
+      "projectId": "prj_axqFQFzpsq6JLTBwXOzyv5Wnbphk",
+      "origin": "https://cars-albasmamotors.vercel.app",
+      "deploymentId": "dpl_DMNTfSo788keDsT3rNrvRqf3k8xN",
+      "state": "READY",
+      "target": "production",
+      "deployedCommit": "4c733bb2c83e2c92de9f96e0822202689beeb145",
+      "repository": "darkapoparka/cars-albasmamotors",
+      "aliases": [
+        "cars-albasmamotors.vercel.app",
+        "cars-albasmamotors-tyj5.vercel.app",
+        "cars-albasmamotors-git-main-tyj5.vercel.app"
+      ],
+      "publicCheck": {
+        "status": 200,
+        "finalUrl": "https://cars-albasmamotors.vercel.app/bg",
+        "title": "Al Basma Motors — Концепция за шоурум в Шарджа",
+        "protectedRedirect": false,
+        "checkedAt": "2026-10-14T12:09:01.668Z"
+      }
+    },
+    {
+      "project": "cars-elitautoimport",
+      "projectId": "prj_7QV9OtCRFxJMWpWWlUXLpptcQPXs",
+      "origin": "https://cars-elitautoimport.vercel.app",
+      "deploymentId": "dpl_FWXPwY8EaZ7YzFbs2KoBy93NKBY2",
+      "state": "READY",
+      "target": "production",
+      "deployedCommit": "f948d62227093438f9b203243a129c8d064096a2",
+      "repository": "darkapoparka/cars-elitautoimport",
+      "aliases": [
+        "cars-elitautoimport.vercel.app",
+        "cars-elitautoimport-tyj5.vercel.app",
+        "cars-elitautoimport-git-main-tyj5.vercel.app"
+      ],
+      "publicCheck": {
+        "status": 200,
+        "finalUrl": "https://cars-elitautoimport.vercel.app/bg",
+        "title": "ELIT AUTO IMPORT EXPORT — Концепция за шоурум в Варна",
+        "protectedRedirect": false,
+        "checkedAt": "2026-10-14T12:09:01.799Z"
+      }
+    },
+    {
+      "project": "cars-championautopro",
+      "projectId": "prj_Zles0MpLROdFwgSnvuvpxrNBWcRY",
+      "origin": "https://cars-championautopro.vercel.app",
+      "deploymentId": "dpl_3MdzHnAK9gRJT8z6VFAPxB4r3PmC",
+      "state": "READY",
+      "target": "production",
+      "deployedCommit": "81c2addef34c4e7e48af9e1541f55606f6693c88",
+      "repository": "darkapoparka/cars-championautopro",
+      "aliases": [
+        "cars-championautopro.vercel.app",
+        "cars-championautopro-tyj5.vercel.app",
+        "cars-championautopro-git-main-tyj5.vercel.app"
+      ],
+      "publicCheck": {
+        "status": 200,
+        "finalUrl": "https://cars-championautopro.vercel.app/bg",
+        "title": "Champion Auto Pro — Концепция за шоурум в Варна",
+        "protectedRedirect": false,
+        "checkedAt": "2026-10-14T12:09:01.683Z"
+      }
+    },
+    {
+      "project": "cars-autolife",
+      "projectId": "prj_h9XFj7PYyl3OsEMxBueC5bZWvdSd",
+      "origin": "https://cars-autolife.vercel.app",
+      "deploymentId": "dpl_BAVz7csUfMcTocCWNbiUq3Hksw4J",
+      "state": "READY",
+      "target": "production",
+      "deployedCommit": "30161b46aa102695fd89a26fe42101a24ce021d7",
+      "repository": "darkapoparka/cars-autolife",
+      "aliases": [
+        "cars-autolife.vercel.app",
+        "cars-autolife-tyj5.vercel.app",
+        "cars-autolife-git-main-tyj5.vercel.app"
+      ],
+      "publicCheck": {
+        "status": 200,
+        "finalUrl": "https://cars-autolife.vercel.app/bg",
+        "title": "Аутолайф — Концепция за шоурум в Варна",
+        "protectedRedirect": false,
+        "checkedAt": "2026-10-14T12:09:01.770Z"
+      }
+    },
+    {
+      "project": "cars-asko96",
+      "projectId": "prj_lrmxXJdqRTKdDlufXaS0vd8TdpJX",
+      "origin": "https://cars-asko96.vercel.app",
+      "deploymentId": "dpl_4h567kvmaEYm5FJNoEX3yQRsCxgZ",
+      "state": "READY",
+      "target": "production",
+      "deployedCommit": "923ae906aa3cf4d4920d312e6ef9bf1a00fb94a1",
+      "repository": "darkapoparka/cars-asko96",
+      "aliases": [
+        "cars-asko96.vercel.app",
+        "cars-asko96-tyj5.vercel.app",
+        "cars-asko96-git-main-tyj5.vercel.app"
+      ],
+      "publicCheck": {
+        "status": 200,
+        "finalUrl": "https://cars-asko96.vercel.app/bg",
+        "title": "АСКО 96 — Концепция за шоурум в София",
+        "protectedRedirect": false,
+        "checkedAt": "2026-10-14T12:09:01.505Z"
+      }
+    },
+    {
+      "project": "cars-alhamooralthahabi",
+      "projectId": "prj_hdzWSWLwsNVu7mmsmGA97XbCDSrw",
+      "origin": "https://cars-alhamooralthahabi.vercel.app",
+      "deploymentId": "dpl_4Xi9nymZx6sBtoURZS2ecvzwUxfw",
+      "state": "READY",
+      "target": "production",
+      "deployedCommit": "4777aa5eb211fdb1281adddbf25819e5d4b4ed3e",
+      "repository": "darkapoparka/cars-alhamooralthahabi",
+      "aliases": [
+        "cars-alhamooralthahabi.vercel.app",
+        "cars-alhamooralthahabi-tyj5.vercel.app",
+        "cars-alhamooralthahabi-git-main-tyj5.vercel.app"
+      ],
+      "publicCheck": {
+        "status": 200,
+        "finalUrl": "https://cars-alhamooralthahabi.vercel.app/bg",
+        "title": "Al Hamoor Al Thahabi Used Cars — Концепция за шоурум в Шарджа",
+        "protectedRedirect": false,
+        "checkedAt": "2026-10-14T12:09:04.383Z"
+      }
+    },
+    {
+      "project": "cars-priselci",
+      "projectId": "prj_GwnlfPmyImlJuiocl77NWplzvTTb",
+      "origin": "https://cars-priselci.vercel.app",
+      "deploymentId": "dpl_BtuHMssG6uc2v6EKqsU28qjjvHbY",
+      "state": "READY",
+      "target": "production",
+      "deployedCommit": "e060d7a67e0af222a9700f6e9e8e67ae4858c2fc",
+      "repository": "darkapoparka/cars-priselci",
+      "aliases": [
+        "cars-priselci.vercel.app",
+        "cars-priselci-tyj5.vercel.app",
+        "cars-priselci-git-main-tyj5.vercel.app"
+      ],
+      "publicCheck": {
+        "status": 200,
+        "finalUrl": "https://cars-priselci.vercel.app/bg",
+        "title": "Автокъща Приселци — Концепция за шоурум в Варна",
+        "protectedRedirect": false,
+        "checkedAt": "2026-10-14T12:09:03.776Z"
+      }
+    },
+    {
+      "project": "cars-astracar",
+      "projectId": "prj_70zIp6vOJGgHSVcOtk9pR8dCTsTT",
+      "origin": "https://cars-astracar.vercel.app",
+      "deploymentId": "dpl_AywCMBUaoLXUZdpJqAvPmNPMxCCn",
+      "state": "READY",
+      "target": "production",
+      "deployedCommit": "2cda77c6513e2d34fe497b2833760c6d13a3f413",
+      "repository": "darkapoparka/cars-astracar",
+      "aliases": [
+        "cars-astracar.vercel.app",
+        "cars-astracar-tyj5.vercel.app",
+        "cars-astracar-git-main-tyj5.vercel.app"
+      ],
+      "publicCheck": {
+        "status": 200,
+        "finalUrl": "https://cars-astracar.vercel.app/bg",
+        "title": "Астракар — Концепция за шоурум в Варна",
+        "protectedRedirect": false,
+        "checkedAt": "2026-10-14T12:09:04.281Z"
+      }
+    },
+    {
+      "project": "day-and-night-a",
+      "projectId": "prj_enD9orrI6rwguMMtDlS0IP6RAXjr",
+      "origin": "https://day-and-night-a.vercel.app",
+      "deploymentId": "dpl_F1fwDsBKq4YJTJprwEwwYekERRvS",
+      "state": "READY",
+      "target": "production",
+      "deployedCommit": "3a0d6a828613bc647e545984481d82d04a932d79",
+      "repository": "darkapoparka/day-and-night-autodeal",
+      "aliases": [
+        "day-and-night-a.vercel.app",
+        "day-and-night-a-tyj5.vercel.app",
+        "day-and-night-a-git-main-tyj5.vercel.app"
+      ],
+      "publicCheck": {
+        "status": 200,
+        "finalUrl": "https://day-and-night-a.vercel.app/bg",
+        "title": "Day &amp; Night Auto Group — Концепция за шоурум в София",
+        "protectedRedirect": false,
+        "checkedAt": "2026-10-14T12:09:03.907Z"
+      }
+    },
+    {
+      "project": "cars-promosalevarna",
+      "projectId": "prj_yjXIu0an7sqCiY26hKWgOGUl5hbY",
+      "origin": "https://cars-promosalevarna.vercel.app",
+      "deploymentId": "dpl_2H2K18mphqCT32er7cntzEwzUJZK",
+      "state": "READY",
+      "target": "production",
+      "deployedCommit": "1d5f1f4e6fa94d97012090ca01bbc403c121a582",
+      "repository": "darkapoparka/cars-promosalevarna",
+      "aliases": [
+        "cars-promosalevarna.vercel.app",
+        "cars-promosalevarna-tyj5.vercel.app",
+        "cars-promosalevarna-git-main-tyj5.vercel.app"
+      ],
+      "publicCheck": {
+        "status": 200,
+        "finalUrl": "https://cars-promosalevarna.vercel.app/bg",
+        "title": "Promosale Varna — Концепция за шоурум в Варна",
+        "protectedRedirect": false,
+        "checkedAt": "2026-10-14T12:09:03.899Z"
+      }
+    }
+  ],
+  "summary": {
+    "projects": 25,
+    "productionReady": 25,
+    "public200": 25
+  },
+  "validationScope": "Fresh provider identities, deployed Git commits and public origin HTTP/title checks; no full six-design browser acceptance or adoption of the new candidate is claimed.",
+  "templatePreview": {
+    "project": "cars-template-modern",
+    "projectId": "prj_A4DN3YbKHzofjvcbYOh3foMBCMpy",
+    "deploymentId": "dpl_BzYVQ3ChxnAh3xoF6dRRLKEq4ScZ",
+    "state": "READY",
+    "deployedCommit": "10e60538def4ba227bbbb0addb7f2ccafad60571",
+    "repository": "darkapoparka/cars-template-modern",
+    "origin": "https://cars-template-modern.vercel.app",
+    "updatedToCandidate": false
+  },
+  "nextUpdate": {
+    "scope": "The 25 registered projects listed in this report; preserve existing repositories, project IDs, aliases, mounted design choices, dealer content and independent ownership.",
+    "source": "Use the candidate source locator after the maintained release and combined six-design pilot checks. The global release lock is unchanged.",
+    "hosting": "Existing Vercel production identities remain intact. This report performs no provider deployment, migration, billing, DNS or deletion.",
+    "localCheckout": "The active shared local main checkpoint and its dirty work are preserved; only the reviewed files were published directly onto current GitHub main."
+  }
+}

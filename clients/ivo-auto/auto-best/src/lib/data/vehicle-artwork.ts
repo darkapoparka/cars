@@ -17,6 +17,34 @@ export const vehicleArtwork = {
 } as const;
 
 export type Vehicle = LeadVehicleArtwork;
+
+// Cutouts share visible area by default; discovery scenes can share visible width.
+// Transparent margins do not affect scale; the original proportions and anchors remain intact.
+export function getVehicleArtworkRatios(artwork: { width: number; height: number; bounds: readonly number[]; normalizationBounds?: readonly number[] }, normalization: 'area' | 'width' = 'area') {
+  const [left, top, right, bottom] = artwork.bounds;
+  const bodyWidth = right - left;
+  const bodyHeight = bottom - top;
+  // A service composition can size its main car independently of its small side props.
+  const [sizeLeft, sizeTop, sizeRight, sizeBottom] = artwork.normalizationBounds ?? artwork.bounds;
+  // Discovery heroes share a visible width, so taller models keep their horizontal presence.
+  const size = normalization === 'width' ? sizeRight - sizeLeft : Math.sqrt((sizeRight - sizeLeft) * (sizeBottom - sizeTop));
+  return {
+    width: artwork.width / size,
+    height: artwork.height / size,
+    bottom: bottom / size,
+    front: (artwork.width - left) / size,
+    right: (artwork.width - right) / size,
+    bodyWidth: bodyWidth / size,
+    bodyHeight: bodyHeight / size
+  };
+}
+
+const vehicleRatios = Object.values(vehicleArtwork).map(artwork => getVehicleArtworkRatios(artwork));
+export const vehicleArtworkFrame = {
+  width: Math.max(...vehicleRatios.map(artwork => artwork.bodyWidth)),
+  height: Math.max(...vehicleRatios.map(artwork => artwork.bodyHeight))
+};
+
 export const heroVehiclePairs = leadSite.artwork.heroVehiclePairs;
 export type HeroVehiclePair = LeadHeroVehiclePair;
 

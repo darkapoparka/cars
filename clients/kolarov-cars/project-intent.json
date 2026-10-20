@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "slug": "kolarov-cars",
+  "repository": "darkapoparka/cars-kolarovcars",
+  "canonicalClientPath": "clients/kolarov-cars",
+  "designSet": "six",
+  "designs": [
+    "auto-best",
+    "modern",
+    "import",
+    "app",
+    "mobile",
+    "karento-best"
+  ],
+  "adminUrl": "https://cars-admin-blue.vercel.app/",
+  "sharedInputs": [
+    "business-facts.json",
+    "stock.json",
+    "locale.json",
+    "assets/"
+  ],
+  "sourceState": "not-created-release-selection-blocked",
+  "buildState": "not-built",
+  "deploymentState": "not-created",
+  "deploymentUrl": null,
+  "buildApprovedByUser": true,
+  "outreachApproved": false,
+  "contactHistory": "not-checked"
+}

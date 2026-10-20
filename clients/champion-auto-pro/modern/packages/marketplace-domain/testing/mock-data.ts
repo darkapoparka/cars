@@ -59,7 +59,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Champion Auto Pro",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-3e978e4c57d4446e/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": true
@@ -121,7 +121,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Champion Auto Pro",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-3e978e4c57d4446e/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": true
@@ -183,7 +183,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Champion Auto Pro",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-3e978e4c57d4446e/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": true
@@ -245,7 +245,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Champion Auto Pro",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-3e978e4c57d4446e/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
@@ -307,7 +307,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Champion Auto Pro",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-3e978e4c57d4446e/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
@@ -369,7 +369,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Champion Auto Pro",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-3e978e4c57d4446e/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
@@ -431,7 +431,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Champion Auto Pro",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-3e978e4c57d4446e/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
@@ -493,7 +493,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Champion Auto Pro",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-3e978e4c57d4446e/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
@@ -555,7 +555,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Champion Auto Pro",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-3e978e4c57d4446e/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
@@ -617,7 +617,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Champion Auto Pro",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-3e978e4c57d4446e/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
@@ -679,7 +679,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Champion Auto Pro",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-3e978e4c57d4446e/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
@@ -741,7 +741,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Champion Auto Pro",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-3e978e4c57d4446e/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
@@ -803,7 +803,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Champion Auto Pro",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-3e978e4c57d4446e/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
@@ -853,7 +853,130 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Champion Auto Pro",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-3e978e4c57d4446e/logo-on-light.webp"
+    },
+    "publishedAt": "2026-09-07T09:00:00.000Z",
+    "promoted": false
+  },
+  {
+    "id": "dealer-825a2d7d075d3e40a326ae8b",
+    "slug": "mercedes-benz-eqc-400-2021-21787200936302723",
+    "category": "car",
+    "dealerOrgId": "dealer-champion-auto-pro",
+    "status": "active",
+    "title": "Mercedes-Benz EQC 400",
+    "description": "Mercedes-Benz EQC 400, 2021 г., електрически, 68 900 км. Публикувана обява към 07.09.2026. Наличност, оборудване и условия се потвърждават с Champion Auto Pro.",
+    "price": {
+      "amount": 38800,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/assets/champion/vehicle-15-1.webp",
+        "alt": "Mercedes-Benz EQC 400"
+      },
+      {
+        "url": "/assets/champion/vehicle-15-2.webp",
+        "alt": "Mercedes-Benz EQC 400"
+      },
+      {
+        "url": "/assets/champion/vehicle-15-3.webp",
+        "alt": "Mercedes-Benz EQC 400"
+      },
+      {
+        "url": "/assets/champion/vehicle-15-4.webp",
+        "alt": "Mercedes-Benz EQC 400"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Варна",
+      "region": "Варна",
+      "country": "България"
+    },
+    "spec": {
+      "make": "Mercedes-Benz",
+      "model": "EQC 400",
+      "year": 2021,
+      "bodyType": "suv",
+      "fuelType": "electric",
+      "transmission": "automatic",
+      "mileageValue": 68900,
+      "mileageUnit": "km",
+      "colorExterior": "Черен"
+    },
+    "seller": {
+      "id": "dealer-champion-auto-pro",
+      "type": "dealer",
+      "displayName": "Champion Auto Pro",
+      "verificationStatus": "unverified",
+      "city": "Варна",
+      "logoUrl": "/dealer-brand/v2-3e978e4c57d4446e/logo-on-light.webp"
+    },
+    "publishedAt": "2026-09-07T09:00:00.000Z",
+    "promoted": false
+  },
+  {
+    "id": "dealer-3312db25ac08a977cdf49e3a",
+    "slug": "renault-captur-2015-11786100747512292",
+    "category": "car",
+    "dealerOrgId": "dealer-champion-auto-pro",
+    "status": "active",
+    "title": "Renault Captur",
+    "description": "Renault Captur, 2015 г., дизел, 55 000 км. Публикувана обява към 07.09.2026. Наличност, оборудване и условия се потвърждават с Champion Auto Pro.",
+    "price": {
+      "amount": 9200,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/assets/champion/vehicle-16-1.webp",
+        "alt": "Renault Captur"
+      },
+      {
+        "url": "/assets/champion/vehicle-16-2.webp",
+        "alt": "Renault Captur"
+      },
+      {
+        "url": "/assets/champion/vehicle-16-3.webp",
+        "alt": "Renault Captur"
+      },
+      {
+        "url": "/assets/champion/vehicle-16-4.webp",
+        "alt": "Renault Captur"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Варна",
+      "region": "Варна",
+      "country": "България"
+    },
+    "spec": {
+      "make": "Renault",
+      "model": "Captur",
+      "year": 2015,
+      "bodyType": "hatchback",
+      "fuelType": "diesel",
+      "transmission": "automatic",
+      "mileageValue": 55000,
+      "mileageUnit": "km",
+      "enginePowerHp": 90,
+      "colorExterior": "Червен"
+    },
+    "seller": {
+      "id": "dealer-champion-auto-pro",
+      "type": "dealer",
+      "displayName": "Champion Auto Pro",
+      "verificationStatus": "unverified",
+      "city": "Варна",
+      "logoUrl": "/dealer-brand/v2-3e978e4c57d4446e/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false

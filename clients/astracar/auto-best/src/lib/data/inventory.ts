@@ -1,6 +1,5 @@
 import { formatPrice, localeContract, type Locale } from '$lib/locale/core';
 import { templateText } from '$lib/locale/messages';
-import { leadSite } from '$config/lead-site';
 
 export const vehicleTypes = ['car', 'motorbike', 'van', 'truck'] as const;
 export type VehicleType = typeof vehicleTypes[number];
@@ -27,11 +26,16 @@ export type Vehicle = {
   make: string;
   /** Optional manufacturer sub-brand used by compact card identity. */
   cardBrand?: string;
+  /** Seller-supplied highlight by locale; import/condition claims require record-specific evidence. */
+  cardNote?: Partial<Record<Locale, string>>;
   title: string;
   year: string;
   yearNumber: number;
   mileage: string;
   mileageKm: number;
+  mileageKnown?: boolean;
+  mileageValue?: number;
+  mileageUnit?: 'km' | 'mi';
   fuel: string;
   transmission: string;
   equipment: readonly VehicleEquipment[];
@@ -43,7 +47,8 @@ export type Vehicle = {
 export const featuredVehicles: Vehicle[] = [
   {
     "id": 1,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://astracar.mobile.bg/obiava-11747499643415236-mini-cooper-1-6d-euro4",
     "image": "/assets/astracar/vehicle-01-1.webp",
     "category": "Hatchback",
@@ -54,6 +59,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2009,
     "mileage": "143 100 км",
     "mileageKm": 143100,
+    "mileageKnown": true,
+    "mileageValue": 143100,
+    "mileageUnit": "km",
     "fuel": "Дизел",
     "transmission": "Ръчна",
     "equipment": [
@@ -61,12 +69,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 4000,
-    "href": "/listing-detail-v1/1",
-    "type": "car"
+    "href": "/listing-detail-v1/1"
   },
   {
     "id": 2,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://astracar.mobile.bg/obiava-21755975324167565-renault-captur-0-9t-euro6b",
     "image": "/assets/astracar/vehicle-02-1.webp",
     "category": "SUV",
@@ -77,6 +85,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2017,
     "mileage": "127 663 км",
     "mileageKm": 127663,
+    "mileageKnown": true,
+    "mileageValue": 127663,
+    "mileageUnit": "km",
     "fuel": "Бензин",
     "transmission": "Ръчна",
     "equipment": [
@@ -85,12 +96,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 9500,
-    "href": "/listing-detail-v1/2",
-    "type": "car"
+    "href": "/listing-detail-v1/2"
   },
   {
     "id": 3,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://astracar.mobile.bg/obiava-11737822623289964-bmw-535-xdrive-full-eu5b",
     "image": "/assets/astracar/vehicle-03-1.webp",
     "category": "Sedan",
@@ -101,6 +112,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2012,
     "mileage": "177 390 км",
     "mileageKm": 177390,
+    "mileageKnown": true,
+    "mileageValue": 177390,
+    "mileageUnit": "km",
     "fuel": "Дизел",
     "transmission": "Автоматик",
     "equipment": [
@@ -111,12 +125,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 14600,
-    "href": "/listing-detail-v1/3",
-    "type": "car"
+    "href": "/listing-detail-v1/3"
   },
   {
     "id": 4,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://astracar.mobile.bg/obiava-11763446260159317-audi-a3-2-0tdi-s-line-quattro",
     "image": "/assets/astracar/vehicle-04-1.webp",
     "category": "Hatchback",
@@ -127,6 +141,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2006,
     "mileage": "181 000 км",
     "mileageKm": 181000,
+    "mileageKnown": true,
+    "mileageValue": 181000,
+    "mileageUnit": "km",
     "fuel": "Дизел",
     "transmission": "Ръчна",
     "equipment": [
@@ -135,12 +152,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 4000,
-    "href": "/listing-detail-v1/4",
-    "type": "car"
+    "href": "/listing-detail-v1/4"
   },
   {
     "id": 5,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://astracar.mobile.bg/obiava-11752951085157214-audi-a5-2-0tfsi-euro5b",
     "image": "/assets/astracar/vehicle-05-1.webp",
     "category": "Coupe",
@@ -151,6 +168,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2010,
     "mileage": "165 170 км",
     "mileageKm": 165170,
+    "mileageKnown": true,
+    "mileageValue": 165170,
+    "mileageUnit": "km",
     "fuel": "Бензин",
     "transmission": "Автоматик",
     "equipment": [
@@ -159,12 +179,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 7900,
-    "href": "/listing-detail-v1/5",
-    "type": "car"
+    "href": "/listing-detail-v1/5"
   },
   {
     "id": 6,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://astracar.mobile.bg/obiava-11762018600091690-fiat-punto-1-4i-evo-euro4",
     "image": "/assets/astracar/vehicle-06-1.webp",
     "category": "Hatchback",
@@ -175,6 +195,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2010,
     "mileage": "139 800 км",
     "mileageKm": 139800,
+    "mileageKnown": true,
+    "mileageValue": 139800,
+    "mileageUnit": "km",
     "fuel": "Бензин",
     "transmission": "Ръчна",
     "equipment": [
@@ -182,12 +205,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 3900,
-    "href": "/listing-detail-v1/6",
-    "type": "car"
+    "href": "/listing-detail-v1/6"
   },
   {
     "id": 7,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://astracar.mobile.bg/obiava-11755359473275644-audi-a3-1-6tdi-eu5b-sportbag",
     "image": "/assets/astracar/vehicle-07-1.webp",
     "category": "Hatchback",
@@ -198,6 +221,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2015,
     "mileage": "162 148 км",
     "mileageKm": 162148,
+    "mileageKnown": true,
+    "mileageValue": 162148,
+    "mileageUnit": "km",
     "fuel": "Дизел",
     "transmission": "Ръчна",
     "equipment": [
@@ -207,12 +233,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 8900,
-    "href": "/listing-detail-v1/7",
-    "type": "car"
+    "href": "/listing-detail-v1/7"
   },
   {
     "id": 8,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://astracar.mobile.bg/obiava-11766248164423161-mini-cooper-1-6d-euro5",
     "image": "/assets/astracar/vehicle-08-1.webp",
     "category": "Hatchback",
@@ -223,17 +249,20 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2010,
     "mileage": "150 052 км",
     "mileageKm": 150052,
+    "mileageKnown": true,
+    "mileageValue": 150052,
+    "mileageUnit": "km",
     "fuel": "Дизел",
     "transmission": "Ръчна",
     "equipment": [],
     "condition": "used",
     "priceEur": 4200,
-    "href": "/listing-detail-v1/8",
-    "type": "car"
+    "href": "/listing-detail-v1/8"
   },
   {
     "id": 9,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://astracar.mobile.bg/obiava-11780761931333448-audi-a6-2-0tdi-euro5b",
     "image": "/assets/astracar/vehicle-09-1.webp",
     "category": "Wagon",
@@ -244,6 +273,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2014,
     "mileage": "159 400 км",
     "mileageKm": 159400,
+    "mileageKnown": true,
+    "mileageValue": 159400,
+    "mileageUnit": "km",
     "fuel": "Дизел",
     "transmission": "Ръчна",
     "equipment": [
@@ -254,12 +286,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 8999,
-    "href": "/listing-detail-v1/9",
-    "type": "car"
+    "href": "/listing-detail-v1/9"
   },
   {
     "id": 10,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://astracar.mobile.bg/obiava-21780733368439452-bmw-x7-3-0d-xdrive-eu6d",
     "image": "/assets/astracar/vehicle-10-1.webp",
     "category": "SUV",
@@ -270,6 +302,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2020,
     "mileage": "190 000 км",
     "mileageKm": 190000,
+    "mileageKnown": true,
+    "mileageValue": 190000,
+    "mileageUnit": "km",
     "fuel": "Дизел",
     "transmission": "Автоматик",
     "equipment": [
@@ -283,12 +318,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 49000,
-    "href": "/listing-detail-v1/10",
-    "type": "car"
+    "href": "/listing-detail-v1/10"
   },
   {
     "id": 11,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://astracar.mobile.bg/obiava-11773504878088103-citroen-c3-1-2i-euro5b",
     "image": "/assets/astracar/vehicle-11-1.webp",
     "category": "Hatchback",
@@ -299,6 +334,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2013,
     "mileage": "136 574 км",
     "mileageKm": 136574,
+    "mileageKnown": true,
+    "mileageValue": 136574,
+    "mileageUnit": "km",
     "fuel": "Бензин",
     "transmission": "Ръчна",
     "equipment": [
@@ -306,12 +344,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 4600,
-    "href": "/listing-detail-v1/11",
-    "type": "car"
+    "href": "/listing-detail-v1/11"
   },
   {
     "id": 12,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://astracar.mobile.bg/obiava-21783183116609383-hyundai-ix35-1-6gdi-euro5",
     "image": "/assets/astracar/vehicle-12-1.webp",
     "category": "SUV",
@@ -322,6 +360,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2012,
     "mileage": "56 178 км",
     "mileageKm": 56178,
+    "mileageKnown": true,
+    "mileageValue": 56178,
+    "mileageUnit": "km",
     "fuel": "Бензин",
     "transmission": "Ръчна",
     "equipment": [
@@ -329,12 +370,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 7999,
-    "href": "/listing-detail-v1/12",
-    "type": "car"
+    "href": "/listing-detail-v1/12"
   },
   {
     "id": 13,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://astracar.mobile.bg/obiava-21783791992541606-mercedes-benz-ml-350-3-0cdi-premium-eu6",
     "image": "/assets/astracar/vehicle-13-1.webp",
     "category": "SUV",
@@ -345,6 +386,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2010,
     "mileage": "182 887 км",
     "mileageKm": 182887,
+    "mileageKnown": true,
+    "mileageValue": 182887,
+    "mileageUnit": "km",
     "fuel": "Дизел",
     "transmission": "Автоматик",
     "equipment": [
@@ -354,12 +398,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 9500,
-    "href": "/listing-detail-v1/13",
-    "type": "car"
+    "href": "/listing-detail-v1/13"
   },
   {
     "id": 14,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://astracar.mobile.bg/obiava-11782577422662538-peugeot-2008-1-2-puretech-eu6d",
     "image": "/assets/astracar/vehicle-14-1.webp",
     "category": "SUV",
@@ -370,6 +414,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2022,
     "mileage": "36 216 км",
     "mileageKm": 36216,
+    "mileageKnown": true,
+    "mileageValue": 36216,
+    "mileageUnit": "km",
     "fuel": "Бензин",
     "transmission": "Ръчна",
     "equipment": [
@@ -380,12 +427,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 14000,
-    "href": "/listing-detail-v1/14",
-    "type": "car"
+    "href": "/listing-detail-v1/14"
   },
   {
     "id": 15,
-    "verification": "verified",
+    "type": "van",
+    "verification": "sample",
     "evidenceUrl": "https://astracar.mobile.bg/obiava-11782575631736534-citroen-jumpy-1-6hdi-l2h1eu6b",
     "image": "/assets/astracar/vehicle-15-1.webp",
     "category": "Minivan",
@@ -396,6 +443,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2017,
     "mileage": "186 586 км",
     "mileageKm": 186586,
+    "mileageKnown": true,
+    "mileageValue": 186586,
+    "mileageUnit": "km",
     "fuel": "Дизел",
     "transmission": "Ръчна",
     "equipment": [
@@ -404,13 +454,15 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 8500,
-    "href": "/listing-detail-v1/15",
-    "type": "car"
+    "href": "/listing-detail-v1/15"
   }
 ];
 
-export const formatVehiclePrice = (amount: number, locale: Locale = localeContract.defaultLocale) => amount > 0 ? formatPrice(amount, locale) : templateText(locale, 'Price on request');
+export const formatVehiclePrice = (
+  amount: number,
+  locale: Locale = localeContract.defaultLocale
+) => amount > 0 ? formatPrice(amount, locale) : templateText(locale, 'Price on request');
 
 /** Allow a currency line break while preserving the locale's grouped digits. */
 export const formatVehiclePriceLabel = (amount: number, locale: Locale = localeContract.defaultLocale) =>
-  formatVehiclePrice(amount, locale).replace(/([A-Z]{3})\s+/u, '$1 ').replace(/\s+([A-Z]{3})$/u, ' $1');
+  formatVehiclePrice(amount, locale).replace(/([A-Z]{3}|\p{Sc})\s+/u, '$1 ').replace(/\s+([A-Z]{3}|\p{Sc})$/u, ' $1');

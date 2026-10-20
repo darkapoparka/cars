@@ -1,6 +1,7 @@
 import { Badge } from "@repo/design-system/components/ui/badge";
 import { Button } from "@repo/design-system/components/ui/button";
-import { getCollectionPath } from "@repo/marketplace";
+import { getCollectionPath, leadSite } from "@repo/marketplace";
+import { isDealershipSite } from "@repo/marketplace/site-config";
 import { log } from "@repo/observability/log";
 import { getLocalizedPath, normalizeSeoLocale } from "@repo/seo/metadata";
 import { ArrowRight, CarFront } from "lucide-react";
@@ -43,8 +44,7 @@ const collectionCopy = {
     listingHeading: "Актуални обяви",
     resultsLabel: "резултата",
     title: "Китайски електромобили и хибриди",
-    truth:
-      "Капитол не твърди официално партньорство с показаните марки. Всяка оферта се потвърждава индивидуално.",
+    truth: `${leadSite.shortName} не твърди официално партньорство с показаните марки. Всяка оферта се потвърждава индивидуално.`,
   },
   en: {
     badge: "Editorial collection",
@@ -61,8 +61,7 @@ const collectionCopy = {
     listingHeading: "Current listings",
     resultsLabel: "results",
     title: "Chinese EVs and hybrids",
-    truth:
-      "Капитол does not claim an official partnership with the displayed brands. Every offer is confirmed individually.",
+    truth: `${leadSite.shortName} does not claim an official partnership with the displayed brands. Every offer is confirmed individually.`,
   },
 } as const;
 
@@ -114,19 +113,36 @@ export default async function ChineseCollectionPage({
     }
 
     return (
-      <PublicMarketplaceFrame activeMode="buy" locale={locale}>
+      <PublicMarketplaceFrame
+        activeMode="buy"
+        desktopIntro={
+          isDealershipSite
+            ? {
+                title: copy.title,
+                variant: "compact",
+              }
+            : undefined
+        }
+        locale={locale}
+      >
         <main className="mx-auto max-w-[90rem] px-3 py-6 sm:px-4 lg:px-6 lg:py-8">
-          <section className="overflow-hidden rounded-xl border border-border bg-card">
+          <section
+            className={
+              isDealershipSite
+                ? "overflow-hidden rounded-xl border border-border bg-card lg:hidden"
+                : "overflow-hidden rounded-xl border border-border bg-card"
+            }
+          >
             <div className="grid lg:grid-cols-[minmax(0,1fr)_20rem]">
               <div className="p-5 sm:p-7">
                 <Badge variant="secondary">{copy.badge}</Badge>
-                <h1 className="mt-3 font-semibold text-page-title tracking-tight sm:text-page-title-lg">
+                <h1 className="mt-3 font-semibold text-page-title tracking-heading lg:text-page-title-lg">
                   {copy.title}
                 </h1>
-                <p className="mt-3 max-w-3xl text-muted-foreground text-sm leading-6">
+                <p className="mt-3 max-w-3xl text-body text-muted-foreground">
                   {copy.description}
                 </p>
-                <p className="mt-3 text-muted-foreground text-xs">
+                <p className="mt-3 text-meta text-muted-foreground">
                   {copy.truth}
                 </p>
               </div>
@@ -139,18 +155,23 @@ export default async function ChineseCollectionPage({
                   src="/images/directory/china-ev-importer-profile.webp"
                 />
                 <div className="absolute inset-x-0 bottom-0 bg-black/60 px-5 py-3 text-white backdrop-blur-[2px]">
-                  <p className="font-medium text-sm">{copy.heroCaption}</p>
+                  <p className="font-medium text-meta">{copy.heroCaption}</p>
                 </div>
               </div>
             </div>
           </section>
 
           <section className="mt-6">
+            {isDealershipSite && (
+              <p className="mb-6 hidden rounded-xl border border-border bg-card p-5 text-meta text-muted-foreground lg:block">
+                {copy.truth}
+              </p>
+            )}
             <div className="mb-4">
               <h2 className="font-semibold text-dialog-title">
                 {copy.listingHeading}
               </h2>
-              <p className="text-muted-foreground text-sm">
+              <p className="text-meta text-muted-foreground">
                 {data.totalListings} {copy.resultsLabel}
               </p>
             </div>
@@ -159,10 +180,10 @@ export default async function ChineseCollectionPage({
                 <span className="mx-auto grid size-10 place-items-center rounded-full bg-secondary text-muted-foreground">
                   <CarFront aria-hidden="true" className="size-5" />
                 </span>
-                <h3 className="mt-3 font-semibold text-base">
+                <h3 className="mt-3 font-semibold text-card-title tracking-heading">
                   {copy.emptyTitle}
                 </h3>
-                <p className="mx-auto mt-1 max-w-lg text-muted-foreground text-sm leading-6">
+                <p className="mx-auto mt-1 max-w-lg text-body text-muted-foreground">
                   {copy.emptyDescription}
                 </p>
                 <Button asChild className="mt-4" size="sm">
@@ -192,7 +213,18 @@ export default async function ChineseCollectionPage({
     unstable_rethrow(error);
     log.error("Chinese EV and hybrid collection is unavailable.", { error });
     return (
-      <PublicMarketplaceFrame activeMode="buy" locale={locale}>
+      <PublicMarketplaceFrame
+        activeMode="buy"
+        desktopIntro={
+          isDealershipSite
+            ? {
+                title: copy.title,
+                variant: "compact",
+              }
+            : undefined
+        }
+        locale={locale}
+      >
         <InventoryUnavailable locale={locale} />
       </PublicMarketplaceFrame>
     );

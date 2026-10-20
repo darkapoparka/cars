@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "dealer": "excellent-cars",
+  "family": "import",
+  "base": "/variant-3",
+  "defaultLocale": "bg",
+  "source": {
+    "inventory": {
+      "path": "carwow/src/lib/data/daynight-current-inventory.ts",
+      "sha256": "f0af3087e9a68e0723b86e36821b4e35a07900217ba45403e6a2f7e7cd4735d7"
+    },
+    "vehicles": {
+      "path": "carwow/src/lib/data/daynight-vehicles.ts",
+      "sha256": "58507cc762f0d0763f6d521a86d8474729fd6cf112b7dd072170f350a2c11d84"
+    },
+    "routeFactorySha256": "094d5128ad5e689e41486a228b1de6d11c54efbe051ce0e75c0170709d8571c9"
+  },
+  "profileSha256": "4077ccebe7b9fc2349c0b9621bd4aa42ad087f690e6c036035bcadb31046b5d0",
+  "entries": [
+    {
+      "sourceId": "21781257688134220",
+      "slug": "mercedes-benz-gle-350-134220",
+      "targetId": "21781257688134220"
+    },
+    {
+      "sourceId": "11785932596351376",
+      "slug": "vw-passat-2-0tdi-351376",
+      "targetId": "11785932596351376"
+    },
+    {
+      "sourceId": "11788181514006324",
+      "slug": "skoda-octavia-2-0tdi-006324",
+      "targetId": "11788181514006324"
+    },
+    {
+      "sourceId": "11786795820524833",
+      "slug": "cupra-born-restyling-524833",
+      "targetId": "11786795820524833"
+    },
+    {
+      "sourceId": "21786794971218528",
+      "slug": "hyundai-kona-1-6hev-218528",
+      "targetId": "21786794971218528"
+    },
+    {
+      "sourceId": "21786455005208728",
+      "slug": "kia-sportage-1-6d-208728",
+      "targetId": "21786455005208728"
+    },
+    {
+      "sourceId": "21786453972789852",
+      "slug": "vw-tiguan-2-0-di-789852",
+      "targetId": "21786453972789852"
+    },
+    {
+      "sourceId": "21786451392501339",
+      "slug": "land-rover-range-501339",
+      "targetId": "21786451392501339"
+    },
+    {
+      "sourceId": "21773151499854810",
+      "slug": "audi-q2-854810",
+      "targetId": "21773151499854810"
+    },
+    {
+      "sourceId": "11768639133016485",
+      "slug": "dodge-challenger-5-7hemi-016485",
+      "targetId": "11768639133016485"
+    },
+    {
+      "sourceId": "21775914499512125",
+      "slug": "vw-t-cross-1-5i-512125",
+      "targetId": "21775914499512125"
+    },
+    {
+      "sourceId": "21785575816054903",
+      "slug": "kia-niro-plug-in-hybrid-054903",
+      "targetId": "21785575816054903"
+    },
+    {
+      "sourceId": "21773150110056507",
+      "slug": "bmw-x3-056507",
+      "targetId": "21773150110056507"
+    },
+    {
+      "sourceId": "21785323501482685",
+      "slug": "nissan-juke-1-6-482685",
+      "targetId": "21785323501482685"
+    },
+    {
+      "sourceId": "11778320754806394",
+      "slug": "peugeot-308-1-6gt-806394",
+      "targetId": "11778320754806394"
+    },
+    {
+      "sourceId": "21781781688732220",
+      "slug": "mazda-cx-5-2-5i-732220",
+      "targetId": "21781781688732220"
+    }
+  ],
+  "retired": []
+}

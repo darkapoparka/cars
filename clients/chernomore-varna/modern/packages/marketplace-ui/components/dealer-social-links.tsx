@@ -1,6 +1,7 @@
+import { withBasePath } from "@repo/internationalization/paths";
 import type { LeadSiteConfig } from "@repo/marketplace";
 import { Music2 } from "lucide-react";
-import Image from "next/image";
+import Image from "./public-image";
 
 const socialPlatforms = [
   { key: "instagram", label: "Instagram" },
@@ -58,10 +59,7 @@ export function DealerSocialLinks({
   isBg: boolean;
 }) {
   const configured = socialPlatforms.filter(
-    (platform) =>
-      links?.[platform.key] ||
-      platform.key === "youtube" ||
-      platform.key === "facebook"
+    (platform) => links?.[platform.key]
   );
   if (!configured.length) {
     return null;
@@ -76,8 +74,8 @@ export function DealerSocialLinks({
         links?.[key] ? (
           <a
             aria-label={`${label} — ${isBg ? "отваря нов раздел" : "opens in a new tab"}`}
-            className="flex min-h-16 min-w-0 flex-col items-center justify-center gap-1.5 rounded-xl bg-zinc-100 px-2 py-3 font-medium text-[12px] text-zinc-950 hover:bg-zinc-200 focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2 active:bg-zinc-200"
-            href={links?.[key]}
+            className="flex min-h-16 min-w-0 flex-col items-center justify-center gap-1.5 rounded-xl bg-zinc-100 px-2 py-3 font-medium text-meta text-zinc-950 hover:bg-zinc-200 focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2 active:bg-zinc-200"
+            href={withBasePath(links?.[key])}
             key={key}
             rel="noopener noreferrer"
             target="_blank"
@@ -88,7 +86,7 @@ export function DealerSocialLinks({
         ) : (
           <button
             aria-label={`${label} — ${isBg ? "очаквайте скоро" : "coming soon"}`}
-            className="flex min-h-16 min-w-0 flex-col items-center justify-center gap-1.5 rounded-xl bg-zinc-100 px-2 py-3 font-medium text-[12px] text-zinc-950"
+            className="flex min-h-16 min-w-0 flex-col items-center justify-center gap-1.5 rounded-xl bg-zinc-100 px-2 py-3 font-medium text-meta text-zinc-950"
             disabled
             key={key}
             title={isBg ? "Очаквайте скоро" : "Coming soon"}

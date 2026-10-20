@@ -2,6 +2,9 @@ import { defaultLocale, translate, type Locale } from './locale';
 
 export const showroomPlaceholderLogo = '/branding/showroom-placeholder-20261002.webp';
 
+// Display-only example: never create a tel: link for this placeholder.
+export const showroomPreviewPhone = '+359 000 000 000';
+
 export type ShowroomConfig = {
   name: string;
   logo: string | null;
@@ -79,6 +82,7 @@ export function defineShowroom(config: ShowroomConfig): Readonly<ShowroomConfig>
       !/^\+?[\d ()-]{6,60}$/.test(config.phone) ||
       digits.length < 6 ||
       digits.length > 15 ||
+      digits === showroomPreviewPhone.replace(/\D/g, '') ||
       /^0+$/.test(digits)
     )
       throw new Error('phone must contain a verified telephone number.');

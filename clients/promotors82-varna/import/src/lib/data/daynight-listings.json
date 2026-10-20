@@ -1,0 +1,37 @@
+{
+  "fetchedAt": "2026-10-11",
+  "sources": {
+    "dealerInventory": "https://promotors82.mobile.bg/",
+    "dealerContact": "https://promotors82.mobile.bg/contacts"
+  },
+  "count": 1,
+  "listings": [
+    {
+      "badge": "ОБЯВА",
+      "category": "Седан",
+      "color": "",
+      "displacement": "",
+      "euroStandard": "",
+      "features": [],
+      "fuel": "Дизелов",
+      "gearbox": "Автоматична",
+      "href": "https://promotors82.mobile.bg/obiava-11791111366122197-mercedes-benz-c-350-cdi-avtomatik",
+      "id": "11791111366122197",
+      "image": "/dealer-stock/11791111366122197-1.webp",
+      "location": "Варна",
+      "mileage": "173 000 км",
+      "mileageKnown": true,
+      "mileageValue": 173000,
+      "mileageUnit": "km",
+      "photoCount": "2",
+      "power": "265 к.с.",
+      "price": "9 400 €",
+      "priceBgn": "",
+      "production": "2013 г.",
+      "rawPriceText": "9 400 €",
+      "shortDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "title": "Mercedes-Benz C 350",
+      "vat": ""
+    }
+  ]
+}

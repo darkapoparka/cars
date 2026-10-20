@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "dealer": "technocar-varna",
+  "copy": {
+    "technocar-varna-21789131552465526": {
+      "sourceDescription": "Hyundai Tucson 1.6 T-GDI MHEV от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+      "en": {
+        "description": "Hyundai Tucson 1.6 T-GDI MHEV from a dated public advert. Confirm condition, price and availability directly with the dealership.",
+        "imageAlts": [
+          "Hyundai Tucson 1.6 T-GDI MHEV — dated public advert photo 1",
+          "Hyundai Tucson 1.6 T-GDI MHEV — dated public advert photo 2"
+        ]
+      },
+      "bg": {
+        "description": "Hyundai Tucson 1.6 T-GDI MHEV от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+        "imageAlts": [
+          "Hyundai Tucson 1.6 T-GDI MHEV — снимка от датирана публична обява 1",
+          "Hyundai Tucson 1.6 T-GDI MHEV — снимка от датирана публична обява 2"
+        ]
+      }
+    },
+    "technocar-varna-21787826931085094": {
+      "sourceDescription": "Hyundai Kona Exclusive 1.6 T-GDI от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+      "en": {
+        "description": "Hyundai Kona Exclusive 1.6 T-GDI from a dated public advert. Confirm condition, price and availability directly with the dealership.",
+        "imageAlts": [
+          "Hyundai Kona Exclusive 1.6 T-GDI — dated public advert photo 1",
+          "Hyundai Kona Exclusive 1.6 T-GDI — dated public advert photo 2"
+        ]
+      },
+      "bg": {
+        "description": "Hyundai Kona Exclusive 1.6 T-GDI от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+        "imageAlts": [
+          "Hyundai Kona Exclusive 1.6 T-GDI — снимка от датирана публична обява 1",
+          "Hyundai Kona Exclusive 1.6 T-GDI — снимка от датирана публична обява 2"
+        ]
+      }
+    }
+  },
+  "consumer": "facts.business.modernInventoryCopy",
+  "donorCopyRetained": false
+}

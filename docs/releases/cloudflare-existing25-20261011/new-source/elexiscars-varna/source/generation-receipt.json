@@ -1,0 +1,247 @@
+{
+  "strategy": "USE GENERATED CANDIDATE",
+  "identityStatus": "Final improved disclosed demo/proposal treatment for same qualified business; materially polished artwork, not official rebrand or owner/dealer approval.",
+  "publishedBranding": {
+    "profileUrl": "https://elexiscars.mobile.bg",
+    "sourceLogoUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h17797762615097465.pic",
+    "observedAt": "2026-10-11",
+    "visualEvidence": "Previously inspected published identity retained in source evidence and compared visually in this triage. Fresh proposal created from the exact factual business name; no reference image supplied to generation.",
+    "decision": "User authorized a fresh disclosed proposal for this weak identity. Existing source brand remains evidence; owner/dealer approval pending.",
+    "retainedEvidence": [
+      "L:/CODEX/cars/leads/branding/fleet-20261011/elexiscars-varna/source/published-logo.jpg"
+    ]
+  },
+  "sourceUrls": [
+    "https://elexiscars.mobile.bg",
+    "https://cdn2.focus.bg/mobile/images/houseslogos/h17797762615097465.pic"
+  ],
+  "sourceLimitations": "New disclosed proposed identity for ELEXIS CARS after authorized weak-logo review; not an official dealer rebrand or approval. Previous sourced/refinement attempts retained.",
+  "priorPreferredPack": "L:/CODEX/cars/leads/branding/fleet-20261011/elexiscars-varna",
+  "priorPreferredFiles": {
+    "branding/logo-master.png": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/elexiscars-varna/branding/logo-master.png",
+      "sha256": "1c80de897190b18720382c8083f616c5507f2eaa2d3095fa5589b30f2a271bf9"
+    },
+    "branding/logo-on-light.png": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/elexiscars-varna/branding/logo-on-light.png",
+      "sha256": "1c80de897190b18720382c8083f616c5507f2eaa2d3095fa5589b30f2a271bf9"
+    },
+    "branding/logo-on-dark.png": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/elexiscars-varna/branding/logo-on-dark.png",
+      "sha256": "aa3c3eb8fa1b941e27a7dfb46c06c5016680003b0620efd4273278a6af3278d0"
+    },
+    "branding/logo-on-accent.png": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/elexiscars-varna/branding/logo-on-accent.png",
+      "sha256": "aa3c3eb8fa1b941e27a7dfb46c06c5016680003b0620efd4273278a6af3278d0"
+    },
+    "dealer-brand/logo-on-light.webp": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/elexiscars-varna/dealer-brand/logo-on-light.webp",
+      "sha256": "71c12c4a688c79a818967c74c711c85021a9f49c227b7354a1a9029811d7f54c"
+    },
+    "dealer-brand/logo-on-dark.webp": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/elexiscars-varna/dealer-brand/logo-on-dark.webp",
+      "sha256": "378bc2eb1a320fa7b77dd04a016df668308cad57813ab198a777faf8d7f58e1a"
+    },
+    "dealer-brand/logo-on-accent.webp": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/elexiscars-varna/dealer-brand/logo-on-accent.webp",
+      "sha256": "378bc2eb1a320fa7b77dd04a016df668308cad57813ab198a777faf8d7f58e1a"
+    },
+    "receipt.json": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/elexiscars-varna/receipt.json",
+      "sha256": "5215ca3864b4d19c1861955e57bb559ff82edcbca15869b770b89c9a4965a6c9"
+    },
+    "surface-review.png": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/elexiscars-varna/surface-review.png",
+      "sha256": "7ba618ede4eca2b01aa3206491571f6047159f799f80d01db8f1b780eebe306f"
+    }
+  },
+  "generatedPath": "C:/Users/radev/.codex/generated_images/01a12a34-d2d7-7571-930a-1ed37e54ff8e/exec-3f5eeed8-0d0f-4c7c-aa43-61d3eaa9353b.png",
+  "imageGeneration": {
+    "tool": "image_gen.imagegen",
+    "reference": "exec-3f5eeed8-0d0f-4c7c-aa43-61d3eaa9353b",
+    "prompt": "Polish this supplied current dealer treatment into a clearly disclosed improved demo proposal for the SAME factual business. Exact ONLY visible name \"ELEXIS CARS\". Keep recognizable broad two-loop infinity emblem, slightly smaller. Customize strong letter forms with crisp geometric cuts, restrained forward slant and distinctive open E forms; name prominent. Retain deep charcoal and dark slate identity colors. Keep meaningful individual identity, never add a generic fleet icon or rename the business. Compact balanced one horizontal row with prominent name, no tiny caption, no subtitle or extra text below/above, no enclosing plate or background. Automotive letter character through purposeful individual shapes, crisp angular ends and restrained forward slant, broad legible strokes and open counters. Emblem secondary, name reads at120px total width. Flat clean opaque inks, no texture, gradients, shadow, glow, shading, grit or edge residue. True RGBA transparent background and genuinely transparent counters/gaps with modest safe padding. Exact script/case/spaces; preserve original name and colors but disclose material rearrangement as proposal.",
+    "referenced_image_paths": [
+      "L:/CODEX/cars/leads/branding/fleet-20261011/elexiscars-varna/branding/logo-master.png"
+    ],
+    "referenceMetadata": [
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/elexiscars-varna/branding/logo-master.png",
+        "sha256": "1c80de897190b18720382c8083f616c5507f2eaa2d3095fa5589b30f2a271bf9",
+        "bytes": 152100,
+        "width": 1496,
+        "height": 259,
+        "hasAlpha": true,
+        "role": "Previously preferred dealer treatment; published source identity and limitations preserved separately."
+      }
+    ],
+    "transparent_background": true,
+    "outputPath": "C:/Users/radev/.codex/generated_images/01a12a34-d2d7-7571-930a-1ed37e54ff8e/exec-3f5eeed8-0d0f-4c7c-aa43-61d3eaa9353b.png",
+    "modelVersion": "not exposed by tool"
+  },
+  "variantDerivation": {
+    "onLight": "Existing approved raster exporter crops/scales ImageGen original colored ink and alpha.",
+    "onDark": "White raster ink derived by existing approved exporter from same native output alpha; not independently generated.",
+    "onAccent": "White raster ink derived by existing approved exporter from same native output alpha; not independently generated."
+  },
+  "visualAccepted": true,
+  "ownerApproved": false,
+  "selectionStatus": "Final preferred technical candidate; owner acceptance and integration pending.",
+  "surfaceReviewPath": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/final-polish-stage/elexiscars-varna/surface-review.png",
+  "visualChecks": {
+    "spelling": "Exact sourced/qualified core business name",
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "surfaces": [
+      "#ffffff",
+      "#30343b",
+      "#17191c",
+      "#202023",
+      "#19171d",
+      "#171717",
+      "#b00020",
+      "#405ff2"
+    ],
+    "result": "Balanced compact readable treatment; no caption, spelling drift, clipping, filled counters, background or residue observed; owner style acceptance pending."
+  },
+  "schemaVersion": 1,
+  "dealer": "elexiscars-varna",
+  "state": "asset-verified",
+  "generated": {
+    "path": "C:/Users/radev/.codex/generated_images/01a12a34-d2d7-7571-930a-1ed37e54ff8e/exec-3f5eeed8-0d0f-4c7c-aa43-61d3eaa9353b.png",
+    "sha256": "cfcdbbe6633a0d85fafb422bae077746a17d014b48412c975a8a22330f246ae2",
+    "bytes": 363449,
+    "format": "png",
+    "width": 2171,
+    "height": 724,
+    "hasAlpha": true,
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparentRatio": 0.8411856694600599,
+      "opaqueRatio": 0.13302867278617436
+    },
+    "visibleBounds": {
+      "x": 67,
+      "y": 232,
+      "width": 2055,
+      "height": 245
+    }
+  },
+  "assets": {
+    "onLight": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/final-polish-stage/elexiscars-varna/dealer-brand/logo-on-light.webp",
+      "sha256": "1295eff18e3320e0fedbd55693a14865673aa94008c0dc415a96b12e3a228c42",
+      "bytes": 52474,
+      "format": "webp",
+      "width": 1496,
+      "height": 239,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.6735003244355939,
+        "opaqueRatio": 0.269759805786141
+      },
+      "visibleBounds": {
+        "x": 49,
+        "y": 36,
+        "width": 1399,
+        "height": 166
+      },
+      "publicPath": "/dealer-brand/logo-on-light.webp"
+    },
+    "onDark": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/final-polish-stage/elexiscars-varna/dealer-brand/logo-on-dark.webp",
+      "sha256": "56265cef5a0c7ea5b9de69b3e377d7c2e2ff68a12be0df72699dcc2444b3180a",
+      "bytes": 33330,
+      "format": "webp",
+      "width": 1496,
+      "height": 239,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.6735003244355939,
+        "opaqueRatio": 0.269759805786141
+      },
+      "visibleBounds": {
+        "x": 49,
+        "y": 36,
+        "width": 1399,
+        "height": 166
+      },
+      "publicPath": "/dealer-brand/logo-on-dark.webp"
+    },
+    "onAccent": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/final-polish-stage/elexiscars-varna/dealer-brand/logo-on-accent.webp",
+      "sha256": "56265cef5a0c7ea5b9de69b3e377d7c2e2ff68a12be0df72699dcc2444b3180a",
+      "bytes": 33330,
+      "format": "webp",
+      "width": 1496,
+      "height": 239,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.6735003244355939,
+        "opaqueRatio": 0.269759805786141
+      },
+      "visibleBounds": {
+        "x": 49,
+        "y": 36,
+        "width": 1399,
+        "height": 166
+      },
+      "publicPath": "/dealer-brand/logo-on-accent.webp"
+    }
+  },
+  "master": {
+    "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/final-polish-stage/elexiscars-varna/branding/logo-master.png",
+    "sha256": "b52669b78312f1f73fb3dddc2eeae648a8db86e634f6c8a360521c10fd4559dd",
+    "bytes": 152109,
+    "format": "png",
+    "width": 1496,
+    "height": 239,
+    "hasAlpha": true,
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparentRatio": 0.6735003244355939,
+      "opaqueRatio": 0.269759805786141
+    },
+    "visibleBounds": {
+      "x": 49,
+      "y": 36,
+      "width": 1399,
+      "height": 166
+    }
+  },
+  "technicalAcceptance": {
+    "spelling": "Exact sourced/qualified core business name",
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "surfaces": [
+      "#ffffff",
+      "#30343b",
+      "#17191c",
+      "#202023",
+      "#19171d",
+      "#171717",
+      "#b00020",
+      "#405ff2"
+    ],
+    "result": "Balanced compact readable treatment; no caption, spelling drift, clipping, filled counters, background or residue observed; owner style acceptance pending."
+  },
+  "integrationVerified": false,
+  "hostedVerified": false,
+  "exportTool": "docs/logo-refresh/2026-09-18/tools/build-approved-logo-pack.mjs",
+  "exportToolSha256": "7fab60c4000210eff6bbb91f9c35e869bad90834d3bdd09d282a9a51835f0dbc",
+  "exportIsolation": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/final-new-a-export",
+  "updatedAt": "2026-10-11T11:59:35.093Z"
+}

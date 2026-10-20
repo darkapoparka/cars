@@ -36,6 +36,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "valueKey": "fuel.diesel"
       },
       {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2006",
+        "labelKey": "vehicle.field.year"
+      },
+      {
         "id": "lit",
         "icon": "/assets/imgs/page/car/lit.svg",
         "value": "224 hp",
@@ -112,7 +118,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Перфект Ауто",
       "location": "бул. Цар Освободител 110, кв. Победа",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-3224d40a0ddda61d/logo-on-light.webp",
       "mobile": "0888 802 226",
       "email": "",
       "whatsapp": "",
@@ -162,6 +168,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Diesel",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.diesel"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2015",
+        "labelKey": "vehicle.field.year"
       },
       {
         "id": "lit",
@@ -247,7 +259,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Перфект Ауто",
       "location": "бул. Цар Освободител 110, кв. Победа",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-3224d40a0ddda61d/logo-on-light.webp",
       "mobile": "0888 802 226",
       "email": "",
       "whatsapp": "",
@@ -297,6 +309,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Diesel",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.diesel"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2022",
+        "labelKey": "vehicle.field.year"
       },
       {
         "id": "lit",
@@ -384,7 +402,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Перфект Ауто",
       "location": "бул. Цар Освободител 110, кв. Победа",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-3224d40a0ddda61d/logo-on-light.webp",
       "mobile": "0888 802 226",
       "email": "",
       "whatsapp": "",
@@ -434,6 +452,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Hybrid",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.hybrid"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2026",
+        "labelKey": "vehicle.field.year"
       },
       {
         "id": "lit",
@@ -521,7 +545,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Перфект Ауто",
       "location": "бул. Цар Освободител 110, кв. Победа",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-3224d40a0ddda61d/logo-on-light.webp",
       "mobile": "0888 802 226",
       "email": "",
       "whatsapp": "",
@@ -571,6 +595,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Diesel",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.diesel"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2022",
+        "labelKey": "vehicle.field.year"
       },
       {
         "id": "lit",
@@ -657,7 +687,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Перфект Ауто",
       "location": "бул. Цар Освободител 110, кв. Победа",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-3224d40a0ddda61d/logo-on-light.webp",
       "mobile": "0888 802 226",
       "email": "",
       "whatsapp": "",
@@ -707,6 +737,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Petrol",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.gasoline"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2016",
+        "labelKey": "vehicle.field.year"
       },
       {
         "id": "lit",
@@ -792,7 +828,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Перфект Ауто",
       "location": "бул. Цар Освободител 110, кв. Победа",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-3224d40a0ddda61d/logo-on-light.webp",
       "mobile": "0888 802 226",
       "email": "",
       "whatsapp": "",

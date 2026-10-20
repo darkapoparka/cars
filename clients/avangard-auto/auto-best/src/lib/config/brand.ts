@@ -2,7 +2,7 @@ export type BrandConfig = {
   name: string;
   shortName: string;
   city: string;
-  showroomCoordinates: { latitude: number; longitude: number };
+  showroomCoordinates: { latitude: number; longitude: number } | null;
   addressLine: string;
   address: string;
   phone: string;
@@ -24,7 +24,7 @@ export const brand = {
   name,
   shortName,
   city,
-  showroomCoordinates: {"latitude":0,"longitude":0},
+  showroomCoordinates: null,
   youtubeUrl: "",
   instagramUrl: "https://www.instagram.com/avangard_auto_varna/",
   facebookUrl: "https://www.facebook.com/avangardautovarna/",
@@ -33,6 +33,6 @@ export const brand = {
   addressLine,
   address: "бул. Цар Освободител 289",
   appointment: "Обадете се преди посещение",
-  logo: "/dealer-brand/logo-on-light-20260919.webp",
-  logoOnDark: "/dealer-brand/logo-on-dark-20260919.webp"
+  logo: "/dealer-brand/v2-d2d110db50b48593/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/v2-d2d110db50b48593/logo-on-dark.webp"
 } as const satisfies BrandConfig;

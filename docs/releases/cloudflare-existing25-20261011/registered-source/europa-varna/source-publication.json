@@ -1,0 +1,115 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-existing-fleet-source-publication",
+  "reviewed": true,
+  "reviewedAt": "2026-10-13T23:06:16.606Z",
+  "dealer": "europa-varna",
+  "sourceOwnership": "cars-canonical",
+  "canonicalSourceRepository": "darkapoparka/cars",
+  "canonicalTarget": "clients/europa-varna",
+  "targetRef": "refs/heads/main",
+  "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+  "canonicalBaseline": {
+    "commit": "92e3945a7aa752de68bb8d8f8035e044a513bea6",
+    "tree": "d5943d303cf5c816e837cdc9f6143b7b2a889266"
+  },
+  "preparedTree": "e3d33e58eade1baf75cfb91b3cf09eb6d0d792c6",
+  "originalSourcePreparation": {
+    "runId": 38479417179,
+    "attempt": "1",
+    "artifact": {
+      "id": 11855658629,
+      "name": "existing-cf-source-europa-varna-38479417179-1",
+      "bytes": 1457245761,
+      "digest": "sha256:52100e415ccc39bf9e6cd89884d20fc74871acd40411fd51d5a108551f89aecf"
+    },
+    "patchSha256": "16b80faa8b5b5982439036328ab582b63d8cd6a9ab19359dc8d665c742c5d96c",
+    "receiptSha256": "67d8a1bce0bacb9fcab281a8dce938cfd4351dce9e435d19b3aa47b4c80cc60a",
+    "finalReviewSha256": "b592879df4578a768d9e04cd0a23b7f7d56be8d8603a6dba3d4bb5c3aa2b5959",
+    "sourceMember": {
+      "planJobId": 115578051578,
+      "sourceJobId": 115579593933
+    }
+  },
+  "transport": {
+    "run": {
+      "id": 38480947961,
+      "attempt": 1,
+      "sourceCommit": "6c4609d628b6b6d13b93211334c6ffa5044dd565"
+    },
+    "retainedArtifact": {
+      "id": 11857209069,
+      "sha256": "49267487dc6b3343ca99475f751dd2f2f3c3b22a8eccc664ef1b8fbe8acb214e"
+    },
+    "reusedGitObjects": 10545,
+    "newBlobs": 224
+  },
+  "inputs": {
+    "adoption": {
+      "path": "docs/releases/cloudflare-existing25-20261011/registered-source/europa-varna/reviewed-public-adoption.json",
+      "sha256": "3999bd90218621848698289db649fabc8d65d24c2d383e664c847dbbcbd2a9ad"
+    },
+    "candidateLock": {
+      "path": "docs/releases/cloudflare-existing25-20261011/registered-source/europa-varna/qualification-lock.json",
+      "sha256": "842a092ead0a5c09ca8380e064f6da5344b572ee14759ce599c1dd6c3a23fd5e"
+    },
+    "qualification": {
+      "path": "docs/releases/cloudflare-existing25-20261011/registered-source/europa-varna/qualification-context.json",
+      "sha256": "032616393dafbdd01190670020ce6ab5c13e17af8cb1efcdc4652b8f47152c36"
+    },
+    "sourceDeltaReview": {
+      "path": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-delta-review.json",
+      "sha256": "cbdd14d8bc3d18a10c028134e33b47225a4fe2a52951b527b08f33cb55581975"
+    },
+    "branding": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/europa-varna/branding.json",
+      "sha256": "999cfdc870ef17f0ed9ba029fdd6d4b7fb2b868123f1fd5fe2ac80f3e83f9d10"
+    }
+  },
+  "mountOwnership": {
+    "baseCommit": "92e3945a7aa752de68bb8d8f8035e044a513bea6",
+    "baseTree": "d5943d303cf5c816e837cdc9f6143b7b2a889266",
+    "adoptionReceiptSha256": "3999bd90218621848698289db649fabc8d65d24c2d383e664c847dbbcbd2a9ad",
+    "initialSelection": true,
+    "previousPublicRoutes": false,
+    "variants": [
+      {
+        "key": "auto-best",
+        "base": "",
+        "entry": "/"
+      },
+      {
+        "key": "modern",
+        "base": "/variant-2",
+        "entry": "/variant-2/cars"
+      },
+      {
+        "key": "import",
+        "base": "/variant-3",
+        "entry": "/variant-3/"
+      },
+      {
+        "key": "app",
+        "base": "/variant-4",
+        "entry": "/variant-4/"
+      },
+      {
+        "key": "mobile",
+        "base": "/variant-5",
+        "entry": "/variant-5/"
+      },
+      {
+        "key": "karento-best",
+        "base": "/variant-6",
+        "entry": "/variant-6/"
+      }
+    ]
+  },
+  "authoritativeFactsUnchanged": true,
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "privatePublishingMirror": {
+    "repository": "darkapoparka/cars-europa-varna",
+    "state": "not-published-by-source-preparation"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "dealer": "balkan-car-varna",
+  "media": [
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/balkan-car-varna/media/11775920728897115-1.webp",
+      "sha256": "f4b4fb8f8e06fd30b863c5e28806c908cefd07295245e25915d7cc9502f6f3ea",
+      "bytes": 251254,
+      "destination": "dealer-stock/11775920728897115-1.webp"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/balkan-car-varna/media/11775920728897115-2.webp",
+      "sha256": "7c0f251908ed69b04b1482fdb20c6c8ed22cc20434c9a1fb4dbeaa1c36002f6a",
+      "bytes": 193684,
+      "destination": "dealer-stock/11775920728897115-2.webp"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/balkan-car-varna/media/21790309618806312-1.webp",
+      "sha256": "4fbaa230a99f48673acb603a508054600115f2bdd4913bbab6f8d52762772c59",
+      "bytes": 292724,
+      "destination": "dealer-stock/21790309618806312-1.webp"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/balkan-car-varna/media/21790309618806312-2.webp",
+      "sha256": "481ab9665152903e769fb71a355236fc9027da093fc13a40defa77d8a899dc5f",
+      "bytes": 272782,
+      "destination": "dealer-stock/21790309618806312-2.webp"
+    }
+  ]
+}

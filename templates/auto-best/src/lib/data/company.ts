@@ -54,6 +54,9 @@ export function resolveImportUrl(value: string | null): string | null {
   }
 }
 
+/** Template labels use the strict reviewed catalog; dealer adapters mark supplied copy separately. */
+export const companyServicesCopyOwner: 'template' | 'dealer' = 'template';
+
 export const companyServices: CompanyService[] = [
   {
     index: '01',

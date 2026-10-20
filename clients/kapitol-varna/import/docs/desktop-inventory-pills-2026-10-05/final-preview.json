@@ -1,0 +1,121 @@
+{
+	"filterPills": [
+		{
+			"border": "1px",
+			"height": 48,
+			"label": "Марка",
+			"radius": "999px"
+		},
+		{
+			"border": "1px",
+			"height": 48,
+			"label": "Модел",
+			"radius": "999px"
+		},
+		{
+			"border": "1px",
+			"height": 48,
+			"label": "Цена",
+			"radius": "999px"
+		},
+		{
+			"border": "1px",
+			"height": 48,
+			"label": "Пробег",
+			"radius": "999px"
+		},
+		{
+			"border": "1px",
+			"height": 48,
+			"label": "Гориво",
+			"radius": "999px"
+		},
+		{
+			"border": "1px",
+			"height": 48,
+			"label": "Тип",
+			"radius": "999px"
+		}
+	],
+	"filters": {
+		"height": 48,
+		"width": 830,
+		"x": 297.5,
+		"y": 410.234375
+	},
+	"firstCard": {
+		"height": 378.203125,
+		"width": 315,
+		"x": 52.5,
+		"y": 599.234375
+	},
+	"overflow": false,
+	"panel": {
+		"height": 222,
+		"width": 880,
+		"x": 272.5,
+		"y": 261.234375
+	},
+	"scroll": {
+		"x": 0,
+		"y": 0
+	},
+	"search": {
+		"height": 48,
+		"width": 830,
+		"x": 297.5,
+		"y": 286.234375
+	},
+	"searchControl": {
+		"height": 48,
+		"width": 830,
+		"x": 297.5,
+		"y": 286.234375
+	},
+	"searchFont": "18px",
+	"searchRadius": "999px",
+	"separators": ["none", "none", "none", "none", "none", "none"],
+	"submitLabelDisplay": "none",
+	"typePills": [
+		{
+			"border": "1px",
+			"height": 44,
+			"label": "Всички",
+			"radius": "999px",
+			"selected": "page"
+		},
+		{
+			"border": "1px",
+			"height": 44,
+			"label": "SUV",
+			"radius": "999px",
+			"selected": null
+		},
+		{
+			"border": "1px",
+			"height": 44,
+			"label": "Седан",
+			"radius": "999px",
+			"selected": null
+		},
+		{
+			"border": "1px",
+			"height": 44,
+			"label": "Кабрио",
+			"radius": "999px",
+			"selected": null
+		}
+	],
+	"types": {
+		"height": 44,
+		"width": 830,
+		"x": 297.5,
+		"y": 350.234375
+	},
+	"url": "http://127.0.0.1:6790/bg/inventory",
+	"viewport": {
+		"height": 1000,
+		"width": 1440
+	},
+	"visibleImagesLoaded": true
+}

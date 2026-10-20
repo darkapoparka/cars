@@ -1,0 +1,237 @@
+{
+  "strategy": "USE GENERATED CANDIDATE",
+  "identityStatus": "Final improved disclosed demo/proposal treatment for same qualified business; materially polished artwork, not official rebrand or owner/dealer approval.",
+  "sourceUrls": [
+    "https://varnacarexpress.mobile.bg",
+    "https://cdn2.focus.bg/mobile/images/housespicts/h10347082890811433.pic"
+  ],
+  "sourceLimitations": "Image Gen refinement of published cursive business-name treatment; vehicle photo and phone removed; demo not dealership approval",
+  "priorPreferredPack": "L:/CODEX/cars/leads/branding/fleet-20261011/varnacarexpress-varna",
+  "priorPreferredFiles": {
+    "branding/logo-master.png": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/varnacarexpress-varna/branding/logo-master.png",
+      "sha256": "b92ccac6ed1125a66b4f6a63f603ee0ee22fe31d17f383e9cfe94262598123fe"
+    },
+    "branding/logo-on-light.png": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/varnacarexpress-varna/branding/logo-on-light.png",
+      "sha256": "b92ccac6ed1125a66b4f6a63f603ee0ee22fe31d17f383e9cfe94262598123fe"
+    },
+    "branding/logo-on-dark.png": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/varnacarexpress-varna/branding/logo-on-dark.png",
+      "sha256": "3ec3c4ba8076af38aaf0d8a7a02a1e0d94321971c72f2ca6a63fc376e27d4513"
+    },
+    "branding/logo-on-accent.png": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/varnacarexpress-varna/branding/logo-on-accent.png",
+      "sha256": "3ec3c4ba8076af38aaf0d8a7a02a1e0d94321971c72f2ca6a63fc376e27d4513"
+    },
+    "dealer-brand/logo-on-light.webp": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/varnacarexpress-varna/dealer-brand/logo-on-light.webp",
+      "sha256": "5d1268c63512c2feddbf76dfa4b732f75ae7360bff408687d09bbf3d0e95004a"
+    },
+    "dealer-brand/logo-on-dark.webp": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/varnacarexpress-varna/dealer-brand/logo-on-dark.webp",
+      "sha256": "de757c5040b5c151e1e6008263c4b4b35a56a7e83d63bf625041436c43c65262"
+    },
+    "dealer-brand/logo-on-accent.webp": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/varnacarexpress-varna/dealer-brand/logo-on-accent.webp",
+      "sha256": "de757c5040b5c151e1e6008263c4b4b35a56a7e83d63bf625041436c43c65262"
+    },
+    "receipt.json": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/varnacarexpress-varna/receipt.json",
+      "sha256": "17907e85c7bdc15fe12ab1b35da92bf3e7cd92cf1b8f1dc0bebd3d5c901ca1f1"
+    },
+    "surface-review.png": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/varnacarexpress-varna/surface-review.png",
+      "sha256": "39e0092e5f74218fde1f1181a8fd565be85751d067e31fcdec20f6430f0643b2"
+    }
+  },
+  "generatedPath": "C:/Users/radev/.codex/generated_images/01a12a34-d2d7-7571-930a-1ed37e54ff8e/exec-c477f2f3-000e-4b27-873e-55a6cceeeb6e.png",
+  "imageGeneration": {
+    "tool": "image_gen.imagegen",
+    "reference": "exec-c477f2f3-000e-4b27-873e-55a6cceeeb6e",
+    "prompt": "Polish the supplied current dealer treatment into a clearly disclosed improved proposal for SAME factual business. Exact ONLY name \"Varna Car Express\". Preserve exact flowing mixed-case handwritten cursive identity, no invented emblem. Redraw script with visibly heavier even clean strokes and simplified joins, broader open small-letter counters; retain personal expressive source handwriting. Single horizontal wordmark. Preserve dark graphite colors and meaningful individual motif. Compact one horizontal row, name dominant, emblem modest if present. No tiny caption/subtitle/extra words/text above or below, no enclosing plate/background. Preserve script personality where requested; other lettering deliberately customized automotive letter shapes with clean broad open counters, crisp individual cuts and restrained forward slant. Readable at120px totalwidth. Flat solid inks, no gradients, texture, mottling, shadow, glow, shading, grit or stray pixels. Genuine RGBA transparent background including gaps/counters with safe padding. Exact name/script/case/spaces, no business rename or invented claims.",
+    "referenced_image_paths": [
+      "L:/CODEX/cars/leads/branding/fleet-20261011/varnacarexpress-varna/branding/logo-master.png"
+    ],
+    "referenceMetadata": [
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/varnacarexpress-varna/branding/logo-master.png",
+        "sha256": "b92ccac6ed1125a66b4f6a63f603ee0ee22fe31d17f383e9cfe94262598123fe",
+        "bytes": 145580,
+        "width": 1496,
+        "height": 332,
+        "hasAlpha": true,
+        "role": "Previously preferred dealer treatment; published source identity and limitations preserved separately."
+      }
+    ],
+    "transparent_background": true,
+    "outputPath": "C:/Users/radev/.codex/generated_images/01a12a34-d2d7-7571-930a-1ed37e54ff8e/exec-c477f2f3-000e-4b27-873e-55a6cceeeb6e.png",
+    "modelVersion": "not exposed by tool"
+  },
+  "variantDerivation": {
+    "onLight": "Existing approved raster exporter crops/scales ImageGen original colored ink and alpha.",
+    "onDark": "White raster ink derived by existing approved exporter from same native output alpha; not independently generated.",
+    "onAccent": "White raster ink derived by existing approved exporter from same native output alpha; not independently generated."
+  },
+  "visualAccepted": true,
+  "ownerApproved": false,
+  "selectionStatus": "Final preferred technical candidate; owner acceptance and integration pending.",
+  "surfaceReviewPath": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/final-polish-stage/varnacarexpress-varna/surface-review.png",
+  "visualChecks": {
+    "spelling": "Exact sourced/qualified core business name",
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "surfaces": [
+      "#ffffff",
+      "#30343b",
+      "#17191c",
+      "#202023",
+      "#19171d",
+      "#171717",
+      "#b00020",
+      "#405ff2"
+    ],
+    "result": "Balanced compact readable treatment; no caption, spelling drift, clipping, filled counters, background or residue observed; owner style acceptance pending."
+  },
+  "schemaVersion": 1,
+  "dealer": "varnacarexpress-varna",
+  "state": "asset-verified",
+  "generated": {
+    "path": "C:/Users/radev/.codex/generated_images/01a12a34-d2d7-7571-930a-1ed37e54ff8e/exec-c477f2f3-000e-4b27-873e-55a6cceeeb6e.png",
+    "sha256": "cc3de2d42ef0e51784d93fc09adfb660ce54c7613ddd0f6ab74854ed5c93913e",
+    "bytes": 395911,
+    "format": "png",
+    "width": 2171,
+    "height": 724,
+    "hasAlpha": true,
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparentRatio": 0.8445843120389056,
+      "opaqueRatio": 0.1239225755883049
+    },
+    "visibleBounds": {
+      "x": 31,
+      "y": 142,
+      "width": 2109,
+      "height": 432
+    }
+  },
+  "assets": {
+    "onLight": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/final-polish-stage/varnacarexpress-varna/dealer-brand/logo-on-light.webp",
+      "sha256": "ab9e78661938461b15f3aafb8101968c96d730626432499b627bd762ec256cc4",
+      "bytes": 65342,
+      "format": "webp",
+      "width": 1496,
+      "height": 359,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.7967355845858222,
+        "opaqueRatio": 0.15768884155333443
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 36,
+        "width": 1400,
+        "height": 287
+      },
+      "publicPath": "/dealer-brand/logo-on-light.webp"
+    },
+    "onDark": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/final-polish-stage/varnacarexpress-varna/dealer-brand/logo-on-dark.webp",
+      "sha256": "5d67d2005e863205b4ede6e9cb72fdea74972149c7a9dce9730de7350c31a6a8",
+      "bytes": 49678,
+      "format": "webp",
+      "width": 1496,
+      "height": 359,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.7967355845858222,
+        "opaqueRatio": 0.15768884155333443
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 36,
+        "width": 1400,
+        "height": 287
+      },
+      "publicPath": "/dealer-brand/logo-on-dark.webp"
+    },
+    "onAccent": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/final-polish-stage/varnacarexpress-varna/dealer-brand/logo-on-accent.webp",
+      "sha256": "5d67d2005e863205b4ede6e9cb72fdea74972149c7a9dce9730de7350c31a6a8",
+      "bytes": 49678,
+      "format": "webp",
+      "width": 1496,
+      "height": 359,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.7967355845858222,
+        "opaqueRatio": 0.15768884155333443
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 36,
+        "width": 1400,
+        "height": 287
+      },
+      "publicPath": "/dealer-brand/logo-on-accent.webp"
+    }
+  },
+  "master": {
+    "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/final-polish-stage/varnacarexpress-varna/branding/logo-master.png",
+    "sha256": "f1714e4acb8801c6c8172ef97c9600c5de25b345a72098aa2f8d3f83defdbcbc",
+    "bytes": 171340,
+    "format": "png",
+    "width": 1496,
+    "height": 359,
+    "hasAlpha": true,
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparentRatio": 0.7967355845858222,
+      "opaqueRatio": 0.15768884155333443
+    },
+    "visibleBounds": {
+      "x": 48,
+      "y": 36,
+      "width": 1400,
+      "height": 287
+    }
+  },
+  "technicalAcceptance": {
+    "spelling": "Exact sourced/qualified core business name",
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "surfaces": [
+      "#ffffff",
+      "#30343b",
+      "#17191c",
+      "#202023",
+      "#19171d",
+      "#171717",
+      "#b00020",
+      "#405ff2"
+    ],
+    "result": "Balanced compact readable treatment; no caption, spelling drift, clipping, filled counters, background or residue observed; owner style acceptance pending."
+  },
+  "integrationVerified": false,
+  "hostedVerified": false,
+  "exportTool": "docs/logo-refresh/2026-09-18/tools/build-approved-logo-pack.mjs",
+  "exportToolSha256": "7fab60c4000210eff6bbb91f9c35e869bad90834d3bdd09d282a9a51835f0dbc",
+  "exportIsolation": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/final-new-a-export",
+  "updatedAt": "2026-10-11T12:01:15.949Z"
+}

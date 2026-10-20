@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "dealer": "valkov-cars-varna",
+  "copy": {
+    "valkov-cars-varna-11770728962537417": {
+      "sourceDescription": "Volvo V60 2.0 D3 от датирана публична обява. Потвърдете цената и наличността директно с автокъщата.",
+      "en": {
+        "description": "Volvo V60 2.0 D3 from a dated public advert. Confirm price and availability directly with the dealership.",
+        "imageAlts": [
+          "Volvo V60 2.0 D3 — dated public advert photo 1",
+          "Volvo V60 2.0 D3 — dated public advert photo 2"
+        ]
+      },
+      "bg": {
+        "description": "Volvo V60 2.0 D3 от датирана публична обява. Потвърдете цената и наличността директно с автокъщата.",
+        "imageAlts": [
+          "Volvo V60 2.0 D3 — снимка от датирана публична обява 1",
+          "Volvo V60 2.0 D3 — снимка от датирана публична обява 2"
+        ]
+      }
+    },
+    "valkov-cars-varna-11772080668154587": {
+      "sourceDescription": "BMW 320 2.0 xDrive Luxury от датирана публична обява. Потвърдете цената и наличността директно с автокъщата.",
+      "en": {
+        "description": "BMW 320 2.0 xDrive Luxury from a dated public advert. Confirm price and availability directly with the dealership.",
+        "imageAlts": [
+          "BMW 320 2.0 xDrive Luxury — dated public advert photo 1",
+          "BMW 320 2.0 xDrive Luxury — dated public advert photo 2"
+        ]
+      },
+      "bg": {
+        "description": "BMW 320 2.0 xDrive Luxury от датирана публична обява. Потвърдете цената и наличността директно с автокъщата.",
+        "imageAlts": [
+          "BMW 320 2.0 xDrive Luxury — снимка от датирана публична обява 1",
+          "BMW 320 2.0 xDrive Luxury — снимка от датирана публична обява 2"
+        ]
+      }
+    }
+  },
+  "consumer": "facts.business.modernInventoryCopy",
+  "donorCopyRetained": false
+}

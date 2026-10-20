@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-focused-exact-source-editorial-repair-proof",
+  "dealer": "elit-auto-import",
+  "baseSourceCommit": "0a01b096ffe071a8762162ac3b9cc9a32e56c465",
+  "baseSourceTree": "8c071de6cf32c162f0e1f74c8f4b5bb38efbe932",
+  "sourceModuleProof": {
+    "dealer": "elit-auto-import",
+    "sourceCommit": "0a01b096ffe071a8762162ac3b9cc9a32e56c465",
+    "sourceTree": "8c071de6cf32c162f0e1f74c8f4b5bb38efbe932",
+    "scope": "clients/elit-auto-import/import/src/lib/content/extra-localized.ts",
+    "baseBlob": "dd418f43c334e3ebcd611daf9374ccfb2cd8fa48",
+    "candidateBlob": "4a24e91fb1b0a64f2e644ae696f21d5f9c162ef7",
+    "candidate": {
+      "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-vercel-resume-20261015/wave-transport/isauto-editorial-repair/elit-auto-import/extra-localized.ts",
+      "sha256": "beb181e0be63045c8d03646bdb7765fd710f5483af6710dd5d858ee3f3ec9bc4"
+    },
+    "patch": {
+      "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-vercel-resume-20261015/wave-transport/isauto-editorial-repair/elit-auto-import/explicit-editorial.patch",
+      "sha256": "d36d5101d9431a5af00466efc61ae750b4ef59a4a0cdb86b0c9ee480c83227ef"
+    },
+    "addedEntries": [
+      {
+        "bg": "Подбрани текущо рекламирани автомобили. Наличност, състояние, пробег и условия се потвърждават с продавача.",
+        "en": "Selected currently advertised vehicles. Confirm availability, condition, mileage and terms with the seller."
+      }
+    ],
+    "beforeError": "Missing English editorial catalog entry: Подбрани текущо рекламирани автомобили. Наличност, състояние, пробег и условия се потвърждават с продавача.",
+    "after": {
+      "slug": "confirm-current-availability",
+      "title": "How to confirm current availability at ELIT AUTO IMPORT EXPORT",
+      "category": "Dealer information",
+      "date": "2026-09-07",
+      "image": "/assets/daynight/codex-generated-v2/blog/blog-cover-import-check-v2.webp",
+      "excerpt": "Selected currently advertised vehicles. Confirm availability, condition, mileage and terms with the seller.",
+      "content": [
+        "Contact the dealership on 0887 777 887 and identify the exact vehicle before visiting.",
+        "Independent demonstration preview. Forms do not send messages or create a reservation."
+      ]
+    },
+    "checks": {
+      "exactRetainedSource": true,
+      "beforeFailureReproduced": true,
+      "afterEnglishPostsPassed": true,
+      "bgBehaviorUnchanged": true,
+      "dateSlugAndImageUnchanged": true,
+      "allExistingCatalogEntriesUnchanged": true,
+      "unknownEditorialStillThrows": true
+    },
+    "modulesRead": [
+      {
+        "path": "import/src/lib/content/localized.ts",
+        "blob": "8e8efdebf54267538d0f7a02930018f56fab65a1"
+      },
+      {
+        "path": "import/src/lib/content/extra-localized.ts",
+        "blob": "dd418f43c334e3ebcd611daf9374ccfb2cd8fa48"
+      },
+      {
+        "path": "import/src/lib/config/site.ts",
+        "blob": "d8ccb2e922f23a4223bad5c590fd1a61cd234c17"
+      },
+      {
+        "path": "import/src/lib/config/dealer.ts",
+        "blob": "149e0f3731c199eb89027fa8c1278086f0b81c14"
+      },
+      {
+        "path": "import/src/lib/config/cars-locale.ts",
+        "blob": "d39ef2e84bd6a744ff0d50390fe8c2687ff45764"
+      },
+      {
+        "path": "import/src/lib/data/blog.ts",
+        "blob": "b437b03e65a39dd075043a5b85b81c7a4a67f4a7"
+      }
+    ]
+  },
+  "originalProof": {
+    "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-vercel-resume-20261015/wave-transport/isauto-editorial-repair/remaining-editorial-repair-proof.json",
+    "sha256": "5b7710a457523840c6295ab7bd853bb852aaf37a84998230d40403a7c39f2566"
+  },
+  "compiled": false,
+  "newCiRun": null,
+  "providerWrites": 0
+}

@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "dealer": "porsche-varna",
+  "copy": {
+    "porsche-varna-11790354686274560": {
+      "sourceDescription": "Audi A5 от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+      "en": {
+        "description": "Audi A5 from a dated public advert. Confirm condition, price and availability directly with the dealership.",
+        "imageAlts": [
+          "Audi A5 — dated public advert photo 1",
+          "Audi A5 — dated public advert photo 2"
+        ]
+      },
+      "bg": {
+        "description": "Audi A5 от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+        "imageAlts": [
+          "Audi A5 — снимка от датирана публична обява 1",
+          "Audi A5 — снимка от датирана публична обява 2"
+        ]
+      }
+    },
+    "porsche-varna-11790324799720879": {
+      "sourceDescription": "Audi RS6 4.0 biturbo quattro от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+      "en": {
+        "description": "Audi RS6 4.0 biturbo quattro from a dated public advert. Confirm condition, price and availability directly with the dealership.",
+        "imageAlts": [
+          "Audi RS6 4.0 biturbo quattro — dated public advert photo 1",
+          "Audi RS6 4.0 biturbo quattro — dated public advert photo 2"
+        ]
+      },
+      "bg": {
+        "description": "Audi RS6 4.0 biturbo quattro от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+        "imageAlts": [
+          "Audi RS6 4.0 biturbo quattro — снимка от датирана публична обява 1",
+          "Audi RS6 4.0 biturbo quattro — снимка от датирана публична обява 2"
+        ]
+      }
+    }
+  },
+  "consumer": "facts.business.modernInventoryCopy",
+  "donorCopyRetained": false
+}

@@ -14,6 +14,14 @@ This repository owns one standalone SvelteKit application. English and Bulgarian
 
 Catalog filenames use the inherited `reviewed` convention; their notes distinguish authored translation review from independent human linguistic approval. No independent professional translator approval is claimed.
 
+Optional `addressShort` and `appointmentShort` fields in `dealerLocalizedText`
+provide explicit EN/BG mobile copy. Keep their matching authored entries in
+`localization/dealer.reviewed.json`. `i18n.dealer(field, true)` selects the compact
+variant; an older dealer configuration without it keeps its own reviewed full
+localized field. Full addresses, opening/appointment guidance and map destinations
+retain their existing defaults. Client refreshes can replace the bounded locale
+object without inheriting the template's compact address or changing the API.
+
 ## Native request/rendering adapter
 
 `src/hooks.ts` uses URL-only SvelteKit rerouting. `src/lib/locale/server.ts` resolves request-local state into `event.locals`; `+layout.server.ts` returns it to native context. Svelte renders message keys directly on the server and client. No rendered DOM translation, HTML text replacement or machine-translation network service is used. The document-language template token is filled from the resolved locale.

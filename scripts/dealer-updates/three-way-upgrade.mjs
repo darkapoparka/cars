@@ -1,4 +1,24 @@
 import crypto from 'node:crypto';
+
+// A reviewed full template replacement rebinds the current raster afterward.
+// Obsolete derived logo seals must not survive that replacement; facts do.
+export function clearReplacedProfileLogoContracts(files,{enabled=false}={}){
+  if(!enabled)return [];
+  if(!(files instanceof Map))throw Error('Exact candidate files required');
+  const hash=bytes=>crypto.createHash('sha256').update(bytes).digest('hex');
+  const paths=['auto-best/src/lib/data/dealer-profile.json','import/src/lib/data/dealer-profile.json','modern/packages/marketplace-domain/testing/dealer-profile.json'],changes=[];
+  for(const name of paths){
+    if(!files.has(name))continue;
+    const before=Buffer.from(files.get(name)),profile=JSON.parse(before.toString('utf8'));
+    if(profile.logoContract==null)continue;
+    const prior=JSON.stringify(profile.logoContract);
+    profile.logoContract=null;
+    const after=Buffer.from(JSON.stringify(profile,null,2)+'\n');
+    files.set(name,after);
+    changes.push({path:name,beforeSha256:hash(before),afterSha256:hash(after),obsoleteLogoContractSha256:hash(Buffer.from(prior)),factualFieldsUnchanged:true});
+  }
+  return changes;
+}
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
@@ -157,7 +177,7 @@ function comparable(pathname, bytes) {
   const text = TEXT_EXTENSIONS.has(path.extname(pathname).toLowerCase())
     ? tryUtf8(bytes)
     : null;
-  return text === null ? Buffer.from(bytes) : normalizedText(bytes);
+  return text === null ? (Buffer.isBuffer(bytes) ? bytes : Buffer.from(bytes)) : normalizedText(bytes);
 }
 
 function tryUtf8(bytes) {
@@ -206,9 +226,9 @@ function gitMerge(pathname, dealerBytes, baseBytes, templateBytes, tempRoot) {
   }
 }
 
-function mapOfFiles(value) {
+function mapOfFiles(value, { copyBuffers = true } = {}) {
   if (value instanceof Map) {
-    return new Map([...value].map(([name, bytes]) => [safeRelative(name), Buffer.from(bytes)]));
+    return new Map([...value].map(([name, bytes]) => [safeRelative(name), copyBuffers || !Buffer.isBuffer(bytes) ? Buffer.from(bytes) : bytes]));
   }
   if (typeof value === 'string') {
     const root = path.resolve(value), result = new Map();
@@ -241,7 +261,7 @@ function record(pathname, kind, before, after, extra = {}) {
 }
 
 /** Select immutable revisions from the current Cars approval lock, never from a floating branch label. */
-export function selectPinnedRevisions(manifest, lock, { targetVariants = manifest?.variants, keys: selectedKeys, qualification, root } = {}) {
+export function selectPinnedRevisions(manifest, lock, { targetVariants = manifest?.variants, keys: selectedKeys, qualification, root, sourceReplacement = false } = {}) {
   if (qualification) validateNativeQualificationContext(qualification,{dealer:manifest?.slug});
   if (!Array.isArray(manifest?.variants) || ![3, 4, 5, 6].includes(manifest.variants.length)) {
     throw new Error('Template update requires the dealer’s recorded three-, four-, five- or six-design manifest');
@@ -263,7 +283,7 @@ export function selectPinnedRevisions(manifest, lock, { targetVariants = manifes
   if (targetKeys.some(key => !keys.includes(key) && !wanted.includes(key))) throw new Error('A design migration must include every newly added family');
   const pins = {};
   for (const key of wanted) {
-    const added = !keys.includes(key);
+    const added = !keys.includes(key) || (sourceReplacement && !manifest.templateSources?.[key]);
     const previous = manifest.templateRevisions?.[key];
     const previousSource = manifest.templateSources?.[key];
     const approved = lock?.templates?.[key];
@@ -363,16 +383,19 @@ export function planDealerUpgrade({ dealerRoot, lock, oldBases, newBases, target
   }
   const manifestBytes = registeredAdoption ? null : fs.readFileSync(manifestFile);
   const manifest = registeredAdoption ? registeredAdoption.manifest : JSON.parse(manifestBytes.toString('utf8').replace(/^\uFEFF/, ''));
-  const pins = selectPinnedRevisions(manifest, lock, { targetVariants: targetManifest?.variants || manifest.variants, keys: selectedKeys, qualification, root });
+  const pins = selectPinnedRevisions(manifest, lock, { targetVariants: targetManifest?.variants || manifest.variants, keys: selectedKeys, qualification, root,sourceReplacement:registeredAdoption?.receipt.templateRefresh?.unversionedBaseline===true });
+  assertRegisteredTemplateRefresh(registeredAdoption,pins,manifest);
   const candidate = new Map(), changes = [], conflicts = [], perDesign = {};
   for (const key of Object.keys(pins)) {
     if ((!oldBases?.[key] && pins[key].from !== null) || !newBases?.[key]) throw new Error(`Missing exact old/new template trees for ${key}`);
-    const oldBase = pins[key].from === null ? new Map() : mapOfFiles(oldBases[key]);
-    const newBase = mapOfFiles(newBases[key]);
+    // Immutable planner inputs are borrowed read-only. The selected candidate
+    // bytes receive their own defensive copy in planThreeWayUpgrade.
+    const oldBase = pins[key].from === null ? new Map() : mapOfFiles(oldBases[key], { copyBuffers: false });
+    const newBase = mapOfFiles(newBases[key], { copyBuffers: false });
     if ((pins[key].from !== null && !oldBase.has('package.json')) || !newBase.has('package.json')) throw new Error(`${key}: pinned template tree must contain package.json`);
     const designRoot = path.join(source, safeRelative(key));
     if (pins[key].from !== null && !exists(path.join(designRoot, 'package.json'))) throw new Error(`${key}: dealer source is missing its design package.json`);
-    const planned = planThreeWayUpgrade({
+    const planned = registeredAdoption?.receipt.templateRefresh ? planRegisteredPinnedTemplateRefresh({newBase,dealer:exists(designRoot)?designRoot:new Map()}) : planThreeWayUpgrade({
       oldBase,
       newBase,
       dealer: exists(designRoot) ? designRoot : new Map(),
@@ -426,8 +449,20 @@ export function planDealerUpgrade({ dealerRoot, lock, oldBases, newBases, target
  * readiness until a deliberate per-path decision or edited resolution file is
  * supplied. No template version is inferred here; callers pin both bases.
  */
+
+/** Deliberate template replacement for a reviewed raw-source proposal; ordinary three-way upgrades retain their behavior. */
+export function planRegisteredPinnedTemplateRefresh({newBase,dealer}){
+ const target=mapOfFiles(newBase),original=mapOfFiles(dealer),candidate=new Map(target),changes=[];
+ if(!target.has('package.json'))throw Error('Pinned template replacement needs its exact application package');
+ for(const name of [...new Set([...original.keys(),...target.keys()])].sort()){
+  const before=original.get(name)??null,after=target.get(name)??null;
+  if(before===null||after===null||!before.equals(after))changes.push(record(name,'reviewed-pinned-template-replacement',before,after,{originalSourceRetainedInGit:true}));
+ }
+ return{schemaVersion:1,mode:'reviewed-pinned-template-replacement',candidate,changes,conflicts:[],ready:true,summary:{examined:new Set([...original.keys(),...target.keys()]).size,changed:changes.length,conflicts:0,autoMerged:0,dealerOnly:0,templateOnly:changes.length}};
+}
+
 export function planThreeWayUpgrade({ oldBase, newBase, dealer, resolutions = {}, tempRoot = os.tmpdir() }) {
-  const oldFiles = mapOfFiles(oldBase), newFiles = mapOfFiles(newBase), dealerFiles = mapOfFiles(dealer);
+  const oldFiles = mapOfFiles(oldBase, { copyBuffers: false }), newFiles = mapOfFiles(newBase, { copyBuffers: false }), dealerFiles = mapOfFiles(dealer, { copyBuffers: false });
   const candidate = new Map(), changes = [], conflicts = [];
   const names = [...new Set([...oldFiles.keys(), ...newFiles.keys(), ...dealerFiles.keys()])].sort();
   for (const pathname of names) {
@@ -855,3 +890,6 @@ export function rollbackUpgrade({ source, receiptPath }) {
     throw error;
   } finally { fs.rmdirSync(lock); }
 }
+
+
+export function assertRegisteredTemplateRefresh(registeredAdoption,pins,manifest=registeredAdoption?.manifest){if(!registeredAdoption?.receipt.templateRefresh)return null;const r=registeredAdoption.receipt.templateRefresh;const families=['auto-best','modern','import','app','mobile','karento-best'];if(r.schemaVersion!==1||r.kind!=='cars-owner-directed-pinned-template-refresh'||r.reviewed!==true||!Number.isFinite(Date.parse(r.reviewedAt))||r.dealer!==manifest.slug||JSON.stringify(r.baseline)!==JSON.stringify(registeredAdoption.receipt.baseline)||JSON.stringify(r.families)!==JSON.stringify(families)||!Object.values(pins).every(p=>p.targetSource.revision===r.sourceRevision)||r.preserveOriginalSourceInGit!==true)throw Error('Exact owner-directed registered template refresh required');return registeredAdoption.receipt.templateRefresh;}

@@ -5,19 +5,19 @@
   "name": "Автокъща Приселци",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "8a97176e3adfbd95dce69b3096abc84e3eecd9c8",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "path": "templates/mobile",
-    "digest": "cc126a7c38634c7601ef8c617411d6938d7c9b6efc7b319e87c2c6efc99d8b6d",
-    "tree": "9a4db757e788ee236712b8eac25956a6a8a61d0b"
+    "digest": "f5a3e541a7c648a4c2899ad3893e22a3806027a9f66d95fa4e8c74b2226635b6",
+    "tree": "792bfdd1d8eb22aabd90c7e3a0c0779a6c1c36f3"
   },
-  "sourceDigest": "02b6ac7fa70274589553eb73cd54a32ef32d46004c115487ad60bd845295da58",
+  "sourceDigest": "83515a6a4bb76424b29a91d79559f7fd68a0c4c70df48f33080738d12d8e6116",
   "inventory": {
     "mode": "dated-listing-snapshot",
     "count": 16,
     "observedAt": "2026-09-07"
   },
   "personalization": {
-    "profileSha256": "8fc3358aaa9af5fd52f1b7b4e03eaf2fac7b8c3557fbb4d30d92bfd469462f6c",
+    "profileSha256": "fa6979c4e08441baf08a12c44e14ae851b7c1368b6a348c7fd9885c2c1561258",
     "logoPaths": [
       "/dealer-brand/logo-on-light-20260919.webp",
       "/dealer-brand/logo-on-dark-20260919.webp"
@@ -100,7 +100,13 @@
       "mobile/src/components/DealerScreens.tsx",
       "mobile/src/components/VehicleCard.tsx",
       "mobile/src/components/ShowroomVehicleCard.tsx",
-      "mobile/src/components/VehicleSections.tsx"
+      "mobile/src/components/VehicleSections.tsx",
+      "mobile/src/lib/mobile-mileage.ts",
+      "mobile/src/lib/types.ts",
+      "mobile/src/components/DesktopVehicleSummary.tsx",
+      "mobile/src/components/NativeCarPark.tsx",
+      "mobile/src/components/ShowroomFilterSheet.tsx",
+      "mobile/src/lib/vehicle-copy.ts"
     ]
   },
   "needsDealerQA": true,

@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "dealer": "kolarov-cars",
+  "reviewed": true,
+  "reviewedAt": "2026-10-11T13:30:47.626Z",
+  "reviewScope": "Hash-identical selected current raster inputs and retained genuine surface-review provenance only; actual dealer integration, native and hosted checks pending.",
+  "officialDealerArtwork": false,
+  "dealerApproval": false,
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "generation": {
+    "tool": "image_gen",
+    "generationId": "exec-07094859-bff4-4db5-a9ef-4edb95b89e4b",
+    "modelVersion": null,
+    "sourceSha256": "9dd01e63de54e0102a5d9f884e42605fc80f939144b19b011a96284c90c1c8a6",
+    "sourceRole": "Native ImageGen output behind exact retained selected raster; no new generation or claimed model version.",
+    "nativeOutput": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/kolarov-cars/source/native-onLight.png",
+      "sha256": "9dd01e63de54e0102a5d9f884e42605fc80f939144b19b011a96284c90c1c8a6"
+    },
+    "originalGenerationReceipt": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/kolarov-cars/source/generation-receipt.json",
+      "sha256": "e7011e2497102311f2ca425d88a79e0ad1f00f8610a80efc0c15f712016be145"
+    },
+    "derivation": "one ImageGen master exported to context raster"
+  },
+  "master": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/kolarov-cars/branding/master.png",
+    "sha256": "c91e54a9bbc4a981cf67006886c30c240cd542d44a6c5a6717414e2f81669664"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/kolarov-cars/branding/onLight.png",
+      "sha256": "c91e54a9bbc4a981cf67006886c30c240cd542d44a6c5a6717414e2f81669664",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/kolarov-cars/source/generation-receipt.json#sha256=e7011e2497102311f2ca425d88a79e0ad1f00f8610a80efc0c15f712016be145; exact selected handoff b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-07094859-bff4-4db5-a9ef-4edb95b89e4b",
+        "modelVersion": null,
+        "sourceSha256": "9dd01e63de54e0102a5d9f884e42605fc80f939144b19b011a96284c90c1c8a6",
+        "sourceRole": "Native ImageGen output behind exact retained selected raster; no new generation or claimed model version.",
+        "nativeOutput": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/kolarov-cars/source/native-onLight.png",
+          "sha256": "9dd01e63de54e0102a5d9f884e42605fc80f939144b19b011a96284c90c1c8a6"
+        },
+        "originalGenerationReceipt": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/kolarov-cars/source/generation-receipt.json",
+          "sha256": "e7011e2497102311f2ca425d88a79e0ad1f00f8610a80efc0c15f712016be145"
+        },
+        "derivation": "one ImageGen master exported to context raster"
+      }
+    },
+    "onDark": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/kolarov-cars/branding/onDark.png",
+      "sha256": "b8329b080f128385ea2ce40816c6a7b152755dbf84805e47134b173168781c0c",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/kolarov-cars/source/generation-receipt.json#sha256=e7011e2497102311f2ca425d88a79e0ad1f00f8610a80efc0c15f712016be145; exact selected handoff b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-07094859-bff4-4db5-a9ef-4edb95b89e4b",
+        "modelVersion": null,
+        "sourceSha256": "9dd01e63de54e0102a5d9f884e42605fc80f939144b19b011a96284c90c1c8a6",
+        "sourceRole": "Native ImageGen output behind exact retained selected raster; no new generation or claimed model version.",
+        "nativeOutput": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/kolarov-cars/source/native-onDark.png",
+          "sha256": "9dd01e63de54e0102a5d9f884e42605fc80f939144b19b011a96284c90c1c8a6"
+        },
+        "originalGenerationReceipt": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/kolarov-cars/source/generation-receipt.json",
+          "sha256": "e7011e2497102311f2ca425d88a79e0ad1f00f8610a80efc0c15f712016be145"
+        },
+        "derivation": "one ImageGen master exported to context raster"
+      }
+    },
+    "onAccent": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/kolarov-cars/branding/onAccent.png",
+      "sha256": "b8329b080f128385ea2ce40816c6a7b152755dbf84805e47134b173168781c0c",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/kolarov-cars/source/generation-receipt.json#sha256=e7011e2497102311f2ca425d88a79e0ad1f00f8610a80efc0c15f712016be145; exact selected handoff b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-07094859-bff4-4db5-a9ef-4edb95b89e4b",
+        "modelVersion": null,
+        "sourceSha256": "9dd01e63de54e0102a5d9f884e42605fc80f939144b19b011a96284c90c1c8a6",
+        "sourceRole": "Native ImageGen output behind exact retained selected raster; no new generation or claimed model version.",
+        "nativeOutput": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/kolarov-cars/source/native-onAccent.png",
+          "sha256": "9dd01e63de54e0102a5d9f884e42605fc80f939144b19b011a96284c90c1c8a6"
+        },
+        "originalGenerationReceipt": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/kolarov-cars/source/generation-receipt.json",
+          "sha256": "e7011e2497102311f2ca425d88a79e0ad1f00f8610a80efc0c15f712016be145"
+        },
+        "derivation": "one ImageGen master exported to context raster"
+      }
+    }
+  },
+  "originalGenerationReceipt": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/kolarov-cars/source/generation-receipt.json",
+    "sha256": "e7011e2497102311f2ca425d88a79e0ad1f00f8610a80efc0c15f712016be145"
+  },
+  "acceptedLogoManifest": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/evidence/final-logo-handoff.json",
+    "sha256": "b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a"
+  },
+  "assetReview": {
+    "status": "completed",
+    "owner": "existing",
+    "proof": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/final-polish-stage/kolarov-cars/surface-review.png",
+      "sha256": "8ae19943cc7aba745ec6bd0d21f683333ab0e8c63373a0fdf17e17c004d2a6c1",
+      "bytes": 104756,
+      "width": 740,
+      "height": 864,
+      "format": "png",
+      "hasAlpha": true
+    },
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "scope": "Actual master and compact native-palette swatches inspected; retained pixels remain identical.",
+    "report": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/final-existing-review.json"
+  },
+  "sourceOwnershipUnchanged": true
+}

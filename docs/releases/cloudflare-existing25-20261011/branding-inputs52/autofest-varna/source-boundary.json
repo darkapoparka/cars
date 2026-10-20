@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-existing-dealer-branding-input-boundary",
+  "dealer": "autofest-varna",
+  "identityKey": "existing-slug:autofest-varna",
+  "cohort": "varna-selected10",
+  "ownership": "preserved-branch-adoption-required",
+  "branding": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/autofest-varna/branding.json",
+    "sha256": "7ffd80858980a26945887e975adba95adbd41ae77ff7237ac131c5f5f0a0e2e1"
+  },
+  "originalManifest": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/autofest-varna/source/original-dealer.json",
+    "sha256": "88299f2556c6462946731033db6e818ff32695a13c28cf608be905aa998e6165"
+  },
+  "originalManifestGitBlob": "2ad7fd8f73821229be2edc7878cc638a0b6d3b63",
+  "originalRepository": "darkapoparka/cars-autofestvarna",
+  "sourceRef": {
+    "ref": "origin/varna",
+    "commit": "4c1cffff71f2ef944fc72be733606d1f3bf8f774",
+    "tree": "fe66d1ea7edb8ced1b6ccfd1d6dad631612e9950"
+  },
+  "originalData": [
+    {
+      "path": "clients/autofest-varna/.cars-branding.json",
+      "gitBlob": "e425d53fbfd97a48312c5b4bb43e32a96b8dde62",
+      "bytes": 77324
+    },
+    {
+      "path": "clients/autofest-varna/business-facts.json",
+      "gitBlob": "7dd3e934e7c0fa963c9d386ef905558f09bb1cdf",
+      "bytes": 2049
+    },
+    {
+      "path": "clients/autofest-varna/dealer.json",
+      "gitBlob": "2ad7fd8f73821229be2edc7878cc638a0b6d3b63",
+      "bytes": 3919
+    },
+    {
+      "path": "clients/autofest-varna/locale.json",
+      "gitBlob": "cdb12a3571222abf14410c6801923131fe01c176",
+      "bytes": 183
+    },
+    {
+      "path": "clients/autofest-varna/stock.json",
+      "gitBlob": "6e152cef2c4681b9631695868629247f5953a58b",
+      "bytes": 13578
+    }
+  ],
+  "sourceProof": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/evidence/original-source-proof.json",
+    "sha256": "477c4eedc097eb2e105b1d50cf1bc3701b558679e8f6c3c3681a3ccd6626e08c"
+  },
+  "roster": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/evidence/accepted-roster.json",
+    "sha256": "c23c6c4ea10acaca9fdc8d09351fd64735a9e2245385fb12a0f95d71f9f0080d"
+  },
+  "sourceCreation": false,
+  "clientIntegration": false,
+  "buildApproval": false,
+  "hostedApproval": false,
+  "eligibleForExistingQualifiedRequest": false,
+  "holds": [
+    "Adopt original branch/research identity and source through a separate reviewed preservation mode; do not pass as absent/new or existing-qualified."
+  ]
+}

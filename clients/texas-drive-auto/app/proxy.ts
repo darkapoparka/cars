@@ -1,20 +1,19 @@
 import {NextResponse, type NextRequest} from 'next/server';
 import {dealer} from './lib/dealer-config';
-import {isAppLocale} from './lib/locale-core';
+import {resolveLocale} from './lib/locale-policy';
 import {withoutMount} from './lib/paths';
-/** App-owned locale routing. The public path always wins over cookie/header input. */
+
+/** The URL wins over preferences; disabled cookies can never create redirect loops. */
 export function proxy(request: NextRequest) {
   if (!['GET', 'HEAD'].includes(request.method)) {
     return new NextResponse('This preview does not accept submissions.', {status: 405, headers: {Allow: 'GET, HEAD'}});
   }
-  const pathname = withoutMount(request.nextUrl.pathname);
-  const segment = pathname.split('/')[1];
-  const requested = isAppLocale(segment) && dealer.enabledLocales.includes(segment) ? segment : null;
-  const preference = request.cookies.get('cars-app-locale')?.value;
-  const locale = requested || (isAppLocale(preference) ? preference : dealer.defaultLocale);
-  const url = request.nextUrl.clone();
-  if (!requested) {
-    url.pathname = '/' + locale + (pathname === '/' ? '' : pathname);
+  const {locale, redirectPath} = resolveLocale(
+    withoutMount(request.nextUrl.pathname), request.cookies.get('cars-app-locale')?.value, dealer,
+  );
+  if (redirectPath !== null) {
+    const url = request.nextUrl.clone();
+    url.pathname = redirectPath;
     return NextResponse.redirect(url);
   }
   const requestHeaders = new Headers(request.headers);

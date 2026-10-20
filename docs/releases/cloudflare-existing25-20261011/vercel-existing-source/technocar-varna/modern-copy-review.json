@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-reviewed-modern-bilingual-copy-input",
+  "dealer": "technocar-varna",
+  "sourceCommit": "d9594c2979f668831b78609e4e990640259aee81",
+  "baselineTree": "f75a3a9af23b66c49765f172cee1b802ddbbf7da",
+  "inputSha256": "acfda024511134dba06cfdded3da0b047023b2dc06c2fd987a21922ce860a1de",
+  "modernInputRowsSha256": "ff71379df85e1f746f037ef2468f070f1dbc5fefaf65d540e98a73daa43a20c2",
+  "listingCount": 2,
+  "profileInputs": [
+    {
+      "path": "dealer.json",
+      "gitBlob": "192d2c3209b02f5b6a672cea5b1d224a96176f1c",
+      "sha256": "e5cce5361fba4fc63fdb22bf4f12a4723ab32ae6125e0f0ecbc3d8d630138465",
+      "bytes": 4325
+    },
+    {
+      "path": "business-facts.json",
+      "gitBlob": "af3207401d7451a4fff11e6190b9a6808c891e65",
+      "sha256": "5bee15fd11b03aa7d9bb19c031f7d67e95ac807ae220f6234bfb6cbf4bbfdf3d",
+      "bytes": 5962
+    },
+    {
+      "path": "stock.json",
+      "gitBlob": "ae147dbc080937aa1aaf170d7280c964c6959a16",
+      "sha256": "b9b01335a013e6f54f7b5d0d5b8da5495f929018ffb618ad0dfe8f6731a0452a",
+      "bytes": 4208
+    }
+  ],
+  "reviewedGeneratorHelper": {
+    "path": "scripts/lib/modern-dealer-inventory-copy.mjs",
+    "sha256": "cbdbaa28dc07911cfe913b4e627671b6556fc25d3bfe59364e29c5ca5a29072b",
+    "sourceCommit": "14d86f67c160699c18a6ec5658197cc4d9011e0b"
+  },
+  "review": {
+    "displayCopyOnly": true,
+    "exactSourceDescriptionKeys": true,
+    "listingFactsUnchanged": true,
+    "imageUrlsUnchanged": true,
+    "imageAltsPreserved": true,
+    "interpolationTokensUnchanged": true,
+    "reviewedBy": "Codex, authorized final-template rollout",
+    "reviewedAt": "2026-10-14T20:04:09.155Z",
+    "notes": "Reuse exact existing native or reviewed registered companions for every actual current row; no new translation/factual source edits."
+  },
+  "reviewedCopy": {
+    "technocar-varna-21789131552465526": {
+      "sourceDescription": "Hyundai Tucson 1.6 T-GDI MHEV от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+      "en": {
+        "description": "Hyundai Tucson 1.6 T-GDI MHEV from a dated public advert. Confirm condition, price and availability directly with the dealership.",
+        "imageAlts": [
+          "Hyundai Tucson 1.6 T-GDI MHEV",
+          "Hyundai Tucson 1.6 T-GDI MHEV"
+        ]
+      },
+      "bg": {
+        "description": "Hyundai Tucson 1.6 T-GDI MHEV от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+        "imageAlts": [
+          "Hyundai Tucson 1.6 T-GDI MHEV",
+          "Hyundai Tucson 1.6 T-GDI MHEV"
+        ]
+      }
+    },
+    "technocar-varna-21787826931085094": {
+      "sourceDescription": "Hyundai Kona Exclusive 1.6 T-GDI от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+      "en": {
+        "description": "Hyundai Kona Exclusive 1.6 T-GDI from a dated public advert. Confirm condition, price and availability directly with the dealership.",
+        "imageAlts": [
+          "Hyundai Kona Exclusive 1.6 T-GDI",
+          "Hyundai Kona Exclusive 1.6 T-GDI"
+        ]
+      },
+      "bg": {
+        "description": "Hyundai Kona Exclusive 1.6 T-GDI от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+        "imageAlts": [
+          "Hyundai Kona Exclusive 1.6 T-GDI",
+          "Hyundai Kona Exclusive 1.6 T-GDI"
+        ]
+      }
+    }
+  }
+}

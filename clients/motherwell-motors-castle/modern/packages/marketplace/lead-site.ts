@@ -6,7 +6,7 @@ import type {
 } from "@repo/marketplace-domain/site-config";
 import { inventoryCopy } from "./content/inventory-copy";
 
-export type LeadSiteCurrency = "AED" | "BGN" | "EUR" | "GBP" | "USD";
+export type LeadSiteCurrency = "AED" | "BGN" | "EUR" | "USD";
 
 export interface LeadSiteCopy {
   readonly address: string;
@@ -114,8 +114,8 @@ export const leadSite: LeadSiteConfig = {
     "tagline": "Motors Castle — vehicles and dealer support in Cleland / Motherwell, Scotland."
   }
 },
-  accent: "#18181B",
-  desktopAccent: "#4b5057",
+  accent: "#09090b",
+  desktopAccent: "#09090b",
   desktopInventoryFilterLayout: "quick",
   desktopPreviewIdentity: {
     sourceSlug: "day-night-auto-group",
@@ -147,11 +147,11 @@ export const leadSite: LeadSiteConfig = {
   email: "davidautodesign5@gmail.com",
   heroPath: "/lead-hero.jpg",
   locale: "en-GB",
-  logoInversePath: "/dealer-brand/logo-on-dark-20261011.webp",
-  logoPath: "/dealer-brand/logo-on-light-20261011.webp",
-  logoOnLight: "/dealer-brand/logo-on-light-20261011.webp",
-  logoOnDark: "/dealer-brand/logo-on-dark-20261011.webp",
-  logoOnAccent: "/dealer-brand/logo-on-accent-20261011.webp",
+  logoPath: "/dealer-brand/v2-7aace8204a8aa0ad/logo-on-light.webp",
+  logoInversePath: "/dealer-brand/v2-7aace8204a8aa0ad/logo-on-dark.webp",
+  logoOnLight: "/dealer-brand/v2-7aace8204a8aa0ad/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/v2-7aace8204a8aa0ad/logo-on-dark.webp",
+  logoOnAccent: "/dealer-brand/v2-7aace8204a8aa0ad/logo-on-dark.webp",
   mapsEmbedUrl:
     "https://maps.google.com/maps?q=Motors%20Castle%2C%2023a%20Biggar%20Road%2C%20Cleland%20Industrial%20Estate%2C%20Motherwell%20ML1%205PB&z=16&output=embed",
   mapsUrl:
@@ -163,6 +163,6 @@ export const leadSite: LeadSiteConfig = {
   slug: "motherwell-motors-castle",
   socialLinks: {},
   staticDemoMode: true,
-  tagline: "Explore used cars in Motherwell.",
+  tagline: "Motors Castle — vehicles and dealer support in Cleland / Motherwell, Scotland.",
 };
 // LEAD_SITE_CONFIG_END

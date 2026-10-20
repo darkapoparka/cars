@@ -9,8 +9,8 @@ import {parseCatalogJson} from './lib/native-localization.mjs';
 export const REQUEST_PATH='docs/releases/cloudflare-existing25-20261011/artifact-transport-request.json';
 export const WORKFLOW_PATH='.github/workflows/fleet-artifact-transport.yml';
 export const MAX_BYTES=2*1024**3,MAX_CHUNKS=10,MAX_CHUNK_BYTES=200*1024**2;
-export const ORIGINAL_SOURCE=Object.freeze({repository:'darkapoparka/cars',workflowPath:'.github/workflows/existing-fleet-cloudflare.yml',runId:38145301107,runAttempt:1,headSha:'875e4c2859a33ba528e7e9a1bdfcc257d7396c8a',event:'push',ref:'refs/heads/main'});
-export const ORIGINAL_ARTIFACT=Object.freeze({id:11705210421,name:'existing-cf-single-worker-priselci-38145301107-1',sizeInBytes:605590607,sha256:'f3371a5790c0e2b42f11150fa5b42711d192b1ff4ae4b174bc80896634cf229a'});
+export const ORIGINAL_SOURCE=Object.freeze({"repository":"darkapoparka/cars","workflowPath":".github/workflows/existing-fleet-cloudflare.yml","runId":38208979137,"runAttempt":1,"headSha":"b9658dc0f9c5ffcd44c5409f6fd092e5c6210c2e","event":"push","ref":"refs/heads/main"});
+export const ORIGINAL_ARTIFACT=Object.freeze({"id":11728636307,"name":"existing-cf-single-worker-priselci-38208979137-1","sizeInBytes":605904991,"sha256":"de868cfa2cbabcf78571c869f58225ecb43832ce6c4293c277471e6901095930"});
 const hash=b=>createHash('sha256').update(b).digest('hex');
 const requireValue=(ok,message)=>{if(!ok)throw Error('Artifact transport: '+message);};
 const exactKeys=(value,keys)=>value&&typeof value==='object'&&!Array.isArray(value)&&Object.keys(value).sort().join('\0')===[...keys].sort().join('\0');
@@ -24,11 +24,22 @@ export function parseTransportRequest(bytes){
  let request;try{request=parseCatalogJson(new TextDecoder('utf-8',{fatal:true}).decode(bytes));}catch{throw Error('Artifact transport: invalid request JSON (including duplicate keys)');}
  return validateTransportRequest(request);
 }
+/** Only the already-maintained successful full-private-source export is an additional raw-byte source.
+ * The request pins an immutable run/attempt/head and artifact ID/name/size/hash; live API metadata
+ * must match every pin before any ZIP byte is read. Other workflows/hosts/extra keys remain forbidden.
+ */
+export function isQualifiedPrivateSourceTransport(request){
+ const s=request?.source,a=request?.artifact;
+ if(!exactKeys(s,Object.keys(ORIGINAL_SOURCE))||!exactKeys(a,Object.keys(ORIGINAL_ARTIFACT)))return false;
+ if(s.repository!==ORIGINAL_SOURCE.repository||s.workflowPath!=='.github/workflows/qualified-private-source-export.yml'||s.event!=='push'||s.ref!=='refs/heads/main'||!positive(s.runId)||!positive(s.runAttempt)||typeof s.headSha!=='string'||!/^[a-f0-9]{40}$/.test(s.headSha))return false;
+ if(!positive(a.id)||!positive(a.sizeInBytes)||a.sizeInBytes>MAX_BYTES||!sha(a.sha256)||typeof a.name!=='string')return false;
+ const match=/^private-source-package-([a-z0-9]+(?:-[a-z0-9]+)*)-([1-9][0-9]*)-([1-9][0-9]*)$/.exec(a.name);
+ return Boolean(match&&match[1].length<=80&&Number(match[2])===s.runId&&Number(match[3])===s.runAttempt);
+}
 export function validateTransportRequest(request){
  requireValue(exactKeys(request,['schemaVersion','kind','reviewed','reviewedAt','source','artifact','chunkSizeBytes']),'exact request keys required');
  requireValue(request.schemaVersion===1&&request.kind==='cars-fleet-artifact-transport-request'&&request.reviewed===true&&dated(request.reviewedAt),'dated reviewed transport request required');
- requireValue(same(request.source,ORIGINAL_SOURCE),'only the original successful main push source is allowed');
- requireValue(same(request.artifact,ORIGINAL_ARTIFACT),'only the exact original sealed singleton ZIP is allowed');
+ requireValue((same(request.source,ORIGINAL_SOURCE)&&same(request.artifact,ORIGINAL_ARTIFACT))||isQualifiedPrivateSourceTransport(request),'only the exact original singleton or pinned maintained qualified-private-source export is allowed');
  requireValue(request.artifact.sizeInBytes<=MAX_BYTES&&positive(request.chunkSizeBytes)&&request.chunkSizeBytes<=MAX_CHUNK_BYTES&&Math.ceil(request.artifact.sizeInBytes/request.chunkSizeBytes)<=MAX_CHUNKS,'bounded ZIP/chunk count and <=200 MiB chunk bytes required');
  return request;
 }

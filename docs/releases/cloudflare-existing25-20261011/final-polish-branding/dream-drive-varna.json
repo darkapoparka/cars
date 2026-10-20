@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "dealer": "dream-drive-varna",
+  "reviewed": true,
+  "reviewedAt": "2026-10-14T11:56:24.553Z",
+  "sourceMode": "retained-or-mixed-raster",
+  "master": {
+    "path": "docs/logo-polish-2026-10-14/parallel/cf-first50/dream-drive-varna/logo-on-light.png",
+    "sha256": "42c5ee3caaad2e3d1b3f2a85bd4df4fc8dac2819a12cc0a99e3604bd7504c25b"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "docs/logo-polish-2026-10-14/parallel/cf-first50/dream-drive-varna/logo-on-light.png",
+      "sha256": "42c5ee3caaad2e3d1b3f2a85bd4df4fc8dac2819a12cc0a99e3604bd7504c25b",
+      "sourceReference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/parallel/cf-first50/dream-drive-varna/logo-on-light.png",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-ed45f2b8-9bb9-448b-86f9-7ef60ec1a6e6",
+        "modelVersion": null
+      }
+    },
+    "onDark": {
+      "path": "docs/logo-polish-2026-10-14/parallel/cf-first50/dream-drive-varna/logo-on-dark.png",
+      "sha256": "50666d42eae7af96596453bc3fd883268ed01a51c5380d2c33061c38671c3ea7",
+      "sourceReference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/parallel/cf-first50/dream-drive-varna/logo-on-dark.png",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-ed45f2b8-9bb9-448b-86f9-7ef60ec1a6e6",
+        "modelVersion": null
+      }
+    },
+    "onAccent": {
+      "path": "docs/logo-polish-2026-10-14/parallel/cf-first50/dream-drive-varna/logo-on-dark.png",
+      "sha256": "50666d42eae7af96596453bc3fd883268ed01a51c5380d2c33061c38671c3ea7",
+      "sourceReference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/parallel/cf-first50/dream-drive-varna/logo-on-dark.png",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-ed45f2b8-9bb9-448b-86f9-7ef60ec1a6e6",
+        "modelVersion": null
+      }
+    }
+  }
+}

@@ -16,7 +16,7 @@
   } = $props();
   const i18n = getI18n();
   const desktop = new MediaQuery('(min-width: 992px)', false);
-  const coordinates = `${brand.showroomCoordinates.latitude},${brand.showroomCoordinates.longitude}`;
+  const coordinates = "Unit 2-3 Chopdat Industrial Estate, Soothill Lane, Batley WF17 5SS, Batley, West Yorkshire";
   const directionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(coordinates)}`;
   const mapUrl = $derived(`https://maps.google.com/maps?q=${coordinates}&z=16&hl=${i18n.locale}&output=embed`);
 </script>
@@ -28,7 +28,7 @@
       <dl>
         <div>
           <dt class="dn-sr-only">{i18n.t('m_56ef8f20955f')}</dt>
-          <dd>{i18n.dealer('address')}</dd>
+          <dd title={i18n.dealer('address')}>{i18n.dealer('addressShort')}</dd>
         </div>
       </dl>
     </div>
@@ -40,7 +40,7 @@
           </a>
         {/if}
         <a class="dn-desktop-showroom__directions" href={directionsUrl} target="_blank" rel="noopener noreferrer">
-          {i18n.t('m_c95356784006')}<Icon name="arrow-right" size={18} />
+          <Icon name="map-pin" size={18} />{i18n.t('m_c95356784006')}
         </a>
       </div>
       {#if showSocialProfiles}<DesktopSocialLinks />{/if}
@@ -76,20 +76,24 @@
       align-items: center;
       justify-content: space-between;
       gap: var(--dn-space-6) var(--dn-space-8);
+      min-height: var(--dn-control-height-default);
       margin-bottom: var(--dn-space-6);
     }
     .dn-desktop-showroom__details {
       display: flex;
       flex: 1 1 24rem;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: var(--dn-space-3);
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: var(--dn-space-3) var(--dn-space-4);
       min-width: 0;
+      min-height: var(--dn-control-height-default);
     }
     .dn-desktop-showroom__tools {
       display: flex;
-      flex-direction: column;
-      align-items: flex-end;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: flex-end;
       gap: var(--dn-space-4);
       max-width: 100%;
     }
@@ -104,16 +108,19 @@
     }
     dl {
       display: grid;
-      width: 100%;
+      width: auto;
+      min-width: 0;
       gap: var(--dn-space-2);
       margin: 0;
+      padding-inline-start: var(--dn-space-4);
+      border-inline-start: 1px solid var(--dn-line);
     }
     dd {
       margin: 0;
-      color: var(--dn-ink);
-      font-size: var(--dn-text-body);
-      font-weight: var(--dn-weight-medium);
-      line-height: var(--dn-leading-body);
+      color: var(--dn-muted);
+      font-size: var(--dn-text-meta);
+      font-weight: var(--dn-weight-regular);
+      line-height: var(--dn-leading-meta);
       overflow-wrap: anywhere;
     }
     .dn-desktop-showroom__actions {

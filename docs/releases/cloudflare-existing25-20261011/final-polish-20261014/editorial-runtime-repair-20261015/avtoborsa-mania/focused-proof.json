@@ -1,0 +1,173 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-focused-exact-source-editorial-repair-proof",
+  "dealer": "avtoborsa-mania",
+  "baseSourceCommit": "118c2c5891809ef555b3690144bf0900e8710903",
+  "baseSourceTree": "bcf94c0a866efc0aee36d02be71ff428f5915df6",
+  "sourceModuleProof": {
+    "dealer": "avtoborsa-mania",
+    "sourceCommit": "118c2c5891809ef555b3690144bf0900e8710903",
+    "sourceTree": "bcf94c0a866efc0aee36d02be71ff428f5915df6",
+    "manifest": {
+      "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/run-38689980731-attempt-1/avtoborsa-mania-proposal-manifest.json",
+      "sha256": "886dd88771fa0666abfdc356f7c2e4796fabaed8b65d5385b225b90ca07ef24d"
+    },
+    "scope": "clients/avtoborsa-mania/import/src/lib/content/extra-localized.ts",
+    "baseBlob": "0ef591f7bac6f4a3c9bc5c37d4f595aa2ae18362",
+    "candidateBlob": "335dc7e9f2ef8985d20c973e2a50953526a58d33",
+    "candidate": {
+      "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/current-eleven-import-editorial/candidates/avtoborsa-mania/extra-localized.ts",
+      "sha256": "7e392d20b30aa6e78022db6a76b53503af91707e282632c3158a65d8d448d10e"
+    },
+    "patch": {
+      "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/current-eleven-import-editorial/candidates/avtoborsa-mania/explicit-editorial.patch",
+      "sha256": "467939e09b82805aa4f86d6500ceb64fc39b3bbdd7a304b4dc143adb8669f11c"
+    },
+    "addedEntries": [
+      {
+        "bg": "Демонстрационни автомобили от шаблона, а не наличност на автокъщата. Illustrative template vehicles, not this dealership’s stock.",
+        "en": "Illustrative template vehicles, not this dealership’s stock."
+      },
+      {
+        "bg": "Независим демонстрационен преглед; формите не изпращат съобщения и не създават резервации. Independent demonstration: forms do not send enquiries or create reservations.",
+        "en": "Independent demonstration: forms do not send enquiries or create reservations."
+      }
+    ],
+    "beforeError": "Missing English editorial catalog entry: Демонстрационни автомобили от шаблона, а не наличност на автокъщата. Illustrative template vehicles, not this dealership’s stock.",
+    "intermediateError": "Missing English editorial catalog entry: Независим демонстрационен преглед; формите не изпращат съобщения и не създават резервации. Independent demonstration: forms do not send enquiries or create reservations.",
+    "after": [
+      {
+        "slug": "confirm-current-availability",
+        "title": "How to confirm current availability at АВТОБОРСА МАНИЯ",
+        "category": "Dealer information",
+        "date": "2026-01-01",
+        "image": "/assets/daynight/codex-generated-v2/blog/blog-cover-import-check-v2.webp",
+        "excerpt": "Illustrative template vehicles, not this dealership’s stock.",
+        "content": [
+          "Contact the dealership on 0899 874 488 and identify the exact vehicle before visiting.",
+          "Independent demonstration: forms do not send enquiries or create reservations."
+        ]
+      }
+    ],
+    "packagingContactAdapter": {
+      "schemaVersion": 1,
+      "dealer": "avtoborsa-mania",
+      "applied": true,
+      "path": "import/src/lib/config/site.ts",
+      "href": "https://cars-avtoborsa-mania.darkapoparka1.workers.dev/variant-3/bg/contact",
+      "beforeSha256": "13c22a45540715ccc6a1891423b774a456a285c820177f4e3cbc87bb3cd113b1",
+      "afterSha256": "a9d3499e93e095270381cb883fa738935909a00114410a5898f1a5cb7fc95f9a",
+      "originalDealerConfigSha256": "ce122b92ae6e7cd80a1dfec4a8c44905382c073c01373c4205fca31a74205cda",
+      "emailInvented": false,
+      "mode": "Existing same-origin contact page; no external enquiry submitted"
+    },
+    "checks": {
+      "exactRetainedSource": true,
+      "beforeFailureReproduced": true,
+      "actualDisclosureFailureReproduced": true,
+      "afterEnglishPostsPassed": true,
+      "bgBehaviorUnchanged": true,
+      "dateSlugAndImageUnchanged": true,
+      "allExistingCatalogEntriesUnchanged": true,
+      "unknownEditorialStillThrows": true,
+      "onlyActualEmittedCatalogEntriesAdded": true,
+      "onlyCatalogPrefixChanged": true
+    },
+    "modulesRead": [
+      {
+        "path": "import/src/lib/content/localized.ts",
+        "blob": "77c02519e880b92aede2447440f6a86f5c192496"
+      },
+      {
+        "path": "import/src/lib/content/extra-localized.ts",
+        "blob": "0ef591f7bac6f4a3c9bc5c37d4f595aa2ae18362"
+      },
+      {
+        "path": "import/src/lib/config/site.ts",
+        "blob": "d8ccb2e922f23a4223bad5c590fd1a61cd234c17"
+      },
+      {
+        "path": "import/src/lib/config/dealer.ts",
+        "blob": "460bf6f7ecb84a87af95ff43045615bb5a4708d6"
+      },
+      {
+        "path": "import/src/lib/config/cars-locale.ts",
+        "blob": "6855ffe173d3701f9c5927bd6d3332698ea13c51"
+      },
+      {
+        "path": "import/src/lib/data/blog.ts",
+        "blob": "6167f79dd6f1af23085fb9f97677682644f14ed7"
+      }
+    ]
+  },
+  "originalProof": {
+    "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/current-eleven-import-editorial/candidates/eleven-editorial-repair-proof.json",
+    "sha256": "10f723c352c11ee952437627ffbe79af81d26105d43dd3219ea3c837d86d4f4e"
+  },
+  "modernCompanionProof": {
+    "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/native13-modern-runtime/eight-modern-alias-repair-proof.json",
+    "sha256": "e6bb81ee497e21000b99317e0833ef7af4f10a1170d213cf1918670301efd9b6"
+  },
+  "modernCompanion": {
+    "dealer": "avtoborsa-mania",
+    "sourceCommit": "118c2c5891809ef555b3690144bf0900e8710903",
+    "sourceTree": "bcf94c0a866efc0aee36d02be71ff428f5915df6",
+    "scope": "modern/packages/marketplace/lead-site.ts",
+    "baseBlob": "1de20819bdf023e0b70ed0f0e62cb4316e477ba4",
+    "baseSha256": "ca1f71dc78c91b1a26be25739c87a35f9d9e928b7e5d679e254fdfe04139aa9d",
+    "selectedRasterBindings": {
+      "logoOnLight": {
+        "path": "/dealer-brand/v2-a83417b07db78ad1/logo-on-light.webp",
+        "sourcePath": "modern/apps/web/public/dealer-brand/v2-a83417b07db78ad1/logo-on-light.webp",
+        "blob": "3267422003d92e198bcc4cd7b3408b469158b955"
+      },
+      "logoOnDark": {
+        "path": "/dealer-brand/v2-a83417b07db78ad1/logo-on-dark.webp",
+        "sourcePath": "modern/apps/web/public/dealer-brand/v2-a83417b07db78ad1/logo-on-dark.webp",
+        "blob": "fa4070c7efbad1b90879a65e4d065e8dc2467232"
+      },
+      "logoOnAccent": {
+        "path": "/dealer-brand/v2-a83417b07db78ad1/logo-on-accent.webp",
+        "sourcePath": "modern/apps/web/public/dealer-brand/v2-a83417b07db78ad1/logo-on-accent.webp",
+        "blob": "fa4070c7efbad1b90879a65e4d065e8dc2467232"
+      }
+    },
+    "values": {
+      "logoOnLight": "/dealer-brand/v2-a83417b07db78ad1/logo-on-light.webp",
+      "logoOnDark": "/dealer-brand/v2-a83417b07db78ad1/logo-on-dark.webp",
+      "logoOnAccent": "/dealer-brand/v2-a83417b07db78ad1/logo-on-dark.webp"
+    },
+    "companionPatches": [
+      {
+        "path": "modern/packages/marketplace/lead-site.ts",
+        "baseBlob": "1de20819bdf023e0b70ed0f0e62cb4316e477ba4",
+        "candidateFile": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/native13-modern-runtime/avtoborsa-mania-lead-site.ts",
+        "candidateSha256": "211c941bb028cec718dd9a1084aa7ef66648f38a2186efe7d9823cab1d200dc8",
+        "candidateBlob": "fa1bfd189ea52b83cdcab4845ec91048c9a31e86",
+        "bytes": 6383,
+        "encoding": "utf8"
+      }
+    ],
+    "actualProviderException": {
+      "versionId": "dd9ce1f0-f1e1-410c-b092-4a1d0a0efd5d",
+      "stack": "    at c (modern/variant-2/_next/static/paths-C82NKJPh.js:2:358)\n    at y (modern/variant-2/_next/static/paths-C82NKJPh.js:2:1018)\n    at modern/variant-2/_next/static/layout-Dl_FrUPy.js:150:490"
+    },
+    "unbuiltSourceRiskOnly": false,
+    "checks": {
+      "allThreeAliasesRestored": true,
+      "interfaceAndInitializerBothUpdated": true,
+      "allExistingBytesOtherwiseIdentical": true,
+      "allFactsAndExistingLogoPathsUnchanged": true,
+      "selectedLightDarkAccentBlobsPresent": true,
+      "accentPreservesCurrentSelectedDarkPixels": true,
+      "allAliasUrlCallsPassActualCompiledPaths": true,
+      "originalUndefinedCallReproduced": true,
+      "typescriptSyntax": true,
+      "layoutAndOtherConsumersUnchanged": true
+    },
+    "sourceCopies": 0
+  },
+  "compiled": false,
+  "newCiRun": null,
+  "providerWrites": 0
+}

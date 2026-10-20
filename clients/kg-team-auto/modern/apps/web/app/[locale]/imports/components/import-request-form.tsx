@@ -81,7 +81,7 @@ const ImportRequestSubmitButton = ({ locale }: { locale: "bg" | "en" }) => {
 
   return (
     <Button
-      className="h-11 w-full gap-2 rounded-lg bg-brand px-5 text-brand-foreground shadow-none hover:bg-[var(--lead-site-accent-hover)] hover:text-[var(--brand-hover-foreground)] hover:text-white sm:w-auto"
+      className="h-11 w-full gap-2 rounded-lg bg-primary px-5 text-primary-foreground shadow-none hover:bg-[var(--primary-hover)] hover:text-[var(--primary-hover-foreground)] hover:text-white sm:w-auto"
       disabled={pending}
       type="submit"
     >
@@ -120,7 +120,7 @@ const ImportRequestSuccess = ({
           {message} {text.successDescription}
         </p>
         <a
-          className="mt-6 inline-flex min-h-11 items-center gap-2 rounded-lg bg-brand px-5 font-semibold text-brand-foreground text-compact-control transition-colors hover:bg-[var(--lead-site-accent-hover)] hover:text-[var(--brand-hover-foreground)] focus-visible:outline-2 focus-visible:outline-[var(--lead-site-accent)] focus-visible:outline-offset-3"
+          className="mt-6 inline-flex min-h-11 items-center gap-2 rounded-lg bg-primary px-5 font-semibold text-compact-control text-primary-foreground transition-colors hover:bg-[var(--primary-hover)] hover:text-[var(--primary-hover-foreground)] focus-visible:outline-2 focus-visible:outline-[var(--lead-site-accent)] focus-visible:outline-offset-3"
           href={withBasePath(leadSite.phoneHref)}
         >
           <Phone aria-hidden="true" className="size-4" />

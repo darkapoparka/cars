@@ -1,3 +1,4 @@
+import { getCurrentPublicDataMode } from "./public-data-policy";
 import "server-only";
 
 import {
@@ -33,6 +34,14 @@ export const getPublicExternalInventory = async (
   originCountryCode: string
 ): Promise<ExternalInventoryDiscoveryResponse> => {
   const normalizedOrigin = originCountryCode.trim().toUpperCase();
+  if (getCurrentPublicDataMode() !== "database") {
+    return {
+      listings: [],
+      originCountryCode: normalizedOrigin,
+      reason: "not_configured",
+      status: "disabled",
+    };
+  }
   const apiBaseUrl = getPublicApiBaseUrl();
   if (!apiBaseUrl) {
     return {

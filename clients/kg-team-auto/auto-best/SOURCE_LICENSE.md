@@ -26,7 +26,7 @@ The standalone template repository was established on 10 September 2026 from the
 
 ## Font and icons
 
-The interface bundles Onest through `@fontsource-variable/onest`. The inherited notes identify SIL Open Font License 1.1; keep the applicable package/font notice when distributing it.
+The interface bundles the reviewed Inter v4.1 variable WOFF2 under SIL Open Font License 1.1; retain [the font license](provenance/inter-OFL.txt), [provenance](provenance/inter.md) and its subset manifest when distributing dealer copies. Mobile icons, including the bottom navbar, use pinned Microsoft Fluent System Icons Regular under [MIT](provenance/fluent-icons-LICENSE.txt); retain [their sources](provenance/fluent-icons.md) and [upstream notice](provenance/fluent-icons-NOTICE.txt). The rejected [generated dock artwork](provenance/generated-bottom-nav.md) is retained as history. Historical Material Symbols, Hugeicons and Phosphor notices remain with their retained source files.
 
 Retained icon notices: [Phosphor](provenance/phosphor-icons-LICENSE.txt), [Hugeicons](provenance/hugeicons-LICENSE.txt), and [Simple Icons](provenance/simple-icons-LICENSE.md). Actual rendered families are determined by the Svelte components. Keeping a historical notice does not mean every historical icon is still used.
 

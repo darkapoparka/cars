@@ -1,4 +1,5 @@
 'use client';
+import { hasMobileMileage, formatMobileMileage } from '../lib/mobile-mileage';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Heart } from 'lucide-react';
@@ -215,7 +216,7 @@ export function ShowroomVehicleCard({
   const href = '/vehicle/' + vehicle.id;
   const specs = {
     year: String(vehicle.year),
-    mileage: number(vehicle.mileage) + ' ' + t('km'),
+    mileage: formatMobileMileage(vehicle, locale),
     transmission: t(vehicle.transmission),
     fuel: t(vehicle.fuel),
   };
@@ -259,7 +260,7 @@ export function ShowroomVehicleCard({
           <p {...stylex.props(s.mobileMeta)}>
             <span data-vehicle-fact="year">{specs.year}</span>
             <span aria-hidden="true">·</span>
-            <span data-vehicle-fact="mileage">{specs.mileage}</span>
+            {hasMobileMileage(vehicle) && <span data-vehicle-fact="mileage">{specs.mileage}</span>}
           </p>
           <ul
             aria-label={locale === 'bg' ? 'Характеристики на ' + name : 'Vehicle facts for ' + name}

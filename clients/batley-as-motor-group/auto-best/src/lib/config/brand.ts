@@ -2,7 +2,7 @@ export type BrandConfig = {
   name: string;
   shortName: string;
   city: string;
-  showroomCoordinates: { latitude: number; longitude: number };
+  showroomCoordinates: { latitude: number; longitude: number } | null;
   addressLine: string;
   address: string;
   phone: string;
@@ -11,8 +11,8 @@ export type BrandConfig = {
   logo: `/${string}`;
   logoOnDark: `/${string}`;
   youtubeUrl: `https://${string}` | '';
-  instagramUrl: `https://${string}`;
-  facebookUrl: `https://${string}`;
+  instagramUrl: `https://${string}` | '';
+  facebookUrl: `https://${string}` | '';
 };
 
 const name = "AS Motor Group";
@@ -24,15 +24,15 @@ export const brand = {
   name,
   shortName,
   city,
-  showroomCoordinates: {"latitude":0,"longitude":0},
-  youtubeUrl: "https://www.youtube.com/",
-  instagramUrl: "https://www.instagram.com/",
-  facebookUrl: "https://www.facebook.com/",
+  showroomCoordinates: null,
+  youtubeUrl: "",
+  instagramUrl: "",
+  facebookUrl: "",
   phone: "",
   phoneHref: "tel:",
   addressLine,
   address: "Unit 2-3 Chopdat Industrial Estate, Soothill Lane, Batley WF17 5SS",
   appointment: "Contact the dealership before visiting.",
-  logo: "/dealer-brand/logo-on-light-20261011.webp",
-  logoOnDark: "/dealer-brand/logo-on-dark-20261011.webp"
+  logo: "/dealer-brand/v2-f2490e1cd4aba515/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/v2-f2490e1cd4aba515/logo-on-dark.webp"
 } as const satisfies BrandConfig;

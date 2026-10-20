@@ -1,0 +1,203 @@
+diff --git a/templates/modern/README.md b/templates/modern/README.md
+index d4e2723..765b0b3 100644
+--- a/templates/modern/README.md
++++ b/templates/modern/README.md
+@@ -2,7 +2,7 @@
+ 
+ **Working branch: `main`.** Coordinate overlapping files and shared Git/build writes; independent files may be edited concurrently. Read [AGENTS.md](AGENTS.md) before starting; temporary branches/worktrees require an explicit request and a completed integration/cleanup handoff.
+ 
+-Canonical standalone master: **`darkapoparka/cars-template-modern`**. This repository is a reusable dealership design, not a dealer-specific project and not evidence that any sample business data is current.
++Canonical reusable master: **`darkapoparka/cars`, `main`, `templates/modern`**. The standalone **`darkapoparka/cars-template-modern`** repository is a publishing mirror and source history. This repository is a reusable dealership design, not a dealer-specific project and not evidence that any sample business data is current.
+ 
+ **AI/agent entry point:** read `AGENTS.md`, then `TEMPLATE.md`, `docs/LEAD-BUILD.md`, and `docs/QA.md` before editing.
+ 
+@@ -10,8 +10,8 @@
+ - Template key: `modern`
+ - Role: **core**
+ - Design position: premium minimal / inventory-first showroom
+-- Standard dealer offer: `auto-best + carwow + modern`
+-- Import is Design 2 in the intentional Import trio; it does not add a fourth design.
++- Current dealer offer: `auto-best + modern + import + app + mobile + karento-best` (Signature).
++- Shared FAB: all six templates plus Admin, preserving each dealer's recorded variant and route mapping.
+ 
+ ## Rule of ownership
+ Improve this repository only when the task is a **shared template improvement**. For a **lead build**, use canonical Cars clients/<slug>/ through its approved-release clone workflow; never personalize this master.
+diff --git a/templates/modern/apps/web/app/[locale]/contact/actions/contact.tsx b/templates/modern/apps/web/app/[locale]/contact/actions/contact.tsx
+index e6c4d7c..5dd1be4 100644
+--- a/templates/modern/apps/web/app/[locale]/contact/actions/contact.tsx
++++ b/templates/modern/apps/web/app/[locale]/contact/actions/contact.tsx
+@@ -205,6 +205,12 @@
+         request,
+         request.locale === "bg"
+       );
++      if (request.phone && request.context !== "import-request") {
++        detailLines.push(
++          "",
++          `${request.locale === "bg" ? "Телефон" : "Phone"}: ${request.phone}`
++        );
++      }
+       return await getReliableEmailDelivery().deliver({
+         ...context,
+         payload: {
+diff --git a/templates/modern/apps/web/app/[locale]/layout.tsx b/templates/modern/apps/web/app/[locale]/layout.tsx
+index 601b884..6c75f90 100644
+--- a/templates/modern/apps/web/app/[locale]/layout.tsx
++++ b/templates/modern/apps/web/app/[locale]/layout.tsx
+@@ -35,7 +35,14 @@
+ export const metadata: Metadata = {
+   applicationName: leadSite.name,
+   icons: {
+-    icon: [{ type: "image/png", url: withBasePath(leadSite.logoPath) }],
++    icon: [
++      {
++        type: publicSite.identity.icon.endsWith(".png")
++          ? "image/png"
++          : undefined,
++        url: withBasePath(publicSite.identity.icon),
++      },
++    ],
+   },
+   metadataBase: new URL(getPublicWebBaseUrl()),
+ };
+diff --git a/templates/modern/apps/web/app/[locale]/sell/page.tsx b/templates/modern/apps/web/app/[locale]/sell/page.tsx
+index d6abedb..f8ad00f 100644
+--- a/templates/modern/apps/web/app/[locale]/sell/page.tsx
++++ b/templates/modern/apps/web/app/[locale]/sell/page.tsx
+@@ -64,7 +64,7 @@
+         question: "Какви данни са необходими?",
+       },
+       {
+-        answer: `Финалната оценка се прави след оглед на място в шоурума ни в ${leadSite.district.bg}, София.`,
++        answer: `Финалната оценка се прави след оглед на място в шоурума ни в ${leadSite.district.bg}, ${leadSite.localizedCopy?.bg.city ?? leadSite.city}.`,
+         question: "Може ли оценка само по снимки?",
+       },
+       {
+@@ -112,7 +112,7 @@
+         question: "What information do you need?",
+       },
+       {
+-        answer: `The final appraisal follows an in-person inspection at our showroom in ${leadSite.district.en}, Sofia.`,
++        answer: `The final appraisal follows an in-person inspection at our showroom in ${leadSite.district.en}, ${leadSite.localizedCopy?.en.city ?? leadSite.city}.`,
+         question: "Can you appraise it from photos only?",
+       },
+       {
+diff --git a/templates/modern/apps/web/lib/public-marketplace-data.ts b/templates/modern/apps/web/lib/public-marketplace-data.ts
+index dc509b3..78e6655 100644
+--- a/templates/modern/apps/web/lib/public-marketplace-data.ts
++++ b/templates/modern/apps/web/lib/public-marketplace-data.ts
+@@ -226,13 +226,11 @@
+     ? {
+         monthlyEstimate: {
+           ...listing.monthlyEstimate,
+-          currency: leadSite.currency,
+         },
+       }
+     : {}),
+   price: {
+     ...listing.price,
+-    currency: leadSite.currency,
+   },
+   seller: {
+     ...listing.seller,
+@@ -254,7 +252,7 @@
+           },
+           documentCount: 0,
+           landedCostStatus: "unknown",
+-          nativePrice: { ...listing.price, currency: leadSite.currency },
++          nativePrice: { ...listing.price },
+           origin: {
+             city: leadSite.city,
+             country: leadSite.country,
+diff --git a/templates/modern/apps/web/lib/public-marketplace-pagination.test.ts b/templates/modern/apps/web/lib/public-marketplace-pagination.test.ts
+index 12c1519..5416f37 100644
+--- a/templates/modern/apps/web/lib/public-marketplace-pagination.test.ts
++++ b/templates/modern/apps/web/lib/public-marketplace-pagination.test.ts
+@@ -36,6 +36,31 @@
+ });
+ 
+ describe("public demo pagination", () => {
++  it("preserves supplied currencies when adapting dealer identity", async () => {
++    const source = fixtures.find((listing) => listing.supply);
++    if (!source) {
++      throw new Error("Missing supply fixture");
++    }
++    const supplied = {
++      ...source,
++      price: { amount: 12_345, currency: "EUR" as const },
++      monthlyEstimate: { amount: 210, currency: "EUR" as const },
++    };
++    const original = structuredClone(supplied);
++    mocks.listings.splice(0, mocks.listings.length, supplied);
++
++    const result = await getPublicMarketplaceListings(
++      parseMarketplaceSearchParams({})
++    );
++    const listing = result.listings[0];
++    expect(listing?.price).toEqual(supplied.price);
++    expect(listing?.monthlyEstimate).toEqual(supplied.monthlyEstimate);
++    expect(listing?.supply?.nativePrice).toEqual(supplied.price);
++    expect(listing?.price).not.toBe(supplied.price);
++    expect(listing?.monthlyEstimate).not.toBe(supplied.monthlyEstimate);
++    expect(supplied).toEqual(original);
++  });
++
+   it("adapts only the current page while keeping complete counts and order", async () => {
+     const reads = mocks.listings.map((listing) => {
+       const badges = listing.badges;
+diff --git a/templates/modern/docs/CARS-INTEGRATION.md b/templates/modern/docs/CARS-INTEGRATION.md
+index 49aa421..669441e 100644
+--- a/templates/modern/docs/CARS-INTEGRATION.md
++++ b/templates/modern/docs/CARS-INTEGRATION.md
+@@ -10,7 +10,7 @@
+ 
+ Cars owns approved immutable source selection and publishing. Follow its [template release contract](https://github.com/darkapoparka/cars/blob/main/docs/TEMPLATE-PROMOTION.md) and [current ownership instructions](https://github.com/darkapoparka/cars/blob/main/AGENTS.md). Main is a development head, not automatic release or visual approval. Existing dealers remain independent of master changes until an explicitly accepted refresh.
+ 
+-The current five-design direction and hosting qualification belong to Cars, not a duplicated template-specific trio list. Preserve each dealer manifest and the approved lock until the relevant migration is accepted. Do not silently substitute, omit or bulk-publish designs.
++The current six-template fleet and hosting qualification are governed by Cars. Preserve each dealer manifest and the approved lock until the relevant migration is accepted. Do not silently substitute, omit or bulk-publish designs.
+ 
+ ## Runtime and adaptation
+ 
+diff --git a/templates/modern/docs/LEAD-BUILD.md b/templates/modern/docs/LEAD-BUILD.md
+index 38603ab..7bbd71e 100644
+--- a/templates/modern/docs/LEAD-BUILD.md
++++ b/templates/modern/docs/LEAD-BUILD.md
+@@ -4,4 +4,4 @@
+ 
+ Use [TEMPLATE](../TEMPLATE.md) for the actual personalization boundaries and [QA](QA.md) for technical checks. Keep layout, spacing, typography, routes, cards, interactions and the full runtime. Apply one sourced fact/inventory/asset pack through real application data modules; complete the stale-identity sweep and integrate local media.
+ 
+-[Cars integration](CARS-INTEGRATION.md) owns standard and Import trio compatibility, promotion and canonical/publishing ownership. The Cars workflow owns publication and records; this template document does not authorize outreach or deployment.
++[Cars integration](CARS-INTEGRATION.md) records source and mirror ownership and links to Cars' six-template fleet and promotion contracts. The Cars workflow owns publication and records; this template document does not authorize outreach or deployment.
+diff --git a/templates/modern/docs/SITE-CONFIGURATION.md b/templates/modern/docs/SITE-CONFIGURATION.md
+index 6907e10..9a2c5e8 100644
+--- a/templates/modern/docs/SITE-CONFIGURATION.md
++++ b/templates/modern/docs/SITE-CONFIGURATION.md
+@@ -20,13 +20,13 @@
+ 
+ `createBrandTheme` accepts a six-digit hexadecimal accent and derives readable foreground pairs. Root CSS variables also reach portalled controls. Public pages deliberately use a light theme; the authenticated workspace's theme preference is separate. Keep the existing mobile geometry unless a specific mobile change is approved and checked.
+ 
+-Modern retains charcoal `#30343b` through `leadSite.accent` for mobile and selects lighter graphite `#4b5057` through `leadSite.desktopAccent` for desktop. Primary buttons, selected controls, text links, focus rings and the discovery hero consume the configured accent through shared tokens. Hover, pressed, soft selection and gradient colours derive from that value; the gradient keeps the chosen foreground readable for dark and bright dealer accents. Component CSS does not repeat the graphite colour.
++Modern currently sets both `leadSite.accent` and `leadSite.desktopAccent` to `#09090b`. Primary buttons, selected controls, text links, focus rings and the discovery hero consume the configured accent through shared tokens. Hover, pressed, soft selection and gradient colours derive from that value; the gradient keeps the chosen foreground readable for dark and bright dealer accents.
+ 
+-Dealer adaptation should set both accent fields when using separate palettes, or remove `desktopAccent` to share `accent` across desktop and mobile. The existing fallback and older explicit desktop overrides remain supported. Secondary actions retain their neutral tokens, and semantic status colours keep their existing meaning.
++Dealer adaptation preserves both accent fields from the selected template; dealer logo colors must not recolor the UI. The existing fallback and older explicit desktop overrides remain supported. Secondary actions retain their neutral tokens, and semantic status colours keep their existing meaning.
+ 
+ Artwork paths must be validated local absolute paths. Configure a real inverse logo when needed rather than recoloring a customer's bitmap through CSS. `site-artwork.ts` contains reusable fallback artwork, not verified customer identity. All generated originals and the six optimized derivative records are preserved under `provenance/assets/`.
+ 
+-The optional `artwork.aboutBenefits` supplies the complete `choice`, `details`, `budget` and `viewing` illustration set, with each local asset path validated by the public configuration schema. The default four illustrations are charcoal and silver, served as transparent 384 px WebP files. Image-generation sources, reference paths, prompts, hashes and derivative details are preserved in `provenance/assets/about-charcoal-v1/generation.json`; the preceding blue set remains available in provenance and the public asset tree. Photographic inventory, genuine logos and semantic status colours keep their own visual meaning.
++The optional `artwork.aboutBenefits` retains the validated `choice`, `details`, `budget` and `viewing` paths for compatibility. Its charcoal defaults remain in `site-artwork.ts`; the current About page uses its showroom gallery and mobile contact view. Image-generation sources, reference paths, prompts, hashes and derivative details are preserved in `provenance/assets/about-charcoal-v1/generation.json`; the preceding blue set remains available in provenance and the public asset tree. Photographic inventory, genuine logos and semantic status colours keep their own visual meaning.
+ 
+ The optional `desktopPreviewIdentity` uses `sourceSlug`, `label`, `wordmark`, optional `markArtwork` and localized `copy`. It supplies the generated Modern logo to mobile and desktop only when the authoring slug still matches `sourceSlug` and static demo mode is enabled. Without artwork, the text wordmark remains available. Client adaptation replaces the dealer slug, so the site consumes the ordinary `name`, `shortName`, `logoPath` and `logoInversePath` fields. The preview fields deliberately avoid those scalar names to preserve Cars' existing adaptation boundary. The monochrome template artwork uses its alpha silhouette in the surface's foreground color; configured customer logos retain their own raster and inverse assets. [Generated logo verification](MODERN-GENERATED-LOGO-2026-10-06.md) records the artwork, mobile/menu/desktop checks and local-only limits.
+ 
+diff --git a/templates/modern/packages/marketplace-ui/components/listing-detail-content.tsx b/templates/modern/packages/marketplace-ui/components/listing-detail-content.tsx
+index a050046..6c9cd5c 100644
+--- a/templates/modern/packages/marketplace-ui/components/listing-detail-content.tsx
++++ b/templates/modern/packages/marketplace-ui/components/listing-detail-content.tsx
+@@ -48,7 +48,7 @@
+   const copy = getListingDetailCopy(locale);
+   const desktopDescription = publicSite.identity.desktopPreview
+     ? listing.description.replaceAll(
+-        "Day & Night",
++        leadSite.shortName,
+         publicSite.identity.desktopPreview.shortName
+       )
+     : listing.description;

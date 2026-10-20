@@ -7,7 +7,7 @@ export type ReferenceSpecification = {key: string; label: string; value: string;
 export type ReferenceCheckpoint = {name: string; status: number | null; remarks: string[]; value?: string};
 export type ReferenceInspectionGroup = {heading?: string; items: ReferenceCheckpoint[]};
 export type ReferenceInspectionSection = {title: string; groups: ReferenceInspectionGroup[]};
-export type ReferenceServiceRecord = {date: string; distance: string; location: string};
+export type ReferenceServiceRecord = {date: string; distance: string; location: string; work?: readonly string[]};
 export type ReferenceServiceDue = {title: string; description: string; image: string};
 export type ReferenceVehicleDetail = {
   referenceId: string;

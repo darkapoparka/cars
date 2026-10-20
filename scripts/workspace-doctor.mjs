@@ -1,5 +1,5 @@
-import fs from 'node:fs';
 import { isEntrypoint } from './lib/cli-entrypoint.mjs';
+import fs from 'node:fs';
 import path from 'node:path';
 import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';

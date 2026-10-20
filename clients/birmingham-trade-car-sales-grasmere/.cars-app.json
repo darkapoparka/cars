@@ -3,22 +3,34 @@
   "dealer": "birmingham-trade-car-sales-grasmere",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "4e184777567849a2c5b4a9e4a3e652252179c29c",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "path": "templates/app",
-    "digest": "fad0067e48d7bd7e1c5177c5e91e2bc5767352e2c16621cb458d18a081f7c541",
-    "tree": "749512ff762c25272d1474225ff653dd4c88f0fe"
+    "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1",
+    "tree": "7f3d3ffa40546635377e6c5225194fe06fead291"
   },
-  "appDigest": "c622e4dca497384d10f28fb4bc89d0b26f65ed0f42a6cc6853d53d93d03c6a6a",
+  "appDigest": "af75f4c3e598b3d86c4e92c730184fde5eddd6ce46b0f99f66fced3dc362ddc5",
   "provenance": {
     "schemaVersion": 1,
     "dealer": "birmingham-trade-car-sales-grasmere",
     "profile": "auto-best/src/lib/data/dealer-profile.json",
-    "profileSha256": "18b0eeec3169ee1817329105fadb18e79db594be4f3a58583940e6759af3b2d1",
-    "logoPolicy": "Use exact dark mark on light surfaces; exact white mark on dark and neutral accent surfaces. Never use CSS inversion, white plates or crop the emblem.",
+    "profileSha256": "e6904a4503672284577232024900f00cc8c0a837a65dfac67b1a736a2d2caefa",
+    "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
     "vehicles": 10,
     "currency": "GBP",
     "observedAt": "2026-10-10",
     "assets": [
+      {
+        "source": "auto-best/static/dealer-brand/v2-7a49c5599de5a3d4/logo-on-light.webp",
+        "output": "public/dealer-app/logo-light-2090821d1f6e9b83e967.webp",
+        "sha256": "2090821d1f6e9b83e9676875269596ee14bdeed49b0b8e65836f0f7d83cfa8d6",
+        "role": "logo-light"
+      },
+      {
+        "source": "auto-best/static/dealer-brand/v2-7a49c5599de5a3d4/logo-on-dark.webp",
+        "output": "public/dealer-app/logo-dark-4575326b00fe96ccafef.webp",
+        "sha256": "4575326b00fe96ccafef1c26fea465f28f7a1e2bcb45671a2a2931faab658f13",
+        "role": "logo-dark"
+      },
       {
         "source": "auto-best/static/dealer-stock/van.webp",
         "output": "public/dealer-app/vehicle-72396847dfc15c2091e3.webp",
@@ -78,18 +90,6 @@
         "output": "public/dealer-app/vehicle-aafb8fc639fa0f2693f4.webp",
         "sha256": "aafb8fc639fa0f2693f4a1c5e969975c757b00dfa0573bf36a48b40a90ecede2",
         "role": "vehicle"
-      },
-      {
-        "source": "auto-best/static/dealer-brand/logo-on-light-20261011.webp",
-        "output": "public/dealer-brand/logo-on-light-20261011.webp",
-        "sha256": "1786b58acf80bfcaf3ef7e186e1567cb8026f60fa4fdfa0dee13b3ffb4509abd",
-        "role": "logo-light"
-      },
-      {
-        "source": "auto-best/static/dealer-brand/logo-on-dark-20261011.webp",
-        "output": "public/dealer-brand/logo-on-dark-20261011.webp",
-        "sha256": "566203a774ab9cde2dce74f5e6677db5cd1239a697d5efe8b421182dcc218e77",
-        "role": "logo-dark"
       }
     ],
     "mileageFacts": [
@@ -174,5 +174,6 @@
     }
   },
   "needsDealerQA": true,
-  "readyToPublish": false
+  "readyToPublish": false,
+  "refreshedAt": "2026-10-15T02:16:51.808Z"
 }

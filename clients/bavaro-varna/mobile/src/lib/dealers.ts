@@ -1,0 +1,27 @@
+export type CapturedDealer = {
+  address: string;
+  languages: string;
+  openingHours: string;
+  years: string;
+  listings: string;
+  referrals: string;
+  descriptionAccuracy: string;
+  highlights: string[];
+  logo: string;
+  logoWidth?: number;
+};
+/** Static reference facts from Android captures 204 and 205, not live dealer data. */
+export const capturedDealers: Record<string, CapturedDealer> = {
+  "21731000046562940": {
+    "address": "бул. Цар Освободител 176, срещу бл. 107, Варна, България",
+    "languages": "",
+    "openingHours": "Потвърдете работното време директно с автокъщата.",
+    "years": "",
+    "listings": "1",
+    "referrals": "",
+    "descriptionAccuracy": "",
+    "highlights": [],
+    "logo": "/dealer-brand/v2-d43004f80ce3d580/logo-on-light.webp",
+    "logoWidth": 128
+  }
+};

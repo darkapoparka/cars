@@ -1,6 +1,8 @@
-import { Button } from "@repo/design-system/components/ui/button";
 import { leadSite } from "@repo/marketplace";
-import { ArrowUpRight } from "lucide-react";
+import { getLeadCopy } from "@repo/marketplace/lead-copy";
+import { publicSite } from "@repo/marketplace/site-config";
+import { ChevronDown } from "lucide-react";
+import { ListingCtaBanner } from "./listing-cta-banner";
 
 interface ListingLocationProps {
   readonly locale?: string;
@@ -9,60 +11,57 @@ interface ListingLocationProps {
 export const ListingLocation = ({ locale }: ListingLocationProps) => {
   const isBg = locale?.toLowerCase().startsWith("bg") ?? false;
   const mapEmbedUrl = leadSite.mapsEmbedUrl;
+  const copy = getLeadCopy(locale);
 
   return (
     <section
       aria-labelledby="listing-location-heading"
-      className="px-4 py-5 lg:rounded-xl lg:border lg:border-border lg:bg-card lg:p-5"
+      className="overflow-hidden rounded-2xl bg-zinc-950 text-white"
       data-slot="listing-location"
       id="listing-location"
     >
-      <div className="space-y-4">
-        <div className="flex min-w-0 items-start justify-between gap-4">
-          <div className="min-w-0">
-            <h2 className="font-semibold text-lg" id="listing-location-heading">
-              {leadSite.city}
-            </h2>
-            <p className="mt-1 font-medium text-sm">
-              {isBg ? "Публикуван адрес" : "Published address"}
-            </p>
-            <p className="mt-0.5 text-muted-foreground text-sm">
-              {leadSite.address}
-            </p>
-            <p className="mt-0.5 text-muted-foreground text-xs">
-              {isBg
-                ? "Потвърдете местоположението на конкретния автомобил преди оглед."
-                : "Confirm the specific vehicle location before travelling to view it."}
-            </p>
-          </div>
-
-          <Button
-            aria-label={
-              isBg
-                ? "Отвори адреса в Google Maps"
-                : "Open address in Google Maps"
-            }
-            asChild
-            className="size-9 shrink-0 rounded-lg"
-            size="icon"
-            variant="secondary"
-          >
-            <a href={leadSite.mapsUrl} rel="noreferrer" target="_blank">
-              <ArrowUpRight aria-hidden="true" className="size-4" />
-            </a>
-          </Button>
-        </div>
-
-        <div className="h-48 overflow-hidden rounded-2xl bg-control lg:rounded-xl">
-          <iframe
-            className="block h-full w-full border-0"
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            src={mapEmbedUrl}
-            title={isBg ? "Карта на публикувания адрес" : "Published address map"}
+      <ListingCtaBanner
+        action={
+          <>
+            {isBg ? "Упътвания" : "Get directions"}
+            <span className="sr-only">
+              {isBg ? " — отваря се в нов раздел" : " — opens in a new tab"}
+            </span>
+          </>
+        }
+        artwork={
+          leadSite.mobileShowroomArtworkPath ?? publicSite.artwork.contactHero
+        }
+        external
+        heading={isBg ? "Посетете шоурума" : "Visit the showroom"}
+        headingId="listing-location-heading"
+        href={leadSite.mapsUrl}
+        layout="photo"
+        slot="listing-showroom-card"
+      >
+        <p className="text-meta text-white/85 leading-5">
+          {copy.address}, {copy.city}
+        </p>
+      </ListingCtaBanner>
+      <details className="group border-white/15 border-t">
+        <summary className="flex min-h-11 cursor-pointer list-none items-center justify-between px-4 py-3 font-medium text-meta text-white/85 focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-[-4px] [&::-webkit-details-marker]:hidden">
+          {isBg ? "Карта на шоурума" : "Showroom map"}
+          <ChevronDown
+            aria-hidden="true"
+            className="size-4 transition-transform group-open:rotate-180 motion-reduce:transition-none"
           />
-        </div>
-      </div>
+        </summary>
+        <iframe
+          allowFullScreen
+          className="block h-80 w-full border-0"
+          height={320}
+          loading="lazy"
+          referrerPolicy="strict-origin-when-cross-origin"
+          src={mapEmbedUrl}
+          title={isBg ? "Карта на шоурума" : "Showroom map"}
+          width="100%"
+        />
+      </details>
     </section>
   );
 };

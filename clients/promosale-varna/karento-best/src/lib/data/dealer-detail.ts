@@ -34,6 +34,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Electric",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.electric"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2022",
+        "labelKey": "vehicle.field.year"
       }
     ],
     "gallery": {
@@ -145,7 +151,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Promosale Varna",
       "location": "Морска гара Варна, Варна, България",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-c1ee2ba0a30e97da/logo-on-light.webp",
       "mobile": "0892 020 208",
       "email": "",
       "whatsapp": "",
@@ -195,6 +201,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Electric",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.electric"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2021",
+        "labelKey": "vehicle.field.year"
       }
     ],
     "gallery": {
@@ -307,7 +319,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Promosale Varna",
       "location": "Морска гара Варна, Варна, България",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-c1ee2ba0a30e97da/logo-on-light.webp",
       "mobile": "0892 020 208",
       "email": "",
       "whatsapp": "",
@@ -357,6 +369,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Petrol",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.gasoline"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2020",
+        "labelKey": "vehicle.field.year"
       }
     ],
     "gallery": {
@@ -479,7 +497,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Promosale Varna",
       "location": "Морска гара Варна, Варна, България",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-c1ee2ba0a30e97da/logo-on-light.webp",
       "mobile": "0892 020 208",
       "email": "",
       "whatsapp": "",
@@ -529,6 +547,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Petrol",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.gasoline"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2017",
+        "labelKey": "vehicle.field.year"
       }
     ],
     "gallery": {
@@ -647,7 +671,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Promosale Varna",
       "location": "Морска гара Варна, Варна, България",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-c1ee2ba0a30e97da/logo-on-light.webp",
       "mobile": "0892 020 208",
       "email": "",
       "whatsapp": "",
@@ -697,6 +721,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Petrol",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.gasoline"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2017",
+        "labelKey": "vehicle.field.year"
       }
     ],
     "gallery": {
@@ -808,7 +838,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Promosale Varna",
       "location": "Морска гара Варна, Варна, България",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-c1ee2ba0a30e97da/logo-on-light.webp",
       "mobile": "0892 020 208",
       "email": "",
       "whatsapp": "",
@@ -858,6 +888,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Electric",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.electric"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2023",
+        "labelKey": "vehicle.field.year"
       }
     ],
     "gallery": {
@@ -974,7 +1010,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Promosale Varna",
       "location": "Морска гара Варна, Варна, България",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-c1ee2ba0a30e97da/logo-on-light.webp",
       "mobile": "0892 020 208",
       "email": "",
       "whatsapp": "",

@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-reviewed-modern-bilingual-copy-input",
+  "dealer": "bora-car-varna",
+  "sourceCommit": "d9594c2979f668831b78609e4e990640259aee81",
+  "baselineTree": "640689e46274c2f45a12d53f5901ea95848e7a56",
+  "inputSha256": "49cf23a05535fd205dff13af9c719fc1c7e2688169802dbaa0fa2b6595a01827",
+  "modernInputRowsSha256": "7b5b14e6e930fdd07490bb02f4ead3e28a722db228996897fc27734aabcd5670",
+  "listingCount": 1,
+  "profileInputs": [
+    {
+      "path": "dealer.json",
+      "gitBlob": "ef26ab1ecc0dad498a6a76bf4df4ab35f7455217",
+      "sha256": "108ff9ccd558c22ddb634225ddeb8e52355fae0e8492182e26bd2f66583df112",
+      "bytes": 4367
+    },
+    {
+      "path": "business-facts.json",
+      "gitBlob": "ac50034ac2d312dbc56a7d735976937afbfa3942",
+      "sha256": "8c329e459a67f273b76ccc8601e7bd118b8131ad1a7441872fe803a553e7fdfe",
+      "bytes": 2025
+    },
+    {
+      "path": "stock.json",
+      "gitBlob": "18de526c3cace44c8ce844e7bf254a3613c93396",
+      "sha256": "eb95c603f9e0513bee96fe0255e886da767aef9f2c620c7982e0282243066eda",
+      "bytes": 9311
+    }
+  ],
+  "reviewedGeneratorHelper": {
+    "path": "scripts/lib/modern-dealer-inventory-copy.mjs",
+    "sha256": "cbdbaa28dc07911cfe913b4e627671b6556fc25d3bfe59364e29c5ca5a29072b",
+    "sourceCommit": "14d86f67c160699c18a6ec5658197cc4d9011e0b"
+  },
+  "review": {
+    "displayCopyOnly": true,
+    "exactSourceDescriptionKeys": true,
+    "listingFactsUnchanged": true,
+    "imageUrlsUnchanged": true,
+    "imageAltsPreserved": true,
+    "interpolationTokensUnchanged": true,
+    "reviewedBy": "Codex, authorized final-template rollout",
+    "reviewedAt": "2026-10-14T20:04:09.142Z",
+    "notes": "Reuse exact existing native or reviewed registered companions for every actual current row; no new translation/factual source edits."
+  },
+  "reviewedCopy": {
+    "seat-ibiza-2011-11746086011937446": {
+      "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "en": {
+        "description": "Dated sample from a published listing. Confirm the condition, price and availability directly with the dealership.",
+        "imageAlts": [
+          "Seat Ibiza",
+          "Seat Ibiza"
+        ]
+      },
+      "bg": {
+        "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+        "imageAlts": [
+          "Seat Ibiza",
+          "Seat Ibiza"
+        ]
+      }
+    }
+  }
+}

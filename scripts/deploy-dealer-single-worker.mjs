@@ -4,6 +4,7 @@
  */
 import fs from 'node:fs';
 import path from 'node:path';
+import {randomUUID} from 'node:crypto';
 import {spawnSync} from 'node:child_process';
 import {isEntrypoint} from './lib/cli-entrypoint.mjs';
 import {ROOT,json,sha256,inside} from './lib/workflow.mjs';
@@ -42,6 +43,100 @@ export function validateSourcePublication(publication,proof,receipt,record) {
  return {...publication,verifiedMainCommit:proof.mainCommit};
 }
 
+
+export const CANONICAL_EXPOSURE_ZONE = '006e99b27c99b7ee85bc0642fa91fa14';
+export const CANONICAL_EXPOSURE_KIND = 'cars-existing-worker-canonical-exposure-lease';
+const exposureReads = new WeakMap();
+const exposureEndpoint = (kind, lease) => kind === 'zoneRoutes' ? '/zones/'+CANONICAL_EXPOSURE_ZONE+'/workers/routes' :
+ kind === 'workerDomains' ? '/accounts/'+SINGLETON_ACCOUNT+'/workers/domains' :
+ '/accounts/'+SINGLETON_ACCOUNT+'/workers/scripts/'+lease.workerName+'/subdomain';
+const exposureKeys = (value, expected, label) => assert(value && typeof value === 'object' && !Array.isArray(value) &&
+ canonical(Object.keys(value).sort()) === canonical([...expected].sort()), 'Canonical exposure '+label+' shape differs');
+function exposureRows(rows, kind) {
+ assert(Array.isArray(rows) && rows.length <= 1000, 'Canonical exposure requires bounded complete '+kind);
+ const ids = new Set();
+ return rows.map(row => {
+  assert(row && /^[a-f0-9]{32}$/.test(row.id ?? '') && !ids.has(row.id), 'Canonical exposure has an invalid or duplicate ID'); ids.add(row.id);
+  if (kind === 'zoneRoutes') {
+   assert(/^[a-z0-9][a-z0-9-]{0,63}\.webpreviews\.site\/\*$/.test(row.pattern ?? '') &&
+    (row.script == null || /^cars-[a-z0-9-]{1,58}$/.test(row.script)), 'Canonical exposure contains an unreviewed route pattern or Worker');
+   return {id:row.id,pattern:row.pattern,script:row.script ?? null};
+  }
+  assert(typeof row.hostname === 'string' && row.hostname.length <= 253 && typeof row.service === 'string' &&
+   typeof row.zone_id === 'string' && typeof row.environment === 'string' && typeof row.cert_id === 'string' &&
+   typeof row.enabled === 'boolean' && typeof row.previews_enabled === 'boolean', 'Canonical exposure domain inventory differs');
+  return {id:row.id,hostname:row.hostname,service:row.service,zone_id:row.zone_id,environment:row.environment,
+   cert_id:row.cert_id,enabled:row.enabled,previews_enabled:row.previews_enabled};
+ }).sort((a,b)=>a.id.localeCompare(b.id,'en'));
+}
+/** Hash normalized authenticated API results, never cached review timestamps. */
+export function canonicalExposureDigests({zoneRoutes,workerDomains,scriptSubdomain}) {
+ const routes=exposureRows(zoneRoutes.result,'zoneRoutes'),domains=exposureRows(workerDomains.result,'workerDomains'),subdomain=scriptSubdomain.result;
+ exposureKeys(subdomain,['enabled','previews_enabled'],'subdomain');
+ assert(typeof subdomain.enabled === 'boolean' && typeof subdomain.previews_enabled === 'boolean','Canonical exposure subdomain settings differ');
+ return {zoneRoutes:sha256(canonical(routes)),workerDomains:sha256(canonical(domains)),scriptSubdomain:sha256(canonical(subdomain))};
+}
+export function validateCanonicalExposureLease(lease, {client,workerName,publicOrigin,now=Date.now()} = {}) {
+ exposureKeys(lease,['schemaVersion','kind','dealer','reviewed','reviewedAt','accountId','workerName','providerOrigin','canonicalOrigin','zoneId','routeId','proofs'],'lease');
+ assert(lease.schemaVersion===1 && lease.kind===CANONICAL_EXPOSURE_KIND && lease.reviewed===true &&
+  Number.isFinite(Date.parse(lease.reviewedAt)) && Date.parse(lease.reviewedAt)<=now &&
+  lease.accountId===SINGLETON_ACCOUNT && lease.zoneId===CANONICAL_EXPOSURE_ZONE && lease.dealer===client &&
+  lease.workerName===workerName && lease.providerOrigin===publicOrigin && /^[a-f0-9]{32}$/.test(lease.routeId ?? ''),
+  'Canonical exposure lease differs from the reviewed dealer/Worker');
+ let origin;try{origin=new URL(lease.canonicalOrigin);}catch{assert(false,'Canonical exposure HTTPS origin required');}
+ assert(origin.origin===lease.canonicalOrigin && origin.protocol==='https:' && !origin.username && !origin.password &&
+  /^[a-z0-9][a-z0-9-]{0,63}\.webpreviews\.site$/.test(origin.hostname), 'Canonical exposure requires one exact existing webpreviews hostname');
+ exposureKeys(lease.proofs,['zoneRoutes','workerDomains','scriptSubdomain'],'proofs');
+ for(const kind of ['zoneRoutes','workerDomains','scriptSubdomain']) {
+  exposureKeys(lease.proofs[kind],['endpoint','sha256'],kind+' proof');
+  assert(lease.proofs[kind].endpoint===exposureEndpoint(kind,lease) && hex64(lease.proofs[kind].sha256), 'Canonical exposure proof endpoint/hash differs');
+ }
+ return lease;
+}
+/** Root supplies actual authenticated GETs. The default CLI has no exposure reader. */
+export async function readCanonicalExposureSnapshot({snapshot,review,readExposure,stage,notBefore,now=()=>Date.now()}) {
+ const lease=validateCanonicalExposureLease(review.canonicalExposure,review);
+ assert(typeof readExposure==='function' && ['before','locked','after'].includes(stage) && Number.isFinite(Date.parse(notBefore)),
+  'Canonical exposure requires a live authenticated readExposure callback');
+ const requestId=randomUUID();
+ const value=await readExposure({requestId,accountId:SINGLETON_ACCOUNT,workerName:review.workerName,zoneId:CANONICAL_EXPOSURE_ZONE,
+  canonicalOrigin:lease.canonicalOrigin,stage,notBefore,expectedVersionId:snapshot.versionId,
+  endpoints:Object.fromEntries(['zoneRoutes','workerDomains','scriptSubdomain'].map(kind=>[kind,exposureEndpoint(kind,lease)]))});
+ assert(value?.kind==='cars-live-canonical-exposure-read' && value.requestId===requestId && value.evidence==='authenticated-cloudflare-connector' &&
+  value.accountId===SINGLETON_ACCOUNT && value.workerName===review.workerName && value.zoneId===CANONICAL_EXPOSURE_ZONE &&
+  Number.isFinite(Date.parse(value.observedAt)) && Date.parse(value.observedAt)>=Date.parse(notBefore) &&
+  Date.parse(value.observedAt)<=now() && now()-Date.parse(value.observedAt)<=15*60*1000,
+  'Canonical exposure requires a fresh stage-specific authenticated observation, not cached review data');
+ for(const kind of ['zoneRoutes','workerDomains','scriptSubdomain']) {
+  const proof=value[kind];
+  assert(proof?.endpoint===exposureEndpoint(kind,lease) && proof.success===true && proof.status===200,
+   'Canonical exposure authenticated GET failed: '+kind);
+  if(kind!=='scriptSubdomain') assert(proof.complete===true && Number.isSafeInteger(proof.totalCount) &&
+   proof.totalCount===proof.result?.length, 'Canonical exposure inventory is incomplete: '+kind);
+ }
+ const digests=canonicalExposureDigests(value),routes=exposureRows(value.zoneRoutes.result,'zoneRoutes'),domains=exposureRows(value.workerDomains.result,'workerDomains');
+ for(const kind of Object.keys(digests)) assert(digests[kind]===lease.proofs[kind].sha256,'Canonical exposure lease drift: '+kind);
+ const own=routes.filter(row=>row.script===review.workerName),pattern=new URL(lease.canonicalOrigin).hostname+'/*';
+ assert(own.length===1 && own[0].id===lease.routeId && own[0].pattern===pattern &&
+  routes.filter(row=>row.pattern===pattern).length===1, 'Canonical exposure route is not owned solely by this exact Worker/hostname');
+ assert(!domains.some(row=>row.service===review.workerName || row.hostname===new URL(lease.canonicalOrigin).hostname),
+  'Canonical exposure includes a foreign or unexpected Custom Domain');
+ assert(value.scriptSubdomain.result.enabled===true && value.scriptSubdomain.result.previews_enabled===false,
+  'Canonical exposure workers.dev/preview settings differ from the sealed configuration');
+ const result={...snapshot,routes:own,domains:[],workersDev:true,workersDevPreviewEnabled:false,
+  canonicalExposureRead:{stage,requestId,observedAt:value.observedAt,leaseSha256:sha256(canonical(lease)),proofDigests:digests}};
+ exposureReads.set(result,{snapshot:canonical(result),leaseSha256:sha256(canonical(lease))});
+ return result;
+}
+function validateCanonicalExposureSnapshot(snapshot, lease, workerName) {
+ const recorded=exposureReads.get(snapshot);
+ assert(recorded?.snapshot===canonical(snapshot) && recorded.leaseSha256===sha256(canonical(lease)) &&
+  snapshot.canonicalExposureRead?.leaseSha256===recorded.leaseSha256 && snapshot.workersDevPreviewEnabled===false &&
+  canonical(snapshot.handlers)===canonical(['fetch']) && snapshot.bindings.length===1 &&
+  snapshot.bindings[0].type==='assets' && snapshot.bindings[0].name==='ASSETS',
+  'Canonical exposure requires the unmodified live-reader snapshot, fetch-only handler and ASSETS-only bindings');
+}
+
 export const MINIMUM_SPARE_WORKER_SCRIPTS=1;
 const freshObservation=(value,now)=>Number.isFinite(Date.parse(value))&&now-Date.parse(value)>=0&&now-Date.parse(value)<=15*60*1000;
 /** A reviewed allowance is separate from inventory and never inferred from purchase intent. */
@@ -70,14 +165,15 @@ export function validateSingletonCapacity(snapshot,{now=Date.now()}={}) {
 }
 const capacityPins=snapshot=>canonical({allowedScripts:snapshot.allowedScripts,capacityReview:snapshot.capacityReview??null});
 
-export function validateCurrentSingletonTarget(snapshot,workerName,{now=Date.now(),after=false,versionId}={}) {
+export function validateCurrentSingletonTarget(snapshot,workerName,{now=Date.now(),after=false,versionId,canonicalExposure}={}) {
  assert(snapshot?.accountId===SINGLETON_ACCOUNT&&snapshot.workerName===workerName&&snapshot.exists===true&&snapshot.workersDev===true&&
   Number.isFinite(Date.parse(snapshot.checkedAt))&&Math.abs(now-Date.parse(snapshot.checkedAt))<=15*60*1000&&
-  Array.isArray(snapshot.routes)&&snapshot.routes.length===0&&Array.isArray(snapshot.domains)&&snapshot.domains.length===0&&
+  Array.isArray(snapshot.routes)&&(canonicalExposure || snapshot.routes.length===0)&&Array.isArray(snapshot.domains)&&snapshot.domains.length===0&&
   Array.isArray(snapshot.tailConsumers)&&snapshot.tailConsumers.length===0&&Array.isArray(snapshot.schedules)&&snapshot.schedules.length===0&&
   Array.isArray(snapshot.bindings),
   'Fresh existing public Worker snapshot without foreign routes/resources is required');
  validateSingletonCapacity(snapshot,{now});
+ if(canonicalExposure)validateCanonicalExposureSnapshot(snapshot,canonicalExposure,workerName);
  const ownServices=new Set(['auto-best','modern','import','app','mobile','karento-best','signature','carwow'].map(k=>workerName+'-'+k));
  for(const binding of snapshot.bindings){
   if(binding.type==='assets'&&binding.name==='ASSETS')continue;
@@ -143,13 +239,18 @@ export async function readSingletonRemoteMetadata(review,record,read=githubJson)
  return {run,artifact,sourceProof:{repository,commit:commit.sha,sourceTree,ref:'refs/heads/main',mainCommit:main.sha,mainReachable:true}};
 }
 
-export async function inspectFleetSingleton({reviewFile,mode='update-existing',root=ROOT,registry=json(path.join(root,'docs/DEPLOYMENT-INVENTORY.json')),readMetadata=readSingletonRemoteMetadata}={}) {
+export async function inspectFleetSingleton({reviewFile,mode='update-existing',root=ROOT,registry=json(path.join(root,'docs/DEPLOYMENT-INVENTORY.json')),readMetadata=readSingletonRemoteMetadata,originalArchiveBytes}={}) {
  const absolute=path.resolve(reviewFile),bytes=fs.readFileSync(absolute),review=JSON.parse(bytes);
  assert(review.schemaVersion===1&&typeof review.reviewed==='boolean'&&(!review.reviewed||Number.isFinite(Date.parse(review.reviewedAt)))&&review.accountId===SINGLETON_ACCOUNT&&
   hex40(review.sourceCommit)&&hex40(review.sourceTree)&&hex64(review.inputDigest)&&hex64(review.outputDigest)&&hex64(review.artifactDigest),'Explicit fleet review and exact source/artifact pins are required');
  deploymentMode(mode,review);
  const capacity=validateSingletonCapacity(review.providerSnapshot);
- for(const key of ['archive','directory'])assert(typeof review[key]==='string'&&path.isAbsolute(review[key]),'Use an exact absolute '+key+' path');
+ if(review.canonicalExposure){assert(mode==='update-existing','Canonical exposure supports existing Workers only');validateCanonicalExposureLease(review.canonicalExposure,review);}
+ const archiveMode=review.archiveMode??'file';assert(['file','original-byte-buffer'].includes(archiveMode),'Unsupported original archive input mode');
+ const memory=archiveMode==='original-byte-buffer';
+ assert(memory?Buffer.isBuffer(originalArchiveBytes)&&review.archive===undefined:originalArchiveBytes===undefined,'Explicit original ZIP buffer mode must not substitute a file path or absent bytes');
+ const originalArchive=memory?originalArchiveBytes:review.archive;
+ for(const key of memory?['directory']:['archive','directory'])assert(typeof review[key]==='string'&&path.isAbsolute(review[key]),'Use an exact absolute '+key+' path');
  assert(review.archive!==review.directory,'Archive and extracted output must be distinct');
  const sealed=verifyFleetSingletonDirectory(review.directory),{receipt,delivery,inventory}=sealed;
  const registered=registeredCompositionIdentity(registry,review.client,{...review,variants:sealed.review.variants});
@@ -157,15 +258,19 @@ export async function inspectFleetSingleton({reviewFile,mode='update-existing',r
  for(const key of ['sourceCommit','sourceTree','inputDigest','sourceReleases','outputDigest','workerName','publicOrigin'])assert(canonical(review[key])===canonical(receipt[key]),'Approved singleton pin differs: '+key);
  assert(receipt.dealer===review.client&&String(receipt.runId)===String(review.runId)&&String(receipt.attempt)===String(review.attempt)&&inventory.digest===review.artifactDigest&&delivery.repository===review.repository,'Approved dealer/run/inventory differs');
  const remote=await readMetadata(review,registered.record);validateSingletonGitHubBuild(remote,review);
- const archive=await hashArchive(review.archive);assert(archive.bytes===remote.artifact.size_in_bytes&&'sha256:'+archive.sha256===remote.artifact.digest,'Original GitHub archive bytes differ');
- for(const name of ['artifact-manifest.json','single-worker-receipt.json','dealer-composition-review.json','delivery-receipt.json','wrangler.json'])assert(readZipReceipt(review.archive,name).equals(fs.readFileSync(inside(review.directory,name,{mustExist:true}))),'Extracted singleton receipt differs from original archive: '+name);
+ const archive=await hashArchive(originalArchive);assert(archive.bytes===remote.artifact.size_in_bytes&&'sha256:'+archive.sha256===remote.artifact.digest,'Original GitHub archive bytes differ');
+ for(const name of ['artifact-manifest.json','single-worker-receipt.json','dealer-composition-review.json','delivery-receipt.json','wrangler.json'])assert(readZipReceipt(originalArchive,name).equals(fs.readFileSync(inside(review.directory,name,{mustExist:true}))),'Extracted singleton receipt differs from original archive: '+name);
+ const composition=receipt.canonicalComposition??null;
+ assert(canonical(review.canonicalComposition??null)===canonical(composition),'Reviewed canonical composition differs from the sealed artifact');
+ if(review.canonicalExposure)assert(composition&&composition.providerOrigin===review.canonicalExposure.providerOrigin&&composition.canonicalOrigin===review.canonicalExposure.canonicalOrigin,'Canonical exposure requires the matching sealed canonical wrapper composition');
+ if(composition)for(const name of ['server/worker.mjs',composition.originalWorkerPath])assert(readZipReceipt(originalArchive,name).equals(fs.readFileSync(inside(review.directory,name,{mustExist:true}))),'Extracted canonical Worker bytes differ from original archive: '+name);
  const sourcePublication=validateSourcePublication(review.sourcePublication,remote.sourceProof,receipt,registered.record);
  if(mode==='create-singleton')validateAbsentSingletonTarget(review.providerSnapshot,receipt.workerName,receipt.publicOrigin);
  return {reviewFile:absolute,reviewSha256:sha256(bytes),review,sealed,remote,sourcePublication,plan:{schemaVersion:1,type:'cars-existing-fleet-single-worker-inspection',client:review.client,repository:review.repository,
   sourcePublication,privatePublishingMirror:{...(review.privatePublishingMirror??{repository:review.repository,state:'not-verified-by-this-bridge'}),verifiedByBridge:false},accountId:SINGLETON_ACCOUNT,workerName:receipt.workerName,publicOrigin:receipt.publicOrigin,
   sourceCommit:receipt.sourceCommit,sourceTree:receipt.sourceTree,inputDigest:receipt.inputDigest,sourceReleases:receipt.sourceReleases,runId:review.runId,attempt:review.attempt,artifactId:review.artifactId,
-  archiveDigest:review.archiveDigest,artifactDigest:inventory.digest,outputDigest:receipt.outputDigest,applicationCount:6,workerCount:1,serviceBindings:[],deploymentMode:mode,readyToDeploy:review.reviewed,
-  capacity,minimumSpareScripts:mode==='create-singleton'?capacity.minimumSpareScripts:null,deployments:0,hostedVerified:false,ownerAccepted:false}};
+  archiveMode,archiveDigest:review.archiveDigest,artifactDigest:inventory.digest,outputDigest:receipt.outputDigest,applicationCount:6,workerCount:1,serviceBindings:[],deploymentMode:mode,readyToDeploy:review.reviewed,
+  ...(composition?{canonicalComposition:composition}:{}),...(review.canonicalExposure?{canonicalExposure:review.canonicalExposure,requiresLiveExposureReader:true}:{}),capacity,minimumSpareScripts:mode==='create-singleton'?capacity.minimumSpareScripts:null,deployments:0,hostedVerified:false,ownerAccepted:false}};
 }
 
 export function localWrangler({toolPackage,accountId=SINGLETON_ACCOUNT}={}) {
@@ -196,7 +301,7 @@ export function localWrangler({toolPackage,accountId=SINGLETON_ACCOUNT}={}) {
    assert(version.id===active&&canonical(version.resources?.script?.handlers)===canonical(['fetch']),'Worker has unexpected handlers');
    const creating=review.deploymentMode==='create-singleton';
    if(creating)assert(lastDeploymentOutput?.version_id===versionId&&canonical(lastDeploymentOutput.targets)===canonical([review.publicOrigin]),'New Worker upload did not expose only the reviewed workers.dev origin');
-   const snapshot={...review.providerSnapshot,checkedAt:new Date().toISOString(),versionId:active,versionTraffic:current.versions,bindings:version.resources?.bindings,accountId,workerName:review.workerName,exists:true,...(creating?{workersDev:true,publicOrigin:review.publicOrigin,exposureEvidence:'qualified-wrangler-deployment-targets'}:{})};
+   const snapshot={...review.providerSnapshot,checkedAt:new Date().toISOString(),versionId:active,versionTraffic:current.versions,bindings:version.resources?.bindings,handlers:version.resources?.script?.handlers,accountId,workerName:review.workerName,exists:true,...(creating?{workersDev:true,publicOrigin:review.publicOrigin,exposureEvidence:'qualified-wrangler-deployment-targets'}:{})};
    // Connector snapshot carries live route/domain/schedule/subdomain/count evidence not returned by version view.
    assert(review.providerSnapshot?.evidence==='authenticated-cloudflare-connector'&&Date.now()-Date.parse(review.providerSnapshot.checkedAt)>=0&&Date.now()-Date.parse(review.providerSnapshot.checkedAt)<=15*60*1000,'Refresh the connected Cloudflare route/resource snapshot before upload');
    if(!versionId)assert(review.providerSnapshot.versionId===active,'Worker advanced since the connected provider review');
@@ -210,16 +315,20 @@ export function localWrangler({toolPackage,accountId=SINGLETON_ACCOUNT}={}) {
  };
 }
 
-export async function runFleetSingletonDeployment({reviewFile,write=false,mode='update-existing',root=ROOT,registry,readMetadata,provider,toolPackage}={}) {
- const context=await inspectFleetSingleton({reviewFile,mode,root,registry,readMetadata});if(!write)return context.plan;
+export async function runFleetSingletonDeployment({reviewFile,write=false,mode='update-existing',root=ROOT,registry,readMetadata,provider,toolPackage,originalArchiveBytes,readExposure}={}) {
+ const context=await inspectFleetSingleton({reviewFile,mode,root,registry,readMetadata,originalArchiveBytes});
+ if(context.review.canonicalExposure)assert(typeof readExposure==='function','Canonical exposure requires a live authenticated readExposure callback; the default CLI refuses');
+ if(!write)return context.plan;
  assert(context.review.reviewed===true,'Upload requires explicit dated review of this exact sealed artifact');
  const review=context.review,uploader=provider??localWrangler({toolPackage});
  assert(uploader.tool?.version===SINGLETON_TOOLCHAIN.wrangler,'Uploader differs from qualified Wrangler');
  const base=inside(root,'runtime',{mustExist:true}),reports=path.join(base,'dealer-single-worker-deployments');fs.mkdirSync(reports,{recursive:true});
  const report=inside(reports,review.client+'-'+review.runId+'-'+review.attempt+'-'+review.outputDigest.slice(0,12));
  assert(!fs.existsSync(report),'An earlier deployment attempt requires live reconciliation before retry');
- const creating=mode==='create-singleton',validateBefore=snapshot=>creating?validateAbsentSingletonTarget(snapshot,review.workerName,review.publicOrigin):validateCurrentSingletonTarget(snapshot,review.workerName);
- const before=validateBefore(await uploader.snapshot(review));
+ const creating=mode==='create-singleton',validateBefore=snapshot=>creating?validateAbsentSingletonTarget(snapshot,review.workerName,review.publicOrigin):validateCurrentSingletonTarget(snapshot,review.workerName,{canonicalExposure:review.canonicalExposure});
+ const snapshotFor=async(stage,versionId)=>{const notBefore=new Date().toISOString(),snapshot=await uploader.snapshot(review,versionId?{versionId}:{});
+  return review.canonicalExposure?readCanonicalExposureSnapshot({snapshot,review,readExposure,stage,notBefore}):snapshot;};
+ const before=validateBefore(await snapshotFor('before'));
  assert(capacityPins(before)===capacityPins(review.providerSnapshot),'Worker allowance evidence changed since the exact provider review');
  if(creating)assert(absentTargetPins(before)===absentTargetPins(review.providerSnapshot),'Absent target/capacity changed since the exact provider review');
  const lock=path.join(reports,'deployment.lock');const fd=fs.openSync(lock,'wx');fs.writeSync(fd,JSON.stringify({pid:process.pid,workerName:review.workerName}));fs.closeSync(fd);
@@ -227,26 +336,92 @@ export async function runFleetSingletonDeployment({reviewFile,write=false,mode='
   fs.mkdirSync(report);writeNew(path.join(report,'started.json'),{...context.plan,status:'started',startedAt:new Date().toISOString(),reviewSha256:context.reviewSha256,tool:uploader.tool,rollback:before});
   assert(sha256(fs.readFileSync(context.reviewFile))===context.reviewSha256,'Reviewed deployment input changed');
   const sealed=verifyFleetSingletonDirectory(review.directory);assert(sealed.inventory.digest===review.artifactDigest,'Sealed output changed before upload');
-  const fresh=validateBefore(await uploader.snapshot(review));
+  const fresh=validateBefore(await snapshotFor('locked'));
   assert(capacityPins(fresh)===capacityPins(before),'Worker allowance evidence changed before upload');
   if(creating)assert(absentTargetPins(fresh)===absentTargetPins(before),'Absent target/capacity changed before upload');
   else assert(fresh.versionId===before.versionId,'Public Worker advanced before upload');
+  if(review.archiveMode==='original-byte-buffer'){const original=await hashArchive(originalArchiveBytes);assert(original.bytes===context.remote.artifact.size_in_bytes&&'sha256:'+original.sha256===context.remote.artifact.digest,'Original GitHub archive bytes changed before upload');}
   const deployed=await uploader.upload(review,report);assert(uuid(deployed.version_id)&&deployed.worker_name===review.workerName,'Uploader returned another Worker/version');
   if(creating)assert(canonical(deployed.targets)===canonical([review.publicOrigin]),'New Worker upload exposed another target or origin');
-  const after=validateCurrentSingletonTarget(await uploader.snapshot(review,{versionId:deployed.version_id}),review.workerName,{after:true,versionId:deployed.version_id});
+  const after=validateCurrentSingletonTarget(await snapshotFor('after',deployed.version_id),review.workerName,{after:true,versionId:deployed.version_id,canonicalExposure:review.canonicalExposure});
   assert(capacityPins(after)===capacityPins(before),'Worker allowance evidence changed during upload; reconcile the deployment');
   assert(verifyFleetSingletonDirectory(review.directory).inventory.digest===review.artifactDigest,'Output changed during upload');
   const receipt={...context.plan,type:'cars-existing-fleet-single-worker-deployment',status:'deployed',deployments:1,versionId:deployed.version_id,deploymentId:after.deploymentId,versionTraffic:after.versionTraffic,
    liveBindings:after.bindings,scriptCountSnapshot:{count:before.scriptCount,allowed:before.allowedScripts,checkedAt:before.resourceSnapshotCheckedAt??before.checkedAt,evidence:before.evidence,capacity:validateSingletonCapacity(before)},scriptCountVerifiedAfter:false,
    ...(creating?{creationEvidence:{absentBefore:true,scriptInventorySha256:sha256(canonical(before.scriptInventory)),checkedAt:before.checkedAt,expectedScriptCountAfter:before.scriptCount+1,minimumSpareScripts:validateSingletonCapacity(before).minimumSpareScripts,expectedSpareScriptsAfter:before.allowedScripts-before.scriptCount-1,scriptCountVerifiedAfter:false,absenceProbe:before.absenceProbe??null}}:{}),
-   rollback:before,reviewSha256:context.reviewSha256,tool:uploader.tool,finishedAt:new Date().toISOString(),hostedVerified:false,ownerAccepted:false};
+   ...(review.canonicalExposure?{exposurePreservation:{canonicalOrigin:review.canonicalExposure.canonicalOrigin,zoneId:review.canonicalExposure.zoneId,routeId:review.canonicalExposure.routeId,before:before.canonicalExposureRead,locked:fresh.canonicalExposureRead,after:after.canonicalExposureRead}}:{}),rollback:before,reviewSha256:context.reviewSha256,tool:uploader.tool,finishedAt:new Date().toISOString(),hostedVerified:false,ownerAccepted:false};
   writeNew(path.join(report,'deployment.json'),receipt);return {...receipt,receiptFile:path.join(report,'deployment.json')};
  }catch(error){if(fs.existsSync(report)&&!fs.existsSync(path.join(report,'needs-reconciliation.json')))writeNew(path.join(report,'needs-reconciliation.json'),{status:'needs-reconciliation',workerName:review.workerName,error:error.message,at:new Date().toISOString()});throw error;
  }finally{fs.unlinkSync(lock);}
 }
 
-export function parseDeploymentArgs(argv){const result={write:false};for(let i=0;i<argv.length;i++){const key=argv[i];if(key==='--write'){assert(!result.write,'Repeated --write');result.write=true;}else{assert(['--input','--wrangler-package','--mode'].includes(key)&&argv[i+1]&&!argv[i+1].startsWith('--'),'Use --input REVIEW_JSON [--mode create-singleton] [--write --wrangler-package ABS_PACKAGE_JSON]');const name=key==='--input'?'reviewFile':key==='--mode'?'mode':'toolPackage';assert(!result[name],'Repeated '+key);result[name]=argv[++i];}}assert(result.reviewFile,'Use --input REVIEW_JSON [--mode create-singleton] [--write --wrangler-package ABS_PACKAGE_JSON]');if(result.mode)assert(['update-existing','create-singleton'].includes(result.mode),'Use update-existing or create-singleton mode');return result;}
-if(isEntrypoint(import.meta.url)){try{
- if(process.argv.slice(2).includes('--help'))console.log('Usage: deploy-dealer-single-worker.mjs --input REVIEW_JSON [--mode create-singleton] [--write --wrangler-package ABS_PACKAGE_JSON]\nDefault: exact artifact/source inspection only; update-existing is the default target mode. Explicit create-singleton requires a fresh complete absent-target inventory. Reserve defaults to one slot; a concrete reviewed Paid-500 policy can explicitly use the final slot. Capacity defaults to 100; 500 requires fresh reviewed paid-plan evidence. --write uploads once with standard Wrangler authentication. No builds/downloads/dependent Workers.');
- else console.log(JSON.stringify(await runFleetSingletonDeployment(parseDeploymentArgs(process.argv.slice(2))),null,2));
-}catch(error){console.error(error.message);process.exitCode=1;}}
+export function readDealerPackBatch(batchFile){
+ const slugs=json(batchFile);
+ assert(Array.isArray(slugs)&&slugs.length>0&&slugs.length<=400&&slugs.every(slug=>typeof slug==='string'&&slug.length<=63&&/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug))&&new Set(slugs).size===slugs.length,
+  'Batch must be a JSON array of 1 to 400 distinct dealer slugs');
+ return slugs;
+}
+
+/** M1 candidates may be inspected on their real branch/run; this never grants deployment approval. */
+export async function inspectDealerPackBatch({batchFile,bundleRoot,plan,reportFile,write=false,root=ROOT,loadPack}={}){
+ assert(write===false,'Dealer pack batch --write is unavailable until the separately authorized M2 deployment');
+ assert(['free','paid'].includes(plan),'Batch inspection requires an explicit --plan free or paid build target');
+ const slugs=readDealerPackBatch(batchFile),base=path.resolve(bundleRoot??path.join(root,'runtime/dealer-packs'));
+ const {inspectDealerPackBundle}=await import('./verify-dealer-pack.mjs');
+ if(!loadPack)({loadDealerPack:loadPack}=await import('./lib/dealer-pack.mjs'));
+ const result={schemaVersion:1,type:'cars-dealer-pack-batch-inspection',startedAt:new Date().toISOString(),targetPlan:plan,success:false,
+  deployments:0,providerWrites:0,readyToDeploy:false,hostedVerified:false,ownerAccepted:false,results:[],
+  qualification:{sourcePublication:'not-verified-by-candidate-inspection',workersPlan:'not-verified',capacity:'not-verified',routes:'not-changed',
+   note:'This verifies local candidate bytes and bound build/QA reports. It is not a main-branch publication proof, a live provider inventory, or deployment authorization.'}};
+ for(const slug of slugs)try{
+  const pack=await loadPack(root,slug),directory=inside(base,slug+'/bundle',{mustExist:true});
+  const context=inspectDealerPackBundle({bundleRoot:directory,slug,packDigest:pack.packDigest,releaseDigest:pack.releaseDigest??pack.manifest.releaseDigest,sourceReleases:pack.manifest.templateSources,plan});
+  const parent=path.dirname(directory),build=json(inside(parent,'build-report.json',{mustExist:true})),qa=json(inside(parent,'qa-report.json',{mustExist:true})),receipt=context.receipt;
+  const bound=value=>value&&value.slug===slug&&value.packDigest===receipt.packDigest&&value.releaseDigest===receipt.releaseDigest&&value.outputDigest===receipt.outputDigest&&canonical(value.execution)===canonical(receipt.execution)&&value.packCompositionDigest===receipt.packCompositionDigest;
+  assert(bound(build)&&build.status==='passed'&&canonical(build.packComposition)===canonical(receipt.packComposition),'Build report does not match the actual compiled candidate');
+  assert(bound(qa)&&qa.type==='cars-dealer-pack-qa'&&qa.success===true&&Array.isArray(qa.checks)&&qa.checks.length>0&&qa.checks.every(row=>row.status==='passed'),
+   'QA report is missing, failed, or does not match this candidate');
+  for(const id of ['bundle-integrity','cloudflare-limits','fleet-contact-coverage','logo-assets','rendered-routes','screenshots','bundle-unchanged'])assert(qa.checks.filter(row=>row.id===id&&row.status==='passed').length===1,'Missing candidate QA gate: '+id);
+  assert(qa.capacity?.targetPlan===plan&&context.capacity.status==='passed','QA or bundle budget differs from the requested target plan');
+  assert(qa.proof?.screenshots?.length===18,'All six designs require 320/390/1280 screenshot evidence');
+  const seen=new Set();
+  for(const image of qa.proof.screenshots){
+   assert(['auto-best','modern','import','app','mobile','karento-best'].includes(image.key)&&[320,390,1280].includes(image.width)&&!seen.has(image.key+':'+image.width)&&
+    typeof image.path==='string'&&!path.isAbsolute(image.path)&&!image.path.includes('\\')&&!image.path.split('/').some(part=>!part||part==='.'||part==='..')&&hex64(image.sha256),'Invalid screenshot evidence');
+   seen.add(image.key+':'+image.width);assert(sha256(fs.readFileSync(inside(parent,image.path,{mustExist:true})))===image.sha256,'Screenshot bytes changed: '+image.path);
+  }
+  result.results.push({slug,status:'passed',workerName:receipt.workerName,publicOrigin:receipt.publicOrigin,workerCount:1,applicationCount:6,serviceBindings:[],
+   execution:receipt.execution,sourceCommit:receipt.sourceCommit,packDigest:receipt.packDigest,releaseDigest:receipt.releaseDigest,outputDigest:receipt.outputDigest,
+   ...(receipt.packCompositionDigest!==undefined?{packCompositionDigest:receipt.packCompositionDigest}:{}),
+   capacity:context.capacity,buildStatus:build.status,qaStatus:'passed',readyToDeploy:false,deployments:0});
+ }catch(error){result.results.push({slug,status:'failed',reason:error.message,readyToDeploy:false,deployments:0});}
+ result.success=result.results.every(row=>row.status==='passed');result.finishedAt=new Date().toISOString();
+ if(reportFile){const target=path.resolve(reportFile);assert(!path.relative(base,target).split(path.sep).includes('bundle'),'Inspection report must stay outside sealed bundles');fs.mkdirSync(path.dirname(target),{recursive:true});fs.writeFileSync(target,JSON.stringify(result,null,2)+'\n');}
+ return result;
+}
+
+export function parseDeploymentArgs(argv){
+ const result={write:false},names={'--input':'reviewFile','--wrangler-package':'toolPackage','--mode':'mode','--batch':'batchFile','--bundle-root':'bundleRoot','--plan':'plan','--report':'reportFile'};
+ for(let i=0;i<argv.length;i++){const key=argv[i];if(key==='--write'){assert(!result.write,'Repeated --write');result.write=true;}else{assert(names[key]&&argv[i+1]&&!argv[i+1].startsWith('--'),'Use --input REVIEW_JSON, or --batch SLUGS_JSON --bundle-root DIRECTORY --plan free|paid');const name=names[key];assert(!result[name],'Repeated '+key);result[name]=argv[++i];}}
+ if(result.batchFile){assert(!result.write,'Dealer pack batch --write is unavailable until the separately authorized M2 deployment');assert(!result.reviewFile&&!result.toolPackage&&!result.mode,'Batch inspection cannot mix legacy deployment options');assert(result.bundleRoot&&['free','paid'].includes(result.plan),'Use --batch SLUGS_JSON --bundle-root DIRECTORY --plan free|paid');}
+ else{assert(result.reviewFile&&!result.bundleRoot&&!result.plan&&!result.reportFile,'Use --input REVIEW_JSON [--mode create-singleton] [--write --wrangler-package ABS_PACKAGE_JSON]');if(result.mode)assert(['update-existing','create-singleton'].includes(result.mode),'Use update-existing or create-singleton mode');}
+ return result;
+}
+async function runDeploymentCli(){
+ if(process.argv.slice(2).includes('--queue')){
+  const argv=process.argv.slice(2),options={},names={'--batch':'slugs','--bundle-root':'bundleRoot','--batch-number':'batch','--report':'report','--owner':'owner','--plan':'plan'};
+  for(let i=0;i<argv.length;i++){const key=argv[i];if(key==='--queue'||key==='--write'){assert(!options[key],'Repeated '+key);options[key]=true;}else{assert(names[key]&&argv[i+1]&&!argv[i+1].startsWith('--')&&!options[names[key]],'Use --queue --batch FILE --bundle-root DIR --plan paid [--batch-number 1] [--write --owner github:RUN_ID]');options[names[key]]=argv[++i];}}
+  assert(options.slugs&&options.bundleRoot&&options.plan==='paid','The M2 queue path requires --batch FILE --bundle-root DIR --plan paid');
+  const {runPackDeploymentCli}=await import('./deploy-dealer-packs.mjs');
+  const report=options.report??path.join(ROOT,'runtime/dealer-pack-deploy-inspection.json'),common=['--slugs',options.slugs,'--bundle-root',options.bundleRoot,'--report',report,...(options.batch?['--batch',options.batch]:[])];
+  if(!options['--write'])return runPackDeploymentCli(['inspect',...common]);
+  assert(options.owner,'Queued writes require --owner with an identifiable executor/run');
+  const prepared=await runPackDeploymentCli(['enqueue',...common]);if(prepared.requests.length)return runPackDeploymentCli(['drain','--bundle-root',options.bundleRoot,'--request-ids',report,'--owner',options.owner,'--write']);
+  return prepared;
+ }
+ if(process.argv.slice(2).includes('--help'))console.log('Usage: deploy-dealer-single-worker.mjs --input REVIEW_JSON [--mode create-singleton] [--write --wrangler-package ABS_PACKAGE_JSON]\nDefault: exact artifact/source inspection only; update-existing is the default target mode. Explicit create-singleton requires a fresh complete absent-target inventory. Reserve defaults to one slot; a concrete reviewed Paid-500 policy can explicitly use the final slot. Capacity defaults to 100; 500 requires fresh reviewed paid-plan evidence. --write uploads once with standard Wrangler authentication. No builds/downloads/dependent Workers.\nDealer-pack candidate inspection: --batch SLUGS_JSON --bundle-root runtime/dealer-packs --plan free|paid [--report PATH]. Legacy candidate inspection remains read-only. M2 deployment: add --queue --write --owner github:RUN_ID to use the durable account queue and create-only provider guards; see deploy-dealer-packs.mjs --help.');
+ else{const options=parseDeploymentArgs(process.argv.slice(2)),result=await(options.batchFile?inspectDealerPackBatch(options):runFleetSingletonDeployment(options));console.log(JSON.stringify(result,null,2));if(options.batchFile&&!result.success)process.exitCode=1;}
+}
+// Batch QA imports hosted checks that reuse this module's deployment guards.
+// Finish module evaluation before awaiting that graph so CLI inspection can run.
+if(isEntrypoint(import.meta.url))runDeploymentCli().catch(error=>{console.error(error.message);process.exitCode=1;});

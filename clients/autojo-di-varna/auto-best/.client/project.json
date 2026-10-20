@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "client": "autojo-di-varna",
+  "templateKey": "auto-best",
+  "templateVersion": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+  "createdAt": "2026-10-13T08:07:22.994Z",
+  "state": "personalized-needs-build",
+  "selectedHome": "main",
+  "availableHomes": [
+    {
+      "id": "main",
+      "route": "/"
+    }
+  ],
+  "offeredHomes": [],
+  "publicUrl": null,
+  "qa": {
+    "desktop": false,
+    "mobile": false,
+    "identity": false,
+    "contactPath": false
+  },
+  "crm": {
+    "leadId": null,
+    "demoProjectId": null,
+    "registered": false
+  },
+  "templateSource": {
+    "repository": "darkapoparka/cars",
+    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "path": "templates/auto-best",
+    "tree": "5fb7a2164775050a47c1183371622295dbf63725",
+    "digest": "dcbc59990928884006652677d3529020df3844029993895a71e5f6818ba7363c",
+    "exportPolicy": "cars-source-v1"
+  },
+  "packaging": {
+    "version": "5",
+    "entry": "/"
+  },
+  "workflowCommit": "a1a6bdbffc2bf8258c633d472ebdb3ada7b4f7c1",
+  "readyToPublish": false,
+  "hosting": {
+    "provider": "cloudflare",
+    "status": "not-deployed"
+  }
+}

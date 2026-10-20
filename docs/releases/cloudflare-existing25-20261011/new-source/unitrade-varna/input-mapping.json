@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-input-mapping",
+  "dealer": "unitrade-varna",
+  "inputs": {
+    "facts": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/unitrade-varna/facts.json",
+      "sha256": "70fce19b3c25f9a16776edcb403ce3cef536b7496b5d0056851693b16240f5ae"
+    },
+    "stock": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/unitrade-varna/stock.json",
+      "sha256": "66afef6bb614a267d1f3fc9a2b1ee290bee50c2bcf031c47f2e7d5ca4b973c0c"
+    },
+    "locale": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/unitrade-varna/locale.json",
+      "sha256": "9359610a9d4335f15acfd956222f3887405bbf7ba5e2007e37e18f45f67b9681"
+    },
+    "branding": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/unitrade-varna/branding.json",
+      "sha256": "0231925de6d126bde0f9f0bc733ee3bcee64c7493a10e6fee2bdc1dd1e5741e0"
+    }
+  },
+  "sources": [
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/unitrade-varna/source/business-facts.json",
+      "sha256": "c146e424765d1b631d694b308929750708240865904446926269ebc14c239da9"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/unitrade-varna/source/locale.json",
+      "sha256": "9359610a9d4335f15acfd956222f3887405bbf7ba5e2007e37e18f45f67b9681"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/unitrade-varna/source/stock.json",
+      "sha256": "2c44fa8abae69b81e558abb718878fb21c6e78bb9b02af47684e93d72d556e1d"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/unitrade-varna/source/generation-receipt.json",
+      "sha256": "76d03d6356c27874f37ba9dd9a91f387825a439de5b3134d5b44ee45407f67a2"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/unitrade-varna/source/native-onLight.png",
+      "sha256": "ec2ff67426b581b439ab9801089f275a80d9b81b1eb7151e223da57b01d4326b"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/unitrade-varna/source/native-onDark.png",
+      "sha256": "ec2ff67426b581b439ab9801089f275a80d9b81b1eb7151e223da57b01d4326b"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/unitrade-varna/source/native-onAccent.png",
+      "sha256": "ec2ff67426b581b439ab9801089f275a80d9b81b1eb7151e223da57b01d4326b"
+    }
+  ],
+  "transformations": {
+    "facts": {
+      "source": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/unitrade-varna/source/business-facts.json",
+        "sha256": "c146e424765d1b631d694b308929750708240865904446926269ebc14c239da9"
+      },
+      "kind": "flat-original-facts-to-business-consumer",
+      "allOriginalEvidenceUnchanged": true,
+      "derivedNameDelta": null,
+      "otherFactsUnchanged": true
+    },
+    "stock": {
+      "source": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/unitrade-varna/source/stock.json",
+        "sha256": "2c44fa8abae69b81e558abb718878fb21c6e78bb9b02af47684e93d72d556e1d"
+      },
+      "originalSourceRecordPreserved": true,
+      "sourceId": "21767710555691116",
+      "normalizer": "loadDealerProfile",
+      "retention": "retainDealerVariantAssets",
+      "sourceKind": "dated-marketplace-listing-sample",
+      "consumerKind": "dated-listing-snapshot",
+      "availabilityUnconfirmed": true,
+      "mediaRightsNotClaimed": true,
+      "mileageUnknownMeansOnRequest": true
+    },
+    "media": [
+      {
+        "sourceId": "21767710555691116",
+        "sourcePublicPath": "/assets/vehicles/21767710555691116/1.webp",
+        "publicPath": "/dealer-stock/21767710555691116-1.webp",
+        "destination": "dealer-stock/21767710555691116-1.webp",
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/unitrade-varna/media/21767710555691116-1.webp",
+        "sha256": "9a2e552f6951bb09eb412bda04882c87c94bc2ffbc0607cd4f704a858f5d95c3",
+        "bytes": 156602
+      },
+      {
+        "sourceId": "21767710555691116",
+        "sourcePublicPath": "/assets/vehicles/21767710555691116/2.webp",
+        "publicPath": "/dealer-stock/21767710555691116-2.webp",
+        "destination": "dealer-stock/21767710555691116-2.webp",
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/unitrade-varna/media/21767710555691116-2.webp",
+        "sha256": "8bcc0fdc993c261193fc855b9646b5748383eafcf26f10de22a80cd4e2d574fb",
+        "bytes": 134684
+      }
+    ],
+    "branding": {
+      "acceptedManifest": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/evidence/final-logo-handoff.json",
+        "sha256": "b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a"
+      },
+      "originalGenerationReceipt": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/unitrade-varna/source/generation-receipt.json",
+        "sha256": "76d03d6356c27874f37ba9dd9a91f387825a439de5b3134d5b44ee45407f67a2"
+      },
+      "noNewGeneration": true,
+      "modelVersion": null,
+      "pixelsUnchanged": true
+    },
+    "identity": null
+  }
+}

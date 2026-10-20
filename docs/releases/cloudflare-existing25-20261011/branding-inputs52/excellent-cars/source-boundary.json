@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-existing-dealer-branding-input-boundary",
+  "dealer": "excellent-cars",
+  "identityKey": "existing-slug:excellent-cars",
+  "cohort": "existing-vercel25",
+  "ownership": "maintained-main",
+  "branding": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/excellent-cars/branding.json",
+    "sha256": "b41a799c5661e0e0ff296f748324b8064e37c6df38cedf0d7c0c73df725d60d3"
+  },
+  "originalManifest": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/excellent-cars/source/original-dealer.json",
+    "sha256": "1b4792b084ea8cc38b304cd6ea1b805a7fe36ab6d20a2a77c364d98d0464f484"
+  },
+  "originalManifestGitBlob": "5bafb7beb4f0c8a925a6dc3fc846e28d8abbc34c",
+  "originalRepository": "darkapoparka/excellent-cars",
+  "sourceRef": {
+    "ref": "main",
+    "commit": "c5c6b0da611a3bf2756c1be2ff9764f6903536ec",
+    "tree": "6011d35697dcb55e891f20e220ac49c4bf84a310"
+  },
+  "originalData": [
+    {
+      "path": "clients/excellent-cars/business-facts.json",
+      "gitBlob": "15faba4bb65370a8daf7f76c9859bad9fb61304a",
+      "bytes": 2804
+    },
+    {
+      "path": "clients/excellent-cars/dealer.json",
+      "gitBlob": "5bafb7beb4f0c8a925a6dc3fc846e28d8abbc34c",
+      "bytes": 3002
+    },
+    {
+      "path": "clients/excellent-cars/stock.json",
+      "gitBlob": "430dbf3a1bce25b5ee8903df839f470f3bc3d8f1",
+      "bytes": 22474
+    }
+  ],
+  "sourceProof": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/evidence/original-source-proof.json",
+    "sha256": "477c4eedc097eb2e105b1d50cf1bc3701b558679e8f6c3c3681a3ccd6626e08c"
+  },
+  "roster": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/evidence/accepted-roster.json",
+    "sha256": "c23c6c4ea10acaca9fdc8d09351fd64735a9e2245385fb12a0f95d71f9f0080d"
+  },
+  "sourceCreation": false,
+  "clientIntegration": false,
+  "buildApproval": false,
+  "hostedApproval": false,
+  "eligibleForExistingQualifiedRequest": true,
+  "holds": [
+    "Exact latest template/source-delta/pilot qualification and preservation-aware updater remain required."
+  ]
+}

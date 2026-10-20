@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-reviewed-modern-bilingual-copy-input",
+  "dealer": "ecodrive-varna",
+  "sourceCommit": "d9594c2979f668831b78609e4e990640259aee81",
+  "baselineTree": "eb1649aa2553c693cd976fe5181f0bd49ba04515",
+  "inputSha256": "2b0aaf8b8c72d1425b326ba936f9f02db1d8d485f082cc28dd351da43caac5aa",
+  "modernInputRowsSha256": "1a5cd224f3a118b5879fa34f5842537fcf5ea094c80007b5f7c6be2888ab6e29",
+  "listingCount": 1,
+  "profileInputs": [
+    {
+      "path": "dealer.json",
+      "gitBlob": "035c08d05f5a2fc9eaf8ab06289f4c351ef4e6a7",
+      "sha256": "bd6cd01edbe2cab94b87dc2aa66c1f1acd053aa7e95eea60edf1899d6e6baab5",
+      "bytes": 4368
+    },
+    {
+      "path": "business-facts.json",
+      "gitBlob": "d6d6e4dc65d54e35726ced3330e0eb7337eb6871",
+      "sha256": "ac8442b084b2be68c42a7b92ab5c574b68dc837962c88f88673f5388ef3d8f17",
+      "bytes": 1911
+    },
+    {
+      "path": "stock.json",
+      "gitBlob": "46cb52ff745894b48c09d0b6bab59b76a5931169",
+      "sha256": "365fb840c4a3262e6853749c905b4bb914253003f245d6757e95d5697fcfbd5d",
+      "bytes": 9114
+    }
+  ],
+  "reviewedGeneratorHelper": {
+    "path": "scripts/lib/modern-dealer-inventory-copy.mjs",
+    "sha256": "cbdbaa28dc07911cfe913b4e627671b6556fc25d3bfe59364e29c5ca5a29072b",
+    "sourceCommit": "14d86f67c160699c18a6ec5658197cc4d9011e0b"
+  },
+  "review": {
+    "displayCopyOnly": true,
+    "exactSourceDescriptionKeys": true,
+    "listingFactsUnchanged": true,
+    "imageUrlsUnchanged": true,
+    "imageAltsPreserved": true,
+    "interpolationTokensUnchanged": true,
+    "reviewedBy": "Codex, authorized final-template rollout",
+    "reviewedAt": "2026-10-14T20:04:09.130Z",
+    "notes": "Reuse exact existing native or reviewed registered companions for every actual current row; no new translation/factual source edits."
+  },
+  "reviewedCopy": {
+    "fiat-scudo-2022-31791553971693975": {
+      "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "en": {
+        "description": "Dated sample from a published listing. Confirm the condition, price and availability directly with the dealership.",
+        "imageAlts": [
+          "Fiat Scudo",
+          "Fiat Scudo"
+        ]
+      },
+      "bg": {
+        "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+        "imageAlts": [
+          "Fiat Scudo",
+          "Fiat Scudo"
+        ]
+      }
+    }
+  }
+}

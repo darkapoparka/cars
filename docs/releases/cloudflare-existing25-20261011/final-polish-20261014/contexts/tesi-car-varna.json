@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-native-source-qualification-context",
+  "id": "fleet-final-polish-20261014",
+  "dealer": "tesi-car-varna",
+  "scope": "existing-dealer-pilot",
+  "sourceCommit": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+  "reviewed": true,
+  "reviewedAt": "2026-10-15T10:55:15.405Z",
+  "qualificationOnly": true,
+  "approved": false,
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "globalReleaseApproval": false,
+  "approvedLockSha256": "ecdfaf9599fbcbeadebc24de3b9aa1c7615a9a49e29d338e5e9a23427d405e26",
+  "candidateLockSha256": "04633129df9e75d6cd62deeac9125b279957789d75f57cdb0b243ef61bfc3e7e",
+  "sourceDeltaReview": {
+    "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-delta-review.json",
+    "sha256": "43cb6876e815a2a6b866f1dadd304236de4ae58c05fe65c2ab62a23506ee7ce9",
+    "reviewedAt": "2026-10-14T23:55:37.398Z"
+  },
+  "sourceReview": {
+    "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-review.json",
+    "sha256": "27c6ce5dd17ee6e1b9f6a5b059a95d5e1dbe4200f61264fc50addeb7af89d984"
+  },
+  "dealerSourceRepair": {
+    "kind": "explicit-local-import-modern-mobile-signature-runtime-correction",
+    "parentContextSha256": "f1b6281a607b441b122b6ea85fb39a093561b65fb810cce2372ba32e251dd610",
+    "originalLocalRecovery": {
+      "file": "C:/Users/radev/AppData/Local/Temp/cars-cf-native-final-polish-20261014/local-source-recovery/exports/tesi-car-varna/local-recovery-receipt.json",
+      "sha256": "7c67f3d6b47245c54e3df8fd4e4ac4f3877ba958856060928db476ca58f6a029"
+    },
+    "baseSourceCommit": "03b7a9f8c3e8238f91eea3a43be92901f9e9982b",
+    "baseSourceTree": "d8380acbe004e6cacebd9bb918c541c372f1a5b0",
+    "baseTreeIsUnpublishedLocalCandidate": true,
+    "changedDesigns": [
+      "import",
+      "modern",
+      "mobile",
+      "karento-best"
+    ],
+    "editorialProof": {
+      "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/final-recovery/local-source-publication/corrective-reseal/tesi-car-varna/editorial-correction-proof.json",
+      "sha256": "fbf9c5bf1c81c86239efd804fe60ecffb9f496707e2a63a86224adb402aae6af"
+    },
+    "logoProof": {
+      "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/native13-modern-runtime/local-four-logo-companions/tesi-car-varna/logo-companion-proof.json",
+      "sha256": "81298d786559bc72a8ac50f0c6c9f21922731e89e5d53ad92dc3da64bd9317b6"
+    },
+    "companionPaths": [
+      {
+        "path": "import/src/lib/content/extra-localized.ts",
+        "beforeBlob": "1c26d8c102eb23665356a0d5ff7d7f9c49ae3409",
+        "afterBlob": "6ff045e1e9e03a84dec2b25ba76294d6a23a81a2"
+      },
+      {
+        "path": "modern/packages/marketplace/lead-site.ts",
+        "beforeBlob": "f06c9edcfeb1786e358d5f55122bfb7794c3ef05",
+        "afterBlob": "a5d2ce57aaeee8498e735519f68757584b264c49"
+      },
+      {
+        "path": "mobile/src/lib/showroom-config.ts",
+        "beforeBlob": "8a2b88aabbf7189b967ede06896e88f40cedaf06",
+        "afterBlob": "339d95bbef07cff338b6a6a7eaa96071b077d174"
+      },
+      {
+        "path": "mobile/src/lib/dealers.ts",
+        "beforeBlob": "e25fe464dd0ca333d6d45761de7daacc01c895cf",
+        "afterBlob": "589b2bddad7ffe180a57ac2a3fb18623d792e70f"
+      },
+      {
+        "path": "karento-best/src/lib/content.ts",
+        "beforeBlob": "b0541ef5e7bdcac80829f02042ff2f7da1d80d51",
+        "afterBlob": "45f9cb6b05875694bced58fe0635a5e84ef8c84f"
+      },
+      {
+        "path": "karento-best/src/lib/data/dealer-detail.ts",
+        "beforeBlob": "7b8ce82f566e28e4ebf5c16573cf2f5173c13d56",
+        "afterBlob": "80d9461e56710da1e3d5d7771b630c378dc3ec98"
+      },
+      {
+        "path": "karento-best/src/lib/data/vehicle-detail.ts",
+        "beforeBlob": "c8053d12dcbb64f52f5eeebb91144004b3ff17ac",
+        "afterBlob": "28f00b07d16967c72ccfc7bf43755bebdbe1bcd5"
+      },
+      {
+        "path": ".cars-branding.json",
+        "beforeBlob": "8cfc5812ad47e615a421139ea84af9225f0dcfb5",
+        "afterBlob": "52d3de780061b5d662acd4f139c2a8715a9d6587"
+      }
+    ],
+    "receiptReseals": [
+      {
+        "path": ".cars-mobile.json",
+        "family": "mobile",
+        "beforeBlob": "ecd62aef38ab1f7668e257f3b13e59bdc8ab7fcd",
+        "profileSha256Preserved": "3c5766982799f838e3934b939ea47997b2f494530c987b29d849fd72293a26c1"
+      },
+      {
+        "path": ".cars-signature.json",
+        "family": "karento-best",
+        "beforeBlob": "5e0af0892c0d8c95d1e17c48b5b0911285dd7d80",
+        "profileSha256Preserved": "3c5766982799f838e3934b939ea47997b2f494530c987b29d849fd72293a26c1"
+      }
+    ],
+    "originalExecutionRemainsLocal": true,
+    "noCiArtifactOrSuccessClaim": true
+  }
+}

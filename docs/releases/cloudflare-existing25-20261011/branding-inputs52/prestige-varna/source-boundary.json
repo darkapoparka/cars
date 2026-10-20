@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-existing-dealer-branding-input-boundary",
+  "dealer": "prestige-varna",
+  "identityKey": "mobile-profile:prestige.mobile.bg",
+  "cohort": "qualified-varna-addition55",
+  "ownership": "registered-research-adoption-required",
+  "branding": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/prestige-varna/branding.json",
+    "sha256": "9925069e86b0455a87742a8f6af224f5a111de498fe821016a6f2994a18b70c9"
+  },
+  "originalManifest": null,
+  "originalManifestGitBlob": null,
+  "originalRepository": null,
+  "sourceRef": {
+    "ref": "main",
+    "commit": "c5c6b0da611a3bf2756c1be2ff9764f6903536ec",
+    "tree": "0857553d20a7de35171cd5347ca4e60a4356300a"
+  },
+  "originalData": [
+    {
+      "path": "clients/prestige-varna/business-facts.json",
+      "gitBlob": "8c62cacdcaa84a3a4b1ac60aad430846c52d86d0",
+      "bytes": 12467
+    }
+  ],
+  "sourceProof": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/evidence/original-source-proof.json",
+    "sha256": "477c4eedc097eb2e105b1d50cf1bc3701b558679e8f6c3c3681a3ccd6626e08c"
+  },
+  "roster": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/evidence/accepted-roster.json",
+    "sha256": "c23c6c4ea10acaca9fdc8d09351fd64735a9e2245385fb12a0f95d71f9f0080d"
+  },
+  "sourceCreation": false,
+  "clientIntegration": false,
+  "buildApproval": false,
+  "hostedApproval": false,
+  "eligibleForExistingQualifiedRequest": false,
+  "holds": [
+    "Adopt original branch/research identity and source through a separate reviewed preservation mode; do not pass as absent/new or existing-qualified."
+  ]
+}

@@ -1,0 +1,243 @@
+{
+  "schemaVersion": 1,
+  "kind": "signature-audit-reconciliation",
+  "baseline": "23911ca0e6731033a12a129eb0dcfefd5a410191",
+  "patchSha256": "83ebd5b30a95d5eeeb3b8e939204a7d62ca1909fc5e1a1cb9cbf4f3465f6eca4",
+  "node": "v26.10.0",
+  "files": [
+    {
+      "path": "templates/karento-best/src/lib/components/DemoForm.svelte",
+      "baselineBlob": "0dc240faf5f3371c92cbd7f6d9cba4be61a72836",
+      "candidateBlob": "38acd5c5ba657876d1a848a27c78551f429e1061",
+      "baselineSha256": "f6be78c575f7622abc0289b0e0070d8870a638acf0f4b03e90316e167799376a",
+      "candidateSha256": "65d51fd5fd5efcc741f2bd821c0649107ac246c299599a14a4ec5b197d50b9ce",
+      "bytes": 662,
+      "localBeforeSha256": "f6be78c575f7622abc0289b0e0070d8870a638acf0f4b03e90316e167799376a",
+      "localAfterSha256": "65d51fd5fd5efcc741f2bd821c0649107ac246c299599a14a4ec5b197d50b9ce",
+      "hadNewerLocalContext": false,
+      "stylesIdentical": true,
+      "markupChange": true,
+      "localEqualsRemoteCandidate": true
+    },
+    {
+      "path": "templates/karento-best/src/lib/components/search/DealershipVehicleSearch.svelte",
+      "baselineBlob": "e19c01b42dc3a4a875e697d616281e2fa0062bf3",
+      "candidateBlob": "4b8826f3215837acd15b96eb91c97457875a5b54",
+      "baselineSha256": "a4ebae0262b480cf0ee5b76bcf935a298004dea2d62b3ce8d7659b4ed6b46bf7",
+      "candidateSha256": "76aea37f52b1c323b1bed278e062fab5b489095d10c174476c75cd3b2a923359",
+      "bytes": 29009,
+      "localBeforeSha256": "a4ebae0262b480cf0ee5b76bcf935a298004dea2d62b3ce8d7659b4ed6b46bf7",
+      "localAfterSha256": "76aea37f52b1c323b1bed278e062fab5b489095d10c174476c75cd3b2a923359",
+      "hadNewerLocalContext": false,
+      "stylesIdentical": true,
+      "markupChange": false,
+      "localEqualsRemoteCandidate": true
+    },
+    {
+      "path": "templates/karento-best/src/lib/components/search/VehicleSearch.svelte",
+      "baselineBlob": "749648321d3c03529384d4b239f922e62fbc3d59",
+      "candidateBlob": "6c309a9c8272a2253912ed3f955a61739131cf07",
+      "baselineSha256": "7791e19be51afd60cc8e89af0b35f50f9a8f7711a7663e5c309f2a8a722a797b",
+      "candidateSha256": "1db3866184071332bcb26af794f1817bd830d498137059ffe9ce4f745c636032",
+      "bytes": 7510,
+      "localBeforeSha256": "b9e9a2bd01041ddbfdbd7242b49be13d9d4d135ea5346ab4d0f1ea47b5e6e619",
+      "localAfterSha256": "a39c4d960785c2f8c75ff21043dfe4e5b21e684933aea1e86b13d7d1d0fde2ce",
+      "hadNewerLocalContext": true,
+      "stylesIdentical": true,
+      "markupChange": false,
+      "localEqualsRemoteCandidate": false
+    },
+    {
+      "path": "templates/karento-best/src/lib/components/vehicle-detail/VehicleHeading.svelte",
+      "baselineBlob": "aad4cb7c44bb2b6994fcc57e6a5047e2bba7a413",
+      "candidateBlob": "544b7e864a55a6e3e478f0bfb001ecaf1fa0cd6d",
+      "baselineSha256": "c8fcdfdd7bf92c69e65b830efe026537be9c8bae3c271d0e99b558e68afa6fbf",
+      "candidateSha256": "20b4fc049a348754d86a213c9106d4ebf80014756a4d41b104e2dffeb129b3dd",
+      "bytes": 10325,
+      "localBeforeSha256": "c8fcdfdd7bf92c69e65b830efe026537be9c8bae3c271d0e99b558e68afa6fbf",
+      "localAfterSha256": "20b4fc049a348754d86a213c9106d4ebf80014756a4d41b104e2dffeb129b3dd",
+      "hadNewerLocalContext": false,
+      "stylesIdentical": true,
+      "markupChange": true,
+      "localEqualsRemoteCandidate": true
+    },
+    {
+      "path": "templates/karento-best/src/lib/components/vehicle-listing/CatalogHeroTypes.svelte",
+      "baselineBlob": "bea927e2dc28a38ccf7e357ba6691c95809f21c3",
+      "candidateBlob": "f1c3e109efcb13cd2add50966405a1ceb3ef80ab",
+      "baselineSha256": "8e683af5ba93277fa352dc4760855ae0c65cfb894ce7c169f5ab3a4af9006be8",
+      "candidateSha256": "aed765955cea906a6057d686a8a78bcc0f645cb510623e980d01d4f048c310c5",
+      "bytes": 2910,
+      "localBeforeSha256": "8e683af5ba93277fa352dc4760855ae0c65cfb894ce7c169f5ab3a4af9006be8",
+      "localAfterSha256": "aed765955cea906a6057d686a8a78bcc0f645cb510623e980d01d4f048c310c5",
+      "hadNewerLocalContext": false,
+      "stylesIdentical": true,
+      "markupChange": false,
+      "localEqualsRemoteCandidate": true
+    },
+    {
+      "path": "templates/karento-best/src/lib/components/vehicle-listing/DesktopCatalogFilters.svelte",
+      "baselineBlob": "ecea0f41bf9a9614189acafc48c44d48b67e30f8",
+      "candidateBlob": "08d523635d7891bbc3a9891174cd1a10e5f7e70c",
+      "baselineSha256": "fd6db843ed324d34974b79efd4c7cacddb6753bf3d6f9b13870152f791ac9827",
+      "candidateSha256": "f3d3529d49094053e656f3dd41083357d3a50bcc80f427e8a7841b3660fc2f63",
+      "bytes": 6987,
+      "localBeforeSha256": "fd6db843ed324d34974b79efd4c7cacddb6753bf3d6f9b13870152f791ac9827",
+      "localAfterSha256": "f3d3529d49094053e656f3dd41083357d3a50bcc80f427e8a7841b3660fc2f63",
+      "hadNewerLocalContext": false,
+      "stylesIdentical": true,
+      "markupChange": false,
+      "localEqualsRemoteCandidate": true
+    },
+    {
+      "path": "templates/karento-best/src/lib/components/vehicle-listing/DesktopCatalogResults.svelte",
+      "baselineBlob": "63ee59d9d30fcc64401f0dbdc71f3eb85c54ef23",
+      "candidateBlob": "de671f540d029c1a1e377bfb719bebcc4e783fbd",
+      "baselineSha256": "6eb3dc4e2fb90e09f11c253fd2262612a8c8fa6f543f3d5780c67bbb0ebe023d",
+      "candidateSha256": "daa00994620fc612e0dc1cf5af8ade17eeae4c2db14e9377237a7d6db9416222",
+      "bytes": 4837,
+      "localBeforeSha256": "6eb3dc4e2fb90e09f11c253fd2262612a8c8fa6f543f3d5780c67bbb0ebe023d",
+      "localAfterSha256": "daa00994620fc612e0dc1cf5af8ade17eeae4c2db14e9377237a7d6db9416222",
+      "hadNewerLocalContext": false,
+      "stylesIdentical": true,
+      "markupChange": false,
+      "localEqualsRemoteCandidate": true
+    },
+    {
+      "path": "templates/karento-best/src/lib/components/vehicle-listing/MobileCatalog.svelte",
+      "baselineBlob": "3076632c8f33b87210a4aea2588b75c623d60f09",
+      "candidateBlob": "d0016aacdf14bd92df727d5a395d27a0e9f8bf53",
+      "baselineSha256": "799db99a63f2b3025ad10bc2c58b3e14c46eb5501c41428d6c8d796026b27010",
+      "candidateSha256": "a7532386ef6766cd789f4f956927d6f85684c90831432c08e14df322d8a27b72",
+      "bytes": 8960,
+      "localBeforeSha256": "d7eccf240c2bfe37a0921d39f12ddade43a30a7f563b5066645fb1e3394370d0",
+      "localAfterSha256": "b48549149696e315c4de7f15e73c8419014f05a9c9940fdd2d82430afb721a20",
+      "hadNewerLocalContext": true,
+      "stylesIdentical": true,
+      "markupChange": false,
+      "localEqualsRemoteCandidate": false
+    },
+    {
+      "path": "templates/karento-best/src/lib/components/vehicles/PopularVehicleFilters.svelte",
+      "baselineBlob": "185e667cbe8179c6375572432da706c71646fe04",
+      "candidateBlob": "8b7f523b5406e0f9464b12de92103953df534eb0",
+      "baselineSha256": "ab1982ab2fc10ad4d48af957e0c818a42c25762865d744726d8abad3a3e57bcb",
+      "candidateSha256": "432e2901178bad7efb6ae5dd2f2c5290574ca88607c52da2d23fa5b9501619fa",
+      "bytes": 2724,
+      "localBeforeSha256": "ab1982ab2fc10ad4d48af957e0c818a42c25762865d744726d8abad3a3e57bcb",
+      "localAfterSha256": "432e2901178bad7efb6ae5dd2f2c5290574ca88607c52da2d23fa5b9501619fa",
+      "hadNewerLocalContext": false,
+      "stylesIdentical": true,
+      "markupChange": false,
+      "localEqualsRemoteCandidate": true
+    },
+    {
+      "path": "templates/karento-best/src/lib/data/vehicle-detail-selection.ts",
+      "baselineBlob": "8b751ff516a88ce193b433f77c5210fdf4a0b7d6",
+      "candidateBlob": "9e1f3f66f0247eb4286f4a1b157ac2aade42e150",
+      "baselineSha256": "3854ae59c2a113123afd83cbe99733217d62d96cd3aee23da4da442e55fb918e",
+      "candidateSha256": "bc4293e7887bcfe52e95abad5ad0d9f99197b94236b21ab111c0b84e0f83c9f0",
+      "bytes": 3661,
+      "localBeforeSha256": "3854ae59c2a113123afd83cbe99733217d62d96cd3aee23da4da442e55fb918e",
+      "localAfterSha256": "bc4293e7887bcfe52e95abad5ad0d9f99197b94236b21ab111c0b84e0f83c9f0",
+      "hadNewerLocalContext": false,
+      "stylesIdentical": true,
+      "markupChange": false,
+      "localEqualsRemoteCandidate": true
+    },
+    {
+      "path": "templates/karento-best/src/lib/data/vehicle-inventory.ts",
+      "baselineBlob": null,
+      "candidateBlob": "a7f8ba5f52b667f7a95810f4211442b1fc2129d3",
+      "baselineSha256": null,
+      "candidateSha256": "38de6e73587046845e88429b791680ad433130f6f5840ed2b40c8c37c134a066",
+      "bytes": 512,
+      "localBeforeSha256": null,
+      "localAfterSha256": "38de6e73587046845e88429b791680ad433130f6f5840ed2b40c8c37c134a066",
+      "hadNewerLocalContext": false,
+      "stylesIdentical": true,
+      "markupChange": false,
+      "localEqualsRemoteCandidate": true
+    },
+    {
+      "path": "templates/karento-best/src/lib/sections/ContactEnquiry.svelte",
+      "baselineBlob": "79adc73babc0200d96e6095dc2bfbbd48b8f50b1",
+      "candidateBlob": "1bb5242daef0ac7add63cec5fe02d4ea1ccb5a65",
+      "baselineSha256": "ca87d92b1dcc0d10745abab74a3ca65a354d13f35fc1c5431fdcdd154fd76cc7",
+      "candidateSha256": "1ec5009e23d28328d810d2834f281c55fb94bde79efdb5bca03ae6466d207446",
+      "bytes": 4423,
+      "localBeforeSha256": "ca87d92b1dcc0d10745abab74a3ca65a354d13f35fc1c5431fdcdd154fd76cc7",
+      "localAfterSha256": "1ec5009e23d28328d810d2834f281c55fb94bde79efdb5bca03ae6466d207446",
+      "hadNewerLocalContext": false,
+      "stylesIdentical": true,
+      "markupChange": true,
+      "localEqualsRemoteCandidate": true
+    },
+    {
+      "path": "templates/karento-best/tests/vehicle-presentation.test.ts",
+      "baselineBlob": "96e4952f9574f9700c73e6fff4668cd1c56c810f",
+      "candidateBlob": "66daab945b2beaa589ba3222d8383fcf2414941e",
+      "baselineSha256": "d48aa71377725490df6837fed16d0e40d3819890e08229d9ccc0e9a9e9a2dc4d",
+      "candidateSha256": "3cb4422488f4696cbf774fbcb11297f826b68eb1979e6ce945827d42a338a32d",
+      "bytes": 2990,
+      "localBeforeSha256": "d48aa71377725490df6837fed16d0e40d3819890e08229d9ccc0e9a9e9a2dc4d",
+      "localAfterSha256": "3cb4422488f4696cbf774fbcb11297f826b68eb1979e6ce945827d42a338a32d",
+      "hadNewerLocalContext": false,
+      "stylesIdentical": true,
+      "markupChange": false,
+      "localEqualsRemoteCandidate": true
+    }
+  ],
+  "localOnlyContext": [
+    "templates/karento-best/src/lib/components/search/VehicleSearch.svelte",
+    "templates/karento-best/src/lib/components/vehicle-listing/MobileCatalog.svelte"
+  ],
+  "sourceChangeCount": 13,
+  "componentCount": 10,
+  "checks": {
+    "unit": {
+      "exitCode": 0,
+      "tests": 127,
+      "scope": "occupied_local_signature_with_newer_16_Oct_context"
+    },
+    "type": {
+      "exitCode": 0,
+      "svelteErrors": 0,
+      "svelteWarnings": 0,
+      "typographySourceFiles": 367,
+      "typographyRoles": 27,
+      "geometryTokens": 37,
+      "scope": "occupied_local_signature_with_recovered_assets_and_newer_context"
+    },
+    "autofixer": {
+      "version": "0.1.26",
+      "uniqueComponentVersions": 12,
+      "failures": 0,
+      "issues": 0,
+      "scope": "all10_local_components_plus2_distinct_remote_versions",
+      "unchangedSuggestions": [
+        {
+          "path": "templates/karento-best/src/lib/components/search/DealershipVehicleSearch.svelte",
+          "suggestion": "Consider replacing existing bind:this with an attachment/action.",
+          "disposition": "Preserved existing binding; generic advisory is outside the functional patch and has no reported issue."
+        }
+      ]
+    },
+    "format": {
+      "exitCode": 0,
+      "scope": "13_changed_local_paths"
+    }
+  },
+  "remoteCandidateMatchesAllPatchBlobs": true,
+  "protectedArtworkAndNavigationWritten": false,
+  "capacityOrResumeFilesWritten": false,
+  "published": false,
+  "deployed": false,
+  "browserAcceptanceExecuted": false,
+  "scopeVerification": {
+    "localReversePatchCheck": "passed",
+    "remoteReverseOriginalPatchCheck": "passed",
+    "sourceStylesUnchanged": true,
+    "markupLimitedToMethodAndTwoHrefExpressions": true
+  }
+}

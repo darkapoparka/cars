@@ -25,5 +25,6 @@ Source-era reports are historical reference evidence, not acceptance of this cop
 Do not run historical one-shot patch scripts or wipe/restart the native AVD.
 
 The preserved native reference is `de.mobile.android.app` 10.26 on emulator-5554.
-Keep its data and other applications intact. Mobile does not enter the approved
-release lock or dealer variants until its integration and release checks pass.
+Keep its data and other applications intact. The Cars release lock selects the
+approved Mobile source for `/variant-5` in the six-design fleet. New source edits
+require their own integration and release checks before lock promotion.

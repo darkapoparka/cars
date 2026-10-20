@@ -1,0 +1,201 @@
+{
+  "schemaVersion": 1,
+  "kind": "dated-listing-snapshot",
+  "candidate": true,
+  "observedAt": "2026-10-11T11:54:04.950Z",
+  "sourceProfile": "https://autojo-di.mobile.bg/",
+  "sourcePageVisibleListingCount": 6,
+  "sourceProfileCountObservedAt": "2026-10-11T11:54:04.880Z",
+  "profileCountIsAvailableStock": false,
+  "profileCountIsClassifiedOrdinaryRetail": false,
+  "liveInventory": false,
+  "mediaPermission": "unconfirmed",
+  "localMediaReady": true,
+  "records": [
+    {
+      "id": "21790429827660652",
+      "sourceId": "21790429827660652",
+      "title": "BMW X1",
+      "sourceTitleExact": "BMW X1",
+      "make": "BMW",
+      "model": "X1",
+      "modelExtraction": "literal make/model prefix from exact primary advert title; canonical market normalization and trim not asserted",
+      "year": 2020,
+      "productionMonth": 8,
+      "currency": "EUR",
+      "sourcePriceText": "16 990 €",
+      "priceVatNotice": "Не се начислява ДДС",
+      "sourceMileageText": "118000 км",
+      "fieldConflicts": [],
+      "body": "Джип",
+      "fuel": "Дизелов",
+      "transmission": "Автоматична",
+      "powerHp": 150,
+      "images": [
+        "/dealer-stock/21790429827660652-1.webp",
+        "/dealer-stock/21790429827660652-2.webp"
+      ],
+      "sourceUrl": "https://autojo-di.mobile.bg/obiava-21790429827660652-bmw-x1",
+      "sourceHtmlSha256": "9df6788ac4fd3083a6e8add647cdefc0ddb34c5ff2ecec56e0467ec44cb74d3b",
+      "sourcePublicationText": "Публикувана в 16:37 часа на 26.09.2026 год.",
+      "observedAt": "2026-10-11T11:54:04.950Z",
+      "availability": "unconfirmed",
+      "availabilityConfirmed": false,
+      "partsListing": false,
+      "conditionMarker": null,
+      "conditionIndependentlyConfirmed": false,
+      "arrivalNotice": null,
+      "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "mediaState": "not-collected; reviewed rights/reuse or explicit illustration decision pending",
+      "mediaPermission": "Not independently established",
+      "telHrefCandidates": [
+        "0898545465"
+      ],
+      "visibleSellerContact": "Контакти с продавача АУТО ЖО-ДИ 0898545465",
+      "sellerPhoneMatchesPrimary": true,
+      "telHrefMatchesPrimary": true,
+      "sampleRole": "dated published vehicle advert; dealer availability, condition and media reuse require confirmation",
+      "retailReadyForAssembly": false,
+      "sourcePhotoUrls": [
+        "https://mobistatic3.focus.bg/mobile/photosorg/652/2/big1/21790429827660652_dh.webp",
+        "https://mobistatic3.focus.bg/mobile/photosorg/652/2/big1/21790429827660652_y.webp",
+        "https://mobistatic3.focus.bg/mobile/photosorg/652/2/big1/21790429827660652_1D.webp",
+        "https://mobistatic3.focus.bg/mobile/photosorg/652/2/big1/21790429827660652_ef.webp",
+        "https://mobistatic3.focus.bg/mobile/photosorg/652/2/big1/21790429827660652_Vy.webp",
+        "https://mobistatic3.focus.bg/mobile/photosorg/652/2/big1/21790429827660652_Op.webp",
+        "https://mobistatic3.focus.bg/mobile/photosorg/652/2/big1/21790429827660652_ui.webp",
+        "https://mobistatic3.focus.bg/mobile/photosorg/652/2/big1/21790429827660652_QZ.webp",
+        "https://mobistatic3.focus.bg/mobile/photosorg/652/2/big1/21790429827660652_Vg.webp",
+        "https://mobistatic3.focus.bg/mobile/photosorg/652/2/big1/21790429827660652_yT.webp",
+        "https://mobistatic3.focus.bg/mobile/photosorg/652/2/big1/21790429827660652_Fq.webp",
+        "https://mobistatic3.focus.bg/mobile/photosorg/652/2/big1/21790429827660652_3V.webp"
+      ],
+      "sourcePhotoEvidence": {
+        "sourceId": "21790429827660652",
+        "sourceUrl": "https://autojo-di.mobile.bg/obiava-21790429827660652-bmw-x1",
+        "observedAt": "2026-10-11T12:09:34.683Z",
+        "responseSha256": "16916ded9b55e29ca9c0bf28e963204bd49977a59ec8d535c881d1329c040f6e",
+        "association": "primary gallery URLs contain exact source listing ID",
+        "remoteBytesFetched": false
+      },
+      "sourceRecord": {
+        "id": "21790429827660652",
+        "sourceId": "21790429827660652",
+        "title": "BMW X1",
+        "sourceTitleExact": "BMW X1",
+        "make": "BMW",
+        "model": "X1",
+        "modelExtraction": "literal make/model prefix from exact primary advert title; canonical market normalization and trim not asserted",
+        "year": 2020,
+        "productionMonth": 8,
+        "priceEur": 16990,
+        "currency": "EUR",
+        "sourcePriceText": "16 990 €",
+        "priceVatNotice": "Не се начислява ДДС",
+        "mileageKm": 118000,
+        "sourceMileageText": "118000 км",
+        "fieldConflicts": [],
+        "body": "Джип",
+        "fuel": "Дизелов",
+        "transmission": "Автоматична",
+        "powerHp": 150,
+        "images": [
+          "/assets/vehicles/21790429827660652/1.webp",
+          "/assets/vehicles/21790429827660652/2.webp"
+        ],
+        "sourceUrl": "https://autojo-di.mobile.bg/obiava-21790429827660652-bmw-x1",
+        "sourceHtmlSha256": "9df6788ac4fd3083a6e8add647cdefc0ddb34c5ff2ecec56e0467ec44cb74d3b",
+        "sourcePublicationText": "Публикувана в 16:37 часа на 26.09.2026 год.",
+        "observedAt": "2026-10-11T11:54:04.950Z",
+        "availability": "unconfirmed",
+        "availabilityConfirmed": false,
+        "partsListing": false,
+        "conditionMarker": null,
+        "conditionIndependentlyConfirmed": false,
+        "arrivalNotice": null,
+        "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+        "mediaState": "not-collected; reviewed rights/reuse or explicit illustration decision pending",
+        "mediaPermission": "Not independently established",
+        "telHrefCandidates": [
+          "0898545465"
+        ],
+        "visibleSellerContact": "Контакти с продавача АУТО ЖО-ДИ 0898545465",
+        "sellerPhoneMatchesPrimary": true,
+        "telHrefMatchesPrimary": true,
+        "sampleRole": "dated published vehicle advert; dealer availability, condition and media reuse require confirmation",
+        "retailReadyForAssembly": false,
+        "sourcePhotoUrls": [
+          "https://mobistatic3.focus.bg/mobile/photosorg/652/2/big1/21790429827660652_dh.webp",
+          "https://mobistatic3.focus.bg/mobile/photosorg/652/2/big1/21790429827660652_y.webp",
+          "https://mobistatic3.focus.bg/mobile/photosorg/652/2/big1/21790429827660652_1D.webp",
+          "https://mobistatic3.focus.bg/mobile/photosorg/652/2/big1/21790429827660652_ef.webp",
+          "https://mobistatic3.focus.bg/mobile/photosorg/652/2/big1/21790429827660652_Vy.webp",
+          "https://mobistatic3.focus.bg/mobile/photosorg/652/2/big1/21790429827660652_Op.webp",
+          "https://mobistatic3.focus.bg/mobile/photosorg/652/2/big1/21790429827660652_ui.webp",
+          "https://mobistatic3.focus.bg/mobile/photosorg/652/2/big1/21790429827660652_QZ.webp",
+          "https://mobistatic3.focus.bg/mobile/photosorg/652/2/big1/21790429827660652_Vg.webp",
+          "https://mobistatic3.focus.bg/mobile/photosorg/652/2/big1/21790429827660652_yT.webp",
+          "https://mobistatic3.focus.bg/mobile/photosorg/652/2/big1/21790429827660652_Fq.webp",
+          "https://mobistatic3.focus.bg/mobile/photosorg/652/2/big1/21790429827660652_3V.webp"
+        ],
+        "sourcePhotoEvidence": {
+          "sourceId": "21790429827660652",
+          "sourceUrl": "https://autojo-di.mobile.bg/obiava-21790429827660652-bmw-x1",
+          "observedAt": "2026-10-11T12:09:34.683Z",
+          "responseSha256": "16916ded9b55e29ca9c0bf28e963204bd49977a59ec8d535c881d1329c040f6e",
+          "association": "primary gallery URLs contain exact source listing ID",
+          "remoteBytesFetched": false
+        }
+      },
+      "priceAmount": 16990,
+      "mileageValue": 118000,
+      "mileageUnit": "km"
+    }
+  ],
+  "localMediaHydration": {
+    "candidateOnly": true,
+    "technicalRasterPresent": true,
+    "rightsApproved": false,
+    "availabilityConfirmed": false,
+    "assets": [
+      {
+        "publicPath": "/assets/vehicles/21790429827660652/1.webp",
+        "sourceUrl": "https://mobistatic3.focus.bg/mobile/photosorg/652/2/big1/21790429827660652_dh.webp",
+        "sha256": "8118f2ba70410db70b395e0dcd72c0d87e6c9264dd99b49c505f73277ae5c9a4",
+        "bytes": 223482,
+        "downloadObservedAt": "2026-10-11T12:20:42.263Z"
+      },
+      {
+        "publicPath": "/assets/vehicles/21790429827660652/2.webp",
+        "sourceUrl": "https://mobistatic3.focus.bg/mobile/photosorg/652/2/big1/21790429827660652_y.webp",
+        "sha256": "c43065d5e30020baccc09948fe02fba8a3377628ce0ad9be68d9d96fc63b03f1",
+        "bytes": 185774,
+        "downloadObservedAt": "2026-10-11T12:20:42.457Z"
+      }
+    ],
+    "sourceStockSha256": "76b499bfd27c98b6361621f82bb08f235f686d8a64b7d8befe8fd416c3d26d28"
+  },
+  "dealer": "autojo-di-varna",
+  "sourceKind": "dated-marketplace-listing-sample",
+  "sourceStock": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/autojo-di-varna/source/stock.json",
+    "sha256": "8b369ae8b759190e904767835dcd17f1639cf1318374281f5fc2abfa8ba31424"
+  },
+  "sourceRecordsUnchanged": true,
+  "mediaPathMappings": [
+    {
+      "sourcePublicPath": "/assets/vehicles/21790429827660652/1.webp",
+      "publicPath": "/dealer-stock/21790429827660652-1.webp",
+      "sha256": "8118f2ba70410db70b395e0dcd72c0d87e6c9264dd99b49c505f73277ae5c9a4",
+      "bytes": 223482,
+      "sourceId": "21790429827660652"
+    },
+    {
+      "sourcePublicPath": "/assets/vehicles/21790429827660652/2.webp",
+      "publicPath": "/dealer-stock/21790429827660652-2.webp",
+      "sha256": "c43065d5e30020baccc09948fe02fba8a3377628ce0ad9be68d9d96fc63b03f1",
+      "bytes": 185774,
+      "sourceId": "21790429827660652"
+    }
+  ]
+}

@@ -1,20 +1,10 @@
 "use client";
 
-import { Button } from "@repo/design-system/components/ui/button";
 import { cn } from "@repo/design-system/lib/utils";
-import { formatMoney, leadSite, type VehicleListing } from "@repo/marketplace";
-import {
-  CarFront,
-  ChevronRight,
-  Clock3,
-  CornerDownLeft,
-  MapPin,
-  Search,
-  Store,
-} from "lucide-react";
-import Image from "next/image";
+import type { InventorySearchListing } from "@repo/marketplace/inventory-search";
 import { useRouter } from "next/navigation";
 import {
+  type KeyboardEvent as ReactKeyboardEvent,
   type ReactNode,
   useEffect,
   useId,
@@ -22,24 +12,30 @@ import {
   useRef,
   useState,
 } from "react";
-import { createPortal } from "react-dom";
 import {
   type DesktopSearchScope,
   getDesktopSearchSuggestionGroups,
   readRecentMarketplaceSearches,
   rememberMarketplaceSearchQuery,
-  type SearchSuggestionItem,
 } from "../lib/desktop-search-policy";
+import { handleDesktopSearchKeyDown } from "../lib/search-keyboard";
+import {
+  type DesktopSearchAppearance,
+  DesktopSearchDialog,
+} from "./desktop-search-dialog";
 
 export type { DesktopSearchScope } from "../lib/desktop-search-policy";
 export { rememberMarketplaceSearchQuery } from "../lib/desktop-search-policy";
 
 interface DesktopSearchAssistantProps {
+  appearance?: DesktopSearchAppearance;
   ariaLabel: string;
   assistantSlot?: ReactNode;
   compact?: boolean;
+  filterSlot?: ReactNode;
   isBg: boolean;
   label: string;
+  listings?: readonly InventorySearchListing[];
   locale?: string;
   onOpenChange?: (open: boolean) => void;
   onQueryChange: (query: string) => void;
@@ -48,232 +44,22 @@ interface DesktopSearchAssistantProps {
   placeholder: string;
   query: string;
   scope: DesktopSearchScope;
+  searchActionLabel?: string;
 }
 
-const getSuggestionIcon = (kind: SearchSuggestionItem["kind"]) => {
-  if (kind === "dealer") {
-    return Store;
-  }
-  if (kind === "location") {
-    return MapPin;
-  }
-  if (kind === "recent") {
-    return Clock3;
-  }
-  if (kind === "search") {
-    return Search;
-  }
-  return CarFront;
-};
-
-const ListingSuggestionContent = ({
-  isBg,
-  item,
-  listing,
-}: {
-  isBg: boolean;
-  item: SearchSuggestionItem;
-  listing: VehicleListing;
-}) => {
-  const listingImage = listing.images[0];
-
-  return (
-    <>
-      {listingImage ? (
-        <Image
-          alt={listingImage.alt}
-          className="h-16 w-[104px] shrink-0 rounded-xl object-cover"
-          height={128}
-          sizes="104px"
-          src={listingImage.url}
-          width={208}
-        />
-      ) : (
-        <span className="grid h-16 w-[104px] shrink-0 place-items-center rounded-xl bg-control text-muted-foreground">
-          <CarFront aria-hidden="true" className="size-5" />
-        </span>
-      )}
-      <span className="min-w-0 flex-1">
-        <span className="block truncate font-semibold text-compact-control text-foreground">
-          {item.label}
-        </span>
-        <span className="mt-1 block truncate text-meta text-muted-foreground">
-          {item.description}
-        </span>
-      </span>
-      <span className="min-w-32 shrink-0 text-right">
-        <span className="block font-semibold text-compact-control text-foreground">
-          {formatMoney(listing.price, isBg ? "bg" : "en")}
-        </span>
-        {listing.monthlyEstimate ? (
-          <span className="mt-1 block text-micro text-muted-foreground">
-            {isBg ? "от " : "from "}
-            {formatMoney(listing.monthlyEstimate, isBg ? "bg" : "en")}
-            {isBg ? "/мес." : "/mo."}
-          </span>
-        ) : null}
-      </span>
-      <ChevronRight
-        aria-hidden="true"
-        className="size-4 shrink-0 text-muted-foreground"
-      />
-    </>
-  );
-};
-
-const StandardSuggestionContent = ({
-  item,
-  locationPanel,
-}: {
-  item: SearchSuggestionItem;
-  locationPanel: boolean;
-}) => {
-  const Icon = getSuggestionIcon(item.kind);
-
-  return (
-    <>
-      <span
-        className={cn(
-          "grid size-9 shrink-0 place-items-center text-foreground/75",
-          locationPanel ? "bg-transparent" : "rounded-lg bg-control"
-        )}
-      >
-        <Icon aria-hidden="true" className="size-4" />
-      </span>
-      <span className="min-w-0 flex-1">
-        <span className="block truncate font-medium text-sm">{item.label}</span>
-        <span className="mt-0.5 block truncate text-meta text-muted-foreground">
-          {item.description}
-        </span>
-      </span>
-      {item.kind === "search" ? (
-        <CornerDownLeft
-          aria-hidden="true"
-          className="size-4 shrink-0 text-muted-foreground"
-        />
-      ) : null}
-      {locationPanel ? (
-        <ChevronRight
-          aria-hidden="true"
-          className="size-4 shrink-0 text-muted-foreground"
-        />
-      ) : null}
-    </>
-  );
-};
-
-const SearchSuggestionOption = ({
-  id,
-  isBg,
-  item,
-  onCommit,
-  onMouseEnter,
-  selected,
-  spansWidePanel,
-}: {
-  id: string;
-  isBg: boolean;
-  item: SearchSuggestionItem;
-  onCommit: (value: string, href?: string) => void;
-  onMouseEnter: () => void;
-  selected: boolean;
-  spansWidePanel: boolean;
-}) => {
-  const listing = item.listing;
-  const locationPanel = leadSite.staticDemoMode && item.kind === "location";
-  let surfaceClassName = "rounded-xl px-3 py-2.5";
-  let dataSlot = "desktop-search-suggestion";
-  if (listing) {
-    surfaceClassName = "min-h-[76px] rounded-xl px-3 py-2";
-    dataSlot = "desktop-search-listing-suggestion";
-  } else if (locationPanel) {
-    surfaceClassName =
-      "min-h-[76px] rounded-xl bg-control px-4 py-3 hover:bg-control-hover";
-    dataSlot = "desktop-search-location-suggestion";
-  }
-
-  const selectedClassName = selected
-    ? locationPanel
-      ? "bg-control-hover text-foreground"
-      : "bg-control text-foreground"
-    : undefined;
-
-  return (
-    <Button
-      aria-selected={selected}
-      className={cn(
-        "h-auto w-full justify-start text-left font-normal",
-        surfaceClassName,
-        selectedClassName,
-        spansWidePanel && "min-[70rem]:col-span-2"
-      )}
-      data-slot={dataSlot}
-      id={id}
-      onClick={() => onCommit(item.value, item.href)}
-      onMouseDown={(event) => event.preventDefault()}
-      onMouseEnter={onMouseEnter}
-      role="option"
-      type="button"
-      variant="ghost"
-    >
-      {listing ? (
-        <ListingSuggestionContent isBg={isBg} item={item} listing={listing} />
-      ) : (
-        <StandardSuggestionContent item={item} locationPanel={locationPanel} />
-      )}
-    </Button>
-  );
-};
-
-const DesktopSearchFocusCanvas = ({
-  anchor,
-  compact,
-  isBg,
-  onDismiss,
-  open,
-}: {
-  anchor: HTMLDivElement | null;
-  compact: boolean;
-  isBg: boolean;
-  onDismiss: () => void;
-  open: boolean;
-}) => {
-  if (!(open && !compact) || typeof document === "undefined") {
-    return null;
-  }
-
-  const root =
-    anchor?.closest<HTMLElement>(
-      '[data-slot="desktop-marketplace-header-band"]'
-    ) ?? document.body;
-  const top =
-    anchor
-      ?.closest<HTMLElement>('[data-slot="desktop-search-surface"]')
-      ?.getBoundingClientRect().bottom ?? 0;
-
-  return createPortal(
-    <button
-      aria-label={
-        isBg ? "Затвори предложенията за търсене" : "Close search suggestions"
-      }
-      className="fixed inset-x-0 bottom-0 z-[5] cursor-default border-0 bg-black/20 p-0"
-      data-slot="desktop-search-focus-canvas"
-      onPointerDown={(event) => {
-        event.preventDefault();
-        onDismiss();
-      }}
-      style={{ top }}
-      tabIndex={-1}
-      type="button"
-    />,
-    root
-  );
-};
+const getSearchAppearanceClasses = (appearance: DesktopSearchAppearance) => ({
+  container: appearance === "hero" ? "static" : "",
+  label: appearance === "standard" ? "" : "sr-only",
+  value: appearance === "standard" ? "" : "mt-0",
+});
 
 export const DesktopSearchAssistant = ({
   ariaLabel,
   assistantSlot,
   compact = true,
+  appearance = "standard",
+  filterSlot,
+  listings,
   isBg,
   label,
   locale,
@@ -283,63 +69,70 @@ export const DesktopSearchAssistant = ({
   open: controlledOpen,
   placeholder,
   query,
+  searchActionLabel,
   scope,
 }: DesktopSearchAssistantProps) => {
+  const appearanceClasses = getSearchAppearanceClasses(appearance);
   const router = useRouter();
-  const containerRef = useRef<HTMLDivElement>(null);
+  const [ready, setReady] = useState(false);
+  useEffect(() => setReady(true), []);
+  const launcherInputRef = useRef<HTMLInputElement>(null);
+  const dialogInputRef = useRef<HTMLInputElement>(null);
+  const preventLauncherFocusOpenRef = useRef(false);
+  const dialogId = useId();
   const listboxId = useId();
   const [activeIndex, setActiveIndex] = useState(-1);
   const [uncontrolledOpen, setUncontrolledOpen] = useState(false);
   const [recentSearches, setRecentSearches] = useState<string[]>([]);
   const open = controlledOpen ?? uncontrolledOpen;
   const setOpen = onOpenChange ?? setUncontrolledOpen;
+  const searchDialogOpenRef = useRef(open);
+  searchDialogOpenRef.current = open;
   const trimmedQuery = query.trim();
+  const showSuggestions = !filterSlot || trimmedQuery.length > 0;
 
   const groups = useMemo(
     () =>
-      getDesktopSearchSuggestionGroups({
-        isBg,
-        locale,
-        query: trimmedQuery,
-        recentSearches,
-        scope,
-      }),
-    [isBg, locale, recentSearches, scope, trimmedQuery]
+      open && showSuggestions
+        ? getDesktopSearchSuggestionGroups({
+            listings,
+            isBg,
+            locale,
+            query: trimmedQuery,
+            recentSearches,
+            scope,
+          })
+        : [],
+    [
+      isBg,
+      listings,
+      locale,
+      open,
+      recentSearches,
+      scope,
+      showSuggestions,
+      trimmedQuery,
+    ]
   );
 
-  const items = groups.flatMap((group) => group.items);
-  const activeItem = items[activeIndex];
+  const items = useMemo(() => groups.flatMap((group) => group.items), [groups]);
+  const activeItem = showSuggestions ? items[activeIndex] : undefined;
 
-  useEffect(() => {
-    if (!open) {
-      return;
+  const handleOpenChange = (nextOpen: boolean) => {
+    searchDialogOpenRef.current = nextOpen;
+    setOpen(nextOpen);
+    if (!nextOpen) {
+      setActiveIndex(-1);
     }
-
-    const closeOnOutsidePointer = (event: PointerEvent) => {
-      if (
-        event.target instanceof Node &&
-        !containerRef.current?.contains(event.target)
-      ) {
-        if (
-          event.target instanceof Element &&
-          event.target.closest("[data-search-menu-action]")
-        ) {
-          return;
-        }
-        setOpen(false);
-        setActiveIndex(-1);
-      }
-    };
-
-    document.addEventListener("pointerdown", closeOnOutsidePointer);
-    return () =>
-      document.removeEventListener("pointerdown", closeOnOutsidePointer);
-  }, [open, setOpen]);
+  };
 
   const openAssistant = () => {
+    if (searchDialogOpenRef.current) {
+      return;
+    }
     setRecentSearches(readRecentMarketplaceSearches(scope));
     setActiveIndex(-1);
-    setOpen(true);
+    handleOpenChange(true);
   };
 
   const commitSearch = (nextQuery: string, href?: string) => {
@@ -350,7 +143,7 @@ export const DesktopSearchAssistant = ({
     onQueryChange(normalizedQuery);
     setRecentSearches(rememberMarketplaceSearchQuery(normalizedQuery, scope));
     setActiveIndex(-1);
-    setOpen(false);
+    handleOpenChange(false);
     if (href) {
       router.push(href);
       return;
@@ -358,91 +151,95 @@ export const DesktopSearchAssistant = ({
     onSearch(normalizedQuery);
   };
 
+  const submitModalSearch = () => {
+    if (trimmedQuery) {
+      setRecentSearches(rememberMarketplaceSearchQuery(trimmedQuery, scope));
+    }
+    setActiveIndex(-1);
+    handleOpenChange(false);
+    onSearch(trimmedQuery);
+  };
+
+  const handleSearchKeyDown = (event: ReactKeyboardEvent<HTMLInputElement>) =>
+    handleDesktopSearchKeyDown(event, {
+      activeItem,
+      commitSearch,
+      items: showSuggestions ? items : [],
+      onClose: () => handleOpenChange(false),
+      open,
+      openAssistant,
+      query: trimmedQuery,
+      setActiveIndex,
+    });
+
+  const restoreLauncherFocus = (event: Event) => {
+    event.preventDefault();
+    preventLauncherFocusOpenRef.current = true;
+    launcherInputRef.current?.focus({ preventScroll: true });
+    window.requestAnimationFrame(() => {
+      preventLauncherFocusOpenRef.current = false;
+    });
+  };
+
+  const dialogTitle = isBg ? "Търсене на автомобили" : "Search vehicles";
+
   return (
     <div
-      className={cn("relative min-w-0", !compact && "p-1.5")}
-      ref={containerRef}
+      className={cn(
+        "relative min-w-0",
+        !compact && "p-1.5",
+        appearanceClasses.container
+      )}
     >
-      <DesktopSearchFocusCanvas
-        anchor={containerRef.current}
-        compact={compact}
-        isBg={isBg}
-        onDismiss={() => {
-          setOpen(false);
-          setActiveIndex(-1);
-        }}
-        open={open}
-      />
       <label
         className={cn(
           "flex h-full min-w-0 flex-col justify-center transition-colors",
           compact
             ? "rounded-lg border border-border/90 bg-card px-4 focus-within:border-foreground/25 focus-within:ring-2 focus-within:ring-ring/25 focus-within:ring-inset"
-            : "rounded-xl px-4 focus-within:bg-zinc-100 hover:bg-zinc-50"
+            : "rounded-xl px-4 focus-within:bg-control hover:bg-canvas",
+          appearance !== "standard" &&
+            "h-[var(--control-height-search)] rounded-xl border border-border bg-panel pr-20 pl-12 focus-within:ring-ring",
+          { standard: "", hero: "relative pr-4 pl-4", toolbar: "pl-4" }[
+            appearance
+          ]
         )}
         data-slot="desktop-search-query"
       >
-        <span className="font-semibold text-xs leading-none">{label}</span>
-        <span className="mt-1 flex min-w-0 items-center">
+        <span
+          className={cn("font-semibold text-micro", appearanceClasses.label)}
+        >
+          {label}
+        </span>
+        <span
+          className={cn(
+            "mt-1 flex min-w-0 items-center",
+            appearanceClasses.value
+          )}
+        >
           <input
-            aria-activedescendant={
-              open && activeItem ? `${listboxId}-${activeItem.id}` : undefined
-            }
             aria-autocomplete="list"
-            aria-controls={listboxId}
+            aria-controls={open ? dialogId : undefined}
             aria-expanded={open}
+            aria-haspopup="dialog"
             aria-label={ariaLabel}
             autoComplete="off"
             className="min-w-0 flex-1 bg-transparent text-compact-control outline-none placeholder:text-muted-foreground"
+            disabled={!ready}
             name="q"
             onChange={(event) => {
               onQueryChange(event.target.value);
               setActiveIndex(-1);
-              setOpen(true);
+              handleOpenChange(true);
             }}
-            onFocus={openAssistant}
-            onKeyDown={(event) => {
-              if (event.key === "ArrowDown") {
-                event.preventDefault();
-                if (!open) {
-                  openAssistant();
-                  setActiveIndex(0);
-                  return;
-                }
-                setActiveIndex((currentIndex) =>
-                  items.length ? (currentIndex + 1) % items.length : -1
-                );
-                return;
-              }
-              if (event.key === "ArrowUp") {
-                event.preventDefault();
-                setActiveIndex((currentIndex) =>
-                  items.length
-                    ? (currentIndex <= 0 ? items.length : currentIndex) - 1
-                    : -1
-                );
-                return;
-              }
-              if (event.key === "Escape" && open) {
-                event.preventDefault();
-                setOpen(false);
-                setActiveIndex(-1);
-                return;
-              }
-              if (event.key === "Tab") {
-                setOpen(false);
-                setActiveIndex(-1);
-                return;
-              }
-              if (event.key === "Enter" && (activeItem || trimmedQuery)) {
-                event.preventDefault();
-                commitSearch(
-                  activeItem?.value ?? trimmedQuery,
-                  activeItem?.href
-                );
+            onClick={openAssistant}
+            onFocus={() => {
+              if (!preventLauncherFocusOpenRef.current) {
+                openAssistant();
               }
             }}
+            onKeyDown={handleSearchKeyDown}
             placeholder={placeholder}
+            ref={launcherInputRef}
             role="combobox"
             spellCheck={false}
             type="search"
@@ -451,69 +248,34 @@ export const DesktopSearchAssistant = ({
         </span>
       </label>
 
-      {open ? (
-        <div
-          aria-label={isBg ? "Предложения за търсене" : "Search suggestions"}
-          className={cn(
-            "absolute z-[70] max-h-[min(36rem,calc(100vh-13rem))] overflow-y-auto bg-white p-3",
-            compact
-              ? "top-[calc(100%+0.625rem)] -right-16 -left-52 rounded-2xl border border-zinc-200 shadow-none"
-              : "top-[calc(100%-1px)] -right-16 -left-56 -mx-px rounded-b-2xl border-zinc-200 border-x border-b shadow-[0_28px_56px_rgba(7,12,18,0.18)]"
-          )}
-          data-search-scope={scope}
-          data-slot="desktop-search-assistant"
-          id={listboxId}
-          role="listbox"
-        >
-          {groups.map((group) => (
-            <div className="not-last:mb-2" key={group.heading}>
-              <p className="px-3 py-1.5 font-medium text-muted-foreground text-xs">
-                {group.heading}
-              </p>
-              <div
-                className={cn(
-                  "grid gap-0.5",
-                  group.items.length > 1 &&
-                    !group.items.some((item) => item.listing) &&
-                    "min-[70rem]:grid-cols-2"
-                )}
-              >
-                {group.items.map((item, groupItemIndex) => {
-                  const itemIndex = items.findIndex(
-                    (candidate) => candidate.id === item.id
-                  );
-                  const selected = itemIndex === activeIndex;
-                  const spansWidePanel =
-                    group.items.length > 1 &&
-                    group.items.length % 2 === 1 &&
-                    groupItemIndex === group.items.length - 1;
-                  return (
-                    <SearchSuggestionOption
-                      id={`${listboxId}-${item.id}`}
-                      isBg={isBg}
-                      item={item}
-                      key={item.id}
-                      onCommit={commitSearch}
-                      onMouseEnter={() => setActiveIndex(itemIndex)}
-                      selected={selected}
-                      spansWidePanel={spansWidePanel}
-                    />
-                  );
-                })}
-              </div>
-            </div>
-          ))}
-          {assistantSlot ? (
-            <div className="mt-1 pt-1">{assistantSlot}</div>
-          ) : null}
-          <div className="mt-1 flex items-center justify-between px-3 pt-2 pb-1 text-micro text-muted-foreground">
-            <span>
-              {isBg ? "↑↓ избор · Enter отвори" : "↑↓ select · Enter open"}
-            </span>
-            <span>Esc</span>
-          </div>
-        </div>
-      ) : null}
+      <DesktopSearchDialog
+        activeIndex={activeIndex}
+        activeItem={activeItem}
+        appearance={appearance}
+        ariaLabel={ariaLabel}
+        assistantSlot={assistantSlot}
+        dialogId={dialogId}
+        dialogInputRef={dialogInputRef}
+        dialogTitle={dialogTitle}
+        filterSlot={filterSlot}
+        groups={groups}
+        handleOpenChange={handleOpenChange}
+        isBg={isBg}
+        items={items}
+        listboxId={listboxId}
+        onCloseAutoFocus={restoreLauncherFocus}
+        onCommit={commitSearch}
+        onQueryChange={onQueryChange}
+        onSearchKeyDown={handleSearchKeyDown}
+        onSearchSubmit={submitModalSearch}
+        onSelectIndex={setActiveIndex}
+        open={open}
+        placeholder={placeholder}
+        query={query}
+        scope={scope}
+        searchActionLabel={searchActionLabel}
+        showSuggestions={showSuggestions}
+      />
     </div>
   );
 };

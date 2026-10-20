@@ -1,0 +1,118 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-source-request",
+  "mode": "new-approved",
+  "reviewed": true,
+  "reviewedAt": "2026-10-12T11:50:42.170Z",
+  "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+  "approvedLockSha256": "ecdfaf9599fbcbeadebc24de3b9aa1c7615a9a49e29d338e5e9a23427d405e26",
+  "registrySha256": "1e80721527f7de675e3e1b6949361ad7663be29e708903fe7440ad3f19b3e7ed",
+  "clientIndexSha256": "b7edb7667c6837b9c909f9dc4f30289e51ace4b60cbfdf099a820f9c59bec954",
+  "qualification": {
+    "candidateLock": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/absent-retained-qualification-lock.json",
+      "sha256": "c28d29acdf39709d38737a972eeb2a1d000cfb1cd96de587c38effd764386ac1"
+    },
+    "contexts": {
+      "tesla-varna": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/tesla-varna/qualification-context-additional100.json",
+        "sha256": "6f47c3c252dcec15f7430abaca115b18fb63ecc6b0c716f755781c434f65fb77"
+      }
+    }
+  },
+  "dealers": [
+    {
+      "slug": "tesla-varna",
+      "dealerId": "tesla-varna",
+      "repository": "darkapoparka/cars-tesla-varna",
+      "sourceOwnership": "cars-canonical",
+      "preset": "standard",
+      "workerName": "cars-tesla-varna",
+      "publicOrigin": "https://cars-tesla-varna.darkapoparka1.workers.dev",
+      "identityReview": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/tesla-varna/identity-repository-corrected-additional100.json",
+        "sha256": "76b5ebde39e57a8bb5c97bbdaf62d8c846571a93b0045d07cff3228c7225291b"
+      },
+      "sourceReleases": {
+        "auto-best": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/auto-best",
+          "tree": "5fb7a2164775050a47c1183371622295dbf63725",
+          "digest": "dcbc59990928884006652677d3529020df3844029993895a71e5f6818ba7363c"
+        },
+        "modern": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/modern",
+          "tree": "3974380670eb388bb16182f94ade33be6d87b1c1",
+          "digest": "ba263aac8f1863d133807d3e1bf3597d125cf315a7e0deba3f6e419b52434c25"
+        },
+        "import": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/import",
+          "tree": "6afc6901e2f95967fb7c72e9f75525d4d6fbf086",
+          "digest": "f98a0934cdcc5adbda393c14c02eb2adc0175344ab2ac3f913afe4b0603366e5"
+        },
+        "app": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/app",
+          "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
+          "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"
+        },
+        "mobile": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/mobile",
+          "tree": "2b02829e157071e305bfb2dff10ef18e85c8a35e",
+          "digest": "4e858bd9dbd3ef5b52cd904c4ed97bbfdc0f4cfe02b5a3840580f38026b867a0"
+        },
+        "karento-best": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/karento-best",
+          "tree": "5f6eec8efb2f9e99819f7f0c2f743d18fff7b134",
+          "digest": "83056967764a686f3737d74b86c5db51c1385a50184853f50ec4ade80c1dd44f"
+        }
+      },
+      "inputs": {
+        "facts": {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/tesla-varna/facts-additional100.json",
+          "sha256": "04dd81363609bfeaf18ed9fa9a65d8fb2eb1167e249de32b2ea57a91424f1834"
+        },
+        "stock": {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/tesla-varna/stock.json",
+          "sha256": "0f66ed41a69c6e555d113fb8af4d52fc316e59b9fc0f543020ea845fb5e7d233"
+        },
+        "locale": {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/tesla-varna/locale.json",
+          "sha256": "148a32677a3709c3abc76b1ac1a0ad362c2c431bf2161baaec93181ada92db1f"
+        },
+        "branding": {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/tesla-varna/branding.json",
+          "sha256": "591e5320158b96fec7bc09aa985f3cb4fe9dc03c3aaff7b798ed3cc5e40bee47"
+        }
+      },
+      "media": [
+        {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/tesla-varna/media/11791701219612494-1.webp",
+          "sha256": "09756aa4feed5033f1d3d81898e2e14c50de1beb1fc221430fb253bdbde98123",
+          "bytes": 76034,
+          "destination": "dealer-stock/11791701219612494-1.webp"
+        },
+        {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/tesla-varna/media/11791701219612494-2.webp",
+          "sha256": "9444105e8a04e0e158b6ab2f6dff20906d42398ef2146c0343f521e6f2c3e987",
+          "bytes": 64936,
+          "destination": "dealer-stock/11791701219612494-2.webp"
+        }
+      ],
+      "copyReview": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/tesla-varna/copy-review-additional100.json",
+        "sha256": "456083544507c4aa7f57bbc50bfb5b17d682b921910d7f0be099556af45e6f26"
+      }
+    }
+  ]
+}

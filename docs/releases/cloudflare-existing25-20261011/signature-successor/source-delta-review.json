@@ -1,0 +1,159 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-source-delta-review",
+  "sourceCommit": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+  "draft": false,
+  "publishable": true,
+  "reviewed": true,
+  "reviewedAt": "2026-10-11T21:04:02.173Z",
+  "qualificationOnly": true,
+  "approved": false,
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "globalReleaseApproval": false,
+  "allSixFrozen": true,
+  "scope": "Exact bounded published master and maintained producer source delta only; no native/hosted acceptance.",
+  "sourceReview": {
+    "reference": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-review.json",
+    "sha256": "888477e39e4dbc3dd15badbf09f66138e2b5ba624ef7b525bea6a7d9905e02f4"
+  },
+  "sourceFiles": [
+    {
+      "path": "templates/auto-best/scripts/qa-locale-storage.mjs",
+      "key": "auto-best",
+      "relative": "scripts/qa-locale-storage.mjs",
+      "beforeBlob": "7382d22cdfd6d433be40f5b5b72f3e0eaf903d3a",
+      "afterBlob": "325134422553fab15e103e2903a0761340a147ae",
+      "mode": "100644",
+      "bytes": 7612,
+      "rawSha256": "1165f3f67ca4fdbb19912807a842b97231a2cd6000f403d1824fb80b8945953f",
+      "normalizedSha256": "1165f3f67ca4fdbb19912807a842b97231a2cd6000f403d1824fb80b8945953f",
+      "previousNormalizedSha256": "a90cfdb1e99286c5718c4a01c4a0e78bc331b6dc1b817994784776675877d42c",
+      "scope": "Previously reviewed hosted QA override"
+    },
+    {
+      "path": "templates/import/tests/localization.e2e.ts",
+      "key": "import",
+      "relative": "tests/localization.e2e.ts",
+      "beforeBlob": "f006fd3a51bfbb42ca24f1f8dd9aa22fa41d18f9",
+      "afterBlob": "af1f6d5ed39150310fcba80da8f3649513a396ce",
+      "mode": "100644",
+      "bytes": 19862,
+      "rawSha256": "8c19c9d4c154f6051da9424a52e3d3c0ff27bf42153f0bde4563bc7109063393",
+      "normalizedSha256": "8c19c9d4c154f6051da9424a52e3d3c0ff27bf42153f0bde4563bc7109063393",
+      "previousNormalizedSha256": "f9dc4e0923fbc7340f273338ada447182675dfffb2a427dedfce856ec3ff9e8e",
+      "scope": "Previously reviewed hosted QA override"
+    },
+    {
+      "path": "templates/karento-best/static/mobile.css",
+      "key": "karento-best",
+      "relative": "static/mobile.css",
+      "beforeBlob": "96a48014f2930a4df442cfc874c4ea66bd0706e0",
+      "afterBlob": "41c8c931b4393d128dcb377354f680c3eab4f39c",
+      "mode": "100644",
+      "bytes": 50030,
+      "rawSha256": "7e507451c13b9105227ea2e2288a73d64e96c7a8c7f42bd2437f3af59e1efd66",
+      "normalizedSha256": "7e507451c13b9105227ea2e2288a73d64e96c7a8c7f42bd2437f3af59e1efd66",
+      "previousNormalizedSha256": "20f13aaf45c6c34b81b1dfe89724660ceae801adb747c01bdb8635498ce2fc40",
+      "scope": "Reviewed owner geometry/title change"
+    },
+    {
+      "path": "templates/modern/apps/e2e/localization-harness.mjs",
+      "key": "modern",
+      "relative": "apps/e2e/localization-harness.mjs",
+      "beforeBlob": "14c652032b32ca445c415829956ce0dc568f5b4a",
+      "afterBlob": "adb166677a57a3d3e14f6df763a7aba576021045",
+      "mode": "100644",
+      "bytes": 4556,
+      "rawSha256": "8af8f8406d93683ebe0d2c9bcd71a390e7b02f58801d3ffe6fb824f293df9c4b",
+      "normalizedSha256": "8af8f8406d93683ebe0d2c9bcd71a390e7b02f58801d3ffe6fb824f293df9c4b",
+      "previousNormalizedSha256": "ad39de254fc9199a999e3246848303cef7b1a7011930f8631f3b1b6499f075f5",
+      "scope": "Previously reviewed hosted QA override"
+    },
+    {
+      "path": "templates/modern/apps/e2e/localization-preferences-client.mjs",
+      "key": "modern",
+      "relative": "apps/e2e/localization-preferences-client.mjs",
+      "beforeBlob": "773d728939f3e2597a8c2473eef0916d6b3a1ec0",
+      "afterBlob": "07f06326f2e5dceccd83da14d11efb52948eb722",
+      "mode": "100644",
+      "bytes": 15880,
+      "rawSha256": "afb7bd35bf7f874eec29fed02fae79e26aff43ab5e13f51e2593bfcaabe47ded",
+      "normalizedSha256": "afb7bd35bf7f874eec29fed02fae79e26aff43ab5e13f51e2593bfcaabe47ded",
+      "previousNormalizedSha256": "a0a4f77dbd934e267efc2ffe09baf59425f7a031ad53bd91fb4ca2afe4810475",
+      "scope": "Previously reviewed hosted QA override"
+    },
+    {
+      "path": "templates/karento-best/src/lib/cards/VehicleGridCard.svelte",
+      "key": "karento-best",
+      "relative": "src/lib/cards/VehicleGridCard.svelte",
+      "beforeBlob": "8022e8835136909a98538b6b7922f0906803c82f",
+      "afterBlob": "487ae3bb2b52262079d867f5e998f0173f46dc21",
+      "mode": "100644",
+      "bytes": 8253,
+      "rawSha256": "011b68bf82d4470860c97607a35237da4f3579c0a4c783fe5ca8b5016e0d4ec2",
+      "normalizedSha256": "011b68bf82d4470860c97607a35237da4f3579c0a4c783fe5ca8b5016e0d4ec2",
+      "previousNormalizedSha256": "555fb56f0dc90ff3a5b7fa86abab9d4c96b033d39d8b9659e0e096cb4103a7f2",
+      "scope": "Reviewed owner geometry/title change"
+    },
+    {
+      "path": "templates/karento-best/src/lib/pages/index-3.svelte",
+      "key": "karento-best",
+      "relative": "src/lib/pages/index-3.svelte",
+      "beforeBlob": "34ecafaa2d8f1895cb0c65f144932a16422b84f9",
+      "afterBlob": "552326f85fbfe75e6a62cf79a87c386019e35c06",
+      "mode": "100644",
+      "bytes": 3851,
+      "rawSha256": "478a780a6f3efe96ae76b8e9db18c3f67efae2701f0e2c9cc4cd33063bd1ea94",
+      "normalizedSha256": "478a780a6f3efe96ae76b8e9db18c3f67efae2701f0e2c9cc4cd33063bd1ea94",
+      "previousNormalizedSha256": "5a807cd7a361eebb7886ad6fe2abc1a501322e2420bbdd7d8d7efb38ed495b17",
+      "scope": "Reviewed owner geometry/title change"
+    },
+    {
+      "path": "templates/karento-best/src/lib/components/vehicle-listing/ListingVehicleRowCard.svelte",
+      "key": "karento-best",
+      "relative": "src/lib/components/vehicle-listing/ListingVehicleRowCard.svelte",
+      "beforeBlob": "08ff81f9fcabfca9035f96b2986e22a5adde3083",
+      "afterBlob": "b42f94828f16935012abd4e1e3483ce9a49e5964",
+      "mode": "100644",
+      "bytes": 5488,
+      "rawSha256": "e7e6e938df715ead363d13a341eee7bd8238c98f934aee05ea5f256589ecbbfa",
+      "normalizedSha256": "e7e6e938df715ead363d13a341eee7bd8238c98f934aee05ea5f256589ecbbfa",
+      "previousNormalizedSha256": "91be2bf2e1b97401cb979d18e1860aa5ff64c790d943447ac6603234f0a2d0c1",
+      "scope": "Reviewed owner geometry/title change"
+    }
+  ],
+  "checks": [
+    {
+      "name": "exact-pruned-immutable-template-tree-and-eight-blob-joins",
+      "status": "passed",
+      "reference": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-fingerprint-joins.json",
+      "evidenceSha256": "9e2fafe4b977d2bf4bbc6dcb95f0f04a8c5e3d0852fb293029942a1aa4b3d3c6"
+    },
+    {
+      "name": "published-owner-four-path-and-producer-two-path-independent-source-reviews",
+      "status": "passed",
+      "reference": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-review.json",
+      "evidenceSha256": "888477e39e4dbc3dd15badbf09f66138e2b5ba624ef7b525bea6a7d9905e02f4"
+    }
+  ],
+  "pendingNativeChecks": [
+    "catalog-completeness",
+    "hardcoded-ui",
+    "native-routing",
+    "standalone-journeys",
+    "mounted-journeys",
+    "public-journeys",
+    "preferences-no-js",
+    "preferences-storage-disabled",
+    "preferences-races",
+    "request-isolation",
+    "security-write-blocking",
+    "assets-preserved"
+  ],
+  "pending": [
+    "All twelve current native acceptance checks remain pending at the selected source.",
+    "Maintained source CI preservation plan, reviewed raster consumer checks, native qualification/App/extended reseals and provider compilation remain required.",
+    "Combined mounted/public browser pilot and owner visual acceptance of that hosted pilot remain pending. Global templates.lock.json is unchanged."
+  ]
+}

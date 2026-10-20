@@ -1,4 +1,5 @@
 'use client';
+import { hasMobileMileage, formatMobileMileage } from '../lib/mobile-mileage';
 import { useLocale } from '@/lib/use-locale';
 import { Fragment, useRef, useState, type ReactNode } from 'react';
 import Image from 'next/image';
@@ -551,7 +552,7 @@ export function VehicleSections({
   const [features, setFeatures] = useState(false);
   const [description, setDescription] = useState(false);
   const spec: [IconName, string, string][] = [
-    ['mileage', 'Mileage', number(v.mileage) + ' ' + t('km')],
+    ['mileage', 'Mileage', formatMobileMileage(v, locale)],
     ...(v.mileage > 0
       ? [
           ['date', showroomMode ? 'First registered' : 'First Registration', v.registration] as [
@@ -575,14 +576,14 @@ export function VehicleSections({
     ['transmission', 'Transmission', v.transmission],
   ];
   const data: [string, string][] = v.technicalData || [
-    ['Vehicle condition', v.mileage ? 'Used vehicle' : 'New vehicle'],
+    ['Vehicle condition', !hasMobileMileage(v) ? 'Not published' : v.mileage ? 'Used vehicle' : 'New vehicle'],
     ['Category', v.body],
     ...(v.attributes?.modelRange
       ? [['Model range', v.attributes.modelRange] as [string, string]]
       : []),
     ...(v.attributes?.trimLine ? [['Trim line', v.attributes.trimLine] as [string, string]] : []),
     ...(v.attributes?.origin ? [['Origin', v.attributes.origin] as [string, string]] : []),
-    ['Mileage', number(v.mileage) + ' ' + t('km')],
+    ['Mileage', formatMobileMileage(v, locale)],
     ['Power', v.power > 0 ? Math.round(v.power / 1.36) + ' kW (' + v.power + ' ' + t('hp') + ')' : 'Not published'],
     ['Fuel', v.fuel],
     ['Transmission', v.transmission],

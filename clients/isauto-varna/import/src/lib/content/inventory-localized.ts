@@ -1,6 +1,14 @@
 import type { Locale } from '$lib/locale/core';
 /** Dealer-owned listing descriptions and specification labels. Source facts are not mutated. */
 export const inventoryCopy = {
+	bmw740RearWheelSteering: {
+		bg: 'BMW 740 Завиващ заден мост',
+		en: 'BMW 740 Rear-wheel steering'
+	},
+	rearWheelSteering: {
+		bg: 'Завиващ заден мост',
+		en: 'Rear-wheel steering'
+	},
 	term0: {
 		bg: '4(5) Врати',
 		en: '4(5) doors'
@@ -477,8 +485,20 @@ export const inventoryCopy = {
 		bg: 'Автомобилът е с пълна сервизна история в Порше. Може да се провери във всяко представителство на марката. Sport Chrono пакет. Абсолютно автентичен вид както е излезнал от завода. Регистриран с каско, гражданска, данък, винетка. Без бартер. Само сериозни обаждания.',
 		en: 'Full Porsche service history. Can be checked at any dealership for the brand. Sport Chrono package. Entirely original factory appearance. Registered, with comprehensive insurance, third-party liability insurance, tax and vignette. No trade-ins. Serious inquiries only.'
 	}
+,
+	"dealerStock_c572f09571cea1dfcfec1f2b2d31fab00097dc3fd12e9256fce629cf0c065d5f": {
+		"bg": "Датирана извадка от публичните обяви към 16.09.2026 г.; потвърдете цената и наличността директно с IS AUTO Varna.",
+		"en": "Dated public listing sample as of 16 September 2026; confirm price and availability directly with IS AUTO Varna."
+	},
+	"dealerStock_e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855": {
+		"bg": "Не е посочен",
+		"en": "Not specified"
+	}
+
 } satisfies Record<string, Record<Locale, string>>;
 export const inventorySourceKeys: Readonly<Record<string, keyof typeof inventoryCopy>> = {
+	'BMW 740 Завиващ заден мост': 'bmw740RearWheelSteering',
+	'Завиващ заден мост': 'rearWheelSteering',
 	'4(5) Врати': 'term0',
 	'4x4': 'term1',
 	'Auto Start Stop function': 'term2',
@@ -630,6 +650,10 @@ export const inventorySourceKeys: Readonly<Record<string, keyof typeof inventory
 		'description30',
 	'Автомобилът е с пълна сервизна история в Порше. Може да се провери във всяко представителство на марката. Sport Chrono пакет. Абсолютно автентичен вид както е излезнал от завода. Регистриран с каско, гражданска, данък, винетка. Без бартер. Само сериозни обаждания.':
 		'description31'
+,
+	"Датирана извадка от публичните обяви към 16.09.2026 г.; потвърдете цената и наличността директно с IS AUTO Varna.": "dealerStock_c572f09571cea1dfcfec1f2b2d31fab00097dc3fd12e9256fce629cf0c065d5f",
+	"": "dealerStock_e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+
 };
 export function inventoryText(locale: Locale, value: string): string {
 	const key = inventorySourceKeys[value];

@@ -5,7 +5,7 @@ import os from 'node:os';
 import path from 'node:path';
 import test from 'node:test';
 import { fingerprint, fingerprintCommit } from '../lib/workflow.mjs';
-import { exportPinnedTemplate, exportPinnedTemplatePair, readPinnedTemplateTree, readRepositoryTreeMap } from './pinned-template-source.mjs';
+import { exportPinnedTemplate, exportPinnedTemplatePair, readPinnedTemplateTree, readRepositoryTreeMap, prefetchPinnedSourceBlobs } from './pinned-template-source.mjs';
 import {appSourceRetainsPath} from '../publishing/app-source.mjs';
 
 function runGit(repo, args) {
@@ -14,6 +14,68 @@ function runGit(repo, args) {
     env: { ...process.env, GIT_AUTHOR_NAME: 'Cars Test', GIT_AUTHOR_EMAIL: 'cars-test@example.invalid', GIT_COMMITTER_NAME: 'Cars Test', GIT_COMMITTER_EMAIL: 'cars-test@example.invalid' }
   }).trim();
 }
+
+const sourceCiEnv = { CARS_SOURCE_BATCH_PREFETCH: '1', GITHUB_ACTIONS: 'true', GITHUB_REPOSITORY: 'darkapoparka/cars', GITHUB_WORKFLOW: 'Existing dealer reviewed source proposals', GITHUB_REF: 'refs/heads/main', GITHUB_SHA: 'a'.repeat(40), GITHUB_RUN_ID: '123' };
+function blobFetchFixture({ count = 2, present = 0, wrongOrigin = false, wrongHead = false, omitted = false, wrongType = false } = {}) {
+  const entries = Array.from({ length: count }, (_, i) => ({ blob: (i + 1).toString(16).padStart(40, '0') }));
+  const available = new Set(entries.slice(0, present).map(r => r.blob)), calls = [];
+  const readGit = (_root, args, options = {}) => {
+    calls.push({ args, options });
+    if (args[0] === 'remote') return wrongOrigin ? 'https://example.invalid/untrusted.git' : 'https://github.com/darkapoparka/cars.git';
+    if (args[0] === 'rev-parse') return wrongHead ? 'b'.repeat(40) : sourceCiEnv.GITHUB_SHA;
+    if (args[0] === 'cat-file') {
+      assert.equal(options.env.GIT_NO_LAZY_FETCH, '1');
+      return options.input.trim().split('\n').map(id => available.has(id) ? id + ' ' + (wrongType ? 'commit' : 'blob') + ' 10' : id + ' missing').join('\n');
+    }
+    assert.deepEqual(args.slice(0, 4), ['-c', 'gc.auto=0', '-c', 'fetch.negotiationAlgorithm=noop']);
+    assert.equal(args[4], 'fetch');
+    assert.deepEqual(args.slice(5, 11), ['--no-tags', '--no-write-fetch-head', '--no-auto-maintenance', '--no-recurse-submodules', '--filter=blob:none', 'origin']);
+    assert(args.length - 11 <= 256);
+    assert.equal(options.env.GIT_TERMINAL_PROMPT, '0');
+    if (!omitted) for (const id of args.slice(11)) available.add(id);
+    return '';
+  };
+  return { entries, calls, readGit };
+}
+test('source prefetch is disabled for ordinary reads without any Git side effects', () => {
+  const { entries, calls, readGit } = blobFetchFixture();
+  assert.deepEqual(prefetchPinnedSourceBlobs({ repositoryPath: '/unused', entries, env: {}, readGit }), { enabled: false, fetched: 0, bytes: 0 });
+  assert.equal(calls.length, 0);
+});
+test('source prefetch requires exact canonical main CI context and repository identity', () => {
+  for (const override of [{ GITHUB_ACTIONS: 'false' }, { GITHUB_REF: 'refs/heads/other' }, { GITHUB_WORKFLOW: 'Unrelated job' }, { GITHUB_SHA: 'main' }, { GITHUB_RUN_ID: '0' }]) {
+    const fixture = blobFetchFixture();
+    assert.throws(() => prefetchPinnedSourceBlobs({ repositoryPath: '/unused', entries: fixture.entries, env: { ...sourceCiEnv, ...override }, readGit: fixture.readGit }), /restricted/);
+    assert.equal(fixture.calls.length, 0);
+  }
+  for (const option of [{ wrongOrigin: true }, { wrongHead: true }]) {
+    const fixture = blobFetchFixture(option);
+    assert.throws(() => prefetchPinnedSourceBlobs({ repositoryPath: '/unused', entries: fixture.entries, env: sourceCiEnv, readGit: fixture.readGit }), /identity differs/);
+    assert(!fixture.calls.some(c => c.args.includes('fetch')));
+  }
+});
+test('source prefetch fetches only deduplicated missing blob IDs in bounded multi-want batches', () => {
+  const fixture = blobFetchFixture({ count: 258, present: 1 });
+  const result = prefetchPinnedSourceBlobs({ repositoryPath: '/unused', entries: [...fixture.entries, fixture.entries[0]], env: sourceCiEnv, readGit: fixture.readGit });
+  assert.deepEqual(result, { enabled: true, fetched: 257, bytes: 2570 });
+  const fetched = fixture.calls.filter(c => c.args.includes('fetch')).flatMap(c => c.args.slice(11));
+  assert.deepEqual(fetched, fixture.entries.slice(1).map(r => r.blob));
+  assert.equal(fixture.calls.filter(c => c.args.includes('fetch')).length, 2);
+});
+test('source prefetch never fetches when every requested blob is already local', () => {
+  const fixture = blobFetchFixture({ present: 2 });
+  assert.deepEqual(prefetchPinnedSourceBlobs({ repositoryPath: '/unused', entries: fixture.entries, env: sourceCiEnv, readGit: fixture.readGit }), { enabled: true, fetched: 0, bytes: 0 });
+  assert(!fixture.calls.some(c => c.args.includes('fetch')));
+});
+test('source prefetch rejects malformed wants, wrong object types and an incomplete fetch without fallback', () => {
+  const fixture = blobFetchFixture();
+  assert.throws(() => prefetchPinnedSourceBlobs({ repositoryPath: '/unused', entries: [{ blob: '--all' }], env: sourceCiEnv, readGit: fixture.readGit }), /bounded exact Git IDs/);
+  for (const option of [{ wrongType: true, present: 2 }, { omitted: true }]) {
+    const f = blobFetchFixture(option);
+    assert.throws(() => prefetchPinnedSourceBlobs({ repositoryPath: '/unused', entries: f.entries, env: sourceCiEnv, readGit: f.readGit }), /invalid blob|did not supply every/);
+    assert(f.calls.filter(c => c.args.includes('fetch')).length <= 1);
+  }
+});
 
 function templateRepo(t, key = 'auto-best') {
   const root = fs.mkdtempSync(path.join(os.tmpdir(), 'cars-pinned-template-'));

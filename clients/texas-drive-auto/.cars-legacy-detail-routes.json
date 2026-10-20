@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "dealer": "texas-drive-auto",
+  "family": "import",
+  "base": "/variant-3",
+  "defaultLocale": "en",
+  "source": {
+    "inventory": {
+      "path": "carwow/src/lib/data/daynight-current-inventory.ts",
+      "sha256": "2346b95cc61634d4dec3fe4be98be70e9aa2eda94c38f125137a6dc405d063b4"
+    },
+    "vehicles": {
+      "path": "carwow/src/lib/data/daynight-vehicles.ts",
+      "sha256": "d9cde2c5c6914dee1aa99e46379984429728f80446b2a1827d344e544e8197dc"
+    },
+    "routeFactorySha256": "094d5128ad5e689e41486a228b1de6d11c54efbe051ce0e75c0170709d8571c9"
+  },
+  "profileSha256": "6382896cdd8ab91e5b98e373d83cc0d075ba932a98c2023830aff3206cb5ed53",
+  "entries": [
+    {
+      "sourceId": "127361913",
+      "slug": "2008-acura-tl-361913",
+      "targetId": "127361913"
+    },
+    {
+      "sourceId": "128538336",
+      "slug": "2012-audi-q5-538336",
+      "targetId": "128538336"
+    },
+    {
+      "sourceId": "127361925",
+      "slug": "2013-audi-q5-361925",
+      "targetId": "127361925"
+    },
+    {
+      "sourceId": "127361924",
+      "slug": "2018-audi-a4-361924",
+      "targetId": "127361924"
+    },
+    {
+      "sourceId": "127361904",
+      "slug": "2014-bmw-x5-361904",
+      "targetId": "127361904"
+    },
+    {
+      "sourceId": "127361891",
+      "slug": "2014-buick-enclave-361891",
+      "targetId": "127361891"
+    },
+    {
+      "sourceId": "127361933",
+      "slug": "2007-cadillac-cts-361933",
+      "targetId": "127361933"
+    },
+    {
+      "sourceId": "127361883",
+      "slug": "2018-cadillac-escalade-361883",
+      "targetId": "127361883"
+    }
+  ],
+  "retired": []
+}

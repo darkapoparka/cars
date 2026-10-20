@@ -1,0 +1,146 @@
+{
+	"date": "2026-10-04",
+	"sources": [
+		{
+			"path": "src/lib/styles/tokens.css",
+			"sha256": "87433750b1637fce0040a4aceaa3e680e35923ab1f128c770c1a6aab83d0f49a"
+		},
+		{
+			"path": "src/lib/components/layout/PublicHeader.svelte",
+			"sha256": "90d8587b571d3c104e284af23008535696d8479e9fdf8768fb3a0243b44d5f02"
+		},
+		{
+			"path": "src/lib/components/layout/NavigationMenu.svelte",
+			"sha256": "f4943b9e1cad9cfcea09b883c774b7c92ec6998f0d6501dab0b2e0d3a20dac59"
+		},
+		{
+			"path": "tests/style-parity.e2e.ts",
+			"sha256": "7e95bdd068ae5b8317c36019b4840c905762b933dd6129cbdef4d45476c028df"
+		},
+		{
+			"path": "tests/storefront-controls.e2e.ts",
+			"sha256": "c666887fdc39d1fc106ad30d888624698c857f37117762185abc3947d802a017"
+		},
+		{
+			"path": "src/lib/components/common/DesktopSearchControl.svelte",
+			"sha256": "18e8f27d3bb4d81c88e59d4c930018aa10e9a36defdee71211804746f6424d6e"
+		},
+		{
+			"path": "src/lib/components/home/DesktopHomeHero.svelte",
+			"sha256": "575bbd655a95bd3d887f05cf7742612a2209f4d8dc241d7934b0a34283b1b86e"
+		},
+		{
+			"path": "src/lib/components/home/HeroFilterDialog.svelte",
+			"sha256": "6e57a0a94e52d6d11da58bacb692af556f5fe7547b850b70ca9600ef3c8e895e"
+		},
+		{
+			"path": "src/lib/components/common/MobileModeTabs.svelte",
+			"sha256": "88f24a3667a1b43847ea36e2e258c8f37cd91fe27ea8b5fbc55c6e1d3b2c7152"
+		},
+		{
+			"path": "src/lib/content/home-discovery.ts",
+			"sha256": "de3ebbf09d47567d176cfdd1a11490c0cdf5bbf94c8323475e08bd9b82b99517"
+		}
+	],
+	"mobile": [
+		{
+			"route": "home",
+			"locale": "bg",
+			"width": 320,
+			"changedPixels": 9020
+		},
+		{
+			"route": "home",
+			"locale": "bg",
+			"width": 390,
+			"changedPixels": 5903
+		},
+		{
+			"route": "home",
+			"locale": "en",
+			"width": 320,
+			"changedPixels": 2062
+		},
+		{
+			"route": "home",
+			"locale": "en",
+			"width": 390,
+			"changedPixels": 3408
+		},
+		{
+			"route": "about",
+			"locale": "bg",
+			"width": 320,
+			"changedPixels": 31803
+		},
+		{
+			"route": "about",
+			"locale": "bg",
+			"width": 390,
+			"changedPixels": 42578
+		},
+		{
+			"route": "about",
+			"locale": "en",
+			"width": 320,
+			"changedPixels": 31800
+		},
+		{
+			"route": "about",
+			"locale": "en",
+			"width": 390,
+			"changedPixels": 42704
+		}
+	],
+	"reference": {
+		"url": "http://127.0.0.1:6474/",
+		"observation": "Centered white page panel with grey outer gutters; inspected read-only",
+		"decision": "Keep the wider Import composition and its existing hero/card/form frames; lighten the page instead of introducing a second outer frame"
+	},
+	"browser": {
+		"routes": [
+			"/bg",
+			"/bg/about",
+			"/bg/services",
+			"/bg/inventory",
+			"/en",
+			"/en/about",
+			"/en/services",
+			"/en/inventory"
+		],
+		"width": 1440,
+		"canvas": "rgb(250, 251, 252)",
+		"header": "rgb(250, 251, 252)",
+		"hero": "rgb(229, 237, 244)",
+		"controlRole": "#f2f4f7",
+		"navLinks": 5,
+		"navButtons": 0,
+		"emptyArrowSlots": 0,
+		"horizontalOverflow": false,
+		"additionalHomeWidths": [768, 1024, 1920],
+		"additionalHomeLocales": ["bg", "en"],
+		"navGap": "24px"
+	},
+	"navigationTests": {
+		"passed": 4,
+		"fitWidths": [768, 1024, 1200, 1280, 1440, 1920],
+		"centeredBGAndENWidths": [1280, 1440, 1920],
+		"behavior": "Direct localized keyboard navigation, active links, real page destinations, accessible services and retained Home panel contrast"
+	},
+	"checks": {
+		"node": "24.21.0",
+		"svelteCheck": "0 errors, 0 warnings",
+		"scopedPrettier": "passed",
+		"scopedEslint": "passed",
+		"architecture": "passed",
+		"assetSignatures": "955 local images passed",
+		"productionBuild": "passed in isolated frozen QA output (exit 0)",
+		"buildWarnings": ["Retained dashboard @reference minifier warning"]
+	},
+	"evidence": "Matched source-rendered in-app browser viewport captures. No complete-page mobile pixel comparison or hosted verification is claimed.",
+	"integration": "Grouped scoped source change on canonical main; commit and push result recorded in the task handoff. No release promotion or dealer deployment.",
+	"actualBrowser": {
+		"finalURL": "http://127.0.0.1:6790/bg",
+		"viewportOverrideReset": true
+	}
+}

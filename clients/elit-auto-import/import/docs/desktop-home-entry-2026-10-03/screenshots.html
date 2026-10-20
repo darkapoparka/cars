@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+	<meta charset="utf-8" /><meta
+		name="viewport"
+		content="width=device-width,initial-scale=1"
+	/><title>Home desktop polish — before and after</title
+	><style>
+		body {
+			margin: 0;
+			background: #f6f6f7;
+			color: #17191c;
+			font:
+				16px/1.5 system-ui,
+				sans-serif;
+		}
+		main {
+			max-width: 1700px;
+			margin: auto;
+			padding: 24px;
+		}
+		h1 {
+			margin: 0;
+			font-size: 28px;
+		}
+		p {
+			margin: 8px 0;
+			color: #66676b;
+		}
+		.controls {
+			display: flex;
+			align-items: center;
+			gap: 12px;
+			flex-wrap: wrap;
+			margin: 24px 0;
+		}
+		select {
+			font: inherit;
+			padding: 8px 12px;
+			background: white;
+			border: 1px solid #c8c8cd;
+			border-radius: 8px;
+		}
+		.pair {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 20px;
+		}
+		figure {
+			margin: 0;
+			min-width: 0;
+		}
+		figcaption {
+			margin-bottom: 8px;
+		}
+		img {
+			display: block;
+			width: 100%;
+			height: auto;
+			border: 1px solid #e5e5e7;
+			box-sizing: border-box;
+			border-radius: 16px;
+		}
+		a {
+			color: inherit;
+		}
+		footer {
+			margin-top: 24px;
+			display: flex;
+			gap: 20px;
+			flex-wrap: wrap;
+		}
+		@media (max-width: 900px) {
+			.pair {
+				grid-template-columns: 1fr;
+			}
+			main {
+				padding: 16px;
+			}
+		}
+	</style>
+	<main>
+		<h1>Cleaner Home tabs and more breathing room</h1>
+		<p>
+			Implemented: equal mode tabs with a red selected underline, quick links removed, title and box
+			lowered by 24px through shared desktop tokens. Newest vehicles stays.
+		</p>
+		<div class="controls">
+			<label for="locale">Language</label
+			><select id="locale">
+				<option value="bg">Bulgarian</option>
+				<option value="en">English</option></select
+			><label for="route">Route / state</label
+			><select id="route"></select>
+		</div>
+		<div class="pair">
+			<figure>
+				<figcaption>Before</figcaption>
+				<a id="before-link"
+					><img id="before" alt="Before desktop polish" width="1440" height="1000"
+				/></a>
+			</figure>
+			<figure>
+				<figcaption>After · production preview</figcaption>
+				<a id="after-link"
+					><img id="after" alt="After desktop polish" width="1440" height="1000"
+				/></a>
+			</figure>
+		</div>
+		<footer>
+			<a href="README.md">Verification receipt</a
+			><a href="mobile-preservation.json">Mobile preservation</a
+			><a href="visual-verification.json">Geometry checks</a>
+		</footer>
+	</main>
+	<script>
+		const pairs = [
+			{
+				id: 'home-bg-1440',
+				locale: 'bg',
+				label: 'Home · buy',
+				before: 'before/home-bg-1440.png',
+				after: 'after/home-bg-1440.png'
+			},
+			{
+				id: 'home-finance-bg-1440',
+				locale: 'bg',
+				label: 'Home · finance',
+				before: 'before/home-finance-bg-1440.png',
+				after: 'after/home-finance-bg-1440.png'
+			},
+			{
+				id: 'home-sell-bg-1440',
+				locale: 'bg',
+				label: 'Home · sell',
+				before: 'before/home-sell-bg-1440.png',
+				after: 'after/home-sell-bg-1440.png'
+			},
+			{
+				id: 'home-import-bg-1440',
+				locale: 'bg',
+				label: 'Home · import',
+				before: 'before/home-import-bg-1440.png',
+				after: 'after/home-import-bg-1440.png'
+			},
+			{
+				id: 'inventory-bg-1440',
+				locale: 'bg',
+				label: 'inventory',
+				before: 'before/inventory-bg-1440.png',
+				after: 'after/inventory-bg-1440.png'
+			},
+			{
+				id: 'services-bg-1440',
+				locale: 'bg',
+				label: 'services',
+				before: 'before/services-bg-1440.png',
+				after: 'after/services-bg-1440.png'
+			},
+			{
+				id: 'about-bg-1440',
+				locale: 'bg',
+				label: 'about',
+				before: 'before/about-bg-1440.png',
+				after: 'after/about-bg-1440.png'
+			},
+			{
+				id: 'contact-bg-1440',
+				locale: 'bg',
+				label: 'contact',
+				before: 'before/contact-bg-1440.png',
+				after: 'after/contact-bg-1440.png'
+			},
+			{
+				id: 'sell-your-car-bg-1440',
+				locale: 'bg',
+				label: 'sell-your-car',
+				before: 'before/sell-your-car-bg-1440.png',
+				after: 'after/sell-your-car-bg-1440.png'
+			},
+			{
+				id: 'financing-bg-1440',
+				locale: 'bg',
+				label: 'financing',
+				before: 'before/financing-bg-1440.png',
+				after: 'after/financing-bg-1440.png'
+			},
+			{
+				id: 'import-bg-1440',
+				locale: 'bg',
+				label: 'import',
+				before: 'before/import-bg-1440.png',
+				after: 'after/import-bg-1440.png'
+			},
+			{
+				id: 'home-en-1440',
+				locale: 'en',
+				label: 'Home · buy',
+				before: 'before/home-en-1440.png',
+				after: 'after/home-en-1440.png'
+			},
+			{
+				id: 'home-finance-en-1440',
+				locale: 'en',
+				label: 'Home · finance',
+				before: 'before/home-finance-en-1440.png',
+				after: 'after/home-finance-en-1440.png'
+			},
+			{
+				id: 'home-sell-en-1440',
+				locale: 'en',
+				label: 'Home · sell',
+				before: 'before/home-sell-en-1440.png',
+				after: 'after/home-sell-en-1440.png'
+			},
+			{
+				id: 'home-import-en-1440',
+				locale: 'en',
+				label: 'Home · import',
+				before: 'before/home-import-en-1440.png',
+				after: 'after/home-import-en-1440.png'
+			},
+			{
+				id: 'inventory-en-1440',
+				locale: 'en',
+				label: 'inventory',
+				before: 'before/inventory-en-1440.png',
+				after: 'after/inventory-en-1440.png'
+			},
+			{
+				id: 'services-en-1440',
+				locale: 'en',
+				label: 'services',
+				before: 'before/services-en-1440.png',
+				after: 'after/services-en-1440.png'
+			},
+			{
+				id: 'about-en-1440',
+				locale: 'en',
+				label: 'about',
+				before: 'before/about-en-1440.png',
+				after: 'after/about-en-1440.png'
+			},
+			{
+				id: 'contact-en-1440',
+				locale: 'en',
+				label: 'contact',
+				before: 'before/contact-en-1440.png',
+				after: 'after/contact-en-1440.png'
+			},
+			{
+				id: 'sell-your-car-en-1440',
+				locale: 'en',
+				label: 'sell-your-car',
+				before: 'before/sell-your-car-en-1440.png',
+				after: 'after/sell-your-car-en-1440.png'
+			},
+			{
+				id: 'financing-en-1440',
+				locale: 'en',
+				label: 'financing',
+				before: 'before/financing-en-1440.png',
+				after: 'after/financing-en-1440.png'
+			},
+			{
+				id: 'import-en-1440',
+				locale: 'en',
+				label: 'import',
+				before: 'before/import-en-1440.png',
+				after: 'after/import-en-1440.png'
+			}
+		];
+		const language = document.getElementById('locale');
+		const route = document.getElementById('route');
+		function render() {
+			const row = pairs.find((row) => row.id === route.value);
+			for (const phase of ['before', 'after']) {
+				document.getElementById(phase).src = row[phase];
+				document.getElementById(phase + '-link').href = row[phase];
+			}
+		}
+		function selectLanguage() {
+			const previous = route.selectedOptions[0]?.textContent;
+			route.replaceChildren(
+				...pairs
+					.filter((row) => row.locale === language.value)
+					.map((row) => {
+						const option = document.createElement('option');
+						option.value = row.id;
+						option.textContent = row.label;
+						if (row.label === previous) option.selected = true;
+						return option;
+					})
+			);
+			render();
+		}
+		language.addEventListener('change', selectLanguage);
+		route.addEventListener('change', render);
+		selectLanguage();
+	</script>
+</html>

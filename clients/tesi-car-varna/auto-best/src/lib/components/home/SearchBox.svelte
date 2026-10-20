@@ -1,82 +1,57 @@
 <script lang="ts">
-  import { resolve } from '$app/paths';
-  import Icon from '$components/ui/Icon.svelte';
-  import VehicleQuickSearch from './VehicleQuickSearch.svelte';
-  import { parseListingFilters } from '$data/listing';
-  import VehicleDiscoveryForm from '$components/listing/VehicleDiscoveryForm.svelte';
-  import VehicleSearchDialog from '$components/listing/VehicleSearchDialog.svelte';
-  import { resolveImportUrl } from '$data/company';
+  import { getI18n } from '$lib/locale/context';
+  const i18n = getI18n();
 
-  let desktopFilters = $state(parseListingFilters(new URLSearchParams()));
+  import { resolve } from '$app/paths';
+  import EntryCard from '$components/ui/entry/EntryCard.svelte';
+  import EntrySegments from '$components/ui/entry/EntrySegments.svelte';
+  import EntryInput from '$components/ui/entry/EntryInput.svelte';
+  import EntryAction from '$components/ui/entry/EntryAction.svelte';
+  import MobileActionIcon from '$components/layout/MobileActionIcon.svelte';
+  import VehicleQuickSearch from './VehicleQuickSearch.svelte';
+  import HomeBrowseBox from './HomeBrowseBox.svelte';
+  import { resolveImportUrl } from '$data/company';
+  import { listingBudgetCaps } from '$data/listing';
+  import { formatPrice, currencySymbol } from '$lib/locale/core';
+
+  const budgetCaps = listingBudgetCaps();
   let mode = $state<'buy' | 'import'>('buy');
   let importUrl = $state('');
   let importError = $state('');
-  let buyTab: HTMLButtonElement;
-  let importTab: HTMLButtonElement;
-  let importInput: HTMLInputElement;
+  let importInput = $state<HTMLInputElement>();
 
-  function handleModeKey(event: KeyboardEvent) {
-    if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
-    event.preventDefault();
-    mode = event.key === 'Home' ? 'buy' : event.key === 'End' ? 'import' : mode === 'buy' ? 'import' : 'buy';
-    (mode === 'buy' ? buyTab : importTab).focus();
-  }
+  const compactInventoryCurrency = $derived(currencySymbol(i18n.locale));
 
   function validateImport(event: SubmitEvent) {
     if (resolveImportUrl(importUrl)) return;
     event.preventDefault();
     importError = importUrl.trim() ? 'Поставете валиден линк с https:// или http://.' : 'Поставете линк към обявата, която сте избрали.';
-    importInput.focus();
+    importInput?.focus();
   }
 </script>
 
-<section class="dn-search-wrap" aria-label="Търсене на автомобил">
+<section class="dn-search-wrap" aria-label={i18n.t("m_0ae7a3ecbc83")}>
   <div class="container">
-    <div class="dn-search">
-      <div class="dn-search__mobile-modes" role="tablist" aria-label="Основна цел">
-        <button
-          bind:this={buyTab}
-          id="home-buy-tab"
-          type="button"
-          role="tab"
-          aria-selected={mode === 'buy'}
-          aria-controls="home-buy-search"
-          tabindex={mode === 'buy' ? 0 : -1}
-          onclick={() => mode = 'buy'}
-          onkeydown={handleModeKey}
-        >Купи</button>
-        <button
-          bind:this={importTab}
-          id="home-import-tab"
-          type="button"
-          role="tab"
-          aria-selected={mode === 'import'}
-          aria-controls="home-import-search"
-          tabindex={mode === 'import' ? 0 : -1}
-          onclick={() => mode = 'import'}
-          onkeydown={handleModeKey}
-        >Внос</button>
-      </div>
+    <EntryCard class="dn-search">
+      <div class="dn-search__mobile-modes"><EntrySegments tabs bind:value={mode} label={i18n.t('m_a78ab3107899')} options={[{ value: 'buy', label: i18n.t('m_64e3cb0e4960'), id: 'home-buy-tab', controls: 'home-buy-search' }, { value: 'import', label: i18n.t('m_2cff9baabf56'), id: 'home-import-tab', controls: 'home-import-search' }]} /></div>
       <div id="home-buy-search" class={['dn-search__buy', { 'dn-search__buy--inactive': mode !== 'buy' }]} role="tabpanel" aria-labelledby="home-buy-tab">
         <VehicleQuickSearch />
-        <a class="dn-search__mobile-all" href={resolve('/listing-grid')}>
-          <span>Виж всички</span>
-          <Icon name="arrow-right" size={17} strokeWidth={2} />
-        </a>
+        <EntryAction class="dn-search__mobile-all" href={i18n.href(resolve('/cars'))}>{i18n.t('m_5701bc5c6a95')}</EntryAction>
       </div>
       <div id="home-import-search" class={['dn-search__import', { 'dn-search__import--active': mode === 'import' }]} role="tabpanel" aria-labelledby="home-import-tab">
-        <form class="dn-search__import-form" method="GET" action={resolve('/contact#contact-intent')} novalidate onsubmit={validateImport}>
+        <form class="dn-search__import-form" method="GET" action={i18n.href(resolve('/contact#contact-intent'))} novalidate onsubmit={validateImport}>
           <input type="hidden" name="topic" value="import" />
           <label class="dn-search__import-field">
-            <Icon name="globe" size={20} strokeWidth={1.8} />
-            <span class="dn-sr-only">Линк към обява за внос</span>
-            <input
-              bind:this={importInput}
+            <span class="dn-sr-only">{i18n.t("m_409235f690e6")}</span>
+            <span class="dn-search__import-icon" aria-hidden="true"><MobileActionIcon name="article" size={22} /></span>
+            <EntryInput
+              class="dn-entry-field--prominent"
+              bind:element={importInput}
               bind:value={importUrl}
               type="url"
               inputmode="url"
               name="vehicle_url"
-              placeholder="Поставете линк към обява"
+              placeholder={i18n.t("m_fbee9a117fb4")}
               maxlength={2048}
               required
               autocomplete="off"
@@ -88,33 +63,37 @@
             />
           </label>
           {#if importError}
-            <p id="home-import-error" class="dn-search__import-error" role="alert">{importError}</p>
+            <p id="home-import-error" class="dn-search__import-error" role="alert">{i18n.text(importError)}</p>
           {/if}
-          <button class="dn-search__mobile-all" type="submit">Продължи към контакт <Icon name="arrow-right" size={17} strokeWidth={2} /></button>
+          <EntryAction class="dn-search__mobile-all" aria-label={i18n.t('action.requestImport')}>{i18n.t('action.requestShort')}</EntryAction>
         </form>
       </div>
       <div class="dn-search__desktop-form">
-        <VehicleSearchDialog filters={desktopFilters}>
-          {#snippet children(openFilters, filtersOpen)}
-            <VehicleDiscoveryForm filters={desktopFilters} {openFilters} {filtersOpen} onDraftChange={(filters) => desktopFilters = filters} showFilterAction={false} />
-          {/snippet}
-        </VehicleSearchDialog>
+        <HomeBrowseBox />
       </div>
-    </div>
-
+    </EntryCard>
+    {#if budgetCaps.length}
+      <nav class="dn-search__desktop-budgets" aria-label={i18n.t('m_dea1661dff21')}>
+        {#each budgetCaps as cap (cap)}
+          <a class="dn-compact-control dn-quick-pill dn-search__budget" href={i18n.href(resolve(`/cars?price_max=${cap}`))} aria-label={i18n.t('inventory.budget.accessible', { amount: formatPrice(cap, i18n.locale) })}>{i18n.t('inventory.budget.short', { amount: cap / 1000, currency: compactInventoryCurrency })}</a>
+        {/each}
+      </nav>
+    {/if}
   </div>
-  <nav class="dn-search__mobile-shortcuts" aria-label="Бързи филтри">
-    <a href={resolve('/listing-grid?price_max=60000')}>До 60 000 €</a>
-    <a href={resolve('/listing-grid?price_min=60000&price_max=70000')}>60–70 000 €</a>
-    <a href={resolve('/listing-grid?make=Audi')}>Audi</a>
-    <a href={resolve('/listing-grid?make=Mercedes-Benz')}>Mercedes</a>
-    <a href={resolve('/listing-grid?make=BMW')}>BMW</a>
+  <nav class="dn-search__mobile-shortcuts" aria-label={i18n.t("m_dea1661dff21")}>
+    {#each budgetCaps as cap (cap)}
+      <a class="dn-compact-control dn-compact-pill dn-quick-pill" href={i18n.href(resolve(`/cars?price_max=${cap}`))} aria-label={i18n.t('inventory.budget.accessible', { amount: formatPrice(cap, i18n.locale) })}>{i18n.t('inventory.budget.short', { amount: cap / 1000, currency: compactInventoryCurrency })}</a>
+    {/each}
+    <a class="dn-compact-control dn-compact-pill dn-quick-pill" href={i18n.href(resolve('/cars?make=Audi'))}>{i18n.t("m_ab31803df6d5")}</a>
+    <a class="dn-compact-control dn-compact-pill dn-quick-pill" href={i18n.href(resolve('/cars?make=Mercedes-Benz'))}>{i18n.t("m_3d0e65dfe82d")}</a>
+    <a class="dn-compact-control dn-compact-pill dn-quick-pill" href={i18n.href(resolve('/cars?make=BMW'))}>{i18n.t("m_c76b5628a9d1")}</a>
   </nav>
 </section>
 
 <style>
   .dn-search-wrap {
     --dn-home-search-top: var(--dn-route-hero-control-top);
+    --dn-discovery-width: min(var(--dn-content), calc(100% - 48px));
 
     position: relative;
     z-index: 20;
@@ -125,19 +104,10 @@
     width: min(1296px, calc(100% - 80px));
   }
 
-  .dn-search {
-    position: relative;
-    padding: 12px 16px 16px;
-    border-radius: 18px;
-    background: var(--dn-white);
-    border: 1px solid var(--dn-line);
-    color: var(--dn-ink);
-  }
-
   .dn-search__mobile-modes,
   .dn-search__import,
-  .dn-search__mobile-shortcuts,
-  .dn-search__mobile-all {
+  .dn-search__desktop-budgets,
+  .dn-search__mobile-shortcuts {
     display: none;
   }
 
@@ -145,21 +115,26 @@
     display: none;
   }
 
-  .dn-search :is(button, a):focus-visible {
-    outline: 3px solid var(--dn-focus);
-    outline-offset: 3px;
+  @media (min-width: 768px) {
+    .dn-search-wrap { min-height: calc(var(--dn-route-hero-height) - var(--dn-home-search-top)); padding-bottom: var(--dn-space-8); }
+    .dn-search__desktop-budgets { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--dn-space-2); margin-top: var(--dn-space-5); }
+    .dn-search__budget { --dn-compact-control-surface: transparent; --dn-compact-control-ink: var(--dn-text-on-ink); padding-inline: var(--dn-space-4); font-size: var(--dn-text-meta); }
+    .dn-search__budget::before { border: 1px solid var(--dn-line-on-ink); }
+    .dn-search__budget:is(:hover, :focus-visible) { --dn-compact-control-surface: color-mix(in srgb, var(--dn-white) 8%, transparent); }
+    .dn-search__budget:is(:hover, :focus-visible)::before { border-color: var(--dn-muted-on-ink); }
+    .dn-search__budget:focus-visible { outline: 2px solid var(--dn-white); outline-offset: 2px; }
+    .dn-search-wrap :global(.dn-search) {
+      padding: 0;
+      border: 0;
+      border-radius: var(--dn-pill);
+      background: transparent;
+      box-shadow: none;
+    }
   }
 
   @media (min-width: 992px) {
-    .dn-search-wrap { margin-top: -220px; margin-bottom: 34px; }
+    .dn-search-wrap { --dn-discovery-width: min(var(--dn-hero-center-width), calc(100% - 48px)); }
     .dn-search-wrap > .container { width: var(--dn-discovery-width); }
-    .dn-search { padding: var(--dn-discovery-padding); border-radius: var(--dn-discovery-radius); }
-  }
-
-  @media (max-width: 1199px) {
-    .dn-search-wrap > .container {
-      width: calc(100% - 48px);
-    }
   }
 
   @media (max-width: 991px) {
@@ -167,70 +142,44 @@
       width: min(100% - 24px, 760px);
     }
 
-    .dn-search {
-      padding: 14px;
-      border-radius: 16px;
-    }
-
   }
 
   @media (max-width: 767px) {
+    .dn-search__mobile-modes {
+      display: block;
+      width: min(100%, 15rem);
+      justify-self: center;
+    }
+
+    .dn-search-wrap :global(.dn-search) {
+      border-radius: var(--dn-radius-entry-card);
+      box-shadow: var(--dn-card-shadow-subtle);
+    }
+
+    .dn-search__mobile-modes :global(.dn-segmented-option) {
+      padding-inline: var(--dn-space-2);
+    }
+
+    .dn-search-wrap :global(.dn-search__mobile-all) {
+      --dn-compact-control-surface: var(--dn-ink-deep);
+    }
+
+    .dn-search-wrap :global(.dn-search__mobile-all:is(:hover, :focus-visible)) {
+      --dn-compact-control-surface: var(--dn-ink-hover);
+    }
+
+    .dn-search-wrap :global(.dn-quick-search__trigger) {
+      padding-block: var(--dn-space-2);
+    }
+
     .dn-search__buy { display: contents; }
     .dn-search-wrap {
-      margin-top: -52px;
+      margin-top: calc(-1 * var(--dn-mobile-entry-overlap));
       background: transparent;
     }
 
     .dn-search-wrap > .container {
       width: calc(100% - 24px);
-    }
-
-    .dn-search {
-      display: grid;
-      gap: 9px;
-      padding: 10px;
-      border: 1px solid var(--dn-line);
-      border-radius: 20px;
-      background: var(--dn-white);
-    }
-
-    .dn-search__mobile-modes {
-      display: grid;
-      min-height: 50px;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 4px;
-      padding: 3px;
-      border-radius: var(--dn-radius-button);
-      background: var(--dn-home-panel);
-    }
-
-    .dn-search__mobile-modes button {
-      display: inline-flex;
-      min-width: 0;
-      min-height: 44px;
-      align-items: center;
-      justify-content: center;
-      padding: 0;
-      border: 0;
-      border-radius: var(--dn-radius-button);
-      background: transparent;
-      color: var(--dn-muted);
-      font-size: 14px;
-      font-weight: 650;
-      cursor: pointer;
-    }
-
-    .dn-search__mobile-modes [aria-selected='true'] {
-      background: var(--dn-ink);
-      color: #fff;
-    }
-
-    .dn-search :global(.dn-quick-search__trigger) {
-      min-height: 52px;
-      margin: 0;
-      border: 0;
-      background: var(--dn-home-panel);
-      color: var(--dn-muted);
     }
 
     .dn-search__desktop-form,
@@ -242,46 +191,20 @@
     .dn-search__import-form {
       display: grid;
       min-width: 0;
-      gap: 10px;
     }
 
-    .dn-search__import-field {
-      display: flex;
-      min-height: 52px;
-      align-items: center;
-      gap: 10px;
-      padding: 0 16px;
-      border-radius: var(--dn-radius-button);
-      background: var(--dn-home-panel);
-      color: var(--dn-muted);
+    .dn-search__import-form {
+      gap: var(--dn-entry-stack-gap);
     }
 
-    .dn-search__import-field input {
-      width: 100%;
-      min-width: 0;
-      min-height: 52px;
-      padding: 0;
-      border: 0;
-      outline: none;
-      background: transparent;
-      color: var(--dn-ink);
-      font-size: 16px;
-    }
-
-    .dn-search__import-field input::placeholder {
-      color: var(--dn-muted);
-      opacity: 1;
-    }
-
-    .dn-search__import-field:focus-within {
-      outline: 3px solid var(--dn-focus);
-      outline-offset: 2px;
-    }
+    .dn-search__import-field { position: relative; display: block; min-width: 0; }
+    .dn-search__import-icon { position: absolute; z-index: 1; top: 0; bottom: 0; left: var(--dn-space-3); display: grid; place-items: center; color: var(--dn-entry-prominent-muted); pointer-events: none; }
+    .dn-search__import-field :global(.dn-entry-input) { padding-inline-start: calc(var(--dn-space-3) + 22px + var(--dn-space-2)); }
 
     .dn-search__import-error {
       margin: 0;
-      font-size: 14px;
-      line-height: 1.5;
+      font-size: var(--dn-text-meta);
+      line-height: var(--dn-leading-body);
     }
 
     .dn-search__import-error {
@@ -290,9 +213,9 @@
 
     .dn-search__mobile-shortcuts {
       display: flex;
-      gap: 8px;
+      gap: var(--dn-entry-action-gap);
       margin: 0;
-      padding: 14px 12px 0;
+      padding: var(--dn-space-3) var(--dn-space-3) 0;
       overflow-x: auto;
       background: var(--dn-mobile-canvas);
       scrollbar-width: none;
@@ -302,43 +225,5 @@
       display: none;
     }
 
-    .dn-search__mobile-shortcuts a {
-      display: inline-flex;
-      min-height: 44px;
-      flex: 0 0 auto;
-      align-items: center;
-      padding: 0 15px;
-      border-radius: var(--dn-radius-button);
-      background: var(--dn-mobile-surface);
-      color: #30363f;
-      font-size: 13px;
-      font-weight: 650;
-      white-space: nowrap;
-    }
-
-    .dn-search__mobile-all {
-      display: flex;
-      width: fit-content;
-      max-width: 100%;
-      min-height: 44px;
-      justify-self: center;
-      align-items: center;
-      justify-content: center;
-      gap: 7px;
-      margin-top: 0;
-      padding: 0 24px;
-      border: 0;
-      border-radius: var(--dn-radius-button);
-      background: var(--dn-red);
-      color: #fff;
-      font-size: 14px;
-      font-weight: 700;
-      cursor: pointer;
-    }
-
-    .dn-search__mobile-all:focus-visible {
-      outline: 3px solid var(--dn-focus);
-      outline-offset: 2px;
-    }
   }
 </style>

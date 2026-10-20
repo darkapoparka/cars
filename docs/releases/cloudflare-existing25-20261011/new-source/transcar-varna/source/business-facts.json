@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "slug": "transcar-varna",
+  "name": "АВТОСАЛОН ТРАНС КАР",
+  "shortName": "АВТОСАЛОН ТРАНС КАР",
+  "city": "Варна",
+  "country": "BG",
+  "countryCode": "BG",
+  "locale": "bg-BG",
+  "currency": "EUR",
+  "distanceUnit": "km",
+  "phone": "0898504908",
+  "phoneDisplay": "0898504908",
+  "phoneE164": "+359898504908",
+  "phones": [
+    "0898504908"
+  ],
+  "addressLine": "бул.Цар Освободител 900 метра след Метро",
+  "address": "бул.Цар Освободител 900 метра след Метро, Варна, България",
+  "hours": "Потвърдете работното време директно с автокъщата.",
+  "email": "",
+  "sourceUrl": "https://transcar.mobile.bg/",
+  "stockUrl": "https://transcar.mobile.bg/",
+  "contactSourceUrl": "https://transcar.mobile.bg/contacts",
+  "observedAt": "2026-10-11T11:46:40.556Z",
+  "inventoryNotice": "Датирана извадка от публични обяви, не складова система в реално време. Потвърдете цената, ДДС и наличността.",
+  "previewNotice": "Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация.",
+  "services": [],
+  "socialLinks": {}
+}

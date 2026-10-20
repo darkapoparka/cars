@@ -27,9 +27,9 @@
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Texas%20Drive%20Auto%2C%2010511%20Olympic%20Drive%2C%20Dallas%2C%20TX%2075220",
     "mapsEmbedUrl": "https://maps.google.com/maps?q=Texas%20Drive%20Auto%2C%2010511%20Olympic%20Drive%2C%20Dallas%2C%20TX%2075220&z=16&output=embed",
     "accent": "#c40101",
-    "logo": "/dealer-brand/logo-on-light.webp",
-    "logoLight": "/dealer-brand/logo-on-light.webp",
-    "logoDark": "/dealer-brand/logo-on-dark.webp",
+    "logo": "/dealer-brand/v2-785fdecf649f9620/logo-on-light.webp",
+    "logoLight": "/dealer-brand/v2-785fdecf649f9620/logo-on-light.webp",
+    "logoDark": "/dealer-brand/v2-785fdecf649f9620/logo-on-dark.webp",
     "socialLinks": {
       "facebook": "",
       "instagram": "",
@@ -74,6 +74,7 @@
       "currency": "USD",
       "mileageValue": 176729,
       "mileageUnit": "mi",
+      "mileageOnRequest": false,
       "body": "Sedan",
       "bodyType": "sedan",
       "fuel": "Gasoline",
@@ -127,6 +128,7 @@
       "currency": "USD",
       "mileageValue": 104710,
       "mileageUnit": "mi",
+      "mileageOnRequest": false,
       "body": "SUV",
       "bodyType": "suv",
       "fuel": "Not published",
@@ -180,6 +182,7 @@
       "currency": "USD",
       "mileageValue": 114512,
       "mileageUnit": "mi",
+      "mileageOnRequest": false,
       "body": "SUV",
       "bodyType": "suv",
       "fuel": "Flex Fuel",
@@ -233,6 +236,7 @@
       "currency": "USD",
       "mileageValue": 128956,
       "mileageUnit": "mi",
+      "mileageOnRequest": false,
       "body": "Sedan",
       "bodyType": "sedan",
       "fuel": "Not published",
@@ -286,6 +290,7 @@
       "currency": "USD",
       "mileageValue": 177873,
       "mileageUnit": "mi",
+      "mileageOnRequest": false,
       "body": "SUV",
       "bodyType": "suv",
       "fuel": "Not published",
@@ -339,6 +344,7 @@
       "currency": "USD",
       "mileageValue": 162632,
       "mileageUnit": "mi",
+      "mileageOnRequest": false,
       "body": "Crossover",
       "bodyType": "other",
       "fuel": "Not published",
@@ -392,6 +398,7 @@
       "currency": "USD",
       "mileageValue": 119529,
       "mileageUnit": "mi",
+      "mileageOnRequest": false,
       "body": "Sedan",
       "bodyType": "sedan",
       "fuel": "Not published",
@@ -445,6 +452,7 @@
       "currency": "USD",
       "mileageValue": 99315,
       "mileageUnit": "mi",
+      "mileageOnRequest": false,
       "body": "SUV",
       "bodyType": "suv",
       "fuel": "Not published",
@@ -505,6 +513,7 @@
     "observedAt": "2026-09-09"
   },
   "sourceCount": 8,
+  "stockKind": "",
   "logoContract": {
     "schemaVersion": 1,
     "dealer": "texas-drive-auto",
@@ -513,19 +522,19 @@
     "originalSha256": "85c545ad7ff94e600786bd4ba550176ab9558d2ac948599e7bc056ac17ef6550",
     "assets": {
       "onLight": {
-        "publicPath": "/dealer-brand/logo-on-light.webp",
-        "sha256": "2298c82ae0c02b028b50c6775e118dc8b1260f19da07ce69c121d56ba58256c0",
-        "bytes": 116070
+        "publicPath": "/dealer-brand/v2-785fdecf649f9620/logo-on-light.webp",
+        "sha256": "fbcfe7909ceffcf50e917102bd6cdbadc28c9ae8bb3edbc6670570cb509a6acc",
+        "bytes": 239364
       },
       "onDark": {
-        "publicPath": "/dealer-brand/logo-on-dark.webp",
-        "sha256": "3dea5fb84807728dcdf333040b41e71c72ccabbc3a179082797714ebb6742231",
-        "bytes": 120008
+        "publicPath": "/dealer-brand/v2-785fdecf649f9620/logo-on-dark.webp",
+        "sha256": "d3ea4a28bf9e0b5390a05ac7c8eb3c51ea287e1dbc9ba70fbb6f1533fa111403",
+        "bytes": 261616
       },
       "onAccent": {
-        "publicPath": "/dealer-brand/logo-on-accent.webp",
-        "sha256": "694e8524b95b3ec2f969444a34c45a498995c85839effb74ed79ae5f41c29723",
-        "bytes": 81822
+        "publicPath": "/dealer-brand/v2-785fdecf649f9620/logo-on-accent.webp",
+        "sha256": "672f4296b8daa2fb34ae11e5f0d17ebd8221fe6097658e681888dddb39af8469",
+        "bytes": 104226
       }
     },
     "preparedAt": "2026-09-19T05:00:36.646Z",

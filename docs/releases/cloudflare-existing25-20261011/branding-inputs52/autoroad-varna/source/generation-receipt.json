@@ -1,0 +1,202 @@
+{
+  "generatedPath": "C:/Users/radev/.codex/generated_images/01a12a34-877e-73a2-9a3d-346e546742c6/exec-6949ec80-fca9-40c6-b740-8d152a72c879.png",
+  "strategy": "REFINE OFFICIAL LOGO",
+  "identityStatus": "Sourced recognizable AUTOROAD demo refinement; dealer approval unknown",
+  "sourceUrls": [
+    "https://autoroad.mobile.bg/",
+    "https://cdn2.focus.bg/mobile/images/houseslogos/h16895859691267921.pic"
+  ],
+  "publishedBranding": {
+    "profileUrl": "https://autoroad.mobile.bg/",
+    "sourceLogoUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h16895859691267921.pic",
+    "observedAt": "2026-10-11T09:19:47.211Z",
+    "visualEvidence": "Published identity visually reviewed with CUA screenshot; downloaded original retained in source-evidence.",
+    "retainedEvidence": [
+      "L:/CODEX/cars/leads/branding/fleet-20261011/autoroad-varna/source-evidence/published-logo.jpg"
+    ]
+  },
+  "imageGeneration": {
+    "tool": "image_gen.imagegen",
+    "reference": "functions.exec cell26 image_gen.imagegen output exec-6949ec80-fca9-40c6-b740-8d152a72c879",
+    "outputPath": "C:/Users/radev/.codex/generated_images/01a12a34-877e-73a2-9a3d-346e546742c6/exec-6949ec80-fca9-40c6-b740-8d152a72c879.png",
+    "transparent_background": true,
+    "modelVersion": "not exposed by tool",
+    "prompt": "Refine sourced AUTOROAD identity as clean transparent high-resolution logo. Preserve exact AUTOROAD uppercase condensed bold lettering and recognizable row of leftward chevrons below it. Remove phone, address, lower decorative arrows and smoky rectangular backdrop. Dark charcoal #17191f text and chevrons, crisp flat finish, exact letters AUTOROAD. No new symbol or tagline. Truly transparent counters and gaps, generous padding.",
+    "promptProvenance": {
+      "kind": "exact-original-tool-input",
+      "transcript": "C:/Users/radev/.codex/sessions/2026/10/11/rollout-2026-10-11T12-04-08-01a12a34-877e-73a2-9a3d-346e546742c6.jsonl",
+      "toolCallLine": 315,
+      "toolCallId": "call_bdc3777d7f134fc9a22b22966a6942a0",
+      "toolCallTimestamp": "2026-10-11T09:13:20.990Z",
+      "generationEventLine": 324,
+      "generationId": "exec-6949ec80-fca9-40c6-b740-8d152a72c879",
+      "generationEventTimestamp": "2026-10-11T09:13:39.029Z",
+      "extraction": "JSON-decoded original prompt string literal; unchanged wording. Completed image_gen.generation revisedPrompt exactly matches it.",
+      "referencedImagesProvided": true
+    },
+    "referenced_image_paths": [
+      "L:/CODEX/cars/leads/branding/fleet-20261011/autoroad-varna/source-evidence/published-logo.jpg"
+    ]
+  },
+  "visualAccepted": true,
+  "visualChecks": {
+    "reviewer": "baseline asset production agent",
+    "identity": "Exact reviewed spelling and recognizable sourced composition",
+    "transparency": "True alpha; no plate, clipped strokes, filled counters or residue visible in compact sheet",
+    "surfaces": "CUA source identity plus local 120/180/320 width raster review on white, four current dark canvases, black/red/blue accent samples",
+    "approval": "Asset review only. Owner/dealer approval and all six actual consumers pending."
+  },
+  "schemaVersion": 1,
+  "dealer": "autoroad-varna",
+  "state": "asset-verified",
+  "generated": {
+    "path": "C:/Users/radev/.codex/generated_images/01a12a34-877e-73a2-9a3d-346e546742c6/exec-6949ec80-fca9-40c6-b740-8d152a72c879.png",
+    "sha256": "63a3e27ecd77513676c4500bc2a484ac9e2581b0ce5205d2ae29304cac7b187e",
+    "bytes": 643453,
+    "format": "png",
+    "width": 1774,
+    "height": 887,
+    "hasAlpha": true,
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparentRatio": 0.6217237842365421,
+      "opaqueRatio": 0.3481441185405119
+    },
+    "visibleBounds": {
+      "x": 75,
+      "y": 190,
+      "width": 1626,
+      "height": 541
+    }
+  },
+  "assets": {
+    "onLight": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/autoroad-varna/dealer-brand/logo-on-light.webp",
+      "sha256": "35ec69c9ba56fbd8097ba36455ade0394c081d437ee480cfc372d068f1bad159",
+      "bytes": 74310,
+      "format": "webp",
+      "width": 1496,
+      "height": 539,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.45029912791562904,
+        "opaqueRatio": 0.5032864385423591
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 37,
+        "width": 1399,
+        "height": 465
+      },
+      "publicPath": "/dealer-brand/logo-on-light.webp"
+    },
+    "onDark": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/autoroad-varna/dealer-brand/logo-on-dark.webp",
+      "sha256": "95a0cfccd1273ef5875c31cd9724d4aecd0851861cb7748a06fdedc35a0f8c30",
+      "bytes": 55358,
+      "format": "webp",
+      "width": 1496,
+      "height": 539,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.45029912791562904,
+        "opaqueRatio": 0.5032864385423591
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 37,
+        "width": 1399,
+        "height": 465
+      },
+      "publicPath": "/dealer-brand/logo-on-dark.webp"
+    },
+    "onAccent": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/autoroad-varna/dealer-brand/logo-on-accent.webp",
+      "sha256": "95a0cfccd1273ef5875c31cd9724d4aecd0851861cb7748a06fdedc35a0f8c30",
+      "bytes": 55358,
+      "format": "webp",
+      "width": 1496,
+      "height": 539,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.45029912791562904,
+        "opaqueRatio": 0.5032864385423591
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 37,
+        "width": 1399,
+        "height": 465
+      },
+      "publicPath": "/dealer-brand/logo-on-accent.webp"
+    }
+  },
+  "master": {
+    "path": "L:/CODEX/cars/leads/branding/fleet-20261011/autoroad-varna/branding/logo-master.png",
+    "sha256": "96a81399a0432112a52b1346040addf6296f16fbf085369cfc232ad27632e0d5",
+    "bytes": 383518,
+    "format": "png",
+    "width": 1496,
+    "height": 539,
+    "hasAlpha": true,
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparentRatio": 0.45029912791562904,
+      "opaqueRatio": 0.5032864385423591
+    },
+    "visibleBounds": {
+      "x": 48,
+      "y": 37,
+      "width": 1399,
+      "height": 465
+    }
+  },
+  "technicalAcceptance": {
+    "reviewer": "baseline asset production agent",
+    "identity": "Exact reviewed spelling and recognizable sourced composition",
+    "transparency": "True alpha; no plate, clipped strokes, filled counters or residue visible in compact sheet",
+    "surfaces": "CUA source identity plus local 120/180/320 width raster review on white, four current dark canvases, black/red/blue accent samples",
+    "approval": "Asset review only. Owner/dealer approval and all six actual consumers pending."
+  },
+  "integrationVerified": false,
+  "hostedVerified": false,
+  "ownerApproved": false,
+  "exportTool": "docs/logo-refresh/2026-09-18/tools/build-approved-logo-pack.mjs",
+  "exportToolSha256": "7fab60c4000210eff6bbb91f9c35e869bad90834d3bdd09d282a9a51835f0dbc",
+  "exportIsolation": "L:/CODEX/cars/runtime/fleet-logo-20261011/baseline-export",
+  "updatedAt": "2026-10-11T09:20:53.54Z",
+  "surfaceReviewPath": "L:/CODEX/cars/leads/branding/fleet-20261011/autoroad-varna/surface-review.png",
+  "exportScratchRetired": true,
+  "sourceEvidence": [
+    {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/autoroad-varna/source-evidence/published-logo.jpg",
+      "sha256": "c90a2afa17f5303b493db4a4cdf0db6505a3ef83cf2bc758221b93ebf5045117",
+      "bytes": 13418,
+      "format": "jpeg",
+      "width": 284,
+      "height": 160,
+      "hasAlpha": false,
+      "alpha": {
+        "min": 255,
+        "max": 255,
+        "transparentRatio": 0,
+        "opaqueRatio": 1
+      },
+      "visibleBounds": {
+        "x": 0,
+        "y": 0,
+        "width": 284,
+        "height": 160
+      }
+    }
+  ],
+  "provenanceFile": "L:/CODEX/cars/leads/branding/fleet-20261011/autoroad-varna/provenance.json"
+}

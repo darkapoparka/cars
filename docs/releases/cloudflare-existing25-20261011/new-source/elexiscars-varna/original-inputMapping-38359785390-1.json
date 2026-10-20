@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-input-mapping",
+  "dealer": "elexiscars-varna",
+  "inputs": {
+    "facts": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/elexiscars-varna/facts.json",
+      "sha256": "136b8f9d714e1400ace3cdc23eaef07fcf49c07b37682ebe2d1c7a5276bb73a8"
+    },
+    "stock": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/elexiscars-varna/stock.json",
+      "sha256": "7c9733ea1b1a11ae9526ee9d12f09580a73078b76aff029915dc1b0ec73b797e"
+    },
+    "locale": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/elexiscars-varna/locale.json",
+      "sha256": "a4dfaf92d10bf3c42daf787a258c1d1948e94fa8747f2db069f6bf611b9b3474"
+    },
+    "branding": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/elexiscars-varna/branding.json",
+      "sha256": "8c0efc65cf52fbb3ba4ae1441c90f2ab7cf268c44499af5207ce1df37cc94421"
+    }
+  },
+  "sources": [
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/elexiscars-varna/identity-repository-corrected-additional100.json",
+      "sha256": "08dffb38259052747885cd30d2b8ebeb1788f27a08a0461dce6a8475c8381e5a"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/elexiscars-varna/facts.json",
+      "sha256": "136b8f9d714e1400ace3cdc23eaef07fcf49c07b37682ebe2d1c7a5276bb73a8"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/elexiscars-varna/stock.json",
+      "sha256": "7c9733ea1b1a11ae9526ee9d12f09580a73078b76aff029915dc1b0ec73b797e"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/elexiscars-varna/locale.json",
+      "sha256": "a4dfaf92d10bf3c42daf787a258c1d1948e94fa8747f2db069f6bf611b9b3474"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/elexiscars-varna/branding.json",
+      "sha256": "8c0efc65cf52fbb3ba4ae1441c90f2ab7cf268c44499af5207ce1df37cc94421"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/elexiscars-varna/media/11791221331078489-1.webp",
+      "sha256": "8b036109270b57e64c65a2091d72ec2f1b33aa4dd3701759e22d318545d21313"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/elexiscars-varna/media/11791221331078489-2.webp",
+      "sha256": "cf322ea827cf2702d80f39ff6e68dd726df2145a50132cd5041db88f89819b20"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/elexiscars-varna/copy-review-additional100.json",
+      "sha256": "98c38a94760028bafc5e5692838fc4a0c23ae35c09da3412134adc04f64880b9"
+    }
+  ]
+}

@@ -3,32 +3,32 @@
   "dealer": "al-hamoor-al-thahabi",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "b66693e3a475ef563ab45f51e4297e7073830ec1",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "path": "templates/app",
-    "digest": "3344230cf8de012eb9c2daf1c962c4a3f189960b52f2026e1d049f2a6eae26ad",
-    "tree": "cd17d913dd597bf7dfb3e2244c2a3a2914ab3080"
+    "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1",
+    "tree": "7f3d3ffa40546635377e6c5225194fe06fead291"
   },
-  "appDigest": "59d3712384f81ed165309b6f6c0bcd20426c687fe04d9e80768df15db6bccfde",
+  "appDigest": "35991aa7b5ecf0507d0c6248b1aa15f5c080739baab752a2f067cc4547cf0927",
   "provenance": {
     "schemaVersion": 1,
     "dealer": "al-hamoor-al-thahabi",
     "profile": "auto-best/src/lib/data/dealer-profile.json",
-    "profileSha256": "b90a0bfda751caf51de52bc36df9dd9fb13ee10d8a5f68522f9a52d19c8c9fea",
+    "profileSha256": "43dc5fcbf9dee34f10535312bfd003494273754daeb88caad36b1c23d0f2ae3a",
     "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
     "vehicles": 8,
     "currency": "AED",
     "observedAt": "2026-09-09",
     "assets": [
       {
-        "source": "auto-best/static/dealer-brand/logo-on-light.webp",
-        "output": "public/dealer-app/logo-light-3a945d87e9198790cc0c.webp",
-        "sha256": "3a945d87e9198790cc0cc15256bbfdec992a95c0d7df6a2edbc31f1f0ebe07e9",
+        "source": "auto-best/static/dealer-brand/v2-f36b0deff0d57ac0/logo-on-light.webp",
+        "output": "public/dealer-app/logo-light-643709b8fcc2872b40a0.webp",
+        "sha256": "643709b8fcc2872b40a0e08b550bd88cacb5f6bd6aec2504dbbc67f55252aaf0",
         "role": "logo-light"
       },
       {
-        "source": "auto-best/static/dealer-brand/logo-on-dark.webp",
-        "output": "public/dealer-app/logo-dark-3ae4cc8473042f99c776.webp",
-        "sha256": "3ae4cc8473042f99c7765d9eff354cf32a9456e032d86fd569613a7d3b727516",
+        "source": "auto-best/static/dealer-brand/v2-f36b0deff0d57ac0/logo-on-dark.webp",
+        "output": "public/dealer-app/logo-dark-3708cb93366efc022351.webp",
+        "sha256": "3708cb93366efc0223514bf7f3cb3658b412220088babe615718ceee64869114",
         "role": "logo-dark"
       },
       {
@@ -223,13 +223,59 @@
         "sha256": "6efdc3616368250c1a0c8a3f62a842850e32632cd05560987433091d6a79f643",
         "role": "vehicle"
       }
+    ],
+    "mileageFacts": [
+      {
+        "slug": "mercedes-benz-cla250-2025-965722",
+        "sourceValue": 22000,
+        "sourceUnit": "km",
+        "canonicalKm": 22000
+      },
+      {
+        "slug": "nissan-rogue-2023-1005647",
+        "sourceValue": 56000,
+        "sourceUnit": "km",
+        "canonicalKm": 56000
+      },
+      {
+        "slug": "toyota-prado-2011-1010924",
+        "sourceValue": 212000,
+        "sourceUnit": "km",
+        "canonicalKm": 212000
+      },
+      {
+        "slug": "chevrolet-malibu-2022-1018774",
+        "sourceValue": 95000,
+        "sourceUnit": "km",
+        "canonicalKm": 95000
+      },
+      {
+        "slug": "toyota-rush-2023-916417",
+        "sourceValue": 121000,
+        "sourceUnit": "km",
+        "canonicalKm": 121000
+      },
+      {
+        "slug": "chevrolet-trax-2020-906007",
+        "sourceValue": 106000,
+        "sourceUnit": "km",
+        "canonicalKm": 106000
+      },
+      {
+        "slug": "ford-figo-2019-1017078",
+        "sourceValue": 185000,
+        "sourceUnit": "km",
+        "canonicalKm": 185000
+      },
+      {
+        "slug": "nissan-sentra-2021-969234",
+        "sourceValue": 116000,
+        "sourceUnit": "km",
+        "canonicalKm": 116000
+      }
     ]
   },
-  "baseDeployment": {
-    "id": "dpl_5Tk36n7rVGTpBs3rMFSPrecGjmNo",
-    "url": "https://cars-alhamooralthahabi.vercel.app/",
-    "checkedAt": "2026-09-28T02:25:28.342Z"
-  },
-  "baseReceiptSha256": "a1df34f2887190d0b0884d864756b08a1e6daf89189c9667d6fa55d2a27ab1cc",
-  "refreshedAt": "2026-09-30T10:41:34.609Z"
+  "needsDealerQA": true,
+  "readyToPublish": false,
+  "refreshedAt": "2026-10-15T02:31:06.003Z"
 }

@@ -2,9 +2,38 @@ import { withBasePath } from "@repo/internationalization/paths";
 import { createElement } from "react";
 import { hugeiconsNavigation } from "../lib/icons/hugeicons-navigation";
 
-const navigationPositions: Partial<
-  Record<keyof typeof hugeiconsNavigation, string>
-> = { car: "0%", import: "25%", sell: "50%", lease: "75%", menu: "100%" };
+const navigationArtwork: Partial<
+  Record<
+    keyof typeof hugeiconsNavigation,
+    { src: string; width: number; top: number }
+  >
+> = {
+  car: {
+    src: "/images/services/navigation-silver-car-v5.webp",
+    width: 34,
+    top: -3,
+  },
+  import: {
+    src: "/images/services/navigation-silver-import-v6.webp",
+    width: 27,
+    top: 0,
+  },
+  sell: {
+    src: "/images/services/navigation-silver-sell-v6.webp",
+    width: 26,
+    top: 1,
+  },
+  lease: {
+    src: "/images/services/navigation-silver-lease-v6.webp",
+    width: 26,
+    top: 1,
+  },
+  menu: {
+    src: "/images/services/navigation-silver-menu-v5.webp",
+    width: 32,
+    top: -2,
+  },
+};
 
 export function DealerBottomNavIcon({
   name,
@@ -13,24 +42,31 @@ export function DealerBottomNavIcon({
   readonly name: keyof typeof hugeiconsNavigation;
   readonly active?: boolean;
 }) {
-  const position = navigationPositions[name];
-  if (position !== undefined) {
+  const artwork = navigationArtwork[name];
+  if (artwork) {
     return (
       <span
         aria-hidden="true"
-        className="block h-6 w-7.5 shrink-0"
+        className="relative block h-[26px] w-10 shrink-0"
         data-icon-family="generated-assets"
         data-nav-icon={name}
-        style={{
-          backgroundImage:
-            name === "sell" || name === "lease"
-              ? `url(${withBasePath("/images/services/navigation-assets-v2-600w.webp")})`
-              : `url(${withBasePath("/images/services/navigation-assets-v1-600w.webp")})`,
-          backgroundSize: "500% auto",
-          backgroundPosition: `${position} 50%`,
-          backgroundRepeat: "no-repeat",
-        }}
-      />
+      >
+        {active ? (
+          <span
+            className="absolute inset-0 rounded-full bg-zinc-100"
+            data-nav-selection="true"
+          />
+        ) : null}
+        <span
+          className="relative block size-full"
+          style={{
+            backgroundImage: `url(${withBasePath(artwork.src)})`,
+            backgroundSize: `${artwork.width}px auto`,
+            backgroundPosition: `center ${artwork.top}px`,
+            backgroundRepeat: "no-repeat",
+          }}
+        />
+      </span>
     );
   }
   return (

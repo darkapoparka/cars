@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-reviewed-modern-bilingual-copy-input",
+  "dealer": "lionauto1-varna",
+  "sourceCommit": "d9594c2979f668831b78609e4e990640259aee81",
+  "baselineTree": "029b7c2f9f71fcb2ae9efd1b50960cb65dfda648",
+  "inputSha256": "9641bb9284609e1d3e2f7c07c05b5bc2d0fa2dd04745d8c139d87c6d126b89fa",
+  "modernInputRowsSha256": "a339de8b5210b6ca1b195587a820339b1cd95f78ed38e4ca11a785e3930c5013",
+  "listingCount": 1,
+  "profileInputs": [
+    {
+      "path": "dealer.json",
+      "gitBlob": "990d6b536531d17c216521137bdec600d4727369",
+      "sha256": "88c443fc97bff4147173518f944adf5d2d55b2c25f9d1b679e604ce6e7de0117",
+      "bytes": 4382
+    },
+    {
+      "path": "business-facts.json",
+      "gitBlob": "4988bf65d2bf6f021d5c91a27c70cadf2d1bf647",
+      "sha256": "06350a431d093e4a863c1758a54a17f075b31a1dd77e1b397bd317bd25db31d4",
+      "bytes": 2146
+    },
+    {
+      "path": "stock.json",
+      "gitBlob": "9d377a522e06a1c72d0cc31ceabe84d71077acb9",
+      "sha256": "2448d8ca379f3495a95bd542857e585f71a567c16ff5f4e6b2762e99759eff0d",
+      "bytes": 10387
+    }
+  ],
+  "reviewedGeneratorHelper": {
+    "path": "scripts/lib/modern-dealer-inventory-copy.mjs",
+    "sha256": "cbdbaa28dc07911cfe913b4e627671b6556fc25d3bfe59364e29c5ca5a29072b",
+    "sourceCommit": "14d86f67c160699c18a6ec5658197cc4d9011e0b"
+  },
+  "review": {
+    "displayCopyOnly": true,
+    "exactSourceDescriptionKeys": true,
+    "listingFactsUnchanged": true,
+    "imageUrlsUnchanged": true,
+    "imageAltsPreserved": true,
+    "interpolationTokensUnchanged": true,
+    "reviewedBy": "Codex, authorized final-template rollout",
+    "reviewedAt": "2026-10-14T20:04:09.134Z",
+    "notes": "Reuse exact existing native or reviewed registered companions for every actual current row; no new translation/factual source edits."
+  },
+  "reviewedCopy": {
+    "audi-a6-2012-11791531218122804": {
+      "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "en": {
+        "description": "Dated sample from a published listing. Confirm the condition, price and availability directly with the dealership.",
+        "imageAlts": [
+          "Audi A6",
+          "Audi A6"
+        ]
+      },
+      "bg": {
+        "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+        "imageAlts": [
+          "Audi A6",
+          "Audi A6"
+        ]
+      }
+    }
+  }
+}

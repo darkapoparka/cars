@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "dealer": "isauto-varna",
+  "reviewed": true,
+  "reviewedAt": "2026-10-14T11:31:43.352Z",
+  "sourceMode": "retained-or-mixed-raster",
+  "master": {
+    "path": "docs/logo-polish-2026-10-14/parallel/vercel/isauto-varna/logo-on-light.png",
+    "sha256": "9e50884debff182cdd5586daf188592cf9d9c85c9bb035119640c77c62f60f70"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "docs/logo-polish-2026-10-14/parallel/vercel/isauto-varna/logo-on-light.png",
+      "sha256": "9e50884debff182cdd5586daf188592cf9d9c85c9bb035119640c77c62f60f70",
+      "sourceReference": "L:\\CODEX\\cars\\docs\\logo-polish-2026-10-14\\parallel\\vercel\\isauto-varna\\logo-on-light.png",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "L:\\CODEX\\cars\\docs\\logo-polish-2026-10-14\\live-assets\\d093167bf017992b76864055e909e36e3fe173aaedcfa077f00a1225277c29e4.webp",
+        "sha256": "d093167bf017992b76864055e909e36e3fe173aaedcfa077f00a1225277c29e4",
+        "reviewReference": "docs/logo-polish-2026-10-14/final-selection.json",
+        "reviewSha256": "6e396eef77195ab7f44d6b055c1936fa079a8195a428a95151fdfd7f3f5d1a16"
+      }
+    },
+    "onDark": {
+      "path": "docs/logo-polish-2026-10-14/parallel/vercel/isauto-varna/logo-on-dark.png",
+      "sha256": "18641a7f0dd2f2e33420f7a121b38d367d001c42df2c5fc213cf2f1ce8bf97e2",
+      "sourceReference": "C:\\Users\\radev\\.codex\\generated_images\\01a13a10-d6a7-7ae1-9379-360e66482a5d\\exec-31531d75-7c45-41a0-be80-47cc077cc79a.png",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-31531d75-7c45-41a0-be80-47cc077cc79a",
+        "modelVersion": null
+      }
+    },
+    "onAccent": {
+      "path": "docs/logo-polish-2026-10-14/parallel/vercel/isauto-varna/logo-on-accent.png",
+      "sha256": "91b6e6c726787d9e3fdaacb2830695bb7e0a32ac19dc7a9a10f0755a555cf0ed",
+      "sourceReference": "L:\\CODEX\\cars\\docs\\logo-polish-2026-10-14\\parallel\\vercel\\isauto-varna\\logo-on-accent.png",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "L:/CODEX/cars/clients/isauto-varna/dealer-brand/logo-on-accent-20260919.webp",
+        "sha256": "2dc87ac83d577192b82b7297369d716ef8fe6528506275cff9206395e2a6537f",
+        "reviewReference": "docs/logo-polish-2026-10-14/final-selection.json",
+        "reviewSha256": "6e396eef77195ab7f44d6b055c1936fa079a8195a428a95151fdfd7f3f5d1a16"
+      }
+    }
+  }
+}

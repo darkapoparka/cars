@@ -5,5 +5,5 @@ export interface FeaturedVideo {
   thumbnail: string;
 }
 
-// No corroborated Exclusive Auto video channel was found. Do not reuse another dealer's clips.
+// Dealer builds add verified videos from their own channel here.
 export const featuredVideos: readonly FeaturedVideo[] = [];

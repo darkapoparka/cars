@@ -31,15 +31,21 @@ export function resetFilters() {
 export function togglePark(id: string) {
   const state = store.read();
   const exists = state.parked.includes(id);
-  patchState({
+  const persisted = patchState({
     parked: exists ? state.parked.filter((value) => value !== id) : [...state.parked, id],
     parkedAt: exists ? state.parkedAt : { ...state.parkedAt, [id]: Date.now() },
-    toast: exists ? 'Car removed from saved cars' : 'Car saved on this device',
   });
+  notify(
+    persisted
+      ? exists
+        ? 'Car removed from saved cars'
+        : 'Car saved on this device'
+      : 'Saving is unavailable. Changes are kept for this session only.',
+  );
 }
 export function saveSearch(name: string, filters: Filters) {
   const state = store.read();
-  patchState({
+  const persisted = patchState({
     saved: [
       ...state.saved,
       {
@@ -49,8 +55,12 @@ export function saveSearch(name: string, filters: Filters) {
         notifications: true,
       },
     ],
-    toast: 'Search saved on this device',
   });
+  notify(
+    persisted
+      ? 'Search saved on this device'
+      : 'Saving is unavailable. Changes are kept for this session only.',
+  );
 }
 export function markViewed(id: string) {
   const state = store.read();

@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-input-mapping",
+  "dealer": "tonyem4m-varna",
+  "inputs": {
+    "facts": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/tonyem4m-varna/facts.json",
+      "sha256": "5cba1b5a978ce82f6db78012453fd2c7b8f832daffb0faf3f72f7e74026bff54"
+    },
+    "stock": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/tonyem4m-varna/stock.json",
+      "sha256": "275520cbd146d6ab6c327c80d0be12a9db8f83868dad15da02cef43384c69593"
+    },
+    "locale": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/tonyem4m-varna/locale.json",
+      "sha256": "f03b7f9cc0e73d5adec38fcf7270217e74e1c572b82e5021978fd4fbe452e677"
+    },
+    "branding": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/tonyem4m-varna/branding.json",
+      "sha256": "f490e806a26f026bbfc9e96240ca67047ad85db0b682c47a8d36a58694a5d0e3"
+    }
+  },
+  "sources": [
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/tonyem4m-varna/identity-repository-corrected-additional100.json",
+      "sha256": "bb9b5afff1de099f5c48c60b5e96facf6482952de7e6767117c03fd17458be34"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/tonyem4m-varna/facts.json",
+      "sha256": "5cba1b5a978ce82f6db78012453fd2c7b8f832daffb0faf3f72f7e74026bff54"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/tonyem4m-varna/stock.json",
+      "sha256": "275520cbd146d6ab6c327c80d0be12a9db8f83868dad15da02cef43384c69593"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/tonyem4m-varna/locale.json",
+      "sha256": "f03b7f9cc0e73d5adec38fcf7270217e74e1c572b82e5021978fd4fbe452e677"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/tonyem4m-varna/branding.json",
+      "sha256": "f490e806a26f026bbfc9e96240ca67047ad85db0b682c47a8d36a58694a5d0e3"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/tonyem4m-varna/media/11764766190100138-1.webp",
+      "sha256": "faa8fb5a1fedcbb55a3520928f69e8cdf3b8e669398c84b2057d189ecdbb4c05"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/tonyem4m-varna/media/11764766190100138-2.webp",
+      "sha256": "5a4bdef9d4ed0da636382d97f77a3908dd38c8d6088fb2557fc8f644944e81f4"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/tonyem4m-varna/copy-review-additional100.json",
+      "sha256": "3ec5c5e1b4541271fe506c31159eeb4dba5990c3ca35d1c2b1bda657a57dfba1"
+    }
+  ]
+}

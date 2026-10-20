@@ -1,0 +1,417 @@
+{
+  "schemaVersion": 1,
+  "slug": "chernomore-varna",
+  "business": {
+    "slug": "chernomore-varna",
+    "name": "Черно море",
+    "shortName": "Черно море",
+    "latinName": "Черно море",
+    "tagline": "Черно море · Варна",
+    "city": "Варна",
+    "region": "",
+    "country": "BG",
+    "countryCode": "BG",
+    "locale": "bg-BG",
+    "currency": "EUR",
+    "distanceUnit": "km",
+    "address": "Кръстовището на бул. Цар Освободител и бул. Константин и Фружин, Варна, България",
+    "addressLine": "Кръстовището на бул. Цар Освободител и бул. Константин и Фружин",
+    "phoneDisplay": "0888596963, 052/560733",
+    "phoneHref": "tel:+359888596963",
+    "phoneE164": "+359888596963",
+    "email": "",
+    "hours": "Потвърдете работното време директно с автокъщата.",
+    "website": "https://chernomore.mobile.bg/",
+    "inventoryUrl": "https://chernomore.mobile.bg/",
+    "contactUrl": "https://chernomore.mobile.bg/contacts",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=%D0%A7%D0%B5%D1%80%D0%BD%D0%BE%20%D0%BC%D0%BE%D1%80%D0%B5%2C%20%D0%9A%D1%80%D1%8A%D1%81%D1%82%D0%BE%D0%B2%D0%B8%D1%89%D0%B5%D1%82%D0%BE%20%D0%BD%D0%B0%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20%D0%B8%20%D0%B1%D1%83%D0%BB.%20%D0%9A%D0%BE%D0%BD%D1%81%D1%82%D0%B0%D0%BD%D1%82%D0%B8%D0%BD%20%D0%B8%20%D0%A4%D1%80%D1%83%D0%B6%D0%B8%D0%BD%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F",
+    "mapsEmbedUrl": "https://maps.google.com/maps?q=%D0%A7%D0%B5%D1%80%D0%BD%D0%BE%20%D0%BC%D0%BE%D1%80%D0%B5%2C%20%D0%9A%D1%80%D1%8A%D1%81%D1%82%D0%BE%D0%B2%D0%B8%D1%89%D0%B5%D1%82%D0%BE%20%D0%BD%D0%B0%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20%D0%B8%20%D0%B1%D1%83%D0%BB.%20%D0%9A%D0%BE%D0%BD%D1%81%D1%82%D0%B0%D0%BD%D1%82%D0%B8%D0%BD%20%D0%B8%20%D0%A4%D1%80%D1%83%D0%B6%D0%B8%D0%BD%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F&z=16&output=embed",
+    "accent": "#c40101",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png",
+    "socialLinks": {
+      "facebook": "",
+      "instagram": "",
+      "youtube": "",
+      "tiktok": ""
+    },
+    "services": [],
+    "inventoryNotice": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "previewNotice": "Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация.",
+    "observedAt": "2026-10-12T10:44:18.739Z",
+    "coordinates": null,
+    "raw": {
+      "schemaVersion": 1,
+      "slug": "chernomore-varna",
+      "name": "Черно море",
+      "shortName": "Черно море",
+      "city": "Варна",
+      "country": "BG",
+      "countryCode": "BG",
+      "locale": "bg-BG",
+      "currency": "EUR",
+      "distanceUnit": "km",
+      "phone": "0888596963",
+      "phoneDisplay": "0888596963, 052/560733",
+      "phoneE164": "+359888596963",
+      "phones": [
+        "+359888596963",
+        "+35952560733"
+      ],
+      "addressLine": "Кръстовището на бул. Цар Освободител и бул. Константин и Фружин",
+      "address": "Кръстовището на бул. Цар Освободител и бул. Константин и Фружин, Варна, България",
+      "hours": "Потвърдете работното време директно с автокъщата.",
+      "email": "",
+      "sourceUrl": "https://chernomore.mobile.bg/",
+      "stockUrl": "https://chernomore.mobile.bg/",
+      "contactSourceUrl": "https://chernomore.mobile.bg/contacts",
+      "observedAt": "2026-10-12T10:44:18.739Z",
+      "inventoryNotice": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+      "previewNotice": "Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация.",
+      "services": [],
+      "socialLinks": {},
+      "logo": "/dealer-brand/logo-on-light.png",
+      "logoLight": "/dealer-brand/logo-on-light.png",
+      "logoDark": "/dealer-brand/logo-on-dark.png",
+      "modernInventoryCopy": {
+        "chernomore-varna-21771946973449498": {
+          "sourceDescription": "Audi Q8 50 TDI S-Line от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+          "en": {
+            "description": "Audi Q8 50 TDI S-Line from a dated public advert. Confirm condition, price and availability directly with the dealership.",
+            "imageAlts": [
+              "Audi Q8 50 TDI S-Line — dated public advert photo 1",
+              "Audi Q8 50 TDI S-Line — dated public advert photo 2"
+            ]
+          },
+          "bg": {
+            "description": "Audi Q8 50 TDI S-Line от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+            "imageAlts": [
+              "Audi Q8 50 TDI S-Line — снимка от датирана публична обява 1",
+              "Audi Q8 50 TDI S-Line — снимка от датирана публична обява 2"
+            ]
+          }
+        },
+        "chernomore-varna-11779358576885782": {
+          "sourceDescription": "Audi A5 Sportback 2.0 TFSI quattro от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+          "en": {
+            "description": "Audi A5 Sportback 2.0 TFSI quattro from a dated public advert. Confirm condition, price and availability directly with the dealership.",
+            "imageAlts": [
+              "Audi A5 Sportback 2.0 TFSI quattro — dated public advert photo 1",
+              "Audi A5 Sportback 2.0 TFSI quattro — dated public advert photo 2"
+            ]
+          },
+          "bg": {
+            "description": "Audi A5 Sportback 2.0 TFSI quattro от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+            "imageAlts": [
+              "Audi A5 Sportback 2.0 TFSI quattro — снимка от датирана публична обява 1",
+              "Audi A5 Sportback 2.0 TFSI quattro — снимка от датирана публична обява 2"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "listings": [
+    {
+      "id": "21771946973449498",
+      "sourceId": "21771946973449498",
+      "slug": "chernomore-varna-21771946973449498",
+      "title": "Audi Q8 50 TDI S-Line",
+      "make": "Audi",
+      "model": "Q8",
+      "trim": "",
+      "year": 2021,
+      "priceAmount": 46900,
+      "currency": "EUR",
+      "mileageValue": 150000,
+      "mileageUnit": "km",
+      "mileageOnRequest": false,
+      "body": "SUV",
+      "bodyType": "suv",
+      "fuel": "Diesel",
+      "fuelType": "diesel",
+      "transmission": "Automatic",
+      "transmissionType": "automatic",
+      "color": "",
+      "powerHp": null,
+      "engine": "",
+      "drivetrain": "",
+      "features": [],
+      "images": [
+        "/dealer-stock/21771946973449498-1.webp",
+        "/dealer-stock/21771946973449498-2.webp"
+      ],
+      "image": "/dealer-stock/21771946973449498-1.webp",
+      "sourceUrl": "https://chernomore.mobile.bg/obiava-21771946973449498-audi-q8-50tdi-3xs-line-maxton-desing",
+      "observedAt": "2026-10-12T12:05:57.074Z",
+      "availability": "Датирана обява; потвърдете цената и наличността директно с автокъщата.",
+      "description": "Audi Q8 50 TDI S-Line от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+      "condition": "used",
+      "location": "Варна",
+      "raw": {
+        "title": "Audi Q8 50 TDI S-Line",
+        "make": "Audi",
+        "model": "Q8",
+        "year": 2021,
+        "priceAmount": 46900,
+        "mileageValue": 150000,
+        "fuel": "Diesel",
+        "transmission": "Automatic",
+        "body": "SUV",
+        "description": "Audi Q8 50 TDI S-Line от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+        "sourceFieldProof": {
+          "source": "https://chernomore.mobile.bg/obiava-21771946973449498-audi-q8-50tdi-3xs-line-maxton-desing",
+          "year": "Дата на производство ноември 2021",
+          "price": "46 900 €,",
+          "mileage": "Пробег [км] 150000 км",
+          "fuel": "Двигател Дизелов",
+          "transmission": "Скоростна кутия Автоматична",
+          "body": "Категория Джип"
+        },
+        "sourceCaveats": [
+          " Автосалон Черно море дава възможност за замяна на вашия стар, повреден или катастрофирал автомобил",
+          " Варна, Кайсиева градина Местоположение: Кръстовището на бул"
+        ],
+        "id": "21771946973449498",
+        "slug": "chernomore-varna-21771946973449498",
+        "currency": "EUR",
+        "priceOnRequest": false,
+        "mileageOnRequest": false,
+        "mileageUnit": "km",
+        "condition": "used",
+        "images": [
+          "/dealer-stock/21771946973449498-1.webp",
+          "/dealer-stock/21771946973449498-2.webp"
+        ],
+        "sourceUrl": "https://chernomore.mobile.bg/obiava-21771946973449498-audi-q8-50tdi-3xs-line-maxton-desing",
+        "observedAt": "2026-10-12T12:05:57.074Z",
+        "availability": "Датирана обява; потвърдете цената и наличността директно с автокъщата.",
+        "sourceProof": {
+          "sha256": "7c7ea99060c7bb218de466ac831e26c715ca9d34c3c636e23cbebfd079abd4c7",
+          "originalPhotoBytesUnchanged": true,
+          "watermarksPreserved": true
+        },
+        "sourceRecord": {
+          "path": ".client/registered-reviewed-public-inputs/stock.json",
+          "sha256": "12c1194f1eb6050f44fed3b8f59673fb02893ab9b72eb9c75891e0d9c51c5e8d",
+          "id": "21771946973449498"
+        }
+      }
+    },
+    {
+      "id": "11779358576885782",
+      "sourceId": "11779358576885782",
+      "slug": "chernomore-varna-11779358576885782",
+      "title": "Audi A5 Sportback 2.0 TFSI quattro",
+      "make": "Audi",
+      "model": "A5",
+      "trim": "",
+      "year": 2019,
+      "priceAmount": 18900,
+      "currency": "EUR",
+      "mileageValue": 199000,
+      "mileageUnit": "km",
+      "mileageOnRequest": false,
+      "body": "Hatchback",
+      "bodyType": "hatchback",
+      "fuel": "Petrol",
+      "fuelType": "gasoline",
+      "transmission": "Automatic",
+      "transmissionType": "automatic",
+      "color": "",
+      "powerHp": null,
+      "engine": "",
+      "drivetrain": "",
+      "features": [],
+      "images": [
+        "/dealer-stock/11779358576885782-1.webp",
+        "/dealer-stock/11779358576885782-2.webp"
+      ],
+      "image": "/dealer-stock/11779358576885782-1.webp",
+      "sourceUrl": "https://chernomore.mobile.bg/obiava-11779358576885782-audi-a5-sportback-s-line-2-0tfsi-quattro-automatic",
+      "observedAt": "2026-10-12T12:05:57.075Z",
+      "availability": "Датирана обява; потвърдете цената и наличността директно с автокъщата.",
+      "description": "Audi A5 Sportback 2.0 TFSI quattro от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+      "condition": "used",
+      "location": "Варна",
+      "raw": {
+        "title": "Audi A5 Sportback 2.0 TFSI quattro",
+        "make": "Audi",
+        "model": "A5",
+        "year": 2019,
+        "priceAmount": 18900,
+        "mileageValue": 199000,
+        "fuel": "Petrol",
+        "transmission": "Automatic",
+        "body": "Hatchback",
+        "description": "Audi A5 Sportback 2.0 TFSI quattro от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+        "sourceFieldProof": {
+          "source": "https://chernomore.mobile.bg/obiava-11779358576885782-audi-a5-sportback-s-line-2-0tfsi-quattro-automatic",
+          "year": "Дата на производство януари 2019",
+          "price": "18 900 €,",
+          "mileage": "Пробег [км] 199000 км",
+          "fuel": "Двигател Бензинов",
+          "transmission": "Скоростна кутия Автоматична",
+          "body": "Категория Хечбек"
+        },
+        "sourceCaveats": [
+          " Автосалон Черно море дава възможност за замяна на вашия стар, повреден или катастрофирал автомобил",
+          " Варна, Кайсиева градина Местоположение: Кръстовището на бул"
+        ],
+        "id": "11779358576885782",
+        "slug": "chernomore-varna-11779358576885782",
+        "currency": "EUR",
+        "priceOnRequest": false,
+        "mileageOnRequest": false,
+        "mileageUnit": "km",
+        "condition": "used",
+        "images": [
+          "/dealer-stock/11779358576885782-1.webp",
+          "/dealer-stock/11779358576885782-2.webp"
+        ],
+        "sourceUrl": "https://chernomore.mobile.bg/obiava-11779358576885782-audi-a5-sportback-s-line-2-0tfsi-quattro-automatic",
+        "observedAt": "2026-10-12T12:05:57.075Z",
+        "availability": "Датирана обява; потвърдете цената и наличността директно с автокъщата.",
+        "sourceProof": {
+          "sha256": "00b4d3e32834da1f94ebc1b271a4ff8f2601cab9eb78237acdeca7cbbdeb0398",
+          "originalPhotoBytesUnchanged": true,
+          "watermarksPreserved": true
+        },
+        "sourceRecord": {
+          "path": ".client/registered-reviewed-public-inputs/stock.json",
+          "sha256": "12c1194f1eb6050f44fed3b8f59673fb02893ab9b72eb9c75891e0d9c51c5e8d",
+          "id": "11779358576885782"
+        }
+      }
+    }
+  ],
+  "rawFacts": {
+    "schemaVersion": 1,
+    "slug": "chernomore-varna",
+    "dealerId": "chernomore-varna",
+    "business": {
+      "schemaVersion": 1,
+      "slug": "chernomore-varna",
+      "name": "Черно море",
+      "shortName": "Черно море",
+      "city": "Варна",
+      "country": "BG",
+      "countryCode": "BG",
+      "locale": "bg-BG",
+      "currency": "EUR",
+      "distanceUnit": "km",
+      "phone": "0888596963",
+      "phoneDisplay": "0888596963, 052/560733",
+      "phoneE164": "+359888596963",
+      "phones": [
+        "+359888596963",
+        "+35952560733"
+      ],
+      "addressLine": "Кръстовището на бул. Цар Освободител и бул. Константин и Фружин",
+      "address": "Кръстовището на бул. Цар Освободител и бул. Константин и Фружин, Варна, България",
+      "hours": "Потвърдете работното време директно с автокъщата.",
+      "email": "",
+      "sourceUrl": "https://chernomore.mobile.bg/",
+      "stockUrl": "https://chernomore.mobile.bg/",
+      "contactSourceUrl": "https://chernomore.mobile.bg/contacts",
+      "observedAt": "2026-10-12T10:44:18.739Z",
+      "inventoryNotice": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+      "previewNotice": "Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация.",
+      "services": [],
+      "socialLinks": {},
+      "logo": "/dealer-brand/logo-on-light.png",
+      "logoLight": "/dealer-brand/logo-on-light.png",
+      "logoDark": "/dealer-brand/logo-on-dark.png",
+      "modernInventoryCopy": {
+        "chernomore-varna-21771946973449498": {
+          "sourceDescription": "Audi Q8 50 TDI S-Line от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+          "en": {
+            "description": "Audi Q8 50 TDI S-Line from a dated public advert. Confirm condition, price and availability directly with the dealership.",
+            "imageAlts": [
+              "Audi Q8 50 TDI S-Line — dated public advert photo 1",
+              "Audi Q8 50 TDI S-Line — dated public advert photo 2"
+            ]
+          },
+          "bg": {
+            "description": "Audi Q8 50 TDI S-Line от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+            "imageAlts": [
+              "Audi Q8 50 TDI S-Line — снимка от датирана публична обява 1",
+              "Audi Q8 50 TDI S-Line — снимка от датирана публична обява 2"
+            ]
+          }
+        },
+        "chernomore-varna-11779358576885782": {
+          "sourceDescription": "Audi A5 Sportback 2.0 TFSI quattro от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+          "en": {
+            "description": "Audi A5 Sportback 2.0 TFSI quattro from a dated public advert. Confirm condition, price and availability directly with the dealership.",
+            "imageAlts": [
+              "Audi A5 Sportback 2.0 TFSI quattro — dated public advert photo 1",
+              "Audi A5 Sportback 2.0 TFSI quattro — dated public advert photo 2"
+            ]
+          },
+          "bg": {
+            "description": "Audi A5 Sportback 2.0 TFSI quattro от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+            "imageAlts": [
+              "Audi A5 Sportback 2.0 TFSI quattro — снимка от датирана публична обява 1",
+              "Audi A5 Sportback 2.0 TFSI quattro — снимка от датирана публична обява 2"
+            ]
+          }
+        }
+      }
+    },
+    "research": {
+      "website": {
+        "status": "confirmed-primary-own-site",
+        "url": "https://chernomoreauto.com/",
+        "phones": [
+          "+35952560733",
+          "+359888596963"
+        ]
+      },
+      "publicIdentityKey": "mobile-profile:chernomore.mobile.bg",
+      "profileAdvertCount": 30,
+      "availabilityConfirmed": false,
+      "legalEntityOwnershipVerified": false,
+      "addressExactness": "public-contact-as-published",
+      "caveats": [
+        "Preserve existing Cars-owned clients/chernomore-varna; not an absent new-client identity."
+      ],
+      "sourceProof": [
+        {
+          "url": "https://chernomore.mobile.bg/",
+          "finalUrl": "https://chernomore.mobile.bg/",
+          "observedAt": "2026-10-12T10:44:18.826Z",
+          "status": 200,
+          "bytes": 182287,
+          "sha256": "3a71c0e4cd06ec28a99b579d1b3b203ddce475356e4a78a07d0c45059c0a2382"
+        },
+        {
+          "url": "https://chernomore.mobile.bg/contacts",
+          "finalUrl": "https://chernomore.mobile.bg/contacts",
+          "observedAt": "2026-10-12T10:44:18.739Z",
+          "status": 200,
+          "bytes": 45386,
+          "sha256": "2d2767985bf2f1ccd3affb0da1c19011f21e8ece6d753047137b37d4a8fd9b58"
+        },
+        {
+          "url": "https://chernomore.mobile.bg/about",
+          "finalUrl": "https://chernomore.mobile.bg/about",
+          "observedAt": "2026-10-12T10:44:18.716Z",
+          "status": 200,
+          "bytes": 8421,
+          "sha256": "bc84e40e95179b1d25757c655dee1acdb7a5fa376b7feade479e06ed132dde3b"
+        }
+      ],
+      "sourceAction": "preserve-existing-cars-source",
+      "existingSourceTree": "3fc884818d7f079b6b60f290fd98856e78b3785d",
+      "inventoryModeSelection": "dated-listing-snapshot",
+      "productionAssetInputsComplete": true,
+      "stockSnapshotScope": "Two retained public adverts, not a complete/live inventory",
+      "stockMediaAuthority": "Owner-authorized public dated demo scope; original source bytes and watermarks retained"
+    }
+  },
+  "sourceCount": 2,
+  "stockKind": "dated-listing-snapshot",
+  "logoContract": null
+}

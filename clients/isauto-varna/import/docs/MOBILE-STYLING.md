@@ -113,6 +113,23 @@ with 14px trailing padding so the final pill is fully visible after scrolling.
 A partially visible next pill signals more choices. Home and Import keep 2px
 block padding; Cars retains its existing vertical toolbar spacing.
 
+The owner's 11 October refinement restores breathing room on Home, Import and
+Services browse rails: 16px from the drawer edge to the painted pills and 16px
+from the pills to the first card. The earlier 12px trial crowded the rounded
+drawer edge. Services uses the shared quick rail/pill styles, including 40px
+surfaces and 44px tap areas. Its All pill includes the total service count from
+the actual directory. Other content drawers and the existing Cars toolbar retain
+their appropriate spacing; do not flatten every panel into this browse role.
+
+Services cards keep one full-card link, a large 42% image panel and left-aligned
+title, description and action. On mobile, use 16px between cards, let longer copy
+wrap naturally, and keep image and text side by side at equal height. Let content
+set the row height; do not reserve extra height or push the action to the bottom
+with an auto margin. The action follows the description with an 8px gap and uses
+a 36px surface paired with the shared 18px icon.
+Avoid tiny inset thumbnails and redundant context lines. Desktop cards retain
+their existing image, copy and action layout.
+
 Final Home corner roles, confirmed on 10 October 2026: quick filters, brand cards
 and type cards use 12px corners; vehicle cards retain their existing 10px corners.
 Quick filters match the browse controls they accompany. These are separate
@@ -129,16 +146,21 @@ transparent pseudo-element outsets to retain the 44px rail footprint and tap are
 Icon-only pills extend the target on all four sides. `MobileIconAction` retains
 its native 44px box around the 40px painted circle.
 
-Page utility bars use `.mobile-utility-bar`: 44px visible circles with 22px icons
-for Home/Import contact and map, Cars Filter/Sort, PDP Back/Compare/Save/Share and
-the photo-viewer Close action. Use 14px edge gutters, an 8px top inset plus the
+Page utility bars use `.mobile-utility-bar`: 40px visible circles, 20px glyphs and
+44px native tap areas. Cars Filter/Sort, PDP Back/Compare/Save/Share and
+photo-viewer Close share the compact appbar role. Cars Search paints a 40px-high
+capsule inside its native 44px button, using a 20px magnifier and the existing
+20px search text. Brand/Model/Price/Year quick pills keep their 40px surfaces,
+44px tap areas and 18px labels. This follows the owner's 14 October request
+to align Cars with Home and PDP; consume the existing mobile control tokens.
+Use 14px edge gutters, an 8px top inset plus the
 safe area, and 8px action gaps (4px below 375px). Dark and image-overlay tones
 retain the contrast needed by their backgrounds. Sheet controls keep their
 compact role. Quick filters in the separate row remain 40px high.
-The header map pin has the owner's approved 2px optical correction (24px)
-beside the 22px call glyph. Its narrow silhouette needs the extra size; the
-button surface, stroke, spacing and tap area remain shared.
-Search fields keep their existing dimensions and independent 20px typography.
+The shared mobile appbar's contact/map actions use 40px visible circles with
+20px glyphs and 44px native tap areas, following the owner's 11 October request
+for smaller header utilities. This supersedes the prior map optical correction.
+Search overlay fields keep their existing dimensions and independent 20px typography.
 The toolbar sizing applies below 768px and preserves desktop styling.
 Default Filter and Sort circles share Search's borderless white surface; keep
 their selected fill and visible keyboard focus styling.

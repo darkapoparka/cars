@@ -94,7 +94,7 @@ export function defineShowroom(config: ShowroomConfig): Readonly<ShowroomConfig>
 // A neutral template placeholder. Replace only with verified dealer details.
 export const showroom = defineShowroom({
   "name": "OUTLETCARS.BG — Варна",
-  "logo": "/dealer-brand/logo-on-light.webp",
+  "logo": "/dealer-brand/v2-5c0d2d99cd366a51/logo-on-light.webp",
   "phone": "+359898921010",
   "email": null,
   "address": "бул. Янош Хуняди 518, срещу КАТ Варна, Варна, България",

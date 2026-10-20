@@ -3,6 +3,7 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import test from 'node:test';
+import {spawnSync} from 'node:child_process';
 import {git,writeJson,sha256} from './lib/workflow.mjs';
 import {packageFiles,packageDigest,verifyPackage,verifyPackageTree,exportDealer,pushExport} from './export-dealer.mjs';
 
@@ -57,29 +58,53 @@ function fixture(t,{frozen=true}={}) {
   return {area,root,pkg,manifest,sourceCommit,tree,reseal};
 }
 
-test('a saved export can push borrowed asset objects from a fresh process environment',t=>{
+test('a saved export pushes borrowed assets from a fresh process with safe Git context only',t=>{
   const f=fixture(t),remote=path.join(f.area,'remote'),assets=path.join(f.area,'asset-objects');init(remote);init(assets);
   put(remote,'README.md','Reviewed initialization.\n');const parent=commit(remote);
+  put(assets,'main.txt','Known-good alternate main.\n');commit(assets);
+  put(assets,'.git/refs/remotes/origin/stale','f'.repeat(40)+'\n');
   git(f.root,['config','url.'+remote.replaceAll('\\','/')+'.insteadOf','https://github.com/fixture/cars-demo.git']);
   const borrowed=git(assets,['hash-object','-w','--stdin'],{input:fs.readFileSync(path.join(f.pkg,'assets/shared.bin'))});
-  const previous=process.env.GIT_ALTERNATE_OBJECT_DIRECTORIES;
+  const safeConfig={
+    'core.alternateRefsPrefixes':'refs/heads/main','maintenance.auto':'false','gc.auto':'0','fetch.writeCommitGraph':'false',
+  };
+  const previous=Object.fromEntries(Object.entries(process.env).filter(([key])=>key==='GIT_ALTERNATE_OBJECT_DIRECTORIES'||key==='GIT_CONFIG_COUNT'||/^GIT_CONFIG_(?:KEY|VALUE)_\d+$/.test(key)));
+  const clearGitContext=env=>{for(const key of Object.keys(env))if(key==='GIT_ALTERNATE_OBJECT_DIRECTORIES'||key==='GIT_CONFIG_COUNT'||/^GIT_CONFIG_(?:KEY|VALUE)_\d+$/.test(key))delete env[key];};
   let result;
   try {
+    clearGitContext(process.env);
     process.env.GIT_ALTERNATE_OBJECT_DIRECTORIES=path.join(assets,'.git/objects');
+    const entries=[...Object.entries(safeConfig),['credential.interactive','never']];
+    process.env.GIT_CONFIG_COUNT=String(entries.length);
+    entries.forEach(([key,value],index)=>{process.env['GIT_CONFIG_KEY_'+index]=key;process.env['GIT_CONFIG_VALUE_'+index]=value;});
     const packageTree=f.tree(),proposal=exportDealer({root:f.root,slug:'demo',packageTree,targetBranch:'codex/borrowed-assets'});
     const reviewFile=path.join(f.area,'review.json');
     writeJson(reviewFile,{remoteCommit:parent,candidateDigest:proposal.candidateDigest,changes:proposal.changes.map(name=>
       ({path:name,resolution:'canonical-source',reason:'Review the exact fixture package.'}))});
     result=exportDealer({root:f.root,slug:'demo',packageTree,targetBranch:'codex/borrowed-assets',reviewFile,write:true});
     assert.equal(result.gitObjectAlternates,process.env.GIT_ALTERNATE_OBJECT_DIRECTORIES);
+    assert.deepEqual(result.gitProcessConfig,safeConfig);
   } finally {
-    if(previous===undefined)delete process.env.GIT_ALTERNATE_OBJECT_DIRECTORIES;
-    else process.env.GIT_ALTERNATE_OBJECT_DIRECTORIES=previous;
+    clearGitContext(process.env);Object.assign(process.env,previous);
   }
-  assert.equal(git(f.root,['cat-file','-e',borrowed],{env:{GIT_ALTERNATE_OBJECT_DIRECTORIES:''},allowFailure:true}),null);
-  pushExport({root:f.root,receiptFile:path.join(result.proposalDirectory,'export.json')});
+  assert.equal(git(f.root,['cat-file','-e',borrowed],{env:{GIT_ALTERNATE_OBJECT_DIRECTORIES:'',GIT_CONFIG_COUNT:'0'},allowFailure:true}),null);
+  assert.equal(git(f.root,['-c','core.alternateRefsPrefixes=refs/remotes/origin/stale','rev-list','--alternate-refs','--max-count=1'],
+    {env:{GIT_ALTERNATE_OBJECT_DIRECTORIES:path.join(assets,'.git/objects'),GIT_CONFIG_COUNT:'0'},allowFailure:true}),null);
+  const invalidReceipt=path.join(f.area,'invalid-receipt.json');
+  for(const gitProcessConfig of [{'credential.helper':'unreviewed-helper'},{'gc.auto':'1'}]) {
+    writeJson(invalidReceipt,{...result,gitProcessConfig});
+    assert.throws(()=>pushExport({root:f.root,receiptFile:invalidReceipt}),/Invalid retained Git process configuration/);
+  }
+  const freshEnvironment={...process.env};clearGitContext(freshEnvironment);
+  const pushed=spawnSync(process.execPath,['--input-type=module','-e',
+    'const {pushExport}=await import(process.argv[1]); console.log(JSON.stringify(pushExport({root:process.argv[2],receiptFile:process.argv[3]})));',
+    new URL('./export-dealer.mjs',import.meta.url).href,f.root,path.join(result.proposalDirectory,'export.json')],
+    {encoding:'utf8',env:freshEnvironment,windowsHide:true});
+  assert.equal(pushed.status,0,pushed.stderr||pushed.error?.message);
+  assert.equal(JSON.parse(pushed.stdout).commit,result.commit);
   assert.equal(git(remote,['rev-parse','refs/heads/codex/borrowed-assets']),result.commit);
   assert.deepEqual(git(remote,['cat-file','blob',borrowed],{encoding:null}),fs.readFileSync(path.join(f.pkg,'assets/shared.bin')));
+  for(const key of Object.keys(safeConfig))assert.equal(git(f.root,['config','--local','--get',key],{allowFailure:true}),null);
 });
 
 test('immutable tree verification equals directory verification without a package checkout, and deduplicates binary blobs',t=>{

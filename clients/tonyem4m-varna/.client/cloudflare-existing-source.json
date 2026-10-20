@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "dealer": "tonyem4m-varna",
+  "kind": "personalized-source-candidate-not-an-approved-release",
+  "sourceRevision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+  "candidateSourceDigest": "7a61695a7101cf8e2f8a649f696c5b4781a8eb9a06cc300d59d47485274b0ac4",
+  "qualificationContextPath": ".client/native-qualification-context.json",
+  "qualificationContextSha256": "1ccadf70bdf736e78dbb34fcf63847b0d86267df98cc50d98e3e411fa47a849e",
+  "qualificationLockPath": ".client/native-qualification-lock.json",
+  "qualificationLockSha256": "04633129df9e75d6cd62deeac9125b279957789d75f57cdb0b243ef61bfc3e7e",
+  "sourceDeltaReview": {
+    "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-delta-review.json",
+    "sha256": "43cb6876e815a2a6b866f1dadd304236de4ae58c05fe65c2ab62a23506ee7ce9",
+    "reviewedAt": "2026-10-14T23:55:37.398Z"
+  },
+  "nativeApproval": false,
+  "hostedApproval": false
+}

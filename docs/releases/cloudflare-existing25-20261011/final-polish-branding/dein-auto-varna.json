@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "dealer": "dein-auto-varna",
+  "reviewed": true,
+  "reviewedAt": "2026-10-14T11:56:24.553Z",
+  "sourceMode": "retained-or-mixed-raster",
+  "master": {
+    "path": "docs/logo-polish-2026-10-14/final-raster-inputs/59cd1e66929207f3daf0773d3e0ef0b9ab2f9761face9a1523b7cf0c133397b6.png",
+    "sha256": "59cd1e66929207f3daf0773d3e0ef0b9ab2f9761face9a1523b7cf0c133397b6"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "docs/logo-polish-2026-10-14/final-raster-inputs/59cd1e66929207f3daf0773d3e0ef0b9ab2f9761face9a1523b7cf0c133397b6.png",
+      "sha256": "59cd1e66929207f3daf0773d3e0ef0b9ab2f9761face9a1523b7cf0c133397b6",
+      "sourceReference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/live-assets/028148c0565e2f547aba4f7d1532bd01df60ebfa384471c41811c0bfab66003d.webp",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/live-assets/028148c0565e2f547aba4f7d1532bd01df60ebfa384471c41811c0bfab66003d.webp",
+        "sha256": "028148c0565e2f547aba4f7d1532bd01df60ebfa384471c41811c0bfab66003d",
+        "reviewReference": "docs/logo-polish-2026-10-14/final-selection.json",
+        "reviewSha256": "6e396eef77195ab7f44d6b055c1936fa079a8195a428a95151fdfd7f3f5d1a16"
+      }
+    },
+    "onDark": {
+      "path": "docs/logo-polish-2026-10-14/final-raster-inputs/3f324b7cc21cb5090d8762db3033279208a6ba576ec89ad1ac614356ca48ef3a.png",
+      "sha256": "3f324b7cc21cb5090d8762db3033279208a6ba576ec89ad1ac614356ca48ef3a",
+      "sourceReference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/live-assets/203d3b7ffd6cda4ef2d6f935d0270a9d40e493453c73ca7857759243d9509364.webp",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/live-assets/203d3b7ffd6cda4ef2d6f935d0270a9d40e493453c73ca7857759243d9509364.webp",
+        "sha256": "203d3b7ffd6cda4ef2d6f935d0270a9d40e493453c73ca7857759243d9509364",
+        "reviewReference": "docs/logo-polish-2026-10-14/final-selection.json",
+        "reviewSha256": "6e396eef77195ab7f44d6b055c1936fa079a8195a428a95151fdfd7f3f5d1a16"
+      }
+    },
+    "onAccent": {
+      "path": "docs/logo-polish-2026-10-14/parallel/cf-last50/dein-auto-varna/logo-on-accent.png",
+      "sha256": "c5a445d35e2288607199edc87a00b127f97b23319f9243e4ca376a23b9e6487e",
+      "sourceReference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/parallel/cf-last50/dein-auto-varna/logo-on-accent.png",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-58ec4c8b-c486-4d76-a0bc-8908543efc01",
+        "modelVersion": null
+      }
+    }
+  }
+}

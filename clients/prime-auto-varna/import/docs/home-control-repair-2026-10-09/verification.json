@@ -1,0 +1,144 @@
+{
+  "verifiedAt": "2026-10-09T16:26:40.848Z",
+  "runtime": "v24.21.0",
+  "baseline": "397fd74196057c819e9867561d31ab2d5a1e5c81",
+  "currentMain": "397fd74196057c819e9867561d31ab2d5a1e5c81",
+  "qaDigest": "a6453c047364200dff538cbecc4ff5f9feb7350e631c03ab19b0280054c20114",
+  "sourcePaths": [
+    "src/lib/components/common/MobileSearchControl.svelte",
+    "src/lib/components/home/HomeFiveHero.svelte"
+  ],
+  "checks": [
+    {
+      "name": "sync",
+      "code": 0,
+      "durationMs": 10646
+    },
+    {
+      "name": "svelte-check",
+      "code": 0,
+      "durationMs": 75516
+    },
+    {
+      "name": "eslint",
+      "code": 0,
+      "durationMs": 31399
+    },
+    {
+      "name": "format",
+      "code": 0,
+      "durationMs": 2131
+    },
+    {
+      "name": "architecture",
+      "code": 0,
+      "durationMs": 1006
+    },
+    {
+      "name": "assets",
+      "code": 0,
+      "durationMs": 1420
+    },
+    {
+      "name": "build",
+      "code": 0,
+      "durationMs": 109412
+    }
+  ],
+  "browser": {
+    "startTime": "2026-10-09T16:24:46.666Z",
+    "duration": 46854.464,
+    "expected": 5,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "rendered": {
+    "locales": [
+      "bg",
+      "en"
+    ],
+    "widths": [
+      320,
+      390
+    ],
+    "localCases": 4,
+    "productionBuildCases": 4,
+    "searchFieldHeight": 48,
+    "searchTapTarget": 44,
+    "searchVisibleCircle": 36,
+    "quickFilterHeight": 44,
+    "quickFilterRadius": 12,
+    "pillHeight": 44,
+    "pillRadius": 12
+  },
+  "desktop": {
+    "width": 1440,
+    "height": 1000,
+    "changedPixels": 0,
+    "maxChannelDelta": 0,
+    "heroGeometryEqual": true
+  },
+  "preservedOtherWork": [
+    {
+      "path": "templates/import/src/lib/auxero/home-five.spec.ts",
+      "unchangedSinceStart": true
+    },
+    {
+      "path": "templates/import/src/lib/auxero/home-five.ts",
+      "unchangedSinceStart": true
+    },
+    {
+      "path": "templates/import/src/lib/components/home/HomePage.svelte",
+      "unchangedSinceStart": false
+    },
+    {
+      "path": "templates/import/src/lib/components/inventory/DesktopFilterPicker.svelte",
+      "unchangedSinceStart": true
+    },
+    {
+      "path": "templates/import/src/lib/components/inventory/DesktopFilterRange.svelte",
+      "unchangedSinceStart": true
+    },
+    {
+      "path": "templates/import/src/lib/components/inventory/InventoryDisplayControls.svelte",
+      "unchangedSinceStart": true
+    },
+    {
+      "path": "templates/import/src/lib/components/inventory/InventoryFilter.svelte",
+      "unchangedSinceStart": true
+    },
+    {
+      "path": "templates/import/src/lib/components/inventory/InventoryFiltersDialog.svelte",
+      "unchangedSinceStart": true
+    },
+    {
+      "path": "templates/import/src/lib/components/inventory/InventoryPage.svelte",
+      "unchangedSinceStart": true
+    },
+    {
+      "path": "templates/import/src/lib/components/inventory/InventorySearch.svelte",
+      "unchangedSinceStart": true
+    },
+    {
+      "path": "templates/import/src/lib/components/inventory/InventoryToolbar.svelte",
+      "unchangedSinceStart": true
+    },
+    {
+      "path": "templates/import/src/lib/content/home-discovery.ts",
+      "unchangedSinceStart": true
+    },
+    {
+      "path": "templates/import/src/lib/content/inventory-desktop-controls.ts",
+      "unchangedSinceStart": true
+    },
+    {
+      "path": "templates/import/src/lib/server/home.ts",
+      "unchangedSinceStart": true
+    },
+    {
+      "path": "templates/import/src/lib/styles/desktop-filters.css",
+      "unchangedSinceStart": true
+    }
+  ]
+}

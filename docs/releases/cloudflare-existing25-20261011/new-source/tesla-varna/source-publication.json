@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-source-publication",
+  "reviewed": true,
+  "reviewedAt": "2026-10-13T20:09:14.154Z",
+  "dealer": "tesla-varna",
+  "dealerId": "tesla-varna",
+  "repository": "darkapoparka/cars-tesla-varna",
+  "sourceOwnership": "cars-canonical",
+  "request": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/exact100-last-two-request.json",
+    "sha256": "ae4fabce45cc0e0111a407ec6b1f1d65ff4be7dd7873902d80d72bf72085a731"
+  },
+  "proposal": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/tesla-varna/original-proposal-38456219205-1.json",
+    "sha256": "98c4b49ee5257ae60a787395aec4d9a32fb75694b23a0145f7f0b7aacecbac4d"
+  },
+  "preparation": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/tesla-varna/original-preparation-38456219205-1.json",
+    "sha256": "e3725071505ba5b5ba3f1507a5ae092f2978ebd99a0a791a3d78f42b9c24cf7e"
+  },
+  "inputMapping": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/tesla-varna/original-inputMapping-38456219205-1.json",
+    "sha256": "b0020b23f12ad4cf330e4baa60e9c245818ff9bf01577d059f6469d466b04b7b"
+  },
+  "sourcePublication": {
+    "repository": "darkapoparka/cars",
+    "commit": "fcbfabb6496b5c9cbf7b81b6dfea6025f9afb985",
+    "sourceTree": "c32cdd90cc7897ee0363a1194c23a418ac4a163b",
+    "ref": "refs/heads/main",
+    "publishedAt": "2026-10-13T20:07:26.540Z",
+    "evidence": "https://github.com/darkapoparka/cars/commit/fcbfabb6496b5c9cbf7b81b6dfea6025f9afb985"
+  }
+}

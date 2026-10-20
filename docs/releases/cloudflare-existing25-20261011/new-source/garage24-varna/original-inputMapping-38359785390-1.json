@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-input-mapping",
+  "dealer": "garage24-varna",
+  "inputs": {
+    "facts": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/garage24-varna/facts.json",
+      "sha256": "382eb5713fa1e2588166fc8ade433cc16b6de7cb493aae991f7bfcb8e525f9f2"
+    },
+    "stock": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/garage24-varna/stock.json",
+      "sha256": "205d1bb839f2a4e7335fbfe9a0d85ba1c647a6ac1f80ee16648ad9b3163c6d13"
+    },
+    "locale": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/garage24-varna/locale.json",
+      "sha256": "4ce320fc6d3772dfd416d9466a92e3a01644aa504cc29f50a652ab11cd041cea"
+    },
+    "branding": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/garage24-varna/branding.json",
+      "sha256": "3930cbdea3a146532061fb5033162ef1e49ef857022edb8bb48ca08c127626ef"
+    }
+  },
+  "sources": [
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/garage24-varna/identity-repository-corrected-additional100.json",
+      "sha256": "78d94e072de447d30389d8ace7b4003781e4a7947e42bbf4c70df300e134406c"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/garage24-varna/facts.json",
+      "sha256": "382eb5713fa1e2588166fc8ade433cc16b6de7cb493aae991f7bfcb8e525f9f2"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/garage24-varna/stock.json",
+      "sha256": "205d1bb839f2a4e7335fbfe9a0d85ba1c647a6ac1f80ee16648ad9b3163c6d13"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/garage24-varna/locale.json",
+      "sha256": "4ce320fc6d3772dfd416d9466a92e3a01644aa504cc29f50a652ab11cd041cea"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/garage24-varna/branding.json",
+      "sha256": "3930cbdea3a146532061fb5033162ef1e49ef857022edb8bb48ca08c127626ef"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/garage24-varna/media/21789110878202273-1.webp",
+      "sha256": "4b01c4ea8314c74e528195bc08bf60f0cc376c6f48a8b8080d89cb809be36f3f"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/garage24-varna/media/21789110878202273-2.webp",
+      "sha256": "5fdd07888dd04df62beed9af7a98fa3c9fdd376efde3eda7e7eca60a6a8f8119"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/garage24-varna/copy-review-additional100.json",
+      "sha256": "80a32070fd565c7e828880eb7933bcf07a4eda6bfba502115a95638444b4c4a0"
+    }
+  ]
+}

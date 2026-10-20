@@ -27,9 +27,9 @@
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=The%20Dealers%20Point%2C%20Plot%20No.%20364-0442%2C%20Al%20Quoz%20Industrial%20Area%201%2C%20Dubai%2C%20UAE",
     "mapsEmbedUrl": "https://maps.google.com/maps?q=The%20Dealers%20Point%2C%20Plot%20No.%20364-0442%2C%20Al%20Quoz%20Industrial%20Area%201%2C%20Dubai%2C%20UAE&z=16&output=embed",
     "accent": "#c40101",
-    "logo": "/dealer-brand/logo-on-light.webp",
-    "logoLight": "/dealer-brand/logo-on-light.webp",
-    "logoDark": "/dealer-brand/logo-on-dark.webp",
+    "logo": "/dealer-brand/v2-2e9ab7c9bd6ca568/logo-on-light.webp",
+    "logoLight": "/dealer-brand/v2-2e9ab7c9bd6ca568/logo-on-light.webp",
+    "logoDark": "/dealer-brand/v2-2e9ab7c9bd6ca568/logo-on-dark.webp",
     "socialLinks": {
       "facebook": "",
       "instagram": "",
@@ -87,6 +87,7 @@
       "currency": "AED",
       "mileageValue": 100600,
       "mileageUnit": "km",
+      "mileageOnRequest": false,
       "body": "Coupe",
       "bodyType": "coupe",
       "fuel": "Gasoline",
@@ -142,6 +143,7 @@
       "currency": "AED",
       "mileageValue": 117800,
       "mileageUnit": "km",
+      "mileageOnRequest": false,
       "body": "Coupe",
       "bodyType": "coupe",
       "fuel": "Gasoline",
@@ -197,6 +199,7 @@
       "currency": "AED",
       "mileageValue": 54500,
       "mileageUnit": "km",
+      "mileageOnRequest": false,
       "body": "Coupe",
       "bodyType": "coupe",
       "fuel": "Gasoline",
@@ -252,6 +255,7 @@
       "currency": "AED",
       "mileageValue": 116600,
       "mileageUnit": "km",
+      "mileageOnRequest": false,
       "body": "Coupe",
       "bodyType": "coupe",
       "fuel": "Gasoline",
@@ -307,6 +311,7 @@
       "currency": "AED",
       "mileageValue": 105400,
       "mileageUnit": "km",
+      "mileageOnRequest": false,
       "body": "Coupe",
       "bodyType": "coupe",
       "fuel": "Gasoline",
@@ -362,6 +367,7 @@
       "currency": "AED",
       "mileageValue": 94000,
       "mileageUnit": "km",
+      "mileageOnRequest": false,
       "body": "Convertible",
       "bodyType": "convertible",
       "fuel": "Gasoline",
@@ -417,6 +423,7 @@
       "currency": "AED",
       "mileageValue": 44000,
       "mileageUnit": "km",
+      "mileageOnRequest": false,
       "body": "SUV",
       "bodyType": "suv",
       "fuel": "Gasoline",
@@ -472,6 +479,7 @@
       "currency": "AED",
       "mileageValue": 153800,
       "mileageUnit": "km",
+      "mileageOnRequest": false,
       "body": "SUV",
       "bodyType": "suv",
       "fuel": "Gasoline",
@@ -527,6 +535,7 @@
       "currency": "AED",
       "mileageValue": 29000,
       "mileageUnit": "km",
+      "mileageOnRequest": false,
       "body": "SUV",
       "bodyType": "suv",
       "fuel": "Gasoline",
@@ -582,6 +591,7 @@
       "currency": "AED",
       "mileageValue": 41220,
       "mileageUnit": "km",
+      "mileageOnRequest": false,
       "body": "SUV",
       "bodyType": "suv",
       "fuel": "Gasoline",
@@ -653,6 +663,7 @@
     "disclosure": "Dated public stock sample, not a live feed. Confirm price, specifications and availability directly with The Dealers Point. Demo forms do not send messages."
   },
   "sourceCount": 10,
+  "stockKind": "",
   "logoContract": {
     "schemaVersion": 1,
     "dealer": "the-dealers-point",
@@ -661,19 +672,19 @@
     "originalSha256": "46034eb61feee84df61e29f86df97274d1e8550b0530630912963e086d616a6d",
     "assets": {
       "onLight": {
-        "publicPath": "/dealer-brand/logo-on-light.webp",
-        "sha256": "391e784b3ed422b42763a9417b406e6d8433b625d0149c68464659145c363cb8",
-        "bytes": 105074
+        "publicPath": "/dealer-brand/v2-2e9ab7c9bd6ca568/logo-on-light.webp",
+        "sha256": "fcd009a9a3f5ceeb9bb60152a80515cc1d6028eb0bff51462e5b45988bbd6f31",
+        "bytes": 180816
       },
       "onDark": {
-        "publicPath": "/dealer-brand/logo-on-dark.webp",
-        "sha256": "bf2b5687015daf0fe982ca89f4116b25e4064ce13e52b9c1dbf6fa02c7f0b4d0",
-        "bytes": 106852
+        "publicPath": "/dealer-brand/v2-2e9ab7c9bd6ca568/logo-on-dark.webp",
+        "sha256": "beb205f8ea1b15bbe68fd611a78d7f58b47a2da9e974e2a8004fe66385f667aa",
+        "bytes": 213988
       },
       "onAccent": {
-        "publicPath": "/dealer-brand/logo-on-accent.webp",
-        "sha256": "e4ed07c6254fb0f4c1c3743dc5e8d79e498bfca6ea3fc94403de06244c8fe959",
-        "bytes": 88102
+        "publicPath": "/dealer-brand/v2-2e9ab7c9bd6ca568/logo-on-accent.webp",
+        "sha256": "c2eb2b0c7a18fe37e2c03a95174473d9aff968ca52c3f017dafd9dd5d2b1d9ca",
+        "bytes": 96832
       }
     },
     "preparedAt": "2026-09-19T05:00:44.207Z",

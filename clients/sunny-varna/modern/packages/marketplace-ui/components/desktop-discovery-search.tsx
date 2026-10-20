@@ -14,11 +14,11 @@ import { cn } from "@repo/design-system/lib/utils";
 import {
   buildMarketplaceSearchHref,
   getCategoryPath,
-  leadSite,
   type MarketplaceSearchParams,
   type VehicleCategory,
   withCategory,
 } from "@repo/marketplace";
+import type { InventorySearchListing } from "@repo/marketplace/inventory-search";
 import { ChevronDown, Search, X } from "lucide-react";
 import Link from "next/link";
 import { type ReactNode, useState } from "react";
@@ -28,6 +28,7 @@ import {
   marketplaceCategorySelectorOptions,
 } from "../lib/marketplace-filter-config";
 import { getLocalizedPublicPath } from "../lib/public-path";
+import filterStyles from "./desktop-full-filter-dialog.module.css";
 import { formatVehicleCount } from "./desktop-marketplace-controls";
 import {
   DesktopSearchAssistant,
@@ -42,12 +43,14 @@ export interface DesktopCategoryInventoryCount {
 }
 
 export const DesktopCategoryPickerTrigger = ({
+  appearance = "standard",
   categoryIcon,
   compact,
   filters,
   isBg,
   open,
 }: {
+  appearance?: "standard" | "toolbar" | "hero";
   categoryIcon?: ReactNode;
   compact: boolean;
   filters: MarketplaceSearchParams;
@@ -63,12 +66,15 @@ export const DesktopCategoryPickerTrigger = ({
         "Choose category"
       )}
       className={cn(
-        "group h-auto min-h-0 cursor-pointer justify-between self-stretch px-4 text-left shadow-none transition-[background-color,box-shadow] duration-150 focus-visible:ring-2 focus-visible:ring-[var(--lead-site-accent-ring)] focus-visible:ring-inset",
+        "group h-auto min-h-0 cursor-pointer justify-between self-stretch px-4 text-left shadow-none transition-[background-color,box-shadow] duration-[var(--duration-interaction)] focus-visible:ring-2 focus-visible:ring-[var(--lead-site-accent-ring)] focus-visible:ring-inset",
         compact
           ? "rounded-lg border border-border/90 bg-card hover:bg-control active:bg-control-hover"
-          : "m-1.5 rounded-[14px] bg-control hover:bg-border/75 active:bg-border",
+          : "m-1.5 rounded-desktop-control bg-control hover:bg-border/75 active:bg-border",
+        appearance !== "standard" &&
+          "h-[var(--control-height-search)] w-52 shrink-0 rounded-xl bg-control",
+        appearance === "hero" && "w-44",
         open &&
-          "bg-[var(--lead-site-accent)] text-white hover:bg-[var(--lead-site-accent-active)] active:bg-[var(--lead-site-accent-active)]"
+          "bg-primary text-primary-foreground hover:bg-[var(--primary-active)] active:bg-[var(--primary-active)] active:text-[var(--primary-active-foreground)]"
       )}
       data-slot="desktop-search-category"
       type="button"
@@ -77,8 +83,8 @@ export const DesktopCategoryPickerTrigger = ({
       <span className="min-w-0">
         <span
           className={cn(
-            "block font-semibold text-xs leading-none",
-            open ? "text-white/80" : "text-foreground"
+            "block font-semibold text-meta",
+            open ? "text-primary-foreground/80" : "text-foreground"
           )}
         >
           {localizeMarketplace(isBg, "Категория", "Category")}
@@ -87,7 +93,7 @@ export const DesktopCategoryPickerTrigger = ({
           className={cn(
             "mt-1 flex items-center gap-2 truncate font-normal text-compact-control transition-colors",
             open
-              ? "text-white group-hover:text-white"
+              ? "text-primary-foreground group-hover:text-primary-foreground"
               : "text-muted-foreground group-hover:text-foreground"
           )}
         >
@@ -104,8 +110,9 @@ export const DesktopCategoryPickerTrigger = ({
       <ChevronDown
         aria-hidden="true"
         className={cn(
-          "size-4 opacity-50 transition-transform duration-150 group-hover:opacity-80",
-          open && "rotate-180 text-white opacity-100 group-hover:opacity-100"
+          "size-4 opacity-50 transition-transform duration-[var(--duration-interaction)] group-hover:opacity-80",
+          open &&
+            "rotate-180 text-primary-foreground opacity-100 group-hover:opacity-100"
         )}
       />
     </Button>
@@ -126,21 +133,25 @@ export const DesktopCategoryPickerContent = ({
   onClose: () => void;
 }) => (
   <DialogContent
-    className="max-h-[calc(100dvh-2rem)] w-[calc(100%-2rem)] max-w-3xl gap-0 overflow-hidden rounded-2xl border-zinc-200 bg-white p-0 shadow-2xl"
+    className={cn(
+      filterStyles.dialog,
+      filterStyles.quickDialog,
+      filterStyles.categoryDialog
+    )}
     data-slot="lead-category-dialog"
     showCloseButton={false}
   >
-    <DialogHeader className="px-5 py-4 text-left">
-      <div className="flex items-start justify-between gap-4">
+    <DialogHeader className={filterStyles.header}>
+      <div className="flex w-full items-center justify-between gap-4">
         <div>
-          <DialogTitle className="text-xl text-zinc-950 leading-7">
+          <DialogTitle className="text-dialog-title text-foreground">
             {localizeMarketplace(
               isBg,
               "Изберете тип превозно средство",
               "Choose vehicle category"
             )}
           </DialogTitle>
-          <DialogDescription className="mt-1 text-base text-zinc-600 leading-6">
+          <DialogDescription className="sr-only">
             {localizeMarketplace(
               isBg,
               "Категорията определя наличностите и филтрите в търсенето.",
@@ -151,7 +162,7 @@ export const DesktopCategoryPickerContent = ({
         <DialogClose asChild>
           <Button
             aria-label={localizeMarketplace(isBg, "Затвори", "Close")}
-            className="-mr-2 size-10 rounded-full text-zinc-600 hover:bg-zinc-100 hover:text-zinc-950"
+            className={filterStyles.close}
             size="icon"
             type="button"
             variant="ghost"
@@ -167,26 +178,14 @@ export const DesktopCategoryPickerContent = ({
         const inventoryCount = categoryCounts?.find(
           (entry) => entry.category === category.id
         )?.count;
-
-        return (
-          <Link
-            aria-current={active ? "page" : undefined}
-            className={cn(
-              "group flex min-h-32 flex-col items-center justify-center gap-2 overflow-hidden rounded-xl border border-transparent bg-zinc-100 p-3 text-center text-foreground transition-[border-color,background-color,box-shadow,color] hover:border-zinc-300 hover:bg-zinc-200 focus-visible:border-zinc-400 focus-visible:bg-zinc-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400/55",
-              active &&
-                "border-transparent bg-[var(--lead-site-accent)] text-white hover:border-transparent hover:bg-[var(--lead-site-accent-active)] hover:text-white focus-visible:border-transparent focus-visible:bg-[var(--lead-site-accent)] focus-visible:text-white focus-visible:ring-[var(--lead-site-accent-ring)]"
-            )}
-            data-slot="lead-category-option"
-            href={buildMarketplaceSearchHref(
-              withCategory(filters, category.id),
-              getLocalizedPublicPath(
-                locale,
-                leadSite.staticDemoMode ? "/" : getCategoryPath(category.id)
-              )
-            )}
-            key={category.id}
-            onClick={onClose}
-          >
+        const className = cn(
+          "group flex h-auto min-h-32 flex-col items-center justify-center gap-2 overflow-hidden rounded-xl border bg-control p-3 text-center text-foreground transition-colors hover:bg-control-hover focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2",
+          active
+            ? "border-selected bg-selected text-selected-foreground hover:bg-selected"
+            : "border-transparent"
+        );
+        const content = (
+          <>
             <span
               className="flex h-14 w-full shrink-0 items-center justify-center rounded-lg bg-inherit"
               data-slot="lead-category-image-surface"
@@ -202,16 +201,27 @@ export const DesktopCategoryPickerContent = ({
                 {getLocalizedDesktopCategoryLabel(category.id, isBg)}
               </span>
               {inventoryCount === undefined ? null : (
-                <span
-                  className={cn(
-                    "mt-1 text-micro",
-                    active ? "text-white/75" : "text-zinc-500"
-                  )}
-                >
+                <span className="mt-1 text-micro opacity-75">
                   {formatVehicleCount(inventoryCount, category.id, locale)}
                 </span>
               )}
             </span>
+          </>
+        );
+
+        return (
+          <Link
+            aria-current={active ? "page" : undefined}
+            className={className}
+            data-slot="lead-category-option"
+            href={buildMarketplaceSearchHref(
+              withCategory(filters, category.id),
+              getLocalizedPublicPath(locale, getCategoryPath(category.id))
+            )}
+            key={category.id}
+            onClick={onClose}
+          >
+            {content}
           </Link>
         );
       })}
@@ -221,6 +231,7 @@ export const DesktopCategoryPickerContent = ({
 
 export const DesktopDiscoverySearch = ({
   assistantSlot,
+  searchListings,
   categoryCounts,
   compact,
   filters,
@@ -231,6 +242,7 @@ export const DesktopDiscoverySearch = ({
   setQuery,
 }: {
   assistantSlot?: ReactNode;
+  searchListings?: readonly InventorySearchListing[];
   categoryCounts?: DesktopCategoryInventoryCount[];
   compact: boolean;
   filters: MarketplaceSearchParams;
@@ -268,11 +280,11 @@ export const DesktopDiscoverySearch = ({
         className={cn(
           "grid items-stretch",
           compact
-            ? "h-16 w-full grid-cols-[12rem_minmax(18rem,1fr)_3rem] grid-rows-[48px] gap-2 rounded-xl border border-border bg-control p-2"
-            : "mx-auto h-16 w-full max-w-[70rem] grid-cols-[14rem_minmax(18rem,1fr)_4rem] rounded-[20px] border border-zinc-200 bg-card shadow-[0_8px_24px_rgba(0,0,0,0.14)] transition-shadow focus-within:shadow-[0_16px_42px_rgba(0,0,0,0.24)]",
+            ? "h-16 w-full grid-cols-[var(--desktop-search-compact-columns)] grid-rows-[var(--desktop-filter-height)] gap-2 rounded-xl border border-border bg-control p-2"
+            : "mx-auto h-16 w-full max-w-[var(--desktop-search-max)] grid-cols-[var(--desktop-search-columns)] rounded-desktop-frame border border-border bg-card shadow-overlay transition-shadow focus-within:shadow-overlay",
           searchMenuOpen &&
             !compact &&
-            "relative z-[60] rounded-b-none shadow-[0_18px_38px_rgba(0,0,0,0.2)] focus-within:shadow-[0_18px_38px_rgba(0,0,0,0.2)]"
+            "relative z-[var(--desktop-layer-popover)] rounded-b-none shadow-overlay focus-within:shadow-overlay"
         )}
         data-slot="desktop-search-surface"
       >
@@ -292,6 +304,7 @@ export const DesktopDiscoverySearch = ({
           compact={compact}
           isBg={isBg}
           label={localizeMarketplace(isBg, "Търсене", "Search")}
+          listings={searchListings}
           locale={locale}
           onOpenChange={(open) => {
             setSearchMenuOpen(open);
@@ -320,8 +333,10 @@ export const DesktopDiscoverySearch = ({
           <Button
             aria-label={localizeMarketplace(isBg, "Търси", "Search")}
             className={cn(
-              "bg-[var(--lead-site-accent)] font-semibold text-white shadow-none hover:bg-[var(--lead-site-accent-hover)]",
-              compact ? "size-[46px] rounded-lg" : "size-12 rounded-full"
+              "bg-primary font-semibold text-primary-foreground shadow-none hover:bg-[var(--primary-hover)] hover:text-[var(--primary-hover-foreground)]",
+              compact
+                ? "size-[var(--desktop-submit-size)] rounded-lg"
+                : "size-12 rounded-full"
             )}
             data-search-menu-action
             onClick={submitSearch}
@@ -330,7 +345,7 @@ export const DesktopDiscoverySearch = ({
           >
             <Search
               aria-hidden="true"
-              className="size-[18px]"
+              className="size-[var(--desktop-icon-size)]"
               strokeWidth={2.2}
             />
           </Button>

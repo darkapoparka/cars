@@ -1,0 +1,124 @@
+{
+  "schemaVersion": 1,
+  "dealer": "granada-auto-sales",
+  "publishedBranding": true,
+  "sourceLogoUrl": "https://granadaautosales.com/wp-content/uploads/2024/11/Granadaautosales.jpg",
+  "sourcePage": "https://granadaautosales.com/",
+  "sourcePath": "branding/source-original.jpg",
+  "observedAt": "2026-10-19T12:02:43Z",
+  "creationMethod": "sourced-logo-imagegen-refinement",
+  "approvalStatus": "refinement-and-compact-proposal-not-dealer-approved",
+  "visualReview": "Recognizable yellow italic Granada Auto Sales LLC lettering on a dark green rectangular background. Preserve this identity when preparing transparent surface variants.",
+  "workingLogoPath": "branding/generated-master.png",
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T12:19:59Z",
+    "master": {
+      "path": "branding/generated-master.png",
+      "sha256": "2d43df2fe6ff3b24588a976722052693173e3d516b783007bbe5d329b4186839",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-07ad024a-3ba4-4bf8-b545-6d6d000069b2",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "8a21203392f8580b7d9c6a170c0f75ed3c22f902351ff0dc5bb14a77109f46e1",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-52484d8a-25d7-4054-9cad-1f122b47a3fd",
+        "modelVersion": null
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-master.png",
+        "sha256": "2d43df2fe6ff3b24588a976722052693173e3d516b783007bbe5d329b4186839",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-07ad024a-3ba4-4bf8-b545-6d6d000069b2",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "d7b28ce130a9fdcc8834201307365186a65e23ac84b3bce1e1c80d2440bc2b12",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-c58f3607-67f7-47e0-9ee5-0196784b6a7f",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "d7b28ce130a9fdcc8834201307365186a65e23ac84b3bce1e1c80d2440bc2b12",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-c58f3607-67f7-47e0-9ee5-0196784b6a7f",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": {
+        "onLight": "#ffffff",
+        "onDark": "#101820",
+        "onAccent": "#ec1838"
+      },
+      "wordmarkWidths": [
+        120,
+        180
+      ],
+      "notes": "Reviewed composited RGBA artwork. White treatment is the same actual image-generation output on dark and accent surfaces. Transparent padding may be cropped in export; source pixels and originals are retained."
+    },
+    "compactMarkStatus": "independent-proposal-not-dealer-approved",
+    "compactMarkDescription": "Italic capital G derived from the sourced lettering; a compact proposal rather than a claimed official mark.",
+    "markOnDark": {
+      "path": "branding/generated-mark-on-dark.png",
+      "sha256": "0425b1d3ed90a67249673fecf537fdeb9e5333c4bc9b3c85572e90de3c09444e",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1090f09a-3731-4232-a3f5-5b132d6f8654",
+        "modelVersion": null
+      }
+    },
+    "marks": {
+      "onLight": {
+        "path": "branding/generated-mark.png",
+        "sha256": "8a21203392f8580b7d9c6a170c0f75ed3c22f902351ff0dc5bb14a77109f46e1",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-52484d8a-25d7-4054-9cad-1f122b47a3fd",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-mark-on-dark.png",
+        "sha256": "0425b1d3ed90a67249673fecf537fdeb9e5333c4bc9b3c85572e90de3c09444e",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-1090f09a-3731-4232-a3f5-5b132d6f8654",
+          "modelVersion": null
+        }
+      }
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-19T12:25:42Z",
+      "widths": [
+        32,
+        64,
+        96
+      ],
+      "backgrounds": [
+        "#ffffff",
+        "#101820",
+        "#ec1838"
+      ],
+      "notes": "Actual light and white generated compact variants rendered legibly after transparent padding removal; no dealer approval is claimed."
+    }
+  },
+  "usageStatus": "public-preview-only",
+  "sourceSha256": "658b9ad8cb28c5b27ef910d22d6887c944d9b67dd2bd55996864a1580ee64fa1"
+}

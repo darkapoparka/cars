@@ -1,0 +1,227 @@
+{
+  "strategy": "USE GENERATED CANDIDATE",
+  "identityStatus": "Improved demo/proposal identity based on qualified primary name and preserved source evidence; material redesign, not official or owner-approved.",
+  "publishedBranding": "Published ЕЛЕГАНТ КАР with blurry vehicle headlight photograph; improved proposal uses clean typographic identity",
+  "sourceUrls": [
+    "https://elegantcar.mobile.bg/"
+  ],
+  "sourceLimitations": "generated improved demo/proposal identity; not official or approved",
+  "originalReceiptPath": "L:/CODEX/cars/leads/branding/fleet-20261011/elegantcar-varna/receipt.json",
+  "generatedPath": "C:/Users/radev/.codex/generated_images/01a12a34-d2d7-7571-930a-1ed37e54ff8e/exec-b898c7ee-105d-4dea-a98a-1a6171e7a4d7.png",
+  "imageGeneration": {
+    "tool": "image_gen.imagegen",
+    "reference": "exec-b898c7ee-105d-4dea-a98a-1a6171e7a4d7",
+    "transparent_background": true,
+    "prompt": "Improve reference1 into a clearly disclosed dealer demo proposal, reference2 is customized automotive lettering direction only, never copy its name/emblem. Exact ONLY name \"ЕЛЕГАНТ КАР\". Keep elegant swept E monogram left, with burgundy curved speed ribbon. Replace thin high-contrast generic serifs with distinctive solid automotive luxury lettering, restrained forward slant, elegant angular ends, thick strokes and open counters. Palette charcoal and burgundy. Strict one horizontal row: compact individual emblem LEFT beside prominent full name on one baseline. Strong expressive automotive lettering with restrained forward slant, purposeful end cuts, distinct letter forms, broad clean strokes and open counters. No generic stock sans or thin serifs, caption, subtitle, slogan, text above/below, roof above, underline, badge, plate, shadow, gradient, white fill, texture, noisy edges, residue or stray pixels. Flat solid clean inks and genuine RGBA transparent background/gaps/counters with safe padding. Exact spelling/script/case/spaces/punctuation, readable at 120px total width.",
+    "referenced_image_paths": [
+      "L:/CODEX/cars/leads/branding/fleet-20261011/elegantcar-varna/branding/logo-master.png",
+      "L:/CODEX/cars/leads/branding/fleet-20261011/style-revision/single-row/biemaauto-varna/branding/logo-master.png"
+    ],
+    "outputPath": "C:/Users/radev/.codex/generated_images/01a12a34-d2d7-7571-930a-1ed37e54ff8e/exec-b898c7ee-105d-4dea-a98a-1a6171e7a4d7.png",
+    "modelVersion": "not exposed by tool",
+    "referenceMetadata": [
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/elegantcar-varna/branding/logo-master.png",
+        "sha256": "1c6c7274943b64973cb786fc48fda355cd5923b34dc1fcccb4d70c6f8ced5253",
+        "bytes": 132529,
+        "width": 1496,
+        "height": 297,
+        "format": "png",
+        "hasAlpha": true,
+        "role": "Prior dealer treatment or preceding candidate; identity/source history preserved separately."
+      },
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/style-revision/single-row/biemaauto-varna/branding/logo-master.png",
+        "sha256": "dc84d9283929362bd17d0b765c1ab219eb3c093ccb52e4d3c05ada2ddfcb37ce",
+        "bytes": 142920,
+        "width": 1496,
+        "height": 240,
+        "format": "png",
+        "hasAlpha": true,
+        "role": "Style direction only; no name or emblem borrowed."
+      }
+    ]
+  },
+  "variantDerivation": {
+    "onLight": "Existing raster exporter crops/scales the real ImageGen master preserving colored ink and alpha.",
+    "onDark": "Existing raster exporter derives white ink from same master alpha; not independently generated.",
+    "onAccent": "Existing raster exporter derives white ink from same master alpha; not independently generated."
+  },
+  "selectionStatus": "Preferred technically selected single-row candidate; owner style acceptance pending",
+  "ownerApproved": false,
+  "visualAccepted": true,
+  "surfaceReviewPath": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/elegantcar-varna/surface-review.png",
+  "visualChecks": {
+    "spelling": "Exact qualified main name; no captions",
+    "surfaces": [
+      "#ffffff",
+      "#30343b",
+      "#17191c",
+      "#202023",
+      "#19171d",
+      "#171717",
+      "#b00020",
+      "#405ff2"
+    ],
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "result": "Compact one-row individualized mark beside expressive name; clear counters, no clipping, opaque background or residue observed. Owner style acceptance pending."
+  },
+  "schemaVersion": 1,
+  "dealer": "elegantcar-varna",
+  "state": "asset-verified",
+  "generated": {
+    "path": "C:/Users/radev/.codex/generated_images/01a12a34-d2d7-7571-930a-1ed37e54ff8e/exec-b898c7ee-105d-4dea-a98a-1a6171e7a4d7.png",
+    "sha256": "aa1a1447e403dfb823af4f6eccbd28c5b762b0fefb6ec59ca57c2d9e7cc9d083",
+    "bytes": 330079,
+    "format": "png",
+    "width": 2171,
+    "height": 724,
+    "hasAlpha": true,
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparentRatio": 0.8501912452188696,
+      "opaqueRatio": 0.12839259856826932
+    },
+    "visibleBounds": {
+      "x": 41,
+      "y": 193,
+      "width": 2093,
+      "height": 302
+    }
+  },
+  "assets": {
+    "onLight": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/elegantcar-varna/dealer-brand/logo-on-light.webp",
+      "sha256": "3224a660d9ed99b268b363f47635c98e13f33b8d6b9f285b5ac8024e8f6fbf8e",
+      "bytes": 45202,
+      "format": "webp",
+      "width": 1496,
+      "height": 274,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.7391389203325657,
+        "opaqueRatio": 0.21856581053124635
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 36,
+        "width": 1400,
+        "height": 202
+      },
+      "publicPath": "/dealer-brand/logo-on-light.webp"
+    },
+    "onDark": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/elegantcar-varna/dealer-brand/logo-on-dark.webp",
+      "sha256": "1314966d62c5f8c4ec6867e0c45949e6931e21a1231ad2ec29903bbd2501f86f",
+      "bytes": 30224,
+      "format": "webp",
+      "width": 1496,
+      "height": 274,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.7391389203325657,
+        "opaqueRatio": 0.21856581053124635
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 36,
+        "width": 1400,
+        "height": 202
+      },
+      "publicPath": "/dealer-brand/logo-on-dark.webp"
+    },
+    "onAccent": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/elegantcar-varna/dealer-brand/logo-on-accent.webp",
+      "sha256": "1314966d62c5f8c4ec6867e0c45949e6931e21a1231ad2ec29903bbd2501f86f",
+      "bytes": 30224,
+      "format": "webp",
+      "width": 1496,
+      "height": 274,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.7391389203325657,
+        "opaqueRatio": 0.21856581053124635
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 36,
+        "width": 1400,
+        "height": 202
+      },
+      "publicPath": "/dealer-brand/logo-on-accent.webp"
+    }
+  },
+  "master": {
+    "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/elegantcar-varna/branding/logo-master.png",
+    "sha256": "48dc53f10def08ca77e1bd18f2c63704da963581f38b8eb15b7e81418f73c4d1",
+    "bytes": 133792,
+    "format": "png",
+    "width": 1496,
+    "height": 274,
+    "hasAlpha": true,
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparentRatio": 0.7391389203325657,
+      "opaqueRatio": 0.21856581053124635
+    },
+    "visibleBounds": {
+      "x": 48,
+      "y": 36,
+      "width": 1400,
+      "height": 202
+    }
+  },
+  "technicalAcceptance": {
+    "spelling": "Exact qualified main name; no captions",
+    "surfaces": [
+      "#ffffff",
+      "#30343b",
+      "#17191c",
+      "#202023",
+      "#19171d",
+      "#171717",
+      "#b00020",
+      "#405ff2"
+    ],
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "result": "Compact one-row individualized mark beside expressive name; clear counters, no clipping, opaque background or residue observed. Owner style acceptance pending."
+  },
+  "integrationVerified": false,
+  "hostedVerified": false,
+  "exportTool": "docs/logo-refresh/2026-09-18/tools/build-approved-logo-pack.mjs",
+  "exportToolSha256": "7fab60c4000210eff6bbb91f9c35e869bad90834d3bdd09d282a9a51835f0dbc",
+  "exportIsolation": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/style-new-a-export",
+  "updatedAt": "2026-10-11T11:36:18.666Z",
+  "sourceEvidence": {
+    "originalReceipt": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/elegantcar-varna/receipt.json",
+      "sha256": "f1c7c8262717de9be05af5430e0e06e19184084b60d0ddbae8cd3b8e3f63fb14"
+    },
+    "originalMaster": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/elegantcar-varna/branding/logo-master.png",
+      "sha256": "1c6c7274943b64973cb786fc48fda355cd5923b34dc1fcccb4d70c6f8ced5253"
+    },
+    "publishedBranding": "Published ЕЛЕГАНТ КАР with blurry vehicle headlight photograph; improved proposal uses clean typographic identity",
+    "sourceUrls": [
+      "https://elegantcar.mobile.bg/"
+    ],
+    "sourceLimitation": "generated improved demo/proposal identity; not official or approved",
+    "sourceEvidenceDirectory": "L:/CODEX/cars/leads/branding/fleet-20261011/elegantcar-varna/source"
+  }
+}

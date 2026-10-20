@@ -27,9 +27,9 @@
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Square%20One%20Motors%2C%20Tameside%20Way%2C%20Birmingham%20B42%202UB",
     "mapsEmbedUrl": "https://maps.google.com/maps?q=Square%20One%20Motors%2C%20Tameside%20Way%2C%20Birmingham%20B42%202UB&z=16&output=embed",
     "accent": "#DB111D",
-    "logo": "/dealer-brand/logo.webp",
-    "logoLight": "/dealer-brand/logo.webp",
-    "logoDark": "/dealer-brand/logo.webp",
+    "logo": "/dealer-brand/v2-430f237b2ede396d/logo-on-light.webp",
+    "logoLight": "/dealer-brand/v2-430f237b2ede396d/logo-on-light.webp",
+    "logoDark": "/dealer-brand/v2-430f237b2ede396d/logo-on-dark.webp",
     "socialLinks": {
       "facebook": "",
       "instagram": "",
@@ -1039,25 +1039,31 @@
     "approvalStatus": "independent_design_proposal_not_dealer_approved",
     "assets": {
       "onLight": {
-        "publicPath": "/dealer-brand/logo.webp",
-        "sha256": "cad5a4c01d4881deb0320f25323ae598f3ca520e38a83eff7a41581e0dd7f8bf",
-        "width": 1024,
-        "height": 341,
-        "background": "opaque_white"
+        "publicPath": "/dealer-brand/v2-430f237b2ede396d/logo-on-light.webp",
+        "sha256": "9a56a237f6645b97aab08c9117fdf968b8b39b46104af3fcb4c1b553ec68cafe",
+        "width": 952,
+        "height": 185,
+        "background": "transparent",
+        "foreground": "dark",
+        "bytes": 5968
       },
       "onDark": {
-        "publicPath": "/dealer-brand/logo.webp",
-        "sha256": "cad5a4c01d4881deb0320f25323ae598f3ca520e38a83eff7a41581e0dd7f8bf",
-        "width": 1024,
-        "height": 341,
-        "background": "opaque_white"
+        "publicPath": "/dealer-brand/v2-430f237b2ede396d/logo-on-dark.webp",
+        "sha256": "e7f53a1e1f406459fb23abe03808a8af5a8c1340a82f65a25134982a4054e018",
+        "width": 952,
+        "height": 185,
+        "background": "transparent",
+        "foreground": "white",
+        "bytes": 5968
       },
       "onAccent": {
-        "publicPath": "/dealer-brand/logo.webp",
-        "sha256": "cad5a4c01d4881deb0320f25323ae598f3ca520e38a83eff7a41581e0dd7f8bf",
-        "width": 1024,
-        "height": 341,
-        "background": "opaque_white"
+        "publicPath": "/dealer-brand/v2-430f237b2ede396d/logo-on-accent.webp",
+        "sha256": "e7f53a1e1f406459fb23abe03808a8af5a8c1340a82f65a25134982a4054e018",
+        "width": 952,
+        "height": 185,
+        "background": "transparent",
+        "foreground": "white",
+        "bytes": 5968
       }
     },
     "icon": {
@@ -1093,6 +1099,15 @@
       "deliveryEncoding": "Proportional size and delivery-format encoding only; no crop, recolouring or compositing.",
       "visualInspection": "Original reference where available, full business-name spelling, emblem completeness, white surface and square icon checked in generated output. Application consumers await browser QA.",
       "dealerApproval": false
-    }
+    },
+    "surfacePreparation": {
+      "width": 952,
+      "height": 185,
+      "sourceSha256": "cad5a4c01d4881deb0320f25323ae598f3ca520e38a83eff7a41581e0dd7f8bf",
+      "foregroundPixels": 60179,
+      "method": "Exact retained emblem and lettering; deterministic white-background alpha separation and monochrome raster encoding. No new generative model call succeeded or is claimed.",
+      "preparedAt": "2026-10-10T23:43:25.244Z"
+    },
+    "rules": "Use exact dark mark on light surfaces; exact white mark on dark and neutral accent surfaces. Never use CSS inversion, white plates or crop the emblem."
   }
 }

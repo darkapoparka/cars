@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "dealer": "autolife",
+  "reviewed": true,
+  "reviewedAt": "2026-10-14T11:31:43.352Z",
+  "sourceMode": "retained-or-mixed-raster",
+  "master": {
+    "path": "docs/logo-polish-2026-10-14/parallel/vercel/autolife/logo-on-light.png",
+    "sha256": "eb009799604f8cdf91b4ddb90481b8d55f5d28d55d62f620fdf39ca52b0885c8"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "docs/logo-polish-2026-10-14/parallel/vercel/autolife/logo-on-light.png",
+      "sha256": "eb009799604f8cdf91b4ddb90481b8d55f5d28d55d62f620fdf39ca52b0885c8",
+      "sourceReference": "L:\\CODEX\\cars\\docs\\logo-polish-2026-10-14\\parallel\\vercel\\autolife\\logo-on-light.png",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "L:\\CODEX\\cars\\docs\\logo-polish-2026-10-14\\live-assets\\379ab5a5957d7012bc262b720b56bab72db3c2f9d0f71de53e290fd8cae17ae1.webp",
+        "sha256": "379ab5a5957d7012bc262b720b56bab72db3c2f9d0f71de53e290fd8cae17ae1",
+        "reviewReference": "docs/logo-polish-2026-10-14/final-selection.json",
+        "reviewSha256": "6e396eef77195ab7f44d6b055c1936fa079a8195a428a95151fdfd7f3f5d1a16"
+      }
+    },
+    "onDark": {
+      "path": "docs/logo-polish-2026-10-14/parallel/vercel/autolife/logo-on-dark.png",
+      "sha256": "6c6e5a83f910da98dcc7f78337dec008d555e6b7dd872c07ec236e93d744d6ff",
+      "sourceReference": "L:\\CODEX\\cars\\docs\\logo-polish-2026-10-14\\parallel\\vercel\\autolife\\logo-on-dark.png",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "L:\\CODEX\\cars\\docs\\logo-polish-2026-10-14\\live-assets\\ef1dbdcfb9c365e6d9d3724c9eddc2969788131737faafbf4b3f0d8fc5a3067f.webp",
+        "sha256": "ef1dbdcfb9c365e6d9d3724c9eddc2969788131737faafbf4b3f0d8fc5a3067f",
+        "reviewReference": "docs/logo-polish-2026-10-14/final-selection.json",
+        "reviewSha256": "6e396eef77195ab7f44d6b055c1936fa079a8195a428a95151fdfd7f3f5d1a16"
+      }
+    },
+    "onAccent": {
+      "path": "docs/logo-polish-2026-10-14/parallel/vercel/autolife/logo-on-dark.png",
+      "sha256": "6c6e5a83f910da98dcc7f78337dec008d555e6b7dd872c07ec236e93d744d6ff",
+      "sourceReference": "L:\\CODEX\\cars\\docs\\logo-polish-2026-10-14\\parallel\\vercel\\autolife\\logo-on-dark.png",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "L:\\CODEX\\cars\\docs\\logo-polish-2026-10-14\\live-assets\\ef1dbdcfb9c365e6d9d3724c9eddc2969788131737faafbf4b3f0d8fc5a3067f.webp",
+        "sha256": "ef1dbdcfb9c365e6d9d3724c9eddc2969788131737faafbf4b3f0d8fc5a3067f",
+        "reviewReference": "docs/logo-polish-2026-10-14/final-selection.json",
+        "reviewSha256": "6e396eef77195ab7f44d6b055c1936fa079a8195a428a95151fdfd7f3f5d1a16"
+      }
+    }
+  }
+}

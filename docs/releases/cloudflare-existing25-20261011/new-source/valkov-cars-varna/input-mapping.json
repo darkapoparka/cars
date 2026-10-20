@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-input-mapping",
+  "dealer": "valkov-cars-varna",
+  "inputs": {
+    "facts": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/valkov-cars-varna/facts.json",
+      "sha256": "e9edcf5d98d15eeebbb9e76762c21feae14e6aa894db22c1456daa7b23ff4cf8"
+    },
+    "stock": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/valkov-cars-varna/stock.json",
+      "sha256": "5b8ad672850849e52e6c493ae1f9a7ff5f9f93b71984fbd610aed4e2abca1a4d"
+    },
+    "locale": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/valkov-cars-varna/locale.json",
+      "sha256": "9bbbaa384c6d9c7b7e2ce8fc1b76775c7f6f861621f2a2103db284bbd1aba3cd"
+    },
+    "branding": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/valkov-cars-varna/branding.json",
+      "sha256": "f4a903c449c518ee432b0070b0ca2cdbd92652f7f29e12c1b1b6fa5d0207cbd6"
+    }
+  },
+  "sources": [
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/valkov-cars-varna/research-facts.json",
+      "sha256": "bd31ad7fc086c304701a65463d5833c90559bd88544a2ab5aaddcc65d525624a"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/valkov-cars-varna/identity.json",
+      "sha256": "62ee5fe68528c1f339de0658b0ca22bfc92746789012e2bbae57194a641f3d68"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/valkov-cars-varna/locale.json",
+      "sha256": "9bbbaa384c6d9c7b7e2ce8fc1b76775c7f6f861621f2a2103db284bbd1aba3cd"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/valkov-cars-varna/stock-research.json",
+      "sha256": "995098a131dc8ce2846cf5a5e2a7f7ac393740dbd8e80bf8844d758584862567"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/valkov-cars-varna/branding.json",
+      "sha256": "f4a903c449c518ee432b0070b0ca2cdbd92652f7f29e12c1b1b6fa5d0207cbd6"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/valkov-cars-varna/branding/generated-master.png",
+      "sha256": "e932dbea72d983e5f7e391b1fb3b484b5a1537d564a5dfc0fcbd11f8acb6fde6"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/valkov-cars-varna/branding/on-accent.png",
+      "sha256": "4b0a6312944217af5cfc80404bb793b614f2005266cd82925b4025ff169f3185"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/valkov-cars-varna/branding/on-dark.png",
+      "sha256": "4b0a6312944217af5cfc80404bb793b614f2005266cd82925b4025ff169f3185"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/valkov-cars-varna/branding/on-light.png",
+      "sha256": "e932dbea72d983e5f7e391b1fb3b484b5a1537d564a5dfc0fcbd11f8acb6fde6"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/valkov-cars-varna/facts.json",
+      "sha256": "e9edcf5d98d15eeebbb9e76762c21feae14e6aa894db22c1456daa7b23ff4cf8"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/valkov-cars-varna/generation-brief.json",
+      "sha256": "ea7a142d887c80245fde51f8e0212370b9bba0f56127b2a0db6689097ebe316c"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/valkov-cars-varna/media-input-mapping.json",
+      "sha256": "7b1ffd6615363c902e828dd14df650b9937928cf7581364e0d6f85f6c9587d87"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/valkov-cars-varna/media/11770728962537417-1.webp",
+      "sha256": "2afc2d44889952d3d00f0dfc8a79c0883fe088c776a004c38f568c300bcf2e9f"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/valkov-cars-varna/media/11770728962537417-2.webp",
+      "sha256": "c3f9fb988c9e85b12691ccfad03821b6988bca65c3662a4f65b7cec0925ef7b1"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/valkov-cars-varna/media/11772080668154587-1.webp",
+      "sha256": "daf024ba46134a7a37920c46ba07e4837e5fb1a994051f84417a1a205f041adb"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/valkov-cars-varna/media/11772080668154587-2.webp",
+      "sha256": "d6edb7d8af5e700cf8d0d4352ac80065c2a612c6c1544db3caabf1da9fc846bc"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/valkov-cars-varna/reviewed-modern-inventory-copy.json",
+      "sha256": "0ac0b4ed2621cc62eedbd006c99af47734f1e8d152b5e2a2704e2341913a9d3c"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/valkov-cars-varna/stock.json",
+      "sha256": "5b8ad672850849e52e6c493ae1f9a7ff5f9f93b71984fbd610aed4e2abca1a4d"
+    }
+  ]
+}

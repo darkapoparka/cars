@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "dealer": "express-auto-varna",
+  "reviewed": true,
+  "reviewedAt": "2026-10-12T12:12:54.631Z",
+  "generation": {
+    "tool": "image_gen",
+    "generationId": "exec-d5f4dd6b-3d7c-4337-8d6f-81ea3d87dbf8",
+    "modelVersion": null,
+    "sourceFileSha256": "44f50a554408f70fdc70072d9f7adafe31e8c1888ec70aaa9cb91594156898bf",
+    "sourceFileMeaning": "Exact text brief for proposed demo identity",
+    "sourceReference": "docs/releases/cloudflare-existing25-20261011/new-source/express-auto-varna/generation-brief.json",
+    "sourceLogoUrl": null,
+    "creationMethod": "generated-demo-proposal",
+    "approvalStatus": "not-dealer-approved",
+    "nativeOutput": {
+      "path": "C:/Users/radev/.codex/generated_images/01a12d64-9c2d-7b03-85e1-619a359e6894/exec-d5f4dd6b-3d7c-4337-8d6f-81ea3d87dbf8.png",
+      "sha256": "e894c0a4a495516767a8b5fd76c9336d597824ffb49f77684dd90137f326fff1",
+      "crop": {
+        "left": 82,
+        "top": 207,
+        "width": 2008,
+        "height": 310
+      },
+      "width": 2172,
+      "height": 724,
+      "transparentPixels": 1353395,
+      "opaquePixels": 185875
+    }
+  },
+  "master": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/express-auto-varna/branding/generated-master.png",
+    "sha256": "c310125ec1256911dc98b235f26fec1fd184e35e357f680510221cec3e925909"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/express-auto-varna/branding/on-light.png",
+      "sha256": "c310125ec1256911dc98b235f26fec1fd184e35e357f680510221cec3e925909",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/new-source/express-auto-varna/branding/generated-master.png",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-d5f4dd6b-3d7c-4337-8d6f-81ea3d87dbf8",
+        "modelVersion": null
+      }
+    },
+    "onDark": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/express-auto-varna/branding/on-dark.png",
+      "sha256": "5812ea851c71c8bba60eacf166a3b05717c5a9dee2ead61aca9cc9a284100c10",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/new-source/express-auto-varna/branding/generated-master.png",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-6b9479cf-d5c3-43d6-baff-13a2a7f8128c",
+        "modelVersion": null
+      }
+    },
+    "onAccent": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/express-auto-varna/branding/on-accent.png",
+      "sha256": "5812ea851c71c8bba60eacf166a3b05717c5a9dee2ead61aca9cc9a284100c10",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/new-source/express-auto-varna/branding/generated-master.png",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-6b9479cf-d5c3-43d6-baff-13a2a7f8128c",
+        "modelVersion": null
+      }
+    }
+  },
+  "provenance": {
+    "sourceLogoUrl": null,
+    "creationMethod": "generated-demo-proposal",
+    "approvalStatus": "not-dealer-approved",
+    "nativeWhiteOutput": {
+      "path": "C:/Users/radev/.codex/generated_images/01a12d64-9c2d-7b03-85e1-619a359e6894/exec-6b9479cf-d5c3-43d6-baff-13a2a7f8128c.png",
+      "sha256": "e2b943a81aabc5123e942dad12eae3c4b7cdada31e1009bb0e9180fd8562f470",
+      "crop": {
+        "left": 82,
+        "top": 203,
+        "width": 2004,
+        "height": 309
+      },
+      "width": 2172,
+      "height": 724,
+      "transparentPixels": 1276330,
+      "opaquePixels": 190520
+    },
+    "whiteEditInput": {
+      "path": "C:/Users/radev/.codex/generated_images/01a12d64-9c2d-7b03-85e1-619a359e6894/exec-d5f4dd6b-3d7c-4337-8d6f-81ea3d87dbf8.png",
+      "sha256": "e894c0a4a495516767a8b5fd76c9336d597824ffb49f77684dd90137f326fff1"
+    },
+    "exports": "Lossless PNG canvas crop only; originals retained",
+    "sameWhiteArtworkUsedOnDarkAndAccent": true,
+    "publishedLogoObserved": false,
+    "observedPrimaryProfile": {
+      "url": "https://express_auto.mobile.bg/",
+      "sha256": "29212074e759bafc8f25ed7f9572d2d7cebccc611b390f301ff77b30a2663676",
+      "observedAt": "2026-10-12T12:05:57.076Z"
+    },
+    "surfaceReviewScope": "Standalone selected native palette; actual six application consumers pending"
+  }
+}

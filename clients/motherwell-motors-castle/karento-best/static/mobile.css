@@ -111,8 +111,14 @@
   }
   .header .main-header,
   .header .main-header .header-left {
-    min-height: 56px;
-    height: 56px;
+    min-height: var(
+      --karento-mobile-header-height,
+      calc(var(--karento-touch-target) + var(--karento-space-3))
+    );
+    height: var(
+      --karento-mobile-header-height,
+      calc(var(--karento-touch-target) + var(--karento-space-3))
+    );
     padding: 0;
   }
   .header .main-header .header-left {
@@ -185,7 +191,12 @@
   .header.mobile-hero-header:not(.mobile-header-scrolled)
     .header-logo
     .light-mode {
-    filter: brightness(0) invert(1);
+    display: none !important;
+  }
+  .header.mobile-hero-header:not(.mobile-header-scrolled)
+    .header-logo
+    .dark-mode {
+    display: block !important;
   }
   .header.mobile-hero-header:not(.mobile-header-scrolled)
     :is(.karento-header-cta, .karento-menu-toggle) {
@@ -327,7 +338,7 @@
     gap: calc(var(--karento-space-1) / 2);
     min-width: 0;
     min-height: var(--karento-touch-target);
-    padding: calc(var(--karento-space-1) / 2);
+    padding: 0;
     border: 0;
     border-radius: var(--karento-radius-card);
     background: transparent;
@@ -337,9 +348,9 @@
     font-weight: var(--karento-type-nav-weight);
     line-height: var(--karento-type-nav-leading);
   }
-  .karento-mobile-navigation svg {
-    width: var(--karento-control-icon-action);
-    height: var(--karento-control-icon-action);
+  .karento-mobile-navigation .bottom-navigation-icon {
+    width: var(--karento-mobile-navigation-icon-size);
+    height: var(--karento-mobile-navigation-icon-size);
     flex-shrink: 0;
   }
   .karento-mobile-navigation span {
@@ -1053,12 +1064,22 @@
     flex: 0 0 24px;
   }
   .list-feature-car .feature-image img {
+    width: 20px;
+    height: 20px;
     max-width: 24px;
+    object-fit: contain;
+    filter: brightness(0);
   }
   .list-feature-car .feature-info p {
+    font-family: var(--karento-font-sans);
     font-size: var(--karento-type-body-small-size);
     line-height: var(--karento-type-body-small-leading);
     font-weight: var(--karento-type-body-small-weight);
+    font-variant-numeric: tabular-nums;
+    letter-spacing: 0;
+  }
+  html[lang="bg"] .list-feature-car .feature-info p {
+    font-family: Arial, sans-serif;
   }
   .box-collapse-expand .card {
     margin-bottom: 16px;

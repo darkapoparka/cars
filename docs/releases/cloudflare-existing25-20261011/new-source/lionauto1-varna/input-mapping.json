@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-input-mapping",
+  "dealer": "lionauto1-varna",
+  "inputs": {
+    "facts": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/lionauto1-varna/facts.json",
+      "sha256": "06350a431d093e4a863c1758a54a17f075b31a1dd77e1b397bd317bd25db31d4"
+    },
+    "stock": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/lionauto1-varna/stock.json",
+      "sha256": "2448d8ca379f3495a95bd542857e585f71a567c16ff5f4e6b2762e99759eff0d"
+    },
+    "locale": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/lionauto1-varna/locale.json",
+      "sha256": "6c150a10d936717977ecaaea44a1c39c09b3446292b1865be1df8a33c313b231"
+    },
+    "branding": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/lionauto1-varna/branding.json",
+      "sha256": "f988bd72365addc9e908725df4a1292d5ec7aa4328605affd51c48d0b6fe49c2"
+    }
+  },
+  "sources": [
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/lionauto1-varna/source/business-facts.json",
+      "sha256": "63c6892798a96a759c5a93e616d5a8608e023cdfb250f1a77b6dcdcfead25aa8"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/lionauto1-varna/source/locale.json",
+      "sha256": "6c150a10d936717977ecaaea44a1c39c09b3446292b1865be1df8a33c313b231"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/lionauto1-varna/source/stock.json",
+      "sha256": "2816b9ba64ca6045aedfbc00db31e7f1f5d84027682017e2e4c74454d15c9ee0"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/lionauto1-varna/source/generation-receipt.json",
+      "sha256": "428f15f5093e25d6fdcd2aa9a6869403b9533c8af45e6a0df9133d71d6f91dd7"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/lionauto1-varna/source/native-onLight.png",
+      "sha256": "84337f8bfe115e0782de6af7e948709166e672c6da22320b89504ce4e79a7aa1"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/lionauto1-varna/source/native-onDark.png",
+      "sha256": "84337f8bfe115e0782de6af7e948709166e672c6da22320b89504ce4e79a7aa1"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/lionauto1-varna/source/native-onAccent.png",
+      "sha256": "84337f8bfe115e0782de6af7e948709166e672c6da22320b89504ce4e79a7aa1"
+    }
+  ],
+  "transformations": {
+    "facts": {
+      "source": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/lionauto1-varna/source/business-facts.json",
+        "sha256": "63c6892798a96a759c5a93e616d5a8608e023cdfb250f1a77b6dcdcfead25aa8"
+      },
+      "kind": "flat-original-facts-to-business-consumer",
+      "allOriginalEvidenceUnchanged": true,
+      "derivedNameDelta": null,
+      "otherFactsUnchanged": true
+    },
+    "stock": {
+      "source": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/lionauto1-varna/source/stock.json",
+        "sha256": "2816b9ba64ca6045aedfbc00db31e7f1f5d84027682017e2e4c74454d15c9ee0"
+      },
+      "originalSourceRecordPreserved": true,
+      "sourceId": "11791531218122804",
+      "normalizer": "loadDealerProfile",
+      "retention": "retainDealerVariantAssets",
+      "sourceKind": "dated-marketplace-listing-sample",
+      "consumerKind": "dated-listing-snapshot",
+      "availabilityUnconfirmed": true,
+      "mediaRightsNotClaimed": true,
+      "mileageUnknownMeansOnRequest": true
+    },
+    "media": [
+      {
+        "sourceId": "11791531218122804",
+        "sourcePublicPath": "/assets/vehicles/11791531218122804/1.webp",
+        "publicPath": "/dealer-stock/11791531218122804-1.webp",
+        "destination": "dealer-stock/11791531218122804-1.webp",
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/lionauto1-varna/media/11791531218122804-1.webp",
+        "sha256": "49c1ea1ad5c73e5658d3e6c2364e91043e11a5d962d0663570daabab359f20fd",
+        "bytes": 231032
+      },
+      {
+        "sourceId": "11791531218122804",
+        "sourcePublicPath": "/assets/vehicles/11791531218122804/2.webp",
+        "publicPath": "/dealer-stock/11791531218122804-2.webp",
+        "destination": "dealer-stock/11791531218122804-2.webp",
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/lionauto1-varna/media/11791531218122804-2.webp",
+        "sha256": "32c857d433855be72a76aa20fde7896a18ac6a0689e301eb5d90cc4862ec470b",
+        "bytes": 181510
+      }
+    ],
+    "branding": {
+      "acceptedManifest": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/evidence/final-logo-handoff.json",
+        "sha256": "b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a"
+      },
+      "originalGenerationReceipt": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/lionauto1-varna/source/generation-receipt.json",
+        "sha256": "428f15f5093e25d6fdcd2aa9a6869403b9533c8af45e6a0df9133d71d6f91dd7"
+      },
+      "noNewGeneration": true,
+      "modelVersion": null,
+      "pixelsUnchanged": true
+    },
+    "identity": null
+  }
+}

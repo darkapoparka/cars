@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-public-stock-research-not-production-input",
+  "dealer": "carnova-varna",
+  "observedAt": "2026-10-12T10:44:18.137Z",
+  "sourceUrl": "https://carnova.mobile.bg/",
+  "profileAdvertCount": 2,
+  "profileCountIsAvailability": false,
+  "sampledAdvertUrls": [
+    "https://carnova.mobile.bg/obiava-11789992722402350-toyota-corolla-1-8-hybrid-ts-toyota-relax",
+    "https://carnova.mobile.bg/obiava-11780304679998646-vw-golf-1-5-etsi-dsg-life-s-garantsiya-realni-km"
+  ],
+  "rawPriceLabels": [
+    "19 900 €",
+    "17 999 €"
+  ],
+  "retainedFirstAdvertExcerpt": "1 - 2 от общо 2 обяви на \"CARNOVA\" - Автомобили и Джипове Toyota Corolla 1.8 Hybrid TS , Toyota relax 19 900 € Цената е с включено ДДС обл. Варна, гр. Варна септември 2022 г. 80 111 км Бял Хибриден 122 к.с. Евро 6 1800 куб.см Автоматична Комби Toyota Corolla TS 1. 8 Hybrid 09/2022 Богато оборудване: - автоматик - двузонов климатроник - подгрев на предни седалки - затъмнени задни стъкла - камера за заден ход - безжично зареждане на телефон - APPLE CARPLAY / ANDROID AUTO - лети джанти 17 - нови всезезонни гуми HANKOOK - салон с полукожа -",
+  "partsIgnored": null,
+  "availabilityConfirmed": false,
+  "mediaReusePermission": "unknown",
+  "sourcePhotosFetched": false,
+  "selectedCreationStockMode": "illustrative-not-dealer-stock",
+  "nextInput": "Use approved template illustrative vehicle assets with same honest demo disclosure across all six. Do not republish these dealer advert photos or claim these prices/availability in demo inventory.",
+  "productionStockReady": false
+}

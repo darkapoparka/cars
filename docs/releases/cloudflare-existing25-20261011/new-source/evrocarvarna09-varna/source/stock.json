@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "kind": "dated-marketplace-listing-sample",
+  "candidate": true,
+  "observedAt": "2026-10-11T11:27:14.270Z",
+  "sourceProfile": "https://evrocarvarna09.mobile.bg/",
+  "sourcePageVisibleListingCount": 25,
+  "sourceProfileCountObservedAt": "2026-10-11T11:25:26.014Z",
+  "profileCountIsAvailableStock": false,
+  "profileCountIsClassifiedOrdinaryRetail": false,
+  "liveInventory": false,
+  "mediaPermission": "unconfirmed",
+  "localMediaReady": true,
+  "records": [
+    {
+      "id": "11769659165544744",
+      "sourceId": "11769659165544744",
+      "title": "VW Passat",
+      "make": "VW",
+      "model": "Passat",
+      "year": 2016,
+      "productionMonth": 1,
+      "priceEur": 9950,
+      "currency": "EUR",
+      "priceVatNotice": "Не се начислява ДДС",
+      "mileageKm": 100000,
+      "body": "Комби",
+      "fuel": "Дизелов",
+      "transmission": "Ръчна",
+      "powerHp": 120,
+      "images": [
+        "/assets/vehicles/11769659165544744/1.webp",
+        "/assets/vehicles/11769659165544744/2.webp"
+      ],
+      "sourceUrl": "https://evrocarvarna09.mobile.bg/obiava-11769659165544744-vw-passat-2016ta-120hp-kato-nov",
+      "sourceHtmlSha256": "e98f781d1277fcce495f41bc70c75abcab1b6aa59619cec2ac8cfafef3999e45",
+      "sourcePriceVerifiedInWebText": true,
+      "sourcePublicationText": "Редактирана в 08:31 часа на 08.10.2026 год.",
+      "observedAt": "2026-10-11T11:27:14.270Z",
+      "availability": "Датирана обява; потвърдете цената и наличността с автокъщата.",
+      "availabilityConfirmed": false,
+      "partsListing": false,
+      "arrivalNotice": null,
+      "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "mediaState": "not-collected; rights/reuse and truthful per-record media decision pending",
+      "mediaPermission": "Not independently established",
+      "fieldConflicts": [],
+      "sourcePhotoUrls": [
+        "https://cdn2.focus.bg/mobile/photosorg/744/1/big1/11769659165544744_oE.webp",
+        "https://cdn2.focus.bg/mobile/photosorg/744/1/big1/11769659165544744_BK.webp",
+        "https://cdn2.focus.bg/mobile/photosorg/744/1/big1/11769659165544744_MV.webp",
+        "https://cdn2.focus.bg/mobile/photosorg/744/1/big1/11769659165544744_og.webp",
+        "https://cdn2.focus.bg/mobile/photosorg/744/1/big1/11769659165544744_tF.webp",
+        "https://cdn2.focus.bg/mobile/photosorg/744/1/big1/11769659165544744_MW.webp",
+        "https://cdn2.focus.bg/mobile/photosorg/744/1/big1/11769659165544744_H7.webp",
+        "https://cdn2.focus.bg/mobile/photosorg/744/1/big1/11769659165544744_6K.webp",
+        "https://cdn2.focus.bg/mobile/photosorg/744/1/big1/11769659165544744_Wz.webp",
+        "https://cdn2.focus.bg/mobile/photosorg/744/1/big1/11769659165544744_t1.webp",
+        "https://cdn2.focus.bg/mobile/photosorg/744/1/big1/11769659165544744_pQ.webp",
+        "https://cdn2.focus.bg/mobile/photosorg/744/1/big1/11769659165544744_GG.webp"
+      ],
+      "sourcePhotoEvidence": {
+        "sourceId": "11769659165544744",
+        "sourceUrl": "https://evrocarvarna09.mobile.bg/obiava-11769659165544744-vw-passat-2016ta-120hp-kato-nov",
+        "observedAt": "2026-10-11T12:09:27.764Z",
+        "responseSha256": "12bd0868ea9e67d5b834cfd2694f56fbc6c5fa8186f472c756a4df1b2c623ec4",
+        "association": "primary gallery URLs contain exact source listing ID",
+        "remoteBytesFetched": false
+      },
+      "conditionIndependentlyConfirmed": false
+    }
+  ],
+  "localMediaHydration": {
+    "candidateOnly": true,
+    "technicalRasterPresent": true,
+    "rightsApproved": false,
+    "availabilityConfirmed": false,
+    "assets": [
+      {
+        "publicPath": "/assets/vehicles/11769659165544744/1.webp",
+        "sourceUrl": "https://cdn2.focus.bg/mobile/photosorg/744/1/big1/11769659165544744_oE.webp",
+        "sha256": "8861d0979939dc230ce298af411e838aa814af5208bee3a18902ba75273e4dba",
+        "bytes": 253346,
+        "downloadObservedAt": "2026-10-11T12:20:25.330Z"
+      },
+      {
+        "publicPath": "/assets/vehicles/11769659165544744/2.webp",
+        "sourceUrl": "https://cdn2.focus.bg/mobile/photosorg/744/1/big1/11769659165544744_BK.webp",
+        "sha256": "e123ec8d175820c643a2d7ada137a75aca2ae19fb06021b083caef198563883d",
+        "bytes": 203216,
+        "downloadObservedAt": "2026-10-11T12:20:25.536Z"
+      }
+    ],
+    "sourceStockSha256": "1cceda8fc4cf63ffbb0a4198c213f3094d2074e33bf6478de18ffa06e1fa6027"
+  }
+}

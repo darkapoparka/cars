@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "dealer": "bradford-cherry-tree-cars",
+  "reviewed": true,
+  "reviewedAt": "2026-10-14T11:56:24.553Z",
+  "sourceMode": "retained-or-mixed-raster",
+  "master": {
+    "path": "docs/logo-polish-2026-10-14/parallel/cf-first50/bradford-cherry-tree-cars/logo-on-light.png",
+    "sha256": "cae6eaf3fa1acabad07cf4a6ab240b7c24f8d012d3cfe337772bb874271ea289"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "docs/logo-polish-2026-10-14/parallel/cf-first50/bradford-cherry-tree-cars/logo-on-light.png",
+      "sha256": "cae6eaf3fa1acabad07cf4a6ab240b7c24f8d012d3cfe337772bb874271ea289",
+      "sourceReference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/parallel/cf-first50/bradford-cherry-tree-cars/logo-on-light.png",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-f10175a2-a15e-4c41-8125-a7c15bb9408d",
+        "modelVersion": null
+      }
+    },
+    "onDark": {
+      "path": "docs/logo-polish-2026-10-14/parallel/cf-first50/bradford-cherry-tree-cars/logo-on-dark.png",
+      "sha256": "acef6988bd149d79d209ee12b92253af93349987cb2eae23f443403060d32099",
+      "sourceReference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/parallel/cf-first50/bradford-cherry-tree-cars/logo-on-dark.png",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-f10175a2-a15e-4c41-8125-a7c15bb9408d",
+        "modelVersion": null
+      }
+    },
+    "onAccent": {
+      "path": "docs/logo-polish-2026-10-14/parallel/cf-first50/bradford-cherry-tree-cars/logo-on-dark.png",
+      "sha256": "acef6988bd149d79d209ee12b92253af93349987cb2eae23f443403060d32099",
+      "sourceReference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/parallel/cf-first50/bradford-cherry-tree-cars/logo-on-dark.png",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-f10175a2-a15e-4c41-8125-a7c15bb9408d",
+        "modelVersion": null
+      }
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-existing-dealer-branding-input-boundary",
+  "dealer": "exclusive-auto-varna",
+  "identityKey": "mobile-profile:exclusiveauto.mobile.bg",
+  "cohort": "qualified-varna-addition55",
+  "ownership": "registered-research-adoption-required",
+  "branding": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/exclusive-auto-varna/branding.json",
+    "sha256": "474407f0ffff40c30f94c5e936e86ec086c311b9424bfb1e1c4e892e2aecc0e9"
+  },
+  "originalManifest": null,
+  "originalManifestGitBlob": null,
+  "originalRepository": null,
+  "sourceRef": {
+    "ref": "main",
+    "commit": "c5c6b0da611a3bf2756c1be2ff9764f6903536ec",
+    "tree": "9ac7f9c753d171bc5be9563f3e16746119f97d71"
+  },
+  "originalData": [
+    {
+      "path": "clients/exclusive-auto-varna/business-facts.json",
+      "gitBlob": "fbac2198cdd54f744be69150e5ab9a3add1883e5",
+      "bytes": 1732
+    }
+  ],
+  "sourceProof": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/evidence/original-source-proof.json",
+    "sha256": "477c4eedc097eb2e105b1d50cf1bc3701b558679e8f6c3c3681a3ccd6626e08c"
+  },
+  "roster": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/evidence/accepted-roster.json",
+    "sha256": "c23c6c4ea10acaca9fdc8d09351fd64735a9e2245385fb12a0f95d71f9f0080d"
+  },
+  "sourceCreation": false,
+  "clientIntegration": false,
+  "buildApproval": false,
+  "hostedApproval": false,
+  "eligibleForExistingQualifiedRequest": false,
+  "holds": [
+    "Adopt original branch/research identity and source through a separate reviewed preservation mode; do not pass as absent/new or existing-qualified."
+  ]
+}

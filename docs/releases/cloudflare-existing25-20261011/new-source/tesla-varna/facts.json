@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "slug": "tesla-varna",
+  "dealerId": "tesla-varna",
+  "business": {
+    "schemaVersion": 1,
+    "slug": "tesla-varna",
+    "name": "Dream Cars 77",
+    "shortName": "Dream Cars 77",
+    "city": "Варна",
+    "country": "BG",
+    "countryCode": "BG",
+    "locale": "bg-BG",
+    "currency": "EUR",
+    "distanceUnit": "km",
+    "phone": "0895762847",
+    "phoneDisplay": "0895762847",
+    "phoneE164": "+359895762847",
+    "phones": [
+      "0895762847"
+    ],
+    "addressLine": "ул. Прилеп 112",
+    "address": "ул. Прилеп 112, Варна, България",
+    "hours": "Потвърдете работното време директно с автокъщата.",
+    "email": "contact@dreamcars77.com",
+    "sourceUrl": "https://tesla.mobile.bg/",
+    "stockUrl": "https://tesla.mobile.bg/",
+    "contactSourceUrl": "https://tesla.mobile.bg/contacts",
+    "observedAt": "2026-10-11T11:32:26.480Z",
+    "inventoryNotice": "Датирана извадка от публични обяви, не складова система в реално време. Потвърдете цената, ДДС и наличността.",
+    "previewNotice": "Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация.",
+    "services": [],
+    "socialLinks": {},
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sourceFacts": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/tesla-varna/source/business-facts.json",
+    "sha256": "dd3dc7c18005fb215ffe3b630bdae5ef894f8277533f209998a9462c43945614"
+  },
+  "originalBusinessLiteralsUnchanged": false,
+  "originalBusinessFacts": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/tesla-varna/source/business-facts.json",
+    "sha256": "dd3dc7c18005fb215ffe3b630bdae5ef894f8277533f209998a9462c43945614"
+  },
+  "reviewedNameDelta": {
+    "review": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/tesla-varna/source/trading-alias-root-review.json",
+      "sha256": "8730dabb2784c0623b16c43dee72e01f5d677f001c8030f41f891eac5a90fc75"
+    },
+    "fields": [
+      "name",
+      "shortName"
+    ],
+    "before": {
+      "name": "Тесла БГ",
+      "shortName": "Тесла БГ"
+    },
+    "after": {
+      "name": "Dream Cars 77",
+      "shortName": "Dream Cars 77"
+    },
+    "otherFactsUnchanged": true,
+    "noLegalOwnershipClaim": true
+  }
+}

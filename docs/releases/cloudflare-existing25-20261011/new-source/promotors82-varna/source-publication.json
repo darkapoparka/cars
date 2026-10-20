@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-source-publication",
+  "reviewed": true,
+  "reviewedAt": "2026-10-13T14:15:52.717Z",
+  "dealer": "promotors82-varna",
+  "dealerId": "promotors82-varna",
+  "repository": "darkapoparka/cars-promotors82-varna",
+  "sourceOwnership": "cars-canonical",
+  "request": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/batch-2-recovery-wave02-10-request.json",
+    "sha256": "c4d350dd16a9495c5f8db496d1931baee099849105b427a2928a7d171bcd5b9f"
+  },
+  "preparation": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/promotors82-varna/source-38355305369/source-preparation.json",
+    "sha256": "91163e99f1e83cb6277b47ba280590105d1bf743658d527f5583c76af1bf231c"
+  },
+  "proposal": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/promotors82-varna/source-38355305369/source-proposal.json",
+    "sha256": "1380c8dd2cc13cbd0e31ee5a39e0842a5b0661236acb9eeab2715d659f07b67d"
+  },
+  "inputMapping": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/promotors82-varna/source-38355305369/input-mapping.json",
+    "sha256": "051fa9209a5287260d979e0b7a8033ac1fc5dd9e84aa8ad59c091cbfabbedac6"
+  },
+  "sourcePublication": {
+    "repository": "darkapoparka/cars",
+    "commit": "b6040ffc0aedd5858b5d47ece5f3f78eac699584",
+    "sourceTree": "78e83790eaa0b9825417dcf8049890ac3d962016",
+    "ref": "refs/heads/main",
+    "publishedAt": "2026-10-13T07:47:19.708Z",
+    "evidence": "https://github.com/darkapoparka/cars/commit/b6040ffc0aedd5858b5d47ece5f3f78eac699584"
+  }
+}

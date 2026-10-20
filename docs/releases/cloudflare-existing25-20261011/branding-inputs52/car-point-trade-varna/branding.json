@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "dealer": "car-point-trade-varna",
+  "reviewed": true,
+  "reviewedAt": "2026-10-11T13:30:47.709Z",
+  "reviewScope": "Hash-identical selected current raster inputs and retained genuine surface-review provenance only; actual dealer integration, native and hosted checks pending.",
+  "officialDealerArtwork": false,
+  "dealerApproval": false,
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "generation": {
+    "tool": "image_gen",
+    "generationId": "exec-1c1082a1-119a-4e2b-9bce-1c9958d44d7b",
+    "modelVersion": null,
+    "sourceSha256": "b2152b1f986fd36a2932abbf5b86c248c7525d45433fb29b7d6689aed9f4c01b",
+    "sourceRole": "Native ImageGen output behind exact retained selected raster; no new generation or claimed model version.",
+    "nativeOutput": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/car-point-trade-varna/source/native-onLight.png",
+      "sha256": "b2152b1f986fd36a2932abbf5b86c248c7525d45433fb29b7d6689aed9f4c01b"
+    },
+    "originalGenerationReceipt": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/car-point-trade-varna/source/generation-receipt.json",
+      "sha256": "f32aec218cab4c19bf49ec0754e56a873a4d1953f786a99a2a4125eab64436bc"
+    },
+    "derivation": "one ImageGen master exported to context raster"
+  },
+  "master": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/car-point-trade-varna/branding/master.png",
+    "sha256": "d7fd03dd6805c9826aa56b0bf1ca88780c6d5ad9878c4fc9a51e0079aa0d2ebf"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/car-point-trade-varna/branding/onLight.png",
+      "sha256": "d7fd03dd6805c9826aa56b0bf1ca88780c6d5ad9878c4fc9a51e0079aa0d2ebf",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/car-point-trade-varna/source/generation-receipt.json#sha256=f32aec218cab4c19bf49ec0754e56a873a4d1953f786a99a2a4125eab64436bc; exact selected handoff b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-1c1082a1-119a-4e2b-9bce-1c9958d44d7b",
+        "modelVersion": null,
+        "sourceSha256": "b2152b1f986fd36a2932abbf5b86c248c7525d45433fb29b7d6689aed9f4c01b",
+        "sourceRole": "Native ImageGen output behind exact retained selected raster; no new generation or claimed model version.",
+        "nativeOutput": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/car-point-trade-varna/source/native-onLight.png",
+          "sha256": "b2152b1f986fd36a2932abbf5b86c248c7525d45433fb29b7d6689aed9f4c01b"
+        },
+        "originalGenerationReceipt": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/car-point-trade-varna/source/generation-receipt.json",
+          "sha256": "f32aec218cab4c19bf49ec0754e56a873a4d1953f786a99a2a4125eab64436bc"
+        },
+        "derivation": "one ImageGen master exported to context raster"
+      }
+    },
+    "onDark": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/car-point-trade-varna/branding/onDark.png",
+      "sha256": "5598fe5f74a921c9b1f54fa35044de4d5cfd46edcbcb829e87daf6a10992ba0a",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/car-point-trade-varna/source/generation-receipt.json#sha256=f32aec218cab4c19bf49ec0754e56a873a4d1953f786a99a2a4125eab64436bc; exact selected handoff b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-1c1082a1-119a-4e2b-9bce-1c9958d44d7b",
+        "modelVersion": null,
+        "sourceSha256": "b2152b1f986fd36a2932abbf5b86c248c7525d45433fb29b7d6689aed9f4c01b",
+        "sourceRole": "Native ImageGen output behind exact retained selected raster; no new generation or claimed model version.",
+        "nativeOutput": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/car-point-trade-varna/source/native-onDark.png",
+          "sha256": "b2152b1f986fd36a2932abbf5b86c248c7525d45433fb29b7d6689aed9f4c01b"
+        },
+        "originalGenerationReceipt": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/car-point-trade-varna/source/generation-receipt.json",
+          "sha256": "f32aec218cab4c19bf49ec0754e56a873a4d1953f786a99a2a4125eab64436bc"
+        },
+        "derivation": "one ImageGen master exported to context raster"
+      }
+    },
+    "onAccent": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/car-point-trade-varna/branding/onAccent.png",
+      "sha256": "5598fe5f74a921c9b1f54fa35044de4d5cfd46edcbcb829e87daf6a10992ba0a",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/car-point-trade-varna/source/generation-receipt.json#sha256=f32aec218cab4c19bf49ec0754e56a873a4d1953f786a99a2a4125eab64436bc; exact selected handoff b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-1c1082a1-119a-4e2b-9bce-1c9958d44d7b",
+        "modelVersion": null,
+        "sourceSha256": "b2152b1f986fd36a2932abbf5b86c248c7525d45433fb29b7d6689aed9f4c01b",
+        "sourceRole": "Native ImageGen output behind exact retained selected raster; no new generation or claimed model version.",
+        "nativeOutput": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/car-point-trade-varna/source/native-onAccent.png",
+          "sha256": "b2152b1f986fd36a2932abbf5b86c248c7525d45433fb29b7d6689aed9f4c01b"
+        },
+        "originalGenerationReceipt": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/car-point-trade-varna/source/generation-receipt.json",
+          "sha256": "f32aec218cab4c19bf49ec0754e56a873a4d1953f786a99a2a4125eab64436bc"
+        },
+        "derivation": "one ImageGen master exported to context raster"
+      }
+    }
+  },
+  "originalGenerationReceipt": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/car-point-trade-varna/source/generation-receipt.json",
+    "sha256": "f32aec218cab4c19bf49ec0754e56a873a4d1953f786a99a2a4125eab64436bc"
+  },
+  "acceptedLogoManifest": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/evidence/final-logo-handoff.json",
+    "sha256": "b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a"
+  },
+  "assetReview": {
+    "status": "completed",
+    "owner": "existing",
+    "proof": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/car-point-trade-varna/surface-review.png",
+      "sha256": "0491cbe79490aa2f9d91882a62ddea1c1c6bf977832a8e2604c89ff7c5885d01",
+      "bytes": 97715,
+      "width": 740,
+      "height": 864,
+      "format": "png",
+      "hasAlpha": true
+    },
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "scope": "Actual master and compact native-palette swatches inspected; retained pixels remain identical.",
+    "report": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/final-existing-review.json"
+  },
+  "sourceOwnershipUnchanged": true
+}

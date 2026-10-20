@@ -27,9 +27,9 @@
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Showroom%2061%2C%20Souq%20Al%20Haraj%2C%20Sharjah%2C%20UAE",
     "mapsEmbedUrl": "https://maps.google.com/maps?q=Showroom%2061%2C%20Souq%20Al%20Haraj%2C%20Sharjah%2C%20UAE&z=16&hl=en&output=embed",
     "accent": "#454b50",
-    "logo": "/dealer-brand/logo-on-light.webp",
-    "logoLight": "/dealer-brand/logo-on-light.webp",
-    "logoDark": "/dealer-brand/logo-on-dark.webp",
+    "logo": "/dealer-brand/v2-e73f3eb48de7300c/logo-on-light.webp",
+    "logoLight": "/dealer-brand/v2-e73f3eb48de7300c/logo-on-light.webp",
+    "logoDark": "/dealer-brand/v2-e73f3eb48de7300c/logo-on-dark.webp",
     "socialLinks": {
       "facebook": "https://www.facebook.com/albasmamotors",
       "instagram": "https://www.instagram.com/albasmamotors",
@@ -105,6 +105,7 @@
       "currency": "AED",
       "mileageValue": 168000,
       "mileageUnit": "km",
+      "mileageOnRequest": false,
       "body": "Hatchback",
       "bodyType": "hatchback",
       "fuel": "Hybrid",
@@ -209,6 +210,7 @@
       "currency": "AED",
       "mileageValue": 40000,
       "mileageUnit": "km",
+      "mileageOnRequest": false,
       "body": "Sedan",
       "bodyType": "sedan",
       "fuel": "Petrol",
@@ -313,6 +315,7 @@
       "currency": "AED",
       "mileageValue": 140000,
       "mileageUnit": "km",
+      "mileageOnRequest": false,
       "body": "Coupe",
       "bodyType": "coupe",
       "fuel": "Petrol",
@@ -417,6 +420,7 @@
       "currency": "AED",
       "mileageValue": 151000,
       "mileageUnit": "km",
+      "mileageOnRequest": false,
       "body": "Sedan",
       "bodyType": "sedan",
       "fuel": "Petrol",
@@ -521,6 +525,7 @@
       "currency": "AED",
       "mileageValue": 52000,
       "mileageUnit": "km",
+      "mileageOnRequest": false,
       "body": "Sedan",
       "bodyType": "sedan",
       "fuel": "Petrol",
@@ -625,6 +630,7 @@
       "currency": "AED",
       "mileageValue": 120000,
       "mileageUnit": "km",
+      "mileageOnRequest": false,
       "body": "Coupe",
       "bodyType": "coupe",
       "fuel": "Petrol",
@@ -729,6 +735,7 @@
       "currency": "AED",
       "mileageValue": 77000,
       "mileageUnit": "km",
+      "mileageOnRequest": false,
       "body": "Sedan",
       "bodyType": "sedan",
       "fuel": "Petrol",
@@ -833,6 +840,7 @@
       "currency": "AED",
       "mileageValue": 228000,
       "mileageUnit": "km",
+      "mileageOnRequest": false,
       "body": "SUV",
       "bodyType": "suv",
       "fuel": "Petrol",
@@ -937,6 +945,7 @@
       "currency": "AED",
       "mileageValue": 53000,
       "mileageUnit": "km",
+      "mileageOnRequest": false,
       "body": "SUV",
       "bodyType": "suv",
       "fuel": "Petrol",
@@ -1041,6 +1050,7 @@
       "currency": "AED",
       "mileageValue": 12000,
       "mileageUnit": "km",
+      "mileageOnRequest": false,
       "body": "SUV",
       "bodyType": "suv",
       "fuel": "Petrol",
@@ -1179,6 +1189,7 @@
     "mapsEmbedUrl": "https://maps.google.com/maps?q=Showroom%2061%2C%20Souq%20Al%20Haraj%2C%20Sharjah%2C%20UAE&z=16&hl=en&output=embed"
   },
   "sourceCount": 10,
+  "stockKind": "",
   "logoContract": {
     "schemaVersion": 1,
     "dealer": "al-basma-motors",
@@ -1187,19 +1198,19 @@
     "originalSha256": "ac85d960fc592f393928f178df7107c70729f5fbb9befaf9524891de4702ee2f",
     "assets": {
       "onLight": {
-        "publicPath": "/dealer-brand/logo-on-light.webp",
-        "sha256": "a711de145806bfc28cb92424e93e21f1c1e5a2cc23b043f97f57b9c0b8035564",
-        "bytes": 148180
+        "publicPath": "/dealer-brand/v2-e73f3eb48de7300c/logo-on-light.webp",
+        "sha256": "69243b2c43b11bc29a2ece97e5ea5a8ff99a2aad4a36df9a8a76e61c522c85df",
+        "bytes": 77628
       },
       "onDark": {
-        "publicPath": "/dealer-brand/logo-on-dark.webp",
-        "sha256": "4003fd1022280c2c8475e45f79d364cd0ad5f5423b99aa9c264e7dba3a5e5688",
-        "bytes": 153974
+        "publicPath": "/dealer-brand/v2-e73f3eb48de7300c/logo-on-dark.webp",
+        "sha256": "7afbb0dd988de9dd59c8c9b00c5f3b216efb9739e825c2e6279e3c06a6d99a6a",
+        "bytes": 26462
       },
       "onAccent": {
-        "publicPath": "/dealer-brand/logo-on-accent.webp",
-        "sha256": "bfd49ac4bd80c61639950944de121eb6020b94ab71d554c1a31d9f36e3bc7f2b",
-        "bytes": 107692
+        "publicPath": "/dealer-brand/v2-e73f3eb48de7300c/logo-on-accent.webp",
+        "sha256": "7afbb0dd988de9dd59c8c9b00c5f3b216efb9739e825c2e6279e3c06a6d99a6a",
+        "bytes": 26462
       }
     },
     "preparedAt": "2026-09-19T04:56:59.740Z",

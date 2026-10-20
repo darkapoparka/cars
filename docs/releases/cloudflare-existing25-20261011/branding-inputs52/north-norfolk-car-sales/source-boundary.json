@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-existing-dealer-branding-input-boundary",
+  "dealer": "north-norfolk-car-sales",
+  "identityKey": "existing-slug:north-norfolk-car-sales",
+  "cohort": "uk-selected10",
+  "ownership": "maintained-main",
+  "branding": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/north-norfolk-car-sales/branding.json",
+    "sha256": "17cdb4e38d9d0e69bf7ff0c507d4642ef9bb2acc7ace6a59b48c2d4690dfc488"
+  },
+  "originalManifest": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/north-norfolk-car-sales/source/original-dealer.json",
+    "sha256": "edf8ff3c6b676fde39d5512c753550f23da05532c02ce031be15ab975fe55dab"
+  },
+  "originalManifestGitBlob": "a522dd6d4aa4dbca4ea35c6706966a4ed43e31b3",
+  "originalRepository": "darkapoparka/cars-uk-north-norfolk-car-sales",
+  "sourceRef": {
+    "ref": "main",
+    "commit": "c5c6b0da611a3bf2756c1be2ff9764f6903536ec",
+    "tree": "c3770f86b6a3f7e036e057b25c3836db750a675c"
+  },
+  "originalData": [
+    {
+      "path": "clients/north-norfolk-car-sales/business-facts.json",
+      "gitBlob": "5bf8ff326b41b1bd1f57f23efa87ab6ab3567ff4",
+      "bytes": 8782
+    },
+    {
+      "path": "clients/north-norfolk-car-sales/dealer.json",
+      "gitBlob": "a522dd6d4aa4dbca4ea35c6706966a4ed43e31b3",
+      "bytes": 4327
+    },
+    {
+      "path": "clients/north-norfolk-car-sales/stock.json",
+      "gitBlob": "4bdd26161140b9e36a168b42d8f5972646c3e87c",
+      "bytes": 3350
+    }
+  ],
+  "sourceProof": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/evidence/original-source-proof.json",
+    "sha256": "477c4eedc097eb2e105b1d50cf1bc3701b558679e8f6c3c3681a3ccd6626e08c"
+  },
+  "roster": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/evidence/accepted-roster.json",
+    "sha256": "c23c6c4ea10acaca9fdc8d09351fd64735a9e2245385fb12a0f95d71f9f0080d"
+  },
+  "sourceCreation": false,
+  "clientIntegration": false,
+  "buildApproval": false,
+  "hostedApproval": false,
+  "eligibleForExistingQualifiedRequest": true,
+  "holds": [
+    "Exact latest template/source-delta/pilot qualification and preservation-aware updater remain required."
+  ]
+}

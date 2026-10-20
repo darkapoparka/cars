@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "dealer": "outletcars-varna",
+  "reviewed": true,
+  "reviewedAt": "2026-10-11T13:30:46.993Z",
+  "reviewScope": "Hash-identical selected current raster inputs and retained genuine surface-review provenance only; actual dealer integration, native and hosted checks pending.",
+  "officialDealerArtwork": false,
+  "dealerApproval": false,
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "generation": {
+    "tool": "image_gen",
+    "generationId": "exec-9acdc30f-4c52-48d3-9260-2c56db5526cd",
+    "modelVersion": null,
+    "sourceSha256": "2cc427a9db150c01c21f509434377ad17cca9f4051828f29824f0e574b06bb9d",
+    "sourceRole": "Native ImageGen output behind exact retained selected raster; no new generation or claimed model version.",
+    "nativeOutput": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/outletcars-varna/source/native-onLight.png",
+      "sha256": "2cc427a9db150c01c21f509434377ad17cca9f4051828f29824f0e574b06bb9d"
+    },
+    "originalGenerationReceipt": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/outletcars-varna/source/generation-receipt.json",
+      "sha256": "60fe359af2e09936f0c85b135d76351259cc5e749a48af8d5eaeb32bc385c1e2"
+    },
+    "derivation": "one ImageGen master exported to context raster"
+  },
+  "master": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/outletcars-varna/branding/master.png",
+    "sha256": "24a1e82adabde1006e9d20623dd61e4d3c1f78b2f108a31b229f80c58e05e432"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/outletcars-varna/branding/onLight.png",
+      "sha256": "24a1e82adabde1006e9d20623dd61e4d3c1f78b2f108a31b229f80c58e05e432",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/outletcars-varna/source/generation-receipt.json#sha256=60fe359af2e09936f0c85b135d76351259cc5e749a48af8d5eaeb32bc385c1e2; exact selected handoff b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-9acdc30f-4c52-48d3-9260-2c56db5526cd",
+        "modelVersion": null,
+        "sourceSha256": "2cc427a9db150c01c21f509434377ad17cca9f4051828f29824f0e574b06bb9d",
+        "sourceRole": "Native ImageGen output behind exact retained selected raster; no new generation or claimed model version.",
+        "nativeOutput": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/outletcars-varna/source/native-onLight.png",
+          "sha256": "2cc427a9db150c01c21f509434377ad17cca9f4051828f29824f0e574b06bb9d"
+        },
+        "originalGenerationReceipt": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/outletcars-varna/source/generation-receipt.json",
+          "sha256": "60fe359af2e09936f0c85b135d76351259cc5e749a48af8d5eaeb32bc385c1e2"
+        },
+        "derivation": "one ImageGen master exported to context raster"
+      }
+    },
+    "onDark": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/outletcars-varna/branding/onDark.png",
+      "sha256": "aca1f3c63c722f9b39415edbf11738c98605a01d98992d00b0eb0e1b96c290c3",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/outletcars-varna/source/generation-receipt.json#sha256=60fe359af2e09936f0c85b135d76351259cc5e749a48af8d5eaeb32bc385c1e2; exact selected handoff b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-9acdc30f-4c52-48d3-9260-2c56db5526cd",
+        "modelVersion": null,
+        "sourceSha256": "2cc427a9db150c01c21f509434377ad17cca9f4051828f29824f0e574b06bb9d",
+        "sourceRole": "Native ImageGen output behind exact retained selected raster; no new generation or claimed model version.",
+        "nativeOutput": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/outletcars-varna/source/native-onDark.png",
+          "sha256": "2cc427a9db150c01c21f509434377ad17cca9f4051828f29824f0e574b06bb9d"
+        },
+        "originalGenerationReceipt": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/outletcars-varna/source/generation-receipt.json",
+          "sha256": "60fe359af2e09936f0c85b135d76351259cc5e749a48af8d5eaeb32bc385c1e2"
+        },
+        "derivation": "one ImageGen master exported to context raster"
+      }
+    },
+    "onAccent": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/outletcars-varna/branding/onAccent.png",
+      "sha256": "aca1f3c63c722f9b39415edbf11738c98605a01d98992d00b0eb0e1b96c290c3",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/outletcars-varna/source/generation-receipt.json#sha256=60fe359af2e09936f0c85b135d76351259cc5e749a48af8d5eaeb32bc385c1e2; exact selected handoff b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-9acdc30f-4c52-48d3-9260-2c56db5526cd",
+        "modelVersion": null,
+        "sourceSha256": "2cc427a9db150c01c21f509434377ad17cca9f4051828f29824f0e574b06bb9d",
+        "sourceRole": "Native ImageGen output behind exact retained selected raster; no new generation or claimed model version.",
+        "nativeOutput": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/outletcars-varna/source/native-onAccent.png",
+          "sha256": "2cc427a9db150c01c21f509434377ad17cca9f4051828f29824f0e574b06bb9d"
+        },
+        "originalGenerationReceipt": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/outletcars-varna/source/generation-receipt.json",
+          "sha256": "60fe359af2e09936f0c85b135d76351259cc5e749a48af8d5eaeb32bc385c1e2"
+        },
+        "derivation": "one ImageGen master exported to context raster"
+      }
+    }
+  },
+  "originalGenerationReceipt": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/outletcars-varna/source/generation-receipt.json",
+    "sha256": "60fe359af2e09936f0c85b135d76351259cc5e749a48af8d5eaeb32bc385c1e2"
+  },
+  "acceptedLogoManifest": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/evidence/final-logo-handoff.json",
+    "sha256": "b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a"
+  },
+  "assetReview": {
+    "status": "completed",
+    "owner": "new-a",
+    "proof": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/outletcars-varna/surface-review.png",
+      "sha256": "7722bad3e9351967be3e81767219e2a992bcd2a95d59610e1a08a5da10d9e62d",
+      "bytes": 119459,
+      "width": 740,
+      "height": 864,
+      "format": "png",
+      "hasAlpha": true
+    },
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "scope": "Actual master and compact native-palette swatches inspected; retained pixels remain identical.",
+    "report": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/final-new-a-review.json"
+  },
+  "sourceOwnershipUnchanged": true
+}

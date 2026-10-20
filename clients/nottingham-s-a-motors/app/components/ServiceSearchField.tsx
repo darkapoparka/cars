@@ -52,7 +52,7 @@ const s = stylex.create({
   onDark: {minHeight: 44, backgroundColor: $.surface, outlineColor: {':focus-within': {[media.mobile]: '#242428', default: '#fff'}}, outlineOffset: 3},
   heroIcon: {marginInlineStart: {[media.desktop]: 14, default: null}},
   heroClear: {marginRight: {[media.desktop]: 0, default: null}},
-  plainMobileSearch: {backgroundColor: $.surface, outlineColor: {':focus-within': {default: '#fff', [media.mobile]: '#242428'}}, outlineOffset: {[media.mobile]: 2, default: 3}},
+  plainMobileSearch: {backgroundColor: {[media.mobile]: $.surfaceAlt, default: $.surface}, outlineColor: {':focus-within': {default: '#fff', [media.mobile]: '#242428'}}, outlineOffset: {[media.mobile]: 2, default: 3}},
   input: {minHeight: 44, appearance: {default: 'auto', '::-webkit-search-cancel-button': 'none'}},
   compactInput: {minHeight: 40},
   clear: {width: 44, height: 44},

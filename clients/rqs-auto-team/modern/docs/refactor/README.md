@@ -1,3 +1,5 @@
+> Historical program/status. The current 19 September 2026 audit and refactor plan is [../../refactor/README.md](../../refactor/README.md). The record below retains its original baseline and approval assumptions; it is not current implementation or visual sign-off.
+
 # Day & Night Modern — Refactor Program
 
 This directory is the implementation contract for the post-polish codebase refactor. The approved mobile and desktop experience is the regression baseline; the goal is to make the implementation easier to reason about without redesigning the product.
@@ -35,4 +37,4 @@ The refactor is complete only when:
 - `pnpm check`, `pnpm boundaries`, `pnpm unit`, `pnpm typecheck`, and production build pass;
 - public E2E and the 320/360/390/430/768/1024/1440 viewport matrix show no accepted-UI regression.
 
-See `AUDIT.md`, `PLAN.md`, `TARGET_ARCHITECTURE.md`, and `QA_AND_MIGRATION.md` for the detailed contract.
+See `AUDIT.md`, `PLAN.md`, `TARGET_ARCHITECTURE.md`, `QA_AND_MIGRATION.md`, and `TYPOGRAPHY-TASKS.md` for the detailed contracts.

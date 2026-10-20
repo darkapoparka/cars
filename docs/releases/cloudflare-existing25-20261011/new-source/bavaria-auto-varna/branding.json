@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "dealer": "bavaria-auto-varna",
+  "reviewed": true,
+  "reviewedAt": "2026-10-12T12:12:55.087Z",
+  "generation": {
+    "tool": "image_gen",
+    "generationId": "exec-44ddeb03-a874-487d-bfbe-a8920b209892",
+    "modelVersion": null,
+    "sourceFileSha256": "a56caffddf8a0f7e84ca1c346b854403bd11527efd8ca071a86985b37e3f428b",
+    "sourceFileMeaning": "Exact text brief for proposed demo identity",
+    "sourceReference": "docs/releases/cloudflare-existing25-20261011/new-source/bavaria-auto-varna/generation-brief.json",
+    "sourceLogoUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h12464359438799833.pic",
+    "creationMethod": "generated-demo-proposal",
+    "approvalStatus": "not-dealer-approved",
+    "nativeOutput": {
+      "path": "C:/Users/radev/.codex/generated_images/01a12d64-9c2d-7b03-85e1-619a359e6894/exec-44ddeb03-a874-487d-bfbe-a8920b209892.png",
+      "sha256": "b96eb0713abb190d129754af1e30c7bc0dca9459d1a47e27f5a846de4cea832f",
+      "crop": {
+        "left": 71,
+        "top": 164,
+        "width": 2030,
+        "height": 375
+      },
+      "width": 2172,
+      "height": 724,
+      "transparentPixels": 1268871,
+      "opaquePixels": 268915
+    }
+  },
+  "master": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/bavaria-auto-varna/branding/generated-master.png",
+    "sha256": "98f80088f2aae631d7382c01cd2e575e85fb78a08edeb69c47358360db13e1ed"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/bavaria-auto-varna/branding/on-light.png",
+      "sha256": "98f80088f2aae631d7382c01cd2e575e85fb78a08edeb69c47358360db13e1ed",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/new-source/bavaria-auto-varna/branding/generated-master.png",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-44ddeb03-a874-487d-bfbe-a8920b209892",
+        "modelVersion": null
+      }
+    },
+    "onDark": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/bavaria-auto-varna/branding/on-dark.png",
+      "sha256": "c48c2c0ae96661f4716dd836a026f8dc93344c7367f25f62ed1028a05e0718eb",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/new-source/bavaria-auto-varna/branding/generated-master.png",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-59fc2aba-9997-4710-a232-b5ffd22917c4",
+        "modelVersion": null
+      }
+    },
+    "onAccent": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/bavaria-auto-varna/branding/on-accent.png",
+      "sha256": "c48c2c0ae96661f4716dd836a026f8dc93344c7367f25f62ed1028a05e0718eb",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/new-source/bavaria-auto-varna/branding/generated-master.png",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-59fc2aba-9997-4710-a232-b5ffd22917c4",
+        "modelVersion": null
+      }
+    }
+  },
+  "provenance": {
+    "sourceLogoUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h12464359438799833.pic",
+    "creationMethod": "generated-demo-proposal",
+    "approvalStatus": "not-dealer-approved",
+    "nativeWhiteOutput": {
+      "path": "C:/Users/radev/.codex/generated_images/01a12d64-9c2d-7b03-85e1-619a359e6894/exec-59fc2aba-9997-4710-a232-b5ffd22917c4.png",
+      "sha256": "110591e6f2977d53e98d254f1d88cc82b42323fe1d292affe3ea480b579f06de",
+      "crop": {
+        "left": 73,
+        "top": 163,
+        "width": 2017,
+        "height": 374
+      },
+      "width": 2172,
+      "height": 724,
+      "transparentPixels": 1202983,
+      "opaquePixels": 274023
+    },
+    "whiteEditInput": {
+      "path": "C:/Users/radev/.codex/generated_images/01a12d64-9c2d-7b03-85e1-619a359e6894/exec-44ddeb03-a874-487d-bfbe-a8920b209892.png",
+      "sha256": "b96eb0713abb190d129754af1e30c7bc0dca9459d1a47e27f5a846de4cea832f"
+    },
+    "exports": "Lossless PNG canvas crop only; originals retained",
+    "sameWhiteArtworkUsedOnDarkAndAccent": true,
+    "publishedLogoObserved": false,
+    "observedPrimaryProfile": {
+      "url": "https://bavaria.mobile.bg/",
+      "sha256": "ebb138ad24fb863f4317a359a1c4de74553ad4426e7aa0cdba62d596f4c4d0b7",
+      "observedAt": "2026-10-12T12:05:57.081Z"
+    },
+    "surfaceReviewScope": "Standalone selected native palette; actual six application consumers pending"
+  }
+}

@@ -9,6 +9,7 @@ import {
   DrawerTitle,
 } from "@repo/design-system/components/ui/drawer";
 import { cn } from "@repo/design-system/lib/utils";
+import { withBasePath } from "@repo/internationalization/paths";
 import {
   buildMarketplaceSearchHref,
   defaultVehicleCategory,
@@ -16,7 +17,26 @@ import {
   leadSite,
   type MarketplaceSearchParams,
 } from "@repo/marketplace";
-import { CircleDollarSign, Heart, Plus, Store, User } from "lucide-react";
+import { getLeadCopy } from "@repo/marketplace/lead-copy";
+import {
+  isDealershipSite,
+  isPublicSitePathEnabled,
+  publicSite,
+} from "@repo/marketplace/site-config";
+import {
+  BookOpenText,
+  Building2,
+  CarFront,
+  ChevronRight,
+  CircleDollarSign,
+  Heart,
+  MapPin,
+  Phone,
+  Plus,
+  Store,
+  User,
+  X,
+} from "lucide-react";
 import Link from "next/link";
 import { useRef, useState } from "react";
 import { getMarketplaceControlCopy } from "../lib/marketplace-control-copy";
@@ -25,17 +45,51 @@ import { getLocalizedPublicPath } from "../lib/public-path";
 import { DealerBottomNavIcon } from "./dealer-bottom-nav-icon";
 import { DealerMobileBrandBar } from "./dealer-mobile-brand-bar";
 import { DealerSocialLinks } from "./dealer-social-links";
-import { DealerUiIcon } from "./dealer-ui-icon";
+import { LanguageFlag } from "./language-flag";
+import { useLocalePreferences } from "./locale-preferences";
 import type { MarketplaceMode } from "./marketplace-masthead";
 import { mobileMarketplaceDrawerIconActionClassName } from "./mobile-marketplace-drawer";
 
 const getDealerNavigationItemClassName = (active: boolean) =>
   cn(
-    "relative flex min-h-[60px] min-w-0 flex-col items-center justify-center gap-0.5 px-0.5 text-[12px] leading-4 transition-colors focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-[-2px]",
+    "relative flex min-h-13 min-w-0 touch-manipulation flex-col items-center justify-center gap-0 px-0.5 text-[11px] leading-[13px] transition-[background-color,color,transform] duration-150 focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-[-2px] active:scale-[0.97]",
     active
-      ? "font-semibold text-[var(--lead-site-accent)]"
-      : "font-medium text-zinc-600 hover:bg-zinc-50 hover:text-zinc-950 active:bg-zinc-100"
+      ? "font-medium text-brand-text"
+      : "font-normal text-zinc-600 hover:bg-zinc-50 hover:text-zinc-950 active:bg-zinc-100"
   );
+
+const getLocaleSettingsHref = (locale?: string, returnTo?: string) =>
+  withBasePath(
+    `${getLocalizedPublicPath(locale, "/locale-settings")}?returnTo=${encodeURIComponent(
+      returnTo ?? getLocalizedPublicPath(locale, "/cars")
+    )}`
+  );
+
+const getSecondaryMenuItems = (locale?: string) => {
+  const isBg = locale?.startsWith("bg");
+  return [
+    {
+      href: getLocalizedPublicPath(locale, "/services"),
+      icon: Building2,
+      label: isBg ? "Всички услуги" : "All services",
+    },
+    {
+      href: getLocalizedPublicPath(locale, "/cars"),
+      icon: CarFront,
+      label: isBg ? "Всички автомобили" : "All vehicles",
+    },
+    {
+      href: getLocalizedPublicPath(locale, "/guides"),
+      icon: BookOpenText,
+      label: isBg ? "Съвети за покупка" : "Buying guides",
+    },
+    {
+      href: getLocalizedPublicPath(locale, "/contact"),
+      icon: Building2,
+      label: isBg ? "За нас и контакти" : "About and contact",
+    },
+  ];
+};
 
 export const DealerBottomNav = ({
   activeMode,
@@ -45,6 +99,12 @@ export const DealerBottomNav = ({
   locale?: string;
 }) => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const preferences = useLocalePreferences();
+  const localeSettingsHref = getLocaleSettingsHref(
+    locale,
+    preferences?.returnTo
+  );
+  const localeRequested = useRef(false);
   const menuTriggerRef = useRef<HTMLButtonElement>(null);
   const isBg = locale?.toLowerCase().startsWith("bg") ?? false;
   const navigationLabel = isBg
@@ -79,35 +139,27 @@ export const DealerBottomNav = ({
       label: isBg ? "Лизинг" : "Lease",
     },
   ];
+  const visibleItems = items.filter((item) =>
+    isPublicSitePathEnabled(item.href, publicSite)
+  );
   const menuLabel = isBg ? "Меню" : "Menu";
-  const secondaryMenuItems = [
-    {
-      href: getLocalizedPublicPath(locale, "/cars"),
-      icon: "car" as const,
-      label: isBg ? "Всички автомобили" : "All vehicles",
-    },
-    {
-      href: getLocalizedPublicPath(locale, "/guides"),
-      icon: "guide" as const,
-      label: isBg ? "Съвети за покупка" : "Buying guides",
-    },
-    {
-      href: getLocalizedPublicPath(locale, "/contact"),
-      icon: "about" as const,
-      label: isBg ? "За нас и контакти" : "About and contact",
-    },
-  ];
+  const secondaryMenuItems = getSecondaryMenuItems(locale);
 
   return (
     <>
       <nav
         aria-label={navigationLabel}
-        className="fixed inset-x-0 bottom-0 z-40 border-zinc-200/70 border-t bg-white lg:hidden"
+        className="fixed inset-x-0 bottom-0 z-40 border-zinc-200/50 border-t bg-white/80 backdrop-blur-lg lg:hidden"
         data-slot="dealer-bottom-nav"
         style={{ paddingBottom: "env(safe-area-inset-bottom)" }}
       >
-        <div className="mx-auto grid min-h-[60px] max-w-lg grid-cols-5 px-1.5">
-          {items.map((item) => {
+        <div
+          className="mx-auto grid max-w-lg px-1.5"
+          style={{
+            gridTemplateColumns: `repeat(${visibleItems.length + 1}, minmax(0, 1fr))`,
+          }}
+        >
+          {visibleItems.map((item) => {
             const visuallyActive = item.active && !menuOpen;
 
             return (
@@ -117,18 +169,13 @@ export const DealerBottomNav = ({
                 href={item.href}
                 key={item.label}
               >
-                <span className="grid h-7 w-10 place-items-center">
-                  <DealerBottomNavIcon
-                    active={visuallyActive}
-                    name={item.icon}
-                  />
-                </span>
+                <DealerBottomNavIcon active={visuallyActive} name={item.icon} />
                 <span className="whitespace-nowrap">{item.label}</span>
               </Link>
             );
           })}
           <button
-            aria-controls="dealer-mobile-menu"
+            aria-controls={menuOpen ? "dealer-mobile-menu" : undefined}
             aria-expanded={menuOpen}
             aria-haspopup="dialog"
             className={getDealerNavigationItemClassName(
@@ -138,12 +185,7 @@ export const DealerBottomNav = ({
             ref={menuTriggerRef}
             type="button"
           >
-            <span className="grid h-7 w-10 place-items-center">
-              <DealerBottomNavIcon
-                active={menuOpen || !activeMode}
-                name="menu"
-              />
-            </span>
+            <DealerBottomNavIcon active={menuOpen || !activeMode} name="menu" />
             <span className="whitespace-nowrap">{menuLabel}</span>
           </button>
         </div>
@@ -151,14 +193,18 @@ export const DealerBottomNav = ({
 
       <Drawer modal onOpenChange={setMenuOpen} open={menuOpen}>
         <DrawerContent
-          className="!bg-white mx-auto h-[calc(100dvh-max(0.75rem,env(safe-area-inset-top))-7rem)] max-w-lg overflow-hidden border-0 data-[vaul-drawer-direction=bottom]:mt-0 data-[vaul-drawer-direction=bottom]:max-h-[calc(100dvh-max(0.75rem,env(safe-area-inset-top)))] data-[vaul-drawer-direction=bottom]:rounded-t-3xl"
+          className="!bg-white mx-auto h-auto max-w-lg overflow-hidden border-0 data-[vaul-drawer-direction=bottom]:mt-0 data-[vaul-drawer-direction=bottom]:max-h-[calc(100dvh-max(0.75rem,env(safe-area-inset-top)))] data-[vaul-drawer-direction=bottom]:rounded-t-3xl"
           data-slot="dealer-mobile-menu"
           id="dealer-mobile-menu"
           onCloseAutoFocus={(event) => {
             event.preventDefault();
-            requestAnimationFrame(() =>
-              menuTriggerRef.current?.focus({ preventScroll: true })
-            );
+            requestAnimationFrame(() => {
+              menuTriggerRef.current?.focus({ preventScroll: true });
+              if (localeRequested.current) {
+                localeRequested.current = false;
+                preferences?.open();
+              }
+            });
           }}
         >
           <DrawerHeader className="shrink-0 px-5 pt-4 pb-4">
@@ -187,7 +233,11 @@ export const DealerBottomNav = ({
                 type="button"
                 variant="ghost"
               >
-                <DealerUiIcon className="size-[18px]" name="close" />
+                <X
+                  aria-hidden="true"
+                  className="size-[18px]"
+                  strokeWidth={1.75}
+                />
               </Button>
             </div>
           </DrawerHeader>
@@ -202,30 +252,38 @@ export const DealerBottomNav = ({
             >
               <a
                 aria-label={`${isBg ? "Обадете се на" : "Call"} ${leadSite.phoneDisplay}`}
-                className="flex min-h-14 min-w-0 items-center justify-center gap-2 rounded-xl bg-[var(--lead-site-accent)] px-2.5 py-3 text-white transition-colors hover:bg-[var(--lead-site-accent-hover)] focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2 active:bg-[var(--lead-site-accent-hover)]"
-                href={leadSite.phoneHref}
+                className="flex min-h-12 min-w-0 items-center justify-center gap-1.5 rounded-xl bg-primary px-2 py-3 text-primary-foreground transition-colors hover:bg-[var(--primary-hover)] hover:text-[var(--primary-hover-foreground)] focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2 active:bg-[var(--primary-active)] active:text-[var(--primary-active-foreground)]"
+                href={withBasePath(leadSite.phoneHref)}
                 onClick={() => setMenuOpen(false)}
               >
-                <DealerUiIcon className="size-5 shrink-0" name="phone" />
-                <span className="whitespace-nowrap font-semibold text-[14px] tabular-nums leading-5">
-                  {leadSite.phoneDisplay}
+                <Phone
+                  aria-hidden="true"
+                  className="size-5 shrink-0"
+                  strokeWidth={1.75}
+                />
+                <span className="whitespace-nowrap font-medium text-body tabular-nums">
+                  {isBg ? "Обади се" : "Call us"}
                 </span>
               </a>
               <a
                 aria-label={
                   isBg
-                    ? `Отворете картата: ${leadSite.address}`
+                    ? `Отворете картата: ${getLeadCopy(locale).address}`
                     : "Open showroom map"
                 }
-                className="flex min-h-14 min-w-0 items-center justify-center gap-2 rounded-xl bg-zinc-950 px-2.5 py-3 text-white transition-colors hover:bg-zinc-800 focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2 active:bg-zinc-800"
-                href={leadSite.mapsUrl}
+                className="flex min-h-12 min-w-0 items-center justify-center gap-1.5 rounded-xl bg-primary px-2 py-3 text-primary-foreground transition-colors hover:bg-[var(--primary-hover)] hover:text-[var(--primary-hover-foreground)] focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2 active:bg-[var(--primary-active)] active:text-[var(--primary-active-foreground)]"
+                href={withBasePath(leadSite.mapsUrl)}
                 onClick={() => setMenuOpen(false)}
                 rel="noreferrer"
                 target="_blank"
               >
-                <DealerUiIcon className="size-5 shrink-0" name="location" />
-                <span className="min-w-0 text-center font-semibold text-[14px] leading-5">
-                  {isBg ? leadSite.city : "Varna"}
+                <MapPin
+                  aria-hidden="true"
+                  className="size-5 shrink-0"
+                  strokeWidth={1.75}
+                />
+                <span className="min-w-0 whitespace-nowrap text-center font-medium text-body">
+                  {isBg ? "Посети ни" : "Visit us"}
                 </span>
               </a>
             </div>
@@ -235,30 +293,60 @@ export const DealerBottomNav = ({
               className="mt-4 grid gap-2"
               data-slot="dealer-mobile-menu-secondary-nav"
             >
-              {secondaryMenuItems.map((item) => {
-                return (
-                  <Link
-                    className="flex min-h-14 items-center gap-3 rounded-xl bg-zinc-100 px-4 font-semibold text-[15px] text-zinc-950 transition-colors hover:bg-zinc-200 focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2 active:bg-zinc-200"
-                    href={item.href}
-                    key={item.href}
-                    onClick={() => setMenuOpen(false)}
-                  >
-                    <DealerUiIcon
-                      className="size-5 shrink-0 text-zinc-600"
-                      name={item.icon}
-                    />
-                    <span className="min-w-0 flex-1 py-3">{item.label}</span>
-                    <DealerUiIcon
-                      className="size-4 shrink-0 text-zinc-400"
-                      name="chevronRight"
-                    />
-                  </Link>
-                );
-              })}
+              {secondaryMenuItems
+                .filter((item) =>
+                  isPublicSitePathEnabled(item.href, publicSite)
+                )
+                .map((item) => {
+                  const Icon = item.icon;
+                  return (
+                    <Link
+                      className="flex min-h-14 items-center gap-3 rounded-xl bg-zinc-100 px-4 font-semibold text-compact-control text-zinc-950 transition-colors hover:bg-zinc-200 focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2 active:bg-zinc-200"
+                      href={item.href}
+                      key={item.href}
+                      onClick={() => setMenuOpen(false)}
+                    >
+                      <span className="flex size-8 shrink-0 items-center justify-center rounded-lg bg-white text-zinc-600">
+                        <Icon
+                          aria-hidden="true"
+                          className="size-5"
+                          strokeWidth={1.75}
+                        />
+                      </span>
+                      <span className="min-w-0 flex-1 py-3">{item.label}</span>
+                      <ChevronRight
+                        aria-hidden="true"
+                        className="size-4 shrink-0 text-zinc-400"
+                        strokeWidth={1.5}
+                      />
+                    </Link>
+                  );
+                })}
             </nav>
+            <a
+              className="mt-4 flex min-h-11 items-center gap-2 rounded-xl border px-4 font-medium"
+              data-locale-trigger
+              href={localeSettingsHref}
+              onClick={(event) => {
+                if (
+                  preferences &&
+                  !event.ctrlKey &&
+                  !event.metaKey &&
+                  !event.shiftKey &&
+                  !event.altKey
+                ) {
+                  event.preventDefault();
+                  localeRequested.current = true;
+                  setMenuOpen(false);
+                }
+              }}
+            >
+              <LanguageFlag locale={isBg ? "bg" : "en"} />
+              {isBg ? "Държава и език" : "Country and language"}
+            </a>
             <DealerSocialLinks isBg={isBg} links={leadSite.socialLinks} />
-            <p className="mt-4 text-[13px] text-zinc-600 leading-5">
-              {leadSite.address}
+            <p className="mt-4 text-meta text-zinc-600">
+              {getLeadCopy(locale).address}
             </p>
           </div>
         </DrawerContent>
@@ -278,7 +366,7 @@ export const BottomMarketplaceNav = ({
 }) => {
   const copy = getMarketplaceControlCopy(locale);
 
-  if (leadSite.staticDemoMode) {
+  if (isDealershipSite) {
     return (
       <DealerBottomNav
         activeMode={filters.category === "lease" ? "lease" : "buy"}
@@ -340,7 +428,7 @@ export const BottomMarketplaceNav = ({
             <Link
               aria-current={item.active ? "page" : undefined}
               className={cn(
-                "flex min-h-12 min-w-0 flex-1 flex-col items-center justify-center gap-0.5 px-1 font-medium text-micro transition-colors",
+                "flex min-h-12 min-w-0 flex-1 flex-col items-center justify-center gap-0.5 px-1 font-medium text-meta transition-colors",
                 item.active
                   ? "text-foreground"
                   : "text-muted-foreground hover:text-foreground"

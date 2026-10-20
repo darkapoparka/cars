@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "dealer": "tesi-car-varna",
+  "reviewed": true,
+  "reviewedAt": "2026-10-14T11:56:24.553Z",
+  "sourceMode": "retained-or-mixed-raster",
+  "master": {
+    "path": "docs/logo-polish-2026-10-14/live-assets/6c7362b70c0ead215e7b5d343314d78584592c267d9e9fdb998fe8a8102bb7d3.png",
+    "sha256": "6c7362b70c0ead215e7b5d343314d78584592c267d9e9fdb998fe8a8102bb7d3"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "docs/logo-polish-2026-10-14/live-assets/6c7362b70c0ead215e7b5d343314d78584592c267d9e9fdb998fe8a8102bb7d3.png",
+      "sha256": "6c7362b70c0ead215e7b5d343314d78584592c267d9e9fdb998fe8a8102bb7d3",
+      "sourceReference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/live-assets/6c7362b70c0ead215e7b5d343314d78584592c267d9e9fdb998fe8a8102bb7d3.png",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/live-assets/6c7362b70c0ead215e7b5d343314d78584592c267d9e9fdb998fe8a8102bb7d3.png",
+        "sha256": "6c7362b70c0ead215e7b5d343314d78584592c267d9e9fdb998fe8a8102bb7d3",
+        "reviewReference": "docs/logo-polish-2026-10-14/final-selection.json",
+        "reviewSha256": "6e396eef77195ab7f44d6b055c1936fa079a8195a428a95151fdfd7f3f5d1a16"
+      }
+    },
+    "onDark": {
+      "path": "docs/logo-polish-2026-10-14/final-raster-inputs/ffaed627ba3370c3f12e6b42a7c31343ccc80bea06195feebc2c9ebcd3b35db5.png",
+      "sha256": "ffaed627ba3370c3f12e6b42a7c31343ccc80bea06195feebc2c9ebcd3b35db5",
+      "sourceReference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/live-assets/3e5e98cc98b4ea3fcc48d76b5a67883035740927d3eea56c4ee470e59e0f4d4d.webp",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/live-assets/3e5e98cc98b4ea3fcc48d76b5a67883035740927d3eea56c4ee470e59e0f4d4d.webp",
+        "sha256": "3e5e98cc98b4ea3fcc48d76b5a67883035740927d3eea56c4ee470e59e0f4d4d",
+        "reviewReference": "docs/logo-polish-2026-10-14/final-selection.json",
+        "reviewSha256": "6e396eef77195ab7f44d6b055c1936fa079a8195a428a95151fdfd7f3f5d1a16"
+      }
+    },
+    "onAccent": {
+      "path": "docs/logo-polish-2026-10-14/final-raster-inputs/1050d3394089229ddc7f57248e001dcd4c962bbdf7b190bfa88ec71e97c59e08.png",
+      "sha256": "1050d3394089229ddc7f57248e001dcd4c962bbdf7b190bfa88ec71e97c59e08",
+      "sourceReference": "L:/CODEX/cars/leads/branding/fleet-20261011/tesi-car-varna/dealer-brand/logo-on-accent.webp",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "L:/CODEX/cars/leads/branding/fleet-20261011/tesi-car-varna/dealer-brand/logo-on-accent.webp",
+        "sha256": "ba15703d917bf3d8f0bdb582ce2059bd5dc53b85439d167ff604165743041f10",
+        "reviewReference": "docs/logo-polish-2026-10-14/final-selection.json",
+        "reviewSha256": "6e396eef77195ab7f44d6b055c1936fa079a8195a428a95151fdfd7f3f5d1a16"
+      }
+    }
+  }
+}

@@ -1,0 +1,135 @@
+{
+  "baselineHead": "352568414db6003856f1c67b196232730fef2ead",
+  "generatedAt": "2026-10-04T03:06:00.402Z",
+  "change": {
+    "paddingBefore": 6,
+    "paddingAfter": 12,
+    "paintedHeight": 28,
+    "weight": 500,
+    "sharedPillRadius": true
+  },
+  "matchedCapture": {
+    "viewport": {
+      "height": 884,
+      "width": 355
+    },
+    "scrollY": 1401,
+    "cardUnchanged": true,
+    "artUnchanged": true,
+    "scrollUnchanged": true
+  },
+  "cases": [
+    {
+      "key": "current",
+      "width": 355,
+      "padding": "0px 12px",
+      "paintedHeight": 28,
+      "radius": "999px",
+      "label": "Виж",
+      "labelRows": 0.9993131868131868,
+      "detailRows": 0.9997814685314684,
+      "imageWidth": 128,
+      "sideBySide": true,
+      "overflow": false,
+      "href": "http://127.0.0.1:6461/bg/about-us#process",
+      "nestedControls": 0
+    },
+    {
+      "key": "bg280",
+      "width": 280,
+      "padding": "0px 12px",
+      "paintedHeight": 28,
+      "radius": "999px",
+      "label": "Виж",
+      "labelRows": 0.9993131868131868,
+      "detailRows": 0.9997814685314684,
+      "imageWidth": 128,
+      "sideBySide": true,
+      "overflow": false,
+      "href": "http://127.0.0.1:6461/bg/about-us#process",
+      "nestedControls": 0
+    },
+    {
+      "key": "bg320",
+      "width": 320,
+      "padding": "0px 12px",
+      "paintedHeight": 28,
+      "radius": "999px",
+      "label": "Виж",
+      "labelRows": 0.9993131868131868,
+      "detailRows": 0.9997814685314684,
+      "imageWidth": 128,
+      "sideBySide": true,
+      "overflow": false,
+      "href": "http://127.0.0.1:6461/bg/about-us#process",
+      "nestedControls": 0
+    },
+    {
+      "key": "bg390",
+      "width": 390,
+      "padding": "0px 12px",
+      "paintedHeight": 28,
+      "radius": "999px",
+      "label": "Виж услугите",
+      "labelRows": 0.9993131868131868,
+      "detailRows": 0.9997814685314684,
+      "imageWidth": 128,
+      "sideBySide": true,
+      "overflow": false,
+      "href": "http://127.0.0.1:6461/bg/about-us#process",
+      "nestedControls": 0
+    },
+    {
+      "key": "en280",
+      "width": 280,
+      "padding": "0px 12px",
+      "paintedHeight": 28,
+      "radius": "999px",
+      "label": "View",
+      "labelRows": 0.9993131868131868,
+      "detailRows": 0.9997814685314684,
+      "imageWidth": 128,
+      "sideBySide": true,
+      "overflow": false,
+      "href": "http://127.0.0.1:6461/en/about-us#process",
+      "nestedControls": 0
+    },
+    {
+      "key": "en320",
+      "width": 320,
+      "padding": "0px 12px",
+      "paintedHeight": 28,
+      "radius": "999px",
+      "label": "View",
+      "labelRows": 0.9993131868131868,
+      "detailRows": 0.9997814685314684,
+      "imageWidth": 128,
+      "sideBySide": true,
+      "overflow": false,
+      "href": "http://127.0.0.1:6461/en/about-us#process",
+      "nestedControls": 0
+    },
+    {
+      "key": "en390",
+      "width": 390,
+      "padding": "0px 12px",
+      "paintedHeight": 28,
+      "radius": "999px",
+      "label": "See services",
+      "labelRows": 0.9993131868131868,
+      "detailRows": 0.9997814685314684,
+      "imageWidth": 128,
+      "sideBySide": true,
+      "overflow": false,
+      "href": "http://127.0.0.1:6461/en/about-us#process",
+      "nestedControls": 0
+    }
+  ],
+  "checks": {
+    "cssPolicy": "passed",
+    "tokens": "passed",
+    "productionBuild": "passed",
+    "consoleErrors": 0
+  },
+  "localOnly": true
+}

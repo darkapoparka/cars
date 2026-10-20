@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "dealer": "bavaro-varna",
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+    "path": "templates/app",
+    "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1",
+    "tree": "7f3d3ffa40546635377e6c5225194fe06fead291"
+  },
+  "appDigest": "3f72b247cd0235e14f3bb465f8b526716a74c273eed04043140c7b431ca9f019",
+  "provenance": {
+    "schemaVersion": 1,
+    "dealer": "bavaro-varna",
+    "profile": "auto-best/src/lib/data/dealer-profile.json",
+    "profileSha256": "e99461700e47fe6aca28fcb1360d97737e5f34b7a6b0a8029742807e90623171",
+    "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
+    "vehicles": 1,
+    "currency": "EUR",
+    "observedAt": "2026-10-11T11:54:03.999Z",
+    "assets": [
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-light.png",
+        "output": "public/dealer-app/logo-light-df670d0eb93a058c0019.png",
+        "sha256": "df670d0eb93a058c0019327f1bbd51190da4816cf4220bc216130520e18631fd",
+        "role": "logo-light"
+      },
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-dark.png",
+        "output": "public/dealer-app/logo-dark-91a2a48c3209a0d4fcf6.png",
+        "sha256": "91a2a48c3209a0d4fcf6651500a4463de5d4a6faeecec96c6e685eadaf7476ac",
+        "role": "logo-dark"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/21731000046562940-1.webp",
+        "output": "public/dealer-app/vehicle-74c3f3a2c04dcc5f4e55.webp",
+        "sha256": "74c3f3a2c04dcc5f4e55cad3bdcc47aa8dfa1bcdec5e2132e3be6cc200b91562",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/21731000046562940-2.webp",
+        "output": "public/dealer-app/vehicle-b8f38d61519d6482c73d.webp",
+        "sha256": "b8f38d61519d6482c73df16455beeea8413b5263567db92d565f12be8121dc6e",
+        "role": "vehicle"
+      }
+    ],
+    "mileageFacts": [
+      {
+        "slug": "bmw-x6-2021-21731000046562940",
+        "sourceValue": 43300,
+        "sourceUnit": "km",
+        "canonicalKm": 43300
+      }
+    ]
+  },
+  "needsDealerQA": true,
+  "readyToPublish": false,
+  "refreshedAt": "2026-10-15T04:04:03.471Z"
+}

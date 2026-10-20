@@ -1,0 +1,13 @@
+diff --git "a/L:\\CODEX\\cars\\runtime\\import-mobile-pdp-weight-20261009\\AuxeroVehicleMobilePdp.svelte.before" b/src/lib/components/detail/AuxeroVehicleMobilePdp.svelte
+index 21172a8..4a6e3ce 100644
+--- "a/L:\\CODEX\\cars\\runtime\\import-mobile-pdp-weight-20261009\\AuxeroVehicleMobilePdp.svelte.before"
++++ b/src/lib/components/detail/AuxeroVehicleMobilePdp.svelte
+@@ -1218,7 +1218,7 @@
+ 			border: 0;
+ 			border-radius: var(--bc-radius-control);
+ 			padding: 6px var(--bc-space-3);
+-			font-size: var(--bc-mobile-label);
++			font-size: 1.0625rem;
+ 			font-weight: var(--bc-weight-action);
+ 			line-height: var(--bc-leading-label);
+ 			text-align: center;

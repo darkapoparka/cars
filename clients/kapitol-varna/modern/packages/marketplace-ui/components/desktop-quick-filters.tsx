@@ -41,9 +41,44 @@ import {
   getDesktopQuickFilterClassName,
 } from "./desktop-filter-controls";
 import { DesktopFilterRailRanges } from "./desktop-filter-rail-ranges";
+import type { DesktopFullFilterSection } from "./desktop-full-filter-dialog";
 import { getActiveFilterChips } from "./desktop-marketplace-controls";
+import styles from "./desktop-quick-filters.module.css";
 
 type ApplyFilters = (filters: Partial<MarketplaceSearchParams>) => void;
+type OpenFilterSection =
+  | ((section: DesktopFullFilterSection) => void)
+  | undefined;
+const getFilterSectionOpener = (
+  open: OpenFilterSection,
+  section: DesktopFullFilterSection
+) => (open ? () => open(section) : undefined);
+function getSupplementaryFilterOpener(
+  id: string,
+  open: OpenFilterSection,
+  fallback: () => void
+) {
+  if (!open) {
+    return fallback;
+  }
+  if (id === "q") {
+    return () => open("search");
+  }
+  if (id === "body" || id === "transmission") {
+    return () => open(id);
+  }
+  return fallback;
+}
+
+const filterLayoutStyles = {
+  toolbar: {
+    row: styles.toolbarRow,
+    scroll: styles.toolbarScroll,
+    items: styles.toolbarItems,
+  },
+  rail: { row: undefined, scroll: undefined, items: undefined },
+  hero: { row: undefined, scroll: undefined, items: undefined },
+};
 
 const representedDesktopFilterChipIds = new Set([
   "q",
@@ -56,10 +91,61 @@ const representedDesktopFilterChipIds = new Set([
 
 export { getDesktopQuickFilterClassName } from "./desktop-filter-controls";
 
+const DesktopQuickSort = ({
+  visible,
+  filters,
+  elevated,
+  isBg,
+  label,
+  onApply,
+}: {
+  visible: boolean;
+  filters: MarketplaceSearchParams;
+  elevated: boolean;
+  isBg: boolean;
+  label: string;
+  onApply: ApplyFilters;
+}) => {
+  if (!visible) {
+    return null;
+  }
+  return (
+    <DesktopQuickFilterDialog
+      active={filters.sort !== "recommended"}
+      anyLabel={localizeMarketplace(isBg, "Препоръчани", "Recommended")}
+      className="w-auto min-w-28 shrink-0 gap-2 desktop-ultra:px-[var(--desktop-control-compact-padding)] px-4 desktop-ultra:has-[>svg]:px-[var(--desktop-control-compact-padding)] has-[>svg]:px-4"
+      dataSlot="desktop-sort-trigger"
+      elevated={elevated}
+      isBg={isBg}
+      label={label}
+      onClear={() => onApply({ sort: "recommended" })}
+      onSelect={(sort) =>
+        onApply({
+          sort: (sort ?? "recommended") as MarketplaceSearchParams["sort"],
+        })
+      }
+      options={sortOptions
+        .filter((value) => value !== "recommended")
+        .map((value) => ({
+          label: isBg
+            ? marketplaceSortLabelsBg[value]
+            : filterLabels.sort[value],
+          value,
+        }))}
+      selected={filters.sort === "recommended" ? undefined : filters.sort}
+      title={localizeMarketplace(isBg, "Подреждане", "Sort")}
+    />
+  );
+};
+
 export const DesktopQuickFilters = ({
   compact,
+  layout = "rail",
+  appearance = "default",
   elevated = false,
   showAdditionalFilters = false,
+  showSearchChip = false,
+  showSort = true,
   filterCount,
   filters,
   isBg,
@@ -69,10 +155,15 @@ export const DesktopQuickFilters = ({
   onOpenFilters,
   onOpenMake,
   onOpenModel,
+  onOpenSection,
 }: {
   compact: boolean;
+  layout?: "rail" | "toolbar" | "hero";
+  appearance?: "default" | "inverse";
   elevated?: boolean;
   showAdditionalFilters?: boolean;
+  showSearchChip?: boolean;
+  showSort?: boolean;
   filterCount: number;
   filters: MarketplaceSearchParams;
   isBg: boolean;
@@ -82,6 +173,7 @@ export const DesktopQuickFilters = ({
   onOpenFilters: () => void;
   onOpenMake: () => void;
   onOpenModel: () => void;
+  onOpenSection?: (section: DesktopFullFilterSection) => void;
 }) => {
   const labels = getDesktopQuickFilterLabels(filters, isBg, numberFormatter);
   const priceLabel = getDesktopPriceQuickFilterLabel(
@@ -93,7 +185,8 @@ export const DesktopQuickFilters = ({
   const supplementaryActiveFilterChips = activeFilterChips.filter(
     (chip) =>
       !(
-        representedDesktopFilterChipIds.has(chip.id) ||
+        (representedDesktopFilterChipIds.has(chip.id) &&
+          !(showSearchChip && chip.id === "q")) ||
         (showAdditionalFilters &&
           (chip.id === "body" || chip.id === "transmission"))
       )
@@ -101,19 +194,39 @@ export const DesktopQuickFilters = ({
 
   return (
     <div
-      className={cn(compact ? "py-2.5" : "mx-auto mt-7 max-w-[100rem] py-0.5")}
+      className={cn(
+        compact
+          ? "py-2.5"
+          : "mx-auto mt-7 max-w-[var(--layout-wide-max)] py-0.5",
+        layout !== "rail" && "p-0",
+        appearance === "inverse" && styles.inverse
+      )}
+      data-filter-appearance={appearance}
     >
       <fieldset className="w-full min-w-0">
         <legend className="sr-only">
           {localizeMarketplace(isBg, "Филтри за автомобили", "Vehicle filters")}
         </legend>
-        <div className="mx-auto flex w-full max-w-[100rem] flex-nowrap items-center justify-center gap-2">
+        <div
+          className={cn(
+            "mx-auto flex w-full max-w-[var(--layout-wide-max)] flex-nowrap items-center justify-center gap-2",
+            layout !== "rail" && "justify-start",
+            filterLayoutStyles[layout].row
+          )}
+        >
           <div
-            className="min-w-0 flex-[0_1_auto] overflow-x-auto overscroll-x-contain [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+            className={cn(
+              "min-w-0 flex-[0_1_auto] overflow-x-auto overscroll-x-contain [scrollbar-width:none] [&::-webkit-scrollbar]:hidden",
+              layout !== "rail" && "flex-1",
+              filterLayoutStyles[layout].scroll
+            )}
             data-slot="desktop-quick-filter-scroll"
           >
             <div
-              className="flex w-max flex-nowrap justify-start gap-2"
+              className={cn(
+                "flex w-max flex-nowrap justify-start gap-2",
+                filterLayoutStyles[layout].items
+              )}
               data-slot="desktop-quick-filter-items"
             >
               <DesktopQuickFilterButton
@@ -200,6 +313,7 @@ export const DesktopQuickFilters = ({
                     priceMin: undefined,
                   })
                 }
+                onOpen={getFilterSectionOpener(onOpenSection, "price")}
                 presets={marketplacePricePresets.map((value) => ({
                   label: `${localizeMarketplace(
                     isBg,
@@ -225,235 +339,249 @@ export const DesktopQuickFilters = ({
                 ]}
                 title={localizeMarketplace(isBg, "Цена", "Price")}
               />
-              <DesktopQuickRangeDialog
-                active={Boolean(filters.yearMin || filters.yearMax)}
-                className={desktopQuickFilterRailItemClassName}
-                dataSlot="desktop-quick-filter"
-                description={localizeMarketplace(
-                  isBg,
-                  "Изберете начална и крайна година с плъзгане или точни стойности.",
-                  "Choose a minimum and maximum year by dragging or entering exact values."
-                )}
-                elevated={elevated}
-                formatValue={(value) => value.toString()}
-                isBg={isBg}
-                label={labels.year}
-                maximumLabel={localizeMarketplace(isBg, "До година", "To year")}
-                maximumPrefix={localizeMarketplace(isBg, "До", "Up to")}
-                minimumLabel={localizeMarketplace(
-                  isBg,
-                  "От година",
-                  "From year"
-                )}
-                onApply={({ maximum, minimum }) =>
-                  onApply({ yearMax: maximum, yearMin: minimum })
-                }
-                onClear={() =>
-                  onApply({ yearMax: undefined, yearMin: undefined })
-                }
-                presets={marketplaceYearPresets.map((value) => ({
-                  label: `${localizeMarketplace(isBg, "От", "From")} ${value}`,
-                  value: [value, marketplaceYearRange[1]],
-                }))}
-                quickSelectLabel={localizeMarketplace(
-                  isBg,
-                  "Бърз избор",
-                  "Quick select"
-                )}
-                range={marketplaceYearRange}
-                selectedMaximum={filters.yearMax}
-                selectedMinimum={filters.yearMin}
-                step={1}
-                thumbLabels={[
-                  localizeMarketplace(isBg, "Минимална година", "Minimum year"),
-                  localizeMarketplace(
-                    isBg,
-                    "Максимална година",
-                    "Maximum year"
-                  ),
-                ]}
-                title={localizeMarketplace(isBg, "Година", "Year")}
-              />
-              <DesktopQuickRangeDialog
-                active={Boolean(filters.mileageMax)}
-                className={cn(
-                  desktopQuickFilterRailItemClassName,
-                  "hidden min-[75rem]:inline-flex"
-                )}
-                dataSlot="desktop-quick-filter"
-                description={localizeMarketplace(
-                  isBg,
-                  "Плъзнете или въведете максималния приемлив пробег.",
-                  "Drag or enter the maximum acceptable mileage."
-                )}
-                elevated={elevated}
-                formatValue={(value) =>
-                  `${numberFormatter.format(value)} ${isBg ? "км" : "km"}`
-                }
-                isBg={isBg}
-                label={labels.mileage}
-                maximumLabel={localizeMarketplace(
-                  isBg,
-                  "Максимален пробег",
-                  "Maximum mileage"
-                )}
-                maximumOnly
-                maximumPrefix={localizeMarketplace(isBg, "До", "Up to")}
-                minimumLabel={localizeMarketplace(isBg, "Минимум", "Minimum")}
-                onApply={({ maximum }) => onApply({ mileageMax: maximum })}
-                onClear={() => onApply({ mileageMax: undefined })}
-                presets={marketplaceMileagePresets.map((value) => ({
-                  label: `${localizeMarketplace(
-                    isBg,
-                    "До",
-                    "To"
-                  )} ${numberFormatter.format(value)} ${isBg ? "км" : "km"}`,
-                  value: [marketplaceMileageRange[0], value],
-                }))}
-                quickSelectLabel={localizeMarketplace(
-                  isBg,
-                  "Бърз избор",
-                  "Quick select"
-                )}
-                range={marketplaceMileageRange}
-                selectedMaximum={filters.mileageMax}
-                step={5000}
-                thumbLabels={[
-                  localizeMarketplace(
-                    isBg,
-                    "Минимален пробег",
-                    "Minimum mileage"
-                  ),
-                  localizeMarketplace(
-                    isBg,
-                    "Максимален пробег",
-                    "Maximum mileage"
-                  ),
-                ]}
-                title={localizeMarketplace(isBg, "Пробег", "Mileage")}
-              />
-              <DesktopQuickFilterDialog
-                active={Boolean(filters.fuel)}
-                anyLabel={localizeMarketplace(
-                  isBg,
-                  "Всички горива",
-                  "Any fuel"
-                )}
-                className={cn(
-                  desktopQuickFilterRailItemClassName,
-                  "hidden min-[75rem]:inline-flex"
-                )}
-                dataSlot="desktop-quick-filter"
-                elevated={elevated}
-                isBg={isBg}
-                label={labels.fuel}
-                onClear={() => onApply({ fuel: undefined })}
-                onSelect={(fuel) =>
-                  onApply({ fuel: fuel as FuelType | undefined })
-                }
-                options={marketplaceFuelOptions.map((value) => ({
-                  label: isBg
-                    ? marketplaceFuelLabelsBg[value]
-                    : filterLabels.fuel[value],
-                  value,
-                }))}
-                selected={filters.fuel}
-                title={localizeMarketplace(isBg, "Гориво", "Fuel")}
-              />
-              {showAdditionalFilters ? (
+              {layout !== "hero" && (
                 <>
+                  <DesktopQuickRangeDialog
+                    active={Boolean(filters.yearMin || filters.yearMax)}
+                    className={desktopQuickFilterRailItemClassName}
+                    dataSlot="desktop-quick-filter"
+                    description={localizeMarketplace(
+                      isBg,
+                      "Изберете начална и крайна година с плъзгане или точни стойности.",
+                      "Choose a minimum and maximum year by dragging or entering exact values."
+                    )}
+                    elevated={elevated}
+                    formatValue={(value) => value.toString()}
+                    isBg={isBg}
+                    label={labels.year}
+                    maximumLabel={localizeMarketplace(
+                      isBg,
+                      "До година",
+                      "To year"
+                    )}
+                    maximumPrefix={localizeMarketplace(isBg, "До", "Up to")}
+                    minimumLabel={localizeMarketplace(
+                      isBg,
+                      "От година",
+                      "From year"
+                    )}
+                    onApply={({ maximum, minimum }) =>
+                      onApply({ yearMax: maximum, yearMin: minimum })
+                    }
+                    onClear={() =>
+                      onApply({ yearMax: undefined, yearMin: undefined })
+                    }
+                    onOpen={getFilterSectionOpener(onOpenSection, "year")}
+                    presets={marketplaceYearPresets.map((value) => ({
+                      label: `${localizeMarketplace(isBg, "От", "From")} ${value}`,
+                      value: [value, marketplaceYearRange[1]],
+                    }))}
+                    quickSelectLabel={localizeMarketplace(
+                      isBg,
+                      "Бърз избор",
+                      "Quick select"
+                    )}
+                    range={marketplaceYearRange}
+                    selectedMaximum={filters.yearMax}
+                    selectedMinimum={filters.yearMin}
+                    step={1}
+                    thumbLabels={[
+                      localizeMarketplace(
+                        isBg,
+                        "Минимална година",
+                        "Minimum year"
+                      ),
+                      localizeMarketplace(
+                        isBg,
+                        "Максимална година",
+                        "Maximum year"
+                      ),
+                    ]}
+                    title={localizeMarketplace(isBg, "Година", "Year")}
+                  />
+                  <DesktopQuickRangeDialog
+                    active={Boolean(filters.mileageMax)}
+                    className={cn(
+                      desktopQuickFilterRailItemClassName,
+                      "desktop-expanded:inline-flex hidden"
+                    )}
+                    dataSlot="desktop-quick-filter"
+                    description={localizeMarketplace(
+                      isBg,
+                      "Плъзнете или въведете максималния приемлив пробег.",
+                      "Drag or enter the maximum acceptable mileage."
+                    )}
+                    elevated={elevated}
+                    formatValue={(value) =>
+                      `${numberFormatter.format(value)} ${isBg ? "км" : "km"}`
+                    }
+                    isBg={isBg}
+                    label={labels.mileage}
+                    maximumLabel={localizeMarketplace(
+                      isBg,
+                      "Максимален пробег",
+                      "Maximum mileage"
+                    )}
+                    maximumOnly
+                    maximumPrefix={localizeMarketplace(isBg, "До", "Up to")}
+                    minimumLabel={localizeMarketplace(
+                      isBg,
+                      "Минимум",
+                      "Minimum"
+                    )}
+                    onApply={({ maximum }) => onApply({ mileageMax: maximum })}
+                    onClear={() => onApply({ mileageMax: undefined })}
+                    onOpen={getFilterSectionOpener(onOpenSection, "mileage")}
+                    presets={marketplaceMileagePresets.map((value) => ({
+                      label: `${localizeMarketplace(
+                        isBg,
+                        "До",
+                        "To"
+                      )} ${numberFormatter.format(value)} ${isBg ? "км" : "km"}`,
+                      value: [marketplaceMileageRange[0], value],
+                    }))}
+                    quickSelectLabel={localizeMarketplace(
+                      isBg,
+                      "Бърз избор",
+                      "Quick select"
+                    )}
+                    range={marketplaceMileageRange}
+                    selectedMaximum={filters.mileageMax}
+                    step={5000}
+                    thumbLabels={[
+                      localizeMarketplace(
+                        isBg,
+                        "Минимален пробег",
+                        "Minimum mileage"
+                      ),
+                      localizeMarketplace(
+                        isBg,
+                        "Максимален пробег",
+                        "Maximum mileage"
+                      ),
+                    ]}
+                    title={localizeMarketplace(isBg, "Пробег", "Mileage")}
+                  />
                   <DesktopQuickFilterDialog
-                    active={Boolean(filters.transmission)}
+                    active={Boolean(filters.fuel)}
                     anyLabel={localizeMarketplace(
                       isBg,
-                      "Всички скорости",
-                      "Any transmission"
+                      "Всички горива",
+                      "Any fuel"
                     )}
-                    className={desktopQuickFilterRailItemClassName}
+                    className={cn(
+                      desktopQuickFilterRailItemClassName,
+                      "desktop-expanded:inline-flex hidden"
+                    )}
                     dataSlot="desktop-quick-filter"
                     elevated={elevated}
                     isBg={isBg}
-                    label={labels.transmission}
-                    onClear={() => onApply({ transmission: undefined })}
-                    onSelect={(transmission) =>
-                      onApply({
-                        transmission: transmission as Transmission | undefined,
-                      })
+                    label={labels.fuel}
+                    onClear={() => onApply({ fuel: undefined })}
+                    onOpen={getFilterSectionOpener(onOpenSection, "fuel")}
+                    onSelect={(fuel) =>
+                      onApply({ fuel: fuel as FuelType | undefined })
                     }
-                    options={marketplaceTransmissionOptions.map((value) => ({
+                    options={marketplaceFuelOptions.map((value) => ({
                       label: isBg
-                        ? marketplaceTransmissionLabelsBg[value]
-                        : filterLabels.transmission[value],
+                        ? marketplaceFuelLabelsBg[value]
+                        : filterLabels.fuel[value],
                       value,
                     }))}
-                    selected={filters.transmission}
-                    title={localizeMarketplace(
-                      isBg,
-                      "Скоростна кутия",
-                      "Transmission"
-                    )}
+                    selected={filters.fuel}
+                    title={localizeMarketplace(isBg, "Гориво", "Fuel")}
                   />
-                  <DesktopQuickFilterDialog
-                    active={Boolean(filters.body)}
-                    anyLabel={localizeMarketplace(
-                      isBg,
-                      "Всички типове",
-                      "Any body type"
-                    )}
-                    className={desktopQuickFilterRailItemClassName}
-                    dataSlot="desktop-quick-filter"
+                  {showAdditionalFilters ? (
+                    <>
+                      <DesktopQuickFilterDialog
+                        active={Boolean(filters.transmission)}
+                        anyLabel={localizeMarketplace(
+                          isBg,
+                          "Всички скорости",
+                          "Any transmission"
+                        )}
+                        className={cn(
+                          desktopQuickFilterRailItemClassName,
+                          "desktop-full:inline-flex hidden"
+                        )}
+                        dataSlot="desktop-quick-filter"
+                        elevated={elevated}
+                        isBg={isBg}
+                        label={labels.transmission}
+                        onClear={() => onApply({ transmission: undefined })}
+                        onOpen={getFilterSectionOpener(
+                          onOpenSection,
+                          "transmission"
+                        )}
+                        onSelect={(transmission) =>
+                          onApply({
+                            transmission: transmission as
+                              | Transmission
+                              | undefined,
+                          })
+                        }
+                        options={marketplaceTransmissionOptions.map(
+                          (value) => ({
+                            label: isBg
+                              ? marketplaceTransmissionLabelsBg[value]
+                              : filterLabels.transmission[value],
+                            value,
+                          })
+                        )}
+                        selected={filters.transmission}
+                        title={localizeMarketplace(
+                          isBg,
+                          "Скоростна кутия",
+                          "Transmission"
+                        )}
+                      />
+                      <DesktopQuickFilterDialog
+                        active={Boolean(filters.body)}
+                        anyLabel={localizeMarketplace(
+                          isBg,
+                          "Всички типове",
+                          "Any body type"
+                        )}
+                        className={cn(
+                          desktopQuickFilterRailItemClassName,
+                          "desktop-full:inline-flex hidden"
+                        )}
+                        dataSlot="desktop-quick-filter"
+                        elevated={elevated}
+                        isBg={isBg}
+                        label={labels.body}
+                        onClear={() => onApply({ body: undefined })}
+                        onOpen={getFilterSectionOpener(onOpenSection, "body")}
+                        onSelect={(body) =>
+                          onApply({
+                            body: body as
+                              | MarketplaceSearchParams["body"]
+                              | undefined,
+                          })
+                        }
+                        options={marketplaceBodyFilterOptions.map((option) => ({
+                          label: isBg ? option.labelBg : option.labelEn,
+                          value: option.value,
+                        }))}
+                        selected={filters.body}
+                        title={localizeMarketplace(
+                          isBg,
+                          "Тип купе",
+                          "Body type"
+                        )}
+                      />
+                    </>
+                  ) : null}
+                  <DesktopQuickSort
                     elevated={elevated}
+                    filters={filters}
                     isBg={isBg}
-                    label={labels.body}
-                    onClear={() => onApply({ body: undefined })}
-                    onSelect={(body) =>
-                      onApply({
-                        body: body as
-                          | MarketplaceSearchParams["body"]
-                          | undefined,
-                      })
-                    }
-                    options={marketplaceBodyFilterOptions.map((option) => ({
-                      label: isBg ? option.labelBg : option.labelEn,
-                      value: option.value,
-                    }))}
-                    selected={filters.body}
-                    title={localizeMarketplace(isBg, "Тип купе", "Body type")}
-                  />
+                    label={labels.sort}
+                    onApply={onApply}
+                    visible={showSort}
+                  />{" "}
                 </>
-              ) : null}
-              <DesktopQuickFilterDialog
-                active={filters.sort !== "recommended"}
-                anyLabel={localizeMarketplace(
-                  isBg,
-                  "Препоръчани",
-                  "Recommended"
-                )}
-                className="w-auto min-w-28 shrink-0 gap-2 px-4 has-[>svg]:px-4 min-[112rem]:px-[18px] min-[112rem]:has-[>svg]:px-[18px]"
-                dataSlot="desktop-sort-trigger"
-                elevated={elevated}
-                isBg={isBg}
-                label={labels.sort}
-                onClear={() => onApply({ sort: "recommended" })}
-                onSelect={(sort) =>
-                  onApply({
-                    sort: (sort ??
-                      "recommended") as MarketplaceSearchParams["sort"],
-                  })
-                }
-                options={sortOptions
-                  .filter((value) => value !== "recommended")
-                  .map((value) => ({
-                    label: isBg
-                      ? marketplaceSortLabelsBg[value]
-                      : filterLabels.sort[value],
-                    value,
-                  }))}
-                selected={
-                  filters.sort === "recommended" ? undefined : filters.sort
-                }
-                title={localizeMarketplace(isBg, "Подреждане", "Sort")}
-              />
+              )}
               {supplementaryActiveFilterChips.map((chip) => (
                 <DesktopQuickFilterButton
                   active
@@ -464,7 +592,11 @@ export const DesktopQuickFilters = ({
                   key={chip.id}
                   label={chip.label}
                   onClear={() => onApply(chip.updates)}
-                  onOpen={onOpenFilters}
+                  onOpen={getSupplementaryFilterOpener(
+                    chip.id,
+                    onOpenSection,
+                    onOpenFilters
+                  )}
                 />
               ))}
             </div>
@@ -480,18 +612,27 @@ export const DesktopQuickFilters = ({
               }`}
               className={cn(
                 getDesktopQuickFilterClassName(false, elevated),
-                "!border-black !bg-black !text-white hover:!bg-zinc-800 hover:!text-white active:!bg-zinc-700 relative w-auto shrink-0 gap-2 px-4 has-[>svg]:px-4"
+                layout === "hero"
+                  ? "border-border bg-panel text-muted-foreground shadow-none hover:bg-control hover:text-foreground"
+                  : "relative w-auto shrink-0 gap-2 border-primary bg-primary px-4 text-primary-foreground hover:border-[var(--primary-hover)] hover:bg-[var(--primary-hover)] hover:text-[var(--primary-hover-foreground)] active:border-[var(--primary-active)] active:bg-[var(--primary-active)] active:text-[var(--primary-active-foreground)] has-[>svg]:px-4"
               )}
               data-slot="desktop-primary-control"
-              onClick={onOpenFilters}
+              onClick={(event) => {
+                // Safari does not focus clicked buttons; give the dialog a return target.
+                event.currentTarget.focus({ preventScroll: true });
+                onOpenFilters();
+              }}
               title={localizeMarketplace(isBg, "Филтри", "Filters")}
               type="button"
               variant="secondary"
             >
-              <SlidersHorizontal aria-hidden="true" className="size-[18px]" />
+              <SlidersHorizontal
+                aria-hidden="true"
+                className="size-[var(--desktop-icon-size)]"
+              />
               <span>{localizeMarketplace(isBg, "Филтри", "Filters")}</span>
               {filterCount > 0 ? (
-                <span className="pointer-events-none absolute -top-1 -right-1 grid min-h-5 min-w-5 place-items-center rounded-full bg-white px-1.5 font-semibold text-black text-micro ring-2 ring-black">
+                <span className="pointer-events-none absolute -top-1 -right-1 grid min-h-5 min-w-5 place-items-center rounded-full bg-panel px-1.5 font-semibold text-foreground text-micro ring-2 ring-primary">
                   {filterCount}
                 </span>
               ) : null}

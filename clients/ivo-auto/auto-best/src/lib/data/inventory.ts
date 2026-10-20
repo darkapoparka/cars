@@ -1,6 +1,5 @@
 import { formatPrice, localeContract, type Locale } from '$lib/locale/core';
 import { templateText } from '$lib/locale/messages';
-import { leadSite } from '$config/lead-site';
 
 export const vehicleTypes = ['car', 'motorbike', 'van', 'truck'] as const;
 export type VehicleType = typeof vehicleTypes[number];
@@ -27,11 +26,16 @@ export type Vehicle = {
   make: string;
   /** Optional manufacturer sub-brand used by compact card identity. */
   cardBrand?: string;
+  /** Seller-supplied highlight by locale; import/condition claims require record-specific evidence. */
+  cardNote?: Partial<Record<Locale, string>>;
   title: string;
   year: string;
   yearNumber: number;
   mileage: string;
   mileageKm: number;
+  mileageKnown?: boolean;
+  mileageValue?: number;
+  mileageUnit?: 'km' | 'mi';
   fuel: string;
   transmission: string;
   equipment: readonly VehicleEquipment[];
@@ -43,7 +47,8 @@ export type Vehicle = {
 export const featuredVehicles: Vehicle[] = [
   {
     "id": 1,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://ivoauto-varna.mobile.bg/obiava-11786049135297264-rolls-royce-ghost",
     "image": "/assets/ivo-auto/vehicle-01-1.webp",
     "category": "Sedan",
@@ -54,17 +59,20 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2011,
     "mileage": "66 000 км",
     "mileageKm": 66000,
+    "mileageKnown": true,
+    "mileageValue": 66000,
+    "mileageUnit": "km",
     "fuel": "Бензин",
     "transmission": "Автоматик",
     "equipment": [],
     "condition": "used",
     "priceEur": 105000,
-    "href": "/listing-detail-v1/1",
-    "type": "car"
+    "href": "/listing-detail-v1/1"
   },
   {
     "id": 2,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://ivoauto-varna.mobile.bg/obiava-11784822971964926-audi-a4-s-line-4x4-2-0t",
     "image": "/assets/ivo-auto/vehicle-02-1.webp",
     "category": "Sedan",
@@ -75,6 +83,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2008,
     "mileage": "195 000 км",
     "mileageKm": 195000,
+    "mileageKnown": true,
+    "mileageValue": 195000,
+    "mileageUnit": "km",
     "fuel": "Бензин",
     "transmission": "Автоматик",
     "equipment": [
@@ -82,12 +93,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 2800,
-    "href": "/listing-detail-v1/2",
-    "type": "car"
+    "href": "/listing-detail-v1/2"
   },
   {
     "id": 3,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://ivoauto-varna.mobile.bg/obiava-11775231551222536-porsche-panamera-turbo-4-8i",
     "image": "/assets/ivo-auto/vehicle-03-1.webp",
     "category": "Coupe",
@@ -98,6 +109,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2010,
     "mileage": "145 000 км",
     "mileageKm": 145000,
+    "mileageKnown": true,
+    "mileageValue": 145000,
+    "mileageUnit": "km",
     "fuel": "Бензин",
     "transmission": "Автоматик",
     "equipment": [
@@ -105,12 +119,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 21000,
-    "href": "/listing-detail-v1/3",
-    "type": "car"
+    "href": "/listing-detail-v1/3"
   },
   {
     "id": 4,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://ivoauto-varna.mobile.bg/obiava-21784804233950248-dodge-durango-3-6-face-lift-gaz-inzh-6-1",
     "image": "/assets/ivo-auto/vehicle-04-1.webp",
     "category": "SUV",
@@ -121,6 +135,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2015,
     "mileage": "202 000 км",
     "mileageKm": 202000,
+    "mileageKnown": true,
+    "mileageValue": 202000,
+    "mileageUnit": "km",
     "fuel": "Бензин",
     "transmission": "Автоматик",
     "equipment": [
@@ -128,12 +145,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 13900,
-    "href": "/listing-detail-v1/4",
-    "type": "car"
+    "href": "/listing-detail-v1/4"
   },
   {
     "id": 5,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://ivoauto-varna.mobile.bg/obiava-11784710943679925-bmw-520-m-paket-digital",
     "image": "/assets/ivo-auto/vehicle-05-1.webp",
     "category": "Sedan",
@@ -144,17 +161,20 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2018,
     "mileage": "165 000 км",
     "mileageKm": 165000,
+    "mileageKnown": true,
+    "mileageValue": 165000,
+    "mileageUnit": "km",
     "fuel": "Дизел",
     "transmission": "Автоматик",
     "equipment": [],
     "condition": "used",
     "priceEur": 19000,
-    "href": "/listing-detail-v1/5",
-    "type": "car"
+    "href": "/listing-detail-v1/5"
   },
   {
     "id": 6,
-    "verification": "verified",
+    "type": "van",
+    "verification": "sample",
     "evidenceUrl": "https://ivoauto-varna.mobile.bg/obiava-11780924566736048-vw-touran-1-6tdi-avtomat-6-1",
     "image": "/assets/ivo-auto/vehicle-06-1.webp",
     "category": "Minivan",
@@ -165,17 +185,20 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2012,
     "mileage": "210 000 км",
     "mileageKm": 210000,
+    "mileageKnown": true,
+    "mileageValue": 210000,
+    "mileageUnit": "km",
     "fuel": "Дизел",
     "transmission": "Автоматик",
     "equipment": [],
     "condition": "used",
     "priceEur": 3999,
-    "href": "/listing-detail-v1/6",
-    "type": "car"
+    "href": "/listing-detail-v1/6"
   },
   {
     "id": 7,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://ivoauto-varna.mobile.bg/obiava-11778070752693531-vw-cc-2-0i",
     "image": "/assets/ivo-auto/vehicle-07-1.webp",
     "category": "Coupe",
@@ -186,17 +209,20 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2013,
     "mileage": "214 000 км",
     "mileageKm": 214000,
+    "mileageKnown": true,
+    "mileageValue": 214000,
+    "mileageUnit": "km",
     "fuel": "Бензин",
     "transmission": "Автоматик",
     "equipment": [],
     "condition": "used",
     "priceEur": 9000,
-    "href": "/listing-detail-v1/7",
-    "type": "car"
+    "href": "/listing-detail-v1/7"
   },
   {
     "id": 8,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://ivoauto-varna.mobile.bg/obiava-21779453321117197-bmw-x5-4-0d-face-lift-8sk",
     "image": "/assets/ivo-auto/vehicle-08-1.webp",
     "category": "SUV",
@@ -207,6 +233,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2011,
     "mileage": "196 000 км",
     "mileageKm": 196000,
+    "mileageKnown": true,
+    "mileageValue": 196000,
+    "mileageUnit": "km",
     "fuel": "Дизел",
     "transmission": "Автоматик",
     "equipment": [
@@ -214,12 +243,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 9500,
-    "href": "/listing-detail-v1/8",
-    "type": "car"
+    "href": "/listing-detail-v1/8"
   },
   {
     "id": 9,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://ivoauto-varna.mobile.bg/obiava-21779444147151936-bmw-x5-3-0d-face-lift",
     "image": "/assets/ivo-auto/vehicle-09-1.webp",
     "category": "SUV",
@@ -230,6 +259,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2005,
     "mileage": "195 000 км",
     "mileageKm": 195000,
+    "mileageKnown": true,
+    "mileageValue": 195000,
+    "mileageUnit": "km",
     "fuel": "Дизел",
     "transmission": "Автоматик",
     "equipment": [
@@ -237,12 +269,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 4600,
-    "href": "/listing-detail-v1/9",
-    "type": "car"
+    "href": "/listing-detail-v1/9"
   },
   {
     "id": 10,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://ivoauto-varna.mobile.bg/obiava-11780659371731573-bmw-418-d-m-paket",
     "image": "/assets/ivo-auto/vehicle-10-1.webp",
     "category": "Coupe",
@@ -253,17 +285,20 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2017,
     "mileage": "149 000 км",
     "mileageKm": 149000,
+    "mileageKnown": true,
+    "mileageValue": 149000,
+    "mileageUnit": "km",
     "fuel": "Дизел",
     "transmission": "Автоматик",
     "equipment": [],
     "condition": "used",
     "priceEur": 16200,
-    "href": "/listing-detail-v1/10",
-    "type": "car"
+    "href": "/listing-detail-v1/10"
   },
   {
     "id": 11,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://ivoauto-varna.mobile.bg/obiava-21781871293573646-subaru-b9-tribeca-3-0-gaz-inzh",
     "image": "/assets/ivo-auto/vehicle-11-1.webp",
     "category": "SUV",
@@ -274,6 +309,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2006,
     "mileage": "170 000 км",
     "mileageKm": 170000,
+    "mileageKnown": true,
+    "mileageValue": 170000,
+    "mileageUnit": "km",
     "fuel": "Бензин",
     "transmission": "Автоматик",
     "equipment": [
@@ -281,12 +319,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 3999,
-    "href": "/listing-detail-v1/11",
-    "type": "car"
+    "href": "/listing-detail-v1/11"
   },
   {
     "id": 12,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://ivoauto-varna.mobile.bg/obiava-21762959348847465-mercedes-benz-ml-250-amg-paket",
     "image": "/assets/ivo-auto/vehicle-12-1.webp",
     "category": "SUV",
@@ -297,6 +335,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2014,
     "mileage": "130 000 км",
     "mileageKm": 130000,
+    "mileageKnown": true,
+    "mileageValue": 130000,
+    "mileageUnit": "km",
     "fuel": "Дизел",
     "transmission": "Автоматик",
     "equipment": [
@@ -304,12 +345,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 14500,
-    "href": "/listing-detail-v1/12",
-    "type": "car"
+    "href": "/listing-detail-v1/12"
   },
   {
     "id": 13,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://ivoauto-varna.mobile.bg/obiava-11774893593485843-mercedes-benz-s-500-4matic-gaz-inzh",
     "image": "/assets/ivo-auto/vehicle-13-1.webp",
     "category": "Sedan",
@@ -320,6 +361,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2007,
     "mileage": "290 000 км",
     "mileageKm": 290000,
+    "mileageKnown": true,
+    "mileageValue": 290000,
+    "mileageUnit": "km",
     "fuel": "Бензин",
     "transmission": "Автоматик",
     "equipment": [
@@ -327,12 +371,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 10000,
-    "href": "/listing-detail-v1/13",
-    "type": "car"
+    "href": "/listing-detail-v1/13"
   },
   {
     "id": 14,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://ivoauto-varna.mobile.bg/obiava-11756369185395904-bmw-730-d-m-paket",
     "image": "/assets/ivo-auto/vehicle-14-1.webp",
     "category": "Sedan",
@@ -343,17 +387,20 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2010,
     "mileage": "214 000 км",
     "mileageKm": 214000,
+    "mileageKnown": true,
+    "mileageValue": 214000,
+    "mileageUnit": "km",
     "fuel": "Дизел",
     "transmission": "Автоматик",
     "equipment": [],
     "condition": "used",
     "priceEur": 11000,
-    "href": "/listing-detail-v1/14",
-    "type": "car"
+    "href": "/listing-detail-v1/14"
   },
   {
     "id": 15,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://ivoauto-varna.mobile.bg/obiava-11775822194120541-bmw-m5",
     "image": "/assets/ivo-auto/vehicle-15-1.webp",
     "category": "Sedan",
@@ -364,17 +411,20 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2008,
     "mileage": "218 000 км",
     "mileageKm": 218000,
+    "mileageKnown": true,
+    "mileageValue": 218000,
+    "mileageUnit": "km",
     "fuel": "Бензин",
     "transmission": "Автоматик",
     "equipment": [],
     "condition": "used",
     "priceEur": 30000,
-    "href": "/listing-detail-v1/15",
-    "type": "car"
+    "href": "/listing-detail-v1/15"
   },
   {
     "id": 16,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://ivoauto-varna.mobile.bg/obiava-11769186790854071-audi-a8-full-led",
     "image": "/assets/ivo-auto/vehicle-16-1.webp",
     "category": "Sedan",
@@ -385,6 +435,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2013,
     "mileage": "215 000 км",
     "mileageKm": 215000,
+    "mileageKnown": true,
+    "mileageValue": 215000,
+    "mileageUnit": "km",
     "fuel": "Дизел",
     "transmission": "Автоматик",
     "equipment": [
@@ -392,13 +445,15 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 15500,
-    "href": "/listing-detail-v1/16",
-    "type": "car"
+    "href": "/listing-detail-v1/16"
   }
 ];
 
-export const formatVehiclePrice = (amount: number, locale: Locale = localeContract.defaultLocale) => amount > 0 ? formatPrice(amount, locale) : templateText(locale, 'Price on request');
+export const formatVehiclePrice = (
+  amount: number,
+  locale: Locale = localeContract.defaultLocale
+) => amount > 0 ? formatPrice(amount, locale) : templateText(locale, 'Price on request');
 
 /** Allow a currency line break while preserving the locale's grouped digits. */
 export const formatVehiclePriceLabel = (amount: number, locale: Locale = localeContract.defaultLocale) =>
-  formatVehiclePrice(amount, locale).replace(/([A-Z]{3})\s+/u, '$1 ').replace(/\s+([A-Z]{3})$/u, ' $1');
+  formatVehiclePrice(amount, locale).replace(/([A-Z]{3}|\p{Sc})\s+/u, '$1 ').replace(/\s+([A-Z]{3}|\p{Sc})$/u, ' $1');

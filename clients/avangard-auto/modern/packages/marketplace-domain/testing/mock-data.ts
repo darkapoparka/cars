@@ -93,7 +93,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "AVANGARD AUTO",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
+      "logoUrl": "/dealer-brand/v2-d2d110db50b48593/logo-on-light.webp"
     },
     "publishedAt": "2026-09-06T09:00:00.000Z",
     "promoted": true
@@ -189,7 +189,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "AVANGARD AUTO",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
+      "logoUrl": "/dealer-brand/v2-d2d110db50b48593/logo-on-light.webp"
     },
     "publishedAt": "2026-09-06T09:00:00.000Z",
     "promoted": true
@@ -285,7 +285,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "AVANGARD AUTO",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
+      "logoUrl": "/dealer-brand/v2-d2d110db50b48593/logo-on-light.webp"
     },
     "publishedAt": "2026-09-06T09:00:00.000Z",
     "promoted": true
@@ -381,7 +381,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "AVANGARD AUTO",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
+      "logoUrl": "/dealer-brand/v2-d2d110db50b48593/logo-on-light.webp"
     },
     "publishedAt": "2026-09-06T09:00:00.000Z",
     "promoted": false
@@ -477,7 +477,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "AVANGARD AUTO",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
+      "logoUrl": "/dealer-brand/v2-d2d110db50b48593/logo-on-light.webp"
     },
     "publishedAt": "2026-09-06T09:00:00.000Z",
     "promoted": false
@@ -573,7 +573,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "AVANGARD AUTO",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
+      "logoUrl": "/dealer-brand/v2-d2d110db50b48593/logo-on-light.webp"
     },
     "publishedAt": "2026-09-06T09:00:00.000Z",
     "promoted": false
@@ -669,7 +669,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "AVANGARD AUTO",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
+      "logoUrl": "/dealer-brand/v2-d2d110db50b48593/logo-on-light.webp"
     },
     "publishedAt": "2026-09-06T09:00:00.000Z",
     "promoted": false
@@ -765,7 +765,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "AVANGARD AUTO",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
+      "logoUrl": "/dealer-brand/v2-d2d110db50b48593/logo-on-light.webp"
     },
     "publishedAt": "2026-09-06T09:00:00.000Z",
     "promoted": false
@@ -861,7 +861,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "AVANGARD AUTO",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
+      "logoUrl": "/dealer-brand/v2-d2d110db50b48593/logo-on-light.webp"
     },
     "publishedAt": "2026-09-06T09:00:00.000Z",
     "promoted": false
@@ -957,7 +957,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "AVANGARD AUTO",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
+      "logoUrl": "/dealer-brand/v2-d2d110db50b48593/logo-on-light.webp"
     },
     "publishedAt": "2026-09-06T09:00:00.000Z",
     "promoted": false
@@ -1053,7 +1053,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "AVANGARD AUTO",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
+      "logoUrl": "/dealer-brand/v2-d2d110db50b48593/logo-on-light.webp"
     },
     "publishedAt": "2026-09-06T09:00:00.000Z",
     "promoted": false
@@ -1149,7 +1149,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "AVANGARD AUTO",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
+      "logoUrl": "/dealer-brand/v2-d2d110db50b48593/logo-on-light.webp"
     },
     "publishedAt": "2026-09-06T09:00:00.000Z",
     "promoted": false
@@ -1245,7 +1245,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "AVANGARD AUTO",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
+      "logoUrl": "/dealer-brand/v2-d2d110db50b48593/logo-on-light.webp"
     },
     "publishedAt": "2026-09-06T09:00:00.000Z",
     "promoted": false
@@ -1341,7 +1341,199 @@ export const mockListings: VehicleListing[] = [
       "displayName": "AVANGARD AUTO",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
+      "logoUrl": "/dealer-brand/v2-d2d110db50b48593/logo-on-light.webp"
+    },
+    "publishedAt": "2026-09-06T09:00:00.000Z",
+    "promoted": false
+  },
+  {
+    "id": "dealer-260cc826550603ee38b456a1",
+    "slug": "audi-q5-premium-plus-2018-21762503862293800",
+    "category": "car",
+    "dealerOrgId": "dealer-avangard-auto",
+    "status": "active",
+    "title": "Audi Q5 Premium Plus",
+    "description": "Audi Q5 Premium Plus, март 2018 г.  206 000 км Светло сив Бензинов 252 к.с. Евро 6 2000 куб.см Автоматична Джип. Обявен от AVANGARD AUTO. Потвърдете наличността и условията по телефона преди посещение.",
+    "price": {
+      "amount": 17999,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/assets/avangard/vehicle-15-1.webp",
+        "alt": "Audi Q5 Premium Plus"
+      },
+      {
+        "url": "/assets/avangard/vehicle-15-2.webp",
+        "alt": "Audi Q5 Premium Plus"
+      },
+      {
+        "url": "/assets/avangard/vehicle-15-3.webp",
+        "alt": "Audi Q5 Premium Plus"
+      },
+      {
+        "url": "/assets/avangard/vehicle-15-4.webp",
+        "alt": "Audi Q5 Premium Plus"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Варна",
+      "region": "Варна",
+      "country": "България"
+    },
+    "features": [
+      {
+        "bg": "360 camera \\ Задна камера",
+        "en": "360 camera \\ Задна камера"
+      },
+      {
+        "bg": "4(5) Врати",
+        "en": "4(5) Врати"
+      },
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "Auto Start Stop function",
+        "en": "Auto Start Stop function"
+      },
+      {
+        "bg": "Apple CarPlay \\ Android Auto",
+        "en": "Apple CarPlay \\ Android Auto"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "DVD",
+        "en": "DVD"
+      },
+      {
+        "bg": "TV",
+        "en": "TV"
+      }
+    ],
+    "spec": {
+      "make": "Audi",
+      "model": "Q5 Premium Plus",
+      "year": 2018,
+      "bodyType": "suv",
+      "fuelType": "gasoline",
+      "transmission": "automatic",
+      "mileageValue": 206000,
+      "mileageUnit": "km",
+      "enginePowerHp": 252,
+      "colorExterior": "Светло Сив"
+    },
+    "seller": {
+      "id": "dealer-avangard-auto",
+      "type": "dealer",
+      "displayName": "AVANGARD AUTO",
+      "verificationStatus": "unverified",
+      "city": "Варна",
+      "logoUrl": "/dealer-brand/v2-d2d110db50b48593/logo-on-light.webp"
+    },
+    "publishedAt": "2026-09-06T09:00:00.000Z",
+    "promoted": false
+  },
+  {
+    "id": "dealer-2314e8412c5cf05b19b077ea",
+    "slug": "audi-a4-2-0tdi-2011-11787435697096424",
+    "category": "car",
+    "dealerOrgId": "dealer-avangard-auto",
+    "status": "active",
+    "title": "Audi A4 2.0TDI",
+    "description": "Audi A4 2.0TDI, юли 2011 г.  202 000 км Бял Дизелов 143 к.с. 2000 куб.см Автоматична Комби. Обявен от AVANGARD AUTO. Потвърдете наличността и условията по телефона преди посещение.",
+    "price": {
+      "amount": 6300,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/assets/avangard/vehicle-16-1.webp",
+        "alt": "Audi A4 2.0TDI"
+      },
+      {
+        "url": "/assets/avangard/vehicle-16-2.webp",
+        "alt": "Audi A4 2.0TDI"
+      },
+      {
+        "url": "/assets/avangard/vehicle-16-3.webp",
+        "alt": "Audi A4 2.0TDI"
+      },
+      {
+        "url": "/assets/avangard/vehicle-16-4.webp",
+        "alt": "Audi A4 2.0TDI"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Варна",
+      "region": "Варна",
+      "country": "България"
+    },
+    "features": [
+      {
+        "bg": "4(5) Врати",
+        "en": "4(5) Врати"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "LED фарове",
+        "en": "LED фарове"
+      },
+      {
+        "bg": "Steptronic",
+        "en": "Steptronic"
+      },
+      {
+        "bg": "Tiptronic",
+        "en": "Tiptronic"
+      },
+      {
+        "bg": "USB",
+        "en": "USB"
+      },
+      {
+        "bg": "audio\\video",
+        "en": "audio\\video"
+      },
+      {
+        "bg": "IN\\AUX изводи",
+        "en": "IN\\AUX изводи"
+      }
+    ],
+    "spec": {
+      "make": "Audi",
+      "model": "A4 2.0TDI",
+      "year": 2011,
+      "bodyType": "wagon",
+      "fuelType": "diesel",
+      "transmission": "automatic",
+      "mileageValue": 202000,
+      "mileageUnit": "km",
+      "enginePowerHp": 143,
+      "colorExterior": "Бял"
+    },
+    "seller": {
+      "id": "dealer-avangard-auto",
+      "type": "dealer",
+      "displayName": "AVANGARD AUTO",
+      "verificationStatus": "unverified",
+      "city": "Варна",
+      "logoUrl": "/dealer-brand/v2-d2d110db50b48593/logo-on-light.webp"
     },
     "publishedAt": "2026-09-06T09:00:00.000Z",
     "promoted": false

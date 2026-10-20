@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "format": "mobile-preview-v1",
+  "dealer": "porsche-varna",
+  "name": "Porsche Varna",
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+    "path": "templates/mobile",
+    "digest": "f5a3e541a7c648a4c2899ad3893e22a3806027a9f66d95fa4e8c74b2226635b6",
+    "tree": "792bfdd1d8eb22aabd90c7e3a0c0779a6c1c36f3"
+  },
+  "sourceDigest": "1c5519c4644941ab8877c1ba54217b2bbf11cf78c7edf561acf8320b8b83ddea",
+  "inventory": {
+    "mode": "dated-listing-snapshot",
+    "count": 2,
+    "observedAt": "2026-10-12T10:44:19.483Z"
+  },
+  "personalization": {
+    "profileSha256": "f76b75edad224ed5ce80ffaa44aadd1ee3c2c1469610b0e0b30aa3a62e9de1e3",
+    "logoPaths": [
+      "/dealer-brand/logo-on-light.png",
+      "/dealer-brand/logo-on-dark.png"
+    ],
+    "mediaPaths": [
+      "/dealer-stock/11790354686274560-1.webp",
+      "/dealer-stock/11790354686274560-2.webp",
+      "/dealer-stock/11790324799720879-1.webp",
+      "/dealer-stock/11790324799720879-2.webp"
+    ],
+    "mediaMappings": [],
+    "contentPaths": [
+      "mobile/src/lib/showroom-config.ts",
+      "mobile/src/lib/catalog.ts",
+      "mobile/src/lib/dealers.ts",
+      "mobile/src/lib/dealer-inventory.json",
+      "mobile/src/lib/locale.ts",
+      "mobile/src/lib/search.ts",
+      "mobile/src/components/NativeDealerCards.tsx",
+      "mobile/src/components/DealerScreens.tsx",
+      "mobile/src/components/VehicleCard.tsx",
+      "mobile/src/components/ShowroomVehicleCard.tsx",
+      "mobile/src/components/VehicleSections.tsx",
+      "mobile/src/lib/mobile-mileage.ts",
+      "mobile/src/lib/types.ts",
+      "mobile/src/components/DesktopVehicleSummary.tsx",
+      "mobile/src/components/NativeCarPark.tsx",
+      "mobile/src/components/ShowroomFilterSheet.tsx",
+      "mobile/src/lib/vehicle-copy.ts"
+    ]
+  },
+  "needsDealerQA": true,
+  "readyToPublish": false
+}

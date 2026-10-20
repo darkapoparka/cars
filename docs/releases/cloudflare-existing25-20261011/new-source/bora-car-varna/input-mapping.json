@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-input-mapping",
+  "dealer": "bora-car-varna",
+  "inputs": {
+    "facts": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/bora-car-varna/facts.json",
+      "sha256": "8c329e459a67f273b76ccc8601e7bd118b8131ad1a7441872fe803a553e7fdfe"
+    },
+    "stock": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/bora-car-varna/stock.json",
+      "sha256": "eb95c603f9e0513bee96fe0255e886da767aef9f2c620c7982e0282243066eda"
+    },
+    "locale": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/bora-car-varna/locale.json",
+      "sha256": "0472192955a6581cdd2eb0f359e8cd85d29d6431385783c2d64af908fae344fe"
+    },
+    "branding": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/bora-car-varna/branding.json",
+      "sha256": "cf8f2a7ac284e7650ce9d2f21f1a6c78bda003ad9a395791be746a07733a3991"
+    }
+  },
+  "sources": [
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/bora-car-varna/source/business-facts.json",
+      "sha256": "dbf819781d8fb7b1a5f19e25643f7196aba89cfa6047349b7e695a4ed7055d6d"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/bora-car-varna/source/locale.json",
+      "sha256": "0472192955a6581cdd2eb0f359e8cd85d29d6431385783c2d64af908fae344fe"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/bora-car-varna/source/stock.json",
+      "sha256": "b96251d8dc6dee729a0203ea70084558b44838eff72fbb763ade6458591b5c3c"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/bora-car-varna/source/generation-receipt.json",
+      "sha256": "fdde535095fae115403bda0a18558c4239dae0be88f11ef7d0a27c22aaaf9444"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/bora-car-varna/source/native-onLight.png",
+      "sha256": "ec77a9374056d73759c7c443dc552093f26910e46846be2cd3a9895d04a89465"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/bora-car-varna/source/native-onDark.png",
+      "sha256": "ec77a9374056d73759c7c443dc552093f26910e46846be2cd3a9895d04a89465"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/bora-car-varna/source/native-onAccent.png",
+      "sha256": "ec77a9374056d73759c7c443dc552093f26910e46846be2cd3a9895d04a89465"
+    }
+  ],
+  "transformations": {
+    "facts": {
+      "source": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/bora-car-varna/source/business-facts.json",
+        "sha256": "dbf819781d8fb7b1a5f19e25643f7196aba89cfa6047349b7e695a4ed7055d6d"
+      },
+      "kind": "flat-original-facts-to-business-consumer",
+      "allOriginalEvidenceUnchanged": true,
+      "derivedNameDelta": null,
+      "otherFactsUnchanged": true
+    },
+    "stock": {
+      "source": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/bora-car-varna/source/stock.json",
+        "sha256": "b96251d8dc6dee729a0203ea70084558b44838eff72fbb763ade6458591b5c3c"
+      },
+      "originalSourceRecordPreserved": true,
+      "sourceId": "11746086011937446",
+      "normalizer": "loadDealerProfile",
+      "retention": "retainDealerVariantAssets",
+      "sourceKind": "dated-marketplace-listing-sample",
+      "consumerKind": "dated-listing-snapshot",
+      "availabilityUnconfirmed": true,
+      "mediaRightsNotClaimed": true,
+      "mileageUnknownMeansOnRequest": true
+    },
+    "media": [
+      {
+        "sourceId": "11746086011937446",
+        "sourcePublicPath": "/assets/vehicles/11746086011937446/1.webp",
+        "publicPath": "/dealer-stock/11746086011937446-1.webp",
+        "destination": "dealer-stock/11746086011937446-1.webp",
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/bora-car-varna/media/11746086011937446-1.webp",
+        "sha256": "c1a807375220d57e4a33e26f4b57e7bd5e258510c8c6fc25dbf41499638f90a2",
+        "bytes": 116238
+      },
+      {
+        "sourceId": "11746086011937446",
+        "sourcePublicPath": "/assets/vehicles/11746086011937446/2.webp",
+        "publicPath": "/dealer-stock/11746086011937446-2.webp",
+        "destination": "dealer-stock/11746086011937446-2.webp",
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/bora-car-varna/media/11746086011937446-2.webp",
+        "sha256": "494c78609dd8141157058bced0f9588b3940cc2cc8f1d0e4fa37f7454920fe20",
+        "bytes": 79232
+      }
+    ],
+    "branding": {
+      "acceptedManifest": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/evidence/final-logo-handoff.json",
+        "sha256": "b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a"
+      },
+      "originalGenerationReceipt": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/bora-car-varna/source/generation-receipt.json",
+        "sha256": "fdde535095fae115403bda0a18558c4239dae0be88f11ef7d0a27c22aaaf9444"
+      },
+      "noNewGeneration": true,
+      "modelVersion": null,
+      "pixelsUnchanged": true
+    },
+    "identity": null
+  }
+}

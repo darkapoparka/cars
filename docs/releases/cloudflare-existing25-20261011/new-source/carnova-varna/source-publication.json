@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-source-publication",
+  "reviewed": true,
+  "reviewedAt": "2026-10-13T14:42:48.703Z",
+  "dealer": "carnova-varna",
+  "dealerId": "carnova-varna",
+  "repository": "darkapoparka/cars-carnova-varna",
+  "sourceOwnership": "cars-canonical",
+  "request": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/batch-4-qualified23-request.json",
+    "sha256": "dcdd093f40a04d9187d5ddaa8cbdbb0006b0fed9ff01722a2d9179278d548f29"
+  },
+  "proposal": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/carnova-varna/source-proposal.json",
+    "sha256": "43ddb5b752d09965bcf7b916f805fa7aad10d5fa75edee7426d79516b8831819"
+  },
+  "preparation": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/carnova-varna/source-preparation.json",
+    "sha256": "4a334bee34408e725ba2b42860b95ef0a58679eb879f60a1ab20e60b348f394b"
+  },
+  "inputMapping": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/carnova-varna/input-mapping.json",
+    "sha256": "78e56a8e0f59f4f902368920bfa033725a6ca1fc3a64ff1db427112b2a8a2c7a"
+  },
+  "sourcePublication": {
+    "repository": "darkapoparka/cars",
+    "commit": "328c0102d7ed151781c4358033eae12102697bd4",
+    "sourceTree": "530b1e522c41fb7307c11f1fde5a32cc1c30e659",
+    "ref": "refs/heads/main",
+    "publishedAt": "2026-10-13T14:41:00.838Z",
+    "evidence": "https://github.com/darkapoparka/cars/commit/328c0102d7ed151781c4358033eae12102697bd4"
+  }
+}

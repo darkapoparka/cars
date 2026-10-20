@@ -4,9 +4,9 @@
   "name": "Аутомаркет Варна",
   "shortName": "Аутомаркет Варна",
   "logo": {
-    "light": "/dealer-app/logo-light-7af239008b510f97e800.webp",
-    "dark": "/dealer-app/logo-dark-8b99f27afd47cc3f0a81.webp",
-    "icon": "/dealer-app/icon.png"
+    "light": "/dealer-brand/v2-8e43d7ba74a02846/logo-on-light.webp",
+    "dark": "/dealer-brand/v2-8e43d7ba74a02846/logo-on-dark.webp",
+    "icon": "/dealer-brand/v2-8e43d7ba74a02846/app-icon.png"
   },
   "defaultLocale": "bg",
   "enabledLocales": [
@@ -42,6 +42,7 @@
       "url": ""
     }
   ],
+  "referenceClaimsApproved": false,
   "services": [
     "Продажба на употребявани автомобили",
     "Внос от ЕС и доставка по поръчка",
@@ -50,8 +51,7 @@
     "Транспорт в страната",
     "Запитване за лизинг чрез финансови партньори"
   ],
-  "referenceClaimsApproved": false,
   "observedAt": "2026-09-07",
-  "inventoryNotice": "Dated listing samples. Confirm price, availability and vehicle information with the dealer.",
+  "inventoryNotice": "Представителни обяви към 07.09.2026 г. Потвърдете наличността и условията по телефона.",
   "previewNotice": "Independent design preview. No purchase, reservation or message is submitted by this website."
 }

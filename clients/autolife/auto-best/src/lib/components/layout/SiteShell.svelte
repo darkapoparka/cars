@@ -5,9 +5,16 @@
   import type { Snippet } from 'svelte';
   import type { Attachment } from 'svelte/attachments';
   import { leadSite } from '$config/lead-site';
+  import { template } from '$config/template';
   import type { ShellPresentation } from '$data/shell';
   import Header from './Header.svelte';
   import Footer from './Footer.svelte';
+  import { page } from '$app/state';
+  import { selectedHeroPreview } from '$lib/ui/hero-preview';
+  import { resolveCompanyHero } from '$lib/ui/company-hero';
+  import HeroPreviewControls from './HeroPreviewControls.svelte';
+  import '$lib/styles/hero-preview.css';
+  import '$lib/styles/company-hero.css';
 
   let { children, presentation }: { children: Snippet; presentation: ShellPresentation } = $props();
   let footerIntersecting = $state(false);
@@ -23,11 +30,18 @@
     };
   };
   const mobileFooterVisible = $derived(presentation.showMobileFooter && footerIntersecting);
+  const heroPreview = $derived(presentation.route === 'home' || presentation.workflowJourney ? selectedHeroPreview(page.url.searchParams) : null);
+  const companyHero = $derived(presentation.route === 'about' || (presentation.route === 'contact' && presentation.contactTopic === 'general') ? resolveCompanyHero(page.url.searchParams) : null);
 </script>
 
 <div
   class="dn-app-shell"
   data-route={presentation.route}
+  data-hero-preview={heroPreview ?? undefined}
+  data-company-hero={companyHero ?? undefined}
+  style:--dn-company-asphalt={companyHero === 'circuit' ? `url("${leadSite.artwork.homeSectionBannerAssets.circuit}")` : undefined}
+  style:--dn-company-mobile-asphalt={companyHero === 'circuit' ? `url("${leadSite.artwork.homeSectionBannerMobileAssets.circuit}")` : undefined}
+  style:--dn-hero-preview-photo={heroPreview === 'photo' ? `url("${leadSite.artwork.inventoryDemo.stock04}")` : undefined}
   data-contact-topic={presentation.contactTopic ?? undefined}
   data-journey={presentation.workflowJourney ? 'workflow' : undefined}
   data-mobile-bottom={presentation.mobileBottom}
@@ -57,5 +71,6 @@
   <a class="dn-skip-link" href="#main-content">{i18n.t("m_ac576a66d456")}</a>
   <Header presentation={presentation.header} {mobileFooterVisible} />
   <main id="main-content" data-layout={presentation.mainLayout} tabindex="-1">{@render children()}</main>
-  <Footer showActions={presentation.showFooterActions} showMobileFooter={presentation.showMobileFooter} {observeFooter} />
+  <Footer showActions={presentation.showFooterActions} hideDesktopActions={(presentation.route === 'contact' && presentation.contactTopic === 'general') || (presentation.route === 'about' && template.sections.demoTeam)} showMobileFooter={presentation.showMobileFooter} {observeFooter} />
+  {#if heroPreview}<HeroPreviewControls variant={heroPreview} />{/if}
 </div>

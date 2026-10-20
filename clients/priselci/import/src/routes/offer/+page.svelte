@@ -1,4 +1,46 @@
 <script lang="ts">
+	import { page } from '$app/state';
+	// CARS_IMPORT_OFFER_COPY_START
+	const offerCopy = $derived(page.data.locale === 'en' ? {
+  "name": "Priselci",
+  "count": "16",
+  "inventoryLabel": "listings in a dated snapshot",
+  "catalogTitle": "Catalogue from dated listings",
+  "roadmap": "Preview catalogue, detail pages, comparison, favourites, services and contact. Confirm current price and availability with the dealership.",
+  "title": "Website proposal for Priselci",
+  "description": "Independent website preview for Priselci; dated listings from 2026-09-07.",
+  "heroLead": "Website preview for Priselci with 16 listings from 2026-09-07. Prices and availability require direct confirmation; preview forms do not send enquiries.",
+  "heading": "Website preview for Priselci",
+  "headerLabel": "Priselci website proposal",
+  "homeLabel": "Priselci home",
+  "openSite": "Open the Priselci preview",
+  "proposal": "Proposal for Priselci",
+  "stackBranding": "Auxero template fidelity + Priselci visual adaptation",
+  "stackSummary": "SvelteKit + Auxero + Priselci data",
+  "product": "Website proposal for Priselci.",
+  "featuresLead": "Preview browsing, comparison, favourites and contact flows. Forms and administration are demonstration interfaces.",
+  "closing": "Priselci can review this proposal before any official publication."
+} : {
+  "name": "Приселци",
+  "count": "16",
+  "inventoryLabel": "обяви в датирана извадка",
+  "catalogTitle": "Каталог от датирани обяви",
+  "roadmap": "Каталог за преглед, детайлни страници, сравнение, любими, услуги и контакт. Потвърдете актуалната цена и наличност с автокъщата.",
+  "title": "Предложение за сайт на Приселци",
+  "description": "Независим преглед на сайт за Приселци; датирани обяви от 2026-09-07.",
+  "heroLead": "Преглед на сайт за Приселци с 16 обяви от 2026-09-07. Цените и наличността се потвърждават директно; формите в прегледа не изпращат запитвания.",
+  "heading": "Демонстрационен сайт за Приселци",
+  "headerLabel": "Предложение за сайт на Приселци",
+  "homeLabel": "Начална страница на Приселци",
+  "openSite": "Отвори прегледа на Приселци",
+  "proposal": "Предложение за Приселци",
+  "stackBranding": "Auxero template fidelity + Приселци визуална адаптация",
+  "stackSummary": "SvelteKit + Auxero + Приселци data",
+  "product": "Предложение за сайт на Приселци.",
+  "featuresLead": "Преглед на търсене, сравнение, любими и контакт. Формите и админ зоната са демонстрационни интерфейси.",
+  "closing": "Приселци може да прегледа предложението преди официално публикуване."
+});
+	// CARS_IMPORT_OFFER_COPY_END
 	import { resolve } from '$app/paths';
 	import ArrowRight from '@lucide/svelte/icons/arrow-right';
 	import BadgeCheck from '@lucide/svelte/icons/badge-check';
@@ -20,14 +62,14 @@
 	import Wrench from '@lucide/svelte/icons/wrench';
 
 	const heroImage = '/assets/daynight/offer/offer-poster-background.webp';
-	const logo = '/brand/daynight-wordmark.svg';
+	const logo = "/dealer-brand/v2-7b937c05859b3290/logo-on-light.webp";
 
-	const stats = [
-		{ value: '42', label: 'реални автомобила в каталога' },
+	const stats = $derived([
+		{ value: offerCopy.count, label: offerCopy.inventoryLabel },
 		{ value: '18+', label: 'готови потребителски страници' },
 		{ value: 'BG / EN', label: 'структура за двуезично съдържание' },
 		{ value: 'Admin', label: 'управление на обяви и заявки' }
-	];
+	]);
 
 	const proofCards = [
 		{
@@ -47,10 +89,10 @@
 		}
 	];
 
-	const deliveredFeatures = [
+	const deliveredFeatures = $derived([
 		{
 			icon: Car,
-			title: 'Каталог с реални автомобили',
+			title: offerCopy.catalogTitle,
 			text: 'Обявите са структурирани с цена, пробег, година, гориво, скоростна кутия, снимки, статус и детайли.'
 		},
 		{
@@ -88,22 +130,22 @@
 			title: 'Съдържание и SEO',
 			text: 'Блог, услуги, екип, ревюта, ЧЗВ, sitemap.xml и route структура за търсачки.'
 		}
-	];
+	]);
 
-	const stack = [
+	const stack = $derived([
 		{ label: 'Frontend', value: 'SvelteKit, Svelte 5, TypeScript, Vite' },
-		{ label: 'UI база', value: 'Auxero template fidelity + Приселци визуална адаптация' },
+		{ label: 'UI база', value: offerCopy.stackBranding },
 		{ label: 'Данни', value: 'структуриран автомобилен feed, server adapters, route state' },
 		{ label: 'Качество', value: 'Vitest, Playwright, svelte-check, ESLint, Prettier' },
 		{ label: 'Готовност', value: 'responsive pages, admin flows, SEO routes, reusable components' }
-	];
+	]);
 
-	const roadmap = [
+	const roadmap = $derived([
 		{
 			icon: BadgeCheck,
 			kicker: 'Готово сега',
 			title: 'Публичен сайт и каталог',
-			text: 'Работеща потребителска част, реални обяви, детайлни страници, сравнение, любими, услуги и контакт.'
+			text: offerCopy.roadmap
 		},
 		{
 			icon: LayoutDashboard,
@@ -123,38 +165,36 @@
 			title: 'Автоматизации и приложение',
 			text: 'VIN проверка, постване към социални канали, известия, лизингов калкулатор или мобилно приложение.'
 		}
-	];
+	]);
 </script>
 
 <svelte:head>
-	<title>Оферта за Приселци</title>
+	<title>{offerCopy.title}</title>
 	<meta
 		name="description"
-		content="Клиентска оферта за новия Приселци сайт: реален каталог, админ панел, услуги, SEO, технологии и следващи стъпки."
+		content={offerCopy.description}
 	/>
 	<link rel="preload" as="image" href={heroImage} />
 </svelte:head>
 
 <main class="offer-page" data-daynight-offer>
-	<header class="offer-header" aria-label="Приселци offer header">
-		<a class="offer-header__logo" href={resolve('/')} aria-label="Приселци home">
-			<img src={logo} alt="Приселци" />
+	<header class="offer-header" aria-label={offerCopy.headerLabel}>
+		<a class="offer-header__logo" href={resolve('/')} aria-label={offerCopy.homeLabel}>
+			<img src={logo} alt={offerCopy.name} />
 		</a>
 		<div class="offer-header__meta">
 			<span>Оферта</span>
-			<a href={resolve('/')} aria-label="Отвори Приселци сайта">Към сайта</a>
+			<a href={resolve('/')} aria-label={offerCopy.openSite}>Към сайта</a>
 		</div>
 	</header>
 
 	<section class="offer-hero">
 		<div class="offer-wrap offer-hero__grid">
 			<div class="offer-hero__copy">
-				<p class="offer-eyebrow">Предложение за Приселци</p>
-				<h1>Новият сайт не е идея. Той вече работи.</h1>
+				<p class="offer-eyebrow">{offerCopy.proposal}</p>
+				<h1>{offerCopy.heading}</h1>
 				<p class="offer-hero__lead">
-					Изградих реална версия на Приселци върху Auxero визуалната база: каталог с истински
-					автомобили, страници за услуги, админ зона, сравнение, любими, блог, SEO и ясна пътна
-					карта към production.
+					{offerCopy.heroLead}
 				</p>
 				<div class="offer-hero__actions">
 					<a class="offer-action offer-action--primary" href={resolve('/')}>
@@ -170,7 +210,7 @@
 				<img src={heroImage} alt="Premium showroom workspace with a digital website proposal" />
 				<figcaption>
 					<span>Built as a real product surface</span>
-					<strong>SvelteKit + Auxero + Приселци data</strong>
+					<strong>{offerCopy.stackSummary}</strong>
 				</figcaption>
 			</figure>
 		</div>
@@ -191,7 +231,7 @@
 		<div class="offer-wrap">
 			<div class="offer-section__head">
 				<p class="offer-eyebrow">Визуално доказателство</p>
-				<h2>Не е generic landing page. Това е Приселци продукт.</h2>
+				<h2>{offerCopy.product}</h2>
 				<p>
 					Страниците използват реалните теми, снимки, сценарии и действия, които клиент на автокъща
 					очаква да види.
@@ -218,8 +258,7 @@
 				<p class="offer-eyebrow">Какво е изградено</p>
 				<h2>Готови функции, които могат да се покажат веднага.</h2>
 				<p>
-					Фокусът е практичен: клиентът намира автомобил, разбира услугата, праща запитване,
-					сравнява, запазва и Приселци може да управлява съдържанието.
+					{offerCopy.featuresLead}
 				</p>
 			</div>
 
@@ -282,7 +321,7 @@
 		<div class="offer-wrap offer-closing">
 			<div>
 				<p class="offer-eyebrow">Финал</p>
-				<h2>Ако Приселци иска, това може да стане официалният сайт.</h2>
+				<h2>{offerCopy.closing}</h2>
 			</div>
 			<div class="offer-closing__panel">
 				<div class="offer-closing__icons" aria-hidden="true">

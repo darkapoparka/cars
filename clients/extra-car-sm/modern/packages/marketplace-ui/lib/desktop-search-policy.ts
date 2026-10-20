@@ -3,9 +3,13 @@ import {
   formatMileage,
   getListingPath,
   leadSite,
-  mockListings,
-  type VehicleListing,
 } from "@repo/marketplace";
+import type { InventorySearchListing } from "@repo/marketplace/inventory-search";
+import { isDealershipSite } from "@repo/marketplace/site-config";
+import {
+  readLocalPreference,
+  writeLocalPreference,
+} from "./browser-preferences";
 import { getLocalizedPublicPath } from "./public-path";
 
 export type DesktopSearchScope = "organizations" | "vehicles";
@@ -18,7 +22,7 @@ interface SearchSuggestionDefinition {
   keywords: string;
   kind: SearchSuggestionKind;
   label: string;
-  listing?: VehicleListing;
+  listing?: InventorySearchListing;
   popular?: boolean;
   value: string;
 }
@@ -29,7 +33,7 @@ export interface SearchSuggestionItem {
   id: string;
   kind: SearchSuggestionKind | "recent" | "search";
   label: string;
-  listing?: VehicleListing;
+  listing?: InventorySearchListing;
   value: string;
 }
 
@@ -38,130 +42,57 @@ export interface SearchSuggestionGroup {
   items: SearchSuggestionItem[];
 }
 
-const defaultVehicleSuggestions: readonly SearchSuggestionDefinition[] = [
-  {
-    descriptionBg: "SUV · дизел · автоматик",
-    descriptionEn: "SUV · diesel · automatic",
-    id: "bmw-x5",
-    keywords: "bmw x5 xdrive40d suv diesel дизел",
-    kind: "vehicle",
-    label: "BMW X5",
-    popular: true,
-    value: "BMW X5",
-  },
-  {
-    descriptionBg: "SUV · бензин · quattro",
-    descriptionEn: "SUV · petrol · quattro",
-    id: "audi-q5",
-    keywords: "audi q5 tfsi quattro suv бензин",
-    kind: "vehicle",
-    label: "Audi Q5",
-    popular: true,
-    value: "Audi Q5",
-  },
-  {
-    descriptionBg: "SUV · хибрид · автоматик",
-    descriptionEn: "SUV · hybrid · automatic",
-    id: "toyota-rav4",
-    keywords: "toyota rav4 hybrid awd suv хибрид",
-    kind: "vehicle",
-    label: "Toyota RAV4",
-    popular: true,
-    value: "Toyota RAV4",
-  },
-  {
-    descriptionBg: "Комби · дизел · автоматик",
-    descriptionEn: "Wagon · diesel · automatic",
-    id: "volkswagen-golf",
-    keywords: "volkswagen vw golf variant tdi комби дизел",
-    kind: "vehicle",
-    label: "Volkswagen Golf",
-    value: "Volkswagen Golf",
-  },
-  {
-    descriptionBg: "Електрически SUV автомобили",
-    descriptionEn: "Electric SUV listings",
-    id: "electric-suv",
-    keywords: "electric ev suv електрически електромобил",
-    kind: "vehicle",
-    label: "Електрически SUV",
-    popular: true,
-    value: "Електрически SUV",
-  },
-  {
-    descriptionBg: `Обяви за автомобили от ${leadSite.city}`,
-    descriptionEn: `Vehicle advertisements from ${leadSite.city}`,
-    id: `${leadSite.slug}-vehicles`,
-    keywords: `${leadSite.city} ${leadSite.country} vehicles автомобили`,
-    kind: "location",
-    label: leadSite.city,
-    popular: true,
-    value: leadSite.city,
-  },
-];
-
-const leadPopularVehicleIds = mockListings.slice(0,4).map(listing => listing.id);
 const leadingListingYearPattern = /^\d{4}\s+/;
 
-const leadVehicleSuggestions: readonly SearchSuggestionDefinition[] = [
-  ...mockListings
-    .filter((listing) => listing.category === "car")
-    .sort((left, right) => {
-      const leftIndex = leadPopularVehicleIds.indexOf(
-        left.id as (typeof leadPopularVehicleIds)[number]
-      );
-      const rightIndex = leadPopularVehicleIds.indexOf(
-        right.id as (typeof leadPopularVehicleIds)[number]
-      );
-      return (
-        (leftIndex === -1 ? Number.MAX_SAFE_INTEGER : leftIndex) -
-        (rightIndex === -1 ? Number.MAX_SAFE_INTEGER : rightIndex)
-      );
-    })
-    .map<SearchSuggestionDefinition>((listing) => ({
-      descriptionBg: "",
-      descriptionEn: "",
-      id: listing.id,
-      keywords: [
-        listing.title,
-        listing.spec.make,
-        listing.spec.model,
-        listing.spec.trim,
-        listing.spec.fuelType,
-      ]
-        .filter(Boolean)
-        .join(" "),
-      kind: "vehicle",
-      label: listing.title.replace(leadingListingYearPattern, ""),
-      listing,
-      popular: leadPopularVehicleIds.includes(
-        listing.id as (typeof leadPopularVehicleIds)[number]
-      ),
-      value: listing.title,
-    })),
-  {
-    descriptionBg: `Обяви за автомобили от ${leadSite.city}`,
-    descriptionEn: `Vehicle advertisements from ${leadSite.city}`,
-    id: `${leadSite.slug}-vehicles`,
-    keywords: `${leadSite.city} ${leadSite.country} vehicles автомобили`,
-    kind: "location",
-    label: leadSite.city,
-    popular: true,
-    value: leadSite.city,
-  },
+const locationSuggestion: SearchSuggestionDefinition = {
+  descriptionBg: `Автомобили в ${leadSite.city}`,
+  descriptionEn: `Vehicles in ${leadSite.city}`,
+  id: `${leadSite.slug}-vehicles`,
+  keywords: `${leadSite.city} ${leadSite.country}`,
+  kind: "location",
+  label: leadSite.city,
+  popular: true,
+  value: leadSite.city,
+};
+
+const getVehicleSuggestions = (
+  listings: readonly InventorySearchListing[]
+): readonly SearchSuggestionDefinition[] => [
+  ...listings.map<SearchSuggestionDefinition>((listing, index) => ({
+    descriptionBg: "",
+    descriptionEn: "",
+    id: listing.id,
+    keywords: [
+      listing.title,
+      listing.spec.make,
+      listing.spec.model,
+      listing.spec.trim,
+      listing.spec.fuelType,
+    ]
+      .filter(Boolean)
+      .join(" "),
+    kind: "vehicle",
+    label: listing.title.replace(leadingListingYearPattern, ""),
+    listing,
+    popular: index < 4,
+    value: listing.title,
+  })),
+  locationSuggestion,
 ];
 
-const vehicleSuggestions = leadSite.staticDemoMode
-  ? leadVehicleSuggestions
-  : defaultVehicleSuggestions;
-
-const organizationSuggestions: readonly SearchSuggestionDefinition[] = [{
-      descriptionBg: `Демонстрационен профил · ${leadSite.city}`, descriptionEn: `Demonstration profile · ${leadSite.city}`,
-      id:leadSite.slug,keywords:`${leadSite.name} ${leadSite.city}`,kind:'dealer',label:leadSite.name,popular:true,value:leadSite.name
-    },{
-      descriptionBg:`Обяви за автомобили · ${leadSite.city}`,descriptionEn:`Vehicle advertisements · ${leadSite.city}`,
-      id:`${leadSite.slug}-location`,keywords:leadSite.city,kind:'location',label:leadSite.city,popular:true,value:leadSite.city
-    }];
+const organizationSuggestions: readonly SearchSuggestionDefinition[] = [
+  {
+    descriptionBg: leadSite.city,
+    descriptionEn: leadSite.city,
+    id: leadSite.slug,
+    keywords: `${leadSite.name} ${leadSite.city} ${leadSite.country}`,
+    kind: "dealer",
+    label: leadSite.name,
+    popular: true,
+    value: leadSite.name,
+  },
+  locationSuggestion,
+];
 
 const recentSearchStorageKey = (scope: DesktopSearchScope) =>
   `automarket:desktop-search:${scope}:recent`;
@@ -172,7 +103,7 @@ export const readRecentMarketplaceSearches = (scope: DesktopSearchScope) => {
   }
 
   try {
-    const stored = window.localStorage.getItem(recentSearchStorageKey(scope));
+    const stored = readLocalPreference(recentSearchStorageKey(scope));
     if (!stored) {
       return [];
     }
@@ -204,14 +135,10 @@ export const rememberMarketplaceSearchQuery = (
     ),
   ].slice(0, 3);
 
-  try {
-    window.localStorage.setItem(
-      recentSearchStorageKey(scope),
-      JSON.stringify(nextRecentSearches)
-    );
-  } catch {
-    return nextRecentSearches;
-  }
+  writeLocalPreference(
+    recentSearchStorageKey(scope),
+    JSON.stringify(nextRecentSearches)
+  );
 
   return nextRecentSearches;
 };
@@ -221,9 +148,7 @@ const toSuggestionItem = (
   isBg: boolean,
   locale?: string
 ): SearchSuggestionItem => {
-  let description = isBg
-    ? suggestion.descriptionBg
-    : suggestion.descriptionEn;
+  let description = isBg ? suggestion.descriptionBg : suggestion.descriptionEn;
   if (suggestion.listing) {
     description = `${suggestion.listing.spec.year} · ${formatMileage(
       suggestion.listing.spec.mileageValue,
@@ -288,10 +213,10 @@ const getQuerySuggestionGroups = (
 
 const getPopularHeading = (isBg: boolean, scope: DesktopSearchScope) => {
   if (scope === "organizations") {
-    return isBg ? "Дилър и местоположение" : "Dealer and location";
+    return isBg ? "Дилъри и места" : "Dealers and places";
   }
-  if (leadSite.staticDemoMode) {
-    return isBg ? "Избрани обяви" : "Selected advertisements";
+  if (isDealershipSite) {
+    return isBg ? "Автомобили в наличност" : "Available vehicles";
   }
   return isBg ? "Популярни търсения" : "Popular searches";
 };
@@ -313,7 +238,7 @@ const getIdleSuggestionGroups = (
     })
   );
 
-  if (leadSite.staticDemoMode && scope === "vehicles") {
+  if (isDealershipSite && scope === "vehicles") {
     const groups: SearchSuggestionGroup[] = [];
     if (recentItems.length) {
       groups.push({
@@ -364,6 +289,7 @@ const getIdleSuggestionGroups = (
 export const getDesktopSearchSuggestionGroups = ({
   isBg,
   locale,
+  listings = [],
   query,
   recentSearches,
   scope,
@@ -373,9 +299,12 @@ export const getDesktopSearchSuggestionGroups = ({
   query: string;
   recentSearches: readonly string[];
   scope: DesktopSearchScope;
+  listings?: readonly InventorySearchListing[];
 }) => {
   const definitions =
-    scope === "organizations" ? organizationSuggestions : vehicleSuggestions;
+    scope === "organizations"
+      ? organizationSuggestions
+      : getVehicleSuggestions(listings);
 
   return query
     ? getQuerySuggestionGroups(definitions, isBg, query, locale)

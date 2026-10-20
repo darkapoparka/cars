@@ -1,5 +1,6 @@
 import { daynightAssets, daynightBrand, daynightContact, mainNavigation } from '$lib/data/daynight';
 import { homeBrowseArtwork } from '$lib/content/home-discovery';
+import { inventoryText } from '$lib/content/inventory-localized';
 import { filterVehicles } from '$lib/domain/vehicle-search';
 import type { ReviewRoleKind } from '$lib/content/reviews';
 import type { BlogPost } from '$lib/data/blog';
@@ -1455,9 +1456,9 @@ export const homeFiveVehicleCardFromVehicle = (
 	brand: vehicle.brand,
 	modelLabel: vehicle.title.startsWith(`${vehicle.brand} ${vehicle.model}`)
 		? `${vehicle.brand} ${vehicle.model}`
-		: vehicle.title,
+		: inventoryText(locale, vehicle.title),
 	trimLabel: vehicle.title.startsWith(`${vehicle.brand} ${vehicle.model}`)
-		? vehicle.title.slice(`${vehicle.brand} ${vehicle.model}`.length).trim()
+		? inventoryText(locale, vehicle.title.slice(`${vehicle.brand} ${vehicle.model}`.length).trim())
 		: '',
 	fuel: compactFuelLabel(vehicle.fuel, locale),
 	highlightClass: 'bg-primary-2',
@@ -1467,7 +1468,7 @@ export const homeFiveVehicleCardFromVehicle = (
 	photoCount: vehicle.images.length || 1,
 	priceLabel: vehicle.priceLabel,
 	slug: vehicle.slug,
-	title: vehicle.title,
+	title: inventoryText(locale, vehicle.title),
 	transmission: translateVehicleTerm(locale, 'transmissions', vehicle.transmission),
 	transmissionIcon: vehicle.transmission === 'Manual' ? 'manual.svg' : 'auto.svg',
 	year: vehicle.year
@@ -1495,7 +1496,7 @@ const modalVehicleFromVehicle = (
 	mileageLabel: formatKm(vehicle, locale),
 	slug: vehicle.slug,
 	stockNumber: vehicle.stockNumber,
-	title: vehicle.title,
+	title: inventoryText(locale, vehicle.title),
 	transmission: translateVehicleTerm(locale, 'transmissions', vehicle.transmission),
 	vin: vehicle.vin,
 	year: vehicle.year

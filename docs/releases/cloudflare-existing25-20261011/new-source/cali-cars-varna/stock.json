@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "dealer": "cali-cars-varna",
+  "kind": "dated-listing-snapshot",
+  "records": [
+    {
+      "title": "BMW X4 M40i xDrive",
+      "make": "BMW",
+      "model": "X4",
+      "year": 2017,
+      "priceAmount": 19500,
+      "mileageValue": 180000,
+      "body": "SUV",
+      "fuel": "Petrol",
+      "transmission": "Automatic",
+      "description": "BMW X4 M40i xDrive от датирана публична обява. Потвърдете цената и наличността директно с автокъщата.",
+      "id": "21785846592411235",
+      "slug": "cali-cars-varna-21785846592411235",
+      "currency": "EUR",
+      "priceOnRequest": false,
+      "mileageOnRequest": false,
+      "mileageUnit": "km",
+      "condition": "used",
+      "images": [
+        "/dealer-stock/21785846592411235-1.webp",
+        "/dealer-stock/21785846592411235-2.webp"
+      ],
+      "sourceUrl": "https://calicars.mobile.bg/obiava-21785846592411235-bmw-x4-x4-m40i-xdrive",
+      "observedAt": "2026-10-12T11:43:24.373Z",
+      "availability": "Датирана обява; потвърдете цената и наличността директно с автокъщата.",
+      "sourceProof": {
+        "sha256": "689f97253513bf7402463a7590f69ba5bd4f70be36149231d4ad453397628737",
+        "originalPhotoBytesUnchanged": true,
+        "watermarksPreserved": true
+      }
+    },
+    {
+      "title": "Mercedes-Benz GLC 300 4Matic",
+      "make": "Mercedes-Benz",
+      "model": "GLC",
+      "year": 2019,
+      "priceAmount": 22000,
+      "mileageValue": 147000,
+      "body": "SUV",
+      "fuel": "Petrol",
+      "transmission": "Automatic",
+      "color": "Blue",
+      "description": "Mercedes-Benz GLC 300 4Matic от датирана публична обява. Потвърдете цената и наличността директно с автокъщата.",
+      "id": "21753383277707999",
+      "slug": "cali-cars-varna-21753383277707999",
+      "currency": "EUR",
+      "priceOnRequest": false,
+      "mileageOnRequest": false,
+      "mileageUnit": "km",
+      "condition": "used",
+      "images": [
+        "/dealer-stock/21753383277707999-1.webp",
+        "/dealer-stock/21753383277707999-2.webp"
+      ],
+      "sourceUrl": "https://calicars.mobile.bg/obiava-21753383277707999-mercedes-benz-glc-300-4matic-360cam-9g-tronic",
+      "observedAt": "2026-10-12T11:43:24.375Z",
+      "availability": "Датирана обява; потвърдете цената и наличността директно с автокъщата.",
+      "sourceProof": {
+        "sha256": "692cf52880277976b3da63e1d6b5de796fe44d4a41e3c3988d50c0adec651f9b",
+        "originalPhotoBytesUnchanged": true,
+        "watermarksPreserved": true
+      }
+    }
+  ],
+  "disclosure": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+  "disclosureEn": "Dated listing samples; confirm price and availability directly with the dealership.",
+  "availabilityConfirmed": false,
+  "completeInventory": false
+}

@@ -1,0 +1,400 @@
+{
+  "schemaVersion": 1,
+  "slug": "champion-auto-varna",
+  "business": {
+    "slug": "champion-auto-varna",
+    "name": "Сhampion Auto",
+    "shortName": "Сhampion Auto",
+    "latinName": "Сhampion Auto",
+    "tagline": "Сhampion Auto · Варна",
+    "city": "Варна",
+    "region": "",
+    "country": "BG",
+    "countryCode": "BG",
+    "locale": "bg-BG",
+    "currency": "EUR",
+    "distanceUnit": "km",
+    "address": "бул. Цар Освободител 210, до изхода на КАТ, Варна, България",
+    "addressLine": "бул. Цар Освободител 210, до изхода на КАТ",
+    "phoneDisplay": "0899736225",
+    "phoneHref": "tel:+359899736225",
+    "phoneE164": "+359899736225",
+    "email": "",
+    "hours": "Потвърдете работното време директно с автокъщата.",
+    "website": "https://champion.mobile.bg/",
+    "inventoryUrl": "https://champion.mobile.bg/",
+    "contactUrl": "https://champion.mobile.bg/contacts",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=%D0%A1hampion%20Auto%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20210%2C%20%D0%B4%D0%BE%20%D0%B8%D0%B7%D1%85%D0%BE%D0%B4%D0%B0%20%D0%BD%D0%B0%20%D0%9A%D0%90%D0%A2%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F",
+    "mapsEmbedUrl": "https://maps.google.com/maps?q=%D0%A1hampion%20Auto%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20210%2C%20%D0%B4%D0%BE%20%D0%B8%D0%B7%D1%85%D0%BE%D0%B4%D0%B0%20%D0%BD%D0%B0%20%D0%9A%D0%90%D0%A2%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F&z=16&output=embed",
+    "accent": "#c40101",
+    "logo": "/dealer-brand/v2-5f3277eaf9d946d1/logo-on-light.webp",
+    "logoLight": "/dealer-brand/v2-5f3277eaf9d946d1/logo-on-light.webp",
+    "logoDark": "/dealer-brand/v2-5f3277eaf9d946d1/logo-on-dark.webp",
+    "socialLinks": {
+      "facebook": "",
+      "instagram": "",
+      "youtube": "",
+      "tiktok": ""
+    },
+    "services": [],
+    "inventoryNotice": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "previewNotice": "Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация.",
+    "observedAt": "2026-10-12T10:44:18.457Z",
+    "coordinates": null,
+    "raw": {
+      "schemaVersion": 1,
+      "slug": "champion-auto-varna",
+      "name": "Сhampion Auto",
+      "shortName": "Сhampion Auto",
+      "city": "Варна",
+      "country": "BG",
+      "countryCode": "BG",
+      "locale": "bg-BG",
+      "currency": "EUR",
+      "distanceUnit": "km",
+      "phone": "0899736225",
+      "phoneDisplay": "0899736225",
+      "phoneE164": "+359899736225",
+      "phones": [
+        "+359899736225"
+      ],
+      "addressLine": "бул. Цар Освободител 210, до изхода на КАТ",
+      "address": "бул. Цар Освободител 210, до изхода на КАТ, Варна, България",
+      "hours": "Потвърдете работното време директно с автокъщата.",
+      "email": "",
+      "sourceUrl": "https://champion.mobile.bg/",
+      "stockUrl": "https://champion.mobile.bg/",
+      "contactSourceUrl": "https://champion.mobile.bg/contacts",
+      "observedAt": "2026-10-12T10:44:18.457Z",
+      "inventoryNotice": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+      "previewNotice": "Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация.",
+      "services": [],
+      "socialLinks": {},
+      "logo": "/dealer-brand/v2-5f3277eaf9d946d1/logo-on-light.webp",
+      "logoLight": "/dealer-brand/v2-5f3277eaf9d946d1/logo-on-light.webp",
+      "logoDark": "/dealer-brand/v2-5f3277eaf9d946d1/logo-on-dark.webp",
+      "modernInventoryCopy": {
+        "champion-auto-varna-21791746826227790": {
+          "sourceDescription": "BMW X6 от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+          "en": {
+            "description": "BMW X6 from a dated public advert. Confirm condition, price and availability directly with the dealership.",
+            "imageAlts": [
+              "BMW X6 — dated public advert photo 1",
+              "BMW X6 — dated public advert photo 2"
+            ]
+          },
+          "bg": {
+            "description": "BMW X6 от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+            "imageAlts": [
+              "BMW X6 — снимка от датирана публична обява 1",
+              "BMW X6 — снимка от датирана публична обява 2"
+            ]
+          }
+        },
+        "champion-auto-varna-11760906472084145": {
+          "sourceDescription": "Mercedes-Benz CLA 250 от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+          "en": {
+            "description": "Mercedes-Benz CLA 250 from a dated public advert. Confirm condition, price and availability directly with the dealership.",
+            "imageAlts": [
+              "Mercedes-Benz CLA 250 — dated public advert photo 1",
+              "Mercedes-Benz CLA 250 — dated public advert photo 2"
+            ]
+          },
+          "bg": {
+            "description": "Mercedes-Benz CLA 250 от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+            "imageAlts": [
+              "Mercedes-Benz CLA 250 — снимка от датирана публична обява 1",
+              "Mercedes-Benz CLA 250 — снимка от датирана публична обява 2"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "listings": [
+    {
+      "id": "21791746826227790",
+      "sourceId": "21791746826227790",
+      "slug": "champion-auto-varna-21791746826227790",
+      "title": "BMW X6",
+      "make": "BMW",
+      "model": "X6",
+      "trim": "",
+      "year": 2015,
+      "priceAmount": 12000,
+      "currency": "EUR",
+      "mileageValue": 179000,
+      "mileageUnit": "km",
+      "mileageOnRequest": false,
+      "body": "SUV",
+      "bodyType": "suv",
+      "fuel": "Diesel",
+      "fuelType": "diesel",
+      "transmission": "Automatic",
+      "transmissionType": "automatic",
+      "color": "",
+      "powerHp": null,
+      "engine": "",
+      "drivetrain": "",
+      "features": [],
+      "images": [
+        "/dealer-stock/21791746826227790-1.webp",
+        "/dealer-stock/21791746826227790-2.webp"
+      ],
+      "image": "/dealer-stock/21791746826227790-1.webp",
+      "sourceUrl": "https://champion.mobile.bg/obiava-21791746826227790-bmw-x6-gotov-lizing",
+      "observedAt": "2026-10-12T11:55:24.097Z",
+      "availability": "Датирана обява; потвърдете цената и наличността директно с автокъщата.",
+      "description": "BMW X6 от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+      "condition": "used",
+      "location": "Варна",
+      "raw": {
+        "title": "BMW X6",
+        "make": "BMW",
+        "model": "X6",
+        "year": 2015,
+        "priceAmount": 12000,
+        "mileageValue": 179000,
+        "fuel": "Diesel",
+        "transmission": "Automatic",
+        "body": "SUV",
+        "description": "BMW X6 от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+        "sourceFieldProof": {
+          "source": "https://champion.mobile.bg/obiava-21791746826227790-bmw-x6-gotov-lizing",
+          "year": "Дата на производство януари 2015",
+          "price": "12 000 €",
+          "mileage": "Пробег [км] 179000 км",
+          "fuel": "Двигател Дизелов",
+          "transmission": "Скоростна кутия Автоматична",
+          "body": "Категория Джип"
+        },
+        "sourceCaveats": [],
+        "id": "21791746826227790",
+        "slug": "champion-auto-varna-21791746826227790",
+        "currency": "EUR",
+        "priceOnRequest": false,
+        "mileageOnRequest": false,
+        "mileageUnit": "km",
+        "condition": "used",
+        "images": [
+          "/dealer-stock/21791746826227790-1.webp",
+          "/dealer-stock/21791746826227790-2.webp"
+        ],
+        "sourceUrl": "https://champion.mobile.bg/obiava-21791746826227790-bmw-x6-gotov-lizing",
+        "observedAt": "2026-10-12T11:55:24.097Z",
+        "availability": "Датирана обява; потвърдете цената и наличността директно с автокъщата.",
+        "sourceProof": {
+          "sha256": "6e797a8bcf1c57a48624e80a3f78263da6dd1421dec1e515b4d898a840d0f793",
+          "originalPhotoBytesUnchanged": true,
+          "watermarksPreserved": true
+        }
+      }
+    },
+    {
+      "id": "11760906472084145",
+      "sourceId": "11760906472084145",
+      "slug": "champion-auto-varna-11760906472084145",
+      "title": "Mercedes-Benz CLA 250",
+      "make": "Mercedes-Benz",
+      "model": "CLA",
+      "trim": "",
+      "year": 2023,
+      "priceAmount": 26000,
+      "currency": "EUR",
+      "mileageValue": 79999,
+      "mileageUnit": "km",
+      "mileageOnRequest": false,
+      "body": "Sedan",
+      "bodyType": "sedan",
+      "fuel": "Plug-in Hybrid",
+      "fuelType": "hybrid",
+      "transmission": "Automatic",
+      "transmissionType": "automatic",
+      "color": "",
+      "powerHp": null,
+      "engine": "",
+      "drivetrain": "",
+      "features": [],
+      "images": [
+        "/dealer-stock/11760906472084145-1.webp",
+        "/dealer-stock/11760906472084145-2.webp"
+      ],
+      "image": "/dealer-stock/11760906472084145-1.webp",
+      "sourceUrl": "https://champion.mobile.bg/obiava-11760906472084145-mercedes-benz-cla-250-barter",
+      "observedAt": "2026-10-12T11:55:24.098Z",
+      "availability": "Датирана обява; потвърдете цената и наличността директно с автокъщата.",
+      "description": "Mercedes-Benz CLA 250 от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+      "condition": "used",
+      "location": "Варна",
+      "raw": {
+        "title": "Mercedes-Benz CLA 250",
+        "make": "Mercedes-Benz",
+        "model": "CLA",
+        "year": 2023,
+        "priceAmount": 26000,
+        "mileageValue": 79999,
+        "fuel": "Plug-in Hybrid",
+        "transmission": "Automatic",
+        "body": "Sedan",
+        "description": "Mercedes-Benz CLA 250 от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+        "sourceFieldProof": {
+          "source": "https://champion.mobile.bg/obiava-11760906472084145-mercedes-benz-cla-250-barter",
+          "year": "Дата на производство януари 2023",
+          "price": "26 000 €",
+          "mileage": "Пробег [км] 79999 км",
+          "fuel": "Двигател Plug-in хибрид",
+          "transmission": "Скоростна кутия Автоматична",
+          "body": "Категория Седан"
+        },
+        "sourceCaveats": [
+          " градски условия Подходящ за фирми и частни лица, с данъчни облекчения Допълнителна информация: Без удари Реален пробег Сервизна история Оригинални ключове Автомобилът е в отлично визуално и техническо състояние Внесен, не е каран в Българи"
+        ],
+        "id": "11760906472084145",
+        "slug": "champion-auto-varna-11760906472084145",
+        "currency": "EUR",
+        "priceOnRequest": false,
+        "mileageOnRequest": false,
+        "mileageUnit": "km",
+        "condition": "used",
+        "images": [
+          "/dealer-stock/11760906472084145-1.webp",
+          "/dealer-stock/11760906472084145-2.webp"
+        ],
+        "sourceUrl": "https://champion.mobile.bg/obiava-11760906472084145-mercedes-benz-cla-250-barter",
+        "observedAt": "2026-10-12T11:55:24.098Z",
+        "availability": "Датирана обява; потвърдете цената и наличността директно с автокъщата.",
+        "sourceProof": {
+          "sha256": "a6e278246848dc1c8e517000baf2fd4b1786250636c198afef5d0b76ecabd53f",
+          "originalPhotoBytesUnchanged": true,
+          "watermarksPreserved": true
+        }
+      }
+    }
+  ],
+  "rawFacts": {
+    "schemaVersion": 1,
+    "slug": "champion-auto-varna",
+    "dealerId": "champion-auto-varna",
+    "business": {
+      "schemaVersion": 1,
+      "slug": "champion-auto-varna",
+      "name": "Сhampion Auto",
+      "shortName": "Сhampion Auto",
+      "city": "Варна",
+      "country": "BG",
+      "countryCode": "BG",
+      "locale": "bg-BG",
+      "currency": "EUR",
+      "distanceUnit": "km",
+      "phone": "0899736225",
+      "phoneDisplay": "0899736225",
+      "phoneE164": "+359899736225",
+      "phones": [
+        "+359899736225"
+      ],
+      "addressLine": "бул. Цар Освободител 210, до изхода на КАТ",
+      "address": "бул. Цар Освободител 210, до изхода на КАТ, Варна, България",
+      "hours": "Потвърдете работното време директно с автокъщата.",
+      "email": "",
+      "sourceUrl": "https://champion.mobile.bg/",
+      "stockUrl": "https://champion.mobile.bg/",
+      "contactSourceUrl": "https://champion.mobile.bg/contacts",
+      "observedAt": "2026-10-12T10:44:18.457Z",
+      "inventoryNotice": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+      "previewNotice": "Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация.",
+      "services": [],
+      "socialLinks": {},
+      "logo": "/dealer-brand/v2-5f3277eaf9d946d1/logo-on-light.webp",
+      "logoLight": "/dealer-brand/v2-5f3277eaf9d946d1/logo-on-light.webp",
+      "logoDark": "/dealer-brand/v2-5f3277eaf9d946d1/logo-on-dark.webp",
+      "modernInventoryCopy": {
+        "champion-auto-varna-21791746826227790": {
+          "sourceDescription": "BMW X6 от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+          "en": {
+            "description": "BMW X6 from a dated public advert. Confirm condition, price and availability directly with the dealership.",
+            "imageAlts": [
+              "BMW X6 — dated public advert photo 1",
+              "BMW X6 — dated public advert photo 2"
+            ]
+          },
+          "bg": {
+            "description": "BMW X6 от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+            "imageAlts": [
+              "BMW X6 — снимка от датирана публична обява 1",
+              "BMW X6 — снимка от датирана публична обява 2"
+            ]
+          }
+        },
+        "champion-auto-varna-11760906472084145": {
+          "sourceDescription": "Mercedes-Benz CLA 250 от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+          "en": {
+            "description": "Mercedes-Benz CLA 250 from a dated public advert. Confirm condition, price and availability directly with the dealership.",
+            "imageAlts": [
+              "Mercedes-Benz CLA 250 — dated public advert photo 1",
+              "Mercedes-Benz CLA 250 — dated public advert photo 2"
+            ]
+          },
+          "bg": {
+            "description": "Mercedes-Benz CLA 250 от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+            "imageAlts": [
+              "Mercedes-Benz CLA 250 — снимка от датирана публична обява 1",
+              "Mercedes-Benz CLA 250 — снимка от датирана публична обява 2"
+            ]
+          }
+        }
+      }
+    },
+    "research": {
+      "website": {
+        "status": "reported-in-primary-advert",
+        "url": "https://www.shampionauto.bg/",
+        "confirmedBy": "https://champion.mobile.bg/",
+        "note": "Primary stock adverts name shampionauto.bg; site was not reachable in bounded check. Do not claim a website gap."
+      },
+      "publicIdentityKey": "mobile-profile:champion.mobile.bg",
+      "profileAdvertCount": 54,
+      "availabilityConfirmed": false,
+      "legalEntityOwnershipVerified": false,
+      "addressExactness": "public-contact-as-published",
+      "caveats": [
+        "Distinct public profile/phone from registered Champion Auto Pro; legal entity ownership has not been audited.",
+        "Contact page says Tsar Osvoboditel 210; advert copy mentions 204. Primary contact location retained; no exact location guarantee."
+      ],
+      "sourceProof": [
+        {
+          "url": "https://champion.mobile.bg/",
+          "finalUrl": "https://champion.mobile.bg/",
+          "observedAt": "2026-10-12T10:44:18.606Z",
+          "status": 200,
+          "bytes": 218560,
+          "sha256": "74247b4532d6a86109b65a16d0950fb9e0658ed55d6a7dc67c394584de519a76"
+        },
+        {
+          "url": "https://champion.mobile.bg/contacts",
+          "finalUrl": "https://champion.mobile.bg/contacts",
+          "observedAt": "2026-10-12T10:44:18.457Z",
+          "status": 200,
+          "bytes": 42456,
+          "sha256": "3dd28ab631fbb21e99eed0a16893010219b257c0b9c8887c2604d95beb9bd16e"
+        },
+        {
+          "url": "https://champion.mobile.bg/about",
+          "finalUrl": "https://champion.mobile.bg/about",
+          "observedAt": "2026-10-12T10:44:18.443Z",
+          "status": 200,
+          "bytes": 8424,
+          "sha256": "a8bba560ae566e498a4e6783c5162a7b968dce1a78cf7b6ecd989a959856c7a6"
+        }
+      ],
+      "sourceAction": "new-absent-cars-source-after-wrapper-identity-recheck",
+      "existingSourceTree": null,
+      "inventoryModeSelection": "dated-listing-snapshot",
+      "productionAssetInputsComplete": true,
+      "stockSnapshotScope": "Two retained public adverts, not a complete/live inventory",
+      "stockMediaAuthority": "Owner-authorized public dated demo scope; original source bytes and watermarks retained"
+    }
+  },
+  "sourceCount": 2,
+  "stockKind": "dated-listing-snapshot",
+  "logoContract": null
+}

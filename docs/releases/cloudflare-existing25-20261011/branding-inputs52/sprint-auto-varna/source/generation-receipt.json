@@ -1,0 +1,252 @@
+{
+  "strategy": "USE GENERATED CANDIDATE",
+  "identityStatus": "Improved demo/proposal identity based on qualified primary name and preserved source evidence; material redesign, not official or owner-approved.",
+  "publishedBranding": "Спринт recognizable published wordmark visually inspected",
+  "sourceUrls": [
+    "https://sprint.mobile.bg/"
+  ],
+  "sourceLimitations": "publishedBranding refined for demo; dealer/owner approval pending",
+  "originalReceiptPath": "L:/CODEX/cars/leads/branding/fleet-20261011/sprint-varna/receipt.json",
+  "generatedPath": "C:/Users/radev/.codex/generated_images/01a12a34-d2d7-7571-930a-1ed37e54ff8e/exec-881cdaa3-3088-442c-ab47-80c136259baf.png",
+  "imageGeneration": {
+    "tool": "image_gen.imagegen",
+    "reference": "exec-881cdaa3-3088-442c-ab47-80c136259baf",
+    "transparent_background": true,
+    "prompt": "Clean and refine the attached Sprint proposal. Keep exact ONLY Cyrillic word \"Спринт\", same single-row side vehicle swoop, same charcoal/red palette and strong italic lettering. Remove any stray isolated pixels, trailing dash or horizontal segment to right of the final т and all speckle outside artwork. Redraw all edges cleanly and all solid ink without noise. The final т must end cleanly, with empty transparent padding after it. No subtitles or extra text. Flat solid ink, genuinely transparent RGBA background, transparent counters and gaps, clean crisp edges. Preserve overall one-row design and letter spelling.",
+    "referenced_image_paths": [
+      "C:/Users/radev/.codex/generated_images/01a12a34-d2d7-7571-930a-1ed37e54ff8e/exec-b8dc26d5-cf64-4c08-8b01-d01b087aa13c.png"
+    ],
+    "outputPath": "C:/Users/radev/.codex/generated_images/01a12a34-d2d7-7571-930a-1ed37e54ff8e/exec-881cdaa3-3088-442c-ab47-80c136259baf.png",
+    "modelVersion": "not exposed by tool",
+    "referenceMetadata": [
+      {
+        "path": "C:/Users/radev/.codex/generated_images/01a12a34-d2d7-7571-930a-1ed37e54ff8e/exec-b8dc26d5-cf64-4c08-8b01-d01b087aa13c.png",
+        "sha256": "e5ded4473af8410113a60e018748a1644691a26cd55b505fa2b59d87acd33ca5",
+        "bytes": 307405,
+        "width": 2171,
+        "height": 724,
+        "format": "png",
+        "hasAlpha": true,
+        "role": "Prior dealer treatment or preceding candidate; identity/source history preserved separately."
+      }
+    ]
+  },
+  "variantDerivation": {
+    "onLight": "Existing raster exporter crops/scales the real ImageGen master preserving colored ink and alpha.",
+    "onDark": "Existing raster exporter derives white ink from same master alpha; not independently generated.",
+    "onAccent": "Existing raster exporter derives white ink from same master alpha; not independently generated."
+  },
+  "selectionStatus": "Preferred technically selected single-row candidate; owner style acceptance pending",
+  "ownerApproved": false,
+  "visualAccepted": true,
+  "surfaceReviewPath": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/sprint-varna/surface-review.png",
+  "visualChecks": {
+    "spelling": "Exact qualified main name; no captions",
+    "surfaces": [
+      "#ffffff",
+      "#30343b",
+      "#17191c",
+      "#202023",
+      "#19171d",
+      "#171717",
+      "#b00020",
+      "#405ff2"
+    ],
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "result": "Compact one-row individualized mark beside expressive name; clear counters, no clipping, opaque background or residue observed. Owner style acceptance pending."
+  },
+  "schemaVersion": 1,
+  "dealer": "sprint-varna",
+  "state": "asset-verified",
+  "generated": {
+    "path": "C:/Users/radev/.codex/generated_images/01a12a34-d2d7-7571-930a-1ed37e54ff8e/exec-881cdaa3-3088-442c-ab47-80c136259baf.png",
+    "sha256": "98deab2a79cd08de41d80c8384716e2bd1aa74382e19044f2d3d081f72e0feff",
+    "bytes": 311116,
+    "format": "png",
+    "width": 2172,
+    "height": 724,
+    "hasAlpha": true,
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparentRatio": 0.8566467496922153,
+      "opaqueRatio": 0.12617390596542638
+    },
+    "visibleBounds": {
+      "x": 53,
+      "y": 233,
+      "width": 2047,
+      "height": 289
+    }
+  },
+  "assets": {
+    "onLight": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/sprint-varna/dealer-brand/logo-on-light.webp",
+      "sha256": "18cc0891d43dad51803705bac43a96d053b5960686a7da7610ff9dbbc5dcbf8d",
+      "bytes": 41388,
+      "format": "webp",
+      "width": 1496,
+      "height": 271,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.7362067604633266,
+        "opaqueRatio": 0.2278178463602818
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 36,
+        "width": 1400,
+        "height": 199
+      },
+      "publicPath": "/dealer-brand/logo-on-light.webp"
+    },
+    "onDark": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/sprint-varna/dealer-brand/logo-on-dark.webp",
+      "sha256": "b5a2d8b78e33deaa036e0e30ccb853046e50306f79179551d58ab15692c48b64",
+      "bytes": 26454,
+      "format": "webp",
+      "width": 1496,
+      "height": 271,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.7362067604633266,
+        "opaqueRatio": 0.2278178463602818
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 36,
+        "width": 1400,
+        "height": 199
+      },
+      "publicPath": "/dealer-brand/logo-on-dark.webp"
+    },
+    "onAccent": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/sprint-varna/dealer-brand/logo-on-accent.webp",
+      "sha256": "b5a2d8b78e33deaa036e0e30ccb853046e50306f79179551d58ab15692c48b64",
+      "bytes": 26454,
+      "format": "webp",
+      "width": 1496,
+      "height": 271,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.7362067604633266,
+        "opaqueRatio": 0.2278178463602818
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 36,
+        "width": 1400,
+        "height": 199
+      },
+      "publicPath": "/dealer-brand/logo-on-accent.webp"
+    }
+  },
+  "master": {
+    "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/sprint-varna/branding/logo-master.png",
+    "sha256": "df6e82b9052a8606b20b0de090c9e3cafd1ebe60cc064c0cbae36b9992a30c00",
+    "bytes": 125120,
+    "format": "png",
+    "width": 1496,
+    "height": 271,
+    "hasAlpha": true,
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparentRatio": 0.7362067604633266,
+      "opaqueRatio": 0.2278178463602818
+    },
+    "visibleBounds": {
+      "x": 48,
+      "y": 36,
+      "width": 1400,
+      "height": 199
+    }
+  },
+  "technicalAcceptance": {
+    "spelling": "Exact qualified main name; no captions",
+    "surfaces": [
+      "#ffffff",
+      "#30343b",
+      "#17191c",
+      "#202023",
+      "#19171d",
+      "#171717",
+      "#b00020",
+      "#405ff2"
+    ],
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "result": "Compact one-row individualized mark beside expressive name; clear counters, no clipping, opaque background or residue observed. Owner style acceptance pending."
+  },
+  "integrationVerified": false,
+  "hostedVerified": false,
+  "exportTool": "docs/logo-refresh/2026-09-18/tools/build-approved-logo-pack.mjs",
+  "exportToolSha256": "7fab60c4000210eff6bbb91f9c35e869bad90834d3bdd09d282a9a51835f0dbc",
+  "exportIsolation": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/style-new-a-export",
+  "updatedAt": "2026-10-11T11:33:12.515Z",
+  "sourceEvidence": {
+    "originalReceipt": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/sprint-varna/receipt.json",
+      "sha256": "423a7b9d66117a1666a2832771257967b7db27be7dcb54122cb4476c2b9a588a"
+    },
+    "originalMaster": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/sprint-varna/branding/logo-master.png",
+      "sha256": "271cf2c412ced99fd6d1af26737eb05ed58551ca5c961c8b3e6e7b3f5a3e50c6"
+    },
+    "publishedBranding": "Спринт recognizable published wordmark visually inspected",
+    "sourceUrls": [
+      "https://sprint.mobile.bg/"
+    ],
+    "sourceLimitation": "publishedBranding refined for demo; dealer/owner approval pending",
+    "sourceEvidenceDirectory": "L:/CODEX/cars/leads/branding/fleet-20261011/sprint-varna/source"
+  },
+  "rejectedOutputs": [
+    {
+      "slug": "sprint-varna",
+      "outputPath": "C:/Users/radev/.codex/generated_images/01a12a34-d2d7-7571-930a-1ed37e54ff8e/exec-b8dc26d5-cf64-4c08-8b01-d01b087aa13c.png",
+      "tool": "image_gen.imagegen",
+      "prompt": "Improve reference 1 as a clearly disclosed dealer demo proposal, reference 2 only illustrates customized automotive lettering quality, never copy its emblem/name. ONLY exact text \"Спринт\". Preserve the expressive forward italic mixed-case Cyrillic name. Convert source vehicle swoop into a compact red and charcoal side emblem LEFT, with no roof over text or underline. Remove АВТОСАЛОН. Use charcoal and red. Strict ONE horizontal row, compact individual emblem to LEFT of name on one baseline, no subtitle/caption/text above/below/underline/car above. Custom broad confident athletic lettering, restrained forward slant, deliberate angular corners and open counters; name prominent and emblem modest. Clean flat solid inks, no texture, mottling, gradients, shadow, glow, white fill, plate or frame. Genuine RGBA transparent background, transparent gaps and counters, no stray pixels or residue. Wide compact shape with safe transparent padding, readable at 120px total width. Exact spelling/script/case/punctuation.",
+      "referenced_image_paths": [
+        "L:/CODEX/cars/leads/branding/fleet-20261011/sprint-varna/branding/logo-master.png",
+        "L:/CODEX/cars/leads/branding/fleet-20261011/style-revision/single-row/biemaauto-varna/branding/logo-master.png"
+      ],
+      "transparent_background": true,
+      "reference": "exec-b8dc26d5-cf64-4c08-8b01-d01b087aa13c",
+      "reason": "Light-surface 320px review showed a small trailing isolated horizontal mark after the Cyrillic name; rejected for residue. One ImageGen cleanup retry selected.",
+      "metadata": {
+        "path": "C:/Users/radev/.codex/generated_images/01a12a34-d2d7-7571-930a-1ed37e54ff8e/exec-b8dc26d5-cf64-4c08-8b01-d01b087aa13c.png",
+        "sha256": "e5ded4473af8410113a60e018748a1644691a26cd55b505fa2b59d87acd33ca5",
+        "bytes": 307405,
+        "format": "png",
+        "width": 2171,
+        "height": 724,
+        "hasAlpha": true,
+        "alpha": {
+          "min": 0,
+          "max": 255,
+          "transparentRatio": 0.8575356723866334,
+          "opaqueRatio": 0.12261388824560823
+        },
+        "visibleBounds": {
+          "x": 54,
+          "y": 236,
+          "width": 2063,
+          "height": 290
+        }
+      }
+    }
+  ]
+}

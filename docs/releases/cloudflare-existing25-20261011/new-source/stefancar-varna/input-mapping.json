@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-input-mapping",
+  "dealer": "stefancar-varna",
+  "inputs": {
+    "facts": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/stefancar-varna/facts.json",
+      "sha256": "cd224a3269e6f288abc6d0e50230582905bd53907bcb75df061289fb00a13b9e"
+    },
+    "stock": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/stefancar-varna/stock.json",
+      "sha256": "cf568ef3f2a3cc8c2805136ac9c5bf6806a5d660e63227dfe38fe156c020bef8"
+    },
+    "locale": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/stefancar-varna/locale.json",
+      "sha256": "3ceaa42535eba5f0b1a11013c6d370b0a68df603e101936ea29cdcdda76bc9d4"
+    },
+    "branding": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/stefancar-varna/branding.json",
+      "sha256": "389c915e57bd477d4e49e784a242ae56f06e263652ae1706fe7e6162b9830276"
+    }
+  },
+  "sources": [
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/stefancar-varna/source/business-facts.json",
+      "sha256": "eb18653b7c93c6c617db319e0d93b9cdb467e6a300b1eb0f45677da42cf3921b"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/stefancar-varna/source/locale.json",
+      "sha256": "3ceaa42535eba5f0b1a11013c6d370b0a68df603e101936ea29cdcdda76bc9d4"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/stefancar-varna/source/stock.json",
+      "sha256": "84fe5a56309c6f7f8ab364965f92c00b778e1af353b88eed35aa2ec7c07f9302"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/stefancar-varna/source/generation-receipt.json",
+      "sha256": "3bade9ac718927fee2ece9cc98bd6aaa2b9862877bf8ca0a0ab8eb062d165560"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/stefancar-varna/source/native-onLight.png",
+      "sha256": "33610a44a7a6637e45f830877ca164653766b8824907ca510ff79c297afec63a"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/stefancar-varna/source/native-onDark.png",
+      "sha256": "33610a44a7a6637e45f830877ca164653766b8824907ca510ff79c297afec63a"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/stefancar-varna/source/native-onAccent.png",
+      "sha256": "33610a44a7a6637e45f830877ca164653766b8824907ca510ff79c297afec63a"
+    }
+  ],
+  "transformations": {
+    "facts": {
+      "source": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/stefancar-varna/source/business-facts.json",
+        "sha256": "eb18653b7c93c6c617db319e0d93b9cdb467e6a300b1eb0f45677da42cf3921b"
+      },
+      "kind": "flat-original-facts-to-business-consumer",
+      "allOriginalEvidenceUnchanged": true,
+      "derivedNameDelta": null,
+      "otherFactsUnchanged": true
+    },
+    "stock": {
+      "source": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/stefancar-varna/source/stock.json",
+        "sha256": "84fe5a56309c6f7f8ab364965f92c00b778e1af353b88eed35aa2ec7c07f9302"
+      },
+      "originalSourceRecordPreserved": true,
+      "sourceId": "11790858680832903",
+      "normalizer": "loadDealerProfile",
+      "retention": "retainDealerVariantAssets",
+      "sourceKind": "dated-marketplace-listing-sample",
+      "consumerKind": "dated-listing-snapshot",
+      "availabilityUnconfirmed": true,
+      "mediaRightsNotClaimed": true,
+      "mileageUnknownMeansOnRequest": true
+    },
+    "media": [
+      {
+        "sourceId": "11790858680832903",
+        "sourcePublicPath": "/assets/vehicles/11790858680832903/1.webp",
+        "publicPath": "/dealer-stock/11790858680832903-1.webp",
+        "destination": "dealer-stock/11790858680832903-1.webp",
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/stefancar-varna/media/11790858680832903-1.webp",
+        "sha256": "416b2d4cac5e05dfde69776edfa825be326d05564f6155aa926d10c8db9167fd",
+        "bytes": 353720
+      },
+      {
+        "sourceId": "11790858680832903",
+        "sourcePublicPath": "/assets/vehicles/11790858680832903/2.webp",
+        "publicPath": "/dealer-stock/11790858680832903-2.webp",
+        "destination": "dealer-stock/11790858680832903-2.webp",
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/stefancar-varna/media/11790858680832903-2.webp",
+        "sha256": "77007a102577437a829951bf1e1b823d547065ceb03185db7a2440ced2c8afe3",
+        "bytes": 357022
+      }
+    ],
+    "branding": {
+      "acceptedManifest": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/evidence/final-logo-handoff.json",
+        "sha256": "b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a"
+      },
+      "originalGenerationReceipt": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/stefancar-varna/source/generation-receipt.json",
+        "sha256": "3bade9ac718927fee2ece9cc98bd6aaa2b9862877bf8ca0a0ab8eb062d165560"
+      },
+      "noNewGeneration": true,
+      "modelVersion": null,
+      "pixelsUnchanged": true
+    },
+    "identity": null
+  }
+}

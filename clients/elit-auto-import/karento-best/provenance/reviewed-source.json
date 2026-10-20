@@ -1,0 +1,36 @@
+{
+  "repository": "darkapoparka/cars",
+  "commit": "4dda98868c448f1735e595628624f5e4178dce86",
+  "template": "templates/karento-best",
+  "originalLibrary": "templates/karento",
+  "dealerStylesSha256": "f592699a92322f78467ab626dc6c0fab929a48f28289d5d7376c901d35d30442",
+  "contract": "reviewed-compositions.json",
+  "files": [
+    {
+      "path": "src/lib/server/site.mjs",
+      "sha256": "7ccbcb9a60f915924f7dac828afed298b15b4d3ba179842bd5bf547a93aa24bc"
+    },
+    {
+      "path": "src/lib/server/dealer-site.css",
+      "sha256": "f592699a92322f78467ab626dc6c0fab929a48f28289d5d7376c901d35d30442"
+    },
+    {
+      "path": "src/lib/server/assets/contact-avatars/portrait-01-20261007.webp",
+      "sha256": "4968e2b054003e218df156fc6cb8ff1a2ee8f3f06af153badbc3f88ef69348b4"
+    },
+    {
+      "path": "src/lib/server/assets/contact-avatars/portrait-02-20261007.webp",
+      "sha256": "2fcc67b0fd22f09eb3871172b1704a070bd88e5e87da73646004d8bf373ad237"
+    },
+    {
+      "path": "src/lib/server/assets/contact-avatars/portrait-03-20261007.webp",
+      "sha256": "4aeb18b4baf59d3c8f44eb8fd53a2dd0ca5cc2c1a0429ead29fceb49f512f9b1"
+    },
+    {
+      "path": "src/lib/server/assets/contact-avatars/portrait-04-20261007.webp",
+      "sha256": "8b2f7719b079d270a158a874a0cc49128e2e7b1b4d48c57d740c82292bf0fb69"
+    }
+  ],
+  "uncommittedApprovedChanges": false,
+  "reason": "Approved Contact split layout, portraits, page heroes, contrast and billing control, committed before the native Svelte promotion."
+}

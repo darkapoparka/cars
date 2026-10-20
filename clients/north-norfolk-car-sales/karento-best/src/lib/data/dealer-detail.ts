@@ -27,6 +27,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Manual",
         "labelKey": "vehicle.field.transmission",
         "valueKey": "transmission.manual"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "1991",
+        "labelKey": "vehicle.field.year"
       }
     ],
     "gallery": {
@@ -65,7 +71,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "North Norfolk Car Sales",
       "location": "Unit 3 Midland Road, North Walsham NR28 9JR",
-      "avatar": "/dealer-brand/logo.webp",
+      "avatar": "/dealer-brand/v2-1cd3fb6dc67c1653/logo-on-light.webp",
       "mobile": "01263 653055",
       "email": "sales@northnorfolkcarsales.co.uk",
       "whatsapp": "",
@@ -115,6 +121,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Petrol",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.gasoline"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2018",
+        "labelKey": "vehicle.field.year"
       }
     ],
     "gallery": {
@@ -153,7 +165,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "North Norfolk Car Sales",
       "location": "Unit 3 Midland Road, North Walsham NR28 9JR",
-      "avatar": "/dealer-brand/logo.webp",
+      "avatar": "/dealer-brand/v2-1cd3fb6dc67c1653/logo-on-light.webp",
       "mobile": "01263 653055",
       "email": "sales@northnorfolkcarsales.co.uk",
       "whatsapp": "",

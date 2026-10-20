@@ -1,0 +1,114 @@
+{
+  "family": "Auto Best graphite dock artwork",
+  "version": "graphite-v1",
+  "status": "implemented",
+  "date": "2026-10-14",
+  "generator": "Built-in image_gen; underlying model version not exposed",
+  "scope": "Bottom mobile dock only; header, menu contents and desktop retain their existing icons",
+  "source": {
+    "file": "provenance/graphite-bottom-nav-source-2026-10-14.png",
+    "sha256": "fd8170010c5967180f72a6a481d1e07125c77da30b33c22d6d3452a2f71a5b04",
+    "width": 2172,
+    "height": 724,
+    "bytes": 780619
+  },
+  "references": [
+    {
+      "file": "templates/app/public/navigation/dock/home.webp",
+      "sha256": "86499b73cb340f82d3e15233b65b17e84c4c701a8433414dff173d9adc0aefad"
+    },
+    {
+      "file": "templates/app/public/navigation/dock/cars.webp",
+      "sha256": "2f998d5eabe6321e6a1dc837b4afc80fbd86d174ba8b00bc1a205d7fbcee60e3"
+    },
+    {
+      "file": "templates/app/public/navigation/dock/more.webp",
+      "sha256": "4970e5b97c5e78f2178a380c3aac5dcbd9e9f91172cca426c513aa739042041d"
+    }
+  ],
+  "processing": "Extract each separated alpha silhouette with 6px source clearance; preserve aspect ratio; Lanczos3 resize inside 88px; center in transparent 96px PNG. No tracing, recoloring or redrawing.",
+  "frame": 24,
+  "roles": {
+    "home": {
+      "file": "static/assets/images/template/dock-graphite-v1/home.png",
+      "publicPath": "/assets/images/template/dock-graphite-v1/home.png",
+      "sha256": "f4865632d47cdaac8e08164426bd869bb883a6d41a010879c477006094c39908",
+      "width": 96,
+      "height": 96,
+      "bytes": 13331,
+      "sourceBounds": {
+        "left": 37,
+        "top": 179,
+        "width": 371,
+        "height": 349
+      }
+    },
+    "cars": {
+      "file": "static/assets/images/template/dock-graphite-v1/cars.png",
+      "publicPath": "/assets/images/template/dock-graphite-v1/cars.png",
+      "sha256": "a76778b61448fb04684326bf1e7a7ff3f557bddf849b889a28f1a93bd020992a",
+      "width": 96,
+      "height": 96,
+      "bytes": 11350,
+      "sourceBounds": {
+        "left": 472,
+        "top": 231,
+        "width": 404,
+        "height": 297
+      }
+    },
+    "sell": {
+      "file": "static/assets/images/template/dock-graphite-v1/sell.png",
+      "publicPath": "/assets/images/template/dock-graphite-v1/sell.png",
+      "sha256": "d20d1f532ca892fe871cc3c2410ff6e45451370f4fda236b3da4c29c49f9f598",
+      "width": 96,
+      "height": 96,
+      "bytes": 11481,
+      "sourceBounds": {
+        "left": 930,
+        "top": 204,
+        "width": 327,
+        "height": 328
+      }
+    },
+    "import": {
+      "file": "static/assets/images/template/dock-graphite-v1/import.png",
+      "publicPath": "/assets/images/template/dock-graphite-v1/import.png",
+      "sha256": "bc1c2506e9a0d637b6e565f120dcbe4c6c3e96e451cfee8296f249b0d1acd746",
+      "width": 96,
+      "height": 96,
+      "bytes": 14028,
+      "sourceBounds": {
+        "left": 1347,
+        "top": 194,
+        "width": 341,
+        "height": 343
+      }
+    },
+    "menu": {
+      "file": "static/assets/images/template/dock-graphite-v1/menu.png",
+      "publicPath": "/assets/images/template/dock-graphite-v1/menu.png",
+      "sha256": "b3a1d6c1e833a0b4b349fe31999004e9841835cb62d0e9b6d8759831331a2215",
+      "width": 96,
+      "height": 96,
+      "bytes": 11602,
+      "sourceBounds": {
+        "left": 1773,
+        "top": 234,
+        "width": 351,
+        "height": 288
+      }
+    }
+  },
+  "prompt": "Create a new cohesive five-icon mobile navigation asset family for an automotive web app, using the three supplied icons only as visual style references. Output ONE transparent sprite sheet, a single horizontal row of FIVE separate icons in this exact left-to-right order: HOME (simple front-facing small house with broad roof, one door and one window), CARS (simple front-facing generic car with broad windscreen and two headlights, no brand or license lettering), SELL (a single thick price tag with a circular hole and no lettering), IMPORT (a simple globe with only two meridians and two broad latitude bands), MENU (three thick rounded horizontal bars). Match the reference's restrained monochrome graphite/silver satin material and subtle shallow 3D depth. Make this noticeably cleaner and simpler for legibility when displayed at 24px: broad clear silhouettes, dark graphite edges, muted silver lit faces, no tiny details, no excessive chrome or white highlights. All FIVE must look made by one designer: same frontal viewpoint, same soft light from upper left, same shallow extrusion, same visual ink size and contrast, optically balanced weight. The globe must be as dark and readable as the car; tag must not be wispy. The bars should have the same graphite weight as the house roof. Isolated on fully transparent background with generous transparent separation in FIVE equal-width cells, each centered on its cell and vertically centered. No floor plane, no background, no tiles, no enclosing circles or pills, no labels, no words, no watermarks. Do not depict the dock or UI. Include only the five standalone icons with clean antialiased transparent edges. Keep every icon safely inside its own cell, no overlapping shadows.",
+  "opticalPadding": {
+    "sell": 2,
+    "unit": "CSS px",
+    "reason": "Owner requested a smaller Sell tag at the 24px dock size."
+  },
+  "ownerReview": {
+    "date": "2026-10-14",
+    "direction": "Owner described the appearance as decent and requested final visual sizing verification.",
+    "followup": "Sell optical padding applied; all five reviewed at 320px and 390px, including selection states."
+  }
+}

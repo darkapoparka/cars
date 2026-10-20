@@ -1,5 +1,6 @@
 import { daynightAssets, daynightBrand, daynightContact, mainNavigation } from '$lib/data/daynight';
 import { homeBrowseArtwork } from '$lib/content/home-discovery';
+import { inventoryText } from '$lib/content/inventory-localized';
 import { filterVehicles } from '$lib/domain/vehicle-search';
 import type { ReviewRoleKind } from '$lib/content/reviews';
 import type { BlogPost } from '$lib/data/blog';
@@ -732,8 +733,32 @@ export const homeFiveHeaderDataForLocale = (
 
 export const homeFiveHeaderData: HomeFiveHeaderData = homeFiveHeaderDataForLocale('en');
 
-// No dealer-approved testimonials were supplied for this proposal.
-export const homeFiveReviewItems: HomeFiveReview[] = [];
+export const homeFiveReviewItems: HomeFiveReview[] = [
+  {
+    "avatar": "",
+    "name": "№ 1",
+    "role": "Демо профил",
+    "roleKind": "customer",
+    "excerpt": "Демонстрационен пример, а не потвърден клиентски отзив.",
+    "text": "Измислен пример за оформлението на отзив. Не описва реален клиент, покупка или доставка."
+  },
+  {
+    "avatar": "",
+    "name": "№ 2",
+    "role": "Демо профил",
+    "roleKind": "customer",
+    "excerpt": "Демонстрационен пример, а не потвърден клиентски отзив.",
+    "text": "Измислен пример за оформлението на отзив. Не описва реален клиент, покупка или доставка."
+  },
+  {
+    "avatar": "",
+    "name": "№ 3",
+    "role": "Демо профил",
+    "roleKind": "customer",
+    "excerpt": "Демонстрационен пример, а не потвърден клиентски отзив.",
+    "text": "Измислен пример за оформлението на отзив. Не описва реален клиент, покупка или доставка."
+  }
+];
 
 export const homeFiveNewsPostsFromPosts = (posts: BlogPost[]): HomeFiveNewsPost[] =>
 	posts.slice(0, 3).map((post) => ({
@@ -1389,7 +1414,7 @@ export function homeFiveHeroDataFromVehicles(
 				defaultLabel: t.filters.allPrice,
 				id: 'Home05MaxPriceSelectToggle',
 				name: 'maxPrice',
-				options: ['30 000 GBP', '50 000 GBP', '80 000 GBP', '120 000 GBP'].map((value) => ({
+				options: ['30 000 EUR', '50 000 EUR', '80 000 EUR', '120 000 EUR'].map((value) => ({
 					label: value,
 					value
 				})),
@@ -1421,16 +1446,11 @@ const compareVehicleFrom = (vehicle: Vehicle): HomeFiveCompareVehicle => ({
 	title: vehicle.title
 });
 
-const formatKm = (vehicle: Vehicle, locale: Locale) => {
-	if (vehicle.mileageKnown === false) return locale === 'bg' ? 'При запитване' : 'On request';
-	const unit = vehicle.mileageUnit ?? 'mi';
-	const value = vehicle.mileageValue ?? (unit === 'mi' ? Math.round(vehicle.mileage / 1.609344) : vehicle.mileage);
-	return Number.isFinite(value) ? new Intl.NumberFormat(locale === 'bg' ? 'bg-BG' : 'en-GB').format(value) + ' ' + unit : (locale === 'bg' ? 'При запитване' : 'On request');
-};
+const formatKm = (value: number) => `${value.toLocaleString('fr-FR').replace(/\u202f/g, ' ')} km`;
 
 const formatMonthly = (value: number, locale: Locale) =>
 	value > 0
-		? `${value.toLocaleString('fr-FR').replace(/\u202f/g, ' ')} ${locale === 'bg' ? '£/мес.' : '£/mo'}`
+		? `${value.toLocaleString('fr-FR').replace(/\u202f/g, ' ')} ${locale === 'bg' ? '€/мес.' : '€/mo'}`
 		: '';
 
 const compactFuelLabel = (fuel: string, locale: Locale) => {
@@ -1455,19 +1475,19 @@ export const homeFiveVehicleCardFromVehicle = (
 	brand: vehicle.brand,
 	modelLabel: vehicle.title.startsWith(`${vehicle.brand} ${vehicle.model}`)
 		? `${vehicle.brand} ${vehicle.model}`
-		: vehicle.title,
+		: inventoryText(locale, vehicle.title),
 	trimLabel: vehicle.title.startsWith(`${vehicle.brand} ${vehicle.model}`)
-		? vehicle.title.slice(`${vehicle.brand} ${vehicle.model}`.length).trim()
+		? inventoryText(locale, vehicle.title.slice(`${vehicle.brand} ${vehicle.model}`.length).trim())
 		: '',
 	fuel: compactFuelLabel(vehicle.fuel, locale),
 	highlightClass: 'bg-primary-2',
 	image: imageForHomeFiveVehicle(vehicle),
-	mileageLabel: formatKm(vehicle, locale),
+	mileageLabel: formatKm(vehicle.mileage),
 	monthlyLabel: formatMonthly(vehicle.monthly, locale),
 	photoCount: vehicle.images.length || 1,
 	priceLabel: vehicle.priceLabel,
 	slug: vehicle.slug,
-	title: vehicle.title,
+	title: inventoryText(locale, vehicle.title),
 	transmission: translateVehicleTerm(locale, 'transmissions', vehicle.transmission),
 	transmissionIcon: vehicle.transmission === 'Manual' ? 'manual.svg' : 'auto.svg',
 	year: vehicle.year
@@ -1492,10 +1512,10 @@ const modalVehicleFromVehicle = (
 	image: imageForHomeFiveVehicle(vehicle),
 	interior: vehicle.interior,
 	location: vehicle.location,
-	mileageLabel: formatKm(vehicle, locale),
+	mileageLabel: formatKm(vehicle.mileage),
 	slug: vehicle.slug,
 	stockNumber: vehicle.stockNumber,
-	title: vehicle.title,
+	title: inventoryText(locale, vehicle.title),
 	transmission: translateVehicleTerm(locale, 'transmissions', vehicle.transmission),
 	vin: vehicle.vin,
 	year: vehicle.year

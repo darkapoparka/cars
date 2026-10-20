@@ -17,7 +17,7 @@
       "entry": "/variant-2/cars"
     },
     {
-      "key": "carwow",
+      "key": "import",
       "base": "/variant-3",
       "entry": "/variant-3/"
     },
@@ -25,6 +25,16 @@
       "key": "app",
       "base": "/variant-4",
       "entry": "/variant-4/"
+    },
+    {
+      "key": "mobile",
+      "base": "/variant-5",
+      "entry": "/variant-5/"
+    },
+    {
+      "key": "karento-best",
+      "base": "/variant-6",
+      "entry": "/variant-6/"
     }
   ],
   "extraAssets": [
@@ -33,46 +43,62 @@
     "dealer-brand"
   ],
   "packaging": {
-    "version": "3"
+    "version": "5"
   },
   "switcher": {
     "language": "en",
     "accent": "#2563eb"
   },
   "templateRevisions": {
-    "auto-best": "b66693e3a475ef563ab45f51e4297e7073830ec1",
-    "modern": "b66693e3a475ef563ab45f51e4297e7073830ec1",
-    "carwow": "b66693e3a475ef563ab45f51e4297e7073830ec1",
-    "app": "b66693e3a475ef563ab45f51e4297e7073830ec1"
+    "auto-best": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+    "modern": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+    "import": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+    "app": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+    "mobile": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+    "karento-best": "bb173c33d7b640502ad2e4bf27546748c12858b8"
   },
   "templateSources": {
-    "app": {
-      "repository": "darkapoparka/cars",
-      "revision": "b66693e3a475ef563ab45f51e4297e7073830ec1",
-      "path": "templates/app",
-      "digest": "3344230cf8de012eb9c2daf1c962c4a3f189960b52f2026e1d049f2a6eae26ad",
-      "tree": "cd17d913dd597bf7dfb3e2244c2a3a2914ab3080"
-    },
     "auto-best": {
       "repository": "darkapoparka/cars",
-      "revision": "b66693e3a475ef563ab45f51e4297e7073830ec1",
+      "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
       "path": "templates/auto-best",
-      "digest": "77644e5f217932973c88a81a4e1fd136efd0ca351d6aeee0dca1daa94ad42964",
-      "tree": "08b90f149f2a2f385cec7fe6b6d8f9d5021b79eb"
+      "digest": "2fc9c3cfc9cf1976dbe30c08592776362e5bcc6b09e8b06620e57c4406df58a5",
+      "tree": "78fa1a82eca14816449f9588283260840ee94f52"
     },
     "modern": {
       "repository": "darkapoparka/cars",
-      "revision": "b66693e3a475ef563ab45f51e4297e7073830ec1",
+      "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
       "path": "templates/modern",
-      "digest": "3585b499ec306bc302bf1abf99771a6aacbdf34bf665a60f2e1093983143fe4c",
-      "tree": "796661a4ff23fb9db34b7df68dc7f190497e4922"
+      "digest": "30e1a99f857cc25e4d78c9459cfb4394a9f70c5b114196a5ca6325ff38823b4b",
+      "tree": "01eac7390fa6ba951d4b8d4c26159a9be150f6c8"
     },
-    "carwow": {
+    "import": {
       "repository": "darkapoparka/cars",
-      "revision": "b66693e3a475ef563ab45f51e4297e7073830ec1",
-      "path": "templates/carwow",
-      "digest": "9c9afa90d6c7897c5eb6b37bd79fcb9a2d32bc90809f8dfec290139d056f0e5f",
-      "tree": "6ba84fbd77bf8536491fcb7f649c620776c91060"
+      "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+      "path": "templates/import",
+      "digest": "c7d6c93214e859aa2747af8f5e068b6a0b8ca095d6328c807728a4d531d688f8",
+      "tree": "d841ddfe5bec918bf6b2c19fd6971fecd6b8e54d"
+    },
+    "app": {
+      "repository": "darkapoparka/cars",
+      "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+      "path": "templates/app",
+      "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1",
+      "tree": "7f3d3ffa40546635377e6c5225194fe06fead291"
+    },
+    "mobile": {
+      "repository": "darkapoparka/cars",
+      "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+      "path": "templates/mobile",
+      "digest": "f5a3e541a7c648a4c2899ad3893e22a3806027a9f66d95fa4e8c74b2226635b6",
+      "tree": "792bfdd1d8eb22aabd90c7e3a0c0779a6c1c36f3"
+    },
+    "karento-best": {
+      "repository": "darkapoparka/cars",
+      "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+      "path": "templates/karento-best",
+      "digest": "be17ef365e3272753df6e50826b139a45bfc32b8fef54ddcb86d977ad16280a9",
+      "tree": "8c5ac869c7fd15e19a80c660343fc64b20a2bad9"
     }
   },
   "appVariant": {
@@ -80,10 +106,10 @@
     "format": "app-preview-v1",
     "source": {
       "repository": "darkapoparka/cars",
-      "revision": "b66693e3a475ef563ab45f51e4297e7073830ec1",
+      "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
       "path": "templates/app",
-      "digest": "3344230cf8de012eb9c2daf1c962c4a3f189960b52f2026e1d049f2a6eae26ad",
-      "tree": "cd17d913dd597bf7dfb3e2244c2a3a2914ab3080"
+      "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1",
+      "tree": "7f3d3ffa40546635377e6c5225194fe06fead291"
     },
     "baseDeployment": {
       "id": "dpl_D67pGtc2zoA8WLqQNb4PbgChSbQY",
@@ -101,5 +127,25 @@
     ],
     "dealerCountry": "US",
     "inventoryCurrency": "USD"
+  },
+  "shareIdentity": {
+    "name": "Texas Drive Auto",
+    "publicOrigin": "https://cars-texasdriveauto.vercel.app",
+    "description": "Independent preview. Forms do not send messages and no reservation is created.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "c208333b941ead2ad40224df98aef2918c7df1a113df54da95fb275244348507",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "c7f40ab81f1195d940c471a483407cbe920a37871210b3acaaa9b5aecfb5e10e"
+    }
+  },
+  "legacyDetailRoutes": {
+    "schemaVersion": 1,
+    "path": ".cars-legacy-detail-routes.json",
+    "sha256": "aa00404ba93f27bdace6d2dcb66d1f45d44fb57dc0a3542e6c35411a65e20858"
+  },
+  "branding": {
+    "required": true,
+    "surfaceBindingsVersion": 1
   }
 }

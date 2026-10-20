@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-input-mapping",
+  "dealer": "vvcars-varna",
+  "inputs": {
+    "facts": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/vvcars-varna/facts.json",
+      "sha256": "7655c675b5093abec275b5f38c1812f9b27c15b4a844a828382abef7503da470"
+    },
+    "stock": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/vvcars-varna/stock.json",
+      "sha256": "92dc64d07a7b6b9d0d4972c56827e59cdb5dfba70428562266cb5b31910c4504"
+    },
+    "locale": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/vvcars-varna/locale.json",
+      "sha256": "0d532beb4848c613bd031d9401a1873f241aad85fb6e84b76f4210a44d706572"
+    },
+    "branding": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/vvcars-varna/branding.json",
+      "sha256": "4aa54d6fb3fc613ee5af79f77e2ad144aaaa547f7494014ab6cc869af566a473"
+    }
+  },
+  "sources": [
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/vvcars-varna/source/business-facts.json",
+      "sha256": "8ae1f510af94b10ca441c65a773364a568a3d1c88f658f8ab89ed15de10b04a2"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/vvcars-varna/source/locale.json",
+      "sha256": "0d532beb4848c613bd031d9401a1873f241aad85fb6e84b76f4210a44d706572"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/vvcars-varna/source/stock.json",
+      "sha256": "3349cb9b06da355cae139a2bb7ef7149b9099002548630854d324eda7ff75f90"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/vvcars-varna/source/generation-receipt.json",
+      "sha256": "c5d429fddb3b588003a80cfebc875fb42c412efa9d4dce69c9d5fcdab8fd5c5b"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/vvcars-varna/source/native-onLight.png",
+      "sha256": "e314e00dba6b37699cb0c95c8c699168bc229c0fd3ad51c263110556035a2967"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/vvcars-varna/source/native-onDark.png",
+      "sha256": "e314e00dba6b37699cb0c95c8c699168bc229c0fd3ad51c263110556035a2967"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/vvcars-varna/source/native-onAccent.png",
+      "sha256": "e314e00dba6b37699cb0c95c8c699168bc229c0fd3ad51c263110556035a2967"
+    }
+  ],
+  "transformations": {
+    "facts": {
+      "source": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/vvcars-varna/source/business-facts.json",
+        "sha256": "8ae1f510af94b10ca441c65a773364a568a3d1c88f658f8ab89ed15de10b04a2"
+      },
+      "kind": "flat-original-facts-to-business-consumer",
+      "allOriginalEvidenceUnchanged": true,
+      "derivedNameDelta": null,
+      "otherFactsUnchanged": true
+    },
+    "stock": {
+      "source": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/vvcars-varna/source/stock.json",
+        "sha256": "3349cb9b06da355cae139a2bb7ef7149b9099002548630854d324eda7ff75f90"
+      },
+      "originalSourceRecordPreserved": true,
+      "sourceId": "11791631223924420",
+      "normalizer": "loadDealerProfile",
+      "retention": "retainDealerVariantAssets",
+      "sourceKind": "dated-marketplace-listing-sample",
+      "consumerKind": "dated-listing-snapshot",
+      "availabilityUnconfirmed": true,
+      "mediaRightsNotClaimed": true,
+      "mileageUnknownMeansOnRequest": true
+    },
+    "media": [
+      {
+        "sourceId": "11791631223924420",
+        "sourcePublicPath": "/assets/vehicles/11791631223924420/1.webp",
+        "publicPath": "/dealer-stock/11791631223924420-1.webp",
+        "destination": "dealer-stock/11791631223924420-1.webp",
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/vvcars-varna/media/11791631223924420-1.webp",
+        "sha256": "8d556ab28a42644f5ee75cc9b72ec23b01dfe183c56b9c7b90692019c16bc25d",
+        "bytes": 376884
+      },
+      {
+        "sourceId": "11791631223924420",
+        "sourcePublicPath": "/assets/vehicles/11791631223924420/2.webp",
+        "publicPath": "/dealer-stock/11791631223924420-2.webp",
+        "destination": "dealer-stock/11791631223924420-2.webp",
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/vvcars-varna/media/11791631223924420-2.webp",
+        "sha256": "ac40094a0eae5222ad8ce20bdc7bee6ceb0501bebe8270299bfafcddf80c78a2",
+        "bytes": 336402
+      }
+    ],
+    "branding": {
+      "acceptedManifest": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/evidence/final-logo-handoff.json",
+        "sha256": "b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a"
+      },
+      "originalGenerationReceipt": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/vvcars-varna/source/generation-receipt.json",
+        "sha256": "c5d429fddb3b588003a80cfebc875fb42c412efa9d4dce69c9d5fcdab8fd5c5b"
+      },
+      "noNewGeneration": true,
+      "modelVersion": null,
+      "pixelsUnchanged": true
+    },
+    "identity": null
+  }
+}

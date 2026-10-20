@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-reviewed-modern-bilingual-copy-input",
+  "dealer": "transcar-varna",
+  "sourceCommit": "d9594c2979f668831b78609e4e990640259aee81",
+  "baselineTree": "67fc594202c20cb2ce84a9c96d379e8118592b39",
+  "inputSha256": "fff9243b97fb4249bd17df642f55e003dc1cba056162bc6ce988063b3f83a17c",
+  "modernInputRowsSha256": "ac08dded56a799326914f30f27fddbb7e8ccdde2adcc6248d1337728c05bb7c5",
+  "listingCount": 1,
+  "profileInputs": [
+    {
+      "path": "dealer.json",
+      "gitBlob": "09dff5ebc06ffdb56ab7e4de8df9559ee96972ba",
+      "sha256": "933d773a4610500ab505c98210a8486107914a37384dabdd46c49f129f6aada2",
+      "bytes": 4395
+    },
+    {
+      "path": "business-facts.json",
+      "gitBlob": "ef2211a78fd0d835173556576dc3808602ec4580",
+      "sha256": "db75a18cff027a3c89e04ceb6b350c93cc296d2129592308bec45f92181a343c",
+      "bytes": 1967
+    },
+    {
+      "path": "stock.json",
+      "gitBlob": "ed0b2c008272c94516b3be1c03e62815c11f041f",
+      "sha256": "2c2bf5a127b9e65a76164542b8d977728491bc310f45cfc92c51e59663fffb1b",
+      "bytes": 9890
+    }
+  ],
+  "reviewedGeneratorHelper": {
+    "path": "scripts/lib/modern-dealer-inventory-copy.mjs",
+    "sha256": "cbdbaa28dc07911cfe913b4e627671b6556fc25d3bfe59364e29c5ca5a29072b",
+    "sourceCommit": "14d86f67c160699c18a6ec5658197cc4d9011e0b"
+  },
+  "review": {
+    "displayCopyOnly": true,
+    "exactSourceDescriptionKeys": true,
+    "listingFactsUnchanged": true,
+    "imageUrlsUnchanged": true,
+    "imageAltsPreserved": true,
+    "interpolationTokensUnchanged": true,
+    "reviewedBy": "Codex, authorized final-template rollout",
+    "reviewedAt": "2026-10-14T20:04:09.130Z",
+    "notes": "Reuse exact existing native or reviewed registered companions for every actual current row; no new translation/factual source edits."
+  },
+  "reviewedCopy": {
+    "vw-passat-2012-11772031596218515": {
+      "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "en": {
+        "description": "Dated sample from a published listing. Confirm the condition, price and availability directly with the dealership.",
+        "imageAlts": [
+          "VW Passat",
+          "VW Passat"
+        ]
+      },
+      "bg": {
+        "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+        "imageAlts": [
+          "VW Passat",
+          "VW Passat"
+        ]
+      }
+    }
+  }
+}

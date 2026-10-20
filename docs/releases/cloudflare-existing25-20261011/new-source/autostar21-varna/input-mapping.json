@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-input-mapping",
+  "dealer": "autostar21-varna",
+  "inputs": {
+    "facts": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/autostar21-varna/facts.json",
+      "sha256": "8a222ae662b1d76613068906c9e85b54786303cdc19ee7a9b24066931ee328cb"
+    },
+    "stock": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/autostar21-varna/stock.json",
+      "sha256": "995fd17d7008762576878ba289b049ff897f0ddb579e101202e12871cacf0d59"
+    },
+    "locale": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/autostar21-varna/locale.json",
+      "sha256": "e74ca60bf745a153ab504dc9a254cbe49c9840ef6cc49aeb37f515da0f4e0521"
+    },
+    "branding": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/autostar21-varna/branding.json",
+      "sha256": "06e2568bc5eead00ca942a91a1f0a8fd1bc9bb96a9402098dd6bba9d493ab86a"
+    }
+  },
+  "sources": [
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/autostar21-varna/source/business-facts.json",
+      "sha256": "bd9542b6e92ea2891a373a40ac6db26017b9bfb7a6e85f2f2cf9e71d4011bbb0"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/autostar21-varna/source/locale.json",
+      "sha256": "e74ca60bf745a153ab504dc9a254cbe49c9840ef6cc49aeb37f515da0f4e0521"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/autostar21-varna/source/stock.json",
+      "sha256": "2f6d4bb3b9800219c7aaf0631c2ae44c0cae58bc10e2b6c8fa7f4a9628c72b55"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/autostar21-varna/source/generation-receipt.json",
+      "sha256": "64f1353cd94d796aa03f2ea3397d872fe610933ea8c67d4ae1e126afa631ddbe"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/autostar21-varna/source/native-onLight.png",
+      "sha256": "2e4eee01e9e6b539ffbdebbc732fad14af5b1e167c2f6a0d6ac274a9b48851a1"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/autostar21-varna/source/native-onDark.png",
+      "sha256": "2e4eee01e9e6b539ffbdebbc732fad14af5b1e167c2f6a0d6ac274a9b48851a1"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/autostar21-varna/source/native-onAccent.png",
+      "sha256": "2e4eee01e9e6b539ffbdebbc732fad14af5b1e167c2f6a0d6ac274a9b48851a1"
+    }
+  ],
+  "transformations": {
+    "facts": {
+      "source": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/autostar21-varna/source/business-facts.json",
+        "sha256": "bd9542b6e92ea2891a373a40ac6db26017b9bfb7a6e85f2f2cf9e71d4011bbb0"
+      },
+      "kind": "flat-original-facts-to-business-consumer",
+      "allOriginalEvidenceUnchanged": true,
+      "derivedNameDelta": null,
+      "otherFactsUnchanged": true
+    },
+    "stock": {
+      "source": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/autostar21-varna/source/stock.json",
+        "sha256": "2f6d4bb3b9800219c7aaf0631c2ae44c0cae58bc10e2b6c8fa7f4a9628c72b55"
+      },
+      "originalSourceRecordPreserved": true,
+      "sourceId": "11778841437368042",
+      "normalizer": "loadDealerProfile",
+      "retention": "retainDealerVariantAssets",
+      "sourceKind": "dated-marketplace-listing-sample",
+      "consumerKind": "dated-listing-snapshot",
+      "availabilityUnconfirmed": true,
+      "mediaRightsNotClaimed": true,
+      "mileageUnknownMeansOnRequest": true
+    },
+    "media": [
+      {
+        "sourceId": "11778841437368042",
+        "sourcePublicPath": "/assets/vehicles/11778841437368042/1.webp",
+        "publicPath": "/dealer-stock/11778841437368042-1.webp",
+        "destination": "dealer-stock/11778841437368042-1.webp",
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/autostar21-varna/media/11778841437368042-1.webp",
+        "sha256": "8096c0ceb96fb9b8e5c2ae086dfe2b0bcafeaf751c09d096b027fd42d862de4b",
+        "bytes": 236924
+      },
+      {
+        "sourceId": "11778841437368042",
+        "sourcePublicPath": "/assets/vehicles/11778841437368042/2.webp",
+        "publicPath": "/dealer-stock/11778841437368042-2.webp",
+        "destination": "dealer-stock/11778841437368042-2.webp",
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/autostar21-varna/media/11778841437368042-2.webp",
+        "sha256": "5b08d328d835c9262fa9c86d4aa8009dec678cb9c1867db48a6f96f93c842abf",
+        "bytes": 236864
+      }
+    ],
+    "branding": {
+      "acceptedManifest": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/evidence/final-logo-handoff.json",
+        "sha256": "b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a"
+      },
+      "originalGenerationReceipt": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/autostar21-varna/source/generation-receipt.json",
+        "sha256": "64f1353cd94d796aa03f2ea3397d872fe610933ea8c67d4ae1e126afa631ddbe"
+      },
+      "noNewGeneration": true,
+      "modelVersion": null,
+      "pixelsUnchanged": true
+    },
+    "identity": null
+  }
+}

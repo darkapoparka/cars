@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-source-publication",
+  "reviewed": true,
+  "reviewedAt": "2026-10-13T14:42:48.703Z",
+  "dealer": "kk-auto-varna",
+  "dealerId": "kk-auto-varna",
+  "repository": "darkapoparka/cars-kk-auto-varna",
+  "sourceOwnership": "cars-canonical",
+  "request": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/batch-4-qualified23-request.json",
+    "sha256": "dcdd093f40a04d9187d5ddaa8cbdbb0006b0fed9ff01722a2d9179278d548f29"
+  },
+  "proposal": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/kk-auto-varna/source-proposal.json",
+    "sha256": "04df65b6436a4dd0aba100a624c7840592d54872fee5dc6428bbb1bda5169361"
+  },
+  "preparation": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/kk-auto-varna/source-preparation.json",
+    "sha256": "290df04adb9d80c8408ffafffa21ebd2a3f95a8ff35d58e48a81936e6f6fe6e1"
+  },
+  "inputMapping": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/kk-auto-varna/input-mapping.json",
+    "sha256": "42a38750bde773160ac40f7ba5b9d6e786483306adb54516777d318a1c972bd8"
+  },
+  "sourcePublication": {
+    "repository": "darkapoparka/cars",
+    "commit": "328c0102d7ed151781c4358033eae12102697bd4",
+    "sourceTree": "7e20ffeb5e1499300b6c01086f361b273e80253e",
+    "ref": "refs/heads/main",
+    "publishedAt": "2026-10-13T14:41:00.838Z",
+    "evidence": "https://github.com/darkapoparka/cars/commit/328c0102d7ed151781c4358033eae12102697bd4"
+  }
+}

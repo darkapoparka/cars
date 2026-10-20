@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-focused-exact-source-editorial-repair-proof",
+  "dealer": "autoroad-varna",
+  "baseSourceCommit": "5f668ef1797745b2511d0e90b91af990f3ae39e4",
+  "baseSourceTree": "5675a0e77a8527bd0a426d00e71aea50d813ac7d",
+  "sourceModuleProof": {
+    "dealer": "autoroad-varna",
+    "sourceCommit": "5f668ef1797745b2511d0e90b91af990f3ae39e4",
+    "sourceTree": "5675a0e77a8527bd0a426d00e71aea50d813ac7d",
+    "manifest": {
+      "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/run-38689980731-attempt-1/autoroad-varna-proposal-manifest.json",
+      "sha256": "cd24a04fd789c408c268faa8971e7b35e117318d5ee89165e63a14772a3efc59"
+    },
+    "scope": "clients/autoroad-varna/import/src/lib/content/extra-localized.ts",
+    "baseBlob": "42e267762add92fb9a086fa7cead9150e6d1d380",
+    "candidateBlob": "bd2ee2a17e9254202244fd521fbdf1180f01e377",
+    "candidate": {
+      "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/current-eleven-import-editorial/candidates/autoroad-varna/extra-localized.ts",
+      "sha256": "e3c90d6b6ef6c5c453a26cc5d779d877233affff36ea60e8eba36b65d23d81ed"
+    },
+    "patch": {
+      "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/current-eleven-import-editorial/candidates/autoroad-varna/explicit-editorial.patch",
+      "sha256": "0f7e6416798111102d8a3c4fba10252b94e65ccec95c6f25acf42fe42d718c03"
+    },
+    "addedEntries": [
+      {
+        "bg": "Датирана извадка от публични обяви, не складова система в реално време. Потвърдете цената, ДДС и наличността. Обявите за очакван внос не означават наличен автомобил във Варна.",
+        "en": "Dated sample of public listings, not a live stock system. Confirm the price, VAT and availability. Listings for expected imports do not mean the vehicle is available in Varna."
+      }
+    ],
+    "beforeError": "Missing English editorial catalog entry: Датирана извадка от публични обяви, не складова система в реално време. Потвърдете цената, ДДС и наличността. Обявите за очакван внос не означават наличен автомобил във Варна.",
+    "intermediateError": null,
+    "after": [
+      {
+        "slug": "confirm-current-availability",
+        "title": "How to confirm current availability at AUTOROAD",
+        "category": "Dealer information",
+        "date": "2026-10-10",
+        "image": "/assets/daynight/codex-generated-v2/blog/blog-cover-import-check-v2.webp",
+        "excerpt": "Dated sample of public listings, not a live stock system. Confirm the price, VAT and availability. Listings for expected imports do not mean the vehicle is available in Varna.",
+        "content": [
+          "Contact the dealership on +359899230001 and identify the exact vehicle before visiting.",
+          "Independent demonstration preview. Forms do not send messages or create a reservation."
+        ]
+      }
+    ],
+    "packagingContactAdapter": {
+      "schemaVersion": 1,
+      "dealer": "autoroad-varna",
+      "applied": false,
+      "reason": "Existing sourced contact preserved"
+    },
+    "checks": {
+      "exactRetainedSource": true,
+      "beforeFailureReproduced": true,
+      "actualDisclosureFailureReproduced": true,
+      "afterEnglishPostsPassed": true,
+      "bgBehaviorUnchanged": true,
+      "dateSlugAndImageUnchanged": true,
+      "allExistingCatalogEntriesUnchanged": true,
+      "unknownEditorialStillThrows": true,
+      "onlyActualEmittedCatalogEntriesAdded": true,
+      "onlyCatalogPrefixChanged": true
+    },
+    "modulesRead": [
+      {
+        "path": "import/src/lib/content/localized.ts",
+        "blob": "304451e070747f71ff42a49890af9e5f3cce3e5f"
+      },
+      {
+        "path": "import/src/lib/content/extra-localized.ts",
+        "blob": "42e267762add92fb9a086fa7cead9150e6d1d380"
+      },
+      {
+        "path": "import/src/lib/config/site.ts",
+        "blob": "553f3ae74725bc538b14fc13c8c4e450858dad76"
+      },
+      {
+        "path": "import/src/lib/config/dealer.ts",
+        "blob": "e46021e46a1510bab53b3453dababa865c828035"
+      },
+      {
+        "path": "import/src/lib/config/cars-locale.ts",
+        "blob": "07a2b57a9373c228cd065d9d70f242a9b5c8b925"
+      },
+      {
+        "path": "import/src/lib/data/blog.ts",
+        "blob": "f77ca31e26c6d70836ee9304148861a68ab6602a"
+      }
+    ]
+  },
+  "originalProof": {
+    "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/current-eleven-import-editorial/candidates/eleven-editorial-repair-proof.json",
+    "sha256": "10f723c352c11ee952437627ffbe79af81d26105d43dd3219ea3c837d86d4f4e"
+  },
+  "modernLogoAliasProof": null,
+  "modernOriginalProof": null,
+  "compiled": false,
+  "newCiRun": null,
+  "providerWrites": 0
+}

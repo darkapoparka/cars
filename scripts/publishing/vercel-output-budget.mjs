@@ -62,6 +62,23 @@ export function auditVercelOutput(outputRoot, { maxBytes = 512 * 1024 * 1024, ma
     accounting: 'Logical bytes in final Vercel output only. Not a Vercel billing-meter measurement.' };
 }
 
+
+/** Records an actual generated-output link for review; grants no exception. */
+export function describeNextOutputLink(name, { outputRoot, traceRoot }) {
+  const output=path.resolve(outputRoot),allowed=fs.realpathSync(traceRoot),file=path.resolve(name);
+  const relative=path.relative(output,file).replaceAll('\\','/');
+  if(!relative||relative==='..'||relative.startsWith('../')||path.isAbsolute(relative)||!fs.lstatSync(file).isSymbolicLink()) throw Error('Expected actual link inside Next output');
+  const within=(root,target)=>{const rel=path.relative(root,target);return rel===''||rel!=='..'&&!rel.startsWith('..'+path.sep)&&!path.isAbsolute(rel);};
+  const row={schemaVersion:1,kind:'next-output-link-review',path:relative,linkTarget:null,resolvedTarget:null,targetKind:null,confinedToTraceRoot:false,confinedToOutput:false,accepted:false};
+  try {
+    const target=fs.readlinkSync(file);if(target.length>4096)throw Error('oversized-link-target');row.linkTarget=target;
+    const real=fs.realpathSync(file),stat=fs.statSync(real);row.resolvedTarget=path.relative(allowed,real).replaceAll('\\','/');
+    row.targetKind=stat.isDirectory()?'directory':stat.isFile()?'file':'other';row.confinedToTraceRoot=within(allowed,real);row.confinedToOutput=within(fs.realpathSync(output),real);
+    row.reason=row.confinedToTraceRoot?'confined-output-link-requires-exact-review':'external-output-link';
+  } catch(error) {row.reason='unresolved-output-link';row.errorCode=error.code??error.message;}
+  return row;
+}
+
 /** Next traces are dependency accounting, not a sum of deployed Lambda storage. */
 export function auditNextTraces(appRoot, { distDir = '.next', traceRoot = appRoot, maxUniqueBytes = 160 * 1024 * 1024, maxRouteBytes = 96 * 1024 * 1024 } = {}) {
   for (const limit of [maxUniqueBytes, maxRouteBytes]) if (!Number.isSafeInteger(limit) || limit < 1) throw Error('Invalid trace byte budget');
@@ -69,11 +86,32 @@ export function auditNextTraces(appRoot, { distDir = '.next', traceRoot = appRoo
   const root = path.resolve(appRoot), output = path.join(root, distDir), allowed = fs.realpathSync(traceRoot);
   if (!fs.existsSync(path.join(output, 'BUILD_ID'))) throw Error('Production Next build is missing');
   const traces = [], missing = [], unsafe = [], unique = new Map(), dependencyAliases = new Map();
+  // Next's Vercel adapter emits output-v3 function aliases. Audit the entire
+  // embedded artifact first, so an alias target has a safe handler and its bytes
+  // are counted exactly once by the maintained Vercel output auditor.
+  const embeddedRoot = path.join(output, 'output'), functionAliases = new Map();
+  let embeddedVercelOutput = null;
+  if (fs.existsSync(path.join(embeddedRoot, 'config.json'))) {
+    const rel = path.relative(allowed, fs.realpathSync(embeddedRoot));
+    if (rel === '..' || rel.startsWith('..' + path.sep) || path.isAbsolute(rel)) throw Error('Embedded Vercel output escaped trace root');
+    embeddedVercelOutput = auditVercelOutput(embeddedRoot);
+    if (!embeddedVercelOutput.passed) throw Error('Embedded Vercel output failed audit: ' + JSON.stringify({totalBytes:embeddedVercelOutput.totalBytes,unsafe:embeddedVercelOutput.unsafe.slice(0,8),oversizedFunctions:embeddedVercelOutput.oversizedFunctions.slice(0,8)}));
+    for (const alias of embeddedVercelOutput.functionAliases) {
+      const group = embeddedVercelOutput.groups.find(row => row.name === alias.target);
+      const entry = embeddedVercelOutput.functionEntrypoints.find(row => row.function === alias.target);
+      if (!group || group.files < 1 || group.bytes < 1 || !entry) throw Error('Unaccounted or unvalidated Next function alias: ' + alias.path);
+      functionAliases.set(path.resolve(embeddedRoot, alias.path), path.resolve(embeddedRoot, alias.target));
+    }
+  }
   function walk(dir) {
     for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
       const name = path.join(dir, entry.name);
       if (entry.name === 'node_modules') continue; // Runtime dependencies are accounted through their explicit NFT references.
-      if (entry.isSymbolicLink()) throw Error('Linked build output requires review');
+      if (entry.isSymbolicLink()) {
+        const target = functionAliases.get(name);
+        if (target && fs.realpathSync(name) === target && fs.statSync(target).isDirectory()) continue;
+        throw Error('Linked build output requires review: '+JSON.stringify(describeNextOutputLink(name,{outputRoot:output,traceRoot:allowed})));
+      }
       if (entry.isDirectory()) { if (!['cache', 'dev'].includes(entry.name)) walk(name); continue; }
       if (!entry.isFile() || !entry.name.endsWith('.nft.json')) continue;
       const data = JSON.parse(fs.readFileSync(name, 'utf8'));
@@ -98,7 +136,8 @@ export function auditNextTraces(appRoot, { distDir = '.next', traceRoot = appRoo
   const uniqueBytes = [...unique.values()].reduce((n, bytes) => n + bytes, 0);
   const largestRouteBytes = Math.max(...traces.map(t => t.bytes));
   return { schemaVersion: 1, root, distDir, uniqueBytes, largestRouteBytes, traceCount: traces.length, uniqueFiles: unique.size, dependencyAliases: dependencyAliases.size,
-    limits: { maxUniqueBytes, maxRouteBytes }, missing, unsafe,
+    limits: { maxUniqueBytes, maxRouteBytes }, missing, unsafe, embeddedVercelOutput,
     passed: uniqueBytes <= maxUniqueBytes && largestRouteBytes <= maxRouteBytes && !missing.length && !unsafe.length,
     accounting: 'Unique traced runtime bytes and largest individual trace; shared dependencies are not multiplied per route.' };
 }
+

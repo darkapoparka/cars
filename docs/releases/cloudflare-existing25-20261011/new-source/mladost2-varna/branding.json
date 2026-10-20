@@ -1,0 +1,126 @@
+{
+  "schemaVersion": 1,
+  "dealer": "mladost2-varna",
+  "reviewed": true,
+  "reviewedAt": "2026-10-11T13:01:13.451Z",
+  "reviewScope": "Exact final accepted logo assets and prior genuine surface review retained; actual six-template integration and hosted acceptance remain pending.",
+  "identityStatus": "Single-row expressive automotive proposal after owner rejected overly plain treatment; not selected or dealer approved",
+  "officialDealerArtwork": false,
+  "dealerApproval": false,
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "generation": {
+    "tool": "image_gen",
+    "generationId": "exec-f7cc933a-8972-40f0-9717-0ef33833d3b3",
+    "modelVersion": null,
+    "sourceSha256": "76aed8a4970fa8bd8d006c645d862f4ed6481f93892b363ad07bb432d63a0ac8",
+    "sourceRole": "native ImageGen output used to derive this exact retained reviewed raster; not asserted to be an image-edit input",
+    "nativeOutput": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/mladost2-varna/source/native-onLight.png",
+      "sha256": "76aed8a4970fa8bd8d006c645d862f4ed6481f93892b363ad07bb432d63a0ac8"
+    },
+    "originalGenerationReceipt": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/mladost2-varna/source/generation-receipt.json",
+      "sha256": "a41ad7456b5781363fee39edec549c90c2c39dd4ec9ba7ebd1714ee9785c84ab"
+    },
+    "derivation": "one ImageGen master exported to context raster"
+  },
+  "master": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/mladost2-varna/branding/master.png",
+    "sha256": "84ca167de34c2abde246153001dd20343ea741b032b3683263cf9583e8174742"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/mladost2-varna/branding/onLight.png",
+      "sha256": "84ca167de34c2abde246153001dd20343ea741b032b3683263cf9583e8174742",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/new-source/mladost2-varna/source/generation-receipt.json#sha256=a41ad7456b5781363fee39edec549c90c2c39dd4ec9ba7ebd1714ee9785c84ab; reviewed onLight PNG from exact accepted final logo manifest b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-f7cc933a-8972-40f0-9717-0ef33833d3b3",
+        "modelVersion": null,
+        "sourceSha256": "76aed8a4970fa8bd8d006c645d862f4ed6481f93892b363ad07bb432d63a0ac8",
+        "sourceRole": "native ImageGen output used to derive this exact retained reviewed raster; not asserted to be an image-edit input",
+        "nativeOutput": {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/mladost2-varna/source/native-onLight.png",
+          "sha256": "76aed8a4970fa8bd8d006c645d862f4ed6481f93892b363ad07bb432d63a0ac8"
+        },
+        "originalGenerationReceipt": {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/mladost2-varna/source/generation-receipt.json",
+          "sha256": "a41ad7456b5781363fee39edec549c90c2c39dd4ec9ba7ebd1714ee9785c84ab"
+        },
+        "derivation": "one ImageGen master exported to context raster"
+      }
+    },
+    "onDark": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/mladost2-varna/branding/onDark.png",
+      "sha256": "502524f439a7a6da3e7933dd994e449f4ba918054fceeb9a81a1b2bf8432e2c4",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/new-source/mladost2-varna/source/generation-receipt.json#sha256=a41ad7456b5781363fee39edec549c90c2c39dd4ec9ba7ebd1714ee9785c84ab; reviewed onDark PNG from exact accepted final logo manifest b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-f7cc933a-8972-40f0-9717-0ef33833d3b3",
+        "modelVersion": null,
+        "sourceSha256": "76aed8a4970fa8bd8d006c645d862f4ed6481f93892b363ad07bb432d63a0ac8",
+        "sourceRole": "native ImageGen output used to derive this exact retained reviewed raster; not asserted to be an image-edit input",
+        "nativeOutput": {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/mladost2-varna/source/native-onDark.png",
+          "sha256": "76aed8a4970fa8bd8d006c645d862f4ed6481f93892b363ad07bb432d63a0ac8"
+        },
+        "originalGenerationReceipt": {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/mladost2-varna/source/generation-receipt.json",
+          "sha256": "a41ad7456b5781363fee39edec549c90c2c39dd4ec9ba7ebd1714ee9785c84ab"
+        },
+        "derivation": "one ImageGen master exported to context raster"
+      }
+    },
+    "onAccent": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/mladost2-varna/branding/onAccent.png",
+      "sha256": "502524f439a7a6da3e7933dd994e449f4ba918054fceeb9a81a1b2bf8432e2c4",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/new-source/mladost2-varna/source/generation-receipt.json#sha256=a41ad7456b5781363fee39edec549c90c2c39dd4ec9ba7ebd1714ee9785c84ab; reviewed onAccent PNG from exact accepted final logo manifest b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-f7cc933a-8972-40f0-9717-0ef33833d3b3",
+        "modelVersion": null,
+        "sourceSha256": "76aed8a4970fa8bd8d006c645d862f4ed6481f93892b363ad07bb432d63a0ac8",
+        "sourceRole": "native ImageGen output used to derive this exact retained reviewed raster; not asserted to be an image-edit input",
+        "nativeOutput": {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/mladost2-varna/source/native-onAccent.png",
+          "sha256": "76aed8a4970fa8bd8d006c645d862f4ed6481f93892b363ad07bb432d63a0ac8"
+        },
+        "originalGenerationReceipt": {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/mladost2-varna/source/generation-receipt.json",
+          "sha256": "a41ad7456b5781363fee39edec549c90c2c39dd4ec9ba7ebd1714ee9785c84ab"
+        },
+        "derivation": "one ImageGen master exported to context raster"
+      }
+    }
+  },
+  "originalGenerationReceipt": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/mladost2-varna/source/generation-receipt.json",
+    "sha256": "a41ad7456b5781363fee39edec549c90c2c39dd4ec9ba7ebd1714ee9785c84ab"
+  },
+  "acceptedLogoManifest": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/evidence/final-logo-handoff.json",
+    "sha256": "b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a"
+  },
+  "assetReview": {
+    "status": "completed",
+    "owner": "new-a",
+    "proof": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/style-revision/single-row/mladost2-varna/surface-review.png",
+      "sha256": "b5869b39f1e65cd35e18c6a06fabb3f1fcdb1b14f30357f09e7ab8a2b06a92a0",
+      "bytes": 107825,
+      "width": 740,
+      "height": 864,
+      "format": "png",
+      "hasAlpha": true
+    },
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "scope": "Actual master and compact native-palette swatches inspected; retained pixels remain identical.",
+    "report": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/final-new-a-review.json"
+  },
+  "identityHeld": false
+}

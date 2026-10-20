@@ -1,0 +1,340 @@
+{
+  "slug": "bradford-cherry-tree-cars",
+  "coreName": "CHERRY TREE CARS",
+  "generatedPath": "C:/Users/radev/.codex/generated_images/01a12a34-877e-73a2-9a3d-346e546742c6/exec-f10175a2-a15e-4c41-8125-a7c15bb9408d.png",
+  "strategy": "USE GENERATED CANDIDATE",
+  "identityStatus": "New disclosed single-row expressive automotive proposal; technically preferred when selected; owner/style and dealer approval pending",
+  "onLight": "original",
+  "onDark": "white",
+  "onAccent": "white",
+  "imageGeneration": {
+    "tool": "image_gen.imagegen",
+    "reference": "exec-f10175a2-a15e-4c41-8125-a7c15bb9408d",
+    "prompt": "Use the attached AVTOMOTOR identity ONLY as a reference for expressive confident automotive letter shapes. Do not copy its emblem or words or stacked layout. Create ONE complete fresh proposed identity, with a small distinctive business-specific emblem LEFT of the name on ONE horizontal row, all on one common visual axis. No text above/below, subtitles, slogans, phone, location caption, descriptors beyond the exact requested core name, underline, stacked layout, multiple options, chrome, gradients, shadow, glow, texture or background plate. True transparent RGBA canvas. Flat solid opaque shapes with clean transparent counters, generous open counters, balanced kerning and modest clear padding. Name charcoal #20252b, useful identity accent confined to emblem. Custom automotive lettering with a restrained forward slant; no plain generic sans typesetting. Distinctive emblem must relate to this name, not a fleet-wide symbol. Exact name: CHERRY TREE CARS. Burgundy #800c2c two compact cherries with a simple leaf; integrate a subtly geometric C-like stem, no photoreal fruit. Warm bold forward-slanted softened rectangular wordmark, distinctive R legs. Complete wide landscape logo, all requested words equally prominent on the same row. Proposed dealer demo identity, no official approval claim.",
+    "referenced_image_paths": [
+      "L:/CODEX/cars/leads/branding/fleet-20261011/am-varna-varna/branding/logo-master.png"
+    ],
+    "transparent_background": true,
+    "outputPath": "C:/Users/radev/.codex/generated_images/01a12a34-877e-73a2-9a3d-346e546742c6/exec-f10175a2-a15e-4c41-8125-a7c15bb9408d.png",
+    "actualOutputHint": "Generated images are saved to C:\\Users\\radev\\.codex\\generated_images\\01a12a34-877e-73a2-9a3d-346e546742c6 as C:\\Users\\radev\\.codex\\generated_images\\01a12a34-877e-73a2-9a3d-346e546742c6\\exec-f10175a2-a15e-4c41-8125-a7c15bb9408d.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+  },
+  "derivation": {
+    "kind": "new-proposed-identity",
+    "styleReferenceOnly": true,
+    "businessIdentityBasis": "Published source or prior disclosed proposal inspected through original compact surface QA; useful established colors/name-specific emblem cue carried into a fresh proposal.",
+    "directionPath": "L:/CODEX/cars/leads/branding/fleet-20261011/style-revision/single-row/DIRECTION.md",
+    "changeReason": "Cars Ltd secondary caption tiny; preserve unique cherry cue with one exact core name row."
+  },
+  "surfaceReviewPath": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/bradford-cherry-tree-cars/surface-review.png",
+  "visualAccepted": true,
+  "selectionStatus": "technically-selected-preferred-revised-pack",
+  "ownerStyleStatus": "pending",
+  "originalPackage": {
+    "path": "L:/CODEX/cars/leads/branding/fleet-20261011/bradford-cherry-tree-cars",
+    "files": [
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/bradford-cherry-tree-cars/branding/logo-master.png",
+        "sha256": "67e126809434fc820d4a8ae65d1739557b596af71424d1e94edfb585613e8f9f"
+      },
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/bradford-cherry-tree-cars/branding/logo-on-light.png",
+        "sha256": "67e126809434fc820d4a8ae65d1739557b596af71424d1e94edfb585613e8f9f"
+      },
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/bradford-cherry-tree-cars/branding/logo-on-dark.png",
+        "sha256": "3be3db33a5091f975bf8ca3b774954d5d6a27e5ef9ad83fd4964a64e2711bfe1"
+      },
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/bradford-cherry-tree-cars/branding/logo-on-accent.png",
+        "sha256": "3be3db33a5091f975bf8ca3b774954d5d6a27e5ef9ad83fd4964a64e2711bfe1"
+      },
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/bradford-cherry-tree-cars/dealer-brand/logo-on-light.webp",
+        "sha256": "4a38b0bd40c30586a6fefaf7b60807d1dc6534018cfe63d1423ec824ad3b563c"
+      },
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/bradford-cherry-tree-cars/dealer-brand/logo-on-dark.webp",
+        "sha256": "c69674ef8611e56b360ff1ce7c15772f1120409961aa66550daec78b7314d120"
+      },
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/bradford-cherry-tree-cars/dealer-brand/logo-on-accent.webp",
+        "sha256": "c69674ef8611e56b360ff1ce7c15772f1120409961aa66550daec78b7314d120"
+      },
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/bradford-cherry-tree-cars/receipt.json",
+        "sha256": "e64a63f0fc4512f58acaf34709a7ee07949a6ad8d10f131aeef34f3d04e9459d"
+      },
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/bradford-cherry-tree-cars/branding/logo-contract.json",
+        "sha256": "205c90a5205f2d78a17d91950ef671b83d79f0a1acbc616d891041d05f100bcb"
+      },
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/bradford-cherry-tree-cars/technical-check.json",
+        "sha256": "8f620ce83da6a50ca35ec9ad6f2cb83252ce89c8eda41ea575b024b831f8506f"
+      },
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/bradford-cherry-tree-cars/surface-review.png",
+        "sha256": "7b387c49beb7facf54299b532a4b54bb27d397ab99098da480fb6de0140da34e"
+      }
+    ]
+  },
+  "sourceUrls": [
+    "https://www.pistonheads.com/buy/dealer/999124",
+    "https://www.google.com/search?q=Cherry+Tree+Cars+Ltd+Bradford+logo&udm=2"
+  ],
+  "publishedBranding": {
+    "profileUrl": "https://www.pistonheads.com/buy/dealer/999124",
+    "sourceLogoUrl": null,
+    "observedAt": "2026-10-11T09:24:02.339Z",
+    "visualEvidence": "Primary profile and focused Google Images screenshot inspected through CUA. No same-business recognizable logo verified; unrelated same-name sources rejected.",
+    "decision": "Generated proposal only; no claim of official identity or approval",
+    "retainedEvidence": [
+      "L:/CODEX/cars/leads/branding/fleet-20261011/bradford-cherry-tree-cars/source-evidence/visual-source.jpg"
+    ]
+  },
+  "sourceEvidence": [
+    {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/bradford-cherry-tree-cars/source-evidence/visual-source.jpg",
+      "sha256": "89d3b88817542ddb413996f1869a65f3a5ac923f47c7ba4ed0cf138cd3b960b1",
+      "bytes": 158727,
+      "format": "jpeg",
+      "width": 1265,
+      "height": 712,
+      "hasAlpha": false,
+      "alpha": {
+        "min": 255,
+        "max": 255,
+        "transparentRatio": 0,
+        "opaqueRatio": 1
+      },
+      "visibleBounds": {
+        "x": 0,
+        "y": 0,
+        "width": 1265,
+        "height": 712
+      }
+    }
+  ],
+  "previousTreatment": {
+    "receipt": "L:/CODEX/cars/leads/branding/fleet-20261011/bradford-cherry-tree-cars/receipt.json",
+    "sha256": "e64a63f0fc4512f58acaf34709a7ee07949a6ad8d10f131aeef34f3d04e9459d",
+    "imageGeneration": {
+      "tool": "image_gen.imagegen",
+      "reference": "functions.exec cell38 image_gen.imagegen output exec-04f3707d-cc14-470f-a33f-e1b590cd2b8b",
+      "outputPath": "C:/Users/radev/.codex/generated_images/01a12a34-877e-73a2-9a3d-346e546742c6/exec-04f3707d-cc14-470f-a33f-e1b590cd2b8b.png",
+      "transparent_background": true,
+      "modelVersion": "not exposed by tool",
+      "prompt": "Create a clean original PROPOSAL identity for exact business Cherry Tree Cars Ltd, Bradford UK. Small elegant cherry branch mark with two deep burgundy circular cherries and dark charcoal leaf, paired with exact bold clean wordmark Cherry Tree above Cars Ltd. Horizontal compact logo, readable at120px. Dark charcoal text, restrained burgundy accent. No actual car, no slogan, no phone, no faux established date, no badge, no background plate, shadow or gradient. True transparent alpha background and counters, generous padding. Generated demo proposal only, no claim official.",
+      "promptProvenance": {
+        "kind": "exact-original-tool-input",
+        "transcript": "C:/Users/radev/.codex/sessions/2026/10/11/rollout-2026-10-11T12-04-08-01a12a34-877e-73a2-9a3d-346e546742c6.jsonl",
+        "toolCallLine": 508,
+        "toolCallId": "call_cc24f53c49e04342b04ab2a6ca01d239",
+        "toolCallTimestamp": "2026-10-11T09:18:41.975Z",
+        "generationEventLine": 529,
+        "generationId": "exec-04f3707d-cc14-470f-a33f-e1b590cd2b8b",
+        "generationEventTimestamp": "2026-10-11T09:19:05.109Z",
+        "extraction": "JSON-decoded original prompt string literal; unchanged wording. Completed image_gen.generation revisedPrompt exactly matches it.",
+        "referencedImagesProvided": false
+      }
+    }
+  },
+  "styleReferenceEvidence": {
+    "path": "L:/CODEX/cars/leads/branding/fleet-20261011/am-varna-varna/branding/logo-master.png",
+    "sha256": "11a4f802dc2725817c409f1b669446cc51763849e5a29467af7b951c01808ffa"
+  },
+  "factualNameTreatment": {
+    "fullPublishedName": "Cherry Tree Cars Ltd",
+    "displayedCoreName": "CHERRY TREE CARS",
+    "explicitlyOmitted": "Ltd legal suffix",
+    "authorization": "Owner permits recognizable trading name and visibly secondary generic descriptive captions omitted; no alternate trading name invented"
+  },
+  "visualChecks": {
+    "reviewer": "baseline asset agent",
+    "spelling": "CHERRY TREE CARS",
+    "layout": "Compact unique emblem beside one expressive name row; no secondary captions",
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "backgrounds": [
+      "#ffffff",
+      "#30343b",
+      "#17191c",
+      "#202023",
+      "#19171d",
+      "#171717",
+      "#b00020",
+      "#405ff2"
+    ],
+    "transparency": "Master and contextual exports visually inspected; no matte, filled counters, clipped strokes or residue visible",
+    "smallSize": "Correct name and distinctive emblem readable at120/180/320 width in isolated raster swatches",
+    "reviewedAt": "2026-10-11T11:26:00.442Z",
+    "approval": "Technical asset selection only; owner/style, dealer, all actual six-design consumers and hosted review pending"
+  },
+  "schemaVersion": 1,
+  "dealer": "bradford-cherry-tree-cars",
+  "state": "asset-verified",
+  "generated": {
+    "path": "C:/Users/radev/.codex/generated_images/01a12a34-877e-73a2-9a3d-346e546742c6/exec-f10175a2-a15e-4c41-8125-a7c15bb9408d.png",
+    "sha256": "7dcd3e8a62782d1a28f89d97ecb7fb957a6cfab28a546188d32ffcc962d469c4",
+    "bytes": 329526,
+    "format": "png",
+    "width": 2172,
+    "height": 724,
+    "hasAlpha": true,
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparentRatio": 0.8628501368497095,
+      "opaqueRatio": 0.11331944486839025
+    },
+    "visibleBounds": {
+      "x": 48,
+      "y": 213,
+      "width": 2077,
+      "height": 264
+    }
+  },
+  "assets": {
+    "onLight": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/bradford-cherry-tree-cars/dealer-brand/logo-on-light.webp",
+      "sha256": "ff1c262151486c9b4818ca008b845f0e34076a0c6e550936bdd32a1fd3157be3",
+      "bytes": 51160,
+      "format": "webp",
+      "width": 1496,
+      "height": 250,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.7346470588235294,
+        "opaqueRatio": 0.21486631016042781
+      },
+      "visibleBounds": {
+        "x": 49,
+        "y": 36,
+        "width": 1399,
+        "height": 178
+      },
+      "publicPath": "/dealer-brand/logo-on-light.webp"
+    },
+    "onDark": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/bradford-cherry-tree-cars/dealer-brand/logo-on-dark.webp",
+      "sha256": "cb7972e765b6601d2602139615f26a1e76807925745f792add77311054f5e745",
+      "bytes": 30848,
+      "format": "webp",
+      "width": 1496,
+      "height": 250,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.7346470588235294,
+        "opaqueRatio": 0.21486631016042781
+      },
+      "visibleBounds": {
+        "x": 49,
+        "y": 36,
+        "width": 1399,
+        "height": 178
+      },
+      "publicPath": "/dealer-brand/logo-on-dark.webp"
+    },
+    "onAccent": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/bradford-cherry-tree-cars/dealer-brand/logo-on-accent.webp",
+      "sha256": "cb7972e765b6601d2602139615f26a1e76807925745f792add77311054f5e745",
+      "bytes": 30848,
+      "format": "webp",
+      "width": 1496,
+      "height": 250,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.7346470588235294,
+        "opaqueRatio": 0.21486631016042781
+      },
+      "visibleBounds": {
+        "x": 49,
+        "y": 36,
+        "width": 1399,
+        "height": 178
+      },
+      "publicPath": "/dealer-brand/logo-on-accent.webp"
+    }
+  },
+  "master": {
+    "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/bradford-cherry-tree-cars/branding/logo-master.png",
+    "sha256": "cae6eaf3fa1acabad07cf4a6ab240b7c24f8d012d3cfe337772bb874271ea289",
+    "bytes": 134408,
+    "format": "png",
+    "width": 1496,
+    "height": 250,
+    "hasAlpha": true,
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparentRatio": 0.7346470588235294,
+      "opaqueRatio": 0.21486631016042781
+    },
+    "visibleBounds": {
+      "x": 49,
+      "y": 36,
+      "width": 1399,
+      "height": 178
+    }
+  },
+  "technicalAcceptance": {
+    "reviewer": "baseline asset agent",
+    "spelling": "CHERRY TREE CARS",
+    "layout": "Compact unique emblem beside one expressive name row; no secondary captions",
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "backgrounds": [
+      "#ffffff",
+      "#30343b",
+      "#17191c",
+      "#202023",
+      "#19171d",
+      "#171717",
+      "#b00020",
+      "#405ff2"
+    ],
+    "transparency": "Master and contextual exports visually inspected; no matte, filled counters, clipped strokes or residue visible",
+    "smallSize": "Correct name and distinctive emblem readable at120/180/320 width in isolated raster swatches",
+    "reviewedAt": "2026-10-11T11:26:00.442Z",
+    "approval": "Technical asset selection only; owner/style, dealer, all actual six-design consumers and hosted review pending"
+  },
+  "integrationVerified": false,
+  "hostedVerified": false,
+  "ownerApproved": false,
+  "exportTool": "docs/logo-refresh/2026-09-18/tools/build-approved-logo-pack.mjs",
+  "exportToolSha256": "7fab60c4000210eff6bbb91f9c35e869bad90834d3bdd09d282a9a51835f0dbc",
+  "exportIsolation": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/style-baseline-export",
+  "updatedAt": "2026-10-11T11:26:00.631Z",
+  "pngTreatments": {
+    "on-light": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/bradford-cherry-tree-cars/branding/logo-on-light.png",
+      "sha256": "cae6eaf3fa1acabad07cf4a6ab240b7c24f8d012d3cfe337772bb874271ea289"
+    },
+    "on-dark": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/bradford-cherry-tree-cars/branding/logo-on-dark.png",
+      "sha256": "acef6988bd149d79d209ee12b92253af93349987cb2eae23f443403060d32099"
+    },
+    "on-accent": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/bradford-cherry-tree-cars/branding/logo-on-accent.png",
+      "sha256": "acef6988bd149d79d209ee12b92253af93349987cb2eae23f443403060d32099"
+    }
+  },
+  "exportRetention": {
+    "nativeImageGenOriginalRetained": true,
+    "compactQAPath": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/bradford-cherry-tree-cars/surface-review.png",
+    "historicalExportScratch": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/style-baseline-export",
+    "retirementReceipt": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/baseline-single-row-retention.json"
+  }
+}

@@ -1,3 +1,4 @@
+import { cn } from "@repo/design-system/lib/utils";
 import {
   formatFuelType,
   formatMileage,
@@ -7,6 +8,7 @@ import {
   formatVehicleMoney,
 } from "@repo/marketplace";
 import { localizeListingCopy } from "@repo/marketplace/listing-copy";
+import { isDealershipSite } from "@repo/marketplace/site-config";
 import { Car, MapPin, Truck } from "lucide-react";
 import Link from "next/link";
 import {
@@ -18,6 +20,7 @@ import {
   getSourceLabel,
 } from "../lib/listing-truth";
 import Image from "./public-image";
+import styles from "./related-listing-card.module.css";
 import { VehicleCard } from "./vehicle-card";
 
 interface RelatedListingCardProps {
@@ -38,6 +41,21 @@ const DesktopRelatedListingCard = ({
   const approximatePrice = getApproximateConvertedPrice(listing);
   const physicalLocation = getPhysicalVehicleLocation(listing);
   const deliveryTruth = getDeliveryTruth(listing, locale);
+
+  if (isDealershipSite) {
+    return (
+      <VehicleCard
+        desktopHeadingLevel={3}
+        desktopImageSizes="(max-width: 1199px) calc((100vw - 126px) / 3), (max-width: 1399px) calc((100vw - 148px) / 4), 313px"
+        desktopLayout="grid"
+        href={href}
+        listing={listing}
+        locale={locale}
+        presentation="showroom"
+        viewMode="grid"
+      />
+    );
+  }
 
   return (
     <article className="overflow-hidden rounded-lg border border-border bg-card">
@@ -106,7 +124,13 @@ export const RelatedListingCard = ({
   locale,
 }: RelatedListingCardProps) => (
   <>
-    <div className="min-w-0 snap-start lg:hidden">
+    <div
+      className={cn(
+        styles.mobileCard,
+        "min-w-0 snap-start overflow-hidden rounded-2xl bg-zinc-100 lg:hidden"
+      )}
+      data-slot="listing-related-card"
+    >
       <VehicleCard
         density="compact"
         desktopHeadingLevel={3}

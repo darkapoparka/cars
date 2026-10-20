@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "format": "mobile-preview-v1",
+  "dealer": "f1rst-motors",
+  "name": "F1rst Motors",
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+    "path": "templates/mobile",
+    "tree": "792bfdd1d8eb22aabd90c7e3a0c0779a6c1c36f3",
+    "digest": "f5a3e541a7c648a4c2899ad3893e22a3806027a9f66d95fa4e8c74b2226635b6"
+  },
+  "sourceDigest": "bcccdfb4e6a037c920eabb72c4bad549e7384e3fd6d62fcd30682194f0999885",
+  "inventory": {
+    "mode": "dated-listing-snapshot",
+    "count": 10,
+    "observedAt": "2026-09-09"
+  },
+  "personalization": {
+    "profileSha256": "25621e678ba61f46693102b2e59a55f5551f06aa7c04e8bd37aa809e61a027cb",
+    "logoPaths": [
+      "/dealer-brand/logo-on-light.webp",
+      "/dealer-brand/logo-on-dark.webp"
+    ],
+    "mediaPaths": [
+      "/dealer/stock/1.webp",
+      "/dealer/stock/2.webp",
+      "/dealer/stock/3.webp",
+      "/dealer/stock/4.webp",
+      "/dealer/stock/5.webp",
+      "/dealer/stock/6.webp",
+      "/dealer/stock/7.webp",
+      "/dealer/stock/8.webp",
+      "/dealer/stock/9.svg",
+      "/dealer/stock/10.webp"
+    ],
+    "mediaMappings": [],
+    "contentPaths": [
+      "mobile/src/lib/showroom-config.ts",
+      "mobile/src/lib/catalog.ts",
+      "mobile/src/lib/dealers.ts",
+      "mobile/src/lib/dealer-inventory.json",
+      "mobile/src/lib/locale.ts",
+      "mobile/src/lib/search.ts",
+      "mobile/src/components/NativeDealerCards.tsx",
+      "mobile/src/components/DealerScreens.tsx",
+      "mobile/src/components/VehicleCard.tsx",
+      "mobile/src/components/ShowroomVehicleCard.tsx",
+      "mobile/src/components/VehicleSections.tsx",
+      "mobile/src/lib/mobile-mileage.ts",
+      "mobile/src/lib/types.ts",
+      "mobile/src/components/DesktopVehicleSummary.tsx",
+      "mobile/src/components/NativeCarPark.tsx",
+      "mobile/src/components/ShowroomFilterSheet.tsx",
+      "mobile/src/lib/vehicle-copy.ts",
+      "mobile/src/components/Header.tsx"
+    ]
+  },
+  "needsDealerQA": true,
+  "readyToPublish": false
+}

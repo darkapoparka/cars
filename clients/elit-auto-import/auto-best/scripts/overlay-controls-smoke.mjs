@@ -23,6 +23,8 @@ async function centered(button) {
       hitToken: parseFloat(root.getPropertyValue('--dn-control-hit-height')),
       visualToken: parseFloat(root.getPropertyValue('--dn-compact-control-visual-height')),
       iconToken: parseFloat(root.getPropertyValue('--dn-control-icon-size')),
+      headerIconToken: parseFloat(root.getPropertyValue('--dn-overlay-header-icon-size')),
+      headerSizedIcon: innerWidth < 768 && el.matches('dialog header .dn-icon-button'),
       tokenSizedIcon: el.classList.contains('dn-overlay-close'),
       svgWidth: icon?.width, intendedWidth: Number(svg?.getAttribute('width')),
       dx: icon ? icon.x + icon.width / 2 - box.x - box.width / 2 : null,
@@ -35,7 +37,7 @@ async function centered(button) {
   assert.equal(geometry.visualWidth, geometry.visualToken, JSON.stringify(geometry));
   assert(geometry.dx !== null && Math.abs(geometry.dx) <= .5 && Math.abs(geometry.dy) <= .5,
     JSON.stringify(geometry));
-  assert.equal(geometry.svgWidth, geometry.tokenSizedIcon ? geometry.iconToken : geometry.intendedWidth,
+  assert.equal(geometry.svgWidth, geometry.headerSizedIcon ? geometry.headerIconToken : geometry.tokenSizedIcon ? geometry.iconToken : geometry.intendedWidth,
     'Icons must use their declared component size or the shared overlay token');
   assert.equal(geometry.appearance, 'none');
   assert(geometry.inViewport, 'Close control must remain reachable');
@@ -48,7 +50,7 @@ async function mobileHeaderGeometry(header) {
     const titleStyle = el.querySelector('h2') ? getComputedStyle(el.querySelector('h2')) : null;
     const close = el.querySelector('.dn-overlay-close')?.getBoundingClientRect();
     return {
-      shared: el.classList.contains('dn-mobile-overlay-header'),
+      shared: el.classList.contains('dn-mobile-overlay-heading') || el.classList.contains('dn-mobile-overlay-header'),
       height: box.height, padding: style.padding, gap: style.gap,
       titleTop: title ? title.top - box.top : null, titleHeight: title?.height,
       titleFont: titleStyle?.fontSize, titleLine: titleStyle?.lineHeight,
@@ -85,31 +87,52 @@ try {
         } finally { await page.close(); }
       });
     }
-    await check('filters', '/listing-grid', async page => {
+    await check('filters', '/cars', async page => {
       const trigger = page.locator(width < 768 ? '.dn-listing-filter__toggle' : '.dn-listing-results__filters');
       await trigger.click();
+      if (width >= 992) {
+        const workspace = page.locator('#dn-listing-filter-dialog');
+        const close = workspace.locator('.dn-listing-filter__close');
+        const geometry = await close.evaluate(el => {
+          const box = el.getBoundingClientRect(), icon = el.querySelector('svg').getBoundingClientRect();
+          return { width: box.width, height: box.height,
+            dx: icon.x + icon.width / 2 - box.x - box.width / 2,
+            dy: icon.y + icon.height / 2 - box.y - box.height / 2,
+            inViewport: box.left >= 0 && box.right <= innerWidth && box.top >= 0 && box.bottom <= innerHeight };
+        });
+        assert(geometry.width >= 44 && geometry.height >= 44 && geometry.inViewport);
+        assert(Math.abs(geometry.dx) <= .5 && Math.abs(geometry.dy) <= .5);
+        await close.click();
+        await page.waitForFunction(el => document.activeElement === el, await trigger.elementHandle());
+        await trigger.click();
+        await page.keyboard.press('Escape');
+        await workspace.waitFor({ state: 'hidden' });
+        await page.waitForFunction(el => document.activeElement === el, await trigger.elementHandle());
+        return { desktopClose: geometry };
+      }
       const close = page.locator('.dn-listing-filter__close');
-      const mainHeader = await mobileHeaderGeometry(page.locator('.dn-listing-filter__dialog-header'));
+      const mainHeader = await mobileHeaderGeometry(page.locator(width < 768 ? '#dn-listing-filter-dialog header' : '.dn-listing-filter__dialog-header'));
       const evidence = [await centered(close)];
       await page.screenshot({ path: `${output}/${locale}-${width}-filters.png` });
       if (width < 768) {
-        const facet = page.locator('.dn-mobile-filter-fields button').nth(1);
+        const facet = page.locator('.dn-mobile-filter-fields button[data-field=make]');
         await facet.click();
-        const picker = page.locator('#dn-dialog-choice');
-        assert.equal(await page.locator('.dn-mobile-filter-fields button[aria-expanded="true"]').count(), 1, 'Only the active facet reports an expanded dialog');
+        const picker = page.locator('#dn-listing-filter-dialog');
+        assert.equal(await page.locator('dialog[open]').count(), 1, 'A facet uses the same mobile dialog');
+        assert.equal(await page.locator('.dn-mobile-filter-fields').count(), 0, 'The active pane replaces the overview');
         const nestedHeader = await mobileHeaderGeometry(picker.locator('header'));
         assert.equal(mainHeader.shared, true, 'Main mobile overlay must use the shared header primitive');
-        assert.equal(nestedHeader.shared, true, 'Nested mobile overlay must use the shared header primitive');
-        assert.deepEqual(nestedHeader, mainHeader, 'Main and nested overlay headers must align exactly');
+        assert.equal(nestedHeader.shared, true, 'The choice pane uses the shared header primitive');
+        assert.deepEqual(nestedHeader, mainHeader, 'Overview and choice headers must align exactly');
         evidence.push({ headerAlignment: { main: mainHeader, nested: nestedHeader } });
-        evidence.push(await centered(picker.locator('.close')));
+        evidence.push(await centered(close));
         await picker.locator('input[type=search]').fill('Audi');
         evidence.push(await centered(picker.locator('.clear-search')));
         await picker.locator('.clear-search').click();
         assert.equal(await picker.locator('input[type=search]').inputValue(), '');
-        await picker.locator('.close').click();
-        assert.equal(await page.locator('.dn-mobile-filter-fields button[aria-expanded="true"]').count(), 0, 'Closing the picker clears the expanded state');
-        assert.equal(await page.locator('dialog[open]').count(), 1, 'Nested Close must retain its parent');
+        await picker.locator('.back').click();
+        assert.equal(await page.locator('.dn-mobile-filter-fields button').count(), 12, 'Back returns to all criteria');
+        assert.equal(await page.locator('dialog[open]').count(), 1, 'Back retains the open filter sheet');
         await page.waitForFunction(el => document.activeElement === el, await facet.elementHandle());
         await page.setViewportSize({ width, height: 420 });
         evidence.push(await centered(close));
@@ -125,8 +148,8 @@ try {
       await trigger.click();
       const evidence = [await centered(page.locator('.dn-quick-search__close'))];
       await page.locator('.dn-quick-search__filter-row').first().click();
-      evidence.push(await centered(page.locator('.dn-quick-search__back')));
-      await page.locator('.dn-quick-search__back').click();
+      evidence.push(await centered(page.locator('#dn-quick-search-dialog header .back')));
+      await page.locator('#dn-quick-search-dialog header .back').click();
       await page.locator('.dn-quick-search__close').click();
       assert(await trigger.evaluate(el => document.activeElement === el));
       return evidence;
@@ -135,9 +158,15 @@ try {
       await check(topic + '-info', '/contact?topic=' + topic, async page => {
         if (width < 768) {
           assert.equal(await page.locator('.dn-service-faq').isVisible(), false);
-          assert(await page.locator('.dn-service-banner').isVisible());
-          assert.match(await page.locator('.dn-service-banner a').getAttribute('href'), /^tel:/);
-          return { serviceBanner: true };
+          const guideTrigger = page.locator(`.dn-service-guide button[aria-controls=${topic === 'import' ? 'import-info-dialog' : 'tradein-info-dialog'}]`);
+          await guideTrigger.click();
+          const guide = page.locator(topic === 'import' ? '#import-info-dialog' : '#tradein-info-dialog');
+          await guide.waitFor({state: 'visible'});
+          const close = guide.locator('header .dn-icon-button');
+          const geometry = await centered(close);
+          await close.click();
+          await page.waitForFunction(el => document.activeElement === el, await guideTrigger.elementHandle());
+          return { serviceGuide: true, close: geometry };
         }
         const faq = page.locator('.dn-service-faq summary').first();
         await faq.click();

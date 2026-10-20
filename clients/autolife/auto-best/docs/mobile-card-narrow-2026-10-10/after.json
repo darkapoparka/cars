@@ -1,0 +1,622 @@
+[
+  {
+    "width": 320,
+    "cardsChecked": 7,
+    "errors": [],
+    "pageOverflow": false,
+    "allCardsFit": true,
+    "visibleFactCounts": [
+      3
+    ],
+    "sample": [
+      {
+        "title": "Audi RS 6 Avant",
+        "card": {
+          "x": 12,
+          "y": 112,
+          "width": 296,
+          "height": 135
+        },
+        "photo": {
+          "x": 20,
+          "y": 120,
+          "width": 126,
+          "height": 88
+        },
+        "identity": {
+          "x": 158,
+          "y": 122,
+          "width": 142,
+          "height": 39.953125
+        },
+        "price": {
+          "x": 158,
+          "y": 184.40625,
+          "width": 78.8125,
+          "height": 21.59375
+        },
+        "titleFont": "500 16px / 20.8px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+        "priceFont": "600 18px / 21.6px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+        "radius": "12px",
+        "facts": [
+          {
+            "text": "2024",
+            "width": 47.109375,
+            "padding": "4px 8px",
+            "clipped": false
+          },
+          {
+            "text": "99 701 km",
+            "width": 78.703125,
+            "padding": "4px 8px",
+            "clipped": false
+          },
+          {
+            "text": "БензинБензин",
+            "width": 58.4375,
+            "padding": "4px 8px",
+            "clipped": false
+          }
+        ]
+      },
+      {
+        "title": "Mercedes-Benz GLE Coupé",
+        "card": {
+          "x": 12,
+          "y": 259,
+          "width": 296,
+          "height": 135
+        },
+        "photo": {
+          "x": 20,
+          "y": 267,
+          "width": 126,
+          "height": 88
+        },
+        "identity": {
+          "x": 158,
+          "y": 269,
+          "width": 142,
+          "height": 39.953125
+        },
+        "price": {
+          "x": 158,
+          "y": 331.40625,
+          "width": 77.90625,
+          "height": 21.59375
+        },
+        "titleFont": "500 16px / 20.8px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+        "priceFont": "600 18px / 21.6px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+        "radius": "12px",
+        "facts": [
+          {
+            "text": "2021",
+            "width": 47.109375,
+            "padding": "4px 8px",
+            "clipped": false
+          },
+          {
+            "text": "96 865 km",
+            "width": 78.703125,
+            "padding": "4px 8px",
+            "clipped": false
+          },
+          {
+            "text": "ДизелДизел",
+            "width": 53.34375,
+            "padding": "4px 8px",
+            "clipped": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "width": 360,
+    "cardsChecked": 7,
+    "errors": [],
+    "pageOverflow": false,
+    "allCardsFit": true,
+    "visibleFactCounts": [
+      3
+    ],
+    "sample": [
+      {
+        "title": "Audi RS 6 Avant",
+        "card": {
+          "x": 12,
+          "y": 112,
+          "width": 336,
+          "height": 135
+        },
+        "photo": {
+          "x": 20,
+          "y": 120,
+          "width": 144,
+          "height": 88
+        },
+        "identity": {
+          "x": 176,
+          "y": 122,
+          "width": 164,
+          "height": 39.953125
+        },
+        "price": {
+          "x": 176,
+          "y": 184.40625,
+          "width": 78.8125,
+          "height": 21.59375
+        },
+        "titleFont": "500 16px / 20.8px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+        "priceFont": "600 18px / 21.6px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+        "radius": "12px",
+        "facts": [
+          {
+            "text": "2024",
+            "width": 47.109375,
+            "padding": "4px 8px",
+            "clipped": false
+          },
+          {
+            "text": "99 701 km",
+            "width": 78.703125,
+            "padding": "4px 8px",
+            "clipped": false
+          },
+          {
+            "text": "БензинБензин",
+            "width": 58.4375,
+            "padding": "4px 8px",
+            "clipped": false
+          }
+        ]
+      },
+      {
+        "title": "Mercedes-Benz GLE Coupé",
+        "card": {
+          "x": 12,
+          "y": 259,
+          "width": 336,
+          "height": 135
+        },
+        "photo": {
+          "x": 20,
+          "y": 267,
+          "width": 144,
+          "height": 88
+        },
+        "identity": {
+          "x": 176,
+          "y": 269,
+          "width": 164,
+          "height": 39.953125
+        },
+        "price": {
+          "x": 176,
+          "y": 331.40625,
+          "width": 77.90625,
+          "height": 21.59375
+        },
+        "titleFont": "500 16px / 20.8px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+        "priceFont": "600 18px / 21.6px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+        "radius": "12px",
+        "facts": [
+          {
+            "text": "2021",
+            "width": 47.109375,
+            "padding": "4px 8px",
+            "clipped": false
+          },
+          {
+            "text": "96 865 km",
+            "width": 78.703125,
+            "padding": "4px 8px",
+            "clipped": false
+          },
+          {
+            "text": "ДизелДизел",
+            "width": 53.34375,
+            "padding": "4px 8px",
+            "clipped": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "width": 390,
+    "cardsChecked": 7,
+    "errors": [],
+    "pageOverflow": false,
+    "allCardsFit": true,
+    "visibleFactCounts": [
+      3
+    ],
+    "sample": [
+      {
+        "title": "Audi RS 6 Avant",
+        "card": {
+          "x": 12,
+          "y": 112,
+          "width": 366,
+          "height": 135
+        },
+        "photo": {
+          "x": 20,
+          "y": 120,
+          "width": 156,
+          "height": 88
+        },
+        "identity": {
+          "x": 188,
+          "y": 122,
+          "width": 182,
+          "height": 39.953125
+        },
+        "price": {
+          "x": 188,
+          "y": 184.40625,
+          "width": 78.8125,
+          "height": 21.59375
+        },
+        "titleFont": "500 16px / 20.8px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+        "priceFont": "600 18px / 21.6px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+        "radius": "12px",
+        "facts": [
+          {
+            "text": "2024",
+            "width": 47.109375,
+            "padding": "4px 8px",
+            "clipped": false
+          },
+          {
+            "text": "99 701 km",
+            "width": 78.703125,
+            "padding": "4px 8px",
+            "clipped": false
+          },
+          {
+            "text": "БензинБензин",
+            "width": 58.4375,
+            "padding": "4px 8px",
+            "clipped": false
+          }
+        ]
+      },
+      {
+        "title": "Mercedes-Benz GLE Coupé",
+        "card": {
+          "x": 12,
+          "y": 259,
+          "width": 366,
+          "height": 135
+        },
+        "photo": {
+          "x": 20,
+          "y": 267,
+          "width": 156,
+          "height": 88
+        },
+        "identity": {
+          "x": 188,
+          "y": 269,
+          "width": 182,
+          "height": 39.953125
+        },
+        "price": {
+          "x": 188,
+          "y": 331.40625,
+          "width": 77.90625,
+          "height": 21.59375
+        },
+        "titleFont": "500 16px / 20.8px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+        "priceFont": "600 18px / 21.6px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+        "radius": "12px",
+        "facts": [
+          {
+            "text": "2021",
+            "width": 47.109375,
+            "padding": "4px 8px",
+            "clipped": false
+          },
+          {
+            "text": "96 865 km",
+            "width": 78.703125,
+            "padding": "4px 8px",
+            "clipped": false
+          },
+          {
+            "text": "ДизелДизел",
+            "width": 53.34375,
+            "padding": "4px 8px",
+            "clipped": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "width": 430,
+    "cardsChecked": 7,
+    "errors": [],
+    "pageOverflow": false,
+    "allCardsFit": true,
+    "visibleFactCounts": [
+      5
+    ],
+    "sample": [
+      {
+        "title": "Audi RS 6 Avant",
+        "card": {
+          "x": 12,
+          "y": 112,
+          "width": 406,
+          "height": 135
+        },
+        "photo": {
+          "x": 20,
+          "y": 120,
+          "width": 156,
+          "height": 88
+        },
+        "identity": {
+          "x": 188,
+          "y": 122,
+          "width": 222,
+          "height": 39.953125
+        },
+        "price": {
+          "x": 188,
+          "y": 184.40625,
+          "width": 78.8125,
+          "height": 21.59375
+        },
+        "titleFont": "500 16px / 20.8px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+        "priceFont": "600 18px / 21.6px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+        "radius": "12px",
+        "facts": [
+          {
+            "text": "2024",
+            "width": 47.109375,
+            "padding": "4px 8px",
+            "clipped": false
+          },
+          {
+            "text": "99 701 km",
+            "width": 78.703125,
+            "padding": "4px 8px",
+            "clipped": false
+          },
+          {
+            "text": "БензинБензин",
+            "width": 58.4375,
+            "padding": "4px 8px",
+            "clipped": false
+          },
+          {
+            "text": "АвтоматАвтоматик",
+            "width": 66.109375,
+            "padding": "4px 8px",
+            "clipped": false
+          },
+          {
+            "text": "Комби",
+            "width": 54.84375,
+            "padding": "4px 8px",
+            "clipped": false
+          }
+        ]
+      },
+      {
+        "title": "Mercedes-Benz GLE Coupé",
+        "card": {
+          "x": 12,
+          "y": 259,
+          "width": 406,
+          "height": 135
+        },
+        "photo": {
+          "x": 20,
+          "y": 267,
+          "width": 156,
+          "height": 88
+        },
+        "identity": {
+          "x": 188,
+          "y": 269,
+          "width": 222,
+          "height": 39.953125
+        },
+        "price": {
+          "x": 188,
+          "y": 331.40625,
+          "width": 77.90625,
+          "height": 21.59375
+        },
+        "titleFont": "500 16px / 20.8px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+        "priceFont": "600 18px / 21.6px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+        "radius": "12px",
+        "facts": [
+          {
+            "text": "2021",
+            "width": 47.109375,
+            "padding": "4px 8px",
+            "clipped": false
+          },
+          {
+            "text": "96 865 km",
+            "width": 78.703125,
+            "padding": "4px 8px",
+            "clipped": false
+          },
+          {
+            "text": "ДизелДизел",
+            "width": 53.34375,
+            "padding": "4px 8px",
+            "clipped": false
+          },
+          {
+            "text": "АвтоматАвтоматик",
+            "width": 66.109375,
+            "padding": "4px 8px",
+            "clipped": false
+          },
+          {
+            "text": "SUV",
+            "width": 41.15625,
+            "padding": "4px 8px",
+            "clipped": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "width": 768,
+    "cardsChecked": 7,
+    "errors": [],
+    "pageOverflow": false,
+    "allCardsFit": true,
+    "visibleFactCounts": [
+      0
+    ],
+    "sample": [
+      {
+        "title": "Audi RS 6 Avant",
+        "card": {
+          "x": 14,
+          "y": 173,
+          "width": 354.5,
+          "height": 405.734375
+        },
+        "photo": {
+          "x": 14,
+          "y": 173,
+          "width": 354.5,
+          "height": 236.328125
+        },
+        "identity": {
+          "x": 30,
+          "y": 425.328125,
+          "width": 322.5,
+          "height": 50.609375
+        },
+        "price": {
+          "x": 30,
+          "y": 517.9375,
+          "width": 322.5,
+          "height": 42.796875
+        },
+        "titleFont": "600 20px / 28.6px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+        "priceFont": "",
+        "radius": "16px",
+        "facts": []
+      },
+      {
+        "title": "Mercedes-Benz GLE Coupé",
+        "card": {
+          "x": 384.5,
+          "y": 173,
+          "width": 354.5,
+          "height": 405.734375
+        },
+        "photo": {
+          "x": 384.5,
+          "y": 173,
+          "width": 354.5,
+          "height": 236.328125
+        },
+        "identity": {
+          "x": 400.5,
+          "y": 425.328125,
+          "width": 322.5,
+          "height": 50.609375
+        },
+        "price": {
+          "x": 400.5,
+          "y": 517.9375,
+          "width": 322.5,
+          "height": 42.796875
+        },
+        "titleFont": "600 20px / 28.6px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+        "priceFont": "",
+        "radius": "16px",
+        "facts": []
+      }
+    ]
+  },
+  {
+    "width": 1440,
+    "cardsChecked": 7,
+    "errors": [],
+    "pageOverflow": false,
+    "allCardsFit": true,
+    "visibleFactCounts": [
+      0
+    ],
+    "sample": [
+      {
+        "title": "Audi RS 6 Avant",
+        "card": {
+          "x": 32.5,
+          "y": 514,
+          "width": 259.1875,
+          "height": 329.609375
+        },
+        "photo": {
+          "x": 32.5,
+          "y": 514,
+          "width": 259.1875,
+          "height": 172.78125
+        },
+        "identity": {
+          "x": 48.5,
+          "y": 702.78125,
+          "width": 227.1875,
+          "height": 50.015625
+        },
+        "price": {
+          "x": 48.5,
+          "y": 790.796875,
+          "width": 227.1875,
+          "height": 36.796875
+        },
+        "titleFont": "500 20px / 28px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+        "priceFont": "",
+        "radius": "20px",
+        "facts": []
+      },
+      {
+        "title": "Mercedes-Benz GLE Coupé",
+        "card": {
+          "x": 307.6875,
+          "y": 514,
+          "width": 259.203125,
+          "height": 329.609375
+        },
+        "photo": {
+          "x": 307.6875,
+          "y": 514,
+          "width": 259.203125,
+          "height": 172.796875
+        },
+        "identity": {
+          "x": 323.6875,
+          "y": 702.796875,
+          "width": 227.203125,
+          "height": 50.015625
+        },
+        "price": {
+          "x": 323.6875,
+          "y": 790.8125,
+          "width": 227.203125,
+          "height": 36.796875
+        },
+        "titleFont": "500 20px / 28px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+        "priceFont": "",
+        "radius": "20px",
+        "facts": []
+      }
+    ]
+  }
+]

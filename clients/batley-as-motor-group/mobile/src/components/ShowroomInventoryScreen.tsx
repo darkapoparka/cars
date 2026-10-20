@@ -450,7 +450,7 @@ export function ShowroomInventoryScreen() {
     filters.minYear || filters.maxYear ? t(yearLabel) : '',
     filters.fuel.map(t).join(', '),
     filters.condition.map(t).join(', '),
-    filters.minMileage || filters.maxMileage ? mileageLabel + ' ' + t('km') : '',
+    filters.minMileage || filters.maxMileage ? mileageLabel + ' ' + 'mi' : '',
     filters.transmission.map(t).join(', '),
     filters.body.map(t).join(', '),
   ]
@@ -700,7 +700,7 @@ export function ShowroomInventoryScreen() {
                   iconOnly
                   onClick={(event) => openSheet('sort', event.currentTarget)}
                 >
-                  <ArrowDownUp size={16} strokeWidth={1.8} aria-hidden="true" />
+                  <ArrowDownUp size={20} strokeWidth={2} aria-hidden="true" />
                 </ShowroomQuickPill>
               </div>
               {pills.map((pill) => (

@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-input-mapping",
+  "dealer": "elegantcar-varna",
+  "inputs": {
+    "facts": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/elegantcar-varna/facts.json",
+      "sha256": "bdb464e51d3615d5f69dd518c3015e4f4bac6b6ffac57d0f7b1e143f6fe68b67"
+    },
+    "stock": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/elegantcar-varna/stock.json",
+      "sha256": "1a6f1b6158b5d47cf0da6fc4631990ed837d82363aea767d1de4ee3d7b9fc451"
+    },
+    "locale": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/elegantcar-varna/locale.json",
+      "sha256": "73dc9c42d2dd7885d4730da951a3334465dd99dcc5cd10eafc6faace66d6f197"
+    },
+    "branding": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/elegantcar-varna/branding.json",
+      "sha256": "f7b6a6db166832d8e23655df7594f4899e4edfc36cf3b12435c4e6bfa17e0f7d"
+    }
+  },
+  "sources": [
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/elegantcar-varna/identity-repository-corrected-additional100.json",
+      "sha256": "86a32c17223f3b36ff58d3edf9f450a01f8e924d62206669e898a1e2275b7afb"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/elegantcar-varna/facts.json",
+      "sha256": "bdb464e51d3615d5f69dd518c3015e4f4bac6b6ffac57d0f7b1e143f6fe68b67"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/elegantcar-varna/stock.json",
+      "sha256": "1a6f1b6158b5d47cf0da6fc4631990ed837d82363aea767d1de4ee3d7b9fc451"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/elegantcar-varna/locale.json",
+      "sha256": "73dc9c42d2dd7885d4730da951a3334465dd99dcc5cd10eafc6faace66d6f197"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/elegantcar-varna/branding.json",
+      "sha256": "f7b6a6db166832d8e23655df7594f4899e4edfc36cf3b12435c4e6bfa17e0f7d"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/elegantcar-varna/media/21791544174764774-1.webp",
+      "sha256": "f37590c33a1c8d6705c26ae4b681efd3329bafaacd90f444cf24d58205484264"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/elegantcar-varna/media/21791544174764774-2.webp",
+      "sha256": "4ef6aa82f2ef037d19c97fbb31e1118048e34b62d74d1e966ed8b4bd2509a13a"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/elegantcar-varna/copy-review-additional100.json",
+      "sha256": "b281b7486f24b7726cf9c7b6eacff9cce28c1743818dd52af309e58676b2e0b2"
+    }
+  ]
+}

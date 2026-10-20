@@ -49,7 +49,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Trade Car Sales",
       "verificationStatus": "unverified",
       "city": "Birmingham",
-      "logoUrl": "/dealer-brand/logo.webp"
+      "logoUrl": "/dealer-brand/v2-7a49c5599de5a3d4/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": true
@@ -100,7 +100,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Trade Car Sales",
       "verificationStatus": "unverified",
       "city": "Birmingham",
-      "logoUrl": "/dealer-brand/logo.webp"
+      "logoUrl": "/dealer-brand/v2-7a49c5599de5a3d4/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": true
@@ -151,7 +151,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Trade Car Sales",
       "verificationStatus": "unverified",
       "city": "Birmingham",
-      "logoUrl": "/dealer-brand/logo.webp"
+      "logoUrl": "/dealer-brand/v2-7a49c5599de5a3d4/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": true
@@ -202,7 +202,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Trade Car Sales",
       "verificationStatus": "unverified",
       "city": "Birmingham",
-      "logoUrl": "/dealer-brand/logo.webp"
+      "logoUrl": "/dealer-brand/v2-7a49c5599de5a3d4/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": false
@@ -253,7 +253,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Trade Car Sales",
       "verificationStatus": "unverified",
       "city": "Birmingham",
-      "logoUrl": "/dealer-brand/logo.webp"
+      "logoUrl": "/dealer-brand/v2-7a49c5599de5a3d4/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": false
@@ -304,7 +304,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Trade Car Sales",
       "verificationStatus": "unverified",
       "city": "Birmingham",
-      "logoUrl": "/dealer-brand/logo.webp"
+      "logoUrl": "/dealer-brand/v2-7a49c5599de5a3d4/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": false
@@ -355,7 +355,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Trade Car Sales",
       "verificationStatus": "unverified",
       "city": "Birmingham",
-      "logoUrl": "/dealer-brand/logo.webp"
+      "logoUrl": "/dealer-brand/v2-7a49c5599de5a3d4/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": false
@@ -406,7 +406,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Trade Car Sales",
       "verificationStatus": "unverified",
       "city": "Birmingham",
-      "logoUrl": "/dealer-brand/logo.webp"
+      "logoUrl": "/dealer-brand/v2-7a49c5599de5a3d4/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": false
@@ -457,7 +457,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Trade Car Sales",
       "verificationStatus": "unverified",
       "city": "Birmingham",
-      "logoUrl": "/dealer-brand/logo.webp"
+      "logoUrl": "/dealer-brand/v2-7a49c5599de5a3d4/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": false
@@ -508,211 +508,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Trade Car Sales",
       "verificationStatus": "unverified",
       "city": "Birmingham",
-      "logoUrl": "/dealer-brand/logo.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1006",
-    "slug": "ford-transit-connect-2014-189038456623",
-    "category": "van",
-    "dealerOrgId": "dealer-birmingham-trade-car-sales-grasmere",
-    "status": "active",
-    "title": "2014 Ford Transit Connect 1.6 TDCi 115ps LWB 3 Seater PANEL VAN Diesel Manual",
-    "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
-    "price": {
-      "amount": 4950,
-      "currency": "GBP"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/dealer-stock/van.webp",
-        "alt": "2014 Ford Transit Connect 1.6 TDCi 115ps LWB 3 Seater PANEL VAN Diesel Manual"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Birmingham",
-      "region": "Birmingham",
-      "country": "United Kingdom"
-    },
-    "spec": {
-      "make": "Ford",
-      "model": "Transit Connect",
-      "trim": "1.6 TDCi 115ps LWB 3 Seater PANEL VAN Diesel Manual",
-      "year": 2014,
-      "bodyType": "van",
-      "fuelType": "diesel",
-      "transmission": "manual",
-      "mileageValue": 185075,
-      "mileageUnit": "km",
-      "mileageSourceValue": 115000,
-      "mileageSourceUnit": "mi"
-    },
-    "seller": {
-      "id": "dealer-birmingham-trade-car-sales-grasmere",
-      "type": "dealer",
-      "displayName": "Trade Car Sales",
-      "verificationStatus": "unverified",
-      "city": "Birmingham",
-      "logoUrl": "/dealer-brand/logo.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1007",
-    "slug": "vauxhall-astra-2014-189026984290",
-    "category": "car",
-    "dealerOrgId": "dealer-birmingham-trade-car-sales-grasmere",
-    "status": "active",
-    "title": "2014 Vauxhall Astra 1.6i 16V Limited Edition 5dr HATCHBACK Petrol Manual",
-    "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
-    "price": {
-      "amount": 600,
-      "currency": "GBP"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/dealer-stock/hatchback.webp",
-        "alt": "2014 Vauxhall Astra 1.6i 16V Limited Edition 5dr HATCHBACK Petrol Manual"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Birmingham",
-      "region": "Birmingham",
-      "country": "United Kingdom"
-    },
-    "spec": {
-      "make": "Vauxhall",
-      "model": "Astra",
-      "trim": "1.6i 16V Limited Edition 5dr HATCHBACK Petrol Manual",
-      "year": 2014,
-      "bodyType": "hatchback",
-      "fuelType": "gasoline",
-      "transmission": "manual",
-      "mileageValue": 177028,
-      "mileageUnit": "km",
-      "mileageSourceValue": 110000,
-      "mileageSourceUnit": "mi"
-    },
-    "seller": {
-      "id": "dealer-birmingham-trade-car-sales-grasmere",
-      "type": "dealer",
-      "displayName": "Trade Car Sales",
-      "verificationStatus": "unverified",
-      "city": "Birmingham",
-      "logoUrl": "/dealer-brand/logo.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1008",
-    "slug": "ford-mondeo-2016-189001222071",
-    "category": "car",
-    "dealerOrgId": "dealer-birmingham-trade-car-sales-grasmere",
-    "status": "active",
-    "title": "2016 Ford Mondeo 1.5 EcoBoost Titanium 5dr ESTATE Petrol Manual",
-    "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
-    "price": {
-      "amount": 3950,
-      "currency": "GBP"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/dealer-stock/wagon.webp",
-        "alt": "2016 Ford Mondeo 1.5 EcoBoost Titanium 5dr ESTATE Petrol Manual"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Birmingham",
-      "region": "Birmingham",
-      "country": "United Kingdom"
-    },
-    "spec": {
-      "make": "Ford",
-      "model": "Mondeo",
-      "trim": "1.5 EcoBoost Titanium 5dr ESTATE Petrol Manual",
-      "year": 2016,
-      "bodyType": "wagon",
-      "fuelType": "gasoline",
-      "transmission": "manual",
-      "mileageValue": 173809,
-      "mileageUnit": "km",
-      "mileageSourceValue": 108000,
-      "mileageSourceUnit": "mi"
-    },
-    "seller": {
-      "id": "dealer-birmingham-trade-car-sales-grasmere",
-      "type": "dealer",
-      "displayName": "Trade Car Sales",
-      "verificationStatus": "unverified",
-      "city": "Birmingham",
-      "logoUrl": "/dealer-brand/logo.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1009",
-    "slug": "mini-hatch-2014-189001115867",
-    "category": "car",
-    "dealerOrgId": "dealer-birmingham-trade-car-sales-grasmere",
-    "status": "active",
-    "title": "2014 MINI Hatch 1.5 Cooper 3dr HATCHBACK Petrol Manual",
-    "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
-    "price": {
-      "amount": 2950,
-      "currency": "GBP"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/dealer-stock/hatchback.webp",
-        "alt": "2014 MINI Hatch 1.5 Cooper 3dr HATCHBACK Petrol Manual"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Birmingham",
-      "region": "Birmingham",
-      "country": "United Kingdom"
-    },
-    "spec": {
-      "make": "MINI",
-      "model": "Hatch",
-      "trim": "1.5 Cooper 3dr HATCHBACK Petrol Manual",
-      "year": 2014,
-      "bodyType": "hatchback",
-      "fuelType": "gasoline",
-      "transmission": "manual",
-      "mileageValue": 193121,
-      "mileageUnit": "km",
-      "mileageSourceValue": 120000,
-      "mileageSourceUnit": "mi"
-    },
-    "seller": {
-      "id": "dealer-birmingham-trade-car-sales-grasmere",
-      "type": "dealer",
-      "displayName": "Trade Car Sales",
-      "verificationStatus": "unverified",
-      "city": "Birmingham",
-      "logoUrl": "/dealer-brand/logo.webp"
+      "logoUrl": "/dealer-brand/v2-7a49c5599de5a3d4/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": false

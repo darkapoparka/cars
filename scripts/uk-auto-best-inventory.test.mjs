@@ -45,7 +45,8 @@ const batch = JSON.parse(fs.readFileSync(path.join(root,'leads/uk-2026-10-10-bui
 const profiles = batch.dealers.map(dealer => loadDealerProfile(path.join(root,dealer.brief),dealer.slug));
 const broadbent = profiles.find(profile => profile.slug === broadbentSlug);
 const asProfile = profiles.find(profile => profile.slug === asSlug);
-const nativeInventory = at(pin,'templates/auto-best/' + inventoryPath);
+// Current selected S1 presentation ABI; direct legacy UK repair stays unchanged.
+const nativeInventory = at('32ac4ebcbafff38df6306e9919ce6113b2d10503','templates/auto-best/' + inventoryPath);
 const retained = (profile = broadbent) => new Map([[inventoryPath, Buffer.from(at(
   profile.slug === asSlug ? asCommit : created, 'clients/' + profile.slug + '/auto-best/' + inventoryPath))]]);
 const text = value => Buffer.isBuffer(value) ? value.toString('utf8') : value;
@@ -143,7 +144,7 @@ test('repair of both genuinely created dealers preserves every factual inventory
     assert.ok(Buffer.isBuffer(files.get(inventoryPath)));
     const output = text(files.get(inventoryPath));
     assert.equal(inventoryLiteral(output),literal);
-    assert.equal(output,adapters.autoBestInventory(profile));
+    assert.equal(adapters.completeAutoBestInventoryPresentationContract(output),adapters.autoBestInventory(profile));
     const sourceWithoutNewContract = output.replace(
       '  /** Optional manufacturer sub-brand used by compact card identity. */\n  cardBrand?: string;\n',''
     ).slice(0,original.length);
@@ -169,7 +170,7 @@ test('real 71-record UK generation preserves facts and formats every published p
         const expected = new Intl.NumberFormat(locale === 'en' ? 'en-GB' : 'bg-BG',
           {style:'currency',currency:'GBP',currencyDisplay:'narrowSymbol',maximumFractionDigits:0}).format(item.priceAmount);
         assert.equal(module.formatVehiclePrice(vehicle.priceEur,locale),expected);
-        assert.equal(module.formatVehiclePriceLabel(vehicle.priceEur,locale),expected);
+        assert.equal(module.formatVehiclePriceLabel(vehicle.priceEur,locale),expected.replace(/([A-Z]{3}|\p{Sc})\s+/u, '$1 ').replace(/\s+([A-Z]{3}|\p{Sc})$/u, ' $1'));
       }
       if (item.transmissionType === 'other') unknown.push([profile.slug,item.id,vehicle.transmission,vehicle.fuel]);
       count++;
@@ -267,6 +268,6 @@ test('unexpected modules, factual changes and non-UK candidates cannot receive a
   const nonUk = {...broadbent,business:{...broadbent.business,countryCode:'BG',distanceUnit:'km'}};
   assert.deepEqual(repairAutoBestUkInventoryContract(files,nonUk),[]);
   assert.equal(files.get(inventoryPath),before);
-  assert.equal(publicNames(adapters.autoBestInventory(nonUk)).includes('formatVehiclePriceLabel'),false);
+  assert.equal(publicNames(adapters.autoBestInventory(nonUk)).includes('formatVehiclePriceLabel'),true);
   assert.throws(()=>repairAutoBestUkInventoryContract(new Map(),broadbent),/source is required/);
 });

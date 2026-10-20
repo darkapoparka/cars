@@ -1,0 +1,216 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-reviewed-modern-bilingual-copy-input",
+  "dealer": "car-point-trade-varna",
+  "sourceCommit": "d9594c2979f668831b78609e4e990640259aee81",
+  "baselineTree": "9b2d7ef5bd870732e80bb7d0b47453d3dbfb6578",
+  "inputSha256": "26e4f67faeb3f37f9ba1505f75d9dde3966732c2e39059cb0247c03bd275b232",
+  "modernInputRowsSha256": "0da8a017c4f7cf263bebcaecf996a214248d9d0497a0487463501bce1396699b",
+  "listingCount": 8,
+  "profileInputs": [
+    {
+      "path": "dealer.json",
+      "gitBlob": "063841def0b88d35156b1ce32a10ecdd6b194d7d",
+      "sha256": "524fa4e8e478899bcc1b713927a2a7186561a15dc9852b46abee64b5306e89fe",
+      "bytes": 3945
+    },
+    {
+      "path": "business-facts.json",
+      "gitBlob": "0bc2faacd99b5ad8a1e5465c96a64ac5c34353bc",
+      "sha256": "05d1b27d6e486f663d2b1dcf2d6de17e03c36e9cb91186d5711f103d84fe4670",
+      "bytes": 1981
+    },
+    {
+      "path": "stock.json",
+      "gitBlob": "9632c8e57e2222607f7ac31ce40cfb905d3cefcb",
+      "sha256": "701d41be8fa123fc06da319757da4b5a76c87efda0450764457cef5e8691fbc3",
+      "bytes": 13370
+    }
+  ],
+  "reviewedGeneratorHelper": {
+    "path": "scripts/lib/modern-dealer-inventory-copy.mjs",
+    "sha256": "cbdbaa28dc07911cfe913b4e627671b6556fc25d3bfe59364e29c5ca5a29072b",
+    "sourceCommit": "14d86f67c160699c18a6ec5658197cc4d9011e0b"
+  },
+  "review": {
+    "displayCopyOnly": true,
+    "exactSourceDescriptionKeys": true,
+    "listingFactsUnchanged": true,
+    "imageUrlsUnchanged": true,
+    "imageAltsPreserved": true,
+    "interpolationTokensUnchanged": true,
+    "reviewedBy": "Codex, authorized final-template rollout",
+    "reviewedAt": "2026-10-14T20:04:09.108Z",
+    "notes": "Reuse exact existing native or reviewed registered companions for every actual current row; no new translation/factual source edits."
+  },
+  "reviewedCopy": {
+    "vw-arteon-2020-11791184773376059": {
+      "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "en": {
+        "description": "Dated sample from a published listing. Confirm the condition, price and availability directly with the dealership.",
+        "imageAlts": [
+          "VW Arteon 2.0* 190* R-Line*",
+          "VW Arteon 2.0* 190* R-Line*",
+          "VW Arteon 2.0* 190* R-Line*",
+          "VW Arteon 2.0* 190* R-Line*"
+        ]
+      },
+      "bg": {
+        "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+        "imageAlts": [
+          "VW Arteon 2.0* 190* R-Line*",
+          "VW Arteon 2.0* 190* R-Line*",
+          "VW Arteon 2.0* 190* R-Line*",
+          "VW Arteon 2.0* 190* R-Line*"
+        ]
+      }
+    },
+    "mercedes-benz-gle-450-2020-11791183074371341": {
+      "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "en": {
+        "description": "Dated sample from a published listing. Confirm the condition, price and availability directly with the dealership.",
+        "imageAlts": [
+          "Mercedes-Benz GLE 450 EQ Boost* Pano* Head UP*",
+          "Mercedes-Benz GLE 450 EQ Boost* Pano* Head UP*",
+          "Mercedes-Benz GLE 450 EQ Boost* Pano* Head UP*",
+          "Mercedes-Benz GLE 450 EQ Boost* Pano* Head UP*"
+        ]
+      },
+      "bg": {
+        "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+        "imageAlts": [
+          "Mercedes-Benz GLE 450 EQ Boost* Pano* Head UP*",
+          "Mercedes-Benz GLE 450 EQ Boost* Pano* Head UP*",
+          "Mercedes-Benz GLE 450 EQ Boost* Pano* Head UP*",
+          "Mercedes-Benz GLE 450 EQ Boost* Pano* Head UP*"
+        ]
+      }
+    },
+    "toyota-corolla-verso-2007-11790856761277539": {
+      "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "en": {
+        "description": "Dated sample from a published listing. Confirm the condition, price and availability directly with the dealership.",
+        "imageAlts": [
+          "Toyota Corolla verso",
+          "Toyota Corolla verso",
+          "Toyota Corolla verso",
+          "Toyota Corolla verso"
+        ]
+      },
+      "bg": {
+        "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+        "imageAlts": [
+          "Toyota Corolla verso",
+          "Toyota Corolla verso",
+          "Toyota Corolla verso",
+          "Toyota Corolla verso"
+        ]
+      }
+    },
+    "toyota-rav4-2008-21763647718712555": {
+      "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "en": {
+        "description": "Dated sample from a published listing. Confirm the condition, price and availability directly with the dealership.",
+        "imageAlts": [
+          "Toyota Rav4",
+          "Toyota Rav4",
+          "Toyota Rav4",
+          "Toyota Rav4"
+        ]
+      },
+      "bg": {
+        "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+        "imageAlts": [
+          "Toyota Rav4",
+          "Toyota Rav4",
+          "Toyota Rav4",
+          "Toyota Rav4"
+        ]
+      }
+    },
+    "toyota-auris-2008-11788508879567241": {
+      "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "en": {
+        "description": "Dated sample from a published listing. Confirm the condition, price and availability directly with the dealership.",
+        "imageAlts": [
+          "Toyota Auris 2.2* 177HP* KEYLESS*",
+          "Toyota Auris 2.2* 177HP* KEYLESS*",
+          "Toyota Auris 2.2* 177HP* KEYLESS*",
+          "Toyota Auris 2.2* 177HP* KEYLESS*"
+        ]
+      },
+      "bg": {
+        "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+        "imageAlts": [
+          "Toyota Auris 2.2* 177HP* KEYLESS*",
+          "Toyota Auris 2.2* 177HP* KEYLESS*",
+          "Toyota Auris 2.2* 177HP* KEYLESS*",
+          "Toyota Auris 2.2* 177HP* KEYLESS*"
+        ]
+      }
+    },
+    "skoda-octavia-2021-11772557595522560": {
+      "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "en": {
+        "description": "Dated sample from a published listing. Confirm the condition, price and availability directly with the dealership.",
+        "imageAlts": [
+          "Skoda Octavia 1.5* 150HP*",
+          "Skoda Octavia 1.5* 150HP*",
+          "Skoda Octavia 1.5* 150HP*",
+          "Skoda Octavia 1.5* 150HP*"
+        ]
+      },
+      "bg": {
+        "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+        "imageAlts": [
+          "Skoda Octavia 1.5* 150HP*",
+          "Skoda Octavia 1.5* 150HP*",
+          "Skoda Octavia 1.5* 150HP*",
+          "Skoda Octavia 1.5* 150HP*"
+        ]
+      }
+    },
+    "skoda-fabia-2017-11788861053896464": {
+      "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "en": {
+        "description": "Dated sample from a published listing. Confirm the condition, price and availability directly with the dealership.",
+        "imageAlts": [
+          "Skoda Fabia MONTE CARLO* PANO* DISTRONIC*",
+          "Skoda Fabia MONTE CARLO* PANO* DISTRONIC*",
+          "Skoda Fabia MONTE CARLO* PANO* DISTRONIC*",
+          "Skoda Fabia MONTE CARLO* PANO* DISTRONIC*"
+        ]
+      },
+      "bg": {
+        "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+        "imageAlts": [
+          "Skoda Fabia MONTE CARLO* PANO* DISTRONIC*",
+          "Skoda Fabia MONTE CARLO* PANO* DISTRONIC*",
+          "Skoda Fabia MONTE CARLO* PANO* DISTRONIC*",
+          "Skoda Fabia MONTE CARLO* PANO* DISTRONIC*"
+        ]
+      }
+    },
+    "peugeot-307-2003-11782721870640258": {
+      "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "en": {
+        "description": "Dated sample from a published listing. Confirm the condition, price and availability directly with the dealership.",
+        "imageAlts": [
+          "Peugeot 307 SW",
+          "Peugeot 307 SW",
+          "Peugeot 307 SW",
+          "Peugeot 307 SW"
+        ]
+      },
+      "bg": {
+        "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+        "imageAlts": [
+          "Peugeot 307 SW",
+          "Peugeot 307 SW",
+          "Peugeot 307 SW",
+          "Peugeot 307 SW"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,1216 @@
+{
+  "version": "v1",
+  "generatedAt": "2026-06-14",
+  "mode": "built-in image_gen plus local Pillow/chroma-key post-processing",
+  "brandRules": {
+    "color": "muted olive grade only; no neon/chartreuse glow",
+    "text": "no baked text/signage/numbers/UI/logos except real vehicle badges where appropriate",
+    "style": "photoreal only; premium Canadian-import dealer for Bulgaria/Plovdiv context"
+  },
+  "assets": [
+    {
+      "class": "A",
+      "role": "white/silver premium SUV, left-facing hero flank",
+      "intendedSlot": "home hero/promo dark panels",
+      "slug": "white-premium-suv-left",
+      "promptNote": "Photoreal full vehicle on flat #00ff00 chroma key; manufacturer-configurator angle; no text/logos/signage; realistic badge; no neon green light.",
+      "outputs": {
+        "transparentPng": {
+          "path": "static/assets/daynight/cutouts/white-premium-suv-left.png",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "bytes": 911748
+        },
+        "transparentPng2x": {
+          "path": "static/assets/daynight/cutouts/white-premium-suv-left@2x.png",
+          "dimensions": [
+            3072,
+            2048
+          ],
+          "bytes": 2560735
+        },
+        "flatSourcePng": {
+          "path": "static/assets/daynight/cutouts/white-premium-suv-left-flat.png",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "bytes": 1625280
+        },
+        "flatSourceJpg": {
+          "path": "static/assets/daynight/cutouts/white-premium-suv-left-flat.jpg",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "bytes": 203514
+        },
+        "flatSourceJpg2x": {
+          "path": "static/assets/daynight/cutouts/white-premium-suv-left-flat@2x.jpg",
+          "dimensions": [
+            3072,
+            2048
+          ],
+          "bytes": 549739
+        }
+      }
+    },
+    {
+      "class": "A",
+      "role": "white/silver premium SUV, right-facing hero flank",
+      "intendedSlot": "home hero/promo dark panels",
+      "slug": "white-premium-suv-right",
+      "promptNote": "Photoreal full vehicle on flat #00ff00 chroma key; manufacturer-configurator angle; no text/logos/signage; realistic badge; no neon green light.",
+      "outputs": {
+        "transparentPng": {
+          "path": "static/assets/daynight/cutouts/white-premium-suv-right.png",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "bytes": 916159
+        },
+        "transparentPng2x": {
+          "path": "static/assets/daynight/cutouts/white-premium-suv-right@2x.png",
+          "dimensions": [
+            3072,
+            2048
+          ],
+          "bytes": 2578070
+        },
+        "flatSourcePng": {
+          "path": "static/assets/daynight/cutouts/white-premium-suv-right-flat.png",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "bytes": 1391692
+        },
+        "flatSourceJpg": {
+          "path": "static/assets/daynight/cutouts/white-premium-suv-right-flat.jpg",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "bytes": 203721
+        },
+        "flatSourceJpg2x": {
+          "path": "static/assets/daynight/cutouts/white-premium-suv-right-flat@2x.jpg",
+          "dimensions": [
+            3072,
+            2048
+          ],
+          "bytes": 550206
+        }
+      }
+    },
+    {
+      "class": "A",
+      "role": "silver executive sedan, right-facing hero flank",
+      "intendedSlot": "home hero/promo dark panels",
+      "slug": "silver-executive-sedan-right",
+      "promptNote": "Photoreal full vehicle on flat #00ff00 chroma key; manufacturer-configurator angle; no text/logos/signage; realistic badge; no neon green light.",
+      "outputs": {
+        "transparentPng": {
+          "path": "static/assets/daynight/cutouts/silver-executive-sedan-right.png",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "bytes": 813043
+        },
+        "transparentPng2x": {
+          "path": "static/assets/daynight/cutouts/silver-executive-sedan-right@2x.png",
+          "dimensions": [
+            3072,
+            2048
+          ],
+          "bytes": 2511882
+        },
+        "flatSourcePng": {
+          "path": "static/assets/daynight/cutouts/silver-executive-sedan-right-flat.png",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "bytes": 1601999
+        },
+        "flatSourceJpg": {
+          "path": "static/assets/daynight/cutouts/silver-executive-sedan-right-flat.jpg",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "bytes": 189564
+        },
+        "flatSourceJpg2x": {
+          "path": "static/assets/daynight/cutouts/silver-executive-sedan-right-flat@2x.jpg",
+          "dimensions": [
+            3072,
+            2048
+          ],
+          "bytes": 531660
+        }
+      }
+    },
+    {
+      "class": "A",
+      "role": "silver executive sedan, left-facing hero flank",
+      "intendedSlot": "home hero/promo dark panels",
+      "slug": "silver-executive-sedan-left",
+      "promptNote": "Photoreal full vehicle on flat #00ff00 chroma key; manufacturer-configurator angle; no text/logos/signage; realistic badge; no neon green light.",
+      "outputs": {
+        "transparentPng": {
+          "path": "static/assets/daynight/cutouts/silver-executive-sedan-left.png",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "bytes": 807780
+        },
+        "transparentPng2x": {
+          "path": "static/assets/daynight/cutouts/silver-executive-sedan-left@2x.png",
+          "dimensions": [
+            3072,
+            2048
+          ],
+          "bytes": 2496199
+        },
+        "flatSourcePng": {
+          "path": "static/assets/daynight/cutouts/silver-executive-sedan-left-flat.png",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "bytes": 1348916
+        },
+        "flatSourceJpg": {
+          "path": "static/assets/daynight/cutouts/silver-executive-sedan-left-flat.jpg",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "bytes": 189529
+        },
+        "flatSourceJpg2x": {
+          "path": "static/assets/daynight/cutouts/silver-executive-sedan-left-flat@2x.jpg",
+          "dimensions": [
+            3072,
+            2048
+          ],
+          "bytes": 531147
+        }
+      }
+    },
+    {
+      "class": "A",
+      "role": "light-grey sport coupe cutout",
+      "intendedSlot": "category/promo panels",
+      "slug": "light-grey-sport-coupe-left",
+      "promptNote": "Photoreal full vehicle on flat #00ff00 chroma key; manufacturer-configurator angle; no text/logos/signage; realistic badge; no neon green light.",
+      "outputs": {
+        "transparentPng": {
+          "path": "static/assets/daynight/cutouts/light-grey-sport-coupe-left.png",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "bytes": 722452
+        },
+        "transparentPng2x": {
+          "path": "static/assets/daynight/cutouts/light-grey-sport-coupe-left@2x.png",
+          "dimensions": [
+            3072,
+            2048
+          ],
+          "bytes": 2076436
+        },
+        "flatSourcePng": {
+          "path": "static/assets/daynight/cutouts/light-grey-sport-coupe-left-flat.png",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "bytes": 1517235
+        },
+        "flatSourceJpg": {
+          "path": "static/assets/daynight/cutouts/light-grey-sport-coupe-left-flat.jpg",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "bytes": 164747
+        },
+        "flatSourceJpg2x": {
+          "path": "static/assets/daynight/cutouts/light-grey-sport-coupe-left-flat@2x.jpg",
+          "dimensions": [
+            3072,
+            2048
+          ],
+          "bytes": 462868
+        }
+      }
+    },
+    {
+      "class": "A",
+      "role": "white compact family SUV cutout",
+      "intendedSlot": "category/promo panels",
+      "slug": "white-compact-suv-right",
+      "promptNote": "Photoreal full vehicle on flat #00ff00 chroma key; manufacturer-configurator angle; no text/logos/signage; realistic badge; no neon green light.",
+      "outputs": {
+        "transparentPng": {
+          "path": "static/assets/daynight/cutouts/white-compact-suv-right.png",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "bytes": 888285
+        },
+        "transparentPng2x": {
+          "path": "static/assets/daynight/cutouts/white-compact-suv-right@2x.png",
+          "dimensions": [
+            3072,
+            2048
+          ],
+          "bytes": 2514826
+        },
+        "flatSourcePng": {
+          "path": "static/assets/daynight/cutouts/white-compact-suv-right-flat.png",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "bytes": 1599222
+        },
+        "flatSourceJpg": {
+          "path": "static/assets/daynight/cutouts/white-compact-suv-right-flat.jpg",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "bytes": 189869
+        },
+        "flatSourceJpg2x": {
+          "path": "static/assets/daynight/cutouts/white-compact-suv-right-flat@2x.jpg",
+          "dimensions": [
+            3072,
+            2048
+          ],
+          "bytes": 520486
+        }
+      }
+    },
+    {
+      "class": "A",
+      "role": "graphite sedan cutout for light panels",
+      "intendedSlot": "light panels only",
+      "slug": "graphite-executive-sedan-left",
+      "promptNote": "Photoreal full vehicle on flat #00ff00 chroma key; manufacturer-configurator angle; no text/logos/signage; realistic badge; no neon green light.",
+      "outputs": {
+        "transparentPng": {
+          "path": "static/assets/daynight/cutouts/graphite-executive-sedan-left.png",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "bytes": 825183
+        },
+        "transparentPng2x": {
+          "path": "static/assets/daynight/cutouts/graphite-executive-sedan-left@2x.png",
+          "dimensions": [
+            3072,
+            2048
+          ],
+          "bytes": 2504764
+        },
+        "flatSourcePng": {
+          "path": "static/assets/daynight/cutouts/graphite-executive-sedan-left-flat.png",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "bytes": 1592021
+        },
+        "flatSourceJpg": {
+          "path": "static/assets/daynight/cutouts/graphite-executive-sedan-left-flat.jpg",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "bytes": 189138
+        },
+        "flatSourceJpg2x": {
+          "path": "static/assets/daynight/cutouts/graphite-executive-sedan-left-flat@2x.jpg",
+          "dimensions": [
+            3072,
+            2048
+          ],
+          "bytes": 521540
+        }
+      }
+    },
+    {
+      "class": "B",
+      "role": "home mobile hero portrait",
+      "intendedSlot": "home/mobile-hero",
+      "slug": "home-mobile-hero",
+      "promptNote": "Photoreal premium SUV lower-third mobile hero; Plovdiv forecourt/showroom; empty top; muted olive grade; no text/logos/signage.",
+      "outputs": {
+        "jpg": {
+          "path": "static/assets/daynight/banners/home-mobile-hero.jpg",
+          "dimensions": [
+            1080,
+            1600
+          ],
+          "bytes": 230146
+        },
+        "webp": {
+          "path": "static/assets/daynight/banners/home-mobile-hero.webp",
+          "dimensions": [
+            1080,
+            1600
+          ],
+          "bytes": 109332
+        },
+        "jpg2x": {
+          "path": "static/assets/daynight/banners/home-mobile-hero@2x.jpg",
+          "dimensions": [
+            2160,
+            3200
+          ],
+          "bytes": 675051
+        },
+        "webp2x": {
+          "path": "static/assets/daynight/banners/home-mobile-hero@2x.webp",
+          "dimensions": [
+            2160,
+            3200
+          ],
+          "bytes": 249770
+        }
+      }
+    },
+    {
+      "class": "B",
+      "role": "import from Europe banner",
+      "intendedSlot": "import/banner",
+      "slug": "premium-auto-selection",
+      "promptNote": "Covered premium car on enclosed transporter at blue-hour loading dock; subject right; empty left; no readable markings.",
+      "outputs": {
+        "jpg": {
+          "path": "static/assets/daynight/banners/premium-auto-selection.jpg",
+          "dimensions": [
+            2400,
+            1100
+          ],
+          "bytes": 420946
+        },
+        "webp": {
+          "path": "static/assets/daynight/banners/premium-auto-selection.webp",
+          "dimensions": [
+            2400,
+            1100
+          ],
+          "bytes": 212288
+        },
+        "jpg2x": {
+          "path": "static/assets/daynight/banners/premium-auto-selection@2x.jpg",
+          "dimensions": [
+            4800,
+            2200
+          ],
+          "bytes": 1186866
+        },
+        "webp2x": {
+          "path": "static/assets/daynight/banners/premium-auto-selection@2x.webp",
+          "dimensions": [
+            4800,
+            2200
+          ],
+          "bytes": 496078
+        }
+      }
+    },
+    {
+      "class": "B",
+      "role": "inspection and Carfax checks banner",
+      "intendedSlot": "inspection/banner",
+      "slug": "inspection-carfax-checks",
+      "promptNote": "Gloved inspection over clean engine bay with blank diagnostics tablet; subject right; natural white light; no readable UI.",
+      "outputs": {
+        "jpg": {
+          "path": "static/assets/daynight/banners/inspection-carfax-checks.jpg",
+          "dimensions": [
+            2400,
+            1100
+          ],
+          "bytes": 310614
+        },
+        "webp": {
+          "path": "static/assets/daynight/banners/inspection-carfax-checks.webp",
+          "dimensions": [
+            2400,
+            1100
+          ],
+          "bytes": 128936
+        },
+        "jpg2x": {
+          "path": "static/assets/daynight/banners/inspection-carfax-checks@2x.jpg",
+          "dimensions": [
+            4800,
+            2200
+          ],
+          "bytes": 901220
+        },
+        "webp2x": {
+          "path": "static/assets/daynight/banners/inspection-carfax-checks@2x.webp",
+          "dimensions": [
+            4800,
+            2200
+          ],
+          "bytes": 300138
+        }
+      }
+    },
+    {
+      "class": "B",
+      "role": "sell/trade-in consultation banner",
+      "intendedSlot": "sell/banner",
+      "slug": "sell-trade-in-consultation",
+      "promptNote": "Two-person trade-in consultation over blank documents and key; natural window light; subtle olive folder.",
+      "outputs": {
+        "jpg": {
+          "path": "static/assets/daynight/banners/sell-trade-in-consultation.jpg",
+          "dimensions": [
+            2400,
+            1100
+          ],
+          "bytes": 304926
+        },
+        "webp": {
+          "path": "static/assets/daynight/banners/sell-trade-in-consultation.webp",
+          "dimensions": [
+            2400,
+            1100
+          ],
+          "bytes": 117814
+        },
+        "jpg2x": {
+          "path": "static/assets/daynight/banners/sell-trade-in-consultation@2x.jpg",
+          "dimensions": [
+            4800,
+            2200
+          ],
+          "bytes": 903605
+        },
+        "webp2x": {
+          "path": "static/assets/daynight/banners/sell-trade-in-consultation@2x.webp",
+          "dimensions": [
+            4800,
+            2200
+          ],
+          "bytes": 295538
+        }
+      }
+    },
+    {
+      "class": "B",
+      "role": "financing/calculator consultation banner",
+      "intendedSlot": "financing/banner",
+      "slug": "financing-calculator-consultation",
+      "promptNote": "Two-person finance consultation with laptop/calculator/blank papers; subject right; no readable UI.",
+      "outputs": {
+        "jpg": {
+          "path": "static/assets/daynight/banners/financing-calculator-consultation.jpg",
+          "dimensions": [
+            2400,
+            1100
+          ],
+          "bytes": 311074
+        },
+        "webp": {
+          "path": "static/assets/daynight/banners/financing-calculator-consultation.webp",
+          "dimensions": [
+            2400,
+            1100
+          ],
+          "bytes": 124162
+        },
+        "jpg2x": {
+          "path": "static/assets/daynight/banners/financing-calculator-consultation@2x.jpg",
+          "dimensions": [
+            4800,
+            2200
+          ],
+          "bytes": 902138
+        },
+        "webp2x": {
+          "path": "static/assets/daynight/banners/financing-calculator-consultation@2x.webp",
+          "dimensions": [
+            4800,
+            2200
+          ],
+          "bytes": 306086
+        }
+      }
+    },
+    {
+      "class": "B",
+      "role": "showroom/contact banner",
+      "intendedSlot": "contact/banner",
+      "slug": "showroom-contact-plovdiv",
+      "promptNote": "Glass showroom exterior at dusk near Plovdiv with white/silver premium cars; no signage; empty left.",
+      "outputs": {
+        "jpg": {
+          "path": "static/assets/daynight/banners/showroom-contact-plovdiv.jpg",
+          "dimensions": [
+            2400,
+            1100
+          ],
+          "bytes": 449656
+        },
+        "webp": {
+          "path": "static/assets/daynight/banners/showroom-contact-plovdiv.webp",
+          "dimensions": [
+            2400,
+            1100
+          ],
+          "bytes": 226750
+        },
+        "jpg2x": {
+          "path": "static/assets/daynight/banners/showroom-contact-plovdiv@2x.jpg",
+          "dimensions": [
+            4800,
+            2200
+          ],
+          "bytes": 1237310
+        },
+        "webp2x": {
+          "path": "static/assets/daynight/banners/showroom-contact-plovdiv@2x.webp",
+          "dimensions": [
+            4800,
+            2200
+          ],
+          "bytes": 514606
+        }
+      }
+    },
+    {
+      "class": "B",
+      "role": "about/import story banner",
+      "intendedSlot": "about/banner",
+      "slug": "about-import-story",
+      "promptNote": "Two-person import-document review with car key and blank shipping papers; subtle olive accent; no readable marks.",
+      "outputs": {
+        "jpg": {
+          "path": "static/assets/daynight/banners/about-import-story.jpg",
+          "dimensions": [
+            2400,
+            1100
+          ],
+          "bytes": 290602
+        },
+        "webp": {
+          "path": "static/assets/daynight/banners/about-import-story.webp",
+          "dimensions": [
+            2400,
+            1100
+          ],
+          "bytes": 115982
+        },
+        "jpg2x": {
+          "path": "static/assets/daynight/banners/about-import-story@2x.jpg",
+          "dimensions": [
+            4800,
+            2200
+          ],
+          "bytes": 846516
+        },
+        "webp2x": {
+          "path": "static/assets/daynight/banners/about-import-story@2x.webp",
+          "dimensions": [
+            4800,
+            2200
+          ],
+          "bytes": 277320
+        }
+      }
+    },
+    {
+      "class": "B",
+      "role": "premium road/journey banner",
+      "intendedSlot": "journey/banner",
+      "slug": "premium-road-journey",
+      "promptNote": "White/silver SUV on scenic Bulgarian foothill road; car right; empty left; no signs/plates.",
+      "outputs": {
+        "jpg": {
+          "path": "static/assets/daynight/banners/premium-road-journey.jpg",
+          "dimensions": [
+            2400,
+            1100
+          ],
+          "bytes": 402590
+        },
+        "webp": {
+          "path": "static/assets/daynight/banners/premium-road-journey.webp",
+          "dimensions": [
+            2400,
+            1100
+          ],
+          "bytes": 190414
+        },
+        "jpg2x": {
+          "path": "static/assets/daynight/banners/premium-road-journey@2x.jpg",
+          "dimensions": [
+            4800,
+            2200
+          ],
+          "bytes": 1121111
+        },
+        "webp2x": {
+          "path": "static/assets/daynight/banners/premium-road-journey@2x.webp",
+          "dimensions": [
+            4800,
+            2200
+          ],
+          "bytes": 452334
+        }
+      }
+    },
+    {
+      "class": "B",
+      "role": "blog cover import check",
+      "intendedSlot": "blog/import-check",
+      "slug": "import-check-cover-v1",
+      "promptNote": "Editorial inspection detail with gloved hand, engine bay, blank tablet/clipboard; 16:9 cover.",
+      "outputs": {
+        "jpg": {
+          "path": "static/assets/daynight/blog/import-check-cover-v1.jpg",
+          "dimensions": [
+            1600,
+            900
+          ],
+          "bytes": 194732
+        },
+        "webp": {
+          "path": "static/assets/daynight/blog/import-check-cover-v1.webp",
+          "dimensions": [
+            1600,
+            900
+          ],
+          "bytes": 87240
+        },
+        "jpg2x": {
+          "path": "static/assets/daynight/blog/import-check-cover-v1@2x.jpg",
+          "dimensions": [
+            3200,
+            1800
+          ],
+          "bytes": 559261
+        },
+        "webp2x": {
+          "path": "static/assets/daynight/blog/import-check-cover-v1@2x.webp",
+          "dimensions": [
+            3200,
+            1800
+          ],
+          "bytes": 193662
+        }
+      }
+    },
+    {
+      "class": "B",
+      "role": "blog cover registration",
+      "intendedSlot": "blog/registration",
+      "slug": "registration-cover-v1",
+      "promptNote": "Blank registration-style paperwork and car key at dealership desk; no official marks/readable text.",
+      "outputs": {
+        "jpg": {
+          "path": "static/assets/daynight/blog/registration-cover-v1.jpg",
+          "dimensions": [
+            1600,
+            900
+          ],
+          "bytes": 175915
+        },
+        "webp": {
+          "path": "static/assets/daynight/blog/registration-cover-v1.webp",
+          "dimensions": [
+            1600,
+            900
+          ],
+          "bytes": 70144
+        },
+        "jpg2x": {
+          "path": "static/assets/daynight/blog/registration-cover-v1@2x.jpg",
+          "dimensions": [
+            3200,
+            1800
+          ],
+          "bytes": 529989
+        },
+        "webp2x": {
+          "path": "static/assets/daynight/blog/registration-cover-v1@2x.webp",
+          "dimensions": [
+            3200,
+            1800
+          ],
+          "bytes": 175522
+        }
+      }
+    },
+    {
+      "class": "B",
+      "role": "blog cover sell car",
+      "intendedSlot": "blog/sell-car",
+      "slug": "sell-car-cover-v1",
+      "promptNote": "Hands reviewing blank valuation papers and car key; premium desk; no text.",
+      "outputs": {
+        "jpg": {
+          "path": "static/assets/daynight/blog/sell-car-cover-v1.jpg",
+          "dimensions": [
+            1600,
+            900
+          ],
+          "bytes": 216039
+        },
+        "webp": {
+          "path": "static/assets/daynight/blog/sell-car-cover-v1.webp",
+          "dimensions": [
+            1600,
+            900
+          ],
+          "bytes": 101422
+        },
+        "jpg2x": {
+          "path": "static/assets/daynight/blog/sell-car-cover-v1@2x.jpg",
+          "dimensions": [
+            3200,
+            1800
+          ],
+          "bytes": 649317
+        },
+        "webp2x": {
+          "path": "static/assets/daynight/blog/sell-car-cover-v1@2x.webp",
+          "dimensions": [
+            3200,
+            1800
+          ],
+          "bytes": 238336
+        }
+      }
+    },
+    {
+      "class": "B",
+      "role": "blog cover buying guide",
+      "intendedSlot": "blog/buying-guide",
+      "slug": "buying-guide-cover",
+      "promptNote": "Consultant/customer from side looking toward silver SUV in showroom; empty left; no signs.",
+      "outputs": {
+        "jpg": {
+          "path": "static/assets/daynight/blog/buying-guide-cover.jpg",
+          "dimensions": [
+            1600,
+            900
+          ],
+          "bytes": 208423
+        },
+        "webp": {
+          "path": "static/assets/daynight/blog/buying-guide-cover.webp",
+          "dimensions": [
+            1600,
+            900
+          ],
+          "bytes": 95628
+        },
+        "jpg2x": {
+          "path": "static/assets/daynight/blog/buying-guide-cover@2x.jpg",
+          "dimensions": [
+            3200,
+            1800
+          ],
+          "bytes": 603080
+        },
+        "webp2x": {
+          "path": "static/assets/daynight/blog/buying-guide-cover@2x.webp",
+          "dimensions": [
+            3200,
+            1800
+          ],
+          "bytes": 219744
+        }
+      }
+    },
+    {
+      "class": "B",
+      "role": "team card consultant",
+      "intendedSlot": "team/consultant",
+      "slug": "consultant-card",
+      "promptNote": "Two-person consultant/customer meeting over blank documents; candid team card.",
+      "outputs": {
+        "jpg": {
+          "path": "static/assets/daynight/team/consultant-card.jpg",
+          "dimensions": [
+            1600,
+            1000
+          ],
+          "bytes": 254259
+        },
+        "webp": {
+          "path": "static/assets/daynight/team/consultant-card.webp",
+          "dimensions": [
+            1600,
+            1000
+          ],
+          "bytes": 115122
+        },
+        "jpg2x": {
+          "path": "static/assets/daynight/team/consultant-card@2x.jpg",
+          "dimensions": [
+            3200,
+            2000
+          ],
+          "bytes": 737986
+        },
+        "webp2x": {
+          "path": "static/assets/daynight/team/consultant-card@2x.webp",
+          "dimensions": [
+            3200,
+            2000
+          ],
+          "bytes": 271526
+        }
+      }
+    },
+    {
+      "class": "B",
+      "role": "team card logistics",
+      "intendedSlot": "team/logistics",
+      "slug": "logistics-card",
+      "promptNote": "Two logistics staff checking covered car in enclosed transporter; no markings.",
+      "outputs": {
+        "jpg": {
+          "path": "static/assets/daynight/team/logistics-card.jpg",
+          "dimensions": [
+            1600,
+            1000
+          ],
+          "bytes": 273047
+        },
+        "webp": {
+          "path": "static/assets/daynight/team/logistics-card.webp",
+          "dimensions": [
+            1600,
+            1000
+          ],
+          "bytes": 132180
+        },
+        "jpg2x": {
+          "path": "static/assets/daynight/team/logistics-card@2x.jpg",
+          "dimensions": [
+            3200,
+            2000
+          ],
+          "bytes": 784420
+        },
+        "webp2x": {
+          "path": "static/assets/daynight/team/logistics-card@2x.webp",
+          "dimensions": [
+            3200,
+            2000
+          ],
+          "bytes": 294994
+        }
+      }
+    },
+    {
+      "class": "B",
+      "role": "team card inspection",
+      "intendedSlot": "team/inspection",
+      "slug": "inspection-card",
+      "promptNote": "Two technicians inspecting clean engine bay with blank diagnostics tablet; white light only.",
+      "outputs": {
+        "jpg": {
+          "path": "static/assets/daynight/team/inspection-card.jpg",
+          "dimensions": [
+            1600,
+            1000
+          ],
+          "bytes": 216063
+        },
+        "webp": {
+          "path": "static/assets/daynight/team/inspection-card.webp",
+          "dimensions": [
+            1600,
+            1000
+          ],
+          "bytes": 91960
+        },
+        "jpg2x": {
+          "path": "static/assets/daynight/team/inspection-card@2x.jpg",
+          "dimensions": [
+            3200,
+            2000
+          ],
+          "bytes": 636544
+        },
+        "webp2x": {
+          "path": "static/assets/daynight/team/inspection-card@2x.webp",
+          "dimensions": [
+            3200,
+            2000
+          ],
+          "bytes": 205022
+        }
+      }
+    },
+    {
+      "class": "B",
+      "role": "team card sales",
+      "intendedSlot": "team/sales",
+      "slug": "sales-card",
+      "promptNote": "Sales consultant and customer walking beside silver SUV; candid showroom card.",
+      "outputs": {
+        "jpg": {
+          "path": "static/assets/daynight/team/sales-card.jpg",
+          "dimensions": [
+            1600,
+            1000
+          ],
+          "bytes": 218093
+        },
+        "webp": {
+          "path": "static/assets/daynight/team/sales-card.webp",
+          "dimensions": [
+            1600,
+            1000
+          ],
+          "bytes": 96002
+        },
+        "jpg2x": {
+          "path": "static/assets/daynight/team/sales-card@2x.jpg",
+          "dimensions": [
+            3200,
+            2000
+          ],
+          "bytes": 629055
+        },
+        "webp2x": {
+          "path": "static/assets/daynight/team/sales-card@2x.webp",
+          "dimensions": [
+            3200,
+            2000
+          ],
+          "bytes": 214624
+        }
+      }
+    },
+    {
+      "class": "B",
+      "role": "category tile premium SUVs",
+      "intendedSlot": "tiles/premium-suvs",
+      "slug": "premium-suvs-tile",
+      "promptNote": "White/silver premium SUV category tile; vehicle right; empty left; no plates/signage.",
+      "outputs": {
+        "jpg": {
+          "path": "static/assets/daynight/tiles/premium-suvs-tile.jpg",
+          "dimensions": [
+            1600,
+            1000
+          ],
+          "bytes": 343097
+        },
+        "webp": {
+          "path": "static/assets/daynight/tiles/premium-suvs-tile.webp",
+          "dimensions": [
+            1600,
+            1000
+          ],
+          "bytes": 200252
+        },
+        "jpg2x": {
+          "path": "static/assets/daynight/tiles/premium-suvs-tile@2x.jpg",
+          "dimensions": [
+            3200,
+            2000
+          ],
+          "bytes": 943223
+        },
+        "webp2x": {
+          "path": "static/assets/daynight/tiles/premium-suvs-tile@2x.webp",
+          "dimensions": [
+            3200,
+            2000
+          ],
+          "bytes": 432216
+        }
+      }
+    },
+    {
+      "class": "B",
+      "role": "category tile executive sedans",
+      "intendedSlot": "tiles/executive-sedans",
+      "slug": "executive-sedans-tile",
+      "promptNote": "Silver executive sedan category tile; vehicle right; empty left; no plates/signage.",
+      "outputs": {
+        "jpg": {
+          "path": "static/assets/daynight/tiles/executive-sedans-tile.jpg",
+          "dimensions": [
+            1600,
+            1000
+          ],
+          "bytes": 363717
+        },
+        "webp": {
+          "path": "static/assets/daynight/tiles/executive-sedans-tile.webp",
+          "dimensions": [
+            1600,
+            1000
+          ],
+          "bytes": 213748
+        },
+        "jpg2x": {
+          "path": "static/assets/daynight/tiles/executive-sedans-tile@2x.jpg",
+          "dimensions": [
+            3200,
+            2000
+          ],
+          "bytes": 996198
+        },
+        "webp2x": {
+          "path": "static/assets/daynight/tiles/executive-sedans-tile@2x.webp",
+          "dimensions": [
+            3200,
+            2000
+          ],
+          "bytes": 471646
+        }
+      }
+    },
+    {
+      "class": "B",
+      "role": "category tile sport coupes",
+      "intendedSlot": "tiles/sport-coupes",
+      "slug": "sport-coupes-tile",
+      "promptNote": "Light grey sport coupe category tile; vehicle right; empty left; no plates/signage.",
+      "outputs": {
+        "jpg": {
+          "path": "static/assets/daynight/tiles/sport-coupes-tile.jpg",
+          "dimensions": [
+            1600,
+            1000
+          ],
+          "bytes": 295393
+        },
+        "webp": {
+          "path": "static/assets/daynight/tiles/sport-coupes-tile.webp",
+          "dimensions": [
+            1600,
+            1000
+          ],
+          "bytes": 168776
+        },
+        "jpg2x": {
+          "path": "static/assets/daynight/tiles/sport-coupes-tile@2x.jpg",
+          "dimensions": [
+            3200,
+            2000
+          ],
+          "bytes": 824162
+        },
+        "webp2x": {
+          "path": "static/assets/daynight/tiles/sport-coupes-tile@2x.webp",
+          "dimensions": [
+            3200,
+            2000
+          ],
+          "bytes": 374872
+        }
+      }
+    },
+    {
+      "class": "B",
+      "role": "category tile family compact SUVs",
+      "intendedSlot": "tiles/family-compact-suvs",
+      "slug": "family-compact-suvs-tile",
+      "promptNote": "White compact premium SUV category tile; vehicle right; empty left; no plates/signage.",
+      "outputs": {
+        "jpg": {
+          "path": "static/assets/daynight/tiles/family-compact-suvs-tile.jpg",
+          "dimensions": [
+            1600,
+            1000
+          ],
+          "bytes": 399760
+        },
+        "webp": {
+          "path": "static/assets/daynight/tiles/family-compact-suvs-tile.webp",
+          "dimensions": [
+            1600,
+            1000
+          ],
+          "bytes": 251728
+        },
+        "jpg2x": {
+          "path": "static/assets/daynight/tiles/family-compact-suvs-tile@2x.jpg",
+          "dimensions": [
+            3200,
+            2000
+          ],
+          "bytes": 1069194
+        },
+        "webp2x": {
+          "path": "static/assets/daynight/tiles/family-compact-suvs-tile@2x.webp",
+          "dimensions": [
+            3200,
+            2000
+          ],
+          "bytes": 529420
+        }
+      }
+    },
+    {
+      "class": "B",
+      "role": "OG/social background",
+      "intendedSlot": "social/og",
+      "slug": "og-social-background",
+      "promptNote": "Dusk showroom OG background with white SUV and silver sedan right; empty left; no signage/text.",
+      "outputs": {
+        "jpg": {
+          "path": "static/assets/daynight/social/og-social-background.jpg",
+          "dimensions": [
+            1200,
+            630
+          ],
+          "bytes": 161817
+        },
+        "webp": {
+          "path": "static/assets/daynight/social/og-social-background.webp",
+          "dimensions": [
+            1200,
+            630
+          ],
+          "bytes": 92766
+        },
+        "jpg2x": {
+          "path": "static/assets/daynight/social/og-social-background@2x.jpg",
+          "dimensions": [
+            2400,
+            1260
+          ],
+          "bytes": 438049
+        },
+        "webp2x": {
+          "path": "static/assets/daynight/social/og-social-background@2x.webp",
+          "dimensions": [
+            2400,
+            1260
+          ],
+          "bytes": 203044
+        }
+      }
+    }
+  ]
+}

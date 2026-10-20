@@ -1,0 +1,179 @@
+{
+  "schemaVersion": 1,
+  "template": "import",
+  "canonicalBase": "b49b5cd10b8a3a3bea5c86d89f80a1c88426c96f",
+  "canonicalSubtree": "d841ddfe5bec918bf6b2c19fd6971fecd6b8e54d",
+  "sourcePatch": "J:/cars/docs/audits/2026-10-18-expansion/import-recovered-audit.patch",
+  "sourcePatchBytes": 19094,
+  "sourcePatchSha256": "9b3f025f85c1f0beccceabb1362f13b8bcb7484e8ac941655f99e4d80182be1b",
+  "scopePaths": [
+    "templates/import/src/lib/auxero/about.spec.ts",
+    "templates/import/src/lib/auxero/about.ts",
+    "templates/import/src/lib/data/daynight.ts",
+    "templates/import/src/lib/server/admin-actions-authorization.spec.ts",
+    "templates/import/src/lib/server/auxero-template.spec.ts",
+    "templates/import/src/lib/server/auxero-template.ts",
+    "templates/import/src/routes/admin/agents/+page.server.ts",
+    "templates/import/src/routes/admin/agents/[slug]/+page.server.ts",
+    "templates/import/src/routes/admin/imports/+page.server.ts",
+    "templates/import/src/routes/admin/messages/+page.server.ts",
+    "templates/import/src/routes/admin/users/+page.server.ts"
+  ],
+  "localHeadBefore": "3bc5a0ea33969f18ccc34d5e4b0e8cab1513e6a2",
+  "localHeadAfter": "3bc5a0ea33969f18ccc34d5e4b0e8cab1513e6a2",
+  "localStatusBefore": " M templates/import/docs/ARCHITECTURE.md\n M templates/import/docs/MOBILE-STYLING.md\n M templates/import/src/lib/auxero/compare.ts\n M templates/import/src/lib/auxero/home-five.ts\n M templates/import/src/lib/components/detail/AuxeroVehicleMobilePdp.svelte\n M templates/import/src/lib/components/home/HomeFiveHero.svelte\n M templates/import/src/lib/components/inventory/InventoryMobilePage.svelte\n M templates/import/src/lib/components/layout/MobileAppbar.svelte\n M templates/import/src/lib/components/services/ServiceCard.svelte\n M templates/import/src/lib/content/inventory-localized.ts\n M templates/import/src/lib/domain/vehicle-card-labels.test.ts\n M templates/import/src/lib/domain/vehicle-card-labels.ts\n M templates/import/src/lib/domain/vehicle-card.ts\n M templates/import/src/lib/domain/vehicle-search.ts\n M templates/import/src/lib/i18n/final-review.spec.ts\n M templates/import/src/lib/i18n/messages.ts\n M templates/import/src/lib/locale/LocalePreferences.svelte\n M templates/import/src/lib/server/vehicle-detail.ts\n M templates/import/src/lib/styles/mobile-controls.css\n M templates/import/src/routes/(site)/services/+page.svelte\n M templates/import/tests/localization.e2e.ts\n",
+  "remoteBefore": [
+    {
+      "path": "templates/import/src/lib/auxero/about.ts",
+      "remoteBeforeSha": "77fc61087d5df08408a55307b24bd99a38d444e6",
+      "remoteBeforeBytes": 9626,
+      "localBeforeRawSha256": "8e369e09461d477819a7791f5d3000b99835227d0affc6de2f7005cfa3d4d266",
+      "localBeforeNormalizedGitSha": "77fc61087d5df08408a55307b24bd99a38d444e6"
+    },
+    {
+      "path": "templates/import/src/lib/data/daynight.ts",
+      "remoteBeforeSha": "0e3d01929c0a085c256331d43abd3e7853f9ef0e",
+      "remoteBeforeBytes": 5850,
+      "localBeforeRawSha256": "a34e5d98b9f775296866df95387ae0e560ea3cc22b2120c74332b3121e7c6c35",
+      "localBeforeNormalizedGitSha": "0e3d01929c0a085c256331d43abd3e7853f9ef0e"
+    },
+    {
+      "path": "templates/import/src/lib/server/auxero-template.ts",
+      "remoteBeforeSha": "f9130f9fe1bae3352389c3c9cf3993dd238ec9a9",
+      "remoteBeforeBytes": 114979,
+      "localBeforeRawSha256": "4a43cc10f98cb44f89eafe26c278c6b96737de80778061f7985c32ad5b1d25ab",
+      "localBeforeNormalizedGitSha": "f9130f9fe1bae3352389c3c9cf3993dd238ec9a9"
+    },
+    {
+      "path": "templates/import/src/routes/admin/agents/+page.server.ts",
+      "remoteBeforeSha": "7a8b06dbf503122038060fd23e0e98939803cab7",
+      "remoteBeforeBytes": 1151,
+      "localBeforeRawSha256": "d0afe1e96d44ee7acdc4df078ba7045318844e307d117043c9fd3a2400b44d1e",
+      "localBeforeNormalizedGitSha": "7a8b06dbf503122038060fd23e0e98939803cab7"
+    },
+    {
+      "path": "templates/import/src/routes/admin/agents/[slug]/+page.server.ts",
+      "remoteBeforeSha": "d10c569e3b1b0abba91c81cb1a414ad0b24f2de6",
+      "remoteBeforeBytes": 1308,
+      "localBeforeRawSha256": "99dd7652de90e15a2b215c0c7fc30e0a20e5c864498d1824c29395c0bf3b9ee4",
+      "localBeforeNormalizedGitSha": "d10c569e3b1b0abba91c81cb1a414ad0b24f2de6"
+    },
+    {
+      "path": "templates/import/src/routes/admin/imports/+page.server.ts",
+      "remoteBeforeSha": "3a3960b07fdb27256d56a9b354ff68866fd7afb5",
+      "remoteBeforeBytes": 1360,
+      "localBeforeRawSha256": "75710c580b1263411de87621808505aa29c681750e12d87bbd6101b875f76221",
+      "localBeforeNormalizedGitSha": "3a3960b07fdb27256d56a9b354ff68866fd7afb5"
+    },
+    {
+      "path": "templates/import/src/routes/admin/messages/+page.server.ts",
+      "remoteBeforeSha": "6aa930126c6b42476c9a9b6ef78f5cf5d24a61bc",
+      "remoteBeforeBytes": 4199,
+      "localBeforeRawSha256": "9bbc310ed3cda64d124ad40ea70f743f0197abe2ed336b0c1fec540eefee935d",
+      "localBeforeNormalizedGitSha": "6aa930126c6b42476c9a9b6ef78f5cf5d24a61bc"
+    },
+    {
+      "path": "templates/import/src/routes/admin/users/+page.server.ts",
+      "remoteBeforeSha": "5509ea25c895456d40926488a2edac4d6487c165",
+      "remoteBeforeBytes": 2010,
+      "localBeforeRawSha256": "c3e0303eea1a0a9f23d37f09b08c4b48597eff90ef118b021e9bffcb3cb816fc",
+      "localBeforeNormalizedGitSha": "5509ea25c895456d40926488a2edac4d6487c165"
+    }
+  ],
+  "candidateFiles": [
+    {
+      "path": "templates/import/src/lib/auxero/about.spec.ts",
+      "candidateGitBlobSha": "8577ce382dc769e9e2a3ad8ed503b21c54f4668e",
+      "candidateSha256": "58ef0c72944166f16e291b15852c8dfbb8700ffcdefbb7f2565af20b9563fc8c",
+      "bytes": 1491,
+      "localRawSha256": "58ef0c72944166f16e291b15852c8dfbb8700ffcdefbb7f2565af20b9563fc8c",
+      "localNormalizedEqualsCandidate": true
+    },
+    {
+      "path": "templates/import/src/lib/auxero/about.ts",
+      "candidateGitBlobSha": "5cb475c1774ce28bf73c4d0810e3894638354709",
+      "candidateSha256": "006c12ba2ea4defb41efc26625c88d96ceec7d66e9e8f3ed60eb16ae41ba3599",
+      "bytes": 9421,
+      "localRawSha256": "006c12ba2ea4defb41efc26625c88d96ceec7d66e9e8f3ed60eb16ae41ba3599",
+      "localNormalizedEqualsCandidate": true
+    },
+    {
+      "path": "templates/import/src/lib/data/daynight.ts",
+      "candidateGitBlobSha": "bbfb9f3b5718e95c299564b1de47ae626e961d96",
+      "candidateSha256": "bb13a8ca67786c9263ba3ec93e48dd040af38ec434e81fbc07dda106c2d79c43",
+      "bytes": 6834,
+      "localRawSha256": "bb13a8ca67786c9263ba3ec93e48dd040af38ec434e81fbc07dda106c2d79c43",
+      "localNormalizedEqualsCandidate": true
+    },
+    {
+      "path": "templates/import/src/lib/server/admin-actions-authorization.spec.ts",
+      "candidateGitBlobSha": "04dd0ac1de3cb48acc6a3cc6940a0360f20fa0a6",
+      "candidateSha256": "f458cdc6060597781a104a047bed4d366681526221efab7b75d07f0e5b0e3c7b",
+      "bytes": 5061,
+      "localRawSha256": "f458cdc6060597781a104a047bed4d366681526221efab7b75d07f0e5b0e3c7b",
+      "localNormalizedEqualsCandidate": true
+    },
+    {
+      "path": "templates/import/src/lib/server/auxero-template.spec.ts",
+      "candidateGitBlobSha": "c3ca0c7b095f9d6bce2b90c5b8e2f87aca939e0e",
+      "candidateSha256": "af6aa69f7ce008cc12bc63f8ffbcaf1c2f638a1893e85b67033d05aec581c5fd",
+      "bytes": 1671,
+      "localRawSha256": "af6aa69f7ce008cc12bc63f8ffbcaf1c2f638a1893e85b67033d05aec581c5fd",
+      "localNormalizedEqualsCandidate": true
+    },
+    {
+      "path": "templates/import/src/lib/server/auxero-template.ts",
+      "candidateGitBlobSha": "a077399e42a40a94b33b1a414e06f3f3aa7ede96",
+      "candidateSha256": "37b4fac5a1370c85885dea66c0568b65014497f50371ddb6862205dd7087e5bd",
+      "bytes": 115039,
+      "localRawSha256": "37b4fac5a1370c85885dea66c0568b65014497f50371ddb6862205dd7087e5bd",
+      "localNormalizedEqualsCandidate": true
+    },
+    {
+      "path": "templates/import/src/routes/admin/agents/+page.server.ts",
+      "candidateGitBlobSha": "eb1fc323121256a06d8597e40e2a52a77db0891d",
+      "candidateSha256": "e33d715a23f6483191b7056f7d1d4b02746bc66915d7e0e4aee65f60c2a73db9",
+      "bytes": 1229,
+      "localRawSha256": "e33d715a23f6483191b7056f7d1d4b02746bc66915d7e0e4aee65f60c2a73db9",
+      "localNormalizedEqualsCandidate": true
+    },
+    {
+      "path": "templates/import/src/routes/admin/agents/[slug]/+page.server.ts",
+      "candidateGitBlobSha": "e0c3eb46c4cca5294fcbf101f53526e70039e744",
+      "candidateSha256": "77b1ea43a9490fc433b6da1e2f1b81dd68c4b32017aeb710547f8584cc5b6209",
+      "bytes": 1401,
+      "localRawSha256": "77b1ea43a9490fc433b6da1e2f1b81dd68c4b32017aeb710547f8584cc5b6209",
+      "localNormalizedEqualsCandidate": true
+    },
+    {
+      "path": "templates/import/src/routes/admin/imports/+page.server.ts",
+      "candidateGitBlobSha": "312f646b6018466dcf1ee79a294e57aba0b7515d",
+      "candidateSha256": "c1ecc0331a09ac319c3a294d8519d34a0037ece868494cc629ee7c2f304849d9",
+      "bytes": 1439,
+      "localRawSha256": "c1ecc0331a09ac319c3a294d8519d34a0037ece868494cc629ee7c2f304849d9",
+      "localNormalizedEqualsCandidate": true
+    },
+    {
+      "path": "templates/import/src/routes/admin/messages/+page.server.ts",
+      "candidateGitBlobSha": "4247b014b3150b79386735b8a00508c9524dfac2",
+      "candidateSha256": "20840d028fd89dbe36266b14edf419ec5d1b9d8948ef9b96d0374346a14ae255",
+      "bytes": 4279,
+      "localRawSha256": "20840d028fd89dbe36266b14edf419ec5d1b9d8948ef9b96d0374346a14ae255",
+      "localNormalizedEqualsCandidate": true
+    },
+    {
+      "path": "templates/import/src/routes/admin/users/+page.server.ts",
+      "candidateGitBlobSha": "48f778abe87180a935af6fb695cc52bca30c4a29",
+      "candidateSha256": "7749684e7e41f739a332ddd8103da1bc381271b1f563b106c310339b0d525ab9",
+      "bytes": 2087,
+      "localRawSha256": "7749684e7e41f739a332ddd8103da1bc381271b1f563b106c310339b0d525ab9",
+      "localNormalizedEqualsCandidate": true
+    }
+  ],
+  "outsidePatchImportTrackedDiffSha256Before": "2f309d4693a8dec5246cf9f39eab86a19e40bd4e3bc9b596b14f3cabd3aed6d2",
+  "outsidePatchImportTrackedDiffSha256After": "2f309d4693a8dec5246cf9f39eab86a19e40bd4e3bc9b596b14f3cabd3aed6d2",
+  "outsidePatchImportTrackedDiffPreserved": true,
+  "gitIndexChanged": false,
+  "published": false,
+  "deployed": false
+}

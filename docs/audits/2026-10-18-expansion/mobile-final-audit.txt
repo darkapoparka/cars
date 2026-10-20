@@ -1,0 +1,97 @@
+Completed Mobile source audit
+
+No accessible final Mobile patch/report was recovered from Chat or Library. I preserved original Chat 6ad50ecb-6024-83ed-96ee-b1f3a37f2bdf, retained its recoverable 18:35:10 UTC progress and partial notes, and completed the bounded audit here.
+
+The resulting patch passes the available source checks. Production-build, browser and hosted acceptance remain unverified, and the remaining copy/currency findings below are explicitly open.
+
+Deliverables
+mobile-final-audit.txt
+ — compact report with findings, source references, validation results and qualifications.
+mobile-final-audit.patch
+ — complete patch, also reproduced inline below.
+mobile-final-audit-evidence.zip
+ — report, patch, original partial notes, exact-source receipts, before/after logs and preservation checks.
+Exact inspected source
+Source	Immutable commit	Inspected tree
+
+Canonical Cars / Mobile	b49b5cd10b8a3a3bea5c86d89f80a1c88426c96f	Mobile: 792bfdd1d8eb22aabd90c7e3a0c0779a6c1c36f3
+
+Original Cars / Mobile	8243539369bbe74419214505f375586e06be0d91	Mobile: 792bfdd1d8eb22aabd90c7e3a0c0779a6c1c36f3 — exact equality verified
+
+Publishing mirror	a3d4927f1e5424be4877862c5374d0e76aae8ea2	Mirror root: 63f5fc24ae9dd856cbb83875966cdce18189519c
+
+Canonical Cars root tree: 8c219f5dee9cb1d0357bee19e35eadc006873cad. Original Cars root tree: c82ff063c7f115b36ff18675c3556b805dddd52e.
+
+The mirror differs in 27 common blobs, with 24 canonical-only and 22 mirror-only blobs. It was used for comparison, and no mirror changes were adopted. The current 
+release lock already selects Mobile as approved at bb173c33d7b640502ad2e4bf27546748c12858b8, using the same Mobile subtree. That existing selection does not qualify this new patch.
+
+Coverage included all 190 Mobile src/ text/source files, all 12 test-source files, relevant manifests and entry points, current source instructions, and the Mobile producer boundary. Git metadata covered all 898 Mobile blobs; historical media/evidence were not exhaustively downloaded.
+
+Prioritized findings and fixes
+
+References below point to the original pinned source. Mobile component/library paths are under templates/mobile/src/.
+
+Priority	Finding and minimal correction
+P1	Generated dealer data could corrupt generated source. Replacement strings at 
+scripts/lib/client-refresh-six.mjs:156 and 
+:267 interpreted literal $&, $` , $' and $$ inside dealer data. Two callback replacements preserve the exact values. Eight regression cases failed before and pass after. This demonstrates source/data corruption; arbitrary code execution was not established.
+P2	Preview contact facts could leak into personalization. 
+ShowroomPageLayout.tsx:114 always fell back to the Varna example street. It now uses the existing preview-aware helper. 
+showroom-config.ts:76–84 accepted the display-only +359 000 000 000; the shared constant and formatting variants are now rejected as configured phone destinations.
+P2	Supplied stock could inherit captured facts through matching IDs. Added sample guards at 
+DealerInformation.tsx:59, 
+VehicleMessageScreen.tsx:185/191, and 
+ShowroomImportExamples.tsx:76. This prevents inherited Hofmann services/logo, WELLER delivery, and illustrative import origins. 
+EnquiryEditor.tsx:169/172 also restricts captured address/hours fallbacks to samples; the normal producer already supplies those dealer fields.
+P2	Expanded supplied descriptions acquired a captured-fixture disclaimer. 
+VehicleSections.tsx:882 now uses the same sample/showroom distinction as the existing bottom disclaimer. Supplied descriptions and the producer’s inventory disclosure remain intact.
+P2	Storage failures produced durable-save success messages. 
+store.ts:31–53, 
+NativeChecklist.tsx:68–74, and 
+SellFlow.tsx:47–54 now use the existing persistence result. Failed writes retain session state and say so. Successful messages and navigation are preserved.
+P2	Repeated login return parameters could throw. 
+app/login/page.tsx:5–8 now checks the actual string | string[] boundary before passing next to the existing navigation helper. Valid destinations and the existing fallback remain unchanged.
+P3	Three Mobile instruction footers described an obsolete release state. Updated AGENTS.md:24–25, TEMPLATE.md:577–580, and docs/FINALIZATION.md:114–119 to reflect the approved lock and 
+six-design contract, while keeping new integration/release qualification explicit.
+
+The maintained producer already replaces captured dealer data and suppresses unsupported statistics/ratings. Those fixes were preserved. No additional active hardcoded dealer social/video/staff/testimonial destinations were found outside the captured reference scope and configured social-link boundary. Captured data and provenance were retained as reference material. No broad dead-code deletion was justified by the actual consumers.
+
+Remaining gaps
+
+These remain source findings requiring qualification before a dealer release:
+
+Generic non-EUR controls and service amounts. The producer changes general price formatters, but euro units remain in controls and service forms, including 
+ShowroomFilterSheet.tsx:330, ShowroomDesktopFilterFields.tsx:181, filter-fields.ts:16, native-filter-options.ts:24, and 
+ShowroomServiceRequest.tsx:440,672,694. The specialized UK adapter handles its own GBP paths; this finding concerns the generic non-EUR boundary.
+Retained native entry claims. 
+NativeInboxes.tsx:86–88 advertises sending/receiving messages; 
+SellScreen.tsx:71–72/82–83 advertises live valuation/marketplace capabilities; 
+AssistantScreen.tsx:123–133 displays a scripted connectivity failure. Later local-demo disclosures do not qualify these initial claims.
+An earlier SellFlow storage sentence remains inaccurate during failure. 
+SellFlow.tsx:235–236 still says text fields are saved on-device. The completion state is corrected; the earlier static sentence is unchanged.
+Build/browser/hosted qualification is outstanding. A complete preview environment was not assembled from this sparse recovery. No production build, browser execution, screenshot matrix, six-design integration run or hosted acceptance was performed. Asset preservation is not a new rights clearance or proof that every historical image is free of donor marks.
+Actual validation and preservation
+
+All results below were obtained during this recovery; no unfinished original validation was presented as completed.
+
+Command/check	Result
+npm run lint — Mobile directory	Pass, exit 0
+npm run typecheck — Mobile directory	Pass, exit 0
+npm test — Mobile directory	Pass, all 11 test files; runner reports at file granularity
+node scripts/mobile-personalization.test.mjs — Cars root	8/8 pass after the fix; 8 failures with the original producer
+node evidence/store-action-smoke.mjs baseline — audit directory	9/9 reproduction assertions, confirming original false-success wording under denied/full storage
+node evidence/store-action-smoke.mjs cars — audit directory	9/9 corrected action/state assertions
+Forward and reverse git apply --check	Pass against pristine baseline and candidate
+Exact source/style/asset comparisons	Pass, no unexpected source changes
+
+The exact patch-check commands were:
+
+git apply --check /workspace/scratch/0aed21ee18b7/mobile-audit/mobile-final-audit.patch, from baseline.
+git apply --reverse --check /workspace/scratch/0aed21ee18b7/mobile-audit/mobile-final-audit.patch, from cars.
+
+An earlier npm test failed in two suites because image fixtures were absent. I reused 77 existing local images, totaling 15,199,960 bytes, after every Git blob and byte length matched the pinned subtree; the final run passed. No installs or media downloads were needed. Checks used Node 22.20.0, npm 11.3.0, and the existing Mobile installation, whose 20 direct dependency versions match the lock. The lock records release Node version 22.23.2.
+
+Style and asset bytes stayed unchanged: all 92 StyleX declarations across 91 files, all 16 complete CSS/StyleX files, the default showroom object, eight catalog/dealer/native-data files, package/lock files, and all 31 route paths were preserved. No asset path appears in the patch.
+
+The affected consumer TSX files are intentionally not byte-identical: predicates, invalid-input handling and failed-storage text change. Browser pixel equivalence was not established. The six-design FAB/shared Admin, coordinator fixes, release lock, clients and publishing systems were untouched.
+

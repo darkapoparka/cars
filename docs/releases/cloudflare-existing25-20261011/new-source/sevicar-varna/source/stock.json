@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "kind": "dated-marketplace-listing-sample",
+  "candidate": true,
+  "observedAt": "2026-10-11T11:27:14.524Z",
+  "sourceProfile": "https://sevicar.mobile.bg/",
+  "sourcePageVisibleListingCount": 27,
+  "sourceProfileCountObservedAt": "2026-10-11T11:25:25.809Z",
+  "profileCountIsAvailableStock": false,
+  "profileCountIsClassifiedOrdinaryRetail": false,
+  "liveInventory": false,
+  "mediaPermission": "unconfirmed",
+  "localMediaReady": true,
+  "records": [
+    {
+      "id": "11781342032890584",
+      "sourceId": "11781342032890584",
+      "title": "Audi A6 S line Plus",
+      "make": "Audi",
+      "model": "A6",
+      "year": 2018,
+      "productionMonth": 5,
+      "priceEur": 18999,
+      "currency": "EUR",
+      "priceVatNotice": "Не се начислява ДДС",
+      "mileageKm": 207189,
+      "body": "Комби",
+      "fuel": "Дизелов",
+      "transmission": "Автоматична",
+      "powerHp": 190,
+      "images": [
+        "/assets/vehicles/11781342032890584/1.webp",
+        "/assets/vehicles/11781342032890584/2.webp"
+      ],
+      "sourceUrl": "https://sevicar.mobile.bg/obiava-11781342032890584-audi-a6-s-line-plus-quattro-matrix-distronic",
+      "sourceHtmlSha256": "ddb7b3f6216166b93e7f99f207d7bef4c2ac661e0b1de899660ccb6b27597f12",
+      "sourcePriceVerifiedInWebText": true,
+      "sourcePublicationText": "Редактирана в 11:52 часа на 05.09.2026 год.",
+      "observedAt": "2026-10-11T11:27:14.524Z",
+      "availability": "Датирана обява; потвърдете цената и наличността с автокъщата.",
+      "availabilityConfirmed": false,
+      "partsListing": false,
+      "arrivalNotice": null,
+      "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "mediaState": "not-collected; rights/reuse and truthful per-record media decision pending",
+      "mediaPermission": "Not independently established",
+      "fieldConflicts": [],
+      "sourcePhotoUrls": [
+        "https://cdn2.focus.bg/mobile/photosorg/584/1/big1/11781342032890584_30.webp",
+        "https://cdn2.focus.bg/mobile/photosorg/584/1/big1/11781342032890584_CG.webp",
+        "https://cdn2.focus.bg/mobile/photosorg/584/1/big1/11781342032890584_tb.webp",
+        "https://cdn2.focus.bg/mobile/photosorg/584/1/big1/11781342032890584_zO.webp",
+        "https://cdn2.focus.bg/mobile/photosorg/584/1/big1/11781342032890584_pq.webp",
+        "https://cdn2.focus.bg/mobile/photosorg/584/1/big1/11781342032890584_dj.webp",
+        "https://cdn2.focus.bg/mobile/photosorg/584/1/big1/11781342032890584_Rw.webp",
+        "https://cdn2.focus.bg/mobile/photosorg/584/1/big1/11781342032890584_Qf.webp",
+        "https://cdn2.focus.bg/mobile/photosorg/584/1/big1/11781342032890584_ER.webp",
+        "https://cdn2.focus.bg/mobile/photosorg/584/1/big1/11781342032890584_6R.webp",
+        "https://cdn2.focus.bg/mobile/photosorg/584/1/big1/11781342032890584_DT.webp",
+        "https://cdn2.focus.bg/mobile/photosorg/584/1/big1/11781342032890584_NV.webp"
+      ],
+      "sourcePhotoEvidence": {
+        "sourceId": "11781342032890584",
+        "sourceUrl": "https://sevicar.mobile.bg/obiava-11781342032890584-audi-a6-s-line-plus-quattro-matrix-distronic",
+        "observedAt": "2026-10-11T12:09:27.474Z",
+        "responseSha256": "1d3cc2a93ae18ddf143b00fdf32ac5b43ede4f83d6b052fa82bcac422885930c",
+        "association": "primary gallery URLs contain exact source listing ID",
+        "remoteBytesFetched": false
+      },
+      "conditionIndependentlyConfirmed": false
+    }
+  ],
+  "localMediaHydration": {
+    "candidateOnly": true,
+    "technicalRasterPresent": true,
+    "rightsApproved": false,
+    "availabilityConfirmed": false,
+    "assets": [
+      {
+        "publicPath": "/assets/vehicles/11781342032890584/1.webp",
+        "sourceUrl": "https://cdn2.focus.bg/mobile/photosorg/584/1/big1/11781342032890584_30.webp",
+        "sha256": "031266123cd65bd395acf460013307f25c2bb11d4a0964990a16f3b2bedfa6c2",
+        "bytes": 258186,
+        "downloadObservedAt": "2026-10-11T12:20:24.329Z"
+      },
+      {
+        "publicPath": "/assets/vehicles/11781342032890584/2.webp",
+        "sourceUrl": "https://cdn2.focus.bg/mobile/photosorg/584/1/big1/11781342032890584_CG.webp",
+        "sha256": "c73980193d699a2bf10c3c304631ea93ff607d6b282d1d25917839c89cfcc371",
+        "bytes": 269712,
+        "downloadObservedAt": "2026-10-11T12:20:24.547Z"
+      }
+    ],
+    "sourceStockSha256": "7981121a13aad5027073604a1e353a35f6e0617113f7eb4412af99cf4b67a54f"
+  }
+}

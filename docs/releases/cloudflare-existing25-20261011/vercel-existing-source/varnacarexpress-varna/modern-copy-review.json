@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-reviewed-modern-bilingual-copy-input",
+  "dealer": "varnacarexpress-varna",
+  "sourceCommit": "d9594c2979f668831b78609e4e990640259aee81",
+  "baselineTree": "4e8a2079d3bdabd49ceccc31810d39680838e2be",
+  "inputSha256": "e6dddfef221f248ebd5a77d3cee94959c29398a96473c5763955ba93990fb083",
+  "modernInputRowsSha256": "52579574f97c91dc586b591dae91a4f3b6930c602f1b1a1502ec1bd0c83f5efd",
+  "listingCount": 1,
+  "profileInputs": [
+    {
+      "path": "dealer.json",
+      "gitBlob": "03d3cdca5e82f0992a91aaa4c96bdd0980fb1f84",
+      "sha256": "62d5af4d70c8ed8f2f8df0c6e170993dbb1356d23174b2a9e5770fea32c1ccab",
+      "bytes": 4433
+    },
+    {
+      "path": "business-facts.json",
+      "gitBlob": "a2e8f69c6e4e92421a3e223f141845c721f130ad",
+      "sha256": "0caf94b00abd49c5fa8528ea97f2bbe3957fa8b353955d62d83363e0546e0d0e",
+      "bytes": 2250
+    },
+    {
+      "path": "stock.json",
+      "gitBlob": "4d4e7ce30c54c17244fa79dec3d9239bd4c7a290",
+      "sha256": "e6a7ee5746871894c04feeef29f6995be99cbdb292a689d15ea45494ad835fe5",
+      "bytes": 10213
+    }
+  ],
+  "reviewedGeneratorHelper": {
+    "path": "scripts/lib/modern-dealer-inventory-copy.mjs",
+    "sha256": "cbdbaa28dc07911cfe913b4e627671b6556fc25d3bfe59364e29c5ca5a29072b",
+    "sourceCommit": "14d86f67c160699c18a6ec5658197cc4d9011e0b"
+  },
+  "review": {
+    "displayCopyOnly": true,
+    "exactSourceDescriptionKeys": true,
+    "listingFactsUnchanged": true,
+    "imageUrlsUnchanged": true,
+    "imageAltsPreserved": true,
+    "interpolationTokensUnchanged": true,
+    "reviewedBy": "Codex, authorized final-template rollout",
+    "reviewedAt": "2026-10-14T20:04:09.138Z",
+    "notes": "Reuse exact existing native or reviewed registered companions for every actual current row; no new translation/factual source edits."
+  },
+  "reviewedCopy": {
+    "kia-sportage-2013-21791619772327999": {
+      "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "en": {
+        "description": "Dated sample from a published listing. Confirm the condition, price and availability directly with the dealership.",
+        "imageAlts": [
+          "Kia Sportage",
+          "Kia Sportage"
+        ]
+      },
+      "bg": {
+        "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+        "imageAlts": [
+          "Kia Sportage",
+          "Kia Sportage"
+        ]
+      }
+    }
+  }
+}

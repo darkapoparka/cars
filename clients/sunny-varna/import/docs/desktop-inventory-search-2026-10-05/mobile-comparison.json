@@ -1,0 +1,46 @@
+[
+	{
+		"locale": "bg",
+		"width": 320,
+		"height": 844,
+		"byteIdentical": true,
+		"beforeSha256": "f6a9d8ad6aa323676c2c1f187c6ef40d4d90778e0f2ae6077eb22064ebfb3a03",
+		"afterSha256": "f6a9d8ad6aa323676c2c1f187c6ef40d4d90778e0f2ae6077eb22064ebfb3a03",
+		"differenceBounds": null,
+		"changedPixels": 0,
+		"maxChannelDifference": 0
+	},
+	{
+		"locale": "bg",
+		"width": 390,
+		"height": 844,
+		"byteIdentical": true,
+		"beforeSha256": "11d9f5c82e5984f4ca1157aa17aa262e605683ce73586456237adaf9cef5a16f",
+		"afterSha256": "11d9f5c82e5984f4ca1157aa17aa262e605683ce73586456237adaf9cef5a16f",
+		"differenceBounds": null,
+		"changedPixels": 0,
+		"maxChannelDifference": 0
+	},
+	{
+		"locale": "en",
+		"width": 320,
+		"height": 844,
+		"byteIdentical": true,
+		"beforeSha256": "eb562af72da6369be8cdb16c0e3c74c2bb8ea8ca60a708495f9a2083c6a48f65",
+		"afterSha256": "eb562af72da6369be8cdb16c0e3c74c2bb8ea8ca60a708495f9a2083c6a48f65",
+		"differenceBounds": null,
+		"changedPixels": 0,
+		"maxChannelDifference": 0
+	},
+	{
+		"locale": "en",
+		"width": 390,
+		"height": 844,
+		"byteIdentical": false,
+		"beforeSha256": "d18ab2f19a9d6ce6160a063a40e368da1c0d3bd517a57f345cfce268ce09c1fb",
+		"afterSha256": "d6a5df397b34d417dd97cde9a035a2857e88009a2d6d627aee1de9f4d14deaf7",
+		"differenceBounds": [288, 224, 296, 544],
+		"changedPixels": 66,
+		"maxChannelDifference": 1
+	}
+]

@@ -1,0 +1,394 @@
+{
+  "schemaVersion": 1,
+  "slug": "dein-auto-varna",
+  "business": {
+    "slug": "dein-auto-varna",
+    "name": "ДайнАуто",
+    "shortName": "ДайнАуто",
+    "latinName": "ДайнАуто",
+    "tagline": "ДайнАуто · Варна",
+    "city": "Варна",
+    "region": "",
+    "country": "BG",
+    "countryCode": "BG",
+    "locale": "bg-BG",
+    "currency": "EUR",
+    "distanceUnit": "km",
+    "address": "ул. Петър Дертлиев 34, Варна, България",
+    "addressLine": "ул. Петър Дертлиев 34",
+    "phoneDisplay": "+359899117330",
+    "phoneHref": "tel:+359899117330",
+    "phoneE164": "+359899117330",
+    "email": "",
+    "hours": "Потвърдете работното време директно с автокъщата.",
+    "website": "https://deinauto.mobile.bg/",
+    "inventoryUrl": "https://deinauto.mobile.bg/",
+    "contactUrl": "https://deinauto.mobile.bg/contacts",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=%D0%94%D0%B0%D0%B9%D0%BD%D0%90%D1%83%D1%82%D0%BE%2C%20%D1%83%D0%BB.%20%D0%9F%D0%B5%D1%82%D1%8A%D1%80%20%D0%94%D0%B5%D1%80%D1%82%D0%BB%D0%B8%D0%B5%D0%B2%2034%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F",
+    "mapsEmbedUrl": "https://maps.google.com/maps?q=%D0%94%D0%B0%D0%B9%D0%BD%D0%90%D1%83%D1%82%D0%BE%2C%20%D1%83%D0%BB.%20%D0%9F%D0%B5%D1%82%D1%8A%D1%80%20%D0%94%D0%B5%D1%80%D1%82%D0%BB%D0%B8%D0%B5%D0%B2%2034%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F&z=16&output=embed",
+    "accent": "#c40101",
+    "logo": "/dealer-brand/v2-a7abec1b51196d86/logo-on-light.webp",
+    "logoLight": "/dealer-brand/v2-a7abec1b51196d86/logo-on-light.webp",
+    "logoDark": "/dealer-brand/v2-a7abec1b51196d86/logo-on-dark.webp",
+    "socialLinks": {
+      "facebook": "",
+      "instagram": "",
+      "youtube": "",
+      "tiktok": ""
+    },
+    "services": [],
+    "inventoryNotice": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "previewNotice": "Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация.",
+    "observedAt": "2026-10-12T10:44:18.096Z",
+    "coordinates": null,
+    "raw": {
+      "schemaVersion": 1,
+      "slug": "dein-auto-varna",
+      "name": "ДайнАуто",
+      "shortName": "ДайнАуто",
+      "city": "Варна",
+      "country": "BG",
+      "countryCode": "BG",
+      "locale": "bg-BG",
+      "currency": "EUR",
+      "distanceUnit": "km",
+      "phone": "+359899117330",
+      "phoneDisplay": "+359899117330",
+      "phoneE164": "+359899117330",
+      "phones": [
+        "+359899117330"
+      ],
+      "addressLine": "ул. Петър Дертлиев 34",
+      "address": "ул. Петър Дертлиев 34, Варна, България",
+      "hours": "Потвърдете работното време директно с автокъщата.",
+      "email": "",
+      "sourceUrl": "https://deinauto.mobile.bg/",
+      "stockUrl": "https://deinauto.mobile.bg/",
+      "contactSourceUrl": "https://deinauto.mobile.bg/contacts",
+      "observedAt": "2026-10-12T10:44:18.096Z",
+      "inventoryNotice": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+      "previewNotice": "Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация.",
+      "services": [],
+      "socialLinks": {},
+      "logo": "/dealer-brand/v2-a7abec1b51196d86/logo-on-light.webp",
+      "logoLight": "/dealer-brand/v2-a7abec1b51196d86/logo-on-light.webp",
+      "logoDark": "/dealer-brand/v2-a7abec1b51196d86/logo-on-dark.webp",
+      "modernInventoryCopy": {
+        "dein-auto-varna-11786124378124232": {
+          "sourceDescription": "VW Passat от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+          "en": {
+            "description": "VW Passat from a dated public advert. Confirm condition, price and availability directly with the dealership.",
+            "imageAlts": [
+              "VW Passat — dated public advert photo 1",
+              "VW Passat — dated public advert photo 2"
+            ]
+          },
+          "bg": {
+            "description": "VW Passat от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+            "imageAlts": [
+              "VW Passat — снимка от датирана публична обява 1",
+              "VW Passat — снимка от датирана публична обява 2"
+            ]
+          }
+        },
+        "dein-auto-varna-11790325495830727": {
+          "sourceDescription": "Audi A5 45 TDI quattro от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+          "en": {
+            "description": "Audi A5 45 TDI quattro from a dated public advert. Confirm condition, price and availability directly with the dealership.",
+            "imageAlts": [
+              "Audi A5 45 TDI quattro — dated public advert photo 1",
+              "Audi A5 45 TDI quattro — dated public advert photo 2"
+            ]
+          },
+          "bg": {
+            "description": "Audi A5 45 TDI quattro от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+            "imageAlts": [
+              "Audi A5 45 TDI quattro — снимка от датирана публична обява 1",
+              "Audi A5 45 TDI quattro — снимка от датирана публична обява 2"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "listings": [
+    {
+      "id": "11786124378124232",
+      "sourceId": "11786124378124232",
+      "slug": "dein-auto-varna-11786124378124232",
+      "title": "VW Passat",
+      "make": "Volkswagen",
+      "model": "Passat",
+      "trim": "",
+      "year": 2023,
+      "priceAmount": 20500,
+      "currency": "EUR",
+      "mileageValue": 80700,
+      "mileageUnit": "km",
+      "mileageOnRequest": false,
+      "body": "Estate",
+      "bodyType": "wagon",
+      "fuel": "Diesel",
+      "fuelType": "diesel",
+      "transmission": "Automatic",
+      "transmissionType": "automatic",
+      "color": "",
+      "powerHp": null,
+      "engine": "",
+      "drivetrain": "",
+      "features": [],
+      "images": [
+        "/dealer-stock/11786124378124232-1.webp",
+        "/dealer-stock/11786124378124232-2.webp"
+      ],
+      "image": "/dealer-stock/11786124378124232-1.webp",
+      "sourceUrl": "https://deinauto.mobile.bg/obiava-11786124378124232-vw-passat",
+      "observedAt": "2026-10-12T11:55:24.091Z",
+      "availability": "Датирана обява; потвърдете цената и наличността директно с автокъщата.",
+      "description": "VW Passat от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+      "condition": "used",
+      "location": "Варна",
+      "raw": {
+        "title": "VW Passat",
+        "make": "Volkswagen",
+        "model": "Passat",
+        "year": 2023,
+        "priceAmount": 20500,
+        "mileageValue": 80700,
+        "fuel": "Diesel",
+        "transmission": "Automatic",
+        "body": "Estate",
+        "description": "VW Passat от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+        "sourceFieldProof": {
+          "source": "https://deinauto.mobile.bg/obiava-11786124378124232-vw-passat",
+          "year": "Дата на производство юни 2023",
+          "price": "20 500 €",
+          "mileage": "Пробег [км] 80700 км",
+          "fuel": "Двигател Дизелов",
+          "transmission": "Скоростна кутия Автоматична",
+          "body": "Категория Комби"
+        },
+        "sourceCaveats": [],
+        "id": "11786124378124232",
+        "slug": "dein-auto-varna-11786124378124232",
+        "currency": "EUR",
+        "priceOnRequest": false,
+        "mileageOnRequest": false,
+        "mileageUnit": "km",
+        "condition": "used",
+        "images": [
+          "/dealer-stock/11786124378124232-1.webp",
+          "/dealer-stock/11786124378124232-2.webp"
+        ],
+        "sourceUrl": "https://deinauto.mobile.bg/obiava-11786124378124232-vw-passat",
+        "observedAt": "2026-10-12T11:55:24.091Z",
+        "availability": "Датирана обява; потвърдете цената и наличността директно с автокъщата.",
+        "sourceProof": {
+          "sha256": "e772f70c1e2ebf9a78bad67b6bcf7103063fe2277b336eb75d1685d865f4e45b",
+          "originalPhotoBytesUnchanged": true,
+          "watermarksPreserved": true
+        }
+      }
+    },
+    {
+      "id": "11790325495830727",
+      "sourceId": "11790325495830727",
+      "slug": "dein-auto-varna-11790325495830727",
+      "title": "Audi A5 45 TDI quattro",
+      "make": "Audi",
+      "model": "A5",
+      "trim": "",
+      "year": 2019,
+      "priceAmount": 21500,
+      "currency": "EUR",
+      "mileageValue": 119715,
+      "mileageUnit": "km",
+      "mileageOnRequest": false,
+      "body": "Sedan",
+      "bodyType": "sedan",
+      "fuel": "Diesel",
+      "fuelType": "diesel",
+      "transmission": "Automatic",
+      "transmissionType": "automatic",
+      "color": "",
+      "powerHp": null,
+      "engine": "",
+      "drivetrain": "",
+      "features": [],
+      "images": [
+        "/dealer-stock/11790325495830727-1.webp",
+        "/dealer-stock/11790325495830727-2.webp"
+      ],
+      "image": "/dealer-stock/11790325495830727-1.webp",
+      "sourceUrl": "https://deinauto.mobile.bg/obiava-11790325495830727-audi-a5-45-tdi-quattro",
+      "observedAt": "2026-10-12T11:55:24.093Z",
+      "availability": "Датирана обява; потвърдете цената и наличността директно с автокъщата.",
+      "description": "Audi A5 45 TDI quattro от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+      "condition": "used",
+      "location": "Варна",
+      "raw": {
+        "title": "Audi A5 45 TDI quattro",
+        "make": "Audi",
+        "model": "A5",
+        "year": 2019,
+        "priceAmount": 21500,
+        "mileageValue": 119715,
+        "fuel": "Diesel",
+        "transmission": "Automatic",
+        "body": "Sedan",
+        "description": "Audi A5 45 TDI quattro от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+        "sourceFieldProof": {
+          "source": "https://deinauto.mobile.bg/obiava-11790325495830727-audi-a5-45-tdi-quattro",
+          "year": "Дата на производство септември 2019",
+          "price": "21 500 €",
+          "mileage": "Пробег [км] 119715 км",
+          "fuel": "Двигател Дизелов",
+          "transmission": "Скоростна кутия Автоматична",
+          "body": "Категория Седан"
+        },
+        "sourceCaveats": [],
+        "id": "11790325495830727",
+        "slug": "dein-auto-varna-11790325495830727",
+        "currency": "EUR",
+        "priceOnRequest": false,
+        "mileageOnRequest": false,
+        "mileageUnit": "km",
+        "condition": "used",
+        "images": [
+          "/dealer-stock/11790325495830727-1.webp",
+          "/dealer-stock/11790325495830727-2.webp"
+        ],
+        "sourceUrl": "https://deinauto.mobile.bg/obiava-11790325495830727-audi-a5-45-tdi-quattro",
+        "observedAt": "2026-10-12T11:55:24.093Z",
+        "availability": "Датирана обява; потвърдете цената и наличността директно с автокъщата.",
+        "sourceProof": {
+          "sha256": "8f4405874865b8a9b85752c582d50822ba0b5dd3752c95efa684821d7006c1d7",
+          "originalPhotoBytesUnchanged": true,
+          "watermarksPreserved": true
+        }
+      }
+    }
+  ],
+  "rawFacts": {
+    "schemaVersion": 1,
+    "slug": "dein-auto-varna",
+    "dealerId": "dein-auto-varna",
+    "business": {
+      "schemaVersion": 1,
+      "slug": "dein-auto-varna",
+      "name": "ДайнАуто",
+      "shortName": "ДайнАуто",
+      "city": "Варна",
+      "country": "BG",
+      "countryCode": "BG",
+      "locale": "bg-BG",
+      "currency": "EUR",
+      "distanceUnit": "km",
+      "phone": "+359899117330",
+      "phoneDisplay": "+359899117330",
+      "phoneE164": "+359899117330",
+      "phones": [
+        "+359899117330"
+      ],
+      "addressLine": "ул. Петър Дертлиев 34",
+      "address": "ул. Петър Дертлиев 34, Варна, България",
+      "hours": "Потвърдете работното време директно с автокъщата.",
+      "email": "",
+      "sourceUrl": "https://deinauto.mobile.bg/",
+      "stockUrl": "https://deinauto.mobile.bg/",
+      "contactSourceUrl": "https://deinauto.mobile.bg/contacts",
+      "observedAt": "2026-10-12T10:44:18.096Z",
+      "inventoryNotice": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+      "previewNotice": "Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация.",
+      "services": [],
+      "socialLinks": {},
+      "logo": "/dealer-brand/v2-a7abec1b51196d86/logo-on-light.webp",
+      "logoLight": "/dealer-brand/v2-a7abec1b51196d86/logo-on-light.webp",
+      "logoDark": "/dealer-brand/v2-a7abec1b51196d86/logo-on-dark.webp",
+      "modernInventoryCopy": {
+        "dein-auto-varna-11786124378124232": {
+          "sourceDescription": "VW Passat от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+          "en": {
+            "description": "VW Passat from a dated public advert. Confirm condition, price and availability directly with the dealership.",
+            "imageAlts": [
+              "VW Passat — dated public advert photo 1",
+              "VW Passat — dated public advert photo 2"
+            ]
+          },
+          "bg": {
+            "description": "VW Passat от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+            "imageAlts": [
+              "VW Passat — снимка от датирана публична обява 1",
+              "VW Passat — снимка от датирана публична обява 2"
+            ]
+          }
+        },
+        "dein-auto-varna-11790325495830727": {
+          "sourceDescription": "Audi A5 45 TDI quattro от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+          "en": {
+            "description": "Audi A5 45 TDI quattro from a dated public advert. Confirm condition, price and availability directly with the dealership.",
+            "imageAlts": [
+              "Audi A5 45 TDI quattro — dated public advert photo 1",
+              "Audi A5 45 TDI quattro — dated public advert photo 2"
+            ]
+          },
+          "bg": {
+            "description": "Audi A5 45 TDI quattro от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+            "imageAlts": [
+              "Audi A5 45 TDI quattro — снимка от датирана публична обява 1",
+              "Audi A5 45 TDI quattro — снимка от датирана публична обява 2"
+            ]
+          }
+        }
+      }
+    },
+    "research": {
+      "website": {
+        "status": "none-confirmed-in-bounded-check",
+        "url": null,
+        "notWebsiteGapProof": true
+      },
+      "publicIdentityKey": "mobile-profile:deinauto.mobile.bg",
+      "profileAdvertCount": 2,
+      "availabilityConfirmed": false,
+      "legalEntityOwnershipVerified": false,
+      "addressExactness": "public-contact-as-published",
+      "caveats": [],
+      "sourceProof": [
+        {
+          "url": "https://deinauto.mobile.bg/",
+          "finalUrl": "https://deinauto.mobile.bg/",
+          "observedAt": "2026-10-12T10:44:18.112Z",
+          "status": 200,
+          "bytes": 41027,
+          "sha256": "80be1115fc132858258fbe894e775144e7f1ebc8aa5d54254cbf694ef2c5bb1d"
+        },
+        {
+          "url": "https://deinauto.mobile.bg/contacts",
+          "finalUrl": "https://deinauto.mobile.bg/contacts",
+          "observedAt": "2026-10-12T10:44:18.096Z",
+          "status": 200,
+          "bytes": 42020,
+          "sha256": "8983641c9353cab4c8f784b45ab4c4f21d9cda0e1370ff59ee0a5c5746c25d9d"
+        },
+        {
+          "url": "https://deinauto.mobile.bg/about",
+          "finalUrl": "https://deinauto.mobile.bg/about",
+          "observedAt": "2026-10-12T10:44:18.083Z",
+          "status": 200,
+          "bytes": 6268,
+          "sha256": "2da4ba46fe46fd4bec80f482e97339ffe999740dd22961d98100f9d391edac86"
+        }
+      ],
+      "sourceAction": "new-absent-cars-source-after-wrapper-identity-recheck",
+      "existingSourceTree": null,
+      "inventoryModeSelection": "dated-listing-snapshot",
+      "productionAssetInputsComplete": true,
+      "stockSnapshotScope": "Two retained public adverts, not a complete/live inventory",
+      "stockMediaAuthority": "Owner-authorized public dated demo scope; original source bytes and watermarks retained"
+    }
+  },
+  "sourceCount": 2,
+  "stockKind": "dated-listing-snapshot",
+  "logoContract": null
+}

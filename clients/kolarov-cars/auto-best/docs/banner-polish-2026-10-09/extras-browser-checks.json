@@ -1,0 +1,80 @@
+[
+  {
+    "variant": "motorsport",
+    "width": 390,
+    "locale": "bg",
+    "frame": {
+      "x": 12,
+      "y": 108.21875,
+      "width": 366,
+      "height": 64
+    },
+    "title": {
+      "x": 77.390625,
+      "y": 125.8125,
+      "width": 235.21875,
+      "height": 28.796875
+    },
+    "background": "url(\"http://127.0.0.1:6461/assets/images/template/home-section-matte-graphite-comparison-v1.webp\")",
+    "before": "linear-gradient(to right, rgb(196, 1, 1) 0px, rgb(196, 1, 1) 10px, rgba(0, 0, 0, 0) 10px, rgba(0, 0, 0, 0) 12px, rgb(244, 245, 247) 12px, rgb(244, 245, 247) 18px)",
+    "after": "linear-gradient(to right, rgb(196, 1, 1) 0px, rgb(196, 1, 1) 10px, rgba(0, 0, 0, 0) 10px, rgba(0, 0, 0, 0) 12px, rgb(244, 245, 247) 12px, rgb(244, 245, 247) 18px)",
+    "overflow": false,
+    "cta": "/bg/listing-grid",
+    "bannerRequests": [
+      "/assets/images/template/home-section-matte-graphite-comparison-v1.webp"
+    ],
+    "errors": []
+  },
+  {
+    "variant": "headlights",
+    "width": 390,
+    "locale": "bg",
+    "frame": {
+      "x": 12,
+      "y": 108.21875,
+      "width": 366,
+      "height": 64
+    },
+    "title": {
+      "x": 77.390625,
+      "y": 125.8125,
+      "width": 235.21875,
+      "height": 28.796875
+    },
+    "background": "linear-gradient(to right, rgba(0, 0, 0, 0), color(srgb 0.0823529 0.0941176 0.113725 / 0.88) 18%, color(srgb 0.0823529 0.0941176 0.113725 / 0.88) 82%, rgba(0, 0, 0, 0)), url(\"http://127.0.0.1:6461/assets/images/template/home-section-headlights-v1.webp\")",
+    "before": "none",
+    "after": "none",
+    "overflow": false,
+    "cta": "/bg/listing-grid",
+    "bannerRequests": [
+      "/assets/images/template/home-section-headlights-v1.webp"
+    ],
+    "errors": []
+  },
+  {
+    "variant": "taillights",
+    "width": 390,
+    "locale": "bg",
+    "frame": {
+      "x": 12,
+      "y": 108.21875,
+      "width": 366,
+      "height": 64
+    },
+    "title": {
+      "x": 77.390625,
+      "y": 125.8125,
+      "width": 235.21875,
+      "height": 28.796875
+    },
+    "background": "url(\"http://127.0.0.1:6461/assets/images/template/home-section-taillights-v1.webp\")",
+    "before": "none",
+    "after": "none",
+    "overflow": false,
+    "cta": "/bg/listing-grid",
+    "bannerRequests": [
+      "/assets/images/template/home-section-taillights-v1.webp"
+    ],
+    "errors": []
+  }
+]

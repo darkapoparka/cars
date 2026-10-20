@@ -1,0 +1,213 @@
+{
+  "schemaVersion": 1,
+  "kind": "dated-listing-snapshot",
+  "candidate": true,
+  "observedAt": "2026-10-11T11:49:53.122Z",
+  "sourceProfile": "https://electricauto.mobile.bg/",
+  "sourcePageVisibleListingCount": 12,
+  "sourceProfileCountObservedAt": "2026-10-11T11:49:52.858Z",
+  "profileCountIsAvailableStock": false,
+  "profileCountIsClassifiedOrdinaryRetail": false,
+  "liveInventory": false,
+  "mediaPermission": "unconfirmed",
+  "localMediaReady": true,
+  "records": [
+    {
+      "id": "11743226761008533",
+      "sourceId": "11743226761008533",
+      "title": "Tesla Model S",
+      "sourceTitleExact": "Tesla Model S S75D ТОП Цена",
+      "make": "Tesla",
+      "model": "Model S",
+      "modelExtraction": "literal make/model prefix from exact primary advert title; canonical market normalization and trim not asserted",
+      "year": 2018,
+      "productionMonth": 1,
+      "currency": "EUR",
+      "sourcePriceText": "19 990 €",
+      "priceVatNotice": "Не се начислява ДДС",
+      "sourceMileageText": "133000 км",
+      "fieldConflicts": [
+        {
+          "field": "trim",
+          "titleToken": "S75D",
+          "descriptionToken": "S 175D",
+          "resolution": "trim withheld; retain source-backed Model S only",
+          "evidenceSha256": "2a9c006ab8c70ad23ff7d9cd661e081aa62e438cb14134546448e773e98cc448"
+        }
+      ],
+      "body": "Седан",
+      "fuel": "Електрически",
+      "transmission": "Автоматична",
+      "powerHp": 418,
+      "images": [
+        "/dealer-stock/11743226761008533-1.webp",
+        "/dealer-stock/11743226761008533-2.webp"
+      ],
+      "sourceUrl": "https://electricauto.mobile.bg/obiava-11743226761008533-tesla-model-s-s75d-top-tsena",
+      "sourceHtmlSha256": "f8d1fe021c2ed6cd84221bec005cfc1d4188d828f6852b6f4b33b644f9c3ecce",
+      "sourcePublicationText": "Редактирана в 08:08 часа на 18.08.2026 год.",
+      "observedAt": "2026-10-11T11:49:53.122Z",
+      "availability": "unconfirmed",
+      "availabilityConfirmed": false,
+      "partsListing": false,
+      "conditionMarker": null,
+      "conditionIndependentlyConfirmed": false,
+      "arrivalNotice": null,
+      "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "mediaState": "not-collected; reviewed rights/reuse or explicit illustration decision pending",
+      "mediaPermission": "Not independently established",
+      "telHrefCandidates": [
+        "0879904724"
+      ],
+      "visibleSellerContact": "Контакти с продавача Electric Auto 0879904724",
+      "sellerPhoneMatchesPrimary": true,
+      "telHrefMatchesPrimary": true,
+      "trim": null,
+      "sampleRole": "dated published vehicle advert; dealer availability, condition and media reuse require confirmation",
+      "retailReadyForAssembly": false,
+      "sourcePhotoUrls": [
+        "https://mobistatic1.focus.bg/mobile/photosorg/533/1/big1/11743226761008533_4Q.webp",
+        "https://mobistatic1.focus.bg/mobile/photosorg/533/1/big1/11743226761008533_l0.webp",
+        "https://mobistatic1.focus.bg/mobile/photosorg/533/1/big1/11743226761008533_nh.webp",
+        "https://mobistatic1.focus.bg/mobile/photosorg/533/1/big1/11743226761008533_Bh.webp",
+        "https://mobistatic1.focus.bg/mobile/photosorg/533/1/big1/11743226761008533_DW.webp",
+        "https://mobistatic1.focus.bg/mobile/photosorg/533/1/big1/11743226761008533_3N.webp",
+        "https://mobistatic1.focus.bg/mobile/photosorg/533/1/big1/11743226761008533_53.webp",
+        "https://mobistatic1.focus.bg/mobile/photosorg/533/1/big1/11743226761008533_cT.webp",
+        "https://mobistatic1.focus.bg/mobile/photosorg/533/1/big1/11743226761008533_DX.webp"
+      ],
+      "sourcePhotoEvidence": {
+        "sourceId": "11743226761008533",
+        "sourceUrl": "https://electricauto.mobile.bg/obiava-11743226761008533-tesla-model-s-s75d-top-tsena",
+        "observedAt": "2026-10-11T12:09:32.873Z",
+        "responseSha256": "283d2c09d0cb559aa6683e240a09f6eb3770e712a151c309429d854fe566ad38",
+        "association": "primary gallery URLs contain exact source listing ID",
+        "remoteBytesFetched": false
+      },
+      "sourceRecord": {
+        "id": "11743226761008533",
+        "sourceId": "11743226761008533",
+        "title": "Tesla Model S",
+        "sourceTitleExact": "Tesla Model S S75D ТОП Цена",
+        "make": "Tesla",
+        "model": "Model S",
+        "modelExtraction": "literal make/model prefix from exact primary advert title; canonical market normalization and trim not asserted",
+        "year": 2018,
+        "productionMonth": 1,
+        "priceEur": 19990,
+        "currency": "EUR",
+        "sourcePriceText": "19 990 €",
+        "priceVatNotice": "Не се начислява ДДС",
+        "mileageKm": 133000,
+        "sourceMileageText": "133000 км",
+        "fieldConflicts": [
+          {
+            "field": "trim",
+            "titleToken": "S75D",
+            "descriptionToken": "S 175D",
+            "resolution": "trim withheld; retain source-backed Model S only",
+            "evidenceSha256": "2a9c006ab8c70ad23ff7d9cd661e081aa62e438cb14134546448e773e98cc448"
+          }
+        ],
+        "body": "Седан",
+        "fuel": "Електрически",
+        "transmission": "Автоматична",
+        "powerHp": 418,
+        "images": [
+          "/assets/vehicles/11743226761008533/1.webp",
+          "/assets/vehicles/11743226761008533/2.webp"
+        ],
+        "sourceUrl": "https://electricauto.mobile.bg/obiava-11743226761008533-tesla-model-s-s75d-top-tsena",
+        "sourceHtmlSha256": "f8d1fe021c2ed6cd84221bec005cfc1d4188d828f6852b6f4b33b644f9c3ecce",
+        "sourcePublicationText": "Редактирана в 08:08 часа на 18.08.2026 год.",
+        "observedAt": "2026-10-11T11:49:53.122Z",
+        "availability": "unconfirmed",
+        "availabilityConfirmed": false,
+        "partsListing": false,
+        "conditionMarker": null,
+        "conditionIndependentlyConfirmed": false,
+        "arrivalNotice": null,
+        "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+        "mediaState": "not-collected; reviewed rights/reuse or explicit illustration decision pending",
+        "mediaPermission": "Not independently established",
+        "telHrefCandidates": [
+          "0879904724"
+        ],
+        "visibleSellerContact": "Контакти с продавача Electric Auto 0879904724",
+        "sellerPhoneMatchesPrimary": true,
+        "telHrefMatchesPrimary": true,
+        "trim": null,
+        "sampleRole": "dated published vehicle advert; dealer availability, condition and media reuse require confirmation",
+        "retailReadyForAssembly": false,
+        "sourcePhotoUrls": [
+          "https://mobistatic1.focus.bg/mobile/photosorg/533/1/big1/11743226761008533_4Q.webp",
+          "https://mobistatic1.focus.bg/mobile/photosorg/533/1/big1/11743226761008533_l0.webp",
+          "https://mobistatic1.focus.bg/mobile/photosorg/533/1/big1/11743226761008533_nh.webp",
+          "https://mobistatic1.focus.bg/mobile/photosorg/533/1/big1/11743226761008533_Bh.webp",
+          "https://mobistatic1.focus.bg/mobile/photosorg/533/1/big1/11743226761008533_DW.webp",
+          "https://mobistatic1.focus.bg/mobile/photosorg/533/1/big1/11743226761008533_3N.webp",
+          "https://mobistatic1.focus.bg/mobile/photosorg/533/1/big1/11743226761008533_53.webp",
+          "https://mobistatic1.focus.bg/mobile/photosorg/533/1/big1/11743226761008533_cT.webp",
+          "https://mobistatic1.focus.bg/mobile/photosorg/533/1/big1/11743226761008533_DX.webp"
+        ],
+        "sourcePhotoEvidence": {
+          "sourceId": "11743226761008533",
+          "sourceUrl": "https://electricauto.mobile.bg/obiava-11743226761008533-tesla-model-s-s75d-top-tsena",
+          "observedAt": "2026-10-11T12:09:32.873Z",
+          "responseSha256": "283d2c09d0cb559aa6683e240a09f6eb3770e712a151c309429d854fe566ad38",
+          "association": "primary gallery URLs contain exact source listing ID",
+          "remoteBytesFetched": false
+        }
+      },
+      "priceAmount": 19990,
+      "mileageValue": 133000,
+      "mileageUnit": "km"
+    }
+  ],
+  "localMediaHydration": {
+    "candidateOnly": true,
+    "technicalRasterPresent": true,
+    "rightsApproved": false,
+    "availabilityConfirmed": false,
+    "assets": [
+      {
+        "publicPath": "/assets/vehicles/11743226761008533/1.webp",
+        "sourceUrl": "https://mobistatic1.focus.bg/mobile/photosorg/533/1/big1/11743226761008533_4Q.webp",
+        "sha256": "818222f0ef548903dcf343287a278f24e7fdf6d10725082c64e417fe5243fad1",
+        "bytes": 120850,
+        "downloadObservedAt": "2026-10-11T12:20:37.159Z"
+      },
+      {
+        "publicPath": "/assets/vehicles/11743226761008533/2.webp",
+        "sourceUrl": "https://mobistatic1.focus.bg/mobile/photosorg/533/1/big1/11743226761008533_l0.webp",
+        "sha256": "b5c36af170d70b5404a86c0372c40bf4807857dbb919cce043e32436e07ca3c5",
+        "bytes": 104356,
+        "downloadObservedAt": "2026-10-11T12:20:37.286Z"
+      }
+    ],
+    "sourceStockSha256": "9aba301c2a5e0741b3709bffe89d112df8addcc0e19ef170af32231e130a9903"
+  },
+  "dealer": "electricauto-varna",
+  "sourceKind": "dated-marketplace-listing-sample",
+  "sourceStock": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/electricauto-varna/source/stock.json",
+    "sha256": "2931f16962166c511061f4f0af940f5e20c610710692f1daeb6f62699ee4270c"
+  },
+  "sourceRecordsUnchanged": true,
+  "mediaPathMappings": [
+    {
+      "sourcePublicPath": "/assets/vehicles/11743226761008533/1.webp",
+      "publicPath": "/dealer-stock/11743226761008533-1.webp",
+      "sha256": "818222f0ef548903dcf343287a278f24e7fdf6d10725082c64e417fe5243fad1",
+      "bytes": 120850,
+      "sourceId": "11743226761008533"
+    },
+    {
+      "sourcePublicPath": "/assets/vehicles/11743226761008533/2.webp",
+      "publicPath": "/dealer-stock/11743226761008533-2.webp",
+      "sha256": "b5c36af170d70b5404a86c0372c40bf4807857dbb919cce043e32436e07ca3c5",
+      "bytes": 104356,
+      "sourceId": "11743226761008533"
+    }
+  ]
+}

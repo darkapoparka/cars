@@ -114,8 +114,8 @@ export const leadSite: LeadSiteConfig = {
     "tagline": "S A Motors — vehicles and dealer support in Nottingham."
   }
 },
-  accent: "#126D77",
-  desktopAccent: "#4b5057",
+  accent: "#09090b",
+  desktopAccent: "#09090b",
   desktopInventoryFilterLayout: "quick",
   desktopPreviewIdentity: {
     sourceSlug: "day-night-auto-group",
@@ -127,7 +127,7 @@ export const leadSite: LeadSiteConfig = {
       en: "Find your next car.",
     },
   },
-  address: "ул. „Атанас Манчев“ 18, Nottingham",
+  address: "",
   city: "Nottingham",
   district: { bg: "Nottingham", en: "Nottingham" },
   sellCategoryAssets: {
@@ -141,16 +141,17 @@ export const leadSite: LeadSiteConfig = {
   mobileShowroomArtworkPath:
     "/images/lease/mobile-pdp-showroom-blue-hour-v1.webp",
   contactUrl: "",
-  country: "България",
+  country: "United Kingdom",
   countryCode: carsLocale.dealerCountry,
   currency: carsLocale.inventoryCurrency,
   email: "",
   heroPath: "/lead-hero.jpg",
   locale: "en-GB",
-  logoPath: "/dealer-brand/logo.webp",
-  logoOnLight: "/dealer-brand/logo.webp",
-  logoOnDark: "/dealer-brand/logo.webp",
-  logoOnAccent: "/dealer-brand/logo.webp",
+  logoPath: "/dealer-brand/v2-ddcdd1628ce29cd1/logo-on-light.webp",
+  logoInversePath: "/dealer-brand/v2-ddcdd1628ce29cd1/logo-on-dark.webp",
+  logoOnLight: "/dealer-brand/v2-ddcdd1628ce29cd1/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/v2-ddcdd1628ce29cd1/logo-on-light.webp",
+  logoOnAccent: "/dealer-brand/v2-ddcdd1628ce29cd1/logo-on-light.webp",
   mapsEmbedUrl:
     "https://maps.google.com/maps?q=S%20A%20Motors%2C%20Nottingham&z=16&output=embed",
   mapsUrl:
@@ -162,6 +163,6 @@ export const leadSite: LeadSiteConfig = {
   slug: "nottingham-s-a-motors",
   socialLinks: {},
   staticDemoMode: true,
-  tagline: "Премиум автомобили, внос и собствен лизинг в Nottingham.",
+  tagline: "S A Motors — vehicles and dealer support in Nottingham.",
 };
 // LEAD_SITE_CONFIG_END

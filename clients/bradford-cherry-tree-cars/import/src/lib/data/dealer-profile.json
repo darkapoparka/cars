@@ -27,9 +27,9 @@
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Cherry%20Tree%20Cars%20Ltd%2C%20Bradford%2C%20West%20Yorkshire",
     "mapsEmbedUrl": "https://maps.google.com/maps?q=Cherry%20Tree%20Cars%20Ltd%2C%20Bradford%2C%20West%20Yorkshire&z=16&output=embed",
     "accent": "#871221",
-    "logo": "/dealer-brand/logo.webp",
-    "logoLight": "/dealer-brand/logo.webp",
-    "logoDark": "/dealer-brand/logo.webp",
+    "logo": "/dealer-brand/v2-c4d01a5862dcc9e1/logo-on-light.webp",
+    "logoLight": "/dealer-brand/v2-c4d01a5862dcc9e1/logo-on-light.webp",
+    "logoDark": "/dealer-brand/v2-c4d01a5862dcc9e1/logo-on-dark.webp",
     "socialLinks": {
       "facebook": "",
       "instagram": "",
@@ -1112,25 +1112,28 @@
     "approvalStatus": "independent_design_proposal_not_dealer_approved",
     "assets": {
       "onLight": {
-        "publicPath": "/dealer-brand/logo.webp",
-        "sha256": "e78f01dbd616cd1fbf3fb0fe043d0eaaacc98d7af211e7af859367e7d3ac78d4",
+        "publicPath": "/dealer-brand/v2-c4d01a5862dcc9e1/logo-on-light.webp",
+        "sha256": "8ef9be6162db1cc9da144b1e8658708a6806a51797ea587fdf5433afdd45ab5b",
         "width": 1024,
         "height": 341,
-        "background": "opaque_white"
+        "background": "opaque_white",
+        "bytes": 101310
       },
       "onDark": {
-        "publicPath": "/dealer-brand/logo.webp",
-        "sha256": "e78f01dbd616cd1fbf3fb0fe043d0eaaacc98d7af211e7af859367e7d3ac78d4",
+        "publicPath": "/dealer-brand/v2-c4d01a5862dcc9e1/logo-on-dark.webp",
+        "sha256": "55f72fe271018b328d52b7906966aa622cee64f5154d2f847a8cd2d7a74db51f",
         "width": 1024,
         "height": 341,
-        "background": "opaque_white"
+        "background": "opaque_white",
+        "bytes": 33122
       },
       "onAccent": {
-        "publicPath": "/dealer-brand/logo.webp",
-        "sha256": "e78f01dbd616cd1fbf3fb0fe043d0eaaacc98d7af211e7af859367e7d3ac78d4",
+        "publicPath": "/dealer-brand/v2-c4d01a5862dcc9e1/logo-on-accent.webp",
+        "sha256": "55f72fe271018b328d52b7906966aa622cee64f5154d2f847a8cd2d7a74db51f",
         "width": 1024,
         "height": 341,
-        "background": "opaque_white"
+        "background": "opaque_white",
+        "bytes": 33122
       }
     },
     "icon": {

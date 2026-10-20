@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "dealer": "asko-96",
+  "reviewed": true,
+  "reviewedAt": "2026-10-11T13:30:46.431Z",
+  "reviewScope": "Hash-identical selected current raster inputs and retained genuine surface-review provenance only; actual dealer integration, native and hosted checks pending.",
+  "officialDealerArtwork": false,
+  "dealerApproval": false,
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "generation": {
+    "tool": "image_gen",
+    "generationId": "exec-70d77276-38a6-483d-b86f-20e67fa217e1",
+    "modelVersion": null,
+    "sourceSha256": "ee5bc57335d9197ff14ec9bc252b18581ed6a5e7783848dcbf9e4b559ac488e9",
+    "sourceRole": "Native ImageGen output behind exact retained selected raster; no new generation or claimed model version.",
+    "nativeOutput": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/asko-96/source/native-onLight.png",
+      "sha256": "ee5bc57335d9197ff14ec9bc252b18581ed6a5e7783848dcbf9e4b559ac488e9"
+    },
+    "originalGenerationReceipt": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/asko-96/source/generation-receipt.json",
+      "sha256": "79bba1c912d218d5747561ce6d3a2c67fe9778556cf4175d7dcf0d33d7272782"
+    },
+    "derivation": "one ImageGen master exported to context raster"
+  },
+  "master": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/asko-96/branding/master.png",
+    "sha256": "717c5106d610102e6faf0376726dc6abf599673b09d18a01ef3ee8f7cc82e021"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/asko-96/branding/onLight.png",
+      "sha256": "717c5106d610102e6faf0376726dc6abf599673b09d18a01ef3ee8f7cc82e021",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/asko-96/source/generation-receipt.json#sha256=79bba1c912d218d5747561ce6d3a2c67fe9778556cf4175d7dcf0d33d7272782; exact selected handoff b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-70d77276-38a6-483d-b86f-20e67fa217e1",
+        "modelVersion": null,
+        "sourceSha256": "ee5bc57335d9197ff14ec9bc252b18581ed6a5e7783848dcbf9e4b559ac488e9",
+        "sourceRole": "Native ImageGen output behind exact retained selected raster; no new generation or claimed model version.",
+        "nativeOutput": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/asko-96/source/native-onLight.png",
+          "sha256": "ee5bc57335d9197ff14ec9bc252b18581ed6a5e7783848dcbf9e4b559ac488e9"
+        },
+        "originalGenerationReceipt": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/asko-96/source/generation-receipt.json",
+          "sha256": "79bba1c912d218d5747561ce6d3a2c67fe9778556cf4175d7dcf0d33d7272782"
+        },
+        "derivation": "one ImageGen master exported to context raster"
+      }
+    },
+    "onDark": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/asko-96/branding/onDark.png",
+      "sha256": "66e09759be2ccfc4df07b96258d195bf84c5a7aa4563918110bfbcc4582b8355",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/asko-96/source/generation-receipt.json#sha256=79bba1c912d218d5747561ce6d3a2c67fe9778556cf4175d7dcf0d33d7272782; exact selected handoff b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-70d77276-38a6-483d-b86f-20e67fa217e1",
+        "modelVersion": null,
+        "sourceSha256": "ee5bc57335d9197ff14ec9bc252b18581ed6a5e7783848dcbf9e4b559ac488e9",
+        "sourceRole": "Native ImageGen output behind exact retained selected raster; no new generation or claimed model version.",
+        "nativeOutput": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/asko-96/source/native-onDark.png",
+          "sha256": "ee5bc57335d9197ff14ec9bc252b18581ed6a5e7783848dcbf9e4b559ac488e9"
+        },
+        "originalGenerationReceipt": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/asko-96/source/generation-receipt.json",
+          "sha256": "79bba1c912d218d5747561ce6d3a2c67fe9778556cf4175d7dcf0d33d7272782"
+        },
+        "derivation": "one ImageGen master exported to context raster"
+      }
+    },
+    "onAccent": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/asko-96/branding/onAccent.png",
+      "sha256": "66e09759be2ccfc4df07b96258d195bf84c5a7aa4563918110bfbcc4582b8355",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/asko-96/source/generation-receipt.json#sha256=79bba1c912d218d5747561ce6d3a2c67fe9778556cf4175d7dcf0d33d7272782; exact selected handoff b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-70d77276-38a6-483d-b86f-20e67fa217e1",
+        "modelVersion": null,
+        "sourceSha256": "ee5bc57335d9197ff14ec9bc252b18581ed6a5e7783848dcbf9e4b559ac488e9",
+        "sourceRole": "Native ImageGen output behind exact retained selected raster; no new generation or claimed model version.",
+        "nativeOutput": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/asko-96/source/native-onAccent.png",
+          "sha256": "ee5bc57335d9197ff14ec9bc252b18581ed6a5e7783848dcbf9e4b559ac488e9"
+        },
+        "originalGenerationReceipt": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/asko-96/source/generation-receipt.json",
+          "sha256": "79bba1c912d218d5747561ce6d3a2c67fe9778556cf4175d7dcf0d33d7272782"
+        },
+        "derivation": "one ImageGen master exported to context raster"
+      }
+    }
+  },
+  "originalGenerationReceipt": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/asko-96/source/generation-receipt.json",
+    "sha256": "79bba1c912d218d5747561ce6d3a2c67fe9778556cf4175d7dcf0d33d7272782"
+  },
+  "acceptedLogoManifest": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/evidence/final-logo-handoff.json",
+    "sha256": "b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a"
+  },
+  "assetReview": {
+    "status": "completed",
+    "owner": "baseline",
+    "proof": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/asko-96/surface-review.png",
+      "sha256": "b80d12c0222d91f1cbaa162b23224f205834584332c36613213a3b482e95b659",
+      "bytes": 140066,
+      "width": 740,
+      "height": 864,
+      "format": "png",
+      "hasAlpha": true
+    },
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "scope": "Actual master and compact native-palette swatches inspected; retained pixels remain identical.",
+    "report": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/final-baseline-review.json"
+  },
+  "sourceOwnershipUnchanged": true
+}

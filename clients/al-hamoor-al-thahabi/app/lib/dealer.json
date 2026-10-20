@@ -4,15 +4,16 @@
   "name": "Al Hamoor Al Thahabi Used Cars",
   "shortName": "Al Hamoor Al Thahabi Used Cars",
   "logo": {
-    "light": "/dealer-app/logo-light-3a945d87e9198790cc0c.webp",
-    "dark": "/dealer-app/logo-dark-3ae4cc8473042f99c776.webp",
-    "icon": "/dealer-app/icon.png"
+    "light": "/dealer-brand/v2-f36b0deff0d57ac0/logo-on-light.webp",
+    "dark": "/dealer-brand/v2-f36b0deff0d57ac0/logo-on-dark.webp",
+    "icon": "/dealer-brand/v2-f36b0deff0d57ac0/app-icon.png"
   },
   "defaultLocale": "en",
   "enabledLocales": [
     "en",
     "bg"
   ],
+  "welcomeEnabled": true,
   "country": "AE",
   "currency": "AED",
   "city": "Sharjah",
@@ -23,12 +24,31 @@
   "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Al+Hamoor+Al+Thahabi+Souk+Al+Haraj+353+Sharjah",
   "website": "",
   "whatsappUrl": "",
+  "socialLinks": [
+    {
+      "label": "Facebook",
+      "url": ""
+    },
+    {
+      "label": "Instagram",
+      "url": ""
+    },
+    {
+      "label": "Mobile.bg",
+      "url": ""
+    },
+    {
+      "label": "Cars.bg",
+      "url": ""
+    }
+  ],
+  "referenceClaimsApproved": false,
   "services": [
     "Vehicle sales",
     "Viewings by arrangement",
     "Trade-in enquiries: confirm terms directly"
   ],
   "observedAt": "2026-09-09",
-  "inventoryNotice": "Dated listing samples. Confirm price, availability and vehicle information with the dealer.",
+  "inventoryNotice": "Dated listing samples; confirm price and availability directly with the dealership.",
   "previewNotice": "Independent design preview. No purchase, reservation or message is submitted by this website."
 }

@@ -114,8 +114,8 @@ export const leadSite: LeadSiteConfig = {
     "tagline": "Norton Grange Trade Cars — vehicles and dealer support in Stockton-on-Tees."
   }
 },
-  accent: "#E21420",
-  desktopAccent: "#4b5057",
+  accent: "#09090b",
+  desktopAccent: "#09090b",
   desktopInventoryFilterLayout: "quick",
   desktopPreviewIdentity: {
     sourceSlug: "day-night-auto-group",
@@ -127,7 +127,7 @@ export const leadSite: LeadSiteConfig = {
       en: "Find your next car.",
     },
   },
-  address: "ул. „Атанас Манчев“ 18, Stockton-on-Tees",
+  address: "",
   city: "Stockton-on-Tees",
   district: { bg: "Stockton-on-Tees", en: "Stockton-on-Tees" },
   sellCategoryAssets: {
@@ -141,16 +141,17 @@ export const leadSite: LeadSiteConfig = {
   mobileShowroomArtworkPath:
     "/images/lease/mobile-pdp-showroom-blue-hour-v1.webp",
   contactUrl: "",
-  country: "България",
+  country: "United Kingdom",
   countryCode: carsLocale.dealerCountry,
   currency: carsLocale.inventoryCurrency,
   email: "",
   heroPath: "/lead-hero.jpg",
   locale: "en-GB",
-  logoPath: "/dealer-brand/logo.webp",
-  logoOnLight: "/dealer-brand/logo.webp",
-  logoOnDark: "/dealer-brand/logo.webp",
-  logoOnAccent: "/dealer-brand/logo.webp",
+  logoPath: "/dealer-brand/v2-12870d10b91ab03b/logo-on-light.webp",
+  logoInversePath: "/dealer-brand/v2-12870d10b91ab03b/logo-on-dark.webp",
+  logoOnLight: "/dealer-brand/v2-12870d10b91ab03b/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/v2-12870d10b91ab03b/logo-on-light.webp",
+  logoOnAccent: "/dealer-brand/v2-12870d10b91ab03b/logo-on-light.webp",
   mapsEmbedUrl:
     "https://maps.google.com/maps?q=Norton%20Grange%20Trade%20Cars%2C%20Stockton-on-Tees&z=16&output=embed",
   mapsUrl:
@@ -162,6 +163,6 @@ export const leadSite: LeadSiteConfig = {
   slug: "stockton-norton-grange-trade-cars",
   socialLinks: {},
   staticDemoMode: true,
-  tagline: "Премиум автомобили, внос и собствен лизинг в Stockton-on-Tees.",
+  tagline: "Norton Grange Trade Cars — vehicles and dealer support in Stockton-on-Tees.",
 };
 // LEAD_SITE_CONFIG_END

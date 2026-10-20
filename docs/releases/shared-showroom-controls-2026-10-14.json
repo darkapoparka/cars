@@ -1,0 +1,88 @@
+{
+  "kind": "cars-shared-showroom-controls-source",
+  "recordedAt": "2026-10-14T16:15:50.886Z",
+  "admin": {
+    "repository": "darkapoparka/cars-admin",
+    "commit": "da1c383d6150606e47ab94f51c31805e58926d15",
+    "deployment": "dpl_AVyFoM8AbAu3upfjkxnGJGTbLTQu",
+    "origin": "https://cars-admin-blue.vercel.app",
+    "state": "READY",
+    "targets": 125
+  },
+  "files": [
+    {
+      "path": "scripts/publishing/preview-switcher.js",
+      "bytes": 186399,
+      "sha256": "960fa4f559249883fd53b7a96bea6e39aeefd3e7e7297d90697cca9b1463db6b"
+    },
+    {
+      "path": "scripts/publishing/proposal-introduction.js",
+      "bytes": 15336,
+      "sha256": "810b0efc0414fbfb59b4f0451373281a59f67788a213aa492ed9d78866aef81c"
+    },
+    {
+      "path": "scripts/publishing/proposal-introduction.mjs",
+      "bytes": 2814,
+      "sha256": "7496e1164485e09e409f10a70e1f81f45629461c1ecf76e272587fd94dbc47c1"
+    },
+    {
+      "path": "scripts/publishing/proposal-introduction.test.mjs",
+      "bytes": 3416,
+      "sha256": "0ac35e917094b6123fcc2f8d00e19cdd4f9a4e74da4ae405008255ae529449e1"
+    },
+    {
+      "path": "scripts/publishing/assets/README.md",
+      "bytes": 1180,
+      "sha256": "b2435d59f9c4ad59a4b322ca4a37a6e3512a1d04d3a13c0fb954545af420e766"
+    },
+    {
+      "path": "scripts/publishing/assets/feature-vehicle.webp",
+      "bytes": 3034,
+      "sha256": "40532e4c34a02c94f12e4b2b47217ba7ec7bcf6d2003cda21478b6b4ef6862bf"
+    },
+    {
+      "path": "scripts/publishing/assets/feature-enquiries.webp",
+      "bytes": 2372,
+      "sha256": "82a75d26e625d4c4b01624865b3858a05e0cd0e2b1ecc289a2de404778d87216"
+    },
+    {
+      "path": "scripts/publishing/assets/feature-viewings.webp",
+      "bytes": 2834,
+      "sha256": "ca5a728fa0c6f0c4467341c6a3fe259a41374bdaaaa8303304a78cc397956330"
+    },
+    {
+      "path": "scripts/publishing/assets/feature-editing.webp",
+      "bytes": 2192,
+      "sha256": "2deacb4ee30da400ed32f09388b70565fc80613aecbc107409e1a049459f57c7"
+    },
+    {
+      "path": "scripts/publishing/assets/feature-analytics.webp",
+      "bytes": 1798,
+      "sha256": "63b78d8c919d0618cc831a8ae83c4b4ea12b4dd5ca025d3c6c09ab6d52bc56a8"
+    },
+    {
+      "path": "scripts/publishing/assets/feature-assistant.webp",
+      "bytes": 2944,
+      "sha256": "180eb608c7d99119b28b3ba5d36d22531d517d5ceb848fd0158ddd989a88bef1"
+    },
+    {
+      "path": "scripts/preview-switcher-release.test.mjs",
+      "bytes": 36923,
+      "sha256": "0be17ba55573b3b55647fae3057f59a2d2e499f896c45586583e23a840ae2d64"
+    }
+  ],
+  "reconciliation": "Published switcher comparison: preserve existing asset/configuration code; add reviewed locale/return handling and loading feedback, replacing the old bare location.assign click handler. Package integration adds only the shared six-design proposal wrapper.",
+  "checks": {
+    "proposalUnitTests": 5,
+    "adminUnitTests": 18,
+    "adminTypeScript": "passed",
+    "ring320": "passed",
+    "ring1440": "passed-local",
+    "loader": "Retained owner validation-summary.json and loader-final-audit.json; source hash matches final owner handoff"
+  },
+  "fleet": {
+    "readyToDeploy": false,
+    "updatedDealerSites": 0,
+    "reason": "Final template commits, exact candidate selection and combined hosted pilots remain outstanding. Source publication is not a 125-dealer deployment."
+  }
+}

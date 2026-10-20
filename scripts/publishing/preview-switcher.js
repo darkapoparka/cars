@@ -226,10 +226,17 @@
         image.decoding = 'async';
         return image;
       };
-      if (templateLogos[choices[active]?.key]) {
+      const dealerFabLogo = config.dealerFabLogo;
+      if (dealerFabLogo || templateLogos[choices[active]?.key]) {
         const artwork = shadow.querySelector('.fab-artwork');
         artwork.innerHTML = '';
-        artwork.append(logoImage(choices[active].key));
+        const image = logoImage(choices[active].key);
+        if (dealerFabLogo) {
+          image.src = dealerFabLogo.src;
+          image.alt = dealerFabLogo.name;
+          image.setAttribute('data-dealer-fab-logo', dealerFabLogo.sha256);
+        }
+        artwork.append(image);
         button.setAttribute('data-has-logo', 'true');
       }
       shadow.querySelector('.heading').textContent = config.labels?.title || copy.title;

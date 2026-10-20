@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-hamoor-al-thahabi",
+  "reviewed": true,
+  "reviewedAt": "2026-10-14T11:31:43.352Z",
+  "sourceMode": "retained-or-mixed-raster",
+  "master": {
+    "path": "docs/logo-polish-2026-10-14/parallel/vercel/al-hamoor-al-thahabi/logo-on-light.png",
+    "sha256": "a26d70c1cb1479308be6c9e360af4fe9de6f12f02b69fb1dfbdd59b1cd1f978f"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "docs/logo-polish-2026-10-14/parallel/vercel/al-hamoor-al-thahabi/logo-on-light.png",
+      "sha256": "a26d70c1cb1479308be6c9e360af4fe9de6f12f02b69fb1dfbdd59b1cd1f978f",
+      "sourceReference": "L:\\CODEX\\cars\\docs\\logo-polish-2026-10-14\\parallel\\vercel\\al-hamoor-al-thahabi\\logo-on-light.png",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "L:\\CODEX\\cars\\docs\\logo-polish-2026-10-14\\live-assets\\643709b8fcc2872b40a0e08b550bd88cacb5f6bd6aec2504dbbc67f55252aaf0.webp",
+        "sha256": "643709b8fcc2872b40a0e08b550bd88cacb5f6bd6aec2504dbbc67f55252aaf0",
+        "reviewReference": "docs/logo-polish-2026-10-14/final-selection.json",
+        "reviewSha256": "6e396eef77195ab7f44d6b055c1936fa079a8195a428a95151fdfd7f3f5d1a16"
+      }
+    },
+    "onDark": {
+      "path": "docs/logo-polish-2026-10-14/parallel/vercel/al-hamoor-al-thahabi/logo-on-dark.png",
+      "sha256": "49e2cfecbbb8553c8938a39f6ea99db20901fc60f02689b29d7eaf582f71662f",
+      "sourceReference": "L:\\CODEX\\cars\\docs\\logo-polish-2026-10-14\\parallel\\vercel\\al-hamoor-al-thahabi\\logo-on-dark.png",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "L:\\CODEX\\cars\\docs\\logo-polish-2026-10-14\\live-assets\\3708cb93366efc0223514bf7f3cb3658b412220088babe615718ceee64869114.webp",
+        "sha256": "3708cb93366efc0223514bf7f3cb3658b412220088babe615718ceee64869114",
+        "reviewReference": "docs/logo-polish-2026-10-14/final-selection.json",
+        "reviewSha256": "6e396eef77195ab7f44d6b055c1936fa079a8195a428a95151fdfd7f3f5d1a16"
+      }
+    },
+    "onAccent": {
+      "path": "docs/logo-polish-2026-10-14/parallel/vercel/al-hamoor-al-thahabi/logo-on-dark.png",
+      "sha256": "49e2cfecbbb8553c8938a39f6ea99db20901fc60f02689b29d7eaf582f71662f",
+      "sourceReference": "L:\\CODEX\\cars\\docs\\logo-polish-2026-10-14\\parallel\\vercel\\al-hamoor-al-thahabi\\logo-on-dark.png",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "L:\\CODEX\\cars\\docs\\logo-polish-2026-10-14\\live-assets\\3708cb93366efc0223514bf7f3cb3658b412220088babe615718ceee64869114.webp",
+        "sha256": "3708cb93366efc0223514bf7f3cb3658b412220088babe615718ceee64869114",
+        "reviewReference": "docs/logo-polish-2026-10-14/final-selection.json",
+        "reviewSha256": "6e396eef77195ab7f44d6b055c1936fa079a8195a428a95151fdfd7f3f5d1a16"
+      }
+    }
+  }
+}

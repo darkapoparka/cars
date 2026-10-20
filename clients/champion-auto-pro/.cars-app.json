@@ -3,32 +3,32 @@
   "dealer": "champion-auto-pro",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "b66693e3a475ef563ab45f51e4297e7073830ec1",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "path": "templates/app",
-    "digest": "3344230cf8de012eb9c2daf1c962c4a3f189960b52f2026e1d049f2a6eae26ad",
-    "tree": "cd17d913dd597bf7dfb3e2244c2a3a2914ab3080"
+    "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1",
+    "tree": "7f3d3ffa40546635377e6c5225194fe06fead291"
   },
-  "appDigest": "21e3d48b8b1fb9f0d96d0da52da5d1471953c01f8610bb56afff2e15ef671673",
+  "appDigest": "57b0d5ae26d30f4008821f19b8c43b6e042c06ae8e21e86e8ad504e51c8a5634",
   "provenance": {
     "schemaVersion": 1,
     "dealer": "champion-auto-pro",
     "profile": "auto-best/src/lib/data/dealer-profile.json",
-    "profileSha256": "06af34eae32a62c3bcc7d89d47aaaf540f0f4678163eb7b29eba35cd8176172c",
+    "profileSha256": "19c4073028b884f7d4c48bb4a56d8b0c44255708b637d9bdf74bbccd06f2cef3",
     "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
     "vehicles": 16,
     "currency": "EUR",
     "observedAt": "2026-09-07",
     "assets": [
       {
-        "source": "auto-best/static/dealer-brand/logo-on-light.webp",
-        "output": "public/dealer-app/logo-light-9428f263c0b35870c755.webp",
-        "sha256": "9428f263c0b35870c755758dd9958d6359c1b0c0bfb469602f865b371788739e",
+        "source": "auto-best/static/dealer-brand/v2-3e978e4c57d4446e/logo-on-light.webp",
+        "output": "public/dealer-app/logo-light-7a5bb57dc67207c4374e.webp",
+        "sha256": "7a5bb57dc67207c4374eaf4128656203be3b2fda0af9f79ee87e437278a8beef",
         "role": "logo-light"
       },
       {
-        "source": "auto-best/static/dealer-brand/logo-on-dark.webp",
-        "output": "public/dealer-app/logo-dark-9f36412a10624c47f271.webp",
-        "sha256": "9f36412a10624c47f2711974a396ee363cf2d3dc667cb7a6cf5d2be91bd23409",
+        "source": "auto-best/static/dealer-brand/v2-3e978e4c57d4446e/logo-on-dark.webp",
+        "output": "public/dealer-app/logo-dark-3818aa0bfbb622608791.webp",
+        "sha256": "3818aa0bfbb622608791d2f28651b2e4fe4b4e67bef93984e3d5586cc58e5230",
         "role": "logo-dark"
       },
       {
@@ -397,13 +397,107 @@
         "sha256": "2f38d235e6c12687705cae6a65bc9434623bd1d71ab0ccd0471b931251b5841c",
         "role": "vehicle"
       }
+    ],
+    "mileageFacts": [
+      {
+        "slug": "bmw-ix-40xdrive-2022-11787294758482309",
+        "sourceValue": 28000,
+        "sourceUnit": "km",
+        "canonicalKm": 28000
+      },
+      {
+        "slug": "audi-a6-50tdi-quattro-2019-11787311251312869",
+        "sourceValue": 176000,
+        "sourceUnit": "km",
+        "canonicalKm": 176000
+      },
+      {
+        "slug": "smart-forfour-22kw-26000-2021-11784794853353090",
+        "sourceValue": 26000,
+        "sourceUnit": "km",
+        "canonicalKm": 26000
+      },
+      {
+        "slug": "mercedes-benz-s-500-amg-packet-63-long-2014-11784640487309304",
+        "sourceValue": 265000,
+        "sourceUnit": "km",
+        "canonicalKm": 265000
+      },
+      {
+        "slug": "mercedes-benz-s-400-long-full-2023-11771862221224289",
+        "sourceValue": 73000,
+        "sourceUnit": "km",
+        "canonicalKm": 73000
+      },
+      {
+        "slug": "mercedes-benz-ml-350-amg-packet-2012-21784732491989700",
+        "sourceValue": 185000,
+        "sourceUnit": "km",
+        "canonicalKm": 185000
+      },
+      {
+        "slug": "audi-a7-s-line-full-2020-11784720940119234",
+        "sourceValue": 108000,
+        "sourceUnit": "km",
+        "canonicalKm": 108000
+      },
+      {
+        "slug": "mercedes-benz-b-200-amg-line-2020-11783584641538327",
+        "sourceValue": 95000,
+        "sourceUnit": "km",
+        "canonicalKm": 95000
+      },
+      {
+        "slug": "audi-sq7-s-line-2017-21778484741555035",
+        "sourceValue": 230000,
+        "sourceUnit": "km",
+        "canonicalKm": 230000
+      },
+      {
+        "slug": "audi-rs5-2-9tfsi-v6-quattro-2020-11758265694582686",
+        "sourceValue": 182000,
+        "sourceUnit": "km",
+        "canonicalKm": 182000
+      },
+      {
+        "slug": "audi-e-tron-2-x-s-line-2021-11773307576284789",
+        "sourceValue": 72000,
+        "sourceUnit": "km",
+        "canonicalKm": 72000
+      },
+      {
+        "slug": "vw-id-5-pro-82kw-2023-11787215050268120",
+        "sourceValue": 104000,
+        "sourceUnit": "km",
+        "canonicalKm": 104000
+      },
+      {
+        "slug": "toyota-highlander-60000km-prins-2019-21787142969943440",
+        "sourceValue": 60000,
+        "sourceUnit": "km",
+        "canonicalKm": 60000
+      },
+      {
+        "slug": "mercedes-benz-eqe-300-2023-21787197677876419",
+        "sourceValue": 47000,
+        "sourceUnit": "km",
+        "canonicalKm": 47000
+      },
+      {
+        "slug": "mercedes-benz-eqc-400-2021-21787200936302723",
+        "sourceValue": 68900,
+        "sourceUnit": "km",
+        "canonicalKm": 68900
+      },
+      {
+        "slug": "renault-captur-2015-11786100747512292",
+        "sourceValue": 55000,
+        "sourceUnit": "km",
+        "canonicalKm": 55000
+      }
     ]
   },
-  "baseDeployment": {
-    "id": "dpl_6LLFkwcc9fHd7AprkLcpbcxkaV8p",
-    "url": "https://cars-championautopro.vercel.app/",
-    "checkedAt": "2026-09-28T02:25:34.859Z"
-  },
-  "baseReceiptSha256": "d783612942448260ef6ea995d78c73f84899469b63ddc3d44d5711075b5aea32",
-  "refreshedAt": "2026-09-30T11:03:11.594Z"
+  "needsDealerQA": true,
+  "readyToPublish": false,
+  "refreshedAt": "2026-10-15T02:31:21.195Z"
 }

@@ -115,6 +115,25 @@ export function legacyDetailRedirects(manifest, artifact) {
   return redirects;
 }
 
+/** An already migrated source retains its reviewed map without retired Carwow files. */
+export function assertRetainedLegacyDetailTargets({artifact, profile, manifest}) {
+  legacyDetailRedirects(manifest, artifact);
+  if (profile.slug !== manifest.slug || artifact.defaultLocale !== (manifest.localization?.defaultLocale ?? manifest.language ?? 'en')) throw new Error('Retained legacy detail identity or locale changed');
+  const current = new Map();
+  for (const listing of profile.listings) {
+    const id = String(listing.sourceId || listing.id);
+    if (current.has(id)) throw new Error('Duplicate current inventory identity: ' + id);
+    current.set(id, listing);
+  }
+  for (const entry of artifact.entries) {
+    const listing = current.get(entry.sourceId);
+    const targetId = listing && (artifact.family === 'import' ? String(listing.sourceId || listing.id) : listing.slug);
+    if (!listing || targetId !== entry.targetId) throw new Error('Retained legacy detail target changed: ' + entry.sourceId);
+  }
+  for (const entry of artifact.retired) if (current.has(entry.sourceId)) throw new Error('Retained legacy detail inventory was restored: ' + entry.sourceId);
+  return artifact;
+}
+
 export function legacyDetailArtifact(files, manifest) {
   const reference = manifest.legacyDetailRoutes;
   if (!reference) {

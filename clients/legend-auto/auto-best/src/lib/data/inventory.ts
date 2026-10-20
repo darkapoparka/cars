@@ -1,6 +1,5 @@
 import { formatPrice, localeContract, type Locale } from '$lib/locale/core';
 import { templateText } from '$lib/locale/messages';
-import { leadSite } from '$config/lead-site';
 
 export const vehicleTypes = ['car', 'motorbike', 'van', 'truck'] as const;
 export type VehicleType = typeof vehicleTypes[number];
@@ -34,6 +33,9 @@ export type Vehicle = {
   yearNumber: number;
   mileage: string;
   mileageKm: number;
+  mileageKnown?: boolean;
+  mileageValue?: number;
+  mileageUnit?: 'km' | 'mi';
   fuel: string;
   transmission: string;
   equipment: readonly VehicleEquipment[];
@@ -42,16 +44,11 @@ export type Vehicle = {
   href: `/listing-detail-v1/${number}`;
 };
 
-// Equipment facets are limited to recurring features published in Day & Night's
-// current adverts for these model families (daynight.mobile.bg, checked 2026-08-30).
-
-
-// Imported master fixtures are not VIN-verified stock. Preserve source media;
-// client promotion requires replacing and verifying each record, including reused photos.
 export const featuredVehicles: Vehicle[] = [
   {
     "id": 1,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://legendauto1.mobile.bg/obiava-11774263732166588-audi-q4-q4-e-tron-45-quattro-digital-termopompa-29000km",
     "image": "/assets/legend-auto/vehicle-01-1.webp",
     "category": "SUV",
@@ -62,6 +59,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2024,
     "mileage": "29 000 км",
     "mileageKm": 29000,
+    "mileageKnown": true,
+    "mileageValue": 29000,
+    "mileageUnit": "km",
     "fuel": "Електрически",
     "transmission": "Автоматик",
     "equipment": [
@@ -73,12 +73,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 37999,
-    "href": "/listing-detail-v1/1",
-    "type": "car"
+    "href": "/listing-detail-v1/1"
   },
   {
     "id": 2,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://legendauto1.mobile.bg/obiava-11784618839120443-seat-leon-2-0tdi",
     "image": "/assets/legend-auto/vehicle-02-1.webp",
     "category": "Hatchback",
@@ -89,6 +89,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2017,
     "mileage": "200 000 км",
     "mileageKm": 200000,
+    "mileageKnown": true,
+    "mileageValue": 200000,
+    "mileageUnit": "km",
     "fuel": "Дизел",
     "transmission": "Ръчна",
     "equipment": [
@@ -98,12 +101,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 7999,
-    "href": "/listing-detail-v1/2",
-    "type": "car"
+    "href": "/listing-detail-v1/2"
   },
   {
     "id": 3,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://legendauto1.mobile.bg/obiava-21785269571488349-vw-tiguan-2-0tdi-150-k-s-dsg-122000km-navigatsiya",
     "image": "/assets/legend-auto/vehicle-03-1.webp",
     "category": "SUV",
@@ -114,6 +117,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2019,
     "mileage": "122 000 км",
     "mileageKm": 122000,
+    "mileageKnown": true,
+    "mileageValue": 122000,
+    "mileageUnit": "km",
     "fuel": "Дизел",
     "transmission": "Автоматик",
     "equipment": [
@@ -122,12 +128,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 16999,
-    "href": "/listing-detail-v1/3",
-    "type": "car"
+    "href": "/listing-detail-v1/3"
   },
   {
     "id": 4,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://legendauto1.mobile.bg/obiava-11788186558085673-vw-passat-2-0tdi-dsg-navigatsiya-podgrev-na-sedalki",
     "image": "/assets/legend-auto/vehicle-04-1.webp",
     "category": "Wagon",
@@ -138,6 +144,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2015,
     "mileage": "220 000 км",
     "mileageKm": 220000,
+    "mileageKnown": true,
+    "mileageValue": 220000,
+    "mileageUnit": "km",
     "fuel": "Дизел",
     "transmission": "Автоматик",
     "equipment": [
@@ -148,12 +157,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 9999,
-    "href": "/listing-detail-v1/4",
-    "type": "car"
+    "href": "/listing-detail-v1/4"
   },
   {
     "id": 5,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://legendauto1.mobile.bg/obiava-11788202283254523-vw-golf-1-9tdi-105k-s",
     "image": "/assets/legend-auto/vehicle-05-1.webp",
     "category": "Hatchback",
@@ -164,6 +173,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2005,
     "mileage": "205 000 км",
     "mileageKm": 205000,
+    "mileageKnown": true,
+    "mileageValue": 205000,
+    "mileageUnit": "km",
     "fuel": "Дизел",
     "transmission": "Ръчна",
     "equipment": [
@@ -171,12 +183,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 3599,
-    "href": "/listing-detail-v1/5",
-    "type": "car"
+    "href": "/listing-detail-v1/5"
   },
   {
     "id": 6,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://legendauto1.mobile.bg/obiava-11782331844226239-toyota-yaris-1-5-hibrid-kamera-4l-100km",
     "image": "/assets/legend-auto/vehicle-06-1.webp",
     "category": "Hatchback",
@@ -187,6 +199,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2012,
     "mileage": "169 000 км",
     "mileageKm": 169000,
+    "mileageKnown": true,
+    "mileageValue": 169000,
+    "mileageUnit": "km",
     "fuel": "Хибрид",
     "transmission": "Автоматик",
     "equipment": [
@@ -194,12 +209,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 7999,
-    "href": "/listing-detail-v1/6",
-    "type": "car"
+    "href": "/listing-detail-v1/6"
   },
   {
     "id": 7,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://legendauto1.mobile.bg/obiava-21787135215316819-toyota-rav4-2-5-hybrid-gaz-full-navigatsiya-kozhen-salon-full",
     "image": "/assets/legend-auto/vehicle-07-1.webp",
     "category": "SUV",
@@ -210,6 +225,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2022,
     "mileage": "252 000 км",
     "mileageKm": 252000,
+    "mileageKnown": true,
+    "mileageValue": 252000,
+    "mileageUnit": "km",
     "fuel": "Хибрид",
     "transmission": "Автоматик",
     "equipment": [
@@ -220,12 +238,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 26999,
-    "href": "/listing-detail-v1/7",
-    "type": "car"
+    "href": "/listing-detail-v1/7"
   },
   {
     "id": 8,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://legendauto1.mobile.bg/obiava-11786699392982478-toyota-auris-2-0d4d",
     "image": "/assets/legend-auto/vehicle-08-1.webp",
     "category": "Hatchback",
@@ -236,6 +254,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2009,
     "mileage": "229 000 км",
     "mileageKm": 229000,
+    "mileageKnown": true,
+    "mileageValue": 229000,
+    "mileageUnit": "km",
     "fuel": "Дизел",
     "transmission": "Ръчна",
     "equipment": [
@@ -243,12 +264,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 4399,
-    "href": "/listing-detail-v1/8",
-    "type": "car"
+    "href": "/listing-detail-v1/8"
   },
   {
     "id": 9,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://legendauto1.mobile.bg/obiava-11787054081251501-skoda-scala-1-6tdi",
     "image": "/assets/legend-auto/vehicle-09-1.webp",
     "category": "Wagon",
@@ -259,6 +280,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2019,
     "mileage": "180 000 км",
     "mileageKm": 180000,
+    "mileageKnown": true,
+    "mileageValue": 180000,
+    "mileageUnit": "km",
     "fuel": "Дизел",
     "transmission": "Ръчна",
     "equipment": [
@@ -268,12 +292,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 11999,
-    "href": "/listing-detail-v1/9",
-    "type": "car"
+    "href": "/listing-detail-v1/9"
   },
   {
     "id": 10,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://legendauto1.mobile.bg/obiava-11787771672265620-renault-zoe-52kw-78000km-sobstvena-bateriya",
     "image": "/assets/legend-auto/vehicle-10-1.webp",
     "category": "Hatchback",
@@ -284,6 +308,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2020,
     "mileage": "78 000 км",
     "mileageKm": 78000,
+    "mileageKnown": true,
+    "mileageValue": 78000,
+    "mileageUnit": "km",
     "fuel": "Електрически",
     "transmission": "Автоматик",
     "equipment": [
@@ -292,12 +319,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 14299,
-    "href": "/listing-detail-v1/10",
-    "type": "car"
+    "href": "/listing-detail-v1/10"
   },
   {
     "id": 11,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://legendauto1.mobile.bg/obiava-11777013326319103-renault-clio-1-2-benzin",
     "image": "/assets/legend-auto/vehicle-11-1.webp",
     "category": "Hatchback",
@@ -308,6 +335,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2014,
     "mileage": "150 000 км",
     "mileageKm": 150000,
+    "mileageKnown": true,
+    "mileageValue": 150000,
+    "mileageUnit": "km",
     "fuel": "Бензин",
     "transmission": "Ръчна",
     "equipment": [
@@ -315,12 +345,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 5199,
-    "href": "/listing-detail-v1/11",
-    "type": "car"
+    "href": "/listing-detail-v1/11"
   },
   {
     "id": 12,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://legendauto1.mobile.bg/obiava-11764232323880460-peugeot-508-2-0hdi",
     "image": "/assets/legend-auto/vehicle-12-1.webp",
     "category": "Wagon",
@@ -331,6 +361,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2013,
     "mileage": "232 000 км",
     "mileageKm": 232000,
+    "mileageKnown": true,
+    "mileageValue": 232000,
+    "mileageUnit": "km",
     "fuel": "Дизел",
     "transmission": "Ръчна",
     "equipment": [
@@ -338,12 +371,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 4299,
-    "href": "/listing-detail-v1/12",
-    "type": "car"
+    "href": "/listing-detail-v1/12"
   },
   {
     "id": 13,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://legendauto1.mobile.bg/obiava-11786966551654053-opel-astra-1-6",
     "image": "/assets/legend-auto/vehicle-13-1.webp",
     "category": "Wagon",
@@ -354,6 +387,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2017,
     "mileage": "193 000 км",
     "mileageKm": 193000,
+    "mileageKnown": true,
+    "mileageValue": 193000,
+    "mileageUnit": "km",
     "fuel": "Дизел",
     "transmission": "Ръчна",
     "equipment": [
@@ -362,12 +398,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 6599,
-    "href": "/listing-detail-v1/13",
-    "type": "car"
+    "href": "/listing-detail-v1/13"
   },
   {
     "id": 14,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://legendauto1.mobile.bg/obiava-11725562013563390-opel-agila-1-3i-vnos-ot-italiya",
     "image": "/assets/legend-auto/vehicle-14-1.webp",
     "category": "Hatchback",
@@ -378,17 +414,22 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2008,
     "mileage": "120 000 км",
     "mileageKm": 120000,
+    "mileageKnown": true,
+    "mileageValue": 120000,
+    "mileageUnit": "km",
     "fuel": "Бензин",
     "transmission": "Ръчна",
     "equipment": [],
     "condition": "used",
     "priceEur": 2500,
-    "href": "/listing-detail-v1/14",
-    "type": "car"
+    "href": "/listing-detail-v1/14"
   }
 ];
 
-export const formatVehiclePrice = (amount: number, locale: Locale = localeContract.defaultLocale) => amount > 0 ? formatPrice(amount, locale) : templateText(locale, 'Price on request');
+export const formatVehiclePrice = (
+  amount: number,
+  locale: Locale = localeContract.defaultLocale
+) => amount > 0 ? formatPrice(amount, locale) : templateText(locale, 'Price on request');
 
 /** Allow a currency line break while preserving the locale's grouped digits. */
 export const formatVehiclePriceLabel = (amount: number, locale: Locale = localeContract.defaultLocale) =>

@@ -1,0 +1,216 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-reviewed-modern-bilingual-copy-input",
+  "dealer": "dynamic-auto-varna",
+  "sourceCommit": "d9594c2979f668831b78609e4e990640259aee81",
+  "baselineTree": "3d06523f766ea9c364ce782988fb8c3db10a28e8",
+  "inputSha256": "96e4f450c8d0668e4858e6e147df90b40c47f25d6d944b8e4507955739321558",
+  "modernInputRowsSha256": "919075c4bc6208723e48b869bbeac5f264a59b5ded2b87b27df879b41b0360d9",
+  "listingCount": 8,
+  "profileInputs": [
+    {
+      "path": "dealer.json",
+      "gitBlob": "cda0f7799f27476f7c3d2eb0a7946233c0ca85c2",
+      "sha256": "74a0c1a7d9273564cb4d5abffed6042eaa5be92366ecf7fa58daf3d2b037c479",
+      "bytes": 3934
+    },
+    {
+      "path": "business-facts.json",
+      "gitBlob": "b71c1cd5252e1dd57cfabd25a606b36a332ede8f",
+      "sha256": "ab8741e9f3dd6d8c6e209f106754a96ec1daeaa4d642ced0026be856921b611a",
+      "bytes": 1997
+    },
+    {
+      "path": "stock.json",
+      "gitBlob": "a646fe0c455ec5a97f66c774be3bef14fba221fd",
+      "sha256": "04286782f055ec9d7885446a886e9cb223ab6d8fdeca053ff099c300a7bfad0b",
+      "bytes": 13905
+    }
+  ],
+  "reviewedGeneratorHelper": {
+    "path": "scripts/lib/modern-dealer-inventory-copy.mjs",
+    "sha256": "cbdbaa28dc07911cfe913b4e627671b6556fc25d3bfe59364e29c5ca5a29072b",
+    "sourceCommit": "14d86f67c160699c18a6ec5658197cc4d9011e0b"
+  },
+  "review": {
+    "displayCopyOnly": true,
+    "exactSourceDescriptionKeys": true,
+    "listingFactsUnchanged": true,
+    "imageUrlsUnchanged": true,
+    "imageAltsPreserved": true,
+    "interpolationTokensUnchanged": true,
+    "reviewedBy": "Codex, authorized final-template rollout",
+    "reviewedAt": "2026-10-14T20:04:09.107Z",
+    "notes": "Reuse exact existing native or reviewed registered companions for every actual current row; no new translation/factual source edits."
+  },
+  "reviewedCopy": {
+    "vw-golf-plus-2006-11755636345481695": {
+      "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "en": {
+        "description": "Dated sample from a published listing. Confirm the condition, price and availability directly with the dealership.",
+        "imageAlts": [
+          "VW Golf Plus 1.9 ТДИ 105кс / Бартер / Лизинг",
+          "VW Golf Plus 1.9 ТДИ 105кс / Бартер / Лизинг",
+          "VW Golf Plus 1.9 ТДИ 105кс / Бартер / Лизинг",
+          "VW Golf Plus 1.9 ТДИ 105кс / Бартер / Лизинг"
+        ]
+      },
+      "bg": {
+        "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+        "imageAlts": [
+          "VW Golf Plus 1.9 ТДИ 105кс / Бартер / Лизинг",
+          "VW Golf Plus 1.9 ТДИ 105кс / Бартер / Лизинг",
+          "VW Golf Plus 1.9 ТДИ 105кс / Бартер / Лизинг",
+          "VW Golf Plus 1.9 ТДИ 105кс / Бартер / Лизинг"
+        ]
+      }
+    },
+    "vw-caddy-2011-11774253415129356": {
+      "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "en": {
+        "description": "Dated sample from a published listing. Confirm the condition, price and availability directly with the dealership.",
+        "imageAlts": [
+          "VW Caddy 1.6 дизел / Регистриран / Обслужен / Лизинг",
+          "VW Caddy 1.6 дизел / Регистриран / Обслужен / Лизинг",
+          "VW Caddy 1.6 дизел / Регистриран / Обслужен / Лизинг",
+          "VW Caddy 1.6 дизел / Регистриран / Обслужен / Лизинг"
+        ]
+      },
+      "bg": {
+        "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+        "imageAlts": [
+          "VW Caddy 1.6 дизел / Регистриран / Обслужен / Лизинг",
+          "VW Caddy 1.6 дизел / Регистриран / Обслужен / Лизинг",
+          "VW Caddy 1.6 дизел / Регистриран / Обслужен / Лизинг",
+          "VW Caddy 1.6 дизел / Регистриран / Обслужен / Лизинг"
+        ]
+      }
+    },
+    "toyota-corolla-2022-11780920338607763": {
+      "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "en": {
+        "description": "Dated sample from a published listing. Confirm the condition, price and availability directly with the dealership.",
+        "imageAlts": [
+          "Toyota Corolla Бартер / Лизинг / Без забележки!!! 43.000км",
+          "Toyota Corolla Бартер / Лизинг / Без забележки!!! 43.000км",
+          "Toyota Corolla Бартер / Лизинг / Без забележки!!! 43.000км",
+          "Toyota Corolla Бартер / Лизинг / Без забележки!!! 43.000км"
+        ]
+      },
+      "bg": {
+        "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+        "imageAlts": [
+          "Toyota Corolla Бартер / Лизинг / Без забележки!!! 43.000км",
+          "Toyota Corolla Бартер / Лизинг / Без забележки!!! 43.000км",
+          "Toyota Corolla Бартер / Лизинг / Без забележки!!! 43.000км",
+          "Toyota Corolla Бартер / Лизинг / Без забележки!!! 43.000км"
+        ]
+      }
+    },
+    "toyota-avensis-verso-2003-11785227540991935": {
+      "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "en": {
+        "description": "Dated sample from a published listing. Confirm the condition, price and availability directly with the dealership.",
+        "imageAlts": [
+          "Toyota Avensis verso Регистриран / Обслужен / Лизинг / Бартер",
+          "Toyota Avensis verso Регистриран / Обслужен / Лизинг / Бартер",
+          "Toyota Avensis verso Регистриран / Обслужен / Лизинг / Бартер",
+          "Toyota Avensis verso Регистриран / Обслужен / Лизинг / Бартер"
+        ]
+      },
+      "bg": {
+        "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+        "imageAlts": [
+          "Toyota Avensis verso Регистриран / Обслужен / Лизинг / Бартер",
+          "Toyota Avensis verso Регистриран / Обслужен / Лизинг / Бартер",
+          "Toyota Avensis verso Регистриран / Обслужен / Лизинг / Бартер",
+          "Toyota Avensis verso Регистриран / Обслужен / Лизинг / Бартер"
+        ]
+      }
+    },
+    "smart-mc-2003-11763409304457756": {
+      "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "en": {
+        "description": "Dated sample from a published listing. Confirm the condition, price and availability directly with the dealership.",
+        "imageAlts": [
+          "Smart Mc Регистриран / Автомат / Климатик / Панорама",
+          "Smart Mc Регистриран / Автомат / Климатик / Панорама",
+          "Smart Mc Регистриран / Автомат / Климатик / Панорама",
+          "Smart Mc Регистриран / Автомат / Климатик / Панорама"
+        ]
+      },
+      "bg": {
+        "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+        "imageAlts": [
+          "Smart Mc Регистриран / Автомат / Климатик / Панорама",
+          "Smart Mc Регистриран / Автомат / Климатик / Панорама",
+          "Smart Mc Регистриран / Автомат / Климатик / Панорама",
+          "Smart Mc Регистриран / Автомат / Климатик / Панорама"
+        ]
+      }
+    },
+    "peugeot-208-2016-11784058872993223": {
+      "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "en": {
+        "description": "Dated sample from a published listing. Confirm the condition, price and availability directly with the dealership.",
+        "imageAlts": [
+          "Peugeot 208 125 хил км. / Лизинг / Бартер",
+          "Peugeot 208 125 хил км. / Лизинг / Бартер",
+          "Peugeot 208 125 хил км. / Лизинг / Бартер",
+          "Peugeot 208 125 хил км. / Лизинг / Бартер"
+        ]
+      },
+      "bg": {
+        "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+        "imageAlts": [
+          "Peugeot 208 125 хил км. / Лизинг / Бартер",
+          "Peugeot 208 125 хил км. / Лизинг / Бартер",
+          "Peugeot 208 125 хил км. / Лизинг / Бартер",
+          "Peugeot 208 125 хил км. / Лизинг / Бартер"
+        ]
+      }
+    },
+    "vw-golf-2005-11790879613801923": {
+      "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "en": {
+        "description": "Dated sample from a published listing. Confirm the condition, price and availability directly with the dealership.",
+        "imageAlts": [
+          "VW Golf Бартер / Лизинг / Навигация",
+          "VW Golf Бартер / Лизинг / Навигация",
+          "VW Golf Бартер / Лизинг / Навигация",
+          "VW Golf Бартер / Лизинг / Навигация"
+        ]
+      },
+      "bg": {
+        "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+        "imageAlts": [
+          "VW Golf Бартер / Лизинг / Навигация",
+          "VW Golf Бартер / Лизинг / Навигация",
+          "VW Golf Бартер / Лизинг / Навигация",
+          "VW Golf Бартер / Лизинг / Навигация"
+        ]
+      }
+    },
+    "vw-touran-2012-11787907499756917": {
+      "sourceDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "en": {
+        "description": "Dated sample from a published listing. Confirm the condition, price and availability directly with the dealership.",
+        "imageAlts": [
+          "VW Touran Регистриран / Обслужен / Бартер / Лизинг",
+          "VW Touran Регистриран / Обслужен / Бартер / Лизинг",
+          "VW Touran Регистриран / Обслужен / Бартер / Лизинг",
+          "VW Touran Регистриран / Обслужен / Бартер / Лизинг"
+        ]
+      },
+      "bg": {
+        "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+        "imageAlts": [
+          "VW Touran Регистриран / Обслужен / Бартер / Лизинг",
+          "VW Touran Регистриран / Обслужен / Бартер / Лизинг",
+          "VW Touran Регистриран / Обслужен / Бартер / Лизинг",
+          "VW Touran Регистриран / Обслужен / Бартер / Лизинг"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "sourceFiles": 172,
+  "svelteFiles": 99,
+  "cssFiles": 11,
+  "cornerDeclarationsBefore": 464,
+  "cornerDeclarationsAfter": 471,
+  "renderedStates": 334,
+  "mobileStates": 156,
+  "desktopStates": 178,
+  "regressionCases": 150,
+  "measuredCards": 2428,
+  "measuredFactBadges": 354,
+  "measuredInsetPhotos": 168,
+  "changedSourceFiles": [
+    "src/lib/components/company/ContactVehicle.svelte",
+    "src/lib/components/company/TradeInEnquiry.svelte",
+    "src/lib/components/company/VehicleEnquiry.svelte",
+    "src/lib/components/layout/HomeBannerPicker.svelte"
+  ],
+  "checks": {
+    "svelte": "0 errors, 0 warnings",
+    "build": "passed",
+    "tokens": "passed",
+    "cssPolicy": "passed",
+    "architecture": "passed",
+    "typography": "passed",
+    "radiusPolicy": "3 passed"
+  },
+  "previewServers": "owned before, after and regression previews closed"
+}

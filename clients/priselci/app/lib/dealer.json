@@ -4,9 +4,9 @@
   "name": "Автокъща Приселци",
   "shortName": "Автокъща Приселци",
   "logo": {
-    "light": "/dealer-app/logo-light-c6427ddf1f5c073cd1a5.webp",
-    "dark": "/dealer-app/logo-dark-ac80f7e7b14ecc7ad9ec.webp",
-    "icon": "/dealer-app/icon.png"
+    "light": "/dealer-brand/v2-7b937c05859b3290/logo-on-light.webp",
+    "dark": "/dealer-brand/v2-7b937c05859b3290/logo-on-dark.webp",
+    "icon": "/dealer-brand/v2-7b937c05859b3290/app-icon.png"
   },
   "defaultLocale": "bg",
   "enabledLocales": [
@@ -42,13 +42,13 @@
       "url": ""
     }
   ],
+  "referenceClaimsApproved": false,
   "services": [
     "Продажба на употребявани автомобили",
     "Съдействие при регистрация",
     "Запитване за лизинг"
   ],
-  "referenceClaimsApproved": false,
   "observedAt": "2026-09-07",
-  "inventoryNotice": "Dated listing samples. Confirm price, availability and vehicle information with the dealer.",
+  "inventoryNotice": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
   "previewNotice": "Independent design preview. No purchase, reservation or message is submitted by this website."
 }

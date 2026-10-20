@@ -1,3 +1,4 @@
+import 'server-only';
 import {isDealer} from './dealer-config';
 import snapshots from './captured-vehicle-details.json';
 import type {ReferenceVehicleDetail} from './reference-types';

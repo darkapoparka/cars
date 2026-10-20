@@ -1,0 +1,17 @@
+{
+  "generatedAt": "2026-10-06T17:51:02.321Z",
+  "generator": "image_gen",
+  "purpose": "Decorative mobile Contact location banner",
+  "originalPath": "C:/Users/radev/.codex/generated_images/01a10aaf-2314-7de0-9b09-b5dfe4f3c810/exec-20103d47-dcd1-4890-89f3-9c64282f64d4.png",
+  "originalPreserved": true,
+  "generatedIllustration": true,
+  "style": "Conceptual porcelain-white showroom pavilion with generic charcoal and white cars and a coral location pin. Not a photograph of the configured address.",
+  "publicPath": "/images/contact/showroom-20261006.webp",
+  "processing": "Resized to 768 pixels wide and encoded as WebP; composition preserved.",
+  "width": 768,
+  "height": 256,
+  "bytes": 12692,
+  "sha256": "d64a9823d0c7d4bf2d0409c8949cb1710886923875e65ef07dc7b894dd982f96",
+  "integratedIn": "src/components/ShowroomContactBanner.tsx",
+  "mobileOnly": true
+}

@@ -1,0 +1,2077 @@
+{
+  "timestamp": "2026-10-04T07:13:50.991Z",
+  "reviewedParent": "a51311e028d0f8a29082ea18ce6bc3d38a018f7d",
+  "sourceHashes": {
+    "docs/TESTING.md": "d44d4ed32e9e93686b753c77a995e921d6e81390f8f28b119b5e31ad7e3d77bc",
+    "scripts/check-tokens.mjs": "750b853b5e7f4aad2cae08732cb4f39a6817962b617a8e95b86b5f7f73284fa4",
+    "scripts/mobile-polish-smoke.mjs": "d820afe3a9d12d5fb7fd1ce48ce46bfb5ccdb7ddc664d851e2ee03d6a30b44b8",
+    "scripts/shared-entry-smoke.mjs": "97cd92d34eb3623fe317d460b350d2fede39f0682210135493b968da34789762",
+    "src/lib/components/ui/entry/EntryCard.svelte": "e6839ca9f9fc14c3b39e6c00f87fc5068c845e98f1e9c267790cea8fa6b80474",
+    "src/lib/styles/base.css": "73fe0cbe50aa4ef869a26966010d2c44555c09980adbca795992d9ea1c7e2f69",
+    "src/lib/styles/tokens.css": "f6922f1d51a5888ed8f9c19be911ba44018d9d20371c26813dca3fe9dd43f092"
+  },
+  "checks": {
+    "svelte": "0 errors and warnings",
+    "build": "passed, including locale checks",
+    "cssPolicy": "passed",
+    "tokens": "passed",
+    "pinnedTypographyAndIcons": "passed"
+  },
+  "browser": {
+    "before": "preserved compiled entry-hierarchy trial",
+    "after": "corrected compiled output",
+    "metrics": [
+      {
+        "phase": "before",
+        "route": "home",
+        "state": 0,
+        "canvas": 320,
+        "card": {
+          "bottom": 402,
+          "height": 210,
+          "left": 12,
+          "right": 308,
+          "top": 192,
+          "width": 296,
+          "x": 12,
+          "y": 192
+        },
+        "field": {
+          "bottom": 321,
+          "height": 48,
+          "left": 33,
+          "right": 287,
+          "top": 273,
+          "width": 254,
+          "x": 33,
+          "y": 273
+        },
+        "height": 844,
+        "options": [
+          {
+            "border": "2px solid rgba(0, 0, 0, 0)",
+            "clip": "padding-box",
+            "rect": {
+              "bottom": 257,
+              "height": 44,
+              "left": 91.25,
+              "right": 158,
+              "top": 213,
+              "width": 66.75,
+              "x": 91.25,
+              "y": 213
+            },
+            "selected": "true"
+          },
+          {
+            "border": "2px solid rgba(0, 0, 0, 0)",
+            "clip": "padding-box",
+            "rect": {
+              "bottom": 257,
+              "height": 44,
+              "left": 162,
+              "right": 228.75,
+              "top": 213,
+              "width": 66.75,
+              "x": 162,
+              "y": 213
+            },
+            "selected": "false"
+          }
+        ],
+        "pseudoTrackHeight": "40px",
+        "track": {
+          "bottom": 257,
+          "height": 44,
+          "left": 91.25,
+          "right": 228.75,
+          "top": 213,
+          "width": 137.5,
+          "x": 91.25,
+          "y": 213
+        },
+        "trackColor": "rgba(0, 0, 0, 0)",
+        "width": 320
+      },
+      {
+        "phase": "before",
+        "route": "home",
+        "state": 1,
+        "canvas": 320,
+        "card": {
+          "bottom": 402,
+          "height": 210,
+          "left": 12,
+          "right": 308,
+          "top": 192,
+          "width": 296,
+          "x": 12,
+          "y": 192
+        },
+        "field": {
+          "bottom": 321,
+          "height": 48,
+          "left": 33,
+          "right": 287,
+          "top": 273,
+          "width": 254,
+          "x": 33,
+          "y": 273
+        },
+        "height": 844,
+        "options": [
+          {
+            "border": "2px solid rgba(0, 0, 0, 0)",
+            "clip": "padding-box",
+            "rect": {
+              "bottom": 257,
+              "height": 44,
+              "left": 91.25,
+              "right": 158,
+              "top": 213,
+              "width": 66.75,
+              "x": 91.25,
+              "y": 213
+            },
+            "selected": "false"
+          },
+          {
+            "border": "2px solid rgba(0, 0, 0, 0)",
+            "clip": "padding-box",
+            "rect": {
+              "bottom": 257,
+              "height": 44,
+              "left": 162,
+              "right": 228.75,
+              "top": 213,
+              "width": 66.75,
+              "x": 162,
+              "y": 213
+            },
+            "selected": "true"
+          }
+        ],
+        "pseudoTrackHeight": "40px",
+        "track": {
+          "bottom": 257,
+          "height": 44,
+          "left": 91.25,
+          "right": 228.75,
+          "top": 213,
+          "width": 137.5,
+          "x": 91.25,
+          "y": 213
+        },
+        "trackColor": "rgba(0, 0, 0, 0)",
+        "width": 320
+      },
+      {
+        "phase": "before",
+        "route": "sell",
+        "state": 0,
+        "canvas": 320,
+        "card": {
+          "bottom": 402,
+          "height": 202,
+          "left": 12,
+          "right": 308,
+          "top": 200,
+          "width": 296,
+          "x": 12,
+          "y": 200
+        },
+        "field": {
+          "bottom": 325,
+          "height": 48,
+          "left": 29,
+          "right": 291,
+          "top": 277,
+          "width": 262,
+          "x": 29,
+          "y": 277
+        },
+        "height": 844,
+        "options": [
+          {
+            "border": "2px solid rgba(0, 0, 0, 0)",
+            "clip": "padding-box",
+            "rect": {
+              "bottom": 261,
+              "height": 44,
+              "left": 47.984375,
+              "right": 158,
+              "top": 217,
+              "width": 110.015625,
+              "x": 47.984375,
+              "y": 217
+            },
+            "selected": "true"
+          },
+          {
+            "border": "2px solid rgba(0, 0, 0, 0)",
+            "clip": "padding-box",
+            "rect": {
+              "bottom": 261,
+              "height": 44,
+              "left": 162,
+              "right": 272.015625,
+              "top": 217,
+              "width": 110.015625,
+              "x": 162,
+              "y": 217
+            },
+            "selected": "false"
+          }
+        ],
+        "pseudoTrackHeight": "40px",
+        "track": {
+          "bottom": 261,
+          "height": 44,
+          "left": 47.984375,
+          "right": 272.015625,
+          "top": 217,
+          "width": 224.03125,
+          "x": 47.984375,
+          "y": 217
+        },
+        "trackColor": "rgba(0, 0, 0, 0)",
+        "width": 320
+      },
+      {
+        "phase": "before",
+        "route": "sell",
+        "state": 1,
+        "canvas": 320,
+        "card": {
+          "bottom": 402,
+          "height": 202,
+          "left": 12,
+          "right": 308,
+          "top": 200,
+          "width": 296,
+          "x": 12,
+          "y": 200
+        },
+        "field": {
+          "bottom": 325,
+          "height": 48,
+          "left": 29,
+          "right": 291,
+          "top": 277,
+          "width": 262,
+          "x": 29,
+          "y": 277
+        },
+        "height": 844,
+        "options": [
+          {
+            "border": "2px solid rgba(0, 0, 0, 0)",
+            "clip": "padding-box",
+            "rect": {
+              "bottom": 261,
+              "height": 44,
+              "left": 47.984375,
+              "right": 158,
+              "top": 217,
+              "width": 110.015625,
+              "x": 47.984375,
+              "y": 217
+            },
+            "selected": "false"
+          },
+          {
+            "border": "2px solid rgba(0, 0, 0, 0)",
+            "clip": "padding-box",
+            "rect": {
+              "bottom": 261,
+              "height": 44,
+              "left": 162,
+              "right": 272.015625,
+              "top": 217,
+              "width": 110.015625,
+              "x": 162,
+              "y": 217
+            },
+            "selected": "true"
+          }
+        ],
+        "pseudoTrackHeight": "40px",
+        "track": {
+          "bottom": 261,
+          "height": 44,
+          "left": 47.984375,
+          "right": 272.015625,
+          "top": 217,
+          "width": 224.03125,
+          "x": 47.984375,
+          "y": 217
+        },
+        "trackColor": "rgba(0, 0, 0, 0)",
+        "width": 320
+      },
+      {
+        "phase": "before",
+        "route": "import",
+        "state": 0,
+        "canvas": 320,
+        "card": {
+          "bottom": 402,
+          "height": 202,
+          "left": 12,
+          "right": 308,
+          "top": 200,
+          "width": 296,
+          "x": 12,
+          "y": 200
+        },
+        "field": {
+          "bottom": 325,
+          "height": 48,
+          "left": 29,
+          "right": 291,
+          "top": 277,
+          "width": 262,
+          "x": 29,
+          "y": 277
+        },
+        "height": 844,
+        "options": [
+          {
+            "border": "2px solid rgba(0, 0, 0, 0)",
+            "clip": "padding-box",
+            "rect": {
+              "bottom": 261,
+              "height": 44,
+              "left": 42.140625,
+              "right": 158,
+              "top": 217,
+              "width": 115.859375,
+              "x": 42.140625,
+              "y": 217
+            },
+            "selected": "true"
+          },
+          {
+            "border": "2px solid rgba(0, 0, 0, 0)",
+            "clip": "padding-box",
+            "rect": {
+              "bottom": 261,
+              "height": 44,
+              "left": 162,
+              "right": 277.859375,
+              "top": 217,
+              "width": 115.859375,
+              "x": 162,
+              "y": 217
+            },
+            "selected": "false"
+          }
+        ],
+        "pseudoTrackHeight": "40px",
+        "track": {
+          "bottom": 261,
+          "height": 44,
+          "left": 42.140625,
+          "right": 277.859375,
+          "top": 217,
+          "width": 235.71875,
+          "x": 42.140625,
+          "y": 217
+        },
+        "trackColor": "rgba(0, 0, 0, 0)",
+        "width": 320
+      },
+      {
+        "phase": "before",
+        "route": "import",
+        "state": 1,
+        "canvas": 320,
+        "card": {
+          "bottom": 402,
+          "height": 202,
+          "left": 12,
+          "right": 308,
+          "top": 200,
+          "width": 296,
+          "x": 12,
+          "y": 200
+        },
+        "field": {
+          "bottom": 325,
+          "height": 48,
+          "left": 29,
+          "right": 291,
+          "top": 277,
+          "width": 262,
+          "x": 29,
+          "y": 277
+        },
+        "height": 844,
+        "options": [
+          {
+            "border": "2px solid rgba(0, 0, 0, 0)",
+            "clip": "padding-box",
+            "rect": {
+              "bottom": 261,
+              "height": 44,
+              "left": 42.140625,
+              "right": 158,
+              "top": 217,
+              "width": 115.859375,
+              "x": 42.140625,
+              "y": 217
+            },
+            "selected": "false"
+          },
+          {
+            "border": "2px solid rgba(0, 0, 0, 0)",
+            "clip": "padding-box",
+            "rect": {
+              "bottom": 261,
+              "height": 44,
+              "left": 162,
+              "right": 277.859375,
+              "top": 217,
+              "width": 115.859375,
+              "x": 162,
+              "y": 217
+            },
+            "selected": "true"
+          }
+        ],
+        "pseudoTrackHeight": "40px",
+        "track": {
+          "bottom": 261,
+          "height": 44,
+          "left": 42.140625,
+          "right": 277.859375,
+          "top": 217,
+          "width": 235.71875,
+          "x": 42.140625,
+          "y": 217
+        },
+        "trackColor": "rgba(0, 0, 0, 0)",
+        "width": 320
+      },
+      {
+        "phase": "after",
+        "route": "home",
+        "state": 0,
+        "canvas": 320,
+        "card": {
+          "bottom": 402,
+          "height": 210,
+          "left": 12,
+          "right": 308,
+          "top": 192,
+          "width": 296,
+          "x": 12,
+          "y": 192
+        },
+        "field": {
+          "bottom": 321,
+          "height": 48,
+          "left": 33,
+          "right": 287,
+          "top": 273,
+          "width": 254,
+          "x": 33,
+          "y": 273
+        },
+        "height": 844,
+        "options": [
+          {
+            "border": "2px solid rgba(0, 0, 0, 0)",
+            "clip": "padding-box",
+            "rect": {
+              "bottom": 257,
+              "height": 44,
+              "left": 40,
+              "right": 158,
+              "top": 213,
+              "width": 118,
+              "x": 40,
+              "y": 213
+            },
+            "selected": "true"
+          },
+          {
+            "border": "2px solid rgba(0, 0, 0, 0)",
+            "clip": "padding-box",
+            "rect": {
+              "bottom": 257,
+              "height": 44,
+              "left": 162,
+              "right": 280,
+              "top": 213,
+              "width": 118,
+              "x": 162,
+              "y": 213
+            },
+            "selected": "false"
+          }
+        ],
+        "pseudoTrackHeight": "auto",
+        "track": {
+          "bottom": 257,
+          "height": 44,
+          "left": 40,
+          "right": 280,
+          "top": 213,
+          "width": 240,
+          "x": 40,
+          "y": 213
+        },
+        "trackColor": "rgb(241, 243, 245)",
+        "width": 320
+      },
+      {
+        "phase": "after",
+        "route": "home",
+        "state": 1,
+        "canvas": 320,
+        "card": {
+          "bottom": 402,
+          "height": 210,
+          "left": 12,
+          "right": 308,
+          "top": 192,
+          "width": 296,
+          "x": 12,
+          "y": 192
+        },
+        "field": {
+          "bottom": 321,
+          "height": 48,
+          "left": 33,
+          "right": 287,
+          "top": 273,
+          "width": 254,
+          "x": 33,
+          "y": 273
+        },
+        "height": 844,
+        "options": [
+          {
+            "border": "2px solid rgba(0, 0, 0, 0)",
+            "clip": "padding-box",
+            "rect": {
+              "bottom": 257,
+              "height": 44,
+              "left": 40,
+              "right": 158,
+              "top": 213,
+              "width": 118,
+              "x": 40,
+              "y": 213
+            },
+            "selected": "false"
+          },
+          {
+            "border": "2px solid rgba(0, 0, 0, 0)",
+            "clip": "padding-box",
+            "rect": {
+              "bottom": 257,
+              "height": 44,
+              "left": 162,
+              "right": 280,
+              "top": 213,
+              "width": 118,
+              "x": 162,
+              "y": 213
+            },
+            "selected": "true"
+          }
+        ],
+        "pseudoTrackHeight": "auto",
+        "track": {
+          "bottom": 257,
+          "height": 44,
+          "left": 40,
+          "right": 280,
+          "top": 213,
+          "width": 240,
+          "x": 40,
+          "y": 213
+        },
+        "trackColor": "rgb(241, 243, 245)",
+        "width": 320
+      },
+      {
+        "phase": "after",
+        "route": "sell",
+        "state": 0,
+        "canvas": 320,
+        "card": {
+          "bottom": 402,
+          "height": 202,
+          "left": 12,
+          "right": 308,
+          "top": 200,
+          "width": 296,
+          "x": 12,
+          "y": 200
+        },
+        "field": {
+          "bottom": 325,
+          "height": 48,
+          "left": 29,
+          "right": 291,
+          "top": 277,
+          "width": 262,
+          "x": 29,
+          "y": 277
+        },
+        "height": 844,
+        "options": [
+          {
+            "border": "2px solid rgba(0, 0, 0, 0)",
+            "clip": "padding-box",
+            "rect": {
+              "bottom": 261,
+              "height": 44,
+              "left": 40,
+              "right": 158,
+              "top": 217,
+              "width": 118,
+              "x": 40,
+              "y": 217
+            },
+            "selected": "true"
+          },
+          {
+            "border": "2px solid rgba(0, 0, 0, 0)",
+            "clip": "padding-box",
+            "rect": {
+              "bottom": 261,
+              "height": 44,
+              "left": 162,
+              "right": 280,
+              "top": 217,
+              "width": 118,
+              "x": 162,
+              "y": 217
+            },
+            "selected": "false"
+          }
+        ],
+        "pseudoTrackHeight": "auto",
+        "track": {
+          "bottom": 261,
+          "height": 44,
+          "left": 40,
+          "right": 280,
+          "top": 217,
+          "width": 240,
+          "x": 40,
+          "y": 217
+        },
+        "trackColor": "rgb(241, 243, 245)",
+        "width": 320
+      },
+      {
+        "phase": "after",
+        "route": "sell",
+        "state": 1,
+        "canvas": 320,
+        "card": {
+          "bottom": 402,
+          "height": 202,
+          "left": 12,
+          "right": 308,
+          "top": 200,
+          "width": 296,
+          "x": 12,
+          "y": 200
+        },
+        "field": {
+          "bottom": 325,
+          "height": 48,
+          "left": 29,
+          "right": 291,
+          "top": 277,
+          "width": 262,
+          "x": 29,
+          "y": 277
+        },
+        "height": 844,
+        "options": [
+          {
+            "border": "2px solid rgba(0, 0, 0, 0)",
+            "clip": "padding-box",
+            "rect": {
+              "bottom": 261,
+              "height": 44,
+              "left": 40,
+              "right": 158,
+              "top": 217,
+              "width": 118,
+              "x": 40,
+              "y": 217
+            },
+            "selected": "false"
+          },
+          {
+            "border": "2px solid rgba(0, 0, 0, 0)",
+            "clip": "padding-box",
+            "rect": {
+              "bottom": 261,
+              "height": 44,
+              "left": 162,
+              "right": 280,
+              "top": 217,
+              "width": 118,
+              "x": 162,
+              "y": 217
+            },
+            "selected": "true"
+          }
+        ],
+        "pseudoTrackHeight": "auto",
+        "track": {
+          "bottom": 261,
+          "height": 44,
+          "left": 40,
+          "right": 280,
+          "top": 217,
+          "width": 240,
+          "x": 40,
+          "y": 217
+        },
+        "trackColor": "rgb(241, 243, 245)",
+        "width": 320
+      },
+      {
+        "phase": "after",
+        "route": "import",
+        "state": 0,
+        "canvas": 320,
+        "card": {
+          "bottom": 402,
+          "height": 202,
+          "left": 12,
+          "right": 308,
+          "top": 200,
+          "width": 296,
+          "x": 12,
+          "y": 200
+        },
+        "field": {
+          "bottom": 325,
+          "height": 48,
+          "left": 29,
+          "right": 291,
+          "top": 277,
+          "width": 262,
+          "x": 29,
+          "y": 277
+        },
+        "height": 844,
+        "options": [
+          {
+            "border": "2px solid rgba(0, 0, 0, 0)",
+            "clip": "padding-box",
+            "rect": {
+              "bottom": 261,
+              "height": 44,
+              "left": 40,
+              "right": 158,
+              "top": 217,
+              "width": 118,
+              "x": 40,
+              "y": 217
+            },
+            "selected": "true"
+          },
+          {
+            "border": "2px solid rgba(0, 0, 0, 0)",
+            "clip": "padding-box",
+            "rect": {
+              "bottom": 261,
+              "height": 44,
+              "left": 162,
+              "right": 280,
+              "top": 217,
+              "width": 118,
+              "x": 162,
+              "y": 217
+            },
+            "selected": "false"
+          }
+        ],
+        "pseudoTrackHeight": "auto",
+        "track": {
+          "bottom": 261,
+          "height": 44,
+          "left": 40,
+          "right": 280,
+          "top": 217,
+          "width": 240,
+          "x": 40,
+          "y": 217
+        },
+        "trackColor": "rgb(241, 243, 245)",
+        "width": 320
+      },
+      {
+        "phase": "after",
+        "route": "import",
+        "state": 1,
+        "canvas": 320,
+        "card": {
+          "bottom": 402,
+          "height": 202,
+          "left": 12,
+          "right": 308,
+          "top": 200,
+          "width": 296,
+          "x": 12,
+          "y": 200
+        },
+        "field": {
+          "bottom": 325,
+          "height": 48,
+          "left": 29,
+          "right": 291,
+          "top": 277,
+          "width": 262,
+          "x": 29,
+          "y": 277
+        },
+        "height": 844,
+        "options": [
+          {
+            "border": "2px solid rgba(0, 0, 0, 0)",
+            "clip": "padding-box",
+            "rect": {
+              "bottom": 261,
+              "height": 44,
+              "left": 40,
+              "right": 158,
+              "top": 217,
+              "width": 118,
+              "x": 40,
+              "y": 217
+            },
+            "selected": "false"
+          },
+          {
+            "border": "2px solid rgba(0, 0, 0, 0)",
+            "clip": "padding-box",
+            "rect": {
+              "bottom": 261,
+              "height": 44,
+              "left": 162,
+              "right": 280,
+              "top": 217,
+              "width": 118,
+              "x": 162,
+              "y": 217
+            },
+            "selected": "true"
+          }
+        ],
+        "pseudoTrackHeight": "auto",
+        "track": {
+          "bottom": 261,
+          "height": 44,
+          "left": 40,
+          "right": 280,
+          "top": 217,
+          "width": 240,
+          "x": 40,
+          "y": 217
+        },
+        "trackColor": "rgb(241, 243, 245)",
+        "width": 320
+      }
+    ]
+  },
+  "sharedEntry": {
+    "passed": true,
+    "results": [
+      {
+        "locale": "en",
+        "width": 320,
+        "passed": true,
+        "entries": [
+          {
+            "route": "/",
+            "fieldHeight": 48,
+            "selectorWidth": 240,
+            "fieldWidth": 254,
+            "labelsFit": true,
+            "firstFrame": {
+              "width": 240,
+              "height": 44,
+              "background": "rgb(241, 243, 245)",
+              "optionWidths": [
+                118,
+                118
+              ],
+              "selectedPaintHeight": 40,
+              "selectedInsets": [
+                "2px",
+                "2px",
+                "2px",
+                "2px"
+              ],
+              "selectedClip": "padding-box"
+            },
+            "secondFrame": {
+              "width": 240,
+              "height": 44,
+              "background": "rgb(241, 243, 245)",
+              "optionWidths": [
+                118,
+                118
+              ],
+              "selectedPaintHeight": 40,
+              "selectedInsets": [
+                "2px",
+                "2px",
+                "2px",
+                "2px"
+              ],
+              "selectedClip": "padding-box"
+            }
+          },
+          {
+            "route": "/contact?topic=trade-in",
+            "fieldHeight": 48,
+            "selectorWidth": 240,
+            "fieldWidth": 262,
+            "labelsFit": true,
+            "firstFrame": {
+              "width": 240,
+              "height": 44,
+              "background": "rgb(241, 243, 245)",
+              "optionWidths": [
+                118,
+                118
+              ],
+              "selectedPaintHeight": 40,
+              "selectedInsets": [
+                "2px",
+                "2px",
+                "2px",
+                "2px"
+              ],
+              "selectedClip": "padding-box"
+            },
+            "secondFrame": {
+              "width": 240,
+              "height": 44,
+              "background": "rgb(241, 243, 245)",
+              "optionWidths": [
+                118,
+                118
+              ],
+              "selectedPaintHeight": 40,
+              "selectedInsets": [
+                "2px",
+                "2px",
+                "2px",
+                "2px"
+              ],
+              "selectedClip": "padding-box"
+            }
+          },
+          {
+            "route": "/contact?topic=import",
+            "fieldHeight": 48,
+            "selectorWidth": 240,
+            "fieldWidth": 262,
+            "labelsFit": true,
+            "firstFrame": {
+              "width": 240,
+              "height": 44,
+              "background": "rgb(241, 243, 245)",
+              "optionWidths": [
+                118,
+                118
+              ],
+              "selectedPaintHeight": 40,
+              "selectedInsets": [
+                "2px",
+                "2px",
+                "2px",
+                "2px"
+              ],
+              "selectedClip": "padding-box"
+            },
+            "secondFrame": {
+              "width": 240,
+              "height": 44,
+              "background": "rgb(241, 243, 245)",
+              "optionWidths": [
+                118,
+                118
+              ],
+              "selectedPaintHeight": 40,
+              "selectedInsets": [
+                "2px",
+                "2px",
+                "2px",
+                "2px"
+              ],
+              "selectedClip": "padding-box"
+            }
+          }
+        ]
+      },
+      {
+        "locale": "en",
+        "width": 390,
+        "passed": true,
+        "entries": [
+          {
+            "route": "/",
+            "fieldHeight": 48,
+            "selectorWidth": 240,
+            "fieldWidth": 324,
+            "labelsFit": true,
+            "firstFrame": {
+              "width": 240,
+              "height": 44,
+              "background": "rgb(241, 243, 245)",
+              "optionWidths": [
+                118,
+                118
+              ],
+              "selectedPaintHeight": 40,
+              "selectedInsets": [
+                "2px",
+                "2px",
+                "2px",
+                "2px"
+              ],
+              "selectedClip": "padding-box"
+            },
+            "secondFrame": {
+              "width": 240,
+              "height": 44,
+              "background": "rgb(241, 243, 245)",
+              "optionWidths": [
+                118,
+                118
+              ],
+              "selectedPaintHeight": 40,
+              "selectedInsets": [
+                "2px",
+                "2px",
+                "2px",
+                "2px"
+              ],
+              "selectedClip": "padding-box"
+            }
+          },
+          {
+            "route": "/contact?topic=trade-in",
+            "fieldHeight": 48,
+            "selectorWidth": 240,
+            "fieldWidth": 332,
+            "labelsFit": true,
+            "firstFrame": {
+              "width": 240,
+              "height": 44,
+              "background": "rgb(241, 243, 245)",
+              "optionWidths": [
+                118,
+                118
+              ],
+              "selectedPaintHeight": 40,
+              "selectedInsets": [
+                "2px",
+                "2px",
+                "2px",
+                "2px"
+              ],
+              "selectedClip": "padding-box"
+            },
+            "secondFrame": {
+              "width": 240,
+              "height": 44,
+              "background": "rgb(241, 243, 245)",
+              "optionWidths": [
+                118,
+                118
+              ],
+              "selectedPaintHeight": 40,
+              "selectedInsets": [
+                "2px",
+                "2px",
+                "2px",
+                "2px"
+              ],
+              "selectedClip": "padding-box"
+            }
+          },
+          {
+            "route": "/contact?topic=import",
+            "fieldHeight": 48,
+            "selectorWidth": 240,
+            "fieldWidth": 332,
+            "labelsFit": true,
+            "firstFrame": {
+              "width": 240,
+              "height": 44,
+              "background": "rgb(241, 243, 245)",
+              "optionWidths": [
+                118,
+                118
+              ],
+              "selectedPaintHeight": 40,
+              "selectedInsets": [
+                "2px",
+                "2px",
+                "2px",
+                "2px"
+              ],
+              "selectedClip": "padding-box"
+            },
+            "secondFrame": {
+              "width": 240,
+              "height": 44,
+              "background": "rgb(241, 243, 245)",
+              "optionWidths": [
+                118,
+                118
+              ],
+              "selectedPaintHeight": 40,
+              "selectedInsets": [
+                "2px",
+                "2px",
+                "2px",
+                "2px"
+              ],
+              "selectedClip": "padding-box"
+            }
+          }
+        ]
+      },
+      {
+        "locale": "en",
+        "width": 768,
+        "passed": true,
+        "entries": [
+          {
+            "route": "/contact?topic=trade-in",
+            "fieldHeight": 44,
+            "selectorWidth": 526,
+            "fieldWidth": 257,
+            "labelsFit": true,
+            "firstFrame": {
+              "width": 526,
+              "height": 44,
+              "background": "rgb(241, 243, 245)",
+              "optionWidths": [
+                261,
+                261
+              ],
+              "selectedPaintHeight": 40,
+              "selectedInsets": [
+                "2px",
+                "2px",
+                "2px",
+                "2px"
+              ],
+              "selectedClip": "padding-box"
+            },
+            "secondFrame": {
+              "width": 526,
+              "height": 44,
+              "background": "rgb(241, 243, 245)",
+              "optionWidths": [
+                261,
+                261
+              ],
+              "selectedPaintHeight": 40,
+              "selectedInsets": [
+                "2px",
+                "2px",
+                "2px",
+                "2px"
+              ],
+              "selectedClip": "padding-box"
+            }
+          },
+          {
+            "route": "/contact?topic=import",
+            "fieldHeight": 44,
+            "selectorWidth": 526,
+            "fieldWidth": 526,
+            "labelsFit": true,
+            "firstFrame": {
+              "width": 526,
+              "height": 44,
+              "background": "rgb(241, 243, 245)",
+              "optionWidths": [
+                261,
+                261
+              ],
+              "selectedPaintHeight": 40,
+              "selectedInsets": [
+                "2px",
+                "2px",
+                "2px",
+                "2px"
+              ],
+              "selectedClip": "padding-box"
+            },
+            "secondFrame": {
+              "width": 526,
+              "height": 44,
+              "background": "rgb(241, 243, 245)",
+              "optionWidths": [
+                261,
+                261
+              ],
+              "selectedPaintHeight": 40,
+              "selectedInsets": [
+                "2px",
+                "2px",
+                "2px",
+                "2px"
+              ],
+              "selectedClip": "padding-box"
+            }
+          }
+        ]
+      },
+      {
+        "locale": "en",
+        "width": 1440,
+        "passed": true,
+        "entries": [
+          {
+            "route": "/contact?topic=trade-in",
+            "fieldHeight": 44,
+            "selectorWidth": 526,
+            "fieldWidth": 257,
+            "labelsFit": true,
+            "firstFrame": {
+              "width": 526,
+              "height": 44,
+              "background": "rgb(241, 243, 245)",
+              "optionWidths": [
+                261,
+                261
+              ],
+              "selectedPaintHeight": 40,
+              "selectedInsets": [
+                "2px",
+                "2px",
+                "2px",
+                "2px"
+              ],
+              "selectedClip": "padding-box"
+            },
+            "secondFrame": {
+              "width": 526,
+              "height": 44,
+              "background": "rgb(241, 243, 245)",
+              "optionWidths": [
+                261,
+                261
+              ],
+              "selectedPaintHeight": 40,
+              "selectedInsets": [
+                "2px",
+                "2px",
+                "2px",
+                "2px"
+              ],
+              "selectedClip": "padding-box"
+            }
+          },
+          {
+            "route": "/contact?topic=import",
+            "fieldHeight": 44,
+            "selectorWidth": 526,
+            "fieldWidth": 526,
+            "labelsFit": true,
+            "firstFrame": {
+              "width": 526,
+              "height": 44,
+              "background": "rgb(241, 243, 245)",
+              "optionWidths": [
+                261,
+                261
+              ],
+              "selectedPaintHeight": 40,
+              "selectedInsets": [
+                "2px",
+                "2px",
+                "2px",
+                "2px"
+              ],
+              "selectedClip": "padding-box"
+            },
+            "secondFrame": {
+              "width": 526,
+              "height": 44,
+              "background": "rgb(241, 243, 245)",
+              "optionWidths": [
+                261,
+                261
+              ],
+              "selectedPaintHeight": 40,
+              "selectedInsets": [
+                "2px",
+                "2px",
+                "2px",
+                "2px"
+              ],
+              "selectedClip": "padding-box"
+            }
+          }
+        ]
+      },
+      {
+        "locale": "bg",
+        "width": 320,
+        "passed": true,
+        "entries": [
+          {
+            "route": "/",
+            "fieldHeight": 48,
+            "selectorWidth": 240,
+            "fieldWidth": 254,
+            "labelsFit": true,
+            "firstFrame": {
+              "width": 240,
+              "height": 44,
+              "background": "rgb(241, 243, 245)",
+              "optionWidths": [
+                118,
+                118
+              ],
+              "selectedPaintHeight": 40,
+              "selectedInsets": [
+                "2px",
+                "2px",
+                "2px",
+                "2px"
+              ],
+              "selectedClip": "padding-box"
+            },
+            "secondFrame": {
+              "width": 240,
+              "height": 44,
+              "background": "rgb(241, 243, 245)",
+              "optionWidths": [
+                118,
+                118
+              ],
+              "selectedPaintHeight": 40,
+              "selectedInsets": [
+                "2px",
+                "2px",
+                "2px",
+                "2px"
+              ],
+              "selectedClip": "padding-box"
+            }
+          },
+          {
+            "route": "/contact?topic=trade-in",
+            "fieldHeight": 48,
+            "selectorWidth": 240,
+            "fieldWidth": 262,
+            "labelsFit": true,
+            "firstFrame": {
+              "width": 240,
+              "height": 44,
+              "background": "rgb(241, 243, 245)",
+              "optionWidths": [
+                118,
+                118
+              ],
+              "selectedPaintHeight": 40,
+              "selectedInsets": [
+                "2px",
+                "2px",
+                "2px",
+                "2px"
+              ],
+              "selectedClip": "padding-box"
+            },
+            "secondFrame": {
+              "width": 240,
+              "height": 44,
+              "background": "rgb(241, 243, 245)",
+              "optionWidths": [
+                118,
+                118
+              ],
+              "selectedPaintHeight": 40,
+              "selectedInsets": [
+                "2px",
+                "2px",
+                "2px",
+                "2px"
+              ],
+              "selectedClip": "padding-box"
+            }
+          },
+          {
+            "route": "/contact?topic=import",
+            "fieldHeight": 48,
+            "selectorWidth": 240,
+            "fieldWidth": 262,
+            "labelsFit": true,
+            "firstFrame": {
+              "width": 240,
+              "height": 44,
+              "background": "rgb(241, 243, 245)",
+              "optionWidths": [
+                118,
+                118
+              ],
+              "selectedPaintHeight": 40,
+              "selectedInsets": [
+                "2px",
+                "2px",
+                "2px",
+                "2px"
+              ],
+              "selectedClip": "padding-box"
+            },
+            "secondFrame": {
+              "width": 240,
+              "height": 44,
+              "background": "rgb(241, 243, 245)",
+              "optionWidths": [
+                118,
+                118
+              ],
+              "selectedPaintHeight": 40,
+              "selectedInsets": [
+                "2px",
+                "2px",
+                "2px",
+                "2px"
+              ],
+              "selectedClip": "padding-box"
+            }
+          }
+        ]
+      },
+      {
+        "locale": "bg",
+        "width": 390,
+        "passed": true,
+        "entries": [
+          {
+            "route": "/",
+            "fieldHeight": 48,
+            "selectorWidth": 240,
+            "fieldWidth": 324,
+            "labelsFit": true,
+            "firstFrame": {
+              "width": 240,
+              "height": 44,
+              "background": "rgb(241, 243, 245)",
+              "optionWidths": [
+                118,
+                118
+              ],
+              "selectedPaintHeight": 40,
+              "selectedInsets": [
+                "2px",
+                "2px",
+                "2px",
+                "2px"
+              ],
+              "selectedClip": "padding-box"
+            },
+            "secondFrame": {
+              "width": 240,
+              "height": 44,
+              "background": "rgb(241, 243, 245)",
+              "optionWidths": [
+                118,
+                118
+              ],
+              "selectedPaintHeight": 40,
+              "selectedInsets": [
+                "2px",
+                "2px",
+                "2px",
+                "2px"
+              ],
+              "selectedClip": "padding-box"
+            }
+          },
+          {
+            "route": "/contact?topic=trade-in",
+            "fieldHeight": 48,
+            "selectorWidth": 240,
+            "fieldWidth": 332,
+            "labelsFit": true,
+            "firstFrame": {
+              "width": 240,
+              "height": 44,
+              "background": "rgb(241, 243, 245)",
+              "optionWidths": [
+                118,
+                118
+              ],
+              "selectedPaintHeight": 40,
+              "selectedInsets": [
+                "2px",
+                "2px",
+                "2px",
+                "2px"
+              ],
+              "selectedClip": "padding-box"
+            },
+            "secondFrame": {
+              "width": 240,
+              "height": 44,
+              "background": "rgb(241, 243, 245)",
+              "optionWidths": [
+                118,
+                118
+              ],
+              "selectedPaintHeight": 40,
+              "selectedInsets": [
+                "2px",
+                "2px",
+                "2px",
+                "2px"
+              ],
+              "selectedClip": "padding-box"
+            }
+          },
+          {
+            "route": "/contact?topic=import",
+            "fieldHeight": 48,
+            "selectorWidth": 240,
+            "fieldWidth": 332,
+            "labelsFit": true,
+            "firstFrame": {
+              "width": 240,
+              "height": 44,
+              "background": "rgb(241, 243, 245)",
+              "optionWidths": [
+                118,
+                118
+              ],
+              "selectedPaintHeight": 40,
+              "selectedInsets": [
+                "2px",
+                "2px",
+                "2px",
+                "2px"
+              ],
+              "selectedClip": "padding-box"
+            },
+            "secondFrame": {
+              "width": 240,
+              "height": 44,
+              "background": "rgb(241, 243, 245)",
+              "optionWidths": [
+                118,
+                118
+              ],
+              "selectedPaintHeight": 40,
+              "selectedInsets": [
+                "2px",
+                "2px",
+                "2px",
+                "2px"
+              ],
+              "selectedClip": "padding-box"
+            }
+          }
+        ]
+      },
+      {
+        "locale": "bg",
+        "width": 768,
+        "passed": true,
+        "entries": [
+          {
+            "route": "/contact?topic=trade-in",
+            "fieldHeight": 44,
+            "selectorWidth": 526,
+            "fieldWidth": 257,
+            "labelsFit": true,
+            "firstFrame": {
+              "width": 526,
+              "height": 44,
+              "background": "rgb(241, 243, 245)",
+              "optionWidths": [
+                261,
+                261
+              ],
+              "selectedPaintHeight": 40,
+              "selectedInsets": [
+                "2px",
+                "2px",
+                "2px",
+                "2px"
+              ],
+              "selectedClip": "padding-box"
+            },
+            "secondFrame": {
+              "width": 526,
+              "height": 44,
+              "background": "rgb(241, 243, 245)",
+              "optionWidths": [
+                261,
+                261
+              ],
+              "selectedPaintHeight": 40,
+              "selectedInsets": [
+                "2px",
+                "2px",
+                "2px",
+                "2px"
+              ],
+              "selectedClip": "padding-box"
+            }
+          },
+          {
+            "route": "/contact?topic=import",
+            "fieldHeight": 44,
+            "selectorWidth": 526,
+            "fieldWidth": 526,
+            "labelsFit": true,
+            "firstFrame": {
+              "width": 526,
+              "height": 44,
+              "background": "rgb(241, 243, 245)",
+              "optionWidths": [
+                261,
+                261
+              ],
+              "selectedPaintHeight": 40,
+              "selectedInsets": [
+                "2px",
+                "2px",
+                "2px",
+                "2px"
+              ],
+              "selectedClip": "padding-box"
+            },
+            "secondFrame": {
+              "width": 526,
+              "height": 44,
+              "background": "rgb(241, 243, 245)",
+              "optionWidths": [
+                261,
+                261
+              ],
+              "selectedPaintHeight": 40,
+              "selectedInsets": [
+                "2px",
+                "2px",
+                "2px",
+                "2px"
+              ],
+              "selectedClip": "padding-box"
+            }
+          }
+        ]
+      },
+      {
+        "locale": "bg",
+        "width": 1440,
+        "passed": true,
+        "entries": [
+          {
+            "route": "/contact?topic=trade-in",
+            "fieldHeight": 44,
+            "selectorWidth": 526,
+            "fieldWidth": 257,
+            "labelsFit": true,
+            "firstFrame": {
+              "width": 526,
+              "height": 44,
+              "background": "rgb(241, 243, 245)",
+              "optionWidths": [
+                261,
+                261
+              ],
+              "selectedPaintHeight": 40,
+              "selectedInsets": [
+                "2px",
+                "2px",
+                "2px",
+                "2px"
+              ],
+              "selectedClip": "padding-box"
+            },
+            "secondFrame": {
+              "width": 526,
+              "height": 44,
+              "background": "rgb(241, 243, 245)",
+              "optionWidths": [
+                261,
+                261
+              ],
+              "selectedPaintHeight": 40,
+              "selectedInsets": [
+                "2px",
+                "2px",
+                "2px",
+                "2px"
+              ],
+              "selectedClip": "padding-box"
+            }
+          },
+          {
+            "route": "/contact?topic=import",
+            "fieldHeight": 44,
+            "selectorWidth": 526,
+            "fieldWidth": 526,
+            "labelsFit": true,
+            "firstFrame": {
+              "width": 526,
+              "height": 44,
+              "background": "rgb(241, 243, 245)",
+              "optionWidths": [
+                261,
+                261
+              ],
+              "selectedPaintHeight": 40,
+              "selectedInsets": [
+                "2px",
+                "2px",
+                "2px",
+                "2px"
+              ],
+              "selectedClip": "padding-box"
+            },
+            "secondFrame": {
+              "width": 526,
+              "height": 44,
+              "background": "rgb(241, 243, 245)",
+              "optionWidths": [
+                261,
+                261
+              ],
+              "selectedPaintHeight": 40,
+              "selectedInsets": [
+                "2px",
+                "2px",
+                "2px",
+                "2px"
+              ],
+              "selectedClip": "padding-box"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "mobileReflow": {
+    "generatedAt": "2026-10-04T07:00:31.239Z",
+    "base": "http://127.0.0.1:6469",
+    "results": [
+      {
+        "name": "en 320 / reflow",
+        "passed": true,
+        "evidence": {
+          "normal": {
+            "pageOverflow": false,
+            "dialogOverflow": false,
+            "clipped": [],
+            "cardHeightSpread": 0
+          },
+          "spacing": {
+            "pageOverflow": false,
+            "dialogOverflow": false,
+            "clipped": [],
+            "cardHeightSpread": 0
+          },
+          "enlarged": {
+            "pageOverflow": false,
+            "dialogOverflow": false,
+            "clipped": [],
+            "cardHeightSpread": 0
+          }
+        },
+        "durationMs": 1622
+      },
+      {
+        "name": "en 320 /contact?topic=trade-in reflow",
+        "passed": true,
+        "evidence": {
+          "normal": {
+            "pageOverflow": false,
+            "dialogOverflow": false,
+            "clipped": [],
+            "cardHeightSpread": 0
+          },
+          "spacing": {
+            "pageOverflow": false,
+            "dialogOverflow": false,
+            "clipped": [],
+            "cardHeightSpread": 0
+          },
+          "enlarged": {
+            "pageOverflow": false,
+            "dialogOverflow": false,
+            "clipped": [],
+            "cardHeightSpread": 0
+          }
+        },
+        "durationMs": 1041
+      },
+      {
+        "name": "en 320 /contact?topic=import reflow",
+        "passed": true,
+        "evidence": {
+          "normal": {
+            "pageOverflow": false,
+            "dialogOverflow": false,
+            "clipped": [],
+            "cardHeightSpread": 0
+          },
+          "spacing": {
+            "pageOverflow": false,
+            "dialogOverflow": false,
+            "clipped": [],
+            "cardHeightSpread": 0
+          },
+          "enlarged": {
+            "pageOverflow": false,
+            "dialogOverflow": false,
+            "clipped": [],
+            "cardHeightSpread": 0
+          }
+        },
+        "durationMs": 1066
+      },
+      {
+        "name": "en 390 / reflow",
+        "passed": true,
+        "evidence": {
+          "normal": {
+            "pageOverflow": false,
+            "dialogOverflow": false,
+            "clipped": [],
+            "cardHeightSpread": 0
+          },
+          "spacing": {
+            "pageOverflow": false,
+            "dialogOverflow": false,
+            "clipped": [],
+            "cardHeightSpread": 0
+          },
+          "enlarged": {
+            "pageOverflow": false,
+            "dialogOverflow": false,
+            "clipped": [],
+            "cardHeightSpread": 0
+          }
+        },
+        "durationMs": 1542
+      },
+      {
+        "name": "en 390 /contact?topic=trade-in reflow",
+        "passed": true,
+        "evidence": {
+          "normal": {
+            "pageOverflow": false,
+            "dialogOverflow": false,
+            "clipped": [],
+            "cardHeightSpread": 0
+          },
+          "spacing": {
+            "pageOverflow": false,
+            "dialogOverflow": false,
+            "clipped": [],
+            "cardHeightSpread": 0
+          },
+          "enlarged": {
+            "pageOverflow": false,
+            "dialogOverflow": false,
+            "clipped": [],
+            "cardHeightSpread": 0
+          }
+        },
+        "durationMs": 996
+      },
+      {
+        "name": "en 390 /contact?topic=import reflow",
+        "passed": true,
+        "evidence": {
+          "normal": {
+            "pageOverflow": false,
+            "dialogOverflow": false,
+            "clipped": [],
+            "cardHeightSpread": 0
+          },
+          "spacing": {
+            "pageOverflow": false,
+            "dialogOverflow": false,
+            "clipped": [],
+            "cardHeightSpread": 0
+          },
+          "enlarged": {
+            "pageOverflow": false,
+            "dialogOverflow": false,
+            "clipped": [],
+            "cardHeightSpread": 0
+          }
+        },
+        "durationMs": 939
+      },
+      {
+        "name": "bg 320 / reflow",
+        "passed": true,
+        "evidence": {
+          "normal": {
+            "pageOverflow": false,
+            "dialogOverflow": false,
+            "clipped": [],
+            "cardHeightSpread": 0
+          },
+          "spacing": {
+            "pageOverflow": false,
+            "dialogOverflow": false,
+            "clipped": [],
+            "cardHeightSpread": 0
+          },
+          "enlarged": {
+            "pageOverflow": false,
+            "dialogOverflow": false,
+            "clipped": [],
+            "cardHeightSpread": 0
+          }
+        },
+        "durationMs": 1274
+      },
+      {
+        "name": "bg 320 /contact?topic=trade-in reflow",
+        "passed": true,
+        "evidence": {
+          "normal": {
+            "pageOverflow": false,
+            "dialogOverflow": false,
+            "clipped": [],
+            "cardHeightSpread": 0
+          },
+          "spacing": {
+            "pageOverflow": false,
+            "dialogOverflow": false,
+            "clipped": [],
+            "cardHeightSpread": 0
+          },
+          "enlarged": {
+            "pageOverflow": false,
+            "dialogOverflow": false,
+            "clipped": [],
+            "cardHeightSpread": 0
+          }
+        },
+        "durationMs": 939
+      },
+      {
+        "name": "bg 320 /contact?topic=import reflow",
+        "passed": true,
+        "evidence": {
+          "normal": {
+            "pageOverflow": false,
+            "dialogOverflow": false,
+            "clipped": [],
+            "cardHeightSpread": 0
+          },
+          "spacing": {
+            "pageOverflow": false,
+            "dialogOverflow": false,
+            "clipped": [],
+            "cardHeightSpread": 0
+          },
+          "enlarged": {
+            "pageOverflow": false,
+            "dialogOverflow": false,
+            "clipped": [],
+            "cardHeightSpread": 0
+          }
+        },
+        "durationMs": 915
+      },
+      {
+        "name": "bg 390 / reflow",
+        "passed": true,
+        "evidence": {
+          "normal": {
+            "pageOverflow": false,
+            "dialogOverflow": false,
+            "clipped": [],
+            "cardHeightSpread": 0
+          },
+          "spacing": {
+            "pageOverflow": false,
+            "dialogOverflow": false,
+            "clipped": [],
+            "cardHeightSpread": 0
+          },
+          "enlarged": {
+            "pageOverflow": false,
+            "dialogOverflow": false,
+            "clipped": [],
+            "cardHeightSpread": 0
+          }
+        },
+        "durationMs": 1376
+      },
+      {
+        "name": "bg 390 /contact?topic=trade-in reflow",
+        "passed": true,
+        "evidence": {
+          "normal": {
+            "pageOverflow": false,
+            "dialogOverflow": false,
+            "clipped": [],
+            "cardHeightSpread": 0
+          },
+          "spacing": {
+            "pageOverflow": false,
+            "dialogOverflow": false,
+            "clipped": [],
+            "cardHeightSpread": 0
+          },
+          "enlarged": {
+            "pageOverflow": false,
+            "dialogOverflow": false,
+            "clipped": [],
+            "cardHeightSpread": 0
+          }
+        },
+        "durationMs": 976
+      },
+      {
+        "name": "bg 390 /contact?topic=import reflow",
+        "passed": true,
+        "evidence": {
+          "normal": {
+            "pageOverflow": false,
+            "dialogOverflow": false,
+            "clipped": [],
+            "cardHeightSpread": 0
+          },
+          "spacing": {
+            "pageOverflow": false,
+            "dialogOverflow": false,
+            "clipped": [],
+            "cardHeightSpread": 0
+          },
+          "enlarged": {
+            "pageOverflow": false,
+            "dialogOverflow": false,
+            "clipped": [],
+            "cardHeightSpread": 0
+          }
+        },
+        "durationMs": 1018
+      }
+    ]
+  }
+}

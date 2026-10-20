@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "dealer": "carnova-varna",
+  "kind": "dated-listing-snapshot",
+  "records": [
+    {
+      "title": "Toyota Corolla 1.8 Hybrid TS",
+      "make": "Toyota",
+      "model": "Corolla",
+      "year": 2022,
+      "priceAmount": 19900,
+      "mileageValue": 80111,
+      "fuel": "Hybrid",
+      "transmission": "Automatic",
+      "body": "Estate",
+      "description": "Toyota Corolla 1.8 Hybrid TS от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+      "sourceFieldProof": {
+        "source": "https://carnova.mobile.bg/obiava-11789992722402350-toyota-corolla-1-8-hybrid-ts-toyota-relax",
+        "year": "Дата на производство септември 2022",
+        "price": "19 900 €",
+        "mileage": "Пробег [км] 80111 км",
+        "fuel": "Двигател Хибриден",
+        "transmission": "Скоростна кутия Автоматична",
+        "body": "Категория Комби"
+      },
+      "sourceCaveats": [],
+      "id": "11789992722402350",
+      "slug": "carnova-varna-11789992722402350",
+      "currency": "EUR",
+      "priceOnRequest": false,
+      "mileageOnRequest": false,
+      "mileageUnit": "km",
+      "condition": "used",
+      "images": [
+        "/dealer-stock/11789992722402350-1.webp",
+        "/dealer-stock/11789992722402350-2.webp"
+      ],
+      "sourceUrl": "https://carnova.mobile.bg/obiava-11789992722402350-toyota-corolla-1-8-hybrid-ts-toyota-relax",
+      "observedAt": "2026-10-12T11:55:24.095Z",
+      "availability": "Датирана обява; потвърдете цената и наличността директно с автокъщата.",
+      "sourceProof": {
+        "sha256": "e3e7d1bc338aabaf4f4674585fb084f1a8ca98a600733b9c428ec8a9c69226fe",
+        "originalPhotoBytesUnchanged": true,
+        "watermarksPreserved": true
+      }
+    },
+    {
+      "title": "VW Golf 1.5 eTSI DSG Life",
+      "make": "Volkswagen",
+      "model": "Golf",
+      "year": 2022,
+      "priceAmount": 17999,
+      "mileageValue": 115794,
+      "fuel": "Petrol",
+      "transmission": "Automatic",
+      "body": "Hatchback",
+      "description": "VW Golf 1.5 eTSI DSG Life от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+      "sourceFieldProof": {
+        "source": "https://carnova.mobile.bg/obiava-11780304679998646-vw-golf-1-5-etsi-dsg-life-s-garantsiya-realni-km",
+        "year": "Дата на производство февруари 2022",
+        "price": "17 999 €",
+        "mileage": "Пробег [км] 115794 км",
+        "fuel": "Двигател Бензинов",
+        "transmission": "Скоростна кутия Автоматична",
+        "body": "Категория Хечбек"
+      },
+      "sourceCaveats": [],
+      "id": "11780304679998646",
+      "slug": "carnova-varna-11780304679998646",
+      "currency": "EUR",
+      "priceOnRequest": false,
+      "mileageOnRequest": false,
+      "mileageUnit": "km",
+      "condition": "used",
+      "images": [
+        "/dealer-stock/11780304679998646-1.webp",
+        "/dealer-stock/11780304679998646-2.webp"
+      ],
+      "sourceUrl": "https://carnova.mobile.bg/obiava-11780304679998646-vw-golf-1-5-etsi-dsg-life-s-garantsiya-realni-km",
+      "observedAt": "2026-10-12T11:55:24.095Z",
+      "availability": "Датирана обява; потвърдете цената и наличността директно с автокъщата.",
+      "sourceProof": {
+        "sha256": "b6772b9c38d0896158b1f134de3b08830ee58cef93882c01c7d034b441292261",
+        "originalPhotoBytesUnchanged": true,
+        "watermarksPreserved": true
+      }
+    }
+  ],
+  "disclosure": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+  "disclosureEn": "Dated listing samples; confirm price and availability directly with the dealership.",
+  "availabilityConfirmed": false,
+  "completeInventory": false
+}

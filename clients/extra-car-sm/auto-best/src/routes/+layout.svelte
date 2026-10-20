@@ -1,24 +1,45 @@
 <script lang="ts">
-  import '@fontsource-variable/onest';
+  import { setLocaleContext, getI18n, applicationUrl } from '$lib/locale/context';
+  import { localeHref } from '$lib/locale/core';
+  import LocalePreferences from '$lib/locale/LocalePreferences.svelte';
+
   import { template, canIndex } from '$config/template';
   import '../app.css';
   import { page } from '$app/state';
   import SiteShell from '$components/layout/SiteShell.svelte';
   import type { Snippet } from 'svelte';
+  import { resolveShellPresentation } from '$data/shell';
 
-  let { children }: { children: Snippet } = $props();
-  const showFooterActions = $derived(page.url.pathname !== '/');
-  const showMobileFooter = $derived(page.url.pathname === '/' || page.url.pathname === '/about-us');
+  let { children, data }: { children: Snippet; data: import('./$types').LayoutData } = $props();
+  setLocaleContext(() => data.localeState);
+  const i18n = getI18n();
+
+  $effect(() => {
+    document.documentElement.lang = i18n.locale;
+    document.documentElement.dir = 'ltr';
+    window.dispatchEvent(new CustomEvent('cars:locale-change', { detail: i18n.state }));
+  });
+
+  const presentation = $derived(resolveShellPresentation(applicationUrl(page.url), page.status));
+  $effect(() => {
+    document.documentElement.classList.toggle('dn-html--workflow', presentation.workflowJourney);
+    return () => document.documentElement.classList.remove('dn-html--workflow');
+  });
   const indexable = canIndex();
   const canonicalUrl = $derived(template.canonicalOrigin ? `${template.canonicalOrigin}${page.url.pathname}` : null);
 </script>
 
+<svelte:body class:dn-body--workflow={presentation.workflowJourney} />
 <svelte:head>
   {#if canonicalUrl}<link rel="canonical" href={canonicalUrl} />{/if}
   {#if !indexable}<meta name="robots" content="noindex, nofollow" />{/if}
+  <link rel="alternate" hreflang="en" href={page.url.origin + localeHref(page.url.pathname, 'en')} />
+  <link rel="alternate" hreflang="bg" href={page.url.origin + localeHref(page.url.pathname, 'bg')} />
 </svelte:head>
+<LocalePreferences />
 
-<SiteShell {showFooterActions} {showMobileFooter}>
-  <p role="note" style="margin:0;padding:10px 16px;text-align:center;font-size:13px;background:#f3f4f6;color:#374151">Неофициално демо. Обяви към 09.09.2026. Снимките очакват разрешение. Логото е неофициално предложение. Запитванията не се изпращат.</p>
+{#key i18n.locale}
+<SiteShell {presentation}>
   {@render children()}
 </SiteShell>
+{/key}

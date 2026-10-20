@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-source-delta-review",
+  "sourceCommit": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+  "parentCommit": "ab532f180e9ed1f0abbcfb55ca17c3e27b325d0e",
+  "reviewed": true,
+  "reviewedAt": "2026-10-14T23:55:37.398Z",
+  "qualificationOnly": true,
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "globalReleaseApproval": false,
+  "sourceReview": {
+    "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-review.json",
+    "sha256": "27c6ce5dd17ee6e1b9f6a5b059a95d5e1dbe4200f61264fc50addeb7af89d984"
+  },
+  "checks": [
+    {
+      "name": "immutable-six-template-tree-and-blob-fingerprints",
+      "status": "passed",
+      "evidenceSha256": "6b079ca4e0125e8ca88172fd747ce7b43c68b7d334acb1f27f20619a2f1008fe"
+    },
+    {
+      "name": "modern-reviewed-mobile-child-logo-binding-regressions",
+      "status": "passed",
+      "evidenceSha256": "4f589f41609cbb06fe3d980e0e45f1ef58a731c16fde94c034039e653212cf5f"
+    },
+    {
+      "name": "standalone-origin-and-faithful-dated-inventory-copy-regressions",
+      "status": "passed",
+      "evidenceSha256": "a019be4077b12dc2bde2e9b8e23ba8038608af0b9c1b97b234a4f3c2b20258ae"
+    },
+    {
+      "name": "auto-best-two-leaf-mobile-category-and-sell-contrast-source-delta",
+      "status": "passed",
+      "evidenceSha256": "b72a9340bbdfdf5d7078073a40557b0b7c1aabd60d5012ac3ff84c9c65f867bc",
+      "scope": "Focused candidate 320/390 rendering and Svelte compiler/autofixer; successor hosted verification pending."
+    },
+    {
+      "name": "about-service-copy-owner-and-single-row-about-contact-titles",
+      "status": "passed",
+      "evidenceSha256": "52b78c040a945fd36add14df7abb005ae2e650729732fc417a44685f1179c26f",
+      "scope": "Actual strict Svelte SSR EN/BG, focused title overlay and3component compile; hosted route acceptance pending."
+    },
+    {
+      "name": "default-company-copy-owner-type-correction",
+      "status": "passed",
+      "evidenceSha256": "bed4734f7cf057788bdb6239bcac9b2de803bc030cbad6ede4439f0cd977c8ec",
+      "scope": "TypeScript2367 corrected with byte-identical emitted JavaScript; personalized dealer facts and marker source unchanged."
+    }
+  ],
+  "pendingNativeChecks": [
+    "catalog-completeness",
+    "hardcoded-ui",
+    "native-routing",
+    "standalone-journeys",
+    "mounted-journeys",
+    "public-journeys",
+    "preferences-no-js",
+    "preferences-storage-disabled",
+    "preferences-races",
+    "request-isolation",
+    "security-write-blocking",
+    "assets-preserved"
+  ],
+  "parentMeaning": "Reviewed template source baseline; not immediate Git parent."
+}

@@ -1,5 +1,6 @@
 import { daynightAssets, daynightBrand, daynightContact, mainNavigation } from '$lib/data/daynight';
 import { homeBrowseArtwork } from '$lib/content/home-discovery';
+import { inventoryText } from '$lib/content/inventory-localized';
 import { filterVehicles } from '$lib/domain/vehicle-search';
 import type { ReviewRoleKind } from '$lib/content/reviews';
 import type { BlogPost } from '$lib/data/blog';
@@ -733,34 +734,30 @@ export const homeFiveHeaderDataForLocale = (
 export const homeFiveHeaderData: HomeFiveHeaderData = homeFiveHeaderDataForLocale('en');
 
 export const homeFiveReviewItems: HomeFiveReview[] = [
-	{
-		name: 'Aleksandar Vytev',
-		role: 'Клиент на Day & Night',
-		roleKind: 'customer',
-		avatar: '/assets/images/avatar/avatar-1.webp',
-		rating: 5,
-		excerpt:
-			'Историята, транспортът и регистрацията бяха обяснени ясно. Спокойно и прозрачно предаване.',
-		text: 'Екипът ми обясни историята на автомобила, транспорта и стъпките по регистрацията, преди да поема ангажимент. Предаването беше спокойно и прозрачно.'
-	},
-	{
-		name: 'Krasimir Georgiev',
-		role: 'Клиент с внос',
-		roleKind: 'import',
-		avatar: '/assets/images/avatar/avatar-2.webp',
-		rating: 4,
-		excerpt: 'Ясни снимки, документи, пробег и разходи. Практичен разговор преди доставката.',
-		text: 'Day & Night запазиха разговора практичен: снимки, документи, пробег и разходите, които имат значение преди доставка.'
-	},
-	{
-		name: 'Iliyan Petrov',
-		role: 'Продава клиентски автомобил',
-		roleKind: 'sale',
-		avatar: '/assets/images/avatar/avatar-3.webp',
-		rating: 5,
-		excerpt: 'Получих ясна обратна връзка за цената, документите и представянето на автомобила.',
-		text: 'Изпратих данните за колата и получих ясна обратна връзка за цената, документите и най-добрия начин да представя автомобила.'
-	}
+  {
+    "avatar": "",
+    "name": "№ 1",
+    "role": "Демо профил",
+    "roleKind": "customer",
+    "excerpt": "Демонстрационен пример, а не потвърден клиентски отзив.",
+    "text": "Измислен пример за оформлението на отзив. Не описва реален клиент, покупка или доставка."
+  },
+  {
+    "avatar": "",
+    "name": "№ 2",
+    "role": "Демо профил",
+    "roleKind": "customer",
+    "excerpt": "Демонстрационен пример, а не потвърден клиентски отзив.",
+    "text": "Измислен пример за оформлението на отзив. Не описва реален клиент, покупка или доставка."
+  },
+  {
+    "avatar": "",
+    "name": "№ 3",
+    "role": "Демо профил",
+    "roleKind": "customer",
+    "excerpt": "Демонстрационен пример, а не потвърден клиентски отзив.",
+    "text": "Измислен пример за оформлението на отзив. Не описва реален клиент, покупка или доставка."
+  }
 ];
 
 export const homeFiveNewsPostsFromPosts = (posts: BlogPost[]): HomeFiveNewsPost[] =>
@@ -1478,9 +1475,9 @@ export const homeFiveVehicleCardFromVehicle = (
 	brand: vehicle.brand,
 	modelLabel: vehicle.title.startsWith(`${vehicle.brand} ${vehicle.model}`)
 		? `${vehicle.brand} ${vehicle.model}`
-		: vehicle.title,
+		: inventoryText(locale, vehicle.title),
 	trimLabel: vehicle.title.startsWith(`${vehicle.brand} ${vehicle.model}`)
-		? vehicle.title.slice(`${vehicle.brand} ${vehicle.model}`.length).trim()
+		? inventoryText(locale, vehicle.title.slice(`${vehicle.brand} ${vehicle.model}`.length).trim())
 		: '',
 	fuel: compactFuelLabel(vehicle.fuel, locale),
 	highlightClass: 'bg-primary-2',
@@ -1490,7 +1487,7 @@ export const homeFiveVehicleCardFromVehicle = (
 	photoCount: vehicle.images.length || 1,
 	priceLabel: vehicle.priceLabel,
 	slug: vehicle.slug,
-	title: vehicle.title,
+	title: inventoryText(locale, vehicle.title),
 	transmission: translateVehicleTerm(locale, 'transmissions', vehicle.transmission),
 	transmissionIcon: vehicle.transmission === 'Manual' ? 'manual.svg' : 'auto.svg',
 	year: vehicle.year
@@ -1518,7 +1515,7 @@ const modalVehicleFromVehicle = (
 	mileageLabel: formatKm(vehicle.mileage),
 	slug: vehicle.slug,
 	stockNumber: vehicle.stockNumber,
-	title: vehicle.title,
+	title: inventoryText(locale, vehicle.title),
 	transmission: translateVehicleTerm(locale, 'transmissions', vehicle.transmission),
 	vin: vehicle.vin,
 	year: vehicle.year

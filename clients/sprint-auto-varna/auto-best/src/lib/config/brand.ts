@@ -1,15 +1,38 @@
-import { dealer } from '../data/dealer';
-
 export type BrandConfig = {
-  name:string; shortName:string; city:string; addressLine:string; address:string;
-  phone:string; phoneHref:`tel:${string}`; appointment:string; logo:`/${string}`;
-  youtubeUrl:string; instagramUrl:string; facebookUrl:string;
+  name: string;
+  shortName: string;
+  city: string;
+  showroomCoordinates: { latitude: number; longitude: number } | null;
+  addressLine: string;
+  address: string;
+  phone: string;
+  phoneHref: `tel:${string}`;
+  appointment: string;
+  logo: `/${string}`;
+  logoOnDark: `/${string}`;
+  youtubeUrl: `https://${string}` | '';
+  instagramUrl: `https://${string}` | '';
+  facebookUrl: `https://${string}` | '';
 };
 
-// Unknown social accounts are deliberately empty, not another business's accounts.
+const name = "Спринт ауто";
+const shortName = "СПРИНТ";
+const city = "Варна";
+const addressLine = "бул. „Цар Освободител“, втората автокъща след Тилком и Италмодалуче към Аксаково";
+
 export const brand = {
-  name:dealer.name, shortName:dealer.shortName, city:dealer.city,
-  addressLine:dealer.addressLine, address:dealer.address,
-  phone:dealer.phone, phoneHref:dealer.phoneHref, appointment:dealer.hours,
-  logo:dealer.logo, youtubeUrl:'', instagramUrl:'', facebookUrl:''
+  name,
+  shortName,
+  city,
+  showroomCoordinates: null,
+  youtubeUrl: "",
+  instagramUrl: "",
+  facebookUrl: "",
+  phone: "0888 006 224",
+  phoneHref: "tel:+359888006224",
+  addressLine,
+  address: "Варна, Владислав Варненчик, бул. „Цар Освободител“, втората автокъща след Тилком и Италмодалуче посока Аксаково",
+  appointment: "Потвърдете работното време и огледа по телефона",
+  logo: "/dealer-brand/v2-7cf90fc8e0bfbac0/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/v2-7cf90fc8e0bfbac0/logo-on-dark.webp"
 } as const satisfies BrandConfig;

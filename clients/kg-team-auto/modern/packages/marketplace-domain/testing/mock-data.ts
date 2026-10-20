@@ -63,7 +63,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "K-G Team Auto",
       "verificationStatus": "unverified",
       "city": "Пловдив",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-781617de6df8596a/logo-on-light.webp"
     },
     "publishedAt": "2026-09-09T09:00:00.000Z",
     "promoted": true
@@ -125,7 +125,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "K-G Team Auto",
       "verificationStatus": "unverified",
       "city": "Пловдив",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-781617de6df8596a/logo-on-light.webp"
     },
     "publishedAt": "2026-09-09T09:00:00.000Z",
     "promoted": true
@@ -181,7 +181,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "K-G Team Auto",
       "verificationStatus": "unverified",
       "city": "Пловдив",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-781617de6df8596a/logo-on-light.webp"
     },
     "publishedAt": "2026-09-09T09:00:00.000Z",
     "promoted": true
@@ -243,7 +243,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "K-G Team Auto",
       "verificationStatus": "unverified",
       "city": "Пловдив",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-781617de6df8596a/logo-on-light.webp"
     },
     "publishedAt": "2026-09-09T09:00:00.000Z",
     "promoted": false
@@ -299,7 +299,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "K-G Team Auto",
       "verificationStatus": "unverified",
       "city": "Пловдив",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-781617de6df8596a/logo-on-light.webp"
     },
     "publishedAt": "2026-09-09T09:00:00.000Z",
     "promoted": false
@@ -373,7 +373,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "K-G Team Auto",
       "verificationStatus": "unverified",
       "city": "Пловдив",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-781617de6df8596a/logo-on-light.webp"
     },
     "publishedAt": "2026-09-09T09:00:00.000Z",
     "promoted": false
@@ -439,7 +439,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "K-G Team Auto",
       "verificationStatus": "unverified",
       "city": "Пловдив",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-781617de6df8596a/logo-on-light.webp"
     },
     "publishedAt": "2026-09-09T09:00:00.000Z",
     "promoted": false
@@ -509,7 +509,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "K-G Team Auto",
       "verificationStatus": "unverified",
       "city": "Пловдив",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-781617de6df8596a/logo-on-light.webp"
     },
     "publishedAt": "2026-09-09T09:00:00.000Z",
     "promoted": false
@@ -565,7 +565,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "K-G Team Auto",
       "verificationStatus": "unverified",
       "city": "Пловдив",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-781617de6df8596a/logo-on-light.webp"
     },
     "publishedAt": "2026-09-09T09:00:00.000Z",
     "promoted": false
@@ -631,253 +631,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "K-G Team Auto",
       "verificationStatus": "unverified",
       "city": "Пловдив",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
-    },
-    "publishedAt": "2026-09-09T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1006",
-    "slug": "toyota-yaris-1-33i-116000km-6-speed-swiss-edition-2014-11783754278742708",
-    "category": "car",
-    "dealerOrgId": "dealer-kg-team-auto",
-    "status": "active",
-    "title": "Toyota Yaris 1.33I 116000KM 6-SPEED SWISS EDITION",
-    "description": "Датирани примерни обяви, не потвърдена наличност. Проверете цена, състояние и местоположение при продавача.",
-    "price": {
-      "amount": 7500,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/dealer/11783754278742708-1.webp",
-        "alt": "Toyota Yaris 1.33I 116000KM 6-SPEED SWISS EDITION"
-      },
-      {
-        "url": "/dealer/11783754278742708-2.webp",
-        "alt": "Toyota Yaris 1.33I 116000KM 6-SPEED SWISS EDITION"
-      },
-      {
-        "url": "/dealer/11783754278742708-3.webp",
-        "alt": "Toyota Yaris 1.33I 116000KM 6-SPEED SWISS EDITION"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Пловдив",
-      "region": "Пловдив",
-      "country": "BG"
-    },
-    "features": [
-      {
-        "bg": "Навигация",
-        "en": "Навигация"
-      },
-      {
-        "bg": "Парктроник",
-        "en": "Парктроник"
-      }
-    ],
-    "spec": {
-      "make": "Toyota",
-      "model": "Yaris 1.33I 116000KM 6-SPEED SWISS EDITION",
-      "year": 2014,
-      "bodyType": "hatchback",
-      "fuelType": "gasoline",
-      "transmission": "manual",
-      "mileageValue": 116000,
-      "mileageUnit": "km"
-    },
-    "seller": {
-      "id": "dealer-kg-team-auto",
-      "type": "dealer",
-      "displayName": "K-G Team Auto",
-      "verificationStatus": "unverified",
-      "city": "Пловдив",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
-    },
-    "publishedAt": "2026-09-09T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1007",
-    "slug": "nissan-qashqai-2-0i-131000km-automatic-2014-21785829117309786",
-    "category": "car",
-    "dealerOrgId": "dealer-kg-team-auto",
-    "status": "active",
-    "title": "Nissan Qashqai 2.0i 131000KM AUTOMATIC",
-    "description": "Датирани примерни обяви, не потвърдена наличност. Проверете цена, състояние и местоположение при продавача.",
-    "price": {
-      "amount": 7700,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/dealer/21785829117309786-1.webp",
-        "alt": "Nissan Qashqai 2.0i 131000KM AUTOMATIC"
-      },
-      {
-        "url": "/dealer/21785829117309786-2.webp",
-        "alt": "Nissan Qashqai 2.0i 131000KM AUTOMATIC"
-      },
-      {
-        "url": "/dealer/21785829117309786-3.webp",
-        "alt": "Nissan Qashqai 2.0i 131000KM AUTOMATIC"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Пловдив",
-      "region": "Пловдив",
-      "country": "BG"
-    },
-    "features": [
-      {
-        "bg": "4x4",
-        "en": "4x4"
-      }
-    ],
-    "spec": {
-      "make": "Nissan",
-      "model": "Qashqai 2.0i 131000KM AUTOMATIC",
-      "year": 2014,
-      "bodyType": "suv",
-      "fuelType": "gasoline",
-      "transmission": "automatic",
-      "mileageValue": 131000,
-      "mileageUnit": "km"
-    },
-    "seller": {
-      "id": "dealer-kg-team-auto",
-      "type": "dealer",
-      "displayName": "K-G Team Auto",
-      "verificationStatus": "unverified",
-      "city": "Пловдив",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
-    },
-    "publishedAt": "2026-09-09T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1008",
-    "slug": "mitsubishi-colt-1-5-i-swiss-2007-11678716951277480",
-    "category": "car",
-    "dealerOrgId": "dealer-kg-team-auto",
-    "status": "active",
-    "title": "Mitsubishi Colt 1.5 I SWISS",
-    "description": "Датирани примерни обяви, не потвърдена наличност. Проверете цена, състояние и местоположение при продавача.",
-    "price": {
-      "amount": 2700,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/dealer/11678716951277480-1.webp",
-        "alt": "Mitsubishi Colt 1.5 I SWISS"
-      },
-      {
-        "url": "/dealer/11678716951277480-2.webp",
-        "alt": "Mitsubishi Colt 1.5 I SWISS"
-      },
-      {
-        "url": "/dealer/11678716951277480-3.webp",
-        "alt": "Mitsubishi Colt 1.5 I SWISS"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Пловдив",
-      "region": "Пловдив",
-      "country": "BG"
-    },
-    "spec": {
-      "make": "Mitsubishi",
-      "model": "Colt 1.5 I SWISS",
-      "year": 2007,
-      "bodyType": "hatchback",
-      "fuelType": "gasoline",
-      "transmission": "manual",
-      "mileageValue": 189000,
-      "mileageUnit": "km"
-    },
-    "seller": {
-      "id": "dealer-kg-team-auto",
-      "type": "dealer",
-      "displayName": "K-G Team Auto",
-      "verificationStatus": "unverified",
-      "city": "Пловдив",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
-    },
-    "publishedAt": "2026-09-09T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1009",
-    "slug": "mini-cooper-1-6i-153000km-euro-5-75ps-2013-11773570472954394",
-    "category": "car",
-    "dealerOrgId": "dealer-kg-team-auto",
-    "status": "active",
-    "title": "Mini Cooper 1.6i 153000km EURO-5 75PS.",
-    "description": "Датирани примерни обяви, не потвърдена наличност. Проверете цена, състояние и местоположение при продавача.",
-    "price": {
-      "amount": 4950,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/dealer/11773570472954394-1.webp",
-        "alt": "Mini Cooper 1.6i 153000km EURO-5 75PS."
-      },
-      {
-        "url": "/dealer/11773570472954394-2.webp",
-        "alt": "Mini Cooper 1.6i 153000km EURO-5 75PS."
-      },
-      {
-        "url": "/dealer/11773570472954394-3.webp",
-        "alt": "Mini Cooper 1.6i 153000km EURO-5 75PS."
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Пловдив",
-      "region": "Пловдив",
-      "country": "BG"
-    },
-    "features": [
-      {
-        "bg": "Парктроник",
-        "en": "Парктроник"
-      }
-    ],
-    "spec": {
-      "make": "Mini",
-      "model": "Cooper 1.6i 153000km EURO-5 75PS.",
-      "year": 2013,
-      "bodyType": "coupe",
-      "fuelType": "gasoline",
-      "transmission": "manual",
-      "mileageValue": 153000,
-      "mileageUnit": "km"
-    },
-    "seller": {
-      "id": "dealer-kg-team-auto",
-      "type": "dealer",
-      "displayName": "K-G Team Auto",
-      "verificationStatus": "unverified",
-      "city": "Пловдив",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-781617de6df8596a/logo-on-light.webp"
     },
     "publishedAt": "2026-09-09T09:00:00.000Z",
     "promoted": false

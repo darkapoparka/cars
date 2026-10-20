@@ -56,7 +56,7 @@ const hofmannServices = [
   'Rental car service',
 ];
 export function DealerInformation({ vehicle: v }: { vehicle: Vehicle }) {
-  const hasCapturedServices = v.id === 'bmw-x6';
+  const hasCapturedServices = v.sample && v.id === 'bmw-x6';
   return (
     <>
       <Header title="Additional Information" back={'/vehicle/' + v.id + '#about-dealer-' + v.id} />

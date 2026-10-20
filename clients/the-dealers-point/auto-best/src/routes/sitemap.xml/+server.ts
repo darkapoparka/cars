@@ -6,7 +6,7 @@ import type { RequestHandler } from './$types';
 
 const canonicalRoutes = [
   '/',
-  '/listing-grid',
+  '/cars',
   ...featuredVehicles.map(vehicle => `/listing-detail-v1/${vehicle.id}`),
   '/about-us',
   '/contact',

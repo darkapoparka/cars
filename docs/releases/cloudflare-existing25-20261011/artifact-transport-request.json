@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-fleet-artifact-transport-request",
+  "reviewed": true,
+  "reviewedAt": "2026-10-13T11:44:30Z",
+  "source": {
+    "repository": "darkapoparka/cars",
+    "workflowPath": ".github/workflows/qualified-private-source-export.yml",
+    "runId": 38389187406,
+    "runAttempt": 1,
+    "headSha": "258f648cb19f8484cbf501a14fef14f4f494890d",
+    "event": "push",
+    "ref": "refs/heads/main"
+  },
+  "artifact": {
+    "id": 11808021008,
+    "name": "private-source-package-miraj-auto-varna-38389187406-1",
+    "sizeInBytes": 908291657,
+    "sha256": "d14665145b32f6dfeffb57934e4865b8bf6abb6f68a3e299ec2669b14835a100"
+  },
+  "chunkSizeBytes": 209715200
+}

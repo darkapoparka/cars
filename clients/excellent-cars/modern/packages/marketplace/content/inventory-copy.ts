@@ -1,200 +1,340 @@
 import type { DealerInventoryCopy } from "../lead-site";
-/** Reviewed text for the existing sample stock only. */
+/** Dealer-owned display copy from the exact personalized listing set. */
 export const inventoryCopy = {
-  "bmw-x5-m50d-sofia-2020": {
-    sourceDescription:
-      "Примерна обява за BMW X5 M50d с 360 камери, панорама, HUD и обдухване. Снимката е илюстративна; наличност и условия се потвърждават с автокъщата.",
-    bg: {
-      description:
-        "Примерна обява за BMW X5 M50d с 360 камери, панорама, HUD и обдухване. Снимката е илюстративна; наличност и условия се потвърждават с автокъщата.",
-      imageAlts: ["Черен BMW X5 SUV"],
+  "mercedes-benz-gle-350-amg-designo-2016-21781257688134220": {
+    "sourceDescription": "Mercedes-Benz GLE 350 AMG  DESIGNO, 2016 г., дизел, 179 000 км. Данни от публикуваната обява. Потвърдете наличността, оборудването и условията с Excellent Cars.",
+    "en": {
+      "description": "Mercedes-Benz GLE 350 AMG  DESIGNO, 2016, diesel, 179 000 km. Details from the published listing. Confirm availability, equipment and terms with Excellent Cars.",
+      "imageAlts": [
+        "Mercedes-Benz GLE 350 AMG  DESIGNO",
+        "Mercedes-Benz GLE 350 AMG  DESIGNO",
+        "Mercedes-Benz GLE 350 AMG  DESIGNO",
+        "Mercedes-Benz GLE 350 AMG  DESIGNO"
+      ]
     },
-    en: {
-      description:
-        "Sample listing for a BMW X5 M50d with 360-degree cameras, panoramic roof, head-up display and ventilated seats. The image is illustrative; availability and terms must be confirmed with the dealership.",
-      imageAlts: ["Black BMW X5 SUV"],
-    },
+    "bg": {
+      "description": "Mercedes-Benz GLE 350 AMG  DESIGNO, 2016 г., дизел, 179 000 км. Данни от публикуваната обява. Потвърдете наличността, оборудването и условията с Excellent Cars.",
+      "imageAlts": [
+        "Mercedes-Benz GLE 350 AMG  DESIGNO",
+        "Mercedes-Benz GLE 350 AMG  DESIGNO",
+        "Mercedes-Benz GLE 350 AMG  DESIGNO",
+        "Mercedes-Benz GLE 350 AMG  DESIGNO"
+      ]
+    }
   },
-  "mercedes-benz-gls-400d-4matic-amg-sofia-2021": {
-    sourceDescription:
-      "GLS 400d 4MATIC AMG Line с Burmester и панорама. Голям семеен SUV от Excellent Cars - наличен за оглед в Варна.",
-    bg: {
-      description:
-        "GLS 400d 4MATIC AMG Line с Burmester и панорама. Голям семеен SUV от {shortName} - наличен за оглед в {city}.",
-      imageAlts: ["Mercedes-Benz GLS 4MATIC AMG SUV"],
+  "vw-passat-2-0tdi-highline-2011-11785932596351376": {
+    "sourceDescription": "VW Passat 2.0TDI  HIGHLINE, 2011 г., дизел, 212 000 км. Данни от публикуваната обява. Потвърдете наличността, оборудването и условията с Excellent Cars.",
+    "en": {
+      "description": "VW Passat 2.0TDI  HIGHLINE, 2011, diesel, 212 000 km. Details from the published listing. Confirm availability, equipment and terms with Excellent Cars.",
+      "imageAlts": [
+        "VW Passat 2.0TDI  HIGHLINE",
+        "VW Passat 2.0TDI  HIGHLINE",
+        "VW Passat 2.0TDI  HIGHLINE",
+        "VW Passat 2.0TDI  HIGHLINE"
+      ]
     },
-    en: {
-      description:
-        "GLS 400d 4MATIC AMG Line with Burmester audio and a panoramic roof. A large family SUV from {shortName}, available to view in {city}.",
-      imageAlts: ["Mercedes-Benz GLS 4MATIC AMG SUV"],
-    },
+    "bg": {
+      "description": "VW Passat 2.0TDI  HIGHLINE, 2011 г., дизел, 212 000 км. Данни от публикуваната обява. Потвърдете наличността, оборудването и условията с Excellent Cars.",
+      "imageAlts": [
+        "VW Passat 2.0TDI  HIGHLINE",
+        "VW Passat 2.0TDI  HIGHLINE",
+        "VW Passat 2.0TDI  HIGHLINE",
+        "VW Passat 2.0TDI  HIGHLINE"
+      ]
+    }
   },
-  "bmw-750e-xdrive-m-sport-sofia-2024": {
-    sourceDescription:
-      "Очакван внос: 7 Series plug-in hybrid с M Sport. Нисък пробег - Excellent Cars организира доставка и оглед в Варна.",
-    bg: {
-      description:
-        "Очакван внос: 7 Series plug-in hybrid с M Sport. Нисък пробег - {shortName} организира доставка и оглед в {city}.",
-      imageAlts: ["BMW 7 Series"],
+  "skoda-octavia-2-0tdi-4x4-2022-11788181514006324": {
+    "sourceDescription": "Skoda Octavia 2.0TDI  4x4, 2022 г., дизел, 180 000 км. Данни от публикуваната обява. Потвърдете наличността, оборудването и условията с Excellent Cars.",
+    "en": {
+      "description": "Skoda Octavia 2.0TDI  4x4, 2022, diesel, 180 000 km. Details from the published listing. Confirm availability, equipment and terms with Excellent Cars.",
+      "imageAlts": [
+        "Skoda Octavia 2.0TDI  4x4",
+        "Skoda Octavia 2.0TDI  4x4",
+        "Skoda Octavia 2.0TDI  4x4",
+        "Skoda Octavia 2.0TDI  4x4"
+      ]
     },
-    en: {
-      description:
-        "Expected import: 7 Series plug-in hybrid with M Sport. Low mileage; {shortName} arranges delivery and viewing in {city}.",
-      imageAlts: ["BMW 7 Series"],
-    },
+    "bg": {
+      "description": "Skoda Octavia 2.0TDI  4x4, 2022 г., дизел, 180 000 км. Данни от публикуваната обява. Потвърдете наличността, оборудването и условията с Excellent Cars.",
+      "imageAlts": [
+        "Skoda Octavia 2.0TDI  4x4",
+        "Skoda Octavia 2.0TDI  4x4",
+        "Skoda Octavia 2.0TDI  4x4",
+        "Skoda Octavia 2.0TDI  4x4"
+      ]
+    }
   },
-  "mercedes-benz-e-63-s-amg-sofia-2021": {
-    sourceDescription:
-      "E 63 S AMG facelift с 360, HUD и Burmester. Спортна лимузина от Excellent Cars.",
-    bg: {
-      description:
-        "E 63 S AMG facelift с 360, HUD и Burmester. Спортна лимузина от {dealer}.",
-      imageAlts: ["Mercedes-Benz E-Class седан"],
+  "cupra-born-restyling-58kw-2022-11786795820524833": {
+    "sourceDescription": "Cupra Born RESTYLING  58KW, 2022 г., електрически, 67 000 км. Данни от публикуваната обява. Потвърдете наличността, оборудването и условията с Excellent Cars.",
+    "en": {
+      "description": "Cupra Born RESTYLING  58KW, 2022, electric, 67 000 km. Details from the published listing. Confirm availability, equipment and terms with Excellent Cars.",
+      "imageAlts": [
+        "Cupra Born RESTYLING  58KW",
+        "Cupra Born RESTYLING  58KW",
+        "Cupra Born RESTYLING  58KW",
+        "Cupra Born RESTYLING  58KW"
+      ]
     },
-    en: {
-      description:
-        "Facelift E 63 S AMG with 360-degree cameras, head-up display and Burmester audio. A sports saloon from {dealer}.",
-      imageAlts: ["Mercedes-Benz E-Class saloon"],
-    },
+    "bg": {
+      "description": "Cupra Born RESTYLING  58KW, 2022 г., електрически, 67 000 км. Данни от публикуваната обява. Потвърдете наличността, оборудването и условията с Excellent Cars.",
+      "imageAlts": [
+        "Cupra Born RESTYLING  58KW",
+        "Cupra Born RESTYLING  58KW",
+        "Cupra Born RESTYLING  58KW",
+        "Cupra Born RESTYLING  58KW"
+      ]
+    }
   },
-  "mercedes-benz-cls-400d-4matic-sofia-2020": {
-    sourceDescription:
-      "CLS 400d 4MATIC AMG Line Designo с 360 камери. Елегантно купе-седан от Excellent Cars в Варна.",
-    bg: {
-      description:
-        "CLS 400d 4MATIC AMG Line Designo с 360 камери. Елегантно купе-седан от {shortName} в {city}.",
-      imageAlts: ["Mercedes CLS"],
+  "hyundai-kona-1-6hev-n-line-2020-21786794971218528": {
+    "sourceDescription": "Hyundai Kona 1.6HEV  N-LINE, 2020 г., хибрид, 40 000 км. Данни от публикуваната обява. Потвърдете наличността, оборудването и условията с Excellent Cars.",
+    "en": {
+      "description": "Hyundai Kona 1.6HEV  N-LINE, 2020, hybrid, 40 000 km. Details from the published listing. Confirm availability, equipment and terms with Excellent Cars.",
+      "imageAlts": [
+        "Hyundai Kona 1.6HEV  N-LINE",
+        "Hyundai Kona 1.6HEV  N-LINE",
+        "Hyundai Kona 1.6HEV  N-LINE",
+        "Hyundai Kona 1.6HEV  N-LINE"
+      ]
     },
-    en: {
-      description:
-        "CLS 400d 4MATIC AMG Line Designo with 360-degree cameras. An elegant four-door coupe from {shortName} in {city}.",
-      imageAlts: ["Mercedes CLS"],
-    },
+    "bg": {
+      "description": "Hyundai Kona 1.6HEV  N-LINE, 2020 г., хибрид, 40 000 км. Данни от публикуваната обява. Потвърдете наличността, оборудването и условията с Excellent Cars.",
+      "imageAlts": [
+        "Hyundai Kona 1.6HEV  N-LINE",
+        "Hyundai Kona 1.6HEV  N-LINE",
+        "Hyundai Kona 1.6HEV  N-LINE",
+        "Hyundai Kona 1.6HEV  N-LINE"
+      ]
+    }
   },
-  "audi-q8-50-tdi-quattro-s-line-sofia-2021": {
-    sourceDescription:
-      "Очакван внос: Q8 50 TDI quattro S line Plus. Купе-SUV с quattro за клиенти на Excellent Cars.",
-    bg: {
-      description:
-        "Очакван внос: Q8 50 TDI quattro S line Plus. Купе-SUV с quattro за клиенти на {shortName}.",
-      imageAlts: ["Audi Q8"],
+  "kia-sportage-1-6d-automat-2017-21786455005208728": {
+    "sourceDescription": "Kia Sportage 1.6D  AUTOMAT, 2017 г., дизел, 180 000 км. Данни от публикуваната обява. Потвърдете наличността, оборудването и условията с Excellent Cars.",
+    "en": {
+      "description": "Kia Sportage 1.6D  AUTOMAT, 2017, diesel, 180 000 km. Details from the published listing. Confirm availability, equipment and terms with Excellent Cars.",
+      "imageAlts": [
+        "Kia Sportage 1.6D  AUTOMAT",
+        "Kia Sportage 1.6D  AUTOMAT",
+        "Kia Sportage 1.6D  AUTOMAT",
+        "Kia Sportage 1.6D  AUTOMAT"
+      ]
     },
-    en: {
-      description:
-        "Expected import: Q8 50 TDI quattro S line Plus. A coupe-SUV with quattro for {shortName} customers.",
-      imageAlts: ["Audi Q8"],
-    },
+    "bg": {
+      "description": "Kia Sportage 1.6D  AUTOMAT, 2017 г., дизел, 180 000 км. Данни от публикуваната обява. Потвърдете наличността, оборудването и условията с Excellent Cars.",
+      "imageAlts": [
+        "Kia Sportage 1.6D  AUTOMAT",
+        "Kia Sportage 1.6D  AUTOMAT",
+        "Kia Sportage 1.6D  AUTOMAT",
+        "Kia Sportage 1.6D  AUTOMAT"
+      ]
+    }
   },
-  "mercedes-benz-gle-400d-coupe-sofia-2021": {
-    sourceDescription:
-      "GLE 400d Coupe 4MATIC AMG с 360 и Burmester. Наличен при Excellent Cars - Варна.",
-    bg: {
-      description:
-        "GLE 400d Coupe 4MATIC AMG с 360 и Burmester. Наличен при {dealer} - {city}.",
-      imageAlts: ["Черен Mercedes-Benz GLE SUV"],
+  "vw-tiguan-2-0-di-4motion-2017-21786453972789852": {
+    "sourceDescription": "VW Tiguan 2.0ТDI  4MOTION, 2017 г., дизел, 199 000 км. Данни от публикуваната обява. Потвърдете наличността, оборудването и условията с Excellent Cars.",
+    "en": {
+      "description": "VW Tiguan 2.0ТDI  4MOTION, 2017, diesel, 199 000 km. Details from the published listing. Confirm availability, equipment and terms with Excellent Cars.",
+      "imageAlts": [
+        "VW Tiguan 2.0ТDI  4MOTION",
+        "VW Tiguan 2.0ТDI  4MOTION",
+        "VW Tiguan 2.0ТDI  4MOTION",
+        "VW Tiguan 2.0ТDI  4MOTION"
+      ]
     },
-    en: {
-      description:
-        "GLE 400d Coupe 4MATIC AMG with 360-degree cameras and Burmester audio. Available from {dealer} in {city}.",
-      imageAlts: ["Black Mercedes-Benz GLE SUV"],
-    },
+    "bg": {
+      "description": "VW Tiguan 2.0ТDI  4MOTION, 2017 г., дизел, 199 000 км. Данни от публикуваната обява. Потвърдете наличността, оборудването и условията с Excellent Cars.",
+      "imageAlts": [
+        "VW Tiguan 2.0ТDI  4MOTION",
+        "VW Tiguan 2.0ТDI  4MOTION",
+        "VW Tiguan 2.0ТDI  4MOTION",
+        "VW Tiguan 2.0ТDI  4MOTION"
+      ]
+    }
   },
-  "mercedes-benz-gle-53-amg-coupe-sofia-2022": {
-    sourceDescription:
-      "Очакван внос: GLE 53 AMG Coupe Night Pack. Excellent Cars предлага собствен лизинг след оглед.",
-    bg: {
-      description:
-        "Очакван внос: GLE 53 AMG Coupe Night Pack. {shortName} предлага собствен лизинг след оглед.",
-      imageAlts: ["Бял Mercedes-Benz GLE AMG SUV"],
+  "land-rover-range-rover-evoque-hybrid-nardo-grey-2022-21786451392501339": {
+    "sourceDescription": "Land Rover Range Rover Evoque HYBRID  NARDO_GREY, 2022 г., хибрид, 125 000 км. Данни от публикуваната обява. Потвърдете наличността, оборудването и условията с Excellent Cars.",
+    "en": {
+      "description": "Land Rover Range Rover Evoque HYBRID  NARDO_GREY, 2022, hybrid, 125 000 km. Details from the published listing. Confirm availability, equipment and terms with Excellent Cars.",
+      "imageAlts": [
+        "Land Rover Range Rover Evoque HYBRID  NARDO_GREY",
+        "Land Rover Range Rover Evoque HYBRID  NARDO_GREY",
+        "Land Rover Range Rover Evoque HYBRID  NARDO_GREY",
+        "Land Rover Range Rover Evoque HYBRID  NARDO_GREY"
+      ]
     },
-    en: {
-      description:
-        "Expected import: GLE 53 AMG Coupe Night Pack. {shortName} offers in-house leasing after a viewing.",
-      imageAlts: ["White Mercedes-Benz GLE AMG SUV"],
-    },
+    "bg": {
+      "description": "Land Rover Range Rover Evoque HYBRID  NARDO_GREY, 2022 г., хибрид, 125 000 км. Данни от публикуваната обява. Потвърдете наличността, оборудването и условията с Excellent Cars.",
+      "imageAlts": [
+        "Land Rover Range Rover Evoque HYBRID  NARDO_GREY",
+        "Land Rover Range Rover Evoque HYBRID  NARDO_GREY",
+        "Land Rover Range Rover Evoque HYBRID  NARDO_GREY",
+        "Land Rover Range Rover Evoque HYBRID  NARDO_GREY"
+      ]
+    }
   },
-  "mercedes-benz-s-350d-long-amg-sofia-2019": {
-    sourceDescription:
-      "S 350d Long с S63 AMG оптика и пакет за шофьор. Представителна лимузина от Excellent Cars.",
-    bg: {
-      description:
-        "S 350d Long с S63 AMG оптика и пакет за шофьор. Представителна лимузина от {shortName}.",
-      imageAlts: ["Mercedes-Benz S-Class седан"],
+  "audi-q2-2-0tfsi-quattro-2018-21773151499854810": {
+    "sourceDescription": "Audi Q2 2.0TFSI  QUATTRO, 2018 г., бензин, 133 000 км. Данни от публикуваната обява. Потвърдете наличността, оборудването и условията с Excellent Cars.",
+    "en": {
+      "description": "Audi Q2 2.0TFSI  QUATTRO, 2018, petrol, 133 000 km. Details from the published listing. Confirm availability, equipment and terms with Excellent Cars.",
+      "imageAlts": [
+        "Audi Q2 2.0TFSI  QUATTRO",
+        "Audi Q2 2.0TFSI  QUATTRO",
+        "Audi Q2 2.0TFSI  QUATTRO",
+        "Audi Q2 2.0TFSI  QUATTRO"
+      ]
     },
-    en: {
-      description:
-        "S 350d Long with S63 AMG styling and a chauffeur package. An executive saloon from {shortName}.",
-      imageAlts: ["Mercedes-Benz S-Class saloon"],
-    },
+    "bg": {
+      "description": "Audi Q2 2.0TFSI  QUATTRO, 2018 г., бензин, 133 000 км. Данни от публикуваната обява. Потвърдете наличността, оборудването и условията с Excellent Cars.",
+      "imageAlts": [
+        "Audi Q2 2.0TFSI  QUATTRO",
+        "Audi Q2 2.0TFSI  QUATTRO",
+        "Audi Q2 2.0TFSI  QUATTRO",
+        "Audi Q2 2.0TFSI  QUATTRO"
+      ]
+    }
   },
-  "mercedes-benz-v-250d-vip-business-sofia-2018": {
-    sourceDescription:
-      "V 250d VIP Business с TV, обдухване и подгряване. Бизнес ван от Excellent Cars.",
-    bg: {
-      description:
-        "V 250d VIP Business с TV, обдухване и подгряване. Бизнес ван от {dealer}.",
-      imageAlts: ["V-Class ван"],
+  "dodge-challenger-5-7hemi-srt-2014-11768639133016485": {
+    "sourceDescription": "Dodge Challenger 5.7HEMI  SRT, 2014 г., бензин, 65 000 км. Данни от публикуваната обява. Потвърдете наличността, оборудването и условията с Excellent Cars.",
+    "en": {
+      "description": "Dodge Challenger 5.7HEMI  SRT, 2014, petrol, 65 000 km. Details from the published listing. Confirm availability, equipment and terms with Excellent Cars.",
+      "imageAlts": [
+        "Dodge Challenger 5.7HEMI  SRT",
+        "Dodge Challenger 5.7HEMI  SRT",
+        "Dodge Challenger 5.7HEMI  SRT",
+        "Dodge Challenger 5.7HEMI  SRT"
+      ]
     },
-    en: {
-      description:
-        "V 250d VIP Business with TV, ventilated and heated seats. A business van from {dealer}.",
-      imageAlts: ["V-Class van"],
-    },
+    "bg": {
+      "description": "Dodge Challenger 5.7HEMI  SRT, 2014 г., бензин, 65 000 км. Данни от публикуваната обява. Потвърдете наличността, оборудването и условията с Excellent Cars.",
+      "imageAlts": [
+        "Dodge Challenger 5.7HEMI  SRT",
+        "Dodge Challenger 5.7HEMI  SRT",
+        "Dodge Challenger 5.7HEMI  SRT",
+        "Dodge Challenger 5.7HEMI  SRT"
+      ]
+    }
   },
-  "range-rover-sport-svr-sofia-2021": {
-    sourceDescription:
-      "Range Rover Sport SVR 600 к.с. с панорама, 360 и Meridian. Висок клас SUV от Excellent Cars.",
-    bg: {
-      description:
-        "Range Rover Sport SVR 600 к.с. с панорама, 360 и Meridian. Висок клас SUV от {shortName}.",
-      imageAlts: ["Range Rover Sport"],
+  "vw-t-cross-1-5i-automat-2023-21775914499512125": {
+    "sourceDescription": "VW T-Cross 1.5i  AUTOMAT, 2023 г., бензин, 48 000 км. Данни от публикуваната обява. Потвърдете наличността, оборудването и условията с Excellent Cars.",
+    "en": {
+      "description": "VW T-Cross 1.5i  AUTOMAT, 2023, petrol, 48 000 km. Details from the published listing. Confirm availability, equipment and terms with Excellent Cars.",
+      "imageAlts": [
+        "VW T-Cross 1.5i  AUTOMAT",
+        "VW T-Cross 1.5i  AUTOMAT",
+        "VW T-Cross 1.5i  AUTOMAT",
+        "VW T-Cross 1.5i  AUTOMAT"
+      ]
     },
-    en: {
-      description:
-        "Range Rover Sport SVR, 600 hp, with a panoramic roof, 360-degree cameras and Meridian audio. A premium SUV from {shortName}.",
-      imageAlts: ["Range Rover Sport"],
-    },
+    "bg": {
+      "description": "VW T-Cross 1.5i  AUTOMAT, 2023 г., бензин, 48 000 км. Данни от публикуваната обява. Потвърдете наличността, оборудването и условията с Excellent Cars.",
+      "imageAlts": [
+        "VW T-Cross 1.5i  AUTOMAT",
+        "VW T-Cross 1.5i  AUTOMAT",
+        "VW T-Cross 1.5i  AUTOMAT",
+        "VW T-Cross 1.5i  AUTOMAT"
+      ]
+    }
   },
-  "bmw-430i-xdrive-gran-coupe-sofia-2023": {
-    sourceDescription:
-      "430i xDrive Gran Coupe M Sport с digital кокпит и Harman Kardon. Excellent Cars, Варна.",
-    bg: {
-      description:
-        "430i xDrive Gran Coupe M Sport с digital кокпит и Harman Kardon. {shortName}, {city}.",
-      imageAlts: ["BMW 4 Series"],
+  "kia-niro-plug-in-hybrid-2019-21785575816054903": {
+    "sourceDescription": "Kia Niro PLUG-IN-HYBRID, 2019 г., електрически, 118 000 км. Данни от публикуваната обява. Потвърдете наличността, оборудването и условията с Excellent Cars.",
+    "en": {
+      "description": "Kia Niro PLUG-IN-HYBRID, 2019, electric, 118 000 km. Details from the published listing. Confirm availability, equipment and terms with Excellent Cars.",
+      "imageAlts": [
+        "Kia Niro PLUG-IN-HYBRID",
+        "Kia Niro PLUG-IN-HYBRID",
+        "Kia Niro PLUG-IN-HYBRID",
+        "Kia Niro PLUG-IN-HYBRID"
+      ]
     },
-    en: {
-      description:
-        "430i xDrive Gran Coupe M Sport with a digital cockpit and Harman Kardon audio. {shortName}, {city}.",
-      imageAlts: ["BMW 4 Series"],
-    },
+    "bg": {
+      "description": "Kia Niro PLUG-IN-HYBRID, 2019 г., електрически, 118 000 км. Данни от публикуваната обява. Потвърдете наличността, оборудването и условията с Excellent Cars.",
+      "imageAlts": [
+        "Kia Niro PLUG-IN-HYBRID",
+        "Kia Niro PLUG-IN-HYBRID",
+        "Kia Niro PLUG-IN-HYBRID",
+        "Kia Niro PLUG-IN-HYBRID"
+      ]
+    }
   },
-  "bmw-m4-competition-sofia-2021": {
-    sourceDescription:
-      "BMW M4 Competition с M пакет, спортен салон и digital кокпит. Купе от портфолиото на Excellent Cars.",
-    bg: {
-      description:
-        "BMW M4 Competition с M пакет, спортен салон и digital кокпит. Купе от портфолиото на {dealer}.",
-      imageAlts: ["Червено BMW M4 Competition пред модерен шоурум"],
+  "bmw-x3-2-0d-xdrive-2014-21773150110056507": {
+    "sourceDescription": "BMW X3 2.0D  xDrive, 2014 г., дизел, 188 000 км. Данни от публикуваната обява. Потвърдете наличността, оборудването и условията с Excellent Cars.",
+    "en": {
+      "description": "BMW X3 2.0D  xDrive, 2014, diesel, 188 000 km. Details from the published listing. Confirm availability, equipment and terms with Excellent Cars.",
+      "imageAlts": [
+        "BMW X3 2.0D  xDrive",
+        "BMW X3 2.0D  xDrive",
+        "BMW X3 2.0D  xDrive",
+        "BMW X3 2.0D  xDrive"
+      ]
     },
-    en: {
-      description:
-        "BMW M4 Competition with M package, sports interior and digital cockpit. A coupe from the {dealer} collection.",
-      imageAlts: ["Red BMW M4 Competition in front of a modern showroom"],
-    },
+    "bg": {
+      "description": "BMW X3 2.0D  xDrive, 2014 г., дизел, 188 000 км. Данни от публикуваната обява. Потвърдете наличността, оборудването и условията с Excellent Cars.",
+      "imageAlts": [
+        "BMW X3 2.0D  xDrive",
+        "BMW X3 2.0D  xDrive",
+        "BMW X3 2.0D  xDrive",
+        "BMW X3 2.0D  xDrive"
+      ]
+    }
   },
-  "bmw-x5-xdrive40d-berlin-2022": {
-    sourceDescription:
-      "Крос-бордер демо наличност с оторизирани медии и право на доставка. Финалният транспорт, данъци и регистрация се уточняват с оферта от Excellent Cars.",
-    bg: {
-      description:
-        "Крос-бордер демо наличност с оторизирани медии и право на доставка. Финалният транспорт, данъци и регистрация се уточняват с оферта от {shortName}.",
-      imageAlts: ["Черен BMW X5 SUV в градска среда"],
+  "nissan-juke-1-6-nismo-2014-21785323501482685": {
+    "sourceDescription": "Nissan Juke 1.6Т  NISMO, 2014 г., бензин, 186 000 км. Данни от публикуваната обява. Потвърдете наличността, оборудването и условията с Excellent Cars.",
+    "en": {
+      "description": "Nissan Juke 1.6Т  NISMO, 2014, petrol, 186 000 km. Details from the published listing. Confirm availability, equipment and terms with Excellent Cars.",
+      "imageAlts": [
+        "Nissan Juke 1.6Т  NISMO",
+        "Nissan Juke 1.6Т  NISMO",
+        "Nissan Juke 1.6Т  NISMO",
+        "Nissan Juke 1.6Т  NISMO"
+      ]
     },
-    en: {
-      description:
-        "Cross-border demo inventory with authorized images and delivery rights. Final transport, tax and registration costs are confirmed in a quote from {shortName}.",
-      imageAlts: ["Black BMW X5 SUV in an urban setting"],
-    },
+    "bg": {
+      "description": "Nissan Juke 1.6Т  NISMO, 2014 г., бензин, 186 000 км. Данни от публикуваната обява. Потвърдете наличността, оборудването и условията с Excellent Cars.",
+      "imageAlts": [
+        "Nissan Juke 1.6Т  NISMO",
+        "Nissan Juke 1.6Т  NISMO",
+        "Nissan Juke 1.6Т  NISMO",
+        "Nissan Juke 1.6Т  NISMO"
+      ]
+    }
   },
+  "peugeot-308-1-6gt-205h-p-2016-11778320754806394": {
+    "sourceDescription": "Peugeot 308 1.6GT  205h.p, 2016 г., бензин, 130 000 км. Данни от публикуваната обява. Потвърдете наличността, оборудването и условията с Excellent Cars.",
+    "en": {
+      "description": "Peugeot 308 1.6GT  205h.p, 2016, petrol, 130 000 km. Details from the published listing. Confirm availability, equipment and terms with Excellent Cars.",
+      "imageAlts": [
+        "Peugeot 308 1.6GT  205h.p",
+        "Peugeot 308 1.6GT  205h.p",
+        "Peugeot 308 1.6GT  205h.p",
+        "Peugeot 308 1.6GT  205h.p"
+      ]
+    },
+    "bg": {
+      "description": "Peugeot 308 1.6GT  205h.p, 2016 г., бензин, 130 000 км. Данни от публикуваната обява. Потвърдете наличността, оборудването и условията с Excellent Cars.",
+      "imageAlts": [
+        "Peugeot 308 1.6GT  205h.p",
+        "Peugeot 308 1.6GT  205h.p",
+        "Peugeot 308 1.6GT  205h.p",
+        "Peugeot 308 1.6GT  205h.p"
+      ]
+    }
+  },
+  "mazda-cx-5-2-5i-4x4-2015-21781781688732220": {
+    "sourceDescription": "Mazda CX-5 2.5i  4x4, 2015 г., бензин, 192 000 км. Данни от публикуваната обява. Потвърдете наличността, оборудването и условията с Excellent Cars.",
+    "en": {
+      "description": "Mazda CX-5 2.5i  4x4, 2015, petrol, 192 000 km. Details from the published listing. Confirm availability, equipment and terms with Excellent Cars.",
+      "imageAlts": [
+        "Mazda CX-5 2.5i  4x4",
+        "Mazda CX-5 2.5i  4x4",
+        "Mazda CX-5 2.5i  4x4",
+        "Mazda CX-5 2.5i  4x4"
+      ]
+    },
+    "bg": {
+      "description": "Mazda CX-5 2.5i  4x4, 2015 г., бензин, 192 000 км. Данни от публикуваната обява. Потвърдете наличността, оборудването и условията с Excellent Cars.",
+      "imageAlts": [
+        "Mazda CX-5 2.5i  4x4",
+        "Mazda CX-5 2.5i  4x4",
+        "Mazda CX-5 2.5i  4x4",
+        "Mazda CX-5 2.5i  4x4"
+      ]
+    }
+  }
 } satisfies DealerInventoryCopy;

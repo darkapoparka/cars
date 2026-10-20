@@ -2,7 +2,7 @@ export type BrandConfig = {
   name: string;
   shortName: string;
   city: string;
-  showroomCoordinates: { latitude: number; longitude: number };
+  showroomCoordinates: { latitude: number; longitude: number } | null;
   addressLine: string;
   address: string;
   phone: string;
@@ -24,7 +24,7 @@ export const brand = {
   name,
   shortName,
   city,
-  showroomCoordinates: {"latitude":0,"longitude":0},
+  showroomCoordinates: null,
   youtubeUrl: "https://www.youtube.com/channel/UCGXhr1QYqALiBBQpBYZtpmw",
   instagramUrl: "",
   facebookUrl: "",
@@ -33,6 +33,6 @@ export const brand = {
   addressLine,
   address: "ул. Свобода, на гърба на Гробищен парк, Пазарджик",
   appointment: "Пон.–пет. 09:30–19:00 · Съб.–нед. 09:30–17:00 · Потвърдете огледа по телефона",
-  logo: "/dealer-brand/logo-on-light-20260919.webp",
-  logoOnDark: "/dealer-brand/logo-on-dark-20260919.webp"
+  logo: "/dealer-brand/v2-b9c4f7939487513f/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/v2-b9c4f7939487513f/logo-on-dark.webp"
 } as const satisfies BrandConfig;

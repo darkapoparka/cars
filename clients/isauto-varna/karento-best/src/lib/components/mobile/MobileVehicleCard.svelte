@@ -5,6 +5,7 @@
   import { useLocale } from "#lib/i18n/context.svelte.ts";
   const locale = useLocale();
   import type { VehicleCardContent } from "#lib/content.ts";
+  import { focusableScroll } from "#lib/horizontal-scroll.ts";
 
   type PhoneVehicle = Pick<
     VehicleCardContent,
@@ -56,7 +57,10 @@
       {
         id: "transmission",
         label: locale.t("vehicle.transmission"),
-        value: display.transmission,
+        value:
+          card.transmissionType === "automatic"
+            ? locale.t("transmission.automatic.short")
+            : display.transmission,
       },
       { id: "fuel", label: locale.t("vehicle.fuel"), value: display.fuel },
       ...additionalFacts.map((value, index) => ({
@@ -94,6 +98,7 @@
   {#if facts.length}
     <ul
       class="mobile-vehicle-facts"
+      {@attach focusableScroll}
       aria-label={locale.t("vehicle.facts", { vehicle: card.title })}
     >
       {#each facts as fact (fact.id)}
@@ -219,9 +224,14 @@
       grid-column: 1 / -1;
       display: flex;
       align-items: center;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
       gap: var(--karento-space-1);
       min-width: 0;
+      overflow-x: auto;
+      overscroll-behavior-x: contain;
+      scrollbar-width: none;
+      position: relative;
+      z-index: 2;
       margin: 0;
       padding: var(--karento-space-2) 0 0;
       border-top: 1px solid var(--bs-border-color);
@@ -232,12 +242,17 @@
       line-height: var(--karento-type-body-small-leading);
     }
     .mobile-vehicle-facts li {
+      flex: none;
       min-width: 0;
-      max-width: 100%;
+      max-width: none;
       padding: var(--karento-space-1) var(--karento-space-2);
       border-radius: var(--karento-radius-media);
       background: var(--bs-neutral-100);
-      overflow-wrap: anywhere;
+      white-space: nowrap;
+    }
+    .mobile-vehicle-facts:focus-visible {
+      outline: var(--karento-focus-width) solid var(--karento-accent);
+      outline-offset: var(--karento-focus-offset);
     }
   }
 </style>

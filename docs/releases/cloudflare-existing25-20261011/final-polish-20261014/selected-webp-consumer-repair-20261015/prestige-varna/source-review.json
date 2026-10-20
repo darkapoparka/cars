@@ -1,0 +1,596 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-focused-current-published-selected-logo-consumer-repair",
+  "dealer": "prestige-varna",
+  "repository": "darkapoparka/cars-prestige-varna",
+  "canonicalSourceRepository": "darkapoparka/cars",
+  "canonicalBaseline": {
+    "commit": "bd32e4d18c6b6e5b882263936322fb50f3c023e2",
+    "tree": "9acb6119527c8b34e0bff3e3d2f20a593cf2b2be"
+  },
+  "preparedTree": "e040ed17e5e3fab462b24c99068e8fed575d1f1c",
+  "sourceRevision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+  "originalCiProvenance": {
+    "sourceRun": {
+      "id": 38689980731,
+      "attempt": 1,
+      "head": "2b21f6e2d32be65fd1b55e0de48557e59944935b",
+      "workflow": ".github/workflows/existing-fleet-source.yml"
+    },
+    "sourceArtifact": {
+      "id": 11952371192,
+      "name": "existing-cf-source-prestige-varna-38689980731-1",
+      "bytes": 5584880,
+      "digest": "sha256:1223cf305377192bd573bbf6e8db3c65a13d4991432909e1f20209b40a915247"
+    },
+    "proposalSha256": "2c09c6c28d8a10de7cc04c4907364a26ee4304bf3cdf6037164ed488f4bd0f3d",
+    "sourceReceiptSha256": "ba9ecf7f873222c114ad8472b30f15150f6ee80c73533633ceecce0d9f926e40",
+    "finalReviewSha256": "7632ed6d2c48f191aa920ce51189e772e24279325eac8eb85afa25e28152e593"
+  },
+  "newCiRun": null,
+  "originalCiReusedAsNewSuccess": false,
+  "originalSourcePreparationReexecuted": false,
+  "focusedProof": {
+    "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/selected-webp-consumer-repair-20261015/prestige-varna/focused-proof.json",
+    "sha256": "febc6c9abca7331614cb86eb116d3b1f727613a5ceebfc8337579a0024760e61"
+  },
+  "patch": {
+    "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/current-seven-selected-webp-runtime/reseals-a/prestige-varna/source-patch.json",
+    "sha256": "37c709fcbbe6ad42941d3a1b7ad96efd63007281e03a5f097e12cdd7ccbcc473"
+  },
+  "nativeInputBefore": {
+    "digest": "90a781dd98af1867830efcf06cb70adbc276ab97d422133558a7cdb1905c3374",
+    "files": 9146
+  },
+  "nativeInput": {
+    "digest": "90a781dd98af1867830efcf06cb70adbc276ab97d422133558a7cdb1905c3374",
+    "files": 9146
+  },
+  "qualificationContext": {
+    "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/contexts/prestige-varna.json",
+    "sha256": "1024c45488dc9f0b326d6c701fc783816661f1711603d4858b374d2b1e18afe6"
+  },
+  "nativeQualification": {
+    "contextFileSha256": "1024c45488dc9f0b326d6c701fc783816661f1711603d4858b374d2b1e18afe6",
+    "qualificationLockSha256": "04633129df9e75d6cd62deeac9125b279957789d75f57cdb0b243ef61bfc3e7e",
+    "contextDigest": "5deea517dd4a75241761d378155755812324afdda6cc005787b8d05ab1cbff9d",
+    "receiptSha256": "9e457ae2ed2595a368be2a9b63a709584d21df10396451f4d3b6ce7ba780425a",
+    "nativeInput": {
+      "digest": "90a781dd98af1867830efcf06cb70adbc276ab97d422133558a7cdb1905c3374",
+      "files": 9146
+    },
+    "pendingNativeChecks": [
+      "catalog-completeness",
+      "hardcoded-ui",
+      "native-routing",
+      "standalone-journeys",
+      "mounted-journeys",
+      "public-journeys",
+      "preferences-no-js",
+      "preferences-storage-disabled",
+      "preferences-races",
+      "request-isolation",
+      "security-write-blocking",
+      "assets-preserved"
+    ]
+  },
+  "preparedCandidateDigest": "ad28fe4829b6f3133f86963ee456ee909ecba9a6ecfa8235401f885101d802fa",
+  "templateSources": {
+    "auto-best": {
+      "repository": "darkapoparka/cars",
+      "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+      "path": "templates/auto-best",
+      "digest": "2fc9c3cfc9cf1976dbe30c08592776362e5bcc6b09e8b06620e57c4406df58a5",
+      "tree": "78fa1a82eca14816449f9588283260840ee94f52"
+    },
+    "modern": {
+      "repository": "darkapoparka/cars",
+      "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+      "path": "templates/modern",
+      "digest": "30e1a99f857cc25e4d78c9459cfb4394a9f70c5b114196a5ca6325ff38823b4b",
+      "tree": "01eac7390fa6ba951d4b8d4c26159a9be150f6c8"
+    },
+    "import": {
+      "repository": "darkapoparka/cars",
+      "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+      "path": "templates/import",
+      "digest": "c7d6c93214e859aa2747af8f5e068b6a0b8ca095d6328c807728a4d531d688f8",
+      "tree": "d841ddfe5bec918bf6b2c19fd6971fecd6b8e54d"
+    },
+    "app": {
+      "repository": "darkapoparka/cars",
+      "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+      "path": "templates/app",
+      "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1",
+      "tree": "7f3d3ffa40546635377e6c5225194fe06fead291"
+    },
+    "mobile": {
+      "repository": "darkapoparka/cars",
+      "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+      "path": "templates/mobile",
+      "digest": "f5a3e541a7c648a4c2899ad3893e22a3806027a9f66d95fa4e8c74b2226635b6",
+      "tree": "792bfdd1d8eb22aabd90c7e3a0c0779a6c1c36f3"
+    },
+    "karento-best": {
+      "repository": "darkapoparka/cars",
+      "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+      "path": "templates/karento-best",
+      "digest": "be17ef365e3272753df6e50826b139a45bfc32b8fef54ddcb86d977ad16280a9",
+      "tree": "8c5ac869c7fd15e19a80c660343fc64b20a2bad9"
+    }
+  },
+  "catalogAuditTransition": {
+    "before": {
+      "auto-best": {
+        "catalogs": [
+          {
+            "descriptor": {
+              "format": "typescript-pair",
+              "path": "src/lib/locale/catalog.ts",
+              "en": "en",
+              "bg": "bg"
+            },
+            "keys": 1151,
+            "contentDigest": "10ac8508028f5f9b7d1dee2897b525ce8742b409fa0be881c537a961705ea0ed"
+          }
+        ],
+        "declaredCatalogParityPassed": true,
+        "linguisticAcceptance": "requires-reviewed-evidence-not-key-counts"
+      },
+      "modern": {
+        "catalogs": [
+          {
+            "descriptor": {
+              "format": "typescript-pair",
+              "path": "packages/internationalization/preferences-messages.ts",
+              "en": "en",
+              "bg": "bg"
+            },
+            "keys": 26,
+            "contentDigest": "89d3278de72c828f268800cb538a436c2bfd8a7868b6e4c0044e989158d1a368"
+          },
+          {
+            "descriptor": {
+              "format": "typescript-pair",
+              "path": "packages/internationalization/public-messages.ts",
+              "en": "en",
+              "bg": "bg"
+            },
+            "keys": 27,
+            "contentDigest": "5bffa6e066509d415a0730f5b7c39d7b6d13ff563c8f447cde59c95fc3d86a8a"
+          },
+          {
+            "descriptor": {
+              "format": "typescript-rows",
+              "path": "packages/marketplace/content/inventory-copy.ts",
+              "export": "inventoryCopy"
+            },
+            "keys": 14,
+            "contentDigest": "d6fdd386b5a94729382f5afeb22942c0198b7ef070438396186bffb8e7796993"
+          },
+          {
+            "descriptor": {
+              "format": "typescript-locale-object",
+              "path": "packages/marketplace-ui/lib/marketplace-control-copy.ts",
+              "export": "copyByLanguage"
+            },
+            "keys": 118,
+            "contentDigest": "c0f9822da9bc3b6c01911e80b400d026d7f063581657196c12cece13820d0fc4"
+          }
+        ],
+        "declaredCatalogParityPassed": true,
+        "linguisticAcceptance": "requires-reviewed-evidence-not-key-counts"
+      },
+      "import": {
+        "catalogs": [
+          {
+            "descriptor": {
+              "format": "typescript-pair",
+              "path": "src/lib/locale/messages.ts",
+              "en": "en",
+              "bg": "bg"
+            },
+            "keys": 15,
+            "contentDigest": "06dead7dfa79c57f0872d960d112141262b5a5ca4998d76523cc6351d101ab6f"
+          },
+          {
+            "descriptor": {
+              "format": "typescript-pair",
+              "path": "src/lib/i18n/native.ts",
+              "en": "nativeEn",
+              "bg": "nativeBg"
+            },
+            "keys": 254,
+            "contentDigest": "249ded88950c8e2ad32ef60db41ed049ca2f798c768c0ae140d245bb3d67067e"
+          },
+          {
+            "descriptor": {
+              "format": "typescript-pair",
+              "path": "src/lib/content/localized.ts",
+              "en": "contentEn",
+              "bg": "contentBg"
+            },
+            "keys": 158,
+            "contentDigest": "2d7d363886966523ce5f852ba501a0dc7fd92d556d89e9ddc0501d44fceb95c9"
+          },
+          {
+            "descriptor": {
+              "format": "typescript-rows",
+              "path": "src/lib/content/inventory-localized.ts",
+              "export": "inventoryCopy"
+            },
+            "keys": 128,
+            "contentDigest": "af41cd2d58388e7624ecf223e4f5cfd0943739e34f0e0531c653b18205e0ecb8"
+          },
+          {
+            "descriptor": {
+              "format": "typescript-source-map",
+              "path": "src/lib/content/extra-localized.ts",
+              "export": "extraEnglish"
+            },
+            "keys": 95,
+            "contentDigest": "9999af020b5dbcd338d1a7199fb3e9ff6b05f8eaf0c43943eb3039cb30a9e518"
+          }
+        ],
+        "declaredCatalogParityPassed": true,
+        "linguisticAcceptance": "requires-reviewed-evidence-not-key-counts"
+      }
+    },
+    "after": {
+      "auto-best": {
+        "catalogs": [
+          {
+            "descriptor": {
+              "format": "typescript-pair",
+              "path": "src/lib/locale/catalog.ts",
+              "en": "en",
+              "bg": "bg"
+            },
+            "keys": 1151,
+            "contentDigest": "10ac8508028f5f9b7d1dee2897b525ce8742b409fa0be881c537a961705ea0ed"
+          }
+        ],
+        "declaredCatalogParityPassed": true,
+        "linguisticAcceptance": "requires-reviewed-evidence-not-key-counts"
+      },
+      "modern": {
+        "catalogs": [
+          {
+            "descriptor": {
+              "format": "typescript-pair",
+              "path": "packages/internationalization/preferences-messages.ts",
+              "en": "en",
+              "bg": "bg"
+            },
+            "keys": 26,
+            "contentDigest": "89d3278de72c828f268800cb538a436c2bfd8a7868b6e4c0044e989158d1a368"
+          },
+          {
+            "descriptor": {
+              "format": "typescript-pair",
+              "path": "packages/internationalization/public-messages.ts",
+              "en": "en",
+              "bg": "bg"
+            },
+            "keys": 27,
+            "contentDigest": "5bffa6e066509d415a0730f5b7c39d7b6d13ff563c8f447cde59c95fc3d86a8a"
+          },
+          {
+            "descriptor": {
+              "format": "typescript-rows",
+              "path": "packages/marketplace/content/inventory-copy.ts",
+              "export": "inventoryCopy"
+            },
+            "keys": 14,
+            "contentDigest": "d6fdd386b5a94729382f5afeb22942c0198b7ef070438396186bffb8e7796993"
+          },
+          {
+            "descriptor": {
+              "format": "typescript-locale-object",
+              "path": "packages/marketplace-ui/lib/marketplace-control-copy.ts",
+              "export": "copyByLanguage"
+            },
+            "keys": 118,
+            "contentDigest": "c0f9822da9bc3b6c01911e80b400d026d7f063581657196c12cece13820d0fc4"
+          }
+        ],
+        "declaredCatalogParityPassed": true,
+        "linguisticAcceptance": "requires-reviewed-evidence-not-key-counts"
+      },
+      "import": {
+        "catalogs": [
+          {
+            "descriptor": {
+              "format": "typescript-pair",
+              "path": "src/lib/locale/messages.ts",
+              "en": "en",
+              "bg": "bg"
+            },
+            "keys": 15,
+            "contentDigest": "06dead7dfa79c57f0872d960d112141262b5a5ca4998d76523cc6351d101ab6f"
+          },
+          {
+            "descriptor": {
+              "format": "typescript-pair",
+              "path": "src/lib/i18n/native.ts",
+              "en": "nativeEn",
+              "bg": "nativeBg"
+            },
+            "keys": 254,
+            "contentDigest": "249ded88950c8e2ad32ef60db41ed049ca2f798c768c0ae140d245bb3d67067e"
+          },
+          {
+            "descriptor": {
+              "format": "typescript-pair",
+              "path": "src/lib/content/localized.ts",
+              "en": "contentEn",
+              "bg": "contentBg"
+            },
+            "keys": 158,
+            "contentDigest": "2d7d363886966523ce5f852ba501a0dc7fd92d556d89e9ddc0501d44fceb95c9"
+          },
+          {
+            "descriptor": {
+              "format": "typescript-rows",
+              "path": "src/lib/content/inventory-localized.ts",
+              "export": "inventoryCopy"
+            },
+            "keys": 128,
+            "contentDigest": "af41cd2d58388e7624ecf223e4f5cfd0943739e34f0e0531c653b18205e0ecb8"
+          },
+          {
+            "descriptor": {
+              "format": "typescript-source-map",
+              "path": "src/lib/content/extra-localized.ts",
+              "export": "extraEnglish"
+            },
+            "keys": 95,
+            "contentDigest": "9999af020b5dbcd338d1a7199fb3e9ff6b05f8eaf0c43943eb3039cb30a9e518"
+          }
+        ],
+        "declaredCatalogParityPassed": true,
+        "linguisticAcceptance": "requires-reviewed-evidence-not-key-counts"
+      }
+    },
+    "otherDeclaredCatalogsUnchanged": true
+  },
+  "pathsChanged": 11,
+  "changedPaths": [
+    ".cars-branding.json",
+    ".cars-mobile.json",
+    ".cars-signature.json",
+    ".client/cloudflare-existing-source.json",
+    ".client/native-qualification-context.json",
+    "karento-best/src/lib/content.ts",
+    "karento-best/src/lib/data/dealer-detail.ts",
+    "karento-best/src/lib/data/vehicle-detail.ts",
+    "localization/adoption.json",
+    "mobile/src/lib/dealers.ts",
+    "mobile/src/lib/showroom-config.ts"
+  ],
+  "authoritativeFactsUnchanged": true,
+  "stockUnchanged": true,
+  "allRasterAssetBytesUnchanged": true,
+  "sourcePinsUnchanged": true,
+  "otherFiveDesignBytesUnchanged": false,
+  "otherFourDesignBytesUnchanged": true,
+  "changedDesigns": [
+    "mobile",
+    "karento-best"
+  ],
+  "priorImportModernRepairBytesPreserved": true,
+  "currentPublishedBaseline": {
+    "dealer": "prestige-varna",
+    "originalSourceCommit": "e33ced344bde012a59b4d39543696d42c6447780",
+    "originalSourceTree": "17cc51d27e39e7d21b0751673fea95e6ca20f8a3",
+    "currentPublishedCommit": "bd32e4d18c6b6e5b882263936322fb50f3c023e2",
+    "currentPublishedTree": "9acb6119527c8b34e0bff3e3d2f20a593cf2b2be",
+    "exactPublishedPriorChangedPaths": [
+      ".client/cloudflare-existing-source.json",
+      ".client/native-qualification-context.json",
+      "import/src/lib/content/extra-localized.ts",
+      "localization/adoption.json",
+      "modern/packages/marketplace/lead-site.ts"
+    ],
+    "sourcePatch": {
+      "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/current-seven-simple-import-editorial/reseals-b/prestige-varna/source-patch.json",
+      "sha256": "dd921165ab7418d20608d719f92d4d11ed9b62050dfd5a65cdd4162796747b79"
+    },
+    "publicationSpec": {
+      "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/current-seven-simple-import-editorial/reseals-b/publication-spec.json",
+      "sha256": "817524d8d5918a6d972179800f52df2202341f75193b6c8c05818e5163338d7f",
+      "blob": "406c8c7238ce261e2505f56882a1284bb9a7c7ea",
+      "bytes": 27262
+    },
+    "actualMainPublication": {
+      "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/reviewed-native-817524d8d5918a6d972179800f52df2202341f75193b6c8c05818e5163338d7f-receipt.json",
+      "sha256": "d4f1cd139506179f9f79b6fe49aee0b06db7b3983c57ec51b4a9b2d4765c9a8d",
+      "commit": "bd32e4d18c6b6e5b882263936322fb50f3c023e2",
+      "refUpdated": true,
+      "readbackVerified": true,
+      "checkedAt": "2026-10-15T08:48:13.566Z"
+    },
+    "sourceReview": {
+      "path": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/editorial-runtime-repair-20261015/prestige-varna/source-review.json",
+      "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/current-seven-simple-import-editorial/reseals-b/prestige-varna/source-review.json",
+      "sha256": "d8a6d14296769256dd34dfdf13eec589758eed3196360fbbc30bd218d7435431",
+      "blob": "fe4049265d89fcc106217846332ae3112cd8e126"
+    },
+    "qualification": {
+      "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/contexts/prestige-varna.json",
+      "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/current-seven-simple-import-editorial/reseals-b/prestige-varna/qualification-context.json",
+      "sha256": "6e13e5e10eb1deec154006207c87b7ddbd0b3610bd66983c7c0c6cf482b0afe2"
+    },
+    "currentNativeInput": {
+      "digest": "90a781dd98af1867830efcf06cb70adbc276ab97d422133558a7cdb1905c3374",
+      "files": 9146
+    },
+    "unchangedOtherSourceEntryBlobs": true,
+    "sourceCopies": 0,
+    "networkReads": 0,
+    "objectWrites": 0,
+    "refWrites": 0
+  },
+  "immediateParentOverlay": {
+    "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-native/native-wave-015/published-ten-source-successors.json",
+    "sha256": "e7b40a66d73cd941b85be64ddef3093ee285df288a885fc5709c5627eb6c8c96"
+  },
+  "selectedExtendedProof": {
+    "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/native13-modern-runtime/seven-selected-extended-rebinds/seven-selected-extended-rebind-proof.json",
+    "sha256": "444f64491c4b2fb593af99519d2670c2fa3664c5e063bc8e055a240e742e133a"
+  },
+  "selectedExtendedPatches": [
+    {
+      "path": "mobile/src/lib/showroom-config.ts",
+      "baseBlob": "cff12e5bb311b7d67de66f25b3b0cdd682991314",
+      "baseSha256": "87c18729d51851142906b08c8d153f0d45e202e00336f89ad310eb68218dc7d4",
+      "candidateFile": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/native13-modern-runtime/seven-selected-extended-rebinds/prestige-varna/mobile--src--lib--showroom-config.ts",
+      "candidateSha256": "2547ad0126e0780e54ac3f8fb017a624a1efb2ffe66fabd99df31f77c4913b76",
+      "candidateBlob": "dc15c8c7aba2dd96c17a0d60c0226df86f73e371",
+      "bytes": 6466,
+      "onlyReviewedLogoLiteralsChanged": true,
+      "replacements": {
+        "onLight": 1,
+        "onDark": 0,
+        "faviconToSelectedAppIcon": 0
+      }
+    },
+    {
+      "path": "mobile/src/lib/dealers.ts",
+      "baseBlob": "5f5a5c9fe4f77f91e4c31e4d0c22c39d49507261",
+      "baseSha256": "433292f6a2c7ba82b9b876b07f106a40af400f3834ce3eca91864f6ecfe22fb1",
+      "candidateFile": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/native13-modern-runtime/seven-selected-extended-rebinds/prestige-varna/mobile--src--lib--dealers.ts",
+      "candidateSha256": "8091db6a719a99dc4e00fd78a5e1d0dc844552715b397a9dfd0a7896569a5914",
+      "candidateBlob": "049eb72c2673e71485862c94cceec1cf8978b9bf",
+      "bytes": 4631,
+      "onlyReviewedLogoLiteralsChanged": true,
+      "replacements": {
+        "onLight": 7,
+        "onDark": 0,
+        "faviconToSelectedAppIcon": 0
+      }
+    },
+    {
+      "path": "karento-best/src/lib/content.ts",
+      "baseBlob": "5c0744f034de209e709ea92f6d409b3a7b036b9a",
+      "baseSha256": "fffa5749b0a2d79b375fc10d7060ef20c819ee2b98a900abbe6b2fbf83d740fb",
+      "candidateFile": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/native13-modern-runtime/seven-selected-extended-rebinds/prestige-varna/karento-best--src--lib--content.ts",
+      "candidateSha256": "203bece42a7e6d61a112679cc9bf9ccdab47fb6cc99c9550b4d68722b351b854",
+      "candidateBlob": "86453693579d3b355182648ac90bb6bdcffc6b64",
+      "bytes": 5687,
+      "onlyReviewedLogoLiteralsChanged": true,
+      "replacements": {
+        "onLight": 2,
+        "onDark": 2,
+        "faviconToSelectedAppIcon": 1
+      }
+    },
+    {
+      "path": "karento-best/src/lib/data/dealer-detail.ts",
+      "baseBlob": "3e15930d8aab26b323d274b9371053394a52cb1b",
+      "baseSha256": "7b07a5d3c935afe85bfa6fa8c7afd98b7c2063d2bd38b1232d0b69c2a06ab7f7",
+      "candidateFile": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/native13-modern-runtime/seven-selected-extended-rebinds/prestige-varna/karento-best--src--lib--data--dealer-detail.ts",
+      "candidateSha256": "2ae8c91e510501ff5e26d8bb0531201a8582ddc647ff2e4c92c1eab9e6a89ed1",
+      "candidateBlob": "588d990cf74f9d7708b441f7386d75d166d47171",
+      "bytes": 19711,
+      "onlyReviewedLogoLiteralsChanged": true,
+      "replacements": {
+        "onLight": 7,
+        "onDark": 0,
+        "faviconToSelectedAppIcon": 0
+      }
+    },
+    {
+      "path": "karento-best/src/lib/data/vehicle-detail.ts",
+      "baseBlob": "e2010009c144e976f9cf914ab92ab6a41e0d82d6",
+      "baseSha256": "f8eb04a0cde449b8045d24b9a38ec2477349c845e63f987fca0a3249a7405d49",
+      "candidateFile": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/native13-modern-runtime/seven-selected-extended-rebinds/prestige-varna/karento-best--src--lib--data--vehicle-detail.ts",
+      "candidateSha256": "8043ed18900ebe15059ea230de85930f1cf78570e986010b450a473a98947e2d",
+      "candidateBlob": "fdee46d225c430473f2df387b5d2f5823209d0f4",
+      "bytes": 11075,
+      "onlyReviewedLogoLiteralsChanged": true,
+      "replacements": {
+        "onLight": 1,
+        "onDark": 0,
+        "faviconToSelectedAppIcon": 0
+      }
+    },
+    {
+      "path": ".cars-branding.json",
+      "baseBlob": "a2c49f6fe1a3888907363547195bbce9ee332307",
+      "baseSha256": "f9e7dfe4a25f77294b0c8720d1f7e267b5fdf89677d0ed9d69c199c971cfd86a",
+      "candidateFile": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/native13-modern-runtime/seven-selected-extended-rebinds/prestige-varna/cars-branding.json",
+      "candidateSha256": "a5fab4ab67b0a5bc95e71e1a3d7ca8523d848d280b54e37b9f9d4282dbed6a27",
+      "candidateBlob": "d4d30504ebbad1fe7746cbb2842f4b5b2281c86e",
+      "bytes": 46071,
+      "onlyConsumerReferencesAdded": true,
+      "addedConsumerReferences": [
+        {
+          "path": "karento-best/src/lib/content.ts",
+          "urls": [
+            "/dealer-brand/v2-b8b42a5a9931c7cb/logo-on-light.webp",
+            "/dealer-brand/v2-b8b42a5a9931c7cb/logo-on-dark.webp",
+            "/dealer-brand/v2-b8b42a5a9931c7cb/app-icon.png"
+          ]
+        },
+        {
+          "path": "karento-best/src/lib/data/dealer-detail.ts",
+          "urls": [
+            "/dealer-brand/v2-b8b42a5a9931c7cb/logo-on-light.webp"
+          ]
+        },
+        {
+          "path": "karento-best/src/lib/data/vehicle-detail.ts",
+          "urls": [
+            "/dealer-brand/v2-b8b42a5a9931c7cb/logo-on-light.webp"
+          ]
+        },
+        {
+          "path": "mobile/src/lib/dealers.ts",
+          "urls": [
+            "/dealer-brand/v2-b8b42a5a9931c7cb/logo-on-light.webp"
+          ]
+        },
+        {
+          "path": "mobile/src/lib/showroom-config.ts",
+          "urls": [
+            "/dealer-brand/v2-b8b42a5a9931c7cb/logo-on-light.webp"
+          ]
+        }
+      ]
+    }
+  ],
+  "extendedReceiptReseals": [
+    {
+      "path": ".cars-mobile.json",
+      "family": "mobile",
+      "beforeBlob": "5c5317d27cc8c7bb53b81924b1533f3a4a103385",
+      "afterBlob": "6da2d6aec9018c45064231876c55bff4b77fb89d",
+      "sourceDigest": "c831935d98833a06997dd6cef68c90c89fde61e381f5d22bdee24a698457a993",
+      "profileSha256Preserved": "d584a06ead383d6c80a02063c42a7ae7ca3d7457849c0d88d33fa4388c5f7994"
+    },
+    {
+      "path": ".cars-signature.json",
+      "family": "karento-best",
+      "beforeBlob": "54c78972542ea9523902cf87c19ac911f2b2ca89",
+      "afterBlob": "bf1bb0f4dd7500925ebacbadf475bd0abf40d633",
+      "sourceDigest": "1c4ed8dc24a914c96276eb39450e43748773391b435b76da5d6da68c83d929d7",
+      "profileSha256Preserved": "d584a06ead383d6c80a02063c42a7ae7ca3d7457849c0d88d33fa4388c5f7994"
+    }
+  ],
+  "maintainedChecks": {
+    "nativeQualification": "PASS",
+    "app": "PASS",
+    "extended": "PASS",
+    "branding": "PASS",
+    "sourcePatch": "PASS"
+  },
+  "reviewed": true,
+  "ready": true,
+  "published": false,
+  "compiled": false,
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "globalReleaseApproval": false,
+  "createdAt": "2026-10-15T09:35:03.254Z"
+}

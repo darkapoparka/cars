@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-public-stock-research-not-production-input",
+  "dealer": "porsche-varna",
+  "observedAt": "2026-10-12T10:44:19.496Z",
+  "sourceUrl": "https://porschevarna.mobile.bg/",
+  "profileAdvertCount": 7,
+  "profileCountIsAvailability": false,
+  "sampledAdvertUrls": [
+    "https://porschevarna.mobile.bg/obiava-11790354686274560-audi-a5",
+    "https://porschevarna.mobile.bg/obiava-11790324799720879-audi-rs6-4-0-biturbo-quattro",
+    "https://porschevarna.mobile.bg/obiava-21790324193082970-audi-sq5-3-0-tfsi-quattro",
+    "https://porschevarna.mobile.bg/obiava-21786731083596332-audi-q7",
+    "https://porschevarna.mobile.bg/obiava-21781290422017063-audi-q3"
+  ],
+  "rawPriceLabels": [
+    "56 980 €",
+    "99 899 €",
+    "69 999 €",
+    "80 000 €",
+    "54 500 €"
+  ],
+  "retainedFirstAdvertExcerpt": "1 - 7 от общо 7 обяви на \"Porsche Varna\" - Автомобили и Джипове Audi A5 56 980 € Цената е с включено ДДС обл. Варна, гр. Варна юли 2026 г. 3 000 км Дизелов 204 к.с. Автоматична Седан Особености - 4x4 Повече детайли и 16 снимки Добави в бележника Маркирай обявата Audi Rs6 4.0 biturbo Quattro 99 899 € Не се начислява ДДС обл. Варна, гр. Варна юли 2021 г. 58 000 км Тъмно сив Бензинов 600 к.с. Евро 6 4000 куб.см Автоматична Комби Клиентски автомобил. Пълна сервизна история. Префектно техническо състояние. Възможност за лизинг",
+  "partsIgnored": null,
+  "availabilityConfirmed": false,
+  "mediaReusePermission": "unknown",
+  "sourcePhotosFetched": false,
+  "selectedCreationStockMode": "illustrative-not-dealer-stock",
+  "nextInput": "Use approved template illustrative vehicle assets with same honest demo disclosure across all six. Do not republish these dealer advert photos or claim these prices/availability in demo inventory.",
+  "productionStockReady": false
+}

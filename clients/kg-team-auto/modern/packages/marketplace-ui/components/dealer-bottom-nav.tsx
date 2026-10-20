@@ -45,16 +45,17 @@ import { getLocalizedPublicPath } from "../lib/public-path";
 import { DealerBottomNavIcon } from "./dealer-bottom-nav-icon";
 import { DealerMobileBrandBar } from "./dealer-mobile-brand-bar";
 import { DealerSocialLinks } from "./dealer-social-links";
+import { LanguageFlag } from "./language-flag";
 import { useLocalePreferences } from "./locale-preferences";
 import type { MarketplaceMode } from "./marketplace-masthead";
 import { mobileMarketplaceDrawerIconActionClassName } from "./mobile-marketplace-drawer";
 
 const getDealerNavigationItemClassName = (active: boolean) =>
   cn(
-    "relative flex min-h-13 min-w-0 touch-manipulation flex-col items-center justify-center gap-0.5 px-0.5 text-meta transition-[background-color,color,transform] duration-150 focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-[-2px] active:scale-[0.97]",
+    "relative flex min-h-13 min-w-0 touch-manipulation flex-col items-center justify-center gap-0 px-0.5 text-[11px] leading-[13px] transition-[background-color,color,transform] duration-150 focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-[-2px] active:scale-[0.97]",
     active
-      ? "font-semibold text-brand-text"
-      : "font-medium text-zinc-600 hover:bg-zinc-50 hover:text-zinc-950 active:bg-zinc-100"
+      ? "font-medium text-brand-text"
+      : "font-normal text-zinc-600 hover:bg-zinc-50 hover:text-zinc-950 active:bg-zinc-100"
   );
 
 const getLocaleSettingsHref = (locale?: string, returnTo?: string) =>
@@ -63,6 +64,32 @@ const getLocaleSettingsHref = (locale?: string, returnTo?: string) =>
       returnTo ?? getLocalizedPublicPath(locale, "/cars")
     )}`
   );
+
+const getSecondaryMenuItems = (locale?: string) => {
+  const isBg = locale?.startsWith("bg");
+  return [
+    {
+      href: getLocalizedPublicPath(locale, "/services"),
+      icon: Building2,
+      label: isBg ? "Всички услуги" : "All services",
+    },
+    {
+      href: getLocalizedPublicPath(locale, "/cars"),
+      icon: CarFront,
+      label: isBg ? "Всички автомобили" : "All vehicles",
+    },
+    {
+      href: getLocalizedPublicPath(locale, "/guides"),
+      icon: BookOpenText,
+      label: isBg ? "Съвети за покупка" : "Buying guides",
+    },
+    {
+      href: getLocalizedPublicPath(locale, "/contact"),
+      icon: Building2,
+      label: isBg ? "За нас и контакти" : "About and contact",
+    },
+  ];
+};
 
 export const DealerBottomNav = ({
   activeMode,
@@ -116,23 +143,7 @@ export const DealerBottomNav = ({
     isPublicSitePathEnabled(item.href, publicSite)
   );
   const menuLabel = isBg ? "Меню" : "Menu";
-  const secondaryMenuItems = [
-    {
-      href: getLocalizedPublicPath(locale, "/cars"),
-      icon: CarFront,
-      label: isBg ? "Всички автомобили" : "All vehicles",
-    },
-    {
-      href: getLocalizedPublicPath(locale, "/guides"),
-      icon: BookOpenText,
-      label: isBg ? "Съвети за покупка" : "Buying guides",
-    },
-    {
-      href: getLocalizedPublicPath(locale, "/contact"),
-      icon: Building2,
-      label: isBg ? "За нас и контакти" : "About and contact",
-    },
-  ];
+  const secondaryMenuItems = getSecondaryMenuItems(locale);
 
   return (
     <>
@@ -241,7 +252,7 @@ export const DealerBottomNav = ({
             >
               <a
                 aria-label={`${isBg ? "Обадете се на" : "Call"} ${leadSite.phoneDisplay}`}
-                className="flex min-h-12 min-w-0 items-center justify-center gap-1.5 rounded-xl bg-zinc-950 px-2 py-3 text-white transition-colors hover:bg-zinc-800 focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2 active:bg-zinc-800"
+                className="flex min-h-12 min-w-0 items-center justify-center gap-1.5 rounded-xl bg-primary px-2 py-3 text-primary-foreground transition-colors hover:bg-[var(--primary-hover)] hover:text-[var(--primary-hover-foreground)] focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2 active:bg-[var(--primary-active)] active:text-[var(--primary-active-foreground)]"
                 href={withBasePath(leadSite.phoneHref)}
                 onClick={() => setMenuOpen(false)}
               >
@@ -260,7 +271,7 @@ export const DealerBottomNav = ({
                     ? `Отворете картата: ${getLeadCopy(locale).address}`
                     : "Open showroom map"
                 }
-                className="flex min-h-12 min-w-0 items-center justify-center gap-1.5 rounded-xl bg-zinc-950 px-2 py-3 text-white transition-colors hover:bg-zinc-800 focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2 active:bg-zinc-800"
+                className="flex min-h-12 min-w-0 items-center justify-center gap-1.5 rounded-xl bg-primary px-2 py-3 text-primary-foreground transition-colors hover:bg-[var(--primary-hover)] hover:text-[var(--primary-hover-foreground)] focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2 active:bg-[var(--primary-active)] active:text-[var(--primary-active-foreground)]"
                 href={withBasePath(leadSite.mapsUrl)}
                 onClick={() => setMenuOpen(false)}
                 rel="noreferrer"
@@ -313,7 +324,7 @@ export const DealerBottomNav = ({
                 })}
             </nav>
             <a
-              className="mt-4 flex min-h-11 items-center rounded-xl border px-4 font-medium"
+              className="mt-4 flex min-h-11 items-center gap-2 rounded-xl border px-4 font-medium"
               data-locale-trigger
               href={localeSettingsHref}
               onClick={(event) => {
@@ -330,6 +341,7 @@ export const DealerBottomNav = ({
                 }
               }}
             >
+              <LanguageFlag locale={isBg ? "bg" : "en"} />
               {isBg ? "Държава и език" : "Country and language"}
             </a>
             <DealerSocialLinks isBg={isBg} links={leadSite.socialLinks} />

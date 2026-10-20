@@ -1,0 +1,25 @@
+{
+	"cropOnly": true,
+	"sourceViewport": {
+		"width": 1440,
+		"height": 1000
+	},
+	"mobile": [
+		{
+			"width": 320,
+			"screenshotWidth": 320,
+			"screenshotHeight": 844,
+			"meanChannelDifference": 0.03561167061611374,
+			"changedChannels": 11761,
+			"maxChannelDifference": 22
+		},
+		{
+			"width": 390,
+			"screenshotWidth": 390,
+			"screenshotHeight": 844,
+			"meanChannelDifference": 0.03027706890266132,
+			"changedChannels": 14522,
+			"maxChannelDifference": 20
+		}
+	]
+}

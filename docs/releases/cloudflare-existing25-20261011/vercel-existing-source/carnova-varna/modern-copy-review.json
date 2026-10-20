@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-reviewed-modern-bilingual-copy-input",
+  "dealer": "carnova-varna",
+  "sourceCommit": "d9594c2979f668831b78609e4e990640259aee81",
+  "baselineTree": "530b1e522c41fb7307c11f1fde5a32cc1c30e659",
+  "inputSha256": "093f15d28eeb59ebdd9e5e855439103858cdb7f326cf17df8f1f3078505c55ae",
+  "modernInputRowsSha256": "64f043bbc4bd411aad5f3442f878442e193250c7d4e94746198270e8b28e4765",
+  "listingCount": 2,
+  "profileInputs": [
+    {
+      "path": "dealer.json",
+      "gitBlob": "6fb94d52a13fcd9f1a8c141f3137dc969d327b55",
+      "sha256": "234aafa259dec070318a592780ae2ffaa51e563e0e0fe38276f467ac9f86bec4",
+      "bytes": 4311
+    },
+    {
+      "path": "business-facts.json",
+      "gitBlob": "257554f80c2ed36f00dfdd47ff3e05ee3501c9be",
+      "sha256": "871c45a51f66688cc7f6c8b5b3181a60a71bd7e26d7f17cb1ba4ac718bf087e7",
+      "bytes": 5686
+    },
+    {
+      "path": "stock.json",
+      "gitBlob": "c4f738e30b2787f111581780df6e9d4ee5858d24",
+      "sha256": "ff116dd0726250cd5569bfa65f8a58036692621981ef739bc7f47b2c2f588e8c",
+      "bytes": 4248
+    }
+  ],
+  "reviewedGeneratorHelper": {
+    "path": "scripts/lib/modern-dealer-inventory-copy.mjs",
+    "sha256": "cbdbaa28dc07911cfe913b4e627671b6556fc25d3bfe59364e29c5ca5a29072b",
+    "sourceCommit": "14d86f67c160699c18a6ec5658197cc4d9011e0b"
+  },
+  "review": {
+    "displayCopyOnly": true,
+    "exactSourceDescriptionKeys": true,
+    "listingFactsUnchanged": true,
+    "imageUrlsUnchanged": true,
+    "imageAltsPreserved": true,
+    "interpolationTokensUnchanged": true,
+    "reviewedBy": "Codex, authorized final-template rollout",
+    "reviewedAt": "2026-10-14T20:04:09.149Z",
+    "notes": "Reuse exact existing native or reviewed registered companions for every actual current row; no new translation/factual source edits."
+  },
+  "reviewedCopy": {
+    "carnova-varna-11789992722402350": {
+      "sourceDescription": "Toyota Corolla 1.8 Hybrid TS от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+      "en": {
+        "description": "Toyota Corolla 1.8 Hybrid TS from a dated public advert. Confirm condition, price and availability directly with the dealership.",
+        "imageAlts": [
+          "Toyota Corolla 1.8 Hybrid TS",
+          "Toyota Corolla 1.8 Hybrid TS"
+        ]
+      },
+      "bg": {
+        "description": "Toyota Corolla 1.8 Hybrid TS от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+        "imageAlts": [
+          "Toyota Corolla 1.8 Hybrid TS",
+          "Toyota Corolla 1.8 Hybrid TS"
+        ]
+      }
+    },
+    "carnova-varna-11780304679998646": {
+      "sourceDescription": "VW Golf 1.5 eTSI DSG Life от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+      "en": {
+        "description": "VW Golf 1.5 eTSI DSG Life from a dated public advert. Confirm condition, price and availability directly with the dealership.",
+        "imageAlts": [
+          "VW Golf 1.5 eTSI DSG Life",
+          "VW Golf 1.5 eTSI DSG Life"
+        ]
+      },
+      "bg": {
+        "description": "VW Golf 1.5 eTSI DSG Life от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+        "imageAlts": [
+          "VW Golf 1.5 eTSI DSG Life",
+          "VW Golf 1.5 eTSI DSG Life"
+        ]
+      }
+    }
+  }
+}

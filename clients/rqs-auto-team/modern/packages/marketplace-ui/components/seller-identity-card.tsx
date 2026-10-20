@@ -1,5 +1,7 @@
 import { Button } from "@repo/design-system/components/ui/button";
+import { withBasePath } from "@repo/internationalization/paths";
 import { leadSite, type VehicleListing } from "@repo/marketplace";
+import { getLeadCopy } from "@repo/marketplace/lead-copy";
 import {
   ArrowUpRight,
   Boxes,
@@ -11,7 +13,6 @@ import {
   Store,
   UserRound,
 } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 import {
   formatTruthDateTime,
@@ -32,6 +33,8 @@ import {
   getSellerPanelCopy,
   getSellerPanelDisplayName,
 } from "../lib/seller-contact-policy";
+import { DealerDesktopLogo } from "./dealer-desktop-logo";
+import Image from "./public-image";
 
 const sellerRoleIcons = {
   dealer: Store,
@@ -56,24 +59,20 @@ export const LeadSiteListingIdentityCard = ({
       className="rounded-xl border border-border bg-card p-5"
       data-slot="listing-dealership-card"
     >
-      <Image
-        alt={leadSite.name}
-        className="h-12 w-auto max-w-full object-contain object-left"
-        height={48}
-        src={leadSite.logoPath}
-        width={220}
-      />
+      <DealerDesktopLogo className="h-12 w-auto max-w-full object-contain object-left" />
 
       <a
         className="group mt-4 flex items-center justify-between gap-4 rounded-xl bg-control px-4 py-3 transition-colors hover:bg-control-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--lead-site-accent)]"
-        href={leadSite.mapsUrl}
+        href={withBasePath(leadSite.mapsUrl)}
         rel="noreferrer"
         target="_blank"
       >
         <span className="min-w-0 flex-1">
-          <span className="block font-semibold text-sm">{leadSite.city}</span>
-          <span className="mt-0.5 block text-muted-foreground text-xs leading-4">
-            {leadSite.address}, {leadSite.country}
+          <span className="block font-semibold text-compact-control">
+            {getLeadCopy(locale).city}
+          </span>
+          <span className="mt-0.5 block text-meta text-muted-foreground">
+            {getLeadCopy(locale).address}, {getLeadCopy(locale).country}
           </span>
         </span>
         <ArrowUpRight
@@ -82,7 +81,10 @@ export const LeadSiteListingIdentityCard = ({
         />
       </a>
 
-      <dl className="mt-4 divide-y divide-border rounded-lg bg-control px-3 text-meta">
+      <dl
+        className="mt-4 divide-y divide-border rounded-lg bg-control px-3 text-meta"
+        data-slot="listing-reference-details"
+      >
         <div className="grid grid-cols-[7rem_minmax(0,1fr)] gap-3 py-3">
           <dt className="text-muted-foreground">
             {isBg ? "Реф. номер" : "Reference"}
@@ -99,15 +101,16 @@ export const LeadSiteListingIdentityCard = ({
         </div>
       </dl>
 
-      <div className="mt-4 h-48 overflow-hidden rounded-lg bg-control">
-        <iframe
-          className="block h-full w-full border-0"
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-          src={leadSite.mapsEmbedUrl}
-          title={isBg ? "Карта на шоурума" : "Showroom map"}
-        />
-      </div>
+      <a
+        className="mt-4 flex items-center justify-between gap-3 rounded-lg bg-control px-4 py-3 font-medium text-meta hover:bg-control-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+        data-slot="listing-showroom-directions"
+        href={withBasePath(leadSite.mapsUrl)}
+        rel="noreferrer"
+        target="_blank"
+      >
+        {isBg ? "Как да ни намерите" : "Get directions"}
+        <ArrowUpRight aria-hidden className="size-4 shrink-0" />
+      </a>
     </section>
   );
 };
@@ -148,7 +151,7 @@ export const SellerIdentityCard = ({
       className="rounded-xl border border-border bg-card p-5"
       data-slot="listing-seller-card"
     >
-      <p className="font-medium text-foreground/70 text-sm">{copy.seller}</p>
+      <p className="font-medium text-foreground/70 text-meta">{copy.seller}</p>
       <div className="mt-2 flex items-center gap-3">
         {listing.seller.logoUrl ? (
           <Image
@@ -160,7 +163,7 @@ export const SellerIdentityCard = ({
             width={44}
           />
         ) : null}
-        <h2 className="min-w-0 font-semibold text-lg">
+        <h2 className="min-w-0 font-semibold text-card-title-lg tracking-heading">
           {sellerProfileHref ? (
             <Link
               aria-label={`${copy.viewSellerProfile}: ${sellerDisplayName}`}
@@ -177,7 +180,7 @@ export const SellerIdentityCard = ({
       </div>
       <div className="mt-2 flex flex-wrap items-center gap-2">
         <p
-          className="flex h-8 w-fit items-center gap-1.5 rounded-md bg-control-hover px-2.5 font-semibold text-sm"
+          className="flex h-8 w-fit items-center gap-1.5 rounded-md bg-control-hover px-2.5 font-semibold text-foreground text-meta"
           data-slot="seller-type"
         >
           <SellerRoleIcon aria-hidden="true" className="size-4" />
@@ -185,7 +188,7 @@ export const SellerIdentityCard = ({
         </p>
         {verificationLabel ? (
           <p
-            className="flex h-8 w-fit items-center gap-1.5 rounded-md bg-success-surface px-2.5 font-semibold text-sm text-success-foreground"
+            className="flex h-8 w-fit items-center gap-1.5 rounded-md bg-success-surface px-2.5 font-semibold text-meta text-success-foreground"
             data-slot="seller-verification"
           >
             <ShieldCheck aria-hidden="true" className="size-4" />
@@ -193,7 +196,7 @@ export const SellerIdentityCard = ({
           </p>
         ) : null}
       </div>
-      <p className="mt-3 flex items-center gap-1.5 text-muted-foreground text-sm">
+      <p className="mt-3 flex items-center gap-1.5 text-meta text-muted-foreground">
         <MapPin aria-hidden="true" className="size-4 shrink-0" />
         {copy.basedIn}{" "}
         {getLocalizedMarketplaceCityName(listing.seller.city, locale)}

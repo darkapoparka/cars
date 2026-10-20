@@ -23,13 +23,17 @@ export const dealerLocalizedText = {
     "city": "Varna",
     "addressLine": "GP4, turnoff for Topoli village",
     "address": "GP4, turnoff for Topoli village, Varna",
-    "appointment": "Call ahead to confirm opening hours."
+    "appointment": "Call ahead to confirm opening hours.",
+    "addressShort": "GP4, turnoff for Topoli village",
+    "appointmentShort": "Call ahead to confirm opening hours."
   },
   "bg": {
     "city": "Варна",
     "addressLine": "ГП4, разклон за с. Тополи",
     "address": "ГП4, разклон за с. Тополи",
-    "appointment": "За работно време се обадете предварително."
+    "appointment": "За работно време се обадете предварително.",
+    "addressShort": "ГП4, разклон за с. Тополи",
+    "appointmentShort": "За работно време се обадете предварително."
   }
 } as const;
 

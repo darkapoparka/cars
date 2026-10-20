@@ -1,0 +1,62 @@
+{
+  "created": "2026-10-02T00:58:02.330Z",
+  "source": "L:/CODEX/cars/templates/import",
+  "candidate": "C:/Users/radev/AppData/Local/Temp/cars-import-desktop-polish-20261001-01a0f65e/discovery-box-final",
+  "baseHead": "e4fe6aaa56a4d5e44aebb7076c537df4bfa2ba9d",
+  "workingSourceDigest": "76e420d0e6ab6e9ad2faa6491e47524568876756eee8f94579c32dc421b2cde3",
+  "files": [
+    {
+      "path": "src/lib/components/common/HeroCars.svelte",
+      "bytes": 2127,
+      "sha256": "1b630941a0a0e4a45aec3c11c8c04c67f3ac5afc7984440b34fe1eaa98229002",
+      "matchesCheckedCandidate": true
+    },
+    {
+      "path": "src/lib/components/common/DesktopSearchControl.svelte",
+      "bytes": 2938,
+      "sha256": "a75c7be08034cb73e0b4023716bdc66b66f8dad21b751d272dc5e36ebefe96ff",
+      "matchesCheckedCandidate": true
+    },
+    {
+      "path": "src/lib/components/inventory/InventoryToolbar.svelte",
+      "bytes": 4383,
+      "sha256": "e462aef3878e3390a66f8753e21381114547af599acec1b8c564c607cfcc0c39",
+      "matchesCheckedCandidate": true
+    },
+    {
+      "path": "src/lib/content/desktop-hero-artwork.ts",
+      "bytes": 469,
+      "sha256": "de2044155cca84c49b77b2ad5879661b7ef944a874c840eac790f41a24c0dd35",
+      "matchesCheckedCandidate": true
+    },
+    {
+      "path": "static/assets/daynight/banners/hero-car-left-profile-v1.webp",
+      "bytes": 84112,
+      "sha256": "18a3a6d3a1cf1153455add77153db987ed6a7240d99787be00981c8f995d1f6a",
+      "matchesCheckedCandidate": true
+    },
+    {
+      "path": "static/assets/daynight/banners/hero-car-right-profile-v1.webp",
+      "bytes": 65210,
+      "sha256": "1c7f0d9728f03a7f7fe07d78ef8f5019bcde844fed9c21e07ca4bb38b929d027",
+      "matchesCheckedCandidate": true
+    },
+    {
+      "path": "docs/assets/DESKTOP-HERO-CARS.md",
+      "bytes": 4787,
+      "sha256": "e12aa5659226d17fb29fd2db9862057f94840d0e93aee2535e2b9d6f1ae18aa5",
+      "matchesCheckedCandidate": true
+    },
+    {
+      "path": "docs/ARCHITECTURE.md",
+      "bytes": 10010,
+      "sha256": "b5f49ef74dc89818f4d94899b075de5ebe90ab457d040baf3260cd60e100377a",
+      "matchesCheckedCandidate": true
+    }
+  ],
+  "finalDelta": {
+    "path": "src/lib/components/inventory/InventoryToolbar.svelte",
+    "change": "Remove narrow desktop edge alignment and prevent unselected filter labels shrinking; active summaries retain ellipsis.",
+    "typeCheck": "Earlier whole-source check passed; final delta changes CSS declarations only. Build and scoped style checks repeated."
+  }
+}

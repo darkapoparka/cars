@@ -4,15 +4,16 @@
   "name": "Square One Motors",
   "shortName": "Square One Motors",
   "logo": {
-    "light": "/dealer-brand/logo-on-light-20261011.webp",
-    "dark": "/dealer-brand/logo-on-dark-20261011.webp",
-    "icon": "/dealer-app/icon.png"
+    "light": "/dealer-brand/v2-430f237b2ede396d/logo-on-light.webp",
+    "dark": "/dealer-brand/v2-430f237b2ede396d/logo-on-dark.webp",
+    "icon": "/dealer-brand/v2-430f237b2ede396d/app-icon.png"
   },
   "defaultLocale": "en",
   "enabledLocales": [
     "en",
     "bg"
   ],
+  "welcomeEnabled": true,
   "country": "GB",
   "currency": "GBP",
   "city": "Birmingham",
@@ -23,6 +24,25 @@
   "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Square%20One%20Motors%2C%20Tameside%20Way%2C%20Birmingham%20B42%202UB",
   "website": "",
   "whatsappUrl": "",
+  "socialLinks": [
+    {
+      "label": "Facebook",
+      "url": ""
+    },
+    {
+      "label": "Instagram",
+      "url": ""
+    },
+    {
+      "label": "Mobile.bg",
+      "url": ""
+    },
+    {
+      "label": "Cars.bg",
+      "url": ""
+    }
+  ],
+  "referenceClaimsApproved": false,
   "services": [],
   "observedAt": "2026-10-10",
   "inventoryNotice": "Vehicle images are generated illustrations, not photographs of the advertised vehicles. Listing details were observed on 10 October 2026; confirm each original advert, price, condition and availability with the dealership.",

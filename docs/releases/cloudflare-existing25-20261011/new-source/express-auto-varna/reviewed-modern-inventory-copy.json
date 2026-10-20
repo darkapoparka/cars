@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "dealer": "express-auto-varna",
+  "copy": {
+    "express-auto-varna-11791655661973701": {
+      "sourceDescription": "Nissan Note 1.4 от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+      "en": {
+        "description": "Nissan Note 1.4 from a dated public advert. Confirm condition, price and availability directly with the dealership.",
+        "imageAlts": [
+          "Nissan Note 1.4 — dated public advert photo 1",
+          "Nissan Note 1.4 — dated public advert photo 2"
+        ]
+      },
+      "bg": {
+        "description": "Nissan Note 1.4 от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+        "imageAlts": [
+          "Nissan Note 1.4 — снимка от датирана публична обява 1",
+          "Nissan Note 1.4 — снимка от датирана публична обява 2"
+        ]
+      }
+    },
+    "express-auto-varna-11791655386104961": {
+      "sourceDescription": "Hyundai Ioniq Plug-in Hybrid от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+      "en": {
+        "description": "Hyundai Ioniq Plug-in Hybrid from a dated public advert. Confirm condition, price and availability directly with the dealership.",
+        "imageAlts": [
+          "Hyundai Ioniq Plug-in Hybrid — dated public advert photo 1",
+          "Hyundai Ioniq Plug-in Hybrid — dated public advert photo 2"
+        ]
+      },
+      "bg": {
+        "description": "Hyundai Ioniq Plug-in Hybrid от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+        "imageAlts": [
+          "Hyundai Ioniq Plug-in Hybrid — снимка от датирана публична обява 1",
+          "Hyundai Ioniq Plug-in Hybrid — снимка от датирана публична обява 2"
+        ]
+      }
+    }
+  },
+  "consumer": "facts.business.modernInventoryCopy",
+  "donorCopyRetained": false
+}

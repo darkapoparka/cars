@@ -50,34 +50,34 @@ const pageCopy = {
     detailsPlaceholder:
       "Състояние, сервизна история, екстри или нещо важно за автомобила.",
     description:
-      "Дайте ни основните данни за автомобила. Екипът ни ще се свърже с вас за оглед и конкретна оферта.",
-    faqTitle: "Как протича оценката",
+      "Подгответе данни и попитайте автокъщата дали разглежда предложения за автомобил. Демото не изпраща заявка.",
+    faqTitle: "Какво да уточните",
     faqs: [
       {
         answer:
-          "Не. Можете да предложите автомобила за директно изкупуване, без да купувате друг.",
-        question: "Задължителен ли е бартерът?",
+          "Публичните данни не потвърждават изкупуване или бартер. Попитайте автокъщата дали разглежда такива предложения.",
+        question: "Предлагате ли изкупуване или бартер?",
       },
       {
         answer:
-          "Марка, модел, година и пробег са достатъчни за първоначалния разговор. Подгответе и телефон за връзка.",
+          "Марка, модел, година, пробег и състояние са отправна точка за разговор. Не изпращайте лични документи през демото.",
         question: "Какви данни са необходими?",
       },
       {
-        answer: `Финалната оценка се прави след оглед на място в шоурума ни в ${leadSite.district.bg}, Bredbury, Stockport.`,
-        question: "Може ли оценка само по снимки?",
+        answer: "Снимките помагат за разговор, но не представляват оценка. Потвърдете следващите стъпки директно.",
+        question: "Какво показват снимките?",
       },
       {
         answer:
-          "Регистрационните документи, сервизната история и информацията за ремонти помагат за по-бърза оценка.",
-        question: "Какво да подготвя за огледа?",
+          "Ако автокъщата разглежда предложението, уточнете дали е нужен оглед и къде. Не е потвърдена услуга за оценка.",
+        question: "Нужен ли е оглед?",
       },
     ],
     formDescription:
-      "Без регистрация. Започнете с основните данни, а ние ще уточним следващата стъпка.",
+      "Формата подготвя данни за контакт. Тя не изпраща заявка, не оценява и не приема автомобил.",
     desktopFormDescription:
-      "Посочете марка, модел, година и пробег. Добавете екстри и бележки, ако желаете.",
-    formLabel: "Заявете оценка на автомобил",
+      "Въведете данни за контактната стъпка. Демото не изпраща заявка и не извършва оценка.",
+    formLabel: "Подгответе данни за автомобил",
     makeLabel: "Марка",
     mileageLabel: "Пробег",
     mileagePlaceholder: "62 000 mi",
@@ -86,7 +86,7 @@ const pageCopy = {
     primaryAction: "Продължи",
     changeVehicle: "Променете автомобила",
     selectedVehicleLabel: "Избран автомобил",
-    title: "Продайте ни автомобила си",
+    title: "Вашият автомобил",
     yearLabel: "Година",
     yearPlaceholder: "2022",
   },
@@ -98,34 +98,34 @@ const pageCopy = {
     detailsPlaceholder:
       "Condition, service history, extras, or anything important about the vehicle.",
     description:
-      "Give us the essentials about your vehicle. Our team will contact you to arrange an inspection and a concrete offer.",
-    faqTitle: "How the appraisal works",
+      "Prepare vehicle details and ask whether the dealership considers vehicle offers. This demo does not submit a request.",
+    faqTitle: "What to confirm",
     faqs: [
       {
         answer:
-          "No. You can offer the vehicle for direct purchase without buying another car.",
-        question: "Is a trade-in required?",
+          "Public information does not confirm purchase or trade-in services. Ask whether the dealership considers such offers.",
+        question: "Do you consider purchase or trade-in?",
       },
       {
         answer:
-          "Make, model, year, and mileage are enough for the initial conversation. Please also leave a phone number.",
+          "Make, model, year, mileage and condition are a starting point for a conversation. Do not submit personal documents through this demo.",
         question: "What information do you need?",
       },
       {
-        answer: `The final appraisal follows an in-person inspection at our showroom in ${leadSite.district.en}, Bredbury, Stockport.`,
-        question: "Can you appraise it from photos only?",
+        answer: "Photos can help a conversation but are not an appraisal. Confirm the next steps directly.",
+        question: "What do photos show?",
       },
       {
         answer:
-          "Registration documents, service history, and repair information help us appraise the car faster.",
-        question: "What should I prepare?",
+          "If the dealership considers the offer, confirm whether an inspection is needed and where. An appraisal service is unconfirmed.",
+        question: "Is an inspection needed?",
       },
     ],
     formDescription:
-      "No account required. Start with the essentials and we will agree the next step with you.",
+      "The form prepares details for the contact step. It does not submit a request, appraise or accept a vehicle.",
     desktopFormDescription:
-      "Enter the make, model, year and mileage. Add extras and notes if you wish.",
-    formLabel: "Request a vehicle appraisal",
+      "Enter details for the contact step. This demo does not submit a request or perform an appraisal.",
+    formLabel: "Prepare vehicle details",
     makeLabel: "Make",
     mileageLabel: "Mileage",
     mileagePlaceholder: "62,000 mi",
@@ -134,7 +134,7 @@ const pageCopy = {
     primaryAction: "Continue",
     changeVehicle: "Change vehicle",
     selectedVehicleLabel: "Selected vehicle",
-    title: "Sell us your vehicle",
+    title: "Your vehicle",
     yearLabel: "Year",
     yearPlaceholder: "2022",
   },
@@ -160,11 +160,11 @@ export const generateMetadata = async ({
   return createPublicLocalizedMetadata({
     baseUrl: getPublicWebBaseUrl(),
     description: isBg
-      ? `Предложете автомобила си за изкупуване или бартер на ${leadSite.name}.`
-      : `Offer your vehicle to ${leadSite.name} for purchase or trade-in.`,
+      ? `Подгответе данни и попитайте ${leadSite.name} дали разглежда предложения за автомобил. Демото не изпраща заявка.`
+      : `Prepare details and ask whether ${leadSite.name} considers vehicle offers. This demo does not submit a request.`,
     locale,
     path: "/sell",
-    title: isBg ? "Продайте ни автомобил" : "Sell us your vehicle",
+    title: isBg ? "Вашият автомобил" : "Your vehicle",
   });
 };
 

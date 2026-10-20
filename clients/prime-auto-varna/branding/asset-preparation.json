@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "dealer": "prime-auto-varna",
+  "createdAt": "2026-10-10T16:40:40.908Z",
+  "original": {
+    "width": 323,
+    "height": 160,
+    "sha256": "9aa45f4aee6ec7be2b1a99d2b2c63f6c10bbb9bc47be65d228c1c1fa0356bbe9"
+  },
+  "method": "Lossless raster format conversion of the published logo; no AI refresh or creative replacement.",
+  "icon": {
+    "input": "assets/brand/logo.png",
+    "png": "assets/app-icon.png",
+    "ico": "assets/favicon.ico",
+    "originalIdentityRetained": true
+  },
+  "finalLogoRefresh": "pending-surface-review",
+  "visualQa": false
+}

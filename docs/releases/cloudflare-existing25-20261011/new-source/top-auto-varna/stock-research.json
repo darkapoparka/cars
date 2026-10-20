@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-public-stock-research-not-production-input",
+  "dealer": "top-auto-varna",
+  "observedAt": "2026-10-12T10:44:19.793Z",
+  "sourceUrl": "https://topauto.mobile.bg/",
+  "profileAdvertCount": 11,
+  "profileCountIsAvailability": false,
+  "sampledAdvertUrls": [
+    "https://topauto.mobile.bg/obiava-11779368431750337-opel-corsa",
+    "https://topauto.mobile.bg/obiava-11778587607368478-citroen-c3",
+    "https://topauto.mobile.bg/obiava-11780644664000737-renault-clio",
+    "https://topauto.mobile.bg/obiava-11681822498903779-renault-kangoo-oblitsovka-za-tovaren-otseg",
+    "https://topauto.mobile.bg/obiava-11765890216110546-ford-fiesta-1-25-trend"
+  ],
+  "rawPriceLabels": [
+    "3 300 €",
+    "3 100 €",
+    "2 500 €",
+    "750 €",
+    "3 600 €"
+  ],
+  "retainedFirstAdvertExcerpt": "1 - 11 от общо 11 обяви на \"topauto\" - Автомобили и Джипове Opel Corsa 3 300 € Цената е с включено ДДС обл. Варна, гр. Варна юни 2024 г. 37 759 км Светло сив Бензинов 100 к.с. Евро 6 1200 куб.см Автоматична Хечбек Продавам Опел Корса, 2024 година. ударен / на части или за ремонт Колата е закупена чисто нова, от официалното представителство София Франс Ауто, и е обслужвана редовно. Модел - Опел Корса, 2024 година, 1. 2 бензин, автоматични скорости. Автомобилът е с регистрация и налични документи. Колата е катастрофирала и с видими външни",
+  "partsIgnored": null,
+  "availabilityConfirmed": false,
+  "mediaReusePermission": "unknown",
+  "sourcePhotosFetched": false,
+  "selectedCreationStockMode": "illustrative-not-dealer-stock",
+  "nextInput": "Use approved template illustrative vehicle assets with same honest demo disclosure across all six. Do not republish these dealer advert photos or claim these prices/availability in demo inventory.",
+  "productionStockReady": false
+}

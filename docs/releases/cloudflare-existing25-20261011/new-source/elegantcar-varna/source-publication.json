@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-source-publication",
+  "reviewed": true,
+  "reviewedAt": "2026-10-13T17:10:12.937Z",
+  "dealer": "elegantcar-varna",
+  "dealerId": "elegantcar-varna",
+  "repository": "darkapoparka/cars-elegantcar-varna",
+  "sourceOwnership": "cars-canonical",
+  "request": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/parallel-batch2-wave03-seven-request-20261013.json",
+    "sha256": "2f68125d3fc677b1b8910a39a6199750456dfb65e464118d5c59d6f7a4f46d44"
+  },
+  "proposal": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/elegantcar-varna/original-proposal-38428463020-1.json",
+    "sha256": "24646ada9161b5914b6c4741ebc96f8fbe014ccb96cef4a9cc6804fc13ca063a"
+  },
+  "preparation": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/elegantcar-varna/original-preparation-38428463020-1.json",
+    "sha256": "ed2beb8002095b73f5329145d00219ed9f08488a10ea187c36965a8b88d3d7bb"
+  },
+  "inputMapping": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/elegantcar-varna/original-inputMapping-38428463020-1.json",
+    "sha256": "e92998a81b8f262b399b7bd080f9eab0d4ab8063f186b15442b5acf46cfe4118"
+  },
+  "sourcePublication": {
+    "repository": "darkapoparka/cars",
+    "commit": "12736d9ff66d2e1b77be51429bb888b18b3278d5",
+    "sourceTree": "c7ef1f9838eb5359a8bfbbd077720fb5188e04f2",
+    "ref": "refs/heads/main",
+    "publishedAt": "2026-10-13T17:09:04.287Z",
+    "evidence": "https://github.com/darkapoparka/cars/commit/12736d9ff66d2e1b77be51429bb888b18b3278d5"
+  }
+}

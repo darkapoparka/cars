@@ -3,16 +3,22 @@ import fs from 'node:fs';
 import path from 'node:path';
 import assert from 'node:assert/strict';
 import { chromium } from 'playwright';
+const hostedQa = process.env.CARS_HOSTED_QA_PROFILE
+  ? await import('../../../scripts/lib/hosted-native-qa.mjs') : null;
 const base = new URL(process.env.DEALER_BASE_URL || process.env.BASE_URL);
 const out = process.env.LOCALE_QA_OUT || path.resolve('runtime/phase2/storage-' + Date.now());
+const hosted = hostedQa?.readHostedProfile('auto-best') ?? null;
+hostedQa?.validateHelperTarget(hosted, base, process.env.LOCALE_QA_MOUNT ?? '', out);
+const widths = process.env.LOCALE_QA_WIDTHS?.split(',').map(Number) ?? [390];
+assert(widths.length > 0 && new Set(widths).size === widths.length && widths.every(width => [320, 390, 1440].includes(width)), 'Unsupported storage QA widths');
 fs.mkdirSync(out, { recursive: true });
 const browser = await chromium.launch({ channel: 'chrome', headless: true });
 const results = [];
 const save = () => fs.writeFileSync(path.join(out, 'RESULTS.json'), JSON.stringify({ checkedAt: new Date().toISOString(), base: base.origin, scope: 'Storage-denied and cookie-rejection simulation, plus native no-JavaScript preference forms; all business writes blocked.', results }, null, 2));
 try {
-  for (const [design, mount] of Object.entries({ 'auto-best': process.env.LOCALE_QA_MOUNT ?? '' })) for (const locale of ['en', 'bg']) for (const mode of ['storage-unavailable', 'cookies-and-storage-unavailable', 'no-javascript']) {
-    const name = [design, locale, mode].join(' ');
-    const context = await browser.newContext({ javaScriptEnabled: mode !== 'no-javascript', locale: locale === 'bg' ? 'en-US' : 'bg-BG', viewport: { width: 390, height: 844 } });
+  for (const [design, mount] of Object.entries({ 'auto-best': process.env.LOCALE_QA_MOUNT ?? '' })) for (const locale of ['en', 'bg']) for (const width of widths) for (const mode of ['storage-unavailable', 'cookies-and-storage-unavailable', 'no-javascript']) {
+    const name = [design, locale, ...(process.env.LOCALE_QA_WIDTHS ? [width] : []), mode].join(' ');
+    const context = await browser.newContext({ javaScriptEnabled: mode !== 'no-javascript', locale: locale === 'bg' ? 'en-US' : 'bg-BG', viewport: { width, height: 844 } });
     const errors = [], prohibitedWrites = [], blockedExternalReads = [];
     const cookiesBlocked = mode === 'cookies-and-storage-unavailable';
     await context.route('**/*', async route => {

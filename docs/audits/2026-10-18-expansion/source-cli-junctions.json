@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-18",
+  "baseline": "8865442cf526daedab19671a6940903d0b7b198b",
+  "defect": "Node resolves import.meta.url physically on L:, while J: argv retains the junction. Five newer source/preparation/composition CLIs silently skipped their entrypoints.",
+  "before": "node scripts/prepare-new-dealer-source.mjs --help and node scripts/package-dealer-single-worker.mjs --help both exited0 without output through J:/cars.",
+  "fix": "Reuse the existing physical-file isEntrypoint helper; command behavior, source pins and permissions are unchanged.",
+  "sourcePaths": [
+    "scripts/assemble-existing-fleet-single-worker.mjs",
+    "scripts/check-five-design-release.mjs",
+    "scripts/package-dealer-single-worker.mjs",
+    "scripts/prepare-existing-fleet-source.mjs",
+    "scripts/prepare-new-dealer-source.mjs"
+  ],
+  "validation": {
+    "runtime": "Node v22.20.0",
+    "command": "node --test scripts/cli-entrypoint.test.mjs",
+    "passed": 19,
+    "failed": 0,
+    "includes": "Alias and physical identity, real help output, fail-before-work argument guards, quiet imports and workflow report."
+  },
+  "remaining": "The separately exported standalone fix-svelte-service-output helper still needs a dependency-safe alias fix. Deployment CLI and paid capacity are handled by a separate coordinated change.",
+  "releaseScope": "CLI dispatch only. No source export, dealer build, provider action, lock promotion or hosted acceptance."
+}

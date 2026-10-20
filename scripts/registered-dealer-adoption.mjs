@@ -6,10 +6,12 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {ROOT,git,sha256,inside,filesAt,validateManifest} from './lib/workflow.mjs';
 import {createHash} from 'node:crypto';
+import {validateRegisteredModernDisplayCopy} from './lib/registered-modern-display-copy.mjs';
 import {normalizeDealerLocale} from './lib/dealer-locale.mjs';
-import {refreshNormalizeInternals,originalListingIdRecorded,assertRegisteredDemoDisclosures,normalizeRegisteredListings,normalizeRegisteredBusiness} from './lib/client-refresh-normalize.mjs';
+import {refreshNormalizeInternals,originalListingIdRecorded,originalListingSourceRecorded,assertRegisteredDemoDisclosures,normalizeRegisteredListings,normalizeRegisteredBusiness} from './lib/client-refresh-normalize.mjs';
 import {planSixDesignSelection} from './lib/six-design-release.mjs';
 import {parseCatalogJson} from './lib/native-localization.mjs';
+import {validateRegisteredPublishedInputs} from './lib/registered-reviewed-public-inputs.mjs';
 
 export const REGISTERED_ADOPTION_KIND='cars-registered-dealer-source-adoption';
 export const REGISTERED_ADOPTION_FILE='.client/registered-source-adoption.json';
@@ -75,7 +77,7 @@ function publishedBranding(input,{root,readGit,baseline,dealer}){
 }
 
 /** Literal-only reading of the maintained Auto Best demo table; never evaluate source. */
-function demoCatalogRecords(catalog,bindings){
+export function demoCatalogRecords(catalog,bindings){
  const text=catalog.toString('utf8'),marker=/const inventoryRecords:[^=]+=/g.exec(text);assert(marker,'reviewed demo declaration required');
  const paths=Object.fromEntries([...bindings.toString('utf8').matchAll(/(stock\d+)\s*:\s*['"]([^'"]+)['"]/g)].map(m=>['leadSite.artwork.inventoryDemo.'+m[1],m[2]]));
  let at=marker.index+marker[0].length;const ws=()=>{while(/\s/.test(text[at]??'')&&at<text.length)at++;};
@@ -98,13 +100,14 @@ function validateTemplateDemo(input,{root,readGit,baseline}){
 
 /** Validate derived facts against retained evidence; no original fact is replaced. */
 export function validateRegisteredPersonalization(input,{dealer,identity,baseline,root=ROOT,readGit=git}){
- keys(input,['schemaVersion','kind','dealer','reviewed','reviewedAt','facts','stock','locale','sourceEvidence','media',...(input.publishedBranding?['publishedBranding']:[])],'derived inputs');
+ keys(input,['schemaVersion','kind','dealer','reviewed','reviewedAt','facts','stock','locale','sourceEvidence','media',...(input.publishedBranding?['publishedBranding']:[]),...(input.publishedInputs?['publishedInputs']:[]),...(input.modernDisplayCopy?['modernDisplayCopy']:[])],'derived inputs');
  assert(input.schemaVersion===1&&input.kind==='cars-registered-dealer-derived-inputs'&&input.dealer===dealer&&input.reviewed===true&&dated(input.reviewedAt),'reviewed derived input required');
  assert(Array.isArray(input.sourceEvidence)&&input.sourceEvidence.length>0&&input.sourceEvidence.length<=50,'preserved factual evidence required');
  for(const p of input.sourceEvidence){assert(!p.path?.startsWith('auto-best/')&&!p.path?.startsWith('modern/'),'proof must survive the upgraded families unchanged');originalBytes(baseline,p);}
  const locale=normalizeDealerLocale(input.locale,identity.dealerId),facts=input.facts,b=facts?.business??facts;
  assert(b&&typeof b.name==='string'&&b.name.trim()&&b.countryCode===locale.dealerCountry&&b.currency===locale.inventoryCurrency,'explicit truthful business/country/currency required');
  assert(Array.isArray(input.stock?.listings)&&input.stock.listings.length>0&&input.stock.listings.length<=400&&typeof input.stock.kind==='string'&&input.stock.kind.trim(),'disclosed bounded stock input required');
+ if(input.publishedInputs){assert(hex40(input.publishedInputs.sourceCommit)&&readGit(root,['merge-base','--is-ancestor',input.publishedInputs.sourceCommit,baseline.commit],{allowFailure:true})!==null,'published reviewed inputs must be immutable ancestors of canonical main');const originalFacts=json(originalBytes(baseline,input.sourceEvidence.find(p=>p.path==='business-facts.json')));return {locale,...validateRegisteredPublishedInputs(input,{dealer,identity,originalFacts,readBytes:(pin,local,max)=>publishedBytes(root,input.publishedInputs.sourceCommit,pin.path,readGit)})};}
  assert(input.stock.mode===undefined||['retained-dealer-source','template-demo'].includes(input.stock.mode),'unsupported registered stock mode');if(input.stock.mode)assert(input.stock.previewOnly===true&&input.stock.actualDealerAvailability===false&&input.stock.disclosure===b.inventoryNotice,'explicit stock mode/disclosure required');
  const branding=publishedBranding(input,{root,readGit,baseline,dealer}),demo=validateTemplateDemo(input,{root,readGit,baseline});
  assert(Array.isArray(input.media)&&input.media.length>0&&input.media.length<=1500,'retained media byte evidence required');const media=new Map(),assetBytes=new Map();let total=0;
@@ -115,7 +118,7 @@ export function validateRegisteredPersonalization(input,{dealer,identity,baselin
   assert(Buffer.isBuffer(bytes)&&bytes.length<=8*1024**2&&sha256(bytes)===item.sha256,'retained/reviewed media bytes differ');total+=bytes.length;assert(total<=64*1024**2,'bounded reviewed media required');media.set(item.publicPath,item);assetBytes.set(item.publicPath,Buffer.from(bytes));
  }
  const ids=new Set();if(!demo)for(const item of input.stock.listings){assert(typeof item.id==='string'&&item.id.trim()&&!ids.has(item.id)&&url(item.sourceUrl),'distinct original listing ID and source URL required');ids.add(item.id);
-  const proof=item.sourceRecord;keys(proof,['path','sha256','id'],'listing source proof');assert(proof.id===item.id,'original listing identity changed');const bytes=originalBytes(baseline,{path:proof.path,sha256:proof.sha256});assert(input.sourceEvidence.some(p=>p.path===proof.path&&p.sha256===proof.sha256)&&originalListingIdRecorded(bytes,item.id)&&bytes.toString('utf8').includes(item.sourceUrl),'listing ID/source URL absent from preserved factual source');
+  const proof=item.sourceRecord;keys(proof,['path','sha256','id'],'listing source proof');assert(proof.id===item.id,'original listing identity changed');const bytes=originalBytes(baseline,{path:proof.path,sha256:proof.sha256});assert(input.sourceEvidence.some(p=>p.path===proof.path&&p.sha256===proof.sha256)&&originalListingSourceRecorded(bytes,item.id,item.sourceUrl),'listing ID/source URL absent from preserved factual source');
   assert(Array.isArray(item.images)&&item.images.length>0&&item.images.every(p=>media.has(p)),'original local listing photo proof required');
  }
  assert([b.logo,b.logoDark??b.logo].every(p=>media.has(p)&&/\.(png|webp)$/i.test(p??'')),'retained raster logo proof required');
@@ -125,7 +128,7 @@ export function validateRegisteredPersonalization(input,{dealer,identity,baselin
 
 /** Pure planner. baseline is authenticated by sourceBaseline in the reader below. */
 export function planRegisteredClientAdoption({receipt,receiptBytes,personalization,personalizationBytes,baseline,registry,dealerRoot,root=ROOT,readGit=git}){
- keys(receipt,['schemaVersion','kind','dealer','reviewed','reviewedAt','canonicalSourceRepository','baseline','identity','layout','variants','applications','templateSources','provenance','personalization','nativeApproval','hostedApproval','globalReleaseApproval'],'adoption receipt');
+ keys(receipt,['schemaVersion','kind','dealer','reviewed','reviewedAt','canonicalSourceRepository','baseline','identity','layout','variants','applications','templateSources','provenance','personalization','nativeApproval','hostedApproval','globalReleaseApproval',...(receipt.templateRefresh?['templateRefresh']:[])],'adoption receipt');
  const dealer=receipt.dealer;assert(slug(dealer)&&receipt.schemaVersion===1&&receipt.kind===REGISTERED_ADOPTION_KIND&&receipt.reviewed===true&&dated(receipt.reviewedAt)&&receipt.canonicalSourceRepository==='darkapoparka/cars','exact reviewed Cars receipt required');
  assert(receipt.nativeApproval===false&&receipt.hostedApproval===false&&receipt.globalReleaseApproval===false,'adoption cannot imply approval');
  keys(receipt.baseline,['commit','tree'],'canonical lease');assert(hex40(receipt.baseline.commit)&&hex40(receipt.baseline.tree)&&receipt.baseline.tree===baseline.tree&&baseline.files instanceof Map&&!baseline.files.has('dealer.json'),'unchanged manifest-less canonical destination required');
@@ -145,7 +148,7 @@ export function planRegisteredClientAdoption({receipt,receiptBytes,personalizati
  for(const key of sourceKeys)assert(receipt.layout.proofs.some(p=>p.path.startsWith(key+'/')&&/config\.[cm]?[jt]s$/.test(p.path)),'each original application needs its mount configuration proof');
  for(const field of ['applications','templateSources','provenance'])keys(receipt[field],sourceKeys,field);
  for(const key of sourceKeys){assert(hex40(receipt.applications[key])&&readGit(root,['rev-parse',baseline.commit+':clients/'+dealer+'/'+key])===receipt.applications[key]&&baseline.files.has(key+'/package.json'),'original application tree differs');
-  const locator=receipt.templateSources[key];keys(locator,['repository','revision','path','tree'],'old source locator');assert(locator.repository==='darkapoparka/cars'&&locator.path==='templates/'+key&&hex40(locator.revision)&&hex40(locator.tree)&&readGit(root,['rev-parse',locator.revision+':'+locator.path])===locator.tree,'exact published previous Cars source required');
+  const locator=receipt.templateSources[key];if(locator===null){assert(receipt.templateRefresh?.unversionedBaseline===true&&receipt.templateRefresh.reviewed===true,'Unversioned source needs an explicit pinned-template replacement');const p=receipt.provenance[key];keys(p,['metadata','copyReceipt'],'historical raw source provenance');assert(p.metadata.path===key+'/.client/project.json'&&p.copyReceipt.path===key+'/.template/source-manifest.json','exact historical raw metadata paths required');const metadata=json(originalBytes(baseline,p.metadata));assert(metadata.client===dealer&&metadata.templateKey===key&&!metadata.sourceCommit&&!metadata.sourceTree,'historical unversioned source identity differs');const captured=json(originalBytes(baseline,p.copyReceipt));assert(!captured.sourceCommit&&!captured.sourceTree,'Known historical template source cannot be discarded as unknown');continue;}keys(locator,['repository','revision','path','tree'],'old source locator');assert(locator.repository==='darkapoparka/cars'&&locator.path==='templates/'+key&&hex40(locator.revision)&&hex40(locator.tree)&&readGit(root,['rev-parse',locator.revision+':'+locator.path])===locator.tree,'exact published previous Cars source required');
   const p=receipt.provenance[key];keys(p,p?.copyReceipt?['metadata','copyReceipt']:['metadata'],'source provenance');assert(p.metadata.path===key+'/.client/project.json','original metadata path differs');const metadata=json(originalBytes(baseline,p.metadata));assert(metadata.client===dealer&&(!metadata.templateKey||metadata.templateKey===key),'original client metadata identity differs');
   assert(!baseline.files.has(key+'/.template/source-manifest.json')||p.copyReceipt,'retained template copy receipt cannot be omitted');
   let copied=null;if(p.copyReceipt){assert(p.copyReceipt.path===key+'/.template/source-manifest.json','original copy receipt path differs');copied=json(originalBytes(baseline,p.copyReceipt));assert(copied.git?.dirtyStatusRecorded!==true&&!copied.git?.status?.trim(),'dirty copied template base is unsupported');assert(copied.sourceCommit===locator.revision&&copied.sourceTree===locator.tree,'copy receipt does not prove the exact previous source');}
@@ -153,14 +156,16 @@ export function planRegisteredClientAdoption({receipt,receiptBytes,personalizati
   assert(revision===locator.revision&&tree===locator.tree&&(!copied?.sourceRepository||copied.sourceRepository===locator.repository)&&(!copied?.sourcePath||copied.sourcePath===locator.path),'original source provenance does not prove the requested base');
  }
  registeredInputPin(receipt.personalization,dealer);assert(Buffer.isBuffer(personalizationBytes)&&sha256(personalizationBytes)===receipt.personalization.sha256&&same(json(personalizationBytes),personalization),'derived input bytes differ');
- const {locale,media,assetBytes}=validateRegisteredPersonalization(personalization,{dealer,identity:receipt.identity,baseline,root,readGit});
+ const {locale,media,assetBytes,materializedFiles=new Map()}=validateRegisteredPersonalization(personalization,{dealer,identity:receipt.identity,baseline,root,readGit});
  assert(Buffer.isBuffer(receiptBytes)&&same(json(receiptBytes),receipt),'exact raw adoption receipt bytes required');
  const rawFacts=personalization.facts,business=normalizeRegisteredBusiness(source,dealer,personalization),listings=normalizeRegisteredListings(personalization,business);assert(listings.length===personalization.stock.listings.length&&listings.every((r,i)=>r.id===personalization.stock.listings[i].id&&r.title&&r.image),'normalization must retain original listing identities and images');
  const assets=Object.fromEntries(['onLight','onDark','onAccent'].map(name=>{const p=name==='onLight'?business.logo:name==='onDark'?business.logoDark||business.logo:business.logo;return[name,{publicPath:p,sha256:media.get(p)?.sha256}];}));
- const manifest=validateManifest({schemaVersion:1,slug:dealer,dealerId:receipt.identity.dealerId,repository:receipt.identity.repository,defaultBranch:'main',variants:structuredClone(REGISTERED_TRIO),extraAssets:[],packaging:{version:'1'},templateRevisions:Object.fromEntries(sourceKeys.map(k=>[k,receipt.templateSources[k].revision])),templateSources:structuredClone(receipt.templateSources),localization:structuredClone(locale)});
+ const manifest=validateManifest({schemaVersion:1,slug:dealer,dealerId:receipt.identity.dealerId,repository:receipt.identity.repository,defaultBranch:'main',variants:structuredClone(REGISTERED_TRIO),extraAssets:[],packaging:{version:'1'},templateRevisions:Object.fromEntries(sourceKeys.filter(k=>receipt.templateSources[k]).map(k=>[k,receipt.templateSources[k].revision])),templateSources:structuredClone(Object.fromEntries(Object.entries(receipt.templateSources).filter(([,v])=>v))),localization:structuredClone(locale)});
  const profile={schemaVersion:1,slug:dealer,business,listings,rawFacts,sourceCount:listings.length,stockKind:personalization.stock.kind,logoContract:{assets}};
- const plan={dealer,manifest,profile,identity:structuredClone(receipt.identity),receipt:structuredClone(receipt),receiptSha256:sha256(receiptBytes),personalizationSha256:sha256(personalizationBytes),baseline:{commit:baseline.commit,tree:baseline.tree},files:new Map([[REGISTERED_ADOPTION_FILE,receiptBytes],[REGISTERED_PROFILE_FILE,personalizationBytes]]),write:false,published:false,nativeApproval:false,hostedApproval:false,globalReleaseApproval:false};
- plans.set(plan,{root,source,assetBytes,demoLockSha256:personalization.stock.mode==='template-demo'?sha256(fs.readFileSync(path.join(root,'templates.lock.json'))):null,manifest:JSON.stringify(manifest),profile:JSON.stringify(profile),identity:JSON.stringify(plan.identity),receipt:JSON.stringify(plan.receipt),receiptSha256:plan.receiptSha256,profileSha256:plan.personalizationSha256,lease:JSON.stringify(plan.baseline),files:new Map([...baseline.files].map(([name,bytes])=>[name,sha256(bytes)]))});return plan;
+ if(personalization.modernDisplayCopy)profile.reviewedModernCopy=validateRegisteredModernDisplayCopy(personalization.modernDisplayCopy,profile);
+ for(const name of materializedFiles.keys())assert(!baseline.files.has(name),'reviewed input materialization destination is occupied');
+ const plan={dealer,manifest,profile,identity:structuredClone(receipt.identity),receipt:structuredClone(receipt),receiptSha256:sha256(receiptBytes),personalizationSha256:sha256(personalizationBytes),baseline:{commit:baseline.commit,tree:baseline.tree},files:new Map([[REGISTERED_ADOPTION_FILE,receiptBytes],[REGISTERED_PROFILE_FILE,personalizationBytes],...materializedFiles]),write:false,published:false,nativeApproval:false,hostedApproval:false,globalReleaseApproval:false};
+ plans.set(plan,{root,source,assetBytes,outputFiles:new Map([...plan.files].map(([name,bytes])=>[name,sha256(bytes)])),demoLockSha256:personalization.stock.mode==='template-demo'?sha256(fs.readFileSync(path.join(root,'templates.lock.json'))):null,manifest:JSON.stringify(manifest),profile:JSON.stringify(profile),identity:JSON.stringify(plan.identity),receipt:JSON.stringify(plan.receipt),receiptSha256:plan.receiptSha256,profileSha256:plan.personalizationSha256,lease:JSON.stringify(plan.baseline),files:new Map([...baseline.files].map(([name,bytes])=>[name,sha256(bytes)]))});return plan;
 }
 
 /** One immutable asset-only input view for existing adapters, bounded to the owner's run. */
@@ -171,11 +176,20 @@ export function materializeRegisteredAssetView(plan,{runDirectory,candidateDirec
  if(candidateDirectory){const candidate=path.resolve(candidateDirectory);assert(candidate!==directory&&!candidate.startsWith(directory+path.sep)&&!directory.startsWith(candidate+path.sep),'asset view cannot overlap candidate source');}
  fs.mkdirSync(directory);for(const key of ['auto-best','modern','import'])fs.mkdirSync(path.join(directory,key));
  for(const [publicName,bytes]of proof.assetBytes){const name=publicName.slice(1),file=inside(directory,name);assert(plan.profile.logoContract?.assets&&sha256(bytes)===JSON.parse(plan.files.get(REGISTERED_PROFILE_FILE)).media.find(p=>p.publicPath===publicName)?.sha256,'private reviewed asset bytes differ');fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file,bytes,{flag:'wx'});}
- proof.assetView={directory,files:new Map([...proof.assetBytes].map(([name,bytes])=>[name.slice(1),sha256(bytes)]))};return directory;
+ const light=plan.profile.logoContract.assets.onLight,filePins=new Map([...proof.assetBytes].map(([name,bytes])=>[name.slice(1),sha256(bytes)]));let legacyAlias=null;
+ if(/\.png$/i.test(light.publicPath)){
+  const lightBytes=proof.assetBytes.get(light.publicPath);assert(lightBytes&&sha256(lightBytes)===light.sha256,'legacy logo alias requires the sealed onLight PNG');
+  const alias='branding/logo-on-light.png',aliasFile=inside(directory,alias),sourceFile=inside(directory,light.publicPath.slice(1),{mustExist:true});
+  if(fs.existsSync(aliasFile))assert(fs.lstatSync(aliasFile).isFile()&&sha256(fs.readFileSync(aliasFile))===light.sha256,'legacy logo alias destination has different bytes');
+  else{fs.mkdirSync(path.dirname(aliasFile),{recursive:true});fs.linkSync(sourceFile,aliasFile);}
+  filePins.set(alias,light.sha256);legacyAlias={path:alias,sha256:light.sha256,sourcePublicPath:light.publicPath};
+ }
+ proof.assetView={directory,files:filePins,legacyAlias};return directory;
 }
 
 export function assertRegisteredAssetView(plan,directory){
  assertRegisteredAdoptionPlan(plan);const view=plans.get(plan).assetView;assert(view&&fs.realpathSync(directory)===view.directory,'authenticated registered asset view required');
+ const light=plan.profile.logoContract.assets.onLight;if(/\.png$/i.test(light.publicPath))assert(view.legacyAlias?.path==='branding/logo-on-light.png'&&view.legacyAlias.sha256===light.sha256&&view.legacyAlias.sourcePublicPath===light.publicPath&&view.files.get(view.legacyAlias.path)===light.sha256,'legacy logo alias proof changed');else assert(view.legacyAlias===null,'WebP source must not acquire a derived PNG alias');
  assert(same(filesAt(directory,{filter:()=>true}).sort(),[...view.files.keys()].sort()),'registered asset view inventory changed');for(const [name,digest]of view.files){const file=inside(directory,name,{mustExist:true});assert(fs.lstatSync(file).isFile()&&sha256(fs.readFileSync(file))===digest,'registered asset view bytes changed');}return directory;
 }
 
@@ -185,7 +199,7 @@ export function assertRegisteredCandidateDirectory(plan,directory){
 }
 
 export function assertRegisteredAdoptionPlan(plan,{dealerRoot,manifest=plan?.manifest}={}){
- const proof=plans.get(plan);assert(proof&&proof.manifest===JSON.stringify(manifest)&&proof.profile===JSON.stringify(plan.profile)&&proof.identity===JSON.stringify(plan.identity)&&proof.receipt===JSON.stringify(plan.receipt)&&proof.lease===JSON.stringify(plan.baseline)&&plan.write===false&&plan.published===false&&plan.nativeApproval===false&&plan.hostedApproval===false&&plan.globalReleaseApproval===false&&plan.files instanceof Map&&plan.files.size===2&&Buffer.isBuffer(plan.files.get(REGISTERED_ADOPTION_FILE))&&Buffer.isBuffer(plan.files.get(REGISTERED_PROFILE_FILE))&&proof.receiptSha256===plan.receiptSha256&&proof.profileSha256===plan.personalizationSha256&&proof.receiptSha256===sha256(plan.files.get(REGISTERED_ADOPTION_FILE))&&proof.profileSha256===sha256(plan.files.get(REGISTERED_PROFILE_FILE))&&fs.realpathSync(dealerRoot??proof.source)===proof.source,'a validated unmodified in-memory adoption plan is required');
+ const proof=plans.get(plan);assert(proof&&proof.manifest===JSON.stringify(manifest)&&proof.profile===JSON.stringify(plan.profile)&&proof.identity===JSON.stringify(plan.identity)&&proof.receipt===JSON.stringify(plan.receipt)&&proof.lease===JSON.stringify(plan.baseline)&&plan.write===false&&plan.published===false&&plan.nativeApproval===false&&plan.hostedApproval===false&&plan.globalReleaseApproval===false&&plan.files instanceof Map&&plan.files.size===proof.outputFiles.size&&[...plan.files].every(([name,bytes])=>Buffer.isBuffer(bytes)&&proof.outputFiles.get(name)===sha256(bytes))&&Buffer.isBuffer(plan.files.get(REGISTERED_ADOPTION_FILE))&&Buffer.isBuffer(plan.files.get(REGISTERED_PROFILE_FILE))&&proof.receiptSha256===plan.receiptSha256&&proof.profileSha256===plan.personalizationSha256&&proof.receiptSha256===sha256(plan.files.get(REGISTERED_ADOPTION_FILE))&&proof.profileSha256===sha256(plan.files.get(REGISTERED_PROFILE_FILE))&&fs.realpathSync(dealerRoot??proof.source)===proof.source,'a validated unmodified in-memory adoption plan is required');
  assert(!proof.demoLockSha256||sha256(fs.readFileSync(path.join(proof.root,'templates.lock.json')))===proof.demoLockSha256,'approved demo catalog lease changed');
  assert(!fs.existsSync(path.join(proof.source,'dealer.json'))&&!fs.existsSync(path.join(proof.source,'.git')),'original manifest-less destination changed');
  assert(same(filesAt(proof.source,{filter:()=>true}).sort(),[...proof.files.keys()].sort()),'original destination inventory changed');
@@ -201,8 +215,11 @@ export async function readRegisteredDealerAdoption({root=ROOT,pin,dealer,baselin
 
 export function registeredAdoptionTarget(plan,pins){assertRegisteredAdoptionPlan(plan,{dealerRoot:plans.get(plan)?.source});const next=structuredClone(plan.manifest);next.variants=planSixDesignSelection(next.variants).variants;next.packaging={version:'5'};next.language=next.localization.defaultLocale;next.branding={schemaVersion:1,required:true,policy:'template-default',contract:'.cars-branding.json',surfaceBindingsVersion:1};
  next.templateRevisions=Object.fromEntries(next.variants.map(({key})=>[key,pins[key]?.to]));next.templateSources=Object.fromEntries(next.variants.map(({key})=>[key,pins[key]?.targetSource]));assert(next.variants.every(({key})=>pins[key]?.targetSource),'all six reviewed target pins required');
- next.extraAssets=['branding','dealer-brand'];next.shareIdentity={name:plan.profile.business.name,description:plan.profile.business.previewNotice,publicOrigin:plan.identity.publicOrigin,logo:{sourcePath:plan.profile.logoContract.assets.onLight.publicPath.slice(1),sha256:plan.profile.logoContract.assets.onLight.sha256}};
+ // Only the share-identity rasters are materialized at the candidate root; stock media is retained inside each variant.
+ const assetRoots=new Set([plan.profile.business.logo,plan.profile.business.logoDark||plan.profile.business.logo].map(name=>name.slice(1).split('/')[0]));
+ next.extraAssets=[...assetRoots].sort();next.shareIdentity={name:plan.profile.business.name,description:plan.profile.business.previewNotice,publicOrigin:plan.identity.publicOrigin,logo:{sourcePath:plan.profile.logoContract.assets.onLight.publicPath.slice(1),sha256:plan.profile.logoContract.assets.onLight.sha256}};
  next.registeredSourceAdoption={receipt:{path:REGISTERED_ADOPTION_FILE,sha256:plan.receiptSha256},personalization:{path:REGISTERED_PROFILE_FILE,sha256:plan.personalizationSha256}};return validateManifest(next);
 }
 
 export function assertRegisteredMountOwnership(manifest,baseline,plan){assertRegisteredAdoptionPlan(plan,{dealerRoot:plans.get(plan)?.source});assert(!baseline.files.has('dealer.json')&&baseline.commit===plan.baseline.commit&&baseline.tree===plan.baseline.tree&&manifest.slug===plan.dealer&&manifest.repository===plan.identity.repository&&same(manifest.variants,planSixDesignSelection(plan.manifest.variants).variants),'prepared mounts differ from reviewed registered adoption');return {baseCommit:baseline.commit,baseTree:baseline.tree,adoptionReceiptSha256:plan.receiptSha256,initialSelection:true,previousPublicRoutes:false,variants:manifest.variants};}
+

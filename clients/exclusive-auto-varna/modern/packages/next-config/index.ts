@@ -1,8 +1,7 @@
-import { dirname, resolve } from "node:path";
-import { fileURLToPath } from "node:url";
+import { resolve } from "node:path";
 import type { NextConfig } from "next";
 
-const monorepoRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..", "..");
+const monorepoRoot = resolve(import.meta.dirname, "..", "..");
 
 export const config: NextConfig = {
   outputFileTracingRoot: monorepoRoot,

@@ -1,0 +1,509 @@
+{
+	"sourceDigest": "7e1cf8d1469db805ebd626ec1f11b1f9a2fa2b8f20149d82a27bdd41c8ceb602",
+	"paths": 1677,
+	"beforeStates": 40,
+	"afterStates": 100,
+	"productionStates": 20,
+	"widths": [320, 390, 768, 1024, 1440, 1920],
+	"locales": ["bg", "en"],
+	"mobile": [
+		{
+			"id": "home-bg-320",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "inventory-bg-320",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "services-bg-320",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "about-bg-320",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "contact-bg-320",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "home-bg-390",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "inventory-bg-390",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "services-bg-390",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "about-bg-390",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "contact-bg-390",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "home-en-320",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "inventory-en-320",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "services-en-320",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "about-en-320",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "contact-en-320",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "home-en-390",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "inventory-en-390",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "services-en-390",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "about-en-390",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "contact-en-390",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		}
+	],
+	"gates": [
+		{
+			"name": "verify",
+			"args": ["L:/Toolchains/Node/24.21.0/node_modules/npm/bin/npm-cli.js", "run", "verify"],
+			"started": "2026-10-03T17:36:03.375Z",
+			"completed": "2026-10-03T17:37:06.811Z",
+			"exitCode": 1,
+			"log": "L:\\CODEX\\cars\\templates\\import\\runtime\\desktop-white-panels-2026-10-03\\qa/runtime/verify.log",
+			"logSha256": "b6dc072f25ceb856c4840c3460e763602b5b970e5386a0e45fe1ee5991d9338d"
+		},
+		{
+			"name": "scoped-format",
+			"args": [
+				"node_modules/prettier/bin/prettier.cjs",
+				"--check",
+				"src/lib/styles/tokens.css",
+				"src/lib/components/common/DesktopDiscoveryPanel.svelte",
+				"src/lib/components/common/MobileModeTabs.svelte",
+				"src/lib/components/home/HeroFilterDialog.svelte"
+			],
+			"started": "2026-10-03T17:37:06.812Z",
+			"completed": "2026-10-03T17:37:07.615Z",
+			"exitCode": 0,
+			"log": "L:\\CODEX\\cars\\templates\\import\\runtime\\desktop-white-panels-2026-10-03\\qa/runtime/scoped-format.log",
+			"logSha256": "17aa973d3f004560237d9a95171210b0671deff23d61628eecf7322ff5938f20"
+		},
+		{
+			"name": "scoped-lint",
+			"args": [
+				"node_modules/eslint/bin/eslint.js",
+				"src/lib/components/common/DesktopDiscoveryPanel.svelte",
+				"src/lib/components/common/MobileModeTabs.svelte",
+				"src/lib/components/home/HeroFilterDialog.svelte"
+			],
+			"started": "2026-10-03T17:37:07.616Z",
+			"completed": "2026-10-03T17:37:16.738Z",
+			"exitCode": 0,
+			"log": "L:\\CODEX\\cars\\templates\\import\\runtime\\desktop-white-panels-2026-10-03\\qa/runtime/scoped-lint.log",
+			"logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+		},
+		{
+			"name": "architecture",
+			"args": [
+				"L:/Toolchains/Node/24.21.0/node_modules/npm/bin/npm-cli.js",
+				"run",
+				"check:architecture"
+			],
+			"started": "2026-10-03T17:37:16.739Z",
+			"completed": "2026-10-03T17:37:17.562Z",
+			"exitCode": 0,
+			"log": "L:\\CODEX\\cars\\templates\\import\\runtime\\desktop-white-panels-2026-10-03\\qa/runtime/architecture.log",
+			"logSha256": "f153ca4e2ca9b6b71ae622dc6c3d96cd08f8f9eff45a7f6791ae81213b51c491"
+		},
+		{
+			"name": "assets",
+			"args": ["L:/Toolchains/Node/24.21.0/node_modules/npm/bin/npm-cli.js", "run", "check:assets"],
+			"started": "2026-10-03T17:37:17.563Z",
+			"completed": "2026-10-03T17:37:17.933Z",
+			"exitCode": 0,
+			"log": "L:\\CODEX\\cars\\templates\\import\\runtime\\desktop-white-panels-2026-10-03\\qa/runtime/assets.log",
+			"logSha256": "b98cbb4d013072e79e1bd8765db3905ed8c6f5fae74e56356eca4fd5a28ef995"
+		},
+		{
+			"name": "build",
+			"args": ["L:/Toolchains/Node/24.21.0/node_modules/npm/bin/npm-cli.js", "run", "build"],
+			"started": "2026-10-03T17:37:17.934Z",
+			"completed": "2026-10-03T17:38:53.703Z",
+			"exitCode": 0,
+			"log": "L:\\CODEX\\cars\\templates\\import\\runtime\\desktop-white-panels-2026-10-03\\qa/runtime/build.log",
+			"logSha256": "3345d6cb3d09f57db36047230121daaafecffda27ff46e517aa3455ef5a196de"
+		}
+	],
+	"browser": {
+		"startTime": "2026-10-03T17:44:25.821Z",
+		"duration": 87892.044,
+		"expected": 35,
+		"skipped": 13,
+		"unexpected": 0,
+		"flaky": 0
+	},
+	"interactions": [
+		{
+			"locale": "bg",
+			"key": "Home",
+			"mode": "buy",
+			"selected": "true",
+			"focusVisible": true,
+			"outline": "rgb(185, 22, 28)",
+			"expectedOutline": "rgb(185, 22, 28)",
+			"width": "3px",
+			"style": "solid",
+			"panel": "rgb(255, 255, 255)",
+			"height": 48
+		},
+		{
+			"locale": "bg",
+			"key": "ArrowRight",
+			"mode": "finance",
+			"selected": "true",
+			"focusVisible": true,
+			"outline": "rgb(185, 22, 28)",
+			"expectedOutline": "rgb(185, 22, 28)",
+			"width": "3px",
+			"style": "solid",
+			"panel": "rgb(255, 255, 255)",
+			"height": 48
+		},
+		{
+			"locale": "bg",
+			"key": "ArrowRight",
+			"mode": "sell",
+			"selected": "true",
+			"focusVisible": true,
+			"outline": "rgb(185, 22, 28)",
+			"expectedOutline": "rgb(185, 22, 28)",
+			"width": "3px",
+			"style": "solid",
+			"panel": "rgb(255, 255, 255)",
+			"height": 48
+		},
+		{
+			"locale": "bg",
+			"key": "ArrowRight",
+			"mode": "import",
+			"selected": "true",
+			"focusVisible": true,
+			"outline": "rgb(185, 22, 28)",
+			"expectedOutline": "rgb(185, 22, 28)",
+			"width": "3px",
+			"style": "solid",
+			"panel": "rgb(255, 255, 255)",
+			"height": 48
+		},
+		{
+			"locale": "bg",
+			"key": "Home",
+			"mode": "buy",
+			"selected": "true",
+			"focusVisible": true,
+			"outline": "rgb(185, 22, 28)",
+			"expectedOutline": "rgb(185, 22, 28)",
+			"width": "3px",
+			"style": "solid",
+			"panel": "rgb(255, 255, 255)",
+			"height": 48
+		},
+		{
+			"locale": "bg",
+			"key": "End",
+			"mode": "import",
+			"selected": "true",
+			"focusVisible": true,
+			"outline": "rgb(185, 22, 28)",
+			"expectedOutline": "rgb(185, 22, 28)",
+			"width": "3px",
+			"style": "solid",
+			"panel": "rgb(255, 255, 255)",
+			"height": 48
+		},
+		{
+			"locale": "bg",
+			"surfaces": {
+				"panel": "rgb(255, 255, 255)",
+				"panelBorder": "rgb(229, 229, 231)",
+				"shadow": "rgba(23, 25, 28, 0.04) 0px 1px 2px 0px, rgba(23, 25, 28, 0.024) 0px 8px 24px 0px",
+				"search": "rgb(242, 244, 247)",
+				"filters": [
+					"rgb(242, 244, 247)",
+					"rgb(242, 244, 247)",
+					"rgb(242, 244, 247)",
+					"rgb(242, 244, 247)"
+				],
+				"hover": "rgb(242, 244, 247)",
+				"text": "rgb(23, 25, 28)",
+				"cta": "rgb(185, 22, 28)"
+			}
+		},
+		{
+			"locale": "en",
+			"key": "Home",
+			"mode": "buy",
+			"selected": "true",
+			"focusVisible": true,
+			"outline": "rgb(185, 22, 28)",
+			"expectedOutline": "rgb(185, 22, 28)",
+			"width": "3px",
+			"style": "solid",
+			"panel": "rgb(255, 255, 255)",
+			"height": 48
+		},
+		{
+			"locale": "en",
+			"key": "ArrowRight",
+			"mode": "finance",
+			"selected": "true",
+			"focusVisible": true,
+			"outline": "rgb(185, 22, 28)",
+			"expectedOutline": "rgb(185, 22, 28)",
+			"width": "3px",
+			"style": "solid",
+			"panel": "rgb(255, 255, 255)",
+			"height": 48
+		},
+		{
+			"locale": "en",
+			"key": "ArrowRight",
+			"mode": "sell",
+			"selected": "true",
+			"focusVisible": true,
+			"outline": "rgb(185, 22, 28)",
+			"expectedOutline": "rgb(185, 22, 28)",
+			"width": "3px",
+			"style": "solid",
+			"panel": "rgb(255, 255, 255)",
+			"height": 48
+		},
+		{
+			"locale": "en",
+			"key": "ArrowRight",
+			"mode": "import",
+			"selected": "true",
+			"focusVisible": true,
+			"outline": "rgb(185, 22, 28)",
+			"expectedOutline": "rgb(185, 22, 28)",
+			"width": "3px",
+			"style": "solid",
+			"panel": "rgb(255, 255, 255)",
+			"height": 48
+		},
+		{
+			"locale": "en",
+			"key": "Home",
+			"mode": "buy",
+			"selected": "true",
+			"focusVisible": true,
+			"outline": "rgb(185, 22, 28)",
+			"expectedOutline": "rgb(185, 22, 28)",
+			"width": "3px",
+			"style": "solid",
+			"panel": "rgb(255, 255, 255)",
+			"height": 48
+		},
+		{
+			"locale": "en",
+			"key": "End",
+			"mode": "import",
+			"selected": "true",
+			"focusVisible": true,
+			"outline": "rgb(185, 22, 28)",
+			"expectedOutline": "rgb(185, 22, 28)",
+			"width": "3px",
+			"style": "solid",
+			"panel": "rgb(255, 255, 255)",
+			"height": 48
+		},
+		{
+			"locale": "en",
+			"surfaces": {
+				"panel": "rgb(255, 255, 255)",
+				"panelBorder": "rgb(229, 229, 231)",
+				"shadow": "rgba(23, 25, 28, 0.04) 0px 1px 2px 0px, rgba(23, 25, 28, 0.024) 0px 8px 24px 0px",
+				"search": "rgb(242, 244, 247)",
+				"filters": [
+					"rgb(242, 244, 247)",
+					"rgb(242, 244, 247)",
+					"rgb(242, 244, 247)",
+					"rgb(242, 244, 247)"
+				],
+				"hover": "rgb(242, 244, 247)",
+				"text": "rgb(23, 25, 28)",
+				"cta": "rgb(185, 22, 28)"
+			}
+		}
+	],
+	"fullPageGeometry": [
+		{
+			"id": "home-bg-1440",
+			"identicalGeometry": true
+		},
+		{
+			"id": "home-finance-bg-1440",
+			"identicalGeometry": true
+		},
+		{
+			"id": "home-sell-bg-1440",
+			"identicalGeometry": true
+		},
+		{
+			"id": "home-import-bg-1440",
+			"identicalGeometry": true
+		},
+		{
+			"id": "inventory-bg-1440",
+			"identicalGeometry": true
+		},
+		{
+			"id": "inventory-selected-bg-1440",
+			"identicalGeometry": true
+		},
+		{
+			"id": "inventory-empty-bg-1440",
+			"identicalGeometry": true
+		},
+		{
+			"id": "services-bg-1440",
+			"identicalGeometry": true
+		},
+		{
+			"id": "about-bg-1440",
+			"identicalGeometry": true
+		},
+		{
+			"id": "contact-bg-1440",
+			"identicalGeometry": true
+		},
+		{
+			"id": "home-en-1440",
+			"identicalGeometry": true
+		},
+		{
+			"id": "home-finance-en-1440",
+			"identicalGeometry": true
+		},
+		{
+			"id": "home-sell-en-1440",
+			"identicalGeometry": true
+		},
+		{
+			"id": "home-import-en-1440",
+			"identicalGeometry": true
+		},
+		{
+			"id": "inventory-en-1440",
+			"identicalGeometry": true
+		},
+		{
+			"id": "inventory-selected-en-1440",
+			"identicalGeometry": true
+		},
+		{
+			"id": "inventory-empty-en-1440",
+			"identicalGeometry": false
+		},
+		{
+			"id": "services-en-1440",
+			"identicalGeometry": true
+		},
+		{
+			"id": "about-en-1440",
+			"identicalGeometry": true
+		},
+		{
+			"id": "contact-en-1440",
+			"identicalGeometry": true
+		}
+	],
+	"screenshotOrigin": "Actual source-rendered frozen production build; no injected styles",
+	"mapEmbedPixelsExcluded": true,
+	"changedSource": [
+		"src/lib/styles/tokens.css",
+		"src/lib/components/common/DesktopDiscoveryPanel.svelte",
+		"src/lib/components/common/MobileModeTabs.svelte",
+		"src/lib/components/home/HeroFilterDialog.svelte"
+	],
+	"screenshots": [
+		{
+			"filename": "before-home.png",
+			"sha256": "c018f835f324da75c99115a0d86e90bd3dd422f1aca788bebc3445aa1eb7b7b4"
+		},
+		{
+			"filename": "after-home.png",
+			"sha256": "b80fa1628332c9b51305128406c1b3e8c92f34fbdc488e9222391a61c44c9da2"
+		},
+		{
+			"filename": "before-inventory.png",
+			"sha256": "324a9a2a1df113c821cbec1913e481d1893ef868fd35920d28dd6b5e61107a2b"
+		},
+		{
+			"filename": "after-inventory.png",
+			"sha256": "67b6ab61324d43d9d8c045ca71a8e02e063c2b90ac3e3bfc30f917559d00b948"
+		},
+		{
+			"filename": "before-services.png",
+			"sha256": "9b56147635898dd49800b40c6709029c4b0d5eaec084e6a3fa895f8e9f4ec937"
+		},
+		{
+			"filename": "after-services.png",
+			"sha256": "f7b18218ad101953922c4123070db29e8754aff03d012ec15a89934d4e7815f7"
+		},
+		{
+			"filename": "before-home-full.png",
+			"sha256": "01b587b1608ca0cb38837e1127044a6e61bd509deac55bdf9a8992d7d8017206"
+		},
+		{
+			"filename": "after-home-full.png",
+			"sha256": "73f1b7e1f3a7592387786587801b9c813e148793ba976860bc2bcbe68e44c056"
+		}
+	]
+}

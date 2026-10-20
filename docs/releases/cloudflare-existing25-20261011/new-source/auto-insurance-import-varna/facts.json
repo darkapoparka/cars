@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "slug": "auto-insurance-import-varna",
+  "dealerId": "auto-insurance-import-varna",
+  "business": {
+    "schemaVersion": 1,
+    "slug": "auto-insurance-import-varna",
+    "name": "Auto Insurance Import",
+    "shortName": "Auto Insurance Import",
+    "city": "Варна",
+    "country": "BG",
+    "countryCode": "BG",
+    "locale": "bg-BG",
+    "currency": "EUR",
+    "distanceUnit": "km",
+    "phone": "0878601371",
+    "phoneDisplay": "0878601371",
+    "phoneE164": "+359878601371",
+    "phones": [
+      "+359878601371"
+    ],
+    "addressLine": "гр. Варна",
+    "address": "гр. Варна, Варна, България",
+    "hours": "Потвърдете работното време директно с автокъщата.",
+    "email": "",
+    "sourceUrl": "https://insautoimport.mobile.bg/",
+    "stockUrl": "https://insautoimport.mobile.bg/",
+    "contactSourceUrl": "https://insautoimport.mobile.bg/contacts",
+    "observedAt": "2026-10-12T10:44:17.702Z",
+    "inventoryNotice": "Показаните демонстрационни автомобили са илюстративни и не представляват наличности на автокъщата. За действителните оферти и наличности се свържете директно с нея.",
+    "previewNotice": "Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация.",
+    "services": [],
+    "socialLinks": {},
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png",
+    "modernInventoryCopy": {
+      "auto-insurance-import-varna-demo-estate": {
+        "sourceDescription": "Илюстративен демонстрационен автомобил с примерни характеристики и цена. Не е действителна оферта или наличност на автокъщата. Изображението е генерирана декоративна илюстрация.",
+        "en": {
+          "description": "Illustrative demo vehicle with example specifications and price. This is not a real offer or dealership stock. The image is generated decorative artwork.",
+          "imageAlts": [
+            "Generated white estate illustration; not dealer stock photography"
+          ]
+        },
+        "bg": {
+          "description": "Илюстративен демонстрационен автомобил с примерни характеристики и цена. Не е действителна оферта или наличност на автокъщата. Изображението е генерирана декоративна илюстрация.",
+          "imageAlts": [
+            "Генерирана илюстрация на бяло комби; не е снимка на наличен автомобил"
+          ]
+        }
+      },
+      "auto-insurance-import-varna-demo-suv": {
+        "sourceDescription": "Илюстративен демонстрационен автомобил с примерни характеристики и цена. Не е действителна оферта или наличност на автокъщата. Изображението е генерирана декоративна илюстрация.",
+        "en": {
+          "description": "Illustrative demo vehicle with example specifications and price. This is not a real offer or dealership stock. The image is generated decorative artwork.",
+          "imageAlts": [
+            "Generated blue SUV illustration; not dealer stock photography"
+          ]
+        },
+        "bg": {
+          "description": "Илюстративен демонстрационен автомобил с примерни характеристики и цена. Не е действителна оферта или наличност на автокъщата. Изображението е генерирана декоративна илюстрация.",
+          "imageAlts": [
+            "Генерирана илюстрация на син SUV; не е снимка на наличен автомобил"
+          ]
+        }
+      }
+    }
+  },
+  "research": {
+    "website": {
+      "status": "none-confirmed-in-bounded-check",
+      "url": null,
+      "notWebsiteGapProof": true
+    },
+    "publicIdentityKey": "mobile-profile:insautoimport.mobile.bg",
+    "profileAdvertCount": 5,
+    "availabilityConfirmed": false,
+    "legalEntityOwnershipVerified": false,
+    "addressExactness": "street-unknown",
+    "caveats": [
+      "Contact location gives Varna without a street; no showroom street is invented.",
+      "First sampled Mercedes EQS advert explicitly describes shipping and availability in early 2027. Public advert count is not available-on-site stock."
+    ],
+    "sourceProof": [
+      {
+        "url": "https://insautoimport.mobile.bg/",
+        "finalUrl": "https://insautoimport.mobile.bg/",
+        "observedAt": "2026-10-12T10:44:17.708Z",
+        "status": 200,
+        "bytes": 55721,
+        "sha256": "a57ff9d2b7fc9b482b21a915e47969b6a8d3cb69a9d82589db6fd9d63929a077"
+      },
+      {
+        "url": "https://insautoimport.mobile.bg/contacts",
+        "finalUrl": "https://insautoimport.mobile.bg/contacts",
+        "observedAt": "2026-10-12T10:44:17.702Z",
+        "status": 200,
+        "bytes": 41889,
+        "sha256": "211e93fb0305988635fe094230ff766489c968bf5f8175c9ceeafb10142e06ce"
+      },
+      {
+        "url": "https://insautoimport.mobile.bg/about",
+        "finalUrl": "https://insautoimport.mobile.bg/about",
+        "observedAt": "2026-10-12T10:44:17.696Z",
+        "status": 200,
+        "bytes": 6157,
+        "sha256": "cc608f75180b1463cbbd495417010630bcaf3f26721679feb1360084d10ad63e"
+      }
+    ],
+    "sourceAction": "new-absent-cars-source-after-wrapper-identity-recheck",
+    "existingSourceTree": null,
+    "inventoryModeSelection": "illustrative-not-dealer-stock",
+    "productionAssetInputsComplete": false
+  }
+}

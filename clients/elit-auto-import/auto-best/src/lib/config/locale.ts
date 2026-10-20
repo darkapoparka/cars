@@ -23,13 +23,17 @@ export const dealerLocalizedText = {
     "city": "Varna",
     "addressLine": "74A Prilep Street, Pchelina area",
     "address": "74A Prilep Street, Pchelina area, Varna",
-    "appointment": "Call to confirm opening hours."
+    "appointment": "Call to confirm opening hours.",
+    "addressShort": "74A Prilep Street, Pchelina area",
+    "appointmentShort": "Call to confirm opening hours."
   },
   "bg": {
     "city": "Варна",
     "addressLine": "ул. „Прилеп“ 74А, м-т Пчелина",
     "address": "ул. „Прилеп“ 74А, м-т Пчелина",
-    "appointment": "Работното време се уточнява по телефона."
+    "appointment": "Работното време се уточнява по телефона.",
+    "addressShort": "ул. „Прилеп“ 74А, м-т Пчелина",
+    "appointmentShort": "Работното време се уточнява по телефона."
   }
 } as const;
 

@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 1,
+  "kind": "dated-marketplace-listing-sample",
+  "candidate": true,
+  "observedAt": "2026-10-11T11:46:40.714Z",
+  "sourceProfile": "https://transcar.mobile.bg/",
+  "sourcePageVisibleListingCount": 19,
+  "sourceProfileCountObservedAt": "2026-10-11T11:46:40.649Z",
+  "profileCountIsAvailableStock": false,
+  "profileCountIsClassifiedOrdinaryRetail": false,
+  "liveInventory": false,
+  "mediaPermission": "unconfirmed",
+  "localMediaReady": true,
+  "records": [
+    {
+      "id": "11772031596218515",
+      "sourceId": "11772031596218515",
+      "title": "VW Passat",
+      "make": "VW",
+      "model": "Passat",
+      "modelExtraction": "literal make/model prefix from exact primary advert title; canonical market normalization and trim not asserted",
+      "year": 2012,
+      "productionMonth": 11,
+      "priceEur": 5600,
+      "currency": "EUR",
+      "sourcePriceText": "5 600 €",
+      "priceVatNotice": "Не се начислява ДДС",
+      "mileageKm": 220000,
+      "sourceMileageText": "220000 км",
+      "fieldConflicts": [],
+      "body": "Комби",
+      "fuel": "Дизелов",
+      "transmission": "Ръчна",
+      "powerHp": 140,
+      "images": [
+        "/assets/vehicles/11772031596218515/1.webp",
+        "/assets/vehicles/11772031596218515/2.webp"
+      ],
+      "sourceUrl": "https://transcar.mobile.bg/obiava-11772031596218515-vw-passat-2-0-tdi",
+      "sourceHtmlSha256": "0b548948167e3770ca476e5c6fed74e15b52240ab2a765f384e47a01e676bf1c",
+      "sourcePublicationText": "Редактирана в 20:25 часа на 04.10.2026 год.",
+      "observedAt": "2026-10-11T11:46:40.714Z",
+      "availability": "unconfirmed",
+      "availabilityConfirmed": false,
+      "partsListing": false,
+      "conditionMarker": null,
+      "conditionIndependentlyConfirmed": false,
+      "arrivalNotice": null,
+      "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "mediaState": "not-collected; reviewed rights/reuse or explicit illustration decision pending",
+      "mediaPermission": "Not independently established",
+      "telHrefCandidates": [
+        "0898504908"
+      ],
+      "visibleSellerContact": "Контакти с продавача АВТОСАЛОН ТРАНС КАР 0898504908",
+      "sellerPhoneMatchesPrimary": true,
+      "telHrefMatchesPrimary": true,
+      "sourceTitleExact": "VW Passat 2.0 TDi",
+      "sampleRole": "dated published vehicle advert; dealer availability, condition and media reuse require confirmation",
+      "retailReadyForAssembly": false,
+      "sourcePhotoUrls": [
+        "https://mobistatic2.focus.bg/mobile/photosorg/515/1/big1/11772031596218515_EU.webp",
+        "https://mobistatic2.focus.bg/mobile/photosorg/515/1/big1/11772031596218515_gL.webp",
+        "https://mobistatic2.focus.bg/mobile/photosorg/515/1/big1/11772031596218515_sh.webp",
+        "https://mobistatic2.focus.bg/mobile/photosorg/515/1/big1/11772031596218515_em.webp",
+        "https://mobistatic2.focus.bg/mobile/photosorg/515/1/big1/11772031596218515_Qv.webp",
+        "https://mobistatic2.focus.bg/mobile/photosorg/515/1/big1/11772031596218515_Lj.webp",
+        "https://mobistatic2.focus.bg/mobile/photosorg/515/1/big1/11772031596218515_Fm.webp",
+        "https://mobistatic2.focus.bg/mobile/photosorg/515/1/big1/11772031596218515_8d.webp",
+        "https://mobistatic2.focus.bg/mobile/photosorg/515/1/big1/11772031596218515_Bb.webp",
+        "https://mobistatic2.focus.bg/mobile/photosorg/515/1/big1/11772031596218515_Nv.webp"
+      ],
+      "sourcePhotoEvidence": {
+        "sourceId": "11772031596218515",
+        "sourceUrl": "https://transcar.mobile.bg/obiava-11772031596218515-vw-passat-2-0-tdi",
+        "observedAt": "2026-10-11T12:09:29.258Z",
+        "responseSha256": "01107dfb6e5037552359c64420bb5cd90dbdf3001933ef547ac2fb08af5b2973",
+        "association": "primary gallery URLs contain exact source listing ID",
+        "remoteBytesFetched": false
+      }
+    }
+  ],
+  "localMediaHydration": {
+    "candidateOnly": true,
+    "technicalRasterPresent": true,
+    "rightsApproved": false,
+    "availabilityConfirmed": false,
+    "assets": [
+      {
+        "publicPath": "/assets/vehicles/11772031596218515/1.webp",
+        "sourceUrl": "https://mobistatic2.focus.bg/mobile/photosorg/515/1/big1/11772031596218515_EU.webp",
+        "sha256": "2c212f01fdb22444c6098e5bdfe6c67d528dfa1eeebe2c17dae0ea376f116aca",
+        "bytes": 216838,
+        "downloadObservedAt": "2026-10-11T12:20:30.644Z"
+      },
+      {
+        "publicPath": "/assets/vehicles/11772031596218515/2.webp",
+        "sourceUrl": "https://mobistatic2.focus.bg/mobile/photosorg/515/1/big1/11772031596218515_gL.webp",
+        "sha256": "38e4bf34a754419b5bb4780c2f8c4bbdcf32928788c59e3096b581cb7a47ab6c",
+        "bytes": 288202,
+        "downloadObservedAt": "2026-10-11T12:20:30.855Z"
+      }
+    ],
+    "sourceStockSha256": "78bed335d80fa8e9c11b762d19423070620419d7f83156ce20fc518c84262ead"
+  }
+}

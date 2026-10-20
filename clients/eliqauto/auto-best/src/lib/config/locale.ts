@@ -23,13 +23,17 @@ export const dealerLocalizedText = {
     "city": "Pazardzhik",
     "addressLine": "Svoboda Street, behind the cemetery park",
     "address": "Svoboda Street, behind the cemetery park, Pazardzhik",
-    "appointment": "Mon–Fri 09:30–19:00 · Sat–Sun 09:30–17:00 · Confirm the viewing by phone"
+    "appointment": "Mon–Fri 09:30–19:00 · Sat–Sun 09:30–17:00 · Confirm the viewing by phone",
+    "addressShort": "Svoboda Street, behind the cemetery park",
+    "appointmentShort": "Mon–Fri 09:30–19:00 · Sat–Sun 09:30–17:00 · Confirm the viewing by phone"
   },
   "bg": {
     "city": "Пазарджик",
     "addressLine": "ул. Свобода, на гърба на Гробищен парк",
     "address": "ул. Свобода, на гърба на Гробищен парк, Пазарджик",
-    "appointment": "Пон.–пет. 09:30–19:00 · Съб.–нед. 09:30–17:00 · Потвърдете огледа по телефона"
+    "appointment": "Пон.–пет. 09:30–19:00 · Съб.–нед. 09:30–17:00 · Потвърдете огледа по телефона",
+    "addressShort": "ул. Свобода, на гърба на Гробищен парк",
+    "appointmentShort": "Пон.–пет. 09:30–19:00 · Съб.–нед. 09:30–17:00 · Потвърдете огледа по телефона"
   }
 } as const;
 

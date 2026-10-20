@@ -1,0 +1,1002 @@
+{
+  "generatedAt": "2026-10-03T23:37:17.563Z",
+  "base": "http://127.0.0.1:6461",
+  "results": [
+    {
+      "name": "bg/home at 1024",
+      "passed": true,
+      "evidence": {
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "width": 1009,
+          "height": 540,
+          "top": 0,
+          "right": 1009,
+          "bottom": 540,
+          "left": 0
+        },
+        "copy": {
+          "x": 24,
+          "y": 276.15625,
+          "width": 961,
+          "height": 35.828125,
+          "top": 276.15625,
+          "right": 985,
+          "bottom": 311.984375,
+          "left": 24
+        },
+        "heading": {
+          "x": 24,
+          "y": 276.15625,
+          "width": 961,
+          "height": 35.828125,
+          "top": 276.15625,
+          "right": 985,
+          "bottom": 311.984375,
+          "left": 24
+        },
+        "lead": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "leadVisible": false,
+        "controls": {
+          "x": 24.5,
+          "y": 340,
+          "width": 960,
+          "height": 154,
+          "top": 340,
+          "right": 984.5,
+          "bottom": 494,
+          "left": 24.5
+        },
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 1009,
+          "height": 0,
+          "top": 0,
+          "right": 1009,
+          "bottom": 0,
+          "left": 0
+        },
+        "logo": {
+          "x": 26,
+          "y": 69,
+          "width": 160,
+          "height": 56,
+          "top": 69,
+          "right": 186,
+          "bottom": 125,
+          "left": 26
+        },
+        "navigation": {
+          "x": 267.96875,
+          "y": 74,
+          "width": 473.046875,
+          "height": 46,
+          "top": 74,
+          "right": 741.015625,
+          "bottom": 120,
+          "left": 267.96875
+        },
+        "backgroundImage": "none",
+        "scene": {
+          "src": null,
+          "artwork": "vehicles",
+          "x": 0,
+          "y": 140,
+          "width": 1009,
+          "height": 400,
+          "top": 140,
+          "right": 1009,
+          "bottom": 540,
+          "left": 0
+        },
+        "cutouts": [
+          {
+            "vehicle": "gclass",
+            "src": "http://127.0.0.1:6461/assets/images/lead/day-night-cutout-gclass-v1.webp?v=profile-1",
+            "x": -22.8125,
+            "y": 224.203125,
+            "width": 184.09375,
+            "height": 122.796875,
+            "top": 224.203125,
+            "right": 161.28125,
+            "bottom": 347,
+            "left": -22.8125
+          },
+          {
+            "vehicle": "urus",
+            "src": "http://127.0.0.1:6461/assets/images/lead/day-night-cutout-urus-v1.webp?v=profile-1",
+            "x": 845.21875,
+            "y": 220.140625,
+            "width": 209.796875,
+            "height": 139.9375,
+            "top": 220.140625,
+            "right": 1055.015625,
+            "bottom": 360.078125,
+            "left": 845.21875
+          }
+        ],
+        "font": "\"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+        "headingSize": "32px",
+        "leadSize": "14px",
+        "overflow": -15,
+        "broken": []
+      },
+      "durationMs": 10820
+    },
+    {
+      "name": "bg/about-us at 1024",
+      "passed": true,
+      "evidence": {
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "width": 1009,
+          "height": 540,
+          "top": 0,
+          "right": 1009,
+          "bottom": 540,
+          "left": 0
+        },
+        "copy": {
+          "x": 124.5,
+          "y": 200,
+          "width": 760,
+          "height": 167.796875,
+          "top": 200,
+          "right": 884.5,
+          "bottom": 367.796875,
+          "left": 124.5
+        },
+        "heading": {
+          "x": 124.5,
+          "y": 232.015625,
+          "width": 760,
+          "height": 100.78125,
+          "top": 232.015625,
+          "right": 884.5,
+          "bottom": 332.796875,
+          "left": 124.5
+        },
+        "lead": {
+          "x": 278.75,
+          "y": 340.796875,
+          "width": 451.5,
+          "height": 27,
+          "top": 340.796875,
+          "right": 730.25,
+          "bottom": 367.796875,
+          "left": 278.75
+        },
+        "leadVisible": true,
+        "controls": {
+          "x": 317.671875,
+          "y": 391.796875,
+          "width": 373.640625,
+          "height": 44,
+          "top": 391.796875,
+          "right": 691.3125,
+          "bottom": 435.796875,
+          "left": 317.671875
+        },
+        "eyebrow": {
+          "x": 124.5,
+          "y": 200,
+          "width": 760,
+          "height": 20.015625,
+          "top": 200,
+          "right": 884.5,
+          "bottom": 220.015625,
+          "left": 124.5
+        },
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 1009,
+          "height": 0,
+          "top": 0,
+          "right": 1009,
+          "bottom": 0,
+          "left": 0
+        },
+        "logo": {
+          "x": 26,
+          "y": 69,
+          "width": 160,
+          "height": 56,
+          "top": 69,
+          "right": 186,
+          "bottom": 125,
+          "left": 26
+        },
+        "navigation": {
+          "x": 267.96875,
+          "y": 74,
+          "width": 473.046875,
+          "height": 46,
+          "top": 74,
+          "right": 741.015625,
+          "bottom": 120,
+          "left": 267.96875
+        },
+        "backgroundImage": "none",
+        "scene": {
+          "src": "http://127.0.0.1:6461/assets/images/lead/auto-best-desktop-home-v3.webp",
+          "artwork": "image",
+          "x": 0,
+          "y": 140,
+          "width": 1009,
+          "height": 400,
+          "top": 140,
+          "right": 1009,
+          "bottom": 540,
+          "left": 0
+        },
+        "cutouts": [],
+        "font": "\"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+        "headingSize": "48px",
+        "leadSize": "18px",
+        "overflow": -15,
+        "broken": []
+      },
+      "durationMs": 3427
+    },
+    {
+      "name": "bg/home at 1440",
+      "passed": true,
+      "evidence": {
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "width": 1425,
+          "height": 540,
+          "top": 0,
+          "right": 1425,
+          "bottom": 540,
+          "left": 0
+        },
+        "copy": {
+          "x": 152.5,
+          "y": 258.234375,
+          "width": 1120,
+          "height": 53.75,
+          "top": 258.234375,
+          "right": 1272.5,
+          "bottom": 311.984375,
+          "left": 152.5
+        },
+        "heading": {
+          "x": 152.5,
+          "y": 258.234375,
+          "width": 1120,
+          "height": 53.75,
+          "top": 258.234375,
+          "right": 1272.5,
+          "bottom": 311.984375,
+          "left": 152.5
+        },
+        "lead": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "leadVisible": false,
+        "controls": {
+          "x": 232.5,
+          "y": 340,
+          "width": 960,
+          "height": 154,
+          "top": 340,
+          "right": 1192.5,
+          "bottom": 494,
+          "left": 232.5
+        },
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 1425,
+          "height": 0,
+          "top": 0,
+          "right": 1425,
+          "bottom": 0,
+          "left": 0
+        },
+        "logo": {
+          "x": 26,
+          "y": 69,
+          "width": 230,
+          "height": 56,
+          "top": 69,
+          "right": 256,
+          "bottom": 125,
+          "left": 26
+        },
+        "navigation": {
+          "x": 408.3125,
+          "y": 72.5,
+          "width": 608.359375,
+          "height": 49,
+          "top": 72.5,
+          "right": 1016.671875,
+          "bottom": 121.5,
+          "left": 408.3125
+        },
+        "backgroundImage": "none",
+        "scene": {
+          "src": null,
+          "artwork": "vehicles",
+          "x": 0,
+          "y": 0,
+          "width": 1425,
+          "height": 540,
+          "top": 0,
+          "right": 1425,
+          "bottom": 540,
+          "left": 0
+        },
+        "cutouts": [
+          {
+            "vehicle": "gclass",
+            "src": "http://127.0.0.1:6461/assets/images/lead/day-night-cutout-gclass-v1.webp?v=profile-1",
+            "x": -187.609375,
+            "y": 273.78125,
+            "width": 398.90625,
+            "height": 266.0625,
+            "top": 273.78125,
+            "right": 211.296875,
+            "bottom": 539.84375,
+            "left": -187.609375
+          },
+          {
+            "vehicle": "urus",
+            "src": "http://127.0.0.1:6461/assets/images/lead/day-night-cutout-urus-v1.webp?v=profile-1",
+            "x": 1208.328125,
+            "y": 264.96875,
+            "width": 454.578125,
+            "height": 303.203125,
+            "top": 264.96875,
+            "right": 1662.90625,
+            "bottom": 568.171875,
+            "left": 1208.328125
+          }
+        ],
+        "font": "\"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+        "headingSize": "48px",
+        "leadSize": "14px",
+        "overflow": -15,
+        "broken": []
+      },
+      "durationMs": 9866
+    },
+    {
+      "name": "bg/about-us at 1440",
+      "passed": true,
+      "evidence": {
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "width": 1425,
+          "height": 540,
+          "top": 0,
+          "right": 1425,
+          "bottom": 540,
+          "left": 0
+        },
+        "copy": {
+          "x": 332.5,
+          "y": 200,
+          "width": 760,
+          "height": 184.609375,
+          "top": 200,
+          "right": 1092.5,
+          "bottom": 384.609375,
+          "left": 332.5
+        },
+        "heading": {
+          "x": 332.5,
+          "y": 232.015625,
+          "width": 760,
+          "height": 117.59375,
+          "top": 232.015625,
+          "right": 1092.5,
+          "bottom": 349.609375,
+          "left": 332.5
+        },
+        "lead": {
+          "x": 486.75,
+          "y": 357.609375,
+          "width": 451.5,
+          "height": 27,
+          "top": 357.609375,
+          "right": 938.25,
+          "bottom": 384.609375,
+          "left": 486.75
+        },
+        "leadVisible": true,
+        "controls": {
+          "x": 525.671875,
+          "y": 408.609375,
+          "width": 373.640625,
+          "height": 44,
+          "top": 408.609375,
+          "right": 899.3125,
+          "bottom": 452.609375,
+          "left": 525.671875
+        },
+        "eyebrow": {
+          "x": 332.5,
+          "y": 200,
+          "width": 760,
+          "height": 20.015625,
+          "top": 200,
+          "right": 1092.5,
+          "bottom": 220.015625,
+          "left": 332.5
+        },
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 1425,
+          "height": 0,
+          "top": 0,
+          "right": 1425,
+          "bottom": 0,
+          "left": 0
+        },
+        "logo": {
+          "x": 26,
+          "y": 69,
+          "width": 230,
+          "height": 56,
+          "top": 69,
+          "right": 256,
+          "bottom": 125,
+          "left": 26
+        },
+        "navigation": {
+          "x": 408.3125,
+          "y": 72.5,
+          "width": 608.359375,
+          "height": 49,
+          "top": 72.5,
+          "right": 1016.671875,
+          "bottom": 121.5,
+          "left": 408.3125
+        },
+        "backgroundImage": "none",
+        "scene": {
+          "src": "http://127.0.0.1:6461/assets/images/lead/auto-best-desktop-home-v3.webp",
+          "artwork": "image",
+          "x": 0,
+          "y": 0,
+          "width": 1425,
+          "height": 540,
+          "top": 0,
+          "right": 1425,
+          "bottom": 540,
+          "left": 0
+        },
+        "cutouts": [],
+        "font": "\"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+        "headingSize": "56px",
+        "leadSize": "18px",
+        "overflow": -15,
+        "broken": []
+      },
+      "durationMs": 5895
+    },
+    {
+      "name": "en/home at 1024",
+      "passed": true,
+      "evidence": {
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "width": 1009,
+          "height": 540,
+          "top": 0,
+          "right": 1009,
+          "bottom": 540,
+          "left": 0
+        },
+        "copy": {
+          "x": 24,
+          "y": 276.15625,
+          "width": 961,
+          "height": 35.828125,
+          "top": 276.15625,
+          "right": 985,
+          "bottom": 311.984375,
+          "left": 24
+        },
+        "heading": {
+          "x": 24,
+          "y": 276.15625,
+          "width": 961,
+          "height": 35.828125,
+          "top": 276.15625,
+          "right": 985,
+          "bottom": 311.984375,
+          "left": 24
+        },
+        "lead": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "leadVisible": false,
+        "controls": {
+          "x": 24.5,
+          "y": 340,
+          "width": 960,
+          "height": 154,
+          "top": 340,
+          "right": 984.5,
+          "bottom": 494,
+          "left": 24.5
+        },
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 1009,
+          "height": 0,
+          "top": 0,
+          "right": 1009,
+          "bottom": 0,
+          "left": 0
+        },
+        "logo": {
+          "x": 26,
+          "y": 69,
+          "width": 160,
+          "height": 56,
+          "top": 69,
+          "right": 186,
+          "bottom": 125,
+          "left": 26
+        },
+        "navigation": {
+          "x": 308.953125,
+          "y": 74,
+          "width": 391.09375,
+          "height": 46,
+          "top": 74,
+          "right": 700.046875,
+          "bottom": 120,
+          "left": 308.953125
+        },
+        "backgroundImage": "none",
+        "scene": {
+          "src": null,
+          "artwork": "vehicles",
+          "x": 0,
+          "y": 140,
+          "width": 1009,
+          "height": 400,
+          "top": 140,
+          "right": 1009,
+          "bottom": 540,
+          "left": 0
+        },
+        "cutouts": [
+          {
+            "vehicle": "gclass",
+            "src": "http://127.0.0.1:6461/assets/images/lead/day-night-cutout-gclass-v1.webp?v=profile-1",
+            "x": -22.8125,
+            "y": 224.203125,
+            "width": 184.09375,
+            "height": 122.796875,
+            "top": 224.203125,
+            "right": 161.28125,
+            "bottom": 347,
+            "left": -22.8125
+          },
+          {
+            "vehicle": "urus",
+            "src": "http://127.0.0.1:6461/assets/images/lead/day-night-cutout-urus-v1.webp?v=profile-1",
+            "x": 845.21875,
+            "y": 220.140625,
+            "width": 209.796875,
+            "height": 139.9375,
+            "top": 220.140625,
+            "right": 1055.015625,
+            "bottom": 360.078125,
+            "left": 845.21875
+          }
+        ],
+        "font": "\"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+        "headingSize": "32px",
+        "leadSize": "14px",
+        "overflow": -15,
+        "broken": []
+      },
+      "durationMs": 11011
+    },
+    {
+      "name": "en/about-us at 1024",
+      "passed": true,
+      "evidence": {
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "width": 1009,
+          "height": 540,
+          "top": 0,
+          "right": 1009,
+          "bottom": 540,
+          "left": 0
+        },
+        "copy": {
+          "x": 124.5,
+          "y": 200,
+          "width": 760,
+          "height": 167.796875,
+          "top": 200,
+          "right": 884.5,
+          "bottom": 367.796875,
+          "left": 124.5
+        },
+        "heading": {
+          "x": 124.5,
+          "y": 232.015625,
+          "width": 760,
+          "height": 100.78125,
+          "top": 232.015625,
+          "right": 884.5,
+          "bottom": 332.796875,
+          "left": 124.5
+        },
+        "lead": {
+          "x": 282.046875,
+          "y": 340.796875,
+          "width": 444.890625,
+          "height": 27,
+          "top": 340.796875,
+          "right": 726.9375,
+          "bottom": 367.796875,
+          "left": 282.046875
+        },
+        "leadVisible": true,
+        "controls": {
+          "x": 395.875,
+          "y": 391.796875,
+          "width": 217.234375,
+          "height": 44,
+          "top": 391.796875,
+          "right": 613.109375,
+          "bottom": 435.796875,
+          "left": 395.875
+        },
+        "eyebrow": {
+          "x": 124.5,
+          "y": 200,
+          "width": 760,
+          "height": 20.015625,
+          "top": 200,
+          "right": 884.5,
+          "bottom": 220.015625,
+          "left": 124.5
+        },
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 1009,
+          "height": 0,
+          "top": 0,
+          "right": 1009,
+          "bottom": 0,
+          "left": 0
+        },
+        "logo": {
+          "x": 26,
+          "y": 69,
+          "width": 160,
+          "height": 56,
+          "top": 69,
+          "right": 186,
+          "bottom": 125,
+          "left": 26
+        },
+        "navigation": {
+          "x": 308.953125,
+          "y": 74,
+          "width": 391.09375,
+          "height": 46,
+          "top": 74,
+          "right": 700.046875,
+          "bottom": 120,
+          "left": 308.953125
+        },
+        "backgroundImage": "none",
+        "scene": {
+          "src": "http://127.0.0.1:6461/assets/images/lead/auto-best-desktop-home-v3.webp",
+          "artwork": "image",
+          "x": 0,
+          "y": 140,
+          "width": 1009,
+          "height": 400,
+          "top": 140,
+          "right": 1009,
+          "bottom": 540,
+          "left": 0
+        },
+        "cutouts": [],
+        "font": "\"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+        "headingSize": "48px",
+        "leadSize": "18px",
+        "overflow": -15,
+        "broken": []
+      },
+      "durationMs": 2219
+    },
+    {
+      "name": "en/home at 1440",
+      "passed": true,
+      "evidence": {
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "width": 1425,
+          "height": 540,
+          "top": 0,
+          "right": 1425,
+          "bottom": 540,
+          "left": 0
+        },
+        "copy": {
+          "x": 152.5,
+          "y": 258.234375,
+          "width": 1120,
+          "height": 53.75,
+          "top": 258.234375,
+          "right": 1272.5,
+          "bottom": 311.984375,
+          "left": 152.5
+        },
+        "heading": {
+          "x": 152.5,
+          "y": 258.234375,
+          "width": 1120,
+          "height": 53.75,
+          "top": 258.234375,
+          "right": 1272.5,
+          "bottom": 311.984375,
+          "left": 152.5
+        },
+        "lead": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "leadVisible": false,
+        "controls": {
+          "x": 232.5,
+          "y": 340,
+          "width": 960,
+          "height": 154,
+          "top": 340,
+          "right": 1192.5,
+          "bottom": 494,
+          "left": 232.5
+        },
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 1425,
+          "height": 0,
+          "top": 0,
+          "right": 1425,
+          "bottom": 0,
+          "left": 0
+        },
+        "logo": {
+          "x": 26,
+          "y": 69,
+          "width": 230,
+          "height": 56,
+          "top": 69,
+          "right": 256,
+          "bottom": 125,
+          "left": 26
+        },
+        "navigation": {
+          "x": 454.203125,
+          "y": 72.5,
+          "width": 516.578125,
+          "height": 49,
+          "top": 72.5,
+          "right": 970.78125,
+          "bottom": 121.5,
+          "left": 454.203125
+        },
+        "backgroundImage": "none",
+        "scene": {
+          "src": null,
+          "artwork": "vehicles",
+          "x": 0,
+          "y": 0,
+          "width": 1425,
+          "height": 540,
+          "top": 0,
+          "right": 1425,
+          "bottom": 540,
+          "left": 0
+        },
+        "cutouts": [
+          {
+            "vehicle": "gclass",
+            "src": "http://127.0.0.1:6461/assets/images/lead/day-night-cutout-gclass-v1.webp?v=profile-1",
+            "x": -187.609375,
+            "y": 273.78125,
+            "width": 398.90625,
+            "height": 266.0625,
+            "top": 273.78125,
+            "right": 211.296875,
+            "bottom": 539.84375,
+            "left": -187.609375
+          },
+          {
+            "vehicle": "urus",
+            "src": "http://127.0.0.1:6461/assets/images/lead/day-night-cutout-urus-v1.webp?v=profile-1",
+            "x": 1208.328125,
+            "y": 264.96875,
+            "width": 454.578125,
+            "height": 303.203125,
+            "top": 264.96875,
+            "right": 1662.90625,
+            "bottom": 568.171875,
+            "left": 1208.328125
+          }
+        ],
+        "font": "\"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+        "headingSize": "48px",
+        "leadSize": "14px",
+        "overflow": -15,
+        "broken": []
+      },
+      "durationMs": 5244
+    },
+    {
+      "name": "en/about-us at 1440",
+      "passed": true,
+      "evidence": {
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "width": 1425,
+          "height": 540,
+          "top": 0,
+          "right": 1425,
+          "bottom": 540,
+          "left": 0
+        },
+        "copy": {
+          "x": 332.5,
+          "y": 200,
+          "width": 760,
+          "height": 184.609375,
+          "top": 200,
+          "right": 1092.5,
+          "bottom": 384.609375,
+          "left": 332.5
+        },
+        "heading": {
+          "x": 332.5,
+          "y": 232.015625,
+          "width": 760,
+          "height": 117.59375,
+          "top": 232.015625,
+          "right": 1092.5,
+          "bottom": 349.609375,
+          "left": 332.5
+        },
+        "lead": {
+          "x": 490.046875,
+          "y": 357.609375,
+          "width": 444.890625,
+          "height": 27,
+          "top": 357.609375,
+          "right": 934.9375,
+          "bottom": 384.609375,
+          "left": 490.046875
+        },
+        "leadVisible": true,
+        "controls": {
+          "x": 603.875,
+          "y": 408.609375,
+          "width": 217.234375,
+          "height": 44,
+          "top": 408.609375,
+          "right": 821.109375,
+          "bottom": 452.609375,
+          "left": 603.875
+        },
+        "eyebrow": {
+          "x": 332.5,
+          "y": 200,
+          "width": 760,
+          "height": 20.015625,
+          "top": 200,
+          "right": 1092.5,
+          "bottom": 220.015625,
+          "left": 332.5
+        },
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 1425,
+          "height": 0,
+          "top": 0,
+          "right": 1425,
+          "bottom": 0,
+          "left": 0
+        },
+        "logo": {
+          "x": 26,
+          "y": 69,
+          "width": 230,
+          "height": 56,
+          "top": 69,
+          "right": 256,
+          "bottom": 125,
+          "left": 26
+        },
+        "navigation": {
+          "x": 454.203125,
+          "y": 72.5,
+          "width": 516.578125,
+          "height": 49,
+          "top": 72.5,
+          "right": 970.78125,
+          "bottom": 121.5,
+          "left": 454.203125
+        },
+        "backgroundImage": "none",
+        "scene": {
+          "src": "http://127.0.0.1:6461/assets/images/lead/auto-best-desktop-home-v3.webp",
+          "artwork": "image",
+          "x": 0,
+          "y": 0,
+          "width": 1425,
+          "height": 540,
+          "top": 0,
+          "right": 1425,
+          "bottom": 540,
+          "left": 0
+        },
+        "cutouts": [],
+        "font": "\"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+        "headingSize": "56px",
+        "leadSize": "18px",
+        "overflow": -15,
+        "broken": []
+      },
+      "durationMs": 4807
+    }
+  ]
+}

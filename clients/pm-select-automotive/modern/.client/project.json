@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "client": "pm-select-automotive",
+  "templateKey": "modern",
+  "templateVersion": "6f87470c1e3ec8ade7d9ecc07daf9ebe45cb9710",
+  "templateSource": {
+    "repository": "darkapoparka/cars",
+    "revision": "6f87470c1e3ec8ade7d9ecc07daf9ebe45cb9710",
+    "path": "templates/modern",
+    "tree": "51d68e5dd6e3b305191df94e877403fd7b7414e1",
+    "digest": "b035a849efb41d3ed18d97fcf3511850469162c0a990397b74be588179d43588"
+  },
+  "createdAt": "2026-10-10T18:19:43.801Z",
+  "state": "candidate-personalized-needs-build",
+  "publicUrl": null,
+  "qa": {
+    "desktop": false,
+    "mobile": false,
+    "identity": false,
+    "contactPath": false
+  },
+  "crm": {
+    "leadId": "bg-varna-pmselect",
+    "demoProjectId": null,
+    "registered": false
+  },
+  "hosting": {
+    "provider": "vercel",
+    "status": "not-deployed"
+  },
+  "readyToPublish": false
+}

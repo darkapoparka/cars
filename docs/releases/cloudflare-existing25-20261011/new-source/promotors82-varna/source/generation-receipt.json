@@ -1,0 +1,241 @@
+{
+  "strategy": "USE GENERATED CANDIDATE",
+  "identityStatus": "generated improved demo/proposal identity; not official or approved",
+  "publishedBranding": "Published red PRO MOTORS and checkered emblem on dark square; improved proposal retains red cue and checkered idea with larger horizontal typography",
+  "sourceUrls": [
+    "https://promotors82.mobile.bg/"
+  ],
+  "sourceLogoUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h17234866690556728.pic",
+  "workingLogoPath": "C:/Users/radev/Downloads/h17234866690556728.pic",
+  "generatedPath": "C:/Users/radev/.codex/generated_images/01a12a34-d2d7-7571-930a-1ed37e54ff8e/exec-70afd4a6-c3cb-4717-bb6d-3beec59394d7.png",
+  "imageGeneration": {
+    "tool": "image_gen.imagegen",
+    "reference": "exec-70afd4a6-c3cb-4717-bb6d-3beec59394d7",
+    "transparent_background": true,
+    "prompt": "Create a clearly disclosed improved demo proposal for dealer PRO MOTORS. Exact Latin uppercase PRO MOTORS in bold clean extended geometric sans, charcoal. Compact stylized red checkered speed flag of four large square shapes to left, simple large gaps. Horizontal refined lockup, main wordmark dominant and readable. No dark square backdrop, no tiny text, shield, manufacturer logo or claims. Genuine transparent background and counters/gaps, high-resolution flat raster modest transparent padding no shadow/glow/border.",
+    "referenced_image_paths": [],
+    "outputPath": "C:/Users/radev/.codex/generated_images/01a12a34-d2d7-7571-930a-1ed37e54ff8e/exec-70afd4a6-c3cb-4717-bb6d-3beec59394d7.png",
+    "modelVersion": "not exposed by tool"
+  },
+  "surfaceReviewPath": "L:/CODEX/cars/leads/branding/fleet-20261011/promotors82-varna/surface-review.png",
+  "visualAccepted": true,
+  "visualChecks": {
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "surfaces": [
+      "white",
+      "#30343b",
+      "#17191c",
+      "#202023",
+      "#19171d",
+      "#171717",
+      "#b00020",
+      "#405ff2"
+    ],
+    "result": "Inspected exact wordmark spelling, open logo geometry/counters, no backdrop residue/clipping, readable contextual contrast on every palette row."
+  },
+  "authorization": "Owner 11 October 2026 approved fresh disclosed proposals for weak/cluttered source logos; preserve strong marks.",
+  "schemaVersion": 1,
+  "dealer": "promotors82-varna",
+  "state": "asset-verified",
+  "generated": {
+    "path": "C:/Users/radev/.codex/generated_images/01a12a34-d2d7-7571-930a-1ed37e54ff8e/exec-70afd4a6-c3cb-4717-bb6d-3beec59394d7.png",
+    "sha256": "bf0118fb51785446087ec48f4b9148cc6b81623eed0fa92ade29e487bcbc6b9b",
+    "bytes": 387970,
+    "format": "png",
+    "width": 2172,
+    "height": 724,
+    "hasAlpha": true,
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparentRatio": 0.8201488304182819,
+      "opaqueRatio": 0.15505161116368038
+    },
+    "visibleBounds": {
+      "x": 39,
+      "y": 241,
+      "width": 2102,
+      "height": 242
+    }
+  },
+  "assets": {
+    "onLight": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/promotors82-varna/dealer-brand/logo-on-light.webp",
+      "sha256": "eb94ac0ea75c53d943cc1d14eab46031891f6ded9026eefd924c9c76d233debd",
+      "bytes": 48484,
+      "format": "webp",
+      "width": 1496,
+      "height": 235,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.6465382864944818,
+        "opaqueRatio": 0.30630333371259527
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 36,
+        "width": 1400,
+        "height": 162
+      },
+      "publicPath": "/dealer-brand/logo-on-light.webp"
+    },
+    "onDark": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/promotors82-varna/dealer-brand/logo-on-dark.webp",
+      "sha256": "3f473c6a51c99335a8d1449841d399f3d8047ba57cc55bbbae4f45815ce21f2c",
+      "bytes": 30346,
+      "format": "webp",
+      "width": 1496,
+      "height": 235,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.6465382864944818,
+        "opaqueRatio": 0.30630333371259527
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 36,
+        "width": 1400,
+        "height": 162
+      },
+      "publicPath": "/dealer-brand/logo-on-dark.webp"
+    },
+    "onAccent": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/promotors82-varna/dealer-brand/logo-on-accent.webp",
+      "sha256": "3f473c6a51c99335a8d1449841d399f3d8047ba57cc55bbbae4f45815ce21f2c",
+      "bytes": 30346,
+      "format": "webp",
+      "width": 1496,
+      "height": 235,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.6465382864944818,
+        "opaqueRatio": 0.30630333371259527
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 36,
+        "width": 1400,
+        "height": 162
+      },
+      "publicPath": "/dealer-brand/logo-on-accent.webp"
+    }
+  },
+  "master": {
+    "path": "L:/CODEX/cars/leads/branding/fleet-20261011/promotors82-varna/branding/logo-master.png",
+    "sha256": "9ee48df995e5a73eab4e365713c3277383340f049d6596abdbe709467eaedbfd",
+    "bytes": 144834,
+    "format": "png",
+    "width": 1496,
+    "height": 235,
+    "hasAlpha": true,
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparentRatio": 0.6465382864944818,
+      "opaqueRatio": 0.30630333371259527
+    },
+    "visibleBounds": {
+      "x": 48,
+      "y": 36,
+      "width": 1400,
+      "height": 162
+    }
+  },
+  "technicalAcceptance": {
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "surfaces": [
+      "white",
+      "#30343b",
+      "#17191c",
+      "#202023",
+      "#19171d",
+      "#171717",
+      "#b00020",
+      "#405ff2"
+    ],
+    "result": "Inspected exact wordmark spelling, open logo geometry/counters, no backdrop residue/clipping, readable contextual contrast on every palette row."
+  },
+  "integrationVerified": false,
+  "hostedVerified": false,
+  "ownerApproved": false,
+  "exportTool": "docs/logo-refresh/2026-09-18/tools/build-approved-logo-pack.mjs",
+  "exportToolSha256": "7fab60c4000210eff6bbb91f9c35e869bad90834d3bdd09d282a9a51835f0dbc",
+  "exportIsolation": "L:/CODEX/cars/runtime/fleet-logo-20261011/new-a-export",
+  "updatedAt": "2026-10-11T09:55:31.283Z",
+  "preservedSourceOriginal": {
+    "originalPath": "C:/Users/radev/Downloads/h17234866690556728.pic",
+    "path": "L:/CODEX/cars/leads/branding/fleet-20261011/promotors82-varna/source/published-original.pic",
+    "sha256": "54665c34603b43d564e73813de1424fc70be67740752c1863b2a991094ba485a",
+    "bytes": 6138,
+    "width": 160,
+    "height": 160,
+    "format": "jpeg"
+  },
+  "exportSurfaceReviewPath": "L:/CODEX/cars/runtime/fleet-logo-20261011/new-a-export/promotors82-varna-review.png",
+  "retention": {
+    "finalQASheet": "L:/CODEX/cars/leads/branding/fleet-20261011/promotors82-varna/surface-review.png",
+    "toolOriginals": "Preserved on C: at exact recorded paths",
+    "sourceOriginal": "Preserved when available; screenshots and source limitations retained",
+    "scratch": "Owned inactive exporter outputs eligible for retirement; no live consumer binding",
+    "priorAcceptance": null
+  },
+  "sourceEvidence": [
+    {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/promotors82-varna/source/profile.png",
+      "sha256": "e38ad965fa7b5b9567fa386fe0541b0153496595a591488a2d4d084282a0fd4a",
+      "bytes": 94160,
+      "format": "jpeg",
+      "width": 1265,
+      "height": 712,
+      "hasAlpha": false,
+      "alpha": {
+        "min": 255,
+        "max": 255,
+        "transparentRatio": 0,
+        "opaqueRatio": 1
+      },
+      "visibleBounds": {
+        "x": 0,
+        "y": 0,
+        "width": 1265,
+        "height": 712
+      }
+    },
+    {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/promotors82-varna/source/published-original.pic",
+      "sha256": "54665c34603b43d564e73813de1424fc70be67740752c1863b2a991094ba485a",
+      "bytes": 6138,
+      "format": "jpeg",
+      "width": 160,
+      "height": 160,
+      "hasAlpha": false,
+      "alpha": {
+        "min": 255,
+        "max": 255,
+        "transparentRatio": 0,
+        "opaqueRatio": 1
+      },
+      "visibleBounds": {
+        "x": 0,
+        "y": 0,
+        "width": 160,
+        "height": 160
+      }
+    }
+  ],
+  "provenanceFile": "L:/CODEX/cars/leads/branding/fleet-20261011/promotors82-varna/provenance.json"
+}

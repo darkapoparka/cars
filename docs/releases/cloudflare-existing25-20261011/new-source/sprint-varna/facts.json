@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "slug": "sprint-varna",
+  "dealerId": "sprint-varna",
+  "business": {
+    "schemaVersion": 1,
+    "slug": "sprint-varna",
+    "name": "Спринт ауто",
+    "shortName": "Спринт ауто",
+    "city": "Варна",
+    "country": "BG",
+    "countryCode": "BG",
+    "locale": "bg-BG",
+    "currency": "EUR",
+    "distanceUnit": "km",
+    "phone": "0888006224",
+    "phoneDisplay": "0888006224",
+    "phoneE164": "+359888006224",
+    "phones": [
+      "0888006224"
+    ],
+    "addressLine": "бул. Цар Освободител,втората автокъща след Тилком и Италмодалуче посока Аксаково",
+    "address": "бул. Цар Освободител,втората автокъща след Тилком и Италмодалуче посока Аксаково, Варна, България",
+    "hours": "Потвърдете работното време директно с автокъщата.",
+    "email": "",
+    "sourceUrl": "https://sprint.mobile.bg/",
+    "stockUrl": "https://sprint.mobile.bg/",
+    "contactSourceUrl": "https://sprint.mobile.bg/contacts",
+    "observedAt": "2026-10-11T11:32:27.210Z",
+    "inventoryNotice": "Датирана извадка от публични обяви, не складова система в реално време. Потвърдете цената, ДДС и наличността.",
+    "previewNotice": "Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация.",
+    "services": [],
+    "socialLinks": {},
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sourceFacts": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/sprint-varna/source/business-facts.json",
+    "sha256": "137094b6dd3a29cfc6855077b04dd64d97a6c8b3414dfbfed5e511b62d21d77b"
+  },
+  "originalBusinessLiteralsUnchanged": true
+}

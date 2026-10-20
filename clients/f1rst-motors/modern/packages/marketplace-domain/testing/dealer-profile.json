@@ -27,9 +27,9 @@
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=F1rst%20Motors%2C%20Danube%20Building%20-%20409%20Sheikh%20Zayed%20Rd%20-%20Al%20Quoz%20-%20Al%20Quoz%201%20-%20Dubai%2C%20UAE",
     "mapsEmbedUrl": "https://maps.google.com/maps?q=F1rst%20Motors%2C%20Danube%20Building%20-%20409%20Sheikh%20Zayed%20Rd%20-%20Al%20Quoz%20-%20Al%20Quoz%201%20-%20Dubai%2C%20UAE&z=16&output=embed",
     "accent": "#c40101",
-    "logo": "/dealer-brand/logo-on-light.webp",
-    "logoLight": "/dealer-brand/logo-on-light.webp",
-    "logoDark": "/dealer-brand/logo-on-dark.webp",
+    "logo": "/dealer-brand/v2-1cc6f1fb3927da42/logo-on-light.webp",
+    "logoLight": "/dealer-brand/v2-1cc6f1fb3927da42/logo-on-light.webp",
+    "logoDark": "/dealer-brand/v2-1cc6f1fb3927da42/logo-on-dark.webp",
     "socialLinks": {
       "facebook": "",
       "instagram": "",
@@ -93,6 +93,7 @@
       "currency": "AED",
       "mileageValue": 0,
       "mileageUnit": "km",
+      "mileageOnRequest": false,
       "body": "Coupe",
       "bodyType": "coupe",
       "fuel": "Not published in source summary",
@@ -105,9 +106,9 @@
       "drivetrain": "",
       "features": [],
       "images": [
-        "/dealer/stock/1.svg"
+        "/dealer/stock/1.webp"
       ],
-      "image": "/dealer/stock/1.svg",
+      "image": "/dealer/stock/1.webp",
       "sourceUrl": "https://f1rstmotors.com/cars/available",
       "observedAt": "2026-09-09",
       "availability": "Dated listing sample — confirm availability",
@@ -132,7 +133,7 @@
         "body": "Coupe",
         "condition": "new",
         "availability": "Dated listing sample — confirm availability",
-        "image": "/dealer/stock/1.svg"
+        "image": "/dealer/stock/1.webp"
       }
     },
     {
@@ -148,6 +149,7 @@
       "currency": "AED",
       "mileageValue": 0,
       "mileageUnit": "km",
+      "mileageOnRequest": false,
       "body": "Convertible",
       "bodyType": "convertible",
       "fuel": "Not published in source summary",
@@ -160,9 +162,9 @@
       "drivetrain": "",
       "features": [],
       "images": [
-        "/dealer/stock/2.svg"
+        "/dealer/stock/2.webp"
       ],
-      "image": "/dealer/stock/2.svg",
+      "image": "/dealer/stock/2.webp",
       "sourceUrl": "https://f1rstmotors.com/cars/available",
       "observedAt": "2026-09-09",
       "availability": "Dated listing sample — confirm availability",
@@ -187,7 +189,7 @@
         "body": "Convertible",
         "condition": "new",
         "availability": "Dated listing sample — confirm availability",
-        "image": "/dealer/stock/2.svg"
+        "image": "/dealer/stock/2.webp"
       }
     },
     {
@@ -203,6 +205,7 @@
       "currency": "AED",
       "mileageValue": 5669,
       "mileageUnit": "km",
+      "mileageOnRequest": false,
       "body": "Coupe",
       "bodyType": "coupe",
       "fuel": "Not published in source summary",
@@ -215,9 +218,9 @@
       "drivetrain": "",
       "features": [],
       "images": [
-        "/dealer/stock/3.svg"
+        "/dealer/stock/3.webp"
       ],
-      "image": "/dealer/stock/3.svg",
+      "image": "/dealer/stock/3.webp",
       "sourceUrl": "https://f1rstmotors.com/cars/available",
       "observedAt": "2026-09-09",
       "availability": "Dated listing sample — confirm availability",
@@ -242,7 +245,7 @@
         "body": "Coupe",
         "condition": "used",
         "availability": "Dated listing sample — confirm availability",
-        "image": "/dealer/stock/3.svg"
+        "image": "/dealer/stock/3.webp"
       }
     },
     {
@@ -258,6 +261,7 @@
       "currency": "AED",
       "mileageValue": 13000,
       "mileageUnit": "km",
+      "mileageOnRequest": false,
       "body": "Coupe",
       "bodyType": "coupe",
       "fuel": "Not published in source summary",
@@ -270,9 +274,9 @@
       "drivetrain": "",
       "features": [],
       "images": [
-        "/dealer/stock/4.svg"
+        "/dealer/stock/4.webp"
       ],
-      "image": "/dealer/stock/4.svg",
+      "image": "/dealer/stock/4.webp",
       "sourceUrl": "https://f1rstmotors.com/cars/available",
       "observedAt": "2026-09-09",
       "availability": "Dated listing sample — confirm availability",
@@ -297,7 +301,7 @@
         "body": "Coupe",
         "condition": "used",
         "availability": "Dated listing sample — confirm availability",
-        "image": "/dealer/stock/4.svg"
+        "image": "/dealer/stock/4.webp"
       }
     },
     {
@@ -313,6 +317,7 @@
       "currency": "AED",
       "mileageValue": 3250,
       "mileageUnit": "km",
+      "mileageOnRequest": false,
       "body": "Coupe",
       "bodyType": "coupe",
       "fuel": "Not published in source summary",
@@ -325,9 +330,9 @@
       "drivetrain": "",
       "features": [],
       "images": [
-        "/dealer/stock/5.svg"
+        "/dealer/stock/5.webp"
       ],
-      "image": "/dealer/stock/5.svg",
+      "image": "/dealer/stock/5.webp",
       "sourceUrl": "https://f1rstmotors.com/cars/available",
       "observedAt": "2026-09-09",
       "availability": "Dated listing sample — confirm availability",
@@ -352,7 +357,7 @@
         "body": "Coupe",
         "condition": "used",
         "availability": "Dated listing sample — confirm availability",
-        "image": "/dealer/stock/5.svg"
+        "image": "/dealer/stock/5.webp"
       }
     },
     {
@@ -368,6 +373,7 @@
       "currency": "AED",
       "mileageValue": 0,
       "mileageUnit": "km",
+      "mileageOnRequest": false,
       "body": "Coupe",
       "bodyType": "coupe",
       "fuel": "Not published in source summary",
@@ -380,9 +386,9 @@
       "drivetrain": "",
       "features": [],
       "images": [
-        "/dealer/stock/6.svg"
+        "/dealer/stock/6.webp"
       ],
-      "image": "/dealer/stock/6.svg",
+      "image": "/dealer/stock/6.webp",
       "sourceUrl": "https://f1rstmotors.com/cars/available",
       "observedAt": "2026-09-09",
       "availability": "Dated listing sample — confirm availability",
@@ -407,7 +413,7 @@
         "body": "Coupe",
         "condition": "new",
         "availability": "Dated listing sample — confirm availability",
-        "image": "/dealer/stock/6.svg"
+        "image": "/dealer/stock/6.webp"
       }
     },
     {
@@ -423,6 +429,7 @@
       "currency": "AED",
       "mileageValue": 10200,
       "mileageUnit": "km",
+      "mileageOnRequest": false,
       "body": "Coupe",
       "bodyType": "coupe",
       "fuel": "Not published in source summary",
@@ -435,9 +442,9 @@
       "drivetrain": "",
       "features": [],
       "images": [
-        "/dealer/stock/7.svg"
+        "/dealer/stock/7.webp"
       ],
-      "image": "/dealer/stock/7.svg",
+      "image": "/dealer/stock/7.webp",
       "sourceUrl": "https://f1rstmotors.com/cars/available",
       "observedAt": "2026-09-09",
       "availability": "Dated listing sample — confirm availability",
@@ -462,7 +469,7 @@
         "body": "Coupe",
         "condition": "used",
         "availability": "Dated listing sample — confirm availability",
-        "image": "/dealer/stock/7.svg"
+        "image": "/dealer/stock/7.webp"
       }
     },
     {
@@ -478,6 +485,7 @@
       "currency": "AED",
       "mileageValue": 692,
       "mileageUnit": "km",
+      "mileageOnRequest": false,
       "body": "Coupe",
       "bodyType": "coupe",
       "fuel": "Not published in source summary",
@@ -490,9 +498,9 @@
       "drivetrain": "",
       "features": [],
       "images": [
-        "/dealer/stock/8.svg"
+        "/dealer/stock/8.webp"
       ],
-      "image": "/dealer/stock/8.svg",
+      "image": "/dealer/stock/8.webp",
       "sourceUrl": "https://f1rstmotors.com/cars/available",
       "observedAt": "2026-09-09",
       "availability": "Dated listing sample — confirm availability",
@@ -517,7 +525,7 @@
         "body": "Coupe",
         "condition": "used",
         "availability": "Dated listing sample — confirm availability",
-        "image": "/dealer/stock/8.svg"
+        "image": "/dealer/stock/8.webp"
       }
     },
     {
@@ -533,6 +541,7 @@
       "currency": "AED",
       "mileageValue": 2550,
       "mileageUnit": "km",
+      "mileageOnRequest": false,
       "body": "Coupe",
       "bodyType": "coupe",
       "fuel": "Not published in source summary",
@@ -588,6 +597,7 @@
       "currency": "AED",
       "mileageValue": 0,
       "mileageUnit": "km",
+      "mileageOnRequest": false,
       "body": "Coupe",
       "bodyType": "coupe",
       "fuel": "Not published in source summary",
@@ -600,9 +610,9 @@
       "drivetrain": "",
       "features": [],
       "images": [
-        "/dealer/stock/10.svg"
+        "/dealer/stock/10.webp"
       ],
-      "image": "/dealer/stock/10.svg",
+      "image": "/dealer/stock/10.webp",
       "sourceUrl": "https://f1rstmotors.com/cars/available",
       "observedAt": "2026-09-09",
       "availability": "Dated listing sample — confirm availability",
@@ -627,7 +637,7 @@
         "body": "Coupe",
         "condition": "new",
         "availability": "Dated listing sample — confirm availability",
-        "image": "/dealer/stock/10.svg"
+        "image": "/dealer/stock/10.webp"
       }
     }
   ],
@@ -665,6 +675,7 @@
     "disclosure": "Dated public stock sample, not a live feed. Confirm price, specifications and availability directly with F1rst Motors. Demo forms do not send messages."
   },
   "sourceCount": 10,
+  "stockKind": "",
   "logoContract": {
     "schemaVersion": 1,
     "dealer": "f1rst-motors",
@@ -673,19 +684,19 @@
     "originalSha256": "43d4c903900bfdce276720f57cf3c638cd890e99d4ea504e6c7bd5789b41ef70",
     "assets": {
       "onLight": {
-        "publicPath": "/dealer-brand/logo-on-light.webp",
-        "sha256": "833105e3bee3f1f81afa6ce7ebbfa4e4e2b2d51fa5e72efc28335d74b3d5f624",
-        "bytes": 110642
+        "publicPath": "/dealer-brand/v2-1cc6f1fb3927da42/logo-on-light.webp",
+        "sha256": "09810a4944188612506d7307ffdfb1aae05c0abd7d5204a4d8bbdf37d6229844",
+        "bytes": 167716
       },
       "onDark": {
-        "publicPath": "/dealer-brand/logo-on-dark.webp",
-        "sha256": "789523ed4d11bf57d34bedf8800745bae3f7db54b93fe35ce6e45aad16933665",
-        "bytes": 109150
+        "publicPath": "/dealer-brand/v2-1cc6f1fb3927da42/logo-on-dark.webp",
+        "sha256": "f1fb1e7811f2161cddaef25c1f0343da687fc9142fccb53c101b2569219e580e",
+        "bytes": 222918
       },
       "onAccent": {
-        "publicPath": "/dealer-brand/logo-on-accent.webp",
-        "sha256": "fa265cd54c49a56be62284c02a85ef2400c67321641c66a3849295966f4bc6e1",
-        "bytes": 89242
+        "publicPath": "/dealer-brand/v2-1cc6f1fb3927da42/logo-on-accent.webp",
+        "sha256": "6774b83db3f67e0d016fb3544eeb9262f67cbc022aa66c2628fb4284508ff112",
+        "bytes": 99372
       }
     },
     "preparedAt": "2026-09-19T04:59:48.789Z",

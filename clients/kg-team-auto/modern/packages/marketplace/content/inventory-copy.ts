@@ -1,200 +1,194 @@
 import type { DealerInventoryCopy } from "../lead-site";
-/** Reviewed text for the existing sample stock only. */
+/** Dealer-owned display copy from the exact personalized listing set. */
 export const inventoryCopy = {
-  "bmw-x5-m50d-sofia-2020": {
-    sourceDescription:
-      "Примерна обява за BMW X5 M50d с 360 камери, панорама, HUD и обдухване. Снимката е илюстративна; наличност и условия се потвърждават с автокъщата.",
-    bg: {
-      description:
-        "Примерна обява за BMW X5 M50d с 360 камери, панорама, HUD и обдухване. Снимката е илюстративна; наличност и условия се потвърждават с автокъщата.",
-      imageAlts: ["Черен BMW X5 SUV"],
+  "toyota-yaris-1-33i-116000km-6-speed-swiss-edition-2014-11783754278742708": {
+    "sourceDescription": "Датирани примерни обяви, не потвърдена наличност. Проверете цена, състояние и местоположение при продавача.",
+    "en": {
+      "description": "Dated listing samples, not confirmed stock. Check price, condition and location with the seller.",
+      "imageAlts": [
+        "Toyota Yaris 1.33I 116000KM 6-SPEED SWISS EDITION",
+        "Toyota Yaris 1.33I 116000KM 6-SPEED SWISS EDITION",
+        "Toyota Yaris 1.33I 116000KM 6-SPEED SWISS EDITION"
+      ]
     },
-    en: {
-      description:
-        "Sample listing for a BMW X5 M50d with 360-degree cameras, panoramic roof, head-up display and ventilated seats. The image is illustrative; availability and terms must be confirmed with the dealership.",
-      imageAlts: ["Black BMW X5 SUV"],
-    },
+    "bg": {
+      "description": "Датирани примерни обяви, не потвърдена наличност. Проверете цена, състояние и местоположение при продавача.",
+      "imageAlts": [
+        "Toyota Yaris 1.33I 116000KM 6-SPEED SWISS EDITION",
+        "Toyota Yaris 1.33I 116000KM 6-SPEED SWISS EDITION",
+        "Toyota Yaris 1.33I 116000KM 6-SPEED SWISS EDITION"
+      ]
+    }
   },
-  "mercedes-benz-gls-400d-4matic-amg-sofia-2021": {
-    sourceDescription:
-      "GLS 400d 4MATIC AMG Line с Burmester и панорама. Голям семеен SUV от K-G Team Auto - наличен за оглед в Пловдив.",
-    bg: {
-      description:
-        "GLS 400d 4MATIC AMG Line с Burmester и панорама. Голям семеен SUV от {shortName} - наличен за оглед в {city}.",
-      imageAlts: ["Mercedes-Benz GLS 4MATIC AMG SUV"],
+  "nissan-qashqai-2-0i-131000km-automatic-2014-21785829117309786": {
+    "sourceDescription": "Датирани примерни обяви, не потвърдена наличност. Проверете цена, състояние и местоположение при продавача.",
+    "en": {
+      "description": "Dated listing samples, not confirmed stock. Check price, condition and location with the seller.",
+      "imageAlts": [
+        "Nissan Qashqai 2.0i 131000KM AUTOMATIC",
+        "Nissan Qashqai 2.0i 131000KM AUTOMATIC",
+        "Nissan Qashqai 2.0i 131000KM AUTOMATIC"
+      ]
     },
-    en: {
-      description:
-        "GLS 400d 4MATIC AMG Line with Burmester audio and a panoramic roof. A large family SUV from {shortName}, available to view in {city}.",
-      imageAlts: ["Mercedes-Benz GLS 4MATIC AMG SUV"],
-    },
+    "bg": {
+      "description": "Датирани примерни обяви, не потвърдена наличност. Проверете цена, състояние и местоположение при продавача.",
+      "imageAlts": [
+        "Nissan Qashqai 2.0i 131000KM AUTOMATIC",
+        "Nissan Qashqai 2.0i 131000KM AUTOMATIC",
+        "Nissan Qashqai 2.0i 131000KM AUTOMATIC"
+      ]
+    }
   },
-  "bmw-750e-xdrive-m-sport-sofia-2024": {
-    sourceDescription:
-      "Очакван внос: 7 Series plug-in hybrid с M Sport. Нисък пробег - K-G Team Auto организира доставка и оглед в Пловдив.",
-    bg: {
-      description:
-        "Очакван внос: 7 Series plug-in hybrid с M Sport. Нисък пробег - {shortName} организира доставка и оглед в {city}.",
-      imageAlts: ["BMW 7 Series"],
+  "mitsubishi-colt-1-5-i-swiss-2007-11678716951277480": {
+    "sourceDescription": "Датирани примерни обяви, не потвърдена наличност. Проверете цена, състояние и местоположение при продавача.",
+    "en": {
+      "description": "Dated listing samples, not confirmed stock. Check price, condition and location with the seller.",
+      "imageAlts": [
+        "Mitsubishi Colt 1.5 I SWISS",
+        "Mitsubishi Colt 1.5 I SWISS",
+        "Mitsubishi Colt 1.5 I SWISS"
+      ]
     },
-    en: {
-      description:
-        "Expected import: 7 Series plug-in hybrid with M Sport. Low mileage; {shortName} arranges delivery and viewing in {city}.",
-      imageAlts: ["BMW 7 Series"],
-    },
+    "bg": {
+      "description": "Датирани примерни обяви, не потвърдена наличност. Проверете цена, състояние и местоположение при продавача.",
+      "imageAlts": [
+        "Mitsubishi Colt 1.5 I SWISS",
+        "Mitsubishi Colt 1.5 I SWISS",
+        "Mitsubishi Colt 1.5 I SWISS"
+      ]
+    }
   },
-  "mercedes-benz-e-63-s-amg-sofia-2021": {
-    sourceDescription:
-      "E 63 S AMG facelift с 360, HUD и Burmester. Спортна лимузина от K-G Team Auto.",
-    bg: {
-      description:
-        "E 63 S AMG facelift с 360, HUD и Burmester. Спортна лимузина от {dealer}.",
-      imageAlts: ["Mercedes-Benz E-Class седан"],
+  "mini-cooper-1-6i-153000km-euro-5-75ps-2013-11773570472954394": {
+    "sourceDescription": "Датирани примерни обяви, не потвърдена наличност. Проверете цена, състояние и местоположение при продавача.",
+    "en": {
+      "description": "Dated listing samples, not confirmed stock. Check price, condition and location with the seller.",
+      "imageAlts": [
+        "Mini Cooper 1.6i 153000km EURO-5 75PS.",
+        "Mini Cooper 1.6i 153000km EURO-5 75PS.",
+        "Mini Cooper 1.6i 153000km EURO-5 75PS."
+      ]
     },
-    en: {
-      description:
-        "Facelift E 63 S AMG with 360-degree cameras, head-up display and Burmester audio. A sports saloon from {dealer}.",
-      imageAlts: ["Mercedes-Benz E-Class saloon"],
-    },
+    "bg": {
+      "description": "Датирани примерни обяви, не потвърдена наличност. Проверете цена, състояние и местоположение при продавача.",
+      "imageAlts": [
+        "Mini Cooper 1.6i 153000km EURO-5 75PS.",
+        "Mini Cooper 1.6i 153000km EURO-5 75PS.",
+        "Mini Cooper 1.6i 153000km EURO-5 75PS."
+      ]
+    }
   },
-  "mercedes-benz-cls-400d-4matic-sofia-2020": {
-    sourceDescription:
-      "CLS 400d 4MATIC AMG Line Designo с 360 камери. Елегантно купе-седан от K-G Team Auto в Пловдив.",
-    bg: {
-      description:
-        "CLS 400d 4MATIC AMG Line Designo с 360 камери. Елегантно купе-седан от {shortName} в {city}.",
-      imageAlts: ["Mercedes CLS"],
+  "honda-jazz-1-4-si-automatic-sport-edition-2013-11780222156478967": {
+    "sourceDescription": "Датирани примерни обяви, не потвърдена наличност. Проверете цена, състояние и местоположение при продавача.",
+    "en": {
+      "description": "Dated listing samples, not confirmed stock. Check price, condition and location with the seller.",
+      "imageAlts": [
+        "Honda Jazz 1.4-SI AUTOMATIC SPORT EDITION",
+        "Honda Jazz 1.4-SI AUTOMATIC SPORT EDITION",
+        "Honda Jazz 1.4-SI AUTOMATIC SPORT EDITION"
+      ]
     },
-    en: {
-      description:
-        "CLS 400d 4MATIC AMG Line Designo with 360-degree cameras. An elegant four-door coupe from {shortName} in {city}.",
-      imageAlts: ["Mercedes CLS"],
-    },
+    "bg": {
+      "description": "Датирани примерни обяви, не потвърдена наличност. Проверете цена, състояние и местоположение при продавача.",
+      "imageAlts": [
+        "Honda Jazz 1.4-SI AUTOMATIC SPORT EDITION",
+        "Honda Jazz 1.4-SI AUTOMATIC SPORT EDITION",
+        "Honda Jazz 1.4-SI AUTOMATIC SPORT EDITION"
+      ]
+    }
   },
-  "audi-q8-50-tdi-quattro-s-line-sofia-2021": {
-    sourceDescription:
-      "Очакван внос: Q8 50 TDI quattro S line Plus. Купе-SUV с quattro за клиенти на K-G Team Auto.",
-    bg: {
-      description:
-        "Очакван внос: Q8 50 TDI quattro S line Plus. Купе-SUV с quattro за клиенти на {shortName}.",
-      imageAlts: ["Audi Q8"],
+  "honda-cr-v-2-2-i-ctdi-177000km-executiv-2009-21788253346975689": {
+    "sourceDescription": "Датирани примерни обяви, не потвърдена наличност. Проверете цена, състояние и местоположение при продавача.",
+    "en": {
+      "description": "Dated listing samples, not confirmed stock. Check price, condition and location with the seller.",
+      "imageAlts": [
+        "Honda Cr-v 2.2 I-CTDI 177000KM EXECUTIV",
+        "Honda Cr-v 2.2 I-CTDI 177000KM EXECUTIV",
+        "Honda Cr-v 2.2 I-CTDI 177000KM EXECUTIV"
+      ]
     },
-    en: {
-      description:
-        "Expected import: Q8 50 TDI quattro S line Plus. A coupe-SUV with quattro for {shortName} customers.",
-      imageAlts: ["Audi Q8"],
-    },
+    "bg": {
+      "description": "Датирани примерни обяви, не потвърдена наличност. Проверете цена, състояние и местоположение при продавача.",
+      "imageAlts": [
+        "Honda Cr-v 2.2 I-CTDI 177000KM EXECUTIV",
+        "Honda Cr-v 2.2 I-CTDI 177000KM EXECUTIV",
+        "Honda Cr-v 2.2 I-CTDI 177000KM EXECUTIV"
+      ]
+    }
   },
-  "mercedes-benz-gle-400d-coupe-sofia-2021": {
-    sourceDescription:
-      "GLE 400d Coupe 4MATIC AMG с 360 и Burmester. Наличен при K-G Team Auto - Пловдив.",
-    bg: {
-      description:
-        "GLE 400d Coupe 4MATIC AMG с 360 и Burmester. Наличен при {dealer} - {city}.",
-      imageAlts: ["Черен Mercedes-Benz GLE SUV"],
+  "vw-golf-vi-tdi-swiss-edition-6-speed-4x4-2013-11782979504874945": {
+    "sourceDescription": "Датирани примерни обяви, не потвърдена наличност. Проверете цена, състояние и местоположение при продавача.",
+    "en": {
+      "description": "Dated listing samples, not confirmed stock. Check price, condition and location with the seller.",
+      "imageAlts": [
+        "VW Golf VI-TDI SWISS EDITION 6-SPEED 4X4",
+        "VW Golf VI-TDI SWISS EDITION 6-SPEED 4X4",
+        "VW Golf VI-TDI SWISS EDITION 6-SPEED 4X4"
+      ]
     },
-    en: {
-      description:
-        "GLE 400d Coupe 4MATIC AMG with 360-degree cameras and Burmester audio. Available from {dealer} in {city}.",
-      imageAlts: ["Black Mercedes-Benz GLE SUV"],
-    },
+    "bg": {
+      "description": "Датирани примерни обяви, не потвърдена наличност. Проверете цена, състояние и местоположение при продавача.",
+      "imageAlts": [
+        "VW Golf VI-TDI SWISS EDITION 6-SPEED 4X4",
+        "VW Golf VI-TDI SWISS EDITION 6-SPEED 4X4",
+        "VW Golf VI-TDI SWISS EDITION 6-SPEED 4X4"
+      ]
+    }
   },
-  "mercedes-benz-gle-53-amg-coupe-sofia-2022": {
-    sourceDescription:
-      "Очакван внос: GLE 53 AMG Coupe Night Pack. K-G Team Auto предлага собствен лизинг след оглед.",
-    bg: {
-      description:
-        "Очакван внос: GLE 53 AMG Coupe Night Pack. {shortName} предлага собствен лизинг след оглед.",
-      imageAlts: ["Бял Mercedes-Benz GLE AMG SUV"],
+  "toyota-auris-1-8-hsd-181000km-euro5-2011-11778753257201470": {
+    "sourceDescription": "Датирани примерни обяви, не потвърдена наличност. Проверете цена, състояние и местоположение при продавача.",
+    "en": {
+      "description": "Dated listing samples, not confirmed stock. Check price, condition and location with the seller.",
+      "imageAlts": [
+        "Toyota Auris 1.8 HSD 181000KM EURO5",
+        "Toyota Auris 1.8 HSD 181000KM EURO5",
+        "Toyota Auris 1.8 HSD 181000KM EURO5"
+      ]
     },
-    en: {
-      description:
-        "Expected import: GLE 53 AMG Coupe Night Pack. {shortName} offers in-house leasing after a viewing.",
-      imageAlts: ["White Mercedes-Benz GLE AMG SUV"],
-    },
+    "bg": {
+      "description": "Датирани примерни обяви, не потвърдена наличност. Проверете цена, състояние и местоположение при продавача.",
+      "imageAlts": [
+        "Toyota Auris 1.8 HSD 181000KM EURO5",
+        "Toyota Auris 1.8 HSD 181000KM EURO5",
+        "Toyota Auris 1.8 HSD 181000KM EURO5"
+      ]
+    }
   },
-  "mercedes-benz-s-350d-long-amg-sofia-2019": {
-    sourceDescription:
-      "S 350d Long с S63 AMG оптика и пакет за шофьор. Представителна лимузина от K-G Team Auto.",
-    bg: {
-      description:
-        "S 350d Long с S63 AMG оптика и пакет за шофьор. Представителна лимузина от {shortName}.",
-      imageAlts: ["Mercedes-Benz S-Class седан"],
+  "suzuki-swift-1-3i-151000km-swiss-edition-2010-11777536762184091": {
+    "sourceDescription": "Датирани примерни обяви, не потвърдена наличност. Проверете цена, състояние и местоположение при продавача.",
+    "en": {
+      "description": "Dated listing samples, not confirmed stock. Check price, condition and location with the seller.",
+      "imageAlts": [
+        "Suzuki Swift 1.3i 151000km. SWISS EDITION",
+        "Suzuki Swift 1.3i 151000km. SWISS EDITION",
+        "Suzuki Swift 1.3i 151000km. SWISS EDITION"
+      ]
     },
-    en: {
-      description:
-        "S 350d Long with S63 AMG styling and a chauffeur package. An executive saloon from {shortName}.",
-      imageAlts: ["Mercedes-Benz S-Class saloon"],
-    },
+    "bg": {
+      "description": "Датирани примерни обяви, не потвърдена наличност. Проверете цена, състояние и местоположение при продавача.",
+      "imageAlts": [
+        "Suzuki Swift 1.3i 151000km. SWISS EDITION",
+        "Suzuki Swift 1.3i 151000km. SWISS EDITION",
+        "Suzuki Swift 1.3i 151000km. SWISS EDITION"
+      ]
+    }
   },
-  "mercedes-benz-v-250d-vip-business-sofia-2018": {
-    sourceDescription:
-      "V 250d VIP Business с TV, обдухване и подгряване. Бизнес ван от K-G Team Auto.",
-    bg: {
-      description:
-        "V 250d VIP Business с TV, обдухване и подгряване. Бизнес ван от {dealer}.",
-      imageAlts: ["V-Class ван"],
+  "subaru-impreza-2-0i-swiss-edition-2007-11701247770704576": {
+    "sourceDescription": "Датирани примерни обяви, не потвърдена наличност. Проверете цена, състояние и местоположение при продавача.",
+    "en": {
+      "description": "Dated listing samples, not confirmed stock. Check price, condition and location with the seller.",
+      "imageAlts": [
+        "Subaru Impreza 2.0i SWISS EDITION",
+        "Subaru Impreza 2.0i SWISS EDITION",
+        "Subaru Impreza 2.0i SWISS EDITION"
+      ]
     },
-    en: {
-      description:
-        "V 250d VIP Business with TV, ventilated and heated seats. A business van from {dealer}.",
-      imageAlts: ["V-Class van"],
-    },
-  },
-  "range-rover-sport-svr-sofia-2021": {
-    sourceDescription:
-      "Range Rover Sport SVR 600 к.с. с панорама, 360 и Meridian. Висок клас SUV от K-G Team Auto.",
-    bg: {
-      description:
-        "Range Rover Sport SVR 600 к.с. с панорама, 360 и Meridian. Висок клас SUV от {shortName}.",
-      imageAlts: ["Range Rover Sport"],
-    },
-    en: {
-      description:
-        "Range Rover Sport SVR, 600 hp, with a panoramic roof, 360-degree cameras and Meridian audio. A premium SUV from {shortName}.",
-      imageAlts: ["Range Rover Sport"],
-    },
-  },
-  "bmw-430i-xdrive-gran-coupe-sofia-2023": {
-    sourceDescription:
-      "430i xDrive Gran Coupe M Sport с digital кокпит и Harman Kardon. K-G Team Auto, Пловдив.",
-    bg: {
-      description:
-        "430i xDrive Gran Coupe M Sport с digital кокпит и Harman Kardon. {shortName}, {city}.",
-      imageAlts: ["BMW 4 Series"],
-    },
-    en: {
-      description:
-        "430i xDrive Gran Coupe M Sport with a digital cockpit and Harman Kardon audio. {shortName}, {city}.",
-      imageAlts: ["BMW 4 Series"],
-    },
-  },
-  "bmw-m4-competition-sofia-2021": {
-    sourceDescription:
-      "BMW M4 Competition с M пакет, спортен салон и digital кокпит. Купе от портфолиото на K-G Team Auto.",
-    bg: {
-      description:
-        "BMW M4 Competition с M пакет, спортен салон и digital кокпит. Купе от портфолиото на {dealer}.",
-      imageAlts: ["Червено BMW M4 Competition пред модерен шоурум"],
-    },
-    en: {
-      description:
-        "BMW M4 Competition with M package, sports interior and digital cockpit. A coupe from the {dealer} collection.",
-      imageAlts: ["Red BMW M4 Competition in front of a modern showroom"],
-    },
-  },
-  "bmw-x5-xdrive40d-berlin-2022": {
-    sourceDescription:
-      "Крос-бордер демо наличност с оторизирани медии и право на доставка. Финалният транспорт, данъци и регистрация се уточняват с оферта от K-G Team Auto.",
-    bg: {
-      description:
-        "Крос-бордер демо наличност с оторизирани медии и право на доставка. Финалният транспорт, данъци и регистрация се уточняват с оферта от {shortName}.",
-      imageAlts: ["Черен BMW X5 SUV в градска среда"],
-    },
-    en: {
-      description:
-        "Cross-border demo inventory with authorized images and delivery rights. Final transport, tax and registration costs are confirmed in a quote from {shortName}.",
-      imageAlts: ["Black BMW X5 SUV in an urban setting"],
-    },
-  },
+    "bg": {
+      "description": "Датирани примерни обяви, не потвърдена наличност. Проверете цена, състояние и местоположение при продавача.",
+      "imageAlts": [
+        "Subaru Impreza 2.0i SWISS EDITION",
+        "Subaru Impreza 2.0i SWISS EDITION",
+        "Subaru Impreza 2.0i SWISS EDITION"
+      ]
+    }
+  }
 } satisfies DealerInventoryCopy;

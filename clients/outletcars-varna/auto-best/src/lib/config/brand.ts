@@ -2,7 +2,7 @@ export type BrandConfig = {
   name: string;
   shortName: string;
   city: string;
-  showroomCoordinates: { latitude: number; longitude: number };
+  showroomCoordinates: { latitude: number; longitude: number } | null;
   addressLine: string;
   address: string;
   phone: string;
@@ -24,7 +24,7 @@ export const brand = {
   name,
   shortName,
   city,
-  showroomCoordinates: {"latitude":0,"longitude":0},
+  showroomCoordinates: null,
   youtubeUrl: "",
   instagramUrl: "",
   facebookUrl: "",
@@ -33,6 +33,6 @@ export const brand = {
   addressLine,
   address: "бул. Янош Хуняди 518, срещу КАТ Варна, Варна, България",
   appointment: "Пон.–пет. 08:30–17:30; съб.–нед. почивни дни",
-  logo: "/dealer-brand/logo-on-light.webp",
-  logoOnDark: "/dealer-brand/logo-on-dark.webp"
+  logo: "/dealer-brand/v2-5c0d2d99cd366a51/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/v2-5c0d2d99cd366a51/logo-on-dark.webp"
 } as const satisfies BrandConfig;

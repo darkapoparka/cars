@@ -49,7 +49,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Car Market Yorkshire",
       "verificationStatus": "unverified",
       "city": "Dewsbury, West Yorkshire",
-      "logoUrl": "/dealer-brand/logo.webp"
+      "logoUrl": "/dealer-brand/v2-c52eb17295e48be5/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": true
@@ -100,7 +100,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Car Market Yorkshire",
       "verificationStatus": "unverified",
       "city": "Dewsbury, West Yorkshire",
-      "logoUrl": "/dealer-brand/logo.webp"
+      "logoUrl": "/dealer-brand/v2-c52eb17295e48be5/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": true
@@ -151,7 +151,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Car Market Yorkshire",
       "verificationStatus": "unverified",
       "city": "Dewsbury, West Yorkshire",
-      "logoUrl": "/dealer-brand/logo.webp"
+      "logoUrl": "/dealer-brand/v2-c52eb17295e48be5/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": true
@@ -202,7 +202,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Car Market Yorkshire",
       "verificationStatus": "unverified",
       "city": "Dewsbury, West Yorkshire",
-      "logoUrl": "/dealer-brand/logo.webp"
+      "logoUrl": "/dealer-brand/v2-c52eb17295e48be5/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": false
@@ -253,7 +253,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Car Market Yorkshire",
       "verificationStatus": "unverified",
       "city": "Dewsbury, West Yorkshire",
-      "logoUrl": "/dealer-brand/logo.webp"
+      "logoUrl": "/dealer-brand/v2-c52eb17295e48be5/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": false
@@ -304,415 +304,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Car Market Yorkshire",
       "verificationStatus": "unverified",
       "city": "Dewsbury, West Yorkshire",
-      "logoUrl": "/dealer-brand/logo.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1002",
-    "slug": "nissan-gt-r-2010-at-sample-1",
-    "category": "car",
-    "dealerOrgId": "dealer-dewsbury-car-market-yorkshire",
-    "status": "active",
-    "title": "Nissan Gt-R 3.8 V6 Black Edition Auto 4WD Euro 4 2dr",
-    "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
-    "price": {
-      "amount": 42495,
-      "currency": "GBP"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/dealer-stock/coupe.webp",
-        "alt": "Nissan Gt-R 3.8 V6 Black Edition Auto 4WD Euro 4 2dr"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Dewsbury, West Yorkshire",
-      "region": "Dewsbury, West Yorkshire",
-      "country": "United Kingdom"
-    },
-    "spec": {
-      "make": "Nissan",
-      "model": "Gt-R",
-      "trim": "3.8 V6 Black Edition Auto 4WD Euro 4 2dr",
-      "year": 2010,
-      "bodyType": "coupe",
-      "fuelType": "gasoline",
-      "transmission": "automatic",
-      "mileageValue": 115414,
-      "mileageUnit": "km",
-      "mileageSourceValue": 71715,
-      "mileageSourceUnit": "mi"
-    },
-    "seller": {
-      "id": "dealer-dewsbury-car-market-yorkshire",
-      "type": "dealer",
-      "displayName": "Car Market Yorkshire",
-      "verificationStatus": "unverified",
-      "city": "Dewsbury, West Yorkshire",
-      "logoUrl": "/dealer-brand/logo.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1003",
-    "slug": "audi-a6-saloon-2022-at-sample-2",
-    "category": "car",
-    "dealerOrgId": "dealer-dewsbury-car-market-yorkshire",
-    "status": "active",
-    "title": "Audi A6 Saloon 2.0 TDI 40 S line S Tronic quattro Euro 6 (s/s) 4dr",
-    "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
-    "price": {
-      "amount": 22995,
-      "currency": "GBP"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/dealer-stock/sedan.webp",
-        "alt": "Audi A6 Saloon 2.0 TDI 40 S line S Tronic quattro Euro 6 (s/s) 4dr"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Dewsbury, West Yorkshire",
-      "region": "Dewsbury, West Yorkshire",
-      "country": "United Kingdom"
-    },
-    "spec": {
-      "make": "Audi",
-      "model": "A6 Saloon",
-      "trim": "2.0 TDI 40 S line S Tronic quattro Euro 6 (s/s) 4dr",
-      "year": 2022,
-      "bodyType": "other",
-      "fuelType": "diesel",
-      "transmission": "automatic",
-      "mileageValue": 56296,
-      "mileageUnit": "km",
-      "mileageSourceValue": 34981,
-      "mileageSourceUnit": "mi"
-    },
-    "seller": {
-      "id": "dealer-dewsbury-car-market-yorkshire",
-      "type": "dealer",
-      "displayName": "Car Market Yorkshire",
-      "verificationStatus": "unverified",
-      "city": "Dewsbury, West Yorkshire",
-      "logoUrl": "/dealer-brand/logo.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1004",
-    "slug": "land-rover-range-rover-velar-2019-at-sample-3",
-    "category": "car",
-    "dealerOrgId": "dealer-dewsbury-car-market-yorkshire",
-    "status": "active",
-    "title": "Land Rover Range Rover Velar 2.0 D180 R-Dynamic S Auto 4WD Euro 6 (s/s) 5dr",
-    "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
-    "price": {
-      "amount": 15495,
-      "currency": "GBP"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/dealer-stock/suv.webp",
-        "alt": "Land Rover Range Rover Velar 2.0 D180 R-Dynamic S Auto 4WD Euro 6 (s/s) 5dr"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Dewsbury, West Yorkshire",
-      "region": "Dewsbury, West Yorkshire",
-      "country": "United Kingdom"
-    },
-    "spec": {
-      "make": "Land Rover",
-      "model": "Range Rover Velar",
-      "trim": "2.0 D180 R-Dynamic S Auto 4WD Euro 6 (s/s) 5dr",
-      "year": 2019,
-      "bodyType": "suv",
-      "fuelType": "diesel",
-      "transmission": "automatic",
-      "mileageValue": 106720,
-      "mileageUnit": "km",
-      "mileageSourceValue": 66313,
-      "mileageSourceUnit": "mi"
-    },
-    "seller": {
-      "id": "dealer-dewsbury-car-market-yorkshire",
-      "type": "dealer",
-      "displayName": "Car Market Yorkshire",
-      "verificationStatus": "unverified",
-      "city": "Dewsbury, West Yorkshire",
-      "logoUrl": "/dealer-brand/logo.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1005",
-    "slug": "mercedes-benz-glc-2018-at-sample-4",
-    "category": "car",
-    "dealerOrgId": "dealer-dewsbury-car-market-yorkshire",
-    "status": "active",
-    "title": "Mercedes-Benz GLC 2.0 GLC250 AMG Line (Premium Plus) G-Tronic+ 4MATIC Euro 6 (s/s) 5dr",
-    "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
-    "price": {
-      "amount": 12995,
-      "currency": "GBP"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/dealer-stock/suv.webp",
-        "alt": "Mercedes-Benz GLC 2.0 GLC250 AMG Line (Premium Plus) G-Tronic+ 4MATIC Euro 6 (s/s) 5dr"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Dewsbury, West Yorkshire",
-      "region": "Dewsbury, West Yorkshire",
-      "country": "United Kingdom"
-    },
-    "spec": {
-      "make": "Mercedes-Benz",
-      "model": "GLC",
-      "trim": "2.0 GLC250 AMG Line (Premium Plus) G-Tronic+ 4MATIC Euro 6 (s/s) 5dr",
-      "year": 2018,
-      "bodyType": "suv",
-      "fuelType": "gasoline",
-      "transmission": "automatic",
-      "mileageValue": 194653,
-      "mileageUnit": "km",
-      "mileageSourceValue": 120952,
-      "mileageSourceUnit": "mi"
-    },
-    "seller": {
-      "id": "dealer-dewsbury-car-market-yorkshire",
-      "type": "dealer",
-      "displayName": "Car Market Yorkshire",
-      "verificationStatus": "unverified",
-      "city": "Dewsbury, West Yorkshire",
-      "logoUrl": "/dealer-brand/logo.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1006",
-    "slug": "volkswagen-golf-2017-at-sample-5",
-    "category": "car",
-    "dealerOrgId": "dealer-dewsbury-car-market-yorkshire",
-    "status": "active",
-    "title": "Volkswagen Golf 2.0 TSI BlueMotion Tech R 4Motion Euro 6 (s/s) 5dr",
-    "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
-    "price": {
-      "amount": 12995,
-      "currency": "GBP"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/dealer-stock/hatchback.webp",
-        "alt": "Volkswagen Golf 2.0 TSI BlueMotion Tech R 4Motion Euro 6 (s/s) 5dr"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Dewsbury, West Yorkshire",
-      "region": "Dewsbury, West Yorkshire",
-      "country": "United Kingdom"
-    },
-    "spec": {
-      "make": "Volkswagen",
-      "model": "Golf",
-      "trim": "2.0 TSI BlueMotion Tech R 4Motion Euro 6 (s/s) 5dr",
-      "year": 2017,
-      "bodyType": "hatchback",
-      "fuelType": "gasoline",
-      "transmission": "manual",
-      "mileageValue": 132595,
-      "mileageUnit": "km",
-      "mileageSourceValue": 82391,
-      "mileageSourceUnit": "mi"
-    },
-    "seller": {
-      "id": "dealer-dewsbury-car-market-yorkshire",
-      "type": "dealer",
-      "displayName": "Car Market Yorkshire",
-      "verificationStatus": "unverified",
-      "city": "Dewsbury, West Yorkshire",
-      "logoUrl": "/dealer-brand/logo.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1007",
-    "slug": "mercedes-benz-citan-2018-at-sample-6",
-    "category": "van",
-    "dealerOrgId": "dealer-dewsbury-car-market-yorkshire",
-    "status": "active",
-    "title": "Mercedes-Benz Citan 1.5 109 CDI BlueEfficiency L2 Euro 6 (s/s) 5dr",
-    "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
-    "price": {
-      "amount": 4895,
-      "currency": "GBP"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/dealer-stock/van.webp",
-        "alt": "Mercedes-Benz Citan 1.5 109 CDI BlueEfficiency L2 Euro 6 (s/s) 5dr"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Dewsbury, West Yorkshire",
-      "region": "Dewsbury, West Yorkshire",
-      "country": "United Kingdom"
-    },
-    "spec": {
-      "make": "Mercedes-Benz",
-      "model": "Citan",
-      "trim": "1.5 109 CDI BlueEfficiency L2 Euro 6 (s/s) 5dr",
-      "year": 2018,
-      "bodyType": "van",
-      "fuelType": "diesel",
-      "transmission": "manual",
-      "mileageValue": 170439,
-      "mileageUnit": "km",
-      "mileageSourceValue": 105906,
-      "mileageSourceUnit": "mi"
-    },
-    "seller": {
-      "id": "dealer-dewsbury-car-market-yorkshire",
-      "type": "dealer",
-      "displayName": "Car Market Yorkshire",
-      "verificationStatus": "unverified",
-      "city": "Dewsbury, West Yorkshire",
-      "logoUrl": "/dealer-brand/logo.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1008",
-    "slug": "nissan-gt-r-2010-at-sample-1",
-    "category": "car",
-    "dealerOrgId": "dealer-dewsbury-car-market-yorkshire",
-    "status": "active",
-    "title": "Nissan Gt-R 3.8 V6 Black Edition Auto 4WD Euro 4 2dr",
-    "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
-    "price": {
-      "amount": 42495,
-      "currency": "GBP"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/dealer-stock/coupe.webp",
-        "alt": "Nissan Gt-R 3.8 V6 Black Edition Auto 4WD Euro 4 2dr"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Dewsbury, West Yorkshire",
-      "region": "Dewsbury, West Yorkshire",
-      "country": "United Kingdom"
-    },
-    "spec": {
-      "make": "Nissan",
-      "model": "Gt-R",
-      "trim": "3.8 V6 Black Edition Auto 4WD Euro 4 2dr",
-      "year": 2010,
-      "bodyType": "coupe",
-      "fuelType": "gasoline",
-      "transmission": "automatic",
-      "mileageValue": 115414,
-      "mileageUnit": "km",
-      "mileageSourceValue": 71715,
-      "mileageSourceUnit": "mi"
-    },
-    "seller": {
-      "id": "dealer-dewsbury-car-market-yorkshire",
-      "type": "dealer",
-      "displayName": "Car Market Yorkshire",
-      "verificationStatus": "unverified",
-      "city": "Dewsbury, West Yorkshire",
-      "logoUrl": "/dealer-brand/logo.webp"
-    },
-    "publishedAt": "2026-10-10T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1009",
-    "slug": "audi-a6-saloon-2022-at-sample-2",
-    "category": "car",
-    "dealerOrgId": "dealer-dewsbury-car-market-yorkshire",
-    "status": "active",
-    "title": "Audi A6 Saloon 2.0 TDI 40 S line S Tronic quattro Euro 6 (s/s) 4dr",
-    "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
-    "price": {
-      "amount": 22995,
-      "currency": "GBP"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/dealer-stock/sedan.webp",
-        "alt": "Audi A6 Saloon 2.0 TDI 40 S line S Tronic quattro Euro 6 (s/s) 4dr"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Dewsbury, West Yorkshire",
-      "region": "Dewsbury, West Yorkshire",
-      "country": "United Kingdom"
-    },
-    "spec": {
-      "make": "Audi",
-      "model": "A6 Saloon",
-      "trim": "2.0 TDI 40 S line S Tronic quattro Euro 6 (s/s) 4dr",
-      "year": 2022,
-      "bodyType": "other",
-      "fuelType": "diesel",
-      "transmission": "automatic",
-      "mileageValue": 56296,
-      "mileageUnit": "km",
-      "mileageSourceValue": 34981,
-      "mileageSourceUnit": "mi"
-    },
-    "seller": {
-      "id": "dealer-dewsbury-car-market-yorkshire",
-      "type": "dealer",
-      "displayName": "Car Market Yorkshire",
-      "verificationStatus": "unverified",
-      "city": "Dewsbury, West Yorkshire",
-      "logoUrl": "/dealer-brand/logo.webp"
+      "logoUrl": "/dealer-brand/v2-c52eb17295e48be5/logo-on-light.webp"
     },
     "publishedAt": "2026-10-10T09:00:00.000Z",
     "promoted": false

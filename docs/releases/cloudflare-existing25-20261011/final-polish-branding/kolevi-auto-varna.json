@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "dealer": "kolevi-auto-varna",
+  "reviewed": true,
+  "reviewedAt": "2026-10-14T11:56:24.553Z",
+  "sourceMode": "retained-or-mixed-raster",
+  "master": {
+    "path": "docs/logo-polish-2026-10-14/final-raster-inputs/f8b07c1281bcf16ddfa4cdf07e2177c5ae3cc70f3692c1f855512f65d62f011f.png",
+    "sha256": "f8b07c1281bcf16ddfa4cdf07e2177c5ae3cc70f3692c1f855512f65d62f011f"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "docs/logo-polish-2026-10-14/final-raster-inputs/f8b07c1281bcf16ddfa4cdf07e2177c5ae3cc70f3692c1f855512f65d62f011f.png",
+      "sha256": "f8b07c1281bcf16ddfa4cdf07e2177c5ae3cc70f3692c1f855512f65d62f011f",
+      "sourceReference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/live-assets/8ebe16fefefff19a2634e4963c8f63051d8b3cded8fea79afb0648f7c2775a74.webp",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/live-assets/8ebe16fefefff19a2634e4963c8f63051d8b3cded8fea79afb0648f7c2775a74.webp",
+        "sha256": "8ebe16fefefff19a2634e4963c8f63051d8b3cded8fea79afb0648f7c2775a74",
+        "reviewReference": "docs/logo-polish-2026-10-14/final-selection.json",
+        "reviewSha256": "6e396eef77195ab7f44d6b055c1936fa079a8195a428a95151fdfd7f3f5d1a16"
+      }
+    },
+    "onDark": {
+      "path": "docs/logo-polish-2026-10-14/final-raster-inputs/45e5b5e41cf3a3a042601b94c957f4b56069421ac15a62179ffd44450fc0bbbe.png",
+      "sha256": "45e5b5e41cf3a3a042601b94c957f4b56069421ac15a62179ffd44450fc0bbbe",
+      "sourceReference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/live-assets/213ebde8301471d8862440c5b87185a3424a3adfa133509c92836046f922c3d4.webp",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/live-assets/213ebde8301471d8862440c5b87185a3424a3adfa133509c92836046f922c3d4.webp",
+        "sha256": "213ebde8301471d8862440c5b87185a3424a3adfa133509c92836046f922c3d4",
+        "reviewReference": "docs/logo-polish-2026-10-14/final-selection.json",
+        "reviewSha256": "6e396eef77195ab7f44d6b055c1936fa079a8195a428a95151fdfd7f3f5d1a16"
+      }
+    },
+    "onAccent": {
+      "path": "docs/logo-polish-2026-10-14/final-raster-inputs/b1d2c68e8724a19f0d9cc1b31000519892a2c24c0b01fb46288476c19783ac18.png",
+      "sha256": "b1d2c68e8724a19f0d9cc1b31000519892a2c24c0b01fb46288476c19783ac18",
+      "sourceReference": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/kolevi-auto-varna/dealer-brand/logo-on-accent.webp",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/kolevi-auto-varna/dealer-brand/logo-on-accent.webp",
+        "sha256": "2694603399e2ba779011aa87f52080b14bcf4eaf84b7d99cc05ac6f59a0a687d",
+        "reviewReference": "docs/logo-polish-2026-10-14/final-selection.json",
+        "reviewSha256": "6e396eef77195ab7f44d6b055c1936fa079a8195a428a95151fdfd7f3f5d1a16"
+      }
+    }
+  }
+}

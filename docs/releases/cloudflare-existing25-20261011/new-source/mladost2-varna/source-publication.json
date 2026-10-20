@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-source-publication",
+  "reviewed": true,
+  "reviewedAt": "2026-10-13T15:46:26.710Z",
+  "dealer": "mladost2-varna",
+  "dealerId": "mladost2-varna",
+  "repository": "darkapoparka/cars-mladost2-varna",
+  "sourceOwnership": "cars-canonical",
+  "request": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/parallel-batch3-remaining23-request.json",
+    "sha256": "dca5e42beb2e14ac556d1fb116d8d5097f07e399225e291969698924ca8f6a1b"
+  },
+  "proposal": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/mladost2-varna/original-proposal-38359785390-1.json",
+    "sha256": "240c034d65f340bc961440efc68bd9bcc197e92bf9536752e1748d5a782992fd"
+  },
+  "preparation": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/mladost2-varna/original-preparation-38359785390-1.json",
+    "sha256": "976a78bdd42c9592400f92a0503aa56a4c2a0a09d490e7022a1995aff17a99c0"
+  },
+  "inputMapping": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/mladost2-varna/original-inputMapping-38359785390-1.json",
+    "sha256": "d20ef802b55bd2a26154736b5eda0acbddf9e1d8535b390e8f66ffc461bc0946"
+  },
+  "sourcePublication": {
+    "repository": "darkapoparka/cars",
+    "commit": "b7c0789d0d5ca6c980d204af79b863cd389f04de",
+    "sourceTree": "b994ea1322d54fda43a77db172135be673185171",
+    "ref": "refs/heads/main",
+    "publishedAt": "2026-10-13T15:40:48.586Z",
+    "evidence": "https://github.com/darkapoparka/cars/commit/b7c0789d0d5ca6c980d204af79b863cd389f04de"
+  }
+}

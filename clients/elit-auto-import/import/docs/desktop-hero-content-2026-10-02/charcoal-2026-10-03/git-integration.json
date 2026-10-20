@@ -1,0 +1,150 @@
+{
+	"commit": "af6941f1e0aeacc29b4c0cd2847883bde4b21405",
+	"parent": "743723d2930a4e15edf84ba08e47c3b0deb839cb",
+	"changedPaths": [
+		"templates/import/docs/ARCHITECTURE.md",
+		"templates/import/docs/DESKTOP-STYLING.md",
+		"templates/import/docs/QA.md",
+		"templates/import/docs/TYPOGRAPHY.md",
+		"templates/import/docs/desktop-hero-content-2026-10-02/charcoal-2026-10-03/README.md",
+		"templates/import/docs/desktop-hero-content-2026-10-02/charcoal-2026-10-03/after-matrix.json",
+		"templates/import/docs/desktop-hero-content-2026-10-02/charcoal-2026-10-03/after/about-bg-1440.png",
+		"templates/import/docs/desktop-hero-content-2026-10-02/charcoal-2026-10-03/after/about-bg-390-full.png",
+		"templates/import/docs/desktop-hero-content-2026-10-02/charcoal-2026-10-03/after/about-en-1440.png",
+		"templates/import/docs/desktop-hero-content-2026-10-02/charcoal-2026-10-03/after/contact-bg-1440.png",
+		"templates/import/docs/desktop-hero-content-2026-10-02/charcoal-2026-10-03/after/contact-bg-390-full.png",
+		"templates/import/docs/desktop-hero-content-2026-10-02/charcoal-2026-10-03/after/contact-en-1440.png",
+		"templates/import/docs/desktop-hero-content-2026-10-02/charcoal-2026-10-03/after/home-bg-1440.png",
+		"templates/import/docs/desktop-hero-content-2026-10-02/charcoal-2026-10-03/after/home-bg-390-full.png",
+		"templates/import/docs/desktop-hero-content-2026-10-02/charcoal-2026-10-03/after/home-en-1440.png",
+		"templates/import/docs/desktop-hero-content-2026-10-02/charcoal-2026-10-03/after/home-finance-bg-1440.png",
+		"templates/import/docs/desktop-hero-content-2026-10-02/charcoal-2026-10-03/after/home-finance-en-1440.png",
+		"templates/import/docs/desktop-hero-content-2026-10-02/charcoal-2026-10-03/after/home-import-bg-1440.png",
+		"templates/import/docs/desktop-hero-content-2026-10-02/charcoal-2026-10-03/after/home-import-en-1440.png",
+		"templates/import/docs/desktop-hero-content-2026-10-02/charcoal-2026-10-03/after/home-sell-bg-1440.png",
+		"templates/import/docs/desktop-hero-content-2026-10-02/charcoal-2026-10-03/after/home-sell-en-1440.png",
+		"templates/import/docs/desktop-hero-content-2026-10-02/charcoal-2026-10-03/after/inventory-bg-1440.png",
+		"templates/import/docs/desktop-hero-content-2026-10-02/charcoal-2026-10-03/after/inventory-bg-390-full.png",
+		"templates/import/docs/desktop-hero-content-2026-10-02/charcoal-2026-10-03/after/inventory-en-1440.png",
+		"templates/import/docs/desktop-hero-content-2026-10-02/charcoal-2026-10-03/after/services-bg-1440.png",
+		"templates/import/docs/desktop-hero-content-2026-10-02/charcoal-2026-10-03/after/services-bg-390-full.png",
+		"templates/import/docs/desktop-hero-content-2026-10-02/charcoal-2026-10-03/after/services-en-1440.png",
+		"templates/import/docs/desktop-hero-content-2026-10-02/charcoal-2026-10-03/before-matrix.json",
+		"templates/import/docs/desktop-hero-content-2026-10-02/charcoal-2026-10-03/before/about-bg-1440.png",
+		"templates/import/docs/desktop-hero-content-2026-10-02/charcoal-2026-10-03/before/about-bg-390-full.png",
+		"templates/import/docs/desktop-hero-content-2026-10-02/charcoal-2026-10-03/before/about-en-1440.png",
+		"templates/import/docs/desktop-hero-content-2026-10-02/charcoal-2026-10-03/before/contact-bg-1440.png",
+		"templates/import/docs/desktop-hero-content-2026-10-02/charcoal-2026-10-03/before/contact-bg-390-full.png",
+		"templates/import/docs/desktop-hero-content-2026-10-02/charcoal-2026-10-03/before/contact-en-1440.png",
+		"templates/import/docs/desktop-hero-content-2026-10-02/charcoal-2026-10-03/before/home-bg-1440.png",
+		"templates/import/docs/desktop-hero-content-2026-10-02/charcoal-2026-10-03/before/home-bg-390-full.png",
+		"templates/import/docs/desktop-hero-content-2026-10-02/charcoal-2026-10-03/before/home-en-1440.png",
+		"templates/import/docs/desktop-hero-content-2026-10-02/charcoal-2026-10-03/before/home-finance-bg-1440.png",
+		"templates/import/docs/desktop-hero-content-2026-10-02/charcoal-2026-10-03/before/home-finance-en-1440.png",
+		"templates/import/docs/desktop-hero-content-2026-10-02/charcoal-2026-10-03/before/home-import-bg-1440.png",
+		"templates/import/docs/desktop-hero-content-2026-10-02/charcoal-2026-10-03/before/home-import-en-1440.png",
+		"templates/import/docs/desktop-hero-content-2026-10-02/charcoal-2026-10-03/before/home-sell-bg-1440.png",
+		"templates/import/docs/desktop-hero-content-2026-10-02/charcoal-2026-10-03/before/home-sell-en-1440.png",
+		"templates/import/docs/desktop-hero-content-2026-10-02/charcoal-2026-10-03/before/inventory-bg-1440.png",
+		"templates/import/docs/desktop-hero-content-2026-10-02/charcoal-2026-10-03/before/inventory-bg-390-full.png",
+		"templates/import/docs/desktop-hero-content-2026-10-02/charcoal-2026-10-03/before/inventory-en-1440.png",
+		"templates/import/docs/desktop-hero-content-2026-10-02/charcoal-2026-10-03/before/services-bg-1440.png",
+		"templates/import/docs/desktop-hero-content-2026-10-02/charcoal-2026-10-03/before/services-bg-390-full.png",
+		"templates/import/docs/desktop-hero-content-2026-10-02/charcoal-2026-10-03/before/services-en-1440.png",
+		"templates/import/docs/desktop-hero-content-2026-10-02/charcoal-2026-10-03/gallery-check.json",
+		"templates/import/docs/desktop-hero-content-2026-10-02/charcoal-2026-10-03/gallery.png",
+		"templates/import/docs/desktop-hero-content-2026-10-02/charcoal-2026-10-03/interactions.json",
+		"templates/import/docs/desktop-hero-content-2026-10-02/charcoal-2026-10-03/mobile-preservation.json",
+		"templates/import/docs/desktop-hero-content-2026-10-02/charcoal-2026-10-03/screenshots.html",
+		"templates/import/docs/desktop-hero-content-2026-10-02/charcoal-2026-10-03/source-snapshot.json",
+		"templates/import/docs/desktop-hero-content-2026-10-02/charcoal-2026-10-03/verification.json",
+		"templates/import/docs/desktop-hero-content-2026-10-02/charcoal-2026-10-03/visual-verification.json",
+		"templates/import/src/lib/components/common/Action.svelte",
+		"templates/import/src/lib/components/common/DesktopDiscoveryPanel.svelte",
+		"templates/import/src/lib/components/common/MobileModeTabs.svelte",
+		"templates/import/src/lib/components/home/DesktopHomeHero.svelte",
+		"templates/import/src/lib/components/inventory/InventoryToolbar.svelte",
+		"templates/import/src/lib/styles/tokens.css"
+	],
+	"frozenSourceProof": [
+		{
+			"path": "src/lib/styles/tokens.css",
+			"gitBlob": "eeac690610015150eeb96744e04c4b2282fbfad6",
+			"matchesReviewedWorkingSource": true
+		},
+		{
+			"path": "src/lib/components/common/DesktopDiscoveryPanel.svelte",
+			"gitBlob": "0a6750458e69971c92925c19708164eb897ba1c5",
+			"matchesReviewedWorkingSource": true
+		},
+		{
+			"path": "src/lib/components/common/MobileModeTabs.svelte",
+			"gitBlob": "6a59a2ed2402181c01c700b9818c99fbbb51bb96",
+			"matchesReviewedWorkingSource": true
+		},
+		{
+			"path": "src/lib/components/common/Action.svelte",
+			"gitBlob": "c2ec1f28ee3b79875e05b9f621381f2ee579f689",
+			"matchesReviewedWorkingSource": true
+		},
+		{
+			"path": "src/lib/components/home/DesktopHomeHero.svelte",
+			"gitBlob": "15f6af257774c1d67cddacfd36069d94ccd1e811",
+			"matchesReviewedWorkingSource": true
+		},
+		{
+			"path": "src/lib/components/inventory/InventoryToolbar.svelte",
+			"gitBlob": "9debfa78edfa1dcc8bccaa51589a3cbc262bb76b",
+			"matchesReviewedWorkingSource": true
+		}
+	],
+	"foreignIndexPreserved": true,
+	"remote": "https://github.com/darkapoparka/cars.git",
+	"branch": "main",
+	"sourcePush": {
+		"verifiedUtc": "2026-10-03T00:09:19.830Z",
+		"remoteMain": "af6941f1e0aeacc29b4c0cd2847883bde4b21405",
+		"localMain": "af6941f1e0aeacc29b4c0cd2847883bde4b21405",
+		"sourceCommitIncluded": true,
+		"nonForce": true
+	},
+	"lockRecovery": [
+		{
+			"source": "L:\\CODEX\\cars\\.git\\index.lock",
+			"destination": "L:\\CODEX\\cars\\templates\\import\\runtime\\desktop-charcoal-2026-10-03\\stale-index-lock-20261002-230600.lock",
+			"originalUtc": "2026-10-02T23:06:00.4205557Z",
+			"length": 0,
+			"exclusiveReadSucceeded": true,
+			"activeGitProcesses": [],
+			"indexBeforeSha256": "465C9252EDECC6D1BF52C2C4589BB6647BD5D75BAED09E976FB13275C714AC88",
+			"indexAfterSha256": "465C9252EDECC6D1BF52C2C4589BB6647BD5D75BAED09E976FB13275C714AC88",
+			"preservedLockSha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+			"preservedUtc": "2026-10-03T00:04:17.7745396Z"
+		},
+		{
+			"source": "L:\\CODEX\\cars\\.git\\index.lock",
+			"destination": "L:\\CODEX\\cars\\templates\\import\\runtime\\desktop-charcoal-2026-10-03\\stale-index-lock-20261003-000423.lock",
+			"originalUtc": "2026-10-03T00:04:23.5376275Z",
+			"length": 0,
+			"exclusiveReadSucceeded": true,
+			"activeGitProcesses": [],
+			"indexBeforeSha256": "17CCAED340BC5DC99553826F750F4AD88321B3B05FE18DC1498FEA291DA364E3",
+			"indexAfterSha256": "17CCAED340BC5DC99553826F750F4AD88321B3B05FE18DC1498FEA291DA364E3",
+			"preservedLockSha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+			"preservedUtc": "2026-10-03T00:07:09.6157956Z"
+		},
+		{
+			"source": "L:\\CODEX\\cars\\.git\\index.lock",
+			"destination": "L:\\CODEX\\cars\\templates\\import\\runtime\\desktop-charcoal-2026-10-03\\stale-index-lock-20261003-000717.lock",
+			"originalUtc": "2026-10-03T00:07:17.4163608Z",
+			"length": 0,
+			"exclusiveReadSucceeded": true,
+			"activeGitProcesses": [],
+			"indexBeforeSha256": "388AA9E2D5CCF59E96DC5334758B50D822D3B76D7E03D4CE2D2125FFD7901051",
+			"indexAfterSha256": "388AA9E2D5CCF59E96DC5334758B50D822D3B76D7E03D4CE2D2125FFD7901051",
+			"preservedLockSha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+			"preservedUtc": "2026-10-03T00:10:05.8855362Z"
+		}
+	],
+	"unrelatedIndexPreserved": true
+}

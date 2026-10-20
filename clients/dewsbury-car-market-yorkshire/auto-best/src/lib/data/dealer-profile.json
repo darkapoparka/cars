@@ -27,9 +27,9 @@
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Car%20Market%20Yorkshire%2C%20Dewsbury%2C%20West%20Yorkshire",
     "mapsEmbedUrl": "https://maps.google.com/maps?q=Car%20Market%20Yorkshire%2C%20Dewsbury%2C%20West%20Yorkshire&z=16&output=embed",
     "accent": "#0849AC",
-    "logo": "/dealer-brand/logo.webp",
-    "logoLight": "/dealer-brand/logo.webp",
-    "logoDark": "/dealer-brand/logo.webp",
+    "logo": "/dealer-brand/v2-c52eb17295e48be5/logo-on-light.webp",
+    "logoLight": "/dealer-brand/v2-c52eb17295e48be5/logo-on-light.webp",
+    "logoDark": "/dealer-brand/v2-c52eb17295e48be5/logo-on-dark.webp",
     "socialLinks": {
       "facebook": "",
       "instagram": "",
@@ -980,25 +980,28 @@
     "approvalStatus": "independent_design_proposal_not_dealer_approved",
     "assets": {
       "onLight": {
-        "publicPath": "/dealer-brand/logo.webp",
-        "sha256": "cadb9c07122892749d4b0ff128ba3ac51f6b0e15e3f17fe8c56ece5dbf177f46",
+        "publicPath": "/dealer-brand/v2-c52eb17295e48be5/logo-on-light.webp",
+        "sha256": "9270bf32fa476305db99b2a0c40c009f08ace890436f97c8ecc0fdfc6ccd919b",
         "width": 1024,
         "height": 341,
-        "background": "opaque_white"
+        "background": "opaque_white",
+        "bytes": 280486
       },
       "onDark": {
-        "publicPath": "/dealer-brand/logo.webp",
-        "sha256": "cadb9c07122892749d4b0ff128ba3ac51f6b0e15e3f17fe8c56ece5dbf177f46",
+        "publicPath": "/dealer-brand/v2-c52eb17295e48be5/logo-on-dark.webp",
+        "sha256": "6131d3edda336eabf2bf0367fed55a13a02d1937ad17eb80d63f2252c99a75b2",
         "width": 1024,
         "height": 341,
-        "background": "opaque_white"
+        "background": "opaque_white",
+        "bytes": 329482
       },
       "onAccent": {
-        "publicPath": "/dealer-brand/logo.webp",
-        "sha256": "cadb9c07122892749d4b0ff128ba3ac51f6b0e15e3f17fe8c56ece5dbf177f46",
+        "publicPath": "/dealer-brand/v2-c52eb17295e48be5/logo-on-accent.webp",
+        "sha256": "6131d3edda336eabf2bf0367fed55a13a02d1937ad17eb80d63f2252c99a75b2",
         "width": 1024,
         "height": 341,
-        "background": "opaque_white"
+        "background": "opaque_white",
+        "bytes": 329482
       }
     },
     "icon": {

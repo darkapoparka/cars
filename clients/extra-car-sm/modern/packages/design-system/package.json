@@ -13,6 +13,7 @@
     "./components/ui/breadcrumb": "./components/ui/breadcrumb.tsx",
     "./components/ui/button": "./components/ui/button.tsx",
     "./components/ui/button-group": "./components/ui/button-group.tsx",
+    "./components/ui/button-link": "./components/ui/button-link.tsx",
     "./components/ui/calendar": "./components/ui/calendar.tsx",
     "./components/ui/card": "./components/ui/card.tsx",
     "./components/ui/carousel": "./components/ui/carousel.tsx",
@@ -58,15 +59,17 @@
     "./components/ui/toggle-group": "./components/ui/toggle-group.tsx",
     "./components/ui/tooltip": "./components/ui/tooltip.tsx",
     "./hooks/use-mobile": "./hooks/use-mobile.ts",
-    "./lib/fonts": "./lib/fonts.ts",
-    "./lib/public-fonts": "./lib/public-fonts.ts",
+    "./lib/typography": "./lib/typography.ts",
     "./lib/utils": "./lib/utils.ts",
     "./postcss.config.mjs": "./postcss.config.mjs",
     "./providers/theme": "./providers/theme.tsx",
-    "./styles/globals.css": "./styles/globals.css"
+    "./styles/globals.css": "./styles/globals.css",
+    "./lib/brand-theme": "./lib/brand-theme.ts",
+    "./styles/tokens.css": "./styles/tokens.css"
   },
   "scripts": {
     "clean": "git clean -xdf .cache .turbo dist node_modules",
+    "test": "vitest run",
     "typecheck": "tsc --noEmit --emitDeclarationOnly false"
   },
   "dependencies": {
@@ -75,7 +78,6 @@
     "clsx": "^2.1.1",
     "cmdk": "^1.1.1",
     "embla-carousel-react": "^8.6.0",
-    "geist": "^1.7.0",
     "input-otp": "^1.4.2",
     "lucide-react": "^0.577.0",
     "next-themes": "^0.4.6",
@@ -88,16 +90,17 @@
     "tailwind-merge": "^3.5.0",
     "tw-animate-css": "^1.4.0",
     "vaul": "^1.1.2",
-    "radix-ui": "latest"
+    "radix-ui": "1.6.7"
   },
   "devDependencies": {
     "@repo/typescript-config": "workspace:*",
     "@tailwindcss/postcss": "^4.2.1",
     "@tailwindcss/typography": "^0.5.19",
-    "@types/node": "^25.3.5",
+    "@types/node": "22.20.2",
     "@types/react": "^19.2.14",
     "postcss": "^8.5.8",
     "tailwindcss": "^4.2.1",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.18"
   }
 }

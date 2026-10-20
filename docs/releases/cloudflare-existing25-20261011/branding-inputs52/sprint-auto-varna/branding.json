@@ -1,0 +1,146 @@
+{
+  "schemaVersion": 1,
+  "dealer": "sprint-auto-varna",
+  "reviewed": true,
+  "reviewedAt": "2026-10-12T20:42:16.868Z",
+  "reviewScope": "Hash-identical accepted raster inputs and original surface-review provenance only. Canonical alias mapping retained from authorized handoff; client adoption/native/hosted checks remain unapproved.",
+  "officialDealerArtwork": false,
+  "dealerApproval": false,
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "generation": {
+    "tool": "image_gen",
+    "generationId": "exec-881cdaa3-3088-442c-ab47-80c136259baf",
+    "modelVersion": null,
+    "sourceSha256": "98deab2a79cd08de41d80c8384716e2bd1aa74382e19044f2d3d081f72e0feff",
+    "sourceRole": "Native ImageGen output behind exact accepted raster. No new generation or claimed model version.",
+    "nativeOutput": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/sprint-auto-varna/source/native-onLight.png",
+      "sha256": "98deab2a79cd08de41d80c8384716e2bd1aa74382e19044f2d3d081f72e0feff"
+    },
+    "originalGenerationReceipt": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/sprint-auto-varna/source/generation-receipt.json",
+      "sha256": "9624cd95237ede52f73b21b7bd37607f829f4ddce842b9b7e350ff44fdf4de81"
+    },
+    "derivation": "one ImageGen master exported to context raster"
+  },
+  "master": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/sprint-auto-varna/branding/master.png",
+    "sha256": "df6e82b9052a8606b20b0de090c9e3cafd1ebe60cc064c0cbae36b9992a30c00"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/sprint-auto-varna/branding/onLight.png",
+      "sha256": "df6e82b9052a8606b20b0de090c9e3cafd1ebe60cc064c0cbae36b9992a30c00",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/sprint-auto-varna/source/generation-receipt.json#sha256=9624cd95237ede52f73b21b7bd37607f829f4ddce842b9b7e350ff44fdf4de81; exact selected handoff b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-881cdaa3-3088-442c-ab47-80c136259baf",
+        "modelVersion": null,
+        "sourceSha256": "98deab2a79cd08de41d80c8384716e2bd1aa74382e19044f2d3d081f72e0feff",
+        "sourceRole": "Native ImageGen output behind exact accepted raster. No new generation or claimed model version.",
+        "nativeOutput": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/sprint-auto-varna/source/native-onLight.png",
+          "sha256": "98deab2a79cd08de41d80c8384716e2bd1aa74382e19044f2d3d081f72e0feff"
+        },
+        "originalGenerationReceipt": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/sprint-auto-varna/source/generation-receipt.json",
+          "sha256": "9624cd95237ede52f73b21b7bd37607f829f4ddce842b9b7e350ff44fdf4de81"
+        },
+        "derivation": "one ImageGen master exported to context raster"
+      },
+      "acceptedWebp": {
+        "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/sprint-auto-varna/dealer-brand/onLight.webp",
+        "sha256": "18cc0891d43dad51803705bac43a96d053b5960686a7da7610ff9dbbc5dcbf8d"
+      }
+    },
+    "onDark": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/sprint-auto-varna/branding/onDark.png",
+      "sha256": "fd5346a909206d51c4a83e166f8d7ce1e2bb7789af882bdb25c4c1c5788e49d9",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/sprint-auto-varna/source/generation-receipt.json#sha256=9624cd95237ede52f73b21b7bd37607f829f4ddce842b9b7e350ff44fdf4de81; exact selected handoff b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-881cdaa3-3088-442c-ab47-80c136259baf",
+        "modelVersion": null,
+        "sourceSha256": "98deab2a79cd08de41d80c8384716e2bd1aa74382e19044f2d3d081f72e0feff",
+        "sourceRole": "Native ImageGen output behind exact accepted raster. No new generation or claimed model version.",
+        "nativeOutput": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/sprint-auto-varna/source/native-onDark.png",
+          "sha256": "98deab2a79cd08de41d80c8384716e2bd1aa74382e19044f2d3d081f72e0feff"
+        },
+        "originalGenerationReceipt": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/sprint-auto-varna/source/generation-receipt.json",
+          "sha256": "9624cd95237ede52f73b21b7bd37607f829f4ddce842b9b7e350ff44fdf4de81"
+        },
+        "derivation": "one ImageGen master exported to context raster"
+      },
+      "acceptedWebp": {
+        "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/sprint-auto-varna/dealer-brand/onDark.webp",
+        "sha256": "b5a2d8b78e33deaa036e0e30ccb853046e50306f79179551d58ab15692c48b64"
+      }
+    },
+    "onAccent": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/sprint-auto-varna/branding/onAccent.png",
+      "sha256": "fd5346a909206d51c4a83e166f8d7ce1e2bb7789af882bdb25c4c1c5788e49d9",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/sprint-auto-varna/source/generation-receipt.json#sha256=9624cd95237ede52f73b21b7bd37607f829f4ddce842b9b7e350ff44fdf4de81; exact selected handoff b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-881cdaa3-3088-442c-ab47-80c136259baf",
+        "modelVersion": null,
+        "sourceSha256": "98deab2a79cd08de41d80c8384716e2bd1aa74382e19044f2d3d081f72e0feff",
+        "sourceRole": "Native ImageGen output behind exact accepted raster. No new generation or claimed model version.",
+        "nativeOutput": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/sprint-auto-varna/source/native-onAccent.png",
+          "sha256": "98deab2a79cd08de41d80c8384716e2bd1aa74382e19044f2d3d081f72e0feff"
+        },
+        "originalGenerationReceipt": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/sprint-auto-varna/source/generation-receipt.json",
+          "sha256": "9624cd95237ede52f73b21b7bd37607f829f4ddce842b9b7e350ff44fdf4de81"
+        },
+        "derivation": "one ImageGen master exported to context raster"
+      },
+      "acceptedWebp": {
+        "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/sprint-auto-varna/dealer-brand/onAccent.webp",
+        "sha256": "b5a2d8b78e33deaa036e0e30ccb853046e50306f79179551d58ab15692c48b64"
+      }
+    }
+  },
+  "originalGenerationReceipt": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/sprint-auto-varna/source/generation-receipt.json",
+    "sha256": "9624cd95237ede52f73b21b7bd37607f829f4ddce842b9b7e350ff44fdf4de81"
+  },
+  "acceptedLogoManifest": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/evidence/final-logo-handoff.json",
+    "sha256": "b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a"
+  },
+  "assetReview": {
+    "status": "completed",
+    "owner": "root",
+    "proof": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/sprint-auto-varna/source/surface-review.png",
+      "sha256": "d244d569e5c759c3f91fb46d878faa6ab7fa5aa799446cbec2f58b10ec9dfafe",
+      "bytes": 108420,
+      "width": 740,
+      "height": 864,
+      "format": "png",
+      "hasAlpha": true
+    },
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "scope": "Current master and120/180 light/dark rendered contact sheets inspected; existing320/all-native-swatches review remains applicable to identical pixels.",
+    "report": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/final-root-review.json"
+  },
+  "sourceOwnershipUnchanged": true,
+  "identityMapping": {
+    "assignedSlug": "sprint-varna",
+    "canonicalSlug": "sprint-auto-varna",
+    "displayName": "Спринт ауто",
+    "sourceUrls": [
+      "https://sprint.mobile.bg/"
+    ],
+    "basis": "authorized-handoff/chatgpt-pro-handoff.md retained canonical alias mapping; no replacement dealer identity"
+  }
+}

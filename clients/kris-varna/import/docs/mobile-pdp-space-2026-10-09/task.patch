@@ -1,0 +1,168 @@
+diff --git a/templates/import/src/lib/components/detail/AuxeroVehicleMobilePdp.svelte b/templates/import/src/lib/components/detail/AuxeroVehicleMobilePdp.svelte
+index 6513e9f99..9666c557c 100644
+--- a/templates/import/src/lib/components/detail/AuxeroVehicleMobilePdp.svelte
++++ b/templates/import/src/lib/components/detail/AuxeroVehicleMobilePdp.svelte
+@@ -408,13 +408,13 @@
+ 			<Drawer.Handle class="daynight-mobile-pdp__handle" preventCycle={true} />
+ 
+ 			<div class="daynight-mobile-pdp__drawer-heading">
+-				<div>
++				<Drawer.Title level={1} class="daynight-mobile-pdp__heading-title">
++					<span class="daynight-mobile-pdp__drawer-title" title={detail.title}>{detail.title}</span>
++				</Drawer.Title>
++				<div class="daynight-mobile-pdp__price-row">
+ 					<p>{detail.priceLabel}</p>
+-					<Drawer.Title level={1}>
+-						<span class="daynight-mobile-pdp__drawer-title">{detail.title}</span>
+-					</Drawer.Title>
++					<span>{detail.monthlyLabel}</span>
+ 				</div>
+-				<span>{detail.monthlyLabel}</span>
+ 			</div>
+ 
+ 			<div class="daynight-mobile-pdp__actions" aria-label={detail.copy.inquiryTitle}>
+@@ -891,11 +891,24 @@
+ 		}
+ 
+ 		.daynight-mobile-pdp__drawer-heading {
++			display: grid;
++			min-width: 0;
++			flex: 0 0 auto;
++			gap: 4px;
++			padding: 4px 0 8px;
++		}
++
++		.daynight-mobile-pdp__drawer-heading :global(.daynight-mobile-pdp__heading-title) {
++			min-width: 0;
++			margin: 0;
++			font: inherit;
++		}
++
++		.daynight-mobile-pdp__price-row {
+ 			display: flex;
+-			align-items: flex-start;
++			align-items: baseline;
+ 			justify-content: space-between;
+-			gap: 14px;
+-			padding: 4px 0 8px;
++			gap: 12px;
+ 		}
+ 
+ 		.daynight-mobile-pdp__drawer-heading p,
+@@ -905,31 +918,28 @@
+ 		}
+ 
+ 		.daynight-mobile-pdp__drawer-heading p {
+-			margin-bottom: 3px;
+ 			color: var(--bc-accent);
+ 			font-size: var(--bc-mobile-card-title);
+-			font-weight: var(--bc-weight-heading);
++			font-weight: var(--bc-weight-body);
+ 			line-height: var(--bc-mobile-card-title-leading);
++			white-space: nowrap;
+ 		}
+ 
+ 		.daynight-mobile-pdp__drawer-title {
+ 			display: block;
++			max-width: 100%;
++			overflow: hidden;
+ 			color: #1c1c1c;
+ 			font-size: var(--bc-mobile-section-title);
+ 			font-weight: var(--bc-weight-heading);
+ 			line-height: var(--bc-mobile-section-title-leading);
+-			overflow-wrap: anywhere;
++			text-overflow: ellipsis;
++			white-space: nowrap;
+ 		}
+ 
+-		.daynight-mobile-pdp__drawer-heading > span {
+-			display: inline-flex;
+-			min-height: 34px;
+-			align-items: center;
++		.daynight-mobile-pdp__price-row > span {
+ 			flex: 0 0 auto;
+-			border-radius: 8px;
+-			background: var(--bc-surface);
+-			color: #1c1c1c;
+-			padding: 0 10px;
++			color: var(--bc-muted);
+ 			font-size: var(--bc-mobile-meta);
+ 			font-weight: var(--bc-weight-body);
+ 			line-height: var(--bc-mobile-meta-leading);
+@@ -1500,10 +1510,6 @@
+ 			gap: 4px;
+ 		}
+ 
+-		.daynight-mobile-pdp__drawer-heading > span {
+-			display: none;
+-		}
+-
+ 		.daynight-mobile-pdp__tabs {
+ 			gap: 0;
+ 		}
+diff --git a/templates/import/src/lib/components/layout/MobileBottomNav.svelte b/templates/import/src/lib/components/layout/MobileBottomNav.svelte
+index 67119a902..4513ac7c5 100644
+--- a/templates/import/src/lib/components/layout/MobileBottomNav.svelte
++++ b/templates/import/src/lib/components/layout/MobileBottomNav.svelte
+@@ -178,7 +178,7 @@
+ 
+ 	@media (max-width: 767.98px) {
+ 		:global(body) {
+-			--bc-mobile-nav-height: max(58px, calc(3.5rem + 2px));
++			--bc-mobile-nav-height: max(52px, calc(3rem + 4px));
+ 			padding-bottom: calc(var(--bc-mobile-nav-height) + env(safe-area-inset-bottom));
+ 		}
+ 		:global(body:has(.mobile-bottom-nav[data-footer-visible='true'])) {
+@@ -212,7 +212,7 @@
+ 		.mobile-bottom-nav__inner {
+ 			display: grid;
+ 			width: 100%;
+-			height: var(--bc-mobile-nav-height);
++			height: 100%;
+ 			max-width: var(--bc-mobile-content-max);
+ 			grid-template-columns: repeat(5, minmax(0, 1fr));
+ 			margin: 0 auto;
+@@ -228,7 +228,7 @@
+ 			align-items: center;
+ 			justify-content: center;
+ 			flex-direction: column;
+-			gap: 3px;
++			gap: 2px;
+ 			border: 0;
+ 			border-radius: 0;
+ 			background: transparent;
+@@ -245,8 +245,8 @@
+ 
+ 		.mobile-bottom-nav__icon {
+ 			display: grid;
+-			width: 28px;
+-			height: 28px;
++			width: 24px;
++			height: 24px;
+ 			place-items: center;
+ 			color: inherit;
+ 			line-height: 0;
+@@ -256,11 +256,13 @@
+ 			display: block;
+ 			min-width: 0;
+ 			max-width: 100%;
+-			overflow-wrap: anywhere;
++			overflow: hidden;
+ 			color: inherit;
+ 			font-size: 0.75rem;
+ 			font-weight: var(--bc-weight-body);
+ 			line-height: 1.3334;
++			text-overflow: ellipsis;
++			white-space: nowrap;
+ 		}
+ 
+ 		.mobile-bottom-nav a.active,
+@@ -298,6 +300,8 @@
+ 		}
+ 
+ 		.mobile-bottom-nav :global(svg) {
++			width: 22px;
++			height: 22px;
+ 			color: currentColor;
+ 		}
+ 

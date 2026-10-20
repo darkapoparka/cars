@@ -3,32 +3,32 @@
   "dealer": "al-basma-motors",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "b66693e3a475ef563ab45f51e4297e7073830ec1",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "path": "templates/app",
-    "digest": "3344230cf8de012eb9c2daf1c962c4a3f189960b52f2026e1d049f2a6eae26ad",
-    "tree": "cd17d913dd597bf7dfb3e2244c2a3a2914ab3080"
+    "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1",
+    "tree": "7f3d3ffa40546635377e6c5225194fe06fead291"
   },
-  "appDigest": "6a1a6050c8fd9a8e5ba80630306116c2c71408983f7a1981bff743adda84c301",
+  "appDigest": "24373a6324b23cd85a1783f25ceb541469d47b4571478ebe5ff665000871fd52",
   "provenance": {
     "schemaVersion": 1,
     "dealer": "al-basma-motors",
     "profile": "auto-best/src/lib/data/dealer-profile.json",
-    "profileSha256": "a92586337b931d0c1d4e5b87b45ce498161821e7e4924012dcfc98901ac834d0",
+    "profileSha256": "be7ec905b11fe9a1494d0b483c32d5efc70575a1f0d2e4a4ef5e57a463e17426",
     "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
     "vehicles": 10,
     "currency": "AED",
     "observedAt": "2026-09-08T21:56:53.027Z, 2026-09-08T21:56:53.853Z, 2026-09-08T21:56:54.631Z, 2026-09-08T21:56:55.427Z, 2026-09-08T21:56:55.912Z, 2026-09-08T21:56:56.764Z, 2026-09-08T21:56:57.238Z, 2026-09-08T21:56:57.955Z, 2026-09-08T21:56:58.854Z, 2026-09-08T21:56:59.789Z",
     "assets": [
       {
-        "source": "auto-best/static/dealer-brand/logo-on-light.webp",
-        "output": "public/dealer-app/logo-light-a711de145806bfc28cb9.webp",
-        "sha256": "a711de145806bfc28cb92424e93e21f1c1e5a2cc23b043f97f57b9c0b8035564",
+        "source": "auto-best/static/dealer-brand/v2-e73f3eb48de7300c/logo-on-light.webp",
+        "output": "public/dealer-app/logo-light-69243b2c43b11bc29a2e.webp",
+        "sha256": "69243b2c43b11bc29a2ece97e5ea5a8ff99a2aad4a36df9a8a76e61c522c85df",
         "role": "logo-light"
       },
       {
-        "source": "auto-best/static/dealer-brand/logo-on-dark.webp",
-        "output": "public/dealer-app/logo-dark-4003fd1022280c2c8475.webp",
-        "sha256": "4003fd1022280c2c8475e45f79d364cd0ad5f5423b99aa9c264e7dba3a5e5688",
+        "source": "auto-best/static/dealer-brand/v2-e73f3eb48de7300c/logo-on-dark.webp",
+        "output": "public/dealer-app/logo-dark-7afbb0dd988de9dd59c8.webp",
+        "sha256": "7afbb0dd988de9dd59c8c9b00c5f3b216efb9739e825c2e6279e3c06a6d99a6a",
         "role": "logo-dark"
       },
       {
@@ -271,13 +271,71 @@
         "sha256": "a2560c0db6633c65f933bf58e47449564ea64dd3d4cd0b3f4edc116c5d4ffa8b",
         "role": "vehicle"
       }
+    ],
+    "mileageFacts": [
+      {
+        "slug": "lexus-ct200h-2018-1",
+        "sourceValue": 168000,
+        "sourceUnit": "km",
+        "canonicalKm": 168000
+      },
+      {
+        "slug": "lexus-is300-2023-2",
+        "sourceValue": 40000,
+        "sourceUnit": "km",
+        "canonicalKm": 40000
+      },
+      {
+        "slug": "lexus-rc-f-2020-3",
+        "sourceValue": 140000,
+        "sourceUnit": "km",
+        "canonicalKm": 140000
+      },
+      {
+        "slug": "lexus-is350-2024-4",
+        "sourceValue": 151000,
+        "sourceUnit": "km",
+        "canonicalKm": 151000
+      },
+      {
+        "slug": "lexus-gs250-2015-5",
+        "sourceValue": 52000,
+        "sourceUnit": "km",
+        "canonicalKm": 52000
+      },
+      {
+        "slug": "lexus-rc350-2021-6",
+        "sourceValue": 120000,
+        "sourceUnit": "km",
+        "canonicalKm": 120000
+      },
+      {
+        "slug": "lexus-es350-2023-7",
+        "sourceValue": 77000,
+        "sourceUnit": "km",
+        "canonicalKm": 77000
+      },
+      {
+        "slug": "lexus-lx570-2016-8",
+        "sourceValue": 228000,
+        "sourceUnit": "km",
+        "canonicalKm": 228000
+      },
+      {
+        "slug": "lexus-tx350-2024-9",
+        "sourceValue": 53000,
+        "sourceUnit": "km",
+        "canonicalKm": 53000
+      },
+      {
+        "slug": "lexus-rx350-2024-10",
+        "sourceValue": 12000,
+        "sourceUnit": "km",
+        "canonicalKm": 12000
+      }
     ]
   },
-  "baseDeployment": {
-    "id": "dpl_7sc1gJXVU7iUJWEvYe5Xp5xLoBi6",
-    "url": "https://cars-albasmamotors.vercel.app/",
-    "checkedAt": "2026-09-28T02:25:28.287Z"
-  },
-  "baseReceiptSha256": "0423a31c5582b7690914b721677d13cc74c02f3a9ea465607f4d0411f1231758",
-  "refreshedAt": "2026-09-30T10:34:08.508Z"
+  "needsDealerQA": true,
+  "readyToPublish": false,
+  "refreshedAt": "2026-10-15T02:30:34.095Z"
 }

@@ -1,0 +1,506 @@
+diff --git a/templates/import/src/lib/auxero/about.spec.ts b/templates/import/src/lib/auxero/about.spec.ts
+new file mode 100644
+--- /dev/null
++++ b/templates/import/src/lib/auxero/about.spec.ts
+@@ -0,0 +1,47 @@
++import { describe, expect, it } from 'vitest';
++import type { Agent } from '$lib/data/agents';
++import { agentCardsFromAgents } from './agents';
++import { aboutCardsFromAgents } from './about';
++
++const dealerAgent = (index: number): Agent => ({
++	slug: `dealer-team-${index}`,
++	name: `Dealer contact ${index}`,
++	title: 'Sales and viewings',
++	phone: '0123456789',
++	email: 'sales@dealer.example',
++	image: `/brand/team-${index}.webp`,
++	rating: 0,
++	sales: 0,
++	bio: 'Configured dealer contact'
++});
++
++describe('About dealer consultants', () => {
++	it.each([0, 1, 4])(
++		'uses all %i configured contacts when generated consultants omit About metadata',
++		(count) => {
++			const agents = Array.from({ length: count }, (_, index) => dealerAgent(index));
++			const consultants = agents.map(({ slug, name, title, image }) => ({
++				slug,
++				name,
++				title,
++				image
++			}));
++			expect(aboutCardsFromAgents(agents, consultants)).toEqual(agentCardsFromAgents(agents));
++		}
++	);
++
++	it('matches optional presentation by consultant identity and retains contact behavior', () => {
++		const agents = [dealerAgent(0), dealerAgent(1)];
++		const about = {
++			name: 'Public team contact',
++			socials: [],
++			desktopPortrait: { position: '60% top', scale: 1.65 }
++		} as const;
++		const consultants = [{ slug: agents[1].slug, about }, { slug: agents[0].slug }];
++		const cards = agentCardsFromAgents(agents);
++		expect(aboutCardsFromAgents(agents, consultants)).toEqual([
++			cards[0],
++			{ ...cards[1], ...about }
++		]);
++	});
++});
+diff --git a/templates/import/src/lib/auxero/about.ts b/templates/import/src/lib/auxero/about.ts
+--- a/templates/import/src/lib/auxero/about.ts
++++ b/templates/import/src/lib/auxero/about.ts
+@@ -1,7 +1,7 @@
+ import { auxeroReviewCards, type AuxeroReviewCard } from '$lib/auxero/reviews';
+ import { agentCardsFromAgents, type AuxeroAgentCard } from '$lib/auxero/agents';
+-import { agents } from '$lib/data/agents';
+-import { daynightAssets, daynightContact } from '$lib/data/daynight';
++import { agents, type Agent } from '$lib/data/agents';
++import { daynightAssets, daynightContact, daynightConsultants } from '$lib/data/daynight';
+ import { brands, vehicles } from '$lib/data/vehicles';
+ import type { AuxeroPageBanner } from './page-banner';
+ import { auxeroServiceCards } from './services';
+@@ -85,6 +85,26 @@
+ 	value: string;
+ };
+ 
++type ConsultantWithAbout = {
++	slug: string;
++	about?: Partial<
++		Pick<AuxeroAgentCard, 'slug' | 'name' | 'title' | 'image' | 'desktopPortrait'>
++	> & {
++		socials?: readonly AuxeroAgentCard['socials'][number][];
++	};
++};
++
++/** Dealer-generated consultants can omit the master's optional About presentation. */
++export const aboutCardsFromAgents = (
++	sourceAgents: Agent[],
++	consultants: readonly ConsultantWithAbout[]
++): AuxeroAgentCard[] =>
++	agentCardsFromAgents(sourceAgents).map((card) => {
++		const about = consultants.find((consultant) => consultant.slug === card.slug)?.about;
++		if (!about) return card;
++		return { ...card, ...about, socials: about.socials ? [...about.socials] : card.socials };
++	});
++
+ const brandLogos: Record<string, string> = {
+ 	Audi: '/assets/daynight/brands/audi.webp',
+ 	BMW: '/assets/daynight/brands/bmw.webp',
+@@ -116,37 +136,7 @@
+ 		hero: daynightAssets.hero
+ 	},
+ 	brands: aboutBrandCards,
+-	consultants: [
+-		{
+-			...agentCardsFromAgents(agents)[0],
+-			slug: 'kristiyan-kirilov',
+-			name: 'Кристиян Кирилов',
+-			title: 'Изпълнителен директор · CEO',
+-			socials: [
+-				{
+-					href: 'https://www.instagram.com/kristiankirilov13/',
+-					icon: 'brands/instagram.svg',
+-					label: 'Кристиян Кирилов в Instagram'
+-				}
+-			],
+-			image: '/assets/daynight/team/kristian-kirilov-public.jpg',
+-			desktopPortrait: { position: '60% top', scale: 1.65 }
+-		},
+-		{
+-			...agentCardsFromAgents(agents)[1],
+-			slug: 'demo-mariya-petrova',
+-			name: 'Мария Петрова',
+-			title: 'Продажби и огледи · Демо профил',
+-			image: '/assets/daynight/team/demo-mariya.png'
+-		},
+-		{
+-			...agentCardsFromAgents(agents)[2],
+-			slug: 'demo-aleksandar-ivanov',
+-			name: 'Александър Иванов',
+-			title: 'Внос и консултации · Демо профил',
+-			image: '/assets/daynight/team/demo-aleksandar.png'
+-		}
+-	],
++	consultants: aboutCardsFromAgents(agents, daynightConsultants),
+ 	contact: {
+ 		primaryPhoneHref: daynightContact.primaryPhoneHref,
+ 		primaryPhoneLabel: daynightContact.primaryPhoneLabel
+diff --git a/templates/import/src/lib/data/daynight.ts b/templates/import/src/lib/data/daynight.ts
+--- a/templates/import/src/lib/data/daynight.ts
++++ b/templates/import/src/lib/data/daynight.ts
+@@ -184,24 +184,51 @@
+ 	isPrimaryNavActive
+ } from '$lib/config/dealer';
+ 
++/** Optional About presentation stays with the sample records replaced by dealer generation. */
+ export const daynightConsultants = [
+ 	{
+ 		slug: 'day-night-auto-group-sales',
+ 		name: 'Продажби и огледи',
+ 		title: 'Налични автомобили и клиентски запитвания - Day Night Auto',
+-		image: '/assets/daynight/team/avatar-sales.jpg'
++		image: '/assets/daynight/team/avatar-sales.jpg',
++		about: {
++			slug: 'kristiyan-kirilov',
++			name: 'Кристиян Кирилов',
++			title: 'Изпълнителен директор · CEO',
++			socials: [
++				{
++					href: 'https://www.instagram.com/kristiankirilov13/',
++					icon: 'brands/instagram.svg',
++					label: 'Кристиян Кирилов в Instagram'
++				}
++			],
++			image: '/assets/daynight/team/kristian-kirilov-public.jpg',
++			desktopPortrait: { position: '60% top', scale: 1.65 }
++		}
+ 	},
+ 	{
+ 		slug: 'day-night-auto-group-documents',
+ 		name: 'Документи и съдействие',
+ 		title: 'Регистрация, финансиране и предаване',
+-		image: '/assets/daynight/team/avatar-logistics.jpg'
++		image: '/assets/daynight/team/avatar-logistics.jpg',
++		about: {
++			slug: 'demo-mariya-petrova',
++			name: 'Мария Петрова',
++			title: 'Продажби и огледи · Демо профил',
++			image: '/assets/daynight/team/demo-mariya.png'
++		}
+ 	},
+ 	{
+ 		slug: 'day-night-auto-group-inspection',
+ 		name: 'Проверка и оглед',
+ 		title: 'Оглед, история и състояние на автомобила',
+-		image: '/assets/daynight/team/avatar-inspection.jpg'
++		image: '/assets/daynight/team/avatar-inspection.jpg',
++		about: {
++			slug: 'demo-aleksandar-ivanov',
++			name: 'Александър Иванов',
++			title: 'Внос и консултации · Демо профил',
++			image: '/assets/daynight/team/demo-aleksandar.png'
++		}
+ 	}
+ ] as const;
+ 
+diff --git a/templates/import/src/lib/server/admin-actions-authorization.spec.ts b/templates/import/src/lib/server/admin-actions-authorization.spec.ts
+new file mode 100644
+--- /dev/null
++++ b/templates/import/src/lib/server/admin-actions-authorization.spec.ts
+@@ -0,0 +1,158 @@
++import { beforeEach, describe, expect, it, vi } from 'vitest';
++
++const { privateEnv, mutations } = vi.hoisted(() => ({
++	privateEnv: {} as Record<string, string>,
++	mutations: {
++		agent: vi.fn(() => ({ slug: 'test-agent' })),
++		user: vi.fn(() => ({ id: 'test-record' })),
++		message: vi.fn(() => ({ id: 'test-thread' })),
++		reply: vi.fn(() => ({ id: 'test-reply' })),
++		import: vi.fn(() => ({ id: 'test-record' }))
++	}
++}));
++
++vi.mock('$env/dynamic/private', () => ({ env: privateEnv }));
++vi.mock('./admin-cms', () => ({ getAdminCmsOverview: vi.fn() }));
++vi.mock('./agents', () => ({
++	listManagedAgents: vi.fn(),
++	normalizeManagedAgentStatus: vi.fn(),
++	updateManagedAgent: mutations.agent
++}));
++vi.mock('./users', () => ({
++	normalizeManagedUserStatus: vi.fn(),
++	updateManagedUser: mutations.user
++}));
++vi.mock('./messages', () => ({
++	createMessage: mutations.reply,
++	normalizeMessageStatus: vi.fn(),
++	updateMessage: mutations.message
++}));
++vi.mock('./inventory', () => ({
++	normalizeVehicleSubmissionStatus: vi.fn(),
++	updateVehicleSubmission: mutations.import
++}));
++
++import { actions as agentActions } from '../../routes/admin/agents/+page.server';
++import { actions as agentDetailActions } from '../../routes/admin/agents/[slug]/+page.server';
++import { actions as userActions } from '../../routes/admin/users/+page.server';
++import { actions as messageActions } from '../../routes/admin/messages/+page.server';
++import { actions as importActions } from '../../routes/admin/imports/+page.server';
++import { authenticateDayNightUser } from './auth';
++
++const actionCases = [
++	{
++		route: 'admin/agents',
++		action: agentActions.default!,
++		mutation: mutations.agent,
++		location: '/admin/agents'
++	},
++	{
++		route: 'admin/agents/test-agent',
++		action: agentDetailActions.default!,
++		mutation: mutations.agent,
++		location: '/admin/agents/test-agent'
++	},
++	{
++		route: 'admin/users',
++		action: userActions.default!,
++		mutation: mutations.user,
++		location: '/admin/users'
++	},
++	{
++		route: 'admin/messages',
++		action: messageActions.default!,
++		mutation: mutations.message,
++		location: '/admin/messages?thread=test-thread'
++	},
++	{
++		route: 'admin/imports',
++		action: importActions.default!,
++		mutation: mutations.import,
++		location: '/admin/imports'
++	}
++];
++
++const requestFor = (route: string, role?: string, token?: string) => {
++	const url = new URL(`https://example.invalid/${route}`);
++	if (role) url.searchParams.set('role', role);
++	return new Request(url, {
++		method: 'POST',
++		headers: token ? { 'x-daynight-session': token } : {},
++		body: new URLSearchParams({
++			id: 'test-record',
++			slug: 'test-agent',
++			threadId: 'test-thread',
++			reply: 'Synthetic preview reply'
++		})
++	});
++};
++
++const eventFor = (request: Request) => ({
++	params: { slug: 'test-agent' },
++	request,
++	url: new URL(request.url)
++});
++
++const enableLiveAdmin = () => {
++	Object.assign(privateEnv, {
++		TEMPLATE_MODE: 'live',
++		TEMPLATE_ADMIN_ENABLED: 'true',
++		DATABASE_URL: 'postgresql://test.invalid/demo',
++		TEMPLATE_ADMIN_EMAIL: 'operator@example.invalid',
++		TEMPLATE_ADMIN_PASSWORD: 'private-template-test-password'
++	});
++};
++
++beforeEach(() => {
++	for (const key of Object.keys(privateEnv)) delete privateEnv[key];
++	vi.clearAllMocks();
++});
++
++describe.each(actionCases)('$route action access', ({ route, action, mutation, location }) => {
++	const expectDenied = async (request: Request, status: number) => {
++		const formData = vi.spyOn(request, 'formData');
++		await expect(action(eventFor(request) as never)).rejects.toMatchObject({ status });
++		expect(formData).not.toHaveBeenCalled();
++		for (const mutate of Object.values(mutations)) expect(mutate).not.toHaveBeenCalled();
++	};
++
++	const expectAllowed = async (request: Request) => {
++		const formData = vi.spyOn(request, 'formData');
++		await expect(action(eventFor(request) as never)).rejects.toMatchObject({
++			status: 303,
++			location
++		});
++		expect(formData).toHaveBeenCalledOnce();
++		expect(mutation).toHaveBeenCalledOnce();
++		if (route === 'admin/messages') expect(mutations.reply).toHaveBeenCalledOnce();
++	};
++
++	it('rejects an unauthenticated live POST before reading or mutating', async () => {
++		enableLiveAdmin();
++		await expectDenied(requestFor(route), 401);
++	});
++
++	it('rejects the disabled live capability even with a configured admin session', async () => {
++		enableLiveAdmin();
++		const session = authenticateDayNightUser({
++			email: privateEnv.TEMPLATE_ADMIN_EMAIL,
++			password: privateEnv.TEMPLATE_ADMIN_PASSWORD
++		});
++		expect(session?.role).toBe('admin');
++		await expectDenied(requestFor(route, undefined, session!.token!), 503);
++	});
++
++	it('honors the customer preview role before reading or mutating', async () => {
++		await expectDenied(requestFor(route, 'customer'), 403);
++	});
++
++	it('preserves the agent preview permission for messages only', async () => {
++		const request = requestFor(route, 'agent');
++		if (route === 'admin/messages') await expectAllowed(request);
++		else await expectDenied(request, 403);
++	});
++
++	it.each([undefined, 'admin'])('preserves the admin preview for role %s', async (role) => {
++		await expectAllowed(requestFor(route, role));
++	});
++});
+diff --git a/templates/import/src/lib/server/auxero-template.spec.ts b/templates/import/src/lib/server/auxero-template.spec.ts
+new file mode 100644
+--- /dev/null
++++ b/templates/import/src/lib/server/auxero-template.spec.ts
+@@ -0,0 +1,44 @@
++import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
++
++vi.mock('$env/dynamic/private', () => ({ env: { TEMPLATE_MODE: 'preview' } }));
++
++import { POST as updateProfile } from '../../routes/api/account/profile/+server';
++import { findDayNightUserByRole, updateDayNightUserProfile } from './db';
++import { removeAuxeroScriptTags } from './auxero-page';
++import { renderAuxeroTemplate } from './auxero-template';
++
++let originalName: string;
++
++beforeEach(() => {
++	originalName = findDayNightUserByRole('customer')!.name;
++});
++
++afterEach(() => {
++	updateDayNightUserProfile({ role: 'customer', name: originalName });
++});
++
++describe('legacy runtime script boundary', () => {
++	it.each(['</script>', '</ScRiPt>'])(
++		'preserves a submitted name containing %s as data after script removal',
++		async (closingTag) => {
++			const marker = '<b data-audit-breakout=inert>audit-probe</b>';
++			const name = `${closingTag}${marker}<script>`;
++			const response = await updateProfile({
++				request: new Request('http://localhost/api/account/profile?role=customer', {
++					method: 'POST',
++					headers: { 'content-type': 'application/json' },
++					body: JSON.stringify({ name, role: 'customer' })
++				})
++			});
++			expect(response.status).toBe(200);
++
++			const html = renderAuxeroTemplate('my-profile.html', { routePath: 'account/profile' });
++			if (!html) throw new Error('The retained account profile template was not loaded');
++			expect(removeAuxeroScriptTags(html)).not.toContain(marker);
++
++			const declaration = html.match(/\bconst runtimeData = (.*);/);
++			expect(declaration).not.toBeNull();
++			expect(JSON.parse(declaration![1]).account.session.name).toBe(name);
++		}
++	);
++});
+diff --git a/templates/import/src/lib/server/auxero-template.ts b/templates/import/src/lib/server/auxero-template.ts
+--- a/templates/import/src/lib/server/auxero-template.ts
++++ b/templates/import/src/lib/server/auxero-template.ts
+@@ -443,6 +443,8 @@
+ 		.replaceAll('"', '&quot;')
+ 		.replaceAll("'", '&#39;');
+ 
++const scriptJson = (value: unknown) => JSON.stringify(value).replace(/</g, '\\u003c');
++
+ function applyAuxeroAccessibilityLabels(html: string, templateFile: string) {
+ 	let next = html
+ 		.replace(
+@@ -2558,12 +2560,12 @@
+ <script>
+ (() => {
+ 	${bodyClassInjection}
+-	const firstVehicleSlug = ${JSON.stringify(firstVehicleSlug)};
+-	const currentView = ${JSON.stringify(currentView)};
+-	const runtimeData = ${JSON.stringify(runtimeData)};
+-	const navItems = ${JSON.stringify(mainNavigation)};
+-	const routeMap = ${JSON.stringify(canonicalTemplateRoutes)};
+-	const blockedFiles = ${JSON.stringify([...blockedTemplateFiles])};
++	const firstVehicleSlug = ${scriptJson(firstVehicleSlug)};
++	const currentView = ${scriptJson(currentView)};
++	const runtimeData = ${scriptJson(runtimeData)};
++	const navItems = ${scriptJson(mainNavigation)};
++	const routeMap = ${scriptJson(canonicalTemplateRoutes)};
++	const blockedFiles = ${scriptJson([...blockedTemplateFiles])};
+ 	const favoriteKey = 'daynight:favorites';
+ 	const compareKey = 'daynight:compare';
+ 	const sessionKey = 'daynight:session';
+@@ -2876,7 +2878,7 @@
+ 		...formContext(form),
+ 		role: runtimeData.account.session.role
+ 	});
+-	const vehicleImageFallback = ${JSON.stringify(daynightAssets.hero)};
++	const vehicleImageFallback = ${scriptJson(daynightAssets.hero)};
+ 	const isVehicleImage = (img) =>
+ 		!img.closest('.daynight-inventory-desktop-route .daynight-inventory-content') &&
+ 		(
+diff --git a/templates/import/src/routes/admin/agents/+page.server.ts b/templates/import/src/routes/admin/agents/+page.server.ts
+--- a/templates/import/src/routes/admin/agents/+page.server.ts
++++ b/templates/import/src/routes/admin/agents/+page.server.ts
+@@ -17,7 +17,8 @@
+ };
+ 
+ export const actions: Actions = {
+-	default: async ({ request }) => {
++	default: async ({ request, url }) => {
++		requireDayNightPageSession(request, 'admin/agents', url.searchParams);
+ 		const formData = await request.formData();
+ 		const slug = value(formData, 'slug');
+ 
+diff --git a/templates/import/src/routes/admin/agents/[slug]/+page.server.ts b/templates/import/src/routes/admin/agents/[slug]/+page.server.ts
+--- a/templates/import/src/routes/admin/agents/[slug]/+page.server.ts
++++ b/templates/import/src/routes/admin/agents/[slug]/+page.server.ts
+@@ -28,7 +28,8 @@
+ };
+ 
+ export const actions: Actions = {
+-	default: async ({ params, request }) => {
++	default: async ({ params, request, url }) => {
++		requireDayNightPageSession(request, `admin/agents/${params.slug}`, url.searchParams);
+ 		const formData = await request.formData();
+ 		const agent = updateManagedAgent({
+ 			note: value(formData, 'note'),
+diff --git a/templates/import/src/routes/admin/imports/+page.server.ts b/templates/import/src/routes/admin/imports/+page.server.ts
+--- a/templates/import/src/routes/admin/imports/+page.server.ts
++++ b/templates/import/src/routes/admin/imports/+page.server.ts
+@@ -17,7 +17,8 @@
+ };
+ 
+ export const actions: Actions = {
+-	default: async ({ request }) => {
++	default: async ({ request, url }) => {
++		requireDayNightPageSession(request, 'admin/imports', url.searchParams);
+ 		const formData = await request.formData();
+ 		const id = value(formData, 'id');
+ 
+diff --git a/templates/import/src/routes/admin/messages/+page.server.ts b/templates/import/src/routes/admin/messages/+page.server.ts
+--- a/templates/import/src/routes/admin/messages/+page.server.ts
++++ b/templates/import/src/routes/admin/messages/+page.server.ts
+@@ -105,7 +105,8 @@
+ };
+ 
+ export const actions: Actions = {
+-	default: async ({ request }) => {
++	default: async ({ request, url }) => {
++		requireDayNightPageSession(request, 'admin/messages', url.searchParams);
+ 		const formData = await request.formData();
+ 		const id = value(formData, 'id');
+ 		const routePath = value(formData, 'routePath');
+diff --git a/templates/import/src/routes/admin/users/+page.server.ts b/templates/import/src/routes/admin/users/+page.server.ts
+--- a/templates/import/src/routes/admin/users/+page.server.ts
++++ b/templates/import/src/routes/admin/users/+page.server.ts
+@@ -38,7 +38,8 @@
+ };
+ 
+ export const actions: Actions = {
+-	default: async ({ request }) => {
++	default: async ({ request, url }) => {
++		requireDayNightPageSession(request, 'admin/users', url.searchParams);
+ 		const formData = await request.formData();
+ 		const id = value(formData, 'id');
+ 

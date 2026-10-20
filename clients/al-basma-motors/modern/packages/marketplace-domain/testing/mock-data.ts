@@ -58,7 +58,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Al Basma Motors",
       "verificationStatus": "unverified",
       "city": "Sharjah",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-e73f3eb48de7300c/logo-on-light.webp"
     },
     "publishedAt": "2026-09-08T09:00:00.000Z",
     "promoted": true
@@ -119,7 +119,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Al Basma Motors",
       "verificationStatus": "unverified",
       "city": "Sharjah",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-e73f3eb48de7300c/logo-on-light.webp"
     },
     "publishedAt": "2026-09-08T09:00:00.000Z",
     "promoted": true
@@ -180,7 +180,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Al Basma Motors",
       "verificationStatus": "unverified",
       "city": "Sharjah",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-e73f3eb48de7300c/logo-on-light.webp"
     },
     "publishedAt": "2026-09-08T09:00:00.000Z",
     "promoted": true
@@ -241,7 +241,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Al Basma Motors",
       "verificationStatus": "unverified",
       "city": "Sharjah",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-e73f3eb48de7300c/logo-on-light.webp"
     },
     "publishedAt": "2026-09-08T09:00:00.000Z",
     "promoted": false
@@ -302,7 +302,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Al Basma Motors",
       "verificationStatus": "unverified",
       "city": "Sharjah",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-e73f3eb48de7300c/logo-on-light.webp"
     },
     "publishedAt": "2026-09-08T09:00:00.000Z",
     "promoted": false
@@ -363,7 +363,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Al Basma Motors",
       "verificationStatus": "unverified",
       "city": "Sharjah",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-e73f3eb48de7300c/logo-on-light.webp"
     },
     "publishedAt": "2026-09-08T09:00:00.000Z",
     "promoted": false
@@ -424,7 +424,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Al Basma Motors",
       "verificationStatus": "unverified",
       "city": "Sharjah",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-e73f3eb48de7300c/logo-on-light.webp"
     },
     "publishedAt": "2026-09-08T09:00:00.000Z",
     "promoted": false
@@ -485,7 +485,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Al Basma Motors",
       "verificationStatus": "unverified",
       "city": "Sharjah",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-e73f3eb48de7300c/logo-on-light.webp"
     },
     "publishedAt": "2026-09-08T09:00:00.000Z",
     "promoted": false
@@ -546,7 +546,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Al Basma Motors",
       "verificationStatus": "unverified",
       "city": "Sharjah",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-e73f3eb48de7300c/logo-on-light.webp"
     },
     "publishedAt": "2026-09-08T09:00:00.000Z",
     "promoted": false
@@ -607,251 +607,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Al Basma Motors",
       "verificationStatus": "unverified",
       "city": "Sharjah",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
-    },
-    "publishedAt": "2026-09-08T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1006",
-    "slug": "lexus-ct200h-2018-1",
-    "category": "car",
-    "dealerOrgId": "dealer-al-basma-motors",
-    "status": "active",
-    "title": "Lexus CT200h Platinum",
-    "description": "Independent, unpublished design concept. Dated listing samples, not a live stock feed. Confirm price, specifications and availability directly with the showroom. Forms only prepare drafts; nothing is delivered.",
-    "price": {
-      "amount": 64000,
-      "currency": "AED"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/dealer/stock/cmtl6wllu000up1mcmlq0al57/1.webp",
-        "alt": "Lexus CT200h Platinum"
-      },
-      {
-        "url": "/dealer/stock/cmtl6wllu000up1mcmlq0al57/2.webp",
-        "alt": "Lexus CT200h Platinum"
-      },
-      {
-        "url": "/dealer/stock/cmtl6wllu000up1mcmlq0al57/3.webp",
-        "alt": "Lexus CT200h Platinum"
-      },
-      {
-        "url": "/dealer/stock/cmtl6wllu000up1mcmlq0al57/4.webp",
-        "alt": "Lexus CT200h Platinum"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Sharjah",
-      "region": "Sharjah",
-      "country": "United Arab Emirates"
-    },
-    "spec": {
-      "make": "Lexus",
-      "model": "CT200h",
-      "year": 2018,
-      "bodyType": "hatchback",
-      "fuelType": "hybrid",
-      "transmission": "semi_automatic",
-      "mileageValue": 168000,
-      "mileageUnit": "km",
-      "colorExterior": "Ultra White"
-    },
-    "seller": {
-      "id": "dealer-al-basma-motors",
-      "type": "dealer",
-      "displayName": "Al Basma Motors",
-      "verificationStatus": "unverified",
-      "city": "Sharjah",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
-    },
-    "publishedAt": "2026-09-08T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1007",
-    "slug": "lexus-is300-2023-2",
-    "category": "car",
-    "dealerOrgId": "dealer-al-basma-motors",
-    "status": "active",
-    "title": "Lexus IS300 Platinum",
-    "description": "Independent, unpublished design concept. Dated listing samples, not a live stock feed. Confirm price, specifications and availability directly with the showroom. Forms only prepare drafts; nothing is delivered.",
-    "price": {
-      "amount": 105000,
-      "currency": "AED"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/dealer/stock/cmtl6pxpd000qp1mcvd0b9ktz/1.webp",
-        "alt": "Lexus IS300 Platinum"
-      },
-      {
-        "url": "/dealer/stock/cmtl6pxpd000qp1mcvd0b9ktz/2.webp",
-        "alt": "Lexus IS300 Platinum"
-      },
-      {
-        "url": "/dealer/stock/cmtl6pxpd000qp1mcvd0b9ktz/3.webp",
-        "alt": "Lexus IS300 Platinum"
-      },
-      {
-        "url": "/dealer/stock/cmtl6pxpd000qp1mcvd0b9ktz/4.webp",
-        "alt": "Lexus IS300 Platinum"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Sharjah",
-      "region": "Sharjah",
-      "country": "United Arab Emirates"
-    },
-    "spec": {
-      "make": "Lexus",
-      "model": "IS300",
-      "year": 2023,
-      "bodyType": "sedan",
-      "fuelType": "gasoline",
-      "transmission": "semi_automatic",
-      "mileageValue": 40000,
-      "mileageUnit": "km",
-      "colorExterior": "Ultra White"
-    },
-    "seller": {
-      "id": "dealer-al-basma-motors",
-      "type": "dealer",
-      "displayName": "Al Basma Motors",
-      "verificationStatus": "unverified",
-      "city": "Sharjah",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
-    },
-    "publishedAt": "2026-09-08T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1008",
-    "slug": "lexus-rc-f-2020-3",
-    "category": "car",
-    "dealerOrgId": "dealer-al-basma-motors",
-    "status": "active",
-    "title": "Lexus RC-F",
-    "description": "Independent, unpublished design concept. Dated listing samples, not a live stock feed. Confirm price, specifications and availability directly with the showroom. Forms only prepare drafts; nothing is delivered.",
-    "price": {
-      "amount": 150000,
-      "currency": "AED"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/dealer/stock/cmqev42oy00i8p13h9qatx95x/1.webp",
-        "alt": "Lexus RC-F"
-      },
-      {
-        "url": "/dealer/stock/cmqev42oy00i8p13h9qatx95x/2.webp",
-        "alt": "Lexus RC-F"
-      },
-      {
-        "url": "/dealer/stock/cmqev42oy00i8p13h9qatx95x/3.webp",
-        "alt": "Lexus RC-F"
-      },
-      {
-        "url": "/dealer/stock/cmqev42oy00i8p13h9qatx95x/4.webp",
-        "alt": "Lexus RC-F"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Sharjah",
-      "region": "Sharjah",
-      "country": "United Arab Emirates"
-    },
-    "spec": {
-      "make": "Lexus",
-      "model": "RC-F",
-      "year": 2020,
-      "bodyType": "coupe",
-      "fuelType": "gasoline",
-      "transmission": "semi_automatic",
-      "mileageValue": 140000,
-      "mileageUnit": "km",
-      "colorExterior": "Ultra White"
-    },
-    "seller": {
-      "id": "dealer-al-basma-motors",
-      "type": "dealer",
-      "displayName": "Al Basma Motors",
-      "verificationStatus": "unverified",
-      "city": "Sharjah",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
-    },
-    "publishedAt": "2026-09-08T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1009",
-    "slug": "lexus-is350-2024-4",
-    "category": "car",
-    "dealerOrgId": "dealer-al-basma-motors",
-    "status": "active",
-    "title": "Lexus IS350 F-Sport",
-    "description": "Independent, unpublished design concept. Dated listing samples, not a live stock feed. Confirm price, specifications and availability directly with the showroom. Forms only prepare drafts; nothing is delivered.",
-    "price": {
-      "amount": 140000,
-      "currency": "AED"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/dealer/stock/cmtfwz86o011dp1we5d9fkdvp/1.webp",
-        "alt": "Lexus IS350 F-Sport"
-      },
-      {
-        "url": "/dealer/stock/cmtfwz86o011dp1we5d9fkdvp/2.webp",
-        "alt": "Lexus IS350 F-Sport"
-      },
-      {
-        "url": "/dealer/stock/cmtfwz86o011dp1we5d9fkdvp/3.webp",
-        "alt": "Lexus IS350 F-Sport"
-      },
-      {
-        "url": "/dealer/stock/cmtfwz86o011dp1we5d9fkdvp/4.webp",
-        "alt": "Lexus IS350 F-Sport"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Sharjah",
-      "region": "Sharjah",
-      "country": "United Arab Emirates"
-    },
-    "spec": {
-      "make": "Lexus",
-      "model": "IS350",
-      "year": 2024,
-      "bodyType": "sedan",
-      "fuelType": "gasoline",
-      "transmission": "semi_automatic",
-      "mileageValue": 151000,
-      "mileageUnit": "km",
-      "colorExterior": "Cloudburst Gray"
-    },
-    "seller": {
-      "id": "dealer-al-basma-motors",
-      "type": "dealer",
-      "displayName": "Al Basma Motors",
-      "verificationStatus": "unverified",
-      "city": "Sharjah",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-e73f3eb48de7300c/logo-on-light.webp"
     },
     "publishedAt": "2026-09-08T09:00:00.000Z",
     "promoted": false

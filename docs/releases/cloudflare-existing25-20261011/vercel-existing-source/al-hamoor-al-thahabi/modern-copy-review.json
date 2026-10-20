@@ -1,0 +1,219 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-reviewed-modern-bilingual-copy-input",
+  "dealer": "al-hamoor-al-thahabi",
+  "sourceCommit": "2f7937757b84d6737a912b92908ff6ba2584cf5f",
+  "baselineTree": "f018359d59bf1a35094b285242a70de9160e397b",
+  "inputSha256": "042151d3b5ae148b23007c19db2d9ad101166caf681e9415926cfb6b7e160482",
+  "modernInputRowsSha256": "b8f40cf116da9118b1d204f9a0075a27279baac6c36bf7d99aebd95967afea4a",
+  "profileInputs": [
+    {
+      "path": "dealer.json",
+      "bytes": 4895,
+      "sha256": "cc0fcb0bb8107ed11ea130bc8b057cdf681b412f3302ca35aab078a85daa771b",
+      "gitBlob": "6f8e151cd6711a16711246398a120223b7b91492"
+    },
+    {
+      "path": "business-facts.json",
+      "bytes": 2778,
+      "sha256": "8334c1beee4e4473d5438a5d923f3aa9e3d4e01e83d46ec4874ebc872f56f294",
+      "gitBlob": "8c427aaa279cbfdef7593ac83db45787e85bb5b1"
+    },
+    {
+      "path": "stock.json",
+      "bytes": 14090,
+      "sha256": "9ee66efa36888ab441d79a9758edf1b9cbfd48bbd03dac07e78b681262883543",
+      "gitBlob": "bb72edcb8e7150a728e4a74eed4b6f5629c2ea24"
+    }
+  ],
+  "reviewedGeneratorHelper": {
+    "path": "scripts/lib/modern-dealer-inventory-copy.mjs",
+    "sha256": "cbdbaa28dc07911cfe913b4e627671b6556fc25d3bfe59364e29c5ca5a29072b"
+  },
+  "listingCount": 8,
+  "review": {
+    "displayCopyOnly": true,
+    "exactSourceDescriptionKeys": true,
+    "listingFactsUnchanged": true,
+    "imageUrlsUnchanged": true,
+    "imageAltsPreserved": true,
+    "interpolationTokensUnchanged": true,
+    "reviewedBy": "root",
+    "notes": "Translate exact snapshot descriptions and preserve owner vehicle names, facts, dated availability and form disclosure."
+  },
+  "reviewedCopy": {
+    "mercedes-benz-cla250-2025-965722": {
+      "sourceDescription": "Dated advertised listing sample. Confirm the vehicle condition, availability and viewing location with the dealership.",
+      "en": {
+        "description": "Dated advertised listing sample. Confirm the vehicle condition, availability and viewing location with the dealership.",
+        "imageAlts": [
+          "2025 Mercedes-Benz CLA250 Premium + 2.0L",
+          "2025 Mercedes-Benz CLA250 Premium + 2.0L",
+          "2025 Mercedes-Benz CLA250 Premium + 2.0L",
+          "2025 Mercedes-Benz CLA250 Premium + 2.0L"
+        ]
+      },
+      "bg": {
+        "description": "Датирана примерна обява. Потвърдете състоянието, наличността и мястото за оглед на автомобила с автокъщата.",
+        "imageAlts": [
+          "2025 Mercedes-Benz CLA250 Premium + 2.0L",
+          "2025 Mercedes-Benz CLA250 Premium + 2.0L",
+          "2025 Mercedes-Benz CLA250 Premium + 2.0L",
+          "2025 Mercedes-Benz CLA250 Premium + 2.0L"
+        ]
+      }
+    },
+    "nissan-rogue-2023-1005647": {
+      "sourceDescription": "Dated advertised listing sample. Confirm the vehicle condition, availability and viewing location with the dealership.",
+      "en": {
+        "description": "Dated advertised listing sample. Confirm the vehicle condition, availability and viewing location with the dealership.",
+        "imageAlts": [
+          "2023 Nissan Rogue Platinum",
+          "2023 Nissan Rogue Platinum",
+          "2023 Nissan Rogue Platinum",
+          "2023 Nissan Rogue Platinum"
+        ]
+      },
+      "bg": {
+        "description": "Датирана примерна обява. Потвърдете състоянието, наличността и мястото за оглед на автомобила с автокъщата.",
+        "imageAlts": [
+          "2023 Nissan Rogue Platinum",
+          "2023 Nissan Rogue Platinum",
+          "2023 Nissan Rogue Platinum",
+          "2023 Nissan Rogue Platinum"
+        ]
+      }
+    },
+    "toyota-prado-2011-1010924": {
+      "sourceDescription": "Dated advertised listing sample. Confirm the vehicle condition, availability and viewing location with the dealership.",
+      "en": {
+        "description": "Dated advertised listing sample. Confirm the vehicle condition, availability and viewing location with the dealership.",
+        "imageAlts": [
+          "2011 Toyota Prado TX-L",
+          "2011 Toyota Prado TX-L",
+          "2011 Toyota Prado TX-L",
+          "2011 Toyota Prado TX-L"
+        ]
+      },
+      "bg": {
+        "description": "Датирана примерна обява. Потвърдете състоянието, наличността и мястото за оглед на автомобила с автокъщата.",
+        "imageAlts": [
+          "2011 Toyota Prado TX-L",
+          "2011 Toyota Prado TX-L",
+          "2011 Toyota Prado TX-L",
+          "2011 Toyota Prado TX-L"
+        ]
+      }
+    },
+    "chevrolet-malibu-2022-1018774": {
+      "sourceDescription": "Dated advertised listing sample. Confirm the vehicle condition, availability and viewing location with the dealership.",
+      "en": {
+        "description": "Dated advertised listing sample. Confirm the vehicle condition, availability and viewing location with the dealership.",
+        "imageAlts": [
+          "2022 Chevrolet Malibu LT",
+          "2022 Chevrolet Malibu LT",
+          "2022 Chevrolet Malibu LT",
+          "2022 Chevrolet Malibu LT"
+        ]
+      },
+      "bg": {
+        "description": "Датирана примерна обява. Потвърдете състоянието, наличността и мястото за оглед на автомобила с автокъщата.",
+        "imageAlts": [
+          "2022 Chevrolet Malibu LT",
+          "2022 Chevrolet Malibu LT",
+          "2022 Chevrolet Malibu LT",
+          "2022 Chevrolet Malibu LT"
+        ]
+      }
+    },
+    "toyota-rush-2023-916417": {
+      "sourceDescription": "Dated advertised listing sample. Confirm the vehicle condition, availability and viewing location with the dealership.",
+      "en": {
+        "description": "Dated advertised listing sample. Confirm the vehicle condition, availability and viewing location with the dealership.",
+        "imageAlts": [
+          "2023 Toyota Rush EX 1.5L",
+          "2023 Toyota Rush EX 1.5L",
+          "2023 Toyota Rush EX 1.5L",
+          "2023 Toyota Rush EX 1.5L"
+        ]
+      },
+      "bg": {
+        "description": "Датирана примерна обява. Потвърдете състоянието, наличността и мястото за оглед на автомобила с автокъщата.",
+        "imageAlts": [
+          "2023 Toyota Rush EX 1.5L",
+          "2023 Toyota Rush EX 1.5L",
+          "2023 Toyota Rush EX 1.5L",
+          "2023 Toyota Rush EX 1.5L"
+        ]
+      }
+    },
+    "chevrolet-trax-2020-906007": {
+      "sourceDescription": "Dated advertised listing sample. Confirm the vehicle condition, availability and viewing location with the dealership.",
+      "en": {
+        "description": "Dated advertised listing sample. Confirm the vehicle condition, availability and viewing location with the dealership.",
+        "imageAlts": [
+          "2020 Chevrolet Trax LT 1.8L AWD",
+          "2020 Chevrolet Trax LT 1.8L AWD",
+          "2020 Chevrolet Trax LT 1.8L AWD",
+          "2020 Chevrolet Trax LT 1.8L AWD"
+        ]
+      },
+      "bg": {
+        "description": "Датирана примерна обява. Потвърдете състоянието, наличността и мястото за оглед на автомобила с автокъщата.",
+        "imageAlts": [
+          "2020 Chevrolet Trax LT 1.8L AWD",
+          "2020 Chevrolet Trax LT 1.8L AWD",
+          "2020 Chevrolet Trax LT 1.8L AWD",
+          "2020 Chevrolet Trax LT 1.8L AWD"
+        ]
+      }
+    },
+    "ford-figo-2019-1017078": {
+      "sourceDescription": "Dated advertised listing sample. Confirm the vehicle condition, availability and viewing location with the dealership.",
+      "en": {
+        "description": "Dated advertised listing sample. Confirm the vehicle condition, availability and viewing location with the dealership.",
+        "imageAlts": [
+          "2019 Ford Figo Ambiente",
+          "2019 Ford Figo Ambiente",
+          "2019 Ford Figo Ambiente",
+          "2019 Ford Figo Ambiente"
+        ]
+      },
+      "bg": {
+        "description": "Датирана примерна обява. Потвърдете състоянието, наличността и мястото за оглед на автомобила с автокъщата.",
+        "imageAlts": [
+          "2019 Ford Figo Ambiente",
+          "2019 Ford Figo Ambiente",
+          "2019 Ford Figo Ambiente",
+          "2019 Ford Figo Ambiente"
+        ]
+      }
+    },
+    "nissan-sentra-2021-969234": {
+      "sourceDescription": "Dated advertised listing sample. Confirm the vehicle condition, availability and viewing location with the dealership.",
+      "en": {
+        "description": "Dated advertised listing sample. Confirm the vehicle condition, availability and viewing location with the dealership.",
+        "imageAlts": [
+          "2021 Nissan Sentra SV 1.6L",
+          "2021 Nissan Sentra SV 1.6L",
+          "2021 Nissan Sentra SV 1.6L",
+          "2021 Nissan Sentra SV 1.6L"
+        ]
+      },
+      "bg": {
+        "description": "Датирана примерна обява. Потвърдете състоянието, наличността и мястото за оглед на автомобила с автокъщата.",
+        "imageAlts": [
+          "2021 Nissan Sentra SV 1.6L",
+          "2021 Nissan Sentra SV 1.6L",
+          "2021 Nissan Sentra SV 1.6L",
+          "2021 Nissan Sentra SV 1.6L"
+        ]
+      }
+    }
+  },
+  "canonicalSourcePublished": false,
+  "currentSourceQualification": false,
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "globalReleaseApproval": false
+}

@@ -1,0 +1,15 @@
+{
+  "generatedAt": "2026-10-04T02:51:03.604Z",
+  "head": "aaf7af021a30fffe1967fd84d9b6fc30223a627d",
+  "sourceSha256": "703c977a6c43391660decd2f7656ffdb24124ccb58ec35b15d08c6ed4ab53e7b",
+  "checks": {
+    "cssPolicy": "passed",
+    "tokens": "passed",
+    "typographyAndVisualPins": "passed",
+    "productionBuild": "passed",
+    "roundedNativeCases": 4,
+    "consoleErrors": 0
+  },
+  "change": "Restore inherited shared button radius; retain slim paint and medium text",
+  "localOnly": true
+}

@@ -2,7 +2,7 @@ export type BrandConfig = {
   name: string;
   shortName: string;
   city: string;
-  showroomCoordinates: { latitude: number; longitude: number };
+  showroomCoordinates: { latitude: number; longitude: number } | null;
   addressLine: string;
   address: string;
   phone: string;
@@ -24,7 +24,7 @@ export const brand = {
   name,
   shortName,
   city,
-  showroomCoordinates: {"latitude":0,"longitude":0},
+  showroomCoordinates: null,
   youtubeUrl: "",
   instagramUrl: "https://www.instagram.com/albasmamotors",
   facebookUrl: "https://www.facebook.com/albasmamotors",
@@ -33,6 +33,6 @@ export const brand = {
   addressLine,
   address: "Showroom 61, Souq Al Haraj, Sharjah, UAE",
   appointment: "Contact the showroom before travelling",
-  logo: "/dealer-brand/logo-on-light.webp",
-  logoOnDark: "/dealer-brand/logo-on-dark.webp"
+  logo: "/dealer-brand/v2-e73f3eb48de7300c/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/v2-e73f3eb48de7300c/logo-on-dark.webp"
 } as const satisfies BrandConfig;

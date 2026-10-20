@@ -209,15 +209,20 @@
     },
     {
       "slug": "avtoborsa-mania",
-      "name": "╨É╨Æ╨ó╨₧╨æ╨₧╨á╨í╨É ╨£╨É╨¥╨ÿ╨»",
+      "name": "АВТОБОРСА МАНИЯ",
       "path": "clients/avtoborsa-mania",
       "variants": [
         "auto-best",
         "modern",
-        "carwow"
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
       ],
       "sourceState": "source-on-main",
-      "reviewState": "unknown"
+      "reviewState": "source-reviewed-native-pending",
+      "repository": "darkapoparka/cars-avtoborsa-mania",
+      "dealerId": "avtoborsa-mania"
     },
     {
       "slug": "car-finder-360",
@@ -271,15 +276,20 @@
     },
     {
       "slug": "chernomore-varna",
-      "name": "╨É╨▓╤é╨╛╤ü╨░╨╗╨╛╨╜ ╨º╨╡╤Ç╨╜╨╛ ╨╝╨╛╤Ç╨╡",
+      "name": "Черно море",
       "path": "clients/chernomore-varna",
       "variants": [
         "auto-best",
         "modern",
-        "carwow"
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
       ],
       "sourceState": "source-on-main",
-      "reviewState": "unknown"
+      "reviewState": "source-reviewed-native-pending",
+      "repository": "darkapoparka/cars-chernomore-varna",
+      "dealerId": "chernomore-varna"
     },
     {
       "slug": "danger-auto",
@@ -346,27 +356,37 @@
     },
     {
       "slug": "europa-varna",
-      "name": "europa-varna",
+      "name": "Европа",
       "path": "clients/europa-varna",
       "variants": [
         "auto-best",
         "modern",
-        "carwow"
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
       ],
       "sourceState": "source-on-main",
-      "reviewState": "unknown"
+      "reviewState": "source-reviewed-native-pending",
+      "repository": "darkapoparka/cars-europa-varna",
+      "dealerId": "europa-varna"
     },
     {
       "slug": "evrocar-varna-09",
-      "name": "evrocar-varna-09",
+      "name": "ЕВРОКАР ВАРНА 09",
       "path": "clients/evrocar-varna-09",
       "variants": [
         "auto-best",
         "modern",
-        "carwow"
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
       ],
       "sourceState": "source-on-main",
-      "reviewState": "unknown"
+      "reviewState": "source-reviewed-native-pending",
+      "repository": "darkapoparka/cars-evrocar-varna-09",
+      "dealerId": "evrocar-varna-09"
     },
     {
       "slug": "excellent-cars",
@@ -388,22 +408,32 @@
       "variants": [
         "auto-best",
         "modern",
-        "carwow"
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
       ],
       "sourceState": "source-on-main",
-      "reviewState": "unknown"
+      "reviewState": "source-reviewed-native-pending",
+      "repository": "darkapoparka/cars-exclusive-auto-varna",
+      "dealerId": "exclusive-auto-varna"
     },
     {
       "slug": "extra-car-sm",
-      "name": "╨ò╨Ü╨í╨ó╨á╨É ╨Ü╨É╨á-╨í╨£",
+      "name": "ЕКСТРА КАР-СМ",
       "path": "clients/extra-car-sm",
       "variants": [
         "auto-best",
         "modern",
-        "carwow"
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
       ],
       "sourceState": "source-on-main",
-      "reviewState": "unknown"
+      "reviewState": "source-reviewed-native-pending",
+      "repository": "darkapoparka/cars-extra-car-sm",
+      "dealerId": "extra-car-sm"
     },
     {
       "slug": "f1-auto-vratsa",
@@ -578,15 +608,20 @@
     },
     {
       "slug": "kapitol-varna",
-      "name": "╨Ü╨É╨ƒ╨ÿ╨ó╨₧╨¢",
+      "name": "Капитол",
       "path": "clients/kapitol-varna",
       "variants": [
         "auto-best",
         "modern",
-        "carwow"
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
       ],
       "sourceState": "source-on-main",
-      "reviewState": "unknown"
+      "reviewState": "source-reviewed-native-pending",
+      "repository": "darkapoparka/cars-kapitol-varna",
+      "dealerId": "kapitol-varna"
     },
     {
       "slug": "keen-auto-mall",
@@ -852,15 +887,20 @@
     },
     {
       "slug": "prestige-varna",
-      "name": "╨É╨▓╤é╨╛╤ü╨░╨╗╨╛╨╜ ╨ƒ╨á╨ò╨í╨ó╨ÿ╨û",
+      "name": "Автосалон ПРЕСТИЖ",
       "path": "clients/prestige-varna",
       "variants": [
         "auto-best",
         "modern",
-        "carwow"
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
       ],
       "sourceState": "source-on-main",
-      "reviewState": "unknown"
+      "reviewState": "source-reviewed-native-pending",
+      "repository": "darkapoparka/cars-prestige-varna",
+      "dealerId": "prestige-varna"
     },
     {
       "slug": "priselci",
@@ -890,15 +930,20 @@
     },
     {
       "slug": "rqs-auto-team",
-      "name": "rqs-auto-team",
+      "name": "R.Q.S. Auto – Team",
       "path": "clients/rqs-auto-team",
       "variants": [
         "auto-best",
         "modern",
-        "carwow"
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
       ],
       "sourceState": "source-on-main",
-      "reviewState": "unknown"
+      "reviewState": "source-reviewed-native-pending",
+      "repository": "darkapoparka/cars-rqs-auto-team",
+      "dealerId": "rqs-auto-team"
     },
     {
       "slug": "sevierville-import-truck-center",
@@ -926,15 +971,20 @@
     },
     {
       "slug": "sprint-auto-varna",
-      "name": "sprint-auto-varna",
+      "name": "Спринт ауто",
       "path": "clients/sprint-auto-varna",
       "variants": [
         "auto-best",
         "modern",
-        "carwow"
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
       ],
       "sourceState": "source-on-main",
-      "reviewState": "unknown"
+      "reviewState": "source-reviewed-native-pending",
+      "repository": "darkapoparka/cars-sprint-auto-varna",
+      "dealerId": "sprint-auto-varna"
     },
     {
       "slug": "stenli-car",
@@ -962,15 +1012,20 @@
     },
     {
       "slug": "sunny-varna",
-      "name": "sunny-varna",
+      "name": "СЪНИ",
       "path": "clients/sunny-varna",
       "variants": [
         "auto-best",
         "modern",
-        "carwow"
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
       ],
       "sourceState": "source-on-main",
-      "reviewState": "unknown"
+      "reviewState": "source-reviewed-native-pending",
+      "repository": "darkapoparka/cars-sunny-varna",
+      "dealerId": "sunny-varna"
     },
     {
       "slug": "swiss-auto-43",
@@ -986,15 +1041,20 @@
     },
     {
       "slug": "tesi-car-varna",
-      "name": "╨ó╨╡╤ü╨╕ ╨Ü╨░╤Ç",
+      "name": "Теси Кар",
       "path": "clients/tesi-car-varna",
       "variants": [
         "auto-best",
         "modern",
-        "carwow"
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
       ],
-      "sourceState": "source-present",
-      "reviewState": "unknown"
+      "sourceState": "source-on-main",
+      "reviewState": "source-reviewed-native-pending",
+      "repository": "darkapoparka/cars-tesi-car-varna",
+      "dealerId": "tesi-car-varna"
     },
     {
       "slug": "texas-drive-auto",
@@ -1082,6 +1142,760 @@
       ],
       "sourceState": "source-on-main",
       "reviewState": "unknown"
+    },
+    {
+      "slug": "stockport-broadbent-car-and-servicing",
+      "name": "Broadbent Car and Servicing",
+      "path": "clients/stockport-broadbent-car-and-servicing",
+      "variants": [
+        "auto-best",
+        "modern",
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
+      ],
+      "sourceState": "source-on-main",
+      "reviewState": "pending"
+    },
+    {
+      "slug": "motherwell-motors-castle",
+      "name": "Motors Castle",
+      "path": "clients/motherwell-motors-castle",
+      "variants": [
+        "auto-best",
+        "modern",
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
+      ],
+      "sourceState": "source-on-main",
+      "reviewState": "pending"
+    },
+    {
+      "slug": "birmingham-trade-car-sales-grasmere",
+      "name": "Trade Car Sales",
+      "path": "clients/birmingham-trade-car-sales-grasmere",
+      "variants": [
+        "auto-best",
+        "modern",
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
+      ],
+      "sourceState": "source-on-main",
+      "reviewState": "pending"
+    },
+    {
+      "slug": "birmingham-square-one-motors",
+      "name": "Square One Motors",
+      "path": "clients/birmingham-square-one-motors",
+      "variants": [
+        "auto-best",
+        "modern",
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
+      ],
+      "sourceState": "source-on-main",
+      "reviewState": "pending"
+    },
+    {
+      "slug": "dewsbury-car-market-yorkshire",
+      "name": "Car Market Yorkshire",
+      "path": "clients/dewsbury-car-market-yorkshire",
+      "variants": [
+        "auto-best",
+        "modern",
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
+      ],
+      "sourceState": "source-on-main",
+      "reviewState": "pending"
+    },
+    {
+      "slug": "nottingham-s-a-motors",
+      "name": "S A Motors",
+      "path": "clients/nottingham-s-a-motors",
+      "variants": [
+        "auto-best",
+        "modern",
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
+      ],
+      "sourceState": "source-on-main",
+      "reviewState": "pending"
+    },
+    {
+      "slug": "batley-as-motor-group",
+      "name": "AS Motor Group",
+      "path": "clients/batley-as-motor-group",
+      "variants": [
+        "auto-best",
+        "modern",
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
+      ],
+      "sourceState": "source-on-main",
+      "reviewState": "pending"
+    },
+    {
+      "slug": "bradford-cherry-tree-cars",
+      "name": "Cherry Tree Cars Ltd",
+      "path": "clients/bradford-cherry-tree-cars",
+      "variants": [
+        "auto-best",
+        "modern",
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
+      ],
+      "sourceState": "source-on-main",
+      "reviewState": "pending"
+    },
+    {
+      "slug": "stockton-norton-grange-trade-cars",
+      "name": "Norton Grange Trade Cars",
+      "path": "clients/stockton-norton-grange-trade-cars",
+      "variants": [
+        "auto-best",
+        "modern",
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
+      ],
+      "sourceState": "source-on-main",
+      "reviewState": "pending"
+    },
+    {
+      "slug": "north-norfolk-car-sales",
+      "name": "North Norfolk Car Sales",
+      "path": "clients/north-norfolk-car-sales",
+      "variants": [
+        "auto-best",
+        "modern",
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
+      ],
+      "sourceState": "source-on-main",
+      "reviewState": "pending"
+    },
+    {
+      "slug": "autofest-varna",
+      "name": "Аутофест",
+      "path": "clients/autofest-varna",
+      "variants": [
+        "auto-best",
+        "modern",
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
+      ],
+      "sourceState": "source-on-main",
+      "reviewState": "unknown",
+      "leadId": "bg-varna-autofest"
+    },
+    {
+      "slug": "autoroad-varna",
+      "name": "AUTOROAD",
+      "path": "clients/autoroad-varna",
+      "variants": [
+        "auto-best",
+        "modern",
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
+      ],
+      "sourceState": "source-on-main",
+      "reviewState": "unknown",
+      "leadId": "bg-varna-autoroad"
+    },
+    {
+      "slug": "car-point-trade-varna",
+      "name": "CAR POINT TRADE LTD",
+      "path": "clients/car-point-trade-varna",
+      "variants": [
+        "auto-best",
+        "modern",
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
+      ],
+      "sourceState": "source-on-main",
+      "reviewState": "unknown",
+      "leadId": "bg-varna-carpointtrade"
+    },
+    {
+      "slug": "city-cars-varna",
+      "name": "Сити Карс",
+      "path": "clients/city-cars-varna",
+      "variants": [
+        "auto-best",
+        "modern",
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
+      ],
+      "sourceState": "source-on-main",
+      "reviewState": "unknown",
+      "leadId": "bg-varna-city-cars"
+    },
+    {
+      "slug": "dm-auto-varna",
+      "name": "D&M - Auto Varna",
+      "path": "clients/dm-auto-varna",
+      "variants": [
+        "auto-best",
+        "modern",
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
+      ],
+      "sourceState": "source-on-main",
+      "reviewState": "unknown",
+      "leadId": "bg-varna-dmautovarna"
+    },
+    {
+      "slug": "dream-drive-varna",
+      "name": "DREAM DRIVE",
+      "path": "clients/dream-drive-varna",
+      "variants": [
+        "auto-best",
+        "modern",
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
+      ],
+      "sourceState": "source-on-main",
+      "reviewState": "unknown",
+      "leadId": "bg-varna-dreamdrive"
+    },
+    {
+      "slug": "dynamic-auto-varna",
+      "name": "Dynamic Auto Varna",
+      "path": "clients/dynamic-auto-varna",
+      "variants": [
+        "auto-best",
+        "modern",
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
+      ],
+      "sourceState": "source-on-main",
+      "reviewState": "unknown",
+      "leadId": "bg-varna-dynamicautovarna"
+    },
+    {
+      "slug": "kolarov-cars",
+      "name": "Kolarov Cars",
+      "path": "clients/kolarov-cars",
+      "variants": [
+        "auto-best",
+        "modern",
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
+      ],
+      "sourceState": "source-on-main",
+      "reviewState": "unknown",
+      "leadId": "bg-varna-kolarovcars"
+    },
+    {
+      "slug": "pm-select-automotive",
+      "name": "PM SELECT AUTOMOTIVE",
+      "path": "clients/pm-select-automotive",
+      "variants": [
+        "auto-best",
+        "modern",
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
+      ],
+      "sourceState": "source-on-main",
+      "reviewState": "unknown",
+      "leadId": "bg-varna-pmselect"
+    },
+    {
+      "slug": "prime-auto-varna",
+      "name": "PRIME AUTO",
+      "path": "clients/prime-auto-varna",
+      "variants": [
+        "auto-best",
+        "modern",
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
+      ],
+      "sourceState": "source-on-main",
+      "reviewState": "unknown",
+      "leadId": "bg-varna-prime-auto"
+    },
+    {
+      "slug": "centralauto-varna",
+      "name": "Ц Е Н Т Р А Л-АВТОСАЛОН",
+      "path": "clients/centralauto-varna",
+      "dealerId": "centralauto-varna",
+      "leadId": "centralauto-varna",
+      "repository": "darkapoparka/cars-centralauto-varna",
+      "variants": [
+        "auto-best",
+        "modern",
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
+      ],
+      "sourceState": "reviewed-source-proposal",
+      "reviewState": "native-build-and-hosted-review-pending"
+    },
+    {
+      "slug": "kalchev-varna",
+      "name": "Kalchev Correct",
+      "path": "clients/kalchev-varna",
+      "dealerId": "kalchev-varna",
+      "leadId": "kalchev-varna",
+      "repository": "darkapoparka/cars-kalchev-varna",
+      "variants": [
+        "auto-best",
+        "modern",
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
+      ],
+      "sourceState": "reviewed-source-proposal",
+      "reviewState": "native-build-and-hosted-review-pending"
+    },
+    {
+      "slug": "sevicar-varna",
+      "name": "АВТОКЪЩА СЕВИ КАР",
+      "path": "clients/sevicar-varna",
+      "dealerId": "sevicar-varna",
+      "leadId": "sevicar-varna",
+      "repository": "darkapoparka/cars-sevicar-varna",
+      "variants": [
+        "auto-best",
+        "modern",
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
+      ],
+      "sourceState": "reviewed-source-proposal",
+      "reviewState": "native-build-and-hosted-review-pending"
+    },
+    {
+      "slug": "biemaauto-varna",
+      "dealerId": "biemaauto-varna",
+      "path": "clients/biemaauto-varna",
+      "repository": "darkapoparka/cars-biemaauto-varna"
+    },
+    {
+      "slug": "auto-insurance-import-varna",
+      "dealerId": "auto-insurance-import-varna",
+      "repository": "darkapoparka/cars-auto-insurance-import-varna",
+      "path": "clients/auto-insurance-import-varna"
+    },
+    {
+      "slug": "part-mag-cars-varna",
+      "dealerId": "part-mag-cars-varna",
+      "repository": "darkapoparka/cars-part-mag-cars-varna",
+      "path": "clients/part-mag-cars-varna"
+    },
+    {
+      "slug": "kalo-0404-varna",
+      "dealerId": "kalo-0404-varna",
+      "repository": "darkapoparka/cars-kalo-0404-varna",
+      "path": "clients/kalo-0404-varna"
+    },
+    {
+      "slug": "eurocar6-varna",
+      "dealerId": "eurocar6-varna",
+      "repository": "darkapoparka/cars-eurocar6-varna",
+      "path": "clients/eurocar6-varna"
+    },
+    {
+      "slug": "miraj-auto-varna",
+      "dealerId": "miraj-auto-varna",
+      "repository": "darkapoparka/cars-miraj-auto-varna",
+      "path": "clients/miraj-auto-varna"
+    },
+    {
+      "slug": "vvcars-varna",
+      "dealerId": "vvcars-varna",
+      "repository": "darkapoparka/cars-vvcars-varna",
+      "path": "clients/vvcars-varna"
+    },
+    {
+      "slug": "kalokars-varna",
+      "dealerId": "kalokars-varna",
+      "repository": "darkapoparka/cars-kalokars-varna",
+      "path": "clients/kalokars-varna"
+    },
+    {
+      "slug": "nunki-1-varna",
+      "dealerId": "nunki-1-varna",
+      "repository": "darkapoparka/cars-nunki-1-varna",
+      "path": "clients/nunki-1-varna"
+    },
+    {
+      "slug": "atanasov-varna",
+      "dealerId": "atanasov-varna",
+      "repository": "darkapoparka/cars-atanasov-varna",
+      "path": "clients/atanasov-varna"
+    },
+    {
+      "slug": "multizaza-varna",
+      "dealerId": "multizaza-varna",
+      "repository": "darkapoparka/cars-multizaza-varna",
+      "path": "clients/multizaza-varna"
+    },
+    {
+      "slug": "kolevi-auto-varna",
+      "dealerId": "kolevi-auto-varna",
+      "repository": "darkapoparka/cars-kolevi-auto-varna",
+      "path": "clients/kolevi-auto-varna"
+    },
+    {
+      "slug": "transcar-varna",
+      "dealerId": "transcar-varna",
+      "repository": "darkapoparka/cars-transcar-varna",
+      "path": "clients/transcar-varna"
+    },
+    {
+      "slug": "promotors82-varna",
+      "dealerId": "promotors82-varna",
+      "repository": "darkapoparka/cars-promotors82-varna",
+      "path": "clients/promotors82-varna"
+    },
+    {
+      "slug": "kk-auto-varna",
+      "dealerId": "kk-auto-varna",
+      "repository": "darkapoparka/cars-kk-auto-varna",
+      "path": "clients/kk-auto-varna"
+    },
+    {
+      "slug": "valkov-cars-varna",
+      "dealerId": "valkov-cars-varna",
+      "repository": "darkapoparka/cars-valkov-cars-varna",
+      "path": "clients/valkov-cars-varna"
+    },
+    {
+      "slug": "i1-auto-varna",
+      "dealerId": "i1-auto-varna",
+      "repository": "darkapoparka/cars-i1-auto-varna",
+      "path": "clients/i1-auto-varna"
+    },
+    {
+      "slug": "cali-cars-varna",
+      "dealerId": "cali-cars-varna",
+      "repository": "darkapoparka/cars-cali-cars-varna",
+      "path": "clients/cali-cars-varna"
+    },
+    {
+      "slug": "nordic-auto-varna",
+      "dealerId": "nordic-auto-varna",
+      "repository": "darkapoparka/cars-nordic-auto-varna",
+      "path": "clients/nordic-auto-varna"
+    },
+    {
+      "slug": "dein-auto-varna",
+      "dealerId": "dein-auto-varna",
+      "repository": "darkapoparka/cars-dein-auto-varna",
+      "path": "clients/dein-auto-varna"
+    },
+    {
+      "slug": "carnova-varna",
+      "dealerId": "carnova-varna",
+      "repository": "darkapoparka/cars-carnova-varna",
+      "path": "clients/carnova-varna"
+    },
+    {
+      "slug": "champion-auto-varna",
+      "dealerId": "champion-auto-varna",
+      "repository": "darkapoparka/cars-champion-auto-varna",
+      "path": "clients/champion-auto-varna"
+    },
+    {
+      "slug": "m-car-varna",
+      "dealerId": "m-car-varna",
+      "repository": "darkapoparka/cars-m-car-varna",
+      "path": "clients/m-car-varna"
+    },
+    {
+      "slug": "express-auto-varna",
+      "dealerId": "express-auto-varna",
+      "repository": "darkapoparka/cars-express-auto-varna",
+      "path": "clients/express-auto-varna"
+    },
+    {
+      "slug": "fusion-auto-varna",
+      "dealerId": "fusion-auto-varna",
+      "repository": "darkapoparka/cars-fusion-auto-varna",
+      "path": "clients/fusion-auto-varna"
+    },
+    {
+      "slug": "bavaria-auto-varna",
+      "dealerId": "bavaria-auto-varna",
+      "repository": "darkapoparka/cars-bavaria-auto-varna",
+      "path": "clients/bavaria-auto-varna"
+    },
+    {
+      "slug": "monarh-varna",
+      "dealerId": "monarh-varna",
+      "repository": "darkapoparka/cars-monarh-varna",
+      "path": "clients/monarh-varna"
+    },
+    {
+      "slug": "balkan-car-varna",
+      "dealerId": "balkan-car-varna",
+      "repository": "darkapoparka/cars-balkan-car-varna",
+      "path": "clients/balkan-car-varna"
+    },
+    {
+      "slug": "vaen-cars-varna",
+      "dealerId": "vaen-cars-varna",
+      "repository": "darkapoparka/cars-vaen-cars-varna",
+      "path": "clients/vaen-cars-varna"
+    },
+    {
+      "slug": "top-auto-varna",
+      "dealerId": "top-auto-varna",
+      "repository": "darkapoparka/cars-top-auto-varna",
+      "path": "clients/top-auto-varna"
+    },
+    {
+      "slug": "technocar-varna",
+      "dealerId": "technocar-varna",
+      "repository": "darkapoparka/cars-technocar-varna",
+      "path": "clients/technocar-varna"
+    },
+    {
+      "slug": "porsche-varna",
+      "dealerId": "porsche-varna",
+      "repository": "darkapoparka/cars-porsche-varna",
+      "path": "clients/porsche-varna"
+    },
+    {
+      "slug": "watt-a-car-varna",
+      "dealerId": "watt-a-car-varna",
+      "repository": "darkapoparka/cars-watt-a-car-varna",
+      "path": "clients/watt-a-car-varna"
+    },
+    {
+      "slug": "am-varna-varna",
+      "dealerId": "am-varna-varna",
+      "repository": "darkapoparka/cars-am-varna-varna",
+      "path": "clients/am-varna-varna"
+    },
+    {
+      "slug": "tonyem4m-varna",
+      "dealerId": "tonyem4m-varna",
+      "repository": "darkapoparka/cars-tonyem4m-varna",
+      "path": "clients/tonyem4m-varna"
+    },
+    {
+      "slug": "mladost2-varna",
+      "dealerId": "mladost2-varna",
+      "repository": "darkapoparka/cars-mladost2-varna",
+      "path": "clients/mladost2-varna"
+    },
+    {
+      "slug": "richicar-varna",
+      "dealerId": "richicar-varna",
+      "repository": "darkapoparka/cars-richicar-varna",
+      "path": "clients/richicar-varna"
+    },
+    {
+      "slug": "lionauto1-varna",
+      "dealerId": "lionauto1-varna",
+      "repository": "darkapoparka/cars-lionauto1-varna",
+      "path": "clients/lionauto1-varna"
+    },
+    {
+      "slug": "elexiscars-varna",
+      "dealerId": "elexiscars-varna",
+      "repository": "darkapoparka/cars-elexiscars-varna",
+      "path": "clients/elexiscars-varna"
+    },
+    {
+      "slug": "electricauto-varna",
+      "dealerId": "electricauto-varna",
+      "repository": "darkapoparka/cars-electricauto-varna",
+      "path": "clients/electricauto-varna"
+    },
+    {
+      "slug": "varnacarexpress-varna",
+      "dealerId": "varnacarexpress-varna",
+      "repository": "darkapoparka/cars-varnacarexpress-varna",
+      "path": "clients/varnacarexpress-varna"
+    },
+    {
+      "slug": "garage24-varna",
+      "dealerId": "garage24-varna",
+      "repository": "darkapoparka/cars-garage24-varna",
+      "path": "clients/garage24-varna"
+    },
+    {
+      "slug": "kris-varna",
+      "dealerId": "kris-varna",
+      "repository": "darkapoparka/cars-kris-varna",
+      "path": "clients/kris-varna"
+    },
+    {
+      "slug": "buscenter-varna",
+      "dealerId": "buscenter-varna",
+      "repository": "darkapoparka/cars-buscenter-varna",
+      "path": "clients/buscenter-varna"
+    },
+    {
+      "slug": "focus1-varna",
+      "dealerId": "focus1-varna",
+      "repository": "darkapoparka/cars-focus1-varna",
+      "path": "clients/focus1-varna"
+    },
+    {
+      "slug": "autostar21-varna",
+      "dealerId": "autostar21-varna",
+      "repository": "darkapoparka/cars-autostar21-varna",
+      "path": "clients/autostar21-varna"
+    },
+    {
+      "slug": "abcbulgaria-varna",
+      "dealerId": "abcbulgaria-varna",
+      "repository": "darkapoparka/cars-abcbulgaria-varna",
+      "path": "clients/abcbulgaria-varna"
+    },
+    {
+      "slug": "grand-auto-varna",
+      "dealerId": "grand-auto-varna",
+      "repository": "darkapoparka/cars-grand-auto-varna",
+      "path": "clients/grand-auto-varna"
+    },
+    {
+      "slug": "mgauto-varna",
+      "dealerId": "mgauto-varna",
+      "repository": "darkapoparka/cars-mgauto-varna",
+      "path": "clients/mgauto-varna"
+    },
+    {
+      "slug": "bora-car-varna",
+      "dealerId": "bora-car-varna",
+      "repository": "darkapoparka/cars-bora-car-varna",
+      "path": "clients/bora-car-varna"
+    },
+    {
+      "slug": "bavaro-varna",
+      "dealerId": "bavaro-varna",
+      "repository": "darkapoparka/cars-bavaro-varna",
+      "path": "clients/bavaro-varna"
+    },
+    {
+      "slug": "wildivaka-varna",
+      "dealerId": "wildivaka-varna",
+      "repository": "darkapoparka/cars-wildivaka-varna",
+      "path": "clients/wildivaka-varna"
+    },
+    {
+      "slug": "triumf-varna",
+      "dealerId": "triumf-varna",
+      "repository": "darkapoparka/cars-triumf-varna",
+      "path": "clients/triumf-varna"
+    },
+    {
+      "slug": "unitrade-varna",
+      "dealerId": "unitrade-varna",
+      "repository": "darkapoparka/cars-unitrade-varna",
+      "path": "clients/unitrade-varna"
+    },
+    {
+      "slug": "autojo-di-varna",
+      "dealerId": "autojo-di-varna",
+      "repository": "darkapoparka/cars-autojo-di-varna",
+      "path": "clients/autojo-di-varna"
+    },
+    {
+      "slug": "specialcarood-varna",
+      "dealerId": "specialcarood-varna",
+      "repository": "darkapoparka/cars-specialcarood-varna",
+      "path": "clients/specialcarood-varna"
+    },
+    {
+      "slug": "ecodrive-varna",
+      "dealerId": "ecodrive-varna",
+      "repository": "darkapoparka/cars-ecodrive-varna",
+      "path": "clients/ecodrive-varna"
+    },
+    {
+      "slug": "vichenca-varna",
+      "dealerId": "vichenca-varna",
+      "repository": "darkapoparka/cars-vichenca-varna",
+      "path": "clients/vichenca-varna"
+    },
+    {
+      "slug": "autobora-varna",
+      "dealerId": "autobora-varna",
+      "repository": "darkapoparka/cars-autobora-varna",
+      "path": "clients/autobora-varna"
+    },
+    {
+      "slug": "stefancar-varna",
+      "dealerId": "stefancar-varna",
+      "repository": "darkapoparka/cars-stefancar-varna",
+      "path": "clients/stefancar-varna"
+    },
+    {
+      "slug": "elegantcar-varna",
+      "dealerId": "elegantcar-varna",
+      "repository": "darkapoparka/cars-elegantcar-varna",
+      "path": "clients/elegantcar-varna"
+    },
+    {
+      "slug": "stadiona-varna",
+      "dealerId": "stadiona-varna",
+      "repository": "darkapoparka/cars-stadiona-varna",
+      "path": "clients/stadiona-varna"
+    },
+    {
+      "slug": "xcar-varna",
+      "dealerId": "xcar-varna",
+      "repository": "darkapoparka/cars-xcar-varna",
+      "path": "clients/xcar-varna"
+    },
+    {
+      "slug": "tesla-varna",
+      "dealerId": "tesla-varna",
+      "repository": "darkapoparka/cars-tesla-varna",
+      "path": "clients/tesla-varna"
+    },
+    {
+      "slug": "crazy-fox-motors-varna",
+      "dealerId": "crazy-fox-motors-varna",
+      "repository": "darkapoparka/cars-crazy-fox-motors-varna",
+      "path": "clients/crazy-fox-motors-varna"
     }
   ],
   "campaignCandidatesWithoutFolders": [

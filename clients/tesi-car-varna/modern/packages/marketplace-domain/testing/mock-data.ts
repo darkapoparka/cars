@@ -3,891 +3,553 @@ import type { Money, VehicleListing } from "../types";
 
 export const mockListings: VehicleListing[] = [
   {
-    "id": "tesi-21783937913461083",
-    "slug": "tesi-21783937913461083",
+    "id": "am-1001",
+    "slug": "audi-2024-template-demo-auto-best-1",
     "category": "car",
     "dealerOrgId": "dealer-tesi-car-varna",
     "status": "active",
-    "title": "Nissan Juke 1.6i tekna 117k.c.",
-    "description": "\u041f\u0443\u0431\u043b\u0438\u043a\u0443\u0432\u0430\u043d\u0430 \u043e\u0431\u044f\u0432\u0430 \u043d\u0430 \u0422\u0435\u0441\u0438 \u041a\u0430\u0440, \u043d\u0430\u0431\u043b\u044e\u0434\u0430\u0432\u0430\u043d\u0430 \u043d\u0430 10.09.2026 \u0433. \u041d\u0430\u043b\u0438\u0447\u043d\u043e\u0441\u0442\u0442\u0430 \u0441\u0435 \u043f\u043e\u0442\u0432\u044a\u0440\u0436\u0434\u0430\u0432\u0430 \u0441 \u0430\u0432\u0442\u043e\u043a\u044a\u0449\u0430\u0442\u0430. \u041e\u0440\u0438\u0433\u0438\u043d\u0430\u043b\u043d\u0430 \u043e\u0431\u044f\u0432\u0430: https://tesicar.mobile.bg/obiava-21783937913461083-nissan-juke-1-6i-tekna-117k-c",
+    "title": "Audi RS 6 Avant",
+    "description": "Демонстрационни автомобили от шаблона, а не наличност на автокъщата. Illustrative template vehicles, not this dealership’s stock.",
     "price": {
-      "amount": 6799,
+      "amount": 68804,
       "currency": "EUR"
     },
     "priceType": "fixed",
     "images": [
       {
-        "url": "/dealer/inventory/21783937913461083-1.webp",
-        "alt": "Nissan Juke 1.6i tekna 117k.c."
-      },
-      {
-        "url": "/dealer/inventory/21783937913461083-2.webp",
-        "alt": "Nissan Juke 1.6i tekna 117k.c."
-      },
-      {
-        "url": "/dealer/inventory/21783937913461083-3.webp",
-        "alt": "Nissan Juke 1.6i tekna 117k.c."
-      },
-      {
-        "url": "/dealer/inventory/21783937913461083-4.webp",
-        "alt": "Nissan Juke 1.6i tekna 117k.c."
+        "url": "/assets/images/lead/day-night-stock-04.webp",
+        "alt": "Audi RS 6 Avant"
       }
     ],
     "badges": [
       "used"
     ],
     "location": {
-      "city": "\u0412\u0430\u0440\u043d\u0430",
-      "region": "\u0412\u043b\u0430\u0434\u0438\u0441\u043b\u0430\u0432 \u0412\u0430\u0440\u043d\u0435\u043d\u0447\u0438\u043a",
-      "country": "\u0411\u044a\u043b\u0433\u0430\u0440\u0438\u044f"
+      "city": "Варна",
+      "region": "Варна",
+      "country": "Bulgaria"
     },
     "features": [
-      {
-        "bg": "4(5) \u0412\u0440\u0430\u0442\u0438",
-        "en": "4(5) \u0412\u0440\u0430\u0442\u0438"
-      },
-      {
-        "bg": "Bluetooth \\ handsfree \u0441\u0438\u0441\u0442\u0435\u043c\u0430",
-        "en": "Bluetooth \\ handsfree \u0441\u0438\u0441\u0442\u0435\u043c\u0430"
-      },
-      {
-        "bg": "USB",
-        "en": "USB"
-      },
-      {
-        "bg": "audio\\video",
-        "en": "audio\\video"
-      },
-      {
-        "bg": "IN\\AUX \u0438\u0437\u0432\u043e\u0434\u0438",
-        "en": "IN\\AUX \u0438\u0437\u0432\u043e\u0434\u0438"
-      },
-      {
-        "bg": "\u0410\u043d\u0442\u0438\u0431\u043b\u043e\u043a\u0438\u0440\u0430\u0449\u0430 \u0441\u0438\u0441\u0442\u0435\u043c\u0430",
-        "en": "\u0410\u043d\u0442\u0438\u0431\u043b\u043e\u043a\u0438\u0440\u0430\u0449\u0430 \u0441\u0438\u0441\u0442\u0435\u043c\u0430"
-      },
-      {
-        "bg": "\u0411\u043e\u0440\u0434\u043a\u043e\u043c\u043f\u044e\u0442\u044a\u0440",
-        "en": "\u0411\u043e\u0440\u0434\u043a\u043e\u043c\u043f\u044e\u0442\u044a\u0440"
-      },
-      {
-        "bg": "\u0412\u044a\u0437\u0434\u0443\u0448\u043d\u0438 \u0432\u044a\u0437\u0433\u043b\u0430\u0432\u043d\u0438\u0446\u0438 - \u041f\u0440\u0435\u0434\u043d\u0438",
-        "en": "\u0412\u044a\u0437\u0434\u0443\u0448\u043d\u0438 \u0432\u044a\u0437\u0433\u043b\u0430\u0432\u043d\u0438\u0446\u0438 - \u041f\u0440\u0435\u0434\u043d\u0438"
-      },
-      {
-        "bg": "\u0412\u044a\u0437\u0434\u0443\u0448\u043d\u0438 \u0432\u044a\u0437\u0433\u043b\u0430\u0432\u043d\u0438\u0446\u0438 - \u0421\u0442\u0440\u0430\u043d\u0438\u0447\u043d\u0438",
-        "en": "\u0412\u044a\u0437\u0434\u0443\u0448\u043d\u0438 \u0432\u044a\u0437\u0433\u043b\u0430\u0432\u043d\u0438\u0446\u0438 - \u0421\u0442\u0440\u0430\u043d\u0438\u0447\u043d\u0438"
-      },
-      {
-        "bg": "\u0414\u0430\u0442\u0447\u0438\u043a \u0437\u0430 \u0441\u0432\u0435\u0442\u043b\u0438\u043d\u0430",
-        "en": "\u0414\u0430\u0442\u0447\u0438\u043a \u0437\u0430 \u0441\u0432\u0435\u0442\u043b\u0438\u043d\u0430"
-      },
-      {
-        "bg": "\u0415\u043b. \u041e\u0433\u043b\u0435\u0434\u0430\u043b\u0430",
-        "en": "\u0415\u043b. \u041e\u0433\u043b\u0435\u0434\u0430\u043b\u0430"
-      },
-      {
-        "bg": "\u0415\u043b. \u0421\u0442\u044a\u043a\u043b\u0430",
-        "en": "\u0415\u043b. \u0421\u0442\u044a\u043a\u043b\u0430"
-      }
-    ],
-    "spec": {
-      "bodyType": "suv",
-      "fuelType": "gasoline",
-      "make": "Nissan",
-      "model": "Juke 1.6i tekna 117k.c.",
-      "year": 2015,
-      "transmission": "manual",
-      "mileageValue": 169200,
-      "mileageUnit": "km",
-      "enginePowerHp": 117,
-      "colorExterior": "\u0421\u0438\u0432"
-    },
-    "seller": {
-      "id": "dealer-tesi-car-varna",
-      "type": "dealer",
-      "displayName": "\u0422\u0435\u0441\u0438 \u041a\u0430\u0440",
-      "verificationStatus": "unverified",
-      "city": "\u0412\u0430\u0440\u043d\u0430"
-    },
-    "publishedAt": "2026-09-10T17:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "tesi-21786378692115915",
-    "slug": "tesi-21786378692115915",
-    "category": "car",
-    "dealerOrgId": "dealer-tesi-car-varna",
-    "status": "active",
-    "title": "Suzuki Grand vitara 2.4i \u0428\u0412\u0415\u0419\u0426\u0410\u0420\u0418\u042f",
-    "description": "\u041f\u0443\u0431\u043b\u0438\u043a\u0443\u0432\u0430\u043d\u0430 \u043e\u0431\u044f\u0432\u0430 \u043d\u0430 \u0422\u0435\u0441\u0438 \u041a\u0430\u0440, \u043d\u0430\u0431\u043b\u044e\u0434\u0430\u0432\u0430\u043d\u0430 \u043d\u0430 10.09.2026 \u0433. \u041d\u0430\u043b\u0438\u0447\u043d\u043e\u0441\u0442\u0442\u0430 \u0441\u0435 \u043f\u043e\u0442\u0432\u044a\u0440\u0436\u0434\u0430\u0432\u0430 \u0441 \u0430\u0432\u0442\u043e\u043a\u044a\u0449\u0430\u0442\u0430. \u041e\u0440\u0438\u0433\u0438\u043d\u0430\u043b\u043d\u0430 \u043e\u0431\u044f\u0432\u0430: https://tesicar.mobile.bg/obiava-21786378692115915-suzuki-grand-vitara-2-4i-shveytsariya",
-    "price": {
-      "amount": 9399,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/dealer/inventory/21786378692115915-1.webp",
-        "alt": "Suzuki Grand vitara 2.4i \u0428\u0412\u0415\u0419\u0426\u0410\u0420\u0418\u042f"
-      },
-      {
-        "url": "/dealer/inventory/21786378692115915-2.webp",
-        "alt": "Suzuki Grand vitara 2.4i \u0428\u0412\u0415\u0419\u0426\u0410\u0420\u0418\u042f"
-      },
-      {
-        "url": "/dealer/inventory/21786378692115915-3.webp",
-        "alt": "Suzuki Grand vitara 2.4i \u0428\u0412\u0415\u0419\u0426\u0410\u0420\u0418\u042f"
-      },
-      {
-        "url": "/dealer/inventory/21786378692115915-4.webp",
-        "alt": "Suzuki Grand vitara 2.4i \u0428\u0412\u0415\u0419\u0426\u0410\u0420\u0418\u042f"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "\u0412\u0430\u0440\u043d\u0430",
-      "region": "\u0412\u043b\u0430\u0434\u0438\u0441\u043b\u0430\u0432 \u0412\u0430\u0440\u043d\u0435\u043d\u0447\u0438\u043a",
-      "country": "\u0411\u044a\u043b\u0433\u0430\u0440\u0438\u044f"
-    },
-    "features": [
-      {
-        "bg": "4(5) \u0412\u0440\u0430\u0442\u0438",
-        "en": "4(5) \u0412\u0440\u0430\u0442\u0438"
-      },
       {
         "bg": "4x4",
         "en": "4x4"
       },
       {
-        "bg": "Bluetooth \\ handsfree \u0441\u0438\u0441\u0442\u0435\u043c\u0430",
-        "en": "Bluetooth \\ handsfree \u0441\u0438\u0441\u0442\u0435\u043c\u0430"
+        "bg": "360° камера",
+        "en": "360° камера"
       },
       {
-        "bg": "DVD",
-        "en": "DVD"
+        "bg": "Панорамен покрив",
+        "en": "Панорамен покрив"
       },
       {
-        "bg": "TV",
-        "en": "TV"
+        "bg": "Подгряване на седалки",
+        "en": "Подгряване на седалки"
       },
       {
-        "bg": "USB",
-        "en": "USB"
+        "bg": "Навигация",
+        "en": "Навигация"
       },
       {
-        "bg": "audio\\video",
-        "en": "audio\\video"
+        "bg": "Парктроник",
+        "en": "Парктроник"
       },
       {
-        "bg": "IN\\AUX \u0438\u0437\u0432\u043e\u0434\u0438",
-        "en": "IN\\AUX \u0438\u0437\u0432\u043e\u0434\u0438"
+        "bg": "Безключов достъп",
+        "en": "Безключов достъп"
       },
       {
-        "bg": "\u0410\u043d\u0442\u0438\u0431\u043b\u043e\u043a\u0438\u0440\u0430\u0449\u0430 \u0441\u0438\u0441\u0442\u0435\u043c\u0430",
-        "en": "\u0410\u043d\u0442\u0438\u0431\u043b\u043e\u043a\u0438\u0440\u0430\u0449\u0430 \u0441\u0438\u0441\u0442\u0435\u043c\u0430"
-      },
-      {
-        "bg": "\u0411\u0435\u0437\u043a\u043b\u044e\u0447\u043e\u0432\u043e \u043f\u0430\u043b\u0435\u043d\u0435",
-        "en": "\u0411\u0435\u0437\u043a\u043b\u044e\u0447\u043e\u0432\u043e \u043f\u0430\u043b\u0435\u043d\u0435"
-      },
-      {
-        "bg": "\u0411\u043e\u0440\u0434\u043a\u043e\u043c\u043f\u044e\u0442\u044a\u0440",
-        "en": "\u0411\u043e\u0440\u0434\u043a\u043e\u043c\u043f\u044e\u0442\u044a\u0440"
-      },
-      {
-        "bg": "\u0412\u044a\u0437\u0434\u0443\u0448\u043d\u0438 \u0432\u044a\u0437\u0433\u043b\u0430\u0432\u043d\u0438\u0446\u0438 - \u041f\u0440\u0435\u0434\u043d\u0438",
-        "en": "\u0412\u044a\u0437\u0434\u0443\u0448\u043d\u0438 \u0432\u044a\u0437\u0433\u043b\u0430\u0432\u043d\u0438\u0446\u0438 - \u041f\u0440\u0435\u0434\u043d\u0438"
+        "bg": "Адаптивен круиз контрол",
+        "en": "Адаптивен круиз контрол"
       }
     ],
     "spec": {
-      "bodyType": "suv",
-      "fuelType": "gasoline",
-      "make": "Suzuki",
-      "model": "Grand vitara 2.4i \u0428\u0412\u0415\u0419\u0426\u0410\u0420\u0418\u042f",
-      "year": 2014,
-      "transmission": "manual",
-      "mileageValue": 90700,
-      "mileageUnit": "km",
-      "enginePowerHp": 169,
-      "colorExterior": "\u0422\u044a\u043c\u043d\u043e \u0441\u0438\u0432"
-    },
-    "seller": {
-      "id": "dealer-tesi-car-varna",
-      "type": "dealer",
-      "displayName": "\u0422\u0435\u0441\u0438 \u041a\u0430\u0440",
-      "verificationStatus": "unverified",
-      "city": "\u0412\u0430\u0440\u043d\u0430"
-    },
-    "publishedAt": "2026-09-10T16:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "tesi-11787674075681544",
-    "slug": "tesi-11787674075681544",
-    "category": "car",
-    "dealerOrgId": "dealer-tesi-car-varna",
-    "status": "active",
-    "title": "Audi A7 3.0 TFSI",
-    "description": "\u041f\u0443\u0431\u043b\u0438\u043a\u0443\u0432\u0430\u043d\u0430 \u043e\u0431\u044f\u0432\u0430 \u043d\u0430 \u0422\u0435\u0441\u0438 \u041a\u0430\u0440, \u043d\u0430\u0431\u043b\u044e\u0434\u0430\u0432\u0430\u043d\u0430 \u043d\u0430 10.09.2026 \u0433. \u041d\u0430\u043b\u0438\u0447\u043d\u043e\u0441\u0442\u0442\u0430 \u0441\u0435 \u043f\u043e\u0442\u0432\u044a\u0440\u0436\u0434\u0430\u0432\u0430 \u0441 \u0430\u0432\u0442\u043e\u043a\u044a\u0449\u0430\u0442\u0430. \u041e\u0440\u0438\u0433\u0438\u043d\u0430\u043b\u043d\u0430 \u043e\u0431\u044f\u0432\u0430: https://tesicar.mobile.bg/obiava-11787674075681544-audi-a7-3-0-tfsi",
-    "price": {
-      "amount": 14900,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/dealer/inventory/11787674075681544-1.webp",
-        "alt": "Audi A7 3.0 TFSI"
-      },
-      {
-        "url": "/dealer/inventory/11787674075681544-2.webp",
-        "alt": "Audi A7 3.0 TFSI"
-      },
-      {
-        "url": "/dealer/inventory/11787674075681544-3.webp",
-        "alt": "Audi A7 3.0 TFSI"
-      },
-      {
-        "url": "/dealer/inventory/11787674075681544-4.webp",
-        "alt": "Audi A7 3.0 TFSI"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "\u0412\u0430\u0440\u043d\u0430",
-      "region": "\u0412\u043b\u0430\u0434\u0438\u0441\u043b\u0430\u0432 \u0412\u0430\u0440\u043d\u0435\u043d\u0447\u0438\u043a",
-      "country": "\u0411\u044a\u043b\u0433\u0430\u0440\u0438\u044f"
-    },
-    "features": [
-      {
-        "bg": "4(5) \u0412\u0440\u0430\u0442\u0438",
-        "en": "4(5) \u0412\u0440\u0430\u0442\u0438"
-      },
-      {
-        "bg": "4x4",
-        "en": "4x4"
-      },
-      {
-        "bg": "Auto Start Stop function",
-        "en": "Auto Start Stop function"
-      },
-      {
-        "bg": "Bluetooth \\ handsfree \u0441\u0438\u0441\u0442\u0435\u043c\u0430",
-        "en": "Bluetooth \\ handsfree \u0441\u0438\u0441\u0442\u0435\u043c\u0430"
-      },
-      {
-        "bg": "DVD",
-        "en": "DVD"
-      },
-      {
-        "bg": "TV",
-        "en": "TV"
-      },
-      {
-        "bg": "Steptronic",
-        "en": "Steptronic"
-      },
-      {
-        "bg": "Tiptronic",
-        "en": "Tiptronic"
-      },
-      {
-        "bg": "USB",
-        "en": "USB"
-      },
-      {
-        "bg": "audio\\video",
-        "en": "audio\\video"
-      },
-      {
-        "bg": "IN\\AUX \u0438\u0437\u0432\u043e\u0434\u0438",
-        "en": "IN\\AUX \u0438\u0437\u0432\u043e\u0434\u0438"
-      },
-      {
-        "bg": "\u0410\u0432\u0442\u043e\u043c\u0430\u0442\u0438\u0447\u043d\u043e \u0437\u0430\u0442\u0432\u0430\u0440\u044f\u043d\u0435 \u043d\u0430 \u0431\u0430\u0433\u0430\u0436\u043d\u0438\u043a\u0430",
-        "en": "\u0410\u0432\u0442\u043e\u043c\u0430\u0442\u0438\u0447\u043d\u043e \u0437\u0430\u0442\u0432\u0430\u0440\u044f\u043d\u0435 \u043d\u0430 \u0431\u0430\u0433\u0430\u0436\u043d\u0438\u043a\u0430"
-      }
-    ],
-    "spec": {
-      "bodyType": "hatchback",
-      "fuelType": "gasoline",
       "make": "Audi",
-      "model": "A7 3.0 TFSI",
-      "year": 2011,
+      "model": "Audi RS 6 Avant",
+      "year": 2024,
+      "bodyType": "wagon",
+      "fuelType": "gasoline",
       "transmission": "automatic",
-      "mileageValue": 270000,
-      "mileageUnit": "km",
-      "enginePowerHp": 300,
-      "colorExterior": "\u0427\u0435\u0440\u0435\u043d"
+      "mileageValue": 99701,
+      "mileageUnit": "km"
     },
     "seller": {
       "id": "dealer-tesi-car-varna",
       "type": "dealer",
-      "displayName": "\u0422\u0435\u0441\u0438 \u041a\u0430\u0440",
+      "displayName": "Теси Кар",
       "verificationStatus": "unverified",
-      "city": "\u0412\u0430\u0440\u043d\u0430"
+      "city": "Варна",
+      "logoUrl": "/registered-branding/onLight.png"
     },
-    "publishedAt": "2026-09-10T15:00:00.000Z",
-    "promoted": false
+    "publishedAt": "2026-01-01T09:00:00.000Z",
+    "promoted": true
   },
   {
-    "id": "tesi-21781003069917784",
-    "slug": "tesi-21781003069917784",
+    "id": "am-1010",
+    "slug": "mercedes-benz-2021-template-demo-auto-best-2",
     "category": "car",
     "dealerOrgId": "dealer-tesi-car-varna",
     "status": "active",
-    "title": "Mitsubishi ASX 2.2DiD 4WD Automatic",
-    "description": "\u041f\u0443\u0431\u043b\u0438\u043a\u0443\u0432\u0430\u043d\u0430 \u043e\u0431\u044f\u0432\u0430 \u043d\u0430 \u0422\u0435\u0441\u0438 \u041a\u0430\u0440, \u043d\u0430\u0431\u043b\u044e\u0434\u0430\u0432\u0430\u043d\u0430 \u043d\u0430 10.09.2026 \u0433. \u041d\u0430\u043b\u0438\u0447\u043d\u043e\u0441\u0442\u0442\u0430 \u0441\u0435 \u043f\u043e\u0442\u0432\u044a\u0440\u0436\u0434\u0430\u0432\u0430 \u0441 \u0430\u0432\u0442\u043e\u043a\u044a\u0449\u0430\u0442\u0430. \u041e\u0440\u0438\u0433\u0438\u043d\u0430\u043b\u043d\u0430 \u043e\u0431\u044f\u0432\u0430: https://tesicar.mobile.bg/obiava-21781003069917784-mitsubishi-asx-2-2did-4wd-automatic",
+    "title": "Mercedes-Benz GLE Coupé",
+    "description": "Демонстрационни автомобили от шаблона, а не наличност на автокъщата. Illustrative template vehicles, not this dealership’s stock.",
     "price": {
-      "amount": 9499,
+      "amount": 55403,
       "currency": "EUR"
     },
     "priceType": "fixed",
     "images": [
       {
-        "url": "/dealer/inventory/21781003069917784-1.webp",
-        "alt": "Mitsubishi ASX 2.2DiD 4WD Automatic"
-      },
-      {
-        "url": "/dealer/inventory/21781003069917784-2.webp",
-        "alt": "Mitsubishi ASX 2.2DiD 4WD Automatic"
-      },
-      {
-        "url": "/dealer/inventory/21781003069917784-3.webp",
-        "alt": "Mitsubishi ASX 2.2DiD 4WD Automatic"
-      },
-      {
-        "url": "/dealer/inventory/21781003069917784-4.webp",
-        "alt": "Mitsubishi ASX 2.2DiD 4WD Automatic"
+        "url": "/assets/images/lead/day-night-stock-01.webp",
+        "alt": "Mercedes-Benz GLE Coupé"
       }
     ],
     "badges": [
       "used"
     ],
     "location": {
-      "city": "\u0412\u0430\u0440\u043d\u0430",
-      "region": "\u0412\u043b\u0430\u0434\u0438\u0441\u043b\u0430\u0432 \u0412\u0430\u0440\u043d\u0435\u043d\u0447\u0438\u043a",
-      "country": "\u0411\u044a\u043b\u0433\u0430\u0440\u0438\u044f"
+      "city": "Варна",
+      "region": "Варна",
+      "country": "Bulgaria"
     },
     "features": [
-      {
-        "bg": "4(5) \u0412\u0440\u0430\u0442\u0438",
-        "en": "4(5) \u0412\u0440\u0430\u0442\u0438"
-      },
       {
         "bg": "4x4",
         "en": "4x4"
       },
       {
-        "bg": "Auto Start Stop function",
-        "en": "Auto Start Stop function"
+        "bg": "360° камера",
+        "en": "360° камера"
       },
       {
-        "bg": "Bluetooth \\ handsfree \u0441\u0438\u0441\u0442\u0435\u043c\u0430",
-        "en": "Bluetooth \\ handsfree \u0441\u0438\u0441\u0442\u0435\u043c\u0430"
+        "bg": "Панорамен покрив",
+        "en": "Панорамен покрив"
       },
       {
-        "bg": "Steptronic",
-        "en": "Steptronic"
+        "bg": "Подгряване на седалки",
+        "en": "Подгряване на седалки"
       },
       {
-        "bg": "Tiptronic",
-        "en": "Tiptronic"
+        "bg": "Навигация",
+        "en": "Навигация"
       },
       {
-        "bg": "USB",
-        "en": "USB"
+        "bg": "Парктроник",
+        "en": "Парктроник"
       },
       {
-        "bg": "audio\\video",
-        "en": "audio\\video"
+        "bg": "Безключов достъп",
+        "en": "Безключов достъп"
       },
       {
-        "bg": "IN\\AUX \u0438\u0437\u0432\u043e\u0434\u0438",
-        "en": "IN\\AUX \u0438\u0437\u0432\u043e\u0434\u0438"
-      },
-      {
-        "bg": "\u0410\u043d\u0442\u0438\u0431\u043b\u043e\u043a\u0438\u0440\u0430\u0449\u0430 \u0441\u0438\u0441\u0442\u0435\u043c\u0430",
-        "en": "\u0410\u043d\u0442\u0438\u0431\u043b\u043e\u043a\u0438\u0440\u0430\u0449\u0430 \u0441\u0438\u0441\u0442\u0435\u043c\u0430"
-      },
-      {
-        "bg": "\u0411\u043b\u043e\u043a\u0430\u0436 \u043d\u0430 \u0434\u0438\u0444\u0435\u0440\u0435\u043d\u0446\u0438\u0430\u043b\u0430",
-        "en": "\u0411\u043b\u043e\u043a\u0430\u0436 \u043d\u0430 \u0434\u0438\u0444\u0435\u0440\u0435\u043d\u0446\u0438\u0430\u043b\u0430"
-      },
-      {
-        "bg": "\u0411\u043e\u0440\u0434\u043a\u043e\u043c\u043f\u044e\u0442\u044a\u0440",
-        "en": "\u0411\u043e\u0440\u0434\u043a\u043e\u043c\u043f\u044e\u0442\u044a\u0440"
+        "bg": "Адаптивен круиз контрол",
+        "en": "Адаптивен круиз контрол"
       }
     ],
     "spec": {
+      "make": "Mercedes-Benz",
+      "model": "Mercedes-Benz GLE Coupé",
+      "year": 2021,
       "bodyType": "suv",
       "fuelType": "diesel",
-      "make": "Mitsubishi",
-      "model": "ASX 2.2DiD 4WD Automatic",
-      "year": 2015,
       "transmission": "automatic",
-      "mileageValue": 110000,
-      "mileageUnit": "km",
-      "enginePowerHp": 150,
-      "colorExterior": "\u041a\u0430\u0444\u044f\u0432"
+      "mileageValue": 96865,
+      "mileageUnit": "km"
     },
     "seller": {
       "id": "dealer-tesi-car-varna",
       "type": "dealer",
-      "displayName": "\u0422\u0435\u0441\u0438 \u041a\u0430\u0440",
+      "displayName": "Теси Кар",
       "verificationStatus": "unverified",
-      "city": "\u0412\u0430\u0440\u043d\u0430"
+      "city": "Варна",
+      "logoUrl": "/registered-branding/onLight.png"
     },
-    "publishedAt": "2026-09-10T14:00:00.000Z",
-    "promoted": false
+    "publishedAt": "2026-01-01T09:00:00.000Z",
+    "promoted": true
   },
   {
-    "id": "tesi-11779806013316184",
-    "slug": "tesi-11779806013316184",
+    "id": "am-1011",
+    "slug": "audi-2021-template-demo-auto-best-3",
     "category": "car",
     "dealerOrgId": "dealer-tesi-car-varna",
     "status": "active",
-    "title": "Toyota Yaris 1.33 99\u043a.\u0441.",
-    "description": "\u041f\u0443\u0431\u043b\u0438\u043a\u0443\u0432\u0430\u043d\u0430 \u043e\u0431\u044f\u0432\u0430 \u043d\u0430 \u0422\u0435\u0441\u0438 \u041a\u0430\u0440, \u043d\u0430\u0431\u043b\u044e\u0434\u0430\u0432\u0430\u043d\u0430 \u043d\u0430 10.09.2026 \u0433. \u041d\u0430\u043b\u0438\u0447\u043d\u043e\u0441\u0442\u0442\u0430 \u0441\u0435 \u043f\u043e\u0442\u0432\u044a\u0440\u0436\u0434\u0430\u0432\u0430 \u0441 \u0430\u0432\u0442\u043e\u043a\u044a\u0449\u0430\u0442\u0430. \u041e\u0440\u0438\u0433\u0438\u043d\u0430\u043b\u043d\u0430 \u043e\u0431\u044f\u0432\u0430: https://tesicar.mobile.bg/obiava-11779806013316184-toyota-yaris-1-33-99k-s",
+    "title": "Audi RS Q8",
+    "description": "Демонстрационни автомобили от шаблона, а не наличност на автокъщата. Illustrative template vehicles, not this dealership’s stock.",
     "price": {
-      "amount": 6150,
+      "amount": 57480,
       "currency": "EUR"
     },
     "priceType": "fixed",
     "images": [
       {
-        "url": "/dealer/inventory/11779806013316184-1.webp",
-        "alt": "Toyota Yaris 1.33 99\u043a.\u0441."
-      },
-      {
-        "url": "/dealer/inventory/11779806013316184-2.webp",
-        "alt": "Toyota Yaris 1.33 99\u043a.\u0441."
-      },
-      {
-        "url": "/dealer/inventory/11779806013316184-3.webp",
-        "alt": "Toyota Yaris 1.33 99\u043a.\u0441."
-      },
-      {
-        "url": "/dealer/inventory/11779806013316184-4.webp",
-        "alt": "Toyota Yaris 1.33 99\u043a.\u0441."
+        "url": "/assets/images/lead/day-night-stock-06.webp",
+        "alt": "Audi RS Q8"
       }
     ],
     "badges": [
       "used"
     ],
     "location": {
-      "city": "\u0412\u0430\u0440\u043d\u0430",
-      "region": "\u0412\u043b\u0430\u0434\u0438\u0441\u043b\u0430\u0432 \u0412\u0430\u0440\u043d\u0435\u043d\u0447\u0438\u043a",
-      "country": "\u0411\u044a\u043b\u0433\u0430\u0440\u0438\u044f"
+      "city": "Варна",
+      "region": "Варна",
+      "country": "Bulgaria"
     },
     "features": [
-      {
-        "bg": "4(5) \u0412\u0440\u0430\u0442\u0438",
-        "en": "4(5) \u0412\u0440\u0430\u0442\u0438"
-      },
-      {
-        "bg": "USB",
-        "en": "USB"
-      },
-      {
-        "bg": "audio\\video",
-        "en": "audio\\video"
-      },
-      {
-        "bg": "IN\\AUX \u0438\u0437\u0432\u043e\u0434\u0438",
-        "en": "IN\\AUX \u0438\u0437\u0432\u043e\u0434\u0438"
-      },
-      {
-        "bg": "\u0410\u043d\u0442\u0438\u0431\u043b\u043e\u043a\u0438\u0440\u0430\u0449\u0430 \u0441\u0438\u0441\u0442\u0435\u043c\u0430",
-        "en": "\u0410\u043d\u0442\u0438\u0431\u043b\u043e\u043a\u0438\u0440\u0430\u0449\u0430 \u0441\u0438\u0441\u0442\u0435\u043c\u0430"
-      },
-      {
-        "bg": "\u0411\u043e\u0440\u0434\u043a\u043e\u043c\u043f\u044e\u0442\u044a\u0440",
-        "en": "\u0411\u043e\u0440\u0434\u043a\u043e\u043c\u043f\u044e\u0442\u044a\u0440"
-      },
-      {
-        "bg": "\u0412\u044a\u0437\u0434\u0443\u0448\u043d\u0438 \u0432\u044a\u0437\u0433\u043b\u0430\u0432\u043d\u0438\u0446\u0438 - \u041f\u0440\u0435\u0434\u043d\u0438",
-        "en": "\u0412\u044a\u0437\u0434\u0443\u0448\u043d\u0438 \u0432\u044a\u0437\u0433\u043b\u0430\u0432\u043d\u0438\u0446\u0438 - \u041f\u0440\u0435\u0434\u043d\u0438"
-      },
-      {
-        "bg": "\u0412\u044a\u0437\u0434\u0443\u0448\u043d\u0438 \u0432\u044a\u0437\u0433\u043b\u0430\u0432\u043d\u0438\u0446\u0438 - \u0421\u0442\u0440\u0430\u043d\u0438\u0447\u043d\u0438",
-        "en": "\u0412\u044a\u0437\u0434\u0443\u0448\u043d\u0438 \u0432\u044a\u0437\u0433\u043b\u0430\u0432\u043d\u0438\u0446\u0438 - \u0421\u0442\u0440\u0430\u043d\u0438\u0447\u043d\u0438"
-      },
-      {
-        "bg": "\u0414\u0430\u0442\u0447\u0438\u043a \u0437\u0430 \u0441\u0432\u0435\u0442\u043b\u0438\u043d\u0430",
-        "en": "\u0414\u0430\u0442\u0447\u0438\u043a \u0437\u0430 \u0441\u0432\u0435\u0442\u043b\u0438\u043d\u0430"
-      },
-      {
-        "bg": "\u0415\u043b. \u041e\u0433\u043b\u0435\u0434\u0430\u043b\u0430",
-        "en": "\u0415\u043b. \u041e\u0433\u043b\u0435\u0434\u0430\u043b\u0430"
-      },
-      {
-        "bg": "\u0415\u043b. \u0421\u0442\u044a\u043a\u043b\u0430",
-        "en": "\u0415\u043b. \u0421\u0442\u044a\u043a\u043b\u0430"
-      },
-      {
-        "bg": "\u0415\u043b. \u0440\u0430\u0437\u043f\u0440\u0435\u0434\u0435\u043b\u044f\u043d\u0435 \u043d\u0430 \u0441\u043f\u0438\u0440\u0430\u0447\u043d\u043e\u0442\u043e \u0443\u0441\u0438\u043b\u0438\u0435",
-        "en": "\u0415\u043b. \u0440\u0430\u0437\u043f\u0440\u0435\u0434\u0435\u043b\u044f\u043d\u0435 \u043d\u0430 \u0441\u043f\u0438\u0440\u0430\u0447\u043d\u043e\u0442\u043e \u0443\u0441\u0438\u043b\u0438\u0435"
-      }
-    ],
-    "spec": {
-      "bodyType": "hatchback",
-      "fuelType": "gasoline",
-      "make": "Toyota",
-      "model": "Yaris 1.33 99\u043a.\u0441.",
-      "year": 2009,
-      "transmission": "manual",
-      "mileageValue": 208000,
-      "mileageUnit": "km",
-      "enginePowerHp": 99,
-      "colorExterior": "\u0421\u0438\u0432"
-    },
-    "seller": {
-      "id": "dealer-tesi-car-varna",
-      "type": "dealer",
-      "displayName": "\u0422\u0435\u0441\u0438 \u041a\u0430\u0440",
-      "verificationStatus": "unverified",
-      "city": "\u0412\u0430\u0440\u043d\u0430"
-    },
-    "publishedAt": "2026-09-10T13:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "tesi-21782292613523387",
-    "slug": "tesi-21782292613523387",
-    "category": "car",
-    "dealerOrgId": "dealer-tesi-car-varna",
-    "status": "active",
-    "title": "Nissan Juke 1.6i \u0428\u0412\u0415\u0419\u0426\u0410\u0420\u0418\u042f",
-    "description": "\u041f\u0443\u0431\u043b\u0438\u043a\u0443\u0432\u0430\u043d\u0430 \u043e\u0431\u044f\u0432\u0430 \u043d\u0430 \u0422\u0435\u0441\u0438 \u041a\u0430\u0440, \u043d\u0430\u0431\u043b\u044e\u0434\u0430\u0432\u0430\u043d\u0430 \u043d\u0430 10.09.2026 \u0433. \u041d\u0430\u043b\u0438\u0447\u043d\u043e\u0441\u0442\u0442\u0430 \u0441\u0435 \u043f\u043e\u0442\u0432\u044a\u0440\u0436\u0434\u0430\u0432\u0430 \u0441 \u0430\u0432\u0442\u043e\u043a\u044a\u0449\u0430\u0442\u0430. \u041e\u0440\u0438\u0433\u0438\u043d\u0430\u043b\u043d\u0430 \u043e\u0431\u044f\u0432\u0430: https://tesicar.mobile.bg/obiava-21782292613523387-nissan-juke-1-6i-shveytsariya",
-    "price": {
-      "amount": 7499,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/dealer/inventory/21782292613523387-1.webp",
-        "alt": "Nissan Juke 1.6i \u0428\u0412\u0415\u0419\u0426\u0410\u0420\u0418\u042f"
-      },
-      {
-        "url": "/dealer/inventory/21782292613523387-2.webp",
-        "alt": "Nissan Juke 1.6i \u0428\u0412\u0415\u0419\u0426\u0410\u0420\u0418\u042f"
-      },
-      {
-        "url": "/dealer/inventory/21782292613523387-3.webp",
-        "alt": "Nissan Juke 1.6i \u0428\u0412\u0415\u0419\u0426\u0410\u0420\u0418\u042f"
-      },
-      {
-        "url": "/dealer/inventory/21782292613523387-4.webp",
-        "alt": "Nissan Juke 1.6i \u0428\u0412\u0415\u0419\u0426\u0410\u0420\u0418\u042f"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "\u0412\u0430\u0440\u043d\u0430",
-      "region": "\u0412\u043b\u0430\u0434\u0438\u0441\u043b\u0430\u0432 \u0412\u0430\u0440\u043d\u0435\u043d\u0447\u0438\u043a",
-      "country": "\u0411\u044a\u043b\u0433\u0430\u0440\u0438\u044f"
-    },
-    "features": [
-      {
-        "bg": "4(5) \u0412\u0440\u0430\u0442\u0438",
-        "en": "4(5) \u0412\u0440\u0430\u0442\u0438"
-      },
-      {
-        "bg": "Bluetooth \\ handsfree \u0441\u0438\u0441\u0442\u0435\u043c\u0430",
-        "en": "Bluetooth \\ handsfree \u0441\u0438\u0441\u0442\u0435\u043c\u0430"
-      },
-      {
-        "bg": "DVD",
-        "en": "DVD"
-      },
-      {
-        "bg": "TV",
-        "en": "TV"
-      },
-      {
-        "bg": "USB",
-        "en": "USB"
-      },
-      {
-        "bg": "audio\\video",
-        "en": "audio\\video"
-      },
-      {
-        "bg": "IN\\AUX \u0438\u0437\u0432\u043e\u0434\u0438",
-        "en": "IN\\AUX \u0438\u0437\u0432\u043e\u0434\u0438"
-      },
-      {
-        "bg": "\u0410\u043d\u0442\u0438\u0431\u043b\u043e\u043a\u0438\u0440\u0430\u0449\u0430 \u0441\u0438\u0441\u0442\u0435\u043c\u0430",
-        "en": "\u0410\u043d\u0442\u0438\u0431\u043b\u043e\u043a\u0438\u0440\u0430\u0449\u0430 \u0441\u0438\u0441\u0442\u0435\u043c\u0430"
-      },
-      {
-        "bg": "\u0412\u044a\u0437\u0434\u0443\u0448\u043d\u0438 \u0432\u044a\u0437\u0433\u043b\u0430\u0432\u043d\u0438\u0446\u0438 - \u041f\u0440\u0435\u0434\u043d\u0438",
-        "en": "\u0412\u044a\u0437\u0434\u0443\u0448\u043d\u0438 \u0432\u044a\u0437\u0433\u043b\u0430\u0432\u043d\u0438\u0446\u0438 - \u041f\u0440\u0435\u0434\u043d\u0438"
-      },
-      {
-        "bg": "\u0412\u044a\u0437\u0434\u0443\u0448\u043d\u0438 \u0432\u044a\u0437\u0433\u043b\u0430\u0432\u043d\u0438\u0446\u0438 - \u0421\u0442\u0440\u0430\u043d\u0438\u0447\u043d\u0438",
-        "en": "\u0412\u044a\u0437\u0434\u0443\u0448\u043d\u0438 \u0432\u044a\u0437\u0433\u043b\u0430\u0432\u043d\u0438\u0446\u0438 - \u0421\u0442\u0440\u0430\u043d\u0438\u0447\u043d\u0438"
-      },
-      {
-        "bg": "\u0414\u0430\u0442\u0447\u0438\u043a \u0437\u0430 \u0441\u0432\u0435\u0442\u043b\u0438\u043d\u0430",
-        "en": "\u0414\u0430\u0442\u0447\u0438\u043a \u0437\u0430 \u0441\u0432\u0435\u0442\u043b\u0438\u043d\u0430"
-      },
-      {
-        "bg": "\u0415\u043b. \u041e\u0433\u043b\u0435\u0434\u0430\u043b\u0430",
-        "en": "\u0415\u043b. \u041e\u0433\u043b\u0435\u0434\u0430\u043b\u0430"
-      }
-    ],
-    "spec": {
-      "bodyType": "suv",
-      "fuelType": "gasoline",
-      "make": "Nissan",
-      "model": "Juke 1.6i \u0428\u0412\u0415\u0419\u0426\u0410\u0420\u0418\u042f",
-      "year": 2015,
-      "transmission": "manual",
-      "mileageValue": 184200,
-      "mileageUnit": "km",
-      "enginePowerHp": 94,
-      "colorExterior": "\u0427\u0435\u0440\u0435\u043d"
-    },
-    "seller": {
-      "id": "dealer-tesi-car-varna",
-      "type": "dealer",
-      "displayName": "\u0422\u0435\u0441\u0438 \u041a\u0430\u0440",
-      "verificationStatus": "unverified",
-      "city": "\u0412\u0430\u0440\u043d\u0430"
-    },
-    "publishedAt": "2026-09-10T12:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "tesi-11779452412819500",
-    "slug": "tesi-11779452412819500",
-    "category": "car",
-    "dealerOrgId": "dealer-tesi-car-varna",
-    "status": "active",
-    "title": "Mitsubishi Colt 1.3i 95k.c.",
-    "description": "\u041f\u0443\u0431\u043b\u0438\u043a\u0443\u0432\u0430\u043d\u0430 \u043e\u0431\u044f\u0432\u0430 \u043d\u0430 \u0422\u0435\u0441\u0438 \u041a\u0430\u0440, \u043d\u0430\u0431\u043b\u044e\u0434\u0430\u0432\u0430\u043d\u0430 \u043d\u0430 10.09.2026 \u0433. \u041d\u0430\u043b\u0438\u0447\u043d\u043e\u0441\u0442\u0442\u0430 \u0441\u0435 \u043f\u043e\u0442\u0432\u044a\u0440\u0436\u0434\u0430\u0432\u0430 \u0441 \u0430\u0432\u0442\u043e\u043a\u044a\u0449\u0430\u0442\u0430. \u041e\u0440\u0438\u0433\u0438\u043d\u0430\u043b\u043d\u0430 \u043e\u0431\u044f\u0432\u0430: https://tesicar.mobile.bg/obiava-11779452412819500-mitsubishi-colt-1-3i-95k-c",
-    "price": {
-      "amount": 1999,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/dealer/inventory/11779452412819500-1.webp",
-        "alt": "Mitsubishi Colt 1.3i 95k.c."
-      },
-      {
-        "url": "/dealer/inventory/11779452412819500-2.webp",
-        "alt": "Mitsubishi Colt 1.3i 95k.c."
-      },
-      {
-        "url": "/dealer/inventory/11779452412819500-3.webp",
-        "alt": "Mitsubishi Colt 1.3i 95k.c."
-      },
-      {
-        "url": "/dealer/inventory/11779452412819500-4.webp",
-        "alt": "Mitsubishi Colt 1.3i 95k.c."
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "\u0412\u0430\u0440\u043d\u0430",
-      "region": "\u0412\u043b\u0430\u0434\u0438\u0441\u043b\u0430\u0432 \u0412\u0430\u0440\u043d\u0435\u043d\u0447\u0438\u043a",
-      "country": "\u0411\u044a\u043b\u0433\u0430\u0440\u0438\u044f"
-    },
-    "features": [
-      {
-        "bg": "4(5) \u0412\u0440\u0430\u0442\u0438",
-        "en": "4(5) \u0412\u0440\u0430\u0442\u0438"
-      },
-      {
-        "bg": "\u0410\u043d\u0442\u0438\u0431\u043b\u043e\u043a\u0438\u0440\u0430\u0449\u0430 \u0441\u0438\u0441\u0442\u0435\u043c\u0430",
-        "en": "\u0410\u043d\u0442\u0438\u0431\u043b\u043e\u043a\u0438\u0440\u0430\u0449\u0430 \u0441\u0438\u0441\u0442\u0435\u043c\u0430"
-      },
-      {
-        "bg": "\u0411\u043e\u0440\u0434\u043a\u043e\u043c\u043f\u044e\u0442\u044a\u0440",
-        "en": "\u0411\u043e\u0440\u0434\u043a\u043e\u043c\u043f\u044e\u0442\u044a\u0440"
-      },
-      {
-        "bg": "\u0412\u044a\u0437\u0434\u0443\u0448\u043d\u0438 \u0432\u044a\u0437\u0433\u043b\u0430\u0432\u043d\u0438\u0446\u0438 - \u041f\u0440\u0435\u0434\u043d\u0438",
-        "en": "\u0412\u044a\u0437\u0434\u0443\u0448\u043d\u0438 \u0432\u044a\u0437\u0433\u043b\u0430\u0432\u043d\u0438\u0446\u0438 - \u041f\u0440\u0435\u0434\u043d\u0438"
-      },
-      {
-        "bg": "\u0415\u043b. \u041e\u0433\u043b\u0435\u0434\u0430\u043b\u0430",
-        "en": "\u0415\u043b. \u041e\u0433\u043b\u0435\u0434\u0430\u043b\u0430"
-      },
-      {
-        "bg": "\u0415\u043b. \u0421\u0442\u044a\u043a\u043b\u0430",
-        "en": "\u0415\u043b. \u0421\u0442\u044a\u043a\u043b\u0430"
-      },
-      {
-        "bg": "\u0415\u043b\u0435\u043a\u0442\u0440\u043e\u043d\u043d\u0430 \u043f\u0440\u043e\u0433\u0440\u0430\u043c\u0430 \u0437\u0430 \u0441\u0442\u0430\u0431\u0438\u043b\u0438\u0437\u0438\u0440\u0430\u043d\u0435",
-        "en": "\u0415\u043b\u0435\u043a\u0442\u0440\u043e\u043d\u043d\u0430 \u043f\u0440\u043e\u0433\u0440\u0430\u043c\u0430 \u0437\u0430 \u0441\u0442\u0430\u0431\u0438\u043b\u0438\u0437\u0438\u0440\u0430\u043d\u0435"
-      },
-      {
-        "bg": "\u041a\u043b\u0438\u043c\u0430\u0442\u0438\u043a",
-        "en": "\u041a\u043b\u0438\u043c\u0430\u0442\u0438\u043a"
-      },
-      {
-        "bg": "\u041b\u0435\u0442\u0438 \u0434\u0436\u0430\u043d\u0442\u0438",
-        "en": "\u041b\u0435\u0442\u0438 \u0434\u0436\u0430\u043d\u0442\u0438"
-      },
-      {
-        "bg": "\u041b\u0438\u0437\u0438\u043d\u0433",
-        "en": "\u041b\u0438\u0437\u0438\u043d\u0433"
-      },
-      {
-        "bg": "\u041c\u0435\u0442\u0430\u043b\u0438\u043a",
-        "en": "\u041c\u0435\u0442\u0430\u043b\u0438\u043a"
-      },
-      {
-        "bg": "\u0420\u0435\u0433\u0443\u043b\u0438\u0440\u0430\u043d\u0435 \u043d\u0430 \u0432\u043e\u043b\u0430\u043d\u0430",
-        "en": "\u0420\u0435\u0433\u0443\u043b\u0438\u0440\u0430\u043d\u0435 \u043d\u0430 \u0432\u043e\u043b\u0430\u043d\u0430"
-      }
-    ],
-    "spec": {
-      "bodyType": "hatchback",
-      "fuelType": "gasoline",
-      "make": "Mitsubishi",
-      "model": "Colt 1.3i 95k.c.",
-      "year": 2005,
-      "transmission": "manual",
-      "mileageValue": 223000,
-      "mileageUnit": "km",
-      "enginePowerHp": 95,
-      "colorExterior": "\u0411\u043e\u0440\u0434\u043e"
-    },
-    "seller": {
-      "id": "dealer-tesi-car-varna",
-      "type": "dealer",
-      "displayName": "\u0422\u0435\u0441\u0438 \u041a\u0430\u0440",
-      "verificationStatus": "unverified",
-      "city": "\u0412\u0430\u0440\u043d\u0430"
-    },
-    "publishedAt": "2026-09-10T11:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "tesi-21783600164931772",
-    "slug": "tesi-21783600164931772",
-    "category": "car",
-    "dealerOrgId": "dealer-tesi-car-varna",
-    "status": "active",
-    "title": "Toyota Rav4 2.2D-4 D 177 PS",
-    "description": "\u041f\u0443\u0431\u043b\u0438\u043a\u0443\u0432\u0430\u043d\u0430 \u043e\u0431\u044f\u0432\u0430 \u043d\u0430 \u0422\u0435\u0441\u0438 \u041a\u0430\u0440, \u043d\u0430\u0431\u043b\u044e\u0434\u0430\u0432\u0430\u043d\u0430 \u043d\u0430 10.09.2026 \u0433. \u041d\u0430\u043b\u0438\u0447\u043d\u043e\u0441\u0442\u0442\u0430 \u0441\u0435 \u043f\u043e\u0442\u0432\u044a\u0440\u0436\u0434\u0430\u0432\u0430 \u0441 \u0430\u0432\u0442\u043e\u043a\u044a\u0449\u0430\u0442\u0430. \u041e\u0440\u0438\u0433\u0438\u043d\u0430\u043b\u043d\u0430 \u043e\u0431\u044f\u0432\u0430: https://tesicar.mobile.bg/obiava-21783600164931772-toyota-rav4-2-2d-4-d-177-ps",
-    "price": {
-      "amount": 4490,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/dealer/inventory/21783600164931772-1.webp",
-        "alt": "Toyota Rav4 2.2D-4 D 177 PS"
-      },
-      {
-        "url": "/dealer/inventory/21783600164931772-2.webp",
-        "alt": "Toyota Rav4 2.2D-4 D 177 PS"
-      },
-      {
-        "url": "/dealer/inventory/21783600164931772-3.webp",
-        "alt": "Toyota Rav4 2.2D-4 D 177 PS"
-      },
-      {
-        "url": "/dealer/inventory/21783600164931772-4.webp",
-        "alt": "Toyota Rav4 2.2D-4 D 177 PS"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "\u0412\u0430\u0440\u043d\u0430",
-      "region": "\u0412\u043b\u0430\u0434\u0438\u0441\u043b\u0430\u0432 \u0412\u0430\u0440\u043d\u0435\u043d\u0447\u0438\u043a",
-      "country": "\u0411\u044a\u043b\u0433\u0430\u0440\u0438\u044f"
-    },
-    "features": [
-      {
-        "bg": "4(5) \u0412\u0440\u0430\u0442\u0438",
-        "en": "4(5) \u0412\u0440\u0430\u0442\u0438"
-      },
       {
         "bg": "4x4",
         "en": "4x4"
       },
       {
-        "bg": "Bluetooth \\ handsfree \u0441\u0438\u0441\u0442\u0435\u043c\u0430",
-        "en": "Bluetooth \\ handsfree \u0441\u0438\u0441\u0442\u0435\u043c\u0430"
+        "bg": "360° камера",
+        "en": "360° камера"
       },
       {
-        "bg": "DVD",
-        "en": "DVD"
+        "bg": "Панорамен покрив",
+        "en": "Панорамен покрив"
       },
       {
-        "bg": "TV",
-        "en": "TV"
+        "bg": "Подгряване на седалки",
+        "en": "Подгряване на седалки"
       },
       {
-        "bg": "Head up display",
-        "en": "Head up display"
+        "bg": "Навигация",
+        "en": "Навигация"
       },
       {
-        "bg": "USB",
-        "en": "USB"
+        "bg": "Парктроник",
+        "en": "Парктроник"
       },
       {
-        "bg": "audio\\video",
-        "en": "audio\\video"
+        "bg": "Безключов достъп",
+        "en": "Безключов достъп"
       },
       {
-        "bg": "IN\\AUX \u0438\u0437\u0432\u043e\u0434\u0438",
-        "en": "IN\\AUX \u0438\u0437\u0432\u043e\u0434\u0438"
-      },
-      {
-        "bg": "\u0410\u043d\u0442\u0438\u0431\u043b\u043e\u043a\u0438\u0440\u0430\u0449\u0430 \u0441\u0438\u0441\u0442\u0435\u043c\u0430",
-        "en": "\u0410\u043d\u0442\u0438\u0431\u043b\u043e\u043a\u0438\u0440\u0430\u0449\u0430 \u0441\u0438\u0441\u0442\u0435\u043c\u0430"
-      },
-      {
-        "bg": "\u0411\u0435\u0437\u043a\u043b\u044e\u0447\u043e\u0432\u043e \u043f\u0430\u043b\u0435\u043d\u0435",
-        "en": "\u0411\u0435\u0437\u043a\u043b\u044e\u0447\u043e\u0432\u043e \u043f\u0430\u043b\u0435\u043d\u0435"
-      },
-      {
-        "bg": "\u0411\u043e\u0440\u0434\u043a\u043e\u043c\u043f\u044e\u0442\u044a\u0440",
-        "en": "\u0411\u043e\u0440\u0434\u043a\u043e\u043c\u043f\u044e\u0442\u044a\u0440"
+        "bg": "Адаптивен круиз контрол",
+        "en": "Адаптивен круиз контрол"
       }
     ],
     "spec": {
+      "make": "Audi",
+      "model": "Audi RS Q8",
+      "year": 2021,
       "bodyType": "suv",
-      "fuelType": "diesel",
-      "make": "Toyota",
-      "model": "Rav4 2.2D-4 D 177 PS",
-      "year": 2006,
-      "transmission": "manual",
-      "mileageValue": 203000,
-      "mileageUnit": "km",
-      "enginePowerHp": 177,
-      "colorExterior": "\u0427\u0435\u0440\u0435\u043d"
+      "fuelType": "gasoline",
+      "transmission": "automatic",
+      "mileageValue": 94709,
+      "mileageUnit": "km"
     },
     "seller": {
       "id": "dealer-tesi-car-varna",
       "type": "dealer",
-      "displayName": "\u0422\u0435\u0441\u0438 \u041a\u0430\u0440",
+      "displayName": "Теси Кар",
       "verificationStatus": "unverified",
-      "city": "\u0412\u0430\u0440\u043d\u0430"
+      "city": "Варна",
+      "logoUrl": "/registered-branding/onLight.png"
     },
-    "publishedAt": "2026-09-10T10:00:00.000Z",
+    "publishedAt": "2026-01-01T09:00:00.000Z",
+    "promoted": true
+  },
+  {
+    "id": "am-1012",
+    "slug": "bmw-2021-template-demo-auto-best-4",
+    "category": "car",
+    "dealerOrgId": "dealer-tesi-car-varna",
+    "status": "active",
+    "title": "BMW X6 M Sport",
+    "description": "Демонстрационни автомобили от шаблона, а не наличност на автокъщата. Illustrative template vehicles, not this dealership’s stock.",
+    "price": {
+      "amount": 54223,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/assets/images/lead/day-night-stock-02.webp",
+        "alt": "BMW X6 M Sport"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Варна",
+      "region": "Варна",
+      "country": "Bulgaria"
+    },
+    "features": [
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "360° камера",
+        "en": "360° камера"
+      },
+      {
+        "bg": "Панорамен покрив",
+        "en": "Панорамен покрив"
+      },
+      {
+        "bg": "Подгряване на седалки",
+        "en": "Подгряване на седалки"
+      },
+      {
+        "bg": "Навигация",
+        "en": "Навигация"
+      },
+      {
+        "bg": "Парктроник",
+        "en": "Парктроник"
+      },
+      {
+        "bg": "Безключов достъп",
+        "en": "Безключов достъп"
+      }
+    ],
+    "spec": {
+      "make": "BMW",
+      "model": "BMW X6 M Sport",
+      "year": 2021,
+      "bodyType": "suv",
+      "fuelType": "diesel",
+      "transmission": "automatic",
+      "mileageValue": 62485,
+      "mileageUnit": "km"
+    },
+    "seller": {
+      "id": "dealer-tesi-car-varna",
+      "type": "dealer",
+      "displayName": "Теси Кар",
+      "verificationStatus": "unverified",
+      "city": "Варна",
+      "logoUrl": "/registered-branding/onLight.png"
+    },
+    "publishedAt": "2026-01-01T09:00:00.000Z",
+    "promoted": false
+  },
+  {
+    "id": "am-1013",
+    "slug": "mercedes-benz-2020-template-demo-auto-best-6",
+    "category": "car",
+    "dealerOrgId": "dealer-tesi-car-varna",
+    "status": "active",
+    "title": "Mercedes-AMG GT 4-Door",
+    "description": "Демонстрационни автомобили от шаблона, а не наличност на автокъщата. Illustrative template vehicles, not this dealership’s stock.",
+    "price": {
+      "amount": 61069,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/assets/images/lead/day-night-stock-03.webp",
+        "alt": "Mercedes-AMG GT 4-Door"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Варна",
+      "region": "Варна",
+      "country": "Bulgaria"
+    },
+    "features": [
+      {
+        "bg": "360° камера",
+        "en": "360° камера"
+      },
+      {
+        "bg": "Панорамен покрив",
+        "en": "Панорамен покрив"
+      },
+      {
+        "bg": "Подгряване на седалки",
+        "en": "Подгряване на седалки"
+      },
+      {
+        "bg": "Навигация",
+        "en": "Навигация"
+      },
+      {
+        "bg": "Парктроник",
+        "en": "Парктроник"
+      },
+      {
+        "bg": "Безключов достъп",
+        "en": "Безключов достъп"
+      }
+    ],
+    "spec": {
+      "make": "Mercedes-Benz",
+      "model": "Mercedes-AMG GT 4-Door",
+      "year": 2020,
+      "bodyType": "other",
+      "fuelType": "gasoline",
+      "transmission": "automatic",
+      "mileageValue": 72812,
+      "mileageUnit": "km"
+    },
+    "seller": {
+      "id": "dealer-tesi-car-varna",
+      "type": "dealer",
+      "displayName": "Теси Кар",
+      "verificationStatus": "unverified",
+      "city": "Варна",
+      "logoUrl": "/registered-branding/onLight.png"
+    },
+    "publishedAt": "2026-01-01T09:00:00.000Z",
+    "promoted": false
+  },
+  {
+    "id": "am-1014",
+    "slug": "bmw-2020-template-demo-auto-best-7",
+    "category": "car",
+    "dealerOrgId": "dealer-tesi-car-varna",
+    "status": "active",
+    "title": "BMW X6 xDrive",
+    "description": "Демонстрационни автомобили от шаблона, а не наличност на автокъщата. Illustrative template vehicles, not this dealership’s stock.",
+    "price": {
+      "amount": 85635,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/assets/images/lead/day-night-stock-02.webp",
+        "alt": "BMW X6 xDrive"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Варна",
+      "region": "Варна",
+      "country": "Bulgaria"
+    },
+    "features": [
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "360° камера",
+        "en": "360° камера"
+      },
+      {
+        "bg": "Панорамен покрив",
+        "en": "Панорамен покрив"
+      },
+      {
+        "bg": "Подгряване на седалки",
+        "en": "Подгряване на седалки"
+      },
+      {
+        "bg": "Навигация",
+        "en": "Навигация"
+      },
+      {
+        "bg": "Парктроник",
+        "en": "Парктроник"
+      },
+      {
+        "bg": "Безключов достъп",
+        "en": "Безключов достъп"
+      }
+    ],
+    "spec": {
+      "make": "BMW",
+      "model": "BMW X6 xDrive",
+      "year": 2020,
+      "bodyType": "suv",
+      "fuelType": "diesel",
+      "transmission": "automatic",
+      "mileageValue": 76346,
+      "mileageUnit": "km"
+    },
+    "seller": {
+      "id": "dealer-tesi-car-varna",
+      "type": "dealer",
+      "displayName": "Теси Кар",
+      "verificationStatus": "unverified",
+      "city": "Варна",
+      "logoUrl": "/registered-branding/onLight.png"
+    },
+    "publishedAt": "2026-01-01T09:00:00.000Z",
+    "promoted": false
+  },
+  {
+    "id": "am-1002",
+    "slug": "mercedes-benz-2023-template-demo-auto-best-8",
+    "category": "car",
+    "dealerOrgId": "dealer-tesi-car-varna",
+    "status": "active",
+    "title": "Mercedes-AMG GT Coupé",
+    "description": "Демонстрационни автомобили от шаблона, а не наличност на автокъщата. Illustrative template vehicles, not this dealership’s stock.",
+    "price": {
+      "amount": 51365,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/assets/images/lead/day-night-stock-03.webp",
+        "alt": "Mercedes-AMG GT Coupé"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Варна",
+      "region": "Варна",
+      "country": "Bulgaria"
+    },
+    "features": [
+      {
+        "bg": "360° камера",
+        "en": "360° камера"
+      },
+      {
+        "bg": "Панорамен покрив",
+        "en": "Панорамен покрив"
+      },
+      {
+        "bg": "Подгряване на седалки",
+        "en": "Подгряване на седалки"
+      },
+      {
+        "bg": "Навигация",
+        "en": "Навигация"
+      },
+      {
+        "bg": "Парктроник",
+        "en": "Парктроник"
+      },
+      {
+        "bg": "Безключов достъп",
+        "en": "Безключов достъп"
+      }
+    ],
+    "spec": {
+      "make": "Mercedes-Benz",
+      "model": "Mercedes-AMG GT Coupé",
+      "year": 2023,
+      "bodyType": "coupe",
+      "fuelType": "gasoline",
+      "transmission": "automatic",
+      "mileageValue": 49584,
+      "mileageUnit": "km"
+    },
+    "seller": {
+      "id": "dealer-tesi-car-varna",
+      "type": "dealer",
+      "displayName": "Теси Кар",
+      "verificationStatus": "unverified",
+      "city": "Варна",
+      "logoUrl": "/registered-branding/onLight.png"
+    },
+    "publishedAt": "2026-01-01T09:00:00.000Z",
     "promoted": false
   }
 ];
@@ -946,6 +608,13 @@ const createListingPredicates = (
     filters.mileageMax === undefined ||
     listing.spec.mileageValue <= filters.mileageMax,
   (listing) => !filters.fuel || listing.spec.fuelType === filters.fuel,
+  (listing) =>
+    filters.powerMin === undefined ||
+    (listing.spec.enginePowerHp !== undefined &&
+      listing.spec.enginePowerHp >= filters.powerMin),
+  (listing) =>
+    !filters.extra ||
+    Boolean(listing.features?.some((feature) => feature.en === filters.extra)),
   (listing) =>
     !filters.transmission || listing.spec.transmission === filters.transmission,
   (listing) => !filters.body || listing.spec.bodyType === filters.body,
@@ -1007,7 +676,7 @@ export const getMockRelatedListings = (source: VehicleListing, limit = 3) =>
     .slice(0, limit)
     .map(({ listing }) => listing);
 
-export const mockSavedListingIds: string[] = [];
+export const mockSavedListingIds = ["am-1001", "am-1003", "am-1008"];
 
 export const getMockSavedListings = () =>
   mockListings.filter((listing) => mockSavedListingIds.includes(listing.id));

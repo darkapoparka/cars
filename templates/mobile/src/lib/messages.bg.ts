@@ -329,6 +329,8 @@ export const bgMessages: Record<string, string> = {
     'Можете да прегледате запитването в раздел Контакт.',
   'Saving is unavailable. Keep this sheet open to retain your details.':
     'Запазването е недостъпно. Оставете този прозорец отворен, за да запазите въведеното.',
+  'Saving is unavailable. Changes are kept for this session only.':
+    'Запазването е недостъпно. Промените се пазят само за тази сесия.',
   'Saving is unavailable. Your draft is kept for this session only. Nothing was sent.':
     'Запазването е недостъпно. Черновата е налична само в тази сесия. Не е изпратена.',
   Enquiry: 'Запитване',

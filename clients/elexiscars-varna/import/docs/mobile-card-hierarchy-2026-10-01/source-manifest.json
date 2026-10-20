@@ -1,0 +1,20 @@
+{
+	"source": "L:/CODEX/cars/templates/import",
+	"target": "L:/CODEX/cars/runtime/import-mobile-hierarchy-20261001/source",
+	"files": 1772,
+	"sourceDigest": "2a6bcd74777ab9233f13b4f0207823d1de2d75307656ed627274db482c061ca1",
+	"canonicalDigest": "2a6bcd74777ab9233f13b4f0207823d1de2d75307656ed627274db482c061ca1",
+	"differences": [],
+	"excluded": [
+		"node_modules",
+		".git",
+		".svelte-kit",
+		".vercel",
+		".audit",
+		"runtime",
+		"test-results",
+		"playwright-report",
+		"outputs",
+		".env*"
+	]
+}

@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "dealer": "prestige-varna",
+  "reviewed": true,
+  "reviewedAt": "2026-10-14T11:56:24.553Z",
+  "sourceMode": "retained-or-mixed-raster",
+  "master": {
+    "path": "docs/logo-polish-2026-10-14/live-assets/f86874f711eaa9580ff458b52155dfc35ee9aeb20db7f6bfad585d9ed0e357ef.png",
+    "sha256": "f86874f711eaa9580ff458b52155dfc35ee9aeb20db7f6bfad585d9ed0e357ef"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "docs/logo-polish-2026-10-14/live-assets/f86874f711eaa9580ff458b52155dfc35ee9aeb20db7f6bfad585d9ed0e357ef.png",
+      "sha256": "f86874f711eaa9580ff458b52155dfc35ee9aeb20db7f6bfad585d9ed0e357ef",
+      "sourceReference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/live-assets/f86874f711eaa9580ff458b52155dfc35ee9aeb20db7f6bfad585d9ed0e357ef.png",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/live-assets/f86874f711eaa9580ff458b52155dfc35ee9aeb20db7f6bfad585d9ed0e357ef.png",
+        "sha256": "f86874f711eaa9580ff458b52155dfc35ee9aeb20db7f6bfad585d9ed0e357ef",
+        "reviewReference": "docs/logo-polish-2026-10-14/final-selection.json",
+        "reviewSha256": "6e396eef77195ab7f44d6b055c1936fa079a8195a428a95151fdfd7f3f5d1a16"
+      }
+    },
+    "onDark": {
+      "path": "docs/logo-polish-2026-10-14/final-raster-inputs/b6e81539e5bce8e031d3c426bb13cd9b27c945d1915f88e4041c37490356ac92.png",
+      "sha256": "b6e81539e5bce8e031d3c426bb13cd9b27c945d1915f88e4041c37490356ac92",
+      "sourceReference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/live-assets/f225fafbb23530ce48431729652c79038169407696af44ac7deb60c19ee79a68.webp",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/live-assets/f225fafbb23530ce48431729652c79038169407696af44ac7deb60c19ee79a68.webp",
+        "sha256": "f225fafbb23530ce48431729652c79038169407696af44ac7deb60c19ee79a68",
+        "reviewReference": "docs/logo-polish-2026-10-14/final-selection.json",
+        "reviewSha256": "6e396eef77195ab7f44d6b055c1936fa079a8195a428a95151fdfd7f3f5d1a16"
+      }
+    },
+    "onAccent": {
+      "path": "docs/logo-polish-2026-10-14/final-raster-inputs/4f72b06d3de73b133fee5012db3a2effbe4928c97a25ec3221fff866c46a2c96.png",
+      "sha256": "4f72b06d3de73b133fee5012db3a2effbe4928c97a25ec3221fff866c46a2c96",
+      "sourceReference": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/prestige-varna/dealer-brand/logo-on-accent.webp",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/prestige-varna/dealer-brand/logo-on-accent.webp",
+        "sha256": "fa023868af29466de2f2446a167ac3ba3a6d16a8b4a27987dad8764cbfca5146",
+        "reviewReference": "docs/logo-polish-2026-10-14/final-selection.json",
+        "reviewSha256": "6e396eef77195ab7f44d6b055c1936fa079a8195a428a95151fdfd7f3f5d1a16"
+      }
+    }
+  }
+}

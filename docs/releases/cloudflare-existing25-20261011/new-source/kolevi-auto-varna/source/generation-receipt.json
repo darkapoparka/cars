@@ -1,0 +1,227 @@
+{
+  "strategy": "USE GENERATED CANDIDATE",
+  "identityStatus": "Improved demo/proposal identity based on qualified primary name and preserved source evidence; material redesign, not official or owner-approved.",
+  "publishedBranding": "Published KOLEVI AUTO with photo car/shield; source preserved; improved proposal simplifies icon and increases wordmark legibility",
+  "sourceUrls": [
+    "https://kolevi_auto.mobile.bg/"
+  ],
+  "sourceLimitations": "generated improved demo/proposal identity; not official or approved",
+  "originalReceiptPath": "L:/CODEX/cars/leads/branding/fleet-20261011/kolevi-auto-varna/receipt.json",
+  "generatedPath": "C:/Users/radev/.codex/generated_images/01a12a34-d2d7-7571-930a-1ed37e54ff8e/exec-80cf3f02-8ba5-40d0-a2b0-a5a3b7ef3868.png",
+  "imageGeneration": {
+    "tool": "image_gen.imagegen",
+    "reference": "exec-80cf3f02-8ba5-40d0-a2b0-a5a3b7ef3868",
+    "transparent_background": true,
+    "prompt": "Improve reference1 into a clearly disclosed dealer demo proposal; reference2 ONLY shows bold customized automotive character and compact one-row typography, never copy its emblem/text. Exact ONLY text \"KOLEVI AUTO\". Create individual KA interlocking angular emblem with broad open diamond gap LEFT, not a generic K. Exact Latin name, KOLEVI charcoal AUTO deep red, custom forward-slanted automotive lettering. Palette charcoal and deep red. Strict SINGLE horizontal row, modest individual emblem LEFT beside prominent name on one baseline. Custom confident broad automotive lettering, restrained forward slant, angular ends, open counters. No plain stock sans, captions, slogans, subtitles, text above/below, roof above, underline, plate, badge, shadow, gradient, texture, speckles, noise, residue or white fill. Genuine RGBA transparent background including gaps and counters; safe padding and exact script/case/spaces/punctuation, readable at120px total width.",
+    "referenced_image_paths": [
+      "L:/CODEX/cars/leads/branding/fleet-20261011/kolevi-auto-varna/branding/logo-master.png",
+      "L:/CODEX/cars/leads/branding/fleet-20261011/style-revision/single-row/biemaauto-varna/branding/logo-master.png"
+    ],
+    "outputPath": "C:/Users/radev/.codex/generated_images/01a12a34-d2d7-7571-930a-1ed37e54ff8e/exec-80cf3f02-8ba5-40d0-a2b0-a5a3b7ef3868.png",
+    "modelVersion": "not exposed by tool",
+    "referenceMetadata": [
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/kolevi-auto-varna/branding/logo-master.png",
+        "sha256": "251b5a67a30e708b8a74d1d336e09339ddd0ed4761b379b584f182aeaf323947",
+        "bytes": 145295,
+        "width": 1496,
+        "height": 297,
+        "format": "png",
+        "hasAlpha": true,
+        "role": "Prior dealer treatment or preceding candidate; identity/source history preserved separately."
+      },
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/style-revision/single-row/biemaauto-varna/branding/logo-master.png",
+        "sha256": "dc84d9283929362bd17d0b765c1ab219eb3c093ccb52e4d3c05ada2ddfcb37ce",
+        "bytes": 142920,
+        "width": 1496,
+        "height": 240,
+        "format": "png",
+        "hasAlpha": true,
+        "role": "Style direction only; no name or emblem borrowed."
+      }
+    ]
+  },
+  "variantDerivation": {
+    "onLight": "Existing raster exporter crops/scales the real ImageGen master preserving colored ink and alpha.",
+    "onDark": "Existing raster exporter derives white ink from same master alpha; not independently generated.",
+    "onAccent": "Existing raster exporter derives white ink from same master alpha; not independently generated."
+  },
+  "selectionStatus": "Preferred technically selected single-row candidate; owner style acceptance pending",
+  "ownerApproved": false,
+  "visualAccepted": true,
+  "surfaceReviewPath": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/kolevi-auto-varna/surface-review.png",
+  "visualChecks": {
+    "spelling": "Exact qualified main name; no captions",
+    "surfaces": [
+      "#ffffff",
+      "#30343b",
+      "#17191c",
+      "#202023",
+      "#19171d",
+      "#171717",
+      "#b00020",
+      "#405ff2"
+    ],
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "result": "Compact one-row individualized mark beside expressive name; clear counters, no clipping, opaque background or residue observed. Owner style acceptance pending."
+  },
+  "schemaVersion": 1,
+  "dealer": "kolevi-auto-varna",
+  "state": "asset-verified",
+  "generated": {
+    "path": "C:/Users/radev/.codex/generated_images/01a12a34-d2d7-7571-930a-1ed37e54ff8e/exec-80cf3f02-8ba5-40d0-a2b0-a5a3b7ef3868.png",
+    "sha256": "4633ae3b8ace243235b2466e916d6b4ce3ffeb6ef91be52b86ee84639cef6f40",
+    "bytes": 367341,
+    "format": "png",
+    "width": 2171,
+    "height": 724,
+    "hasAlpha": true,
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparentRatio": 0.8456321526093584,
+      "opaqueRatio": 0.13413631725075137
+    },
+    "visibleBounds": {
+      "x": 46,
+      "y": 197,
+      "width": 2063,
+      "height": 283
+    }
+  },
+  "assets": {
+    "onLight": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/kolevi-auto-varna/dealer-brand/logo-on-light.webp",
+      "sha256": "409fcf8962dba13d48255a308806319d5ea6819aa1ec7651e2344eae946c4cf1",
+      "bytes": 54352,
+      "format": "webp",
+      "width": 1496,
+      "height": 265,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.7154626172939158,
+        "opaqueRatio": 0.24351982645545353
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 37,
+        "width": 1400,
+        "height": 191
+      },
+      "publicPath": "/dealer-brand/logo-on-light.webp"
+    },
+    "onDark": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/kolevi-auto-varna/dealer-brand/logo-on-dark.webp",
+      "sha256": "2694603399e2ba779011aa87f52080b14bcf4eaf84b7d99cc05ac6f59a0a687d",
+      "bytes": 29804,
+      "format": "webp",
+      "width": 1496,
+      "height": 265,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.7154626172939158,
+        "opaqueRatio": 0.24351982645545353
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 37,
+        "width": 1400,
+        "height": 191
+      },
+      "publicPath": "/dealer-brand/logo-on-dark.webp"
+    },
+    "onAccent": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/kolevi-auto-varna/dealer-brand/logo-on-accent.webp",
+      "sha256": "2694603399e2ba779011aa87f52080b14bcf4eaf84b7d99cc05ac6f59a0a687d",
+      "bytes": 29804,
+      "format": "webp",
+      "width": 1496,
+      "height": 265,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.7154626172939158,
+        "opaqueRatio": 0.24351982645545353
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 37,
+        "width": 1400,
+        "height": 191
+      },
+      "publicPath": "/dealer-brand/logo-on-accent.webp"
+    }
+  },
+  "master": {
+    "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/kolevi-auto-varna/branding/logo-master.png",
+    "sha256": "1853d93ce6a076478d43e4e7a25588a81d3f100e2a03f6526fe46b24684f85c0",
+    "bytes": 151870,
+    "format": "png",
+    "width": 1496,
+    "height": 265,
+    "hasAlpha": true,
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparentRatio": 0.7154626172939158,
+      "opaqueRatio": 0.24351982645545353
+    },
+    "visibleBounds": {
+      "x": 48,
+      "y": 37,
+      "width": 1400,
+      "height": 191
+    }
+  },
+  "technicalAcceptance": {
+    "spelling": "Exact qualified main name; no captions",
+    "surfaces": [
+      "#ffffff",
+      "#30343b",
+      "#17191c",
+      "#202023",
+      "#19171d",
+      "#171717",
+      "#b00020",
+      "#405ff2"
+    ],
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "result": "Compact one-row individualized mark beside expressive name; clear counters, no clipping, opaque background or residue observed. Owner style acceptance pending."
+  },
+  "integrationVerified": false,
+  "hostedVerified": false,
+  "exportTool": "docs/logo-refresh/2026-09-18/tools/build-approved-logo-pack.mjs",
+  "exportToolSha256": "7fab60c4000210eff6bbb91f9c35e869bad90834d3bdd09d282a9a51835f0dbc",
+  "exportIsolation": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/style-new-a-export",
+  "updatedAt": "2026-10-11T11:33:12.234Z",
+  "sourceEvidence": {
+    "originalReceipt": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/kolevi-auto-varna/receipt.json",
+      "sha256": "7f84e91aeb3c790452b6bde9c696f19b665ed7fbca03d1bbfe276cdbdef64651"
+    },
+    "originalMaster": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/kolevi-auto-varna/branding/logo-master.png",
+      "sha256": "251b5a67a30e708b8a74d1d336e09339ddd0ed4761b379b584f182aeaf323947"
+    },
+    "publishedBranding": "Published KOLEVI AUTO with photo car/shield; source preserved; improved proposal simplifies icon and increases wordmark legibility",
+    "sourceUrls": [
+      "https://kolevi_auto.mobile.bg/"
+    ],
+    "sourceLimitation": "generated improved demo/proposal identity; not official or approved",
+    "sourceEvidenceDirectory": "L:/CODEX/cars/leads/branding/fleet-20261011/kolevi-auto-varna/source"
+  }
+}

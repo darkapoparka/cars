@@ -2,23 +2,25 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
+import os from 'node:os';
 import { fileURLToPath } from 'node:url';
-import { loadDealerProfile } from './lib/client-refresh-normalize.mjs';
 import { planSixDesignSelection } from './lib/six-design-release.mjs';
 import { vercelConfiguration, packageRetainsPath } from './package-dealer.mjs';
-import { LEGACY_DETAIL_FILE, buildLegacyDetailRouteMap, mapLegacyCarwowDetails, legacyDetailArtifact, legacyDetailRedirects } from './publishing/legacy-detail-routes.mjs';
+import { LEGACY_DETAIL_FILE, buildLegacyDetailRouteMap, mapLegacyCarwowDetails, legacyDetailArtifact, legacyDetailRedirects, assertRetainedLegacyDetailTargets } from './publishing/legacy-detail-routes.mjs';
 
 const root = fileURLToPath(new URL('..', import.meta.url));
-const dealerRoot = path.join(root, 'clients/promosale-varna');
-const oldManifest = JSON.parse(fs.readFileSync(path.join(dealerRoot, 'dealer.json')));
-const profile = loadDealerProfile(dealerRoot, oldManifest.slug);
-const manifest = family => ({ ...oldManifest, packaging: { version: '5' },
-  variants: planSixDesignSelection(oldManifest.variants.map(variant => variant.base === '/variant-2'
-    ? { ...variant, key: family === 'modern' ? 'import' : 'modern', entry: family === 'modern' ? '/variant-2/' : '/variant-2/cars' } : variant)).variants });
-const source = {
-  inventoryBytes: fs.readFileSync(path.join(dealerRoot, 'carwow/src/lib/data/daynight-current-inventory.ts')),
-  vehicleBytes: fs.readFileSync(path.join(dealerRoot, 'carwow/src/lib/data/daynight-vehicles.ts'))
-};
+const fixture=JSON.parse(fs.readFileSync(path.join(root,'scripts/fixtures/legacy-detail-promosale.json')));
+const oldManifest=fixture.manifest, profile=fixture.profile;
+// Historical Carwow inputs are compact test evidence, independent of mutable live dealer source.
+const dealerRoot=fs.mkdtempSync(path.join(os.tmpdir(),'cars-legacy-route-test-'));
+const historicalData=path.join(dealerRoot,'carwow/src/lib/data');
+fs.mkdirSync(historicalData,{recursive:true});
+const source={inventoryBytes:Buffer.from(fixture.inventory),vehicleBytes:Buffer.from(fixture.vehicles)};
+fs.writeFileSync(path.join(historicalData,'daynight-current-inventory.ts'),source.inventoryBytes);
+fs.writeFileSync(path.join(historicalData,'daynight-vehicles.ts'),source.vehicleBytes);
+test.after(()=>{assert(path.isAbsolute(dealerRoot)&&path.dirname(dealerRoot)===os.tmpdir()&&path.basename(dealerRoot).startsWith('cars-legacy-route-test-'));fs.rmSync(dealerRoot,{recursive:true,force:true});});
+const {legacyDetailRoutes:retainedLegacyDetailRoutes,...legacyFixtureManifest}=oldManifest;
+const manifest=family=>({...legacyFixtureManifest,packaging:{version:'5'},variants:planSixDesignSelection(oldManifest.variants.map(variant=>variant.base==='/variant-2'?{...variant,key:family==='modern'?'import':'modern',entry:family==='modern'?'/variant-2/':'/variant-2/cars'}:variant)).variants});
 
 test('retained source identities select different Modern PDPs for old dealer vehicle links', () => {
   const result = buildLegacyDetailRouteMap({ dealerRoot, profile, manifest: manifest('modern') });
@@ -82,8 +84,46 @@ test('six-services configuration includes exact legacy redirects before mount ro
   const m = manifest('modern'), result = mapLegacyCarwowDetails({ ...source, profile, manifest: m });
   const config = vercelConfiguration(m, result.artifact);
   assert.equal(Object.keys(config.services).length, 6);
-  assert.equal(config.redirects.length, result.artifact.entries.length * 5 + 10);
+  const legacy = legacyDetailRedirects(m, result.artifact);
+  assert.deepEqual(config.redirects.slice(0, legacy.length), legacy);
+  const mounted = config.redirects.slice(legacy.length);
+  assert.deepEqual(mounted.filter(rule => !rule.has), m.variants.filter(variant => variant.base && !['mobile','app'].includes(variant.key))
+    .map(variant => ({ source: variant.base, destination: variant.entry, permanent: false })));
+  const preferred = mounted.filter(rule => rule.has);
+  assert.equal(preferred.length, m.localization.enabledLocales.length * 2);
+  for (const locale of m.localization.enabledLocales) for (const source of ['/variant-4','/variant-4/']) {
+    assert.deepEqual(preferred.find(rule => rule.source === source && rule.destination === '/variant-4/' + locale),
+      { source, has: [{ type: 'cookie', key: 'cars-app-locale', value: { eq: locale } }], destination: '/variant-4/' + locale, permanent: false });
+  }
+  assert.ok(config.redirects.every(rule => rule.source !== rule.destination), 'Bare mounted entries must not redirect to themselves');
+  for (const key of ['mobile','app']) {
+    const variant = m.variants.find(variant => variant.key === key);
+    assert.ok(config.rewrites.some(rule => rule.source === variant.base && rule.destination.service === key && rule.destination.path === variant.base),
+      key + ' bare entry is dispatched directly to its native service');
+  }
   assert.equal(config.redirects[0].source, '/variant-3/en/inventory');
   assert.equal(config.redirects[0].destination, '/variant-3/en/cars');
   assert.ok(packageRetainsPath(LEGACY_DETAIL_FILE));
+});
+
+test('already migrated source retains exact legacy routes without reading retired Carwow files', () => {
+  for (const family of ['modern', 'import']) {
+    const m=manifest(family), result=mapLegacyCarwowDetails({...source,profile,manifest:m});
+    m.legacyDetailRoutes=result.reference;
+    const files=new Map([[LEGACY_DETAIL_FILE,result.bytes]]), bytes=files.get(LEGACY_DETAIL_FILE);
+    const retained=legacyDetailArtifact(files,m);
+    assert.equal(assertRetainedLegacyDetailTargets({artifact:retained,profile,manifest:m}),retained);
+    assert.equal(files.get(LEGACY_DETAIL_FILE),bytes);
+    assert.deepEqual(legacyDetailRedirects(m,retained),legacyDetailRedirects(m,result.artifact));
+  }
+});
+
+test('retained legacy route targets fail closed when inventory, locale or PDP identity changes', () => {
+  const m=manifest('modern'), {artifact}=mapLegacyCarwowDetails({...source,profile,manifest:m});
+  assert.throws(()=>assertRetainedLegacyDetailTargets({artifact,profile:{...profile,listings:profile.listings.slice(1)},manifest:m}),/target changed/);
+  assert.throws(()=>assertRetainedLegacyDetailTargets({artifact,profile:{...profile,listings:profile.listings.map((row,i)=>i?row:{...row,slug:'new-pdp-identity'})},manifest:m}),/target changed/);
+  assert.throws(()=>assertRetainedLegacyDetailTargets({artifact,profile:{...profile,listings:[...profile.listings,profile.listings[0]]},manifest:m}),/Duplicate current/);
+  assert.throws(()=>assertRetainedLegacyDetailTargets({artifact,profile,manifest:{...m,localization:{defaultLocale:artifact.defaultLocale==='en'?'bg':'en'}}}),/locale changed/);
+  const smaller={...profile,listings:profile.listings.slice(1)}, retired=mapLegacyCarwowDetails({...source,profile:smaller,manifest:m}).artifact;
+  assert.throws(()=>assertRetainedLegacyDetailTargets({artifact:retired,profile,manifest:m}),/inventory was restored/);
 });

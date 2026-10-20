@@ -2,7 +2,9 @@ import test from 'node:test';import assert from 'node:assert/strict';import {cre
 import fs from 'node:fs';import os from 'node:os';import path from 'node:path';import {createHash} from 'node:crypto';
 import {artifactInventory} from './lib/uk-cloudflare-artifacts.mjs';
 import {planSixDesignSelection} from './lib/six-design-release.mjs';
-import {scopedGlobalsSource,scopeCompiledModule,singleWorkerSource,inspectSingleWorkerInputs,packageUkSingleWorker} from './package-uk-single-worker.mjs';
+import {createDealerRouter} from './publishing/cloudflare-router.mjs';
+import {headSwitcher} from './publishing/native-mounts.mjs';
+import {scopedGlobalsSource,scopeCompiledModule,singleWorkerSource,inspectSingleWorkerInputs,inspectModernFreeStaticExperiment,packageUkSingleWorker,materializeSignatureStaticFontCompletion} from './package-uk-single-worker.mjs';
 const require=createRequire(process.env.CARS_ESBUILD_RESOLVE_FROM||import.meta.url),esbuild=require('esbuild');
 const uri=(source,tag)=>'data:text/javascript;base64,'+Buffer.from(source+'\n// '+tag).toString('base64');
 test('framework registries are separate while native constructors remain native',async()=>{
@@ -115,3 +117,133 @@ test('Import-first composition namespaces variant-2 assets while preserving Mode
  assert(fs.readFileSync(path.join(destination,'server/modern/index.js'),'utf8').includes('modern/variant-3'));assert(fs.readFileSync(path.join(destination,'public/variant-3/_next/static/modern.js'),'utf8').includes('/variant-3'));
  assert(fs.existsSync(path.join(f.inputs.import,'compiled/import/public/variant-2/_app/client.js')));assert.equal(inspectSingleWorkerInputs({inputs:f.inputs,expectedDealer:'fixture'}).identity.inputDigest,f.identity.inputDigest);
 });
+
+function addModernServices(f,mount='/variant-2'){
+ const directory=f.inputs.modern,deployFile=path.join(directory,'deploy.json'),deploy=JSON.parse(fs.readFileSync(deployFile,'utf8')),server=deploy.mainPath.slice(0,-'index.js'.length);
+ const write=(name,value)=>{const file=path.join(directory,name);fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file,value);};
+ const resolver='export function resolveCarsNativePreferences({locale,returnTo}){return {state:{locale,country:"BG",suggestedCountry:"BG",promptDismissed:false,source:"default"},returnTo};}\n';
+ const nativeVary='RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch, Next-Url, X-Vinext-Interception-Context, X-Vinext-Interception-Id, X-Vinext-Mounted-Slots, X-Vinext-Rsc-Render-Mode, X-Vinext-Rsc-State-Fingerprint';
+ const policy=(locale,kind)=>({
+  'cache-control':'private, no-store','cdn-cache-control':'no-store','vercel-cdn-cache-control':'no-store','content-language':locale,'content-type':kind==='rsc'?'text/x-component':'text/html; charset=utf-8',vary:nativeVary,
+  'content-security-policy':"default-src 'self'; script-src 'self' 'unsafe-inline'",'cross-origin-opener-policy':'same-origin','cross-origin-resource-policy':'same-origin','origin-agent-cluster':'?1','referrer-policy':'no-referrer','strict-transport-security':'max-age=31536000; includeSubDomains',
+  'x-content-type-options':'nosniff','x-dns-prefetch-control':'off','x-download-options':'noopen','x-frame-options':'SAMEORIGIN','x-permitted-cross-domain-policies':'none','x-xss-protection':'0',
+  ...(kind==='rsc'?{'x-vinext-params':encodeURIComponent(JSON.stringify({locale})),'x-vinext-rendered-path-and-search':encodeURIComponent('/'+locale+'/services'),'x-vinext-rsc-build-id':'fixture-build','x-vinext-rsc-compatibility-id':'fixture-compatibility'}:{link:'</native-fixture.woff2>; rel=preload; as=font'}),
+ });
+ const routes=['en','bg'].map(locale=>{
+  const bodies={html:'<html lang="'+locale+'"><head><script type="application/json" id="cars-modern-native-preferences">null</script></head><body>Native Services '+locale+'</body></html>',rsc:'0:{"nativeServices":"'+locale+'"}\n'};
+  const nativeHead=new Map([['fixture/app.html',Buffer.from(bodies.html)]]);headSwitcher(nativeHead,'fixture/app.html');bodies.html=nativeHead.get('fixture/app.html').toString();
+  const row={locale,pathname:mount+'/'+locale+'/services'};
+  for(const kind of ['html','rsc']){const body=bodies[kind];row[kind]={path:'/_cars/private/modern/'+sha(body)+'.'+kind,bytes:Buffer.byteLength(body),sha256:sha(body),headers:policy(locale,kind)};write(deploy.assetPath+row[kind].path,body);}return row;
+ });
+ const manifest={schemaVersion:2,kind:'cars-modern-services-static-experiment',mount,routes,responsePolicy:{vinextVersion:'1.1.0',sourceTree:deploy.sourceTree,producerSha256:sha(resolver),identities:{buildId:'fixture-build',compatibilityId:'fixture-compatibility',deploymentId:null}}};
+ write(server+'cars-free-services.json',JSON.stringify(manifest));
+ write(server+'cars-native-preferences.js',resolver);
+ deploy.freeStaticExperiment={manifestPath:server+'cars-free-services.json',resolverPath:server+'cars-native-preferences.js'};
+ fs.writeFileSync(deployFile,JSON.stringify(deploy));
+ const reseal=()=>{
+  const current=JSON.parse(fs.readFileSync(deployFile,'utf8')),files=[];
+  const visit=(prefix='compiled')=>{for(const item of fs.readdirSync(path.join(directory,prefix),{withFileTypes:true})){const name=prefix+'/'+item.name;if(item.isDirectory())visit(name);else{const b=fs.readFileSync(path.join(directory,name));files.push({path:name,bytes:b.length,sha256:sha(b)});}}};visit();files.sort((a,b)=>a.path.localeCompare(b.path));
+  current.compiledFiles=files;current.compiledDigest=sha(JSON.stringify(files));fs.writeFileSync(deployFile,JSON.stringify(current));
+  const buildFile=path.join(directory,'receipts/build.json'),build=JSON.parse(fs.readFileSync(buildFile,'utf8'));build.compiledDigest=current.compiledDigest;fs.writeFileSync(buildFile,JSON.stringify(build));f.reseal('modern');
+ };
+ reseal();return {manifest,deploy,write,reseal};
+}
+
+test('explicit sealed Modern Services experiment preserves all six native handlers and emits private snapshot guard only when opted in',t=>{
+ const f=fixture(t),s=addModernServices(f),destination=path.join(f.root,'composed'),receipt=packageUkSingleWorker({inputs:f.inputs,destination,expectedDealer:'fixture',esbuild});
+ assert.equal(receipt.applicationCount,6);assert.equal(receipt.workerCount,1);assert.deepEqual(receipt.composition.serviceBindings,[]);assert.equal(receipt.hostedVerified,false);
+ const worker=fs.readFileSync(path.join(destination,'server/worker.mjs'),'utf8');assert(worker.includes('modernStatic.fetch(request,env)'));for(const family of ['AUTO_BEST','MODERN','IMPORT','APP','MOBILE','KARENTO_BEST'])assert(worker.includes('CARS_'+family+':{fetch:'+(family==='MODERN'?'async r=>':'r=>')));
+ assert.doesNotThrow(()=>esbuild.transformSync(worker,{format:'esm',target:'es2022'}));assert(fs.existsSync(path.join(destination,'server/modern/cars-native-preferences.js')));assert(fs.existsSync(path.join(destination,'server/modern-free-static-runtime.mjs')));
+ const config=JSON.parse(fs.readFileSync(path.join(destination,'wrangler.json'),'utf8'));assert.deepEqual(config.assets.run_worker_first,['/_cars/private/modern/*','/_vinext/static-cache/*']);
+ for(const route of s.manifest.routes)for(const kind of ['html','rsc'])assert.equal(sha(fs.readFileSync(path.join(destination,'public'+route[kind].path))),route[kind].sha256);
+ assert.equal(inspectModernFreeStaticExperiment(inspectSingleWorkerInputs({inputs:f.inputs,expectedDealer:'fixture'}).inspected,'/variant-2').routes.length,2);
+});
+
+test('static experiment supports preserved opposite Modern mount and rejects incomplete or unadmitted sealed outputs before composition',async t=>{
+ const other=fixture(t,'existing-fleet','import');addModernServices(other,'/variant-3');assert.doesNotThrow(()=>packageUkSingleWorker({inputs:other.inputs,destination:path.join(other.root,'composed'),expectedDealer:'fixture',esbuild}));
+ const cases=[
+  ['no marker',s=>{const file=path.join(s.directory,'deploy.json'),d=JSON.parse(fs.readFileSync(file,'utf8'));delete d.freeStaticExperiment;fs.writeFileSync(file,JSON.stringify(d));},/Unadmitted private/],
+  ['different response source tree',s=>s.write(s.deploy.freeStaticExperiment.manifestPath,JSON.stringify({...s.manifest,responsePolicy:{...s.manifest.responsePolicy,sourceTree:'9'.repeat(40)}})),/response source tree differs/],
+  ['different compiled response producer',s=>s.write(s.deploy.freeStaticExperiment.manifestPath,JSON.stringify({...s.manifest,responsePolicy:{...s.manifest.responsePolicy,producerSha256:'9'.repeat(64)}})),/response producer differs/],
+  ['wrong selected mount',s=>s.write(s.deploy.freeStaticExperiment.manifestPath,JSON.stringify({...s.manifest,mount:'/variant-3',routes:s.manifest.routes.map(r=>({...r,pathname:r.pathname.replace('/variant-2/','/variant-3/')}))})),/mount differs/],
+  ['missing pure module',s=>fs.unlinkSync(path.join(s.directory,s.deploy.freeStaticExperiment.resolverPath)),/Missing bounded compiled/],
+  ['changed snapshot bytes',s=>s.write(s.deploy.assetPath+s.manifest.routes[0].html.path,'changed'),/snapshot differs/],
+  ['unscoped adapter cache',s=>s.write(s.deploy.assetPath+'/_vinext/static-cache/index.json','{}'),/Unscoped native/],
+  ['extra private route',s=>s.write(s.deploy.assetPath+'/_cars/private/modern/'+sha('other')+'.html','other'),/Only four/]
+ ];
+ for(const [name,edit,pattern] of cases)await t.test(name,t=>{const f=fixture(t),s=addModernServices(f);s.directory=f.inputs.modern;edit(s);s.reseal();const destination=path.join(f.root,'refused');assert.throws(()=>packageUkSingleWorker({inputs:f.inputs,destination,expectedDealer:'fixture',esbuild}),pattern);assert.equal(fs.existsSync(destination),false);});
+});
+
+test('ordinary package contains no experiment runtime, private-cache admission or changed asset dispatch',t=>{
+ const f=fixture(t),destination=path.join(f.root,'composed');packageUkSingleWorker({inputs:f.inputs,destination,expectedDealer:'fixture',esbuild});
+ const config=JSON.parse(fs.readFileSync(path.join(destination,'wrangler.json'),'utf8'));assert.equal(config.assets.run_worker_first,false);assert.equal(fs.existsSync(path.join(destination,'server/modern-free-static-runtime.mjs')),false);assert.equal(fs.readFileSync(path.join(destination,'server/worker.mjs'),'utf8'),singleWorkerSource());
+ assert.equal(inspectModernFreeStaticExperiment(inspectSingleWorkerInputs({inputs:f.inputs,expectedDealer:'fixture'}).inspected,'/variant-2'),null);
+});
+
+
+test('captured Services traverse the real dealer router and retain the native shared chrome, RSC policy and early private boundaries',async t=>{
+ const f=fixture(t),s=addModernServices(f),variants=planSixDesignSelection([{key:'auto-best',base:'',entry:'/'},{key:'modern',base:'/variant-2',entry:'/variant-2/cars'},{key:'carwow',base:'/variant-3',entry:'/variant-3/'}]).variants.map(v=>({...v,binding:'CARS_'+v.key.toUpperCase().replaceAll('-','_')}));
+ const routerUrl=uri('export default ('+createDealerRouter.toString()+')('+JSON.stringify({variants,redirects:[]})+');','real-dealer-router'),router=await import(routerUrl);
+ const runtimeUrl=new URL('./lib/modern-free-static-runtime.mjs',import.meta.url).href;
+ const observerUrl=uri('import {createModernFreeStaticRuntime as native,modernSnapshotRequest} from '+JSON.stringify(runtimeUrl)+';export {modernSnapshotRequest};export const calls=[];export function createModernFreeStaticRuntime(options){const runtime=native(options);return {fetch(request,env){calls.push({request,pathname:new URL(request.url).pathname,country:request.headers.get("x-cars-country"),vercelCountry:request.headers.get("x-vercel-ip-country")});return runtime.fetch(request,env);}};}','transparent-native-snapshot-observer'),observer=await import(observerUrl);
+ const resolver=fs.readFileSync(path.join(f.inputs.modern,s.deploy.freeStaticExperiment.resolverPath),'utf8'),resolverUrl=uri(resolver,'fixture-native-resolver');
+ let source=singleWorkerSource(s.manifest).replace('"./router.mjs"',JSON.stringify(routerUrl)).replace('"./modern-free-static-runtime.mjs"',JSON.stringify(observerUrl)).replace('"./modern/cars-native-preferences.js"',JSON.stringify(resolverUrl));
+ const nativeModules={};for(const family of keys.filter(k=>k!=='router')){const tag=family.replaceAll('-','_'),nativeUrl=uri('export const calls=[];export default {fetch(request,env,ctx){calls.push({request,env,ctx});return new Response("original native '+family+'",{headers:{"content-type":"text/html"}});}};','fixture-native-'+family);nativeModules[family]=await import(nativeUrl);source=source.replace(JSON.stringify('./'+family+'/'+(['modern','app','mobile'].includes(family)?'index.js':'index.mjs')),JSON.stringify(nativeUrl));}
+ const worker=(await import(uri(source,'owned-static-router-entry'))).default,assetCalls=[],env={ASSETS:{async fetch(request){const name=new URL(request.url).pathname;assetCalls.push(name);const asset=s.manifest.routes.flatMap(r=>[r.html,r.rsc]).find(a=>a.path===name||a.path.endsWith('.html')&&a.path.slice(0,-5)===name);assert.ok(asset);assert.equal(request.redirect,'manual');return new Response(fs.readFileSync(path.join(f.inputs.modern,s.deploy.assetPath+asset.path)));}}},ctx={passThroughOnException(){}};
+ for(const route of s.manifest.routes){const request=new Request('https://dealer.example'+route.pathname,{headers:{'x-cars-country':'ZZ','x-vercel-ip-country':'ZZ'}});const response=await worker.fetch(request,env,ctx),html=await response.text();assert.equal(response.status,200);assert.equal(observer.calls.at(-1).request===request,false,'the actual router must clone/sanitize the ingress');assert.equal(observer.calls.at(-1).country,null);assert.equal(observer.calls.at(-1).vercelCountry,null);assert.equal((html.match(/preview-switcher\.js/g)||[]).length,1);assert.match(html,/<script defer src="\/preview-switcher\.js"><\/script>/);assert.match(html,/cars-modern-native-preferences/);assert.equal(response.headers.get('content-security-policy'),route.html.headers['content-security-policy']);assert.equal(response.headers.get('cache-control'),'private, no-store');assert.equal(response.headers.get('x-robots-tag'),'noindex, nofollow');
+ const rscResponse=await worker.fetch(new Request('https://dealer.example'+route.pathname+'?_rsc=',{headers:{RSC:'1'}}),env,ctx),rsc=Buffer.from(await rscResponse.arrayBuffer());assert.equal(sha(rsc),route.rsc.sha256);assert.equal(rscResponse.headers.get('content-type'),'text/x-component');assert.equal(rscResponse.headers.get('cache-control'),'private, no-store');assert.equal(rsc.toString().includes('preview-switcher'),false);assert.equal(rscResponse.headers.get('x-vinext-rsc-build-id'),'fixture-build');}
+ assert.equal(observer.calls.length,4);assert.equal(nativeModules.modern.calls.length,0);
+ const assetCount=assetCalls.length;for(const pathname of ['/_cars/private/modern','/_cars/private/modern/alias','/_cars/private/modern/alias.html','/_vinext/static-cache','/_vinext/static-cache/alias.rsc']){const response=await worker.fetch(new Request('https://dealer.example'+pathname),env,ctx);assert.equal(response.status,404);assert.equal(response.headers.get('cache-control'),'private, no-store');assert.equal((await response.text()).includes('preview-switcher'),false);}assert.equal(assetCalls.length,assetCount);for(const family of Object.values(nativeModules))assert.equal(family.calls.length,0);
+ const invalidBootstrap=await worker.fetch(new Request('https://dealer.example/_cars/native-preferences/modern?returnTo=https://evil.invalid'),env,ctx);assert.equal(invalidBootstrap.status,400);assert.equal(assetCalls.length,assetCount);
+ const fallback=await worker.fetch(new Request('https://dealer.example/variant-2/en/services?ordinary=1'),env,ctx);assert.equal(await fallback.text(),'original native modern');assert.equal(nativeModules.modern.calls.length,1);assert.equal(nativeModules.modern.calls[0].ctx,ctx);assert.equal(new URL(nativeModules.modern.calls[0].request.url).search,'?ordinary=1');assert.equal(router.default.fetch instanceof Function,true);
+});
+
+import {SIGNATURE_FONT_FILES} from './publishing/signature-font-assets.mjs';
+for(const importMount of ['/variant-2','/variant-3'])test('static font completion preserves mounted original WOFF2 bytes at '+importMount+' and /variant-6 without touching JS',t=>{
+ const f=fixture(t,'existing-fleet',importMount==='/variant-2'?'import':'modern'),native=f.inputs.import,deploy=JSON.parse(fs.readFileSync(path.join(native,'deploy.json')));const files=[];const mounts={importMount,signatureMount:'/variant-6'};
+ for(const name of SIGNATURE_FONT_FILES){const bytes=Buffer.concat([Buffer.from('wOF2'),Buffer.alloc(80,3),Buffer.from(name)]),sourcePath='import/static/fonts/sofia-sans/'+name,relative=deploy.assetPath+importMount+'/fonts/sofia-sans/'+name,absolute=path.join(native,relative);fs.mkdirSync(path.dirname(absolute),{recursive:true});fs.writeFileSync(absolute,bytes);deploy.compiledFiles.push({path:relative,bytes:bytes.length,sha256:sha(bytes)});files.push({sourcePath,targetPath:'karento-best/static/assets/fonts/sofia-sans/'+name,sha256:sha(bytes)});}
+ const completion={schemaVersion:1,kind:'cars-signature-static-font-completion',sourceFamily:'import',targetFamily:'karento-best',sourceFamilyDigest:'a'.repeat(64),compiledFamilyDigest:'b'.repeat(64),preparedFamilyDigest:'c'.repeat(64),compiledSourceFiles:100,preparedSourceFiles:109,scriptOrStyleBytesChanged:false,files};
+ const before=fs.readFileSync(path.join(native,deploy.mainPath)),copies=[],inspected={import:{directory:native,deploy}};const rows=materializeSignatureStaticFontCompletion(inspected,completion,(from,to)=>copies.push({from,to}),mounts);assert.equal(copies.length,9);assert.equal(rows.length,9);assert(copies.every(x=>x.to.startsWith('public/variant-6/assets/fonts/sofia-sans/')&&x.from.replaceAll('\\','/').includes(importMount+'/fonts/sofia-sans/')&&x.to.endsWith('.woff2')));assert(before.equals(fs.readFileSync(path.join(native,deploy.mainPath))));
+ let writes=0;deploy.compiledFiles.find(x=>x.path.endsWith(SIGNATURE_FONT_FILES.at(-1))).sha256='0'.repeat(64);assert.throws(()=>materializeSignatureStaticFontCompletion(inspected,completion,()=>writes++,mounts),/font pin differs/);assert.equal(writes,0);assert.throws(()=>materializeSignatureStaticFontCompletion(inspected,completion,()=>writes++,{...mounts,signatureMount:'/variant-5'}),/Exact frozen/);assert.equal(writes,0);assert.deepEqual(materializeSignatureStaticFontCompletion(inspected,null,()=>writes++),[]);
+});
+
+import {createCanonicalComposition,canonicalCompositionEntry,canonicalOriginWrapper,CANONICAL_ORIGINAL_WORKER_PATH} from './publishing/canonical-origin-wrapper.mjs';
+
+test('canonical wrapper and raw six router enter the file seal before outputDigest is computed',t=>{
+ const f=fixture(t),{identity}=inspectSingleWorkerInputs({inputs:f.inputs,expectedDealer:'fixture'}),variants=JSON.parse(fs.readFileSync(path.join(f.inputs.router,'compiled/cloudflare/router.mjs'),'utf8').match(/createDealerRouter\((\{[\s\S]*\})\)/)[1]).variants;
+ const composition=createCanonicalComposition({canonicalOrigin:'https://explicit-fixture.webpreviews.site',ukDefault:false},{providerOrigin:identity.publicOrigin,toolRevision:identity.sourceCommit,variants}),destination=path.join(f.root,'canonical-provider'),receipt=packageUkSingleWorker({inputs:f.inputs,destination,expectedDealer:'fixture',esbuild,canonicalComposition:composition});
+ assert.deepEqual(receipt.canonicalComposition,composition);assert.equal(receipt.publicOrigin,identity.publicOrigin);assert.equal(receipt.outputDigest,sha(JSON.stringify(receipt.files)));
+ for(const name of ['server/worker.mjs',CANONICAL_ORIGINAL_WORKER_PATH]){const bytes=fs.readFileSync(path.join(destination,name)),pin=receipt.files.find(row=>row.path===name);assert.equal(pin.bytes,bytes.length);assert.equal(pin.sha256,sha(bytes));}
+ assert.equal(fs.readFileSync(path.join(destination,CANONICAL_ORIGINAL_WORKER_PATH),'utf8'),singleWorkerSource());assert.equal(fs.readFileSync(path.join(destination,'server/worker.mjs'),'utf8'),canonicalCompositionEntry(composition));
+ const config=JSON.parse(fs.readFileSync(path.join(destination,'wrangler.json')));assert.equal(config.routes,undefined);assert.equal(config.services,undefined);assert.equal(config.workers_dev,true);
+});
+
+test('stream-safe canonical v2 rewrites metadata and Location while preserving React scripts and non-HTML bytes',async t=>{
+ const miniflareRequire=createRequire(process.env.CARS_MINIFLARE_RESOLVE_FROM||import.meta.url);
+ const {Miniflare,convertV4MiniflareOptions}=miniflareRequire('miniflare'),provider='https://cars-stream.darkapoparka1.workers.dev',canonical='https://explicit-stream.webpreviews.site';
+ const flight='self.__next_f.push([1,'+JSON.stringify('0:T'+Buffer.byteLength(provider).toString(16)+','+provider+' /same-length-prefixed-payload')+']);';
+ const html='<html><head><link rel="canonical" href="'+provider+'/en"><meta property="og:url" content="'+provider+'/en"></head><body><script>'+flight+'</script><script type="application/ld+json">'+JSON.stringify({url:provider+'/en'})+'</script></body></html>';
+ const source='export default {async fetch(request){const path=new URL(request.url).pathname;if(path==="/redirect")return new Response(null,{status:302,headers:{location:'+JSON.stringify(provider+'/en')+'}});const value=path==="/rsc"?'+JSON.stringify(flight)+':'+JSON.stringify(html)+';const body=new ReadableStream({start(c){const bytes=new TextEncoder().encode(value),middle=Math.floor(bytes.length/2);c.enqueue(bytes.slice(0,middle));c.enqueue(bytes.slice(middle));c.close();}});return new Response(body,{headers:{"content-type":path==="/rsc"?"text/x-component":"text/html; charset=utf-8","etag":"original","content-length":String(new TextEncoder().encode(value).length)}});}};';
+ const moduleRoot=fs.realpathSync(os.tmpdir()),options={compatibilityDate:'2026-10-10',compatibilityFlags:['nodejs_compat'],modulesRoot:moduleRoot,modules:[{type:'ESModule',path:path.join(moduleRoot,'canonical-test-worker.mjs'),contents:canonicalOriginWrapper({originalImport:'./canonical-test-original.mjs',provider,canonical})},{type:'ESModule',path:path.join(moduleRoot,'canonical-test-original.mjs'),contents:source}],telemetry:{enabled:false}},mf=new Miniflare(convertV4MiniflareOptions?convertV4MiniflareOptions(options):options);t.after(()=>mf.dispose());
+ const response=await mf.dispatchFetch(canonical+'/en'),body=await response.text();
+ assert.equal(response.status,200);assert.ok(body.includes('href="'+canonical+'/en"'));assert.ok(body.includes('content="'+canonical+'/en"'));assert.ok(body.includes('<script>'+flight+'</script>'));assert.ok(body.includes(JSON.stringify({url:provider+'/en'})),'SSR JSON-LD is preserved; the v2 client updates it after hydration');
+ assert.ok(body.includes('/.well-known/cars-origin-v2.js'));assert.equal(response.headers.get('etag'),null);assert.equal(response.headers.get('content-length'),null);
+ const rsc=await mf.dispatchFetch(canonical+'/rsc');assert.equal(await rsc.text(),flight);assert.equal(rsc.headers.get('etag'),'original');assert.equal(rsc.headers.get('content-type'),'text/x-component');
+ const redirect=await mf.dispatchFetch(canonical+'/redirect',{redirect:'manual'});assert.equal(redirect.headers.get('location'),canonical+'/en');
+ const script=await mf.dispatchFetch(canonical+'/.well-known/cars-origin-v2.js');assert.equal(script.status,200);assert.ok((await script.text()).includes('application/ld+json'));
+ const head=await mf.dispatchFetch(canonical+'/.well-known/cars-origin-v2.js',{method:'HEAD'});assert.equal(await head.text(),'');
+});
+
+
+test('source CI installs a separate exact Worker runtime before the mandatory stream test checkpoint',()=>{
+ const yaml=fs.readFileSync(new URL('../.github/workflows/existing-fleet-source.yml',import.meta.url),'utf8'),plan=yaml.split('  prepare_source:')[0];
+ assert.match(plan,/stream_test_root="\$RUNNER_TEMP\/cars-stream-test-runtime"/);
+ assert.match(plan,/npm install --prefix "\$stream_test_root" --save-exact --no-audit --no-fund miniflare@5\.20261006\.1-alpha/);
+ assert.match(plan,/CARS_MINIFLARE_RESOLVE_FROM=.*stream_test_root/);
+ assert.match(plan,/workerd:'1\.20261006\.1'/);
+ assert.ok(plan.indexOf('miniflare@5.20261006.1-alpha')<plan.indexOf('node --test scripts/*.test.mjs'));
+ assert.match(plan,/CARS_ESBUILD_RESOLVE_FROM: \$\{\{ github\.workspace \}\}\/templates\/import\/package\.json/);
+ assert.doesNotMatch(plan,/npm install .*--prefix templates\/import.*miniflare/);
+ assert.match(plan,/node --test scripts\/\*\.test\.mjs/);assert.doesNotMatch(plan,/skip.*stream|stream.*skip/i);
+});
+

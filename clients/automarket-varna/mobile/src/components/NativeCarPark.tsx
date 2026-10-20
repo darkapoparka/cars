@@ -1,4 +1,5 @@
 'use client';
+import { formatMobileMileage } from '../lib/mobile-mileage';
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -302,7 +303,7 @@ export function NativeCarPark() {
               </div>
             </Link>
             <p {...stylex.props(s.specs)}>
-              FR {v.registration} • {number(v.mileage)} km • {Math.round(v.power / 1.36)} kW (
+              FR {v.registration} • {formatMobileMileage(v)} • {Math.round(v.power / 1.36)} kW (
               {v.power} hp) • {v.fuel}
             </p>
             <p {...stylex.props(s.parked)}>

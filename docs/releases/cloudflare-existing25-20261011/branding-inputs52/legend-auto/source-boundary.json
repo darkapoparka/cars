@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-existing-dealer-branding-input-boundary",
+  "dealer": "legend-auto",
+  "identityKey": "existing-slug:legend-auto",
+  "cohort": "existing-vercel25",
+  "ownership": "maintained-main",
+  "branding": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/legend-auto/branding.json",
+    "sha256": "7e3ac12a2fa6a633720038da619abc68b27e283de7e8043bbe8ed122d2309614"
+  },
+  "originalManifest": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/legend-auto/source/original-dealer.json",
+    "sha256": "a4129e8217720c9f19d90adafb1b4a3a626df6cd756e9a080780f319fa7982fe"
+  },
+  "originalManifestGitBlob": "6bfeb2a53eb6e7ec6025aae5e9986a4455d444fb",
+  "originalRepository": "darkapoparka/cars-legendauto",
+  "sourceRef": {
+    "ref": "main",
+    "commit": "c5c6b0da611a3bf2756c1be2ff9764f6903536ec",
+    "tree": "f521fbae71845d2f1c864e7d351c94ae72d51185"
+  },
+  "originalData": [
+    {
+      "path": "clients/legend-auto/business-facts.json",
+      "gitBlob": "8670a76a6b31eebef92862327a0522043adb374a",
+      "bytes": 3341
+    },
+    {
+      "path": "clients/legend-auto/dealer.json",
+      "gitBlob": "6bfeb2a53eb6e7ec6025aae5e9986a4455d444fb",
+      "bytes": 4628
+    },
+    {
+      "path": "clients/legend-auto/stock.json",
+      "gitBlob": "b2c0058afe7e2ea5c7141269e1663798b26efd65",
+      "bytes": 33969
+    }
+  ],
+  "sourceProof": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/evidence/original-source-proof.json",
+    "sha256": "477c4eedc097eb2e105b1d50cf1bc3701b558679e8f6c3c3681a3ccd6626e08c"
+  },
+  "roster": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/evidence/accepted-roster.json",
+    "sha256": "c23c6c4ea10acaca9fdc8d09351fd64735a9e2245385fb12a0f95d71f9f0080d"
+  },
+  "sourceCreation": false,
+  "clientIntegration": false,
+  "buildApproval": false,
+  "hostedApproval": false,
+  "eligibleForExistingQualifiedRequest": true,
+  "holds": [
+    "Exact latest template/source-delta/pilot qualification and preservation-aware updater remain required."
+  ]
+}

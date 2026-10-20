@@ -34,6 +34,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Diesel",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.diesel"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2021",
+        "labelKey": "vehicle.field.year"
       }
     ],
     "gallery": {
@@ -135,7 +141,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "OUTLETCARS.BG — Варна",
       "location": "бул. Янош Хуняди 518, срещу КАТ Варна, Варна, България",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-5c0d2d99cd366a51/logo-on-light.webp",
       "mobile": "0898 921 010",
       "email": "",
       "whatsapp": "",
@@ -185,6 +191,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Petrol",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.gasoline"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2025",
+        "labelKey": "vehicle.field.year"
       }
     ],
     "gallery": {
@@ -272,7 +284,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "OUTLETCARS.BG — Варна",
       "location": "бул. Янош Хуняди 518, срещу КАТ Варна, Варна, България",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-5c0d2d99cd366a51/logo-on-light.webp",
       "mobile": "0898 921 010",
       "email": "",
       "whatsapp": "",
@@ -322,6 +334,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Petrol",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.gasoline"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2024",
+        "labelKey": "vehicle.field.year"
       }
     ],
     "gallery": {
@@ -412,7 +430,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "OUTLETCARS.BG — Варна",
       "location": "бул. Янош Хуняди 518, срещу КАТ Варна, Варна, България",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-5c0d2d99cd366a51/logo-on-light.webp",
       "mobile": "0898 921 010",
       "email": "",
       "whatsapp": "",
@@ -462,6 +480,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Petrol",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.gasoline"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2023",
+        "labelKey": "vehicle.field.year"
       }
     ],
     "gallery": {
@@ -551,7 +575,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "OUTLETCARS.BG — Варна",
       "location": "бул. Янош Хуняди 518, срещу КАТ Варна, Варна, България",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-5c0d2d99cd366a51/logo-on-light.webp",
       "mobile": "0898 921 010",
       "email": "",
       "whatsapp": "",
@@ -601,6 +625,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Diesel",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.diesel"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2023",
+        "labelKey": "vehicle.field.year"
       }
     ],
     "gallery": {
@@ -697,7 +727,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "OUTLETCARS.BG — Варна",
       "location": "бул. Янош Хуняди 518, срещу КАТ Варна, Варна, България",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-5c0d2d99cd366a51/logo-on-light.webp",
       "mobile": "0898 921 010",
       "email": "",
       "whatsapp": "",
@@ -747,6 +777,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Petrol",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.gasoline"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2024",
+        "labelKey": "vehicle.field.year"
       }
     ],
     "gallery": {
@@ -838,7 +874,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "OUTLETCARS.BG — Варна",
       "location": "бул. Янош Хуняди 518, срещу КАТ Варна, Варна, България",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-5c0d2d99cd366a51/logo-on-light.webp",
       "mobile": "0898 921 010",
       "email": "",
       "whatsapp": "",
@@ -888,6 +924,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Diesel",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.diesel"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2010",
+        "labelKey": "vehicle.field.year"
       }
     ],
     "gallery": {
@@ -990,7 +1032,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "OUTLETCARS.BG — Варна",
       "location": "бул. Янош Хуняди 518, срещу КАТ Варна, Варна, България",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-5c0d2d99cd366a51/logo-on-light.webp",
       "mobile": "0898 921 010",
       "email": "",
       "whatsapp": "",
@@ -1040,6 +1082,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Diesel",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.diesel"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2023",
+        "labelKey": "vehicle.field.year"
       }
     ],
     "gallery": {
@@ -1136,7 +1184,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "OUTLETCARS.BG — Варна",
       "location": "бул. Янош Хуняди 518, срещу КАТ Варна, Варна, България",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-5c0d2d99cd366a51/logo-on-light.webp",
       "mobile": "0898 921 010",
       "email": "",
       "whatsapp": "",

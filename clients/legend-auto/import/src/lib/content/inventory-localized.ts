@@ -1,6 +1,14 @@
 import type { Locale } from '$lib/locale/core';
 /** Dealer-owned listing descriptions and specification labels. Source facts are not mutated. */
 export const inventoryCopy = {
+	bmw740RearWheelSteering: {
+		bg: 'BMW 740 Завиващ заден мост',
+		en: 'BMW 740 Rear-wheel steering'
+	},
+	rearWheelSteering: {
+		bg: 'Завиващ заден мост',
+		en: 'Rear-wheel steering'
+	},
 	term0: {
 		bg: '4(5) Врати',
 		en: '4(5) doors'
@@ -477,8 +485,112 @@ export const inventoryCopy = {
 		bg: 'Автомобилът е с пълна сервизна история в Порше. Може да се провери във всяко представителство на марката. Sport Chrono пакет. Абсолютно автентичен вид както е излезнал от завода. Регистриран с каско, гражданска, данък, винетка. Без бартер. Само сериозни обаждания.',
 		en: 'Full Porsche service history. Can be checked at any dealership for the brand. Sport Chrono package. Entirely original factory appearance. Registered, with comprehensive insurance, third-party liability insurance, tax and vignette. No trade-ins. Serious inquiries only.'
 	}
+,
+	"dealerStock_7291b4be396bf14ec28c78dee356e7f1d5ace79a787cbe6594dfd8d941059b30": {
+		"bg": "Audi Q4 Q4 e-tron 45 QUATTRO, DIGITAL, ТЕРМОПОМПА 29000km. 2024 г., 29 000 км, електрически, автоматик скоростна кутия. Публикувана оферта от LEGEND AUTO. Потвърдете наличността и характеристиките преди оглед.",
+		"en": "Audi Q4 Q4 e-tron 45 QUATTRO, DIGITAL, ТЕРМОПОМПА 29000km. 2024, 29 000 km, electric, automatic transmission. Published offer from LEGEND AUTO. Confirm availability and specifications before arranging a viewing."
+	},
+	"dealerStock_6e6c280e9623093cd1633e5d0c6a87eb298b3264443fe9e868238fb954ed0dbb": {
+		"bg": "Apple CarPlay / Android Auto",
+		"en": "Apple CarPlay / Android Auto"
+	},
+	"dealerStock_a361d0a678da8d08851a6de6afed2cc99e145a910b1d5408495969c8b433ca16": {
+		"bg": "Bluetooth / handsfree система",
+		"en": "Bluetooth / hands-free system"
+	},
+	"dealerStock_0184fe75300fc233b182c53220cc314715a7247d92f167e8a0a6335f4391b6cb": {
+		"bg": "Аудио / видео",
+		"en": "Audio / video"
+	},
+	"dealerStock_f258769daf4cedc0e0f4ac711c2fe5090299dd941db55faefab350b88ca23ab1": {
+		"bg": "IN / AUX изводи",
+		"en": "IN / AUX inputs"
+	},
+	"dealerStock_73550b5bf27360e0294a55212cc910228b75393999750841a8559399fe2ca18c": {
+		"bg": "Безключово палене",
+		"en": "Keyless start"
+	},
+	"dealerStock_a5f88de5a473a2b747f8c4685b672d9c59138b6db95e6b08a8baca3faf2bc13d": {
+		"bg": "Термопомпа",
+		"en": "Heat pump"
+	},
+	"dealerStock_687fb589826fd16f1c05b095fd0d70f355ec4f79a219d0984b52ed8242d0abe1": {
+		"bg": "Seat Leon 2.0TDI. 2017 г., 200 000 км, дизел, ръчна скоростна кутия. Публикувана оферта от LEGEND AUTO. Потвърдете наличността и характеристиките преди оглед.",
+		"en": "Seat Leon 2.0TDI. 2017, 200 000 km, diesel, manual transmission. Published offer from LEGEND AUTO. Confirm availability and specifications before arranging a viewing."
+	},
+	"dealerStock_0530e18748b28a5d07fdf006a57b2bd6251da46f42952170d37869f8c24238d9": {
+		"bg": "VW Tiguan 2.0TDI 150 к.с DSG 122000км НАВИГАЦИЯ. 2019 г., 122 000 км, дизел, автоматик скоростна кутия. Публикувана оферта от LEGEND AUTO. Потвърдете наличността и характеристиките преди оглед.",
+		"en": "VW Tiguan 2.0TDI 150 к.с DSG 122000км НАВИГАЦИЯ. 2019, 122 000 km, diesel, automatic transmission. Published offer from LEGEND AUTO. Confirm availability and specifications before arranging a viewing."
+	},
+	"dealerStock_5efc6b42891239a382e76feeeb0963a3c6d43f5093b70127a4b0c30635570c2e": {
+		"bg": "VW Passat 2.0TDI DSG НАВИГАЦИЯ .ПОДГРЕВ НА СЕДАЛКИ. 2015 г., 220 000 км, дизел, автоматик скоростна кутия. Публикувана оферта от LEGEND AUTO. Потвърдете наличността и характеристиките преди оглед.",
+		"en": "VW Passat 2.0TDI DSG НАВИГАЦИЯ .ПОДГРЕВ НА СЕДАЛКИ. 2015, 220 000 km, diesel, automatic transmission. Published offer from LEGEND AUTO. Confirm availability and specifications before arranging a viewing."
+	},
+	"dealerStock_08d62ae61f2917a32f97c83993e3d88df7bb778f977679645d9830d17dcdf867": {
+		"bg": "VW Golf 1.9TDI 105к.с. 2005 г., 205 000 км, дизел, ръчна скоростна кутия. Публикувана оферта от LEGEND AUTO. Потвърдете наличността и характеристиките преди оглед.",
+		"en": "VW Golf 1.9TDI 105к.с. 2005, 205 000 km, diesel, manual transmission. Published offer from LEGEND AUTO. Confirm availability and specifications before arranging a viewing."
+	},
+	"dealerStock_3d96c249155b3ea1aedba5e6897000211a0680d2fa4f745edb3014f74eb2096d": {
+		"bg": "Тъмно син",
+		"en": "Dark blue"
+	},
+	"dealerStock_5eb2f0a0a181c56bd0de4b4cf36bf2a468f9045bab91952d71b8f7de7fce2022": {
+		"bg": "Toyota Yaris 1.5 Хибрид Камера 4л/100км. 2012 г., 169 000 км, хибрид, автоматик скоростна кутия. Публикувана оферта от LEGEND AUTO. Потвърдете наличността и характеристиките преди оглед.",
+		"en": "Toyota Yaris 1.5 Хибрид Камера 4л/100км. 2012, 169 000 km, hybrid, automatic transmission. Published offer from LEGEND AUTO. Confirm availability and specifications before arranging a viewing."
+	},
+	"dealerStock_ab9a0feda20668f3092c2f29d0308104005067664be9d5a092a77104f40c4787": {
+		"bg": "Toyota Rav4 2.5 HYBRID/ГАЗ FULL НАВИГАЦИЯ, КОЖЕН САЛОН, FULL. 2022 г., 252 000 км, хибрид, автоматик скоростна кутия. Публикувана оферта от LEGEND AUTO. Потвърдете наличността и характеристиките преди оглед.",
+		"en": "Toyota Rav4 2.5 HYBRID/ГАЗ FULL НАВИГАЦИЯ, КОЖЕН САЛОН, FULL. 2022, 252 000 km, hybrid, automatic transmission. Published offer from LEGEND AUTO. Confirm availability and specifications before arranging a viewing."
+	},
+	"dealerStock_d04158cef66af6e9e3f19f4ce98231c23c015950501b3f5dbb03611b9cab275b": {
+		"bg": "360 камера / задна камера",
+		"en": "360 camera / rear camera"
+	},
+	"dealerStock_f4b3671be395a055fa8d0cd3288cb6a8d88b42ae3629dcc0894e1d030134ac10": {
+		"bg": "Газова уредба",
+		"en": "Gas fuel system"
+	},
+	"dealerStock_124963d50601ee852cd7699c3ebd50bf9e9a6f5e9abaf9d05bfed58e37a61e97": {
+		"bg": "Toyota Auris 2.0D4D. 2009 г., 229 000 км, дизел, ръчна скоростна кутия. Публикувана оферта от LEGEND AUTO. Потвърдете наличността и характеристиките преди оглед.",
+		"en": "Toyota Auris 2.0D4D. 2009, 229 000 km, diesel, manual transmission. Published offer from LEGEND AUTO. Confirm availability and specifications before arranging a viewing."
+	},
+	"dealerStock_d3340e81f9cde4fc8aae4d651291bffd06b7ea305b0ae18efa500a0e0a2358ca": {
+		"bg": "Skoda Scala 1.6TDI. 2019 г., 180 000 км, дизел, ръчна скоростна кутия. Публикувана оферта от LEGEND AUTO. Потвърдете наличността и характеристиките преди оглед.",
+		"en": "Skoda Scala 1.6TDI. 2019, 180 000 km, diesel, manual transmission. Published offer from LEGEND AUTO. Confirm availability and specifications before arranging a viewing."
+	},
+	"dealerStock_cdfd850f9590e6ae5d56626b6ea7b3fcf381b310d696b79be43b56c5ceea2f3b": {
+		"bg": "Renault Zoe 52kw 78000km Собствена батерия. 2020 г., 78 000 км, електрически, автоматик скоростна кутия. Публикувана оферта от LEGEND AUTO. Потвърдете наличността и характеристиките преди оглед.",
+		"en": "Renault Zoe 52kw 78000km Собствена батерия. 2020, 78 000 km, electric, automatic transmission. Published offer from LEGEND AUTO. Confirm availability and specifications before arranging a viewing."
+	},
+	"dealerStock_c78cd581da3aa4de35d6919238c4713939f3b2cac47dd3159756d967f6fd7011": {
+		"bg": "Климатик",
+		"en": "Air conditioning"
+	},
+	"dealerStock_8caa663871b5ba43b9a1c30298f2a8a75a296130af6d38ddb12e2acbe5e36cd1": {
+		"bg": "Renault Clio 1.2 БЕНЗИН. 2014 г., 150 000 км, бензин, ръчна скоростна кутия. Публикувана оферта от LEGEND AUTO. Потвърдете наличността и характеристиките преди оглед.",
+		"en": "Renault Clio 1.2 БЕНЗИН. 2014, 150 000 km, petrol, manual transmission. Published offer from LEGEND AUTO. Confirm availability and specifications before arranging a viewing."
+	},
+	"dealerStock_fbce0ff4b2657aaed7ffb14bb66b9c740c4470e2555585bdc80c845ae623f48b": {
+		"bg": "Peugeot 508 2.0HDI. 2013 г., 232 000 км, дизел, ръчна скоростна кутия. Публикувана оферта от LEGEND AUTO. Потвърдете наличността и характеристиките преди оглед.",
+		"en": "Peugeot 508 2.0HDI. 2013, 232 000 km, diesel, manual transmission. Published offer from LEGEND AUTO. Confirm availability and specifications before arranging a viewing."
+	},
+	"dealerStock_9fc370258e32237d295982e60bf22ec8356a36619630c5af21084a5eab2a73fb": {
+		"bg": "Opel Astra 1.6. 2017 г., 193 000 км, дизел, ръчна скоростна кутия. Публикувана оферта от LEGEND AUTO. Потвърдете наличността и характеристиките преди оглед.",
+		"en": "Opel Astra 1.6. 2017, 193 000 km, diesel, manual transmission. Published offer from LEGEND AUTO. Confirm availability and specifications before arranging a viewing."
+	},
+	"dealerStock_45ea17e2e5c8ded4195c1ca270b692bad9f9382997478f2786a7da349d5139de": {
+		"bg": "Opel Agila 1.3i Внос от Италия. 2008 г., 120 000 км, бензин, ръчна скоростна кутия. Публикувана оферта от LEGEND AUTO. Потвърдете наличността и характеристиките преди оглед.",
+		"en": "Opel Agila 1.3i Внос от Италия. 2008, 120 000 km, petrol, manual transmission. Published offer from LEGEND AUTO. Confirm availability and specifications before arranging a viewing."
+	},
+	"dealerStock_79b36e42829b5d41f07ec37c8f62c79488fbfab2eeaa80a0e9d486d86d341dd7": {
+		"bg": "Светло син",
+		"en": "Light blue"
+	}
+
 } satisfies Record<string, Record<Locale, string>>;
 export const inventorySourceKeys: Readonly<Record<string, keyof typeof inventoryCopy>> = {
+	'BMW 740 Завиващ заден мост': 'bmw740RearWheelSteering',
+	'Завиващ заден мост': 'rearWheelSteering',
 	'4(5) Врати': 'term0',
 	'4x4': 'term1',
 	'Auto Start Stop function': 'term2',
@@ -630,6 +742,33 @@ export const inventorySourceKeys: Readonly<Record<string, keyof typeof inventory
 		'description30',
 	'Автомобилът е с пълна сервизна история в Порше. Може да се провери във всяко представителство на марката. Sport Chrono пакет. Абсолютно автентичен вид както е излезнал от завода. Регистриран с каско, гражданска, данък, винетка. Без бартер. Само сериозни обаждания.':
 		'description31'
+,
+	"Audi Q4 Q4 e-tron 45 QUATTRO, DIGITAL, ТЕРМОПОМПА 29000km. 2024 г., 29 000 км, електрически, автоматик скоростна кутия. Публикувана оферта от LEGEND AUTO. Потвърдете наличността и характеристиките преди оглед.": "dealerStock_7291b4be396bf14ec28c78dee356e7f1d5ace79a787cbe6594dfd8d941059b30",
+	"Apple CarPlay \\ Android Auto": "dealerStock_6e6c280e9623093cd1633e5d0c6a87eb298b3264443fe9e868238fb954ed0dbb",
+	"Bluetooth \\ handsfree система": "dealerStock_a361d0a678da8d08851a6de6afed2cc99e145a910b1d5408495969c8b433ca16",
+	"audio\\video": "dealerStock_0184fe75300fc233b182c53220cc314715a7247d92f167e8a0a6335f4391b6cb",
+	"IN\\AUX изводи": "dealerStock_f258769daf4cedc0e0f4ac711c2fe5090299dd941db55faefab350b88ca23ab1",
+	"Безключово палене ": "dealerStock_73550b5bf27360e0294a55212cc910228b75393999750841a8559399fe2ca18c",
+	"Термопомпа": "dealerStock_a5f88de5a473a2b747f8c4685b672d9c59138b6db95e6b08a8baca3faf2bc13d",
+	"Seat Leon 2.0TDI. 2017 г., 200 000 км, дизел, ръчна скоростна кутия. Публикувана оферта от LEGEND AUTO. Потвърдете наличността и характеристиките преди оглед.": "dealerStock_687fb589826fd16f1c05b095fd0d70f355ec4f79a219d0984b52ed8242d0abe1",
+	"VW Tiguan 2.0TDI 150 к.с DSG 122000км НАВИГАЦИЯ. 2019 г., 122 000 км, дизел, автоматик скоростна кутия. Публикувана оферта от LEGEND AUTO. Потвърдете наличността и характеристиките преди оглед.": "dealerStock_0530e18748b28a5d07fdf006a57b2bd6251da46f42952170d37869f8c24238d9",
+	"VW Passat 2.0TDI DSG НАВИГАЦИЯ .ПОДГРЕВ НА СЕДАЛКИ. 2015 г., 220 000 км, дизел, автоматик скоростна кутия. Публикувана оферта от LEGEND AUTO. Потвърдете наличността и характеристиките преди оглед.": "dealerStock_5efc6b42891239a382e76feeeb0963a3c6d43f5093b70127a4b0c30635570c2e",
+	"VW Golf 1.9TDI 105к.с. 2005 г., 205 000 км, дизел, ръчна скоростна кутия. Публикувана оферта от LEGEND AUTO. Потвърдете наличността и характеристиките преди оглед.": "dealerStock_08d62ae61f2917a32f97c83993e3d88df7bb778f977679645d9830d17dcdf867",
+	"Tъмно син": "dealerStock_3d96c249155b3ea1aedba5e6897000211a0680d2fa4f745edb3014f74eb2096d",
+	"Toyota Yaris 1.5 Хибрид Камера 4л/100км. 2012 г., 169 000 км, хибрид, автоматик скоростна кутия. Публикувана оферта от LEGEND AUTO. Потвърдете наличността и характеристиките преди оглед.": "dealerStock_5eb2f0a0a181c56bd0de4b4cf36bf2a468f9045bab91952d71b8f7de7fce2022",
+	"Toyota Rav4 2.5 HYBRID/ГАЗ FULL НАВИГАЦИЯ, КОЖЕН САЛОН, FULL. 2022 г., 252 000 км, хибрид, автоматик скоростна кутия. Публикувана оферта от LEGEND AUTO. Потвърдете наличността и характеристиките преди оглед.": "dealerStock_ab9a0feda20668f3092c2f29d0308104005067664be9d5a092a77104f40c4787",
+	"360 camera \\ Задна камера": "dealerStock_d04158cef66af6e9e3f19f4ce98231c23c015950501b3f5dbb03611b9cab275b",
+	"Газова уредба": "dealerStock_f4b3671be395a055fa8d0cd3288cb6a8d88b42ae3629dcc0894e1d030134ac10",
+	"Toyota Auris 2.0D4D. 2009 г., 229 000 км, дизел, ръчна скоростна кутия. Публикувана оферта от LEGEND AUTO. Потвърдете наличността и характеристиките преди оглед.": "dealerStock_124963d50601ee852cd7699c3ebd50bf9e9a6f5e9abaf9d05bfed58e37a61e97",
+	"Skoda Scala 1.6TDI. 2019 г., 180 000 км, дизел, ръчна скоростна кутия. Публикувана оферта от LEGEND AUTO. Потвърдете наличността и характеристиките преди оглед.": "dealerStock_d3340e81f9cde4fc8aae4d651291bffd06b7ea305b0ae18efa500a0e0a2358ca",
+	"Renault Zoe 52kw 78000km Собствена батерия. 2020 г., 78 000 км, електрически, автоматик скоростна кутия. Публикувана оферта от LEGEND AUTO. Потвърдете наличността и характеристиките преди оглед.": "dealerStock_cdfd850f9590e6ae5d56626b6ea7b3fcf381b310d696b79be43b56c5ceea2f3b",
+	"Климатик": "dealerStock_c78cd581da3aa4de35d6919238c4713939f3b2cac47dd3159756d967f6fd7011",
+	"Renault Clio 1.2 БЕНЗИН. 2014 г., 150 000 км, бензин, ръчна скоростна кутия. Публикувана оферта от LEGEND AUTO. Потвърдете наличността и характеристиките преди оглед.": "dealerStock_8caa663871b5ba43b9a1c30298f2a8a75a296130af6d38ddb12e2acbe5e36cd1",
+	"Peugeot 508 2.0HDI. 2013 г., 232 000 км, дизел, ръчна скоростна кутия. Публикувана оферта от LEGEND AUTO. Потвърдете наличността и характеристиките преди оглед.": "dealerStock_fbce0ff4b2657aaed7ffb14bb66b9c740c4470e2555585bdc80c845ae623f48b",
+	"Opel Astra 1.6. 2017 г., 193 000 км, дизел, ръчна скоростна кутия. Публикувана оферта от LEGEND AUTO. Потвърдете наличността и характеристиките преди оглед.": "dealerStock_9fc370258e32237d295982e60bf22ec8356a36619630c5af21084a5eab2a73fb",
+	"Opel Agila 1.3i Внос от Италия. 2008 г., 120 000 км, бензин, ръчна скоростна кутия. Публикувана оферта от LEGEND AUTO. Потвърдете наличността и характеристиките преди оглед.": "dealerStock_45ea17e2e5c8ded4195c1ca270b692bad9f9382997478f2786a7da349d5139de",
+	"Светло син": "dealerStock_79b36e42829b5d41f07ec37c8f62c79488fbfab2eeaa80a0e9d486d86d341dd7"
+
 };
 export function inventoryText(locale: Locale, value: string): string {
 	const key = inventorySourceKeys[value];

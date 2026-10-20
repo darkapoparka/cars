@@ -51,11 +51,38 @@
 <style>
   @media (max-width: 767.98px) {
     .list-feature-car {
+      display: flex;
+      flex-wrap: wrap;
       align-items: stretch !important;
+      gap: 8px;
     }
 
     .list-feature-car .item-feature-car {
       display: grid;
+      flex: 0 0 calc((100% - 8px) / 2);
+      width: auto;
+      min-width: max-content;
+      padding-inline: 0;
+      margin-bottom: 0;
+    }
+
+    .list-feature-car .item-feature-car .item-feature-car-inner {
+      gap: 6px;
+      padding: 12px 8px;
+    }
+
+    .list-feature-car .item-feature-car .item-feature-car-inner .feature-image {
+      display: grid;
+      place-items: center;
+      flex: 0 0 20px;
+      width: 20px;
+      height: 20px;
+      margin-right: 0;
+    }
+
+    .list-feature-car .feature-image img {
+      max-width: 20px;
+      max-height: 20px;
     }
 
     .feature-info {
@@ -63,7 +90,8 @@
     }
 
     .feature-info p {
-      overflow-wrap: anywhere;
+      white-space: nowrap;
+      overflow-wrap: normal;
     }
   }
 

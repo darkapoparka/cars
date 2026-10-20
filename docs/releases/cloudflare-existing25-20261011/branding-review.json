@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "dealer": "priselci",
+  "reviewed": true,
+  "reviewedAt": "2026-10-11T12:21:13.965Z",
+  "reviewScope": "Final selected transparent Priselci raster and exact surface generation provenance read back; actual six-application consumer and hosted review pending",
+  "identityStatus": "Owner-requested existing demonstration identity refined; not official dealer artwork or dealer approval",
+  "officialDealerArtwork": false,
+  "dealerApproval": false,
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "generation": {
+    "tool": "image_gen",
+    "generationId": "exec-4c9e214e-84e5-4f61-b4ca-3ef6ebb472b4",
+    "modelVersion": null,
+    "sourceReference": "Owner-requested demonstration logo refined; no claim of official dealer artwork",
+    "sourceSha256": "2736bbc059c50b4eb8691f8d06121f686434be7ef815033b151d09bc56b3e98a"
+  },
+  "master": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding/priselci-light.png",
+    "sha256": "6d6d5c53e6a52500eab737cbb28fecf7951ea79b5f14b9a5eb6ad7d6261b4fb1"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding/priselci-light.png",
+      "sha256": "6d6d5c53e6a52500eab737cbb28fecf7951ea79b5f14b9a5eb6ad7d6261b4fb1",
+      "sourceReference": "ImageGen reviewed Priselci light-surface pack",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-4c9e214e-84e5-4f61-b4ca-3ef6ebb472b4",
+        "modelVersion": null,
+        "sourceReference": "Owner-requested demonstration logo refined; no claim of official dealer artwork",
+        "sourceSha256": "2736bbc059c50b4eb8691f8d06121f686434be7ef815033b151d09bc56b3e98a"
+      }
+    },
+    "onDark": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding/priselci-dark.png",
+      "sha256": "a523a04752cb2ecd1edb56dc53ca528e8770d30a2e2f01e1b4441ba5496473b6",
+      "sourceReference": "ImageGen reviewed Priselci dark-surface pack",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-7ecd9e07-f1eb-4959-b618-884046caba71",
+        "modelVersion": null,
+        "sourceReference": "Owner-requested demonstration logo refined; no claim of official dealer artwork",
+        "sourceSha256": "6aca293c8d37ef3abbbb93e92846d677d859de85ae133534d859bb7554785c3a"
+      }
+    },
+    "onAccent": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding/priselci-dark.png",
+      "sha256": "a523a04752cb2ecd1edb56dc53ca528e8770d30a2e2f01e1b4441ba5496473b6",
+      "sourceReference": "Same reviewed dark treatment tested on native template accents",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-7ecd9e07-f1eb-4959-b618-884046caba71",
+        "modelVersion": null,
+        "sourceReference": "Owner-requested demonstration logo refined; no claim of official dealer artwork",
+        "sourceSha256": "6aca293c8d37ef3abbbb93e92846d677d859de85ae133534d859bb7554785c3a"
+      }
+    }
+  },
+  "publicSources": [
+    "https://priselci.mobile.bg/",
+    "https://priselci.mobile.bg/about",
+    "https://www.auto.bg/dealer/priselci"
+  ],
+  "finalSelection": {
+    "handoffSha256": "b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a",
+    "selection": "retained-reviewed-treatment",
+    "rawRasterReadbackPassed": true,
+    "applicationConsumersAccepted": false,
+    "hostedAccepted": false
+  }
+}

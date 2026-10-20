@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-input-mapping",
+  "dealer": "triumf-varna",
+  "inputs": {
+    "facts": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/triumf-varna/facts.json",
+      "sha256": "d46b726efa45ec49ca3af79b74a48441e877dff55ccc355e5a6235c2c923c874"
+    },
+    "stock": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/triumf-varna/stock.json",
+      "sha256": "be217a5475c852603ba231464f2881f79cdede036b9d84733bbecf69f70f8ad2"
+    },
+    "locale": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/triumf-varna/locale.json",
+      "sha256": "b3f00e64022b6483fb8fb516cb59b49de229bf9e86076641f4508c96ffbe081a"
+    },
+    "branding": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/triumf-varna/branding.json",
+      "sha256": "10fb318738bb8f387ffe88c176f09ecc179f39373a5ec5d5d784579efa108f0f"
+    }
+  },
+  "sources": [
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/triumf-varna/identity-repository-corrected-additional100.json",
+      "sha256": "0ed5482cf6c3d103c4f917e1fd82e83cdeb5d635d4735e37654579e9e3b25828"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/triumf-varna/facts.json",
+      "sha256": "d46b726efa45ec49ca3af79b74a48441e877dff55ccc355e5a6235c2c923c874"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/triumf-varna/stock.json",
+      "sha256": "be217a5475c852603ba231464f2881f79cdede036b9d84733bbecf69f70f8ad2"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/triumf-varna/locale.json",
+      "sha256": "b3f00e64022b6483fb8fb516cb59b49de229bf9e86076641f4508c96ffbe081a"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/triumf-varna/branding.json",
+      "sha256": "10fb318738bb8f387ffe88c176f09ecc179f39373a5ec5d5d784579efa108f0f"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/triumf-varna/media/11786001673149613-1.webp",
+      "sha256": "45e3a1807ff0215eef998eeb83b8b2cdbf2ef7dcd4bf4fa0de51c29bca5cfe30"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/triumf-varna/media/11786001673149613-2.webp",
+      "sha256": "705e1b68673e675347afd3680efb67b1c4956a72068d770d31ab5327e93c2f8b"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/triumf-varna/copy-review-additional100.json",
+      "sha256": "8ef0d272f18fa24998bbbfacf5ac50704c76fb52efd18a014edabab3e3be88ae"
+    }
+  ]
+}

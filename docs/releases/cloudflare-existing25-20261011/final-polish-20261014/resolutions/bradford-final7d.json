@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "resolutions": {
+    "auto-best/src/lib/config/brand.ts": "template",
+    "auto-best/src/lib/data/dealer-profile.json": "template",
+    "auto-best/static/assets/images/lead/day-night-logo.png": "template",
+    "auto-best/static/dealer-brand/logo.webp": "template",
+    "modern/apps/web/public/dealer-brand/logo.webp": "template",
+    "modern/packages/marketplace-domain/testing/dealer-profile.json": "template",
+    "modern/packages/marketplace-domain/testing/mock-data.ts": "template",
+    "modern/packages/marketplace/lead-site.ts": "template",
+    "import/src/lib/config/dealer.ts": "template",
+    "import/src/lib/content/sell-your-car.ts": "template",
+    "import/src/lib/data/dealer-profile.json": "template",
+    "import/src/lib/server/auxero-listing-data.ts": "template",
+    "import/src/lib/server/inventory-options.ts": "template",
+    "import/src/routes/offer/+page.svelte": "template",
+    "import/static/dealer-brand/logo.webp": "template",
+    "app/lib/dealer.json": "template",
+    "app/public/dealer-app/logo-dark-e78f01dbd616cd1fbf3f.webp": "template",
+    "app/public/dealer-app/logo-light-e78f01dbd616cd1fbf3f.webp": "template",
+    "mobile/public/dealer-brand/logo.webp": "template",
+    "mobile/src/lib/dealers.ts": "template",
+    "mobile/src/lib/showroom-config.ts": "template",
+    "karento-best/src/lib/content.ts": "template",
+    "karento-best/src/lib/data/dealer-detail.ts": "template",
+    "karento-best/src/lib/data/vehicle-detail.ts": "template",
+    "karento-best/static/dealer-brand/logo.webp": "template"
+  }
+}

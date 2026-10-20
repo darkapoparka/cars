@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-input-mapping",
+  "dealer": "i1-auto-varna",
+  "inputs": {
+    "facts": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/i1-auto-varna/facts.json",
+      "sha256": "1173e34c8da9c2c91229203163ae558b740b31c0aa2b4999ba43e95656377a06"
+    },
+    "stock": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/i1-auto-varna/stock.json",
+      "sha256": "056222db31b8b15a31940a2a6bf5e04cfccdec793de1bdd00c47a582fba327de"
+    },
+    "locale": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/i1-auto-varna/locale.json",
+      "sha256": "b1fb928d30ec072474c1c200b3ea52ff1b1267145618b7c55a317a9fa297b031"
+    },
+    "branding": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/i1-auto-varna/branding.json",
+      "sha256": "baea203ec04cada5f2a7683d70df726c6c793f9b907caa6ff9be117136b4e682"
+    }
+  },
+  "sources": [
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/i1-auto-varna/research-facts.json",
+      "sha256": "e02b554261eff4b8ac313fac571b828bfcb02c863bf792e2646994e73a4a2f89"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/i1-auto-varna/identity.json",
+      "sha256": "3cb5b77dc5d04d27e398c99502169f39cab8de047982ca682b9049c6ea730191"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/i1-auto-varna/locale.json",
+      "sha256": "b1fb928d30ec072474c1c200b3ea52ff1b1267145618b7c55a317a9fa297b031"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/i1-auto-varna/stock-research.json",
+      "sha256": "de0114e6763f51af60519bcbcbf98d7bb63661f0f70edb8ee135ca80438d4219"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/i1-auto-varna/branding.json",
+      "sha256": "baea203ec04cada5f2a7683d70df726c6c793f9b907caa6ff9be117136b4e682"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/i1-auto-varna/branding/generated-master.png",
+      "sha256": "39568bf90c006387d7ea3a45be2d84d196af51196b7b5aec5535f168e20a86c5"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/i1-auto-varna/branding/on-accent.png",
+      "sha256": "e016372ae92d5debc86690bd11870ff1ed3cfba0b3cbe6a87a9b23f6186fdf80"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/i1-auto-varna/branding/on-dark.png",
+      "sha256": "e016372ae92d5debc86690bd11870ff1ed3cfba0b3cbe6a87a9b23f6186fdf80"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/i1-auto-varna/branding/on-light.png",
+      "sha256": "39568bf90c006387d7ea3a45be2d84d196af51196b7b5aec5535f168e20a86c5"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/i1-auto-varna/facts.json",
+      "sha256": "1173e34c8da9c2c91229203163ae558b740b31c0aa2b4999ba43e95656377a06"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/i1-auto-varna/generation-brief.json",
+      "sha256": "e874d5dc15689f12ac13b189456aec5895c8520ce053ccf9b21805bab21f0a62"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/i1-auto-varna/media-input-mapping.json",
+      "sha256": "e5e07446fc46d7dd57cfd0cec5d54a5c3a74524366a459d437f97901d3c027b6"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/i1-auto-varna/media/21785858753229590-1.webp",
+      "sha256": "7ec32468d62dad0d2505d54043ab3604156dc3c1538dcdb891029f5db56f04cc"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/i1-auto-varna/media/21785858753229590-2.webp",
+      "sha256": "7fcf59cdcfa65dce0d0177ee03ecbfa7d78f164fa54f7ffb4a143f341b1f997f"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/i1-auto-varna/media/21790672329302787-1.webp",
+      "sha256": "82cab504746784eee0e5d794a1d66ebc243ea88db175374753a6ba88efc6474b"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/i1-auto-varna/media/21790672329302787-2.webp",
+      "sha256": "e70a4b158ec568fe62f4b849fb184b94153fd678d79e7b1fd34c5e22c8fbd68e"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/i1-auto-varna/reviewed-modern-inventory-copy.json",
+      "sha256": "c5b4e0439e4d709db7559ef56724d447b59eed78f0d28299e4f6500af04d77d0"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/i1-auto-varna/stock.json",
+      "sha256": "056222db31b8b15a31940a2a6bf5e04cfccdec793de1bdd00c47a582fba327de"
+    }
+  ]
+}

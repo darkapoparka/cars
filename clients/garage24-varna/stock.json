@@ -1,0 +1,205 @@
+{
+  "schemaVersion": 1,
+  "kind": "dated-listing-snapshot",
+  "candidate": true,
+  "observedAt": "2026-10-11T11:49:53.965Z",
+  "sourceProfile": "https://garage24.mobile.bg/",
+  "sourcePageVisibleListingCount": 11,
+  "sourceProfileCountObservedAt": "2026-10-11T11:49:53.883Z",
+  "profileCountIsAvailableStock": false,
+  "profileCountIsClassifiedOrdinaryRetail": false,
+  "liveInventory": false,
+  "mediaPermission": "unconfirmed",
+  "localMediaReady": true,
+  "records": [
+    {
+      "id": "21789110878202273",
+      "sourceId": "21789110878202273",
+      "title": "Ford F150",
+      "sourceTitleExact": "Ford F150 5.4 V8 Triton",
+      "make": "Ford",
+      "model": "F150",
+      "modelExtraction": "literal make/model prefix from exact primary advert title; canonical market normalization and trim not asserted",
+      "year": 2010,
+      "productionMonth": 4,
+      "currency": "EUR",
+      "sourcePriceText": "9 990 €",
+      "priceVatNotice": "Цената е с включено ДДС",
+      "sourceMileageText": "515000 км",
+      "fieldConflicts": [],
+      "body": "Пикап",
+      "fuel": "Бензинов",
+      "transmission": "Автоматична",
+      "powerHp": 320,
+      "images": [
+        "/dealer-stock/21789110878202273-1.webp",
+        "/dealer-stock/21789110878202273-2.webp"
+      ],
+      "sourceUrl": "https://garage24.mobile.bg/obiava-21789110878202273-ford-f150-5-4-v8-triton",
+      "sourceHtmlSha256": "915769fa030e66a260f57bff965646c2fe63a978886ecb08623b938b3b01772f",
+      "sourcePublicationText": "Публикувана в 10:14 часа на 11.09.2026 год.",
+      "observedAt": "2026-10-11T11:49:53.965Z",
+      "availability": "unconfirmed",
+      "availabilityConfirmed": false,
+      "partsListing": false,
+      "conditionMarker": null,
+      "conditionIndependentlyConfirmed": false,
+      "arrivalNotice": null,
+      "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "mediaState": "not-collected; reviewed rights/reuse or explicit illustration decision pending",
+      "mediaPermission": "Not independently established",
+      "telHrefCandidates": [
+        "0885580070"
+      ],
+      "visibleSellerContact": "Контакти с продавача Garage24 +359885580070",
+      "sellerPhoneMatchesPrimary": true,
+      "telHrefMatchesPrimary": true,
+      "registrationCondition": {
+        "state": "registration-requires-technotest-as-advertised",
+        "evidenceSha256": "5ae01b06d050eae7ed0008e50f1da6e7df4ffcbc5d19d95851a610cb9a2d4f82",
+        "independentlyConfirmed": false
+      },
+      "sampleRole": "dated published vehicle advert; dealer availability, condition and media reuse require confirmation",
+      "retailReadyForAssembly": false,
+      "sourcePhotoUrls": [
+        "https://mobistatic3.focus.bg/mobile/photosorg/273/2/big1/21789110878202273_Tu.webp",
+        "https://mobistatic3.focus.bg/mobile/photosorg/273/2/big1/21789110878202273_hv.webp",
+        "https://mobistatic3.focus.bg/mobile/photosorg/273/2/big1/21789110878202273_LA.webp",
+        "https://mobistatic3.focus.bg/mobile/photosorg/273/2/big1/21789110878202273_UU.webp",
+        "https://mobistatic3.focus.bg/mobile/photosorg/273/2/big1/21789110878202273_g9.webp",
+        "https://mobistatic3.focus.bg/mobile/photosorg/273/2/big1/21789110878202273_wl.webp",
+        "https://mobistatic3.focus.bg/mobile/photosorg/273/2/big1/21789110878202273_X8.webp",
+        "https://mobistatic3.focus.bg/mobile/photosorg/273/2/big1/21789110878202273_pa.webp",
+        "https://mobistatic3.focus.bg/mobile/photosorg/273/2/big1/21789110878202273_rG.webp"
+      ],
+      "sourcePhotoEvidence": {
+        "sourceId": "21789110878202273",
+        "sourceUrl": "https://garage24.mobile.bg/obiava-21789110878202273-ford-f150-5-4-v8-triton",
+        "observedAt": "2026-10-11T12:09:33.028Z",
+        "responseSha256": "3d07fec7320c7d9e3be8bb6c31b33080c989cddab7e22b7238aecab77fd429ca",
+        "association": "primary gallery URLs contain exact source listing ID",
+        "remoteBytesFetched": false
+      },
+      "sourceRecord": {
+        "id": "21789110878202273",
+        "sourceId": "21789110878202273",
+        "title": "Ford F150",
+        "sourceTitleExact": "Ford F150 5.4 V8 Triton",
+        "make": "Ford",
+        "model": "F150",
+        "modelExtraction": "literal make/model prefix from exact primary advert title; canonical market normalization and trim not asserted",
+        "year": 2010,
+        "productionMonth": 4,
+        "priceEur": 9990,
+        "currency": "EUR",
+        "sourcePriceText": "9 990 €",
+        "priceVatNotice": "Цената е с включено ДДС",
+        "mileageKm": 515000,
+        "sourceMileageText": "515000 км",
+        "fieldConflicts": [],
+        "body": "Пикап",
+        "fuel": "Бензинов",
+        "transmission": "Автоматична",
+        "powerHp": 320,
+        "images": [
+          "/assets/vehicles/21789110878202273/1.webp",
+          "/assets/vehicles/21789110878202273/2.webp"
+        ],
+        "sourceUrl": "https://garage24.mobile.bg/obiava-21789110878202273-ford-f150-5-4-v8-triton",
+        "sourceHtmlSha256": "915769fa030e66a260f57bff965646c2fe63a978886ecb08623b938b3b01772f",
+        "sourcePublicationText": "Публикувана в 10:14 часа на 11.09.2026 год.",
+        "observedAt": "2026-10-11T11:49:53.965Z",
+        "availability": "unconfirmed",
+        "availabilityConfirmed": false,
+        "partsListing": false,
+        "conditionMarker": null,
+        "conditionIndependentlyConfirmed": false,
+        "arrivalNotice": null,
+        "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+        "mediaState": "not-collected; reviewed rights/reuse or explicit illustration decision pending",
+        "mediaPermission": "Not independently established",
+        "telHrefCandidates": [
+          "0885580070"
+        ],
+        "visibleSellerContact": "Контакти с продавача Garage24 +359885580070",
+        "sellerPhoneMatchesPrimary": true,
+        "telHrefMatchesPrimary": true,
+        "registrationCondition": {
+          "state": "registration-requires-technotest-as-advertised",
+          "evidenceSha256": "5ae01b06d050eae7ed0008e50f1da6e7df4ffcbc5d19d95851a610cb9a2d4f82",
+          "independentlyConfirmed": false
+        },
+        "sampleRole": "dated published vehicle advert; dealer availability, condition and media reuse require confirmation",
+        "retailReadyForAssembly": false,
+        "sourcePhotoUrls": [
+          "https://mobistatic3.focus.bg/mobile/photosorg/273/2/big1/21789110878202273_Tu.webp",
+          "https://mobistatic3.focus.bg/mobile/photosorg/273/2/big1/21789110878202273_hv.webp",
+          "https://mobistatic3.focus.bg/mobile/photosorg/273/2/big1/21789110878202273_LA.webp",
+          "https://mobistatic3.focus.bg/mobile/photosorg/273/2/big1/21789110878202273_UU.webp",
+          "https://mobistatic3.focus.bg/mobile/photosorg/273/2/big1/21789110878202273_g9.webp",
+          "https://mobistatic3.focus.bg/mobile/photosorg/273/2/big1/21789110878202273_wl.webp",
+          "https://mobistatic3.focus.bg/mobile/photosorg/273/2/big1/21789110878202273_X8.webp",
+          "https://mobistatic3.focus.bg/mobile/photosorg/273/2/big1/21789110878202273_pa.webp",
+          "https://mobistatic3.focus.bg/mobile/photosorg/273/2/big1/21789110878202273_rG.webp"
+        ],
+        "sourcePhotoEvidence": {
+          "sourceId": "21789110878202273",
+          "sourceUrl": "https://garage24.mobile.bg/obiava-21789110878202273-ford-f150-5-4-v8-triton",
+          "observedAt": "2026-10-11T12:09:33.028Z",
+          "responseSha256": "3d07fec7320c7d9e3be8bb6c31b33080c989cddab7e22b7238aecab77fd429ca",
+          "association": "primary gallery URLs contain exact source listing ID",
+          "remoteBytesFetched": false
+        }
+      },
+      "priceAmount": 9990,
+      "mileageValue": 515000,
+      "mileageUnit": "km"
+    }
+  ],
+  "localMediaHydration": {
+    "candidateOnly": true,
+    "technicalRasterPresent": true,
+    "rightsApproved": false,
+    "availabilityConfirmed": false,
+    "assets": [
+      {
+        "publicPath": "/assets/vehicles/21789110878202273/1.webp",
+        "sourceUrl": "https://mobistatic3.focus.bg/mobile/photosorg/273/2/big1/21789110878202273_Tu.webp",
+        "sha256": "4b01c4ea8314c74e528195bc08bf60f0cc376c6f48a8b8080d89cb809be36f3f",
+        "bytes": 293716,
+        "downloadObservedAt": "2026-10-11T12:20:37.863Z"
+      },
+      {
+        "publicPath": "/assets/vehicles/21789110878202273/2.webp",
+        "sourceUrl": "https://mobistatic3.focus.bg/mobile/photosorg/273/2/big1/21789110878202273_hv.webp",
+        "sha256": "5fdd07888dd04df62beed9af7a98fa3c9fdd376efde3eda7e7eca60a6a8f8119",
+        "bytes": 164516,
+        "downloadObservedAt": "2026-10-11T12:20:38.070Z"
+      }
+    ],
+    "sourceStockSha256": "672608298d7e4a2e9fcd4c9fb297d93000a8736e1fed771cf8bf0a370faf8e58"
+  },
+  "dealer": "garage24-varna",
+  "sourceKind": "dated-marketplace-listing-sample",
+  "sourceStock": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/garage24-varna/source/stock.json",
+    "sha256": "7fbe74d563582e7debea2d2b98a190c569815a4787e80bbc3fbdffa8462231f1"
+  },
+  "sourceRecordsUnchanged": true,
+  "mediaPathMappings": [
+    {
+      "sourcePublicPath": "/assets/vehicles/21789110878202273/1.webp",
+      "publicPath": "/dealer-stock/21789110878202273-1.webp",
+      "sha256": "4b01c4ea8314c74e528195bc08bf60f0cc376c6f48a8b8080d89cb809be36f3f",
+      "bytes": 293716,
+      "sourceId": "21789110878202273"
+    },
+    {
+      "sourcePublicPath": "/assets/vehicles/21789110878202273/2.webp",
+      "publicPath": "/dealer-stock/21789110878202273-2.webp",
+      "sha256": "5fdd07888dd04df62beed9af7a98fa3c9fdd376efde3eda7e7eca60a6a8f8119",
+      "bytes": 164516,
+      "sourceId": "21789110878202273"
+    }
+  ]
+}

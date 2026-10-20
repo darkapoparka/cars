@@ -1,0 +1,37 @@
+{
+  "fetchedAt": "2026-10-11",
+  "sources": {
+    "dealerInventory": "https://kalokars.mobile.bg/",
+    "dealerContact": "https://kalokars.mobile.bg/contacts"
+  },
+  "count": 1,
+  "listings": [
+    {
+      "badge": "ОБЯВА",
+      "category": "Ван",
+      "color": "",
+      "displacement": "",
+      "euroStandard": "",
+      "features": [],
+      "fuel": "Дизелов",
+      "gearbox": "Ръчна",
+      "href": "https://kalokars.mobile.bg/obiava-11787740471095305-vw-touran-7-mesta-webasto",
+      "id": "11787740471095305",
+      "image": "/dealer-stock/11787740471095305-1.webp",
+      "location": "Варна",
+      "mileage": "191 000 км",
+      "mileageKnown": true,
+      "mileageValue": 191000,
+      "mileageUnit": "km",
+      "photoCount": "2",
+      "power": "140 к.с.",
+      "price": "7 390 €",
+      "priceBgn": "",
+      "production": "2011 г.",
+      "rawPriceText": "7 390 €",
+      "shortDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "title": "VW Touran 7 места",
+      "vat": ""
+    }
+  ]
+}

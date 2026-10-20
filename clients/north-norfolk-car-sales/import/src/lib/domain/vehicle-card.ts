@@ -86,7 +86,7 @@ export const inventoryCardsFromVehicles = (
 			slug: vehicle.slug,
 			mediaKind: vehicle.mediaKind,
 			tag: translateVehicleTerm(locale, 'statuses', vehicle.tag ?? 'Available'),
-			title: vehicle.title,
+			title: inventoryText(locale, vehicle.title),
 			transmission: translateVehicleTerm(locale, 'transmissions', vehicle.transmission),
 			videoCount: 0,
 			year: vehicle.year

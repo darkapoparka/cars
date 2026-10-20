@@ -1,6 +1,5 @@
 import { formatPrice, localeContract, type Locale } from '$lib/locale/core';
 import { templateText } from '$lib/locale/messages';
-import { leadSite } from '$config/lead-site';
 
 export const vehicleTypes = ['car', 'motorbike', 'van', 'truck'] as const;
 export type VehicleType = typeof vehicleTypes[number];
@@ -34,6 +33,9 @@ export type Vehicle = {
   yearNumber: number;
   mileage: string;
   mileageKm: number;
+  mileageKnown?: boolean;
+  mileageValue?: number;
+  mileageUnit?: 'km' | 'mi';
   fuel: string;
   transmission: string;
   equipment: readonly VehicleEquipment[];
@@ -42,16 +44,11 @@ export type Vehicle = {
   href: `/listing-detail-v1/${number}`;
 };
 
-// Equipment facets are limited to recurring features published in Day & Night's
-// current adverts for these model families (daynight.mobile.bg, checked 2026-08-30).
-
-
-// Imported master fixtures are not VIN-verified stock. Preserve source media;
-// client promotion requires replacing and verifying each record, including reused photos.
 export const featuredVehicles: Vehicle[] = [
   {
     "id": 1,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://perfektauto.mobile.bg/obiava-21788859055085650-mercedes-benz-ml-320-cdi",
     "image": "/assets/perfect-auto/vehicle-01-1.webp",
     "category": "Джип",
@@ -62,17 +59,20 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2006,
     "mileage": "249 000 км",
     "mileageKm": 249000,
+    "mileageKnown": true,
+    "mileageValue": 249000,
+    "mileageUnit": "km",
     "fuel": "Дизелов",
     "transmission": "Автоматична",
     "equipment": [],
     "condition": "used",
     "priceEur": 6900,
-    "href": "/listing-detail-v1/1",
-    "type": "car"
+    "href": "/listing-detail-v1/1"
   },
   {
     "id": 2,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://perfektauto.mobile.bg/obiava-21788174780697334-mercedes-benz-g-350-4-matic-facelift-bluetec-full-eks-shibedah",
     "image": "/assets/perfect-auto/vehicle-02-1.webp",
     "category": "Джип",
@@ -83,6 +83,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2015,
     "mileage": "151 000 км",
     "mileageKm": 151000,
+    "mileageKnown": true,
+    "mileageValue": 151000,
+    "mileageUnit": "km",
     "fuel": "Дизелов",
     "transmission": "Автоматична",
     "equipment": [
@@ -92,12 +95,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 59900,
-    "href": "/listing-detail-v1/2",
-    "type": "car"
+    "href": "/listing-detail-v1/2"
   },
   {
     "id": 3,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://perfektauto.mobile.bg/obiava-21788174574608668-audi-q7-50-tdi-facelift-quattro-s-line-maxton-full-rs",
     "image": "/assets/perfect-auto/vehicle-03-1.webp",
     "category": "Джип",
@@ -108,6 +111,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2022,
     "mileage": "136 000 км",
     "mileageKm": 136000,
+    "mileageKnown": true,
+    "mileageValue": 136000,
+    "mileageUnit": "km",
     "fuel": "Дизелов",
     "transmission": "Автоматична",
     "equipment": [
@@ -118,12 +124,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 44900,
-    "href": "/listing-detail-v1/3",
-    "type": "car"
+    "href": "/listing-detail-v1/3"
   },
   {
     "id": 4,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://perfektauto.mobile.bg/obiava-21787209952978104-lexus-nx-450-chisto-nov-full-ekstri-mark-lev-pano-head-u",
     "image": "/assets/perfect-auto/vehicle-04-1.webp",
     "category": "Джип",
@@ -134,6 +140,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2026,
     "mileage": "0 км",
     "mileageKm": 0,
+    "mileageKnown": true,
+    "mileageValue": 0,
+    "mileageUnit": "km",
     "fuel": "Plug-in хибрид",
     "transmission": "Автоматична",
     "equipment": [
@@ -144,12 +153,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 55900,
-    "href": "/listing-detail-v1/4",
-    "type": "car"
+    "href": "/listing-detail-v1/4"
   },
   {
     "id": 5,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://perfektauto.mobile.bg/obiava-21787209746596224-bmw-x6-30d-xdrive-swarovski-m-packet-maxton",
     "image": "/assets/perfect-auto/vehicle-05-1.webp",
     "category": "Джип",
@@ -160,6 +169,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2022,
     "mileage": "138 000 км",
     "mileageKm": 138000,
+    "mileageKnown": true,
+    "mileageValue": 138000,
+    "mileageUnit": "km",
     "fuel": "Дизелов",
     "transmission": "Автоматична",
     "equipment": [
@@ -169,12 +181,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 48900,
-    "href": "/listing-detail-v1/5",
-    "type": "car"
+    "href": "/listing-detail-v1/5"
   },
   {
     "id": 6,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://perfektauto.mobile.bg/obiava-11786890129374054-ford-mustang-kamera",
     "image": "/assets/perfect-auto/vehicle-06-1.webp",
     "category": "Купе",
@@ -185,6 +197,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2016,
     "mileage": "48 000 км",
     "mileageKm": 48000,
+    "mileageKnown": true,
+    "mileageValue": 48000,
+    "mileageUnit": "km",
     "fuel": "Бензинов",
     "transmission": "Автоматична",
     "equipment": [
@@ -193,12 +208,14 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 19900,
-    "href": "/listing-detail-v1/6",
-    "type": "car"
+    "href": "/listing-detail-v1/6"
   }
 ];
 
-export const formatVehiclePrice = (amount: number, locale: Locale = localeContract.defaultLocale) => amount > 0 ? formatPrice(amount, locale) : templateText(locale, 'Price on request');
+export const formatVehiclePrice = (
+  amount: number,
+  locale: Locale = localeContract.defaultLocale
+) => amount > 0 ? formatPrice(amount, locale) : templateText(locale, 'Price on request');
 
 /** Allow a currency line break while preserving the locale's grouped digits. */
 export const formatVehiclePriceLabel = (amount: number, locale: Locale = localeContract.defaultLocale) =>

@@ -27,9 +27,9 @@
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Norton%20Grange%20Trade%20Cars%2C%20Stockton-on-Tees",
     "mapsEmbedUrl": "https://maps.google.com/maps?q=Norton%20Grange%20Trade%20Cars%2C%20Stockton-on-Tees&z=16&output=embed",
     "accent": "#E21420",
-    "logo": "/dealer-brand/logo.webp",
-    "logoLight": "/dealer-brand/logo.webp",
-    "logoDark": "/dealer-brand/logo.webp",
+    "logo": "/dealer-brand/v2-12870d10b91ab03b/logo-on-light.webp",
+    "logoLight": "/dealer-brand/v2-12870d10b91ab03b/logo-on-light.webp",
+    "logoDark": "/dealer-brand/v2-12870d10b91ab03b/logo-on-dark.webp",
     "socialLinks": {
       "facebook": "",
       "instagram": "",
@@ -1266,25 +1266,28 @@
     "approvalStatus": "independent_design_proposal_not_dealer_approved",
     "assets": {
       "onLight": {
-        "publicPath": "/dealer-brand/logo.webp",
-        "sha256": "a4c81c76ad62d0916a4212e7e31f93e2aa2b513309761f6c38a4c4ddc385befc",
+        "publicPath": "/dealer-brand/v2-12870d10b91ab03b/logo-on-light.webp",
+        "sha256": "d65350ee5091704fa43776b047e1760ce499c3684969dbf6afb5124b69ae3797",
         "width": 1024,
         "height": 341,
-        "background": "opaque_white"
+        "background": "opaque_white",
+        "bytes": 109290
       },
       "onDark": {
-        "publicPath": "/dealer-brand/logo.webp",
-        "sha256": "a4c81c76ad62d0916a4212e7e31f93e2aa2b513309761f6c38a4c4ddc385befc",
+        "publicPath": "/dealer-brand/v2-12870d10b91ab03b/logo-on-dark.webp",
+        "sha256": "ffbf830304c097391a6bd507b76160ba14cebbc84c68dfbf43dbda0190797590",
         "width": 1024,
         "height": 341,
-        "background": "opaque_white"
+        "background": "opaque_white",
+        "bytes": 34646
       },
       "onAccent": {
-        "publicPath": "/dealer-brand/logo.webp",
-        "sha256": "a4c81c76ad62d0916a4212e7e31f93e2aa2b513309761f6c38a4c4ddc385befc",
+        "publicPath": "/dealer-brand/v2-12870d10b91ab03b/logo-on-accent.webp",
+        "sha256": "ffbf830304c097391a6bd507b76160ba14cebbc84c68dfbf43dbda0190797590",
         "width": 1024,
         "height": 341,
-        "background": "opaque_white"
+        "background": "opaque_white",
+        "bytes": 34646
       }
     },
     "icon": {

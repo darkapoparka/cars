@@ -1,0 +1,898 @@
+{
+  "schemaVersion": 1,
+  "status": "accepted-local-ui-baseline",
+  "verifiedAt": "2026-10-14T15:51:19.752Z",
+  "ownerDirection": "Verify the final controls and lock their sizing down.",
+  "preview": "http://127.0.0.1:6474",
+  "source": {
+    "root": "L:/CODEX/cars/templates/mobile",
+    "head": "3bc5a0ea33969f18ccc34d5e4b0e8cab1513e6a2",
+    "state": "Reviewed working tree; source hashes identify the exact UI snapshot.",
+    "hashes": {
+      "src/components/ShowroomQuickPills.tsx": "5c829aef46d916566d1def98a7c7211d361f0ecaba48c6b30c5df35f99521d4d",
+      "src/components/ShowroomInventoryScreen.tsx": "9305de4fe63467ffbc219bb6f981e36f0b76102db6af84618a5d0eb31d71d3f4",
+      "src/components/AppShell.tsx": "24e71a2b6893adb26f5cab333b16720b76e7c6e4b9942052ee358003ef5a972a",
+      "src/components/ShowroomTabs.tsx": "27ad8e88d2e73db1134a8ab0f854b5569a0221c906a85583f16f19ed359cc3ee",
+      "src/components/ShowroomSearch.tsx": "9866b002df3298e29d4d30c692bf235f03c358a97f5e55f43b8907569eace37c",
+      "src/components/ShowroomFilterSheet.tsx": "0fa0b90c4c34c4987a9c1d5710741a6f4f3b4c6fce56a9158791231f9ec538de",
+      "src/components/showroom-filter-sheet.stylex.ts": "ac31a2f54189828de8cefe2e3e9a90ea5e5706bc74c4668e39b6f5cb1ab1a9ef",
+      "src/components/ShowroomSortDialog.tsx": "9cc1f2f0a4604762c837493683dc08518b72ce77ff76ef48f7bd7320c707ed62",
+      "src/components/showroom-navigation.ts": "518253b7ae9342b61c66275cce82074198c489e183a023cb410fd3b282ed3e1f",
+      "src/styles/tokens.stylex.ts": "c02fb60570ecd18469f9ff8565899b635ecc7e11c43f2c22d241de72375d88d5",
+      "src/app/globals.css": "165b296e91f0e61fd47c9559e1b96ac7d1d00188eb9d17408f0202031d8a5d2a",
+      "public/navigation/dock/master.png": "cad44b47c8acbc0ce5dc1e29187e06bc076ca47532f3257c64b97831b43b8dbf",
+      "public/navigation/dock/cars.webp": "980d71fd1df6a6a54a79db9245ab742959d17b2a72ea28cb5ba6c4b4cf563ec1",
+      "public/navigation/dock/services.webp": "b3615f16136eec14593396e2c5508a6a2d5a9756689fedb6d733ab4ecfd3aa95",
+      "public/navigation/dock/contact.webp": "e1f5b143c25de3257e93410b5442833317ce30a531d698d8fab547bda583b18d"
+    }
+  },
+  "sizing": {
+    "quickPills": {
+      "font": 16,
+      "lineHeight": 22,
+      "visibleHeight": 36,
+      "targetHeight": 48,
+      "paddingInline": 10,
+      "width": "natural"
+    },
+    "sort": {
+      "icon": 20,
+      "stroke": 2,
+      "visibleDiameter": 36,
+      "target": {
+        "width": 44,
+        "height": 48
+      }
+    },
+    "vehicleTypes": {
+      "targetHeight": 52,
+      "imageAt320": {
+        "width": 56,
+        "height": 35
+      },
+      "imageAt390": {
+        "width": 64,
+        "height": 40
+      }
+    },
+    "search": {
+      "font": 16,
+      "fieldHeight": 48,
+      "inputHeight": 44,
+      "tabsHeight": 48,
+      "closeResetTarget": 48,
+      "applyHeight": 44,
+      "resultRowHeight": 72
+    },
+    "dock": {
+      "width": 204,
+      "height": 48,
+      "icon": 28,
+      "targetHeight": 44,
+      "visibleLabels": false
+    }
+  },
+  "checks": {
+    "passed": true,
+    "failures": [],
+    "viewports": [320, 390, 1440],
+    "locales": ["bg", "en"],
+    "keyboardFocus": "passed",
+    "tapPadding": "all five quick pills verified after keyboard navigation reveals each one",
+    "sortOpenAndDismiss": "passed",
+    "makeOpenAndDismiss": "passed",
+    "searchQueryAndClear": "passed",
+    "searchEnterSubmit": "passed",
+    "desktopPreserved": true,
+    "consoleErrors": 0,
+    "sourceUnchangedDuringReview": 6,
+    "priorCodeChecks": "Scoped ESLint and formatting passed for the unchanged reviewed AppShell, ShowroomQuickPills and ShowroomInventoryScreen sources."
+  },
+  "measurements": {
+    "phone320": {
+      "categories": [
+        {
+          "height": 52,
+          "imageHeight": 35,
+          "imageWidth": 56,
+          "label": "Коли",
+          "width": 62.25
+        },
+        {
+          "height": 52,
+          "imageHeight": 35,
+          "imageWidth": 56,
+          "label": "Мотоциклети",
+          "width": 62.25
+        },
+        {
+          "height": 52,
+          "imageHeight": 35,
+          "imageWidth": 56,
+          "label": "Електрически велосипеди",
+          "width": 62.25
+        },
+        {
+          "height": 52,
+          "imageHeight": 35,
+          "imageWidth": 56,
+          "label": "Кемпери",
+          "width": 62.25
+        },
+        {
+          "height": 52,
+          "imageHeight": 35,
+          "imageWidth": 56,
+          "label": "Камиони и други",
+          "width": 62.25
+        }
+      ],
+      "dock": {
+        "height": 48,
+        "links": [
+          {
+            "current": "page",
+            "height": 44,
+            "iconWidth": 28,
+            "imageLoaded": true,
+            "label": "Коли",
+            "text": ""
+          },
+          {
+            "current": null,
+            "height": 44,
+            "iconWidth": 28,
+            "imageLoaded": true,
+            "label": "Услуги",
+            "text": ""
+          },
+          {
+            "current": null,
+            "height": 44,
+            "iconWidth": 28,
+            "imageLoaded": true,
+            "label": "Контакт",
+            "text": ""
+          }
+        ],
+        "width": 204
+      },
+      "lang": "bg",
+      "overflow": false,
+      "pills": [
+        {
+          "face": 36,
+          "faceWidth": 161.703125,
+          "font": "16px",
+          "label": "Марка и модел · Филтри",
+          "lineHeight": "22px",
+          "target": 48
+        },
+        {
+          "face": 36,
+          "faceWidth": 81.609375,
+          "font": "16px",
+          "label": "Цена · Филтри",
+          "lineHeight": "22px",
+          "target": 48
+        },
+        {
+          "face": 36,
+          "faceWidth": 97.625,
+          "font": "16px",
+          "label": "Година · Филтри",
+          "lineHeight": "22px",
+          "target": 48
+        },
+        {
+          "face": 36,
+          "faceWidth": 97.484375,
+          "font": "16px",
+          "label": "Гориво · Филтри",
+          "lineHeight": "22px",
+          "target": 48
+        },
+        {
+          "face": 36,
+          "faceWidth": 76.90625,
+          "font": "16px",
+          "label": "Още · Филтри",
+          "lineHeight": "22px",
+          "target": 48
+        }
+      ],
+      "sort": {
+        "face": 36,
+        "height": 48,
+        "icon": 20,
+        "stroke": "2",
+        "width": 44
+      },
+      "url": "http://127.0.0.1:6474/?lang=bg",
+      "viewport": {
+        "height": 844,
+        "width": 320
+      }
+    },
+    "phone390": {
+      "categories": [
+        {
+          "height": 52,
+          "imageHeight": 40,
+          "imageWidth": 64
+        },
+        {
+          "height": 52,
+          "imageHeight": 40,
+          "imageWidth": 64
+        },
+        {
+          "height": 52,
+          "imageHeight": 40,
+          "imageWidth": 64
+        },
+        {
+          "height": 52,
+          "imageHeight": 40,
+          "imageWidth": 64
+        },
+        {
+          "height": 52,
+          "imageHeight": 40,
+          "imageWidth": 64
+        }
+      ],
+      "lang": "bg",
+      "overflow": false,
+      "pills": [
+        {
+          "face": 36,
+          "font": "16px",
+          "label": "Марка и модел · Филтри",
+          "target": 48
+        },
+        {
+          "face": 36,
+          "font": "16px",
+          "label": "Цена · Филтри",
+          "target": 48
+        },
+        {
+          "face": 36,
+          "font": "16px",
+          "label": "Година · Филтри",
+          "target": 48
+        },
+        {
+          "face": 36,
+          "font": "16px",
+          "label": "Гориво · Филтри",
+          "target": 48
+        },
+        {
+          "face": 36,
+          "font": "16px",
+          "label": "Още · Филтри",
+          "target": 48
+        }
+      ],
+      "scrollY": 0,
+      "viewport": {
+        "height": 844,
+        "width": 390
+      }
+    },
+    "english390": {
+      "dock": [
+        {
+          "height": 44,
+          "label": "Cars",
+          "text": "",
+          "title": "Cars"
+        },
+        {
+          "height": 44,
+          "label": "Services",
+          "text": "",
+          "title": "Services"
+        },
+        {
+          "height": 44,
+          "label": "Contact",
+          "text": "",
+          "title": "Contact"
+        }
+      ],
+      "lang": "en",
+      "overflow": false,
+      "pills": [
+        {
+          "face": 36,
+          "font": "16px",
+          "label": "Make and model · Filters",
+          "target": 48
+        },
+        {
+          "face": 36,
+          "font": "16px",
+          "label": "Price · Filters",
+          "target": 48
+        },
+        {
+          "face": 36,
+          "font": "16px",
+          "label": "Year · Filters",
+          "target": 48
+        },
+        {
+          "face": 36,
+          "font": "16px",
+          "label": "Fuel · Filters",
+          "target": 48
+        },
+        {
+          "face": 36,
+          "font": "16px",
+          "label": "More · Filters",
+          "target": 48
+        }
+      ],
+      "viewport": {
+        "height": 844,
+        "width": 390
+      }
+    },
+    "keyboardPills": [
+      {
+        "box": {
+          "bottom": 223,
+          "height": 48,
+          "left": 68,
+          "right": 229.703125,
+          "top": 175,
+          "width": 161.703125,
+          "x": 68,
+          "y": 175
+        },
+        "label": "Марка и модел · Филтри",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "paddingHit": true
+      },
+      {
+        "box": {
+          "bottom": 223,
+          "height": 48,
+          "left": 237.703125,
+          "right": 319.3125,
+          "top": 175,
+          "width": 81.609375,
+          "x": 237.703125,
+          "y": 175
+        },
+        "label": "Цена · Филтри",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "paddingHit": true
+      },
+      {
+        "box": {
+          "bottom": 223,
+          "height": 48,
+          "left": 103.3125,
+          "right": 200.9375,
+          "top": 175,
+          "width": 97.625,
+          "x": 103.3125,
+          "y": 175
+        },
+        "label": "Година · Филтри",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "paddingHit": true
+      },
+      {
+        "box": {
+          "bottom": 223,
+          "height": 48,
+          "left": 208.9375,
+          "right": 306.421875,
+          "top": 175,
+          "width": 97.484375,
+          "x": 208.9375,
+          "y": 175
+        },
+        "label": "Гориво · Филтри",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "paddingHit": true
+      },
+      {
+        "box": {
+          "bottom": 223,
+          "height": 48,
+          "left": 212.421875,
+          "right": 289.328125,
+          "top": 175,
+          "width": 76.90625,
+          "x": 212.421875,
+          "y": 175
+        },
+        "label": "Още · Филтри",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "paddingHit": true
+      }
+    ],
+    "search320": {
+      "apply": [
+        {
+          "font": "16px",
+          "height": 44,
+          "text": " Покажи 16 коли"
+        }
+      ],
+      "focused": true,
+      "inputFont": "16px",
+      "inputHeight": 44,
+      "overflow": false,
+      "tabs": [
+        {
+          "font": "16px",
+          "height": 48,
+          "label": "Търсене"
+        },
+        {
+          "font": "16px",
+          "height": 48,
+          "label": "Марка и модел"
+        },
+        {
+          "font": "16px",
+          "height": 48,
+          "label": "Цена"
+        },
+        {
+          "font": "16px",
+          "height": 48,
+          "label": "Година"
+        },
+        {
+          "font": "16px",
+          "height": 48,
+          "label": "Гориво"
+        },
+        {
+          "font": "16px",
+          "height": 48,
+          "label": "Състояние"
+        },
+        {
+          "font": "16px",
+          "height": 48,
+          "label": "Още"
+        }
+      ],
+      "viewport": {
+        "height": 844,
+        "width": 320
+      },
+      "visibleFieldHeight": 48
+    },
+    "search390": {
+      "field": {
+        "bottom": 172,
+        "height": 48,
+        "left": 16,
+        "right": 374,
+        "top": 124,
+        "width": 358,
+        "x": 16,
+        "y": 124
+      },
+      "inputFont": "16px",
+      "overflow": false,
+      "resultRows": [
+        {
+          "height": 72
+        },
+        {
+          "height": 72
+        },
+        {
+          "height": 72
+        },
+        {
+          "height": 72
+        },
+        {
+          "height": 72
+        },
+        {
+          "height": 72
+        }
+      ],
+      "tabs": [
+        {
+          "font": "16px",
+          "height": 48
+        },
+        {
+          "font": "16px",
+          "height": 48
+        },
+        {
+          "font": "16px",
+          "height": 48
+        },
+        {
+          "font": "16px",
+          "height": 48
+        },
+        {
+          "font": "16px",
+          "height": 48
+        },
+        {
+          "font": "16px",
+          "height": 48
+        },
+        {
+          "font": "16px",
+          "height": 48
+        }
+      ],
+      "viewport": {
+        "height": 844,
+        "width": 390
+      }
+    },
+    "englishSearch": {
+      "fieldHeight": 48,
+      "inputFont": "16px",
+      "lang": "en",
+      "overflow": false,
+      "tabs": [
+        {
+          "font": "16px",
+          "height": 48,
+          "label": "Search"
+        },
+        {
+          "font": "16px",
+          "height": 48,
+          "label": "Make & model"
+        },
+        {
+          "font": "16px",
+          "height": 48,
+          "label": "Price"
+        },
+        {
+          "font": "16px",
+          "height": 48,
+          "label": "Year"
+        },
+        {
+          "font": "16px",
+          "height": 48,
+          "label": "Fuel"
+        },
+        {
+          "font": "16px",
+          "height": 48,
+          "label": "Condition"
+        },
+        {
+          "font": "16px",
+          "height": 48,
+          "label": "More"
+        }
+      ]
+    },
+    "query": {
+      "results": [
+        "Виж автомобила: BMW X6, 2025, 18 500 км, 73 937 €",
+        "Виж автомобила: BMW X6, 2018, 128 000 км, 42 900 €",
+        "Виж автомобила: BMW X6, 2017, 162 000 км, 34 950 €"
+      ],
+      "value": "BMW X6"
+    },
+    "clear": {
+      "focused": true,
+      "results": 6,
+      "value": ""
+    },
+    "enterSubmit": {
+      "editorClosed": true,
+      "focus": null,
+      "scrollY": 169,
+      "stockHeading": "16 коли",
+      "url": "http://127.0.0.1:6474/"
+    },
+    "makeDismiss": {
+      "focus": "Марка и модел · Филтри",
+      "url": "http://127.0.0.1:6474/?lang=bg"
+    },
+    "sortCloseTarget": {
+      "bottom": 322,
+      "height": 48,
+      "left": 252,
+      "right": 300,
+      "top": 274,
+      "width": 48,
+      "x": 252,
+      "y": 274
+    },
+    "desktop": {
+      "height": 900,
+      "pills": [
+        {
+          "face": {
+            "bottom": 356.625,
+            "height": 40,
+            "left": 313.5,
+            "right": 473.421875,
+            "top": 316.625,
+            "width": 159.921875,
+            "x": 313.5,
+            "y": 316.625
+          },
+          "font": "16px",
+          "label": "Всички филтри",
+          "target": {
+            "bottom": 358.625,
+            "height": 44,
+            "left": 313.5,
+            "right": 473.421875,
+            "top": 314.625,
+            "width": 159.921875,
+            "x": 313.5,
+            "y": 314.625
+          }
+        },
+        {
+          "face": {
+            "bottom": 356.625,
+            "height": 40,
+            "left": 481.421875,
+            "right": 545.890625,
+            "top": 316.625,
+            "width": 64.46875,
+            "x": 481.421875,
+            "y": 316.625
+          },
+          "font": "16px",
+          "label": "Цена · Филтри",
+          "target": {
+            "bottom": 358.625,
+            "height": 44,
+            "left": 481.421875,
+            "right": 545.890625,
+            "top": 314.625,
+            "width": 64.46875,
+            "x": 481.421875,
+            "y": 314.625
+          }
+        },
+        {
+          "face": {
+            "bottom": 356.625,
+            "height": 40,
+            "left": 553.890625,
+            "right": 632.046875,
+            "top": 316.625,
+            "width": 78.15625,
+            "x": 553.890625,
+            "y": 316.625
+          },
+          "font": "16px",
+          "label": "Година · Филтри",
+          "target": {
+            "bottom": 358.625,
+            "height": 44,
+            "left": 553.890625,
+            "right": 632.046875,
+            "top": 314.625,
+            "width": 78.15625,
+            "x": 553.890625,
+            "y": 314.625
+          }
+        },
+        {
+          "face": {
+            "bottom": 356.625,
+            "height": 40,
+            "left": 640.046875,
+            "right": 719.0625,
+            "top": 316.625,
+            "width": 79.015625,
+            "x": 640.046875,
+            "y": 316.625
+          },
+          "font": "16px",
+          "label": "Пробег · Филтри",
+          "target": {
+            "bottom": 358.625,
+            "height": 44,
+            "left": 640.046875,
+            "right": 719.0625,
+            "top": 314.625,
+            "width": 79.015625,
+            "x": 640.046875,
+            "y": 314.625
+          }
+        },
+        {
+          "face": {
+            "bottom": 356.625,
+            "height": 40,
+            "left": 727.0625,
+            "right": 804.609375,
+            "top": 316.625,
+            "width": 77.546875,
+            "x": 727.0625,
+            "y": 316.625
+          },
+          "font": "16px",
+          "label": "Гориво · Филтри",
+          "target": {
+            "bottom": 358.625,
+            "height": 44,
+            "left": 727.0625,
+            "right": 804.609375,
+            "top": 314.625,
+            "width": 77.546875,
+            "x": 727.0625,
+            "y": 314.625
+          }
+        },
+        {
+          "face": {
+            "bottom": 356.625,
+            "height": 40,
+            "left": 812.609375,
+            "right": 927.65625,
+            "top": 316.625,
+            "width": 115.046875,
+            "x": 812.609375,
+            "y": 316.625
+          },
+          "font": "16px",
+          "label": "Трансмисия · Филтри",
+          "target": {
+            "bottom": 358.625,
+            "height": 44,
+            "left": 812.609375,
+            "right": 927.65625,
+            "top": 314.625,
+            "width": 115.046875,
+            "x": 812.609375,
+            "y": 314.625
+          }
+        },
+        {
+          "face": {
+            "bottom": 356.625,
+            "height": 40,
+            "left": 935.65625,
+            "right": 996.546875,
+            "top": 316.625,
+            "width": 60.890625,
+            "x": 935.65625,
+            "y": 316.625
+          },
+          "font": "16px",
+          "label": "Купе · Филтри",
+          "target": {
+            "bottom": 358.625,
+            "height": 44,
+            "left": 935.65625,
+            "right": 996.546875,
+            "top": 314.625,
+            "width": 60.890625,
+            "x": 935.65625,
+            "y": 314.625
+          }
+        },
+        {
+          "face": {
+            "bottom": 356.625,
+            "height": 40,
+            "left": 1004.546875,
+            "right": 1111.484375,
+            "top": 316.625,
+            "width": 106.9375,
+            "x": 1004.546875,
+            "y": 316.625
+          },
+          "font": "16px",
+          "label": "Състояние · Филтри",
+          "target": {
+            "bottom": 358.625,
+            "height": 44,
+            "left": 1004.546875,
+            "right": 1111.484375,
+            "top": 314.625,
+            "width": 106.9375,
+            "x": 1004.546875,
+            "y": 314.625
+          }
+        }
+      ],
+      "width": 1440
+    },
+    "desktopExtra": {
+      "desktopSortIcon": [
+        {
+          "stroke": "1.8",
+          "width": 16
+        }
+      ],
+      "headerNavigation": [
+        {
+          "height": 48,
+          "label": "Основна навигация",
+          "text": "КолиУслугиКонтакт"
+        }
+      ],
+      "overflow": false,
+      "visibleDockImages": 0
+    }
+  },
+  "screenshots": [
+    {
+      "name": "locked-home-320.jpg",
+      "viewport": {
+        "width": 320,
+        "height": 844
+      },
+      "imagePixels": {
+        "width": 305,
+        "height": 804
+      },
+      "sha256": "034b30a1acff5b80aa86298f5280495d74b43ab9996879470c99ae6735f317bd"
+    },
+    {
+      "name": "locked-home-390.jpg",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "imagePixels": {
+        "width": 375,
+        "height": 812
+      },
+      "sha256": "cc066d7c8c6fa32aa8a0e412928722f84e6b55f4a32eff9ec9ae2367e90cf126"
+    },
+    {
+      "name": "locked-search-390.jpg",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "imagePixels": {
+        "width": 390,
+        "height": 844
+      },
+      "sha256": "3d1dd11ca9f279e12eb952ca1e053b2e0c1730fdc2a9c3c1e8d5cf34859234a7"
+    },
+    {
+      "name": "locked-desktop-1440.jpg",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "imagePixels": {
+        "width": 1425,
+        "height": 891
+      },
+      "sha256": "644cc0f17cc8b72a1ad6549d6678b3e0e4d34e64bb499ad4db1815e556322fe5"
+    }
+  ],
+  "release": {
+    "templateLockChanged": false,
+    "hostedVerified": false,
+    "published": false
+  }
+}

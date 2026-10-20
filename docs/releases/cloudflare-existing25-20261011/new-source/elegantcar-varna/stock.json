@@ -1,0 +1,201 @@
+{
+  "schemaVersion": 1,
+  "kind": "dated-listing-snapshot",
+  "candidate": true,
+  "observedAt": "2026-10-11T11:47:28.163Z",
+  "sourceProfile": "https://elegantcar.mobile.bg/",
+  "sourcePageVisibleListingCount": 17,
+  "sourceProfileCountObservedAt": "2026-10-11T11:47:28.016Z",
+  "profileCountIsAvailableStock": false,
+  "profileCountIsClassifiedOrdinaryRetail": false,
+  "liveInventory": false,
+  "mediaPermission": "unconfirmed",
+  "localMediaReady": true,
+  "records": [
+    {
+      "id": "21791544174764774",
+      "sourceId": "21791544174764774",
+      "title": "Hyundai IX35",
+      "sourceTitleExact": "Hyundai IX35 1.7GRDI",
+      "make": "Hyundai",
+      "model": "IX35",
+      "modelExtraction": "literal make/model prefix from exact primary advert title; canonical market normalization and trim not asserted",
+      "year": 2013,
+      "productionMonth": 10,
+      "currency": "EUR",
+      "sourcePriceText": "5 200 €",
+      "priceVatNotice": "Не се начислява ДДС",
+      "sourceMileageText": "250000 км",
+      "fieldConflicts": [],
+      "body": "Джип",
+      "fuel": "Дизелов",
+      "transmission": "Ръчна",
+      "powerHp": 116,
+      "images": [
+        "/dealer-stock/21791544174764774-1.webp",
+        "/dealer-stock/21791544174764774-2.webp"
+      ],
+      "sourceUrl": "https://elegantcar.mobile.bg/obiava-21791544174764774-hyundai-ix35-1-7grdi",
+      "sourceHtmlSha256": "61f7a05fb4a5aa2aef690e2e076a3e3e6bad5cc593e663361d829fcfc637eed1",
+      "sourcePublicationText": "Публикувана в 14:09 часа на 09.10.2026 год.",
+      "observedAt": "2026-10-11T11:47:28.163Z",
+      "availability": "unconfirmed",
+      "availabilityConfirmed": false,
+      "partsListing": false,
+      "conditionMarker": null,
+      "conditionIndependentlyConfirmed": false,
+      "arrivalNotice": null,
+      "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "mediaState": "not-collected; reviewed rights/reuse or explicit illustration decision pending",
+      "mediaPermission": "Not independently established",
+      "telHrefCandidates": [
+        "0888554972"
+      ],
+      "visibleSellerContact": "Контакти с продавача Елегант кар 0877910051 0888554972",
+      "sellerPhoneMatchesPrimary": true,
+      "telHrefMatchesPrimary": true,
+      "sampleRole": "dated published vehicle advert; dealer availability, condition and media reuse require confirmation",
+      "retailReadyForAssembly": false,
+      "sourcePhotoUrls": [
+        "https://mobistatic1.focus.bg/mobile/photosorg/774/2/big1/21791544174764774_4j.webp",
+        "https://mobistatic1.focus.bg/mobile/photosorg/774/2/big1/21791544174764774_Na.webp",
+        "https://mobistatic1.focus.bg/mobile/photosorg/774/2/big1/21791544174764774_R3.webp",
+        "https://mobistatic1.focus.bg/mobile/photosorg/774/2/big1/21791544174764774_3B.webp",
+        "https://mobistatic1.focus.bg/mobile/photosorg/774/2/big1/21791544174764774_5f.webp",
+        "https://mobistatic1.focus.bg/mobile/photosorg/774/2/big1/21791544174764774_vl.webp",
+        "https://mobistatic1.focus.bg/mobile/photosorg/774/2/big1/21791544174764774_cO.webp",
+        "https://mobistatic1.focus.bg/mobile/photosorg/774/2/big1/21791544174764774_6L.webp",
+        "https://mobistatic1.focus.bg/mobile/photosorg/774/2/big1/21791544174764774_rr.webp",
+        "https://mobistatic1.focus.bg/mobile/photosorg/774/2/big1/21791544174764774_Wj.webp",
+        "https://mobistatic1.focus.bg/mobile/photosorg/774/2/big1/21791544174764774_ye.webp",
+        "https://mobistatic1.focus.bg/mobile/photosorg/774/2/big1/21791544174764774_7f.webp"
+      ],
+      "sourcePhotoEvidence": {
+        "sourceId": "21791544174764774",
+        "sourceUrl": "https://elegantcar.mobile.bg/obiava-21791544174764774-hyundai-ix35-1-7grdi",
+        "observedAt": "2026-10-11T12:09:29.816Z",
+        "responseSha256": "3aa217c4b85d9b01c3ff67b8381ed35c69c6dbf15c8263068e621e13865f2a57",
+        "association": "primary gallery URLs contain exact source listing ID",
+        "remoteBytesFetched": false
+      },
+      "sourceRecord": {
+        "id": "21791544174764774",
+        "sourceId": "21791544174764774",
+        "title": "Hyundai IX35",
+        "sourceTitleExact": "Hyundai IX35 1.7GRDI",
+        "make": "Hyundai",
+        "model": "IX35",
+        "modelExtraction": "literal make/model prefix from exact primary advert title; canonical market normalization and trim not asserted",
+        "year": 2013,
+        "productionMonth": 10,
+        "priceEur": 5200,
+        "currency": "EUR",
+        "sourcePriceText": "5 200 €",
+        "priceVatNotice": "Не се начислява ДДС",
+        "mileageKm": 250000,
+        "sourceMileageText": "250000 км",
+        "fieldConflicts": [],
+        "body": "Джип",
+        "fuel": "Дизелов",
+        "transmission": "Ръчна",
+        "powerHp": 116,
+        "images": [
+          "/assets/vehicles/21791544174764774/1.webp",
+          "/assets/vehicles/21791544174764774/2.webp"
+        ],
+        "sourceUrl": "https://elegantcar.mobile.bg/obiava-21791544174764774-hyundai-ix35-1-7grdi",
+        "sourceHtmlSha256": "61f7a05fb4a5aa2aef690e2e076a3e3e6bad5cc593e663361d829fcfc637eed1",
+        "sourcePublicationText": "Публикувана в 14:09 часа на 09.10.2026 год.",
+        "observedAt": "2026-10-11T11:47:28.163Z",
+        "availability": "unconfirmed",
+        "availabilityConfirmed": false,
+        "partsListing": false,
+        "conditionMarker": null,
+        "conditionIndependentlyConfirmed": false,
+        "arrivalNotice": null,
+        "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+        "mediaState": "not-collected; reviewed rights/reuse or explicit illustration decision pending",
+        "mediaPermission": "Not independently established",
+        "telHrefCandidates": [
+          "0888554972"
+        ],
+        "visibleSellerContact": "Контакти с продавача Елегант кар 0877910051 0888554972",
+        "sellerPhoneMatchesPrimary": true,
+        "telHrefMatchesPrimary": true,
+        "sampleRole": "dated published vehicle advert; dealer availability, condition and media reuse require confirmation",
+        "retailReadyForAssembly": false,
+        "sourcePhotoUrls": [
+          "https://mobistatic1.focus.bg/mobile/photosorg/774/2/big1/21791544174764774_4j.webp",
+          "https://mobistatic1.focus.bg/mobile/photosorg/774/2/big1/21791544174764774_Na.webp",
+          "https://mobistatic1.focus.bg/mobile/photosorg/774/2/big1/21791544174764774_R3.webp",
+          "https://mobistatic1.focus.bg/mobile/photosorg/774/2/big1/21791544174764774_3B.webp",
+          "https://mobistatic1.focus.bg/mobile/photosorg/774/2/big1/21791544174764774_5f.webp",
+          "https://mobistatic1.focus.bg/mobile/photosorg/774/2/big1/21791544174764774_vl.webp",
+          "https://mobistatic1.focus.bg/mobile/photosorg/774/2/big1/21791544174764774_cO.webp",
+          "https://mobistatic1.focus.bg/mobile/photosorg/774/2/big1/21791544174764774_6L.webp",
+          "https://mobistatic1.focus.bg/mobile/photosorg/774/2/big1/21791544174764774_rr.webp",
+          "https://mobistatic1.focus.bg/mobile/photosorg/774/2/big1/21791544174764774_Wj.webp",
+          "https://mobistatic1.focus.bg/mobile/photosorg/774/2/big1/21791544174764774_ye.webp",
+          "https://mobistatic1.focus.bg/mobile/photosorg/774/2/big1/21791544174764774_7f.webp"
+        ],
+        "sourcePhotoEvidence": {
+          "sourceId": "21791544174764774",
+          "sourceUrl": "https://elegantcar.mobile.bg/obiava-21791544174764774-hyundai-ix35-1-7grdi",
+          "observedAt": "2026-10-11T12:09:29.816Z",
+          "responseSha256": "3aa217c4b85d9b01c3ff67b8381ed35c69c6dbf15c8263068e621e13865f2a57",
+          "association": "primary gallery URLs contain exact source listing ID",
+          "remoteBytesFetched": false
+        }
+      },
+      "priceAmount": 5200,
+      "mileageValue": 250000,
+      "mileageUnit": "km"
+    }
+  ],
+  "localMediaHydration": {
+    "candidateOnly": true,
+    "technicalRasterPresent": true,
+    "rightsApproved": false,
+    "availabilityConfirmed": false,
+    "assets": [
+      {
+        "publicPath": "/assets/vehicles/21791544174764774/1.webp",
+        "sourceUrl": "https://mobistatic1.focus.bg/mobile/photosorg/774/2/big1/21791544174764774_4j.webp",
+        "sha256": "f37590c33a1c8d6705c26ae4b681efd3329bafaacd90f444cf24d58205484264",
+        "bytes": 256740,
+        "downloadObservedAt": "2026-10-11T12:20:33.087Z"
+      },
+      {
+        "publicPath": "/assets/vehicles/21791544174764774/2.webp",
+        "sourceUrl": "https://mobistatic1.focus.bg/mobile/photosorg/774/2/big1/21791544174764774_Na.webp",
+        "sha256": "4ef6aa82f2ef037d19c97fbb31e1118048e34b62d74d1e966ed8b4bd2509a13a",
+        "bytes": 175360,
+        "downloadObservedAt": "2026-10-11T12:20:33.260Z"
+      }
+    ],
+    "sourceStockSha256": "d894bef7bd3b1de16cfbb2d6ad1445b60b5964f57410e8069b78d4653638f23f"
+  },
+  "dealer": "elegantcar-varna",
+  "sourceKind": "dated-marketplace-listing-sample",
+  "sourceStock": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/elegantcar-varna/source/stock.json",
+    "sha256": "7ae6f70069b003a928911ef0ccc4c6d88196e545ff70a7bbe81bdcd022aefa7c"
+  },
+  "sourceRecordsUnchanged": true,
+  "mediaPathMappings": [
+    {
+      "sourcePublicPath": "/assets/vehicles/21791544174764774/1.webp",
+      "publicPath": "/dealer-stock/21791544174764774-1.webp",
+      "sha256": "f37590c33a1c8d6705c26ae4b681efd3329bafaacd90f444cf24d58205484264",
+      "bytes": 256740,
+      "sourceId": "21791544174764774"
+    },
+    {
+      "sourcePublicPath": "/assets/vehicles/21791544174764774/2.webp",
+      "publicPath": "/dealer-stock/21791544174764774-2.webp",
+      "sha256": "4ef6aa82f2ef037d19c97fbb31e1118048e34b62d74d1e966ed8b4bd2509a13a",
+      "bytes": 175360,
+      "sourceId": "21791544174764774"
+    }
+  ]
+}

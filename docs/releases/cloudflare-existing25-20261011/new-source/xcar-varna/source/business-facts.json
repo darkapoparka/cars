@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "slug": "xcar-varna",
+  "name": "Х CAR",
+  "shortName": "Х CAR",
+  "city": "Варна",
+  "country": "BG",
+  "countryCode": "BG",
+  "locale": "bg-BG",
+  "currency": "EUR",
+  "distanceUnit": "km",
+  "phone": "0988975522",
+  "phoneDisplay": "0988975522",
+  "phoneE164": "+359988975522",
+  "phones": [
+    "0988975522"
+  ],
+  "addressLine": "Север, бул. Владислав Варненчик",
+  "address": "Север, бул. Владислав Варненчик, Варна, България",
+  "hours": "Понеделник 08:30 - 18:00 ч. Вторник 08:30 - 18:00 ч. Сряда 08:30 - 18:00 ч. Четвъртък 08:30 - 18:00 ч. Петък 08:30 - 18:00 ч. Събота 09:00 - 17:00 ч. Неделя Почивен ден",
+  "email": "",
+  "sourceUrl": "https://xcar.mobile.bg/",
+  "stockUrl": "https://xcar.mobile.bg/",
+  "contactSourceUrl": "https://xcar.mobile.bg/contacts",
+  "observedAt": "2026-10-11T11:47:28.566Z",
+  "inventoryNotice": "Датирана извадка от публични обяви, не складова система в реално време. Потвърдете цената, ДДС и наличността.",
+  "previewNotice": "Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация.",
+  "services": [],
+  "socialLinks": {}
+}

@@ -3,32 +3,32 @@
   "dealer": "isauto-varna",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "4e184777567849a2c5b4a9e4a3e652252179c29c",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "path": "templates/app",
-    "digest": "fad0067e48d7bd7e1c5177c5e91e2bc5767352e2c16621cb458d18a081f7c541",
-    "tree": "749512ff762c25272d1474225ff653dd4c88f0fe"
+    "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1",
+    "tree": "7f3d3ffa40546635377e6c5225194fe06fead291"
   },
-  "appDigest": "00787550609ae98a55a2b7a87f3ec5b21ad8e1e6e2f3fb497e8101a872a418b5",
+  "appDigest": "1867ec669f4f7d4759285f8e0a7833f4ba23dbba20f16a9a6648ea1c0e919305",
   "provenance": {
     "schemaVersion": 1,
     "dealer": "isauto-varna",
     "profile": "auto-best/src/lib/data/dealer-profile.json",
-    "profileSha256": "4f3caa9ec6eaf4fd2c4b04d7c915d22dd5846ae5f437c643c71117167db7ec25",
+    "profileSha256": "59fae42f76fc56a871261878dd0425edd86080634c30284761abb966d4ce2c80",
     "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
     "vehicles": 6,
     "currency": "EUR",
     "observedAt": "2026-09-16",
     "assets": [
       {
-        "source": "auto-best/static/dealer-brand/logo-on-light-20260919.webp",
-        "output": "public/dealer-app/logo-light-d093167bf017992b7686.webp",
-        "sha256": "d093167bf017992b76864055e909e36e3fe173aaedcfa077f00a1225277c29e4",
+        "source": "auto-best/static/dealer-brand/v2-82b4cdb8bfee0672/logo-on-light.webp",
+        "output": "public/dealer-app/logo-light-072c874356a1d124a7c4.webp",
+        "sha256": "072c874356a1d124a7c490b334ecaa3d4822907f0dd981c24e7a6e4e88de2c6f",
         "role": "logo-light"
       },
       {
-        "source": "auto-best/static/dealer-brand/logo-on-dark-20260919.webp",
-        "output": "public/dealer-app/logo-dark-7be72f265ad997e6f7f8.webp",
-        "sha256": "7be72f265ad997e6f7f86ee3af9f8f2ae1d24f188acd45a14bdc201f0f054eb4",
+        "source": "auto-best/static/dealer-brand/v2-82b4cdb8bfee0672/logo-on-dark.webp",
+        "output": "public/dealer-app/logo-dark-24471b5fa65ed13c66cc.webp",
+        "sha256": "24471b5fa65ed13c66cc9837d0608327484eec45cc20be1fb3754c1cc5e3c630",
         "role": "logo-dark"
       },
       {
@@ -67,13 +67,47 @@
         "sha256": "e480519d71d40fd0495ee6c70b82d595faa3eb56981fba9f9c238fa535fdf04c",
         "role": "vehicle"
       }
+    ],
+    "mileageFacts": [
+      {
+        "slug": "audi-r8-2021-is-1001",
+        "sourceValue": 75000,
+        "sourceUnit": "km",
+        "canonicalKm": 75000
+      },
+      {
+        "slug": "audi-q7-2022-is-1002",
+        "sourceValue": 57500,
+        "sourceUnit": "km",
+        "canonicalKm": 57500
+      },
+      {
+        "slug": "bmw-m5-2018-is-1003",
+        "sourceValue": 61000,
+        "sourceUnit": "km",
+        "canonicalKm": 61000
+      },
+      {
+        "slug": "bmw-x5-2014-is-1004",
+        "sourceValue": 196000,
+        "sourceUnit": "km",
+        "canonicalKm": 196000
+      },
+      {
+        "slug": "bmw-750-2019-is-1005",
+        "sourceValue": 167000,
+        "sourceUnit": "km",
+        "canonicalKm": 167000
+      },
+      {
+        "slug": "audi-a5-sportback-2018-is-1006",
+        "sourceValue": 175000,
+        "sourceUnit": "km",
+        "canonicalKm": 175000
+      }
     ]
   },
-  "baseDeployment": {
-    "id": "dpl_9zhikwXLRYiettS1ERL7geEVQxCb",
-    "url": "https://cars-isautovarna.vercel.app/",
-    "checkedAt": "2026-09-28T02:25:47.067Z"
-  },
-  "baseReceiptSha256": "671171c7aad775d85967f555701c5859d93e28d2a80fca7975c078bc21fef86c",
-  "refreshedAt": "2026-10-10T23:08:04.445Z"
+  "needsDealerQA": true,
+  "readyToPublish": false,
+  "refreshedAt": "2026-10-15T02:25:17.816Z"
 }

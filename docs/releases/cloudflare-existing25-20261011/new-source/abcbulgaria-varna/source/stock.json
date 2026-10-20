@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 1,
+  "kind": "dated-marketplace-listing-sample",
+  "candidate": true,
+  "observedAt": "2026-10-11T11:54:02.492Z",
+  "sourceProfile": "https://abcbulgaria.mobile.bg/",
+  "sourcePageVisibleListingCount": 9,
+  "sourceProfileCountObservedAt": "2026-10-11T11:54:02.439Z",
+  "profileCountIsAvailableStock": false,
+  "profileCountIsClassifiedOrdinaryRetail": false,
+  "liveInventory": false,
+  "mediaPermission": "unconfirmed",
+  "localMediaReady": true,
+  "records": [
+    {
+      "id": "31791195588891492",
+      "sourceId": "31791195588891492",
+      "title": "Renault Trafic",
+      "sourceTitleExact": "Renault Trafic",
+      "make": "Renault",
+      "model": "Trafic",
+      "modelExtraction": "literal make/model prefix from exact primary advert title; canonical market normalization and trim not asserted",
+      "year": 2002,
+      "productionMonth": 9,
+      "priceEur": 2800,
+      "currency": "EUR",
+      "sourcePriceText": "2 800 €",
+      "priceVatNotice": "Цената е с включено ДДС",
+      "mileageKm": 294749,
+      "sourceMileageText": "294749 км",
+      "fieldConflicts": [],
+      "body": "Товарен",
+      "fuel": "Дизелов",
+      "transmission": "Ръчна",
+      "powerHp": 100,
+      "images": [
+        "/assets/vehicles/31791195588891492/1.webp",
+        "/assets/vehicles/31791195588891492/2.webp"
+      ],
+      "sourceUrl": "https://abcbulgaria.mobile.bg/obiava-31791195588891492-renault-trafic",
+      "sourceHtmlSha256": "27d24113a64a6a0eb621f420d5f24c789d126dc8755fa2bdd8f16764603114f0",
+      "sourcePublicationText": "Публикувана в 13:19 часа на 05.10.2026 год.",
+      "observedAt": "2026-10-11T11:54:02.492Z",
+      "availability": "unconfirmed",
+      "availabilityConfirmed": false,
+      "partsListing": false,
+      "conditionMarker": null,
+      "conditionIndependentlyConfirmed": false,
+      "arrivalNotice": null,
+      "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "mediaState": "not-collected; reviewed rights/reuse or explicit illustration decision pending",
+      "mediaPermission": "Not independently established",
+      "telHrefCandidates": [
+        "0885550086"
+      ],
+      "visibleSellerContact": "Контакти с продавача АБЦ БЪЛГАРИЯ ЕООД 0893324178",
+      "sellerPhoneMatchesPrimary": true,
+      "telHrefMatchesPrimary": false,
+      "sampleRole": "dated published vehicle advert; dealer availability, condition and media reuse require confirmation",
+      "retailReadyForAssembly": false,
+      "sourcePhotoUrls": [
+        "https://mobistatic3.focus.bg/mobile/photosorg/492/3/big1/31791195588891492_Ds.webp",
+        "https://mobistatic3.focus.bg/mobile/photosorg/492/3/big1/31791195588891492_My.webp",
+        "https://mobistatic3.focus.bg/mobile/photosorg/492/3/big1/31791195588891492_Ng.webp",
+        "https://mobistatic3.focus.bg/mobile/photosorg/492/3/big1/31791195588891492_aR.webp",
+        "https://mobistatic3.focus.bg/mobile/photosorg/492/3/big1/31791195588891492_VG.webp",
+        "https://mobistatic3.focus.bg/mobile/photosorg/492/3/big1/31791195588891492_EF.webp",
+        "https://mobistatic3.focus.bg/mobile/photosorg/492/3/big1/31791195588891492_mg.webp",
+        "https://mobistatic3.focus.bg/mobile/photosorg/492/3/big1/31791195588891492_hr.webp",
+        "https://mobistatic3.focus.bg/mobile/photosorg/492/3/big1/31791195588891492_aB.webp"
+      ],
+      "sourcePhotoEvidence": {
+        "sourceId": "31791195588891492",
+        "sourceUrl": "https://abcbulgaria.mobile.bg/obiava-31791195588891492-renault-trafic",
+        "observedAt": "2026-10-11T12:09:33.733Z",
+        "responseSha256": "093c8cd4edcb8270e4e4292798d2d225a88d612706e8f083d645c15b7e93efe7",
+        "association": "primary gallery URLs contain exact source listing ID",
+        "remoteBytesFetched": false
+      }
+    }
+  ],
+  "localMediaHydration": {
+    "candidateOnly": true,
+    "technicalRasterPresent": true,
+    "rightsApproved": false,
+    "availabilityConfirmed": false,
+    "assets": [
+      {
+        "publicPath": "/assets/vehicles/31791195588891492/1.webp",
+        "sourceUrl": "https://mobistatic3.focus.bg/mobile/photosorg/492/3/big1/31791195588891492_Ds.webp",
+        "sha256": "9f587b7fe3c454b5bbad36ac16d91f23f39c345e2d9caa74761a56881a1fee23",
+        "bytes": 103176,
+        "downloadObservedAt": "2026-10-11T12:20:39.753Z"
+      },
+      {
+        "publicPath": "/assets/vehicles/31791195588891492/2.webp",
+        "sourceUrl": "https://mobistatic3.focus.bg/mobile/photosorg/492/3/big1/31791195588891492_My.webp",
+        "sha256": "5b20a057c56507bcafc91b710eee617f06cb121c348d30cb3a7971189efc97e3",
+        "bytes": 124346,
+        "downloadObservedAt": "2026-10-11T12:20:39.896Z"
+      }
+    ],
+    "sourceStockSha256": "8414d3593b8ad120c2a9cbd819d3ae2739e1207ad02e1f03ffc8dc7d8de5f5cf"
+  }
+}

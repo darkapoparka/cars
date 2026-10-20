@@ -1,6 +1,5 @@
 import { formatPrice, localeContract, type Locale } from '$lib/locale/core';
 import { templateText } from '$lib/locale/messages';
-import { leadSite } from '$config/lead-site';
 
 export const vehicleTypes = ['car', 'motorbike', 'van', 'truck'] as const;
 export type VehicleType = typeof vehicleTypes[number];
@@ -34,6 +33,9 @@ export type Vehicle = {
   yearNumber: number;
   mileage: string;
   mileageKm: number;
+  mileageKnown?: boolean;
+  mileageValue?: number;
+  mileageUnit?: 'km' | 'mi';
   fuel: string;
   transmission: string;
   equipment: readonly VehicleEquipment[];
@@ -42,16 +44,11 @@ export type Vehicle = {
   href: `/listing-detail-v1/${number}`;
 };
 
-// Equipment facets are limited to recurring features published in Day & Night's
-// current adverts for these model families (daynight.mobile.bg, checked 2026-08-30).
-
-
-// Imported master fixtures are not VIN-verified stock. Preserve source media;
-// client promotion requires replacing and verifying each record, including reused photos.
 export const featuredVehicles: Vehicle[] = [
   {
     "id": 1,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://navara.mobile.bg/obiava-11786363468065195-nissan-micra-1-0-n-sport",
     "image": "/navara/vehicles/11786363468065195-1.webp",
     "category": "Хечбек",
@@ -62,6 +59,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2021,
     "mileage": "63 800 км",
     "mileageKm": 63800,
+    "mileageKnown": true,
+    "mileageValue": 63800,
+    "mileageUnit": "km",
     "fuel": "Бензин",
     "transmission": "Ръчна",
     "equipment": [
@@ -71,12 +71,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 10500,
-    "href": "/listing-detail-v1/1",
-    "type": "car"
+    "href": "/listing-detail-v1/1"
   },
   {
     "id": 2,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://navara.mobile.bg/obiava-11782409246983224-vw-polo-1-6-tdi",
     "image": "/navara/vehicles/11782409246983224-1.webp",
     "category": "Хечбек",
@@ -87,17 +87,20 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2018,
     "mileage": "125 902 км",
     "mileageKm": 125902,
+    "mileageKnown": true,
+    "mileageValue": 125902,
+    "mileageUnit": "km",
     "fuel": "Дизел",
     "transmission": "Ръчна",
     "equipment": [],
     "condition": "used",
     "priceEur": 10000,
-    "href": "/listing-detail-v1/2",
-    "type": "car"
+    "href": "/listing-detail-v1/2"
   },
   {
     "id": 3,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://navara.mobile.bg/obiava-11787311216769974-tesla-model-3-peformance-dual-motor",
     "image": "/navara/vehicles/11787311216769974-1.webp",
     "category": "Седан",
@@ -108,6 +111,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2022,
     "mileage": "63 900 км",
     "mileageKm": 63900,
+    "mileageKnown": true,
+    "mileageValue": 63900,
+    "mileageUnit": "km",
     "fuel": "Електрически",
     "transmission": "Автоматик",
     "equipment": [
@@ -118,12 +124,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 32999,
-    "href": "/listing-detail-v1/3",
-    "type": "car"
+    "href": "/listing-detail-v1/3"
   },
   {
     "id": 4,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://navara.mobile.bg/obiava-21780735125049477-nissan-qashqai-2-0i-4x4-automatic-sv-awd",
     "image": "/navara/vehicles/21780735125049477-1.webp",
     "category": "SUV",
@@ -134,6 +140,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2023,
     "mileage": "57 000 км",
     "mileageKm": 57000,
+    "mileageKnown": true,
+    "mileageValue": 57000,
+    "mileageUnit": "km",
     "fuel": "Бензин",
     "transmission": "Автоматик",
     "equipment": [
@@ -143,12 +152,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 18499,
-    "href": "/listing-detail-v1/4",
-    "type": "car"
+    "href": "/listing-detail-v1/4"
   },
   {
     "id": 5,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://navara.mobile.bg/obiava-11787212062225914-peugeot-2008-e-2008-allure",
     "image": "/navara/vehicles/11787212062225914-1.webp",
     "category": "SUV",
@@ -159,6 +168,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2022,
     "mileage": "59 079 км",
     "mileageKm": 59079,
+    "mileageKnown": true,
+    "mileageValue": 59079,
+    "mileageUnit": "km",
     "fuel": "Електрически",
     "transmission": "Автоматик",
     "equipment": [
@@ -167,12 +179,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 19999,
-    "href": "/listing-detail-v1/5",
-    "type": "car"
+    "href": "/listing-detail-v1/5"
   },
   {
     "id": 6,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://navara.mobile.bg/obiava-21774534756506554-opel-mokka-1-4-i-gaz-benzin",
     "image": "/navara/vehicles/21774534756506554-1.webp",
     "category": "SUV",
@@ -183,6 +195,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2015,
     "mileage": "182 000 км",
     "mileageKm": 182000,
+    "mileageKnown": true,
+    "mileageValue": 182000,
+    "mileageUnit": "km",
     "fuel": "Бензин / LPG",
     "transmission": "Ръчна",
     "equipment": [
@@ -190,12 +205,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 6999,
-    "href": "/listing-detail-v1/6",
-    "type": "car"
+    "href": "/listing-detail-v1/6"
   },
   {
     "id": 7,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://navara.mobile.bg/obiava-11784982235652112-audi-a4-1-8-i-quattro",
     "image": "/navara/vehicles/11784982235652112-1.webp",
     "category": "Комби",
@@ -206,6 +221,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2009,
     "mileage": "212 000 км",
     "mileageKm": 212000,
+    "mileageKnown": true,
+    "mileageValue": 212000,
+    "mileageUnit": "km",
     "fuel": "Бензин",
     "transmission": "Ръчна",
     "equipment": [
@@ -216,12 +234,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 6999,
-    "href": "/listing-detail-v1/7",
-    "type": "car"
+    "href": "/listing-detail-v1/7"
   },
   {
     "id": 8,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://navara.mobile.bg/obiava-11772183782578045-mercedes-benz-b-250-b250-e",
     "image": "/navara/vehicles/11772183782578045-1.webp",
     "category": "Хечбек",
@@ -232,6 +250,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2016,
     "mileage": "106 000 км",
     "mileageKm": 106000,
+    "mileageKnown": true,
+    "mileageValue": 106000,
+    "mileageUnit": "km",
     "fuel": "Електрически",
     "transmission": "Автоматик",
     "equipment": [
@@ -240,12 +261,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 9999,
-    "href": "/listing-detail-v1/8",
-    "type": "car"
+    "href": "/listing-detail-v1/8"
   },
   {
     "id": 9,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://navara.mobile.bg/obiava-11780755712824361-smart-fortwo-1-0i",
     "image": "/navara/vehicles/11780755712824361-1.webp",
     "category": "Хечбек",
@@ -256,6 +277,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2011,
     "mileage": "66 121 км",
     "mileageKm": 66121,
+    "mileageKnown": true,
+    "mileageValue": 66121,
+    "mileageUnit": "km",
     "fuel": "Бензин",
     "transmission": "Автоматик",
     "equipment": [
@@ -263,12 +287,14 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 4500,
-    "href": "/listing-detail-v1/9",
-    "type": "car"
+    "href": "/listing-detail-v1/9"
   }
 ];
 
-export const formatVehiclePrice = (amount: number, locale: Locale = localeContract.defaultLocale) => amount > 0 ? formatPrice(amount, locale) : templateText(locale, 'Price on request');
+export const formatVehiclePrice = (
+  amount: number,
+  locale: Locale = localeContract.defaultLocale
+) => amount > 0 ? formatPrice(amount, locale) : templateText(locale, 'Price on request');
 
 /** Allow a currency line break while preserving the locale's grouped digits. */
 export const formatVehiclePriceLabel = (amount: number, locale: Locale = localeContract.defaultLocale) =>

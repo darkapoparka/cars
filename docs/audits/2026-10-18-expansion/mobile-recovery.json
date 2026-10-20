@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "originalChat": "6ad50ecb-6024-83ed-96ee-b1f3a37f2bdf",
+  "originalState": "Last recoverable progress18:35UTC; no final output recovered; original follow-up rejected as no compatible active turn. Original preserved.",
+  "recoveryChat": "https://chatgpt.com/g/g-p-6ad50eac88248191b3c40db13e9868a5-cars-template-mobile/c/6ad53246-5f94-83ed-80ee-21054e5bf022",
+  "mode": "Chat",
+  "modelUi": "GPT-6 selected; Pro5/5 verified before submission",
+  "sourceBaseline": "b49b5cd10b8a3a3bea5c86d89f80a1c88426c96f",
+  "sourceTree": "792bfdd1d8eb22aabd90c7e3a0c0779a6c1c36f3",
+  "prompt": "mobile-recovery-prompt.txt",
+  "submissionProof": "mobile-recovery-submitted.jpg",
+  "submitted": true,
+  "completed": true,
+  "integrated": true,
+  "published": true,
+  "hostedAcceptance": false,
+  "completedAt": "2026-10-18T21:46:04.270Z",
+  "finalReport": "mobile-final-audit.txt",
+  "patch": "mobile-final-audit.patch",
+  "patchBytes": 29066,
+  "patchSha256": "49b69826b2faaa5f0a6949b2cb0a6cf6260f4486ca59b62a73044d422ad2510b",
+  "exactInlineRecoveryVerified": true,
+  "remaining": [
+    "Original19pathdelta canonicalreconciliation",
+    "NonEUR monetarycontrol/serviceunits",
+    "Nativeentryclaims and earlySellFlowstoragecopy",
+    "Productionbuild and actualsixdesign browser/hostingacceptance"
+  ],
+  "integrationScope": "Exact canonical source patch in the commit containing this receipt; occupied local drafts preserved. No lock selection or deployment.",
+  "productionBuild": false
+}

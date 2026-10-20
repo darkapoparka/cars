@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-input-mapping",
+  "dealer": "focus1-varna",
+  "inputs": {
+    "facts": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/focus1-varna/facts.json",
+      "sha256": "a5c3d8ff06fd3441838ef23d157cae36d89456879db7f88546acb2c2c9ce7c3b"
+    },
+    "stock": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/focus1-varna/stock.json",
+      "sha256": "9f0ea8175ecbbb94f8f39f9822c0ccb9b8e3cfaed244a7da4aeec237513a7a52"
+    },
+    "locale": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/focus1-varna/locale.json",
+      "sha256": "b3b9e4fc25bcfd6e553ea550d0fb5416f74f406277d2eb0c38c7353c9c975476"
+    },
+    "branding": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/focus1-varna/branding.json",
+      "sha256": "6e9c0ad37339408c483ccc6d1b0d7b5cc05b0a3df8445258f3f241577f9e3f73"
+    }
+  },
+  "sources": [
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/focus1-varna/identity-repository-corrected-additional100.json",
+      "sha256": "88b9069f77ee93339d24ba769b40570f31e2cccecb618c12e14ea0148c6362c3"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/focus1-varna/facts.json",
+      "sha256": "a5c3d8ff06fd3441838ef23d157cae36d89456879db7f88546acb2c2c9ce7c3b"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/focus1-varna/stock.json",
+      "sha256": "9f0ea8175ecbbb94f8f39f9822c0ccb9b8e3cfaed244a7da4aeec237513a7a52"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/focus1-varna/locale.json",
+      "sha256": "b3b9e4fc25bcfd6e553ea550d0fb5416f74f406277d2eb0c38c7353c9c975476"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/focus1-varna/branding.json",
+      "sha256": "6e9c0ad37339408c483ccc6d1b0d7b5cc05b0a3df8445258f3f241577f9e3f73"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/focus1-varna/media/11735043947455415-1.webp",
+      "sha256": "6de24bcf128a7c365fe49cfaabc21d2a541207704598357b4283e62e2a9282ec"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/focus1-varna/media/11735043947455415-2.webp",
+      "sha256": "ca579d45ee6ef0de1cc50d3e8e3acc8c21d84a598b5e0e79ce95dbed016a25fa"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/focus1-varna/copy-review-additional100.json",
+      "sha256": "68ec5f8ba85ae293b72ec7832f856d4dcce8a907d47e8e6da8dda4358a6c64cd"
+    }
+  ]
+}

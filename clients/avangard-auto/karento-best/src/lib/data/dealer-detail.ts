@@ -36,6 +36,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "valueKey": "fuel.diesel"
       },
       {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2018",
+        "labelKey": "vehicle.field.year"
+      },
+      {
         "id": "lit",
         "icon": "/assets/imgs/page/car/lit.svg",
         "value": "190 hp",
@@ -149,7 +155,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "AVANGARD AUTO",
       "location": "бул. Цар Освободител 289",
-      "avatar": "/dealer-brand/logo-on-light-20260919.webp",
+      "avatar": "/dealer-brand/v2-d2d110db50b48593/logo-on-light.webp",
       "mobile": "0877 800 921",
       "email": "",
       "whatsapp": "",
@@ -199,6 +205,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Diesel",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.diesel"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2019",
+        "labelKey": "vehicle.field.year"
       },
       {
         "id": "lit",
@@ -312,7 +324,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "AVANGARD AUTO",
       "location": "бул. Цар Освободител 289",
-      "avatar": "/dealer-brand/logo-on-light-20260919.webp",
+      "avatar": "/dealer-brand/v2-d2d110db50b48593/logo-on-light.webp",
       "mobile": "0877 800 921",
       "email": "",
       "whatsapp": "",
@@ -362,6 +374,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Petrol",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.gasoline"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2019",
+        "labelKey": "vehicle.field.year"
       },
       {
         "id": "lit",
@@ -494,7 +512,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "AVANGARD AUTO",
       "location": "бул. Цар Освободител 289",
-      "avatar": "/dealer-brand/logo-on-light-20260919.webp",
+      "avatar": "/dealer-brand/v2-d2d110db50b48593/logo-on-light.webp",
       "mobile": "0877 800 921",
       "email": "",
       "whatsapp": "",
@@ -544,6 +562,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Diesel",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.diesel"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2016",
+        "labelKey": "vehicle.field.year"
       },
       {
         "id": "lit",
@@ -645,7 +669,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "AVANGARD AUTO",
       "location": "бул. Цар Освободител 289",
-      "avatar": "/dealer-brand/logo-on-light-20260919.webp",
+      "avatar": "/dealer-brand/v2-d2d110db50b48593/logo-on-light.webp",
       "mobile": "0877 800 921",
       "email": "",
       "whatsapp": "",
@@ -695,6 +719,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Diesel",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.diesel"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2013",
+        "labelKey": "vehicle.field.year"
       },
       {
         "id": "lit",
@@ -803,7 +833,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "AVANGARD AUTO",
       "location": "бул. Цар Освободител 289",
-      "avatar": "/dealer-brand/logo-on-light-20260919.webp",
+      "avatar": "/dealer-brand/v2-d2d110db50b48593/logo-on-light.webp",
       "mobile": "0877 800 921",
       "email": "",
       "whatsapp": "",
@@ -853,6 +883,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Diesel",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.diesel"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2018",
+        "labelKey": "vehicle.field.year"
       },
       {
         "id": "lit",
@@ -965,7 +1001,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "AVANGARD AUTO",
       "location": "бул. Цар Освободител 289",
-      "avatar": "/dealer-brand/logo-on-light-20260919.webp",
+      "avatar": "/dealer-brand/v2-d2d110db50b48593/logo-on-light.webp",
       "mobile": "0877 800 921",
       "email": "",
       "whatsapp": "",
@@ -1015,6 +1051,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Diesel",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.diesel"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2014",
+        "labelKey": "vehicle.field.year"
       },
       {
         "id": "lit",
@@ -1123,7 +1165,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "AVANGARD AUTO",
       "location": "бул. Цар Освободител 289",
-      "avatar": "/dealer-brand/logo-on-light-20260919.webp",
+      "avatar": "/dealer-brand/v2-d2d110db50b48593/logo-on-light.webp",
       "mobile": "0877 800 921",
       "email": "",
       "whatsapp": "",
@@ -1173,6 +1215,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Diesel",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.diesel"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2014",
+        "labelKey": "vehicle.field.year"
       },
       {
         "id": "lit",
@@ -1281,7 +1329,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "AVANGARD AUTO",
       "location": "бул. Цар Освободител 289",
-      "avatar": "/dealer-brand/logo-on-light-20260919.webp",
+      "avatar": "/dealer-brand/v2-d2d110db50b48593/logo-on-light.webp",
       "mobile": "0877 800 921",
       "email": "",
       "whatsapp": "",
@@ -1331,6 +1379,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Diesel",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.diesel"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2016",
+        "labelKey": "vehicle.field.year"
       },
       {
         "id": "lit",
@@ -1446,7 +1500,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "AVANGARD AUTO",
       "location": "бул. Цар Освободител 289",
-      "avatar": "/dealer-brand/logo-on-light-20260919.webp",
+      "avatar": "/dealer-brand/v2-d2d110db50b48593/logo-on-light.webp",
       "mobile": "0877 800 921",
       "email": "",
       "whatsapp": "",
@@ -1496,6 +1550,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Diesel",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.diesel"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2010",
+        "labelKey": "vehicle.field.year"
       },
       {
         "id": "lit",
@@ -1606,7 +1666,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "AVANGARD AUTO",
       "location": "бул. Цар Освободител 289",
-      "avatar": "/dealer-brand/logo-on-light-20260919.webp",
+      "avatar": "/dealer-brand/v2-d2d110db50b48593/logo-on-light.webp",
       "mobile": "0877 800 921",
       "email": "",
       "whatsapp": "",
@@ -1656,6 +1716,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Petrol",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.gasoline"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2013",
+        "labelKey": "vehicle.field.year"
       },
       {
         "id": "lit",
@@ -1763,7 +1829,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "AVANGARD AUTO",
       "location": "бул. Цар Освободител 289",
-      "avatar": "/dealer-brand/logo-on-light-20260919.webp",
+      "avatar": "/dealer-brand/v2-d2d110db50b48593/logo-on-light.webp",
       "mobile": "0877 800 921",
       "email": "",
       "whatsapp": "",
@@ -1813,6 +1879,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Petrol",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.gasoline"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2018",
+        "labelKey": "vehicle.field.year"
       },
       {
         "id": "lit",
@@ -1946,7 +2018,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "AVANGARD AUTO",
       "location": "бул. Цар Освободител 289",
-      "avatar": "/dealer-brand/logo-on-light-20260919.webp",
+      "avatar": "/dealer-brand/v2-d2d110db50b48593/logo-on-light.webp",
       "mobile": "0877 800 921",
       "email": "",
       "whatsapp": "",
@@ -1996,6 +2068,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Petrol",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.gasoline"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2017",
+        "labelKey": "vehicle.field.year"
       },
       {
         "id": "lit",
@@ -2125,7 +2203,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "AVANGARD AUTO",
       "location": "бул. Цар Освободител 289",
-      "avatar": "/dealer-brand/logo-on-light-20260919.webp",
+      "avatar": "/dealer-brand/v2-d2d110db50b48593/logo-on-light.webp",
       "mobile": "0877 800 921",
       "email": "",
       "whatsapp": "",
@@ -2175,6 +2253,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Petrol",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.gasoline"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2018",
+        "labelKey": "vehicle.field.year"
       },
       {
         "id": "lit",
@@ -2309,7 +2393,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "AVANGARD AUTO",
       "location": "бул. Цар Освободител 289",
-      "avatar": "/dealer-brand/logo-on-light-20260919.webp",
+      "avatar": "/dealer-brand/v2-d2d110db50b48593/logo-on-light.webp",
       "mobile": "0877 800 921",
       "email": "",
       "whatsapp": "",
@@ -2359,6 +2443,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Petrol",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.gasoline"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2018",
+        "labelKey": "vehicle.field.year"
       },
       {
         "id": "lit",
@@ -2489,7 +2579,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "AVANGARD AUTO",
       "location": "бул. Цар Освободител 289",
-      "avatar": "/dealer-brand/logo-on-light-20260919.webp",
+      "avatar": "/dealer-brand/v2-d2d110db50b48593/logo-on-light.webp",
       "mobile": "0877 800 921",
       "email": "",
       "whatsapp": "",
@@ -2539,6 +2629,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Diesel",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.diesel"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2011",
+        "labelKey": "vehicle.field.year"
       },
       {
         "id": "lit",
@@ -2653,7 +2749,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "AVANGARD AUTO",
       "location": "бул. Цар Освободител 289",
-      "avatar": "/dealer-brand/logo-on-light-20260919.webp",
+      "avatar": "/dealer-brand/v2-d2d110db50b48593/logo-on-light.webp",
       "mobile": "0877 800 921",
       "email": "",
       "whatsapp": "",

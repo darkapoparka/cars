@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "dealer": "granada-auto-sales",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T12:02:44Z",
+  "disclosure": "Dated public listing samples observed on 19 October 2026. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "sonata-2022",
+      "title": "2022 Hyundai Sonata SEL",
+      "make": "Hyundai",
+      "model": "Sonata SEL",
+      "year": 2022,
+      "mileageOnRequest": true,
+      "transmission": "Automatic",
+      "fuel": "Gasoline",
+      "color": "Black",
+      "currency": "USD",
+      "images": [
+        "/dealer-stock/sonata-2022.webp"
+      ],
+      "sourceUrl": "https://inventory.granadaautosales.com/listing/2022-hyundai-sonata-sel-sedan-4d",
+      "observedAt": "2026-10-19T12:06:52Z",
+      "availability": "Advertised in the observed public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "description": "Dated public listing samples observed on 19 October 2026. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "palisade-2022",
+      "title": "2022 Hyundai Palisade Limited",
+      "make": "Hyundai",
+      "model": "Palisade Limited",
+      "year": 2022,
+      "mileageOnRequest": true,
+      "transmission": "Automatic",
+      "fuel": "Gasoline",
+      "color": "Blue",
+      "currency": "USD",
+      "images": [
+        "/dealer-stock/palisade-2022.webp"
+      ],
+      "sourceUrl": "https://inventory.granadaautosales.com/listing/2022-hyundai-palisade-limited-sport-utility-4d",
+      "observedAt": "2026-10-19T12:06:52Z",
+      "availability": "Advertised in the observed public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "description": "Dated public listing samples observed on 19 October 2026. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "corolla-2022",
+      "title": "2022 Toyota Corolla LE",
+      "make": "Toyota",
+      "model": "Corolla LE",
+      "year": 2022,
+      "mileageOnRequest": true,
+      "transmission": "Automatic",
+      "fuel": "Gasoline",
+      "color": "Blue",
+      "currency": "USD",
+      "images": [
+        "/dealer-stock/corolla-2022.webp"
+      ],
+      "sourceUrl": "https://inventory.granadaautosales.com/listing/2022-toyota-corolla-le-sedan-4d",
+      "observedAt": "2026-10-19T12:06:52Z",
+      "availability": "Advertised in the observed public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "description": "Dated public listing samples observed on 19 October 2026. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

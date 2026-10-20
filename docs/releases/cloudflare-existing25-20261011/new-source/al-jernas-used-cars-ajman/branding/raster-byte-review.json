@@ -1,0 +1,49 @@
+{
+  "checkedAt": "2026-10-18T21:32:35.811Z",
+  "assets": [
+    {
+      "name": "on-light-master.png",
+      "sha256": "f1bf3161e13a3b39eee59ca928d8b5b87d90072c61361c9b03f8fa25213d7a3a",
+      "bytes": 562079,
+      "width": 2172,
+      "height": 724,
+      "format": "png",
+      "hasAlpha": true,
+      "transparentRatio": 0.7792306400903514,
+      "opaquePixels": 250895
+    },
+    {
+      "name": "on-dark-master.png",
+      "sha256": "d15ef000b5be35ae31d4d0248d3c8d1a55dc92d26f4180ac043a5b4e464587da",
+      "bytes": 591749,
+      "width": 2171,
+      "height": 724,
+      "format": "png",
+      "hasAlpha": true,
+      "transparentRatio": 0.7004238441943142,
+      "opaquePixels": 274476
+    },
+    {
+      "name": "on-accent-master.png",
+      "sha256": "54908927d1681fb4999a4d530df29b8860ef944315065c7bc2c934dbe8065bb5",
+      "bytes": 523497,
+      "width": 2172,
+      "height": 724,
+      "format": "png",
+      "hasAlpha": true,
+      "transparentRatio": 0.6951685438987414,
+      "opaquePixels": 291912
+    },
+    {
+      "name": "compact-mark.png",
+      "sha256": "ab9c9a3221a58806c93ede8ef0dee4a4b35b35d3a49bb28f8f8a45f4913208ad",
+      "bytes": 695744,
+      "width": 1254,
+      "height": 1254,
+      "format": "png",
+      "hasAlpha": true,
+      "transparentRatio": 0.742474480386845,
+      "opaquePixels": 323971
+    }
+  ]
+}

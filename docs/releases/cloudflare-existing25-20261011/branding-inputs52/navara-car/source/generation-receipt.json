@@ -1,0 +1,215 @@
+{
+  "strategy": "USE GENERATED CANDIDATE",
+  "displayName": "Навара кар",
+  "queueDisplayName": "Навара кар",
+  "identityStatus": "Final polished proposal under owner single-row direction; existing name and individual palette preserved. Not official dealer rebrand or owner acceptance.",
+  "sourceUrls": [
+    "https://navara.mobile.bg/",
+    "https://cdn2.focus.bg/mobile/images/houseslogos/h10849685945706627.pic"
+  ],
+  "generatedPath": "C:/Users/radev/.codex/generated_images/01a12a0e-8374-7732-9e28-580ceda2a0fc/exec-1f7e06e5-1ca5-4da2-b795-75e4adba26e2.png",
+  "onLight": "original",
+  "onDark": "white",
+  "onAccent": "white",
+  "accentColor": "#405ff2",
+  "reason": "Replace the generic racing font and repeated road emblem with a distinctive upright Cyrillic identity.",
+  "priorPreferredPack": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/navara-car",
+  "priorPreferredMasterSha256": "21008fbc790f9f3485442adf00156f85404d85e0fb957872f25a0ee6b00e126c",
+  "imageGeneration": {
+    "tool": "image_gen.imagegen",
+    "modelVersion": "not exposed by tool",
+    "reference": "exec-1f7e06e5-1ca5-4da2-b795-75e4adba26e2",
+    "toolArguments": {
+      "transparent_background": true,
+      "referenced_image_paths": [
+        "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/navara-car/branding/logo-master.png"
+      ],
+      "prompt": "Polish this dealer logo into a more distinctive premium identity. Exact complete Cyrillic text НАВАРА КАР, all in ONE horizontal row. Keep the existing deep red and charcoal palette. Replace the generic heavily slanted racing font with strong custom upright softly squared Cyrillic lettering, open counters, deliberate individual letter cuts, comfortable tight spacing. A very compact НК initial monogram can sit to the left, no more than one letter wide; build it from actual initials rather than a road, car, shield, wings or abstract NA. The full name must dominate and read at 120px total width. No descriptor, slogan, tiny text or second line. Flat solid clean vector-like artwork, generous transparent margins, no gradient, shadow, texture or mockup. Proposed improvement of the same name, true transparent background."
+    },
+    "outputPath": "C:/Users/radev/.codex/generated_images/01a12a0e-8374-7732-9e28-580ceda2a0fc/exec-1f7e06e5-1ca5-4da2-b795-75e4adba26e2.png",
+    "outputHint": "Generated images are saved to C:\\Users\\radev\\.codex\\generated_images\\01a12a0e-8374-7732-9e28-580ceda2a0fc as C:\\Users\\radev\\.codex\\generated_images\\01a12a0e-8374-7732-9e28-580ceda2a0fc\\exec-1f7e06e5-1ca5-4da2-b795-75e4adba26e2.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+    "referenceFiles": [
+      {
+        "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/navara-car/branding/logo-master.png",
+        "sha256": "21008fbc790f9f3485442adf00156f85404d85e0fb957872f25a0ee6b00e126c"
+      }
+    ],
+    "sourceUrls": [
+      "https://navara.mobile.bg/",
+      "https://cdn2.focus.bg/mobile/images/houseslogos/h10849685945706627.pic"
+    ],
+    "nativeMetadata": {
+      "path": "C:/Users/radev/.codex/generated_images/01a12a0e-8374-7732-9e28-580ceda2a0fc/exec-1f7e06e5-1ca5-4da2-b795-75e4adba26e2.png",
+      "sha256": "665d0f0afc10a11fa838beb64006bf551700f8f0bf7aa316e35c72c207e70ec2",
+      "bytes": 361191,
+      "width": 2171,
+      "height": 724,
+      "format": "png",
+      "hasAlpha": true
+    }
+  },
+  "surfaceReviewPath": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/final-polish-stage/navara-car/surface-review.png",
+  "visualAccepted": true,
+  "ownerApproved": false,
+  "visualChecks": {
+    "spelling": "НАВАРА КАР",
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "swatches": [
+      "#ffffff",
+      "#30343b",
+      "#17191c",
+      "#202023",
+      "#19171d",
+      "#171717",
+      "#b00020",
+      "#405ff2"
+    ],
+    "judgment": "Actual exported eight-swatch sheet inspected; complete name one row, strong small-size weight and open counters, no clipping or material visible residue at compact widths. Distinct compact geometry; white treatment on dark/accent. Asset-only review, no actual site consumers or hosted acceptance.",
+    "reviewer": "root",
+    "ownerAcceptance": false
+  },
+  "schemaVersion": 1,
+  "dealer": "navara-car",
+  "state": "asset-verified",
+  "generated": {
+    "path": "C:/Users/radev/.codex/generated_images/01a12a0e-8374-7732-9e28-580ceda2a0fc/exec-1f7e06e5-1ca5-4da2-b795-75e4adba26e2.png",
+    "sha256": "665d0f0afc10a11fa838beb64006bf551700f8f0bf7aa316e35c72c207e70ec2",
+    "bytes": 361191,
+    "format": "png",
+    "width": 2171,
+    "height": 724,
+    "hasAlpha": true,
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparentRatio": 0.8323264223783627,
+      "opaqueRatio": 0.1497266834796196
+    },
+    "visibleBounds": {
+      "x": 89,
+      "y": 253,
+      "width": 2008,
+      "height": 198
+    }
+  },
+  "assets": {
+    "onLight": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/final-polish-stage/navara-car/dealer-brand/logo-on-light.webp",
+      "sha256": "d246ac3e0f32a9eee7d8f1357af15c364cec53bb556ceca63017df2fdba1fbc4",
+      "bytes": 48552,
+      "format": "webp",
+      "width": 1496,
+      "height": 211,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.5931520389284538,
+        "opaqueRatio": 0.35967318853435387
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 36,
+        "width": 1400,
+        "height": 139
+      },
+      "publicPath": "/dealer-brand/logo-on-light.webp"
+    },
+    "onDark": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/final-polish-stage/navara-car/dealer-brand/logo-on-dark.webp",
+      "sha256": "1e31e463690ff64cdc4ad8f5843d09dc7e7e3e6c7d7dc4c04763ddb0194775b0",
+      "bytes": 26168,
+      "format": "webp",
+      "width": 1496,
+      "height": 211,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.5931520389284538,
+        "opaqueRatio": 0.35967318853435387
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 36,
+        "width": 1400,
+        "height": 139
+      },
+      "publicPath": "/dealer-brand/logo-on-dark.webp"
+    },
+    "onAccent": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/final-polish-stage/navara-car/dealer-brand/logo-on-accent.webp",
+      "sha256": "1e31e463690ff64cdc4ad8f5843d09dc7e7e3e6c7d7dc4c04763ddb0194775b0",
+      "bytes": 26168,
+      "format": "webp",
+      "width": 1496,
+      "height": 211,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.5931520389284538,
+        "opaqueRatio": 0.35967318853435387
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 36,
+        "width": 1400,
+        "height": 139
+      },
+      "publicPath": "/dealer-brand/logo-on-accent.webp"
+    }
+  },
+  "master": {
+    "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/final-polish-stage/navara-car/branding/logo-master.png",
+    "sha256": "ea2e3f7dcb0e2120fd0a19cfeee45b30522365f433b3cba12a4fb3ea2ae58a73",
+    "bytes": 130285,
+    "format": "png",
+    "width": 1496,
+    "height": 211,
+    "hasAlpha": true,
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparentRatio": 0.5931520389284538,
+      "opaqueRatio": 0.35967318853435387
+    },
+    "visibleBounds": {
+      "x": 48,
+      "y": 36,
+      "width": 1400,
+      "height": 139
+    }
+  },
+  "technicalAcceptance": {
+    "spelling": "НАВАРА КАР",
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "swatches": [
+      "#ffffff",
+      "#30343b",
+      "#17191c",
+      "#202023",
+      "#19171d",
+      "#171717",
+      "#b00020",
+      "#405ff2"
+    ],
+    "judgment": "Actual exported eight-swatch sheet inspected; complete name one row, strong small-size weight and open counters, no clipping or material visible residue at compact widths. Distinct compact geometry; white treatment on dark/accent. Asset-only review, no actual site consumers or hosted acceptance.",
+    "reviewer": "root",
+    "ownerAcceptance": false
+  },
+  "integrationVerified": false,
+  "hostedVerified": false,
+  "exportTool": "docs/logo-refresh/2026-09-18/tools/build-approved-logo-pack.mjs",
+  "exportToolSha256": "7fab60c4000210eff6bbb91f9c35e869bad90834d3bdd09d282a9a51835f0dbc",
+  "exportIsolation": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/final-root-export",
+  "updatedAt": "2026-10-11T12:04:01.930Z"
+}

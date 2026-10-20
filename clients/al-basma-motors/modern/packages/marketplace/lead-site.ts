@@ -1,5 +1,6 @@
 import { carsLocale } from './cars-locale';
 import type {
+  PublicInventoryFilterLayout,
   PublicSiteArtwork,
   PublicSiteConfig,
 } from "@repo/marketplace-domain/site-config";
@@ -41,6 +42,16 @@ export interface LeadSiteConfig {
   readonly country: string;
   readonly countryCode: string;
   readonly currency: LeadSiteCurrency;
+  readonly desktopAccent?: string;
+  readonly desktopInventoryFilterLayout?: PublicInventoryFilterLayout;
+  /** Source-bound master identity; dealer adaptation changes the slug and disables it. */
+  readonly desktopPreviewIdentity?: {
+    readonly sourceSlug: string;
+    readonly label: string;
+    readonly wordmark: string;
+    readonly markArtwork?: string;
+    readonly copy: Readonly<Record<"bg" | "en", string>>;
+  };
   readonly district: { readonly bg: string; readonly en: string };
   readonly email: string;
   readonly financingArtworkPath: string;
@@ -62,6 +73,8 @@ export interface LeadSiteConfig {
   readonly logoOnAccent: string;
   readonly mapsEmbedUrl: string;
   readonly mapsUrl: string;
+  readonly mobileFinancingArtworkPath?: string;
+  readonly mobileShowroomArtworkPath?: string;
   readonly name: string;
   readonly phoneDisplay: string;
   readonly phoneHref: string;
@@ -101,8 +114,20 @@ export const leadSite: LeadSiteConfig = {
     "tagline": "Al Basma — vehicles and dealer support in Sharjah."
   }
 },
-  accent: "#454b50",
-  address: "ул. „Атанас Манчев“ 18, Sharjah",
+  accent: "#09090b",
+  desktopAccent: "#09090b",
+  desktopInventoryFilterLayout: "quick",
+  desktopPreviewIdentity: {
+    sourceSlug: "day-night-auto-group",
+    label: "Modern",
+    wordmark: "Modern",
+    markArtwork: "/images/brand/modern-logo-v2.webp",
+    copy: {
+      bg: "Открийте следващия си автомобил.",
+      en: "Find your next car.",
+    },
+  },
+  address: "Showroom 61, Souq Al Haraj, Sharjah, UAE",
   city: "Sharjah",
   district: { bg: "Шарджа", en: "Sharjah" },
   sellCategoryAssets: {
@@ -112,17 +137,21 @@ export const leadSite: LeadSiteConfig = {
     van: "/lead-sell-van-v1.png",
   },
   financingArtworkPath: "/images/services/leasing-red-suv-v2.webp",
+  mobileFinancingArtworkPath: "/images/lease/mobile-pdp-finance-studio-v2.webp",
+  mobileShowroomArtworkPath:
+    "/images/lease/mobile-pdp-showroom-blue-hour-v1.webp",
   contactUrl: "tel:+971543422222",
-  country: "България",
+  country: "United Arab Emirates",
   countryCode: carsLocale.dealerCountry,
   currency: carsLocale.inventoryCurrency,
   email: "admin@albasmamotors.com",
   heroPath: "/lead-hero.jpg",
   locale: "en-AE",
-  logoPath: "/dealer-brand/logo-on-dark.webp",
-  logoOnLight: "/dealer-brand/logo-on-light.webp",
-  logoOnDark: "/dealer-brand/logo-on-dark.webp",
-  logoOnAccent: "/dealer-brand/logo-on-accent.webp",
+  logoPath: "/dealer-brand/v2-e73f3eb48de7300c/logo-on-light.webp",
+  logoInversePath: "/dealer-brand/v2-e73f3eb48de7300c/logo-on-dark.webp",
+  logoOnLight: "/dealer-brand/v2-e73f3eb48de7300c/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/v2-e73f3eb48de7300c/logo-on-dark.webp",
+  logoOnAccent: "/dealer-brand/v2-e73f3eb48de7300c/logo-on-dark.webp",
   mapsEmbedUrl:
     "https://maps.google.com/maps?q=Showroom%2061%2C%20Souq%20Al%20Haraj%2C%20Sharjah%2C%20UAE&z=16&hl=en&output=embed",
   mapsUrl:
@@ -134,6 +163,6 @@ export const leadSite: LeadSiteConfig = {
   slug: "al-basma-motors",
   socialLinks: {"facebook":"https://www.facebook.com/albasmamotors","instagram":"https://www.instagram.com/albasmamotors"},
   staticDemoMode: true,
-  tagline: "Премиум автомобили, внос и собствен лизинг в Sharjah.",
+  tagline: "Al Basma — vehicles and dealer support in Sharjah.",
 };
 // LEAD_SITE_CONFIG_END

@@ -1,0 +1,130 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-registered-dealer-source-adoption",
+  "dealer": "tesi-car-varna",
+  "reviewed": true,
+  "reviewedAt": "2026-10-13T19:30:40.492Z",
+  "canonicalSourceRepository": "darkapoparka/cars",
+  "baseline": {
+    "commit": "89001396e585fc312d2b4e14c6ccd162399c117d",
+    "tree": "8248cd180577043a4d0a1a3edd3942e681b629d9"
+  },
+  "identity": {
+    "dealerId": "tesi-car-varna",
+    "repository": "darkapoparka/cars-tesi-car-varna",
+    "workerName": "cars-tesi-car-varna",
+    "publicOrigin": "https://cars-tesi-car-varna.darkapoparka1.workers.dev",
+    "sources": [
+      {
+        "url": "https://tesicar.mobile.bg/",
+        "observedAt": "2026-09-10"
+      }
+    ]
+  },
+  "layout": {
+    "kind": "raw-unmounted-applications",
+    "reviewed": true,
+    "proofs": [
+      {
+        "path": "auto-best/svelte.config.js",
+        "sha256": "12c428bb7348c6beb2af9f896b9d4607510b2e3a8bb22b6b68a9ad2fd809fe69"
+      },
+      {
+        "path": "carwow/svelte.config.js",
+        "sha256": "6f9f2e467afe235ca6bdcf14bdef6260b0b7060d92aa311dbff09445e0912bc8"
+      },
+      {
+        "path": "modern/apps/web/next.config.ts",
+        "sha256": "dd47e165bfbfae56740a33cff2e3d5ba2a4b62ef490731586c02de9aedd54476"
+      }
+    ]
+  },
+  "variants": [
+    {
+      "key": "auto-best",
+      "base": "",
+      "entry": "/"
+    },
+    {
+      "key": "modern",
+      "base": "/variant-2",
+      "entry": "/variant-2/cars"
+    },
+    {
+      "key": "carwow",
+      "base": "/variant-3",
+      "entry": "/variant-3/"
+    }
+  ],
+  "applications": {
+    "auto-best": "30e7fe9150d6d5ffa1636d09f5db95922dd71b56",
+    "carwow": "3982f65564930812092f40fd998c6ee8362eabe1",
+    "modern": "bda0b3bec8752ea61feffae98b11dbbce52a0f0c"
+  },
+  "templateSources": {
+    "auto-best": null,
+    "carwow": null,
+    "modern": null
+  },
+  "provenance": {
+    "auto-best": {
+      "metadata": {
+        "path": "auto-best/.client/project.json",
+        "sha256": "350d130aa27f048ac304db4ded9e7dc6dc2e6f4382f1ad708cc3e2e7f8987296"
+      },
+      "copyReceipt": {
+        "path": "auto-best/.template/source-manifest.json",
+        "sha256": "f834fe0d602ac15b3ef7fcd6637511b334c93b74d7de2bf1863387498344e617"
+      }
+    },
+    "carwow": {
+      "metadata": {
+        "path": "carwow/.client/project.json",
+        "sha256": "3f20620c93ca91ad8023baa7c0f0565e96d25389efcb7022c2764c861d158c55"
+      },
+      "copyReceipt": {
+        "path": "carwow/.template/source-manifest.json",
+        "sha256": "016633a63dbcf8429c9897870f6252c35264242a6a136a0f0263877b57624409"
+      }
+    },
+    "modern": {
+      "metadata": {
+        "path": "modern/.client/project.json",
+        "sha256": "fd054614cc6ba44cd3f218f59715225a582c7cd70ca2db8ba28d82aaa86b6a9c"
+      },
+      "copyReceipt": {
+        "path": "modern/.template/source-manifest.json",
+        "sha256": "57d64194cd7a30aac2b95a267ed2aac11f06e927ea0c4f68c4963349fa231ff9"
+      }
+    }
+  },
+  "personalization": {
+    "path": "docs/releases/cloudflare-existing25-20261011/registered-source/tesi-car-varna/personalization.json",
+    "sha256": "3ce6334a750c665befd601ad85927e9cc4aea568faf670b2b8c7370f035fa7ed"
+  },
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "globalReleaseApproval": false,
+  "templateRefresh": {
+    "schemaVersion": 1,
+    "kind": "cars-owner-directed-pinned-template-refresh",
+    "reviewed": true,
+    "reviewedAt": "2026-10-13T19:30:40.492Z",
+    "dealer": "tesi-car-varna",
+    "baseline": {
+      "commit": "89001396e585fc312d2b4e14c6ccd162399c117d",
+      "tree": "8248cd180577043a4d0a1a3edd3942e681b629d9"
+    },
+    "families": [
+      "auto-best",
+      "modern",
+      "import",
+      "app",
+      "mobile",
+      "karento-best"
+    ],
+    "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "preserveOriginalSourceInGit": true,
+    "unversionedBaseline": true
+  }
+}

@@ -1,6 +1,14 @@
 import type { Locale } from '$lib/locale/core';
 /** Dealer-owned listing descriptions and specification labels. Source facts are not mutated. */
 export const inventoryCopy = {
+	bmw740RearWheelSteering: {
+		bg: 'BMW 740 Завиващ заден мост',
+		en: 'BMW 740 Rear-wheel steering'
+	},
+	rearWheelSteering: {
+		bg: 'Завиващ заден мост',
+		en: 'Rear-wheel steering'
+	},
 	term0: {
 		bg: '4(5) Врати',
 		en: '4(5) doors'
@@ -477,8 +485,64 @@ export const inventoryCopy = {
 		bg: 'Автомобилът е с пълна сервизна история в Порше. Може да се провери във всяко представителство на марката. Sport Chrono пакет. Абсолютно автентичен вид както е излезнал от завода. Регистриран с каско, гражданска, данък, винетка. Без бартер. Само сериозни обаждания.',
 		en: 'Full Porsche service history. Can be checked at any dealership for the brand. Sport Chrono package. Entirely original factory appearance. Registered, with comprehensive insurance, third-party liability insurance, tax and vignette. No trade-ins. Serious inquiries only.'
 	}
+,
+	"dealerStock_a0832b399f2c889f4f53539116767296f69ca7560bf758f6a68667085e19bb18": {
+		"bg": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+		"en": "Dated listing snapshot; confirm the price and availability directly with the dealership."
+	},
+	"dealerStock_d04158cef66af6e9e3f19f4ce98231c23c015950501b3f5dbb03611b9cab275b": {
+		"bg": "360 камера / задна камера",
+		"en": "360 camera / rear camera"
+	},
+	"dealerStock_6e6c280e9623093cd1633e5d0c6a87eb298b3264443fe9e868238fb954ed0dbb": {
+		"bg": "Apple CarPlay / Android Auto",
+		"en": "Apple CarPlay / Android Auto"
+	},
+	"dealerStock_5b775fabfef2be2fa4dd7f7afc79d7578945e23f8ab6a95875240edc7c9eed5a": {
+		"bg": "Пакет OFFROAD",
+		"en": "Off-road package"
+	},
+	"dealerStock_0184fe75300fc233b182c53220cc314715a7247d92f167e8a0a6335f4391b6cb": {
+		"bg": "Аудио / видео",
+		"en": "Audio / video"
+	},
+	"dealerStock_f258769daf4cedc0e0f4ac711c2fe5090299dd941db55faefab350b88ca23ab1": {
+		"bg": "IN / AUX изводи",
+		"en": "IN / AUX inputs"
+	},
+	"dealerStock_4807faef19a35446d6a4ebab85c6608e927c3e9b63dfa5113d0b8a6dcf23e695": {
+		"bg": "Графит",
+		"en": "Graphite"
+	},
+	"dealerStock_a361d0a678da8d08851a6de6afed2cc99e145a910b1d5408495969c8b433ca16": {
+		"bg": "Bluetooth / handsfree система",
+		"en": "Bluetooth / hands-free system"
+	},
+	"dealerStock_a90c2550d3a3c7e7cc969add9a838b298f72f9781a56f3ec45e6ed3414922ccd": {
+		"bg": "Перла",
+		"en": "Pearlescent"
+	},
+	"dealerStock_3b3d9186b800a052121e5858cb8e81c6e882694ee34fe58db4e4cba9393ecf17": {
+		"bg": "Обратно изкупуване",
+		"en": "Buy back"
+	},
+	"dealerStock_53ea1d8d941c7398e9d6e789507aba3f7ca0dbe4e38e3bacb23fd18c57ae16f2": {
+		"bg": "Син",
+		"en": "Blue"
+	},
+	"dealerStock_48b06561777df6aac3646cf2f92b50a3b3f1254254853f01b5b267433e95211c": {
+		"bg": "Бартер",
+		"en": "Part exchange"
+	},
+	"dealerStock_d8525042e8415e53d5b155ea37d6df6b1a5b01e4b8aca32b996f1314825ffd8c": {
+		"bg": "Кафяв",
+		"en": "Brown"
+	}
+
 } satisfies Record<string, Record<Locale, string>>;
 export const inventorySourceKeys: Readonly<Record<string, keyof typeof inventoryCopy>> = {
+	'BMW 740 Завиващ заден мост': 'bmw740RearWheelSteering',
+	'Завиващ заден мост': 'rearWheelSteering',
 	'4(5) Врати': 'term0',
 	'4x4': 'term1',
 	'Auto Start Stop function': 'term2',
@@ -630,6 +694,21 @@ export const inventorySourceKeys: Readonly<Record<string, keyof typeof inventory
 		'description30',
 	'Автомобилът е с пълна сервизна история в Порше. Може да се провери във всяко представителство на марката. Sport Chrono пакет. Абсолютно автентичен вид както е излезнал от завода. Регистриран с каско, гражданска, данък, винетка. Без бартер. Само сериозни обаждания.':
 		'description31'
+,
+	"Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.": "dealerStock_a0832b399f2c889f4f53539116767296f69ca7560bf758f6a68667085e19bb18",
+	"360 camera \\ Задна камера": "dealerStock_d04158cef66af6e9e3f19f4ce98231c23c015950501b3f5dbb03611b9cab275b",
+	"Apple CarPlay \\ Android Auto": "dealerStock_6e6c280e9623093cd1633e5d0c6a87eb298b3264443fe9e868238fb954ed0dbb",
+	"OFFROAD пакет": "dealerStock_5b775fabfef2be2fa4dd7f7afc79d7578945e23f8ab6a95875240edc7c9eed5a",
+	"audio\\video": "dealerStock_0184fe75300fc233b182c53220cc314715a7247d92f167e8a0a6335f4391b6cb",
+	"IN\\AUX изводи": "dealerStock_f258769daf4cedc0e0f4ac711c2fe5090299dd941db55faefab350b88ca23ab1",
+	"Графит": "dealerStock_4807faef19a35446d6a4ebab85c6608e927c3e9b63dfa5113d0b8a6dcf23e695",
+	"Bluetooth \\ handsfree система": "dealerStock_a361d0a678da8d08851a6de6afed2cc99e145a910b1d5408495969c8b433ca16",
+	"Перла": "dealerStock_a90c2550d3a3c7e7cc969add9a838b298f72f9781a56f3ec45e6ed3414922ccd",
+	"Buy back": "dealerStock_3b3d9186b800a052121e5858cb8e81c6e882694ee34fe58db4e4cba9393ecf17",
+	"Син": "dealerStock_53ea1d8d941c7398e9d6e789507aba3f7ca0dbe4e38e3bacb23fd18c57ae16f2",
+	"Бартер": "dealerStock_48b06561777df6aac3646cf2f92b50a3b3f1254254853f01b5b267433e95211c",
+	"Кафяв": "dealerStock_d8525042e8415e53d5b155ea37d6df6b1a5b01e4b8aca32b996f1314825ffd8c"
+
 };
 export function inventoryText(locale: Locale, value: string): string {
 	const key = inventorySourceKeys[value];

@@ -1,0 +1,78 @@
+{
+  "createdAt": "2026-10-18T20:58:48.962Z",
+  "purpose": "One bounded public research intake/publication checkpoint; no private CRM data",
+  "files": [
+    {
+      "file": "usa.json",
+      "bytes": 187314,
+      "chars": 187201,
+      "sha256": "39080afaea1c0c74bd94afba119350c7e1aaf0330fb554ef162fe27fa9bae34b"
+    },
+    {
+      "file": "usa-research.md",
+      "bytes": 15035,
+      "chars": 15031,
+      "sha256": "5a494877031611f21ee12f6af65bd3385246e3d3f91eae4cb2dedc876b8d2e10"
+    },
+    {
+      "file": "uk.json",
+      "bytes": 346139,
+      "chars": 345936,
+      "sha256": "6cd8d365586f9a5d5131fe4b1d50baede7de91ab384a135017c25367298b07c4"
+    },
+    {
+      "file": "uk-research.md",
+      "bytes": 3336,
+      "chars": 3334,
+      "sha256": "3888e16350fd98ccd34575aad3006bbb3fd4241423a1c511f7a37a4753a967f3"
+    },
+    {
+      "file": "uae.json",
+      "bytes": 701774,
+      "chars": 701735,
+      "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+    },
+    {
+      "file": "uae-research.md",
+      "bytes": 7181,
+      "chars": 7179,
+      "sha256": "717092d232c3bd13bd716f7897eeefd47dfadc451051776b666256515c0efb3d"
+    },
+    {
+      "file": "uae-supplement.json",
+      "bytes": 78452,
+      "chars": 78109,
+      "sha256": "ea2d396ef7a8a73326f488e53858ac60b4a0324d553ccba34b566b5ec5e91f2a"
+    },
+    {
+      "file": "uae-supplement-research.md",
+      "bytes": 13265,
+      "chars": 13211,
+      "sha256": "c6b015bdaa0aa5dcfa718f88e623c0b4ddf306c7f952182c05bebd6285be93be"
+    },
+    {
+      "file": "usa-supplement.json",
+      "bytes": 36916,
+      "chars": 36916,
+      "sha256": "9f61452a6f728d6eeab63a945aea441d6f8737b0f8b41f4eb4c6924e04a8ae0e"
+    },
+    {
+      "file": "usa-supplement-research.md",
+      "bytes": 2641,
+      "chars": 2639,
+      "sha256": "836b73db83e9f7ee5617dc751ff46b246eaf4ae1bce261f52640ad47b3cf9eb1"
+    },
+    {
+      "file": "uae-supplement-2.json",
+      "bytes": 87335,
+      "chars": 86506,
+      "sha256": "aee92b9d3407b408d84113272c67358d98517f397cfbfe76fb223f15ba8a093e"
+    },
+    {
+      "file": "uae-supplement-2-research.md",
+      "bytes": 4905,
+      "chars": 4901,
+      "sha256": "4aa66c37db93f1acdf8083643d27adbeaa8edc69402d26a4f7d9fd24164d3574"
+    }
+  ]
+}

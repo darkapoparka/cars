@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "slug": "varnacarexpress-varna",
+  "name": "Варна Кар Експрес",
+  "shortName": "Варна Кар Експрес",
+  "city": "Варна",
+  "country": "BG",
+  "countryCode": "BG",
+  "locale": "bg-BG",
+  "currency": "EUR",
+  "distanceUnit": "km",
+  "phone": "0899155902",
+  "phoneDisplay": "0899155902",
+  "phoneE164": "+359899155902",
+  "phones": [
+    "0899155902",
+    "0897964420"
+  ],
+  "addressLine": "бул.'Цар Освободител' 200м. след Дом на Камиона посока Аксаково.",
+  "address": "бул.'Цар Освободител' 200м. след Дом на Камиона посока Аксаково., Варна, България",
+  "hours": "Понеделник 09:00 - 17:30 ч. Вторник 00:00 - 00:00 ч. Сряда 00:00 - 00:00 ч. Четвъртък 00:00 - 00:00 ч. Петък 00:00 - 00:00 ч. Събота 00:00 - 00:00 ч. Неделя Почивен ден",
+  "email": "",
+  "sourceUrl": "https://varnacarexpress.mobile.bg/",
+  "stockUrl": "https://varnacarexpress.mobile.bg/",
+  "contactSourceUrl": "https://varnacarexpress.mobile.bg/contacts",
+  "observedAt": "2026-10-11T11:49:53.712Z",
+  "inventoryNotice": "Датирана извадка от публични обяви, не складова система в реално време. Потвърдете цената, ДДС и наличността.",
+  "previewNotice": "Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация.",
+  "services": [],
+  "socialLinks": {}
+}

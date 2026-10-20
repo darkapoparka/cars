@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-input-mapping",
+  "dealer": "nordic-auto-varna",
+  "inputs": {
+    "facts": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/nordic-auto-varna/facts.json",
+      "sha256": "f92f8c81f95b5b7bb8cec3c93674a3a1590a200ef42b0fba97f132bfca78f64a"
+    },
+    "stock": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/nordic-auto-varna/stock.json",
+      "sha256": "7ab94bb2ed5cb460b0278cd00ac7e87b8b0760beb7ac288f78372cea5978d403"
+    },
+    "locale": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/nordic-auto-varna/locale.json",
+      "sha256": "503b60f7a88dfa92aff28b0ee1f637305a922719542bd63a0836b3dbf995cb92"
+    },
+    "branding": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/nordic-auto-varna/branding.json",
+      "sha256": "87869a536744630bc165c3f4f640ecc2c098cdc2ede519f63d7063eddd2b7457"
+    }
+  },
+  "sources": [
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/nordic-auto-varna/research-facts.json",
+      "sha256": "592f39f11881fa3deaa74fd12e5da421b4ea9897e5641816776c3a8459dcf86e"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/nordic-auto-varna/identity.json",
+      "sha256": "03e6f4cd2bc7f3fc97c28a59916aba31b8a2f86b14166ab86327689a5ad229bf"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/nordic-auto-varna/locale.json",
+      "sha256": "503b60f7a88dfa92aff28b0ee1f637305a922719542bd63a0836b3dbf995cb92"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/nordic-auto-varna/stock-research.json",
+      "sha256": "2f79cf74a27ff910f59391bb8d3708b2b7c579fb5a091d9a4ae0999dcceff165"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/nordic-auto-varna/branding.json",
+      "sha256": "87869a536744630bc165c3f4f640ecc2c098cdc2ede519f63d7063eddd2b7457"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/nordic-auto-varna/branding/generated-master.png",
+      "sha256": "5cd0386ec99f3dc2914ecd62c9b49f32a0dd3192ef26ce11ccb2fee7f4f2ab57"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/nordic-auto-varna/branding/on-accent.png",
+      "sha256": "c368d7b8088a9baa2d21459e416b016b206fc7ce9ec652d420cc339e3c0bf067"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/nordic-auto-varna/branding/on-dark.png",
+      "sha256": "c368d7b8088a9baa2d21459e416b016b206fc7ce9ec652d420cc339e3c0bf067"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/nordic-auto-varna/branding/on-light.png",
+      "sha256": "5cd0386ec99f3dc2914ecd62c9b49f32a0dd3192ef26ce11ccb2fee7f4f2ab57"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/nordic-auto-varna/facts.json",
+      "sha256": "f92f8c81f95b5b7bb8cec3c93674a3a1590a200ef42b0fba97f132bfca78f64a"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/nordic-auto-varna/generation-brief.json",
+      "sha256": "2f6d2089e62c5698537e8dfa4acaf41bf183935b28ddc64d0b473cc61e93ad77"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/nordic-auto-varna/media-input-mapping.json",
+      "sha256": "8a2b5d726d4ec88e70bec117e9e916fbb073145611e7ab889028170a358b7bf0"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/nordic-auto-varna/media/21783932906160618-1.webp",
+      "sha256": "e7f23c098d85de29793d4d42a9f5e0802438e5bbbc491f70963d9c00d17cdf3a"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/nordic-auto-varna/media/21783932906160618-2.webp",
+      "sha256": "ec4d642f02724a41154bf7cb5152ba839abec6abc825777da8a8348279541f07"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/nordic-auto-varna/media/21788770224128681-1.webp",
+      "sha256": "bc038defd925d00a486eb344c803906a0905dfbc60510e12075da31772346b01"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/nordic-auto-varna/media/21788770224128681-2.webp",
+      "sha256": "081eb07b9a812d9e35731767db0fe649e9129e8b4a8ee47a31211d28f9bb847e"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/nordic-auto-varna/reviewed-modern-inventory-copy.json",
+      "sha256": "37b8922595ef48431c73b8c19432353c3bc06539a437ab6ef97014ab28948374"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/nordic-auto-varna/stock.json",
+      "sha256": "7ab94bb2ed5cb460b0278cd00ac7e87b8b0760beb7ac288f78372cea5978d403"
+    }
+  ]
+}

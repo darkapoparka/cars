@@ -1,23 +1,24 @@
 import { cn } from "@repo/design-system/lib/utils";
+import { withBasePath } from "@repo/internationalization/paths";
 import { leadSite } from "@repo/marketplace";
 import { DealerMobileBrandBar, MobileDealerChrome } from "@repo/marketplace-ui";
 import { DealerMobileHeaderIcon } from "@repo/marketplace-ui/components/dealer-mobile-header-icon";
+import Image from "@repo/marketplace-ui/components/public-image";
 import { mobileHeaderIconActionClassName } from "@repo/marketplace-ui/lib/mobile-header-icon-action";
 import { Phone } from "lucide-react";
-import Image from "next/image";
 import type { ReactNode } from "react";
 
 const serviceWordmarkTones = {
   leasing: "light",
-  import: "dark",
-  sell: "dark",
+  import: "light",
+  sell: "light",
   contact: "original",
 } as const;
 const serviceBackgrounds = {
-  leasing: "#bd001b",
-  import: "#f5c542",
-  sell: "#dce8ee",
-  contact: "#09090b",
+  leasing: "var(--brand)",
+  import: "var(--brand)",
+  sell: "var(--brand)",
+  contact: "var(--brand)",
 } as const;
 
 /** Shared brand alignment with route-specific service artwork. */
@@ -29,20 +30,24 @@ export function MobileDealerServiceHero({
   locale,
   tone,
   helpAction,
+  title,
+  titleId,
 }: {
-  children: ReactNode;
+  children?: ReactNode;
   className?: string;
   imageClassName?: string;
   imageSrc: string;
   locale: "bg" | "en";
   tone?: "leasing" | "import" | "sell" | "contact";
   helpAction?: ReactNode;
+  title?: string;
+  titleId?: string;
 }) {
   return (
     <section
       className={cn(
         "relative isolate flex flex-col overflow-hidden bg-zinc-200 text-zinc-950 lg:hidden",
-        tone === "leasing" && "[--mobile-header-action-fill:20%]",
+        tone && "[--lead-site-accent-bright:white] [--ring:white]",
         className
       )}
       data-slot="mobile-service-hero"
@@ -76,9 +81,7 @@ export function MobileDealerServiceHero({
           <div
             className={cn(
               "grid h-11 grid-cols-[44px_minmax(0,1fr)_44px] items-center gap-3",
-              tone === "leasing" || tone === "contact"
-                ? "text-white"
-                : "text-zinc-950"
+              tone ? "text-white" : "text-zinc-950"
             )}
           >
             <div>{helpAction}</div>
@@ -92,12 +95,15 @@ export function MobileDealerServiceHero({
               aria-label={`${locale === "bg" ? "Обадете се на" : "Call"} ${leadSite.phoneDisplay}`}
               className={mobileHeaderIconActionClassName}
               data-slot="mobile-service-call"
-              href={leadSite.phoneHref}
+              href={withBasePath(leadSite.phoneHref)}
             >
               <DealerMobileHeaderIcon icon={Phone} kind="phone" />
             </a>
           </div>
         }
+        title={title}
+        titleClassName={tone ? "text-white" : "text-zinc-950"}
+        titleId={titleId}
       >
         {children}
       </MobileDealerChrome>

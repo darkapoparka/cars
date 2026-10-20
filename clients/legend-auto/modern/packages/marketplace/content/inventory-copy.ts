@@ -1,200 +1,326 @@
 import type { DealerInventoryCopy } from "../lead-site";
-/** Reviewed text for the existing sample stock only. */
+/** Dealer-owned display copy from the exact personalized listing set. */
 export const inventoryCopy = {
-  "bmw-x5-m50d-sofia-2020": {
-    sourceDescription:
-      "Примерна обява за BMW X5 M50d с 360 камери, панорама, HUD и обдухване. Снимката е илюстративна; наличност и условия се потвърждават с автокъщата.",
-    bg: {
-      description:
-        "Примерна обява за BMW X5 M50d с 360 камери, панорама, HUD и обдухване. Снимката е илюстративна; наличност и условия се потвърждават с автокъщата.",
-      imageAlts: ["Черен BMW X5 SUV"],
+  "audi-q4-2024-11774263732166588": {
+    "sourceDescription": "Audi Q4 Q4 e-tron 45 QUATTRO, DIGITAL, ТЕРМОПОМПА 29000km. 2024 г., 29 000 км, електрически, автоматик скоростна кутия. Публикувана оферта от LEGEND AUTO. Потвърдете наличността и характеристиките преди оглед.",
+    "en": {
+      "description": "Audi Q4 Q4 e-tron 45 QUATTRO, DIGITAL, ТЕРМОПОМПА 29000km. 2024, 29 000 km, electric, automatic transmission. Published offer from LEGEND AUTO. Confirm availability and specifications before arranging a viewing.",
+      "imageAlts": [
+        "Audi Q4 Q4 e-tron 45 QUATTRO, DIGITAL, ТЕРМОПОМПА 29000km",
+        "Audi Q4 Q4 e-tron 45 QUATTRO, DIGITAL, ТЕРМОПОМПА 29000km",
+        "Audi Q4 Q4 e-tron 45 QUATTRO, DIGITAL, ТЕРМОПОМПА 29000km",
+        "Audi Q4 Q4 e-tron 45 QUATTRO, DIGITAL, ТЕРМОПОМПА 29000km",
+        "Audi Q4 Q4 e-tron 45 QUATTRO, DIGITAL, ТЕРМОПОМПА 29000km"
+      ]
     },
-    en: {
-      description:
-        "Sample listing for a BMW X5 M50d with 360-degree cameras, panoramic roof, head-up display and ventilated seats. The image is illustrative; availability and terms must be confirmed with the dealership.",
-      imageAlts: ["Black BMW X5 SUV"],
-    },
+    "bg": {
+      "description": "Audi Q4 Q4 e-tron 45 QUATTRO, DIGITAL, ТЕРМОПОМПА 29000km. 2024 г., 29 000 км, електрически, автоматик скоростна кутия. Публикувана оферта от LEGEND AUTO. Потвърдете наличността и характеристиките преди оглед.",
+      "imageAlts": [
+        "Audi Q4 Q4 e-tron 45 QUATTRO, DIGITAL, ТЕРМОПОМПА 29000km",
+        "Audi Q4 Q4 e-tron 45 QUATTRO, DIGITAL, ТЕРМОПОМПА 29000km",
+        "Audi Q4 Q4 e-tron 45 QUATTRO, DIGITAL, ТЕРМОПОМПА 29000km",
+        "Audi Q4 Q4 e-tron 45 QUATTRO, DIGITAL, ТЕРМОПОМПА 29000km",
+        "Audi Q4 Q4 e-tron 45 QUATTRO, DIGITAL, ТЕРМОПОМПА 29000km"
+      ]
+    }
   },
-  "mercedes-benz-gls-400d-4matic-amg-sofia-2021": {
-    sourceDescription:
-      "GLS 400d 4MATIC AMG Line с Burmester и панорама. Голям семеен SUV от LEGEND AUTO - наличен за оглед в Варна.",
-    bg: {
-      description:
-        "GLS 400d 4MATIC AMG Line с Burmester и панорама. Голям семеен SUV от {shortName} - наличен за оглед в {city}.",
-      imageAlts: ["Mercedes-Benz GLS 4MATIC AMG SUV"],
+  "seat-leon-2017-11784618839120443": {
+    "sourceDescription": "Seat Leon 2.0TDI. 2017 г., 200 000 км, дизел, ръчна скоростна кутия. Публикувана оферта от LEGEND AUTO. Потвърдете наличността и характеристиките преди оглед.",
+    "en": {
+      "description": "Seat Leon 2.0TDI. 2017, 200 000 km, diesel, manual transmission. Published offer from LEGEND AUTO. Confirm availability and specifications before arranging a viewing.",
+      "imageAlts": [
+        "Seat Leon 2.0TDI",
+        "Seat Leon 2.0TDI",
+        "Seat Leon 2.0TDI",
+        "Seat Leon 2.0TDI",
+        "Seat Leon 2.0TDI"
+      ]
     },
-    en: {
-      description:
-        "GLS 400d 4MATIC AMG Line with Burmester audio and a panoramic roof. A large family SUV from {shortName}, available to view in {city}.",
-      imageAlts: ["Mercedes-Benz GLS 4MATIC AMG SUV"],
-    },
+    "bg": {
+      "description": "Seat Leon 2.0TDI. 2017 г., 200 000 км, дизел, ръчна скоростна кутия. Публикувана оферта от LEGEND AUTO. Потвърдете наличността и характеристиките преди оглед.",
+      "imageAlts": [
+        "Seat Leon 2.0TDI",
+        "Seat Leon 2.0TDI",
+        "Seat Leon 2.0TDI",
+        "Seat Leon 2.0TDI",
+        "Seat Leon 2.0TDI"
+      ]
+    }
   },
-  "bmw-750e-xdrive-m-sport-sofia-2024": {
-    sourceDescription:
-      "Очакван внос: 7 Series plug-in hybrid с M Sport. Нисък пробег - LEGEND AUTO организира доставка и оглед в Варна.",
-    bg: {
-      description:
-        "Очакван внос: 7 Series plug-in hybrid с M Sport. Нисък пробег - {shortName} организира доставка и оглед в {city}.",
-      imageAlts: ["BMW 7 Series"],
+  "vw-tiguan-2019-21785269571488349": {
+    "sourceDescription": "VW Tiguan 2.0TDI 150 к.с DSG 122000км НАВИГАЦИЯ. 2019 г., 122 000 км, дизел, автоматик скоростна кутия. Публикувана оферта от LEGEND AUTO. Потвърдете наличността и характеристиките преди оглед.",
+    "en": {
+      "description": "VW Tiguan 2.0TDI 150 к.с DSG 122000км НАВИГАЦИЯ. 2019, 122 000 km, diesel, automatic transmission. Published offer from LEGEND AUTO. Confirm availability and specifications before arranging a viewing.",
+      "imageAlts": [
+        "VW Tiguan 2.0TDI 150 к.с DSG 122000км НАВИГАЦИЯ",
+        "VW Tiguan 2.0TDI 150 к.с DSG 122000км НАВИГАЦИЯ",
+        "VW Tiguan 2.0TDI 150 к.с DSG 122000км НАВИГАЦИЯ",
+        "VW Tiguan 2.0TDI 150 к.с DSG 122000км НАВИГАЦИЯ",
+        "VW Tiguan 2.0TDI 150 к.с DSG 122000км НАВИГАЦИЯ"
+      ]
     },
-    en: {
-      description:
-        "Expected import: 7 Series plug-in hybrid with M Sport. Low mileage; {shortName} arranges delivery and viewing in {city}.",
-      imageAlts: ["BMW 7 Series"],
-    },
+    "bg": {
+      "description": "VW Tiguan 2.0TDI 150 к.с DSG 122000км НАВИГАЦИЯ. 2019 г., 122 000 км, дизел, автоматик скоростна кутия. Публикувана оферта от LEGEND AUTO. Потвърдете наличността и характеристиките преди оглед.",
+      "imageAlts": [
+        "VW Tiguan 2.0TDI 150 к.с DSG 122000км НАВИГАЦИЯ",
+        "VW Tiguan 2.0TDI 150 к.с DSG 122000км НАВИГАЦИЯ",
+        "VW Tiguan 2.0TDI 150 к.с DSG 122000км НАВИГАЦИЯ",
+        "VW Tiguan 2.0TDI 150 к.с DSG 122000км НАВИГАЦИЯ",
+        "VW Tiguan 2.0TDI 150 к.с DSG 122000км НАВИГАЦИЯ"
+      ]
+    }
   },
-  "mercedes-benz-e-63-s-amg-sofia-2021": {
-    sourceDescription:
-      "E 63 S AMG facelift с 360, HUD и Burmester. Спортна лимузина от LEGEND AUTO.",
-    bg: {
-      description:
-        "E 63 S AMG facelift с 360, HUD и Burmester. Спортна лимузина от {dealer}.",
-      imageAlts: ["Mercedes-Benz E-Class седан"],
+  "vw-passat-2015-11788186558085673": {
+    "sourceDescription": "VW Passat 2.0TDI DSG НАВИГАЦИЯ .ПОДГРЕВ НА СЕДАЛКИ. 2015 г., 220 000 км, дизел, автоматик скоростна кутия. Публикувана оферта от LEGEND AUTO. Потвърдете наличността и характеристиките преди оглед.",
+    "en": {
+      "description": "VW Passat 2.0TDI DSG НАВИГАЦИЯ .ПОДГРЕВ НА СЕДАЛКИ. 2015, 220 000 km, diesel, automatic transmission. Published offer from LEGEND AUTO. Confirm availability and specifications before arranging a viewing.",
+      "imageAlts": [
+        "VW Passat 2.0TDI DSG НАВИГАЦИЯ .ПОДГРЕВ НА СЕДАЛКИ",
+        "VW Passat 2.0TDI DSG НАВИГАЦИЯ .ПОДГРЕВ НА СЕДАЛКИ",
+        "VW Passat 2.0TDI DSG НАВИГАЦИЯ .ПОДГРЕВ НА СЕДАЛКИ",
+        "VW Passat 2.0TDI DSG НАВИГАЦИЯ .ПОДГРЕВ НА СЕДАЛКИ",
+        "VW Passat 2.0TDI DSG НАВИГАЦИЯ .ПОДГРЕВ НА СЕДАЛКИ"
+      ]
     },
-    en: {
-      description:
-        "Facelift E 63 S AMG with 360-degree cameras, head-up display and Burmester audio. A sports saloon from {dealer}.",
-      imageAlts: ["Mercedes-Benz E-Class saloon"],
-    },
+    "bg": {
+      "description": "VW Passat 2.0TDI DSG НАВИГАЦИЯ .ПОДГРЕВ НА СЕДАЛКИ. 2015 г., 220 000 км, дизел, автоматик скоростна кутия. Публикувана оферта от LEGEND AUTO. Потвърдете наличността и характеристиките преди оглед.",
+      "imageAlts": [
+        "VW Passat 2.0TDI DSG НАВИГАЦИЯ .ПОДГРЕВ НА СЕДАЛКИ",
+        "VW Passat 2.0TDI DSG НАВИГАЦИЯ .ПОДГРЕВ НА СЕДАЛКИ",
+        "VW Passat 2.0TDI DSG НАВИГАЦИЯ .ПОДГРЕВ НА СЕДАЛКИ",
+        "VW Passat 2.0TDI DSG НАВИГАЦИЯ .ПОДГРЕВ НА СЕДАЛКИ",
+        "VW Passat 2.0TDI DSG НАВИГАЦИЯ .ПОДГРЕВ НА СЕДАЛКИ"
+      ]
+    }
   },
-  "mercedes-benz-cls-400d-4matic-sofia-2020": {
-    sourceDescription:
-      "CLS 400d 4MATIC AMG Line Designo с 360 камери. Елегантно купе-седан от LEGEND AUTO в Варна.",
-    bg: {
-      description:
-        "CLS 400d 4MATIC AMG Line Designo с 360 камери. Елегантно купе-седан от {shortName} в {city}.",
-      imageAlts: ["Mercedes CLS"],
+  "vw-golf-2005-11788202283254523": {
+    "sourceDescription": "VW Golf 1.9TDI 105к.с. 2005 г., 205 000 км, дизел, ръчна скоростна кутия. Публикувана оферта от LEGEND AUTO. Потвърдете наличността и характеристиките преди оглед.",
+    "en": {
+      "description": "VW Golf 1.9TDI 105к.с. 2005, 205 000 km, diesel, manual transmission. Published offer from LEGEND AUTO. Confirm availability and specifications before arranging a viewing.",
+      "imageAlts": [
+        "VW Golf 1.9TDI 105к.с",
+        "VW Golf 1.9TDI 105к.с",
+        "VW Golf 1.9TDI 105к.с",
+        "VW Golf 1.9TDI 105к.с",
+        "VW Golf 1.9TDI 105к.с"
+      ]
     },
-    en: {
-      description:
-        "CLS 400d 4MATIC AMG Line Designo with 360-degree cameras. An elegant four-door coupe from {shortName} in {city}.",
-      imageAlts: ["Mercedes CLS"],
-    },
+    "bg": {
+      "description": "VW Golf 1.9TDI 105к.с. 2005 г., 205 000 км, дизел, ръчна скоростна кутия. Публикувана оферта от LEGEND AUTO. Потвърдете наличността и характеристиките преди оглед.",
+      "imageAlts": [
+        "VW Golf 1.9TDI 105к.с",
+        "VW Golf 1.9TDI 105к.с",
+        "VW Golf 1.9TDI 105к.с",
+        "VW Golf 1.9TDI 105к.с",
+        "VW Golf 1.9TDI 105к.с"
+      ]
+    }
   },
-  "audi-q8-50-tdi-quattro-s-line-sofia-2021": {
-    sourceDescription:
-      "Очакван внос: Q8 50 TDI quattro S line Plus. Купе-SUV с quattro за клиенти на LEGEND AUTO.",
-    bg: {
-      description:
-        "Очакван внос: Q8 50 TDI quattro S line Plus. Купе-SUV с quattro за клиенти на {shortName}.",
-      imageAlts: ["Audi Q8"],
+  "toyota-yaris-2012-11782331844226239": {
+    "sourceDescription": "Toyota Yaris 1.5 Хибрид Камера 4л/100км. 2012 г., 169 000 км, хибрид, автоматик скоростна кутия. Публикувана оферта от LEGEND AUTO. Потвърдете наличността и характеристиките преди оглед.",
+    "en": {
+      "description": "Toyota Yaris 1.5 Хибрид Камера 4л/100км. 2012, 169 000 km, hybrid, automatic transmission. Published offer from LEGEND AUTO. Confirm availability and specifications before arranging a viewing.",
+      "imageAlts": [
+        "Toyota Yaris 1.5 Хибрид Камера 4л/100км",
+        "Toyota Yaris 1.5 Хибрид Камера 4л/100км",
+        "Toyota Yaris 1.5 Хибрид Камера 4л/100км",
+        "Toyota Yaris 1.5 Хибрид Камера 4л/100км",
+        "Toyota Yaris 1.5 Хибрид Камера 4л/100км"
+      ]
     },
-    en: {
-      description:
-        "Expected import: Q8 50 TDI quattro S line Plus. A coupe-SUV with quattro for {shortName} customers.",
-      imageAlts: ["Audi Q8"],
-    },
+    "bg": {
+      "description": "Toyota Yaris 1.5 Хибрид Камера 4л/100км. 2012 г., 169 000 км, хибрид, автоматик скоростна кутия. Публикувана оферта от LEGEND AUTO. Потвърдете наличността и характеристиките преди оглед.",
+      "imageAlts": [
+        "Toyota Yaris 1.5 Хибрид Камера 4л/100км",
+        "Toyota Yaris 1.5 Хибрид Камера 4л/100км",
+        "Toyota Yaris 1.5 Хибрид Камера 4л/100км",
+        "Toyota Yaris 1.5 Хибрид Камера 4л/100км",
+        "Toyota Yaris 1.5 Хибрид Камера 4л/100км"
+      ]
+    }
   },
-  "mercedes-benz-gle-400d-coupe-sofia-2021": {
-    sourceDescription:
-      "GLE 400d Coupe 4MATIC AMG с 360 и Burmester. Наличен при LEGEND AUTO - Варна.",
-    bg: {
-      description:
-        "GLE 400d Coupe 4MATIC AMG с 360 и Burmester. Наличен при {dealer} - {city}.",
-      imageAlts: ["Черен Mercedes-Benz GLE SUV"],
+  "toyota-rav4-2022-21787135215316819": {
+    "sourceDescription": "Toyota Rav4 2.5 HYBRID/ГАЗ FULL НАВИГАЦИЯ, КОЖЕН САЛОН, FULL. 2022 г., 252 000 км, хибрид, автоматик скоростна кутия. Публикувана оферта от LEGEND AUTO. Потвърдете наличността и характеристиките преди оглед.",
+    "en": {
+      "description": "Toyota Rav4 2.5 HYBRID/ГАЗ FULL НАВИГАЦИЯ, КОЖЕН САЛОН, FULL. 2022, 252 000 km, hybrid, automatic transmission. Published offer from LEGEND AUTO. Confirm availability and specifications before arranging a viewing.",
+      "imageAlts": [
+        "Toyota Rav4 2.5 HYBRID/ГАЗ FULL НАВИГАЦИЯ, КОЖЕН САЛОН, FULL",
+        "Toyota Rav4 2.5 HYBRID/ГАЗ FULL НАВИГАЦИЯ, КОЖЕН САЛОН, FULL",
+        "Toyota Rav4 2.5 HYBRID/ГАЗ FULL НАВИГАЦИЯ, КОЖЕН САЛОН, FULL",
+        "Toyota Rav4 2.5 HYBRID/ГАЗ FULL НАВИГАЦИЯ, КОЖЕН САЛОН, FULL",
+        "Toyota Rav4 2.5 HYBRID/ГАЗ FULL НАВИГАЦИЯ, КОЖЕН САЛОН, FULL"
+      ]
     },
-    en: {
-      description:
-        "GLE 400d Coupe 4MATIC AMG with 360-degree cameras and Burmester audio. Available from {dealer} in {city}.",
-      imageAlts: ["Black Mercedes-Benz GLE SUV"],
-    },
+    "bg": {
+      "description": "Toyota Rav4 2.5 HYBRID/ГАЗ FULL НАВИГАЦИЯ, КОЖЕН САЛОН, FULL. 2022 г., 252 000 км, хибрид, автоматик скоростна кутия. Публикувана оферта от LEGEND AUTO. Потвърдете наличността и характеристиките преди оглед.",
+      "imageAlts": [
+        "Toyota Rav4 2.5 HYBRID/ГАЗ FULL НАВИГАЦИЯ, КОЖЕН САЛОН, FULL",
+        "Toyota Rav4 2.5 HYBRID/ГАЗ FULL НАВИГАЦИЯ, КОЖЕН САЛОН, FULL",
+        "Toyota Rav4 2.5 HYBRID/ГАЗ FULL НАВИГАЦИЯ, КОЖЕН САЛОН, FULL",
+        "Toyota Rav4 2.5 HYBRID/ГАЗ FULL НАВИГАЦИЯ, КОЖЕН САЛОН, FULL",
+        "Toyota Rav4 2.5 HYBRID/ГАЗ FULL НАВИГАЦИЯ, КОЖЕН САЛОН, FULL"
+      ]
+    }
   },
-  "mercedes-benz-gle-53-amg-coupe-sofia-2022": {
-    sourceDescription:
-      "Очакван внос: GLE 53 AMG Coupe Night Pack. LEGEND AUTO предлага собствен лизинг след оглед.",
-    bg: {
-      description:
-        "Очакван внос: GLE 53 AMG Coupe Night Pack. {shortName} предлага собствен лизинг след оглед.",
-      imageAlts: ["Бял Mercedes-Benz GLE AMG SUV"],
+  "toyota-auris-2009-11786699392982478": {
+    "sourceDescription": "Toyota Auris 2.0D4D. 2009 г., 229 000 км, дизел, ръчна скоростна кутия. Публикувана оферта от LEGEND AUTO. Потвърдете наличността и характеристиките преди оглед.",
+    "en": {
+      "description": "Toyota Auris 2.0D4D. 2009, 229 000 km, diesel, manual transmission. Published offer from LEGEND AUTO. Confirm availability and specifications before arranging a viewing.",
+      "imageAlts": [
+        "Toyota Auris 2.0D4D",
+        "Toyota Auris 2.0D4D",
+        "Toyota Auris 2.0D4D",
+        "Toyota Auris 2.0D4D",
+        "Toyota Auris 2.0D4D"
+      ]
     },
-    en: {
-      description:
-        "Expected import: GLE 53 AMG Coupe Night Pack. {shortName} offers in-house leasing after a viewing.",
-      imageAlts: ["White Mercedes-Benz GLE AMG SUV"],
-    },
+    "bg": {
+      "description": "Toyota Auris 2.0D4D. 2009 г., 229 000 км, дизел, ръчна скоростна кутия. Публикувана оферта от LEGEND AUTO. Потвърдете наличността и характеристиките преди оглед.",
+      "imageAlts": [
+        "Toyota Auris 2.0D4D",
+        "Toyota Auris 2.0D4D",
+        "Toyota Auris 2.0D4D",
+        "Toyota Auris 2.0D4D",
+        "Toyota Auris 2.0D4D"
+      ]
+    }
   },
-  "mercedes-benz-s-350d-long-amg-sofia-2019": {
-    sourceDescription:
-      "S 350d Long с S63 AMG оптика и пакет за шофьор. Представителна лимузина от LEGEND AUTO.",
-    bg: {
-      description:
-        "S 350d Long с S63 AMG оптика и пакет за шофьор. Представителна лимузина от {shortName}.",
-      imageAlts: ["Mercedes-Benz S-Class седан"],
+  "skoda-scala-2019-11787054081251501": {
+    "sourceDescription": "Skoda Scala 1.6TDI. 2019 г., 180 000 км, дизел, ръчна скоростна кутия. Публикувана оферта от LEGEND AUTO. Потвърдете наличността и характеристиките преди оглед.",
+    "en": {
+      "description": "Skoda Scala 1.6TDI. 2019, 180 000 km, diesel, manual transmission. Published offer from LEGEND AUTO. Confirm availability and specifications before arranging a viewing.",
+      "imageAlts": [
+        "Skoda Scala 1.6TDI",
+        "Skoda Scala 1.6TDI",
+        "Skoda Scala 1.6TDI",
+        "Skoda Scala 1.6TDI",
+        "Skoda Scala 1.6TDI"
+      ]
     },
-    en: {
-      description:
-        "S 350d Long with S63 AMG styling and a chauffeur package. An executive saloon from {shortName}.",
-      imageAlts: ["Mercedes-Benz S-Class saloon"],
-    },
+    "bg": {
+      "description": "Skoda Scala 1.6TDI. 2019 г., 180 000 км, дизел, ръчна скоростна кутия. Публикувана оферта от LEGEND AUTO. Потвърдете наличността и характеристиките преди оглед.",
+      "imageAlts": [
+        "Skoda Scala 1.6TDI",
+        "Skoda Scala 1.6TDI",
+        "Skoda Scala 1.6TDI",
+        "Skoda Scala 1.6TDI",
+        "Skoda Scala 1.6TDI"
+      ]
+    }
   },
-  "mercedes-benz-v-250d-vip-business-sofia-2018": {
-    sourceDescription:
-      "V 250d VIP Business с TV, обдухване и подгряване. Бизнес ван от LEGEND AUTO.",
-    bg: {
-      description:
-        "V 250d VIP Business с TV, обдухване и подгряване. Бизнес ван от {dealer}.",
-      imageAlts: ["V-Class ван"],
+  "renault-zoe-2020-11787771672265620": {
+    "sourceDescription": "Renault Zoe 52kw 78000km Собствена батерия. 2020 г., 78 000 км, електрически, автоматик скоростна кутия. Публикувана оферта от LEGEND AUTO. Потвърдете наличността и характеристиките преди оглед.",
+    "en": {
+      "description": "Renault Zoe 52kw 78000km Собствена батерия. 2020, 78 000 km, electric, automatic transmission. Published offer from LEGEND AUTO. Confirm availability and specifications before arranging a viewing.",
+      "imageAlts": [
+        "Renault Zoe 52kw 78000km Собствена батерия",
+        "Renault Zoe 52kw 78000km Собствена батерия",
+        "Renault Zoe 52kw 78000km Собствена батерия",
+        "Renault Zoe 52kw 78000km Собствена батерия",
+        "Renault Zoe 52kw 78000km Собствена батерия"
+      ]
     },
-    en: {
-      description:
-        "V 250d VIP Business with TV, ventilated and heated seats. A business van from {dealer}.",
-      imageAlts: ["V-Class van"],
-    },
+    "bg": {
+      "description": "Renault Zoe 52kw 78000km Собствена батерия. 2020 г., 78 000 км, електрически, автоматик скоростна кутия. Публикувана оферта от LEGEND AUTO. Потвърдете наличността и характеристиките преди оглед.",
+      "imageAlts": [
+        "Renault Zoe 52kw 78000km Собствена батерия",
+        "Renault Zoe 52kw 78000km Собствена батерия",
+        "Renault Zoe 52kw 78000km Собствена батерия",
+        "Renault Zoe 52kw 78000km Собствена батерия",
+        "Renault Zoe 52kw 78000km Собствена батерия"
+      ]
+    }
   },
-  "range-rover-sport-svr-sofia-2021": {
-    sourceDescription:
-      "Range Rover Sport SVR 600 к.с. с панорама, 360 и Meridian. Висок клас SUV от LEGEND AUTO.",
-    bg: {
-      description:
-        "Range Rover Sport SVR 600 к.с. с панорама, 360 и Meridian. Висок клас SUV от {shortName}.",
-      imageAlts: ["Range Rover Sport"],
+  "renault-clio-2014-11777013326319103": {
+    "sourceDescription": "Renault Clio 1.2 БЕНЗИН. 2014 г., 150 000 км, бензин, ръчна скоростна кутия. Публикувана оферта от LEGEND AUTO. Потвърдете наличността и характеристиките преди оглед.",
+    "en": {
+      "description": "Renault Clio 1.2 БЕНЗИН. 2014, 150 000 km, petrol, manual transmission. Published offer from LEGEND AUTO. Confirm availability and specifications before arranging a viewing.",
+      "imageAlts": [
+        "Renault Clio 1.2 БЕНЗИН",
+        "Renault Clio 1.2 БЕНЗИН",
+        "Renault Clio 1.2 БЕНЗИН",
+        "Renault Clio 1.2 БЕНЗИН",
+        "Renault Clio 1.2 БЕНЗИН"
+      ]
     },
-    en: {
-      description:
-        "Range Rover Sport SVR, 600 hp, with a panoramic roof, 360-degree cameras and Meridian audio. A premium SUV from {shortName}.",
-      imageAlts: ["Range Rover Sport"],
-    },
+    "bg": {
+      "description": "Renault Clio 1.2 БЕНЗИН. 2014 г., 150 000 км, бензин, ръчна скоростна кутия. Публикувана оферта от LEGEND AUTO. Потвърдете наличността и характеристиките преди оглед.",
+      "imageAlts": [
+        "Renault Clio 1.2 БЕНЗИН",
+        "Renault Clio 1.2 БЕНЗИН",
+        "Renault Clio 1.2 БЕНЗИН",
+        "Renault Clio 1.2 БЕНЗИН",
+        "Renault Clio 1.2 БЕНЗИН"
+      ]
+    }
   },
-  "bmw-430i-xdrive-gran-coupe-sofia-2023": {
-    sourceDescription:
-      "430i xDrive Gran Coupe M Sport с digital кокпит и Harman Kardon. LEGEND AUTO, Варна.",
-    bg: {
-      description:
-        "430i xDrive Gran Coupe M Sport с digital кокпит и Harman Kardon. {shortName}, {city}.",
-      imageAlts: ["BMW 4 Series"],
+  "peugeot-508-2013-11764232323880460": {
+    "sourceDescription": "Peugeot 508 2.0HDI. 2013 г., 232 000 км, дизел, ръчна скоростна кутия. Публикувана оферта от LEGEND AUTO. Потвърдете наличността и характеристиките преди оглед.",
+    "en": {
+      "description": "Peugeot 508 2.0HDI. 2013, 232 000 km, diesel, manual transmission. Published offer from LEGEND AUTO. Confirm availability and specifications before arranging a viewing.",
+      "imageAlts": [
+        "Peugeot 508 2.0HDI",
+        "Peugeot 508 2.0HDI",
+        "Peugeot 508 2.0HDI",
+        "Peugeot 508 2.0HDI",
+        "Peugeot 508 2.0HDI"
+      ]
     },
-    en: {
-      description:
-        "430i xDrive Gran Coupe M Sport with a digital cockpit and Harman Kardon audio. {shortName}, {city}.",
-      imageAlts: ["BMW 4 Series"],
-    },
+    "bg": {
+      "description": "Peugeot 508 2.0HDI. 2013 г., 232 000 км, дизел, ръчна скоростна кутия. Публикувана оферта от LEGEND AUTO. Потвърдете наличността и характеристиките преди оглед.",
+      "imageAlts": [
+        "Peugeot 508 2.0HDI",
+        "Peugeot 508 2.0HDI",
+        "Peugeot 508 2.0HDI",
+        "Peugeot 508 2.0HDI",
+        "Peugeot 508 2.0HDI"
+      ]
+    }
   },
-  "bmw-m4-competition-sofia-2021": {
-    sourceDescription:
-      "BMW M4 Competition с M пакет, спортен салон и digital кокпит. Купе от портфолиото на LEGEND AUTO.",
-    bg: {
-      description:
-        "BMW M4 Competition с M пакет, спортен салон и digital кокпит. Купе от портфолиото на {dealer}.",
-      imageAlts: ["Червено BMW M4 Competition пред модерен шоурум"],
+  "opel-astra-2017-11786966551654053": {
+    "sourceDescription": "Opel Astra 1.6. 2017 г., 193 000 км, дизел, ръчна скоростна кутия. Публикувана оферта от LEGEND AUTO. Потвърдете наличността и характеристиките преди оглед.",
+    "en": {
+      "description": "Opel Astra 1.6. 2017, 193 000 km, diesel, manual transmission. Published offer from LEGEND AUTO. Confirm availability and specifications before arranging a viewing.",
+      "imageAlts": [
+        "Opel Astra 1.6",
+        "Opel Astra 1.6",
+        "Opel Astra 1.6",
+        "Opel Astra 1.6",
+        "Opel Astra 1.6"
+      ]
     },
-    en: {
-      description:
-        "BMW M4 Competition with M package, sports interior and digital cockpit. A coupe from the {dealer} collection.",
-      imageAlts: ["Red BMW M4 Competition in front of a modern showroom"],
-    },
+    "bg": {
+      "description": "Opel Astra 1.6. 2017 г., 193 000 км, дизел, ръчна скоростна кутия. Публикувана оферта от LEGEND AUTO. Потвърдете наличността и характеристиките преди оглед.",
+      "imageAlts": [
+        "Opel Astra 1.6",
+        "Opel Astra 1.6",
+        "Opel Astra 1.6",
+        "Opel Astra 1.6",
+        "Opel Astra 1.6"
+      ]
+    }
   },
-  "bmw-x5-xdrive40d-berlin-2022": {
-    sourceDescription:
-      "Крос-бордер демо наличност с оторизирани медии и право на доставка. Финалният транспорт, данъци и регистрация се уточняват с оферта от LEGEND AUTO.",
-    bg: {
-      description:
-        "Крос-бордер демо наличност с оторизирани медии и право на доставка. Финалният транспорт, данъци и регистрация се уточняват с оферта от {shortName}.",
-      imageAlts: ["Черен BMW X5 SUV в градска среда"],
+  "opel-agila-2008-11725562013563390": {
+    "sourceDescription": "Opel Agila 1.3i Внос от Италия. 2008 г., 120 000 км, бензин, ръчна скоростна кутия. Публикувана оферта от LEGEND AUTO. Потвърдете наличността и характеристиките преди оглед.",
+    "en": {
+      "description": "Opel Agila 1.3i Внос от Италия. 2008, 120 000 km, petrol, manual transmission. Published offer from LEGEND AUTO. Confirm availability and specifications before arranging a viewing.",
+      "imageAlts": [
+        "Opel Agila 1.3i Внос от Италия",
+        "Opel Agila 1.3i Внос от Италия",
+        "Opel Agila 1.3i Внос от Италия",
+        "Opel Agila 1.3i Внос от Италия",
+        "Opel Agila 1.3i Внос от Италия"
+      ]
     },
-    en: {
-      description:
-        "Cross-border demo inventory with authorized images and delivery rights. Final transport, tax and registration costs are confirmed in a quote from {shortName}.",
-      imageAlts: ["Black BMW X5 SUV in an urban setting"],
-    },
-  },
+    "bg": {
+      "description": "Opel Agila 1.3i Внос от Италия. 2008 г., 120 000 км, бензин, ръчна скоростна кутия. Публикувана оферта от LEGEND AUTO. Потвърдете наличността и характеристиките преди оглед.",
+      "imageAlts": [
+        "Opel Agila 1.3i Внос от Италия",
+        "Opel Agila 1.3i Внос от Италия",
+        "Opel Agila 1.3i Внос от Италия",
+        "Opel Agila 1.3i Внос от Италия",
+        "Opel Agila 1.3i Внос от Италия"
+      ]
+    }
+  }
 } satisfies DealerInventoryCopy;

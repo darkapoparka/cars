@@ -1,0 +1,213 @@
+{
+  "strategy": "USE GENERATED CANDIDATE",
+  "displayName": "R.Q.S. Auto - Team",
+  "queueDisplayName": "R.Q.S. Auto - Team",
+  "identityStatus": "Final polished proposal under owner single-row direction; existing name and individual palette preserved. Not official dealer rebrand or owner acceptance.",
+  "sourceUrls": [
+    "https://rqsautoteam.mobile.bg/"
+  ],
+  "generatedPath": "C:/Users/radev/.codex/generated_images/01a12a0e-8374-7732-9e28-580ceda2a0fc/exec-57cfb8ab-5bbc-4be4-b3d1-38a4bebd642e.png",
+  "onLight": "original",
+  "onDark": "white",
+  "onAccent": "white",
+  "accentColor": "#405ff2",
+  "reason": "Redundant emblem and wide lettering reduce complete full-name readability at120; use a compact custom wordmark.",
+  "priorPreferredPack": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/rqs-auto-team",
+  "priorPreferredMasterSha256": "c450e4f0dada7aa1df79c12fdf0765e1c3e78b3b9e52e968fe56669937aca8a2",
+  "imageGeneration": {
+    "tool": "image_gen.imagegen",
+    "modelVersion": "not exposed by tool",
+    "reference": "exec-57cfb8ab-5bbc-4be4-b3d1-38a4bebd642e",
+    "toolArguments": {
+      "transparent_background": true,
+      "referenced_image_paths": [
+        "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/rqs-auto-team/branding/logo-master.png"
+      ],
+      "prompt": "Polish this identity for small header readability. Exact full name R.Q.S. AUTO-TEAM on ONE horizontal row. Retain deep red R.Q.S. and charcoal AUTO-TEAM. Remove the separate redundant R/road emblem. Design a distinctive slightly condensed upright custom wordmark: all letters same strong cap height, substantial weight, open counters, geometric rounded corners and selective unique joints. Preserve clear punctuation R.Q.S. and hyphen AUTO-TEAM. Avoid generic slanted racing letters, car outlines, road icons or shields. Full complete name dominant and taller at120px width. No slogan or second row. Flat solid vector-like transparent artwork, no effects or mockup."
+    },
+    "outputPath": "C:/Users/radev/.codex/generated_images/01a12a0e-8374-7732-9e28-580ceda2a0fc/exec-57cfb8ab-5bbc-4be4-b3d1-38a4bebd642e.png",
+    "outputHint": "Generated images are saved to C:\\Users\\radev\\.codex\\generated_images\\01a12a0e-8374-7732-9e28-580ceda2a0fc as C:\\Users\\radev\\.codex\\generated_images\\01a12a0e-8374-7732-9e28-580ceda2a0fc\\exec-57cfb8ab-5bbc-4be4-b3d1-38a4bebd642e.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+    "referenceFiles": [
+      {
+        "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/rqs-auto-team/branding/logo-master.png",
+        "sha256": "c450e4f0dada7aa1df79c12fdf0765e1c3e78b3b9e52e968fe56669937aca8a2"
+      }
+    ],
+    "sourceUrls": [
+      "https://rqsautoteam.mobile.bg/"
+    ],
+    "nativeMetadata": {
+      "path": "C:/Users/radev/.codex/generated_images/01a12a0e-8374-7732-9e28-580ceda2a0fc/exec-57cfb8ab-5bbc-4be4-b3d1-38a4bebd642e.png",
+      "sha256": "ba4b7ab77d9775d6f3605ccb512e909863a7432ec4f656f536954cd0001813be",
+      "bytes": 353403,
+      "width": 2171,
+      "height": 724,
+      "format": "png",
+      "hasAlpha": true
+    }
+  },
+  "surfaceReviewPath": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/final-polish-stage/rqs-auto-team/surface-review.png",
+  "visualAccepted": true,
+  "ownerApproved": false,
+  "visualChecks": {
+    "spelling": "R.Q.S. AUTO-TEAM",
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "swatches": [
+      "#ffffff",
+      "#30343b",
+      "#17191c",
+      "#202023",
+      "#19171d",
+      "#171717",
+      "#b00020",
+      "#405ff2"
+    ],
+    "judgment": "Actual exported eight-swatch sheet inspected; complete name one row, strong small-size weight and open counters, no clipping or material visible residue at compact widths. Distinct compact geometry; white treatment on dark/accent. Asset-only review, no actual site consumers or hosted acceptance.",
+    "reviewer": "root",
+    "ownerAcceptance": false
+  },
+  "schemaVersion": 1,
+  "dealer": "rqs-auto-team",
+  "state": "asset-verified",
+  "generated": {
+    "path": "C:/Users/radev/.codex/generated_images/01a12a0e-8374-7732-9e28-580ceda2a0fc/exec-57cfb8ab-5bbc-4be4-b3d1-38a4bebd642e.png",
+    "sha256": "ba4b7ab77d9775d6f3605ccb512e909863a7432ec4f656f536954cd0001813be",
+    "bytes": 353403,
+    "format": "png",
+    "width": 2171,
+    "height": 724,
+    "hasAlpha": true,
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparentRatio": 0.8288762466567078,
+      "opaqueRatio": 0.15006642049517624
+    },
+    "visibleBounds": {
+      "x": 47,
+      "y": 252,
+      "width": 2078,
+      "height": 206
+    }
+  },
+  "assets": {
+    "onLight": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/final-polish-stage/rqs-auto-team/dealer-brand/logo-on-light.webp",
+      "sha256": "1b255e98afea7dca166f9e4a14c552cf55b2b112cd69311d040d20d0f30ec025",
+      "bytes": 41914,
+      "format": "webp",
+      "width": 1496,
+      "height": 212,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.6123782917969932,
+        "opaqueRatio": 0.33533132378165675
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 36,
+        "width": 1399,
+        "height": 140
+      },
+      "publicPath": "/dealer-brand/logo-on-light.webp"
+    },
+    "onDark": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/final-polish-stage/rqs-auto-team/dealer-brand/logo-on-dark.webp",
+      "sha256": "6dcb17ab5725aa2c37b6fa4edbb3534f9dac8142f4d9465a45c6742c5e7b2b47",
+      "bytes": 24710,
+      "format": "webp",
+      "width": 1496,
+      "height": 212,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.6123782917969932,
+        "opaqueRatio": 0.33533132378165675
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 36,
+        "width": 1399,
+        "height": 140
+      },
+      "publicPath": "/dealer-brand/logo-on-dark.webp"
+    },
+    "onAccent": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/final-polish-stage/rqs-auto-team/dealer-brand/logo-on-accent.webp",
+      "sha256": "6dcb17ab5725aa2c37b6fa4edbb3534f9dac8142f4d9465a45c6742c5e7b2b47",
+      "bytes": 24710,
+      "format": "webp",
+      "width": 1496,
+      "height": 212,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.6123782917969932,
+        "opaqueRatio": 0.33533132378165675
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 36,
+        "width": 1399,
+        "height": 140
+      },
+      "publicPath": "/dealer-brand/logo-on-accent.webp"
+    }
+  },
+  "master": {
+    "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/final-polish-stage/rqs-auto-team/branding/logo-master.png",
+    "sha256": "4630c3916c61ca85a52d7c1d5b98fb16d20359fc6d1867cdcad8e32ef30191a1",
+    "bytes": 127328,
+    "format": "png",
+    "width": 1496,
+    "height": 212,
+    "hasAlpha": true,
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparentRatio": 0.6123782917969932,
+      "opaqueRatio": 0.33533132378165675
+    },
+    "visibleBounds": {
+      "x": 48,
+      "y": 36,
+      "width": 1399,
+      "height": 140
+    }
+  },
+  "technicalAcceptance": {
+    "spelling": "R.Q.S. AUTO-TEAM",
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "swatches": [
+      "#ffffff",
+      "#30343b",
+      "#17191c",
+      "#202023",
+      "#19171d",
+      "#171717",
+      "#b00020",
+      "#405ff2"
+    ],
+    "judgment": "Actual exported eight-swatch sheet inspected; complete name one row, strong small-size weight and open counters, no clipping or material visible residue at compact widths. Distinct compact geometry; white treatment on dark/accent. Asset-only review, no actual site consumers or hosted acceptance.",
+    "reviewer": "root",
+    "ownerAcceptance": false
+  },
+  "integrationVerified": false,
+  "hostedVerified": false,
+  "exportTool": "docs/logo-refresh/2026-09-18/tools/build-approved-logo-pack.mjs",
+  "exportToolSha256": "7fab60c4000210eff6bbb91f9c35e869bad90834d3bdd09d282a9a51835f0dbc",
+  "exportIsolation": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/final-root-export",
+  "updatedAt": "2026-10-11T12:04:02.473Z"
+}

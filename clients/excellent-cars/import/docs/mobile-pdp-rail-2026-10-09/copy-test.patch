@@ -1,0 +1,26 @@
+diff --git a/templates/import/src/lib/server/vehicle-detail.ts b/templates/import/src/lib/server/vehicle-detail.ts
+index 0a4f6b9d4..20861525d 100644
+--- a/templates/import/src/lib/server/vehicle-detail.ts
++++ b/templates/import/src/lib/server/vehicle-detail.ts
+@@ -111,7 +111,7 @@ const mobileDrawer = (locale: Locale = 'en'): AuxeroVehicleDetailMobileDrawer =>
+ 			: [
+ 					{ id: 'info', label: 'Info' },
+ 					{ id: 'specs', label: 'Specs' },
+-					{ id: 'features', label: 'Features' },
++					{ id: 'features', label: 'Extras' },
+ 					{ id: 'images', label: 'Images' },
+ 					{ id: 'contact', label: 'Contact' }
+ 				]
+diff --git a/templates/import/tests/localization-interactions.e2e.ts b/templates/import/tests/localization-interactions.e2e.ts
+index 09406e46d..3a1306703 100644
+--- a/templates/import/tests/localization-interactions.e2e.ts
++++ b/templates/import/tests/localization-interactions.e2e.ts
+@@ -210,7 +210,7 @@ for (const width of [320, 390, 1440])
+ 				await expect(page.locator('.daynight-mobile-pdp__spec-list')).toContainText(
+ 					english ? '3000 cc / 340 hp' : '3000 куб.см / 340 к.с.'
+ 				);
+-				await page.getByRole('tab', { name: english ? 'Features' : 'Екстри', exact: true }).click();
++				await page.getByRole('tab', { name: english ? 'Extras' : 'Екстри', exact: true }).click();
+ 				await expect(page.locator('.daynight-mobile-pdp__feature-groups')).toBeVisible();
+ 				await page.locator('.daynight-mobile-pdp__actions button').click();
+ 				const form = page.locator('.daynight-mobile-pdp__inquiry-form');

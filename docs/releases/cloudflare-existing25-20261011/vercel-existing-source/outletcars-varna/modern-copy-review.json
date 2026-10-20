@@ -1,0 +1,198 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-reviewed-modern-bilingual-copy-input",
+  "dealer": "outletcars-varna",
+  "reviewedGeneratorHelper": {
+    "path": "scripts/lib/modern-dealer-inventory-copy.mjs",
+    "sha256": "cbdbaa28dc07911cfe913b4e627671b6556fc25d3bfe59364e29c5ca5a29072b",
+    "sourceCommit": "14d86f67c160699c18a6ec5658197cc4d9011e0b"
+  },
+  "review": {
+    "displayCopyOnly": true,
+    "exactSourceDescriptionKeys": true,
+    "listingFactsUnchanged": true,
+    "imageUrlsUnchanged": true,
+    "imageAltsPreserved": true,
+    "interpolationTokensUnchanged": true,
+    "reviewedBy": "Codex, authorized final-template rollout"
+  },
+  "sourceCommit": "2f7937757b84d6737a912b92908ff6ba2584cf5f",
+  "baselineTree": "2c040a606b090861bc3b5a391824d968445d669a",
+  "inputSha256": "25cec2512de45627324f9bd05cc6bdab198a8ac8040f74dcffffd070565822ee",
+  "modernInputRowsSha256": "b7d4ee2e9e0f5ee00dc40d505e6c5c647f33a4ad2266df3d8bbaf436c43a716d",
+  "listingCount": 8,
+  "profileInputs": [
+    {
+      "path": "dealer.json",
+      "bytes": 4701,
+      "sha256": "d30c6f6b2894d753b5bc77dad837778395f43e90399a28b6e1875fe4d446bac6",
+      "gitBlob": "1c3b8e7ac79ba0313708fa4ead86cc5d875b090f"
+    },
+    {
+      "path": "business-facts.json",
+      "bytes": 1559,
+      "sha256": "3611ce508c3360b96ec32a7b47b2d537729fc5111a20769b9dbbcb639018ecf8",
+      "gitBlob": "2070086a44970fd8c35f8a0369f0ea970c95bfa6"
+    },
+    {
+      "path": "stock.json",
+      "bytes": 30392,
+      "sha256": "3aa6ae78295604cbe311fde4db7a45c0ae5d9669f63135f19134b0b168f07bc5",
+      "gitBlob": "a3455105d5e83f0eb9c19a0ce195fcd643e7f1ee"
+    }
+  ],
+  "reviewedCopy": {
+    "audi-q5-mild-hybrid-s-line-quattro-1-2021-21780566866553359": {
+      "sourceDescription": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+      "en": {
+        "description": "Dated listing samples; confirm price and availability directly with the dealership.",
+        "imageAlts": [
+          "Audi Q5 Mild Hybrid/S-line/quattro 1 ГОДИНА ГАРАНЦИЯ",
+          "Audi Q5 Mild Hybrid/S-line/quattro 1 ГОДИНА ГАРАНЦИЯ",
+          "Audi Q5 Mild Hybrid/S-line/quattro 1 ГОДИНА ГАРАНЦИЯ"
+        ]
+      },
+      "bg": {
+        "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+        "imageAlts": [
+          "Audi Q5 Mild Hybrid/S-line/quattro 1 ГОДИНА ГАРАНЦИЯ",
+          "Audi Q5 Mild Hybrid/S-line/quattro 1 ГОДИНА ГАРАНЦИЯ",
+          "Audi Q5 Mild Hybrid/S-line/quattro 1 ГОДИНА ГАРАНЦИЯ"
+        ]
+      }
+    },
+    "citroen-c3-1-2-100hp-03-2027-2025-11780668057655036": {
+      "sourceDescription": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+      "en": {
+        "description": "Dated listing samples; confirm price and availability directly with the dealership.",
+        "imageAlts": [
+          "Citroen C3 1.2 100hp ГАРАНЦИЯ ДО 03. 2027г.",
+          "Citroen C3 1.2 100hp ГАРАНЦИЯ ДО 03. 2027г.",
+          "Citroen C3 1.2 100hp ГАРАНЦИЯ ДО 03. 2027г."
+        ]
+      },
+      "bg": {
+        "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+        "imageAlts": [
+          "Citroen C3 1.2 100hp ГАРАНЦИЯ ДО 03. 2027г.",
+          "Citroen C3 1.2 100hp ГАРАНЦИЯ ДО 03. 2027г.",
+          "Citroen C3 1.2 100hp ГАРАНЦИЯ ДО 03. 2027г."
+        ]
+      }
+    },
+    "opel-corsa-edition-2024-11778766828983143": {
+      "sourceDescription": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+      "en": {
+        "description": "Dated listing samples; confirm price and availability directly with the dealership.",
+        "imageAlts": [
+          "Opel Corsa Edition",
+          "Opel Corsa Edition",
+          "Opel Corsa Edition"
+        ]
+      },
+      "bg": {
+        "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+        "imageAlts": [
+          "Opel Corsa Edition",
+          "Opel Corsa Edition",
+          "Opel Corsa Edition"
+        ]
+      }
+    },
+    "vw-tiguan-1-5tsi-150hp-04-2028-2023-21779776692067869": {
+      "sourceDescription": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+      "en": {
+        "description": "Dated listing samples; confirm price and availability directly with the dealership.",
+        "imageAlts": [
+          "VW Tiguan 1.5TSI 150hp Гаранция до 04.2028",
+          "VW Tiguan 1.5TSI 150hp Гаранция до 04.2028",
+          "VW Tiguan 1.5TSI 150hp Гаранция до 04.2028"
+        ]
+      },
+      "bg": {
+        "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+        "imageAlts": [
+          "VW Tiguan 1.5TSI 150hp Гаранция до 04.2028",
+          "VW Tiguan 1.5TSI 150hp Гаранция до 04.2028",
+          "VW Tiguan 1.5TSI 150hp Гаранция до 04.2028"
+        ]
+      }
+    },
+    "vw-arteon-r-line-04-2028-2023-11782296205813235": {
+      "sourceDescription": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+      "en": {
+        "description": "Dated listing samples; confirm price and availability directly with the dealership.",
+        "imageAlts": [
+          "VW Arteon R-LINE Гаранция до 04.2028",
+          "VW Arteon R-LINE Гаранция до 04.2028",
+          "VW Arteon R-LINE Гаранция до 04.2028"
+        ]
+      },
+      "bg": {
+        "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+        "imageAlts": [
+          "VW Arteon R-LINE Гаранция до 04.2028",
+          "VW Arteon R-LINE Гаранция до 04.2028",
+          "VW Arteon R-LINE Гаранция до 04.2028"
+        ]
+      }
+    },
+    "peugeot-2008-gt-2024-11782392995192464": {
+      "sourceDescription": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+      "en": {
+        "description": "Dated listing samples; confirm price and availability directly with the dealership.",
+        "imageAlts": [
+          "Peugeot 2008 GT",
+          "Peugeot 2008 GT",
+          "Peugeot 2008 GT"
+        ]
+      },
+      "bg": {
+        "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+        "imageAlts": [
+          "Peugeot 2008 GT",
+          "Peugeot 2008 GT",
+          "Peugeot 2008 GT"
+        ]
+      }
+    },
+    "audi-q7-4-2-tdi-v8-340-800-nm-2010-21786715209008072": {
+      "sourceDescription": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+      "en": {
+        "description": "Dated listing samples; confirm price and availability directly with the dealership.",
+        "imageAlts": [
+          "Audi Q7  4.2 TDI V8 (340 к. с. / 800 Nm) | Фейслифт",
+          "Audi Q7  4.2 TDI V8 (340 к. с. / 800 Nm) | Фейслифт",
+          "Audi Q7  4.2 TDI V8 (340 к. с. / 800 Nm) | Фейслифт"
+        ]
+      },
+      "bg": {
+        "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+        "imageAlts": [
+          "Audi Q7  4.2 TDI V8 (340 к. с. / 800 Nm) | Фейслифт",
+          "Audi Q7  4.2 TDI V8 (340 к. с. / 800 Nm) | Фейслифт",
+          "Audi Q7  4.2 TDI V8 (340 к. с. / 800 Nm) | Фейслифт"
+        ]
+      }
+    },
+    "vw-arteon-r-line-2023-11785245019997658": {
+      "sourceDescription": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+      "en": {
+        "description": "Dated listing samples; confirm price and availability directly with the dealership.",
+        "imageAlts": [
+          "VW Arteon R-LINE",
+          "VW Arteon R-LINE",
+          "VW Arteon R-LINE"
+        ]
+      },
+      "bg": {
+        "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+        "imageAlts": [
+          "VW Arteon R-LINE",
+          "VW Arteon R-LINE",
+          "VW Arteon R-LINE"
+        ]
+      }
+    }
+  }
+}

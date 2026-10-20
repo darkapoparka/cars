@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-input-mapping",
+  "dealer": "abcbulgaria-varna",
+  "inputs": {
+    "facts": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/abcbulgaria-varna/facts.json",
+      "sha256": "fc451eb5d54c0bc72320b0f00a17b4aac087bb26d115fb9c6815122ca49b2e7b"
+    },
+    "stock": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/abcbulgaria-varna/stock.json",
+      "sha256": "44e84dae2faa849122cbd6cc447966375a3cd524883d48375ef26bd6748f031e"
+    },
+    "locale": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/abcbulgaria-varna/locale.json",
+      "sha256": "b967b58b3b592fd37cb14ccec0b7d1c2efcf0cd69f70bf8e3609d95b9b17c437"
+    },
+    "branding": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/abcbulgaria-varna/branding.json",
+      "sha256": "f5a3f33c0cf831b40256fe09260f2765f95d18360069cf6a83a04ae4fc0a390d"
+    }
+  },
+  "sources": [
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/abcbulgaria-varna/identity-repository-corrected-additional100.json",
+      "sha256": "abd151656d580900b1d040184df15524bbf6a5a8afe8639ae4778468a57f3cb6"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/abcbulgaria-varna/facts.json",
+      "sha256": "fc451eb5d54c0bc72320b0f00a17b4aac087bb26d115fb9c6815122ca49b2e7b"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/abcbulgaria-varna/stock.json",
+      "sha256": "44e84dae2faa849122cbd6cc447966375a3cd524883d48375ef26bd6748f031e"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/abcbulgaria-varna/locale.json",
+      "sha256": "b967b58b3b592fd37cb14ccec0b7d1c2efcf0cd69f70bf8e3609d95b9b17c437"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/abcbulgaria-varna/branding.json",
+      "sha256": "f5a3f33c0cf831b40256fe09260f2765f95d18360069cf6a83a04ae4fc0a390d"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/abcbulgaria-varna/media/31791195588891492-1.webp",
+      "sha256": "9f587b7fe3c454b5bbad36ac16d91f23f39c345e2d9caa74761a56881a1fee23"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/abcbulgaria-varna/media/31791195588891492-2.webp",
+      "sha256": "5b20a057c56507bcafc91b710eee617f06cb121c348d30cb3a7971189efc97e3"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/abcbulgaria-varna/copy-review-additional100.json",
+      "sha256": "e3d594a4fb4c9efaacf3bdc639a23e7a96c32d4660cff8756d49835da75ca6ea"
+    }
+  ]
+}

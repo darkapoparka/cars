@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 1,
+  "slug": "vaen-cars-varna",
+  "dealerId": "vaen-cars-varna",
+  "business": {
+    "schemaVersion": 1,
+    "slug": "vaen-cars-varna",
+    "name": "VAEN CARS",
+    "shortName": "VAEN CARS",
+    "city": "Варна",
+    "country": "BG",
+    "countryCode": "BG",
+    "locale": "bg-BG",
+    "currency": "EUR",
+    "distanceUnit": "km",
+    "phone": "0886039057",
+    "phoneDisplay": "0886039057",
+    "phoneE164": "+359886039057",
+    "phones": [
+      "+359886039057"
+    ],
+    "addressLine": "ул. Мусала11",
+    "address": "ул. Мусала11, Варна, България",
+    "hours": "Потвърдете работното време директно с автокъщата.",
+    "email": "",
+    "sourceUrl": "https://vaencars.mobile.bg/",
+    "stockUrl": "https://vaencars.mobile.bg/",
+    "contactSourceUrl": "https://vaencars.mobile.bg/contacts",
+    "observedAt": "2026-10-12T10:44:19.774Z",
+    "inventoryNotice": "Показаните демонстрационни автомобили са илюстративни и не представляват наличности на автокъщата. За действителните оферти и наличности се свържете директно с нея.",
+    "previewNotice": "Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация.",
+    "services": [],
+    "socialLinks": {},
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "research": {
+    "website": {
+      "status": "workbook-reported-not-confirmed",
+      "url": "https://vaencars.com/"
+    },
+    "publicIdentityKey": "mobile-profile:vaencars.mobile.bg",
+    "profileAdvertCount": 14,
+    "availabilityConfirmed": false,
+    "legalEntityOwnershipVerified": false,
+    "addressExactness": "public-contact-as-published",
+    "caveats": [],
+    "sourceProof": [
+      {
+        "url": "https://vaencars.mobile.bg/",
+        "finalUrl": "https://vaencars.mobile.bg/",
+        "observedAt": "2026-10-12T10:44:19.724Z",
+        "status": 200,
+        "bytes": 107768,
+        "sha256": "c7a2df9170fd44ae0bf283b82b9c6571cfd6fec29adc51a245df9ee7e8953627"
+      },
+      {
+        "url": "https://vaencars.mobile.bg/contacts",
+        "finalUrl": "https://vaencars.mobile.bg/contacts",
+        "observedAt": "2026-10-12T10:44:19.774Z",
+        "status": 200,
+        "bytes": 41827,
+        "sha256": "be1ce399021f96fcb432a45bce0069d26738ba50875e490ffe294ddd2855cd10"
+      },
+      {
+        "url": "https://vaencars.mobile.bg/about",
+        "finalUrl": "https://vaencars.mobile.bg/about",
+        "observedAt": "2026-10-12T10:44:19.770Z",
+        "status": 200,
+        "bytes": 6096,
+        "sha256": "997c7700ac078e79e280f670cb35f280687c7491900e7c2a16691e0d05712eee"
+      }
+    ],
+    "sourceAction": "new-absent-cars-source-after-wrapper-identity-recheck",
+    "existingSourceTree": null,
+    "inventoryModeSelection": "illustrative-not-dealer-stock",
+    "productionAssetInputsComplete": false
+  }
+}

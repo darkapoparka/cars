@@ -23,13 +23,17 @@ export const dealerLocalizedText = {
     "city": "Bradford, West Yorkshire",
     "addressLine": "Bradford, West Yorkshire",
     "address": "Bradford, West Yorkshire",
-    "appointment": "Contact the dealership before visiting."
+    "appointment": "Contact the dealership before visiting.",
+    "addressShort": "Bradford, West Yorkshire",
+    "appointmentShort": "Contact the dealership before visiting."
   },
   "bg": {
     "city": "Bradford, West Yorkshire",
     "addressLine": "Bradford, West Yorkshire",
     "address": "Bradford, West Yorkshire",
-    "appointment": "Свържете се с автокъщата преди посещение."
+    "appointment": "Свържете се с автокъщата преди посещение.",
+    "addressShort": "Bradford, West Yorkshire",
+    "appointmentShort": "Свържете се с автокъщата преди посещение."
   }
 } as const;
 

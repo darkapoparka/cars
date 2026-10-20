@@ -1,10 +1,14 @@
 <script lang="ts">
+  import { MediaQuery } from 'svelte/reactivity';
   import { trapDialogTab } from '$lib/ui/overlay';
+  import { dialogViewport } from '$lib/ui/dialog-viewport';
   import { specificationLabel, formatMileage } from '$lib/i18n/presentation';
 
   import { getI18n } from '$lib/locale/context';
   import { templateMessage } from '$lib/i18n/presentation';
   const i18n = getI18n();
+  const mobile = new MediaQuery('(max-width: 767px)', false);
+  const desktop = new MediaQuery('(min-width: 992px)', false);
 
   import './detail.css';
   import { vehicleContactHref } from '$data/journeys';
@@ -13,7 +17,13 @@
   import { tick } from 'svelte';
   import ShowroomMap from '$components/company/ShowroomMap.svelte';
   import Icon from '$components/ui/Icon.svelte';
+  import CheckmarkIcon from '$components/ui/CheckmarkIcon.svelte';
+  import MobileActionIcon from '$components/layout/MobileActionIcon.svelte';
   import VehicleFinanceCalculator from '$components/vehicles/VehicleFinanceCalculator.svelte';
+  import VehiclePhoto from '$components/vehicles/VehiclePhoto.svelte';
+  import VehiclePhotoGallery from '$components/vehicles/VehiclePhotoGallery.svelte';
+  import { vehicleGallery } from '$data/vehicle-gallery';
+  import { template } from '$config/template';
   import { brand } from '$config/brand';
   import { formatVehiclePrice, formatVehiclePriceLabel, type Vehicle } from '$data/inventory';
   import { imageSrcset } from '$data/responsive-images';
@@ -22,14 +32,17 @@
   let { data }: { data: PageData } = $props();
   const phoneLinkAttributes = { href: brand.phoneHref } as const;
 
-  const detailTabs = [
+  const allDetailTabs = [
     { id: 'overview', label: 'Details', message: 'm_56bd72e87e53' },
     { id: 'description', label: 'Description', message: 'm_3ef61560aafe' },
-    { id: 'equipment', label: 'Features', message: 'm_0c229ca25b6c' }
+    { id: 'equipment', label: 'Features', message: 'm_0c229ca25b6c' },
+    { id: 'photos', label: 'Photos', message: 'detail.photos' }
   ] as const;
-  type DetailTab = (typeof detailTabs)[number]['id'];
+  type DetailTab = (typeof allDetailTabs)[number]['id'];
+  const detailTabs = $derived(allDetailTabs.filter(tab => tab.id !== 'photos' || desktop.current));
+  const gallery = $derived(vehicleGallery(data.vehicle, template.mode === 'preview'));
   let activeTabsByVehicle = $state<Record<number, DetailTab>>({});
-  let activeDetailTab = $derived(activeTabsByVehicle[data.vehicle.id] ?? 'overview');
+  let activeDetailTab = $derived(detailTabs.find(tab => tab.id === activeTabsByVehicle[data.vehicle.id])?.id ?? 'overview');
   let shareCopied = $state(false);
   let financeDialog = $state<HTMLDialogElement>();
   let financeOpener: HTMLButtonElement | undefined;
@@ -111,30 +124,21 @@
 
             <div class="dn-detail-card dn-detail-media-card">
               <figure class="dn-detail-gallery">
-                <a class="dn-detail-mobile-back" href={i18n.href(data.returnTo)} aria-label={i18n.t("m_82331f7533ac")}>
-                  <Icon name="arrow-left" size={20} strokeWidth={2} />
+                <a class="dn-detail-mobile-back dn-icon-button dn-mobile-header-action" href={i18n.href(data.returnTo)} aria-label={i18n.t("m_82331f7533ac")}>
+                  <MobileActionIcon name="back" />
                 </a>
                 <div class="dn-detail-mobile-actions">
-                  <a {...phoneLinkAttributes} aria-label={i18n.t("m_772c70f449af", { p0: brand.phone })}><Icon name="phone" size={20} strokeWidth={1.9} /></a>
-                  <button type="button" onclick={shareVehicle} aria-label={shareCopied ? i18n.t("m_bd845e0879a3") : i18n.t("m_d8977651889f")}>
-                    <Icon name="share" size={20} strokeWidth={1.9} />
+                  <a class="dn-icon-button dn-mobile-header-action" {...phoneLinkAttributes} aria-label={i18n.t("m_772c70f449af", { p0: brand.phone })}><MobileActionIcon name="phone" /></a>
+                  <button class="dn-icon-button dn-mobile-header-action" type="button" onclick={shareVehicle} aria-label={shareCopied ? i18n.t("m_bd845e0879a3") : i18n.t("m_d8977651889f")}>
+                    <MobileActionIcon name="share" />
                   </button>
                 </div>
-                <img
-                  src={data.vehicle.image}
-                  srcset={imageSrcset(data.vehicle.image)}
-                  sizes="(max-width: 991px) 100vw, (max-width: 1199px) 65vw, 850px"
-                  alt={data.vehicle.title}
-                  width="1245"
-                  height="988"
-                  fetchpriority="high"
-                  decoding="async"
-                />
+                <VehiclePhoto image={data.vehicle.image} title={data.vehicle.title} id={`vehicle-photo-${data.vehicle.id}`} />
               </figure>
             </div>
 
             <section class="dn-detail-card dn-detail-info-card" aria-label={i18n.t("m_ba3e721d1725")}>
-              <div class="dn-detail-tabs" role="tablist" aria-label={i18n.t("m_ba3e721d1725")}>
+              <div class="dn-detail-tabs" class:dn-detail-tabs--photos={desktop.current} role="tablist" aria-label={i18n.t("m_ba3e721d1725")}>
                 {#each detailTabs as tab (tab.id)}
                   <button
                     id={`detail-tab-${tab.id}`}
@@ -172,15 +176,19 @@
                     {templateMessage(i18n, "{p0} is an illustrative demo vehicle on this {p1} website concept. Contact the showroom to confirm current availability, condition and details.", { p0: data.vehicle.title, p1: brand.name })}
                   </p>
                   <a class="dn-detail-inline-action" href={i18n.href(resolve(vehicleContactHref(data.vehicle.id)))}>
-                    <Icon name="message" size={22} strokeWidth={1.7} />
+                    {#if mobile.current}<MobileActionIcon name="message" />{:else}<Icon name="message" size={22} strokeWidth={1.7} />{/if}
                     {i18n.t("m_aaff7e78a8ea")}
                   </a>
+                </div>
+              {:else if activeDetailTab === 'photos'}
+                <div id="detail-panel-photos" role="tabpanel" aria-labelledby="detail-tab-photos">
+                  <VehiclePhotoGallery photos={gallery.photos} title={data.vehicle.title} vehicleId={data.vehicle.id} demo={gallery.demo} />
                 </div>
               {:else}
                 <div id="detail-panel-equipment" role="tabpanel" aria-labelledby="detail-tab-equipment">
                   <ul class="dn-detail-equipment">
                     {#each data.vehicle.equipment as feature (feature)}
-                      <li><span aria-hidden="true"></span>{specificationLabel(feature, i18n.locale)}</li>
+                      <li><span aria-hidden="true">{#if mobile.current}<MobileActionIcon name="check" size={16} />{:else if desktop.current}<CheckmarkIcon />{/if}</span>{specificationLabel(feature, i18n.locale)}</li>
                     {/each}
                   </ul>
                 </div>
@@ -188,17 +196,31 @@
             </section>
 
             <div class="dn-detail-finance-trigger">
-              <strong>{i18n.t("m_b231bc0b36a1")}</strong>
-              <button class="dn-compact-control dn-detail-banner-action" type="button" onclick={openFinance} aria-haspopup="dialog" aria-controls="dn-detail-finance-dialog" aria-label={i18n.t("m_e5ac520d079e")}>
-                {i18n.t("action.calculate")}
-                <Icon name="arrow-right" size={16} />
-              </button>
+              <div class="dn-detail-finance-trigger__copy">
+                <span class="dn-detail-finance-trigger__logo">
+                  {#if mobile.current}
+                    <img src={brand.logoOnDark} alt={brand.name} width="640" height="86" loading="lazy" decoding="async" />
+                  {/if}
+                </span>
+                <strong>{i18n.t("m_b231bc0b36a1")}</strong>
+                <button class="dn-compact-control dn-detail-banner-action" type="button" onclick={openFinance} aria-haspopup="dialog" aria-controls="dn-detail-finance-dialog" aria-label={i18n.t("m_e5ac520d079e")}>
+                  {i18n.t("action.calculate")}
+                  <MobileActionIcon name="arrow" size={18} />
+                </button>
+              </div>
+              {#if mobile.current}
+                <img class="dn-detail-finance-trigger__art" src="/assets/images/template/pdp-finance-calculator-key-v2.webp" alt="" width="320" height="320" loading="lazy" decoding="async" />
+              {/if}
             </div>
 
             <section class="dn-detail-card dn-detail-location-card" id="location" aria-labelledby="location-title">
               <div class="dn-detail-location-card__header">
                 <h2 id="location-title">{i18n.t("m_15b61974b270")}</h2>
-                <p><Icon name="map-pin" size={20} strokeWidth={1.7} />{i18n.dealer('address')}</p>
+                <p>
+                  <span class="dn-detail-location-card__address-pin">{#if mobile.current}<MobileActionIcon name="location" size={20} />{:else}<Icon name="map-pin" size={20} strokeWidth={1.7} />{/if}</span>
+                  <span class="dn-detail-location-card__address--wide">{i18n.dealer('address')}</span>
+                  <span class="dn-detail-location-card__address--mobile">{i18n.dealer('address', true)}</span>
+                </p>
               </div>
               <ShowroomMap />
             </section>
@@ -223,15 +245,17 @@
               </div>
             </section>
 
-            <section class="dn-detail-card dn-detail-dealer" aria-label={brand.name}>
-              <div class="dn-detail-dealer-banner">
-                <img class="dn-detail-dealer-banner__logo" src={brand.logoOnDark} alt={brand.name} width="180" height="64" loading="lazy" decoding="async" />
-                <a class="dn-compact-control dn-detail-banner-action" href={i18n.href(resolve(vehicleContactHref(data.vehicle.id)))}>
-                  {i18n.t("action.viewingShort")}
-                  <Icon name="arrow-right" size={16} />
-                </a>
-              </div>
-            </section>
+            {#if !mobile.current}
+              <section class="dn-detail-card dn-detail-dealer" aria-label={brand.name}>
+                <div class="dn-detail-dealer-banner">
+                  <img class="dn-detail-dealer-banner__logo" src={brand.logoOnDark} alt={brand.name} width="180" height="64" loading="lazy" decoding="async" />
+                  <a class="dn-compact-control dn-detail-banner-action" href={i18n.href(resolve(vehicleContactHref(data.vehicle.id)))}>
+                    {i18n.t("action.viewingShort")}
+                    <Icon name="arrow-right" size={16} />
+                  </a>
+                </div>
+              </section>
+            {/if}
 
           </aside>
         </div>
@@ -242,7 +266,7 @@
               <h2 id="related-title">{i18n.t("detail.viewMore")}</h2>
               <p>{i18n.t("m_70f001dd6767")}</p>
             </div>
-            <a class="dn-detail-related__all" href={i18n.href(resolve('/listing-grid'))}>{i18n.t("m_7d6647b063a2")}</a>
+            <a class="dn-detail-related__all" href={i18n.href(resolve('/cars'))}>{i18n.t("m_7d6647b063a2")}</a>
           </div>
           <div class="dn-detail-related__list">
             {#each data.recommendations as vehicle (vehicle.id)}
@@ -263,6 +287,7 @@
     class="dn-detail-finance-dialog"
     id="dn-detail-finance-dialog"
     bind:this={financeDialog}
+    {@attach dialogViewport}
     aria-labelledby="dn-detail-finance-dialog-title"
     onclose={() => financeOpener?.focus({ preventScroll: true })}
     onclick={(event) => { if (event.target === event.currentTarget) closeFinance(); }}
@@ -271,15 +296,17 @@
       <header class="dn-detail-finance-sheet__header">
         <div>
           <span>{i18n.t("m_76e1b210c1a4", { p0: data.vehicle.title })}</span>
-          <h2 id="dn-detail-finance-dialog-title">{i18n.t("m_b444d04a5c5c")}</h2>
+          <h2 id="dn-detail-finance-dialog-title">{i18n.t(mobile.current ? "m_b231bc0b36a1" : "m_b444d04a5c5c")}</h2>
         </div>
         <button class="dn-icon-button" type="button" onclick={closeFinance} aria-label={i18n.t("m_aafd23be5f4a")}>
-          <Icon name="x" size={18} strokeWidth={1.8} />
+          {#if mobile.current}<MobileActionIcon name="close" />{:else}<Icon name="x" size={18} strokeWidth={1.8} />{/if}
         </button>
       </header>
-      {#key data.vehicle.id}
-        <VehicleFinanceCalculator priceEur={data.vehicle.priceEur} vehicleId={data.vehicle.id} idPrefix="finance-dialog" />
-      {/key}
+      <div class="dn-detail-finance-scroll">
+        {#key data.vehicle.id}
+          <VehicleFinanceCalculator priceEur={data.vehicle.priceEur} vehicleId={data.vehicle.id} idPrefix="finance-dialog" />
+        {/key}
+      </div>
     </div>
   </dialog>
 </div>

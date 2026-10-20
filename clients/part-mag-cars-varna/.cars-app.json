@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "dealer": "part-mag-cars-varna",
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+    "path": "templates/app",
+    "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1",
+    "tree": "7f3d3ffa40546635377e6c5225194fe06fead291"
+  },
+  "appDigest": "768f9e458ac4f61fbde85fd78bb41dc46124f710fce22e6356fe043f3fa1a5b8",
+  "provenance": {
+    "schemaVersion": 1,
+    "dealer": "part-mag-cars-varna",
+    "profile": "auto-best/src/lib/data/dealer-profile.json",
+    "profileSha256": "beeac6d24ab23013996e236082f21e646dec91d564af5e780b69e087ed794efa",
+    "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
+    "vehicles": 2,
+    "currency": "EUR",
+    "observedAt": "2026-10-12T11:35:26.653Z",
+    "assets": [
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-light.png",
+        "output": "public/dealer-app/logo-light-ed661d8aa7022b21c682.png",
+        "sha256": "ed661d8aa7022b21c6827686cb5da029bd58767da9794072a0a430ed81ff4204",
+        "role": "logo-light"
+      },
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-dark.png",
+        "output": "public/dealer-app/logo-dark-c1bcebd5cd3f82903425.png",
+        "sha256": "c1bcebd5cd3f829034255f80a53a821398fbda3f1b03f01d8f2321a0ee0d9c07",
+        "role": "logo-dark"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/demo-estate.webp",
+        "output": "public/dealer-app/vehicle-d2d3deacbc9f566a2278.webp",
+        "sha256": "d2d3deacbc9f566a22783f2a5eab6335473bf2e47c627261e8895dbff6fece70",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/demo-suv.webp",
+        "output": "public/dealer-app/vehicle-5c0c6062ef8af622fd85.webp",
+        "sha256": "5c0c6062ef8af622fd852a7a43b2dfc989d6836f1528698b51d88f9352640f2f",
+        "role": "vehicle"
+      }
+    ],
+    "mileageFacts": [
+      {
+        "slug": "part-mag-cars-varna-demo-estate",
+        "sourceValue": 12000,
+        "sourceUnit": "km",
+        "canonicalKm": 12000
+      },
+      {
+        "slug": "part-mag-cars-varna-demo-suv",
+        "sourceValue": 8000,
+        "sourceUnit": "km",
+        "canonicalKm": 8000
+      }
+    ]
+  },
+  "needsDealerQA": true,
+  "readyToPublish": false,
+  "refreshedAt": "2026-10-15T04:17:19.559Z"
+}

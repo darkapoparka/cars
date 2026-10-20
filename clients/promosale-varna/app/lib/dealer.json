@@ -4,9 +4,9 @@
   "name": "Promosale Varna",
   "shortName": "Promosale Varna",
   "logo": {
-    "light": "/dealer-app/logo-light-66b9f788b14b096b007d.webp",
-    "dark": "/dealer-app/logo-dark-0bfec3e1f4c57c2932a1.webp",
-    "icon": "/dealer-app/icon.png"
+    "light": "/dealer-brand/v2-c1ee2ba0a30e97da/logo-on-light.webp",
+    "dark": "/dealer-brand/v2-c1ee2ba0a30e97da/logo-on-dark.webp",
+    "icon": "/dealer-brand/v2-c1ee2ba0a30e97da/app-icon.png"
   },
   "defaultLocale": "bg",
   "enabledLocales": [
@@ -42,9 +42,9 @@
       "url": ""
     }
   ],
-  "services": [],
   "referenceClaimsApproved": false,
+  "services": [],
   "observedAt": "2026-09-09T19:17:27.878450+00:00",
-  "inventoryNotice": "Dated listing samples. Confirm price, availability and vehicle information with the dealer.",
+  "inventoryNotice": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
   "previewNotice": "Independent design preview. No purchase, reservation or message is submitted by this website."
 }

@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-existing-dealer-branding-input-boundary",
+  "dealer": "kg-team-auto",
+  "identityKey": "existing-slug:kg-team-auto",
+  "cohort": "existing-vercel25",
+  "ownership": "maintained-main",
+  "branding": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/kg-team-auto/branding.json",
+    "sha256": "0ee8bdfd57b3d24c6a128e2950546f297aca4bba73a14634e6c9ade75aa67fcf"
+  },
+  "originalManifest": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/kg-team-auto/source/original-dealer.json",
+    "sha256": "90d1caa0cf64957d24a949239d0c70d8dc5efd8c5149a3d6ff2f4325cffcee19"
+  },
+  "originalManifestGitBlob": "a8a6fcfaa62839a754a6dd9e12330220341e5191",
+  "originalRepository": "darkapoparka/cars-kgteamauto",
+  "sourceRef": {
+    "ref": "main",
+    "commit": "c5c6b0da611a3bf2756c1be2ff9764f6903536ec",
+    "tree": "408eecbf05b75998c5f727f23ae1bb1043b76f8b"
+  },
+  "originalData": [
+    {
+      "path": "clients/kg-team-auto/business-facts.json",
+      "gitBlob": "b8bcae8f5d850d20161a4a19445322a8342751eb",
+      "bytes": 1320
+    },
+    {
+      "path": "clients/kg-team-auto/dealer.json",
+      "gitBlob": "a8a6fcfaa62839a754a6dd9e12330220341e5191",
+      "bytes": 3006
+    },
+    {
+      "path": "clients/kg-team-auto/stock.json",
+      "gitBlob": "965683d2c72820538cf3934f87c08f295cfc37ce",
+      "bytes": 8146
+    }
+  ],
+  "sourceProof": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/evidence/original-source-proof.json",
+    "sha256": "477c4eedc097eb2e105b1d50cf1bc3701b558679e8f6c3c3681a3ccd6626e08c"
+  },
+  "roster": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/evidence/accepted-roster.json",
+    "sha256": "c23c6c4ea10acaca9fdc8d09351fd64735a9e2245385fb12a0f95d71f9f0080d"
+  },
+  "sourceCreation": false,
+  "clientIntegration": false,
+  "buildApproval": false,
+  "hostedApproval": false,
+  "eligibleForExistingQualifiedRequest": true,
+  "holds": [
+    "Exact latest template/source-delta/pilot qualification and preservation-aware updater remain required."
+  ]
+}

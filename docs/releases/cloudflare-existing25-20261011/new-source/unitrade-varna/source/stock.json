@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "kind": "dated-marketplace-listing-sample",
+  "candidate": true,
+  "observedAt": "2026-10-11T11:54:04.381Z",
+  "sourceProfile": "https://unitrade.mobile.bg/",
+  "sourcePageVisibleListingCount": 7,
+  "sourceProfileCountObservedAt": "2026-10-11T11:54:04.300Z",
+  "profileCountIsAvailableStock": false,
+  "profileCountIsClassifiedOrdinaryRetail": false,
+  "liveInventory": false,
+  "mediaPermission": "unconfirmed",
+  "localMediaReady": true,
+  "records": [
+    {
+      "id": "21767710555691116",
+      "sourceId": "21767710555691116",
+      "title": "VW Tiguan",
+      "sourceTitleExact": "VW Tiguan 2.0tdi 190kc R-LINE",
+      "make": "VW",
+      "model": "Tiguan",
+      "modelExtraction": "literal make/model prefix from exact primary advert title; canonical market normalization and trim not asserted",
+      "year": 2017,
+      "productionMonth": 12,
+      "priceEur": 18500,
+      "currency": "EUR",
+      "sourcePriceText": "18 500 €",
+      "priceVatNotice": "Цената е с включено ДДС",
+      "mileageKm": 198000,
+      "sourceMileageText": "198000 км",
+      "fieldConflicts": [],
+      "body": "Джип",
+      "fuel": "Дизелов",
+      "transmission": "Автоматична",
+      "powerHp": 190,
+      "images": [
+        "/assets/vehicles/21767710555691116/1.webp",
+        "/assets/vehicles/21767710555691116/2.webp"
+      ],
+      "sourceUrl": "https://unitrade.mobile.bg/obiava-21767710555691116-vw-tiguan-2-0tdi-190kc-r-line",
+      "sourceHtmlSha256": "d660c25c4e6953a7d61cf7882d2ba24e36a40f18f35a5abbe94a11efbe4ecc4a",
+      "sourcePublicationText": "Редактирана в 10:19 часа на 07.08.2026 год.",
+      "observedAt": "2026-10-11T11:54:04.381Z",
+      "availability": "unconfirmed",
+      "availabilityConfirmed": false,
+      "partsListing": false,
+      "conditionMarker": null,
+      "conditionIndependentlyConfirmed": false,
+      "arrivalNotice": null,
+      "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "mediaState": "not-collected; reviewed rights/reuse or explicit illustration decision pending",
+      "mediaPermission": "Not independently established",
+      "telHrefCandidates": [
+        "0887479224"
+      ],
+      "visibleSellerContact": "Контакти с продавача УНИТРЕЙД 0887479224",
+      "sellerPhoneMatchesPrimary": true,
+      "telHrefMatchesPrimary": true,
+      "sampleRole": "dated published vehicle advert; dealer availability, condition and media reuse require confirmation",
+      "retailReadyForAssembly": false,
+      "sourcePhotoUrls": [
+        "https://mobistatic2.focus.bg/mobile/photosorg/116/2/big1/21767710555691116_Ui.webp",
+        "https://mobistatic2.focus.bg/mobile/photosorg/116/2/big1/21767710555691116_7f.webp",
+        "https://mobistatic2.focus.bg/mobile/photosorg/116/2/big1/21767710555691116_xY.webp",
+        "https://mobistatic2.focus.bg/mobile/photosorg/116/2/big1/21767710555691116_Ml.webp",
+        "https://mobistatic2.focus.bg/mobile/photosorg/116/2/big1/21767710555691116_qf.webp",
+        "https://mobistatic2.focus.bg/mobile/photosorg/116/2/big1/21767710555691116_ic.webp",
+        "https://mobistatic2.focus.bg/mobile/photosorg/116/2/big1/21767710555691116_MQ.webp",
+        "https://mobistatic2.focus.bg/mobile/photosorg/116/2/big1/21767710555691116_e5.webp",
+        "https://mobistatic2.focus.bg/mobile/photosorg/116/2/big1/21767710555691116_YB.webp",
+        "https://mobistatic2.focus.bg/mobile/photosorg/116/2/big1/21767710555691116_rA.webp",
+        "https://mobistatic2.focus.bg/mobile/photosorg/116/2/big1/21767710555691116_sj.webp",
+        "https://mobistatic2.focus.bg/mobile/photosorg/116/2/big1/21767710555691116_yK.webp"
+      ],
+      "sourcePhotoEvidence": {
+        "sourceId": "21767710555691116",
+        "sourceUrl": "https://unitrade.mobile.bg/obiava-21767710555691116-vw-tiguan-2-0tdi-190kc-r-line",
+        "observedAt": "2026-10-11T12:09:34.535Z",
+        "responseSha256": "2c7aa3d60bffefa808d73138ea5a700730e62a9e92b182d378599ffc371f6cea",
+        "association": "primary gallery URLs contain exact source listing ID",
+        "remoteBytesFetched": false
+      }
+    }
+  ],
+  "localMediaHydration": {
+    "candidateOnly": true,
+    "technicalRasterPresent": true,
+    "rightsApproved": false,
+    "availabilityConfirmed": false,
+    "assets": [
+      {
+        "publicPath": "/assets/vehicles/21767710555691116/1.webp",
+        "sourceUrl": "https://mobistatic2.focus.bg/mobile/photosorg/116/2/big1/21767710555691116_Ui.webp",
+        "sha256": "9a2e552f6951bb09eb412bda04882c87c94bc2ffbc0607cd4f704a858f5d95c3",
+        "bytes": 156602,
+        "downloadObservedAt": "2026-10-11T12:20:41.916Z"
+      },
+      {
+        "publicPath": "/assets/vehicles/21767710555691116/2.webp",
+        "sourceUrl": "https://mobistatic2.focus.bg/mobile/photosorg/116/2/big1/21767710555691116_7f.webp",
+        "sha256": "8bcc0fdc993c261193fc855b9646b5748383eafcf26f10de22a80cd4e2d574fb",
+        "bytes": 134684,
+        "downloadObservedAt": "2026-10-11T12:20:42.082Z"
+      }
+    ],
+    "sourceStockSha256": "bca70fbf36ca2c3384122c37e542ec546d03fd8f5710331bd835877bbeceb773"
+  }
+}

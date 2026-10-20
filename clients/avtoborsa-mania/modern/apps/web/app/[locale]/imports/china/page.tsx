@@ -1,7 +1,9 @@
+import { leadSite } from "@repo/marketplace";
 import { getLocalizedPath, normalizeSeoLocale } from "@repo/seo/metadata";
 import type { Metadata } from "next";
 import { redirect } from "next/navigation";
 import { createPublicLocalizedMetadata } from "@/lib/public-metadata";
+import { requirePublicSitePath } from "@/lib/public-site-access";
 import { getPublicWebBaseUrl } from "@/lib/public-url";
 
 interface PageProps {
@@ -19,17 +21,18 @@ export const generateMetadata = async ({
   return createPublicLocalizedMetadata({
     baseUrl: getPublicWebBaseUrl(),
     description: isBg
-      ? "Започнете заявка за автомобил от Китай с доставка до България от Мания."
-      : "Start a request for a vehicle from China with delivery to Bulgaria from Мания.",
+      ? `Започнете заявка за автомобил от Китай с доставка до България от ${leadSite.shortName}.`
+      : `Start a request for a vehicle from China with delivery to Bulgaria from ${leadSite.shortName}.`,
     locale,
     path,
     title: isBg
-      ? "Внос от Китай | Мания"
-      : "Import from China | Мания",
+      ? `Внос от Китай | ${leadSite.shortName}`
+      : `Import from China | ${leadSite.shortName}`,
   });
 };
 
 export default async function ChinaImportPage({ params }: PageProps) {
+  requirePublicSitePath("/imports/china");
   const { locale } = await params;
   const normalizedLocale = normalizeSeoLocale(locale);
 

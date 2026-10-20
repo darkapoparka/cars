@@ -1,4 +1,5 @@
 import { createHash } from 'node:crypto';
+import {applyModernFreeBuildOverlay} from '../lib/modern-free-services-build.mjs';
 
 // Provider-only overlay. Templates and application routes retain their native
 // request behavior; this module does not turn SSR applications into an SPA.
@@ -42,16 +43,19 @@ const stylexPlugin = stylex.vite({
 });
 `;
 }
-function viteConfiguration(stylex) {
+function viteConfiguration(stylex, experiment = false) {
   return `// Generated Cloudflare publisher configuration; canonical templates remain Next.js.
 import { defineConfig } from 'vite';
 import vinext from 'vinext';
 import { cloudflare } from '@cloudflare/vite-plugin';
-${stylex ? stylexConfiguration() : ''}
+${experiment ? `import path from 'node:path';
+import {createModernFreeServicesPlugin} from '../../../scripts/modern-free-services-build.mjs';
+const carsModernFreeServices = createModernFreeServicesPlugin({packageRoot:path.resolve(import.meta.dirname,'../../..'),cwd:import.meta.dirname});
+` : ''}${stylex ? stylexConfiguration() : ''}
 export default defineConfig({
   plugins: [
     ${stylex ? 'stylexPlugin,' : ''}
-    vinext(),
+    ${experiment ? 'vinext({prerender:{routes:"*",concurrency:1}}),\n    carsModernFreeServices,' : 'vinext(),'}
     cloudflare({ viteEnvironment: { name: 'rsc', childEnvironments: ['ssr'] } }),
   ],
   build: { target: ['chrome111', 'edge111', 'firefox111', 'safari16.4'] },
@@ -106,13 +110,16 @@ function modernReact(files, changes) {
   }
 }
 
-export function applyCloudflareNext(inputFiles, manifest, { workerPrefix = 'cars-' + manifest?.slug, dependencyLocks } = {}) {
+export function applyCloudflareNext(inputFiles, manifest, { workerPrefix = 'cars-' + manifest?.slug, dependencyLocks, modernFreeServicesExperiment, modernFreeNativeQueryExperiment } = {}) {
   if (!(inputFiles instanceof Map)) throw Error('Next Cloudflare adapter requires a source file map');
   if (!/^[a-z][a-z0-9]*(?:-[a-z0-9]+)*$/.test(workerPrefix) || workerPrefix.length > 54) throw Error('Invalid Cloudflare Worker prefix');
   if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(manifest?.slug ?? '')) throw Error('Invalid Next Cloudflare dealer slug');
   const selected = (manifest.variants ?? []).filter(({ key }) => Object.hasOwn(services, key));
   if (!selected.length || new Set(selected.map(({ key }) => key)).size !== selected.length) throw Error('Missing or duplicate Next Cloudflare services');
-  const files = new Map(inputFiles), adaptations = [], targets = [];
+  const modern = selected.find(item => item.key === "modern");
+  if (modernFreeServicesExperiment && !modern) throw Error("Modern Free build experiment requires Modern");
+  if(modernFreeNativeQueryExperiment&&!modernFreeServicesExperiment)throw Error("Native query capture requires explicit original native policy experiment");
+  const files = new Map(applyModernFreeBuildOverlay(inputFiles, modernFreeServicesExperiment, {base:modern?.base,nativeQuery:modernFreeNativeQueryExperiment})), adaptations = [], targets = [];
   for (const { key, base } of selected) {
     const allowed = key === 'modern' ? ['/variant-2', '/variant-3'] : [key === 'app' ? '/variant-4' : '/variant-5'];
     if (!allowed.includes(base)) throw Error('Invalid Next Cloudflare native mount: ' + key);
@@ -153,7 +160,7 @@ export function applyCloudflareNext(inputFiles, manifest, { workerPrefix = 'cars
       adaptations.push({ file: root + '/vite.config.ts', operation: 'stylex-vite', compilerSha256: digest(compiler), postcssSha256: digest(postcss) });
     } else modernTrustedCountry(files);
     const workerName = workerPrefix + '-' + key;
-    generated(files, root + '/vite.config.ts', viteConfiguration(key !== 'modern'));
+    generated(files, root + '/vite.config.ts', viteConfiguration(key !== 'modern', key === 'modern' && Boolean(modernFreeServicesExperiment)));
     generated(files, root + '/wrangler.jsonc', encode({
       $schema: 'node_modules/wrangler/config-schema.json', name: workerName,
       compatibility_date: '2026-10-10', compatibility_flags: ['nodejs_compat'],
@@ -168,9 +175,11 @@ export function applyCloudflareNext(inputFiles, manifest, { workerPrefix = 'cars
       config: root + '/wrangler.jsonc', generatedConfig: root + '/dist/server/wrangler.json', assets: root + '/dist/client',
       main: root + '/dist/server/index.js', react,
       environment: { NEXT_PUBLIC_BASE_PATH: base, CARS_CLOUDFLARE_PROVIDER: '1' },
+      ...(key === 'modern' && modernFreeServicesExperiment ? {freeStaticExperiment:{manifestPath:root+'/dist/server/cars-free-services.json',resolverPath:root+'/dist/server/cars-native-preferences.js',receiptPath:root+'/dist/server/cars-free-services-build.json'}} : {}),
+      ...(key === 'modern' && modernFreeNativeQueryExperiment ? {nativeQueryExperiment:{manifestPath:root+'/dist/server/cars-free-native-query.json',entryPath:root+'/dist/server/cars-native-marketplace-query.js',receiptPath:root+'/dist/server/cars-free-native-query-build.json'}} : {}),
       sourcePackageSha256: digest(originalPackage), sourceLockSha256, generatedPackageSha256: digest(files.get(packageName)), lockPath });
   }
-  generated(files, 'scripts/build-cloudflare-next.mjs', cloudflareNextBuildHelper());
+  generated(files, 'scripts/build-cloudflare-next.mjs', cloudflareNextBuildHelper({modernFreeServicesExperiment:Boolean(modernFreeServicesExperiment)}));
   generated(files, '.cars-cloudflare-next.json', encode({ schemaVersion: 1, adapter: 'cars-cloudflare-vinext-v1', version: CLOUDFLARE_NEXT_VERSION,
     dealer: manifest.slug, pins: CLOUDFLARE_NEXT_PINS, targets, adaptations,
     dependencyLock: 'requires-generated-lock-and-install-proof', build: 'unverified', hosted: 'unverified', freeTier: 'unverified' }));
@@ -223,13 +232,13 @@ export function resolveCloudflareNpmCli(nodeExecutable, io, paths) {
   return selected;
 }
 
-export function cloudflareNextBuildHelper() {
+export function cloudflareNextBuildHelper({modernFreeServicesExperiment = false} = {}) {
   return `import fs from 'node:fs';
 import path from 'node:path';
 import {createRequire} from 'node:module';
 import {spawnSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
-const packageRoot=path.resolve(import.meta.dirname,'..');
+${modernFreeServicesExperiment ? "import {emitModernFreeServicesSnapshots} from './modern-free-services-build.mjs';\n" : ''}const packageRoot=path.resolve(import.meta.dirname,'..');
 const receipt=JSON.parse(fs.readFileSync(path.join(packageRoot,'.cars-cloudflare-next.json'),'utf8'));
 const [phase,key]=process.argv.slice(2);
 if(!['install','prove','check','build','freeze'].includes(phase)||process.argv.length!==4) throw Error('Usage: node scripts/build-cloudflare-next.mjs install|prove|check|build|freeze modern|app|mobile');
@@ -259,7 +268,7 @@ function inputs(){const rows=[];function add(file){if(fs.existsSync(file))rows.p
   return hash(JSON.stringify(rows.sort()));}
 function sourceInputs(){const rows=[];const ignored=new Set(['node_modules','.git','dist','runtime','.vinext','.wrangler','.cloudflare','.turbo']);
   function visit(directory){for(const item of fs.readdirSync(directory,{withFileTypes:true}).sort((a,b)=>a.name.localeCompare(b.name,'en'))){if(ignored.has(item.name)||item.name.startsWith('.next')||item.name==='next-env.d.ts'||item.name.endsWith('.tsbuildinfo'))continue;const file=path.join(directory,item.name);if(/packages[\\\\/]database[\\\\/]generated(?:[\\\\/]|$)/.test(file))continue;if(item.isSymbolicLink())throw Error('Linked generated source requires review: '+file);if(item.isDirectory())visit(file);else if(item.isFile())rows.push([path.relative(packageRoot,file).replaceAll('\\\\','/'),hash(fs.readFileSync(file))]);}}
-  visit(dependencyRoot);for(const name of ['dealer.json','.cars-cloudflare-next.json','scripts/build-cloudflare-next.mjs']){const file=path.join(packageRoot,name);if(fs.existsSync(file))rows.push([name,hash(fs.readFileSync(file))]);}
+  visit(dependencyRoot);for(const name of ['dealer.json','.cars-cloudflare-next.json','scripts/build-cloudflare-next.mjs'${modernFreeServicesExperiment ? ",'.cars-modern-free-build.json','scripts/modern-free-services-build.mjs','scripts/modern-native-prerender-preload.mjs'" : ''}]){const file=path.join(packageRoot,name);if(fs.existsSync(file))rows.push([name,hash(fs.readFileSync(file))]);}
   return hash(JSON.stringify(rows.sort()));}
 function verifyPins(){const pkg=JSON.parse(fs.readFileSync(path.join(cwd,'package.json'),'utf8')),installed={};
   for(const name of ['vinext','vite','@vitejs/plugin-rsc','@cloudflare/vite-plugin','wrangler','react','react-dom','react-server-dom-webpack',...(key==='modern'?[]:['@stylexjs/unplugin','unplugin'])]){
@@ -288,8 +297,8 @@ if(phase==='prove'){
   }else run([bin('vinext','vinext'),'check']);
   if(phase==='build'){
     if(key==='modern')run([npmCli,'exec','--yes','--package=pnpm@11.4.0','--','pnpm','--filter','@repo/database','build'],dependencyRoot);
-    run([bin('vite','vite'),'build']);
-    if(proof.sourceDigest!==sourceInputs())throw Error('Generated Next Cloudflare source changed during build');
+    ${modernFreeServicesExperiment ? "run([...(target.freeStaticExperiment?['--import',new URL('./modern-native-prerender-preload.mjs',import.meta.url).href]:[]),bin('vite','vite'),'build']);" : "run([bin('vite','vite'),'build']);"}
+    if(proof.sourceDigest!==sourceInputs())throw Error('Generated Next Cloudflare source changed during build');${modernFreeServicesExperiment ? "\n    if(target.freeStaticExperiment)await emitModernFreeServicesSnapshots({packageRoot,target});" : ''}
     for(const file of [target.generatedConfig,target.main])if(!fs.existsSync(path.join(packageRoot,file)))throw Error('Missing Cloudflare build artifact: '+file);
     // Vite emits compiled assets beneath basePath but copies public namespaces
     // to the asset root. Place only generated copies at their published mount.

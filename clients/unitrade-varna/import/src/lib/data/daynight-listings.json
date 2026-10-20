@@ -1,0 +1,37 @@
+{
+  "fetchedAt": "2026-10-11",
+  "sources": {
+    "dealerInventory": "https://unitrade.mobile.bg/",
+    "dealerContact": "https://unitrade.mobile.bg/contacts"
+  },
+  "count": 1,
+  "listings": [
+    {
+      "badge": "ОБЯВА",
+      "category": "Джип",
+      "color": "",
+      "displacement": "",
+      "euroStandard": "",
+      "features": [],
+      "fuel": "Дизелов",
+      "gearbox": "Автоматична",
+      "href": "https://unitrade.mobile.bg/obiava-21767710555691116-vw-tiguan-2-0tdi-190kc-r-line",
+      "id": "21767710555691116",
+      "image": "/dealer-stock/21767710555691116-1.webp",
+      "location": "Варна",
+      "mileage": "198 000 км",
+      "mileageKnown": true,
+      "mileageValue": 198000,
+      "mileageUnit": "km",
+      "photoCount": "2",
+      "power": "190 к.с.",
+      "price": "18 500 €",
+      "priceBgn": "",
+      "production": "2017 г.",
+      "rawPriceText": "18 500 €",
+      "shortDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "title": "VW Tiguan",
+      "vat": ""
+    }
+  ]
+}

@@ -21,7 +21,7 @@ export const capturedDealers: Record<string, CapturedDealer> = {
     "referrals": "",
     "descriptionAccuracy": "",
     "highlights": [],
-    "logo": "/dealer-brand/logo-on-light-20260919.webp",
+    "logo": "/dealer-brand/v2-82b4cdb8bfee0672/logo-on-light.webp",
     "logoWidth": 128
   },
   "is-1002": {
@@ -33,7 +33,7 @@ export const capturedDealers: Record<string, CapturedDealer> = {
     "referrals": "",
     "descriptionAccuracy": "",
     "highlights": [],
-    "logo": "/dealer-brand/logo-on-light-20260919.webp",
+    "logo": "/dealer-brand/v2-82b4cdb8bfee0672/logo-on-light.webp",
     "logoWidth": 128
   },
   "is-1003": {
@@ -45,7 +45,7 @@ export const capturedDealers: Record<string, CapturedDealer> = {
     "referrals": "",
     "descriptionAccuracy": "",
     "highlights": [],
-    "logo": "/dealer-brand/logo-on-light-20260919.webp",
+    "logo": "/dealer-brand/v2-82b4cdb8bfee0672/logo-on-light.webp",
     "logoWidth": 128
   },
   "is-1004": {
@@ -57,7 +57,7 @@ export const capturedDealers: Record<string, CapturedDealer> = {
     "referrals": "",
     "descriptionAccuracy": "",
     "highlights": [],
-    "logo": "/dealer-brand/logo-on-light-20260919.webp",
+    "logo": "/dealer-brand/v2-82b4cdb8bfee0672/logo-on-light.webp",
     "logoWidth": 128
   },
   "is-1005": {
@@ -69,7 +69,7 @@ export const capturedDealers: Record<string, CapturedDealer> = {
     "referrals": "",
     "descriptionAccuracy": "",
     "highlights": [],
-    "logo": "/dealer-brand/logo-on-light-20260919.webp",
+    "logo": "/dealer-brand/v2-82b4cdb8bfee0672/logo-on-light.webp",
     "logoWidth": 128
   },
   "is-1006": {
@@ -81,7 +81,7 @@ export const capturedDealers: Record<string, CapturedDealer> = {
     "referrals": "",
     "descriptionAccuracy": "",
     "highlights": [],
-    "logo": "/dealer-brand/logo-on-light-20260919.webp",
+    "logo": "/dealer-brand/v2-82b4cdb8bfee0672/logo-on-light.webp",
     "logoWidth": 128
   }
 };

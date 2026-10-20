@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "dealer": "legend-auto",
+  "reviewed": true,
+  "reviewedAt": "2026-10-14T11:31:43.352Z",
+  "sourceMode": "retained-or-mixed-raster",
+  "master": {
+    "path": "docs/logo-polish-2026-10-14/parallel/vercel/legend-auto/logo-on-light.png",
+    "sha256": "3ba72007dfe864606d714da6327284b751570b6732bb65d5787ba7e2b1cdf239"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "docs/logo-polish-2026-10-14/parallel/vercel/legend-auto/logo-on-light.png",
+      "sha256": "3ba72007dfe864606d714da6327284b751570b6732bb65d5787ba7e2b1cdf239",
+      "sourceReference": "L:\\CODEX\\cars\\docs\\logo-polish-2026-10-14\\parallel\\vercel\\legend-auto\\logo-on-light.png",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "L:\\CODEX\\cars\\docs\\logo-polish-2026-10-14\\live-assets\\393c8f05cb6020c8e4435a742ad89a5d9dfdf5543ed67bc78003931ed35d7029.webp",
+        "sha256": "393c8f05cb6020c8e4435a742ad89a5d9dfdf5543ed67bc78003931ed35d7029",
+        "reviewReference": "docs/logo-polish-2026-10-14/final-selection.json",
+        "reviewSha256": "6e396eef77195ab7f44d6b055c1936fa079a8195a428a95151fdfd7f3f5d1a16"
+      }
+    },
+    "onDark": {
+      "path": "docs/logo-polish-2026-10-14/parallel/vercel/legend-auto/logo-on-dark.png",
+      "sha256": "e1736e0cd5908d770d84c1b28221bb28c31bed16897657070a6cf953c50cf652",
+      "sourceReference": "L:\\CODEX\\cars\\docs\\logo-polish-2026-10-14\\parallel\\vercel\\legend-auto\\logo-on-dark.png",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "L:\\CODEX\\cars\\docs\\logo-polish-2026-10-14\\live-assets\\3306a5e66871d4527cf4de4cfc4b752ebebc346d44c0ecf0c8ffae3626cd61cf.webp",
+        "sha256": "3306a5e66871d4527cf4de4cfc4b752ebebc346d44c0ecf0c8ffae3626cd61cf",
+        "reviewReference": "docs/logo-polish-2026-10-14/final-selection.json",
+        "reviewSha256": "6e396eef77195ab7f44d6b055c1936fa079a8195a428a95151fdfd7f3f5d1a16"
+      }
+    },
+    "onAccent": {
+      "path": "docs/logo-polish-2026-10-14/parallel/vercel/legend-auto/logo-on-accent.png",
+      "sha256": "f318c4053169107bc510fe469c9d6cbc5889d7ce43bf9b287e4d133e73a19abc",
+      "sourceReference": "L:\\CODEX\\cars\\docs\\logo-polish-2026-10-14\\parallel\\vercel\\legend-auto\\logo-on-accent.png",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "L:/CODEX/cars/clients/legend-auto/dealer-brand/logo-on-accent.webp",
+        "sha256": "275cb5fa30d746abbb2c5086163588481405d50394441dce60065af5501fb28a",
+        "reviewReference": "docs/logo-polish-2026-10-14/final-selection.json",
+        "reviewSha256": "6e396eef77195ab7f44d6b055c1936fa079a8195a428a95151fdfd7f3f5d1a16"
+      }
+    }
+  }
+}

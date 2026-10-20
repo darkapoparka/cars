@@ -1,21 +1,42 @@
 <script lang="ts">
+  import { tick } from 'svelte';
+  import { MediaQuery } from 'svelte/reactivity';
+  import { trapDialogTab } from '$lib/ui/overlay';
+  import { dialogViewport } from '$lib/ui/dialog-viewport';
+  import { specificationLabel } from '$lib/i18n/presentation';
+
+  import { getI18n } from '$lib/locale/context';
+
+  const i18n = getI18n();
+
   import Icon from '$components/ui/Icon.svelte';
-  import MobileNavIcon from '$components/layout/MobileNavIcon.svelte';
+  import MobileActionIcon from '$components/layout/MobileActionIcon.svelte';
   import { resolve } from '$app/paths';
   import { featuredVehicles } from '$data/inventory';
-  import { bodyLabel, filterListingVehicles, listingFilterOptions, listingModelsForMake } from '$data/listing';
+  import { bodyLabel, filterListingVehicles, listingFilterOptions, listingModelsForMake, listingSelectionHas } from '$data/listing';
+  import {
+    cleanListingFormData,
+    emptyListingDraft,
+    formatListingNumber,
+    listingDraftHasFilters,
+    listingFiltersFromDraft,
+    toggleListingIdentity,
+    type ListingDraft
+  } from '$data/listing-draft';
   import type { Attachment } from 'svelte/attachments';
-
 
   type MobileFilterView = 'main' | 'make' | 'model' | 'body' | 'price' | 'fuel' | 'mileage' | 'year';
   type MobileFilterOption = { value: string; label: string };
 
+  const mobile = new MediaQuery('(max-width: 767px)', false);
+
   let dialog = $state<HTMLDialogElement>();
   let trigger = $state<HTMLButtonElement>();
   let searchInput = $state<HTMLInputElement>();
+  let heading: HTMLHeadingElement;
   let query = $state('');
-  let make = $state('');
-  let model = $state('');
+  let make = $state<string[]>([]);
+  let model = $state<string[]>([]);
   let body = $state('');
   let priceMax = $state('');
   let fuel = $state('');
@@ -23,37 +44,36 @@
   let yearMin = $state('');
   let searchOpen = $state(false);
   let mobileView = $state<MobileFilterView>('main');
+  let modelReturnView = $state<'main' | 'make'>('main');
   let modelOptions = $derived(listingModelsForMake(make));
-  let filteredVehicles = $derived(filterListingVehicles(featuredVehicles, {
+  let quickDraft = $derived<ListingDraft>({
+    ...emptyListingDraft(),
     q: query,
     make,
     model,
     body,
+    priceMax,
     fuel,
-    transmission: '',
-    version: '',
-    equipment: [],
-    condition: '',
-    yearMin: yearMin ? Number(yearMin) : null,
-    yearMax: null,
-    priceMin: null,
-    priceMax: priceMax ? Number(priceMax) : null,
-    mileageMax: mileageMax ? Number(mileageMax) : null,
-    sort: 'default'
-  }));
-  let hasFilters = $derived(Boolean(query || make || model || body || priceMax || fuel || mileageMax || yearMin));
-  const formatNumber = (value: string) => new Intl.NumberFormat('bg-BG').format(Number(value));
-  let makeModelSummary = $derived([make, model].filter(Boolean).join(' ') || 'Всички марки');
-  let mobileMenuTitle = $derived.by(() => {
-    if (mobileView === 'make') return 'Марка';
-    if (mobileView === 'model') return make || 'Модел';
-    if (mobileView === 'body') return 'Купе';
-    if (mobileView === 'price') return 'Бюджет';
-    if (mobileView === 'fuel') return 'Гориво';
-    if (mobileView === 'mileage') return 'Пробег';
-    if (mobileView === 'year') return 'Година';
-    return 'Филтри';
+    mileageMax,
+    yearMin
   });
+  let filteredVehicles = $derived(filterListingVehicles(featuredVehicles, listingFiltersFromDraft(quickDraft), i18n.locale));
+  let hasFilters = $derived(listingDraftHasFilters(quickDraft));
+  let makeSummary = $derived(make.join(', ') || i18n.t("m_a52ace420f21"));
+  let modelSummary = $derived(model.join(', ') || i18n.t("m_a52ace420f21"));
+  let mobileMenuTitle = $derived.by(() => {
+    if (mobileView === 'make') return i18n.t("m_ccdd25d4230f");
+    if (mobileView === 'model') return i18n.t("m_5e2c614c23f0");
+    if (mobileView === 'body') return i18n.t("m_191c24bf12d5");
+    if (mobileView === 'price') return i18n.t("m_84e960d40ad5");
+    if (mobileView === 'fuel') return i18n.t("m_a80f942f4112");
+    if (mobileView === 'mileage') return i18n.t("m_ffe44a017911");
+    if (mobileView === 'year') return i18n.t("m_89f6832560de");
+    return i18n.t("m_546ebb8eb993");
+  });
+  const optionSelected = (value: string) => Boolean(value) && (Array.isArray(mobileMenuValue)
+    ? value ? listingSelectionHas(mobileMenuValue, value) : mobileMenuValue.length === 0
+    : mobileMenuValue === value);
   let mobileMenuValue = $derived.by(() => {
     if (mobileView === 'make') return make;
     if (mobileView === 'model') return model;
@@ -65,93 +85,92 @@
     return '';
   });
   let mobileMenuOptions = $derived.by<MobileFilterOption[]>(() => {
-    if (mobileView === 'make') return listingFilterOptions.makes.map((value) => ({ value, label: value || 'Всички марки' }));
-    if (mobileView === 'model') return modelOptions.map((value) => ({ value, label: value || 'Всички модели' }));
-    if (mobileView === 'body') return listingFilterOptions.bodies.map((value) => ({ value, label: bodyLabel(value) || 'Всички купета' }));
-    if (mobileView === 'price') return listingFilterOptions.prices.map((value) => ({ value, label: value ? `До ${formatNumber(value)} €` : 'Всеки бюджет' }));
-    if (mobileView === 'fuel') return listingFilterOptions.fuels.map((value) => ({ value, label: value || 'Всяко гориво' }));
-    if (mobileView === 'mileage') return listingFilterOptions.mileages.map((value) => ({ value, label: value ? `До ${formatNumber(value)} км` : 'Всеки пробег' }));
-    if (mobileView === 'year') return listingFilterOptions.years.map((value) => ({ value, label: value ? `От ${value}` : 'Всяка година' }));
+    if (mobileView === 'make') return listingFilterOptions.makes.map(value => ({ value, label: value || i18n.t("m_28c0e12158d9") }));
+    if (mobileView === 'model') return modelOptions.map(value => ({ value, label: value || i18n.t("m_4a7bb1458685") }));
+    if (mobileView === 'body') return listingFilterOptions.bodies.map(value => ({ value, label: specificationLabel(bodyLabel(value), i18n.locale) || i18n.t("m_6c177524dfb8") }));
+    if (mobileView === 'price') return listingFilterOptions.prices.map(value => ({ value, label: value ? i18n.t("m_a04d91558e9c", { p0: formatListingNumber(value, i18n.locale) }) : i18n.t("m_53d34bf6c934") }));
+    if (mobileView === 'fuel') return listingFilterOptions.fuels.map(value => ({ value, label: specificationLabel(value, i18n.locale) || i18n.t("m_e8be76e05426") }));
+    if (mobileView === 'mileage') return listingFilterOptions.mileages.map(value => ({ value, label: value ? i18n.t("m_243dcf897937", { p0: formatListingNumber(value, i18n.locale) }) : i18n.t("m_960884c7b030") }));
+    if (mobileView === 'year') return listingFilterOptions.years.map(value => ({ value, label: value ? i18n.t("m_a8f4bf044ac3", { p0: value }) : i18n.t("m_562ec6e12633") }));
     return [];
   });
-  const attachDialog: Attachment<HTMLDialogElement> = (node) => {
+
+  const attachDialog: Attachment<HTMLDialogElement> = node => {
     dialog = node;
-    return () => {
-      if (dialog === node) dialog = undefined;
-    };
+    return () => { if (dialog === node) dialog = undefined; };
   };
-
-  const attachTrigger: Attachment<HTMLButtonElement> = (node) => {
+  const attachTrigger: Attachment<HTMLButtonElement> = node => {
     trigger = node;
-    return () => {
-      if (trigger === node) trigger = undefined;
-    };
+    return () => { if (trigger === node) trigger = undefined; };
   };
-
-  const attachSearchInput: Attachment<HTMLInputElement> = (node) => {
+  const attachSearchInput: Attachment<HTMLInputElement> = node => {
     searchInput = node;
-    return () => {
-      if (searchInput === node) searchInput = undefined;
-    };
+    return () => { if (searchInput === node) searchInput = undefined; };
+  };
+  const attachHeading: Attachment<HTMLHeadingElement> = node => { heading = node; };
+  const focusMobileView = async (view?: MobileFilterView) => {
+    await tick();
+    if (!dialog?.open) return;
+    const row = view && dialog?.querySelector<HTMLButtonElement>(`button[data-view="${view}"]`);
+    (row || heading)?.focus({ preventScroll: true });
   };
 
   const openSearch = () => {
     searchOpen = true;
     mobileView = 'main';
     dialog?.showModal();
-    if (window.matchMedia('(min-width: 768px)').matches) requestAnimationFrame(() => searchInput?.focus());
+    // Keep focus in the tap handler so mobile browsers can open the keyboard.
+    if (mobile.current) searchInput?.focus({ preventScroll: true });
+    else void tick().then(() => { if (dialog?.open) searchInput?.focus({ preventScroll: true }); });
   };
-
-  const closeSearch = () => {
-    if (dialog?.open) dialog.close();
-  };
-
+  const closeSearch = () => { if (dialog?.open) dialog.close(); };
+  $effect(() => {
+    if (!mobile.current) closeSearch();
+  });
   const resetSearch = () => {
-    query = '';
-    make = '';
-    model = '';
-    body = '';
-    priceMax = '';
-    fuel = '';
-    mileageMax = '';
-    yearMin = '';
+    const cleared = emptyListingDraft();
+    query = cleared.q;
+    make = cleared.make;
+    model = cleared.model;
+    body = cleared.body;
+    priceMax = cleared.priceMax;
+    fuel = cleared.fuel;
+    mileageMax = cleared.mileageMax;
+    yearMin = cleared.yearMin;
     mobileView = 'main';
   };
-
   const openMobileMenu = (view: Exclude<MobileFilterView, 'main'>) => {
+    if (view === 'model') modelReturnView = mobileView === 'make' ? 'make' : 'main';
     mobileView = view;
+    void focusMobileView();
   };
-
   const returnToMobileOverview = () => {
-    mobileView = mobileView === 'model' ? 'make' : 'main';
+    const previous = mobileView;
+    mobileView = previous === 'model' ? modelReturnView : 'main';
+    void focusMobileView(previous);
   };
-
   const selectMobileOption = (value: string) => {
-    if (mobileView === 'make') {
-      make = value;
-      model = '';
-      mobileView = value ? 'model' : 'main';
+    const previous = mobileView;
+    if (mobileView === 'make' || mobileView === 'model') {
+      const next = toggleListingIdentity(quickDraft, mobileView, value);
+      make = next.make;
+      model = next.model;
       return;
     }
-    if (mobileView === 'model') model = value;
     if (mobileView === 'body') body = value;
     if (mobileView === 'price') priceMax = value;
     if (mobileView === 'fuel') fuel = value;
     if (mobileView === 'mileage') mileageMax = value;
     if (mobileView === 'year') yearMin = value;
     mobileView = 'main';
+    void focusMobileView(previous === 'model' ? 'make' : previous);
   };
-
-  const handleDialogClick = (event: MouseEvent) => {
-    if (event.target === event.currentTarget) closeSearch();
-  };
-
+  const handleDialogClick = (event: MouseEvent) => { if (event.target === event.currentTarget) closeSearch(); };
   const handleCancel = (event: Event) => {
     event.preventDefault();
     if (mobileView === 'main') closeSearch();
     else returnToMobileOverview();
   };
-
   const handleKeydown = (event: KeyboardEvent) => {
     if (event.key === 'Escape') {
       event.preventDefault();
@@ -159,94 +178,88 @@
       else returnToMobileOverview();
     }
   };
-
   const restoreTriggerFocus = () => {
     searchOpen = false;
     mobileView = 'main';
     trigger?.focus();
   };
-
-  const cleanFormData = (event: FormDataEvent) => {
-    for (const key of new Set(event.formData.keys())) {
-      const values = event.formData.getAll(key);
-      if (values.every((value) => typeof value === 'string' && !value.trim())) event.formData.delete(key);
-    }
-  };
+  const cleanFormData = (event: FormDataEvent) => cleanListingFormData(event.formData);
 </script>
 
 <button
-  class="dn-quick-search__trigger"
+  class="dn-quick-search__trigger dn-entry-field dn-entry-field--prominent"
   type="button"
   {@attach attachTrigger}
   aria-haspopup="dialog"
   aria-controls="dn-quick-search-dialog"
   aria-expanded={searchOpen}
-  aria-label="Търсете марка, модел или ключова дума"
+  aria-label={i18n.t("m_6d382243bfbe")}
   onclick={openSearch}
 >
-  <MobileNavIcon name="search" size={20} />
-  <span class="dn-quick-search__label-full">Търсете марка, модел или ключова дума</span>
-  <span class="dn-quick-search__label-mobile" aria-hidden="true">Марка или модел</span>
-  <span class="dn-quick-search__hint" aria-hidden="true">Бързо търсене</span>
-  <span class="dn-quick-search__mobile-filter" aria-hidden="true"><MobileNavIcon name="filters" size={20} /></span>
+  <span class="dn-quick-search__search-desktop"><Icon name="search" size={18} strokeWidth={1.5} /></span>
+  <span class="dn-quick-search__search-mobile"><MobileActionIcon name="search" size={22} /></span>
+  <span class="dn-quick-search__label-full">{i18n.t("m_6d382243bfbe")}</span>
+  <span class="dn-quick-search__label-mobile" aria-hidden="true">{i18n.t("m_cb8bed4ff8b8")}</span>
+  <span class="dn-quick-search__hint" aria-hidden="true">{i18n.t("m_933643dcad14")}</span>
 </button>
 
-<dialog
+<dialog onkeydown={event => { trapDialogTab(event); handleKeydown(event); }}
   class="dn-quick-search__dialog"
   id="dn-quick-search-dialog"
   {@attach attachDialog}
+  {@attach dialogViewport}
   aria-labelledby="quick-search-title"
   onclick={handleDialogClick}
   oncancel={handleCancel}
   onclose={restoreTriggerFocus}
 >
   <div class="dn-quick-search__panel">
-    <header class="dn-quick-search__header">
+    <header class="dn-mobile-overlay-heading dn-quick-search__header dn-mobile-overlay-header dn-mobile-filter-header">
       {#if mobileView === 'main'}
-        <button class="dn-quick-search__reset" type="button" disabled={!hasFilters} onclick={resetSearch}>Нулирай</button>
+        <button class="dn-quick-search__reset dn-icon-button dn-overlay-clear" type="button" disabled={!hasFilters} onclick={resetSearch}>{i18n.t('action.clearShort')}</button>
       {:else}
         <button
-          class="dn-quick-search__back"
+          class="dn-quick-search__back dn-icon-button"
           type="button"
-          aria-label={mobileView === 'model' ? 'Назад към марките' : 'Назад към филтрите'}
+          aria-label={mobileView === 'model' && modelReturnView === 'make' ? i18n.t("m_d73ca16bbc17") : i18n.t("m_a779c56e526e")}
           onclick={returnToMobileOverview}
         >
-          <Icon name="arrow-left" size={21} strokeWidth={1.8} />
+          <MobileActionIcon name="back" size={20} />
         </button>
       {/if}
-      <h2 id="quick-search-title">
-        <span class="dn-quick-search__title-desktop">Търсене на автомобил</span>
-        <span class="dn-quick-search__title-mobile">{mobileMenuTitle}</span>
+      <h2 id="quick-search-title" tabindex="-1" {@attach attachHeading}>
+        <span class="dn-quick-search__title-desktop">{i18n.t("m_0ae7a3ecbc83")}</span>
+        <span class="dn-quick-search__title-mobile">{mobileView === 'main' ? i18n.t("m_0ae7a3ecbc83") : mobileMenuTitle}</span>
       </h2>
-      <button class="dn-quick-search__close" type="button" aria-label="Затворете търсенето" onclick={closeSearch}>
-        <Icon name="x" size={22} strokeWidth={1.8} />
+      <button class="dn-quick-search__close dn-icon-button" type="button" aria-label={i18n.t("m_fab9fcfc48bf")} onclick={closeSearch}>
+        {#if mobile.current}<MobileActionIcon name="close" size={20} />{:else}<Icon name="x" size={22} strokeWidth={1.8} />{/if}
       </button>
     </header>
 
     <form
       class={['dn-quick-search__form', { 'dn-quick-search__form--mobile-hidden': mobileView !== 'main' }]}
       method="GET"
-      action={resolve('/listing-grid')}
+      action={i18n.href(resolve('/cars'))}
       onsubmit={closeSearch}
       onformdata={cleanFormData}
     >
-      <label class="dn-sr-only" for="quick-search-input">Марка, модел или ключова дума</label>
-      <div class="dn-quick-search__input-wrap">
-        <Icon name="search" size={21} strokeWidth={1.8} />
-        <input
+      <label class="dn-sr-only" for="quick-search-input">{i18n.t("m_13fd09148700")}</label>
+      <div class="dn-quick-search__input-wrap dn-entry-field dn-mobile-overlay-search">
+        {#if mobile.current}<MobileActionIcon name="search" size={18} />{:else}<Icon name="search" size={18} strokeWidth={1.8} />{/if}
+        <input {@attach i18n.validation}
           id="quick-search-input"
+          class="dn-entry-field__input"
           {@attach attachSearchInput}
           bind:value={query}
           type="search"
           name="q"
-          placeholder="Например Audi, BMW или SUV"
+          placeholder={i18n.t(mobile.current ? 'm_cb8bed4ff8b8' : 'm_08c6b6889e71')}
           autocomplete="off"
           aria-describedby="quick-search-status"
-          onkeydown={handleKeydown}
         />
       </div>
-      {#if make}<input type="hidden" name="make" value={make} />{/if}
-      {#if model}<input type="hidden" name="model" value={model} />{/if}
+      {#each make as value (value)}<input type="hidden" name="make" {value} />{/each}
+      {#each model as value (value)}<input type="hidden" name="model" {value} />{/each}
       {#if body}<input type="hidden" name="body" value={body} />{/if}
       {#if priceMax}<input type="hidden" name="price_max" value={priceMax} />{/if}
       {#if fuel}<input type="hidden" name="fuel" value={fuel} />{/if}
@@ -254,10 +267,10 @@
       {#if yearMin}<input type="hidden" name="year_min" value={yearMin} />{/if}
     </form>
 
-    <form class="dn-quick-search__mobile-filters" method="GET" action={resolve('/listing-grid')} onsubmit={closeSearch} onformdata={cleanFormData}>
+    <form class="dn-quick-search__mobile-filters" method="GET" action={i18n.href(resolve('/cars'))} onsubmit={closeSearch} onformdata={cleanFormData}>
       {#if query.trim()}<input type="hidden" name="q" value={query.trim()} />{/if}
-      {#if make}<input type="hidden" name="make" value={make} />{/if}
-      {#if model}<input type="hidden" name="model" value={model} />{/if}
+      {#each make as value (value)}<input type="hidden" name="make" {value} />{/each}
+      {#each model as value (value)}<input type="hidden" name="model" {value} />{/each}
       {#if body}<input type="hidden" name="body" value={body} />{/if}
       {#if priceMax}<input type="hidden" name="price_max" value={priceMax} />{/if}
       {#if fuel}<input type="hidden" name="fuel" value={fuel} />{/if}
@@ -266,40 +279,46 @@
 
       {#if mobileView === 'main'}
         <div class="dn-quick-search__filter-rows">
-          <button class="dn-quick-search__filter-row" type="button" onclick={() => openMobileMenu('make')}>
-            <strong>Марка и модел</strong>
-            <span>{makeModelSummary}</span>
-            <Icon name="arrow-right" size={17} strokeWidth={1.8} />
+          <button class="dn-quick-search__filter-row dn-mobile-overlay-row" data-view="make" data-active={Boolean(make.length)} type="button" onclick={() => openMobileMenu('make')}>
+            <strong>{i18n.t("m_ccdd25d4230f")}</strong>
+            <span data-active={Boolean(make.length)}>{makeSummary}</span>
+            <MobileActionIcon name="arrow" size={18} />
           </button>
 
-          <button class="dn-quick-search__filter-row" type="button" onclick={() => openMobileMenu('body')}>
-            <strong>Купе</strong>
-            <span>{bodyLabel(body) || 'Всички купета'}</span>
-            <Icon name="arrow-right" size={17} strokeWidth={1.8} />
+          <button class="dn-quick-search__filter-row dn-mobile-overlay-row" data-view="model" data-active={Boolean(model.length)} type="button" onclick={() => openMobileMenu('model')}>
+            <strong>{i18n.t("m_5e2c614c23f0")}</strong>
+            <span data-active={Boolean(model.length)}>{modelSummary}</span>
+            <MobileActionIcon name="arrow" size={18} />
           </button>
 
-          <button class="dn-quick-search__filter-row" type="button" onclick={() => openMobileMenu('price')}>
-            <strong>Бюджет</strong>
-            <span>{priceMax ? `До ${formatNumber(priceMax)} €` : 'Всеки бюджет'}</span>
-            <Icon name="arrow-right" size={17} strokeWidth={1.8} />
+          <button class="dn-quick-search__filter-row dn-mobile-overlay-row" data-view="body" data-active={Boolean(body)} type="button" onclick={() => openMobileMenu('body')}>
+            <strong>{i18n.t("m_191c24bf12d5")}</strong>
+            <span data-active={Boolean(body)}>{body ? specificationLabel(bodyLabel(body), i18n.locale) : i18n.t("m_a52ace420f21")}</span>
+            <MobileActionIcon name="arrow" size={18} />
           </button>
 
-          <button class="dn-quick-search__filter-row" type="button" onclick={() => openMobileMenu('fuel')}>
-            <strong>Гориво</strong>
-            <span>{fuel || 'Всяко гориво'}</span>
-            <Icon name="arrow-right" size={17} strokeWidth={1.8} />
+          <button class="dn-quick-search__filter-row dn-mobile-overlay-row" data-view="price" data-active={Boolean(priceMax)} type="button" onclick={() => openMobileMenu('price')}>
+            <strong>{i18n.t("m_84e960d40ad5")}</strong>
+            <span data-active={Boolean(priceMax)}>{priceMax ? i18n.t("m_a04d91558e9c", { p0: formatListingNumber(priceMax, i18n.locale) }) : i18n.t("m_53d34bf6c934")}</span>
+            <MobileActionIcon name="arrow" size={18} />
           </button>
 
-          <button class="dn-quick-search__filter-row" type="button" onclick={() => openMobileMenu('mileage')}>
-            <strong>Пробег</strong>
-            <span>{mileageMax ? `До ${formatNumber(mileageMax)} км` : 'Всеки пробег'}</span>
-            <Icon name="arrow-right" size={17} strokeWidth={1.8} />
+          <button class="dn-quick-search__filter-row dn-mobile-overlay-row" data-view="fuel" data-active={Boolean(fuel)} type="button" onclick={() => openMobileMenu('fuel')}>
+            <strong>{i18n.t("m_a80f942f4112")}</strong>
+            <span data-active={Boolean(fuel)}>{fuel ? specificationLabel(fuel, i18n.locale) : i18n.t("m_a52ace420f21")}</span>
+            <MobileActionIcon name="arrow" size={18} />
           </button>
 
-          <button class="dn-quick-search__filter-row" type="button" onclick={() => openMobileMenu('year')}>
-            <strong>Година</strong>
-            <span>{yearMin ? `От ${yearMin}` : 'Всяка година'}</span>
-            <Icon name="arrow-right" size={17} strokeWidth={1.8} />
+          <button class="dn-quick-search__filter-row dn-mobile-overlay-row" data-view="mileage" data-active={Boolean(mileageMax)} type="button" onclick={() => openMobileMenu('mileage')}>
+            <strong>{i18n.t("m_ffe44a017911")}</strong>
+            <span data-active={Boolean(mileageMax)}>{mileageMax ? i18n.t("m_243dcf897937", { p0: formatListingNumber(mileageMax, i18n.locale) }) : i18n.t("m_960884c7b030")}</span>
+            <MobileActionIcon name="arrow" size={18} />
+          </button>
+
+          <button class="dn-quick-search__filter-row dn-mobile-overlay-row" data-view="year" data-active={Boolean(yearMin)} type="button" onclick={() => openMobileMenu('year')}>
+            <strong>{i18n.t("m_89f6832560de")}</strong>
+            <span data-active={Boolean(yearMin)}>{yearMin ? i18n.t("m_a8f4bf044ac3", { p0: yearMin }) : i18n.t("m_562ec6e12633")}</span>
+            <MobileActionIcon name="arrow" size={18} />
           </button>
         </div>
       {:else}
@@ -307,31 +326,36 @@
           <div class="dn-quick-search__option-grid">
             {#each mobileMenuOptions as option (option.value)}
               <button
-                class={['dn-quick-search__option', { 'dn-quick-search__option--selected': mobileMenuValue === option.value }]}
+                class="dn-quick-search__option dn-mobile-overlay-option"
                 type="button"
-                aria-pressed={mobileMenuValue === option.value}
+                aria-pressed={optionSelected(option.value)}
                 onclick={() => selectMobileOption(option.value)}
               >
-                {option.label}
+                <span class="option-label">{option.label}</span><span class="identity-check dn-mobile-filter-check" data-checked={optionSelected(option.value)} aria-hidden="true">{#if optionSelected(option.value)}<MobileActionIcon name="check" size={18} />{/if}</span>
               </button>
             {/each}
           </div>
         </div>
       {/if}
 
-      <footer class="dn-quick-search__mobile-footer">
-        <button type="submit" disabled={filteredVehicles.length === 0} aria-live="polite">
-          {filteredVehicles.length === 1 ? 'Покажи 1 автомобил' : `Покажи ${filteredVehicles.length} автомобила`}
-        </button>
+      <footer class="dn-quick-search__mobile-footer dn-mobile-overlay-footer">
+        {#if mobileView === 'main'}<button class="dn-quick-search__clear dn-mobile-overlay-clear" type="button" disabled={!hasFilters} onclick={resetSearch}>{i18n.t('action.clearShort')}</button>{/if}
+        {#if mobileView === 'make'}
+          <button class="dn-mobile-overlay-action" type="button" onclick={() => openMobileMenu('model')}>{i18n.t('m_5e2c614c23f0')}<MobileActionIcon name="arrow" size={20} /></button>
+        {:else if mobileView === 'model'}
+          <button class="dn-mobile-overlay-action" type="button" onclick={() => { mobileView = 'main'; void focusMobileView('model'); }}>{i18n.t('m_1509f561f241')}</button>
+        {:else}<button class="dn-mobile-overlay-action" type="submit" disabled={filteredVehicles.length === 0} aria-live="polite" aria-label={filteredVehicles.length === 1 ? i18n.t('m_047e325f6562') : i18n.t('m_08d2ff28407e', { p0: filteredVehicles.length })}>
+          {i18n.t('action.showCount', { count: filteredVehicles.length })}
+        </button>{/if}
       </footer>
     </form>
 
     <span class="dn-sr-only" id="quick-search-status" role="status" aria-live="polite">
       {query.trim()
         ? filteredVehicles.length === 1
-          ? '1 съвпадение'
-          : `${filteredVehicles.length} съвпадения`
-        : 'Въведете марка, модел или ключова дума.'}
+          ? i18n.t("m_8e7d9c401501")
+          : i18n.t("m_127d0c5730b9", { p0: filteredVehicles.length })
+        : i18n.t("m_9be515240808")}
     </span>
 
   </div>
@@ -341,18 +365,11 @@
   .dn-quick-search__trigger {
     display: grid;
     width: 100%;
-    min-height: 48px;
     grid-template-columns: auto minmax(0, 1fr) auto;
     align-items: center;
     gap: 11px;
-    margin: 0 0 12px;
+    margin: 0;
     padding: 0 16px;
-    border: 1px solid #dfe2e6;
-    border-radius: var(--dn-radius-button);
-    background: #f8f9fa;
-    color: #686d75;
-    font: inherit;
-    font-size: 16px;
     text-align: left;
     cursor: pointer;
     transition: border-color 160ms ease-out, background-color 160ms ease-out;
@@ -360,32 +377,25 @@
 
   @media (min-width: 992px) {
     .dn-quick-search__trigger {
-      min-height: var(--dn-discovery-search-height);
-      margin-bottom: var(--dn-discovery-gap);
       padding-inline: 18px;
-      border-radius: 14px;
-      background: #f5f6f7;
     }
   }
 
-  .dn-quick-search__trigger:hover {
-    border-color: #b8bec7;
-    background: #f3f4f6;
-  }
-
-  .dn-quick-search__trigger:focus-visible {
-    outline: 3px solid rgba(196, 1, 1, 0.2);
-    outline-offset: 2px;
+  @media (hover: hover) and (pointer: fine) {
+    .dn-quick-search__trigger:hover {
+      border-color: var(--dn-entry-hover-line, #b8bec7);
+      background: var(--dn-entry-hover-surface, #f3f4f6);
+    }
   }
 
   .dn-quick-search__hint {
     color: #2d3036;
-    font-size: 14px;
-    font-weight: 600;
+    font-size: var(--dn-text-meta);
+    font-weight: var(--dn-weight-semibold);
   }
 
   .dn-quick-search__label-mobile,
-  .dn-quick-search__mobile-filter {
+  .dn-quick-search__search-mobile {
     display: none;
   }
 
@@ -398,7 +408,7 @@
     padding: 0;
     overflow: hidden;
     border: 0;
-    border-radius: 20px;
+    border-radius: var(--dn-radius-lg);
     background: #f6f7f8;
     color: #191c22;
     box-shadow: 0 32px 100px rgba(0, 0, 0, 0.32);
@@ -426,10 +436,11 @@
   .dn-quick-search__header h2 {
     margin: 0;
     font-size: var(--dn-text-subheading);
-    font-weight: 650;
-    line-height: 1.25;
-    letter-spacing: -0.02em;
+    font-weight: var(--dn-weight-semibold);
+    line-height: var(--dn-leading-heading);
+    letter-spacing: var(--dn-tracking-heading);
   }
+  .dn-quick-search__header h2:focus { outline: none; }
 
   .dn-quick-search__reset,
   .dn-quick-search__back,
@@ -439,18 +450,10 @@
   }
 
   .dn-quick-search__close {
-    display: inline-flex;
-    width: 46px;
-    height: 46px;
-    flex: 0 0 auto;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
     border: 0;
     border-radius: var(--dn-radius-button);
     background: #e9ecef;
     color: #24272c;
-    cursor: pointer;
   }
 
   .dn-quick-search__close:hover,
@@ -459,7 +462,7 @@
   }
 
   .dn-quick-search__close:focus-visible {
-    outline: 3px solid rgba(196, 1, 1, 0.2);
+    outline: 3px solid rgb(var(--dn-theme-accent-rgb) / 20%);
     outline-offset: -3px;
   }
 
@@ -470,52 +473,31 @@
 
   .dn-quick-search__input-wrap {
     display: flex;
-    height: 64px;
     align-items: center;
-    gap: 12px;
-    padding: 0 20px;
-    border: 1px solid transparent;
-    border-radius: var(--dn-radius-control);
-    background: #e9ecef;
-    color: #727780;
-  }
-
-  .dn-quick-search__input-wrap:focus-within {
-    border-color: #c40101;
-    background: #fff;
-  }
-
-  .dn-quick-search__input-wrap input {
-    width: 100%;
-    min-width: 0;
-    height: 100%;
+    gap: var(--dn-space-3);
+    padding: 0 var(--dn-space-4);
     border: 0;
-    outline: 0;
-    background: transparent;
-    color: #191c22;
-    font: inherit;
-    font-size: var(--dn-text-lead);
-    line-height: var(--dn-leading-lead);
-  }
-
-  .dn-quick-search__input-wrap input::placeholder {
-    color: #777c84;
-    opacity: 1;
   }
 
   @media (max-width: 767px) {
+    .dn-quick-search__trigger { grid-template-columns: auto minmax(0, 1fr); gap: var(--dn-space-2); padding-inline: var(--dn-space-3); }
+    .dn-quick-search__search-desktop { display: none; }
+    .dn-quick-search__search-mobile { display: grid; place-items: center; }
     .dn-quick-search__label-full {
       display: none;
     }
 
     .dn-quick-search__label-mobile {
       display: inline;
+      min-width: 0;
+      overflow: hidden;
+      color: var(--dn-entry-prominent-muted);
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }
 
-    .dn-quick-search__mobile-filter {
-      display: grid;
-      place-items: center;
-      color: #30363f;
+    .dn-quick-search__trigger :global(.dn-icon) {
+      color: var(--dn-entry-prominent-muted);
     }
 
     .dn-quick-search__hint {
@@ -523,78 +505,80 @@
     }
 
     .dn-quick-search__dialog {
+      --dn-primary-action-surface: var(--dn-ink);
+      --dn-primary-action-surface-hover: var(--dn-ink-hover);
+      position: fixed;
+      inset: var(--dn-dialog-viewport-top, 0px) 0 auto;
       width: 100%;
-      height: 100dvh;
-      max-height: none;
+      height: var(--dn-dialog-viewport-height, 100dvh);
+      max-height: var(--dn-dialog-viewport-height, 100dvh);
       margin: 0;
       border-radius: 0;
-      background: #fff;
+      background: var(--dn-white);
+      box-shadow: none;
     }
+    .dn-quick-search__dialog[open] { display: flex; flex-direction: column; }
+    .dn-quick-search__dialog::backdrop { background: rgb(8 10 14 / .35); backdrop-filter: none; }
 
     .dn-quick-search__panel {
+      min-height: 0;
       height: 100%;
-      max-height: none;
+      max-height: 100%;
+      overflow: hidden;
+      border-radius: 0;
+      background: var(--dn-white);
     }
 
     .dn-quick-search__header {
       display: grid;
       min-height: 64px;
-      grid-template-columns: 64px minmax(0, 1fr) 64px;
-      gap: 0;
-      padding: 6px 12px;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 2fr) minmax(0, 1fr);
+      gap: var(--dn-space-3);
+      padding: var(--dn-space-3) var(--dn-overlay-gutter);
       background: #fff;
     }
 
     .dn-quick-search__header h2 {
+      min-width: 0;
       text-align: center;
-      font-size: 18px;
-      letter-spacing: -0.01em;
+      font-size: var(--dn-text-card);
+      letter-spacing: var(--dn-tracking-heading);
+      overflow-wrap: anywhere;
     }
 
-    .dn-quick-search__reset {
-      display: inline-flex;
-      min-height: 44px;
-      align-items: center;
-      justify-content: flex-start;
-      padding: 0;
-      border: 0;
-      background: transparent;
-      color: var(--dn-red);
-      cursor: pointer;
-      font: inherit;
-      font-size: 13px;
-      font-weight: 650;
-    }
+    .dn-quick-search__reset { display: inline-grid; justify-self: start; border: 0; border-radius: var(--dn-radius-button); background: var(--dn-home-panel); color: var(--dn-ink); cursor: pointer; }
+    .dn-quick-search__reset:disabled { color: var(--dn-muted); cursor: default; }
+    .dn-quick-search__reset:enabled:hover { background: var(--dn-surface-hover); }
+    .dn-quick-search__reset:focus-visible { outline: 2px solid var(--dn-focus); outline-offset: -2px; }
 
     .dn-quick-search__back {
       display: inline-flex;
-      width: 46px;
-      height: 46px;
+      justify-self: start;
+      padding: var(--dn-compact-control-inset);
       align-items: center;
       justify-content: center;
-      padding: 0;
       border: 0;
-      border-radius: var(--dn-radius-button);
-      background: #e9ecef;
-      color: #24272c;
+      border-radius: var(--dn-pill);
+      background: var(--dn-home-panel);
+      color: var(--dn-ink);
+      font: var(--dn-overlay-option-font);
       cursor: pointer;
       transition: background-color 140ms ease-out;
     }
 
     .dn-quick-search__back:hover,
     .dn-quick-search__back:focus-visible {
-      background: #dfe3e7;
+      background: var(--dn-surface-hover);
     }
 
     .dn-quick-search__back:focus-visible {
-      outline: 3px solid rgba(196, 1, 1, 0.18);
-      outline-offset: -3px;
+      outline: 2px solid var(--dn-focus);
+      outline-offset: -2px;
     }
 
-    .dn-quick-search__reset:disabled {
-      color: #9aa0a8;
-      cursor: default;
-    }
+    .dn-quick-search__option:has(.identity-check) { display: flex; align-items: center; justify-content: flex-start; gap: var(--dn-space-3); }
+    .identity-check { order: -1; }
+    .option-label { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
     .dn-quick-search__title-desktop {
       display: none;
@@ -609,160 +593,48 @@
     }
 
     .dn-quick-search__form {
-      padding: 4px 16px 10px;
+      flex-shrink: 0;
+      padding: 0 var(--dn-overlay-gutter) var(--dn-overlay-gap);
     }
 
     .dn-quick-search__form--mobile-hidden {
       display: none;
     }
 
-    .dn-quick-search__input-wrap {
-      height: 48px;
-      padding-inline: 16px;
-      border-color: transparent;
-      border-radius: var(--dn-pill);
-      background: #f1f2f4;
-    }
-
-    .dn-quick-search__input-wrap:focus-within {
-      border-color: var(--dn-red);
-      background: #f1f2f4;
-    }
-
-    .dn-quick-search__input-wrap input {
-      font-size: var(--dn-text-body);
-    }
-
     .dn-quick-search__mobile-filters {
       display: flex;
       min-height: 0;
-      flex: 1;
+      flex: 1 1 auto;
       flex-direction: column;
     }
 
     .dn-quick-search__filter-rows {
       display: grid;
+      flex: 1 1 auto;
       min-height: 0;
-      gap: 8px;
-      padding: 0 16px 10px;
+      grid-auto-rows: max-content;
+      align-content: start;
+      gap: var(--dn-mobile-filter-control-gap);
+      padding: var(--dn-space-2) var(--dn-overlay-gutter) var(--dn-overlay-gap);
       overflow-y: auto;
       overscroll-behavior: contain;
     }
 
-    .dn-quick-search__filter-row {
-      display: grid;
-      min-height: 52px;
-      width: 100%;
-      grid-template-columns: auto minmax(0, 1fr) auto;
-      align-items: center;
-      gap: 10px;
-      padding: 0 14px;
-      border: 1px solid transparent;
-      border-radius: 14px;
-      background: #f1f2f4;
-      color: #191c22;
-      cursor: pointer;
-      font: inherit;
-      text-align: left;
-      transition: background-color 140ms ease-out, border-color 140ms ease-out;
-    }
-
-    .dn-quick-search__filter-row strong {
-      font-size: 15px;
-      font-weight: 650;
-    }
-
-    .dn-quick-search__filter-row > span {
-      overflow: hidden;
-      color: #626975;
-      font-size: 14px;
-      text-align: right;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
-
-    .dn-quick-search__filter-row :global(.dn-icon) {
-      color: #626975;
-    }
-
-    .dn-quick-search__filter-row:hover {
-      background: #e9ebee;
-    }
-
-    .dn-quick-search__filter-row:focus-visible {
-      border-color: var(--dn-red);
-      outline: 3px solid rgba(196, 1, 1, 0.18);
-      outline-offset: -3px;
-    }
-
     .dn-quick-search__option-menu {
       min-height: 0;
-      flex: 1;
-      padding: 2px 16px 16px;
+      flex: 1 1 auto;
+      padding: 0 var(--dn-overlay-gutter) var(--dn-overlay-gap);
       overflow-y: auto;
       overscroll-behavior: contain;
     }
 
     .dn-quick-search__option-grid {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 10px;
+      grid-template-columns: minmax(0, 1fr);
+      gap: var(--dn-mobile-filter-control-gap);
     }
 
-    .dn-quick-search__option {
-      min-height: 52px;
-      padding: 8px 12px;
-      border: 1px solid transparent;
-      border-radius: 14px;
-      background: #f1f2f4;
-      color: #24272c;
-      cursor: pointer;
-      font: inherit;
-      font-size: 14px;
-      font-weight: 650;
-      line-height: 1.25;
-      transition: background-color 140ms ease-out, color 140ms ease-out;
-    }
-
-    .dn-quick-search__option:hover {
-      background: #e4e7ea;
-    }
-
-    .dn-quick-search__option:focus-visible {
-      outline: 3px solid rgba(196, 1, 1, 0.2);
-      outline-offset: -3px;
-    }
-
-    .dn-quick-search__option--selected {
-      background: #171a20;
-      color: #fff;
-    }
-
-    .dn-quick-search__mobile-footer {
-      flex: 0 0 auto;
-      padding: 12px 16px calc(14px + env(safe-area-inset-bottom));
-      background: #fff;
-    }
-
-    .dn-quick-search__mobile-footer button {
-      width: 100%;
-      min-height: 50px;
-      border: 0;
-      border-radius: var(--dn-radius-button);
-      background: var(--dn-red);
-      color: #fff;
-      cursor: pointer;
-      font: inherit;
-      font-size: 15px;
-      font-weight: 700;
-    }
-
-    .dn-quick-search__mobile-footer button:disabled {
-      background: #c7cbd1;
-      cursor: not-allowed;
-    }
-
-
+    .dn-quick-search__option { min-height: var(--dn-overlay-row-height); padding-inline: var(--dn-space-3); }
   }
 
   @media (prefers-reduced-motion: reduce) {

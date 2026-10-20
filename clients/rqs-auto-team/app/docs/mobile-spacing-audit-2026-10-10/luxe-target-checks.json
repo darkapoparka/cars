@@ -1,0 +1,80 @@
+{
+  "results": [
+    {
+      "width": 320,
+      "target": {
+        "x": 25,
+        "y": 61,
+        "width": 270,
+        "height": 44,
+        "top": 61,
+        "right": 295,
+        "bottom": 105,
+        "left": 25
+      },
+      "field": {
+        "x": 12,
+        "y": 60,
+        "width": 296,
+        "height": 46,
+        "top": 60,
+        "right": 308,
+        "bottom": 106,
+        "left": 12
+      },
+      "overflow": false,
+      "openClose": "passed"
+    },
+    {
+      "width": 390,
+      "target": {
+        "x": 25,
+        "y": 61,
+        "width": 340,
+        "height": 44,
+        "top": 61,
+        "right": 365,
+        "bottom": 105,
+        "left": 25
+      },
+      "field": {
+        "x": 12,
+        "y": 60,
+        "width": 366,
+        "height": 46,
+        "top": 60,
+        "right": 378,
+        "bottom": 106,
+        "left": 12
+      },
+      "overflow": false,
+      "openClose": "passed"
+    },
+    {
+      "width": 1440,
+      "target": {
+        "x": 71.5,
+        "y": 138,
+        "width": 1282,
+        "height": 40,
+        "top": 138,
+        "right": 1353.5,
+        "bottom": 178,
+        "left": 71.5
+      },
+      "field": {
+        "x": 58.5,
+        "y": 136,
+        "width": 1308,
+        "height": 44,
+        "top": 136,
+        "right": 1366.5,
+        "bottom": 180,
+        "left": 58.5
+      },
+      "overflow": false,
+      "openClose": "passed"
+    }
+  ],
+  "errors": []
+}

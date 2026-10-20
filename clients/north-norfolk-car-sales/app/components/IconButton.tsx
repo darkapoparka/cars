@@ -21,5 +21,5 @@ const s = stylex.create({
   control: {display: 'grid', placeItems: 'center', flexShrink: 0, width: $.controlHeight, height: $.controlHeight, padding: 0, color: $.ink, borderWidth: 0, borderRadius: '50%', backgroundColor: 'transparent', outlineWidth: 2, outlineStyle: 'solid', outlineColor: {default: 'transparent', ':focus-visible': $.ink}, outlineOffset: 1, pointerEvents: 'auto', cursor: 'pointer'},
   surface: {display: 'grid', placeItems: 'center', width: $.controlCompactHeight, height: $.controlCompactHeight, borderRadius: '50%', backgroundColor: {default: $.surfaceAlt, ':hover': $.violetSoft}},
   photo: {backgroundColor: {default: $.surface, ':hover': $.surface}, boxShadow: '0 1px 6px rgba(0,0,0,.1)'},
-  icon: {width: $.controlIconSize, height: $.controlIconSize},
+  icon: {display: 'block', flexShrink: 0, width: $.controlIconSize, height: $.controlIconSize},
 });

@@ -5,6 +5,7 @@ on:
     paths: [docs/releases/cloudflare-existing25-20261011/build-request.json]
 permissions:
   contents: read
+  actions: read
 defaults:
   run:
     shell: bash
@@ -19,6 +20,7 @@ jobs:
     outputs:
       matrix: ${{ steps.matrix.outputs.matrix }}
       dealers: ${{ steps.matrix.outputs.dealers }}
+      compile_required: ${{ steps.matrix.outputs.compile_required }}
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:
@@ -31,25 +33,35 @@ jobs:
             /docs/DEPLOYMENT-INVENTORY.json
             /docs/releases/cloudflare-existing25-20261011/selection.json
             /docs/releases/cloudflare-existing25-20261011/build-request.json
+            /templates/modern/packages/marketplace-ui/components/dealer-mobile-brand-bar.tsx
             /templates/karento-best/src/lib/components/Header.svelte
             /templates/karento-best/src/lib/components/MobileNavigation.svelte
       - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
         with:
           node-version: '26.10.0'
           package-manager-cache: false
-      - run: node --test scripts/existing-fleet-cloudflare.test.mjs scripts/assemble-existing-fleet-single-worker.test.mjs scripts/deploy-dealer-single-worker.test.mjs scripts/client-logo-contract.test.mjs scripts/dealer-reference-package.test.mjs scripts/modern-demo-database.test.mjs scripts/dealer-presentation.test.mjs scripts/existing-wave-registry.test.mjs scripts/dealer-contact-fallback.test.mjs
+      - name: Install the pinned AST parser for focused missing-contact tests
+        run: |
+          mkdir -p runtime/varna-tools
+          printf '{"private":true}\n' > runtime/varna-tools/package.json
+          npm install --prefix runtime/varna-tools --ignore-scripts --save-exact typescript@6.0.3
+      - run: node --test scripts/fleet-component-repairs.test.mjs scripts/existing-fleet-cloudflare.test.mjs scripts/assemble-existing-fleet-single-worker.test.mjs scripts/deploy-dealer-single-worker.test.mjs scripts/client-logo-contract.test.mjs scripts/dealer-reference-package.test.mjs scripts/modern-demo-database.test.mjs scripts/dealer-presentation.test.mjs scripts/existing-wave-registry.test.mjs scripts/dealer-contact-fallback.test.mjs scripts/emit-existing-fleet-cloudflare-source.test.mjs scripts/cloudflare-native-source-qualification.test.mjs
+        env:
+          CARS_ESBUILD_RESOLVE_FROM: ${{ github.workspace }}/runtime/varna-tools/package.json
       - id: matrix
         run: |
           node scripts/build-existing-fleet-cloudflare.mjs matrix >> "$GITHUB_OUTPUT"
-          node -e 'const r=require("./docs/releases/cloudflare-existing25-20261011/build-request.json");console.log("dealers="+JSON.stringify({include:r.dealers.map(slug=>({slug}))}));' >> "$GITHUB_OUTPUT"
+          node --input-type=module -e 'import fs from "node:fs";import {componentDownloadPlan} from "./scripts/lib/fleet-component-repairs.mjs";const r=JSON.parse(fs.readFileSync("./docs/releases/cloudflare-existing25-20261011/build-request.json"));console.log("dealers="+JSON.stringify({include:r.dealers.map(slug=>componentDownloadPlan(r,slug,{runId:process.env.GITHUB_RUN_ID,attempt:process.env.GITHUB_RUN_ATTEMPT}))}));' >> "$GITHUB_OUTPUT"
+          node --input-type=module -e 'import fs from "node:fs";import {buildMatrix} from "./scripts/build-existing-fleet-cloudflare.mjs";const r=JSON.parse(fs.readFileSync("./docs/releases/cloudflare-existing25-20261011/build-request.json"));console.log("compile_required="+(buildMatrix(r).include.length>0));' >> "$GITHUB_OUTPUT"
   compile:
+    if: needs.plan.outputs.compile_required == 'true'
     needs: plan
     name: ${{ matrix.slug }} / ${{ matrix.key }}
     runs-on: ubuntu-24.04
     timeout-minutes: 60
     strategy:
       fail-fast: false
-      max-parallel: 14
+      max-parallel: 28
       matrix: ${{ fromJSON(needs.plan.outputs.matrix) }}
     env:
       DEALER_SLUG: ${{ matrix.slug }}
@@ -105,17 +117,21 @@ jobs:
           compression-level: 1
   delivery_artifacts:
     needs: [plan, compile]
+    if: always() && needs.plan.result == 'success'
     runs-on: ubuntu-24.04
     timeout-minutes: 30
     strategy:
-      max-parallel: 3
+      fail-fast: false
+      max-parallel: 6
       matrix: ${{ fromJSON(needs.plan.outputs.dealers) }}
     steps:
       - name: Check out exact composition tools, registry and source
+        id: assembly_checkout
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:
           ref: ${{ github.sha }}
-          persist-credentials: false
+          fetch-depth: 0
+          persist-credentials: true
           sparse-checkout-cone-mode: false
           sparse-checkout: |
             /scripts/
@@ -123,15 +139,40 @@ jobs:
             /docs/releases/cloudflare-existing25-20261011/selection.json
             /docs/releases/cloudflare-existing25-20261011/build-request.json
             /docs/releases/**/*.json
+            /docs/releases/cloudflare-existing25-20261011/new-source/${{ matrix.slug }}/
             /clients/${{ matrix.slug }}/
+            /clients/index.json
+            /templates.lock.json
       - uses: actions/download-artifact@634f93cb2916e3fdff6788551b99b062d0335ce0
+        if: matrix.retainedRunId == 0
         with:
           pattern: existing-cf-${{ matrix.slug }}-*-${{ github.run_id }}-${{ github.run_attempt }}
-          path: runtime/existing-fleet-single-worker/${{ github.run_id }}-${{ github.run_attempt }}/${{ matrix.slug }}/inputs
+          path: runtime/existing-fleet-single-worker/${{ github.run_id }}-${{ github.run_attempt }}/${{ matrix.slug }}/inputs/${{ matrix.singleArtifactDirectory }}
+      - name: Retain passed changed compilations from their original failed-delivery run
+        if: matrix.retainedRunId != 0
+        uses: actions/download-artifact@634f93cb2916e3fdff6788551b99b062d0335ce0
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ matrix.retainedRunId }}
+          artifact-ids: ${{ matrix.retainedArtifactIds }}
+          path: runtime/existing-fleet-single-worker/${{ github.run_id }}-${{ github.run_attempt }}/${{ matrix.slug }}/inputs/${{ matrix.singleArtifactDirectory }}
+      - name: Reuse the exact original passed native artifacts without relabeling
+        if: matrix.originalRunId != 0
+        uses: actions/download-artifact@634f93cb2916e3fdff6788551b99b062d0335ce0
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ matrix.originalRunId }}
+          pattern: existing-cf-${{ matrix.slug }}-*-${{ matrix.originalRunId }}-${{ matrix.originalAttempt }}
+          path: runtime/existing-fleet-single-worker/${{ github.run_id }}-${{ github.run_attempt }}/${{ matrix.slug }}/inputs/original
       - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
         with:
           node-version: '26.10.0'
           package-manager-cache: false
+      - name: Install pinned source-verification and source-package tooling
+        run: |
+          mkdir -p runtime/varna-tools
+          printf '{"private":true}\n' > runtime/varna-tools/package.json
+          npm install --prefix runtime/varna-tools --ignore-scripts --save-exact sharp@0.35.5 typescript@6.0.3
       - name: Install the existing exact uploader and esbuild lock without credentials
         run: |
           node --input-type=module <<'NODE'
@@ -146,12 +187,19 @@ jobs:
       - name: Verify seven native targets, compose one Worker and seal its dry-run artifact
         env:
           DEALER_SLUG: ${{ matrix.slug }}
+          GH_TOKEN: ${{ github.token }}
           WRANGLER_SEND_METRICS: 'false'
           NEXT_TELEMETRY_DISABLED: '1'
           NODE_OPTIONS: --max-old-space-size=4608
         run: |
           area="runtime/existing-fleet-single-worker/$GITHUB_RUN_ID-$GITHUB_RUN_ATTEMPT/$DEALER_SLUG"
           node scripts/assemble-existing-fleet-single-worker.mjs "$DEALER_SLUG" "$area/inputs" "$area/output" runtime/single-worker-tools/package.json
+      - name: End historical-composition Git read authentication before artifact upload
+        if: always() && steps.assembly_checkout.outcome == 'success'
+        run: |
+          credentials_config="$(git config --local --no-includes --get "includeIf.gitdir:$GITHUB_WORKSPACE/.git.path")"
+          [[ "${credentials_config%/*}" == "$RUNNER_TEMP" && "${credentials_config##*/}" =~ ^git-credentials-[0-9a-f-]+\.config$ ]] || exit 1
+          git config --file "$credentials_config" --unset-all http.https://github.com/.extraheader
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
           name: existing-cf-single-worker-${{ matrix.slug }}-${{ github.run_id }}-${{ github.run_attempt }}
@@ -159,6 +207,23 @@ jobs:
           include-hidden-files: true
           if-no-files-found: error
           compression-level: 6
+          retention-days: 7
+      - name: Emit the maintained frozen source package for private MAIN
+        env:
+          DEALER_SLUG: ${{ matrix.slug }}
+          GIT_NO_LAZY_FETCH: '1'
+          NODE_OPTIONS: --max-old-space-size=4608
+        run: |
+          area="runtime/existing-fleet-single-worker/$GITHUB_RUN_ID-$GITHUB_RUN_ATTEMPT/$DEALER_SLUG"
+          node scripts/emit-existing-fleet-cloudflare-source.mjs "$DEALER_SLUG" "$area/inputs" "$area/output" "$area/source-transport"
+      - name: Retain compact private MAIN source objects
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: existing-cf-source-package-${{ matrix.slug }}-${{ github.run_id }}-${{ github.run_attempt }}
+          path: runtime/existing-fleet-single-worker/${{ github.run_id }}-${{ github.run_attempt }}/${{ matrix.slug }}/source-transport/artifact/
+          include-hidden-files: true
+          if-no-files-found: error
+          compression-level: 1
           retention-days: 7
       - name: Retain compact composition and dry-run evidence
         if: always()
@@ -168,5 +233,8 @@ jobs:
           path: |
             runtime/existing-fleet-single-worker/${{ github.run_id }}-${{ github.run_attempt }}/${{ matrix.slug }}/composition-review.json
             runtime/existing-fleet-single-worker/${{ github.run_id }}-${{ github.run_attempt }}/${{ matrix.slug }}/evidence/dry-run.log
+            runtime/existing-fleet-component-proof/${{ github.run_id }}-${{ github.run_attempt }}/${{ matrix.slug }}/component-reuse-proof.json
+            runtime/existing-fleet-component-proof/${{ github.run_id }}-${{ github.run_attempt }}/${{ matrix.slug }}/receipts/source.json
           if-no-files-found: warn
           retention-days: 7
+

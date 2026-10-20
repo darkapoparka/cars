@@ -1,0 +1,1075 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-m2-visual-carry-forward-evidence",
+  "status": "passed",
+  "observedAt": "2026-10-19T21:30:34Z",
+  "scope": "Authenticate the three existing 19feec8 CI proof report archives and compare their 54 original full-page PNGs with the authenticated 26b626c M2 corpus. No rebuild or browser recapture was performed.",
+  "candidateRun": {
+    "repository": "darkapoparka/cars",
+    "sourceCommit": "19feec837524c04f88f3c3ccbd0586e0771574c3",
+    "runId": "39319236637",
+    "attempt": 1,
+    "url": "https://github.com/darkapoparka/cars/actions/runs/39319236637",
+    "status": "completed",
+    "conclusion": "success",
+    "authenticatedJobs": [
+      {
+        "id": 118288636039,
+        "name": "plan",
+        "conclusion": "success"
+      },
+      {
+        "id": 118288636654,
+        "name": "contracts",
+        "conclusion": "success"
+      },
+      {
+        "id": 118289327983,
+        "name": "lane (1, granada-auto-sales)",
+        "conclusion": "success"
+      },
+      {
+        "id": 118289328097,
+        "name": "lane (3, za-motors)",
+        "conclusion": "success"
+      },
+      {
+        "id": 118289328215,
+        "name": "lane (2, wadishee-used-cars)",
+        "conclusion": "success"
+      },
+      {
+        "id": 118296991723,
+        "name": "result",
+        "conclusion": "success"
+      }
+    ],
+    "brandingRun": {
+      "runId": "39319236514",
+      "url": "https://github.com/darkapoparka/cars/actions/runs/39319236514",
+      "status": "completed",
+      "conclusion": "success"
+    }
+  },
+  "priorEvidence": {
+    "path": "docs/m2/visual-equivalence-2026-10-19.json",
+    "sha256": "b62bfbff6f449a443b8e93617b394c1170ec9fa167e25764f3de294af6d9dc91",
+    "sourceCommit": "26b626c979d2cfd653b3015d94ff8fe2df724a93",
+    "runId": "39314170350",
+    "attempt": 1,
+    "url": "https://github.com/darkapoparka/cars/actions/runs/39314170350",
+    "originalM1Comparison": {
+      "sourceCommit": "a999878a921fb61b37bf198c43275550814f88cc",
+      "runId": "39284983471",
+      "attempt": 2,
+      "url": "https://github.com/darkapoparka/cars/actions/runs/39284983471/attempts/2",
+      "views": 54,
+      "authorizedFabArtworkPixels": 29691,
+      "antialiasingPixels": 9,
+      "unexpectedPixels": 0,
+      "globalPixelIdentityClaimed": false
+    }
+  },
+  "verification": {
+    "githubMetadata": "Authenticated GitHub connector run jobs and artifact metadata",
+    "archiveChecks": [
+      "exact byte count",
+      "exact provider SHA-256"
+    ],
+    "reports": [
+      "passing matching build and QA",
+      "exact source commit and Actions execution",
+      "matching slug, packDigest, releaseDigest and outputDigest",
+      "prior build/QA bytes match committed prior evidence",
+      "unchanged pack and release digests across the two M2 runs"
+    ],
+    "screenshots": [
+      "exact complete six-design by three-width filename set",
+      "all 54 current PNG SHA-256 values match authenticated current QA",
+      "all 54 prior PNG SHA-256 values match authenticated prior QA",
+      "decoded dimensions equal without resizing",
+      "exact original PNG bytes compared",
+      "all three differing pairs passed the maintained classifier at threshold zero without an exception"
+    ],
+    "filesystemWritesDuringAuthentication": 0,
+    "providerWrites": 0,
+    "builds": 0,
+    "browserRecaptures": 0
+  },
+  "comparison": {
+    "script": "scripts/compare-dealer-pack-screenshots.mjs",
+    "export": "compareDealerPackPngs",
+    "scriptSha256": "dba886143328e065b36903b1d767b12b6913151b5f684f53932d0bd3ffa71078",
+    "decoder": "sharp/0.35.5",
+    "comparator": "playwright-core/1.62.1 pixelmatch",
+    "threshold": 0,
+    "maxDiffPixels": 0,
+    "exception": null,
+    "callerDefinedMasks": false,
+    "resizing": false,
+    "aggregate": {
+      "dealers": 3,
+      "views": 54,
+      "byteIdenticalViews": 51,
+      "differingViews": 3,
+      "rawDifferentPixels": 9,
+      "antialiasingPixels": 9,
+      "unexpectedPixels": 0,
+      "dimensionsUnchanged": true
+    },
+    "classifiedDifferences": [
+      {
+        "slug": "granada-auto-sales",
+        "path": "screenshots/karento-best-390-home.png",
+        "status": "antialiasing-only",
+        "findings": [],
+        "width": 390,
+        "height": 900,
+        "rawDifferentPixels": 3,
+        "authorizedFabPixels": 0,
+        "antialiasingPixels": 3,
+        "unexpectedPixels": 0
+      },
+      {
+        "slug": "za-motors",
+        "path": "screenshots/karento-best-320-home.png",
+        "status": "antialiasing-only",
+        "findings": [],
+        "width": 320,
+        "height": 900,
+        "rawDifferentPixels": 3,
+        "authorizedFabPixels": 0,
+        "antialiasingPixels": 3,
+        "unexpectedPixels": 0
+      },
+      {
+        "slug": "za-motors",
+        "path": "screenshots/karento-best-390-home.png",
+        "status": "antialiasing-only",
+        "findings": [],
+        "width": 390,
+        "height": 900,
+        "rawDifferentPixels": 3,
+        "authorizedFabPixels": 0,
+        "antialiasingPixels": 3,
+        "unexpectedPixels": 0
+      }
+    ]
+  },
+  "limitations": [
+    "This comparison binds only the exact existing 19feec8 outputs identified below; later outputs need their own evidence.",
+    "This is M2-to-M2 visual carry-forward. The separately retained M2-to-M1 comparison includes the previously requested FAB artwork correction and does not claim global pixel identity.",
+    "Hosted checks, HEAD behavior, Cloudflare counts, startup, CPU and memory are separate evidence and are not established here."
+  ],
+  "dealers": [
+    {
+      "slug": "granada-auto-sales",
+      "artifactId": 12220350639,
+      "archiveBytes": 10497167,
+      "archiveSha256": "2d047e6cc7eae3ad786bc8baf9bf184e46849705f18b90c81c478ff570a65bcf",
+      "buildReportSha256": "a0634ed07fb4e91fed1644f447ac36892480c72a6505ffb5f6a4bb542958ab37",
+      "qaReportSha256": "fe1b4caffd0417ba5dcf57a04332ce0b20f866182531bea60ab10de418a8762b",
+      "sourceCommit": "19feec837524c04f88f3c3ccbd0586e0771574c3",
+      "packDigest": "4b209fc366894e172643f0a8600a0ff6d827b9622475333fde4319613c1420db",
+      "releaseDigest": "2920143c97546de03d5e7c7c9f572fb87cee2b088cf48fbba40d575c73cfc9c3",
+      "outputDigest": "8037d20a83cd9ff02438ef5fb738f78776aedd1af8a3385527db0a579907cf7e",
+      "comparisonSourceCommit": "26b626c979d2cfd653b3015d94ff8fe2df724a93",
+      "qaSuccess": true,
+      "providerWrites": 0,
+      "byteIdenticalViews": 17,
+      "differentPixels": 3,
+      "views": [
+        {
+          "path": "screenshots/auto-best-320-home.png",
+          "sha256": "0067360fc29699ba3347a33cac940d30336290285cc1a7f7d3b685a30030f564",
+          "priorSha256": "0067360fc29699ba3347a33cac940d30336290285cc1a7f7d3b685a30030f564",
+          "byteIdentical": true,
+          "dimensions": [
+            320,
+            2797
+          ],
+          "differentPixels": 0,
+          "maxChannelDifference": 0,
+          "changedPixelCoordinates": [],
+          "classification": "byte-identical",
+          "unexpectedPixels": 0
+        },
+        {
+          "path": "screenshots/auto-best-390-home.png",
+          "sha256": "2c52d0c7dfbde4a296485ef482869b03f98eed869594f20f882d709092799b47",
+          "priorSha256": "2c52d0c7dfbde4a296485ef482869b03f98eed869594f20f882d709092799b47",
+          "byteIdentical": true,
+          "dimensions": [
+            390,
+            2810
+          ],
+          "differentPixels": 0,
+          "maxChannelDifference": 0,
+          "changedPixelCoordinates": [],
+          "classification": "byte-identical",
+          "unexpectedPixels": 0
+        },
+        {
+          "path": "screenshots/auto-best-1280-home.png",
+          "sha256": "f091b0e9fe001bf5534c37e7ce9cb43388353c3fdcab233a73adb36fda5cb6fe",
+          "priorSha256": "f091b0e9fe001bf5534c37e7ce9cb43388353c3fdcab233a73adb36fda5cb6fe",
+          "byteIdentical": true,
+          "dimensions": [
+            1280,
+            3802
+          ],
+          "differentPixels": 0,
+          "maxChannelDifference": 0,
+          "changedPixelCoordinates": [],
+          "classification": "byte-identical",
+          "unexpectedPixels": 0
+        },
+        {
+          "path": "screenshots/modern-320-home.png",
+          "sha256": "f86f4f98c609cada81ac0a13b85319c54029f9ac54b45a73df4a3458b4e5fc4b",
+          "priorSha256": "f86f4f98c609cada81ac0a13b85319c54029f9ac54b45a73df4a3458b4e5fc4b",
+          "byteIdentical": true,
+          "dimensions": [
+            320,
+            900
+          ],
+          "differentPixels": 0,
+          "maxChannelDifference": 0,
+          "changedPixelCoordinates": [],
+          "classification": "byte-identical",
+          "unexpectedPixels": 0
+        },
+        {
+          "path": "screenshots/modern-390-home.png",
+          "sha256": "d4c215fb900ada3182670588b0691b9f1faa8679826867932eb370ba4f6f0151",
+          "priorSha256": "d4c215fb900ada3182670588b0691b9f1faa8679826867932eb370ba4f6f0151",
+          "byteIdentical": true,
+          "dimensions": [
+            390,
+            900
+          ],
+          "differentPixels": 0,
+          "maxChannelDifference": 0,
+          "changedPixelCoordinates": [],
+          "classification": "byte-identical",
+          "unexpectedPixels": 0
+        },
+        {
+          "path": "screenshots/modern-1280-home.png",
+          "sha256": "ba5a1525e5a7882c315049c77f916dc8a8a8481566f359b9cdc3e3babd1ebf64",
+          "priorSha256": "ba5a1525e5a7882c315049c77f916dc8a8a8481566f359b9cdc3e3babd1ebf64",
+          "byteIdentical": true,
+          "dimensions": [
+            1280,
+            1425
+          ],
+          "differentPixels": 0,
+          "maxChannelDifference": 0,
+          "changedPixelCoordinates": [],
+          "classification": "byte-identical",
+          "unexpectedPixels": 0
+        },
+        {
+          "path": "screenshots/import-320-home.png",
+          "sha256": "7b15dfc57feadfc6e569ec92aa71e9abdfb1b770f38e55727f338d7baf758d0d",
+          "priorSha256": "7b15dfc57feadfc6e569ec92aa71e9abdfb1b770f38e55727f338d7baf758d0d",
+          "byteIdentical": true,
+          "dimensions": [
+            320,
+            3245
+          ],
+          "differentPixels": 0,
+          "maxChannelDifference": 0,
+          "changedPixelCoordinates": [],
+          "classification": "byte-identical",
+          "unexpectedPixels": 0
+        },
+        {
+          "path": "screenshots/import-390-home.png",
+          "sha256": "d52cf28f337c02d9695bc126f1ee12bee547607b60aa3bd1ebaf51d88d562414",
+          "priorSha256": "d52cf28f337c02d9695bc126f1ee12bee547607b60aa3bd1ebaf51d88d562414",
+          "byteIdentical": true,
+          "dimensions": [
+            390,
+            3271
+          ],
+          "differentPixels": 0,
+          "maxChannelDifference": 0,
+          "changedPixelCoordinates": [],
+          "classification": "byte-identical",
+          "unexpectedPixels": 0
+        },
+        {
+          "path": "screenshots/import-1280-home.png",
+          "sha256": "0e1d42326b2ac67741900bc85598b1e345eaa356de63bd81441530cc8c9445d8",
+          "priorSha256": "0e1d42326b2ac67741900bc85598b1e345eaa356de63bd81441530cc8c9445d8",
+          "byteIdentical": true,
+          "dimensions": [
+            1280,
+            3515
+          ],
+          "differentPixels": 0,
+          "maxChannelDifference": 0,
+          "changedPixelCoordinates": [],
+          "classification": "byte-identical",
+          "unexpectedPixels": 0
+        },
+        {
+          "path": "screenshots/app-320-home.png",
+          "sha256": "9905dae7540861981043571bee982f8520bf3b707dc8aab2ecaa93a267fac489",
+          "priorSha256": "9905dae7540861981043571bee982f8520bf3b707dc8aab2ecaa93a267fac489",
+          "byteIdentical": true,
+          "dimensions": [
+            320,
+            1124
+          ],
+          "differentPixels": 0,
+          "maxChannelDifference": 0,
+          "changedPixelCoordinates": [],
+          "classification": "byte-identical",
+          "unexpectedPixels": 0
+        },
+        {
+          "path": "screenshots/app-390-home.png",
+          "sha256": "b79fbaab3af64175c39933d202f1c35736255ddcd1fcaa97aaa64bd6c82a0474",
+          "priorSha256": "b79fbaab3af64175c39933d202f1c35736255ddcd1fcaa97aaa64bd6c82a0474",
+          "byteIdentical": true,
+          "dimensions": [
+            390,
+            1124
+          ],
+          "differentPixels": 0,
+          "maxChannelDifference": 0,
+          "changedPixelCoordinates": [],
+          "classification": "byte-identical",
+          "unexpectedPixels": 0
+        },
+        {
+          "path": "screenshots/app-1280-home.png",
+          "sha256": "98288bebfd8a0733a54b18cdc51a12b1d00eaa68e71bbefd37b87928b2ddf372",
+          "priorSha256": "98288bebfd8a0733a54b18cdc51a12b1d00eaa68e71bbefd37b87928b2ddf372",
+          "byteIdentical": true,
+          "dimensions": [
+            1280,
+            1115
+          ],
+          "differentPixels": 0,
+          "maxChannelDifference": 0,
+          "changedPixelCoordinates": [],
+          "classification": "byte-identical",
+          "unexpectedPixels": 0
+        },
+        {
+          "path": "screenshots/mobile-320-home.png",
+          "sha256": "8dd2d8f6e58ecc2df4d020355ad038469c4b016f4035ca3282e7aceea6f793ca",
+          "priorSha256": "8dd2d8f6e58ecc2df4d020355ad038469c4b016f4035ca3282e7aceea6f793ca",
+          "byteIdentical": true,
+          "dimensions": [
+            320,
+            1141
+          ],
+          "differentPixels": 0,
+          "maxChannelDifference": 0,
+          "changedPixelCoordinates": [],
+          "classification": "byte-identical",
+          "unexpectedPixels": 0
+        },
+        {
+          "path": "screenshots/mobile-390-home.png",
+          "sha256": "c71a630c3b0bb6f90851b93290f5d77bad960e826138e215106fe30f67e72f36",
+          "priorSha256": "c71a630c3b0bb6f90851b93290f5d77bad960e826138e215106fe30f67e72f36",
+          "byteIdentical": true,
+          "dimensions": [
+            390,
+            1141
+          ],
+          "differentPixels": 0,
+          "maxChannelDifference": 0,
+          "changedPixelCoordinates": [],
+          "classification": "byte-identical",
+          "unexpectedPixels": 0
+        },
+        {
+          "path": "screenshots/mobile-1280-home.png",
+          "sha256": "d84b2dd7b17619f9721724058d40b90df01a964f88049458ff866255877e737b",
+          "priorSha256": "d84b2dd7b17619f9721724058d40b90df01a964f88049458ff866255877e737b",
+          "byteIdentical": true,
+          "dimensions": [
+            1280,
+            917
+          ],
+          "differentPixels": 0,
+          "maxChannelDifference": 0,
+          "changedPixelCoordinates": [],
+          "classification": "byte-identical",
+          "unexpectedPixels": 0
+        },
+        {
+          "path": "screenshots/karento-best-320-home.png",
+          "sha256": "0b0a40af8bf72220d1ddb12441ea7b7a9cd081ef12ed27f7aa568c0f186341fd",
+          "priorSha256": "0b0a40af8bf72220d1ddb12441ea7b7a9cd081ef12ed27f7aa568c0f186341fd",
+          "byteIdentical": true,
+          "dimensions": [
+            320,
+            900
+          ],
+          "differentPixels": 0,
+          "maxChannelDifference": 0,
+          "changedPixelCoordinates": [],
+          "classification": "byte-identical",
+          "unexpectedPixels": 0
+        },
+        {
+          "path": "screenshots/karento-best-390-home.png",
+          "sha256": "c172f8259689465969bcd46b94d096e713290d75a21ea2f4edc187025c1a4d4c",
+          "priorSha256": "6e0c4cee542bc2f9ba44e838b715789713a7673362e105cef1ba09fe5d57666c",
+          "byteIdentical": false,
+          "dimensions": [
+            390,
+            900
+          ],
+          "differentPixels": 3,
+          "maxChannelDifference": 1,
+          "changedPixelCoordinates": [
+            [
+              75,
+              854
+            ],
+            [
+              78,
+              857
+            ],
+            [
+              79,
+              859
+            ]
+          ],
+          "classification": "antialiasing-only",
+          "unexpectedPixels": 0
+        },
+        {
+          "path": "screenshots/karento-best-1280-home.png",
+          "sha256": "7e51ff4bd7ee11e2768eecb8ace9787a7b7260b609a40ac659f969d86f2e96d3",
+          "priorSha256": "7e51ff4bd7ee11e2768eecb8ace9787a7b7260b609a40ac659f969d86f2e96d3",
+          "byteIdentical": true,
+          "dimensions": [
+            1280,
+            4739
+          ],
+          "differentPixels": 0,
+          "maxChannelDifference": 0,
+          "changedPixelCoordinates": [],
+          "classification": "byte-identical",
+          "unexpectedPixels": 0
+        }
+      ],
+      "artifactUrl": "https://github.com/darkapoparka/cars/actions/runs/39319236637/artifacts/12220350639"
+    },
+    {
+      "slug": "wadishee-used-cars",
+      "artifactId": 12220450751,
+      "archiveBytes": 10797535,
+      "archiveSha256": "37f464e9572d275b26a16e660822fc20695e4473ee1d0c647d86426f90337f40",
+      "buildReportSha256": "49acf51c9bcdf3ad388f2210678d5b7f4ca0b5844cf2cfed17e3c2be0f5703d5",
+      "qaReportSha256": "e6b9c200863db178fc3dab39d8204d1d059d2945cbce8d805306159436800fd0",
+      "sourceCommit": "19feec837524c04f88f3c3ccbd0586e0771574c3",
+      "packDigest": "e60910c5d52a07a8facb7a51cfbaabddff29e2b434125baa3509a6b56f7a71ea",
+      "releaseDigest": "2920143c97546de03d5e7c7c9f572fb87cee2b088cf48fbba40d575c73cfc9c3",
+      "outputDigest": "43dfec2c4908140490cbd1f7d70c21f5323ed1012ea36111152bb3e849326213",
+      "comparisonSourceCommit": "26b626c979d2cfd653b3015d94ff8fe2df724a93",
+      "qaSuccess": true,
+      "providerWrites": 0,
+      "byteIdenticalViews": 18,
+      "differentPixels": 0,
+      "views": [
+        {
+          "path": "screenshots/auto-best-320-home.png",
+          "sha256": "11ec7c5ee533ba509f5ebf9dd708b5cc2571f0db1e5fecbb567c2f1b2a3b77c8",
+          "priorSha256": "11ec7c5ee533ba509f5ebf9dd708b5cc2571f0db1e5fecbb567c2f1b2a3b77c8",
+          "byteIdentical": true,
+          "dimensions": [
+            320,
+            2789
+          ],
+          "differentPixels": 0,
+          "maxChannelDifference": 0,
+          "changedPixelCoordinates": [],
+          "classification": "byte-identical",
+          "unexpectedPixels": 0
+        },
+        {
+          "path": "screenshots/auto-best-390-home.png",
+          "sha256": "21fa6bf18dfd947a8378276f327dc6756ccf94673a18227f4d38c4af2b8c2b51",
+          "priorSha256": "21fa6bf18dfd947a8378276f327dc6756ccf94673a18227f4d38c4af2b8c2b51",
+          "byteIdentical": true,
+          "dimensions": [
+            390,
+            2810
+          ],
+          "differentPixels": 0,
+          "maxChannelDifference": 0,
+          "changedPixelCoordinates": [],
+          "classification": "byte-identical",
+          "unexpectedPixels": 0
+        },
+        {
+          "path": "screenshots/auto-best-1280-home.png",
+          "sha256": "288c4d3d06919d7bce7a0b1c99e08aa181ffe5033b7858e1463efd290cd72869",
+          "priorSha256": "288c4d3d06919d7bce7a0b1c99e08aa181ffe5033b7858e1463efd290cd72869",
+          "byteIdentical": true,
+          "dimensions": [
+            1280,
+            3853
+          ],
+          "differentPixels": 0,
+          "maxChannelDifference": 0,
+          "changedPixelCoordinates": [],
+          "classification": "byte-identical",
+          "unexpectedPixels": 0
+        },
+        {
+          "path": "screenshots/modern-320-home.png",
+          "sha256": "85a3570b76dc3b7dba3bd59cddeb21a1507b4bdf15baacd68ab9e97c1504c973",
+          "priorSha256": "85a3570b76dc3b7dba3bd59cddeb21a1507b4bdf15baacd68ab9e97c1504c973",
+          "byteIdentical": true,
+          "dimensions": [
+            320,
+            900
+          ],
+          "differentPixels": 0,
+          "maxChannelDifference": 0,
+          "changedPixelCoordinates": [],
+          "classification": "byte-identical",
+          "unexpectedPixels": 0
+        },
+        {
+          "path": "screenshots/modern-390-home.png",
+          "sha256": "039bebce071269cf595524b02d01d02e6e525e31426b78bc828dfe9ea33b2b7c",
+          "priorSha256": "039bebce071269cf595524b02d01d02e6e525e31426b78bc828dfe9ea33b2b7c",
+          "byteIdentical": true,
+          "dimensions": [
+            390,
+            900
+          ],
+          "differentPixels": 0,
+          "maxChannelDifference": 0,
+          "changedPixelCoordinates": [],
+          "classification": "byte-identical",
+          "unexpectedPixels": 0
+        },
+        {
+          "path": "screenshots/modern-1280-home.png",
+          "sha256": "c2bc854012d6cd95754e6f459e3f50398929e4ce22d42eea7162ac9ebc12afc2",
+          "priorSha256": "c2bc854012d6cd95754e6f459e3f50398929e4ce22d42eea7162ac9ebc12afc2",
+          "byteIdentical": true,
+          "dimensions": [
+            1280,
+            1425
+          ],
+          "differentPixels": 0,
+          "maxChannelDifference": 0,
+          "changedPixelCoordinates": [],
+          "classification": "byte-identical",
+          "unexpectedPixels": 0
+        },
+        {
+          "path": "screenshots/import-320-home.png",
+          "sha256": "a5eefcc4ef5f558b83c22ac75025e4d881f409c2e51588d691a280364945572b",
+          "priorSha256": "a5eefcc4ef5f558b83c22ac75025e4d881f409c2e51588d691a280364945572b",
+          "byteIdentical": true,
+          "dimensions": [
+            320,
+            3266
+          ],
+          "differentPixels": 0,
+          "maxChannelDifference": 0,
+          "changedPixelCoordinates": [],
+          "classification": "byte-identical",
+          "unexpectedPixels": 0
+        },
+        {
+          "path": "screenshots/import-390-home.png",
+          "sha256": "ad848f67d66d5cba3388eeb18cfa87b49c99ed8b6cd61b538a9369d66c2bb5ca",
+          "priorSha256": "ad848f67d66d5cba3388eeb18cfa87b49c99ed8b6cd61b538a9369d66c2bb5ca",
+          "byteIdentical": true,
+          "dimensions": [
+            390,
+            3291
+          ],
+          "differentPixels": 0,
+          "maxChannelDifference": 0,
+          "changedPixelCoordinates": [],
+          "classification": "byte-identical",
+          "unexpectedPixels": 0
+        },
+        {
+          "path": "screenshots/import-1280-home.png",
+          "sha256": "fd2181d3b6347e996965fe923247cf14a940be103d76c95e35b84a862a884e75",
+          "priorSha256": "fd2181d3b6347e996965fe923247cf14a940be103d76c95e35b84a862a884e75",
+          "byteIdentical": true,
+          "dimensions": [
+            1280,
+            3515
+          ],
+          "differentPixels": 0,
+          "maxChannelDifference": 0,
+          "changedPixelCoordinates": [],
+          "classification": "byte-identical",
+          "unexpectedPixels": 0
+        },
+        {
+          "path": "screenshots/app-320-home.png",
+          "sha256": "72cf9945ab802cb7d0b308ce683b5c37b7c0f58695f61e932aeb2ef883363564",
+          "priorSha256": "72cf9945ab802cb7d0b308ce683b5c37b7c0f58695f61e932aeb2ef883363564",
+          "byteIdentical": true,
+          "dimensions": [
+            320,
+            1141
+          ],
+          "differentPixels": 0,
+          "maxChannelDifference": 0,
+          "changedPixelCoordinates": [],
+          "classification": "byte-identical",
+          "unexpectedPixels": 0
+        },
+        {
+          "path": "screenshots/app-390-home.png",
+          "sha256": "deffa760a7aef0bdbdd86cd7977a01165ba5b7b96c6ddffba8cc619ffc723549",
+          "priorSha256": "deffa760a7aef0bdbdd86cd7977a01165ba5b7b96c6ddffba8cc619ffc723549",
+          "byteIdentical": true,
+          "dimensions": [
+            390,
+            1141
+          ],
+          "differentPixels": 0,
+          "maxChannelDifference": 0,
+          "changedPixelCoordinates": [],
+          "classification": "byte-identical",
+          "unexpectedPixels": 0
+        },
+        {
+          "path": "screenshots/app-1280-home.png",
+          "sha256": "2580c9ad9f2ed3426a17919168c9b19424d9ceec1c757708a7f2075dd7168035",
+          "priorSha256": "2580c9ad9f2ed3426a17919168c9b19424d9ceec1c757708a7f2075dd7168035",
+          "byteIdentical": true,
+          "dimensions": [
+            1280,
+            1115
+          ],
+          "differentPixels": 0,
+          "maxChannelDifference": 0,
+          "changedPixelCoordinates": [],
+          "classification": "byte-identical",
+          "unexpectedPixels": 0
+        },
+        {
+          "path": "screenshots/mobile-320-home.png",
+          "sha256": "fba9b3a138957efdace4afb797eba3bb869238fa7569dc0cbef16f5bbf946888",
+          "priorSha256": "fba9b3a138957efdace4afb797eba3bb869238fa7569dc0cbef16f5bbf946888",
+          "byteIdentical": true,
+          "dimensions": [
+            320,
+            1141
+          ],
+          "differentPixels": 0,
+          "maxChannelDifference": 0,
+          "changedPixelCoordinates": [],
+          "classification": "byte-identical",
+          "unexpectedPixels": 0
+        },
+        {
+          "path": "screenshots/mobile-390-home.png",
+          "sha256": "a43e6bb2bfc7644916b73c47a2d03a8a0b97f2b3fb61fad79bdea2a98d3b77c5",
+          "priorSha256": "a43e6bb2bfc7644916b73c47a2d03a8a0b97f2b3fb61fad79bdea2a98d3b77c5",
+          "byteIdentical": true,
+          "dimensions": [
+            390,
+            1141
+          ],
+          "differentPixels": 0,
+          "maxChannelDifference": 0,
+          "changedPixelCoordinates": [],
+          "classification": "byte-identical",
+          "unexpectedPixels": 0
+        },
+        {
+          "path": "screenshots/mobile-1280-home.png",
+          "sha256": "3a9251c0a05621b52176e43d00f7bc671390923d107865165e8ca267c1c0d97b",
+          "priorSha256": "3a9251c0a05621b52176e43d00f7bc671390923d107865165e8ca267c1c0d97b",
+          "byteIdentical": true,
+          "dimensions": [
+            1280,
+            917
+          ],
+          "differentPixels": 0,
+          "maxChannelDifference": 0,
+          "changedPixelCoordinates": [],
+          "classification": "byte-identical",
+          "unexpectedPixels": 0
+        },
+        {
+          "path": "screenshots/karento-best-320-home.png",
+          "sha256": "8b9b6dc51cb1863e9c2657b7115066b2ba210f5b1125259ed614952714018b89",
+          "priorSha256": "8b9b6dc51cb1863e9c2657b7115066b2ba210f5b1125259ed614952714018b89",
+          "byteIdentical": true,
+          "dimensions": [
+            320,
+            900
+          ],
+          "differentPixels": 0,
+          "maxChannelDifference": 0,
+          "changedPixelCoordinates": [],
+          "classification": "byte-identical",
+          "unexpectedPixels": 0
+        },
+        {
+          "path": "screenshots/karento-best-390-home.png",
+          "sha256": "4f0896071609e24d474c5505e954e716697ca43b3eaf37fb867a05badea9c47b",
+          "priorSha256": "4f0896071609e24d474c5505e954e716697ca43b3eaf37fb867a05badea9c47b",
+          "byteIdentical": true,
+          "dimensions": [
+            390,
+            900
+          ],
+          "differentPixels": 0,
+          "maxChannelDifference": 0,
+          "changedPixelCoordinates": [],
+          "classification": "byte-identical",
+          "unexpectedPixels": 0
+        },
+        {
+          "path": "screenshots/karento-best-1280-home.png",
+          "sha256": "2819a7dc823c3389c6ce00126847fb326f5e8640f59b36a7ecb5aa63b6a72732",
+          "priorSha256": "2819a7dc823c3389c6ce00126847fb326f5e8640f59b36a7ecb5aa63b6a72732",
+          "byteIdentical": true,
+          "dimensions": [
+            1280,
+            4757
+          ],
+          "differentPixels": 0,
+          "maxChannelDifference": 0,
+          "changedPixelCoordinates": [],
+          "classification": "byte-identical",
+          "unexpectedPixels": 0
+        }
+      ],
+      "artifactUrl": "https://github.com/darkapoparka/cars/actions/runs/39319236637/artifacts/12220450751"
+    },
+    {
+      "slug": "za-motors",
+      "artifactId": 12218894412,
+      "archiveBytes": 10661747,
+      "archiveSha256": "2085c8f06073b64fb33034f1b00c30ca41c0f11d6a2dfdba64c46114217a9bd2",
+      "buildReportSha256": "05603a67bde887b73664d119d4a4d1acf4644ebd24fb6b3a10490a0d80580f87",
+      "qaReportSha256": "4108b8d26dab562dfb69e4fa53ebb180180d39546024d01498f88155910421b0",
+      "sourceCommit": "19feec837524c04f88f3c3ccbd0586e0771574c3",
+      "packDigest": "36c557950afc1390b56f72e69f60f9eefcae579538054b6c2856b12533d8b872",
+      "releaseDigest": "2920143c97546de03d5e7c7c9f572fb87cee2b088cf48fbba40d575c73cfc9c3",
+      "outputDigest": "ec5dd7df84e0a190509d92b123652ce033f9d98e0d1200909cc8c2fd40f35ffc",
+      "comparisonSourceCommit": "26b626c979d2cfd653b3015d94ff8fe2df724a93",
+      "qaSuccess": true,
+      "providerWrites": 0,
+      "byteIdenticalViews": 16,
+      "differentPixels": 6,
+      "views": [
+        {
+          "path": "screenshots/auto-best-320-home.png",
+          "sha256": "f675dedd8d7f7a6c85178aea5174d83b3e2f605ba3aefff2184045e155e4cd2a",
+          "priorSha256": "f675dedd8d7f7a6c85178aea5174d83b3e2f605ba3aefff2184045e155e4cd2a",
+          "byteIdentical": true,
+          "dimensions": [
+            320,
+            2789
+          ],
+          "differentPixels": 0,
+          "maxChannelDifference": 0,
+          "changedPixelCoordinates": [],
+          "classification": "byte-identical",
+          "unexpectedPixels": 0
+        },
+        {
+          "path": "screenshots/auto-best-390-home.png",
+          "sha256": "54c2ca22b683d659f2e5266e8df4b8910129703a2c4baafff4497138c4b4726e",
+          "priorSha256": "54c2ca22b683d659f2e5266e8df4b8910129703a2c4baafff4497138c4b4726e",
+          "byteIdentical": true,
+          "dimensions": [
+            390,
+            2822
+          ],
+          "differentPixels": 0,
+          "maxChannelDifference": 0,
+          "changedPixelCoordinates": [],
+          "classification": "byte-identical",
+          "unexpectedPixels": 0
+        },
+        {
+          "path": "screenshots/auto-best-1280-home.png",
+          "sha256": "807cef200d2ee4b44062864ad0c020e7dec21e0379e7c69f7108fa4528452fa1",
+          "priorSha256": "807cef200d2ee4b44062864ad0c020e7dec21e0379e7c69f7108fa4528452fa1",
+          "byteIdentical": true,
+          "dimensions": [
+            1280,
+            3853
+          ],
+          "differentPixels": 0,
+          "maxChannelDifference": 0,
+          "changedPixelCoordinates": [],
+          "classification": "byte-identical",
+          "unexpectedPixels": 0
+        },
+        {
+          "path": "screenshots/modern-320-home.png",
+          "sha256": "7edc7ea0911f8f278f0107ce5351a7888304c8cb388def6a77a2a000319b699e",
+          "priorSha256": "7edc7ea0911f8f278f0107ce5351a7888304c8cb388def6a77a2a000319b699e",
+          "byteIdentical": true,
+          "dimensions": [
+            320,
+            900
+          ],
+          "differentPixels": 0,
+          "maxChannelDifference": 0,
+          "changedPixelCoordinates": [],
+          "classification": "byte-identical",
+          "unexpectedPixels": 0
+        },
+        {
+          "path": "screenshots/modern-390-home.png",
+          "sha256": "55efbf0594833d96d6d2fda0d4a9ccb40f334002837d5fe656ffad580f317471",
+          "priorSha256": "55efbf0594833d96d6d2fda0d4a9ccb40f334002837d5fe656ffad580f317471",
+          "byteIdentical": true,
+          "dimensions": [
+            390,
+            900
+          ],
+          "differentPixels": 0,
+          "maxChannelDifference": 0,
+          "changedPixelCoordinates": [],
+          "classification": "byte-identical",
+          "unexpectedPixels": 0
+        },
+        {
+          "path": "screenshots/modern-1280-home.png",
+          "sha256": "2f31032272aa50479bd83c9fb3b61ccba6f7efae56f07e6402d23c032f9aff31",
+          "priorSha256": "2f31032272aa50479bd83c9fb3b61ccba6f7efae56f07e6402d23c032f9aff31",
+          "byteIdentical": true,
+          "dimensions": [
+            1280,
+            1425
+          ],
+          "differentPixels": 0,
+          "maxChannelDifference": 0,
+          "changedPixelCoordinates": [],
+          "classification": "byte-identical",
+          "unexpectedPixels": 0
+        },
+        {
+          "path": "screenshots/import-320-home.png",
+          "sha256": "659a7fc3e16bf5f0a7703276d993d8e775dd68e12afdeb4a0fa690dda00dc168",
+          "priorSha256": "659a7fc3e16bf5f0a7703276d993d8e775dd68e12afdeb4a0fa690dda00dc168",
+          "byteIdentical": true,
+          "dimensions": [
+            320,
+            3219
+          ],
+          "differentPixels": 0,
+          "maxChannelDifference": 0,
+          "changedPixelCoordinates": [],
+          "classification": "byte-identical",
+          "unexpectedPixels": 0
+        },
+        {
+          "path": "screenshots/import-390-home.png",
+          "sha256": "d22fc99e84425ec89372d742e2e1bdc1a4c34da382007468663c735b36dc7df4",
+          "priorSha256": "d22fc99e84425ec89372d742e2e1bdc1a4c34da382007468663c735b36dc7df4",
+          "byteIdentical": true,
+          "dimensions": [
+            390,
+            3290
+          ],
+          "differentPixels": 0,
+          "maxChannelDifference": 0,
+          "changedPixelCoordinates": [],
+          "classification": "byte-identical",
+          "unexpectedPixels": 0
+        },
+        {
+          "path": "screenshots/import-1280-home.png",
+          "sha256": "f4a62f7dd552dcebc8aa5ce3ec4c733223af6a13e7c52b6f3068aae73a7a16a6",
+          "priorSha256": "f4a62f7dd552dcebc8aa5ce3ec4c733223af6a13e7c52b6f3068aae73a7a16a6",
+          "byteIdentical": true,
+          "dimensions": [
+            1280,
+            3515
+          ],
+          "differentPixels": 0,
+          "maxChannelDifference": 0,
+          "changedPixelCoordinates": [],
+          "classification": "byte-identical",
+          "unexpectedPixels": 0
+        },
+        {
+          "path": "screenshots/app-320-home.png",
+          "sha256": "8cb24a466eda4ecc7ae50c84ec6ecea4f4a55986ebc76b08741b11576ec56c3d",
+          "priorSha256": "8cb24a466eda4ecc7ae50c84ec6ecea4f4a55986ebc76b08741b11576ec56c3d",
+          "byteIdentical": true,
+          "dimensions": [
+            320,
+            1119
+          ],
+          "differentPixels": 0,
+          "maxChannelDifference": 0,
+          "changedPixelCoordinates": [],
+          "classification": "byte-identical",
+          "unexpectedPixels": 0
+        },
+        {
+          "path": "screenshots/app-390-home.png",
+          "sha256": "337ed7410159879b7b41e76af33261d0bac8d014e4c2dafe3cf27699b80deba3",
+          "priorSha256": "337ed7410159879b7b41e76af33261d0bac8d014e4c2dafe3cf27699b80deba3",
+          "byteIdentical": true,
+          "dimensions": [
+            390,
+            1119
+          ],
+          "differentPixels": 0,
+          "maxChannelDifference": 0,
+          "changedPixelCoordinates": [],
+          "classification": "byte-identical",
+          "unexpectedPixels": 0
+        },
+        {
+          "path": "screenshots/app-1280-home.png",
+          "sha256": "715ed40d2184e1c3003c150c26ba6db965ea47747a97326d2e6fb4cf7a079bde",
+          "priorSha256": "715ed40d2184e1c3003c150c26ba6db965ea47747a97326d2e6fb4cf7a079bde",
+          "byteIdentical": true,
+          "dimensions": [
+            1280,
+            1115
+          ],
+          "differentPixels": 0,
+          "maxChannelDifference": 0,
+          "changedPixelCoordinates": [],
+          "classification": "byte-identical",
+          "unexpectedPixels": 0
+        },
+        {
+          "path": "screenshots/mobile-320-home.png",
+          "sha256": "e6e37d14877ed14bdf5ce9f83a0e4f827a512420a2bb3eada28bd36c78cfc910",
+          "priorSha256": "e6e37d14877ed14bdf5ce9f83a0e4f827a512420a2bb3eada28bd36c78cfc910",
+          "byteIdentical": true,
+          "dimensions": [
+            320,
+            1141
+          ],
+          "differentPixels": 0,
+          "maxChannelDifference": 0,
+          "changedPixelCoordinates": [],
+          "classification": "byte-identical",
+          "unexpectedPixels": 0
+        },
+        {
+          "path": "screenshots/mobile-390-home.png",
+          "sha256": "fb23a571600c37f746afcaf0aa1d89a732e6419be2d25686a8680a905fb0c571",
+          "priorSha256": "fb23a571600c37f746afcaf0aa1d89a732e6419be2d25686a8680a905fb0c571",
+          "byteIdentical": true,
+          "dimensions": [
+            390,
+            1141
+          ],
+          "differentPixels": 0,
+          "maxChannelDifference": 0,
+          "changedPixelCoordinates": [],
+          "classification": "byte-identical",
+          "unexpectedPixels": 0
+        },
+        {
+          "path": "screenshots/mobile-1280-home.png",
+          "sha256": "8a879fa24965aac434895959181955c7c1de90165c9d2c8d304a300cbed27ad4",
+          "priorSha256": "8a879fa24965aac434895959181955c7c1de90165c9d2c8d304a300cbed27ad4",
+          "byteIdentical": true,
+          "dimensions": [
+            1280,
+            917
+          ],
+          "differentPixels": 0,
+          "maxChannelDifference": 0,
+          "changedPixelCoordinates": [],
+          "classification": "byte-identical",
+          "unexpectedPixels": 0
+        },
+        {
+          "path": "screenshots/karento-best-320-home.png",
+          "sha256": "86b3a78e6d229e2875f1457f7c2d1c44a3e2b8ae714e0f75974062a569516a43",
+          "priorSha256": "a576877023b038f0e7897aff488d58fc4d71c0496a87ff85b57709044f9ae2f5",
+          "byteIdentical": false,
+          "dimensions": [
+            320,
+            900
+          ],
+          "differentPixels": 3,
+          "maxChannelDifference": 1,
+          "changedPixelCoordinates": [
+            [
+              61,
+              854
+            ],
+            [
+              64,
+              857
+            ],
+            [
+              65,
+              859
+            ]
+          ],
+          "classification": "antialiasing-only",
+          "unexpectedPixels": 0
+        },
+        {
+          "path": "screenshots/karento-best-390-home.png",
+          "sha256": "eb8ad6f1b082691c5025ededabec4182e3de47702a7e74b496fb340ba81b802d",
+          "priorSha256": "78ba7ba1a9cab57a6a723b6218ea343bdc7b4beed7756446d221acb77af3e325",
+          "byteIdentical": false,
+          "dimensions": [
+            390,
+            900
+          ],
+          "differentPixels": 3,
+          "maxChannelDifference": 1,
+          "changedPixelCoordinates": [
+            [
+              75,
+              854
+            ],
+            [
+              78,
+              857
+            ],
+            [
+              79,
+              859
+            ]
+          ],
+          "classification": "antialiasing-only",
+          "unexpectedPixels": 0
+        },
+        {
+          "path": "screenshots/karento-best-1280-home.png",
+          "sha256": "aa742287c17556d0fe7188c65e7b4624ad605aaa7361506822f4ae9fb507423d",
+          "priorSha256": "aa742287c17556d0fe7188c65e7b4624ad605aaa7361506822f4ae9fb507423d",
+          "byteIdentical": true,
+          "dimensions": [
+            1280,
+            4756
+          ],
+          "differentPixels": 0,
+          "maxChannelDifference": 0,
+          "changedPixelCoordinates": [],
+          "classification": "byte-identical",
+          "unexpectedPixels": 0
+        }
+      ],
+      "artifactUrl": "https://github.com/darkapoparka/cars/actions/runs/39319236637/artifacts/12218894412"
+    }
+  ]
+}

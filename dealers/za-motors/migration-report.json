@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "za-motors",
+  "previousSlug": "za-motors",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-19T18:53:04.155Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-birmingham-za-motors",
+    "position": 20
+  },
+  "before": {
+    "files": 36,
+    "bytes": 3077753
+  },
+  "afterBeforeReview": {
+    "files": 20,
+    "bytes": 2129988
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 64606,
+      "sha256": "86220b458ac5d705a3aab8013166483eb746567491c8c1ce240d8aeda3930383"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 62880,
+      "sha256": "ca85564e28848d5d3c824842399e291f7c42c6b0d1a8eece1f2dccd2d5df67ff"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 64606,
+      "sha256": "86220b458ac5d705a3aab8013166483eb746567491c8c1ce240d8aeda3930383"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 61114,
+      "sha256": "8421f9c3520d6b3f6fafa073537890b6a5fd77fdb217b2c48e694333c8e1b3e1"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 68198,
+      "sha256": "d9defba976891bc4bff4acc8f2104ba50b7c3f1bdbd9e884cb9cf05d6a05cd73"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 68198,
+      "sha256": "d9defba976891bc4bff4acc8f2104ba50b7c3f1bdbd9e884cb9cf05d6a05cd73"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 61114,
+      "sha256": "8421f9c3520d6b3f6fafa073537890b6a5fd77fdb217b2c48e694333c8e1b3e1"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 64606,
+      "sha256": "86220b458ac5d705a3aab8013166483eb746567491c8c1ce240d8aeda3930383"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 5197,
+      "sha256": "454ffef404c1b520ca77f44fb01d6d0c7937ddbe8140d8a750afd7711c400990"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 68198,
+      "sha256": "d9defba976891bc4bff4acc8f2104ba50b7c3f1bdbd9e884cb9cf05d6a05cd73"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 50054,
+      "sha256": "a04ee2a993cb6ecc66ea4aca94b08be7acd46bf0e22cde87fcbd48f33d1cb551"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 68198,
+      "sha256": "d9defba976891bc4bff4acc8f2104ba50b7c3f1bdbd9e884cb9cf05d6a05cd73"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 50054,
+      "sha256": "a04ee2a993cb6ecc66ea4aca94b08be7acd46bf0e22cde87fcbd48f33d1cb551"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 61114,
+      "sha256": "8421f9c3520d6b3f6fafa073537890b6a5fd77fdb217b2c48e694333c8e1b3e1"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 44468,
+      "sha256": "95625945a50cdd327e73b2c1f215e8ceabb72aec928889b256dbb45be9ba74c9"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 42690,
+      "sha256": "5c7ca2093a5d44f7ce2079dec34b1ebc18bc7a131aebbd6b982567bd54df09b1"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 46236,
+      "sha256": "40619d1abe626bde53f5b34a96c3b41c6b2664cce2e3dc52058c009df364bb90"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 12,
+    "bytes": 2109509,
+    "inventorySha256": "63aeba760ea4b585d7cbef7c69117f8ec2c2622b6c3c80f817876c75d033b948",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "za-motors",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 22,
+    "report": "dealers/za-motors/input-review.json"
+  },
+  "after": {
+    "files": 22,
+    "bytes": 2138644
+  }
+}

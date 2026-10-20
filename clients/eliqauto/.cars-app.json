@@ -3,32 +3,32 @@
   "dealer": "eliqauto",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "b66693e3a475ef563ab45f51e4297e7073830ec1",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "path": "templates/app",
-    "digest": "3344230cf8de012eb9c2daf1c962c4a3f189960b52f2026e1d049f2a6eae26ad",
-    "tree": "cd17d913dd597bf7dfb3e2244c2a3a2914ab3080"
+    "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1",
+    "tree": "7f3d3ffa40546635377e6c5225194fe06fead291"
   },
-  "appDigest": "5b9c897b7b12a8d516477d1a1ac0c2258bf78f1c9318e4f34b717e02d70aa348",
+  "appDigest": "421f30d20ff2e732d81fc60d9b407eeb05498f7cee55d89a6683692dc7275393",
   "provenance": {
     "schemaVersion": 1,
     "dealer": "eliqauto",
     "profile": "auto-best/src/lib/data/dealer-profile.json",
-    "profileSha256": "1824750b4ad559a474472d1f40829c5283b852d223aafda3f9e2187253376cac",
+    "profileSha256": "91bb3037b6964b72f9d9898cef46cde76e1105fabfefd31d7533cdfcf1685106",
     "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
     "vehicles": 16,
     "currency": "EUR",
     "observedAt": "",
     "assets": [
       {
-        "source": "auto-best/static/dealer-brand/logo-on-light-20260919.webp",
-        "output": "public/dealer-app/logo-light-47a1af7c61fb7a84c18b.webp",
-        "sha256": "47a1af7c61fb7a84c18b8717c25486b41811ab2556860dc27a6731ec6c0aba38",
+        "source": "auto-best/static/dealer-brand/v2-b9c4f7939487513f/logo-on-light.webp",
+        "output": "public/dealer-app/logo-light-fc012a3b5319997723d5.webp",
+        "sha256": "fc012a3b5319997723d52e902ec3efad5087a0f50cb0222f6ae9ab731af8e559",
         "role": "logo-light"
       },
       {
-        "source": "auto-best/static/dealer-brand/logo-on-dark-20260919.webp",
-        "output": "public/dealer-app/logo-dark-1cf956154e7101725bba.webp",
-        "sha256": "1cf956154e7101725bba0d42603ea27bf0bf509782803dea0db176453a5ca91c",
+        "source": "auto-best/static/dealer-brand/v2-b9c4f7939487513f/logo-on-dark.webp",
+        "output": "public/dealer-app/logo-dark-d2af767aa95955376971.webp",
+        "sha256": "d2af767aa95955376971b9cdbf1345da66e990cfe2551254e64dc568e9449294",
         "role": "logo-dark"
       },
       {
@@ -595,13 +595,107 @@
         "sha256": "3149dfa5da8e8c96c6e18f818931b2f048dd8e25732c5d78794606b03c4fe2c2",
         "role": "vehicle"
       }
+    ],
+    "mileageFacts": [
+      {
+        "slug": "2014-11779989521200947",
+        "sourceValue": 172000,
+        "sourceUnit": "km",
+        "canonicalKm": 172000
+      },
+      {
+        "slug": "2017-11780007305121982",
+        "sourceValue": 163000,
+        "sourceUnit": "km",
+        "canonicalKm": 163000
+      },
+      {
+        "slug": "2009-11780175636720970",
+        "sourceValue": 180000,
+        "sourceUnit": "km",
+        "canonicalKm": 180000
+      },
+      {
+        "slug": "2014-11780176585830804",
+        "sourceValue": 180000,
+        "sourceUnit": "km",
+        "canonicalKm": 180000
+      },
+      {
+        "slug": "2019-11780177315125298",
+        "sourceValue": 177000,
+        "sourceUnit": "km",
+        "canonicalKm": 177000
+      },
+      {
+        "slug": "2022-11780254722465322",
+        "sourceValue": 80000,
+        "sourceUnit": "km",
+        "canonicalKm": 80000
+      },
+      {
+        "slug": "2020-11780906851194765",
+        "sourceValue": 158000,
+        "sourceUnit": "km",
+        "canonicalKm": 158000
+      },
+      {
+        "slug": "2023-11780907716855488",
+        "sourceValue": 72000,
+        "sourceUnit": "km",
+        "canonicalKm": 72000
+      },
+      {
+        "slug": "2018-11780909888518340",
+        "sourceValue": 200000,
+        "sourceUnit": "km",
+        "canonicalKm": 200000
+      },
+      {
+        "slug": "2021-11781187597210481",
+        "sourceValue": 78000,
+        "sourceUnit": "km",
+        "canonicalKm": 78000
+      },
+      {
+        "slug": "2020-11781207164422554",
+        "sourceValue": 135000,
+        "sourceUnit": "km",
+        "canonicalKm": 135000
+      },
+      {
+        "slug": "2020-11781211980587571",
+        "sourceValue": 87000,
+        "sourceUnit": "km",
+        "canonicalKm": 87000
+      },
+      {
+        "slug": "2020-11781244995278530",
+        "sourceValue": 164000,
+        "sourceUnit": "km",
+        "canonicalKm": 164000
+      },
+      {
+        "slug": "2017-11781281410239020",
+        "sourceValue": 170000,
+        "sourceUnit": "km",
+        "canonicalKm": 170000
+      },
+      {
+        "slug": "2021-11781294210212810",
+        "sourceValue": 146000,
+        "sourceUnit": "km",
+        "canonicalKm": 146000
+      },
+      {
+        "slug": "2012-11781346026930952",
+        "sourceValue": 170000,
+        "sourceUnit": "km",
+        "canonicalKm": 170000
+      }
     ]
   },
-  "baseDeployment": {
-    "id": "dpl_FTp9vzenc2QGBADMH7QMfMmVuTqG",
-    "url": "https://cars-eliqauto.vercel.app/",
-    "checkedAt": "2026-09-28T02:25:40.550Z"
-  },
-  "baseReceiptSha256": "689792ea008b9504cf5574bd0487d8106861d1925bf0fbf19cbf97f4ce7de54d",
-  "refreshedAt": "2026-09-30T11:14:46.043Z"
+  "needsDealerQA": true,
+  "readyToPublish": false,
+  "refreshedAt": "2026-10-15T02:32:13.411Z"
 }

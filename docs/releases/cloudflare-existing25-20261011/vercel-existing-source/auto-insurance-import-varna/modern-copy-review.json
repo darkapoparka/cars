@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-reviewed-modern-bilingual-copy-input",
+  "dealer": "auto-insurance-import-varna",
+  "sourceCommit": "d9594c2979f668831b78609e4e990640259aee81",
+  "baselineTree": "248f96bda97c22ca503154f93d4cdddc972bacd9",
+  "inputSha256": "f2f04978782e3774cd4bfbce1dd2e0f0dd0f20bbb4a908e97241ba429deac931",
+  "modernInputRowsSha256": "528a621f9d1776a774737cba710f3c5b910cb35c64a460d6d2454616030e210d",
+  "listingCount": 2,
+  "profileInputs": [
+    {
+      "path": "dealer.json",
+      "gitBlob": "298ffab813ca2082181ab4408d0dcab839ebd4ec",
+      "sha256": "862790eb799216ae0fc8de6d810b4546f699ed9d767b347ee5b9f1fd3676dae6",
+      "bytes": 4565
+    },
+    {
+      "path": "business-facts.json",
+      "gitBlob": "2d980e8676969daf597a280372ecc0127ee0542f",
+      "sha256": "97b50c8b87e058475c3639d9de9242be918c9001035d16fa91c068980f058bcd",
+      "bytes": 6195
+    },
+    {
+      "path": "stock.json",
+      "gitBlob": "d45de112ea2d07ab384db47fc683cc4229ebd392",
+      "sha256": "095a04c484cb6e18892314af1085325a9a41325fc6011bbdf5fe48516fd02e06",
+      "bytes": 4795
+    }
+  ],
+  "reviewedGeneratorHelper": {
+    "path": "scripts/lib/modern-dealer-inventory-copy.mjs",
+    "sha256": "cbdbaa28dc07911cfe913b4e627671b6556fc25d3bfe59364e29c5ca5a29072b",
+    "sourceCommit": "14d86f67c160699c18a6ec5658197cc4d9011e0b"
+  },
+  "review": {
+    "displayCopyOnly": true,
+    "exactSourceDescriptionKeys": true,
+    "listingFactsUnchanged": true,
+    "imageUrlsUnchanged": true,
+    "imageAltsPreserved": true,
+    "interpolationTokensUnchanged": true,
+    "reviewedBy": "Codex, authorized final-template rollout",
+    "reviewedAt": "2026-10-14T20:04:09.144Z",
+    "notes": "Reuse exact existing native or reviewed registered companions for every actual current row; no new translation/factual source edits."
+  },
+  "reviewedCopy": {
+    "auto-insurance-import-varna-demo-estate": {
+      "sourceDescription": "Илюстративен демонстрационен автомобил с примерни характеристики и цена. Не е действителна оферта или наличност на автокъщата. Изображението е генерирана декоративна илюстрация.",
+      "en": {
+        "description": "Illustrative demo vehicle with example specifications and price. This is not a real offer or dealership stock. The image is generated decorative artwork.",
+        "imageAlts": [
+          "Demo Estate — illustration"
+        ]
+      },
+      "bg": {
+        "description": "Илюстративен демонстрационен автомобил с примерни характеристики и цена. Не е действителна оферта или наличност на автокъщата. Изображението е генерирана декоративна илюстрация.",
+        "imageAlts": [
+          "Demo Estate — illustration"
+        ]
+      }
+    },
+    "auto-insurance-import-varna-demo-suv": {
+      "sourceDescription": "Илюстративен демонстрационен автомобил с примерни характеристики и цена. Не е действителна оферта или наличност на автокъщата. Изображението е генерирана декоративна илюстрация.",
+      "en": {
+        "description": "Illustrative demo vehicle with example specifications and price. This is not a real offer or dealership stock. The image is generated decorative artwork.",
+        "imageAlts": [
+          "Demo SUV — illustration"
+        ]
+      },
+      "bg": {
+        "description": "Илюстративен демонстрационен автомобил с примерни характеристики и цена. Не е действителна оферта или наличност на автокъщата. Изображението е генерирана декоративна илюстрация.",
+        "imageAlts": [
+          "Demo SUV — illustration"
+        ]
+      }
+    }
+  }
+}

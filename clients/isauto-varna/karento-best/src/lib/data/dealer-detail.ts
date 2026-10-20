@@ -34,6 +34,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Petrol",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.gasoline"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2021",
+        "labelKey": "vehicle.field.year"
       }
     ],
     "gallery": {
@@ -70,7 +76,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "IS AUTO Varna",
       "location": "Бизнес парк Варна, сграда B6, Варна, България",
-      "avatar": "/dealer-brand/logo-on-light-20260919.webp",
+      "avatar": "/dealer-brand/v2-82b4cdb8bfee0672/logo-on-light.webp",
       "mobile": "0899 266 666",
       "email": "varna@isauto.net",
       "whatsapp": "",
@@ -120,6 +126,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Diesel",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.diesel"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2022",
+        "labelKey": "vehicle.field.year"
       }
     ],
     "gallery": {
@@ -156,7 +168,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "IS AUTO Varna",
       "location": "Бизнес парк Варна, сграда B6, Варна, България",
-      "avatar": "/dealer-brand/logo-on-light-20260919.webp",
+      "avatar": "/dealer-brand/v2-82b4cdb8bfee0672/logo-on-light.webp",
       "mobile": "0899 266 666",
       "email": "varna@isauto.net",
       "whatsapp": "",
@@ -206,6 +218,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Petrol",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.gasoline"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2018",
+        "labelKey": "vehicle.field.year"
       }
     ],
     "gallery": {
@@ -242,7 +260,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "IS AUTO Varna",
       "location": "Бизнес парк Варна, сграда B6, Варна, България",
-      "avatar": "/dealer-brand/logo-on-light-20260919.webp",
+      "avatar": "/dealer-brand/v2-82b4cdb8bfee0672/logo-on-light.webp",
       "mobile": "0899 266 666",
       "email": "varna@isauto.net",
       "whatsapp": "",
@@ -292,6 +310,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Diesel",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.diesel"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2014",
+        "labelKey": "vehicle.field.year"
       }
     ],
     "gallery": {
@@ -328,7 +352,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "IS AUTO Varna",
       "location": "Бизнес парк Варна, сграда B6, Варна, България",
-      "avatar": "/dealer-brand/logo-on-light-20260919.webp",
+      "avatar": "/dealer-brand/v2-82b4cdb8bfee0672/logo-on-light.webp",
       "mobile": "0899 266 666",
       "email": "varna@isauto.net",
       "whatsapp": "",
@@ -378,6 +402,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Diesel",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.diesel"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2019",
+        "labelKey": "vehicle.field.year"
       }
     ],
     "gallery": {
@@ -414,7 +444,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "IS AUTO Varna",
       "location": "Бизнес парк Варна, сграда B6, Варна, България",
-      "avatar": "/dealer-brand/logo-on-light-20260919.webp",
+      "avatar": "/dealer-brand/v2-82b4cdb8bfee0672/logo-on-light.webp",
       "mobile": "0899 266 666",
       "email": "varna@isauto.net",
       "whatsapp": "",
@@ -464,6 +494,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Diesel",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.diesel"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2018",
+        "labelKey": "vehicle.field.year"
       }
     ],
     "gallery": {
@@ -500,7 +536,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "IS AUTO Varna",
       "location": "Бизнес парк Варна, сграда B6, Варна, България",
-      "avatar": "/dealer-brand/logo-on-light-20260919.webp",
+      "avatar": "/dealer-brand/v2-82b4cdb8bfee0672/logo-on-light.webp",
       "mobile": "0899 266 666",
       "email": "varna@isauto.net",
       "whatsapp": "",

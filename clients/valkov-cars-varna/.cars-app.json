@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "dealer": "valkov-cars-varna",
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+    "path": "templates/app",
+    "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1",
+    "tree": "7f3d3ffa40546635377e6c5225194fe06fead291"
+  },
+  "appDigest": "486315f0dec7a37e3c3a177aee29d1467748e774ae2cc8700d1af70178908664",
+  "provenance": {
+    "schemaVersion": 1,
+    "dealer": "valkov-cars-varna",
+    "profile": "auto-best/src/lib/data/dealer-profile.json",
+    "profileSha256": "961d3ab1d6dd82b6fc0a06b7cd68b267d03a421c25bc9cde02a243d7156159d5",
+    "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
+    "vehicles": 2,
+    "currency": "EUR",
+    "observedAt": "2026-10-12T11:43:24.364Z, 2026-10-12T11:43:24.365Z",
+    "assets": [
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-light.png",
+        "output": "public/dealer-app/logo-light-3920faba84184b041f80.png",
+        "sha256": "3920faba84184b041f80d13fff1efa1c4dd3d5598a47cbbacc646f2466183d96",
+        "role": "logo-light"
+      },
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-dark.png",
+        "output": "public/dealer-app/logo-dark-914c016a580f70646fbf.png",
+        "sha256": "914c016a580f70646fbf81d64919a7376b46a299e7194649c331f0c181b5f068",
+        "role": "logo-dark"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/11770728962537417-1.webp",
+        "output": "public/dealer-app/vehicle-2afc2d44889952d3d00f.webp",
+        "sha256": "2afc2d44889952d3d00f0dfc8a79c0883fe088c776a004c38f568c300bcf2e9f",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/11770728962537417-2.webp",
+        "output": "public/dealer-app/vehicle-c3f9fb988c9e85b12691.webp",
+        "sha256": "c3f9fb988c9e85b12691ccfad03821b6988bca65c3662a4f65b7cec0925ef7b1",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/11772080668154587-1.webp",
+        "output": "public/dealer-app/vehicle-daf024ba46134a7a3792.webp",
+        "sha256": "daf024ba46134a7a37920c46ba07e4837e5fb1a994051f84417a1a205f041adb",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/11772080668154587-2.webp",
+        "output": "public/dealer-app/vehicle-d6edb7d8af5e700cf8d0.webp",
+        "sha256": "d6edb7d8af5e700cf8d0d4352ac80065c2a612c6c1544db3caabf1da9fc846bc",
+        "role": "vehicle"
+      }
+    ],
+    "mileageFacts": [
+      {
+        "slug": "valkov-cars-varna-11770728962537417",
+        "sourceValue": 290000,
+        "sourceUnit": "km",
+        "canonicalKm": 290000
+      },
+      {
+        "slug": "valkov-cars-varna-11772080668154587",
+        "sourceValue": 180000,
+        "sourceUnit": "km",
+        "canonicalKm": 180000
+      }
+    ]
+  },
+  "needsDealerQA": true,
+  "readyToPublish": false,
+  "refreshedAt": "2026-10-15T04:22:13.664Z"
+}

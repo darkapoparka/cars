@@ -1,7 +1,14 @@
-import { getMockListingBySlug, type VehicleListing } from "@repo/marketplace";
+import {
+  formatMoney,
+  getMockListingBySlug,
+  type VehicleListing,
+} from "@repo/marketplace";
 import { describe, expect, it } from "vitest";
 import {
   formatVehicleCardMoney,
+  getMobileVehicleCardHeading,
+  getShowroomVehicleCardSpecFacts,
+  getShowroomVehicleHeading,
   getVehicleCardBadgeLabels,
   getVehicleCardPricePolicy,
   getVehicleCardSpecFacts,
@@ -20,6 +27,28 @@ const getListing = (slug: string): VehicleListing => {
 };
 
 describe("vehicle card policy", () => {
+  it("separates the real brand only at a complete title prefix", () => {
+    const listing = getListing("bmw-x5-m50d-sofia-2020");
+    expect(getMobileVehicleCardHeading(listing)).toEqual({
+      brand: "BMW",
+      fullTitle: "BMW X5 M50d",
+      title: "X5 M50d",
+    });
+    expect(
+      getMobileVehicleCardHeading({ ...listing, title: "2020 bmw X5 M50d" })
+    ).toEqual({ brand: "BMW", fullTitle: "bmw X5 M50d", title: "X5 M50d" });
+    expect(
+      getMobileVehicleCardHeading({ ...listing, title: "BMWi special edition" })
+        .title
+    ).toBe("BMWi special edition");
+    expect(
+      getMobileVehicleCardHeading({
+        ...listing,
+        spec: { ...listing.spec, make: "" },
+      })
+    ).toEqual({ brand: "", fullTitle: "BMW X5 M50d", title: "BMW X5 M50d" });
+  });
+
   it("resolves explicit comparison, compact-list, and standard variants", () => {
     expect(
       getVehicleCardVariant({
@@ -51,7 +80,12 @@ describe("vehicle card policy", () => {
       { id: "year", value: "2020" },
       { id: "mileage", value: "167 000 км" },
       { id: "fuel", value: "Дизел" },
-      { id: "transmission", value: "Автоматик" },
+      {
+        id: "transmission",
+        value: "Автоматик",
+        mobileDisplayValue: "Автом.",
+        mobileMediumDisplayValue: "Автомат",
+      },
     ]);
   });
 
@@ -66,6 +100,38 @@ describe("vehicle card policy", () => {
         imported: "Внос",
       })
     ).toEqual(["Препоръчана"]);
+  });
+
+  it("keeps full descriptions when compact fuel and transmission labels are displayed", () => {
+    const listing = getListing("bmw-x5-m50d-sofia-2020");
+    const spec = {
+      ...listing.spec,
+      fuelType: "plug_in_hybrid" as const,
+      transmission: "semi_automatic" as const,
+    };
+
+    expect(getVehicleCardSpecFacts({ spec }, "bg")).toEqual(
+      expect.arrayContaining([
+        { id: "fuel", value: "Плъгин хибрид", displayValue: "PHEV" },
+        {
+          id: "transmission",
+          value: "Полуавтоматик",
+          displayValue: "Полуавт.",
+        },
+      ])
+    );
+    expect(getVehicleCardSpecFacts({ spec }, "en")).toContainEqual({
+      id: "fuel",
+      value: "Plug-in hybrid",
+      displayValue: "PHEV",
+    });
+    expect(
+      getVehicleCardSpecFacts({ spec: { ...spec, fuelType: "electric" } }, "bg")
+    ).toContainEqual({
+      id: "fuel",
+      value: "Електрически",
+      displayValue: "Електро",
+    });
   });
 
   it("surfaces an attached monthly estimate on comparison cards", () => {
@@ -88,7 +154,7 @@ describe("vehicle card policy", () => {
         "comparison",
         "bg"
       )
-    ).toBe("1 360 лв.");
+    ).toBe(formatMoney({ amount: 1360, currency: "BGN" }, "bg"));
   });
 
   it("keeps a lease vehicle purchase price and estimate distinct", () => {
@@ -113,7 +179,7 @@ describe("vehicle card policy", () => {
     expect(policy.monthlyEstimate).toBeUndefined();
     expect(
       formatVehicleCardMoney(policy.primaryPrice, "comparison", "bg")
-    ).toBe("57 499 €");
+    ).toBe(formatMoney(policy.primaryPrice, "bg"));
   });
 
   it("surfaces negotiable status without converting it into a finance claim", () => {
@@ -124,5 +190,59 @@ describe("vehicle card policy", () => {
       monthlyEstimate: undefined,
       showNegotiable: true,
     });
+  });
+});
+
+describe("showroom title hierarchy", () => {
+  it("separates the model from the original derivative and preserves mobile titles", () => {
+    const listing = getListing("bmw-x5-m50d-sofia-2020");
+    const heading = getShowroomVehicleHeading(listing, "bg");
+    expect(heading.title).toBe("2020 BMW X5");
+    expect(heading.subtitle).toContain("M50d");
+    expect(getShowroomVehicleCardSpecFacts(listing, "bg")).toEqual([
+      { id: "year", value: "2020" },
+      { id: "variant", value: "M50d" },
+      { id: "body", value: heading.bodyType },
+      ...getVehicleCardSpecFacts(listing, "bg").filter(
+        (fact) => fact.id !== "year"
+      ),
+    ]);
+    expect(getVehicleCardTitle(listing, "comparison")).toBe("BMW X5 M50d");
+  });
+  it("retains a custom listing title", () => {
+    const listing = {
+      ...getListing("bmw-x5-m50d-sofia-2020"),
+      title: "Special edition with winter package",
+    };
+    expect(getShowroomVehicleHeading(listing, "en").subtitle).toContain(
+      listing.title
+    );
+    expect(getShowroomVehicleCardSpecFacts(listing, "en")).toContainEqual({
+      id: "variant",
+      value: listing.title,
+    });
+  });
+  it("does not confuse a model with a prefix of a different model", () => {
+    const listing = {
+      ...getListing("bmw-x5-m50d-sofia-2020"),
+      title: "BMW X50 Limited",
+    };
+    expect(getShowroomVehicleHeading(listing, "en").subtitle).toContain(
+      "X50 Limited"
+    );
+  });
+  it("does not repeat a model-only title in the subtitle", () => {
+    const listing = {
+      ...getListing("bmw-x5-m50d-sofia-2020"),
+      title: "2020 BMW X5",
+    };
+    expect(getShowroomVehicleHeading(listing, "en").subtitle).not.toContain(
+      "BMW X5"
+    );
+    expect(
+      getShowroomVehicleCardSpecFacts(listing, "en").some(
+        (fact) => fact.id === "variant"
+      )
+    ).toBe(false);
   });
 });

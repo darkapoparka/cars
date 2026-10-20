@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-reviewed-modern-bilingual-copy-input",
+  "dealer": "dein-auto-varna",
+  "sourceCommit": "d9594c2979f668831b78609e4e990640259aee81",
+  "baselineTree": "554d3201983d7e83f983be2e33cc4ac40c42fd73",
+  "inputSha256": "9c713cd48a4428aa6211371f0090fbd3e7f35b4069af25a55d63ca2c88674bb6",
+  "modernInputRowsSha256": "cb9503e22c67040a8a038561af642e5d5d93958adc61cc00b34c4e9f9aa03365",
+  "listingCount": 2,
+  "profileInputs": [
+    {
+      "path": "dealer.json",
+      "gitBlob": "f8034f304dd5a95b923bc20ef9c5800a13d9de1a",
+      "sha256": "c3330f2fab5ad73461ba88f0d8b017183e9fcf0dbf24379e41ea9be8713b6317",
+      "bytes": 4332
+    },
+    {
+      "path": "business-facts.json",
+      "gitBlob": "827139d1e4928a079f8b9da241215a307f5eb616",
+      "sha256": "96a0fe06d1f1b02cca7270658f4d9a00dd6a2872953d231727f307665da725a8",
+      "bytes": 5534
+    },
+    {
+      "path": "stock.json",
+      "gitBlob": "175d804f91fe81f101f4f463e4b40ff1e52061da",
+      "sha256": "fd1eb24e90fbf9e8771c5d37a8a34c7c3d759dcbd2d50aef5073106654adb1d9",
+      "bytes": 4073
+    }
+  ],
+  "reviewedGeneratorHelper": {
+    "path": "scripts/lib/modern-dealer-inventory-copy.mjs",
+    "sha256": "cbdbaa28dc07911cfe913b4e627671b6556fc25d3bfe59364e29c5ca5a29072b",
+    "sourceCommit": "14d86f67c160699c18a6ec5658197cc4d9011e0b"
+  },
+  "review": {
+    "displayCopyOnly": true,
+    "exactSourceDescriptionKeys": true,
+    "listingFactsUnchanged": true,
+    "imageUrlsUnchanged": true,
+    "imageAltsPreserved": true,
+    "interpolationTokensUnchanged": true,
+    "reviewedBy": "Codex, authorized final-template rollout",
+    "reviewedAt": "2026-10-14T20:04:09.149Z",
+    "notes": "Reuse exact existing native or reviewed registered companions for every actual current row; no new translation/factual source edits."
+  },
+  "reviewedCopy": {
+    "dein-auto-varna-11786124378124232": {
+      "sourceDescription": "VW Passat от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+      "en": {
+        "description": "VW Passat from a dated public advert. Confirm condition, price and availability directly with the dealership.",
+        "imageAlts": [
+          "VW Passat",
+          "VW Passat"
+        ]
+      },
+      "bg": {
+        "description": "VW Passat от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+        "imageAlts": [
+          "VW Passat",
+          "VW Passat"
+        ]
+      }
+    },
+    "dein-auto-varna-11790325495830727": {
+      "sourceDescription": "Audi A5 45 TDI quattro от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+      "en": {
+        "description": "Audi A5 45 TDI quattro from a dated public advert. Confirm condition, price and availability directly with the dealership.",
+        "imageAlts": [
+          "Audi A5 45 TDI quattro",
+          "Audi A5 45 TDI quattro"
+        ]
+      },
+      "bg": {
+        "description": "Audi A5 45 TDI quattro от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+        "imageAlts": [
+          "Audi A5 45 TDI quattro",
+          "Audi A5 45 TDI quattro"
+        ]
+      }
+    }
+  }
+}

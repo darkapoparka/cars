@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "dealer": "city-cars-varna",
+  "reviewed": true,
+  "reviewedAt": "2026-10-14T11:56:24.553Z",
+  "sourceMode": "retained-or-mixed-raster",
+  "master": {
+    "path": "docs/logo-polish-2026-10-14/parallel/cf-first50/city-cars-varna/logo-on-light.png",
+    "sha256": "d4fe0bc028a4f78df02a4bff128cb83af3a2678c15837024484af63014da6d14"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "docs/logo-polish-2026-10-14/parallel/cf-first50/city-cars-varna/logo-on-light.png",
+      "sha256": "d4fe0bc028a4f78df02a4bff128cb83af3a2678c15837024484af63014da6d14",
+      "sourceReference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/parallel/cf-first50/city-cars-varna/logo-on-light.png",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-c240b5f1-1e91-4f05-855c-b3f50ba18c42",
+        "modelVersion": null
+      }
+    },
+    "onDark": {
+      "path": "docs/logo-polish-2026-10-14/parallel/cf-first50/city-cars-varna/logo-on-dark.png",
+      "sha256": "fbde5938f1a1db17c89bd44f518eadcfb1376f292610ccb9b00be7d34442998c",
+      "sourceReference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/parallel/cf-first50/city-cars-varna/logo-on-dark.png",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-c240b5f1-1e91-4f05-855c-b3f50ba18c42",
+        "modelVersion": null
+      }
+    },
+    "onAccent": {
+      "path": "docs/logo-polish-2026-10-14/parallel/cf-first50/city-cars-varna/logo-on-dark.png",
+      "sha256": "fbde5938f1a1db17c89bd44f518eadcfb1376f292610ccb9b00be7d34442998c",
+      "sourceReference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/parallel/cf-first50/city-cars-varna/logo-on-dark.png",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-c240b5f1-1e91-4f05-855c-b3f50ba18c42",
+        "modelVersion": null
+      }
+    }
+  }
+}

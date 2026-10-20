@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "dealer": "monarh-varna",
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+    "path": "templates/app",
+    "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1",
+    "tree": "7f3d3ffa40546635377e6c5225194fe06fead291"
+  },
+  "appDigest": "e5242f71ef5f88b03f47a87c6451d5c4c8956371d225413bc53ee2662cc90c10",
+  "provenance": {
+    "schemaVersion": 1,
+    "dealer": "monarh-varna",
+    "profile": "auto-best/src/lib/data/dealer-profile.json",
+    "profileSha256": "664f651aa4e9f0fab29f9350b2c4d266088b470c53280b2334fd4e57db5da008",
+    "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
+    "vehicles": 2,
+    "currency": "EUR",
+    "observedAt": "2026-10-12T12:05:57.083Z, 2026-10-12T12:05:57.084Z",
+    "assets": [
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-light.png",
+        "output": "public/dealer-app/logo-light-a9f46e188a718afdd187.png",
+        "sha256": "a9f46e188a718afdd1874842003e4c84610040c282c316c0d49b15275147cf01",
+        "role": "logo-light"
+      },
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-dark.png",
+        "output": "public/dealer-app/logo-dark-7b4e20ca3784594ed243.png",
+        "sha256": "7b4e20ca3784594ed243d54caceedf4fd0f8f4b601b8e02b653127f8318ff3a2",
+        "role": "logo-dark"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/21789634036820538-1.webp",
+        "output": "public/dealer-app/vehicle-27cde98b63cb8e85cd6e.webp",
+        "sha256": "27cde98b63cb8e85cd6ef50e5aeca40efc7a1e293bcc17b9851f5db69dcb3cc8",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/21789634036820538-2.webp",
+        "output": "public/dealer-app/vehicle-dd6986a82a23ae6f83ec.webp",
+        "sha256": "dd6986a82a23ae6f83eca488581963b4f9e1a2ac3f752340b2a2aa187ffc08b1",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/11772882774601045-1.webp",
+        "output": "public/dealer-app/vehicle-bce4838746d4d60920c6.webp",
+        "sha256": "bce4838746d4d60920c6c8f24a733923f86eecbd80593c00fe299011f0049d8a",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/11772882774601045-2.webp",
+        "output": "public/dealer-app/vehicle-748d24e947bd40dbc0d0.webp",
+        "sha256": "748d24e947bd40dbc0d0d5d6a61d860e7264d7931fa99f8070a53fd504ba846d",
+        "role": "vehicle"
+      }
+    ],
+    "mileageFacts": [
+      {
+        "slug": "monarh-varna-21789634036820538",
+        "sourceValue": 251000,
+        "sourceUnit": "km",
+        "canonicalKm": 251000
+      },
+      {
+        "slug": "monarh-varna-11772882774601045",
+        "sourceValue": 199000,
+        "sourceUnit": "km",
+        "canonicalKm": 199000
+      }
+    ]
+  },
+  "needsDealerQA": true,
+  "readyToPublish": false,
+  "refreshedAt": "2026-10-15T04:39:00.336Z"
+}

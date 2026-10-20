@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "Cherry Tree Cars Ltd",
   "locale": "en-GB",
   "logo": {
-    "light": "/dealer-brand/logo.webp",
-    "footer": "/dealer-brand/logo.webp",
-    "archivedDark": "/dealer-brand/logo.webp",
+    "light": "/dealer-brand/v2-c4d01a5862dcc9e1/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-c4d01a5862dcc9e1/logo-on-light.webp",
+    "archivedDark": "/dealer-brand/v2-c4d01a5862dcc9e1/logo-on-light.webp",
     "alt": "Cherry Tree Cars Ltd",
-    "favicon": "/dealer-brand/app-icon.png",
+    "favicon": "/dealer-brand/v2-c4d01a5862dcc9e1/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {

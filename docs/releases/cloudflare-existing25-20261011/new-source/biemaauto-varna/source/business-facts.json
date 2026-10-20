@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "slug": "biemaauto-varna",
+  "name": "BIEMAAUТO",
+  "shortName": "BIEMAAUТO",
+  "city": "Варна",
+  "country": "BG",
+  "countryCode": "BG",
+  "locale": "bg-BG",
+  "currency": "EUR",
+  "distanceUnit": "km",
+  "phone": "0878258953",
+  "phoneDisplay": "0878258953",
+  "phoneE164": "+359878258953",
+  "phones": [
+    "0878258953",
+    "0898670101"
+  ],
+  "addressLine": "Бул.Цар Освободите 202 до изхода на КАТ",
+  "address": "Бул.Цар Освободите 202 до изхода на КАТ, Варна, България",
+  "hours": "Понеделник 09:00 - 19:00 ч. Вторник 09:00 - 19:00 ч. Сряда 09:00 - 19:00 ч. Четвъртък 09:00 - 19:00 ч. Петък 09:00 - 19:00 ч. Събота 09:00 - 19:00 ч. Неделя Почивен ден",
+  "email": "",
+  "sourceUrl": "https://biemaauto.mobile.bg/",
+  "stockUrl": "https://biemaauto.mobile.bg/",
+  "contactSourceUrl": "https://biemaauto.mobile.bg/contacts",
+  "observedAt": "2026-10-11T11:48:32.846Z",
+  "inventoryNotice": "Датирана извадка от публични обяви, не складова система в реално време. Потвърдете цената, ДДС и наличността.",
+  "previewNotice": "Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация.",
+  "services": [],
+  "socialLinks": {}
+}

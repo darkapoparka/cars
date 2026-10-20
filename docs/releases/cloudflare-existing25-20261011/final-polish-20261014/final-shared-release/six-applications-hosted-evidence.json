@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-six-application-existing-hosted-evidence",
+  "assembledAt": "2026-10-15T01:55:17.524Z",
+  "current": {
+    "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/final-shared-release/bradford-current-focused-observations.json",
+    "sha256": "533284580fd63c7b0d7c89860e12c8f58a64cf34f31c51a9e50d1f93b2d558a6"
+  },
+  "previous": {
+    "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/final-shared-release/bradford-prior-unchanged-observations.json",
+    "sha256": "b4bf1de0d29cbf80257d71cffc39f0395543eda460bb82299c14ef5a914dbf8b"
+  },
+  "exactSourceComparison": {
+    "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/final-shared-release/bradford-source-hosted-inheritance.json",
+    "sha256": "2fe74677864cbc5791febf6ce23f786a4ba88dfd66f5fda216303aa7893cec6e"
+  },
+  "sourceReview": {
+    "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-review.json",
+    "sha256": "27c6ce5dd17ee6e1b9f6a5b059a95d5e1dbe4200f61264fc50addeb7af89d984"
+  },
+  "notes": [
+    "Current proof verifies all six canonical entries, final Auto dark logo and absent unknown-phone controls, actual FAB/Features/dashboard links and exact served shared-script bytes.",
+    "The earlier six-family route/stock/assets observations retain their original source/version/timestamp. Five complete family source trees and every client asset are byte-identical; Auto publishing correction uses separate current affected-consumer evidence.",
+    "No new all-route or viewport campaign is claimed."
+  ]
+}

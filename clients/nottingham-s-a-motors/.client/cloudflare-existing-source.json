@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "dealer": "nottingham-s-a-motors",
+  "kind": "personalized-source-candidate-not-an-approved-release",
+  "sourceRevision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+  "candidateSourceDigest": "4fa914e83beacbfa31b15c4f8ee93bd2875b31283871f757dd45e4fc0f515a56",
+  "qualificationContextPath": ".client/native-qualification-context.json",
+  "qualificationContextSha256": "6482fdd3a996e678789e32ffd9f00d73afdce1efb89763817fd4308bf820d41c",
+  "qualificationLockPath": ".client/native-qualification-lock.json",
+  "qualificationLockSha256": "04633129df9e75d6cd62deeac9125b279957789d75f57cdb0b243ef61bfc3e7e",
+  "sourceDeltaReview": {
+    "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-delta-review.json",
+    "sha256": "43cb6876e815a2a6b866f1dadd304236de4ae58c05fe65c2ab62a23506ee7ce9",
+    "reviewedAt": "2026-10-14T23:55:37.398Z"
+  },
+  "nativeApproval": false,
+  "hostedApproval": false
+}

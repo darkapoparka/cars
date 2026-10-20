@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-existing-dealer-branding-input-boundary",
+  "dealer": "stockton-norton-grange-trade-cars",
+  "identityKey": "existing-slug:stockton-norton-grange-trade-cars",
+  "cohort": "uk-selected10",
+  "ownership": "maintained-main",
+  "branding": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/stockton-norton-grange-trade-cars/branding.json",
+    "sha256": "1fdc80864c84f6e291b74baf7dccacc7ad460edc64072110e66795f972bc35f2"
+  },
+  "originalManifest": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/stockton-norton-grange-trade-cars/source/original-dealer.json",
+    "sha256": "496073b10c56f0013b18a126c30538068b598330523187b78e55a2d289cbe9c2"
+  },
+  "originalManifestGitBlob": "19654c73c6bfa24850fe6de54d3c6630cb534cab",
+  "originalRepository": "darkapoparka/cars-uk-stockton-norton-grange-trade-cars",
+  "sourceRef": {
+    "ref": "main",
+    "commit": "c5c6b0da611a3bf2756c1be2ff9764f6903536ec",
+    "tree": "a6e1b2dface50cb5d818a8505d93c08b5fdae549"
+  },
+  "originalData": [
+    {
+      "path": "clients/stockton-norton-grange-trade-cars/business-facts.json",
+      "gitBlob": "2a2aa79bf6d1e47f4a7e2d8cb75bc469bd24f246",
+      "bytes": 10250
+    },
+    {
+      "path": "clients/stockton-norton-grange-trade-cars/dealer.json",
+      "gitBlob": "19654c73c6bfa24850fe6de54d3c6630cb534cab",
+      "bytes": 4378
+    },
+    {
+      "path": "clients/stockton-norton-grange-trade-cars/stock.json",
+      "gitBlob": "6606a8743f7371a81369d7215d9dc80acd2a53e1",
+      "bytes": 16533
+    }
+  ],
+  "sourceProof": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/evidence/original-source-proof.json",
+    "sha256": "477c4eedc097eb2e105b1d50cf1bc3701b558679e8f6c3c3681a3ccd6626e08c"
+  },
+  "roster": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/evidence/accepted-roster.json",
+    "sha256": "c23c6c4ea10acaca9fdc8d09351fd64735a9e2245385fb12a0f95d71f9f0080d"
+  },
+  "sourceCreation": false,
+  "clientIntegration": false,
+  "buildApproval": false,
+  "hostedApproval": false,
+  "eligibleForExistingQualifiedRequest": true,
+  "holds": [
+    "Exact latest template/source-delta/pilot qualification and preservation-aware updater remain required."
+  ]
+}

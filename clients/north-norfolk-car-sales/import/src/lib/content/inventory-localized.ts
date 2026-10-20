@@ -1,6 +1,14 @@
 import type { Locale } from '$lib/locale/core';
 /** Dealer-owned listing descriptions and specification labels. Source facts are not mutated. */
 export const inventoryCopy = {
+	bmw740RearWheelSteering: {
+		bg: 'BMW 740 Завиващ заден мост',
+		en: 'BMW 740 Rear-wheel steering'
+	},
+	rearWheelSteering: {
+		bg: 'Завиващ заден мост',
+		en: 'Rear-wheel steering'
+	},
 	term0: {
 		bg: '4(5) Врати',
 		en: '4(5) doors'
@@ -477,8 +485,28 @@ export const inventoryCopy = {
 		bg: 'Автомобилът е с пълна сервизна история в Порше. Може да се провери във всяко представителство на марката. Sport Chrono пакет. Абсолютно автентичен вид както е излезнал от завода. Регистриран с каско, гражданска, данък, винетка. Без бартер. Само сериозни обаждания.',
 		en: 'Full Porsche service history. Can be checked at any dealership for the brand. Sport Chrono package. Entirely original factory appearance. Registered, with comprehensive insurance, third-party liability insurance, tax and vignette. No trade-ins. Serious inquiries only.'
 	}
+,
+	"dealerStock_050dce71b9f7b52055e46b83cb2ac5d76e0bf0273cb0b45bd302d427793a2487": {
+		"bg": "Илюстрация — не показва обявения автомобил. Това са датирани данни от обяви, наблюдавани на 10 октомври 2026 г. Потвърдете оригиналната обява, цената, състоянието и наличността с автокъщата.",
+		"en": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer."
+	},
+	"dealerStock_ba19e9c3d5f49882ddaafed4f286a8a81491150426d321179270e27e74a89097": {
+		"bg": "Червен",
+		"en": "Red"
+	},
+	"dealerStock_2a3a1bd88d4cdcb96f6b662760ebcd6a67ccf705340f2d1f1cf85895745e8cb7": {
+		"bg": "Илюстрация — не показва обявения автомобил. Това са датирани данни от обяви, наблюдавани на 10 октомври 2026 г. Потвърдете оригиналната обява, цената, състоянието и наличността с автокъщата. В общите данни е посочен пробег 45 500 мили, а в описанието той е закръглен на 45 000 мили. Този преглед запазва стойността от структурираните общи данни.",
+		"en": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer. The overview shows 45,500 miles; the prose rounds it to 45,000. This preview preserves the structured overview value."
+	},
+	"dealerStock_c6cfe6e4f129a34671d10c1bbe158eff05197d388727e331951b0ec2637c194e": {
+		"bg": "Черен",
+		"en": "Black"
+	}
+
 } satisfies Record<string, Record<Locale, string>>;
 export const inventorySourceKeys: Readonly<Record<string, keyof typeof inventoryCopy>> = {
+	'BMW 740 Завиващ заден мост': 'bmw740RearWheelSteering',
+	'Завиващ заден мост': 'rearWheelSteering',
 	'4(5) Врати': 'term0',
 	'4x4': 'term1',
 	'Auto Start Stop function': 'term2',
@@ -630,6 +658,12 @@ export const inventorySourceKeys: Readonly<Record<string, keyof typeof inventory
 		'description30',
 	'Автомобилът е с пълна сервизна история в Порше. Може да се провери във всяко представителство на марката. Sport Chrono пакет. Абсолютно автентичен вид както е излезнал от завода. Регистриран с каско, гражданска, данък, винетка. Без бартер. Само сериозни обаждания.':
 		'description31'
+,
+	"Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.": "dealerStock_050dce71b9f7b52055e46b83cb2ac5d76e0bf0273cb0b45bd302d427793a2487",
+	"Red": "dealerStock_ba19e9c3d5f49882ddaafed4f286a8a81491150426d321179270e27e74a89097",
+	"Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer. The overview shows 45,500 miles; the prose rounds it to 45,000. This preview preserves the structured overview value.": "dealerStock_2a3a1bd88d4cdcb96f6b662760ebcd6a67ccf705340f2d1f1cf85895745e8cb7",
+	"Black": "dealerStock_c6cfe6e4f129a34671d10c1bbe158eff05197d388727e331951b0ec2637c194e"
+
 };
 export function inventoryText(locale: Locale, value: string): string {
 	const key = inventorySourceKeys[value];

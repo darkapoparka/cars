@@ -1,0 +1,388 @@
+{
+  "schemaVersion": 1,
+  "slug": "kalo-0404-varna",
+  "business": {
+    "slug": "kalo-0404-varna",
+    "name": "Кало 0404",
+    "shortName": "Кало 0404",
+    "latinName": "Кало 0404",
+    "tagline": "Кало 0404 · Варна",
+    "city": "Варна",
+    "region": "",
+    "country": "BG",
+    "countryCode": "BG",
+    "locale": "bg-BG",
+    "currency": "EUR",
+    "distanceUnit": "km",
+    "address": "бул. Цар Освободител, Варна, България",
+    "addressLine": "бул. Цар Освободител",
+    "phoneDisplay": "0878483604",
+    "phoneHref": "tel:+359878483604",
+    "phoneE164": "+359878483604",
+    "email": "",
+    "hours": "Потвърдете работното време директно с автокъщата.",
+    "website": "https://kalo.mobile.bg/",
+    "inventoryUrl": "https://kalo.mobile.bg/",
+    "contactUrl": "https://kalo.mobile.bg/contacts",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=%D0%9A%D0%B0%D0%BB%D0%BE%200404%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F",
+    "mapsEmbedUrl": "https://maps.google.com/maps?q=%D0%9A%D0%B0%D0%BB%D0%BE%200404%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F&z=16&output=embed",
+    "accent": "#c40101",
+    "logo": "/dealer-brand/v2-1e207107b7559017/logo-on-light.webp",
+    "logoLight": "/dealer-brand/v2-1e207107b7559017/logo-on-light.webp",
+    "logoDark": "/dealer-brand/v2-1e207107b7559017/logo-on-dark.webp",
+    "socialLinks": {
+      "facebook": "",
+      "instagram": "",
+      "youtube": "",
+      "tiktok": ""
+    },
+    "services": [],
+    "inventoryNotice": "Показаните демонстрационни автомобили са илюстративни и не представляват наличности на автокъщата. За действителните оферти и наличности се свържете директно с нея.",
+    "previewNotice": "Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация.",
+    "observedAt": "2026-10-12T10:44:17.796Z",
+    "coordinates": null,
+    "raw": {
+      "schemaVersion": 1,
+      "slug": "kalo-0404-varna",
+      "name": "Кало 0404",
+      "shortName": "Кало 0404",
+      "city": "Варна",
+      "country": "BG",
+      "countryCode": "BG",
+      "locale": "bg-BG",
+      "currency": "EUR",
+      "distanceUnit": "km",
+      "phone": "0878483604",
+      "phoneDisplay": "0878483604",
+      "phoneE164": "+359878483604",
+      "phones": [
+        "+359878483604"
+      ],
+      "addressLine": "бул. Цар Освободител",
+      "address": "бул. Цар Освободител, Варна, България",
+      "hours": "Потвърдете работното време директно с автокъщата.",
+      "email": "",
+      "sourceUrl": "https://kalo.mobile.bg/",
+      "stockUrl": "https://kalo.mobile.bg/",
+      "contactSourceUrl": "https://kalo.mobile.bg/contacts",
+      "observedAt": "2026-10-12T10:44:17.796Z",
+      "inventoryNotice": "Показаните демонстрационни автомобили са илюстративни и не представляват наличности на автокъщата. За действителните оферти и наличности се свържете директно с нея.",
+      "previewNotice": "Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация.",
+      "services": [],
+      "socialLinks": {},
+      "logo": "/dealer-brand/v2-1e207107b7559017/logo-on-light.webp",
+      "logoLight": "/dealer-brand/v2-1e207107b7559017/logo-on-light.webp",
+      "logoDark": "/dealer-brand/v2-1e207107b7559017/logo-on-dark.webp",
+      "modernInventoryCopy": {
+        "kalo-0404-varna-demo-estate": {
+          "sourceDescription": "Илюстративен демонстрационен автомобил с примерни характеристики и цена. Не е действителна оферта или наличност на автокъщата. Изображението е генерирана декоративна илюстрация.",
+          "en": {
+            "description": "Illustrative demo vehicle with example specifications and price. This is not a real offer or dealership stock. The image is generated decorative artwork.",
+            "imageAlts": [
+              "Generated white estate illustration; not dealer stock photography"
+            ]
+          },
+          "bg": {
+            "description": "Илюстративен демонстрационен автомобил с примерни характеристики и цена. Не е действителна оферта или наличност на автокъщата. Изображението е генерирана декоративна илюстрация.",
+            "imageAlts": [
+              "Генерирана илюстрация на бяло комби; не е снимка на наличен автомобил"
+            ]
+          }
+        },
+        "kalo-0404-varna-demo-suv": {
+          "sourceDescription": "Илюстративен демонстрационен автомобил с примерни характеристики и цена. Не е действителна оферта или наличност на автокъщата. Изображението е генерирана декоративна илюстрация.",
+          "en": {
+            "description": "Illustrative demo vehicle with example specifications and price. This is not a real offer or dealership stock. The image is generated decorative artwork.",
+            "imageAlts": [
+              "Generated blue SUV illustration; not dealer stock photography"
+            ]
+          },
+          "bg": {
+            "description": "Илюстративен демонстрационен автомобил с примерни характеристики и цена. Не е действителна оферта или наличност на автокъщата. Изображението е генерирана декоративна илюстрация.",
+            "imageAlts": [
+              "Генерирана илюстрация на син SUV; не е снимка на наличен автомобил"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "listings": [
+    {
+      "id": "demo-estate",
+      "sourceId": "demo-estate",
+      "slug": "kalo-0404-varna-demo-estate",
+      "title": "Demo Estate — illustration",
+      "make": "Demo",
+      "model": "Estate",
+      "trim": "",
+      "year": 2026,
+      "priceAmount": 23900,
+      "currency": "EUR",
+      "mileageValue": 12000,
+      "mileageUnit": "km",
+      "mileageOnRequest": false,
+      "body": "Estate",
+      "bodyType": "wagon",
+      "fuel": "Petrol",
+      "fuelType": "gasoline",
+      "transmission": "Automatic",
+      "transmissionType": "automatic",
+      "color": "White",
+      "powerHp": null,
+      "engine": "",
+      "drivetrain": "",
+      "features": [],
+      "images": [
+        "/dealer-stock/demo-estate.webp"
+      ],
+      "image": "/dealer-stock/demo-estate.webp",
+      "sourceUrl": "https://github.com/darkapoparka/cars/blob/b1f0f5609c7c249cfd0649c122849ff2cbb8dfde/templates/modern/apps/web/public/desktop-boxcars/page-banner-art-provenance.md",
+      "observedAt": "2026-10-12T11:35:26.658Z",
+      "availability": "Демонстрация; не е действителна оферта или наличен автомобил.",
+      "description": "Илюстративен демонстрационен автомобил с примерни характеристики и цена. Не е действителна оферта или наличност на автокъщата. Изображението е генерирана декоративна илюстрация.",
+      "condition": "used",
+      "location": "Варна",
+      "raw": {
+        "id": "demo-estate",
+        "slug": "kalo-0404-varna-demo-estate",
+        "title": "Demo Estate — illustration",
+        "make": "Demo",
+        "model": "Estate",
+        "year": 2026,
+        "currency": "EUR",
+        "priceAmount": 23900,
+        "priceOnRequest": false,
+        "mileageValue": 12000,
+        "mileageUnit": "km",
+        "mileageOnRequest": false,
+        "body": "Estate",
+        "fuel": "Petrol",
+        "transmission": "Automatic",
+        "condition": "used",
+        "color": "White",
+        "description": "Илюстративен демонстрационен автомобил с примерни характеристики и цена. Не е действителна оферта или наличност на автокъщата. Изображението е генерирана декоративна илюстрация.",
+        "images": [
+          "/dealer-stock/demo-estate.webp"
+        ],
+        "observedAt": "2026-10-12T11:35:26.658Z",
+        "sourceUrl": "https://github.com/darkapoparka/cars/blob/b1f0f5609c7c249cfd0649c122849ff2cbb8dfde/templates/modern/apps/web/public/desktop-boxcars/page-banner-art-provenance.md",
+        "availability": "Демонстрация; не е действителна оферта или наличен автомобил.",
+        "dealerStock": false,
+        "illustrativeFacts": {
+          "year": true,
+          "price": true,
+          "mileage": true,
+          "fuel": true,
+          "transmission": true,
+          "makeAndModel": true,
+          "meaning": "Explicitly authored fictional demonstration values, not observed dealer or vehicle facts"
+        },
+        "mediaProvenance": {
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/modern/apps/web/public/desktop-boxcars/banner-estate-right.webp",
+          "gitBlob": "905e3d9153abe76f57798e19e839854eda4f9972",
+          "sha256": "d2d3deacbc9f566a22783f2a5eab6335473bf2e47c627261e8895dbff6fece70",
+          "generated": true,
+          "stockPhotography": false
+        }
+      }
+    },
+    {
+      "id": "demo-suv",
+      "sourceId": "demo-suv",
+      "slug": "kalo-0404-varna-demo-suv",
+      "title": "Demo SUV — illustration",
+      "make": "Demo",
+      "model": "SUV",
+      "trim": "",
+      "year": 2026,
+      "priceAmount": 28900,
+      "currency": "EUR",
+      "mileageValue": 8000,
+      "mileageUnit": "km",
+      "mileageOnRequest": false,
+      "body": "SUV",
+      "bodyType": "suv",
+      "fuel": "Petrol",
+      "fuelType": "gasoline",
+      "transmission": "Automatic",
+      "transmissionType": "automatic",
+      "color": "Blue",
+      "powerHp": null,
+      "engine": "",
+      "drivetrain": "",
+      "features": [],
+      "images": [
+        "/dealer-stock/demo-suv.webp"
+      ],
+      "image": "/dealer-stock/demo-suv.webp",
+      "sourceUrl": "https://github.com/darkapoparka/cars/blob/b1f0f5609c7c249cfd0649c122849ff2cbb8dfde/templates/modern/apps/web/public/desktop-boxcars/page-banner-art-provenance.md",
+      "observedAt": "2026-10-12T11:35:26.658Z",
+      "availability": "Демонстрация; не е действителна оферта или наличен автомобил.",
+      "description": "Илюстративен демонстрационен автомобил с примерни характеристики и цена. Не е действителна оферта или наличност на автокъщата. Изображението е генерирана декоративна илюстрация.",
+      "condition": "used",
+      "location": "Варна",
+      "raw": {
+        "id": "demo-suv",
+        "slug": "kalo-0404-varna-demo-suv",
+        "title": "Demo SUV — illustration",
+        "make": "Demo",
+        "model": "SUV",
+        "year": 2026,
+        "currency": "EUR",
+        "priceAmount": 28900,
+        "priceOnRequest": false,
+        "mileageValue": 8000,
+        "mileageUnit": "km",
+        "mileageOnRequest": false,
+        "body": "SUV",
+        "fuel": "Petrol",
+        "transmission": "Automatic",
+        "condition": "used",
+        "color": "Blue",
+        "description": "Илюстративен демонстрационен автомобил с примерни характеристики и цена. Не е действителна оферта или наличност на автокъщата. Изображението е генерирана декоративна илюстрация.",
+        "images": [
+          "/dealer-stock/demo-suv.webp"
+        ],
+        "observedAt": "2026-10-12T11:35:26.658Z",
+        "sourceUrl": "https://github.com/darkapoparka/cars/blob/b1f0f5609c7c249cfd0649c122849ff2cbb8dfde/templates/modern/apps/web/public/desktop-boxcars/page-banner-art-provenance.md",
+        "availability": "Демонстрация; не е действителна оферта или наличен автомобил.",
+        "dealerStock": false,
+        "illustrativeFacts": {
+          "year": true,
+          "price": true,
+          "mileage": true,
+          "fuel": true,
+          "transmission": true,
+          "makeAndModel": true,
+          "meaning": "Explicitly authored fictional demonstration values, not observed dealer or vehicle facts"
+        },
+        "mediaProvenance": {
+          "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/modern/apps/web/public/desktop-boxcars/banner-suv-left.webp",
+          "gitBlob": "61aa0e5810cbdf0abd4d84349bbd7135cdd9700f",
+          "sha256": "5c0c6062ef8af622fd852a7a43b2dfc989d6836f1528698b51d88f9352640f2f",
+          "generated": true,
+          "stockPhotography": false
+        }
+      }
+    }
+  ],
+  "rawFacts": {
+    "schemaVersion": 1,
+    "slug": "kalo-0404-varna",
+    "dealerId": "kalo-0404-varna",
+    "business": {
+      "schemaVersion": 1,
+      "slug": "kalo-0404-varna",
+      "name": "Кало 0404",
+      "shortName": "Кало 0404",
+      "city": "Варна",
+      "country": "BG",
+      "countryCode": "BG",
+      "locale": "bg-BG",
+      "currency": "EUR",
+      "distanceUnit": "km",
+      "phone": "0878483604",
+      "phoneDisplay": "0878483604",
+      "phoneE164": "+359878483604",
+      "phones": [
+        "+359878483604"
+      ],
+      "addressLine": "бул. Цар Освободител",
+      "address": "бул. Цар Освободител, Варна, България",
+      "hours": "Потвърдете работното време директно с автокъщата.",
+      "email": "",
+      "sourceUrl": "https://kalo.mobile.bg/",
+      "stockUrl": "https://kalo.mobile.bg/",
+      "contactSourceUrl": "https://kalo.mobile.bg/contacts",
+      "observedAt": "2026-10-12T10:44:17.796Z",
+      "inventoryNotice": "Показаните демонстрационни автомобили са илюстративни и не представляват наличности на автокъщата. За действителните оферти и наличности се свържете директно с нея.",
+      "previewNotice": "Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация.",
+      "services": [],
+      "socialLinks": {},
+      "logo": "/dealer-brand/v2-1e207107b7559017/logo-on-light.webp",
+      "logoLight": "/dealer-brand/v2-1e207107b7559017/logo-on-light.webp",
+      "logoDark": "/dealer-brand/v2-1e207107b7559017/logo-on-dark.webp",
+      "modernInventoryCopy": {
+        "kalo-0404-varna-demo-estate": {
+          "sourceDescription": "Илюстративен демонстрационен автомобил с примерни характеристики и цена. Не е действителна оферта или наличност на автокъщата. Изображението е генерирана декоративна илюстрация.",
+          "en": {
+            "description": "Illustrative demo vehicle with example specifications and price. This is not a real offer or dealership stock. The image is generated decorative artwork.",
+            "imageAlts": [
+              "Generated white estate illustration; not dealer stock photography"
+            ]
+          },
+          "bg": {
+            "description": "Илюстративен демонстрационен автомобил с примерни характеристики и цена. Не е действителна оферта или наличност на автокъщата. Изображението е генерирана декоративна илюстрация.",
+            "imageAlts": [
+              "Генерирана илюстрация на бяло комби; не е снимка на наличен автомобил"
+            ]
+          }
+        },
+        "kalo-0404-varna-demo-suv": {
+          "sourceDescription": "Илюстративен демонстрационен автомобил с примерни характеристики и цена. Не е действителна оферта или наличност на автокъщата. Изображението е генерирана декоративна илюстрация.",
+          "en": {
+            "description": "Illustrative demo vehicle with example specifications and price. This is not a real offer or dealership stock. The image is generated decorative artwork.",
+            "imageAlts": [
+              "Generated blue SUV illustration; not dealer stock photography"
+            ]
+          },
+          "bg": {
+            "description": "Илюстративен демонстрационен автомобил с примерни характеристики и цена. Не е действителна оферта или наличност на автокъщата. Изображението е генерирана декоративна илюстрация.",
+            "imageAlts": [
+              "Генерирана илюстрация на син SUV; не е снимка на наличен автомобил"
+            ]
+          }
+        }
+      }
+    },
+    "research": {
+      "website": {
+        "status": "none-confirmed-in-bounded-check",
+        "url": null,
+        "notWebsiteGapProof": true
+      },
+      "publicIdentityKey": "mobile-profile:kalo.mobile.bg",
+      "profileAdvertCount": 4,
+      "availabilityConfirmed": false,
+      "legalEntityOwnershipVerified": false,
+      "addressExactness": "public-contact-as-published",
+      "caveats": [],
+      "sourceProof": [
+        {
+          "url": "https://kalo.mobile.bg/",
+          "finalUrl": "https://kalo.mobile.bg/",
+          "observedAt": "2026-10-12T10:44:17.810Z",
+          "status": 200,
+          "bytes": 46997,
+          "sha256": "788d1ea4b265f362f8ebb95abae70567d3e55b44dac0b59ce4fc805fc904aec7"
+        },
+        {
+          "url": "https://kalo.mobile.bg/contacts",
+          "finalUrl": "https://kalo.mobile.bg/contacts",
+          "observedAt": "2026-10-12T10:44:17.796Z",
+          "status": 200,
+          "bytes": 41948,
+          "sha256": "0335c368a556aaa1fc03426ddbe55708a3869db222027a7afd559f97ae7291f1"
+        },
+        {
+          "url": "https://kalo.mobile.bg/about",
+          "finalUrl": "https://kalo.mobile.bg/about",
+          "observedAt": "2026-10-12T10:44:17.787Z",
+          "status": 200,
+          "bytes": 6076,
+          "sha256": "18f378ec27bf7871d3858946a2f02f278a85f902f3dbfffbef4c4149aa9096e0"
+        }
+      ],
+      "sourceAction": "new-absent-cars-source-after-wrapper-identity-recheck",
+      "existingSourceTree": null,
+      "inventoryModeSelection": "illustrative-not-dealer-stock",
+      "productionAssetInputsComplete": false
+    }
+  },
+  "sourceCount": 2,
+  "stockKind": "illustrative-not-dealer-stock",
+  "logoContract": null
+}

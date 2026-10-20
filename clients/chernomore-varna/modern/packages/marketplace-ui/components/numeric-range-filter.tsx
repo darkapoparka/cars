@@ -19,6 +19,71 @@ const clamp = (value: number, minimum: number, maximum: number) =>
 const rangesMatch = (left: NumericRangeValue, right: NumericRangeValue) =>
   left[0] === right[0] && left[1] === right[1];
 
+interface NumericRangeFieldProps {
+  ariaLabel: string;
+  fieldId: string;
+  formattedValue: string;
+  isDefaultValue: boolean;
+  label: string;
+  maximum: number;
+  minimum: number;
+  onCommit: (value: string) => void;
+  onInput: (value: string) => void;
+  step: number;
+  value: string;
+}
+
+const NumericRangeField = ({
+  ariaLabel,
+  fieldId,
+  formattedValue,
+  isDefaultValue,
+  label,
+  maximum,
+  minimum,
+  onCommit,
+  onInput,
+  step,
+  value,
+}: NumericRangeFieldProps) => (
+  <label
+    className="group relative block font-medium text-meta text-zinc-600"
+    htmlFor={fieldId}
+  >
+    <span className="pointer-events-none absolute top-2 left-3 z-10 font-normal text-xs text-zinc-600 max-lg:hidden">
+      {label}
+    </span>
+    <Input
+      aria-label={ariaLabel}
+      className="h-14 rounded-xl border-transparent bg-zinc-100 pt-5 pb-1 text-base text-transparent tabular-nums shadow-none hover:bg-zinc-200/70 focus-visible:border-[var(--lead-site-accent)] focus-visible:bg-white focus-visible:text-zinc-950 focus-visible:ring-2 focus-visible:ring-ring/15 focus-visible:ring-offset-0 group-focus-within:text-zinc-950 max-lg:h-12 max-lg:py-3 md:text-base"
+      id={fieldId}
+      inputMode="numeric"
+      max={maximum}
+      min={minimum}
+      onBlur={(event) => onCommit(event.target.value)}
+      onChange={(event) => onInput(event.target.value)}
+      step={step}
+      type="number"
+      value={value}
+    />
+    <span
+      aria-hidden="true"
+      className="pointer-events-none absolute right-3 bottom-0 left-3 flex h-14 items-end pb-1.5 text-base text-zinc-950 tabular-nums group-focus-within:hidden max-lg:hidden"
+    >
+      {formattedValue}
+    </span>
+    <span
+      aria-hidden="true"
+      className={cn(
+        "pointer-events-none absolute right-3 bottom-0 left-3 hidden h-12 items-center text-base text-zinc-950 tabular-nums group-focus-within:hidden max-lg:flex",
+        isDefaultValue && "font-normal text-muted-foreground"
+      )}
+    >
+      {isDefaultValue ? label : formattedValue}
+    </span>
+  </label>
+);
+
 export const NumericRangeFilter = ({
   className,
   compact = false,
@@ -96,26 +161,29 @@ export const NumericRangeFilter = ({
     <div
       className={cn("space-y-5 data-[compact=true]:space-y-4", className)}
       data-compact={compact}
+      data-slot="numeric-range-filter"
       style={{ "--ring": "var(--lead-site-accent)" } as CSSProperties}
     >
       <div
         className={cn(
           "flex items-baseline gap-4",
-          compact ? "justify-center" : "justify-between"
+          compact || !label ? "justify-center" : "justify-between"
         )}
       >
-        <span
-          className={cn(
-            "font-semibold text-meta text-zinc-600",
-            compact && "sr-only"
-          )}
-        >
-          {label}
-        </span>
+        {label ? (
+          <span
+            className={cn(
+              "font-semibold text-meta text-zinc-600",
+              compact && "sr-only"
+            )}
+          >
+            {label}
+          </span>
+        ) : null}
         <output
           className={cn(
             "font-semibold text-zinc-950 tabular-nums",
-            compact ? "text-center text-xl" : "text-right text-base"
+            compact || !label ? "text-center text-xl" : "text-right text-base"
           )}
           data-slot="numeric-range-summary"
         >
@@ -147,71 +215,33 @@ export const NumericRangeFilter = ({
         )}
       >
         {maximumOnly ? null : (
-          <label
-            className={cn(
-              "font-medium text-meta text-zinc-600",
-              compact ? "relative block" : "space-y-1.5"
-            )}
-            htmlFor={`${inputId}-minimum`}
-          >
-            <span
-              className={cn(
-                compact &&
-                  "pointer-events-none absolute top-2 left-4 z-10 text-xs text-zinc-500 leading-none"
-              )}
-            >
-              {minimumLabel}
-            </span>
-            <Input
-              aria-label={thumbLabels[0]}
-              className={cn(
-                "h-12 rounded-xl border-transparent bg-zinc-100 text-base text-zinc-950 tabular-nums shadow-none hover:bg-zinc-200/70 focus-visible:border-[var(--lead-site-accent)] focus-visible:bg-white focus-visible:ring-[var(--lead-site-accent-ring)] md:text-base",
-                compact && "h-14 pt-5 pb-1"
-              )}
-              id={`${inputId}-minimum`}
-              inputMode="numeric"
-              max={maximum}
-              min={rangeMinimum}
-              onBlur={(event) => updateMinimum(event.target.value)}
-              onChange={(event) => setMinimumInput(event.target.value)}
-              step={step}
-              type="number"
-              value={minimumInput}
-            />
-          </label>
-        )}
-        <label
-          className={cn(
-            "font-medium text-meta text-zinc-600",
-            compact ? "relative block" : "space-y-1.5"
-          )}
-          htmlFor={`${inputId}-maximum`}
-        >
-          <span
-            className={cn(
-              compact &&
-                "pointer-events-none absolute top-2 left-4 z-10 text-xs text-zinc-500 leading-none"
-            )}
-          >
-            {maximumLabel}
-          </span>
-          <Input
-            aria-label={thumbLabels[1]}
-            className={cn(
-              "h-12 rounded-xl border-transparent bg-zinc-100 text-base text-zinc-950 tabular-nums shadow-none hover:bg-zinc-200/70 focus-visible:border-[var(--lead-site-accent)] focus-visible:bg-white focus-visible:ring-[var(--lead-site-accent-ring)] md:text-base",
-              compact && "h-14 pt-5 pb-1"
-            )}
-            id={`${inputId}-maximum`}
-            inputMode="numeric"
-            max={rangeMaximum}
-            min={minimum}
-            onBlur={(event) => updateMaximum(event.target.value)}
-            onChange={(event) => setMaximumInput(event.target.value)}
+          <NumericRangeField
+            ariaLabel={thumbLabels[0]}
+            fieldId={`${inputId}-minimum`}
+            formattedValue={formatValue(minimum)}
+            isDefaultValue={minimum === rangeMinimum}
+            label={minimumLabel}
+            maximum={maximum}
+            minimum={rangeMinimum}
+            onCommit={updateMinimum}
+            onInput={setMinimumInput}
             step={step}
-            type="number"
-            value={maximumInput}
+            value={minimumInput}
           />
-        </label>
+        )}
+        <NumericRangeField
+          ariaLabel={thumbLabels[1]}
+          fieldId={`${inputId}-maximum`}
+          formattedValue={formatValue(maximum)}
+          isDefaultValue={maximum === rangeMaximum}
+          label={maximumLabel}
+          maximum={rangeMaximum}
+          minimum={minimum}
+          onCommit={updateMaximum}
+          onInput={setMaximumInput}
+          step={step}
+          value={maximumInput}
+        />
       </div>
 
       {presets.length > 0 ? (
@@ -225,7 +255,7 @@ export const NumericRangeFilter = ({
             {quickSelectLabel}
           </p>
           <div
-            className="no-scrollbar flex gap-2 overflow-x-auto overscroll-x-contain lg:grid lg:grid-cols-4"
+            className="grid grid-cols-2 gap-2 lg:grid-cols-4"
             data-slot="numeric-range-presets"
           >
             {presets.map((preset) => (
@@ -234,7 +264,7 @@ export const NumericRangeFilter = ({
                 className={cn(
                   "min-h-11 shrink-0 rounded-full border border-transparent bg-zinc-100 px-4 font-semibold text-meta text-zinc-800 shadow-none hover:bg-zinc-200 hover:text-zinc-950 focus-visible:border-transparent focus-visible:ring-[var(--lead-site-accent-ring)] lg:rounded-xl lg:px-3",
                   rangesMatch(value, preset.value) &&
-                    "bg-[var(--lead-site-accent)] text-white hover:bg-[var(--lead-site-accent-hover)] hover:text-white"
+                    "bg-primary text-primary-foreground hover:bg-[var(--primary-hover)] hover:text-[var(--primary-hover-foreground)] hover:text-white"
                 )}
                 key={`${preset.value[0]}-${preset.value[1]}`}
                 onClick={() => onValueChange(preset.value)}

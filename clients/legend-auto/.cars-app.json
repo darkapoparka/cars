@@ -3,32 +3,32 @@
   "dealer": "legend-auto",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "4e184777567849a2c5b4a9e4a3e652252179c29c",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "path": "templates/app",
-    "digest": "fad0067e48d7bd7e1c5177c5e91e2bc5767352e2c16621cb458d18a081f7c541",
-    "tree": "749512ff762c25272d1474225ff653dd4c88f0fe"
+    "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1",
+    "tree": "7f3d3ffa40546635377e6c5225194fe06fead291"
   },
-  "appDigest": "216c9aa3aeeeca962ba6573171099963326c43a715bdfea49ec499b62a372fee",
+  "appDigest": "9c2ae9415d28035524f0804b2d8761ae7623fd9533c1a90078d0a420c708b2b1",
   "provenance": {
     "schemaVersion": 1,
     "dealer": "legend-auto",
     "profile": "auto-best/src/lib/data/dealer-profile.json",
-    "profileSha256": "8a2f093ede98731f9665fcb77df9c15e6771723de8898b18b861ae6735b4b145",
+    "profileSha256": "ed33e1ca33572a80db89a4cec03be5bbb5edd804babe740630490415319d7bf8",
     "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
     "vehicles": 14,
     "currency": "EUR",
     "observedAt": "2026-09-06T21:52:55.020Z, 2026-09-06T21:52:55.219Z, 2026-09-06T21:52:55.362Z, 2026-09-06T21:52:55.452Z, 2026-09-06T21:52:55.578Z, 2026-09-06T21:52:55.731Z, 2026-09-06T21:52:55.812Z, 2026-09-06T21:52:55.901Z, 2026-09-06T21:52:55.993Z, 2026-09-06T21:52:56.129Z, 2026-09-06T21:52:56.213Z, 2026-09-06T21:52:56.330Z, 2026-09-06T21:52:56.411Z, 2026-09-06T21:52:56.518Z",
     "assets": [
       {
-        "source": "auto-best/static/dealer-brand/logo-on-light.webp",
-        "output": "public/dealer-app/logo-light-393c8f05cb6020c8e443.webp",
-        "sha256": "393c8f05cb6020c8e4435a742ad89a5d9dfdf5543ed67bc78003931ed35d7029",
+        "source": "auto-best/static/dealer-brand/v2-10a764fe9224b1a5/logo-on-light.webp",
+        "output": "public/dealer-app/logo-light-4df8eee87d1817266f88.webp",
+        "sha256": "4df8eee87d1817266f885b3f56aeec3536fcaf014fce2645010073444c638fbf",
         "role": "logo-light"
       },
       {
-        "source": "auto-best/static/dealer-brand/logo-on-dark.webp",
-        "output": "public/dealer-app/logo-dark-3306a5e66871d4527cf4.webp",
-        "sha256": "3306a5e66871d4527cf4de4cfc4b752ebebc346d44c0ecf0c8ffae3626cd61cf",
+        "source": "auto-best/static/dealer-brand/v2-10a764fe9224b1a5/logo-on-dark.webp",
+        "output": "public/dealer-app/logo-dark-dcd14f9dc7f287dd35d4.webp",
+        "sha256": "dcd14f9dc7f287dd35d4b3d2f01422976bdb863bea3d640f0446561565eded21",
         "role": "logo-dark"
       },
       {
@@ -451,13 +451,95 @@
         "sha256": "570d730f5ddacc4d49e776dd2baa808158e2b1adb1558a81ff9bc5d124013135",
         "role": "vehicle"
       }
+    ],
+    "mileageFacts": [
+      {
+        "slug": "audi-q4-2024-11774263732166588",
+        "sourceValue": 29000,
+        "sourceUnit": "km",
+        "canonicalKm": 29000
+      },
+      {
+        "slug": "seat-leon-2017-11784618839120443",
+        "sourceValue": 200000,
+        "sourceUnit": "km",
+        "canonicalKm": 200000
+      },
+      {
+        "slug": "vw-tiguan-2019-21785269571488349",
+        "sourceValue": 122000,
+        "sourceUnit": "km",
+        "canonicalKm": 122000
+      },
+      {
+        "slug": "vw-passat-2015-11788186558085673",
+        "sourceValue": 220000,
+        "sourceUnit": "km",
+        "canonicalKm": 220000
+      },
+      {
+        "slug": "vw-golf-2005-11788202283254523",
+        "sourceValue": 205000,
+        "sourceUnit": "km",
+        "canonicalKm": 205000
+      },
+      {
+        "slug": "toyota-yaris-2012-11782331844226239",
+        "sourceValue": 169000,
+        "sourceUnit": "km",
+        "canonicalKm": 169000
+      },
+      {
+        "slug": "toyota-rav4-2022-21787135215316819",
+        "sourceValue": 252000,
+        "sourceUnit": "km",
+        "canonicalKm": 252000
+      },
+      {
+        "slug": "toyota-auris-2009-11786699392982478",
+        "sourceValue": 229000,
+        "sourceUnit": "km",
+        "canonicalKm": 229000
+      },
+      {
+        "slug": "skoda-scala-2019-11787054081251501",
+        "sourceValue": 180000,
+        "sourceUnit": "km",
+        "canonicalKm": 180000
+      },
+      {
+        "slug": "renault-zoe-2020-11787771672265620",
+        "sourceValue": 78000,
+        "sourceUnit": "km",
+        "canonicalKm": 78000
+      },
+      {
+        "slug": "renault-clio-2014-11777013326319103",
+        "sourceValue": 150000,
+        "sourceUnit": "km",
+        "canonicalKm": 150000
+      },
+      {
+        "slug": "peugeot-508-2013-11764232323880460",
+        "sourceValue": 232000,
+        "sourceUnit": "km",
+        "canonicalKm": 232000
+      },
+      {
+        "slug": "opel-astra-2017-11786966551654053",
+        "sourceValue": 193000,
+        "sourceUnit": "km",
+        "canonicalKm": 193000
+      },
+      {
+        "slug": "opel-agila-2008-11725562013563390",
+        "sourceValue": 120000,
+        "sourceUnit": "km",
+        "canonicalKm": 120000
+      }
     ]
   },
-  "baseDeployment": {
-    "id": "dpl_8VbZ3DcPWhu4uisB922TvLBfuRde",
-    "url": "https://cars-legendauto.vercel.app/",
-    "checkedAt": "2026-09-28T02:25:50.313Z"
-  },
-  "baseReceiptSha256": "767343649ac0045fa02bf70fbe9a7bbb54897a2a8cd7ae12c451d9e7b6d29dd9",
-  "refreshedAt": "2026-10-10T23:11:02.362Z"
+  "needsDealerQA": true,
+  "readyToPublish": false,
+  "refreshedAt": "2026-10-15T02:25:29.115Z"
 }

@@ -4,8 +4,8 @@
     "en",
     "bg"
   ],
-  "messages": 1128,
-  "catalogSha256": "c96c3ceb9928856ecb24dcf633261a9531a5f451987a65207321f1b9669fb479",
+  "messages": 1151,
+  "catalogSha256": "68e0b542689be947e72b08985cc9a70978caa3065dbb5f2a0bdb9dca78d2d5bd",
   "sources": [
     "localization/common.json",
     "localization/catalog.reviewed.json",
@@ -13,10 +13,10 @@
     "localization/dealer.reviewed.json"
   ],
   "sourceSha256": {
-    "localization/common.json": "d92c219797a35eb09ca23705e3dafada887db998ed6076c2ab7403d355c7a1ea",
+    "localization/common.json": "2ab2ca27066bc4dfc84506e7fea708edcddd47682a71c9dbf25c522bb4cfdfb3",
     "localization/catalog.reviewed.json": "0bc34f72f1e001112d5fe3ab2f2027a8654a13faabca550d4b690bc17ab5fb1d",
     "localization/template.reviewed.json": "87f67dbce93c1e7d59569d538a3ea81540803284d836365183e338c0ea903122",
-    "localization/dealer.reviewed.json": "f9d4e5ff3c8f805e4f50592cdb47c9d0239d54330741dc47891a7089ea4e3e82"
+    "localization/dealer.reviewed.json": "fc801a6e1860bd0cd13141eb73b98e18cd2cdf9ec7baaa5a178cda32d4353bed"
   },
   "policySha256": "9b965830b64c496eac861fdc4059813f130056d543173bc3a777eb34624226cf",
   "ambiguousAliases": [
@@ -26,7 +26,6 @@
     "Automatic",
     "Birmingham",
     "Browse cars",
-    "By appointment",
     "Car search",
     "Choose JPG, PNG or WebP photos.",
     "Choosing a car",

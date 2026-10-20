@@ -1,0 +1,166 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-reviewed-modern-bilingual-copy-input",
+  "dealer": "texas-drive-auto",
+  "reviewedGeneratorHelper": {
+    "path": "scripts/lib/modern-dealer-inventory-copy.mjs",
+    "sha256": "cbdbaa28dc07911cfe913b4e627671b6556fc25d3bfe59364e29c5ca5a29072b",
+    "sourceCommit": "14d86f67c160699c18a6ec5658197cc4d9011e0b"
+  },
+  "review": {
+    "displayCopyOnly": true,
+    "exactSourceDescriptionKeys": true,
+    "listingFactsUnchanged": true,
+    "imageUrlsUnchanged": true,
+    "imageAltsPreserved": true,
+    "interpolationTokensUnchanged": true,
+    "reviewedBy": "Codex, authorized final-template rollout"
+  },
+  "sourceCommit": "2f7937757b84d6737a912b92908ff6ba2584cf5f",
+  "baselineTree": "b8fc8d607e2ea294ec3a3e578906ad7a3cf0ccc2",
+  "inputSha256": "f9bf135849cd280548b5750fd09336825a7d709fc0ed9613c73e5467ae02f161",
+  "modernInputRowsSha256": "e489e7b184b74b2d5ec1d72f246e5af40823cb2572460b98c85e58be2f4635cc",
+  "listingCount": 8,
+  "profileInputs": [
+    {
+      "path": "dealer.json",
+      "bytes": 4534,
+      "sha256": "534c62fae17bc56f041895b4ac47413e97d42dcef3d5b5d104049f24283455ad",
+      "gitBlob": "a10853ba3f7ef459a0402dc6a9d9ef501f7ddb58"
+    },
+    {
+      "path": "business-facts.json",
+      "bytes": 510,
+      "sha256": "02b2b426b3e01e2e5edfcf41aea9cc24b20efd032e99c6ad4f01068f75525778",
+      "gitBlob": "01a61e7e15e78e4d170655ed06d04567d3dc5155"
+    },
+    {
+      "path": "stock.json",
+      "bytes": 4450,
+      "sha256": "13fc0bb5a0c2cb29c99273565591be7f528bf34dc00d35f03a36b1bc6bbce428",
+      "gitBlob": "8e531774dfa8be7369d771de57a1d3c8492e3cd6"
+    }
+  ],
+  "reviewedCopy": {
+    "acura-tl-2008-127361913": {
+      "sourceDescription": "Dated listing samples; confirm price and availability directly with the dealership.",
+      "en": {
+        "description": "Dated listing samples; confirm price and availability directly with the dealership.",
+        "imageAlts": [
+          "2008 Acura TL"
+        ]
+      },
+      "bg": {
+        "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+        "imageAlts": [
+          "2008 Acura TL"
+        ]
+      }
+    },
+    "audi-q5-2012-128538336": {
+      "sourceDescription": "Dated listing samples; confirm price and availability directly with the dealership.",
+      "en": {
+        "description": "Dated listing samples; confirm price and availability directly with the dealership.",
+        "imageAlts": [
+          "2012 Audi Q5 2.0T quattro Premium Plus"
+        ]
+      },
+      "bg": {
+        "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+        "imageAlts": [
+          "2012 Audi Q5 2.0T quattro Premium Plus"
+        ]
+      }
+    },
+    "audi-q5-2013-127361925": {
+      "sourceDescription": "Dated listing samples; confirm price and availability directly with the dealership.",
+      "en": {
+        "description": "Dated listing samples; confirm price and availability directly with the dealership.",
+        "imageAlts": [
+          "2013 Audi Q5 2.0T quattro Premium Plus"
+        ]
+      },
+      "bg": {
+        "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+        "imageAlts": [
+          "2013 Audi Q5 2.0T quattro Premium Plus"
+        ]
+      }
+    },
+    "audi-a4-2018-127361924": {
+      "sourceDescription": "Dated listing samples; confirm price and availability directly with the dealership.",
+      "en": {
+        "description": "Dated listing samples; confirm price and availability directly with the dealership.",
+        "imageAlts": [
+          "2018 Audi A4 Premium"
+        ]
+      },
+      "bg": {
+        "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+        "imageAlts": [
+          "2018 Audi A4 Premium"
+        ]
+      }
+    },
+    "bmw-x5-2014-127361904": {
+      "sourceDescription": "Dated listing samples; confirm price and availability directly with the dealership.",
+      "en": {
+        "description": "Dated listing samples; confirm price and availability directly with the dealership.",
+        "imageAlts": [
+          "2014 BMW X5 xDrive35i"
+        ]
+      },
+      "bg": {
+        "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+        "imageAlts": [
+          "2014 BMW X5 xDrive35i"
+        ]
+      }
+    },
+    "buick-enclave-2014-127361891": {
+      "sourceDescription": "Dated listing samples; confirm price and availability directly with the dealership.",
+      "en": {
+        "description": "Dated listing samples; confirm price and availability directly with the dealership.",
+        "imageAlts": [
+          "2014 Buick Enclave Leather"
+        ]
+      },
+      "bg": {
+        "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+        "imageAlts": [
+          "2014 Buick Enclave Leather"
+        ]
+      }
+    },
+    "cadillac-cts-2007-127361933": {
+      "sourceDescription": "Dated listing samples; confirm price and availability directly with the dealership.",
+      "en": {
+        "description": "Dated listing samples; confirm price and availability directly with the dealership.",
+        "imageAlts": [
+          "2007 Cadillac CTS HI FEATURE V6"
+        ]
+      },
+      "bg": {
+        "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+        "imageAlts": [
+          "2007 Cadillac CTS HI FEATURE V6"
+        ]
+      }
+    },
+    "cadillac-escalade-2018-127361883": {
+      "sourceDescription": "Dated listing samples; confirm price and availability directly with the dealership.",
+      "en": {
+        "description": "Dated listing samples; confirm price and availability directly with the dealership.",
+        "imageAlts": [
+          "2018 Cadillac Escalade Standard"
+        ]
+      },
+      "bg": {
+        "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+        "imageAlts": [
+          "2018 Cadillac Escalade Standard"
+        ]
+      }
+    }
+  }
+}

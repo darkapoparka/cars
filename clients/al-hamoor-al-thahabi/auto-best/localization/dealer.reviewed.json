@@ -24,6 +24,22 @@
     "notes": "Dealer-owned appointment and opening-hours guidance."
   },
   {
+    "key": "dealer.addressShort",
+    "source": "Souk Al Haraj, showroom 353, Sharjah",
+    "en": "Souk Al Haraj, showroom 353, Sharjah",
+    "bg": "Souk Al Haraj, Шоурум 353, Sharjah",
+    "disposition": "translate",
+    "notes": "Native short-address consumer uses the recorded dealer address line."
+  },
+  {
+    "key": "dealer.appointmentShort",
+    "source": "Please confirm opening hours and arrange your visit with the dealership.",
+    "en": "Please confirm opening hours and arrange your visit with the dealership.",
+    "bg": "Потвърдете работното време и уговорете посещение с автокъщата.",
+    "disposition": "translate",
+    "notes": "Native short-hours consumer uses the same factual appointment guidance."
+  },
+  {
     "key": "m_159520cd7f28",
     "source": "Най-желаната кола в България | Lamborghini Urus",
     "en": "The most sought-after car in Bulgaria | Lamborghini Urus",

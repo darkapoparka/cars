@@ -1,0 +1,1564 @@
+[
+  {
+    "route": "bg/Home",
+    "width": 1440,
+    "category": "Марка",
+    "metrics": {
+      "controls": [
+        {
+          "label": "Търсене на марки",
+          "type": "search",
+          "value": ""
+        },
+        {
+          "label": "Nissan5",
+          "type": "checkbox",
+          "value": "on"
+        },
+        {
+          "label": "Toyota9",
+          "type": "checkbox",
+          "value": "on"
+        },
+        {
+          "label": "Mitsubishi9",
+          "type": "checkbox",
+          "value": "on"
+        },
+        {
+          "label": "MG2",
+          "type": "checkbox",
+          "value": "on"
+        },
+        {
+          "label": "Mercedes Benz1",
+          "type": "checkbox",
+          "value": "on"
+        },
+        {
+          "label": "BMW3",
+          "type": "checkbox",
+          "value": "on"
+        },
+        {
+          "label": "Ford2",
+          "type": "checkbox",
+          "value": "on"
+        },
+        {
+          "label": "Hyundai1",
+          "type": "checkbox",
+          "value": "on"
+        },
+        {
+          "label": "Kia2",
+          "type": "checkbox",
+          "value": "on"
+        },
+        {
+          "label": "Jeep1",
+          "type": "checkbox",
+          "value": "on"
+        },
+        {
+          "label": "JAC2",
+          "type": "checkbox",
+          "value": "on"
+        },
+        {
+          "label": "Mazda1",
+          "type": "checkbox",
+          "value": "on"
+        },
+        {
+          "label": "Suzuki4",
+          "type": "checkbox",
+          "value": "on"
+        },
+        {
+          "label": "Audi1",
+          "type": "checkbox",
+          "value": "on"
+        },
+        {
+          "label": "Volkswagen1",
+          "type": "checkbox",
+          "value": "on"
+        },
+        {
+          "label": "Lexus1",
+          "type": "checkbox",
+          "value": "on"
+        },
+        {
+          "label": "Volvo1",
+          "type": "checkbox",
+          "value": "on"
+        },
+        {
+          "label": "Land Rover1",
+          "type": "checkbox",
+          "value": "on"
+        },
+        {
+          "label": "Haval1",
+          "type": "checkbox",
+          "value": "on"
+        }
+      ],
+      "footerVisible": true,
+      "height": 760,
+      "horizontalOverflow": false,
+      "searches": 1,
+      "width": 980,
+      "withinViewport": true
+    }
+  },
+  {
+    "route": "bg/Home",
+    "width": 1440,
+    "category": "Модел",
+    "metrics": {
+      "controls": [
+        {
+          "label": "Търсете модел",
+          "type": "search",
+          "value": ""
+        },
+        {
+          "label": "A5 Sportback",
+          "type": "checkbox",
+          "value": "on"
+        },
+        {
+          "label": "430I",
+          "type": "checkbox",
+          "value": "on"
+        },
+        {
+          "label": "X2",
+          "type": "checkbox",
+          "value": "on"
+        },
+        {
+          "label": "X3",
+          "type": "checkbox",
+          "value": "on"
+        },
+        {
+          "label": "TAURUS",
+          "type": "checkbox",
+          "value": "on"
+        },
+        {
+          "label": "TERRITORY",
+          "type": "checkbox",
+          "value": "on"
+        },
+        {
+          "label": "H6 GT",
+          "type": "checkbox",
+          "value": "on"
+        },
+        {
+          "label": "CRETA",
+          "type": "checkbox",
+          "value": "on"
+        },
+        {
+          "label": "J7",
+          "type": "checkbox",
+          "value": "on"
+        },
+        {
+          "label": "S3",
+          "type": "checkbox",
+          "value": "on"
+        },
+        {
+          "label": "Grand Cherokee L",
+          "type": "checkbox",
+          "value": "on"
+        },
+        {
+          "label": "K8",
+          "type": "checkbox",
+          "value": "on"
+        },
+        {
+          "label": "SELTOS",
+          "type": "checkbox",
+          "value": "on"
+        },
+        {
+          "label": "DEFENDER",
+          "type": "checkbox",
+          "value": "on"
+        },
+        {
+          "label": "RX350",
+          "type": "checkbox",
+          "value": "on"
+        },
+        {
+          "label": "6",
+          "type": "checkbox",
+          "value": "on"
+        },
+        {
+          "label": "C 200",
+          "type": "checkbox",
+          "value": "on"
+        },
+        {
+          "label": "5",
+          "type": "checkbox",
+          "value": "on"
+        },
+        {
+          "label": "ZS",
+          "type": "checkbox",
+          "value": "on"
+        },
+        {
+          "label": "ASX",
+          "type": "checkbox",
+          "value": "on"
+        },
+        {
+          "label": "ATTRAGE",
+          "type": "checkbox",
+          "value": "on"
+        },
+        {
+          "label": "OUTLANDER",
+          "type": "checkbox",
+          "value": "on"
+        },
+        {
+          "label": "PAJERO",
+          "type": "checkbox",
+          "value": "on"
+        },
+        {
+          "label": "Xpander",
+          "type": "checkbox",
+          "value": "on"
+        },
+        {
+          "label": "KICKS",
+          "type": "checkbox",
+          "value": "on"
+        },
+        {
+          "label": "PATROL",
+          "type": "checkbox",
+          "value": "on"
+        },
+        {
+          "label": "BALENO",
+          "type": "checkbox",
+          "value": "on"
+        },
+        {
+          "label": "Ciaz",
+          "type": "checkbox",
+          "value": "on"
+        },
+        {
+          "label": "DZIRE",
+          "type": "checkbox",
+          "value": "on"
+        },
+        {
+          "label": "GRAND VITARA",
+          "type": "checkbox",
+          "value": "on"
+        },
+        {
+          "label": "COROLLA",
+          "type": "checkbox",
+          "value": "on"
+        },
+        {
+          "label": "Fortuner",
+          "type": "checkbox",
+          "value": "on"
+        },
+        {
+          "label": "LAND CRUISER",
+          "type": "checkbox",
+          "value": "on"
+        },
+        {
+          "label": "VELOZ",
+          "type": "checkbox",
+          "value": "on"
+        },
+        {
+          "label": "YARIS",
+          "type": "checkbox",
+          "value": "on"
+        },
+        {
+          "label": "T ROC",
+          "type": "checkbox",
+          "value": "on"
+        },
+        {
+          "label": "XC40",
+          "type": "checkbox",
+          "value": "on"
+        }
+      ],
+      "footerVisible": true,
+      "height": 760,
+      "horizontalOverflow": false,
+      "searches": 1,
+      "width": 980,
+      "withinViewport": true
+    }
+  },
+  {
+    "route": "bg/Home",
+    "width": 1440,
+    "category": "Бюджет",
+    "metrics": {
+      "controls": [
+        {
+          "label": "Минимална стойност: цена",
+          "type": "text",
+          "value": "€ 8 000"
+        },
+        {
+          "label": "Максимална стойност: цена",
+          "type": "text",
+          "value": "€ 950 000"
+        },
+        {
+          "label": "Минимална стойност: цена",
+          "type": "range",
+          "value": "8000"
+        },
+        {
+          "label": "Максимална стойност: цена",
+          "type": "range",
+          "value": "950000"
+        },
+        {
+          "label": "Под €40 000",
+          "type": "checkbox",
+          "value": "on"
+        },
+        {
+          "label": "Под €60 000",
+          "type": "checkbox",
+          "value": "on"
+        },
+        {
+          "label": "Под €100 000",
+          "type": "checkbox",
+          "value": "on"
+        },
+        {
+          "label": "Над €100 000",
+          "type": "checkbox",
+          "value": "on"
+        }
+      ],
+      "footerVisible": true,
+      "height": 760,
+      "horizontalOverflow": false,
+      "searches": 0,
+      "width": 980,
+      "withinViewport": true
+    }
+  },
+  {
+    "route": "bg/Home",
+    "width": 1440,
+    "category": "Отстъпки",
+    "metrics": {
+      "controls": [
+        {
+          "label": "С отстъпка",
+          "type": "checkbox",
+          "value": "on"
+        }
+      ],
+      "footerVisible": true,
+      "height": 760,
+      "horizontalOverflow": false,
+      "searches": 0,
+      "width": 980,
+      "withinViewport": true
+    }
+  },
+  {
+    "route": "bg/Home",
+    "width": 1440,
+    "category": "Вноска",
+    "metrics": {
+      "controls": [
+        {
+          "label": "Под €750Под EUR 750",
+          "type": "radio",
+          "value": "on"
+        },
+        {
+          "label": "Под €1 500Под EUR 1,500",
+          "type": "radio",
+          "value": "on"
+        },
+        {
+          "label": "Под €2 000Под EUR 2,000",
+          "type": "radio",
+          "value": "on"
+        },
+        {
+          "label": "Над €2 000Над EUR 2,000",
+          "type": "radio",
+          "value": "on"
+        },
+        {
+          "label": "Максимална месечна вноска",
+          "type": "number",
+          "value": ""
+        }
+      ],
+      "footerVisible": true,
+      "height": 760,
+      "horizontalOverflow": false,
+      "searches": 0,
+      "width": 980,
+      "withinViewport": true
+    }
+  },
+  {
+    "route": "bg/Home",
+    "width": 1440,
+    "category": "Първоначална вноска",
+    "metrics": {
+      "controls": [
+        {
+          "label": "Само без първоначална вноска",
+          "type": "checkbox",
+          "value": "on"
+        }
+      ],
+      "footerVisible": true,
+      "height": 760,
+      "horizontalOverflow": false,
+      "searches": 0,
+      "width": 980,
+      "withinViewport": true
+    }
+  },
+  {
+    "route": "bg/Home",
+    "width": 1440,
+    "category": "Година",
+    "metrics": {
+      "controls": [
+        {
+          "label": "Минимална стойност: година",
+          "type": "text",
+          "value": "2003"
+        },
+        {
+          "label": "Максимална стойност: година",
+          "type": "text",
+          "value": "2026"
+        },
+        {
+          "label": "Минимална стойност: година",
+          "type": "range",
+          "value": "2003"
+        },
+        {
+          "label": "Максимална стойност: година",
+          "type": "range",
+          "value": "2026"
+        },
+        {
+          "label": "От 2021 г.",
+          "type": "radio",
+          "value": "on"
+        },
+        {
+          "label": "От 2019 г.",
+          "type": "radio",
+          "value": "on"
+        },
+        {
+          "label": "От 2017 г.",
+          "type": "radio",
+          "value": "on"
+        },
+        {
+          "label": "От 2015 г.",
+          "type": "radio",
+          "value": "on"
+        },
+        {
+          "label": "От 2013 г.",
+          "type": "radio",
+          "value": "on"
+        },
+        {
+          "label": "От 2011 г.",
+          "type": "radio",
+          "value": "on"
+        }
+      ],
+      "footerVisible": true,
+      "height": 760,
+      "horizontalOverflow": false,
+      "searches": 0,
+      "width": 980,
+      "withinViewport": true
+    }
+  },
+  {
+    "route": "bg/Home",
+    "width": 1440,
+    "category": "Тип купе",
+    "metrics": {
+      "controls": [],
+      "footerVisible": true,
+      "height": 760,
+      "horizontalOverflow": false,
+      "searches": 0,
+      "width": 980,
+      "withinViewport": true
+    }
+  },
+  {
+    "route": "bg/Home",
+    "width": 1440,
+    "category": "Пробег",
+    "metrics": {
+      "controls": [
+        {
+          "label": "Минимална стойност: пробег",
+          "type": "text",
+          "value": "0 км"
+        },
+        {
+          "label": "Максимална стойност: пробег",
+          "type": "text",
+          "value": "530,000 км"
+        },
+        {
+          "label": "Минимална стойност: пробег",
+          "type": "range",
+          "value": "0"
+        },
+        {
+          "label": "Максимална стойност: пробег",
+          "type": "range",
+          "value": "530000"
+        }
+      ],
+      "footerVisible": true,
+      "height": 760,
+      "horizontalOverflow": false,
+      "searches": 0,
+      "width": 980,
+      "withinViewport": true
+    }
+  },
+  {
+    "route": "bg/Home",
+    "width": 1440,
+    "category": "Вид автомобил",
+    "metrics": {
+      "controls": [
+        {
+          "label": "За всеки денАвтомобили за всеки ден от нашата автокъща.",
+          "type": "checkbox",
+          "value": "on"
+        },
+        {
+          "label": "ИзберетеРазгледайте премиум селекцията ни.",
+          "type": "checkbox",
+          "value": "on"
+        },
+        {
+          "label": "ValueРазгледайте по-достъпни предложения.",
+          "type": "checkbox",
+          "value": "on"
+        }
+      ],
+      "footerVisible": true,
+      "height": 760,
+      "horizontalOverflow": false,
+      "searches": 0,
+      "width": 980,
+      "withinViewport": true
+    }
+  },
+  {
+    "route": "bg/Home",
+    "width": 1440,
+    "category": "Гориво",
+    "metrics": {
+      "controls": [
+        {
+          "label": "Бензин",
+          "type": "checkbox",
+          "value": "on"
+        },
+        {
+          "label": "Хибрид",
+          "type": "checkbox",
+          "value": "on"
+        },
+        {
+          "label": "Електрически",
+          "type": "checkbox",
+          "value": "on"
+        },
+        {
+          "label": "Дизел",
+          "type": "checkbox",
+          "value": "on"
+        }
+      ],
+      "footerVisible": true,
+      "height": 760,
+      "horizontalOverflow": false,
+      "searches": 0,
+      "width": 980,
+      "withinViewport": true
+    }
+  },
+  {
+    "route": "bg/Home",
+    "width": 1440,
+    "category": "Скорости",
+    "metrics": {
+      "controls": [
+        {
+          "label": "Автоматична",
+          "type": "checkbox",
+          "value": "on"
+        },
+        {
+          "label": "Ръчна",
+          "type": "checkbox",
+          "value": "on"
+        }
+      ],
+      "footerVisible": true,
+      "height": 760,
+      "horizontalOverflow": false,
+      "searches": 0,
+      "width": 980,
+      "withinViewport": true
+    }
+  },
+  {
+    "route": "bg/Home",
+    "width": 1440,
+    "category": "Категории",
+    "metrics": {
+      "controls": [
+        {
+          "label": "Автомобил за приключения",
+          "type": "checkbox",
+          "value": "on"
+        },
+        {
+          "label": "Като нов",
+          "type": "checkbox",
+          "value": "on"
+        },
+        {
+          "label": "Достъпен бюджет",
+          "type": "checkbox",
+          "value": "on"
+        },
+        {
+          "label": "Икономичен автомобил за всеки ден",
+          "type": "checkbox",
+          "value": "on"
+        },
+        {
+          "label": "Семеен автомобил",
+          "type": "checkbox",
+          "value": "on"
+        },
+        {
+          "label": "Нови SUV предложения",
+          "type": "checkbox",
+          "value": "on"
+        },
+        {
+          "label": "Лукс в рамките на бюджета",
+          "type": "checkbox",
+          "value": "on"
+        },
+        {
+          "label": "Hot deals",
+          "type": "checkbox",
+          "value": "on"
+        },
+        {
+          "label": "Премиум седани",
+          "type": "checkbox",
+          "value": "on"
+        }
+      ],
+      "footerVisible": true,
+      "height": 760,
+      "horizontalOverflow": false,
+      "searches": 0,
+      "width": 980,
+      "withinViewport": true
+    }
+  },
+  {
+    "route": "bg/Home",
+    "width": 1440,
+    "category": "Оборудване",
+    "metrics": {
+      "controls": [
+        {
+          "label": "Икономичен",
+          "type": "checkbox",
+          "value": "on"
+        },
+        {
+          "label": "Камера за заден ход",
+          "type": "checkbox",
+          "value": "on"
+        },
+        {
+          "label": "Шибедах",
+          "type": "checkbox",
+          "value": "on"
+        },
+        {
+          "label": "Панорамен покрив",
+          "type": "checkbox",
+          "value": "on"
+        },
+        {
+          "label": "Стъклен люк",
+          "type": "checkbox",
+          "value": "on"
+        }
+      ],
+      "footerVisible": true,
+      "height": 760,
+      "horizontalOverflow": false,
+      "searches": 0,
+      "width": 980,
+      "withinViewport": true
+    }
+  },
+  {
+    "route": "bg/Home",
+    "width": 1440,
+    "category": "Двигател",
+    "metrics": {
+      "controls": [
+        {
+          "label": "Минимална стойност: обем на двигателя",
+          "type": "text",
+          "value": "0"
+        },
+        {
+          "label": "Максимална стойност: обем на двигателя",
+          "type": "text",
+          "value": "7"
+        },
+        {
+          "label": "Минимална стойност: обем на двигателя",
+          "type": "range",
+          "value": "0"
+        },
+        {
+          "label": "Максимална стойност: обем на двигателя",
+          "type": "range",
+          "value": "7"
+        },
+        {
+          "label": "Минимална стойност: цилиндри",
+          "type": "text",
+          "value": "0"
+        },
+        {
+          "label": "Максимална стойност: цилиндри",
+          "type": "text",
+          "value": "12"
+        },
+        {
+          "label": "Минимална стойност: цилиндри",
+          "type": "range",
+          "value": "0"
+        },
+        {
+          "label": "Максимална стойност: цилиндри",
+          "type": "range",
+          "value": "12"
+        }
+      ],
+      "footerVisible": true,
+      "height": 760,
+      "horizontalOverflow": false,
+      "searches": 0,
+      "width": 980,
+      "withinViewport": true
+    }
+  },
+  {
+    "route": "bg/Home",
+    "width": 1440,
+    "category": "Търсете по ключова дума",
+    "metrics": {
+      "controls": [
+        {
+          "label": "Търсене на автомобили",
+          "type": "search",
+          "value": ""
+        }
+      ],
+      "footerVisible": true,
+      "height": 760,
+      "horizontalOverflow": false,
+      "searches": 1,
+      "width": 980,
+      "withinViewport": true
+    }
+  },
+  {
+    "route": "en/Home",
+    "width": 1440,
+    "category": "Brand",
+    "metrics": {
+      "footerVisible": true,
+      "height": 760,
+      "horizontalOverflow": false,
+      "searches": 1,
+      "width": 980,
+      "withinViewport": true
+    }
+  },
+  {
+    "route": "en/Home",
+    "width": 1440,
+    "category": "Model",
+    "metrics": {
+      "footerVisible": true,
+      "height": 760,
+      "horizontalOverflow": false,
+      "searches": 1,
+      "width": 980,
+      "withinViewport": true
+    }
+  },
+  {
+    "route": "en/Home",
+    "width": 1440,
+    "category": "Budget",
+    "metrics": {
+      "footerVisible": true,
+      "height": 760,
+      "horizontalOverflow": false,
+      "searches": 0,
+      "width": 980,
+      "withinViewport": true
+    }
+  },
+  {
+    "route": "en/Home",
+    "width": 1440,
+    "category": "Discounts",
+    "metrics": {
+      "footerVisible": true,
+      "height": 760,
+      "horizontalOverflow": false,
+      "searches": 0,
+      "width": 980,
+      "withinViewport": true
+    }
+  },
+  {
+    "route": "en/Home",
+    "width": 1440,
+    "category": "EMI",
+    "metrics": {
+      "footerVisible": true,
+      "height": 760,
+      "horizontalOverflow": false,
+      "searches": 0,
+      "width": 980,
+      "withinViewport": true
+    }
+  },
+  {
+    "route": "en/Home",
+    "width": 1440,
+    "category": "Down payment",
+    "metrics": {
+      "footerVisible": true,
+      "height": 760,
+      "horizontalOverflow": false,
+      "searches": 0,
+      "width": 980,
+      "withinViewport": true
+    }
+  },
+  {
+    "route": "en/Home",
+    "width": 1440,
+    "category": "Year",
+    "metrics": {
+      "footerVisible": true,
+      "height": 760,
+      "horizontalOverflow": false,
+      "searches": 0,
+      "width": 980,
+      "withinViewport": true
+    }
+  },
+  {
+    "route": "en/Home",
+    "width": 1440,
+    "category": "Body type",
+    "metrics": {
+      "footerVisible": true,
+      "height": 760,
+      "horizontalOverflow": false,
+      "searches": 0,
+      "width": 980,
+      "withinViewport": true
+    }
+  },
+  {
+    "route": "en/Home",
+    "width": 1440,
+    "category": "Mileage",
+    "metrics": {
+      "footerVisible": true,
+      "height": 760,
+      "horizontalOverflow": false,
+      "searches": 0,
+      "width": 980,
+      "withinViewport": true
+    }
+  },
+  {
+    "route": "en/Home",
+    "width": 1440,
+    "category": "Car type",
+    "metrics": {
+      "footerVisible": true,
+      "height": 760,
+      "horizontalOverflow": false,
+      "searches": 0,
+      "width": 980,
+      "withinViewport": true
+    }
+  },
+  {
+    "route": "en/Home",
+    "width": 1440,
+    "category": "Fuel type",
+    "metrics": {
+      "footerVisible": true,
+      "height": 760,
+      "horizontalOverflow": false,
+      "searches": 0,
+      "width": 980,
+      "withinViewport": true
+    }
+  },
+  {
+    "route": "en/Home",
+    "width": 1440,
+    "category": "Gearbox",
+    "metrics": {
+      "footerVisible": true,
+      "height": 760,
+      "horizontalOverflow": false,
+      "searches": 0,
+      "width": 980,
+      "withinViewport": true
+    }
+  },
+  {
+    "route": "en/Home",
+    "width": 1440,
+    "category": "Categories",
+    "metrics": {
+      "footerVisible": true,
+      "height": 760,
+      "horizontalOverflow": false,
+      "searches": 0,
+      "width": 980,
+      "withinViewport": true
+    }
+  },
+  {
+    "route": "en/Home",
+    "width": 1440,
+    "category": "Features",
+    "metrics": {
+      "footerVisible": true,
+      "height": 760,
+      "horizontalOverflow": false,
+      "searches": 0,
+      "width": 980,
+      "withinViewport": true
+    }
+  },
+  {
+    "route": "en/Home",
+    "width": 1440,
+    "category": "Engine",
+    "metrics": {
+      "footerVisible": true,
+      "height": 760,
+      "horizontalOverflow": false,
+      "searches": 0,
+      "width": 980,
+      "withinViewport": true
+    }
+  },
+  {
+    "route": "en/Home",
+    "width": 1440,
+    "category": "Search by keyword",
+    "metrics": {
+      "footerVisible": true,
+      "height": 760,
+      "horizontalOverflow": false,
+      "searches": 1,
+      "width": 980,
+      "withinViewport": true
+    }
+  },
+  {
+    "route": "en/Cars",
+    "width": 1440,
+    "category": "Brand",
+    "metrics": {
+      "footerVisible": true,
+      "height": 760,
+      "horizontalOverflow": false,
+      "searches": 1,
+      "width": 980,
+      "withinViewport": true
+    }
+  },
+  {
+    "route": "en/Cars",
+    "width": 1440,
+    "category": "Model",
+    "metrics": {
+      "footerVisible": true,
+      "height": 760,
+      "horizontalOverflow": false,
+      "searches": 1,
+      "width": 980,
+      "withinViewport": true
+    }
+  },
+  {
+    "route": "en/Cars",
+    "width": 1440,
+    "category": "Budget",
+    "metrics": {
+      "footerVisible": true,
+      "height": 760,
+      "horizontalOverflow": false,
+      "searches": 0,
+      "width": 980,
+      "withinViewport": true
+    }
+  },
+  {
+    "route": "en/Cars",
+    "width": 1440,
+    "category": "Discounts",
+    "metrics": {
+      "footerVisible": true,
+      "height": 760,
+      "horizontalOverflow": false,
+      "searches": 0,
+      "width": 980,
+      "withinViewport": true
+    }
+  },
+  {
+    "route": "en/Cars",
+    "width": 1440,
+    "category": "EMI",
+    "metrics": {
+      "footerVisible": true,
+      "height": 760,
+      "horizontalOverflow": false,
+      "searches": 0,
+      "width": 980,
+      "withinViewport": true
+    }
+  },
+  {
+    "route": "en/Cars",
+    "width": 1440,
+    "category": "Down payment",
+    "metrics": {
+      "footerVisible": true,
+      "height": 760,
+      "horizontalOverflow": false,
+      "searches": 0,
+      "width": 980,
+      "withinViewport": true
+    }
+  },
+  {
+    "route": "en/Cars",
+    "width": 1440,
+    "category": "Year",
+    "metrics": {
+      "footerVisible": true,
+      "height": 760,
+      "horizontalOverflow": false,
+      "searches": 0,
+      "width": 980,
+      "withinViewport": true
+    }
+  },
+  {
+    "route": "en/Cars",
+    "width": 1440,
+    "category": "Body type",
+    "metrics": {
+      "footerVisible": true,
+      "height": 760,
+      "horizontalOverflow": false,
+      "searches": 0,
+      "width": 980,
+      "withinViewport": true
+    }
+  },
+  {
+    "route": "en/Cars",
+    "width": 1440,
+    "category": "Mileage",
+    "metrics": {
+      "footerVisible": true,
+      "height": 760,
+      "horizontalOverflow": false,
+      "searches": 0,
+      "width": 980,
+      "withinViewport": true
+    }
+  },
+  {
+    "route": "en/Cars",
+    "width": 1440,
+    "category": "Car type",
+    "metrics": {
+      "footerVisible": true,
+      "height": 760,
+      "horizontalOverflow": false,
+      "searches": 0,
+      "width": 980,
+      "withinViewport": true
+    }
+  },
+  {
+    "route": "en/Cars",
+    "width": 1440,
+    "category": "Fuel type",
+    "metrics": {
+      "footerVisible": true,
+      "height": 760,
+      "horizontalOverflow": false,
+      "searches": 0,
+      "width": 980,
+      "withinViewport": true
+    }
+  },
+  {
+    "route": "en/Cars",
+    "width": 1440,
+    "category": "Gearbox",
+    "metrics": {
+      "footerVisible": true,
+      "height": 760,
+      "horizontalOverflow": false,
+      "searches": 0,
+      "width": 980,
+      "withinViewport": true
+    }
+  },
+  {
+    "route": "en/Cars",
+    "width": 1440,
+    "category": "Categories",
+    "metrics": {
+      "footerVisible": true,
+      "height": 760,
+      "horizontalOverflow": false,
+      "searches": 0,
+      "width": 980,
+      "withinViewport": true
+    }
+  },
+  {
+    "route": "en/Cars",
+    "width": 1440,
+    "category": "Features",
+    "metrics": {
+      "footerVisible": true,
+      "height": 760,
+      "horizontalOverflow": false,
+      "searches": 0,
+      "width": 980,
+      "withinViewport": true
+    }
+  },
+  {
+    "route": "en/Cars",
+    "width": 1440,
+    "category": "Engine",
+    "metrics": {
+      "footerVisible": true,
+      "height": 760,
+      "horizontalOverflow": false,
+      "searches": 0,
+      "width": 980,
+      "withinViewport": true
+    }
+  },
+  {
+    "route": "en/Cars",
+    "width": 1440,
+    "category": "Search by keyword",
+    "metrics": {
+      "footerVisible": true,
+      "height": 760,
+      "horizontalOverflow": false,
+      "searches": 1,
+      "width": 980,
+      "withinViewport": true
+    }
+  },
+  {
+    "route": "bg/Cars",
+    "width": 1440,
+    "category": "Марка",
+    "metrics": {
+      "footerVisible": true,
+      "height": 760,
+      "horizontalOverflow": false,
+      "searches": 1,
+      "width": 980,
+      "withinViewport": true
+    }
+  },
+  {
+    "route": "bg/Cars",
+    "width": 1440,
+    "category": "Модел",
+    "metrics": {
+      "footerVisible": true,
+      "height": 760,
+      "horizontalOverflow": false,
+      "searches": 1,
+      "width": 980,
+      "withinViewport": true
+    }
+  },
+  {
+    "route": "bg/Cars",
+    "width": 1440,
+    "category": "Бюджет",
+    "metrics": {
+      "footerVisible": true,
+      "height": 760,
+      "horizontalOverflow": false,
+      "searches": 0,
+      "width": 980,
+      "withinViewport": true
+    }
+  },
+  {
+    "route": "bg/Cars",
+    "width": 1440,
+    "category": "Отстъпки",
+    "metrics": {
+      "footerVisible": true,
+      "height": 760,
+      "horizontalOverflow": false,
+      "searches": 0,
+      "width": 980,
+      "withinViewport": true
+    }
+  },
+  {
+    "route": "bg/Cars",
+    "width": 1440,
+    "category": "Вноска",
+    "metrics": {
+      "footerVisible": true,
+      "height": 760,
+      "horizontalOverflow": false,
+      "searches": 0,
+      "width": 980,
+      "withinViewport": true
+    }
+  },
+  {
+    "route": "bg/Cars",
+    "width": 1440,
+    "category": "Първоначална вноска",
+    "metrics": {
+      "footerVisible": true,
+      "height": 760,
+      "horizontalOverflow": false,
+      "searches": 0,
+      "width": 980,
+      "withinViewport": true
+    }
+  },
+  {
+    "route": "bg/Cars",
+    "width": 1440,
+    "category": "Година",
+    "metrics": {
+      "footerVisible": true,
+      "height": 760,
+      "horizontalOverflow": false,
+      "searches": 0,
+      "width": 980,
+      "withinViewport": true
+    }
+  },
+  {
+    "route": "bg/Cars",
+    "width": 1440,
+    "category": "Тип купе",
+    "metrics": {
+      "footerVisible": true,
+      "height": 760,
+      "horizontalOverflow": false,
+      "searches": 0,
+      "width": 980,
+      "withinViewport": true
+    }
+  },
+  {
+    "route": "bg/Cars",
+    "width": 1440,
+    "category": "Пробег",
+    "metrics": {
+      "footerVisible": true,
+      "height": 760,
+      "horizontalOverflow": false,
+      "searches": 0,
+      "width": 980,
+      "withinViewport": true
+    }
+  },
+  {
+    "route": "bg/Cars",
+    "width": 1440,
+    "category": "Вид автомобил",
+    "metrics": {
+      "footerVisible": true,
+      "height": 760,
+      "horizontalOverflow": false,
+      "searches": 0,
+      "width": 980,
+      "withinViewport": true
+    }
+  },
+  {
+    "route": "bg/Cars",
+    "width": 1440,
+    "category": "Гориво",
+    "metrics": {
+      "footerVisible": true,
+      "height": 760,
+      "horizontalOverflow": false,
+      "searches": 0,
+      "width": 980,
+      "withinViewport": true
+    }
+  },
+  {
+    "route": "bg/Cars",
+    "width": 1440,
+    "category": "Скорости",
+    "metrics": {
+      "footerVisible": true,
+      "height": 760,
+      "horizontalOverflow": false,
+      "searches": 0,
+      "width": 980,
+      "withinViewport": true
+    }
+  },
+  {
+    "route": "bg/Cars",
+    "width": 1440,
+    "category": "Категории",
+    "metrics": {
+      "footerVisible": true,
+      "height": 760,
+      "horizontalOverflow": false,
+      "searches": 0,
+      "width": 980,
+      "withinViewport": true
+    }
+  },
+  {
+    "route": "bg/Cars",
+    "width": 1440,
+    "category": "Оборудване",
+    "metrics": {
+      "footerVisible": true,
+      "height": 760,
+      "horizontalOverflow": false,
+      "searches": 0,
+      "width": 980,
+      "withinViewport": true
+    }
+  },
+  {
+    "route": "bg/Cars",
+    "width": 1440,
+    "category": "Двигател",
+    "metrics": {
+      "footerVisible": true,
+      "height": 760,
+      "horizontalOverflow": false,
+      "searches": 0,
+      "width": 980,
+      "withinViewport": true
+    }
+  },
+  {
+    "route": "bg/Cars",
+    "width": 1440,
+    "category": "Търсете по ключова дума",
+    "metrics": {
+      "footerVisible": true,
+      "height": 760,
+      "horizontalOverflow": false,
+      "searches": 1,
+      "width": 980,
+      "withinViewport": true
+    }
+  },
+  {
+    "route": "bg/Cars",
+    "width": 1100,
+    "category": "Марка",
+    "metrics": {
+      "footerVisible": true,
+      "height": 736,
+      "horizontalOverflow": false,
+      "searches": 1,
+      "width": 980,
+      "withinViewport": true
+    }
+  },
+  {
+    "route": "bg/Cars",
+    "width": 1100,
+    "category": "Модел",
+    "metrics": {
+      "footerVisible": true,
+      "height": 736,
+      "horizontalOverflow": false,
+      "searches": 1,
+      "width": 980,
+      "withinViewport": true
+    }
+  },
+  {
+    "route": "bg/Cars",
+    "width": 1100,
+    "category": "Бюджет",
+    "metrics": {
+      "footerVisible": true,
+      "height": 736,
+      "horizontalOverflow": false,
+      "searches": 0,
+      "width": 980,
+      "withinViewport": true
+    }
+  },
+  {
+    "route": "bg/Cars",
+    "width": 1100,
+    "category": "Двигател",
+    "metrics": {
+      "footerVisible": true,
+      "height": 736,
+      "horizontalOverflow": false,
+      "searches": 0,
+      "width": 980,
+      "withinViewport": true
+    }
+  },
+  {
+    "route": "bg/Cars",
+    "width": 1920,
+    "category": "Марка",
+    "metrics": {
+      "footerVisible": true,
+      "height": 736,
+      "horizontalOverflow": false,
+      "searches": 1,
+      "width": 980,
+      "withinViewport": true
+    }
+  },
+  {
+    "route": "bg/Cars",
+    "width": 1920,
+    "category": "Модел",
+    "metrics": {
+      "footerVisible": true,
+      "height": 736,
+      "horizontalOverflow": false,
+      "searches": 1,
+      "width": 980,
+      "withinViewport": true
+    }
+  },
+  {
+    "route": "bg/Cars",
+    "width": 1920,
+    "category": "Бюджет",
+    "metrics": {
+      "footerVisible": true,
+      "height": 736,
+      "horizontalOverflow": false,
+      "searches": 0,
+      "width": 980,
+      "withinViewport": true
+    }
+  },
+  {
+    "route": "bg/Cars",
+    "width": 1920,
+    "category": "Двигател",
+    "metrics": {
+      "footerVisible": true,
+      "height": 736,
+      "horizontalOverflow": false,
+      "searches": 0,
+      "width": 980,
+      "withinViewport": true
+    }
+  }
+]

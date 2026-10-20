@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-input-mapping",
+  "dealer": "kk-auto-varna",
+  "inputs": {
+    "facts": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/kk-auto-varna/facts.json",
+      "sha256": "697e3c35bcf4b4cd9f145e8801371229ab7e6351e5ad9aa0890132d7084e62fd"
+    },
+    "stock": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/kk-auto-varna/stock.json",
+      "sha256": "f63a3c87b996309c3fbb3278200d85d605fc1400507bf43b3077c6937fe23b93"
+    },
+    "locale": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/kk-auto-varna/locale.json",
+      "sha256": "3279db373cb108e524331489a8d0c7e54663b8d4a9da694a71427874659d7ed4"
+    },
+    "branding": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/kk-auto-varna/branding.json",
+      "sha256": "9cd0e2c3dc0d64a22fba2ae41118cf4d78b7b641c9daba7f343dab571fcfe948"
+    }
+  },
+  "sources": [
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/kk-auto-varna/research-facts.json",
+      "sha256": "58955b8c93d93cb5d89091ba9c94e9fb523fcf560ef0fe1e1b65e0ce822b1360"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/kk-auto-varna/identity.json",
+      "sha256": "84f9c0eb6cc2992e57defef30b9ee24466388be304975489fc0bf0aeba9a7e86"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/kk-auto-varna/locale.json",
+      "sha256": "3279db373cb108e524331489a8d0c7e54663b8d4a9da694a71427874659d7ed4"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/kk-auto-varna/stock-research.json",
+      "sha256": "3e4e8ede28c386fe2daf8a09aa8c2227f00a104c19f5638651b2134ce3e8c949"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/kk-auto-varna/branding.json",
+      "sha256": "9cd0e2c3dc0d64a22fba2ae41118cf4d78b7b641c9daba7f343dab571fcfe948"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/kk-auto-varna/branding/generated-master.png",
+      "sha256": "c44ade3772c771be322b7c12a26f1907d4710f08f0d5379cf88e77c6483af8d2"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/kk-auto-varna/branding/on-accent.png",
+      "sha256": "4de3c5d31666c2e9abca06c3abb124c8592b9142b9093ec27a9e231c43297247"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/kk-auto-varna/branding/on-dark.png",
+      "sha256": "4de3c5d31666c2e9abca06c3abb124c8592b9142b9093ec27a9e231c43297247"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/kk-auto-varna/branding/on-light.png",
+      "sha256": "c44ade3772c771be322b7c12a26f1907d4710f08f0d5379cf88e77c6483af8d2"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/kk-auto-varna/generation-brief.json",
+      "sha256": "379bdd54594ede075aa10782d125071354371f3776cbf3f96ae68536866eef36"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/kk-auto-varna/source-profile-reference.jpg",
+      "sha256": "2328972c316e2489bc2458592ee99191ff97d9d1466ef3c976b3b2b4d7f54551"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/kk-auto-varna/media/demo-estate.webp",
+      "sha256": "d2d3deacbc9f566a22783f2a5eab6335473bf2e47c627261e8895dbff6fece70"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/kk-auto-varna/media/demo-suv.webp",
+      "sha256": "5c0c6062ef8af622fd852a7a43b2dfc989d6836f1528698b51d88f9352640f2f"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/kk-auto-varna/facts.json",
+      "sha256": "697e3c35bcf4b4cd9f145e8801371229ab7e6351e5ad9aa0890132d7084e62fd"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/kk-auto-varna/stock.json",
+      "sha256": "f63a3c87b996309c3fbb3278200d85d605fc1400507bf43b3077c6937fe23b93"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/kk-auto-varna/reviewed-modern-inventory-copy.json",
+      "sha256": "917e1c9bc2f90e2914ea856fe94c5797a8998e589a3414650dc60337a93f7c2e"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/kk-auto-varna/media-input-mapping.json",
+      "sha256": "7bb60fd6946ba541c5df17c2de5b88a1dbcb6bc807755f96c67e44d554ce5479"
+    }
+  ]
+}

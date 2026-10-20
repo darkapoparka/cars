@@ -5,12 +5,12 @@
   "name": "Перфект Ауто",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "8a97176e3adfbd95dce69b3096abc84e3eecd9c8",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "path": "templates/mobile",
-    "digest": "cc126a7c38634c7601ef8c617411d6938d7c9b6efc7b319e87c2c6efc99d8b6d",
-    "tree": "9a4db757e788ee236712b8eac25956a6a8a61d0b"
+    "digest": "f5a3e541a7c648a4c2899ad3893e22a3806027a9f66d95fa4e8c74b2226635b6",
+    "tree": "792bfdd1d8eb22aabd90c7e3a0c0779a6c1c36f3"
   },
-  "sourceDigest": "c9aa0adfdbe75b32af754387437e2b54bb7c9d6588b5dc3cbd9b62adb2085f20",
+  "sourceDigest": "a1f6b4ee2fe6e2c26157107418918a1fb9a41b6c59e03ca99627cf1678a0b3fa",
   "inventory": {
     "mode": "dated-listing-snapshot",
     "count": 6,
@@ -66,7 +66,13 @@
       "mobile/src/components/DealerScreens.tsx",
       "mobile/src/components/VehicleCard.tsx",
       "mobile/src/components/ShowroomVehicleCard.tsx",
-      "mobile/src/components/VehicleSections.tsx"
+      "mobile/src/components/VehicleSections.tsx",
+      "mobile/src/lib/mobile-mileage.ts",
+      "mobile/src/lib/types.ts",
+      "mobile/src/components/DesktopVehicleSummary.tsx",
+      "mobile/src/components/NativeCarPark.tsx",
+      "mobile/src/components/ShowroomFilterSheet.tsx",
+      "mobile/src/lib/vehicle-copy.ts"
     ]
   },
   "needsDealerQA": true,

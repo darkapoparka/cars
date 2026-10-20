@@ -1,118 +1,125 @@
 import { NextRequest } from "next/server";
 import { describe, expect, it } from "vitest";
-import {
-  getLocaleCookieOptions,
-  internationalizationMiddleware,
-  LOCALE_COOKIE_MAX_AGE_SECONDS,
-  LOCALE_COOKIE_NAME,
-} from "./proxy";
+import type { Locale } from "./config";
+import { createLocalePolicy, type LocaleConfiguration } from "./policy";
+import { createLocaleRequestHandler } from "./request";
 
-const request = (pathname: string, headers: Record<string, string> = {}) =>
-  new NextRequest(`https://automarket.example${pathname}`, { headers });
-
-describe("internationalization middleware", () => {
-  it("treats an explicit Bulgarian path as authoritative", () => {
-    const response = internationalizationMiddleware(
-      request("/bg/cars?sort=newest", {
-        "accept-language": "en-GB,en;q=0.9",
-        cookie: `${LOCALE_COOKIE_NAME}=en`,
-      })
-    );
-
-    expect(response.status).toBe(200);
-    expect(response.headers.get("location")).toBeNull();
-    expect(response.headers.get("x-next-locale")).toBe("bg");
-    expect(response.cookies.get(LOCALE_COOKIE_NAME)?.value).toBe("bg");
-  });
-
-  it("treats an explicit English path as authoritative and canonicalizes it", () => {
-    const response = internationalizationMiddleware(
-      request("/en/cars?sort=newest", {
-        "accept-language": "bg-BG,bg;q=0.9",
-        cookie: `${LOCALE_COOKIE_NAME}=bg`,
-      })
-    );
-
-    expect(response.status).toBe(307);
-    expect(response.headers.get("location")).toBe(
-      "https://automarket.example/cars?sort=newest"
-    );
-    expect(response.cookies.get(LOCALE_COOKIE_NAME)?.value).toBe("en");
-  });
-
-  it("uses a supported preference for an unprefixed path", () => {
-    const response = internationalizationMiddleware(
-      request("/cars", {
-        "accept-language": "en-GB,en;q=0.9",
-        cookie: `${LOCALE_COOKIE_NAME}=bg`,
-      })
-    );
-
-    expect(response.status).toBe(307);
-    expect(response.headers.get("location")).toBe(
-      "https://automarket.example/bg/cars"
-    );
-  });
-
-  it("negotiates an unprefixed path when no supported preference exists", () => {
-    const response = internationalizationMiddleware(
-      request("/cars", { "accept-language": "bg-BG,bg;q=0.9" })
-    );
-
-    expect(response.status).toBe(307);
-    expect(response.headers.get("location")).toBe(
-      "https://automarket.example/bg/cars"
-    );
-  });
-
-  it("rewrites an unprefixed default-locale path internally", () => {
-    const response = internationalizationMiddleware(
-      request("/cars?sort=newest", {
-        "accept-language": "en-GB,en;q=0.9",
-      })
-    );
-
-    expect(response.status).toBe(200);
-    expect(response.headers.get("x-middleware-rewrite")).toBe(
-      "https://automarket.example/en/cars?sort=newest"
-    );
-    expect(
-      response.headers.get(
-        "x-middleware-request-x-automarket-internal-locale-rewrite"
-      )
-    ).toBe("1");
-  });
-
-  it("allows an internal default-locale rewrite to reach the App Router", () => {
-    const response = internationalizationMiddleware(
-      request("/en/cars?sort=newest", {
+const configuration: LocaleConfiguration<Locale> = {
+  schemaVersion: 1,
+  dealerId: "test-dealer",
+  dealerName: "Test Dealer",
+  defaultLocale: "bg",
+  enabledLocales: ["en", "bg"],
+  dealerCountry: "BG",
+  inventoryCurrency: "EUR",
+  formatLocales: { en: "en-GB", bg: "bg-BG" },
+  preferenceMaxAge: 15_552_000,
+  promptVersion: "v1",
+  suggestedLanguages: { BG: "bg", GB: "en" },
+};
+const handler = createLocaleRequestHandler(configuration);
+const policy = createLocalePolicy(configuration);
+const origin = "https://dealer.example";
+const request = (path: string, headers: Record<string, string> = {}) =>
+  new NextRequest(origin + path, { headers });
+describe("native URL locale contract", () => {
+  it.each([
+    "en",
+    "bg",
+  ])("explicit %s beats every conflicting hint", (locale) => {
+    const other = locale === "en" ? "bg" : "en";
+    const response = handler(
+      request(`/${locale}/contact?topic=trade-in&lang=${other}`, {
+        cookie: `cars_locale=${other}`,
+        "accept-language": other,
+        "x-vercel-ip-country": other === "bg" ? "BG" : "GB",
         "x-automarket-internal-locale-rewrite": "1",
+        "x-cars-locale": other,
       })
     );
-
     expect(response.status).toBe(200);
+    expect(response.headers.get("content-language")).toBe(locale);
     expect(response.headers.get("location")).toBeNull();
-    expect(response.headers.get("x-middleware-next")).toBe("1");
+    expect(response.headers.get("set-cookie")).toBeNull();
   });
-
-  it("keeps unsupported locale-like segments on the localized 404 path", () => {
-    const response = internationalizationMiddleware(
-      request("/fr/cars", { "accept-language": "en-GB,en;q=0.9" })
-    );
-
-    expect(response.status).toBe(200);
-    expect(response.headers.get("x-middleware-rewrite")).toBe(
-      "https://automarket.example/en/fr/cars"
-    );
+  it.each([
+    [
+      "/cars?lang=en&q=BMW",
+      { cookie: "cars_locale=bg", "accept-language": "bg" },
+      "/en/cars?lang=en&q=BMW",
+    ],
+    [
+      "/cars",
+      { cookie: "cars_locale=en", "accept-language": "bg" },
+      "/en/cars",
+    ],
+    ["/cars", { "accept-language": "bg;q=0.5,en-GB;q=0.9" }, "/en/cars"],
+    ["/cars", { "accept-language": "en;q=0,bg;q=0" }, "/bg/cars"],
+  ] as const)("negotiates %s without persisting inferred preferences", (path, headers, destination) => {
+    const response = handler(request(path, headers));
+    expect(response.status).toBe(307);
+    expect(response.headers.get("location")).toBe(origin + destination);
+    expect(response.headers.get("set-cookie")).toBeNull();
+    expect(response.headers.get("cache-control")).toBe("private, no-store");
+    expect(response.headers.get("vercel-cdn-cache-control")).toBe("no-store");
   });
-
-  it("uses a durable host-only secure production preference cookie", () => {
-    expect(getLocaleCookieOptions("production")).toEqual({
-      httpOnly: true,
-      maxAge: LOCALE_COOKIE_MAX_AGE_SECONDS,
-      path: "/",
-      sameSite: "lax",
-      secure: true,
+  it.each([
+    "/api/preferences",
+    "/api/ai/search",
+    "/_next/static/a.js",
+    "/images/car.webp",
+    "/dealer-brand/v2-3eab0e10b1487ebc/logo-on-light.webp",
+  ])("preserves resource %s", (path) => {
+    expect(handler(request(path)).headers.get("location")).toBeNull();
+  });
+  it.each([
+    "ar",
+    "de",
+    "uk",
+    "tr",
+    "ro",
+    "el",
+    "fr",
+  ])("does not enable %s", (locale) =>
+    expect(handler(request(`/${locale}/cars`)).status).toBe(404));
+  it("adds native basePath exactly once", () => {
+    const req = new NextRequest(`${origin}/variant-2/cars?lang=en`, {
+      nextConfig: { basePath: "/variant-2" },
     });
+    expect(req.nextUrl.pathname).toBe("/cars");
+    expect(handler(req).headers.get("location")).toBe(
+      `${origin}/variant-2/en/cars?lang=en`
+    );
   });
+  it("cannot redirect to a hostile Host header", () =>
+    expect(
+      handler(request("/cars", { host: "evil.example" })).headers.get(
+        "location"
+      )
+    ).toBe(`${origin}/bg/cars`));
+  it("returns independent visitor state", () => {
+    const a = policy.resolveLocale({
+      url: new URL(`${origin}/en/cars`),
+      cookie: "cars_country=GB; cars_locale=bg",
+    });
+    const b = policy.resolveLocale({
+      url: new URL(`${origin}/bg/cars`),
+      cookie: "cars_country=BG; cars_locale=en",
+    });
+    expect(a).toMatchObject({ locale: "en", country: "GB" });
+    expect(b).toMatchObject({ locale: "bg", country: "BG" });
+    a.country = "US";
+    expect(b.country).toBe("BG");
+  });
+});
+
+it("overwrites a forged public return path with the real request URL", () => {
+  const response = createLocaleRequestHandler(configuration)(
+    new NextRequest("https://dealer.example/en/contact?topic=trade-in", {
+      headers: { "x-modern-public-path": "/bg/foreign" },
+    })
+  );
+  expect(
+    response.headers.get("x-middleware-request-x-modern-public-path")
+  ).toBe("/en/contact?topic=trade-in");
 });

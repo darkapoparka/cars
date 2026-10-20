@@ -1,0 +1,227 @@
+{
+  "strategy": "USE GENERATED CANDIDATE",
+  "identityStatus": "Improved demo/proposal identity based on qualified primary name and preserved source evidence; material redesign, not official or owner-approved.",
+  "publishedBranding": "Published ECO DRIVE green/charcoal leaf-car emblem with illegible tiny caption; improved proposal simplifies identity and omits clutter",
+  "sourceUrls": [
+    "https://ecodrive.mobile.bg/"
+  ],
+  "sourceLimitations": "generated improved demo/proposal identity; not official or approved",
+  "originalReceiptPath": "L:/CODEX/cars/leads/branding/fleet-20261011/ecodrive-varna/receipt.json",
+  "generatedPath": "C:/Users/radev/.codex/generated_images/01a12a34-d2d7-7571-930a-1ed37e54ff8e/exec-4ed6c459-65d3-41bb-a98b-ae0559b10760.png",
+  "imageGeneration": {
+    "tool": "image_gen.imagegen",
+    "reference": "exec-4ed6c459-65d3-41bb-a98b-ae0559b10760",
+    "transparent_background": true,
+    "prompt": "Improve reference1 into a disclosed dealer demo proposal, reference2 illustrates customized athletic automotive lettering ONLY, never copy its name/emblem. Exact ONLY name \"ECO DRIVE\". Keep the distinctive leaf-road emblem left. Customized rounded athletic lettering with restrained forward slant and a unique open E form; ecological but automotive, not a generic sans font. Palette charcoal and deep forest green. Strict single horizontal row: modest individual emblem LEFT beside prominent name on single baseline. Customized expressive strong automotive lettering with restrained forward slant, squared curved arches, purposeful corner cuts, broad crisp strokes and open counters. No generic stock sans, caption, subtitle, slogan, text above/below, car roof above, underline, badge, plate, shadow, white fill, gradients or texture. Clean solid inks; no noisy edges, residue or isolated pixels. Genuine RGBA transparent background including gaps/counters with safe padding. Exact script/case/spaces/punctuation. Compact automotive header, readable at120px total width.",
+    "referenced_image_paths": [
+      "L:/CODEX/cars/leads/branding/fleet-20261011/ecodrive-varna/branding/logo-master.png",
+      "L:/CODEX/cars/leads/branding/fleet-20261011/style-revision/single-row/biemaauto-varna/branding/logo-master.png"
+    ],
+    "outputPath": "C:/Users/radev/.codex/generated_images/01a12a34-d2d7-7571-930a-1ed37e54ff8e/exec-4ed6c459-65d3-41bb-a98b-ae0559b10760.png",
+    "modelVersion": "not exposed by tool",
+    "referenceMetadata": [
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/ecodrive-varna/branding/logo-master.png",
+        "sha256": "e5e3174323dd81abb2a59feab2716b2a2477da3eb6aafd25648bb44caf6862ae",
+        "bytes": 174597,
+        "width": 1496,
+        "height": 346,
+        "format": "png",
+        "hasAlpha": true,
+        "role": "Prior dealer treatment or preceding candidate; identity/source history preserved separately."
+      },
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/style-revision/single-row/biemaauto-varna/branding/logo-master.png",
+        "sha256": "dc84d9283929362bd17d0b765c1ab219eb3c093ccb52e4d3c05ada2ddfcb37ce",
+        "bytes": 142920,
+        "width": 1496,
+        "height": 240,
+        "format": "png",
+        "hasAlpha": true,
+        "role": "Style direction only; no name or emblem borrowed."
+      }
+    ]
+  },
+  "variantDerivation": {
+    "onLight": "Existing raster exporter crops/scales the real ImageGen master preserving colored ink and alpha.",
+    "onDark": "Existing raster exporter derives white ink from same master alpha; not independently generated.",
+    "onAccent": "Existing raster exporter derives white ink from same master alpha; not independently generated."
+  },
+  "selectionStatus": "Preferred technically selected single-row candidate; owner style acceptance pending",
+  "ownerApproved": false,
+  "visualAccepted": true,
+  "surfaceReviewPath": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/ecodrive-varna/surface-review.png",
+  "visualChecks": {
+    "spelling": "Exact qualified main name; no captions",
+    "surfaces": [
+      "#ffffff",
+      "#30343b",
+      "#17191c",
+      "#202023",
+      "#19171d",
+      "#171717",
+      "#b00020",
+      "#405ff2"
+    ],
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "result": "Compact one-row individualized mark beside expressive name; clear counters, no clipping, opaque background or residue observed. Owner style acceptance pending."
+  },
+  "schemaVersion": 1,
+  "dealer": "ecodrive-varna",
+  "state": "asset-verified",
+  "generated": {
+    "path": "C:/Users/radev/.codex/generated_images/01a12a34-d2d7-7571-930a-1ed37e54ff8e/exec-4ed6c459-65d3-41bb-a98b-ae0559b10760.png",
+    "sha256": "3c0d559c61250f4370b1061e5f2a8af6aab3a9ba7972b25f885332a0587de986",
+    "bytes": 396849,
+    "format": "png",
+    "width": 2171,
+    "height": 724,
+    "hasAlpha": true,
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparentRatio": 0.8203300157017033,
+      "opaqueRatio": 0.15643617143104357
+    },
+    "visibleBounds": {
+      "x": 57,
+      "y": 162,
+      "width": 2073,
+      "height": 392
+    }
+  },
+  "assets": {
+    "onLight": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/ecodrive-varna/dealer-brand/logo-on-light.webp",
+      "sha256": "8915b12933969a7800a0d981312b89f2f48eea7961e79a939e9813716cc94bc5",
+      "bytes": 57512,
+      "format": "webp",
+      "width": 1496,
+      "height": 337,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.7395606880464621,
+        "opaqueRatio": 0.22066162585886795
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 36,
+        "width": 1400,
+        "height": 265
+      },
+      "publicPath": "/dealer-brand/logo-on-light.webp"
+    },
+    "onDark": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/ecodrive-varna/dealer-brand/logo-on-dark.webp",
+      "sha256": "d2c0e221b970bb7cffb6cb0072e122f30ac6e2b3a88bf329759cd9faa87a08db",
+      "bytes": 34590,
+      "format": "webp",
+      "width": 1496,
+      "height": 337,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.7395606880464621,
+        "opaqueRatio": 0.22066162585886795
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 36,
+        "width": 1400,
+        "height": 265
+      },
+      "publicPath": "/dealer-brand/logo-on-dark.webp"
+    },
+    "onAccent": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/ecodrive-varna/dealer-brand/logo-on-accent.webp",
+      "sha256": "d2c0e221b970bb7cffb6cb0072e122f30ac6e2b3a88bf329759cd9faa87a08db",
+      "bytes": 34590,
+      "format": "webp",
+      "width": 1496,
+      "height": 337,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.7395606880464621,
+        "opaqueRatio": 0.22066162585886795
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 36,
+        "width": 1400,
+        "height": 265
+      },
+      "publicPath": "/dealer-brand/logo-on-accent.webp"
+    }
+  },
+  "master": {
+    "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/ecodrive-varna/branding/logo-master.png",
+    "sha256": "5447506893b7edd82b335d71dd5237555c33c17835c7eed4be55518500da9223",
+    "bytes": 165568,
+    "format": "png",
+    "width": 1496,
+    "height": 337,
+    "hasAlpha": true,
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparentRatio": 0.7395606880464621,
+      "opaqueRatio": 0.22066162585886795
+    },
+    "visibleBounds": {
+      "x": 48,
+      "y": 36,
+      "width": 1400,
+      "height": 265
+    }
+  },
+  "technicalAcceptance": {
+    "spelling": "Exact qualified main name; no captions",
+    "surfaces": [
+      "#ffffff",
+      "#30343b",
+      "#17191c",
+      "#202023",
+      "#19171d",
+      "#171717",
+      "#b00020",
+      "#405ff2"
+    ],
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "result": "Compact one-row individualized mark beside expressive name; clear counters, no clipping, opaque background or residue observed. Owner style acceptance pending."
+  },
+  "integrationVerified": false,
+  "hostedVerified": false,
+  "exportTool": "docs/logo-refresh/2026-09-18/tools/build-approved-logo-pack.mjs",
+  "exportToolSha256": "7fab60c4000210eff6bbb91f9c35e869bad90834d3bdd09d282a9a51835f0dbc",
+  "exportIsolation": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/style-new-a-export",
+  "updatedAt": "2026-10-11T11:35:02.558Z",
+  "sourceEvidence": {
+    "originalReceipt": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/ecodrive-varna/receipt.json",
+      "sha256": "051626a2ec1c6b4e0059d1af531aa25a8080148c8a5eb87f8c2a2f76baae6cee"
+    },
+    "originalMaster": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/ecodrive-varna/branding/logo-master.png",
+      "sha256": "e5e3174323dd81abb2a59feab2716b2a2477da3eb6aafd25648bb44caf6862ae"
+    },
+    "publishedBranding": "Published ECO DRIVE green/charcoal leaf-car emblem with illegible tiny caption; improved proposal simplifies identity and omits clutter",
+    "sourceUrls": [
+      "https://ecodrive.mobile.bg/"
+    ],
+    "sourceLimitation": "generated improved demo/proposal identity; not official or approved",
+    "sourceEvidenceDirectory": "L:/CODEX/cars/leads/branding/fleet-20261011/ecodrive-varna/source"
+  }
+}

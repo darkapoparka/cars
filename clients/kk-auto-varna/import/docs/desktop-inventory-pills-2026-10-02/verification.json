@@ -1,0 +1,153 @@
+{
+  "checkedAt": "2026-10-01T21:56:35.020Z",
+  "scope": "Import desktop inventory Make/Model pills and one Sort by disclosure",
+  "source": [
+    {
+      "path": "src/lib/components/common/SearchField.svelte",
+      "sha256": "ea71acf46e9f0e4de673b6e80ed29e2cd560d37a6715631b33c8ed594bae376c",
+      "matchesCheckedSource": true
+    },
+    {
+      "path": "src/lib/components/inventory/InventoryPage.svelte",
+      "sha256": "1538ce3e2bda9a5695539d566a1cc53774fee6a0729113a666efc3ef91be566d",
+      "matchesCheckedSource": true
+    },
+    {
+      "path": "src/lib/components/inventory/InventoryToolbar.svelte",
+      "sha256": "02feba7b171007a04210522edd4d89e13ff97e20192ace384049f1f002a677a1",
+      "matchesCheckedSource": true
+    },
+    {
+      "path": "src/lib/components/inventory/InventoryFilter.svelte",
+      "sha256": "974838a72c581569ad4db82f5f3d47f0b97e7a465da0570507f341545e2cea88",
+      "matchesCheckedSource": true
+    },
+    {
+      "path": "src/lib/components/inventory/InventoryDisplayControls.svelte",
+      "sha256": "1c9ec306a877b3b5ea2a97b5afa6545870baa7ff4707a0df623ee3d728dceadd",
+      "matchesCheckedSource": true
+    },
+    {
+      "path": "src/lib/content/inventory-desktop-controls.ts",
+      "sha256": "c70a4b59b24dc75964d7bc8fa3759ac624b7b99511405e42749a6acecc87f567",
+      "matchesCheckedSource": true
+    },
+    {
+      "path": "tests/inventory.e2e.ts",
+      "sha256": "cc70bea8092327d0929cd38fe7a4a8b6c9b201d39cb3fb7b10824c163a3b936a",
+      "matchesCheckedSource": true
+    },
+    {
+      "path": "docs/ARCHITECTURE.md",
+      "sha256": "166660b2154d137bc7bc8fdb810ddfe5a522d5bb30e7ba47e657ab3ddbdd9765",
+      "matchesCheckedSource": true
+    }
+  ],
+  "frozenProductionCheck": {
+    "head": "96cbc0f34ab7227fc36d2382b3dd656e0b9d18a0",
+    "digest": "327302afba97e88482468aa0615c1efed39e653431bd76b42856efd7884ab655",
+    "node": "24.21.0",
+    "mode": "preview",
+    "url": "http://127.0.0.1:6832/bg/inventory",
+    "httpStatus": 200
+  },
+  "checks": [
+    {
+      "name": "check",
+      "exit": 0,
+      "seconds": 85
+    },
+    {
+      "name": "format",
+      "exit": 0,
+      "seconds": 12
+    },
+    {
+      "name": "lint",
+      "exit": 0,
+      "seconds": 38
+    },
+    {
+      "name": "architecture",
+      "exit": 0,
+      "seconds": 1
+    },
+    {
+      "name": "build",
+      "exit": 0,
+      "seconds": 74
+    }
+  ],
+  "browser": {
+    "passed": 26,
+    "skipped": 22,
+    "failed": 0,
+    "suites": [
+      "inventory.e2e.ts",
+      "filter-inputs.e2e.ts",
+      "desktop-search.e2e.ts"
+    ],
+    "includes": [
+      "native GET with JavaScript disabled",
+      "repeated query parameters",
+      "keyboard and menu dismissal",
+      "desktop/mobile search and filters"
+    ]
+  },
+  "desktop": {
+    "cases": 12,
+    "locales": [
+      "bg",
+      "en"
+    ],
+    "widths": [
+      768,
+      900,
+      1024,
+      1280,
+      1440,
+      1920
+    ],
+    "filterPills": 6,
+    "sortTriggers": 1,
+    "choicesHiddenWhenClosed": true,
+    "noOverflowOrClippedDefaultLabels": true
+  },
+  "mobile": [
+    {
+      "viewportWidth": 320,
+      "imageWidth": 320,
+      "imageHeight": 844,
+      "changedPixels": 0,
+      "pixelIdentical": true,
+      "maxChannelDelta": 0,
+      "changeBounds": null
+    },
+    {
+      "viewportWidth": 390,
+      "imageWidth": 390,
+      "imageHeight": 844,
+      "changedPixels": 0,
+      "pixelIdentical": true,
+      "maxChannelDelta": 0,
+      "changeBounds": null
+    }
+  ],
+  "sourceDrift": [
+    {
+      "path": "L:\\CODEX\\cars",
+      "branch": "main",
+      "head": "96cbc0f34ab7227fc36d2382b3dd656e0b9d18a0",
+      "ahead": 0,
+      "behind": 0
+    },
+    {
+      "path": "L:\\CODEX\\cars-admin",
+      "branch": "main",
+      "head": "b0baba6285d82d5cacc196c780535e7e1dc9b7d3",
+      "ahead": 4,
+      "behind": 4
+    }
+  ],
+  "limits": "Local source and production-preview verification; no template release promotion or dealer deployment."
+}

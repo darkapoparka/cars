@@ -1,17 +1,29 @@
 <script lang="ts">
-  import { brand } from '$config/brand';
+  import { getI18n } from '$lib/locale/context';
+
+  const i18n = getI18n();
+
   import HeroVehicles from '$components/ui/HeroVehicles.svelte';
+  import DesktopHeroScene from '$components/ui/DesktopHeroScene.svelte';
+  import HeroLocation from '$components/ui/HeroLocation.svelte';
+  import { mobileHeroRegions } from '$data/vehicle-artwork';
+  import { imageSrcset, mobileHeroSizes } from '$data/responsive-images';
 </script>
 
-<section class="dn-hero dn-route-hero" aria-labelledby="home-hero-title">
-  <HeroVehicles pair="home" mobile mobileLeft="gclass" mobileRight="urus" />
+<svelte:head>
+  <link rel="preload" as="image" href={mobileHeroRegions.home.src} imagesrcset={imageSrcset(mobileHeroRegions.home.src)} imagesizes={mobileHeroSizes} media="(max-width: 767px)" fetchpriority="high" />
+</svelte:head>
+
+<section class="dn-hero dn-route-hero dn-route-hero--campaign dn-route-hero--search dn-discovery-hero" aria-labelledby="home-hero-title">
+  <DesktopHeroScene scene="home" />
+  <HeroVehicles pair="home" mobile desktop={false} />
   <div class="container dn-hero__inner dn-route-hero__layout">
     <div class="dn-hero__copy dn-route-hero__copy">
       <h1 id="home-hero-title">
-        <span class="dn-hero__title-desktop">Изберете своя автомобил</span>
-        <span class="dn-hero__title-mobile">Намери автомобил</span>
+        <span class="dn-hero__title-desktop">{i18n.t("m_bb7c0e3ca487")}</span>
+        <span class="dn-hero__title-mobile">{i18n.t("m_f92c64344e85")}</span>
       </h1>
-      <p class="dn-hero__location">{brand.city} · Възраждане 1 · Оглед по уговорка</p>
+      <HeroLocation />
     </div>
   </div>
 </section>
@@ -21,14 +33,8 @@
     isolation: isolate;
   }
 
-  .dn-hero__location { display: none; }
-
   @media (min-width: 992px) {
-    .dn-hero { background: #101114; }
-    .dn-hero__inner { height: 320px; padding-top: 0; }
-    .dn-hero .dn-hero__copy { position: absolute; bottom: 24px; width: min(800px, calc(100% - 480px)); display: block; }
-    .dn-hero__copy h1 { color: #fff; font-size: clamp(36px, 3.4vw, 56px); line-height: 1.12; }
-    .dn-hero__copy .dn-hero__location { display: block; margin: 8px auto 0; color: #d7d9dd; font-size: 16px; line-height: 24px; }
+    .dn-hero { background: var(--dn-theme-hero-surface-deep); }
   }
 
   .dn-hero__title-mobile {
@@ -37,8 +43,8 @@
 
   @media (max-width: 767px) {
     .dn-hero {
-      height: 208px;
-      min-height: 208px;
+      height: var(--dn-mobile-entry-hero-height);
+      min-height: var(--dn-mobile-entry-hero-height);
       background: #090a0b;
     }
 

@@ -10,14 +10,17 @@ import {isEntrypoint} from './lib/cli-entrypoint.mjs';
 import {ROOT,git,json,sha256,inside,filesAt,fingerprint} from './lib/workflow.mjs';
 import {readRepositoryTreeMap,readPinnedTemplateTree} from './dealer-updates/pinned-template-source.mjs';
 import {packageRetainsPath,collectSource} from './package-dealer.mjs';
-import {applyLeadBranding,assertLeadBranding} from './publishing/lead-branding.mjs';
+import {applyLeadBranding,assertLeadBranding,rebindDerivedProfileLogoContracts,captureBrandConsumers,reviewedRasterProvenance} from './publishing/lead-branding.mjs';
 import {baseNativeManifest,assertAppVariant} from './publishing/app-variant.mjs';
 import {assertExtendedVariantSources} from './publishing/six-variant.mjs';
-import {ADOPTION_FILE,assertNativeQualification,validateNativeQualificationContext,parseCatalogJson} from './lib/native-localization.mjs';
+import {ADOPTION_FILE,assertNativeQualification,sealNativeQualification,validateNativeQualificationContext,parseCatalogJson} from './lib/native-localization.mjs';
+import {sealAppDealerSource} from './lib/app-dealer-adapter.mjs';
 import {selectedDealer,existingFleetQualifiedSources,QUALIFICATION_LOCK_PATH} from './build-existing-fleet-cloudflare.mjs';
 import {artifactInventory} from './lib/uk-cloudflare-artifacts.mjs';
 import {planSixDesignSelection} from './lib/six-design-release.mjs';
 import {loadDealerProfile} from './lib/client-refresh-normalize.mjs';
+import {isRegisteredPublishedMaterializationPath} from './lib/registered-reviewed-public-inputs.mjs';
+import {clearReplacedProfileLogoContracts} from './dealer-updates/three-way-upgrade.mjs';
 import {validateRegisteredSourceRequest,readRegisteredInput,readRegisteredDealerAdoption,assertRegisteredMountOwnership,REGISTERED_ADOPTION_FILE,REGISTERED_PROFILE_FILE,REGISTERED_INPUT_ROOT} from './registered-dealer-adoption.mjs';
 
 export const SOURCE_CAMPAIGN='docs/releases/cloudflare-existing25-20261011';
@@ -29,7 +32,7 @@ const same=(a,b)=>JSON.stringify(a)===JSON.stringify(b);
 const writeNew=(file,bytes)=>{fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file,bytes,{flag:'wx'});};
 const safeName=n=>typeof n==='string'&&n&&!n.includes('\\')&&!n.includes('\0')&&!n.startsWith('/')&&!/^[a-z]:/i.test(n)&&n.split('/').every(p=>p&&p!=='.'&&p!=='..');
 const markers=new Set(['.client/cloudflare-existing-source.json','.client/native-qualification-context.json',QUALIFICATION_LOCK_PATH,REGISTERED_ADOPTION_FILE,REGISTERED_PROFILE_FILE]);
-const managed=n=>safeName(n)&&(packageRetainsPath(n)||markers.has(n));
+const managed=n=>safeName(n)&&(packageRetainsPath(n)||markers.has(n)||isRegisteredPublishedMaterializationPath(n));
 const factPaths=new Set(['business-facts.json','stock.json','locale.json','FACTS-AND-INVENTORY.json']);
 const strictJson=bytes=>parseCatalogJson(new TextDecoder('utf-8',{fatal:true}).decode(bytes).replace(/^\uFEFF/,''));
 export function sourceRequestMode(request){
@@ -49,31 +52,58 @@ export async function resolveSourceRequest(request,{root=ROOT,leads,registry}={}
  assert(request?.schemaVersion===1&&same(Object.keys(request).sort(),['mode','newSourceRequest','schemaVersion']),'Exact new-approved source envelope required');
  const p=request.newSourceRequest;
  assert(p&&same(Object.keys(p).sort(),['path','sha256'])&&safeName(p.path)&&p.path.startsWith(SOURCE_CAMPAIGN+'/new-source/')&&p.path.endsWith('.json')&&hex64(p.sha256),'Exact bounded nested source request pin required');
- const {readNewSourceInput,validateNewSourceRequest}=await import('./prepare-new-dealer-source.mjs');
+ const {readNewSourceInput,validateNewSourceRequest,readNewSourceQualification}=await import('./prepare-new-dealer-source.mjs');
  const nested=strictJson(readNewSourceInput(root,p).bytes),lockBytes=fs.readFileSync(path.join(root,'templates.lock.json')),registryBytes=fs.readFileSync(path.join(root,'docs/DEPLOYMENT-INVENTORY.json')),indexBytes=fs.readFileSync(path.join(root,'clients/index.json'));
  const inventory=strictJson(registryBytes),index=strictJson(indexBytes),lock=strictJson(lockBytes),occupiedSlugs=git(root,['ls-tree','-z','--name-only','HEAD:clients'],{encoding:null}).toString('utf8').split('\0').filter(Boolean);
- validateNewSourceRequest(nested,{registry:inventory,clientIndex:index,occupiedSlugs,lock,lockSha256:sha256(lockBytes),registrySha256:sha256(registryBytes),clientIndexSha256:sha256(indexBytes)});
- return {mode,dealers:nested.dealers.map(r=>r.slug),requestFile:p.path,nested,lock};
+ validateNewSourceRequest(nested,{registry:inventory,clientIndex:index,occupiedSlugs,lock,lockSha256:sha256(lockBytes),registrySha256:sha256(registryBytes),clientIndexSha256:sha256(indexBytes),root});
+ const qualified=readNewSourceQualification(root,nested,nested.dealers[0].slug);
+ return {mode,dealers:nested.dealers.map(r=>r.slug),requestFile:p.path,nested,lock:qualified?.lock??lock};
+}
+/** Request validation reads every dealer context before selecting one source job. */
+export function newSourceQualificationCheckoutPins(request){
+ const qualification=request.qualification;
+ return qualification?[qualification.candidateLock,...Object.values(qualification.contexts)]:[];
+}
+/** Add only exact reviewed raster pins outside the source job's existing checkout. */
+function brandingSparseCheckoutPaths(root,pin,slug){
+ assert(pin&&safeName(pin.path)&&/^[a-zA-Z0-9._/-]+$/.test(pin.path)&&pin.path.startsWith(SOURCE_CAMPAIGN+'/')&&pin.path.endsWith('.json')&&hex64(pin.sha256),'Exact bounded branding JSON pin required for sparse checkout');
+ const bytes=fs.readFileSync(inside(root,pin.path,{mustExist:true}));assert(bytes.length<=2*1024**2&&sha256(bytes)===pin.sha256,'Branding sparse input JSON bytes changed');
+ const record=strictJson(bytes),retainedAllowed=record?.sourceMode==='retained-or-mixed-raster';
+ for(const group of [record.surfaces,record.assets])assert(group===undefined||(group&&typeof group==='object'&&!Array.isArray(group)),'Branding sparse roles require objects');
+ const pins=[record.master,record.mark,...Object.values(record.surfaces??{}),...Object.values(record.assets??{})].filter(Boolean);
+ assert(pins.length<=16,'Branding sparse pin inventory exceeds its bound');const paths=new Map();
+ for(const p of pins){
+  assert(p&&safeName(p.path)&&/^[a-zA-Z0-9._/-]+$/.test(p.path)&&hex64(p.sha256),'Branding sparse paths must be exact hash-pinned literals');
+  assert(p.path.startsWith(SOURCE_CAMPAIGN+'/')||p.path.startsWith('clients/'+slug+'/branding/')||(retainedAllowed&&p.path.startsWith('docs/logo-polish-2026-10-14/')),'Branding sparse path is outside its reviewed source boundary');
+  assert(!paths.has(p.path)||paths.get(p.path)===p.sha256,'Conflicting branding sparse path hashes');paths.set(p.path,p.sha256);
+ }
+ return [...paths.keys()].filter(p=>!p.startsWith('docs/releases/')&&!p.startsWith('clients/'+slug+'/')).sort();
 }
 export async function sourceMatrix(request,options={}){
  const resolved=await resolveSourceRequest(request,options);
- if(resolved.mode==='existing-migration')return {include:resolved.dealers.map(slug=>({slug}))};
+ if(resolved.mode==='existing-migration'){
+  const matrix={include:resolved.dealers.map(slug=>{
+   const paths=brandingSparseCheckoutPaths(options.root??ROOT,request.inputs[slug].branding,slug),sourceInputs=paths.map(p=>'/'+p).join('\n');
+   assert(Buffer.byteLength(sourceInputs)<=32768,'Per-dealer branding sparse input list exceeds the matrix byte limit');return {slug,...(paths.length?{sourceInputs}:{})};
+  })};assert(Buffer.byteLength(JSON.stringify(matrix))<=450*1024,'Existing source matrix exceeds the bounded CI output limit');return matrix;
+ }
  if(resolved.mode==='registered-adoption'){const matrix={include:resolved.dealers.map(slug=>{
-  const receipt=resolved.receipts.find(r=>r.dealer===slug),paths=[...Object.values(request.inputs[slug]).map(p=>p.path),receipt.personalization.path,'clients/index.json','templates.lock.json'];
+  const receipt=resolved.receipts.find(r=>r.dealer===slug),paths=[...Object.values(request.inputs[slug]).map(p=>p.path),receipt.personalization.path,'clients/index.json','templates.lock.json',...brandingSparseCheckoutPaths(options.root??ROOT,request.inputs[slug].branding,slug)];
   assert(paths.every(p=>safeName(p)&&/^[a-zA-Z0-9._/-]+$/.test(p)),'Registered source sparse paths must be exact literals');const sourceInputs=[...new Set(paths)].sort().map(p=>'/'+p).join('\n');assert(Buffer.byteLength(sourceInputs)<=32768,'Registered input matrix exceeds its bound');return {slug,mode:resolved.mode,sourceInputs};
  })};assert(Buffer.byteLength(JSON.stringify(matrix))<=450*1024,'Registered source matrix exceeds the bounded CI output limit');return matrix;}
- const {readNewSourceInput}=await import('./prepare-new-dealer-source.mjs');
+ const {readNewSourceInput,readNewSourceQualification}=await import('./prepare-new-dealer-source.mjs');
  const matrix={include:resolved.nested.dealers.map(row=>{
   const prefix=SOURCE_CAMPAIGN+'/new-source/'+row.slug,branding=strictJson(readNewSourceInput(options.root??ROOT,row.inputs.branding,{prefix}).bytes);
-  const inputPaths=[resolved.requestFile,...Object.values(row.inputs).map(p=>p.path),row.identityReview.path,...row.media.map(p=>p.path)];
+  const inputPaths=[...newSourceQualificationCheckoutPins(resolved.nested).map(pin=>pin.path),...(row.copyReview?[row.copyReview.path]:[]),resolved.requestFile,...Object.values(row.inputs).map(p=>p.path),row.identityReview.path,...row.media.map(p=>p.path)];
   for(const p of [branding.master,branding.mark,...Object.values(branding.surfaces??{})].filter(Boolean)){
    assert(safeName(p.path)&&p.path.startsWith(prefix+'/')&&hex64(p.sha256),'Exact bounded creator branding pin required');inputPaths.push(p.path);
   }
   assert(inputPaths.length<=430,'New source sparse input inventory exceeds its bound');
   const evidence=[];for(const key of Object.keys(row.sourceReleases)){
-   const qa=resolved.lock.templates[key].qa;if(qa?.evidence){assert(safeName(qa.evidence)&&qa.evidence.startsWith('docs/releases/')&&qa.evidence.endsWith('.json'),'Bounded approved template evidence path required');evidence.push(qa.evidence);}
+   const release=resolved.lock.templates[key],qa=release.qualification?.sourceQA?.approvedRelease?.qa??release.qa;if(qa?.evidence){assert(safeName(qa.evidence)&&qa.evidence.startsWith('docs/releases/')&&qa.evidence.endsWith('.json'),'Bounded approved template evidence path required');evidence.push(qa.evidence);}
    const deployment=qa?.nativeLocalization?.deployment;for(const name of ['artifactManifest','singleWorkerReceipt','deploymentReceipt','hostedReceipt'])if(deployment?.[name]){const p=deployment[name];assert(safeName(p.reference)&&p.reference.startsWith('docs/releases/')&&p.reference.endsWith('.json')&&hex64(p.sha256),'Bounded approved native proof pin required');evidence.push(p.reference);}
   }
+  if(resolved.nested.qualification){const qualified=readNewSourceQualification(options.root??ROOT,resolved.nested,row.slug);evidence.push(qualified.context.sourceDeltaReview.reference);}
   const paths=[...new Set(['catalog.json','workspace.json','clients/index.json',...Object.keys(row.sourceReleases).map(k=>'templates/'+k+'/package.json'),...evidence,...inputPaths])].sort();
   assert(paths.every(p=>safeName(p)&&/^[a-zA-Z0-9._/-]+$/.test(p)),'Source sparse paths must be exact literals without pattern metacharacters');const sourceInputs=paths.map(p=>'/'+p).join('\n');
   assert(Buffer.byteLength(sourceInputs)<=32768,'Per-dealer sparse input list exceeds the matrix byte limit');return {slug:row.slug,mode:resolved.mode,sourceInputs};
@@ -82,8 +112,10 @@ export async function sourceMatrix(request,options={}){
 export function assertNewSourceBootstrap({root=ROOT,env=process.env,readGit=git,checkCi=sourceCiContext}={}){
  const ci=checkCi({root,env,readGit});
  assert(readGit(root,['branch','--show-current'])==='main'&&readGit(root,['rev-parse','--is-shallow-repository'])==='false','New source CI requires actual main and complete historical commit objects');
- const remote=readGit(root,['ls-remote','--exit-code','origin','refs/heads/main']).split(/\s+/)[0];
- assert(remote===ci.commit,'New source event SHA no longer equals synchronized origin main');return ci;
+ // Keep the event checkout immutable. The maintained creator checks current
+ // origin ancestry, and the source preparer checks current row/input leases.
+ // A later unrelated main publication is not a different source input.
+ return ci;
 }
 export async function prepareFleetSource(options={}){
  const root=options.root??ROOT,request=options.request??strictJson(fs.readFileSync(path.join(root,SOURCE_CAMPAIGN,'source-request.json')));
@@ -172,7 +204,79 @@ export function validateSourceRequest(request,leads,registry){
  for(const slug of request.dealers){selectedDealer(slug,leads,registry);const record=registry.dealers.find(r=>r.slug===slug);assert(record.sourceOwnership!=='independent-repository'&&(!record.canonicalSourceRepository||record.canonicalSourceRepository==='darkapoparka/cars'),'Independent source preparation is excluded');
   for(const name of ['candidateLock','qualification','sourceDeltaReview','branding']){const row=request.inputs[slug][name];assert(row&&safeName(row.path)&&row.path.startsWith(SOURCE_CAMPAIGN+'/')&&hex64(row.sha256),'Exact bounded source input required: '+name);}
   const resolution=request.inputs[slug].resolutions;if(resolution)assert(safeName(resolution.path)&&resolution.path.startsWith(SOURCE_CAMPAIGN+'/')&&hex64(resolution.sha256),'Exact bounded resolutions required');
- }return request;
+  const copy=request.inputs[slug].modernCopyReview;if(copy)assert(copy.path===SOURCE_CAMPAIGN+'/vercel-existing-source/'+slug+'/modern-copy-review.json'&&hex64(copy.sha256),'Exact dealer-bound Modern display copy pin required');
+ }validateLogoContractResealRequest(request);return request;
+}
+
+/** A single reviewed pilot continuation; never an ordinary source refresh. */
+export function validateLogoContractResealRequest(request){
+ const value=request?.logoContractReseal;if(value===undefined)return null;
+ assert(sourceRequestMode(request)==='existing-migration'&&same(request.dealers,['priselci'])&&request.sourceRevision==='b1f0f5609c7c249cfd0649c122849ff2cbb8dfde','Logo reseal requires the exact existing reviewed pilot');
+ assert(value&&same(Object.keys(value).sort(),['kind','schemaVersion','sourceReceipt','sourceTree'])&&value.schemaVersion===1&&value.kind==='cars-existing-source-derived-logo-reseal'&&value.sourceTree==='9b5ad1a83b3442a4f1453169517195afb6fe5a4b','Exact original logo reseal tree required');
+ const pin=value.sourceReceipt;assert(pin&&same(Object.keys(pin).sort(),['path','sha256'])&&safeName(pin.path)&&pin.path.startsWith(SOURCE_CAMPAIGN+'/pilot-logo-reseal/')&&pin.path.endsWith('.json')&&hex64(pin.sha256),'Hash-pinned original prepared source receipt required');
+ return structuredClone(value);
+}
+
+const derivedLogoProfiles=['auto-best/src/lib/data/dealer-profile.json','import/src/lib/data/dealer-profile.json','modern/packages/marketplace-domain/testing/dealer-profile.json'];
+export function bindLogoResealBrandingProof(branding,profileRows){
+ assert(Array.isArray(branding.changes)&&same(profileRows.map(row=>row.path).sort(),[...derivedLogoProfiles].sort()),'Original branding ledger and exact profile transitions required');
+ for(const row of profileRows){
+  if(Object.hasOwn(branding.facts,row.path)){assert(branding.facts[row.path]===row.beforeSha256,'Original derived factual hash changed');branding.facts[row.path]=row.afterSha256;}
+  const changes=branding.changes.filter(change=>change.path===row.path);assert(changes.length<=1,'Duplicate original profile branding transition');
+  if(changes.length){assert(changes[0].after===row.beforeSha256,'Original profile branding ledger is stale');changes[0].after=row.afterSha256;}
+  else branding.changes.push({path:row.path,before:row.beforeSha256,after:row.afterSha256});
+ }
+ branding.derivedProfileLogoBindings=profileRows;return branding;
+}
+export function assertLogoResealPreservation(before,after,profileRows){
+ assert(before instanceof Map&&after instanceof Map&&same(profileRows.map(row=>row.path).sort(),[...derivedLogoProfiles].sort()),'Exact three derived logo consumers required');
+ const envelopes=new Set(['.cars-branding.json','.cars-app.json',ADOPTION_FILE,'localization/contract.json','.client/cloudflare-existing-source.json']);
+ assert(before.size===after.size&&[...before.keys()].every(name=>after.has(name)),'Logo reseal must retain the exact original file inventory');
+ for(const [name,bytes]of before){
+  if(envelopes.has(name))continue;
+  if(!derivedLogoProfiles.includes(name)){assert(bytes.equals(after.get(name)),'Logo reseal changed unrelated source bytes: '+name);continue;}
+  const original=strictJson(bytes),restored=strictJson(after.get(name));
+  for(const field of ['logo','logoLight','logoDark'])restored.business[field]=original.business[field];
+  for(const surface of ['onLight','onDark','onAccent'])for(const field of ['publicPath','sha256','bytes'])restored.logoContract.assets[surface][field]=original.logoContract.assets[surface][field];
+  assert(same(restored,original),'Logo reseal changed non-logo profile facts: '+name);
+  const row=profileRows.find(row=>row.path===name);assert(row.factualFieldsUnchanged===true&&row.beforeSha256===sha256(bytes)&&row.afterSha256===sha256(after.get(name)),'Exact derived profile transition proof required');
+ }
+ return {unchangedSourceFiles:[...before.keys()].filter(name=>!envelopes.has(name)&&!derivedLogoProfiles.includes(name)).length,profilePaths:[...derivedLogoProfiles],nonLogoFactsUnchanged:true,rastersAndComponentsByteIdentical:true};
+}
+
+/** All mutations stay in a pending map until every maintained seal validates. */
+export function resealExistingProfileLogoContracts(input,{manifest,context,root=ROOT}){
+ const published=new Map([...input].filter(([name])=>packageRetainsPath(name))),base=baseNativeManifest(manifest),priorNative=assertNativeQualification(published,base,context,{root});assertAppVariant(published,manifest);assertExtendedVariantSources(published,manifest);
+ const files=new Map([...published].map(([name,bytes])=>[name,Buffer.from(bytes)])),branding=strictJson(files.get('.cars-branding.json'));
+ const profileRows=rebindDerivedProfileLogoContracts(files,branding.publicBase,{originalFiles:published});
+ assert(same(profileRows.map(row=>row.path).sort(),[...derivedLogoProfiles].sort()),'All three existing profile logo contracts are required');
+ bindLogoResealBrandingProof(branding,profileRows);branding.consumerReferences=captureBrandConsumers(files,branding.publicBase);files.set('.cars-branding.json',encode(branding));
+ assertLeadBranding(files,manifest);
+ const app=strictJson(files.get('.cars-app.json'));assert(app.provenance?.profile===derivedLogoProfiles[0]&&app.provenance.profileSha256===sha256(input.get(derivedLogoProfiles[0])),'Original App profile provenance changed');
+ sealAppDealerSource({files,manifest,provenance:{...app.provenance,profileSha256:sha256(files.get(derivedLogoProfiles[0]))}});
+ const native=sealNativeQualification(files,base,priorNative.releases,context,{root});assert(same(native.catalogs,priorNative.catalogs)&&same(native.context,priorNative.context)&&same(native.releases,priorNative.releases),'Logo reseal changed reviewed catalogs, context or source pins');
+ assertNativeQualification(files,base,context,{root});assertAppVariant(files,manifest);assertExtendedVariantSources(files,manifest);assertLeadBranding(files,manifest);
+ const pending=new Map([...input,...files]),preservation=assertLogoResealPreservation(input,pending,profileRows);
+ return {files:pending,branding,native,profileRows,preservation,previousBrandingSha256:sha256(input.get('.cars-branding.json')),previousNativeSha256:sha256(input.get(ADOPTION_FILE))};
+}
+
+async function prepareExistingLogoContractReseal({slug,root,request,ci,baseline,qualified,lock,context,area,source,sourceBefore}){
+ const value=validateLogoContractResealRequest(request),prior=pinnedInput(root,value.sourceReceipt).value;
+ assert(baseline.tree===value.sourceTree&&prior.kind===SOURCE_KIND&&prior.dealer===slug&&prior.preparedTree===baseline.tree&&prior.sourceRevision===request.sourceRevision&&prior.approvedParentLockDigest===request.approvedParentLockDigest&&same(prior.inputs,request.inputs[slug]),'Original prepared pilot receipt or source bytes differ');
+ assert(prior.canonicalSourceUnchanged===true&&prior.authoritativeFactsUnchanged===true&&prior.originalPlanArtifactsUnchanged===true&&prior.nativeApproval===false&&prior.hostedApproval===false&&prior.originalPlan&&hex64(prior.originalPlan.reviewSha256)&&hex64(prior.originalPlan.runSha256)&&hex64(prior.originalPlan.candidateDigest),'Exact original preservation review chain required');
+ const factual=prior.factualRefresh;assert(factual?.dealer===slug&&factual.mode==='current-facts-from-pinned-six-targets'&&factual.stage==='preservation-merge-before-native-catalogs-and-branding'&&factual.consumerPaths?.length===588&&factual.consumerHashes?.length===588,'Original 588-consumer factual review required');
+ const manifest=strictJson(baseline.files.get('dealer.json'));assert(same(factual.targetSources,manifest.templateSources),'Original factual six-source pins changed');
+ const sourceMarker=strictJson(baseline.files.get('.client/cloudflare-existing-source.json'));assert(sourceMarker.sourceRevision===request.sourceRevision&&sourceMarker.candidateSourceDigest===prior.preparedCandidateDigest&&sourceMarker.qualificationContextSha256===sha256(qualified.bytes)&&sourceMarker.qualificationLockSha256===sha256(lock.bytes),'Original personalized-source envelope differs from its prepared receipt');
+ const result=resealExistingProfileLogoContracts(baseline.files,{manifest,context,root});
+ const candidateSourceDigest=sha256(JSON.stringify([...result.files].filter(([name])=>!markers.has(name)).sort(([a],[b])=>a.localeCompare(b,'en')).map(([name,bytes])=>[name,sha256(bytes)])));
+ for(const [name,bytes]of sourceQualificationFiles({manifest,qualificationBytes:qualified.bytes,qualificationLockBytes:lock.bytes,sourceRevision:request.sourceRevision,candidateSourceDigest,root}))result.files.set(name,bytes);
+ const preservation=assertLogoResealPreservation(baseline.files,result.files,result.profileRows),proposal=createSourcePatch({baseline,candidateFiles:result.files,dealer:slug,sourceRevision:request.sourceRevision,contextFileSha256:sha256(qualified.bytes)});verifySourcePatch({baseline,...proposal});
+ assert(git(root,['rev-parse',ci.commit+':clients/'+slug])===baseline.tree&&fingerprint(source).digest===sourceBefore&&sha256(fs.readFileSync(path.join(root,'templates.lock.json')))===request.approvedParentLockDigest,'Canonical pilot source or approved lock changed');
+ const output=path.join(area,'output');writeNew(path.join(output,'source-patch.json'),encode(proposal.patch));for(const [digest,blob]of proposal.blobs)writeNew(path.join(output,'blobs',digest+'.json'),encode(blob));
+ const review={schemaVersion:1,kind:'cars-existing-source-derived-logo-reseal-review',dealer:slug,priorSourceReceipt:value.sourceReceipt,canonicalBaseline:{commit:baseline.commit,tree:baseline.tree},preparedTree:proposal.patch.preparedTree,profileRows:result.profileRows,preservation,originalPlan:prior.originalPlan,originalFactualRefresh:factual,catalogsUnchanged:true,appSourceBytesUnchanged:true,sourcePinsUnchanged:true,reviewed:false,nativeApproval:false,hostedApproval:false};
+ writeNew(path.join(output,'final-source-review.json'),encode(review));
+ const receipt={schemaVersion:1,kind:SOURCE_KIND,dealer:slug,repository:manifest.repository,canonicalSourceRepository:'darkapoparka/cars',canonicalBaseline:review.canonicalBaseline,preparedTree:proposal.patch.preparedTree,sourceRevision:request.sourceRevision,runId:ci.runId,attempt:ci.attempt,inputs:request.inputs[slug],sourceMode:'existing-migration',approvedParentLockDigest:request.approvedParentLockDigest,originalPlan:prior.originalPlan,factualRefresh:prior.factualRefresh,logoContractReseal:{...review,previousBrandingSha256:result.previousBrandingSha256,previousNativeSha256:result.previousNativeSha256},finalSourceReviewSha256:sha256(encode(review)),preparedCandidateDigest:candidateSourceDigest,patchDigest:sha256(encode(proposal.patch)),branding:result.branding,nativeQualification:{contextFileSha256:sha256(qualified.bytes),qualificationLockSha256:sha256(lock.bytes),contextDigest:result.native.contextDigest,receiptSha256:sha256(result.files.get(ADOPTION_FILE)),nativeInput:result.native.input,pendingNativeChecks:result.native.pendingNativeChecks},pathsChanged:proposal.patch.changes.length,uniqueBlobBytes:proposal.patch.uniqueBlobBytes,authoritativeFactsUnchanged:true,canonicalSourceUnchanged:true,originalPlanArtifactsUnchanged:true,reviewed:false,published:false,nativeApproval:false,hostedApproval:false,createdAt:new Date().toISOString()};
+ writeNew(path.join(output,'source-preparation-receipt.json'),encode(receipt));artifactInventory(output,{kind:SOURCE_KIND,dealer:slug,status:'passed'});return {dealer:slug,output,preparedTree:receipt.preparedTree,pathsChanged:receipt.pathsChanged,uniqueBlobBytes:receipt.uniqueBlobBytes,reviewed:false,published:false};
 }
 export function sourceCiContext({root=ROOT,env=process.env,platform=process.platform,version=process.version,readGit=git}={}){
  assert(platform==='linux'&&version==='v26.10.0'&&env.GITHUB_ACTIONS==='true'&&env.GITHUB_EVENT_NAME==='push'&&env.GITHUB_REPOSITORY==='darkapoparka/cars'&&env.GITHUB_REF==='refs/heads/main'&&hex40(env.GITHUB_SHA)&&/^[1-9][0-9]*$/.test(env.GITHUB_RUN_ID??'')&&/^[1-9][0-9]*$/.test(env.GITHUB_RUN_ATTEMPT??''),'Source preparation requires exact Cars main push CI');
@@ -181,17 +285,22 @@ export function sourceCiContext({root=ROOT,env=process.env,platform=process.plat
 }
 function pinnedInput(root,row){const file=inside(root,row.path,{mustExist:true}),bytes=fs.readFileSync(file);assert(sha256(bytes)===row.sha256,'Reviewed source input bytes changed: '+row.path);return {file,bytes,value:JSON.parse(bytes.toString('utf8'))};}
 export function readBrandingInputs(root,record,slug){
- assert(record?.schemaVersion===1&&record.dealer===slug&&record.reviewed===true&&Number.isFinite(Date.parse(record.reviewedAt))&&record.generation?.tool==='image_gen'&&typeof record.generation.generationId==='string'&&record.generation.generationId.trim(),'Exact reviewed ImageGen branding input required');
- const png=row=>{assert(row&&safeName(row.path)&&hex64(row.sha256)&&(row.path.startsWith(SOURCE_CAMPAIGN+'/')||row.path.startsWith('clients/'+slug+'/branding/')),'Bounded hash-pinned dealer PNG required');const bytes=fs.readFileSync(inside(root,row.path,{mustExist:true}));assert(sha256(bytes)===row.sha256,'Reviewed branding PNG bytes differ');return bytes;};
+ const retainedAllowed=record?.sourceMode==='retained-or-mixed-raster';
+ assert(record?.schemaVersion===1&&record.dealer===slug&&record.reviewed===true&&Number.isFinite(Date.parse(record.reviewedAt))&&(retainedAllowed||(record.generation?.tool==='image_gen'&&typeof record.generation.generationId==='string'&&record.generation.generationId.trim())),'Exact reviewed ImageGen branding input required');
+ const png=row=>{assert(row&&safeName(row.path)&&hex64(row.sha256)&&(row.path.startsWith(SOURCE_CAMPAIGN+'/')||row.path.startsWith('clients/'+slug+'/branding/')||(retainedAllowed&&row.path.startsWith('docs/logo-polish-2026-10-14/'))),'Bounded hash-pinned dealer PNG required');const bytes=fs.readFileSync(inside(root,row.path,{mustExist:true}));assert(sha256(bytes)===row.sha256,'Reviewed branding PNG bytes differ');return bytes;};
  assert(same(Object.keys(record.surfaces??{}).sort(),['onAccent','onDark','onLight']),'Exactly three reviewed ImageGen surfaces required');
+ if(retainedAllowed&&record.generation!==undefined)throw Error('Mixed raster record requires role-specific provenance');
  const surfaces=Object.fromEntries(Object.entries(record.surfaces).map(([name,row])=>[name,{...row,png:png(row)}]));
  const master={png:png(record.master),sha256:record.master.sha256};if(record.mark){master.markPng=png(record.mark);master.markSha256=record.mark.sha256;}
+ if(retainedAllowed){for(const row of Object.values(surfaces))reviewedRasterProvenance(row,{retainedAllowed:true});const assets=Object.fromEntries(Object.entries(record.assets??{}).map(([name,row])=>[name,{...row,bytes:png(row)}]));for(const row of Object.values(assets))reviewedRasterProvenance(row,{retainedAllowed:true});return {master,reviewedSurfaces:{schemaVersion:1,reviewed:true,reviewedAt:record.reviewedAt,sourceMode:record.sourceMode,surfaces,...(Object.keys(assets).length?{assets}:{})}};}
  const originalSha=record.generation.sourceFileSha256??record.generation.sourceSha256;assert(hex64(originalSha)&&(!record.generation.sourceFileSha256||!record.generation.sourceSha256||record.generation.sourceFileSha256===record.generation.sourceSha256),'Original ImageGen source hash is required and must agree');
  return {master,generation:{...record.generation,sourceFileSha256:originalSha},reviewedSurfaces:{schemaVersion:1,reviewed:true,reviewedAt:record.reviewedAt,surfaces}};
 }
+/** A full reviewed template replacement discards obsolete derived logo seals, while current reviewed raster binding remains authoritative. */
 export function bindPreparedShareLogo(files,manifest,contract){
  const logo=files.get('branding/logo-on-light.png'),icon=files.get('branding/app-icon.png');
  assert(manifest.shareIdentity&&logo&&icon&&contract.reviewedSurfaceVariants?.surfaces.onLight.sha256===sha256(logo),'Prepared share identity needs the exact reviewed on-light logo and derived icon');
+ manifest.extraAssets=[...new Set([...(manifest.extraAssets??[]),'branding'])];
  manifest.shareIdentity={...manifest.shareIdentity,logo:{...(manifest.shareIdentity.logo??{}),sourcePath:'branding/logo-on-light.png',sha256:sha256(logo),faviconSourcePath:'branding/app-icon.png',faviconSha256:sha256(icon)}};
  return manifest.shareIdentity.logo;
 }
@@ -199,11 +308,12 @@ function candidateFiles(directory){return new Map(filesAt(directory,{filter:()=>
 function writeCandidateChanges(directory,before,after,assetPool,replace){for(const [name,bytes]of after){if(before.get(name)?.equals(bytes))continue;const target=inside(directory,name);fs.mkdirSync(path.dirname(target),{recursive:true});replace(target,bytes,{assetPool,expectedPreviousSha256:before.has(name)?sha256(before.get(name)):null});}}
 
 /** Source CI explicitly opts into current facts; ordinary updater plans stay unchanged. */
-export function sourcePreparationPlanArgs({source,root,lockFile,qualificationFile,runDirectory,assetPool,resolutionsFile,registeredAdoptionPin}){
+export function sourcePreparationPlanArgs({source,root,lockFile,qualificationFile,runDirectory,assetPool,resolutionsFile,registeredAdoptionPin,modernCopyReviewPin,brandingPin}){
  const args=['plan','--dealer-root',source,'--cars-root',root,'--lock-file',lockFile,'--qualification',qualificationFile,'--run-dir',runDirectory,'--candidate-asset-pool',assetPool,'--design-set','six','--template-palette'];
  if(resolutionsFile)args.push('--resolutions-file',resolutionsFile);
+ if(modernCopyReviewPin){assert(!registeredAdoptionPin,'Modern copy input is ordinary factual preparation only');args.push('--modern-copy-review',modernCopyReviewPin.path,'--modern-copy-review-sha256',modernCopyReviewPin.sha256);}
  if(registeredAdoptionPin)args.push('--registered-adoption',registeredAdoptionPin.path,'--registered-adoption-sha256',registeredAdoptionPin.sha256);
- else args.push('--refresh-facts');
+ else {args.push('--refresh-facts');if(brandingPin)args.push('--target-branding',brandingPin.path,'--target-branding-sha256',brandingPin.sha256);}
  return args;
 }
 
@@ -231,13 +341,15 @@ export async function prepareExistingFleetSource({slug,root=ROOT,env=process.env
  const resolutions=input.resolutions?pinnedInput(root,input.resolutions):null,source=inside(root,'clients/'+slug,{mustExist:true});assert(!fs.existsSync(path.join(source,'.git')),'Independent dealer source excluded');
  const baseline=sourceBaseline(root,slug,ci.commit),registeredAdoption=registered?await readRegisteredDealerAdoption({root,pin:input.adoption,dealer:slug,baseline,registry}):null;
  const sourceBefore=fingerprint(source).digest,area=inside(root,'runtime/existing-fleet-source/'+ci.runId+'-'+ci.attempt+'/'+slug);assert(!fs.existsSync(area),'Source preparation attempt already exists');fs.mkdirSync(area,{recursive:true});
+ if(request.logoContractReseal!==undefined)return prepareExistingLogoContractReseal({slug,root,request,ci,baseline,qualified,lock,context,area,source,sourceBefore});
  const {runUpdateDealerTemplate,finalizeDealerTemplateCandidate}=await import('./dealer-updates/update-dealer-template.mjs');const {replaceCandidateFile}=await import('./dealer-updates/three-way-upgrade.mjs');
- const runDirectory=path.join(area,'plan'),assetPool=path.join(area,'asset-pool'),args=sourcePreparationPlanArgs({source,root,lockFile:lock.file,qualificationFile:qualified.file,runDirectory,assetPool,resolutionsFile:resolutions?.file,registeredAdoptionPin:registeredAdoption?input.adoption:null});
+ const runDirectory=path.join(area,'plan'),assetPool=path.join(area,'asset-pool'),args=sourcePreparationPlanArgs({source,root,lockFile:lock.file,qualificationFile:qualified.file,runDirectory,assetPool,resolutionsFile:resolutions?.file,registeredAdoptionPin:registeredAdoption?input.adoption:null,modernCopyReviewPin:input.modernCopyReview,brandingPin:input.branding});
  const planned=await runUpdateDealerTemplate(args);assert(planned.ready===true&&planned.candidateDirectory,'Unresolved preservation conflicts: review the original plan artifact');
  const originalReview=fs.readFileSync(planned.reviewPath),originalRun=fs.readFileSync(path.join(runDirectory,'run.json')),review=JSON.parse(originalReview),metadata=JSON.parse(originalRun),directory=planned.candidateDirectory,beforeBranding=candidateFiles(directory),files=new Map(beforeBranding),manifest=JSON.parse(files.get('dealer.json'));
  assert(manifest.slug===slug&&manifest.repository===(registeredAdoption?.identity.repository??registry.dealers.find(r=>r.slug===slug).repository),'Prepared dealer identity differs');
  const factualRefresh=registeredAdoption?null:assertSourceFactualRefresh({metadata,review,manifest,profile:loadDealerProfile(source,slug)});
  // Retain previous branding proof as baseline evidence; the new pack gets its own seal.
+ const replacedProfileLogoContracts=clearReplacedProfileLogoContracts(files,{enabled:registeredAdoption?.receipt.templateRefresh?.reviewed===true});
  const previousBrandingDigest=files.has('.cars-branding.json')?sha256(files.get('.cars-branding.json')):null;files.delete('.cars-branding.json');manifest.branding={...(manifest.branding??{}),required:true,surfaceBindingsVersion:1};
  const require=createRequire(toolPackage),sharp=require('sharp');assert(sharp.versions.sharp==='0.35.5','Source raster toolchain differs');
  const templates=new Map(),readTemplate=(locator,name,optional)=>{const key=locator.path.slice('templates/'.length),id=key+'@'+locator.revision;if(!templates.has(id))templates.set(id,readPinnedTemplateTree({key,repositoryPath:root,source:locator}).tree);const bytes=templates.get(id).get(name);if(!bytes&&optional)return null;assert(bytes,'Missing exact palette source '+key+'/'+name);return bytes.toString('utf8');};

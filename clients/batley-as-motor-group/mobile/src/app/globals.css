@@ -142,6 +142,9 @@
     --font-base: 'Mobile UI';
     --font-hero: 'Mobile UI';
   }
+  label {
+    -webkit-tap-highlight-color: transparent;
+  }
   dialog[data-mobile-keyboard='true'] [data-filter-footer],
   dialog[data-mobile-keyboard='true'] [data-service-search-footer] {
     display: none;

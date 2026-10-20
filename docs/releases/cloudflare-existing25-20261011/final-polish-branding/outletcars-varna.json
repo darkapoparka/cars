@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "dealer": "outletcars-varna",
+  "reviewed": true,
+  "reviewedAt": "2026-10-14T11:31:43.352Z",
+  "sourceMode": "retained-or-mixed-raster",
+  "master": {
+    "path": "docs/logo-polish-2026-10-14/parallel/vercel/outletcars-varna/logo-on-light.png",
+    "sha256": "50cc92b7587ca89775de69d21b4017b5278c783d9f26e9484ae48d63e9e9f04f"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "docs/logo-polish-2026-10-14/parallel/vercel/outletcars-varna/logo-on-light.png",
+      "sha256": "50cc92b7587ca89775de69d21b4017b5278c783d9f26e9484ae48d63e9e9f04f",
+      "sourceReference": "L:\\CODEX\\cars\\docs\\logo-polish-2026-10-14\\parallel\\vercel\\outletcars-varna\\logo-on-light.png",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "L:\\CODEX\\cars\\docs\\logo-polish-2026-10-14\\live-assets\\f6f5e42e0bb7ac78eb23c998834fe9f84d1388e457acf2c3bdee25e7bbf0815f.webp",
+        "sha256": "f6f5e42e0bb7ac78eb23c998834fe9f84d1388e457acf2c3bdee25e7bbf0815f",
+        "reviewReference": "docs/logo-polish-2026-10-14/final-selection.json",
+        "reviewSha256": "6e396eef77195ab7f44d6b055c1936fa079a8195a428a95151fdfd7f3f5d1a16"
+      }
+    },
+    "onDark": {
+      "path": "docs/logo-polish-2026-10-14/parallel/vercel/outletcars-varna/logo-on-dark.png",
+      "sha256": "d0fa012fa53c1beead215a83d49c85c253839dfc3d634fd73bbebce3026ee929",
+      "sourceReference": "C:\\Users\\radev\\.codex\\generated_images\\01a13a10-d6a7-7ae1-9379-360e66482a5d\\exec-a1db0899-5107-40e3-8158-f4132df14ec0.png",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a1db0899-5107-40e3-8158-f4132df14ec0",
+        "modelVersion": null
+      }
+    },
+    "onAccent": {
+      "path": "docs/logo-polish-2026-10-14/parallel/vercel/outletcars-varna/logo-on-accent.png",
+      "sha256": "6ee99a5d47b1b0ca69bb06102dc32298533e8f1a53a347ee3ea7237b93cb764c",
+      "sourceReference": "L:\\CODEX\\cars\\docs\\logo-polish-2026-10-14\\parallel\\vercel\\outletcars-varna\\logo-on-accent.png",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "L:/CODEX/cars/clients/outletcars-varna/dealer-brand/logo-on-accent.webp",
+        "sha256": "c331e0a3bf47c63a8fea264c06ad5e93495ea59fa511bcd540bcc69a70e6b60a",
+        "reviewReference": "docs/logo-polish-2026-10-14/final-selection.json",
+        "reviewSha256": "6e396eef77195ab7f44d6b055c1936fa079a8195a428a95151fdfd7f3f5d1a16"
+      }
+    }
+  }
+}

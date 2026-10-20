@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-source-publication",
+  "reviewed": true,
+  "reviewedAt": "2026-10-12T16:36:02.956Z",
+  "dealer": "centralauto-varna",
+  "dealerId": "centralauto-varna",
+  "repository": "darkapoparka/cars-centralauto-varna",
+  "sourceOwnership": "cars-canonical",
+  "request": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/wave01-request.json",
+    "sha256": "f2ba27130c21f3d6324a1cd5c5aaeaa8fdba9a5087165bed26fe1e1e579ccaf7"
+  },
+  "preparation": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/centralauto-varna/source-preparation-receipt.json",
+    "sha256": "a7d62f4d4af4df1b2289703c5e49f0e036aca335aabe07710ee340d3c851d72e"
+  },
+  "proposal": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/centralauto-varna/source-patch.json",
+    "sha256": "56357664562e827668f07d708658274738db65051cb56aa6cdf97f8d85febac9"
+  },
+  "inputMapping": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/centralauto-varna/input-mapping.json",
+    "sha256": "c708e6079f44c9d2a3e411f1e4501b044c28982eafd65edbe229fa0bfe5c5942"
+  },
+  "sourcePublication": {
+    "repository": "darkapoparka/cars",
+    "commit": "a774853f22b28e2d05cd8e84256823c6e9524a04",
+    "sourceTree": "6e62f26a7362e348b4debdf867b50c6e1352172f",
+    "ref": "refs/heads/main",
+    "publishedAt": "2026-10-12T16:34:20.9563482Z",
+    "evidence": "Normal non-force Git publication and independent GitHub main readback at a774853f22b28e2d05cd8e84256823c6e9524a04. Exact successful preparation run 38262314549 attempt 1 source trees and frozen original proposal/input bytes were preserved."
+  },
+  "sourcePreparationRun": {
+    "id": 38262314549,
+    "attempt": 1
+  },
+  "globalReleaseApproval": false,
+  "buildQualified": false,
+  "hostedAccepted": false
+}

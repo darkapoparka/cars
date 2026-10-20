@@ -1,0 +1,245 @@
+{
+  "strategy": "REFINE OFFICIAL LOGO",
+  "identityStatus": "publishedBranding refined for demo; dealer/owner approval pending",
+  "sourceUrls": [
+    "https://centralauto.mobile.bg/"
+  ],
+  "sourceLogoUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h12669104499724032.pic",
+  "publishedBranding": "Red geometric Cyrillic ЦЕНТРАЛ wordmark visually inspected on public profile",
+  "workingLogoPath": "C:/Users/radev/Downloads/h12669104499724032.pic",
+  "generatedPath": "C:/Users/radev/.codex/generated_images/01a12a34-d2d7-7571-930a-1ed37e54ff8e/exec-866635f6-685b-4650-8740-6a7d1972fcfc.png",
+  "imageGeneration": {
+    "tool": "image_gen.imagegen",
+    "reference": "exec-866635f6-685b-4650-8740-6a7d1972fcfc",
+    "transparent_background": true,
+    "prompt": "Refine the referenced dealer logo as an exact faithful transparent raster recreation. Keep only the red Cyrillic wordmark ЦЕНТРАЛ from the reference, retaining exactly its unusual geometric lettering, spacing, cutouts, contours and deep red color. Do not add text, subtitle, badge, vehicle, glow, shadow, white interior fills or background. Recreate the same letters precisely, including open transparent counters and gaps; do not replace with a font. Remove white background completely with genuine RGBA transparency everywhere outside the red strokes. Clean crisp high resolution horizontal logo centered with modest transparent padding. Preserve original identity; this is a demo refinement, not redesign.",
+    "referenced_image_paths": [
+      "C:/Users/radev/Downloads/h12669104499724032.pic"
+    ],
+    "outputPath": "C:/Users/radev/.codex/generated_images/01a12a34-d2d7-7571-930a-1ed37e54ff8e/exec-866635f6-685b-4650-8740-6a7d1972fcfc.png",
+    "modelVersion": "not exposed by tool"
+  },
+  "visualAccepted": true,
+  "visualChecks": {
+    "sourceIdentity": "Same recognizable geometric Cyrillic ЦЕНТРАЛ; red retained on light",
+    "spelling": "matched published reference",
+    "surfaces": [
+      "#ffffff",
+      "#30343b",
+      "#17191c",
+      "#202023",
+      "#19171d",
+      "#171717",
+      "#b00020",
+      "#405ff2"
+    ],
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "result": "No clipped strokes, opaque residue or filled counters; legible at all sampled sizes. White surface treatments preserve geometry."
+  },
+  "schemaVersion": 1,
+  "dealer": "centralauto-varna",
+  "state": "asset-verified",
+  "generated": {
+    "path": "C:/Users/radev/.codex/generated_images/01a12a34-d2d7-7571-930a-1ed37e54ff8e/exec-866635f6-685b-4650-8740-6a7d1972fcfc.png",
+    "sha256": "54eb4e561c196d30d67752468330cced0f811e9402cbc52d564628e6d10640fb",
+    "bytes": 366875,
+    "format": "png",
+    "width": 2172,
+    "height": 724,
+    "hasAlpha": true,
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparentRatio": 0.8116739415768749,
+      "opaqueRatio": 0.16966756712758055
+    },
+    "visibleBounds": {
+      "x": 169,
+      "y": 235,
+      "width": 1840,
+      "height": 249
+    }
+  },
+  "assets": {
+    "onLight": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/centralauto-varna/dealer-brand/logo-on-light.webp",
+      "sha256": "5ae463002b811449b81eb486033cf80f8f1c7b4b12eb5d4b7b9de8188b6df8c0",
+      "bytes": 48214,
+      "format": "webp",
+      "width": 1496,
+      "height": 263,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.5646133669506517,
+        "opaqueRatio": 0.39029045769707815
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 37,
+        "width": 1400,
+        "height": 190
+      },
+      "publicPath": "/dealer-brand/logo-on-light.webp"
+    },
+    "onDark": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/centralauto-varna/dealer-brand/logo-on-dark.webp",
+      "sha256": "bfabd9582fcb3404f53261ba3d56843d2eb3a9dad3aa64c3b583e507806cdb28",
+      "bytes": 24124,
+      "format": "webp",
+      "width": 1496,
+      "height": 263,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.5646133669506517,
+        "opaqueRatio": 0.39029045769707815
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 37,
+        "width": 1400,
+        "height": 190
+      },
+      "publicPath": "/dealer-brand/logo-on-dark.webp"
+    },
+    "onAccent": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/centralauto-varna/dealer-brand/logo-on-accent.webp",
+      "sha256": "bfabd9582fcb3404f53261ba3d56843d2eb3a9dad3aa64c3b583e507806cdb28",
+      "bytes": 24124,
+      "format": "webp",
+      "width": 1496,
+      "height": 263,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.5646133669506517,
+        "opaqueRatio": 0.39029045769707815
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 37,
+        "width": 1400,
+        "height": 190
+      },
+      "publicPath": "/dealer-brand/logo-on-accent.webp"
+    }
+  },
+  "master": {
+    "path": "L:/CODEX/cars/leads/branding/fleet-20261011/centralauto-varna/branding/logo-master.png",
+    "sha256": "4d7a5b17c7e5ea8ab38f609bf5320e46a4a6e2838564083ca0c351c3a7700b35",
+    "bytes": 174902,
+    "format": "png",
+    "width": 1496,
+    "height": 263,
+    "hasAlpha": true,
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparentRatio": 0.5646133669506517,
+      "opaqueRatio": 0.39029045769707815
+    },
+    "visibleBounds": {
+      "x": 48,
+      "y": 37,
+      "width": 1400,
+      "height": 190
+    }
+  },
+  "technicalAcceptance": {
+    "sourceIdentity": "Same recognizable geometric Cyrillic ЦЕНТРАЛ; red retained on light",
+    "spelling": "matched published reference",
+    "surfaces": [
+      "#ffffff",
+      "#30343b",
+      "#17191c",
+      "#202023",
+      "#19171d",
+      "#171717",
+      "#b00020",
+      "#405ff2"
+    ],
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "result": "No clipped strokes, opaque residue or filled counters; legible at all sampled sizes. White surface treatments preserve geometry."
+  },
+  "integrationVerified": false,
+  "hostedVerified": false,
+  "ownerApproved": false,
+  "exportTool": "docs/logo-refresh/2026-09-18/tools/build-approved-logo-pack.mjs",
+  "exportToolSha256": "7fab60c4000210eff6bbb91f9c35e869bad90834d3bdd09d282a9a51835f0dbc",
+  "exportIsolation": "L:/CODEX/cars/runtime/fleet-logo-20261011/new-a-export",
+  "updatedAt": "2026-10-11T09:10:31.948Z",
+  "preservedSourceOriginal": {
+    "originalPath": "C:/Users/radev/Downloads/h12669104499724032.pic",
+    "path": "L:/CODEX/cars/leads/branding/fleet-20261011/centralauto-varna/source/published-original.pic",
+    "sha256": "bd3d28e99c6f756f3497b85c403e0ce25f0a1e353d91314ad036bc53d387dc8b",
+    "bytes": 21628,
+    "width": 778,
+    "height": 160,
+    "format": "jpeg"
+  },
+  "surfaceReviewPath": "L:/CODEX/cars/leads/branding/fleet-20261011/centralauto-varna/surface-review.png",
+  "retention": {
+    "finalQASheet": "L:/CODEX/cars/leads/branding/fleet-20261011/centralauto-varna/surface-review.png",
+    "toolOriginals": "Preserved on C: at exact recorded paths",
+    "sourceOriginal": "Preserved when available; screenshots and source limitations retained",
+    "scratch": "Owned inactive exporter outputs eligible for retirement; no live consumer binding",
+    "priorAcceptance": null
+  },
+  "sourceEvidence": [
+    {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/centralauto-varna/source/profile.png",
+      "sha256": "6a106e2d5c970d5573956e034c19c602e890fd9dc875d3b0f57aaca23fe2526a",
+      "bytes": 105097,
+      "format": "jpeg",
+      "width": 1265,
+      "height": 712,
+      "hasAlpha": false,
+      "alpha": {
+        "min": 255,
+        "max": 255,
+        "transparentRatio": 0,
+        "opaqueRatio": 1
+      },
+      "visibleBounds": {
+        "x": 0,
+        "y": 0,
+        "width": 1265,
+        "height": 712
+      }
+    },
+    {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/centralauto-varna/source/published-original.pic",
+      "sha256": "bd3d28e99c6f756f3497b85c403e0ce25f0a1e353d91314ad036bc53d387dc8b",
+      "bytes": 21628,
+      "format": "jpeg",
+      "width": 778,
+      "height": 160,
+      "hasAlpha": false,
+      "alpha": {
+        "min": 255,
+        "max": 255,
+        "transparentRatio": 0,
+        "opaqueRatio": 1
+      },
+      "visibleBounds": {
+        "x": 0,
+        "y": 0,
+        "width": 778,
+        "height": 160
+      }
+    }
+  ],
+  "provenanceFile": "L:/CODEX/cars/leads/branding/fleet-20261011/centralauto-varna/provenance.json"
+}

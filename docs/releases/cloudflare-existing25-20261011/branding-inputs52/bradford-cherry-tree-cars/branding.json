@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "dealer": "bradford-cherry-tree-cars",
+  "reviewed": true,
+  "reviewedAt": "2026-10-11T13:30:47.327Z",
+  "reviewScope": "Hash-identical selected current raster inputs and retained genuine surface-review provenance only; actual dealer integration, native and hosted checks pending.",
+  "officialDealerArtwork": false,
+  "dealerApproval": false,
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "generation": {
+    "tool": "image_gen",
+    "generationId": "exec-f10175a2-a15e-4c41-8125-a7c15bb9408d",
+    "modelVersion": null,
+    "sourceSha256": "7dcd3e8a62782d1a28f89d97ecb7fb957a6cfab28a546188d32ffcc962d469c4",
+    "sourceRole": "Native ImageGen output behind exact retained selected raster; no new generation or claimed model version.",
+    "nativeOutput": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/bradford-cherry-tree-cars/source/native-onLight.png",
+      "sha256": "7dcd3e8a62782d1a28f89d97ecb7fb957a6cfab28a546188d32ffcc962d469c4"
+    },
+    "originalGenerationReceipt": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/bradford-cherry-tree-cars/source/generation-receipt.json",
+      "sha256": "701622ba307269808902e66c5c86f59e76340784917e3f6ba2731ce72426095a"
+    },
+    "derivation": "one ImageGen master exported to context raster"
+  },
+  "master": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/bradford-cherry-tree-cars/branding/master.png",
+    "sha256": "cae6eaf3fa1acabad07cf4a6ab240b7c24f8d012d3cfe337772bb874271ea289"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/bradford-cherry-tree-cars/branding/onLight.png",
+      "sha256": "cae6eaf3fa1acabad07cf4a6ab240b7c24f8d012d3cfe337772bb874271ea289",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/bradford-cherry-tree-cars/source/generation-receipt.json#sha256=701622ba307269808902e66c5c86f59e76340784917e3f6ba2731ce72426095a; exact selected handoff b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-f10175a2-a15e-4c41-8125-a7c15bb9408d",
+        "modelVersion": null,
+        "sourceSha256": "7dcd3e8a62782d1a28f89d97ecb7fb957a6cfab28a546188d32ffcc962d469c4",
+        "sourceRole": "Native ImageGen output behind exact retained selected raster; no new generation or claimed model version.",
+        "nativeOutput": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/bradford-cherry-tree-cars/source/native-onLight.png",
+          "sha256": "7dcd3e8a62782d1a28f89d97ecb7fb957a6cfab28a546188d32ffcc962d469c4"
+        },
+        "originalGenerationReceipt": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/bradford-cherry-tree-cars/source/generation-receipt.json",
+          "sha256": "701622ba307269808902e66c5c86f59e76340784917e3f6ba2731ce72426095a"
+        },
+        "derivation": "one ImageGen master exported to context raster"
+      }
+    },
+    "onDark": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/bradford-cherry-tree-cars/branding/onDark.png",
+      "sha256": "acef6988bd149d79d209ee12b92253af93349987cb2eae23f443403060d32099",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/bradford-cherry-tree-cars/source/generation-receipt.json#sha256=701622ba307269808902e66c5c86f59e76340784917e3f6ba2731ce72426095a; exact selected handoff b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-f10175a2-a15e-4c41-8125-a7c15bb9408d",
+        "modelVersion": null,
+        "sourceSha256": "7dcd3e8a62782d1a28f89d97ecb7fb957a6cfab28a546188d32ffcc962d469c4",
+        "sourceRole": "Native ImageGen output behind exact retained selected raster; no new generation or claimed model version.",
+        "nativeOutput": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/bradford-cherry-tree-cars/source/native-onDark.png",
+          "sha256": "7dcd3e8a62782d1a28f89d97ecb7fb957a6cfab28a546188d32ffcc962d469c4"
+        },
+        "originalGenerationReceipt": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/bradford-cherry-tree-cars/source/generation-receipt.json",
+          "sha256": "701622ba307269808902e66c5c86f59e76340784917e3f6ba2731ce72426095a"
+        },
+        "derivation": "one ImageGen master exported to context raster"
+      }
+    },
+    "onAccent": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/bradford-cherry-tree-cars/branding/onAccent.png",
+      "sha256": "acef6988bd149d79d209ee12b92253af93349987cb2eae23f443403060d32099",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/bradford-cherry-tree-cars/source/generation-receipt.json#sha256=701622ba307269808902e66c5c86f59e76340784917e3f6ba2731ce72426095a; exact selected handoff b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-f10175a2-a15e-4c41-8125-a7c15bb9408d",
+        "modelVersion": null,
+        "sourceSha256": "7dcd3e8a62782d1a28f89d97ecb7fb957a6cfab28a546188d32ffcc962d469c4",
+        "sourceRole": "Native ImageGen output behind exact retained selected raster; no new generation or claimed model version.",
+        "nativeOutput": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/bradford-cherry-tree-cars/source/native-onAccent.png",
+          "sha256": "7dcd3e8a62782d1a28f89d97ecb7fb957a6cfab28a546188d32ffcc962d469c4"
+        },
+        "originalGenerationReceipt": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/bradford-cherry-tree-cars/source/generation-receipt.json",
+          "sha256": "701622ba307269808902e66c5c86f59e76340784917e3f6ba2731ce72426095a"
+        },
+        "derivation": "one ImageGen master exported to context raster"
+      }
+    }
+  },
+  "originalGenerationReceipt": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/bradford-cherry-tree-cars/source/generation-receipt.json",
+    "sha256": "701622ba307269808902e66c5c86f59e76340784917e3f6ba2731ce72426095a"
+  },
+  "acceptedLogoManifest": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/evidence/final-logo-handoff.json",
+    "sha256": "b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a"
+  },
+  "assetReview": {
+    "status": "completed",
+    "owner": "existing",
+    "proof": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/bradford-cherry-tree-cars/surface-review.png",
+      "sha256": "be2860c3a083b423c620c96ca207c8f2dbec95cf3a6a83293ff7c24efdbabd3b",
+      "bytes": 118616,
+      "width": 740,
+      "height": 864,
+      "format": "png",
+      "hasAlpha": true
+    },
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "scope": "Actual master and compact native-palette swatches inspected; retained pixels remain identical.",
+    "report": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/final-existing-review.json"
+  },
+  "sourceOwnershipUnchanged": true
+}

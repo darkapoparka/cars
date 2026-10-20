@@ -4,9 +4,9 @@
   "name": "IS AUTO Varna",
   "shortName": "IS AUTO Varna",
   "logo": {
-    "light": "/dealer-app/logo-light-d093167bf017992b7686.webp",
-    "dark": "/dealer-app/logo-dark-7be72f265ad997e6f7f8.webp",
-    "icon": "/dealer-app/icon.png"
+    "light": "/dealer-brand/v2-82b4cdb8bfee0672/logo-on-light.webp",
+    "dark": "/dealer-brand/v2-82b4cdb8bfee0672/logo-on-dark.webp",
+    "icon": "/dealer-brand/v2-82b4cdb8bfee0672/app-icon.png"
   },
   "defaultLocale": "bg",
   "enabledLocales": [
@@ -27,11 +27,11 @@
   "socialLinks": [
     {
       "label": "Facebook",
-      "url": ""
+      "url": "https://www.facebook.com/isauto1"
     },
     {
       "label": "Instagram",
-      "url": ""
+      "url": "https://www.instagram.com/is__auto/?hl=bg"
     },
     {
       "label": "Mobile.bg",
@@ -42,13 +42,13 @@
       "url": ""
     }
   ],
+  "referenceClaimsApproved": false,
   "services": [
     "Нови и употребявани автомобили",
     "Внос и подбор",
     "Съдействие при покупка"
   ],
-  "referenceClaimsApproved": false,
   "observedAt": "2026-09-16",
-  "inventoryNotice": "Dated listing samples. Confirm price, availability and vehicle information with the dealer.",
+  "inventoryNotice": "Датирана извадка от публичните обяви към 16.09.2026 г.; потвърдете цената и наличността директно с IS AUTO Varna.",
   "previewNotice": "Independent design preview. No purchase, reservation or message is submitted by this website."
 }

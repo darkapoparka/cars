@@ -1,6 +1,10 @@
 import { brand } from '$config/brand';
+import { leadSite } from '$config/lead-site';
+import type { Locale } from '$lib/locale/core';
+import { templateText, dealerLabel } from '$lib/locale/messages';
+import { formatTemplate } from '$lib/i18n/presentation';
 
-export type BlogCategory = 'Оглед' | 'Внос' | 'Лизинг' | 'Насоки' | 'Регистрация';
+export type BlogCategory = 'Оглед' | 'Внос' | 'Лизинг' | 'Насоки' | 'Бартер';
 
 export type BlogPost = {
   id: number;
@@ -88,6 +92,28 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   {
+    id: 8,
+    title: 'Какво да попитате при оглед',
+    text: 'Пробег, история, оборудване и наличност се потвърждават на място.',
+    category: 'Оглед',
+    tag: 'Оглед',
+    image: '/assets/images/blog/blog-8.jpg',
+    sections: [
+      {
+        title: 'Попитайте за историята и текущото състояние',
+        paragraphs: [
+          'Уточнете каква сервизна информация е налична, има ли известни ремонти или забележки и кои консумативи са сменяни скоро. Поискайте конкретни отговори за конкретния автомобил.'
+        ]
+      },
+      {
+        title: 'Проверете оборудването и следващите разходи',
+        paragraphs: [
+          'Потвърдете важните за вас функции на място и попитайте какво е включено в обявената цена. Добавете към сметката регистрация, първоначално обслужване, гуми и застраховки.'
+        ]
+      }
+    ]
+  },
+  {
     id: 4,
     title: 'Как да изберете автомобил',
     text: 'Марка, купе и бюджет се уточняват с екипа според вашите критерии.',
@@ -133,22 +159,22 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: 6,
-    title: 'Регистрация и транзитни номера',
-    text: 'Проверете документите и потвърдете актуалните стъпки за регистрация или транзитни номера.',
-    category: 'Регистрация',
-    tag: 'Регистрация',
+    title: 'Бартер и оценка',
+    text: 'Предложете автомобил за бартер и поискайте индивидуална оценка.',
+    category: 'Бартер',
+    tag: 'Бартер',
     image: '/assets/images/blog/blog-6.jpg',
     sections: [
       {
-        title: 'Подгответе документите за автомобила',
+        title: 'Подгответе точна информация за автомобила',
         paragraphs: [
-          'Подредете документите за произход и придобиване, данните на автомобила и всичко получено при вноса. Уточнете какво е необходимо за конкретната регистрация.'
+          'Модел, година, пробег, оборудване, сервизна история и известни забележки дават добра начална картина. Снимките помагат за предварителен разговор, но не заменят огледа на място.'
         ]
       },
       {
-        title: 'Потвърдете актуалната процедура',
+        title: 'Разглеждайте оценката като част от цялата сделка',
         paragraphs: [
-          'Теси Кар публикува съдействие при регистрация или транзитни номера в КАТ Варна. Конкретните документи, такси и срокове се потвърждават за автомобила и към момента на регистрацията.'
+          'Крайната стойност зависи от състоянието, документите и текущото пазарно търсене. Сравнете не само оценката на стария автомобил, а и условията по автомобила, който искате да придобиете.'
         ]
       }
     ]
@@ -176,28 +202,6 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   {
-    id: 8,
-    title: 'Какво да попитате при оглед',
-    text: 'Пробег, история, оборудване и наличност се потвърждават на място.',
-    category: 'Оглед',
-    tag: 'Оглед',
-    image: '/assets/images/blog/blog-8.jpg',
-    sections: [
-      {
-        title: 'Попитайте за историята и текущото състояние',
-        paragraphs: [
-          'Уточнете каква сервизна информация е налична, има ли известни ремонти или забележки и кои консумативи са сменяни скоро. Поискайте конкретни отговори за конкретния автомобил.'
-        ]
-      },
-      {
-        title: 'Проверете оборудването и следващите разходи',
-        paragraphs: [
-          'Потвърдете важните за вас функции на място и попитайте какво е включено в обявената цена. Добавете към сметката регистрация, първоначално обслужване, гуми и застраховки.'
-        ]
-      }
-    ]
-  },
-  {
     id: 9,
     title: 'След покупката',
     text: 'Свържете се за сервиз, документи и следващи стъпки след сделката.',
@@ -218,10 +222,85 @@ export const blogPosts: BlogPost[] = [
         ]
       }
     ]
+  },
+  {
+    id: 10,
+    title: 'Пробно шофиране',
+    text: 'Проверете удобството, управлението и поведението на автомобила в движение.',
+    category: 'Оглед',
+    tag: 'Оглед',
+    image: leadSite.artwork.inventoryDemo.stock04,
+    sections: [
+      {
+        title: 'Подгответе удобен маршрут',
+        paragraphs: [
+          'Уговорете пробното шофиране предварително и уточнете подходящ маршрут. Настройте седалката и огледалата, проверете видимостта и помислете дали автомобилът е удобен за ежедневните ви пътувания.'
+        ]
+      },
+      {
+        title: 'Запишете наблюденията си',
+        paragraphs: [
+          'Обърнете внимание на управлението, спирането, превключването и необичайни шумове или вибрации. Запишете конкретните въпроси за разговора с екипа; при съмнения уговорете независим технически преглед.'
+        ]
+      }
+    ]
+  },
+  {
+    id: 11,
+    title: 'Сервизна история',
+    text: 'Проверете наличните записи за обслужване и уточнете следващите стъпки.',
+    category: 'Оглед',
+    tag: 'Оглед',
+    image: leadSite.artwork.inventoryDemo.stock01,
+    sections: [
+      {
+        title: 'Сверете датите и пробега',
+        paragraphs: [
+          'Поискайте наличните сервизни записи и фактури и ги сравнете по дата, пробег и описание на извършената работа. Ако има пропуски или разминавания, отбележете ги и поискайте пояснение за конкретния автомобил.'
+        ]
+      },
+      {
+        title: 'Планирайте следващото обслужване',
+        paragraphs: [
+          'Уточнете какво е обслужено наскоро и кои консумативи предстоят според наличната история и указанията за модела. Когато записите са непълни, обсъдете начален технически преглед със сервиз по ваш избор.'
+        ]
+      }
+    ]
+  },
+  {
+    id: 12,
+    title: 'Избор на двигател',
+    text: 'Изберете гориво и мощност според маршрутите, пробега и разходите си.',
+    category: 'Насоки',
+    tag: 'Насоки',
+    image: leadSite.artwork.inventoryDemo.stock06,
+    sections: [
+      {
+        title: 'Започнете от ежедневните маршрути',
+        paragraphs: [
+          'Помислете колко често шофирате в града, колко дълги пътувания правите и какъв товар превозвате. Използвайте тези навици, за да сравните подходящите двигатели за избрания модел.'
+        ]
+      },
+      {
+        title: 'Сравнете общите разходи',
+        paragraphs: [
+          'Освен заявения разход на гориво, включете обслужване, застраховки и необходимите консумативи. Проверете данните за конкретната версия и обсъдете поддръжката, преди да ограничите избора си до едно гориво.'
+        ]
+      }
+    ]
   }
 ];
 
-export const blogCategories: BlogCategory[] = ['Оглед', 'Внос', 'Лизинг', 'Насоки', 'Регистрация'];
+export const blogCategories: BlogCategory[] = ['Оглед', 'Внос', 'Лизинг', 'Насоки', 'Бартер'];
+
+/** Display the immutable template guide copy without changing loaded posts or category values. */
+export const blogPostTitle = (post: BlogPost, locale: Locale): string => post.id === 5
+  ? formatTemplate(locale, 'Viewing in {p0}', { p0: dealerLabel(locale, 'city') })
+  : templateText(locale, post.title);
+
+export const blogPostSummary = (post: BlogPost, locale: Locale): string => post.id === 5
+  ? formatTemplate(locale, 'Уговорете посещение на {p0}.', { p0: dealerLabel(locale, 'addressLine') })
+  : templateText(locale, post.text);
 
 const isBlogCategory = (value: string | null): value is BlogCategory =>
   Boolean(value && blogCategories.includes(value as BlogCategory));
@@ -233,12 +312,12 @@ export const parseBlogFilters = (params: URLSearchParams): BlogFilters => ({
 
 const normalize = (value: string) => value.trim().toLocaleLowerCase('bg-BG');
 
-export const filterBlogPosts = (posts: BlogPost[], filters: BlogFilters) => {
+export const filterBlogPosts = (posts: BlogPost[], filters: BlogFilters, locale: Locale = 'bg') => {
   const query = normalize(filters.q);
   return posts.filter((post) => {
     if (filters.category && post.category !== filters.category) return false;
     if (!query) return true;
-    return normalize(`${post.title} ${post.text} ${post.category} ${post.tag}`).includes(query);
+    return normalize(`${post.title} ${post.text} ${post.category} ${post.tag} ${blogPostTitle(post, locale)} ${blogPostSummary(post, locale)} ${templateText(locale, post.category)} ${templateText(locale, post.tag)}`).includes(query);
   });
 };
 

@@ -5,6 +5,7 @@
   import BrowseAllCard from './BrowseAllCard.svelte';
   import { resolve } from '$app/paths';
   import Icon from '$components/ui/Icon.svelte';
+  import MobileActionIcon from '$components/layout/MobileActionIcon.svelte';
   import { editorial } from '$data/home';
   import { leadSite } from '$config/lead-site';
   import { imageSrcset } from '$data/responsive-images';
@@ -50,6 +51,16 @@
                 </span>
                 <h3>{i18n.text(item.title)}</h3>
                 <span class="dn-editorial-item__summary">{i18n.text(item.text)}</span>
+                <span class="dn-editorial-item__action dn-article-action">
+                  {i18n.t('action.readArticle')}
+                  <Icon name="arrow-right" size={16} />
+                </span>
+                <span class="dn-editorial-item__mobile-footer">
+                  <span class="dn-editorial-item__mobile-action dn-compact-control dn-quick-pill">
+                    {i18n.t('home.editorial.read')}
+                    <MobileActionIcon name="arrow" size={15} />
+                  </span>
+                </span>
               </span>
             </a>
           </article>
@@ -76,7 +87,7 @@
     overflow: hidden;
     margin: 0 12px;
     padding: 82px 0 0;
-    border-radius: 24px;
+    border-radius: var(--dn-radius-sheet);
     background-image: var(--dn-editorial-banner);
     background-position: center 64%;
     background-repeat: no-repeat;
@@ -153,14 +164,13 @@
     min-width: 0;
     overflow: hidden;
     border: 0;
-    border-radius: 16px;
+    border-radius: var(--dn-radius-card);
     background: #fff;
     box-shadow: 0 2px 8px rgba(18, 25, 38, 0.08);
     transform: none;
     transition: box-shadow 180ms ease-out;
   }
 
-  .dn-editorial-item:hover,
   .dn-editorial-item:focus-within {
     box-shadow: var(--dn-card-hover-shadow);
   }
@@ -194,7 +204,7 @@
     width: 100%;
     height: 220px;
     overflow: hidden;
-    border-radius: 15px 15px 0 0;
+    border-radius: var(--dn-radius-card-inset) var(--dn-radius-card-inset) 0 0;
     background: #eceff2;
   }
 
@@ -251,9 +261,13 @@
     transition: color 180ms ease-out;
   }
 
-  .dn-editorial-item:hover h3,
   .dn-editorial-item:focus-within h3 {
     color: var(--dn-red);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .dn-editorial-item:hover { box-shadow: var(--dn-card-hover-shadow); }
+    .dn-editorial-item:hover h3 { color: var(--dn-red); }
   }
 
   .dn-editorial-item__summary {
@@ -268,6 +282,9 @@
     -webkit-line-clamp: 2;
     line-clamp: 2;
   }
+
+  .dn-editorial-item__action { display: none; }
+  .dn-editorial-item__mobile-footer { display: none; }
 
   @media (prefers-reduced-motion: reduce) {
     .dn-editorial-item, .dn-editorial-item h3 {
@@ -297,7 +314,7 @@
       min-height: 0;
       margin: 0 8px;
       padding: 72px 20px 160px;
-      border-radius: 20px;
+      border-radius: var(--dn-radius-lg);
       background-attachment: scroll;
     }
 
@@ -393,29 +410,73 @@
 
     .dn-editorial-item {
       scroll-snap-align: start;
-      border-radius: 16px;
+      padding: calc(var(--dn-space-1) + var(--dn-space-half));
+      border-radius: var(--dn-radius-card);
       background: var(--dn-mobile-surface);
       box-shadow: none;
     }
 
     .dn-editorial-item__media {
+      flex-shrink: 0;
       height: auto;
       aspect-ratio: 16 / 9;
-      border-radius: 16px 16px 0 0;
+      border-radius: var(--dn-radius-card);
     }
 
     .dn-editorial-item__content {
-      padding: 14px 14px 16px;
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      /* The outer frame and action paint inset already supply 12px below the button. */
+      padding: var(--dn-space-3) var(--dn-space-3) var(--dn-space-half);
+    }
+
+    .dn-editorial-item__link {
+      display: flex;
+      flex-direction: column;
     }
 
     .dn-editorial-item h3 {
-      margin-bottom: 7px;
-      font-size: var(--dn-text-lead);
+      min-block-size: calc(2em * var(--dn-leading-control));
+      margin-bottom: var(--dn-space-2);
+      font: var(--dn-mobile-card-title-font);
+      letter-spacing: var(--dn-tracking-normal);
+    }
+
+    .dn-editorial-item__meta {
+      margin-bottom: var(--dn-space-1);
+    }
+
+    .dn-editorial-item__meta span {
+      color: var(--dn-muted);
+      font: var(--dn-mobile-card-meta-font);
     }
 
     .dn-editorial-item__summary {
-      font-size: var(--dn-text-meta);
-      line-height: var(--dn-leading-meta);
+      display: none;
+    }
+
+    .dn-editorial-item__mobile-footer {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-top: auto;
+    }
+
+    .dn-editorial-item__mobile-action {
+      --dn-compact-control-surface: var(--dn-ink);
+      --dn-compact-control-ink: var(--dn-white);
+      --dn-compact-control-padding-inline: var(--dn-space-3);
+      --dn-compact-control-inset: calc(var(--dn-space-1) + var(--dn-space-half));
+      --dn-entry-action-height: var(--dn-control-height-compact);
+      --dn-entry-action-gap: var(--dn-space-1);
+      --dn-compact-control-font: var(--dn-weight-medium) var(--dn-text-meta) / var(--dn-leading-control) var(--dn-font);
+      max-width: 100%;
+      white-space: normal;
+    }
+
+    .dn-editorial-item__link:is(:hover, :focus-visible) .dn-editorial-item__mobile-action {
+      --dn-compact-control-surface: var(--dn-line-on-ink);
     }
   }
   @media (min-width: 992px) {
@@ -423,12 +484,21 @@
       padding-block: 32px;
     }
 
+    .dn-editorial-item__link { display: flex; flex-direction: column; }
+    .dn-editorial-item__media { flex-shrink: 0; height: 160px; }
+    .dn-editorial-item__badge { display: none; }
+    .dn-editorial-item__content { display: flex; flex: 1; flex-direction: column; padding: var(--dn-space-4); }
+    .dn-editorial-item__meta { margin-bottom: var(--dn-space-1); }
+    .dn-editorial-item h3 { margin-bottom: 6px; }
+    .dn-editorial-item__summary { margin-bottom: var(--dn-space-2); font-size: var(--dn-text-meta); line-height: var(--dn-leading-meta); }
+    .dn-editorial-item__action { display: inline-flex; }
+
     .dn-editorial__banner {
       width: min(var(--dn-content), calc(100% - 48px));
       min-height: 0;
       margin-inline: auto;
       padding: 0;
-      border-radius: 20px 20px 0 0;
+      border-radius: var(--dn-radius-lg) var(--dn-radius-lg) 0 0;
       background: var(--dn-home-panel);
       background-attachment: scroll;
     }

@@ -1,6 +1,5 @@
 import { formatPrice, localeContract, type Locale } from '$lib/locale/core';
 import { templateText } from '$lib/locale/messages';
-import { leadSite } from '$config/lead-site';
 
 export const vehicleTypes = ['car', 'motorbike', 'van', 'truck'] as const;
 export type VehicleType = typeof vehicleTypes[number];
@@ -27,11 +26,16 @@ export type Vehicle = {
   make: string;
   /** Optional manufacturer sub-brand used by compact card identity. */
   cardBrand?: string;
+  /** Seller-supplied highlight by locale; import/condition claims require record-specific evidence. */
+  cardNote?: Partial<Record<Locale, string>>;
   title: string;
   year: string;
   yearNumber: number;
   mileage: string;
   mileageKm: number;
+  mileageKnown?: boolean;
+  mileageValue?: number;
+  mileageUnit?: 'km' | 'mi';
   fuel: string;
   transmission: string;
   equipment: readonly VehicleEquipment[];
@@ -43,7 +47,8 @@ export type Vehicle = {
 export const featuredVehicles: Vehicle[] = [
   {
     "id": 1,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://albasmamotors.com/car/cmtl6wllu000up1mcmlq0al57",
     "image": "/dealer/stock/cmtl6wllu000up1mcmlq0al57/1.webp",
     "category": "Hatchback",
@@ -54,17 +59,20 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2018,
     "mileage": "168,000 км",
     "mileageKm": 168000,
+    "mileageKnown": true,
+    "mileageValue": 168000,
+    "mileageUnit": "km",
     "fuel": "Hybrid",
     "transmission": "Not published",
     "equipment": [],
     "condition": "used",
     "priceEur": 64000,
-    "href": "/listing-detail-v1/1",
-    "type": "car"
+    "href": "/listing-detail-v1/1"
   },
   {
     "id": 2,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://albasmamotors.com/car/cmtl6pxpd000qp1mcvd0b9ktz",
     "image": "/dealer/stock/cmtl6pxpd000qp1mcvd0b9ktz/1.webp",
     "category": "Sedan",
@@ -75,17 +83,20 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2023,
     "mileage": "40,000 км",
     "mileageKm": 40000,
+    "mileageKnown": true,
+    "mileageValue": 40000,
+    "mileageUnit": "km",
     "fuel": "Petrol",
     "transmission": "Not published",
     "equipment": [],
     "condition": "used",
     "priceEur": 105000,
-    "href": "/listing-detail-v1/2",
-    "type": "car"
+    "href": "/listing-detail-v1/2"
   },
   {
     "id": 3,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://albasmamotors.com/car/cmqev42oy00i8p13h9qatx95x",
     "image": "/dealer/stock/cmqev42oy00i8p13h9qatx95x/1.webp",
     "category": "Coupe",
@@ -96,17 +107,20 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2020,
     "mileage": "140,000 км",
     "mileageKm": 140000,
+    "mileageKnown": true,
+    "mileageValue": 140000,
+    "mileageUnit": "km",
     "fuel": "Petrol",
     "transmission": "Not published",
     "equipment": [],
     "condition": "used",
     "priceEur": 150000,
-    "href": "/listing-detail-v1/3",
-    "type": "car"
+    "href": "/listing-detail-v1/3"
   },
   {
     "id": 4,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://albasmamotors.com/car/cmtfwz86o011dp1we5d9fkdvp",
     "image": "/dealer/stock/cmtfwz86o011dp1we5d9fkdvp/1.webp",
     "category": "Sedan",
@@ -117,17 +131,20 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2024,
     "mileage": "151,000 км",
     "mileageKm": 151000,
+    "mileageKnown": true,
+    "mileageValue": 151000,
+    "mileageUnit": "km",
     "fuel": "Petrol",
     "transmission": "Not published",
     "equipment": [],
     "condition": "used",
     "priceEur": 140000,
-    "href": "/listing-detail-v1/4",
-    "type": "car"
+    "href": "/listing-detail-v1/4"
   },
   {
     "id": 5,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://albasmamotors.com/car/cmte58re000ykp1we0fkcsw8e",
     "image": "/dealer/stock/cmte58re000ykp1we0fkcsw8e/1.webp",
     "category": "Sedan",
@@ -138,17 +155,20 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2015,
     "mileage": "52,000 км",
     "mileageKm": 52000,
+    "mileageKnown": true,
+    "mileageValue": 52000,
+    "mileageUnit": "km",
     "fuel": "Petrol",
     "transmission": "Not published",
     "equipment": [],
     "condition": "used",
     "priceEur": 65000,
-    "href": "/listing-detail-v1/5",
-    "type": "car"
+    "href": "/listing-detail-v1/5"
   },
   {
     "id": 6,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://albasmamotors.com/car/cmtb7oa3k00rsp1weiw6cwm9m",
     "image": "/dealer/stock/cmtb7oa3k00rsp1weiw6cwm9m/1.webp",
     "category": "Coupe",
@@ -159,17 +179,20 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2021,
     "mileage": "120,000 км",
     "mileageKm": 120000,
+    "mileageKnown": true,
+    "mileageValue": 120000,
+    "mileageUnit": "km",
     "fuel": "Petrol",
     "transmission": "Not published",
     "equipment": [],
     "condition": "used",
     "priceEur": 80000,
-    "href": "/listing-detail-v1/6",
-    "type": "car"
+    "href": "/listing-detail-v1/6"
   },
   {
     "id": 7,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://albasmamotors.com/car/cmt6yyshu00ljp1wewaxpucal",
     "image": "/dealer/stock/cmt6yyshu00ljp1wewaxpucal/1.webp",
     "category": "Sedan",
@@ -180,17 +203,20 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2023,
     "mileage": "77,000 км",
     "mileageKm": 77000,
+    "mileageKnown": true,
+    "mileageValue": 77000,
+    "mileageUnit": "km",
     "fuel": "Petrol",
     "transmission": "Not published",
     "equipment": [],
     "condition": "used",
     "priceEur": 145000,
-    "href": "/listing-detail-v1/7",
-    "type": "car"
+    "href": "/listing-detail-v1/7"
   },
   {
     "id": 8,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://albasmamotors.com/car/cmt4d2ajl00gsp1wehldp9v1e",
     "image": "/dealer/stock/cmt4d2ajl00gsp1wehldp9v1e/1.webp",
     "category": "SUV",
@@ -201,17 +227,20 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2016,
     "mileage": "228,000 км",
     "mileageKm": 228000,
+    "mileageKnown": true,
+    "mileageValue": 228000,
+    "mileageUnit": "km",
     "fuel": "Petrol",
     "transmission": "Not published",
     "equipment": [],
     "condition": "used",
     "priceEur": 175000,
-    "href": "/listing-detail-v1/8",
-    "type": "car"
+    "href": "/listing-detail-v1/8"
   },
   {
     "id": 9,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://albasmamotors.com/car/cmt4czt2400gqp1weg7ck3qba",
     "image": "/dealer/stock/cmt4czt2400gqp1weg7ck3qba/1.webp",
     "category": "SUV",
@@ -222,17 +251,20 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2024,
     "mileage": "53,000 км",
     "mileageKm": 53000,
+    "mileageKnown": true,
+    "mileageValue": 53000,
+    "mileageUnit": "km",
     "fuel": "Petrol",
     "transmission": "Not published",
     "equipment": [],
     "condition": "used",
     "priceEur": 185000,
-    "href": "/listing-detail-v1/9",
-    "type": "car"
+    "href": "/listing-detail-v1/9"
   },
   {
     "id": 10,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://albasmamotors.com/car/cms38d0r90058p1a10q2alud6",
     "image": "/dealer/stock/cms38d0r90058p1a10q2alud6/1.webp",
     "category": "SUV",
@@ -243,18 +275,23 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2024,
     "mileage": "12,000 км",
     "mileageKm": 12000,
+    "mileageKnown": true,
+    "mileageValue": 12000,
+    "mileageUnit": "km",
     "fuel": "Petrol",
     "transmission": "Not published",
     "equipment": [],
     "condition": "used",
     "priceEur": 165000,
-    "href": "/listing-detail-v1/10",
-    "type": "car"
+    "href": "/listing-detail-v1/10"
   }
 ];
 
-export const formatVehiclePrice = (amount: number, locale: Locale = localeContract.defaultLocale) => amount > 0 ? formatPrice(amount, locale) : templateText(locale, 'Price on request');
+export const formatVehiclePrice = (
+  amount: number,
+  locale: Locale = localeContract.defaultLocale
+) => amount > 0 ? formatPrice(amount, locale) : templateText(locale, 'Price on request');
 
 /** Allow a currency line break while preserving the locale's grouped digits. */
 export const formatVehiclePriceLabel = (amount: number, locale: Locale = localeContract.defaultLocale) =>
-  formatVehiclePrice(amount, locale).replace(/([A-Z]{3})\s+/u, '$1 ').replace(/\s+([A-Z]{3})$/u, ' $1');
+  formatVehiclePrice(amount, locale).replace(/([A-Z]{3}|\p{Sc})\s+/u, '$1 ').replace(/\s+([A-Z]{3}|\p{Sc})$/u, ' $1');

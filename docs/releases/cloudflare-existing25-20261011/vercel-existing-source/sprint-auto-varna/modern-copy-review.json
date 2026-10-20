@@ -1,0 +1,165 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-reviewed-modern-bilingual-copy-input",
+  "dealer": "sprint-auto-varna",
+  "sourceCommit": "d9594c2979f668831b78609e4e990640259aee81",
+  "baselineTree": "30539af117415ea78bc692132169999a4b5e6a18",
+  "inputSha256": "c731a36f43b7b10df826b7cb53278ec3a8621b7cc6a18d285f51fe44cf8b1f29",
+  "modernInputRowsSha256": "da24a89ffadc1a3af36799547d96198c8f19778961dd75010a64eedd82bc8823",
+  "listingCount": 7,
+  "profileInputs": [
+    {
+      "path": "dealer.json",
+      "gitBlob": "d43d2a2686a6eb18c52ff6becf5fa113d8d86061",
+      "sha256": "82c23abeef5434220f600d5c5faae3e76d1caeca62bb11bb2321ad6ea20d6cea",
+      "bytes": 4894
+    },
+    {
+      "path": ".client/registered-source-adoption.json",
+      "gitBlob": "c43e65040c49621350965d87e10d215a7005ae8a",
+      "sha256": "67452fcf5d8e175d388d202ced22bcb0bc187d916fb4bf964a3763f3b287841d",
+      "bytes": 3925
+    },
+    {
+      "path": ".client/registered-personalization.json",
+      "gitBlob": "da5c9bdaeda008ab311e7efeb4690e4fcf3f5035",
+      "sha256": "103b9dc2afc44ab6b19b2a6b67a8e4c732be5cea7a0c150c7440eebc259bd4cf",
+      "bytes": 26781
+    },
+    {
+      "path": "carwow/src/lib/data/dealer.ts",
+      "gitBlob": "3ded09d3c69eb830b1d8f3da81346b4c6f77ed33",
+      "sha256": "4d9d3dba75258dc5a9c7d2b5d0e7acecc0d14f2003bed0a593b5cef479957be6",
+      "bytes": 5495
+    },
+    {
+      "path": "RESEARCH-2026-09-09.md",
+      "gitBlob": "fccb141dd1db1c7e38a59e6729eab9a51444d7af",
+      "sha256": "46ed07095ed7b8c08b98a9cbcd13ed8cd25f5b4b2dbdc2fd1a9d7ea72943f937",
+      "bytes": 5151
+    }
+  ],
+  "reviewedGeneratorHelper": {
+    "path": "scripts/lib/modern-dealer-inventory-copy.mjs",
+    "sha256": "cbdbaa28dc07911cfe913b4e627671b6556fc25d3bfe59364e29c5ca5a29072b",
+    "sourceCommit": "14d86f67c160699c18a6ec5658197cc4d9011e0b"
+  },
+  "review": {
+    "displayCopyOnly": true,
+    "exactSourceDescriptionKeys": true,
+    "listingFactsUnchanged": true,
+    "imageUrlsUnchanged": true,
+    "imageAltsPreserved": true,
+    "interpolationTokensUnchanged": true,
+    "reviewedBy": "Codex, authorized final-template rollout",
+    "reviewedAt": "2026-10-14T20:04:09.121Z",
+    "notes": "Reuse exact existing native or reviewed registered companions for every actual current row; no new translation/factual source edits."
+  },
+  "reviewedCopy": {
+    "audi-2024-template-demo-auto-best-1": {
+      "sourceDescription": "Демонстрационни автомобили от шаблона, а не наличност на автокъщата. Illustrative template vehicles, not this dealership’s stock.",
+      "en": {
+        "description": "Illustrative template vehicles, not this dealership’s stock.",
+        "imageAlts": [
+          "Audi RS 6 Avant"
+        ]
+      },
+      "bg": {
+        "description": "Демонстрационни автомобили от шаблона, а не наличност на автокъщата.",
+        "imageAlts": [
+          "Audi RS 6 Avant"
+        ]
+      }
+    },
+    "mercedes-benz-2021-template-demo-auto-best-2": {
+      "sourceDescription": "Демонстрационни автомобили от шаблона, а не наличност на автокъщата. Illustrative template vehicles, not this dealership’s stock.",
+      "en": {
+        "description": "Illustrative template vehicles, not this dealership’s stock.",
+        "imageAlts": [
+          "Mercedes-Benz GLE Coupé"
+        ]
+      },
+      "bg": {
+        "description": "Демонстрационни автомобили от шаблона, а не наличност на автокъщата.",
+        "imageAlts": [
+          "Mercedes-Benz GLE Coupé"
+        ]
+      }
+    },
+    "audi-2021-template-demo-auto-best-3": {
+      "sourceDescription": "Демонстрационни автомобили от шаблона, а не наличност на автокъщата. Illustrative template vehicles, not this dealership’s stock.",
+      "en": {
+        "description": "Illustrative template vehicles, not this dealership’s stock.",
+        "imageAlts": [
+          "Audi RS Q8"
+        ]
+      },
+      "bg": {
+        "description": "Демонстрационни автомобили от шаблона, а не наличност на автокъщата.",
+        "imageAlts": [
+          "Audi RS Q8"
+        ]
+      }
+    },
+    "bmw-2021-template-demo-auto-best-4": {
+      "sourceDescription": "Демонстрационни автомобили от шаблона, а не наличност на автокъщата. Illustrative template vehicles, not this dealership’s stock.",
+      "en": {
+        "description": "Illustrative template vehicles, not this dealership’s stock.",
+        "imageAlts": [
+          "BMW X6 M Sport"
+        ]
+      },
+      "bg": {
+        "description": "Демонстрационни автомобили от шаблона, а не наличност на автокъщата.",
+        "imageAlts": [
+          "BMW X6 M Sport"
+        ]
+      }
+    },
+    "mercedes-benz-2020-template-demo-auto-best-6": {
+      "sourceDescription": "Демонстрационни автомобили от шаблона, а не наличност на автокъщата. Illustrative template vehicles, not this dealership’s stock.",
+      "en": {
+        "description": "Illustrative template vehicles, not this dealership’s stock.",
+        "imageAlts": [
+          "Mercedes-AMG GT 4-Door"
+        ]
+      },
+      "bg": {
+        "description": "Демонстрационни автомобили от шаблона, а не наличност на автокъщата.",
+        "imageAlts": [
+          "Mercedes-AMG GT 4-Door"
+        ]
+      }
+    },
+    "bmw-2020-template-demo-auto-best-7": {
+      "sourceDescription": "Демонстрационни автомобили от шаблона, а не наличност на автокъщата. Illustrative template vehicles, not this dealership’s stock.",
+      "en": {
+        "description": "Illustrative template vehicles, not this dealership’s stock.",
+        "imageAlts": [
+          "BMW X6 xDrive"
+        ]
+      },
+      "bg": {
+        "description": "Демонстрационни автомобили от шаблона, а не наличност на автокъщата.",
+        "imageAlts": [
+          "BMW X6 xDrive"
+        ]
+      }
+    },
+    "mercedes-benz-2023-template-demo-auto-best-8": {
+      "sourceDescription": "Демонстрационни автомобили от шаблона, а не наличност на автокъщата. Illustrative template vehicles, not this dealership’s stock.",
+      "en": {
+        "description": "Illustrative template vehicles, not this dealership’s stock.",
+        "imageAlts": [
+          "Mercedes-AMG GT Coupé"
+        ]
+      },
+      "bg": {
+        "description": "Демонстрационни автомобили от шаблона, а не наличност на автокъщата.",
+        "imageAlts": [
+          "Mercedes-AMG GT Coupé"
+        ]
+      }
+    }
+  }
+}

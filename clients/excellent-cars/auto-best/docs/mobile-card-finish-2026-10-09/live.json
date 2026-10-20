@@ -1,0 +1,33 @@
+{
+  "base": "http://127.0.0.1:6461",
+  "results": [
+    {
+      "locale": "bg",
+      "width": 320,
+      "passed": true,
+      "servicesNavigation": "/bg/about-us#process",
+      "mobilePrice": "20px"
+    },
+    {
+      "locale": "bg",
+      "width": 390,
+      "passed": true,
+      "servicesNavigation": "/bg/about-us#process",
+      "mobilePrice": "20px"
+    },
+    {
+      "locale": "en",
+      "width": 320,
+      "passed": true,
+      "servicesNavigation": "/en/about-us#process",
+      "mobilePrice": "20px"
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "passed": true,
+      "servicesNavigation": "/en/about-us#process",
+      "mobilePrice": "20px"
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "dealer": "north-norfolk-car-sales",
+  "reviewed": true,
+  "reviewedAt": "2026-10-11T13:30:47.439Z",
+  "reviewScope": "Hash-identical selected current raster inputs and retained genuine surface-review provenance only; actual dealer integration, native and hosted checks pending.",
+  "officialDealerArtwork": false,
+  "dealerApproval": false,
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "generation": {
+    "tool": "image_gen",
+    "generationId": "exec-86ceaa37-347a-4d2a-a18f-de3eef1f8ec7",
+    "modelVersion": null,
+    "sourceSha256": "917081050757e49732d2f93226748ce1092d921e914e4549e22ff480507e9748",
+    "sourceRole": "Native ImageGen output behind exact retained selected raster; no new generation or claimed model version.",
+    "nativeOutput": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/north-norfolk-car-sales/source/native-onLight.png",
+      "sha256": "917081050757e49732d2f93226748ce1092d921e914e4549e22ff480507e9748"
+    },
+    "originalGenerationReceipt": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/north-norfolk-car-sales/source/generation-receipt.json",
+      "sha256": "ae29f3874ab0f82921d95b7575f556c211fcb04126f992f213a277f258f5a27b"
+    },
+    "derivation": "one ImageGen master exported to context raster"
+  },
+  "master": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/north-norfolk-car-sales/branding/master.png",
+    "sha256": "c23fdb0ef73c962a59829ed0682f9dddc6d34fd9aa8a74bd218c41f9bab4d587"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/north-norfolk-car-sales/branding/onLight.png",
+      "sha256": "c23fdb0ef73c962a59829ed0682f9dddc6d34fd9aa8a74bd218c41f9bab4d587",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/north-norfolk-car-sales/source/generation-receipt.json#sha256=ae29f3874ab0f82921d95b7575f556c211fcb04126f992f213a277f258f5a27b; exact selected handoff b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-86ceaa37-347a-4d2a-a18f-de3eef1f8ec7",
+        "modelVersion": null,
+        "sourceSha256": "917081050757e49732d2f93226748ce1092d921e914e4549e22ff480507e9748",
+        "sourceRole": "Native ImageGen output behind exact retained selected raster; no new generation or claimed model version.",
+        "nativeOutput": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/north-norfolk-car-sales/source/native-onLight.png",
+          "sha256": "917081050757e49732d2f93226748ce1092d921e914e4549e22ff480507e9748"
+        },
+        "originalGenerationReceipt": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/north-norfolk-car-sales/source/generation-receipt.json",
+          "sha256": "ae29f3874ab0f82921d95b7575f556c211fcb04126f992f213a277f258f5a27b"
+        },
+        "derivation": "one ImageGen master exported to context raster"
+      }
+    },
+    "onDark": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/north-norfolk-car-sales/branding/onDark.png",
+      "sha256": "ba0c62192aadf4169288220e671b39c955bb7d1ce296abcc8ca99b0f0f6fa43a",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/north-norfolk-car-sales/source/generation-receipt.json#sha256=ae29f3874ab0f82921d95b7575f556c211fcb04126f992f213a277f258f5a27b; exact selected handoff b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-86ceaa37-347a-4d2a-a18f-de3eef1f8ec7",
+        "modelVersion": null,
+        "sourceSha256": "917081050757e49732d2f93226748ce1092d921e914e4549e22ff480507e9748",
+        "sourceRole": "Native ImageGen output behind exact retained selected raster; no new generation or claimed model version.",
+        "nativeOutput": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/north-norfolk-car-sales/source/native-onDark.png",
+          "sha256": "917081050757e49732d2f93226748ce1092d921e914e4549e22ff480507e9748"
+        },
+        "originalGenerationReceipt": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/north-norfolk-car-sales/source/generation-receipt.json",
+          "sha256": "ae29f3874ab0f82921d95b7575f556c211fcb04126f992f213a277f258f5a27b"
+        },
+        "derivation": "one ImageGen master exported to context raster"
+      }
+    },
+    "onAccent": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/north-norfolk-car-sales/branding/onAccent.png",
+      "sha256": "ba0c62192aadf4169288220e671b39c955bb7d1ce296abcc8ca99b0f0f6fa43a",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/north-norfolk-car-sales/source/generation-receipt.json#sha256=ae29f3874ab0f82921d95b7575f556c211fcb04126f992f213a277f258f5a27b; exact selected handoff b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-86ceaa37-347a-4d2a-a18f-de3eef1f8ec7",
+        "modelVersion": null,
+        "sourceSha256": "917081050757e49732d2f93226748ce1092d921e914e4549e22ff480507e9748",
+        "sourceRole": "Native ImageGen output behind exact retained selected raster; no new generation or claimed model version.",
+        "nativeOutput": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/north-norfolk-car-sales/source/native-onAccent.png",
+          "sha256": "917081050757e49732d2f93226748ce1092d921e914e4549e22ff480507e9748"
+        },
+        "originalGenerationReceipt": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/north-norfolk-car-sales/source/generation-receipt.json",
+          "sha256": "ae29f3874ab0f82921d95b7575f556c211fcb04126f992f213a277f258f5a27b"
+        },
+        "derivation": "one ImageGen master exported to context raster"
+      }
+    }
+  },
+  "originalGenerationReceipt": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/north-norfolk-car-sales/source/generation-receipt.json",
+    "sha256": "ae29f3874ab0f82921d95b7575f556c211fcb04126f992f213a277f258f5a27b"
+  },
+  "acceptedLogoManifest": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/evidence/final-logo-handoff.json",
+    "sha256": "b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a"
+  },
+  "assetReview": {
+    "status": "completed",
+    "owner": "existing",
+    "proof": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/final-polish-stage/north-norfolk-car-sales/surface-review.png",
+      "sha256": "875b838041c0ab6f59a76f24bb7f3b6107b555a4c690ec965b537373e3bbe30d",
+      "bytes": 120397,
+      "width": 740,
+      "height": 864,
+      "format": "png",
+      "hasAlpha": true
+    },
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "scope": "Actual master and compact native-palette swatches inspected; retained pixels remain identical.",
+    "report": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/final-existing-review.json"
+  },
+  "sourceOwnershipUnchanged": true
+}

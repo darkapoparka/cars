@@ -1,0 +1,168 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-reviewed-modern-bilingual-copy-input",
+  "dealer": "motherwell-motors-castle",
+  "sourceCommit": "d9594c2979f668831b78609e4e990640259aee81",
+  "baselineTree": "199bd6aa4da3a71f90a626f06e46a97ffc9a8b20",
+  "inputSha256": "5b9630d9d9cf58f95ab2515b73a515f05494fecbc7e9b66ba0b492847ef2ed94",
+  "modernInputRowsSha256": "0f59076fe9cc033dd84996e15014f9ce7aec0475ddc8c4e1702949eb36126a0e",
+  "listingCount": 8,
+  "profileInputs": [
+    {
+      "path": "dealer.json",
+      "gitBlob": "c51525a3258c50672ca8782ae4f033582beb8c3d",
+      "sha256": "394205c049de7d2055aad1d67cfee4088ca3f3b295e7843e525a3f5e40637e6b",
+      "bytes": 4322
+    },
+    {
+      "path": "business-facts.json",
+      "gitBlob": "fc71c16a183676911d730d891bf05a43f6284277",
+      "sha256": "ef8506b0810636bc1f0f68c9b1acd2f3f837b882d9686391893d10ca97dfc9ef",
+      "bytes": 11141
+    },
+    {
+      "path": "stock.json",
+      "gitBlob": "f5a4923b8fdbf3138fb8ef8d5a5139f7b8c273a4",
+      "sha256": "2d3c50384865f0eb254ff88b34e8e20fa11b6fd0b063b05d88a23cafed361d38",
+      "bytes": 13221
+    }
+  ],
+  "reviewedGeneratorHelper": {
+    "path": "scripts/lib/modern-dealer-inventory-copy.mjs",
+    "sha256": "cbdbaa28dc07911cfe913b4e627671b6556fc25d3bfe59364e29c5ca5a29072b",
+    "sourceCommit": "14d86f67c160699c18a6ec5658197cc4d9011e0b"
+  },
+  "review": {
+    "displayCopyOnly": true,
+    "exactSourceDescriptionKeys": true,
+    "listingFactsUnchanged": true,
+    "imageUrlsUnchanged": true,
+    "imageAltsPreserved": true,
+    "interpolationTokensUnchanged": true,
+    "reviewedBy": "Codex, authorized final-template rollout",
+    "reviewedAt": "2026-10-14T20:04:09.100Z",
+    "notes": "Reuse exact existing native or reviewed registered companions for every actual current row; no new translation/factual source edits."
+  },
+  "reviewedCopy": {
+    "audi-a1-2013-800753431171": {
+      "sourceDescription": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "en": {
+        "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+        "imageAlts": [
+          "2013 Audi A1 1.6 TDI S Line 5dr HATCHBACK Diesel Manual"
+        ]
+      },
+      "bg": {
+        "description": "Илюстрация — не показва обявения автомобил. Това са датирани данни от обяви, наблюдавани на 10 октомври 2026 г. Потвърдете оригиналната обява, цената, състоянието и наличността с автокъщата.",
+        "imageAlts": [
+          "2013 Audi A1 1.6 TDI S Line 5dr HATCHBACK Diesel Manual"
+        ]
+      }
+    },
+    "vauxhall-corsa-2021-800729940509": {
+      "sourceDescription": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "en": {
+        "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+        "imageAlts": [
+          "2021 Vauxhall Corsa 1.2 SE 5dr HATCHBACK Petrol Manual"
+        ]
+      },
+      "bg": {
+        "description": "Илюстрация — не показва обявения автомобил. Това са датирани данни от обяви, наблюдавани на 10 октомври 2026 г. Потвърдете оригиналната обява, цената, състоянието и наличността с автокъщата.",
+        "imageAlts": [
+          "2021 Vauxhall Corsa 1.2 SE 5dr HATCHBACK Petrol Manual"
+        ]
+      }
+    },
+    "citroen-c3-2023-800722114749": {
+      "sourceDescription": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "en": {
+        "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+        "imageAlts": [
+          "2023 Citroen C3 1.2 PureTech Elle 5dr HATCHBACK Petrol Manual"
+        ]
+      },
+      "bg": {
+        "description": "Илюстрация — не показва обявения автомобил. Това са датирани данни от обяви, наблюдавани на 10 октомври 2026 г. Потвърдете оригиналната обява, цената, състоянието и наличността с автокъщата.",
+        "imageAlts": [
+          "2023 Citroen C3 1.2 PureTech Elle 5dr HATCHBACK Petrol Manual"
+        ]
+      }
+    },
+    "renault-clio-2016-800696671424": {
+      "sourceDescription": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "en": {
+        "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+        "imageAlts": [
+          "2016 Renault Clio 0.9 TCE 90 Dynamique Nav 5dr HATCHBACK Petrol Manual"
+        ]
+      },
+      "bg": {
+        "description": "Илюстрация — не показва обявения автомобил. Това са датирани данни от обяви, наблюдавани на 10 октомври 2026 г. Потвърдете оригиналната обява, цената, състоянието и наличността с автокъщата.",
+        "imageAlts": [
+          "2016 Renault Clio 0.9 TCE 90 Dynamique Nav 5dr HATCHBACK Petrol Manual"
+        ]
+      }
+    },
+    "vauxhall-corsa-2015-800682432068": {
+      "sourceDescription": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "en": {
+        "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+        "imageAlts": [
+          "2015 Vauxhall Corsa 1.4 Limited Edition 3dr HATCHBACK Petrol Manual"
+        ]
+      },
+      "bg": {
+        "description": "Илюстрация — не показва обявения автомобил. Това са датирани данни от обяви, наблюдавани на 10 октомври 2026 г. Потвърдете оригиналната обява, цената, състоянието и наличността с автокъщата.",
+        "imageAlts": [
+          "2015 Vauxhall Corsa 1.4 Limited Edition 3dr HATCHBACK Petrol Manual"
+        ]
+      }
+    },
+    "audi-q5-2013-800637144674": {
+      "sourceDescription": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "en": {
+        "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+        "imageAlts": [
+          "2013 Audi Q5 2.0 TDI Quattro S Line Plus 5dr ESTATE Diesel Manual"
+        ]
+      },
+      "bg": {
+        "description": "Илюстрация — не показва обявения автомобил. Това са датирани данни от обяви, наблюдавани на 10 октомври 2026 г. Потвърдете оригиналната обява, цената, състоянието и наличността с автокъщата.",
+        "imageAlts": [
+          "2013 Audi Q5 2.0 TDI Quattro S Line Plus 5dr ESTATE Diesel Manual"
+        ]
+      }
+    },
+    "nissan-qashqai-2016-800632116283": {
+      "sourceDescription": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "en": {
+        "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+        "imageAlts": [
+          "2016 Nissan Qashqai 1.5 dCi Tekna 5dr HATCHBACK Diesel Manual"
+        ]
+      },
+      "bg": {
+        "description": "Илюстрация — не показва обявения автомобил. Това са датирани данни от обяви, наблюдавани на 10 октомври 2026 г. Потвърдете оригиналната обява, цената, състоянието и наличността с автокъщата.",
+        "imageAlts": [
+          "2016 Nissan Qashqai 1.5 dCi Tekna 5dr HATCHBACK Diesel Manual"
+        ]
+      }
+    },
+    "audi-a1-2016-800549423064": {
+      "sourceDescription": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "en": {
+        "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+        "imageAlts": [
+          "2016 Audi A1 1.4 TFSI Sport 5dr HATCHBACK Petrol Manual"
+        ]
+      },
+      "bg": {
+        "description": "Илюстрация — не показва обявения автомобил. Това са датирани данни от обяви, наблюдавани на 10 октомври 2026 г. Потвърдете оригиналната обява, цената, състоянието и наличността с автокъщата.",
+        "imageAlts": [
+          "2016 Audi A1 1.4 TFSI Sport 5dr HATCHBACK Petrol Manual"
+        ]
+      }
+    }
+  }
+}

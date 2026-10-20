@@ -69,6 +69,17 @@ interface MarketplaceControlCopy {
     selectDerivative: string;
     selectMake: string;
   };
+  mobileTitles: Record<
+    | MarketplaceFilterView
+    | QuickFilterKey
+    | "category"
+    | "derivative"
+    | "make"
+    | "model"
+    | "more"
+    | "search",
+    string
+  >;
   options: {
     dealer: string;
     diesel: string;
@@ -94,6 +105,7 @@ interface MarketplaceControlCopy {
   search: {
     allFilters: string;
     ariaLabel: string;
+    makeModelPlaceholder: string;
     placeholder: string;
   };
   sort: Record<SortOption, string>;
@@ -125,27 +137,27 @@ const copyByLanguage = {
     },
     categories: {
       car: {
-        description: "Леки автомобили, SUV, комбита, купета и хечбеци",
+        description: "Седани, SUV и комбита",
         label: "Автомобили",
         shortLabel: "Коли",
       },
       truck: {
-        description: "Товарни автомобили, пикапи и тежкотоварна техника",
+        description: "Пикапи и тежкотоварни",
         label: "Камиони",
         shortLabel: "Камиони",
       },
       motorbike: {
-        description: "Мотоциклети, скутери и туристически модели",
+        description: "Мотори и скутери",
         label: "Мотоциклети",
         shortLabel: "Мотори",
       },
       van: {
-        description: "Товарни и пътнически бусове и микробуси",
+        description: "Пътнически и товарни",
         label: "Бусове",
         shortLabel: "Бусове",
       },
       lease: {
-        description: "Автомобили на лизинг и оферти с месечна вноска",
+        description: "С месечна вноска",
         label: "Лизинг",
         shortLabel: "Лизинг",
       },
@@ -186,6 +198,27 @@ const copyByLanguage = {
     },
     fullFilterDescription:
       "Разширени филтри за автомобил, цена, пробег и продавач.",
+    mobileTitles: {
+      main: "Филтри",
+      category: "Тип",
+      "make-model": "Марка",
+      make: "Марка",
+      model: "Модел",
+      derivative: "Вариант",
+      more: "Още",
+      body: "Купе",
+      "deliver-to": "Доставка",
+      origin: "Произход",
+      location: "Място",
+      price: "Цена",
+      year: "Година",
+      mileage: "Пробег",
+      fuel: "Гориво",
+      transmission: "Скорости",
+      seller: "Продавач",
+      search: "Търси",
+      sort: "Сортиране",
+    },
     makeModel: {
       anyDerivative: "Всички каросерии",
       anyDerivativeDescription: "Покажи всички обяви за този модел",
@@ -226,6 +259,7 @@ const copyByLanguage = {
     search: {
       allFilters: "Отвори всички филтри",
       ariaLabel: "Търси автомобили",
+      makeModelPlaceholder: "Марка или модел",
       placeholder: "Търси…",
     },
     sort: {
@@ -262,27 +296,27 @@ const copyByLanguage = {
     },
     categories: {
       car: {
-        description: "Passenger cars, SUVs, wagons, coupes, and hatchbacks",
+        description: "Sedans, SUVs and wagons",
         label: "Cars",
         shortLabel: "Cars",
       },
       truck: {
-        description: "Commercial trucks, pickups, and heavy duty vehicles",
+        description: "Pickups and heavy trucks",
         label: "Trucks",
         shortLabel: "Trucks",
       },
       motorbike: {
-        description: "Motorcycles, scooters, and touring bikes",
+        description: "Motorcycles and scooters",
         label: "Motorbikes",
         shortLabel: "Bikes",
       },
       van: {
-        description: "Cargo vans, passenger vans, and minibuses",
+        description: "Passenger and cargo vans",
         label: "Vans",
         shortLabel: "Vans",
       },
       lease: {
-        description: "Lease-ready vehicles and monthly offers",
+        description: "Cars with monthly payments",
         label: "Lease",
         shortLabel: "Lease",
       },
@@ -323,6 +357,27 @@ const copyByLanguage = {
     },
     fullFilterDescription:
       "Extended vehicle, price, mileage, and seller filters.",
+    mobileTitles: {
+      main: "Filters",
+      category: "Type",
+      "make-model": "Make",
+      make: "Make",
+      model: "Model",
+      derivative: "Variant",
+      more: "More",
+      body: "Body",
+      "deliver-to": "Delivery",
+      origin: "Origin",
+      location: "Location",
+      price: "Price",
+      year: "Year",
+      mileage: "Mileage",
+      fuel: "Fuel",
+      transmission: "Transmission",
+      seller: "Seller",
+      search: "Search",
+      sort: "Sort",
+    },
     makeModel: {
       anyDerivative: "All body styles",
       anyDerivativeDescription: "Show every listing for this model",
@@ -364,6 +419,7 @@ const copyByLanguage = {
     search: {
       allFilters: "Open all filters",
       ariaLabel: "Search vehicles",
+      makeModelPlaceholder: "Make or model",
       placeholder: "Search…",
     },
     sort: {

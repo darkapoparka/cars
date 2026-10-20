@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-focused-exact-source-editorial-repair-proof",
+  "dealer": "asko-96",
+  "baseSourceCommit": "7cbb9d004bc6ae32f0bace5beeea30bd4bb5cb86",
+  "baseSourceTree": "f3c92c9a759cefbb7f911c73dc847aebcda81069",
+  "sourceModuleProof": {
+    "dealer": "asko-96",
+    "sourceCommit": "7cbb9d004bc6ae32f0bace5beeea30bd4bb5cb86",
+    "sourceTree": "f3c92c9a759cefbb7f911c73dc847aebcda81069",
+    "scope": "clients/asko-96/import/src/lib/content/extra-localized.ts",
+    "baseBlob": "fc77f7002b62f92aa8cf3149746fe6f85487fceb",
+    "candidateBlob": "157bade69b636c4adc211c46661385b2ddd54e5d",
+    "candidate": {
+      "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-vercel-resume-20261015/wave-transport/isauto-editorial-repair/asko-96/extra-localized.ts",
+      "sha256": "643964bb2a371e35c1dc9a4964d79f643764789d425d2eed13d924f85200bc1f"
+    },
+    "patch": {
+      "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-vercel-resume-20261015/wave-transport/isauto-editorial-repair/asko-96/explicit-editorial.patch",
+      "sha256": "f4a52c25754eec8fcc660af3abdf5b2a2943573b9a307c7a4dcf4c00b0c2e31f"
+    },
+    "addedEntries": [
+      {
+        "bg": "Подбрани автомобили от публикуваните обяви. Наличностите и условията се потвърждават с АСКО 96.",
+        "en": "Selected vehicles from the published listings. Availability and terms must be confirmed with АСКО 96."
+      }
+    ],
+    "beforeError": "Missing English editorial catalog entry: Подбрани автомобили от публикуваните обяви. Наличностите и условията се потвърждават с АСКО 96.",
+    "after": {
+      "slug": "confirm-current-availability",
+      "title": "How to confirm current availability at АСКО 96",
+      "category": "Dealer information",
+      "date": "2026-09-06",
+      "image": "/assets/daynight/codex-generated-v2/blog/blog-cover-import-check-v2.webp",
+      "excerpt": "Selected vehicles from the published listings. Availability and terms must be confirmed with АСКО 96.",
+      "content": [
+        "Contact the dealership on 0899 76 96 96 and identify the exact vehicle before visiting.",
+        "Independent demonstration preview. Forms do not send messages or create a reservation."
+      ]
+    },
+    "checks": {
+      "exactRetainedSource": true,
+      "beforeFailureReproduced": true,
+      "afterEnglishPostsPassed": true,
+      "bgBehaviorUnchanged": true,
+      "dateSlugAndImageUnchanged": true,
+      "allExistingCatalogEntriesUnchanged": true,
+      "unknownEditorialStillThrows": true
+    },
+    "modulesRead": [
+      {
+        "path": "import/src/lib/content/localized.ts",
+        "blob": "6373bf7efbcece37372881f2915f91cbf05ef21b"
+      },
+      {
+        "path": "import/src/lib/content/extra-localized.ts",
+        "blob": "fc77f7002b62f92aa8cf3149746fe6f85487fceb"
+      },
+      {
+        "path": "import/src/lib/config/site.ts",
+        "blob": "d8ccb2e922f23a4223bad5c590fd1a61cd234c17"
+      },
+      {
+        "path": "import/src/lib/config/dealer.ts",
+        "blob": "6cc4398848479b25a96883fcab03b8a0af918e80"
+      },
+      {
+        "path": "import/src/lib/config/cars-locale.ts",
+        "blob": "2278c3e7ad4ea30dc297ae0cfcd690cace058760"
+      },
+      {
+        "path": "import/src/lib/data/blog.ts",
+        "blob": "0a0fdf648ed400e4d85f11b78e0daf4d95cc0c71"
+      }
+    ]
+  },
+  "originalProof": {
+    "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-vercel-resume-20261015/wave-transport/isauto-editorial-repair/remaining-editorial-repair-proof.json",
+    "sha256": "5b7710a457523840c6295ab7bd853bb852aaf37a84998230d40403a7c39f2566"
+  },
+  "compiled": false,
+  "newCiRun": null,
+  "providerWrites": 0
+}

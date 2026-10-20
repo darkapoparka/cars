@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "dealer": "technocar-varna",
+  "media": [
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/technocar-varna/media/21789131552465526-1.webp",
+      "sha256": "41912ccccef24a435841c16fb4aba4b31f3bbf3701a1b1b46d513d8be71ed0c5",
+      "bytes": 827652,
+      "destination": "dealer-stock/21789131552465526-1.webp"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/technocar-varna/media/21789131552465526-2.webp",
+      "sha256": "5798e9223c1c7b44faf61a468508a24cda785877c90217d9326db55034c9b733",
+      "bytes": 650186,
+      "destination": "dealer-stock/21789131552465526-2.webp"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/technocar-varna/media/21787826931085094-1.webp",
+      "sha256": "bd872c56b0dfea0761112b8b64a13452ebd3c21d1b9f0557cb9e1aa3cf270406",
+      "bytes": 547974,
+      "destination": "dealer-stock/21787826931085094-1.webp"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/technocar-varna/media/21787826931085094-2.webp",
+      "sha256": "c8bc359821502f156b26c4e5a2d70fe1f3323d41f8b82cab7b28cb914ed20f60",
+      "bytes": 516664,
+      "destination": "dealer-stock/21787826931085094-2.webp"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "slug": "specialcarood-varna",
+  "name": "Специал Кар",
+  "shortName": "Специал Кар",
+  "city": "Варна",
+  "country": "BG",
+  "countryCode": "BG",
+  "locale": "bg-BG",
+  "currency": "EUR",
+  "distanceUnit": "km",
+  "phone": "0893557367",
+  "phoneDisplay": "0893557367",
+  "phoneE164": "+359893557367",
+  "phones": [
+    "0893557367"
+  ],
+  "addressLine": "бул. Цар Освободител 324",
+  "address": "бул. Цар Освободител 324, Варна, България",
+  "hours": "Потвърдете работното време директно с автокъщата.",
+  "email": "",
+  "sourceUrl": "https://specialcarood.mobile.bg/",
+  "stockUrl": "https://specialcarood.mobile.bg/",
+  "contactSourceUrl": "https://specialcarood.mobile.bg/contacts",
+  "observedAt": "2026-10-11T11:54:05.255Z",
+  "inventoryNotice": "Датирана извадка от публични обяви, не складова система в реално време. Потвърдете цената, ДДС и наличността.",
+  "previewNotice": "Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация.",
+  "services": [],
+  "socialLinks": {}
+}

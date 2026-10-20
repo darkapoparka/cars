@@ -113,6 +113,7 @@
     </Popover.Trigger>
     <Popover.Portal to={portalTarget}>
       <Popover.Content bind:ref={picker} class="dn-filter-picker" role="dialog" aria-labelledby={id + '-title'} sideOffset={8} align="start" collisionPadding={16}
+        collisionBoundary={desktop.current && portalTarget?.tagName === 'DIALOG' ? portalTarget : []}
         onOpenAutoFocus={focusPicker}
         onCloseAutoFocus={restoreFocus} onInteractOutside={interactOutside}
         onkeydowncapture={event => { keyboardBrowsing = event.key.startsWith('Arrow'); }} onpointerdowncapture={() => { keyboardBrowsing = false; }}>

@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "dealer": "kg-team-auto",
+  "reviewed": true,
+  "reviewedAt": "2026-10-11T13:30:46.906Z",
+  "reviewScope": "Hash-identical selected current raster inputs and retained genuine surface-review provenance only; actual dealer integration, native and hosted checks pending.",
+  "officialDealerArtwork": false,
+  "dealerApproval": false,
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "generation": {
+    "tool": "image_gen",
+    "generationId": "exec-d471384f-20bc-445e-9ab0-b45060d10825",
+    "modelVersion": null,
+    "sourceSha256": "995fd21c47922e71f01b9f4df687c7038c0834f26c30cf62d417e25fbd6faba9",
+    "sourceRole": "Native ImageGen output behind exact retained selected raster; no new generation or claimed model version.",
+    "nativeOutput": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/kg-team-auto/source/native-onLight.png",
+      "sha256": "995fd21c47922e71f01b9f4df687c7038c0834f26c30cf62d417e25fbd6faba9"
+    },
+    "originalGenerationReceipt": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/kg-team-auto/source/generation-receipt.json",
+      "sha256": "732d71d7ac0d9180001d67fcc916735359d3115b30882d2ca86f3e18663e9a9d"
+    },
+    "derivation": "one ImageGen master exported to context raster"
+  },
+  "master": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/kg-team-auto/branding/master.png",
+    "sha256": "72d490beb86e8c252a72fe55e8aac505d344228d1e26b134b73be658f0e7562a"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/kg-team-auto/branding/onLight.png",
+      "sha256": "72d490beb86e8c252a72fe55e8aac505d344228d1e26b134b73be658f0e7562a",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/kg-team-auto/source/generation-receipt.json#sha256=732d71d7ac0d9180001d67fcc916735359d3115b30882d2ca86f3e18663e9a9d; exact selected handoff b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-d471384f-20bc-445e-9ab0-b45060d10825",
+        "modelVersion": null,
+        "sourceSha256": "995fd21c47922e71f01b9f4df687c7038c0834f26c30cf62d417e25fbd6faba9",
+        "sourceRole": "Native ImageGen output behind exact retained selected raster; no new generation or claimed model version.",
+        "nativeOutput": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/kg-team-auto/source/native-onLight.png",
+          "sha256": "995fd21c47922e71f01b9f4df687c7038c0834f26c30cf62d417e25fbd6faba9"
+        },
+        "originalGenerationReceipt": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/kg-team-auto/source/generation-receipt.json",
+          "sha256": "732d71d7ac0d9180001d67fcc916735359d3115b30882d2ca86f3e18663e9a9d"
+        },
+        "derivation": "one ImageGen master exported to context raster"
+      }
+    },
+    "onDark": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/kg-team-auto/branding/onDark.png",
+      "sha256": "caa6c5c98b5fc10d8bc533b258c6a79ca405db04d46efc0615e8f81f54f52f1b",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/kg-team-auto/source/generation-receipt.json#sha256=732d71d7ac0d9180001d67fcc916735359d3115b30882d2ca86f3e18663e9a9d; exact selected handoff b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-d471384f-20bc-445e-9ab0-b45060d10825",
+        "modelVersion": null,
+        "sourceSha256": "995fd21c47922e71f01b9f4df687c7038c0834f26c30cf62d417e25fbd6faba9",
+        "sourceRole": "Native ImageGen output behind exact retained selected raster; no new generation or claimed model version.",
+        "nativeOutput": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/kg-team-auto/source/native-onDark.png",
+          "sha256": "995fd21c47922e71f01b9f4df687c7038c0834f26c30cf62d417e25fbd6faba9"
+        },
+        "originalGenerationReceipt": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/kg-team-auto/source/generation-receipt.json",
+          "sha256": "732d71d7ac0d9180001d67fcc916735359d3115b30882d2ca86f3e18663e9a9d"
+        },
+        "derivation": "one ImageGen master exported to context raster"
+      }
+    },
+    "onAccent": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/kg-team-auto/branding/onAccent.png",
+      "sha256": "caa6c5c98b5fc10d8bc533b258c6a79ca405db04d46efc0615e8f81f54f52f1b",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/kg-team-auto/source/generation-receipt.json#sha256=732d71d7ac0d9180001d67fcc916735359d3115b30882d2ca86f3e18663e9a9d; exact selected handoff b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-d471384f-20bc-445e-9ab0-b45060d10825",
+        "modelVersion": null,
+        "sourceSha256": "995fd21c47922e71f01b9f4df687c7038c0834f26c30cf62d417e25fbd6faba9",
+        "sourceRole": "Native ImageGen output behind exact retained selected raster; no new generation or claimed model version.",
+        "nativeOutput": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/kg-team-auto/source/native-onAccent.png",
+          "sha256": "995fd21c47922e71f01b9f4df687c7038c0834f26c30cf62d417e25fbd6faba9"
+        },
+        "originalGenerationReceipt": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/kg-team-auto/source/generation-receipt.json",
+          "sha256": "732d71d7ac0d9180001d67fcc916735359d3115b30882d2ca86f3e18663e9a9d"
+        },
+        "derivation": "one ImageGen master exported to context raster"
+      }
+    }
+  },
+  "originalGenerationReceipt": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/kg-team-auto/source/generation-receipt.json",
+    "sha256": "732d71d7ac0d9180001d67fcc916735359d3115b30882d2ca86f3e18663e9a9d"
+  },
+  "acceptedLogoManifest": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/evidence/final-logo-handoff.json",
+    "sha256": "b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a"
+  },
+  "assetReview": {
+    "status": "completed",
+    "owner": "baseline",
+    "proof": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/final-polish-stage/kg-team-auto/surface-review.png",
+      "sha256": "a125a5cbe62a604c4b37c36b4c6a73a380c318bd98a9b07732f65d9d6c72e7c9",
+      "bytes": 101659,
+      "width": 740,
+      "height": 864,
+      "format": "png",
+      "hasAlpha": true
+    },
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "scope": "Actual master and compact native-palette swatches inspected; retained pixels remain identical.",
+    "report": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/final-baseline-review.json"
+  },
+  "sourceOwnershipUnchanged": true
+}

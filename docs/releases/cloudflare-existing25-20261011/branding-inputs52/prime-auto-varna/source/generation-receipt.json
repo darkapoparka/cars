@@ -1,0 +1,351 @@
+{
+  "slug": "prime-auto-varna",
+  "coreName": "PRIME AUTO",
+  "generatedPath": "C:/Users/radev/.codex/generated_images/01a12a34-877e-73a2-9a3d-346e546742c6/exec-ba1e8b29-6d78-4b71-86de-ad7754ef69ef.png",
+  "strategy": "USE GENERATED CANDIDATE",
+  "identityStatus": "Disclosed expressive single-row Prime Auto proposal preserving simple charcoal car-profile cue; previous orange-glow attempt rejected; owner style approval pending",
+  "onLight": "original",
+  "onDark": "white",
+  "onAccent": "white",
+  "imageGeneration": {
+    "tool": "image_gen.imagegen",
+    "reference": "exec-ba1e8b29-6d78-4b71-86de-ad7754ef69ef",
+    "prompt": "Create ONE flat vector-like raster dealer PROPOSAL logo on true transparent RGBA background. Exact name PRIME AUTO, a single horizontal row of expressive heavy slightly forward-slanted rounded-square automotive lettering, balanced open counters. Place a compact simple P-shaped car-roof emblem LEFT of the name, same visual axis; car roof one smooth stroke and two open wheel arcs. Entire logo ONLY solid opaque dark charcoal #20252b; NO other color. No orange, red, glow, fog, haze, gradients, shadows, translucent interiors, chrome, photoreal art, outlines around name, mockup or background. Every stroke must be crisp opaque solid ink; all spaces including letter counters and outside shapes true alpha transparency. Modest padding around complete wide landscape composition. No secondary text, slogan, underline, caption, stacks or multiple options. Retain the actual Prime Auto charcoal car-profile cue in a new compact horizontal proposed identity; approval pending.",
+    "transparent_background": true,
+    "outputPath": "C:/Users/radev/.codex/generated_images/01a12a34-877e-73a2-9a3d-346e546742c6/exec-ba1e8b29-6d78-4b71-86de-ad7754ef69ef.png",
+    "actualOutputHint": "Generated images are saved to C:\\Users\\radev\\.codex\\generated_images\\01a12a34-877e-73a2-9a3d-346e546742c6 as C:\\Users\\radev\\.codex\\generated_images\\01a12a34-877e-73a2-9a3d-346e546742c6\\exec-ba1e8b29-6d78-4b71-86de-ad7754ef69ef.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+  },
+  "derivation": {
+    "kind": "new-proposed-identity",
+    "styleReferenceOnly": false,
+    "referencesSuppliedToTool": false,
+    "businessIdentityBasis": "Published PrimeAuto monochrome car-profile cue visually observed in original package, described in the actual prompt; generated fresh without image reference.",
+    "changeReason": "Generic type under oversize car silhouette; reflow recognizable car cue to a compact left emblem and expressive single-row name."
+  },
+  "rejectedOutputs": [
+    {
+      "reference": "exec-03fe0abc-7163-4625-adcc-24509be17cdd",
+      "outputPath": "C:/Users/radev/.codex/generated_images/01a12a34-877e-73a2-9a3d-346e546742c6/exec-03fe0abc-7163-4625-adcc-24509be17cdd.png",
+      "prompt": "Use the attached AVTOMOTOR identity ONLY as a reference for expressive confident automotive letter shapes. Do not copy its emblem or words or stacked layout. Create ONE complete fresh proposed identity, with a small distinctive business-specific emblem LEFT of the name on ONE horizontal row, all on one common visual axis. No text above/below, subtitles, slogans, phone, location caption, descriptors beyond the exact requested core name, underline, stacked layout, multiple options, chrome, gradients, shadow, glow, texture or background plate. True transparent RGBA canvas. Flat solid opaque shapes with clean transparent counters, generous open counters, balanced kerning and modest clear padding. Name charcoal #20252b, useful identity accent confined to emblem. Custom automotive lettering with a restrained forward slant; no plain generic sans typesetting. Distinctive emblem must relate to this name, not a fleet-wide symbol. Exact name: PRIME AUTO. Retain the published simple charcoal side-profile car cue as a compact left emblem: a clean open P-shaped front and one smooth roof stroke, two open wheel arcs, no intricate realistic car drawing. Expressive bold slightly slanted squared-round lettering. Complete wide landscape logo, all requested words equally prominent on the same row. Proposed dealer demo identity, no official approval claim.",
+      "referenced_image_paths": [
+        "L:/CODEX/cars/leads/branding/fleet-20261011/am-varna-varna/branding/logo-master.png"
+      ],
+      "transparent_background": true,
+      "reason": "Visible orange glow and translucent dark haze rather than source charcoal flat shapes; rejected regardless of alpha/exporter pass.",
+      "actualOutputHint": "Generated images are saved to C:\\Users\\radev\\.codex\\generated_images\\01a12a34-877e-73a2-9a3d-346e546742c6 as C:\\Users\\radev\\.codex\\generated_images\\01a12a34-877e-73a2-9a3d-346e546742c6\\exec-03fe0abc-7163-4625-adcc-24509be17cdd.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "nativeOriginalSha256": "24cfd8fb43cc2c9c4d5d31891ebb45151e46b17f7a0bd95bec222c8ae148492f",
+      "retained": true
+    }
+  ],
+  "surfaceReviewPath": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/prime-auto-varna/surface-review.png",
+  "visualAccepted": true,
+  "ownerStyleStatus": "pending",
+  "originalPackage": {
+    "path": "L:/CODEX/cars/leads/branding/fleet-20261011/prime-auto-varna",
+    "files": [
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/prime-auto-varna/branding/logo-master.png",
+        "sha256": "4a14f104455564b734a36ed0404929afd6bb4271cc9c80b6991bbd7404fa3dd6"
+      },
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/prime-auto-varna/branding/logo-on-light.png",
+        "sha256": "4a14f104455564b734a36ed0404929afd6bb4271cc9c80b6991bbd7404fa3dd6"
+      },
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/prime-auto-varna/branding/logo-on-dark.png",
+        "sha256": "d6321b01b3b3c7e199f78d7c5bf1411d7da29a9173b26debe6a9d83f4219a1ed"
+      },
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/prime-auto-varna/branding/logo-on-accent.png",
+        "sha256": "d6321b01b3b3c7e199f78d7c5bf1411d7da29a9173b26debe6a9d83f4219a1ed"
+      },
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/prime-auto-varna/dealer-brand/logo-on-light.webp",
+        "sha256": "2064bc6429c8e64da466396f7814c58cccfbbe7254b190ff4c09c4762f2198e1"
+      },
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/prime-auto-varna/dealer-brand/logo-on-dark.webp",
+        "sha256": "ecf4be781097454ce20105a100128168615c03428506a05040e41c814b34e4a7"
+      },
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/prime-auto-varna/dealer-brand/logo-on-accent.webp",
+        "sha256": "ecf4be781097454ce20105a100128168615c03428506a05040e41c814b34e4a7"
+      },
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/prime-auto-varna/receipt.json",
+        "sha256": "5bf4550bbf4366a9677e1efc2d60261adcfcbf53ca912a5c75a687d13f459741"
+      },
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/prime-auto-varna/branding/logo-contract.json",
+        "sha256": "a823f6241fb16852b9f807913aea50b18adb1c796403d494835387528d48e019"
+      },
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/prime-auto-varna/technical-check.json",
+        "sha256": "3490101210b68fc9d25bb065be3aeead464d6f9dd0f6a3c32d83507feb004d84"
+      },
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/prime-auto-varna/surface-review.png",
+        "sha256": "1ceba4d9e54db94fde51e0e6147b28152c73dc2988f26dd59fc3224d0e580747"
+      }
+    ]
+  },
+  "sourceUrls": [
+    "https://prime_auto.mobile.bg/",
+    "https://cdn2.focus.bg/mobile/images/housespicts/h15323517957298601.pic"
+  ],
+  "publishedBranding": {
+    "profileUrl": "https://prime_auto.mobile.bg/",
+    "sourceLogoUrl": "https://cdn2.focus.bg/mobile/images/housespicts/h15323517957298601.pic",
+    "observedAt": "2026-10-11T09:19:47.189Z",
+    "visualEvidence": "Published identity visually reviewed with CUA screenshot; downloaded original retained in source-evidence.",
+    "retainedEvidence": [
+      "L:/CODEX/cars/leads/branding/fleet-20261011/prime-auto-varna/source-evidence/published-logo.jpg"
+    ]
+  },
+  "sourceEvidence": [
+    {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/prime-auto-varna/source-evidence/published-logo.jpg",
+      "sha256": "603b7f289865df0ac58877e40eb547f224d88346d352557d87299529a3bc0888",
+      "bytes": 96016,
+      "format": "jpeg",
+      "width": 980,
+      "height": 653,
+      "hasAlpha": false,
+      "alpha": {
+        "min": 255,
+        "max": 255,
+        "transparentRatio": 0,
+        "opaqueRatio": 1
+      },
+      "visibleBounds": {
+        "x": 0,
+        "y": 0,
+        "width": 980,
+        "height": 653
+      }
+    }
+  ],
+  "previousTreatment": {
+    "receipt": "L:/CODEX/cars/leads/branding/fleet-20261011/prime-auto-varna/receipt.json",
+    "sha256": "5bf4550bbf4366a9677e1efc2d60261adcfcbf53ca912a5c75a687d13f459741",
+    "imageGeneration": {
+      "tool": "image_gen.imagegen",
+      "reference": "functions.exec cell19 image_gen.imagegen output exec-730f2985-c007-4922-b926-272bad9753a1",
+      "outputPath": "C:/Users/radev/.codex/generated_images/01a12a34-877e-73a2-9a3d-346e546742c6/exec-730f2985-c007-4922-b926-272bad9753a1.png",
+      "transparent_background": true,
+      "modelVersion": "not exposed by tool",
+      "prompt": "Refine exact PrimeAuto logo from reference as transparent high resolution logo. Preserve exact capitalization PrimeAuto, the bold sans-serif text, and side profile sedan line drawing above; composition and recognizable car geometry remain. Change white ink to dark charcoal #17191f for white surface. Remove charcoal textured background completely; counters and gaps truly transparent. No new icon or words, no shadow, no bevel, no glow. Generous transparent margin.",
+      "promptProvenance": {
+        "kind": "exact-original-tool-input",
+        "transcript": "C:/Users/radev/.codex/sessions/2026/10/11/rollout-2026-10-11T12-04-08-01a12a34-877e-73a2-9a3d-346e546742c6.jsonl",
+        "toolCallLine": 241,
+        "toolCallId": "call_b34924de3f054061b7bb2a8fee5a6f6b",
+        "toolCallTimestamp": "2026-10-11T09:10:53.629Z",
+        "generationEventLine": 253,
+        "generationId": "exec-730f2985-c007-4922-b926-272bad9753a1",
+        "generationEventTimestamp": "2026-10-11T09:11:14.916Z",
+        "extraction": "JSON-decoded original prompt string literal; unchanged wording. Completed image_gen.generation revisedPrompt exactly matches it.",
+        "referencedImagesProvided": true
+      },
+      "referenced_image_paths": [
+        "L:/CODEX/cars/leads/branding/fleet-20261011/prime-auto-varna/source-evidence/published-logo.jpg"
+      ]
+    }
+  },
+  "styleReferenceEvidence": null,
+  "factualNameTreatment": {
+    "fullPublishedName": "PRIME AUTO",
+    "displayedCoreName": "PRIME AUTO",
+    "explicitlyOmitted": null,
+    "authorization": "Owner permits recognizable trading name and visibly secondary generic descriptive captions omitted; no alternate trading name invented"
+  },
+  "selectionStatus": "technically-selected-preferred-revised-pack",
+  "visualChecks": {
+    "reviewer": "baseline asset agent",
+    "spelling": "PRIME AUTO",
+    "layout": "Compact unique emblem beside one expressive name row; no secondary captions",
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "backgrounds": [
+      "#ffffff",
+      "#30343b",
+      "#17191c",
+      "#202023",
+      "#19171d",
+      "#171717",
+      "#b00020",
+      "#405ff2"
+    ],
+    "transparency": "Master and contextual exports visually inspected; no matte, filled counters, clipped strokes or residue visible",
+    "smallSize": "Correct name and distinctive emblem readable at120/180/320 width in isolated raster swatches",
+    "reviewedAt": "2026-10-11T11:36:45.004Z",
+    "approval": "Technical asset selection only; owner/style, dealer, all actual six-design consumers and hosted review pending"
+  },
+  "schemaVersion": 1,
+  "dealer": "prime-auto-varna",
+  "state": "asset-verified",
+  "generated": {
+    "path": "C:/Users/radev/.codex/generated_images/01a12a34-877e-73a2-9a3d-346e546742c6/exec-ba1e8b29-6d78-4b71-86de-ad7754ef69ef.png",
+    "sha256": "be875fafef8d2f868deb6b146ee6523d0d058bea8b4c29fc28dee109470caf9c",
+    "bytes": 298585,
+    "format": "png",
+    "width": 2172,
+    "height": 724,
+    "hasAlpha": true,
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparentRatio": 0.8700163049560962,
+      "opaqueRatio": 0.11105748196534497
+    },
+    "visibleBounds": {
+      "x": 92,
+      "y": 244,
+      "width": 1988,
+      "height": 231
+    }
+  },
+  "assets": {
+    "onLight": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/prime-auto-varna/dealer-brand/logo-on-light.webp",
+      "sha256": "d1129dc18e954bb96dd64635e7d7c0555646e7979dd4993cd090988ee9dfb33e",
+      "bytes": 44770,
+      "format": "webp",
+      "width": 1496,
+      "height": 236,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.7098902157164869,
+        "opaqueRatio": 0.2432248708420194
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 36,
+        "width": 1400,
+        "height": 163
+      },
+      "publicPath": "/dealer-brand/logo-on-light.webp"
+    },
+    "onDark": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/prime-auto-varna/dealer-brand/logo-on-dark.webp",
+      "sha256": "51bed4f4e9dfdd2b0eb2e3da8b96042684bca609ef621588fd6ea12760d409b5",
+      "bytes": 29072,
+      "format": "webp",
+      "width": 1496,
+      "height": 236,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.7098902157164869,
+        "opaqueRatio": 0.2432248708420194
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 36,
+        "width": 1400,
+        "height": 163
+      },
+      "publicPath": "/dealer-brand/logo-on-dark.webp"
+    },
+    "onAccent": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/prime-auto-varna/dealer-brand/logo-on-accent.webp",
+      "sha256": "51bed4f4e9dfdd2b0eb2e3da8b96042684bca609ef621588fd6ea12760d409b5",
+      "bytes": 29072,
+      "format": "webp",
+      "width": 1496,
+      "height": 236,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.7098902157164869,
+        "opaqueRatio": 0.2432248708420194
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 36,
+        "width": 1400,
+        "height": 163
+      },
+      "publicPath": "/dealer-brand/logo-on-accent.webp"
+    }
+  },
+  "master": {
+    "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/prime-auto-varna/branding/logo-master.png",
+    "sha256": "ab53582e5e560e47abe8183e392cd7406c31158a415317047b4ba3c8675eec23",
+    "bytes": 126870,
+    "format": "png",
+    "width": 1496,
+    "height": 236,
+    "hasAlpha": true,
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparentRatio": 0.7098902157164869,
+      "opaqueRatio": 0.2432248708420194
+    },
+    "visibleBounds": {
+      "x": 48,
+      "y": 36,
+      "width": 1400,
+      "height": 163
+    }
+  },
+  "technicalAcceptance": {
+    "reviewer": "baseline asset agent",
+    "spelling": "PRIME AUTO",
+    "layout": "Compact unique emblem beside one expressive name row; no secondary captions",
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "backgrounds": [
+      "#ffffff",
+      "#30343b",
+      "#17191c",
+      "#202023",
+      "#19171d",
+      "#171717",
+      "#b00020",
+      "#405ff2"
+    ],
+    "transparency": "Master and contextual exports visually inspected; no matte, filled counters, clipped strokes or residue visible",
+    "smallSize": "Correct name and distinctive emblem readable at120/180/320 width in isolated raster swatches",
+    "reviewedAt": "2026-10-11T11:36:45.004Z",
+    "approval": "Technical asset selection only; owner/style, dealer, all actual six-design consumers and hosted review pending"
+  },
+  "integrationVerified": false,
+  "hostedVerified": false,
+  "ownerApproved": false,
+  "exportTool": "docs/logo-refresh/2026-09-18/tools/build-approved-logo-pack.mjs",
+  "exportToolSha256": "7fab60c4000210eff6bbb91f9c35e869bad90834d3bdd09d282a9a51835f0dbc",
+  "exportIsolation": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/style-baseline-export",
+  "updatedAt": "2026-10-11T11:36:45.209Z",
+  "pngTreatments": {
+    "on-light": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/prime-auto-varna/branding/logo-on-light.png",
+      "sha256": "ab53582e5e560e47abe8183e392cd7406c31158a415317047b4ba3c8675eec23"
+    },
+    "on-dark": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/prime-auto-varna/branding/logo-on-dark.png",
+      "sha256": "e1e497c8fbc677187f3d83f4334dcb2080a109ab832b82fbb30d5359a9b80ce2"
+    },
+    "on-accent": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/prime-auto-varna/branding/logo-on-accent.png",
+      "sha256": "e1e497c8fbc677187f3d83f4334dcb2080a109ab832b82fbb30d5359a9b80ce2"
+    }
+  },
+  "exportRetention": {
+    "nativeImageGenOriginalRetained": true,
+    "compactQAPath": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/prime-auto-varna/surface-review.png",
+    "historicalExportScratch": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/style-baseline-export",
+    "retirementReceipt": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/baseline-single-row-retention.json"
+  }
+}

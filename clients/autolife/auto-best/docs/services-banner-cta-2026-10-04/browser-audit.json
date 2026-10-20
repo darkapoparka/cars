@@ -1,0 +1,191 @@
+{
+  "before": {
+    "bg390": {
+      "card": {
+        "bottom": 535.921875,
+        "height": 150.25,
+        "left": 12,
+        "right": 363,
+        "top": 385.671875,
+        "width": 351,
+        "x": 12,
+        "y": 385.671875
+      },
+      "copy": "Всички услуги Оглед, внос и лизинг Виж услугите",
+      "scroll": [
+        0,
+        1431
+      ],
+      "viewport": [
+        390,
+        844
+      ]
+    }
+  },
+  "after": {
+    "bg390": {
+      "card": {
+        "bottom": 553.296875,
+        "height": 167.625,
+        "left": 12,
+        "right": 363,
+        "top": 385.671875,
+        "width": 351,
+        "x": 12,
+        "y": 385.671875
+      },
+      "color": "rgb(255, 255, 255)",
+      "copy": "Всички услуги Оглед, внос, бартер и лизинг Виж услугите",
+      "cta": {
+        "bottom": 532.296875,
+        "height": 44,
+        "left": 25,
+        "right": 167.515625,
+        "top": 488.296875,
+        "width": 142.515625,
+        "x": 25,
+        "y": 488.296875
+      },
+      "detail": {
+        "bottom": 476.296875,
+        "height": 40.03125,
+        "left": 25,
+        "right": 222.390625,
+        "top": 436.265625,
+        "width": 197.390625,
+        "x": 25,
+        "y": 436.265625
+      },
+      "overflow": false,
+      "scroll": [
+        0,
+        1431
+      ],
+      "surface": "rgb(20, 23, 29)",
+      "viewport": [
+        390,
+        844
+      ]
+    },
+    "bg320": {
+      "card": {
+        "bottom": 568.671875,
+        "height": 167.625,
+        "left": 12,
+        "right": 293,
+        "top": 401.046875,
+        "width": 281,
+        "x": 12,
+        "y": 401.046875
+      },
+      "color": "rgb(255, 255, 255)",
+      "copy": "Всички услуги Оглед, внос, бартер и лизинг Виж услугите",
+      "cta": {
+        "bottom": 547.671875,
+        "height": 44,
+        "left": 25,
+        "right": 167.515625,
+        "top": 503.671875,
+        "width": 142.515625,
+        "x": 25,
+        "y": 503.671875
+      },
+      "detail": {
+        "bottom": 491.671875,
+        "height": 40.03125,
+        "left": 25,
+        "right": 180.390625,
+        "top": 451.640625,
+        "width": 155.390625,
+        "x": 25,
+        "y": 451.640625
+      },
+      "heroSource": "http://127.0.0.1:6461/assets/images/lead/day-night-collection-banner-v2-480.webp",
+      "href": "/bg/about-us#process",
+      "label": {
+        "bottom": 534.765625,
+        "height": 18.1875,
+        "left": 37,
+        "right": 132.515625,
+        "top": 516.578125,
+        "width": 95.515625,
+        "x": 37,
+        "y": 516.578125
+      },
+      "labelClipped": false,
+      "labelLines": 0.9993131868131868,
+      "nestedActions": 0,
+      "overflow": false,
+      "scroll": [
+        0,
+        1401
+      ],
+      "surface": "rgb(20, 23, 29)",
+      "viewport": [
+        320,
+        844
+      ]
+    },
+    "en320": {
+      "card": {
+        "bottom": 568.671875,
+        "height": 167.625,
+        "left": 12,
+        "right": 293,
+        "top": 401.046875,
+        "width": 281,
+        "x": 12,
+        "y": 401.046875
+      },
+      "color": "rgb(255, 255, 255)",
+      "copy": "All services Viewing, import, trade-in & finance See services",
+      "cta": {
+        "bottom": 547.671875,
+        "height": 44,
+        "left": 25,
+        "right": 158.953125,
+        "top": 503.671875,
+        "width": 133.953125,
+        "x": 25,
+        "y": 503.671875
+      },
+      "detail": {
+        "bottom": 491.671875,
+        "height": 40.03125,
+        "left": 25,
+        "right": 180.390625,
+        "top": 451.640625,
+        "width": 155.390625,
+        "x": 25,
+        "y": 451.640625
+      },
+      "heroSource": "http://127.0.0.1:6461/assets/images/lead/day-night-collection-banner-v2-480.webp",
+      "href": "/en/about-us#process",
+      "label": {
+        "bottom": 534.765625,
+        "height": 18.1875,
+        "left": 37,
+        "right": 123.953125,
+        "top": 516.578125,
+        "width": 86.953125,
+        "x": 37,
+        "y": 516.578125
+      },
+      "labelClipped": false,
+      "labelLines": 0.9993131868131868,
+      "nestedActions": 0,
+      "overflow": false,
+      "scroll": [
+        0,
+        1401
+      ],
+      "surface": "rgb(20, 23, 29)",
+      "viewport": [
+        320,
+        844
+      ]
+    }
+  },
+  "destination": "http://127.0.0.1:6461/bg/about-us#process",
+  "console": []
+}

@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-source-publication",
+  "reviewed": true,
+  "reviewedAt": "2026-10-13T14:42:48.703Z",
+  "dealer": "vaen-cars-varna",
+  "dealerId": "vaen-cars-varna",
+  "repository": "darkapoparka/cars-vaen-cars-varna",
+  "sourceOwnership": "cars-canonical",
+  "request": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/batch-4-qualified23-request.json",
+    "sha256": "dcdd093f40a04d9187d5ddaa8cbdbb0006b0fed9ff01722a2d9179278d548f29"
+  },
+  "proposal": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/vaen-cars-varna/source-proposal.json",
+    "sha256": "24a7084e8db8293b06bf033f78d71a6bdfa0988a394b5b8100a588fcafab18a9"
+  },
+  "preparation": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/vaen-cars-varna/source-preparation.json",
+    "sha256": "c9c82a6a1fe245d919239b30d069e7b94fee3cb49b412421303d1e704c4ef387"
+  },
+  "inputMapping": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/vaen-cars-varna/input-mapping.json",
+    "sha256": "0ba2026ad7189e851c58870d531d56fb23951b82e28cc6eb97ccb6d01d93d350"
+  },
+  "sourcePublication": {
+    "repository": "darkapoparka/cars",
+    "commit": "328c0102d7ed151781c4358033eae12102697bd4",
+    "sourceTree": "a75973ad32cf59600f7347a252e9b99379264d62",
+    "ref": "refs/heads/main",
+    "publishedAt": "2026-10-13T14:41:00.838Z",
+    "evidence": "https://github.com/darkapoparka/cars/commit/328c0102d7ed151781c4358033eae12102697bd4"
+  }
+}

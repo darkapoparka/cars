@@ -11,6 +11,14 @@
   let { compactMobile = false }: { compactMobile?: boolean } = $props();
   import { dealer } from "#lib/content.ts";
   const mobile = new MediaQuery("(max-width: 767.98px)");
+  const brandsIntro = $derived(
+    dealer.copy["home.brandsIntro"] === "Explore our dated vehicle examples." &&
+      (dealer.businessPreview?.mode === "dated-listing-snapshot" || dealer.businessPreview?.mode === "illustrative-not-dealer-stock")
+      ? locale.t(dealer.businessPreview.mode === "illustrative-not-dealer-stock"
+          ? "referenceHome.brands.illustrativeIntro"
+          : "referenceHome.brands.datedIntro")
+      : dealer.copy["home.brandsIntro"] ?? "Explore a range of leading car manufacturers.",
+  );
 </script>
 
 <div
@@ -32,8 +40,7 @@
           >
           <p
             class="text-lg-medium neutral-500 home-section-description desktop-type-lead"
-            >{dealer.copy["home.brandsIntro"] ??
-              "Explore a range of leading car manufacturers."}</p
+            >{brandsIntro}</p
           >
           {#if mobile.current}
             <MobilePill

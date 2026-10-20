@@ -65,7 +65,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Al Hamoor Al Thahabi Used Cars",
       "verificationStatus": "unverified",
       "city": "Sharjah",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-f36b0deff0d57ac0/logo-on-light.webp"
     },
     "publishedAt": "2026-09-09T09:00:00.000Z",
     "promoted": true
@@ -133,7 +133,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Al Hamoor Al Thahabi Used Cars",
       "verificationStatus": "unverified",
       "city": "Sharjah",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-f36b0deff0d57ac0/logo-on-light.webp"
     },
     "publishedAt": "2026-09-09T09:00:00.000Z",
     "promoted": true
@@ -201,7 +201,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Al Hamoor Al Thahabi Used Cars",
       "verificationStatus": "unverified",
       "city": "Sharjah",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-f36b0deff0d57ac0/logo-on-light.webp"
     },
     "publishedAt": "2026-09-09T09:00:00.000Z",
     "promoted": true
@@ -269,7 +269,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Al Hamoor Al Thahabi Used Cars",
       "verificationStatus": "unverified",
       "city": "Sharjah",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-f36b0deff0d57ac0/logo-on-light.webp"
     },
     "publishedAt": "2026-09-09T09:00:00.000Z",
     "promoted": false
@@ -337,7 +337,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Al Hamoor Al Thahabi Used Cars",
       "verificationStatus": "unverified",
       "city": "Sharjah",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-f36b0deff0d57ac0/logo-on-light.webp"
     },
     "publishedAt": "2026-09-09T09:00:00.000Z",
     "promoted": false
@@ -405,7 +405,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Al Hamoor Al Thahabi Used Cars",
       "verificationStatus": "unverified",
       "city": "Sharjah",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-f36b0deff0d57ac0/logo-on-light.webp"
     },
     "publishedAt": "2026-09-09T09:00:00.000Z",
     "promoted": false
@@ -473,7 +473,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Al Hamoor Al Thahabi Used Cars",
       "verificationStatus": "unverified",
       "city": "Sharjah",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-f36b0deff0d57ac0/logo-on-light.webp"
     },
     "publishedAt": "2026-09-09T09:00:00.000Z",
     "promoted": false
@@ -541,415 +541,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Al Hamoor Al Thahabi Used Cars",
       "verificationStatus": "unverified",
       "city": "Sharjah",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
-    },
-    "publishedAt": "2026-09-09T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1004",
-    "slug": "mercedes-benz-cla250-2025-965722",
-    "category": "car",
-    "dealerOrgId": "dealer-al-hamoor-al-thahabi",
-    "status": "active",
-    "title": "2025 Mercedes-Benz CLA250 Premium + 2.0L",
-    "description": "Dated advertised listing sample. Confirm the vehicle condition, availability and viewing location with the dealership.",
-    "price": {
-      "amount": 95000,
-      "currency": "AED"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/dealer/inventory/965722-1.webp",
-        "alt": "2025 Mercedes-Benz CLA250 Premium + 2.0L"
-      },
-      {
-        "url": "/dealer/inventory/965722-2.webp",
-        "alt": "2025 Mercedes-Benz CLA250 Premium + 2.0L"
-      },
-      {
-        "url": "/dealer/inventory/965722-3.webp",
-        "alt": "2025 Mercedes-Benz CLA250 Premium + 2.0L"
-      },
-      {
-        "url": "/dealer/inventory/965722-4.webp",
-        "alt": "2025 Mercedes-Benz CLA250 Premium + 2.0L"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Sharjah",
-      "region": "Sharjah",
-      "country": "United Arab Emirates"
-    },
-    "features": [
-      {
-        "bg": "American specification",
-        "en": "American specification"
-      }
-    ],
-    "spec": {
-      "make": "Mercedes-Benz",
-      "model": "CLA250",
-      "trim": "Premium + 2.0L",
-      "year": 2025,
-      "bodyType": "sedan",
-      "fuelType": "gasoline",
-      "transmission": "automatic",
-      "mileageValue": 22000,
-      "mileageUnit": "km",
-      "colorExterior": "Brown"
-    },
-    "seller": {
-      "id": "dealer-al-hamoor-al-thahabi",
-      "type": "dealer",
-      "displayName": "Al Hamoor Al Thahabi Used Cars",
-      "verificationStatus": "unverified",
-      "city": "Sharjah",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
-    },
-    "publishedAt": "2026-09-09T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1005",
-    "slug": "nissan-rogue-2023-1005647",
-    "category": "car",
-    "dealerOrgId": "dealer-al-hamoor-al-thahabi",
-    "status": "active",
-    "title": "2023 Nissan Rogue Platinum",
-    "description": "Dated advertised listing sample. Confirm the vehicle condition, availability and viewing location with the dealership.",
-    "price": {
-      "amount": 45000,
-      "currency": "AED"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/dealer/inventory/1005647-1.webp",
-        "alt": "2023 Nissan Rogue Platinum"
-      },
-      {
-        "url": "/dealer/inventory/1005647-2.webp",
-        "alt": "2023 Nissan Rogue Platinum"
-      },
-      {
-        "url": "/dealer/inventory/1005647-3.webp",
-        "alt": "2023 Nissan Rogue Platinum"
-      },
-      {
-        "url": "/dealer/inventory/1005647-4.webp",
-        "alt": "2023 Nissan Rogue Platinum"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Sharjah",
-      "region": "Sharjah",
-      "country": "United Arab Emirates"
-    },
-    "features": [
-      {
-        "bg": "American specification",
-        "en": "American specification"
-      }
-    ],
-    "spec": {
-      "make": "Nissan",
-      "model": "Rogue",
-      "trim": "Platinum",
-      "year": 2023,
-      "bodyType": "suv",
-      "fuelType": "gasoline",
-      "transmission": "automatic",
-      "mileageValue": 56000,
-      "mileageUnit": "km",
-      "colorExterior": "Grey"
-    },
-    "seller": {
-      "id": "dealer-al-hamoor-al-thahabi",
-      "type": "dealer",
-      "displayName": "Al Hamoor Al Thahabi Used Cars",
-      "verificationStatus": "unverified",
-      "city": "Sharjah",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
-    },
-    "publishedAt": "2026-09-09T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1006",
-    "slug": "toyota-prado-2011-1010924",
-    "category": "car",
-    "dealerOrgId": "dealer-al-hamoor-al-thahabi",
-    "status": "active",
-    "title": "2011 Toyota Prado TX-L",
-    "description": "Dated advertised listing sample. Confirm the vehicle condition, availability and viewing location with the dealership.",
-    "price": {
-      "amount": 56000,
-      "currency": "AED"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/dealer/inventory/1010924-1.webp",
-        "alt": "2011 Toyota Prado TX-L"
-      },
-      {
-        "url": "/dealer/inventory/1010924-2.webp",
-        "alt": "2011 Toyota Prado TX-L"
-      },
-      {
-        "url": "/dealer/inventory/1010924-3.webp",
-        "alt": "2011 Toyota Prado TX-L"
-      },
-      {
-        "url": "/dealer/inventory/1010924-4.webp",
-        "alt": "2011 Toyota Prado TX-L"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Sharjah",
-      "region": "Sharjah",
-      "country": "United Arab Emirates"
-    },
-    "features": [
-      {
-        "bg": "GCC specification",
-        "en": "GCC specification"
-      }
-    ],
-    "spec": {
-      "make": "Toyota",
-      "model": "Prado",
-      "trim": "TX-L",
-      "year": 2011,
-      "bodyType": "suv",
-      "fuelType": "gasoline",
-      "transmission": "automatic",
-      "mileageValue": 212000,
-      "mileageUnit": "km",
-      "colorExterior": "White"
-    },
-    "seller": {
-      "id": "dealer-al-hamoor-al-thahabi",
-      "type": "dealer",
-      "displayName": "Al Hamoor Al Thahabi Used Cars",
-      "verificationStatus": "unverified",
-      "city": "Sharjah",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
-    },
-    "publishedAt": "2026-09-09T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1007",
-    "slug": "chevrolet-malibu-2022-1018774",
-    "category": "car",
-    "dealerOrgId": "dealer-al-hamoor-al-thahabi",
-    "status": "active",
-    "title": "2022 Chevrolet Malibu LT",
-    "description": "Dated advertised listing sample. Confirm the vehicle condition, availability and viewing location with the dealership.",
-    "price": {
-      "amount": 32000,
-      "currency": "AED"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/dealer/inventory/1018774-1.webp",
-        "alt": "2022 Chevrolet Malibu LT"
-      },
-      {
-        "url": "/dealer/inventory/1018774-2.webp",
-        "alt": "2022 Chevrolet Malibu LT"
-      },
-      {
-        "url": "/dealer/inventory/1018774-3.webp",
-        "alt": "2022 Chevrolet Malibu LT"
-      },
-      {
-        "url": "/dealer/inventory/1018774-4.webp",
-        "alt": "2022 Chevrolet Malibu LT"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Sharjah",
-      "region": "Sharjah",
-      "country": "United Arab Emirates"
-    },
-    "features": [
-      {
-        "bg": "GCC specification",
-        "en": "GCC specification"
-      }
-    ],
-    "spec": {
-      "make": "Chevrolet",
-      "model": "Malibu",
-      "trim": "LT",
-      "year": 2022,
-      "bodyType": "sedan",
-      "fuelType": "gasoline",
-      "transmission": "automatic",
-      "mileageValue": 95000,
-      "mileageUnit": "km",
-      "colorExterior": "Silver"
-    },
-    "seller": {
-      "id": "dealer-al-hamoor-al-thahabi",
-      "type": "dealer",
-      "displayName": "Al Hamoor Al Thahabi Used Cars",
-      "verificationStatus": "unverified",
-      "city": "Sharjah",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
-    },
-    "publishedAt": "2026-09-09T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1008",
-    "slug": "toyota-rush-2023-916417",
-    "category": "car",
-    "dealerOrgId": "dealer-al-hamoor-al-thahabi",
-    "status": "active",
-    "title": "2023 Toyota Rush EX 1.5L",
-    "description": "Dated advertised listing sample. Confirm the vehicle condition, availability and viewing location with the dealership.",
-    "price": {
-      "amount": 43000,
-      "currency": "AED"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/dealer/inventory/916417-1.webp",
-        "alt": "2023 Toyota Rush EX 1.5L"
-      },
-      {
-        "url": "/dealer/inventory/916417-2.webp",
-        "alt": "2023 Toyota Rush EX 1.5L"
-      },
-      {
-        "url": "/dealer/inventory/916417-3.webp",
-        "alt": "2023 Toyota Rush EX 1.5L"
-      },
-      {
-        "url": "/dealer/inventory/916417-4.webp",
-        "alt": "2023 Toyota Rush EX 1.5L"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Sharjah",
-      "region": "Sharjah",
-      "country": "United Arab Emirates"
-    },
-    "features": [
-      {
-        "bg": "GCC specification",
-        "en": "GCC specification"
-      }
-    ],
-    "spec": {
-      "make": "Toyota",
-      "model": "Rush",
-      "trim": "EX 1.5L",
-      "year": 2023,
-      "bodyType": "suv",
-      "fuelType": "gasoline",
-      "transmission": "automatic",
-      "mileageValue": 121000,
-      "mileageUnit": "km",
-      "colorExterior": "White"
-    },
-    "seller": {
-      "id": "dealer-al-hamoor-al-thahabi",
-      "type": "dealer",
-      "displayName": "Al Hamoor Al Thahabi Used Cars",
-      "verificationStatus": "unverified",
-      "city": "Sharjah",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
-    },
-    "publishedAt": "2026-09-09T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1009",
-    "slug": "chevrolet-trax-2020-906007",
-    "category": "car",
-    "dealerOrgId": "dealer-al-hamoor-al-thahabi",
-    "status": "active",
-    "title": "2020 Chevrolet Trax LT 1.8L AWD",
-    "description": "Dated advertised listing sample. Confirm the vehicle condition, availability and viewing location with the dealership.",
-    "price": {
-      "amount": 14500,
-      "currency": "AED"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/dealer/inventory/906007-1.webp",
-        "alt": "2020 Chevrolet Trax LT 1.8L AWD"
-      },
-      {
-        "url": "/dealer/inventory/906007-2.webp",
-        "alt": "2020 Chevrolet Trax LT 1.8L AWD"
-      },
-      {
-        "url": "/dealer/inventory/906007-3.webp",
-        "alt": "2020 Chevrolet Trax LT 1.8L AWD"
-      },
-      {
-        "url": "/dealer/inventory/906007-4.webp",
-        "alt": "2020 Chevrolet Trax LT 1.8L AWD"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Sharjah",
-      "region": "Sharjah",
-      "country": "United Arab Emirates"
-    },
-    "features": [
-      {
-        "bg": "American specification",
-        "en": "American specification"
-      }
-    ],
-    "spec": {
-      "make": "Chevrolet",
-      "model": "Trax",
-      "trim": "LT 1.8L AWD",
-      "year": 2020,
-      "bodyType": "suv",
-      "fuelType": "gasoline",
-      "transmission": "automatic",
-      "mileageValue": 106000,
-      "mileageUnit": "km",
-      "colorExterior": "Black"
-    },
-    "seller": {
-      "id": "dealer-al-hamoor-al-thahabi",
-      "type": "dealer",
-      "displayName": "Al Hamoor Al Thahabi Used Cars",
-      "verificationStatus": "unverified",
-      "city": "Sharjah",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-f36b0deff0d57ac0/logo-on-light.webp"
     },
     "publishedAt": "2026-09-09T09:00:00.000Z",
     "promoted": false

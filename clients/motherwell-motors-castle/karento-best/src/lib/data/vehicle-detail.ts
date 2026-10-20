@@ -116,6 +116,12 @@ export const referenceSpecifications: readonly DetailSpecification[] = [
     "value": "Diesel",
     "labelKey": "vehicle.field.fuel",
     "valueKey": "fuel.diesel"
+  },
+  {
+    "id": "year",
+    "icon": "/assets/imgs/template/icons/calendar.svg",
+    "value": "2013",
+    "labelKey": "vehicle.field.year"
   }
 ];
 
@@ -141,7 +147,7 @@ export const referenceReviews: readonly DetailReview[] = [];
 export const referenceSeller: DetailSeller = {
   "name": "Motors Castle",
   "location": "23a Biggar Road, Cleland Industrial Estate, Motherwell ML1 5PB",
-  "avatar": "/dealer-brand/logo.webp",
+  "avatar": "/dealer-brand/v2-7aace8204a8aa0ad/logo-on-light.webp",
   "mobile": "07850 472427",
   "email": "davidautodesign5@gmail.com",
   "whatsapp": "",

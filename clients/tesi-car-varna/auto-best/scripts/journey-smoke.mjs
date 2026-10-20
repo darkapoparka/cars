@@ -1,3 +1,4 @@
+import { appPath, returningContext, returningPage } from './locale-smoke-fixture.mjs';
 import assert from 'node:assert/strict';
 import { launchBrowser, previewUrl } from './browser.mjs';
 import { smokeReport } from './smoke-report.mjs';
@@ -8,39 +9,75 @@ const suite = await smokeReport(output, base);
 const browser = await launchBrowser();
 try {
   for (const width of [390, 1440]) {
-    const page = await browser.newPage({ viewport: { width, height: 900 } });
+    const page = await returningPage(browser, { viewport: { width, height: 900 } });
     page.setDefaultTimeout(8000);
+    page.setDefaultNavigationTimeout(30000);
     await suite.check(`list and article return ${width}`, async () => {
-      await page.goto(`${base}/listing-grid?make=BMW&sort=price-asc`, { waitUntil: 'networkidle' });
+      await page.goto(`${base}/cars?make=BMW&sort=price-asc`, { waitUntil: 'networkidle' });
       const first = page.locator('.dn-listing-results .dn-vehicle-card__link').first();
       const title = await first.getAttribute('aria-label');
-      // Click the padded card area, not just its title, to protect the real hit target.
-      await first.click({ position: { x: 5, y: 5 } });
+      // Exercise the card surface inside its 20px rounded corner, away from title text.
+      await first.click({ position: { x: 12, y: 12 } });
       await page.waitForURL('**/listing-detail-v1/**');
       await page.locator(width < 768 ? '.dn-detail-mobile-back' : '.dn-detail-title-card a').click();
-      await page.waitForURL(url => url.pathname === '/listing-grid');
+      await page.waitForURL(url => appPath(url) === '/cars');
       assert.equal(new URL(page.url()).searchParams.get('make'), 'BMW');
       assert.equal(new URL(page.url()).searchParams.get('sort'), 'price-asc');
       assert.equal(await page.locator('.dn-listing-results .dn-vehicle-card__link').first().getAttribute('aria-label'), title);
       assert(new URL(page.url()).hash.startsWith('#vehicle-'));
       await page.goto(`${base}/blog?category=${encodeURIComponent('Внос')}`, { waitUntil: 'networkidle' });
-      await page.locator('.dn-blog-card__link').first().click();
+      await page.locator('.dn-blog-grid .dn-blog-card__link').first().click();
       await page.waitForURL('**/blog-detail/**');
       await page.locator('.dn-blog-detail__back').click();
-      await page.waitForURL(url => url.pathname === '/blog');
+      await page.waitForURL(url => appPath(url) === '/blog');
       assert.equal(new URL(page.url()).searchParams.get('category'), 'Внос');
       assert(new URL(page.url()).hash.startsWith('#article-'));
       await page.goto(`${base}/listing-detail-v1/4?return=https://example.com`, { waitUntil: 'networkidle' });
-      assert.equal(await page.locator('.dn-detail-mobile-back').getAttribute('href'), '/listing-grid');
+      assert.equal(await page.locator('.dn-detail-mobile-back').getAttribute('href'), '/bg/cars');
+    });
+    await suite.check(`full photo viewer ${width}`, async () => {
+      await page.goto(`${base}/listing-detail-v1/1`, { waitUntil: 'networkidle' });
+      const trigger = page.locator('.dn-vehicle-photo');
+      const dialog = page.locator('.dn-vehicle-photo-dialog');
+      const overflowBefore = await page.evaluate(() => document.body.style.overflow);
+      assert.equal(await dialog.locator('img').count(), 0, 'Full photo is requested only when opened');
+      await trigger.focus();
+      await page.keyboard.press('Enter');
+      assert(await dialog.evaluate(el => el.matches(':modal')));
+      await dialog.locator('img').waitFor();
+      assert.equal(await dialog.locator('img').evaluate(el => getComputedStyle(el).objectFit), 'contain');
+      assert.equal(await page.evaluate(() => document.body.style.overflow), 'hidden');
+      for (const key of ['Tab', 'Shift+Tab']) {
+        await page.keyboard.press(key);
+        assert(await dialog.evaluate(el => el.contains(document.activeElement)));
+      }
+      await page.keyboard.press('Escape');
+      await dialog.waitFor({ state: 'hidden' });
+      assert(await trigger.evaluate(el => el === document.activeElement));
+      assert.equal(await page.evaluate(() => document.body.style.overflow), overflowBefore);
+      await trigger.click();
+      await dialog.locator('button').click();
+      await dialog.waitFor({ state: 'hidden' });
+      assert(await trigger.evaluate(el => el === document.activeElement));
+      await trigger.click();
+      await page.mouse.click(2, 2);
+      await dialog.waitFor({ state: 'hidden' });
+      assert.equal(await page.evaluate(() => document.body.style.overflow), overflowBefore);
     });
     await suite.check(`vehicle context and finance ${width}`, async () => {
-      for (let id = 1; id <= 8; id++) {
+      await page.goto(`${base}/cars`, { waitUntil: 'networkidle' });
+      const ids = await page.locator('.dn-listing-results .dn-vehicle-card__link').evaluateAll(links => [...new Set(links.map(link => Number(new URL(link.href).pathname.split('/').at(-1))))]);
+      assert(ids.length > 0 && ids.every(Number.isSafeInteger), 'Exercise every actual inventory record');
+      for (const id of ids) {
         await page.goto(`${base}/listing-detail-v1/${id}`, { waitUntil: 'networkidle' });
         const title = await page.locator('h1').innerText();
-        const finance = page.locator('.dn-finance-calculator');
+        if (width < 768) await page.locator('.dn-detail-finance-trigger button').click();
+        const finance = page.locator(width < 768 ? '.dn-detail-finance-dialog .dn-finance-calculator' : '.dn-detail-finance-inline .dn-finance-calculator');
+        await finance.waitFor({ state: 'visible' });
         const amountBefore = await finance.locator('dd').first().innerText();
         await finance.locator('input').fill('10000');
         await finance.locator('select').selectOption('24');
+        await page.waitForFunction(({ node, before }) => node.textContent.trim() !== before, { node: await finance.locator('dd').first().elementHandle(), before: amountBefore });
         assert.notEqual(await finance.locator('dd').first().innerText(), amountBefore);
         await finance.locator('input').focus();
         await page.keyboard.press('Tab');
@@ -48,10 +85,10 @@ try {
         assert.notEqual(ring.style, 'none'); assert.notEqual(ring.width, '0px');
         assert.equal(await page.locator('.dn-detail-gallery__count').count(), 0);
         await finance.locator('a').click();
-        await page.waitForURL(url => url.pathname === '/contact');
+        await page.waitForURL(url => appPath(url) === '/contact');
         assert.equal(new URL(page.url()).searchParams.get('vehicle'), String(id));
         assert.equal(await page.locator('.dn-contact-vehicle strong').innerText(), title);
-        assert.equal(await page.locator('.dn-contact-vehicle').getAttribute('href'), `/listing-detail-v1/${id}`);
+        assert.equal(await page.locator('.dn-contact-vehicle').getAttribute('href'), `/bg/listing-detail-v1/${id}`);
       }
       await page.goto(`${base}/contact?topic=leasing&vehicle=999`, { waitUntil: 'networkidle' });
       assert.equal(await page.locator('.dn-contact-vehicle').count(), 0);
@@ -64,14 +101,14 @@ try {
         assert.equal(await page.locator('.dn-listing-results .dn-vehicle-card').count(), count, `${route} must reflect actual stock`);
         if (!count) assert(await page.getByText('Няма съвпадения', { exact: true }).isVisible());
       }
-      await page.goto(`${base}/listing-grid?equipment=4x4&equipment=4x4&price_max=0`, { waitUntil: 'networkidle' });
+      await page.goto(`${base}/cars?equipment=4x4&equipment=4x4&price_max=0`, { waitUntil: 'networkidle' });
       assert.equal(await page.locator('.dn-listing-results .dn-vehicle-card').count(), 0);
       assert(await page.getByText('Няма съвпадения', { exact: true }).isVisible());
     });
     await page.close();
   }
   await suite.check('mobile menu isolation, focus and resize', async () => {
-    const page = await browser.newPage({ viewport: { width: 390, height: 844 } });
+    const page = await returningPage(browser, { viewport: { width: 390, height: 844 } });
     try {
       await page.goto(base, { waitUntil: 'networkidle' });
       await page.keyboard.press('Tab');
@@ -96,7 +133,7 @@ try {
   await suite.check('hero media only loads for its viewport', async () => {
     const evidence = [];
     for (const width of [390, 1024, 1440]) {
-      const page = await browser.newPage({ viewport: { width, height: 900 } });
+      const page = await returningPage(browser, { viewport: { width, height: 900 } });
       const media = [];
       page.on('request', request => { if (request.url().includes('/assets/')) media.push(request.url()); });
       try {
@@ -105,14 +142,30 @@ try {
         assert(!media.some(url => url.includes('urus-front-v1')), 'Home uses the refreshed two-car artwork');
         const homeArtwork = await page.locator('.dn-hero-vehicles__pair img').evaluate(image => image.currentSrc);
         assert(width < 768 ? homeArtwork.includes('collection-banner-v2') : homeArtwork.startsWith('data:'));
-        const sources = await page.locator('.dn-hero-vehicles__car img').evaluateAll(images => images.map(image => image.currentSrc));
-        assert(sources.every(src => width >= 1440 ? src.startsWith('http') : src.startsWith('data:')));
+        assert.equal(await page.locator('.dn-hero-vehicles__car img').count(), 0, 'Mobile hero omits unused desktop car nodes');
+        const sources = await page.locator('.dn-hero .dn-campaign-vehicles__car img').evaluateAll(images => images.map(image => image.currentSrc));
+        assert.equal(sources.length, 2);
+        assert(sources.every(src => width >= 992 ? src.startsWith('http') : src.startsWith('data:')));
+        assert.equal(media.filter(url => /auto-best-desktop-.+-v1\.webp/.test(url)).length, 0, 'Home no longer requests the generated scene');
         evidence.push({ width, heroSources: sources, homeArtwork });
-        for (const [topic, scene] of [['trade-in', 'sell'], ['import', 'import']]) {
+        let sharedServiceCar = null;
+        for (const [topic, service] of [['trade-in', 'sell'], ['import', 'import']]) {
           await page.goto(`${base}/contact?topic=${topic}`, { waitUntil: 'networkidle' });
-          const support = await page.locator('.dn-hero-vehicles__support img').evaluateAll(images => images.map(image => image.currentSrc));
-          assert.equal(support.length, 2);
-          assert(support.every(src => width < 768 ? src.includes(`mobile-${scene}-v1`) : src.startsWith('data:')));
+          const scene = page.locator('.dn-hero-vehicles__scene');
+          const support = await scene.locator('img').evaluateAll(images => images.map(image => image.currentSrc));
+          assert.equal(support.length, 3, 'Service hero renders two detail crops around one shared car');
+          assert.equal(await scene.locator('.dn-hero-vehicles__detail img').count(), 2);
+          assert.equal(await scene.locator('.dn-hero-vehicles__shared-car img').count(), 1);
+          if (width < 768) {
+            const expectedDetails = `service-${service}-front-v3.webp`;
+            const artwork = support.map(src => new URL(src).pathname.replace(/-\d+(?=\.webp$)/, ''));
+            assert(artwork[0].endsWith(expectedDetails) && artwork[2].endsWith(expectedDetails), 'Responsive crops retain the reviewed service artwork');
+            assert(artwork[1].endsWith('service-sell-front-v3.webp'), 'Both services reuse the reviewed central car');
+            if (sharedServiceCar === null) sharedServiceCar = support[1];
+            else assert.equal(support[1], sharedServiceCar, 'Sell and Import must use the exact same central-car source');
+          } else {
+            assert(support.every(src => src.startsWith('data:')), 'Mobile service media must not load outside its viewport');
+          }
         }
       } finally { await page.close(); }
     }

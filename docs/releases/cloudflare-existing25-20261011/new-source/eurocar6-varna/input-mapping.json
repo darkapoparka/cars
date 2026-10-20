@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-input-mapping",
+  "dealer": "eurocar6-varna",
+  "inputs": {
+    "facts": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/eurocar6-varna/facts.json",
+      "sha256": "8e855fe649eed6e891a2e0504ce536ef89a908a822533180da9c3c8d42bff09b"
+    },
+    "stock": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/eurocar6-varna/stock.json",
+      "sha256": "22a2705dbe3fe9f97ce297b809bad6e0550ca6cfac45b2720637ec2c898c2df3"
+    },
+    "locale": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/eurocar6-varna/locale.json",
+      "sha256": "804b4bbe174cba2c1199fafd933200b63602500bf7fc9fc81aa0a0de27051738"
+    },
+    "branding": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/eurocar6-varna/branding.json",
+      "sha256": "0c73ebb9bce9ac603deb78085a55be58d159cf583f470bd68ab347c1e18a2e38"
+    }
+  },
+  "sources": [
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/eurocar6-varna/source/business-facts.json",
+      "sha256": "a4c673c9ab56771f8763561c3bb134224fbbe2d32b80eb4ffd2d44a73f503f3e"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/eurocar6-varna/source/locale.json",
+      "sha256": "804b4bbe174cba2c1199fafd933200b63602500bf7fc9fc81aa0a0de27051738"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/eurocar6-varna/source/stock.json",
+      "sha256": "42b1ce2b0c628ebbeafe1780a129ca7d80b651bc6ace5fcc34ef1233b18598d4"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/eurocar6-varna/source/generation-receipt.json",
+      "sha256": "19fea3171c7e74c9fec5fc95967cc6245f0f31225528410475e1baa0b60b0ba4"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/eurocar6-varna/source/native-onLight.png",
+      "sha256": "d59a6e6fabea6c8dcbcbb287f993a659e0ae07de0c8a7f9cfb346e45a6e35504"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/eurocar6-varna/source/native-onDark.png",
+      "sha256": "d59a6e6fabea6c8dcbcbb287f993a659e0ae07de0c8a7f9cfb346e45a6e35504"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/eurocar6-varna/source/native-onAccent.png",
+      "sha256": "d59a6e6fabea6c8dcbcbb287f993a659e0ae07de0c8a7f9cfb346e45a6e35504"
+    }
+  ],
+  "transformations": {
+    "facts": {
+      "source": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/eurocar6-varna/source/business-facts.json",
+        "sha256": "a4c673c9ab56771f8763561c3bb134224fbbe2d32b80eb4ffd2d44a73f503f3e"
+      },
+      "kind": "flat-original-facts-to-business-consumer",
+      "allOriginalEvidenceUnchanged": true,
+      "derivedNameDelta": null,
+      "otherFactsUnchanged": true
+    },
+    "stock": {
+      "source": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/eurocar6-varna/source/stock.json",
+        "sha256": "42b1ce2b0c628ebbeafe1780a129ca7d80b651bc6ace5fcc34ef1233b18598d4"
+      },
+      "originalSourceRecordPreserved": true,
+      "sourceId": "21790941738758845",
+      "normalizer": "loadDealerProfile",
+      "retention": "retainDealerVariantAssets",
+      "sourceKind": "dated-marketplace-listing-sample",
+      "consumerKind": "dated-listing-snapshot",
+      "availabilityUnconfirmed": true,
+      "mediaRightsNotClaimed": true,
+      "mileageUnknownMeansOnRequest": true
+    },
+    "media": [
+      {
+        "sourceId": "21790941738758845",
+        "sourcePublicPath": "/assets/vehicles/21790941738758845/1.webp",
+        "publicPath": "/dealer-stock/21790941738758845-1.webp",
+        "destination": "dealer-stock/21790941738758845-1.webp",
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/eurocar6-varna/media/21790941738758845-1.webp",
+        "sha256": "3d3cfd774330f933f8803ae3b090161a35795f520ecbbf42fc984988a40e4a08",
+        "bytes": 166418
+      },
+      {
+        "sourceId": "21790941738758845",
+        "sourcePublicPath": "/assets/vehicles/21790941738758845/2.webp",
+        "publicPath": "/dealer-stock/21790941738758845-2.webp",
+        "destination": "dealer-stock/21790941738758845-2.webp",
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/eurocar6-varna/media/21790941738758845-2.webp",
+        "sha256": "6ca4873e0751ff4f54e0c0262b4ffbaded9ebcef3646e9c0df8aed7440c29b3e",
+        "bytes": 291402
+      }
+    ],
+    "branding": {
+      "acceptedManifest": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/evidence/final-logo-handoff.json",
+        "sha256": "b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a"
+      },
+      "originalGenerationReceipt": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/eurocar6-varna/source/generation-receipt.json",
+        "sha256": "19fea3171c7e74c9fec5fc95967cc6245f0f31225528410475e1baa0b60b0ba4"
+      },
+      "noNewGeneration": true,
+      "modelVersion": null,
+      "pixelsUnchanged": true
+    },
+    "identity": null
+  }
+}

@@ -1,0 +1,340 @@
+{
+  "slug": "birmingham-trade-car-sales-grasmere",
+  "coreName": "TRADE CAR SALES",
+  "generatedPath": "C:/Users/radev/.codex/generated_images/01a12a34-877e-73a2-9a3d-346e546742c6/exec-41b53362-a7e0-43f9-ba00-4e23456760e9.png",
+  "strategy": "USE GENERATED CANDIDATE",
+  "identityStatus": "New disclosed single-row expressive automotive proposal; technically preferred when selected; owner/style and dealer approval pending",
+  "onLight": "original",
+  "onDark": "white",
+  "onAccent": "white",
+  "imageGeneration": {
+    "tool": "image_gen.imagegen",
+    "reference": "exec-41b53362-a7e0-43f9-ba00-4e23456760e9",
+    "prompt": "Use the attached AVTOMOTOR identity ONLY as a reference for expressive confident automotive letter shapes. Do not copy its emblem or words or stacked layout. Create ONE complete fresh proposed identity, with a small distinctive business-specific emblem LEFT of the name on ONE horizontal row, all on one common visual axis. No text above/below, subtitles, slogans, phone, location caption, descriptors beyond the exact requested core name, underline, stacked layout, multiple options, chrome, gradients, shadow, glow, texture or background plate. True transparent RGBA canvas. Flat solid opaque shapes with clean transparent counters, generous open counters, balanced kerning and modest clear padding. Name charcoal #20252b, useful identity accent confined to emblem. Custom automotive lettering with a restrained forward slant; no plain generic sans typesetting. Distinctive emblem must relate to this name, not a fleet-wide symbol. Exact name: TRADE CAR SALES. Deep teal #00575c compact T emblem: two lanes turning into the stem, no enclosing badge. Wordmark robust broad angular softened lettering, cut T terminals and open A counters. Complete wide landscape logo, all requested words equally prominent on the same row. Proposed dealer demo identity, no official approval claim.",
+    "referenced_image_paths": [
+      "L:/CODEX/cars/leads/branding/fleet-20261011/am-varna-varna/branding/logo-master.png"
+    ],
+    "transparent_background": true,
+    "outputPath": "C:/Users/radev/.codex/generated_images/01a12a34-877e-73a2-9a3d-346e546742c6/exec-41b53362-a7e0-43f9-ba00-4e23456760e9.png",
+    "actualOutputHint": "Generated images are saved to C:\\Users\\radev\\.codex\\generated_images\\01a12a34-877e-73a2-9a3d-346e546742c6 as C:\\Users\\radev\\.codex\\generated_images\\01a12a34-877e-73a2-9a3d-346e546742c6\\exec-41b53362-a7e0-43f9-ba00-4e23456760e9.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+  },
+  "derivation": {
+    "kind": "new-proposed-identity",
+    "styleReferenceOnly": true,
+    "businessIdentityBasis": "Published source or prior disclosed proposal inspected through original compact surface QA; useful established colors/name-specific emblem cue carried into a fresh proposal.",
+    "directionPath": "L:/CODEX/cars/leads/branding/fleet-20261011/style-revision/single-row/DIRECTION.md",
+    "changeReason": "One line but generic type; road-shaped T distinctive cue deserves expressive automotive lettering."
+  },
+  "surfaceReviewPath": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/birmingham-trade-car-sales-grasmere/surface-review.png",
+  "visualAccepted": true,
+  "selectionStatus": "technically-selected-preferred-revised-pack",
+  "ownerStyleStatus": "pending",
+  "originalPackage": {
+    "path": "L:/CODEX/cars/leads/branding/fleet-20261011/birmingham-trade-car-sales-grasmere",
+    "files": [
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/birmingham-trade-car-sales-grasmere/branding/logo-master.png",
+        "sha256": "f01213da2d81e07a67158746d2e681c3807d8446316fbb0a07187a3e773ff7ca"
+      },
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/birmingham-trade-car-sales-grasmere/branding/logo-on-light.png",
+        "sha256": "f01213da2d81e07a67158746d2e681c3807d8446316fbb0a07187a3e773ff7ca"
+      },
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/birmingham-trade-car-sales-grasmere/branding/logo-on-dark.png",
+        "sha256": "0bd19933fc73e45405639f12e4ca91175582d095bfcc36ef2cababaa91c6c1cc"
+      },
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/birmingham-trade-car-sales-grasmere/branding/logo-on-accent.png",
+        "sha256": "0bd19933fc73e45405639f12e4ca91175582d095bfcc36ef2cababaa91c6c1cc"
+      },
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/birmingham-trade-car-sales-grasmere/dealer-brand/logo-on-light.webp",
+        "sha256": "218b8dd57576394f9c507372279c53c4cf4c59e38b151f74fe672e646db932de"
+      },
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/birmingham-trade-car-sales-grasmere/dealer-brand/logo-on-dark.webp",
+        "sha256": "2bfa6949cbc1ccafc2a4e67ce15ad4969a8009792dc0502f4f4ccb8df082389a"
+      },
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/birmingham-trade-car-sales-grasmere/dealer-brand/logo-on-accent.webp",
+        "sha256": "2bfa6949cbc1ccafc2a4e67ce15ad4969a8009792dc0502f4f4ccb8df082389a"
+      },
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/birmingham-trade-car-sales-grasmere/receipt.json",
+        "sha256": "1cb90d6d1668cb01db915054be4ccc1163b5d2a29f0c8ae77cb4d6cbb4f44daa"
+      },
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/birmingham-trade-car-sales-grasmere/branding/logo-contract.json",
+        "sha256": "29dc5007d065d2b84a855759894668f3f609d20b20dcdbe6626c6e6a3fcac724"
+      },
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/birmingham-trade-car-sales-grasmere/technical-check.json",
+        "sha256": "ac5733541b401368e8acc43735470fa50cdc811d97eadc1beac8c6ed8f10e177"
+      },
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/birmingham-trade-car-sales-grasmere/surface-review.png",
+        "sha256": "82f5c110f9c2c7bfc6d16b0964558a9de25b8d62fc10a91e8b3ef99d9b0547ba"
+      }
+    ]
+  },
+  "sourceUrls": [
+    "https://showroom.ebaymotorspro.co.uk/Trade-Car-Sales1",
+    "https://www.google.com/search?q=Trade+Car+Sales+Grasmere+Road+Birmingham+logo&udm=2"
+  ],
+  "publishedBranding": {
+    "profileUrl": "https://showroom.ebaymotorspro.co.uk/Trade-Car-Sales1",
+    "sourceLogoUrl": null,
+    "observedAt": "2026-10-11T09:24:02.306Z",
+    "visualEvidence": "Primary profile and focused Google Images screenshot inspected through CUA. No same-business recognizable logo verified; unrelated same-name sources rejected.",
+    "decision": "Generated proposal only; no claim of official identity or approval",
+    "retainedEvidence": [
+      "L:/CODEX/cars/leads/branding/fleet-20261011/birmingham-trade-car-sales-grasmere/source-evidence/visual-source.jpg"
+    ]
+  },
+  "sourceEvidence": [
+    {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/birmingham-trade-car-sales-grasmere/source-evidence/visual-source.jpg",
+      "sha256": "b1a716de84ce8c18c3730621abb70e3cda1947aaa25ee6caa5db0335e0a3c1f0",
+      "bytes": 121046,
+      "format": "jpeg",
+      "width": 1265,
+      "height": 712,
+      "hasAlpha": false,
+      "alpha": {
+        "min": 255,
+        "max": 255,
+        "transparentRatio": 0,
+        "opaqueRatio": 1
+      },
+      "visibleBounds": {
+        "x": 0,
+        "y": 0,
+        "width": 1265,
+        "height": 712
+      }
+    }
+  ],
+  "previousTreatment": {
+    "receipt": "L:/CODEX/cars/leads/branding/fleet-20261011/birmingham-trade-car-sales-grasmere/receipt.json",
+    "sha256": "1cb90d6d1668cb01db915054be4ccc1163b5d2a29f0c8ae77cb4d6cbb4f44daa",
+    "imageGeneration": {
+      "tool": "image_gen.imagegen",
+      "reference": "functions.exec cell36 image_gen.imagegen output exec-770a6cfe-34d8-4894-8c74-7858ce54299c",
+      "outputPath": "C:/Users/radev/.codex/generated_images/01a12a34-877e-73a2-9a3d-346e546742c6/exec-770a6cfe-34d8-4894-8c74-7858ce54299c.png",
+      "transparent_background": true,
+      "modelVersion": "not exposed by tool",
+      "prompt": "Create a clean professional PROPOSAL logo for exact name Trade Car Sales, Grasmere Road Birmingham UK. Horizontal wordmark Trade Car Sales in dark charcoal confident modern sans serif, a small distinctive two-line road T monogram at left with restrained deep teal accent. Exact spelling, compact readable at 120px, open counters, generous transparent alpha margin. No slogan, phone, location, shield, badge, manufacturer symbol, shadow, gradient or opaque plate. Original generated demo proposal only.",
+      "promptProvenance": {
+        "kind": "exact-original-tool-input",
+        "transcript": "C:/Users/radev/.codex/sessions/2026/10/11/rollout-2026-10-11T12-04-08-01a12a34-877e-73a2-9a3d-346e546742c6.jsonl",
+        "toolCallLine": 462,
+        "toolCallId": "call_df85c99adea8478db0ba7076f69f315b",
+        "toolCallTimestamp": "2026-10-11T09:17:48.145Z",
+        "generationEventLine": 480,
+        "generationId": "exec-770a6cfe-34d8-4894-8c74-7858ce54299c",
+        "generationEventTimestamp": "2026-10-11T09:18:07.770Z",
+        "extraction": "JSON-decoded original prompt string literal; unchanged wording. Completed image_gen.generation revisedPrompt exactly matches it.",
+        "referencedImagesProvided": false
+      }
+    }
+  },
+  "styleReferenceEvidence": {
+    "path": "L:/CODEX/cars/leads/branding/fleet-20261011/am-varna-varna/branding/logo-master.png",
+    "sha256": "11a4f802dc2725817c409f1b669446cc51763849e5a29467af7b951c01808ffa"
+  },
+  "factualNameTreatment": {
+    "fullPublishedName": "TRADE CAR SALES",
+    "displayedCoreName": "TRADE CAR SALES",
+    "explicitlyOmitted": null,
+    "authorization": "Owner permits recognizable trading name and visibly secondary generic descriptive captions omitted; no alternate trading name invented"
+  },
+  "visualChecks": {
+    "reviewer": "baseline asset agent",
+    "spelling": "TRADE CAR SALES",
+    "layout": "Compact unique emblem beside one expressive name row; no secondary captions",
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "backgrounds": [
+      "#ffffff",
+      "#30343b",
+      "#17191c",
+      "#202023",
+      "#19171d",
+      "#171717",
+      "#b00020",
+      "#405ff2"
+    ],
+    "transparency": "Master and contextual exports visually inspected; no matte, filled counters, clipped strokes or residue visible",
+    "smallSize": "Correct name and distinctive emblem readable at120/180/320 width in isolated raster swatches",
+    "reviewedAt": "2026-10-11T11:25:59.856Z",
+    "approval": "Technical asset selection only; owner/style, dealer, all actual six-design consumers and hosted review pending"
+  },
+  "schemaVersion": 1,
+  "dealer": "birmingham-trade-car-sales-grasmere",
+  "state": "asset-verified",
+  "generated": {
+    "path": "C:/Users/radev/.codex/generated_images/01a12a34-877e-73a2-9a3d-346e546742c6/exec-41b53362-a7e0-43f9-ba00-4e23456760e9.png",
+    "sha256": "e9045289b6dc3220ce7d8b2e29d4cdf99be2c8a737535d5400659e2d357b7b65",
+    "bytes": 299162,
+    "format": "png",
+    "width": 2172,
+    "height": 724,
+    "hasAlpha": true,
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparentRatio": 0.8750171698055615,
+      "opaqueRatio": 0.10318798774966169
+    },
+    "visibleBounds": {
+      "x": 44,
+      "y": 241,
+      "width": 2081,
+      "height": 242
+    }
+  },
+  "assets": {
+    "onLight": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/birmingham-trade-car-sales-grasmere/dealer-brand/logo-on-light.webp",
+      "sha256": "89fa7c4835baa49e1bd58c1f943d10b5e139026d9dde62ce5c1bbfb86c344f74",
+      "bytes": 43962,
+      "format": "webp",
+      "width": 1496,
+      "height": 235,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.7431562179997725,
+        "opaqueRatio": 0.20585959722380248
+      },
+      "visibleBounds": {
+        "x": 49,
+        "y": 36,
+        "width": 1399,
+        "height": 163
+      },
+      "publicPath": "/dealer-brand/logo-on-light.webp"
+    },
+    "onDark": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/birmingham-trade-car-sales-grasmere/dealer-brand/logo-on-dark.webp",
+      "sha256": "7559d2ccfe2865e33e20f70191a2e0de4fef9a7e72042c3ff4a6bd7650bc554e",
+      "bytes": 27322,
+      "format": "webp",
+      "width": 1496,
+      "height": 235,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.7431562179997725,
+        "opaqueRatio": 0.20585959722380248
+      },
+      "visibleBounds": {
+        "x": 49,
+        "y": 36,
+        "width": 1399,
+        "height": 163
+      },
+      "publicPath": "/dealer-brand/logo-on-dark.webp"
+    },
+    "onAccent": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/birmingham-trade-car-sales-grasmere/dealer-brand/logo-on-accent.webp",
+      "sha256": "7559d2ccfe2865e33e20f70191a2e0de4fef9a7e72042c3ff4a6bd7650bc554e",
+      "bytes": 27322,
+      "format": "webp",
+      "width": 1496,
+      "height": 235,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.7431562179997725,
+        "opaqueRatio": 0.20585959722380248
+      },
+      "visibleBounds": {
+        "x": 49,
+        "y": 36,
+        "width": 1399,
+        "height": 163
+      },
+      "publicPath": "/dealer-brand/logo-on-accent.webp"
+    }
+  },
+  "master": {
+    "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/birmingham-trade-car-sales-grasmere/branding/logo-master.png",
+    "sha256": "3edd6558a3b90a4b661373c2f55358ac2b776eb9bc4eea671f1d276eed0789b5",
+    "bytes": 119646,
+    "format": "png",
+    "width": 1496,
+    "height": 235,
+    "hasAlpha": true,
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparentRatio": 0.7431562179997725,
+      "opaqueRatio": 0.20585959722380248
+    },
+    "visibleBounds": {
+      "x": 49,
+      "y": 36,
+      "width": 1399,
+      "height": 163
+    }
+  },
+  "technicalAcceptance": {
+    "reviewer": "baseline asset agent",
+    "spelling": "TRADE CAR SALES",
+    "layout": "Compact unique emblem beside one expressive name row; no secondary captions",
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "backgrounds": [
+      "#ffffff",
+      "#30343b",
+      "#17191c",
+      "#202023",
+      "#19171d",
+      "#171717",
+      "#b00020",
+      "#405ff2"
+    ],
+    "transparency": "Master and contextual exports visually inspected; no matte, filled counters, clipped strokes or residue visible",
+    "smallSize": "Correct name and distinctive emblem readable at120/180/320 width in isolated raster swatches",
+    "reviewedAt": "2026-10-11T11:25:59.856Z",
+    "approval": "Technical asset selection only; owner/style, dealer, all actual six-design consumers and hosted review pending"
+  },
+  "integrationVerified": false,
+  "hostedVerified": false,
+  "ownerApproved": false,
+  "exportTool": "docs/logo-refresh/2026-09-18/tools/build-approved-logo-pack.mjs",
+  "exportToolSha256": "7fab60c4000210eff6bbb91f9c35e869bad90834d3bdd09d282a9a51835f0dbc",
+  "exportIsolation": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/style-baseline-export",
+  "updatedAt": "2026-10-11T11:26:00.062Z",
+  "pngTreatments": {
+    "on-light": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/birmingham-trade-car-sales-grasmere/branding/logo-on-light.png",
+      "sha256": "3edd6558a3b90a4b661373c2f55358ac2b776eb9bc4eea671f1d276eed0789b5"
+    },
+    "on-dark": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/birmingham-trade-car-sales-grasmere/branding/logo-on-dark.png",
+      "sha256": "20ea03bf7d2b6ca1fad3b90c71b48de5557fbe00de7f1472bd22afd314009c4d"
+    },
+    "on-accent": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/birmingham-trade-car-sales-grasmere/branding/logo-on-accent.png",
+      "sha256": "20ea03bf7d2b6ca1fad3b90c71b48de5557fbe00de7f1472bd22afd314009c4d"
+    }
+  },
+  "exportRetention": {
+    "nativeImageGenOriginalRetained": true,
+    "compactQAPath": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/birmingham-trade-car-sales-grasmere/surface-review.png",
+    "historicalExportScratch": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/style-baseline-export",
+    "retirementReceipt": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/baseline-single-row-retention.json"
+  }
+}

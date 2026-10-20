@@ -10,22 +10,74 @@ import {
   DialogTitle,
 } from "@repo/design-system/components/ui/dialog";
 import { cn } from "@repo/design-system/lib/utils";
-import type { ReactNode } from "react";
+import {
+  type ComponentProps,
+  type ReactNode,
+  type RefObject,
+  useRef,
+} from "react";
+import {
+  mobileMarketplaceOverlayFieldClassName,
+  mobileMarketplaceOverlayIconActionClassName,
+  mobileMarketplaceOverlayInputClassName,
+  mobileMarketplaceOverlayScrollClassName,
+} from "../lib/mobile-overlay-styles";
 import { DealerUiIcon } from "./dealer-ui-icon";
 
-export const mobileMarketplaceOverlayIconActionClassName =
-  "size-11 shrink-0 rounded-full bg-zinc-200 p-0 text-zinc-950 shadow-none hover:bg-zinc-300 active:bg-zinc-300";
+export {
+  mobileMarketplaceOverlayFieldClassName,
+  mobileMarketplaceOverlayFieldRowClassName,
+  mobileMarketplaceOverlayIconActionClassName,
+  mobileMarketplaceOverlayInputClassName,
+  mobileMarketplaceOverlayPrimaryActionClassName,
+  mobileMarketplaceOverlayScrollClassName,
+} from "../lib/mobile-overlay-styles";
 
-/** Shared single-field entry geometry for search, listing links, and VIN. */
-export const mobileMarketplaceOverlayFieldClassName =
-  "flex h-[52px] min-w-0 items-center gap-1 rounded-full bg-zinc-100 p-1 pl-3 focus-within:ring-2 focus-within:ring-zinc-300";
-export const mobileMarketplaceOverlayInputClassName =
-  "h-full min-w-0 flex-1 bg-transparent px-2 text-[16px] text-zinc-950 outline-none placeholder:text-zinc-600";
-export const mobileMarketplaceOverlayFieldRowClassName =
-  "shrink-0 bg-white px-3 pb-3";
-
-export const mobileMarketplaceOverlayPrimaryActionClassName =
-  "h-12 w-full rounded-xl bg-[var(--lead-site-accent)] text-white shadow-none hover:bg-[var(--lead-site-accent-hover)]";
+/** One entry field for inventory, vehicle selection, listing links and VIN. */
+export const MobileMarketplaceOverlayField = ({
+  className,
+  clearAction,
+  icon,
+  inputClassName,
+  inputRef,
+  ...inputProps
+}: Omit<ComponentProps<"input">, "className" | "ref"> & {
+  readonly className?: string;
+  readonly clearAction?: {
+    readonly label: string;
+    readonly onClear: () => void;
+  };
+  readonly icon?: ReactNode;
+  readonly inputClassName?: string;
+  readonly inputRef?: RefObject<HTMLInputElement | null>;
+}) => {
+  const localRef = useRef<HTMLInputElement>(null);
+  const ref = inputRef ?? localRef;
+  return (
+    <div className={cn(mobileMarketplaceOverlayFieldClassName, className)}>
+      {icon}
+      <input
+        autoComplete="off"
+        className={cn(mobileMarketplaceOverlayInputClassName, inputClassName)}
+        ref={ref}
+        spellCheck={false}
+        {...inputProps}
+      />
+      {clearAction && String(inputProps.value ?? "").length > 0 ? (
+        <MobileMarketplaceOverlayIconAction
+          ariaLabel={clearAction.label}
+          disabled={inputProps.disabled || inputProps.readOnly}
+          onClick={() => {
+            clearAction.onClear();
+            ref.current?.focus({ preventScroll: true });
+          }}
+        >
+          <DealerUiIcon className="size-[18px]" name="close" />
+        </MobileMarketplaceOverlayIconAction>
+      ) : null}
+    </div>
+  );
+};
 
 interface MobileMarketplaceOverlayShellProps {
   readonly children: ReactNode;
@@ -48,6 +100,7 @@ export const MobileMarketplaceOverlayShell = ({
   onOpenChange,
   open,
 }: MobileMarketplaceOverlayShellProps) => {
+  const contentRef = useRef<HTMLDivElement>(null);
   return (
     <Dialog onOpenChange={onOpenChange} open={open}>
       <DialogContent
@@ -60,7 +113,14 @@ export const MobileMarketplaceOverlayShell = ({
         data-mobile-overlay={presentation}
         data-slot={contentDataSlot}
         onCloseAutoFocus={onCloseAutoFocus}
-        onOpenAutoFocus={onOpenAutoFocus}
+        onOpenAutoFocus={(event) => {
+          onOpenAutoFocus?.(event);
+          if (!event.defaultPrevented) {
+            event.preventDefault();
+            contentRef.current?.focus({ preventScroll: true });
+          }
+        }}
+        ref={contentRef}
         showCloseButton={false}
       >
         {children}
@@ -84,9 +144,9 @@ export const MobileMarketplaceOverlayHeader = ({
     className="shrink-0 gap-0 bg-white text-left"
     data-slot="mobile-marketplace-overlay-header"
   >
-    <div className="grid min-h-16 grid-cols-[2.75rem_minmax(0,1fr)_2.75rem] items-center gap-2 px-3 pt-[max(0.75rem,env(safe-area-inset-top))] pb-2">
+    <div className="grid min-h-16 grid-cols-[2.75rem_minmax(0,1fr)_2.75rem] items-center gap-2 px-4 pt-[max(0.75rem,env(safe-area-inset-top))] pb-3">
       <div className="flex justify-start">{leftAction}</div>
-      <DialogTitle className="truncate text-center text-[17px] leading-6">
+      <DialogTitle className="whitespace-normal text-balance break-words text-center font-medium text-card-title-lg tracking-normal">
         {title}
       </DialogTitle>
       <div className="flex justify-end">{rightAction}</div>
@@ -143,10 +203,7 @@ export const MobileMarketplaceOverlay = ({
     />
 
     <div
-      className={cn(
-        "min-h-0 flex-1 overflow-y-auto overscroll-contain bg-white",
-        bodyClassName
-      )}
+      className={cn(mobileMarketplaceOverlayScrollClassName, bodyClassName)}
       data-slot="mobile-marketplace-overlay-scroll-body"
     >
       {children}

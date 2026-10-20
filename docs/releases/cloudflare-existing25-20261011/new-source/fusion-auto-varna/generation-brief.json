@@ -1,0 +1,15 @@
+{
+  "slug": "fusion-auto-varna",
+  "reference": "E:/Temp/cars-fleet-01a12a02-priselci-integration16-1/fleet-100-status/additional25-qualification/batch4/payload/docs/releases/cloudflare-existing25-20261011/new-source/fusion-auto-varna/media/11790662447767037-1.webp",
+  "prompt": "Extract and clarify the EXISTING FUSION AUTO dealer logo visible in the top-center banner of this exact public stock photograph. Preserve the original slim flowing car-roof outline and exact words 'FUSION' above smaller red 'AUTO', the recognizable original letterforms and red AUTO accent. Remove the surrounding car photograph, banner/background, telephone numbers and all other material. Recompose the original logo alone as a compact readable horizontal transparent lockup. Use dark charcoal for original white roof/FUSION letters on light surfaces; preserve red AUTO. No new emblem, Cyrillic rebranding, extra words, manufacturer logo, shadow, gradient or claim. True transparent RGBA background. This is a proposed transparent website treatment of the observed dealer mark.",
+  "dark": {
+    "generationId": "exec-e23e57b2-4c26-48aa-8bbf-254686414ea7",
+    "sourcePath": "C:/Users/radev/.codex/generated_images/01a12d64-9c2d-7b03-85e1-619a359e6894/exec-e23e57b2-4c26-48aa-8bbf-254686414ea7.png"
+  },
+  "white": {
+    "generationId": "exec-399ae07a-3bd1-4ff3-8e68-6e271ea5e39c",
+    "sourcePath": "C:/Users/radev/.codex/generated_images/01a12d64-9c2d-7b03-85e1-619a359e6894/exec-399ae07a-3bd1-4ff3-8e68-6e271ea5e39c.png",
+    "prompt": "Edit this exact FUSION AUTO logo into its matched dark-surface treatment. Preserve exact roof/car-outline geometry, lettering, spacing, proportions and identity. Change only dark charcoal FUSION and car outline to pure white. Preserve the original red AUTO word, underline and small red rear-light accent exactly. No other text, phone, backdrop, shadow, glow, fringe, gradient or redesign. True transparent RGBA background."
+  },
+  "referenceUrl": "https://cdn2.focus.bg/mobile/photosorg/037/1/big1/11790662447767037_kT.webp"
+}

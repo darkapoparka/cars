@@ -1,200 +1,349 @@
 import type { DealerInventoryCopy } from "../lead-site";
-/** Reviewed text for the existing sample stock only. */
+/** Dealer-owned display copy from the exact personalized listing set. */
 export const inventoryCopy = {
-  "bmw-x5-m50d-sofia-2020": {
-    sourceDescription:
-      "Примерна обява за BMW X5 M50d с 360 камери, панорама, HUD и обдухване. Снимката е илюстративна; наличност и условия се потвърждават с автокъщата.",
-    bg: {
-      description:
-        "Примерна обява за BMW X5 M50d с 360 камери, панорама, HUD и обдухване. Снимката е илюстративна; наличност и условия се потвърждават с автокъщата.",
-      imageAlts: ["Черен BMW X5 SUV"],
+  "mercedes-benz-gl-450-2010-21717056982373192": {
+    "sourceDescription": "Mercedes GL 450 4matic V8 Facelift ( X164 ) Автомобилът е внос от САЩ. Пробегът е в мили (114300 мили - 184000 км).  В цената са калкулирани всички разходи(мито, ДДС, технотест).  Продажба с фактура и договор без разходи за нотариус.  Постоянен внос от САЩ на бензинови автомобили в перфектно техническо състояние и доказан пробег. Може да бъде проверен в сервиз по Ваш избор. Пакетни цени за търговци.  Мы говорим по-русски.  tel. /viber/whatsapp+359887777887",
+    "en": {
+      "description": "From the dated listing: Mercedes GL 450 4matic V8 Facelift (X164). Imported from the USA. Mileage is in miles (114300 miles — 184000 km). The stated price includes all costs (customs duty, VAT and Technotest). Sale with an invoice and contract, without notary fees. Regular imports of petrol vehicles from the USA. The listing describes excellent technical condition and verified mileage. Inspection at a workshop of your choice is available. Package prices for traders. Russian is spoken. Tel./Viber/WhatsApp +359887777887.",
+      "imageAlts": [
+        "Mercedes-Benz GL 450",
+        "Mercedes-Benz GL 450",
+        "Mercedes-Benz GL 450",
+        "Mercedes-Benz GL 450",
+        "Mercedes-Benz GL 450"
+      ]
     },
-    en: {
-      description:
-        "Sample listing for a BMW X5 M50d with 360-degree cameras, panoramic roof, head-up display and ventilated seats. The image is illustrative; availability and terms must be confirmed with the dealership.",
-      imageAlts: ["Black BMW X5 SUV"],
-    },
+    "bg": {
+      "description": "От датираната обява: Mercedes GL 450 4matic V8 Facelift ( X164 ) Автомобилът е внос от САЩ. Пробегът е в мили (114300 мили - 184000 км).  В цената са калкулирани всички разходи(мито, ДДС, технотест).  Продажба с фактура и договор без разходи за нотариус.  Постоянен внос от САЩ на бензинови автомобили в перфектно техническо състояние и доказан пробег. Може да бъде проверен в сервиз по Ваш избор. Пакетни цени за търговци.  Мы говорим по-русски.  tel. /viber/whatsapp+359887777887",
+      "imageAlts": [
+        "Mercedes-Benz GL 450",
+        "Mercedes-Benz GL 450",
+        "Mercedes-Benz GL 450",
+        "Mercedes-Benz GL 450",
+        "Mercedes-Benz GL 450"
+      ]
+    }
   },
-  "mercedes-benz-gls-400d-4matic-amg-sofia-2021": {
-    sourceDescription:
-      "GLS 400d 4MATIC AMG Line с Burmester и панорама. Голям семеен SUV от ELIT AUTO - наличен за оглед в Варна.",
-    bg: {
-      description:
-        "GLS 400d 4MATIC AMG Line с Burmester и панорама. Голям семеен SUV от {shortName} - наличен за оглед в {city}.",
-      imageAlts: ["Mercedes-Benz GLS 4MATIC AMG SUV"],
+  "volvo-s60-2013-11700571967441521": {
+    "sourceDescription": "ПРИ ЗАКУПУВАНЕ НА АВТОМОБИЛ ОТ НАС МОЖЕ ДА ВИ ГО ДОСТАВИМ ДО ВСЯКО НАСЕЛЕНО МЯСТО В СТРАНАТА СЪС СОБСТВЕН ТРАНСПОРТ ! ! !  Volvo S60 Автомобилът в внос от Америка! Паркинг забележки! Пробегът е в мили (206500km)! В цената са калкулирани всички разходи(мито, ДДС, технотест).  Продажба с фактура и договор без разходи за нотариус.",
+    "en": {
+      "description": "From the dated listing: The seller offers delivery anywhere in the country using its own transport when you buy a vehicle from it. Volvo S60 imported from America. Parking-related cosmetic marks. The listing describes the mileage as being in miles and also states 206500 km. The stated price includes all costs (customs duty, VAT and Technotest). Sale with an invoice and contract, without notary fees. ",
+      "imageAlts": [
+        "Volvo S60",
+        "Volvo S60",
+        "Volvo S60",
+        "Volvo S60",
+        "Volvo S60"
+      ]
     },
-    en: {
-      description:
-        "GLS 400d 4MATIC AMG Line with Burmester audio and a panoramic roof. A large family SUV from {shortName}, available to view in {city}.",
-      imageAlts: ["Mercedes-Benz GLS 4MATIC AMG SUV"],
-    },
+    "bg": {
+      "description": "От датираната обява: ПРИ ЗАКУПУВАНЕ НА АВТОМОБИЛ ОТ НАС МОЖЕ ДА ВИ ГО ДОСТАВИМ ДО ВСЯКО НАСЕЛЕНО МЯСТО В СТРАНАТА СЪС СОБСТВЕН ТРАНСПОРТ ! ! !  Volvo S60 Автомобилът в внос от Америка! Паркинг забележки! Пробегът е в мили (206500km)! В цената са калкулирани всички разходи(мито, ДДС, технотест).  Продажба с фактура и договор без разходи за нотариус.",
+      "imageAlts": [
+        "Volvo S60",
+        "Volvo S60",
+        "Volvo S60",
+        "Volvo S60",
+        "Volvo S60"
+      ]
+    }
   },
-  "bmw-750e-xdrive-m-sport-sofia-2024": {
-    sourceDescription:
-      "Очакван внос: 7 Series plug-in hybrid с M Sport. Нисък пробег - ELIT AUTO организира доставка и оглед в Варна.",
-    bg: {
-      description:
-        "Очакван внос: 7 Series plug-in hybrid с M Sport. Нисък пробег - {shortName} организира доставка и оглед в {city}.",
-      imageAlts: ["BMW 7 Series"],
+  "toyota-prius-hybrid-2016-11529502627430878": {
+    "sourceDescription": "ПРИ ЗАКУПУВАНЕ НА АВТОМОБИЛ ОТ НАС МОЖЕ ДА ВИ ГО ДОСТАВИМ ДО ВСЯКО НАСЕЛЕНО МЯСТО В СТРАНАТА СЪС СОБСТВЕН ТРАНСПОРТ ! ! !  Пета еко категория Перфектен автомобил внос от Америка   абсолютно реални километри  камера Нови гуми всичко платено годишна винетка 2. 5 литра разход градско каране 3. 5 лира извънградско автомобила се ползва всеки ден - за оглед с предварителна уговорка Мы говорим по русски tel. /viber/whatsapp+359887777887",
+    "en": {
+      "description": "From the dated listing: The seller offers delivery anywhere in the country using its own transport when you buy a vehicle from it. Environmental category 5. The listing describes the vehicle as an excellent import from America with genuine mileage. Camera, new tyres, all charges paid and an annual road vignette. Stated fuel consumption: 2.5 litres for city driving and 3.5 litres outside the city. The vehicle is used daily; viewing by prior arrangement. Russian is spoken. Tel./Viber/WhatsApp +359887777887.",
+      "imageAlts": [
+        "Toyota Prius  Hybrid",
+        "Toyota Prius  Hybrid",
+        "Toyota Prius  Hybrid",
+        "Toyota Prius  Hybrid",
+        "Toyota Prius  Hybrid"
+      ]
     },
-    en: {
-      description:
-        "Expected import: 7 Series plug-in hybrid with M Sport. Low mileage; {shortName} arranges delivery and viewing in {city}.",
-      imageAlts: ["BMW 7 Series"],
-    },
+    "bg": {
+      "description": "От датираната обява: ПРИ ЗАКУПУВАНЕ НА АВТОМОБИЛ ОТ НАС МОЖЕ ДА ВИ ГО ДОСТАВИМ ДО ВСЯКО НАСЕЛЕНО МЯСТО В СТРАНАТА СЪС СОБСТВЕН ТРАНСПОРТ ! ! !  Пета еко категория Перфектен автомобил внос от Америка   абсолютно реални километри  камера Нови гуми всичко платено годишна винетка 2. 5 литра разход градско каране 3. 5 лира извънградско автомобила се ползва всеки ден - за оглед с предварителна уговорка Мы говорим по русски tel. /viber/whatsapp+359887777887",
+      "imageAlts": [
+        "Toyota Prius  Hybrid",
+        "Toyota Prius  Hybrid",
+        "Toyota Prius  Hybrid",
+        "Toyota Prius  Hybrid",
+        "Toyota Prius  Hybrid"
+      ]
+    }
   },
-  "mercedes-benz-e-63-s-amg-sofia-2021": {
-    sourceDescription:
-      "E 63 S AMG facelift с 360, HUD и Burmester. Спортна лимузина от ELIT AUTO IMPORT EXPORT.",
-    bg: {
-      description:
-        "E 63 S AMG facelift с 360, HUD и Burmester. Спортна лимузина от {dealer}.",
-      imageAlts: ["Mercedes-Benz E-Class седан"],
+  "subaru-xv-2-5-sport-4x4-2021-11694454110383951": {
+    "sourceDescription": "ПРИ ЗАКУПУВАНЕ НА АВТОМОБИЛ ОТ НАС МОЖЕ ДА ВИ ГО ДОСТАВИМ ДО ВСЯКО НАСЕЛЕНО МЯСТО В СТРАНАТА СЪС СОБСТВЕН ТРАНСПОРТ ! ! !  2. 5 бензин 4х4 МОТОРЪТ Е С ВЕРИГА-FB25 Пробегът е в мили.  В цената са калкулирани всички разходи(мито, ДДС, технотест). Euro 6!  Продажба с фактура и договор без разходи за нотариус Автомобилът е внос от Америка, произведен е в Япония, без разлика от европейските модели. Постоянен внос от САЩ и Япония на бензинови автомобили от марката Subaru в перфектно техническо състояние и доказан пробег. Може да бъде проверен в сервиз по Ваш избор. Пакетни цени за търговци.  Мы говорим по-русски.  tel. /viber/whatsapp+359887777887",
+    "en": {
+      "description": "From the dated listing: The seller offers delivery anywhere in the country using its own transport when you buy a vehicle from it. 2.5 petrol, 4x4, FB25 engine with a timing chain. Mileage is in miles. The stated price includes all costs (customs duty, VAT and Technotest). Sale with an invoice and contract, without notary fees. Euro 6. Imported from America, made in Japan, with no differences from the European models. Regular imports of petrol Subaru vehicles from the USA and Japan. The listing describes excellent technical condition and verified mileage. Inspection at a workshop of your choice is available. Package prices for traders. Russian is spoken. Tel./Viber/WhatsApp +359887777887.",
+      "imageAlts": [
+        "Subaru XV 2.5 Sport 4x4",
+        "Subaru XV 2.5 Sport 4x4",
+        "Subaru XV 2.5 Sport 4x4",
+        "Subaru XV 2.5 Sport 4x4",
+        "Subaru XV 2.5 Sport 4x4"
+      ]
     },
-    en: {
-      description:
-        "Facelift E 63 S AMG with 360-degree cameras, head-up display and Burmester audio. A sports saloon from {dealer}.",
-      imageAlts: ["Mercedes-Benz E-Class saloon"],
-    },
+    "bg": {
+      "description": "От датираната обява: ПРИ ЗАКУПУВАНЕ НА АВТОМОБИЛ ОТ НАС МОЖЕ ДА ВИ ГО ДОСТАВИМ ДО ВСЯКО НАСЕЛЕНО МЯСТО В СТРАНАТА СЪС СОБСТВЕН ТРАНСПОРТ ! ! !  2. 5 бензин 4х4 МОТОРЪТ Е С ВЕРИГА-FB25 Пробегът е в мили.  В цената са калкулирани всички разходи(мито, ДДС, технотест). Euro 6!  Продажба с фактура и договор без разходи за нотариус Автомобилът е внос от Америка, произведен е в Япония, без разлика от европейските модели. Постоянен внос от САЩ и Япония на бензинови автомобили от марката Subaru в перфектно техническо състояние и доказан пробег. Може да бъде проверен в сервиз по Ваш избор. Пакетни цени за търговци.  Мы говорим по-русски.  tel. /viber/whatsapp+359887777887",
+      "imageAlts": [
+        "Subaru XV 2.5 Sport 4x4",
+        "Subaru XV 2.5 Sport 4x4",
+        "Subaru XV 2.5 Sport 4x4",
+        "Subaru XV 2.5 Sport 4x4",
+        "Subaru XV 2.5 Sport 4x4"
+      ]
+    }
   },
-  "mercedes-benz-cls-400d-4matic-sofia-2020": {
-    sourceDescription:
-      "CLS 400d 4MATIC AMG Line Designo с 360 камери. Елегантно купе-седан от ELIT AUTO в Варна.",
-    bg: {
-      description:
-        "CLS 400d 4MATIC AMG Line Designo с 360 камери. Елегантно купе-седан от {shortName} в {city}.",
-      imageAlts: ["Mercedes CLS"],
+  "subaru-xv-2-0-limited-4x4-2017-11694504370077664": {
+    "sourceDescription": "ПРИ ЗАКУПУВАНЕ НА АВТОМОБИЛ ОТ НАС МОЖЕ ДА ВИ ГО ДОСТАВИМ ДО ВСЯКО НАСЕЛЕНО МЯСТО В СТРАНАТА СЪС СОБСТВЕН ТРАНСПОРТ ! ! !  2. 0 бензин 4х4 МОТОРЪТ Е С ВЕРИГА-FB20 Пробегът е в мили.  В цената са калкулирани всички разходи(мито, ДДС, технотест).  Продажба с фактура и договор без разходи за нотариус Автомобилът е внос от Америка, произведен е в Япония, без разлика от европейските модели. Постоянен внос от САЩ и Япония на бензинови автомобили от марката Subaru в перфектно техническо състояние и доказан пробег. Може да бъде проверен в сервиз по Ваш избор. Пакетни цени за търговци.  Мы говорим по-русски.  tel. /viber/whatsapp+359887777887",
+    "en": {
+      "description": "From the dated listing: The seller offers delivery anywhere in the country using its own transport when you buy a vehicle from it. 2.0 petrol, 4x4, FB20 engine with a timing chain. Mileage is in miles. The stated price includes all costs (customs duty, VAT and Technotest). Sale with an invoice and contract, without notary fees. Imported from America, made in Japan, with no differences from the European models. Regular imports of petrol Subaru vehicles from the USA and Japan. The listing describes excellent technical condition and verified mileage. Inspection at a workshop of your choice is available. Package prices for traders. Russian is spoken. Tel./Viber/WhatsApp +359887777887.",
+      "imageAlts": [
+        "Subaru XV 2.0 Limited 4x4",
+        "Subaru XV 2.0 Limited 4x4",
+        "Subaru XV 2.0 Limited 4x4",
+        "Subaru XV 2.0 Limited 4x4",
+        "Subaru XV 2.0 Limited 4x4"
+      ]
     },
-    en: {
-      description:
-        "CLS 400d 4MATIC AMG Line Designo with 360-degree cameras. An elegant four-door coupe from {shortName} in {city}.",
-      imageAlts: ["Mercedes CLS"],
-    },
+    "bg": {
+      "description": "От датираната обява: ПРИ ЗАКУПУВАНЕ НА АВТОМОБИЛ ОТ НАС МОЖЕ ДА ВИ ГО ДОСТАВИМ ДО ВСЯКО НАСЕЛЕНО МЯСТО В СТРАНАТА СЪС СОБСТВЕН ТРАНСПОРТ ! ! !  2. 0 бензин 4х4 МОТОРЪТ Е С ВЕРИГА-FB20 Пробегът е в мили.  В цената са калкулирани всички разходи(мито, ДДС, технотест).  Продажба с фактура и договор без разходи за нотариус Автомобилът е внос от Америка, произведен е в Япония, без разлика от европейските модели. Постоянен внос от САЩ и Япония на бензинови автомобили от марката Subaru в перфектно техническо състояние и доказан пробег. Може да бъде проверен в сервиз по Ваш избор. Пакетни цени за търговци.  Мы говорим по-русски.  tel. /viber/whatsapp+359887777887",
+      "imageAlts": [
+        "Subaru XV 2.0 Limited 4x4",
+        "Subaru XV 2.0 Limited 4x4",
+        "Subaru XV 2.0 Limited 4x4",
+        "Subaru XV 2.0 Limited 4x4",
+        "Subaru XV 2.0 Limited 4x4"
+      ]
+    }
   },
-  "audi-q8-50-tdi-quattro-s-line-sofia-2021": {
-    sourceDescription:
-      "Очакван внос: Q8 50 TDI quattro S line Plus. Купе-SUV с quattro за клиенти на ELIT AUTO.",
-    bg: {
-      description:
-        "Очакван внос: Q8 50 TDI quattro S line Plus. Купе-SUV с quattro за клиенти на {shortName}.",
-      imageAlts: ["Audi Q8"],
+  "subaru-xv-2-0-premium-4x4-2017-11752520414621839": {
+    "sourceDescription": "ПРИ ЗАКУПУВАНЕ НА АВТОМОБИЛ ОТ НАС МОЖЕ ДА ВИ ГО ДОСТАВИМ ДО ВСЯКО НАСЕЛЕНО МЯСТО В СТРАНАТА СЪС СОБСТВЕН ТРАНСПОРТ ! ! !  2. 0 бензин 4х4 МОТОРЪТ Е С ВЕРИГА-FB20 Пробегът е в мили. 126000 км В цената са калкулирани всички разходи(мито, ДДС, технотест).  Продажба с фактура и договор без разходи за нотариус Автомобилът е внос от Америка, произведен е в Япония, без разлика от европейските модели. Постоянен внос от САЩ и Япония на бензинови автомобили от марката Subaru в перфектно техническо състояние и доказан пробег. Може да бъде проверен в сервиз по Ваш избор. Пакетни цени за търговци.  Мы говорим по-русски.  tel. /viber/whatsapp+359887777887",
+    "en": {
+      "description": "From the dated listing: The seller offers delivery anywhere in the country using its own transport when you buy a vehicle from it. 2.0 petrol, 4x4, FB20 engine with a timing chain. Mileage is in miles; the listing also states 126000 km. The stated price includes all costs (customs duty, VAT and Technotest). Sale with an invoice and contract, without notary fees. Imported from America, made in Japan, with no differences from the European models. Regular imports of petrol Subaru vehicles from the USA and Japan. The listing describes excellent technical condition and verified mileage. Inspection at a workshop of your choice is available. Package prices for traders. Russian is spoken. Tel./Viber/WhatsApp +359887777887.",
+      "imageAlts": [
+        "Subaru XV 2.0 Premium 4x4",
+        "Subaru XV 2.0 Premium 4x4",
+        "Subaru XV 2.0 Premium 4x4",
+        "Subaru XV 2.0 Premium 4x4",
+        "Subaru XV 2.0 Premium 4x4"
+      ]
     },
-    en: {
-      description:
-        "Expected import: Q8 50 TDI quattro S line Plus. A coupe-SUV with quattro for {shortName} customers.",
-      imageAlts: ["Audi Q8"],
-    },
+    "bg": {
+      "description": "От датираната обява: ПРИ ЗАКУПУВАНЕ НА АВТОМОБИЛ ОТ НАС МОЖЕ ДА ВИ ГО ДОСТАВИМ ДО ВСЯКО НАСЕЛЕНО МЯСТО В СТРАНАТА СЪС СОБСТВЕН ТРАНСПОРТ ! ! !  2. 0 бензин 4х4 МОТОРЪТ Е С ВЕРИГА-FB20 Пробегът е в мили. 126000 км В цената са калкулирани всички разходи(мито, ДДС, технотест).  Продажба с фактура и договор без разходи за нотариус Автомобилът е внос от Америка, произведен е в Япония, без разлика от европейските модели. Постоянен внос от САЩ и Япония на бензинови автомобили от марката Subaru в перфектно техническо състояние и доказан пробег. Може да бъде проверен в сервиз по Ваш избор. Пакетни цени за търговци.  Мы говорим по-русски.  tel. /viber/whatsapp+359887777887",
+      "imageAlts": [
+        "Subaru XV 2.0 Premium 4x4",
+        "Subaru XV 2.0 Premium 4x4",
+        "Subaru XV 2.0 Premium 4x4",
+        "Subaru XV 2.0 Premium 4x4",
+        "Subaru XV 2.0 Premium 4x4"
+      ]
+    }
   },
-  "mercedes-benz-gle-400d-coupe-sofia-2021": {
-    sourceDescription:
-      "GLE 400d Coupe 4MATIC AMG с 360 и Burmester. Наличен при ELIT AUTO IMPORT EXPORT - Варна.",
-    bg: {
-      description:
-        "GLE 400d Coupe 4MATIC AMG с 360 и Burmester. Наличен при {dealer} - {city}.",
-      imageAlts: ["Черен Mercedes-Benz GLE SUV"],
+  "subaru-xv-2-0-4-4-2017-11671399519745199": {
+    "sourceDescription": "ПРИ ЗАКУПУВАНЕ НА АВТОМОБИЛ ОТ НАС МОЖЕ ДА ВИ ГО ДОСТАВИМ ДО ВСЯКО НАСЕЛЕНО МЯСТО В СТРАНАТА СЪС СОБСТВЕН ТРАНСПОРТ ! ! !  2. 0 бензин 4х4 МОТОРЪТ Е С ВЕРИГА-FB20 Пробегът е в мили.  В цената са калкулирани всички разходи(мито, ДДС, технотест).  Продажба с фактура и договор без разходи за нотариус Автомобилът е внос от Америка, произведен е в Япония, без разлика от европейските модели. Постоянен внос от САЩ и Япония на бензинови автомобили от марката Subaru в перфектно техническо състояние и доказан пробег. Може да бъде проверен в сервиз по Ваш избор. Пакетни цени за търговци.  Мы говорим по-русски.  tel. /viber/whatsapp+359887777887",
+    "en": {
+      "description": "From the dated listing: The seller offers delivery anywhere in the country using its own transport when you buy a vehicle from it. 2.0 petrol, 4x4, FB20 engine with a timing chain. Mileage is in miles. The stated price includes all costs (customs duty, VAT and Technotest). Sale with an invoice and contract, without notary fees. Imported from America, made in Japan, with no differences from the European models. Regular imports of petrol Subaru vehicles from the USA and Japan. The listing describes excellent technical condition and verified mileage. Inspection at a workshop of your choice is available. Package prices for traders. Russian is spoken. Tel./Viber/WhatsApp +359887777887.",
+      "imageAlts": [
+        "Subaru XV 2.0 бензин 4х4",
+        "Subaru XV 2.0 бензин 4х4",
+        "Subaru XV 2.0 бензин 4х4",
+        "Subaru XV 2.0 бензин 4х4",
+        "Subaru XV 2.0 бензин 4х4"
+      ]
     },
-    en: {
-      description:
-        "GLE 400d Coupe 4MATIC AMG with 360-degree cameras and Burmester audio. Available from {dealer} in {city}.",
-      imageAlts: ["Black Mercedes-Benz GLE SUV"],
-    },
+    "bg": {
+      "description": "От датираната обява: ПРИ ЗАКУПУВАНЕ НА АВТОМОБИЛ ОТ НАС МОЖЕ ДА ВИ ГО ДОСТАВИМ ДО ВСЯКО НАСЕЛЕНО МЯСТО В СТРАНАТА СЪС СОБСТВЕН ТРАНСПОРТ ! ! !  2. 0 бензин 4х4 МОТОРЪТ Е С ВЕРИГА-FB20 Пробегът е в мили.  В цената са калкулирани всички разходи(мито, ДДС, технотест).  Продажба с фактура и договор без разходи за нотариус Автомобилът е внос от Америка, произведен е в Япония, без разлика от европейските модели. Постоянен внос от САЩ и Япония на бензинови автомобили от марката Subaru в перфектно техническо състояние и доказан пробег. Може да бъде проверен в сервиз по Ваш избор. Пакетни цени за търговци.  Мы говорим по-русски.  tel. /viber/whatsapp+359887777887",
+      "imageAlts": [
+        "Subaru XV 2.0 бензин 4х4",
+        "Subaru XV 2.0 бензин 4х4",
+        "Subaru XV 2.0 бензин 4х4",
+        "Subaru XV 2.0 бензин 4х4",
+        "Subaru XV 2.0 бензин 4х4"
+      ]
+    }
   },
-  "mercedes-benz-gle-53-amg-coupe-sofia-2022": {
-    sourceDescription:
-      "Очакван внос: GLE 53 AMG Coupe Night Pack. ELIT AUTO предлага собствен лизинг след оглед.",
-    bg: {
-      description:
-        "Очакван внос: GLE 53 AMG Coupe Night Pack. {shortName} предлага собствен лизинг след оглед.",
-      imageAlts: ["Бял Mercedes-Benz GLE AMG SUV"],
+  "subaru-xv-2-0-limited-sti-2015-11752522269460399": {
+    "sourceDescription": "Subaru XV Limited STI 2. 0 бензин 4х4 МОТОРЪТ Е С ВЕРИГА-FB20 Пробегът е в мили. 177000 км В цената са калкулирани всички разходи(мито, ДДС, технотест).  Продажба с фактура и договор без разходи за нотариус.  Автомобилът е внос от Америка, произведен е в Япония, без разлика от европейските модели. Постоянен внос от САЩ на бензинови автомобили от марката Subaru в перфектно техническо състояние и доказан пробег. Може да бъде проверен в сервиз по Ваш избор. Пакетни цени за търговци.  Мы говорим по-русски.  tel. /viber/whatsapp+359887777887",
+    "en": {
+      "description": "From the dated listing: Subaru XV Limited STI, 2.0 petrol, 4x4, FB20 engine with a timing chain. Mileage is in miles; the listing also states 177000 km. The stated price includes all costs (customs duty, VAT and Technotest). Sale with an invoice and contract, without notary fees. Imported from America, made in Japan, with no differences from the European models. Regular imports of petrol Subaru vehicles from the USA. The listing describes excellent technical condition and verified mileage. Inspection at a workshop of your choice is available. Package prices for traders. Russian is spoken. Tel./Viber/WhatsApp +359887777887.",
+      "imageAlts": [
+        "Subaru XV 2.0 Limited STI",
+        "Subaru XV 2.0 Limited STI",
+        "Subaru XV 2.0 Limited STI",
+        "Subaru XV 2.0 Limited STI",
+        "Subaru XV 2.0 Limited STI"
+      ]
     },
-    en: {
-      description:
-        "Expected import: GLE 53 AMG Coupe Night Pack. {shortName} offers in-house leasing after a viewing.",
-      imageAlts: ["White Mercedes-Benz GLE AMG SUV"],
-    },
+    "bg": {
+      "description": "От датираната обява: Subaru XV Limited STI 2. 0 бензин 4х4 МОТОРЪТ Е С ВЕРИГА-FB20 Пробегът е в мили. 177000 км В цената са калкулирани всички разходи(мито, ДДС, технотест).  Продажба с фактура и договор без разходи за нотариус.  Автомобилът е внос от Америка, произведен е в Япония, без разлика от европейските модели. Постоянен внос от САЩ на бензинови автомобили от марката Subaru в перфектно техническо състояние и доказан пробег. Може да бъде проверен в сервиз по Ваш избор. Пакетни цени за търговци.  Мы говорим по-русски.  tel. /viber/whatsapp+359887777887",
+      "imageAlts": [
+        "Subaru XV 2.0 Limited STI",
+        "Subaru XV 2.0 Limited STI",
+        "Subaru XV 2.0 Limited STI",
+        "Subaru XV 2.0 Limited STI",
+        "Subaru XV 2.0 Limited STI"
+      ]
+    }
   },
-  "mercedes-benz-s-350d-long-amg-sofia-2019": {
-    sourceDescription:
-      "S 350d Long с S63 AMG оптика и пакет за шофьор. Представителна лимузина от ELIT AUTO.",
-    bg: {
-      description:
-        "S 350d Long с S63 AMG оптика и пакет за шофьор. Представителна лимузина от {shortName}.",
-      imageAlts: ["Mercedes-Benz S-Class седан"],
+  "subaru-outback-3-6r-limited-4-4-2017-11690723101506266": {
+    "sourceDescription": "ПРИ ЗАКУПУВАНЕ НА АВТОМОБИЛ ОТ НАС МОЖЕ ДА ВИ ГО ДОСТАВИМ ДО ВСЯКО НАСЕЛЕНО МЯСТО В СТРАНАТА СЪС СОБСТВЕН ТРАНСПОРТ ! ! !  3. 6 бензин 4х4 МОТОРЪТ Е С ВЕРИГА Пробегът е в мили.  В цената са калкулирани всички разходи(мито, ДДС, технотест).  Продажба с фактура и договор без разходи за нотариус Автомобилът е внос от Америка Постоянен внос от САЩ и Япония на бензинови автомобили от марката Subaru в перфектно техническо състояние и доказан пробег. Може да бъде проверен в сервиз по Ваш избор. Пакетни цени за търговци.  Мы говорим по-русски.  tel. /viber/whatsapp+359887777887",
+    "en": {
+      "description": "From the dated listing: The seller offers delivery anywhere in the country using its own transport when you buy a vehicle from it. 3.6 petrol, 4x4, engine with a timing chain. Mileage is in miles. The stated price includes all costs (customs duty, VAT and Technotest). Sale with an invoice and contract, without notary fees. Imported from America. Regular imports of petrol Subaru vehicles from the USA and Japan. The listing describes excellent technical condition and verified mileage. Inspection at a workshop of your choice is available. Package prices for traders. Russian is spoken. Tel./Viber/WhatsApp +359887777887.",
+      "imageAlts": [
+        "Subaru Outback 3.6R Limited 4х4",
+        "Subaru Outback 3.6R Limited 4х4",
+        "Subaru Outback 3.6R Limited 4х4",
+        "Subaru Outback 3.6R Limited 4х4",
+        "Subaru Outback 3.6R Limited 4х4"
+      ]
     },
-    en: {
-      description:
-        "S 350d Long with S63 AMG styling and a chauffeur package. An executive saloon from {shortName}.",
-      imageAlts: ["Mercedes-Benz S-Class saloon"],
-    },
+    "bg": {
+      "description": "От датираната обява: ПРИ ЗАКУПУВАНЕ НА АВТОМОБИЛ ОТ НАС МОЖЕ ДА ВИ ГО ДОСТАВИМ ДО ВСЯКО НАСЕЛЕНО МЯСТО В СТРАНАТА СЪС СОБСТВЕН ТРАНСПОРТ ! ! !  3. 6 бензин 4х4 МОТОРЪТ Е С ВЕРИГА Пробегът е в мили.  В цената са калкулирани всички разходи(мито, ДДС, технотест).  Продажба с фактура и договор без разходи за нотариус Автомобилът е внос от Америка Постоянен внос от САЩ и Япония на бензинови автомобили от марката Subaru в перфектно техническо състояние и доказан пробег. Може да бъде проверен в сервиз по Ваш избор. Пакетни цени за търговци.  Мы говорим по-русски.  tel. /viber/whatsapp+359887777887",
+      "imageAlts": [
+        "Subaru Outback 3.6R Limited 4х4",
+        "Subaru Outback 3.6R Limited 4х4",
+        "Subaru Outback 3.6R Limited 4х4",
+        "Subaru Outback 3.6R Limited 4х4",
+        "Subaru Outback 3.6R Limited 4х4"
+      ]
+    }
   },
-  "mercedes-benz-v-250d-vip-business-sofia-2018": {
-    sourceDescription:
-      "V 250d VIP Business с TV, обдухване и подгряване. Бизнес ван от ELIT AUTO IMPORT EXPORT.",
-    bg: {
-      description:
-        "V 250d VIP Business с TV, обдухване и подгряване. Бизнес ван от {dealer}.",
-      imageAlts: ["V-Class ван"],
+  "subaru-outback-3-6-touring-4x4-2017-11708792902908882": {
+    "sourceDescription": "Subaru Outback Touring 3. 6 бензин 4х4 МОТОРЪТ Е С ВЕРИГА Пробегът е в мили.  Всички екстри за модела!  Дистроник, EyeSight Driver Assist Technology, датчици за мъртви зони, асистент за ленти, адаптивни лед фарове, Apple Carplay, Android auto, keyless (безключово палене), камера за задно виждане, парктроници, подгрев не седалките (предни и задни), подгрев на волана, шибидах и други В цената са калкулирани всички разходи(мито, ДДС, технотест).  Продажба с фактура и договор без разходи за нотариус.  Автомобилът е внос от Америка Постоянен внос от САЩ и Япония на бензинови автомобили от марката Subaru в перфектно техническо състояние и доказан пробег. Може да бъде проверен в сервиз по Ваш избор. Пакетни цени за търговци.  Мы говорим по-русски.  tel. /viber/whatsapp+359887777887",
+    "en": {
+      "description": "From the dated listing: Subaru Outback Touring, 3.6 petrol, 4x4, engine with a timing chain. Mileage is in miles. The listing describes all equipment available for the model: adaptive cruise control, EyeSight Driver Assist Technology, blind-spot sensors, lane assist, adaptive LED headlights, Apple CarPlay, Android Auto, keyless starting, rear-view camera, parking sensors, heated front and rear seats, heated steering wheel, sunroof and more. The stated price includes all costs (customs duty, VAT and Technotest). Sale with an invoice and contract, without notary fees. Imported from America. Regular imports of petrol Subaru vehicles from the USA and Japan. The listing describes excellent technical condition and verified mileage. Inspection at a workshop of your choice is available. Package prices for traders. Russian is spoken. Tel./Viber/WhatsApp +359887777887.",
+      "imageAlts": [
+        "Subaru Outback 3.6 Touring 4x4",
+        "Subaru Outback 3.6 Touring 4x4",
+        "Subaru Outback 3.6 Touring 4x4",
+        "Subaru Outback 3.6 Touring 4x4",
+        "Subaru Outback 3.6 Touring 4x4"
+      ]
     },
-    en: {
-      description:
-        "V 250d VIP Business with TV, ventilated and heated seats. A business van from {dealer}.",
-      imageAlts: ["V-Class van"],
-    },
+    "bg": {
+      "description": "От датираната обява: Subaru Outback Touring 3. 6 бензин 4х4 МОТОРЪТ Е С ВЕРИГА Пробегът е в мили.  Всички екстри за модела!  Дистроник, EyeSight Driver Assist Technology, датчици за мъртви зони, асистент за ленти, адаптивни лед фарове, Apple Carplay, Android auto, keyless (безключово палене), камера за задно виждане, парктроници, подгрев не седалките (предни и задни), подгрев на волана, шибидах и други В цената са калкулирани всички разходи(мито, ДДС, технотест).  Продажба с фактура и договор без разходи за нотариус.  Автомобилът е внос от Америка Постоянен внос от САЩ и Япония на бензинови автомобили от марката Subaru в перфектно техническо състояние и доказан пробег. Може да бъде проверен в сервиз по Ваш избор. Пакетни цени за търговци.  Мы говорим по-русски.  tel. /viber/whatsapp+359887777887",
+      "imageAlts": [
+        "Subaru Outback 3.6 Touring 4x4",
+        "Subaru Outback 3.6 Touring 4x4",
+        "Subaru Outback 3.6 Touring 4x4",
+        "Subaru Outback 3.6 Touring 4x4",
+        "Subaru Outback 3.6 Touring 4x4"
+      ]
+    }
   },
-  "range-rover-sport-svr-sofia-2021": {
-    sourceDescription:
-      "Range Rover Sport SVR 600 к.с. с панорама, 360 и Meridian. Висок клас SUV от ELIT AUTO.",
-    bg: {
-      description:
-        "Range Rover Sport SVR 600 к.с. с панорама, 360 и Meridian. Висок клас SUV от {shortName}.",
-      imageAlts: ["Range Rover Sport"],
+  "subaru-outback-3-6-limited-4x4-2017-11706466498517805": {
+    "sourceDescription": "Subaru Outback Limited 3. 6 бензин 4х4 МОТОРЪТ Е С ВЕРИГА Пробегът е в мили.  Дистроник, EyeSight Driver Assist Technology, датчици за мъртви зони, асистент за ленти, ксенонови фарове, keyless (безключово палене), камера за задно виждане, парктроници, подгрев на седалките (предни и задни), шибидах и други В цената са калкулирани всички разходи(мито, ДДС, технотест).  Продажба с фактура и договор без разходи за нотариус Автомобилът е внос от Америка Постоянен внос от САЩ и Япония на бензинови автомобили от марката Subaru в перфектно техническо състояние и доказан пробег. Може да бъде проверен в сервиз по Ваш избор. Пакетни цени за търговци.  Мы говорим по-русски.  tel. /viber/whatsapp+359887777887",
+    "en": {
+      "description": "From the dated listing: Subaru Outback Limited, 3.6 petrol, 4x4, engine with a timing chain. Mileage is in miles. Adaptive cruise control, EyeSight Driver Assist Technology, blind-spot sensors, lane assist, xenon headlights, keyless starting, rear-view camera, parking sensors, heated front and rear seats, sunroof and more. The stated price includes all costs (customs duty, VAT and Technotest). Sale with an invoice and contract, without notary fees. Imported from America. Regular imports of petrol Subaru vehicles from the USA and Japan. The listing describes excellent technical condition and verified mileage. Inspection at a workshop of your choice is available. Package prices for traders. Russian is spoken. Tel./Viber/WhatsApp +359887777887.",
+      "imageAlts": [
+        "Subaru Outback 3.6 Limited 4x4",
+        "Subaru Outback 3.6 Limited 4x4",
+        "Subaru Outback 3.6 Limited 4x4",
+        "Subaru Outback 3.6 Limited 4x4",
+        "Subaru Outback 3.6 Limited 4x4"
+      ]
     },
-    en: {
-      description:
-        "Range Rover Sport SVR, 600 hp, with a panoramic roof, 360-degree cameras and Meridian audio. A premium SUV from {shortName}.",
-      imageAlts: ["Range Rover Sport"],
-    },
+    "bg": {
+      "description": "От датираната обява: Subaru Outback Limited 3. 6 бензин 4х4 МОТОРЪТ Е С ВЕРИГА Пробегът е в мили.  Дистроник, EyeSight Driver Assist Technology, датчици за мъртви зони, асистент за ленти, ксенонови фарове, keyless (безключово палене), камера за задно виждане, парктроници, подгрев на седалките (предни и задни), шибидах и други В цената са калкулирани всички разходи(мито, ДДС, технотест).  Продажба с фактура и договор без разходи за нотариус Автомобилът е внос от Америка Постоянен внос от САЩ и Япония на бензинови автомобили от марката Subaru в перфектно техническо състояние и доказан пробег. Може да бъде проверен в сервиз по Ваш избор. Пакетни цени за търговци.  Мы говорим по-русски.  tel. /viber/whatsapp+359887777887",
+      "imageAlts": [
+        "Subaru Outback 3.6 Limited 4x4",
+        "Subaru Outback 3.6 Limited 4x4",
+        "Subaru Outback 3.6 Limited 4x4",
+        "Subaru Outback 3.6 Limited 4x4",
+        "Subaru Outback 3.6 Limited 4x4"
+      ]
+    }
   },
-  "bmw-430i-xdrive-gran-coupe-sofia-2023": {
-    sourceDescription:
-      "430i xDrive Gran Coupe M Sport с digital кокпит и Harman Kardon. ELIT AUTO, Варна.",
-    bg: {
-      description:
-        "430i xDrive Gran Coupe M Sport с digital кокпит и Harman Kardon. {shortName}, {city}.",
-      imageAlts: ["BMW 4 Series"],
+  "subaru-legacy-2-5-limited-4x4-2015-11693118990022696": {
+    "sourceDescription": "подходящ за ГАЗ   2. 5 бензин 4х4 МОТОРЪТ Е С ВЕРИГА-FB25 Пробегът е в мили.  В цената са калкулирани всички разходи(мито, ДДС, технотест).  Продажба с фактура и договор без разходи за нотариус Автомобилът е внос от Америка, без разлика от европейските модели. Постоянен внос от САЩ на бензинови автомобили от марката Subaru в перфектно техническо състояние и доказан пробег. Може да бъде проверен в сервиз по Ваш избор. Пакетни цени за търговци.  Мы говорим по-русски.  tel. /viber/whatsapp+359887777887",
+    "en": {
+      "description": "From the dated listing: Suitable for LPG. 2.5 petrol, 4x4, FB25 engine with a timing chain. Mileage is in miles. The stated price includes all costs (customs duty, VAT and Technotest). Sale with an invoice and contract, without notary fees. Imported from America, with no differences from the European models. Regular imports of petrol Subaru vehicles from the USA. The listing describes excellent technical condition and verified mileage. Inspection at a workshop of your choice is available. Package prices for traders. Russian is spoken. Tel./Viber/WhatsApp +359887777887.",
+      "imageAlts": [
+        "Subaru Legacy 2.5 Limited 4x4",
+        "Subaru Legacy 2.5 Limited 4x4",
+        "Subaru Legacy 2.5 Limited 4x4",
+        "Subaru Legacy 2.5 Limited 4x4",
+        "Subaru Legacy 2.5 Limited 4x4"
+      ]
     },
-    en: {
-      description:
-        "430i xDrive Gran Coupe M Sport with a digital cockpit and Harman Kardon audio. {shortName}, {city}.",
-      imageAlts: ["BMW 4 Series"],
-    },
+    "bg": {
+      "description": "От датираната обява: подходящ за ГАЗ   2. 5 бензин 4х4 МОТОРЪТ Е С ВЕРИГА-FB25 Пробегът е в мили.  В цената са калкулирани всички разходи(мито, ДДС, технотест).  Продажба с фактура и договор без разходи за нотариус Автомобилът е внос от Америка, без разлика от европейските модели. Постоянен внос от САЩ на бензинови автомобили от марката Subaru в перфектно техническо състояние и доказан пробег. Може да бъде проверен в сервиз по Ваш избор. Пакетни цени за търговци.  Мы говорим по-русски.  tel. /viber/whatsapp+359887777887",
+      "imageAlts": [
+        "Subaru Legacy 2.5 Limited 4x4",
+        "Subaru Legacy 2.5 Limited 4x4",
+        "Subaru Legacy 2.5 Limited 4x4",
+        "Subaru Legacy 2.5 Limited 4x4",
+        "Subaru Legacy 2.5 Limited 4x4"
+      ]
+    }
   },
-  "bmw-m4-competition-sofia-2021": {
-    sourceDescription:
-      "BMW M4 Competition с M пакет, спортен салон и digital кокпит. Купе от портфолиото на ELIT AUTO IMPORT EXPORT.",
-    bg: {
-      description:
-        "BMW M4 Competition с M пакет, спортен салон и digital кокпит. Купе от портфолиото на {dealer}.",
-      imageAlts: ["Червено BMW M4 Competition пред модерен шоурум"],
+  "subaru-legacy-2-5-4-4-2014-11655794958039551": {
+    "sourceDescription": "ПРИ ЗАКУПУВАНЕ НА АВТОМОБИЛ ОТ НАС МОЖЕ ДА ВИ ГО ДОСТАВИМ ДО ВСЯКО НАСЕЛЕНО МЯСТО В СТРАНАТА СЪС СОБСТВЕН ТРАНСПОРТ ! ! !  2. 5 бензин 4х4 МОТОРЪТ Е С ВЕРИГА-FB25 Пробегът е в мили.  В цената са калкулирани всички разходи(мито, ДДС, технотест).  Продажба с фактура и договор без разходи за нотариус Автомобилът е внос от Америка, произведен е в Япония, без разлика от европейските модели. Постоянен внос от САЩ и Япония на бензинови автомобили от марката Subaru в перфектно техническо състояние и доказан пробег. Може да бъде проверен в сервиз по Ваш избор. Пакетни цени за търговци.  Мы говорим по-русски.  tel. /viber/whatsapp+359887777887",
+    "en": {
+      "description": "From the dated listing: The seller offers delivery anywhere in the country using its own transport when you buy a vehicle from it. 2.5 petrol, 4x4, FB25 engine with a timing chain. Mileage is in miles. The stated price includes all costs (customs duty, VAT and Technotest). Sale with an invoice and contract, without notary fees. Imported from America, made in Japan, with no differences from the European models. Regular imports of petrol Subaru vehicles from the USA and Japan. The listing describes excellent technical condition and verified mileage. Inspection at a workshop of your choice is available. Package prices for traders. Russian is spoken. Tel./Viber/WhatsApp +359887777887.",
+      "imageAlts": [
+        "Subaru Legacy 2.5 бензин 4х4",
+        "Subaru Legacy 2.5 бензин 4х4",
+        "Subaru Legacy 2.5 бензин 4х4",
+        "Subaru Legacy 2.5 бензин 4х4",
+        "Subaru Legacy 2.5 бензин 4х4"
+      ]
     },
-    en: {
-      description:
-        "BMW M4 Competition with M package, sports interior and digital cockpit. A coupe from the {dealer} collection.",
-      imageAlts: ["Red BMW M4 Competition in front of a modern showroom"],
-    },
+    "bg": {
+      "description": "От датираната обява: ПРИ ЗАКУПУВАНЕ НА АВТОМОБИЛ ОТ НАС МОЖЕ ДА ВИ ГО ДОСТАВИМ ДО ВСЯКО НАСЕЛЕНО МЯСТО В СТРАНАТА СЪС СОБСТВЕН ТРАНСПОРТ ! ! !  2. 5 бензин 4х4 МОТОРЪТ Е С ВЕРИГА-FB25 Пробегът е в мили.  В цената са калкулирани всички разходи(мито, ДДС, технотест).  Продажба с фактура и договор без разходи за нотариус Автомобилът е внос от Америка, произведен е в Япония, без разлика от европейските модели. Постоянен внос от САЩ и Япония на бензинови автомобили от марката Subaru в перфектно техническо състояние и доказан пробег. Може да бъде проверен в сервиз по Ваш избор. Пакетни цени за търговци.  Мы говорим по-русски.  tel. /viber/whatsapp+359887777887",
+      "imageAlts": [
+        "Subaru Legacy 2.5 бензин 4х4",
+        "Subaru Legacy 2.5 бензин 4х4",
+        "Subaru Legacy 2.5 бензин 4х4",
+        "Subaru Legacy 2.5 бензин 4х4",
+        "Subaru Legacy 2.5 бензин 4х4"
+      ]
+    }
   },
-  "bmw-x5-xdrive40d-berlin-2022": {
-    sourceDescription:
-      "Крос-бордер демо наличност с оторизирани медии и право на доставка. Финалният транспорт, данъци и регистрация се уточняват с оферта от ELIT AUTO.",
-    bg: {
-      description:
-        "Крос-бордер демо наличност с оторизирани медии и право на доставка. Финалният транспорт, данъци и регистрация се уточняват с оферта от {shortName}.",
-      imageAlts: ["Черен BMW X5 SUV в градска среда"],
+  "mazda-6-2-5-skyactiv-2015-11722966256335346": {
+    "sourceDescription": "Mazda 6 Skyactiv 2. 5 бензин (най-добрия бензинов мотор на Mazda) Доказуем пробег!  В цената са калкулирани всички разходи(мито, ДДС, технотест).  Продажба с фактура и договор без разходи за нотариус.  Автомобилът е внос от Америка, произведен е в Япония, без разлика от европейските модели. Постоянен внос от САЩ на бензинови автомобили в перфектно техническо състояние и доказан пробег. Може да бъде проверен в сервиз по Ваш избор. Пакетни цени за търговци.  Мы говорим по-русски.  tel. /viber/whatsapp+35988777788",
+    "en": {
+      "description": "From the dated listing: Mazda 6 Skyactiv, 2.5 petrol, described in the listing as Mazda’s best petrol engine. Verifiable mileage. The stated price includes all costs (customs duty, VAT and Technotest). Sale with an invoice and contract, without notary fees. Imported from America, made in Japan, with no differences from the European models. Regular imports of petrol vehicles from the USA. The listing describes excellent technical condition and verified mileage. Inspection at a workshop of your choice is available. Package prices for traders. Russian is spoken. Tel./Viber/WhatsApp +35988777788.",
+      "imageAlts": [
+        "Mazda 6 2.5 Skyactiv",
+        "Mazda 6 2.5 Skyactiv",
+        "Mazda 6 2.5 Skyactiv",
+        "Mazda 6 2.5 Skyactiv",
+        "Mazda 6 2.5 Skyactiv"
+      ]
     },
-    en: {
-      description:
-        "Cross-border demo inventory with authorized images and delivery rights. Final transport, tax and registration costs are confirmed in a quote from {shortName}.",
-      imageAlts: ["Black BMW X5 SUV in an urban setting"],
-    },
+    "bg": {
+      "description": "От датираната обява: Mazda 6 Skyactiv 2. 5 бензин (най-добрия бензинов мотор на Mazda) Доказуем пробег!  В цената са калкулирани всички разходи(мито, ДДС, технотест).  Продажба с фактура и договор без разходи за нотариус.  Автомобилът е внос от Америка, произведен е в Япония, без разлика от европейските модели. Постоянен внос от САЩ на бензинови автомобили в перфектно техническо състояние и доказан пробег. Може да бъде проверен в сервиз по Ваш избор. Пакетни цени за търговци.  Мы говорим по-русски.  tel. /viber/whatsapp+35988777788",
+      "imageAlts": [
+        "Mazda 6 2.5 Skyactiv",
+        "Mazda 6 2.5 Skyactiv",
+        "Mazda 6 2.5 Skyactiv",
+        "Mazda 6 2.5 Skyactiv",
+        "Mazda 6 2.5 Skyactiv"
+      ]
+    }
   },
+  "hyundai-santa-fe-2013-21691652621240351": {
+    "sourceDescription": "Hyundai Santa Fe 2. 0 GRDi 4х4 7 места В цената са калкулирани всички разходи(мито, ДДС, технотест).  Продажба с фактура и договор без разходи за нотариус Автомобилът е внос от Южна Корея. Постоянен внос от САЩ и Южна Корея на автомобили в перфектно техническо състояние и доказан пробег. Може да бъде проверен в сервиз по Ваш избор. Пакетни цени за търговци.  Мы говорим по-русски.  tel. /viber/whatsapp+359887777887",
+    "en": {
+      "description": "From the dated listing: Hyundai Santa Fe, 2.0 GRDi, 4x4, 7 seats. The stated price includes all costs (customs duty, VAT and Technotest). Sale with an invoice and contract, without notary fees. Imported from South Korea. Regular vehicle imports from the USA and South Korea. The listing describes excellent technical condition and verified mileage. Inspection at a workshop of your choice is available. Package prices for traders. Russian is spoken. Tel./Viber/WhatsApp +359887777887.",
+      "imageAlts": [
+        "Hyundai Santa fe",
+        "Hyundai Santa fe",
+        "Hyundai Santa fe",
+        "Hyundai Santa fe",
+        "Hyundai Santa fe"
+      ]
+    },
+    "bg": {
+      "description": "От датираната обява: Hyundai Santa Fe 2. 0 GRDi 4х4 7 места В цената са калкулирани всички разходи(мито, ДДС, технотест).  Продажба с фактура и договор без разходи за нотариус Автомобилът е внос от Южна Корея. Постоянен внос от САЩ и Южна Корея на автомобили в перфектно техническо състояние и доказан пробег. Може да бъде проверен в сервиз по Ваш избор. Пакетни цени за търговци.  Мы говорим по-русски.  tel. /viber/whatsapp+359887777887",
+      "imageAlts": [
+        "Hyundai Santa fe",
+        "Hyundai Santa fe",
+        "Hyundai Santa fe",
+        "Hyundai Santa fe",
+        "Hyundai Santa fe"
+      ]
+    }
+  }
 } satisfies DealerInventoryCopy;

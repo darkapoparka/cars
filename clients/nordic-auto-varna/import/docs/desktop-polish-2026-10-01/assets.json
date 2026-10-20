@@ -1,0 +1,46 @@
+[
+	{
+		"source": "exec-a754e16e-7179-4e02-b409-e4a85aff1f24.png",
+		"target": "services-studio-desktop.webp",
+		"width": 1920,
+		"metadata": {
+			"format": "webp",
+			"mediaType": "image/webp",
+			"width": 1920,
+			"height": 640,
+			"space": "srgb",
+			"channels": 3,
+			"depth": "uchar",
+			"isProgressive": false,
+			"isPalette": false,
+			"hasProfile": false,
+			"hasAlpha": false,
+			"autoOrient": {
+				"width": 1920,
+				"height": 640
+			}
+		}
+	},
+	{
+		"source": "exec-a56bc1ef-57b1-4958-8f7c-8da0b75fdad8.png",
+		"target": "commerce-visit-desktop-v2.webp",
+		"width": 1920,
+		"metadata": {
+			"format": "webp",
+			"mediaType": "image/webp",
+			"width": 1920,
+			"height": 645,
+			"space": "srgb",
+			"channels": 3,
+			"depth": "uchar",
+			"isProgressive": false,
+			"isPalette": false,
+			"hasProfile": false,
+			"hasAlpha": false,
+			"autoOrient": {
+				"width": 1920,
+				"height": 645
+			}
+		}
+	}
+]

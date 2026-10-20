@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-focused-exact-source-editorial-repair-proof",
+  "dealer": "dream-drive-varna",
+  "baseSourceCommit": "811c7721b72cb6b1a903b745b5400f99c0a7664d",
+  "baseSourceTree": "7b878170ecb557b66f9794790e9321133a6a76d7",
+  "sourceModuleProof": {
+    "dealer": "dream-drive-varna",
+    "sourceCommit": "811c7721b72cb6b1a903b745b5400f99c0a7664d",
+    "sourceTree": "7b878170ecb557b66f9794790e9321133a6a76d7",
+    "manifest": {
+      "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/run-38689980731-attempt-1/dream-drive-varna-proposal-manifest.json",
+      "sha256": "5e9aa22d5233d64b7aa058e8bba5b46f815ae37a1753d7acd444a87a859def17"
+    },
+    "scope": "clients/dream-drive-varna/import/src/lib/content/extra-localized.ts",
+    "baseBlob": "1c369a24fefbe200e390907e76d709bdc5d56d9a",
+    "candidateBlob": "02df7cfd3339f11e0d4940492bf32d192c3bd1f9",
+    "candidate": {
+      "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/current-eleven-import-editorial/candidates/dream-drive-varna/extra-localized.ts",
+      "sha256": "5b07b7eddc66c353bd8b46927131833cf24f509c4811fc8660440adfcab2a7e3"
+    },
+    "patch": {
+      "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/current-eleven-import-editorial/candidates/dream-drive-varna/explicit-editorial.patch",
+      "sha256": "8170e7cdcbc2a5af1ac69a7e9f75e0052ce17ba9b87f97bd1c2ddf1c46ba90ca"
+    },
+    "addedEntries": [
+      {
+        "bg": "Датирана извадка от публични обяви, не складова система в реално време. Потвърдете цената, ДДС и наличността. Обявите за очакван внос не означават наличен автомобил във Варна.",
+        "en": "Dated sample of public listings, not a live stock system. Confirm the price, VAT and availability. Listings for expected imports do not mean the vehicle is available in Varna."
+      }
+    ],
+    "beforeError": "Missing English editorial catalog entry: Датирана извадка от публични обяви, не складова система в реално време. Потвърдете цената, ДДС и наличността. Обявите за очакван внос не означават наличен автомобил във Варна.",
+    "intermediateError": null,
+    "after": [
+      {
+        "slug": "confirm-current-availability",
+        "title": "How to confirm current availability at DREAM DRIVE",
+        "category": "Dealer information",
+        "date": "2026-10-10",
+        "image": "/assets/daynight/codex-generated-v2/blog/blog-cover-import-check-v2.webp",
+        "excerpt": "Dated sample of public listings, not a live stock system. Confirm the price, VAT and availability. Listings for expected imports do not mean the vehicle is available in Varna.",
+        "content": [
+          "Contact the dealership on 0895395980 and identify the exact vehicle before visiting.",
+          "Independent demonstration preview. Forms do not send messages or create a reservation."
+        ]
+      }
+    ],
+    "packagingContactAdapter": {
+      "schemaVersion": 1,
+      "dealer": "dream-drive-varna",
+      "applied": false,
+      "reason": "Existing sourced contact preserved"
+    },
+    "checks": {
+      "exactRetainedSource": true,
+      "beforeFailureReproduced": true,
+      "actualDisclosureFailureReproduced": true,
+      "afterEnglishPostsPassed": true,
+      "bgBehaviorUnchanged": true,
+      "dateSlugAndImageUnchanged": true,
+      "allExistingCatalogEntriesUnchanged": true,
+      "unknownEditorialStillThrows": true,
+      "onlyActualEmittedCatalogEntriesAdded": true,
+      "onlyCatalogPrefixChanged": true
+    },
+    "modulesRead": [
+      {
+        "path": "import/src/lib/content/localized.ts",
+        "blob": "b431adc38faa804febafe0f174516512f062f15c"
+      },
+      {
+        "path": "import/src/lib/content/extra-localized.ts",
+        "blob": "1c369a24fefbe200e390907e76d709bdc5d56d9a"
+      },
+      {
+        "path": "import/src/lib/config/site.ts",
+        "blob": "553f3ae74725bc538b14fc13c8c4e450858dad76"
+      },
+      {
+        "path": "import/src/lib/config/dealer.ts",
+        "blob": "9f8bb9a9f5ad4a0dd9b1875b67ec0c1b4fc36028"
+      },
+      {
+        "path": "import/src/lib/config/cars-locale.ts",
+        "blob": "34d859ad40b1fee1755a6768ee4bf614f3cc31ec"
+      },
+      {
+        "path": "import/src/lib/data/blog.ts",
+        "blob": "77bc6a37de4706bdd992a88cda9ea24094b1c208"
+      }
+    ]
+  },
+  "originalProof": {
+    "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/current-eleven-import-editorial/candidates/eleven-editorial-repair-proof.json",
+    "sha256": "10f723c352c11ee952437627ffbe79af81d26105d43dd3219ea3c837d86d4f4e"
+  },
+  "modernLogoAliasProof": null,
+  "modernOriginalProof": null,
+  "compiled": false,
+  "newCiRun": null,
+  "providerWrites": 0
+}

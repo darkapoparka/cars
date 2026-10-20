@@ -1,11 +1,38 @@
-import dealer from '$data/dealer-stock.json';
-export type BrandConfig = { name: string; shortName: string; city: string; addressLine: string; address: string; phone: string; secondaryPhone: string; phoneHref: `tel:${string}`; appointment: string; logo: `/${string}`; logoLight: `/${string}`; youtubeUrl: string; instagramUrl: string; facebookUrl: string; marketplaceUrl: string; hours: string; };
-const socials = dealer.socialLinks as Partial<Record<'youtube' | 'instagram' | 'facebook', string>>;
-export const brand: BrandConfig = {
-  name: dealer.name, shortName: dealer.shortName, city: dealer.city,
-  addressLine: dealer.address, address: `${dealer.address}, ${dealer.city}`,
-  phone: dealer.phone, secondaryPhone: dealer.secondaryPhone, phoneHref: `tel:${dealer.phoneE164}`,
-  appointment: 'Потвърдете огледа по телефона', hours: dealer.hours,
-  logo: '/dealer/logo-dark.svg', logoLight: '/dealer/logo-light.svg', marketplaceUrl: dealer.profile,
-  youtubeUrl: socials.youtube ?? '', instagramUrl: socials.instagram ?? '', facebookUrl: socials.facebook ?? ''
+export type BrandConfig = {
+  name: string;
+  shortName: string;
+  city: string;
+  showroomCoordinates: { latitude: number; longitude: number } | null;
+  addressLine: string;
+  address: string;
+  phone: string;
+  phoneHref: `tel:${string}`;
+  appointment: string;
+  logo: `/${string}`;
+  logoOnDark: `/${string}`;
+  youtubeUrl: `https://${string}` | '';
+  instagramUrl: `https://${string}` | '';
+  facebookUrl: `https://${string}` | '';
 };
+
+const name = "АВТОБОРСА МАНИЯ";
+const shortName = "Мания";
+const city = "Варна";
+const addressLine = "бул. Цар Освободител, район Владислав Варненчик";
+
+export const brand = {
+  name,
+  shortName,
+  city,
+  showroomCoordinates: null,
+  youtubeUrl: "",
+  instagramUrl: "",
+  facebookUrl: "",
+  phone: "0899 874 488",
+  phoneHref: "tel:+359899874488",
+  addressLine,
+  address: "бул. Цар Освободител, район Владислав Варненчик",
+  appointment: "Не е публикувано работно време. Потвърдете удобния час и точния вход по телефона.",
+  logo: "/dealer-brand/v2-a83417b07db78ad1/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/v2-a83417b07db78ad1/logo-on-dark.webp"
+} as const satisfies BrandConfig;

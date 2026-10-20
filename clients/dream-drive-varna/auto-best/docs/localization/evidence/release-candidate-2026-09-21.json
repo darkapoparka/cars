@@ -1,0 +1,198 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-09-21T04:17:18.874Z",
+  "repository": "darkapoparka/cars-template-auto-best",
+  "branch": "main",
+  "parentCommit": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
+  "candidate": {
+    "applicationSha256": "e8930660f3c8f71d40bc4d0e8a405a90f8c0ecd5f7a5b1964abe14075332de69",
+    "assetsSha256": "ede625f0b2e6871f6cd3655293a769d21554fc6d91687e822f9d9bd047755119",
+    "testsSha256": "7c133fd8030a16e64fc4d3c4668b9339bac25e5dd796d1905f9314d5c62d3e83"
+  },
+  "catalogs": {
+    "messages": 958,
+    "enabledLocales": [
+      "en",
+      "bg"
+    ],
+    "catalogSha256": "f9d14b919eedc6b633c41b60061f9f05a0c7d63fd0265a1945abfdada8685b73",
+    "policySha256": "e0adcfd9ca1efaf30c1410540cdbef25d2144bf9dc447971f0ce3b38cc5928c0",
+    "sourceSha256": {
+      "localization/common.json": "db0415ae99f2e76946633869ac053ea03a3b4a688d2c0263a406c3b14cb68e78",
+      "localization/catalog.reviewed.json": "0709059743c3aff1f9e6d1025b3a36385de10309b65022f35ee9a1b47e15d316",
+      "localization/template.reviewed.json": "e8276265d20a7069f25dfca610af2fa39125bb2f7ae392c174a5a4a9bd30c1b5",
+      "localization/dealer.reviewed.json": "22ebd7f3ba2ce8ff5e78964797431bad1075e46c67cfea194f5b024ca0a7ff2f"
+    },
+    "quarantinedAliases": 43,
+    "activeAmbiguousAliases": 0,
+    "manifestFileSha256": "c841478a893a77731fc755a2dea6798c1afa46878eeed5b14adc284d49e26524"
+  },
+  "staticGate": {
+    "file": "artifacts/localization/release-current/static-results.json",
+    "generatedAt": null,
+    "base": null,
+    "total": 13,
+    "passed": 13,
+    "failed": 0,
+    "skipped": 0
+  },
+  "localeBrowserGate": {
+    "base": "http://127.0.0.1:6461",
+    "serial": true,
+    "total": 10,
+    "passed": 10,
+    "failed": 0,
+    "suites": [
+      {
+        "name": "qa-locale-ssr",
+        "exitCode": 0,
+        "out": "J:\\template-repos\\cars-template-auto-best\\artifacts\\localization\\release-current-browser\\qa-locale-ssr"
+      },
+      {
+        "name": "qa-locales",
+        "exitCode": 0,
+        "out": "J:\\template-repos\\cars-template-auto-best\\artifacts\\localization\\release-current-browser\\qa-locales"
+      },
+      {
+        "name": "qa-locale-http",
+        "exitCode": 0,
+        "out": "J:\\template-repos\\cars-template-auto-best\\artifacts\\localization\\release-current-browser\\qa-locale-http"
+      },
+      {
+        "name": "qa-locale-legacy",
+        "exitCode": 0,
+        "out": "J:\\template-repos\\cars-template-auto-best\\artifacts\\localization\\release-current-browser\\qa-locale-legacy"
+      },
+      {
+        "name": "qa-locale-preferences",
+        "exitCode": 0,
+        "out": "J:\\template-repos\\cars-template-auto-best\\artifacts\\localization\\release-current-browser\\qa-locale-preferences"
+      },
+      {
+        "name": "qa-locale-storage",
+        "exitCode": 0,
+        "out": "J:\\template-repos\\cars-template-auto-best\\artifacts\\localization\\release-current-browser\\qa-locale-storage"
+      },
+      {
+        "name": "qa-locale-races",
+        "exitCode": 0,
+        "out": "J:\\template-repos\\cars-template-auto-best\\artifacts\\localization\\release-current-browser\\qa-locale-races"
+      },
+      {
+        "name": "qa-locale-journeys",
+        "exitCode": 0,
+        "out": "J:\\template-repos\\cars-template-auto-best\\artifacts\\localization\\release-current-browser\\qa-locale-journeys"
+      },
+      {
+        "name": "qa-locale-completion",
+        "exitCode": 0,
+        "out": "J:\\template-repos\\cars-template-auto-best\\artifacts\\localization\\release-current-browser\\qa-locale-completion"
+      },
+      {
+        "name": "qa-locale-mobile-copy",
+        "exitCode": 0,
+        "out": "J:\\template-repos\\cars-template-auto-best\\artifacts\\localization\\release-current-browser\\qa-locale-mobile-copy"
+      }
+    ]
+  },
+  "focusedBrowser": {
+    "typography": {
+      "file": "artifacts/typography-smoke/report.json",
+      "generatedAt": "2026-09-21T04:07:05.112Z",
+      "base": "http://127.0.0.1:6461",
+      "total": 7,
+      "passed": 7,
+      "failed": 0,
+      "skipped": 0
+    },
+    "mobilePolish": {
+      "file": "artifacts/localization/release-current/mobile-polish-report.json",
+      "generatedAt": "2026-09-21T04:14:53.562Z",
+      "base": "http://127.0.0.1:6461",
+      "total": 8,
+      "passed": 8,
+      "failed": 0,
+      "skipped": 0
+    },
+    "overlayProportions": {
+      "file": "artifacts/overlay-proportions-smoke/report.json",
+      "generatedAt": "2026-09-21T04:10:41.428Z",
+      "base": "http://127.0.0.1:6461",
+      "total": 18,
+      "passed": 18,
+      "failed": 0,
+      "skipped": 0
+    },
+    "overlayControlsChromium": {
+      "file": "artifacts/overlay-controls-chromium/report.json",
+      "generatedAt": "2026-09-21T04:11:31.257Z",
+      "base": "http://127.0.0.1:6461",
+      "total": 100,
+      "passed": 100,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "existingBrowser": {
+    "route": {
+      "file": "artifacts/route-smoke/report.json",
+      "generatedAt": "2026-09-21T03:58:08.394Z",
+      "base": "http://127.0.0.1:6461",
+      "total": 106,
+      "passed": 106,
+      "failed": 0,
+      "skipped": 0
+    },
+    "journey": {
+      "file": "artifacts/journey-smoke/report.json",
+      "generatedAt": "2026-09-21T04:01:16.376Z",
+      "base": "http://127.0.0.1:6461",
+      "total": 8,
+      "passed": 8,
+      "failed": 0,
+      "skipped": 0
+    },
+    "enquiry": {
+      "file": "artifacts/enquiry-smoke/report.json",
+      "generatedAt": "2026-09-21T04:02:39.685Z",
+      "base": "http://127.0.0.1:6461",
+      "total": 4,
+      "passed": 4,
+      "failed": 0,
+      "skipped": 0
+    },
+    "mobileFilters": {
+      "file": "artifacts/mobile-filter-smoke/report.json",
+      "generatedAt": "2026-09-21T04:12:24.677Z",
+      "base": null,
+      "total": 4,
+      "passed": 4,
+      "failed": 0,
+      "skipped": 0
+    },
+    "desktopDiscovery": {
+      "file": "artifacts/desktop-discovery-smoke/report.json",
+      "generatedAt": "2026-09-21T04:02:59.702Z",
+      "base": null,
+      "total": 6,
+      "passed": 6,
+      "failed": 0,
+      "skipped": 0
+    },
+    "phase4": {
+      "file": "artifacts/phase4-smoke/report.json",
+      "generatedAt": "2026-09-21T04:03:00.458Z",
+      "base": "http://127.0.0.1:6461",
+      "total": 6,
+      "passed": 6,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "limits": {
+    "intentionalJourneySkips": 6,
+    "skipReason": "Standalone Auto Best has no cross-design FAB.",
+    "additionalLanguages": "Hidden; only en and bg enabled.",
+    "dealerDeployments": "Not performed."
+  }
+}

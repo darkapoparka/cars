@@ -118,6 +118,12 @@ export const referenceSpecifications: readonly DetailSpecification[] = [
     "valueKey": "fuel.diesel"
   },
   {
+    "id": "year",
+    "icon": "/assets/imgs/template/icons/calendar.svg",
+    "value": "2018",
+    "labelKey": "vehicle.field.year"
+  },
+  {
     "id": "lit",
     "icon": "/assets/imgs/page/car/lit.svg",
     "value": "190 hp",
@@ -194,7 +200,7 @@ export const referenceReviews: readonly DetailReview[] = [];
 export const referenceSeller: DetailSeller = {
   "name": "AVANGARD AUTO",
   "location": "бул. Цар Освободител 289",
-  "avatar": "/dealer-brand/logo-on-light-20260919.webp",
+  "avatar": "/dealer-brand/v2-d2d110db50b48593/logo-on-light.webp",
   "mobile": "0877 800 921",
   "email": "",
   "whatsapp": "",

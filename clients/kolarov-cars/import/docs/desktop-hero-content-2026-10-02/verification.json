@@ -1,0 +1,93 @@
+{
+	"node": "24.21.0",
+	"packageLockSha256": "aa596db7046c3f226ce50b488e283e30121eb49122d5006c60035ef57a952e1c",
+	"source": [
+		{
+			"path": "src/lib/components/contact/ContactHeroDetails.svelte",
+			"canonicalSha256": "c57a288c0725be5f28bc2b24c8bfe12389807030c02d41cde010d21e93fa70c1",
+			"testedSha256": "c57a288c0725be5f28bc2b24c8bfe12389807030c02d41cde010d21e93fa70c1"
+		},
+		{
+			"path": "src/routes/(site)/about/+page.svelte",
+			"canonicalSha256": "5aede2e3e64d0cacfef403e70efa28dac4af1e353a6f4953858aef643492dbab",
+			"testedSha256": "5aede2e3e64d0cacfef403e70efa28dac4af1e353a6f4953858aef643492dbab"
+		},
+		{
+			"path": "src/routes/(site)/contact/+page.svelte",
+			"canonicalSha256": "9dc4961d5b3904b09d1a15f300582be922f51f959068e49daa88405b2016b324",
+			"testedSha256": "9dc4961d5b3904b09d1a15f300582be922f51f959068e49daa88405b2016b324"
+		},
+		{
+			"path": "tests/desktop-page-patterns.e2e.ts",
+			"canonicalSha256": "1c6001d7801de08f78fac431bf5940b344db6d21db045300f089d9dcc8e1278d",
+			"testedSha256": "1c6001d7801de08f78fac431bf5940b344db6d21db045300f089d9dcc8e1278d"
+		},
+		{
+			"path": "tests/typography-contact.e2e.ts",
+			"canonicalSha256": "4bd831cd463c1c011d564e5ee1c4ec9a3211ab4191dd286526783b43a95d16b6",
+			"testedSha256": "4bd831cd463c1c011d564e5ee1c4ec9a3211ab4191dd286526783b43a95d16b6"
+		}
+	],
+	"before": {
+		"states": 24,
+		"server": "http://127.0.0.1:6790"
+	},
+	"after": {
+		"states": 24,
+		"server": "http://127.0.0.1:6792",
+		"production": true,
+		"failures": 0
+	},
+	"preservation": {
+		"mobileStates": 8,
+		"exactVisiblePresentationMatches": 8,
+		"desktopStates": 16,
+		"exactHeroFrameAndTitleMatches": 16
+	},
+	"browser": {
+		"passed": 73,
+		"viewportSkips": 27,
+		"failed": 0
+	},
+	"unit": {
+		"files": 18,
+		"passed": 124
+	},
+	"logs": [
+		{
+			"name": "Svelte/TypeScript",
+			"result": "0 errors, 0 warnings",
+			"path": "C:/Users/radev/AppData/Local/Temp/cars-import-desktop-contact-about-services-2026-10-02/runtime/hero-content-check.log",
+			"sha256": "e2e779b8de53654fde83558f1928bf2662e8e76169698ac8c8bc4d0e3c5d9531"
+		},
+		{
+			"name": "Production build",
+			"result": "Passed",
+			"path": "C:/Users/radev/AppData/Local/Temp/cars-import-desktop-contact-about-services-2026-10-02/runtime/hero-content-build.log",
+			"sha256": "763ad0de8ca1c8ff3fd3c124261b93a0f8a24865b4a113c5967581629584ecda"
+		},
+		{
+			"name": "Unit recheck",
+			"result": "124 passed in 18 files",
+			"path": "C:/Users/radev/AppData/Local/Temp/cars-import-desktop-contact-about-services-2026-10-02/runtime/hero-content-unit.log",
+			"sha256": "9907ff7064bb921d02d601a16eb1556a2434fe8425d14216e5940fa9aab1f6b1"
+		},
+		{
+			"name": "Browser suites",
+			"result": "73 passed, 27 viewport skips, 0 failures",
+			"path": "C:/Users/radev/AppData/Local/Temp/cars-import-desktop-contact-about-services-2026-10-02/runtime/hero-content-e2e.log",
+			"sha256": "5d0ca142362ae7c3ff732f62e37314804ab0e48758721741f92fcecf451f2777"
+		},
+		{
+			"name": "Earlier unit memory failure",
+			"result": "Preserved; successful unchanged-source recheck above",
+			"path": "C:/Users/radev/AppData/Local/Temp/cars-import-desktop-contact-about-services-2026-10-02/runtime/hero-content-unit-memory-failure.log",
+			"sha256": "945b1d4e713acd0fa37f184d5a11396f96af7e688ae93be0235eb905bbb86c5a"
+		}
+	],
+	"workspaceDoctor": {
+		"path": "L:\\CODEX\\cars\\templates\\import/runtime/desktop-hero-content-2026-10-02/workspace-doctor.log",
+		"sourceTracking": "cars ahead=0 behind=0 at fetched inspection; unrelated Cars Admin divergence preserved"
+	},
+	"boundary": "Standalone local Chromium; no hosted/mounted verification, template promotion, dealer deployment or outreach"
+}

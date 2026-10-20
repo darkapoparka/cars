@@ -1,0 +1,387 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-reviewed-modern-bilingual-copy-input",
+  "dealer": "ivo-auto",
+  "sourceCommit": "2f7937757b84d6737a912b92908ff6ba2584cf5f",
+  "baselineTree": "1c9f9fdb147ca102faf2b9acfae3d9db46ac65b5",
+  "inputSha256": "82c0ae41bcf81c51f334a93353547c75bb1aa8e77fec9a0c31c333b3c1b678f3",
+  "modernInputRowsSha256": "797d88b53f88c097c9d77f91bdbc170e411494f1e4d7783d1a041428d832f4a6",
+  "profileInputs": [
+    {
+      "path": "dealer.json",
+      "bytes": 4552,
+      "sha256": "853206ca77780e4730f418659bd1cd126f88c792c17bd5b7d20cc6dd9dc88f65",
+      "gitBlob": "4f63f6446954973fdcef515d8b4954ea9c43afd8"
+    },
+    {
+      "path": "business-facts.json",
+      "bytes": 2534,
+      "sha256": "b47e80422cc76f13a503dd47341a9ac9800aeb821c0629f53943539fd85b4bc9",
+      "gitBlob": "93678529b5b09bc5b69ee627bae4c3cfcd8a714d"
+    },
+    {
+      "path": "stock.json",
+      "bytes": 18543,
+      "sha256": "7b4d7b205a7934b1c5a63f088f2050660082d2474dff558c99fc0394db41621c",
+      "gitBlob": "2a1670fe6bec6d13ef05357a7b4514af65984fea"
+    }
+  ],
+  "reviewedGeneratorHelper": {
+    "path": "scripts/lib/modern-dealer-inventory-copy.mjs",
+    "sha256": "cbdbaa28dc07911cfe913b4e627671b6556fc25d3bfe59364e29c5ca5a29072b"
+  },
+  "listingCount": 16,
+  "review": {
+    "displayCopyOnly": true,
+    "exactSourceDescriptionKeys": true,
+    "listingFactsUnchanged": true,
+    "imageUrlsUnchanged": true,
+    "imageAltsPreserved": true,
+    "interpolationTokensUnchanged": true,
+    "reviewedBy": "root",
+    "notes": "Translate exact snapshot descriptions and preserve owner vehicle names, facts, dated availability and form disclosure."
+  },
+  "reviewedCopy": {
+    "rolls-royce-ghost-2011-11786049135297264": {
+      "sourceDescription": "Rolls-Royce Ghost, 2011 г., 66 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона.",
+      "en": {
+        "description": "Rolls-Royce Ghost, 2011, 66 000 km. Published listing from IVO AUTO. Confirm availability, equipment and terms by phone.",
+        "imageAlts": [
+          "Rolls-Royce Ghost",
+          "Rolls-Royce Ghost",
+          "Rolls-Royce Ghost",
+          "Rolls-Royce Ghost"
+        ]
+      },
+      "bg": {
+        "description": "Rolls-Royce Ghost, 2011 г., 66 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона.",
+        "imageAlts": [
+          "Rolls-Royce Ghost",
+          "Rolls-Royce Ghost",
+          "Rolls-Royce Ghost",
+          "Rolls-Royce Ghost"
+        ]
+      }
+    },
+    "audi-a4-s-line-4x4-2-0t-2008-11784822971964926": {
+      "sourceDescription": "Audi A4 S-line 4x4 2.0T, 2008 г., 195 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона.",
+      "en": {
+        "description": "Audi A4 S-line 4x4 2.0T, 2008, 195 000 km. Published listing from IVO AUTO. Confirm availability, equipment and terms by phone.",
+        "imageAlts": [
+          "Audi A4 S-line 4x4 2.0T",
+          "Audi A4 S-line 4x4 2.0T",
+          "Audi A4 S-line 4x4 2.0T",
+          "Audi A4 S-line 4x4 2.0T"
+        ]
+      },
+      "bg": {
+        "description": "Audi A4 S-line 4x4 2.0T, 2008 г., 195 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона.",
+        "imageAlts": [
+          "Audi A4 S-line 4x4 2.0T",
+          "Audi A4 S-line 4x4 2.0T",
+          "Audi A4 S-line 4x4 2.0T",
+          "Audi A4 S-line 4x4 2.0T"
+        ]
+      }
+    },
+    "porsche-panamera-turbo-4-8i-2010-11775231551222536": {
+      "sourceDescription": "Porsche Panamera Turbo 4.8i, 2010 г., 145 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона.",
+      "en": {
+        "description": "Porsche Panamera Turbo 4.8i, 2010, 145 000 km. Published listing from IVO AUTO. Confirm availability, equipment and terms by phone.",
+        "imageAlts": [
+          "Porsche Panamera Turbo 4.8i",
+          "Porsche Panamera Turbo 4.8i",
+          "Porsche Panamera Turbo 4.8i",
+          "Porsche Panamera Turbo 4.8i"
+        ]
+      },
+      "bg": {
+        "description": "Porsche Panamera Turbo 4.8i, 2010 г., 145 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона.",
+        "imageAlts": [
+          "Porsche Panamera Turbo 4.8i",
+          "Porsche Panamera Turbo 4.8i",
+          "Porsche Panamera Turbo 4.8i",
+          "Porsche Panamera Turbo 4.8i"
+        ]
+      }
+    },
+    "dodge-durango-3-6-face-lift-6-1-2015-21784804233950248": {
+      "sourceDescription": "Dodge Durango 3.6 Face Lift Газ.Инж. 6+ 1, 2015 г., 202 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона.",
+      "en": {
+        "description": "Dodge Durango 3.6 Face Lift Газ.Инж. 6+ 1, 2015, 202 000 km. Published listing from IVO AUTO. Confirm availability, equipment and terms by phone.",
+        "imageAlts": [
+          "Dodge Durango 3.6 Face Lift Газ.Инж. 6+ 1",
+          "Dodge Durango 3.6 Face Lift Газ.Инж. 6+ 1",
+          "Dodge Durango 3.6 Face Lift Газ.Инж. 6+ 1",
+          "Dodge Durango 3.6 Face Lift Газ.Инж. 6+ 1"
+        ]
+      },
+      "bg": {
+        "description": "Dodge Durango 3.6 Face Lift Газ.Инж. 6+ 1, 2015 г., 202 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона.",
+        "imageAlts": [
+          "Dodge Durango 3.6 Face Lift Газ.Инж. 6+ 1",
+          "Dodge Durango 3.6 Face Lift Газ.Инж. 6+ 1",
+          "Dodge Durango 3.6 Face Lift Газ.Инж. 6+ 1",
+          "Dodge Durango 3.6 Face Lift Газ.Инж. 6+ 1"
+        ]
+      }
+    },
+    "bmw-520-m-digital-2018-11784710943679925": {
+      "sourceDescription": "BMW 520 M-пакет Digital, 2018 г., 165 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона.",
+      "en": {
+        "description": "BMW 520 M-пакет Digital, 2018, 165 000 km. Published listing from IVO AUTO. Confirm availability, equipment and terms by phone.",
+        "imageAlts": [
+          "BMW 520 M-пакет Digital",
+          "BMW 520 M-пакет Digital",
+          "BMW 520 M-пакет Digital",
+          "BMW 520 M-пакет Digital"
+        ]
+      },
+      "bg": {
+        "description": "BMW 520 M-пакет Digital, 2018 г., 165 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона.",
+        "imageAlts": [
+          "BMW 520 M-пакет Digital",
+          "BMW 520 M-пакет Digital",
+          "BMW 520 M-пакет Digital",
+          "BMW 520 M-пакет Digital"
+        ]
+      }
+    },
+    "vw-touran-1-6tdi-6-1-2012-11780924566736048": {
+      "sourceDescription": "VW Touran 1.6TDI Автомат 6+ 1, 2012 г., 210 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона.",
+      "en": {
+        "description": "VW Touran 1.6TDI Автомат 6+ 1, 2012, 210 000 km. Published listing from IVO AUTO. Confirm availability, equipment and terms by phone.",
+        "imageAlts": [
+          "VW Touran 1.6TDI Автомат 6+ 1",
+          "VW Touran 1.6TDI Автомат 6+ 1",
+          "VW Touran 1.6TDI Автомат 6+ 1",
+          "VW Touran 1.6TDI Автомат 6+ 1"
+        ]
+      },
+      "bg": {
+        "description": "VW Touran 1.6TDI Автомат 6+ 1, 2012 г., 210 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона.",
+        "imageAlts": [
+          "VW Touran 1.6TDI Автомат 6+ 1",
+          "VW Touran 1.6TDI Автомат 6+ 1",
+          "VW Touran 1.6TDI Автомат 6+ 1",
+          "VW Touran 1.6TDI Автомат 6+ 1"
+        ]
+      }
+    },
+    "vw-cc-2-0i-2013-11778070752693531": {
+      "sourceDescription": "VW CC 2.0i, 2013 г., 214 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона.",
+      "en": {
+        "description": "VW CC 2.0i, 2013, 214 000 km. Published listing from IVO AUTO. Confirm availability, equipment and terms by phone.",
+        "imageAlts": [
+          "VW CC 2.0i",
+          "VW CC 2.0i",
+          "VW CC 2.0i",
+          "VW CC 2.0i"
+        ]
+      },
+      "bg": {
+        "description": "VW CC 2.0i, 2013 г., 214 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона.",
+        "imageAlts": [
+          "VW CC 2.0i",
+          "VW CC 2.0i",
+          "VW CC 2.0i",
+          "VW CC 2.0i"
+        ]
+      }
+    },
+    "bmw-x5-4-0d-face-lift-8-2011-21779453321117197": {
+      "sourceDescription": "BMW X5 4.0D Face Lift 8ск., 2011 г., 196 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона.",
+      "en": {
+        "description": "BMW X5 4.0D Face Lift 8ск., 2011, 196 000 km. Published listing from IVO AUTO. Confirm availability, equipment and terms by phone.",
+        "imageAlts": [
+          "BMW X5 4.0D Face Lift 8ск.",
+          "BMW X5 4.0D Face Lift 8ск.",
+          "BMW X5 4.0D Face Lift 8ск.",
+          "BMW X5 4.0D Face Lift 8ск."
+        ]
+      },
+      "bg": {
+        "description": "BMW X5 4.0D Face Lift 8ск., 2011 г., 196 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона.",
+        "imageAlts": [
+          "BMW X5 4.0D Face Lift 8ск.",
+          "BMW X5 4.0D Face Lift 8ск.",
+          "BMW X5 4.0D Face Lift 8ск.",
+          "BMW X5 4.0D Face Lift 8ск."
+        ]
+      }
+    },
+    "bmw-x5-3-0d-face-lift-2005-21779444147151936": {
+      "sourceDescription": "BMW X5 3.0D Face Lift, 2005 г., 195 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона.",
+      "en": {
+        "description": "BMW X5 3.0D Face Lift, 2005, 195 000 km. Published listing from IVO AUTO. Confirm availability, equipment and terms by phone.",
+        "imageAlts": [
+          "BMW X5 3.0D Face Lift",
+          "BMW X5 3.0D Face Lift",
+          "BMW X5 3.0D Face Lift",
+          "BMW X5 3.0D Face Lift"
+        ]
+      },
+      "bg": {
+        "description": "BMW X5 3.0D Face Lift, 2005 г., 195 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона.",
+        "imageAlts": [
+          "BMW X5 3.0D Face Lift",
+          "BMW X5 3.0D Face Lift",
+          "BMW X5 3.0D Face Lift",
+          "BMW X5 3.0D Face Lift"
+        ]
+      }
+    },
+    "bmw-418-d-m-2017-11780659371731573": {
+      "sourceDescription": "BMW 418 D M-Пакет, 2017 г., 149 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона.",
+      "en": {
+        "description": "BMW 418 D M-Пакет, 2017, 149 000 km. Published listing from IVO AUTO. Confirm availability, equipment and terms by phone.",
+        "imageAlts": [
+          "BMW 418 D M-Пакет",
+          "BMW 418 D M-Пакет",
+          "BMW 418 D M-Пакет",
+          "BMW 418 D M-Пакет"
+        ]
+      },
+      "bg": {
+        "description": "BMW 418 D M-Пакет, 2017 г., 149 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона.",
+        "imageAlts": [
+          "BMW 418 D M-Пакет",
+          "BMW 418 D M-Пакет",
+          "BMW 418 D M-Пакет",
+          "BMW 418 D M-Пакет"
+        ]
+      }
+    },
+    "subaru-b9-tribeca-3-0-2006-21781871293573646": {
+      "sourceDescription": "Subaru B9 tribeca 3.0 Газ.Инж., 2006 г., 170 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона.",
+      "en": {
+        "description": "Subaru B9 tribeca 3.0 Газ.Инж., 2006, 170 000 km. Published listing from IVO AUTO. Confirm availability, equipment and terms by phone.",
+        "imageAlts": [
+          "Subaru B9 tribeca 3.0 Газ.Инж.",
+          "Subaru B9 tribeca 3.0 Газ.Инж.",
+          "Subaru B9 tribeca 3.0 Газ.Инж.",
+          "Subaru B9 tribeca 3.0 Газ.Инж."
+        ]
+      },
+      "bg": {
+        "description": "Subaru B9 tribeca 3.0 Газ.Инж., 2006 г., 170 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона.",
+        "imageAlts": [
+          "Subaru B9 tribeca 3.0 Газ.Инж.",
+          "Subaru B9 tribeca 3.0 Газ.Инж.",
+          "Subaru B9 tribeca 3.0 Газ.Инж.",
+          "Subaru B9 tribeca 3.0 Газ.Инж."
+        ]
+      }
+    },
+    "mercedes-benz-ml-250-amg-2014-21762959348847465": {
+      "sourceDescription": "Mercedes-Benz ML 250 AMG-Пакет, 2014 г., 130 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона.",
+      "en": {
+        "description": "Mercedes-Benz ML 250 AMG-Пакет, 2014, 130 000 km. Published listing from IVO AUTO. Confirm availability, equipment and terms by phone.",
+        "imageAlts": [
+          "Mercedes-Benz ML 250 AMG-Пакет",
+          "Mercedes-Benz ML 250 AMG-Пакет",
+          "Mercedes-Benz ML 250 AMG-Пакет",
+          "Mercedes-Benz ML 250 AMG-Пакет"
+        ]
+      },
+      "bg": {
+        "description": "Mercedes-Benz ML 250 AMG-Пакет, 2014 г., 130 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона.",
+        "imageAlts": [
+          "Mercedes-Benz ML 250 AMG-Пакет",
+          "Mercedes-Benz ML 250 AMG-Пакет",
+          "Mercedes-Benz ML 250 AMG-Пакет",
+          "Mercedes-Benz ML 250 AMG-Пакет"
+        ]
+      }
+    },
+    "mercedes-benz-s-500-4matic-2007-11774893593485843": {
+      "sourceDescription": "Mercedes-Benz S 500 4Matic Газ.Инж, 2007 г., 290 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона.",
+      "en": {
+        "description": "Mercedes-Benz S 500 4Matic Газ.Инж, 2007, 290 000 km. Published listing from IVO AUTO. Confirm availability, equipment and terms by phone.",
+        "imageAlts": [
+          "Mercedes-Benz S 500 4Matic Газ.Инж",
+          "Mercedes-Benz S 500 4Matic Газ.Инж",
+          "Mercedes-Benz S 500 4Matic Газ.Инж",
+          "Mercedes-Benz S 500 4Matic Газ.Инж"
+        ]
+      },
+      "bg": {
+        "description": "Mercedes-Benz S 500 4Matic Газ.Инж, 2007 г., 290 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона.",
+        "imageAlts": [
+          "Mercedes-Benz S 500 4Matic Газ.Инж",
+          "Mercedes-Benz S 500 4Matic Газ.Инж",
+          "Mercedes-Benz S 500 4Matic Газ.Инж",
+          "Mercedes-Benz S 500 4Matic Газ.Инж"
+        ]
+      }
+    },
+    "bmw-730-d-m-2010-11756369185395904": {
+      "sourceDescription": "BMW 730 D M-Пакет, 2010 г., 214 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона.",
+      "en": {
+        "description": "BMW 730 D M-Пакет, 2010, 214 000 km. Published listing from IVO AUTO. Confirm availability, equipment and terms by phone.",
+        "imageAlts": [
+          "BMW 730 D M-Пакет",
+          "BMW 730 D M-Пакет",
+          "BMW 730 D M-Пакет",
+          "BMW 730 D M-Пакет"
+        ]
+      },
+      "bg": {
+        "description": "BMW 730 D M-Пакет, 2010 г., 214 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона.",
+        "imageAlts": [
+          "BMW 730 D M-Пакет",
+          "BMW 730 D M-Пакет",
+          "BMW 730 D M-Пакет",
+          "BMW 730 D M-Пакет"
+        ]
+      }
+    },
+    "bmw-m5-2008-11775822194120541": {
+      "sourceDescription": "BMW M5, 2008 г., 218 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона.",
+      "en": {
+        "description": "BMW M5, 2008, 218 000 km. Published listing from IVO AUTO. Confirm availability, equipment and terms by phone.",
+        "imageAlts": [
+          "BMW M5",
+          "BMW M5",
+          "BMW M5",
+          "BMW M5"
+        ]
+      },
+      "bg": {
+        "description": "BMW M5, 2008 г., 218 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона.",
+        "imageAlts": [
+          "BMW M5",
+          "BMW M5",
+          "BMW M5",
+          "BMW M5"
+        ]
+      }
+    },
+    "audi-a8-full-led-2013-11769186790854071": {
+      "sourceDescription": "Audi A8 Full Led, 2013 г., 215 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона.",
+      "en": {
+        "description": "Audi A8 Full Led, 2013, 215 000 km. Published listing from IVO AUTO. Confirm availability, equipment and terms by phone.",
+        "imageAlts": [
+          "Audi A8 Full Led",
+          "Audi A8 Full Led",
+          "Audi A8 Full Led",
+          "Audi A8 Full Led"
+        ]
+      },
+      "bg": {
+        "description": "Audi A8 Full Led, 2013 г., 215 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона.",
+        "imageAlts": [
+          "Audi A8 Full Led",
+          "Audi A8 Full Led",
+          "Audi A8 Full Led",
+          "Audi A8 Full Led"
+        ]
+      }
+    }
+  },
+  "canonicalSourcePublished": false,
+  "currentSourceQualification": false,
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "globalReleaseApproval": false
+}

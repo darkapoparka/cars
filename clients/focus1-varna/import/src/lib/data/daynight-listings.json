@@ -1,0 +1,37 @@
+{
+  "fetchedAt": "2026-10-11",
+  "sources": {
+    "dealerInventory": "https://focus1.mobile.bg/",
+    "dealerContact": "https://focus1.mobile.bg/contacts"
+  },
+  "count": 1,
+  "listings": [
+    {
+      "badge": "ОБЯВА",
+      "category": "Хечбек",
+      "color": "",
+      "displacement": "",
+      "euroStandard": "",
+      "features": [],
+      "fuel": "Plug-in хибрид",
+      "gearbox": "Автоматична",
+      "href": "https://focus1.mobile.bg/obiava-11735043947455415-vw-golf-1-4-gte-shveytsariya",
+      "id": "11735043947455415",
+      "image": "/dealer-stock/11735043947455415-1.webp",
+      "location": "Варна",
+      "mileage": "131 000 км",
+      "mileageKnown": true,
+      "mileageValue": 131000,
+      "mileageUnit": "km",
+      "photoCount": "2",
+      "power": "150 к.с.",
+      "price": "13 500 €",
+      "priceBgn": "",
+      "production": "2015 г.",
+      "rawPriceText": "13 500 €",
+      "shortDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "title": "VW Golf",
+      "vat": ""
+    }
+  ]
+}

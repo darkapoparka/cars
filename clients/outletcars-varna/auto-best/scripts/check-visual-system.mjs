@@ -46,7 +46,23 @@ assert.equal(navSprite.readUInt32BE(16), generatedNav.width, 'Navbar sprite widt
 assert.equal(navSprite.readUInt32BE(20), generatedNav.height, 'Navbar sprite height must match its mask coordinates');
 assert.equal(navSprite[25], 6, 'Navbar sprite must retain RGBA transparency');
 assert.deepEqual(Object.keys(generatedNav.roles).sort(), ['cars', 'home', 'import', 'menu', 'sell']);
-assert(navSource.includes("from './MobileActionIcon.svelte'"), 'The dock must share the official Fluent renderer');
-assert(navSource.includes('<MobileNavIcon {name} {size} {active} />'), 'The dock must retain its label-owned selection state and size');
 assert(!/imagegen-generated-nav|mask-image|generated-bottom-nav-v3\.png|iconPreview/.test(navSource), 'Retired generated artwork must stay out of the live dock');
-console.log(`Visual system passed: pinned Inter v4.1 and ${Object.keys(data).length} official Fluent Regular roles, including the bottom navbar.`);
+const dockArtwork = JSON.parse(await read('provenance/graphite-bottom-nav-2026-10-14.json'));
+const dockMap = await read('src/lib/components/layout/dock-artwork.ts');
+assert.equal(dockArtwork.version, 'graphite-v1');
+assert.equal(dockArtwork.frame, 24, 'Dock artwork retains the existing 24px frame');
+assert.deepEqual(Object.keys(dockArtwork.roles).sort(), ['cars', 'home', 'import', 'menu', 'sell']);
+assert.equal(hash(await readFile(dockArtwork.source.file)), dockArtwork.source.sha256, 'Preserve the original generated source');
+for (const [name, icon] of Object.entries(dockArtwork.roles)) {
+  const bytes = await readFile(icon.file);
+  assert.equal(hash(bytes), icon.sha256, `Pinned dock artwork: ${name}`);
+  assert.equal(bytes.readUInt32BE(16), 96, `Four-times-resolution dock canvas: ${name}`);
+  assert.equal(bytes.readUInt32BE(20), 96, `Square dock canvas: ${name}`);
+  assert.equal(bytes[25], 6, `RGBA dock transparency: ${name}`);
+  assert(dockMap.includes(`${name}: '${icon.publicPath}'`), `Explicit dock asset binding: ${name}`);
+}
+assert(navSource.includes("from './dock-artwork'"), 'Only the bottom dock uses the generated asset family');
+assert(navSource.includes('asset(dockArtwork[name])'), 'Dock asset paths respect the mounted application base');
+assert(navSource.includes('data-icon-active={active}') && navSource.includes('width={size}') && navSource.includes('height={size}'), 'Retain label-owned selection and frame size');
+assert(navSource.includes('alt=""') && navSource.includes('aria-hidden="true"'), 'Dock artwork is decorative beside accessible labels');
+console.log(`Visual system passed: pinned Inter v4.1, ${Object.keys(data).length} official Fluent Regular action roles and five graphite dock assets.`);

@@ -23,4 +23,3 @@ export * from "./registry";
 export * from "./routes";
 export * from "./search-params";
 export * from "./types";
-export { dealerGuides, dealerServiceCopy, dealerServiceSource } from './dealer-editorial';

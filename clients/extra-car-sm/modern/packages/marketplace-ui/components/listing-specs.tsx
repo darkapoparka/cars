@@ -11,6 +11,7 @@ import {
   Cog,
   Fuel,
   Gauge,
+  type LucideIcon,
   Palette,
   Tag,
   Zap,
@@ -24,11 +25,21 @@ interface ListingSpecsProps {
   readonly variant?: ListingSpecsVariant;
 }
 
+interface ListingSpecItem {
+  readonly displayValue?: string;
+  readonly icon: LucideIcon;
+  readonly label: string;
+  readonly value: string;
+}
+
 const compactTransmissionLabels = {
   automatic: { bg: "Автоматик", en: "Automatic" },
   manual: { bg: "Ръчни", en: "Manual" },
   semi_automatic: { bg: "Полуавтоматик", en: "Semi-auto" },
 } as const;
+
+const trimPackagePattern =
+  /\b(?:AMG(?:\s+Line)?|M\s+Sport|S\s+line|R[-\s]?Line)\b/i;
 
 const formatPower = (enginePowerHp: number | undefined, isBg: boolean) => {
   if (!enginePowerHp) {
@@ -42,7 +53,7 @@ const getSummarySpecItems = (
   listing: VehicleListing,
   locale: string | undefined,
   isBg: boolean
-) => [
+): ListingSpecItem[] => [
   {
     icon: CalendarDays,
     label: isBg ? "Година" : "Year",
@@ -76,7 +87,10 @@ const getSummarySpecItems = (
   },
 ];
 
-const getDetailSpecItems = (listing: VehicleListing, isBg: boolean) => [
+const getDetailSpecItems = (
+  listing: VehicleListing,
+  isBg: boolean
+): ListingSpecItem[] => [
   {
     icon: Tag,
     label: isBg ? "Марка" : "Make",
@@ -112,6 +126,7 @@ const getCombinedSpecItems = (
       icon: BadgeCheck,
       label: isBg ? "Версия" : "Trim",
       value: listing.spec.trim,
+      displayValue: listing.spec.trim.match(trimPackagePattern)?.[0],
     });
   }
 
@@ -155,33 +170,31 @@ export const ListingSpecs = ({
   if (variant === "details") {
     heading = isBg ? "Характеристики" : "Specifications";
   }
-  const headingId =
-    variant === "details" ? "specifications-heading" : "information-heading";
-  const gridClassName =
-    variant === "details"
-      ? "grid-cols-2 sm:grid-cols-4"
-      : variant === "combined"
-        ? "grid-cols-2"
-        : "grid-cols-2 sm:grid-cols-3 xl:grid-cols-6";
-  const sectionId =
-    variant === "details" ? "listing-specifications" : "listing-information";
+  let gridClassName = "grid-cols-2 sm:grid-cols-3 xl:grid-cols-6";
+  if (variant === "details") {
+    gridClassName = "grid-cols-2 sm:grid-cols-4";
+  } else if (variant === "combined") {
+    gridClassName = "grid-cols-2";
+  }
   const sectionSlot =
     variant === "details" ? "listing-specifications" : "listing-information";
 
   return (
     <section
-      aria-labelledby={headingId}
-      className="scroll-mt-24"
+      aria-label={heading}
+      className={
+        variant === "combined"
+          ? "scroll-mt-24 rounded-2xl border border-zinc-200 bg-white p-3"
+          : "scroll-mt-24"
+      }
       data-slot={sectionSlot}
-      id={sectionId}
     >
       <h2
         className={
           variant === "combined"
             ? "sr-only"
-            : "mb-3 font-semibold text-[18px] leading-6 lg:text-lg"
+            : "mb-3 font-semibold text-card-title tracking-heading lg:text-card-title-lg"
         }
-        id={headingId}
       >
         {heading}
       </h2>
@@ -198,28 +211,36 @@ export const ListingSpecs = ({
             <div
               className={
                 mobileCombined
-                  ? "min-w-0 rounded-xl bg-zinc-100 px-3 py-3.5"
+                  ? "min-w-0 rounded-xl bg-zinc-100 px-3 py-2.5"
                   : "min-w-0 py-2.5 lg:min-h-[5.5rem] lg:rounded-lg lg:bg-control lg:px-3.5 lg:py-3.5"
               }
               data-slot="listing-specification"
               key={item.label}
             >
-              <dt className="flex items-center gap-2 font-medium text-[12px] text-zinc-500 lg:text-foreground/80 lg:text-meta lg:text-compact-control">
+              <dt className="flex items-center gap-1.5 font-medium text-meta text-zinc-600 lg:gap-2 lg:text-foreground/80">
                 <Icon
                   aria-hidden="true"
                   className="size-[18px] shrink-0 lg:size-[22px]"
                   strokeWidth={1.8}
                 />
-                <span>{item.label}</span>
+                <span className="min-w-0 [overflow-wrap:anywhere] lg:[overflow-wrap:normal]">
+                  {item.label}
+                </span>
               </dt>
               <dd
                 className={
                   mobileCombined
-                    ? "mt-1.5 break-words font-semibold text-[15px] text-zinc-950 tabular-nums leading-5"
-                    : "mt-1.5 break-words font-semibold text-[15px] text-zinc-950 tabular-nums leading-5 lg:mt-3 lg:text-dialog-title lg:tracking-tight"
+                    ? "mt-1 break-words font-medium text-compact-control text-zinc-950 tabular-nums"
+                    : "mt-1.5 break-words font-semibold text-compact-control text-zinc-950 tabular-nums lg:mt-3 lg:text-dialog-title lg:tracking-heading"
                 }
+                title={item.value}
               >
-                {item.value}
+                <span aria-hidden={item.displayValue ? true : undefined}>
+                  {item.displayValue ?? item.value}
+                </span>
+                {item.displayValue ? (
+                  <span className="sr-only">{item.value}</span>
+                ) : null}
               </dd>
             </div>
           );

@@ -93,7 +93,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Автокъща Приселци",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
+      "logoUrl": "/dealer-brand/v2-7b937c05859b3290/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": true
@@ -189,7 +189,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Автокъща Приселци",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
+      "logoUrl": "/dealer-brand/v2-7b937c05859b3290/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": true
@@ -285,7 +285,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Автокъща Приселци",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
+      "logoUrl": "/dealer-brand/v2-7b937c05859b3290/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": true
@@ -347,7 +347,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Автокъща Приселци",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
+      "logoUrl": "/dealer-brand/v2-7b937c05859b3290/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
@@ -361,7 +361,7 @@ export const mockListings: VehicleListing[] = [
     "title": "Renault Koleos 2.0 ДИЗЕЛ 4Х4",
     "description": "Renault Koleos 2.0 ДИЗЕЛ 4Х4, 2010 г., 181 246 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци.",
     "price": {
-      "amount": 44299,
+      "amount": 4299,
       "currency": "EUR"
     },
     "priceType": "fixed",
@@ -443,7 +443,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Автокъща Приселци",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
+      "logoUrl": "/dealer-brand/v2-7b937c05859b3290/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
@@ -539,7 +539,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Автокъща Приселци",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
+      "logoUrl": "/dealer-brand/v2-7b937c05859b3290/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
@@ -635,7 +635,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Автокъща Приселци",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
+      "logoUrl": "/dealer-brand/v2-7b937c05859b3290/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
@@ -731,7 +731,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Автокъща Приселци",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
+      "logoUrl": "/dealer-brand/v2-7b937c05859b3290/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
@@ -827,7 +827,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Автокъща Приселци",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
+      "logoUrl": "/dealer-brand/v2-7b937c05859b3290/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
@@ -923,7 +923,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Автокъща Приселци",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
+      "logoUrl": "/dealer-brand/v2-7b937c05859b3290/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
@@ -1019,7 +1019,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Автокъща Приселци",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
+      "logoUrl": "/dealer-brand/v2-7b937c05859b3290/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
@@ -1115,7 +1115,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Автокъща Приселци",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
+      "logoUrl": "/dealer-brand/v2-7b937c05859b3290/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
@@ -1211,7 +1211,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Автокъща Приселци",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
+      "logoUrl": "/dealer-brand/v2-7b937c05859b3290/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
@@ -1225,7 +1225,7 @@ export const mockListings: VehicleListing[] = [
     "title": "BMW X3 2.0 ДИЗЕЛ 4Х4",
     "description": "BMW X3 2.0 ДИЗЕЛ 4Х4, 2007 г., 207 195 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци.",
     "price": {
-      "amount": 44399,
+      "amount": 4399,
       "currency": "EUR"
     },
     "priceType": "fixed",
@@ -1307,7 +1307,199 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Автокъща Приселци",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
+      "logoUrl": "/dealer-brand/v2-7b937c05859b3290/logo-on-light.webp"
+    },
+    "publishedAt": "2026-09-07T09:00:00.000Z",
+    "promoted": false
+  },
+  {
+    "id": "dealer-71e89500b7d89835026a4b59",
+    "slug": "nissan-qashqai-1-5-dci-2012-21787900875118991",
+    "category": "car",
+    "dealerOrgId": "dealer-priselci",
+    "status": "active",
+    "title": "Nissan Qashqai 1.5 DCI",
+    "description": "Nissan Qashqai 1.5 DCI, 2012 г., 192 641 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци.",
+    "price": {
+      "amount": 5499,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/assets/priselci/vehicle-15-1.webp",
+        "alt": "Nissan Qashqai 1.5 DCI"
+      },
+      {
+        "url": "/assets/priselci/vehicle-15-2.webp",
+        "alt": "Nissan Qashqai 1.5 DCI"
+      },
+      {
+        "url": "/assets/priselci/vehicle-15-3.webp",
+        "alt": "Nissan Qashqai 1.5 DCI"
+      },
+      {
+        "url": "/assets/priselci/vehicle-15-4.webp",
+        "alt": "Nissan Qashqai 1.5 DCI"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Варна",
+      "region": "Варна",
+      "country": "България"
+    },
+    "features": [
+      {
+        "bg": "4(5) Врати",
+        "en": "4(5) Врати"
+      },
+      {
+        "bg": "Аларма",
+        "en": "Аларма"
+      },
+      {
+        "bg": "Антиблокираща система",
+        "en": "Антиблокираща система"
+      },
+      {
+        "bg": "Бордкомпютър",
+        "en": "Бордкомпютър"
+      },
+      {
+        "bg": "Въздушни възглавници - Задни",
+        "en": "Въздушни възглавници - Задни"
+      },
+      {
+        "bg": "Въздушни възглавници - Предни",
+        "en": "Въздушни възглавници - Предни"
+      },
+      {
+        "bg": "Въздушни възглавници - Странични",
+        "en": "Въздушни възглавници - Странични"
+      },
+      {
+        "bg": "Датчик за светлина",
+        "en": "Датчик за светлина"
+      }
+    ],
+    "spec": {
+      "make": "Nissan",
+      "model": "Qashqai 1.5 DCI",
+      "year": 2012,
+      "bodyType": "suv",
+      "fuelType": "diesel",
+      "transmission": "manual",
+      "mileageValue": 192641,
+      "mileageUnit": "km",
+      "enginePowerHp": 110,
+      "colorExterior": "Черен"
+    },
+    "seller": {
+      "id": "dealer-priselci",
+      "type": "dealer",
+      "displayName": "Автокъща Приселци",
+      "verificationStatus": "unverified",
+      "city": "Варна",
+      "logoUrl": "/dealer-brand/v2-7b937c05859b3290/logo-on-light.webp"
+    },
+    "publishedAt": "2026-09-07T09:00:00.000Z",
+    "promoted": false
+  },
+  {
+    "id": "dealer-5fb0f077046f17c224ee5765",
+    "slug": "mercedes-benz-e-280-3-0cdi-v6-2005-11763969547989753",
+    "category": "car",
+    "dealerOrgId": "dealer-priselci",
+    "status": "active",
+    "title": "Mercedes-Benz E 280 3.0CDI V6",
+    "description": "Mercedes-Benz E 280 3.0CDI V6, 2005 г., 208 357 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци.",
+    "price": {
+      "amount": 4100,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/assets/priselci/vehicle-16-1.webp",
+        "alt": "Mercedes-Benz E 280 3.0CDI V6"
+      },
+      {
+        "url": "/assets/priselci/vehicle-16-2.webp",
+        "alt": "Mercedes-Benz E 280 3.0CDI V6"
+      },
+      {
+        "url": "/assets/priselci/vehicle-16-3.webp",
+        "alt": "Mercedes-Benz E 280 3.0CDI V6"
+      },
+      {
+        "url": "/assets/priselci/vehicle-16-4.webp",
+        "alt": "Mercedes-Benz E 280 3.0CDI V6"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Варна",
+      "region": "Варна",
+      "country": "България"
+    },
+    "features": [
+      {
+        "bg": "4(5) Врати",
+        "en": "4(5) Врати"
+      },
+      {
+        "bg": "Аларма",
+        "en": "Аларма"
+      },
+      {
+        "bg": "Антиблокираща система",
+        "en": "Антиблокираща система"
+      },
+      {
+        "bg": "Бордкомпютър",
+        "en": "Бордкомпютър"
+      },
+      {
+        "bg": "Въздушни възглавници - Задни",
+        "en": "Въздушни възглавници - Задни"
+      },
+      {
+        "bg": "Въздушни възглавници - Предни",
+        "en": "Въздушни възглавници - Предни"
+      },
+      {
+        "bg": "Въздушни възглавници - Странични",
+        "en": "Въздушни възглавници - Странични"
+      },
+      {
+        "bg": "Датчик за светлина",
+        "en": "Датчик за светлина"
+      }
+    ],
+    "spec": {
+      "make": "Mercedes-Benz",
+      "model": "E 280 3.0CDI V6",
+      "year": 2005,
+      "bodyType": "sedan",
+      "fuelType": "diesel",
+      "transmission": "automatic",
+      "mileageValue": 208357,
+      "mileageUnit": "km",
+      "enginePowerHp": 190,
+      "colorExterior": "Сив"
+    },
+    "seller": {
+      "id": "dealer-priselci",
+      "type": "dealer",
+      "displayName": "Автокъща Приселци",
+      "verificationStatus": "unverified",
+      "city": "Варна",
+      "logoUrl": "/dealer-brand/v2-7b937c05859b3290/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false

@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-existing-dealer-branding-input-boundary",
+  "dealer": "the-dealers-point",
+  "identityKey": "existing-slug:the-dealers-point",
+  "cohort": "existing-vercel25",
+  "ownership": "maintained-main",
+  "branding": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/the-dealers-point/branding.json",
+    "sha256": "0476a23439b016f84979bfee7f6fc7603302014a7db174952c504f9391d6667d"
+  },
+  "originalManifest": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/the-dealers-point/source/original-dealer.json",
+    "sha256": "8204fe81abf4e520a344987425cf66eee1a6e4e28f12958927c797ce5ed14a23"
+  },
+  "originalManifestGitBlob": "27d735cdc168b4484b6fde982a1b571870ded123",
+  "originalRepository": "darkapoparka/cars-thedealerspoint",
+  "sourceRef": {
+    "ref": "main",
+    "commit": "c5c6b0da611a3bf2756c1be2ff9764f6903536ec",
+    "tree": "1eed6abaf535d42d7863da7eb4647e0bc4e049b1"
+  },
+  "originalData": [
+    {
+      "path": "clients/the-dealers-point/business-facts.json",
+      "gitBlob": "13ef06a6b3d80ad6b2c844770c75a1b23db2e980",
+      "bytes": 1007
+    },
+    {
+      "path": "clients/the-dealers-point/dealer.json",
+      "gitBlob": "27d735cdc168b4484b6fde982a1b571870ded123",
+      "bytes": 3009
+    },
+    {
+      "path": "clients/the-dealers-point/stock.json",
+      "gitBlob": "8bce0a1e35c1786f356608d657eb1ef057927fcb",
+      "bytes": 4257
+    }
+  ],
+  "sourceProof": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/evidence/original-source-proof.json",
+    "sha256": "477c4eedc097eb2e105b1d50cf1bc3701b558679e8f6c3c3681a3ccd6626e08c"
+  },
+  "roster": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/evidence/accepted-roster.json",
+    "sha256": "c23c6c4ea10acaca9fdc8d09351fd64735a9e2245385fb12a0f95d71f9f0080d"
+  },
+  "sourceCreation": false,
+  "clientIntegration": false,
+  "buildApproval": false,
+  "hostedApproval": false,
+  "eligibleForExistingQualifiedRequest": true,
+  "holds": [
+    "Exact latest template/source-delta/pilot qualification and preservation-aware updater remain required."
+  ]
+}

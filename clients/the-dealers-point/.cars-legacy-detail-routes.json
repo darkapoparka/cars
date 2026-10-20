@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "dealer": "the-dealers-point",
+  "family": "import",
+  "base": "/variant-3",
+  "defaultLocale": "en",
+  "source": {
+    "inventory": {
+      "path": "carwow/src/lib/data/daynight-current-inventory.ts",
+      "sha256": "a35863b0c31afe55f5138d39f937cd4ba223d6bf52197bf85bc72975a8d1270a"
+    },
+    "vehicles": {
+      "path": "carwow/src/lib/data/daynight-vehicles.ts",
+      "sha256": "9e47a8b634fca18bdcf379e086cde39c82c1db530a243dd62ab278c91bd32fd7"
+    },
+    "routeFactorySha256": "094d5128ad5e689e41486a228b1de6d11c54efbe051ce0e75c0170709d8571c9"
+  },
+  "profileSha256": "ddf9249df4908bb8bbdb2390ad00dfc8b0d799c261571f29b9fabe2d98fa6cec",
+  "entries": [
+    {
+      "sourceId": "FA-85208",
+      "slug": "2003-porsche-911--85208",
+      "targetId": "FA-85208"
+    },
+    {
+      "sourceId": "FA-85210",
+      "slug": "2006-porsche-911--85210",
+      "targetId": "FA-85210"
+    },
+    {
+      "sourceId": "FA-85136",
+      "slug": "2007-porsche-911--85136",
+      "targetId": "FA-85136"
+    },
+    {
+      "sourceId": "FA-83283",
+      "slug": "2015-porsche-911--83283",
+      "targetId": "FA-83283"
+    },
+    {
+      "sourceId": "FA-84061",
+      "slug": "2020-porsche-911--84061",
+      "targetId": "FA-84061"
+    },
+    {
+      "sourceId": "FA-76723",
+      "slug": "2006-porsche-boxster--76723",
+      "targetId": "FA-76723"
+    },
+    {
+      "sourceId": "FA-84119",
+      "slug": "2008-porsche-cayenne--84119",
+      "targetId": "FA-84119"
+    },
+    {
+      "sourceId": "FA-80162",
+      "slug": "2011-porsche-cayenne--80162",
+      "targetId": "FA-80162"
+    },
+    {
+      "sourceId": "FA-78089",
+      "slug": "2013-porsche-cayenne--78089",
+      "targetId": "FA-78089"
+    },
+    {
+      "sourceId": "FA-83372",
+      "slug": "2014-porsche-cayenne--83372",
+      "targetId": "FA-83372"
+    }
+  ],
+  "retired": []
+}

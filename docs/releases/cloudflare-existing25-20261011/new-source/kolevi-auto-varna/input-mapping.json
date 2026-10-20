@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-input-mapping",
+  "dealer": "kolevi-auto-varna",
+  "inputs": {
+    "facts": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/kolevi-auto-varna/facts.json",
+      "sha256": "76a32f2588b295c0943473940bb9f193510ad8d89481d027e058f56cac62a1cf"
+    },
+    "stock": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/kolevi-auto-varna/stock.json",
+      "sha256": "ff80472e7ec7a2b3d284591c67816e6662b1c82fefe112e4bcef6f2dad59dd1b"
+    },
+    "locale": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/kolevi-auto-varna/locale.json",
+      "sha256": "a688c022a96427af6fed6398e08769669ffbf1a9a593f2083c811cb9f0d2abc5"
+    },
+    "branding": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/kolevi-auto-varna/branding.json",
+      "sha256": "697204a814832942bd4f565b82d6509ca8907269e50d4840195f6dfc0ffd6f73"
+    }
+  },
+  "sources": [
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/kolevi-auto-varna/source/business-facts.json",
+      "sha256": "8f2e4e115169407de50f7629ba9f8c9e166f6947f73550f802f0bfb6c6e23ec9"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/kolevi-auto-varna/source/locale.json",
+      "sha256": "a688c022a96427af6fed6398e08769669ffbf1a9a593f2083c811cb9f0d2abc5"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/kolevi-auto-varna/source/stock.json",
+      "sha256": "1a7f949380ac3d21af21fcfb14883b1592f3fe586bb99ad8d46e55478fb151d9"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/kolevi-auto-varna/source/generation-receipt.json",
+      "sha256": "784e4ced39fa0a8212cdf562e7b049f4240f66dd40debc2bffa497aac63f17c5"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/kolevi-auto-varna/source/native-onLight.png",
+      "sha256": "4633ae3b8ace243235b2466e916d6b4ce3ffeb6ef91be52b86ee84639cef6f40"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/kolevi-auto-varna/source/native-onDark.png",
+      "sha256": "4633ae3b8ace243235b2466e916d6b4ce3ffeb6ef91be52b86ee84639cef6f40"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/kolevi-auto-varna/source/native-onAccent.png",
+      "sha256": "4633ae3b8ace243235b2466e916d6b4ce3ffeb6ef91be52b86ee84639cef6f40"
+    }
+  ],
+  "transformations": {
+    "facts": {
+      "source": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/kolevi-auto-varna/source/business-facts.json",
+        "sha256": "8f2e4e115169407de50f7629ba9f8c9e166f6947f73550f802f0bfb6c6e23ec9"
+      },
+      "kind": "flat-original-facts-to-business-consumer",
+      "allOriginalEvidenceUnchanged": true,
+      "derivedNameDelta": null,
+      "otherFactsUnchanged": true
+    },
+    "stock": {
+      "source": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/kolevi-auto-varna/source/stock.json",
+        "sha256": "1a7f949380ac3d21af21fcfb14883b1592f3fe586bb99ad8d46e55478fb151d9"
+      },
+      "originalSourceRecordPreserved": true,
+      "sourceId": "11789979969434970",
+      "normalizer": "loadDealerProfile",
+      "retention": "retainDealerVariantAssets",
+      "sourceKind": "dated-marketplace-listing-sample",
+      "consumerKind": "dated-listing-snapshot",
+      "availabilityUnconfirmed": true,
+      "mediaRightsNotClaimed": true,
+      "mileageUnknownMeansOnRequest": true
+    },
+    "media": [
+      {
+        "sourceId": "11789979969434970",
+        "sourcePublicPath": "/assets/vehicles/11789979969434970/1.webp",
+        "publicPath": "/dealer-stock/11789979969434970-1.webp",
+        "destination": "dealer-stock/11789979969434970-1.webp",
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/kolevi-auto-varna/media/11789979969434970-1.webp",
+        "sha256": "19965d6b74dc664ead78e552b8d07bc1b51f01869a2f47506d55a1d30d3110cc",
+        "bytes": 226666
+      },
+      {
+        "sourceId": "11789979969434970",
+        "sourcePublicPath": "/assets/vehicles/11789979969434970/2.webp",
+        "publicPath": "/dealer-stock/11789979969434970-2.webp",
+        "destination": "dealer-stock/11789979969434970-2.webp",
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/kolevi-auto-varna/media/11789979969434970-2.webp",
+        "sha256": "1fd504b5e1eff443234f84ab44349cac40eed75964ccf75656d769f489f50729",
+        "bytes": 211098
+      }
+    ],
+    "branding": {
+      "acceptedManifest": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/evidence/final-logo-handoff.json",
+        "sha256": "b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a"
+      },
+      "originalGenerationReceipt": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/kolevi-auto-varna/source/generation-receipt.json",
+        "sha256": "784e4ced39fa0a8212cdf562e7b049f4240f66dd40debc2bffa497aac63f17c5"
+      },
+      "noNewGeneration": true,
+      "modelVersion": null,
+      "pixelsUnchanged": true
+    },
+    "identity": null
+  }
+}

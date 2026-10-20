@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "slug": "bavaro-varna",
+  "name": "Автоцентър Баваро",
+  "shortName": "Автоцентър Баваро",
+  "city": "Варна",
+  "country": "BG",
+  "countryCode": "BG",
+  "locale": "bg-BG",
+  "currency": "EUR",
+  "distanceUnit": "km",
+  "phone": "0883590090",
+  "phoneDisplay": "0883590090",
+  "phoneE164": "+359883590090",
+  "phones": [
+    "0883590090"
+  ],
+  "addressLine": "бул. Цар Освободител 176, срещу бл. 107",
+  "address": "бул. Цар Освободител 176, срещу бл. 107, Варна, България",
+  "hours": "Потвърдете работното време директно с автокъщата.",
+  "email": "",
+  "sourceUrl": "https://bavaro.mobile.bg/",
+  "stockUrl": "https://bavaro.mobile.bg/",
+  "contactSourceUrl": "https://bavaro.mobile.bg/contacts",
+  "observedAt": "2026-10-11T11:54:03.887Z",
+  "inventoryNotice": "Датирана извадка от публични обяви, не складова система в реално време. Потвърдете цената, ДДС и наличността.",
+  "previewNotice": "Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация.",
+  "services": [],
+  "socialLinks": {}
+}

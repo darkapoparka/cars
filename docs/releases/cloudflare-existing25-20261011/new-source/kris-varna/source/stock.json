@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "kind": "dated-marketplace-listing-sample",
+  "candidate": true,
+  "observedAt": "2026-10-11T11:49:54.429Z",
+  "sourceProfile": "https://kris.mobile.bg/",
+  "sourcePageVisibleListingCount": 11,
+  "sourceProfileCountObservedAt": "2026-10-11T11:49:54.365Z",
+  "profileCountIsAvailableStock": false,
+  "profileCountIsClassifiedOrdinaryRetail": false,
+  "liveInventory": false,
+  "mediaPermission": "unconfirmed",
+  "localMediaReady": true,
+  "records": [
+    {
+      "id": "11789565203600472",
+      "sourceId": "11789565203600472",
+      "title": "Scion Tc",
+      "sourceTitleExact": "Scion Tc",
+      "make": "Scion",
+      "model": "Tc",
+      "modelExtraction": "literal make/model prefix from exact primary advert title; canonical market normalization and trim not asserted",
+      "year": 2006,
+      "productionMonth": 1,
+      "priceEur": 5300,
+      "currency": "EUR",
+      "sourcePriceText": "5 300 €",
+      "priceVatNotice": "Не се начислява ДДС",
+      "mileageKm": 88550,
+      "sourceMileageText": "88550 км",
+      "fieldConflicts": [],
+      "body": "Купе",
+      "fuel": "Бензинов",
+      "transmission": "Автоматична",
+      "powerHp": 163,
+      "images": [
+        "/assets/vehicles/11789565203600472/1.webp",
+        "/assets/vehicles/11789565203600472/2.webp"
+      ],
+      "sourceUrl": "https://kris.mobile.bg/obiava-11789565203600472-scion-tc",
+      "sourceHtmlSha256": "5fd1f5cb5184c7966a08320aef86eff247fc37d8994589618c8d5b52da6e35c6",
+      "sourcePublicationText": "Публикувана в 16:26 часа на 16.09.2026 год.",
+      "observedAt": "2026-10-11T11:49:54.429Z",
+      "availability": "unconfirmed",
+      "availabilityConfirmed": false,
+      "partsListing": false,
+      "conditionMarker": null,
+      "conditionIndependentlyConfirmed": false,
+      "arrivalNotice": null,
+      "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "mediaState": "not-collected; reviewed rights/reuse or explicit illustration decision pending",
+      "mediaPermission": "Not independently established",
+      "telHrefCandidates": [
+        "0899927244"
+      ],
+      "visibleSellerContact": "Контакти с продавача Крис 0899927244",
+      "sellerPhoneMatchesPrimary": true,
+      "telHrefMatchesPrimary": true,
+      "sampleRole": "dated published vehicle advert; dealer availability, condition and media reuse require confirmation",
+      "retailReadyForAssembly": false,
+      "sourcePhotoUrls": [
+        "https://mobistatic2.focus.bg/mobile/photosorg/472/1/big1/11789565203600472_u9.webp",
+        "https://mobistatic2.focus.bg/mobile/photosorg/472/1/big1/11789565203600472_lS.webp",
+        "https://mobistatic2.focus.bg/mobile/photosorg/472/1/big1/11789565203600472_rK.webp",
+        "https://mobistatic2.focus.bg/mobile/photosorg/472/1/big1/11789565203600472_Qb.webp",
+        "https://mobistatic2.focus.bg/mobile/photosorg/472/1/big1/11789565203600472_lI.webp",
+        "https://mobistatic2.focus.bg/mobile/photosorg/472/1/big1/11789565203600472_e2.webp",
+        "https://mobistatic2.focus.bg/mobile/photosorg/472/1/big1/11789565203600472_UC.webp",
+        "https://mobistatic2.focus.bg/mobile/photosorg/472/1/big1/11789565203600472_1n.webp",
+        "https://mobistatic2.focus.bg/mobile/photosorg/472/1/big1/11789565203600472_L9.webp",
+        "https://mobistatic2.focus.bg/mobile/photosorg/472/1/big1/11789565203600472_sQ.webp",
+        "https://mobistatic2.focus.bg/mobile/photosorg/472/1/big1/11789565203600472_4J.webp",
+        "https://mobistatic2.focus.bg/mobile/photosorg/472/1/big1/11789565203600472_JD.webp"
+      ],
+      "sourcePhotoEvidence": {
+        "sourceId": "11789565203600472",
+        "sourceUrl": "https://kris.mobile.bg/obiava-11789565203600472-scion-tc",
+        "observedAt": "2026-10-11T12:09:33.146Z",
+        "responseSha256": "b9f7038279033cb3f0cbc85bb782c17b0e54e8c0b5e22bb70b5bf5946a91b2c9",
+        "association": "primary gallery URLs contain exact source listing ID",
+        "remoteBytesFetched": false
+      }
+    }
+  ],
+  "localMediaHydration": {
+    "candidateOnly": true,
+    "technicalRasterPresent": true,
+    "rightsApproved": false,
+    "availabilityConfirmed": false,
+    "assets": [
+      {
+        "publicPath": "/assets/vehicles/11789565203600472/1.webp",
+        "sourceUrl": "https://mobistatic2.focus.bg/mobile/photosorg/472/1/big1/11789565203600472_u9.webp",
+        "sha256": "4ad148373cb362222b7e0ede6e86de0688eeda436a6f5ab6f30d21eec09bccff",
+        "bytes": 222080,
+        "downloadObservedAt": "2026-10-11T12:20:38.336Z"
+      },
+      {
+        "publicPath": "/assets/vehicles/11789565203600472/2.webp",
+        "sourceUrl": "https://mobistatic2.focus.bg/mobile/photosorg/472/1/big1/11789565203600472_lS.webp",
+        "sha256": "0f214ff98d5640b34284478db9e7bbacb8c21146bda539dbef9eea5eeeb367b6",
+        "bytes": 183922,
+        "downloadObservedAt": "2026-10-11T12:20:38.509Z"
+      }
+    ],
+    "sourceStockSha256": "09d260c51547b45e573c90ae7ec67be4e7858428b5352c85755889246e837912"
+  }
+}

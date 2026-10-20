@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "slug": "richicar-varna",
+  "dealerId": "richicar-varna",
+  "business": {
+    "schemaVersion": 1,
+    "slug": "richicar-varna",
+    "name": "РИЧИ КАР",
+    "shortName": "РИЧИ КАР",
+    "city": "Варна",
+    "country": "BG",
+    "countryCode": "BG",
+    "locale": "bg-BG",
+    "currency": "EUR",
+    "distanceUnit": "km",
+    "phone": "0895636226",
+    "phoneDisplay": "0895636226",
+    "phoneE164": "+359895636226",
+    "phones": [
+      "0895636226"
+    ],
+    "addressLine": null,
+    "address": "Варна, България",
+    "hours": "Потвърдете работното време директно с автокъщата.",
+    "email": "",
+    "sourceUrl": "https://richicar.mobile.bg/",
+    "stockUrl": "https://richicar.mobile.bg/",
+    "contactSourceUrl": "https://richicar.mobile.bg/contacts",
+    "observedAt": "2026-10-11T11:49:52.133Z",
+    "inventoryNotice": "Датирана извадка от публични обяви, не складова система в реално време. Потвърдете цената, ДДС и наличността.",
+    "previewNotice": "Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация.",
+    "services": [],
+    "socialLinks": {},
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sourceFacts": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/richicar-varna/source/business-facts.json",
+    "sha256": "bd2782c62a1d706eed1e9e8e2b1fa84b1e516685991d422072455a535d654195"
+  },
+  "originalBusinessLiteralsUnchanged": true
+}

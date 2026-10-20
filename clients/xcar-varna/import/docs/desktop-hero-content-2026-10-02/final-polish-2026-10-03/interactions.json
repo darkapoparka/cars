@@ -1,0 +1,390 @@
+[
+	{
+		"locale": "bg",
+		"route": "about",
+		"javascript": true,
+		"status": 200,
+		"configuredHrefs": [
+			"https://www.facebook.com/deninoshtautogroup/?locale=bg_BG",
+			"https://www.instagram.com/kristiankirilov13/",
+			"https://www.tiktok.com/@kristiankirilov13"
+		],
+		"keyboard": [
+			{
+				"href": "https://www.facebook.com/deninoshtautogroup/?locale=bg_BG",
+				"name": "Facebook",
+				"width": 48,
+				"height": 48,
+				"outlineWidth": "3px",
+				"outlineStyle": "solid"
+			},
+			{
+				"href": "https://www.instagram.com/kristiankirilov13/",
+				"name": "Instagram",
+				"width": 48,
+				"height": 48,
+				"outlineWidth": "3px",
+				"outlineStyle": "solid"
+			},
+			{
+				"href": "https://www.tiktok.com/@kristiankirilov13",
+				"name": "TikTok",
+				"width": 48,
+				"height": 48,
+				"outlineWidth": "3px",
+				"outlineStyle": "solid"
+			}
+		],
+		"buttons": [
+			{
+				"background": "rgb(185, 22, 28)",
+				"color": "rgb(255, 255, 255)"
+			},
+			{
+				"background": "rgb(23, 25, 28)",
+				"color": "rgb(255, 255, 255)"
+			}
+		],
+		"strongHover": {
+			"background": "rgb(37, 40, 43)",
+			"color": "rgb(255, 255, 255)"
+		},
+		"accessibilityViolations": [],
+		"pageErrors": []
+	},
+	{
+		"locale": "bg",
+		"route": "contact",
+		"javascript": true,
+		"status": 200,
+		"configuredHrefs": [
+			"https://www.google.com/maps/search/?api=1&query=%D0%B3%D1%80.%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%A1%D1%82%D1%83%D0%B4%D0%B5%D0%BD%D1%82%D1%81%D0%BA%D0%B8%20%D0%B3%D1%80%D0%B0%D0%B4%2C%20%D1%83%D0%BB.%20%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%2018",
+			"viber://chat?number=%2B359877733110"
+		],
+		"keyboard": [
+			{
+				"href": "https://www.google.com/maps/search/?api=1&query=%D0%B3%D1%80.%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%A1%D1%82%D1%83%D0%B4%D0%B5%D0%BD%D1%82%D1%81%D0%BA%D0%B8%20%D0%B3%D1%80%D0%B0%D0%B4%2C%20%D1%83%D0%BB.%20%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%2018",
+				"name": "Как да стигнеш",
+				"width": 191.015625,
+				"height": 44,
+				"outlineWidth": "3px",
+				"outlineStyle": "solid"
+			},
+			{
+				"href": "viber://chat?number=%2B359877733110",
+				"name": "Пиши ни · Viber",
+				"width": 181.78125,
+				"height": 44,
+				"outlineWidth": "3px",
+				"outlineStyle": "solid"
+			}
+		],
+		"buttons": [
+			{
+				"background": "rgb(185, 22, 28)",
+				"color": "rgb(255, 255, 255)"
+			},
+			{
+				"background": "rgb(23, 25, 28)",
+				"color": "rgb(255, 255, 255)"
+			}
+		],
+		"strongHover": {
+			"background": "rgb(37, 40, 43)",
+			"color": "rgb(255, 255, 255)"
+		},
+		"accessibilityViolations": [],
+		"pageErrors": []
+	},
+	{
+		"locale": "en",
+		"route": "about",
+		"javascript": true,
+		"status": 200,
+		"configuredHrefs": [
+			"https://www.facebook.com/deninoshtautogroup/?locale=bg_BG",
+			"https://www.instagram.com/kristiankirilov13/",
+			"https://www.tiktok.com/@kristiankirilov13"
+		],
+		"keyboard": [
+			{
+				"href": "https://www.facebook.com/deninoshtautogroup/?locale=bg_BG",
+				"name": "Facebook",
+				"width": 48,
+				"height": 48,
+				"outlineWidth": "3px",
+				"outlineStyle": "solid"
+			},
+			{
+				"href": "https://www.instagram.com/kristiankirilov13/",
+				"name": "Instagram",
+				"width": 48,
+				"height": 48,
+				"outlineWidth": "3px",
+				"outlineStyle": "solid"
+			},
+			{
+				"href": "https://www.tiktok.com/@kristiankirilov13",
+				"name": "TikTok",
+				"width": 48,
+				"height": 48,
+				"outlineWidth": "3px",
+				"outlineStyle": "solid"
+			}
+		],
+		"buttons": [
+			{
+				"background": "rgb(185, 22, 28)",
+				"color": "rgb(255, 255, 255)"
+			},
+			{
+				"background": "rgb(23, 25, 28)",
+				"color": "rgb(255, 255, 255)"
+			}
+		],
+		"strongHover": {
+			"background": "rgb(37, 40, 43)",
+			"color": "rgb(255, 255, 255)"
+		},
+		"accessibilityViolations": [],
+		"pageErrors": []
+	},
+	{
+		"locale": "en",
+		"route": "contact",
+		"javascript": true,
+		"status": 200,
+		"configuredHrefs": [
+			"https://www.google.com/maps/search/?api=1&query=%D0%B3%D1%80.%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%A1%D1%82%D1%83%D0%B4%D0%B5%D0%BD%D1%82%D1%81%D0%BA%D0%B8%20%D0%B3%D1%80%D0%B0%D0%B4%2C%20%D1%83%D0%BB.%20%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%2018",
+			"viber://chat?number=%2B359877733110"
+		],
+		"keyboard": [
+			{
+				"href": "https://www.google.com/maps/search/?api=1&query=%D0%B3%D1%80.%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%A1%D1%82%D1%83%D0%B4%D0%B5%D0%BD%D1%82%D1%81%D0%BA%D0%B8%20%D0%B3%D1%80%D0%B0%D0%B4%2C%20%D1%83%D0%BB.%20%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%2018",
+				"name": "Get directions",
+				"width": 169.625,
+				"height": 44,
+				"outlineWidth": "3px",
+				"outlineStyle": "solid"
+			},
+			{
+				"href": "viber://chat?number=%2B359877733110",
+				"name": "Message us · Viber",
+				"width": 201.0625,
+				"height": 44,
+				"outlineWidth": "3px",
+				"outlineStyle": "solid"
+			}
+		],
+		"buttons": [
+			{
+				"background": "rgb(185, 22, 28)",
+				"color": "rgb(255, 255, 255)"
+			},
+			{
+				"background": "rgb(23, 25, 28)",
+				"color": "rgb(255, 255, 255)"
+			}
+		],
+		"strongHover": {
+			"background": "rgb(37, 40, 43)",
+			"color": "rgb(255, 255, 255)"
+		},
+		"accessibilityViolations": [],
+		"pageErrors": []
+	},
+	{
+		"locale": "bg",
+		"route": "about",
+		"javascript": false,
+		"status": 200,
+		"configuredHrefs": [
+			"https://www.facebook.com/deninoshtautogroup/?locale=bg_BG",
+			"https://www.instagram.com/kristiankirilov13/",
+			"https://www.tiktok.com/@kristiankirilov13"
+		],
+		"keyboard": [
+			{
+				"href": "https://www.facebook.com/deninoshtautogroup/?locale=bg_BG",
+				"name": "Facebook",
+				"width": 48,
+				"height": 48,
+				"outlineWidth": "3px",
+				"outlineStyle": "solid"
+			},
+			{
+				"href": "https://www.instagram.com/kristiankirilov13/",
+				"name": "Instagram",
+				"width": 48,
+				"height": 48,
+				"outlineWidth": "3px",
+				"outlineStyle": "solid"
+			},
+			{
+				"href": "https://www.tiktok.com/@kristiankirilov13",
+				"name": "TikTok",
+				"width": 48,
+				"height": 48,
+				"outlineWidth": "3px",
+				"outlineStyle": "solid"
+			}
+		],
+		"buttons": [
+			{
+				"background": "rgb(185, 22, 28)",
+				"color": "rgb(255, 255, 255)"
+			},
+			{
+				"background": "rgb(23, 25, 28)",
+				"color": "rgb(255, 255, 255)"
+			}
+		],
+		"strongHover": {
+			"background": "rgb(37, 40, 43)",
+			"color": "rgb(255, 255, 255)"
+		},
+		"accessibilityViolations": null,
+		"pageErrors": []
+	},
+	{
+		"locale": "bg",
+		"route": "contact",
+		"javascript": false,
+		"status": 200,
+		"configuredHrefs": [
+			"https://www.google.com/maps/search/?api=1&query=%D0%B3%D1%80.%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%A1%D1%82%D1%83%D0%B4%D0%B5%D0%BD%D1%82%D1%81%D0%BA%D0%B8%20%D0%B3%D1%80%D0%B0%D0%B4%2C%20%D1%83%D0%BB.%20%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%2018",
+			"viber://chat?number=%2B359877733110"
+		],
+		"keyboard": [
+			{
+				"href": "https://www.google.com/maps/search/?api=1&query=%D0%B3%D1%80.%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%A1%D1%82%D1%83%D0%B4%D0%B5%D0%BD%D1%82%D1%81%D0%BA%D0%B8%20%D0%B3%D1%80%D0%B0%D0%B4%2C%20%D1%83%D0%BB.%20%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%2018",
+				"name": "Как да стигнеш",
+				"width": 191.015625,
+				"height": 44,
+				"outlineWidth": "3px",
+				"outlineStyle": "solid"
+			},
+			{
+				"href": "viber://chat?number=%2B359877733110",
+				"name": "Пиши ни · Viber",
+				"width": 181.78125,
+				"height": 44,
+				"outlineWidth": "3px",
+				"outlineStyle": "solid"
+			}
+		],
+		"buttons": [
+			{
+				"background": "rgb(185, 22, 28)",
+				"color": "rgb(255, 255, 255)"
+			},
+			{
+				"background": "rgb(23, 25, 28)",
+				"color": "rgb(255, 255, 255)"
+			}
+		],
+		"strongHover": {
+			"background": "rgb(37, 40, 43)",
+			"color": "rgb(255, 255, 255)"
+		},
+		"accessibilityViolations": null,
+		"pageErrors": []
+	},
+	{
+		"locale": "en",
+		"route": "about",
+		"javascript": false,
+		"status": 200,
+		"configuredHrefs": [
+			"https://www.facebook.com/deninoshtautogroup/?locale=bg_BG",
+			"https://www.instagram.com/kristiankirilov13/",
+			"https://www.tiktok.com/@kristiankirilov13"
+		],
+		"keyboard": [
+			{
+				"href": "https://www.facebook.com/deninoshtautogroup/?locale=bg_BG",
+				"name": "Facebook",
+				"width": 48,
+				"height": 48,
+				"outlineWidth": "3px",
+				"outlineStyle": "solid"
+			},
+			{
+				"href": "https://www.instagram.com/kristiankirilov13/",
+				"name": "Instagram",
+				"width": 48,
+				"height": 48,
+				"outlineWidth": "3px",
+				"outlineStyle": "solid"
+			},
+			{
+				"href": "https://www.tiktok.com/@kristiankirilov13",
+				"name": "TikTok",
+				"width": 48,
+				"height": 48,
+				"outlineWidth": "3px",
+				"outlineStyle": "solid"
+			}
+		],
+		"buttons": [
+			{
+				"background": "rgb(185, 22, 28)",
+				"color": "rgb(255, 255, 255)"
+			},
+			{
+				"background": "rgb(23, 25, 28)",
+				"color": "rgb(255, 255, 255)"
+			}
+		],
+		"strongHover": {
+			"background": "rgb(37, 40, 43)",
+			"color": "rgb(255, 255, 255)"
+		},
+		"accessibilityViolations": null,
+		"pageErrors": []
+	},
+	{
+		"locale": "en",
+		"route": "contact",
+		"javascript": false,
+		"status": 200,
+		"configuredHrefs": [
+			"https://www.google.com/maps/search/?api=1&query=%D0%B3%D1%80.%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%A1%D1%82%D1%83%D0%B4%D0%B5%D0%BD%D1%82%D1%81%D0%BA%D0%B8%20%D0%B3%D1%80%D0%B0%D0%B4%2C%20%D1%83%D0%BB.%20%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%2018",
+			"viber://chat?number=%2B359877733110"
+		],
+		"keyboard": [
+			{
+				"href": "https://www.google.com/maps/search/?api=1&query=%D0%B3%D1%80.%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%A1%D1%82%D1%83%D0%B4%D0%B5%D0%BD%D1%82%D1%81%D0%BA%D0%B8%20%D0%B3%D1%80%D0%B0%D0%B4%2C%20%D1%83%D0%BB.%20%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%2018",
+				"name": "Get directions",
+				"width": 169.625,
+				"height": 44,
+				"outlineWidth": "3px",
+				"outlineStyle": "solid"
+			},
+			{
+				"href": "viber://chat?number=%2B359877733110",
+				"name": "Message us · Viber",
+				"width": 201.0625,
+				"height": 44,
+				"outlineWidth": "3px",
+				"outlineStyle": "solid"
+			}
+		],
+		"buttons": [
+			{
+				"background": "rgb(185, 22, 28)",
+				"color": "rgb(255, 255, 255)"
+			},
+			{
+				"background": "rgb(23, 25, 28)",
+				"color": "rgb(255, 255, 255)"
+			}
+		],
+		"strongHover": {
+			"background": "rgb(37, 40, 43)",
+			"color": "rgb(255, 255, 255)"
+		},
+		"accessibilityViolations": null,
+		"pageErrors": []
+	}
+]

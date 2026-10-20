@@ -2,6 +2,26 @@
 
 This file records the incumbent visual and interaction system that has been proven in the rendered Day & Night client demo. It is a preservation contract for future polish, not permission to redesign the product.
 
+## Mobile control density — September 13, 2026
+
+The dealer bottom navbar uses the owner's requested frosted-white treatment: 80% white background, 16px backdrop blur and a faint zinc top border. This is a scoped exception to the older no-glass guidance; keep the existing dock dimensions, labels and artwork, and retain a solid-white Menu drawer.
+
+Mobile PDP tabs are ordered `Детайли | Описание` (`Details | Description`), with Details selected on initial load. Description contains the seller's prose; Details contains specifications and equipment. Preserve desktop tab order and defaults.
+
+The mobile Import request banner keeps its existing artwork in a 152px-tall image area, with an 18px/24px semibold heading, 14px/20px regular description and 15px/20px medium request action. Use 20px bottom padding and an 8px image margin; preserve the desktop banner dimensions.
+
+Sell's three next steps share one white rounded container with 16px padding and 20px row gaps, without dividers. Keep the heading accessible but visually hidden, numbers beside the step titles, and regular-weight descriptions below. Do not restore separate cards or the visible heading above them.
+
+Menu Call and Location actions share 48px minimum height, 20px icons, 16px/24px medium labels (`text-body`), 8px horizontal padding and a 6px icon gap. Keep both labels on one line at 320px; preserve their existing equal-width black surfaces and destinations.
+
+For mobile PDPs with a direct telephone action, use a 52px circular call button with the shared silver phone artwork from `DealerMobileHeaderIcon`, fixed 16px from the right and 16px above the bottom safe area. Keep its accessible call label and telephone destination. Do not render a full-width bottom background behind it. Preserve document bottom clearance so final content can scroll above the action. Non-telephone enquiry actions retain their labelled treatment.
+
+PDP mobile segments are 44px overall: 40px buttons inside 2px padding, with transparent pseudo-elements extending each button's touch area to the full 44px height. Labels use the existing 16px/24px `text-body` token with medium weight on both states; the selected surface indicates selection. Combined mobile specification values use the existing 15px/20px `text-compact-control` token with regular weight. The vehicle title uses the mobile section-title variables at 22px/28px medium; descriptions are 15px/24px regular in zinc-600. Keep the primary price and right-aligned monthly amount on one row at 320px. The summary and financing card share euro estimate formatting, converting BGN amounts with the existing fixed conversion and preserving estimates already in EUR. Never relabel an unchanged BGN amount as euros.
+
+This geometry supersedes the older 52px header-control and 44px visible-pill guidance below. Home/Cars, Import, Sell, Lease and Guides use a 48px primary header control with 16px/24px medium text (`text-body`). `MobileDealerChrome` and loading shells reserve the same 48px slot. The condensed scrolling search remains 44px with 15px/20px medium text (`text-compact-control`), aligned with the unchanged 44px header icon buttons. Actual overlay entry fields retain their existing 52px height.
+
+Shared quick pills use 15px/20px medium text and a 40px visible fill within a 44px touch target. Transparent 2px top and bottom borders with padding-box background clipping keep the touch area inside horizontal rails; do not shrink the clickable button to 40px or extend overlapping hit areas outside the rail. Selected pills retain their existing black fill and semibold text. At zero safe-area inset the primary control runs from y=64 to y=112, and the rounded content begins at y=124.
+
 ## Mobile refinement — September 6, 2026
 
 The owner's phone review supersedes the older masthead guidance below. All mobile masthead actions share one softly filled circular style from `mobile-header-icon-action.ts`: 44px borderless circular targets with a 10% current-color fill, 15% hover, 20% pressed and a faint inset highlight on every route and 24px Hugeicons Stroke Rounded SVGs from `dealer-mobile-header-icon.tsx`, using their original 1.5px strokes, matching fill feedback and focus outlines. Use white on black/red headers and dark foreground on yellow/pale headers for contrast. This includes Home/Cars category and filters, the scrolling header, service info/call, Contact location/call, secondary pages, and loading shells. Keep the 144px logo. Cars uses Car01, filters use FilterHorizontal, help uses MessageQuestion, phone uses Call02, and location uses Location01 from Hugeicons 4.3.0. The used icon definitions are vendored unchanged with their MIT license; mobile service cards, main-menu actions, and overlay controls use the same family. Mobile pill rails retain a 16px inset and a 12px fade only on edges with hidden content. Active filters retain the red count badge. Dialog close/back controls retain their existing surfaces.

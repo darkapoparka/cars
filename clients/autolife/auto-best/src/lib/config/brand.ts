@@ -2,7 +2,7 @@ export type BrandConfig = {
   name: string;
   shortName: string;
   city: string;
-  showroomCoordinates: { latitude: number; longitude: number };
+  showroomCoordinates: { latitude: number; longitude: number } | null;
   addressLine: string;
   address: string;
   phone: string;
@@ -33,6 +33,6 @@ export const brand = {
   addressLine,
   address: "ГП4, разклон за с. Тополи",
   appointment: "За работно време се обадете предварително.",
-  logo: "/dealer-brand/logo-on-light-20260919.webp",
-  logoOnDark: "/dealer-brand/logo-on-dark-20260919.webp"
+  logo: "/dealer-brand/v2-b461deb6698b93fc/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/v2-b461deb6698b93fc/logo-on-dark.webp"
 } as const satisfies BrandConfig;

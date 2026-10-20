@@ -118,6 +118,12 @@ export const referenceSpecifications: readonly DetailSpecification[] = [
     "valueKey": "fuel.gasoline"
   },
   {
+    "id": "year",
+    "icon": "/assets/imgs/template/icons/calendar.svg",
+    "value": "2021",
+    "labelKey": "vehicle.field.year"
+  },
+  {
     "id": "lit",
     "icon": "/assets/imgs/page/car/lit.svg",
     "value": "92 hp",
@@ -152,7 +158,7 @@ export const referenceReviews: readonly DetailReview[] = [];
 export const referenceSeller: DetailSeller = {
   "name": "Навара кар",
   "location": "бул. „Цар Освободител“, Кайсиева градина, Варна",
-  "avatar": "/dealer-brand/logo-on-light-20260919.webp",
+  "avatar": "/dealer-brand/v2-7d4f22c6bf5681d7/logo-on-light.webp",
   "mobile": "0899 192 300",
   "email": "",
   "whatsapp": "",

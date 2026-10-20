@@ -1,4 +1,4 @@
-import test from 'node:test';import assert from 'node:assert/strict';import path from 'node:path';import fs from 'node:fs';import {spawnSync} from 'node:child_process';import {buildMatrix,selectedDealer,outputBudget,existingFleetBranding,existingFleetNativeSource,QUALIFICATION_LOCK_PATH,fleetSourceMode,newApprovedFleetSource,readPinnedFleetInput} from './build-existing-fleet-cloudflare.mjs';
+import test from 'node:test';import assert from 'node:assert/strict';import path from 'node:path';import fs from 'node:fs';import {spawnSync} from 'node:child_process';import {buildMatrix,selectedDealer,outputBudget,existingFleetBranding,existingFleetNativeSource,QUALIFICATION_LOCK_PATH,fleetSourceMode,newApprovedFleetSource,readPinnedFleetInput,readCommittedFleetMetadata} from './build-existing-fleet-cloudflare.mjs';
 import {sha256,POLICY,fingerprint} from './lib/workflow.mjs';import {PUBLIC_ROOTS} from './publishing/lead-branding.mjs';
 import {nativeFixture} from './test-fixtures/native-source.mjs';import {tinyArea} from './test-fixtures/fleet-single-worker.mjs';import {sealNativeQualification,sealNativeAdoption,ADOPTION_FILE} from './lib/native-localization.mjs';
 import {baseNativeManifest} from './publishing/app-variant.mjs';import {planSixDesignSelection} from './lib/six-design-release.mjs';
@@ -174,4 +174,65 @@ test('new-approved rejects stale publication trees, substituted receipt hashes a
 test('committed fleet inputs reject physical aliases and uncommitted or duplicate-key proof bytes',async t=>{
  const f=newApprovedFixture(t),p=f.request.newSources[0].inputMapping;assert(readPinnedFleetInput(f.root,p,f.commit).length>0);const hidden=path.join(f.root,'runtime','linked');fs.mkdirSync(hidden);fs.writeFileSync(path.join(hidden,'proof.json'),jsonBytes({fixture:true}));fs.symlinkSync(hidden,path.join(f.root,f.prefix,'linked'),process.platform==='win32'?'junction':'dir');assert.throws(()=>readPinnedFleetInput(f.root,{path:f.prefix+'/linked/proof.json',sha256:sha256(jsonBytes({fixture:true}))},f.commit),/physical input link/);
  const duplicate=Buffer.from('{"reviewed":true,"reviewed":false}');f.request.newSources[0].publication=f.write(f.prefix+'/source-publication.json',duplicate);const commit=f.commitAll();await assert.rejects(()=>newApprovedFleetSource({...f.options,commit}),/duplicate/i);
+});
+
+test('new-approved branch-count receipt parity admits 128, 139 and 256 and rejects 257 or invalid proof',async t=>{
+ const f=newApprovedFixture(t),originalDigest=f.prep.branchAbsence.digest;
+ async function replay(branchAbsence){
+  const prep={...f.prep,branchAbsence},preparation=f.write(f.prefix+'/source-preparation.json',prep);
+  f.request.newSources[0].preparation=preparation;
+  f.request.newSources[0].publication=f.write(f.prefix+'/source-publication.json',{...f.publication,preparation});
+  const commit=f.commitAll();return newApprovedFleetSource({...f.options,commit,request:f.request});
+ }
+ for(const branches of [128,139,256]){
+  const result=await replay({...f.prep.branchAbsence,branches});
+  assert.equal(result.sourceTree,f.prep.preparedTree);
+  assert.equal(result.sourcePublication.commit,f.publication.sourcePublication.commit);
+  assert.equal(f.prep.branchAbsence.digest,originalDigest);
+  assert.equal(result.nativeSource.kind,'approved-native-adoption');
+ }
+ for(const branchAbsence of [
+  {...f.prep.branchAbsence,branches:257},{...f.prep.branchAbsence,branches:0},
+  {...f.prep.branchAbsence,branches:139.5},{...f.prep.branchAbsence,branches:'139'},
+  {...f.prep.branchAbsence,branches:139,digest:'bad'},
+  {...f.prep.branchAbsence,branches:139,absence:'assumed-absence'}
+ ])await assert.rejects(()=>replay(branchAbsence),/original request\/input\/source\/branch lease differs/);
+});
+
+// Regression: the verified 12,864-path native proposals are approximately 9 MiB.
+test('new-approved admits full six-app proposal inventories without widening other proof limits',async t=>{
+ const f=newApprovedFixture(t),row=f.request.newSources[0],size=9_330_692;
+ const original=jsonBytes(f.proposal),large=Buffer.concat([original,Buffer.alloc(size-original.length,32)]);
+ row.proposal=f.write(f.prefix+'/source-patch.json',large);
+ const prep={...f.prep,patchSha256:row.proposal.sha256};row.preparation=f.write(f.prefix+'/source-preparation.json',prep);
+ row.publication=f.write(f.prefix+'/source-publication.json',{...f.publication,proposal:row.proposal,preparation:row.preparation});
+ let commit=f.commitAll();const result=await newApprovedFleetSource({...f.options,commit,request:f.request});
+ assert.equal(result.sourceTree,f.prep.preparedTree);assert.equal(prep.reviewed,false);assert.equal(prep.buildApproval,false);assert.equal(prep.hostedApproval,false);
+ assert.throws(()=>readPinnedFleetInput(f.root,row.proposal,commit),/bounded regular file/);
+ row.proposal=f.write(f.prefix+'/source-patch.json',Buffer.concat([original,Buffer.alloc(16*1024**2+1-original.length,32)]));
+ commit=f.commitAll();await assert.rejects(()=>newApprovedFleetSource({...f.options,commit,request:f.request}),/bounded regular file/);
+});
+
+test('new-approved accepts the maintained collector omission of dealer metadata without weakening the manifest lease',async t=>{
+ const f=newApprovedFixture(t),files=new Map(f.files);files.delete('dealer.json');
+ const result=await newApprovedFleetSource({...f.options,files});assert.equal(result.sourceTree,f.prep.preparedTree);assert.equal(files.has('dealer.json'),false);
+ await assert.rejects(()=>newApprovedFleetSource({...f.options,files,manifest:{...f.manifest,repository:'darkapoparka/not-the-published-dealer'}}),/build manifest differs/);
+ const substituted=new Map(files);substituted.set('dealer.json',jsonBytes({...f.manifest,slug:'other'}));
+ await assert.rejects(()=>newApprovedFleetSource({...f.options,files:substituted}),/collected build bytes differ/);
+});
+
+test('fleet metadata reads stay committed, bounded and separate from package inputs',t=>{
+ const f=newApprovedFixture(t);assert.deepEqual(JSON.parse(readCommittedFleetMetadata(f.root,f.slug,'dealer.json',f.commit)),f.manifest);
+ for(const name of ['../dealer.json','stock.json','.git/config'])assert.throws(()=>readCommittedFleetMetadata(f.root,f.slug,name,f.commit),/invalid dealer metadata locator/);
+ f.write('clients/'+f.slug+'/dealer.json',{...f.manifest,repository:'darkapoparka/unpublished'});assert.throws(()=>readCommittedFleetMetadata(f.root,f.slug,'dealer.json',f.commit),/physical input bytes differ/);
+});
+
+test('actual fleet CLI envelope completes dynamic back-imports and propagates failures',t=>{
+ const directory=fs.mkdtempSync(path.join(process.env.TEMP??process.env.TMPDIR??'/tmp','cars-fleet-cli-cycle-'));t.after(()=>fs.rmSync(directory,{recursive:true,force:true}));
+ const builder=fs.readFileSync(new URL('./build-existing-fleet-cloudflare.mjs',import.meta.url),'utf8'),marker='export async function runExistingFleetCli(';assert.equal(builder.split(marker).length,2);
+ const envelope=builder.slice(builder.indexOf(marker));
+ fs.writeFileSync(path.join(directory,'entry.mjs'),"import path from 'node:path';import {fileURLToPath} from 'node:url';export const QUALIFICATION_LOCK_PATH='.client/native-qualification-lock.json';async function compile(slug){if(slug==='reject')throw Error('expected-cli-rejection');const loaded=await import('./dependent.mjs');if(loaded.proof!==QUALIFICATION_LOCK_PATH)throw Error('back-import mismatch');console.log('CLI_IMPORT_COMPLETE');}\n"+envelope);
+ fs.writeFileSync(path.join(directory,'dependent.mjs'),"import {QUALIFICATION_LOCK_PATH} from './entry.mjs';export const proof=QUALIFICATION_LOCK_PATH;\n");
+ const complete=spawnSync(process.execPath,[path.join(directory,'entry.mjs'),'compile','fixture'],{encoding:'utf8',timeout:15000});assert.equal(complete.status,0,complete.stderr);assert.match(complete.stdout,/CLI_IMPORT_COMPLETE/);assert.doesNotMatch(complete.stderr,/unsettled top-level await/);
+ const rejected=spawnSync(process.execPath,[path.join(directory,'entry.mjs'),'compile','reject'],{encoding:'utf8',timeout:15000});assert.equal(rejected.status,1);assert.match(rejected.stderr,/expected-cli-rejection/);assert.doesNotMatch(rejected.stdout,/CLI_IMPORT_COMPLETE/);
 });

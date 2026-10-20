@@ -1,0 +1,1277 @@
+[
+  {
+    "phase": "before",
+    "header": {
+      "bottom": 94,
+      "height": 94,
+      "left": 0,
+      "right": 1425,
+      "top": 0,
+      "width": 1425,
+      "x": 0,
+      "y": 0
+    },
+    "height": 1000,
+    "hero": {
+      "bottom": 494,
+      "height": 400,
+      "left": 52.5,
+      "right": 1372.5,
+      "top": 94,
+      "width": 1320,
+      "x": 52.5,
+      "y": 94
+    },
+    "links": [
+      {
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "none",
+        "current": "page",
+        "focusVisible": false,
+        "outline": "none",
+        "radius": "0px",
+        "rect": {
+          "bottom": 69,
+          "height": 44,
+          "left": 522.140625,
+          "right": 573.375,
+          "top": 25,
+          "width": 51.234375,
+          "x": 522.140625,
+          "y": 25
+        },
+        "text": "Home",
+        "underline": "block"
+      },
+      {
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "none",
+        "current": null,
+        "focusVisible": false,
+        "outline": "none",
+        "radius": "0px",
+        "rect": {
+          "bottom": 69,
+          "height": 44,
+          "left": 597.375,
+          "right": 635.6875,
+          "top": 25,
+          "width": 38.3125,
+          "x": 597.375,
+          "y": 25
+        },
+        "text": "Cars",
+        "underline": "block"
+      },
+      {
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "none",
+        "current": null,
+        "focusVisible": false,
+        "outline": "none",
+        "radius": "0px",
+        "rect": {
+          "bottom": 69,
+          "height": 44,
+          "left": 659.6875,
+          "right": 733.46875,
+          "top": 25,
+          "width": 73.78125,
+          "x": 659.6875,
+          "y": 25
+        },
+        "text": "Services",
+        "underline": "block"
+      },
+      {
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "none",
+        "current": null,
+        "focusVisible": false,
+        "outline": "none",
+        "radius": "0px",
+        "rect": {
+          "bottom": 69,
+          "height": 44,
+          "left": 757.46875,
+          "right": 808.859375,
+          "top": 25,
+          "width": 51.390625,
+          "x": 757.46875,
+          "y": 25
+        },
+        "text": "About",
+        "underline": "block"
+      },
+      {
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "none",
+        "current": null,
+        "focusVisible": false,
+        "outline": "none",
+        "radius": "0px",
+        "rect": {
+          "bottom": 69,
+          "height": 44,
+          "left": 832.859375,
+          "right": 902.84375,
+          "top": 25,
+          "width": 69.984375,
+          "x": 832.859375,
+          "y": 25
+        },
+        "text": "Contact",
+        "underline": "block"
+      }
+    ],
+    "nav": {
+      "bottom": 69,
+      "height": 44,
+      "left": 522.140625,
+      "right": 902.84375,
+      "top": 25,
+      "width": 380.703125,
+      "x": 522.140625,
+      "y": 25
+    },
+    "overflow": -15,
+    "url": "http://localhost:6794/en?lang=en",
+    "width": 1440
+  },
+  {
+    "phase": "after",
+    "header": {
+      "bottom": 94,
+      "height": 94,
+      "left": 0,
+      "right": 1425,
+      "top": 0,
+      "width": 1425,
+      "x": 0,
+      "y": 0
+    },
+    "height": 1000,
+    "hero": {
+      "bottom": 494,
+      "height": 400,
+      "left": 52.5,
+      "right": 1372.5,
+      "top": 94,
+      "width": 1320,
+      "x": 52.5,
+      "y": 94
+    },
+    "links": [
+      {
+        "background": "rgb(229, 237, 244)",
+        "border": "rgb(229, 229, 231) 0px 0px 0px 1px inset",
+        "current": "page",
+        "focusVisible": false,
+        "outline": "none",
+        "radius": "999px",
+        "rect": {
+          "bottom": 69,
+          "height": 44,
+          "left": 514.140625,
+          "right": 581.375,
+          "top": 25,
+          "width": 67.234375,
+          "x": 514.140625,
+          "y": 25
+        },
+        "text": "Home",
+        "underline": "none"
+      },
+      {
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "none",
+        "current": null,
+        "focusVisible": false,
+        "outline": "none",
+        "radius": "999px",
+        "rect": {
+          "bottom": 69,
+          "height": 44,
+          "left": 589.375,
+          "right": 643.6875,
+          "top": 25,
+          "width": 54.3125,
+          "x": 589.375,
+          "y": 25
+        },
+        "text": "Cars",
+        "underline": "block"
+      },
+      {
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "none",
+        "current": null,
+        "focusVisible": false,
+        "outline": "none",
+        "radius": "999px",
+        "rect": {
+          "bottom": 69,
+          "height": 44,
+          "left": 651.6875,
+          "right": 741.46875,
+          "top": 25,
+          "width": 89.78125,
+          "x": 651.6875,
+          "y": 25
+        },
+        "text": "Services",
+        "underline": "block"
+      },
+      {
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "none",
+        "current": null,
+        "focusVisible": false,
+        "outline": "none",
+        "radius": "999px",
+        "rect": {
+          "bottom": 69,
+          "height": 44,
+          "left": 749.46875,
+          "right": 816.859375,
+          "top": 25,
+          "width": 67.390625,
+          "x": 749.46875,
+          "y": 25
+        },
+        "text": "About",
+        "underline": "block"
+      },
+      {
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "none",
+        "current": null,
+        "focusVisible": false,
+        "outline": "none",
+        "radius": "999px",
+        "rect": {
+          "bottom": 69,
+          "height": 44,
+          "left": 824.859375,
+          "right": 910.84375,
+          "top": 25,
+          "width": 85.984375,
+          "x": 824.859375,
+          "y": 25
+        },
+        "text": "Contact",
+        "underline": "block"
+      }
+    ],
+    "nav": {
+      "bottom": 69,
+      "height": 44,
+      "left": 522.140625,
+      "right": 902.84375,
+      "top": 25,
+      "width": 380.703125,
+      "x": 522.140625,
+      "y": 25
+    },
+    "overflow": -15,
+    "url": "http://localhost:6794/en?lang=en",
+    "width": 1440
+  },
+  {
+    "phase": "keyboard-focus",
+    "header": {
+      "bottom": 94,
+      "height": 94,
+      "left": 0,
+      "right": 1425,
+      "top": 0,
+      "width": 1425,
+      "x": 0,
+      "y": 0
+    },
+    "height": 1000,
+    "hero": {
+      "bottom": 494,
+      "height": 400,
+      "left": 52.5,
+      "right": 1372.5,
+      "top": 94,
+      "width": 1320,
+      "x": 52.5,
+      "y": 94
+    },
+    "links": [
+      {
+        "background": "rgb(229, 237, 244)",
+        "border": "rgb(229, 229, 231) 0px 0px 0px 1px inset",
+        "current": "page",
+        "focusVisible": false,
+        "outline": "none",
+        "radius": "999px",
+        "rect": {
+          "bottom": 69,
+          "height": 44,
+          "left": 514.140625,
+          "right": 581.375,
+          "top": 25,
+          "width": 67.234375,
+          "x": 514.140625,
+          "y": 25
+        },
+        "text": "Home",
+        "underline": "none"
+      },
+      {
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "rgb(255, 255, 255) 0px 0px 0px 2px",
+        "current": null,
+        "focusVisible": true,
+        "outline": "solid",
+        "radius": "999px",
+        "rect": {
+          "bottom": 69,
+          "height": 44,
+          "left": 589.375,
+          "right": 643.6875,
+          "top": 25,
+          "width": 54.3125,
+          "x": 589.375,
+          "y": 25
+        },
+        "text": "Cars",
+        "underline": "block"
+      },
+      {
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "none",
+        "current": null,
+        "focusVisible": false,
+        "outline": "none",
+        "radius": "999px",
+        "rect": {
+          "bottom": 69,
+          "height": 44,
+          "left": 651.6875,
+          "right": 741.46875,
+          "top": 25,
+          "width": 89.78125,
+          "x": 651.6875,
+          "y": 25
+        },
+        "text": "Services",
+        "underline": "block"
+      },
+      {
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "none",
+        "current": null,
+        "focusVisible": false,
+        "outline": "none",
+        "radius": "999px",
+        "rect": {
+          "bottom": 69,
+          "height": 44,
+          "left": 749.46875,
+          "right": 816.859375,
+          "top": 25,
+          "width": 67.390625,
+          "x": 749.46875,
+          "y": 25
+        },
+        "text": "About",
+        "underline": "block"
+      },
+      {
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "none",
+        "current": null,
+        "focusVisible": false,
+        "outline": "none",
+        "radius": "999px",
+        "rect": {
+          "bottom": 69,
+          "height": 44,
+          "left": 824.859375,
+          "right": 910.84375,
+          "top": 25,
+          "width": 85.984375,
+          "x": 824.859375,
+          "y": 25
+        },
+        "text": "Contact",
+        "underline": "block"
+      }
+    ],
+    "nav": {
+      "bottom": 69,
+      "height": 44,
+      "left": 522.140625,
+      "right": 902.84375,
+      "top": 25,
+      "width": 380.703125,
+      "x": 522.140625,
+      "y": 25
+    },
+    "overflow": -15,
+    "url": "http://localhost:6794/en?lang=en",
+    "width": 1440
+  },
+  {
+    "phase": "cars-active",
+    "header": {
+      "bottom": 94,
+      "height": 94,
+      "left": 0,
+      "right": 1425,
+      "top": 0,
+      "width": 1425,
+      "x": 0,
+      "y": 0
+    },
+    "height": 1000,
+    "links": [
+      {
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "none",
+        "current": null,
+        "focusVisible": false,
+        "outline": "none",
+        "radius": "999px",
+        "rect": {
+          "bottom": 69,
+          "height": 44,
+          "left": 514.140625,
+          "right": 581.375,
+          "top": 25,
+          "width": 67.234375,
+          "x": 514.140625,
+          "y": 25
+        },
+        "text": "Home",
+        "underline": "block"
+      },
+      {
+        "background": "rgb(229, 237, 244)",
+        "border": "rgb(229, 229, 231) 0px 0px 0px 1px inset",
+        "current": "page",
+        "focusVisible": false,
+        "outline": "none",
+        "radius": "999px",
+        "rect": {
+          "bottom": 69,
+          "height": 44,
+          "left": 589.375,
+          "right": 643.6875,
+          "top": 25,
+          "width": 54.3125,
+          "x": 589.375,
+          "y": 25
+        },
+        "text": "Cars",
+        "underline": "none"
+      },
+      {
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "none",
+        "current": null,
+        "focusVisible": false,
+        "outline": "none",
+        "radius": "999px",
+        "rect": {
+          "bottom": 69,
+          "height": 44,
+          "left": 651.6875,
+          "right": 741.46875,
+          "top": 25,
+          "width": 89.78125,
+          "x": 651.6875,
+          "y": 25
+        },
+        "text": "Services",
+        "underline": "block"
+      },
+      {
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "none",
+        "current": null,
+        "focusVisible": false,
+        "outline": "none",
+        "radius": "999px",
+        "rect": {
+          "bottom": 69,
+          "height": 44,
+          "left": 749.46875,
+          "right": 816.859375,
+          "top": 25,
+          "width": 67.390625,
+          "x": 749.46875,
+          "y": 25
+        },
+        "text": "About",
+        "underline": "block"
+      },
+      {
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "none",
+        "current": null,
+        "focusVisible": false,
+        "outline": "none",
+        "radius": "999px",
+        "rect": {
+          "bottom": 69,
+          "height": 44,
+          "left": 824.859375,
+          "right": 910.84375,
+          "top": 25,
+          "width": 85.984375,
+          "x": 824.859375,
+          "y": 25
+        },
+        "text": "Contact",
+        "underline": "block"
+      }
+    ],
+    "nav": {
+      "bottom": 69,
+      "height": 44,
+      "left": 522.140625,
+      "right": 902.84375,
+      "top": 25,
+      "width": 380.703125,
+      "x": 522.140625,
+      "y": 25
+    },
+    "overflow": -15,
+    "url": "http://localhost:6794/en/inventory?lang=en",
+    "width": 1440
+  },
+  {
+    "phase": "narrow-desktop",
+    "header": {
+      "bottom": 130.65625,
+      "height": 130.65625,
+      "left": 0,
+      "right": 753,
+      "top": 0,
+      "width": 753,
+      "x": 0,
+      "y": 0
+    },
+    "height": 1000,
+    "links": [
+      {
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "none",
+        "current": null,
+        "focusVisible": false,
+        "outline": "none",
+        "radius": "999px",
+        "rect": {
+          "bottom": 118.65625,
+          "height": 44,
+          "left": 178.140625,
+          "right": 245.375,
+          "top": 74.65625,
+          "width": 67.234375,
+          "x": 178.140625,
+          "y": 74.65625
+        },
+        "text": "Home",
+        "underline": "block"
+      },
+      {
+        "background": "rgb(229, 237, 244)",
+        "border": "rgb(229, 229, 231) 0px 0px 0px 1px inset",
+        "current": "page",
+        "focusVisible": false,
+        "outline": "none",
+        "radius": "999px",
+        "rect": {
+          "bottom": 118.65625,
+          "height": 44,
+          "left": 253.375,
+          "right": 307.6875,
+          "top": 74.65625,
+          "width": 54.3125,
+          "x": 253.375,
+          "y": 74.65625
+        },
+        "text": "Cars",
+        "underline": "none"
+      },
+      {
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "none",
+        "current": null,
+        "focusVisible": false,
+        "outline": "none",
+        "radius": "999px",
+        "rect": {
+          "bottom": 118.65625,
+          "height": 44,
+          "left": 315.6875,
+          "right": 405.46875,
+          "top": 74.65625,
+          "width": 89.78125,
+          "x": 315.6875,
+          "y": 74.65625
+        },
+        "text": "Services",
+        "underline": "block"
+      },
+      {
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "none",
+        "current": null,
+        "focusVisible": false,
+        "outline": "none",
+        "radius": "999px",
+        "rect": {
+          "bottom": 118.65625,
+          "height": 44,
+          "left": 413.46875,
+          "right": 480.859375,
+          "top": 74.65625,
+          "width": 67.390625,
+          "x": 413.46875,
+          "y": 74.65625
+        },
+        "text": "About",
+        "underline": "block"
+      },
+      {
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "none",
+        "current": null,
+        "focusVisible": false,
+        "outline": "none",
+        "radius": "999px",
+        "rect": {
+          "bottom": 118.65625,
+          "height": 44,
+          "left": 488.859375,
+          "right": 574.84375,
+          "top": 74.65625,
+          "width": 85.984375,
+          "x": 488.859375,
+          "y": 74.65625
+        },
+        "text": "Contact",
+        "underline": "block"
+      }
+    ],
+    "nav": {
+      "bottom": 118.65625,
+      "height": 44,
+      "left": 32,
+      "right": 721,
+      "top": 74.65625,
+      "width": 689,
+      "x": 32,
+      "y": 74.65625
+    },
+    "overflow": -15,
+    "url": "http://localhost:6794/en/inventory?lang=en",
+    "width": 768
+  },
+  {
+    "phase": "bg-768",
+    "header": {
+      "bottom": 130.65625,
+      "height": 130.65625,
+      "left": 0,
+      "right": 753,
+      "top": 0,
+      "width": 753,
+      "x": 0,
+      "y": 0
+    },
+    "height": 1000,
+    "hero": {
+      "bottom": 582.65625,
+      "height": 452,
+      "left": 32,
+      "right": 721,
+      "top": 130.65625,
+      "width": 689,
+      "x": 32,
+      "y": 130.65625
+    },
+    "links": [
+      {
+        "background": "rgb(229, 237, 244)",
+        "border": "rgb(229, 229, 231) 0px 0px 0px 1px inset",
+        "current": "page",
+        "focusVisible": false,
+        "outline": "none",
+        "radius": "999px",
+        "rect": {
+          "bottom": 118.65625,
+          "height": 44,
+          "left": 125.421875,
+          "right": 204.671875,
+          "top": 74.65625,
+          "width": 79.25,
+          "x": 125.421875,
+          "y": 74.65625
+        },
+        "text": "Начало",
+        "underline": "none"
+      },
+      {
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "none",
+        "current": null,
+        "focusVisible": false,
+        "outline": "none",
+        "radius": "999px",
+        "rect": {
+          "bottom": 118.65625,
+          "height": 44,
+          "left": 212.671875,
+          "right": 342.8125,
+          "top": 74.65625,
+          "width": 130.140625,
+          "x": 212.671875,
+          "y": 74.65625
+        },
+        "text": "Автомобили",
+        "underline": "block"
+      },
+      {
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "none",
+        "current": null,
+        "focusVisible": false,
+        "outline": "none",
+        "radius": "999px",
+        "rect": {
+          "bottom": 118.65625,
+          "height": 44,
+          "left": 350.8125,
+          "right": 425.625,
+          "top": 74.65625,
+          "width": 74.8125,
+          "x": 350.8125,
+          "y": 74.65625
+        },
+        "text": "Услуги",
+        "underline": "block"
+      },
+      {
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "none",
+        "current": null,
+        "focusVisible": false,
+        "outline": "none",
+        "radius": "999px",
+        "rect": {
+          "bottom": 118.65625,
+          "height": 44,
+          "left": 433.625,
+          "right": 506.359375,
+          "top": 74.65625,
+          "width": 72.734375,
+          "x": 433.625,
+          "y": 74.65625
+        },
+        "text": "За нас",
+        "underline": "block"
+      },
+      {
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "none",
+        "current": null,
+        "focusVisible": false,
+        "outline": "none",
+        "radius": "999px",
+        "rect": {
+          "bottom": 118.65625,
+          "height": 44,
+          "left": 514.359375,
+          "right": 627.5625,
+          "top": 74.65625,
+          "width": 113.203125,
+          "x": 514.359375,
+          "y": 74.65625
+        },
+        "text": "Контакти",
+        "underline": "block"
+      }
+    ],
+    "nav": {
+      "bottom": 118.65625,
+      "height": 44,
+      "left": 32,
+      "right": 721,
+      "top": 74.65625,
+      "width": 689,
+      "x": 32,
+      "y": 74.65625
+    },
+    "overflow": -15,
+    "url": "http://localhost:6794/bg?lang=bg",
+    "width": 768
+  },
+  {
+    "phase": "bg-1024",
+    "header": {
+      "bottom": 130.65625,
+      "height": 130.65625,
+      "left": 0,
+      "right": 1009,
+      "top": 0,
+      "width": 1009,
+      "x": 0,
+      "y": 0
+    },
+    "height": 1000,
+    "hero": {
+      "bottom": 530.65625,
+      "height": 400,
+      "left": 32,
+      "right": 977,
+      "top": 130.65625,
+      "width": 945,
+      "x": 32,
+      "y": 130.65625
+    },
+    "links": [
+      {
+        "background": "rgb(229, 237, 244)",
+        "border": "rgb(229, 229, 231) 0px 0px 0px 1px inset",
+        "current": "page",
+        "focusVisible": false,
+        "outline": "none",
+        "radius": "999px",
+        "rect": {
+          "bottom": 118.65625,
+          "height": 44,
+          "left": 253.421875,
+          "right": 332.671875,
+          "top": 74.65625,
+          "width": 79.25,
+          "x": 253.421875,
+          "y": 74.65625
+        },
+        "text": "Начало",
+        "underline": "none"
+      },
+      {
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "none",
+        "current": null,
+        "focusVisible": false,
+        "outline": "none",
+        "radius": "999px",
+        "rect": {
+          "bottom": 118.65625,
+          "height": 44,
+          "left": 340.671875,
+          "right": 470.8125,
+          "top": 74.65625,
+          "width": 130.140625,
+          "x": 340.671875,
+          "y": 74.65625
+        },
+        "text": "Автомобили",
+        "underline": "block"
+      },
+      {
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "none",
+        "current": null,
+        "focusVisible": false,
+        "outline": "none",
+        "radius": "999px",
+        "rect": {
+          "bottom": 118.65625,
+          "height": 44,
+          "left": 478.8125,
+          "right": 553.625,
+          "top": 74.65625,
+          "width": 74.8125,
+          "x": 478.8125,
+          "y": 74.65625
+        },
+        "text": "Услуги",
+        "underline": "block"
+      },
+      {
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "none",
+        "current": null,
+        "focusVisible": false,
+        "outline": "none",
+        "radius": "999px",
+        "rect": {
+          "bottom": 118.65625,
+          "height": 44,
+          "left": 561.625,
+          "right": 634.359375,
+          "top": 74.65625,
+          "width": 72.734375,
+          "x": 561.625,
+          "y": 74.65625
+        },
+        "text": "За нас",
+        "underline": "block"
+      },
+      {
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "none",
+        "current": null,
+        "focusVisible": false,
+        "outline": "none",
+        "radius": "999px",
+        "rect": {
+          "bottom": 118.65625,
+          "height": 44,
+          "left": 642.359375,
+          "right": 755.5625,
+          "top": 74.65625,
+          "width": 113.203125,
+          "x": 642.359375,
+          "y": 74.65625
+        },
+        "text": "Контакти",
+        "underline": "block"
+      }
+    ],
+    "nav": {
+      "bottom": 118.65625,
+      "height": 44,
+      "left": 32,
+      "right": 977,
+      "top": 74.65625,
+      "width": 945,
+      "x": 32,
+      "y": 74.65625
+    },
+    "overflow": -15,
+    "url": "http://localhost:6794/bg?lang=bg",
+    "width": 1024
+  },
+  {
+    "phase": "bg-1440",
+    "header": {
+      "bottom": 94,
+      "height": 94,
+      "left": 0,
+      "right": 1425,
+      "top": 0,
+      "width": 1425,
+      "x": 0,
+      "y": 0
+    },
+    "height": 1000,
+    "hero": {
+      "bottom": 494,
+      "height": 400,
+      "left": 52.5,
+      "right": 1372.5,
+      "top": 94,
+      "width": 1320,
+      "x": 52.5,
+      "y": 94
+    },
+    "links": [
+      {
+        "background": "rgb(229, 237, 244)",
+        "border": "rgb(229, 229, 231) 0px 0px 0px 1px inset",
+        "current": "page",
+        "focusVisible": false,
+        "outline": "none",
+        "radius": "999px",
+        "rect": {
+          "bottom": 69,
+          "height": 44,
+          "left": 461.421875,
+          "right": 540.671875,
+          "top": 25,
+          "width": 79.25,
+          "x": 461.421875,
+          "y": 25
+        },
+        "text": "Начало",
+        "underline": "none"
+      },
+      {
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "none",
+        "current": null,
+        "focusVisible": false,
+        "outline": "none",
+        "radius": "999px",
+        "rect": {
+          "bottom": 69,
+          "height": 44,
+          "left": 548.671875,
+          "right": 678.8125,
+          "top": 25,
+          "width": 130.140625,
+          "x": 548.671875,
+          "y": 25
+        },
+        "text": "Автомобили",
+        "underline": "block"
+      },
+      {
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "none",
+        "current": null,
+        "focusVisible": false,
+        "outline": "none",
+        "radius": "999px",
+        "rect": {
+          "bottom": 69,
+          "height": 44,
+          "left": 686.8125,
+          "right": 761.625,
+          "top": 25,
+          "width": 74.8125,
+          "x": 686.8125,
+          "y": 25
+        },
+        "text": "Услуги",
+        "underline": "block"
+      },
+      {
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "none",
+        "current": null,
+        "focusVisible": false,
+        "outline": "none",
+        "radius": "999px",
+        "rect": {
+          "bottom": 69,
+          "height": 44,
+          "left": 769.625,
+          "right": 842.359375,
+          "top": 25,
+          "width": 72.734375,
+          "x": 769.625,
+          "y": 25
+        },
+        "text": "За нас",
+        "underline": "block"
+      },
+      {
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "none",
+        "current": null,
+        "focusVisible": false,
+        "outline": "none",
+        "radius": "999px",
+        "rect": {
+          "bottom": 69,
+          "height": 44,
+          "left": 850.359375,
+          "right": 963.5625,
+          "top": 25,
+          "width": 113.203125,
+          "x": 850.359375,
+          "y": 25
+        },
+        "text": "Контакти",
+        "underline": "block"
+      }
+    ],
+    "nav": {
+      "bottom": 69,
+      "height": 44,
+      "left": 469.421875,
+      "right": 955.5625,
+      "top": 25,
+      "width": 486.140625,
+      "x": 469.421875,
+      "y": 25
+    },
+    "overflow": -15,
+    "url": "http://localhost:6794/bg?lang=bg",
+    "width": 1440
+  },
+  {
+    "phase": "wide-desktop",
+    "header": {
+      "bottom": 94,
+      "height": 94,
+      "left": 0,
+      "right": 1905,
+      "top": 0,
+      "width": 1905,
+      "x": 0,
+      "y": 0
+    },
+    "height": 1000,
+    "hero": {
+      "bottom": 494,
+      "height": 400,
+      "left": 292.5,
+      "right": 1612.5,
+      "top": 94,
+      "width": 1320,
+      "x": 292.5,
+      "y": 94
+    },
+    "links": [
+      {
+        "background": "rgb(229, 237, 244)",
+        "border": "rgb(229, 229, 231) 0px 0px 0px 1px inset",
+        "current": "page",
+        "focusVisible": false,
+        "outline": "none",
+        "radius": "999px",
+        "rect": {
+          "bottom": 69,
+          "height": 44,
+          "left": 754.140625,
+          "right": 821.375,
+          "top": 25,
+          "width": 67.234375,
+          "x": 754.140625,
+          "y": 25
+        },
+        "text": "Home",
+        "underline": "none"
+      },
+      {
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "none",
+        "current": null,
+        "focusVisible": false,
+        "outline": "none",
+        "radius": "999px",
+        "rect": {
+          "bottom": 69,
+          "height": 44,
+          "left": 829.375,
+          "right": 883.6875,
+          "top": 25,
+          "width": 54.3125,
+          "x": 829.375,
+          "y": 25
+        },
+        "text": "Cars",
+        "underline": "block"
+      },
+      {
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "none",
+        "current": null,
+        "focusVisible": false,
+        "outline": "none",
+        "radius": "999px",
+        "rect": {
+          "bottom": 69,
+          "height": 44,
+          "left": 891.6875,
+          "right": 981.46875,
+          "top": 25,
+          "width": 89.78125,
+          "x": 891.6875,
+          "y": 25
+        },
+        "text": "Services",
+        "underline": "block"
+      },
+      {
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "none",
+        "current": null,
+        "focusVisible": false,
+        "outline": "none",
+        "radius": "999px",
+        "rect": {
+          "bottom": 69,
+          "height": 44,
+          "left": 989.46875,
+          "right": 1056.859375,
+          "top": 25,
+          "width": 67.390625,
+          "x": 989.46875,
+          "y": 25
+        },
+        "text": "About",
+        "underline": "block"
+      },
+      {
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "none",
+        "current": null,
+        "focusVisible": false,
+        "outline": "none",
+        "radius": "999px",
+        "rect": {
+          "bottom": 69,
+          "height": 44,
+          "left": 1064.859375,
+          "right": 1150.84375,
+          "top": 25,
+          "width": 85.984375,
+          "x": 1064.859375,
+          "y": 25
+        },
+        "text": "Contact",
+        "underline": "block"
+      }
+    ],
+    "nav": {
+      "bottom": 69,
+      "height": 44,
+      "left": 762.140625,
+      "right": 1142.84375,
+      "top": 25,
+      "width": 380.703125,
+      "x": 762.140625,
+      "y": 25
+    },
+    "overflow": -15,
+    "url": "http://localhost:6794/en?lang=en",
+    "width": 1920
+  },
+  {
+    "phase": "mobile-preserved",
+    "header": {
+      "bottom": 0,
+      "height": 0,
+      "left": 0,
+      "right": 0,
+      "top": 0,
+      "width": 0,
+      "x": 0,
+      "y": 0
+    },
+    "height": 844,
+    "hero": {
+      "bottom": 0,
+      "height": 0,
+      "left": 0,
+      "right": 0,
+      "top": 0,
+      "width": 0,
+      "x": 0,
+      "y": 0
+    },
+    "links": [],
+    "nav": {
+      "bottom": 0,
+      "height": 0,
+      "left": 0,
+      "right": 0,
+      "top": 0,
+      "width": 0,
+      "x": 0,
+      "y": 0
+    },
+    "overflow": 0,
+    "url": "http://localhost:6794/en?lang=en",
+    "width": 320,
+    "heroTab": {
+      "background": "rgba(0, 0, 0, 0)",
+      "height": "5px",
+      "text": " Buy",
+      "underline": "block"
+    }
+  }
+]

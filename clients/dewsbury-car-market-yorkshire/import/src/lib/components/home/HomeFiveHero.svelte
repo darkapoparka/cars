@@ -1089,7 +1089,7 @@
 			z-index: 2;
 			background: var(--bc-bg-strong);
 			margin: -20px 0 0;
-			padding: var(--bc-mobile-browse-top-inset) 0 9px;
+			padding: var(--bc-space-3) 0;
 			border: 0;
 			border-radius: 24px 24px 0 0;
 			box-shadow: 0 -1px 0 rgb(255 255 255 / 0.14);

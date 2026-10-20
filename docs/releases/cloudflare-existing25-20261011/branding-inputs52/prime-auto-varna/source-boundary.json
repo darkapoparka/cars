@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-existing-dealer-branding-input-boundary",
+  "dealer": "prime-auto-varna",
+  "identityKey": "existing-slug:prime-auto-varna",
+  "cohort": "varna-selected10",
+  "ownership": "preserved-branch-adoption-required",
+  "branding": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/prime-auto-varna/branding.json",
+    "sha256": "a9ba8305906beb51b8be4ba4f096808bb5fb5baffc3c3bfaae405652ed196977"
+  },
+  "originalManifest": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/prime-auto-varna/source/original-dealer.json",
+    "sha256": "3e5e4edbb7977b614c674f58b23ae1e6b48dc70eb72e4788adc91a4a6941fa96"
+  },
+  "originalManifestGitBlob": "47acbe8080c4d0662b48b70dcc19c38cf5e59a02",
+  "originalRepository": "darkapoparka/cars-primeautovarna",
+  "sourceRef": {
+    "ref": "origin/varna",
+    "commit": "4c1cffff71f2ef944fc72be733606d1f3bf8f774",
+    "tree": "2729137fdc945f9c957035bfd49d5ebe3c851d50"
+  },
+  "originalData": [
+    {
+      "path": "clients/prime-auto-varna/.cars-branding.json",
+      "gitBlob": "e35d2b4d9ffbd701d2ee889cafa25317d8943b1b",
+      "bytes": 77326
+    },
+    {
+      "path": "clients/prime-auto-varna/business-facts.json",
+      "gitBlob": "4d2a9ef4d650635d78c5729809645a7606d3a7b9",
+      "bytes": 1961
+    },
+    {
+      "path": "clients/prime-auto-varna/dealer.json",
+      "gitBlob": "47acbe8080c4d0662b48b70dcc19c38cf5e59a02",
+      "bytes": 3926
+    },
+    {
+      "path": "clients/prime-auto-varna/locale.json",
+      "gitBlob": "10363c91d023b192278f22f88fd03eaa41b5c1b8",
+      "bytes": 185
+    },
+    {
+      "path": "clients/prime-auto-varna/stock.json",
+      "gitBlob": "5fd68c18dc88115579b93e496cb0a1adf5f19f0d",
+      "bytes": 13652
+    }
+  ],
+  "sourceProof": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/evidence/original-source-proof.json",
+    "sha256": "477c4eedc097eb2e105b1d50cf1bc3701b558679e8f6c3c3681a3ccd6626e08c"
+  },
+  "roster": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/evidence/accepted-roster.json",
+    "sha256": "c23c6c4ea10acaca9fdc8d09351fd64735a9e2245385fb12a0f95d71f9f0080d"
+  },
+  "sourceCreation": false,
+  "clientIntegration": false,
+  "buildApproval": false,
+  "hostedApproval": false,
+  "eligibleForExistingQualifiedRequest": false,
+  "holds": [
+    "Adopt original branch/research identity and source through a separate reviewed preservation mode; do not pass as absent/new or existing-qualified."
+  ]
+}

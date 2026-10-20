@@ -1,0 +1,922 @@
+[
+	{
+		"locale": "bg",
+		"route": "/",
+		"controls": [
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Търси автомобил…  Търси",
+				"width": 591
+			},
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Марка: Всички марки",
+				"width": 289.5
+			},
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Модел: Всички модели",
+				"width": 289.5
+			},
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Цена: Всички цени",
+				"width": 289.5
+			},
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Пробег: Без ограничение",
+				"width": 289.5
+			}
+		],
+		"overflow": false,
+		"width": 768
+	},
+	{
+		"locale": "bg",
+		"route": "/inventory",
+		"controls": [
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Търси в Day Night Auto   Търси",
+				"width": 591
+			},
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Марка",
+				"width": 141.75
+			},
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Модел",
+				"width": 141.75
+			},
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Цена",
+				"width": 141.75
+			},
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Пробег",
+				"width": 141.75
+			},
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Гориво",
+				"width": 141.75
+			},
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Купе",
+				"width": 141.75
+			}
+		],
+		"overflow": false,
+		"width": 768
+	},
+	{
+		"locale": "bg",
+		"route": "/services",
+		"controls": [
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Търси услуга   Търси",
+				"width": 591
+			}
+		],
+		"overflow": false,
+		"width": 768
+	},
+	{
+		"locale": "en",
+		"route": "/",
+		"controls": [
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Search cars…  Search",
+				"width": 591
+			},
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Make: All Brand",
+				"width": 289.5
+			},
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Model: All Model",
+				"width": 289.5
+			},
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Price: All Price",
+				"width": 289.5
+			},
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Mileage: Any mileage",
+				"width": 289.5
+			}
+		],
+		"overflow": false,
+		"width": 768
+	},
+	{
+		"locale": "en",
+		"route": "/inventory",
+		"controls": [
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Search Day Night Auto inventory   Search",
+				"width": 591
+			},
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Make",
+				"width": 141.75
+			},
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Model",
+				"width": 141.75
+			},
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Price",
+				"width": 141.75
+			},
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Mileage",
+				"width": 141.75
+			},
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Fuel",
+				"width": 141.75
+			},
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Body",
+				"width": 141.75
+			}
+		],
+		"overflow": false,
+		"width": 768
+	},
+	{
+		"locale": "en",
+		"route": "/services",
+		"controls": [
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Search services   Search",
+				"width": 591
+			}
+		],
+		"overflow": false,
+		"width": 768
+	},
+	{
+		"locale": "bg",
+		"route": "/",
+		"controls": [
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Търси автомобил…  Търси",
+				"width": 710
+			},
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Марка: Всички марки",
+				"width": 168.5
+			},
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Модел: Всички модели",
+				"width": 168.5
+			},
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Цена: Всички цени",
+				"width": 168.5
+			},
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Пробег: Без ограничение",
+				"width": 168.5
+			}
+		],
+		"overflow": false,
+		"width": 1024
+	},
+	{
+		"locale": "bg",
+		"route": "/inventory",
+		"controls": [
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Търси в Day Night Auto   Търси",
+				"width": 830
+			},
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Марка",
+				"width": 102.953125
+			},
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Модел",
+				"width": 102.96875
+			},
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Цена",
+				"width": 102.96875
+			},
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Пробег",
+				"width": 102.96875
+			},
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Гориво",
+				"width": 102.96875
+			},
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Купе",
+				"width": 102.96875
+			}
+		],
+		"overflow": false,
+		"width": 1024
+	},
+	{
+		"locale": "bg",
+		"route": "/services",
+		"controls": [
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Търси услуга   Търси",
+				"width": 710
+			}
+		],
+		"overflow": false,
+		"width": 1024
+	},
+	{
+		"locale": "en",
+		"route": "/",
+		"controls": [
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Search cars…  Search",
+				"width": 710
+			},
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Make: All Brand",
+				"width": 168.5
+			},
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Model: All Model",
+				"width": 168.5
+			},
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Price: All Price",
+				"width": 168.5
+			},
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Mileage: Any mileage",
+				"width": 168.5
+			}
+		],
+		"overflow": false,
+		"width": 1024
+	},
+	{
+		"locale": "en",
+		"route": "/inventory",
+		"controls": [
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Search Day Night Auto inventory   Search",
+				"width": 830
+			},
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Make",
+				"width": 111.65625
+			},
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Model",
+				"width": 111.671875
+			},
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Price",
+				"width": 111.65625
+			},
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Mileage",
+				"width": 111.65625
+			},
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Fuel",
+				"width": 111.65625
+			},
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Body",
+				"width": 111.65625
+			}
+		],
+		"overflow": false,
+		"width": 1024
+	},
+	{
+		"locale": "en",
+		"route": "/services",
+		"controls": [
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Search services   Search",
+				"width": 710
+			}
+		],
+		"overflow": false,
+		"width": 1024
+	},
+	{
+		"locale": "bg",
+		"route": "/",
+		"controls": [
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Търси автомобил…  Търси",
+				"width": 710
+			},
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Марка: Всички марки",
+				"width": 168.5
+			},
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Модел: Всички модели",
+				"width": 168.5
+			},
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Цена: Всички цени",
+				"width": 168.5
+			},
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Пробег: Без ограничение",
+				"width": 168.5
+			}
+		],
+		"overflow": false,
+		"width": 1440
+	},
+	{
+		"locale": "bg",
+		"route": "/inventory",
+		"controls": [
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Търси в Day Night Auto   Търси",
+				"width": 830
+			},
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Марка",
+				"width": 102.953125
+			},
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Модел",
+				"width": 102.96875
+			},
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Цена",
+				"width": 102.96875
+			},
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Пробег",
+				"width": 102.96875
+			},
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Гориво",
+				"width": 102.96875
+			},
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Купе",
+				"width": 102.96875
+			}
+		],
+		"overflow": false,
+		"width": 1440
+	},
+	{
+		"locale": "bg",
+		"route": "/services",
+		"controls": [
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Търси услуга   Търси",
+				"width": 710
+			}
+		],
+		"overflow": false,
+		"width": 1440
+	},
+	{
+		"locale": "en",
+		"route": "/",
+		"controls": [
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Search cars…  Search",
+				"width": 710
+			},
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Make: All Brand",
+				"width": 168.5
+			},
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Model: All Model",
+				"width": 168.5
+			},
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Price: All Price",
+				"width": 168.5
+			},
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Mileage: Any mileage",
+				"width": 168.5
+			}
+		],
+		"overflow": false,
+		"width": 1440
+	},
+	{
+		"locale": "en",
+		"route": "/inventory",
+		"controls": [
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Search Day Night Auto inventory   Search",
+				"width": 830
+			},
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Make",
+				"width": 111.65625
+			},
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Model",
+				"width": 111.671875
+			},
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Price",
+				"width": 111.65625
+			},
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Mileage",
+				"width": 111.65625
+			},
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Fuel",
+				"width": 111.65625
+			},
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Body",
+				"width": 111.65625
+			}
+		],
+		"overflow": false,
+		"width": 1440
+	},
+	{
+		"locale": "en",
+		"route": "/services",
+		"controls": [
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Search services   Search",
+				"width": 710
+			}
+		],
+		"overflow": false,
+		"width": 1440
+	},
+	{
+		"locale": "bg",
+		"route": "/",
+		"controls": [
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Търси автомобил…  Търси",
+				"width": 710
+			},
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Марка: Всички марки",
+				"width": 168.5
+			},
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Модел: Всички модели",
+				"width": 168.5
+			},
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Цена: Всички цени",
+				"width": 168.5
+			},
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Пробег: Без ограничение",
+				"width": 168.5
+			}
+		],
+		"overflow": false,
+		"width": 1920
+	},
+	{
+		"locale": "bg",
+		"route": "/inventory",
+		"controls": [
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Търси в Day Night Auto   Търси",
+				"width": 830
+			},
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Марка",
+				"width": 102.953125
+			},
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Модел",
+				"width": 102.96875
+			},
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Цена",
+				"width": 102.96875
+			},
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Пробег",
+				"width": 102.96875
+			},
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Гориво",
+				"width": 102.96875
+			},
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Купе",
+				"width": 102.96875
+			}
+		],
+		"overflow": false,
+		"width": 1920
+	},
+	{
+		"locale": "bg",
+		"route": "/services",
+		"controls": [
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Търси услуга   Търси",
+				"width": 710
+			}
+		],
+		"overflow": false,
+		"width": 1920
+	},
+	{
+		"locale": "en",
+		"route": "/",
+		"controls": [
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Search cars…  Search",
+				"width": 710
+			},
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Make: All Brand",
+				"width": 168.5
+			},
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Model: All Model",
+				"width": 168.5
+			},
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Price: All Price",
+				"width": 168.5
+			},
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Mileage: Any mileage",
+				"width": 168.5
+			}
+		],
+		"overflow": false,
+		"width": 1920
+	},
+	{
+		"locale": "en",
+		"route": "/inventory",
+		"controls": [
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Search Day Night Auto inventory   Search",
+				"width": 830
+			},
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Make",
+				"width": 111.65625
+			},
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Model",
+				"width": 111.671875
+			},
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Price",
+				"width": 111.65625
+			},
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Mileage",
+				"width": 111.65625
+			},
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Fuel",
+				"width": 111.65625
+			},
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Body",
+				"width": 111.65625
+			}
+		],
+		"overflow": false,
+		"width": 1920
+	},
+	{
+		"locale": "en",
+		"route": "/services",
+		"controls": [
+			{
+				"background": "rgb(255, 255, 255)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"height": 48,
+				"label": "Search services   Search",
+				"width": 710
+			}
+		],
+		"overflow": false,
+		"width": 1920
+	}
+]

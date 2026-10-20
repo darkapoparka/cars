@@ -9,7 +9,7 @@ import { planSixDesignSelection } from './lib/six-design-release.mjs';
 import { selectPinnedRevisions, updateManifestPins, planDealerUpgrade, materializeUpgradeCandidate } from './dealer-updates/three-way-upgrade.mjs';
 import { updateSelection, addLegacyDetailUpgrade } from './dealer-updates/update-dealer-template.mjs';
 import { LEGACY_DETAIL_FILE, legacyDetailArtifact } from './publishing/legacy-detail-routes.mjs';
-import { applyExtendedRefreshAdapter, extendedVariantSourceDigest, sealExtendedVariant, retainDealerVariantAssets } from './lib/client-refresh-six.mjs';
+import { applyExtendedRefreshAdapter, personalizeSignatureNativeCopy, extendedVariantSourceDigest, sealExtendedVariant, retainDealerVariantAssets } from './lib/client-refresh-six.mjs';
 import { signatureBusinessPreview, signaturePriceFacts, signatureMileageFacts } from './lib/client-refresh-signature.mjs';
 import { loadDealerProfile, refreshNormalizeInternals } from './lib/client-refresh-normalize.mjs';
 import { UK_MOBILE_PATHS } from './lib/client-refresh-uk-next.mjs';
@@ -571,9 +571,23 @@ test('Signature native mobile forwarding permits only the optional trailing shor
   }
 });
 
-test('Al Reef authoritative illustrative pack remains illustrative in the native English and Bulgarian preview',async()=>{
-  const client=path.resolve('clients/al-reef-used-cars'),stockPath=path.join(client,'stock.json'),before=fs.readFileSync(stockPath);
-  const stock=JSON.parse(before),profile=loadDealerProfile(client,'al-reef-used-cars');
+test('an explicit illustrative pack remains illustrative in the native English and Bulgarian preview',async t=>{
+  // Portable test data: these examples do not represent a dealer or available stock.
+  const client=fs.mkdtempSync(path.join(os.tmpdir(),'cars-illustrative-preview-')),stockPath=path.join(client,'stock.json');
+  t.after(()=>{const actual=fs.realpathSync(client),relative=path.relative(fs.realpathSync(os.tmpdir()),actual);assert(relative&&!relative.startsWith('..')&&!path.isAbsolute(relative));fs.rmSync(actual,{recursive:true,force:true});});
+  const factsPath=path.join(client,'business-facts.json'),facts={schemaVersion:1,slug:'illustrative-preview-fixture',name:'Illustrative preview fixture',countryCode:'GB',country:'United Kingdom',locale:'en-GB',currency:'GBP',distanceUnit:'mi',observedAt:'2026-10-01',inventoryNotice:'Illustrative examples only; no dealer availability is claimed.',unknownFact:null};
+  const illustrative={schemaVersion:1,dealer:'illustrative-preview-fixture',kind:'illustrative-not-dealer-stock',listings:[
+    {id:'example-known-gbp',title:'Illustrative petrol hatchback',make:'Example',model:'Hatchback',year:2020,priceAmount:12500,currency:'GBP',mileageValue:42000,mileageUnit:'mi',images:['/illustrative/example-1.webp','/illustrative/example-1-detail.webp'],sourceUrl:'',observedAt:'',availabilityConfirmed:false,unknownSourceField:{retained:true}},
+    {id:'example-known-eur',title:'Illustrative electric saloon',make:'Example',model:'Saloon',year:2022,priceAmount:18000,currency:'EUR',mileageValue:50000,mileageUnit:'km',images:['/illustrative/example-2.webp'],sourceUrl:'',observedAt:'',availabilityConfirmed:false},
+    {id:'example-unknown-price',title:'Illustrative unknown-price estate',make:'Example',model:'Estate',priceAmount:null,currency:'GBP',mileageValue:null,mileageUnit:'mi',images:['/illustrative/example-3.webp'],sourceUrl:'',observedAt:'',availabilityConfirmed:false}
+  ]};
+  fs.writeFileSync(factsPath,JSON.stringify(facts,null,2)+'\n');fs.writeFileSync(stockPath,JSON.stringify(illustrative,null,2)+'\n');
+  const before=fs.readFileSync(stockPath),factsBefore=fs.readFileSync(factsPath),stock=JSON.parse(before),profile=loadDealerProfile(client,'illustrative-preview-fixture');
+  assert.equal(profile.listings.length,3);assert.deepEqual(profile.listings.map(listing=>listing.id),stock.listings.map(listing=>listing.id));
+  assert.deepEqual(profile.listings.slice(0,2).map(({mileageValue,mileageUnit})=>({mileageValue,mileageUnit})),[{mileageValue:42000,mileageUnit:'mi'},{mileageValue:50000,mileageUnit:'km'}]);
+  assert.equal(profile.listings[2].priceAmount,null,'unknown example price must not become a fabricated amount');
+  assert.equal(profile.listings[2].mileageOnRequest,true,'unknown example mileage must stay on request');
+  assert.deepEqual(profile.listings[0].raw.unknownSourceField,{retained:true});
   assert.equal(stock.kind,'illustrative-not-dealer-stock');
   assert.equal(profile.stockKind,stock.kind);
   assert.ok(profile.business.observedAt,'a business observation date cannot verify illustrative stock');
@@ -602,15 +616,23 @@ test('Al Reef authoritative illustrative pack remains illustrative in the native
   const files=new Map([['karento-best/package.json',Buffer.from('{"name":"fixture"}')]]),manifest=manifestFor('modern',true);
   const receipt=sealExtendedVariant({files,key:'karento-best',manifest,profile,adaptation:{nativeFacts:true,logoPaths:['/dealer-brand/logo-on-light.webp'],mediaPaths:[],contentPaths:[]}});
   assert.equal(receipt.inventory.mode,'illustrative-not-dealer-stock','the install/publishing receipt cannot relabel sample inventory');
-  assert.deepEqual(fs.readFileSync(stockPath),before,'the independent dealer is never regenerated or edited');
+  assert.deepEqual(fs.readFileSync(stockPath),before,'the authoritative illustrative fixture is never regenerated or edited');
+  assert.deepEqual(fs.readFileSync(factsPath),factsBefore,'a dated business observation and unknown facts are retained unchanged');
 });
 
 test('six migration records exact preserved Carwow links and a Signature-only refresh preserves that artifact',t=>{
   const x=extendedFixture(t,'karento-best'),old=manifestFor('modern'),nextManifest=manifestFor('modern',true);
   fs.writeFileSync(path.join(x.client,'dealer.json'),JSON.stringify(old));
-  for(const relative of ['business-facts.json','stock.json','carwow/src/lib/data/daynight-current-inventory.ts','carwow/src/lib/data/daynight-vehicles.ts']){
+  const historical=JSON.parse(fs.readFileSync(new URL('./fixtures/legacy-detail-promosale.json',import.meta.url)));
+  const retainedInputs=new Map([
+    ['business-facts.json',JSON.stringify(historical.profile.rawFacts)],
+    ['stock.json',JSON.stringify(historical.profile.listings)],
+    ['carwow/src/lib/data/daynight-current-inventory.ts',historical.inventory],
+    ['carwow/src/lib/data/daynight-vehicles.ts',historical.vehicles]
+  ]);
+  for(const [relative,bytes] of retainedInputs){
     const destination=path.join(x.client,relative);fs.mkdirSync(path.dirname(destination),{recursive:true});
-    fs.copyFileSync(path.join('clients/promosale-varna',relative),destination);
+    fs.writeFileSync(destination,bytes);
   }
   const files=new Map([['dealer.json',Buffer.from(JSON.stringify(nextManifest))]]);
   const result=addLegacyDetailUpgrade({files,dealerRoot:x.client,manifest:nextManifest,pins:{import:{}}});
@@ -645,4 +667,50 @@ test('extended input digest is stable across Windows newlines, excludes build/in
   assert.equal(again.personalization.nativeDealerFacts,true,'selective resealing retains the native factual contract');
   x.profile.listings[0].priceAmount=1;
   assert.throws(()=>sealExtendedVariant({...x,key:'karento-best',manifest,adaptation:receipt.personalization}),/facts changed after personalization/);
+});
+
+const signatureNativeCopyPaths=['components/ServiceSpotCard.svelte','sections/HomeBrandLinks.svelte','i18n/catalogs/reference-home.ts'];
+function nativeCopyFixture(){return new Map(signatureNativeCopyPaths.map(name=>['karento-best/src/lib/'+name,fs.readFileSync(new URL('../templates/karento-best/src/lib/'+name,import.meta.url))]));}
+const nativeCopyCatalogs=files=>{const source=files.get('karento-best/src/lib/i18n/catalogs/reference-home.ts').toString();return new Function(stripTypeScriptTypes(source,{disableExperimentalWarning:true}).replaceAll('export const ','const ')+';return {en:referenceHomeEn,bg:referenceHomeBg};')();};
+async function nativeCopyValues(source,{locale,spot={},mode='dated-listing-snapshot',copy='Explore our dated vehicle examples.',preview=true,current=false}){
+  const {runInNewContext}=await import('node:vm');const script=source.match(/<script lang="ts">([\s\S]*?)<\/script>/)[1].replace(/^[\t ]*import[^;]+;[\t ]*(?:\r?\n|$)/gm,'');
+  const context={$props:()=>({spot}),$derived:value=>value,useLocale:()=>locale,dealer:{name:'Custom identity',copy:{'home.brandsIntro':copy},...(preview?{businessPreview:{mode}}:{})},MediaQuery:class{constructor(){this.current=current;}}};
+  return runInNewContext(stripTypeScriptTypes(script,{disableExperimentalWarning:true})+'\n({title:typeof title === "undefined"?undefined:title,description:typeof description === "undefined"?undefined:description,brandsIntro:typeof brandsIntro === "undefined"?undefined:brandsIntro});',context);
+}
+test('Signature native service category and example copy remain identical before and after viewport initialization',async()=>{
+ const files=nativeCopyFixture(),before=new Map(files),changed=personalizeSignatureNativeCopy(files),catalog=nativeCopyCatalogs(files);assert.deepEqual(changed,signatureNativeCopyPaths.map(p=>'karento-best/src/lib/'+p));
+ const source=files.get(changed[0]).toString(),keys=['import','sell','buy','lease'],expected={en:['Import','Sell','Buy','Lease'],bg:['Внос','Продажба','Покупка','Лизинг']};
+ for(const language of ['en','bg'])for(const current of [false,true])for(const [index,key]of keys.entries()){
+  const locale={t:k=>catalog[language][k]??k},spot={title:['Venice','New York','Amsterdam','Budapest'][index],desktopTitleKey:'referenceHome.services.'+key,description:'356 Properties',descriptionKey:'reference.dynamic.service-spots.venice.description'},actual=await nativeCopyValues(source,{locale,spot,current});
+  assert.equal(actual.title,expected[language][index]);assert.equal(actual.description,language==='bg'?'Примерна услуга':'Service example');assert.doesNotMatch(actual.title+' '+actual.description,/Venice|New York|Amsterdam|Budapest|356|Properties|обекта/);
+ }
+ for(const name of changed.slice(0,2)){const old=before.get(name).toString(),after=files.get(name).toString();assert.equal(after.match(/<style>[\s\S]*<\/style>/)[0],old.match(/<style>[\s\S]*<\/style>/)[0]);assert.deepEqual([...after.matchAll(/(?:class|src|href|alt|action|data-[\w-]+)="[^"]*"/g)].map(m=>m[0]),[...old.matchAll(/(?:class|src|href|alt|action|data-[\w-]+)="[^"]*"/g)].map(m=>m[0]));}
+ assert.deepEqual(personalizeSignatureNativeCopy(files),[],'Exact regenerated native copy is idempotent');
+});
+test('Signature native brands intro distinguishes dated and explicit demo modes in EN/BG and preserves custom identities',async()=>{
+ const files=nativeCopyFixture();personalizeSignatureNativeCopy(files);const catalog=nativeCopyCatalogs(files),source=files.get('karento-best/src/lib/sections/HomeBrandLinks.svelte').toString();
+ for(const language of ['en','bg'])for(const current of [false,true])for(const mode of ['dated-listing-snapshot','illustrative-not-dealer-stock']){const result=await nativeCopyValues(source,{locale:{t:k=>catalog[language][k]},mode,current});assert.equal(result.brandsIntro,catalog[language]['referenceHome.brands.'+(mode==='illustrative-not-dealer-stock'?'illustrativeIntro':'datedIntro')]);if(language==='bg')assert.doesNotMatch(result.brandsIntro,/Explore|dated|vehicles/);assert.doesNotMatch(result.brandsIntro,/available|in stock|налични/i);}
+ for(const copy of ['Custom dealership identity and copy','Персонален текст на автокъщата'])for(const current of [false,true])assert.equal((await nativeCopyValues(source,{locale:{t:()=>{throw Error('Custom copy must not be translated as a template key');}},copy,current})).brandsIntro,copy);
+ assert.equal((await nativeCopyValues(source,{locale:{t:()=>{throw Error('Unknown mode must retain its fallback');}},mode:'unknown'})).brandsIntro,'Explore our dated vehicle examples.');
+});
+test('Signature native preview copy preserves unknown service/custom fallback and non-preview behavior',async()=>{
+ const files=nativeCopyFixture();personalizeSignatureNativeCopy(files);const source=files.get('karento-best/src/lib/components/ServiceSpotCard.svelte').toString(),spot={title:'Custom service location',desktopTitleKey:'custom.service.title',description:'Custom original description',descriptionKey:'custom.service.description'},locale={t:key=>({'custom.service.title':'Персонална услуга','custom.service.description':'Персонално описание'})[key]??key};
+ for(const preview of [false,true])for(const current of [false,true]){const actual=await nativeCopyValues(source,{locale,spot,preview,current});assert.equal(actual.title,current?'Персонална услуга':'Custom service location');assert.equal(actual.description,'Персонално описание');}
+ const known={...spot,title:'Venice',desktopTitleKey:'referenceHome.services.import'};assert.equal((await nativeCopyValues(source,{locale,spot:known,preview:false,current:false})).title,'Venice','Non-preview behavior remains outside the dealer personalization seam');
+});
+test('Signature native preview copy rejects partial, changed or duplicate boundaries before any consumer mutation',()=>{
+ assert.deepEqual(personalizeSignatureNativeCopy(new Map()),[],'Older sparse fixtures without the native copy boundary remain compatible');
+ for(const mutate of [files=>files.delete('karento-best/src/lib/sections/HomeBrandLinks.svelte'),files=>{const p='karento-best/src/lib/components/ServiceSpotCard.svelte';files.set(p,Buffer.from(files.get(p).toString().replace('desktop.current && spot.desktopTitleKey','spot.desktopTitleKey')));},files=>{const p='karento-best/src/lib/i18n/catalogs/reference-home.ts';files.set(p,Buffer.from(files.get(p).toString()+'\n'+files.get(p).toString()));},files=>{const p='karento-best/src/lib/components/ServiceSpotCard.svelte';files.set(p,Buffer.from(files.get(p).toString().replace('  const desktop =','  const previewServiceSpot = $derived(false);\n  const desktop =')));},files=>{const p='karento-best/src/lib/sections/HomeBrandLinks.svelte';files.set(p,Buffer.from(files.get(p).toString().replace('  const mobile =','  const brandsIntro = $derived("Unreviewed custom derived text");\n  const mobile =')));}]){const files=nativeCopyFixture();mutate(files);const before=new Map([...files].map(([p,b])=>[p,Buffer.from(b)]));assert.throws(()=>personalizeSignatureNativeCopy(files),/reviewed|Reviewed|unique/);assert.deepEqual(files,before);}
+});
+test('Signature generated native service and brands consumers render truthful localized SSR text',async t=>{
+ const files=nativeCopyFixture();personalizeSignatureNativeCopy(files);const catalogs=nativeCopyCatalogs(files),require=createRequire(path.resolve('templates/karento-best/package.json')),{compile}=require('svelte/compiler'),{pathToFileURL}=await import('node:url'),{render}=await import(pathToFileURL(require.resolve('svelte/server')).href);
+ const root=fs.mkdtempSync(path.join(os.tmpdir(),'cars-signature-native-ssr-')),url=name=>pathToFileURL(path.join(root,name)).href,write=(name,s)=>fs.writeFileSync(path.join(root,name),s),fixture={dealer:{name:'Custom dealer identity',copy:{'home.brandsIntro':'Explore our dated vehicle examples.'},businessPreview:{mode:'dated-listing-snapshot'}},locale:null};globalThis.__carsSignatureNativeCopyFixture=fixture;
+ t.after(()=>{delete globalThis.__carsSignatureNativeCopyFixture;const canonicalRoot=fs.realpathSync(root),within=path.relative(fs.realpathSync(os.tmpdir()),canonicalRoot);assert(within&&!within.startsWith('..')&&!path.isAbsolute(within));fs.rmSync(canonicalRoot,{recursive:true,force:true});});
+ write('context.mjs','export const useLocale=()=>globalThis.__carsSignatureNativeCopyFixture.locale;');write('dealer.mjs','export const dealer=globalThis.__carsSignatureNativeCopyFixture.dealer;');write('scroll.mjs','export const focusableScroll=()=>{};');
+ const imports=code=>code.replace(/(from\s+|import\s+)(['"])(svelte(?:\/[^'"]+)?)(\2)/g,(_m,p,q,name)=>p+JSON.stringify(pathToFileURL(require.resolve(name)).href)).replace(/(['"])#lib\/i18n\/context\.svelte\.ts\1/g,JSON.stringify(url('context.mjs'))).replace(/(['"])#lib\/content\.ts\1/g,JSON.stringify(url('dealer.mjs'))).replace(/(['"])#lib\/horizontal-scroll\.ts\1/g,JSON.stringify(url('scroll.mjs'))).replace(/^import ["']#lib\/styles\/home-section-headings\.css["'];?\s*$/gm,'').replace(/(['"])(?:\.\/DemoActionLink\.svelte|#lib\/components\/mobile\/(?:MobilePill|MobileSectionHeading)\.svelte)\1/g,JSON.stringify(url('child.mjs')));
+ write('child.mjs',imports(compile('<script>let {children,...props}=$props();</script><a {...props}>{@render children?.()}</a>',{generate:'server'}).js.code));
+ const components=[];for(const [index,name]of signatureNativeCopyPaths.slice(0,2).entries()){const source=files.get('karento-best/src/lib/'+name).toString(),compiled=compile(source,{filename:name,generate:'server'});write('consumer-'+index+'.mjs',imports(compiled.js.code));components.push((await import(url('consumer-'+index+'.mjs'))).default);assert(!compiled.warnings.some(w=>w.code==='a11y_no_static_element_interactions'));}
+ for(const language of ['en','bg']){fixture.locale={t:key=>catalogs[language][key]??key,href:route=>'/'+language+route};for(const key of ['import','sell','buy','lease']){const result=render(components[0],{props:{spot:{title:'Venice',desktopTitleKey:'referenceHome.services.'+key,description:'356 Properties',descriptionKey:'donor.description',href:'/services',image:'/original-artwork.png'}}});assert(result.body.includes(catalogs[language]['referenceHome.services.'+key]));assert(result.body.includes(catalogs[language]['referenceHome.services.exampleDescription']));assert.doesNotMatch(result.body,/Venice|356 Properties|donor\.description/);assert(result.body.includes('/original-artwork.png'));}
+  for(const mode of ['dated-listing-snapshot','illustrative-not-dealer-stock']){fixture.dealer.businessPreview.mode=mode;const result=render(components[1]);assert(result.body.includes(catalogs[language]['referenceHome.brands.'+(mode==='illustrative-not-dealer-stock'?'illustrativeIntro':'datedIntro')]));if(language==='bg')assert.doesNotMatch(result.body,/Explore our dated vehicle examples/);}
+ }
 });

@@ -1,0 +1,88 @@
+{
+  "baseline": "1ed056de3f593343214f68e43873b9dc09901d76",
+  "files": [
+    {
+      "path": "templates/mobile/src/components/NativeInboxes.tsx",
+      "beforeBlob": "c99f56f8738295b33540372f00ed5d50dd4807a0",
+      "beforeSha256": "be86162468c014d719fcdcfe313abcf34ef5bdf5f8662785afdf2cb0f2c9eba4",
+      "afterBlob": "1260964b31f58881cc836b46e778157a592075ae",
+      "afterSha256": "28cede526b69c3cdca62d96101357b7f5fdc26db3ddfe59618c72d036226e99e",
+      "bytes": 3914
+    },
+    {
+      "path": "templates/mobile/src/components/SellScreen.tsx",
+      "beforeBlob": "8db77904532aa150ee6a1c61559abec04062f24f",
+      "beforeSha256": "c642b4390e9aeb96b10a232184eea837da82323ec8464fc33481685d026bb3d3",
+      "afterBlob": "2f39df5c9461c2ee05d72af3766db34222ca88e9",
+      "afterSha256": "6a333e77da164b5287e122dceb3be3ec3c433dbf38c1511ee240af0bf259d472",
+      "bytes": 3199
+    },
+    {
+      "path": "templates/mobile/src/components/AssistantScreen.tsx",
+      "beforeBlob": "db663907304731c43d34fcb2f584f9036b373aee",
+      "beforeSha256": "6b256a8d56b1374ebeab4f736f7b895373b28e4663d634c67a6536b279772a48",
+      "afterBlob": "90e90335f4c2e4fa79145227b8ef0bea658c237a",
+      "afterSha256": "881019d841cfd2080dc60ea3b0d55757d297ba44a2315818443f832601dd523c",
+      "bytes": 6121
+    },
+    {
+      "path": "templates/mobile/src/components/SellFlow.tsx",
+      "beforeBlob": "da890455837ec0273b27e1e63c528302df853d86",
+      "beforeSha256": "d1ee13d4001d22c0c23b6681930f20fdda3761cad4204c910b996b0d21898767",
+      "afterBlob": "627bdd1b6f5ab94a8e67623f2c58db0fbdd68988",
+      "afterSha256": "41ff3318b3265ede8a59819357d344da23aca086a6b207fe274ff521a21d9e6b",
+      "bytes": 10147
+    },
+    {
+      "path": "templates/mobile/tests/native-demo-claims.test.mjs",
+      "beforeBlob": null,
+      "beforeSha256": null,
+      "afterBlob": "6ad37e98efdefc10e7a1a29a297be0105d2f2647",
+      "afterSha256": "e721087a47a2b7cfccfade12273487d4b527633bebd303835242034ca1e48a8f",
+      "bytes": 8354
+    }
+  ],
+  "patch": {
+    "path": "claims-only.patch",
+    "bytes": 14433,
+    "sha256": "51818f9fa0e182c0446c0b2346760b64310709f83e1fb1a21a33c764fedb11ff"
+  },
+  "preservation": {
+    "method": "TypeScript AST range mask removes only JSX copy/alt/label strings and normalizes the exact scoped Prettier wrap of the published notify call; remaining code/markup bytes, StyleX initializers and all src expressions match published before exactly.",
+    "passed": true
+  },
+  "auditCompatibility": {
+    "patchSha256": "49b69826b2faaa5f0a6949b2cb0a6cf6260f4486ca59b62a73044d422ad2510b",
+    "overlap": [
+      "templates/mobile/src/components/SellFlow.tsx"
+    ],
+    "check": "Published audit SellFlow persisted completion logic and message arguments are unchanged; one existing notify call receives a formatting-only wrap.",
+    "publishedSellFlowSha256": "d1ee13d4001d22c0c23b6681930f20fdda3761cad4204c910b996b0d21898767"
+  },
+  "checks": {
+    "runtime": "22.20.0",
+    "baselineComponentProbes": {
+      "passed": 0,
+      "failed": 5
+    },
+    "candidateComponentProbes": {
+      "passed": 5,
+      "failed": 0
+    },
+    "scopedEslint": {
+      "exitCode": 0
+    },
+    "typecheck": {
+      "exitCode": 0
+    },
+    "patchApplyCheck": {
+      "exitCode": 0
+    }
+  },
+  "limits": {
+    "productionBuild": false,
+    "browser": false,
+    "hosted": false,
+    "publication": false
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "fetchedAt": "2026-10-11",
+  "sources": {
+    "dealerInventory": "https://autostar21.mobile.bg/",
+    "dealerContact": "https://autostar21.mobile.bg/contacts"
+  },
+  "count": 1,
+  "listings": [
+    {
+      "badge": "ОБЯВА",
+      "category": "Ван",
+      "color": "",
+      "displacement": "",
+      "euroStandard": "",
+      "features": [],
+      "fuel": "Дизелов",
+      "gearbox": "Автоматична",
+      "href": "https://autostar21.mobile.bg/obiava-11778841437368042-vw-touran-2-0tdi-dsg-6-1",
+      "id": "11778841437368042",
+      "image": "/dealer-stock/11778841437368042-1.webp",
+      "location": "Варна",
+      "mileage": "261 000 км",
+      "mileageKnown": true,
+      "mileageValue": 261000,
+      "mileageUnit": "km",
+      "photoCount": "2",
+      "power": "140 к.с.",
+      "price": "4 700 €",
+      "priceBgn": "",
+      "production": "2007 г.",
+      "rawPriceText": "4 700 €",
+      "shortDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "title": "VW Touran",
+      "vat": ""
+    }
+  ]
+}

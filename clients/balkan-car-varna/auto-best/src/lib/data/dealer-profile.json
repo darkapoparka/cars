@@ -1,0 +1,400 @@
+{
+  "schemaVersion": 1,
+  "slug": "balkan-car-varna",
+  "business": {
+    "slug": "balkan-car-varna",
+    "name": "BalkanCarVarna",
+    "shortName": "BalkanCarVarna",
+    "latinName": "BalkanCarVarna",
+    "tagline": "BalkanCarVarna · Варна",
+    "city": "Варна",
+    "region": "",
+    "country": "BG",
+    "countryCode": "BG",
+    "locale": "bg-BG",
+    "currency": "EUR",
+    "distanceUnit": "km",
+    "address": "бул. Цар Освободител 548 (на светофара под Джъмбо), Варна, България",
+    "addressLine": "бул. Цар Освободител 548 (на светофара под Джъмбо)",
+    "phoneDisplay": "0888513460, 0888706421",
+    "phoneHref": "tel:+359888513460",
+    "phoneE164": "+359888513460",
+    "email": "",
+    "hours": "Потвърдете работното време директно с автокъщата.",
+    "website": "https://balkancarvarna.mobile.bg/",
+    "inventoryUrl": "https://balkancarvarna.mobile.bg/",
+    "contactUrl": "https://balkancarvarna.mobile.bg/contacts",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=BalkanCarVarna%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20548%20(%D0%BD%D0%B0%20%D1%81%D0%B2%D0%B5%D1%82%D0%BE%D1%84%D0%B0%D1%80%D0%B0%20%D0%BF%D0%BE%D0%B4%20%D0%94%D0%B6%D1%8A%D0%BC%D0%B1%D0%BE)%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F",
+    "mapsEmbedUrl": "https://maps.google.com/maps?q=BalkanCarVarna%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20548%20(%D0%BD%D0%B0%20%D1%81%D0%B2%D0%B5%D1%82%D0%BE%D1%84%D0%B0%D1%80%D0%B0%20%D0%BF%D0%BE%D0%B4%20%D0%94%D0%B6%D1%8A%D0%BC%D0%B1%D0%BE)%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F&z=16&output=embed",
+    "accent": "#c40101",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png",
+    "socialLinks": {
+      "facebook": "",
+      "instagram": "",
+      "youtube": "",
+      "tiktok": ""
+    },
+    "services": [],
+    "inventoryNotice": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "previewNotice": "Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация.",
+    "observedAt": "2026-10-12T10:44:18.920Z",
+    "coordinates": null,
+    "raw": {
+      "schemaVersion": 1,
+      "slug": "balkan-car-varna",
+      "name": "BalkanCarVarna",
+      "shortName": "BalkanCarVarna",
+      "city": "Варна",
+      "country": "BG",
+      "countryCode": "BG",
+      "locale": "bg-BG",
+      "currency": "EUR",
+      "distanceUnit": "km",
+      "phone": "0888513460",
+      "phoneDisplay": "0888513460, 0888706421",
+      "phoneE164": "+359888513460",
+      "phones": [
+        "+359888513460",
+        "+359888706421"
+      ],
+      "addressLine": "бул. Цар Освободител 548 (на светофара под Джъмбо)",
+      "address": "бул. Цар Освободител 548 (на светофара под Джъмбо), Варна, България",
+      "hours": "Потвърдете работното време директно с автокъщата.",
+      "email": "",
+      "sourceUrl": "https://balkancarvarna.mobile.bg/",
+      "stockUrl": "https://balkancarvarna.mobile.bg/",
+      "contactSourceUrl": "https://balkancarvarna.mobile.bg/contacts",
+      "observedAt": "2026-10-12T10:44:18.920Z",
+      "inventoryNotice": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+      "previewNotice": "Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация.",
+      "services": [],
+      "socialLinks": {},
+      "logo": "/dealer-brand/logo-on-light.png",
+      "logoLight": "/dealer-brand/logo-on-light.png",
+      "logoDark": "/dealer-brand/logo-on-dark.png",
+      "modernInventoryCopy": {
+        "balkan-car-varna-11775920728897115": {
+          "sourceDescription": "MINI Cooper S F55 от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+          "en": {
+            "description": "MINI Cooper S F55 from a dated public advert. Confirm condition, price and availability directly with the dealership.",
+            "imageAlts": [
+              "MINI Cooper S F55 — dated public advert photo 1",
+              "MINI Cooper S F55 — dated public advert photo 2"
+            ]
+          },
+          "bg": {
+            "description": "MINI Cooper S F55 от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+            "imageAlts": [
+              "MINI Cooper S F55 — снимка от датирана публична обява 1",
+              "MINI Cooper S F55 — снимка от датирана публична обява 2"
+            ]
+          }
+        },
+        "balkan-car-varna-21790309618806312": {
+          "sourceDescription": "Jeep Renegade 4xe Trailhawk от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+          "en": {
+            "description": "Jeep Renegade 4xe Trailhawk from a dated public advert. Confirm condition, price and availability directly with the dealership.",
+            "imageAlts": [
+              "Jeep Renegade 4xe Trailhawk — dated public advert photo 1",
+              "Jeep Renegade 4xe Trailhawk — dated public advert photo 2"
+            ]
+          },
+          "bg": {
+            "description": "Jeep Renegade 4xe Trailhawk от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+            "imageAlts": [
+              "Jeep Renegade 4xe Trailhawk — снимка от датирана публична обява 1",
+              "Jeep Renegade 4xe Trailhawk — снимка от датирана публична обява 2"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "listings": [
+    {
+      "id": "11775920728897115",
+      "sourceId": "11775920728897115",
+      "slug": "balkan-car-varna-11775920728897115",
+      "title": "MINI Cooper S F55",
+      "make": "MINI",
+      "model": "Cooper S",
+      "trim": "",
+      "year": 2016,
+      "priceAmount": 11500,
+      "currency": "EUR",
+      "mileageValue": 178000,
+      "mileageUnit": "km",
+      "mileageOnRequest": false,
+      "body": "Hatchback",
+      "bodyType": "hatchback",
+      "fuel": "Petrol",
+      "fuelType": "gasoline",
+      "transmission": "Automatic",
+      "transmissionType": "automatic",
+      "color": "",
+      "powerHp": null,
+      "engine": "",
+      "drivetrain": "",
+      "features": [],
+      "images": [
+        "/dealer-stock/11775920728897115-1.webp",
+        "/dealer-stock/11775920728897115-2.webp"
+      ],
+      "image": "/dealer-stock/11775920728897115-1.webp",
+      "sourceUrl": "https://balkancarvarna.mobile.bg/obiava-11775920728897115-mini-cooper-s-f55-5-vrati-avtomatik-euro6b",
+      "observedAt": "2026-10-12T12:12:21.628Z",
+      "availability": "Датирана обява; потвърдете цената и наличността директно с автокъщата.",
+      "description": "MINI Cooper S F55 от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+      "condition": "used",
+      "location": "Варна",
+      "raw": {
+        "title": "MINI Cooper S F55",
+        "make": "MINI",
+        "model": "Cooper S",
+        "year": 2016,
+        "priceAmount": 11500,
+        "mileageValue": 178000,
+        "fuel": "Petrol",
+        "transmission": "Automatic",
+        "body": "Hatchback",
+        "description": "MINI Cooper S F55 от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+        "sourceFieldProof": {
+          "source": "https://balkancarvarna.mobile.bg/obiava-11775920728897115-mini-cooper-s-f55-5-vrati-avtomatik-euro6b",
+          "year": "Дата на производство март 2016",
+          "price": "11 500 €,",
+          "mileage": "Пробег [км] 178000 км",
+          "fuel": "Двигател Бензинов",
+          "transmission": "Скоростна кутия Автоматична",
+          "body": "Категория Хечбек"
+        },
+        "sourceCaveats": [
+          "проверка, като състоянието му отговаря напълно на пробега и произхода, без необходимост от належащи ремонти"
+        ],
+        "id": "11775920728897115",
+        "slug": "balkan-car-varna-11775920728897115",
+        "currency": "EUR",
+        "priceOnRequest": false,
+        "mileageOnRequest": false,
+        "mileageUnit": "km",
+        "condition": "used",
+        "images": [
+          "/dealer-stock/11775920728897115-1.webp",
+          "/dealer-stock/11775920728897115-2.webp"
+        ],
+        "sourceUrl": "https://balkancarvarna.mobile.bg/obiava-11775920728897115-mini-cooper-s-f55-5-vrati-avtomatik-euro6b",
+        "observedAt": "2026-10-12T12:12:21.628Z",
+        "availability": "Датирана обява; потвърдете цената и наличността директно с автокъщата.",
+        "sourceProof": {
+          "sha256": "23bc0c98620c05c3fb73528b5b03ed5b34b6ce308c123ffc6a8099875c4d0a6f",
+          "originalPhotoBytesUnchanged": true,
+          "watermarksPreserved": true
+        }
+      }
+    },
+    {
+      "id": "21790309618806312",
+      "sourceId": "21790309618806312",
+      "slug": "balkan-car-varna-21790309618806312",
+      "title": "Jeep Renegade 4xe Trailhawk",
+      "make": "Jeep",
+      "model": "Renegade",
+      "trim": "",
+      "year": 2021,
+      "priceAmount": 16500,
+      "currency": "EUR",
+      "mileageValue": 129680,
+      "mileageUnit": "km",
+      "mileageOnRequest": false,
+      "body": "SUV",
+      "bodyType": "suv",
+      "fuel": "Plug-in Hybrid",
+      "fuelType": "hybrid",
+      "transmission": "Automatic",
+      "transmissionType": "automatic",
+      "color": "",
+      "powerHp": null,
+      "engine": "",
+      "drivetrain": "",
+      "features": [],
+      "images": [
+        "/dealer-stock/21790309618806312-1.webp",
+        "/dealer-stock/21790309618806312-2.webp"
+      ],
+      "image": "/dealer-stock/21790309618806312-1.webp",
+      "sourceUrl": "https://balkancarvarna.mobile.bg/obiava-21790309618806312-jeep-renegade-4xe-trailhawk-plug-in-hybrid-4x4",
+      "observedAt": "2026-10-12T12:12:21.629Z",
+      "availability": "Датирана обява; потвърдете цената и наличността директно с автокъщата.",
+      "description": "Jeep Renegade 4xe Trailhawk от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+      "condition": "used",
+      "location": "Варна",
+      "raw": {
+        "title": "Jeep Renegade 4xe Trailhawk",
+        "make": "Jeep",
+        "model": "Renegade",
+        "year": 2021,
+        "priceAmount": 16500,
+        "mileageValue": 129680,
+        "fuel": "Plug-in Hybrid",
+        "transmission": "Automatic",
+        "body": "SUV",
+        "description": "Jeep Renegade 4xe Trailhawk от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+        "sourceFieldProof": {
+          "source": "https://balkancarvarna.mobile.bg/obiava-21790309618806312-jeep-renegade-4xe-trailhawk-plug-in-hybrid-4x4",
+          "year": "Дата на производство юли 2021",
+          "price": "16 500 €,",
+          "mileage": "Пробег [км] 129680 км",
+          "fuel": "Двигател Plug-in хибрид",
+          "transmission": "Скоростна кутия Автоматична",
+          "body": "Категория Джип"
+        },
+        "sourceCaveats": [
+          "ието му отговаря напълно на пробега както визуално, така и технически, без необходимост от належащи ремонти"
+        ],
+        "id": "21790309618806312",
+        "slug": "balkan-car-varna-21790309618806312",
+        "currency": "EUR",
+        "priceOnRequest": false,
+        "mileageOnRequest": false,
+        "mileageUnit": "km",
+        "condition": "used",
+        "images": [
+          "/dealer-stock/21790309618806312-1.webp",
+          "/dealer-stock/21790309618806312-2.webp"
+        ],
+        "sourceUrl": "https://balkancarvarna.mobile.bg/obiava-21790309618806312-jeep-renegade-4xe-trailhawk-plug-in-hybrid-4x4",
+        "observedAt": "2026-10-12T12:12:21.629Z",
+        "availability": "Датирана обява; потвърдете цената и наличността директно с автокъщата.",
+        "sourceProof": {
+          "sha256": "21ce0c4884b9c1c9541a614c637c538f0984cbf1730ff0a991474f7740df3b28",
+          "originalPhotoBytesUnchanged": true,
+          "watermarksPreserved": true
+        }
+      }
+    }
+  ],
+  "rawFacts": {
+    "schemaVersion": 1,
+    "slug": "balkan-car-varna",
+    "dealerId": "balkan-car-varna",
+    "business": {
+      "schemaVersion": 1,
+      "slug": "balkan-car-varna",
+      "name": "BalkanCarVarna",
+      "shortName": "BalkanCarVarna",
+      "city": "Варна",
+      "country": "BG",
+      "countryCode": "BG",
+      "locale": "bg-BG",
+      "currency": "EUR",
+      "distanceUnit": "km",
+      "phone": "0888513460",
+      "phoneDisplay": "0888513460, 0888706421",
+      "phoneE164": "+359888513460",
+      "phones": [
+        "+359888513460",
+        "+359888706421"
+      ],
+      "addressLine": "бул. Цар Освободител 548 (на светофара под Джъмбо)",
+      "address": "бул. Цар Освободител 548 (на светофара под Джъмбо), Варна, България",
+      "hours": "Потвърдете работното време директно с автокъщата.",
+      "email": "",
+      "sourceUrl": "https://balkancarvarna.mobile.bg/",
+      "stockUrl": "https://balkancarvarna.mobile.bg/",
+      "contactSourceUrl": "https://balkancarvarna.mobile.bg/contacts",
+      "observedAt": "2026-10-12T10:44:18.920Z",
+      "inventoryNotice": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+      "previewNotice": "Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация.",
+      "services": [],
+      "socialLinks": {},
+      "logo": "/dealer-brand/logo-on-light.png",
+      "logoLight": "/dealer-brand/logo-on-light.png",
+      "logoDark": "/dealer-brand/logo-on-dark.png",
+      "modernInventoryCopy": {
+        "balkan-car-varna-11775920728897115": {
+          "sourceDescription": "MINI Cooper S F55 от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+          "en": {
+            "description": "MINI Cooper S F55 from a dated public advert. Confirm condition, price and availability directly with the dealership.",
+            "imageAlts": [
+              "MINI Cooper S F55 — dated public advert photo 1",
+              "MINI Cooper S F55 — dated public advert photo 2"
+            ]
+          },
+          "bg": {
+            "description": "MINI Cooper S F55 от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+            "imageAlts": [
+              "MINI Cooper S F55 — снимка от датирана публична обява 1",
+              "MINI Cooper S F55 — снимка от датирана публична обява 2"
+            ]
+          }
+        },
+        "balkan-car-varna-21790309618806312": {
+          "sourceDescription": "Jeep Renegade 4xe Trailhawk от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+          "en": {
+            "description": "Jeep Renegade 4xe Trailhawk from a dated public advert. Confirm condition, price and availability directly with the dealership.",
+            "imageAlts": [
+              "Jeep Renegade 4xe Trailhawk — dated public advert photo 1",
+              "Jeep Renegade 4xe Trailhawk — dated public advert photo 2"
+            ]
+          },
+          "bg": {
+            "description": "Jeep Renegade 4xe Trailhawk от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+            "imageAlts": [
+              "Jeep Renegade 4xe Trailhawk — снимка от датирана публична обява 1",
+              "Jeep Renegade 4xe Trailhawk — снимка от датирана публична обява 2"
+            ]
+          }
+        }
+      }
+    },
+    "research": {
+      "website": {
+        "status": "confirmed-primary-own-site",
+        "url": "https://balkancarvarna.com/",
+        "phone": "+359888706421"
+      },
+      "publicIdentityKey": "mobile-profile:balkancarvarna.mobile.bg",
+      "profileAdvertCount": 18,
+      "availabilityConfirmed": false,
+      "legalEntityOwnershipVerified": false,
+      "addressExactness": "public-contact-as-published",
+      "caveats": [],
+      "sourceProof": [
+        {
+          "url": "https://balkancarvarna.mobile.bg/",
+          "finalUrl": "https://balkancarvarna.mobile.bg/",
+          "observedAt": "2026-10-12T10:44:18.995Z",
+          "status": 200,
+          "bytes": 140535,
+          "sha256": "bf25a2eb6009123f3d3538decf6ad26ce01151acec053cacb4960df7366cd3f8"
+        },
+        {
+          "url": "https://balkancarvarna.mobile.bg/contacts",
+          "finalUrl": "https://balkancarvarna.mobile.bg/contacts",
+          "observedAt": "2026-10-12T10:44:18.920Z",
+          "status": 200,
+          "bytes": 45337,
+          "sha256": "9751c515f232226fdfbaf7d9050850403147d16ab26f8b523a31866d3cc3db3e"
+        },
+        {
+          "url": "https://balkancarvarna.mobile.bg/about",
+          "finalUrl": "https://balkancarvarna.mobile.bg/about",
+          "observedAt": "2026-10-12T10:44:18.910Z",
+          "status": 200,
+          "bytes": 21008,
+          "sha256": "d9b57ef406aad956dce7da511afdffdf8f6944614ea857285c92e7d777cdb987"
+        }
+      ],
+      "sourceAction": "new-absent-cars-source-after-wrapper-identity-recheck",
+      "existingSourceTree": null,
+      "inventoryModeSelection": "dated-listing-snapshot",
+      "productionAssetInputsComplete": true,
+      "stockSnapshotScope": "Two retained public adverts, not a complete/live inventory",
+      "stockMediaAuthority": "Owner-authorized public dated demo scope; original source bytes and watermarks retained"
+    }
+  },
+  "sourceCount": 2,
+  "stockKind": "dated-listing-snapshot",
+  "logoContract": null
+}

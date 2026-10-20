@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-source-publication",
+  "reviewed": true,
+  "reviewedAt": "2026-10-13T14:42:48.703Z",
+  "dealer": "monarh-varna",
+  "dealerId": "monarh-varna",
+  "repository": "darkapoparka/cars-monarh-varna",
+  "sourceOwnership": "cars-canonical",
+  "request": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/batch-4-qualified23-request.json",
+    "sha256": "dcdd093f40a04d9187d5ddaa8cbdbb0006b0fed9ff01722a2d9179278d548f29"
+  },
+  "proposal": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/monarh-varna/source-proposal.json",
+    "sha256": "669cadcdaab999d77714f3edf4d21c581e4a995e5986900187b73563b118e702"
+  },
+  "preparation": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/monarh-varna/source-preparation.json",
+    "sha256": "125f4c1f3f26709c069752d2936099a338454822076249a18b3f29eb485fd326"
+  },
+  "inputMapping": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/monarh-varna/input-mapping.json",
+    "sha256": "a002927ada9a5511643b089e2755cb77ebe9cf794d7bfeca7fc945fa366d798e"
+  },
+  "sourcePublication": {
+    "repository": "darkapoparka/cars",
+    "commit": "328c0102d7ed151781c4358033eae12102697bd4",
+    "sourceTree": "28fe6c115e31a8d12ddeaf71dbc22458dc3192ff",
+    "ref": "refs/heads/main",
+    "publishedAt": "2026-10-13T14:41:00.838Z",
+    "evidence": "https://github.com/darkapoparka/cars/commit/328c0102d7ed151781c4358033eae12102697bd4"
+  }
+}

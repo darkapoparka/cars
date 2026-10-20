@@ -1,6 +1,14 @@
 import type { Locale } from '$lib/locale/core';
 /** Dealer-owned listing descriptions and specification labels. Source facts are not mutated. */
 export const inventoryCopy = {
+	bmw740RearWheelSteering: {
+		bg: 'BMW 740 Завиващ заден мост',
+		en: 'BMW 740 Rear-wheel steering'
+	},
+	rearWheelSteering: {
+		bg: 'Завиващ заден мост',
+		en: 'Rear-wheel steering'
+	},
 	term0: {
 		bg: '4(5) Врати',
 		en: '4(5) doors'
@@ -477,8 +485,108 @@ export const inventoryCopy = {
 		bg: 'Автомобилът е с пълна сервизна история в Порше. Може да се провери във всяко представителство на марката. Sport Chrono пакет. Абсолютно автентичен вид както е излезнал от завода. Регистриран с каско, гражданска, данък, винетка. Без бартер. Само сериозни обаждания.',
 		en: 'Full Porsche service history. Can be checked at any dealership for the brand. Sport Chrono package. Entirely original factory appearance. Registered, with comprehensive insurance, third-party liability insurance, tax and vignette. No trade-ins. Serious inquiries only.'
 	}
+,
+	"dealerStock_75aac75e44741b73584b0b6fdf77210e297ea1076ef3bfd79c565354f9cd234c": {
+		"bg": "VW Golf 1.4 БЕНЗИН, 2007 г., 235 193 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци.",
+		"en": "VW Golf 1.4 PETROL, 2007, 235 193 km. Selected listing dated 7 September 2026. Confirm availability, equipment and terms with the Priselci dealership."
+	},
+	"dealerStock_c78cd581da3aa4de35d6919238c4713939f3b2cac47dd3159756d967f6fd7011": {
+		"bg": "Климатик",
+		"en": "Air conditioning"
+	},
+	"dealerStock_e8b8a518e15b0fc1c361f1691b4a21d156427eaa36fce311b8a0a970af578dba": {
+		"bg": "Лизинг",
+		"en": "Leasing"
+	},
+	"dealerStock_4807faef19a35446d6a4ebab85c6608e927c3e9b63dfa5113d0b8a6dcf23e695": {
+		"bg": "Графит",
+		"en": "Graphite"
+	},
+	"dealerStock_28f71058091c475083771b02c36bd17f9368373cf1dce8e706d3256e78e3d368": {
+		"bg": "VW Passat 1.4 БЕНЗИН, 2010 г., 179 848 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци.",
+		"en": "VW Passat 1.4 PETROL, 2010, 179 848 km. Selected listing dated 7 September 2026. Confirm availability, equipment and terms with the Priselci dealership."
+	},
+	"dealerStock_c0f23a235062724ee1d3015772ad6bdad3671729bbf8efb7e0c033e550121a50": {
+		"bg": "VW Passat 2.0TDI COMMONRAIL, 2008 г., 210 534 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци.",
+		"en": "VW Passat 2.0TDI COMMONRAIL, 2008, 210 534 km. Selected listing dated 7 September 2026. Confirm availability, equipment and terms with the Priselci dealership."
+	},
+	"dealerStock_f07a621bd67cc87174296e2fd687fb46f78d88b72cc37f04fa0f9ebec50cec36": {
+		"bg": "Seat Ibiza 1.2 БЕНЗИН, 2010 г., 175 532 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци.",
+		"en": "Seat Ibiza 1.2 PETROL, 2010, 175 532 km. Selected listing dated 7 September 2026. Confirm availability, equipment and terms with the Priselci dealership."
+	},
+	"dealerStock_76aa94f3ea91306de62c7d2be85ef783e37a482e7ab478fe8c096cd45398fd6b": {
+		"bg": "Renault Koleos 2.0 ДИЗЕЛ 4Х4, 2010 г., 181 246 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци.",
+		"en": "Renault Koleos 2.0 DIESEL 4X4, 2010, 181 246 km. Selected listing dated 7 September 2026. Confirm availability, equipment and terms with the Priselci dealership."
+	},
+	"dealerStock_a93722ac1c95b4b4094a519a84a2e1728e501f073dfd4e01bd6455201d2b3e3b": {
+		"bg": "Peugeot 307 CC КАБРИО, 2006 г., 205 664 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци.",
+		"en": "Peugeot 307 CC CONVERTIBLE, 2006, 205 664 km. Selected listing dated 7 September 2026. Confirm availability, equipment and terms with the Priselci dealership."
+	},
+	"dealerStock_f652ff43f35637380102c51dfc2ffc27cd87fa592ae3c89401d7fa54809a11de": {
+		"bg": "Ford Mondeo 2.0 DIZEL, 2009 г., 235 788 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци.",
+		"en": "Ford Mondeo 2.0 DIZEL, 2009, 235 788 km. Selected listing dated 7 September 2026. Confirm availability, equipment and terms with the Priselci dealership."
+	},
+	"dealerStock_0184fe75300fc233b182c53220cc314715a7247d92f167e8a0a6335f4391b6cb": {
+		"bg": "Аудио / видео",
+		"en": "Audio / video"
+	},
+	"dealerStock_f258769daf4cedc0e0f4ac711c2fe5090299dd941db55faefab350b88ca23ab1": {
+		"bg": "IN / AUX изводи",
+		"en": "IN / AUX inputs"
+	},
+	"dealerStock_6902ccf063b8ae1e654b8e7fcdf65de868c983239c35e8ecebcf5104aeaeccbc": {
+		"bg": "Хладилна жабка",
+		"en": "Cooled glove box"
+	},
+	"dealerStock_20f765ddd00cda7dc2ba5ec39467459bbabf8a8a63213ff4d7dcc9d818208421": {
+		"bg": "Peugeot 5008 2.0HDI 150К.С, 2011 г., 210 452 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци.",
+		"en": "Peugeot 5008 2.0HDI 150hp, 2011, 210 452 km. Selected listing dated 7 September 2026. Confirm availability, equipment and terms with the Priselci dealership."
+	},
+	"dealerStock_a361d0a678da8d08851a6de6afed2cc99e145a910b1d5408495969c8b433ca16": {
+		"bg": "Bluetooth / handsfree система",
+		"en": "Bluetooth / hands-free system"
+	},
+	"dealerStock_b4763ac4064dbbebede4907b86deebbcaa8a493505ff8c211d327c9e07205bf0": {
+		"bg": "Mercedes-Benz C 200 2.2 CDI, 2004 г., 218 432 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци.",
+		"en": "Mercedes-Benz C 200 2.2 CDI, 2004, 218 432 km. Selected listing dated 7 September 2026. Confirm availability, equipment and terms with the Priselci dealership."
+	},
+	"dealerStock_9975e5c013fc5aefb1886a409db049e8ff95d4403d5164be43e32479aa39c7a3": {
+		"bg": "Citroen C3 Picasso 1.6HDI 90К.С, 2010 г., 185 783 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци.",
+		"en": "Citroen C3 Picasso 1.6HDI 90hp, 2010, 185 783 km. Selected listing dated 7 September 2026. Confirm availability, equipment and terms with the Priselci dealership."
+	},
+	"dealerStock_a3c3bf98fb7d87cf0aa8e8a132a0420ffbc40c9352ef3c7f932cfc2b8841c68b": {
+		"bg": "Audi A3 1.9 TDI 105ps, 2009 г., 253 746 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци.",
+		"en": "Audi A3 1.9 TDI 105ps, 2009, 253 746 km. Selected listing dated 7 September 2026. Confirm availability, equipment and terms with the Priselci dealership."
+	},
+	"dealerStock_87090e04b218b0d22789a643e96cda4ceb730c94444774c172c5d167bbf9940c": {
+		"bg": "Dacia Sandero 1.4 БЕНЗИН/ГАЗ, 2009 г., 136 016 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци.",
+		"en": "Dacia Sandero 1.4 PETROL/LPG, 2009, 136 016 km. Selected listing dated 7 September 2026. Confirm availability, equipment and terms with the Priselci dealership."
+	},
+	"dealerStock_f4b3671be395a055fa8d0cd3288cb6a8d88b42ae3629dcc0894e1d030134ac10": {
+		"bg": "Газова уредба",
+		"en": "Gas fuel system"
+	},
+	"dealerStock_ee55be3c3a0533889d4c9fc8a712a1ce351fb28cdfe797543f40f4ac25b10d43": {
+		"bg": "Renault Grand scenic 1.5DCI, 2012 г., 199 811 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци.",
+		"en": "Renault Grand scenic 1.5DCI, 2012, 199 811 km. Selected listing dated 7 September 2026. Confirm availability, equipment and terms with the Priselci dealership."
+	},
+	"dealerStock_895f7592e45102528026f88a715aff7a8d76554c0f239d87758fd80f323f7238": {
+		"bg": "BMW X3 2.0 ДИЗЕЛ 4Х4, 2007 г., 207 195 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци.",
+		"en": "BMW X3 2.0 DIESEL 4X4, 2007, 207 195 km. Selected listing dated 7 September 2026. Confirm availability, equipment and terms with the Priselci dealership."
+	},
+	"dealerStock_cf29baf07910aed1c12f1b9fa155e22c9f0a4dcb6a0d77cd3464c3ba3606c524": {
+		"bg": "Nissan Qashqai 1.5 DCI, 2012 г., 192 641 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци.",
+		"en": "Nissan Qashqai 1.5 DCI, 2012, 192 641 km. Selected listing dated 7 September 2026. Confirm availability, equipment and terms with the Priselci dealership."
+	},
+	"dealerStock_73deb3b8bdc4cc0c9a1b9a8b939e5406a3809391a3f4d43def6bf44f3753f898": {
+		"bg": "Mercedes-Benz E 280 3.0CDI V6, 2005 г., 208 357 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци.",
+		"en": "Mercedes-Benz E 280 3.0CDI V6, 2005, 208 357 km. Selected listing dated 7 September 2026. Confirm availability, equipment and terms with the Priselci dealership."
+	}
+
 } satisfies Record<string, Record<Locale, string>>;
 export const inventorySourceKeys: Readonly<Record<string, keyof typeof inventoryCopy>> = {
+	'BMW 740 Завиващ заден мост': 'bmw740RearWheelSteering',
+	'Завиващ заден мост': 'rearWheelSteering',
 	'4(5) Врати': 'term0',
 	'4x4': 'term1',
 	'Auto Start Stop function': 'term2',
@@ -630,6 +738,32 @@ export const inventorySourceKeys: Readonly<Record<string, keyof typeof inventory
 		'description30',
 	'Автомобилът е с пълна сервизна история в Порше. Може да се провери във всяко представителство на марката. Sport Chrono пакет. Абсолютно автентичен вид както е излезнал от завода. Регистриран с каско, гражданска, данък, винетка. Без бартер. Само сериозни обаждания.':
 		'description31'
+,
+	"VW Golf 1.4 БЕНЗИН, 2007 г., 235 193 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци.": "dealerStock_75aac75e44741b73584b0b6fdf77210e297ea1076ef3bfd79c565354f9cd234c",
+	"Климатик": "dealerStock_c78cd581da3aa4de35d6919238c4713939f3b2cac47dd3159756d967f6fd7011",
+	"Лизинг": "dealerStock_e8b8a518e15b0fc1c361f1691b4a21d156427eaa36fce311b8a0a970af578dba",
+	"Графит": "dealerStock_4807faef19a35446d6a4ebab85c6608e927c3e9b63dfa5113d0b8a6dcf23e695",
+	"VW Passat 1.4 БЕНЗИН, 2010 г., 179 848 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци.": "dealerStock_28f71058091c475083771b02c36bd17f9368373cf1dce8e706d3256e78e3d368",
+	"VW Passat 2.0TDI COMMONRAIL, 2008 г., 210 534 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци.": "dealerStock_c0f23a235062724ee1d3015772ad6bdad3671729bbf8efb7e0c033e550121a50",
+	"Seat Ibiza 1.2 БЕНЗИН, 2010 г., 175 532 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци.": "dealerStock_f07a621bd67cc87174296e2fd687fb46f78d88b72cc37f04fa0f9ebec50cec36",
+	"Renault Koleos 2.0 ДИЗЕЛ 4Х4, 2010 г., 181 246 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци.": "dealerStock_76aa94f3ea91306de62c7d2be85ef783e37a482e7ab478fe8c096cd45398fd6b",
+	"Peugeot 307 CC КАБРИО, 2006 г., 205 664 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци.": "dealerStock_a93722ac1c95b4b4094a519a84a2e1728e501f073dfd4e01bd6455201d2b3e3b",
+	"Ford Mondeo 2.0 DIZEL, 2009 г., 235 788 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци.": "dealerStock_f652ff43f35637380102c51dfc2ffc27cd87fa592ae3c89401d7fa54809a11de",
+	"audio\\video": "dealerStock_0184fe75300fc233b182c53220cc314715a7247d92f167e8a0a6335f4391b6cb",
+	"IN\\AUX изводи": "dealerStock_f258769daf4cedc0e0f4ac711c2fe5090299dd941db55faefab350b88ca23ab1",
+	"Хладилна жабка": "dealerStock_6902ccf063b8ae1e654b8e7fcdf65de868c983239c35e8ecebcf5104aeaeccbc",
+	"Peugeot 5008 2.0HDI 150К.С, 2011 г., 210 452 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци.": "dealerStock_20f765ddd00cda7dc2ba5ec39467459bbabf8a8a63213ff4d7dcc9d818208421",
+	"Bluetooth \\ handsfree система": "dealerStock_a361d0a678da8d08851a6de6afed2cc99e145a910b1d5408495969c8b433ca16",
+	"Mercedes-Benz C 200 2.2 CDI, 2004 г., 218 432 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци.": "dealerStock_b4763ac4064dbbebede4907b86deebbcaa8a493505ff8c211d327c9e07205bf0",
+	"Citroen C3 Picasso 1.6HDI 90К.С, 2010 г., 185 783 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци.": "dealerStock_9975e5c013fc5aefb1886a409db049e8ff95d4403d5164be43e32479aa39c7a3",
+	"Audi A3 1.9 TDI 105ps, 2009 г., 253 746 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци.": "dealerStock_a3c3bf98fb7d87cf0aa8e8a132a0420ffbc40c9352ef3c7f932cfc2b8841c68b",
+	"Dacia Sandero 1.4 БЕНЗИН/ГАЗ, 2009 г., 136 016 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци.": "dealerStock_87090e04b218b0d22789a643e96cda4ceb730c94444774c172c5d167bbf9940c",
+	"Газова уредба": "dealerStock_f4b3671be395a055fa8d0cd3288cb6a8d88b42ae3629dcc0894e1d030134ac10",
+	"Renault Grand scenic 1.5DCI, 2012 г., 199 811 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци.": "dealerStock_ee55be3c3a0533889d4c9fc8a712a1ce351fb28cdfe797543f40f4ac25b10d43",
+	"BMW X3 2.0 ДИЗЕЛ 4Х4, 2007 г., 207 195 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци.": "dealerStock_895f7592e45102528026f88a715aff7a8d76554c0f239d87758fd80f323f7238",
+	"Nissan Qashqai 1.5 DCI, 2012 г., 192 641 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци.": "dealerStock_cf29baf07910aed1c12f1b9fa155e22c9f0a4dcb6a0d77cd3464c3ba3606c524",
+	"Mercedes-Benz E 280 3.0CDI V6, 2005 г., 208 357 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци.": "dealerStock_73deb3b8bdc4cc0c9a1b9a8b939e5406a3809391a3f4d43def6bf44f3753f898"
+
 };
 export function inventoryText(locale: Locale, value: string): string {
 	const key = inventorySourceKeys[value];

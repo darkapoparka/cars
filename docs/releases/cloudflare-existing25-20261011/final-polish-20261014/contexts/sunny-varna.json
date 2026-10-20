@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-native-source-qualification-context",
+  "id": "fleet-final-polish-20261014",
+  "dealer": "sunny-varna",
+  "scope": "existing-dealer-pilot",
+  "sourceCommit": "bb173c33d7b640502ad2e4bf27546748c12858b8",
+  "reviewed": true,
+  "reviewedAt": "2026-10-15T09:35:04.683Z",
+  "qualificationOnly": true,
+  "approved": false,
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "globalReleaseApproval": false,
+  "approvedLockSha256": "ecdfaf9599fbcbeadebc24de3b9aa1c7615a9a49e29d338e5e9a23427d405e26",
+  "candidateLockSha256": "04633129df9e75d6cd62deeac9125b279957789d75f57cdb0b243ef61bfc3e7e",
+  "sourceDeltaReview": {
+    "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-delta-review.json",
+    "sha256": "43cb6876e815a2a6b866f1dadd304236de4ae58c05fe65c2ab62a23506ee7ce9",
+    "reviewedAt": "2026-10-14T23:55:37.398Z"
+  },
+  "sourceReview": {
+    "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/source-review.json",
+    "sha256": "27c6ce5dd17ee6e1b9f6a5b059a95d5e1dbe4200f61264fc50addeb7af89d984"
+  },
+  "dealerSourceRepair": {
+    "kind": "explicit-selected-mobile-signature-logo-consumers",
+    "parentContextSha256": "e127252fd24d2908cd6a4dd58f6bdb666a8f9e930b9e6239affb22251e567814",
+    "baseSourceCommit": "bd32e4d18c6b6e5b882263936322fb50f3c023e2",
+    "baseSourceTree": "f1ce93c8c8045ee04ff12ccf5a745a2d127994ff",
+    "path": "mobile/src/lib/showroom-config.ts",
+    "beforeBlob": "188b48c1f54079a9401641e9dc7ad21f9c0abb0b",
+    "afterBlob": "323c653f4dac59325d3b2f07387b28d8a9e488e8",
+    "changedDesigns": [
+      "mobile",
+      "karento-best"
+    ],
+    "companionPaths": [
+      {
+        "path": "mobile/src/lib/showroom-config.ts",
+        "beforeBlob": "188b48c1f54079a9401641e9dc7ad21f9c0abb0b",
+        "afterBlob": "323c653f4dac59325d3b2f07387b28d8a9e488e8"
+      },
+      {
+        "path": "mobile/src/lib/dealers.ts",
+        "beforeBlob": "3ab376ca85185510b542e80b138db83353f87c0a",
+        "afterBlob": "39271e758aefa9a9c5c7bb9d1b0750b002d53c29"
+      },
+      {
+        "path": "karento-best/src/lib/content.ts",
+        "beforeBlob": "6cd99c15aea4b6a35a02334af89c83aeefb86f91",
+        "afterBlob": "92326d43656e129d798755edd37836e17a447ddc"
+      },
+      {
+        "path": "karento-best/src/lib/data/dealer-detail.ts",
+        "beforeBlob": "5fb63f0bade5d5134bb43a4d5a9437b42bad3897",
+        "afterBlob": "cf3f859704e1b2fb4b2f06aeb790c9d7f6d60ffd"
+      },
+      {
+        "path": "karento-best/src/lib/data/vehicle-detail.ts",
+        "beforeBlob": "e427b063125717e0e5a81c5e2e49b86a11e618f7",
+        "afterBlob": "29bc78c5594fe3ffd4c401ecf8545ace438a6e3f"
+      },
+      {
+        "path": ".cars-branding.json",
+        "beforeBlob": "101bd37089cb12f2d713ebb746cfe70739ea11c4",
+        "afterBlob": "b6f6640f0e2019e6ca58ee22caed687dd1a31ddc"
+      }
+    ],
+    "receiptReseals": [
+      {
+        "path": ".cars-mobile.json",
+        "family": "mobile",
+        "beforeBlob": "8de7f042fde85a39e5c23fc19c190d60017e9177",
+        "profileSha256Preserved": "31d805cd180dbab2c5418453367e269a24088a98951ca5a268a951ea66d91b09"
+      },
+      {
+        "path": ".cars-signature.json",
+        "family": "karento-best",
+        "beforeBlob": "f737230145948645ab63e98a9996a4dbca2c9174",
+        "profileSha256Preserved": "31d805cd180dbab2c5418453367e269a24088a98951ca5a268a951ea66d91b09"
+      }
+    ],
+    "immediateParentOverlay": {
+      "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-native/native-wave-015/published-ten-source-successors.json",
+      "sha256": "e7b40a66d73cd941b85be64ddef3093ee285df288a885fc5709c5627eb6c8c96"
+    },
+    "proof": {
+      "reference": "docs/releases/cloudflare-existing25-20261011/final-polish-20261014/selected-webp-consumer-repair-20261015/sunny-varna/focused-proof.json",
+      "sha256": "a44c2676ec68d0726d88ea5b14e10abcd8a7e4f36533506168e92dde923a7185"
+    },
+    "evidenceReuse": "Original immutable six-template QA and source preparation remain provenance; focused exact-source selected Mobile and Signature logo consumer proof covers this new dealer edit. No new CI, build, native or hosted success is asserted."
+  }
+}

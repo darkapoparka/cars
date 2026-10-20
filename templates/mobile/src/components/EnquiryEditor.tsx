@@ -166,10 +166,10 @@ export function EnquiryEditor({
   const nativeDealer = capturedDealers[v.id];
   const address =
     nativeDealer?.address ||
-    (v.id === 'bmw-540' ? 'Weseler Straße 655\nDE-48163 Münster' : v.location);
+    (v.sample && v.id === 'bmw-540' ? 'Weseler Straße 655\nDE-48163 Münster' : v.location);
   const openingHours =
     nativeDealer?.openingHours ||
-    (v.id === 'bmw-540'
+    (v.sample && v.id === 'bmw-540'
       ? 'Mon - Fri 08:00 h - 19:00 h\nSat 09:00 h - 14:00 h\nSun 10:00 h - 17:00 h (Viewing day)'
       : '');
   function set(key: string, value: string) {

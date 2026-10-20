@@ -2,6 +2,7 @@
  * No template/dealer generation, Vercel write, credential export or release approval.
  * The resulting exact artifacts are staged for separately authorized local deployment.
  */
+import {repairSignatureFooterContact} from './publishing/signature-footer-contact.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
 import {createHash} from 'node:crypto';
@@ -15,18 +16,22 @@ import {loadDealerProfile} from './lib/client-refresh-normalize.mjs';
 import {assertAppVariant,baseNativeManifest} from './publishing/app-variant.mjs';
 import {ADOPTION_FILE,NATIVE_QUALIFICATION_KIND,assertNativeAdoption,assertNativeQualification,parseCatalogJson} from './lib/native-localization.mjs';
 import {registeredCompositionIdentity} from './package-dealer-single-worker.mjs';
-import {assertExtendedVariantSources,applySixVariantMounts} from './publishing/six-variant.mjs';
-import {bindModernMobileWordmarkLogo} from './lib/client-logo-contract.mjs';
+import {assertExtendedVariantSources,applySixVariantMounts,sealSixVariantBuild} from './publishing/six-variant.mjs';
+import {bindModernMobileWordmarkLogo,repairModernDarkDiscoverySource} from './lib/client-logo-contract.mjs';
+import {repairImportDealerDisclosureCatalog} from './lib/import-dealer-inventory-copy.mjs';
+import {componentRepairRow,componentAssemblyRow,applyReviewedComponentRepairs,componentSourceRows} from './lib/fleet-component-repairs.mjs';
 import {applyDealerPresentation} from './publishing/dealer-presentation.mjs';
 import {applyAutoBestCardLayout} from './publishing/auto-best-card-layout.mjs';
-import {applyOptionalContactFallback} from './publishing/dealer-contact-fallback.mjs';
+import {applyOptionalContactFallback,applyModernOptionalContactFallback} from './publishing/dealer-contact-fallback.mjs';
 import {applyDealerShare} from './publishing/dealer-share.mjs';
 import {appendProposalIntroduction} from './publishing/proposal-introduction.mjs';
 import {assertLeadBranding} from './publishing/lead-branding.mjs';
 import {PUBLIC_ROOTS,familyRetention} from './publishing/vercel-asset-plan.mjs';
 import {applyCloudflareProvider} from './publishing/cloudflare-provider.mjs';
 import {applyCloudflareSvelte,CLOUDFLARE_SVELTE_OUTPUT} from './publishing/cloudflare-svelte.mjs';
-import {resolveCloudflareNpmCli} from './publishing/cloudflare-next.mjs';
+import {resolveCloudflareNpmCli,applyCloudflareNext} from './publishing/cloudflare-next.mjs';
+import {applyModernFreeNativeOverlay,validateModernFreeServicesRequest,modernNativeFailureEvidence} from './lib/modern-free-services-build.mjs';
+import {applyModernNativeQuerySource,validateModernNativeQueryRequest,splitModernNativeQueryPreferences,selectModernNativeQueryDiagnostic,verifyModernNativeQuerySourceUpdate} from './lib/modern-free-native-query-build.mjs';
 import {artifactInventory,copyBuildArtifact,assertCompiledConfig,safeArtifactPath} from './lib/uk-cloudflare-artifacts.mjs';
 import {selectPinnedRevisions} from './dealer-updates/three-way-upgrade.mjs';
 import {assertSixDesignSelection} from './lib/six-design-release.mjs';
@@ -72,7 +77,7 @@ export function buildMatrix(request,leads=selection(),inventory=registry()) {
  const keys=request.targets??Object.keys(NODES);
  if(!Array.isArray(keys)||keys.length!==7||new Set(keys).size!==7||keys.some(k=>!Object.hasOwn(NODES,k)))throw Error('Exactly seven Cloudflare targets are required for one Worker');
  if(fleetSourceMode(request)==='new-approved')for(const slug of request.dealers)newSourceRow(request,slug,leads,inventory);
- return {include:request.dealers.flatMap(slug=>{selectedDealer(slug,leads,inventory);return keys.map(key=>({slug,key,node:NODES[key]}));})};
+ return {include:request.dealers.flatMap(slug=>{selectedDealer(slug,leads,inventory);const repair=componentRepairRow(request,slug);if(componentAssemblyRow(request,slug))return [];return keys.filter(key=>!repair||repair.rebuild.includes(key)).map(key=>({slug,key,node:NODES[key]}));})};
 }
 function committedBytes(root,name,commit,digest,maxBytes=2*1024**2){
  requireNew(safeArtifactPath(name)&&hex40(commit)&&hex64(digest),'invalid historical byte lease');
@@ -87,13 +92,23 @@ export function readPinnedFleetInput(root,p,commit,{prefix=NEW_INPUT_ROOT,maxByt
  requireNew(bytes.equals(committedBytes(root,p.path,commit,p.sha256,maxBytes)),'physical input differs from published bytes');return bytes;
 }
 const proofJson=bytes=>parseCatalogJson(new TextDecoder('utf-8',{fatal:true}).decode(bytes).replace(/^\uFEFF/,''));
+/** Metadata is deliberately outside collectSource; read it as physical, committed proof, never package it. */
+export function readCommittedFleetMetadata(root,slug,name,commit){
+ requireNew(/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug)&&hex40(commit)&&['dealer.json','.client/cloudflare-existing-source.json','.client/native-qualification-context.json',QUALIFICATION_LOCK_PATH].includes(name),'invalid dealer metadata locator');
+ const metadataPath='clients/'+slug+'/'+name,size=Number(git(root,['cat-file','-s',commit+':'+metadataPath]));
+ requireNew(Number.isSafeInteger(size)&&size>0&&size<=2*1024**2,'dealer metadata exceeds its byte limit');
+ const bytes=git(root,['cat-file','blob',commit+':'+metadataPath],{encoding:null});
+ requireNew(bytes.length===size,'dealer metadata size differs');
+ return readPinnedFleetInput(root,{path:metadataPath,sha256:hash(bytes)},commit,{prefix:'clients/'+slug});
+}
 /** The creator proposal is historical evidence. Only its exact reviewed,
  * published client tree can enter this path; no creation or adoption occurs. */
 export async function newApprovedFleetSource({root=ROOT,slug,commit,request,leads,inventory,manifest,files}){
  requireNew(fleetSourceMode(request)==='new-approved'&&hex40(commit)&&git(root,['rev-parse','HEAD'])===commit,'exact current source checkout required');
- requireNew(!fs.existsSync(path.join(root,'clients',slug,'.git'))&&!fs.existsSync(path.join(root,'clients',slug,'.client/cloudflare-existing-source.json')),'independent source and existing qualification markers are forbidden');
+ requireNew(!fs.existsSync(path.join(root,'clients',slug,'.git')),'independent source is forbidden');
  const {row,selected,record}=newSourceRow(request,slug,leads,inventory),prefix=NEW_INPUT_ROOT+'/'+slug;
- const proofs=Object.fromEntries(['preparation','proposal','publication','inputMapping'].map(k=>[k,proofJson(readPinnedFleetInput(root,row[k],commit,{prefix}))]));
+ // Full path/blob inventories exceed 2 MiB for six native apps; only proposals get the bounded 16 MiB allowance.
+ const proofs=Object.fromEntries(['preparation','proposal','publication','inputMapping'].map(k=>[k,proofJson(readPinnedFleetInput(root,row[k],commit,{prefix,maxBytes:k==='proposal'?16*1024**2:2*1024**2}))]));
  const {preparation:prep,proposal,publication,inputMapping}=proofs;
  requireNew(prep.schemaVersion===1&&prep.kind==='cars-new-dealer-source-proposal'&&prep.mode==='new-approved'&&prep.dealer===slug&&prep.repository===record.repository&&prep.canonicalSourceRepository==='darkapoparka/cars'&&prep.write===true&&prep.reviewed===false&&prep.published===false&&prep.buildApproval===false&&prep.hostedApproval===false&&hex40(prep.baseCommit)&&hex40(prep.baseRootTree)&&hex40(prep.preparedTree)&&prep.sourceRevision===request.sourceRevision,'original unapproved creator receipt required');
  requireNew(proposal.schemaVersion===1&&proposal.kind===prep.kind&&proposal.mode===prep.mode&&proposal.dealer===slug&&proposal.canonicalSourceRepository===prep.canonicalSourceRepository&&proposal.baseCommit===prep.baseCommit&&proposal.baseRootTree===prep.baseRootTree&&proposal.absentPath==='clients/'+slug&&proposal.preparedTree===prep.preparedTree&&proposal.reviewed===false&&proposal.published===false&&proposal.hostedApproval===false&&row.proposal.sha256===prep.patchSha256&&same(proposal.sourceReleases,prep.sourceReleases),'original addition-only proposal differs from preparation');
@@ -106,13 +121,29 @@ export async function newApprovedFleetSource({root=ROOT,slug,commit,request,lead
  requireNew(Array.isArray(proposal.entries)&&proposal.entries.length>0&&proposal.entries.length<=20000&&prep.sourcePaths===proposal.entries.length&&same(entries,[...proposal.entries].map(({path,mode,blob})=>({path,mode,blob})).sort((a,b)=>Buffer.compare(Buffer.from(a.path),Buffer.from(b.path)))),'published proposal path/blob/mode inventory differs');
  const sourceBlobs=new Map(entries.map(({path,blob})=>[path,blob]));
  requireNew(files instanceof Map&&files.size>0&&[...files].every(([name,bytes])=>Buffer.isBuffer(bytes)&&sourceBlobs.get(name)===createHash('sha1').update(Buffer.from('blob '+bytes.length+'\0')).update(bytes).digest('hex')),'collected build bytes differ from the published dealer tree');
- requireNew(files.has('dealer.json')&&same(manifest,proofJson(files.get('dealer.json'))),'build manifest differs from the published dealer manifest');
+ // collectSource intentionally omits dealer.json: it is package metadata, not an application input.
+ // Bind the supplied manifest directly to its already-verified immutable client tree instead.
+ const publishedManifest=readCommittedFleetMetadata(root,slug,'dealer.json',commit);
+ requireNew(same(manifest,proofJson(publishedManifest)),'build manifest differs from the published dealer manifest');
  const originalRequest=proofJson(readPinnedFleetInput(root,prep.request,prep.baseCommit)),originalRows=originalRequest.dealers?.filter(d=>d.slug===slug)??[];requireNew(originalRows.length===1,'original source request lacks exact dealer');const original=originalRows[0];
  const lockBytes=committedBytes(root,'templates.lock.json',prep.baseCommit,originalRequest.approvedLockSha256),oldRegistry=proofJson(committedBytes(root,'docs/DEPLOYMENT-INVENTORY.json',prep.baseCommit,originalRequest.registrySha256)),oldIndex=proofJson(committedBytes(root,'clients/index.json',prep.baseCommit,originalRequest.clientIndexSha256)),lock=proofJson(lockBytes);
  const {validateNewSourceRequest,validateNewDealerFacts}=await import('./prepare-new-dealer-source.mjs');
  const oldClients=git(root,['ls-tree','-z','--name-only',prep.baseCommit+':clients'],{encoding:null}).toString('utf8').split('\0').filter(Boolean);
- validateNewSourceRequest(originalRequest,{registry:oldRegistry,clientIndex:oldIndex,occupiedSlugs:oldClients,lock,lockSha256:hash(lockBytes),registrySha256:originalRequest.registrySha256,clientIndexSha256:originalRequest.clientIndexSha256});
- requireNew(originalRequest.sourceRevision===request.sourceRevision&&prep.approvedLockSha256===originalRequest.approvedLockSha256&&same(prep.inputs,original.inputs)&&same(prep.identityReview,original.identityReview)&&same(prep.sourceReleases,original.sourceReleases)&&hex64(prep.branchAbsence?.digest)&&prep.branchAbsence.absence==='normalized-dealer-folder-absent-on-current-origin-branches'&&Number.isInteger(prep.branchAbsence.branches)&&prep.branchAbsence.branches>0&&prep.branchAbsence.branches<=128,'original request/input/source/branch lease differs');
+ const sourceQualification=originalRequest.qualification;
+ let qualifiedContextBytes,qualifiedLockBytes;
+ if(sourceQualification){
+  // The explicit creator opt-in remains a proposal, bound to its historical input bytes.
+  qualifiedLockBytes=readPinnedFleetInput(root,sourceQualification.candidateLock,prep.baseCommit);
+  for(const dealer of originalRequest.dealers)readPinnedFleetInput(root,sourceQualification.contexts[dealer.slug],prep.baseCommit);
+  qualifiedContextBytes=readPinnedFleetInput(root,sourceQualification.contexts[slug],prep.baseCommit,{prefix});
+  const context=proofJson(qualifiedContextBytes),qualification=prep.nativeQualification;
+  requireNew(context.scope==='new-dealer-source-proposal'&&context.dealer===slug&&context.sourceCommit===request.sourceRevision&&context.nativeApproval===false&&context.hostedApproval===false&&context.globalReleaseApproval===false,'only the exact new-dealer proposal qualification scope is admitted');
+  requireNew(qualification&&same(Object.keys(qualification).sort(),['contextFileSha256','globalReleaseApproval','hostedApproval','nativeApproval','qualificationLockSha256','receiptSha256'])&&qualification.contextFileSha256===hash(qualifiedContextBytes)&&qualification.qualificationLockSha256===hash(qualifiedLockBytes)&&qualification.receiptSha256===prep.nativeAdoptionSha256&&qualification.nativeApproval===false&&qualification.hostedApproval===false&&qualification.globalReleaseApproval===false,'creator qualification receipt differs from its exact unapproved input pins');
+ }else{
+  requireNew(prep.nativeQualification===undefined&&!fs.existsSync(path.join(root,'clients',slug,'.client/cloudflare-existing-source.json'))&&!files.has('.client/cloudflare-existing-source.json'),'existing qualification markers are forbidden without an explicit new-source request');
+ }
+ validateNewSourceRequest(originalRequest,{registry:oldRegistry,clientIndex:oldIndex,occupiedSlugs:oldClients,lock,lockSha256:hash(lockBytes),registrySha256:originalRequest.registrySha256,clientIndexSha256:originalRequest.clientIndexSha256,root});
+ requireNew(originalRequest.sourceRevision===request.sourceRevision&&prep.approvedLockSha256===originalRequest.approvedLockSha256&&same(prep.inputs,original.inputs)&&same(prep.identityReview,original.identityReview)&&same(prep.sourceReleases,original.sourceReleases)&&hex64(prep.branchAbsence?.digest)&&prep.branchAbsence.absence==='normalized-dealer-folder-absent-on-current-origin-branches'&&Number.isInteger(prep.branchAbsence.branches)&&prep.branchAbsence.branches>0&&prep.branchAbsence.branches<=256,'original request/input/source/branch lease differs');
  requireNew(hash(fs.readFileSync(path.join(root,'templates.lock.json')))===originalRequest.approvedLockSha256&&lockBytes.equals(committedBytes(root,'templates.lock.json',commit,originalRequest.approvedLockSha256)),'approved template selection changed after creation');
  requireNew(manifest.slug===slug&&manifest.dealerId===original.dealerId&&manifest.repository===original.repository&&publication.dealerId===original.dealerId&&selected.dealerId===original.dealerId&&same(manifest.templateSources,original.sourceReleases)&&FAMILIES.every(k=>manifest.templateRevisions?.[k]===original.sourceReleases[k].revision),'manifest/registry/selection/source locators differ from reviewed creation');
  assertSixDesignSelection(manifest.variants);
@@ -130,8 +161,15 @@ export async function newApprovedFleetSource({root=ROOT,slug,commit,request,lead
  let originalBytes=0;for(const p of inputMapping.sources){originalBytes+=readPinnedFleetInput(root,p,commit,{prefix,maxBytes:25*1024**2}).length;requireNew(originalBytes<=256*1024**2,'original mapping sources exceed the per-dealer byte budget');}
  for(const [key,name]of [['facts','business-facts.json'],['stock','stock.json'],['locale','locale.json']])requireNew(files.has(name)&&hash(files.get(name))===original.inputs[key].sha256,'factual input changed in prepared client: '+name);
  for(const image of original.media){const bytes=readPinnedFleetInput(root,{path:image.path,sha256:image.sha256},prep.baseCommit,{prefix,maxBytes:25*1024**2});requireNew(bytes.length===image.bytes&&files.has(image.destination)&&files.get(image.destination).equals(bytes),'retained stock media differs: '+image.destination);}
- requireNew(files.has('.cars-branding.json')&&same(proofJson(files.get('.cars-branding.json')),prep.branding)&&files.has(ADOPTION_FILE)&&hash(files.get(ADOPTION_FILE))===prep.nativeAdoptionSha256&&!files.has('.client/cloudflare-existing-source.json'),'original branding/native seals required; existing qualification markers are forbidden');
- const nativeSource={kind:'approved-native-adoption',receipt:assertNativeAdoption(files,baseNativeManifest(manifest),{root})};
+ requireNew(files.has('.cars-branding.json')&&same(proofJson(files.get('.cars-branding.json')),prep.branding)&&files.has(ADOPTION_FILE)&&hash(files.get(ADOPTION_FILE))===prep.nativeAdoptionSha256,'original branding/native seals required');
+ let nativeSource;
+ if(sourceQualification){
+  const candidateBytes=readCommittedFleetMetadata(root,slug,'.client/cloudflare-existing-source.json',commit);
+  const contextBytes=readCommittedFleetMetadata(root,slug,'.client/native-qualification-context.json',commit),lockBytes=readCommittedFleetMetadata(root,slug,QUALIFICATION_LOCK_PATH,commit);
+  requireNew(contextBytes.equals(qualifiedContextBytes)&&lockBytes.equals(qualifiedLockBytes),'published candidate must retain the exact original qualification markers and bytes');
+  nativeSource=existingFleetNativeSource(files,manifest,{candidate:proofJson(candidateBytes),qualificationBytes:qualifiedContextBytes,qualificationLockBytes:qualifiedLockBytes,root});
+  requireNew(nativeSource.kind==='native-source-qualification','new-source qualification cannot be converted into an approved release');
+ }else nativeSource={kind:'approved-native-adoption',receipt:assertNativeAdoption(files,baseNativeManifest(manifest),{root})};
  return {mode:'new-approved',workerPrefix:identity.workerName,publicOrigin:identity.publicOrigin,sourceTree,sourceCandidate:row.proposal.sha256,nativeSource,originalRequest:prep.request,inputs:original.inputs,inputMapping:row.inputMapping,preparation:row.preparation,proposal:row.proposal,publication:row.publication,sourcePublication:published,creationBaseCommit:prep.baseCommit,templateSourceRevision:request.sourceRevision};
 }
 export function pruneReviewedAssets(input,keys=FAMILIES) {
@@ -193,7 +231,8 @@ function writeFiles(root,files){
  if(fs.existsSync(root))throw Error('Fresh derived package required');fs.mkdirSync(root,{recursive:true});
  for(const [name,bytes]of files){if(!safeArtifactPath(name))throw Error('Unsafe package member');const p=path.join(root,name);fs.mkdirSync(path.dirname(p),{recursive:true});fs.writeFileSync(p,bytes,{flag:'wx'});}
 }
-async function prepare(slug,key,sha,area,request){
+export async function prepareExistingFleetSourcePackage(slug,key,sha,area,request,{fullSource=false,dependencyLocks}={}){
+ if(fullSource&&(!dependencyLocks||key!=='router'))throw Error('Full source export requires all qualified dependency locks and router preparation');
  const {specializeModernDemoDatabase}=await import('./publishing/modern-demo-database.mjs');
  const {specializeDealerReferencePackage}=await import('./publishing/dealer-reference-package.mjs');
  const dealer=selectedDealer(slug),source=path.join(ROOT,'clients',slug),manifest=read(path.join(source,'dealer.json'));
@@ -210,17 +249,46 @@ async function prepare(slug,key,sha,area,request){
  const newSource=mode==='new-approved'?await newApprovedFleetSource({slug,commit:sha,request,leads:selection(),inventory:registry(),manifest,files}):null;
  const nativeSource=newSource?.nativeSource??existingFleetNativeSource(files,manifest,{candidate,qualificationBytes:fs.existsSync(qualificationFile)?fs.readFileSync(qualificationFile):undefined,qualificationLockBytes:fs.existsSync(qualificationLockFile)?fs.readFileSync(qualificationLockFile):undefined});
  assertAppVariant(files,manifest);assertExtendedVariantSources(files,manifest);
- const inputRows=sourceRows(files),profile=loadDealerProfile(source,slug),workerPrefix=newSource?.workerPrefix??manifest.repository.split('/')[1];
+ const inputRows=sourceRows(files),experimentRequest=request.modernFreeServicesExperiment;
+ const componentRepair=applyReviewedComponentRepairs(files,request,slug,git(ROOT,['rev-parse',sha+':clients/'+slug]),{importRepair:repairImportDealerDisclosureCatalog,modernRepair:repairModernDarkDiscoverySource});
+ if(componentRepair&&(experimentRequest!==undefined||request.modernFreeNativeQueryExperiment!==undefined))throw Error('Component repairs cannot be combined with experimental source overlays');
+ let modernFreeServicesExperiment=null,modernFreeNativeQueryExperiment=null;
+ if(experimentRequest!==undefined){
+  const sourceTree=git(ROOT,['rev-parse',sha+':clients/'+slug]);
+  // Validate the request only for its exact selected dealer; no implicit rollout.
+  if(slug!==experimentRequest.dealer)throw Error('Modern experiment request forbids other dealers in this build');
+  validateModernFreeServicesRequest(experimentRequest,{dealer:slug,sourceTree,sourceReleases:manifest.templateSources});
+  const sourceUpdateProof=experimentRequest.sourceUpdate?verifyModernNativeQuerySourceUpdate(experimentRequest.sourceUpdate,{sourceCommit:sha,readTree:(commit,name)=>git(ROOT,['rev-parse',commit+':'+name]),readBytes:(commit,name)=>git(ROOT,['show',commit+':'+name],{encoding:null})}):null;
+  if(key==='modern'){
+   git(ROOT,['merge-base','--is-ancestor',experimentRequest.overlayCommit,sha]);
+   const overlaid=applyModernFreeNativeOverlay(files,experimentRequest,{dealer:slug,sourceTree,sourceReleases:manifest.templateSources,sourceCommit:sha,readOverlay:(commit,name)=>Buffer.from(git(ROOT,['show',commit+':'+name],{encoding:null}))});
+   files=overlaid.files;modernFreeServicesExperiment={...overlaid.experiment,...(sourceUpdateProof?{sourceUpdateProof}:{} )};
+  }
+ }
+ if(request.modernFreeNativeQueryExperiment!==undefined){
+  if(experimentRequest===undefined||request.modernFreeNativeQueryExperiment.dealer!==slug)throw Error('Native query experiment requires the exact selected Services source authority');
+  const sourceTree=git(ROOT,['rev-parse',sha+':clients/'+slug]),nativeQueryRequest=request.modernFreeNativeQueryExperiment,sourceRevision=manifest.templateSources.modern.revision;
+  validateModernNativeQueryRequest(nativeQueryRequest,{dealer:slug,sourceTree,sourceRevision});
+  if(key==='modern'){
+   git(ROOT,['merge-base','--is-ancestor',nativeQueryRequest.overlayCommit,sha]);
+   const readSource=(commit,name)=>Buffer.from(git(ROOT,['show',commit+':'+name],{encoding:null}));
+   const adopted=applyModernNativeQuerySource(files,nativeQueryRequest,{dealer:slug,sourceTree,sourceRevision,sourceCommit:sha,readBefore:readSource,readAfter:readSource,typescript,tempRoot:path.join(area,'native-query-merge')});
+   const split=splitModernNativeQueryPreferences(adopted.files,{typescript});files=split.files;modernFreeNativeQueryExperiment={...adopted.experiment,preferences:split.proof};
+  }
+ }
+ const profile=loadDealerProfile(source,slug),workerPrefix=newSource?.workerPrefix??manifest.repository.split('/')[1];
  const publicOrigin=newSource?.publicOrigin??'https://'+workerPrefix+'.darkapoparka1.workers.dev';
  manifest.cloudflare={workerPrefix};
  if(!manifest.shareIdentity?.logo?.sourcePath||!files.has(manifest.shareIdentity.logo.sourcePath)||hash(files.get(manifest.shareIdentity.logo.sourcePath))!==manifest.shareIdentity.logo.sha256)throw Error('Preserved dealer share-logo contract differs');
  manifest.shareIdentity={...manifest.shareIdentity,publicOrigin};manifest.candidate={...(manifest.candidate||{}),approved:false,nativeReleaseQualification:false};
  const contactFallback=applyOptionalContactFallback(files,manifest);
+ const modernContactFallback=applyModernOptionalContactFallback(files,manifest,{profile,typescript});
  const presentation=applyDealerPresentation(files,manifest);
  applyAutoBestCardLayout(files,manifest);
  files=applySixVariantMounts(files,manifest,{provider:'cloudflare'});
  const logoFile='modern/packages/marketplace-ui/components/dealer-mobile-brand-bar.tsx',originalLogo=files.get(logoFile);if(!originalLogo)throw Error('Modern logo consumer missing');
  const fixedLogo=Buffer.from(bindModernMobileWordmarkLogo(originalLogo.toString('utf8')));files.set(logoFile,fixedLogo);
+ const signatureContactRepair=repairSignatureFooterContact(files);
  const contracts={kind:'existing-reviewed-pilot-logo-binding',changes:[{path:logoFile,beforeSha256:hash(originalLogo),afterSha256:hash(fixedLogo)}],factsPreserved:true};
  const reference=specializeDealerReferencePackage(files,manifest);
  const databaseSpecialization=specializeModernDemoDatabase(files,manifest);
@@ -228,15 +296,19 @@ async function prepare(slug,key,sha,area,request){
  const config=switcherConfiguration(manifest,read(path.join(ROOT,'scripts/publishing/switcher-messages.json')),files);
  const switcher=fs.readFileSync(path.join(ROOT,'scripts/publishing/preview-switcher.js'),'utf8').replace('__CARS_SWITCHER_CONFIG__',()=>JSON.stringify(config).replace(/</g,'\\u003c'));
  files.set('auto-best/static/preview-switcher.js',Buffer.from(appendProposalIntroduction(switcher,{dealerId:manifest.dealerId||manifest.slug,dealerName:manifest.shareIdentity?.name||manifest.slug})));files.set('dealer.json',encode(manifest));
+ const {completeSignatureFontAssets}=await import('./publishing/signature-font-assets.mjs');
+ completeSignatureFontAssets(files);
  const pruned=pruneReviewedAssets(files);files=pruned.files;
- files=await applyCloudflareProvider(files,manifest,{workerPrefix,svelteAdapter:(f,m,o)=>applyCloudflareSvelte(f,m,{...o,serviceKeys:!NEXT.has(key)&&key!=='router'?[key]:['auto-best','import','karento-best']})});
+ files=await applyCloudflareProvider(files,manifest,{workerPrefix,...(dependencyLocks?{dependencyLocks}:{}),...(modernFreeServicesExperiment?{nextAdapter:(f,m,o)=>applyCloudflareNext(f,m,{...o,modernFreeServicesExperiment,modernFreeNativeQueryExperiment})}:{}),svelteAdapter:(f,m,o)=>applyCloudflareSvelte(f,m,{...o,serviceKeys:!NEXT.has(key)&&key!=='router'?[key]:['auto-best','import','karento-best']})});
  files.set('scripts/build-cloudflare-svelte.mjs',fs.readFileSync(path.join(ROOT,'scripts/publishing/cloudflare-svelte.mjs')));
+ if(fullSource)sealSixVariantBuild(files,manifest,{provider:'cloudflare'});
  const assembledRows=sourceRows(files);
+ const familyBeforeDependencies=componentRepair?Object.fromEntries(Object.keys(NODES).map(k=>[k,componentSourceRows(assembledRows,k)])):undefined;
  // Materialize only this job's real target, not six installed dependency trees.
  const root=key==='router'?'cloudflare':key;
- const retained=new Map([...files].filter(([name])=>name.startsWith(root+'/')||name.startsWith('scripts/')||!name.includes('/')));
+ const retained=fullSource?files:new Map([...files].filter(([name])=>name.startsWith(root+'/')||name.startsWith('scripts/')||!name.includes('/')));
  const packageRoot=path.join(area,'package');writeFiles(packageRoot,retained);
- const provenance={schemaVersion:1,dealer:slug,key,sourceCommit:sha,sourceTree:git(ROOT,['rev-parse',sha+':clients/'+slug]),inputDigest:hash(JSON.stringify(inputRows)),sourceCandidate:newSource?.sourceCandidate??candidate.candidateSourceDigest,sourceReleases:manifest.templateSources,manifest,workerPrefix,publicOrigin,originalSourceUnchanged:true,assembledDigest:hash(JSON.stringify(assembledRows)),targetBeforeDependencies:sourceRows(retained),branding,nativeSource,contracts,contactFallback,presentation,reference,databaseSpecialization,retention:pruned.receipts,nativeApproval:false,hosted:false,...(newSource?{sourceMode:mode,sourcePreparation:newSource}:{})};
+ const provenance={schemaVersion:1,dealer:slug,key,sourceCommit:sha,sourceTree:git(ROOT,['rev-parse',sha+':clients/'+slug]),inputDigest:hash(JSON.stringify(inputRows)),sourceCandidate:newSource?.sourceCandidate??candidate.candidateSourceDigest,sourceReleases:manifest.templateSources,manifest,workerPrefix,publicOrigin,originalSourceUnchanged:true,assembledDigest:hash(JSON.stringify(assembledRows)),targetBeforeDependencies:sourceRows(retained),...(componentRepair?{componentRepair,familyBeforeDependencies}:{}),branding,nativeSource,contracts,...(signatureContactRepair?{signatureContactRepair}:{}),contactFallback,modernContactFallback,presentation,reference,databaseSpecialization,retention:pruned.receipts,...(modernFreeServicesExperiment?{modernFreeServicesExperiment}:{}),...(modernFreeNativeQueryExperiment?{modernFreeNativeQueryExperiment}:{}),nativeApproval:false,hosted:false,...(newSource?{sourceMode:mode,sourcePreparation:newSource}:{})};
  writeJson(path.join(area,'receipts/source.json'),provenance);return {packageRoot,manifest,provenance};
 }
 function installedBin(root,name){
@@ -253,12 +325,15 @@ export function outputBudget(assets,modules){
 }
 export async function compile(slug,key){
  selectedDealer(slug);if(!Object.hasOwn(NODES,key))throw Error('Unknown family');const sha=exactCi(key);
- const request=read(path.join(ROOT,'docs/releases/cloudflare-existing25-20261011/build-request.json'));
+ const normalRequest=read(path.join(ROOT,'docs/releases/cloudflare-existing25-20261011/build-request.json')),diagnosticPath=path.join(ROOT,'docs/releases/cloudflare-existing25-20261011/modern-diagnostic-request.json'),diagnosticRequest=process.env.GITHUB_WORKFLOW_REF==='darkapoparka/cars/.github/workflows/modern-native-diagnostic.yml@refs/heads/main'&&fs.existsSync(diagnosticPath)?read(diagnosticPath):undefined,{request,diagnostic}=selectModernNativeQueryDiagnostic(normalRequest,diagnosticRequest,{workflowRef:process.env.GITHUB_WORKFLOW_REF,dealer:slug,family:key});
  if(fleetSourceMode(request)==='new-approved'){buildMatrix(request);requireNew(request.dealers.includes(slug),'dealer is outside the exact build request');}
+ if(componentAssemblyRow(request,slug))throw Error('Passed repaired component must be retained; compilation is forbidden in assembly recovery');
+ if(request.componentRepair&&!componentRepairRow(request,slug).rebuild.includes(key))throw Error('Passed original component must be reused, not compiled again');
  const area=path.join(ROOT,'runtime/existing-fleet-cloudflare',slug,key);if(fs.existsSync(area))throw Error('Build attempt exists');fs.mkdirSync(path.join(area,'receipts'),{recursive:true});
- const artifact=path.join(area,'artifact');fs.mkdirSync(artifact);const result={schemaVersion:1,dealer:slug,key,sourceCommit:sha,runId:process.env.GITHUB_RUN_ID,attempt:process.env.GITHUB_RUN_ATTEMPT,node:process.version,startedAt:new Date().toISOString(),status:'running',compiled:false,hosted:false};
+ const artifact=path.join(area,'artifact');fs.mkdirSync(artifact);const result={schemaVersion:1,dealer:slug,key,sourceCommit:sha,runId:process.env.GITHUB_RUN_ID,attempt:process.env.GITHUB_RUN_ATTEMPT,node:process.version,...(diagnostic?{diagnostic}:{}),startedAt:new Date().toISOString(),status:'running',compiled:false,hosted:false};
+ let prepared;
  try{
-  const {packageRoot,manifest,provenance}=await prepare(slug,key,sha,area,request);let target,bundle;
+  prepared=await prepareExistingFleetSourcePackage(slug,key,sha,area,request);const {packageRoot,manifest,provenance}=prepared;let target,bundle;
   if(key==='router'){
    target={config:'cloudflare/wrangler.jsonc',main:'cloudflare/router.mjs',assets:'cloudflare/public',workerName:provenance.workerPrefix,root:'cloudflare'};
    stage(area,'router-install',[resolveCloudflareNpmCli(process.execPath,fs,path),'ci','--include=dev'],path.join(packageRoot,'cloudflare'));
@@ -292,10 +367,43 @@ export async function compile(slug,key){
   if(uploadConfig.build?.command||uploadConfig.route||uploadConfig.routes?.length||uploadConfig.durable_objects?.bindings?.length||uploadConfig.containers?.length)throw Error('Unexpected deployment-side build or resource');
   writeJson(path.join(artifact,'compiled/deploy.json'),uploadConfig);
   const compiledFiles=filesAt(path.join(artifact,'compiled'),{filter:()=>true}).map(name=>{const b=fs.readFileSync(path.join(artifact,'compiled',name));return {path:'compiled/'+name,bytes:b.length,sha256:hash(b)};});
-  const deploy={schemaVersion:1,kind:'existing-fleet-cloudflare-compiled-candidate',dealer:slug,key,provider:'cloudflare',accountId:'cb0007f242077bd759331f096eb75531',workerName:target.workerName,publicOrigin:provenance.publicOrigin,sourceCommit:sha,sourceTree:provenance.sourceTree,inputDigest:provenance.inputDigest,sourceReleases:manifest.templateSources,configPath:'compiled/deploy.json',mainPath:'compiled/'+uploadMain,assetPath:'compiled/'+target.assets,compiledFiles,compiledDigest:hash(JSON.stringify(compiledFiles)),output,runId:process.env.GITHUB_RUN_ID,attempt:process.env.GITHUB_RUN_ATTEMPT,compiled:true,dryRun:true,hosted:false,credentialsIncluded:false,nativeApproval:false};
+  const deploy={schemaVersion:1,kind:diagnostic?'cars-modern-native-query-diagnostic-candidate':'existing-fleet-cloudflare-compiled-candidate',dealer:slug,key,provider:'cloudflare',accountId:'cb0007f242077bd759331f096eb75531',workerName:target.workerName,publicOrigin:provenance.publicOrigin,sourceCommit:sha,sourceTree:provenance.sourceTree,inputDigest:provenance.inputDigest,sourceReleases:manifest.templateSources,configPath:'compiled/deploy.json',mainPath:'compiled/'+uploadMain,assetPath:'compiled/'+target.assets,compiledFiles,compiledDigest:hash(JSON.stringify(compiledFiles)),output,runId:process.env.GITHUB_RUN_ID,attempt:process.env.GITHUB_RUN_ATTEMPT,compiled:true,dryRun:true,hosted:false,credentialsIncluded:false,nativeApproval:false,...(diagnostic?{diagnosticOnly:true,admittedForDelivery:false,diagnostic}:{} )};
+  if(target.freeStaticExperiment){
+   if(key!=='modern'||!provenance.modernFreeServicesExperiment)throw Error('Unrequested compiled Modern experiment marker');
+   for(const name of Object.values(target.freeStaticExperiment))if(!compiledFiles.some(row=>row.path==='compiled/'+name))throw Error('Missing sealed compiled experiment member');
+   const proof=read(path.join(artifact,'compiled',target.freeStaticExperiment.receiptPath));
+   if(proof.sourceCommit!==sha||proof.overlayCommit!==provenance.modernFreeServicesExperiment.overlayCommit||proof.requestSha256!==provenance.modernFreeServicesExperiment.requestSha256||proof.sourceTree!==provenance.sourceTree)throw Error('Compiled Modern experiment authority differs');
+   deploy.freeStaticExperiment={manifestPath:'compiled/'+target.freeStaticExperiment.manifestPath,resolverPath:'compiled/'+target.freeStaticExperiment.resolverPath};
+   deploy.freeStaticExperimentReceipt={path:'compiled/'+target.freeStaticExperiment.receiptPath,sha256:hash(fs.readFileSync(path.join(artifact,'compiled',target.freeStaticExperiment.receiptPath))),sourceCommit:sha,overlayCommit:proof.overlayCommit,requestSha256:proof.requestSha256};
+  }
+  if(target.nativeQueryExperiment){
+   if(!diagnostic||key!=='modern'||!provenance.modernFreeNativeQueryExperiment)throw Error('Query capture may only leave the exact nondelivery diagnostic');
+   for(const name of Object.values(target.nativeQueryExperiment))if(!compiledFiles.some(row=>row.path==='compiled/'+name))throw Error('Missing sealed compiled query capture member');
+   const query=provenance.modernFreeNativeQueryExperiment,proof=read(path.join(artifact,'compiled',target.nativeQueryExperiment.receiptPath)),plan=read(path.join(artifact,'compiled',target.nativeQueryExperiment.manifestPath)),entryRow=compiledFiles.find(row=>row.path==='compiled/'+target.nativeQueryExperiment.entryPath),manifestRow=compiledFiles.find(row=>row.path==='compiled/'+target.nativeQueryExperiment.manifestPath);
+   if(proof.sourceCommit!==sha||proof.sourceTree!==provenance.sourceTree||proof.overlayCommit!==query.overlayCommit||proof.requestSha256!==query.requestSha256||proof.nativeInventorySeal!==query.nativeInventorySeal||proof.pureEntry?.sha256!==entryRow.sha256||proof.manifest?.sha256!==manifestRow.sha256||plan.sourceTree!==provenance.sourceTree||plan.nativeInventorySeal!==query.nativeInventorySeal||plan.producerSha256!==entryRow.sha256||plan.graphSeal!==proof.graphSeal||plan.policyProducerSha256!==read(path.join(artifact,'compiled',target.freeStaticExperiment.receiptPath)).responsePolicy.producerSha256||plan.kind!=='cars-modern-native-query-capture-candidate'||plan.admission?.runtime!==false||plan.admission?.fullModernFree!==false||proof.provenance?.officialStaticAccepted!==false)throw Error('Compiled original query capture authority/admission differs');
+   deploy.nativeQueryCapture={...target.nativeQueryExperiment,requestSha256:query.requestSha256,overlayCommit:query.overlayCommit,nativeInventorySeal:query.nativeInventorySeal,graphSeal:proof.graphSeal,routes:plan.routes.length,admission:plan.admission,officialStaticAccepted:false,admittedForDelivery:false};
+  }
   writeJson(path.join(artifact,'deploy.json'),deploy);Object.assign(result,{status:'passed',compiled:true,dryRun:true,workerName:target.workerName,compiledDigest:deploy.compiledDigest,output});
  }catch(error){Object.assign(result,{status:'failed',error:error.message});throw error;}
- finally{result.finishedAt=new Date().toISOString();writeJson(path.join(area,'receipts/build.json'),result);copyBuildArtifact(path.join(area,'receipts'),path.join(artifact,'receipts'));artifactInventory(artifact,{kind:'existing-fleet-cloudflare-compiled-candidate',dealer:slug,key,status:result.status});console.log(JSON.stringify(result));}
+ finally{
+  if(result.status==='failed'&&key==='modern'&&prepared?.packageRoot)try{
+   const evidence=modernNativeFailureEvidence({packageRoot:prepared.packageRoot,sourceCommit:sha});
+   if(evidence){const directory=path.join(area,'receipts/modern-native-evidence');for(const row of evidence.files){const copied=path.join(directory,row.path);copyBuildArtifact(path.join(prepared.packageRoot,row.path),copied);const bytes=fs.readFileSync(copied);if(bytes.length!==row.bytes||hash(bytes)!==row.sha256)throw Error('Native failure evidence copy changed');}writeJson(path.join(directory,'retention.json'),evidence);result.nativeFailureEvidence={files:evidence.files.length,bytes:evidence.totalBytes,observational:true};}
+  }catch(error){result.nativeFailureEvidenceError=error.message;console.error('Native failure evidence unavailable: '+error.message);}
+  result.finishedAt=new Date().toISOString();writeJson(path.join(area,'receipts/build.json'),result);copyBuildArtifact(path.join(area,'receipts'),path.join(artifact,'receipts'));artifactInventory(artifact,{kind:diagnostic?'cars-modern-native-query-diagnostic-candidate':'existing-fleet-cloudflare-compiled-candidate',dealer:slug,key,status:result.status});console.log(JSON.stringify(result));
+ }
  return result;
 }
-if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url))try{const [command,a,b]=process.argv.slice(2);if(command==='matrix')console.log('matrix='+JSON.stringify(buildMatrix(read(path.join(ROOT,'docs/releases/cloudflare-existing25-20261011/build-request.json')))));else if(command==='compile')await compile(a,b);else throw Error('Usage: matrix | compile SLUG FAMILY');}catch(e){console.error(e.stack);process.exitCode=1;}
+/** Finish module evaluation before invoking async CLI work. New-source validators
+ * import shared fleet exports through their maintained preparation module; awaiting
+ * compile at module top level deadlocks that legitimate dynamic import cycle. */
+export async function runExistingFleetCli(argv=process.argv.slice(2)){
+ const [command,a,b]=argv;
+ if(command==='matrix')console.log('matrix='+JSON.stringify(buildMatrix(read(path.join(ROOT,'docs/releases/cloudflare-existing25-20261011/build-request.json')))));
+ else if(command==='compile')await compile(a,b);
+ else throw Error('Usage: matrix | compile SLUG FAMILY');
+}
+if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url)){
+ runExistingFleetCli().catch(e=>{console.error(e.stack);process.exitCode=1;});
+}
+

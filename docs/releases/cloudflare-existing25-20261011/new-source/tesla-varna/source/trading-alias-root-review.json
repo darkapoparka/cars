@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-fleet-trading-alias-rollout-review",
+  "dealer": "tesla-varna",
+  "reviewed": true,
+  "reviewedAt": "2026-10-11T12:55:29.455Z",
+  "stableIdentity": {
+    "slug": "tesla-varna",
+    "identityKey": "mobile-profile:tesla.mobile.bg",
+    "originalQueueName": "Тесла БГ",
+    "publicPhone": "+359895762847"
+  },
+  "selectedPublicName": "Dream Cars 77",
+  "selectedLogoDisplayName": "DreamCars77",
+  "aliases": [
+    "Тесла БГ",
+    "Dreamcars77",
+    "ДриймКарс77"
+  ],
+  "basis": "Primary Mobile.bg contact and the Dream Cars 77 own-site contact publish the same phone; the dated dealer-authored listing identifies and links Dreamcars77. Public trading alias selected for the demo, without a legal ownership claim.",
+  "sources": [
+    {
+      "url": "https://tesla.mobile.bg/contacts",
+      "observedAt": "2026-10-11T12:55:29.456Z",
+      "finding": "0895762847; Varna Izgrev, Prilep112"
+    },
+    {
+      "url": "https://dreamcars77.com/contacts/",
+      "observedAt": "2026-10-11T12:55:29.456Z",
+      "finding": "+359895762847; contact@dreamcars77.com; Dream Cars77 title"
+    },
+    {
+      "url": "https://tesla.mobile.bg/obiava-11791701219612494-tesla-model-3-standart-plyus-evropeyska",
+      "observedAt": "2026-10-11T12:09:27.318Z",
+      "finding": "Dated retained primary extraction in original fact evidence; not a fresh availability assertion"
+    }
+  ],
+  "deduplication": {
+    "queueIdentities": 100,
+    "phoneMatches": [
+      "tesla-varna"
+    ],
+    "publishedMainRegistryCheckedAtRevision": "424efff42d688e3fe23c647c0e9fe3ea7c7fb9ac",
+    "matchingMainSlugOrAliasFound": false,
+    "actualBranchAndCreatorIdentityGuardsStillRequired": true
+  },
+  "websiteReview": {
+    "hasOwnWebsite": true,
+    "ownWebsite": "https://dreamcars77.com/",
+    "websiteGap": false,
+    "retainedInRoster": true,
+    "reason": "Owner asked especially for dealers without websites; this is a documented lower-priority existing-website exception in the accepted mixed fleet, rather than a website-absence claim."
+  },
+  "derivation": {
+    "preserveOriginalQueueAndAllFactMediaEvidence": true,
+    "allowSelectedPublicNameInNewDerivedBusinessFacts": true,
+    "otherFactsUnchanged": true,
+    "originalSourceRecordRetained": true
+  },
+  "scope": {
+    "assetSelectionAcceptedByUser": true,
+    "nativeApproval": false,
+    "sourceIntegrated": false,
+    "buildPerformed": false,
+    "hostedAccepted": false,
+    "noLegalOwnershipClaim": true,
+    "rosterIdentityHoldResolvedForSourcePreparation": true
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "date": "2026-09-27",
+  "tool": "built-in image_gen",
+  "modelVersion": "Not exposed by tool; user requested 2.5",
+  "assets": [
+    {
+      "file": "static/assets/images/template/service-sell-front-v3.webp",
+      "source": "C:/Users/radev/.codex/generated_images/01a0defa-3f34-74e3-ae4f-71b7bd2d5e53/exec-d334989e-d234-4d9e-bce7-1715ef85cb88.png",
+      "prompt": "Use case: ads-marketing. Create a replacement transparent cutout illustration for the Sell / Trade-in hero of an automotive website. Input 1 is the existing HOME artwork: match its premium photorealistic studio vehicle rendering and straight front-facing camera. Input 2 is the old SELL composition to improve. Produce one clean NEW sell illustration, landscape 3:1 composition, actual transparent alpha background. A pearl-white sporty luxury SUV seen EXACTLY HEAD ON, bilaterally symmetric, optical axis centered at x=50%, occupying the central 52% of composition width and almost full image height. Full roof, both mirrors, bumper and tyres visible. On the lower left place one small realistic black-and-silver car key fob; on lower right a restrained small neat stack of euro coins, each supporting group at most 18% of canvas width and 28% of the vehicle height. Leave clear air between objects. All objects grounded on the same baseline, soft tight contact shadows only, fully isolated with real alpha. No banknotes, no giant keys, no side profile, no angled car, no perspective rotation, no scene/background, no floor rectangle, no text, no logo badge, no watermark, no people. Centered, calm, detailed automotive studio photography, clean edges, crisp grille and headlights; equally legible at 300px and at a 140px card size. The car is the visual focus, side accents subordinate. Use the input as composition/style references, do not simply copy the low quality cutout.",
+      "width": 1200,
+      "height": 400,
+      "bytes": 79952,
+      "sha256": "47d0f89eb362f5663e32fa31c78f521c124ce0e743a6e68c253ff259ccf50091",
+      "heroAlignment": {
+        "vehicleCenterX": 598.5,
+        "tyreBaselineY": 393,
+        "crop": [
+          -1.5,
+          0,
+          1200,
+          400
+        ]
+      }
+    },
+    {
+      "file": "static/assets/images/template/service-import-front-v3.webp",
+      "source": "C:/Users/radev/.codex/generated_images/01a0defa-3f34-74e3-ae4f-71b7bd2d5e53/exec-fd34d62f-444b-4ec4-af20-fb4791f41d9c.png",
+      "prompt": "Use case: precise-object-edit. Create the matching IMPORT service illustration for this automotive website. The provided image is the freshly approved composition reference and edit target: KEEP the exact same pearl-white vehicle, strictly head-on camera, centered x=50%, same scale, grille, studio lighting, roof, mirrors, tyres and baseline. Replace ONLY the small key on the lower left with a small realistic container ship seen in a restrained three-quarter view, and replace ONLY the coins on lower right with a small realistic vehicle transport truck carrying two cars. Supporting logistics objects must each stay within 18% of total image width and at most 32% of the main vehicle height, with clear transparent separation from the central car. Main car dominates and is visibly centered and front-facing, never angled. Keep the same 3:1 landscape framing and genuinely transparent alpha background, soft tight contact shadows only. No ground plane, no rectangle, no scenery, no ocean, no labels, no text, no watermark, no logo. Crisp premium photorealistic studio cutout for a small 300px mobile hero and 140px service tile. Preserve center vehicle and composition as closely as possible.",
+      "width": 1200,
+      "height": 400,
+      "bytes": 93022,
+      "sha256": "9e893a83dfe5e454cd10fa1acd7f6c728204520c09a235c13c63eb29c6413a66",
+      "heroAlignment": {
+        "vehicleCenterX": 591,
+        "tyreBaselineY": 387,
+        "crop": [
+          -9,
+          -6,
+          1200,
+          400
+        ]
+      }
+    }
+  ]
+}

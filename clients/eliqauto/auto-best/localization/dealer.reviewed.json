@@ -24,6 +24,22 @@
     "notes": "Dealer-owned appointment and opening-hours guidance."
   },
   {
+    "key": "dealer.addressShort",
+    "source": "ул. Свобода, на гърба на Гробищен парк",
+    "en": "Svoboda Street, behind the cemetery park",
+    "bg": "ул. Свобода, на гърба на Гробищен парк",
+    "disposition": "translate",
+    "notes": "Native short-address consumer uses the recorded dealer address line."
+  },
+  {
+    "key": "dealer.appointmentShort",
+    "source": "Пон.–пет. 09:30–19:00 · Съб.–нед. 09:30–17:00 · Потвърдете огледа по телефона",
+    "en": "Mon–Fri 09:30–19:00 · Sat–Sun 09:30–17:00 · Confirm the viewing by phone",
+    "bg": "Пон.–пет. 09:30–19:00 · Съб.–нед. 09:30–17:00 · Потвърдете огледа по телефона",
+    "disposition": "translate",
+    "notes": "Native short-hours consumer uses the same factual appointment guidance."
+  },
+  {
     "key": "m_159520cd7f28",
     "source": "Най-желаната кола в България | Lamborghini Urus",
     "en": "The most sought-after car in Bulgaria | Lamborghini Urus",

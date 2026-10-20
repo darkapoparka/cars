@@ -1,0 +1,152 @@
+{
+  "date": "2026-10-14",
+  "owner": "01a139e0-e0ce-72e3-a440-17e25ad8c553",
+  "source": {
+    "checkout": "L:/CODEX/cars/templates/import",
+    "branch": "main",
+    "head": "3bc5a0ea33969f18ccc34d5e4b0e8cab1513e6a2",
+    "state": "Local uncommitted template changes; no promotion or dealer deployment",
+    "taskPaths": {
+      "src/lib/components/detail/AuxeroVehicleMobilePdp.svelte": "421E1CABE3CF111920DE5E4D7DA1DBE1A58A290CBA85154E2F23C7ED13423586",
+      "tests/mobile-pdp-scroll.e2e.ts": "4D92009328D125F6A79DCBBB83FD3A955DAAD5D3207078328BD884FB41217C8C",
+      "docs/ARCHITECTURE.md": "56A583B8110918A061248ACFE06BED93B110E76C2D2FE447D74D9668CABA8CCB",
+      "src/lib/content/vehicle-mobile.ts": "152D334667188C1342367A710683B937FEE885B83587AEA40BC2D170318655CA"
+    },
+    "hashAlgorithm": "SHA256"
+  },
+  "preview": {
+    "origin": "http://127.0.0.1:6790",
+    "route": "/bg/inventory/21778067767337633",
+    "runtime": "Existing Import dev server; no replacement preview or dependency installation"
+  },
+  "change": [
+    "Mobile detail panel and image use one native page scroll with the existing rounded panel composition.",
+    "Utility controls stay fixed; the panel grip crossing them activates an opaque compact header.",
+    "Info, Specs and Extras stick beneath the utility row, including the safe-area inset.",
+    "Pinned tab selection starts new content directly below the tab row.",
+    "Gallery and enquiry remain separate overlays; the page panel has no nested scroller.",
+    "The grip supports free pointer dragging up/down and stays where released. Lowering reveals more of the existing photo frame; raising uses the same native page scroll.",
+    "The grip retains its painted position inside a 44px target. Keyboard positioning, cancellation and resize limits use the same bounds; BG/EN instructions live in the content boundary."
+  ],
+  "reference": "Reviewed the existing templates/mobile detail screen and its running preview; no changes to that template.",
+  "comparison": {
+    "mobile": {
+      "locale": "bg",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "before": {
+        "screenshot": "before-mobile-scrolled.jpg",
+        "pageScroll": 0,
+        "drawerTop": 300.56,
+        "tabsTop": 443.56,
+        "panelScroll": 240,
+        "panelOverflow": "auto"
+      },
+      "after": {
+        "screenshot": "after-mobile-scrolled.jpg",
+        "pageScroll": 370,
+        "tabsTop": 60,
+        "panelScroll": 0,
+        "headerPinned": true,
+        "horizontalOverflow": false
+      }
+    },
+    "freeDrag": {
+      "locale": "bg",
+      "viewport": { "width": 390, "height": 844 },
+      "before": { "screenshot": "before-free-drag.jpg", "drawerTop": 286.953125 },
+      "after": { "screenshot": "after-free-drag.jpg", "drawerTop": 376.953125, "pageScroll": 0 },
+      "input": "Native in-app browser drag from the grip down by 90px",
+      "result": "Position retained after release; no snapping, accidental gallery opening or pointer focus outline."
+    },
+    "desktop": {
+      "requestedViewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "captureDimensions": {
+        "width": 1425,
+        "height": 990
+      },
+      "before": "before-desktop.jpg",
+      "after": "after-desktop.jpg",
+      "result": "Visually preserved. The mobile composition and its CSS remain restricted to the phone breakpoint.",
+      "decodedPixelComparison": {
+        "pixelIdentical": false,
+        "totalPixels": 1410750,
+        "differingPixels": 20888,
+        "pixelsWithMaximumChannelDifferenceAbove8": 243,
+        "pixelsWithMaximumChannelDifferenceAbove16": 54,
+        "meanMaximumChannelDifference": 0.030404394825447458,
+        "captureFormat": "JPEG"
+      }
+    }
+  },
+  "checks": [
+    {
+      "command": "playwright test tests/mobile-pdp-scroll.e2e.ts --project=mobile --workers=1 --reporter=line",
+      "result": "12 passed",
+      "viewports": [
+        "320x844",
+        "390x844",
+        "320x568"
+      ],
+      "locales": [
+        "bg",
+        "en"
+      ],
+      "coverage": [
+        "Wheel over the content scrolls the page and pins the tabs.",
+        "All utility controls remain visible with 44px tap areas.",
+        "Each tab and keyboard selection stays aligned beneath the header.",
+        "Returning to the top restores the image header.",
+        "Gallery and enquiry opening, Escape closing and focus restoration.",
+        "No horizontal overflow.",
+        "Real Chromium touch input freely lowers/raises the grip; position persists after a 650ms release window.",
+        "The grip has a 44px target; native content scroll continues after dragging.",
+        "Touch cancellation clears the drag session; pointer gestures do not steal keyboard focus.",
+        "Keyboard Up/Down/Home/End position the panel, and a 390x320 resize keeps the tabs visible."
+      ]
+    },
+    {
+      "command": "playwright test tests/mobile-finalize.e2e.ts tests/mobile-final.e2e.ts tests/form-opening-focus.e2e.ts --grep \"PDP server rendering|vehicle toolbar remains keyboard|phone vehicle enquiry\" --project=mobile --project=desktop --workers=1 --reporter=line",
+      "result": "6 passed, 2 skipped",
+      "coverage": [
+        "Server rendering with JavaScript disabled",
+        "Utility keyboard controls",
+        "Enquiry initial focus and focus restoration"
+      ]
+    },
+    {
+      "command": "svelte-check --workspace . --tsconfig K:/CodexRuntime/import-final-20261014-01a139e0/pdp-check.tsconfig.json --output machine",
+      "result": "968 files, 0 errors, 0 warnings",
+      "scope": "Edited PDP and new browser test, required SvelteKit ambient definitions and their dependencies"
+    },
+    {
+      "command": "Scoped ESLint, Prettier check and git diff --check",
+      "result": "Passed"
+    },
+    {
+      "command": "Retained @sveltejs/mcp autofixer on the edited component",
+      "result": "No compiler errors; existing goto advisory uses the project's locale/base-aware linkHref alias as resolve."
+    },
+    {
+      "command": "Native in-app browser tap at 320x568",
+      "result": "Extras selected, tabs remained at 60px, no horizontal overflow"
+    }
+  ],
+  "limits": [
+    "This is local frontend qualification, not an immutable template release or hosted dealer acceptance.",
+    "No production build or full screenshot matrix was repeated for this focused change.",
+    "The earlier full-project check still has external portfolio JavaScript errors pulled in by an existing dirty localization helper import; the focused PDP check passes.",
+    "No physical iOS/Android hardware run was performed."
+  ],
+  "preservation": {
+    "otherWork": "Preserved existing staged, unstaged and untracked work; no Git index writes, branch changes or provider writes.",
+    "artifacts": "Six captures retained with distinct purposes: the original mobile reading pair, the desktop preservation pair, and one additional matched pair showing the new free-drag behavior. Earlier screenshots remain referenced by the conversation.",
+    "runtime": "Reused K:/CodexRuntime/import-final-20261014-01a139e0 for compact check output and the stable dev preview.",
+    "priorCleanup": "The previous audit's recursive temporary-root removal was blocked by automatic approval review. It was not retried or bypassed during this change."
+  }
+}

@@ -3,32 +3,32 @@
   "dealer": "stockton-norton-grange-trade-cars",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "4e184777567849a2c5b4a9e4a3e652252179c29c",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "path": "templates/app",
-    "digest": "fad0067e48d7bd7e1c5177c5e91e2bc5767352e2c16621cb458d18a081f7c541",
-    "tree": "749512ff762c25272d1474225ff653dd4c88f0fe"
+    "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1",
+    "tree": "7f3d3ffa40546635377e6c5225194fe06fead291"
   },
-  "appDigest": "233de0ce541bb23880f0f535e7081d2d2d81e88a18fdbdcdeaf6e2239be4c903",
+  "appDigest": "64989e077585ae9c1fd17573eea23b1daf1d26406e3e008c9b7f142db00315f3",
   "provenance": {
     "schemaVersion": 1,
     "dealer": "stockton-norton-grange-trade-cars",
     "profile": "auto-best/src/lib/data/dealer-profile.json",
-    "profileSha256": "3d85a65059d32f7f4da14dd579ec313f9c3dc792bfbffe7b37ac471233341fd3",
+    "profileSha256": "4255031a9fb5a0ae798ce0198e1174298f06637f485f5e39eafbf382ec194874",
     "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
     "vehicles": 10,
     "currency": "GBP",
     "observedAt": "2026-10-10",
     "assets": [
       {
-        "source": "auto-best/static/dealer-brand/logo.webp",
-        "output": "public/dealer-app/logo-light-a4c81c76ad62d0916a42.webp",
-        "sha256": "a4c81c76ad62d0916a4212e7e31f93e2aa2b513309761f6c38a4c4ddc385befc",
+        "source": "auto-best/static/dealer-brand/v2-12870d10b91ab03b/logo-on-light.webp",
+        "output": "public/dealer-app/logo-light-d65350ee5091704fa437.webp",
+        "sha256": "d65350ee5091704fa43776b047e1760ce499c3684969dbf6afb5124b69ae3797",
         "role": "logo-light"
       },
       {
-        "source": "auto-best/static/dealer-brand/logo.webp",
-        "output": "public/dealer-app/logo-dark-a4c81c76ad62d0916a42.webp",
-        "sha256": "a4c81c76ad62d0916a4212e7e31f93e2aa2b513309761f6c38a4c4ddc385befc",
+        "source": "auto-best/static/dealer-brand/v2-12870d10b91ab03b/logo-on-dark.webp",
+        "output": "public/dealer-app/logo-dark-ffbf830304c097391a6b.webp",
+        "sha256": "ffbf830304c097391a6bd507b76160ba14cebbc84c68dfbf43dbda0190797590",
         "role": "logo-dark"
       },
       {
@@ -175,5 +175,5 @@
   },
   "needsDealerQA": true,
   "readyToPublish": false,
-  "refreshedAt": "2026-10-10T22:02:16.470Z"
+  "refreshedAt": "2026-10-15T02:16:35.916Z"
 }

@@ -3,32 +3,32 @@
   "dealer": "north-norfolk-car-sales",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "4e184777567849a2c5b4a9e4a3e652252179c29c",
+    "revision": "bb173c33d7b640502ad2e4bf27546748c12858b8",
     "path": "templates/app",
-    "digest": "fad0067e48d7bd7e1c5177c5e91e2bc5767352e2c16621cb458d18a081f7c541",
-    "tree": "749512ff762c25272d1474225ff653dd4c88f0fe"
+    "digest": "df336def57349fedfc4c425a00c7434c251735b90abb4636d0926290aafa7ed1",
+    "tree": "7f3d3ffa40546635377e6c5225194fe06fead291"
   },
-  "appDigest": "621ece5daf521cf1f49a0430efe7709a1a9c62bf620bd5f080f47d8417964a30",
+  "appDigest": "7bf63abe2e4172779509505e61ace7fed8b9d33a0b6fefb15b9e02002536e57c",
   "provenance": {
     "schemaVersion": 1,
     "dealer": "north-norfolk-car-sales",
     "profile": "auto-best/src/lib/data/dealer-profile.json",
-    "profileSha256": "a68818bd9a7a026b50da33a5576e0801539849d8d2cbdb1d5496e7f498d1f829",
+    "profileSha256": "a271de81b7d074bf0de23a4df5fcd118abe2bbc15657df2f68ed835c4293a875",
     "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
     "vehicles": 2,
     "currency": "GBP",
     "observedAt": "2026-10-10",
     "assets": [
       {
-        "source": "auto-best/static/dealer-brand/logo.webp",
-        "output": "public/dealer-app/logo-light-0f70eadda345cc351592.webp",
-        "sha256": "0f70eadda345cc351592c2d1c705b1aab754aefa7cf1eeb05231add4c0d2420f",
+        "source": "auto-best/static/dealer-brand/v2-1cd3fb6dc67c1653/logo-on-light.webp",
+        "output": "public/dealer-app/logo-light-8c7308f756043f2ebd72.webp",
+        "sha256": "8c7308f756043f2ebd72b3c78a7f2b0d915b05815b948f5824e2c5a734a52010",
         "role": "logo-light"
       },
       {
-        "source": "auto-best/static/dealer-brand/logo.webp",
-        "output": "public/dealer-app/logo-dark-0f70eadda345cc351592.webp",
-        "sha256": "0f70eadda345cc351592c2d1c705b1aab754aefa7cf1eeb05231add4c0d2420f",
+        "source": "auto-best/static/dealer-brand/v2-1cd3fb6dc67c1653/logo-on-dark.webp",
+        "output": "public/dealer-app/logo-dark-7120d1252bfdeecde9d0.webp",
+        "sha256": "7120d1252bfdeecde9d0425ff2b6cd24e245a5be65731f2be326e917ea03730d",
         "role": "logo-dark"
       },
       {
@@ -79,5 +79,5 @@
   },
   "needsDealerQA": true,
   "readyToPublish": false,
-  "refreshedAt": "2026-10-10T21:44:23.070Z"
+  "refreshedAt": "2026-10-15T08:55:24.337Z"
 }

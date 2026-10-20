@@ -4,30 +4,36 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@repo/design-system/components/ui/accordion";
-import { Button } from "@repo/design-system/components/ui/button";
 import { Input } from "@repo/design-system/components/ui/input";
 import { Label } from "@repo/design-system/components/ui/label";
 import { Textarea } from "@repo/design-system/components/ui/textarea";
 import { cn } from "@repo/design-system/lib/utils";
+import { withBasePath } from "@repo/internationalization/paths";
+import { leadSite, vehicleCategories } from "@repo/marketplace";
+import { publicSite } from "@repo/marketplace/site-config";
+import { DealerDesktopHero } from "@repo/marketplace-ui/components/dealer-desktop-hero";
 import {
-  getListingPath,
-  leadSite,
-  parseMarketplaceSearchParams,
-  vehicleCategories,
-  vehicleMakes,
-} from "@repo/marketplace";
-import { marketplaceDiscoveryFrameClassName } from "@repo/marketplace-ui";
-import { VehicleCard } from "@repo/marketplace-ui/components/vehicle-card";
+  DesktopActionButton,
+  DesktopActionPanel,
+} from "@repo/marketplace-ui/components/desktop-action-panel";
+import Image from "@repo/marketplace-ui/components/public-image";
 import { getLocalizedPath, normalizeSeoLocale } from "@repo/seo/metadata";
 import { ArrowRight } from "lucide-react";
 import type { Metadata } from "next";
-import Image from "next/image";
-import Link from "next/link";
-import { getPublicMarketplaceListings } from "@/lib/public-marketplace-data";
 import { createPublicLocalizedMetadata } from "@/lib/public-metadata";
+import { requirePublicSitePath } from "@/lib/public-site-access";
 import { getPublicWebBaseUrl } from "@/lib/public-url";
+import {
+  parseSellVehicleDraft,
+  sellCategoryLabels,
+  serializeSellVehicleDraft,
+  vehicleMileageMaximum,
+  vehicleYearMaximum,
+  vehicleYearMinimum,
+} from "@/lib/sell-vehicle-draft";
 import { MobileSellVehicleExperience } from "../components/mobile-sell-vehicle-experience";
 import { MobileVehicleTaxonomyFields } from "../components/mobile-vehicle-taxonomy-fields";
+import desktopStyles from "../components/public-desktop-layout.module.css";
 import { PublicMarketplaceFrame } from "../components/public-marketplace-frame";
 
 interface SellPageProps {
@@ -44,33 +50,34 @@ const pageCopy = {
     detailsPlaceholder:
       "Състояние, сервизна история, екстри или нещо важно за автомобила.",
     description:
-      "Дайте ни основните данни за автомобила. Екипът ни ще се свърже с вас за оглед и конкретна оферта.",
-    faqTitle: "Как протича оценката",
+      "Подгответе данни и попитайте автокъщата дали разглежда предложения за автомобил. Демото не изпраща заявка.",
+    faqTitle: "Какво да уточните",
     faqs: [
       {
         answer:
-          "Не. Можете да предложите автомобила за директно изкупуване, без да купувате друг.",
-        question: "Задължителен ли е бартерът?",
+          "Публичните данни не потвърждават изкупуване или бартер. Попитайте автокъщата дали разглежда такива предложения.",
+        question: "Предлагате ли изкупуване или бартер?",
       },
       {
         answer:
-          "Марка, модел, година и пробег са достатъчни за първоначалния разговор. Подгответе и телефон за връзка.",
+          "Марка, модел, година, пробег и състояние са отправна точка за разговор. Не изпращайте лични документи през демото.",
         question: "Какви данни са необходими?",
       },
       {
-        answer:
-          "Финалната оценка се прави след оглед на място в шоурума ни в Студентски град, София.",
-        question: "Може ли оценка само по снимки?",
+        answer: "Снимките помагат за разговор, но не представляват оценка. Потвърдете следващите стъпки директно.",
+        question: "Какво показват снимките?",
       },
       {
         answer:
-          "Регистрационните документи, сервизната история и информацията за ремонти помагат за по-бърза оценка.",
-        question: "Какво да подготвя за огледа?",
+          "Ако автокъщата разглежда предложението, уточнете дали е нужен оглед и къде. Не е потвърдена услуга за оценка.",
+        question: "Нужен ли е оглед?",
       },
     ],
     formDescription:
-      "Без регистрация. Започнете с основните данни, а ние ще уточним следващата стъпка.",
-    formLabel: "Заявете оценка на автомобил",
+      "Формата подготвя данни за контакт. Тя не изпраща заявка, не оценява и не приема автомобил.",
+    desktopFormDescription:
+      "Въведете данни за контактната стъпка. Демото не изпраща заявка и не извършва оценка.",
+    formLabel: "Подгответе данни за автомобил",
     makeLabel: "Марка",
     mileageLabel: "Пробег",
     mileagePlaceholder: "62 000 км",
@@ -79,7 +86,7 @@ const pageCopy = {
     primaryAction: "Продължи",
     changeVehicle: "Променете автомобила",
     selectedVehicleLabel: "Избран автомобил",
-    title: "Продайте ни автомобила си",
+    title: "Вашият автомобил",
     yearLabel: "Година",
     yearPlaceholder: "2022",
   },
@@ -91,33 +98,34 @@ const pageCopy = {
     detailsPlaceholder:
       "Condition, service history, extras, or anything important about the vehicle.",
     description:
-      "Give us the essentials about your vehicle. Our team will contact you to arrange an inspection and a concrete offer.",
-    faqTitle: "How the appraisal works",
+      "Prepare vehicle details and ask whether the dealership considers vehicle offers. This demo does not submit a request.",
+    faqTitle: "What to confirm",
     faqs: [
       {
         answer:
-          "No. You can offer the vehicle for direct purchase without buying another car.",
-        question: "Is a trade-in required?",
+          "Public information does not confirm purchase or trade-in services. Ask whether the dealership considers such offers.",
+        question: "Do you consider purchase or trade-in?",
       },
       {
         answer:
-          "Make, model, year, and mileage are enough for the initial conversation. Please also leave a phone number.",
+          "Make, model, year, mileage and condition are a starting point for a conversation. Do not submit personal documents through this demo.",
         question: "What information do you need?",
       },
       {
-        answer:
-          "The final appraisal follows an in-person inspection at our showroom in Studentski grad, Sofia.",
-        question: "Can you appraise it from photos only?",
+        answer: "Photos can help a conversation but are not an appraisal. Confirm the next steps directly.",
+        question: "What do photos show?",
       },
       {
         answer:
-          "Registration documents, service history, and repair information help us appraise the car faster.",
-        question: "What should I prepare?",
+          "If the dealership considers the offer, confirm whether an inspection is needed and where. An appraisal service is unconfirmed.",
+        question: "Is an inspection needed?",
       },
     ],
     formDescription:
-      "No account required. Start with the essentials and we will agree the next step with you.",
-    formLabel: "Request a vehicle appraisal",
+      "The form prepares details for the contact step. It does not submit a request, appraise or accept a vehicle.",
+    desktopFormDescription:
+      "Enter details for the contact step. This demo does not submit a request or perform an appraisal.",
+    formLabel: "Prepare vehicle details",
     makeLabel: "Make",
     mileageLabel: "Mileage",
     mileagePlaceholder: "62,000 km",
@@ -126,51 +134,22 @@ const pageCopy = {
     primaryAction: "Continue",
     changeVehicle: "Change vehicle",
     selectedVehicleLabel: "Selected vehicle",
-    title: "Sell us your vehicle",
+    title: "Your vehicle",
     yearLabel: "Year",
     yearPlaceholder: "2022",
   },
 } as const;
 
-const categoryLabels = {
-  bg: {
-    car: "Автомобил",
-    motorbike: "Мотоциклет",
-    truck: "Камион",
-    van: "Бус",
-  },
-  en: {
-    car: "Car",
-    motorbike: "Motorbike",
-    truck: "Truck",
-    van: "Van",
-  },
-} as const;
-
+const categoryLabels = sellCategoryLabels;
+const sellCategoryAssets = leadSite.sellCategoryAssets;
 const sellableCategories = vehicleCategories.filter(
   (category) => category.id !== "lease"
 );
-
-const sellCategoryAssets = {
-  car: "/lead-sell-car-v1.png",
-  motorbike: "/lead-sell-motorcycle-v1.png",
-  truck: "/lead-sell-truck-v1.png",
-  van: "/lead-sell-van-v1.png",
-} as const;
 
 const inputClassName =
   "h-11 rounded-lg border-transparent bg-secondary shadow-none";
 const selectClassName =
   "h-11 w-full rounded-lg border border-transparent bg-secondary px-3 text-sm outline-none transition-shadow focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50";
-
-const getQueryValue = (
-  query: Record<string, string | string[] | undefined>,
-  key: string
-) => {
-  const value = query[key];
-  const firstValue = Array.isArray(value) ? value[0] : value;
-  return typeof firstValue === "string" ? firstValue.trim() : "";
-};
 
 export const generateMetadata = async ({
   params,
@@ -181,11 +160,11 @@ export const generateMetadata = async ({
   return createPublicLocalizedMetadata({
     baseUrl: getPublicWebBaseUrl(),
     description: isBg
-      ? `Предложете автомобила си за изкупуване или бартер на ${leadSite.name}.`
-      : `Offer your vehicle to ${leadSite.name} for purchase or trade-in.`,
+      ? `Подгответе данни и попитайте ${leadSite.name} дали разглежда предложения за автомобил. Демото не изпраща заявка.`
+      : `Prepare details and ask whether ${leadSite.name} considers vehicle offers. This demo does not submit a request.`,
     locale,
     path: "/sell",
-    title: isBg ? "Продайте ни автомобил" : "Sell us your vehicle",
+    title: isBg ? "Вашият автомобил" : "Your vehicle",
   });
 };
 
@@ -193,6 +172,7 @@ export default async function SellPage({
   params,
   searchParams,
 }: SellPageProps) {
+  requirePublicSitePath("/sell");
   const [{ locale }, query] = await Promise.all([
     params,
     searchParams ?? Promise.resolve({}),
@@ -200,23 +180,16 @@ export default async function SellPage({
   const normalizedLocale = normalizeSeoLocale(locale);
   const copy = pageCopy[normalizedLocale];
   const localize = (path: string) => getLocalizedPath(normalizedLocale, path);
-  const { listings } = await getPublicMarketplaceListings(
-    parseMarketplaceSearchParams({ category: "car" })
-  );
 
-  const requestedCategory = getQueryValue(query, "category");
-  const requestedMake = getQueryValue(query, "make");
-  const requestedModel = getQueryValue(query, "model");
-  const initialCategory = sellableCategories.some(
-    (category) => category.id === requestedCategory
-  )
-    ? requestedCategory
-    : "car";
-  const initialMake = vehicleMakes.includes(requestedMake) ? requestedMake : "";
-  const initialModel = requestedModel.slice(0, 80);
-  const initialMileage = getQueryValue(query, "mileage");
-  const initialNotes = getQueryValue(query, "notes").slice(0, 500);
-  const initialYear = getQueryValue(query, "year");
+  const initialDraft = parseSellVehicleDraft(query);
+  const {
+    category: initialCategory,
+    make: initialMake,
+    model: initialModel,
+    mileage: initialMileage,
+    notes: initialNotes,
+    year: initialYear,
+  } = initialDraft;
   const hasSelectedVehicle = Boolean(initialMake && initialModel);
   const selectedVehicleAsset =
     sellCategoryAssets[initialCategory as keyof typeof sellCategoryAssets] ??
@@ -232,87 +205,49 @@ export default async function SellPage({
       <main className="lg:min-h-[38rem]">
         <MobileSellVehicleExperience
           contactHref={localize("/contact")}
-          inventory={
-            listings.length ? (
-              listings
-                .slice(0, 6)
-                .map((listing) => (
-                  <VehicleCard
-                    density="compact"
-                    href={localize(getListingPath(listing))}
-                    key={listing.id}
-                    listing={listing}
-                    locale={normalizedLocale}
-                    presentation="discovery"
-                  />
-                ))
-            ) : (
-              <p className="py-6 text-center text-sm text-zinc-600">
-                {normalizedLocale === "bg"
-                  ? "В момента няма налични автомобили."
-                  : "No cars are currently available."}
-              </p>
-            )
-          }
+          initialDraft={initialDraft}
+          key={serializeSellVehicleDraft(initialDraft)}
           locale={normalizedLocale}
         />
-        <div
-          className={cn(
-            marketplaceDiscoveryFrameClassName,
-            "hidden py-5 sm:py-7 lg:block lg:py-9"
-          )}
+        <DealerDesktopHero
+          locale={normalizedLocale}
+          title={copy.title}
+          variant="service"
         >
-          <section
-            className="relative isolate min-h-[34rem] overflow-hidden rounded-xl border border-border shadow-panel lg:min-h-[32rem]"
-            data-slot="sell-hero"
+          <div
+            className={cn(
+              "hidden lg:block",
+              desktopStyles.content,
+              desktopStyles.heroContent
+            )}
           >
-            <Image
-              alt={
-                normalizedLocale === "bg"
-                  ? "Автомобили пред модерен шоурум"
-                  : "Vehicles outside a modern showroom"
-              }
-              className="object-cover object-center"
-              fill
-              priority
-              sizes="(min-width: 1792px) calc(100vw - 96px), (min-width: 1440px) 1360px, calc(100vw - 48px)"
-              src="/images/sell/day-night-sell-centered-hero-v2.webp"
-            />
-            <div aria-hidden="true" className="absolute inset-0 bg-black/15" />
-
-            <div
-              className="relative z-10 flex min-h-[40rem] items-start justify-center px-3 pt-6 pb-3 lg:min-h-[32rem] lg:items-center lg:p-8"
-              data-slot="sell-hero-content"
+            <DesktopActionPanel
+              className={desktopStyles.sellPanel}
+              data-slot="sell-hero"
             >
-              <div
-                className="w-full max-w-6xl rounded-xl bg-card p-4 shadow-2xl shadow-black/20 sm:p-6 lg:border lg:border-border/80 lg:p-7"
-                data-slot="sell-form-panel"
-              >
-                <h1 className="text-balance text-center font-semibold text-[1.875rem] leading-[1.08] tracking-[-0.03em] lg:text-page-title-lg">
-                  {copy.title}
-                </h1>
-                <p className="mx-auto mt-3 max-w-[17rem] text-center text-muted-foreground text-sm leading-6 lg:max-w-2xl lg:text-body">
-                  <span className="lg:hidden">
-                    {normalizedLocale === "bg"
-                      ? "Започнете с основните данни. Ще се свържем с вас за оглед и оферта."
-                      : "Start with the essentials. We will contact you to arrange an inspection and offer."}
-                  </span>
-                  <span className="hidden lg:inline">{copy.description}</span>
-                </p>
-
+              <div data-slot="sell-form-panel">
+                <div className="mb-4 max-w-3xl">
+                  <h2 className="font-semibold text-xl tracking-tight">
+                    {copy.formLabel}
+                  </h2>
+                  <p className="mt-2 text-muted-foreground text-sm leading-6">
+                    {copy.desktopFormDescription}
+                  </p>
+                </div>
                 <form
                   action={localize("/contact")}
                   aria-label={copy.formLabel}
                   className={cn(
-                    "mt-5 grid grid-cols-2 gap-3",
+                    "grid grid-cols-2 gap-3",
                     hasSelectedVehicle
-                      ? "lg:grid-cols-[minmax(9rem,1fr)_minmax(15rem,1.7fr)_minmax(8rem,1fr)_minmax(9rem,1fr)_auto]"
-                      : "lg:grid-cols-[minmax(9rem,1fr)_minmax(9rem,1fr)_minmax(11rem,1.25fr)_minmax(8rem,1fr)_minmax(9rem,1fr)_auto]"
+                      ? "lg:grid-cols-[minmax(0,1fr)_minmax(0,1.7fr)_minmax(0,.75fr)_minmax(0,1fr)_auto]"
+                      : "lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)_minmax(0,1.25fr)_minmax(0,.75fr)_minmax(0,1fr)_auto]"
                   )}
                   data-slot="sell-vehicle-start-form"
                   method="get"
                 >
                   <input name="intent" type="hidden" value="sell" />
+                  <input name="vin" type="hidden" value={initialDraft.vin} />
                   <div className="grid gap-1.5">
                     <Label className="text-meta" htmlFor="sell-category">
                       {copy.categoryLabel}
@@ -363,8 +298,8 @@ export default async function SellPage({
                       defaultValue={initialYear}
                       id="sell-year"
                       inputMode="numeric"
-                      max={2100}
-                      min={1886}
+                      max={vehicleYearMaximum}
+                      min={vehicleYearMinimum}
                       name="year"
                       placeholder={copy.yearPlaceholder}
                       required
@@ -381,7 +316,7 @@ export default async function SellPage({
                       defaultValue={initialMileage}
                       id="sell-mileage"
                       inputMode="numeric"
-                      max={10_000_000}
+                      max={vehicleMileageMaximum}
                       min={0}
                       name="mileage"
                       placeholder={copy.mileagePlaceholder}
@@ -391,28 +326,25 @@ export default async function SellPage({
                   </div>
 
                   <div className="col-span-2 flex items-end justify-end lg:col-span-1">
-                    <Button
-                      className="h-11 w-full gap-2 rounded-lg bg-[var(--lead-site-accent)] px-5 text-white shadow-none hover:bg-[var(--lead-site-accent-hover)]"
-                      type="submit"
-                    >
+                    <DesktopActionButton className="w-full" type="submit">
                       {copy.primaryAction}
                       <ArrowRight aria-hidden="true" className="size-4" />
-                    </Button>
+                    </DesktopActionButton>
                   </div>
 
-                  <div
-                    className="col-span-2 hidden rounded-lg border border-border/60 bg-secondary/80 p-2.5 lg:col-span-full lg:block"
+                  <details
+                    className="col-span-2 hidden lg:col-span-full lg:block"
                     data-slot="sell-optional-details"
+                    open={initialNotes ? true : undefined}
                   >
-                    <div className="flex items-center justify-between gap-3 px-1">
-                      <Label className="text-meta" htmlFor="sell-notes">
-                        {copy.detailsLabel}
-                      </Label>
-                      <span className="text-muted-foreground text-xs">
+                    <summary className="cursor-pointer font-medium text-meta">
+                      <span>{copy.detailsLabel}</span>
+                      <span className="ml-2 text-meta text-muted-foreground">
                         {copy.detailsHint}
                       </span>
-                    </div>
+                    </summary>
                     <Textarea
+                      aria-label={copy.detailsLabel}
                       className="mt-2 h-20 min-h-20 resize-none rounded-md border-transparent bg-card shadow-none"
                       defaultValue={initialNotes}
                       id="sell-notes"
@@ -420,37 +352,36 @@ export default async function SellPage({
                       name="notes"
                       placeholder={copy.detailsPlaceholder}
                     />
-                  </div>
+                  </details>
                 </form>
-
-                <div className="mt-5 flex flex-col items-start justify-center gap-2 border-border border-t pt-4 text-sm sm:flex-row sm:items-center sm:gap-7 lg:mt-5">
-                  <p className="text-muted-foreground">
-                    {normalizedLocale === "bg"
-                      ? "Търсите автомобил за бартер?"
-                      : "Looking for a trade-in vehicle?"}{" "}
-                    <Link
-                      className="font-medium text-foreground underline-offset-4 hover:underline"
-                      href={localize("/cars")}
-                    >
-                      {normalizedLocale === "bg"
-                        ? "Вижте наличностите"
-                        : "Browse inventory"}
-                    </Link>
-                  </p>
-                  <p className="text-muted-foreground">
-                    {copy.contactPrompt}{" "}
-                    <a
-                      className="font-medium text-foreground underline-offset-4 hover:underline"
-                      href={leadSite.phoneHref}
-                    >
-                      {leadSite.phoneDisplay}
-                    </a>
-                  </p>
-                </div>
+                <p className="mt-5 border-border border-t pt-4 text-center text-meta text-muted-foreground">
+                  {copy.contactPrompt}{" "}
+                  <a
+                    className="font-medium text-foreground underline underline-offset-4"
+                    href={withBasePath(leadSite.phoneHref)}
+                  >
+                    {leadSite.phoneDisplay}
+                  </a>
+                </p>
               </div>
-            </div>
-          </section>
-
+              <div
+                className={desktopStyles.serviceArtwork}
+                data-slot="sell-desktop-artwork"
+              >
+                <Image
+                  alt=""
+                  fill
+                  sizes="180px"
+                  src={
+                    publicSite.artwork.desktopServices?.sell ??
+                    publicSite.artwork.sellHero
+                  }
+                />
+              </div>
+            </DesktopActionPanel>
+          </div>
+        </DealerDesktopHero>
+        <div className={cn("hidden lg:block", desktopStyles.content)}>
           <section
             className="mx-auto mt-8 w-full max-w-4xl sm:mt-10"
             data-slot="sell-faq"

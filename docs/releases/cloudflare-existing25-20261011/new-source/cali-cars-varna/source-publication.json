@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-source-publication",
+  "reviewed": true,
+  "reviewedAt": "2026-10-13T14:42:48.703Z",
+  "dealer": "cali-cars-varna",
+  "dealerId": "cali-cars-varna",
+  "repository": "darkapoparka/cars-cali-cars-varna",
+  "sourceOwnership": "cars-canonical",
+  "request": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/batch-4-qualified23-request.json",
+    "sha256": "dcdd093f40a04d9187d5ddaa8cbdbb0006b0fed9ff01722a2d9179278d548f29"
+  },
+  "proposal": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/cali-cars-varna/source-proposal.json",
+    "sha256": "3c99b6c21d6403fc94df335e529c64e22440b6cabda7fb219d985ace87c46203"
+  },
+  "preparation": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/cali-cars-varna/source-preparation.json",
+    "sha256": "e5a74cdb9ad3571267950d8023165b7b5cd8adeeca931c755ba4af2a8d8cb17c"
+  },
+  "inputMapping": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/cali-cars-varna/input-mapping.json",
+    "sha256": "67a1ac9208929f6eda7214f97c052192556da9f68c772cedaf3108910efb62ef"
+  },
+  "sourcePublication": {
+    "repository": "darkapoparka/cars",
+    "commit": "328c0102d7ed151781c4358033eae12102697bd4",
+    "sourceTree": "287d787dc8468ea5f472291cd62a8b533d629f91",
+    "ref": "refs/heads/main",
+    "publishedAt": "2026-10-13T14:41:00.838Z",
+    "evidence": "https://github.com/darkapoparka/cars/commit/328c0102d7ed151781c4358033eae12102697bd4"
+  }
+}

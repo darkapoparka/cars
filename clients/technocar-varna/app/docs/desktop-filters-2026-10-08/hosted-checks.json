@@ -1,0 +1,1086 @@
+{
+  "productionCommit": "e2504af29c9e6e86911f3a1e5b61e1b4e1894674",
+  "sourceCommit": "1f80d598b690059e7a5d6fce9361aaf1b8032866",
+  "alias": "https://cars-template-app.vercel.app",
+  "keyboardFocusAfterLastAction": "Close filters",
+  "checks": [
+    {
+      "locale": "bg",
+      "category": "Model",
+      "buttons": [
+        {
+          "rect": {
+            "height": 44,
+            "width": 177.671875,
+            "x": 246.5,
+            "y": 826
+          },
+          "text": "Изчисти всички филтри"
+        },
+        {
+          "rect": {
+            "height": 44,
+            "width": 197.140625,
+            "x": 981.359375,
+            "y": 826
+          },
+          "text": "Покажете 48 автомобила"
+        }
+      ],
+      "dialog": {
+        "height": 760,
+        "width": 980,
+        "x": 222.5,
+        "y": 120
+      },
+      "footer": {
+        "height": 64,
+        "width": 980,
+        "x": 222.5,
+        "y": 816
+      },
+      "images": [
+        {
+          "blend": "normal",
+          "loaded": true,
+          "src": "/reference-assets/brand-audi.png"
+        },
+        {
+          "blend": "normal",
+          "loaded": true,
+          "src": "/reference-assets/brand-bmw.png"
+        },
+        {
+          "blend": "normal",
+          "loaded": true,
+          "src": "/reference-assets/sell-brand-7.png"
+        },
+        {
+          "blend": "normal",
+          "loaded": true,
+          "src": "/reference-assets/brand-hyundai.png"
+        },
+        {
+          "blend": "normal",
+          "loaded": true,
+          "src": "/reference-assets/sell-brand-8.png"
+        },
+        {
+          "blend": "normal",
+          "loaded": true,
+          "src": "/reference-assets/brand-mercedes.png"
+        },
+        {
+          "blend": "normal",
+          "loaded": true,
+          "src": "/reference-assets/brand-nissan.png"
+        },
+        {
+          "blend": "normal",
+          "loaded": true,
+          "src": "/reference-assets/sell-brand-1.png"
+        }
+      ],
+      "overflow": -15,
+      "visibleSearches": 1,
+      "width": 1440
+    },
+    {
+      "locale": "bg",
+      "category": "Selected SUV",
+      "buttons": [
+        {
+          "rect": {
+            "height": 44,
+            "width": 177.671875,
+            "x": 246.5,
+            "y": 826
+          },
+          "text": "Изчисти всички филтри"
+        },
+        {
+          "rect": {
+            "height": 44,
+            "width": 197.140625,
+            "x": 981.359375,
+            "y": 826
+          },
+          "text": "Покажете 33 автомобила"
+        }
+      ],
+      "dialog": {
+        "height": 760,
+        "width": 980,
+        "x": 222.5,
+        "y": 120
+      },
+      "footer": {
+        "height": 64,
+        "width": 980,
+        "x": 222.5,
+        "y": 816
+      },
+      "images": [
+        {
+          "blend": "multiply",
+          "loaded": true,
+          "src": "/reference-assets/continuation/filter-body-0.png"
+        },
+        {
+          "blend": "multiply",
+          "loaded": true,
+          "src": "/reference-assets/continuation/filter-body-1.png"
+        },
+        {
+          "blend": "multiply",
+          "loaded": true,
+          "src": "/reference-assets/continuation/filter-body-2.png"
+        },
+        {
+          "blend": "multiply",
+          "loaded": false,
+          "src": "/reference-assets/continuation/filter-body-3.png"
+        },
+        {
+          "blend": "multiply",
+          "loaded": true,
+          "src": "/reference-assets/continuation/filter-body-4.png"
+        },
+        {
+          "blend": "multiply",
+          "loaded": true,
+          "src": "/reference-assets/continuation/filter-body-5.png"
+        },
+        {
+          "blend": "multiply",
+          "loaded": true,
+          "src": "/reference-assets/continuation/filter-body-6.png"
+        },
+        {
+          "blend": "multiply",
+          "loaded": true,
+          "src": "/reference-assets/continuation/filter-body-7.png"
+        },
+        {
+          "blend": "multiply",
+          "loaded": true,
+          "src": "/reference-assets/continuation/filter-body-8.png"
+        },
+        {
+          "blend": "multiply",
+          "loaded": true,
+          "src": "/reference-assets/continuation/filter-body-9.png"
+        },
+        {
+          "blend": "multiply",
+          "loaded": true,
+          "src": "/reference-assets/continuation/filter-body-10.png"
+        },
+        {
+          "blend": "multiply",
+          "loaded": true,
+          "src": "/reference-assets/continuation/filter-body-11.png"
+        },
+        {
+          "blend": "multiply",
+          "loaded": true,
+          "src": "/reference-assets/continuation/filter-body-12.png"
+        },
+        {
+          "blend": "multiply",
+          "loaded": true,
+          "src": "/reference-assets/continuation/filter-body-13.png"
+        }
+      ],
+      "overflow": -15,
+      "visibleSearches": 0,
+      "width": 1440
+    },
+    {
+      "locale": "bg",
+      "category": "Model",
+      "buttons": [
+        {
+          "rect": {
+            "height": 44,
+            "width": 88,
+            "x": 12,
+            "y": 794
+          },
+          "text": "Изчистете"
+        },
+        {
+          "rect": {
+            "height": 44,
+            "width": 270,
+            "x": 108,
+            "y": 794
+          },
+          "text": "Покажете 48 автомобила"
+        }
+      ],
+      "dialog": {
+        "height": 844,
+        "width": 390,
+        "x": 0,
+        "y": 0
+      },
+      "footer": {
+        "height": 56,
+        "width": 390,
+        "x": 0,
+        "y": 788
+      },
+      "images": [],
+      "overflow": 0,
+      "visibleSearches": 1,
+      "width": 390
+    },
+    {
+      "locale": "bg",
+      "category": "Selected SUV",
+      "buttons": [
+        {
+          "rect": {
+            "height": 44,
+            "width": 88,
+            "x": 12,
+            "y": 794
+          },
+          "text": "Изчистете"
+        },
+        {
+          "rect": {
+            "height": 44,
+            "width": 270,
+            "x": 108,
+            "y": 794
+          },
+          "text": "Покажете 33 автомобила"
+        }
+      ],
+      "dialog": {
+        "height": 844,
+        "width": 390,
+        "x": 0,
+        "y": 0
+      },
+      "footer": {
+        "height": 56,
+        "width": 390,
+        "x": 0,
+        "y": 788
+      },
+      "images": [
+        {
+          "blend": "multiply",
+          "loaded": true,
+          "src": "/reference-assets/continuation/filter-body-0.png"
+        },
+        {
+          "blend": "multiply",
+          "loaded": true,
+          "src": "/reference-assets/continuation/filter-body-1.png"
+        },
+        {
+          "blend": "multiply",
+          "loaded": true,
+          "src": "/reference-assets/continuation/filter-body-2.png"
+        },
+        {
+          "blend": "multiply",
+          "loaded": true,
+          "src": "/reference-assets/continuation/filter-body-3.png"
+        },
+        {
+          "blend": "multiply",
+          "loaded": true,
+          "src": "/reference-assets/continuation/filter-body-4.png"
+        },
+        {
+          "blend": "multiply",
+          "loaded": true,
+          "src": "/reference-assets/continuation/filter-body-5.png"
+        },
+        {
+          "blend": "multiply",
+          "loaded": true,
+          "src": "/reference-assets/continuation/filter-body-6.png"
+        },
+        {
+          "blend": "multiply",
+          "loaded": true,
+          "src": "/reference-assets/continuation/filter-body-7.png"
+        },
+        {
+          "blend": "multiply",
+          "loaded": true,
+          "src": "/reference-assets/continuation/filter-body-8.png"
+        },
+        {
+          "blend": "multiply",
+          "loaded": true,
+          "src": "/reference-assets/continuation/filter-body-9.png"
+        },
+        {
+          "blend": "multiply",
+          "loaded": true,
+          "src": "/reference-assets/continuation/filter-body-10.png"
+        },
+        {
+          "blend": "multiply",
+          "loaded": true,
+          "src": "/reference-assets/continuation/filter-body-11.png"
+        },
+        {
+          "blend": "multiply",
+          "loaded": true,
+          "src": "/reference-assets/continuation/filter-body-12.png"
+        },
+        {
+          "blend": "multiply",
+          "loaded": true,
+          "src": "/reference-assets/continuation/filter-body-13.png"
+        }
+      ],
+      "overflow": 0,
+      "visibleSearches": 0,
+      "width": 390
+    },
+    {
+      "locale": "bg",
+      "category": "Model",
+      "buttons": [
+        {
+          "rect": {
+            "height": 44,
+            "width": 88,
+            "x": 12,
+            "y": 794
+          },
+          "text": "Изчистете"
+        },
+        {
+          "rect": {
+            "height": 44,
+            "width": 200,
+            "x": 108,
+            "y": 794
+          },
+          "text": "Покажете 48 автомобила"
+        }
+      ],
+      "dialog": {
+        "height": 844,
+        "width": 320,
+        "x": 0,
+        "y": 0
+      },
+      "footer": {
+        "height": 56,
+        "width": 320,
+        "x": 0,
+        "y": 788
+      },
+      "images": [],
+      "overflow": 0,
+      "visibleSearches": 1,
+      "width": 320
+    },
+    {
+      "locale": "bg",
+      "category": "Selected SUV",
+      "buttons": [
+        {
+          "rect": {
+            "height": 44,
+            "width": 88,
+            "x": 12,
+            "y": 794
+          },
+          "text": "Изчистете"
+        },
+        {
+          "rect": {
+            "height": 44,
+            "width": 200,
+            "x": 108,
+            "y": 794
+          },
+          "text": "Покажете 33 автомобила"
+        }
+      ],
+      "dialog": {
+        "height": 844,
+        "width": 320,
+        "x": 0,
+        "y": 0
+      },
+      "footer": {
+        "height": 56,
+        "width": 320,
+        "x": 0,
+        "y": 788
+      },
+      "images": [
+        {
+          "blend": "multiply",
+          "loaded": true,
+          "src": "/reference-assets/continuation/filter-body-0.png"
+        },
+        {
+          "blend": "multiply",
+          "loaded": true,
+          "src": "/reference-assets/continuation/filter-body-1.png"
+        },
+        {
+          "blend": "multiply",
+          "loaded": true,
+          "src": "/reference-assets/continuation/filter-body-2.png"
+        },
+        {
+          "blend": "multiply",
+          "loaded": true,
+          "src": "/reference-assets/continuation/filter-body-3.png"
+        },
+        {
+          "blend": "multiply",
+          "loaded": true,
+          "src": "/reference-assets/continuation/filter-body-4.png"
+        },
+        {
+          "blend": "multiply",
+          "loaded": true,
+          "src": "/reference-assets/continuation/filter-body-5.png"
+        },
+        {
+          "blend": "multiply",
+          "loaded": true,
+          "src": "/reference-assets/continuation/filter-body-6.png"
+        },
+        {
+          "blend": "multiply",
+          "loaded": true,
+          "src": "/reference-assets/continuation/filter-body-7.png"
+        },
+        {
+          "blend": "multiply",
+          "loaded": true,
+          "src": "/reference-assets/continuation/filter-body-8.png"
+        },
+        {
+          "blend": "multiply",
+          "loaded": true,
+          "src": "/reference-assets/continuation/filter-body-9.png"
+        },
+        {
+          "blend": "multiply",
+          "loaded": true,
+          "src": "/reference-assets/continuation/filter-body-10.png"
+        },
+        {
+          "blend": "multiply",
+          "loaded": true,
+          "src": "/reference-assets/continuation/filter-body-11.png"
+        },
+        {
+          "blend": "multiply",
+          "loaded": true,
+          "src": "/reference-assets/continuation/filter-body-12.png"
+        },
+        {
+          "blend": "multiply",
+          "loaded": true,
+          "src": "/reference-assets/continuation/filter-body-13.png"
+        }
+      ],
+      "overflow": 0,
+      "visibleSearches": 0,
+      "width": 320
+    },
+    {
+      "locale": "en",
+      "category": "Model",
+      "buttons": [
+        {
+          "rect": {
+            "height": 44,
+            "width": 120.171875,
+            "x": 246.5,
+            "y": 826
+          },
+          "text": "Clear all filters"
+        },
+        {
+          "rect": {
+            "height": 44,
+            "width": 120.109375,
+            "x": 1058.390625,
+            "y": 826
+          },
+          "text": "Show 48 cars"
+        }
+      ],
+      "dialog": {
+        "height": 760,
+        "width": 980,
+        "x": 222.5,
+        "y": 120
+      },
+      "footer": {
+        "height": 64,
+        "width": 980,
+        "x": 222.5,
+        "y": 816
+      },
+      "images": [
+        {
+          "blend": "normal",
+          "loaded": true,
+          "src": "/reference-assets/brand-audi.png"
+        },
+        {
+          "blend": "normal",
+          "loaded": true,
+          "src": "/reference-assets/brand-bmw.png"
+        },
+        {
+          "blend": "normal",
+          "loaded": true,
+          "src": "/reference-assets/sell-brand-7.png"
+        },
+        {
+          "blend": "normal",
+          "loaded": true,
+          "src": "/reference-assets/brand-hyundai.png"
+        },
+        {
+          "blend": "normal",
+          "loaded": true,
+          "src": "/reference-assets/sell-brand-8.png"
+        },
+        {
+          "blend": "normal",
+          "loaded": true,
+          "src": "/reference-assets/brand-mercedes.png"
+        },
+        {
+          "blend": "normal",
+          "loaded": true,
+          "src": "/reference-assets/brand-nissan.png"
+        },
+        {
+          "blend": "normal",
+          "loaded": true,
+          "src": "/reference-assets/sell-brand-1.png"
+        }
+      ],
+      "overflow": -15,
+      "visibleSearches": 1,
+      "width": 1440
+    },
+    {
+      "locale": "en",
+      "category": "Toyota keyword",
+      "buttons": [
+        {
+          "rect": {
+            "height": 44,
+            "width": 120.171875,
+            "x": 246.5,
+            "y": 826
+          },
+          "text": "Clear all filters"
+        },
+        {
+          "rect": {
+            "height": 44,
+            "width": 110.96875,
+            "x": 1067.53125,
+            "y": 826
+          },
+          "text": "Show 9 cars"
+        }
+      ],
+      "dialog": {
+        "height": 760,
+        "width": 980,
+        "x": 222.5,
+        "y": 120
+      },
+      "footer": {
+        "height": 64,
+        "width": 980,
+        "x": 222.5,
+        "y": 816
+      },
+      "images": [],
+      "overflow": -15,
+      "visibleSearches": 1,
+      "width": 1440
+    },
+    {
+      "locale": "en",
+      "category": "Selected SUV",
+      "buttons": [
+        {
+          "rect": {
+            "height": 44,
+            "width": 120.171875,
+            "x": 246.5,
+            "y": 826
+          },
+          "text": "Clear all filters"
+        },
+        {
+          "rect": {
+            "height": 44,
+            "width": 120.21875,
+            "x": 1058.28125,
+            "y": 826
+          },
+          "text": "Show 33 cars"
+        }
+      ],
+      "dialog": {
+        "height": 760,
+        "width": 980,
+        "x": 222.5,
+        "y": 120
+      },
+      "footer": {
+        "height": 64,
+        "width": 980,
+        "x": 222.5,
+        "y": 816
+      },
+      "images": [
+        {
+          "blend": "multiply",
+          "loaded": true,
+          "src": "/reference-assets/continuation/filter-body-0.png"
+        },
+        {
+          "blend": "multiply",
+          "loaded": true,
+          "src": "/reference-assets/continuation/filter-body-1.png"
+        },
+        {
+          "blend": "multiply",
+          "loaded": true,
+          "src": "/reference-assets/continuation/filter-body-2.png"
+        },
+        {
+          "blend": "multiply",
+          "loaded": true,
+          "src": "/reference-assets/continuation/filter-body-3.png"
+        },
+        {
+          "blend": "multiply",
+          "loaded": true,
+          "src": "/reference-assets/continuation/filter-body-4.png"
+        },
+        {
+          "blend": "multiply",
+          "loaded": true,
+          "src": "/reference-assets/continuation/filter-body-5.png"
+        },
+        {
+          "blend": "multiply",
+          "loaded": true,
+          "src": "/reference-assets/continuation/filter-body-6.png"
+        },
+        {
+          "blend": "multiply",
+          "loaded": true,
+          "src": "/reference-assets/continuation/filter-body-7.png"
+        },
+        {
+          "blend": "multiply",
+          "loaded": true,
+          "src": "/reference-assets/continuation/filter-body-8.png"
+        },
+        {
+          "blend": "multiply",
+          "loaded": true,
+          "src": "/reference-assets/continuation/filter-body-9.png"
+        },
+        {
+          "blend": "multiply",
+          "loaded": true,
+          "src": "/reference-assets/continuation/filter-body-10.png"
+        },
+        {
+          "blend": "multiply",
+          "loaded": true,
+          "src": "/reference-assets/continuation/filter-body-11.png"
+        },
+        {
+          "blend": "multiply",
+          "loaded": true,
+          "src": "/reference-assets/continuation/filter-body-12.png"
+        },
+        {
+          "blend": "multiply",
+          "loaded": true,
+          "src": "/reference-assets/continuation/filter-body-13.png"
+        }
+      ],
+      "overflow": -15,
+      "visibleSearches": 0,
+      "width": 1440
+    },
+    {
+      "locale": "en",
+      "category": "Quick Make",
+      "buttons": [
+        {
+          "rect": {
+            "height": 44,
+            "width": 65.203125,
+            "x": 210.5,
+            "y": 884
+          },
+          "text": "Clear"
+        },
+        {
+          "rect": {
+            "height": 44,
+            "width": 120.640625,
+            "x": 675.859375,
+            "y": 884
+          },
+          "text": "Show 48 cars"
+        }
+      ],
+      "dialog": {
+        "height": 640,
+        "width": 620,
+        "x": 193.5,
+        "y": 295
+      },
+      "footer": {
+        "height": 56,
+        "width": 618,
+        "x": 194.5,
+        "y": 878
+      },
+      "images": [
+        {
+          "blend": "normal",
+          "loaded": true,
+          "src": "/reference-assets/brand-nissan.png"
+        },
+        {
+          "blend": "normal",
+          "loaded": true,
+          "src": "/reference-assets/sell-brand-1.png"
+        },
+        {
+          "blend": "normal",
+          "loaded": true,
+          "src": "/reference-assets/brand-mercedes.png"
+        },
+        {
+          "blend": "normal",
+          "loaded": true,
+          "src": "/reference-assets/brand-bmw.png"
+        },
+        {
+          "blend": "normal",
+          "loaded": true,
+          "src": "/reference-assets/sell-brand-7.png"
+        },
+        {
+          "blend": "normal",
+          "loaded": true,
+          "src": "/reference-assets/brand-hyundai.png"
+        },
+        {
+          "blend": "normal",
+          "loaded": true,
+          "src": "/reference-assets/sell-brand-8.png"
+        },
+        {
+          "blend": "normal",
+          "loaded": true,
+          "src": "/reference-assets/brand-audi.png"
+        }
+      ],
+      "overflow": -15,
+      "visibleSearches": 1,
+      "width": 1440
+    },
+    {
+      "locale": "en",
+      "category": "Quick Model BMW X3",
+      "buttons": [
+        {
+          "rect": {
+            "height": 44,
+            "width": 65.203125,
+            "x": 538.5,
+            "y": 608
+          },
+          "text": "Clear"
+        },
+        {
+          "rect": {
+            "height": 44,
+            "width": 101.78125,
+            "x": 1022.71875,
+            "y": 608
+          },
+          "text": "Show 1 car"
+        }
+      ],
+      "dialog": {
+        "height": 364,
+        "width": 620,
+        "x": 521.5,
+        "y": 295
+      },
+      "footer": {
+        "height": 56,
+        "width": 618,
+        "x": 522.5,
+        "y": 602
+      },
+      "images": [
+        {
+          "blend": "normal",
+          "loaded": true,
+          "src": "/reference-assets/brand-bmw.png"
+        }
+      ],
+      "overflow": -15,
+      "visibleSearches": 1,
+      "width": 1440
+    },
+    {
+      "locale": "bg",
+      "category": "Tablet Model",
+      "buttons": [
+        {
+          "rect": {
+            "height": 44,
+            "width": 241.046875,
+            "x": 22,
+            "y": 944
+          },
+          "text": "ИЗЧИСТИ ВСИЧКО"
+        },
+        {
+          "rect": {
+            "height": 44,
+            "width": 459.953125,
+            "x": 271.046875,
+            "y": 944
+          },
+          "text": "ПОКАЖИ 48 АВТОМОБИЛИ"
+        }
+      ],
+      "dialog": {
+        "height": 1000,
+        "width": 753,
+        "x": 0,
+        "y": 0
+      },
+      "footer": {
+        "height": 68,
+        "width": 753,
+        "x": 0,
+        "y": 932
+      },
+      "images": [],
+      "overflow": -15,
+      "visibleSearches": 1,
+      "width": 768
+    },
+    {
+      "locale": "bg",
+      "category": "Final desktop SUV",
+      "buttons": [
+        {
+          "rect": {
+            "height": 44,
+            "width": 177.671875,
+            "x": 246.5,
+            "y": 826
+          },
+          "text": "Изчисти всички филтри"
+        },
+        {
+          "rect": {
+            "height": 44,
+            "width": 197.140625,
+            "x": 981.359375,
+            "y": 826
+          },
+          "text": "Покажете 33 автомобила"
+        }
+      ],
+      "dialog": {
+        "height": 760,
+        "width": 980,
+        "x": 222.5,
+        "y": 120
+      },
+      "footer": {
+        "height": 64,
+        "width": 980,
+        "x": 222.5,
+        "y": 816
+      },
+      "images": [
+        {
+          "blend": "multiply",
+          "loaded": true,
+          "src": "/reference-assets/continuation/filter-body-0.png"
+        },
+        {
+          "blend": "multiply",
+          "loaded": true,
+          "src": "/reference-assets/continuation/filter-body-1.png"
+        },
+        {
+          "blend": "multiply",
+          "loaded": true,
+          "src": "/reference-assets/continuation/filter-body-2.png"
+        },
+        {
+          "blend": "multiply",
+          "loaded": true,
+          "src": "/reference-assets/continuation/filter-body-3.png"
+        },
+        {
+          "blend": "multiply",
+          "loaded": true,
+          "src": "/reference-assets/continuation/filter-body-4.png"
+        },
+        {
+          "blend": "multiply",
+          "loaded": false,
+          "src": "/reference-assets/continuation/filter-body-5.png"
+        },
+        {
+          "blend": "multiply",
+          "loaded": true,
+          "src": "/reference-assets/continuation/filter-body-6.png"
+        },
+        {
+          "blend": "multiply",
+          "loaded": true,
+          "src": "/reference-assets/continuation/filter-body-7.png"
+        },
+        {
+          "blend": "multiply",
+          "loaded": true,
+          "src": "/reference-assets/continuation/filter-body-8.png"
+        },
+        {
+          "blend": "multiply",
+          "loaded": true,
+          "src": "/reference-assets/continuation/filter-body-9.png"
+        },
+        {
+          "blend": "multiply",
+          "loaded": true,
+          "src": "/reference-assets/continuation/filter-body-10.png"
+        },
+        {
+          "blend": "multiply",
+          "loaded": true,
+          "src": "/reference-assets/continuation/filter-body-11.png"
+        },
+        {
+          "blend": "multiply",
+          "loaded": true,
+          "src": "/reference-assets/continuation/filter-body-12.png"
+        },
+        {
+          "blend": "multiply",
+          "loaded": true,
+          "src": "/reference-assets/continuation/filter-body-13.png"
+        }
+      ],
+      "overflow": -15,
+      "visibleSearches": 0,
+      "width": 1440
+    }
+  ],
+  "stableTypeImages": [
+    {
+      "blend": "multiply",
+      "loaded": true,
+      "src": "/reference-assets/continuation/filter-body-0.png"
+    },
+    {
+      "blend": "multiply",
+      "loaded": true,
+      "src": "/reference-assets/continuation/filter-body-1.png"
+    },
+    {
+      "blend": "multiply",
+      "loaded": true,
+      "src": "/reference-assets/continuation/filter-body-2.png"
+    },
+    {
+      "blend": "multiply",
+      "loaded": true,
+      "src": "/reference-assets/continuation/filter-body-3.png"
+    },
+    {
+      "blend": "multiply",
+      "loaded": true,
+      "src": "/reference-assets/continuation/filter-body-4.png"
+    },
+    {
+      "blend": "multiply",
+      "loaded": true,
+      "src": "/reference-assets/continuation/filter-body-5.png"
+    },
+    {
+      "blend": "multiply",
+      "loaded": true,
+      "src": "/reference-assets/continuation/filter-body-6.png"
+    },
+    {
+      "blend": "multiply",
+      "loaded": true,
+      "src": "/reference-assets/continuation/filter-body-7.png"
+    },
+    {
+      "blend": "multiply",
+      "loaded": true,
+      "src": "/reference-assets/continuation/filter-body-8.png"
+    },
+    {
+      "blend": "multiply",
+      "loaded": true,
+      "src": "/reference-assets/continuation/filter-body-9.png"
+    },
+    {
+      "blend": "multiply",
+      "loaded": true,
+      "src": "/reference-assets/continuation/filter-body-10.png"
+    },
+    {
+      "blend": "multiply",
+      "loaded": true,
+      "src": "/reference-assets/continuation/filter-body-11.png"
+    },
+    {
+      "blend": "multiply",
+      "loaded": true,
+      "src": "/reference-assets/continuation/filter-body-12.png"
+    },
+    {
+      "blend": "multiply",
+      "loaded": true,
+      "src": "/reference-assets/continuation/filter-body-13.png"
+    }
+  ],
+  "note": "One image was still loading in the immediate desktop snapshot; all 14 completed loading with no console errors.",
+  "consoleErrors": []
+}

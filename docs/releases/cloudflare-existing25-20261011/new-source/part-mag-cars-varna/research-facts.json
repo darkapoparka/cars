@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "slug": "part-mag-cars-varna",
+  "dealerId": "part-mag-cars-varna",
+  "business": {
+    "schemaVersion": 1,
+    "slug": "part-mag-cars-varna",
+    "name": "Part Mag Cars",
+    "shortName": "Part Mag Cars",
+    "city": "Варна",
+    "country": "BG",
+    "countryCode": "BG",
+    "locale": "bg-BG",
+    "currency": "EUR",
+    "distanceUnit": "km",
+    "phone": "0899960605",
+    "phoneDisplay": "0899960605, 0897906712",
+    "phoneE164": "+359899960605",
+    "phones": [
+      "+359899960605",
+      "+359897906712"
+    ],
+    "addressLine": "гр. Варна",
+    "address": "гр. Варна, Варна, България",
+    "hours": "Потвърдете работното време директно с автокъщата.",
+    "email": "",
+    "sourceUrl": "https://partmagcars.mobile.bg/",
+    "stockUrl": "https://partmagcars.mobile.bg/",
+    "contactSourceUrl": "https://partmagcars.mobile.bg/contacts",
+    "observedAt": "2026-10-12T10:44:17.760Z",
+    "inventoryNotice": "Показаните демонстрационни автомобили са илюстративни и не представляват наличности на автокъщата. За действителните оферти и наличности се свържете директно с нея.",
+    "previewNotice": "Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация.",
+    "services": [],
+    "socialLinks": {},
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "research": {
+    "website": {
+      "status": "none-confirmed-in-bounded-check",
+      "url": null,
+      "notWebsiteGapProof": true
+    },
+    "publicIdentityKey": "mobile-profile:partmagcars.mobile.bg",
+    "profileAdvertCount": 4,
+    "availabilityConfirmed": false,
+    "legalEntityOwnershipVerified": false,
+    "addressExactness": "public-contact-as-published",
+    "caveats": [
+      "Mixed retail and parts profile: two 5 EUR parts adverts excluded from retail samples; VW Caddy and Ford Galaxy are ordinary retail adverts."
+    ],
+    "sourceProof": [
+      {
+        "url": "https://partmagcars.mobile.bg/",
+        "finalUrl": "https://partmagcars.mobile.bg/",
+        "observedAt": "2026-10-12T10:44:17.777Z",
+        "status": 200,
+        "bytes": 46990,
+        "sha256": "425c68379fc1a462bb600984a895578078020502d38cff093597f5d74f6f33ad"
+      },
+      {
+        "url": "https://partmagcars.mobile.bg/contacts",
+        "finalUrl": "https://partmagcars.mobile.bg/contacts",
+        "observedAt": "2026-10-12T10:44:17.760Z",
+        "status": 200,
+        "bytes": 42270,
+        "sha256": "291abda9fafaaa5c7edd7e4e1c3ecc05ee37d9e3145a12f8cdbca7320ee14e3c"
+      },
+      {
+        "url": "https://partmagcars.mobile.bg/about",
+        "finalUrl": "https://partmagcars.mobile.bg/about",
+        "observedAt": "2026-10-12T10:44:17.748Z",
+        "status": 200,
+        "bytes": 6123,
+        "sha256": "9d52c03b62b6b1d5533cf357661005dec985a8fab8b4248a548597688baffdb1"
+      }
+    ],
+    "sourceAction": "new-absent-cars-source-after-wrapper-identity-recheck",
+    "existingSourceTree": null,
+    "inventoryModeSelection": "illustrative-not-dealer-stock",
+    "productionAssetInputsComplete": false
+  }
+}

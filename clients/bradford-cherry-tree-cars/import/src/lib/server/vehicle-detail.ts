@@ -203,7 +203,7 @@ export const vehicleDetailFromVehicle = (
 		copy,
 		description:
 			localizeVehicleTermsInText(locale, vehicle.description) ||
-			`${vehicle.title} ${copy.detailDescriptionFallback}`,
+			`${inventoryText(locale, vehicle.title)} ${copy.detailDescriptionFallback}`,
 		featureTabs: detailFeatureTabs(vehicle, locale),
 		galleryImages,
 		image: primaryImage,
@@ -216,7 +216,7 @@ export const vehicleDetailFromVehicle = (
 		priceBgn: vehicle.priceBgn || (locale === 'bg' ? 'По запитване' : 'On request'),
 		priceLabel: listedPrice(vehicle.price, locale),
 		slug: vehicle.slug,
-		title: vehicle.title,
+		title: inventoryText(locale, vehicle.title),
 		trust: vehicleTrust()
 	};
 };

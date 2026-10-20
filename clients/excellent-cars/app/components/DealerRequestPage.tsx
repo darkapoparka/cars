@@ -7,11 +7,13 @@ import PageHeader from './PageHeader';
 import DealerEnquirySheet from './DealerEnquirySheet';
 import {dealer} from '@/lib/dealer-config';
 import {useCopy} from '@/lib/locale';
+import {serviceOptions} from '@/lib/service-catalogue';
 import {media, tokens as $} from '@/app/tokens.stylex';
 export default function DealerRequestPage({kind}: {kind: 'sell' | 'service'}) {
   const tx = useCopy(), params = useSearchParams();
   const [make, setMake] = useState(params.get('brand') || '');
-  const [model, setModel] = useState(''), [details, setDetails] = useState(''), [open, setOpen] = useState(false);
+  const service = kind === 'service' ? serviceOptions.find(option => option.id === params.get('service')) : undefined;
+  const [model, setModel] = useState(''), [details, setDetails] = useState(service ? tx(service.name) : ''), [open, setOpen] = useState(false);
   const title = kind === 'sell' ? 'Sell or part-exchange' : 'Vehicle service enquiry';
   return <><PageHeader title={tx(title)}/><main {...stylex.props(s.page)}>
     <h2 {...stylex.props(s.title)}>{tx('Tell the dealer about your car')}</h2>

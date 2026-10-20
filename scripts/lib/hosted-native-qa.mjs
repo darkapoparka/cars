@@ -9,7 +9,51 @@ import { parseCatalogJson } from './native-localization.mjs';
 export const HOSTED_QA_PROFILE = 'cars-priselci-native-readonly';
 export const HOSTED_QA_ORIGIN = 'https://cars-priselci.darkapoparka1.workers.dev';
 export const HOSTED_QA_ACCOUNT = 'cb0007f242077bd759331f096eb75531';
-export const TEMPLATE_REVISION = '32ac4ebcbafff38df6306e9919ce6113b2d10503';
+export const TEMPLATE_REVISION = 'b1f0f5609c7c249cfd0649c122849ff2cbb8dfde';
+export const TEMPLATE_SOURCES = Object.freeze(Object.fromEntries(Object.entries({
+  "auto-best": {
+    "repository": "darkapoparka/cars",
+    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "path": "templates/auto-best",
+    "tree": "5fb7a2164775050a47c1183371622295dbf63725",
+    "digest": "dcbc59990928884006652677d3529020df3844029993895a71e5f6818ba7363c"
+  },
+  "modern": {
+    "repository": "darkapoparka/cars",
+    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "path": "templates/modern",
+    "tree": "3974380670eb388bb16182f94ade33be6d87b1c1",
+    "digest": "ba263aac8f1863d133807d3e1bf3597d125cf315a7e0deba3f6e419b52434c25"
+  },
+  "import": {
+    "repository": "darkapoparka/cars",
+    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "path": "templates/import",
+    "tree": "6afc6901e2f95967fb7c72e9f75525d4d6fbf086",
+    "digest": "f98a0934cdcc5adbda393c14c02eb2adc0175344ab2ac3f913afe4b0603366e5"
+  },
+  "app": {
+    "repository": "darkapoparka/cars",
+    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "path": "templates/app",
+    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
+    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"
+  },
+  "mobile": {
+    "repository": "darkapoparka/cars",
+    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "path": "templates/mobile",
+    "tree": "2b02829e157071e305bfb2dff10ef18e85c8a35e",
+    "digest": "4e858bd9dbd3ef5b52cd904c4ed97bbfdc0f4cfe02b5a3840580f38026b867a0"
+  },
+  "karento-best": {
+    "repository": "darkapoparka/cars",
+    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "path": "templates/karento-best",
+    "tree": "5f6eec8efb2f9e99819f7f0c2f743d18fff7b134",
+    "digest": "83056967764a686f3737d74b86c5db51c1385a50184853f50ec4ade80c1dd44f"
+  }
+}).map(([key, source]) => [key, Object.freeze(source)])));
 export const REQUEST_DIRECTORY = 'docs/releases/cloudflare-existing25-20261011/hosted-native-qa';
 export const REQUEST_BASENAME = 'priselci-request.json';
 export const FAMILIES = Object.freeze({ 'auto-best': '', modern: '/variant-2', import: '/variant-3' });
@@ -50,8 +94,7 @@ export function validateRequest(request) {
   for (const key of APPLICATIONS) {
     const source = request.sourceReleases[key];
     same(Object.keys(source ?? {}).sort(), ['digest', 'path', 'repository', 'revision', 'tree'], 'Invalid source locator fields');
-    assert(source.repository === 'darkapoparka/cars' && source.path === 'templates/' + key && source.revision === TEMPLATE_REVISION &&
-      commit(source.tree) && hash(source.digest), 'The reviewed S1 template release must remain immutable');
+    same(source, TEMPLATE_SOURCES[key], 'The reviewed b1f template source locator must remain immutable: ' + key);
   }
   const names = ['artifactManifest', 'singleWorkerReceipt', 'deploymentReceipt', 'providerSnapshot'];
   same(Object.keys(request.proofs ?? {}).sort(), [...names].sort(), 'Four original input proofs are required');

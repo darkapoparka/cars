@@ -1,0 +1,173 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-focused-exact-source-editorial-repair-proof",
+  "dealer": "evrocar-varna-09",
+  "baseSourceCommit": "7278c981491b22432c2f785f0ab19c7d387aaeb3",
+  "baseSourceTree": "f5e65461197200919f8c76944c34eab933be02aa",
+  "sourceModuleProof": {
+    "dealer": "evrocar-varna-09",
+    "sourceCommit": "7278c981491b22432c2f785f0ab19c7d387aaeb3",
+    "sourceTree": "f5e65461197200919f8c76944c34eab933be02aa",
+    "manifest": {
+      "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/run-38689980731-attempt-1/evrocar-varna-09-proposal-manifest.json",
+      "sha256": "0d78157156e33bf8955479e89b9caf3920993146547adb9c2cf4380cec3cf89f"
+    },
+    "scope": "clients/evrocar-varna-09/import/src/lib/content/extra-localized.ts",
+    "baseBlob": "ab1af4557112c94bd12837c4d129ee7c5aeab4cf",
+    "candidateBlob": "0527904b3f97e854a201b9a3cb9020907a8b3dcf",
+    "candidate": {
+      "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/current-eleven-import-editorial/candidates/evrocar-varna-09/extra-localized.ts",
+      "sha256": "e027e410a15ed69d72ed22299a63b2fab967c7bdba1f334edb5258642d3e764a"
+    },
+    "patch": {
+      "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/current-eleven-import-editorial/candidates/evrocar-varna-09/explicit-editorial.patch",
+      "sha256": "1d4462eb7d59dd64da206d86b5924a2985b5bff7b246ecc7b2abb63275d99402"
+    },
+    "addedEntries": [
+      {
+        "bg": "Демонстрационни автомобили от шаблона, а не наличност на автокъщата. Illustrative template vehicles, not this dealership’s stock.",
+        "en": "Illustrative template vehicles, not this dealership’s stock."
+      },
+      {
+        "bg": "Независим демонстрационен преглед; формите не изпращат съобщения и не създават резервации. Independent demonstration: forms do not send enquiries or create reservations.",
+        "en": "Independent demonstration: forms do not send enquiries or create reservations."
+      }
+    ],
+    "beforeError": "Missing English editorial catalog entry: Демонстрационни автомобили от шаблона, а не наличност на автокъщата. Illustrative template vehicles, not this dealership’s stock.",
+    "intermediateError": "Missing English editorial catalog entry: Независим демонстрационен преглед; формите не изпращат съобщения и не създават резервации. Independent demonstration: forms do not send enquiries or create reservations.",
+    "after": [
+      {
+        "slug": "confirm-current-availability",
+        "title": "How to confirm current availability at ЕВРОКАР ВАРНА 09",
+        "category": "Dealer information",
+        "date": "2026-01-01",
+        "image": "/assets/daynight/codex-generated-v2/blog/blog-cover-import-check-v2.webp",
+        "excerpt": "Illustrative template vehicles, not this dealership’s stock.",
+        "content": [
+          "Contact the dealership on 0897 002 225 and identify the exact vehicle before visiting.",
+          "Independent demonstration: forms do not send enquiries or create reservations."
+        ]
+      }
+    ],
+    "packagingContactAdapter": {
+      "schemaVersion": 1,
+      "dealer": "evrocar-varna-09",
+      "applied": true,
+      "path": "import/src/lib/config/site.ts",
+      "href": "https://cars-evrocar-varna-09.darkapoparka1.workers.dev/variant-3/bg/contact",
+      "beforeSha256": "13c22a45540715ccc6a1891423b774a456a285c820177f4e3cbc87bb3cd113b1",
+      "afterSha256": "af418681c73f14621a30399d5dd5d8d528b1ecd1a78060e68070bde720bc8697",
+      "originalDealerConfigSha256": "2aecb5d103133a576ab6267bf66414c6b56ef32322790600dcb5f2d9a0de6357",
+      "emailInvented": false,
+      "mode": "Existing same-origin contact page; no external enquiry submitted"
+    },
+    "checks": {
+      "exactRetainedSource": true,
+      "beforeFailureReproduced": true,
+      "actualDisclosureFailureReproduced": true,
+      "afterEnglishPostsPassed": true,
+      "bgBehaviorUnchanged": true,
+      "dateSlugAndImageUnchanged": true,
+      "allExistingCatalogEntriesUnchanged": true,
+      "unknownEditorialStillThrows": true,
+      "onlyActualEmittedCatalogEntriesAdded": true,
+      "onlyCatalogPrefixChanged": true
+    },
+    "modulesRead": [
+      {
+        "path": "import/src/lib/content/localized.ts",
+        "blob": "e7984d48ec3b61b2bebf5c8dcbefd5b35eefafd5"
+      },
+      {
+        "path": "import/src/lib/content/extra-localized.ts",
+        "blob": "ab1af4557112c94bd12837c4d129ee7c5aeab4cf"
+      },
+      {
+        "path": "import/src/lib/config/site.ts",
+        "blob": "d8ccb2e922f23a4223bad5c590fd1a61cd234c17"
+      },
+      {
+        "path": "import/src/lib/config/dealer.ts",
+        "blob": "8c43c6b64eddf3f2739b34517afff5e63bc6177a"
+      },
+      {
+        "path": "import/src/lib/config/cars-locale.ts",
+        "blob": "97cd4ed2dca0bc516abaebff87bd9b0c1abcb899"
+      },
+      {
+        "path": "import/src/lib/data/blog.ts",
+        "blob": "e0af5243033c4540b9055f53af5800d7a156e27b"
+      }
+    ]
+  },
+  "originalProof": {
+    "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/current-eleven-import-editorial/candidates/eleven-editorial-repair-proof.json",
+    "sha256": "10f723c352c11ee952437627ffbe79af81d26105d43dd3219ea3c837d86d4f4e"
+  },
+  "modernCompanionProof": {
+    "file": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/native13-modern-runtime/eight-modern-alias-repair-proof.json",
+    "sha256": "e6bb81ee497e21000b99317e0833ef7af4f10a1170d213cf1918670301efd9b6"
+  },
+  "modernCompanion": {
+    "dealer": "evrocar-varna-09",
+    "sourceCommit": "7278c981491b22432c2f785f0ab19c7d387aaeb3",
+    "sourceTree": "f5e65461197200919f8c76944c34eab933be02aa",
+    "scope": "modern/packages/marketplace/lead-site.ts",
+    "baseBlob": "adf10e20ede4d8fe2f5642e9c9e2f3349b389adb",
+    "baseSha256": "7e2dad58d209c18c318d171ea8c9010bee7bc7a86b6087ccb8ceeedd27bb69bb",
+    "selectedRasterBindings": {
+      "logoOnLight": {
+        "path": "/dealer-brand/v2-2fd2080cc1d79c8f/logo-on-light.webp",
+        "sourcePath": "modern/apps/web/public/dealer-brand/v2-2fd2080cc1d79c8f/logo-on-light.webp",
+        "blob": "7b2d085901ec31f5f1c52671b8922809c2a37727"
+      },
+      "logoOnDark": {
+        "path": "/dealer-brand/v2-2fd2080cc1d79c8f/logo-on-dark.webp",
+        "sourcePath": "modern/apps/web/public/dealer-brand/v2-2fd2080cc1d79c8f/logo-on-dark.webp",
+        "blob": "a0dda7775c24a4bf04cd4d1d41ed89b23cc1c2c7"
+      },
+      "logoOnAccent": {
+        "path": "/dealer-brand/v2-2fd2080cc1d79c8f/logo-on-accent.webp",
+        "sourcePath": "modern/apps/web/public/dealer-brand/v2-2fd2080cc1d79c8f/logo-on-accent.webp",
+        "blob": "a0dda7775c24a4bf04cd4d1d41ed89b23cc1c2c7"
+      }
+    },
+    "values": {
+      "logoOnLight": "/dealer-brand/v2-2fd2080cc1d79c8f/logo-on-light.webp",
+      "logoOnDark": "/dealer-brand/v2-2fd2080cc1d79c8f/logo-on-dark.webp",
+      "logoOnAccent": "/dealer-brand/v2-2fd2080cc1d79c8f/logo-on-dark.webp"
+    },
+    "companionPatches": [
+      {
+        "path": "modern/packages/marketplace/lead-site.ts",
+        "baseBlob": "adf10e20ede4d8fe2f5642e9c9e2f3349b389adb",
+        "candidateFile": "E:/CODEX/runtime/cars-rollout-20261014-01a13b28/merged/fresh-cf-source/native13-modern-runtime/evrocar-varna-09-lead-site.ts",
+        "candidateSha256": "3259f66ca696c295e94b6de73e07f9401c928b4c08f253121f90cd5ca5da185e",
+        "candidateBlob": "b152b6a903f7df00fdf55d81c4ca326416bd62ed",
+        "bytes": 6908,
+        "encoding": "utf8"
+      }
+    ],
+    "actualProviderException": {
+      "versionId": "576ebe28-8d90-4ac2-a06f-3269d5d93a5d",
+      "stack": "    at c (modern/variant-2/_next/static/paths-CA2tc1VC.js:2:359)\n    at y (modern/variant-2/_next/static/paths-CA2tc1VC.js:2:1019)\n    at modern/variant-2/_next/static/layout-CQaHavUh.js:150:490"
+    },
+    "unbuiltSourceRiskOnly": false,
+    "checks": {
+      "allThreeAliasesRestored": true,
+      "interfaceAndInitializerBothUpdated": true,
+      "allExistingBytesOtherwiseIdentical": true,
+      "allFactsAndExistingLogoPathsUnchanged": true,
+      "selectedLightDarkAccentBlobsPresent": true,
+      "accentPreservesCurrentSelectedDarkPixels": true,
+      "allAliasUrlCallsPassActualCompiledPaths": true,
+      "originalUndefinedCallReproduced": true,
+      "typescriptSyntax": true,
+      "layoutAndOtherConsumersUnchanged": true
+    },
+    "sourceCopies": 0
+  },
+  "compiled": false,
+  "newCiRun": null,
+  "providerWrites": 0
+}

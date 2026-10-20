@@ -4,15 +4,16 @@
   "name": "F1rst Motors",
   "shortName": "F1rst Motors",
   "logo": {
-    "light": "/dealer-app/logo-light-833105e3bee3f1f81afa.webp",
-    "dark": "/dealer-app/logo-dark-789523ed4d11bf57d34b.webp",
-    "icon": "/dealer-app/icon.png"
+    "light": "/dealer-brand/v2-1cc6f1fb3927da42/logo-on-light.webp",
+    "dark": "/dealer-brand/v2-1cc6f1fb3927da42/logo-on-dark.webp",
+    "icon": "/dealer-brand/v2-1cc6f1fb3927da42/app-icon.png"
   },
   "defaultLocale": "en",
   "enabledLocales": [
     "en",
     "bg"
   ],
+  "welcomeEnabled": true,
   "country": "AE",
   "currency": "AED",
   "city": "Dubai",
@@ -23,12 +24,31 @@
   "mapsUrl": "https://www.google.com/maps/search/?api=1&query=F1rst%20Motors%2C%20Danube%20Building%20-%20409%20Sheikh%20Zayed%20Rd%20-%20Al%20Quoz%20-%20Al%20Quoz%201%20-%20Dubai%2C%20UAE",
   "website": "https://f1rstmotors.com/",
   "whatsappUrl": "",
+  "socialLinks": [
+    {
+      "label": "Facebook",
+      "url": ""
+    },
+    {
+      "label": "Instagram",
+      "url": ""
+    },
+    {
+      "label": "Mobile.bg",
+      "url": ""
+    },
+    {
+      "label": "Cars.bg",
+      "url": ""
+    }
+  ],
+  "referenceClaimsApproved": false,
   "services": [
     "Luxury vehicle sales",
     "Sell-my-car enquiries",
     "Vehicle sourcing enquiries"
   ],
   "observedAt": "2026-09-09",
-  "inventoryNotice": "Dated listing samples. Confirm price, availability and vehicle information with the dealer.",
+  "inventoryNotice": "Dated public stock sample, not a live feed. Confirm price, specifications and availability directly with F1rst Motors. Demo forms do not send messages.",
   "previewNotice": "Independent design preview. No purchase, reservation or message is submitted by this website."
 }

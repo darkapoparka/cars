@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "dealer": "technocar-varna",
+  "reviewed": true,
+  "reviewedAt": "2026-10-14T11:56:24.553Z",
+  "sourceMode": "retained-or-mixed-raster",
+  "master": {
+    "path": "docs/logo-polish-2026-10-14/final-raster-inputs/f758ab0c8d8865110ff32e9856bad014e0b327ed53712deccfcfa80722d0685b.png",
+    "sha256": "f758ab0c8d8865110ff32e9856bad014e0b327ed53712deccfcfa80722d0685b"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "docs/logo-polish-2026-10-14/final-raster-inputs/f758ab0c8d8865110ff32e9856bad014e0b327ed53712deccfcfa80722d0685b.png",
+      "sha256": "f758ab0c8d8865110ff32e9856bad014e0b327ed53712deccfcfa80722d0685b",
+      "sourceReference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/live-assets/b261f0c4f205a839c96c9fd17322f2bceeb60686e23faee624ee761055755d63.webp",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/live-assets/b261f0c4f205a839c96c9fd17322f2bceeb60686e23faee624ee761055755d63.webp",
+        "sha256": "b261f0c4f205a839c96c9fd17322f2bceeb60686e23faee624ee761055755d63",
+        "reviewReference": "docs/logo-polish-2026-10-14/final-selection.json",
+        "reviewSha256": "6e396eef77195ab7f44d6b055c1936fa079a8195a428a95151fdfd7f3f5d1a16"
+      }
+    },
+    "onDark": {
+      "path": "docs/logo-polish-2026-10-14/final-raster-inputs/aa9f1a878ed70e05456681a75db39bd47639202d29170064ee95153968a0a197.png",
+      "sha256": "aa9f1a878ed70e05456681a75db39bd47639202d29170064ee95153968a0a197",
+      "sourceReference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/live-assets/7623c98aab97e788104af09a3151683bf04216526bb1551ce79716e9f60e0ef7.webp",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/live-assets/7623c98aab97e788104af09a3151683bf04216526bb1551ce79716e9f60e0ef7.webp",
+        "sha256": "7623c98aab97e788104af09a3151683bf04216526bb1551ce79716e9f60e0ef7",
+        "reviewReference": "docs/logo-polish-2026-10-14/final-selection.json",
+        "reviewSha256": "6e396eef77195ab7f44d6b055c1936fa079a8195a428a95151fdfd7f3f5d1a16"
+      }
+    },
+    "onAccent": {
+      "path": "docs/logo-polish-2026-10-14/final-raster-inputs/aa9f1a878ed70e05456681a75db39bd47639202d29170064ee95153968a0a197.png",
+      "sha256": "aa9f1a878ed70e05456681a75db39bd47639202d29170064ee95153968a0a197",
+      "sourceReference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/live-assets/7623c98aab97e788104af09a3151683bf04216526bb1551ce79716e9f60e0ef7.webp",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "L:/CODEX/cars/docs/logo-polish-2026-10-14/live-assets/7623c98aab97e788104af09a3151683bf04216526bb1551ce79716e9f60e0ef7.webp",
+        "sha256": "7623c98aab97e788104af09a3151683bf04216526bb1551ce79716e9f60e0ef7",
+        "reviewReference": "docs/logo-polish-2026-10-14/final-selection.json",
+        "reviewSha256": "6e396eef77195ab7f44d6b055c1936fa079a8195a428a95151fdfd7f3f5d1a16"
+      }
+    }
+  }
+}
