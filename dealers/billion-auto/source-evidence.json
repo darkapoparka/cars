@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "dealer": "billion-auto",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://www.dubicars.com/dealers/dubai-billion-auto-2646",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/dealers/dubai-billion-auto-2646",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "business-name",
+        "public-dealer-contact",
+        "public-location-if-shown",
+        "dated-stock-sample"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "researchedAt": "2026-10-19",
+  "catalogueResponseSha256": "264d5c5629690d807d28d6983203b7029ff0eff1403eb9a8c1a0d9cb1ea1de30",
+  "stockSources": [
+    {
+      "listingUrl": "https://www.dubicars.com/2026-rox-01-vip-995623.html",
+      "catalogueUrl": "https://www.dubicars.com/dealers/dubai-billion-auto-2646",
+      "imageUrl": "https://www.dubicars.com/images/76277e/650x380/billion-auto/8f3a00fe-e364-40d6-b824-57feaf5b73e2.jpeg",
+      "observedAt": "2026-10-19",
+      "imageSourceSha256": "0bb7158459bb9de62543bcd08b4b07504281118569f12f3cef445f684be037b4",
+      "retainedPath": "dealer-stock/stock-1.webp",
+      "retainedSha256": "4023da26caf798aedaf2f844035c48a129a18065509f2b2bb1ac9e69b357de02",
+      "originalDimensions": [
+        650,
+        487
+      ],
+      "retainedDimensions": [
+        650,
+        487
+      ],
+      "retainedBytes": 39840,
+      "transformation": "Proportional downscale only if needed to maximum 1280 pixels; WebP quality 80; no visual content edits."
+    },
+    {
+      "listingUrl": "https://www.dubicars.com/2026-rox-01-1007143.html",
+      "catalogueUrl": "https://www.dubicars.com/dealers/dubai-billion-auto-2646",
+      "imageUrl": "https://www.dubicars.com/images/23df26/650x380/billion-auto/3f727450-7aca-4f6e-a775-1b6efa671e51.jpeg",
+      "observedAt": "2026-10-19",
+      "imageSourceSha256": "4931c63e5106da6e6201aaa6654f27dd1259bad4379ff1b679c62b488fc529de",
+      "retainedPath": "dealer-stock/stock-2.webp",
+      "retainedSha256": "2f7fee173cc484dc4847c880f7cb3cfb0ebec8280942456207fe4f3d6b399f7a",
+      "originalDimensions": [
+        650,
+        487
+      ],
+      "retainedDimensions": [
+        650,
+        487
+      ],
+      "retainedBytes": 36734,
+      "transformation": "Proportional downscale only if needed to maximum 1280 pixels; WebP quality 80; no visual content edits."
+    },
+    {
+      "listingUrl": "https://www.dubicars.com/2026-byd-leopard-5-1007157.html",
+      "catalogueUrl": "https://www.dubicars.com/dealers/dubai-billion-auto-2646",
+      "imageUrl": "https://www.dubicars.com/images/dbba28/650x380/billion-auto/be6ab1d0-cf4f-4c13-ae76-fe1d9649cc6a.jpeg",
+      "observedAt": "2026-10-19",
+      "imageSourceSha256": "fe8ae9d87d9360fe6a91022f94d43ca6dac52fc12fdec9187ce09d0977d623f3",
+      "retainedPath": "dealer-stock/stock-3.webp",
+      "retainedSha256": "324159b64db7029c33e57042a12177f9e472a667ffa65c5d905a2c2f3828b678",
+      "originalDimensions": [
+        650,
+        488
+      ],
+      "retainedDimensions": [
+        650,
+        488
+      ],
+      "retainedBytes": 40342,
+      "transformation": "Proportional downscale only if needed to maximum 1280 pixels; WebP quality 80; no visual content edits."
+    }
+  ],
+  "omissions": [
+    "Personal-looking or unverified emails omitted; no private contact fields retained.",
+    "Unknown official website, exact address or hours left empty; marketplace-wide defaults not imported."
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "dealer": "11fg-limited",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "public-listing-1",
+      "title": "2013 Jaguar XF 2.2d Premium Luxury Auto",
+      "make": "Jaguar",
+      "model": "XF",
+      "year": 2013,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/public-1.jpg"
+      ],
+      "sourceUrl": "https://www.ebay.co.uk/itm/900024686837",
+      "observedAt": "2026-10-19T17:53:32.269427Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "transmission": "Automatic",
+      "fuel": "Diesel",
+      "color": "Black",
+      "mileageValue": 114800,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "public-listing-2",
+      "title": "2016 Volkswagen Scirocco 2.0 TDI GT Black Edition",
+      "make": "Volkswagen",
+      "model": "Scirocco",
+      "year": 2016,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/public-2.jpg"
+      ],
+      "sourceUrl": "https://www.ebay.co.uk/itm/900020292030",
+      "observedAt": "2026-10-19T17:53:32.348846Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "color": "White",
+      "mileageValue": 91134,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "public-listing-3",
+      "title": "2010 Volkswagen Polo 1.4 SE",
+      "make": "Volkswagen",
+      "model": "Polo",
+      "year": 2010,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/public-3.jpg"
+      ],
+      "sourceUrl": "https://www.ebay.co.uk/itm/900020096454",
+      "observedAt": "2026-10-19T17:53:33.331081Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "transmission": "Manual",
+      "fuel": "Petrol",
+      "color": "Silver",
+      "mileageValue": 73000,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

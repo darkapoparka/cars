@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "carmind-motors",
+  "previousSlug": "carmind-motors",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T18:30:39.913Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 3,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-dubai-carmind-motors",
+    "position": 208
+  },
+  "before": {
+    "files": 39,
+    "bytes": 2179253
+  },
+  "afterBeforeReview": {
+    "files": 23,
+    "bytes": 899450
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 118349,
+      "sha256": "34a06a42f61ba25779dbece461cf45088df3ff87726c9b213e1610372f3e198f"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 106424,
+      "sha256": "a3a30a53897395af30daf63cf2813ebfd2d895332d39b48a2a39393f6e08c002"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 118349,
+      "sha256": "34a06a42f61ba25779dbece461cf45088df3ff87726c9b213e1610372f3e198f"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 29760,
+      "sha256": "ff90b3e2651274dcb35459849f81eeb6e3497228dac20b505ee3eec5cbef9ddd"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 102390,
+      "sha256": "3a71fefdc4d83b4eea50d4dd8a7b6fc4ed8fa91b4b38e664eccd8b24fb994277"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 102390,
+      "sha256": "3a71fefdc4d83b4eea50d4dd8a7b6fc4ed8fa91b4b38e664eccd8b24fb994277"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 29760,
+      "sha256": "ff90b3e2651274dcb35459849f81eeb6e3497228dac20b505ee3eec5cbef9ddd"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 118349,
+      "sha256": "34a06a42f61ba25779dbece461cf45088df3ff87726c9b213e1610372f3e198f"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 10031,
+      "sha256": "193a8b95f911f30faa9cda4cb08d6dd6d4dad60053ad3694500b4bcb10464b91"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 102390,
+      "sha256": "3a71fefdc4d83b4eea50d4dd8a7b6fc4ed8fa91b4b38e664eccd8b24fb994277"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 73328,
+      "sha256": "031c9a143d148fc177880808eed9f293c7ff4aa4a783b0aafd14fef8860134c9"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 102390,
+      "sha256": "3a71fefdc4d83b4eea50d4dd8a7b6fc4ed8fa91b4b38e664eccd8b24fb994277"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 73328,
+      "sha256": "031c9a143d148fc177880808eed9f293c7ff4aa4a783b0aafd14fef8860134c9"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 29760,
+      "sha256": "ff90b3e2651274dcb35459849f81eeb6e3497228dac20b505ee3eec5cbef9ddd"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 18840,
+      "sha256": "a17cb44a7a293c175bf11d1b552bdeb9402c3306d4d912da38c907f29dfbf1ed"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 75732,
+      "sha256": "fbd84734796e047f5a338fe4019ff120e0807c6e7f6e1fec938c4a317939e032"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 72024,
+      "sha256": "580a57ab21d4b07ad549bb06329d8cc4a5e918a3821ad6d4536eab858eb3e7eb"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 12,
+    "bytes": 389313,
+    "inventorySha256": "7131297e8c966c51699b1df264b857a4e05310f18a59fea5b0e3b56b70ef664a",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "carmind-motors",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 25,
+    "report": "dealers/carmind-motors/input-review.json"
+  },
+  "after": {
+    "files": 25,
+    "bytes": 908282
+  }
+}

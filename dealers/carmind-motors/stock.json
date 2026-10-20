@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "dealer": "carmind-motors",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "carmind-motors-stock-1",
+      "title": "2026 Mg Mg5",
+      "make": "Mg",
+      "model": "Mg5",
+      "year": 2026,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/stock-1.webp"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2026-mg-5-mg5-15l-global-luxury-edition-at-2026-1031473.html",
+      "observedAt": "2026-10-19",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageOnRequest": true,
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "carmind-motors-stock-2",
+      "title": "2024 Chery Arrizo E",
+      "make": "Chery",
+      "model": "Arrizo E",
+      "year": 2024,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/stock-2.webp"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2024-chery-arrizo-e-cherry-arrizo-e-2024-405km-949072.html",
+      "observedAt": "2026-10-19",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageOnRequest": true,
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "carmind-motors-stock-3",
+      "title": "2025 Wey Gaoshan 9",
+      "make": "Wey",
+      "model": "Gaoshan 9",
+      "year": 2025,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/stock-3.webp"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2025-gwm-wey-gaoshan-gaoshan-2025-all-wheel-drive-mpv-946724.html",
+      "observedAt": "2026-10-19",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageOnRequest": true,
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

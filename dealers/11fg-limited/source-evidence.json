@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "dealer": "11fg-limited",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uk.json",
+    "sha256": "6cd8d365586f9a5d5131fe4b1d50baede7de91ab384a135017c25367298b07c4"
+  },
+  "publicSources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/11fglimited",
+      "observedAt": "2026-10-19T17:36:50.806010Z",
+      "supports": [
+        "public-business-identity",
+        "public-business-contact",
+        "advertised-stock"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "publicObservations": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/11fglimited",
+      "observedAt": "2026-10-19T17:36:50.806010Z",
+      "httpStatus": 200,
+      "sha256": "f16bf31b11f4c7cbe39d04df00cb675915c10793a8c030a5014376617e99ce25",
+      "byteLength": 36963,
+      "retention": "Only reviewed public business fields, hashes, listing identities and compressed photographs are committed; raw HTML remains outside the public pack."
+    }
+  ],
+  "stock": [
+    {
+      "sourceUrl": "https://www.ebay.co.uk/itm/900024686837",
+      "photoUrl": "https://i.ebayimg.com/images/g/Dh0AAeSwla9q1fxA/s-l1600.jpg",
+      "observedAt": "2026-10-19T17:53:32.269427Z",
+      "listingSha256": "849006270b0795d294cc34f693f03daf9a258a7b2c82b3bc244e3ccc6ebcb052",
+      "descriptionSha256": "eb3820306a0328f8f49bda698c9902af82cdcabdd1abc4211e506f89303342c2",
+      "sourcePhotoSha256": "53de1e2a67c63ade081f7bea14fb2ef5ec665eabcbac8a0bc13dd8ff64a180e2",
+      "sourcePhotoDimensions": [
+        1500,
+        1125
+      ],
+      "photoSha256": "51dee22f3f5b87557e4e149014a40696cc99539d57001f67a3c74a26ea913220",
+      "photoDimensions": [
+        1280,
+        960
+      ],
+      "photoBytes": 161643,
+      "photoObservedAt": "2026-10-19T18:01:41.906961Z",
+      "recordId": "public-listing-1",
+      "title": "2013 Jaguar XF 2.2d Premium Luxury Auto",
+      "retainedPhoto": "dealer-stock/public-1.jpg",
+      "publicPhotoReviewed": true
+    },
+    {
+      "sourceUrl": "https://www.ebay.co.uk/itm/900020292030",
+      "photoUrl": "https://i.ebayimg.com/images/g/J8wAAeSwHANq06mp/s-l1600.jpg",
+      "observedAt": "2026-10-19T17:53:32.348846Z",
+      "listingSha256": "8bc83afbb75a32205e23fe4fbe9c96fec210363bbd5d39911c045cdfd1ca069f",
+      "descriptionSha256": "f6caf31935e942d37f9715629a78284e87a053917afec152b83a6dca0086c8c9",
+      "sourcePhotoSha256": "8ad0a1609537489cf4cd4df8e50930c8e1a56de1612c3a311bba7594cbc1b677",
+      "sourcePhotoDimensions": [
+        1500,
+        1125
+      ],
+      "photoSha256": "4e42052f57058123ad96e505d5f86c7f5e2bf6166296b1753af2c746a4ab9474",
+      "photoDimensions": [
+        1280,
+        960
+      ],
+      "photoBytes": 159677,
+      "photoObservedAt": "2026-10-19T18:01:41.830452Z",
+      "recordId": "public-listing-2",
+      "title": "2016 Volkswagen Scirocco 2.0 TDI GT Black Edition",
+      "retainedPhoto": "dealer-stock/public-2.jpg",
+      "publicPhotoReviewed": true
+    },
+    {
+      "sourceUrl": "https://www.ebay.co.uk/itm/900020096454",
+      "photoUrl": "https://i.ebayimg.com/images/g/D~AAAeSwTaVq04Bg/s-l1600.jpg",
+      "observedAt": "2026-10-19T17:53:33.331081Z",
+      "listingSha256": "01d368757c7948eee8c1e6e257c5d2ee34766363a389609cbec33d95c8c88996",
+      "descriptionSha256": "61dbab600ce7995fa5f5d72b8e9df46c8f4c653cf8f4be94d91501832913feea",
+      "sourcePhotoSha256": "4c8e4442357b2c91bc05dd689069c30c251da7eb66631df9bcad66cea0f359a0",
+      "sourcePhotoDimensions": [
+        1500,
+        1125
+      ],
+      "photoSha256": "e5b24f6683360b3ae9e6afa1132da55d96444e41a8bb5dfdd948c3c7c55d676c",
+      "photoDimensions": [
+        1280,
+        960
+      ],
+      "photoBytes": 160087,
+      "photoObservedAt": "2026-10-19T18:01:41.887907Z",
+      "recordId": "public-listing-3",
+      "title": "2010 Volkswagen Polo 1.4 SE",
+      "retainedPhoto": "dealer-stock/public-3.jpg",
+      "publicPhotoReviewed": true
+    }
+  ],
+  "review": {
+    "reviewedAt": "2026-10-19T18:24:26.771517Z",
+    "stockPhotoIdentityChecked": true,
+    "sourceClaimLimits": "Dated public adverts only; availability, repairs, vehicle condition and legal entity details are not independently certified.",
+    "omissions": [
+      "Exact retained lead business.name preserved for the M1 identity validator; clean public trading name used in artwork."
+    ]
+  }
+}
