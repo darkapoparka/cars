@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "dealer": "cars-4-u-wakefield",
   "reviewed": true,
-  "reviewedAt": "2026-10-20T20:15:21.660Z",
+  "reviewedAt": "2026-10-20T22:39:07.797Z",
   "status": "independent-proposal-not-dealer-approved",
   "creationMethod": "imagegen-proposal",
   "assets": {
@@ -50,16 +50,16 @@
   },
   "mark": {
     "path": "branding/logo-mark.png",
-    "sha256": "8279c0960d97d60e3e988160225cf6d686351961818eaf3c05d795a7847601b5",
+    "sha256": "aaceba46ebc8e02bb5a63d1ebbcdb7ec34ad280513f5792bef4ceffb3388b556",
     "generation": {
       "tool": "image_gen.imagegen",
-      "generationId": "exec-fe4b1560-4394-4399-a3d5-ccc461ef751c",
+      "generationId": "exec-bd5e4dff-d5d5-442e-b1d2-0fdc72dc8393",
       "modelVersion": null
     }
   },
   "favicon": {
     "path": "dealer-brand/favicon.ico",
-    "sha256": "d3d18927aa2f6e4065e259eb4baf273b9c0046da49f3467b3062bc53201d7a30"
+    "sha256": "3fbc72e4f50021020ee68ec19548b005c9e3e7f883e0df91bc06b5a58a2b02da"
   },
   "surfaces": {
     "onLight": {
@@ -139,13 +139,13 @@
   "supplemental": {
     "mark-on-light.webp": {
       "path": "dealer-brand/mark-on-light.webp",
-      "sha256": "56bfe211df5cc74c4a74ad05078e5c912349b02b663a099081b1f9582f9f884b",
+      "sha256": "04082ae40b2dbf13d9127b9f55e7e10204be2703eb041b998ec6ca488b70798e",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-fe4b1560-4394-4399-a3d5-ccc461ef751c",
+        "generationId": "exec-bd5e4dff-d5d5-442e-b1d2-0fdc72dc8393",
         "modelVersion": null
       },
-      "sourceReference": "dealers/cars-4-u-wakefield/branding/generated-mark.png"
+      "sourceReference": "dealers/cars-4-u-wakefield/branding/mark-on-light-canvas-v2-20261021.png"
     },
     "mark-on-dark.webp": {
       "path": "dealer-brand/mark-on-dark.webp",
@@ -160,30 +160,30 @@
     },
     "app-icon.png": {
       "path": "dealer-brand/app-icon.png",
-      "sha256": "8279c0960d97d60e3e988160225cf6d686351961818eaf3c05d795a7847601b5",
+      "sha256": "aaceba46ebc8e02bb5a63d1ebbcdb7ec34ad280513f5792bef4ceffb3388b556",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-fe4b1560-4394-4399-a3d5-ccc461ef751c",
+        "generationId": "exec-bd5e4dff-d5d5-442e-b1d2-0fdc72dc8393",
         "modelVersion": null
       },
-      "sourceReference": "dealers/cars-4-u-wakefield/branding/generated-mark.png"
+      "sourceReference": "dealers/cars-4-u-wakefield/branding/mark-on-light-canvas-v2-20261021.png"
     },
     "favicon.ico": {
       "path": "dealer-brand/favicon.ico",
-      "sha256": "d3d18927aa2f6e4065e259eb4baf273b9c0046da49f3467b3062bc53201d7a30",
+      "sha256": "3fbc72e4f50021020ee68ec19548b005c9e3e7f883e0df91bc06b5a58a2b02da",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-fe4b1560-4394-4399-a3d5-ccc461ef751c",
+        "generationId": "exec-bd5e4dff-d5d5-442e-b1d2-0fdc72dc8393",
         "modelVersion": null
       },
-      "sourceReference": "dealers/cars-4-u-wakefield/branding/generated-mark.png"
+      "sourceReference": "dealers/cars-4-u-wakefield/branding/mark-on-light-canvas-v2-20261021.png"
     }
   },
   "markOnDarkReady": true,
   "originalArtworkPreserved": true,
   "visualReview": {
     "reviewed": true,
-    "reviewedAt": "2026-10-20T20:15:21.660Z",
+    "reviewedAt": "2026-10-20T22:39:07.797Z",
     "source": "branding/source.json",
     "spelling": "agent-visual-review",
     "dealerApproval": false

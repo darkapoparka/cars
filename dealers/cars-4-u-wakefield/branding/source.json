@@ -25,24 +25,8 @@
     "modelVersion": null,
     "prompt": "Use case: logo-brand. Create one polished independent UK motor dealer identity proposal. Transparent background, flat crisp graphic, no mockup, no gradients, no shadows, no raster distress or speckles. Wide horizontal lockup, simple isolated compact emblem on left and exact business name on right with plenty of transparent gap for cropping. Emblem legible at32px, thick clean geometry, no tiny details. Design a dual-contrast outline of clean white and deep navy around every shape so it works on white, dark charcoal #111113 and red #c40101. Two-line wordmark, tight readable bold geometric letterforms, no tagline, no extra text. Business name CARS 4 U. Left emblem an original combination of a bold numeral 4 inside the curve of a U, clear exact two symbols, no roof or wheel. CARS 4 U to right as one bold line, exact spaces. Deep navy and fresh red-orange #dd513e with precise white outer keyline. Simple, highly legible, balanced."
   },
-  "compactDerivation": {
-    "method": "lossless-isolated-emblem-crop",
-    "parentReference": "branding/generated-master.png",
-    "parentSha256": "9cd2c3ee500b05c75c4189a85acf02a8a65579067f94d64304a66cc7b0e1571a",
-    "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 660,
-      "height": 728
-    },
-    "generation": {
-      "tool": "image_gen.imagegen",
-      "generationId": "exec-fe4b1560-4394-4399-a3d5-ccc461ef751c",
-      "modelVersion": null
-    }
-  },
   "generatedInputs": {
-    "reviewedAt": "2026-10-20T20:15:21.660Z",
+    "reviewedAt": "2026-10-20T22:39:07.797Z",
     "master": {
       "path": "branding/generated-master.png",
       "sha256": "9cd2c3ee500b05c75c4189a85acf02a8a65579067f94d64304a66cc7b0e1571a",
@@ -53,11 +37,15 @@
       }
     },
     "mark": {
-      "path": "branding/generated-mark.png",
-      "sha256": "3087cb58f61905b74ab39c332bc2417c7be4fd885409f01ef27020549c27f2c4",
+      "path": "branding/mark-on-light-canvas-v2-20261021.png",
+      "sha256": "15e342866567605f24e40eb974ca1f43d42839d3a2921fd790f9f348be6f02e3",
+      "nativeDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-fe4b1560-4394-4399-a3d5-ccc461ef751c",
+        "generationId": "exec-bd5e4dff-d5d5-442e-b1d2-0fdc72dc8393",
         "modelVersion": null
       }
     },
@@ -123,9 +111,22 @@
         32,
         64
       ],
-      "method": "Agent review of exact maintained before/after source raster exports on current consumer backgrounds; unchanged technical pixel checks. New neutral/brand inverse treatment is artwork only and does not change template palettes.",
-      "reviewedAt": "2026-10-20T20:15:21.660Z",
-      "review": "Exact existing spelling and emblem geometry retained. Original inputs and generation provenance remain preserved. Independent proposal; no human/dealer/native/hosted acceptance inferred."
+      "method": "Agent viewed actual prepared64px mark and32px favicon before/after on white; all14unchanged pixel gates passed. Real ImageGen canvas variant retains U/4 identity and navy/red/white composition. Wordmarks and darkcompact unchanged byte-for-byte.",
+      "reviewedAt": "2026-10-20T22:39:07.797Z",
+      "review": "Only the light compact input and required derived icons change. Original isolated crop remains retained. No filters, alpha cleanup, threshold changes or dealer/native/hosted/owner approval."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-20T22:39:07.797Z",
+      "widths": [
+        32,
+        64
+      ],
+      "backgrounds": [
+        "#ffffff"
+      ],
+      "generationId": "exec-bd5e4dff-d5d5-442e-b1d2-0fdc72dc8393",
+      "method": "Exact actual prepared consumer rasters visually reviewed; real publisher accepted the prepared candidate after original source reproduced rejection."
     }
   },
   "artworkHistory": [
@@ -244,6 +245,70 @@
     "reviewedAt": "2026-10-20T20:15:21.660Z",
     "provenance": "branding/contrast-repair-20261020.json",
     "reason": "Measured weak contrast in the original98-pack focused pixel preflight",
+    "originalArtworkPreserved": true,
+    "dealerApproved": false
+  },
+  "sourceHistory": [
+    {
+      "reference": "branding/source-before-light-mark-canvas-repair-20261021-d329de933cb6128f.json",
+      "sha256": "d329de933cb6128f6aa8b8be826d150787185c6c9b523da94ef22198fe295dbb",
+      "retainedAt": "2026-10-20T22:39:07.797Z",
+      "reason": "Exact source provenance before dedicated light compact canvas repair"
+    }
+  ],
+  "additionalGenerations": [
+    {
+      "roles": [
+        "mark"
+      ],
+      "path": "branding/mark-on-light-canvas-v2-20261021.png",
+      "sha256": "15e342866567605f24e40eb974ca1f43d42839d3a2921fd790f9f348be6f02e3",
+      "nativeDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-bd5e4dff-d5d5-442e-b1d2-0fdc72dc8393",
+        "modelVersion": null
+      },
+      "prompt": "Edit this exact existing independent preview logo proposal as a compact canvas repair. The source is a tightly cropped interlocking U and numeral 4 mark. Preserve exactly its existing U/4 silhouette, geometry, stroke thickness, overlaps, white keylines, red-orange #dd513e numeral and deep navy U. Do not add text, badges, background plates, motifs, shadows, gradients, texture or a new design. Keep the existing artwork intact as the sole central object, at a similar shape aspect ratio. The required change is to extend the genuinely transparent exterior canvas around the entire isolated symbol, especially the right edge, so no art touches the source bounds and a normal transparent-padding crop has room on every side. Make the canvas at least square with generous fully alpha-zero margin; do not enlarge the artwork to fill the canvas. Preserve all intended transparent internal gaps/counters and the exact established color composition. This is an artwork variant for a disclosed proposal, with no claimed business adoption.",
+      "referencePaths": [
+        "L:/CODEX/cars/dealers/cars-4-u-wakefield/branding/generated-mark.png"
+      ],
+      "createdAt": "2026-10-20T22:39:07.797Z",
+      "reason": "Actual imagegen edit extends the compact canvas so unchanged maintained crop has complete transparent margin. Originalraw untouched; no neighboring wordmark pixels or manual alpha/recolour filter used."
+    }
+  ],
+  "lightMarkCanvasCorrection": {
+    "reviewedAt": "2026-10-20T22:39:07.797Z",
+    "provenance": "branding/light-mark-canvas-repair-20261021.json",
+    "previousMark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "3087cb58f61905b74ab39c332bc2417c7be4fd885409f01ef27020549c27f2c4",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-fe4b1560-4394-4399-a3d5-ccc461ef751c",
+        "modelVersion": null
+      }
+    },
+    "previousDerivation": {
+      "method": "lossless-isolated-emblem-crop",
+      "parentReference": "branding/generated-master.png",
+      "parentSha256": "9cd2c3ee500b05c75c4189a85acf02a8a65579067f94d64304a66cc7b0e1571a",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 660,
+        "height": 728
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-fe4b1560-4394-4399-a3d5-ccc461ef751c",
+        "modelVersion": null
+      }
+    },
+    "reason": "Oldpreparedmark had24.035% exact transparency and failed unchanged publisher25%guard; actual generatedcanvas variant prepares with26.717%.",
     "originalArtworkPreserved": true,
     "dealerApproved": false
   }

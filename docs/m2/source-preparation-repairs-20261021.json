@@ -1,0 +1,161 @@
+{
+  "schemaVersion": 1,
+  "type": "cars-source-preparation-repairs",
+  "recordedAt": "2026-10-20T22:45:25.678Z",
+  "baseRevision": "548502be4c851be4c3c60b3c506cde58d0db7357",
+  "importStaticCatalogs": {
+    "cause": {
+      "file": "templates/import/src/lib/i18n/native.ts",
+      "line": 261,
+      "error": "Invalid catalog literal at 7914: expected separator",
+      "emitted": "ui1: 'Let's Sell Your Car home'",
+      "otherAffectedQualifiedCatalogs": [
+        "src/lib/content/localized.ts",
+        "src/lib/content/extra-localized.ts"
+      ]
+    },
+    "fix": "Apply strict data-only string literal decode plus JSON encoding to the five declared static Import catalog paths; preserve the distinct regex and replacement-template dollar handling in i18n/messages.ts. Parser remains unchanged.",
+    "files": [
+      {
+        "path": "scripts/lib/client-refresh-adapters.mjs",
+        "bytes": 92657,
+        "sha256": "48f591d3fc73da340951ce1ea4c28b46b6406e67d36c1db5ec90ee5cf6af8af0",
+        "baselineSha256": "65831ad4f5a927cddbffd20de68370d38d2e7dbaba28d457db2a49aa65910e87"
+      },
+      {
+        "path": "scripts/client-refresh-import-facts.test.mjs",
+        "bytes": 14717,
+        "sha256": "4b97d72c0309af2ab89a9868a6b612584672f67dd7ea7097ba1aa00d0e4735cb",
+        "baselineSha256": "e51c8ac8af78018b769159840b3ee1b0b8caaaea62fa98d8719a36b4cb752da2"
+      }
+    ],
+    "tests": {
+      "focusedImportFactsAndCatalogs": {
+        "passed": 20,
+        "failed": 0,
+        "new": 3
+      },
+      "existingImportAdapterAndSafeContent": {
+        "passed": 10,
+        "failed": 0
+      },
+      "exactQualifiedCatalogs": 5,
+      "catalogKeys": 638,
+      "identityCases": [
+        "Lets Sell actual apostrophe name",
+        "Millions actual apostrophe name",
+        "Combined quote slash backslash dollar interpolation display text"
+      ],
+      "computedCatalogExpressionsStillRejected": true
+    },
+    "parserGuardUnchanged": true,
+    "freshNativeRequired": [
+      "lets-sell-your-car",
+      "millions-auto-cars"
+    ]
+  },
+  "cars4u": {
+    "slug": "cars-4-u-wakefield",
+    "packDigest": "fd2e01240327913839d416c580e85e98ac1c23d4c7cea553fb444d58a16334ac",
+    "previousPackDigest": "85c79b3ddd183606985156cb2527fb4212578c4c6e1c169093dd1fbffcc89796",
+    "imagegenOutput": "exec-bd5e4dff-d5d5-442e-b1d2-0fdc72dc8393",
+    "summary": {
+      "candidateAssetChecks": 14,
+      "actualSourceAssetChecks": 14,
+      "actualMaintainedPublisherBeforeRejectedAfterPassed": true,
+      "actualSourceGuardPassed": true,
+      "preparedFullyTransparentFraction": 0.26717376708984375,
+      "files": 27,
+      "bytes": 3722924,
+      "modified": 8,
+      "added": 3,
+      "deleted": 0
+    },
+    "preservation": {
+      "allOriginalSourceFilesRetained": true,
+      "factsStockPhotosPreserved": true,
+      "wordmarksAndDarkCompactBytesPreserved": true,
+      "onlyNecessaryDerivedLightIconsChanged": true,
+      "sharedPublisherSha256Unchanged": "ed0862ad00132685bbc79025f0e23c6d1d483be186e3890d79b79cc16fabeab3"
+    },
+    "exactChangedPaths": [
+      {
+        "path": "dealers/cars-4-u-wakefield/branding/logo-contract.json",
+        "beforeSha256": "53732d334399449e2839d010e7242c0c326fbf4ae0ec00edde2eb71e4d3f4d28",
+        "afterSha256": "7bada917e0784d72a66f2c9a7fbfd8cefd380a1d8169ec6fa6a36bfe8b41bcbb",
+        "operation": "modified"
+      },
+      {
+        "path": "dealers/cars-4-u-wakefield/branding/logo-recipe.json",
+        "beforeSha256": "9222d82aeb316420a15026d0cf3981063b5cc4b8dac8095d6949cae25702a068",
+        "afterSha256": "1f304fa3b5219e328ea1dd25b3b4bca236f78f30e4f9f2774f55eb2cab6be921",
+        "operation": "modified"
+      },
+      {
+        "path": "dealers/cars-4-u-wakefield/branding/source.json",
+        "beforeSha256": "d329de933cb6128f6aa8b8be826d150787185c6c9b523da94ef22198fe295dbb",
+        "afterSha256": "cd492dfcc3b31be1ee05bce671df327a7210749690eb1953d24fcd4f5403023c",
+        "operation": "modified"
+      },
+      {
+        "path": "dealers/cars-4-u-wakefield/copy-review.json",
+        "beforeSha256": "f8add79a41aad45241edb4c079dcef7e8318704e2be78e330229550b04e66e89",
+        "afterSha256": "cd7f62aa5cc86f03288c3731f12d139bb9b469a71becee8d62a22e03f503df69",
+        "operation": "modified"
+      },
+      {
+        "path": "dealers/cars-4-u-wakefield/dealer.json",
+        "beforeSha256": "5eeca89d588cef0e435ba4a6f6755be13f80fc58f05f9ca06a4d873474d9c11e",
+        "afterSha256": "9052ac79f46865120c59f9044f48e1338d146c2000c17cf7de72d9030e93daf4",
+        "operation": "modified"
+      },
+      {
+        "path": "dealers/cars-4-u-wakefield/identity-review.json",
+        "beforeSha256": "3d53c5a48e8ec9c4b5ed2ba8a6e8494aed8e3a15e89ecad340881322bed425f7",
+        "afterSha256": "33219249c73c88ea7d94d5eb02a7ad63bc6e11bcf1e451b9e641201f7d5be560",
+        "operation": "modified"
+      },
+      {
+        "path": "dealers/cars-4-u-wakefield/input-review.json",
+        "beforeSha256": "d0de9ac01d2e6da36dffc4767e429dbda0c9ba04c0187c2d12df335d99aa9602",
+        "afterSha256": "5960355198abf5b25ddca1a5318868e193f9986c21171a3f60b4b471e9fc7f50",
+        "operation": "modified"
+      },
+      {
+        "path": "dealers/cars-4-u-wakefield/qualification.json",
+        "beforeSha256": "0721b4feea5f8ddba6e674102c00da1b7678d81190d7683e5640dca8e11d78ab",
+        "afterSha256": "eaeb1c7516df2c19e6ecb06d1a7cf5c1e8ee496deb6b5adf6597bf761b5b29f0",
+        "operation": "modified"
+      },
+      {
+        "path": "dealers/cars-4-u-wakefield/branding/light-mark-canvas-repair-20261021.json",
+        "bytes": 4247,
+        "sha256": "b1d1e52df3bfe17f0727616696032d677d2b3d4c64a0272d71c95ce6ed9c3b59",
+        "operation": "added"
+      },
+      {
+        "path": "dealers/cars-4-u-wakefield/branding/mark-on-light-canvas-v2-20261021.png",
+        "bytes": 538796,
+        "sha256": "15e342866567605f24e40eb974ca1f43d42839d3a2921fd790f9f348be6f02e3",
+        "operation": "added"
+      },
+      {
+        "path": "dealers/cars-4-u-wakefield/branding/source-before-light-mark-canvas-repair-20261021-d329de933cb6128f.json",
+        "bytes": 11007,
+        "sha256": "d329de933cb6128f6aa8b8be826d150787185c6c9b523da94ef22198fe295dbb",
+        "operation": "added"
+      }
+    ],
+    "failedOldNativeRun": {
+      "runId": 39503680016,
+      "jobId": 118907925709,
+      "sourceCommit": "a92135f6b5c3e0f510a0fdc95ca2a2740197805a",
+      "packDigest": "85c79b3ddd183606985156cb2527fb4212578c4c6e1c169093dd1fbffcc89796",
+      "status": "failed-remains-failed"
+    }
+  },
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "dealerApproval": false,
+  "ownerAccepted": false
+}

@@ -1636,6 +1636,17 @@ function patchImportHeroBindings(candidate) {
   return 'src/lib/components/home/HomeFiveHero.svelte (dealer contact binding)';
 }
 
+function personalizeImportCatalogStrings(source, replacements) {
+  return source.replace(/(["'`])(?:\\.|(?!\1)[^\\\r\n])*\1/g, literal => {
+    if (!replacements.some(([from]) => literal.includes(from))) return literal;
+    const parsed = readCatalogLiteral(literal);
+    if (typeof parsed.value !== 'string' || parsed.end !== literal.length) throw Error('Import catalog string literal boundary changed');
+    let value = parsed.value;
+    for (const [from, to] of replacements) value = value.split(from).join(to);
+    return JSON.stringify(value);
+  });
+}
+
 function personalizeImportMessageText(source, replacements) {
   const replace=(text,rows)=>{for(const [from,to] of rows)text=text.split(from).join(to);return text;};
   const replacementStart=source.indexOf('const auxeroBgReplacements:'),replacementEnd=source.indexOf('\n];',replacementStart)+3;
@@ -1644,13 +1655,9 @@ function personalizeImportMessageText(source, replacements) {
   // Decode only the static string slots which actually contain a retained
   // identity. JSON string encoding preserves quotes/backslashes and keeps a
   // sourced ${...} sequence as display text, never executable interpolation.
-  const slots=(text,replacementCopy)=>text.replace(/(["'`])(?:\\.|(?!\1)[^\\\r\n])*\1/g,literal=>{
-    if(!replacements.some(([from])=>literal.includes(from)))return literal;
-    const parsed=readCatalogLiteral(literal);if(typeof parsed.value!=='string'||parsed.end!==literal.length)throw Error('Import message string literal boundary changed');
-    // These catalog strings are String.replace templates. Escape only dollars
-    // from the sourced identity; existing $1/$2 count captures stay active.
-    return JSON.stringify(replace(parsed.value,replacementCopy?replacementSlots:replacements));
-  });
+  // Replacement-copy strings need dollar quoting; ordinary catalog values do
+  // not. The strict literal reader and JSON encoder are shared by both paths.
+  const slots=(text,replacementCopy)=>personalizeImportCatalogStrings(text,replacementCopy?replacementSlots:replacements);
   const escape=value=>String(value).replace(/[.*+?^${}()|[\]\\]/g,'\\$&').replaceAll('/','\\/').replaceAll('\r','\\r').replaceAll('\n','\\n').replaceAll('\u2028','\\u2028').replaceAll('\u2029','\\u2029');
   const escaped=replacements.map(([from,to])=>[from,escape(to)]);
   // The reviewed message catalog stores its regex literals in array rows.
@@ -1685,9 +1692,18 @@ function patchImportText(candidate, profile) {
     ['0877 733 110', b.phoneDisplay],
     ['гр. София, Студентски град, ул. Атанас Манчев 18', b.address]
   ];
+  const staticCatalogs = new Set([
+    'src/lib/locale/messages.ts',
+    'src/lib/i18n/native.ts',
+    'src/lib/content/localized.ts',
+    'src/lib/content/inventory-localized.ts',
+    'src/lib/content/extra-localized.ts'
+  ]);
   return patchTextTree(path.join(candidate, 'src'), replacements,
     new Set(['node_modules', '.svelte-kit', 'dist', 'build']), (value,file)=>{
-      if(path.relative(candidate,file).replaceAll('\\','/')==='src/lib/i18n/messages.ts')return personalizeImportMessageText(value,replacements);
+      const relative = path.relative(candidate,file).replaceAll('\\','/');
+      if(relative==='src/lib/i18n/messages.ts')return personalizeImportMessageText(value,replacements);
+      if(staticCatalogs.has(relative))return personalizeImportCatalogStrings(value,replacements);
       for(const [from,to] of replacements)value=value.split(from).join(to);return value;
     })
     .map((file) => path.relative(candidate, file).replaceAll('\\', '/'));

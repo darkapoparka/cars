@@ -4,8 +4,11 @@ import path from 'node:path';
 import test from 'node:test';
 import { stripTypeScriptTypes } from 'node:module';
 import { runInNewContext } from 'node:vm';
+import { createHash } from 'node:crypto';
 import { applyRefreshAdapter, refreshAdapterInternals as adapters } from './lib/client-refresh-adapters.mjs';
 import { refreshNormalizeInternals } from './lib/client-refresh-normalize.mjs';
+import { readTypeScriptCatalog } from './lib/catalog-literal.mjs';
+import { auditNativeCatalogs } from './lib/native-localization.mjs';
 
 const root = path.resolve(import.meta.dirname, '..');
 const markets = [
@@ -140,3 +143,49 @@ for(const name of ['Fairfield Car Centre (Bury / M-Kars seller path)','Cars and 
   if(name.includes('.+')){pattern.lastIndex=0;assert.equal(pattern.test(actual.replace('.+','wildcard text')),false,'Regex metacharacters in the name are literal');}
   const [stockPattern,stockCopy]=rows.find(([row])=>row.source.endsWith(' current stock'));assert.equal((name+' current stock').replace(stockPattern,stockCopy),'Налични автомобили в '+name,'Rendered UI replacement retains the exact sourced name, without display escapes');assert.equal(context.injected,undefined,'A sourced interpolation sequence must not execute');
 });
+
+// Exact catalog blobs from the selected immutable Import release at
+// 5d052ea655714f3d0ca3656daa7dbff411e2f747, tree87950ec43fdb33fd85dbf6d6b6160e1a779777c6.
+// Hash binding prevents a newer working template from silently changing this
+// regression fixture; no historical source download or whole-family copy.
+const qualifiedImportCatalogs = [
+  {path:'src/lib/locale/messages.ts',oid:'19e6cb59a6941a4297575ffae80cf3cbd5ea8d86',format:'typescript-pair',en:'en',bg:'bg'},
+  {path:'src/lib/i18n/native.ts',oid:'3fd546d415be0ae158934391dff7c386bbe7b0ec',format:'typescript-pair',en:'nativeEn',bg:'nativeBg'},
+  {path:'src/lib/content/localized.ts',oid:'05514d2985db5c4806ce64f8cdb156981f4139e4',format:'typescript-pair',en:'contentEn',bg:'contentBg'},
+  {path:'src/lib/content/inventory-localized.ts',oid:'c67557afcfa72d6db5966ea3bbb9578b1abc4ce0',format:'typescript-rows',export:'inventoryCopy'},
+  {path:'src/lib/content/extra-localized.ts',oid:'80be366f3b3ec6760da6398899ad18d1eef192ea',format:'typescript-source-map',export:'extraEnglish'}
+];
+for (const name of ["Let's Sell Your Car", "Million's Auto Cars Ltd", `O'Brien "Motors" / North \\ $\{globalThis.injected=true\} $& $'`]) {
+  test('Import qualified release catalogs retain the literal identity '+name, t => {
+    const fixtureRoot = path.join(root, 'runtime/import-facts-tests'); fs.mkdirSync(fixtureRoot, {recursive:true});
+    const candidate = fs.mkdtempSync(path.join(fixtureRoot, 'qualified-catalogs-'));
+    t.after(() => {const target = fs.realpathSync(candidate); assert(target.startsWith(fs.realpathSync(fixtureRoot)+path.sep)); fs.rmSync(target, {recursive:true,force:true});});
+    const original = new Map();
+    for (const {path:relative,oid} of qualifiedImportCatalogs) {
+      const bytes = Buffer.from(fs.readFileSync(path.join(root, 'templates/import', relative), 'utf8').replace(/\r\n/g, '\n'));
+      assert.equal(createHash('sha1').update('blob '+bytes.length+'\0').update(bytes).digest('hex'), oid, 'Exact qualified release input: '+relative);
+      original.set(relative, bytes.toString('utf8'));
+      const file = path.join(candidate, relative); fs.mkdirSync(path.dirname(file), {recursive:true}); fs.writeFileSync(file, bytes);
+    }
+    const nativePath = 'src/lib/i18n/native.ts';
+    assert.throws(() => readTypeScriptCatalog(original.get(nativePath).split('Day Night Auto').join(name), 'nativeEn'), /Invalid catalog literal/, 'Raw source replacement reproduces the released single-quote failure');
+    const profile = {business:{name,shortName:name,phoneE164:'',phoneDisplay:'',address:''}}, before = JSON.stringify(profile);
+    adapters.patchImportText(candidate, profile);
+    const files = new Map(qualifiedImportCatalogs.map(({path:relative}) => ['import/'+relative, fs.readFileSync(path.join(candidate, relative))]));
+    const text = relative => files.get('import/'+relative).toString('utf8');
+    for (const [relative,source] of files) assert.doesNotThrow(() => stripTypeScriptTypes(source.toString('utf8')), 'Full generated TypeScript: '+relative);
+    const descriptors = qualifiedImportCatalogs.map(({oid,...descriptor}) => descriptor);
+    const audit = auditNativeCatalogs(files, 'import', descriptors);
+    assert.equal(audit.declaredCatalogParityPassed, true); assert.equal(audit.catalogs.length, 5);
+    const native = readTypeScriptCatalog(text(nativePath), 'nativeEn');
+    assert.equal(native.ui1, name+' home'); assert.equal(native.ui2, 'Call '+name);
+    const content = readTypeScriptCatalog(text('src/lib/content/localized.ts'), 'contentEn');
+    assert.equal(content.content18, 'Send a link, VIN, budget, timeframe or sale request and '+name+' will prepare the next step.');
+    const extra = readTypeScriptCatalog(text('src/lib/content/extra-localized.ts'), 'extraEnglish');
+    assert.equal(extra['За '+name], 'About '+name, 'Static catalog keys and values both retain the exact displayed identity');
+    assert.equal(JSON.stringify(profile), before);
+    const unreviewed = text(nativePath).replace('ui1: '+JSON.stringify(name+' home'), () => 'ui1: getUnreviewedName() || '+JSON.stringify(name+' home'));
+    assert.notEqual(unreviewed, text(nativePath), 'The negative fixture changes the exact nativeEn identity slot');
+    assert.throws(() => readTypeScriptCatalog(unreviewed, 'nativeEn'), /Invalid catalog literal/, 'Executable catalog expressions remain refused');
+  });
+}

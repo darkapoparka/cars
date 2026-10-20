@@ -3,7 +3,7 @@
   "kind": "cars-dealer-pack-input-review",
   "dealer": "cars-4-u-wakefield",
   "reviewed": true,
-  "reviewedAt": "2026-10-20T20:28:58.950Z",
+  "reviewedAt": "2026-10-20T22:39:11.106Z",
   "review": {
     "kind": "automated",
     "humanReview": false,
@@ -62,16 +62,28 @@
       "sha256": "9cd2c3ee500b05c75c4189a85acf02a8a65579067f94d64304a66cc7b0e1571a"
     },
     {
+      "path": "branding/light-mark-canvas-repair-20261021.json",
+      "sha256": "b1d1e52df3bfe17f0727616696032d677d2b3d4c64a0272d71c95ce6ed9c3b59"
+    },
+    {
       "path": "branding/logo-contract.json",
-      "sha256": "53732d334399449e2839d010e7242c0c326fbf4ae0ec00edde2eb71e4d3f4d28"
+      "sha256": "7bada917e0784d72a66f2c9a7fbfd8cefd380a1d8169ec6fa6a36bfe8b41bcbb"
     },
     {
       "path": "branding/logo-recipe.json",
-      "sha256": "9222d82aeb316420a15026d0cf3981063b5cc4b8dac8095d6949cae25702a068"
+      "sha256": "1f304fa3b5219e328ea1dd25b3b4bca236f78f30e4f9f2774f55eb2cab6be921"
+    },
+    {
+      "path": "branding/mark-on-light-canvas-v2-20261021.png",
+      "sha256": "15e342866567605f24e40eb974ca1f43d42839d3a2921fd790f9f348be6f02e3"
+    },
+    {
+      "path": "branding/source-before-light-mark-canvas-repair-20261021-d329de933cb6128f.json",
+      "sha256": "d329de933cb6128f6aa8b8be826d150787185c6c9b523da94ef22198fe295dbb"
     },
     {
       "path": "branding/source.json",
-      "sha256": "d329de933cb6128f6aa8b8be826d150787185c6c9b523da94ef22198fe295dbb"
+      "sha256": "cd492dfcc3b31be1ee05bce671df327a7210749690eb1953d24fcd4f5403023c"
     },
     {
       "path": "business-facts.json",
@@ -79,7 +91,7 @@
     },
     {
       "path": "copy-review.json",
-      "sha256": "f8add79a41aad45241edb4c079dcef7e8318704e2be78e330229550b04e66e89"
+      "sha256": "cd7f62aa5cc86f03288c3731f12d139bb9b469a71becee8d62a22e03f503df69"
     },
     {
       "path": "dealer-stock/public-1.jpg",
@@ -95,11 +107,11 @@
     },
     {
       "path": "dealer.json",
-      "sha256": "5eeca89d588cef0e435ba4a6f6755be13f80fc58f05f9ca06a4d873474d9c11e"
+      "sha256": "9052ac79f46865120c59f9044f48e1338d146c2000c17cf7de72d9030e93daf4"
     },
     {
       "path": "identity-review.json",
-      "sha256": "3d53c5a48e8ec9c4b5ed2ba8a6e8494aed8e3a15e89ecad340881322bed425f7"
+      "sha256": "33219249c73c88ea7d94d5eb02a7ad63bc6e11bcf1e451b9e641201f7d5be560"
     },
     {
       "path": "locale.json",
@@ -111,7 +123,7 @@
     },
     {
       "path": "qualification.json",
-      "sha256": "0721b4feea5f8ddba6e674102c00da1b7678d81190d7683e5640dca8e11d78ab"
+      "sha256": "eaeb1c7516df2c19e6ecb06d1a7cf5c1e8ee496deb6b5adf6597bf761b5b29f0"
     },
     {
       "path": "source-evidence.json",

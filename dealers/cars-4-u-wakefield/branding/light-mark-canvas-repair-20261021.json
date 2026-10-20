@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-light-compact-canvas-repair",
+  "dealer": "cars-4-u-wakefield",
+  "createdAt": "2026-10-20T22:39:07.797Z",
+  "previousPackDigest": "85c79b3ddd183606985156cb2527fb4212578c4c6e1c169093dd1fbffcc89796",
+  "previousSource": {
+    "path": "branding/source-before-light-mark-canvas-repair-20261021-d329de933cb6128f.json",
+    "sha256": "d329de933cb6128f6aa8b8be826d150787185c6c9b523da94ef22198fe295dbb"
+  },
+  "previousMark": {
+    "path": "branding/generated-mark.png",
+    "sha256": "3087cb58f61905b74ab39c332bc2417c7be4fd885409f01ef27020549c27f2c4",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-fe4b1560-4394-4399-a3d5-ccc461ef751c",
+      "modelVersion": null
+    }
+  },
+  "previousDerivation": {
+    "method": "lossless-isolated-emblem-crop",
+    "parentReference": "branding/generated-master.png",
+    "parentSha256": "9cd2c3ee500b05c75c4189a85acf02a8a65579067f94d64304a66cc7b0e1571a",
+    "crop": {
+      "left": 0,
+      "top": 0,
+      "width": 660,
+      "height": 728
+    },
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-fe4b1560-4394-4399-a3d5-ccc461ef751c",
+      "modelVersion": null
+    }
+  },
+  "newInput": {
+    "path": "branding/mark-on-light-canvas-v2-20261021.png",
+    "sha256": "15e342866567605f24e40eb974ca1f43d42839d3a2921fd790f9f348be6f02e3",
+    "nativeDimensions": {
+      "width": 1254,
+      "height": 1254
+    },
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-bd5e4dff-d5d5-442e-b1d2-0fdc72dc8393",
+      "modelVersion": null
+    }
+  },
+  "actualImagegen": {
+    "slug": "cars-4-u-wakefield",
+    "role": "markLight",
+    "refs": [
+      "L:/CODEX/cars/dealers/cars-4-u-wakefield/branding/generated-mark.png"
+    ],
+    "prompt": "Edit this exact existing independent preview logo proposal as a compact canvas repair. The source is a tightly cropped interlocking U and numeral 4 mark. Preserve exactly its existing U/4 silhouette, geometry, stroke thickness, overlaps, white keylines, red-orange #dd513e numeral and deep navy U. Do not add text, badges, background plates, motifs, shadows, gradients, texture or a new design. Keep the existing artwork intact as the sole central object, at a similar shape aspect ratio. The required change is to extend the genuinely transparent exterior canvas around the entire isolated symbol, especially the right edge, so no art touches the source bounds and a normal transparent-padding crop has room on every side. Make the canvas at least square with generous fully alpha-zero margin; do not enlarge the artwork to fill the canvas. Preserve all intended transparent internal gaps/counters and the exact established color composition. This is an artwork variant for a disclosed proposal, with no claimed business adoption.",
+    "path": "C:\\Users\\radev\\.codex\\generated_images\\01a15a1f-d666-7482-9123-db2575e93737\\exec-bd5e4dff-d5d5-442e-b1d2-0fdc72dc8393.png",
+    "generationId": "exec-bd5e4dff-d5d5-442e-b1d2-0fdc72dc8393",
+    "tool": "image_gen.imagegen",
+    "modelVersion": null,
+    "recordedAt": "2026-10-20T22:36:41.202Z",
+    "sourceFileCopiedByteIdentical": true
+  },
+  "agentVisualReview": {
+    "comparison": {
+      "path": "J:/.artifacts/cars-source-sync/cars4u-light-mark-canvas-before-after.png",
+      "sha256": "b843500e9bd38f5951e6112640e9582001aa7cffa0c24a24fb98164b3e69f44a",
+      "bytes": 45595,
+      "actualMarkWidth": 64,
+      "actualFaviconWidth": 32,
+      "wordmarkWidth": 180,
+      "background": "#ffffff"
+    },
+    "markWidth": 64,
+    "faviconWidth": 32,
+    "unchangedWordmarkWidth": 180,
+    "spellingAndMotif": "U/4 geometry and navy/red/white composition retained",
+    "humanReview": false,
+    "dealerApproval": false,
+    "ownerApproval": false,
+    "nativeApproval": false,
+    "hostedApproval": false
+  },
+  "necessaryDerivedChanges": [
+    "light compact PNG/WebP",
+    "app-icon",
+    "favicon32/64",
+    "dealer share-logo favicon hash"
+  ],
+  "preservedRoles": [
+    "master",
+    "onLight",
+    "onDark",
+    "onAccent",
+    "markOnDark"
+  ],
+  "guardThresholdUnchanged": true,
+  "pixelThresholdsUnchanged": true,
+  "filtersApplied": false,
+  "manualAlphaCleanup": false
+}

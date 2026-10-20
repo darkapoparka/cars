@@ -97,7 +97,7 @@ jobs:
         CARS_MINIFLARE_RESOLVE_FROM: ${{ github.workspace }}/runtime/dealer-pack-stream-tests/package.json
         NODE_PATH: ${{ github.workspace }}/runtime/dealer-pack-test-tools/node_modules
       run: |
-        node --test --test-isolation=none scripts/*dealer-pack*.test.mjs scripts/package-uk-single-worker.test.mjs scripts/package-dealer.test.mjs scripts/preview-switcher-release.test.mjs scripts/app-dealer-adapter.test.mjs scripts/mobile-dealer-currency.test.mjs scripts/six-publishing.test.mjs scripts/cloudflare-six-mount.test.mjs scripts/six-variant-refresh.test.mjs scripts/lead-branding-surfaces.test.mjs scripts/registered-dealer-adoption.test.mjs scripts/prepare-new-dealer-source.test.mjs scripts/auto-best-optional-contact.test.mjs scripts/dealer-contact-fallback.test.mjs scripts/deploy-dealer-single-worker.test.mjs
+        node --test --test-isolation=none scripts/*dealer-pack*.test.mjs scripts/client-refresh-import-facts.test.mjs scripts/import-dealer-inventory-red.test.mjs scripts/package-uk-single-worker.test.mjs scripts/package-dealer.test.mjs scripts/preview-switcher-release.test.mjs scripts/app-dealer-adapter.test.mjs scripts/mobile-dealer-currency.test.mjs scripts/six-publishing.test.mjs scripts/cloudflare-six-mount.test.mjs scripts/six-variant-refresh.test.mjs scripts/lead-branding-surfaces.test.mjs scripts/registered-dealer-adoption.test.mjs scripts/prepare-new-dealer-source.test.mjs scripts/auto-best-optional-contact.test.mjs scripts/dealer-contact-fallback.test.mjs scripts/deploy-dealer-single-worker.test.mjs
         node scripts/check-workflow.mjs
     - name: Use the retained Auto Best runtime for Svelte publisher tests
       uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
