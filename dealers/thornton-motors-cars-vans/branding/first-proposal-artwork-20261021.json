@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-first-missing-source-proposal-artwork",
+  "dealer": "thornton-motors-cars-vans",
+  "createdAt": "2026-10-20T23:44:13.777Z",
+  "inputRows": [
+    {
+      "role": "wordLight",
+      "path": "branding/generated-master-v1-20261021.png",
+      "sha256": "8a0715b9a7ec204925351981f7b39d427bbc74708a5c4ea27bc0692b2d97edae",
+      "nativeDimensions": {
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-2f763e9c-73af-448e-be6e-99f201ff9fe3",
+        "modelVersion": null
+      },
+      "artifact": "J:/.artifacts/cars-source-sync/pilot-next3-branding-inputs/thornton_light.png",
+      "prompt": "Use case: logo-brand. Produce a clean transparent raster website refresh PROPOSAL using the attached actual Thornton Motors public logo as identity reference. Preserve its recognizable simple sports-car/road-and-wrench motif and exact trading words THORNTON MOTORS, with small descriptor VANS AND CARS. OMIT all contact numbers, QR code, address and Est.2019; do not invent facts or use a manufacturer badge. This is an unapproved website proposal, not an official original. For usable responsive layout, create a horizontal lockup with a compact approximately square TM/car-and-wrench emblem isolated on the LEFT and a generous fully transparent vertical gap; on RIGHT clear large THORNTON above MOTORS, with readable VANS AND CARS below. Robust flat near-black #101820 filled strokes, bold clear lettering, simplified detail for32px emblem and120px wordmark legibility. Genuine transparent background/zero-alpha empty space, generous outer margins, no shadows/glows/gradients/mockup/backdrop/extra text. Keep source reference visually recognizable while removing its old contacts and QR code.",
+      "referencePaths": [
+        "J:/.artifacts/cars-source-sync/next3-branding-public/thornton-motors-cars-vans-public-context.jpg"
+      ]
+    },
+    {
+      "role": "markLight",
+      "path": "branding/generated-mark-light-v1-20261021.png",
+      "sha256": "0b92afa4d9add0fb4cd070b9fc33fc6fc3535fab75b3df38522dd70dc6b8c5ba",
+      "nativeDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-e1033e89-2853-4942-98b1-7fed89029e7a",
+        "modelVersion": null
+      },
+      "artifact": "J:/.artifacts/cars-source-sync/pilot-next3-branding-inputs/thornton_mark_light.png",
+      "prompt": "Use case: logo-brand. Create ONLY a dedicated COMPACT logo emblem for the attached Thornton Motors website refresh proposal. This is an unapproved responsive companion, not official adopted branding. Approximately square, strong filled near-black #101820 ink on genuine transparent background. A bold readable TM monogram integrated with one simple car-roof sweep and a small robust wrench cue, echoing the attached car-and-wrench identity but SIMPLIFIED for32px/favicon use. Clear open counters, thick smooth flat strokes and generous genuine zero-alpha outer padding. No full business name, no descriptor, no slogan, no contact numbers, address, QR, dates, manufacturer symbol, shield, decorative border, shadow, glow or background. Exact letters TM only. One isolated centered compact emblem, no wordmark or presentation sheet.",
+      "referencePaths": [
+        "J:/.artifacts/cars-source-sync/pilot-next3-branding-inputs/thornton_light.png"
+      ]
+    },
+    {
+      "role": "wordDark",
+      "path": "branding/generated-inverse-v1-20261021.png",
+      "sha256": "a9e4d4a62cd40ac2a936b097f85fad42443824e43db6080db4c748532183011e",
+      "nativeDimensions": {
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-d5903e09-b310-49dd-aa0e-4c1cdc3c3a99",
+        "modelVersion": null
+      },
+      "artifact": "J:/.artifacts/cars-source-sync/pilot-next3-branding-inputs/thornton_dark.png",
+      "prompt": "Edit the attached Thornton Motors transparent proposal into its exact matching inverse white-ink treatment. Preserve sports-car and wrench silhouette, layout, exact words THORNTON / MOTORS / VANS AND CARS, separation, strokes and counters. Change near-black ink to solid white ink for dark and native red backgrounds. Genuine transparent background, zero-alpha empty regions and outer padding. No glow, texture, shadow, backdrop, QR, contact numbers, address, dates, extra text or redesign. This remains an unapproved website logo refresh proposal.",
+      "referencePaths": [
+        "J:/.artifacts/cars-source-sync/pilot-next3-branding-inputs/thornton_light.png"
+      ]
+    },
+    {
+      "role": "markDark",
+      "path": "branding/generated-mark-dark-v1-20261021.png",
+      "sha256": "e5cd7b4b6659befadffb74b1aeb5981e2c1368bae0c3e69f6daeb3e8916981a2",
+      "nativeDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-c0fdb302-a1ed-4787-a488-da0e186e7b49",
+        "modelVersion": null
+      },
+      "artifact": "J:/.artifacts/cars-source-sync/pilot-next3-branding-inputs/thornton_mark_dark.png",
+      "prompt": "Make the attached compact Thornton Motors TM/car-and-wrench proposal its matching WHITE inverse ink treatment. Preserve exact TM letters, bold car-roof sweep and wrench cue, dimensions, geometry, open counters and strong strokes. Solid white ink only on genuine transparent background with fully zero-alpha outer space. This is a responsive compact unapproved website proposal, no new business text. No glow, shadow, backdrop, contact numbers, QR, address, dates, mockup or redesign.",
+      "referencePaths": [
+        "C:/Users/radev/.codex/generated_images/01a15a1f-96e3-7001-a49b-e6e059368aa7/exec-e1033e89-2853-4942-98b1-7fed89029e7a.png"
+      ]
+    }
+  ],
+  "sourceFactNamePreserved": true,
+  "publicTradingText": "Thornton Motors Cars & Vans",
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "dealerApproval": false,
+  "humanReview": false,
+  "providerWrites": 0,
+  "filtersApplied": false,
+  "thresholdsChanged": false
+}

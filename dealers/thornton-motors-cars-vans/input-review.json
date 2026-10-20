@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-input-review",
+  "dealer": "thornton-motors-cars-vans",
+  "reviewed": true,
+  "reviewedAt": "2026-10-20T23:44:36.198Z",
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "checks": [
+    "canonical-hosting-and-preserved-fleet-collisions",
+    "assigned-expansion-lead",
+    "public-fact-schema-and-price-omission",
+    "personal-contact-screen",
+    "retained-stock-media",
+    "companion-copy-source-binding",
+    "immutable-template-release-and-native-QA-parent",
+    "reviewed-artwork-provenance-and-regenerated-logo-hashes"
+  ],
+  "sourceArtworkReview": "Retained artwork review is separate provenance; this command does not perform visual, Arabic-expert or dealer approval.",
+  "copyReview": "Automated structure, stock hash, source text and complete EN/BG rows; no new human translation approval is inferred.",
+  "contacts": {
+    "schemaVersion": 1,
+    "kind": "cars-automated-public-contact-screen",
+    "dealer": "thornton-motors-cars-vans",
+    "method": "heuristic; no claim that unflagged values cannot be personal",
+    "flags": [],
+    "blocking": []
+  },
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-bradford-thornton-motors-cars-vans",
+    "position": 26
+  },
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "inputs": [
+    {
+      "path": "FACTS-AND-INVENTORY.json",
+      "sha256": "81fab5aaaa2768b175753e821d08eea829ef04fe6277c9289f0602eb626ebc6c"
+    },
+    {
+      "path": "branding/first-proposal-artwork-20261021.json",
+      "sha256": "78b8c3437d9f31a390e64f3a2d58a91c0fb24702b8f85187dbab78f6743c372e"
+    },
+    {
+      "path": "branding/generated-inverse-v1-20261021.png",
+      "sha256": "a9e4d4a62cd40ac2a936b097f85fad42443824e43db6080db4c748532183011e"
+    },
+    {
+      "path": "branding/generated-mark-dark-v1-20261021.png",
+      "sha256": "e5cd7b4b6659befadffb74b1aeb5981e2c1368bae0c3e69f6daeb3e8916981a2"
+    },
+    {
+      "path": "branding/generated-mark-light-v1-20261021.png",
+      "sha256": "0b92afa4d9add0fb4cd070b9fc33fc6fc3535fab75b3df38522dd70dc6b8c5ba"
+    },
+    {
+      "path": "branding/generated-master-v1-20261021.png",
+      "sha256": "8a0715b9a7ec204925351981f7b39d427bbc74708a5c4ea27bc0692b2d97edae"
+    },
+    {
+      "path": "branding/logo-contract.json",
+      "sha256": "5da8e720572978eee34272a41abd275dd8a0f2a2b44d8e9e48e935f383c55ff9"
+    },
+    {
+      "path": "branding/logo-recipe.json",
+      "sha256": "67af293e0cdcf6bbe7eb7ff1d6c15ac486752ed7bf5e8488f69f91f76036c82e"
+    },
+    {
+      "path": "branding/originals/thornton-autotrader-logo-20261021.jpg",
+      "sha256": "f2b77803e4b231bf18af9f12d9611a72c50e402ae1641258ffe4bc2184dc74ce"
+    },
+    {
+      "path": "branding/source-before-first-artwork-20261021-81b95e7202d42994.json",
+      "sha256": "81b95e7202d42994d1ed6209a6580d56350967a08f3bdda4e88e55e4a869b076"
+    },
+    {
+      "path": "branding/source.json",
+      "sha256": "2f3ee2e46af6617b4cb3c8a58fa57629c72cdf1f7a4eb9267cbfde87ef255bd5"
+    },
+    {
+      "path": "business-facts.json",
+      "sha256": "62d4e59397e2012987bc9e328b2fe31e0eb1785ac4395a7fa9171d4cdd2f33ae"
+    },
+    {
+      "path": "copy-review.json",
+      "sha256": "fe94b0f835bf2f98817730cc2086c8464b60e6c1ef52bcf0bac3df1bc04a324a"
+    },
+    {
+      "path": "dealer-stock/template-demo-1.webp",
+      "sha256": "945e6864218ab3bd5fbd415336b212ecfde645685033f8506836f906885d447c"
+    },
+    {
+      "path": "dealer-stock/template-demo-2.webp",
+      "sha256": "17689ab880bf47de81ef467c34d639223f39f0c1ebe68c90d0aaf70e3dcc6333"
+    },
+    {
+      "path": "dealer-stock/template-demo-3.webp",
+      "sha256": "d644dec8e1ef280a702dccac267a2367f0ab823e40373e1299b156e7723b3b1f"
+    },
+    {
+      "path": "dealer.json",
+      "sha256": "e14209b3411d3952478d8307d7f99e35de5a8a254479ead4160edde736545aa7"
+    },
+    {
+      "path": "identity-review.json",
+      "sha256": "8d6af7d3f16e61a6978c8286023c4a0103994e7fc67234b44678de5432b0399b"
+    },
+    {
+      "path": "locale.json",
+      "sha256": "bb3b8cf45f495947dba14b685150fce9b6b68a0cbd5f8422b08fb13fcd08cdd0"
+    },
+    {
+      "path": "missing-facts.json",
+      "sha256": "af61470ab0be063869ccf2ff95535d963a3feb7603bb4afed198d375c757fe4c"
+    },
+    {
+      "path": "qualification.json",
+      "sha256": "a3f0fab77b991d4b9361d8ee6eb9268c0f23ccff3ca6d86ed31d830a7a16c5ae"
+    },
+    {
+      "path": "source-evidence.json",
+      "sha256": "596bb0a6c702d4eb0293b5f126de13ae21959c11ea6c114e8418b75addd18a4e"
+    },
+    {
+      "path": "stock.json",
+      "sha256": "3b991161d63feaf7d9ae0c9d6a4c35f3c47d7777224ef994e62db6ca6e36f492"
+    }
+  ],
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "providerWrites": 0
+}

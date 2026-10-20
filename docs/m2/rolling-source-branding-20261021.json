@@ -90,6 +90,108 @@
           "provenance": "dealers/drive-select-motors/branding/first-proposal-artwork-20261021.json"
         }
       ],
+      "nativeStatus": "dispatched; qualification not inferred from dispatch",
+      "nativeApproval": false,
+      "hostedApproval": false,
+      "nativeRun": {
+        "runId": 39516617008,
+        "sourceCommit": "825aa8196cc5f697690dc4c352ab0dd39ef1fd3f",
+        "url": "https://github.com/darkapoparka/cars/actions/runs/39516617008",
+        "slugs": [
+          "birmingham-motors-ltd",
+          "dc-car-sales",
+          "drive-select-motors"
+        ]
+      }
+    },
+    {
+      "group": "pilot-next3",
+      "recordedAt": "2026-10-20T23:46:01.609Z",
+      "reviewSealSha256": "9eff4c8f9d6955510486b16a6e562726bd4a4f9e569e666974e0b324424eaae5",
+      "totals": {
+        "packs": 3,
+        "artworkPassed": 3,
+        "sourceReviewCheckPassed": 3,
+        "existingContactHeld": 0,
+        "candidateRasterChecks": 42,
+        "actualSourceRasterChecks": 42,
+        "files": 73,
+        "bytes": 8105052,
+        "modifiedPaths": 15,
+        "addedPaths": 28,
+        "deleted": 0
+      },
+      "packs": [
+        {
+          "slug": "evelyn-motors",
+          "path": "dealers/evelyn-motors",
+          "packDigest": "df2f773aeeb571fc70c6a123e799468152078150d3266f091ab6d9434317c5f2",
+          "files": 24,
+          "bytes": 2288887,
+          "sourceReady": true,
+          "proposalOnly": true,
+          "maintainerConsumerReview": true,
+          "actualSourceRasters": 14,
+          "strictPublisher": {
+            "passed": true,
+            "actualExportedApplyLeadBranding": true,
+            "fixtureSourceSha256": "85d66559b60867d2ab30ff7c4cb0a9eb07f7d6b9e0fb8ef3c4ae5caeae594783",
+            "noBuild": true
+          },
+          "sourceFactsStockPhotosResearchPreserved": true,
+          "humanReview": false,
+          "dealerApproval": false,
+          "nativeApproval": false,
+          "hostedApproval": false,
+          "provenance": "dealers/evelyn-motors/branding/first-proposal-artwork-20261021.json"
+        },
+        {
+          "slug": "newtown-autos-ltd",
+          "path": "dealers/newtown-autos-ltd",
+          "packDigest": "a2c9860f3a6478242c6824279f4f403cddba1fd79568f51c7f7d4b71b875f7e1",
+          "files": 24,
+          "bytes": 3462215,
+          "sourceReady": true,
+          "proposalOnly": true,
+          "maintainerConsumerReview": true,
+          "actualSourceRasters": 14,
+          "strictPublisher": {
+            "passed": true,
+            "actualExportedApplyLeadBranding": true,
+            "fixtureSourceSha256": "85d66559b60867d2ab30ff7c4cb0a9eb07f7d6b9e0fb8ef3c4ae5caeae594783",
+            "noBuild": true
+          },
+          "sourceFactsStockPhotosResearchPreserved": true,
+          "humanReview": false,
+          "dealerApproval": false,
+          "nativeApproval": false,
+          "hostedApproval": false,
+          "provenance": "dealers/newtown-autos-ltd/branding/first-proposal-artwork-20261021.json"
+        },
+        {
+          "slug": "thornton-motors-cars-vans",
+          "path": "dealers/thornton-motors-cars-vans",
+          "packDigest": "9f5f85bae014d88b02c3afd8fdb4df94a985681ad9c3bd6047d44c8a6050fda3",
+          "files": 25,
+          "bytes": 2353950,
+          "sourceReady": true,
+          "proposalOnly": true,
+          "maintainerConsumerReview": true,
+          "actualSourceRasters": 14,
+          "strictPublisher": {
+            "passed": true,
+            "actualExportedApplyLeadBranding": true,
+            "fixtureSourceSha256": "85d66559b60867d2ab30ff7c4cb0a9eb07f7d6b9e0fb8ef3c4ae5caeae594783",
+            "noBuild": true
+          },
+          "sourceFactsStockPhotosResearchPreserved": true,
+          "humanReview": false,
+          "dealerApproval": false,
+          "nativeApproval": false,
+          "hostedApproval": false,
+          "provenance": "dealers/thornton-motors-cars-vans/branding/first-proposal-artwork-20261021.json"
+        }
+      ],
       "nativeStatus": "Awaiting exact-source dispatch after this checkpoint",
       "nativeApproval": false,
       "hostedApproval": false

@@ -1,0 +1,197 @@
+{
+  "schemaVersion": 1,
+  "dealer": "thornton-motors-cars-vans",
+  "reviewed": true,
+  "reviewedAt": "2026-10-20T23:44:13.777Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "0c00182ec885c17d16c3cb235304f45ab4c4d1f69537c6691139e0deeca96c30",
+      "sourceSha256": "3e37b4240084ed8939202be01163f4cf2b4baec9ada2851d54e09bba074bd5a5"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "e702642c4e473acc76298e0e8036243a255e89cc789503240e938950c933c3aa",
+      "sourceSha256": "7c0eb38c6304c90d0b6f22434d3964c7279882c56fda697cc8a40d98a2796d84"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "e702642c4e473acc76298e0e8036243a255e89cc789503240e938950c933c3aa",
+      "sourceSha256": "7c0eb38c6304c90d0b6f22434d3964c7279882c56fda697cc8a40d98a2796d84"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "3e37b4240084ed8939202be01163f4cf2b4baec9ada2851d54e09bba074bd5a5",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-2f763e9c-73af-448e-be6e-99f201ff9fe3",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "e226d30c80a8aa4a505fa986d8a898ab5262b22f0ad1bab2f616fff2c0da8295",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-e1033e89-2853-4942-98b1-7fed89029e7a",
+      "modelVersion": null
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "8c65cc411f3af6e0959409dd120a138140a6c6284b779b52a5f204ab990c6989"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "3e37b4240084ed8939202be01163f4cf2b4baec9ada2851d54e09bba074bd5a5",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-2f763e9c-73af-448e-be6e-99f201ff9fe3",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/thornton-motors-cars-vans/branding/generated-master-v1-20261021.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "7c0eb38c6304c90d0b6f22434d3964c7279882c56fda697cc8a40d98a2796d84",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-d5903e09-b310-49dd-aa0e-4c1cdc3c3a99",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/thornton-motors-cars-vans/branding/generated-inverse-v1-20261021.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "7c0eb38c6304c90d0b6f22434d3964c7279882c56fda697cc8a40d98a2796d84",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-d5903e09-b310-49dd-aa0e-4c1cdc3c3a99",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/thornton-motors-cars-vans/branding/generated-inverse-v1-20261021.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "8a0715b9a7ec204925351981f7b39d427bbc74708a5c4ea27bc0692b2d97edae",
+      "sha256": "3e37b4240084ed8939202be01163f4cf2b4baec9ada2851d54e09bba074bd5a5",
+      "crop": {
+        "left": 0,
+        "top": 113,
+        "width": 2172,
+        "height": 502
+      },
+      "sourcePath": "branding/generated-master-v1-20261021.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "a9e4d4a62cd40ac2a936b097f85fad42443824e43db6080db4c748532183011e",
+      "sha256": "7c0eb38c6304c90d0b6f22434d3964c7279882c56fda697cc8a40d98a2796d84",
+      "crop": {
+        "left": 0,
+        "top": 109,
+        "width": 2172,
+        "height": 508
+      },
+      "sourcePath": "branding/generated-inverse-v1-20261021.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "a9e4d4a62cd40ac2a936b097f85fad42443824e43db6080db4c748532183011e",
+      "sha256": "7c0eb38c6304c90d0b6f22434d3964c7279882c56fda697cc8a40d98a2796d84",
+      "crop": {
+        "left": 0,
+        "top": 109,
+        "width": 2172,
+        "height": 508
+      },
+      "sourcePath": "branding/generated-inverse-v1-20261021.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "83627dc7eff7ab36efff304324a2fd145f857563e1956af513b90d19d1527187",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-e1033e89-2853-4942-98b1-7fed89029e7a",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/thornton-motors-cars-vans/branding/generated-mark-light-v1-20261021.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "d0a764d7da845593006b384aed24440d1e332f7ddf7af080651f0e1205967a88",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-c0fdb302-a1ed-4787-a488-da0e186e7b49",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/thornton-motors-cars-vans/branding/generated-mark-dark-v1-20261021.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "e226d30c80a8aa4a505fa986d8a898ab5262b22f0ad1bab2f616fff2c0da8295",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-e1033e89-2853-4942-98b1-7fed89029e7a",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/thornton-motors-cars-vans/branding/generated-mark-light-v1-20261021.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "8c65cc411f3af6e0959409dd120a138140a6c6284b779b52a5f204ab990c6989",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-e1033e89-2853-4942-98b1-7fed89029e7a",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/thornton-motors-cars-vans/branding/generated-mark-light-v1-20261021.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-20T23:44:13.777Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "3c7d7100d191db129aec61fe1231bea261c552b146c195971cc40bcd1e4506ec",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-c0fdb302-a1ed-4787-a488-da0e186e7b49",
+      "modelVersion": null
+    }
+  }
+}

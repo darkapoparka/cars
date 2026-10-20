@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "dealer": "newtown-autos-ltd",
-  "status": "research-required",
+  "status": "reviewed",
   "realLogoFirst": true,
   "publicSources": [
     {
@@ -10,7 +10,191 @@
     }
   ],
   "originals": [],
-  "creationMethod": null,
+  "creationMethod": "imagegen-proposal",
   "dealerApproved": false,
-  "generatedInputs": null
+  "generatedInputs": {
+    "reviewedAt": "2026-10-20T23:40:42.839Z",
+    "master": {
+      "path": "branding/generated-master-v1-20261021.png",
+      "sha256": "b691dd5696065d1a4c520cb5bf1c8aeaa0bb6bdc926da6e54b0c22033ee0571d",
+      "nativeDimensions": {
+        "width": 2048,
+        "height": 768
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-4ebeac0e-b3a6-4ea4-89da-dd21ade9615a",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark-light-v1-20261021.png",
+      "sha256": "09c0aadff9581b9b56e3f2eff5fbfc5b432f3b4dac0c6a6944e433f7e78e8f7f",
+      "nativeDimensions": {
+        "width": 591,
+        "height": 768
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-4ebeac0e-b3a6-4ea4-89da-dd21ade9615a",
+        "modelVersion": null
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-dark-v1-20261021.png",
+      "sha256": "e5267bf0f197249f40074afea2ccd2081d13e4cb82942aa1439cc669a81c0aef",
+      "nativeDimensions": {
+        "width": 591,
+        "height": 768
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-50732147-ff31-4177-b142-c6ea56534ab5",
+        "modelVersion": null
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-master-v1-20261021.png",
+        "sha256": "b691dd5696065d1a4c520cb5bf1c8aeaa0bb6bdc926da6e54b0c22033ee0571d",
+        "nativeDimensions": {
+          "width": 2048,
+          "height": 768
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-4ebeac0e-b3a6-4ea4-89da-dd21ade9615a",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-inverse-v1-20261021.png",
+        "sha256": "c73dcb7eba9e9c98bb442253e4dec712a3f7d662ad67d9467cf54990e94619f6",
+        "nativeDimensions": {
+          "width": 2048,
+          "height": 768
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-50732147-ff31-4177-b142-c6ea56534ab5",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-inverse-v1-20261021.png",
+        "sha256": "c73dcb7eba9e9c98bb442253e4dec712a3f7d662ad67d9467cf54990e94619f6",
+        "nativeDimensions": {
+          "width": 2048,
+          "height": 768
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-50732147-ff31-4177-b142-c6ea56534ab5",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-20T23:40:42.839Z",
+      "wordmarkWidths": [
+        120,
+        180
+      ],
+      "markWidths": [
+        32,
+        64
+      ],
+      "notes": "Agent inspected exact alpha-composited light/inverse wordmarks; final matched consumer sheet is separately retained. All five native dark/red backgrounds are unchanged. Proposal only, no human/dealer/native/hosted approval."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-20T23:40:42.839Z",
+      "widths": [
+        32,
+        64
+      ],
+      "notes": "Compact artwork is an exact pixel extraction of the isolated generated emblem, with a clear alpha gap to the wordmark; no recolour, filters or alpha cleanup."
+    }
+  },
+  "approvalStatus": "independent-preview-not-dealer-approved",
+  "researchConclusion": "The exact retained Autotrader profile confirms Newtown Autos Ltd at192ABridgeStreetWest,Birmingham B192YT. The linked header image is gallery/cars/default.jpg, a marketplace placeholder, not dealer artwork. No distinct usable standalone logo was obtained in the bounded check, which is not a claim that no logo exists. New transparent treatments are an independent unapproved proposal.",
+  "publicSourceObservations": [
+    {
+      "observedAt": "2026-10-20T23:40:42.839Z",
+      "kind": "bounded-logo-first-primary-page-review",
+      "observations": "Autotrader primary dealer page read2026-10-20; exact profile name/location and retained phone match. Header link resolves to https://m.atcdn.co.uk/retailer/media/w768/gallery/cars/default.jpg and was excluded as a placeholder. No facts/hours/stock updated from this review."
+    }
+  ],
+  "generation": {
+    "tool": "image_gen.imagegen",
+    "generationId": "exec-4ebeac0e-b3a6-4ea4-89da-dd21ade9615a",
+    "modelVersion": null,
+    "prompt": "Use case: logo-brand. Create ONE clean transparent raster logo proposal for \"NEWTOWN AUTOS LTD\", an independent Birmingham used-car business. Not an assertion of official adopted branding. Horizontal lockup: isolated approximately square bold N monogram/road emblem on LEFT, a generous genuinely transparent vertical gap, then large crisp exact text NEWTOWN above AUTOS LTD on RIGHT. Strong contemporary sans-serif typography, restrained confident proportions and robust filled strokes/counters readable at32px for emblem and120px total lockup. Flat near-black ink #101820 ONLY; no gray. Open N/road geometry, no manufacturer logo, shield, flags or unrelated symbols. Wide horizontal composition, useful clear outer margins, actual zero-alpha transparency, no background rectangle, shadow, glow, gradient, mockup, contact details, slogan or extra text. Exact spelling N E W T O W N / A U T O S L T D. Keep isolated emblem separate for lossless compact extraction."
+  },
+  "compactDerivation": {
+    "operation": "lossless-png-extract-isolated-emblem",
+    "parentPath": "branding/generated-master-v1-20261021.png",
+    "parentSha256": "b691dd5696065d1a4c520cb5bf1c8aeaa0bb6bdc926da6e54b0c22033ee0571d",
+    "crop": {
+      "left": 0,
+      "top": 0,
+      "width": 591,
+      "height": 768
+    },
+    "emptyGap": {
+      "start": 551,
+      "end": 631,
+      "width": 80
+    },
+    "parentNativeDimensions": {
+      "width": 2048,
+      "height": 768
+    },
+    "artworkUnmodified": true,
+    "alphaUnmodified": true
+  },
+  "compactOnDarkDerivation": {
+    "operation": "lossless-png-extract-isolated-emblem",
+    "parentPath": "branding/generated-inverse-v1-20261021.png",
+    "parentSha256": "c73dcb7eba9e9c98bb442253e4dec712a3f7d662ad67d9467cf54990e94619f6",
+    "crop": {
+      "left": 0,
+      "top": 0,
+      "width": 591,
+      "height": 768
+    },
+    "emptyGap": {
+      "start": 552,
+      "end": 630,
+      "width": 78
+    },
+    "parentNativeDimensions": {
+      "width": 2048,
+      "height": 768
+    },
+    "artworkUnmodified": true,
+    "alphaUnmodified": true
+  },
+  "additionalGenerations": [
+    {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-50732147-ff31-4177-b142-c6ea56534ab5",
+      "modelVersion": null,
+      "prompt": "Edit the attached NEWTOWN AUTOS LTD proposal to a matching inverse white-ink treatment for dark/red website backgrounds. Keep exact N-road monogram, text NEWTOWN / AUTOS LTD, spacing, geometry, clear letter counters and isolated emblem/text gap. Change dark ink to solid white ink only; preserve genuine transparent zero-alpha background and clear outside padding. No glow, shadows, backdrop, extra details, new words or redesign. Exact spelling NEWTOWN AUTOS LTD. Do not flatten onto a black/white rectangle.",
+      "referencePaths": [
+        "J:/.artifacts/cars-source-sync/pilot-next3-branding-inputs/newtown_light.png"
+      ],
+      "path": "branding/generated-inverse-v1-20261021.png",
+      "sha256": "c73dcb7eba9e9c98bb442253e4dec712a3f7d662ad67d9467cf54990e94619f6"
+    }
+  ],
+  "sourceHistory": [
+    {
+      "reference": "branding/source-before-first-artwork-20261021-cc2baa2eb28a1f18.json",
+      "sha256": "cc2baa2eb28a1f1801004a333313d05999b9b9223de3600845d96412bb9a81a3",
+      "retainedAt": "2026-10-20T23:40:42.839Z",
+      "reason": "Exact maintained input-only draft provenance before first proposal artwork"
+    }
+  ]
 }

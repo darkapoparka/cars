@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-first-missing-source-proposal-artwork",
+  "dealer": "evelyn-motors",
+  "createdAt": "2026-10-20T23:40:18.545Z",
+  "inputRows": [
+    {
+      "role": "wordLight",
+      "path": "branding/generated-master-v1-20261021.png",
+      "sha256": "d69d080bd77e5c0e04069a88270b174a73eafef060c21ae7ae70036dfe673f43",
+      "nativeDimensions": {
+        "width": 2073,
+        "height": 758
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-caaa4f84-1736-497f-8ba5-7d6b8981e42b",
+        "modelVersion": null
+      },
+      "artifact": "J:/.artifacts/cars-source-sync/pilot-next3-branding-inputs/evelyn_light.png",
+      "prompt": "Use case: logo-brand. Create ONE production transparent raster logo lockup for an independent website branding PROPOSAL for Evelyn Motors, a Birmingham used-car business. This is a new proposal, not an assertion of adopted branding. Horizontal lockup: on the left a bold compact E monogram inside an open wheel/road-inspired geometric emblem, approximately square, with strong filled strokes and clear open counters for 32px. On the right, large exceptionally clear exact words \"EVELYN MOTORS\" on two balanced lines; EVELYN above MOTORS. Keep the emblem entirely separate from the text with a generous completely transparent vertical gap, so it can be losslessly cropped as a compact mark. Restrained professional near-black ink (#101820) ONLY, no gray fill. Strong straightforward sans-serif lettering and flat clean forms. Transparent background with genuine zero-alpha empty areas, generous clear outer margins; no background rectangle, no shadow, no glow, no mockup, no border, no QR code, no extra text, no slogan, no manufacturer marks. Wide horizontal composition, artwork centered and crisp, no tiny details. Spell every letter exactly. The source business name in the website remains Evelyn Motors.",
+      "referencePaths": []
+    },
+    {
+      "role": "markLight",
+      "path": "branding/generated-mark-light-v1-20261021.png",
+      "sha256": "1b39cfd176d4b0bca8a23ca0cb794df7c55c29eadfe42463d96153b3b68cce5d",
+      "nativeDimensions": {
+        "width": 750,
+        "height": 758
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-caaa4f84-1736-497f-8ba5-7d6b8981e42b",
+        "modelVersion": null
+      },
+      "artifact": "J:/.artifacts/cars-source-sync/pilot-next3-branding-inputs/evelyn-motors/markLight.png",
+      "prompt": "Use case: logo-brand. Create ONE production transparent raster logo lockup for an independent website branding PROPOSAL for Evelyn Motors, a Birmingham used-car business. This is a new proposal, not an assertion of adopted branding. Horizontal lockup: on the left a bold compact E monogram inside an open wheel/road-inspired geometric emblem, approximately square, with strong filled strokes and clear open counters for 32px. On the right, large exceptionally clear exact words \"EVELYN MOTORS\" on two balanced lines; EVELYN above MOTORS. Keep the emblem entirely separate from the text with a generous completely transparent vertical gap, so it can be losslessly cropped as a compact mark. Restrained professional near-black ink (#101820) ONLY, no gray fill. Strong straightforward sans-serif lettering and flat clean forms. Transparent background with genuine zero-alpha empty areas, generous clear outer margins; no background rectangle, no shadow, no glow, no mockup, no border, no QR code, no extra text, no slogan, no manufacturer marks. Wide horizontal composition, artwork centered and crisp, no tiny details. Spell every letter exactly. The source business name in the website remains Evelyn Motors.",
+      "referencePaths": [
+        "J:/.artifacts/cars-source-sync/pilot-next3-branding-inputs/evelyn_light.png"
+      ],
+      "derivation": {
+        "operation": "lossless-png-extract-isolated-emblem",
+        "parentPath": "branding/generated-master-v1-20261021.png",
+        "parentSha256": "d69d080bd77e5c0e04069a88270b174a73eafef060c21ae7ae70036dfe673f43",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 750,
+          "height": 758
+        },
+        "emptyGap": {
+          "start": 711,
+          "end": 790,
+          "width": 79
+        },
+        "parentNativeDimensions": {
+          "width": 2073,
+          "height": 758
+        },
+        "artworkUnmodified": true,
+        "alphaUnmodified": true
+      }
+    },
+    {
+      "role": "wordDark",
+      "path": "branding/generated-inverse-v1-20261021.png",
+      "sha256": "6aaa1cb9a262049d3baeff62faf41ecd456ad2281be49fa9e60e5cd0ca900cb9",
+      "nativeDimensions": {
+        "width": 2073,
+        "height": 759
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-138bc85a-4655-4563-bd6c-0a7781ba164e",
+        "modelVersion": null
+      },
+      "artifact": "J:/.artifacts/cars-source-sync/pilot-next3-branding-inputs/evelyn_dark.png",
+      "prompt": "Edit the provided Evelyn Motors proposal into its matching inverse treatment. Preserve exact emblem, text, geometry, line breaks, spacing, stroke weight and generous transparent separation between isolated left E/road emblem and right EVELYN / MOTORS wordmark. Change the near-black artwork to solid WHITE ink for dark and red native website surfaces. Genuine transparent background, fully zero-alpha empty areas and clear open counters; no glow, shadow, border, background, new text or redesign. Exact text EVELYN MOTORS. Do not add a solid black or white rectangle.",
+      "referencePaths": [
+        "C:/Users/radev/.codex/generated_images/01a15a1f-96e3-7001-a49b-e6e059368aa7/exec-caaa4f84-1736-497f-8ba5-7d6b8981e42b.png"
+      ]
+    },
+    {
+      "role": "markDark",
+      "path": "branding/generated-mark-dark-v1-20261021.png",
+      "sha256": "da0d6c2d940d12325112f8e858fd6e8b6e808a4812d00ed3be9eac1f462d7e4b",
+      "nativeDimensions": {
+        "width": 750,
+        "height": 759
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-138bc85a-4655-4563-bd6c-0a7781ba164e",
+        "modelVersion": null
+      },
+      "artifact": "J:/.artifacts/cars-source-sync/pilot-next3-branding-inputs/evelyn-motors/markDark.png",
+      "prompt": "Edit the provided Evelyn Motors proposal into its matching inverse treatment. Preserve exact emblem, text, geometry, line breaks, spacing, stroke weight and generous transparent separation between isolated left E/road emblem and right EVELYN / MOTORS wordmark. Change the near-black artwork to solid WHITE ink for dark and red native website surfaces. Genuine transparent background, fully zero-alpha empty areas and clear open counters; no glow, shadow, border, background, new text or redesign. Exact text EVELYN MOTORS. Do not add a solid black or white rectangle.",
+      "referencePaths": [
+        "J:/.artifacts/cars-source-sync/pilot-next3-branding-inputs/evelyn_dark.png"
+      ],
+      "derivation": {
+        "operation": "lossless-png-extract-isolated-emblem",
+        "parentPath": "branding/generated-inverse-v1-20261021.png",
+        "parentSha256": "6aaa1cb9a262049d3baeff62faf41ecd456ad2281be49fa9e60e5cd0ca900cb9",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 750,
+          "height": 759
+        },
+        "emptyGap": {
+          "start": 711,
+          "end": 789,
+          "width": 78
+        },
+        "parentNativeDimensions": {
+          "width": 2073,
+          "height": 759
+        },
+        "artworkUnmodified": true,
+        "alphaUnmodified": true
+      }
+    }
+  ],
+  "sourceFactNamePreserved": true,
+  "publicTradingText": "Evelyn Motors",
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "dealerApproval": false,
+  "humanReview": false,
+  "providerWrites": 0,
+  "filtersApplied": false,
+  "thresholdsChanged": false
+}

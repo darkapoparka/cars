@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Thornton Motors Cars & Vans",
     "publicOrigin": "https://thornton-motors-cars-vans.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "3e37b4240084ed8939202be01163f4cf2b4baec9ada2851d54e09bba074bd5a5",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "e226d30c80a8aa4a505fa986d8a898ab5262b22f0ad1bab2f616fff2c0da8295"
+    }
   }
 }

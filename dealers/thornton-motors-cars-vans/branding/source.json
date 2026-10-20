@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "dealer": "thornton-motors-cars-vans",
-  "status": "research-required",
+  "status": "reviewed",
   "realLogoFirst": true,
   "publicSources": [
     {
@@ -13,8 +13,187 @@
       "observedAt": "2026-10-18"
     }
   ],
-  "originals": [],
-  "creationMethod": null,
+  "originals": [
+    {
+      "path": "branding/originals/thornton-autotrader-logo-20261021.jpg",
+      "sha256": "f2b77803e4b231bf18af9f12d9611a72c50e402ae1641258ffe4bc2184dc74ce",
+      "bytes": 31532,
+      "nativeDimensions": {
+        "width": 768,
+        "height": 512
+      },
+      "url": "https://m.atcdn.co.uk/retailer/media/w768/50d23eb2-5514-4142-a6a8-241cce0b1fd2.jpg",
+      "observedAt": "2026-10-20T23:35:38.313Z",
+      "sourcePage": "https://www.autotrader.co.uk/dealers/west-yorkshire/bradford/thornton-motors-cars-%26-vans-10050515",
+      "kind": "retained-public-dealer-logo",
+      "dealerApproval": false
+    }
+  ],
+  "creationMethod": "imagegen-proposal",
   "dealerApproved": false,
-  "generatedInputs": null
+  "generatedInputs": {
+    "reviewedAt": "2026-10-20T23:44:13.777Z",
+    "master": {
+      "path": "branding/generated-master-v1-20261021.png",
+      "sha256": "8a0715b9a7ec204925351981f7b39d427bbc74708a5c4ea27bc0692b2d97edae",
+      "nativeDimensions": {
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-2f763e9c-73af-448e-be6e-99f201ff9fe3",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark-light-v1-20261021.png",
+      "sha256": "0b92afa4d9add0fb4cd070b9fc33fc6fc3535fab75b3df38522dd70dc6b8c5ba",
+      "nativeDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-e1033e89-2853-4942-98b1-7fed89029e7a",
+        "modelVersion": null
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-dark-v1-20261021.png",
+      "sha256": "e5cd7b4b6659befadffb74b1aeb5981e2c1368bae0c3e69f6daeb3e8916981a2",
+      "nativeDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-c0fdb302-a1ed-4787-a488-da0e186e7b49",
+        "modelVersion": null
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-master-v1-20261021.png",
+        "sha256": "8a0715b9a7ec204925351981f7b39d427bbc74708a5c4ea27bc0692b2d97edae",
+        "nativeDimensions": {
+          "width": 2172,
+          "height": 724
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-2f763e9c-73af-448e-be6e-99f201ff9fe3",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-inverse-v1-20261021.png",
+        "sha256": "a9e4d4a62cd40ac2a936b097f85fad42443824e43db6080db4c748532183011e",
+        "nativeDimensions": {
+          "width": 2172,
+          "height": 724
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-d5903e09-b310-49dd-aa0e-4c1cdc3c3a99",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-inverse-v1-20261021.png",
+        "sha256": "a9e4d4a62cd40ac2a936b097f85fad42443824e43db6080db4c748532183011e",
+        "nativeDimensions": {
+          "width": 2172,
+          "height": 724
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-d5903e09-b310-49dd-aa0e-4c1cdc3c3a99",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-20T23:44:13.777Z",
+      "wordmarkWidths": [
+        120,
+        180
+      ],
+      "markWidths": [
+        32,
+        64
+      ],
+      "notes": "Agent inspected exact alpha-composited light/inverse wordmarks; final matched consumer sheet is separately retained. All five native dark/red backgrounds are unchanged. Proposal only, no human/dealer/native/hosted approval."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-20T23:44:13.777Z",
+      "widths": [
+        32,
+        64
+      ],
+      "notes": "Dedicated actual ImageGen compact TM/car-and-wrench companion retains actual generation IDs and prompts/references. No forced crop, recolour, alpha cleanup or filter."
+    }
+  },
+  "approvalStatus": "independent-preview-not-dealer-approved",
+  "researchConclusion": "The exact retained Autotrader profile links an actual Thornton Motors car-and-wrench logo with VANSANDCARS descriptor. The original is retained byte-identical as dated public branding evidence. Generated transparent responsive treatments preserve that identity while omitting old contact numbers,address,QRcode and establishment date from artwork. They remain unapproved proposals; factual business/stock records are unchanged.",
+  "publicSourceObservations": [
+    {
+      "observedAt": "2026-10-20T23:44:13.777Z",
+      "kind": "bounded-logo-first-primary-page-review",
+      "observations": "Exact Autotrader profile confirms Thornton Motors Cars & Vans,581-583ThorntonRoad,Bradford BD89RA. Header Image link resolves to actual dealer logo JPEG50d23eb2-5514-4142-a6a8-241cce0b1fd2.jpg,31532bytes,SHA256f2b77803e4b231bf18af9f12d9611a72c50e402ae1641258ffe4bc2184dc74ce,read2026-10-20T23:35:38.313Z. Old artwork phone numbers are not adopted as contacts."
+    }
+  ],
+  "generation": {
+    "tool": "image_gen.imagegen",
+    "generationId": "exec-2f763e9c-73af-448e-be6e-99f201ff9fe3",
+    "modelVersion": null,
+    "prompt": "Use case: logo-brand. Produce a clean transparent raster website refresh PROPOSAL using the attached actual Thornton Motors public logo as identity reference. Preserve its recognizable simple sports-car/road-and-wrench motif and exact trading words THORNTON MOTORS, with small descriptor VANS AND CARS. OMIT all contact numbers, QR code, address and Est.2019; do not invent facts or use a manufacturer badge. This is an unapproved website proposal, not an official original. For usable responsive layout, create a horizontal lockup with a compact approximately square TM/car-and-wrench emblem isolated on the LEFT and a generous fully transparent vertical gap; on RIGHT clear large THORNTON above MOTORS, with readable VANS AND CARS below. Robust flat near-black #101820 filled strokes, bold clear lettering, simplified detail for32px emblem and120px wordmark legibility. Genuine transparent background/zero-alpha empty space, generous outer margins, no shadows/glows/gradients/mockup/backdrop/extra text. Keep source reference visually recognizable while removing its old contacts and QR code."
+  },
+  "compactDerivation": {},
+  "compactOnDarkDerivation": {},
+  "additionalGenerations": [
+    {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-e1033e89-2853-4942-98b1-7fed89029e7a",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand. Create ONLY a dedicated COMPACT logo emblem for the attached Thornton Motors website refresh proposal. This is an unapproved responsive companion, not official adopted branding. Approximately square, strong filled near-black #101820 ink on genuine transparent background. A bold readable TM monogram integrated with one simple car-roof sweep and a small robust wrench cue, echoing the attached car-and-wrench identity but SIMPLIFIED for32px/favicon use. Clear open counters, thick smooth flat strokes and generous genuine zero-alpha outer padding. No full business name, no descriptor, no slogan, no contact numbers, address, QR, dates, manufacturer symbol, shield, decorative border, shadow, glow or background. Exact letters TM only. One isolated centered compact emblem, no wordmark or presentation sheet.",
+      "referencePaths": [
+        "J:/.artifacts/cars-source-sync/pilot-next3-branding-inputs/thornton_light.png"
+      ],
+      "path": "branding/generated-mark-light-v1-20261021.png",
+      "sha256": "0b92afa4d9add0fb4cd070b9fc33fc6fc3535fab75b3df38522dd70dc6b8c5ba"
+    },
+    {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-d5903e09-b310-49dd-aa0e-4c1cdc3c3a99",
+      "modelVersion": null,
+      "prompt": "Edit the attached Thornton Motors transparent proposal into its exact matching inverse white-ink treatment. Preserve sports-car and wrench silhouette, layout, exact words THORNTON / MOTORS / VANS AND CARS, separation, strokes and counters. Change near-black ink to solid white ink for dark and native red backgrounds. Genuine transparent background, zero-alpha empty regions and outer padding. No glow, texture, shadow, backdrop, QR, contact numbers, address, dates, extra text or redesign. This remains an unapproved website logo refresh proposal.",
+      "referencePaths": [
+        "J:/.artifacts/cars-source-sync/pilot-next3-branding-inputs/thornton_light.png"
+      ],
+      "path": "branding/generated-inverse-v1-20261021.png",
+      "sha256": "a9e4d4a62cd40ac2a936b097f85fad42443824e43db6080db4c748532183011e"
+    },
+    {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-c0fdb302-a1ed-4787-a488-da0e186e7b49",
+      "modelVersion": null,
+      "prompt": "Make the attached compact Thornton Motors TM/car-and-wrench proposal its matching WHITE inverse ink treatment. Preserve exact TM letters, bold car-roof sweep and wrench cue, dimensions, geometry, open counters and strong strokes. Solid white ink only on genuine transparent background with fully zero-alpha outer space. This is a responsive compact unapproved website proposal, no new business text. No glow, shadow, backdrop, contact numbers, QR, address, dates, mockup or redesign.",
+      "referencePaths": [
+        "C:/Users/radev/.codex/generated_images/01a15a1f-96e3-7001-a49b-e6e059368aa7/exec-e1033e89-2853-4942-98b1-7fed89029e7a.png"
+      ],
+      "path": "branding/generated-mark-dark-v1-20261021.png",
+      "sha256": "e5cd7b4b6659befadffb74b1aeb5981e2c1368bae0c3e69f6daeb3e8916981a2"
+    }
+  ],
+  "sourceHistory": [
+    {
+      "reference": "branding/source-before-first-artwork-20261021-81b95e7202d42994.json",
+      "sha256": "81b95e7202d42994d1ed6209a6580d56350967a08f3bdda4e88e55e4a869b076",
+      "retainedAt": "2026-10-20T23:44:13.777Z",
+      "reason": "Exact maintained input-only draft provenance before first proposal artwork"
+    }
+  ]
 }

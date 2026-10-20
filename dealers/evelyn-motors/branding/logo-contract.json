@@ -1,0 +1,197 @@
+{
+  "schemaVersion": 1,
+  "dealer": "evelyn-motors",
+  "reviewed": true,
+  "reviewedAt": "2026-10-20T23:40:18.545Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "989993e50e46759628c982626c0feb8217f1e0e1c4a1c5401a1a73b73645897b",
+      "sourceSha256": "36fd8a9e7103572ebbbc27fb7d70ed4fd2f3c94fd558f979cadb637824efced8"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "f514ef1400dda3d754234a7856ee06bedc586d5fc5e15e7be8a0e82195a5446f",
+      "sourceSha256": "54bd2bcaeab53d89d176481ef4a2c20771e85617a0cf9e610ba728f311afe363"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "f514ef1400dda3d754234a7856ee06bedc586d5fc5e15e7be8a0e82195a5446f",
+      "sourceSha256": "54bd2bcaeab53d89d176481ef4a2c20771e85617a0cf9e610ba728f311afe363"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "36fd8a9e7103572ebbbc27fb7d70ed4fd2f3c94fd558f979cadb637824efced8",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-caaa4f84-1736-497f-8ba5-7d6b8981e42b",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "3bd89d1ed8276a87b735d98fd03d52f0936f3a0799d681b74546966918b41916",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-caaa4f84-1736-497f-8ba5-7d6b8981e42b",
+      "modelVersion": null
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "8c8546f7d5528d0621ac52faa2e57abbc5525e3f8439514bdc69c95291f38162"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "36fd8a9e7103572ebbbc27fb7d70ed4fd2f3c94fd558f979cadb637824efced8",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-caaa4f84-1736-497f-8ba5-7d6b8981e42b",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/evelyn-motors/branding/generated-master-v1-20261021.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "54bd2bcaeab53d89d176481ef4a2c20771e85617a0cf9e610ba728f311afe363",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-138bc85a-4655-4563-bd6c-0a7781ba164e",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/evelyn-motors/branding/generated-inverse-v1-20261021.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "54bd2bcaeab53d89d176481ef4a2c20771e85617a0cf9e610ba728f311afe363",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-138bc85a-4655-4563-bd6c-0a7781ba164e",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/evelyn-motors/branding/generated-inverse-v1-20261021.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "d69d080bd77e5c0e04069a88270b174a73eafef060c21ae7ae70036dfe673f43",
+      "sha256": "36fd8a9e7103572ebbbc27fb7d70ed4fd2f3c94fd558f979cadb637824efced8",
+      "crop": {
+        "left": 76,
+        "top": 56,
+        "width": 1945,
+        "height": 636
+      },
+      "sourcePath": "branding/generated-master-v1-20261021.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "6aaa1cb9a262049d3baeff62faf41ecd456ad2281be49fa9e60e5cd0ca900cb9",
+      "sha256": "54bd2bcaeab53d89d176481ef4a2c20771e85617a0cf9e610ba728f311afe363",
+      "crop": {
+        "left": 75,
+        "top": 55,
+        "width": 1946,
+        "height": 638
+      },
+      "sourcePath": "branding/generated-inverse-v1-20261021.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "6aaa1cb9a262049d3baeff62faf41ecd456ad2281be49fa9e60e5cd0ca900cb9",
+      "sha256": "54bd2bcaeab53d89d176481ef4a2c20771e85617a0cf9e610ba728f311afe363",
+      "crop": {
+        "left": 75,
+        "top": 55,
+        "width": 1946,
+        "height": 638
+      },
+      "sourcePath": "branding/generated-inverse-v1-20261021.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "780632fc5dbd7dfbf8d9fcc8768bbbd49c7c5d970bbd85574782aa5296d10dff",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-caaa4f84-1736-497f-8ba5-7d6b8981e42b",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/evelyn-motors/branding/generated-mark-light-v1-20261021.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "4c55a49afa8c969a84360a47cfd6e426101c8d9aff35cb52e8e387bb699886ba",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-138bc85a-4655-4563-bd6c-0a7781ba164e",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/evelyn-motors/branding/generated-mark-dark-v1-20261021.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "3bd89d1ed8276a87b735d98fd03d52f0936f3a0799d681b74546966918b41916",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-caaa4f84-1736-497f-8ba5-7d6b8981e42b",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/evelyn-motors/branding/generated-mark-light-v1-20261021.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "8c8546f7d5528d0621ac52faa2e57abbc5525e3f8439514bdc69c95291f38162",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-caaa4f84-1736-497f-8ba5-7d6b8981e42b",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/evelyn-motors/branding/generated-mark-light-v1-20261021.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-20T23:40:18.545Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "2839bdc912177593a59b8c11e69e44340720c40a88f167f89ef0ee6ebe627f00",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-138bc85a-4655-4563-bd6c-0a7781ba164e",
+      "modelVersion": null
+    }
+  }
+}

@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Evelyn Motors",
     "publicOrigin": "https://evelyn-motors.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "36fd8a9e7103572ebbbc27fb7d70ed4fd2f3c94fd558f979cadb637824efced8",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "3bd89d1ed8276a87b735d98fd03d52f0936f3a0799d681b74546966918b41916"
+    }
   }
 }
