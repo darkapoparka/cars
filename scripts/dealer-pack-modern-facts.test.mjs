@@ -8,6 +8,7 @@ import { DEALER_PACK_MODERN_PATHS, dealerPackModernListing, dealerPackModernRunt
 import { UK_MODERN_PATHS, personalizeModernUk } from './lib/client-refresh-uk-next.mjs';
 import { refreshAdapterInternals } from './lib/client-refresh-adapters.mjs';
 import { refreshNormalizeInternals } from './lib/client-refresh-normalize.mjs';
+import { UK_MODERN_CITY_PATHS, repairModernDealerPackCityKeys, repairModernUkCityKeys } from './lib/client-refresh-uk-native.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const dataPath = 'packages/marketplace-domain/testing/mock-data.ts';
@@ -230,4 +231,70 @@ test('missing or drifted source boundaries leave the map unchanged; default poli
   const before = [...files].map(([name, value]) => [name, Buffer.from(value)]);
   assert.throws(() => personalizeDealerPackModernFacts(files, profile()), /boundary changed/);
   assert.deepEqual([...files], before);
+});
+
+const cityFiles = city => new Map(UK_MODERN_CITY_PATHS.map(name => [name,
+  fs.readFileSync(path.join(root, 'templates/modern', name), 'utf8').replace(/\r\n/g, '\n')
+    .replaceAll('София', city).replaceAll('Sofia', city)
+]));
+
+test('optional-fact AE city keys compile and retain the exact sourced Umm al-Quwain in all three native maps', async () => {
+  const p = profile('AE'); p.business.city = 'Umm al-Quwain';
+  const originalProfile = JSON.stringify(p), files = cityFiles(p.business.city), before = new Map(files);
+  assert.deepEqual(repairModernDealerPackCityKeys(files, p), UK_MODERN_CITY_PATHS);
+  const ts = createRequire(path.join(root, 'templates/mobile/package.json'))('typescript');
+  for (const name of UK_MODERN_CITY_PATHS) {
+    const source = files.get(name), city = p.business.city;
+    assert.equal(source, before.get(name).replace('  '+city+': '+JSON.stringify(city)+',',
+      '  '+JSON.stringify(city)+': '+JSON.stringify(city)+','));
+    const parsed = ts.createSourceFile(name, source, ts.ScriptTarget.Latest, true, ts.ScriptKind.TS);
+    assert.deepEqual(parsed.parseDiagnostics.map(d => ts.flattenDiagnosticMessageText(d.messageText, ' ')), [], name);
+  }
+  const copy = await evaluate(files.get(UK_MODERN_CITY_PATHS[1]));
+  const truth = await evaluate(files.get(UK_MODERN_CITY_PATHS[0]),
+    'const leadSite='+JSON.stringify(p.business)+'; const getLeadCopy=()=>('+JSON.stringify(p.business)+');\n');
+  const card = await evaluate(files.get(UK_MODERN_CITY_PATHS[2]));
+  for (const locale of ['en', 'bg']) {
+    assert.equal(copy.getLocalizedMarketplaceCityName(p.business.city, locale), p.business.city);
+    assert.equal(truth.formatVehicleLocation({city:p.business.city}, locale), p.business.city);
+    assert.equal(card.getLocalizedVehicleCardLocationPart(p.business.city, locale), p.business.city);
+  }
+  assert.equal(JSON.stringify(p), originalProfile, 'Factual profile and source identity remain unchanged');
+});
+
+test('optional-fact city repair rejects changed or duplicate native boundaries atomically and preserves legacy GB admission', () => {
+  const p = profile('AE'); p.business.city = 'Umm al-Quwain';
+  for (const mutate of [source => source.replace('const cityLabelsBg:', 'const unreviewedCityLabels:'),
+    source => source.replace('  Umm al-Quwain: "Umm al-Quwain",', '  Umm al-Quwain: "Umm al-Quwain",\n  Umm al-Quwain: "Umm al-Quwain",')]) {
+    const files = cityFiles(p.business.city), name = UK_MODERN_CITY_PATHS[1]; files.set(name, mutate(files.get(name)));
+    const before = [...files];
+    assert.throws(() => repairModernDealerPackCityKeys(files, p), /boundary changed/);
+    assert.deepEqual([...files], before);
+  }
+  const files = cityFiles(p.business.city), before = [...files];
+  assert.deepEqual(repairModernDealerPackCityKeys(files, {...p, factPolicy:undefined}), []);
+  assert.deepEqual(repairModernUkCityKeys(files, p), [], 'Legacy UK repair does not admit ordinary AE profiles');
+  assert.deepEqual([...files], before);
+  const gb = {...p, factPolicy:undefined, business:{...p.business, countryCode:'GB'}};
+  assert.deepEqual(repairModernUkCityKeys(files, gb), UK_MODERN_CITY_PATHS);
+  for (const name of UK_MODERN_CITY_PATHS) assert.match(files.get(name), /"Umm al-Quwain": "Umm al-Quwain"/);
+});
+
+test('actual Modern city write boundary repairs only explicit dealer-pack or GB maps after personalization', t => {
+  const fixtureRoot = path.join(root, 'runtime/modern-city-facts-tests'); fs.mkdirSync(fixtureRoot, {recursive:true});
+  const candidate = fs.mkdtempSync(path.join(fixtureRoot, 'maps-'));
+  t.after(() => {const target = fs.realpathSync(candidate); assert(target.startsWith(fs.realpathSync(fixtureRoot)+path.sep)); fs.rmSync(target, {recursive:true, force:true});});
+  const p = profile('AE'); p.business.city = 'Umm al-Quwain';
+  const files = cityFiles(p.business.city), originalProfile = JSON.stringify(p);
+  for (const [name, source] of files) {const file = path.join(candidate, name); fs.mkdirSync(path.dirname(file), {recursive:true}); fs.writeFileSync(file, source);}
+  assert.deepEqual(refreshAdapterInternals.patchModernCityMaps(candidate, {...p, factPolicy:undefined}), []);
+  const badName = UK_MODERN_CITY_PATHS[1], file = path.join(candidate, badName);
+  fs.writeFileSync(file, files.get(badName).replace('const cityLabelsBg:', 'const unreviewedCityLabels:'));
+  assert.throws(() => refreshAdapterInternals.patchModernCityMaps(candidate, p), /boundary changed/);
+  assert.equal(fs.readFileSync(path.join(candidate, UK_MODERN_CITY_PATHS[0]), 'utf8'), files.get(UK_MODERN_CITY_PATHS[0]), 'No partial family writes on rejected map');
+  fs.writeFileSync(file, files.get(badName));
+  assert.deepEqual(refreshAdapterInternals.patchModernCityMaps(candidate, p), UK_MODERN_CITY_PATHS);
+  for (const name of UK_MODERN_CITY_PATHS) assert.equal(fs.readFileSync(path.join(candidate, name), 'utf8'),
+    files.get(name).replace('  Umm al-Quwain: "Umm al-Quwain",', '  "Umm al-Quwain": "Umm al-Quwain",'));
+  assert.equal(JSON.stringify(p), originalProfile);
 });

@@ -65,8 +65,8 @@ function commit(files, updates) {
   return [...updates.keys()];
 }
 
-function repairCityMaps(files, profile, paths, maps) {
-  if (profile?.business?.countryCode !== 'GB') return [];
+function repairCityMaps(files, profile, paths, maps, dealerPack = false) {
+  if (profile?.business?.countryCode !== 'GB' && !dealerPack) return [];
   const city = profile.business.city;
   if (typeof city !== 'string' || !city.trim() || /[\r\n"]/.test(city)) throw Error('Expected the reviewed UK city text.');
   const updates = new Map();
@@ -87,6 +87,12 @@ function repairCityMaps(files, profile, paths, maps) {
 /** All three initial native city boundaries; atomic family-relative Map changes. */
 export function repairModernUkCityKeys(files, profile) {
   return repairCityMaps(files, profile, UK_MODERN_CITY_PATHS, cityMaps);
+}
+
+/** The same reviewed native maps for explicit optional-fact dealer packs. */
+export function repairModernDealerPackCityKeys(files, profile) {
+  if (profile?.factPolicy !== 'dealer-pack-optional-v1') return [];
+  return repairCityMaps(files, profile, UK_MODERN_CITY_PATHS, cityMaps, true);
 }
 
 /** Existing UK sources already have the first two maps repaired; patch only the reviewed third map. */
