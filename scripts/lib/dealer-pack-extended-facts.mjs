@@ -39,6 +39,8 @@ export function compareMobileMileage(a: MileageStock, b: MileageStock, direction
 
 export function adaptMobilePackFacts(files, profile) {
   if (!optionalDealerPackFacts(profile)) return [];
+  const currency = profile.business.currency, distance = profile.business.distanceUnit;
+  assert(/^[A-Z]{3}$/.test(currency), 'Explicit pack currency required');
   const prefix = 'mobile/src/', changed = [];
   const patch = (name, transform) => { const file = prefix + name; files.set(file, Buffer.from(transform(get(files, file)))); changed.push(file); };
   const use = (source, names, relative) => source.replace(/^(['"]use client['"];\r?\n)?/, (_match, directive = '') => directive + `import {${names}} from '${relative}';\n`);
@@ -74,7 +76,9 @@ export function comparePackPrice(a: PricedStock, b: PricedStock, direction = 1):
   patch('components/NativeCarPark.tsx', source => {
     source = one(source, 'a.price - b.price', 'comparePackPrice(a, b)', 'Mobile saved price sort');
     source = one(source, 'b.price - a.price', 'comparePackPrice(a, b, -1)', 'Mobile saved descending price sort');
-    source = one(source, "{v.price.toLocaleString('de-DE')} €", '{money(v.price)}', 'Mobile saved price display');
+    // The currency adapter runs first and retains the EUR source unchanged.
+    const priceBoundary = currency === 'EUR' ? "{v.price.toLocaleString('de-DE')} €" : '{number(v.price)} ' + (currency === 'GBP' ? '£' : currency);
+    source = one(source, priceBoundary, '{money(v.price)}', 'Mobile saved price display');
     return use(source, 'comparePackPrice', '../lib/dealer-pack-price');
   });
   patch('components/FinanceCalculator.tsx', source => one(source,
@@ -89,8 +93,6 @@ export function comparePackPrice(a: PricedStock, b: PricedStock, direction = 1):
     assert(found === 1, 'Mobile finance price boundary changed: ' + name); return source;
   });
   // Form/filter labels retain the actual inventory currency and range unit.
-  const currency = profile.business.currency, distance = profile.business.distanceUnit;
-  assert(/^[A-Z]{3}$/.test(currency), 'Explicit pack currency required');
   const symbol = new Intl.NumberFormat('en', {style: 'currency', currency, currencyDisplay: 'narrowSymbol'}).formatToParts(1).find(row => row.type === 'currency')?.value || currency;
   for (const name of ['lib/filter-fields.ts', 'lib/native-filter-options.ts', 'lib/service-requests.ts', 'lib/enquiry.ts', 'lib/assistant.ts', 'components/ShowroomInventoryScreen.tsx', 'components/ShowroomDesktopFilterFields.tsx', 'components/ShowroomFilterSheet.tsx', 'components/ShowroomServiceRequest.tsx']) patch(name, source => {
     source = source.replaceAll('€', symbol).replaceAll('(EUR)', '(' + currency + ')').replaceAll("currency: 'EUR'", 'currency: ' + JSON.stringify(currency));

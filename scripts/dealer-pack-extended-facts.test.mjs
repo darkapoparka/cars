@@ -47,6 +47,8 @@ for (const country of ['GB', 'AE', 'US']) test('Mobile ' + country + ' keeps omi
   const localeSource = data.files.get('mobile/src/lib/locale.ts').toString().replace(/^import[^;]+;\n/, 'const bgMessages: Record<string,string> = {};\n');
   const locale = await moduleFrom(localeSource), unknown = {...inventory[0], price: NaN, mileage: NaN};
   assert.equal(locale.localeMoney(unknown.price, 'en'), 'Price on request');
+  for (const language of ['en', 'bg']) assert.equal(locale.localeMoney(12345.67, language),
+    new Intl.NumberFormat(language === 'bg' ? 'bg-BG' : 'en-IE', {style: 'currency', currency: data.profile.business.currency, maximumFractionDigits: 0}).format(12345.67));
   const legacyMoney = await moduleFrom(data.files.get('mobile/src/lib/search.ts').toString().match(/export const money = [\s\S]*$/)[0]);
   assert.equal(legacyMoney.money(unknown.price), 'Price on request');
   assert.equal(mileage.formatMobileMileage(unknown), 'Mileage on request'); assert(Number.isNaN(mileage.mobileMileageValue(unknown)));
@@ -61,6 +63,7 @@ for (const country of ['GB', 'AE', 'US']) test('Mobile ' + country + ' keeps omi
   assert.doesNotMatch(assistant.answerLocally('Toyota').text, /NaN|0 hp|0 km/);
   assert.match(data.files.get('mobile/src/components/FinanceCalculator.tsx').toString(), /if \(!Number\.isFinite\(v\.price\) \|\| v\.price <= 0\) return/);
   assert.doesNotMatch(data.files.get('mobile/src/components/NativeCarPark.tsx').toString(), /v\.price\.toLocaleString/);
+  assert.match(data.files.get('mobile/src/components/NativeCarPark.tsx').toString(), /\{money\(v\.price\)\}/);
   assert.match(data.files.get('mobile/src/lib/catalog.ts').toString(), /price: typeof vehicle\.price === 'number' \? vehicle\.price : Number\.NaN/);
   for (const name of adapted.contentPaths.filter(name => /\.tsx?$/.test(name))) {
     esbuild.transformSync(data.files.get(name).toString(), {loader: name.endsWith('.tsx') ? 'tsx' : 'ts', target: 'es2022'});
@@ -76,6 +79,18 @@ test('Mobile pack source retains original miles while numeric filters use the se
   assert.equal(helper.formatMobileMileage(inventory[0]), '60,000 mi');
   assert.equal(helper.mobileMileageValue(inventory[0]), 60000);
   assert.equal(inventory[0].mileageSourceValue, 60000); assert.equal(inventory[0].mileageSourceUnit, 'mi');
+});
+
+test('Mobile optional-fact composition rejects changed or repeated saved-price consumers', t => {
+  const anchor = "for {v.price.toLocaleString('de-DE')} €";
+  for (const transform of [source => source.replace(anchor, 'for {Math.round(v.price)} €'), source => source.replace(anchor, anchor + ' and ' + anchor)]) {
+    const data = fixture(t, 'mobile', 'US'), name = 'mobile/src/components/NativeCarPark.tsx';
+    const originalProfile = JSON.stringify(data.profile), original = data.files.get(name).toString();
+    assert.equal(original.split(anchor).length, 2, 'the actual template has one reviewed saved-price consumer');
+    data.files.set(name, Buffer.from(transform(original)));
+    assert.throws(() => applyExtendedRefreshAdapter(data), /Reviewed Mobile currency boundary changed: src\/components\/NativeCarPark\.tsx/);
+    assert.equal(JSON.stringify(data.profile), originalProfile);
+  }
 });
 
 test('Signature pack discovery accepts POA while excluding it from budget and cheapest claims', async t => {
