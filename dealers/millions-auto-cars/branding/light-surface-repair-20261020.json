@@ -1,0 +1,140 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-owned-light-surface-contrast-repair",
+  "dealer": "millions-auto-cars",
+  "createdAt": "2026-10-20T20:46:14.717Z",
+  "previousPackDigest": "af1b9abb30349c59c0348b9c2758557cc3d4b4871b106817f67705136e3762ba",
+  "previousSource": {
+    "path": "branding/source-before-light-repair-20261020-11b7c384a16318b9.json",
+    "sha256": "11b7c384a16318b90640cae303921f9961c74c1955b05c282be8686558744184"
+  },
+  "description": "Existing eagle/head and M in deep charcoal/red for white surfaces",
+  "replacements": [
+    {
+      "key": "wordmark-millions-light-v2",
+      "roles": [
+        "master",
+        "onLight"
+      ],
+      "path": "branding/generated-on-light-v2-20261020-c0272b6017ec1027.png",
+      "sha256": "c0272b6017ec1027d73496ec1e849d9ec4cf8df6362d8f84e596d1fe514576f6",
+      "nativeDimensions": {
+        "width": 2169,
+        "height": 725
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-c7a37dcf-98ce-4bdf-81a8-a7889e5b7c28",
+        "modelVersion": null
+      },
+      "prompt": "Use case: logo-brand. Input1 is EDIT TARGET: existing Million’s Auto Cars identity. Produce a genuine high-contrast LIGHT-SURFACE transparent variant without changing composition or brand geometry: eagle/head+M compact emblem LEFT, slim vertical separator, eagle profile above exact \"Million’s\" and \"AUTO CARS\" RIGHT. Text verbatim \"Million’s\" and \"AUTO CARS\"; preserve apostrophe and full name. Keep eagle silhouette, all letter shapes and proportions. For WHITE background use dominant deep charcoal eagle/roof/separator and AUTO CARS ink, plus deep rich red (#a80012 feel) for M and Million’s letters. At least85% visible ink must strongly contrast with white; no large pale silver/white fills or thick white borders. Retain red/black identity family, no new motif. Actual transparent alpha, no shadows, gradients, glow, haze, alpha speckles or backing tile. Crisp clear at120/180px.",
+      "references": [
+        {
+          "path": "branding/generated-master.png",
+          "sha256": "ab01ffcbcee04b72e551b7bdd022423ffe77f65e22886266d6bf8a7cdad0c7db"
+        }
+      ]
+    },
+    {
+      "key": "compact-millions-light-v2",
+      "roles": [
+        "mark"
+      ],
+      "path": "branding/generated-compact-on-light-v2-20261020-f92fc41de564fea2.png",
+      "sha256": "f92fc41de564fea29901cf563edad9233ef068c7c5822e452d68e96a1010765a",
+      "nativeDimensions": {
+        "width": 1215,
+        "height": 1295
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-0d7ca55c-9151-484f-965d-c782652c52c8",
+        "modelVersion": null
+      },
+      "prompt": "Use case: logo-brand. Input1 is EDIT TARGET: exact Million’s compact eagle/head over M emblem. Create a real high-contrast WHITE-SURFACE version preserving the eagle head silhouette and bold capital M, all shape geometry/counters, relative proportions, square placement and transparency. Retain red/black identity family: deep rich red M (#a80012 feel) and solid deep charcoal eagle/head. Over85% visible ink must strongly contrast with WHITE. No large pale silver/white fills or thick bright edging; no new outline motif, letters or badge. Clear at32px, crisp filled strokes, actual transparent alpha, no gradient, shadow, glow, haze or speckles. Do not stretch/rearrange the existing compact shape.",
+      "references": [
+        {
+          "path": "branding/generated-mark.png",
+          "sha256": "6a273b653a5b7f801fb602bfcc493eb350a698575eecbd86e039fcb9ac11af49"
+        }
+      ]
+    },
+    {
+      "key": "wordmark-millions-accent-v2",
+      "roles": [
+        "onAccent"
+      ],
+      "path": "branding/generated-on-accent-v2-20261020-45caf859371b51d1.png",
+      "sha256": "45caf859371b51d1a42831bc2413c3d86ba09ff7a6a686af55a8113820cf7203",
+      "nativeDimensions": {
+        "width": 2169,
+        "height": 725
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-bf038323-0548-4271-8a37-0771f2a501ed",
+        "modelVersion": null
+      },
+      "prompt": "Use case: logo-brand. Input1 is EDIT TARGET: exact Million’s Auto Cars full logo. Create a dedicated ACTUAL light-ink accent-surface variant, preserving all geometry/composition: eagle/head+M emblem LEFT, slim separator, eagle above exact \"Million’s\" with \"AUTO CARS\" RIGHT. Text verbatim \"Million’s\" and \"AUTO CARS\", apostrophe preserved. Keep same eagle shape, M, lettering, spacing and natural wide proportions. Dominant ALL visible ink clean solid very-light ivory/silver (#e3e7ee feel), over95% light, so the M/name no longer blend into RED #c40101; also clear on #09090b and #17191c. Existing dark logo/red palette elsewhere stays as source reference; this is only a dedicated accent inverse. True transparent alpha, clean counters, no background tile, dark/red fills, gradient, shadow, glow, haze or speckled texture. Clear at120/180px, no new motif or slogan.",
+      "references": [
+        {
+          "path": "branding/generated-master.png",
+          "sha256": "ab01ffcbcee04b72e551b7bdd022423ffe77f65e22886266d6bf8a7cdad0c7db"
+        }
+      ]
+    }
+  ],
+  "visualReview": {
+    "kind": "agent-visual-review",
+    "viewedAt": "2026-10-20T20:47:28.4825103Z",
+    "wordmarkWidths": [
+      120,
+      180
+    ],
+    "compactWidths": [
+      32,
+      64
+    ],
+    "backgrounds": [
+      "#ffffff",
+      "#111113",
+      "#101820",
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ],
+    "identitySpellingReviewed": true,
+    "notes": "Viewed all four matched maintained consumer exports. KING STREET MOTORS, Million's / AUTO CARS, MOSASO and PRIME LANE / MOTORS LTD remain exact. Prime flat PL/coupe redraw is clean and legible without rejected halo; only failing light roles and Millions accent changed. Passing dark/other accent consumers remain visually and byte-identically preserved.",
+    "humanReview": false,
+    "ownerApproval": false,
+    "dealerApproval": false,
+    "nativeApproval": false,
+    "hostedApproval": false,
+    "comparison": {
+      "path": "J:/.artifacts/cars-source-sync/millions-auto-cars-light-logo-before-after.png",
+      "bytes": 284132,
+      "sha256": "51d0370a533fb29b933b6463621475d05e59417ffceaa74dfd398b4679c4690a",
+      "wordmarkWidths": [
+        120,
+        180
+      ],
+      "compactWidths": [
+        32,
+        64
+      ],
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#101820",
+        "#09090b",
+        "#17191c",
+        "#c40101"
+      ]
+    }
+  },
+  "originalArtworkPreserved": true,
+  "factsStockPhotosPreserved": true,
+  "filtersApplied": false,
+  "thresholdsChanged": false,
+  "providerWrites": 0
+}

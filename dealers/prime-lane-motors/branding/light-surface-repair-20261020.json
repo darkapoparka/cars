@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-owned-light-surface-contrast-repair",
+  "dealer": "prime-lane-motors",
+  "createdAt": "2026-10-20T20:46:14.717Z",
+  "previousPackDigest": "b99ffb08a11c315767086b60a2d556c61b0e014e3205a0d4ea5a3b991994dcdf",
+  "previousSource": {
+    "path": "branding/source-before-light-repair-20261020-1eaa57b4e2acb567.json",
+    "sha256": "1eaa57b4e2acb567b9c1f6390cb2e859fd233f5fab8c3a8c0d38a40799946265"
+  },
+  "description": "Interlocking serif PL and coupe sweep redrawn in flat deep bronze for white surfaces",
+  "replacements": [
+    {
+      "key": "wordmark-prime-light-v2",
+      "roles": [
+        "master",
+        "onLight"
+      ],
+      "path": "branding/generated-on-light-v2-20261020-9b7edeb40a4c7426.png",
+      "sha256": "9b7edeb40a4c7426f30697f278d41dc4c29f6cf9a4924632f10ea003457a472b",
+      "nativeDimensions": {
+        "width": 2169,
+        "height": 725
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-257fe324-8db3-4bcb-b227-132be896d68f",
+        "modelVersion": null
+      },
+      "prompt": "Use case: logo-brand. Input1 is EDIT TARGET: exact Prime Lane Motors Ltd identity redraw. Create an actual DEEP-GOLD/BRONZE ink variant for WHITE surfaces while preserving exact full logo geometry/composition: interlocking PL with coupe sweep LEFT; car silhouette over \"PRIME LANE\" with \"MOTORS LTD\" below RIGHT. Text verbatim \"PRIME LANE\" and \"MOTORS LTD\". Keep elegant serif typography, spacing, interlocking initials, car/sweep motif, proportions and all wording. Dominant ink deep dark bronze (#65400b feel), with limited warm gold accents under10% visible ink; retain gold-family identity but give at least85% ink strong WHITE contrast. No large pale yellow/white fills, no thick light outline. Actual transparent alpha/counters, no background tile, shadows, gradients, glow, haze or speckles. Clear at120/180px, no extra slogan.",
+      "references": [
+        {
+          "path": "branding/generated-master.png",
+          "sha256": "7c5ecd3419df4121ab7a9d0c5337de9cca9661862e79250b228e8aca5fffc9fd"
+        }
+      ]
+    },
+    {
+      "key": "compact-prime-light-v5",
+      "roles": [
+        "mark"
+      ],
+      "path": "branding/generated-compact-on-light-v2-20261020-8fe821db390f0616.png",
+      "sha256": "8fe821db390f0616f06eb0477a0af0785a935964338b756b08dc1f5f3d6073e5",
+      "nativeDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-920979d1-d995-4e8c-b7b2-99ce2ec38f27",
+        "modelVersion": null
+      },
+      "prompt": "Use case: logo-brand. Create a crisp flat compact initials emblem for Prime Lane Motors Ltd, a preview proposal. Exact initials PL, capital P and capital L, elegant classic slab serif, interlocking with P behind and L at lower-right. A simple thin arched coupe-roof swoosh crosses the upper third of the letters from left to right. Retain this PL plus coupe motif. Balanced native compact geometry centered with transparent margins. SINGLE FLAT SOLID DARK BROWN INK #49311f. Both letters and car sweep are uniformly opaque dark brown; all counters and surrounding canvas genuinely transparent. Clean vector-like spot-colour artwork, no outline, no glow, no shadow, no blur, no lighting, no gradient, no texture, no bevel, no metallic finish, no aura. Only hard-edged dark-brown filled shapes on alpha. Strong clear at32px and64px on WHITE. No full words, no badge, no extra symbol, no background. Export a transparent square PNG.",
+      "references": []
+    }
+  ],
+  "visualReview": {
+    "kind": "agent-visual-review",
+    "viewedAt": "2026-10-20T20:47:28.4825103Z",
+    "wordmarkWidths": [
+      120,
+      180
+    ],
+    "compactWidths": [
+      32,
+      64
+    ],
+    "backgrounds": [
+      "#ffffff",
+      "#111113",
+      "#101820",
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ],
+    "identitySpellingReviewed": true,
+    "notes": "Viewed all four matched maintained consumer exports. KING STREET MOTORS, Million's / AUTO CARS, MOSASO and PRIME LANE / MOTORS LTD remain exact. Prime flat PL/coupe redraw is clean and legible without rejected halo; only failing light roles and Millions accent changed. Passing dark/other accent consumers remain visually and byte-identically preserved.",
+    "humanReview": false,
+    "ownerApproval": false,
+    "dealerApproval": false,
+    "nativeApproval": false,
+    "hostedApproval": false,
+    "comparison": {
+      "path": "J:/.artifacts/cars-source-sync/prime-lane-motors-light-logo-before-after.png",
+      "bytes": 235065,
+      "sha256": "285c3759a30ee83b56be509637af7bc9bd957d5dec0cffd7f42e5e6778f788df",
+      "wordmarkWidths": [
+        120,
+        180
+      ],
+      "compactWidths": [
+        32,
+        64
+      ],
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#101820",
+        "#09090b",
+        "#17191c",
+        "#c40101"
+      ]
+    }
+  },
+  "originalArtworkPreserved": true,
+  "factsStockPhotosPreserved": true,
+  "filtersApplied": false,
+  "thresholdsChanged": false,
+  "providerWrites": 0
+}

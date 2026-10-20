@@ -1,0 +1,124 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-second-original-held-logo-contrast-repair",
+  "dealer": "reliable-autos",
+  "createdAt": "2026-10-20T20:37:08.206Z",
+  "previousPackDigest": "5d3eafb6cd534b0bd1d5cd2edbb91b2086239456380aaf43b8694284e48b2e1e",
+  "previousSource": {
+    "path": "branding/source-before-second-held-logo-repair-20261020-cdacd634751ecfbb.json",
+    "sha256": "cdacd634751ecfbb1f8b5b1c1e39fa71de9cd6644f2b4225b51daf7077024ec8"
+  },
+  "previousInputs": {
+    "surfaces": {
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "34b1fb1da06aa62e34bfe8c4f645d237fc769903a326cbee281362a36d5e461c",
+        "nativeDimensions": {
+          "width": 2169,
+          "height": 725
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-f91db7f9-70d3-4c6b-8bd0-42c4af406ad5",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "34b1fb1da06aa62e34bfe8c4f645d237fc769903a326cbee281362a36d5e461c",
+        "nativeDimensions": {
+          "width": 2169,
+          "height": 725
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-f91db7f9-70d3-4c6b-8bd0-42c4af406ad5",
+          "modelVersion": null
+        }
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "4ce4abb660ebef4864d54f9a4b37332db8274a6fa38ff79f0b44b72645398911",
+      "nativeDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-c68072d8-92b9-433f-9d54-d662571a0e80",
+        "modelVersion": null
+      }
+    }
+  },
+  "replacements": [
+    {
+      "roles": [
+        "onDark",
+        "onAccent"
+      ],
+      "reference": "branding/generated-on-dark.png",
+      "path": "branding/generated-on-dark-v2-20261020.png",
+      "sha256": "bcd31f84656235c66d2b658c57bbf320cd2cc9ce4671ee87fc0cc2956a380575",
+      "nativeDimensions": {
+        "width": 2169,
+        "height": 725
+      },
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-0ea7031e-c36c-4770-abc1-5a97270dcc31",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand, faithful inverse surface edit of the retained identity. Preserve exactly this interlocked RA emblem at left and RELIABLE AUTOS with LTD beneath, same bold letterforms, proportions, alignment, spacing, open counters and angular cuts. Make a clean flat pale silver-grey #c8d0d8 inverse wordmark for charcoal/navy/black/red surfaces. All visible artwork uses this uniform opaque light silver-grey. Remove heavy black contours and white keylines without changing the silhouettes; their separation gaps and all counters become transparent. No pure white, gradients, texture, speckles, distress, shadows, glow, new shapes or extra wording. Exact spelling RELIABLE AUTOS LTD. Truly transparent background with generous padding. Preserve observed monochrome identity; preview variant without dealer approval.",
+      "createdAt": "2026-10-20T20:37:08.206Z",
+      "derivation": "Actual built-in imagegen edit of retained identity. Raw returned PNG copied byte-identical; no recolouring, filtering, alpha cleanup or threshold changes."
+    },
+    {
+      "roles": [
+        "mark"
+      ],
+      "reference": "branding/generated-mark.png",
+      "path": "branding/generated-mark-on-light-v2-20261020.png",
+      "sha256": "3dc4dd435ac1cf52daea0ca5211aec0689967d82ed9dae671b06dd23fdb81524",
+      "nativeDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-a65f8912-9d1c-4f2d-b45d-a79722ffe192",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand, faithful compact dark-ink variant for white-background app icon/favicon. Preserve exactly the supplied interlocking RA emblem, its angular R top and leg, triangular A, overlapping gap shapes, geometry and proportions. Reproduce all visible emblem fill as uniform opaque deep charcoal #17202b. Existing black separating gaps and all open counters become transparent negative space. Remove white keylines and grey fill; no added outlines. Smooth clean thick geometry, clear at32px and64px. Center on a generous square truly transparent canvas. No gradients, texture, shadow, glow, speckles, extra shapes or lettering. Same retained RELIABLE AUTOS LTD monochrome identity, no redesign or dealer approval claim.",
+      "createdAt": "2026-10-20T20:37:08.206Z",
+      "derivation": "Actual built-in imagegen edit of retained identity. Raw returned PNG copied byte-identical; no recolouring, filtering, alpha cleanup or threshold changes."
+    }
+  ],
+  "visualReview": {
+    "wordmarkWidths": [
+      120,
+      180
+    ],
+    "compactWidths": [
+      32,
+      64
+    ],
+    "wordmarkBackgrounds": [
+      "#111113",
+      "#101820",
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ],
+    "compactBackgrounds": [
+      "#ffffff"
+    ],
+    "identityAndSpelling": "agent-visual-review",
+    "dealerApproval": false,
+    "nativeApproval": false,
+    "hostedApproval": false,
+    "humanReview": false
+  },
+  "originalArtworkFactsStockPhotosPalettesPreserved": true,
+  "passingConsumerHashesProtected": true,
+  "toolPackage": "L:/CODEX/cars/templates/karento-best/package.json",
+  "filtersApplied": false,
+  "thresholdsChanged": false,
+  "providerWrites": 0
+}

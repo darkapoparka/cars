@@ -1,0 +1,160 @@
+{
+  "schemaVersion": 1,
+  "dealer": "mosaso",
+  "status": "reviewed",
+  "realLogoFirst": true,
+  "publicSources": [
+    {
+      "url": "https://www.autotrader.co.uk/dealers/west-midlands/oldbury/mosaso-10037755",
+      "observedAt": "2026-10-19T17:36:49.281348Z"
+    }
+  ],
+  "originals": [
+    {
+      "path": "branding/observed-logo.gif",
+      "sha256": "25974366c7c1a912b11777888cb265dd1eead8d841a861ee308978f93f920070",
+      "sourceUrl": "https://m.atcdn.co.uk/dealer-logo/at2/adbranding/10037755/images/fpa_logo.gif",
+      "observedAt": "2026-10-19",
+      "kind": "generic-marketplace-business-name-banner"
+    }
+  ],
+  "creationMethod": "imagegen-proposal",
+  "dealerApproved": false,
+  "approvalStatus": "independent-preview-not-dealer-approved",
+  "researchConclusion": "Bounded public checks did not yield usable distinct dealer artwork. Generic text banners or unavailable image-host URLs do not prove that the dealer has no logo. This artwork is clearly an independent proposal.",
+  "generation": {
+    "tool": "image_gen.imagegen",
+    "generationId": "exec-4ce5d39d-21b4-44df-a486-2e3e4fa94bf6",
+    "modelVersion": null,
+    "prompt": "Use case: logo-brand. Create one professional automotive dealer logo asset for the business name MOSASO. Transparent background. Wide horizontal lockup: at left a compact geometric M monogram with an elegant continuous-road negative space, at right the word MOSASO in bold custom geometric sans serif capitals, no tagline. Deep navy #142838 and bright teal #18a999, with a precise clean white keyline around the navy strokes so the identical artwork remains readable on white, charcoal, and dark red surfaces. Flat graphic artwork, crisp simple shapes, no gradient, no shadow, no fake metallic finish, no mockup, no photography, no additional text. The left mark must read clearly at 32px, keep shapes thick and few; wordmark must remain legible at small website header size. Provide generous transparent separation between the mark and wordmark for lossless cropping of the mark. This is an independent proposal, not dealer-approved artwork."
+  },
+  "compactDerivation": {
+    "method": "lossless-isolated-emblem-crop",
+    "parentReference": "branding/generated-master.png",
+    "parentSha256": "8b620e89fdfa6b012106fe0f63cf4d3efc5f9469d803814d8423cb4925982470",
+    "crop": {
+      "left": 0,
+      "top": 0,
+      "width": 572,
+      "height": 724
+    },
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-4ce5d39d-21b4-44df-a486-2e3e4fa94bf6",
+      "modelVersion": null
+    }
+  },
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T18:56:33.139740Z",
+    "master": {
+      "path": "branding/generated-master.png",
+      "sha256": "8b620e89fdfa6b012106fe0f63cf4d3efc5f9469d803814d8423cb4925982470",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-4ce5d39d-21b4-44df-a486-2e3e4fa94bf6",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "1d8cd9098ac2b44d3190ef1f53b99dd28c315eef45b18910068740ed893a5415",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-4ce5d39d-21b4-44df-a486-2e3e4fa94bf6",
+        "modelVersion": null
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-on-dark.png",
+      "sha256": "45aae765be2e2dad0c2f86a384c69a3106e88cd35023c40a7acc94d8cbacac90",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-df73bc29-99b5-4baa-8bf7-b305d58d9460",
+        "modelVersion": null
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-master.png",
+        "sha256": "8b620e89fdfa6b012106fe0f63cf4d3efc5f9469d803814d8423cb4925982470",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-4ce5d39d-21b4-44df-a486-2e3e4fa94bf6",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "9f1708ca68242b94b31eabae20a27a3ac51cca6892a3d8ced407b36af6c39534",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-df73bc29-99b5-4baa-8bf7-b305d58d9460",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "9f1708ca68242b94b31eabae20a27a3ac51cca6892a3d8ced407b36af6c39534",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-df73bc29-99b5-4baa-8bf7-b305d58d9460",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": {
+        "onLight": [
+          "#ffffff"
+        ],
+        "onDark": [
+          "#111113",
+          "#101820"
+        ],
+        "onAccent": [
+          "#09090b",
+          "#17191c",
+          "#c40101"
+        ]
+      },
+      "wordmarkWidths": [
+        120,
+        180
+      ],
+      "markWidths": [
+        32,
+        64
+      ],
+      "method": "Exact pipeline alpha-padding crop and resize of actual generated surface artwork. Separate light-ink generated wordmark is used on dark and accent surfaces. Compact inputs are documented actual imagegen outputs or isolated lossless crops.",
+      "reviewedAt": "2026-10-19T18:56:33.139740Z",
+      "review": "Visually reviewed the exact pipeline cropTransparentPadding exports at 120 px and 180 px wordmark widths and 32 px and 64 px compact sizes against all six required background colours. Spelling and transparency checked. Filled light wordmarks improve contrast on dark surfaces; artwork colours do not change template palettes."
+    }
+  },
+  "additionalGenerations": [
+    {
+      "role": "onDark-and-onAccent",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-df73bc29-99b5-4baa-8bf7-b305d58d9460",
+      "modelVersion": null,
+      "reference": "branding/generated-master.png",
+      "prompt": "Use case: logo-brand, exact surface variant. This is an existing approved composition being prepared for a dark website background. Preserve its exact business name, spelling, typography, emblem motif, layout, separation and proportions. Make a faithful LIGHT-INK version on a truly TRANSPARENT background: all wordmark text should be solid bright ivory-white, filled letters, not hollow outline letters. Preserve any restrained emblem accent colours if they have contrast, and use white for the emblem's dark strokes so the compact emblem also reads on charcoal. Preserve the existing dark contour where helpful. No change of shape or concept. No added content. Do not include the background; it must remain transparent. Clean perfectly smooth edges, no speckles, no distress, no glow, no shadow, no gradients. The result must be clearly legible at180px width on charcoal #111113 and dark red #c40101. Match the reference geometry; no business names or letters may be omitted or repeated."
+    }
+  ],
+  "compactOnDarkDerivation": {
+    "method": "lossless-isolated-emblem-crop",
+    "parentReference": "branding/generated-on-dark.png",
+    "parentSha256": "9f1708ca68242b94b31eabae20a27a3ac51cca6892a3d8ced407b36af6c39534",
+    "crop": {
+      "left": 0,
+      "top": 0,
+      "width": 572,
+      "height": 724
+    },
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-df73bc29-99b5-4baa-8bf7-b305d58d9460",
+      "modelVersion": null
+    }
+  }
+}

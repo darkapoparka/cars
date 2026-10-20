@@ -3,7 +3,7 @@
   "kind": "cars-dealer-pack-input-review",
   "dealer": "dms-cars-peterborough",
   "reviewed": true,
-  "reviewedAt": "2026-10-20T19:17:37.401Z",
+  "reviewedAt": "2026-10-20T20:37:00.856Z",
   "review": {
     "kind": "automated",
     "humanReview": false,
@@ -46,6 +46,10 @@
       "sha256": "460fec99450713e1164acedb19e4525538d515cc7ee5d2617ef9193a45a13957"
     },
     {
+      "path": "branding/generated-mark-on-light-v2-20261020.png",
+      "sha256": "90827ed316b5321d0052adabde7afd7148fec278ace767bbafa42aae74c18b7d"
+    },
+    {
       "path": "branding/generated-mark.png",
       "sha256": "51296b958cd812187d62f46dd4ed27e76774e37e752908da43f8f6b4fc28b5ef"
     },
@@ -54,20 +58,32 @@
       "sha256": "b4b3b774faa9063f9a49d2473d0424872efa6efe1eda28f90ce0248dd13818e9"
     },
     {
+      "path": "branding/generated-on-accent-v2-20261020.png",
+      "sha256": "8c1228fa3bac11b6958ca528e0af0940acd5d76e7d516f2172b90ba6df837a0c"
+    },
+    {
       "path": "branding/generated-on-dark.png",
       "sha256": "0d42ac1e07504775321562cc166b96c881b145b8b51c1048089f09caca23f53d"
     },
     {
       "path": "branding/logo-contract.json",
-      "sha256": "32098730fb8464002d27be8ce403a90642ebf86eeef92a4a9605c517180569d0"
+      "sha256": "97041c2ccacd198548a039ff0ed9069fee7a266d08c6ffd7b34fc51e6671cc47"
     },
     {
       "path": "branding/logo-recipe.json",
-      "sha256": "b9bf19dac9ad6ec3ad8674a9accdc2db8c9ad9f1ba2cba248269c1d11bcc3198"
+      "sha256": "596b17064a83bd4fbc40c0fd5458f00a5094f19c1f2773529c8fb72acadec275"
+    },
+    {
+      "path": "branding/second-held-logo-repair-20261020.json",
+      "sha256": "c16f550183a8674278a2650561ff52e025f0d7e81635eca563ae09e274ed1c60"
+    },
+    {
+      "path": "branding/source-before-second-held-logo-repair-20261020-4209bcb854572bfd.json",
+      "sha256": "4209bcb854572bfd1db1df33765ec8845e45634d723b63632459cb1cac0f0756"
     },
     {
       "path": "branding/source.json",
-      "sha256": "4209bcb854572bfd1db1df33765ec8845e45634d723b63632459cb1cac0f0756"
+      "sha256": "034ee2625792101b5422a5584ba230f8a2cd9fcebada237dfda21fb34154f641"
     },
     {
       "path": "business-facts.json",
@@ -75,7 +91,7 @@
     },
     {
       "path": "copy-review.json",
-      "sha256": "bcd66eb7304042ee9b00fabae3d2480dc1b449dd37b8b39110c136b5ce4c2eb3"
+      "sha256": "5a5c44d129dd60d063685f350895fe76ef6da5aef00976b139414d7736fe75ad"
     },
     {
       "path": "dealer-stock/public-1.jpg",
@@ -91,11 +107,11 @@
     },
     {
       "path": "dealer.json",
-      "sha256": "2d4fd59cf48e5a1de17ebb88cf177c0e16dda694697362990129b0a5e539c28f"
+      "sha256": "a1d67113cadbb93346511e099a1401baa8e3434b3f2e7d4ef7576a00758be16c"
     },
     {
       "path": "identity-review.json",
-      "sha256": "09e6d9e682406adc5679fbdf6777db3afcc0bd57bb6719ad2eae965fba9e4928"
+      "sha256": "2b93ef8310f21815096b89b578c34a792a2d107fbf56a5f974d7f12fb5e77d4c"
     },
     {
       "path": "locale.json",
@@ -107,7 +123,7 @@
     },
     {
       "path": "qualification.json",
-      "sha256": "5ad0dd3b2c94908a386f6497342f4b98208ebbb2375f479d956ee6a98b0d1781"
+      "sha256": "dcecbeff1f9751e394f705cbb4ac8ec904360f1cf6f1bcd3ac6fe94f6ee81964"
     },
     {
       "path": "source-evidence.json",

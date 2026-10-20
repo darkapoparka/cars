@@ -54,22 +54,30 @@
     }
   },
   "generatedInputs": {
-    "reviewedAt": "2026-10-19T18:39:55.953Z",
+    "reviewedAt": "2026-10-20T20:47:28.4825103Z",
     "master": {
-      "path": "branding/generated-master.png",
-      "sha256": "466320a6dd38858c13f95bfaa66cbffc5d2ddb5e98df9284ee8d658c415c6426",
+      "path": "branding/generated-on-light-v2-20261020-d452dc472f0e4789.png",
+      "sha256": "d452dc472f0e4789548c67aa3ae39bd3798d5fba3b8b3bfb8a8358c532133cb1",
+      "nativeDimensions": {
+        "width": 2172,
+        "height": 724
+      },
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-6dcf534e-f0df-4db3-818f-b8c9ce0d861e",
+        "generationId": "exec-d7462833-e9f4-47a0-bf73-c5b8c3cb991d",
         "modelVersion": null
       }
     },
     "mark": {
-      "path": "branding/generated-mark.png",
-      "sha256": "060e48b31460bc39be7668aabbe27d9b2ae238b0a1dbdda5699a70203cc5b62c",
+      "path": "branding/generated-compact-on-light-v2-20261020-44ab453f6909b05a.png",
+      "sha256": "44ab453f6909b05a15ddafd0f37098ae3d2408660839b231d5d17c39101cb6e8",
+      "nativeDimensions": {
+        "width": 1070,
+        "height": 1470
+      },
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-6dcf534e-f0df-4db3-818f-b8c9ce0d861e",
+        "generationId": "exec-12579244-e4e6-482c-93d5-5651517fc752",
         "modelVersion": null
       }
     },
@@ -84,11 +92,15 @@
     },
     "surfaces": {
       "onLight": {
-        "path": "branding/generated-master.png",
-        "sha256": "466320a6dd38858c13f95bfaa66cbffc5d2ddb5e98df9284ee8d658c415c6426",
+        "path": "branding/generated-on-light-v2-20261020-d452dc472f0e4789.png",
+        "sha256": "d452dc472f0e4789548c67aa3ae39bd3798d5fba3b8b3bfb8a8358c532133cb1",
+        "nativeDimensions": {
+          "width": 2172,
+          "height": 724
+        },
         "generation": {
           "tool": "image_gen.imagegen",
-          "generationId": "exec-6dcf534e-f0df-4db3-818f-b8c9ce0d861e",
+          "generationId": "exec-d7462833-e9f4-47a0-bf73-c5b8c3cb991d",
           "modelVersion": null
         }
       },
@@ -118,9 +130,12 @@
           "#ffffff"
         ],
         "onDark": [
-          "#111113"
+          "#111113",
+          "#101820"
         ],
         "onAccent": [
+          "#09090b",
+          "#17191c",
           "#c40101"
         ]
       },
@@ -133,8 +148,99 @@
         64
       ],
       "method": "Same actual dual-contrast generated artwork on each surface; no generated colours are represented as a template palette change.",
-      "reviewedAt": "2026-10-19T18:39:55.953Z",
-      "review": "Visually reviewed exact cropTransparentPadding exports at120px and180px wordmark widths and32px/64px compact sizes on white, charcoal and red. Exact spelling retained, real alpha present, compact emblem clear. The source palette is part of the artwork only."
+      "reviewedAt": "2026-10-20T20:47:28.4825103Z",
+      "review": "Visually reviewed exact cropTransparentPadding exports at120px and180px wordmark widths and32px/64px compact sizes on white, charcoal and red. Exact spelling retained, real alpha present, compact emblem clear. The source palette is part of the artwork only.",
+      "notes": "Agent viewed matched maintained exports at120/180px and32/64px on actual six template surfaces. New deeper light-surface variants preserve identity and palette family; Millions alone also receives an accent inverse. All passing dark wordmarks and dark compact consumers remain exact, and other three accent wordmarks remain exact. Original artwork retained. Independent preview proposals; no dealer/native/hosted approval."
+    },
+    "marks": {
+      "onLight": {
+        "path": "branding/generated-compact-on-light-v2-20261020-44ab453f6909b05a.png",
+        "sha256": "44ab453f6909b05a15ddafd0f37098ae3d2408660839b231d5d17c39101cb6e8",
+        "nativeDimensions": {
+          "width": 1070,
+          "height": 1470
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-12579244-e4e6-482c-93d5-5651517fc752",
+          "modelVersion": null
+        }
+      }
+    },
+    "compactMarkDescription": "Existing rounded slab-serif K in deep charcoal for white surfaces",
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-20T20:47:28.4825103Z",
+      "widths": [
+        32,
+        64
+      ],
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#101820",
+        "#09090b",
+        "#17191c",
+        "#c40101"
+      ],
+      "notes": "New light compact ink variants and exact identity visually reviewed at32/64px; Prime uses a clean flat PL/coupe redraw after halo candidates were rejected. Passing dark compact unchanged. Padding/contrast thresholds unchanged; no stretching or filters."
     }
-  }
+  },
+  "additionalGenerations": [
+    {
+      "roles": [
+        "master",
+        "onLight"
+      ],
+      "path": "branding/generated-on-light-v2-20261020-d452dc472f0e4789.png",
+      "sha256": "d452dc472f0e4789548c67aa3ae39bd3798d5fba3b8b3bfb8a8358c532133cb1",
+      "nativeDimensions": {
+        "width": 2172,
+        "height": 724
+      },
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-d7462833-e9f4-47a0-bf73-c5b8c3cb991d",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand. Input1 is EDIT TARGET: existing King Street Motors logo. Create an actual deep-ink transparent variant for WHITE surfaces while preserving exact identity, soft rounded bold slab-serif letterforms and composition: large K at LEFT, \"KING STREET\" above \"MOTORS\" RIGHT. Text verbatim \"KING STREET MOTORS\". Keep exact spelling, spacing, geometry, natural aspect and relative sizes. Change dominant pale silver/white interiors to solid deep charcoal/near-black; over90% visible ink DARK, fine silver edge only if needed. Preserve monochrome palette; do not recolour any website UI. No thick white outlines, shadow, glow, gradient, haze, alpha speckles, badge or backing rectangle. Strong clean letters readable at120/180px on WHITE. True transparent alpha and counters. No new text or symbol.",
+      "references": [
+        {
+          "path": "branding/generated-master.png",
+          "sha256": "466320a6dd38858c13f95bfaa66cbffc5d2ddb5e98df9284ee8d658c415c6426"
+        }
+      ],
+      "createdAt": "2026-10-20T20:46:18.91Z",
+      "derivation": "Actual built-in imagegen result copied byte-for-byte. Dedicated deeper light-surface ink or accent inverse; existing identity/motifs retained. Prime compact is a fresh flat PL/coupe redraw. No stretch, filters, recolouring or alpha cleanup."
+    },
+    {
+      "roles": [
+        "mark"
+      ],
+      "path": "branding/generated-compact-on-light-v2-20261020-44ab453f6909b05a.png",
+      "sha256": "44ab453f6909b05a15ddafd0f37098ae3d2408660839b231d5d17c39101cb6e8",
+      "nativeDimensions": {
+        "width": 1070,
+        "height": 1470
+      },
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-12579244-e4e6-482c-93d5-5651517fc752",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand. Input1 is EDIT TARGET: King Street Motors compact K. Create an actual strong WHITE-SURFACE version preserving exact large soft rounded slab-serif CAPITAL K silhouette, counters, size, placement, natural compact geometry and transparent canvas. Text exact \"K\" only. Change dominant pale interior to solid deep charcoal/near-black, over90% visible ink dark, fine light edge only if needed, no bulky white outline. Retain monochrome identity. Crisp native strokes readable at32px, no stretched shapes, no added crown/icon, gradient, shadow, glow, haze, speckles or background tile. Actual alpha transparency.",
+      "references": [
+        {
+          "path": "branding/generated-mark.png",
+          "sha256": "060e48b31460bc39be7668aabbe27d9b2ae238b0a1dbdda5699a70203cc5b62c"
+        }
+      ],
+      "createdAt": "2026-10-20T20:46:18.91Z",
+      "derivation": "Actual built-in imagegen result copied byte-for-byte. Dedicated deeper light-surface ink or accent inverse; existing identity/motifs retained. Prime compact is a fresh flat PL/coupe redraw. No stretch, filters, recolouring or alpha cleanup."
+    }
+  ],
+  "sourceHistory": [
+    {
+      "reference": "branding/source-before-light-repair-20261020-16d34a93a6414af0.json",
+      "sha256": "16d34a93a6414af0889db794d9f8231745b9dcc25bb99182e51e7d62f5f644ff",
+      "retainedAt": "2026-10-20T20:46:18.91Z",
+      "reason": "Exact source provenance before owned light-surface contrast repair"
+    }
+  ]
 }

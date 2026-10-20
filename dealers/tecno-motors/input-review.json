@@ -3,7 +3,7 @@
   "kind": "cars-dealer-pack-input-review",
   "dealer": "tecno-motors",
   "reviewed": true,
-  "reviewedAt": "2026-10-20T19:23:59.912Z",
+  "reviewedAt": "2026-10-20T20:36:47.703Z",
   "review": {
     "kind": "automated",
     "humanReview": false,
@@ -42,6 +42,10 @@
       "sha256": "337f21591a356087464305656e28aff1ca628e3e9d5666c44c229adc7b4a06e0"
     },
     {
+      "path": "branding/generated-mark-on-dark-v2-20261020.png",
+      "sha256": "c46ae293824e801ed7ca938d222d11de247e9cad0f255bfdc848f8afc87720ee"
+    },
+    {
       "path": "branding/generated-mark.png",
       "sha256": "37281ee9f9b691381cf6edede123181916e876d5cbb85a71191cb16fbe517aa7"
     },
@@ -50,20 +54,32 @@
       "sha256": "4c4d740976db11754b2fe257cc688c9404dab6d65d841f3a09e1e5e3310846be"
     },
     {
+      "path": "branding/generated-on-accent-v2-20261020.png",
+      "sha256": "9202c9962b3b4dba86974a6f339424a9a7992290ef0522f35fbddb890643692a"
+    },
+    {
       "path": "branding/generated-on-dark.png",
       "sha256": "417148b5f08497c3a46f017ebccc6abde759b4186eb03f96107e91a88e356c4b"
     },
     {
       "path": "branding/logo-contract.json",
-      "sha256": "9c5f043cfa7786633d941513be0ca3778197b465bf7593b8f121a64e2a8b7aa8"
+      "sha256": "7b63e46b23eea797439e7d6c83c31db00f2ecc2a4d339efe0ef56a69dd577db4"
     },
     {
       "path": "branding/logo-recipe.json",
-      "sha256": "606298db667b6986cb55b3685b0f649c69fabd3b7920421375022b20299f27c7"
+      "sha256": "7cad5734ccb9f512c992dcf3e19beb93887a513ce36f86a243e14a36bfd8be0a"
+    },
+    {
+      "path": "branding/second-held-logo-repair-20261020.json",
+      "sha256": "82b43df02abe8d5cf9511822eb6f14469eec0989cd21014f0ead4a6a3a699f5f"
+    },
+    {
+      "path": "branding/source-before-second-held-logo-repair-20261020-8b517fe786e8e7d9.json",
+      "sha256": "8b517fe786e8e7d90b903fb846c2818e49602be3b065799ba77d5d4275987ee9"
     },
     {
       "path": "branding/source.json",
-      "sha256": "8b517fe786e8e7d90b903fb846c2818e49602be3b065799ba77d5d4275987ee9"
+      "sha256": "d33123dffd2a04f2936c92626a40d7ec4145ae73007441259fce8b115837ea39"
     },
     {
       "path": "business-facts.json",
@@ -71,7 +87,7 @@
     },
     {
       "path": "copy-review.json",
-      "sha256": "6cd03650bbd2415507ccd1bb7513e095c89663b99b68cbd9840957be74cf2d2a"
+      "sha256": "3cd2491faa41fb07e546d0f25545fde46faaad0e1ebf0eb4ee53a96cf081a282"
     },
     {
       "path": "dealer-stock/public-1.jpg",
@@ -91,7 +107,7 @@
     },
     {
       "path": "identity-review.json",
-      "sha256": "521d292756e283a3e272de2a52f9ed92de006c35a9307a1af499db2143099bf9"
+      "sha256": "3b09e64bbe268f250c3bcdd3244cd8b6334d09ae3eefdfeabaebf89abe20d0a3"
     },
     {
       "path": "locale.json",
@@ -103,7 +119,7 @@
     },
     {
       "path": "qualification.json",
-      "sha256": "fa50790ef1ec30283e73aabd5400ecf761103cace75defc2d1eb5f1c15cfcd6e"
+      "sha256": "d550592d93be6ed8de768801ccdc791d9a2856bd84441ea902aa5d8d40769520"
     },
     {
       "path": "source-evidence.json",

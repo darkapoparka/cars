@@ -34,8 +34,8 @@
     "zlib-ng": "2.3.3",
     "sharp": "0.35.5"
   },
-  "sourceSha256": "a93ce49753f2dc77cd91afb5ff829b229b3cc2b41c73aaa2c1d250418fe19645",
-  "contractSha256": "7324989b2ab5abe55709b87ade520dc41057f08ee131f9fa94cde19d01ca909e",
+  "sourceSha256": "590a21b97733019676d058cc2649fd2b2a0a11d7a7eda8239f842b8cc3278b54",
+  "contractSha256": "341230c039e4a97aacd54fb06e3e6161d07601b1b32e2f007ce70df9fea9db3f",
   "outputs": [
     {
       "path": "branding/app-icon.png",
@@ -44,8 +44,8 @@
     },
     {
       "path": "branding/logo-mark-on-dark.png",
-      "bytes": 227228,
-      "sha256": "25dcc12acd406d2f8ec286720756cad7d16529566150152b3c6f4eff1fc5384e"
+      "bytes": 129922,
+      "sha256": "84b3903aa451791780aee68b00dd3199da2773bd2204524e3fec56230dbc89f7"
     },
     {
       "path": "branding/logo-mark.png",
@@ -59,8 +59,8 @@
     },
     {
       "path": "branding/logo-on-accent.png",
-      "bytes": 263055,
-      "sha256": "665e68d4ecc2b6350d7f973740be4ca80ede641089549a0b7f5782ac0cb28697"
+      "bytes": 162570,
+      "sha256": "d90371e313b31415ebf081093368ae7bbfb99960b338c57276f5e5bce54928c5"
     },
     {
       "path": "branding/logo-on-dark.png",
@@ -84,13 +84,13 @@
     },
     {
       "path": "dealer-brand/logo-on-accent.png",
-      "bytes": 263055,
-      "sha256": "665e68d4ecc2b6350d7f973740be4ca80ede641089549a0b7f5782ac0cb28697"
+      "bytes": 162570,
+      "sha256": "d90371e313b31415ebf081093368ae7bbfb99960b338c57276f5e5bce54928c5"
     },
     {
       "path": "dealer-brand/logo-on-accent.webp",
-      "bytes": 168486,
-      "sha256": "7c812adfe790e137f5a945be798d6f2537bf6ea159a07cb374c9d674e54df975"
+      "bytes": 114800,
+      "sha256": "b5589fca955f3d03a5e368a135844a819b94bc94ff2f6a92e92f7dec992c2aee"
     },
     {
       "path": "dealer-brand/logo-on-dark.png",
@@ -114,8 +114,8 @@
     },
     {
       "path": "dealer-brand/mark-on-dark.webp",
-      "bytes": 139374,
-      "sha256": "7f413afcb04f9c8c2e50ba4fea0b6fbac85add0f28d92cca1ba8b1d31042f362"
+      "bytes": 86372,
+      "sha256": "e440e6635c527f5aa662086ddbc22197a3be72d1ea01649cf66dbb971d841d72"
     },
     {
       "path": "dealer-brand/mark-on-light.webp",

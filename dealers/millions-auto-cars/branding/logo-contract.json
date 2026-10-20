@@ -2,15 +2,15 @@
   "schemaVersion": 1,
   "dealer": "millions-auto-cars",
   "reviewed": true,
-  "reviewedAt": "2026-10-19T18:39:43.452Z",
+  "reviewedAt": "2026-10-20T20:47:28.4825103Z",
   "status": "independent-proposal-not-dealer-approved",
   "creationMethod": "imagegen-redraw",
   "assets": {
     "onLight": {
       "sourcePath": "branding/logo-on-light.png",
       "publicPath": "/dealer-brand/logo-on-light.webp",
-      "sha256": "23f61edd5d82f062048d4fa168aaf1a71b2902b0d3b277bde1a4e502fc7ed1c4",
-      "sourceSha256": "32b0435e1204b17381e89c9b3c8eb23aa6f8c532df9014347559af4854204342"
+      "sha256": "96aa8e902f8b2026a299b45bd7331a2ea79319b313f4177af561539dc0fe85d5",
+      "sourceSha256": "0eb0660ad55ee73dc1c1b00f8828ee91679590465f513e1d9ef92839dfedb901"
     },
     "onDark": {
       "sourcePath": "branding/logo-on-dark.png",
@@ -21,8 +21,8 @@
     "onAccent": {
       "sourcePath": "branding/logo-on-accent.png",
       "publicPath": "/dealer-brand/logo-on-accent.webp",
-      "sha256": "23f61edd5d82f062048d4fa168aaf1a71b2902b0d3b277bde1a4e502fc7ed1c4",
-      "sourceSha256": "32b0435e1204b17381e89c9b3c8eb23aa6f8c532df9014347559af4854204342"
+      "sha256": "3c1a203c2dd69aeefe2e1f446982977dc0bdaa75a0245c490495ce42df45580c",
+      "sourceSha256": "ad4da09a7ac891311e4b0b929831b58ecfb6ac2a5489f36c6d697f179f9bf7b9"
     }
   },
   "surfaceBackgrounds": {
@@ -41,36 +41,36 @@
   },
   "master": {
     "path": "branding/logo-master.png",
-    "sha256": "32b0435e1204b17381e89c9b3c8eb23aa6f8c532df9014347559af4854204342",
+    "sha256": "0eb0660ad55ee73dc1c1b00f8828ee91679590465f513e1d9ef92839dfedb901",
     "generation": {
       "tool": "image_gen.imagegen",
-      "generationId": "exec-6558754b-cbf4-44e6-8faf-f1c1d4b7e85a",
+      "generationId": "exec-c7a37dcf-98ce-4bdf-81a8-a7889e5b7c28",
       "modelVersion": null
     }
   },
   "mark": {
     "path": "branding/logo-mark.png",
-    "sha256": "e1967e2510edcf5d546d55093fdc3105d4791d29c42df2d4da7b21984cba1d8f",
+    "sha256": "615896cd57855e48eefe78cd9ac08a1a135bc4b0b7eb662de9c038e4caff4b3f",
     "generation": {
       "tool": "image_gen.imagegen",
-      "generationId": "exec-6558754b-cbf4-44e6-8faf-f1c1d4b7e85a",
+      "generationId": "exec-0d7ca55c-9151-484f-965d-c782652c52c8",
       "modelVersion": null
     }
   },
   "favicon": {
     "path": "dealer-brand/favicon.ico",
-    "sha256": "b79a9f9536e24f51c036f21fd5983b112f09ee42194f5628de8828becd034bb9"
+    "sha256": "dc894cb2fa3091903b439992016f520c85c17a1c9eafae6cd8a821498a567c25"
   },
   "surfaces": {
     "onLight": {
       "path": "branding/logo-on-light.png",
-      "sha256": "32b0435e1204b17381e89c9b3c8eb23aa6f8c532df9014347559af4854204342",
+      "sha256": "0eb0660ad55ee73dc1c1b00f8828ee91679590465f513e1d9ef92839dfedb901",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-6558754b-cbf4-44e6-8faf-f1c1d4b7e85a",
+        "generationId": "exec-c7a37dcf-98ce-4bdf-81a8-a7889e5b7c28",
         "modelVersion": null
       },
-      "sourceReference": "dealers/millions-auto-cars/branding/generated-master.png"
+      "sourceReference": "dealers/millions-auto-cars/branding/generated-on-light-v2-20261020-c0272b6017ec1027.png"
     },
     "onDark": {
       "path": "branding/logo-on-dark.png",
@@ -84,27 +84,27 @@
     },
     "onAccent": {
       "path": "branding/logo-on-accent.png",
-      "sha256": "32b0435e1204b17381e89c9b3c8eb23aa6f8c532df9014347559af4854204342",
+      "sha256": "ad4da09a7ac891311e4b0b929831b58ecfb6ac2a5489f36c6d697f179f9bf7b9",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-6558754b-cbf4-44e6-8faf-f1c1d4b7e85a",
+        "generationId": "exec-bf038323-0548-4271-8a37-0771f2a501ed",
         "modelVersion": null
       },
-      "sourceReference": "dealers/millions-auto-cars/branding/generated-master.png"
+      "sourceReference": "dealers/millions-auto-cars/branding/generated-on-accent-v2-20261020-45caf859371b51d1.png"
     }
   },
   "transforms": {
     "onLight": {
       "operation": "crop-transparent-padding-and-resize",
-      "sourceSha256": "ab01ffcbcee04b72e551b7bdd022423ffe77f65e22886266d6bf8a7cdad0c7db",
-      "sha256": "32b0435e1204b17381e89c9b3c8eb23aa6f8c532df9014347559af4854204342",
+      "sourceSha256": "c0272b6017ec1027d73496ec1e849d9ec4cf8df6362d8f84e596d1fe514576f6",
+      "sha256": "0eb0660ad55ee73dc1c1b00f8828ee91679590465f513e1d9ef92839dfedb901",
       "crop": {
-        "left": 69,
+        "left": 64,
         "top": 70,
-        "width": 2033,
-        "height": 595
+        "width": 2025,
+        "height": 582
       },
-      "sourcePath": "branding/generated-master.png",
+      "sourcePath": "branding/generated-on-light-v2-20261020-c0272b6017ec1027.png",
       "outputPath": "branding/logo-on-light.png"
     },
     "onDark": {
@@ -122,28 +122,28 @@
     },
     "onAccent": {
       "operation": "crop-transparent-padding-and-resize",
-      "sourceSha256": "ab01ffcbcee04b72e551b7bdd022423ffe77f65e22886266d6bf8a7cdad0c7db",
-      "sha256": "32b0435e1204b17381e89c9b3c8eb23aa6f8c532df9014347559af4854204342",
+      "sourceSha256": "45caf859371b51d1a42831bc2413c3d86ba09ff7a6a686af55a8113820cf7203",
+      "sha256": "ad4da09a7ac891311e4b0b929831b58ecfb6ac2a5489f36c6d697f179f9bf7b9",
       "crop": {
-        "left": 69,
-        "top": 70,
-        "width": 2033,
-        "height": 595
+        "left": 13,
+        "top": 58,
+        "width": 2126,
+        "height": 642
       },
-      "sourcePath": "branding/generated-master.png",
+      "sourcePath": "branding/generated-on-accent-v2-20261020-45caf859371b51d1.png",
       "outputPath": "branding/logo-on-accent.png"
     }
   },
   "supplemental": {
     "mark-on-light.webp": {
       "path": "dealer-brand/mark-on-light.webp",
-      "sha256": "dffa8cf0de10980b068ab46a667df0ed2190b58950a7aa8190598f36a90c90c6",
+      "sha256": "b5b2cfd687ce7050f92c1d0d2e420d05fb059df38c3239fbffaa17b8ab4ace6b",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-6558754b-cbf4-44e6-8faf-f1c1d4b7e85a",
+        "generationId": "exec-0d7ca55c-9151-484f-965d-c782652c52c8",
         "modelVersion": null
       },
-      "sourceReference": "dealers/millions-auto-cars/branding/generated-mark.png"
+      "sourceReference": "dealers/millions-auto-cars/branding/generated-compact-on-light-v2-20261020-f92fc41de564fea2.png"
     },
     "mark-on-dark.webp": {
       "path": "dealer-brand/mark-on-dark.webp",
@@ -157,30 +157,30 @@
     },
     "app-icon.png": {
       "path": "dealer-brand/app-icon.png",
-      "sha256": "e1967e2510edcf5d546d55093fdc3105d4791d29c42df2d4da7b21984cba1d8f",
+      "sha256": "615896cd57855e48eefe78cd9ac08a1a135bc4b0b7eb662de9c038e4caff4b3f",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-6558754b-cbf4-44e6-8faf-f1c1d4b7e85a",
+        "generationId": "exec-0d7ca55c-9151-484f-965d-c782652c52c8",
         "modelVersion": null
       },
-      "sourceReference": "dealers/millions-auto-cars/branding/generated-mark.png"
+      "sourceReference": "dealers/millions-auto-cars/branding/generated-compact-on-light-v2-20261020-f92fc41de564fea2.png"
     },
     "favicon.ico": {
       "path": "dealer-brand/favicon.ico",
-      "sha256": "b79a9f9536e24f51c036f21fd5983b112f09ee42194f5628de8828becd034bb9",
+      "sha256": "dc894cb2fa3091903b439992016f520c85c17a1c9eafae6cd8a821498a567c25",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-6558754b-cbf4-44e6-8faf-f1c1d4b7e85a",
+        "generationId": "exec-0d7ca55c-9151-484f-965d-c782652c52c8",
         "modelVersion": null
       },
-      "sourceReference": "dealers/millions-auto-cars/branding/generated-mark.png"
+      "sourceReference": "dealers/millions-auto-cars/branding/generated-compact-on-light-v2-20261020-f92fc41de564fea2.png"
     }
   },
   "markOnDarkReady": true,
   "originalArtworkPreserved": true,
   "visualReview": {
     "reviewed": true,
-    "reviewedAt": "2026-10-19T18:39:43.452Z",
+    "reviewedAt": "2026-10-20T20:47:28.4825103Z",
     "source": "branding/source.json",
     "spelling": "agent-visual-review",
     "dealerApproval": false

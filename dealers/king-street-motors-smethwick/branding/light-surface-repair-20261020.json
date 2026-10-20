@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-owned-light-surface-contrast-repair",
+  "dealer": "king-street-motors-smethwick",
+  "createdAt": "2026-10-20T20:46:14.717Z",
+  "previousPackDigest": "22610d4008b3a593165be26f2ed6837a844db1113b13838871a7b1ab17618220",
+  "previousSource": {
+    "path": "branding/source-before-light-repair-20261020-16d34a93a6414af0.json",
+    "sha256": "16d34a93a6414af0889db794d9f8231745b9dcc25bb99182e51e7d62f5f644ff"
+  },
+  "description": "Existing rounded slab-serif K in deep charcoal for white surfaces",
+  "replacements": [
+    {
+      "key": "wordmark-king-light-v2",
+      "roles": [
+        "master",
+        "onLight"
+      ],
+      "path": "branding/generated-on-light-v2-20261020-d452dc472f0e4789.png",
+      "sha256": "d452dc472f0e4789548c67aa3ae39bd3798d5fba3b8b3bfb8a8358c532133cb1",
+      "nativeDimensions": {
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-d7462833-e9f4-47a0-bf73-c5b8c3cb991d",
+        "modelVersion": null
+      },
+      "prompt": "Use case: logo-brand. Input1 is EDIT TARGET: existing King Street Motors logo. Create an actual deep-ink transparent variant for WHITE surfaces while preserving exact identity, soft rounded bold slab-serif letterforms and composition: large K at LEFT, \"KING STREET\" above \"MOTORS\" RIGHT. Text verbatim \"KING STREET MOTORS\". Keep exact spelling, spacing, geometry, natural aspect and relative sizes. Change dominant pale silver/white interiors to solid deep charcoal/near-black; over90% visible ink DARK, fine silver edge only if needed. Preserve monochrome palette; do not recolour any website UI. No thick white outlines, shadow, glow, gradient, haze, alpha speckles, badge or backing rectangle. Strong clean letters readable at120/180px on WHITE. True transparent alpha and counters. No new text or symbol.",
+      "references": [
+        {
+          "path": "branding/generated-master.png",
+          "sha256": "466320a6dd38858c13f95bfaa66cbffc5d2ddb5e98df9284ee8d658c415c6426"
+        }
+      ]
+    },
+    {
+      "key": "compact-king-light-v2",
+      "roles": [
+        "mark"
+      ],
+      "path": "branding/generated-compact-on-light-v2-20261020-44ab453f6909b05a.png",
+      "sha256": "44ab453f6909b05a15ddafd0f37098ae3d2408660839b231d5d17c39101cb6e8",
+      "nativeDimensions": {
+        "width": 1070,
+        "height": 1470
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-12579244-e4e6-482c-93d5-5651517fc752",
+        "modelVersion": null
+      },
+      "prompt": "Use case: logo-brand. Input1 is EDIT TARGET: King Street Motors compact K. Create an actual strong WHITE-SURFACE version preserving exact large soft rounded slab-serif CAPITAL K silhouette, counters, size, placement, natural compact geometry and transparent canvas. Text exact \"K\" only. Change dominant pale interior to solid deep charcoal/near-black, over90% visible ink dark, fine light edge only if needed, no bulky white outline. Retain monochrome identity. Crisp native strokes readable at32px, no stretched shapes, no added crown/icon, gradient, shadow, glow, haze, speckles or background tile. Actual alpha transparency.",
+      "references": [
+        {
+          "path": "branding/generated-mark.png",
+          "sha256": "060e48b31460bc39be7668aabbe27d9b2ae238b0a1dbdda5699a70203cc5b62c"
+        }
+      ]
+    }
+  ],
+  "visualReview": {
+    "kind": "agent-visual-review",
+    "viewedAt": "2026-10-20T20:47:28.4825103Z",
+    "wordmarkWidths": [
+      120,
+      180
+    ],
+    "compactWidths": [
+      32,
+      64
+    ],
+    "backgrounds": [
+      "#ffffff",
+      "#111113",
+      "#101820",
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ],
+    "identitySpellingReviewed": true,
+    "notes": "Viewed all four matched maintained consumer exports. KING STREET MOTORS, Million's / AUTO CARS, MOSASO and PRIME LANE / MOTORS LTD remain exact. Prime flat PL/coupe redraw is clean and legible without rejected halo; only failing light roles and Millions accent changed. Passing dark/other accent consumers remain visually and byte-identically preserved.",
+    "humanReview": false,
+    "ownerApproval": false,
+    "dealerApproval": false,
+    "nativeApproval": false,
+    "hostedApproval": false,
+    "comparison": {
+      "path": "J:/.artifacts/cars-source-sync/king-street-motors-smethwick-light-logo-before-after.png",
+      "bytes": 189956,
+      "sha256": "71a0e00a6a5eedcac4b84b03806af1634137782ef2e5f486eb7d9d2cd0bf3587",
+      "wordmarkWidths": [
+        120,
+        180
+      ],
+      "compactWidths": [
+        32,
+        64
+      ],
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#101820",
+        "#09090b",
+        "#17191c",
+        "#c40101"
+      ]
+    }
+  },
+  "originalArtworkPreserved": true,
+  "factsStockPhotosPreserved": true,
+  "filtersApplied": false,
+  "thresholdsChanged": false,
+  "providerWrites": 0
+}

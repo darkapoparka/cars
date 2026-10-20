@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "dealer": "reliable-autos",
   "reviewed": true,
-  "reviewedAt": "2026-10-19T19:22:56.608725Z",
+  "reviewedAt": "2026-10-20T20:37:08.206Z",
   "status": "independent-proposal-not-dealer-approved",
   "creationMethod": "imagegen-faithful-redraw",
   "assets": {
@@ -15,14 +15,14 @@
     "onDark": {
       "sourcePath": "branding/logo-on-dark.png",
       "publicPath": "/dealer-brand/logo-on-dark.webp",
-      "sha256": "73f40b6dbf9de20b1f5d5cba9d3ad0c666847cd805223eed60f60498b87d6d88",
-      "sourceSha256": "c60322083e410c452f600e083b95d2ea685f8d67dfdb37fd5c2409aa16c91ea2"
+      "sha256": "47a157d985e205d8e87b397be4c4ebcc70cbaadcdebb29bbdb6026b0ca4f1b6b",
+      "sourceSha256": "359452a74ad40d1978e3fa754e91d0e6bc33e19f2b900eb6ac4560e76d8530f1"
     },
     "onAccent": {
       "sourcePath": "branding/logo-on-accent.png",
       "publicPath": "/dealer-brand/logo-on-accent.webp",
-      "sha256": "73f40b6dbf9de20b1f5d5cba9d3ad0c666847cd805223eed60f60498b87d6d88",
-      "sourceSha256": "c60322083e410c452f600e083b95d2ea685f8d67dfdb37fd5c2409aa16c91ea2"
+      "sha256": "47a157d985e205d8e87b397be4c4ebcc70cbaadcdebb29bbdb6026b0ca4f1b6b",
+      "sourceSha256": "359452a74ad40d1978e3fa754e91d0e6bc33e19f2b900eb6ac4560e76d8530f1"
     }
   },
   "surfaceBackgrounds": {
@@ -50,16 +50,16 @@
   },
   "mark": {
     "path": "branding/logo-mark.png",
-    "sha256": "efe668b99dcd0bacad0cefeb253e5567ea5c68276f8e40954494de1c4944cb08",
+    "sha256": "c2f790fd98cc5b87ec3293341c62990eb77615b2368c3eddcfc1d20eb94aba93",
     "generation": {
       "tool": "image_gen.imagegen",
-      "generationId": "exec-c68072d8-92b9-433f-9d54-d662571a0e80",
+      "generationId": "exec-a65f8912-9d1c-4f2d-b45d-a79722ffe192",
       "modelVersion": null
     }
   },
   "favicon": {
     "path": "dealer-brand/favicon.ico",
-    "sha256": "8f0f154d56c28edc9cae5d968ad26663cd43f9e9c7040c48edba642f754f38d4"
+    "sha256": "55345ded000c5587dbc18393965554026df1151e7a7cd05e7c31bccc2044f290"
   },
   "surfaces": {
     "onLight": {
@@ -74,23 +74,23 @@
     },
     "onDark": {
       "path": "branding/logo-on-dark.png",
-      "sha256": "c60322083e410c452f600e083b95d2ea685f8d67dfdb37fd5c2409aa16c91ea2",
+      "sha256": "359452a74ad40d1978e3fa754e91d0e6bc33e19f2b900eb6ac4560e76d8530f1",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-f91db7f9-70d3-4c6b-8bd0-42c4af406ad5",
+        "generationId": "exec-0ea7031e-c36c-4770-abc1-5a97270dcc31",
         "modelVersion": null
       },
-      "sourceReference": "dealers/reliable-autos/branding/generated-on-dark.png"
+      "sourceReference": "dealers/reliable-autos/branding/generated-on-dark-v2-20261020.png"
     },
     "onAccent": {
       "path": "branding/logo-on-accent.png",
-      "sha256": "c60322083e410c452f600e083b95d2ea685f8d67dfdb37fd5c2409aa16c91ea2",
+      "sha256": "359452a74ad40d1978e3fa754e91d0e6bc33e19f2b900eb6ac4560e76d8530f1",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-f91db7f9-70d3-4c6b-8bd0-42c4af406ad5",
+        "generationId": "exec-0ea7031e-c36c-4770-abc1-5a97270dcc31",
         "modelVersion": null
       },
-      "sourceReference": "dealers/reliable-autos/branding/generated-on-dark.png"
+      "sourceReference": "dealers/reliable-autos/branding/generated-on-dark-v2-20261020.png"
     }
   },
   "transforms": {
@@ -109,41 +109,41 @@
     },
     "onDark": {
       "operation": "crop-transparent-padding-and-resize",
-      "sourceSha256": "34b1fb1da06aa62e34bfe8c4f645d237fc769903a326cbee281362a36d5e461c",
-      "sha256": "c60322083e410c452f600e083b95d2ea685f8d67dfdb37fd5c2409aa16c91ea2",
+      "sourceSha256": "bcd31f84656235c66d2b658c57bbf320cd2cc9ce4671ee87fc0cc2956a380575",
+      "sha256": "359452a74ad40d1978e3fa754e91d0e6bc33e19f2b900eb6ac4560e76d8530f1",
       "crop": {
         "left": 0,
-        "top": 135,
-        "width": 2169,
-        "height": 443
+        "top": 144,
+        "width": 2162,
+        "height": 420
       },
-      "sourcePath": "branding/generated-on-dark.png",
+      "sourcePath": "branding/generated-on-dark-v2-20261020.png",
       "outputPath": "branding/logo-on-dark.png"
     },
     "onAccent": {
       "operation": "crop-transparent-padding-and-resize",
-      "sourceSha256": "34b1fb1da06aa62e34bfe8c4f645d237fc769903a326cbee281362a36d5e461c",
-      "sha256": "c60322083e410c452f600e083b95d2ea685f8d67dfdb37fd5c2409aa16c91ea2",
+      "sourceSha256": "bcd31f84656235c66d2b658c57bbf320cd2cc9ce4671ee87fc0cc2956a380575",
+      "sha256": "359452a74ad40d1978e3fa754e91d0e6bc33e19f2b900eb6ac4560e76d8530f1",
       "crop": {
         "left": 0,
-        "top": 135,
-        "width": 2169,
-        "height": 443
+        "top": 144,
+        "width": 2162,
+        "height": 420
       },
-      "sourcePath": "branding/generated-on-dark.png",
+      "sourcePath": "branding/generated-on-dark-v2-20261020.png",
       "outputPath": "branding/logo-on-accent.png"
     }
   },
   "supplemental": {
     "mark-on-light.webp": {
       "path": "dealer-brand/mark-on-light.webp",
-      "sha256": "b39d62556aa99c1412a1c5d3eca6e1f944697f9c16347a0432324ed320448439",
+      "sha256": "54e2c6b8097fb7a10426d8dd208b23cf28e11430d7a52fbac687cf9b541ca040",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-c68072d8-92b9-433f-9d54-d662571a0e80",
+        "generationId": "exec-a65f8912-9d1c-4f2d-b45d-a79722ffe192",
         "modelVersion": null
       },
-      "sourceReference": "dealers/reliable-autos/branding/generated-mark.png"
+      "sourceReference": "dealers/reliable-autos/branding/generated-mark-on-light-v2-20261020.png"
     },
     "mark-on-dark.webp": {
       "path": "dealer-brand/mark-on-dark.webp",
@@ -157,30 +157,30 @@
     },
     "app-icon.png": {
       "path": "dealer-brand/app-icon.png",
-      "sha256": "efe668b99dcd0bacad0cefeb253e5567ea5c68276f8e40954494de1c4944cb08",
+      "sha256": "c2f790fd98cc5b87ec3293341c62990eb77615b2368c3eddcfc1d20eb94aba93",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-c68072d8-92b9-433f-9d54-d662571a0e80",
+        "generationId": "exec-a65f8912-9d1c-4f2d-b45d-a79722ffe192",
         "modelVersion": null
       },
-      "sourceReference": "dealers/reliable-autos/branding/generated-mark.png"
+      "sourceReference": "dealers/reliable-autos/branding/generated-mark-on-light-v2-20261020.png"
     },
     "favicon.ico": {
       "path": "dealer-brand/favicon.ico",
-      "sha256": "8f0f154d56c28edc9cae5d968ad26663cd43f9e9c7040c48edba642f754f38d4",
+      "sha256": "55345ded000c5587dbc18393965554026df1151e7a7cd05e7c31bccc2044f290",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-c68072d8-92b9-433f-9d54-d662571a0e80",
+        "generationId": "exec-a65f8912-9d1c-4f2d-b45d-a79722ffe192",
         "modelVersion": null
       },
-      "sourceReference": "dealers/reliable-autos/branding/generated-mark.png"
+      "sourceReference": "dealers/reliable-autos/branding/generated-mark-on-light-v2-20261020.png"
     }
   },
   "markOnDarkReady": true,
   "originalArtworkPreserved": true,
   "visualReview": {
     "reviewed": true,
-    "reviewedAt": "2026-10-19T19:22:56.608725Z",
+    "reviewedAt": "2026-10-20T20:37:08.206Z",
     "source": "branding/source.json",
     "spelling": "agent-visual-review",
     "dealerApproval": false

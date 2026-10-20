@@ -2,15 +2,15 @@
   "schemaVersion": 1,
   "dealer": "king-street-motors-smethwick",
   "reviewed": true,
-  "reviewedAt": "2026-10-19T18:39:55.953Z",
+  "reviewedAt": "2026-10-20T20:47:28.4825103Z",
   "status": "independent-proposal-not-dealer-approved",
   "creationMethod": "imagegen-redraw",
   "assets": {
     "onLight": {
       "sourcePath": "branding/logo-on-light.png",
       "publicPath": "/dealer-brand/logo-on-light.webp",
-      "sha256": "1e169def019fb98185433ea03227c950b26da741165f2d431b5a05d4a497a904",
-      "sourceSha256": "2f534187821873d9377a2b9bf69a5c4a79d565d410ebf4bb8cbcdafc1b2d6c96"
+      "sha256": "1dd2909e4b14e3f3c9b11d470ce7c9c2356ef635a8999db7ba86a7be76ee0082",
+      "sourceSha256": "61b921ae1bbddf491ea42d042b6f83e90cae26deef7d2a67857484de21be40e0"
     },
     "onDark": {
       "sourcePath": "branding/logo-on-dark.png",
@@ -41,36 +41,36 @@
   },
   "master": {
     "path": "branding/logo-master.png",
-    "sha256": "2f534187821873d9377a2b9bf69a5c4a79d565d410ebf4bb8cbcdafc1b2d6c96",
+    "sha256": "61b921ae1bbddf491ea42d042b6f83e90cae26deef7d2a67857484de21be40e0",
     "generation": {
       "tool": "image_gen.imagegen",
-      "generationId": "exec-6dcf534e-f0df-4db3-818f-b8c9ce0d861e",
+      "generationId": "exec-d7462833-e9f4-47a0-bf73-c5b8c3cb991d",
       "modelVersion": null
     }
   },
   "mark": {
     "path": "branding/logo-mark.png",
-    "sha256": "41aa65379cc8249cc2827cd41d84e93ab46e999954ba39b7544dac7e20332f6b",
+    "sha256": "8950aea791774febbb24c50a45c72c8428ddf68052378419220f7466836d7ea8",
     "generation": {
       "tool": "image_gen.imagegen",
-      "generationId": "exec-6dcf534e-f0df-4db3-818f-b8c9ce0d861e",
+      "generationId": "exec-12579244-e4e6-482c-93d5-5651517fc752",
       "modelVersion": null
     }
   },
   "favicon": {
     "path": "dealer-brand/favicon.ico",
-    "sha256": "faa26aefd887350e55a9ab5e497544f6b020bdf271b341e40fe40664fae0f9d2"
+    "sha256": "e7ffeb8c3da4a71446e15ae4c616db101fc4809ac4598b57a39c0e9ae51f9206"
   },
   "surfaces": {
     "onLight": {
       "path": "branding/logo-on-light.png",
-      "sha256": "2f534187821873d9377a2b9bf69a5c4a79d565d410ebf4bb8cbcdafc1b2d6c96",
+      "sha256": "61b921ae1bbddf491ea42d042b6f83e90cae26deef7d2a67857484de21be40e0",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-6dcf534e-f0df-4db3-818f-b8c9ce0d861e",
+        "generationId": "exec-d7462833-e9f4-47a0-bf73-c5b8c3cb991d",
         "modelVersion": null
       },
-      "sourceReference": "dealers/king-street-motors-smethwick/branding/generated-master.png"
+      "sourceReference": "dealers/king-street-motors-smethwick/branding/generated-on-light-v2-20261020-d452dc472f0e4789.png"
     },
     "onDark": {
       "path": "branding/logo-on-dark.png",
@@ -96,15 +96,15 @@
   "transforms": {
     "onLight": {
       "operation": "crop-transparent-padding-and-resize",
-      "sourceSha256": "466320a6dd38858c13f95bfaa66cbffc5d2ddb5e98df9284ee8d658c415c6426",
-      "sha256": "2f534187821873d9377a2b9bf69a5c4a79d565d410ebf4bb8cbcdafc1b2d6c96",
+      "sourceSha256": "d452dc472f0e4789548c67aa3ae39bd3798d5fba3b8b3bfb8a8358c532133cb1",
+      "sha256": "61b921ae1bbddf491ea42d042b6f83e90cae26deef7d2a67857484de21be40e0",
       "crop": {
-        "left": 10,
-        "top": 125,
-        "width": 2158,
-        "height": 485
+        "left": 17,
+        "top": 129,
+        "width": 2146,
+        "height": 473
       },
-      "sourcePath": "branding/generated-master.png",
+      "sourcePath": "branding/generated-on-light-v2-20261020-d452dc472f0e4789.png",
       "outputPath": "branding/logo-on-light.png"
     },
     "onDark": {
@@ -137,13 +137,13 @@
   "supplemental": {
     "mark-on-light.webp": {
       "path": "dealer-brand/mark-on-light.webp",
-      "sha256": "65a641d5c33d261054f4605d18fcf218fd8235a85402e67a0bcdfc943137a77b",
+      "sha256": "ab7179c1d735771ec574f8482892f07efc04078bc70cfa1465419d48c5118790",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-6dcf534e-f0df-4db3-818f-b8c9ce0d861e",
+        "generationId": "exec-12579244-e4e6-482c-93d5-5651517fc752",
         "modelVersion": null
       },
-      "sourceReference": "dealers/king-street-motors-smethwick/branding/generated-mark.png"
+      "sourceReference": "dealers/king-street-motors-smethwick/branding/generated-compact-on-light-v2-20261020-44ab453f6909b05a.png"
     },
     "mark-on-dark.webp": {
       "path": "dealer-brand/mark-on-dark.webp",
@@ -157,30 +157,30 @@
     },
     "app-icon.png": {
       "path": "dealer-brand/app-icon.png",
-      "sha256": "41aa65379cc8249cc2827cd41d84e93ab46e999954ba39b7544dac7e20332f6b",
+      "sha256": "8950aea791774febbb24c50a45c72c8428ddf68052378419220f7466836d7ea8",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-6dcf534e-f0df-4db3-818f-b8c9ce0d861e",
+        "generationId": "exec-12579244-e4e6-482c-93d5-5651517fc752",
         "modelVersion": null
       },
-      "sourceReference": "dealers/king-street-motors-smethwick/branding/generated-mark.png"
+      "sourceReference": "dealers/king-street-motors-smethwick/branding/generated-compact-on-light-v2-20261020-44ab453f6909b05a.png"
     },
     "favicon.ico": {
       "path": "dealer-brand/favicon.ico",
-      "sha256": "faa26aefd887350e55a9ab5e497544f6b020bdf271b341e40fe40664fae0f9d2",
+      "sha256": "e7ffeb8c3da4a71446e15ae4c616db101fc4809ac4598b57a39c0e9ae51f9206",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-6dcf534e-f0df-4db3-818f-b8c9ce0d861e",
+        "generationId": "exec-12579244-e4e6-482c-93d5-5651517fc752",
         "modelVersion": null
       },
-      "sourceReference": "dealers/king-street-motors-smethwick/branding/generated-mark.png"
+      "sourceReference": "dealers/king-street-motors-smethwick/branding/generated-compact-on-light-v2-20261020-44ab453f6909b05a.png"
     }
   },
   "markOnDarkReady": true,
   "originalArtworkPreserved": true,
   "visualReview": {
     "reviewed": true,
-    "reviewedAt": "2026-10-19T18:39:55.953Z",
+    "reviewedAt": "2026-10-20T20:47:28.4825103Z",
     "source": "branding/source.json",
     "spelling": "agent-visual-review",
     "dealerApproval": false

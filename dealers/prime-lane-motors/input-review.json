@@ -3,7 +3,7 @@
   "kind": "cars-dealer-pack-input-review",
   "dealer": "prime-lane-motors",
   "reviewed": true,
-  "reviewedAt": "2026-10-20T19:19:35.121Z",
+  "reviewedAt": "2026-10-20T20:50:04.547Z",
   "review": {
     "kind": "automated",
     "humanReview": false,
@@ -42,6 +42,10 @@
       "sha256": "34c48dbcbc1175c5f31dc13cc96bb79757a86c7db0b6f7830c1f60b2bf8c1dea"
     },
     {
+      "path": "branding/generated-compact-on-light-v2-20261020-8fe821db390f0616.png",
+      "sha256": "8fe821db390f0616f06eb0477a0af0785a935964338b756b08dc1f5f3d6073e5"
+    },
+    {
       "path": "branding/generated-mark.png",
       "sha256": "3daf2eded9c36d8114c085b3e63cdb0946af9bea0b96e3334fc380546bcac77a"
     },
@@ -50,20 +54,32 @@
       "sha256": "7c5ecd3419df4121ab7a9d0c5337de9cca9661862e79250b228e8aca5fffc9fd"
     },
     {
+      "path": "branding/generated-on-light-v2-20261020-9b7edeb40a4c7426.png",
+      "sha256": "9b7edeb40a4c7426f30697f278d41dc4c29f6cf9a4924632f10ea003457a472b"
+    },
+    {
+      "path": "branding/light-surface-repair-20261020.json",
+      "sha256": "23fc7fc786930daa09e1411bc20cc8f2aae7b5ca3c1cd0072410bba853037947"
+    },
+    {
       "path": "branding/logo-contract.json",
-      "sha256": "025c7b8f09d5dfcaa00cb69dcbe44a68785cc168905452b5beaeb06b9ae92635"
+      "sha256": "39d8fa8b2b383a9e2a69622c92e705af46c042f037e0e9e4449a5ec1d6e027d5"
     },
     {
       "path": "branding/logo-recipe.json",
-      "sha256": "9dff47024cf7a39336f9988e7ae43c12f38624c77b77eec5d54b499433910af9"
+      "sha256": "50e6b016d21746a7c557901bfc46b6a2efb27dbaccaf283be3c55fb40787de82"
     },
     {
       "path": "branding/observed-logo.png",
       "sha256": "08f6f48a143a8966d0d7e844dc2ec816d818234c0881d0077da59f189fe9467c"
     },
     {
-      "path": "branding/source.json",
+      "path": "branding/source-before-light-repair-20261020-1eaa57b4e2acb567.json",
       "sha256": "1eaa57b4e2acb567b9c1f6390cb2e859fd233f5fab8c3a8c0d38a40799946265"
+    },
+    {
+      "path": "branding/source.json",
+      "sha256": "d7e6efa9522e5addf533b68102358c0a610e8a3dc084c70386c6f707716d5a53"
     },
     {
       "path": "business-facts.json",
@@ -71,7 +87,7 @@
     },
     {
       "path": "copy-review.json",
-      "sha256": "ccd08408d80202b12ef71bd04ae7f23c668df610f62ee606b224f08e5cbc7b9f"
+      "sha256": "4487d923b9bc42a42f2cf5d294b99d196773f6a6d038fae3aca9645102007263"
     },
     {
       "path": "dealer-stock/public-1.jpg",
@@ -79,11 +95,11 @@
     },
     {
       "path": "dealer.json",
-      "sha256": "9fe95c3198840deeaee71c3ec6f2fccd406d6b91cf639165f35f435f7c901390"
+      "sha256": "13bdf78d08a438cf91cd24a0d4a380f5901ce59b024539f561d63b6d07fff493"
     },
     {
       "path": "identity-review.json",
-      "sha256": "9153d0091d90827d6147cc1e02b62f6a8c2313102e1aa08dfcbefd2b5fd96e55"
+      "sha256": "5c200022f2a47db1abc185de772a08f9aae8c677f59592427edcfe17c414c5e4"
     },
     {
       "path": "locale.json",
@@ -95,7 +111,7 @@
     },
     {
       "path": "qualification.json",
-      "sha256": "aa87e1ed36acaf8a15910e9d4eb182037c7ea553aeb4a3a0716c7522a0ff3f10"
+      "sha256": "5434a6c9ffbb4ab20aa3a5ffb9477acff30ddcb39993c959d7e45a3417b9201b"
     },
     {
       "path": "source-evidence.json",

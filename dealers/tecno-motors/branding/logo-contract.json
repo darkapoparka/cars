@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "dealer": "tecno-motors",
   "reviewed": true,
-  "reviewedAt": "2026-10-19T18:56:40.320128Z",
+  "reviewedAt": "2026-10-20T20:36:44.247Z",
   "status": "independent-proposal-not-dealer-approved",
   "creationMethod": "imagegen-proposal",
   "assets": {
@@ -21,8 +21,8 @@
     "onAccent": {
       "sourcePath": "branding/logo-on-accent.png",
       "publicPath": "/dealer-brand/logo-on-accent.webp",
-      "sha256": "fa7222a9fe8fead222040cc37340c4e5007dc4401c4a8b12f96c3e1c3cc2abc8",
-      "sourceSha256": "e39474778db5a074e9e8af808dbf393211738aec0b96410133ea995667bb3a72"
+      "sha256": "861b35132b6e628a4883997f88515255584ddb9b54543ab04f5ef39434407af8",
+      "sourceSha256": "c2985ddb0f4412d25f5ff8e08de16d52fef582fc8cdb787fbc48dfa026f038e7"
     }
   },
   "surfaceBackgrounds": {
@@ -84,13 +84,13 @@
     },
     "onAccent": {
       "path": "branding/logo-on-accent.png",
-      "sha256": "e39474778db5a074e9e8af808dbf393211738aec0b96410133ea995667bb3a72",
+      "sha256": "c2985ddb0f4412d25f5ff8e08de16d52fef582fc8cdb787fbc48dfa026f038e7",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-2426b99f-6dc4-47ae-b5b5-d748ee7a7373",
+        "generationId": "exec-a956f39d-7515-424a-b853-9b8ce445c736",
         "modelVersion": null
       },
-      "sourceReference": "dealers/tecno-motors/branding/generated-on-dark.png"
+      "sourceReference": "dealers/tecno-motors/branding/generated-on-accent-v2-20261020.png"
     }
   },
   "transforms": {
@@ -122,15 +122,15 @@
     },
     "onAccent": {
       "operation": "crop-transparent-padding-and-resize",
-      "sourceSha256": "417148b5f08497c3a46f017ebccc6abde759b4186eb03f96107e91a88e356c4b",
-      "sha256": "e39474778db5a074e9e8af808dbf393211738aec0b96410133ea995667bb3a72",
+      "sourceSha256": "9202c9962b3b4dba86974a6f339424a9a7992290ef0522f35fbddb890643692a",
+      "sha256": "c2985ddb0f4412d25f5ff8e08de16d52fef582fc8cdb787fbc48dfa026f038e7",
       "crop": {
         "left": 0,
-        "top": 91,
+        "top": 111,
         "width": 1983,
-        "height": 589
+        "height": 552
       },
-      "sourcePath": "branding/generated-on-dark.png",
+      "sourcePath": "branding/generated-on-accent-v2-20261020.png",
       "outputPath": "branding/logo-on-accent.png"
     }
   },
@@ -147,13 +147,13 @@
     },
     "mark-on-dark.webp": {
       "path": "dealer-brand/mark-on-dark.webp",
-      "sha256": "bb31479f26751b0021e5d51e1e6764e2316ab5935ccd4d8622352ea5e703e7b2",
+      "sha256": "54d1569b0d22dc0ace761ea8502e52c0ef6ce89d5858afd87ecd2be911d57dc4",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-34cdbd03-6383-4bda-a332-6bc9facc62d2",
+        "generationId": "exec-e5d24993-6edf-4d2e-9e55-1f6229b28f25",
         "modelVersion": null
       },
-      "sourceReference": "dealers/tecno-motors/branding/generated-mark.png"
+      "sourceReference": "dealers/tecno-motors/branding/generated-mark-on-dark-v2-20261020.png"
     },
     "app-icon.png": {
       "path": "dealer-brand/app-icon.png",
@@ -180,17 +180,17 @@
   "originalArtworkPreserved": true,
   "visualReview": {
     "reviewed": true,
-    "reviewedAt": "2026-10-19T18:56:40.320128Z",
+    "reviewedAt": "2026-10-20T20:36:44.247Z",
     "source": "branding/source.json",
     "spelling": "agent-visual-review",
     "dealerApproval": false
   },
   "markOnDark": {
     "path": "branding/logo-mark-on-dark.png",
-    "sha256": "56420cb35bb2e16ce878edf9a6b1b72a3e62e150924148d2a702714a6fe49a75",
+    "sha256": "6f9684069d9cd494ec20ab4a08b2883bbcb82f3ed7b64cd6da28915c5a3693ea",
     "generation": {
       "tool": "image_gen.imagegen",
-      "generationId": "exec-34cdbd03-6383-4bda-a332-6bc9facc62d2",
+      "generationId": "exec-e5d24993-6edf-4d2e-9e55-1f6229b28f25",
       "modelVersion": null
     }
   }

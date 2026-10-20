@@ -3,7 +3,7 @@
   "kind": "cars-dealer-pack-input-review",
   "dealer": "king-street-motors-smethwick",
   "reviewed": true,
-  "reviewedAt": "2026-10-20T19:15:38.221Z",
+  "reviewedAt": "2026-10-20T20:52:15.084Z",
   "review": {
     "kind": "automated",
     "humanReview": false,
@@ -42,6 +42,10 @@
       "sha256": "e5cf66d591103f3c4ee5934e4e628489d2afc193ad29d172c479b435d0d286b0"
     },
     {
+      "path": "branding/generated-compact-on-light-v2-20261020-44ab453f6909b05a.png",
+      "sha256": "44ab453f6909b05a15ddafd0f37098ae3d2408660839b231d5d17c39101cb6e8"
+    },
+    {
       "path": "branding/generated-mark.png",
       "sha256": "060e48b31460bc39be7668aabbe27d9b2ae238b0a1dbdda5699a70203cc5b62c"
     },
@@ -50,20 +54,32 @@
       "sha256": "466320a6dd38858c13f95bfaa66cbffc5d2ddb5e98df9284ee8d658c415c6426"
     },
     {
+      "path": "branding/generated-on-light-v2-20261020-d452dc472f0e4789.png",
+      "sha256": "d452dc472f0e4789548c67aa3ae39bd3798d5fba3b8b3bfb8a8358c532133cb1"
+    },
+    {
+      "path": "branding/light-surface-repair-20261020.json",
+      "sha256": "44529d28fbdea9afd7f0f2a99157eba3aac73f504046b25ba5ade554d94bf3cb"
+    },
+    {
       "path": "branding/logo-contract.json",
-      "sha256": "f5e2a43dc0448784c75e0e75f23d88daaf644be71fbb644511727160e432baf8"
+      "sha256": "aed963befc2444a090a01999258112faf701d4d97d99a50ea68c4c71eeb16169"
     },
     {
       "path": "branding/logo-recipe.json",
-      "sha256": "e750779dc5a38876d9a0b496974a59651aa84348f87880eba51ca38997543a72"
+      "sha256": "c41dc5a9c23d6b31586f4499bdfe54a3686093b4240e2b2780e7203c60385f29"
     },
     {
       "path": "branding/observed-logo.gif",
       "sha256": "259e5c0642ee457afd13276c3742f5a3a210126d3e3c459bf638c701cf8b5257"
     },
     {
-      "path": "branding/source.json",
+      "path": "branding/source-before-light-repair-20261020-16d34a93a6414af0.json",
       "sha256": "16d34a93a6414af0889db794d9f8231745b9dcc25bb99182e51e7d62f5f644ff"
+    },
+    {
+      "path": "branding/source.json",
+      "sha256": "d0927716e56c930dfe30ed2d7a5a378e32d3561dcf1849916b37f6ea1f9fb5f2"
     },
     {
       "path": "business-facts.json",
@@ -71,7 +87,7 @@
     },
     {
       "path": "copy-review.json",
-      "sha256": "c0bf8b570f56d7785b38fd022810ae86caa4fdf024b81db5c1629264c7b906a6"
+      "sha256": "60e62f45fb68ba3daf2ec57c0865bc7bdb6f6b65facb75fcbf7ea2794361e3a1"
     },
     {
       "path": "dealer-stock/public-1.jpg",
@@ -87,11 +103,11 @@
     },
     {
       "path": "dealer.json",
-      "sha256": "6d1a360439cc74f8e2dd621edea346dd3c275fa2d7b028fe01b211007ac1062e"
+      "sha256": "6e443ae6f1f7755fa088b873ac802515307ef94d8a2d15f8a76f20cc46b5c5b5"
     },
     {
       "path": "identity-review.json",
-      "sha256": "7b5c589f389140ca4e315570058c16a70ff542ce49aa40a420953a45f379f3bc"
+      "sha256": "243ca99287861598a03f5b72f705dbaa50788f6e93d6996c9089a3a105857132"
     },
     {
       "path": "locale.json",
@@ -103,7 +119,7 @@
     },
     {
       "path": "qualification.json",
-      "sha256": "d7d6b1c8224ddce8debc97b37b32fe19a0ec7731badfcb68ba60ba0f2a8ff22c"
+      "sha256": "161b0c4fc2bfdd693c21223255e5f7e8f25829e5a8e7c0ffd7fbcf758e492e58"
     },
     {
       "path": "source-evidence.json",

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "dealer": "dms-cars-peterborough",
   "reviewed": true,
-  "reviewedAt": "2026-10-19T18:56:38.260045Z",
+  "reviewedAt": "2026-10-20T20:36:57.499Z",
   "status": "independent-proposal-not-dealer-approved",
   "creationMethod": "imagegen-proposal",
   "assets": {
@@ -21,8 +21,8 @@
     "onAccent": {
       "sourcePath": "branding/logo-on-accent.png",
       "publicPath": "/dealer-brand/logo-on-accent.webp",
-      "sha256": "2998b3984229bd90cba96c581fd96de3af2ed1118d69385dbec7ea3de087bdcf",
-      "sourceSha256": "205dd2bc4d3dbf9df0079d655f3d0b76924db1ec288d6b200252ad33c753171a"
+      "sha256": "35179a8a3d46fdb74ce502e20d946576b457aa239f654bc355582b402f2c360a",
+      "sourceSha256": "e4c762fbd645565277d4bd857cc8e07f7fcaeaa61d267dd100b445f1169432fd"
     }
   },
   "surfaceBackgrounds": {
@@ -50,16 +50,16 @@
   },
   "mark": {
     "path": "branding/logo-mark.png",
-    "sha256": "b80dadc8a3cab9a2b24d4da09131b0c18f99aaf70aeb1e2618de5df1c9c2c5cc",
+    "sha256": "6b9f784778651a114410a685b3971c1bb8f8f1f5f0b36918e446bde63642574f",
     "generation": {
       "tool": "image_gen.imagegen",
-      "generationId": "exec-ed68ef8f-627c-44ca-9d4f-3eae38c75c47",
+      "generationId": "exec-2d309274-ac6e-4d01-aa10-c0476f13edcf",
       "modelVersion": null
     }
   },
   "favicon": {
     "path": "dealer-brand/favicon.ico",
-    "sha256": "3979c7a49857427259a97f7354fc06b0173216d60a7161f72e0c5148da13bc50"
+    "sha256": "20e31eafd7b0d1009e1db6dbb10f9eca4469cbc0a566c915ac404dd8be9b99ca"
   },
   "surfaces": {
     "onLight": {
@@ -84,13 +84,13 @@
     },
     "onAccent": {
       "path": "branding/logo-on-accent.png",
-      "sha256": "205dd2bc4d3dbf9df0079d655f3d0b76924db1ec288d6b200252ad33c753171a",
+      "sha256": "e4c762fbd645565277d4bd857cc8e07f7fcaeaa61d267dd100b445f1169432fd",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-4d1105b0-0b20-41ab-8827-d67845708934",
+        "generationId": "exec-e29a397e-731e-46ad-9ac2-fb133684c2e8",
         "modelVersion": null
       },
-      "sourceReference": "dealers/dms-cars-peterborough/branding/generated-on-dark.png"
+      "sourceReference": "dealers/dms-cars-peterborough/branding/generated-on-accent-v2-20261020.png"
     }
   },
   "transforms": {
@@ -122,28 +122,28 @@
     },
     "onAccent": {
       "operation": "crop-transparent-padding-and-resize",
-      "sourceSha256": "0d42ac1e07504775321562cc166b96c881b145b8b51c1048089f09caca23f53d",
-      "sha256": "205dd2bc4d3dbf9df0079d655f3d0b76924db1ec288d6b200252ad33c753171a",
+      "sourceSha256": "8c1228fa3bac11b6958ca528e0af0940acd5d76e7d516f2172b90ba6df837a0c",
+      "sha256": "e4c762fbd645565277d4bd857cc8e07f7fcaeaa61d267dd100b445f1169432fd",
       "crop": {
         "left": 13,
-        "top": 162,
-        "width": 2148,
-        "height": 371
+        "top": 159,
+        "width": 2152,
+        "height": 373
       },
-      "sourcePath": "branding/generated-on-dark.png",
+      "sourcePath": "branding/generated-on-accent-v2-20261020.png",
       "outputPath": "branding/logo-on-accent.png"
     }
   },
   "supplemental": {
     "mark-on-light.webp": {
       "path": "dealer-brand/mark-on-light.webp",
-      "sha256": "5f4710f861cfa2f8805b56947aa730cdc475c579d79550518ef7fa47a16af524",
+      "sha256": "2d02d14998ba11c3d5244ecbc1df90a87c317748ace5beb14575ea818ae1386b",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-ed68ef8f-627c-44ca-9d4f-3eae38c75c47",
+        "generationId": "exec-2d309274-ac6e-4d01-aa10-c0476f13edcf",
         "modelVersion": null
       },
-      "sourceReference": "dealers/dms-cars-peterborough/branding/generated-mark.png"
+      "sourceReference": "dealers/dms-cars-peterborough/branding/generated-mark-on-light-v2-20261020.png"
     },
     "mark-on-dark.webp": {
       "path": "dealer-brand/mark-on-dark.webp",
@@ -157,30 +157,30 @@
     },
     "app-icon.png": {
       "path": "dealer-brand/app-icon.png",
-      "sha256": "b80dadc8a3cab9a2b24d4da09131b0c18f99aaf70aeb1e2618de5df1c9c2c5cc",
+      "sha256": "6b9f784778651a114410a685b3971c1bb8f8f1f5f0b36918e446bde63642574f",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-ed68ef8f-627c-44ca-9d4f-3eae38c75c47",
+        "generationId": "exec-2d309274-ac6e-4d01-aa10-c0476f13edcf",
         "modelVersion": null
       },
-      "sourceReference": "dealers/dms-cars-peterborough/branding/generated-mark.png"
+      "sourceReference": "dealers/dms-cars-peterborough/branding/generated-mark-on-light-v2-20261020.png"
     },
     "favicon.ico": {
       "path": "dealer-brand/favicon.ico",
-      "sha256": "3979c7a49857427259a97f7354fc06b0173216d60a7161f72e0c5148da13bc50",
+      "sha256": "20e31eafd7b0d1009e1db6dbb10f9eca4469cbc0a566c915ac404dd8be9b99ca",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-ed68ef8f-627c-44ca-9d4f-3eae38c75c47",
+        "generationId": "exec-2d309274-ac6e-4d01-aa10-c0476f13edcf",
         "modelVersion": null
       },
-      "sourceReference": "dealers/dms-cars-peterborough/branding/generated-mark.png"
+      "sourceReference": "dealers/dms-cars-peterborough/branding/generated-mark-on-light-v2-20261020.png"
     }
   },
   "markOnDarkReady": true,
   "originalArtworkPreserved": true,
   "visualReview": {
     "reviewed": true,
-    "reviewedAt": "2026-10-19T18:56:38.260045Z",
+    "reviewedAt": "2026-10-20T20:36:57.499Z",
     "source": "branding/source.json",
     "spelling": "agent-visual-review",
     "dealerApproval": false

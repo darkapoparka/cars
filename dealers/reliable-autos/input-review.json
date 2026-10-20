@@ -3,7 +3,7 @@
   "kind": "cars-dealer-pack-input-review",
   "dealer": "reliable-autos",
   "reviewed": true,
-  "reviewedAt": "2026-10-20T19:19:35.536Z",
+  "reviewedAt": "2026-10-20T20:37:10.409Z",
   "review": {
     "kind": "automated",
     "humanReview": false,
@@ -46,12 +46,20 @@
       "sha256": "919346d833fc85dabf2b92b56d9f953a572a9f7da5f9130ff0f2353594383553"
     },
     {
+      "path": "branding/generated-mark-on-light-v2-20261020.png",
+      "sha256": "3dc4dd435ac1cf52daea0ca5211aec0689967d82ed9dae671b06dd23fdb81524"
+    },
+    {
       "path": "branding/generated-mark.png",
       "sha256": "4ce4abb660ebef4864d54f9a4b37332db8274a6fa38ff79f0b44b72645398911"
     },
     {
       "path": "branding/generated-master.png",
       "sha256": "0e5f94f39fc49195800390a34bf4e2fe99562604534cc937b11d05d5b622323d"
+    },
+    {
+      "path": "branding/generated-on-dark-v2-20261020.png",
+      "sha256": "bcd31f84656235c66d2b658c57bbf320cd2cc9ce4671ee87fc0cc2956a380575"
     },
     {
       "path": "branding/generated-on-dark.png",
@@ -63,19 +71,27 @@
     },
     {
       "path": "branding/logo-contract.json",
-      "sha256": "f44b0fe54678b35959d45717eff04ffc07eb8d1b49e70ac432c6a12416dd710f"
+      "sha256": "ec70097cf9a20b8ebd629e572b9d08dc9c00835211f256a118e57fe09999d929"
     },
     {
       "path": "branding/logo-recipe.json",
-      "sha256": "68b8ad238957a1789a18ba964da53205b22047bdd4d7dce816c2bd597760b5e6"
+      "sha256": "cae3da695b8fd75a903fb24b1c7b85e27ea6ce6457a9f7ff8d42508865fdacca"
     },
     {
       "path": "branding/original-logo.gif",
       "sha256": "3d2c697bbeef5625063e49036c8a7a7e9b1957dabc165e35005481b77b1e90d2"
     },
     {
-      "path": "branding/source.json",
+      "path": "branding/second-held-logo-repair-20261020.json",
+      "sha256": "ccfeffff51413b1031ac75ee5acb61e7486208673224cd6e4157e9059173a8d0"
+    },
+    {
+      "path": "branding/source-before-second-held-logo-repair-20261020-cdacd634751ecfbb.json",
       "sha256": "cdacd634751ecfbb1f8b5b1c1e39fa71de9cd6644f2b4225b51daf7077024ec8"
+    },
+    {
+      "path": "branding/source.json",
+      "sha256": "8b2cb4b4c0da0af56b481093946de44bd8422afbc2f2c96723284f01adc3c4ef"
     },
     {
       "path": "business-facts.json",
@@ -83,7 +99,7 @@
     },
     {
       "path": "copy-review.json",
-      "sha256": "05ecd8f44793bb25829f1f6ae7b1f8323257d6e2ed7983629840a26c609c3d4f"
+      "sha256": "14c3dc1f56daeef75587e0850e78f5ebb3068fffa21e5cc3cb280e9d4bde1fa3"
     },
     {
       "path": "dealer-stock/listing-1.jpg",
@@ -99,11 +115,11 @@
     },
     {
       "path": "dealer.json",
-      "sha256": "1eb50e3ad871705404f0b872844422a63ac2c29dfc33621502f7ec324afb721d"
+      "sha256": "c6708cf3facca12812020d50703bb8063173be44cf99a8aff2b27ac60c7593c6"
     },
     {
       "path": "identity-review.json",
-      "sha256": "77a9e66172257ec4544c8ff3e9c0613e6b356c1611d88d979e2a81b789cdbdf8"
+      "sha256": "069e267af58525c9dd893d4fc34ca8a881e4593b8496d074af0e9a713395e9e1"
     },
     {
       "path": "locale.json",
@@ -119,7 +135,7 @@
     },
     {
       "path": "qualification.json",
-      "sha256": "4558ef6542dcd7f53be20fee6da223577a2bd6b0b5023991dc782039f680d1ca"
+      "sha256": "b31649f8f14e258c265a8b41b010796bf62e07bcd7ace3ffcbcaa38d168808a6"
     },
     {
       "path": "research-review.json",

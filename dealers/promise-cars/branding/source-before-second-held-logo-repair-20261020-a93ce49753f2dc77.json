@@ -1,0 +1,141 @@
+{
+  "schemaVersion": 1,
+  "dealer": "promise-cars",
+  "status": "reviewed",
+  "realLogoFirst": true,
+  "publicSources": [
+    {
+      "url": "https://www.autotrader.co.uk/dealers/west-midlands/oldbury/promise-cars-10042436",
+      "observedAt": "2026-10-19T17:36:50.039548Z"
+    },
+    {
+      "source": "alternate-public-logo-page",
+      "retainedEvidence": "source URL in real-logo research",
+      "observation": "A dealer-image URL was observed, but the image host timed out; no inaccessible image is claimed as an obtained original."
+    }
+  ],
+  "originals": [],
+  "creationMethod": "imagegen-proposal",
+  "dealerApproved": false,
+  "approvalStatus": "independent-preview-not-dealer-approved",
+  "researchConclusion": "Bounded public checks did not yield usable distinct dealer artwork. Generic text banners or unavailable image-host URLs do not prove that the dealer has no logo. This artwork is clearly an independent proposal.",
+  "generation": {
+    "tool": "image_gen.imagegen",
+    "generationId": "exec-a8ce00cb-c0aa-4978-a268-6342fdff3496",
+    "modelVersion": null,
+    "prompt": " Use case: logo-brand. Produce one professional dealer-logo asset on a truly transparent background. Wide horizontal lockup with a separate compact emblem at left, generous transparent gap, and the exact business name at right in bold custom geometric lettering. The emblem must stay clear at 32px, thick strokes and few shapes. Flat crisp vector-like artwork; no gradients, no shadows, no mockup, no photography, no extra text. Every dark element must have a fine white outer keyline and every white element a dark navy outline, so this identical master works on white, charcoal #111113 and dark red #c40101. Use a clean solid silhouette, not decorative outlines. This is an independent proposal, not dealer-approved artwork. Exact name: PROMISE CARS. Left emblem is a simple P formed from two interlocking cobalt-blue #2863d6 bands with one open road notch; no checkmark or shield. Strong, balanced, reassuring mark. PROMISE large, CARS small but bold beneath it. Navy and cobalt with precise white keylines."
+  },
+  "compactDerivation": {
+    "method": "lossless-isolated-emblem-crop",
+    "parentReference": "branding/generated-master.png",
+    "parentSha256": "5b7db7532ba1f671ca4944e4afbc7e53a96bda0d81b613927412ca8d42405000",
+    "crop": {
+      "left": 0,
+      "top": 0,
+      "width": 588,
+      "height": 724
+    },
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-a8ce00cb-c0aa-4978-a268-6342fdff3496",
+      "modelVersion": null
+    }
+  },
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T18:56:33.140095Z",
+    "master": {
+      "path": "branding/generated-master.png",
+      "sha256": "5b7db7532ba1f671ca4944e4afbc7e53a96bda0d81b613927412ca8d42405000",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a8ce00cb-c0aa-4978-a268-6342fdff3496",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "c0024a473abc6b560946659acac33fb31f4049f5e6daceef5d8aeb37c042a2d1",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a8ce00cb-c0aa-4978-a268-6342fdff3496",
+        "modelVersion": null
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "c0024a473abc6b560946659acac33fb31f4049f5e6daceef5d8aeb37c042a2d1",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a8ce00cb-c0aa-4978-a268-6342fdff3496",
+        "modelVersion": null
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-master.png",
+        "sha256": "5b7db7532ba1f671ca4944e4afbc7e53a96bda0d81b613927412ca8d42405000",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-a8ce00cb-c0aa-4978-a268-6342fdff3496",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "d2762d793d3620ba1950b352e3747a3d98990f14502477708c7fe43fb7f5e39d",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-5eed5b43-3336-4ccd-b326-748e2929021d",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "d2762d793d3620ba1950b352e3747a3d98990f14502477708c7fe43fb7f5e39d",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-5eed5b43-3336-4ccd-b326-748e2929021d",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": {
+        "onLight": [
+          "#ffffff"
+        ],
+        "onDark": [
+          "#111113",
+          "#101820"
+        ],
+        "onAccent": [
+          "#09090b",
+          "#17191c",
+          "#c40101"
+        ]
+      },
+      "wordmarkWidths": [
+        120,
+        180
+      ],
+      "markWidths": [
+        32,
+        64
+      ],
+      "method": "Exact pipeline alpha-padding crop and resize of actual generated surface artwork. Separate light-ink generated wordmark is used on dark and accent surfaces. Compact inputs are documented actual imagegen outputs or isolated lossless crops.",
+      "reviewedAt": "2026-10-19T18:56:33.140095Z",
+      "review": "Visually reviewed the exact pipeline cropTransparentPadding exports at 120 px and 180 px wordmark widths and 32 px and 64 px compact sizes against all six required background colours. Spelling and transparency checked. Filled light wordmarks improve contrast on dark surfaces; artwork colours do not change template palettes."
+    }
+  },
+  "additionalGenerations": [
+    {
+      "role": "onDark-and-onAccent",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-5eed5b43-3336-4ccd-b326-748e2929021d",
+      "modelVersion": null,
+      "reference": "branding/generated-master.png",
+      "prompt": "Use case: logo-brand, exact surface variant. This is an existing approved composition being prepared for a dark website background. Preserve its exact business name, spelling, typography, emblem motif, layout, separation and proportions. Make a faithful LIGHT-INK version on a truly TRANSPARENT background: all wordmark text should be solid bright ivory-white, filled letters, not hollow outline letters. Preserve any restrained emblem accent colours if they have contrast, and use white for the emblem's dark strokes so the compact emblem also reads on charcoal. Preserve the existing dark contour where helpful. No change of shape or concept. No added content. Do not include the background; it must remain transparent. Clean perfectly smooth edges, no speckles, no distress, no glow, no shadow, no gradients. The result must be clearly legible at180px width on charcoal #111113 and dark red #c40101. Match the reference geometry; no business names or letters may be omitted or repeated."
+    }
+  ]
+}

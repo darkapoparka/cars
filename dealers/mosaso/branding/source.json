@@ -45,22 +45,30 @@
     }
   },
   "generatedInputs": {
-    "reviewedAt": "2026-10-19T18:56:33.139740Z",
+    "reviewedAt": "2026-10-20T20:47:28.4825103Z",
     "master": {
-      "path": "branding/generated-master.png",
-      "sha256": "8b620e89fdfa6b012106fe0f63cf4d3efc5f9469d803814d8423cb4925982470",
+      "path": "branding/generated-on-light-v2-20261020-8cbfebfd64714cee.png",
+      "sha256": "8cbfebfd64714cee9b7afb6fdf0dc68e1475b56dcc2bb7215cd9e23ab0de10a9",
+      "nativeDimensions": {
+        "width": 2172,
+        "height": 724
+      },
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-4ce5d39d-21b4-44df-a486-2e3e4fa94bf6",
+        "generationId": "exec-dd8bb388-f73d-47b0-af1c-adc2f5d2edd1",
         "modelVersion": null
       }
     },
     "mark": {
-      "path": "branding/generated-mark.png",
-      "sha256": "1d8cd9098ac2b44d3190ef1f53b99dd28c315eef45b18910068740ed893a5415",
+      "path": "branding/generated-compact-on-light-v2-20261020-982b2cb2d6e6c553.png",
+      "sha256": "982b2cb2d6e6c5532ef1c053c208cb645492dcad19a28909e4357cafc5afb89f",
+      "nativeDimensions": {
+        "width": 1115,
+        "height": 1411
+      },
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-4ce5d39d-21b4-44df-a486-2e3e4fa94bf6",
+        "generationId": "exec-b1f499d3-5470-4b8a-bfd0-3c49683d7b5b",
         "modelVersion": null
       }
     },
@@ -75,11 +83,15 @@
     },
     "surfaces": {
       "onLight": {
-        "path": "branding/generated-master.png",
-        "sha256": "8b620e89fdfa6b012106fe0f63cf4d3efc5f9469d803814d8423cb4925982470",
+        "path": "branding/generated-on-light-v2-20261020-8cbfebfd64714cee.png",
+        "sha256": "8cbfebfd64714cee9b7afb6fdf0dc68e1475b56dcc2bb7215cd9e23ab0de10a9",
+        "nativeDimensions": {
+          "width": 2172,
+          "height": 724
+        },
         "generation": {
           "tool": "image_gen.imagegen",
-          "generationId": "exec-4ce5d39d-21b4-44df-a486-2e3e4fa94bf6",
+          "generationId": "exec-dd8bb388-f73d-47b0-af1c-adc2f5d2edd1",
           "modelVersion": null
         }
       },
@@ -127,8 +139,42 @@
         64
       ],
       "method": "Exact pipeline alpha-padding crop and resize of actual generated surface artwork. Separate light-ink generated wordmark is used on dark and accent surfaces. Compact inputs are documented actual imagegen outputs or isolated lossless crops.",
-      "reviewedAt": "2026-10-19T18:56:33.139740Z",
-      "review": "Visually reviewed the exact pipeline cropTransparentPadding exports at 120 px and 180 px wordmark widths and 32 px and 64 px compact sizes against all six required background colours. Spelling and transparency checked. Filled light wordmarks improve contrast on dark surfaces; artwork colours do not change template palettes."
+      "reviewedAt": "2026-10-20T20:47:28.4825103Z",
+      "review": "Visually reviewed the exact pipeline cropTransparentPadding exports at 120 px and 180 px wordmark widths and 32 px and 64 px compact sizes against all six required background colours. Spelling and transparency checked. Filled light wordmarks improve contrast on dark surfaces; artwork colours do not change template palettes.",
+      "notes": "Agent viewed matched maintained exports at120/180px and32/64px on actual six template surfaces. New deeper light-surface variants preserve identity and palette family; Millions alone also receives an accent inverse. All passing dark wordmarks and dark compact consumers remain exact, and other three accent wordmarks remain exact. Original artwork retained. Independent preview proposals; no dealer/native/hosted approval."
+    },
+    "marks": {
+      "onLight": {
+        "path": "branding/generated-compact-on-light-v2-20261020-982b2cb2d6e6c553.png",
+        "sha256": "982b2cb2d6e6c5532ef1c053c208cb645492dcad19a28909e4357cafc5afb89f",
+        "nativeDimensions": {
+          "width": 1115,
+          "height": 1411
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-b1f499d3-5470-4b8a-bfd0-3c49683d7b5b",
+          "modelVersion": null
+        }
+      }
+    },
+    "compactMarkDescription": "Existing navy M and teal road motif in deep navy/teal for white surfaces",
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-20T20:47:28.4825103Z",
+      "widths": [
+        32,
+        64
+      ],
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#101820",
+        "#09090b",
+        "#17191c",
+        "#c40101"
+      ],
+      "notes": "New light compact ink variants and exact identity visually reviewed at32/64px; Prime uses a clean flat PL/coupe redraw after halo candidates were rejected. Passing dark compact unchanged. Padding/contrast thresholds unchanged; no stretching or filters."
     }
   },
   "additionalGenerations": [
@@ -139,6 +185,53 @@
       "modelVersion": null,
       "reference": "branding/generated-master.png",
       "prompt": "Use case: logo-brand, exact surface variant. This is an existing approved composition being prepared for a dark website background. Preserve its exact business name, spelling, typography, emblem motif, layout, separation and proportions. Make a faithful LIGHT-INK version on a truly TRANSPARENT background: all wordmark text should be solid bright ivory-white, filled letters, not hollow outline letters. Preserve any restrained emblem accent colours if they have contrast, and use white for the emblem's dark strokes so the compact emblem also reads on charcoal. Preserve the existing dark contour where helpful. No change of shape or concept. No added content. Do not include the background; it must remain transparent. Clean perfectly smooth edges, no speckles, no distress, no glow, no shadow, no gradients. The result must be clearly legible at180px width on charcoal #111113 and dark red #c40101. Match the reference geometry; no business names or letters may be omitted or repeated."
+    },
+    {
+      "roles": [
+        "master",
+        "onLight"
+      ],
+      "path": "branding/generated-on-light-v2-20261020-8cbfebfd64714cee.png",
+      "sha256": "8cbfebfd64714cee9b7afb6fdf0dc68e1475b56dcc2bb7215cd9e23ab0de10a9",
+      "nativeDimensions": {
+        "width": 2172,
+        "height": 724
+      },
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-dd8bb388-f73d-47b0-af1c-adc2f5d2edd1",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand. Input1 is EDIT TARGET: existing MOSASO independent proposal. Generate an actual stronger LIGHT-SURFACE variant preserving exact logo geometry: road-shaped teal S/road through navy M emblem LEFT and uppercase \"MOSASO\" RIGHT. Exact text \"MOSASO\", M-O-S-A-S-O. Keep wordmark letter shapes, proportions, spacing, road motif and dashed lane markings. Dominant deep navy (#0d2638 feel) for M and text; road uses deep teal (#00665e feel) with small restrained light lane dashes. Over85% visible ink strongly contrasts with WHITE. Remove bulky pale outlines; any fine edge remains subordinate. Keep navy/teal identity and genuine transparency. No new icon, background rectangle, shadow, glow, gradient, haze or alpha speckles. Crisp legible120/180px.",
+      "references": [
+        {
+          "path": "branding/generated-master.png",
+          "sha256": "8b620e89fdfa6b012106fe0f63cf4d3efc5f9469d803814d8423cb4925982470"
+        }
+      ],
+      "createdAt": "2026-10-20T20:46:40.033Z",
+      "derivation": "Actual built-in imagegen result copied byte-for-byte. Dedicated deeper light-surface ink or accent inverse; existing identity/motifs retained. Prime compact is a fresh flat PL/coupe redraw. No stretch, filters, recolouring or alpha cleanup."
+    },
+    {
+      "roles": [
+        "mark"
+      ],
+      "path": "branding/generated-compact-on-light-v2-20261020-982b2cb2d6e6c553.png",
+      "sha256": "982b2cb2d6e6c5532ef1c053c208cb645492dcad19a28909e4357cafc5afb89f",
+      "nativeDimensions": {
+        "width": 1115,
+        "height": 1411
+      },
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-b1f499d3-5470-4b8a-bfd0-3c49683d7b5b",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand. Input1 is EDIT TARGET: exact MOSASO compact navy M with winding teal road/S. Generate a real stronger WHITE-SURFACE version preserving exact road/M silhouette, lane dashes, native compact geometry, counters, placement and all proportions. Deep navy M (#0d2638 feel) plus deep teal road (#00665e feel); over85% ink contrasts strongly with WHITE. Keep small restrained light lane dashes, remove dominant thick pale outline. Retain navy/teal identity, no new letters/icon, badge or background tile. Crisp strong fill clear at32px, genuine alpha transparency, no stretching, gradients, shadow, glow, haze or speckles.",
+      "references": [
+        {
+          "path": "branding/generated-mark.png",
+          "sha256": "1d8cd9098ac2b44d3190ef1f53b99dd28c315eef45b18910068740ed893a5415"
+        }
+      ],
+      "createdAt": "2026-10-20T20:46:40.033Z",
+      "derivation": "Actual built-in imagegen result copied byte-for-byte. Dedicated deeper light-surface ink or accent inverse; existing identity/motifs retained. Prime compact is a fresh flat PL/coupe redraw. No stretch, filters, recolouring or alpha cleanup."
     }
   ],
   "compactOnDarkDerivation": {
@@ -156,5 +249,13 @@
       "generationId": "exec-df73bc29-99b5-4baa-8bf7-b305d58d9460",
       "modelVersion": null
     }
-  }
+  },
+  "sourceHistory": [
+    {
+      "reference": "branding/source-before-light-repair-20261020-ee1c83e439a6b030.json",
+      "sha256": "ee1c83e439a6b030524c6a90dfe7d2bde0116675dcccba268b95543926532bd7",
+      "retainedAt": "2026-10-20T20:46:40.033Z",
+      "reason": "Exact source provenance before owned light-surface contrast repair"
+    }
+  ]
 }

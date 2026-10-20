@@ -34,13 +34,13 @@
     "zlib-ng": "2.3.3",
     "sharp": "0.35.5"
   },
-  "sourceSha256": "11b7c384a16318b90640cae303921f9961c74c1955b05c282be8686558744184",
-  "contractSha256": "b0798ade0eff1f4e2758862fb67e83fd02e94ac118789ae6a90587e86404d93c",
+  "sourceSha256": "432113dbf70b549afb3c6ae9836cf21fb46728023b3f8bf2da4f5b15039ea310",
+  "contractSha256": "a1c38ffa61c91fcb37b96dc5b981e56912e0ce903110909ce2ae43516e796a9a",
   "outputs": [
     {
       "path": "branding/app-icon.png",
-      "bytes": 161335,
-      "sha256": "e1967e2510edcf5d546d55093fdc3105d4791d29c42df2d4da7b21984cba1d8f"
+      "bytes": 104348,
+      "sha256": "615896cd57855e48eefe78cd9ac08a1a135bc4b0b7eb662de9c038e4caff4b3f"
     },
     {
       "path": "branding/logo-mark-on-dark.png",
@@ -49,18 +49,18 @@
     },
     {
       "path": "branding/logo-mark.png",
-      "bytes": 161335,
-      "sha256": "e1967e2510edcf5d546d55093fdc3105d4791d29c42df2d4da7b21984cba1d8f"
+      "bytes": 104348,
+      "sha256": "615896cd57855e48eefe78cd9ac08a1a135bc4b0b7eb662de9c038e4caff4b3f"
     },
     {
       "path": "branding/logo-master.png",
-      "bytes": 271372,
-      "sha256": "32b0435e1204b17381e89c9b3c8eb23aa6f8c532df9014347559af4854204342"
+      "bytes": 152794,
+      "sha256": "0eb0660ad55ee73dc1c1b00f8828ee91679590465f513e1d9ef92839dfedb901"
     },
     {
       "path": "branding/logo-on-accent.png",
-      "bytes": 271372,
-      "sha256": "32b0435e1204b17381e89c9b3c8eb23aa6f8c532df9014347559af4854204342"
+      "bytes": 230999,
+      "sha256": "ad4da09a7ac891311e4b0b929831b58ecfb6ac2a5489f36c6d697f179f9bf7b9"
     },
     {
       "path": "branding/logo-on-dark.png",
@@ -69,28 +69,28 @@
     },
     {
       "path": "branding/logo-on-light.png",
-      "bytes": 271372,
-      "sha256": "32b0435e1204b17381e89c9b3c8eb23aa6f8c532df9014347559af4854204342"
+      "bytes": 152794,
+      "sha256": "0eb0660ad55ee73dc1c1b00f8828ee91679590465f513e1d9ef92839dfedb901"
     },
     {
       "path": "dealer-brand/app-icon.png",
-      "bytes": 161335,
-      "sha256": "e1967e2510edcf5d546d55093fdc3105d4791d29c42df2d4da7b21984cba1d8f"
+      "bytes": 104348,
+      "sha256": "615896cd57855e48eefe78cd9ac08a1a135bc4b0b7eb662de9c038e4caff4b3f"
     },
     {
       "path": "dealer-brand/favicon.ico",
-      "bytes": 11032,
-      "sha256": "b79a9f9536e24f51c036f21fd5983b112f09ee42194f5628de8828becd034bb9"
+      "bytes": 8267,
+      "sha256": "dc894cb2fa3091903b439992016f520c85c17a1c9eafae6cd8a821498a567c25"
     },
     {
       "path": "dealer-brand/logo-on-accent.png",
-      "bytes": 271372,
-      "sha256": "32b0435e1204b17381e89c9b3c8eb23aa6f8c532df9014347559af4854204342"
+      "bytes": 230999,
+      "sha256": "ad4da09a7ac891311e4b0b929831b58ecfb6ac2a5489f36c6d697f179f9bf7b9"
     },
     {
       "path": "dealer-brand/logo-on-accent.webp",
-      "bytes": 166984,
-      "sha256": "23f61edd5d82f062048d4fa168aaf1a71b2902b0d3b277bde1a4e502fc7ed1c4"
+      "bytes": 167728,
+      "sha256": "3c1a203c2dd69aeefe2e1f446982977dc0bdaa75a0245c490495ce42df45580c"
     },
     {
       "path": "dealer-brand/logo-on-dark.png",
@@ -104,13 +104,13 @@
     },
     {
       "path": "dealer-brand/logo-on-light.png",
-      "bytes": 271372,
-      "sha256": "32b0435e1204b17381e89c9b3c8eb23aa6f8c532df9014347559af4854204342"
+      "bytes": 152794,
+      "sha256": "0eb0660ad55ee73dc1c1b00f8828ee91679590465f513e1d9ef92839dfedb901"
     },
     {
       "path": "dealer-brand/logo-on-light.webp",
-      "bytes": 166984,
-      "sha256": "23f61edd5d82f062048d4fa168aaf1a71b2902b0d3b277bde1a4e502fc7ed1c4"
+      "bytes": 105556,
+      "sha256": "96aa8e902f8b2026a299b45bd7331a2ea79319b313f4177af561539dc0fe85d5"
     },
     {
       "path": "dealer-brand/mark-on-dark.webp",
@@ -119,8 +119,8 @@
     },
     {
       "path": "dealer-brand/mark-on-light.webp",
-      "bytes": 96674,
-      "sha256": "dffa8cf0de10980b068ab46a667df0ed2190b58950a7aa8190598f36a90c90c6"
+      "bytes": 71472,
+      "sha256": "b5b2cfd687ce7050f92c1d0d2e420d05fb059df38c3239fbffaa17b8ab4ace6b"
     }
   ]
 }

@@ -22,7 +22,7 @@ const write = (file, value) => {
 };
 const q = (value) => JSON.stringify(String(value ?? ''));
 const textExtensions = new Set(['.js', '.mjs', '.cjs', '.ts', '.tsx', '.svelte', '.html', '.json']);
-function patchTextTree(root, replacements, ignoredDirectories = new Set()) {
+function patchTextTree(root, replacements, ignoredDirectories = new Set(), transform) {
   const changed = [];
   const visit = (current) => {
     if (!exists(current)) return;
@@ -33,7 +33,8 @@ function patchTextTree(root, replacements, ignoredDirectories = new Set()) {
       else if (textExtensions.has(path.extname(entry.name).toLowerCase())) {
         let value = read(target);
         const before = value;
-        for (const [from, to] of replacements) value = value.split(from).join(to);
+        if (transform) value = transform(value, target);
+        else for (const [from, to] of replacements) value = value.split(from).join(to);
         if (value !== before) {
           write(target, value);
           changed.push(target);
@@ -1630,6 +1631,28 @@ function patchImportHeroBindings(candidate) {
   return 'src/lib/components/home/HomeFiveHero.svelte (dealer contact binding)';
 }
 
+function personalizeImportMessageText(source, replacements) {
+  const replace=(text,rows)=>{for(const [from,to] of rows)text=text.split(from).join(to);return text;};
+  const escape=value=>String(value).replace(/[.*+?^${}()|[\]\\]/g,'\\$&').replaceAll('/','\\/').replaceAll('\r','\\r').replaceAll('\n','\\n').replaceAll('\u2028','\\u2028').replaceAll('\u2029','\\u2029');
+  const escaped=replacements.map(([from,to])=>[from,escape(to)]);
+  // The reviewed message catalog stores its regex literals in array rows.
+  // Personalize each pattern separately from its adjacent display string, so
+  // a sourced slash or metacharacter never becomes generated regex syntax.
+  return source.split(/(?<=\n)/).map(line=>{
+    const marker=/^[ \t]*(?:\[[ \t]*)?\/(?![/*])/.exec(line);if(!marker)return replace(line,replacements);
+    const open=marker[0].length-1;let close=-1,inClass=false;
+    for(let index=open+1;index<line.length;index++){
+      if(line[index]==='\\'){index++;continue;}
+      if(line[index]==='[')inClass=true;else if(line[index]===']')inClass=false;else if(line[index]==='/'&&!inClass){close=index;break;}
+    }
+    if(close<0)throw Error('Import message regex literal boundary changed');
+    const original=line.slice(open+1,close);if(!replacements.some(([from])=>original.includes(from)))return replace(line,replacements);
+    const flags=/^\/([dgimsuvy]*)(?=[ \t]*[,;\]])/.exec(line.slice(close));if(!flags)throw Error('Import message regex flags boundary changed');
+    const pattern=replace(original,escaped);new RegExp(pattern,flags[1]);
+    return replace(line.slice(0,open+1),replacements)+pattern+replace(line.slice(close),replacements);
+  }).join('');
+}
+
 function patchImportText(candidate, profile) {
   const b = profile.business;
   const replacements = [
@@ -1644,7 +1667,10 @@ function patchImportText(candidate, profile) {
     ['гр. София, Студентски град, ул. Атанас Манчев 18', b.address]
   ];
   return patchTextTree(path.join(candidate, 'src'), replacements,
-    new Set(['node_modules', '.svelte-kit', 'dist', 'build']))
+    new Set(['node_modules', '.svelte-kit', 'dist', 'build']), (value,file)=>{
+      if(path.relative(candidate,file).replaceAll('\\','/')==='src/lib/i18n/messages.ts')return personalizeImportMessageText(value,replacements);
+      for(const [from,to] of replacements)value=value.split(from).join(to);return value;
+    })
     .map((file) => path.relative(candidate, file).replaceAll('\\', '/'));
 }
 
@@ -1721,6 +1747,7 @@ export const refreshAdapterInternals = {
   carwowInventory,
   assertImportListingFacts,
   importListingFeed,
+  patchImportText,
   pickLogo,
   isRasterLogo,
   rasterLogoCandidates,

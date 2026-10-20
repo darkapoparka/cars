@@ -37,7 +37,7 @@
     }
   },
   "generatedInputs": {
-    "reviewedAt": "2026-10-19T18:56:40.320128Z",
+    "reviewedAt": "2026-10-20T20:36:44.247Z",
     "master": {
       "path": "branding/generated-master.png",
       "sha256": "4c4d740976db11754b2fe257cc688c9404dab6d65d841f3a09e1e5e3310846be",
@@ -57,11 +57,15 @@
       }
     },
     "markOnDark": {
-      "path": "branding/generated-mark.png",
-      "sha256": "37281ee9f9b691381cf6edede123181916e876d5cbb85a71191cb16fbe517aa7",
+      "path": "branding/generated-mark-on-dark-v2-20261020.png",
+      "sha256": "c46ae293824e801ed7ca938d222d11de247e9cad0f255bfdc848f8afc87720ee",
+      "nativeDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-34cdbd03-6383-4bda-a332-6bc9facc62d2",
+        "generationId": "exec-e5d24993-6edf-4d2e-9e55-1f6229b28f25",
         "modelVersion": null
       }
     },
@@ -85,11 +89,15 @@
         }
       },
       "onAccent": {
-        "path": "branding/generated-on-dark.png",
-        "sha256": "417148b5f08497c3a46f017ebccc6abde759b4186eb03f96107e91a88e356c4b",
+        "path": "branding/generated-on-accent-v2-20261020.png",
+        "sha256": "9202c9962b3b4dba86974a6f339424a9a7992290ef0522f35fbddb890643692a",
+        "nativeDimensions": {
+          "width": 1983,
+          "height": 793
+        },
         "generation": {
           "tool": "image_gen.imagegen",
-          "generationId": "exec-2426b99f-6dc4-47ae-b5b5-d748ee7a7373",
+          "generationId": "exec-a956f39d-7515-424a-b853-9b8ce445c736",
           "modelVersion": null
         }
       }
@@ -119,8 +127,9 @@
         64
       ],
       "method": "Exact pipeline alpha-padding crop and resize of actual generated surface artwork. Separate light-ink generated wordmark is used on dark and accent surfaces. Compact inputs are documented actual imagegen outputs or isolated lossless crops.",
-      "reviewedAt": "2026-10-19T18:56:40.320128Z",
-      "review": "Visually reviewed the exact pipeline cropTransparentPadding exports at 120 px and 180 px wordmark widths and 32 px and 64 px compact sizes against all six required background colours. Spelling and transparency checked. Filled light wordmarks improve contrast on dark surfaces; artwork colours do not change template palettes."
+      "reviewedAt": "2026-10-20T20:36:44.247Z",
+      "review": "Visually reviewed the exact pipeline cropTransparentPadding exports at 120 px and 180 px wordmark widths and 32 px and 64 px compact sizes against all six required background colours. Spelling and transparency checked. Filled light wordmarks improve contrast on dark surfaces; artwork colours do not change template palettes.",
+      "notes": "Agent reviewed exact new onAccent wordmark at120/180px on unchanged five dark/red backgrounds and dedicated light-ink dark-surface compact mark at32/64px. Exact spelling, geometry, counters, spacing and edges checked. Passing master/light wordmark and other surface/compact inputs retain original bytes. Dealer/native/hosted approval remains false."
     }
   },
   "additionalGenerations": [
@@ -131,6 +140,50 @@
       "modelVersion": null,
       "reference": "branding/generated-master.png",
       "prompt": "Use case: logo-brand, exact surface variant. This is an existing approved composition being prepared for a dark website background. Preserve its exact business name, spelling, typography, emblem motif, layout, separation and proportions. Make a faithful LIGHT-INK version on a truly TRANSPARENT background: all wordmark text should be solid bright ivory-white, filled letters, not hollow outline letters. Preserve any restrained emblem accent colours if they have contrast, and use white for the emblem's dark strokes so the compact emblem also reads on charcoal. Preserve the existing dark contour where helpful. No change of shape or concept. No added content. Do not include the background; it must remain transparent. Clean perfectly smooth edges, no speckles, no distress, no glow, no shadow, no gradients. The result must be clearly legible at180px width on charcoal #111113 and dark red #c40101. Match the reference geometry; no business names or letters may be omitted or repeated."
+    },
+    {
+      "roles": [
+        "onAccent"
+      ],
+      "reference": "branding/generated-on-dark.png",
+      "path": "branding/generated-on-accent-v2-20261020.png",
+      "sha256": "9202c9962b3b4dba86974a6f339424a9a7992290ef0522f35fbddb890643692a",
+      "nativeDimensions": {
+        "width": 1983,
+        "height": 793
+      },
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-a956f39d-7515-424a-b853-9b8ce445c736",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand, faithful colour-only surface edit. Preserve the exact split-cap T engineering emblem on the left and TECNO / MOTORS two-line lettering at right. Keep every shape, corner, proportion, spacing, word and open counter. Dedicated light-ink variant for charcoal and dark-red backgrounds: TECNO and T main stem flat pale silver-grey #c8d0d8, split top bars and MOTORS flat pale mint #b0d8c8. Remove all heavy navy/black outlines and white keylines. Transparent spaces stay transparent. Uniform smooth opaque flat fills, no pure white, gradients, shadows, glow, texture, speckles, extra geometry or wording. Truly transparent background with generous padding. Exact spelling TECNO MOTORS. Independent proposal, not dealer approved.",
+      "createdAt": "2026-10-20T20:36:44.247Z",
+      "derivation": "Actual built-in imagegen edit of retained identity. Raw returned PNG copied byte-identical; no recolouring, filtering, alpha cleanup or threshold changes."
+    },
+    {
+      "roles": [
+        "markOnDark"
+      ],
+      "reference": "branding/generated-mark.png",
+      "path": "branding/generated-mark-on-dark-v2-20261020.png",
+      "sha256": "c46ae293824e801ed7ca938d222d11de247e9cad0f255bfdc848f8afc87720ee",
+      "nativeDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-e5d24993-6edf-4d2e-9e55-1f6229b28f25",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand, dedicated inverse compact mark. Preserve exactly the supplied split-cap T engineering emblem: two slanted top bars separated at center and the broad angular T stem beneath. Same proportions, slanted ends, notch and transparent separation gaps. T body flat opaque pale silver-grey #c8d0d8; the two cap bars flat opaque pale mint #b0d8c8. Remove dark/navy contours and white keylines; open gaps stay transparent. Center on a square truly transparent canvas with generous padding. Thick clean smooth strokes readable at32px on charcoal/navy/red, no pure white, gradients, texture, speckles, shadows, glow, extra text or geometry. TECNO MOTORS independent proposal, no dealer approval. Do not redesign.",
+      "createdAt": "2026-10-20T20:36:44.247Z",
+      "derivation": "Actual built-in imagegen edit of retained identity. Raw returned PNG copied byte-identical; no recolouring, filtering, alpha cleanup or threshold changes."
+    }
+  ],
+  "sourceHistory": [
+    {
+      "reference": "branding/source-before-second-held-logo-repair-20261020-8b517fe786e8e7d9.json",
+      "sha256": "8b517fe786e8e7d90b903fb846c2818e49602be3b065799ba77d5d4275987ee9",
+      "retainedAt": "2026-10-20T20:36:44.247Z",
+      "reason": "Exact provenance before targeted second original-held wordmark/compact contrast repair"
     }
   ]
 }

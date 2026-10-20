@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "kind": "cars-artwork-source-corrections",
-  "checkedAt": "2026-10-20T20:33:39.353Z",
+  "checkedAt": "2026-10-20T21:01:12.181Z",
   "sourceParent": "cf566a99b663d6367b242d096ab2b812e2b3cb68",
   "builtInImagegen": true,
   "proposalsOnly": true,
@@ -19,10 +19,10 @@
     "ownerAcceptance": false
   },
   "summary": {
-    "packs": 22,
-    "assetChecks": 308,
-    "files": 636,
-    "bytes": 64629098
+    "packs": 30,
+    "assetChecks": 420,
+    "files": 850,
+    "bytes": 88833544
   },
   "packs": [
     {
@@ -354,6 +354,126 @@
       "hostedApproval": false,
       "dealerApproval": false,
       "ownerAcceptance": false
+    },
+    {
+      "slug": "promise-cars",
+      "packDigest": "8498ee21ee666eed1e75eac5549055a76143ed9960bfa0954a5997bcb55db041",
+      "files": 25,
+      "bytes": 3529989,
+      "correction": "second-inverse",
+      "assetChecks": 14,
+      "sourceCheckPassed": true,
+      "originalArtworkFactsStockPhotosPreserved": true,
+      "provenance": "dealers/promise-cars/branding/second-held-logo-repair-20261020.json",
+      "nativeApproval": false,
+      "hostedApproval": false,
+      "dealerApproval": false,
+      "ownerAcceptance": false
+    },
+    {
+      "slug": "tecno-motors",
+      "packDigest": "c2a81772ae0deddc8b854c6bf7deebda46bba5cd97641b6a3d5fb55e04993fce",
+      "files": 26,
+      "bytes": 3811584,
+      "correction": "second-inverse",
+      "assetChecks": 14,
+      "sourceCheckPassed": true,
+      "originalArtworkFactsStockPhotosPreserved": true,
+      "provenance": "dealers/tecno-motors/branding/second-held-logo-repair-20261020.json",
+      "nativeApproval": false,
+      "hostedApproval": false,
+      "dealerApproval": false,
+      "ownerAcceptance": false
+    },
+    {
+      "slug": "dms-cars-peterborough",
+      "packDigest": "7156cc804aa2602fec15d637254f36ef2e5b28ead3a9f7f8b78d10d997bb12a8",
+      "files": 27,
+      "bytes": 2616804,
+      "correction": "second-inverse",
+      "assetChecks": 14,
+      "sourceCheckPassed": true,
+      "originalArtworkFactsStockPhotosPreserved": true,
+      "provenance": "dealers/dms-cars-peterborough/branding/second-held-logo-repair-20261020.json",
+      "nativeApproval": false,
+      "hostedApproval": false,
+      "dealerApproval": false,
+      "ownerAcceptance": false
+    },
+    {
+      "slug": "reliable-autos",
+      "packDigest": "45f993fe60942d3322bb278e53434b50f6df402aab12256645cc7395915ffc1f",
+      "files": 31,
+      "bytes": 2504673,
+      "correction": "second-inverse",
+      "assetChecks": 14,
+      "sourceCheckPassed": true,
+      "originalArtworkFactsStockPhotosPreserved": true,
+      "provenance": "dealers/reliable-autos/branding/second-held-logo-repair-20261020.json",
+      "nativeApproval": false,
+      "hostedApproval": false,
+      "dealerApproval": false,
+      "ownerAcceptance": false
+    },
+    {
+      "slug": "king-street-motors-smethwick",
+      "packDigest": "32df6816378a1c870f6abd80dc97f228ea8035ca860cc5972e0f3fb48c830bb1",
+      "files": 26,
+      "bytes": 2460850,
+      "correction": "light",
+      "assetChecks": 14,
+      "sourceCheckPassed": true,
+      "originalArtworkFactsStockPhotosPreserved": true,
+      "provenance": "dealers/king-street-motors-smethwick/branding/light-surface-repair-20261020.json",
+      "nativeApproval": false,
+      "hostedApproval": false,
+      "dealerApproval": false,
+      "ownerAcceptance": false
+    },
+    {
+      "slug": "millions-auto-cars",
+      "packDigest": "9cc68f78e824f84ea8e9b6bb09bfd6d55a5fa859dbab60a8035b5426cacc7de7",
+      "files": 27,
+      "bytes": 3465069,
+      "correction": "light",
+      "assetChecks": 14,
+      "sourceCheckPassed": true,
+      "originalArtworkFactsStockPhotosPreserved": true,
+      "provenance": "dealers/millions-auto-cars/branding/light-surface-repair-20261020.json",
+      "nativeApproval": false,
+      "hostedApproval": false,
+      "dealerApproval": false,
+      "ownerAcceptance": false
+    },
+    {
+      "slug": "mosaso",
+      "packDigest": "0c96cbffb7eb39b3418afdc77275f5ad6799266e4b09edd2050b016e49313870",
+      "files": 28,
+      "bytes": 3208466,
+      "correction": "light",
+      "assetChecks": 14,
+      "sourceCheckPassed": true,
+      "originalArtworkFactsStockPhotosPreserved": true,
+      "provenance": "dealers/mosaso/branding/light-surface-repair-20261020.json",
+      "nativeApproval": false,
+      "hostedApproval": false,
+      "dealerApproval": false,
+      "ownerAcceptance": false
+    },
+    {
+      "slug": "prime-lane-motors",
+      "packDigest": "beb0426a87ba395294482032dcc42509c003b7bdda24f20526d6714aa1d50590",
+      "files": 24,
+      "bytes": 2607011,
+      "correction": "light",
+      "assetChecks": 14,
+      "sourceCheckPassed": true,
+      "originalArtworkFactsStockPhotosPreserved": true,
+      "provenance": "dealers/prime-lane-motors/branding/light-surface-repair-20261020.json",
+      "nativeApproval": false,
+      "hostedApproval": false,
+      "dealerApproval": false,
+      "ownerAcceptance": false
     }
   ],
   "nativeApproval": false,
@@ -391,6 +511,20 @@
         "wortley-road-car-sales",
         "leicester-motor-group",
         "simply-motors-ilford"
+      ],
+      "sourceCommit": "28f51ee7fe046a195a7b1ef5036b18ab47fee8e6"
+    },
+    {
+      "sourceParent": "97a7fb677c2341f438de2018aad97e1c14f90cf7",
+      "packs": [
+        "promise-cars",
+        "tecno-motors",
+        "dms-cars-peterborough",
+        "reliable-autos",
+        "king-street-motors-smethwick",
+        "millions-auto-cars",
+        "mosaso",
+        "prime-lane-motors"
       ]
     }
   ]

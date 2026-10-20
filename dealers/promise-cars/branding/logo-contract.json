@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "dealer": "promise-cars",
   "reviewed": true,
-  "reviewedAt": "2026-10-19T18:56:33.140095Z",
+  "reviewedAt": "2026-10-20T20:36:32.109Z",
   "status": "independent-proposal-not-dealer-approved",
   "creationMethod": "imagegen-proposal",
   "assets": {
@@ -21,8 +21,8 @@
     "onAccent": {
       "sourcePath": "branding/logo-on-accent.png",
       "publicPath": "/dealer-brand/logo-on-accent.webp",
-      "sha256": "7c812adfe790e137f5a945be798d6f2537bf6ea159a07cb374c9d674e54df975",
-      "sourceSha256": "665e68d4ecc2b6350d7f973740be4ca80ede641089549a0b7f5782ac0cb28697"
+      "sha256": "b5589fca955f3d03a5e368a135844a819b94bc94ff2f6a92e92f7dec992c2aee",
+      "sourceSha256": "d90371e313b31415ebf081093368ae7bbfb99960b338c57276f5e5bce54928c5"
     }
   },
   "surfaceBackgrounds": {
@@ -84,13 +84,13 @@
     },
     "onAccent": {
       "path": "branding/logo-on-accent.png",
-      "sha256": "665e68d4ecc2b6350d7f973740be4ca80ede641089549a0b7f5782ac0cb28697",
+      "sha256": "d90371e313b31415ebf081093368ae7bbfb99960b338c57276f5e5bce54928c5",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-5eed5b43-3336-4ccd-b326-748e2929021d",
+        "generationId": "exec-b0b57d37-7d56-4a85-983e-4410b271891d",
         "modelVersion": null
       },
-      "sourceReference": "dealers/promise-cars/branding/generated-on-dark.png"
+      "sourceReference": "dealers/promise-cars/branding/generated-on-accent-v2-20261020.png"
     }
   },
   "transforms": {
@@ -122,15 +122,15 @@
     },
     "onAccent": {
       "operation": "crop-transparent-padding-and-resize",
-      "sourceSha256": "d2762d793d3620ba1950b352e3747a3d98990f14502477708c7fe43fb7f5e39d",
-      "sha256": "665e68d4ecc2b6350d7f973740be4ca80ede641089549a0b7f5782ac0cb28697",
+      "sourceSha256": "07011aa384f81ac2242effd472b4ffed837aced4258180d82af31611659f93e8",
+      "sha256": "d90371e313b31415ebf081093368ae7bbfb99960b338c57276f5e5bce54928c5",
       "crop": {
         "left": 0,
-        "top": 39,
+        "top": 60,
         "width": 2172,
-        "height": 638
+        "height": 595
       },
-      "sourcePath": "branding/generated-on-dark.png",
+      "sourcePath": "branding/generated-on-accent-v2-20261020.png",
       "outputPath": "branding/logo-on-accent.png"
     }
   },
@@ -147,13 +147,13 @@
     },
     "mark-on-dark.webp": {
       "path": "dealer-brand/mark-on-dark.webp",
-      "sha256": "7f413afcb04f9c8c2e50ba4fea0b6fbac85add0f28d92cca1ba8b1d31042f362",
+      "sha256": "e440e6635c527f5aa662086ddbc22197a3be72d1ea01649cf66dbb971d841d72",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-a8ce00cb-c0aa-4978-a268-6342fdff3496",
+        "generationId": "exec-83ece953-3508-409c-9502-c155f5847143",
         "modelVersion": null
       },
-      "sourceReference": "dealers/promise-cars/branding/generated-mark.png"
+      "sourceReference": "dealers/promise-cars/branding/generated-mark-on-dark-v2-20261020.png"
     },
     "app-icon.png": {
       "path": "dealer-brand/app-icon.png",
@@ -180,17 +180,17 @@
   "originalArtworkPreserved": true,
   "visualReview": {
     "reviewed": true,
-    "reviewedAt": "2026-10-19T18:56:33.140095Z",
+    "reviewedAt": "2026-10-20T20:36:32.109Z",
     "source": "branding/source.json",
     "spelling": "agent-visual-review",
     "dealerApproval": false
   },
   "markOnDark": {
     "path": "branding/logo-mark-on-dark.png",
-    "sha256": "25dcc12acd406d2f8ec286720756cad7d16529566150152b3c6f4eff1fc5384e",
+    "sha256": "84b3903aa451791780aee68b00dd3199da2773bd2204524e3fec56230dbc89f7",
     "generation": {
       "tool": "image_gen.imagegen",
-      "generationId": "exec-a8ce00cb-c0aa-4978-a268-6342fdff3496",
+      "generationId": "exec-83ece953-3508-409c-9502-c155f5847143",
       "modelVersion": null
     }
   }

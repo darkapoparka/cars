@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-second-original-held-logo-contrast-repair",
+  "dealer": "dms-cars-peterborough",
+  "createdAt": "2026-10-20T20:36:57.499Z",
+  "previousPackDigest": "034b8c55c6df319cc94fc5116750019bef9c62984bf144557c793d9851bf4b03",
+  "previousSource": {
+    "path": "branding/source-before-second-held-logo-repair-20261020-4209bcb854572bfd.json",
+    "sha256": "4209bcb854572bfd1db1df33765ec8845e45634d723b63632459cb1cac0f0756"
+  },
+  "previousInputs": {
+    "surfaces": {
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "0d42ac1e07504775321562cc166b96c881b145b8b51c1048089f09caca23f53d",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-4d1105b0-0b20-41ab-8827-d67845708934",
+          "modelVersion": null
+        }
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "51296b958cd812187d62f46dd4ed27e76774e37e752908da43f8f6b4fc28b5ef",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-ed68ef8f-627c-44ca-9d4f-3eae38c75c47",
+        "modelVersion": null
+      }
+    }
+  },
+  "replacements": [
+    {
+      "roles": [
+        "onAccent"
+      ],
+      "reference": "branding/generated-on-dark.png",
+      "path": "branding/generated-on-accent-v2-20261020.png",
+      "sha256": "8c1228fa3bac11b6958ca528e0af0940acd5d76e7d516f2172b90ba6df837a0c",
+      "nativeDimensions": {
+        "width": 2172,
+        "height": 724
+      },
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-e29a397e-731e-46ad-9ac2-fb133684c2e8",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand, faithful surface-colour repair. Preserve exactly the reference's interlocking DMS monogram at left and single-line DMS CARS at right, all letter geometry, angular overlaps, spacing and proportions. Make clean light-ink artwork for dark red and charcoal: the existing white D and DMS text become flat pale silver-grey #c8d0d8; existing vivid-blue portions and CARS become flat light powder blue #accde6. Keep counters and narrow separation gaps truly transparent. No dark heavy outlines, no pure white, no distressed alpha, speckles, gradient, texture, shadow, glow or new shapes. Exact spelling DMS CARS. Truly transparent background, generous padding. Same identity and layout, colour change only; independent proposal, not dealer approved.",
+      "createdAt": "2026-10-20T20:36:57.499Z",
+      "derivation": "Actual built-in imagegen edit of retained identity. Raw returned PNG copied byte-identical; no recolouring, filtering, alpha cleanup or threshold changes."
+    },
+    {
+      "roles": [
+        "mark"
+      ],
+      "reference": "branding/generated-mark.png",
+      "path": "branding/generated-mark-on-light-v2-20261020.png",
+      "sha256": "90827ed316b5321d0052adabde7afd7148fec278ace767bbafa42aae74c18b7d",
+      "nativeDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-2d309274-ac6e-4d01-aa10-c0476f13edcf",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand, faithful compact dark-ink variant for white background favicon. Preserve exactly this interlocking DMS monogram, open D counter, diagonal M band, rounded right S and every angular overlapping cut/gap, proportions and arrangement. Replace existing dark midnight shapes with solid deep midnight navy #09274a and blue shapes with solid strong deep blue #155fb5. Remove all white outer keylines, faint edge texture and speckles; the existing narrow separators and open counters must be transparent negative space. Uniform opaque flat fills, smooth precise edges readable at32px and64px. Generous square truly transparent canvas. No gradients, shadows, glow, new contours, redesign, extra lettering or background. This DMS CARS identity is an independent proposal, not dealer approved.",
+      "createdAt": "2026-10-20T20:36:57.499Z",
+      "derivation": "Actual built-in imagegen edit of retained identity. Raw returned PNG copied byte-identical; no recolouring, filtering, alpha cleanup or threshold changes."
+    }
+  ],
+  "visualReview": {
+    "wordmarkWidths": [
+      120,
+      180
+    ],
+    "compactWidths": [
+      32,
+      64
+    ],
+    "wordmarkBackgrounds": [
+      "#111113",
+      "#101820",
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ],
+    "compactBackgrounds": [
+      "#ffffff"
+    ],
+    "identityAndSpelling": "agent-visual-review",
+    "dealerApproval": false,
+    "nativeApproval": false,
+    "hostedApproval": false,
+    "humanReview": false
+  },
+  "originalArtworkFactsStockPhotosPalettesPreserved": true,
+  "passingConsumerHashesProtected": true,
+  "toolPackage": "L:/CODEX/cars/templates/karento-best/package.json",
+  "filtersApplied": false,
+  "thresholdsChanged": false,
+  "providerWrites": 0
+}

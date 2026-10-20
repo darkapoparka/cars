@@ -2,15 +2,15 @@
   "schemaVersion": 1,
   "dealer": "mosaso",
   "reviewed": true,
-  "reviewedAt": "2026-10-19T18:56:33.139740Z",
+  "reviewedAt": "2026-10-20T20:47:28.4825103Z",
   "status": "independent-proposal-not-dealer-approved",
   "creationMethod": "imagegen-proposal",
   "assets": {
     "onLight": {
       "sourcePath": "branding/logo-on-light.png",
       "publicPath": "/dealer-brand/logo-on-light.webp",
-      "sha256": "bcd2688f79733474520693b5a1bc898b15ee7cafffb6b9ad864535e26b7b6865",
-      "sourceSha256": "a80a7a434ce0beeebcad548882511f6c9b150ca476019a428c2a5f40843daed1"
+      "sha256": "11e29c39826065b9533958e7ae8cf62161ce69f91ad10001e5742368bae4d273",
+      "sourceSha256": "1bdf2279d0695ac8df1ace1604fb7a234ee9436a0767e7b430db3f777d030f88"
     },
     "onDark": {
       "sourcePath": "branding/logo-on-dark.png",
@@ -41,36 +41,36 @@
   },
   "master": {
     "path": "branding/logo-master.png",
-    "sha256": "a80a7a434ce0beeebcad548882511f6c9b150ca476019a428c2a5f40843daed1",
+    "sha256": "1bdf2279d0695ac8df1ace1604fb7a234ee9436a0767e7b430db3f777d030f88",
     "generation": {
       "tool": "image_gen.imagegen",
-      "generationId": "exec-4ce5d39d-21b4-44df-a486-2e3e4fa94bf6",
+      "generationId": "exec-dd8bb388-f73d-47b0-af1c-adc2f5d2edd1",
       "modelVersion": null
     }
   },
   "mark": {
     "path": "branding/logo-mark.png",
-    "sha256": "2152f2cdb18f2a057b2fc6b11e552d5a433fd9f29c53de115972a3238553a1bc",
+    "sha256": "aaa63ed609c7bced34d13a14d9fc2cf2b376d24b190fdfeecb637c6ee1ad202c",
     "generation": {
       "tool": "image_gen.imagegen",
-      "generationId": "exec-4ce5d39d-21b4-44df-a486-2e3e4fa94bf6",
+      "generationId": "exec-b1f499d3-5470-4b8a-bfd0-3c49683d7b5b",
       "modelVersion": null
     }
   },
   "favicon": {
     "path": "dealer-brand/favicon.ico",
-    "sha256": "f8b77a8ab94b2487595393c3cf55d992a824db91bad84b5c271bdf554f94131b"
+    "sha256": "edccc6a7ed77823f6dd6aadbaf246edb3e468685e4e81b63f1513015f55f0a58"
   },
   "surfaces": {
     "onLight": {
       "path": "branding/logo-on-light.png",
-      "sha256": "a80a7a434ce0beeebcad548882511f6c9b150ca476019a428c2a5f40843daed1",
+      "sha256": "1bdf2279d0695ac8df1ace1604fb7a234ee9436a0767e7b430db3f777d030f88",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-4ce5d39d-21b4-44df-a486-2e3e4fa94bf6",
+        "generationId": "exec-dd8bb388-f73d-47b0-af1c-adc2f5d2edd1",
         "modelVersion": null
       },
-      "sourceReference": "dealers/mosaso/branding/generated-master.png"
+      "sourceReference": "dealers/mosaso/branding/generated-on-light-v2-20261020-8cbfebfd64714cee.png"
     },
     "onDark": {
       "path": "branding/logo-on-dark.png",
@@ -96,15 +96,15 @@
   "transforms": {
     "onLight": {
       "operation": "crop-transparent-padding-and-resize",
-      "sourceSha256": "8b620e89fdfa6b012106fe0f63cf4d3efc5f9469d803814d8423cb4925982470",
-      "sha256": "a80a7a434ce0beeebcad548882511f6c9b150ca476019a428c2a5f40843daed1",
+      "sourceSha256": "8cbfebfd64714cee9b7afb6fdf0dc68e1475b56dcc2bb7215cd9e23ab0de10a9",
+      "sha256": "1bdf2279d0695ac8df1ace1604fb7a234ee9436a0767e7b430db3f777d030f88",
       "crop": {
-        "left": 13,
+        "left": 16,
         "top": 112,
-        "width": 2155,
-        "height": 497
+        "width": 2149,
+        "height": 493
       },
-      "sourcePath": "branding/generated-master.png",
+      "sourcePath": "branding/generated-on-light-v2-20261020-8cbfebfd64714cee.png",
       "outputPath": "branding/logo-on-light.png"
     },
     "onDark": {
@@ -137,13 +137,13 @@
   "supplemental": {
     "mark-on-light.webp": {
       "path": "dealer-brand/mark-on-light.webp",
-      "sha256": "98d1a09a20f75c1c6d0df36ddb781e9a079cea3b2a348856a4cbb751f036132c",
+      "sha256": "c0f7d629dcefad0235d6800389f131e109df9c4ca70d84dadc9219689cdf2a21",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-4ce5d39d-21b4-44df-a486-2e3e4fa94bf6",
+        "generationId": "exec-b1f499d3-5470-4b8a-bfd0-3c49683d7b5b",
         "modelVersion": null
       },
-      "sourceReference": "dealers/mosaso/branding/generated-mark.png"
+      "sourceReference": "dealers/mosaso/branding/generated-compact-on-light-v2-20261020-982b2cb2d6e6c553.png"
     },
     "mark-on-dark.webp": {
       "path": "dealer-brand/mark-on-dark.webp",
@@ -157,30 +157,30 @@
     },
     "app-icon.png": {
       "path": "dealer-brand/app-icon.png",
-      "sha256": "2152f2cdb18f2a057b2fc6b11e552d5a433fd9f29c53de115972a3238553a1bc",
+      "sha256": "aaa63ed609c7bced34d13a14d9fc2cf2b376d24b190fdfeecb637c6ee1ad202c",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-4ce5d39d-21b4-44df-a486-2e3e4fa94bf6",
+        "generationId": "exec-b1f499d3-5470-4b8a-bfd0-3c49683d7b5b",
         "modelVersion": null
       },
-      "sourceReference": "dealers/mosaso/branding/generated-mark.png"
+      "sourceReference": "dealers/mosaso/branding/generated-compact-on-light-v2-20261020-982b2cb2d6e6c553.png"
     },
     "favicon.ico": {
       "path": "dealer-brand/favicon.ico",
-      "sha256": "f8b77a8ab94b2487595393c3cf55d992a824db91bad84b5c271bdf554f94131b",
+      "sha256": "edccc6a7ed77823f6dd6aadbaf246edb3e468685e4e81b63f1513015f55f0a58",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-4ce5d39d-21b4-44df-a486-2e3e4fa94bf6",
+        "generationId": "exec-b1f499d3-5470-4b8a-bfd0-3c49683d7b5b",
         "modelVersion": null
       },
-      "sourceReference": "dealers/mosaso/branding/generated-mark.png"
+      "sourceReference": "dealers/mosaso/branding/generated-compact-on-light-v2-20261020-982b2cb2d6e6c553.png"
     }
   },
   "markOnDarkReady": true,
   "originalArtworkPreserved": true,
   "visualReview": {
     "reviewed": true,
-    "reviewedAt": "2026-10-19T18:56:33.139740Z",
+    "reviewedAt": "2026-10-20T20:47:28.4825103Z",
     "source": "branding/source.json",
     "spelling": "agent-visual-review",
     "dealerApproval": false

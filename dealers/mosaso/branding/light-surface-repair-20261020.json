@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-owned-light-surface-contrast-repair",
+  "dealer": "mosaso",
+  "createdAt": "2026-10-20T20:46:14.717Z",
+  "previousPackDigest": "654b1164a0aee80bc23614d3b3f6f9eacfd06989dbcabc40706d77138d4df8ef",
+  "previousSource": {
+    "path": "branding/source-before-light-repair-20261020-ee1c83e439a6b030.json",
+    "sha256": "ee1c83e439a6b030524c6a90dfe7d2bde0116675dcccba268b95543926532bd7"
+  },
+  "description": "Existing navy M and teal road motif in deep navy/teal for white surfaces",
+  "replacements": [
+    {
+      "key": "wordmark-mosaso-light-v2",
+      "roles": [
+        "master",
+        "onLight"
+      ],
+      "path": "branding/generated-on-light-v2-20261020-8cbfebfd64714cee.png",
+      "sha256": "8cbfebfd64714cee9b7afb6fdf0dc68e1475b56dcc2bb7215cd9e23ab0de10a9",
+      "nativeDimensions": {
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-dd8bb388-f73d-47b0-af1c-adc2f5d2edd1",
+        "modelVersion": null
+      },
+      "prompt": "Use case: logo-brand. Input1 is EDIT TARGET: existing MOSASO independent proposal. Generate an actual stronger LIGHT-SURFACE variant preserving exact logo geometry: road-shaped teal S/road through navy M emblem LEFT and uppercase \"MOSASO\" RIGHT. Exact text \"MOSASO\", M-O-S-A-S-O. Keep wordmark letter shapes, proportions, spacing, road motif and dashed lane markings. Dominant deep navy (#0d2638 feel) for M and text; road uses deep teal (#00665e feel) with small restrained light lane dashes. Over85% visible ink strongly contrasts with WHITE. Remove bulky pale outlines; any fine edge remains subordinate. Keep navy/teal identity and genuine transparency. No new icon, background rectangle, shadow, glow, gradient, haze or alpha speckles. Crisp legible120/180px.",
+      "references": [
+        {
+          "path": "branding/generated-master.png",
+          "sha256": "8b620e89fdfa6b012106fe0f63cf4d3efc5f9469d803814d8423cb4925982470"
+        }
+      ]
+    },
+    {
+      "key": "compact-mosaso-light-v2",
+      "roles": [
+        "mark"
+      ],
+      "path": "branding/generated-compact-on-light-v2-20261020-982b2cb2d6e6c553.png",
+      "sha256": "982b2cb2d6e6c5532ef1c053c208cb645492dcad19a28909e4357cafc5afb89f",
+      "nativeDimensions": {
+        "width": 1115,
+        "height": 1411
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-b1f499d3-5470-4b8a-bfd0-3c49683d7b5b",
+        "modelVersion": null
+      },
+      "prompt": "Use case: logo-brand. Input1 is EDIT TARGET: exact MOSASO compact navy M with winding teal road/S. Generate a real stronger WHITE-SURFACE version preserving exact road/M silhouette, lane dashes, native compact geometry, counters, placement and all proportions. Deep navy M (#0d2638 feel) plus deep teal road (#00665e feel); over85% ink contrasts strongly with WHITE. Keep small restrained light lane dashes, remove dominant thick pale outline. Retain navy/teal identity, no new letters/icon, badge or background tile. Crisp strong fill clear at32px, genuine alpha transparency, no stretching, gradients, shadow, glow, haze or speckles.",
+      "references": [
+        {
+          "path": "branding/generated-mark.png",
+          "sha256": "1d8cd9098ac2b44d3190ef1f53b99dd28c315eef45b18910068740ed893a5415"
+        }
+      ]
+    }
+  ],
+  "visualReview": {
+    "kind": "agent-visual-review",
+    "viewedAt": "2026-10-20T20:47:28.4825103Z",
+    "wordmarkWidths": [
+      120,
+      180
+    ],
+    "compactWidths": [
+      32,
+      64
+    ],
+    "backgrounds": [
+      "#ffffff",
+      "#111113",
+      "#101820",
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ],
+    "identitySpellingReviewed": true,
+    "notes": "Viewed all four matched maintained consumer exports. KING STREET MOTORS, Million's / AUTO CARS, MOSASO and PRIME LANE / MOTORS LTD remain exact. Prime flat PL/coupe redraw is clean and legible without rejected halo; only failing light roles and Millions accent changed. Passing dark/other accent consumers remain visually and byte-identically preserved.",
+    "humanReview": false,
+    "ownerApproval": false,
+    "dealerApproval": false,
+    "nativeApproval": false,
+    "hostedApproval": false,
+    "comparison": {
+      "path": "J:/.artifacts/cars-source-sync/mosaso-light-logo-before-after.png",
+      "bytes": 181766,
+      "sha256": "b9937fa46807183d7832884ca2ad571e3ce6ef419cceae82f6c2dfaff20d3dbe",
+      "wordmarkWidths": [
+        120,
+        180
+      ],
+      "compactWidths": [
+        32,
+        64
+      ],
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#101820",
+        "#09090b",
+        "#17191c",
+        "#c40101"
+      ]
+    }
+  },
+  "originalArtworkPreserved": true,
+  "factsStockPhotosPreserved": true,
+  "filtersApplied": false,
+  "thresholdsChanged": false,
+  "providerWrites": 0
+}
