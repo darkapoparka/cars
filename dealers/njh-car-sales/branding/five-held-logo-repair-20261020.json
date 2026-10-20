@@ -1,0 +1,189 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-five-original-held-logo-contrast-repair",
+  "dealer": "njh-car-sales",
+  "createdAt": "2026-10-20T21:21:01.760Z",
+  "previousPackDigest": "2dba397d06a0e3bb1bed15ad6101f9d6e8894d4e5df7f1940adfeaebe58035d3",
+  "previousSource": {
+    "path": "branding/source-before-five-held-logo-repair-20261020-4fb2fcbb1ed7d6a5.json",
+    "sha256": "4fb2fcbb1ed7d6a51a62eb3c9159e7b6c5a0d45098637ad1b9c687ac7eeec1a1"
+  },
+  "previousInputs": [
+    {
+      "role": "wordLight",
+      "input": {
+        "path": "branding/generated-master.png",
+        "sha256": "a25ac49b5582997003dd4df1afca2e584f445b9aa7f372f2aff47b76c52e3418",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-d49576e7-912a-4970-b1f1-a986ae6e151e",
+          "modelVersion": null
+        }
+      }
+    },
+    {
+      "role": "wordDark",
+      "input": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "fdfc41f844e5d5d34e8b91709f21acf703d7dfc20cb4a43240d1c474f63f8464",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-02f49042-b3f7-4f15-b900-8261cc17acdf",
+          "modelVersion": null
+        }
+      }
+    },
+    {
+      "role": "markLight",
+      "input": {
+        "path": "branding/generated-mark.png",
+        "sha256": "dabdbe47d5d79ef30e172a4d10d3843861611b04a491ebc5956a255a0db3fea5",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-d49576e7-912a-4970-b1f1-a986ae6e151e",
+          "modelVersion": null
+        }
+      }
+    },
+    {
+      "role": "markDark",
+      "input": {
+        "path": "branding/generated-mark.png",
+        "sha256": "dabdbe47d5d79ef30e172a4d10d3843861611b04a491ebc5956a255a0db3fea5",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-d49576e7-912a-4970-b1f1-a986ae6e151e",
+          "modelVersion": null
+        }
+      }
+    }
+  ],
+  "replacements": [
+    {
+      "roles": [
+        "master",
+        "onLight"
+      ],
+      "reference": "branding/generated-master.png",
+      "path": "branding/generated-on-light-v2-20261020.png",
+      "sha256": "ac4fb423085518ae2cc20fb760c2c6c0d9602aecca2e960e69ebf8e0104b1702",
+      "nativeDimensions": {
+        "width": 1983,
+        "height": 793
+      },
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-3c618f54-bf84-4c6a-8c71-76cef7c7195e",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand, faithful dark-ink wordmark variant for WHITE backgrounds. Preserve exactly the reference circular NJH interlock emblem at left and the large NJH over CAR SALES lettering at right. Same typography, layout, proportions, letter spacing, circle and counters. All wordmark text, N/H of emblem and ring uniform opaque deep charcoal #17202b; emblem J flat deep muted blue #2c5a7a. Remove white keylines and heavy navy contours; all separating gaps and counters become transparent negative space. Exact spelling NJH CAR SALES, no omissions. Truly transparent background with generous padding. No background disk, extra outlines, gradient, halo, speckles, texture, glow, shadow, new lettering or redesign. Existing independent proposal, not dealer approved.",
+      "referencePaths": [
+        "L:/CODEX/cars/dealers/njh-car-sales/branding/generated-master.png"
+      ],
+      "createdAt": "2026-10-20T21:21:01.760Z",
+      "derivation": "Actual built-in imagegen edit of retained identity. Raw returned PNG copied byte-identical, with maintained transparent crop/resize only; no recolouring, filtering, alpha cleanup or threshold changes."
+    },
+    {
+      "roles": [
+        "onDark",
+        "onAccent"
+      ],
+      "reference": "branding/generated-on-dark.png",
+      "path": "branding/generated-on-dark-v2-20261020.png",
+      "sha256": "cabdfa8b21147fc29fed5db4fb0fa0ab2a57a63ce556bd731ba21144654acd52",
+      "nativeDimensions": {
+        "width": 1983,
+        "height": 793
+      },
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-c05ef681-a7d5-4af1-b9a0-b3561be878b3",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand, faithful inverse wordmark. Preserve exactly the circular interlocking NJH emblem on the left, huge NJH on line one and CAR SALES on line two, exact geometry, spacing, bold block letterforms, circle and counters. For charcoal/navy/black/red surfaces make main lettering, N/H of emblem and ring flat opaque pale silver-grey #c8d0d8; emblem J flat light powder blue #abcde3. Remove all heavy navy/black contours and white keylines; separation gaps and counters become transparent negative space. Do not fill holes or add a background disk. Exact spelling NJH CAR SALES. Truly transparent canvas, generous padding, no pure white, speckles, glow, shadows, halo, gradients, texture or new motifs. Existing independent proposal, no dealer approval.",
+      "referencePaths": [
+        "L:/CODEX/cars/dealers/njh-car-sales/branding/generated-on-dark.png"
+      ],
+      "createdAt": "2026-10-20T21:21:01.760Z",
+      "derivation": "Actual built-in imagegen edit of retained identity. Raw returned PNG copied byte-identical, with maintained transparent crop/resize only; no recolouring, filtering, alpha cleanup or threshold changes."
+    },
+    {
+      "roles": [
+        "mark",
+        "favicon"
+      ],
+      "reference": "branding/generated-mark.png",
+      "path": "branding/generated-mark-on-light-v2-20261020.png",
+      "sha256": "228f02e77b8534372257a995eb51e90ea981ae90d906e4e65e00a0854a26694e",
+      "nativeDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-1f8eb6ef-b0a8-4966-a16a-a2701b0a04d9",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand, faithful compact dark-ink variant for white-background favicon. Preserve exactly the circular NJH letter interlock, all initials, circle proportions, gaps, angular N/H and central hooked J. N and H plus outer ring uniform opaque deep charcoal #17202b, existing blue J flat opaque deep muted blue #2c5a7a. Remove white keylines and navy thick contours; all separating gaps and open counters must become truly transparent negative space. Keep every letter identifiable at32/64px, same geometry, no added background disk or new outlines. Center on square truly transparent canvas, generous padding. No gradients, texture, halo, glow, shadows, speckles or new details. Existing NJH CAR SALES independent proposal, not dealer approved.",
+      "referencePaths": [
+        "L:/CODEX/cars/dealers/njh-car-sales/branding/generated-mark.png"
+      ],
+      "createdAt": "2026-10-20T21:21:01.760Z",
+      "derivation": "Actual built-in imagegen edit of retained identity. Raw returned PNG copied byte-identical, with maintained transparent crop/resize only; no recolouring, filtering, alpha cleanup or threshold changes."
+    },
+    {
+      "roles": [
+        "markOnDark"
+      ],
+      "reference": "branding/generated-mark.png",
+      "path": "branding/generated-mark-on-dark-v2-20261020.png",
+      "sha256": "e247a6f61ffaf09e9031e592967dbc968af06387a6d290cb322050a2af86502f",
+      "nativeDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-f509e09b-c972-4040-9be3-ee756cfb3b1d",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand, faithful inverse compact variant for dark backgrounds. Preserve exactly this circular NJH interlock, each initial, circle, hook on J, N/H angles, counters, gaps and proportions. N and H plus ring uniform opaque pale silver-grey #c8d0d8; J flat opaque light powder blue #abcde3. Remove heavy navy/black contours and white keylines; separation gaps and counters become truly transparent negative space, no background disk. Same geometry, clear32/64px on charcoal/navy/red. Center on generous square truly transparent canvas. No pure white, gradients, shadow, halo, glow, speckles, texture, new outlines, letters or redesign. Existing NJH CAR SALES proposal, no dealer approval.",
+      "referencePaths": [
+        "L:/CODEX/cars/dealers/njh-car-sales/branding/generated-mark.png"
+      ],
+      "createdAt": "2026-10-20T21:21:01.760Z",
+      "derivation": "Actual built-in imagegen edit of retained identity. Raw returned PNG copied byte-identical, with maintained transparent crop/resize only; no recolouring, filtering, alpha cleanup or threshold changes."
+    }
+  ],
+  "changedRoles": [
+    "master",
+    "onLight",
+    "onDark",
+    "onAccent",
+    "mark",
+    "favicon",
+    "markOnDark"
+  ],
+  "derivedLightIconChanges": true,
+  "visualReview": {
+    "wordmarkWidths": [
+      120,
+      180
+    ],
+    "compactWidths": [
+      32,
+      64
+    ],
+    "backgrounds": [
+      "#ffffff",
+      "#111113",
+      "#101820",
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ],
+    "identityAndSpelling": "agent-visual-review",
+    "dealerApproval": false,
+    "nativeApproval": false,
+    "hostedApproval": false,
+    "humanReview": false
+  },
+  "originalArtworkFactsStockPhotosPalettesPreserved": true,
+  "passingConsumerHashesProtected": true,
+  "toolPackage": "L:/CODEX/cars/templates/karento-best/package.json",
+  "filtersApplied": false,
+  "thresholdsChanged": false,
+  "providerWrites": 0
+}

@@ -1,0 +1,386 @@
+{
+  "schemaVersion": 1,
+  "type": "cars-expansion-first-three-runtime-evidence",
+  "recordedAt": "2026-10-20T21:32:40.907Z",
+  "observedAt": "2026-10-20T21:27:30.068Z",
+  "sourceRunId": 39484929757,
+  "executorRunId": 39496540692,
+  "executorCommit": "97a7fb677c2341f438de2018aad97e1c14f90cf7",
+  "cohortComplete": false,
+  "cohortSize": 44,
+  "activatedAtCheckpoint": 3,
+  "hostedPassedAtCheckpoint": 3,
+  "runtimeAcceptedAtCheckpoint": 3,
+  "remainingAtCheckpoint": {
+    "active": 1,
+    "queued": 40
+  },
+  "combinedRolloutAtCheckpoint": {
+    "activated": 15,
+    "hostedPassed": 13,
+    "runtimeAccepted": 13,
+    "hostedFailed": 2,
+    "ownerAccepted": 0
+  },
+  "queueSnapshot": {
+    "revision": "9a9be48596b0d6225c9b929837bc3b138bc6d445",
+    "blob": "4598e20ca0f2d4abcb419e1751e21aa9064e91e3",
+    "sha256": "ca19e7b784197a70256832969b20dde63f1137ac5df0147b2cb5f17d81cdfba3",
+    "generation": 237,
+    "bytes": 436236
+  },
+  "priorHeld": [
+    "car-avenue-llc",
+    "dubuy-auto-cars"
+  ],
+  "samplingScope": "Authenticated analytics filter Worker script and exact hosted time window, not version. Receipt Worker/version establishes deployment provenance. Maximum sampled group P99 CPU/memory are not exact peaks, whole-window quantiles or sustained-load qualification.",
+  "evidenceCollectionProviderWrites": 0,
+  "queueWrites": 0,
+  "reports": [
+    {
+      "slug": "car-4-me-fz",
+      "publicOrigin": "https://car-4-me-fz.webpreviews.site",
+      "receiptSha256": "e46d7e2fd3ab0e38d6e08c72ff151f05d3bfae4da754ba036fc513c9a9c913e4",
+      "requestId": "b7e98c04d16fb0c5f9077bdeb5f264b078b06778084713177ba03b9e6a277af3",
+      "workerId": "af38f071077f4ec39c5ba6ef4abd557b",
+      "versionId": "155d349b-70c3-4744-a1bf-bbaec406be9d",
+      "sourceCommit": "f73c8e4b258653d1cee9c29d161e41774cfe6fb8",
+      "packDigest": "9fdd955468dfb3abc0abae68fd991166e2c9c992625103d2c25b9fcd465fbb41",
+      "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+      "releaseDigest": "2920143c97546de03d5e7c7c9f572fb87cee2b088cf48fbba40d575c73cfc9c3",
+      "outputDigest": "12c623b57d86d490f27f7b723fc2b94cb6ffbfe4a33c65bef4735b9a37b0023a",
+      "deployedAt": "2026-10-20T21:09:17.151Z",
+      "hosted": {
+        "verified": true,
+        "reportScope": "compact-acceptance-summary",
+        "fullReportCanonicalSha256": "b94396061dcf90b106fbec5cc074c79602943dcf190263ed8aef4714e850f50b",
+        "summarySha256": "f022d59edbaac379fc24e0f9d9873aea9298e4318b1e7b93d1dbee8b2e51413d",
+        "finishedAt": "2026-10-20T21:10:19.595Z",
+        "designs": [
+          {
+            "key": "auto-best",
+            "status": "passed"
+          },
+          {
+            "key": "modern",
+            "status": "passed"
+          },
+          {
+            "key": "import",
+            "status": "passed"
+          },
+          {
+            "key": "app",
+            "status": "passed"
+          },
+          {
+            "key": "mobile",
+            "status": "passed"
+          },
+          {
+            "key": "karento-best",
+            "status": "passed"
+          }
+        ],
+        "width": 390,
+        "language": "en"
+      },
+      "runtime": {
+        "schemaVersion": 1,
+        "type": "cars-dealer-pack-runtime-metrics",
+        "slug": "car-4-me-fz",
+        "workerName": "cars-car-4-me-fz",
+        "accountId": "cb0007f242077bd759331f096eb75531",
+        "window": {
+          "start": "2026-10-20T21:08:17.151Z",
+          "end": "2026-10-20T21:10:19.595Z"
+        },
+        "observedAt": "2026-10-20T21:27:27.968Z",
+        "providerWrites": 0,
+        "requests": 69,
+        "errors": 0,
+        "exceptionalStatuses": [],
+        "startupTimeMs": 66,
+        "cpuAvailable": true,
+        "memoryAvailable": true,
+        "maxP99CpuMs": 306.177,
+        "maxP99MemoryMiB": 113.5330867767334,
+        "status": "observed-without-errors",
+        "cpuLimitMs": 30000,
+        "cpuLimitSource": "provider-active-version-readback",
+        "withinLimits": true,
+        "limitChecks": {
+          "startup": {
+            "withinLimit": true,
+            "observedMs": 66,
+            "limitMs": 1000
+          },
+          "cpu": {
+            "withinLimit": true,
+            "observedMaxGroupP99Ms": 306.177,
+            "limitMs": 30000
+          },
+          "memory": {
+            "withinLimit": true,
+            "observedMaxGroupP99MiB": 113.5330867767334,
+            "limitMiB": 128
+          }
+        },
+        "limitsReference": {
+          "source": "https://developers.cloudflare.com/workers/platform/limits/",
+          "verifiedAt": "2026-10-19"
+        },
+        "interpretation": "withinLimits compares measured upload startup and sampled maximum group P99 CPU/memory values against their stated limits, and requires observed invocations without errors. It is null when evidence is incomplete unless an observed failure already establishes false. These are not exact peaks, whole-window quantiles or a guarantee about every invocation. Memory is shared per V8 isolate; absent data is not zero usage. This pilot does not establish sustained production-load headroom.",
+        "scope": "exact-hosted-window-convention",
+        "provenance": {
+          "requestId": "b7e98c04d16fb0c5f9077bdeb5f264b078b06778084713177ba03b9e6a277af3",
+          "receiptSha256": "e46d7e2fd3ab0e38d6e08c72ff151f05d3bfae4da754ba036fc513c9a9c913e4",
+          "workerId": "af38f071077f4ec39c5ba6ef4abd557b",
+          "versionId": "155d349b-70c3-4744-a1bf-bbaec406be9d",
+          "packDigest": "9fdd955468dfb3abc0abae68fd991166e2c9c992625103d2c25b9fcd465fbb41",
+          "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+          "releaseDigest": "2920143c97546de03d5e7c7c9f572fb87cee2b088cf48fbba40d575c73cfc9c3",
+          "outputDigest": "12c623b57d86d490f27f7b723fc2b94cb6ffbfe4a33c65bef4735b9a37b0023a",
+          "sourceCommit": "f73c8e4b258653d1cee9c29d161e41774cfe6fb8",
+          "sourceRun": 39484929757,
+          "queueCommit": "4f4c1f3022a98d1209f8032d9125e3d62394b8c1",
+          "windowConvention": "receipt.deployedAt minus60 seconds through exact hosted.report.finishedAt; script/time sampled scope, not version-filtered",
+          "providerWrites": 0
+        },
+        "analyticsCollectedAt": "2026-10-20T21:25:32.383Z"
+      },
+      "technicalAcceptance": true,
+      "ownerAccepted": false
+    },
+    {
+      "slug": "great-west-east-auto",
+      "publicOrigin": "https://great-west-east-auto.webpreviews.site",
+      "receiptSha256": "ecb627fa50f10ec4519d69440704334a5f88d84e21cc7bdb9c321365bb4fafe7",
+      "requestId": "670234111a27d7844124180daba0be525b01a39bc8ad9b2248c3ea5e4edc542d",
+      "workerId": "b6a6d91d4b874d40be161120ed55bbfb",
+      "versionId": "4cedcbb8-cdf0-46ac-a3fa-6d5b7bc70ff1",
+      "sourceCommit": "f73c8e4b258653d1cee9c29d161e41774cfe6fb8",
+      "packDigest": "a6fb10a21ed2248ddf2164ea175d27f2c2ab5e9650cd53eff422f07d06e30f10",
+      "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+      "releaseDigest": "2920143c97546de03d5e7c7c9f572fb87cee2b088cf48fbba40d575c73cfc9c3",
+      "outputDigest": "9ae38c790844ccb0d8b46038a70b7893c6005ecaa01b95389ee9ab83dbef756f",
+      "deployedAt": "2026-10-20T21:16:55.887Z",
+      "hosted": {
+        "verified": true,
+        "reportScope": "compact-acceptance-summary",
+        "fullReportCanonicalSha256": "df09720aa502ba5411d68b58f50b3355e30c750d1b54457d7551f16b8caccc66",
+        "summarySha256": "5cceac0972274dd2aba5a064667ffbc39286aa828cc51bc71c90d1df2e4aa31f",
+        "finishedAt": "2026-10-20T21:17:38.170Z",
+        "designs": [
+          {
+            "key": "auto-best",
+            "status": "passed"
+          },
+          {
+            "key": "modern",
+            "status": "passed"
+          },
+          {
+            "key": "import",
+            "status": "passed"
+          },
+          {
+            "key": "app",
+            "status": "passed"
+          },
+          {
+            "key": "mobile",
+            "status": "passed"
+          },
+          {
+            "key": "karento-best",
+            "status": "passed"
+          }
+        ],
+        "width": 390,
+        "language": "en"
+      },
+      "runtime": {
+        "schemaVersion": 1,
+        "type": "cars-dealer-pack-runtime-metrics",
+        "slug": "great-west-east-auto",
+        "workerName": "cars-great-west-east-auto",
+        "accountId": "cb0007f242077bd759331f096eb75531",
+        "window": {
+          "start": "2026-10-20T21:15:55.887Z",
+          "end": "2026-10-20T21:17:38.170Z"
+        },
+        "observedAt": "2026-10-20T21:27:27.968Z",
+        "providerWrites": 0,
+        "requests": 64,
+        "errors": 0,
+        "exceptionalStatuses": [],
+        "startupTimeMs": 67,
+        "cpuAvailable": true,
+        "memoryAvailable": true,
+        "maxP99CpuMs": 241.969,
+        "maxP99MemoryMiB": 112.69445419311523,
+        "status": "observed-without-errors",
+        "cpuLimitMs": 30000,
+        "cpuLimitSource": "provider-active-version-readback",
+        "withinLimits": true,
+        "limitChecks": {
+          "startup": {
+            "withinLimit": true,
+            "observedMs": 67,
+            "limitMs": 1000
+          },
+          "cpu": {
+            "withinLimit": true,
+            "observedMaxGroupP99Ms": 241.969,
+            "limitMs": 30000
+          },
+          "memory": {
+            "withinLimit": true,
+            "observedMaxGroupP99MiB": 112.69445419311523,
+            "limitMiB": 128
+          }
+        },
+        "limitsReference": {
+          "source": "https://developers.cloudflare.com/workers/platform/limits/",
+          "verifiedAt": "2026-10-19"
+        },
+        "interpretation": "withinLimits compares measured upload startup and sampled maximum group P99 CPU/memory values against their stated limits, and requires observed invocations without errors. It is null when evidence is incomplete unless an observed failure already establishes false. These are not exact peaks, whole-window quantiles or a guarantee about every invocation. Memory is shared per V8 isolate; absent data is not zero usage. This pilot does not establish sustained production-load headroom.",
+        "scope": "exact-hosted-window-convention",
+        "provenance": {
+          "requestId": "670234111a27d7844124180daba0be525b01a39bc8ad9b2248c3ea5e4edc542d",
+          "receiptSha256": "ecb627fa50f10ec4519d69440704334a5f88d84e21cc7bdb9c321365bb4fafe7",
+          "workerId": "b6a6d91d4b874d40be161120ed55bbfb",
+          "versionId": "4cedcbb8-cdf0-46ac-a3fa-6d5b7bc70ff1",
+          "packDigest": "a6fb10a21ed2248ddf2164ea175d27f2c2ab5e9650cd53eff422f07d06e30f10",
+          "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+          "releaseDigest": "2920143c97546de03d5e7c7c9f572fb87cee2b088cf48fbba40d575c73cfc9c3",
+          "outputDigest": "9ae38c790844ccb0d8b46038a70b7893c6005ecaa01b95389ee9ab83dbef756f",
+          "sourceCommit": "f73c8e4b258653d1cee9c29d161e41774cfe6fb8",
+          "sourceRun": 39484929757,
+          "queueCommit": "4f4c1f3022a98d1209f8032d9125e3d62394b8c1",
+          "windowConvention": "receipt.deployedAt minus60 seconds through exact hosted.report.finishedAt; script/time sampled scope, not version-filtered",
+          "providerWrites": 0
+        },
+        "analyticsCollectedAt": "2026-10-20T21:25:32.383Z"
+      },
+      "technicalAcceptance": true,
+      "ownerAccepted": false
+    },
+    {
+      "slug": "jr-auto-fzco",
+      "publicOrigin": "https://jr-auto-fzco.webpreviews.site",
+      "receiptSha256": "4ba079dc54f72066cd26dc55cc603ae97e908dd5d9fc926a7a95589be7862d0a",
+      "requestId": "d3e969f9115f12ac3f5aeb7dde9e2e10e3712cbed7923d55c113044ca8d7294e",
+      "workerId": "27dbbfe560d8439ab14c46a776d657f3",
+      "versionId": "93137f8d-bc65-4a4b-975c-091fe2637bea",
+      "sourceCommit": "f73c8e4b258653d1cee9c29d161e41774cfe6fb8",
+      "packDigest": "82df8888e6041440fe8bf5aaaa154e8cb232ff3a293d8a4b85fa0747449a272f",
+      "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+      "releaseDigest": "2920143c97546de03d5e7c7c9f572fb87cee2b088cf48fbba40d575c73cfc9c3",
+      "outputDigest": "184faea6afbc1987a58e5b6c5ee7b5ee485011052a5a2b59278e2c42115e52b3",
+      "deployedAt": "2026-10-20T21:25:08.725Z",
+      "hosted": {
+        "verified": true,
+        "reportScope": "compact-acceptance-summary",
+        "fullReportCanonicalSha256": "261b3b36128f28a6d3e240390e4c4e1af8a5ec001dc915189fd0064197c96ce4",
+        "summarySha256": "b2596a18b4c7efefeab7c6c244afef3c8c827a81c91d289751b25919ceb0c884",
+        "finishedAt": "2026-10-20T21:25:50.899Z",
+        "designs": [
+          {
+            "key": "auto-best",
+            "status": "passed"
+          },
+          {
+            "key": "modern",
+            "status": "passed"
+          },
+          {
+            "key": "import",
+            "status": "passed"
+          },
+          {
+            "key": "app",
+            "status": "passed"
+          },
+          {
+            "key": "mobile",
+            "status": "passed"
+          },
+          {
+            "key": "karento-best",
+            "status": "passed"
+          }
+        ],
+        "width": 390,
+        "language": "en"
+      },
+      "runtime": {
+        "schemaVersion": 1,
+        "type": "cars-dealer-pack-runtime-metrics",
+        "slug": "jr-auto-fzco",
+        "workerName": "cars-jr-auto-fzco",
+        "accountId": "cb0007f242077bd759331f096eb75531",
+        "window": {
+          "start": "2026-10-20T21:24:08.725Z",
+          "end": "2026-10-20T21:25:50.899Z"
+        },
+        "observedAt": "2026-10-20T21:27:27.968Z",
+        "providerWrites": 0,
+        "requests": 76,
+        "errors": 0,
+        "exceptionalStatuses": [],
+        "startupTimeMs": 79,
+        "cpuAvailable": true,
+        "memoryAvailable": true,
+        "maxP99CpuMs": 386.547,
+        "maxP99MemoryMiB": 113.33587646484375,
+        "status": "observed-without-errors",
+        "cpuLimitMs": 30000,
+        "cpuLimitSource": "provider-active-version-readback",
+        "withinLimits": true,
+        "limitChecks": {
+          "startup": {
+            "withinLimit": true,
+            "observedMs": 79,
+            "limitMs": 1000
+          },
+          "cpu": {
+            "withinLimit": true,
+            "observedMaxGroupP99Ms": 386.547,
+            "limitMs": 30000
+          },
+          "memory": {
+            "withinLimit": true,
+            "observedMaxGroupP99MiB": 113.33587646484375,
+            "limitMiB": 128
+          }
+        },
+        "limitsReference": {
+          "source": "https://developers.cloudflare.com/workers/platform/limits/",
+          "verifiedAt": "2026-10-19"
+        },
+        "interpretation": "withinLimits compares measured upload startup and sampled maximum group P99 CPU/memory values against their stated limits, and requires observed invocations without errors. It is null when evidence is incomplete unless an observed failure already establishes false. These are not exact peaks, whole-window quantiles or a guarantee about every invocation. Memory is shared per V8 isolate; absent data is not zero usage. This pilot does not establish sustained production-load headroom.",
+        "scope": "exact-hosted-window-convention",
+        "provenance": {
+          "requestId": "d3e969f9115f12ac3f5aeb7dde9e2e10e3712cbed7923d55c113044ca8d7294e",
+          "receiptSha256": "4ba079dc54f72066cd26dc55cc603ae97e908dd5d9fc926a7a95589be7862d0a",
+          "workerId": "27dbbfe560d8439ab14c46a776d657f3",
+          "versionId": "93137f8d-bc65-4a4b-975c-091fe2637bea",
+          "packDigest": "82df8888e6041440fe8bf5aaaa154e8cb232ff3a293d8a4b85fa0747449a272f",
+          "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+          "releaseDigest": "2920143c97546de03d5e7c7c9f572fb87cee2b088cf48fbba40d575c73cfc9c3",
+          "outputDigest": "184faea6afbc1987a58e5b6c5ee7b5ee485011052a5a2b59278e2c42115e52b3",
+          "sourceCommit": "f73c8e4b258653d1cee9c29d161e41774cfe6fb8",
+          "sourceRun": 39484929757,
+          "queueCommit": "05296e906cd5e90e36e63eae9a03b29cc7125308",
+          "windowConvention": "receipt.deployedAt minus60 seconds through exact hosted.report.finishedAt; script/time sampled scope, not version-filtered",
+          "providerWrites": 0
+        },
+        "analyticsCollectedAt": "2026-10-20T21:27:27.480Z"
+      },
+      "technicalAcceptance": true,
+      "ownerAccepted": false
+    }
+  ]
+}

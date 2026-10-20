@@ -2,27 +2,27 @@
   "schemaVersion": 1,
   "dealer": "unique-motors-nottingham",
   "reviewed": true,
-  "reviewedAt": "2026-10-19T18:39:29.314Z",
+  "reviewedAt": "2026-10-20T21:21:15.198Z",
   "status": "independent-proposal-not-dealer-approved",
   "creationMethod": "imagegen-redraw",
   "assets": {
     "onLight": {
       "sourcePath": "branding/logo-on-light.png",
       "publicPath": "/dealer-brand/logo-on-light.webp",
-      "sha256": "4f253fb1e9b64eecdcdcfb341dfa611bb895c12923fade52b3402b02cbb76909",
-      "sourceSha256": "a9046e8bc8e6bc220aeddf5f82aa59018d155f2f710ec93ed51078b53d88d467"
+      "sha256": "ffdee93ab9f94019703ba6b7464168ff13b7da666300be5b4049e5e5b1ef40bb",
+      "sourceSha256": "b26581a0cce422a988c79c3a856e320b88464df01b23013db2b172a7b439bd2f"
     },
     "onDark": {
       "sourcePath": "branding/logo-on-dark.png",
       "publicPath": "/dealer-brand/logo-on-dark.webp",
-      "sha256": "4f253fb1e9b64eecdcdcfb341dfa611bb895c12923fade52b3402b02cbb76909",
-      "sourceSha256": "a9046e8bc8e6bc220aeddf5f82aa59018d155f2f710ec93ed51078b53d88d467"
+      "sha256": "662942ba1897c2ce531787bfdaa0499e9ec2f2b81a0609733c7ecc445190d47b",
+      "sourceSha256": "6ffab44a44e0a2dd513257491daeecd312651557d5bfb76e4e73474dd790414c"
     },
     "onAccent": {
       "sourcePath": "branding/logo-on-accent.png",
       "publicPath": "/dealer-brand/logo-on-accent.webp",
-      "sha256": "4f253fb1e9b64eecdcdcfb341dfa611bb895c12923fade52b3402b02cbb76909",
-      "sourceSha256": "a9046e8bc8e6bc220aeddf5f82aa59018d155f2f710ec93ed51078b53d88d467"
+      "sha256": "662942ba1897c2ce531787bfdaa0499e9ec2f2b81a0609733c7ecc445190d47b",
+      "sourceSha256": "6ffab44a44e0a2dd513257491daeecd312651557d5bfb76e4e73474dd790414c"
     }
   },
   "surfaceBackgrounds": {
@@ -41,10 +41,10 @@
   },
   "master": {
     "path": "branding/logo-master.png",
-    "sha256": "a9046e8bc8e6bc220aeddf5f82aa59018d155f2f710ec93ed51078b53d88d467",
+    "sha256": "b26581a0cce422a988c79c3a856e320b88464df01b23013db2b172a7b439bd2f",
     "generation": {
       "tool": "image_gen.imagegen",
-      "generationId": "exec-d79cf616-df8d-4b56-b99e-57e6a1f75b84",
+      "generationId": "exec-f240a431-e5f7-430e-95b4-a332904c011a",
       "modelVersion": null
     }
   },
@@ -64,73 +64,73 @@
   "surfaces": {
     "onLight": {
       "path": "branding/logo-on-light.png",
-      "sha256": "a9046e8bc8e6bc220aeddf5f82aa59018d155f2f710ec93ed51078b53d88d467",
+      "sha256": "b26581a0cce422a988c79c3a856e320b88464df01b23013db2b172a7b439bd2f",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-d79cf616-df8d-4b56-b99e-57e6a1f75b84",
+        "generationId": "exec-f240a431-e5f7-430e-95b4-a332904c011a",
         "modelVersion": null
       },
-      "sourceReference": "dealers/unique-motors-nottingham/branding/generated-master.png"
+      "sourceReference": "dealers/unique-motors-nottingham/branding/generated-on-light-v2-20261020.png"
     },
     "onDark": {
       "path": "branding/logo-on-dark.png",
-      "sha256": "a9046e8bc8e6bc220aeddf5f82aa59018d155f2f710ec93ed51078b53d88d467",
+      "sha256": "6ffab44a44e0a2dd513257491daeecd312651557d5bfb76e4e73474dd790414c",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-d79cf616-df8d-4b56-b99e-57e6a1f75b84",
+        "generationId": "exec-57d126e8-adeb-4bc3-a49c-3f1d0360ee70",
         "modelVersion": null
       },
-      "sourceReference": "dealers/unique-motors-nottingham/branding/generated-master.png"
+      "sourceReference": "dealers/unique-motors-nottingham/branding/generated-on-dark-v2-20261020.png"
     },
     "onAccent": {
       "path": "branding/logo-on-accent.png",
-      "sha256": "a9046e8bc8e6bc220aeddf5f82aa59018d155f2f710ec93ed51078b53d88d467",
+      "sha256": "6ffab44a44e0a2dd513257491daeecd312651557d5bfb76e4e73474dd790414c",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-d79cf616-df8d-4b56-b99e-57e6a1f75b84",
+        "generationId": "exec-57d126e8-adeb-4bc3-a49c-3f1d0360ee70",
         "modelVersion": null
       },
-      "sourceReference": "dealers/unique-motors-nottingham/branding/generated-master.png"
+      "sourceReference": "dealers/unique-motors-nottingham/branding/generated-on-dark-v2-20261020.png"
     }
   },
   "transforms": {
     "onLight": {
       "operation": "crop-transparent-padding-and-resize",
-      "sourceSha256": "7334e6ef8ed8b0b7b54086a1204eef4357d8b60e49ec044aa38976c70f90ab4c",
-      "sha256": "a9046e8bc8e6bc220aeddf5f82aa59018d155f2f710ec93ed51078b53d88d467",
+      "sourceSha256": "ea5d05e29b0a2d3ba640f4c7bbc1d14013b0a248ab1d4c1c3435761896baff19",
+      "sha256": "b26581a0cce422a988c79c3a856e320b88464df01b23013db2b172a7b439bd2f",
       "crop": {
         "left": 0,
-        "top": 103,
-        "width": 2170,
-        "height": 516
+        "top": 105,
+        "width": 2169,
+        "height": 505
       },
-      "sourcePath": "branding/generated-master.png",
+      "sourcePath": "branding/generated-on-light-v2-20261020.png",
       "outputPath": "branding/logo-on-light.png"
     },
     "onDark": {
       "operation": "crop-transparent-padding-and-resize",
-      "sourceSha256": "7334e6ef8ed8b0b7b54086a1204eef4357d8b60e49ec044aa38976c70f90ab4c",
-      "sha256": "a9046e8bc8e6bc220aeddf5f82aa59018d155f2f710ec93ed51078b53d88d467",
+      "sourceSha256": "25bbd40da37fc2da4acc17cede00e8aa7e04e6dae380dedb7c49d996fbfe42bc",
+      "sha256": "6ffab44a44e0a2dd513257491daeecd312651557d5bfb76e4e73474dd790414c",
       "crop": {
         "left": 0,
-        "top": 103,
-        "width": 2170,
-        "height": 516
+        "top": 107,
+        "width": 2169,
+        "height": 502
       },
-      "sourcePath": "branding/generated-master.png",
+      "sourcePath": "branding/generated-on-dark-v2-20261020.png",
       "outputPath": "branding/logo-on-dark.png"
     },
     "onAccent": {
       "operation": "crop-transparent-padding-and-resize",
-      "sourceSha256": "7334e6ef8ed8b0b7b54086a1204eef4357d8b60e49ec044aa38976c70f90ab4c",
-      "sha256": "a9046e8bc8e6bc220aeddf5f82aa59018d155f2f710ec93ed51078b53d88d467",
+      "sourceSha256": "25bbd40da37fc2da4acc17cede00e8aa7e04e6dae380dedb7c49d996fbfe42bc",
+      "sha256": "6ffab44a44e0a2dd513257491daeecd312651557d5bfb76e4e73474dd790414c",
       "crop": {
         "left": 0,
-        "top": 103,
-        "width": 2170,
-        "height": 516
+        "top": 107,
+        "width": 2169,
+        "height": 502
       },
-      "sourcePath": "branding/generated-master.png",
+      "sourcePath": "branding/generated-on-dark-v2-20261020.png",
       "outputPath": "branding/logo-on-accent.png"
     }
   },
@@ -147,13 +147,13 @@
     },
     "mark-on-dark.webp": {
       "path": "dealer-brand/mark-on-dark.webp",
-      "sha256": "166cb4b78f55239c6ff6741469f01bffcdfd3c83b0d969d9bcd399471d6e76a9",
+      "sha256": "b8d2e40693e52f32247a4111e97b723b5bd7b32ea76056365210ea0164fb7aca",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-d79cf616-df8d-4b56-b99e-57e6a1f75b84",
+        "generationId": "exec-c1506cde-bd35-4a4c-96dc-be482e9d5762",
         "modelVersion": null
       },
-      "sourceReference": "dealers/unique-motors-nottingham/branding/generated-mark.png"
+      "sourceReference": "dealers/unique-motors-nottingham/branding/generated-mark-on-dark-v2-20261020.png"
     },
     "app-icon.png": {
       "path": "dealer-brand/app-icon.png",
@@ -180,17 +180,17 @@
   "originalArtworkPreserved": true,
   "visualReview": {
     "reviewed": true,
-    "reviewedAt": "2026-10-19T18:39:29.314Z",
+    "reviewedAt": "2026-10-20T21:21:15.198Z",
     "source": "branding/source.json",
     "spelling": "agent-visual-review",
     "dealerApproval": false
   },
   "markOnDark": {
     "path": "branding/logo-mark-on-dark.png",
-    "sha256": "c465e932d2bb42f90ff8e85ea66a8551ca61c6152c81e7b41943eb65c39cbcdf",
+    "sha256": "e893457b57c09448abd5875411f7d4e46d91a8457dca3ffe9f7a8c79fb96b08a",
     "generation": {
       "tool": "image_gen.imagegen",
-      "generationId": "exec-d79cf616-df8d-4b56-b99e-57e6a1f75b84",
+      "generationId": "exec-c1506cde-bd35-4a4c-96dc-be482e9d5762",
       "modelVersion": null
     }
   }

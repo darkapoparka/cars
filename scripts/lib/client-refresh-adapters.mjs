@@ -12,6 +12,7 @@ import {renderModernDealerInventoryCopy} from './modern-dealer-inventory-copy.mj
 import {personalizeModernDealerServices} from './modern-dealer-services.mjs';
 import { DEALER_PACK_MODERN_PATHS, dealerPackModernListing, isDealerPackOptionalFacts, personalizeDealerPackModernFacts } from './dealer-pack-modern-facts.mjs';
 import {repairImportDealerInventoryCatalog} from './import-dealer-inventory-copy.mjs';
+import {readCatalogLiteral} from './catalog-literal.mjs';
 import { applyCarwowSafeContent, applyImportSafeContent, applyModernSafeContent } from './client-refresh-safe-content.mjs';
 
 const exists = (file) => fs.existsSync(file);
@@ -1633,23 +1634,37 @@ function patchImportHeroBindings(candidate) {
 
 function personalizeImportMessageText(source, replacements) {
   const replace=(text,rows)=>{for(const [from,to] of rows)text=text.split(from).join(to);return text;};
+  const replacementStart=source.indexOf('const auxeroBgReplacements:'),replacementEnd=source.indexOf('\n];',replacementStart)+3;
+  if(replacementStart<0||replacementEnd<=replacementStart)throw Error('Import message replacement catalog boundary changed');
+  const replacementSlots=replacements.map(([from,to])=>[from,String(to).split('$').join('$$')]);
+  // Decode only the static string slots which actually contain a retained
+  // identity. JSON string encoding preserves quotes/backslashes and keeps a
+  // sourced ${...} sequence as display text, never executable interpolation.
+  const slots=(text,replacementCopy)=>text.replace(/(["'`])(?:\\.|(?!\1)[^\\\r\n])*\1/g,literal=>{
+    if(!replacements.some(([from])=>literal.includes(from)))return literal;
+    const parsed=readCatalogLiteral(literal);if(typeof parsed.value!=='string'||parsed.end!==literal.length)throw Error('Import message string literal boundary changed');
+    // These catalog strings are String.replace templates. Escape only dollars
+    // from the sourced identity; existing $1/$2 count captures stay active.
+    return JSON.stringify(replace(parsed.value,replacementCopy?replacementSlots:replacements));
+  });
   const escape=value=>String(value).replace(/[.*+?^${}()|[\]\\]/g,'\\$&').replaceAll('/','\\/').replaceAll('\r','\\r').replaceAll('\n','\\n').replaceAll('\u2028','\\u2028').replaceAll('\u2029','\\u2029');
   const escaped=replacements.map(([from,to])=>[from,escape(to)]);
   // The reviewed message catalog stores its regex literals in array rows.
   // Personalize each pattern separately from its adjacent display string, so
   // a sourced slash or metacharacter never becomes generated regex syntax.
-  return source.split(/(?<=\n)/).map(line=>{
-    const marker=/^[ \t]*(?:\[[ \t]*)?\/(?![/*])/.exec(line);if(!marker)return replace(line,replacements);
+  let offset=0;return source.split(/(?<=\n)/).map(line=>{
+    const replacementCopy=offset>=replacementStart&&offset<replacementEnd;offset+=line.length;
+    const marker=/^[ \t]*(?:\[[ \t]*)?\/(?![/*])/.exec(line);if(!marker)return slots(line,replacementCopy);
     const open=marker[0].length-1;let close=-1,inClass=false;
     for(let index=open+1;index<line.length;index++){
       if(line[index]==='\\'){index++;continue;}
       if(line[index]==='[')inClass=true;else if(line[index]===']')inClass=false;else if(line[index]==='/'&&!inClass){close=index;break;}
     }
     if(close<0)throw Error('Import message regex literal boundary changed');
-    const original=line.slice(open+1,close);if(!replacements.some(([from])=>original.includes(from)))return replace(line,replacements);
+    const original=line.slice(open+1,close);if(!replacements.some(([from])=>original.includes(from)))return slots(line,replacementCopy);
     const flags=/^\/([dgimsuvy]*)(?=[ \t]*[,;\]])/.exec(line.slice(close));if(!flags)throw Error('Import message regex flags boundary changed');
     const pattern=replace(original,escaped);new RegExp(pattern,flags[1]);
-    return replace(line.slice(0,open+1),replacements)+pattern+replace(line.slice(close),replacements);
+    return slots(line.slice(0,open+1),replacementCopy)+pattern+slots(line.slice(close),replacementCopy);
   }).join('');
 }
 

@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { repairImportDealerInventoryCatalog } from './lib/import-dealer-inventory-copy.mjs';
 
-for (const [color,bg] of [['Red','Червен'],['Gold','Златист'],['Green','Зелен']]) test(`reviewed ${color} companion preserves stock and retained copy while unknown colors still refuse`, () => {
+for (const [color,bg] of [['Red','Червен'],['Gold','Златист'],['Green','Зелен'],['Pink','Розов'],['Yellow','Жълт'],['Orange','Оранжев']]) test(`reviewed ${color} companion preserves stock and retained copy while unknown colors still refuse`, () => {
   const source="export const inventoryCopy = { retained: { bg: 'Запазен', en: 'Retained' } } as const;\nexport const inventorySourceKeys = { 'existing-term': 'retained' } as const;\n";
   const description='Example description with {model}.';
   const listing={slug:'reviewed-'+color.toLowerCase()+'-listing',shortDescription:description,color,features:[],price:19999,mileage:92500,sourceUrl:'https://example.invalid/listing/1090',images:['/unchanged-illustration.webp']};

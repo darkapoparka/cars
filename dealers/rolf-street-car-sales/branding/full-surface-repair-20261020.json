@@ -1,0 +1,149 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-owned-full-surface-contrast-repair",
+  "dealer": "rolf-street-car-sales",
+  "createdAt": "2026-10-20T21:21:33.549Z",
+  "previousPackDigest": "6e86bc9d1d0c0529125e28e639c6fb71d3c018b0fd99794933d463b24457f4c5",
+  "previousSource": {
+    "path": "branding/source-before-full-repair-20261020-27123519c307d9f8.json",
+    "sha256": "27123519c307d9f844b8e081bcd74017ccd25979c80eb6501a4f677b932815a3"
+  },
+  "description": "RS road/arrow and ROLF STREET CAR SALES; original passing dark compact retained",
+  "replacements": [
+    {
+      "key": "wordmark-rolf-light-v2",
+      "roles": [
+        "master",
+        "onLight"
+      ],
+      "path": "branding/generated-on-light-v2-20261020-851228c40a798387.png",
+      "sha256": "851228c40a798387425672fb17bea047a782c3e26213b945214569e39a92e6b6",
+      "nativeDimensions": {
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-044b5cde-14fc-478d-8217-ca360bb1f1e1",
+        "modelVersion": null
+      },
+      "prompt": "Use case: logo-brand. Input1 is EDIT TARGET. Create an actual dedicated WHITE-SURFACE deep-ink transparent variant. Preserve exact spelling, composition, typography, emblem geometry, natural proportions and all counters. At least90% of visible ink must contrast strongly with WHITE. Clean flat opaque ink, genuine alpha transparency. No backing tile, glow, halo, shadow, gradients, blur, bevel or alpha speckles. No added words or motifs. Clear at120/180px. Retain RS road-and-arrow emblem LEFT and exact ROLF STREET CAR SALES on one line RIGHT. R and S winding-road dashed lane markings remain. Use dominant deep navy ROLF STREET/R, deep burnt orange (#914000) for CAR SALES/S; small subordinate white lane dashes. Preserve navy/orange identity family, no thick pale edge.",
+      "references": [
+        {
+          "path": "branding/generated-master.png",
+          "sha256": "7f987315cf01ca5a9d5cfd53a46d04b9fba6c1301d465e48af204d6e965089fb"
+        }
+      ]
+    },
+    {
+      "key": "wordmark-rolf-dark-v3",
+      "roles": [
+        "onDark",
+        "onAccent"
+      ],
+      "path": "branding/generated-on-dark-v2-20261020-bf1eb4fa09615233.png",
+      "sha256": "bf1eb4fa0961523342bd120e3b9717cd94905701ae5b493aa373b8b7e6271308",
+      "nativeDimensions": {
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-bc497a21-a627-49d8-899b-3cd1c7b6b872",
+        "modelVersion": null
+      },
+      "prompt": "Use case: logo-brand. Input1 edit target. Keep exact RS winding-road/arrow emblem at left and exact ROLF STREET CAR SALES lettering one line at right, same proportions. Make a clean ALL-IVORY inverse. EVERY letter including CAR SALES and the whole S must be solid #e8edf3 ivory, no orange at all. RS lane dashes can be transparent thin counters. No heavy dark outline: only tiny fine internal keyline if required. Truly transparent background and counters. Flat opaque ink stamp, crisp clean edges, no glow, blur, gradient, shadow, halo or alpha flecks. At least95% visible ink light, clear on dark #111113 and RED #c40101. Preserve exact spelling and composition.",
+      "references": [
+        {
+          "path": "branding/generated-master.png",
+          "sha256": "7f987315cf01ca5a9d5cfd53a46d04b9fba6c1301d465e48af204d6e965089fb"
+        }
+      ]
+    },
+    {
+      "key": "compact-rolf-light-v2",
+      "roles": [
+        "mark"
+      ],
+      "path": "branding/generated-compact-on-light-v2-20261020-3e6a35781b040006.png",
+      "sha256": "3e6a35781b040006c3e60ecab7aa1699bb7234e54439ce6eb2f8ff40f0ca3e06",
+      "nativeDimensions": {
+        "width": 1244,
+        "height": 1264
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-4cccf2a6-813d-481c-bd40-4d4f6582a68e",
+        "modelVersion": null
+      },
+      "prompt": "Use case: logo-brand. Input1 edit target, exact RS road/arrow compact emblem. Preserve winding R and S silhouette, right arrows, lane dashes, counters and proportions. Dedicated WHITE-SURFACE strong variant: R deep navy #071e40, S deep burnt orange #914000, tiny white lane dashes only. At least85% ink dark, remove bulky pale borders. Actual transparent background/counters, no badge or other letters. Crisp filled geometry legible32/64px, no stretching, glow, shadow, gradient, halo, blur or alpha speckles.",
+      "references": [
+        {
+          "path": "branding/generated-mark.png",
+          "sha256": "027180dfedbe9d6e7cea3a2f7260b8922198b1b38d17ee014bd32c65f03c3d93"
+        }
+      ]
+    }
+  ],
+  "visualReview": {
+    "kind": "agent-visual-review",
+    "viewedAt": "2026-10-20T21:23:30.301Z",
+    "wordmarkWidths": [
+      120,
+      180
+    ],
+    "compactWidths": [
+      32,
+      64
+    ],
+    "backgrounds": [
+      "#ffffff",
+      "#111113",
+      "#101820",
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ],
+    "identitySpellingReviewed": true,
+    "notes": "Viewed five matched consumer comparisons; exact CARS4LESS, ROLF STREET CAR SALES, SMALL AUTOMATICS, STANLEY MOTOR GROUP and TJ CARS LTD reviewed. No invented dealer adoption. Rolf dark compact exact; Small derived favicon dependency recorded.",
+    "humanReview": false,
+    "ownerApproval": false,
+    "dealerApproval": false,
+    "nativeApproval": false,
+    "hostedApproval": false,
+    "comparison": {
+      "path": "J:/.artifacts/cars-source-sync/rolf-street-car-sales-full-logo-before-after.png",
+      "bytes": 218340,
+      "sha256": "e92b63493623ad3f0337f124b1dcd0061ce17bb05ef794e02ad4bada0db9f3e1",
+      "wordmarkWidths": [
+        120,
+        180
+      ],
+      "compactWidths": [
+        32,
+        64
+      ],
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#101820",
+        "#09090b",
+        "#17191c",
+        "#c40101"
+      ]
+    }
+  },
+  "passingRolePreservation": [
+    {
+      "role": "markOnDark",
+      "sourceSha256": "e231561c72f624dffe4d9cefc95459de2623a4c5c1107d5a93b24cc42f032080",
+      "publicSha256": "341c430bd0ce718c227d433f541664ee195ced8a85d09d1bc32b7df9809e8923",
+      "byteIdentical": true
+    }
+  ],
+  "originalArtworkPreserved": true,
+  "factsStockPhotosPreserved": true,
+  "filtersApplied": false,
+  "thresholdsChanged": false,
+  "providerWrites": 0
+}

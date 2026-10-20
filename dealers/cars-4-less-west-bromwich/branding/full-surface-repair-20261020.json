@@ -1,0 +1,166 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-owned-full-surface-contrast-repair",
+  "dealer": "cars-4-less-west-bromwich",
+  "createdAt": "2026-10-20T21:21:33.549Z",
+  "previousPackDigest": "6146c234cc25f822f2b32b99c1d70f1cfde426a94b0735f5e03bbc79e3512070",
+  "previousSource": {
+    "path": "branding/source-before-full-repair-20261020-af3649365a62d478.json",
+    "sha256": "af3649365a62d47830e857ae630e8258463f3dcce6d8e22cc934653ad92446c4"
+  },
+  "description": "Angular4 compact and CARS4LESS in dedicated navy/deep-orange and ivory surface inks",
+  "replacements": [
+    {
+      "key": "wordmark-cars4less-light-v2",
+      "roles": [
+        "master",
+        "onLight"
+      ],
+      "path": "branding/generated-on-light-v2-20261020-2f0299cebb71837a.png",
+      "sha256": "2f0299cebb71837a8cab61575458a81bd092a14862f759f0d940743d6b566306",
+      "nativeDimensions": {
+        "width": 2163,
+        "height": 727
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-4e559652-a43c-4bdc-9762-c483f07d0e8a",
+        "modelVersion": null
+      },
+      "prompt": "Use case: logo-brand. Input1 is EDIT TARGET. Create an actual dedicated WHITE-SURFACE deep-ink transparent variant. Preserve exact spelling, composition, typography, emblem geometry, natural proportions and all counters. At least90% of visible ink must contrast strongly with WHITE. Clean flat opaque ink, genuine alpha transparency. No backing tile, glow, halo, shadow, gradients, blur, bevel or alpha speckles. No added words or motifs. Clear at120/180px. Retain oversized angular numeral4 LEFT and exact CARS4LESS RIGHT, including the middle4. Exact text CARS4LESS, no hyphens. Dominant deep navy fills (#071e40 feel) replace large white interiors; the small middle4/triangle may be deep burnt orange (#914000 feel). Over85% dark/navy/deep-amber ink; no bulky light outline. Preserve navy/orange identity family.",
+      "references": [
+        {
+          "path": "branding/generated-master.png",
+          "sha256": "659c94324c27eef22e7c0aead791d19cc4b78d9bc05ed6c10a994999c652758f"
+        }
+      ]
+    },
+    {
+      "key": "wordmark-cars4less-dark-v2",
+      "roles": [
+        "onDark",
+        "onAccent"
+      ],
+      "path": "branding/generated-on-dark-v2-20261020-38a91d16c40db5f7.png",
+      "sha256": "38a91d16c40db5f7edb6b2f0a476b2dd94986441771dc42dbf37d2a03e569357",
+      "nativeDimensions": {
+        "width": 2163,
+        "height": 727
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-398bcc62-aa3a-4d2a-9bd6-32b478e96661",
+        "modelVersion": null
+      },
+      "prompt": "Use case: logo-brand. Input1 is EDIT TARGET. Create a genuine light-ink inverse for DARK and RED surfaces, preserving exact spelling, full composition, typography, emblem geometry, counters and natural proportions. At least95% of visible ink must be LIGHT ivory/white (#e6ebf2 feel), remaining accents pale enough for #c40101. Pass backgrounds #111113,#101820,#09090b,#17191c,#c40101. No large dark/navy/black/orange/blue fills or heavy dark border. Fine dark internal separators at most. Flat crisp opaque fills, genuinely transparent alpha. No backing tile, glow, halo, shadows, gradients, metallic effect, blur, texture or alpha speckles. No added words/motifs. Clear at120/180px. Retain oversized angular4 LEFT and exact CARS4LESS RIGHT, middle4 included. Exact CARS4LESS, no hyphens. All major letters and both4 numerals light ivory; tiny pale-apricot triangle/accent allowed under5% ink. Retain exact navy/orange identity geometry, only this inverse surface ink changes.",
+      "references": [
+        {
+          "path": "branding/generated-master.png",
+          "sha256": "659c94324c27eef22e7c0aead791d19cc4b78d9bc05ed6c10a994999c652758f"
+        }
+      ]
+    },
+    {
+      "key": "compact-cars4less-light-v2",
+      "roles": [
+        "mark"
+      ],
+      "path": "branding/generated-compact-on-light-v2-20261020-20cc08ae135a4898.png",
+      "sha256": "20cc08ae135a489885e7522bb99e77b0bff39befb6b2a15a0e84891ac96a2825",
+      "nativeDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-18a2c3b5-f4e9-47d0-955f-256531fffe17",
+        "modelVersion": null
+      },
+      "prompt": "Use case: logo-brand. Input1 edit target, existing angular4 compact emblem. Preserve exact numeral4 silhouette, counters, proportions and compact placement. Dedicated WHITE-SURFACE deep NAVY version: ALL large numeral4 body solid deep navy #071e40, original small triangular accent deep burnt orange #914000. At least90% ink dark, no large white fills, only a fine light inner line if essential. Transparent counter and canvas; no badge/text or added motif. Flat opaque strong ink, crisp32/64px, no glow, shadow, halo, gradient, texture or speckles. Keep natural geometry, no stretching.",
+      "references": [
+        {
+          "path": "branding/generated-mark.png",
+          "sha256": "7b26afa53566214ad1901f57bf5fcb4b64b3ea4efd86f968689d90c6971d5516"
+        }
+      ]
+    },
+    {
+      "key": "compact-cars4less-dark-v2",
+      "roles": [
+        "markOnDark"
+      ],
+      "path": "branding/generated-compact-on-dark-v2-20261020-87471bf0c0b6090b.png",
+      "sha256": "87471bf0c0b6090b0fd496a9e2759099547da0f45e2c2ec2a2cd233717a60953",
+      "nativeDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-4b1a3130-cfec-421c-98b4-a3951d127348",
+        "modelVersion": null
+      },
+      "prompt": "Use case: logo-brand. Input1 edit target. Preserve exact compact silhouette, letters, counters, proportions and native compact placement. Genuine transparent alpha, crisp flat opaque artwork clear at32/64px. No badge/new text/symbol, stretching, glow, halo, shadow, blur, gradients or speckles. DARK/RED inverse of angular numeral4. Every major numeral4 body and former thick navy outline becomes light ivory #e8edf3. Small triangular accent may be pale apricot but no dark/orange field. At least95% visible ink LIGHT. Thin transparent interior separator if needed, no thick dark borders. Clear on #111113 and #c40101. Exact digit4.",
+      "references": [
+        {
+          "path": "branding/generated-mark.png",
+          "sha256": "7b26afa53566214ad1901f57bf5fcb4b64b3ea4efd86f968689d90c6971d5516"
+        }
+      ]
+    }
+  ],
+  "visualReview": {
+    "kind": "agent-visual-review",
+    "viewedAt": "2026-10-20T21:23:30.301Z",
+    "wordmarkWidths": [
+      120,
+      180
+    ],
+    "compactWidths": [
+      32,
+      64
+    ],
+    "backgrounds": [
+      "#ffffff",
+      "#111113",
+      "#101820",
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ],
+    "identitySpellingReviewed": true,
+    "notes": "Viewed five matched consumer comparisons; exact CARS4LESS, ROLF STREET CAR SALES, SMALL AUTOMATICS, STANLEY MOTOR GROUP and TJ CARS LTD reviewed. No invented dealer adoption. Rolf dark compact exact; Small derived favicon dependency recorded.",
+    "humanReview": false,
+    "ownerApproval": false,
+    "dealerApproval": false,
+    "nativeApproval": false,
+    "hostedApproval": false,
+    "comparison": {
+      "path": "J:/.artifacts/cars-source-sync/cars-4-less-west-bromwich-full-logo-before-after.png",
+      "bytes": 283287,
+      "sha256": "b4c212c571ec8e7d1bbaf949e5a89ea51724b0bc7b8cbd2af13502dd20f29e12",
+      "wordmarkWidths": [
+        120,
+        180
+      ],
+      "compactWidths": [
+        32,
+        64
+      ],
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#101820",
+        "#09090b",
+        "#17191c",
+        "#c40101"
+      ]
+    }
+  },
+  "passingRolePreservation": [],
+  "originalArtworkPreserved": true,
+  "factsStockPhotosPreserved": true,
+  "filtersApplied": false,
+  "thresholdsChanged": false,
+  "providerWrites": 0
+}

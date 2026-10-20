@@ -2,27 +2,27 @@
   "schemaVersion": 1,
   "dealer": "stanley-motor-group",
   "reviewed": true,
-  "reviewedAt": "2026-10-19T18:40:24.957Z",
+  "reviewedAt": "2026-10-20T21:23:30.301Z",
   "status": "independent-proposal-not-dealer-approved",
   "creationMethod": "imagegen-redraw",
   "assets": {
     "onLight": {
       "sourcePath": "branding/logo-on-light.png",
       "publicPath": "/dealer-brand/logo-on-light.webp",
-      "sha256": "898a2bf42a5e7d3b122fa2a2665612bcdd0d885b4b645ac65310cb29b6ecd6d3",
-      "sourceSha256": "9aff01d2c87f44268f3d50f77e6445de70b62068db09894840d516eec53d47e0"
+      "sha256": "801095dda1d61ba80cc56375d126b07f1c3d4636ad8494c6ec9156f21370edf3",
+      "sourceSha256": "bdf44da4bdd898c141c1019a0f6afac90335009959beaf46034bfcbb25f2585d"
     },
     "onDark": {
       "sourcePath": "branding/logo-on-dark.png",
       "publicPath": "/dealer-brand/logo-on-dark.webp",
-      "sha256": "898a2bf42a5e7d3b122fa2a2665612bcdd0d885b4b645ac65310cb29b6ecd6d3",
-      "sourceSha256": "9aff01d2c87f44268f3d50f77e6445de70b62068db09894840d516eec53d47e0"
+      "sha256": "62b6201e50417f272f4929e013d5141d0ae182ca95ddc8df08c13a1c899bb92f",
+      "sourceSha256": "f1cc37b482bb68780376c35a773f9844b209a941bd67499f41d0f70f535e1feb"
     },
     "onAccent": {
       "sourcePath": "branding/logo-on-accent.png",
       "publicPath": "/dealer-brand/logo-on-accent.webp",
-      "sha256": "898a2bf42a5e7d3b122fa2a2665612bcdd0d885b4b645ac65310cb29b6ecd6d3",
-      "sourceSha256": "9aff01d2c87f44268f3d50f77e6445de70b62068db09894840d516eec53d47e0"
+      "sha256": "62b6201e50417f272f4929e013d5141d0ae182ca95ddc8df08c13a1c899bb92f",
+      "sourceSha256": "f1cc37b482bb68780376c35a773f9844b209a941bd67499f41d0f70f535e1feb"
     }
   },
   "surfaceBackgrounds": {
@@ -41,156 +41,156 @@
   },
   "master": {
     "path": "branding/logo-master.png",
-    "sha256": "9aff01d2c87f44268f3d50f77e6445de70b62068db09894840d516eec53d47e0",
+    "sha256": "bdf44da4bdd898c141c1019a0f6afac90335009959beaf46034bfcbb25f2585d",
     "generation": {
       "tool": "image_gen.imagegen",
-      "generationId": "exec-139b4155-08b6-4d4d-a132-47dc0ec62a8f",
+      "generationId": "exec-ef19b658-4395-4a06-9697-00ced0dc591a",
       "modelVersion": null
     }
   },
   "mark": {
     "path": "branding/logo-mark.png",
-    "sha256": "357ed8cf74a476624926aab4eb75f0ca6dadacff0a6f6157db46efc89096af90",
+    "sha256": "b78ee48d6e1dbe2e6d85fb44de86e0a7985cafe88491f406e97a9ea9a3f2b5b3",
     "generation": {
       "tool": "image_gen.imagegen",
-      "generationId": "exec-139b4155-08b6-4d4d-a132-47dc0ec62a8f",
+      "generationId": "exec-40b42f05-4ea4-4ebd-9f8b-58ed484b0f51",
       "modelVersion": null
     }
   },
   "favicon": {
     "path": "dealer-brand/favicon.ico",
-    "sha256": "58a80d3bfbde18b7a2d46a137936a8b8f7dfcbccf307088928174385ea9721b6"
+    "sha256": "268193b3f46330bc7ec959b79d7930c213ac4d4faa88332c84f64e1f4bb639b6"
   },
   "surfaces": {
     "onLight": {
       "path": "branding/logo-on-light.png",
-      "sha256": "9aff01d2c87f44268f3d50f77e6445de70b62068db09894840d516eec53d47e0",
+      "sha256": "bdf44da4bdd898c141c1019a0f6afac90335009959beaf46034bfcbb25f2585d",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-139b4155-08b6-4d4d-a132-47dc0ec62a8f",
+        "generationId": "exec-ef19b658-4395-4a06-9697-00ced0dc591a",
         "modelVersion": null
       },
-      "sourceReference": "dealers/stanley-motor-group/branding/generated-master.png"
+      "sourceReference": "dealers/stanley-motor-group/branding/generated-on-light-v2-20261020-c8091240847ba06a.png"
     },
     "onDark": {
       "path": "branding/logo-on-dark.png",
-      "sha256": "9aff01d2c87f44268f3d50f77e6445de70b62068db09894840d516eec53d47e0",
+      "sha256": "f1cc37b482bb68780376c35a773f9844b209a941bd67499f41d0f70f535e1feb",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-139b4155-08b6-4d4d-a132-47dc0ec62a8f",
+        "generationId": "exec-c4c5705a-3076-4b5d-8ac8-805e44f242ee",
         "modelVersion": null
       },
-      "sourceReference": "dealers/stanley-motor-group/branding/generated-master.png"
+      "sourceReference": "dealers/stanley-motor-group/branding/generated-on-dark-v2-20261020-d0e6a6044951140f.png"
     },
     "onAccent": {
       "path": "branding/logo-on-accent.png",
-      "sha256": "9aff01d2c87f44268f3d50f77e6445de70b62068db09894840d516eec53d47e0",
+      "sha256": "f1cc37b482bb68780376c35a773f9844b209a941bd67499f41d0f70f535e1feb",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-139b4155-08b6-4d4d-a132-47dc0ec62a8f",
+        "generationId": "exec-c4c5705a-3076-4b5d-8ac8-805e44f242ee",
         "modelVersion": null
       },
-      "sourceReference": "dealers/stanley-motor-group/branding/generated-master.png"
+      "sourceReference": "dealers/stanley-motor-group/branding/generated-on-dark-v2-20261020-d0e6a6044951140f.png"
     }
   },
   "transforms": {
     "onLight": {
       "operation": "crop-transparent-padding-and-resize",
-      "sourceSha256": "2515315c9f96d184343abfd92ca53ca1ea4fde954833377161cff4ab09f37c7e",
-      "sha256": "9aff01d2c87f44268f3d50f77e6445de70b62068db09894840d516eec53d47e0",
+      "sourceSha256": "c8091240847ba06a0b94b56112b4986ffcab1070e7c112968a0c55a64afdf3c9",
+      "sha256": "bdf44da4bdd898c141c1019a0f6afac90335009959beaf46034bfcbb25f2585d",
       "crop": {
-        "left": 25,
-        "top": 127,
-        "width": 2122,
-        "height": 528
+        "left": 8,
+        "top": 109,
+        "width": 2158,
+        "height": 537
       },
-      "sourcePath": "branding/generated-master.png",
+      "sourcePath": "branding/generated-on-light-v2-20261020-c8091240847ba06a.png",
       "outputPath": "branding/logo-on-light.png"
     },
     "onDark": {
       "operation": "crop-transparent-padding-and-resize",
-      "sourceSha256": "2515315c9f96d184343abfd92ca53ca1ea4fde954833377161cff4ab09f37c7e",
-      "sha256": "9aff01d2c87f44268f3d50f77e6445de70b62068db09894840d516eec53d47e0",
+      "sourceSha256": "d0e6a6044951140f1665af399f08736af0f5e907a8bbdfb6f47dc6ec560d5efd",
+      "sha256": "f1cc37b482bb68780376c35a773f9844b209a941bd67499f41d0f70f535e1feb",
       "crop": {
-        "left": 25,
-        "top": 127,
-        "width": 2122,
-        "height": 528
+        "left": 17,
+        "top": 107,
+        "width": 2126,
+        "height": 516
       },
-      "sourcePath": "branding/generated-master.png",
+      "sourcePath": "branding/generated-on-dark-v2-20261020-d0e6a6044951140f.png",
       "outputPath": "branding/logo-on-dark.png"
     },
     "onAccent": {
       "operation": "crop-transparent-padding-and-resize",
-      "sourceSha256": "2515315c9f96d184343abfd92ca53ca1ea4fde954833377161cff4ab09f37c7e",
-      "sha256": "9aff01d2c87f44268f3d50f77e6445de70b62068db09894840d516eec53d47e0",
+      "sourceSha256": "d0e6a6044951140f1665af399f08736af0f5e907a8bbdfb6f47dc6ec560d5efd",
+      "sha256": "f1cc37b482bb68780376c35a773f9844b209a941bd67499f41d0f70f535e1feb",
       "crop": {
-        "left": 25,
-        "top": 127,
-        "width": 2122,
-        "height": 528
+        "left": 17,
+        "top": 107,
+        "width": 2126,
+        "height": 516
       },
-      "sourcePath": "branding/generated-master.png",
+      "sourcePath": "branding/generated-on-dark-v2-20261020-d0e6a6044951140f.png",
       "outputPath": "branding/logo-on-accent.png"
     }
   },
   "supplemental": {
     "mark-on-light.webp": {
       "path": "dealer-brand/mark-on-light.webp",
-      "sha256": "f018ff685abbe7c314dac49bdaf3d779665db3c7b7c10f39b0d79d152c85ffc5",
+      "sha256": "3d7e71ff6aa33909fb6a0e27ca69e58b909e609d67be2008c0e0521133130175",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-139b4155-08b6-4d4d-a132-47dc0ec62a8f",
+        "generationId": "exec-40b42f05-4ea4-4ebd-9f8b-58ed484b0f51",
         "modelVersion": null
       },
-      "sourceReference": "dealers/stanley-motor-group/branding/generated-mark.png"
+      "sourceReference": "dealers/stanley-motor-group/branding/generated-compact-on-light-v2-20261020-5904ed89ff58ad52.png"
     },
     "mark-on-dark.webp": {
       "path": "dealer-brand/mark-on-dark.webp",
-      "sha256": "f018ff685abbe7c314dac49bdaf3d779665db3c7b7c10f39b0d79d152c85ffc5",
+      "sha256": "3770887271b1df79d36036bd8c5e250e9f0d054d7de89e581452b3705611cf9e",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-139b4155-08b6-4d4d-a132-47dc0ec62a8f",
+        "generationId": "exec-53a7be22-d8ce-4541-8c8d-0d5b978c3c89",
         "modelVersion": null
       },
-      "sourceReference": "dealers/stanley-motor-group/branding/generated-mark.png"
+      "sourceReference": "dealers/stanley-motor-group/branding/generated-compact-on-dark-v2-20261020-ec65ed89f5a578e9.png"
     },
     "app-icon.png": {
       "path": "dealer-brand/app-icon.png",
-      "sha256": "357ed8cf74a476624926aab4eb75f0ca6dadacff0a6f6157db46efc89096af90",
+      "sha256": "b78ee48d6e1dbe2e6d85fb44de86e0a7985cafe88491f406e97a9ea9a3f2b5b3",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-139b4155-08b6-4d4d-a132-47dc0ec62a8f",
+        "generationId": "exec-40b42f05-4ea4-4ebd-9f8b-58ed484b0f51",
         "modelVersion": null
       },
-      "sourceReference": "dealers/stanley-motor-group/branding/generated-mark.png"
+      "sourceReference": "dealers/stanley-motor-group/branding/generated-compact-on-light-v2-20261020-5904ed89ff58ad52.png"
     },
     "favicon.ico": {
       "path": "dealer-brand/favicon.ico",
-      "sha256": "58a80d3bfbde18b7a2d46a137936a8b8f7dfcbccf307088928174385ea9721b6",
+      "sha256": "268193b3f46330bc7ec959b79d7930c213ac4d4faa88332c84f64e1f4bb639b6",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-139b4155-08b6-4d4d-a132-47dc0ec62a8f",
+        "generationId": "exec-40b42f05-4ea4-4ebd-9f8b-58ed484b0f51",
         "modelVersion": null
       },
-      "sourceReference": "dealers/stanley-motor-group/branding/generated-mark.png"
+      "sourceReference": "dealers/stanley-motor-group/branding/generated-compact-on-light-v2-20261020-5904ed89ff58ad52.png"
     }
   },
   "markOnDarkReady": true,
   "originalArtworkPreserved": true,
   "visualReview": {
     "reviewed": true,
-    "reviewedAt": "2026-10-19T18:40:24.957Z",
+    "reviewedAt": "2026-10-20T21:23:30.301Z",
     "source": "branding/source.json",
     "spelling": "agent-visual-review",
     "dealerApproval": false
   },
   "markOnDark": {
     "path": "branding/logo-mark-on-dark.png",
-    "sha256": "357ed8cf74a476624926aab4eb75f0ca6dadacff0a6f6157db46efc89096af90",
+    "sha256": "b8baa278ddf8375bfd1c9fcccad586ba16738825d02cc58d1f99ffe9cf56eb68",
     "generation": {
       "tool": "image_gen.imagegen",
-      "generationId": "exec-139b4155-08b6-4d4d-a132-47dc0ec62a8f",
+      "generationId": "exec-53a7be22-d8ce-4541-8c8d-0d5b978c3c89",
       "modelVersion": null
     }
   }

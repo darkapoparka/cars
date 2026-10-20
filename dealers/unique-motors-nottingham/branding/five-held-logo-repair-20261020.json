@@ -1,0 +1,153 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-five-original-held-logo-contrast-repair",
+  "dealer": "unique-motors-nottingham",
+  "createdAt": "2026-10-20T21:21:15.198Z",
+  "previousPackDigest": "a7c9c9a4fe782f8c4d025fca1748fb03229d2e474b6f1a115d6c97b96cb504d7",
+  "previousSource": {
+    "path": "branding/source-before-five-held-logo-repair-20261020-70f7c77d774693b6.json",
+    "sha256": "70f7c77d774693b6d2e217fed70dfa6c7e3658e7bbc70cd16264e03f26ca7b48"
+  },
+  "previousInputs": [
+    {
+      "role": "wordLight",
+      "input": {
+        "path": "branding/generated-master.png",
+        "sha256": "7334e6ef8ed8b0b7b54086a1204eef4357d8b60e49ec044aa38976c70f90ab4c",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-d79cf616-df8d-4b56-b99e-57e6a1f75b84",
+          "modelVersion": null
+        }
+      }
+    },
+    {
+      "role": "wordDark",
+      "input": {
+        "path": "branding/generated-master.png",
+        "sha256": "7334e6ef8ed8b0b7b54086a1204eef4357d8b60e49ec044aa38976c70f90ab4c",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-d79cf616-df8d-4b56-b99e-57e6a1f75b84",
+          "modelVersion": null
+        }
+      }
+    },
+    {
+      "role": "markDark",
+      "input": {
+        "path": "branding/generated-mark.png",
+        "sha256": "21f2e9a57c242ba48f9393f21170ab75220757585adfe02cb2d29ce9c5f92f8e",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-d79cf616-df8d-4b56-b99e-57e6a1f75b84",
+          "modelVersion": null
+        }
+      }
+    }
+  ],
+  "replacements": [
+    {
+      "roles": [
+        "master",
+        "onLight"
+      ],
+      "reference": "branding/generated-master.png",
+      "path": "branding/generated-on-light-v2-20261020.png",
+      "sha256": "ea5d05e29b0a2d3ba640f4c7bbc1d14013b0a248ab1d4c1c3435761896baff19",
+      "nativeDimensions": {
+        "width": 2169,
+        "height": 725
+      },
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-f240a431-e5f7-430e-95b4-a332904c011a",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand, faithful dark-ink variant for WHITE backgrounds. Preserve exactly the existing U+roof emblem at far left, italic UNIQUE MOTORS lettering, sleek vehicle roof above it, NOTTINGHAM below and flanking bars. Same geometry, letterforms, spacing, proportions and counters. UNIQUE non-red letters, NOTTINGHAM and main roof strokes uniform opaque deep charcoal #17202b; existing red U, MOTORS, lower roof accent and flanking bars flat opaque deep red #b50012. Remove white keylines and heavy black outlines; roof/windows/counter gaps stay transparent. Exact spelling UNIQUE MOTORS NOTTINGHAM. Truly transparent canvas with generous padding. No halo, shadows, glow, gradients, texture, speckles, new letters, extra shapes or redesign. Retain real identity and original red/monochrome palette, no dealer approval.",
+      "referencePaths": [
+        "L:/CODEX/cars/dealers/unique-motors-nottingham/branding/generated-master.png"
+      ],
+      "createdAt": "2026-10-20T21:21:15.198Z",
+      "derivation": "Actual built-in imagegen edit of retained identity. Raw returned PNG copied byte-identical, with maintained transparent crop/resize only; no recolouring, filtering, alpha cleanup or threshold changes."
+    },
+    {
+      "roles": [
+        "onDark",
+        "onAccent"
+      ],
+      "reference": "branding/generated-master.png",
+      "path": "branding/generated-on-dark-v2-20261020.png",
+      "sha256": "25bbd40da37fc2da4acc17cede00e8aa7e04e6dae380dedb7c49d996fbfe42bc",
+      "nativeDimensions": {
+        "width": 2169,
+        "height": 725
+      },
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-57d126e8-adeb-4bc3-a49c-3f1d0360ee70",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand, faithful inverse surface variant. Preserve exactly this U+roof compact emblem at far left, italic UNIQUE MOTORS wordmark, sleek vehicle roof over it and NOTTINGHAM below with flanking bars. Same geometry, letterforms, spacing, proportions and motifs. For charcoal/navy/black/red surfaces: UNIQUE's non-red letters, NOTTINGHAM and main roof strokes flat opaque pale silver-grey #c8d0d8; the existing red U, MOTORS, lower roof accent and flanking bars flat opaque pale muted rose #e3b9bd, a light tint of its retained red identity. Remove heavy black outlines and white keylines; open roof/counter gaps remain transparent. Exact spelling UNIQUE MOTORS NOTTINGHAM. Truly transparent background, generous padding. No pure white, gradients, halos, texture, speckles, glow, shadows, new details or wording. No dealer approval claim.",
+      "referencePaths": [
+        "L:/CODEX/cars/dealers/unique-motors-nottingham/branding/generated-master.png"
+      ],
+      "createdAt": "2026-10-20T21:21:15.198Z",
+      "derivation": "Actual built-in imagegen edit of retained identity. Raw returned PNG copied byte-identical, with maintained transparent crop/resize only; no recolouring, filtering, alpha cleanup or threshold changes."
+    },
+    {
+      "roles": [
+        "markOnDark"
+      ],
+      "reference": "branding/generated-mark.png",
+      "path": "branding/generated-mark-on-dark-v2-20261020.png",
+      "sha256": "1bc032810616dcec58bcd4d161f2fdd35be09c1ad407711962c0f2e840953815",
+      "nativeDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-c1506cde-bd35-4a4c-96dc-be482e9d5762",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand, faithful inverse compact surface variant. Preserve exactly the stylized italic U and sleek vehicle roof motif of this retained UNIQUE MOTORS identity. Same silhouette, roof/window cuts, U counter, proportions and spacing. U and lower roof accent flat opaque pale muted rose #e3b9bd (light tint of retained red); main roof strokes flat opaque pale silver-grey #c8d0d8. Remove heavy black contours and white keylines; all separation gaps, windows and counters become truly transparent negative space. Center on generous square truly transparent canvas, smooth precise edges clear at32/64px against charcoal/navy/red. No pure white, halo, shadow, glow, gradients, texture, speckles, extra shape or letters. Faithful preview variant, no dealer approval.",
+      "referencePaths": [
+        "L:/CODEX/cars/dealers/unique-motors-nottingham/branding/generated-mark.png"
+      ],
+      "createdAt": "2026-10-20T21:21:15.198Z",
+      "derivation": "Actual built-in imagegen edit of retained identity. Raw returned PNG copied byte-identical, with maintained transparent crop/resize only; no recolouring, filtering, alpha cleanup or threshold changes."
+    }
+  ],
+  "changedRoles": [
+    "master",
+    "onLight",
+    "onDark",
+    "onAccent",
+    "markOnDark"
+  ],
+  "derivedLightIconChanges": false,
+  "visualReview": {
+    "wordmarkWidths": [
+      120,
+      180
+    ],
+    "compactWidths": [
+      32,
+      64
+    ],
+    "backgrounds": [
+      "#ffffff",
+      "#111113",
+      "#101820",
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ],
+    "identityAndSpelling": "agent-visual-review",
+    "dealerApproval": false,
+    "nativeApproval": false,
+    "hostedApproval": false,
+    "humanReview": false
+  },
+  "originalArtworkFactsStockPhotosPalettesPreserved": true,
+  "passingConsumerHashesProtected": true,
+  "toolPackage": "L:/CODEX/cars/templates/karento-best/package.json",
+  "filtersApplied": false,
+  "thresholdsChanged": false,
+  "providerWrites": 0
+}

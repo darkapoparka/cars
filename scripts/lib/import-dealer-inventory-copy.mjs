@@ -258,6 +258,27 @@ const scalarTerms=new Map([
     }
   ],
   [
+    "color:Pink",
+    {
+      "bg": "Розов",
+      "en": "Pink"
+    }
+  ],
+  [
+    "color:Yellow",
+    {
+      "bg": "Жълт",
+      "en": "Yellow"
+    }
+  ],
+  [
+    "color:Orange",
+    {
+      "bg": "Оранжев",
+      "en": "Orange"
+    }
+  ],
+  [
     "color:White",
     {
       "bg": "Бял",

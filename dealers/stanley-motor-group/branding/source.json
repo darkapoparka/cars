@@ -45,59 +45,83 @@
     }
   },
   "generatedInputs": {
-    "reviewedAt": "2026-10-19T18:40:24.957Z",
+    "reviewedAt": "2026-10-20T21:23:30.301Z",
     "master": {
-      "path": "branding/generated-master.png",
-      "sha256": "2515315c9f96d184343abfd92ca53ca1ea4fde954833377161cff4ab09f37c7e",
+      "path": "branding/generated-on-light-v2-20261020-c8091240847ba06a.png",
+      "sha256": "c8091240847ba06a0b94b56112b4986ffcab1070e7c112968a0c55a64afdf3c9",
+      "nativeDimensions": {
+        "width": 2169,
+        "height": 725
+      },
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-139b4155-08b6-4d4d-a132-47dc0ec62a8f",
+        "generationId": "exec-ef19b658-4395-4a06-9697-00ced0dc591a",
         "modelVersion": null
       }
     },
     "mark": {
-      "path": "branding/generated-mark.png",
-      "sha256": "033946a00b280ff30ebfa7838e020e29bab54929b9a0162728950ea6eb92b865",
+      "path": "branding/generated-compact-on-light-v2-20261020-5904ed89ff58ad52.png",
+      "sha256": "5904ed89ff58ad523ee311fafad8f90ab3a8895c8f41e3c41a142353be0217df",
+      "nativeDimensions": {
+        "width": 1035,
+        "height": 1519
+      },
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-139b4155-08b6-4d4d-a132-47dc0ec62a8f",
+        "generationId": "exec-40b42f05-4ea4-4ebd-9f8b-58ed484b0f51",
         "modelVersion": null
       }
     },
     "markOnDark": {
-      "path": "branding/generated-mark.png",
-      "sha256": "033946a00b280ff30ebfa7838e020e29bab54929b9a0162728950ea6eb92b865",
+      "path": "branding/generated-compact-on-dark-v2-20261020-ec65ed89f5a578e9.png",
+      "sha256": "ec65ed89f5a578e97147a6de544376fad7f3fec175140bc6391304a479370da2",
+      "nativeDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-139b4155-08b6-4d4d-a132-47dc0ec62a8f",
+        "generationId": "exec-53a7be22-d8ce-4541-8c8d-0d5b978c3c89",
         "modelVersion": null
       }
     },
     "surfaces": {
       "onLight": {
-        "path": "branding/generated-master.png",
-        "sha256": "2515315c9f96d184343abfd92ca53ca1ea4fde954833377161cff4ab09f37c7e",
+        "path": "branding/generated-on-light-v2-20261020-c8091240847ba06a.png",
+        "sha256": "c8091240847ba06a0b94b56112b4986ffcab1070e7c112968a0c55a64afdf3c9",
+        "nativeDimensions": {
+          "width": 2169,
+          "height": 725
+        },
         "generation": {
           "tool": "image_gen.imagegen",
-          "generationId": "exec-139b4155-08b6-4d4d-a132-47dc0ec62a8f",
+          "generationId": "exec-ef19b658-4395-4a06-9697-00ced0dc591a",
           "modelVersion": null
         }
       },
       "onDark": {
-        "path": "branding/generated-master.png",
-        "sha256": "2515315c9f96d184343abfd92ca53ca1ea4fde954833377161cff4ab09f37c7e",
+        "path": "branding/generated-on-dark-v2-20261020-d0e6a6044951140f.png",
+        "sha256": "d0e6a6044951140f1665af399f08736af0f5e907a8bbdfb6f47dc6ec560d5efd",
+        "nativeDimensions": {
+          "width": 2169,
+          "height": 725
+        },
         "generation": {
           "tool": "image_gen.imagegen",
-          "generationId": "exec-139b4155-08b6-4d4d-a132-47dc0ec62a8f",
+          "generationId": "exec-c4c5705a-3076-4b5d-8ac8-805e44f242ee",
           "modelVersion": null
         }
       },
       "onAccent": {
-        "path": "branding/generated-master.png",
-        "sha256": "2515315c9f96d184343abfd92ca53ca1ea4fde954833377161cff4ab09f37c7e",
+        "path": "branding/generated-on-dark-v2-20261020-d0e6a6044951140f.png",
+        "sha256": "d0e6a6044951140f1665af399f08736af0f5e907a8bbdfb6f47dc6ec560d5efd",
+        "nativeDimensions": {
+          "width": 2169,
+          "height": 725
+        },
         "generation": {
           "tool": "image_gen.imagegen",
-          "generationId": "exec-139b4155-08b6-4d4d-a132-47dc0ec62a8f",
+          "generationId": "exec-c4c5705a-3076-4b5d-8ac8-805e44f242ee",
           "modelVersion": null
         }
       }
@@ -109,9 +133,12 @@
           "#ffffff"
         ],
         "onDark": [
-          "#111113"
+          "#111113",
+          "#101820"
         ],
         "onAccent": [
+          "#09090b",
+          "#17191c",
           "#c40101"
         ]
       },
@@ -124,8 +151,154 @@
         64
       ],
       "method": "Same actual dual-contrast generated artwork on each surface; no generated colours are represented as a template palette change.",
-      "reviewedAt": "2026-10-19T18:40:24.957Z",
-      "review": "Visually reviewed exact cropTransparentPadding exports at120px and180px wordmark widths and32px/64px compact sizes on white, charcoal and red. Exact spelling retained, real alpha present, compact emblem clear. The source palette is part of the artwork only."
+      "reviewedAt": "2026-10-20T21:23:30.301Z",
+      "review": "Visually reviewed exact cropTransparentPadding exports at120px and180px wordmark widths and32px/64px compact sizes on white, charcoal and red. Exact spelling retained, real alpha present, compact emblem clear. The source palette is part of the artwork only.",
+      "notes": "Agent viewed matched maintained exports at120/180px and32/64px on actual six surfaces. Dedicated strong light/dark inks preserve exact spelling and palette families. Original artwork retained; Rolf passing dark compact unchanged. Small derived favicons necessarily regenerate with the corrected light compact, as authorized. Independent preview proposals; no dealer/native/hosted approval."
+    },
+    "marks": {
+      "onLight": {
+        "path": "branding/generated-compact-on-light-v2-20261020-5904ed89ff58ad52.png",
+        "sha256": "5904ed89ff58ad523ee311fafad8f90ab3a8895c8f41e3c41a142353be0217df",
+        "nativeDimensions": {
+          "width": 1035,
+          "height": 1519
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-40b42f05-4ea4-4ebd-9f8b-58ed484b0f51",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-compact-on-dark-v2-20261020-ec65ed89f5a578e9.png",
+        "sha256": "ec65ed89f5a578e97147a6de544376fad7f3fec175140bc6391304a479370da2",
+        "nativeDimensions": {
+          "width": 1254,
+          "height": 1254
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-53a7be22-d8ce-4541-8c8d-0d5b978c3c89",
+          "modelVersion": null
+        }
+      }
+    },
+    "compactMarkDescription": "Bold slab-serif S and STANLEY MOTOR GROUP monochrome identity",
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-20T21:23:30.301Z",
+      "widths": [
+        32,
+        64
+      ],
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#101820",
+        "#09090b",
+        "#17191c",
+        "#c40101"
+      ],
+      "notes": "Compact variants and exact identity viewed at32/64px; Stanley/TJ dark compact use flat ivory redraws after unsuitable candidates were rejected. Rolf passing dark compact unchanged. Padding/contrast thresholds unchanged; no stretching or filters."
     }
-  }
+  },
+  "additionalGenerations": [
+    {
+      "roles": [
+        "master",
+        "onLight"
+      ],
+      "path": "branding/generated-on-light-v2-20261020-c8091240847ba06a.png",
+      "sha256": "c8091240847ba06a0b94b56112b4986ffcab1070e7c112968a0c55a64afdf3c9",
+      "nativeDimensions": {
+        "width": 2169,
+        "height": 725
+      },
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-ef19b658-4395-4a06-9697-00ced0dc591a",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand. Input1 is EDIT TARGET. Create an actual dedicated WHITE-SURFACE deep-ink transparent variant. Preserve exact spelling, composition, typography, emblem geometry, natural proportions and all counters. At least90% of visible ink must contrast strongly with WHITE. Clean flat opaque ink, genuine alpha transparency. No backing tile, glow, halo, shadow, gradients, blur, bevel or alpha speckles. No added words or motifs. Clear at120/180px. Retain large serif S LEFT, exact STANLEY above MOTOR GROUP RIGHT, bold slab serif. Fill all large letter interiors solid deep charcoal/black. Thin light edge at most, no large white fills or thick double borders. Retain monochrome family and exact slab-serif forms.",
+      "references": [
+        {
+          "path": "branding/generated-master.png",
+          "sha256": "2515315c9f96d184343abfd92ca53ca1ea4fde954833377161cff4ab09f37c7e"
+        }
+      ],
+      "createdAt": "2026-10-20T21:22:15.129Z",
+      "derivation": "Actual built-in imagegen result copied byte-for-byte. Dedicated light/dark surface inks retain exact business spelling and existing identity/motifs. Stanley/TJ dark compact are single-ivory redraws. No stretch, filters, recolouring or alpha cleanup."
+    },
+    {
+      "roles": [
+        "onDark",
+        "onAccent"
+      ],
+      "path": "branding/generated-on-dark-v2-20261020-d0e6a6044951140f.png",
+      "sha256": "d0e6a6044951140f1665af399f08736af0f5e907a8bbdfb6f47dc6ec560d5efd",
+      "nativeDimensions": {
+        "width": 2169,
+        "height": 725
+      },
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-c4c5705a-3076-4b5d-8ac8-805e44f242ee",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand. Input1 is EDIT TARGET. Create a genuine light-ink inverse for DARK and RED surfaces, preserving exact spelling, full composition, typography, emblem geometry, counters and natural proportions. At least95% of visible ink must be LIGHT ivory/white (#e6ebf2 feel), remaining accents pale enough for #c40101. Pass backgrounds #111113,#101820,#09090b,#17191c,#c40101. No large dark/navy/black/orange/blue fills or heavy dark border. Fine dark internal separators at most. Flat crisp opaque fills, genuinely transparent alpha. No backing tile, glow, halo, shadows, gradients, metallic effect, blur, texture or alpha speckles. No added words/motifs. Clear at120/180px. Retain large serif S LEFT, exact STANLEY above MOTOR GROUP RIGHT. Preserve heavy slab-serif forms. All letter bodies solid ivory/white; only thin internal dark keyline if useful. Retain monochrome family, remove heavy black surround that dominated original.",
+      "references": [
+        {
+          "path": "branding/generated-master.png",
+          "sha256": "2515315c9f96d184343abfd92ca53ca1ea4fde954833377161cff4ab09f37c7e"
+        }
+      ],
+      "createdAt": "2026-10-20T21:22:15.129Z",
+      "derivation": "Actual built-in imagegen result copied byte-for-byte. Dedicated light/dark surface inks retain exact business spelling and existing identity/motifs. Stanley/TJ dark compact are single-ivory redraws. No stretch, filters, recolouring or alpha cleanup."
+    },
+    {
+      "roles": [
+        "mark"
+      ],
+      "path": "branding/generated-compact-on-light-v2-20261020-5904ed89ff58ad52.png",
+      "sha256": "5904ed89ff58ad523ee311fafad8f90ab3a8895c8f41e3c41a142353be0217df",
+      "nativeDimensions": {
+        "width": 1035,
+        "height": 1519
+      },
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-40b42f05-4ea4-4ebd-9f8b-58ed484b0f51",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand. Input1 edit target, exact Stanley rounded slab-serif capital S compact. Preserve exact S serif silhouette and proportions. Dedicated WHITE-SURFACE variant: ALL large S interior solid charcoal/black, no white fill or heavy white border. Tiny fine silver edge at most. At least95% ink dark. Actual transparent background/counters, flat opaque stamp, crisp32/64px, no stretching, new symbols, badge, glow, shadow, gradient, blur or speckles.",
+      "references": [
+        {
+          "path": "branding/generated-mark.png",
+          "sha256": "033946a00b280ff30ebfa7838e020e29bab54929b9a0162728950ea6eb92b865"
+        }
+      ],
+      "createdAt": "2026-10-20T21:22:15.129Z",
+      "derivation": "Actual built-in imagegen result copied byte-for-byte. Dedicated light/dark surface inks retain exact business spelling and existing identity/motifs. Stanley/TJ dark compact are single-ivory redraws. No stretch, filters, recolouring or alpha cleanup."
+    },
+    {
+      "roles": [
+        "markOnDark"
+      ],
+      "path": "branding/generated-compact-on-dark-v2-20261020-ec65ed89f5a578e9.png",
+      "sha256": "ec65ed89f5a578e97147a6de544376fad7f3fec175140bc6391304a479370da2",
+      "nativeDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-53a7be22-d8ce-4541-8c8d-0d5b978c3c89",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand. Create a native compact single capital S for Stanley Motor Group, independent preview proposal. Preserve the established bold rounded SLAB-SERIF S identity: broad heavy curves with squared slab-serif terminals at upper right and lower left. One large S centered naturally in a square transparent canvas. SINGLE LIGHT IVORY INK #e8edf3, solid fully opaque flat fill. Only this light ivory color exists in visible artwork. No borders, no colored accents, no outline, no shadow, glow, blur, halo, gradients, texture or lighting. Clean smooth hard alpha edges, real transparent counter and background. Strong legibility32/64px. Not a badge, no other letters/text/icons. Vector-like flat solid ink shape rendered as PNG.",
+      "references": [],
+      "createdAt": "2026-10-20T21:22:15.129Z",
+      "derivation": "Actual built-in imagegen result copied byte-for-byte. Dedicated light/dark surface inks retain exact business spelling and existing identity/motifs. Stanley/TJ dark compact are single-ivory redraws. No stretch, filters, recolouring or alpha cleanup."
+    }
+  ],
+  "sourceHistory": [
+    {
+      "reference": "branding/source-before-full-repair-20261020-f3864dced1c4dfce.json",
+      "sha256": "f3864dced1c4dfce4e7999c5bfa696f8834a404689b4bf47a7432e99d7be9387",
+      "retainedAt": "2026-10-20T21:22:15.129Z",
+      "reason": "Exact source provenance before owned full surface contrast repair"
+    }
+  ]
 }

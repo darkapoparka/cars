@@ -3,7 +3,7 @@
   "kind": "cars-dealer-pack-input-review",
   "dealer": "tj-cars-slough",
   "reviewed": true,
-  "reviewedAt": "2026-10-20T19:24:26.949Z",
+  "reviewedAt": "2026-10-20T21:25:21.768Z",
   "review": {
     "kind": "automated",
     "humanReview": false,
@@ -42,6 +42,18 @@
       "sha256": "28a7e53c128126efa9046c5f3a9a8e8515c8209fc6c0dc93460eb1b1d9ce1434"
     },
     {
+      "path": "branding/full-surface-repair-20261020.json",
+      "sha256": "764089938b22f32b5f87d62b113fa45e94c6b5ba0bf6c1b66ec2eec41a3eb883"
+    },
+    {
+      "path": "branding/generated-compact-on-dark-v2-20261020-2749a6279373a5ea.png",
+      "sha256": "2749a6279373a5ea223802fefea43c274a09ebaf25876c7057c1e099f0d55533"
+    },
+    {
+      "path": "branding/generated-compact-on-light-v2-20261020-2025558961c15980.png",
+      "sha256": "2025558961c159806d9bf0cd1838d7b34ac464fdf6642d4f8c35dc76d9e62dc0"
+    },
+    {
       "path": "branding/generated-mark.png",
       "sha256": "30a86494142df0ff3ecd85e6d0dcedb8fcbc2fea9faaa109153ca32c910cdc12"
     },
@@ -50,20 +62,32 @@
       "sha256": "435b2e5d62af7849ff97b9f29652bd5c035205c9813df6d312028609e97268b9"
     },
     {
+      "path": "branding/generated-on-dark-v2-20261020-92a0c11e3d0f26d2.png",
+      "sha256": "92a0c11e3d0f26d245d73b6c2dad27c0628f48fda41ccb136956894e167e1902"
+    },
+    {
+      "path": "branding/generated-on-light-v2-20261020-ef6eb106e443cd57.png",
+      "sha256": "ef6eb106e443cd576f31b6af5d707ad7474bec5bcab7127041affc56a1b159db"
+    },
+    {
       "path": "branding/logo-contract.json",
-      "sha256": "3178daf8133a5a8210d668a5208cf4392a9148045cc68c993ec3d1ac1476673e"
+      "sha256": "b0d15f9fdf17df9ae95ad3f930c546e1b76379aa34f19c99fbd60ab07f6a7cf6"
     },
     {
       "path": "branding/logo-recipe.json",
-      "sha256": "d64e2e7fd49395ce4bdb6ba84b2f2853754a964ee6b297a0b6ab81f8eae6c1ab"
+      "sha256": "b8d844b27acbb0a83f66228cc18b82d30ca9f828e355ba9ff86cc5926b4f10ec"
     },
     {
       "path": "branding/observed-logo.gif",
       "sha256": "2673cbd2cfeeec33ca85ec327389a1c10a60c9ab442a4168c08a98fc24bbef17"
     },
     {
-      "path": "branding/source.json",
+      "path": "branding/source-before-full-repair-20261020-b235baa688cba486.json",
       "sha256": "b235baa688cba486e00e57b3509d66b4c8ce2ab9235ff301cd26eddd2be1fdcc"
+    },
+    {
+      "path": "branding/source.json",
+      "sha256": "8e1ff1d435bca7bd2e91debb9f62142428852df8be9761398e9e9da3282c5b37"
     },
     {
       "path": "business-facts.json",
@@ -71,7 +95,7 @@
     },
     {
       "path": "copy-review.json",
-      "sha256": "9f7baa2c8eee8be5244f3e756386ad4ec16da65b118bd89ba97b55355d8e80d6"
+      "sha256": "b0650e9d42f0e2479ff1d1cfdb9d263fd2dc0795ef44c27f772efd6adde83a9b"
     },
     {
       "path": "dealer-stock/public-1.jpg",
@@ -87,11 +111,11 @@
     },
     {
       "path": "dealer.json",
-      "sha256": "61837f257c18c5df2a9fa40a74b347ce06de6de694b12074408c4e0b4cb81c8f"
+      "sha256": "a61618b9950e5035b8e93a59b38b46266ed6582444fd5ad3365d2d748b1f7d96"
     },
     {
       "path": "identity-review.json",
-      "sha256": "2e323f6b77a46607a69cfc894f7d344d7f5d41eae3953e50e5c763a457dfc347"
+      "sha256": "646ad22ba578997f655e9e33e9b945fae90cadfb88e318113f11dcdb41faa2a7"
     },
     {
       "path": "locale.json",
@@ -103,7 +127,7 @@
     },
     {
       "path": "qualification.json",
-      "sha256": "5e9cf7efec3ed972b16cf3b5580b7cb73cd84d0b6331f293b8d04017fa8b3e32"
+      "sha256": "7ed29cb22edccd7e4bf4eebb016a3125d12ead9aab72ef645bdde326deb3c22b"
     },
     {
       "path": "source-evidence.json",

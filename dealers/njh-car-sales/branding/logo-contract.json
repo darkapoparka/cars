@@ -2,27 +2,27 @@
   "schemaVersion": 1,
   "dealer": "njh-car-sales",
   "reviewed": true,
-  "reviewedAt": "2026-10-19T18:56:55.343524Z",
+  "reviewedAt": "2026-10-20T21:21:01.760Z",
   "status": "independent-proposal-not-dealer-approved",
   "creationMethod": "imagegen-proposal",
   "assets": {
     "onLight": {
       "sourcePath": "branding/logo-on-light.png",
       "publicPath": "/dealer-brand/logo-on-light.webp",
-      "sha256": "b8fc8eb76a20dd21d24c3711c6b82ae77e59da3a33de0e9b4e608c64e910cadd",
-      "sourceSha256": "0d7359ea9cb0a488ab55dc3a35ff6118ca6006db6c84b0f25c4eb1941551c911"
+      "sha256": "394896ae07564973d8f0293c9ceb835ecd0be3d601b83bb14e9afb295b05f5bf",
+      "sourceSha256": "5e2a273528d1c80972c4bf97632ea52e38ebec3f548b8d994b83b4d7539fa5c5"
     },
     "onDark": {
       "sourcePath": "branding/logo-on-dark.png",
       "publicPath": "/dealer-brand/logo-on-dark.webp",
-      "sha256": "566dd6315fe4ec518601d45443e915b096560bf95d68477b754f12f983f7aaac",
-      "sourceSha256": "32d43cb894c269513166ba8a9811aec19d01202a4b0ea5da9e42059b271cd96c"
+      "sha256": "87e7a6b970d655fd14920bcc2cd7d46e1753d0171223849b5a3f42328df9d63d",
+      "sourceSha256": "c37c178ec7fb33b8572fa31f4288f0d8b2c5be900d7210331551db01c2f7e5f5"
     },
     "onAccent": {
       "sourcePath": "branding/logo-on-accent.png",
       "publicPath": "/dealer-brand/logo-on-accent.webp",
-      "sha256": "566dd6315fe4ec518601d45443e915b096560bf95d68477b754f12f983f7aaac",
-      "sourceSha256": "32d43cb894c269513166ba8a9811aec19d01202a4b0ea5da9e42059b271cd96c"
+      "sha256": "87e7a6b970d655fd14920bcc2cd7d46e1753d0171223849b5a3f42328df9d63d",
+      "sourceSha256": "c37c178ec7fb33b8572fa31f4288f0d8b2c5be900d7210331551db01c2f7e5f5"
     }
   },
   "surfaceBackgrounds": {
@@ -41,156 +41,156 @@
   },
   "master": {
     "path": "branding/logo-master.png",
-    "sha256": "0d7359ea9cb0a488ab55dc3a35ff6118ca6006db6c84b0f25c4eb1941551c911",
+    "sha256": "5e2a273528d1c80972c4bf97632ea52e38ebec3f548b8d994b83b4d7539fa5c5",
     "generation": {
       "tool": "image_gen.imagegen",
-      "generationId": "exec-d49576e7-912a-4970-b1f1-a986ae6e151e",
+      "generationId": "exec-3c618f54-bf84-4c6a-8c71-76cef7c7195e",
       "modelVersion": null
     }
   },
   "mark": {
     "path": "branding/logo-mark.png",
-    "sha256": "1bad4ecd027cd328fa18fd51d6b93f398ed902d8efac1752a81e3ac6db7cac13",
+    "sha256": "eebea6272f5f3c6ed1b264c0d1e103c54867ebcf50fb8c945ad331bc27442625",
     "generation": {
       "tool": "image_gen.imagegen",
-      "generationId": "exec-d49576e7-912a-4970-b1f1-a986ae6e151e",
+      "generationId": "exec-1f8eb6ef-b0a8-4966-a16a-a2701b0a04d9",
       "modelVersion": null
     }
   },
   "favicon": {
     "path": "dealer-brand/favicon.ico",
-    "sha256": "a1c4ecd7407973cd7fe364c5af02610ac6d5bed1497ea000d1ee690e2f3dca7e"
+    "sha256": "0ed982733ae7af3f1244d3b1240cb7ea0f03193f87d5f46ac86389c2db1627f7"
   },
   "surfaces": {
     "onLight": {
       "path": "branding/logo-on-light.png",
-      "sha256": "0d7359ea9cb0a488ab55dc3a35ff6118ca6006db6c84b0f25c4eb1941551c911",
+      "sha256": "5e2a273528d1c80972c4bf97632ea52e38ebec3f548b8d994b83b4d7539fa5c5",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-d49576e7-912a-4970-b1f1-a986ae6e151e",
+        "generationId": "exec-3c618f54-bf84-4c6a-8c71-76cef7c7195e",
         "modelVersion": null
       },
-      "sourceReference": "dealers/njh-car-sales/branding/generated-master.png"
+      "sourceReference": "dealers/njh-car-sales/branding/generated-on-light-v2-20261020.png"
     },
     "onDark": {
       "path": "branding/logo-on-dark.png",
-      "sha256": "32d43cb894c269513166ba8a9811aec19d01202a4b0ea5da9e42059b271cd96c",
+      "sha256": "c37c178ec7fb33b8572fa31f4288f0d8b2c5be900d7210331551db01c2f7e5f5",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-02f49042-b3f7-4f15-b900-8261cc17acdf",
+        "generationId": "exec-c05ef681-a7d5-4af1-b9a0-b3561be878b3",
         "modelVersion": null
       },
-      "sourceReference": "dealers/njh-car-sales/branding/generated-on-dark.png"
+      "sourceReference": "dealers/njh-car-sales/branding/generated-on-dark-v2-20261020.png"
     },
     "onAccent": {
       "path": "branding/logo-on-accent.png",
-      "sha256": "32d43cb894c269513166ba8a9811aec19d01202a4b0ea5da9e42059b271cd96c",
+      "sha256": "c37c178ec7fb33b8572fa31f4288f0d8b2c5be900d7210331551db01c2f7e5f5",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-02f49042-b3f7-4f15-b900-8261cc17acdf",
+        "generationId": "exec-c05ef681-a7d5-4af1-b9a0-b3561be878b3",
         "modelVersion": null
       },
-      "sourceReference": "dealers/njh-car-sales/branding/generated-on-dark.png"
+      "sourceReference": "dealers/njh-car-sales/branding/generated-on-dark-v2-20261020.png"
     }
   },
   "transforms": {
     "onLight": {
       "operation": "crop-transparent-padding-and-resize",
-      "sourceSha256": "a25ac49b5582997003dd4df1afca2e584f445b9aa7f372f2aff47b76c52e3418",
-      "sha256": "0d7359ea9cb0a488ab55dc3a35ff6118ca6006db6c84b0f25c4eb1941551c911",
+      "sourceSha256": "ac4fb423085518ae2cc20fb760c2c6c0d9602aecca2e960e69ebf8e0104b1702",
+      "sha256": "5e2a273528d1c80972c4bf97632ea52e38ebec3f548b8d994b83b4d7539fa5c5",
       "crop": {
-        "left": 18,
-        "top": 24,
-        "width": 1953,
-        "height": 722
+        "left": 9,
+        "top": 23,
+        "width": 1966,
+        "height": 720
       },
-      "sourcePath": "branding/generated-master.png",
+      "sourcePath": "branding/generated-on-light-v2-20261020.png",
       "outputPath": "branding/logo-on-light.png"
     },
     "onDark": {
       "operation": "crop-transparent-padding-and-resize",
-      "sourceSha256": "fdfc41f844e5d5d34e8b91709f21acf703d7dfc20cb4a43240d1c474f63f8464",
-      "sha256": "32d43cb894c269513166ba8a9811aec19d01202a4b0ea5da9e42059b271cd96c",
+      "sourceSha256": "cabdfa8b21147fc29fed5db4fb0fa0ab2a57a63ce556bd731ba21144654acd52",
+      "sha256": "c37c178ec7fb33b8572fa31f4288f0d8b2c5be900d7210331551db01c2f7e5f5",
       "crop": {
-        "left": 16,
-        "top": 21,
-        "width": 1957,
-        "height": 728
+        "left": 22,
+        "top": 30,
+        "width": 1939,
+        "height": 713
       },
-      "sourcePath": "branding/generated-on-dark.png",
+      "sourcePath": "branding/generated-on-dark-v2-20261020.png",
       "outputPath": "branding/logo-on-dark.png"
     },
     "onAccent": {
       "operation": "crop-transparent-padding-and-resize",
-      "sourceSha256": "fdfc41f844e5d5d34e8b91709f21acf703d7dfc20cb4a43240d1c474f63f8464",
-      "sha256": "32d43cb894c269513166ba8a9811aec19d01202a4b0ea5da9e42059b271cd96c",
+      "sourceSha256": "cabdfa8b21147fc29fed5db4fb0fa0ab2a57a63ce556bd731ba21144654acd52",
+      "sha256": "c37c178ec7fb33b8572fa31f4288f0d8b2c5be900d7210331551db01c2f7e5f5",
       "crop": {
-        "left": 16,
-        "top": 21,
-        "width": 1957,
-        "height": 728
+        "left": 22,
+        "top": 30,
+        "width": 1939,
+        "height": 713
       },
-      "sourcePath": "branding/generated-on-dark.png",
+      "sourcePath": "branding/generated-on-dark-v2-20261020.png",
       "outputPath": "branding/logo-on-accent.png"
     }
   },
   "supplemental": {
     "mark-on-light.webp": {
       "path": "dealer-brand/mark-on-light.webp",
-      "sha256": "c09a456a26a0f87e090372659a2b01ec0eecc33f646433c4b2009e66be4c978e",
+      "sha256": "12f08ea1aa182194f09c5ca5aa825737e80e6098eb32ffb1fed2300262f6132a",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-d49576e7-912a-4970-b1f1-a986ae6e151e",
+        "generationId": "exec-1f8eb6ef-b0a8-4966-a16a-a2701b0a04d9",
         "modelVersion": null
       },
-      "sourceReference": "dealers/njh-car-sales/branding/generated-mark.png"
+      "sourceReference": "dealers/njh-car-sales/branding/generated-mark-on-light-v2-20261020.png"
     },
     "mark-on-dark.webp": {
       "path": "dealer-brand/mark-on-dark.webp",
-      "sha256": "c09a456a26a0f87e090372659a2b01ec0eecc33f646433c4b2009e66be4c978e",
+      "sha256": "ad1f9de5dd5458d5a4028ac4aa52ba16ebecc1c5dd81f021b3bd0d5d20236554",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-d49576e7-912a-4970-b1f1-a986ae6e151e",
+        "generationId": "exec-f509e09b-c972-4040-9be3-ee756cfb3b1d",
         "modelVersion": null
       },
-      "sourceReference": "dealers/njh-car-sales/branding/generated-mark.png"
+      "sourceReference": "dealers/njh-car-sales/branding/generated-mark-on-dark-v2-20261020.png"
     },
     "app-icon.png": {
       "path": "dealer-brand/app-icon.png",
-      "sha256": "1bad4ecd027cd328fa18fd51d6b93f398ed902d8efac1752a81e3ac6db7cac13",
+      "sha256": "eebea6272f5f3c6ed1b264c0d1e103c54867ebcf50fb8c945ad331bc27442625",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-d49576e7-912a-4970-b1f1-a986ae6e151e",
+        "generationId": "exec-1f8eb6ef-b0a8-4966-a16a-a2701b0a04d9",
         "modelVersion": null
       },
-      "sourceReference": "dealers/njh-car-sales/branding/generated-mark.png"
+      "sourceReference": "dealers/njh-car-sales/branding/generated-mark-on-light-v2-20261020.png"
     },
     "favicon.ico": {
       "path": "dealer-brand/favicon.ico",
-      "sha256": "a1c4ecd7407973cd7fe364c5af02610ac6d5bed1497ea000d1ee690e2f3dca7e",
+      "sha256": "0ed982733ae7af3f1244d3b1240cb7ea0f03193f87d5f46ac86389c2db1627f7",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-d49576e7-912a-4970-b1f1-a986ae6e151e",
+        "generationId": "exec-1f8eb6ef-b0a8-4966-a16a-a2701b0a04d9",
         "modelVersion": null
       },
-      "sourceReference": "dealers/njh-car-sales/branding/generated-mark.png"
+      "sourceReference": "dealers/njh-car-sales/branding/generated-mark-on-light-v2-20261020.png"
     }
   },
   "markOnDarkReady": true,
   "originalArtworkPreserved": true,
   "visualReview": {
     "reviewed": true,
-    "reviewedAt": "2026-10-19T18:56:55.343524Z",
+    "reviewedAt": "2026-10-20T21:21:01.760Z",
     "source": "branding/source.json",
     "spelling": "agent-visual-review",
     "dealerApproval": false
   },
   "markOnDark": {
     "path": "branding/logo-mark-on-dark.png",
-    "sha256": "1bad4ecd027cd328fa18fd51d6b93f398ed902d8efac1752a81e3ac6db7cac13",
+    "sha256": "37af67470f11e49fab7757e2e95f639705df7473e4fd38f1853749977b4dc9a4",
     "generation": {
       "tool": "image_gen.imagegen",
-      "generationId": "exec-d49576e7-912a-4970-b1f1-a986ae6e151e",
+      "generationId": "exec-f509e09b-c972-4040-9be3-ee756cfb3b1d",
       "modelVersion": null
     }
   }

@@ -34,93 +34,93 @@
     "zlib-ng": "2.3.3",
     "sharp": "0.35.5"
   },
-  "sourceSha256": "4fb2fcbb1ed7d6a51a62eb3c9159e7b6c5a0d45098637ad1b9c687ac7eeec1a1",
-  "contractSha256": "f3c50ce111e9cdcc1e2a7a945c819369b7dce32f606a78ebbc5281c1a4859dff",
+  "sourceSha256": "2f71730247a07fe35318d3dbe311bf376345358c8f121a8b90d9d01f41e61fac",
+  "contractSha256": "d240e9770f942629e3da124b49d04c8101f16246040330724bf8cd146d0ced3c",
   "outputs": [
     {
       "path": "branding/app-icon.png",
-      "bytes": 282011,
-      "sha256": "1bad4ecd027cd328fa18fd51d6b93f398ed902d8efac1752a81e3ac6db7cac13"
+      "bytes": 171269,
+      "sha256": "eebea6272f5f3c6ed1b264c0d1e103c54867ebcf50fb8c945ad331bc27442625"
     },
     {
       "path": "branding/logo-mark-on-dark.png",
-      "bytes": 282011,
-      "sha256": "1bad4ecd027cd328fa18fd51d6b93f398ed902d8efac1752a81e3ac6db7cac13"
+      "bytes": 164593,
+      "sha256": "37af67470f11e49fab7757e2e95f639705df7473e4fd38f1853749977b4dc9a4"
     },
     {
       "path": "branding/logo-mark.png",
-      "bytes": 282011,
-      "sha256": "1bad4ecd027cd328fa18fd51d6b93f398ed902d8efac1752a81e3ac6db7cac13"
+      "bytes": 171269,
+      "sha256": "eebea6272f5f3c6ed1b264c0d1e103c54867ebcf50fb8c945ad331bc27442625"
     },
     {
       "path": "branding/logo-master.png",
-      "bytes": 355050,
-      "sha256": "0d7359ea9cb0a488ab55dc3a35ff6118ca6006db6c84b0f25c4eb1941551c911"
+      "bytes": 207110,
+      "sha256": "5e2a273528d1c80972c4bf97632ea52e38ebec3f548b8d994b83b4d7539fa5c5"
     },
     {
       "path": "branding/logo-on-accent.png",
-      "bytes": 328042,
-      "sha256": "32d43cb894c269513166ba8a9811aec19d01202a4b0ea5da9e42059b271cd96c"
+      "bytes": 238185,
+      "sha256": "c37c178ec7fb33b8572fa31f4288f0d8b2c5be900d7210331551db01c2f7e5f5"
     },
     {
       "path": "branding/logo-on-dark.png",
-      "bytes": 328042,
-      "sha256": "32d43cb894c269513166ba8a9811aec19d01202a4b0ea5da9e42059b271cd96c"
+      "bytes": 238185,
+      "sha256": "c37c178ec7fb33b8572fa31f4288f0d8b2c5be900d7210331551db01c2f7e5f5"
     },
     {
       "path": "branding/logo-on-light.png",
-      "bytes": 355050,
-      "sha256": "0d7359ea9cb0a488ab55dc3a35ff6118ca6006db6c84b0f25c4eb1941551c911"
+      "bytes": 207110,
+      "sha256": "5e2a273528d1c80972c4bf97632ea52e38ebec3f548b8d994b83b4d7539fa5c5"
     },
     {
       "path": "dealer-brand/app-icon.png",
-      "bytes": 282011,
-      "sha256": "1bad4ecd027cd328fa18fd51d6b93f398ed902d8efac1752a81e3ac6db7cac13"
+      "bytes": 171269,
+      "sha256": "eebea6272f5f3c6ed1b264c0d1e103c54867ebcf50fb8c945ad331bc27442625"
     },
     {
       "path": "dealer-brand/favicon.ico",
-      "bytes": 18714,
-      "sha256": "a1c4ecd7407973cd7fe364c5af02610ac6d5bed1497ea000d1ee690e2f3dca7e"
+      "bytes": 13678,
+      "sha256": "0ed982733ae7af3f1244d3b1240cb7ea0f03193f87d5f46ac86389c2db1627f7"
     },
     {
       "path": "dealer-brand/logo-on-accent.png",
-      "bytes": 328042,
-      "sha256": "32d43cb894c269513166ba8a9811aec19d01202a4b0ea5da9e42059b271cd96c"
+      "bytes": 238185,
+      "sha256": "c37c178ec7fb33b8572fa31f4288f0d8b2c5be900d7210331551db01c2f7e5f5"
     },
     {
       "path": "dealer-brand/logo-on-accent.webp",
-      "bytes": 213018,
-      "sha256": "566dd6315fe4ec518601d45443e915b096560bf95d68477b754f12f983f7aaac"
+      "bytes": 166188,
+      "sha256": "87e7a6b970d655fd14920bcc2cd7d46e1753d0171223849b5a3f42328df9d63d"
     },
     {
       "path": "dealer-brand/logo-on-dark.png",
-      "bytes": 328042,
-      "sha256": "32d43cb894c269513166ba8a9811aec19d01202a4b0ea5da9e42059b271cd96c"
+      "bytes": 238185,
+      "sha256": "c37c178ec7fb33b8572fa31f4288f0d8b2c5be900d7210331551db01c2f7e5f5"
     },
     {
       "path": "dealer-brand/logo-on-dark.webp",
-      "bytes": 213018,
-      "sha256": "566dd6315fe4ec518601d45443e915b096560bf95d68477b754f12f983f7aaac"
+      "bytes": 166188,
+      "sha256": "87e7a6b970d655fd14920bcc2cd7d46e1753d0171223849b5a3f42328df9d63d"
     },
     {
       "path": "dealer-brand/logo-on-light.png",
-      "bytes": 355050,
-      "sha256": "0d7359ea9cb0a488ab55dc3a35ff6118ca6006db6c84b0f25c4eb1941551c911"
+      "bytes": 207110,
+      "sha256": "5e2a273528d1c80972c4bf97632ea52e38ebec3f548b8d994b83b4d7539fa5c5"
     },
     {
       "path": "dealer-brand/logo-on-light.webp",
-      "bytes": 212836,
-      "sha256": "b8fc8eb76a20dd21d24c3711c6b82ae77e59da3a33de0e9b4e608c64e910cadd"
+      "bytes": 136790,
+      "sha256": "394896ae07564973d8f0293c9ceb835ecd0be3d601b83bb14e9afb295b05f5bf"
     },
     {
       "path": "dealer-brand/mark-on-dark.webp",
-      "bytes": 166910,
-      "sha256": "c09a456a26a0f87e090372659a2b01ec0eecc33f646433c4b2009e66be4c978e"
+      "bytes": 115320,
+      "sha256": "ad1f9de5dd5458d5a4028ac4aa52ba16ebecc1c5dd81f021b3bd0d5d20236554"
     },
     {
       "path": "dealer-brand/mark-on-light.webp",
-      "bytes": 166910,
-      "sha256": "c09a456a26a0f87e090372659a2b01ec0eecc33f646433c4b2009e66be4c978e"
+      "bytes": 119862,
+      "sha256": "12f08ea1aa182194f09c5ca5aa825737e80e6098eb32ffb1fed2300262f6132a"
     }
   ]
 }

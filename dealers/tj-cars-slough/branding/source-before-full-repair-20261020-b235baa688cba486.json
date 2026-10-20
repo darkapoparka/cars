@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "dealer": "tj-cars-slough",
+  "status": "reviewed",
+  "realLogoFirst": true,
+  "publicSources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/TJ-Cars-Ltd1?menu=1",
+      "observedAt": "2026-10-19T17:36:50.850125Z"
+    },
+    {
+      "url": "https://www.autotrader.co.uk/dealers/buckinghamshire/slough/tj-cars-ltd-10035303",
+      "observedAt": "2026-10-19T18:24:26.842867Z"
+    },
+    {
+      "source": "alternate-public-logo-page",
+      "retainedEvidence": "source URL in real-logo research",
+      "observation": "A dealer-image URL was observed, but the image host timed out; no inaccessible image is claimed as an obtained original."
+    }
+  ],
+  "originals": [
+    {
+      "path": "branding/observed-logo.gif",
+      "sha256": "2673cbd2cfeeec33ca85ec327389a1c10a60c9ab442a4168c08a98fc24bbef17",
+      "sourceUrl": "https://m.atcdn.co.uk/dealer-logo/at2/adbranding/10035303/images/fpa_logo.gif",
+      "observedAt": "2026-10-19T18:02:51.696560Z",
+      "kind": "generic-marketplace-business-name-banner"
+    }
+  ],
+  "creationMethod": "imagegen-proposal",
+  "dealerApproved": false,
+  "approvalStatus": "independent-preview-not-dealer-approved",
+  "researchConclusion": "Bounded public checks did not yield usable distinct dealer artwork. Generic text banners or unavailable image-host URLs do not prove that the dealer has no logo. This artwork is clearly an independent proposal.",
+  "generation": {
+    "tool": "image_gen.imagegen",
+    "generationId": "exec-c45bbec5-dd96-4a8d-9cae-27734b27942c",
+    "modelVersion": null,
+    "prompt": "Use case: logo-brand. Create one polished independent UK motor dealer identity proposal. Transparent background, flat crisp graphic, no mockup, no gradients, no shadows, no raster distress or speckles. Wide horizontal lockup, simple isolated compact emblem on left and exact business name on right with plenty of transparent gap for cropping. Emblem legible at32px, thick clean geometry, no tiny details. Design a dual-contrast outline of clean white and deep navy around every shape so it works on white, dark charcoal #111113 and red #c40101. Two-line wordmark, tight readable bold geometric letterforms, no tagline, no extra text. Business name TJ CARS LTD. Preserve the simple white-and-black identity in the existing generic business-name banner while proposing a distinct TJ interlock with a gently rounded J and square T. Use white lettering with dark navy outlines, one restrained silver bar. The right wordmark is TJ CARS on line one and LTD smaller on line two; do not repeat the emblem in the right wording."
+  },
+  "compactDerivation": {
+    "method": "separate-imagegen-compact-emblem",
+    "parentReference": "branding/generated-master.png",
+    "parentSha256": "435b2e5d62af7849ff97b9f29652bd5c035205c9813df6d312028609e97268b9",
+    "prompt": "Use case: logo-brand, derive compact logo. Reproduce ONLY the isolated emblem on the far left of the reference, omitting the adjacent business wordmark entirely. Keep exactly the same motif, lettering inside the emblem, colour palette, navy and white outlines and proportions. Center this one compact emblem on a generous square transparent canvas, no other objects or words. Strengthen only tiny outline irregularities so the emblem is perfectly smooth and clear at32px. Flat crisp graphic, absolutely no speckles, no distressed pixels, no shadows, no gradients, no new geometry or creative changes.",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-4816b524-0bba-4e96-9d36-2b026d074b1b",
+      "modelVersion": null
+    }
+  },
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T18:39:49.713Z",
+    "master": {
+      "path": "branding/generated-master.png",
+      "sha256": "435b2e5d62af7849ff97b9f29652bd5c035205c9813df6d312028609e97268b9",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-c45bbec5-dd96-4a8d-9cae-27734b27942c",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "30a86494142df0ff3ecd85e6d0dcedb8fcbc2fea9faaa109153ca32c910cdc12",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-4816b524-0bba-4e96-9d36-2b026d074b1b",
+        "modelVersion": null
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "30a86494142df0ff3ecd85e6d0dcedb8fcbc2fea9faaa109153ca32c910cdc12",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-4816b524-0bba-4e96-9d36-2b026d074b1b",
+        "modelVersion": null
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-master.png",
+        "sha256": "435b2e5d62af7849ff97b9f29652bd5c035205c9813df6d312028609e97268b9",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-c45bbec5-dd96-4a8d-9cae-27734b27942c",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-master.png",
+        "sha256": "435b2e5d62af7849ff97b9f29652bd5c035205c9813df6d312028609e97268b9",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-c45bbec5-dd96-4a8d-9cae-27734b27942c",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-master.png",
+        "sha256": "435b2e5d62af7849ff97b9f29652bd5c035205c9813df6d312028609e97268b9",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-c45bbec5-dd96-4a8d-9cae-27734b27942c",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": {
+        "onLight": [
+          "#ffffff"
+        ],
+        "onDark": [
+          "#111113"
+        ],
+        "onAccent": [
+          "#c40101"
+        ]
+      },
+      "wordmarkWidths": [
+        120,
+        180
+      ],
+      "markWidths": [
+        32,
+        64
+      ],
+      "method": "Same actual dual-contrast generated artwork on each surface; no generated colours are represented as a template palette change.",
+      "reviewedAt": "2026-10-19T18:39:49.713Z",
+      "review": "Visually reviewed exact cropTransparentPadding exports at120px and180px wordmark widths and32px/64px compact sizes on white, charcoal and red. Exact spelling retained, real alpha present, compact emblem clear. The source palette is part of the artwork only."
+    }
+  }
+}

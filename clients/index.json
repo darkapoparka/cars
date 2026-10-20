@@ -2611,6 +2611,66 @@
       "sourceRepository": "darkapoparka/cars",
       "sourceCommit": "27026835389c4c683a7245afb4bd415ced447ed4",
       "sourcePath": "dealers/express-motors"
+    },
+    {
+      "slug": "car-4-me-fz",
+      "name": "Car 4 Me FZ",
+      "path": "dealers/car-4-me-fz",
+      "variants": [
+        "auto-best",
+        "modern",
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
+      ],
+      "sourceState": "source-present",
+      "reviewState": "not-claimed",
+      "leadId": "ae-dubai-car-4-me-fz",
+      "sourceFormat": "dealer-pack",
+      "sourceRepository": "darkapoparka/cars",
+      "sourceCommit": "f73c8e4b258653d1cee9c29d161e41774cfe6fb8",
+      "sourcePath": "dealers/car-4-me-fz"
+    },
+    {
+      "slug": "great-west-east-auto",
+      "name": "Great West East Auto",
+      "path": "dealers/great-west-east-auto",
+      "variants": [
+        "auto-best",
+        "modern",
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
+      ],
+      "sourceState": "source-present",
+      "reviewState": "not-claimed",
+      "leadId": "ae-dubai-great-west-east-auto",
+      "sourceFormat": "dealer-pack",
+      "sourceRepository": "darkapoparka/cars",
+      "sourceCommit": "f73c8e4b258653d1cee9c29d161e41774cfe6fb8",
+      "sourcePath": "dealers/great-west-east-auto"
+    },
+    {
+      "slug": "jr-auto-fzco",
+      "name": "JR Auto FZCO",
+      "path": "dealers/jr-auto-fzco",
+      "variants": [
+        "auto-best",
+        "modern",
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
+      ],
+      "sourceState": "source-present",
+      "reviewState": "not-claimed",
+      "leadId": "ae-dubai-jr-auto-fzco",
+      "sourceFormat": "dealer-pack",
+      "sourceRepository": "darkapoparka/cars",
+      "sourceCommit": "f73c8e4b258653d1cee9c29d161e41774cfe6fb8",
+      "sourcePath": "dealers/jr-auto-fzco"
     }
   ],
   "campaignCandidatesWithoutFolders": [

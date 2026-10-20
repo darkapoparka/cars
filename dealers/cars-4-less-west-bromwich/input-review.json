@@ -3,7 +3,7 @@
   "kind": "cars-dealer-pack-input-review",
   "dealer": "cars-4-less-west-bromwich",
   "reviewed": true,
-  "reviewedAt": "2026-10-20T19:15:33.425Z",
+  "reviewedAt": "2026-10-20T21:24:28.955Z",
   "review": {
     "kind": "automated",
     "humanReview": false,
@@ -42,6 +42,18 @@
       "sha256": "723e35686a3b15981c101633c48a2a6a93aa141d46e1847fd9221df669c51f31"
     },
     {
+      "path": "branding/full-surface-repair-20261020.json",
+      "sha256": "ac43e3c97cfbbdb587f2ef2fdf1b195d8e17815d616a107c0c005731934584ae"
+    },
+    {
+      "path": "branding/generated-compact-on-dark-v2-20261020-87471bf0c0b6090b.png",
+      "sha256": "87471bf0c0b6090b0fd496a9e2759099547da0f45e2c2ec2a2cd233717a60953"
+    },
+    {
+      "path": "branding/generated-compact-on-light-v2-20261020-20cc08ae135a4898.png",
+      "sha256": "20cc08ae135a489885e7522bb99e77b0bff39befb6b2a15a0e84891ac96a2825"
+    },
+    {
       "path": "branding/generated-mark.png",
       "sha256": "7b26afa53566214ad1901f57bf5fcb4b64b3ea4efd86f968689d90c6971d5516"
     },
@@ -50,16 +62,28 @@
       "sha256": "659c94324c27eef22e7c0aead791d19cc4b78d9bc05ed6c10a994999c652758f"
     },
     {
+      "path": "branding/generated-on-dark-v2-20261020-38a91d16c40db5f7.png",
+      "sha256": "38a91d16c40db5f7edb6b2f0a476b2dd94986441771dc42dbf37d2a03e569357"
+    },
+    {
+      "path": "branding/generated-on-light-v2-20261020-2f0299cebb71837a.png",
+      "sha256": "2f0299cebb71837a8cab61575458a81bd092a14862f759f0d940743d6b566306"
+    },
+    {
       "path": "branding/logo-contract.json",
-      "sha256": "57fa6aec9a40aa300105de44784dfea497fb3dc01ab119d3fe93282c54a135d3"
+      "sha256": "5c4e97e2bb717e3f9c7cbe4b5653ad35d91a8ba215e9916b45aba25e28dae7b7"
     },
     {
       "path": "branding/logo-recipe.json",
-      "sha256": "62692a94712f5558d6a4f82b141be7aecc2f3578d6a9373f7c065efa85b1c87f"
+      "sha256": "b15a730123cadf1e6443c66ae3bc687e2a8f1bd40088278d1bd52367a805106d"
+    },
+    {
+      "path": "branding/source-before-full-repair-20261020-af3649365a62d478.json",
+      "sha256": "af3649365a62d47830e857ae630e8258463f3dcce6d8e22cc934653ad92446c4"
     },
     {
       "path": "branding/source.json",
-      "sha256": "af3649365a62d47830e857ae630e8258463f3dcce6d8e22cc934653ad92446c4"
+      "sha256": "0d85654bc819c34a36cce528ec1b571ffecce83054f8211a6ffd80afc92e24c1"
     },
     {
       "path": "business-facts.json",
@@ -67,7 +91,7 @@
     },
     {
       "path": "copy-review.json",
-      "sha256": "4e05b31e7c1083ac3209c0b66aa684a6ade6ff0044f79ef2a87cca935bde2c68"
+      "sha256": "c60a944ddda2874352fe912b87fde44d5b30c86e6115bd7b0ca125ab49cbc6de"
     },
     {
       "path": "dealer-stock/public-1.jpg",
@@ -83,11 +107,11 @@
     },
     {
       "path": "dealer.json",
-      "sha256": "a0afb766bb550c6aa4255b7f0049096350fdb58d9b02ce10c5563b9e9d0a0d6e"
+      "sha256": "4000cdef06dc13480b92ecc509306f82081199dfcab084508f0c0ffeb61a74cb"
     },
     {
       "path": "identity-review.json",
-      "sha256": "c8618fb5627eec76ff7917af8b5ea74b4a052c844cd564413f67edac9f7f9885"
+      "sha256": "cb609bb5e68b24946f4c60c00157097aecc91bd4d637b61ba61949a2d1d5f07b"
     },
     {
       "path": "locale.json",
@@ -99,7 +123,7 @@
     },
     {
       "path": "qualification.json",
-      "sha256": "27e4ae69c361dd0a52574c4bdc0a0d6e2f5db7c0d6829d8b13f1eaf6223fd839"
+      "sha256": "6b4a43abb93e589a1874c96edaaa35caeb4acde33edc2966f9f8bbe2679b1ee8"
     },
     {
       "path": "source-evidence.json",

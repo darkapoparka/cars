@@ -1,0 +1,161 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-owned-full-surface-contrast-repair",
+  "dealer": "tj-cars-slough",
+  "createdAt": "2026-10-20T21:21:33.549Z",
+  "previousPackDigest": "61622f2d271eb6aee84daf60c390765c0399420640d9420297446e11ccb64ff1",
+  "previousSource": {
+    "path": "branding/source-before-full-repair-20261020-b235baa688cba486.json",
+    "sha256": "b235baa688cba486e00e57b3509d66b4c8ce2ab9235ff301cd26eddd2be1fdcc"
+  },
+  "description": "Italic interlocking TJ and TJ CARS LTD in navy/slate and ivory variants",
+  "replacements": [
+    {
+      "key": "wordmark-tj-light-v2",
+      "roles": [
+        "master",
+        "onLight"
+      ],
+      "path": "branding/generated-on-light-v2-20261020-ef6eb106e443cd57.png",
+      "sha256": "ef6eb106e443cd576f31b6af5d707ad7474bec5bcab7127041affc56a1b159db",
+      "nativeDimensions": {
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1da7b3e9-0577-47b9-a2ff-fcd3292002cf",
+        "modelVersion": null
+      },
+      "prompt": "Use case: logo-brand. Input1 is EDIT TARGET. Create an actual dedicated WHITE-SURFACE deep-ink transparent variant. Preserve exact spelling, composition, typography, emblem geometry, natural proportions and all counters. At least90% of visible ink must contrast strongly with WHITE. Clean flat opaque ink, genuine alpha transparency. No backing tile, glow, halo, shadow, gradients, blur, bevel or alpha speckles. No added words or motifs. Clear at120/180px. Retain interlocking italic TJ emblem LEFT and exact TJ CARS with LTD below RIGHT. Exact text TJ CARS LTD. Fill dominant letter interiors deep navy (#081a35), small secondary J detail may be dark slate gray. No large white/silver fills or thick white borders. Preserve navy/silver identity and exact TJ initials, not J alone.",
+      "references": [
+        {
+          "path": "branding/generated-master.png",
+          "sha256": "435b2e5d62af7849ff97b9f29652bd5c035205c9813df6d312028609e97268b9"
+        }
+      ]
+    },
+    {
+      "key": "wordmark-tj-dark-v3",
+      "roles": [
+        "onDark",
+        "onAccent"
+      ],
+      "path": "branding/generated-on-dark-v2-20261020-92a0c11e3d0f26d2.png",
+      "sha256": "92a0c11e3d0f26d245d73b6c2dad27c0628f48fda41ccb136956894e167e1902",
+      "nativeDimensions": {
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-485c8bdc-9d4a-4e6f-b3c9-a143d802d2cc",
+        "modelVersion": null
+      },
+      "prompt": "Use case: logo-brand. Input1 edit target. Retain exact TJ interlocking italic emblem at LEFT and TJ CARS above LTD at RIGHT. Exact text TJ CARS LTD. Rebuild as clean SINGLE LIGHT-IVORY INK #e8edf3 silhouette on real transparent alpha. ALL letter bodies and old navy borders become light ivory; NO navy outer or inner borders, NO dark surround, NO heavy outline. Small original inner J detail may be transparent counter, so TJ remains distinct. Same typography/proportions. At least95% visible ink very light, strong on #111113,#101820,#09090b,#17191c,#c40101. Flat vector-like filled art, no glow, halo, shadow, gradient, haze, alpha speckles or tile. Clear120/180px.",
+      "references": [
+        {
+          "path": "branding/generated-master.png",
+          "sha256": "435b2e5d62af7849ff97b9f29652bd5c035205c9813df6d312028609e97268b9"
+        }
+      ]
+    },
+    {
+      "key": "compact-tj-light-v2",
+      "roles": [
+        "mark"
+      ],
+      "path": "branding/generated-compact-on-light-v2-20261020-2025558961c15980.png",
+      "sha256": "2025558961c159806d9bf0cd1838d7b34ac464fdf6642d4f8c35dc76d9e62dc0",
+      "nativeDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-b255438b-5ec3-450e-9d9c-0b45aaf279cb",
+        "modelVersion": null
+      },
+      "prompt": "Use case: logo-brand. Input1 edit target, exact interlocking italic TJ compact. Preserve both T and hooked J, all geometry/counters and original proportions. Dedicated WHITE-SURFACE variant: all large letter bodies deep navy #081a35, inner secondary J may be deep slate gray. At least90% ink dark; remove large white/silver fills and bulky white borders. Actual transparent counters/background, flat clean opaque filled mark, legible TJ32/64px. No new symbols/text, badge, stretch, glow, halo, shadow, gradient or speckles.",
+      "references": [
+        {
+          "path": "branding/generated-mark.png",
+          "sha256": "30a86494142df0ff3ecd85e6d0dcedb8fcbc2fea9faaa109153ca32c910cdc12"
+        }
+      ]
+    },
+    {
+      "key": "compact-tj-dark-v3",
+      "roles": [
+        "markOnDark"
+      ],
+      "path": "branding/generated-compact-on-dark-v2-20261020-2749a6279373a5ea.png",
+      "sha256": "2749a6279373a5ea223802fefea43c274a09ebaf25876c7057c1e099f0d55533",
+      "nativeDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-4711ed9b-df2d-413e-b635-5efe4d15aaa1",
+        "modelVersion": null
+      },
+      "prompt": "Use case: logo-brand. Create a native compact interlocking TJ monogram for TJ Cars Ltd, independent preview proposal. Retain established italic block letters: wide slanted capital T at upper left, tall hooked capital J forming lower/right curve. T vertical ends above hooked J bowl; both letters must read TJ. Preserve compact overlapping identity and broad bold geometry. SINGLE LIGHT IVORY INK #e8edf3 ONLY, solid fully opaque flat fill. Thin transparent gaps reveal T and J. No colored accents, borders or outline. No shadow, glow, halo, blur, gradients, lighting, texture or speckles. Genuine alpha transparent background/counters, no tile or badge. Natural compact geometry clear32/64px. No other words or symbols. Vector-like flat filled art rendered as transparent square PNG.",
+      "references": []
+    }
+  ],
+  "visualReview": {
+    "kind": "agent-visual-review",
+    "viewedAt": "2026-10-20T21:23:30.301Z",
+    "wordmarkWidths": [
+      120,
+      180
+    ],
+    "compactWidths": [
+      32,
+      64
+    ],
+    "backgrounds": [
+      "#ffffff",
+      "#111113",
+      "#101820",
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ],
+    "identitySpellingReviewed": true,
+    "notes": "Viewed five matched consumer comparisons; exact CARS4LESS, ROLF STREET CAR SALES, SMALL AUTOMATICS, STANLEY MOTOR GROUP and TJ CARS LTD reviewed. No invented dealer adoption. Rolf dark compact exact; Small derived favicon dependency recorded.",
+    "humanReview": false,
+    "ownerApproval": false,
+    "dealerApproval": false,
+    "nativeApproval": false,
+    "hostedApproval": false,
+    "comparison": {
+      "path": "J:/.artifacts/cars-source-sync/tj-cars-slough-full-logo-before-after.png",
+      "bytes": 299841,
+      "sha256": "612ea30e43e8984b9642a7e75de0c27b3ddff3b5044da08c6ca7c6f69d3cb3ec",
+      "wordmarkWidths": [
+        120,
+        180
+      ],
+      "compactWidths": [
+        32,
+        64
+      ],
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#101820",
+        "#09090b",
+        "#17191c",
+        "#c40101"
+      ]
+    }
+  },
+  "passingRolePreservation": [],
+  "originalArtworkPreserved": true,
+  "factsStockPhotosPreserved": true,
+  "filtersApplied": false,
+  "thresholdsChanged": false,
+  "providerWrites": 0
+}

@@ -3,7 +3,7 @@
   "kind": "cars-dealer-pack-input-review",
   "dealer": "njh-car-sales",
   "reviewed": true,
-  "reviewedAt": "2026-10-20T19:18:30.394Z",
+  "reviewedAt": "2026-10-20T21:21:04.721Z",
   "review": {
     "kind": "automated",
     "humanReview": false,
@@ -42,6 +42,18 @@
       "sha256": "12d7df4c835e310494aaa8ce922b52d7e6c7f519b13681c2db0c19f5a3b0c894"
     },
     {
+      "path": "branding/five-held-logo-repair-20261020.json",
+      "sha256": "2e7a9265b6f9ddca505bf08099baa30cce4776ed9f9ddda2130b786090da3972"
+    },
+    {
+      "path": "branding/generated-mark-on-dark-v2-20261020.png",
+      "sha256": "e247a6f61ffaf09e9031e592967dbc968af06387a6d290cb322050a2af86502f"
+    },
+    {
+      "path": "branding/generated-mark-on-light-v2-20261020.png",
+      "sha256": "228f02e77b8534372257a995eb51e90ea981ae90d906e4e65e00a0854a26694e"
+    },
+    {
       "path": "branding/generated-mark.png",
       "sha256": "dabdbe47d5d79ef30e172a4d10d3843861611b04a491ebc5956a255a0db3fea5"
     },
@@ -50,24 +62,36 @@
       "sha256": "a25ac49b5582997003dd4df1afca2e584f445b9aa7f372f2aff47b76c52e3418"
     },
     {
+      "path": "branding/generated-on-dark-v2-20261020.png",
+      "sha256": "cabdfa8b21147fc29fed5db4fb0fa0ab2a57a63ce556bd731ba21144654acd52"
+    },
+    {
       "path": "branding/generated-on-dark.png",
       "sha256": "fdfc41f844e5d5d34e8b91709f21acf703d7dfc20cb4a43240d1c474f63f8464"
     },
     {
+      "path": "branding/generated-on-light-v2-20261020.png",
+      "sha256": "ac4fb423085518ae2cc20fb760c2c6c0d9602aecca2e960e69ebf8e0104b1702"
+    },
+    {
       "path": "branding/logo-contract.json",
-      "sha256": "f3c50ce111e9cdcc1e2a7a945c819369b7dce32f606a78ebbc5281c1a4859dff"
+      "sha256": "d240e9770f942629e3da124b49d04c8101f16246040330724bf8cd146d0ced3c"
     },
     {
       "path": "branding/logo-recipe.json",
-      "sha256": "83b55ae932252d71f762083727620e6862fbb0e7fa5b0dea0505244ebee50fd4"
+      "sha256": "15c13e2c5ae2f0924bf34bc4b6beaf47b139b4adcab21a39a244ac96f04bb149"
     },
     {
       "path": "branding/observed-logo.gif",
       "sha256": "0b403839fd876ed7244efd3ce761c0bad898febac3a124d64e0bd069eeee7f08"
     },
     {
-      "path": "branding/source.json",
+      "path": "branding/source-before-five-held-logo-repair-20261020-4fb2fcbb1ed7d6a5.json",
       "sha256": "4fb2fcbb1ed7d6a51a62eb3c9159e7b6c5a0d45098637ad1b9c687ac7eeec1a1"
+    },
+    {
+      "path": "branding/source.json",
+      "sha256": "2f71730247a07fe35318d3dbe311bf376345358c8f121a8b90d9d01f41e61fac"
     },
     {
       "path": "business-facts.json",
@@ -75,7 +99,7 @@
     },
     {
       "path": "copy-review.json",
-      "sha256": "d5275d5c3eea9904382704d65f19c7e5e74f5926d0a30a1bd26957bad58aa3a0"
+      "sha256": "6a9f0386e95ac518896893869399553ada0ed38d2d9e22909b28fccbad4efb93"
     },
     {
       "path": "dealer-stock/public-1.jpg",
@@ -91,11 +115,11 @@
     },
     {
       "path": "dealer.json",
-      "sha256": "f03fc9833bc8653fa307c52e21f261891dd1d9754d5ff3da28b653a76cacb102"
+      "sha256": "5ba8be5834615fd4a58cc30d4fce89f5bbc362a7418ec8f7987c38d51be7d5c0"
     },
     {
       "path": "identity-review.json",
-      "sha256": "6d5239b402d3dfaeb86b7f1a3ad3ea3fdc97613b8da344069fac52dc1c55dcf0"
+      "sha256": "72e3c260d82c5b94f3ae65db6e3f473591093a59ee34f4150faff5d039f0b18d"
     },
     {
       "path": "locale.json",
@@ -107,7 +131,7 @@
     },
     {
       "path": "qualification.json",
-      "sha256": "e1c749ac362c0ab3a0e73539553eb0987b2013d534d8a7407692d2df682dd8ce"
+      "sha256": "4187b62bdc1a901f660b15bf5cd3e3b3ffd2a2b670bf5f298131368eb80592e8"
     },
     {
       "path": "source-evidence.json",

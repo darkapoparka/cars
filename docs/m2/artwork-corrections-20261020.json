@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "kind": "cars-artwork-source-corrections",
-  "checkedAt": "2026-10-20T21:01:12.181Z",
+  "checkedAt": "2026-10-20T21:34:04.777Z",
   "sourceParent": "cf566a99b663d6367b242d096ab2b812e2b3cb68",
   "builtInImagegen": true,
   "proposalsOnly": true,
@@ -19,10 +19,10 @@
     "ownerAcceptance": false
   },
   "summary": {
-    "packs": 30,
-    "assetChecks": 420,
-    "files": 850,
-    "bytes": 88833544
+    "packs": 39,
+    "assetChecks": 546,
+    "files": 1103,
+    "bytes": 126906507
   },
   "packs": [
     {
@@ -474,6 +474,141 @@
       "hostedApproval": false,
       "dealerApproval": false,
       "ownerAcceptance": false
+    },
+    {
+      "slug": "cars-4-less-west-bromwich",
+      "packDigest": "95bef8f3f715a8604d4be8f89c8d717cc42351228d3f9786eeec34b38808c871",
+      "files": 27,
+      "bytes": 4215086,
+      "correction": "contrast",
+      "assetChecks": 14,
+      "sourceCheckPassed": true,
+      "originalArtworkFactsStockPhotosPreserved": true,
+      "provenance": "dealers/cars-4-less-west-bromwich/branding/full-surface-repair-20261020.json",
+      "nativeApproval": false,
+      "hostedApproval": false,
+      "dealerApproval": false,
+      "ownerAcceptance": false
+    },
+    {
+      "slug": "rolf-street-car-sales",
+      "packDigest": "75937aaca5eb5a31768f4518af6507c0e11331b3520ddcdf0c8a5ec4be7e431a",
+      "files": 28,
+      "bytes": 3602804,
+      "correction": "contrast",
+      "assetChecks": 14,
+      "sourceCheckPassed": true,
+      "originalArtworkFactsStockPhotosPreserved": true,
+      "provenance": "dealers/rolf-street-car-sales/branding/full-surface-repair-20261020.json",
+      "nativeApproval": false,
+      "hostedApproval": false,
+      "dealerApproval": false,
+      "ownerAcceptance": false
+    },
+    {
+      "slug": "small-automatics",
+      "packDigest": "34507d9a05a8689b00f6a57a0166423b83261ec89dc60da7f60f45ffddc1f53c",
+      "files": 27,
+      "bytes": 5622889,
+      "correction": "contrast",
+      "assetChecks": 14,
+      "sourceCheckPassed": true,
+      "originalArtworkFactsStockPhotosPreserved": true,
+      "provenance": "dealers/small-automatics/branding/full-surface-repair-20261020.json",
+      "nativeApproval": false,
+      "hostedApproval": false,
+      "dealerApproval": false,
+      "ownerAcceptance": false
+    },
+    {
+      "slug": "stanley-motor-group",
+      "packDigest": "478e75b62b8624f8396eca6ba42b0767aece686553aade7bca6370d8644f3e35",
+      "files": 28,
+      "bytes": 4109081,
+      "correction": "contrast",
+      "assetChecks": 14,
+      "sourceCheckPassed": true,
+      "originalArtworkFactsStockPhotosPreserved": true,
+      "provenance": "dealers/stanley-motor-group/branding/full-surface-repair-20261020.json",
+      "nativeApproval": false,
+      "hostedApproval": false,
+      "dealerApproval": false,
+      "ownerAcceptance": false
+    },
+    {
+      "slug": "tj-cars-slough",
+      "packDigest": "6e4a768ee3d1cf7f573313a938c20d02552ebbb2ebb75aa9667d414ca2c76acd",
+      "files": 28,
+      "bytes": 4582031,
+      "correction": "contrast",
+      "assetChecks": 14,
+      "sourceCheckPassed": true,
+      "originalArtworkFactsStockPhotosPreserved": true,
+      "provenance": "dealers/tj-cars-slough/branding/full-surface-repair-20261020.json",
+      "nativeApproval": false,
+      "hostedApproval": false,
+      "dealerApproval": false,
+      "ownerAcceptance": false
+    },
+    {
+      "slug": "chris-automotive",
+      "packDigest": "b1e61cfead3897da9d60fae8c990429f40437d4c6a56504f578be4ee94adeaf2",
+      "files": 29,
+      "bytes": 3448977,
+      "correction": "contrast",
+      "assetChecks": 14,
+      "sourceCheckPassed": true,
+      "originalArtworkFactsStockPhotosPreserved": true,
+      "provenance": "dealers/chris-automotive/branding/five-held-logo-repair-20261020.json",
+      "nativeApproval": false,
+      "hostedApproval": false,
+      "dealerApproval": false,
+      "ownerAcceptance": false
+    },
+    {
+      "slug": "danny-trading",
+      "packDigest": "8cfeab98b0afbd2093970d474dec4f788127db79dcba28294ddbb709d1e13b78",
+      "files": 30,
+      "bytes": 3315076,
+      "correction": "contrast",
+      "assetChecks": 14,
+      "sourceCheckPassed": true,
+      "originalArtworkFactsStockPhotosPreserved": true,
+      "provenance": "dealers/danny-trading/branding/five-held-logo-repair-20261020.json",
+      "nativeApproval": false,
+      "hostedApproval": false,
+      "dealerApproval": false,
+      "ownerAcceptance": false
+    },
+    {
+      "slug": "njh-car-sales",
+      "packDigest": "9036957861fa7eed1c59a0057614005d2a39e386c8b940a080509553c33e72f2",
+      "files": 29,
+      "bytes": 6119548,
+      "correction": "contrast",
+      "assetChecks": 14,
+      "sourceCheckPassed": true,
+      "originalArtworkFactsStockPhotosPreserved": true,
+      "provenance": "dealers/njh-car-sales/branding/five-held-logo-repair-20261020.json",
+      "nativeApproval": false,
+      "hostedApproval": false,
+      "dealerApproval": false,
+      "ownerAcceptance": false
+    },
+    {
+      "slug": "unique-motors-nottingham",
+      "packDigest": "e81084febc0a9287ce73d7304348c58dfbd8a44342dd4e8512454cdd9b1b5fec",
+      "files": 27,
+      "bytes": 3057471,
+      "correction": "contrast",
+      "assetChecks": 14,
+      "sourceCheckPassed": true,
+      "originalArtworkFactsStockPhotosPreserved": true,
+      "provenance": "dealers/unique-motors-nottingham/branding/five-held-logo-repair-20261020.json",
+      "nativeApproval": false,
+      "hostedApproval": false,
+      "dealerApproval": false,
+      "ownerAcceptance": false
     }
   ],
   "nativeApproval": false,
@@ -525,6 +660,21 @@
         "millions-auto-cars",
         "mosaso",
         "prime-lane-motors"
+      ],
+      "sourceCommit": "76a96330f8de691259964433a5f35aa907c87777"
+    },
+    {
+      "sourceParent": "76a96330f8de691259964433a5f35aa907c87777",
+      "packs": [
+        "cars-4-less-west-bromwich",
+        "rolf-street-car-sales",
+        "small-automatics",
+        "stanley-motor-group",
+        "tj-cars-slough",
+        "chris-automotive",
+        "danny-trading",
+        "njh-car-sales",
+        "unique-motors-nottingham"
       ]
     }
   ]

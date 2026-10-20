@@ -37,22 +37,30 @@
     }
   },
   "generatedInputs": {
-    "reviewedAt": "2026-10-19T18:56:47.945880Z",
+    "reviewedAt": "2026-10-20T21:23:30.301Z",
     "master": {
-      "path": "branding/generated-master.png",
-      "sha256": "7f987315cf01ca5a9d5cfd53a46d04b9fba6c1301d465e48af204d6e965089fb",
+      "path": "branding/generated-on-light-v2-20261020-851228c40a798387.png",
+      "sha256": "851228c40a798387425672fb17bea047a782c3e26213b945214569e39a92e6b6",
+      "nativeDimensions": {
+        "width": 2172,
+        "height": 724
+      },
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-1999df7f-209f-40c9-ae99-40b0d0ae0700",
+        "generationId": "exec-044b5cde-14fc-478d-8217-ca360bb1f1e1",
         "modelVersion": null
       }
     },
     "mark": {
-      "path": "branding/generated-mark.png",
-      "sha256": "027180dfedbe9d6e7cea3a2f7260b8922198b1b38d17ee014bd32c65f03c3d93",
+      "path": "branding/generated-compact-on-light-v2-20261020-3e6a35781b040006.png",
+      "sha256": "3e6a35781b040006c3e60ecab7aa1699bb7234e54439ce6eb2f8ff40f0ca3e06",
+      "nativeDimensions": {
+        "width": 1244,
+        "height": 1264
+      },
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-1999df7f-209f-40c9-ae99-40b0d0ae0700",
+        "generationId": "exec-4cccf2a6-813d-481c-bd40-4d4f6582a68e",
         "modelVersion": null
       }
     },
@@ -67,29 +75,41 @@
     },
     "surfaces": {
       "onLight": {
-        "path": "branding/generated-master.png",
-        "sha256": "7f987315cf01ca5a9d5cfd53a46d04b9fba6c1301d465e48af204d6e965089fb",
+        "path": "branding/generated-on-light-v2-20261020-851228c40a798387.png",
+        "sha256": "851228c40a798387425672fb17bea047a782c3e26213b945214569e39a92e6b6",
+        "nativeDimensions": {
+          "width": 2172,
+          "height": 724
+        },
         "generation": {
           "tool": "image_gen.imagegen",
-          "generationId": "exec-1999df7f-209f-40c9-ae99-40b0d0ae0700",
+          "generationId": "exec-044b5cde-14fc-478d-8217-ca360bb1f1e1",
           "modelVersion": null
         }
       },
       "onDark": {
-        "path": "branding/generated-on-dark.png",
-        "sha256": "39efa98f285c535e02b1dbde4529193d69d33def3872e1d4afedaf4fa433a73c",
+        "path": "branding/generated-on-dark-v2-20261020-bf1eb4fa09615233.png",
+        "sha256": "bf1eb4fa0961523342bd120e3b9717cd94905701ae5b493aa373b8b7e6271308",
+        "nativeDimensions": {
+          "width": 2172,
+          "height": 724
+        },
         "generation": {
           "tool": "image_gen.imagegen",
-          "generationId": "exec-d53f642f-5fa8-4667-9234-6c28344aee61",
+          "generationId": "exec-bc497a21-a627-49d8-899b-3cd1c7b6b872",
           "modelVersion": null
         }
       },
       "onAccent": {
-        "path": "branding/generated-on-dark.png",
-        "sha256": "39efa98f285c535e02b1dbde4529193d69d33def3872e1d4afedaf4fa433a73c",
+        "path": "branding/generated-on-dark-v2-20261020-bf1eb4fa09615233.png",
+        "sha256": "bf1eb4fa0961523342bd120e3b9717cd94905701ae5b493aa373b8b7e6271308",
+        "nativeDimensions": {
+          "width": 2172,
+          "height": 724
+        },
         "generation": {
           "tool": "image_gen.imagegen",
-          "generationId": "exec-d53f642f-5fa8-4667-9234-6c28344aee61",
+          "generationId": "exec-bc497a21-a627-49d8-899b-3cd1c7b6b872",
           "modelVersion": null
         }
       }
@@ -119,8 +139,42 @@
         64
       ],
       "method": "Exact pipeline alpha-padding crop and resize of actual generated surface artwork. Separate light-ink generated wordmark is used on dark and accent surfaces. Compact inputs are documented actual imagegen outputs or isolated lossless crops.",
-      "reviewedAt": "2026-10-19T18:56:47.945880Z",
-      "review": "Visually reviewed the exact pipeline cropTransparentPadding exports at 120 px and 180 px wordmark widths and 32 px and 64 px compact sizes against all six required background colours. Spelling and transparency checked. Filled light wordmarks improve contrast on dark surfaces; artwork colours do not change template palettes."
+      "reviewedAt": "2026-10-20T21:23:30.301Z",
+      "review": "Visually reviewed the exact pipeline cropTransparentPadding exports at 120 px and 180 px wordmark widths and 32 px and 64 px compact sizes against all six required background colours. Spelling and transparency checked. Filled light wordmarks improve contrast on dark surfaces; artwork colours do not change template palettes.",
+      "notes": "Agent viewed matched maintained exports at120/180px and32/64px on actual six surfaces. Dedicated strong light/dark inks preserve exact spelling and palette families. Original artwork retained; Rolf passing dark compact unchanged. Small derived favicons necessarily regenerate with the corrected light compact, as authorized. Independent preview proposals; no dealer/native/hosted approval."
+    },
+    "marks": {
+      "onLight": {
+        "path": "branding/generated-compact-on-light-v2-20261020-3e6a35781b040006.png",
+        "sha256": "3e6a35781b040006c3e60ecab7aa1699bb7234e54439ce6eb2f8ff40f0ca3e06",
+        "nativeDimensions": {
+          "width": 1244,
+          "height": 1264
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-4cccf2a6-813d-481c-bd40-4d4f6582a68e",
+          "modelVersion": null
+        }
+      }
+    },
+    "compactMarkDescription": "RS road/arrow and ROLF STREET CAR SALES; original passing dark compact retained",
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-20T21:23:30.301Z",
+      "widths": [
+        32,
+        64
+      ],
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#101820",
+        "#09090b",
+        "#17191c",
+        "#c40101"
+      ],
+      "notes": "Compact variants and exact identity viewed at32/64px; Stanley/TJ dark compact use flat ivory redraws after unsuitable candidates were rejected. Rolf passing dark compact unchanged. Padding/contrast thresholds unchanged; no stretching or filters."
     }
   },
   "additionalGenerations": [
@@ -131,6 +185,77 @@
       "modelVersion": null,
       "reference": "branding/generated-master.png",
       "prompt": "Use case: logo-brand, exact surface variant. This is an existing approved composition being prepared for a dark website background. Preserve its exact business name, spelling, typography, emblem motif, layout, separation and proportions. Make a faithful LIGHT-INK version on a truly TRANSPARENT background: all wordmark text should be solid bright ivory-white, filled letters, not hollow outline letters. Preserve any restrained emblem accent colours if they have contrast, and use white for the emblem's dark strokes so the compact emblem also reads on charcoal. Preserve the existing dark contour where helpful. No change of shape or concept. No added content. Do not include the background; it must remain transparent. Clean perfectly smooth edges, no speckles, no distress, no glow, no shadow, no gradients. The result must be clearly legible at180px width on charcoal #111113 and dark red #c40101. Match the reference geometry; no business names or letters may be omitted or repeated."
+    },
+    {
+      "roles": [
+        "master",
+        "onLight"
+      ],
+      "path": "branding/generated-on-light-v2-20261020-851228c40a798387.png",
+      "sha256": "851228c40a798387425672fb17bea047a782c3e26213b945214569e39a92e6b6",
+      "nativeDimensions": {
+        "width": 2172,
+        "height": 724
+      },
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-044b5cde-14fc-478d-8217-ca360bb1f1e1",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand. Input1 is EDIT TARGET. Create an actual dedicated WHITE-SURFACE deep-ink transparent variant. Preserve exact spelling, composition, typography, emblem geometry, natural proportions and all counters. At least90% of visible ink must contrast strongly with WHITE. Clean flat opaque ink, genuine alpha transparency. No backing tile, glow, halo, shadow, gradients, blur, bevel or alpha speckles. No added words or motifs. Clear at120/180px. Retain RS road-and-arrow emblem LEFT and exact ROLF STREET CAR SALES on one line RIGHT. R and S winding-road dashed lane markings remain. Use dominant deep navy ROLF STREET/R, deep burnt orange (#914000) for CAR SALES/S; small subordinate white lane dashes. Preserve navy/orange identity family, no thick pale edge.",
+      "references": [
+        {
+          "path": "branding/generated-master.png",
+          "sha256": "7f987315cf01ca5a9d5cfd53a46d04b9fba6c1301d465e48af204d6e965089fb"
+        }
+      ],
+      "createdAt": "2026-10-20T21:21:51.928Z",
+      "derivation": "Actual built-in imagegen result copied byte-for-byte. Dedicated light/dark surface inks retain exact business spelling and existing identity/motifs. Stanley/TJ dark compact are single-ivory redraws. No stretch, filters, recolouring or alpha cleanup."
+    },
+    {
+      "roles": [
+        "onDark",
+        "onAccent"
+      ],
+      "path": "branding/generated-on-dark-v2-20261020-bf1eb4fa09615233.png",
+      "sha256": "bf1eb4fa0961523342bd120e3b9717cd94905701ae5b493aa373b8b7e6271308",
+      "nativeDimensions": {
+        "width": 2172,
+        "height": 724
+      },
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-bc497a21-a627-49d8-899b-3cd1c7b6b872",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand. Input1 edit target. Keep exact RS winding-road/arrow emblem at left and exact ROLF STREET CAR SALES lettering one line at right, same proportions. Make a clean ALL-IVORY inverse. EVERY letter including CAR SALES and the whole S must be solid #e8edf3 ivory, no orange at all. RS lane dashes can be transparent thin counters. No heavy dark outline: only tiny fine internal keyline if required. Truly transparent background and counters. Flat opaque ink stamp, crisp clean edges, no glow, blur, gradient, shadow, halo or alpha flecks. At least95% visible ink light, clear on dark #111113 and RED #c40101. Preserve exact spelling and composition.",
+      "references": [
+        {
+          "path": "branding/generated-master.png",
+          "sha256": "7f987315cf01ca5a9d5cfd53a46d04b9fba6c1301d465e48af204d6e965089fb"
+        }
+      ],
+      "createdAt": "2026-10-20T21:21:51.928Z",
+      "derivation": "Actual built-in imagegen result copied byte-for-byte. Dedicated light/dark surface inks retain exact business spelling and existing identity/motifs. Stanley/TJ dark compact are single-ivory redraws. No stretch, filters, recolouring or alpha cleanup."
+    },
+    {
+      "roles": [
+        "mark"
+      ],
+      "path": "branding/generated-compact-on-light-v2-20261020-3e6a35781b040006.png",
+      "sha256": "3e6a35781b040006c3e60ecab7aa1699bb7234e54439ce6eb2f8ff40f0ca3e06",
+      "nativeDimensions": {
+        "width": 1244,
+        "height": 1264
+      },
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-4cccf2a6-813d-481c-bd40-4d4f6582a68e",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand. Input1 edit target, exact RS road/arrow compact emblem. Preserve winding R and S silhouette, right arrows, lane dashes, counters and proportions. Dedicated WHITE-SURFACE strong variant: R deep navy #071e40, S deep burnt orange #914000, tiny white lane dashes only. At least85% ink dark, remove bulky pale borders. Actual transparent background/counters, no badge or other letters. Crisp filled geometry legible32/64px, no stretching, glow, shadow, gradient, halo, blur or alpha speckles.",
+      "references": [
+        {
+          "path": "branding/generated-mark.png",
+          "sha256": "027180dfedbe9d6e7cea3a2f7260b8922198b1b38d17ee014bd32c65f03c3d93"
+        }
+      ],
+      "createdAt": "2026-10-20T21:21:51.928Z",
+      "derivation": "Actual built-in imagegen result copied byte-for-byte. Dedicated light/dark surface inks retain exact business spelling and existing identity/motifs. Stanley/TJ dark compact are single-ivory redraws. No stretch, filters, recolouring or alpha cleanup."
     }
   ],
   "compactOnDarkDerivation": {
@@ -148,5 +273,13 @@
       "generationId": "exec-d53f642f-5fa8-4667-9234-6c28344aee61",
       "modelVersion": null
     }
-  }
+  },
+  "sourceHistory": [
+    {
+      "reference": "branding/source-before-full-repair-20261020-27123519c307d9f8.json",
+      "sha256": "27123519c307d9f844b8e081bcd74017ccd25979c80eb6501a4f677b932815a3",
+      "retainedAt": "2026-10-20T21:21:51.928Z",
+      "reason": "Exact source provenance before owned full surface contrast repair"
+    }
+  ]
 }

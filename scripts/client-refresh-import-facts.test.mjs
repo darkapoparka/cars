@@ -126,17 +126,17 @@ test('Import accepts a source production year and rejects normalized-only invent
   assert.throws(() => adapters.assertImportListingFacts(forged), error => error.fields.includes('year'));
 });
 
-for(const name of ['Fairfield Car Centre (Bury / M-Kars seller path)','Cars and Van / Cars and Vans','Literal .+ [Motors] (UK) / North?'])test('Import message regexes preserve the literal sourced name '+name,t=>{
+for(const name of ['Fairfield Car Centre (Bury / M-Kars seller path)','Cars and Van / Cars and Vans','Literal .+ [Motors] (UK) / North?',"Let's Sell Your Car","Million's Auto Cars Ltd",`O'Brien "Motors" .+ [UK] / North? \\ $\{globalThis.injected=true\} $& $'`])test('Import message regexes preserve the literal sourced name '+name,t=>{
   const fixtureRoot=path.join(root,'runtime','import-facts-tests');fs.mkdirSync(fixtureRoot,{recursive:true});const candidate=fs.mkdtempSync(path.join(fixtureRoot,'messages-'));
   t.after(()=>{const target=fs.realpathSync(candidate);assert(target.startsWith(fs.realpathSync(fixtureRoot)+path.sep));fs.rmSync(target,{recursive:true,force:true});});
   const file=path.join(candidate,'src/lib/i18n/messages.ts');fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file,fs.readFileSync(path.join(root,'templates/import/src/lib/i18n/messages.ts')));
   const profile={business:{name,shortName:name,phoneE164:'',phoneDisplay:'',address:''}},before=JSON.stringify(profile);adapters.patchImportText(candidate,profile);
   const source=fs.readFileSync(file,'utf8');assert.doesNotThrow(()=>stripTypeScriptTypes(source),'The full generated catalog must parse as TypeScript');assert.equal(JSON.stringify(profile),before);
   const start=source.indexOf('const auxeroBgReplacements:'),end=source.indexOf('\n];',start)+3;assert(start>=0&&end>start,'Reviewed message pattern array remains explicit');
-  const rows=runInNewContext(stripTypeScriptTypes(source.slice(start,end))+';auxeroBgReplacements;'),[pattern,copy]=rows.find(([row])=>row.source.startsWith('Showing ')&&row.source.includes('matching'));
+  const context={},rows=runInNewContext(stripTypeScriptTypes(source.slice(start,end))+';auxeroBgReplacements;',context),[pattern,copy]=rows.find(([row])=>row.source.startsWith('Showing ')&&row.source.includes('matching'));
   const actual='Showing 1 - 3 of 5 matching '+name+' Listings';assert.equal(actual.replace(pattern,copy),'Показани 1 – 3 от 5 съвпадащи обяви');
-  pattern.lastIndex=0;assert.equal(pattern.test(actual.replace(name,'Another dealership')),false);pattern.lastIndex=0;assert.equal(pattern.test(actual.replace('/','X')),false,'A slash in the name is literal');
+  pattern.lastIndex=0;assert.equal(pattern.test(actual.replace(name,'Another dealership')),false);if(name.includes('/')){pattern.lastIndex=0;assert.equal(pattern.test(actual.replace('/','X')),false,'A slash in the name is literal');}
   if(name.includes('(')){pattern.lastIndex=0;assert.equal(pattern.test(actual.replace(/[()]/g,'')),false,'Parentheses in the name are literal');}
   if(name.includes('.+')){pattern.lastIndex=0;assert.equal(pattern.test(actual.replace('.+','wildcard text')),false,'Regex metacharacters in the name are literal');}
-  assert(source.includes('Налични автомобили в '+name),'Adjacent display copy retains the exact sourced name');
+  const [stockPattern,stockCopy]=rows.find(([row])=>row.source.endsWith(' current stock'));assert.equal((name+' current stock').replace(stockPattern,stockCopy),'Налични автомобили в '+name,'Rendered UI replacement retains the exact sourced name, without display escapes');assert.equal(context.injected,undefined,'A sourced interpolation sequence must not execute');
 });

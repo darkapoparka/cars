@@ -20,7 +20,7 @@
   "observedAt": "2026-10-19",
   "researchConclusion": "No usable original logo was obtained from bounded exact-business/locality searches and the matched public seller and directory sources. The dealer catalogue supplies a text identity and vehicle photographs; an unavailable or absent logo image does not prove that no original branding exists. This is an independent proposed identity, not an official dealer logo.",
   "generatedInputs": {
-    "reviewedAt": "2026-10-19T19:22:56.608725Z",
+    "reviewedAt": "2026-10-20T21:20:49.538Z",
     "master": {
       "path": "branding/generated-master.png",
       "sha256": "81d4f57fb6f3fc720d7d4aa1cf1634b133030ce21d243333d60aaff2d002c639",
@@ -35,15 +35,15 @@
       }
     },
     "mark": {
-      "path": "branding/generated-mark.png",
-      "sha256": "b74cef42486f22bec1b653c8724a805d182eb15653ca136448aa87db2e834766",
+      "path": "branding/generated-mark-on-light-v2-20261020.png",
+      "sha256": "c7a54cf9f19f7e30c63654bc4537b16357ddfd34457a5d55fbc233124b8e5750",
       "nativeDimensions": {
         "width": 1254,
         "height": 1254
       },
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-fbbf3b18-1f81-4d39-98df-af792575329c",
+        "generationId": "exec-3fce8583-2221-41f1-90c7-b79da6403ee3",
         "modelVersion": null
       }
     },
@@ -75,43 +75,43 @@
         }
       },
       "onDark": {
-        "path": "branding/generated-on-dark.png",
-        "sha256": "25abf2a157f0b909c07ab81873e31472c496dc8d315d0f0869bed49a2c46ca3b",
+        "path": "branding/generated-on-dark-v2-20261020.png",
+        "sha256": "7cf963fab36b1c6bd769f205326975377953b0eeeaf8e9e4f75adedd69b061f3",
         "nativeDimensions": {
-          "width": 2011,
+          "width": 2012,
           "height": 782
         },
         "generation": {
           "tool": "image_gen.imagegen",
-          "generationId": "exec-27825418-41a3-4d93-91ce-0678f0c81a96",
+          "generationId": "exec-b70dc897-45d1-4a40-b14b-6b6ed41dc8f7",
           "modelVersion": null
         }
       },
       "onAccent": {
-        "path": "branding/generated-on-dark.png",
-        "sha256": "25abf2a157f0b909c07ab81873e31472c496dc8d315d0f0869bed49a2c46ca3b",
+        "path": "branding/generated-on-dark-v2-20261020.png",
+        "sha256": "7cf963fab36b1c6bd769f205326975377953b0eeeaf8e9e4f75adedd69b061f3",
         "nativeDimensions": {
-          "width": 2011,
+          "width": 2012,
           "height": 782
         },
         "generation": {
           "tool": "image_gen.imagegen",
-          "generationId": "exec-27825418-41a3-4d93-91ce-0678f0c81a96",
+          "generationId": "exec-b70dc897-45d1-4a40-b14b-6b6ed41dc8f7",
           "modelVersion": null
         }
       }
     },
     "marks": {
       "onLight": {
-        "path": "branding/generated-mark.png",
-        "sha256": "b74cef42486f22bec1b653c8724a805d182eb15653ca136448aa87db2e834766",
+        "path": "branding/generated-mark-on-light-v2-20261020.png",
+        "sha256": "c7a54cf9f19f7e30c63654bc4537b16357ddfd34457a5d55fbc233124b8e5750",
         "nativeDimensions": {
           "width": 1254,
           "height": 1254
         },
         "generation": {
           "tool": "image_gen.imagegen",
-          "generationId": "exec-fbbf3b18-1f81-4d39-98df-af792575329c",
+          "generationId": "exec-3fce8583-2221-41f1-90c7-b79da6403ee3",
           "modelVersion": null
         }
       },
@@ -149,8 +149,12 @@
         120,
         180
       ],
-      "reviewedAt": "2026-10-19T19:22:56.608725Z",
-      "notes": "Visually reviewed the actual deterministic transparent-padding exports at120px and180px on all six retained template surface colours. Exact name spelling, silhouette, alpha edges, spacing and clipping were checked. Light-ink variants are actual imagegen results, not deterministic recolours. Small secondary suffix text is subordinate to the principal name; compact identity is provided separately."
+      "reviewedAt": "2026-10-20T21:20:49.538Z",
+      "notes": "Agent viewed exact prepared candidates on white and all five unchanged dark/red backgrounds. Replaced roles: wordDark, markLight. Retained spelling, motifs and geometry; passing inputs and consumer bytes protected. Native/hosted/human/dealer approvals remain false.",
+      "markWidths": [
+        32,
+        64
+      ]
     },
     "compactMarkStatus": "independent-preview-not-dealer-approved",
     "compactMarkDescription": "CA monogram",
@@ -168,8 +172,62 @@
         "#17191c",
         "#c40101"
       ],
-      "reviewedAt": "2026-10-19T19:22:56.608725Z",
-      "notes": "Visually inspected the actual compact exports at32px and64px on all six template backgrounds. Existing-emblem pixel crops have explicit parent hashes and exact rectangle provenance; independently generated compact marks retain their own actual generation IDs. Shape, spacing, clipping and transparent counters were checked. Dealer approval remains unknown."
+      "reviewedAt": "2026-10-20T21:20:49.538Z",
+      "notes": "Agent viewed exact new compact input(s) at32/64 on actual white/dark/red backgrounds. Actual generation IDs and raw hashes retained. Other compact input remains byte-identical when unchanged. No dealer/native/hosted approval."
     }
-  }
+  },
+  "additionalGenerations": [
+    {
+      "roles": [
+        "onDark",
+        "onAccent"
+      ],
+      "reference": "branding/generated-on-dark.png",
+      "path": "branding/generated-on-dark-v2-20261020.png",
+      "sha256": "7cf963fab36b1c6bd769f205326975377953b0eeeaf8e9e4f75adedd69b061f3",
+      "nativeDimensions": {
+        "width": 2012,
+        "height": 782
+      },
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-b70dc897-45d1-4a40-b14b-6b6ed41dc8f7",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand, faithful inverse surface variant. Preserve exactly this reference CA interlocked circular C and angular A emblem on left, CHRIS over AUTOMOTIVE on right, exact typography, positions, proportions, letter spacing and counters. Make all visible artwork uniform opaque pale silver-grey #c8d0d8 for charcoal/navy/black/red surfaces. Remove heavy black contours and white keylines without changing silhouettes; all separation gaps and counters become truly transparent. Exact spelling CHRIS AUTOMOTIVE. Truly transparent background, generous padding. No pure white, glow, shadow, halo, gradients, speckles, rough pixels, texture, new wording or motifs. Existing independent proposal, no dealer approval. Geometry-preserving colour variant only.",
+      "referencePaths": [
+        "L:/CODEX/cars/dealers/chris-automotive/branding/generated-on-dark.png"
+      ],
+      "createdAt": "2026-10-20T21:20:49.538Z",
+      "derivation": "Actual built-in imagegen edit of retained identity. Raw returned PNG copied byte-identical, with maintained transparent crop/resize only; no recolouring, filtering, alpha cleanup or threshold changes."
+    },
+    {
+      "roles": [
+        "mark",
+        "favicon"
+      ],
+      "reference": "branding/generated-mark.png",
+      "path": "branding/generated-mark-on-light-v2-20261020.png",
+      "sha256": "c7a54cf9f19f7e30c63654bc4537b16357ddfd34457a5d55fbc233124b8e5750",
+      "nativeDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-3fce8583-2221-41f1-90c7-b79da6403ee3",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand, faithful compact dark-ink variant for white-background favicon/app icon. Preserve exactly the interlocking circular C and angular A monogram, its open C counter, triangular A hole, overlap gap, silhouette and proportions. Reproduce all visible fill as uniform opaque deep charcoal #17202b. All existing separating contours/counters/gaps become transparent negative space, remove white keylines and pale-grey fill. No additional outline. Center on a square truly transparent canvas, generous padding, smooth precise thick geometry clear at32/64px. No gradients, texture, halo, shadow, glow, speckles, extra shapes or letters. Same CHRIS AUTOMOTIVE proposal, no dealer approval or redesign.",
+      "referencePaths": [
+        "L:/CODEX/cars/dealers/chris-automotive/branding/generated-mark.png"
+      ],
+      "createdAt": "2026-10-20T21:20:49.538Z",
+      "derivation": "Actual built-in imagegen edit of retained identity. Raw returned PNG copied byte-identical, with maintained transparent crop/resize only; no recolouring, filtering, alpha cleanup or threshold changes."
+    }
+  ],
+  "sourceHistory": [
+    {
+      "reference": "branding/source-before-five-held-logo-repair-20261020-c15530a4c513e8f2.json",
+      "sha256": "c15530a4c513e8f2f50d89061a5be4ccdae542c89106152183ac22a62890d170",
+      "retainedAt": "2026-10-20T21:20:49.538Z",
+      "reason": "Exact source provenance before targeted five-original-hold contrast repair"
+    }
+  ]
 }

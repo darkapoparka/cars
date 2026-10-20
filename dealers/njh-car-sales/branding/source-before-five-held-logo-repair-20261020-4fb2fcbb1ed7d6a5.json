@@ -1,0 +1,153 @@
+{
+  "schemaVersion": 1,
+  "dealer": "njh-car-sales",
+  "status": "reviewed",
+  "realLogoFirst": true,
+  "publicSources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/S-D-Harris?menu=1",
+      "observedAt": "2026-10-19T17:36:51.244160Z"
+    },
+    {
+      "url": "https://www.autotrader.co.uk/dealers/glamorgan/swansea/njh-car-sales-10007755",
+      "observedAt": "2026-10-19T18:24:26.921748Z"
+    },
+    {
+      "source": "alternate-public-logo-page",
+      "retainedEvidence": "source URL in real-logo research",
+      "observation": "A dealer-image URL was observed, but the image host timed out; no inaccessible image is claimed as an obtained original."
+    }
+  ],
+  "originals": [
+    {
+      "path": "branding/observed-logo.gif",
+      "sha256": "0b403839fd876ed7244efd3ce761c0bad898febac3a124d64e0bd069eeee7f08",
+      "sourceUrl": "https://m.atcdn.co.uk/dealer-logo/at2/adbranding/10007755/images/fpa_logo.gif",
+      "observedAt": "2026-10-19T18:02:51.920660Z",
+      "kind": "generic-marketplace-business-name-banner"
+    }
+  ],
+  "creationMethod": "imagegen-proposal",
+  "dealerApproved": false,
+  "approvalStatus": "independent-preview-not-dealer-approved",
+  "researchConclusion": "Bounded public checks did not yield usable distinct dealer artwork. Generic text banners or unavailable image-host URLs do not prove that the dealer has no logo. This artwork is clearly an independent proposal.",
+  "generation": {
+    "tool": "image_gen.imagegen",
+    "generationId": "exec-d49576e7-912a-4970-b1f1-a986ae6e151e",
+    "modelVersion": null,
+    "prompt": "Use case: logo-brand. Create one polished independent UK motor dealer identity proposal. Transparent background, flat crisp graphic, no mockup, no gradients, no shadows, no raster distress or speckles. Wide horizontal lockup, simple isolated compact emblem on left and exact business name on right with plenty of transparent gap for cropping. Emblem legible at32px, thick clean geometry, no tiny details. Design a dual-contrast outline of clean white and deep navy around every shape so it works on white, dark charcoal #111113 and red #c40101. Two-line wordmark, tight readable bold geometric letterforms, no tagline, no extra text. Business name NJH CAR SALES. Existing generic marketplace name banner is white and black; propose an original compact NJH letter interlock with generous counters, sturdy exact initials. Preserve monochrome white and charcoal; only a restrained blue #447ba1 inset accent. NJH large on wordmark line one; CAR SALES line two. Compact emblem must be clear at32px without fine strokes."
+  },
+  "compactDerivation": {
+    "method": "lossless-isolated-emblem-crop",
+    "parentReference": "branding/generated-master.png",
+    "parentSha256": "a25ac49b5582997003dd4df1afca2e584f445b9aa7f372f2aff47b76c52e3418",
+    "crop": {
+      "left": 0,
+      "top": 0,
+      "width": 697,
+      "height": 793
+    },
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-d49576e7-912a-4970-b1f1-a986ae6e151e",
+      "modelVersion": null
+    }
+  },
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T18:56:55.343524Z",
+    "master": {
+      "path": "branding/generated-master.png",
+      "sha256": "a25ac49b5582997003dd4df1afca2e584f445b9aa7f372f2aff47b76c52e3418",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-d49576e7-912a-4970-b1f1-a986ae6e151e",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "dabdbe47d5d79ef30e172a4d10d3843861611b04a491ebc5956a255a0db3fea5",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-d49576e7-912a-4970-b1f1-a986ae6e151e",
+        "modelVersion": null
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "dabdbe47d5d79ef30e172a4d10d3843861611b04a491ebc5956a255a0db3fea5",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-d49576e7-912a-4970-b1f1-a986ae6e151e",
+        "modelVersion": null
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-master.png",
+        "sha256": "a25ac49b5582997003dd4df1afca2e584f445b9aa7f372f2aff47b76c52e3418",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-d49576e7-912a-4970-b1f1-a986ae6e151e",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "fdfc41f844e5d5d34e8b91709f21acf703d7dfc20cb4a43240d1c474f63f8464",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-02f49042-b3f7-4f15-b900-8261cc17acdf",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "fdfc41f844e5d5d34e8b91709f21acf703d7dfc20cb4a43240d1c474f63f8464",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-02f49042-b3f7-4f15-b900-8261cc17acdf",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": {
+        "onLight": [
+          "#ffffff"
+        ],
+        "onDark": [
+          "#111113",
+          "#101820"
+        ],
+        "onAccent": [
+          "#09090b",
+          "#17191c",
+          "#c40101"
+        ]
+      },
+      "wordmarkWidths": [
+        120,
+        180
+      ],
+      "markWidths": [
+        32,
+        64
+      ],
+      "method": "Exact pipeline alpha-padding crop and resize of actual generated surface artwork. Separate light-ink generated wordmark is used on dark and accent surfaces. Compact inputs are documented actual imagegen outputs or isolated lossless crops.",
+      "reviewedAt": "2026-10-19T18:56:55.343524Z",
+      "review": "Visually reviewed the exact pipeline cropTransparentPadding exports at 120 px and 180 px wordmark widths and 32 px and 64 px compact sizes against all six required background colours. Spelling and transparency checked. Filled light wordmarks improve contrast on dark surfaces; artwork colours do not change template palettes."
+    }
+  },
+  "additionalGenerations": [
+    {
+      "role": "onDark-and-onAccent",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-02f49042-b3f7-4f15-b900-8261cc17acdf",
+      "modelVersion": null,
+      "reference": "branding/generated-master.png",
+      "prompt": "Use case: logo-brand, exact surface variant. This is an existing approved composition being prepared for a dark website background. Preserve its exact business name, spelling, typography, emblem motif, layout, separation and proportions. Make a faithful LIGHT-INK version on a truly TRANSPARENT background: all wordmark text should be solid bright ivory-white, filled letters, not hollow outline letters. Preserve any restrained emblem accent colours if they have contrast, and use white for the emblem's dark strokes so the compact emblem also reads on charcoal. Preserve the existing dark contour where helpful. No change of shape or concept. No added content. Do not include the background; it must remain transparent. Clean perfectly smooth edges, no speckles, no distress, no glow, no shadow, no gradients. The result must be clearly legible at180px width on charcoal #111113 and dark red #c40101. Match the reference geometry; no business names or letters may be omitted or repeated."
+    }
+  ]
+}

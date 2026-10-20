@@ -22,7 +22,7 @@ Vercel deploys the dedicated repository. A local edit or folder move does not up
 
 ## Registered public dealer projects
 
-The registry contains 137 dealer public aliases below. These rows are generated from ../docs/DEPLOYMENT-INVENTORY.json; they are a source-location guide, not a fresh visual acceptance report.
+The registry contains 140 dealer public aliases below. These rows are generated from ../docs/DEPLOYMENT-INVENTORY.json; they are a source-location guide, not a fresh visual acceptance report.
 
 | Dealer / source folder | Source ownership | Published source | Hosting project / Worker | Public website |
 | --- | --- | --- | --- | --- |
@@ -57,6 +57,7 @@ The registry contains 137 dealer public aliases below. These rows are generated 
 | Cherry Tree Cars Ltd — `bradford-cherry-tree-cars/` | Cars repository | [darkapoparka/cars-uk-bradford-cherry-tree-cars](https://github.com/darkapoparka/cars-uk-bradford-cherry-tree-cars) | `Not recorded` | [bradford-cherry-tree-cars.webpreviews.site](https://bradford-cherry-tree-cars.webpreviews.site/) |
 | Not recorded — `buscenter-varna/` | Cars repository | [darkapoparka/cars-buscenter-varna](https://github.com/darkapoparka/cars-buscenter-varna) | `Not recorded` | [buscenter-varna.webpreviews.site](https://buscenter-varna.webpreviews.site/) |
 | Not recorded — `cali-cars-varna/` | Cars repository | [darkapoparka/cars-cali-cars-varna](https://github.com/darkapoparka/cars-cali-cars-varna) | `Not recorded` | [cali-cars-varna.webpreviews.site](https://cali-cars-varna.webpreviews.site/) |
+| Car 4 Me FZ — `dealers/car-4-me-fz/` | Cars dealer pack | [darkapoparka/cars @ f73c8e4b2586](https://github.com/darkapoparka/cars/tree/f73c8e4b258653d1cee9c29d161e41774cfe6fb8/dealers/car-4-me-fz/) | `cars-car-4-me-fz` | [car-4-me-fz.webpreviews.site](https://car-4-me-fz.webpreviews.site/) |
 | Car Avenue LLC — `dealers/car-avenue-llc/` | Cars dealer pack | [darkapoparka/cars @ 27026835389c](https://github.com/darkapoparka/cars/tree/27026835389c4c683a7245afb4bd415ced447ed4/dealers/car-avenue-llc/) | `cars-car-avenue-llc` | [car-avenue-llc.webpreviews.site](https://car-avenue-llc.webpreviews.site/) |
 | CAR POINT TRADE LTD — `car-point-trade-varna/` | Cars repository | [darkapoparka/cars-carpointtradevarna](https://github.com/darkapoparka/cars-carpointtradevarna) | `Not recorded` | [car-point-trade-varna.webpreviews.site](https://car-point-trade-varna.webpreviews.site/) |
 | Carmind Motors — `dealers/carmind-motors/` | Cars dealer pack | [darkapoparka/cars @ 27026835389c](https://github.com/darkapoparka/cars/tree/27026835389c4c683a7245afb4bd415ced447ed4/dealers/carmind-motors/) | `cars-carmind-motors` | [carmind-motors.webpreviews.site](https://carmind-motors.webpreviews.site/) |
@@ -97,9 +98,11 @@ The registry contains 137 dealer public aliases below. These rows are generated 
 | Not recorded — `garage24-varna/` | Cars repository | [darkapoparka/cars-garage24-varna](https://github.com/darkapoparka/cars-garage24-varna) | `Not recorded` | [garage24-varna.webpreviews.site](https://garage24-varna.webpreviews.site/) |
 | Granada Auto Sales LLC — `dealers/granada-auto-sales/` | Cars dealer pack | [darkapoparka/cars @ 599adb6c1012](https://github.com/darkapoparka/cars/tree/599adb6c101219eecbe8b4117e62189f7f168f16/dealers/granada-auto-sales/) | `cars-granada-auto-sales` | [granada-auto-sales.webpreviews.site](https://granada-auto-sales.webpreviews.site/) |
 | Not recorded — `grand-auto-varna/` | Cars repository | [darkapoparka/cars-grand-auto-varna](https://github.com/darkapoparka/cars-grand-auto-varna) | `Not recorded` | [grand-auto-varna.webpreviews.site](https://grand-auto-varna.webpreviews.site/) |
+| Great West East Auto — `dealers/great-west-east-auto/` | Cars dealer pack | [darkapoparka/cars @ f73c8e4b2586](https://github.com/darkapoparka/cars/tree/f73c8e4b258653d1cee9c29d161e41774cfe6fb8/dealers/great-west-east-auto/) | `cars-great-west-east-auto` | [great-west-east-auto.webpreviews.site](https://great-west-east-auto.webpreviews.site/) |
 | Not recorded — `i1-auto-varna/` | Cars repository | [darkapoparka/cars-i1-auto-varna](https://github.com/darkapoparka/cars-i1-auto-varna) | `Not recorded` | [i1-auto-varna.webpreviews.site](https://i1-auto-varna.webpreviews.site/) |
 | IS Auto Varna — `isauto-varna/` | Cars repository | [darkapoparka/cars-isautovarna](https://github.com/darkapoparka/cars-isautovarna) | `cars-isautovarna` | [cars-isautovarna.vercel.app](https://cars-isautovarna.vercel.app/) |
 | Иво Ауто — `ivo-auto/` | Cars repository | [darkapoparka/cars-ivoauto](https://github.com/darkapoparka/cars-ivoauto) | `cars-ivoauto` | [cars-ivoauto.vercel.app](https://cars-ivoauto.vercel.app/) |
+| JR Auto FZCO — `dealers/jr-auto-fzco/` | Cars dealer pack | [darkapoparka/cars @ f73c8e4b2586](https://github.com/darkapoparka/cars/tree/f73c8e4b258653d1cee9c29d161e41774cfe6fb8/dealers/jr-auto-fzco/) | `cars-jr-auto-fzco` | [jr-auto-fzco.webpreviews.site](https://jr-auto-fzco.webpreviews.site/) |
 | Kalchev Correct — `kalchev-varna/` | Cars repository | [darkapoparka/cars-kalchev-varna](https://github.com/darkapoparka/cars-kalchev-varna) | `Not recorded` | [kalchev-varna.webpreviews.site](https://kalchev-varna.webpreviews.site/) |
 | Not recorded — `kalo-0404-varna/` | Cars repository | [darkapoparka/cars-kalo-0404-varna](https://github.com/darkapoparka/cars-kalo-0404-varna) | `Not recorded` | [kalo-0404-varna.webpreviews.site](https://kalo-0404-varna.webpreviews.site/) |
 | Not recorded — `kalokars-varna/` | Cars repository | [darkapoparka/cars-kalokars-varna](https://github.com/darkapoparka/cars-kalokars-varna) | `Not recorded` | [kalokars-varna.webpreviews.site](https://kalokars-varna.webpreviews.site/) |

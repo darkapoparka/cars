@@ -40,7 +40,7 @@
   "observedAt": "2026-10-19",
   "researchConclusion": "No usable original logo was obtained from bounded exact-business/locality searches and the matched public seller and directory sources. The dealer catalogue supplies a text identity and vehicle photographs; an unavailable or absent logo image does not prove that no original branding exists. This is an independent proposed identity, not an official dealer logo.",
   "generatedInputs": {
-    "reviewedAt": "2026-10-19T19:22:56.608725Z",
+    "reviewedAt": "2026-10-20T21:20:56.420Z",
     "master": {
       "path": "branding/generated-master.png",
       "sha256": "004428ab808a7e4ab9e08a6a56e1e46c12fc3b7ab15b1cf6abc796a95918d877",
@@ -55,28 +55,28 @@
       }
     },
     "mark": {
-      "path": "branding/generated-mark.png",
-      "sha256": "8c5f8cc3b2140a7a08b0b1ed5c8338c240893e7b5265e6893156bd229fdc1c20",
+      "path": "branding/generated-mark-on-light-v2-20261020.png",
+      "sha256": "5ff812931e043e7b79a22c39feceafe6011871d94d5ecb327141ef1614b3e3c0",
       "nativeDimensions": {
         "width": 1254,
         "height": 1254
       },
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-d4b7d96b-80ec-4ed3-aaf7-e56ab1836334",
+        "generationId": "exec-c9e4a49c-8c46-43ef-9e64-24c16d82f131",
         "modelVersion": null
       }
     },
     "markOnDark": {
-      "path": "branding/generated-mark.png",
-      "sha256": "8c5f8cc3b2140a7a08b0b1ed5c8338c240893e7b5265e6893156bd229fdc1c20",
+      "path": "branding/generated-mark-on-dark-v2-20261020.png",
+      "sha256": "1fb84afe3989b48d7db359bcb075f41aaab12d03ed3e9c5482b042fe28c782ab",
       "nativeDimensions": {
         "width": 1254,
         "height": 1254
       },
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-d4b7d96b-80ec-4ed3-aaf7-e56ab1836334",
+        "generationId": "exec-aec75965-fb41-43d9-8143-e3448bed686c",
         "modelVersion": null
       }
     },
@@ -95,56 +95,56 @@
         }
       },
       "onDark": {
-        "path": "branding/generated-on-dark.png",
-        "sha256": "5fd4030ae794d90a070bf3d41a60dea6c1ba7bcfdf59ae27c434108d203c7fe1",
+        "path": "branding/generated-on-dark-v2-20261020.png",
+        "sha256": "780e2f9346e5cddf3c8b398922a5c85b3200a4bfa843b1cf1dd3d38d9bc6f434",
         "nativeDimensions": {
           "width": 2172,
           "height": 724
         },
         "generation": {
           "tool": "image_gen.imagegen",
-          "generationId": "exec-cbe924f8-ad2d-40f1-a524-de9021b47425",
+          "generationId": "exec-83e2588f-3532-4255-916b-ba028b80dec5",
           "modelVersion": null
         }
       },
       "onAccent": {
-        "path": "branding/generated-on-dark.png",
-        "sha256": "5fd4030ae794d90a070bf3d41a60dea6c1ba7bcfdf59ae27c434108d203c7fe1",
+        "path": "branding/generated-on-dark-v2-20261020.png",
+        "sha256": "780e2f9346e5cddf3c8b398922a5c85b3200a4bfa843b1cf1dd3d38d9bc6f434",
         "nativeDimensions": {
           "width": 2172,
           "height": 724
         },
         "generation": {
           "tool": "image_gen.imagegen",
-          "generationId": "exec-cbe924f8-ad2d-40f1-a524-de9021b47425",
+          "generationId": "exec-83e2588f-3532-4255-916b-ba028b80dec5",
           "modelVersion": null
         }
       }
     },
     "marks": {
       "onLight": {
-        "path": "branding/generated-mark.png",
-        "sha256": "8c5f8cc3b2140a7a08b0b1ed5c8338c240893e7b5265e6893156bd229fdc1c20",
+        "path": "branding/generated-mark-on-light-v2-20261020.png",
+        "sha256": "5ff812931e043e7b79a22c39feceafe6011871d94d5ecb327141ef1614b3e3c0",
         "nativeDimensions": {
           "width": 1254,
           "height": 1254
         },
         "generation": {
           "tool": "image_gen.imagegen",
-          "generationId": "exec-d4b7d96b-80ec-4ed3-aaf7-e56ab1836334",
+          "generationId": "exec-c9e4a49c-8c46-43ef-9e64-24c16d82f131",
           "modelVersion": null
         }
       },
       "onDark": {
-        "path": "branding/generated-mark.png",
-        "sha256": "8c5f8cc3b2140a7a08b0b1ed5c8338c240893e7b5265e6893156bd229fdc1c20",
+        "path": "branding/generated-mark-on-dark-v2-20261020.png",
+        "sha256": "1fb84afe3989b48d7db359bcb075f41aaab12d03ed3e9c5482b042fe28c782ab",
         "nativeDimensions": {
           "width": 1254,
           "height": 1254
         },
         "generation": {
           "tool": "image_gen.imagegen",
-          "generationId": "exec-d4b7d96b-80ec-4ed3-aaf7-e56ab1836334",
+          "generationId": "exec-aec75965-fb41-43d9-8143-e3448bed686c",
           "modelVersion": null
         }
       }
@@ -169,8 +169,12 @@
         120,
         180
       ],
-      "reviewedAt": "2026-10-19T19:22:56.608725Z",
-      "notes": "Visually reviewed the actual deterministic transparent-padding exports at120px and180px on all six retained template surface colours. Exact name spelling, silhouette, alpha edges, spacing and clipping were checked. Light-ink variants are actual imagegen results, not deterministic recolours. Small secondary suffix text is subordinate to the principal name; compact identity is provided separately."
+      "reviewedAt": "2026-10-20T21:20:56.420Z",
+      "notes": "Agent viewed exact prepared candidates on white and all five unchanged dark/red backgrounds. Replaced roles: wordDark, markLight, markDark. Retained spelling, motifs and geometry; passing inputs and consumer bytes protected. Native/hosted/human/dealer approvals remain false.",
+      "markWidths": [
+        32,
+        64
+      ]
     },
     "compactMarkStatus": "independent-preview-not-dealer-approved",
     "compactMarkDescription": "DT monogram with the same internal road motif",
@@ -188,8 +192,83 @@
         "#17191c",
         "#c40101"
       ],
-      "reviewedAt": "2026-10-19T19:22:56.608725Z",
-      "notes": "Visually inspected the actual compact exports at32px and64px on all six template backgrounds. Existing-emblem pixel crops have explicit parent hashes and exact rectangle provenance; independently generated compact marks retain their own actual generation IDs. Shape, spacing, clipping and transparent counters were checked. Dealer approval remains unknown."
+      "reviewedAt": "2026-10-20T21:20:56.420Z",
+      "notes": "Agent viewed exact new compact input(s) at32/64 on actual white/dark/red backgrounds. Actual generation IDs and raw hashes retained. Other compact input remains byte-identical when unchanged. No dealer/native/hosted approval."
     }
-  }
+  },
+  "additionalGenerations": [
+    {
+      "roles": [
+        "onDark",
+        "onAccent"
+      ],
+      "reference": "branding/generated-on-dark.png",
+      "path": "branding/generated-on-dark-v2-20261020.png",
+      "sha256": "780e2f9346e5cddf3c8b398922a5c85b3200a4bfa843b1cf1dd3d38d9bc6f434",
+      "nativeDimensions": {
+        "width": 2172,
+        "height": 724
+      },
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-83e2588f-3532-4255-916b-ba028b80dec5",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand, exact inverse surface variant. Preserve the reference DT monogram with curved road/dashed lane inside D at left and exact single-line DANNY TRADING with LTD beneath. Same bold italic forms, layout, proportions, spacing, emblem and transparent gaps. Make all visible artwork uniform opaque pale silver-grey #c8d0d8. Heavy navy/black contours and white keylines are removed; internal road dashes, counters and separation gaps become transparent negative space. Truly transparent canvas with generous padding. No pure white, glow, shadows, halos, gradients, texture, speckles, rough alpha or new details. Exact spelling DANNY TRADING LTD. This is an existing proposal, not dealer approved. Colour variant without redesign.",
+      "referencePaths": [
+        "L:/CODEX/cars/dealers/danny-trading/branding/generated-on-dark.png"
+      ],
+      "createdAt": "2026-10-20T21:20:56.420Z",
+      "derivation": "Actual built-in imagegen edit of retained identity. Raw returned PNG copied byte-identical, with maintained transparent crop/resize only; no recolouring, filtering, alpha cleanup or threshold changes."
+    },
+    {
+      "roles": [
+        "mark",
+        "favicon"
+      ],
+      "reference": "branding/generated-mark.png",
+      "path": "branding/generated-mark-on-light-v2-20261020.png",
+      "sha256": "5ff812931e043e7b79a22c39feceafe6011871d94d5ecb327141ef1614b3e3c0",
+      "nativeDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-c9e4a49c-8c46-43ef-9e64-24c16d82f131",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand, faithful compact dark-ink surface variant. Preserve exactly the stylized DT monogram with curved road and dashed lane cut through the D: same italic silhouette, broad T cap, corner angles, open center, road path and dash positions. Make the existing main light-filled DT shapes uniform opaque deep midnight navy #102b4a for white-background icons. Heavy dark contours and white keylines removed; road separators, dashed lane marks, counters and overlap gaps must be transparent negative space. No background disk, extra contours or new geometry. Center on square truly transparent canvas with generous padding. Strong smooth precise edges readable at32/64px, no texture, halo, speckles, gradients, shadows or glow. DANNY TRADING LTD existing proposal, not dealer approved.",
+      "referencePaths": [
+        "L:/CODEX/cars/dealers/danny-trading/branding/generated-mark.png"
+      ],
+      "createdAt": "2026-10-20T21:20:56.420Z",
+      "derivation": "Actual built-in imagegen edit of retained identity. Raw returned PNG copied byte-identical, with maintained transparent crop/resize only; no recolouring, filtering, alpha cleanup or threshold changes."
+    },
+    {
+      "roles": [
+        "markOnDark"
+      ],
+      "reference": "branding/generated-mark.png",
+      "path": "branding/generated-mark-on-dark-v2-20261020.png",
+      "sha256": "1fb84afe3989b48d7db359bcb075f41aaab12d03ed3e9c5482b042fe28c782ab",
+      "nativeDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-aec75965-fb41-43d9-8143-e3448bed686c",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand, faithful inverse compact surface variant. Preserve exactly this DT monogram with the curved road and dashed lane cut through D, same italic silhouette, broad T cap, corners, road path, dash positions, proportions and open center. All visible main artwork uniform opaque pale silver-grey #c8d0d8 for charcoal/navy/black/red. Remove heavy navy/black contours and white keylines; internal road separators, lane dashes, counters and overlap gaps become transparent negative space. No extra outlines or redesign. Center on a generous square truly transparent canvas, smooth thick strokes clear at32/64px. No pure white, halo, texture, speckles, glow, shadow, gradients, new letters or shapes. Existing DANNY TRADING LTD proposal, no dealer approval.",
+      "referencePaths": [
+        "L:/CODEX/cars/dealers/danny-trading/branding/generated-mark.png"
+      ],
+      "createdAt": "2026-10-20T21:20:56.420Z",
+      "derivation": "Actual built-in imagegen edit of retained identity. Raw returned PNG copied byte-identical, with maintained transparent crop/resize only; no recolouring, filtering, alpha cleanup or threshold changes."
+    }
+  ],
+  "sourceHistory": [
+    {
+      "reference": "branding/source-before-five-held-logo-repair-20261020-06ec853f8ba7f339.json",
+      "sha256": "06ec853f8ba7f33998176c818239dc164a3d08a39dabb6c558403088403f5867",
+      "retainedAt": "2026-10-20T21:20:56.420Z",
+      "reason": "Exact source provenance before targeted five-original-hold contrast repair"
+    }
+  ]
 }
