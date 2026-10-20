@@ -77,6 +77,97 @@ test('static uploads use only session JWT, enforce requested hashes, and require
   const result=await provider.prepareAssets({candidate,request,beforeWrite:async()=>{writes++;}});assert.equal(result.completionToken,completion);assert.equal(result.uploadedFiles,keys.length);assert.equal(uploads.length,1);assert.equal(writes,2);
   const corrupt=cloudflarePackProvider({api:async()=>ok({jwt:session,buckets:[['f'.repeat(32)]]}),assetFetch:async()=>assert.fail('No unknown asset can upload')});await assert.rejects(()=>corrupt.prepareAssets({candidate,request,beforeWrite:async()=>{}}),/unknown or duplicate/);
 });
+
+function deferred(){let resolve,reject;const promise=new Promise((yes,no)=>{resolve=yes;reject=no;});return {promise,resolve,reject};}
+const nextTurn=()=>new Promise(resolve=>setImmediate(resolve));
+function bucketFixture(t,count=6){
+  const candidate=bundle(t),rows=[];
+  for(let index=0;index<count;index++){
+    const name='public/pool-'+index+'.txt',bytes=Buffer.from('Sealed lazy bucket '+index),file=path.join(candidate.directory,name);
+    fs.writeFileSync(file,bytes);const row={path:name,bytes:bytes.length,sha256:hash(bytes)};candidate.files.push(row);rows.push(row);
+  }
+  const assets=packAssetManifest(candidate),keys=rows.map(row=>assets.manifest['/'+row.path.slice(7)].hash);
+  return {candidate,assets,keys,buckets:keys.map(key=>[key]),rows};
+}
+function uploadControl(keys){
+  const started=keys.map(()=>deferred()),responses=keys.map(()=>deferred()),calls=[];
+  let active=0,maximum=0;
+  const assetFetch=async(url,options)=>{
+    const fields=[...options.body.keys()];assert.equal(fields.length,1);const index=keys.indexOf(fields[0]);assert(index>=0);
+    assert.equal(options.method,'POST');assert.equal(options.headers.Authorization,'Bearer test-session-private');
+    assert.equal(url,'https://api.cloudflare.com/client/v4/accounts/'+PACK_DEPLOY_ACCOUNT+'/workers/assets/upload?base64=true');
+    calls.push(index);active++;maximum=Math.max(maximum,active);started[index].resolve(options);
+    try{return await responses[index].promise;}finally{active--;}
+  };
+  const acknowledge=(index,jwt)=>responses[index].resolve({status:jwt?201:202,json:async()=>({success:true,result:jwt?{jwt}:{}})});
+  return {started,responses,calls,assetFetch,acknowledge,get active(){return active;},get maximum(){return maximum;}};
+}
+
+test('static bucket uploads overlap at most three and require all acknowledgements after an out-of-order completion JWT',async t=>{
+  const f=bucketFixture(t),control=uploadControl(f.keys),completion='test-completed-private-session';let fences=0,settled=false;
+  const provider=cloudflarePackProvider({api:async operation=>{assert.deepEqual(operation.body.manifest,f.assets.manifest);return ok({jwt:'test-session-private',buckets:f.buckets});},assetFetch:control.assetFetch});
+  const pending=provider.prepareAssets({candidate:f.candidate,request,beforeWrite:async()=>{fences++;}}).finally(()=>{settled=true;});
+  await Promise.all(control.started.slice(0,3).map(row=>row.promise));assert.deepEqual(control.calls,[0,1,2]);assert.equal(control.active,3);assert.equal(settled,false);
+  control.acknowledge(1,completion);await control.started[3].promise;assert.equal(settled,false,'An early completion token cannot finish while other bucket responses are pending');
+  control.acknowledge(0);await control.started[4].promise;control.acknowledge(3);await control.started[5].promise;
+  assert.equal(control.maximum,3);assert.equal(control.active,3);assert.equal(settled,false);
+  control.acknowledge(2);control.acknowledge(4);control.acknowledge(5);const result=await pending;
+  assert.equal(result.completionToken,completion);assert.equal(result.manifestDigest,f.assets.manifestDigest);assert.equal(result.assetFiles,Object.keys(f.assets.manifest).length);assert.equal(result.uploadedFiles,6);
+  assert.equal(fences,7,'Session and every POST have their own current-claim check');assert.equal(control.active,0);assert.deepEqual([...control.calls].sort(),[0,1,2,3,4,5]);
+  for(const [index,row] of control.started.entries()){const options=await row.promise,blob=options.body.get(f.keys[index]);assert.equal(hash(Buffer.from(await blob.text(),'base64')),f.rows[index].sha256);}
+});
+
+for(const mode of ['HTTP refusal','ambiguous timeout'])test('bucket '+mode+' stops admission and waits for all in-flight requests without retry',async t=>{
+  const f=bucketFixture(t),control=uploadControl(f.keys);let settled=false;
+  const provider=cloudflarePackProvider({api:async()=>ok({jwt:'test-session-private',buckets:f.buckets}),assetFetch:control.assetFetch});
+  const pending=provider.prepareAssets({candidate:f.candidate,request,beforeWrite:async()=>{}});
+  const rejected=assert.rejects(pending,mode==='HTTP refusal'?/Static asset upload failed/:/ambiguous timeout/).then(()=>{settled=true;});
+  await Promise.all(control.started.slice(0,3).map(row=>row.promise));
+  if(mode==='HTTP refusal')control.responses[1].resolve({status:500,json:async()=>({success:false,result:{}})});else control.responses[1].reject(Error('ambiguous timeout'));
+  await nextTurn();assert.deepEqual(control.calls,[0,1,2]);assert.equal(settled,false,'Unknown outcome is not returned while uploads remain in flight');assert.equal(control.active,2);
+  control.acknowledge(0,'test-token-cannot-hide-failure');await nextTurn();assert.equal(settled,false);assert.deepEqual(control.calls,[0,1,2]);
+  control.acknowledge(2);await rejected;assert.equal(control.active,0);assert.deepEqual(control.calls,[0,1,2],'No new request or retry follows an observed failure');
+});
+
+test('a lost per-bucket claim blocks pending POSTs and waits for an already-running upload',async t=>{
+  const f=bucketFixture(t),control=uploadControl(f.keys),lost=deferred(),other=deferred();let fences=0,settled=false;
+  const provider=cloudflarePackProvider({api:async()=>ok({jwt:'test-session-private',buckets:f.buckets}),assetFetch:control.assetFetch});
+  const pending=provider.prepareAssets({candidate:f.candidate,request,beforeWrite:async()=>{fences++;if(fences===3)await lost.promise;if(fences===4)await other.promise;}});
+  const rejected=assert.rejects(pending,/current claim lost/).then(()=>{settled=true;});
+  await control.started[0].promise;assert.equal(fences,4);assert.deepEqual(control.calls,[0]);
+  lost.reject(Error('current claim lost'));await nextTurn();other.resolve();await nextTurn();assert.equal(settled,false);assert.deepEqual(control.calls,[0],'A pending claim read cannot admit a POST after another worker loses the fence');
+  control.acknowledge(0);await rejected;assert.equal(control.active,0);assert.equal(fences,4);assert.deepEqual(control.calls,[0]);
+});
+
+test('every bucket is preflighted for unknown, same-bucket and cross-bucket duplicate hashes before any upload POST',async t=>{
+  const f=bucketFixture(t);
+  for(const buckets of [[...f.buckets.slice(0,3),['f'.repeat(32)]],[...f.buckets.slice(0,3),[f.keys[3],f.keys[3]]],[...f.buckets.slice(0,3),[f.keys[0]]]]){
+    let posts=0,fences=0,customCalls=0;
+    const provider=cloudflarePackProvider({api:async()=>ok({jwt:'test-session-private',buckets}),assetFetch:async()=>{posts++;assert.fail('Invalid inventory cannot start a POST');},uploadAssets:async()=>{customCalls++;assert.fail('Invalid inventory cannot enter the connector bypass');}});
+    await assert.rejects(()=>provider.prepareAssets({candidate:f.candidate,request,beforeWrite:async()=>{fences++;}}),/unknown or duplicate/);
+    assert.equal(posts,0);assert.equal(fences,1);assert.equal(customCalls,0);
+  }
+});
+
+test('lazy bucket materialization rechecks sealed bytes when a later upload is admitted',async t=>{
+  const f=bucketFixture(t),control=uploadControl(f.keys);let settled=false;
+  const provider=cloudflarePackProvider({api:async()=>ok({jwt:'test-session-private',buckets:f.buckets}),assetFetch:control.assetFetch});
+  const pending=provider.prepareAssets({candidate:f.candidate,request,beforeWrite:async()=>{}});
+  const rejected=assert.rejects(pending,/sealed inventory/).then(()=>{settled=true;});
+  await Promise.all(control.started.slice(0,3).map(row=>row.promise));fs.appendFileSync(path.join(f.candidate.directory,f.rows[3].path),'changed after manifest');
+  control.acknowledge(0);await nextTurn();assert.deepEqual(control.calls,[0,1,2],'Later payloads were not eagerly materialized');assert.equal(settled,false);
+  control.acknowledge(1);control.acknowledge(2);await rejected;assert.equal(control.active,0);assert.deepEqual(control.calls,[0,1,2]);
+});
+
+test('empty sessions and the explicit connector upload hook retain their previous completion contracts',async t=>{
+  const f=bucketFixture(t);let posts=0,fences=0;
+  const empty=cloudflarePackProvider({api:async()=>ok({jwt:'test-empty-session-complete',buckets:[]}),assetFetch:async()=>{posts++;assert.fail('Empty session cannot upload');}});
+  const result=await empty.prepareAssets({candidate:f.candidate,request,beforeWrite:async()=>{fences++;}});assert.equal(result.completionToken,'test-empty-session-complete');assert.equal(result.uploadedFiles,0);assert.equal(posts,0);assert.equal(fences,1);
+  let hooks=0;const custom=cloudflarePackProvider({api:async()=>ok({jwt:'test-session-private',buckets:f.buckets}),assetFetch:async()=>assert.fail('Custom connector must not use the CI pool'),uploadAssets:async options=>{hooks++;assert.deepEqual(options.session.buckets,f.buckets);assert.equal(options.session.jwt,'test-session-private');await options.beforeWrite();return {completionToken:'test-custom-completion'};}});
+  const hooked=await custom.prepareAssets({candidate:f.candidate,request,beforeWrite:async()=>{fences++;}});assert.equal(hooks,1);assert.equal(hooked.completionToken,'test-custom-completion');assert.equal(hooked.uploadedFiles,6);assert.equal(hooked.manifestDigest,f.assets.manifestDigest);
+  const incomplete=cloudflarePackProvider({api:async()=>ok({jwt:'test-session-private',buckets:[[f.keys[0]]]}),assetFetch:async()=>({status:202,json:async()=>({success:true,result:{}})})});
+  await assert.rejects(()=>incomplete.prepareAssets({candidate:f.candidate,request,beforeWrite:async()=>{}}),/completion token/);
+});
 test('version uploads address immutable Worker IDs and preserve measured startup',async t=>{
   const candidate=bundle(t),workerId='b'.repeat(32),versionId='11111111-1111-4111-8111-111111111111',calls=[],provider=cloudflarePackProvider({api:async operation=>{calls.push(operation);return ok({id:versionId,startup_time_ms:23});}});
   const uploaded=await provider.upload({candidate,request,workerId,assets:{completionToken:'test-only-completion-token'},ownershipTags:['cars-pack-v1']});assert.equal(uploaded.workerId,workerId);assert.equal(uploaded.versionId,versionId);assert.equal(uploaded.startupTimeMs,23);assert.equal(calls[0].method,'POST');assert.equal(calls[0].path,'/accounts/'+PACK_DEPLOY_ACCOUNT+'/workers/workers/'+workerId+'/versions');assert.deepEqual(calls[0].query,{deploy:false});await assert.rejects(()=>provider.upload({candidate,request,workerId:request.workerName,assets:{}}),/immutable Worker ID/);

@@ -1,0 +1,175 @@
+{
+  "schemaVersion": 1,
+  "type": "cars-three-concurrent-asset-buckets-within-one-owned-worker",
+  "recordedAt": "2026-10-20T23:37:55.921Z",
+  "baseRevision": "34c99454e362b72a5e4a4f5921e83fc86c37b1ab",
+  "providerFiles": [
+    {
+      "path": "scripts/lib/dealer-pack-cloudflare.mjs",
+      "bytes": 19344,
+      "sha256": "59bb6fc3997bb6d86162ec45c55e2facae1986f12251d78f39331444e50e386a",
+      "baselineSha256": "2db32df1c6c8df04ecc894681729af5542ef33aa9ca6e3175905bdc86f8bd3d4"
+    },
+    {
+      "path": "scripts/dealer-pack-provider.test.mjs",
+      "bytes": 27380,
+      "sha256": "8bdb6e07e15fc2723064e610d6873c00003b34aba6c77cc081774b7af4ffcfec",
+      "baselineSha256": "27243f5dc0fc1fcf91335f4bf90cfc191b0e80952f73a03ffd9df1c5408e99be"
+    }
+  ],
+  "behavior": {
+    "maximumConcurrentBucketPosts": 3,
+    "payloads": "Build and hash-check one lazy bucket per running worker; at most three FormData payloads live in this pool, no whole-session base64 materialization",
+    "preflight": "All requested hashes validated before custom hook or any bucket POST; same-bucket and cross-bucket duplicates both rejected",
+    "fencing": "Current claim checked for session and immediately before each bucket POST; recheck stop flag after awaiting claim",
+    "failure": "First observed failure stops new bucket admission; local catches let Promise.all wait for every running bucket and pending fence before throwing first error",
+    "retries": 0,
+    "completion": "Nonempty session returns only after every bucket successfully acknowledges and a completion JWT is retained regardless of response order; an early JWT cannot hide a later failure",
+    "zeroBucketCase": "Session JWT remains the completion token with zero asset POSTs",
+    "apiAndReceipts": "Same endpoints, JWT-only upload auth, status validation, manifest digest/counts, module/version upload, activation and durable uncertainty policy"
+  },
+  "validation": {
+    "providerFocused": {
+      "file": "scripts/dealer-pack-provider.test.mjs",
+      "passed": 22,
+      "failed": 0,
+      "newDeterministicCases": 7,
+      "durationMs": 2225.6186
+    },
+    "related": {
+      "files": [
+        "scripts/dealer-pack-deployment.test.mjs",
+        "scripts/dealer-pack-upload-members.test.mjs"
+      ],
+      "passed": 29,
+      "failed": 0,
+      "durationMs": 403.4313
+    },
+    "totalPassed": 51,
+    "totalFailed": 0,
+    "proof": [
+      "Maximum3 actual in-flight bucket requests and each bucket POST exactly once",
+      "Out-of-order early completion JWT retained; promise remains pending until every response",
+      "HTTP500 and ambiguous timeout stop new admissions, preserve first failure, wait all in-flight without retry",
+      "Claim failure stops a separately pending claim from admitting its POST and waits the existing upload",
+      "All unknown/same-bucket/cross-bucket bad hashes refused before any bucket upload or connector hook",
+      "Later sealed-byte mutation refused when lazy bucket is admitted, proving no eager whole-session payload cache",
+      "Empty session/custom connector completion and incomplete session refusal unchanged",
+      "Existing module byte containment, tilde names, immutable Worker-ID upload, CPU/startup and V1 claim/ownership/recovery checks pass"
+    ],
+    "tools": {
+      "node": "26.10.0",
+      "toolPackage": "J:/.artifacts/cars-source-sync/test-tools/package.json",
+      "blake3": "2.1.5",
+      "temporaryRoot": "J:/.artifacts/cars-source-sync/test-temp",
+      "installs": 0
+    },
+    "liveProviderMeasured": false,
+    "nativeBuildRun": false
+  },
+  "primarySources": [
+    {
+      "url": "https://raw.githubusercontent.com/cloudflare/workers-sdk/main/packages/deploy-helpers/src/deploy/helpers/assets.ts",
+      "observed": "Current official source: bulk concurrency3, lazy per-running-bucket payload construction, final JWT gate after queued work",
+      "lines": [
+        62,
+        160,
+        169,
+        388,
+        521,
+        557
+      ]
+    },
+    {
+      "url": "https://developers.cloudflare.com/workers/static-assets/direct-upload/",
+      "observed": "One upload-session JWT authorizes bucket requests; all uploads complete before completion JWT attaches assets to a Worker version; empty buckets reuse session JWT"
+    }
+  ],
+  "expectedEffect": {
+    "retainedBaseline": {
+      "ordinaryDeployments": 11,
+      "medianAssetPhaseSeconds": 227,
+      "medianDeploymentSeconds": 481,
+      "source": "docs/m2/publisher-hotpath-20261021.json"
+    },
+    "reason": "Overlaps independent bucket network/provider waits inside the same existing Worker/session/account claim",
+    "limit": "Speedup is unmeasured; one-bucket or bandwidth/CPU-bound sessions may gain little. No threefold throughput claim."
+  },
+  "workflowGuard": {
+    "path": ".github/workflows/dealer-pack-deploy.yml",
+    "sha256": "f71b6a763a10253e6f817ec3b1c493e698ed4a1e6974526c34d5256ae3bfd6b7",
+    "change": "Run provider and upload-member checks on the exact Linux executor before any provider mutation",
+    "focusedWorkflowChecks": {
+      "passed": 19,
+      "failed": 0
+    }
+  },
+  "pureBatchPrototype": {
+    "files": [
+      {
+        "path": "scripts/lib/dealer-pack-batch-protocol.mjs",
+        "bytes": 21875,
+        "sha256": "f3110b4902759c74c929d6230bc82c2fbab07bce09caaa13b34e5f02a3ee0c13"
+      },
+      {
+        "path": "scripts/dealer-pack-batch-protocol.test.mjs",
+        "bytes": 19862,
+        "sha256": "f8556cd63d0eb02b251f86a9f835b53221de34ce33719e386fdaf5b9411127f6"
+      }
+    ],
+    "revision": 2,
+    "validation": {
+      "focusedCases": 12,
+      "passed": 12,
+      "failed": 0,
+      "coverage": [
+        "idle-only exact-generation migration preserves requests/receipts/policy/baseline/order byte-for-byte",
+        "actual old executor rejects V2 before provider calls or queue writes",
+        "one owner/two independent member fences/default and maximum2/no steal or implicit release",
+        "fresh complete provider snapshot and reserved disk/RAM arithmetic refuse oversubscription",
+        "serial create intent/ack gate retains unacknowledged capacity and blocks new creates under uncertainty",
+        "exact Worker-ID/name/tags acknowledgement, duplicate and missing-created-ledger refusal",
+        "uncertain child keeps account held while qualified sibling settles without changing its bytes",
+        "wrong/unqualified receipt refusal",
+        "failed hosted Worker remains in capacity ledger and next batch rejects stale lower count",
+        "explicit empty settled release only",
+        "malformed V2 active/reservation state cannot be hidden by a private V1 immutable-envelope view",
+        "resource observations must be at/after authenticated snapshot.startedAt and within maintained 30000ms admission freshness; exact boundary admitted, +1ms/day-old/pre-window/future refused"
+      ]
+    },
+    "review": "Independent review found a stale resource observation admission defect; revision2 enforces the provider-read window and shared30s maximum. Root reviewed the repair and boundary proof.",
+    "wired": false,
+    "providerCapable": false,
+    "limits": [
+      "Only pure proposed states; not production migration or deployment capability. No active queue or old395049 executor touched.",
+      "Consumer must authenticate physical resource budgets/transport allocations and persist each next state through reviewed CAS before action. No public V1 validation projection is exposed.",
+      "New batch admission is create-only; owned updates/rollback remain outside this prototype.",
+      "No uncertain-member clearing/TTL/steal/retry API. Positive stopped-owner per-member reconciliation still needs separate reviewed wiring before any V2 rollout.",
+      "Fresh per-create provider capacity checks, lane lifetime isolation, asset/session memory budget, resource admission and guarded receiver/CLI wiring remain unimplemented.",
+      "Receipt tests use synthetic six-design evidence; they prove protocol bindings and do not claim real hosted/runtime acceptance.",
+      "Future allocator must observe physical resources at/after this admission snapshot.startedAt and no more than PACK_SNAPSHOT_MAX_AGE_MS before admission."
+    ],
+    "remainingProductionWork": [
+      "Explicit full-V2 CAS/store/intake adapter and immutable-envelope validation",
+      "Create mutex through fresh observation/create acknowledgement/post-create observation, with exact sibling count accounting",
+      "Leased transport lanes, request-owned outputs and measured physical RAM/disk reservations",
+      "Positive stopped-outer-owner reconciliation for every unfinished slot, including409/unacknowledged-intent handling",
+      "V2-aware continuation and staged idle-only activation; old V1 validators remain strict"
+    ]
+  },
+  "liveStatus": {
+    "assetPoolPublishedByThisRecord": false,
+    "activeExecutorChanged": false,
+    "currentNormalDrain": 39515213505,
+    "currentExecutorSource": "826c052680ff27d6d25e4021a17ec60771a951d5",
+    "liveAssetPoolMeasurement": false,
+    "twelveNativeRun": 39515430757,
+    "twelveNativeSource": "34c99454e362b72a5e4a4f5921e83fc86c37b1ab",
+    "twelveOwnContracts": "passed",
+    "twelvePlan": "passed",
+    "nativeLanes": "seven active; dealer qualification pending"
+  },
+  "localProviderWrites": 0,
+  "localQueueWrites": 0,
+  "ownerAccepted": false
+}

@@ -131,15 +131,27 @@ export function cloudflarePackProvider({api,assetFetch=fetch,uploadAssets,upload
       exactRequest(request);const {manifest,byHash,manifestDigest}=packAssetManifest(candidate);
       await beforeWrite();const session=successful(await api({method:'POST',path:account+'/workers/scripts/'+request.workerName+'/assets-upload-session',body:{manifest}}),'asset upload session');
       assert(typeof session.jwt==='string'&&Array.isArray(session.buckets),'Invalid asset upload session');
-      const seen=new Set();for(const bucket of session.buckets){assert(Array.isArray(bucket)&&bucket.every(key=>byHash.has(key)&&!seen.has(key)),'Provider requested an unknown or duplicate asset hash');bucket.forEach(key=>seen.add(key));}
+      const seen=new Set();for(const bucket of session.buckets){assert(Array.isArray(bucket),'Provider requested an unknown or duplicate asset hash');for(const key of bucket){assert(byHash.has(key)&&!seen.has(key),'Provider requested an unknown or duplicate asset hash');seen.add(key);}}
       if(uploadAssets)return {...await uploadAssets({candidate,request,session,manifest,byHash,beforeWrite}),manifestDigest,assetFiles:Object.keys(manifest).length,uploadedFiles:seen.size};
       let completionToken=session.buckets.length===0?session.jwt:null;
-      for(const bucket of session.buckets){
-        const form=new FormData();for(const key of bucket){const asset=byHash.get(key),content=readPackUploadFile(candidate,asset.row).toString('base64');form.append(key,new Blob([content],{type:asset.mime}),key);}
-        await beforeWrite();
-        const response=await assetFetch('https://api.cloudflare.com/client/v4'+account+'/workers/assets/upload?base64=true',{method:'POST',headers:{Authorization:'Bearer '+session.jwt},body:form,signal:AbortSignal.timeout(120000)});
-        const body=await response.json();assert([201,202].includes(response.status)&&body.success===true,'Static asset upload failed; the session token was not persisted');if(body.result?.jwt)completionToken=body.result.jwt;
-      }
+      let nextBucket=0,failed=false,firstError;
+      const uploadBuckets=async()=>{
+        while(!failed&&nextBucket<session.buckets.length){
+          const bucket=session.buckets[nextBucket++];
+          try{
+            // Match Wrangler's three bulk uploads; materialize only a running
+            // bucket, never the whole session's base64/FormData payloads.
+            const form=new FormData();for(const key of bucket){const asset=byHash.get(key),content=readPackUploadFile(candidate,asset.row).toString('base64');form.append(key,new Blob([content],{type:asset.mime}),key);}
+            await beforeWrite();if(failed)return;
+            const response=await assetFetch('https://api.cloudflare.com/client/v4'+account+'/workers/assets/upload?base64=true',{method:'POST',headers:{Authorization:'Bearer '+session.jwt},body:form,signal:AbortSignal.timeout(120000)});
+            const body=await response.json();assert([201,202].includes(response.status)&&body.success===true,'Static asset upload failed; the session token was not persisted');if(body.result?.jwt)completionToken=body.result.jwt;
+          }catch(error){if(!failed){failed=true;firstError=error;}}
+        }
+      };
+      // Workers catch locally, so this waits for EVERY in-flight response before
+      // the caller may record an uncertain outcome. No bucket POST is retried.
+      await Promise.all(Array.from({length:Math.min(3,session.buckets.length)},()=>uploadBuckets()));
+      if(failed)throw firstError;
       assert(typeof completionToken==='string','Provider did not return an asset completion token');return {completionToken,manifestDigest,assetFiles:Object.keys(manifest).length,uploadedFiles:seen.size};
     },
     async upload({candidate,request,workerId,assets,ownershipTags}){

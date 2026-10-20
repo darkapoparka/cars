@@ -146,7 +146,7 @@ jobs:
           runtime/dealer-pack-deploy-tools/node_modules/.bin/playwright install --with-deps chromium
       - name: Check executor intake and recovery guards
         id: executor_guard
-        run: node --test scripts/dealer-pack-dispatcher.test.mjs scripts/dealer-pack-ready-intake.test.mjs scripts/dealer-pack-recovery-workflow.test.mjs scripts/dealer-pack-automatic-intake.test.mjs scripts/inspect-dealer-pack-pilot.test.mjs scripts/dealer-pack-continuation.test.mjs
+        run: node --test scripts/dealer-pack-dispatcher.test.mjs scripts/dealer-pack-ready-intake.test.mjs scripts/dealer-pack-recovery-workflow.test.mjs scripts/dealer-pack-automatic-intake.test.mjs scripts/inspect-dealer-pack-pilot.test.mjs scripts/dealer-pack-continuation.test.mjs scripts/dealer-pack-provider.test.mjs scripts/dealer-pack-upload-members.test.mjs
       - name: Check deployment credential presence without exposing it
         id: token
         env:

@@ -211,7 +211,7 @@
     "b23-motors",
     "baban-cars-baban-motors"
   ],
-  "freshNativeStatus": "Awaiting this checkpoint publication and exact-source producing run",
+  "freshNativeStatus": "Own shared contracts and plan passed; seven native lanes active",
   "publisher": {
     "previousRecovery": {
       "runId": 39504964498,
@@ -238,5 +238,92 @@
   },
   "ownerAccepted": false,
   "localProviderWrites": 0,
-  "localQueueWrites": 0
+  "localQueueWrites": 0,
+  "freshNativeRun": {
+    "runId": 39515430757,
+    "sourceCommit": "34c99454e362b72a5e4a4f5921e83fc86c37b1ab",
+    "url": "https://github.com/darkapoparka/cars/actions/runs/39515430757",
+    "slugs": [
+      "reliable-autos",
+      "mosaso",
+      "badar-used-cars",
+      "al-ishfaq-used-cars-llc",
+      "ra-motor-group-ltd",
+      "hrs-cars-ltd",
+      "coseley-auto-centre",
+      "lets-sell-your-car",
+      "millions-auto-cars",
+      "jst-group",
+      "b23-motors",
+      "baban-cars-baban-motors"
+    ],
+    "packs": [
+      {
+        "slug": "reliable-autos",
+        "files": 31,
+        "packDigest": "45f993fe60942d3322bb278e53434b50f6df402aab12256645cc7395915ffc1f"
+      },
+      {
+        "slug": "mosaso",
+        "files": 28,
+        "packDigest": "0c96cbffb7eb39b3418afdc77275f5ad6799266e4b09edd2050b016e49313870"
+      },
+      {
+        "slug": "badar-used-cars",
+        "files": 22,
+        "packDigest": "907018fcb3ceba8b5e4e11909931ccb35b2384bd5063addd584cd59feacfb253"
+      },
+      {
+        "slug": "al-ishfaq-used-cars-llc",
+        "files": 23,
+        "packDigest": "de3ca6c3a40af16ed47fe54c011a0ddc6514d3219d6ec279f2e13021ddc33202"
+      },
+      {
+        "slug": "ra-motor-group-ltd",
+        "files": 25,
+        "packDigest": "3758b9a086756c4928fb61f14f9955c988f7c2e865eaa63ee1e16d6dabff9505"
+      },
+      {
+        "slug": "hrs-cars-ltd",
+        "files": 24,
+        "packDigest": "017f04069509a2ccd1ea50ee2bb233aeaa64ad1553a8fbf41f419f0135db0c9e"
+      },
+      {
+        "slug": "coseley-auto-centre",
+        "files": 24,
+        "packDigest": "df51b5cd341f890a4ca8fb0bca4cdf9f5c6534f283fecb67843282a5978ee1c8"
+      },
+      {
+        "slug": "lets-sell-your-car",
+        "files": 28,
+        "packDigest": "048aae46c8e63faf4df5f26d3a668b35dd0ded7f6dd228ec8c162b8577146e22"
+      },
+      {
+        "slug": "millions-auto-cars",
+        "files": 27,
+        "packDigest": "9cc68f78e824f84ea8e9b6bb09bfd6d55a5fa859dbab60a8035b5426cacc7de7"
+      },
+      {
+        "slug": "jst-group",
+        "files": 25,
+        "packDigest": "77c9c95f15401e34e18549a6738b8313df693c488cf1476045801c69a15694ce"
+      },
+      {
+        "slug": "b23-motors",
+        "files": 24,
+        "packDigest": "7167f0904a80f73baac177e0d3314ab7fd84a56a06661e11a95aa838339357fe"
+      },
+      {
+        "slug": "baban-cars-baban-motors",
+        "files": 24,
+        "packDigest": "a439a1b9dbbbb502ba23e1dc6c6612e0f15cb7279430973620070ee121f6bd4b"
+      }
+    ],
+    "oneSharedContractRun": true,
+    "nativeLaneMaximum": 7,
+    "nativeApproval": false,
+    "hostedApproval": false,
+    "ownContracts": "passed",
+    "plan": "passed"
+  }
 }
