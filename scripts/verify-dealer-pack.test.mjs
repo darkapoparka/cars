@@ -272,6 +272,42 @@ test('all native welcome families use real localized controls and preserve the c
  await assert.rejects(completeDealerPackWelcome(welcomeFixture('modern','en',{changeLocale:true}).page,{key:'modern'}),/changed the document locale/);
 });
 
+test('closed hydrated native locale dialogs pass without reopening or changing language',async()=>{
+ for(const key of ['auto-best','modern','import']){
+  const f=welcomeFixture(key,'bg',{present:false}),result=await completeDealerPackWelcome(f.page,{key});
+  assert.equal(result.status,'passed');assert.equal(result.documentLocale,'bg');assert.deepEqual(result.actions,[]);
+  assert(f.calls.includes('native-ready'));assert(!f.calls.includes('native-not-now'));
+ }
+});
+
+test('missing or unhydrated native locale dialogs retain failure-time state and never pass as closed',async()=>{
+ for(const dialogs of [[],[{ready:'false',open:false,visible:false}],[{ready:'false',open:true,visible:true}]]){
+  const f=welcomeFixture('auto-best','en',{present:false}),locator=f.page.locator,timeout=new Error('locator.waitFor: Timeout 15000ms exceeded');
+  f.page.locator=selector=>selector==='dialog[data-locale-dialog][data-locale-ready="true"]'?{waitFor:async options=>{
+   assert.deepEqual(options,{state:'attached',timeout:15000});throw timeout;
+  }}:locator(selector);
+  f.page.evaluate=async fn=>vm.runInNewContext('('+fn.toString()+')()',{
+   location:{href:'https://honest-motors.webpreviews.site/bg'},document:{documentElement:{lang:'bg'},readyState:'complete',
+    querySelectorAll:selector=>{assert.equal(selector,'dialog[data-locale-dialog]');return dialogs.map(row=>({open:row.open,getAttribute:name=>{assert.equal(name,'data-locale-ready');return row.ready},checkVisibility:()=>row.visible}));}}
+  });
+  await assert.rejects(completeDealerPackWelcome(f.page,{key:'auto-best'}),error=>{
+   assert.equal(error.cause,timeout);assert.match(error.message,/Native locale readiness failed: locator\.waitFor: Timeout 15000ms exceeded/);
+   assert.deepEqual(JSON.parse(JSON.stringify(error.nativeWelcome)),{design:'auto-best',url:'https://honest-motors.webpreviews.site/bg',documentLocale:'bg',readyState:'complete',dialogCount:dialogs.length,dialogs});
+   assert(!f.calls.includes('native-not-now'));assert(!f.calls.includes('native-hidden'));return true;
+  });
+ }
+});
+
+test('a failed native locale state observation preserves the original readiness failure',async()=>{
+ const f=welcomeFixture('auto-best','en'),locator=f.page.locator,timeout=new Error('readiness deadline exceeded');
+ f.page.locator=selector=>selector==='dialog[data-locale-dialog][data-locale-ready="true"]'?{waitFor:async()=>{throw timeout}}:locator(selector);
+ f.page.evaluate=async()=>{throw Error('Execution context was destroyed')};
+ await assert.rejects(completeDealerPackWelcome(f.page,{key:'auto-best'}),error=>{
+  assert.equal(error.cause,timeout);assert.deepEqual(error.nativeWelcome,{design:'auto-best',observationError:'Execution context was destroyed'});
+  assert.match(error.message,/readiness deadline exceeded/);assert(!f.calls.includes('native-not-now'));return true;
+ });
+});
+
 test('preference dismissal selectors remain bound to the retained native English and Bulgarian catalogues',()=>{
  for(const relative of ['templates/auto-best/src/lib/locale/catalog.ts','templates/modern/packages/internationalization/preferences-messages.ts']){
   const text=fs.readFileSync(new URL('../'+relative,import.meta.url),'utf8');assert.match(text,/"locale\.dismiss": "Not now"/);assert.match(text,/"locale\.dismiss": "Не сега"/);

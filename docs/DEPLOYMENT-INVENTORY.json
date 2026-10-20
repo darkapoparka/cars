@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-20T19:53:57.820Z",
+  "updatedAt": "2026-10-20T20:48:29.862Z",
   "githubOwner": "darkapoparka",
   "vercelTeam": "tyj5",
   "model": "One canonical dealer folder and publishing repository; deployment provider and actual variants are declared per dealer.",
@@ -35133,6 +35133,990 @@
         "receiptSha256": "b6f5972a94159e141f24131cdc4f485859f19c0516843a5695a82dc55ac39929",
         "batch": 3,
         "recordedAt": "2026-10-20T19:53:57.820Z"
+      }
+    },
+    {
+      "slug": "car-avenue-llc",
+      "id": "ae-dubai-car-avenue-llc",
+      "name": "Car Avenue LLC",
+      "sourceFormat": "dealer-pack",
+      "sourceOwnership": "cars-repository",
+      "sourcePath": "dealers/car-avenue-llc",
+      "localPath": "dealers/car-avenue-llc",
+      "localPresent": true,
+      "repository": "darkapoparka/cars",
+      "canonicalSourceRepository": "darkapoparka/cars",
+      "canonicalSourceRef": "27026835389c4c683a7245afb4bd415ced447ed4",
+      "canonicalSourceCommit": "27026835389c4c683a7245afb4bd415ced447ed4",
+      "canonicalSourceTree": "8da844ae8db9c06df6d772207c1b823a53e5b106",
+      "packagingVersion": "5",
+      "variants": [
+        {
+          "key": "auto-best",
+          "base": "",
+          "entry": "/",
+          "publicUrl": "https://car-avenue-llc.webpreviews.site/",
+          "state": "deployed-unverified",
+          "qaRecorded": false,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/auto-best",
+            "tree": "cbd21f5e0b794a0cbf52bf36fdf07b25fb0bb499",
+            "digest": "90760c4c73d46ebf976a06e923171f31fc716661f69d25d864342ea856002279"
+          }
+        },
+        {
+          "key": "modern",
+          "base": "/variant-2",
+          "entry": "/variant-2/cars",
+          "publicUrl": "https://car-avenue-llc.webpreviews.site/variant-2/cars",
+          "state": "deployed-unverified",
+          "qaRecorded": false,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/modern",
+            "tree": "e1285aeebcf21730a064db00779a679e64e9d3ca",
+            "digest": "965f1003f5292e99adc72afb738d676436bdc27e7da7ec0264d2872d149a23b5"
+          }
+        },
+        {
+          "key": "import",
+          "base": "/variant-3",
+          "entry": "/variant-3/",
+          "publicUrl": "https://car-avenue-llc.webpreviews.site/variant-3/",
+          "state": "deployed-unverified",
+          "qaRecorded": false,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/import",
+            "tree": "87950ec43fdb33fd85dbf6d6b6160e1a779777c6",
+            "digest": "3c1fe9e9adef074aa7ca2e774ef8a0d955c77e527b7939418ab408e87659e50d"
+          }
+        },
+        {
+          "key": "app",
+          "base": "/variant-4",
+          "entry": "/variant-4/",
+          "publicUrl": "https://car-avenue-llc.webpreviews.site/variant-4/",
+          "state": "deployed-unverified",
+          "qaRecorded": false,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/app",
+            "tree": "ad5b8acf793545b0082cfb33e37c7a97da63ec36",
+            "digest": "524f71647d6bafa4320173f73658fce39b48bf0508171480475b980dc3565b65"
+          }
+        },
+        {
+          "key": "mobile",
+          "base": "/variant-5",
+          "entry": "/variant-5/",
+          "publicUrl": "https://car-avenue-llc.webpreviews.site/variant-5/",
+          "state": "deployed-unverified",
+          "qaRecorded": false,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/mobile",
+            "tree": "9dadfcad37e2b8909cc39d7758db3fca1cd5cf61",
+            "digest": "c85e58c9e747e68d0911f6bd4827a643b8a538dc1ea5eb7d29a78c3252585ef1"
+          }
+        },
+        {
+          "key": "karento-best",
+          "base": "/variant-6",
+          "entry": "/variant-6/",
+          "publicUrl": "https://car-avenue-llc.webpreviews.site/variant-6/",
+          "state": "deployed-unverified",
+          "qaRecorded": false,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/karento-best",
+            "tree": "9c2ab0e1c84f2ffbb0f20dbba757dea36d88808f",
+            "digest": "1f32f03af52daee41861d53d66bafcf3147d001f5a0a9840afbe9b6fb128a8c9"
+          }
+        }
+      ],
+      "delivery": {
+        "provider": "cloudflare",
+        "state": "deployed-unverified",
+        "workerName": "cars-car-avenue-llc",
+        "workerId": "22356dd2a355497eb665bf5f21047f04",
+        "versionId": "8f4935ce-c99e-40d3-adf8-4b50a882dee2",
+        "routeId": "a61b682c0c1c4f699e069bdf16bc0e60",
+        "configuredPublicOrigin": "https://car-avenue-llc.webpreviews.site",
+        "url": "https://car-avenue-llc.webpreviews.site/",
+        "checkedAt": "2026-10-20T19:58:00.020Z"
+      },
+      "evidence": {
+        "source": {
+          "state": "committed",
+          "repository": "darkapoparka/cars",
+          "commit": "27026835389c4c683a7245afb4bd415ced447ed4",
+          "path": "dealers/car-avenue-llc",
+          "tree": "8da844ae8db9c06df6d772207c1b823a53e5b106",
+          "inputFiles": 28,
+          "remoteVerified": true
+        },
+        "build": {
+          "state": "passed",
+          "outputDigest": "764afd7b2374f2b4b6cfe7bbdab84267dd3d7c8938ec35f17442deece7044739",
+          "packDigest": "4a46b20491410131c25ee4b880db8f6d85b4a54a7ea36a826758b4926a6d5d73",
+          "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0"
+        },
+        "deployment": {
+          "state": "deployed",
+          "workerId": "22356dd2a355497eb665bf5f21047f04",
+          "versionId": "8f4935ce-c99e-40d3-adf8-4b50a882dee2",
+          "receiptSha256": "8f8de7abe64ed672d22ee51827c356c9a68543b1c33de332abf7c49d0f3474c8"
+        },
+        "browser": {
+          "state": "not-verified",
+          "reportSha256": null,
+          "widths": [
+            390
+          ],
+          "locales": [
+            "en"
+          ]
+        },
+        "ownerReview": {
+          "state": "not-claimed",
+          "note": "Owner authorized preview deployment; this receipt does not claim dealer identity or visual approval."
+        }
+      },
+      "newPackDeployment": {
+        "queueId": "10b70e3e-8623-49b4-bc1d-3a7468c0231a",
+        "queueBranch": "cars-deploy-queue",
+        "requestId": "5951858fc0302a5f29871a6e3bb5fa4fed0b464dcdfc680afa2d5f979a5fc4bc",
+        "receiptSha256": "8f8de7abe64ed672d22ee51827c356c9a68543b1c33de332abf7c49d0f3474c8",
+        "batch": 3,
+        "recordedAt": "2026-10-20T20:48:29.862Z"
+      }
+    },
+    {
+      "slug": "carmind-motors",
+      "id": "ae-dubai-carmind-motors",
+      "name": "Carmind Motors",
+      "sourceFormat": "dealer-pack",
+      "sourceOwnership": "cars-repository",
+      "sourcePath": "dealers/carmind-motors",
+      "localPath": "dealers/carmind-motors",
+      "localPresent": true,
+      "repository": "darkapoparka/cars",
+      "canonicalSourceRepository": "darkapoparka/cars",
+      "canonicalSourceRef": "27026835389c4c683a7245afb4bd415ced447ed4",
+      "canonicalSourceCommit": "27026835389c4c683a7245afb4bd415ced447ed4",
+      "canonicalSourceTree": "aed53a682b852361f89065d9bd6aa5618cfabdcf",
+      "packagingVersion": "5",
+      "variants": [
+        {
+          "key": "auto-best",
+          "base": "",
+          "entry": "/",
+          "publicUrl": "https://carmind-motors.webpreviews.site/",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/auto-best",
+            "tree": "cbd21f5e0b794a0cbf52bf36fdf07b25fb0bb499",
+            "digest": "90760c4c73d46ebf976a06e923171f31fc716661f69d25d864342ea856002279"
+          }
+        },
+        {
+          "key": "modern",
+          "base": "/variant-2",
+          "entry": "/variant-2/cars",
+          "publicUrl": "https://carmind-motors.webpreviews.site/variant-2/cars",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/modern",
+            "tree": "e1285aeebcf21730a064db00779a679e64e9d3ca",
+            "digest": "965f1003f5292e99adc72afb738d676436bdc27e7da7ec0264d2872d149a23b5"
+          }
+        },
+        {
+          "key": "import",
+          "base": "/variant-3",
+          "entry": "/variant-3/",
+          "publicUrl": "https://carmind-motors.webpreviews.site/variant-3/",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/import",
+            "tree": "87950ec43fdb33fd85dbf6d6b6160e1a779777c6",
+            "digest": "3c1fe9e9adef074aa7ca2e774ef8a0d955c77e527b7939418ab408e87659e50d"
+          }
+        },
+        {
+          "key": "app",
+          "base": "/variant-4",
+          "entry": "/variant-4/",
+          "publicUrl": "https://carmind-motors.webpreviews.site/variant-4/",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/app",
+            "tree": "ad5b8acf793545b0082cfb33e37c7a97da63ec36",
+            "digest": "524f71647d6bafa4320173f73658fce39b48bf0508171480475b980dc3565b65"
+          }
+        },
+        {
+          "key": "mobile",
+          "base": "/variant-5",
+          "entry": "/variant-5/",
+          "publicUrl": "https://carmind-motors.webpreviews.site/variant-5/",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/mobile",
+            "tree": "9dadfcad37e2b8909cc39d7758db3fca1cd5cf61",
+            "digest": "c85e58c9e747e68d0911f6bd4827a643b8a538dc1ea5eb7d29a78c3252585ef1"
+          }
+        },
+        {
+          "key": "karento-best",
+          "base": "/variant-6",
+          "entry": "/variant-6/",
+          "publicUrl": "https://carmind-motors.webpreviews.site/variant-6/",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/karento-best",
+            "tree": "9c2ab0e1c84f2ffbb0f20dbba757dea36d88808f",
+            "digest": "1f32f03af52daee41861d53d66bafcf3147d001f5a0a9840afbe9b6fb128a8c9"
+          }
+        }
+      ],
+      "delivery": {
+        "provider": "cloudflare",
+        "state": "live-verified",
+        "workerName": "cars-carmind-motors",
+        "workerId": "20f2b50ea5a04da0afe731e3607c83b4",
+        "versionId": "761fe4b3-ceb0-46c5-a1b3-bba42bc1518d",
+        "routeId": "17cdf048e05b41949d2290ab341760f7",
+        "configuredPublicOrigin": "https://carmind-motors.webpreviews.site",
+        "url": "https://carmind-motors.webpreviews.site/",
+        "checkedAt": "2026-10-20T20:34:22.861Z"
+      },
+      "evidence": {
+        "source": {
+          "state": "committed",
+          "repository": "darkapoparka/cars",
+          "commit": "27026835389c4c683a7245afb4bd415ced447ed4",
+          "path": "dealers/carmind-motors",
+          "tree": "aed53a682b852361f89065d9bd6aa5618cfabdcf",
+          "inputFiles": 25,
+          "remoteVerified": true
+        },
+        "build": {
+          "state": "passed",
+          "outputDigest": "fc82ac63ae384ca34b37cb2b6571a7f1b47ef2d2724b2a6de6d9a5b50bf52428",
+          "packDigest": "dd2627f24800080584406401d6b12770f895a9a8231acb01533b62c0bf936fbc",
+          "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0"
+        },
+        "deployment": {
+          "state": "deployed",
+          "workerId": "20f2b50ea5a04da0afe731e3607c83b4",
+          "versionId": "761fe4b3-ceb0-46c5-a1b3-bba42bc1518d",
+          "receiptSha256": "56cf97e876c1927ed9c81e4e957f5c8447e2cabf7bd8ba819dc3057810ed8d9c"
+        },
+        "browser": {
+          "state": "passed",
+          "reportSha256": "75c9e7c7087cb1de6c69d60f2df31b38cd5a17f42bc47bba83e716bda1a44f1e",
+          "widths": [
+            390
+          ],
+          "locales": [
+            "en"
+          ]
+        },
+        "ownerReview": {
+          "state": "not-claimed",
+          "note": "Owner authorized preview deployment; this receipt does not claim dealer identity or visual approval."
+        }
+      },
+      "newPackDeployment": {
+        "queueId": "10b70e3e-8623-49b4-bc1d-3a7468c0231a",
+        "queueBranch": "cars-deploy-queue",
+        "requestId": "7f908f3a27a8122c077cf337dce40ab15b27c9c453edb8505d9069054037766f",
+        "receiptSha256": "56cf97e876c1927ed9c81e4e957f5c8447e2cabf7bd8ba819dc3057810ed8d9c",
+        "batch": 3,
+        "recordedAt": "2026-10-20T20:48:29.862Z"
+      }
+    },
+    {
+      "slug": "chrome-used-cars",
+      "id": "ae-dubai-chrome-used-cars",
+      "name": "Chrome Used Cars",
+      "sourceFormat": "dealer-pack",
+      "sourceOwnership": "cars-repository",
+      "sourcePath": "dealers/chrome-used-cars",
+      "localPath": "dealers/chrome-used-cars",
+      "localPresent": true,
+      "repository": "darkapoparka/cars",
+      "canonicalSourceRepository": "darkapoparka/cars",
+      "canonicalSourceRef": "27026835389c4c683a7245afb4bd415ced447ed4",
+      "canonicalSourceCommit": "27026835389c4c683a7245afb4bd415ced447ed4",
+      "canonicalSourceTree": "0d76544204ed028f04207b03607eae58c8ff2eb1",
+      "packagingVersion": "5",
+      "variants": [
+        {
+          "key": "auto-best",
+          "base": "",
+          "entry": "/",
+          "publicUrl": "https://chrome-used-cars.webpreviews.site/",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/auto-best",
+            "tree": "cbd21f5e0b794a0cbf52bf36fdf07b25fb0bb499",
+            "digest": "90760c4c73d46ebf976a06e923171f31fc716661f69d25d864342ea856002279"
+          }
+        },
+        {
+          "key": "modern",
+          "base": "/variant-2",
+          "entry": "/variant-2/cars",
+          "publicUrl": "https://chrome-used-cars.webpreviews.site/variant-2/cars",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/modern",
+            "tree": "e1285aeebcf21730a064db00779a679e64e9d3ca",
+            "digest": "965f1003f5292e99adc72afb738d676436bdc27e7da7ec0264d2872d149a23b5"
+          }
+        },
+        {
+          "key": "import",
+          "base": "/variant-3",
+          "entry": "/variant-3/",
+          "publicUrl": "https://chrome-used-cars.webpreviews.site/variant-3/",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/import",
+            "tree": "87950ec43fdb33fd85dbf6d6b6160e1a779777c6",
+            "digest": "3c1fe9e9adef074aa7ca2e774ef8a0d955c77e527b7939418ab408e87659e50d"
+          }
+        },
+        {
+          "key": "app",
+          "base": "/variant-4",
+          "entry": "/variant-4/",
+          "publicUrl": "https://chrome-used-cars.webpreviews.site/variant-4/",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/app",
+            "tree": "ad5b8acf793545b0082cfb33e37c7a97da63ec36",
+            "digest": "524f71647d6bafa4320173f73658fce39b48bf0508171480475b980dc3565b65"
+          }
+        },
+        {
+          "key": "mobile",
+          "base": "/variant-5",
+          "entry": "/variant-5/",
+          "publicUrl": "https://chrome-used-cars.webpreviews.site/variant-5/",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/mobile",
+            "tree": "9dadfcad37e2b8909cc39d7758db3fca1cd5cf61",
+            "digest": "c85e58c9e747e68d0911f6bd4827a643b8a538dc1ea5eb7d29a78c3252585ef1"
+          }
+        },
+        {
+          "key": "karento-best",
+          "base": "/variant-6",
+          "entry": "/variant-6/",
+          "publicUrl": "https://chrome-used-cars.webpreviews.site/variant-6/",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/karento-best",
+            "tree": "9c2ab0e1c84f2ffbb0f20dbba757dea36d88808f",
+            "digest": "1f32f03af52daee41861d53d66bafcf3147d001f5a0a9840afbe9b6fb128a8c9"
+          }
+        }
+      ],
+      "delivery": {
+        "provider": "cloudflare",
+        "state": "live-verified",
+        "workerName": "cars-chrome-used-cars",
+        "workerId": "ca190034cb3c4c59bbc2bf995175e676",
+        "versionId": "3159247d-50bb-4dca-bd27-925c3c60a8f8",
+        "routeId": "ed45d3239c2e4df2a3227982053c9958",
+        "configuredPublicOrigin": "https://chrome-used-cars.webpreviews.site",
+        "url": "https://chrome-used-cars.webpreviews.site/",
+        "checkedAt": "2026-10-20T20:08:56.723Z"
+      },
+      "evidence": {
+        "source": {
+          "state": "committed",
+          "repository": "darkapoparka/cars",
+          "commit": "27026835389c4c683a7245afb4bd415ced447ed4",
+          "path": "dealers/chrome-used-cars",
+          "tree": "0d76544204ed028f04207b03607eae58c8ff2eb1",
+          "inputFiles": 25,
+          "remoteVerified": true
+        },
+        "build": {
+          "state": "passed",
+          "outputDigest": "360d686f3c9452403057267c8900447e166f03c06bb6e59f22b2de5b25834525",
+          "packDigest": "ddab5fe20c3b74c5226ef15d4613ce94432bb5ef3e192607e849010f8660ee14",
+          "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0"
+        },
+        "deployment": {
+          "state": "deployed",
+          "workerId": "ca190034cb3c4c59bbc2bf995175e676",
+          "versionId": "3159247d-50bb-4dca-bd27-925c3c60a8f8",
+          "receiptSha256": "64e53fd4ae90885dbcf9f7935e1abb7bc6b7a84f4bb1552c305bde44c97f7807"
+        },
+        "browser": {
+          "state": "passed",
+          "reportSha256": "f4fb2a5ca12dcb07a34c33640e1d1b52d7a8e2df46f872aeac03f7e564428400",
+          "widths": [
+            390
+          ],
+          "locales": [
+            "en"
+          ]
+        },
+        "ownerReview": {
+          "state": "not-claimed",
+          "note": "Owner authorized preview deployment; this receipt does not claim dealer identity or visual approval."
+        }
+      },
+      "newPackDeployment": {
+        "queueId": "10b70e3e-8623-49b4-bc1d-3a7468c0231a",
+        "queueBranch": "cars-deploy-queue",
+        "requestId": "b4829646550393a52558cd23691cefed1112d6534e367d85e4bf4380459c5857",
+        "receiptSha256": "64e53fd4ae90885dbcf9f7935e1abb7bc6b7a84f4bb1552c305bde44c97f7807",
+        "batch": 3,
+        "recordedAt": "2026-10-20T20:48:29.862Z"
+      }
+    },
+    {
+      "slug": "dubuy-auto-cars",
+      "id": "ae-dubai-dubuy-auto-cars",
+      "name": "Dubuy Auto Cars",
+      "sourceFormat": "dealer-pack",
+      "sourceOwnership": "cars-repository",
+      "sourcePath": "dealers/dubuy-auto-cars",
+      "localPath": "dealers/dubuy-auto-cars",
+      "localPresent": true,
+      "repository": "darkapoparka/cars",
+      "canonicalSourceRepository": "darkapoparka/cars",
+      "canonicalSourceRef": "27026835389c4c683a7245afb4bd415ced447ed4",
+      "canonicalSourceCommit": "27026835389c4c683a7245afb4bd415ced447ed4",
+      "canonicalSourceTree": "b024dae12e837ac0c7416cd795f5afd78a35baef",
+      "packagingVersion": "5",
+      "variants": [
+        {
+          "key": "auto-best",
+          "base": "",
+          "entry": "/",
+          "publicUrl": "https://dubuy-auto-cars.webpreviews.site/",
+          "state": "deployed-unverified",
+          "qaRecorded": false,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/auto-best",
+            "tree": "cbd21f5e0b794a0cbf52bf36fdf07b25fb0bb499",
+            "digest": "90760c4c73d46ebf976a06e923171f31fc716661f69d25d864342ea856002279"
+          }
+        },
+        {
+          "key": "modern",
+          "base": "/variant-2",
+          "entry": "/variant-2/cars",
+          "publicUrl": "https://dubuy-auto-cars.webpreviews.site/variant-2/cars",
+          "state": "deployed-unverified",
+          "qaRecorded": false,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/modern",
+            "tree": "e1285aeebcf21730a064db00779a679e64e9d3ca",
+            "digest": "965f1003f5292e99adc72afb738d676436bdc27e7da7ec0264d2872d149a23b5"
+          }
+        },
+        {
+          "key": "import",
+          "base": "/variant-3",
+          "entry": "/variant-3/",
+          "publicUrl": "https://dubuy-auto-cars.webpreviews.site/variant-3/",
+          "state": "deployed-unverified",
+          "qaRecorded": false,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/import",
+            "tree": "87950ec43fdb33fd85dbf6d6b6160e1a779777c6",
+            "digest": "3c1fe9e9adef074aa7ca2e774ef8a0d955c77e527b7939418ab408e87659e50d"
+          }
+        },
+        {
+          "key": "app",
+          "base": "/variant-4",
+          "entry": "/variant-4/",
+          "publicUrl": "https://dubuy-auto-cars.webpreviews.site/variant-4/",
+          "state": "deployed-unverified",
+          "qaRecorded": false,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/app",
+            "tree": "ad5b8acf793545b0082cfb33e37c7a97da63ec36",
+            "digest": "524f71647d6bafa4320173f73658fce39b48bf0508171480475b980dc3565b65"
+          }
+        },
+        {
+          "key": "mobile",
+          "base": "/variant-5",
+          "entry": "/variant-5/",
+          "publicUrl": "https://dubuy-auto-cars.webpreviews.site/variant-5/",
+          "state": "deployed-unverified",
+          "qaRecorded": false,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/mobile",
+            "tree": "9dadfcad37e2b8909cc39d7758db3fca1cd5cf61",
+            "digest": "c85e58c9e747e68d0911f6bd4827a643b8a538dc1ea5eb7d29a78c3252585ef1"
+          }
+        },
+        {
+          "key": "karento-best",
+          "base": "/variant-6",
+          "entry": "/variant-6/",
+          "publicUrl": "https://dubuy-auto-cars.webpreviews.site/variant-6/",
+          "state": "deployed-unverified",
+          "qaRecorded": false,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/karento-best",
+            "tree": "9c2ab0e1c84f2ffbb0f20dbba757dea36d88808f",
+            "digest": "1f32f03af52daee41861d53d66bafcf3147d001f5a0a9840afbe9b6fb128a8c9"
+          }
+        }
+      ],
+      "delivery": {
+        "provider": "cloudflare",
+        "state": "deployed-unverified",
+        "workerName": "cars-dubuy-auto-cars",
+        "workerId": "a07366df22ef47879f639079d2bffe44",
+        "versionId": "79be730c-174c-484f-86fb-e232aa4a58a6",
+        "routeId": "e28000d7735b4ea0b1b8d2f335194fa6",
+        "configuredPublicOrigin": "https://dubuy-auto-cars.webpreviews.site",
+        "url": "https://dubuy-auto-cars.webpreviews.site/",
+        "checkedAt": "2026-10-20T20:25:27.155Z"
+      },
+      "evidence": {
+        "source": {
+          "state": "committed",
+          "repository": "darkapoparka/cars",
+          "commit": "27026835389c4c683a7245afb4bd415ced447ed4",
+          "path": "dealers/dubuy-auto-cars",
+          "tree": "b024dae12e837ac0c7416cd795f5afd78a35baef",
+          "inputFiles": 25,
+          "remoteVerified": true
+        },
+        "build": {
+          "state": "passed",
+          "outputDigest": "58b5a0990ef2717058b4016851acb4b4634d054ff12a57e85ddd1dba64440aca",
+          "packDigest": "cf8f43cd773644c4bdd8cbb1fb6ed2749089d685371962ee36a27badc29fcb54",
+          "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0"
+        },
+        "deployment": {
+          "state": "deployed",
+          "workerId": "a07366df22ef47879f639079d2bffe44",
+          "versionId": "79be730c-174c-484f-86fb-e232aa4a58a6",
+          "receiptSha256": "a12183ce67d24fbc1dd737c3bdab49b827cf28e0dc759bcc2ae9f99708dd0aae"
+        },
+        "browser": {
+          "state": "not-verified",
+          "reportSha256": null,
+          "widths": [
+            390
+          ],
+          "locales": [
+            "en"
+          ]
+        },
+        "ownerReview": {
+          "state": "not-claimed",
+          "note": "Owner authorized preview deployment; this receipt does not claim dealer identity or visual approval."
+        }
+      },
+      "newPackDeployment": {
+        "queueId": "10b70e3e-8623-49b4-bc1d-3a7468c0231a",
+        "queueBranch": "cars-deploy-queue",
+        "requestId": "82d456703947fda9e7cd05fd2383a1b0fae83333aac2aa457f9aa61c18dfbedc",
+        "receiptSha256": "a12183ce67d24fbc1dd737c3bdab49b827cf28e0dc759bcc2ae9f99708dd0aae",
+        "batch": 3,
+        "recordedAt": "2026-10-20T20:48:29.862Z"
+      }
+    },
+    {
+      "slug": "durmaz-auto-export-and-trading-fzco",
+      "id": "ae-dubai-durmaz-auto-export-and-trading-fzco",
+      "name": "Durmaz Auto Export and Trading FZCO",
+      "sourceFormat": "dealer-pack",
+      "sourceOwnership": "cars-repository",
+      "sourcePath": "dealers/durmaz-auto-export-and-trading-fzco",
+      "localPath": "dealers/durmaz-auto-export-and-trading-fzco",
+      "localPresent": true,
+      "repository": "darkapoparka/cars",
+      "canonicalSourceRepository": "darkapoparka/cars",
+      "canonicalSourceRef": "27026835389c4c683a7245afb4bd415ced447ed4",
+      "canonicalSourceCommit": "27026835389c4c683a7245afb4bd415ced447ed4",
+      "canonicalSourceTree": "fe2e6a8116c6cb610c2e5cfac56c85bc572ae8d1",
+      "packagingVersion": "5",
+      "variants": [
+        {
+          "key": "auto-best",
+          "base": "",
+          "entry": "/",
+          "publicUrl": "https://durmaz-auto-export-and-trading-fzco.webpreviews.site/",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/auto-best",
+            "tree": "cbd21f5e0b794a0cbf52bf36fdf07b25fb0bb499",
+            "digest": "90760c4c73d46ebf976a06e923171f31fc716661f69d25d864342ea856002279"
+          }
+        },
+        {
+          "key": "modern",
+          "base": "/variant-2",
+          "entry": "/variant-2/cars",
+          "publicUrl": "https://durmaz-auto-export-and-trading-fzco.webpreviews.site/variant-2/cars",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/modern",
+            "tree": "e1285aeebcf21730a064db00779a679e64e9d3ca",
+            "digest": "965f1003f5292e99adc72afb738d676436bdc27e7da7ec0264d2872d149a23b5"
+          }
+        },
+        {
+          "key": "import",
+          "base": "/variant-3",
+          "entry": "/variant-3/",
+          "publicUrl": "https://durmaz-auto-export-and-trading-fzco.webpreviews.site/variant-3/",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/import",
+            "tree": "87950ec43fdb33fd85dbf6d6b6160e1a779777c6",
+            "digest": "3c1fe9e9adef074aa7ca2e774ef8a0d955c77e527b7939418ab408e87659e50d"
+          }
+        },
+        {
+          "key": "app",
+          "base": "/variant-4",
+          "entry": "/variant-4/",
+          "publicUrl": "https://durmaz-auto-export-and-trading-fzco.webpreviews.site/variant-4/",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/app",
+            "tree": "ad5b8acf793545b0082cfb33e37c7a97da63ec36",
+            "digest": "524f71647d6bafa4320173f73658fce39b48bf0508171480475b980dc3565b65"
+          }
+        },
+        {
+          "key": "mobile",
+          "base": "/variant-5",
+          "entry": "/variant-5/",
+          "publicUrl": "https://durmaz-auto-export-and-trading-fzco.webpreviews.site/variant-5/",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/mobile",
+            "tree": "9dadfcad37e2b8909cc39d7758db3fca1cd5cf61",
+            "digest": "c85e58c9e747e68d0911f6bd4827a643b8a538dc1ea5eb7d29a78c3252585ef1"
+          }
+        },
+        {
+          "key": "karento-best",
+          "base": "/variant-6",
+          "entry": "/variant-6/",
+          "publicUrl": "https://durmaz-auto-export-and-trading-fzco.webpreviews.site/variant-6/",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/karento-best",
+            "tree": "9c2ab0e1c84f2ffbb0f20dbba757dea36d88808f",
+            "digest": "1f32f03af52daee41861d53d66bafcf3147d001f5a0a9840afbe9b6fb128a8c9"
+          }
+        }
+      ],
+      "delivery": {
+        "provider": "cloudflare",
+        "state": "live-verified",
+        "workerName": "cars-durmaz-auto-export-and-trading-fzco",
+        "workerId": "3245cc306d814c378932658a00020cbb",
+        "versionId": "848d4225-37f3-4240-84f8-70712eb4193b",
+        "routeId": "49bff0a315194aeba6af576b006493f3",
+        "configuredPublicOrigin": "https://durmaz-auto-export-and-trading-fzco.webpreviews.site",
+        "url": "https://durmaz-auto-export-and-trading-fzco.webpreviews.site/",
+        "checkedAt": "2026-10-20T20:16:54.387Z"
+      },
+      "evidence": {
+        "source": {
+          "state": "committed",
+          "repository": "darkapoparka/cars",
+          "commit": "27026835389c4c683a7245afb4bd415ced447ed4",
+          "path": "dealers/durmaz-auto-export-and-trading-fzco",
+          "tree": "fe2e6a8116c6cb610c2e5cfac56c85bc572ae8d1",
+          "inputFiles": 25,
+          "remoteVerified": true
+        },
+        "build": {
+          "state": "passed",
+          "outputDigest": "5c48c8540414b1d3d50ef98cd0af998759b1239ac25880417d085a4427436479",
+          "packDigest": "26d67b39278a99d82d7b201416a107f2df00229670206b3e2ad6c11c7a8aea3c",
+          "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0"
+        },
+        "deployment": {
+          "state": "deployed",
+          "workerId": "3245cc306d814c378932658a00020cbb",
+          "versionId": "848d4225-37f3-4240-84f8-70712eb4193b",
+          "receiptSha256": "816c6739eaf8bddf19570f345497ed6d01e1d287f219cd105f4abd9f6190fc77"
+        },
+        "browser": {
+          "state": "passed",
+          "reportSha256": "801845f04abbef5d9af23abed81b4fb47156ba9a1acb501b80d99b5c183b062a",
+          "widths": [
+            390
+          ],
+          "locales": [
+            "en"
+          ]
+        },
+        "ownerReview": {
+          "state": "not-claimed",
+          "note": "Owner authorized preview deployment; this receipt does not claim dealer identity or visual approval."
+        }
+      },
+      "newPackDeployment": {
+        "queueId": "10b70e3e-8623-49b4-bc1d-3a7468c0231a",
+        "queueBranch": "cars-deploy-queue",
+        "requestId": "ae33a403c1834a46f8c266682667fd4fdc3d8a7a20e53f36ac85c6853531613d",
+        "receiptSha256": "816c6739eaf8bddf19570f345497ed6d01e1d287f219cd105f4abd9f6190fc77",
+        "batch": 3,
+        "recordedAt": "2026-10-20T20:48:29.862Z"
+      }
+    },
+    {
+      "slug": "express-motors",
+      "id": "ae-dubai-express-motors",
+      "name": "Express Motors",
+      "sourceFormat": "dealer-pack",
+      "sourceOwnership": "cars-repository",
+      "sourcePath": "dealers/express-motors",
+      "localPath": "dealers/express-motors",
+      "localPresent": true,
+      "repository": "darkapoparka/cars",
+      "canonicalSourceRepository": "darkapoparka/cars",
+      "canonicalSourceRef": "27026835389c4c683a7245afb4bd415ced447ed4",
+      "canonicalSourceCommit": "27026835389c4c683a7245afb4bd415ced447ed4",
+      "canonicalSourceTree": "1ca7c8a1f97e8df8ebcb3293fa6a1a4c81c14aff",
+      "packagingVersion": "5",
+      "variants": [
+        {
+          "key": "auto-best",
+          "base": "",
+          "entry": "/",
+          "publicUrl": "https://express-motors.webpreviews.site/",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/auto-best",
+            "tree": "cbd21f5e0b794a0cbf52bf36fdf07b25fb0bb499",
+            "digest": "90760c4c73d46ebf976a06e923171f31fc716661f69d25d864342ea856002279"
+          }
+        },
+        {
+          "key": "modern",
+          "base": "/variant-2",
+          "entry": "/variant-2/cars",
+          "publicUrl": "https://express-motors.webpreviews.site/variant-2/cars",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/modern",
+            "tree": "e1285aeebcf21730a064db00779a679e64e9d3ca",
+            "digest": "965f1003f5292e99adc72afb738d676436bdc27e7da7ec0264d2872d149a23b5"
+          }
+        },
+        {
+          "key": "import",
+          "base": "/variant-3",
+          "entry": "/variant-3/",
+          "publicUrl": "https://express-motors.webpreviews.site/variant-3/",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/import",
+            "tree": "87950ec43fdb33fd85dbf6d6b6160e1a779777c6",
+            "digest": "3c1fe9e9adef074aa7ca2e774ef8a0d955c77e527b7939418ab408e87659e50d"
+          }
+        },
+        {
+          "key": "app",
+          "base": "/variant-4",
+          "entry": "/variant-4/",
+          "publicUrl": "https://express-motors.webpreviews.site/variant-4/",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/app",
+            "tree": "ad5b8acf793545b0082cfb33e37c7a97da63ec36",
+            "digest": "524f71647d6bafa4320173f73658fce39b48bf0508171480475b980dc3565b65"
+          }
+        },
+        {
+          "key": "mobile",
+          "base": "/variant-5",
+          "entry": "/variant-5/",
+          "publicUrl": "https://express-motors.webpreviews.site/variant-5/",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/mobile",
+            "tree": "9dadfcad37e2b8909cc39d7758db3fca1cd5cf61",
+            "digest": "c85e58c9e747e68d0911f6bd4827a643b8a538dc1ea5eb7d29a78c3252585ef1"
+          }
+        },
+        {
+          "key": "karento-best",
+          "base": "/variant-6",
+          "entry": "/variant-6/",
+          "publicUrl": "https://express-motors.webpreviews.site/variant-6/",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/karento-best",
+            "tree": "9c2ab0e1c84f2ffbb0f20dbba757dea36d88808f",
+            "digest": "1f32f03af52daee41861d53d66bafcf3147d001f5a0a9840afbe9b6fb128a8c9"
+          }
+        }
+      ],
+      "delivery": {
+        "provider": "cloudflare",
+        "state": "live-verified",
+        "workerName": "cars-express-motors",
+        "workerId": "0404940868504e758e9aa8372f94f40b",
+        "versionId": "d79fe3cc-bb8c-4e40-a5b4-535319515102",
+        "routeId": "fc498ed5e7db4ae3ae07bb5868303666",
+        "configuredPublicOrigin": "https://express-motors.webpreviews.site",
+        "url": "https://express-motors.webpreviews.site/",
+        "checkedAt": "2026-10-20T19:49:08.976Z"
+      },
+      "evidence": {
+        "source": {
+          "state": "committed",
+          "repository": "darkapoparka/cars",
+          "commit": "27026835389c4c683a7245afb4bd415ced447ed4",
+          "path": "dealers/express-motors",
+          "tree": "1ca7c8a1f97e8df8ebcb3293fa6a1a4c81c14aff",
+          "inputFiles": 25,
+          "remoteVerified": true
+        },
+        "build": {
+          "state": "passed",
+          "outputDigest": "7418a4ac2d8871e4586655950c0840742133774a42be1cfdd460bec2f74924a7",
+          "packDigest": "d10a42be6935bc31c5ede816dcf923fcf86d02f9d736e3de538606fa3dfd00b7",
+          "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0"
+        },
+        "deployment": {
+          "state": "deployed",
+          "workerId": "0404940868504e758e9aa8372f94f40b",
+          "versionId": "d79fe3cc-bb8c-4e40-a5b4-535319515102",
+          "receiptSha256": "9497664b39a22cfa31d93d73095a1dfb2b6809e955029f472d4b5d225d402b9c"
+        },
+        "browser": {
+          "state": "passed",
+          "reportSha256": "a7649d6478bb97749b8e15cc3a07ec87a7d6debb24f8e305e81f8891e29455e3",
+          "widths": [
+            390
+          ],
+          "locales": [
+            "en"
+          ]
+        },
+        "ownerReview": {
+          "state": "not-claimed",
+          "note": "Owner authorized preview deployment; this receipt does not claim dealer identity or visual approval."
+        }
+      },
+      "newPackDeployment": {
+        "queueId": "10b70e3e-8623-49b4-bc1d-3a7468c0231a",
+        "queueBranch": "cars-deploy-queue",
+        "requestId": "d0bf9de3f972afa1d8ac84209182375e79b4b85c5c635753e25e378314ab270e",
+        "receiptSha256": "9497664b39a22cfa31d93d73095a1dfb2b6809e955029f472d4b5d225d402b9c",
+        "batch": 3,
+        "recordedAt": "2026-10-20T20:48:29.862Z"
       }
     }
   ],

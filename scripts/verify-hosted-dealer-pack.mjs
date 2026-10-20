@@ -71,6 +71,7 @@ export async function verifyHostedDealerPack({root=ROOT,request,receipt,pack,can
       const inspect=async(href,label)=>{
         const target=new URL(href,identity.publicOrigin);assert(target.origin===identity.publicOrigin,'Hosted journey escaped the approved dealer origin');errors.length=0;
         const response=await page.goto(target.href,{waitUntil:'domcontentloaded',timeout:60000});assert(new URL(page.url()).origin===identity.publicOrigin,'Hosted redirect escaped the approved dealer origin');
+        if(label==='home')row.httpStatus=response?.status()??null;
         await page.waitForLoadState('networkidle',{timeout:10000}).catch(()=>{});await completeDealerPackWelcome(page,variant);
         if(label==='home')await prepareDealerPackScreenshot(page);
         const snapshot=await page.evaluate(readDealerPackDom);
@@ -95,7 +96,7 @@ export async function verifyHostedDealerPack({root=ROOT,request,receipt,pack,can
         row.headStatus=home.assessed.head.status==='passed'&&contact.assessed.head.status==='passed'?'passed':'failed';
         row.foreignIdentityCount=home.assessed.leaks.length+contact.assessed.leaks.length;row.findings=[...home.assessed.findings,...contact.assessed.findings,...(row.fabInteraction?[]:['fab-interaction'])];
         row.status=home.assessed.status==='passed'&&contact.assessed.status==='passed'&&row.fabInteraction?'passed':'failed';
-      }catch(error){row.findings.push(error.message);}finally{await page.close();}
+      }catch(error){row.findings.push(error.message);row.runtimeErrors=[...errors];row.failedUrl=page.url();if(error.nativeWelcome)row.nativeWelcome=error.nativeWelcome;}finally{await page.close();}
       if(reportFile)writeJson(reportFile,result);
     }
     result.success=result.designs.length===6&&result.designs.every(row=>row.status==='passed');

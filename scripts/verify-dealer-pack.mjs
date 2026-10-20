@@ -405,7 +405,19 @@ export async function completeDealerPackWelcome(page,variant) {
   assert(locale,'Unsupported native document locale: '+documentLocale);
   const actions=[];
   if(['auto-best','modern','import'].includes(variant.key)){
-    await page.locator('dialog[data-locale-dialog][data-locale-ready="true"]').waitFor({state:'attached',timeout:15000});
+    try{
+      await page.locator('dialog[data-locale-dialog][data-locale-ready="true"]').waitFor({state:'attached',timeout:15000});
+    }catch(error){
+      // A closed, hydrated dialog is valid; absent/unhydrated markup is not.
+      // Retain its actual state rather than losing hydration failures to a
+      // generic journey timeout. This never dismisses or bypasses an unready UI.
+      const state=await page.evaluate(()=>({url:location.href.slice(0,2048),documentLocale:document.documentElement.lang,readyState:document.readyState,
+        dialogCount:document.querySelectorAll('dialog[data-locale-dialog]').length,
+        dialogs:[...document.querySelectorAll('dialog[data-locale-dialog]')].slice(0,4).map(dialog=>({ready:dialog.getAttribute('data-locale-ready'),open:dialog.open,visible:dialog.checkVisibility()}))
+      })).catch(observationError=>({observationError:observationError.message}));
+      const failure={design:variant.key,...state};
+      throw Object.assign(new Error('Native locale readiness failed: '+error.message+'; state='+JSON.stringify(failure),{cause:error}),{nativeWelcome:failure});
+    }
     const dialog=page.locator('dialog[data-locale-dialog][open]');
     if(await dialog.isVisible()){
       const label=locale==='bg'?'Не сега':'Not now';

@@ -11,14 +11,14 @@ const step = name => {
 };
 const recovery = step('Reconcile only an explicitly selected stopped request');
 const drain = step('Drain all retained batches through the single account claim');
-const intake = step('Inspect completed builds; persist requests only for explicit manual intake');
+const intake = step('Intake qualified owner-selected main builds or perform a manual inspection');
 const blocked = step('Record an unavailable deployment credential as a blocked write request');
-const condition = (value, {event = 'workflow_dispatch', action = 'recover-and-drain', token = 'true', conclusion = 'success', succeeded = true, cancelled = false} = {}) => {
+const condition = (value, {event = 'workflow_dispatch', action = 'recover-and-drain', token = 'true', conclusion = 'success', guard = 'success', succeeded = true, cancelled = false} = {}) => {
   const expression = value.match(/^        if: \$\{\{ (.+) \}\}$/m)?.[1];
   assert.ok(expression, 'Expected an explicit step condition');
   if (!/\b(?:success|failure|always|cancelled)\s*\(/.test(expression) && !succeeded) return false;
   return Function('github', 'inputs', 'steps', 'success', 'cancelled', `return (${expression});`)(
-    {event_name: event}, {action}, {token: {outputs: {present: token}}, reconcile: {conclusion}}, () => succeeded, () => cancelled,
+    {event_name: event}, {action}, {token: {outputs: {present: token}}, reconcile: {conclusion}, executor_guard: {conclusion: guard}}, () => succeeded, () => cancelled,
   );
 };
 const script = recovery.match(/          node --input-type=module <<'NODE'\n([\s\S]+?)          NODE\n/)?.[1]
@@ -62,7 +62,10 @@ test('ordinary retained-queue service remains independent of intake inspection',
     assert.equal(condition(drain, {action}), true);
   }
   assert.equal(condition(drain, {event: 'schedule'}), true);
-  assert.equal(condition(drain, {event: 'workflow_run'}), false);
+  assert.equal(condition(drain, {event: 'workflow_run'}), true);
+  for (const event of ['schedule', 'workflow_run', 'workflow_dispatch']) {
+    for (const guard of ['failure', 'skipped', 'cancelled']) assert.equal(condition(drain, {event, guard}), false);
+  }
 });
 
 test('missing credentials block both recovery actions with a failed result', () => {

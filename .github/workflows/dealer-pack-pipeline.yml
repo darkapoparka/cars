@@ -186,6 +186,9 @@ jobs:
         overwrite: true
         retention-days: 3
   lane:
+    # This completed job is the early-intake readiness unit. Artifact names alone
+    # never authorize intake while another lane is still building.
+    name: dealer-pack-producer-lane-${{ matrix.lane }}
     needs: plan
     if: ${{ !cancelled() && needs.plan.outputs.has_work == 'true' }}
     runs-on: ubuntu-24.04

@@ -2491,6 +2491,126 @@
       "sourceRepository": "darkapoparka/cars",
       "sourceCommit": "27026835389c4c683a7245afb4bd415ced447ed4",
       "sourcePath": "dealers/elena-used-cars"
+    },
+    {
+      "slug": "car-avenue-llc",
+      "name": "Car Avenue LLC",
+      "path": "dealers/car-avenue-llc",
+      "variants": [
+        "auto-best",
+        "modern",
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
+      ],
+      "sourceState": "source-present",
+      "reviewState": "not-claimed",
+      "leadId": "ae-dubai-car-avenue-llc",
+      "sourceFormat": "dealer-pack",
+      "sourceRepository": "darkapoparka/cars",
+      "sourceCommit": "27026835389c4c683a7245afb4bd415ced447ed4",
+      "sourcePath": "dealers/car-avenue-llc"
+    },
+    {
+      "slug": "carmind-motors",
+      "name": "Carmind Motors",
+      "path": "dealers/carmind-motors",
+      "variants": [
+        "auto-best",
+        "modern",
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
+      ],
+      "sourceState": "source-present",
+      "reviewState": "not-claimed",
+      "leadId": "ae-dubai-carmind-motors",
+      "sourceFormat": "dealer-pack",
+      "sourceRepository": "darkapoparka/cars",
+      "sourceCommit": "27026835389c4c683a7245afb4bd415ced447ed4",
+      "sourcePath": "dealers/carmind-motors"
+    },
+    {
+      "slug": "chrome-used-cars",
+      "name": "Chrome Used Cars",
+      "path": "dealers/chrome-used-cars",
+      "variants": [
+        "auto-best",
+        "modern",
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
+      ],
+      "sourceState": "source-present",
+      "reviewState": "not-claimed",
+      "leadId": "ae-dubai-chrome-used-cars",
+      "sourceFormat": "dealer-pack",
+      "sourceRepository": "darkapoparka/cars",
+      "sourceCommit": "27026835389c4c683a7245afb4bd415ced447ed4",
+      "sourcePath": "dealers/chrome-used-cars"
+    },
+    {
+      "slug": "dubuy-auto-cars",
+      "name": "Dubuy Auto Cars",
+      "path": "dealers/dubuy-auto-cars",
+      "variants": [
+        "auto-best",
+        "modern",
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
+      ],
+      "sourceState": "source-present",
+      "reviewState": "not-claimed",
+      "leadId": "ae-dubai-dubuy-auto-cars",
+      "sourceFormat": "dealer-pack",
+      "sourceRepository": "darkapoparka/cars",
+      "sourceCommit": "27026835389c4c683a7245afb4bd415ced447ed4",
+      "sourcePath": "dealers/dubuy-auto-cars"
+    },
+    {
+      "slug": "durmaz-auto-export-and-trading-fzco",
+      "name": "Durmaz Auto Export and Trading FZCO",
+      "path": "dealers/durmaz-auto-export-and-trading-fzco",
+      "variants": [
+        "auto-best",
+        "modern",
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
+      ],
+      "sourceState": "source-present",
+      "reviewState": "not-claimed",
+      "leadId": "ae-dubai-durmaz-auto-export-and-trading-fzco",
+      "sourceFormat": "dealer-pack",
+      "sourceRepository": "darkapoparka/cars",
+      "sourceCommit": "27026835389c4c683a7245afb4bd415ced447ed4",
+      "sourcePath": "dealers/durmaz-auto-export-and-trading-fzco"
+    },
+    {
+      "slug": "express-motors",
+      "name": "Express Motors",
+      "path": "dealers/express-motors",
+      "variants": [
+        "auto-best",
+        "modern",
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
+      ],
+      "sourceState": "source-present",
+      "reviewState": "not-claimed",
+      "leadId": "ae-dubai-express-motors",
+      "sourceFormat": "dealer-pack",
+      "sourceRepository": "darkapoparka/cars",
+      "sourceCommit": "27026835389c4c683a7245afb4bd415ced447ed4",
+      "sourcePath": "dealers/express-motors"
     }
   ],
   "campaignCandidatesWithoutFolders": [

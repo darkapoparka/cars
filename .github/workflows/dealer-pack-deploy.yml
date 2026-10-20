@@ -17,7 +17,7 @@ on:
         required: false
         type: string
       source_run_id:
-        description: Completed Dealer pack pipeline run ID; omit for drain or recovery
+        description: Dealer pack pipeline run with a qualified completed producer; omit for drain or recovery
         required: false
         type: string
       artifact_prefix:
@@ -45,8 +45,9 @@ permissions:
 
 # GitHub concurrency groups replace pending runs. Durable requests and the
 # account CAS claim serialize this workflow; no Actions concurrency group is used.
-# Completed builds only inspect. Explicit manual intake persists new requests;
-# scheduled/manual drains service those retained requests after inspection.
+# The owner-authorized 400-preview expansion admits qualified manual main builds.
+# Scheduled intake can retain finished producers while sibling lanes still build.
+# Exact producer/source/artifact checks and the durable account claim remain gates.
 jobs:
   inspect-pilot:
     if: ${{ github.event_name == 'push' }}
@@ -98,7 +99,7 @@ jobs:
           if-no-files-found: error
           retention-days: 3
   deploy:
-    if: ${{ (github.event_name == 'workflow_dispatch' || github.event_name == 'schedule' || github.event_name == 'workflow_run') && (github.event_name != 'workflow_run' || (github.event.workflow_run.head_repository.full_name == github.repository && (github.event.workflow_run.conclusion == 'success' || github.event.workflow_run.conclusion == 'failure'))) }}
+    if: ${{ (github.event_name == 'workflow_dispatch' || github.event_name == 'schedule' || github.event_name == 'workflow_run') && (github.event_name != 'workflow_run' || (github.event.workflow_run.head_repository.full_name == github.repository && github.event.workflow_run.head_branch == 'main' && github.event.workflow_run.event == 'workflow_dispatch' && (github.event.workflow_run.conclusion == 'success' || github.event.workflow_run.conclusion == 'failure'))) }}
     runs-on: ubuntu-24.04
     timeout-minutes: 350
     permissions:
@@ -138,6 +139,9 @@ jobs:
         run: |
           npm install --prefix runtime/dealer-pack-deploy-tools --ignore-scripts --no-audit --no-fund --save-exact sharp@0.35.5 playwright@1.62.1 blake3-wasm@2.1.5
           runtime/dealer-pack-deploy-tools/node_modules/.bin/playwright install --with-deps chromium
+      - name: Check executor intake and recovery guards
+        id: executor_guard
+        run: node --test scripts/dealer-pack-dispatcher.test.mjs scripts/dealer-pack-ready-intake.test.mjs scripts/dealer-pack-recovery-workflow.test.mjs scripts/dealer-pack-automatic-intake.test.mjs
       - name: Check deployment credential presence without exposing it
         id: token
         env:
@@ -149,13 +153,14 @@ jobs:
           fs.appendFileSync(process.env.GITHUB_OUTPUT,'present='+present+'\n');
           if(!present) console.log('CLOUDFLARE_API_TOKEN is absent. Ready requests can be retained, but CI cannot perform live preflight or deploy. Minimum scopes: Account Workers Scripts Edit; webpreviews.site Workers Routes Edit. Account Analytics Read is also required for CPU/memory metrics.');
           NODE
-      - name: Inspect completed builds; persist requests only for explicit manual intake
+      - name: Intake qualified owner-selected main builds or perform a manual inspection
         if: ${{ github.event_name == 'workflow_run' || (github.event_name == 'workflow_dispatch' && (inputs.action == 'inspect' || inputs.action == 'enqueue-and-deploy')) }}
         env:
           GITHUB_TOKEN: ${{ github.token }}
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           SOURCE_RUN_ID: ${{ github.event.workflow_run.id || inputs.source_run_id }}
-          PACK_ACTION: ${{ github.event_name == 'workflow_run' && 'inspect' || inputs.action }}
+          PACK_ACTION: ${{ github.event_name == 'workflow_run' && 'enqueue-and-deploy' || inputs.action }}
+          PACK_AUTOMATIC: ${{ github.event_name == 'workflow_run' && 'true' || 'false' }}
           PACK_PREFIX: ${{ inputs.artifact_prefix }}
           PACK_SLUGS: ${{ inputs.slugs }}
           PACK_BATCH: ${{ inputs.batch }}
@@ -164,12 +169,18 @@ jobs:
           import fs from 'node:fs';
           import {runPackQueueDispatcher} from './scripts/dispatch-dealer-pack-queue.mjs';
           const args=[process.env.PACK_ACTION==='inspect'?'inspect':'enqueue','--run',process.env.SOURCE_RUN_ID,'--report','runtime/dealer-pack-dispatch/inspection.json'];
+          if(process.env.PACK_AUTOMATIC==='true')args.push('--automatic');
           if(process.env.PACK_ACTION==='inspect'&&process.env.CLOUDFLARE_API_TOKEN)args.push('--live');
           if(process.env.PACK_PREFIX)args.push('--prefix',process.env.PACK_PREFIX);
           if(process.env.PACK_BATCH&&process.env.PACK_BATCH!=='auto')args.push('--batch',process.env.PACK_BATCH);
           if(process.env.PACK_SLUGS){const value=process.env.PACK_SLUGS.trim(),slugs=value.startsWith('[')?JSON.parse(value):value.split(',').map(row=>row.trim()).filter(Boolean);fs.mkdirSync('runtime/dealer-pack-dispatch',{recursive:true});fs.writeFileSync('runtime/dealer-pack-dispatch/slugs.json',JSON.stringify(slugs));args.push('--slugs','runtime/dealer-pack-dispatch/slugs.json');}
           await runPackQueueDispatcher(args);
           NODE
+      - name: Retain qualified completed producers from active main builds
+        if: ${{ github.event_name == 'schedule' }}
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: node scripts/intake-ready-dealer-pack-runs.mjs --report runtime/dealer-pack-dispatch/ready-intake.json
       - name: Reconcile only an explicitly selected stopped request
         id: reconcile
         if: ${{ github.event_name == 'workflow_dispatch' && steps.token.outputs.present == 'true' && (inputs.action == 'recover-inspect' || inputs.action == 'recover-and-drain') }}
@@ -189,7 +200,7 @@ jobs:
           }
           NODE
       - name: Drain all retained batches through the single account claim
-        if: ${{ !cancelled() && steps.token.outputs.present == 'true' && (github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && (inputs.action == 'enqueue-and-deploy' || inputs.action == 'drain' || (inputs.action == 'recover-and-drain' && steps.reconcile.conclusion == 'success')))) }}
+        if: ${{ !cancelled() && steps.executor_guard.conclusion == 'success' && steps.token.outputs.present == 'true' && (github.event_name == 'schedule' || github.event_name == 'workflow_run' || (github.event_name == 'workflow_dispatch' && (inputs.action == 'enqueue-and-deploy' || inputs.action == 'drain' || (inputs.action == 'recover-and-drain' && steps.reconcile.conclusion == 'success')))) }}
         env:
           GITHUB_TOKEN: ${{ github.token }}
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
@@ -198,7 +209,7 @@ jobs:
           # for the remaining requests without expiring or replacing any claim.
           node scripts/dispatch-dealer-pack-queue.mjs drain --owner "github:${{ github.run_id }}" --write --max 10 --report runtime/dealer-pack-dispatch/drain.json
       - name: Read startup, sampled CPU, memory and error evidence for this drain
-        if: ${{ !cancelled() && steps.token.outputs.present == 'true' && (github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && (inputs.action == 'enqueue-and-deploy' || inputs.action == 'drain' || (inputs.action == 'recover-and-drain' && steps.reconcile.conclusion == 'success')))) }}
+        if: ${{ !cancelled() && steps.executor_guard.conclusion == 'success' && steps.token.outputs.present == 'true' && (github.event_name == 'schedule' || github.event_name == 'workflow_run' || (github.event_name == 'workflow_dispatch' && (inputs.action == 'enqueue-and-deploy' || inputs.action == 'drain' || (inputs.action == 'recover-and-drain' && steps.reconcile.conclusion == 'success')))) }}
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
         run: |
@@ -220,7 +231,7 @@ jobs:
           }
           NODE
       - name: Record an unavailable deployment credential as a blocked write request
-        if: ${{ !cancelled() && steps.token.outputs.present != 'true' && (github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && (inputs.action == 'enqueue-and-deploy' || inputs.action == 'drain' || inputs.action == 'recover-inspect' || inputs.action == 'recover-and-drain'))) }}
+        if: ${{ !cancelled() && steps.executor_guard.conclusion == 'success' && steps.token.outputs.present != 'true' && (github.event_name == 'schedule' || github.event_name == 'workflow_run' || (github.event_name == 'workflow_dispatch' && (inputs.action == 'enqueue-and-deploy' || inputs.action == 'drain' || inputs.action == 'recover-inspect' || inputs.action == 'recover-and-drain'))) }}
         env:
           PACK_ACTION: ${{ inputs.action }}
         run: |

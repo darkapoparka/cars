@@ -1,89 +1,40 @@
 {
   "schemaVersion": 1,
   "type": "cars-next-eight-runtime-evidence",
-  "recordedAt": "2026-10-20T19:50:55.512Z",
+  "recordedAt": "2026-10-20T20:50:25.072Z",
   "expectedCohortSize": 8,
-  "recordCount": 2,
-  "cohortComplete": false,
+  "recordCount": 8,
+  "cohortComplete": true,
+  "activated": 8,
+  "hostedPassed": 6,
+  "hostedFailed": 2,
+  "runtimeObservedWithinLimits": 8,
+  "technicallyAccepted": 6,
+  "ownerAccepted": 0,
   "sourceRunId": 39477427789,
   "sourceCommit": "27026835389c4c683a7245afb4bd415ced447ed4",
   "executorRunId": 39482618268,
   "executorCommit": "6b02415bef8e2c6a92e2dd8658655d5aa81f682d",
   "actualOwner": "github:39482618268",
   "queueSnapshot": {
-    "revision": "fba23d1d60d5aa05665b3c57fe59fad49f56c82a",
-    "blob": "fcfface7e3cf97fe1a6886c8d4e0e579531fde3d",
-    "sha256": "6a8dad7c2e11e8f64788bbcd550c53ed877a91c3e5ed957b1749cae447d462a2",
-    "generation": 113,
-    "bytes": 133356
+    "revision": "32e2e4ee43c6e64aa33e43f5fd409f5f374e6cbb",
+    "blob": "af4596e082094be1b474772ba5219880e3a9888e",
+    "sha256": "3abb966df6cd1f17887b304cef85b529a856c03be1770419f00a17a8f535b806",
+    "generation": 189,
+    "bytes": 192533
   },
-  "metricsSource": "Authenticated existing Cloudflare connector; unchanged maintained packMetricsRequest/readPackMetrics/assessPackMetrics",
-  "samplingScope": "Query filters exact Worker script and stated time window. It is not version-filtered; receipt Worker/version identifies deployment provenance. Values are sampled maximum group P99 CPU/memory, not exact peaks, whole-window quantiles or sustained-load qualification.",
-  "windowConvention": "Each receipt deployedAt minus 60 seconds through its exact hosted finishedAt; no broader after-deployment window substituted.",
+  "authenticatedReportArtifact": {
+    "id": 12296353094,
+    "name": "dealer-pack-deploy-reports--39482618268",
+    "bytes": 12832314,
+    "digest": "sha256:6c9cb9d58deb0f80b73270d93574b74b5941458370127d6749d3914776c795ec"
+  },
+  "metricsSource": "Authenticated deployment-run artifact containing unchanged maintained readPackMetrics assessments",
+  "samplingScope": "Queries filter Worker script and stated drain time window, not version. Receipt Worker/version is deployment provenance. Maximum sampled group P99 CPU/memory are not exact peaks, whole-window quantiles or sustained-load qualification.",
+  "windowConvention": "Actual per-script window retained verbatim: deployedAt minus60seconds through that CI metrics query after the drain. These broader windows do not replace prior exact hosted-window samples in Git history or imply exact-version traffic.",
   "evidenceCollectionProviderWrites": 0,
   "queueWrites": 0,
   "reports": [
-    {
-      "slug": "elena-used-cars",
-      "publicOrigin": "https://elena-used-cars.webpreviews.site",
-      "requestId": "63e572ef57ebaa422bb87536393493a6b0ae3f50d8f1567e19f7d677029b6efa",
-      "receiptSha256": "b6f5972a94159e141f24131cdc4f485859f19c0516843a5695a82dc55ac39929",
-      "workerId": "6584bbe5483543ef97e0d8e4e4541e7d",
-      "versionId": "8923ee64-d9c0-4b3b-ae2d-d83732d7a279",
-      "sourceCommit": "27026835389c4c683a7245afb4bd415ced447ed4",
-      "packDigest": "2c1e5c57668310836f433bbe4d74f5365982806d09e25527b91576b6bab424de",
-      "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
-      "releaseDigest": "2920143c97546de03d5e7c7c9f572fb87cee2b088cf48fbba40d575c73cfc9c3",
-      "outputDigest": "ed0f33c8625657876886d5fbf539465fbcf9acf484c2960aa233b9c2de8b69e6",
-      "deployedAt": "2026-10-20T19:30:46.825Z",
-      "hosted": {
-        "verified": true,
-        "finishedAt": "2026-10-20T19:31:52.896Z",
-        "fullReportSha256": "e469efed284eaf77505dd996c03de1137136346a48fdbe529a49e92521ff2147",
-        "summarySha256": "83fe0a9aa4a36111ccecc7966efd595921bd748518e6a17a40d5b17853ffb621",
-        "designsPassed": 6,
-        "getAndHead200": true,
-        "identityNameLogoPhonePassed": true,
-        "sixChoicesAndFabPassed": true,
-        "foreignIdentityCount": 0,
-        "width": 390,
-        "language": "en"
-      },
-      "runtime": {
-        "observedAt": "2026-10-20T19:33:25.267Z",
-        "window": {
-          "start": "2026-10-20T19:29:46.825Z",
-          "end": "2026-10-20T19:31:52.896Z"
-        },
-        "status": "observed-without-errors",
-        "withinLimits": true,
-        "requests": 73,
-        "errors": 0,
-        "startupTimeMs": 74,
-        "cpuLimitMs": 30000,
-        "cpuLimitSource": "provider-active-version-readback",
-        "maxP99CpuMs": 390.235,
-        "maxP99MemoryMiB": 109.89488983154297,
-        "limitChecks": {
-          "startup": {
-            "withinLimit": true,
-            "observedMs": 74,
-            "limitMs": 1000
-          },
-          "cpu": {
-            "withinLimit": true,
-            "observedMaxGroupP99Ms": 390.235,
-            "limitMs": 30000
-          },
-          "memory": {
-            "withinLimit": true,
-            "observedMaxGroupP99MiB": 109.89488983154297,
-            "limitMiB": 128
-          }
-        }
-      },
-      "ownerAccepted": false
-    },
     {
       "slug": "billion-auto",
       "publicOrigin": "https://billion-auto.webpreviews.site",
@@ -100,21 +51,18 @@
       "hosted": {
         "verified": true,
         "finishedAt": "2026-10-20T19:40:42.376Z",
-        "fullReportSha256": "e2d62eac142880d7360294c4cd6f278a4a0fc1b85f73c89ce27490d2a56ac596",
+        "fullReportSha256": "4e8275290f8b1c5c6bdbaf8adb81c74c09ef862f0febc050b26036d4ff105526",
         "summarySha256": "22b8f15d4696718d8c8dfba9f193e9942ff7f43eb060d5de9ee1c3e2ad85bd5f",
         "designsPassed": 6,
-        "getAndHead200": true,
-        "identityNameLogoPhonePassed": true,
-        "sixChoicesAndFabPassed": true,
-        "foreignIdentityCount": 0,
+        "failed": [],
         "width": 390,
         "language": "en"
       },
       "runtime": {
-        "observedAt": "2026-10-20T19:42:04.509Z",
+        "observedAt": "2026-10-20T20:34:27.177Z",
         "window": {
           "start": "2026-10-20T19:38:52.454Z",
-          "end": "2026-10-20T19:40:42.376Z"
+          "end": "2026-10-20T20:34:26.587Z"
         },
         "status": "observed-without-errors",
         "withinLimits": true,
@@ -143,6 +91,434 @@
           }
         }
       },
+      "technicalAcceptance": true,
+      "ownerAccepted": false
+    },
+    {
+      "slug": "carmind-motors",
+      "publicOrigin": "https://carmind-motors.webpreviews.site",
+      "requestId": "7f908f3a27a8122c077cf337dce40ab15b27c9c453edb8505d9069054037766f",
+      "receiptSha256": "56cf97e876c1927ed9c81e4e957f5c8447e2cabf7bd8ba819dc3057810ed8d9c",
+      "workerId": "20f2b50ea5a04da0afe731e3607c83b4",
+      "versionId": "761fe4b3-ceb0-46c5-a1b3-bba42bc1518d",
+      "sourceCommit": "27026835389c4c683a7245afb4bd415ced447ed4",
+      "packDigest": "dd2627f24800080584406401d6b12770f895a9a8231acb01533b62c0bf936fbc",
+      "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+      "releaseDigest": "2920143c97546de03d5e7c7c9f572fb87cee2b088cf48fbba40d575c73cfc9c3",
+      "outputDigest": "fc82ac63ae384ca34b37cb2b6571a7f1b47ef2d2724b2a6de6d9a5b50bf52428",
+      "deployedAt": "2026-10-20T20:33:39.289Z",
+      "hosted": {
+        "verified": true,
+        "finishedAt": "2026-10-20T20:34:22.859Z",
+        "fullReportSha256": "fd8e9db796313d477c2e6492c2c3a32fa9f058b899e86d07ad1c4c8f511f78e0",
+        "summarySha256": "5069506c8423f3d8d2f0383ee993ad576d3e6324f630e7be2ff6e48332b93fb1",
+        "designsPassed": 6,
+        "failed": [],
+        "width": 390,
+        "language": "en"
+      },
+      "runtime": {
+        "observedAt": "2026-10-20T20:34:29.515Z",
+        "window": {
+          "start": "2026-10-20T20:32:39.289Z",
+          "end": "2026-10-20T20:34:29.177Z"
+        },
+        "status": "observed-without-errors",
+        "withinLimits": true,
+        "requests": 10,
+        "errors": 0,
+        "startupTimeMs": 81,
+        "cpuLimitMs": 30000,
+        "cpuLimitSource": "provider-active-version-readback",
+        "maxP99CpuMs": 259.513,
+        "maxP99MemoryMiB": 101.72137260437012,
+        "limitChecks": {
+          "startup": {
+            "withinLimit": true,
+            "observedMs": 81,
+            "limitMs": 1000
+          },
+          "cpu": {
+            "withinLimit": true,
+            "observedMaxGroupP99Ms": 259.513,
+            "limitMs": 30000
+          },
+          "memory": {
+            "withinLimit": true,
+            "observedMaxGroupP99MiB": 101.72137260437012,
+            "limitMiB": 128
+          }
+        }
+      },
+      "technicalAcceptance": true,
+      "ownerAccepted": false
+    },
+    {
+      "slug": "car-avenue-llc",
+      "publicOrigin": "https://car-avenue-llc.webpreviews.site",
+      "requestId": "5951858fc0302a5f29871a6e3bb5fa4fed0b464dcdfc680afa2d5f979a5fc4bc",
+      "receiptSha256": "8f8de7abe64ed672d22ee51827c356c9a68543b1c33de332abf7c49d0f3474c8",
+      "workerId": "22356dd2a355497eb665bf5f21047f04",
+      "versionId": "8f4935ce-c99e-40d3-adf8-4b50a882dee2",
+      "sourceCommit": "27026835389c4c683a7245afb4bd415ced447ed4",
+      "packDigest": "4a46b20491410131c25ee4b880db8f6d85b4a54a7ea36a826758b4926a6d5d73",
+      "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+      "releaseDigest": "2920143c97546de03d5e7c7c9f572fb87cee2b088cf48fbba40d575c73cfc9c3",
+      "outputDigest": "764afd7b2374f2b4b6cfe7bbdab84267dd3d7c8938ec35f17442deece7044739",
+      "deployedAt": "2026-10-20T19:56:52.114Z",
+      "hosted": {
+        "verified": false,
+        "finishedAt": "2026-10-20T19:58:00.019Z",
+        "fullReportSha256": "192afced40fa5f9a6b5c55dce94aaa696992a3466d8a7171d9a61f9e01ce6e8f",
+        "summarySha256": null,
+        "designsPassed": 5,
+        "failed": [
+          {
+            "key": "auto-best",
+            "findings": [
+              "locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator('dialog[data-locale-dialog][data-locale-ready=\"true\"]')\n"
+            ]
+          }
+        ],
+        "width": 390,
+        "language": "en"
+      },
+      "runtime": {
+        "observedAt": "2026-10-20T20:34:27.884Z",
+        "window": {
+          "start": "2026-10-20T19:55:52.114Z",
+          "end": "2026-10-20T20:34:27.610Z"
+        },
+        "status": "observed-without-errors",
+        "withinLimits": true,
+        "requests": 155,
+        "errors": 0,
+        "startupTimeMs": 71,
+        "cpuLimitMs": 30000,
+        "cpuLimitSource": "provider-active-version-readback",
+        "maxP99CpuMs": 240.218,
+        "maxP99MemoryMiB": 117.64925003051758,
+        "limitChecks": {
+          "startup": {
+            "withinLimit": true,
+            "observedMs": 71,
+            "limitMs": 1000
+          },
+          "cpu": {
+            "withinLimit": true,
+            "observedMaxGroupP99Ms": 240.218,
+            "limitMs": 30000
+          },
+          "memory": {
+            "withinLimit": true,
+            "observedMaxGroupP99MiB": 117.64925003051758,
+            "limitMiB": 128
+          }
+        }
+      },
+      "technicalAcceptance": false,
+      "ownerAccepted": false
+    },
+    {
+      "slug": "chrome-used-cars",
+      "publicOrigin": "https://chrome-used-cars.webpreviews.site",
+      "requestId": "b4829646550393a52558cd23691cefed1112d6534e367d85e4bf4380459c5857",
+      "receiptSha256": "64e53fd4ae90885dbcf9f7935e1abb7bc6b7a84f4bb1552c305bde44c97f7807",
+      "workerId": "ca190034cb3c4c59bbc2bf995175e676",
+      "versionId": "3159247d-50bb-4dca-bd27-925c3c60a8f8",
+      "sourceCommit": "27026835389c4c683a7245afb4bd415ced447ed4",
+      "packDigest": "ddab5fe20c3b74c5226ef15d4613ce94432bb5ef3e192607e849010f8660ee14",
+      "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+      "releaseDigest": "2920143c97546de03d5e7c7c9f572fb87cee2b088cf48fbba40d575c73cfc9c3",
+      "outputDigest": "360d686f3c9452403057267c8900447e166f03c06bb6e59f22b2de5b25834525",
+      "deployedAt": "2026-10-20T20:08:15.142Z",
+      "hosted": {
+        "verified": true,
+        "finishedAt": "2026-10-20T20:08:56.721Z",
+        "fullReportSha256": "673f58d0147ecbfbd0755c616423919e2272022549e645dba7ef55a6c17a9320",
+        "summarySha256": "c16dbd845999dfe715c384024bc76cda223326d8d69dae34063a50b301a15ccd",
+        "designsPassed": 6,
+        "failed": [],
+        "width": 390,
+        "language": "en"
+      },
+      "runtime": {
+        "observedAt": "2026-10-20T20:34:28.122Z",
+        "window": {
+          "start": "2026-10-20T20:07:15.142Z",
+          "end": "2026-10-20T20:34:27.884Z"
+        },
+        "status": "observed-without-errors",
+        "withinLimits": true,
+        "requests": 66,
+        "errors": 0,
+        "startupTimeMs": 67,
+        "cpuLimitMs": 30000,
+        "cpuLimitSource": "provider-active-version-readback",
+        "maxP99CpuMs": 247.915,
+        "maxP99MemoryMiB": 113.11389923095703,
+        "limitChecks": {
+          "startup": {
+            "withinLimit": true,
+            "observedMs": 67,
+            "limitMs": 1000
+          },
+          "cpu": {
+            "withinLimit": true,
+            "observedMaxGroupP99Ms": 247.915,
+            "limitMs": 30000
+          },
+          "memory": {
+            "withinLimit": true,
+            "observedMaxGroupP99MiB": 113.11389923095703,
+            "limitMiB": 128
+          }
+        }
+      },
+      "technicalAcceptance": true,
+      "ownerAccepted": false
+    },
+    {
+      "slug": "dubuy-auto-cars",
+      "publicOrigin": "https://dubuy-auto-cars.webpreviews.site",
+      "requestId": "82d456703947fda9e7cd05fd2383a1b0fae83333aac2aa457f9aa61c18dfbedc",
+      "receiptSha256": "a12183ce67d24fbc1dd737c3bdab49b827cf28e0dc759bcc2ae9f99708dd0aae",
+      "workerId": "a07366df22ef47879f639079d2bffe44",
+      "versionId": "79be730c-174c-484f-86fb-e232aa4a58a6",
+      "sourceCommit": "27026835389c4c683a7245afb4bd415ced447ed4",
+      "packDigest": "cf8f43cd773644c4bdd8cbb1fb6ed2749089d685371962ee36a27badc29fcb54",
+      "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+      "releaseDigest": "2920143c97546de03d5e7c7c9f572fb87cee2b088cf48fbba40d575c73cfc9c3",
+      "outputDigest": "58b5a0990ef2717058b4016851acb4b4634d054ff12a57e85ddd1dba64440aca",
+      "deployedAt": "2026-10-20T20:24:08.190Z",
+      "hosted": {
+        "verified": false,
+        "finishedAt": "2026-10-20T20:25:27.155Z",
+        "fullReportSha256": "7a643ed769398be765155de1d5e0876d400c65b3676db239c344fdabbcc1cc51",
+        "summarySha256": null,
+        "designsPassed": 5,
+        "failed": [
+          {
+            "key": "auto-best",
+            "findings": [
+              "locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator('dialog[data-locale-dialog][data-locale-ready=\"true\"]')\n"
+            ]
+          }
+        ],
+        "width": 390,
+        "language": "en"
+      },
+      "runtime": {
+        "observedAt": "2026-10-20T20:34:29.177Z",
+        "window": {
+          "start": "2026-10-20T20:23:08.190Z",
+          "end": "2026-10-20T20:34:28.866Z"
+        },
+        "status": "observed-without-errors",
+        "withinLimits": true,
+        "requests": 64,
+        "errors": 0,
+        "startupTimeMs": 94,
+        "cpuLimitMs": 30000,
+        "cpuLimitSource": "provider-active-version-readback",
+        "maxP99CpuMs": 474.325,
+        "maxP99MemoryMiB": 109.24715423583984,
+        "limitChecks": {
+          "startup": {
+            "withinLimit": true,
+            "observedMs": 94,
+            "limitMs": 1000
+          },
+          "cpu": {
+            "withinLimit": true,
+            "observedMaxGroupP99Ms": 474.325,
+            "limitMs": 30000
+          },
+          "memory": {
+            "withinLimit": true,
+            "observedMaxGroupP99MiB": 109.24715423583984,
+            "limitMiB": 128
+          }
+        }
+      },
+      "technicalAcceptance": false,
+      "ownerAccepted": false
+    },
+    {
+      "slug": "durmaz-auto-export-and-trading-fzco",
+      "publicOrigin": "https://durmaz-auto-export-and-trading-fzco.webpreviews.site",
+      "requestId": "ae33a403c1834a46f8c266682667fd4fdc3d8a7a20e53f36ac85c6853531613d",
+      "receiptSha256": "816c6739eaf8bddf19570f345497ed6d01e1d287f219cd105f4abd9f6190fc77",
+      "workerId": "3245cc306d814c378932658a00020cbb",
+      "versionId": "848d4225-37f3-4240-84f8-70712eb4193b",
+      "sourceCommit": "27026835389c4c683a7245afb4bd415ced447ed4",
+      "packDigest": "26d67b39278a99d82d7b201416a107f2df00229670206b3e2ad6c11c7a8aea3c",
+      "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+      "releaseDigest": "2920143c97546de03d5e7c7c9f572fb87cee2b088cf48fbba40d575c73cfc9c3",
+      "outputDigest": "5c48c8540414b1d3d50ef98cd0af998759b1239ac25880417d085a4427436479",
+      "deployedAt": "2026-10-20T20:16:09.504Z",
+      "hosted": {
+        "verified": true,
+        "finishedAt": "2026-10-20T20:16:54.386Z",
+        "fullReportSha256": "4682182459f9e385c4709fe35a2a105943b7476ddf51a3ff216e2a7c158b5e4e",
+        "summarySha256": "a30022c2850bda9c3659d061765bb18dd3fa3fca393c548c598f05b9e46587b8",
+        "designsPassed": 6,
+        "failed": [],
+        "width": 390,
+        "language": "en"
+      },
+      "runtime": {
+        "observedAt": "2026-10-20T20:34:28.866Z",
+        "window": {
+          "start": "2026-10-20T20:15:09.504Z",
+          "end": "2026-10-20T20:34:28.122Z"
+        },
+        "status": "observed-without-errors",
+        "withinLimits": true,
+        "requests": 63,
+        "errors": 0,
+        "startupTimeMs": 92,
+        "cpuLimitMs": 30000,
+        "cpuLimitSource": "provider-active-version-readback",
+        "maxP99CpuMs": 389.795,
+        "maxP99MemoryMiB": 113.62123489379883,
+        "limitChecks": {
+          "startup": {
+            "withinLimit": true,
+            "observedMs": 92,
+            "limitMs": 1000
+          },
+          "cpu": {
+            "withinLimit": true,
+            "observedMaxGroupP99Ms": 389.795,
+            "limitMs": 30000
+          },
+          "memory": {
+            "withinLimit": true,
+            "observedMaxGroupP99MiB": 113.62123489379883,
+            "limitMiB": 128
+          }
+        }
+      },
+      "technicalAcceptance": true,
+      "ownerAccepted": false
+    },
+    {
+      "slug": "elena-used-cars",
+      "publicOrigin": "https://elena-used-cars.webpreviews.site",
+      "requestId": "63e572ef57ebaa422bb87536393493a6b0ae3f50d8f1567e19f7d677029b6efa",
+      "receiptSha256": "b6f5972a94159e141f24131cdc4f485859f19c0516843a5695a82dc55ac39929",
+      "workerId": "6584bbe5483543ef97e0d8e4e4541e7d",
+      "versionId": "8923ee64-d9c0-4b3b-ae2d-d83732d7a279",
+      "sourceCommit": "27026835389c4c683a7245afb4bd415ced447ed4",
+      "packDigest": "2c1e5c57668310836f433bbe4d74f5365982806d09e25527b91576b6bab424de",
+      "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+      "releaseDigest": "2920143c97546de03d5e7c7c9f572fb87cee2b088cf48fbba40d575c73cfc9c3",
+      "outputDigest": "ed0f33c8625657876886d5fbf539465fbcf9acf484c2960aa233b9c2de8b69e6",
+      "deployedAt": "2026-10-20T19:30:46.825Z",
+      "hosted": {
+        "verified": true,
+        "finishedAt": "2026-10-20T19:31:52.896Z",
+        "fullReportSha256": "bcb2318e99ca1fba58bfdf9ed745fb581463d07187ad94cbf91708ee57d1d91a",
+        "summarySha256": "83fe0a9aa4a36111ccecc7966efd595921bd748518e6a17a40d5b17853ffb621",
+        "designsPassed": 6,
+        "failed": [],
+        "width": 390,
+        "language": "en"
+      },
+      "runtime": {
+        "observedAt": "2026-10-20T20:34:26.587Z",
+        "window": {
+          "start": "2026-10-20T19:29:46.825Z",
+          "end": "2026-10-20T20:34:25.938Z"
+        },
+        "status": "observed-without-errors",
+        "withinLimits": true,
+        "requests": 73,
+        "errors": 0,
+        "startupTimeMs": 74,
+        "cpuLimitMs": 30000,
+        "cpuLimitSource": "provider-active-version-readback",
+        "maxP99CpuMs": 390.235,
+        "maxP99MemoryMiB": 109.89488983154297,
+        "limitChecks": {
+          "startup": {
+            "withinLimit": true,
+            "observedMs": 74,
+            "limitMs": 1000
+          },
+          "cpu": {
+            "withinLimit": true,
+            "observedMaxGroupP99Ms": 390.235,
+            "limitMs": 30000
+          },
+          "memory": {
+            "withinLimit": true,
+            "observedMaxGroupP99MiB": 109.89488983154297,
+            "limitMiB": 128
+          }
+        }
+      },
+      "technicalAcceptance": true,
+      "ownerAccepted": false
+    },
+    {
+      "slug": "express-motors",
+      "publicOrigin": "https://express-motors.webpreviews.site",
+      "requestId": "d0bf9de3f972afa1d8ac84209182375e79b4b85c5c635753e25e378314ab270e",
+      "receiptSha256": "9497664b39a22cfa31d93d73095a1dfb2b6809e955029f472d4b5d225d402b9c",
+      "workerId": "0404940868504e758e9aa8372f94f40b",
+      "versionId": "d79fe3cc-bb8c-4e40-a5b4-535319515102",
+      "sourceCommit": "27026835389c4c683a7245afb4bd415ced447ed4",
+      "packDigest": "d10a42be6935bc31c5ede816dcf923fcf86d02f9d736e3de538606fa3dfd00b7",
+      "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+      "releaseDigest": "2920143c97546de03d5e7c7c9f572fb87cee2b088cf48fbba40d575c73cfc9c3",
+      "outputDigest": "7418a4ac2d8871e4586655950c0840742133774a42be1cfdd460bec2f74924a7",
+      "deployedAt": "2026-10-20T19:48:24.828Z",
+      "hosted": {
+        "verified": true,
+        "finishedAt": "2026-10-20T19:49:08.975Z",
+        "fullReportSha256": "591acfa88f2ddecab98c6d4478148cb5a7d0df4337762cf9fe38f0374969bfe0",
+        "summarySha256": "7c424cb9743ad32f1ea30d3d8df5a6464ad805773667fb4f56c5e90965d9be0f",
+        "designsPassed": 6,
+        "failed": [],
+        "width": 390,
+        "language": "en"
+      },
+      "runtime": {
+        "observedAt": "2026-10-20T20:34:27.610Z",
+        "window": {
+          "start": "2026-10-20T19:47:24.828Z",
+          "end": "2026-10-20T20:34:27.177Z"
+        },
+        "status": "observed-without-errors",
+        "withinLimits": true,
+        "requests": 63,
+        "errors": 0,
+        "startupTimeMs": 68,
+        "cpuLimitMs": 30000,
+        "cpuLimitSource": "provider-active-version-readback",
+        "maxP99CpuMs": 372.904,
+        "maxP99MemoryMiB": 108.97503852844238,
+        "limitChecks": {
+          "startup": {
+            "withinLimit": true,
+            "observedMs": 68,
+            "limitMs": 1000
+          },
+          "cpu": {
+            "withinLimit": true,
+            "observedMaxGroupP99Ms": 372.904,
+            "limitMs": 30000
+          },
+          "memory": {
+            "withinLimit": true,
+            "observedMaxGroupP99MiB": 108.97503852844238,
+            "limitMiB": 128
+          }
+        }
+      },
+      "technicalAcceptance": true,
       "ownerAccepted": false
     }
   ]

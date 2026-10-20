@@ -244,6 +244,13 @@ const scalarTerms=new Map([
     }
   ],
   [
+    "color:Gold",
+    {
+      "bg": "Златист",
+      "en": "Gold"
+    }
+  ],
+  [
     "color:White",
     {
       "bg": "Бял",
