@@ -6,6 +6,7 @@ import { UK_MODERN_PATHS, personalizeModernUk, modernUkTransmission, ukSourceMil
 import fs from 'node:fs';
 import path from 'node:path';
 import { createHash } from 'node:crypto';
+import { createRequire } from 'node:module';
 import { applyDealerLogoContract } from './client-logo-contract.mjs';
 import { dealerLocalizedCopy } from './dealer-localized-copy.mjs';
 import {renderModernDealerInventoryCopy} from './modern-dealer-inventory-copy.mjs';
@@ -1647,6 +1648,72 @@ function personalizeImportCatalogStrings(source, replacements) {
   });
 }
 
+let importTypeScript;
+function resolveImportTypeScript(candidate, supplied) {
+  if (supplied) return supplied;
+  if (importTypeScript) return importTypeScript;
+  const toolPackage = process.env.CARS_DEALER_PACK_TOOL_PACKAGE || process.env.CARS_QA_RESOLVE_FROM || process.env.CARS_ESBUILD_RESOLVE_FROM;
+  // The maintained assembler passes its existing compiler. Legacy callers use
+  // their installed Import tools; this never installs or downloads a package.
+  const require = createRequire(toolPackage ? path.resolve(toolPackage) : path.join(candidate, 'package.json'));
+  try { importTypeScript = require('typescript'); }
+  catch (error) {
+    if (toolPackage || error.code !== 'MODULE_NOT_FOUND') throw error;
+    importTypeScript = createRequire(new URL('../../templates/import/package.json', import.meta.url))('typescript');
+  }
+  return importTypeScript;
+}
+
+function personalizeImportTypeScript(source, replacements, typescript, file) {
+  const ts = typescript, tree = ts.createSourceFile(file, source, ts.ScriptTarget.Latest, true, ts.ScriptKind.TS);
+  if (tree.parseDiagnostics.length) throw Error('Import TypeScript input must parse before personalization: ' + file);
+  const replacementCopyRows = replacements.map(([from, to]) => [from, String(to).split('$').join('$$')]);
+  function replacementCopy(node) {
+    let child = node;
+    for (let parent = node.parent; parent; child = parent, parent = parent.parent) {
+      if (ts.isFunctionLike(parent)) return false; // A replacement callback returns literal display text.
+      if (!ts.isCallExpression(parent)) continue;
+      if (ts.isPropertyAccessExpression(parent.expression) && ['replace', 'replaceAll'].includes(parent.expression.name.text)) return parent.arguments[1] === child;
+      // The selected Import HTML helper only escapes HTML characters, leaving
+      // replacement dollars intact. Preserve that exact existing expression.
+      if (ts.isIdentifier(parent.expression) && parent.expression.text === 'escapeHtml' && parent.arguments.length === 1 && parent.arguments[0] === child) continue;
+      return false;
+    }
+    return false;
+  }
+  const edits = [], replace = (text, node) => {
+    for (const [from, to] of replacementCopy(node) ? replacementCopyRows : replacements) text = text.split(from).join(to);
+    return text;
+  };
+  const containsIdentity = text => replacements.some(([from]) => text.includes(from));
+  const templateText = text => JSON.stringify(text).slice(1, -1).replaceAll('`', '\\`').replaceAll('${', '\\${');
+  function visit(node) {
+    // Raw/tagged templates have different escape semantics. Refuse matching
+    // template text rather than silently changing the meaning of its tag.
+    if (ts.isTaggedTemplateExpression(node) && containsIdentity(node.template.getText(tree))) {
+      throw Error('Import identity in a tagged template requires review: ' + file);
+    }
+    if (ts.isStringLiteral(node) && containsIdentity(node.text)) {
+      const start = node.getStart(tree), literal = source.slice(start, node.end), parsed = readCatalogLiteral(literal);
+      if (typeof parsed.value !== 'string' || parsed.end !== literal.length || parsed.value !== node.text) throw Error('Import TypeScript string literal boundary changed: ' + file);
+      const value = replace(parsed.value, node);
+      if (value !== parsed.value) edits.push({start, end: node.end, value: JSON.stringify(value)});
+    } else if (ts.isNoSubstitutionTemplateLiteral(node) && containsIdentity(node.text)) {
+      const value = replace(node.text, node);
+      if (value !== node.text) edits.push({start: node.getStart(tree), end: node.end, value: JSON.stringify(value)});
+    } else if ([ts.SyntaxKind.TemplateHead, ts.SyntaxKind.TemplateMiddle, ts.SyntaxKind.TemplateTail].includes(node.kind) && containsIdentity(node.text)) {
+      const value = replace(node.text, node);
+      if (value !== node.text) edits.push({start: node.getStart(tree) + 1, end: node.end - (node.kind === ts.SyntaxKind.TemplateTail ? 1 : 2), value: templateText(value)});
+    }
+    ts.forEachChild(node, visit);
+  }
+  visit(tree);
+  // Only literal ranges change. Auth, expressions, comments and regex bytes
+  // retain their original positions relative to the surrounding source.
+  for (const {start, end, value} of edits.sort((a, b) => b.start - a.start)) source = source.slice(0, start) + value + source.slice(end);
+  return source;
+}
+
 function personalizeImportMessageText(source, replacements) {
   const replace=(text,rows)=>{for(const [from,to] of rows)text=text.split(from).join(to);return text;};
   const replacementStart=source.indexOf('const auxeroBgReplacements:'),replacementEnd=source.indexOf('\n];',replacementStart)+3;
@@ -1679,7 +1746,7 @@ function personalizeImportMessageText(source, replacements) {
   }).join('');
 }
 
-function patchImportText(candidate, profile) {
+function patchImportText(candidate, profile, {typescript} = {}) {
   const b = profile.business;
   const replacements = [
     ['DAY NIGHT AUTO GROUP', b.name.toUpperCase()],
@@ -1704,12 +1771,14 @@ function patchImportText(candidate, profile) {
       const relative = path.relative(candidate,file).replaceAll('\\','/');
       if(relative==='src/lib/i18n/messages.ts')return personalizeImportMessageText(value,replacements);
       if(staticCatalogs.has(relative))return personalizeImportCatalogStrings(value,replacements);
+      if(relative.endsWith('.ts'))return replacements.some(([from])=>value.includes(from))
+        ? personalizeImportTypeScript(value,replacements,resolveImportTypeScript(candidate,typescript),relative) : value;
       for(const [from,to] of replacements)value=value.split(from).join(to);return value;
     })
     .map((file) => path.relative(candidate, file).replaceAll('\\', '/'));
 }
 
-function patchImport({ oldVariant, candidate, profile, reviewedModernCopy }) {
+function patchImport({ oldVariant, candidate, profile, reviewedModernCopy, typescript }) {
   assertImportListingFacts(profile);
   const feedFile = path.join(candidate, 'src/lib/data/daynight-listings.json');
   write(feedFile, `${JSON.stringify(importListingFeed(profile), null, 2)}\n`);
@@ -1719,7 +1788,7 @@ function patchImport({ oldVariant, candidate, profile, reviewedModernCopy }) {
   patchImportDealers(candidate, profile);
   patchImportAgents(candidate);
   const safeContent = applyImportSafeContent({ candidate, profile });
-  const changed = patchImportText(candidate, profile);
+  const changed = patchImportText(candidate, profile, {typescript});
   const inventoryCopyFile = path.join(candidate, 'src/lib/content/inventory-localized.ts');
   const inventoryCopy = repairImportDealerInventoryCatalog({
     source: read(inventoryCopyFile), feed: JSON.parse(read(feedFile)),

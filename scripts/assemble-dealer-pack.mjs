@@ -88,13 +88,15 @@ export async function assembleDealerPack({root = ROOT, slug, out, materialize = 
     {...manifest, inputs: {stock: {sha256: sha256(pack.files.get('stock.json'))}}}, pack.stock) : null;
   const reviewedModernCopy = newSourceReviewedCopy(profile, copyReview);
   assert(profile.sourceCount === pack.stock.records.length && profile.listings.length === pack.stock.records.length, 'Maintained normalization dropped an authoritative stock record');
+  const typescript = createRequire(path.resolve(toolPackage))('typescript');
   for (const {key} of manifest.variants.slice(0, 3)) {
     const assets = new Map(); retainDealerVariantAssets(assets, key, profile, directory); writePackSource(directory, assets);
     applyRefreshAdapter({key, oldVariant: path.join(directory, key), candidate: path.join(directory, key), profile,
+      ...(key === 'import' ? {typescript} : {}),
       ...(['modern', 'import'].includes(key) && reviewedModernCopy ? {reviewedModernCopy} : {})});
   }
   let files = await collectSource(directory, manifest);
-  applyDealerPackOptionalContact(files, manifest, {profile, typescript: createRequire(path.resolve(toolPackage))('typescript')});
+  applyDealerPackOptionalContact(files, manifest, {profile, typescript});
   adaptPackImportFacts(files, profile);
   const app = await prepareAppDealer(directory, manifest, {factPolicy: profile.factPolicy, appFiles: new Map([...files].filter(([name]) => name.startsWith('app/')).map(([name, bytes]) => [name.slice(4), bytes]))});
   for (const [name, bytes] of app.files) files.set('app/' + name, bytes);

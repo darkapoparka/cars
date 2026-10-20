@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "dealer": "b23-motors",
-  "status": "research-required",
+  "status": "reviewed",
   "realLogoFirst": true,
   "publicSources": [
     {
@@ -26,7 +26,191 @@
     }
   ],
   "originals": [],
-  "creationMethod": null,
+  "creationMethod": "imagegen-proposal",
   "dealerApproved": false,
-  "generatedInputs": null
+  "generatedInputs": {
+    "reviewedAt": "2026-10-20T23:22:06.709Z",
+    "master": {
+      "path": "branding/generated-master-v1-20261021.png",
+      "sha256": "82df5c806f896b38f5bc642ad4188d62b85d275e99cb048d9a9adb62bc9f04d6",
+      "nativeDimensions": {
+        "width": 1942,
+        "height": 809
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-ff72c130-03b4-4804-8cd0-76480ee78d14",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark-light-v1-20261021.png",
+      "sha256": "ca89e8ee9421465f50590608a8f366a328e062e41cb3f6b867d37ae1e9ddeb7f",
+      "nativeDimensions": {
+        "width": 958,
+        "height": 809
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-ff72c130-03b4-4804-8cd0-76480ee78d14",
+        "modelVersion": null
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-dark-v1-20261021.png",
+      "sha256": "620ccf30ec537788bb2512faa03cdeba6ddd06ae6053df0c5a0db6cebeca3910",
+      "nativeDimensions": {
+        "width": 958,
+        "height": 809
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1c3f4dcc-f027-4af6-ada2-9c7ec18a965c",
+        "modelVersion": null
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-master-v1-20261021.png",
+        "sha256": "82df5c806f896b38f5bc642ad4188d62b85d275e99cb048d9a9adb62bc9f04d6",
+        "nativeDimensions": {
+          "width": 1942,
+          "height": 809
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-ff72c130-03b4-4804-8cd0-76480ee78d14",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-inverse-v1-20261021.png",
+        "sha256": "4207888b83e8a6a5fa4845079eb910e2193c0846fad2f0cb7d4402feabb9bce2",
+        "nativeDimensions": {
+          "width": 1942,
+          "height": 809
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-1c3f4dcc-f027-4af6-ada2-9c7ec18a965c",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-inverse-v1-20261021.png",
+        "sha256": "4207888b83e8a6a5fa4845079eb910e2193c0846fad2f0cb7d4402feabb9bce2",
+        "nativeDimensions": {
+          "width": 1942,
+          "height": 809
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-1c3f4dcc-f027-4af6-ada2-9c7ec18a965c",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-20T23:22:06.709Z",
+      "wordmarkWidths": [
+        120,
+        180
+      ],
+      "markWidths": [
+        32,
+        64
+      ],
+      "notes": "Agent inspected exact alpha-composited light/inverse wordmarks; final matched consumer sheet is separately retained. All five native dark/red backgrounds are unchanged. Proposal only, no human/dealer/native/hosted approval."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-20T23:22:06.709Z",
+      "widths": [
+        32,
+        64
+      ],
+      "notes": "Compact artwork is an exact pixel extraction of the isolated generated emblem, with a clear alpha gap to the wordmark; no recolour, filters or alpha cleanup."
+    }
+  },
+  "approvalStatus": "independent-preview-not-dealer-approved",
+  "researchConclusion": "The exact retained dealer marketplace page was checked and confirms the trading text; no usable distinct standalone artwork was obtained in bounded checks. This does not establish absence of a logo. Independent new proposal; factual alias, contacts, stock and research remain unchanged.",
+  "publicSourceObservations": [
+    {
+      "observedAt": "2026-10-20T23:22:06.709Z",
+      "kind": "bounded-logo-first-page-review",
+      "observations": "Current primary eBay BTS account explicitly displays B23 Motors at177GooseMooreLane Birmingham B235QG and retained contact values. Older HRM identity and contacts were not adopted."
+    }
+  ],
+  "generation": {
+    "tool": "image_gen.imagegen",
+    "generationId": "exec-ff72c130-03b4-4804-8cd0-76480ee78d14",
+    "modelVersion": null,
+    "prompt": "Use case: logo-brand. Create ONE independent identity proposal for B23 MOTORS, a Birmingham used-car dealer. Exact text B23 on first line and MOTORS beneath. Wide horizontal lockup with a separate compact original B23 monogram on LEFT, clear transparent gap, bold geometric wordmark on RIGHT. Compact monogram combines the B and clearly readable digits2 and3 with open counters, naturally balanced roughly1.8:1 shape, no background tile or borderframe. Deep charcoal #1c2932 and deep burnt orange #9e491d, flat opaque ink with strong WHITE contrast. Substantial strokes, no tiny details, clean at120/180px wordmark and32/64px compact. Genuine transparent canvas/counters and generous margin. No HRM wording or other legacy alias, no car silhouette, shield, crown, slogan, gradient, glow, shadows, white keyline, texture or speckles. New proposal based on current sourced B23 Motors trading name; no official/adoption claim."
+  },
+  "compactDerivation": {
+    "operation": "lossless-png-extract-isolated-emblem",
+    "parentPath": "branding/generated-master-v1-20261021.png",
+    "parentSha256": "82df5c806f896b38f5bc642ad4188d62b85d275e99cb048d9a9adb62bc9f04d6",
+    "crop": {
+      "left": 0,
+      "top": 0,
+      "width": 958,
+      "height": 809
+    },
+    "emptyGap": {
+      "start": 921,
+      "end": 995,
+      "width": 74
+    },
+    "parentNativeDimensions": {
+      "width": 1942,
+      "height": 809
+    },
+    "artworkUnmodified": true,
+    "alphaUnmodified": true
+  },
+  "compactOnDarkDerivation": {
+    "operation": "lossless-png-extract-isolated-emblem",
+    "parentPath": "branding/generated-inverse-v1-20261021.png",
+    "parentSha256": "4207888b83e8a6a5fa4845079eb910e2193c0846fad2f0cb7d4402feabb9bce2",
+    "crop": {
+      "left": 0,
+      "top": 0,
+      "width": 958,
+      "height": 809
+    },
+    "emptyGap": {
+      "start": 922,
+      "end": 995,
+      "width": 73
+    },
+    "parentNativeDimensions": {
+      "width": 1942,
+      "height": 809
+    },
+    "artworkUnmodified": true,
+    "alphaUnmodified": true
+  },
+  "additionalGenerations": [
+    {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-1c3f4dcc-f027-4af6-ada2-9c7ec18a965c",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand, exact inverse variant. Preserve exact open B23 monogram at LEFT and B23 over MOTORS at RIGHT, digit shapes, counters, spacing, layout and proportions. Charcoal ink becomes opaque flat pale silver-grey #cbd2d8; burnt-orange ink becomes opaque flat pale peach #e6c6ae. All gaps/counters/canvas truly transparent. Strong clarity on charcoal/navy/black/red at120/180px and compact32/64px. No glow, halos, shadows, gradients, texture, speckles, keyline, plate, extra text or altered initials. Exact B23 MOTORS. Independent unapproved proposal only.",
+      "referencePaths": [
+        "C:\\Users\\radev\\.codex\\generated_images\\01a15a1f-d666-7482-9123-db2575e93737\\exec-ff72c130-03b4-4804-8cd0-76480ee78d14.png"
+      ],
+      "path": "branding/generated-inverse-v1-20261021.png",
+      "sha256": "4207888b83e8a6a5fa4845079eb910e2193c0846fad2f0cb7d4402feabb9bce2"
+    }
+  ],
+  "sourceHistory": [
+    {
+      "reference": "branding/source-before-first-artwork-20261021-8fde4285fec40bea.json",
+      "sha256": "8fde4285fec40bea7f12d50bdd7bac435238ce86a296f19252586629b7171add",
+      "retainedAt": "2026-10-20T23:22:06.709Z",
+      "reason": "Exact maintained input-only draft provenance before first proposal artwork"
+    }
+  ]
 }

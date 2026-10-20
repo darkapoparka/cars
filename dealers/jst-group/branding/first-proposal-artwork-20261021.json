@@ -1,0 +1,137 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-first-missing-source-proposal-artwork",
+  "dealer": "jst-group",
+  "createdAt": "2026-10-20T23:22:00.405Z",
+  "inputRows": [
+    {
+      "role": "wordLight",
+      "path": "branding/generated-master-v1-20261021.png",
+      "sha256": "6b57cd7fec28a42b5deb2a8c2aefc4221c3adf2ec42d31f273f4d24b22df2818",
+      "nativeDimensions": {
+        "width": 1962,
+        "height": 802
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1cd6c495-dea9-4994-9c62-2d5795319e72",
+        "modelVersion": null
+      },
+      "artifact": "C:\\Users\\radev\\.codex\\generated_images\\01a15a1f-d666-7482-9123-db2575e93737\\exec-1cd6c495-dea9-4994-9c62-2d5795319e72.png",
+      "prompt": "Use case: logo-brand. Create an independent clean transparent logo treatment for JST GROUP, based only on the tiny dealer identity on the BLACK CAR NUMBER PLATE in this source photo: a blue front-view car icon over JST GROUP lettering. Do NOT use the Peugeot manufacturer lion, vehicle body, registration number or photo background. Wide horizontal lockup: isolated compact simplified front-view car icon at LEFT, generous transparent gap, exact bold text JST over GROUP at RIGHT. Icon has two clear headlights and open windshield as transparent cuts, thick blue/navy strokes, simple and recognizable at32/64px, no enclosing badge plate. Ink deep blue #135896 and dark navy #142e49, flat opaque, good contrast on WHITE. Main text bold and legible at120/180px total width. Truly transparent canvas with margins. No slogan, claims, extra letters, crown, shield, glow, gradients, shadows, white keylines, texture or speckles. Generated proposal treatment only; original context photo is retained separately and no dealer adoption is claimed.",
+      "referencePaths": [
+        "J:/.artifacts/cars-source-sync/third3-public-branding-inputs/jst-group-public-original.jpg"
+      ]
+    },
+    {
+      "role": "markLight",
+      "path": "branding/generated-mark-light-v1-20261021.png",
+      "sha256": "61724a326d4d02426173713f27e408e12c1f1c9b289f5d371defa8fe3fe58876",
+      "nativeDimensions": {
+        "width": 806,
+        "height": 802
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1cd6c495-dea9-4994-9c62-2d5795319e72",
+        "modelVersion": null
+      },
+      "artifact": "J:/.artifacts/cars-source-sync/third3-branding-inputs/jst-group/markLight.png",
+      "prompt": "Use case: logo-brand. Create an independent clean transparent logo treatment for JST GROUP, based only on the tiny dealer identity on the BLACK CAR NUMBER PLATE in this source photo: a blue front-view car icon over JST GROUP lettering. Do NOT use the Peugeot manufacturer lion, vehicle body, registration number or photo background. Wide horizontal lockup: isolated compact simplified front-view car icon at LEFT, generous transparent gap, exact bold text JST over GROUP at RIGHT. Icon has two clear headlights and open windshield as transparent cuts, thick blue/navy strokes, simple and recognizable at32/64px, no enclosing badge plate. Ink deep blue #135896 and dark navy #142e49, flat opaque, good contrast on WHITE. Main text bold and legible at120/180px total width. Truly transparent canvas with margins. No slogan, claims, extra letters, crown, shield, glow, gradients, shadows, white keylines, texture or speckles. Generated proposal treatment only; original context photo is retained separately and no dealer adoption is claimed.",
+      "referencePaths": [
+        "C:\\Users\\radev\\.codex\\generated_images\\01a15a1f-d666-7482-9123-db2575e93737\\exec-1cd6c495-dea9-4994-9c62-2d5795319e72.png"
+      ],
+      "derivation": {
+        "operation": "lossless-png-extract-isolated-emblem",
+        "parentPath": "branding/generated-master-v1-20261021.png",
+        "parentSha256": "6b57cd7fec28a42b5deb2a8c2aefc4221c3adf2ec42d31f273f4d24b22df2818",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 806,
+          "height": 802
+        },
+        "emptyGap": {
+          "start": 785,
+          "end": 827,
+          "width": 42
+        },
+        "parentNativeDimensions": {
+          "width": 1962,
+          "height": 802
+        },
+        "artworkUnmodified": true,
+        "alphaUnmodified": true
+      }
+    },
+    {
+      "role": "wordDark",
+      "path": "branding/generated-inverse-v1-20261021.png",
+      "sha256": "da6daf5f5d79f2e8141b1070bfb2d6720db43a53eb02b3fadfb773c2f3115d7e",
+      "nativeDimensions": {
+        "width": 1962,
+        "height": 801
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-9ca5df97-809b-4a3a-8feb-17c7b235ece2",
+        "modelVersion": null
+      },
+      "artifact": "C:\\Users\\radev\\.codex\\generated_images\\01a15a1f-d666-7482-9123-db2575e93737\\exec-9ca5df97-809b-4a3a-8feb-17c7b235ece2.png",
+      "prompt": "Use case: logo-brand, exact inverse variant. Preserve reference front-car icon at LEFT, transparent windshield/headlights/grilles, JST over GROUP at RIGHT, exact shapes, proportions, spacing, letterforms and natural layout. Blue ink becomes flat opaque pale ice blue #c5dcec, dark navy becomes pale silver-grey #cbd2d8. Same colorpartition, no darkfill. Truly transparent canvas/windows/counters, generous padding. Clear on charcoal/navy/black/red at120/180px and compact32/64px. No backgroundplate, glow, halo, shadow, gradients, metallic effect, keylines, texture, speckles, extra text or redesign. Exact JST GROUP. Proposed treatment of retained source plate identity, not official/adopted.",
+      "referencePaths": [
+        "C:\\Users\\radev\\.codex\\generated_images\\01a15a1f-d666-7482-9123-db2575e93737\\exec-1cd6c495-dea9-4994-9c62-2d5795319e72.png"
+      ]
+    },
+    {
+      "role": "markDark",
+      "path": "branding/generated-mark-dark-v1-20261021.png",
+      "sha256": "05a6cf497f9f1b25942c79108378376e2bf083a5668c0478e42518718aeb9649",
+      "nativeDimensions": {
+        "width": 809,
+        "height": 801
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-9ca5df97-809b-4a3a-8feb-17c7b235ece2",
+        "modelVersion": null
+      },
+      "artifact": "J:/.artifacts/cars-source-sync/third3-branding-inputs/jst-group/markDark.png",
+      "prompt": "Use case: logo-brand, exact inverse variant. Preserve reference front-car icon at LEFT, transparent windshield/headlights/grilles, JST over GROUP at RIGHT, exact shapes, proportions, spacing, letterforms and natural layout. Blue ink becomes flat opaque pale ice blue #c5dcec, dark navy becomes pale silver-grey #cbd2d8. Same colorpartition, no darkfill. Truly transparent canvas/windows/counters, generous padding. Clear on charcoal/navy/black/red at120/180px and compact32/64px. No backgroundplate, glow, halo, shadow, gradients, metallic effect, keylines, texture, speckles, extra text or redesign. Exact JST GROUP. Proposed treatment of retained source plate identity, not official/adopted.",
+      "referencePaths": [
+        "C:\\Users\\radev\\.codex\\generated_images\\01a15a1f-d666-7482-9123-db2575e93737\\exec-9ca5df97-809b-4a3a-8feb-17c7b235ece2.png"
+      ],
+      "derivation": {
+        "operation": "lossless-png-extract-isolated-emblem",
+        "parentPath": "branding/generated-inverse-v1-20261021.png",
+        "parentSha256": "da6daf5f5d79f2e8141b1070bfb2d6720db43a53eb02b3fadfb773c2f3115d7e",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 809,
+          "height": 801
+        },
+        "emptyGap": {
+          "start": 790,
+          "end": 829,
+          "width": 39
+        },
+        "parentNativeDimensions": {
+          "width": 1962,
+          "height": 801
+        },
+        "artworkUnmodified": true,
+        "alphaUnmodified": true
+      }
+    }
+  ],
+  "sourceFactNamePreserved": true,
+  "publicTradingText": "JST Group",
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "dealerApproval": false,
+  "humanReview": false,
+  "providerWrites": 0,
+  "filtersApplied": false,
+  "thresholdsChanged": false
+}

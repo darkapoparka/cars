@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-first-missing-source-proposal-artwork",
+  "dealer": "baban-cars-baban-motors",
+  "createdAt": "2026-10-20T23:22:13.541Z",
+  "inputRows": [
+    {
+      "role": "wordLight",
+      "path": "branding/generated-master-v1-20261021.png",
+      "sha256": "fe1af45b92af1436887a73675ce5e25559b15bd0c2b85b6707a1e8a61aa134e5",
+      "nativeDimensions": {
+        "width": 1942,
+        "height": 809
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-5d53f1f1-7b82-4497-b589-66cf03353d4b",
+        "modelVersion": null
+      },
+      "artifact": "C:\\Users\\radev\\.codex\\generated_images\\01a15a1f-d666-7482-9123-db2575e93737\\exec-5d53f1f1-7b82-4497-b589-66cf03353d4b.png",
+      "prompt": "Use case: logo-brand. Create ONE independent proposal for the sourced trading name BABAN CARS. Exact text BABAN on first line, CARS on second. Wide horizontal lockup: original compact open BC monogram isolated at LEFT, generous transparent gap, substantial readable geometric two-line wordmark at RIGHT. B has two clear counters and C is a matching open arc, balanced compact shape naturally about1.3:1, strong at32/64px. Deep plum #4d284d and navy-charcoal #182838, flat opaque ink, good contrast on white. Exact spelling, legible at120/180px. True transparent background/counters, generous margins. No ADAM or extra names, no invented legal suffix, car silhouette, shield, crown, backingtile, tagline, gradients, glow, shadow, white keyline, texture or speckles. This is an independent new proposal for the Birmingham Baban Cars/Baban Motors lead; original factual alias record stays unchanged and no dealer adoption is implied.",
+      "referencePaths": []
+    },
+    {
+      "role": "markLight",
+      "path": "branding/generated-mark-light-v1-20261021.png",
+      "sha256": "5545914a4406abc1958998ebe807a04dd232ac9e2205e68646450f2c49e40f41",
+      "nativeDimensions": {
+        "width": 837,
+        "height": 809
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-5d53f1f1-7b82-4497-b589-66cf03353d4b",
+        "modelVersion": null
+      },
+      "artifact": "J:/.artifacts/cars-source-sync/third3-branding-inputs/baban-cars-baban-motors/markLight.png",
+      "prompt": "Use case: logo-brand. Create ONE independent proposal for the sourced trading name BABAN CARS. Exact text BABAN on first line, CARS on second. Wide horizontal lockup: original compact open BC monogram isolated at LEFT, generous transparent gap, substantial readable geometric two-line wordmark at RIGHT. B has two clear counters and C is a matching open arc, balanced compact shape naturally about1.3:1, strong at32/64px. Deep plum #4d284d and navy-charcoal #182838, flat opaque ink, good contrast on white. Exact spelling, legible at120/180px. True transparent background/counters, generous margins. No ADAM or extra names, no invented legal suffix, car silhouette, shield, crown, backingtile, tagline, gradients, glow, shadow, white keyline, texture or speckles. This is an independent new proposal for the Birmingham Baban Cars/Baban Motors lead; original factual alias record stays unchanged and no dealer adoption is implied.",
+      "referencePaths": [
+        "C:\\Users\\radev\\.codex\\generated_images\\01a15a1f-d666-7482-9123-db2575e93737\\exec-5d53f1f1-7b82-4497-b589-66cf03353d4b.png"
+      ],
+      "derivation": {
+        "operation": "lossless-png-extract-isolated-emblem",
+        "parentPath": "branding/generated-master-v1-20261021.png",
+        "parentSha256": "fe1af45b92af1436887a73675ce5e25559b15bd0c2b85b6707a1e8a61aa134e5",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 837,
+          "height": 809
+        },
+        "emptyGap": {
+          "start": 804,
+          "end": 871,
+          "width": 67
+        },
+        "parentNativeDimensions": {
+          "width": 1942,
+          "height": 809
+        },
+        "artworkUnmodified": true,
+        "alphaUnmodified": true
+      }
+    },
+    {
+      "role": "wordDark",
+      "path": "branding/generated-inverse-v1-20261021.png",
+      "sha256": "7e506634abde6d07225c381951f308ed13fd8d28ed9d6b652b506bb06b53df90",
+      "nativeDimensions": {
+        "width": 1944,
+        "height": 809
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-2e5269dd-2d9d-44c2-b874-ebce6c67df3d",
+        "modelVersion": null
+      },
+      "artifact": "C:\\Users\\radev\\.codex\\generated_images\\01a15a1f-d666-7482-9123-db2575e93737\\exec-2e5269dd-2d9d-44c2-b874-ebce6c67df3d.png",
+      "prompt": "Use case: logo-brand, exact inverse variant. Preserve exact open BC monogram at LEFT and BABAN over CARS at RIGHT, natural proportions, typography, spacing, counters and layout. Plum ink becomes opaque flat pale pink-lilac #e0bfd8; dark navy becomes opaque flat pale silver-grey #cbd2d8. Same colorpartition, true transparent canvas and counters, generous margin. Clear on charcoal/navy/black/red at120/180px and compact32/64px. No glow, halo, shadow, gradient, texture, speckles, keyline, backgroundplate, other wording or redesign. Exact BABAN CARS, independent unapproved proposal.",
+      "referencePaths": [
+        "C:\\Users\\radev\\.codex\\generated_images\\01a15a1f-d666-7482-9123-db2575e93737\\exec-5d53f1f1-7b82-4497-b589-66cf03353d4b.png"
+      ]
+    },
+    {
+      "role": "markDark",
+      "path": "branding/generated-mark-dark-v1-20261021.png",
+      "sha256": "f0e30cf8fa6ec38b4e605782c7347a3b19c2b627d320a3c3e096eaff9ed8c452",
+      "nativeDimensions": {
+        "width": 829,
+        "height": 809
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-2e5269dd-2d9d-44c2-b874-ebce6c67df3d",
+        "modelVersion": null
+      },
+      "artifact": "J:/.artifacts/cars-source-sync/third3-branding-inputs/baban-cars-baban-motors/markDark.png",
+      "prompt": "Use case: logo-brand, exact inverse variant. Preserve exact open BC monogram at LEFT and BABAN over CARS at RIGHT, natural proportions, typography, spacing, counters and layout. Plum ink becomes opaque flat pale pink-lilac #e0bfd8; dark navy becomes opaque flat pale silver-grey #cbd2d8. Same colorpartition, true transparent canvas and counters, generous margin. Clear on charcoal/navy/black/red at120/180px and compact32/64px. No glow, halo, shadow, gradient, texture, speckles, keyline, backgroundplate, other wording or redesign. Exact BABAN CARS, independent unapproved proposal.",
+      "referencePaths": [
+        "C:\\Users\\radev\\.codex\\generated_images\\01a15a1f-d666-7482-9123-db2575e93737\\exec-2e5269dd-2d9d-44c2-b874-ebce6c67df3d.png"
+      ],
+      "derivation": {
+        "operation": "lossless-png-extract-isolated-emblem",
+        "parentPath": "branding/generated-inverse-v1-20261021.png",
+        "parentSha256": "7e506634abde6d07225c381951f308ed13fd8d28ed9d6b652b506bb06b53df90",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 829,
+          "height": 809
+        },
+        "emptyGap": {
+          "start": 795,
+          "end": 863,
+          "width": 68
+        },
+        "parentNativeDimensions": {
+          "width": 1944,
+          "height": 809
+        },
+        "artworkUnmodified": true,
+        "alphaUnmodified": true
+      }
+    }
+  ],
+  "sourceFactNamePreserved": true,
+  "publicTradingText": "Baban Cars",
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "dealerApproval": false,
+  "humanReview": false,
+  "providerWrites": 0,
+  "filtersApplied": false,
+  "thresholdsChanged": false
+}

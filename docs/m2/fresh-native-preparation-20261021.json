@@ -402,5 +402,21 @@
     ],
     "nativeApproval": false,
     "hostedApproval": false
+  },
+  "freshSixResult": {
+    "runId": 39512592289,
+    "conclusion": "success",
+    "ownContracts": "passed",
+    "allSixNativeLanes": "passed",
+    "qualified": [
+      "j26-vans-trucks",
+      "al-sammarraie-used-cars",
+      "rebou-al-fakhama-used-cars",
+      "small-automatics",
+      "trade-car-centre-accrington-ghmc-419b403bea",
+      "car-hunt-plus-limited"
+    ],
+    "queueGeneration": 444,
+    "hostedApproval": false
   }
 }

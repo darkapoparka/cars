@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "B23 Motors",
     "publicOrigin": "https://b23-motors.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "8c2f41187c7f2fa60cfae060557966cf9100eea95e09764d26b6f715b2ae7799",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "5bb7a4a82382131dfa851c2002191fccc147ec7a8181e2ef690099fd45bda6f4"
+    }
   }
 }

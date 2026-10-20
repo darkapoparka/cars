@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Baban Cars / Baban Motors",
     "publicOrigin": "https://baban-cars-baban-motors.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "cdd242e98d135d8080e243a2183d47a03e3a08db16c4e4efccee0e127bac6ca4",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "ab22d6ca54e99cabdb2e789c8ace9b708a50f1dc74f1ed62ac8d241a5ab540a0"
+    }
   }
 }

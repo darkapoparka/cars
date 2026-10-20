@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "JST Group",
     "publicOrigin": "https://jst-group.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "c93a0aedffba6f62cfefff89061f2b242c51c56b51dd166483be2cfb8faf0430",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "fe4901332340bf0fdad110855f0c1f8f53a069b1ef30e893a238f7654977d0e2"
+    }
   }
 }

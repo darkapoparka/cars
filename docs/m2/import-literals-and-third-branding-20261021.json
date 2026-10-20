@@ -1,0 +1,242 @@
+{
+  "schemaVersion": 1,
+  "type": "cars-import-literal-repair-and-third-source-branding",
+  "recordedAt": "2026-10-20T23:29:13.983Z",
+  "baseRevision": "826c052680ff27d6d25e4021a17ec60771a951d5",
+  "literalRepair": {
+    "files": [
+      {
+        "path": "scripts/lib/client-refresh-adapters.mjs",
+        "bytes": 98037,
+        "sha256": "da236bced0c6f2b2c79baa2570fcc681fd24d1cc672558ad3dbeb961e5fc71d4"
+      },
+      {
+        "path": "scripts/assemble-dealer-pack.mjs",
+        "bytes": 10400,
+        "sha256": "722d980fa110066480b5fe27c3e1fb9ec323507cad5142f6944d3c3b1fbb789e"
+      },
+      {
+        "path": "scripts/dealer-pack-import-identity-literals.test.mjs",
+        "bytes": 18491,
+        "sha256": "3bb8b57d3052ef900db03e576490cfc931109e2fa8f32784c2df698ea03af12f"
+      }
+    ],
+    "selectedRelease": {
+      "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+      "importTree": "87950ec43fdb33fd85dbf6d6b6160e1a779777c6",
+      "identityBearingTsFiles": 56,
+      "sourceBindings": {
+        "path": "J:\\.artifacts\\cars-source-sync\\import-selected-identity-slots.json",
+        "sha256": "585258b385d5699ad573198b5cad2138b051ae40b6ded5bb32aa31126d08ad19"
+      },
+      "patternAudit": {
+        "path": "J:\\.artifacts\\cars-source-sync\\import-selected-pattern-context-audit.json",
+        "sha256": "ac43ddb356385533ed99c9a3f949793e6940b38c5fa911f2a406bb868e1e5013"
+      },
+      "regExpStringIdentitySlots": 0,
+      "matchingTaggedTemplates": 0,
+      "matchingRegexLiterals": 19,
+      "regexLiteralHandler": "src/lib/i18n/messages.ts"
+    },
+    "failureBinding": {
+      "runId": 39510514421,
+      "sourceCommit": "ade81490674a64722a8f9059a61c78ce4d9d22a3",
+      "slugs": [
+        "lets-sell-your-car",
+        "millions-auto-cars"
+      ],
+      "failedFamily": "import",
+      "stage": "native-compile-before-QA",
+      "compilerDiagnosticCountPerLane": 45,
+      "actualApiLiteralSlots": 18,
+      "qualifiedSiblingUntouched": "cars-4-u-wakefield",
+      "cause": "Raw factual apostrophes were inserted into ordinary single-quoted TypeScript strings; API plus account/admin and server/lib strings shared the defect.",
+      "evidence": [
+        {
+          "path": "J:\\.artifacts\\cars-source-sync\\fresh3-39510514421-failed-diagnostics.json",
+          "sha256": "73db6688624d4b4dcc6c72a0110c0870a150a0c9f3f49f1c387041b9f27e1e04"
+        }
+      ]
+    },
+    "behavior": {
+      "existingCompiler": "TypeScript 6.0.3 reused from maintained assembler toolPackage, passed only to Import; legacy fallback uses existing installed tools",
+      "beforeSubstitution": "Full original .ts parse; exact ordinary literal decode through readCatalogLiteral",
+      "changedRanges": "Only matching actual string literals or AST template text; no raw .ts fallback",
+      "templateText": "Escapes backslash, backtick and literal interpolation; expression bytes stay exact",
+      "replacementCopies": "Only inserted factual dollars quoted in native replace/replaceAll second arguments, with known escapeHtml wrapper; original capture/replacement tokens and search strings preserved",
+      "unsupported": "Malformed TypeScript or matching tagged/raw templates fail before that source file is written",
+      "retainedHandlers": [
+        {
+          "name": "personalizeImportCatalogStrings",
+          "sha256": "a442dc3093b5cf9e30b9815658ed0d62dd054117753e8d6bc5abd70c8962fdb3",
+          "unchanged": true
+        },
+        {
+          "name": "personalizeImportMessageText",
+          "sha256": "e7c511cc20c921993c6f3fbc6b91b3eb1acbf7a166466439ce6005e4a395360b",
+          "unchanged": true
+        }
+      ]
+    },
+    "validation": {
+      "commands": [
+        "node --check scripts/assemble-dealer-pack.mjs",
+        "node --test scripts/dealer-pack-import-identity-literals.test.mjs scripts/client-refresh-import-facts.test.mjs"
+      ],
+      "tests": 28,
+      "passed": 28,
+      "failed": 0,
+      "newFocusedTests": 8,
+      "selectedNames": [
+        "Let's Sell Your Car",
+        "Million's Auto Cars Ltd",
+        "Adversarial apostrophe, double quotes, .+ [UK] /, backslash, backtick, literal interpolation, $&/$'/$1/$$/$`"
+      ],
+      "perName": {
+        "entireSelectedTsFilesParsed": 56,
+        "genericChangedLiteralTextSlots": 289,
+        "apiSlots": 18,
+        "nativeReplacementCopyExpressionsExecuted": 53
+      },
+      "preserved": [
+        "all generic TS bytes outside changed ranges",
+        "auth/control-flow/template-expression bytes",
+        "comments and regex literal bytes",
+        "profile/facts inputs",
+        "five-catalog parity contract",
+        "message regex escaping and dollar-copy contract"
+      ],
+      "freshNativeBuild": false,
+      "hostedQa": false
+    }
+  },
+  "branding": [
+    {
+      "slug": "jst-group",
+      "path": "dealers/jst-group",
+      "packDigest": "77c9c95f15401e34e18549a6738b8313df693c488cf1476045801c69a15694ce",
+      "files": 25,
+      "bytes": 2500094,
+      "sourceReady": true,
+      "actualSourceRasterChecks": 14,
+      "strictPublisher": {
+        "passed": true,
+        "actualExportedApplyLeadBranding": true,
+        "fixtureSourceSha256": "85d66559b60867d2ab30ff7c4cb0a9eb07f7d6b9e0fb8ef3c4ae5caeae594783",
+        "noBuild": true
+      },
+      "sourceFactsStockPhotosResearchPreserved": true,
+      "proposalOnly": true,
+      "maintainerConsumerReview": true,
+      "humanReview": false,
+      "dealerApproval": false,
+      "nativeApproval": false,
+      "hostedApproval": false,
+      "provenance": "dealers/jst-group/branding/first-proposal-artwork-20261021.json"
+    },
+    {
+      "slug": "b23-motors",
+      "path": "dealers/b23-motors",
+      "packDigest": "7167f0904a80f73baac177e0d3314ab7fd84a56a06661e11a95aa838339357fe",
+      "files": 24,
+      "bytes": 2230714,
+      "sourceReady": true,
+      "actualSourceRasterChecks": 14,
+      "strictPublisher": {
+        "passed": true,
+        "actualExportedApplyLeadBranding": true,
+        "fixtureSourceSha256": "85d66559b60867d2ab30ff7c4cb0a9eb07f7d6b9e0fb8ef3c4ae5caeae594783",
+        "noBuild": true
+      },
+      "sourceFactsStockPhotosResearchPreserved": true,
+      "proposalOnly": true,
+      "maintainerConsumerReview": true,
+      "humanReview": false,
+      "dealerApproval": false,
+      "nativeApproval": false,
+      "hostedApproval": false,
+      "provenance": "dealers/b23-motors/branding/first-proposal-artwork-20261021.json"
+    },
+    {
+      "slug": "baban-cars-baban-motors",
+      "path": "dealers/baban-cars-baban-motors",
+      "packDigest": "a439a1b9dbbbb502ba23e1dc6c6612e0f15cb7279430973620070ee121f6bd4b",
+      "files": 24,
+      "bytes": 2370764,
+      "sourceReady": true,
+      "actualSourceRasterChecks": 14,
+      "strictPublisher": {
+        "passed": true,
+        "actualExportedApplyLeadBranding": true,
+        "fixtureSourceSha256": "85d66559b60867d2ab30ff7c4cb0a9eb07f7d6b9e0fb8ef3c4ae5caeae594783",
+        "noBuild": true
+      },
+      "sourceFactsStockPhotosResearchPreserved": true,
+      "proposalOnly": true,
+      "maintainerConsumerReview": true,
+      "humanReview": false,
+      "dealerApproval": false,
+      "nativeApproval": false,
+      "hostedApproval": false,
+      "provenance": "dealers/baban-cars-baban-motors/branding/first-proposal-artwork-20261021.json"
+    }
+  ],
+  "previousSix": {
+    "runId": 39512592289,
+    "sourceCommit": "80bedaf7f214b2b3b50e1cd83079e606e09ac031",
+    "conclusion": "success",
+    "ownContracts": "passed",
+    "nativeProducerLanes": "all six passed",
+    "qualified": [
+      "j26-vans-trucks",
+      "al-sammarraie-used-cars",
+      "rebou-al-fakhama-used-cars",
+      "small-automatics",
+      "trade-car-centre-accrington-ghmc-419b403bea",
+      "car-hunt-plus-limited"
+    ],
+    "intake": "All six appear as queued authenticated requests at generation444; no failed older output relabelled"
+  },
+  "freshNativeCandidates": [
+    "reliable-autos",
+    "mosaso",
+    "badar-used-cars",
+    "al-ishfaq-used-cars-llc",
+    "ra-motor-group-ltd",
+    "hrs-cars-ltd",
+    "coseley-auto-centre",
+    "lets-sell-your-car",
+    "millions-auto-cars",
+    "jst-group",
+    "b23-motors",
+    "baban-cars-baban-motors"
+  ],
+  "freshNativeStatus": "Awaiting this checkpoint publication and exact-source producing run",
+  "publisher": {
+    "previousRecovery": {
+      "runId": 39504964498,
+      "conclusion": "success"
+    },
+    "normalDrain": {
+      "runId": 39515213505,
+      "sourceCommit": "826c052680ff27d6d25e4021a17ec60771a951d5",
+      "status": "dispatched; provider outcome pending",
+      "url": "https://github.com/darkapoparka/cars/actions/runs/39515213505"
+    },
+    "onePassRestoration": "published; elapsed savings unmeasured",
+    "continuation": "published; live handoff unverified",
+    "twoSlotProtocol": "Pure prototype only; independent review in progress, no production wiring"
+  },
+  "queue": {
+    "generation": 444,
+    "observedAt": "2026-10-20T23:27:48.199Z",
+    "activated": 28,
+    "hostedPassed": 26,
+    "hostedFailed": 2,
+    "queued": 126,
+    "active": false
+  },
+  "ownerAccepted": false,
+  "localProviderWrites": 0,
+  "localQueueWrites": 0
+}

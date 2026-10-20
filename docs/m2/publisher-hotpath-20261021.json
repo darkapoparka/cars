@@ -236,7 +236,7 @@
     "hrs-cars-ltd",
     "coseley-auto-centre"
   ],
-  "freshNativeStatus": "Awaiting this source checkpoint publication and producing run",
+  "freshNativeStatus": "Seven source candidates await combined12 producer at next published literal/branding checkpoint; none has been dispatched by this record",
   "previousThree": {
     "runId": 39510514421,
     "sourceCommit": "ade81490674a64722a8f9059a61c78ce4d9d22a3",
@@ -253,5 +253,11 @@
   "concurrentPublisher": "Still one account request; a pure two-slot protocol prototype is being reviewed separately and is not wired or claimed live.",
   "providerWritesFromLocalValidation": 0,
   "queueWritesFromLocalValidation": 0,
-  "ownerAccepted": false
+  "ownerAccepted": false,
+  "publisherExecution": {
+    "runId": 39515213505,
+    "sourceCommit": "826c052680ff27d6d25e4021a17ec60771a951d5",
+    "status": "dispatched; provider outcome pending",
+    "url": "https://github.com/darkapoparka/cars/actions/runs/39515213505"
+  }
 }

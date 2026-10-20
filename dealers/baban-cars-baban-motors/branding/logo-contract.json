@@ -1,0 +1,197 @@
+{
+  "schemaVersion": 1,
+  "dealer": "baban-cars-baban-motors",
+  "reviewed": true,
+  "reviewedAt": "2026-10-20T23:22:13.541Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "ba9781a43ec9975836ccda4fb7a1d21716e2f5238d9bf4ad93e1a6541b7edb20",
+      "sourceSha256": "cdd242e98d135d8080e243a2183d47a03e3a08db16c4e4efccee0e127bac6ca4"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "b5aa72c7e8f059ce7a1e94ba31f7ee26ad8dceee6d4cd918ef4fdcd4ea12c57d",
+      "sourceSha256": "fb988f3d1d3395696d099b3b449010291e195daf8bb88cc4ce6e42a992422309"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "b5aa72c7e8f059ce7a1e94ba31f7ee26ad8dceee6d4cd918ef4fdcd4ea12c57d",
+      "sourceSha256": "fb988f3d1d3395696d099b3b449010291e195daf8bb88cc4ce6e42a992422309"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "cdd242e98d135d8080e243a2183d47a03e3a08db16c4e4efccee0e127bac6ca4",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-5d53f1f1-7b82-4497-b589-66cf03353d4b",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "ab22d6ca54e99cabdb2e789c8ace9b708a50f1dc74f1ed62ac8d241a5ab540a0",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-5d53f1f1-7b82-4497-b589-66cf03353d4b",
+      "modelVersion": null
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "633490f2077c8d11406a5cae8d3628aafe71f53d5b0bc0b6b4d8a2f49499cedb"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "cdd242e98d135d8080e243a2183d47a03e3a08db16c4e4efccee0e127bac6ca4",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-5d53f1f1-7b82-4497-b589-66cf03353d4b",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/baban-cars-baban-motors/branding/generated-master-v1-20261021.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "fb988f3d1d3395696d099b3b449010291e195daf8bb88cc4ce6e42a992422309",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-2e5269dd-2d9d-44c2-b874-ebce6c67df3d",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/baban-cars-baban-motors/branding/generated-inverse-v1-20261021.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "fb988f3d1d3395696d099b3b449010291e195daf8bb88cc4ce6e42a992422309",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-2e5269dd-2d9d-44c2-b874-ebce6c67df3d",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/baban-cars-baban-motors/branding/generated-inverse-v1-20261021.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "fe1af45b92af1436887a73675ce5e25559b15bd0c2b85b6707a1e8a61aa134e5",
+      "sha256": "cdd242e98d135d8080e243a2183d47a03e3a08db16c4e4efccee0e127bac6ca4",
+      "crop": {
+        "left": 30,
+        "top": 120,
+        "width": 1903,
+        "height": 566
+      },
+      "sourcePath": "branding/generated-master-v1-20261021.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "7e506634abde6d07225c381951f308ed13fd8d28ed9d6b652b506bb06b53df90",
+      "sha256": "fb988f3d1d3395696d099b3b449010291e195daf8bb88cc4ce6e42a992422309",
+      "crop": {
+        "left": 26,
+        "top": 126,
+        "width": 1910,
+        "height": 559
+      },
+      "sourcePath": "branding/generated-inverse-v1-20261021.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "7e506634abde6d07225c381951f308ed13fd8d28ed9d6b652b506bb06b53df90",
+      "sha256": "fb988f3d1d3395696d099b3b449010291e195daf8bb88cc4ce6e42a992422309",
+      "crop": {
+        "left": 26,
+        "top": 126,
+        "width": 1910,
+        "height": 559
+      },
+      "sourcePath": "branding/generated-inverse-v1-20261021.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "9b3bf7a37682f180380cdd9092d039c437d12ffea99d9d200d50e2e834feca5a",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-5d53f1f1-7b82-4497-b589-66cf03353d4b",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/baban-cars-baban-motors/branding/generated-mark-light-v1-20261021.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "261cd7f179d4a942bbdbdfcb5413d39c7f8a0beadac504e3d6b1ec5148b0f8df",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-2e5269dd-2d9d-44c2-b874-ebce6c67df3d",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/baban-cars-baban-motors/branding/generated-mark-dark-v1-20261021.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "ab22d6ca54e99cabdb2e789c8ace9b708a50f1dc74f1ed62ac8d241a5ab540a0",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-5d53f1f1-7b82-4497-b589-66cf03353d4b",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/baban-cars-baban-motors/branding/generated-mark-light-v1-20261021.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "633490f2077c8d11406a5cae8d3628aafe71f53d5b0bc0b6b4d8a2f49499cedb",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-5d53f1f1-7b82-4497-b589-66cf03353d4b",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/baban-cars-baban-motors/branding/generated-mark-light-v1-20261021.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-20T23:22:13.541Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "4e1c16ad9d3e07944767eac77e67ce1854415bee141fa149dd84a17de125a9ac",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-2e5269dd-2d9d-44c2-b874-ebce6c67df3d",
+      "modelVersion": null
+    }
+  }
+}
