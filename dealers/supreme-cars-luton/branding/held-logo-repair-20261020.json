@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-original-held-logo-contrast-repair",
+  "dealer": "supreme-cars-luton",
+  "createdAt": "2026-10-20T20:21:22.652Z",
+  "previousPackDigest": "1d969cdda58d74b3254a36c222e381a26f7cb25454481eb607fd75ab62751246",
+  "previousSource": {
+    "path": "branding/source-before-held-logo-repair-20261020-c8c83034fcd09a21.json",
+    "sha256": "c8c83034fcd09a218ce8395dc07a3961a78ee076197e4bd251f45f6e29429cee"
+  },
+  "previousInputs": {
+    "onDark": {
+      "path": "branding/generated-on-dark.png",
+      "sha256": "811b9be4853ca3d2519242b38a518c65f43272425d6969360378504bcb2e8ad8",
+      "nativeDimensions": {
+        "width": 2167,
+        "height": 725
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-18274f9d-a8b7-4df8-b4fa-fc0c6148ce23",
+        "modelVersion": null
+      }
+    },
+    "onAccent": {
+      "path": "branding/generated-on-dark.png",
+      "sha256": "811b9be4853ca3d2519242b38a518c65f43272425d6969360378504bcb2e8ad8",
+      "nativeDimensions": {
+        "width": 2167,
+        "height": 725
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-18274f9d-a8b7-4df8-b4fa-fc0c6148ce23",
+        "modelVersion": null
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-on-dark.png",
+      "sha256": "92417ddc192776dca9936bced35b8a77f5d632398c447bc3144a234f29877e22",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-18274f9d-a8b7-4df8-b4fa-fc0c6148ce23",
+        "modelVersion": null
+      },
+      "derivation": {
+        "operation": "pixel-exact rectangular extraction of the existing generated compact emblem; no recolouring or invented artwork",
+        "parentPath": "branding/generated-on-dark.png",
+        "parentSha256": "811b9be4853ca3d2519242b38a518c65f43272425d6969360378504bcb2e8ad8",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 461,
+          "height": 725
+        }
+      }
+    }
+  },
+  "replacements": [
+    {
+      "roles": [
+        "onDark",
+        "onAccent"
+      ],
+      "reference": "branding/generated-on-dark.png",
+      "path": "branding/generated-on-dark-v2-20261020.png",
+      "sha256": "f5ab7f7b13c75a1608700a4dd6a60f58cba9c9e8fbd956c0cb6b70555125c821",
+      "nativeDimensions": {
+        "width": 2167,
+        "height": 725
+      },
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-f83a6432-d38c-4781-ba36-952ef3aaf4d6",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand, exact surface-colour edit. Preserve supplied interlocked SC emblem at left and exact mixed-case Supreme Cars wordmark at right, letterforms, scale, spacing, silhouette and layout. Produce a light monochrome variant using flat opaque pale silver-grey #c8d0d8. Replace light fills with that colour and remove the heavy black contour/white outline, keeping internal negative-space separations and counters transparent so the S/C overlap stays recognizable. Do not redesign any shape or change capitalization. Smooth clean filled artwork on a truly transparent background. No pure white, texture, grain, speckles, gradients, shadows, glow, badge or extra text. Entire logo inside canvas with generous transparent padding. This is a faithful preview treatment, not dealer approved.",
+      "createdAt": "2026-10-20T20:21:22.652Z",
+      "derivation": "Actual built-in imagegen edit of the retained identity; raw returned PNG copied byte-identical without recolouring, filters or alpha cleanup."
+    },
+    {
+      "roles": [
+        "markOnDark"
+      ],
+      "reference": "branding/generated-mark-on-dark.png",
+      "path": "branding/generated-mark-on-dark-v2-20261020.png",
+      "sha256": "17397a17b40c9d120f43dcccfe5a1f9880e9776c570d088ade67e5fe990a7b62",
+      "nativeDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-cb4197a0-ec4d-423d-b621-15472bf9d3d0",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand. Exact light monochrome surface variant of supplied interlocked SC compact emblem for Supreme Cars. Preserve exact S and C geometry, overlap, proportions and internal openings. Use solid flat pale silver-grey #c8d0d8 for the filled letter strokes. Remove heavy black/white outlines while keeping thin separating gaps/counters genuinely transparent so S and C remain recognizable. No redesign, lettering changes, extra shapes or words. Smooth opaque flat artwork, no pure white, gradient, texture, speckles, grain, shadow or glow. Real transparent background, whole emblem centered within a generous square canvas with natural proportions; do not stretch it.",
+      "createdAt": "2026-10-20T20:21:22.652Z",
+      "derivation": "Actual built-in imagegen edit of the retained identity; raw returned PNG copied byte-identical without recolouring, filters or alpha cleanup."
+    }
+  ],
+  "visualReview": {
+    "wordmarkWidths": [
+      120,
+      180
+    ],
+    "compactWidths": [
+      32,
+      64
+    ],
+    "backgrounds": [
+      "#111113",
+      "#101820",
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ],
+    "identityAndSpelling": "agent-visual-review",
+    "dealerApproval": false,
+    "nativeApproval": false,
+    "hostedApproval": false,
+    "humanReview": false
+  },
+  "originalMasterLightCompactFactsStockPhotosPreserved": true,
+  "toolPackage": "L:/CODEX/cars/templates/karento-best/package.json",
+  "filtersApplied": false,
+  "thresholdsChanged": false,
+  "providerWrites": 0
+}

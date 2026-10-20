@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "dealer": "wortley-road-car-sales",
   "reviewed": true,
-  "reviewedAt": "2026-10-19T19:22:56.608725Z",
+  "reviewedAt": "2026-10-20T20:16:02.106Z",
   "status": "independent-proposal-not-dealer-approved",
   "creationMethod": "imagegen-faithful-redraw",
   "assets": {
@@ -15,14 +15,14 @@
     "onDark": {
       "sourcePath": "branding/logo-on-dark.png",
       "publicPath": "/dealer-brand/logo-on-dark.webp",
-      "sha256": "c576f508316036af5b94a896fc2f3328f1b88c5981bc35d6b525daa7514042b3",
-      "sourceSha256": "5e3729ebc70c248b647b6dda60f5407c79f8d342bfabcd625b40f777e51e2877"
+      "sha256": "fc5bb65c7b05daae6a3442f113b43c65eb1b497912ecf8519a6dd4a87039db08",
+      "sourceSha256": "defe91c88fe1ea5b2bedce83cf6475e8d1c54a69a20d2ec4a7ffd5aebb18579d"
     },
     "onAccent": {
       "sourcePath": "branding/logo-on-accent.png",
       "publicPath": "/dealer-brand/logo-on-accent.webp",
-      "sha256": "c576f508316036af5b94a896fc2f3328f1b88c5981bc35d6b525daa7514042b3",
-      "sourceSha256": "5e3729ebc70c248b647b6dda60f5407c79f8d342bfabcd625b40f777e51e2877"
+      "sha256": "fc5bb65c7b05daae6a3442f113b43c65eb1b497912ecf8519a6dd4a87039db08",
+      "sourceSha256": "defe91c88fe1ea5b2bedce83cf6475e8d1c54a69a20d2ec4a7ffd5aebb18579d"
     }
   },
   "surfaceBackgrounds": {
@@ -50,16 +50,17 @@
   },
   "mark": {
     "path": "branding/logo-mark.png",
-    "sha256": "e070bb9e2ad8b0a958610495c00cd6a413ed6c9edb937e1d6d9bd2f57b6d9c7f",
+    "sha256": "9683e8c33ce43306e82c8bb08d429efbc54c0e9715e2cf0c51da54f6d1ddacc7",
     "generation": {
       "tool": "image_gen.imagegen",
-      "generationId": "exec-4da1ddee-2db2-4712-89ab-b595b1bb8f38",
+      "generationId": "exec-e765ee96-1cb7-4399-b175-65c49eee8f70",
+      "referenceKind": "actual-tool-output-filename",
       "modelVersion": null
     }
   },
   "favicon": {
     "path": "dealer-brand/favicon.ico",
-    "sha256": "9a26219d7ace473adf4fc9219b5b6eb2a00dd7740a367417c18504e51ac27e44"
+    "sha256": "8f0a076b03a7027dad5ecae287f2f85bc87ec80310aa511cfc6f812a169ca19a"
   },
   "surfaces": {
     "onLight": {
@@ -74,23 +75,25 @@
     },
     "onDark": {
       "path": "branding/logo-on-dark.png",
-      "sha256": "5e3729ebc70c248b647b6dda60f5407c79f8d342bfabcd625b40f777e51e2877",
+      "sha256": "defe91c88fe1ea5b2bedce83cf6475e8d1c54a69a20d2ec4a7ffd5aebb18579d",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-37a9a0f6-a030-406f-9421-7df3ee41cb6e",
+        "generationId": "exec-dfc98ac7-5c18-4c76-83e4-cafcdd16ac15",
+        "referenceKind": "actual-tool-output-filename",
         "modelVersion": null
       },
-      "sourceReference": "dealers/wortley-road-car-sales/branding/generated-on-dark.png"
+      "sourceReference": "dealers/wortley-road-car-sales/branding/contrast-on-dark-v2.png"
     },
     "onAccent": {
       "path": "branding/logo-on-accent.png",
-      "sha256": "5e3729ebc70c248b647b6dda60f5407c79f8d342bfabcd625b40f777e51e2877",
+      "sha256": "defe91c88fe1ea5b2bedce83cf6475e8d1c54a69a20d2ec4a7ffd5aebb18579d",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-37a9a0f6-a030-406f-9421-7df3ee41cb6e",
+        "generationId": "exec-dfc98ac7-5c18-4c76-83e4-cafcdd16ac15",
+        "referenceKind": "actual-tool-output-filename",
         "modelVersion": null
       },
-      "sourceReference": "dealers/wortley-road-car-sales/branding/generated-on-dark.png"
+      "sourceReference": "dealers/wortley-road-car-sales/branding/contrast-on-dark-v2.png"
     }
   },
   "transforms": {
@@ -109,88 +112,93 @@
     },
     "onDark": {
       "operation": "crop-transparent-padding-and-resize",
-      "sourceSha256": "c0f6756e9fde6c16f04f098660534df42b5494c3c8718099f3e361fe2fa3a9d6",
-      "sha256": "5e3729ebc70c248b647b6dda60f5407c79f8d342bfabcd625b40f777e51e2877",
+      "sourceSha256": "ea374b2cefa27c06fb4f6234fe2f97ea4fa44379cbdd6ef9e6a11f1f93a9d8a5",
+      "sha256": "defe91c88fe1ea5b2bedce83cf6475e8d1c54a69a20d2ec4a7ffd5aebb18579d",
       "crop": {
-        "left": 39,
-        "top": 53,
-        "width": 2086,
-        "height": 606
+        "left": 47,
+        "top": 55,
+        "width": 2067,
+        "height": 593
       },
-      "sourcePath": "branding/generated-on-dark.png",
+      "sourcePath": "branding/contrast-on-dark-v2.png",
       "outputPath": "branding/logo-on-dark.png"
     },
     "onAccent": {
       "operation": "crop-transparent-padding-and-resize",
-      "sourceSha256": "c0f6756e9fde6c16f04f098660534df42b5494c3c8718099f3e361fe2fa3a9d6",
-      "sha256": "5e3729ebc70c248b647b6dda60f5407c79f8d342bfabcd625b40f777e51e2877",
+      "sourceSha256": "ea374b2cefa27c06fb4f6234fe2f97ea4fa44379cbdd6ef9e6a11f1f93a9d8a5",
+      "sha256": "defe91c88fe1ea5b2bedce83cf6475e8d1c54a69a20d2ec4a7ffd5aebb18579d",
       "crop": {
-        "left": 39,
-        "top": 53,
-        "width": 2086,
-        "height": 606
+        "left": 47,
+        "top": 55,
+        "width": 2067,
+        "height": 593
       },
-      "sourcePath": "branding/generated-on-dark.png",
+      "sourcePath": "branding/contrast-on-dark-v2.png",
       "outputPath": "branding/logo-on-accent.png"
     }
   },
   "supplemental": {
     "mark-on-light.webp": {
       "path": "dealer-brand/mark-on-light.webp",
-      "sha256": "d53dfbf7522bd77b266689d471bb51964b7145d087b219980a85e434d67e743e",
+      "sha256": "c529176f87d5bd5a63adb3ec27db52d81459ca2745c76be9a58d637060aaaf77",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-4da1ddee-2db2-4712-89ab-b595b1bb8f38",
+        "generationId": "exec-e765ee96-1cb7-4399-b175-65c49eee8f70",
+        "referenceKind": "actual-tool-output-filename",
         "modelVersion": null
       },
-      "sourceReference": "dealers/wortley-road-car-sales/branding/generated-mark.png"
+      "sourceReference": "dealers/wortley-road-car-sales/branding/contrast-mark-on-light-v2.png"
     },
     "mark-on-dark.webp": {
       "path": "dealer-brand/mark-on-dark.webp",
-      "sha256": "17fc2611c1ecdf80f9c701922fae3190532f8d4f055f15596f0d875ade79deab",
+      "sha256": "84a5e3913ef24df75c7c1df2507159be9e50698b945159e0f78b5d9835cfaa38",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-37a9a0f6-a030-406f-9421-7df3ee41cb6e",
+        "generationId": "exec-7b5a29a1-9228-412e-ad94-2589a8315391",
+        "referenceKind": "actual-tool-output-filename",
         "modelVersion": null
       },
-      "sourceReference": "dealers/wortley-road-car-sales/branding/generated-mark-on-dark.png"
+      "sourceReference": "dealers/wortley-road-car-sales/branding/contrast-mark-on-dark-v2.png"
     },
     "app-icon.png": {
       "path": "dealer-brand/app-icon.png",
-      "sha256": "e070bb9e2ad8b0a958610495c00cd6a413ed6c9edb937e1d6d9bd2f57b6d9c7f",
+      "sha256": "9683e8c33ce43306e82c8bb08d429efbc54c0e9715e2cf0c51da54f6d1ddacc7",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-4da1ddee-2db2-4712-89ab-b595b1bb8f38",
+        "generationId": "exec-e765ee96-1cb7-4399-b175-65c49eee8f70",
+        "referenceKind": "actual-tool-output-filename",
         "modelVersion": null
       },
-      "sourceReference": "dealers/wortley-road-car-sales/branding/generated-mark.png"
+      "sourceReference": "dealers/wortley-road-car-sales/branding/contrast-mark-on-light-v2.png"
     },
     "favicon.ico": {
       "path": "dealer-brand/favicon.ico",
-      "sha256": "9a26219d7ace473adf4fc9219b5b6eb2a00dd7740a367417c18504e51ac27e44",
+      "sha256": "8f0a076b03a7027dad5ecae287f2f85bc87ec80310aa511cfc6f812a169ca19a",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-4da1ddee-2db2-4712-89ab-b595b1bb8f38",
+        "generationId": "exec-e765ee96-1cb7-4399-b175-65c49eee8f70",
+        "referenceKind": "actual-tool-output-filename",
         "modelVersion": null
       },
-      "sourceReference": "dealers/wortley-road-car-sales/branding/generated-mark.png"
+      "sourceReference": "dealers/wortley-road-car-sales/branding/contrast-mark-on-light-v2.png"
     }
   },
   "markOnDarkReady": true,
   "originalArtworkPreserved": true,
   "visualReview": {
     "reviewed": true,
-    "reviewedAt": "2026-10-19T19:22:56.608725Z",
+    "reviewedAt": "2026-10-20T20:16:02.106Z",
     "source": "branding/source.json",
     "spelling": "agent-visual-review",
     "dealerApproval": false
   },
   "markOnDark": {
     "path": "branding/logo-mark-on-dark.png",
-    "sha256": "dbf0d5e0931ece7c4ee549836180e88aeb5180ad6b908c13f07d04aac20cb796",
+    "sha256": "215cf4c2d3531ed4b17d5a433fce5bcf604f7325716759ab63bc2e8da6639e31",
     "generation": {
       "tool": "image_gen.imagegen",
-      "generationId": "exec-37a9a0f6-a030-406f-9421-7df3ee41cb6e",
+      "generationId": "exec-7b5a29a1-9228-412e-ad94-2589a8315391",
+      "referenceKind": "actual-tool-output-filename",
       "modelVersion": null
     }
   }

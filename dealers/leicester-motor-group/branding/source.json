@@ -45,7 +45,7 @@
   "observedAt": "2026-10-19",
   "researchConclusion": "A real identity was obtained and visually reviewed. Only a 60px monochrome italic name and car-line identity was obtained; retained the full name, monochrome palette and car-line motif, with compact LMG lettering. This is a faithful image-generated redraw for an independent preview and has not been approved by the dealer.",
   "generatedInputs": {
-    "reviewedAt": "2026-10-19T19:22:56.608725Z",
+    "reviewedAt": "2026-10-20T20:30:09.235Z",
     "master": {
       "path": "branding/generated-master.png",
       "sha256": "243197a75b2b28eb488796100d818ea05c1af5286185dffc576b0ea38f5a5d8e",
@@ -60,43 +60,29 @@
       }
     },
     "mark": {
-      "path": "branding/generated-mark.png",
-      "sha256": "fc067f1f43f75e07bb99d51091a6755d5b80bc399e0339b49da69d0bd1e04318",
+      "path": "branding/generated-compact-on-light-v2-20261020-f4373fd50f8fa609.png",
+      "sha256": "f4373fd50f8fa609116a9a25f47ba136ea1da30d0b151ddc3be13a2d74ac4779",
+      "nativeDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-1f959efb-f104-449f-8f2e-43e2c034a93b",
+        "generationId": "exec-3a584f1e-95f4-48fe-bda5-fb9676e6ae52",
         "modelVersion": null
-      },
-      "derivation": {
-        "operation": "pixel-exact rectangular extraction of the existing generated compact emblem; no recolouring or invented artwork",
-        "parentPath": "branding/generated-master.png",
-        "parentSha256": "243197a75b2b28eb488796100d818ea05c1af5286185dffc576b0ea38f5a5d8e",
-        "crop": {
-          "left": 0,
-          "top": 0,
-          "width": 948,
-          "height": 724
-        }
       }
     },
     "markOnDark": {
-      "path": "branding/generated-mark-on-dark.png",
-      "sha256": "0539eb4ccbaaa999c60bb500be2a3972176df0b674dd5ee2f7583dc00ce9a1e4",
+      "path": "branding/generated-compact-on-dark-v2-20261020-3827b06d4d5f8605.png",
+      "sha256": "3827b06d4d5f8605ad347577bc2358493119b81d38bc62ef90ed607016fcb127",
+      "nativeDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-c77d1340-0aa6-4f43-9d40-15f24da7b80b",
+        "generationId": "exec-1f444700-4c1f-4b8a-a184-18b8d014c015",
         "modelVersion": null
-      },
-      "derivation": {
-        "operation": "pixel-exact rectangular extraction of the existing generated compact emblem; no recolouring or invented artwork",
-        "parentPath": "branding/generated-on-dark.png",
-        "parentSha256": "5a999c27433f415b4b0472e1e45c57b299c95c592522e6cb72946579cc5b93f2",
-        "crop": {
-          "left": 0,
-          "top": 0,
-          "width": 948,
-          "height": 724
-        }
       }
     },
     "surfaces": {
@@ -114,71 +100,57 @@
         }
       },
       "onDark": {
-        "path": "branding/generated-on-dark.png",
-        "sha256": "5a999c27433f415b4b0472e1e45c57b299c95c592522e6cb72946579cc5b93f2",
+        "path": "branding/generated-on-dark-v2-20261020-a27e1f4249282ebd.png",
+        "sha256": "a27e1f4249282ebd2b590fc397981af6ad8d534a3f74c4f2464e5bd59bfe2e1b",
         "nativeDimensions": {
           "width": 2172,
           "height": 724
         },
         "generation": {
           "tool": "image_gen.imagegen",
-          "generationId": "exec-c77d1340-0aa6-4f43-9d40-15f24da7b80b",
+          "generationId": "exec-6bf60e09-33f7-4520-aa48-d090bbac0af5",
           "modelVersion": null
         }
       },
       "onAccent": {
-        "path": "branding/generated-on-dark.png",
-        "sha256": "5a999c27433f415b4b0472e1e45c57b299c95c592522e6cb72946579cc5b93f2",
+        "path": "branding/generated-on-dark-v2-20261020-a27e1f4249282ebd.png",
+        "sha256": "a27e1f4249282ebd2b590fc397981af6ad8d534a3f74c4f2464e5bd59bfe2e1b",
         "nativeDimensions": {
           "width": 2172,
           "height": 724
         },
         "generation": {
           "tool": "image_gen.imagegen",
-          "generationId": "exec-c77d1340-0aa6-4f43-9d40-15f24da7b80b",
+          "generationId": "exec-6bf60e09-33f7-4520-aa48-d090bbac0af5",
           "modelVersion": null
         }
       }
     },
     "marks": {
       "onLight": {
-        "path": "branding/generated-mark.png",
-        "sha256": "fc067f1f43f75e07bb99d51091a6755d5b80bc399e0339b49da69d0bd1e04318",
+        "path": "branding/generated-compact-on-light-v2-20261020-f4373fd50f8fa609.png",
+        "sha256": "f4373fd50f8fa609116a9a25f47ba136ea1da30d0b151ddc3be13a2d74ac4779",
+        "nativeDimensions": {
+          "width": 1254,
+          "height": 1254
+        },
         "generation": {
           "tool": "image_gen.imagegen",
-          "generationId": "exec-1f959efb-f104-449f-8f2e-43e2c034a93b",
+          "generationId": "exec-3a584f1e-95f4-48fe-bda5-fb9676e6ae52",
           "modelVersion": null
-        },
-        "derivation": {
-          "operation": "pixel-exact rectangular extraction of the existing generated compact emblem; no recolouring or invented artwork",
-          "parentPath": "branding/generated-master.png",
-          "parentSha256": "243197a75b2b28eb488796100d818ea05c1af5286185dffc576b0ea38f5a5d8e",
-          "crop": {
-            "left": 0,
-            "top": 0,
-            "width": 948,
-            "height": 724
-          }
         }
       },
       "onDark": {
-        "path": "branding/generated-mark-on-dark.png",
-        "sha256": "0539eb4ccbaaa999c60bb500be2a3972176df0b674dd5ee2f7583dc00ce9a1e4",
+        "path": "branding/generated-compact-on-dark-v2-20261020-3827b06d4d5f8605.png",
+        "sha256": "3827b06d4d5f8605ad347577bc2358493119b81d38bc62ef90ed607016fcb127",
+        "nativeDimensions": {
+          "width": 1254,
+          "height": 1254
+        },
         "generation": {
           "tool": "image_gen.imagegen",
-          "generationId": "exec-c77d1340-0aa6-4f43-9d40-15f24da7b80b",
+          "generationId": "exec-1f444700-4c1f-4b8a-a184-18b8d014c015",
           "modelVersion": null
-        },
-        "derivation": {
-          "operation": "pixel-exact rectangular extraction of the existing generated compact emblem; no recolouring or invented artwork",
-          "parentPath": "branding/generated-on-dark.png",
-          "parentSha256": "5a999c27433f415b4b0472e1e45c57b299c95c592522e6cb72946579cc5b93f2",
-          "crop": {
-            "left": 0,
-            "top": 0,
-            "width": 948,
-            "height": 724
-          }
         }
       }
     },
@@ -202,11 +174,11 @@
         120,
         180
       ],
-      "reviewedAt": "2026-10-19T19:22:56.608725Z",
-      "notes": "Visually reviewed the actual deterministic transparent-padding exports at120px and180px on all six retained template surface colours. Exact name spelling, silhouette, alpha edges, spacing and clipping were checked. Light-ink variants are actual imagegen results, not deterministic recolours. Small secondary suffix text is subordinate to the principal name; compact identity is provided separately."
+      "reviewedAt": "2026-10-20T20:30:09.235Z",
+      "notes": "Agent viewed matched maintained exports at120/180px and32/64px on actual six template surfaces. Original/on-light wordmarks remain exact. Generated inverse and native compact variants are independent preview proposals; no dealer/native/hosted approval."
     },
     "compactMarkStatus": "independent-preview-not-dealer-approved",
-    "compactMarkDescription": "LMG monogram and coupe roof",
+    "compactMarkDescription": "Native LM-over-G compact monogram beneath the retained coupe-roof motif",
     "compactMarkReview": {
       "reviewed": true,
       "widths": [
@@ -221,8 +193,88 @@
         "#17191c",
         "#c40101"
       ],
-      "reviewedAt": "2026-10-19T19:22:56.608725Z",
-      "notes": "Visually inspected the actual compact exports at32px and64px on all six template backgrounds. Existing-emblem pixel crops have explicit parent hashes and exact rectangle provenance; independently generated compact marks retain their own actual generation IDs. Shape, spacing, clipping and transparent counters were checked. Dealer approval remains unknown."
+      "reviewedAt": "2026-10-20T20:30:09.235Z",
+      "notes": "New native compact geometry and exact spelling visually reviewed at32/64px; padding/contrast thresholds unchanged; real imagegen light/dark variants, no stretched or filtered artwork."
     }
-  }
+  },
+  "additionalGenerations": [
+    {
+      "roles": [
+        "mark"
+      ],
+      "path": "branding/generated-compact-on-light-v2-20261020-f4373fd50f8fa609.png",
+      "sha256": "f4373fd50f8fa609116a9a25f47ba136ea1da30d0b151ddc3be13a2d74ac4779",
+      "nativeDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-3a584f1e-95f4-48fe-bda5-fb9676e6ae52",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand. Input1 is STYLE/IDENTITY reference only; its thin wide arrangement must change into a genuine SQUARE compact alternative. Keep monochrome italic angular \"LMG\" identity and the coupe-roof/car-line motif. Exact new compact layout: a small strong coupe roof above two-row lettering \"LM\" on top and large \"G\" below, reading L-M-G. Capital G MUST have clear interior horizontal crossbar, never C. Draw native new tall glyph geometry, no stretched pixels. Overall roof+LM+G occupies85-90% square width AND75-85% square height with balanced5-8% margins. Dominant solid black/dark charcoal ink for white background; no pale fills. Bold simplified strokes/transparent counters and exact recognizable letters clear at32px. Actual transparent alpha, no background tile/badge, no small business-name words, gradient, shadows, glow, haze or speckles. Preserve existing dealer initials and roof motif, no new icon.",
+      "references": [
+        {
+          "path": "branding/generated-mark.png",
+          "sha256": "fc067f1f43f75e07bb99d51091a6755d5b80bc399e0339b49da69d0bd1e04318"
+        }
+      ],
+      "createdAt": "2026-10-20T20:29:06.429Z",
+      "derivation": "Actual built-in imagegen result copied byte-for-byte. Native compact geometry newly drawn; no stretch, filters, recolouring or alpha cleanup."
+    },
+    {
+      "roles": [
+        "markOnDark"
+      ],
+      "path": "branding/generated-compact-on-dark-v2-20261020-3827b06d4d5f8605.png",
+      "sha256": "3827b06d4d5f8605ad347577bc2358493119b81d38bc62ef90ed607016fcb127",
+      "nativeDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-1f444700-4c1f-4b8a-a184-18b8d014c015",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand. Input1 is EDIT TARGET: exact new compact Leicester LMG/roof mark. Change ONLY ink to a high-contrast inverse for dark/red surfaces. Preserve the exact coupe roof motif and stacked \"LM\" above \"G\" geometry, all italic angular letter forms, clear G crossbar, placement, natural proportions, compact square canvas and transparent counters. Exact reading L-M-G. Dominant all visible ink clean solid very-light ivory/silver (#e3e7ee feel), over95% light, no dark filling. Actual transparent alpha, crisp filled strokes, clear at32px on #111113,#101820,#09090b,#17191c,#c40101. No gradient, gloss, shadow, glow, haze, white spray speckles, badge or backing tile. Do not stretch, rearrange or add anything.",
+      "references": [
+        {
+          "path": "branding/generated-compact-on-light-v2-20261020-f4373fd50f8fa609.png",
+          "sha256": "f4373fd50f8fa609116a9a25f47ba136ea1da30d0b151ddc3be13a2d74ac4779"
+        }
+      ],
+      "createdAt": "2026-10-20T20:29:06.429Z",
+      "derivation": "Actual built-in imagegen result copied byte-for-byte. Native compact geometry newly drawn; no stretch, filters, recolouring or alpha cleanup."
+    },
+    {
+      "roles": [
+        "onDark",
+        "onAccent"
+      ],
+      "path": "branding/generated-on-dark-v2-20261020-a27e1f4249282ebd.png",
+      "sha256": "a27e1f4249282ebd2b590fc397981af6ad8d534a3f74c4f2464e5bd59bfe2e1b",
+      "nativeDimensions": {
+        "width": 2172,
+        "height": 724
+      },
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-6bf60e09-33f7-4520-aa48-d090bbac0af5",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand. Input1 is EDIT TARGET, existing Leicester Motor Group full wordmark. Produce an actual high-contrast transparent inverse, preserving exact composition, all existing natural geometry, italic angular font, car-line/coupe roof above LMG at LEFT, and two-line business wording RIGHT. Text verbatim: \"LMG\", \"LEICESTER\", \"MOTOR GROUP LTD\". Preserve exact spelling L-E-I-C-E-S-T-E-R and all spacing/proportions. Change dominant ink only to solid very-light cool silver/ivory (#e3e7ee feel), over95% visible ink light, so ALL text and emblem work on #111113,#101820,#09090b,#17191c and #c40101. True transparent alpha; no background tile, dark fills, gray outlines dominating lettering, shadows, gradient, glow, haze or alpha speckles. Clear at120px and180px. Keep existing identity, no new words or motif.",
+      "references": [
+        {
+          "path": "branding/generated-master.png",
+          "sha256": "243197a75b2b28eb488796100d818ea05c1af5286185dffc576b0ea38f5a5d8e"
+        }
+      ],
+      "createdAt": "2026-10-20T20:29:06.429Z",
+      "derivation": "Actual built-in imagegen result copied byte-for-byte. Native compact geometry newly drawn; no stretch, filters, recolouring or alpha cleanup."
+    }
+  ],
+  "sourceHistory": [
+    {
+      "reference": "branding/source-before-compact-repair-20261020-133816e15544dc39.json",
+      "sha256": "133816e15544dc391861d1c7ccd0fef44ad2b99a3a15be0e10066bc230de26dc",
+      "retainedAt": "2026-10-20T20:29:06.429Z",
+      "reason": "Exact source provenance before owned compact geometry and contrast repair"
+    }
+  ]
 }

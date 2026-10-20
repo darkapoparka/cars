@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "dealer": "driveline-cars",
+  "mode": "built-in-imagegen",
+  "independentProposal": true,
+  "dealerApproved": false,
+  "originalPackDigest": "325212c97fd54856de34249fdbc18daa0dccfc51a5a6ce6e65956bf90787a5e2",
+  "originalSourceSha256": "c5c0fb0d7158fdf0e16cdead093eb8be0c45bc2752899e3d4bcacf3698a7f28c",
+  "selected": [
+    {
+      "roles": [
+        "onDark",
+        "onAccent"
+      ],
+      "filename": "contrast-on-dark-v2.png",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-4d54ce92-e09b-49fd-8670-f872ce021a15",
+        "referenceKind": "actual-tool-output-filename",
+        "modelVersion": null
+      },
+      "prompt": "Precise inverse consumer-surface edit of this existing proposal logo. Preserve exactly the squared D-and-road emblem, exact DRIVELINE CARS spelling, underline and two-line composition, typography, proportions, alignment, spacing and intended negative spaces. Change every positive shape and letter to one uniform solid very light icy blue-grey #d5e8f6. Remove all dark outlines/backing strokes, white keylines, gradients, texture, speckles and stray edge pixels. Flat smooth opaque light-blue silhouettes with crisp genuine alpha, letter counters and emblem negative spaces fully transparent. Do not fill existing holes or merge separate strokes. No background plate, colored halo, shadows, clouds, added words or redesign. The exact existing identity must remain recognizable at120px and180px. This is an independent preview proposal, no business adoption claimed.",
+      "parentReference": "branding/generated-on-dark.png",
+      "sourcePath": "branding/contrast-on-dark-v2.png",
+      "sha256": "5c7453f4cc77619a0cc3f7619bef1c6e1baba7db054ddb78b376ee4f66d0f44f",
+      "bytes": 623833,
+      "outputFile": "exec-4d54ce92-e09b-49fd-8670-f872ce021a15.png"
+    },
+    {
+      "roles": [
+        "markOnDark"
+      ],
+      "filename": "contrast-mark-on-dark-v2.png",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-bb1f49d6-951c-4516-8256-619050bfd2a1",
+        "referenceKind": "actual-tool-output-filename",
+        "modelVersion": null
+      },
+      "prompt": "Exact compact-emblem surface edit of this existing proposal. Retain the exact squared D-and-road emblem with its horizontal bars, open gaps and D counter, same proportions and arrangement. Make EVERY positive shape one uniform solid #d5e8f6; remove every other color and all dark outlines, keylines, gradients and surface texture. Preserve intended transparent holes and negative gaps; separate adjacent strokes must stay separated. Smooth flat opaque silhouettes with crisp true alpha. No added badge or square, no background, shadows, halos, speckles, extra text or redesign. A clean standalone exact existing symbol that reads at32px and64px. Independent preview proposal only.",
+      "parentReference": "branding/generated-mark-on-dark.png",
+      "sourcePath": "branding/contrast-mark-on-dark-v2.png",
+      "sha256": "afee4d21ec04a08f0a2465e544e9e93986900f07e2e70701f428bc0f9727b36d",
+      "bytes": 552916,
+      "outputFile": "exec-bb1f49d6-951c-4516-8256-619050bfd2a1.png"
+    }
+  ]
+}

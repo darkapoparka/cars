@@ -3,7 +3,7 @@
   "kind": "cars-dealer-pack-input-review",
   "dealer": "cars-4-u-wakefield",
   "reviewed": true,
-  "reviewedAt": "2026-10-20T19:15:52.904Z",
+  "reviewedAt": "2026-10-20T20:28:58.950Z",
   "review": {
     "kind": "automated",
     "humanReview": false,
@@ -42,6 +42,18 @@
       "sha256": "f4586119cff49d983f66c54653b779e33d29275f17f4beea19d2ee2672235e93"
     },
     {
+      "path": "branding/contrast-mark-on-dark-v2.png",
+      "sha256": "887303efe7123d53f2b44e94d19bd440501d09f32002158357002727ae8c8f16"
+    },
+    {
+      "path": "branding/contrast-on-dark-v2.png",
+      "sha256": "75d618e0e59391400bd080dd7f53a2527aef6b2e7ab7548e1c91430776615bf9"
+    },
+    {
+      "path": "branding/contrast-repair-20261020.json",
+      "sha256": "4702272ab4f0ec32b435649b3bab3fdfe4c01f429a224ba3d3e8b41a1a1cac6f"
+    },
+    {
       "path": "branding/generated-mark.png",
       "sha256": "3087cb58f61905b74ab39c332bc2417c7be4fd885409f01ef27020549c27f2c4"
     },
@@ -51,15 +63,15 @@
     },
     {
       "path": "branding/logo-contract.json",
-      "sha256": "777580b67320b6216f76015389c7febd5d8ea4d8803510599651957c3e1ce739"
+      "sha256": "53732d334399449e2839d010e7242c0c326fbf4ae0ec00edde2eb71e4d3f4d28"
     },
     {
       "path": "branding/logo-recipe.json",
-      "sha256": "bec8630cf1eb2582942acdb0ea450c605bcce0dbe6ed03dd88a929daf2c4c8fa"
+      "sha256": "9222d82aeb316420a15026d0cf3981063b5cc4b8dac8095d6949cae25702a068"
     },
     {
       "path": "branding/source.json",
-      "sha256": "53740545928353a3cf7c9b466bf9413a2dfd2674cf8e4c8589327a83389e64aa"
+      "sha256": "d329de933cb6128f6aa8b8be826d150787185c6c9b523da94ef22198fe295dbb"
     },
     {
       "path": "business-facts.json",
@@ -67,7 +79,7 @@
     },
     {
       "path": "copy-review.json",
-      "sha256": "bd70fad03e885f51e5561db42a43a7b203c17411542d10085dba6cf87f66fe88"
+      "sha256": "f8add79a41aad45241edb4c079dcef7e8318704e2be78e330229550b04e66e89"
     },
     {
       "path": "dealer-stock/public-1.jpg",
@@ -87,7 +99,7 @@
     },
     {
       "path": "identity-review.json",
-      "sha256": "676896601a522b0e94d0c72d299301b81ab96fefeb379a642068215562df741a"
+      "sha256": "3d53c5a48e8ec9c4b5ed2ba8a6e8494aed8e3a15e89ecad340881322bed425f7"
     },
     {
       "path": "locale.json",
@@ -99,7 +111,7 @@
     },
     {
       "path": "qualification.json",
-      "sha256": "968d5d35ca4f4ac2592526e2f25e3e896e368659c76db0ff8a748986abc14695"
+      "sha256": "0721b4feea5f8ddba6e674102c00da1b7678d81190d7683e5640dca8e11d78ab"
     },
     {
       "path": "source-evidence.json",

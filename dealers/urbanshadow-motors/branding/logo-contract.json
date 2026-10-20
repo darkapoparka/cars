@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "dealer": "urbanshadow-motors",
   "reviewed": true,
-  "reviewedAt": "2026-10-19T18:57:02.655524Z",
+  "reviewedAt": "2026-10-20T20:21:28.059Z",
   "status": "independent-proposal-not-dealer-approved",
   "creationMethod": "imagegen-redraw",
   "assets": {
@@ -15,14 +15,14 @@
     "onDark": {
       "sourcePath": "branding/logo-on-dark.png",
       "publicPath": "/dealer-brand/logo-on-dark.webp",
-      "sha256": "29b4cf66762623c44455c63b67996496affb582a5488b06c8220c693d07be689",
-      "sourceSha256": "956b8f7013a02b8bba7e5975864d3f3ced0786d709d5e7cc8fe5d6a83dd7ce7c"
+      "sha256": "4e2aa3343c550011cabc2fbeb0864c4c781af5c1a589b52fd857210e69455fa9",
+      "sourceSha256": "5db3a7b74c94c57302261a69df686798338a396c8be4c1ee2bdb0efc384c5281"
     },
     "onAccent": {
       "sourcePath": "branding/logo-on-accent.png",
       "publicPath": "/dealer-brand/logo-on-accent.webp",
-      "sha256": "29b4cf66762623c44455c63b67996496affb582a5488b06c8220c693d07be689",
-      "sourceSha256": "956b8f7013a02b8bba7e5975864d3f3ced0786d709d5e7cc8fe5d6a83dd7ce7c"
+      "sha256": "4e2aa3343c550011cabc2fbeb0864c4c781af5c1a589b52fd857210e69455fa9",
+      "sourceSha256": "5db3a7b74c94c57302261a69df686798338a396c8be4c1ee2bdb0efc384c5281"
     }
   },
   "surfaceBackgrounds": {
@@ -74,23 +74,23 @@
     },
     "onDark": {
       "path": "branding/logo-on-dark.png",
-      "sha256": "956b8f7013a02b8bba7e5975864d3f3ced0786d709d5e7cc8fe5d6a83dd7ce7c",
+      "sha256": "5db3a7b74c94c57302261a69df686798338a396c8be4c1ee2bdb0efc384c5281",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-32c5d09f-430a-43f1-9fe2-1cf0abea9b3b",
+        "generationId": "exec-96ae4fcf-2aec-4d09-acdd-373d04a26707",
         "modelVersion": null
       },
-      "sourceReference": "dealers/urbanshadow-motors/branding/generated-on-dark.png"
+      "sourceReference": "dealers/urbanshadow-motors/branding/generated-on-dark-v2-20261020.png"
     },
     "onAccent": {
       "path": "branding/logo-on-accent.png",
-      "sha256": "956b8f7013a02b8bba7e5975864d3f3ced0786d709d5e7cc8fe5d6a83dd7ce7c",
+      "sha256": "5db3a7b74c94c57302261a69df686798338a396c8be4c1ee2bdb0efc384c5281",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-32c5d09f-430a-43f1-9fe2-1cf0abea9b3b",
+        "generationId": "exec-96ae4fcf-2aec-4d09-acdd-373d04a26707",
         "modelVersion": null
       },
-      "sourceReference": "dealers/urbanshadow-motors/branding/generated-on-dark.png"
+      "sourceReference": "dealers/urbanshadow-motors/branding/generated-on-dark-v2-20261020.png"
     }
   },
   "transforms": {
@@ -109,28 +109,28 @@
     },
     "onDark": {
       "operation": "crop-transparent-padding-and-resize",
-      "sourceSha256": "706d635fba70a3ff5ae370eab60e0a17632dc17d824c844dc1e18d20e128d172",
-      "sha256": "956b8f7013a02b8bba7e5975864d3f3ced0786d709d5e7cc8fe5d6a83dd7ce7c",
+      "sourceSha256": "5753e953a2d5da7cd199f30505594539fcb1a2e59d24eca20fa27b47b3bc89d9",
+      "sha256": "5db3a7b74c94c57302261a69df686798338a396c8be4c1ee2bdb0efc384c5281",
       "crop": {
-        "left": 10,
-        "top": 51,
-        "width": 2157,
-        "height": 627
+        "left": 17,
+        "top": 55,
+        "width": 2139,
+        "height": 616
       },
-      "sourcePath": "branding/generated-on-dark.png",
+      "sourcePath": "branding/generated-on-dark-v2-20261020.png",
       "outputPath": "branding/logo-on-dark.png"
     },
     "onAccent": {
       "operation": "crop-transparent-padding-and-resize",
-      "sourceSha256": "706d635fba70a3ff5ae370eab60e0a17632dc17d824c844dc1e18d20e128d172",
-      "sha256": "956b8f7013a02b8bba7e5975864d3f3ced0786d709d5e7cc8fe5d6a83dd7ce7c",
+      "sourceSha256": "5753e953a2d5da7cd199f30505594539fcb1a2e59d24eca20fa27b47b3bc89d9",
+      "sha256": "5db3a7b74c94c57302261a69df686798338a396c8be4c1ee2bdb0efc384c5281",
       "crop": {
-        "left": 10,
-        "top": 51,
-        "width": 2157,
-        "height": 627
+        "left": 17,
+        "top": 55,
+        "width": 2139,
+        "height": 616
       },
-      "sourcePath": "branding/generated-on-dark.png",
+      "sourcePath": "branding/generated-on-dark-v2-20261020.png",
       "outputPath": "branding/logo-on-accent.png"
     }
   },
@@ -147,13 +147,13 @@
     },
     "mark-on-dark.webp": {
       "path": "dealer-brand/mark-on-dark.webp",
-      "sha256": "073fac8b97d644da90084c58884d106d65dec34016e67f46ffdd45ed098ee6ee",
+      "sha256": "7a7154a384a2d3d083476cced59cedc4c1df11ab972be224d011a346ddb86b80",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-32c5d09f-430a-43f1-9fe2-1cf0abea9b3b",
+        "generationId": "exec-ed2d7292-accc-4f19-862d-8bcd9c2c061c",
         "modelVersion": null
       },
-      "sourceReference": "dealers/urbanshadow-motors/branding/generated-mark-on-dark.png"
+      "sourceReference": "dealers/urbanshadow-motors/branding/generated-mark-on-dark-v2-20261020.png"
     },
     "app-icon.png": {
       "path": "dealer-brand/app-icon.png",
@@ -180,17 +180,17 @@
   "originalArtworkPreserved": true,
   "visualReview": {
     "reviewed": true,
-    "reviewedAt": "2026-10-19T18:57:02.655524Z",
+    "reviewedAt": "2026-10-20T20:21:28.059Z",
     "source": "branding/source.json",
     "spelling": "agent-visual-review",
     "dealerApproval": false
   },
   "markOnDark": {
     "path": "branding/logo-mark-on-dark.png",
-    "sha256": "2b063dfcf59f6245b08687ac61006fba3b90899ce4cde84b4fe49ae0e27b624e",
+    "sha256": "4275e8b7b6e582c40835e28b4c1992c3a0b7796d8b1620bec19b021a83507c8a",
     "generation": {
       "tool": "image_gen.imagegen",
-      "generationId": "exec-32c5d09f-430a-43f1-9fe2-1cf0abea9b3b",
+      "generationId": "exec-ed2d7292-accc-4f19-862d-8bcd9c2c061c",
       "modelVersion": null
     }
   }

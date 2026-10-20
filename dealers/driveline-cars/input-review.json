@@ -3,7 +3,7 @@
   "kind": "cars-dealer-pack-input-review",
   "dealer": "driveline-cars",
   "reviewed": true,
-  "reviewedAt": "2026-10-20T19:17:51.773Z",
+  "reviewedAt": "2026-10-20T20:29:08.062Z",
   "review": {
     "kind": "automated",
     "humanReview": false,
@@ -42,6 +42,18 @@
       "sha256": "a64a881cb7d63368e1b6a1b92140e5d9b22e3f4a54e225b37d2a1ea75aa9c816"
     },
     {
+      "path": "branding/contrast-mark-on-dark-v2.png",
+      "sha256": "afee4d21ec04a08f0a2465e544e9e93986900f07e2e70701f428bc0f9727b36d"
+    },
+    {
+      "path": "branding/contrast-on-dark-v2.png",
+      "sha256": "5c7453f4cc77619a0cc3f7619bef1c6e1baba7db054ddb78b376ee4f66d0f44f"
+    },
+    {
+      "path": "branding/contrast-repair-20261020.json",
+      "sha256": "8631d4ca9486f309f0142e0c9505be1027ea4507286b80f446293521f0ee48bb"
+    },
+    {
       "path": "branding/generated-mark-on-dark.png",
       "sha256": "b63695c600c7f0811fc8cd2abcac125588ab3cece218d12997954408fe865902"
     },
@@ -63,11 +75,11 @@
     },
     {
       "path": "branding/logo-contract.json",
-      "sha256": "cb8d220133eb20cb3160d24e6b07bc83e41aeac3febf038ddbe3c1ec7275e343"
+      "sha256": "04adfb614025b5e7bee1025e447afe3a77790bffec961feab864ce4ce72656e9"
     },
     {
       "path": "branding/logo-recipe.json",
-      "sha256": "7f4f7e5226cb594cae0ca75b61747eb6d0c0b6d9c037e8257ac52a74871b4839"
+      "sha256": "90ba3024b6e4e73e601482a7596ef61ef62162224fedad7645307a0ce512327e"
     },
     {
       "path": "branding/original-logo.png",
@@ -75,7 +87,7 @@
     },
     {
       "path": "branding/source.json",
-      "sha256": "c5c0fb0d7158fdf0e16cdead093eb8be0c45bc2752899e3d4bcacf3698a7f28c"
+      "sha256": "ebfafaa0e20250b975adc564bf62f6ceced74506f38a4da9e936d4de3d0de8bc"
     },
     {
       "path": "business-facts.json",
@@ -83,7 +95,7 @@
     },
     {
       "path": "copy-review.json",
-      "sha256": "d754ff726fda25267eebc8380a4e42d70e3320c54966555feee2e9b4820ce59a"
+      "sha256": "b268da28cd887e3d3c21ec624134608aec370500989797ad82b48272a75d1113"
     },
     {
       "path": "dealer-stock/listing-1.jpg",
@@ -103,7 +115,7 @@
     },
     {
       "path": "identity-review.json",
-      "sha256": "0e3d35087b62f150c05491f52d643159bcf046a27d3e422cba47be3c448c32f0"
+      "sha256": "315a3b852ca067d4ed7fe335430c5d6467751478809808d74580a638b0b17d48"
     },
     {
       "path": "locale.json",
@@ -119,7 +131,7 @@
     },
     {
       "path": "qualification.json",
-      "sha256": "89faace6d4ffa31245613e72f978e03a3dd479cac0ce6bbac1ef93e2f9901cba"
+      "sha256": "4a53dce5d2e635001cd75754e4a42ada31d874c0ffb5dec98f26b90bf38c4b99"
     },
     {
       "path": "research-review.json",

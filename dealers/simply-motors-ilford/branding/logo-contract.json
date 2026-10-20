@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "dealer": "simply-motors-ilford",
   "reviewed": true,
-  "reviewedAt": "2026-10-19T19:22:56.608725Z",
+  "reviewedAt": "2026-10-20T20:30:09.235Z",
   "status": "independent-proposal-not-dealer-approved",
   "creationMethod": "imagegen-proposal",
   "assets": {
@@ -15,14 +15,14 @@
     "onDark": {
       "sourcePath": "branding/logo-on-dark.png",
       "publicPath": "/dealer-brand/logo-on-dark.webp",
-      "sha256": "a24b0d7db6effab9919efa52841f9fbcd2250263504a65e29c7a739366418d05",
-      "sourceSha256": "64fb3383125b12ecb11d00f7ce28e62314190f53edbf2108c69d7e14562a4320"
+      "sha256": "0d73f38226d0db4d0e4e880321d31602faf13ea7564c5cf171cc9cfa6651a58f",
+      "sourceSha256": "8e1477958a970cee417ec3392abf3083162b4cf0acacb32af09645878a4bf7e9"
     },
     "onAccent": {
       "sourcePath": "branding/logo-on-accent.png",
       "publicPath": "/dealer-brand/logo-on-accent.webp",
-      "sha256": "a24b0d7db6effab9919efa52841f9fbcd2250263504a65e29c7a739366418d05",
-      "sourceSha256": "64fb3383125b12ecb11d00f7ce28e62314190f53edbf2108c69d7e14562a4320"
+      "sha256": "0d73f38226d0db4d0e4e880321d31602faf13ea7564c5cf171cc9cfa6651a58f",
+      "sourceSha256": "8e1477958a970cee417ec3392abf3083162b4cf0acacb32af09645878a4bf7e9"
     }
   },
   "surfaceBackgrounds": {
@@ -50,16 +50,16 @@
   },
   "mark": {
     "path": "branding/logo-mark.png",
-    "sha256": "edb7fa1f24bc928636aecd15caa796761658ec6b33bb623dfa2497c29ea1460e",
+    "sha256": "d167a6e22a5a6f0b46aaa76780f499c63f83dfd1827c908251fdf09fb69dcdd5",
     "generation": {
       "tool": "image_gen.imagegen",
-      "generationId": "exec-b7d4622b-0ca1-4352-84d7-ecbdce62064c",
+      "generationId": "exec-783b907e-16a6-4894-ad42-8eec20f36dc0",
       "modelVersion": null
     }
   },
   "favicon": {
     "path": "dealer-brand/favicon.ico",
-    "sha256": "daa432a6f90e70d3e8cc91fa7fa7280ad1cd1d9a822df7e70c0679cabe1d8868"
+    "sha256": "9ae8f0bea04e7b8797595d96dc260e52383add776886705f06c1fb76a2692749"
   },
   "surfaces": {
     "onLight": {
@@ -74,23 +74,23 @@
     },
     "onDark": {
       "path": "branding/logo-on-dark.png",
-      "sha256": "64fb3383125b12ecb11d00f7ce28e62314190f53edbf2108c69d7e14562a4320",
+      "sha256": "8e1477958a970cee417ec3392abf3083162b4cf0acacb32af09645878a4bf7e9",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-c34f1dfb-2b82-4e66-adc0-f0ce4c530345",
+        "generationId": "exec-13d90ffe-3b72-4b77-afbe-158a1fbbb071",
         "modelVersion": null
       },
-      "sourceReference": "dealers/simply-motors-ilford/branding/generated-on-dark.png"
+      "sourceReference": "dealers/simply-motors-ilford/branding/generated-on-dark-v2-20261020-32f6118276592930.png"
     },
     "onAccent": {
       "path": "branding/logo-on-accent.png",
-      "sha256": "64fb3383125b12ecb11d00f7ce28e62314190f53edbf2108c69d7e14562a4320",
+      "sha256": "8e1477958a970cee417ec3392abf3083162b4cf0acacb32af09645878a4bf7e9",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-c34f1dfb-2b82-4e66-adc0-f0ce4c530345",
+        "generationId": "exec-13d90ffe-3b72-4b77-afbe-158a1fbbb071",
         "modelVersion": null
       },
-      "sourceReference": "dealers/simply-motors-ilford/branding/generated-on-dark.png"
+      "sourceReference": "dealers/simply-motors-ilford/branding/generated-on-dark-v2-20261020-32f6118276592930.png"
     }
   },
   "transforms": {
@@ -109,88 +109,88 @@
     },
     "onDark": {
       "operation": "crop-transparent-padding-and-resize",
-      "sourceSha256": "6d6b0a6be6831d4b1075003b9b055585273b60c6e2a571d6e7f0905e05aa9c63",
-      "sha256": "64fb3383125b12ecb11d00f7ce28e62314190f53edbf2108c69d7e14562a4320",
+      "sourceSha256": "32f6118276592930df8b7176ee90ae673dc357e62709841f8fbe6b8442c3214b",
+      "sha256": "8e1477958a970cee417ec3392abf3083162b4cf0acacb32af09645878a4bf7e9",
       "crop": {
         "left": 0,
-        "top": 156,
-        "width": 2172,
-        "height": 373
+        "top": 193,
+        "width": 2164,
+        "height": 314
       },
-      "sourcePath": "branding/generated-on-dark.png",
+      "sourcePath": "branding/generated-on-dark-v2-20261020-32f6118276592930.png",
       "outputPath": "branding/logo-on-dark.png"
     },
     "onAccent": {
       "operation": "crop-transparent-padding-and-resize",
-      "sourceSha256": "6d6b0a6be6831d4b1075003b9b055585273b60c6e2a571d6e7f0905e05aa9c63",
-      "sha256": "64fb3383125b12ecb11d00f7ce28e62314190f53edbf2108c69d7e14562a4320",
+      "sourceSha256": "32f6118276592930df8b7176ee90ae673dc357e62709841f8fbe6b8442c3214b",
+      "sha256": "8e1477958a970cee417ec3392abf3083162b4cf0acacb32af09645878a4bf7e9",
       "crop": {
         "left": 0,
-        "top": 156,
-        "width": 2172,
-        "height": 373
+        "top": 193,
+        "width": 2164,
+        "height": 314
       },
-      "sourcePath": "branding/generated-on-dark.png",
+      "sourcePath": "branding/generated-on-dark-v2-20261020-32f6118276592930.png",
       "outputPath": "branding/logo-on-accent.png"
     }
   },
   "supplemental": {
     "mark-on-light.webp": {
       "path": "dealer-brand/mark-on-light.webp",
-      "sha256": "282917d8666043964403fb6766b9db32b5b6a6146741f637b4033d52c08b6b56",
+      "sha256": "0ac593d56e6d39e4892b91d1edb3b97310629e41b7e1f7db1f1256f556880fc3",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-b7d4622b-0ca1-4352-84d7-ecbdce62064c",
+        "generationId": "exec-783b907e-16a6-4894-ad42-8eec20f36dc0",
         "modelVersion": null
       },
-      "sourceReference": "dealers/simply-motors-ilford/branding/generated-mark.png"
+      "sourceReference": "dealers/simply-motors-ilford/branding/generated-compact-on-light-v2-20261020-79f388eb3d5e232f.png"
     },
     "mark-on-dark.webp": {
       "path": "dealer-brand/mark-on-dark.webp",
-      "sha256": "2d3dd92b7245b46784885a6b2013900f5f358b0247424c3af455bd11d138011a",
+      "sha256": "2bf1d89bbba14d72397907b28039bde979510c2d6af57b93d5819eb560517f1f",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-c34f1dfb-2b82-4e66-adc0-f0ce4c530345",
+        "generationId": "exec-041d4e34-2eeb-46a3-a3df-15b1f5c6ca81",
         "modelVersion": null
       },
-      "sourceReference": "dealers/simply-motors-ilford/branding/generated-mark-on-dark.png"
+      "sourceReference": "dealers/simply-motors-ilford/branding/generated-compact-on-dark-v2-20261020-705676452032f679.png"
     },
     "app-icon.png": {
       "path": "dealer-brand/app-icon.png",
-      "sha256": "edb7fa1f24bc928636aecd15caa796761658ec6b33bb623dfa2497c29ea1460e",
+      "sha256": "d167a6e22a5a6f0b46aaa76780f499c63f83dfd1827c908251fdf09fb69dcdd5",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-b7d4622b-0ca1-4352-84d7-ecbdce62064c",
+        "generationId": "exec-783b907e-16a6-4894-ad42-8eec20f36dc0",
         "modelVersion": null
       },
-      "sourceReference": "dealers/simply-motors-ilford/branding/generated-mark.png"
+      "sourceReference": "dealers/simply-motors-ilford/branding/generated-compact-on-light-v2-20261020-79f388eb3d5e232f.png"
     },
     "favicon.ico": {
       "path": "dealer-brand/favicon.ico",
-      "sha256": "daa432a6f90e70d3e8cc91fa7fa7280ad1cd1d9a822df7e70c0679cabe1d8868",
+      "sha256": "9ae8f0bea04e7b8797595d96dc260e52383add776886705f06c1fb76a2692749",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-b7d4622b-0ca1-4352-84d7-ecbdce62064c",
+        "generationId": "exec-783b907e-16a6-4894-ad42-8eec20f36dc0",
         "modelVersion": null
       },
-      "sourceReference": "dealers/simply-motors-ilford/branding/generated-mark.png"
+      "sourceReference": "dealers/simply-motors-ilford/branding/generated-compact-on-light-v2-20261020-79f388eb3d5e232f.png"
     }
   },
   "markOnDarkReady": true,
   "originalArtworkPreserved": true,
   "visualReview": {
     "reviewed": true,
-    "reviewedAt": "2026-10-19T19:22:56.608725Z",
+    "reviewedAt": "2026-10-20T20:30:09.235Z",
     "source": "branding/source.json",
     "spelling": "agent-visual-review",
     "dealerApproval": false
   },
   "markOnDark": {
     "path": "branding/logo-mark-on-dark.png",
-    "sha256": "964593d3d72dd6452b5b58ed8e14926c952bfe8e1a689aa46e728de445c556d3",
+    "sha256": "e4fbf897435ab08280a632afdc8c41aeef799f174f5ab9681030abcc530d911f",
     "generation": {
       "tool": "image_gen.imagegen",
-      "generationId": "exec-c34f1dfb-2b82-4e66-adc0-f0ce4c530345",
+      "generationId": "exec-041d4e34-2eeb-46a3-a3df-15b1f5c6ca81",
       "modelVersion": null
     }
   }

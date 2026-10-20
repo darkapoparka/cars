@@ -24,7 +24,7 @@
   "observedAt": "2026-10-19",
   "researchConclusion": "No usable original logo was obtained from bounded exact-business/locality searches and the matched public seller and directory sources. The dealer catalogue supplies a text identity and vehicle photographs; an unavailable or absent logo image does not prove that no original branding exists. This is an independent proposed identity, not an official dealer logo.",
   "generatedInputs": {
-    "reviewedAt": "2026-10-19T19:22:56.608725Z",
+    "reviewedAt": "2026-10-20T20:21:32.308Z",
     "master": {
       "path": "branding/generated-master.png",
       "sha256": "60dd42832104b92187a13faef3c8108cab42f98de4b88d0c2b814c6f861d6968",
@@ -59,23 +59,16 @@
       }
     },
     "markOnDark": {
-      "path": "branding/generated-mark-on-dark.png",
-      "sha256": "b652e1f22e6ef97118aefc7e19d190a4b2063a31d2befb64698aead9f7ec8aa6",
+      "path": "branding/generated-mark-on-dark-v2-20261020.png",
+      "sha256": "92ddff13a61546488870db265a68ed4fe47472f113612a3afd10dbfedcb81e83",
+      "nativeDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-ea5f7091-fd17-4fea-9952-179ba11d2175",
+        "generationId": "exec-14d531a4-fd73-4e68-abd4-5fabb3272d50",
         "modelVersion": null
-      },
-      "derivation": {
-        "operation": "pixel-exact rectangular extraction of the existing generated compact emblem; no recolouring or invented artwork",
-        "parentPath": "branding/generated-on-dark.png",
-        "parentSha256": "18b7d5f8fa5d75a6734aa22db34b091808ded7f0bf67774b3492ae1c9bce5508",
-        "crop": {
-          "left": 0,
-          "top": 0,
-          "width": 818,
-          "height": 724
-        }
       }
     },
     "surfaces": {
@@ -93,28 +86,28 @@
         }
       },
       "onDark": {
-        "path": "branding/generated-on-dark.png",
-        "sha256": "18b7d5f8fa5d75a6734aa22db34b091808ded7f0bf67774b3492ae1c9bce5508",
+        "path": "branding/generated-on-dark-v2-20261020.png",
+        "sha256": "d073a5865d7e0425614abf7002af83e10a7dece43f720b72354be4636097f7e4",
         "nativeDimensions": {
           "width": 2172,
           "height": 724
         },
         "generation": {
           "tool": "image_gen.imagegen",
-          "generationId": "exec-ea5f7091-fd17-4fea-9952-179ba11d2175",
+          "generationId": "exec-7e4a408f-462f-46e4-98fc-41be41ea2934",
           "modelVersion": null
         }
       },
       "onAccent": {
-        "path": "branding/generated-on-dark.png",
-        "sha256": "18b7d5f8fa5d75a6734aa22db34b091808ded7f0bf67774b3492ae1c9bce5508",
+        "path": "branding/generated-on-dark-v2-20261020.png",
+        "sha256": "d073a5865d7e0425614abf7002af83e10a7dece43f720b72354be4636097f7e4",
         "nativeDimensions": {
           "width": 2172,
           "height": 724
         },
         "generation": {
           "tool": "image_gen.imagegen",
-          "generationId": "exec-ea5f7091-fd17-4fea-9952-179ba11d2175",
+          "generationId": "exec-7e4a408f-462f-46e4-98fc-41be41ea2934",
           "modelVersion": null
         }
       }
@@ -141,23 +134,16 @@
         }
       },
       "onDark": {
-        "path": "branding/generated-mark-on-dark.png",
-        "sha256": "b652e1f22e6ef97118aefc7e19d190a4b2063a31d2befb64698aead9f7ec8aa6",
+        "path": "branding/generated-mark-on-dark-v2-20261020.png",
+        "sha256": "92ddff13a61546488870db265a68ed4fe47472f113612a3afd10dbfedcb81e83",
+        "nativeDimensions": {
+          "width": 1254,
+          "height": 1254
+        },
         "generation": {
           "tool": "image_gen.imagegen",
-          "generationId": "exec-ea5f7091-fd17-4fea-9952-179ba11d2175",
+          "generationId": "exec-14d531a4-fd73-4e68-abd4-5fabb3272d50",
           "modelVersion": null
-        },
-        "derivation": {
-          "operation": "pixel-exact rectangular extraction of the existing generated compact emblem; no recolouring or invented artwork",
-          "parentPath": "branding/generated-on-dark.png",
-          "parentSha256": "18b7d5f8fa5d75a6734aa22db34b091808ded7f0bf67774b3492ae1c9bce5508",
-          "crop": {
-            "left": 0,
-            "top": 0,
-            "width": 818,
-            "height": 724
-          }
         }
       }
     },
@@ -181,8 +167,12 @@
         120,
         180
       ],
-      "reviewedAt": "2026-10-19T19:22:56.608725Z",
-      "notes": "Visually reviewed the actual deterministic transparent-padding exports at120px and180px on all six retained template surface colours. Exact name spelling, silhouette, alpha edges, spacing and clipping were checked. Light-ink variants are actual imagegen results, not deterministic recolours. Small secondary suffix text is subordinate to the principal name; compact identity is provided separately."
+      "reviewedAt": "2026-10-20T20:21:32.308Z",
+      "notes": "Actual new light-ink wordmark and dark compact mark inspected at120/180px and32/64px on unchanged charcoal/navy/black/red template backgrounds. Exact spelling, established identity motifs, alpha edges, spacing and transparent counters checked. Original light/master/light compact assets and provenance remain unchanged; dealer/native/hosted approval is not inferred.",
+      "markWidths": [
+        32,
+        64
+      ]
     },
     "compactMarkStatus": "independent-preview-not-dealer-approved",
     "compactMarkDescription": "EP monogram",
@@ -200,8 +190,55 @@
         "#17191c",
         "#c40101"
       ],
-      "reviewedAt": "2026-10-19T19:22:56.608725Z",
-      "notes": "Visually inspected the actual compact exports at32px and64px on all six template backgrounds. Existing-emblem pixel crops have explicit parent hashes and exact rectangle provenance; independently generated compact marks retain their own actual generation IDs. Shape, spacing, clipping and transparent counters were checked. Dealer approval remains unknown."
+      "reviewedAt": "2026-10-20T20:21:32.308Z",
+      "notes": "The new dedicated dark compact mark is an actual built-in imagegen edit, directly retained with its own generation ID and raw byte hash. Agent inspected32/64px outputs on the five unchanged dark/red surfaces. Existing light compact mark and its exact crop provenance remain unchanged. Dealer approval remains false."
     }
-  }
+  },
+  "additionalGenerations": [
+    {
+      "roles": [
+        "onDark",
+        "onAccent"
+      ],
+      "reference": "branding/generated-on-dark.png",
+      "path": "branding/generated-on-dark-v2-20261020.png",
+      "sha256": "d073a5865d7e0425614abf7002af83e10a7dece43f720b72354be4636097f7e4",
+      "nativeDimensions": {
+        "width": 2172,
+        "height": 724
+      },
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-7e4a408f-462f-46e4-98fc-41be41ea2934",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand, faithful light-ink surface edit. Preserve the supplied stylized EP speed-line monogram on the left and exact EP CARS text on the right, all letterforms, arrangement, width and spacing. Change existing white filled strokes to solid light powder blue #accde6, a pale tint of the existing navy. Remove thick navy outlines by opening the internal separators/counters to true transparency; do not fill the E's horizontal gaps or merge the letter shapes into a block. Keep exact EP geometry and exact text EP CARS. Flat smooth opaque shapes on a genuinely transparent background, generous clear padding, no pure white fill, no dark border, gradient, texture, speckles, shadow, glow or added elements. Independent proposal, not dealer approved.",
+      "createdAt": "2026-10-20T20:21:32.308Z",
+      "derivation": "Actual built-in imagegen edit of the retained identity; raw returned PNG copied byte-identical without recolouring, filters or alpha cleanup."
+    },
+    {
+      "roles": [
+        "markOnDark"
+      ],
+      "reference": "branding/generated-mark-on-dark.png",
+      "path": "branding/generated-mark-on-dark-v2-20261020.png",
+      "sha256": "92ddff13a61546488870db265a68ed4fe47472f113612a3afd10dbfedcb81e83",
+      "nativeDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-14d531a4-fd73-4e68-abd4-5fabb3272d50",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand. Faithful light-blue dark-surface edit of supplied EP speed-line compact monogram. Preserve exact stylized slanted E and P silhouette, three horizontal speed-line bars, rounded P corner and all proportions. Convert the white filled strokes to solid light powder blue #accde6, a pale tint of the existing navy identity. Remove the thick navy/white contours and preserve internal separators and counters as transparency, especially the E's horizontal gaps; do not merge into a solid block. No text or new shapes. Clean smooth opaque flat artwork on a genuinely transparent background; no pure-white fill, dark border, gradient, texture, speckles, grain, shadow or glow. Whole mark centered with natural proportions on a generous square transparent canvas, no stretching.",
+      "createdAt": "2026-10-20T20:21:32.308Z",
+      "derivation": "Actual built-in imagegen edit of the retained identity; raw returned PNG copied byte-identical without recolouring, filters or alpha cleanup."
+    }
+  ],
+  "sourceHistory": [
+    {
+      "reference": "branding/source-before-held-logo-repair-20261020-4f60395e6f37cdce.json",
+      "sha256": "4f60395e6f37cdcefeb3d09a428f7b60992d66447132870f841f10ad7c22c4e6",
+      "retainedAt": "2026-10-20T20:21:32.308Z",
+      "reason": "Exact provenance before targeted original-held wordmark/dark-mark contrast repair"
+    }
+  ]
 }

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "kind": "cars-twelve-artwork-source-corrections",
-  "checkedAt": "2026-10-20T20:16:56.490Z",
+  "kind": "cars-artwork-source-corrections",
+  "checkedAt": "2026-10-20T20:33:39.353Z",
   "sourceParent": "cf566a99b663d6367b242d096ab2b812e2b3cb68",
   "builtInImagegen": true,
   "proposalsOnly": true,
@@ -19,10 +19,10 @@
     "ownerAcceptance": false
   },
   "summary": {
-    "packs": 12,
-    "assetChecks": 168,
-    "files": 345,
-    "bytes": 33057683
+    "packs": 22,
+    "assetChecks": 308,
+    "files": 636,
+    "bytes": 64629098
   },
   "packs": [
     {
@@ -204,10 +204,194 @@
       "hostedApproval": false,
       "dealerApproval": false,
       "ownerAcceptance": false
+    },
+    {
+      "slug": "london-used-cars",
+      "packDigest": "8daae13c0142089eb8403cc26e82126a2a88d53d48769ca24bab76836aedd0ec",
+      "files": 26,
+      "bytes": 2378252,
+      "correction": "held-inverse",
+      "assetChecks": 14,
+      "sourceCheckPassed": true,
+      "originalArtworkFactsStockPhotosPreserved": true,
+      "provenance": "dealers/london-used-cars/branding/held-logo-repair-20261020.json",
+      "nativeApproval": false,
+      "hostedApproval": false,
+      "dealerApproval": false,
+      "ownerAcceptance": false
+    },
+    {
+      "slug": "supreme-cars-luton",
+      "packDigest": "ef8a9e10b799bd9aa89589666b69723f1e27d2374ad9a28502d46a43d5e31b08",
+      "files": 31,
+      "bytes": 2675585,
+      "correction": "held-inverse",
+      "assetChecks": 14,
+      "sourceCheckPassed": true,
+      "originalArtworkFactsStockPhotosPreserved": true,
+      "provenance": "dealers/supreme-cars-luton/branding/held-logo-repair-20261020.json",
+      "nativeApproval": false,
+      "hostedApproval": false,
+      "dealerApproval": false,
+      "ownerAcceptance": false
+    },
+    {
+      "slug": "urbanshadow-motors",
+      "packDigest": "567f8eb723d7595a697c9fe6841b4ff73ed2a2261d769ecb45eb7e351d921b61",
+      "files": 28,
+      "bytes": 3232714,
+      "correction": "held-inverse",
+      "assetChecks": 14,
+      "sourceCheckPassed": true,
+      "originalArtworkFactsStockPhotosPreserved": true,
+      "provenance": "dealers/urbanshadow-motors/branding/held-logo-repair-20261020.json",
+      "nativeApproval": false,
+      "hostedApproval": false,
+      "dealerApproval": false,
+      "ownerAcceptance": false
+    },
+    {
+      "slug": "ep-cars-kirby-cross",
+      "packDigest": "b35bbdb8d61424e093b47f2b2894b7620f29c58ff80133d3945bdee57e97cb81",
+      "files": 30,
+      "bytes": 2638895,
+      "correction": "held-inverse",
+      "assetChecks": 14,
+      "sourceCheckPassed": true,
+      "originalArtworkFactsStockPhotosPreserved": true,
+      "provenance": "dealers/ep-cars-kirby-cross/branding/held-logo-repair-20261020.json",
+      "nativeApproval": false,
+      "hostedApproval": false,
+      "dealerApproval": false,
+      "ownerAcceptance": false
+    },
+    {
+      "slug": "cars-4-u-wakefield",
+      "packDigest": "85c79b3ddd183606985156cb2527fb4212578c4c6e1c169093dd1fbffcc89796",
+      "files": 24,
+      "bytes": 3164739,
+      "correction": "contrast",
+      "assetChecks": 14,
+      "sourceCheckPassed": true,
+      "originalArtworkFactsStockPhotosPreserved": true,
+      "provenance": "dealers/cars-4-u-wakefield/branding/contrast-repair-20261020.json",
+      "nativeApproval": false,
+      "hostedApproval": false,
+      "dealerApproval": false,
+      "ownerAcceptance": false
+    },
+    {
+      "slug": "driveline-cars",
+      "packDigest": "454209a5b52378f970e53f382d051f77b6ca07cb74d17cced146a8ec5599e8cc",
+      "files": 30,
+      "bytes": 3061929,
+      "correction": "contrast",
+      "assetChecks": 14,
+      "sourceCheckPassed": true,
+      "originalArtworkFactsStockPhotosPreserved": true,
+      "provenance": "dealers/driveline-cars/branding/contrast-repair-20261020.json",
+      "nativeApproval": false,
+      "hostedApproval": false,
+      "dealerApproval": false,
+      "ownerAcceptance": false
+    },
+    {
+      "slug": "lifeline-cars",
+      "packDigest": "2c2f2ea88c2592874d9ee6555464713386da0f15101c3784e1da07c9234dc109",
+      "files": 27,
+      "bytes": 3784143,
+      "correction": "contrast",
+      "assetChecks": 14,
+      "sourceCheckPassed": true,
+      "originalArtworkFactsStockPhotosPreserved": true,
+      "provenance": "dealers/lifeline-cars/branding/contrast-repair-20261020.json",
+      "nativeApproval": false,
+      "hostedApproval": false,
+      "dealerApproval": false,
+      "ownerAcceptance": false
+    },
+    {
+      "slug": "wortley-road-car-sales",
+      "packDigest": "634d2f7dbda9741f23951141e10aad0f0a751e87859bc2d026f0825807260f2e",
+      "files": 32,
+      "bytes": 3902552,
+      "correction": "contrast",
+      "assetChecks": 14,
+      "sourceCheckPassed": true,
+      "originalArtworkFactsStockPhotosPreserved": true,
+      "provenance": "dealers/wortley-road-car-sales/branding/contrast-repair-20261020.json",
+      "nativeApproval": false,
+      "hostedApproval": false,
+      "dealerApproval": false,
+      "ownerAcceptance": false
+    },
+    {
+      "slug": "leicester-motor-group",
+      "packDigest": "cd080ec62a7c2e8e7f4edce76c5e9e60091afd46fc1029e13e39c8ed7b525266",
+      "files": 32,
+      "bytes": 3520531,
+      "correction": "compact",
+      "assetChecks": 14,
+      "sourceCheckPassed": true,
+      "originalArtworkFactsStockPhotosPreserved": true,
+      "provenance": "dealers/leicester-motor-group/branding/compact-repair-20261020.json",
+      "nativeApproval": false,
+      "hostedApproval": false,
+      "dealerApproval": false,
+      "ownerAcceptance": false
+    },
+    {
+      "slug": "simply-motors-ilford",
+      "packDigest": "4c77be9769abd737433a6572106bade6fc1cd99196492c9f2805a1f3d5261760",
+      "files": 31,
+      "bytes": 3212075,
+      "correction": "compact",
+      "assetChecks": 14,
+      "sourceCheckPassed": true,
+      "originalArtworkFactsStockPhotosPreserved": true,
+      "provenance": "dealers/simply-motors-ilford/branding/compact-repair-20261020.json",
+      "nativeApproval": false,
+      "hostedApproval": false,
+      "dealerApproval": false,
+      "ownerAcceptance": false
     }
   ],
   "nativeApproval": false,
   "hostedApproval": false,
   "dealerApproval": false,
-  "ownerAcceptance": false
+  "ownerAcceptance": false,
+  "cohorts": [
+    {
+      "sourceCommit": "80ee4abfffc15255055e69b6b06ad725a2bbd85b",
+      "packs": [
+        "east-midlands-car-sales",
+        "lets-sell-your-car",
+        "lomeshaye-perfomance",
+        "saad-motors",
+        "sour-motors-hyde",
+        "zed-specialist",
+        "resi-auto-sales",
+        "al-sammarraie-used-cars",
+        "raj-motors",
+        "rpm-shentonfield",
+        "hmz-cars-dealers",
+        "j26-vans-trucks"
+      ]
+    },
+    {
+      "sourceParent": "80ee4abfffc15255055e69b6b06ad725a2bbd85b",
+      "packs": [
+        "london-used-cars",
+        "supreme-cars-luton",
+        "urbanshadow-motors",
+        "ep-cars-kirby-cross",
+        "cars-4-u-wakefield",
+        "driveline-cars",
+        "lifeline-cars",
+        "wortley-road-car-sales",
+        "leicester-motor-group",
+        "simply-motors-ilford"
+      ]
+    }
+  ]
 }

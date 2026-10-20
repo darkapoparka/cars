@@ -46,7 +46,7 @@
     }
   },
   "generatedInputs": {
-    "reviewedAt": "2026-10-19T18:57:02.655524Z",
+    "reviewedAt": "2026-10-20T20:21:28.059Z",
     "master": {
       "path": "branding/generated-master.png",
       "sha256": "49ec89b187241d193424d8d49931e7cbaca986e3f48dbbd7938814371dbbc2e9",
@@ -66,11 +66,15 @@
       }
     },
     "markOnDark": {
-      "path": "branding/generated-mark-on-dark.png",
-      "sha256": "7ef744bf967963cbba503cb0da5e99bcb2727689e498d6877c14dc188ce044db",
+      "path": "branding/generated-mark-on-dark-v2-20261020.png",
+      "sha256": "0d0d767f5b5f4f37d2bfac9d3fe73d39ed19d6898bbb25eaf9c695bee49c0bdc",
+      "nativeDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-32c5d09f-430a-43f1-9fe2-1cf0abea9b3b",
+        "generationId": "exec-ed2d7292-accc-4f19-862d-8bcd9c2c061c",
         "modelVersion": null
       }
     },
@@ -85,20 +89,28 @@
         }
       },
       "onDark": {
-        "path": "branding/generated-on-dark.png",
-        "sha256": "706d635fba70a3ff5ae370eab60e0a17632dc17d824c844dc1e18d20e128d172",
+        "path": "branding/generated-on-dark-v2-20261020.png",
+        "sha256": "5753e953a2d5da7cd199f30505594539fcb1a2e59d24eca20fa27b47b3bc89d9",
+        "nativeDimensions": {
+          "width": 2172,
+          "height": 724
+        },
         "generation": {
           "tool": "image_gen.imagegen",
-          "generationId": "exec-32c5d09f-430a-43f1-9fe2-1cf0abea9b3b",
+          "generationId": "exec-96ae4fcf-2aec-4d09-acdd-373d04a26707",
           "modelVersion": null
         }
       },
       "onAccent": {
-        "path": "branding/generated-on-dark.png",
-        "sha256": "706d635fba70a3ff5ae370eab60e0a17632dc17d824c844dc1e18d20e128d172",
+        "path": "branding/generated-on-dark-v2-20261020.png",
+        "sha256": "5753e953a2d5da7cd199f30505594539fcb1a2e59d24eca20fa27b47b3bc89d9",
+        "nativeDimensions": {
+          "width": 2172,
+          "height": 724
+        },
         "generation": {
           "tool": "image_gen.imagegen",
-          "generationId": "exec-32c5d09f-430a-43f1-9fe2-1cf0abea9b3b",
+          "generationId": "exec-96ae4fcf-2aec-4d09-acdd-373d04a26707",
           "modelVersion": null
         }
       }
@@ -128,8 +140,9 @@
         64
       ],
       "method": "Exact pipeline alpha-padding crop and resize of actual generated surface artwork. Separate light-ink generated wordmark is used on dark and accent surfaces. Compact inputs are documented actual imagegen outputs or isolated lossless crops.",
-      "reviewedAt": "2026-10-19T18:57:02.655524Z",
-      "review": "Visually reviewed the exact pipeline cropTransparentPadding exports at 120 px and 180 px wordmark widths and 32 px and 64 px compact sizes against all six required background colours. Spelling and transparency checked. Filled light wordmarks improve contrast on dark surfaces; artwork colours do not change template palettes."
+      "reviewedAt": "2026-10-20T20:21:28.059Z",
+      "review": "Visually reviewed the exact pipeline cropTransparentPadding exports at 120 px and 180 px wordmark widths and 32 px and 64 px compact sizes against all six required background colours. Spelling and transparency checked. Filled light wordmarks improve contrast on dark surfaces; artwork colours do not change template palettes.",
+      "notes": "Actual new light-ink wordmark and dark compact mark inspected at120/180px and32/64px on unchanged charcoal/navy/black/red template backgrounds. Exact spelling, established identity motifs, alpha edges, spacing and transparent counters checked. Original light/master/light compact assets and provenance remain unchanged; dealer/native/hosted approval is not inferred."
     }
   },
   "additionalGenerations": [
@@ -140,22 +153,51 @@
       "modelVersion": null,
       "reference": "branding/generated-master.png",
       "prompt": "Use case: logo-brand, exact surface variant. This is an existing approved composition being prepared for a dark website background. Preserve its exact business name, spelling, typography, emblem motif, layout, separation and proportions. Make a faithful LIGHT-INK version on a truly TRANSPARENT background: all wordmark text should be solid bright ivory-white, filled letters, not hollow outline letters. Preserve any restrained emblem accent colours if they have contrast, and use white for the emblem's dark strokes so the compact emblem also reads on charcoal. Preserve the existing dark contour where helpful. No change of shape or concept. No added content. Do not include the background; it must remain transparent. Clean perfectly smooth edges, no speckles, no distress, no glow, no shadow, no gradients. The result must be clearly legible at180px width on charcoal #111113 and dark red #c40101. Match the reference geometry; no business names or letters may be omitted or repeated."
+    },
+    {
+      "roles": [
+        "onDark",
+        "onAccent"
+      ],
+      "reference": "branding/generated-on-dark.png",
+      "path": "branding/generated-on-dark-v2-20261020.png",
+      "sha256": "5753e953a2d5da7cd199f30505594539fcb1a2e59d24eca20fa27b47b3bc89d9",
+      "nativeDimensions": {
+        "width": 2172,
+        "height": 724
+      },
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-96ae4fcf-2aec-4d09-acdd-373d04a26707",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand, faithful surface variant. Preserve exactly the supplied geometric US shield emblem at left, its hexagonal outline and internal letter geometry, and exact URBANSHADOW wordmark above MOTORS with two horizontal flanking rules. Keep letterforms, layout, scale and proportions. Make all visible artwork flat solid pale silver-grey #c8d0d8, removing heavy dark contours and pure-white keylines while keeping all internal counters and shield/letter separators transparent. No redesign or added motifs. Clean smooth uniform opaque strokes on a genuinely transparent background. No gradients, texture, speckles, grain, shadow, glow or extra words. Exact business spelling URBANSHADOW MOTORS. Generous transparent canvas padding; whole logo in frame. Faithful preview, not dealer approved.",
+      "createdAt": "2026-10-20T20:21:28.059Z",
+      "derivation": "Actual built-in imagegen edit of the retained identity; raw returned PNG copied byte-identical without recolouring, filters or alpha cleanup."
+    },
+    {
+      "roles": [
+        "markOnDark"
+      ],
+      "reference": "branding/generated-mark-on-dark.png",
+      "path": "branding/generated-mark-on-dark-v2-20261020.png",
+      "sha256": "0d0d767f5b5f4f37d2bfac9d3fe73d39ed19d6898bbb25eaf9c695bee49c0bdc",
+      "nativeDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-ed2d7292-accc-4f19-862d-8bcd9c2c061c",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand. Faithful surface-colour edit of supplied Urbanshadow US shield compact logo. Preserve exactly the hexagonal/shield outer border, nested top chevron and geometric U S letter strokes, overlap, shape and proportions. Make the existing white/grey filled strokes solid pale silver-grey #c8d0d8, and remove the thick black contours into clean transparent separators/counters. Do not merge the U/S letters or alter shield geometry. Clean smooth opaque flat strokes on a truly transparent background, no pure white, shading, gradients, grain, speckles, shadows, glow, text or new motif. Center entire original emblem naturally on a generous square transparent canvas, no stretching.",
+      "createdAt": "2026-10-20T20:21:28.059Z",
+      "derivation": "Actual built-in imagegen edit of the retained identity; raw returned PNG copied byte-identical without recolouring, filters or alpha cleanup."
     }
   ],
-  "compactOnDarkDerivation": {
-    "method": "lossless-isolated-emblem-crop",
-    "parentReference": "branding/generated-on-dark.png",
-    "parentSha256": "706d635fba70a3ff5ae370eab60e0a17632dc17d824c844dc1e18d20e128d172",
-    "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 460,
-      "height": 724
-    },
-    "generation": {
-      "tool": "image_gen.imagegen",
-      "generationId": "exec-32c5d09f-430a-43f1-9fe2-1cf0abea9b3b",
-      "modelVersion": null
+  "sourceHistory": [
+    {
+      "reference": "branding/source-before-held-logo-repair-20261020-9b6221798349657e.json",
+      "sha256": "9b6221798349657ee568583845bc8c3397464e6d2d8701415e193158a82be559",
+      "retainedAt": "2026-10-20T20:21:28.059Z",
+      "reason": "Exact provenance before targeted original-held wordmark/dark-mark contrast repair"
     }
-  }
+  ]
 }

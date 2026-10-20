@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "dealer": "ep-cars-kirby-cross",
   "reviewed": true,
-  "reviewedAt": "2026-10-19T19:22:56.608725Z",
+  "reviewedAt": "2026-10-20T20:21:32.308Z",
   "status": "independent-proposal-not-dealer-approved",
   "creationMethod": "imagegen-proposal",
   "assets": {
@@ -15,14 +15,14 @@
     "onDark": {
       "sourcePath": "branding/logo-on-dark.png",
       "publicPath": "/dealer-brand/logo-on-dark.webp",
-      "sha256": "384f4cd7ece4879f90001e2547353dbf8063d5bc66737bf1805d901ef6ac59df",
-      "sourceSha256": "ca614006478a46a55e6d59633fbf54e485b61e2cfa861177cf7238d9cb685eea"
+      "sha256": "5d13fc51f539787ab50a076cde1c481d865c4ce90d5be7acf976faf6be4dc1d3",
+      "sourceSha256": "389acba3c739fa5084b18ab172711a31fd4ddf4f91944a01d02bc3b47586686e"
     },
     "onAccent": {
       "sourcePath": "branding/logo-on-accent.png",
       "publicPath": "/dealer-brand/logo-on-accent.webp",
-      "sha256": "384f4cd7ece4879f90001e2547353dbf8063d5bc66737bf1805d901ef6ac59df",
-      "sourceSha256": "ca614006478a46a55e6d59633fbf54e485b61e2cfa861177cf7238d9cb685eea"
+      "sha256": "5d13fc51f539787ab50a076cde1c481d865c4ce90d5be7acf976faf6be4dc1d3",
+      "sourceSha256": "389acba3c739fa5084b18ab172711a31fd4ddf4f91944a01d02bc3b47586686e"
     }
   },
   "surfaceBackgrounds": {
@@ -74,23 +74,23 @@
     },
     "onDark": {
       "path": "branding/logo-on-dark.png",
-      "sha256": "ca614006478a46a55e6d59633fbf54e485b61e2cfa861177cf7238d9cb685eea",
+      "sha256": "389acba3c739fa5084b18ab172711a31fd4ddf4f91944a01d02bc3b47586686e",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-ea5f7091-fd17-4fea-9952-179ba11d2175",
+        "generationId": "exec-7e4a408f-462f-46e4-98fc-41be41ea2934",
         "modelVersion": null
       },
-      "sourceReference": "dealers/ep-cars-kirby-cross/branding/generated-on-dark.png"
+      "sourceReference": "dealers/ep-cars-kirby-cross/branding/generated-on-dark-v2-20261020.png"
     },
     "onAccent": {
       "path": "branding/logo-on-accent.png",
-      "sha256": "ca614006478a46a55e6d59633fbf54e485b61e2cfa861177cf7238d9cb685eea",
+      "sha256": "389acba3c739fa5084b18ab172711a31fd4ddf4f91944a01d02bc3b47586686e",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-ea5f7091-fd17-4fea-9952-179ba11d2175",
+        "generationId": "exec-7e4a408f-462f-46e4-98fc-41be41ea2934",
         "modelVersion": null
       },
-      "sourceReference": "dealers/ep-cars-kirby-cross/branding/generated-on-dark.png"
+      "sourceReference": "dealers/ep-cars-kirby-cross/branding/generated-on-dark-v2-20261020.png"
     }
   },
   "transforms": {
@@ -109,28 +109,28 @@
     },
     "onDark": {
       "operation": "crop-transparent-padding-and-resize",
-      "sourceSha256": "18b7d5f8fa5d75a6734aa22db34b091808ded7f0bf67774b3492ae1c9bce5508",
-      "sha256": "ca614006478a46a55e6d59633fbf54e485b61e2cfa861177cf7238d9cb685eea",
+      "sourceSha256": "d073a5865d7e0425614abf7002af83e10a7dece43f720b72354be4636097f7e4",
+      "sha256": "389acba3c739fa5084b18ab172711a31fd4ddf4f91944a01d02bc3b47586686e",
       "crop": {
         "left": 0,
-        "top": 113,
-        "width": 2172,
-        "height": 495
+        "top": 124,
+        "width": 2164,
+        "height": 466
       },
-      "sourcePath": "branding/generated-on-dark.png",
+      "sourcePath": "branding/generated-on-dark-v2-20261020.png",
       "outputPath": "branding/logo-on-dark.png"
     },
     "onAccent": {
       "operation": "crop-transparent-padding-and-resize",
-      "sourceSha256": "18b7d5f8fa5d75a6734aa22db34b091808ded7f0bf67774b3492ae1c9bce5508",
-      "sha256": "ca614006478a46a55e6d59633fbf54e485b61e2cfa861177cf7238d9cb685eea",
+      "sourceSha256": "d073a5865d7e0425614abf7002af83e10a7dece43f720b72354be4636097f7e4",
+      "sha256": "389acba3c739fa5084b18ab172711a31fd4ddf4f91944a01d02bc3b47586686e",
       "crop": {
         "left": 0,
-        "top": 113,
-        "width": 2172,
-        "height": 495
+        "top": 124,
+        "width": 2164,
+        "height": 466
       },
-      "sourcePath": "branding/generated-on-dark.png",
+      "sourcePath": "branding/generated-on-dark-v2-20261020.png",
       "outputPath": "branding/logo-on-accent.png"
     }
   },
@@ -147,13 +147,13 @@
     },
     "mark-on-dark.webp": {
       "path": "dealer-brand/mark-on-dark.webp",
-      "sha256": "be4d6b95b17e11bf0a3d03b94f3af29f68e9b209e528926c678e0664bae2c8aa",
+      "sha256": "445d1394b321fcc8d03ccc25ecb8220f565244bdb789dab17502fa4998c74da5",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-ea5f7091-fd17-4fea-9952-179ba11d2175",
+        "generationId": "exec-14d531a4-fd73-4e68-abd4-5fabb3272d50",
         "modelVersion": null
       },
-      "sourceReference": "dealers/ep-cars-kirby-cross/branding/generated-mark-on-dark.png"
+      "sourceReference": "dealers/ep-cars-kirby-cross/branding/generated-mark-on-dark-v2-20261020.png"
     },
     "app-icon.png": {
       "path": "dealer-brand/app-icon.png",
@@ -180,17 +180,17 @@
   "originalArtworkPreserved": true,
   "visualReview": {
     "reviewed": true,
-    "reviewedAt": "2026-10-19T19:22:56.608725Z",
+    "reviewedAt": "2026-10-20T20:21:32.308Z",
     "source": "branding/source.json",
     "spelling": "agent-visual-review",
     "dealerApproval": false
   },
   "markOnDark": {
     "path": "branding/logo-mark-on-dark.png",
-    "sha256": "3357f944b7b4ef76098ed730f0a4e776e5d78af34b7ed3372b50d3e605deee47",
+    "sha256": "315ef98bdc1570d5f9d011b4070f807cd7e3edc68b7bc27ceb5d869a8e788756",
     "generation": {
       "tool": "image_gen.imagegen",
-      "generationId": "exec-ea5f7091-fd17-4fea-9952-179ba11d2175",
+      "generationId": "exec-14d531a4-fd73-4e68-abd4-5fabb3272d50",
       "modelVersion": null
     }
   }

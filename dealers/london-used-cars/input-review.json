@@ -3,7 +3,7 @@
   "kind": "cars-dealer-pack-input-review",
   "dealer": "london-used-cars",
   "reviewed": true,
-  "reviewedAt": "2026-10-20T19:17:10.048Z",
+  "reviewedAt": "2026-10-20T20:18:44.086Z",
   "review": {
     "kind": "automated",
     "humanReview": false,
@@ -42,6 +42,10 @@
       "sha256": "fd9218d267f782a824de55a4a834ec65ae8cbcd7c105eca33b52eec7c4a71fa9"
     },
     {
+      "path": "branding/generated-mark-on-dark-v2-20261020.png",
+      "sha256": "bb15d693fd40c9faf2bb075ce19fd0820f71acdeba1faec3f5980bb4af5038cc"
+    },
+    {
       "path": "branding/generated-mark.png",
       "sha256": "4210e2463595eea8ab597cd066d9146e740a90d0683838084984521025cb996d"
     },
@@ -50,20 +54,32 @@
       "sha256": "fb9f7198320673b8dda4b3496b71af689bbf12cbc11a24fb3b85386ffe346deb"
     },
     {
+      "path": "branding/generated-on-dark-v2-20261020.png",
+      "sha256": "38ad566487049f9f2ff706972c52618b2852d3eceb5d41662f3575383c3e8f82"
+    },
+    {
       "path": "branding/generated-on-dark.png",
       "sha256": "febe3962f4f288b20a50273f5626af1661e0f10f919f78e3156249ba05cc6b43"
     },
     {
+      "path": "branding/held-logo-repair-20261020.json",
+      "sha256": "22caa647cf237e3152fbb917329a8d05e66244ee3784aa149f730cf1ac85666b"
+    },
+    {
       "path": "branding/logo-contract.json",
-      "sha256": "e61e575112ae6025b7f69d258e878d1d07e0aa88426cc27bd6b82c45b46a49f8"
+      "sha256": "ebde7cf91778ae5bd6ba5edcd02771c1a00a5559a7dba74d61527f4577f651bf"
     },
     {
       "path": "branding/logo-recipe.json",
-      "sha256": "5ab94accc79fbd6b946f5d70a5a9257e5e4d72e02bf5eaa0318ef7aeb6f47d7c"
+      "sha256": "203d3c22e1b8ce09e0fcee8617dfdcdc367a6f18c90a508f59ca83cf7749b03d"
+    },
+    {
+      "path": "branding/source-before-held-logo-repair-20261020-f7411a2b2808797e.json",
+      "sha256": "f7411a2b2808797e70208b4c71c5e5753c7cc61f3a8a150b58c8167b7ed9b965"
     },
     {
       "path": "branding/source.json",
-      "sha256": "f7411a2b2808797e70208b4c71c5e5753c7cc61f3a8a150b58c8167b7ed9b965"
+      "sha256": "bb685e9f6e57f33decc3fe3d9306789f8489e21f32a21a6a85942d044db6c70f"
     },
     {
       "path": "business-facts.json",
@@ -71,7 +87,7 @@
     },
     {
       "path": "copy-review.json",
-      "sha256": "06d73b68224ffbe3914555ec1baf94fab62d0d5f59405fb7d7b7ae15e0e33a85"
+      "sha256": "38efcfa5a1cbfe1490bdf860faf040645ea6f5240b1229fe7c73a19065b84e7b"
     },
     {
       "path": "dealer-stock/public-1.jpg",
@@ -91,7 +107,7 @@
     },
     {
       "path": "identity-review.json",
-      "sha256": "c1aefbdeea042104c639c8d7917bf267ab90bcf6b9bdfaf920978ff01628ce02"
+      "sha256": "054d05abd46d85498233dff4976bd50b88ab2d27d8551150e10888d6573fbbe3"
     },
     {
       "path": "locale.json",
@@ -103,7 +119,7 @@
     },
     {
       "path": "qualification.json",
-      "sha256": "82988e160a2d705a1666f75b92aee4223b6a8f62eee46a0a2fe6f50157e265bb"
+      "sha256": "f12ef114895154f1ad6d40892ca04d8a068c6b247929e7ce7dbd3087d3c5efac"
     },
     {
       "path": "source-evidence.json",

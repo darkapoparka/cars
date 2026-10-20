@@ -3,7 +3,7 @@
   "kind": "cars-dealer-pack-input-review",
   "dealer": "simply-motors-ilford",
   "reviewed": true,
-  "reviewedAt": "2026-10-20T19:21:49.658Z",
+  "reviewedAt": "2026-10-20T20:30:34.309Z",
   "review": {
     "kind": "automated",
     "humanReview": false,
@@ -42,6 +42,18 @@
       "sha256": "9e1bc897eae1815da9c6baa26767264546591d7f10493671708f0479ee1a4182"
     },
     {
+      "path": "branding/compact-repair-20261020.json",
+      "sha256": "8e6d64140ba9730adf9f68b4eab9a18323d13d60ebddd6b91bb1e9be8406a536"
+    },
+    {
+      "path": "branding/generated-compact-on-dark-v2-20261020-705676452032f679.png",
+      "sha256": "705676452032f679bef92f4632dfd5b979dbeea3696b71a15a8acb0cfa2fe77a"
+    },
+    {
+      "path": "branding/generated-compact-on-light-v2-20261020-79f388eb3d5e232f.png",
+      "sha256": "79f388eb3d5e232f80f7a294d6a8f64085a809a7442dbe7b3e82c444bd42d7cd"
+    },
+    {
       "path": "branding/generated-mark-on-dark.png",
       "sha256": "e0e31d53cf93e28ce5dff96198b1022adecba6d286d411b1512b7e058ae9e373"
     },
@@ -54,6 +66,10 @@
       "sha256": "f3ce077890f2f74e3afd53cbaba6cf92322ee67d399745f3beb1708d525902a3"
     },
     {
+      "path": "branding/generated-on-dark-v2-20261020-32f6118276592930.png",
+      "sha256": "32f6118276592930df8b7176ee90ae673dc357e62709841f8fbe6b8442c3214b"
+    },
+    {
       "path": "branding/generated-on-dark.png",
       "sha256": "6d6b0a6be6831d4b1075003b9b055585273b60c6e2a571d6e7f0905e05aa9c63"
     },
@@ -63,15 +79,19 @@
     },
     {
       "path": "branding/logo-contract.json",
-      "sha256": "a211819548053a164927f88e39815af1e3250c79a54a09f53c3a8da0e932fdf0"
+      "sha256": "28dabdc3ba5fa61f0c3a1954393ee19373c274d6144397373988800011eecb26"
     },
     {
       "path": "branding/logo-recipe.json",
-      "sha256": "f346c45902bf10bc2cc747c61a91f40017a3f6fd63d803eab19eebee316d98ea"
+      "sha256": "c3a5df9df675ed8878a80cc332634ec9663f6ff42f2d392632d91ed12b1739d3"
+    },
+    {
+      "path": "branding/source-before-compact-repair-20261020-490e14159b788f67.json",
+      "sha256": "490e14159b788f670e9bb834ea907a463b92d75136825e2c9f30f0ca4605ce9b"
     },
     {
       "path": "branding/source.json",
-      "sha256": "490e14159b788f670e9bb834ea907a463b92d75136825e2c9f30f0ca4605ce9b"
+      "sha256": "b87b6456f904bfe9042d1b9752c0ac3c1e13b4a9bb5815a9318ab14afa657e00"
     },
     {
       "path": "business-facts.json",
@@ -79,7 +99,7 @@
     },
     {
       "path": "copy-review.json",
-      "sha256": "2277a97fcd70cb6a0a32e85221a8e1ba737d39aaf2a31c4028122e65ff696316"
+      "sha256": "a3773964243d4f1c77b4d9fbee905b7b55085cb807d29edc0e526419864b4f10"
     },
     {
       "path": "dealer-stock/listing-1.jpg",
@@ -95,11 +115,11 @@
     },
     {
       "path": "dealer.json",
-      "sha256": "d83a5ce0af07297afee0934ff946fadaf39d58c61339b88cb9b550ca4a5109fc"
+      "sha256": "10476fccd33d4526f0fc47490b2f471e583ee6fdaaa4ad1618b66327e1c936f9"
     },
     {
       "path": "identity-review.json",
-      "sha256": "007036c4aabafdd071a54653788dac83e387c9ce39f444ff3dc025d3818a7100"
+      "sha256": "3cf8a57fa39c4ea8481e172d0ae6fcdf47b102d3e773a186a291975606c7e774"
     },
     {
       "path": "locale.json",
@@ -115,7 +135,7 @@
     },
     {
       "path": "qualification.json",
-      "sha256": "68357e41303f139d81b1bbfc9a5cc79e1f6b7785de66f2524cb2dcf42aa0e832"
+      "sha256": "1bcb8f37486417a6963a943a8018c4893d15fd74e0c347a80f968a850ae124a9"
     },
     {
       "path": "research-review.json",

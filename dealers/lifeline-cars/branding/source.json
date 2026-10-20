@@ -42,7 +42,7 @@
     }
   },
   "generatedInputs": {
-    "reviewedAt": "2026-10-19T18:56:33.142650Z",
+    "reviewedAt": "2026-10-20T20:23:07.279Z",
     "master": {
       "path": "branding/generated-master.png",
       "sha256": "0314f4bfd100ef30b26ff4ecdc1a3ad39afce7b336a0bb8c02c4eb3072b5ee6c",
@@ -53,20 +53,22 @@
       }
     },
     "mark": {
-      "path": "branding/generated-mark.png",
-      "sha256": "ce0a66aff4ff98a90d6110757708eeeab8f8aa312ef7d14a4498256ce0fc4868",
+      "path": "branding/contrast-mark-on-light-v2.png",
+      "sha256": "f5db00b66e6ebef3a2a9b030e9c79a9baad7cc04252ddc1c613da0990f454aa8",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-5d2fe7a1-eb5a-41c9-8554-86f33f07f68f",
+        "generationId": "exec-ba89cdea-9134-4d99-bcb6-791366ed0283",
+        "referenceKind": "actual-tool-output-filename",
         "modelVersion": null
       }
     },
     "markOnDark": {
-      "path": "branding/generated-mark-on-dark.png",
-      "sha256": "c30f0a6c781499237b27f8d5e1f508f9c180de2ab3cd6771fd6046272f563196",
+      "path": "branding/contrast-mark-on-dark-v2.png",
+      "sha256": "5c889355b49778aec6dafd86e0e815d68908add9547d13a39978d134569c0df9",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-bc87592e-c859-43e9-ac4d-f5c62e42c389",
+        "generationId": "exec-55b43a60-bc23-4d83-be12-fed33f5d1039",
+        "referenceKind": "actual-tool-output-filename",
         "modelVersion": null
       }
     },
@@ -81,20 +83,22 @@
         }
       },
       "onDark": {
-        "path": "branding/generated-on-dark.png",
-        "sha256": "8a1d0ca6a54e753aca21323efd3a306df80da4593ee306d6fd608f7bef5e3653",
+        "path": "branding/contrast-on-dark-v2.png",
+        "sha256": "77746891bdea086a29221cced0b55238657e79678b450b4501584a34e93fd075",
         "generation": {
           "tool": "image_gen.imagegen",
-          "generationId": "exec-bc87592e-c859-43e9-ac4d-f5c62e42c389",
+          "generationId": "exec-7bacb3e8-5dcb-43a3-ae21-dab34a37de96",
+          "referenceKind": "actual-tool-output-filename",
           "modelVersion": null
         }
       },
       "onAccent": {
-        "path": "branding/generated-on-dark.png",
-        "sha256": "8a1d0ca6a54e753aca21323efd3a306df80da4593ee306d6fd608f7bef5e3653",
+        "path": "branding/contrast-on-dark-v2.png",
+        "sha256": "77746891bdea086a29221cced0b55238657e79678b450b4501584a34e93fd075",
         "generation": {
           "tool": "image_gen.imagegen",
-          "generationId": "exec-bc87592e-c859-43e9-ac4d-f5c62e42c389",
+          "generationId": "exec-7bacb3e8-5dcb-43a3-ae21-dab34a37de96",
+          "referenceKind": "actual-tool-output-filename",
           "modelVersion": null
         }
       }
@@ -123,9 +127,9 @@
         32,
         64
       ],
-      "method": "Exact pipeline alpha-padding crop and resize of actual generated surface artwork. Separate light-ink generated wordmark is used on dark and accent surfaces. Compact inputs are documented actual imagegen outputs or isolated lossless crops.",
-      "reviewedAt": "2026-10-19T18:56:33.142650Z",
-      "review": "Visually reviewed the exact pipeline cropTransparentPadding exports at 120 px and 180 px wordmark widths and 32 px and 64 px compact sizes against all six required background colours. Spelling and transparency checked. Filled light wordmarks improve contrast on dark surfaces; artwork colours do not change template palettes."
+      "method": "Agent review of exact maintained before/after source raster exports on current consumer backgrounds; unchanged technical pixel checks. New neutral/brand inverse treatment is artwork only and does not change template palettes.",
+      "reviewedAt": "2026-10-20T20:23:07.279Z",
+      "review": "Exact existing spelling and emblem geometry retained. Original inputs and generation provenance remain preserved. Independent proposal; no human/dealer/native/hosted acceptance inferred."
     }
   },
   "additionalGenerations": [
@@ -153,5 +157,127 @@
       "generationId": "exec-bc87592e-c859-43e9-ac4d-f5c62e42c389",
       "modelVersion": null
     }
+  },
+  "artworkHistory": [
+    {
+      "supersededAt": "2026-10-20T20:23:07.279Z",
+      "reason": "Dedicated consumer surface variants correct measured pixel contrast; existing source inputs remain retained.",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-5d2fe7a1-eb5a-41c9-8554-86f33f07f68f",
+        "modelVersion": null,
+        "prompt": "Use case: logo-brand. Design a professional, distinctive independent proposal logo for the UK vehicle seller \"LIFELINE CARS\". Transparent background. Motif and colours: a compact LC monogram built from an elegant continuous road line, without medical or heartbeat imagery; deep navy and vivid emerald. One wide horizontal lockup: compact emblem at far left, substantial transparent gap, and the exact full business name to its right in bold beautifully spaced modern lettering. Text must read \"LIFELINE CARS\" exactly, no extra words or tagline. Keep the emblem inside the left 22% of the canvas, isolated from all text so it can be cropped for a favicon. Flat clean graphic design with thick simple forms, no gradients, no photographic textures, no 3D, no background, no mockup, no decorative tiny lines. Include a crisp white outer keyline around the dark shapes and a fine dark edge on any white shapes so this same transparent artwork remains legible on white, charcoal and dark-red website backgrounds. Restrained expert typography. Compact symbol must remain distinctive at 32px. Not a dealer-approved logo."
+      },
+      "compactDerivation": {
+        "method": "lossless-isolated-emblem-crop",
+        "parentReference": "branding/generated-master.png",
+        "parentSha256": "0314f4bfd100ef30b26ff4ecdc1a3ad39afce7b336a0bb8c02c4eb3072b5ee6c",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 560,
+          "height": 724
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-5d2fe7a1-eb5a-41c9-8554-86f33f07f68f",
+          "modelVersion": null
+        }
+      },
+      "generatedInputs": {
+        "reviewedAt": "2026-10-19T18:56:33.142650Z",
+        "master": {
+          "path": "branding/generated-master.png",
+          "sha256": "0314f4bfd100ef30b26ff4ecdc1a3ad39afce7b336a0bb8c02c4eb3072b5ee6c",
+          "generation": {
+            "tool": "image_gen.imagegen",
+            "generationId": "exec-5d2fe7a1-eb5a-41c9-8554-86f33f07f68f",
+            "modelVersion": null
+          }
+        },
+        "mark": {
+          "path": "branding/generated-mark.png",
+          "sha256": "ce0a66aff4ff98a90d6110757708eeeab8f8aa312ef7d14a4498256ce0fc4868",
+          "generation": {
+            "tool": "image_gen.imagegen",
+            "generationId": "exec-5d2fe7a1-eb5a-41c9-8554-86f33f07f68f",
+            "modelVersion": null
+          }
+        },
+        "markOnDark": {
+          "path": "branding/generated-mark-on-dark.png",
+          "sha256": "c30f0a6c781499237b27f8d5e1f508f9c180de2ab3cd6771fd6046272f563196",
+          "generation": {
+            "tool": "image_gen.imagegen",
+            "generationId": "exec-bc87592e-c859-43e9-ac4d-f5c62e42c389",
+            "modelVersion": null
+          }
+        },
+        "surfaces": {
+          "onLight": {
+            "path": "branding/generated-master.png",
+            "sha256": "0314f4bfd100ef30b26ff4ecdc1a3ad39afce7b336a0bb8c02c4eb3072b5ee6c",
+            "generation": {
+              "tool": "image_gen.imagegen",
+              "generationId": "exec-5d2fe7a1-eb5a-41c9-8554-86f33f07f68f",
+              "modelVersion": null
+            }
+          },
+          "onDark": {
+            "path": "branding/generated-on-dark.png",
+            "sha256": "8a1d0ca6a54e753aca21323efd3a306df80da4593ee306d6fd608f7bef5e3653",
+            "generation": {
+              "tool": "image_gen.imagegen",
+              "generationId": "exec-bc87592e-c859-43e9-ac4d-f5c62e42c389",
+              "modelVersion": null
+            }
+          },
+          "onAccent": {
+            "path": "branding/generated-on-dark.png",
+            "sha256": "8a1d0ca6a54e753aca21323efd3a306df80da4593ee306d6fd608f7bef5e3653",
+            "generation": {
+              "tool": "image_gen.imagegen",
+              "generationId": "exec-bc87592e-c859-43e9-ac4d-f5c62e42c389",
+              "modelVersion": null
+            }
+          }
+        },
+        "surfaceReview": {
+          "reviewed": true,
+          "backgrounds": {
+            "onLight": [
+              "#ffffff"
+            ],
+            "onDark": [
+              "#111113",
+              "#101820"
+            ],
+            "onAccent": [
+              "#09090b",
+              "#17191c",
+              "#c40101"
+            ]
+          },
+          "wordmarkWidths": [
+            120,
+            180
+          ],
+          "markWidths": [
+            32,
+            64
+          ],
+          "method": "Exact pipeline alpha-padding crop and resize of actual generated surface artwork. Separate light-ink generated wordmark is used on dark and accent surfaces. Compact inputs are documented actual imagegen outputs or isolated lossless crops.",
+          "reviewedAt": "2026-10-19T18:56:33.142650Z",
+          "review": "Visually reviewed the exact pipeline cropTransparentPadding exports at 120 px and 180 px wordmark widths and 32 px and 64 px compact sizes against all six required background colours. Spelling and transparency checked. Filled light wordmarks improve contrast on dark surfaces; artwork colours do not change template palettes."
+        }
+      }
+    }
+  ],
+  "contrastCorrection": {
+    "reviewedAt": "2026-10-20T20:23:07.279Z",
+    "provenance": "branding/contrast-repair-20261020.json",
+    "reason": "Measured weak contrast in the original98-pack focused pixel preflight",
+    "originalArtworkPreserved": true,
+    "dealerApproved": false
   }
 }

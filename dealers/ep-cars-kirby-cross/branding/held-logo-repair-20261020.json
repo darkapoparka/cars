@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-original-held-logo-contrast-repair",
+  "dealer": "ep-cars-kirby-cross",
+  "createdAt": "2026-10-20T20:21:32.308Z",
+  "previousPackDigest": "9d0f2a84602865ae80577268593f226a76e860c063c3693f56a70f34cf683e5c",
+  "previousSource": {
+    "path": "branding/source-before-held-logo-repair-20261020-4f60395e6f37cdce.json",
+    "sha256": "4f60395e6f37cdcefeb3d09a428f7b60992d66447132870f841f10ad7c22c4e6"
+  },
+  "previousInputs": {
+    "onDark": {
+      "path": "branding/generated-on-dark.png",
+      "sha256": "18b7d5f8fa5d75a6734aa22db34b091808ded7f0bf67774b3492ae1c9bce5508",
+      "nativeDimensions": {
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-ea5f7091-fd17-4fea-9952-179ba11d2175",
+        "modelVersion": null
+      }
+    },
+    "onAccent": {
+      "path": "branding/generated-on-dark.png",
+      "sha256": "18b7d5f8fa5d75a6734aa22db34b091808ded7f0bf67774b3492ae1c9bce5508",
+      "nativeDimensions": {
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-ea5f7091-fd17-4fea-9952-179ba11d2175",
+        "modelVersion": null
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-on-dark.png",
+      "sha256": "b652e1f22e6ef97118aefc7e19d190a4b2063a31d2befb64698aead9f7ec8aa6",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-ea5f7091-fd17-4fea-9952-179ba11d2175",
+        "modelVersion": null
+      },
+      "derivation": {
+        "operation": "pixel-exact rectangular extraction of the existing generated compact emblem; no recolouring or invented artwork",
+        "parentPath": "branding/generated-on-dark.png",
+        "parentSha256": "18b7d5f8fa5d75a6734aa22db34b091808ded7f0bf67774b3492ae1c9bce5508",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 818,
+          "height": 724
+        }
+      }
+    }
+  },
+  "replacements": [
+    {
+      "roles": [
+        "onDark",
+        "onAccent"
+      ],
+      "reference": "branding/generated-on-dark.png",
+      "path": "branding/generated-on-dark-v2-20261020.png",
+      "sha256": "d073a5865d7e0425614abf7002af83e10a7dece43f720b72354be4636097f7e4",
+      "nativeDimensions": {
+        "width": 2172,
+        "height": 724
+      },
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-7e4a408f-462f-46e4-98fc-41be41ea2934",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand, faithful light-ink surface edit. Preserve the supplied stylized EP speed-line monogram on the left and exact EP CARS text on the right, all letterforms, arrangement, width and spacing. Change existing white filled strokes to solid light powder blue #accde6, a pale tint of the existing navy. Remove thick navy outlines by opening the internal separators/counters to true transparency; do not fill the E's horizontal gaps or merge the letter shapes into a block. Keep exact EP geometry and exact text EP CARS. Flat smooth opaque shapes on a genuinely transparent background, generous clear padding, no pure white fill, no dark border, gradient, texture, speckles, shadow, glow or added elements. Independent proposal, not dealer approved.",
+      "createdAt": "2026-10-20T20:21:32.308Z",
+      "derivation": "Actual built-in imagegen edit of the retained identity; raw returned PNG copied byte-identical without recolouring, filters or alpha cleanup."
+    },
+    {
+      "roles": [
+        "markOnDark"
+      ],
+      "reference": "branding/generated-mark-on-dark.png",
+      "path": "branding/generated-mark-on-dark-v2-20261020.png",
+      "sha256": "92ddff13a61546488870db265a68ed4fe47472f113612a3afd10dbfedcb81e83",
+      "nativeDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-14d531a4-fd73-4e68-abd4-5fabb3272d50",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand. Faithful light-blue dark-surface edit of supplied EP speed-line compact monogram. Preserve exact stylized slanted E and P silhouette, three horizontal speed-line bars, rounded P corner and all proportions. Convert the white filled strokes to solid light powder blue #accde6, a pale tint of the existing navy identity. Remove the thick navy/white contours and preserve internal separators and counters as transparency, especially the E's horizontal gaps; do not merge into a solid block. No text or new shapes. Clean smooth opaque flat artwork on a genuinely transparent background; no pure-white fill, dark border, gradient, texture, speckles, grain, shadow or glow. Whole mark centered with natural proportions on a generous square transparent canvas, no stretching.",
+      "createdAt": "2026-10-20T20:21:32.308Z",
+      "derivation": "Actual built-in imagegen edit of the retained identity; raw returned PNG copied byte-identical without recolouring, filters or alpha cleanup."
+    }
+  ],
+  "visualReview": {
+    "wordmarkWidths": [
+      120,
+      180
+    ],
+    "compactWidths": [
+      32,
+      64
+    ],
+    "backgrounds": [
+      "#111113",
+      "#101820",
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ],
+    "identityAndSpelling": "agent-visual-review",
+    "dealerApproval": false,
+    "nativeApproval": false,
+    "hostedApproval": false,
+    "humanReview": false
+  },
+  "originalMasterLightCompactFactsStockPhotosPreserved": true,
+  "toolPackage": "L:/CODEX/cars/templates/karento-best/package.json",
+  "filtersApplied": false,
+  "thresholdsChanged": false,
+  "providerWrites": 0
+}

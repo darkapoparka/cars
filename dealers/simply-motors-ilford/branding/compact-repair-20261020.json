@@ -1,0 +1,139 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-owned-compact-geometry-and-contrast-repair",
+  "dealer": "simply-motors-ilford",
+  "createdAt": "2026-10-20T20:29:03.293Z",
+  "previousPackDigest": "76448fb09ba926f5a2db29c6a55df3204996f80e2b22cffffd743a53dd39ecce",
+  "previousSource": {
+    "path": "branding/source-before-compact-repair-20261020-490e14159b788f67.json",
+    "sha256": "490e14159b788f670e9bb834ea907a463b92d75136825e2c9f30f0ca4605ce9b"
+  },
+  "description": "Native rounded-S-over-angular-M compact monogram",
+  "replacements": [
+    {
+      "key": "compact-simply-light-v3",
+      "roles": [
+        "mark"
+      ],
+      "path": "branding/generated-compact-on-light-v2-20261020-79f388eb3d5e232f.png",
+      "sha256": "79f388eb3d5e232f80f7a294d6a8f64085a809a7442dbe7b3e82c444bd42d7cd",
+      "nativeDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-783b907e-16a6-4894-ad42-8eec20f36dc0",
+        "modelVersion": null
+      },
+      "prompt": "Use case: logo-brand. Input1 is STYLE/IDENTITY reference only; change the ultra-wide arrangement into a native square compact version. Exact letters \"SM\", arranged large rounded S ABOVE large angular M, reading S-M, retaining the existing smoothly rounded S channel and angular bold M motifs. Do not add other letters, words or icons. Draw genuinely new natural tall compact geometry, no stretching old pixels. Overall S-over-M composition fills85-90% square width AND75-85% square height with small balanced transparent margins. Dominant solid near-black ink, monochrome palette for white surfaces. Robust simple strokes and clear transparent counters at32px; S must read as letter S, M as letter M. No badge/backplate/background, gradient, shadow, glow, haze or speckles. Actual transparent alpha required.",
+      "references": [
+        {
+          "path": "branding/generated-mark.png",
+          "sha256": "cb0e4a2504bedbd561dcf219c8437cbc11434c801499ffb4dd8f55067e0bb522"
+        }
+      ]
+    },
+    {
+      "key": "compact-simply-dark-v3",
+      "roles": [
+        "markOnDark"
+      ],
+      "path": "branding/generated-compact-on-dark-v2-20261020-705676452032f679.png",
+      "sha256": "705676452032f679bef92f4632dfd5b979dbeea3696b71a15a8acb0cfa2fe77a",
+      "nativeDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-041d4e34-2eeb-46a3-a3df-15b1f5c6ca81",
+        "modelVersion": null
+      },
+      "prompt": "Use case: logo-brand. Input1 is EDIT TARGET: exact new compact S-over-M Simply Motors monogram. Change ONLY ink to a true light inverse for dark/red backgrounds. Preserve exact rounded S shape, angular M below, letter counters, stacked placement, size, natural tall geometry and transparent square canvas. Exact reading S-M. Dominant all visible ink clean solid very-light ivory/silver (#e3e7ee feel), over95% light. Actual alpha transparency, no dark filling or background tile, no badge, gradient, glow, shadow, haze or alpha speckles. Crisp strong mark clear at32px on #111113,#101820,#09090b,#17191c,#c40101. Do not stretch source or change identity.",
+      "references": [
+        {
+          "path": "branding/generated-compact-on-light-v2-20261020-79f388eb3d5e232f.png",
+          "sha256": "79f388eb3d5e232f80f7a294d6a8f64085a809a7442dbe7b3e82c444bd42d7cd"
+        }
+      ]
+    },
+    {
+      "key": "wordmark-simply-dark-v2",
+      "roles": [
+        "onDark",
+        "onAccent"
+      ],
+      "path": "branding/generated-on-dark-v2-20261020-32f6118276592930.png",
+      "sha256": "32f6118276592930df8b7176ee90ae673dc357e62709841f8fbe6b8442c3214b",
+      "nativeDimensions": {
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-13d90ffe-3b72-4b77-afbe-158a1fbbb071",
+        "modelVersion": null
+      },
+      "prompt": "Use case: logo-brand. Input1 is EDIT TARGET: existing Simply Motors proposal identity. Create a real transparent inverse with identical geometry/composition: joined SM emblem LEFT, exact uppercase \"SIMPLY MOTORS\" RIGHT. Text verbatim \"SIMPLY MOTORS\", S-I-M-P-L-Y M-O-T-O-R-S. Preserve letter shapes, smooth S/angular M motif, kerning, all proportions and natural wide aspect. Change dominant emblem and text ink to clean solid very-light cool ivory/silver (#e3e7ee feel), over95% ink light. Must clearly contrast on #111113,#101820,#09090b,#17191c and #c40101 at120/180px. Actual transparent alpha, no background rectangle, dark fills, shadow, gradient, glow, haze or speckled alpha texture. No added slogan or rebranding.",
+      "references": [
+        {
+          "path": "branding/generated-master.png",
+          "sha256": "f3ce077890f2f74e3afd53cbaba6cf92322ee67d399745f3beb1708d525902a3"
+        }
+      ]
+    }
+  ],
+  "visualReview": {
+    "kind": "agent-visual-review",
+    "viewedAt": "2026-10-20T20:30:09.235Z",
+    "method": "Viewed both exact maintained export before/after boards at wordmark180/120px and compact64/32px on all six actual template backgrounds. Confirmed Leicester LMG+roof and Simply SM identity/spelling, padding, alpha edges and useful native compact geometry.",
+    "humanReview": false,
+    "dealerApproval": false,
+    "ownerApproval": false,
+    "comparison": {
+      "path": "J:/.artifacts/cars-source-sync/simply-motors-ilford-compact-logo-before-after.png",
+      "bytes": 206062,
+      "sha256": "a2ed64aa238f7284630acd6e1d43622a6b5651f37c7e962a37dd3444f00980cd",
+      "wordmarkWidths": [
+        120,
+        180
+      ],
+      "compactWidths": [
+        32,
+        64
+      ],
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#101820",
+        "#09090b",
+        "#17191c",
+        "#c40101"
+      ]
+    },
+    "wordmarkWidths": [
+      120,
+      180
+    ],
+    "compactWidths": [
+      32,
+      64
+    ],
+    "backgrounds": [
+      "#ffffff",
+      "#111113",
+      "#101820",
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ],
+    "nativeApproval": false,
+    "hostedApproval": false
+  },
+  "originalArtworkPreserved": true,
+  "factsStockPhotosPreserved": true,
+  "filtersApplied": false,
+  "thresholdsChanged": false,
+  "providerWrites": 0
+}

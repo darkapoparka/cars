@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "dealer": "lifeline-cars",
   "reviewed": true,
-  "reviewedAt": "2026-10-19T18:56:33.142650Z",
+  "reviewedAt": "2026-10-20T20:23:07.279Z",
   "status": "independent-proposal-not-dealer-approved",
   "creationMethod": "imagegen-proposal",
   "assets": {
@@ -15,14 +15,14 @@
     "onDark": {
       "sourcePath": "branding/logo-on-dark.png",
       "publicPath": "/dealer-brand/logo-on-dark.webp",
-      "sha256": "725387c82295607224cbc81b0b8fe25dfbe8448289c7efe07ec3f8665f366db1",
-      "sourceSha256": "8bf1ddb560541f23b492bc4992da828262bc42484341c4e2043a3344efdc5ace"
+      "sha256": "3569bdf8eca0dbe6ac1169813fefa8f92e976740e00f18ee57ea2aaf34282f26",
+      "sourceSha256": "354b40dbb9271efbc32ce1d741671a17b32ed65888c390bd310f12504a3e671c"
     },
     "onAccent": {
       "sourcePath": "branding/logo-on-accent.png",
       "publicPath": "/dealer-brand/logo-on-accent.webp",
-      "sha256": "725387c82295607224cbc81b0b8fe25dfbe8448289c7efe07ec3f8665f366db1",
-      "sourceSha256": "8bf1ddb560541f23b492bc4992da828262bc42484341c4e2043a3344efdc5ace"
+      "sha256": "3569bdf8eca0dbe6ac1169813fefa8f92e976740e00f18ee57ea2aaf34282f26",
+      "sourceSha256": "354b40dbb9271efbc32ce1d741671a17b32ed65888c390bd310f12504a3e671c"
     }
   },
   "surfaceBackgrounds": {
@@ -50,16 +50,17 @@
   },
   "mark": {
     "path": "branding/logo-mark.png",
-    "sha256": "2e4db09e359fddb816908483c70bfa2e11d65a59df44bcf63051d51a4f455e21",
+    "sha256": "35991b7ffd30f17b1cd86df2dd1a8a57ddcab62c8fff4c4c26ba10b7ae1c7ab5",
     "generation": {
       "tool": "image_gen.imagegen",
-      "generationId": "exec-5d2fe7a1-eb5a-41c9-8554-86f33f07f68f",
+      "generationId": "exec-ba89cdea-9134-4d99-bcb6-791366ed0283",
+      "referenceKind": "actual-tool-output-filename",
       "modelVersion": null
     }
   },
   "favicon": {
     "path": "dealer-brand/favicon.ico",
-    "sha256": "05fd5740105036d95bf6a051a7e3ae08a430873dfbeac355383464c0df449f61"
+    "sha256": "1a9e3f729769478cdbbfa5b8190d01aab8f642919f21895a0806413e17bf8ebf"
   },
   "surfaces": {
     "onLight": {
@@ -74,23 +75,25 @@
     },
     "onDark": {
       "path": "branding/logo-on-dark.png",
-      "sha256": "8bf1ddb560541f23b492bc4992da828262bc42484341c4e2043a3344efdc5ace",
+      "sha256": "354b40dbb9271efbc32ce1d741671a17b32ed65888c390bd310f12504a3e671c",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-bc87592e-c859-43e9-ac4d-f5c62e42c389",
+        "generationId": "exec-7bacb3e8-5dcb-43a3-ae21-dab34a37de96",
+        "referenceKind": "actual-tool-output-filename",
         "modelVersion": null
       },
-      "sourceReference": "dealers/lifeline-cars/branding/generated-on-dark.png"
+      "sourceReference": "dealers/lifeline-cars/branding/contrast-on-dark-v2.png"
     },
     "onAccent": {
       "path": "branding/logo-on-accent.png",
-      "sha256": "8bf1ddb560541f23b492bc4992da828262bc42484341c4e2043a3344efdc5ace",
+      "sha256": "354b40dbb9271efbc32ce1d741671a17b32ed65888c390bd310f12504a3e671c",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-bc87592e-c859-43e9-ac4d-f5c62e42c389",
+        "generationId": "exec-7bacb3e8-5dcb-43a3-ae21-dab34a37de96",
+        "referenceKind": "actual-tool-output-filename",
         "modelVersion": null
       },
-      "sourceReference": "dealers/lifeline-cars/branding/generated-on-dark.png"
+      "sourceReference": "dealers/lifeline-cars/branding/contrast-on-dark-v2.png"
     }
   },
   "transforms": {
@@ -109,88 +112,93 @@
     },
     "onDark": {
       "operation": "crop-transparent-padding-and-resize",
-      "sourceSha256": "8a1d0ca6a54e753aca21323efd3a306df80da4593ee306d6fd608f7bef5e3653",
-      "sha256": "8bf1ddb560541f23b492bc4992da828262bc42484341c4e2043a3344efdc5ace",
+      "sourceSha256": "77746891bdea086a29221cced0b55238657e79678b450b4501584a34e93fd075",
+      "sha256": "354b40dbb9271efbc32ce1d741671a17b32ed65888c390bd310f12504a3e671c",
       "crop": {
-        "left": 18,
-        "top": 105,
-        "width": 2150,
-        "height": 482
+        "left": 23,
+        "top": 108,
+        "width": 2136,
+        "height": 473
       },
-      "sourcePath": "branding/generated-on-dark.png",
+      "sourcePath": "branding/contrast-on-dark-v2.png",
       "outputPath": "branding/logo-on-dark.png"
     },
     "onAccent": {
       "operation": "crop-transparent-padding-and-resize",
-      "sourceSha256": "8a1d0ca6a54e753aca21323efd3a306df80da4593ee306d6fd608f7bef5e3653",
-      "sha256": "8bf1ddb560541f23b492bc4992da828262bc42484341c4e2043a3344efdc5ace",
+      "sourceSha256": "77746891bdea086a29221cced0b55238657e79678b450b4501584a34e93fd075",
+      "sha256": "354b40dbb9271efbc32ce1d741671a17b32ed65888c390bd310f12504a3e671c",
       "crop": {
-        "left": 18,
-        "top": 105,
-        "width": 2150,
-        "height": 482
+        "left": 23,
+        "top": 108,
+        "width": 2136,
+        "height": 473
       },
-      "sourcePath": "branding/generated-on-dark.png",
+      "sourcePath": "branding/contrast-on-dark-v2.png",
       "outputPath": "branding/logo-on-accent.png"
     }
   },
   "supplemental": {
     "mark-on-light.webp": {
       "path": "dealer-brand/mark-on-light.webp",
-      "sha256": "7204305927e28775e362cadbc27ca950851b2bbb08f38157661ea9e59dca194e",
+      "sha256": "5f3cc7d5af816b658dc65d50bfa6a293d5554d2fba9317abf5d79ff158845cca",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-5d2fe7a1-eb5a-41c9-8554-86f33f07f68f",
+        "generationId": "exec-ba89cdea-9134-4d99-bcb6-791366ed0283",
+        "referenceKind": "actual-tool-output-filename",
         "modelVersion": null
       },
-      "sourceReference": "dealers/lifeline-cars/branding/generated-mark.png"
+      "sourceReference": "dealers/lifeline-cars/branding/contrast-mark-on-light-v2.png"
     },
     "mark-on-dark.webp": {
       "path": "dealer-brand/mark-on-dark.webp",
-      "sha256": "2b098aac1d86990b4b4ec1b3bbe76b104fca16e67cb11adaca8b43550597fbc7",
+      "sha256": "a6f40bef83a51a7a1aab912a677f7470a13dfe257a9e5422b756f12eafc205e4",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-bc87592e-c859-43e9-ac4d-f5c62e42c389",
+        "generationId": "exec-55b43a60-bc23-4d83-be12-fed33f5d1039",
+        "referenceKind": "actual-tool-output-filename",
         "modelVersion": null
       },
-      "sourceReference": "dealers/lifeline-cars/branding/generated-mark-on-dark.png"
+      "sourceReference": "dealers/lifeline-cars/branding/contrast-mark-on-dark-v2.png"
     },
     "app-icon.png": {
       "path": "dealer-brand/app-icon.png",
-      "sha256": "2e4db09e359fddb816908483c70bfa2e11d65a59df44bcf63051d51a4f455e21",
+      "sha256": "35991b7ffd30f17b1cd86df2dd1a8a57ddcab62c8fff4c4c26ba10b7ae1c7ab5",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-5d2fe7a1-eb5a-41c9-8554-86f33f07f68f",
+        "generationId": "exec-ba89cdea-9134-4d99-bcb6-791366ed0283",
+        "referenceKind": "actual-tool-output-filename",
         "modelVersion": null
       },
-      "sourceReference": "dealers/lifeline-cars/branding/generated-mark.png"
+      "sourceReference": "dealers/lifeline-cars/branding/contrast-mark-on-light-v2.png"
     },
     "favicon.ico": {
       "path": "dealer-brand/favicon.ico",
-      "sha256": "05fd5740105036d95bf6a051a7e3ae08a430873dfbeac355383464c0df449f61",
+      "sha256": "1a9e3f729769478cdbbfa5b8190d01aab8f642919f21895a0806413e17bf8ebf",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-5d2fe7a1-eb5a-41c9-8554-86f33f07f68f",
+        "generationId": "exec-ba89cdea-9134-4d99-bcb6-791366ed0283",
+        "referenceKind": "actual-tool-output-filename",
         "modelVersion": null
       },
-      "sourceReference": "dealers/lifeline-cars/branding/generated-mark.png"
+      "sourceReference": "dealers/lifeline-cars/branding/contrast-mark-on-light-v2.png"
     }
   },
   "markOnDarkReady": true,
   "originalArtworkPreserved": true,
   "visualReview": {
     "reviewed": true,
-    "reviewedAt": "2026-10-19T18:56:33.142650Z",
+    "reviewedAt": "2026-10-20T20:23:07.279Z",
     "source": "branding/source.json",
     "spelling": "agent-visual-review",
     "dealerApproval": false
   },
   "markOnDark": {
     "path": "branding/logo-mark-on-dark.png",
-    "sha256": "2b10a13e9e63a40da68ea8efe7d6f701bd6cadb2796ceb207fce116d5850d5c3",
+    "sha256": "220ffc9ada912b34bf917a7e53073a10ee0d206cfc6382fbea1c8cafd66d6bb6",
     "generation": {
       "tool": "image_gen.imagegen",
-      "generationId": "exec-bc87592e-c859-43e9-ac4d-f5c62e42c389",
+      "generationId": "exec-55b43a60-bc23-4d83-be12-fed33f5d1039",
+      "referenceKind": "actual-tool-output-filename",
       "modelVersion": null
     }
   }

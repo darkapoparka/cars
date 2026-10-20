@@ -42,7 +42,7 @@
     }
   },
   "generatedInputs": {
-    "reviewedAt": "2026-10-19T18:40:18.546Z",
+    "reviewedAt": "2026-10-20T20:15:21.660Z",
     "master": {
       "path": "branding/generated-master.png",
       "sha256": "9cd2c3ee500b05c75c4189a85acf02a8a65579067f94d64304a66cc7b0e1571a",
@@ -62,11 +62,12 @@
       }
     },
     "markOnDark": {
-      "path": "branding/generated-mark.png",
-      "sha256": "3087cb58f61905b74ab39c332bc2417c7be4fd885409f01ef27020549c27f2c4",
+      "path": "branding/contrast-mark-on-dark-v2.png",
+      "sha256": "887303efe7123d53f2b44e94d19bd440501d09f32002158357002727ae8c8f16",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-fe4b1560-4394-4399-a3d5-ccc461ef751c",
+        "generationId": "exec-6b8efb8f-767a-4170-81fc-2c53dc2d7827",
+        "referenceKind": "actual-tool-output-filename",
         "modelVersion": null
       }
     },
@@ -81,20 +82,22 @@
         }
       },
       "onDark": {
-        "path": "branding/generated-master.png",
-        "sha256": "9cd2c3ee500b05c75c4189a85acf02a8a65579067f94d64304a66cc7b0e1571a",
+        "path": "branding/contrast-on-dark-v2.png",
+        "sha256": "75d618e0e59391400bd080dd7f53a2527aef6b2e7ab7548e1c91430776615bf9",
         "generation": {
           "tool": "image_gen.imagegen",
-          "generationId": "exec-fe4b1560-4394-4399-a3d5-ccc461ef751c",
+          "generationId": "exec-5ddca5c1-6368-421e-a6d1-5a05ae15d08a",
+          "referenceKind": "actual-tool-output-filename",
           "modelVersion": null
         }
       },
       "onAccent": {
-        "path": "branding/generated-master.png",
-        "sha256": "9cd2c3ee500b05c75c4189a85acf02a8a65579067f94d64304a66cc7b0e1571a",
+        "path": "branding/contrast-on-dark-v2.png",
+        "sha256": "75d618e0e59391400bd080dd7f53a2527aef6b2e7ab7548e1c91430776615bf9",
         "generation": {
           "tool": "image_gen.imagegen",
-          "generationId": "exec-fe4b1560-4394-4399-a3d5-ccc461ef751c",
+          "generationId": "exec-5ddca5c1-6368-421e-a6d1-5a05ae15d08a",
+          "referenceKind": "actual-tool-output-filename",
           "modelVersion": null
         }
       }
@@ -120,9 +123,128 @@
         32,
         64
       ],
-      "method": "Same actual dual-contrast generated artwork on each surface; no generated colours are represented as a template palette change.",
-      "reviewedAt": "2026-10-19T18:40:18.546Z",
-      "review": "Visually reviewed exact cropTransparentPadding exports at120px and180px wordmark widths and32px/64px compact sizes on white, charcoal and red. Exact spelling retained, real alpha present, compact emblem clear. The source palette is part of the artwork only."
+      "method": "Agent review of exact maintained before/after source raster exports on current consumer backgrounds; unchanged technical pixel checks. New neutral/brand inverse treatment is artwork only and does not change template palettes.",
+      "reviewedAt": "2026-10-20T20:15:21.660Z",
+      "review": "Exact existing spelling and emblem geometry retained. Original inputs and generation provenance remain preserved. Independent proposal; no human/dealer/native/hosted acceptance inferred."
     }
+  },
+  "artworkHistory": [
+    {
+      "supersededAt": "2026-10-20T20:15:21.660Z",
+      "reason": "Dedicated consumer surface variants correct measured pixel contrast; existing source inputs remain retained.",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-fe4b1560-4394-4399-a3d5-ccc461ef751c",
+        "modelVersion": null,
+        "prompt": "Use case: logo-brand. Create one polished independent UK motor dealer identity proposal. Transparent background, flat crisp graphic, no mockup, no gradients, no shadows, no raster distress or speckles. Wide horizontal lockup, simple isolated compact emblem on left and exact business name on right with plenty of transparent gap for cropping. Emblem legible at32px, thick clean geometry, no tiny details. Design a dual-contrast outline of clean white and deep navy around every shape so it works on white, dark charcoal #111113 and red #c40101. Two-line wordmark, tight readable bold geometric letterforms, no tagline, no extra text. Business name CARS 4 U. Left emblem an original combination of a bold numeral 4 inside the curve of a U, clear exact two symbols, no roof or wheel. CARS 4 U to right as one bold line, exact spaces. Deep navy and fresh red-orange #dd513e with precise white outer keyline. Simple, highly legible, balanced."
+      },
+      "compactDerivation": {
+        "method": "lossless-isolated-emblem-crop",
+        "parentReference": "branding/generated-master.png",
+        "parentSha256": "9cd2c3ee500b05c75c4189a85acf02a8a65579067f94d64304a66cc7b0e1571a",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 660,
+          "height": 728
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-fe4b1560-4394-4399-a3d5-ccc461ef751c",
+          "modelVersion": null
+        }
+      },
+      "generatedInputs": {
+        "reviewedAt": "2026-10-19T18:40:18.546Z",
+        "master": {
+          "path": "branding/generated-master.png",
+          "sha256": "9cd2c3ee500b05c75c4189a85acf02a8a65579067f94d64304a66cc7b0e1571a",
+          "generation": {
+            "tool": "image_gen.imagegen",
+            "generationId": "exec-fe4b1560-4394-4399-a3d5-ccc461ef751c",
+            "modelVersion": null
+          }
+        },
+        "mark": {
+          "path": "branding/generated-mark.png",
+          "sha256": "3087cb58f61905b74ab39c332bc2417c7be4fd885409f01ef27020549c27f2c4",
+          "generation": {
+            "tool": "image_gen.imagegen",
+            "generationId": "exec-fe4b1560-4394-4399-a3d5-ccc461ef751c",
+            "modelVersion": null
+          }
+        },
+        "markOnDark": {
+          "path": "branding/generated-mark.png",
+          "sha256": "3087cb58f61905b74ab39c332bc2417c7be4fd885409f01ef27020549c27f2c4",
+          "generation": {
+            "tool": "image_gen.imagegen",
+            "generationId": "exec-fe4b1560-4394-4399-a3d5-ccc461ef751c",
+            "modelVersion": null
+          }
+        },
+        "surfaces": {
+          "onLight": {
+            "path": "branding/generated-master.png",
+            "sha256": "9cd2c3ee500b05c75c4189a85acf02a8a65579067f94d64304a66cc7b0e1571a",
+            "generation": {
+              "tool": "image_gen.imagegen",
+              "generationId": "exec-fe4b1560-4394-4399-a3d5-ccc461ef751c",
+              "modelVersion": null
+            }
+          },
+          "onDark": {
+            "path": "branding/generated-master.png",
+            "sha256": "9cd2c3ee500b05c75c4189a85acf02a8a65579067f94d64304a66cc7b0e1571a",
+            "generation": {
+              "tool": "image_gen.imagegen",
+              "generationId": "exec-fe4b1560-4394-4399-a3d5-ccc461ef751c",
+              "modelVersion": null
+            }
+          },
+          "onAccent": {
+            "path": "branding/generated-master.png",
+            "sha256": "9cd2c3ee500b05c75c4189a85acf02a8a65579067f94d64304a66cc7b0e1571a",
+            "generation": {
+              "tool": "image_gen.imagegen",
+              "generationId": "exec-fe4b1560-4394-4399-a3d5-ccc461ef751c",
+              "modelVersion": null
+            }
+          }
+        },
+        "surfaceReview": {
+          "reviewed": true,
+          "backgrounds": {
+            "onLight": [
+              "#ffffff"
+            ],
+            "onDark": [
+              "#111113"
+            ],
+            "onAccent": [
+              "#c40101"
+            ]
+          },
+          "wordmarkWidths": [
+            120,
+            180
+          ],
+          "markWidths": [
+            32,
+            64
+          ],
+          "method": "Same actual dual-contrast generated artwork on each surface; no generated colours are represented as a template palette change.",
+          "reviewedAt": "2026-10-19T18:40:18.546Z",
+          "review": "Visually reviewed exact cropTransparentPadding exports at120px and180px wordmark widths and32px/64px compact sizes on white, charcoal and red. Exact spelling retained, real alpha present, compact emblem clear. The source palette is part of the artwork only."
+        }
+      }
+    }
+  ],
+  "contrastCorrection": {
+    "reviewedAt": "2026-10-20T20:15:21.660Z",
+    "provenance": "branding/contrast-repair-20261020.json",
+    "reason": "Measured weak contrast in the original98-pack focused pixel preflight",
+    "originalArtworkPreserved": true,
+    "dealerApproved": false
   }
 }

@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "dealer": "wortley-road-car-sales",
+  "mode": "built-in-imagegen",
+  "independentProposal": true,
+  "dealerApproved": false,
+  "originalPackDigest": "3e588914dd971628995de3a8f58015aa4e7252df7f134fc4d3554fa7fb8c3360",
+  "originalSourceSha256": "6da97e3e7df10503b6acd67811ec8d3a153ab5e527b73e5920a49a7333cdb4fd",
+  "selected": [
+    {
+      "roles": [
+        "onDark",
+        "onAccent"
+      ],
+      "filename": "contrast-on-dark-v2.png",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-dfc98ac7-5c18-4c76-83e4-cafcdd16ac15",
+        "referenceKind": "actual-tool-output-filename",
+        "modelVersion": null
+      },
+      "prompt": "Precise inverse consumer-surface edit of this existing proposal logo. Preserve exactly the WR shield and coupe roof emblem and exact WORTLEY ROAD CAR SALES spelling and two-line composition, typography, proportions, alignment, spacing and intended negative spaces. Change every positive shape and letter to one uniform solid very light icy blue-grey #d5e8f6. Remove all dark outlines/backing strokes, white keylines, gradients, texture, speckles and stray edge pixels. Flat smooth opaque light-blue silhouettes with crisp genuine alpha, letter counters and emblem negative spaces fully transparent. Do not fill existing holes or merge separate strokes. No background plate, colored halo, shadows, clouds, added words or redesign. The exact existing identity must remain recognizable at120px and180px. This is an independent preview proposal, no business adoption claimed.",
+      "parentReference": "branding/generated-on-dark.png",
+      "sourcePath": "branding/contrast-on-dark-v2.png",
+      "sha256": "ea374b2cefa27c06fb4f6234fe2f97ea4fa44379cbdd6ef9e6a11f1f93a9d8a5",
+      "bytes": 545263,
+      "outputFile": "exec-dfc98ac7-5c18-4c76-83e4-cafcdd16ac15.png"
+    },
+    {
+      "roles": [
+        "markOnDark"
+      ],
+      "filename": "contrast-mark-on-dark-v2.png",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-7b5a29a1-9228-412e-ad94-2589a8315391",
+        "referenceKind": "actual-tool-output-filename",
+        "modelVersion": null
+      },
+      "prompt": "Exact compact-emblem surface edit of this existing proposal. Retain the precise WR shield with coupe roof silhouette, shield outline and letter counters, same proportions and arrangement. Make EVERY positive shape one uniform solid #d5e8f6; remove every other color and all dark outlines, keylines, gradients and surface texture. Preserve intended transparent holes and negative gaps; separate adjacent strokes must stay separated. Smooth flat opaque silhouettes with crisp true alpha. No added badge or square, no background, shadows, halos, speckles, extra text or redesign. A clean standalone exact existing symbol that reads at32px and64px. Independent preview proposal only.",
+      "parentReference": "branding/generated-mark-on-dark.png",
+      "sourcePath": "branding/contrast-mark-on-dark-v2.png",
+      "sha256": "c1480c29e1cb7539d5c54121d3435d6d12479b9a00338ddee745a7142335e7d4",
+      "bytes": 715355,
+      "outputFile": "exec-7b5a29a1-9228-412e-ad94-2589a8315391.png"
+    },
+    {
+      "roles": [
+        "mark"
+      ],
+      "filename": "contrast-mark-on-light-v2.png",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-e765ee96-1cb7-4399-b175-65c49eee8f70",
+        "referenceKind": "actual-tool-output-filename",
+        "modelVersion": null
+      },
+      "prompt": "Exact compact-emblem surface edit of this existing proposal. Retain the precise WR shield with coupe roof silhouette, shield outline and letter counters, same proportions and arrangement. Make EVERY positive shape one uniform solid #102b46; remove every other color and all dark outlines, keylines, gradients and surface texture. Preserve intended transparent holes and negative gaps; separate adjacent strokes must stay separated. Smooth flat opaque silhouettes with crisp true alpha. No added badge or square, no background, shadows, halos, speckles, extra text or redesign. A clean standalone exact existing symbol that reads at32px and64px. Independent preview proposal only.",
+      "parentReference": "branding/generated-mark.png",
+      "sourcePath": "branding/contrast-mark-on-light-v2.png",
+      "sha256": "f25ec69587d580ee529ef076827918fc137fa828b3af7022d27d66e986dc725d",
+      "bytes": 420299,
+      "outputFile": "exec-e765ee96-1cb7-4399-b175-65c49eee8f70.png"
+    }
+  ]
+}

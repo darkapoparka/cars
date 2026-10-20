@@ -32,7 +32,7 @@
   "observedAt": "2026-10-19",
   "researchConclusion": "No usable original logo was obtained from bounded exact-business/locality searches and the matched public seller and directory sources. The dealer catalogue supplies a text identity and vehicle photographs; an unavailable or absent logo image does not prove that no original branding exists. This is an independent proposed identity, not an official dealer logo.",
   "generatedInputs": {
-    "reviewedAt": "2026-10-19T19:22:56.608725Z",
+    "reviewedAt": "2026-10-20T20:30:09.235Z",
     "master": {
       "path": "branding/generated-master.png",
       "sha256": "f3ce077890f2f74e3afd53cbaba6cf92322ee67d399745f3beb1708d525902a3",
@@ -47,43 +47,29 @@
       }
     },
     "mark": {
-      "path": "branding/generated-mark.png",
-      "sha256": "cb0e4a2504bedbd561dcf219c8437cbc11434c801499ffb4dd8f55067e0bb522",
+      "path": "branding/generated-compact-on-light-v2-20261020-79f388eb3d5e232f.png",
+      "sha256": "79f388eb3d5e232f80f7a294d6a8f64085a809a7442dbe7b3e82c444bd42d7cd",
+      "nativeDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-b7d4622b-0ca1-4352-84d7-ecbdce62064c",
+        "generationId": "exec-783b907e-16a6-4894-ad42-8eec20f36dc0",
         "modelVersion": null
-      },
-      "derivation": {
-        "operation": "pixel-exact rectangular extraction of the existing generated compact emblem; no recolouring or invented artwork",
-        "parentPath": "branding/generated-master.png",
-        "parentSha256": "f3ce077890f2f74e3afd53cbaba6cf92322ee67d399745f3beb1708d525902a3",
-        "crop": {
-          "left": 0,
-          "top": 0,
-          "width": 715,
-          "height": 724
-        }
       }
     },
     "markOnDark": {
-      "path": "branding/generated-mark-on-dark.png",
-      "sha256": "e0e31d53cf93e28ce5dff96198b1022adecba6d286d411b1512b7e058ae9e373",
+      "path": "branding/generated-compact-on-dark-v2-20261020-705676452032f679.png",
+      "sha256": "705676452032f679bef92f4632dfd5b979dbeea3696b71a15a8acb0cfa2fe77a",
+      "nativeDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-c34f1dfb-2b82-4e66-adc0-f0ce4c530345",
+        "generationId": "exec-041d4e34-2eeb-46a3-a3df-15b1f5c6ca81",
         "modelVersion": null
-      },
-      "derivation": {
-        "operation": "pixel-exact rectangular extraction of the existing generated compact emblem; no recolouring or invented artwork",
-        "parentPath": "branding/generated-on-dark.png",
-        "parentSha256": "6d6b0a6be6831d4b1075003b9b055585273b60c6e2a571d6e7f0905e05aa9c63",
-        "crop": {
-          "left": 0,
-          "top": 0,
-          "width": 698,
-          "height": 724
-        }
       }
     },
     "surfaces": {
@@ -101,71 +87,57 @@
         }
       },
       "onDark": {
-        "path": "branding/generated-on-dark.png",
-        "sha256": "6d6b0a6be6831d4b1075003b9b055585273b60c6e2a571d6e7f0905e05aa9c63",
+        "path": "branding/generated-on-dark-v2-20261020-32f6118276592930.png",
+        "sha256": "32f6118276592930df8b7176ee90ae673dc357e62709841f8fbe6b8442c3214b",
         "nativeDimensions": {
           "width": 2172,
           "height": 724
         },
         "generation": {
           "tool": "image_gen.imagegen",
-          "generationId": "exec-c34f1dfb-2b82-4e66-adc0-f0ce4c530345",
+          "generationId": "exec-13d90ffe-3b72-4b77-afbe-158a1fbbb071",
           "modelVersion": null
         }
       },
       "onAccent": {
-        "path": "branding/generated-on-dark.png",
-        "sha256": "6d6b0a6be6831d4b1075003b9b055585273b60c6e2a571d6e7f0905e05aa9c63",
+        "path": "branding/generated-on-dark-v2-20261020-32f6118276592930.png",
+        "sha256": "32f6118276592930df8b7176ee90ae673dc357e62709841f8fbe6b8442c3214b",
         "nativeDimensions": {
           "width": 2172,
           "height": 724
         },
         "generation": {
           "tool": "image_gen.imagegen",
-          "generationId": "exec-c34f1dfb-2b82-4e66-adc0-f0ce4c530345",
+          "generationId": "exec-13d90ffe-3b72-4b77-afbe-158a1fbbb071",
           "modelVersion": null
         }
       }
     },
     "marks": {
       "onLight": {
-        "path": "branding/generated-mark.png",
-        "sha256": "cb0e4a2504bedbd561dcf219c8437cbc11434c801499ffb4dd8f55067e0bb522",
+        "path": "branding/generated-compact-on-light-v2-20261020-79f388eb3d5e232f.png",
+        "sha256": "79f388eb3d5e232f80f7a294d6a8f64085a809a7442dbe7b3e82c444bd42d7cd",
+        "nativeDimensions": {
+          "width": 1254,
+          "height": 1254
+        },
         "generation": {
           "tool": "image_gen.imagegen",
-          "generationId": "exec-b7d4622b-0ca1-4352-84d7-ecbdce62064c",
+          "generationId": "exec-783b907e-16a6-4894-ad42-8eec20f36dc0",
           "modelVersion": null
-        },
-        "derivation": {
-          "operation": "pixel-exact rectangular extraction of the existing generated compact emblem; no recolouring or invented artwork",
-          "parentPath": "branding/generated-master.png",
-          "parentSha256": "f3ce077890f2f74e3afd53cbaba6cf92322ee67d399745f3beb1708d525902a3",
-          "crop": {
-            "left": 0,
-            "top": 0,
-            "width": 715,
-            "height": 724
-          }
         }
       },
       "onDark": {
-        "path": "branding/generated-mark-on-dark.png",
-        "sha256": "e0e31d53cf93e28ce5dff96198b1022adecba6d286d411b1512b7e058ae9e373",
+        "path": "branding/generated-compact-on-dark-v2-20261020-705676452032f679.png",
+        "sha256": "705676452032f679bef92f4632dfd5b979dbeea3696b71a15a8acb0cfa2fe77a",
+        "nativeDimensions": {
+          "width": 1254,
+          "height": 1254
+        },
         "generation": {
           "tool": "image_gen.imagegen",
-          "generationId": "exec-c34f1dfb-2b82-4e66-adc0-f0ce4c530345",
+          "generationId": "exec-041d4e34-2eeb-46a3-a3df-15b1f5c6ca81",
           "modelVersion": null
-        },
-        "derivation": {
-          "operation": "pixel-exact rectangular extraction of the existing generated compact emblem; no recolouring or invented artwork",
-          "parentPath": "branding/generated-on-dark.png",
-          "parentSha256": "6d6b0a6be6831d4b1075003b9b055585273b60c6e2a571d6e7f0905e05aa9c63",
-          "crop": {
-            "left": 0,
-            "top": 0,
-            "width": 698,
-            "height": 724
-          }
         }
       }
     },
@@ -189,11 +161,11 @@
         120,
         180
       ],
-      "reviewedAt": "2026-10-19T19:22:56.608725Z",
-      "notes": "Visually reviewed the actual deterministic transparent-padding exports at120px and180px on all six retained template surface colours. Exact name spelling, silhouette, alpha edges, spacing and clipping were checked. Light-ink variants are actual imagegen results, not deterministic recolours. Small secondary suffix text is subordinate to the principal name; compact identity is provided separately."
+      "reviewedAt": "2026-10-20T20:30:09.235Z",
+      "notes": "Agent viewed matched maintained exports at120/180px and32/64px on actual six template surfaces. Original/on-light wordmarks remain exact. Generated inverse and native compact variants are independent preview proposals; no dealer/native/hosted approval."
     },
     "compactMarkStatus": "independent-preview-not-dealer-approved",
-    "compactMarkDescription": "SM monogram",
+    "compactMarkDescription": "Native rounded-S-over-angular-M compact monogram",
     "compactMarkReview": {
       "reviewed": true,
       "widths": [
@@ -208,8 +180,88 @@
         "#17191c",
         "#c40101"
       ],
-      "reviewedAt": "2026-10-19T19:22:56.608725Z",
-      "notes": "Visually inspected the actual compact exports at32px and64px on all six template backgrounds. Existing-emblem pixel crops have explicit parent hashes and exact rectangle provenance; independently generated compact marks retain their own actual generation IDs. Shape, spacing, clipping and transparent counters were checked. Dealer approval remains unknown."
+      "reviewedAt": "2026-10-20T20:30:09.235Z",
+      "notes": "New native compact geometry and exact spelling visually reviewed at32/64px; padding/contrast thresholds unchanged; real imagegen light/dark variants, no stretched or filtered artwork."
     }
-  }
+  },
+  "additionalGenerations": [
+    {
+      "roles": [
+        "mark"
+      ],
+      "path": "branding/generated-compact-on-light-v2-20261020-79f388eb3d5e232f.png",
+      "sha256": "79f388eb3d5e232f80f7a294d6a8f64085a809a7442dbe7b3e82c444bd42d7cd",
+      "nativeDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-783b907e-16a6-4894-ad42-8eec20f36dc0",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand. Input1 is STYLE/IDENTITY reference only; change the ultra-wide arrangement into a native square compact version. Exact letters \"SM\", arranged large rounded S ABOVE large angular M, reading S-M, retaining the existing smoothly rounded S channel and angular bold M motifs. Do not add other letters, words or icons. Draw genuinely new natural tall compact geometry, no stretching old pixels. Overall S-over-M composition fills85-90% square width AND75-85% square height with small balanced transparent margins. Dominant solid near-black ink, monochrome palette for white surfaces. Robust simple strokes and clear transparent counters at32px; S must read as letter S, M as letter M. No badge/backplate/background, gradient, shadow, glow, haze or speckles. Actual transparent alpha required.",
+      "references": [
+        {
+          "path": "branding/generated-mark.png",
+          "sha256": "cb0e4a2504bedbd561dcf219c8437cbc11434c801499ffb4dd8f55067e0bb522"
+        }
+      ],
+      "createdAt": "2026-10-20T20:29:15.056Z",
+      "derivation": "Actual built-in imagegen result copied byte-for-byte. Native compact geometry newly drawn; no stretch, filters, recolouring or alpha cleanup."
+    },
+    {
+      "roles": [
+        "markOnDark"
+      ],
+      "path": "branding/generated-compact-on-dark-v2-20261020-705676452032f679.png",
+      "sha256": "705676452032f679bef92f4632dfd5b979dbeea3696b71a15a8acb0cfa2fe77a",
+      "nativeDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-041d4e34-2eeb-46a3-a3df-15b1f5c6ca81",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand. Input1 is EDIT TARGET: exact new compact S-over-M Simply Motors monogram. Change ONLY ink to a true light inverse for dark/red backgrounds. Preserve exact rounded S shape, angular M below, letter counters, stacked placement, size, natural tall geometry and transparent square canvas. Exact reading S-M. Dominant all visible ink clean solid very-light ivory/silver (#e3e7ee feel), over95% light. Actual alpha transparency, no dark filling or background tile, no badge, gradient, glow, shadow, haze or alpha speckles. Crisp strong mark clear at32px on #111113,#101820,#09090b,#17191c,#c40101. Do not stretch source or change identity.",
+      "references": [
+        {
+          "path": "branding/generated-compact-on-light-v2-20261020-79f388eb3d5e232f.png",
+          "sha256": "79f388eb3d5e232f80f7a294d6a8f64085a809a7442dbe7b3e82c444bd42d7cd"
+        }
+      ],
+      "createdAt": "2026-10-20T20:29:15.056Z",
+      "derivation": "Actual built-in imagegen result copied byte-for-byte. Native compact geometry newly drawn; no stretch, filters, recolouring or alpha cleanup."
+    },
+    {
+      "roles": [
+        "onDark",
+        "onAccent"
+      ],
+      "path": "branding/generated-on-dark-v2-20261020-32f6118276592930.png",
+      "sha256": "32f6118276592930df8b7176ee90ae673dc357e62709841f8fbe6b8442c3214b",
+      "nativeDimensions": {
+        "width": 2172,
+        "height": 724
+      },
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-13d90ffe-3b72-4b77-afbe-158a1fbbb071",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand. Input1 is EDIT TARGET: existing Simply Motors proposal identity. Create a real transparent inverse with identical geometry/composition: joined SM emblem LEFT, exact uppercase \"SIMPLY MOTORS\" RIGHT. Text verbatim \"SIMPLY MOTORS\", S-I-M-P-L-Y M-O-T-O-R-S. Preserve letter shapes, smooth S/angular M motif, kerning, all proportions and natural wide aspect. Change dominant emblem and text ink to clean solid very-light cool ivory/silver (#e3e7ee feel), over95% ink light. Must clearly contrast on #111113,#101820,#09090b,#17191c and #c40101 at120/180px. Actual transparent alpha, no background rectangle, dark fills, shadow, gradient, glow, haze or speckled alpha texture. No added slogan or rebranding.",
+      "references": [
+        {
+          "path": "branding/generated-master.png",
+          "sha256": "f3ce077890f2f74e3afd53cbaba6cf92322ee67d399745f3beb1708d525902a3"
+        }
+      ],
+      "createdAt": "2026-10-20T20:29:15.056Z",
+      "derivation": "Actual built-in imagegen result copied byte-for-byte. Native compact geometry newly drawn; no stretch, filters, recolouring or alpha cleanup."
+    }
+  ],
+  "sourceHistory": [
+    {
+      "reference": "branding/source-before-compact-repair-20261020-490e14159b788f67.json",
+      "sha256": "490e14159b788f670e9bb834ea907a463b92d75136825e2c9f30f0ca4605ce9b",
+      "retainedAt": "2026-10-20T20:29:15.056Z",
+      "reason": "Exact source provenance before owned compact geometry and contrast repair"
+    }
+  ]
 }

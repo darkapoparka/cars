@@ -3,7 +3,7 @@
   "kind": "cars-dealer-pack-input-review",
   "dealer": "lifeline-cars",
   "reviewed": true,
-  "reviewedAt": "2026-10-20T19:16:31.218Z",
+  "reviewedAt": "2026-10-20T20:29:19.961Z",
   "review": {
     "kind": "automated",
     "humanReview": false,
@@ -42,6 +42,22 @@
       "sha256": "578ea93d3ce5ae0653cf7f9630d41944622053729bb798488f722cd0bd0c064e"
     },
     {
+      "path": "branding/contrast-mark-on-dark-v2.png",
+      "sha256": "5c889355b49778aec6dafd86e0e815d68908add9547d13a39978d134569c0df9"
+    },
+    {
+      "path": "branding/contrast-mark-on-light-v2.png",
+      "sha256": "f5db00b66e6ebef3a2a9b030e9c79a9baad7cc04252ddc1c613da0990f454aa8"
+    },
+    {
+      "path": "branding/contrast-on-dark-v2.png",
+      "sha256": "77746891bdea086a29221cced0b55238657e79678b450b4501584a34e93fd075"
+    },
+    {
+      "path": "branding/contrast-repair-20261020.json",
+      "sha256": "949ef1c5722c77fc6cf7e42f0b9b76b45a4299b7bff10741ee5f4cbcb69ab5c4"
+    },
+    {
       "path": "branding/generated-mark-on-dark.png",
       "sha256": "c30f0a6c781499237b27f8d5e1f508f9c180de2ab3cd6771fd6046272f563196"
     },
@@ -59,15 +75,15 @@
     },
     {
       "path": "branding/logo-contract.json",
-      "sha256": "edc1462dfd5ed6b20f13a80862ef25f9eca22339d7fcd7dee2926b36247009be"
+      "sha256": "fd4eea342ba5ddc6b2f959b5a9762702b49e56cddcf5a5e98c063d8b10826886"
     },
     {
       "path": "branding/logo-recipe.json",
-      "sha256": "67fd0a7de7adc2cae4d8e78726e6f142aaabafeb8c8d39552fe775c9543b7daa"
+      "sha256": "72e2a0583e5d3385e5372b53fec0632d34bc5e875d3ddcc61505464874cb7a86"
     },
     {
       "path": "branding/source.json",
-      "sha256": "f2d1758e5624f06ab835908fe0ec6e837044a6da102ffd56c424266a5d286a18"
+      "sha256": "f9add5f9725fec646c78f7e4af1b0c22e58b5c229eec25a80d6ffb88c7a9e537"
     },
     {
       "path": "business-facts.json",
@@ -75,7 +91,7 @@
     },
     {
       "path": "copy-review.json",
-      "sha256": "32fc09c0df19ce081072ce00cd145863d2d06d101332eb38f04e5ced48103f03"
+      "sha256": "e44e5fb4a6edad4662256aa9dbd6c27ff3097fb1ee49700d25dee2e2e4f9c301"
     },
     {
       "path": "dealer-stock/public-1.jpg",
@@ -91,11 +107,11 @@
     },
     {
       "path": "dealer.json",
-      "sha256": "44c68cfc14ac90afff99fca3cd9c10526acecff9af18ba273aa26af71bcdeede"
+      "sha256": "143b82027242dde0a57096d83fde586bf8eeb402b39b6dcc166de432d5cdd8e9"
     },
     {
       "path": "identity-review.json",
-      "sha256": "e643fc4e4505e717e5217518baeb84b3fe9d1d92ed36172bd77c43b6745d61d8"
+      "sha256": "6f06435cec441315e97952e58c082a32cebb834d6bd4bb50800521b9f4b45a22"
     },
     {
       "path": "locale.json",
@@ -107,7 +123,7 @@
     },
     {
       "path": "qualification.json",
-      "sha256": "08e913198144e19faf8142d5f709bf56992caa809836edb291590ddb014e0a90"
+      "sha256": "dfcb83e2ee1bb015d243e4fd664aba80103a04f1531bfd3363852b2f40d6fc7c"
     },
     {
       "path": "source-evidence.json",

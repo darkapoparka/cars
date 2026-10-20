@@ -3,7 +3,7 @@
   "kind": "cars-dealer-pack-input-review",
   "dealer": "supreme-cars-luton",
   "reviewed": true,
-  "reviewedAt": "2026-10-20T19:23:22.731Z",
+  "reviewedAt": "2026-10-20T20:21:23.661Z",
   "review": {
     "kind": "automated",
     "humanReview": false,
@@ -42,6 +42,10 @@
       "sha256": "d2a1ba11a691a7756f792e0add7f5f5ea9341fad35e23b07b84c43facd9ddf54"
     },
     {
+      "path": "branding/generated-mark-on-dark-v2-20261020.png",
+      "sha256": "17397a17b40c9d120f43dcccfe5a1f9880e9776c570d088ade67e5fe990a7b62"
+    },
+    {
       "path": "branding/generated-mark-on-dark.png",
       "sha256": "92417ddc192776dca9936bced35b8a77f5d632398c447bc3144a234f29877e22"
     },
@@ -54,6 +58,10 @@
       "sha256": "d4676b5159769b9882077e633b2efccb8e24d9d95cec4d4f46f0cc813ce667e8"
     },
     {
+      "path": "branding/generated-on-dark-v2-20261020.png",
+      "sha256": "f5ab7f7b13c75a1608700a4dd6a60f58cba9c9e8fbd956c0cb6b70555125c821"
+    },
+    {
       "path": "branding/generated-on-dark.png",
       "sha256": "811b9be4853ca3d2519242b38a518c65f43272425d6969360378504bcb2e8ad8"
     },
@@ -62,20 +70,28 @@
       "sha256": "0a3a8171f8bb84e8ddbf7bdd5034218a6c012898c2871bdb157d94218ffccae9"
     },
     {
+      "path": "branding/held-logo-repair-20261020.json",
+      "sha256": "6e42451080a8019030bde1472758998b0f8d05006f911149dd3bef1ddcad1dc3"
+    },
+    {
       "path": "branding/logo-contract.json",
-      "sha256": "f0d10143b0873a89e8851047f728e6bfb1b2455b1090fbe04f409c66acee401f"
+      "sha256": "63c7a7569aa4b58ce02f83b42b4e715f2949cac730f40b3d35b3ce96c7914e7f"
     },
     {
       "path": "branding/logo-recipe.json",
-      "sha256": "64c69f6a4327c108021b3bb5e5736de5a096eab5ec1a1c4eadbf378e94c2223c"
+      "sha256": "cbb7fb7bf35b6a6fe2d10ab88ea69c7626b195d59f9d5a54ecc15fb38df3ff47"
     },
     {
       "path": "branding/original-logo.gif",
       "sha256": "91472c5d7960204942ae7d3831756afe22f694e883173e9ca2c9821745feaa3d"
     },
     {
-      "path": "branding/source.json",
+      "path": "branding/source-before-held-logo-repair-20261020-c8c83034fcd09a21.json",
       "sha256": "c8c83034fcd09a218ce8395dc07a3961a78ee076197e4bd251f45f6e29429cee"
+    },
+    {
+      "path": "branding/source.json",
+      "sha256": "28822dc542f9510c935c4fdf435fc4416c0598b6c124919f770b4dfaec9d2c7e"
     },
     {
       "path": "business-facts.json",
@@ -83,7 +99,7 @@
     },
     {
       "path": "copy-review.json",
-      "sha256": "4760b849f2360bccd2178fb5d64c8219e78b9f37eae955b69ef2e30721d8fa93"
+      "sha256": "edffb2e540ea7c7e9d29e717b4675a023973a0fde5412844ffa58d47ec5c968a"
     },
     {
       "path": "dealer-stock/listing-1.jpg",
@@ -103,7 +119,7 @@
     },
     {
       "path": "identity-review.json",
-      "sha256": "0be78de51f3c8ca391b774022f052aa2081d0b845b2a41838fb58ad6962373f0"
+      "sha256": "49b824678beee13a7f00ab5e90f7d576ea543b0c0ac5fa16ad8bc9cd5fceeb87"
     },
     {
       "path": "locale.json",
@@ -119,7 +135,7 @@
     },
     {
       "path": "qualification.json",
-      "sha256": "cb6d8a340c5ab5a3e4976cfe0888fae403b9424912c54d20ed103ab35b834772"
+      "sha256": "8bd799a2290c5de270277d043c22810eeb60a70c236005b3207a09132bed0418"
     },
     {
       "path": "research-review.json",

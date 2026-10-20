@@ -42,7 +42,7 @@
     }
   },
   "generatedInputs": {
-    "reviewedAt": "2026-10-19T18:56:47.410734Z",
+    "reviewedAt": "2026-10-20T20:18:41.005Z",
     "master": {
       "path": "branding/generated-master.png",
       "sha256": "fb9f7198320673b8dda4b3496b71af689bbf12cbc11a24fb3b85386ffe346deb",
@@ -62,11 +62,15 @@
       }
     },
     "markOnDark": {
-      "path": "branding/generated-mark.png",
-      "sha256": "4210e2463595eea8ab597cd066d9146e740a90d0683838084984521025cb996d",
+      "path": "branding/generated-mark-on-dark-v2-20261020.png",
+      "sha256": "bb15d693fd40c9faf2bb075ce19fd0820f71acdeba1faec3f5980bb4af5038cc",
+      "nativeDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-1c396cf0-6572-4012-9cdf-90469a029987",
+        "generationId": "exec-7ba3bfe9-391d-4716-8cb4-6cba888d9197",
         "modelVersion": null
       }
     },
@@ -81,20 +85,28 @@
         }
       },
       "onDark": {
-        "path": "branding/generated-on-dark.png",
-        "sha256": "febe3962f4f288b20a50273f5626af1661e0f10f919f78e3156249ba05cc6b43",
+        "path": "branding/generated-on-dark-v2-20261020.png",
+        "sha256": "38ad566487049f9f2ff706972c52618b2852d3eceb5d41662f3575383c3e8f82",
+        "nativeDimensions": {
+          "width": 2172,
+          "height": 724
+        },
         "generation": {
           "tool": "image_gen.imagegen",
-          "generationId": "exec-23e55444-9cfb-4e15-aced-82c825b548e3",
+          "generationId": "exec-b0c5b3f0-d844-4c26-9785-b0258f52cce0",
           "modelVersion": null
         }
       },
       "onAccent": {
-        "path": "branding/generated-on-dark.png",
-        "sha256": "febe3962f4f288b20a50273f5626af1661e0f10f919f78e3156249ba05cc6b43",
+        "path": "branding/generated-on-dark-v2-20261020.png",
+        "sha256": "38ad566487049f9f2ff706972c52618b2852d3eceb5d41662f3575383c3e8f82",
+        "nativeDimensions": {
+          "width": 2172,
+          "height": 724
+        },
         "generation": {
           "tool": "image_gen.imagegen",
-          "generationId": "exec-23e55444-9cfb-4e15-aced-82c825b548e3",
+          "generationId": "exec-b0c5b3f0-d844-4c26-9785-b0258f52cce0",
           "modelVersion": null
         }
       }
@@ -124,8 +136,9 @@
         64
       ],
       "method": "Exact pipeline alpha-padding crop and resize of actual generated surface artwork. Separate light-ink generated wordmark is used on dark and accent surfaces. Compact inputs are documented actual imagegen outputs or isolated lossless crops.",
-      "reviewedAt": "2026-10-19T18:56:47.410734Z",
-      "review": "Visually reviewed the exact pipeline cropTransparentPadding exports at 120 px and 180 px wordmark widths and 32 px and 64 px compact sizes against all six required background colours. Spelling and transparency checked. Filled light wordmarks improve contrast on dark surfaces; artwork colours do not change template palettes."
+      "reviewedAt": "2026-10-20T20:18:41.005Z",
+      "review": "Visually reviewed the exact pipeline cropTransparentPadding exports at 120 px and 180 px wordmark widths and 32 px and 64 px compact sizes against all six required background colours. Spelling and transparency checked. Filled light wordmarks improve contrast on dark surfaces; artwork colours do not change template palettes.",
+      "notes": "Actual new light-ink wordmark and dark compact mark inspected at120/180px and32/64px on unchanged charcoal/navy/black/red template backgrounds. Exact spelling, established identity motifs, alpha edges, spacing and transparent counters checked. Original light/master/light compact assets and provenance remain unchanged; dealer/native/hosted approval is not inferred."
     }
   },
   "additionalGenerations": [
@@ -136,6 +149,51 @@
       "modelVersion": null,
       "reference": "branding/generated-master.png",
       "prompt": "Use case: logo-brand, exact surface variant. This is an existing approved composition being prepared for a dark website background. Preserve its exact business name, spelling, typography, emblem motif, layout, separation and proportions. Make a faithful LIGHT-INK version on a truly TRANSPARENT background: all wordmark text should be solid bright ivory-white, filled letters, not hollow outline letters. Preserve any restrained emblem accent colours if they have contrast, and use white for the emblem's dark strokes so the compact emblem also reads on charcoal. Preserve the existing dark contour where helpful. No change of shape or concept. No added content. Do not include the background; it must remain transparent. Clean perfectly smooth edges, no speckles, no distress, no glow, no shadow, no gradients. The result must be clearly legible at180px width on charcoal #111113 and dark red #c40101. Match the reference geometry; no business names or letters may be omitted or repeated."
+    },
+    {
+      "roles": [
+        "onDark",
+        "onAccent"
+      ],
+      "reference": "branding/generated-on-dark.png",
+      "path": "branding/generated-on-dark-v2-20261020.png",
+      "sha256": "38ad566487049f9f2ff706972c52618b2852d3eceb5d41662f3575383c3e8f82",
+      "nativeDimensions": {
+        "width": 2172,
+        "height": 724
+      },
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-b0c5b3f0-d844-4c26-9785-b0258f52cce0",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand, faithful surface-colour edit. Preserve exactly the supplied L-shaped road emblem with dashed lane at left and the single-line words LONDON USED CARS at right, their typography, scale, gap and proportions. Make a clean light-ink variant for charcoal and red surfaces. Road body and USED become flat light powder blue #accde6; LONDON and CARS become flat pale silver-grey #c8d0d8. Remove heavy black/navy contours and white keylines; preserve the road's dashed centerline as transparent negative-space marks. Do not fill any open counters. All fills uniform, opaque and smooth. Exact spelling LONDON USED CARS. Truly transparent background, generous outer padding, no new motifs, gradients, texture, speckles, shadow, glow, pure white pixels or extra wording. Independent proposal, not dealer approved.",
+      "createdAt": "2026-10-20T20:18:41.005Z",
+      "derivation": "Actual built-in imagegen edit of the retained identity; raw returned PNG copied byte-identical without recolouring, filters or alpha cleanup."
+    },
+    {
+      "roles": [
+        "markOnDark"
+      ],
+      "reference": "branding/generated-mark.png",
+      "path": "branding/generated-mark-on-dark-v2-20261020.png",
+      "sha256": "bb15d693fd40c9faf2bb075ce19fd0820f71acdeba1faec3f5980bb4af5038cc",
+      "nativeDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-7ba3bfe9-391d-4716-8cb4-6cba888d9197",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand. Faithful dark-surface colour edit of supplied L-shaped road compact emblem. Preserve exact L-road silhouette, curved lower corner, road-lane proportions and dashed centerline. Replace the dark grey and dark blue road body with flat solid light powder blue #accde6. Preserve lane dashes as transparent negative-space cutouts, with no white pixels. Remove the black/white exterior contours without changing shape. Flat smooth opaque blue strokes on a genuinely transparent background, centered on a generous square transparent canvas without stretching. No text, new shape, gradient, texture, speckles, grain, shadow, glow or background tile. Same London Used Cars identity, independent proposal.",
+      "createdAt": "2026-10-20T20:18:41.005Z",
+      "derivation": "Actual built-in imagegen edit of the retained identity; raw returned PNG copied byte-identical without recolouring, filters or alpha cleanup."
+    }
+  ],
+  "sourceHistory": [
+    {
+      "reference": "branding/source-before-held-logo-repair-20261020-f7411a2b2808797e.json",
+      "sha256": "f7411a2b2808797e70208b4c71c5e5753c7cc61f3a8a150b58c8167b7ed9b965",
+      "retainedAt": "2026-10-20T20:18:41.005Z",
+      "reason": "Exact provenance before targeted original-held wordmark/dark-mark contrast repair"
     }
   ]
 }

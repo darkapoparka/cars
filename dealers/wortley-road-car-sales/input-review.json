@@ -3,7 +3,7 @@
   "kind": "cars-dealer-pack-input-review",
   "dealer": "wortley-road-car-sales",
   "reviewed": true,
-  "reviewedAt": "2026-10-20T19:27:02.028Z",
+  "reviewedAt": "2026-10-20T20:29:29.105Z",
   "review": {
     "kind": "automated",
     "humanReview": false,
@@ -46,6 +46,22 @@
       "sha256": "6bd4959d5f14b9276bc791ddcccef87409388e4bcbbe6fde61acff0957b87d8e"
     },
     {
+      "path": "branding/contrast-mark-on-dark-v2.png",
+      "sha256": "c1480c29e1cb7539d5c54121d3435d6d12479b9a00338ddee745a7142335e7d4"
+    },
+    {
+      "path": "branding/contrast-mark-on-light-v2.png",
+      "sha256": "f25ec69587d580ee529ef076827918fc137fa828b3af7022d27d66e986dc725d"
+    },
+    {
+      "path": "branding/contrast-on-dark-v2.png",
+      "sha256": "ea374b2cefa27c06fb4f6234fe2f97ea4fa44379cbdd6ef9e6a11f1f93a9d8a5"
+    },
+    {
+      "path": "branding/contrast-repair-20261020.json",
+      "sha256": "84092492bf520fbfa73de797ba4cd58a79ad0e1d068a28e33b15608c9e4abe6e"
+    },
+    {
       "path": "branding/generated-mark-on-dark.png",
       "sha256": "53ec94ac2cce6ad601c68545b62bc755183d56d2c6f2a657cb042b11d4614391"
     },
@@ -67,11 +83,11 @@
     },
     {
       "path": "branding/logo-contract.json",
-      "sha256": "58fb8156bf49b6de75a99274d9cda68ba489e53214fa912d4e5e7c643cc1a70e"
+      "sha256": "226763be397cc95e56740b405655f926ae0433b49483a0ca55ec2f0608dd4705"
     },
     {
       "path": "branding/logo-recipe.json",
-      "sha256": "6bdeeebd1d9ae6350e9a0e9748cd1376c8c179dd0573164e8d56b130a6bead0d"
+      "sha256": "7505e5eaa58d8da67c42b4524f5ed8d518576181b2e07835b623e3b14e1155da"
     },
     {
       "path": "branding/original-logo.png",
@@ -79,7 +95,7 @@
     },
     {
       "path": "branding/source.json",
-      "sha256": "6da97e3e7df10503b6acd67811ec8d3a153ab5e527b73e5920a49a7333cdb4fd"
+      "sha256": "0a585b91bbce478f1e7fcdc6483d754dcdd1f72de245d0dec04b47609f877fd2"
     },
     {
       "path": "business-facts.json",
@@ -87,7 +103,7 @@
     },
     {
       "path": "copy-review.json",
-      "sha256": "3b5a2204bfa2423e4f5ac9b30bda0f654b5a06e629c2680b97a04414df1579c4"
+      "sha256": "e37d754efbd2696f091e70cd8c0d420c6a3a82145c14b47c0531aa32fe3eafb2"
     },
     {
       "path": "dealer-stock/listing-1.jpg",
@@ -103,11 +119,11 @@
     },
     {
       "path": "dealer.json",
-      "sha256": "3b8172a3d38ba19bd99436a59d6b231e14d70cc5fc77f28be9922d6fa772af4f"
+      "sha256": "1dd0f463eeec6067b15459067fb918b990283136b050a35c459adfc9c2737af2"
     },
     {
       "path": "identity-review.json",
-      "sha256": "a9cc27c68d76266c4f15fb80533d3bc161772af8226d58db0685c9b7679912d6"
+      "sha256": "9bb3b134728e065059fe84e25cec1926c1d6084cf33e88aa653fe861a96eea5f"
     },
     {
       "path": "locale.json",
@@ -123,7 +139,7 @@
     },
     {
       "path": "qualification.json",
-      "sha256": "64e478c236f838a1ec36174bac0476d7d0661d79d735f9367fbf589d88a34a1d"
+      "sha256": "570ea15b8d2ce9844e0ea5407aa804ce864b1ecd5400653c9b737da9f41364cb"
     },
     {
       "path": "research-review.json",

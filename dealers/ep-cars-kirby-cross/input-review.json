@@ -3,7 +3,7 @@
   "kind": "cars-dealer-pack-input-review",
   "dealer": "ep-cars-kirby-cross",
   "reviewed": true,
-  "reviewedAt": "2026-10-20T19:13:07.817Z",
+  "reviewedAt": "2026-10-20T20:21:34.964Z",
   "review": {
     "kind": "automated",
     "humanReview": false,
@@ -42,6 +42,10 @@
       "sha256": "a9ad7c81a6ad475b147fe7a5bc3963ffd14e69dee15b8c80cb99fde7af5ce705"
     },
     {
+      "path": "branding/generated-mark-on-dark-v2-20261020.png",
+      "sha256": "92ddff13a61546488870db265a68ed4fe47472f113612a3afd10dbfedcb81e83"
+    },
+    {
       "path": "branding/generated-mark-on-dark.png",
       "sha256": "b652e1f22e6ef97118aefc7e19d190a4b2063a31d2befb64698aead9f7ec8aa6"
     },
@@ -54,6 +58,10 @@
       "sha256": "60dd42832104b92187a13faef3c8108cab42f98de4b88d0c2b814c6f861d6968"
     },
     {
+      "path": "branding/generated-on-dark-v2-20261020.png",
+      "sha256": "d073a5865d7e0425614abf7002af83e10a7dece43f720b72354be4636097f7e4"
+    },
+    {
       "path": "branding/generated-on-dark.png",
       "sha256": "18b7d5f8fa5d75a6734aa22db34b091808ded7f0bf67774b3492ae1c9bce5508"
     },
@@ -62,16 +70,24 @@
       "sha256": "249287b413bf99c44198a714e07c986b470d626fe215fc3ebd8b9eca67539cf0"
     },
     {
+      "path": "branding/held-logo-repair-20261020.json",
+      "sha256": "1a045f0527542d45b5fa0bb950bdfb8a4a3ff259bd6a0706abe0fb7cdbf7c242"
+    },
+    {
       "path": "branding/logo-contract.json",
-      "sha256": "5af85c09f1c2559065f947ac9d71fcaf868f7f0e2c58f8062ed31b78037fc335"
+      "sha256": "0871a786387864b6860e3b20b8393e725da4c2027921ccc95da7d1483caaa147"
     },
     {
       "path": "branding/logo-recipe.json",
-      "sha256": "87b06ca6f117307ea5c21d51c8e45ae7cba0ef545e8a21fc07e3bb4454b7743a"
+      "sha256": "d19d7be7d62534a0313d96381e145dbef2ca17e31a492d3ba7e87096f78001bc"
+    },
+    {
+      "path": "branding/source-before-held-logo-repair-20261020-4f60395e6f37cdce.json",
+      "sha256": "4f60395e6f37cdcefeb3d09a428f7b60992d66447132870f841f10ad7c22c4e6"
     },
     {
       "path": "branding/source.json",
-      "sha256": "4f60395e6f37cdcefeb3d09a428f7b60992d66447132870f841f10ad7c22c4e6"
+      "sha256": "0c772e897bca55b8ff2feb02fb77874d013926f0aaa46b94832228f9d4a82cdf"
     },
     {
       "path": "business-facts.json",
@@ -79,7 +95,7 @@
     },
     {
       "path": "copy-review.json",
-      "sha256": "b3188500ffec95ec07a467c9817a0e93e17a4b53f66d473493e7c0c1f423203d"
+      "sha256": "a4cdb107a27e1349308855bc923cddb7d5992996ef4aa6252be6b3dd845fe173"
     },
     {
       "path": "dealer-stock/listing-1.jpg",
@@ -99,7 +115,7 @@
     },
     {
       "path": "identity-review.json",
-      "sha256": "054106879522df8cff192c25fa4ebe2fbb177af4b6ca3c05d62eb44b74dd8508"
+      "sha256": "ab9ae16e4acd7c4aabaa5fe39edb29c7f0d2ff268a836dc461570f88f5a750da"
     },
     {
       "path": "locale.json",
@@ -115,7 +131,7 @@
     },
     {
       "path": "qualification.json",
-      "sha256": "ec75149329f07629e944aa85a5cb5b5c32f6a0f46b2d71c4821c033ecb766503"
+      "sha256": "5f9528392e5ee208f31c0d33bed7a0505bb59dc28c87442903a7c58dd0e4ce9a"
     },
     {
       "path": "research-review.json",

@@ -3,7 +3,7 @@
   "kind": "cars-dealer-pack-input-review",
   "dealer": "leicester-motor-group",
   "reviewed": true,
-  "reviewedAt": "2026-10-20T19:15:59.738Z",
+  "reviewedAt": "2026-10-20T20:30:23.236Z",
   "review": {
     "kind": "automated",
     "humanReview": false,
@@ -42,6 +42,18 @@
       "sha256": "4990dff41ecfc4073537a97f2f8dc1dc9faf42f58eb4558918e75cb4b4fd5f5d"
     },
     {
+      "path": "branding/compact-repair-20261020.json",
+      "sha256": "e9b3cf837fbca0783a9205c3af0a2f97e545fb533af54cfa8faeca6383ef2970"
+    },
+    {
+      "path": "branding/generated-compact-on-dark-v2-20261020-3827b06d4d5f8605.png",
+      "sha256": "3827b06d4d5f8605ad347577bc2358493119b81d38bc62ef90ed607016fcb127"
+    },
+    {
+      "path": "branding/generated-compact-on-light-v2-20261020-f4373fd50f8fa609.png",
+      "sha256": "f4373fd50f8fa609116a9a25f47ba136ea1da30d0b151ddc3be13a2d74ac4779"
+    },
+    {
       "path": "branding/generated-mark-on-dark.png",
       "sha256": "0539eb4ccbaaa999c60bb500be2a3972176df0b674dd5ee2f7583dc00ce9a1e4"
     },
@@ -54,6 +66,10 @@
       "sha256": "243197a75b2b28eb488796100d818ea05c1af5286185dffc576b0ea38f5a5d8e"
     },
     {
+      "path": "branding/generated-on-dark-v2-20261020-a27e1f4249282ebd.png",
+      "sha256": "a27e1f4249282ebd2b590fc397981af6ad8d534a3f74c4f2464e5bd59bfe2e1b"
+    },
+    {
       "path": "branding/generated-on-dark.png",
       "sha256": "5a999c27433f415b4b0472e1e45c57b299c95c592522e6cb72946579cc5b93f2"
     },
@@ -63,19 +79,23 @@
     },
     {
       "path": "branding/logo-contract.json",
-      "sha256": "00fa6d28e973af48a240f3e0f0dcd36826b7aa80a41fcb3835baae271ce21197"
+      "sha256": "3c607ea9dbcec87cfbec053c9d49369a514694d4e3ee8e43c9d7b0e8c7c389b0"
     },
     {
       "path": "branding/logo-recipe.json",
-      "sha256": "b6118cbbbf2ac3356a280dd676c5cf2bf76b43d01b6624cf6a4576923fa6a204"
+      "sha256": "efab0431e3477ed242938945dc7bab0b029b7f525a85f00a1b83b31678e52637"
     },
     {
       "path": "branding/original-logo.jpg",
       "sha256": "208938cb3572c7e85c83b842ee02619739a3f43bf1ce96e3ccfbd00748df5cf6"
     },
     {
-      "path": "branding/source.json",
+      "path": "branding/source-before-compact-repair-20261020-133816e15544dc39.json",
       "sha256": "133816e15544dc391861d1c7ccd0fef44ad2b99a3a15be0e10066bc230de26dc"
+    },
+    {
+      "path": "branding/source.json",
+      "sha256": "df49160623c78f528d5c2f14653f400926a5a3311bf9282165bc3c7eb5498456"
     },
     {
       "path": "business-facts.json",
@@ -83,7 +103,7 @@
     },
     {
       "path": "copy-review.json",
-      "sha256": "23612654b0f2c7f95d4c40eff755fde1591780b7bf42dbafbe7092423368bc33"
+      "sha256": "855575c0ac391879120517baca58980a2cb3bcaffae47b2961d9a7f45d7f9b69"
     },
     {
       "path": "dealer-stock/listing-1.jpg",
@@ -99,11 +119,11 @@
     },
     {
       "path": "dealer.json",
-      "sha256": "5b190bdeba7cd1efe2af43f37d3a6e74eec09bd5538fdb96bbd6bb1731db5429"
+      "sha256": "5e6acb8b7672fe67b7881878cbdabc33acca537101ee6aaa7e7590e5b482a83c"
     },
     {
       "path": "identity-review.json",
-      "sha256": "249956cad5e3e432d1cb8160048932129f4b9d784113d3890339c437f070095c"
+      "sha256": "2dfa6147bf9b8766c91300fec7aa407dcc988c2a53d1c9ec5e20557b7a945a98"
     },
     {
       "path": "locale.json",
@@ -119,7 +139,7 @@
     },
     {
       "path": "qualification.json",
-      "sha256": "7daee295f2a33394792a56127637cb61c660e3a47478d77b20c58987125a4f9d"
+      "sha256": "d9e0e25a43e476463ff87e1f2a0cdba90c99cc0f267190cd329e54886bf7fc8e"
     },
     {
       "path": "research-review.json",
