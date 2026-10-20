@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Birmingham Motors Ltd",
     "publicOrigin": "https://birmingham-motors-ltd.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "7cff386b5f2299bd9d2acbb300d7bc60a105d5a9f43a9b8c90acf9ecca063b3f",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "481b0042b74564abff81906d1b07e2191a202ef0130978393ca52962cc87a2ab"
+    }
   }
 }

@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "DC Car Sales",
     "publicOrigin": "https://dc-car-sales.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "51f40be8f8d0aabccb2f9038ad147d054ce36eb182c5293dcb2516991455b9d3",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "64b4866a140b737503527f8c6b460341964547130c7d092256fadb7a6872777a"
+    }
   }
 }

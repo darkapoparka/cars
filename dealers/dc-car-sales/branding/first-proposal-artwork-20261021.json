@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-first-missing-source-proposal-artwork",
+  "dealer": "dc-car-sales",
+  "createdAt": "2026-10-20T23:33:25.779Z",
+  "inputRows": [
+    {
+      "role": "wordLight",
+      "path": "branding/generated-master-v1-20261021.png",
+      "sha256": "98f99ff1488f2510b1e8280ff02f1fe63d8b0bdc1a347f64cb7f12c4cbde8e86",
+      "nativeDimensions": {
+        "width": 1774,
+        "height": 887
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1fa9293e-e751-4811-9c00-1889e03eeac3",
+        "modelVersion": null
+      },
+      "artifact": "C:\\Users\\radev\\.codex\\generated_images\\01a15a1f-d666-7482-9123-db2575e93737\\exec-1fa9293e-e751-4811-9c00-1889e03eeac3.png",
+      "prompt": "Use case: logo-brand. Create ONE independent proposal for DC CAR SALES, Birmingham used-car dealer. Wide horizontal lockup with an original simple open DC monogram at LEFT, generous transparent gap, exact bold geometric text DC above CAR SALES at RIGHT. D and C have clear counters and squared smooth terminals, a short diagonal split adds recognizable geometry; naturally balanced roughly1.5:1 compact shape, no enclosing tile. Deep steel-blue #214e68 and charcoal #202730, flat opaque strong white-surface ink. Readable exact text at120/180px, compact32/64px. Truly transparent background/counters and ample padding. No superhero/comic/DC Entertainment marks, no unrelated dealer logo, car silhouette, crown, shield, slogan, legal suffix, gradient, glow, shadow, white keyline, texture or speckles. New independent unapproved artwork proposal based on retained exact trading name.",
+      "referencePaths": []
+    },
+    {
+      "role": "markLight",
+      "path": "branding/generated-mark-light-v1-20261021.png",
+      "sha256": "c07fd69411188166a50c340cf033a8a83df35a2718dd95fbd35760cdf2d4e52c",
+      "nativeDimensions": {
+        "width": 829,
+        "height": 887
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1fa9293e-e751-4811-9c00-1889e03eeac3",
+        "modelVersion": null
+      },
+      "artifact": "J:/.artifacts/cars-source-sync/fourth3-branding-inputs/dc-car-sales/markLight.png",
+      "prompt": "Use case: logo-brand. Create ONE independent proposal for DC CAR SALES, Birmingham used-car dealer. Wide horizontal lockup with an original simple open DC monogram at LEFT, generous transparent gap, exact bold geometric text DC above CAR SALES at RIGHT. D and C have clear counters and squared smooth terminals, a short diagonal split adds recognizable geometry; naturally balanced roughly1.5:1 compact shape, no enclosing tile. Deep steel-blue #214e68 and charcoal #202730, flat opaque strong white-surface ink. Readable exact text at120/180px, compact32/64px. Truly transparent background/counters and ample padding. No superhero/comic/DC Entertainment marks, no unrelated dealer logo, car silhouette, crown, shield, slogan, legal suffix, gradient, glow, shadow, white keyline, texture or speckles. New independent unapproved artwork proposal based on retained exact trading name.",
+      "referencePaths": [
+        "C:\\Users\\radev\\.codex\\generated_images\\01a15a1f-d666-7482-9123-db2575e93737\\exec-1fa9293e-e751-4811-9c00-1889e03eeac3.png"
+      ],
+      "derivation": {
+        "operation": "lossless-png-extract-isolated-emblem",
+        "parentPath": "branding/generated-master-v1-20261021.png",
+        "parentSha256": "98f99ff1488f2510b1e8280ff02f1fe63d8b0bdc1a347f64cb7f12c4cbde8e86",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 829,
+          "height": 887
+        },
+        "emptyGap": {
+          "start": 801,
+          "end": 858,
+          "width": 57
+        },
+        "parentNativeDimensions": {
+          "width": 1774,
+          "height": 887
+        },
+        "artworkUnmodified": true,
+        "alphaUnmodified": true
+      }
+    },
+    {
+      "role": "wordDark",
+      "path": "branding/generated-inverse-v1-20261021.png",
+      "sha256": "952d3d8d03fc5855d11f002443ee4c8153254bd75940cb74034145eee770919d",
+      "nativeDimensions": {
+        "width": 1774,
+        "height": 887
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-5fdeb085-4938-42bc-bb56-11878a48ccfc",
+        "modelVersion": null
+      },
+      "artifact": "C:\\Users\\radev\\.codex\\generated_images\\01a15a1f-d666-7482-9123-db2575e93737\\exec-5fdeb085-4938-42bc-bb56-11878a48ccfc.png",
+      "prompt": "Use case: logo-brand, exact inverse variant. Preserve exact open DC emblem and DC above CAR SALES wording, diagonal split, natural proportions, counters, typography, spacing and layout. Steelblue ink becomes flat opaque pale ice blue #c3d9e5; charcoal becomes flat opaque pale silver-grey #cbd2d8. All gaps and canvas truly transparent, margins unchanged. Clear on charcoal/navy/black/red. No glow, shadows, halo, gradient, keylines, texture, speckles, backgroundplate, extra text or new symbols. Exact DC CAR SALES, same independent unapproved proposal.",
+      "referencePaths": [
+        "C:\\Users\\radev\\.codex\\generated_images\\01a15a1f-d666-7482-9123-db2575e93737\\exec-1fa9293e-e751-4811-9c00-1889e03eeac3.png"
+      ]
+    },
+    {
+      "role": "markDark",
+      "path": "branding/generated-mark-dark-v1-20261021.png",
+      "sha256": "75e4b436ab7cc64d447da6a51756d82e47572ae9fc7f8b625581bfe80b2070ba",
+      "nativeDimensions": {
+        "width": 830,
+        "height": 887
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-5fdeb085-4938-42bc-bb56-11878a48ccfc",
+        "modelVersion": null
+      },
+      "artifact": "J:/.artifacts/cars-source-sync/fourth3-branding-inputs/dc-car-sales/markDark.png",
+      "prompt": "Use case: logo-brand, exact inverse variant. Preserve exact open DC emblem and DC above CAR SALES wording, diagonal split, natural proportions, counters, typography, spacing and layout. Steelblue ink becomes flat opaque pale ice blue #c3d9e5; charcoal becomes flat opaque pale silver-grey #cbd2d8. All gaps and canvas truly transparent, margins unchanged. Clear on charcoal/navy/black/red. No glow, shadows, halo, gradient, keylines, texture, speckles, backgroundplate, extra text or new symbols. Exact DC CAR SALES, same independent unapproved proposal.",
+      "referencePaths": [
+        "C:\\Users\\radev\\.codex\\generated_images\\01a15a1f-d666-7482-9123-db2575e93737\\exec-5fdeb085-4938-42bc-bb56-11878a48ccfc.png"
+      ],
+      "derivation": {
+        "operation": "lossless-png-extract-isolated-emblem",
+        "parentPath": "branding/generated-inverse-v1-20261021.png",
+        "parentSha256": "952d3d8d03fc5855d11f002443ee4c8153254bd75940cb74034145eee770919d",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 830,
+          "height": 887
+        },
+        "emptyGap": {
+          "start": 802,
+          "end": 858,
+          "width": 56
+        },
+        "parentNativeDimensions": {
+          "width": 1774,
+          "height": 887
+        },
+        "artworkUnmodified": true,
+        "alphaUnmodified": true
+      }
+    }
+  ],
+  "sourceFactNamePreserved": true,
+  "publicTradingText": "DC Car Sales",
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "dealerApproval": false,
+  "humanReview": false,
+  "providerWrites": 0,
+  "filtersApplied": false,
+  "thresholdsChanged": false
+}

@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-first-missing-source-proposal-artwork",
+  "dealer": "drive-select-motors",
+  "createdAt": "2026-10-20T23:36:43.598Z",
+  "inputRows": [
+    {
+      "role": "wordLight",
+      "path": "branding/generated-master-v1-20261021.png",
+      "sha256": "cebc29dadea9df160b7f0f85766122aee00b823e6c3831afe7d9afae63359aa2",
+      "nativeDimensions": {
+        "width": 1667,
+        "height": 944
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-e7c66f56-bd63-4373-a2e0-e72fddd9b5ca",
+        "modelVersion": null
+      },
+      "artifact": "C:\\Users\\radev\\.codex\\generated_images\\01a15a1f-d666-7482-9123-db2575e93737\\exec-e7c66f56-bd63-4373-a2e0-e72fddd9b5ca.png",
+      "prompt": "Use case: logo-brand. Create a clean transparent light-surface proposal treatment of this actual sourced DRIVE SELECT MOTORS logo. Retain recognizable coupe silhouette, open polygon outline, red accent lines and slanted condensed lettering style. Wide horizontal composition: isolated compact simplified coupe inside the open polygon outline at LEFT with natural compact about1.8:1 aspect, ample transparent gap, exact text DRIVE SELECT above MOTORS at RIGHT. Deep charcoal #19232c replaces silver/white for white-background contrast; deep muted red #9e2538 accents. Flat opaque ink, no metallic gradient, remove tiny star glints. Car windows, gaps and canvas truly transparent; no filled backgroundplate. All text bold and readable at120/180px, compact32/64px. Clean margins. No new words, legal suffix, claims, extra badge, glow, shadow, white keyline, texture, speckles or redesigned motif. Original opaque source is retained separately; this is a transparent proposed treatment, no dealer adoption implied.",
+      "referencePaths": [
+        "J:/.artifacts/cars-source-sync/fourth3-public-branding-inputs/drive-select-public-original.jpg"
+      ]
+    },
+    {
+      "role": "markLight",
+      "path": "branding/generated-mark-light-v1-20261021.png",
+      "sha256": "857837e77aedf6234b2a8dc5f86b9f590ffd012a7168f4e60adb95bd652bcc97",
+      "nativeDimensions": {
+        "width": 1774,
+        "height": 887
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-0f755c43-706c-482a-9988-cbe76ee4c3cc",
+        "modelVersion": null
+      },
+      "artifact": "C:\\Users\\radev\\.codex\\generated_images\\01a15a1f-d666-7482-9123-db2575e93737\\exec-0f755c43-706c-482a-9988-cbe76ee4c3cc.png",
+      "prompt": "Use case: logo-brand, exact compact companion image edit. Keep ONLY the LEFT emblem from the reference: coupe silhouette inside its open polygon outline and the short red accent/base lines UNDER that emblem. Remove ALL DRIVE SELECT MOTORS lettering on right and remove every horizontal line segment extending beyond the polygon. Center retained complete emblem on generous truly transparent square canvas; preserve natural proportions without stretching. Compact visible aspect about2:1, not an ultra-wide banner. Deep charcoal #19232c and muted red #9e2538, flat opaque ink. Windows/cuts/canvas genuinely transparent. Strong crisp geometry at32/64px, no tiny star glints, no new letters or symbols, no filled tile, no metallic finish, glow, shadows, gradients, white keyline, halos, speckles or texture. Same sourced coupe/polygon motif as the full treatment, independent unapproved proposal.",
+      "referencePaths": [
+        "C:\\Users\\radev\\.codex\\generated_images\\01a15a1f-d666-7482-9123-db2575e93737\\exec-e7c66f56-bd63-4373-a2e0-e72fddd9b5ca.png"
+      ],
+      "derivation": {
+        "operation": "actual-imagegen-dedicated-compact",
+        "artworkUnmodifiedAfterGeneration": true,
+        "alphaUnmodified": true
+      }
+    },
+    {
+      "role": "wordDark",
+      "path": "branding/generated-inverse-v1-20261021.png",
+      "sha256": "c138064468438303537d5aedd9a8d74b6b5cc3bdba1b33292bad14e898002473",
+      "nativeDimensions": {
+        "width": 1666,
+        "height": 944
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-5730337f-2013-40ed-bb1f-1defd7219ab8",
+        "modelVersion": null
+      },
+      "artifact": "C:\\Users\\radev\\.codex\\generated_images\\01a15a1f-d666-7482-9123-db2575e93737\\exec-5730337f-2013-40ed-bb1f-1defd7219ab8.png",
+      "prompt": "Use case: logo-brand, faithful inverse of sourced logo treatment. Preserve EXACT coupe silhouette, polygon outline, accent lines, DRIVE SELECT over MOTORS typography, shapes, layout, spacing and proportions. Charcoal ink becomes flat opaque pale silver-grey #cbd2d8, red accents become flat opaque pale muted rose #e3c1c8. Windows/gaps/canvas genuinely transparent. Clear inverse on charcoal/navy/black/red. No metallic gradient, shadow, glow, halos, keyline, haze, texture, speckles, backgroundplate, added words or redesigned motif. Exact DRIVE SELECT MOTORS; transparent treatment remains an unapproved proposal.",
+      "referencePaths": [
+        "C:\\Users\\radev\\.codex\\generated_images\\01a15a1f-d666-7482-9123-db2575e93737\\exec-e7c66f56-bd63-4373-a2e0-e72fddd9b5ca.png"
+      ]
+    },
+    {
+      "role": "markDark",
+      "path": "branding/generated-mark-dark-v1-20261021.png",
+      "sha256": "b7f1f39796f70f27b5aafa69cd35f9fa477aafcf6bb87b53243cb9eaaa5a5c09",
+      "nativeDimensions": {
+        "width": 1774,
+        "height": 887
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-7201995a-9e63-451b-aa31-bf59a290ddae",
+        "modelVersion": null
+      },
+      "artifact": "C:\\Users\\radev\\.codex\\generated_images\\01a15a1f-d666-7482-9123-db2575e93737\\exec-7201995a-9e63-451b-aa31-bf59a290ddae.png",
+      "prompt": "Use case: logo-brand, faithful inverse compact variant. Preserve EXACT coupe silhouette, open polygon outline, short base accent lines, geometry, windows/cuts and natural proportions of this reference emblem. Charcoal ink becomes opaque flat pale silver-grey #cbd2d8; red becomes opaque flat pale muted rose #e3c1c8. Same motif and colorpartition, no lettering. All gaps/windows/canvas genuinely transparent, generous margins. Clear at32/64px on charcoal/navy/black/red. No metallic gradient, glow, halo, shadows, texture, speckles, keyline, backgroundplate, added text or redesign. Same sourced Drive Select Motors transparent treatment, independent proposal without dealer adoption.",
+      "referencePaths": [
+        "C:\\Users\\radev\\.codex\\generated_images\\01a15a1f-d666-7482-9123-db2575e93737\\exec-0f755c43-706c-482a-9988-cbe76ee4c3cc.png"
+      ],
+      "derivation": {
+        "operation": "actual-imagegen-dedicated-compact",
+        "artworkUnmodifiedAfterGeneration": true,
+        "alphaUnmodified": true
+      }
+    }
+  ],
+  "sourceFactNamePreserved": true,
+  "publicTradingText": "Drive Select Motors",
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "dealerApproval": false,
+  "humanReview": false,
+  "providerWrites": 0,
+  "filtersApplied": false,
+  "thresholdsChanged": false
+}

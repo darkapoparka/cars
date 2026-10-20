@@ -158,7 +158,6 @@
     ]
   },
   "liveStatus": {
-    "assetPoolPublishedByThisRecord": false,
     "activeExecutorChanged": false,
     "currentNormalDrain": 39515213505,
     "currentExecutorSource": "826c052680ff27d6d25e4021a17ec60771a951d5",
@@ -167,7 +166,9 @@
     "twelveNativeSource": "34c99454e362b72a5e4a4f5921e83fc86c37b1ab",
     "twelveOwnContracts": "passed",
     "twelvePlan": "passed",
-    "nativeLanes": "seven active; dealer qualification pending"
+    "nativeLanes": "seven active; dealer qualification pending",
+    "assetPoolPublishedSource": "075d3d7d99428afe49d49bf8df522bb4b1b8664d",
+    "assetPoolRuntimeVerified": false
   },
   "localProviderWrites": 0,
   "localQueueWrites": 0,

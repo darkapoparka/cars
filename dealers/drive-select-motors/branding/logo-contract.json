@@ -1,0 +1,197 @@
+{
+  "schemaVersion": 1,
+  "dealer": "drive-select-motors",
+  "reviewed": true,
+  "reviewedAt": "2026-10-20T23:36:43.598Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "cc2f7d0598f79816675f225a610b39ba05baa2c9d137c83e9d07c9b868134505",
+      "sourceSha256": "619502ea415e76de921860978e5a16d6f0091ca1ca7c01cd2fbfb7c5ad6c05c4"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "579c1027d4730b2166fbb2b74b625b17c49f351b2832b3d2729588d55cd51ae1",
+      "sourceSha256": "f6b8bb49aad84dbfcf7a63ba537ca58ceff291cdf7d96e470f8240dfa52b0ba2"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "579c1027d4730b2166fbb2b74b625b17c49f351b2832b3d2729588d55cd51ae1",
+      "sourceSha256": "f6b8bb49aad84dbfcf7a63ba537ca58ceff291cdf7d96e470f8240dfa52b0ba2"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "619502ea415e76de921860978e5a16d6f0091ca1ca7c01cd2fbfb7c5ad6c05c4",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-e7c66f56-bd63-4373-a2e0-e72fddd9b5ca",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "cab138646d1fb82270ef3fb4a636fdb5181385cc3e87a50c6b71cebac30a07fd",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-0f755c43-706c-482a-9988-cbe76ee4c3cc",
+      "modelVersion": null
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "74de827af70facdbedb0f1651de1324f44733eae67cb1a092a025dfdd0016a70"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "619502ea415e76de921860978e5a16d6f0091ca1ca7c01cd2fbfb7c5ad6c05c4",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-e7c66f56-bd63-4373-a2e0-e72fddd9b5ca",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/drive-select-motors/branding/generated-master-v1-20261021.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "f6b8bb49aad84dbfcf7a63ba537ca58ceff291cdf7d96e470f8240dfa52b0ba2",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-5730337f-2013-40ed-bb1f-1defd7219ab8",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/drive-select-motors/branding/generated-inverse-v1-20261021.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "f6b8bb49aad84dbfcf7a63ba537ca58ceff291cdf7d96e470f8240dfa52b0ba2",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-5730337f-2013-40ed-bb1f-1defd7219ab8",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/drive-select-motors/branding/generated-inverse-v1-20261021.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "cebc29dadea9df160b7f0f85766122aee00b823e6c3831afe7d9afae63359aa2",
+      "sha256": "619502ea415e76de921860978e5a16d6f0091ca1ca7c01cd2fbfb7c5ad6c05c4",
+      "crop": {
+        "left": 1,
+        "top": 267,
+        "width": 1663,
+        "height": 421
+      },
+      "sourcePath": "branding/generated-master-v1-20261021.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "c138064468438303537d5aedd9a8d74b6b5cc3bdba1b33292bad14e898002473",
+      "sha256": "f6b8bb49aad84dbfcf7a63ba537ca58ceff291cdf7d96e470f8240dfa52b0ba2",
+      "crop": {
+        "left": 0,
+        "top": 266,
+        "width": 1666,
+        "height": 425
+      },
+      "sourcePath": "branding/generated-inverse-v1-20261021.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "c138064468438303537d5aedd9a8d74b6b5cc3bdba1b33292bad14e898002473",
+      "sha256": "f6b8bb49aad84dbfcf7a63ba537ca58ceff291cdf7d96e470f8240dfa52b0ba2",
+      "crop": {
+        "left": 0,
+        "top": 266,
+        "width": 1666,
+        "height": 425
+      },
+      "sourcePath": "branding/generated-inverse-v1-20261021.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "6e9464c022d6a21f0206a8e4e687d1df056fe888d2556c14411fd86e5ea2ce3b",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-0f755c43-706c-482a-9988-cbe76ee4c3cc",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/drive-select-motors/branding/generated-mark-light-v1-20261021.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "9da7f092dc4f118ac8253c2e8d0bc2f14c6bc162cf5ce40e8e6676723b1e16cb",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-7201995a-9e63-451b-aa31-bf59a290ddae",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/drive-select-motors/branding/generated-mark-dark-v1-20261021.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "cab138646d1fb82270ef3fb4a636fdb5181385cc3e87a50c6b71cebac30a07fd",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-0f755c43-706c-482a-9988-cbe76ee4c3cc",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/drive-select-motors/branding/generated-mark-light-v1-20261021.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "74de827af70facdbedb0f1651de1324f44733eae67cb1a092a025dfdd0016a70",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-0f755c43-706c-482a-9988-cbe76ee4c3cc",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/drive-select-motors/branding/generated-mark-light-v1-20261021.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-20T23:36:43.598Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "fb97112c93e5713a0ee14d90610182fff087b20dd3c0379aca109fd29b1fa016",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-7201995a-9e63-451b-aa31-bf59a290ddae",
+      "modelVersion": null
+    }
+  }
+}

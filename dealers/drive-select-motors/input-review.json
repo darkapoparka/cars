@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-input-review",
+  "dealer": "drive-select-motors",
+  "reviewed": true,
+  "reviewedAt": "2026-10-20T23:37:13.619Z",
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "checks": [
+    "canonical-hosting-and-preserved-fleet-collisions",
+    "assigned-expansion-lead",
+    "public-fact-schema-and-price-omission",
+    "personal-contact-screen",
+    "retained-stock-media",
+    "companion-copy-source-binding",
+    "immutable-template-release-and-native-QA-parent",
+    "reviewed-artwork-provenance-and-regenerated-logo-hashes"
+  ],
+  "sourceArtworkReview": "Retained artwork review is separate provenance; this command does not perform visual, Arabic-expert or dealer approval.",
+  "copyReview": "Automated structure, stock hash, source text and complete EN/BG rows; no new human translation approval is inferred.",
+  "contacts": {
+    "schemaVersion": 1,
+    "kind": "cars-automated-public-contact-screen",
+    "dealer": "drive-select-motors",
+    "method": "heuristic; no claim that unflagged values cannot be personal",
+    "flags": [],
+    "blocking": []
+  },
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-birmingham-drive-select-motors",
+    "position": 14
+  },
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "inputs": [
+    {
+      "path": "FACTS-AND-INVENTORY.json",
+      "sha256": "cc1abce494844701090d0655c3543f4d33cfd3ff79854dd20ead5667d0cb3482"
+    },
+    {
+      "path": "branding/first-proposal-artwork-20261021.json",
+      "sha256": "9f3c3c6056756b10eebf8ea194d80c1ef073868d1257c9a31e273188f86a70b4"
+    },
+    {
+      "path": "branding/generated-inverse-v1-20261021.png",
+      "sha256": "c138064468438303537d5aedd9a8d74b6b5cc3bdba1b33292bad14e898002473"
+    },
+    {
+      "path": "branding/generated-mark-dark-v1-20261021.png",
+      "sha256": "b7f1f39796f70f27b5aafa69cd35f9fa477aafcf6bb87b53243cb9eaaa5a5c09"
+    },
+    {
+      "path": "branding/generated-mark-light-v1-20261021.png",
+      "sha256": "857837e77aedf6234b2a8dc5f86b9f590ffd012a7168f4e60adb95bd652bcc97"
+    },
+    {
+      "path": "branding/generated-master-v1-20261021.png",
+      "sha256": "cebc29dadea9df160b7f0f85766122aee00b823e6c3831afe7d9afae63359aa2"
+    },
+    {
+      "path": "branding/logo-contract.json",
+      "sha256": "8ec4b42d6df5c41741f332b14db632aac6b59695388a29aa669c3d70171e2448"
+    },
+    {
+      "path": "branding/logo-recipe.json",
+      "sha256": "24a5d55c91e574c416d1fdbfcbd46f3994f78ef6d66c2192f2d2cc0785df9cce"
+    },
+    {
+      "path": "branding/originals/drive-select-autotrader-original-20261021.jpg",
+      "sha256": "cdaf4e686c29e491cf5b6375b8506270a430262d0488512e2b41d59adb11f550"
+    },
+    {
+      "path": "branding/source-before-first-artwork-20261021-199f71c406a6ef04.json",
+      "sha256": "199f71c406a6ef04cd9e1f76f3864209868fc61f3673d4af91ab22399f82ac8d"
+    },
+    {
+      "path": "branding/source.json",
+      "sha256": "5e7b831d2f5638991ab626f2132413a10b4d1ad7b92b56e6eb550aa3afb77f54"
+    },
+    {
+      "path": "business-facts.json",
+      "sha256": "fe009840befb85805498261d9c34a374ccdb3767fcfdd75cee126e95ad0226de"
+    },
+    {
+      "path": "copy-review.json",
+      "sha256": "ca28a00dbd66fcad4df8f88e0133585862b2c85f36db0319c230c790345dbaed"
+    },
+    {
+      "path": "dealer-stock/template-demo-1.webp",
+      "sha256": "945e6864218ab3bd5fbd415336b212ecfde645685033f8506836f906885d447c"
+    },
+    {
+      "path": "dealer-stock/template-demo-2.webp",
+      "sha256": "17689ab880bf47de81ef467c34d639223f39f0c1ebe68c90d0aaf70e3dcc6333"
+    },
+    {
+      "path": "dealer-stock/template-demo-3.webp",
+      "sha256": "d644dec8e1ef280a702dccac267a2367f0ab823e40373e1299b156e7723b3b1f"
+    },
+    {
+      "path": "dealer.json",
+      "sha256": "9a2732da977b76a0b7a6dbe9453ac2be911ee7fad632c65d6867ff59684bf224"
+    },
+    {
+      "path": "identity-review.json",
+      "sha256": "f78da2ddd38064cd8b394fa27a32caf059880770be5508d4dfad4337249dbf7f"
+    },
+    {
+      "path": "locale.json",
+      "sha256": "82db06e6116f73b886426c79790a55300a845f31d8398fd8506b73dfcf0f3baf"
+    },
+    {
+      "path": "missing-facts.json",
+      "sha256": "87bf535ada63258a38207fc1a1a89e4fe1fb4d605a0f411645f37065aa71d372"
+    },
+    {
+      "path": "qualification.json",
+      "sha256": "8dd7a2bd79c92023dee54a9803113fe9ba6ad2de786f3e4b116babc841b1314d"
+    },
+    {
+      "path": "source-evidence.json",
+      "sha256": "894ea4cc37ed5a4f2fae07517a885694748ac655d8bd55a8faae86c853a0df9a"
+    },
+    {
+      "path": "stock.json",
+      "sha256": "1d86a95c3a5c09650623a80d87dc457fb7be05ae56b09a02317b64718b5ce63f"
+    }
+  ],
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "providerWrites": 0
+}

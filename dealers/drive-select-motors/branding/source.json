@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "dealer": "drive-select-motors",
-  "status": "research-required",
+  "status": "reviewed",
   "realLogoFirst": true,
   "publicSources": [
     {
@@ -13,8 +13,195 @@
       "observedAt": "2026-10-18"
     }
   ],
-  "originals": [],
-  "creationMethod": null,
+  "originals": [
+    {
+      "path": "branding/originals/drive-select-autotrader-original-20261021.jpg",
+      "sha256": "cdaf4e686c29e491cf5b6375b8506270a430262d0488512e2b41d59adb11f550",
+      "bytes": 20770,
+      "nativeDimensions": {
+        "width": 768,
+        "height": 586
+      },
+      "url": "https://m.atcdn.co.uk/retailer/media/w768/ba97f726-efcc-47ee-8318-11e0a756ef4d.jpg",
+      "observedAt": "2026-10-20T23:28:45.5180369Z",
+      "sourcePage": "https://www.autotrader.co.uk/dealers/worcestershire/birmingham/drive-select-motors-10049495",
+      "kind": "retained-public-original-raster",
+      "dealerApproval": false
+    }
+  ],
+  "creationMethod": "imagegen-proposal",
   "dealerApproved": false,
-  "generatedInputs": null
+  "generatedInputs": {
+    "reviewedAt": "2026-10-20T23:36:43.598Z",
+    "master": {
+      "path": "branding/generated-master-v1-20261021.png",
+      "sha256": "cebc29dadea9df160b7f0f85766122aee00b823e6c3831afe7d9afae63359aa2",
+      "nativeDimensions": {
+        "width": 1667,
+        "height": 944
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-e7c66f56-bd63-4373-a2e0-e72fddd9b5ca",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark-light-v1-20261021.png",
+      "sha256": "857837e77aedf6234b2a8dc5f86b9f590ffd012a7168f4e60adb95bd652bcc97",
+      "nativeDimensions": {
+        "width": 1774,
+        "height": 887
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-0f755c43-706c-482a-9988-cbe76ee4c3cc",
+        "modelVersion": null
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-dark-v1-20261021.png",
+      "sha256": "b7f1f39796f70f27b5aafa69cd35f9fa477aafcf6bb87b53243cb9eaaa5a5c09",
+      "nativeDimensions": {
+        "width": 1774,
+        "height": 887
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-7201995a-9e63-451b-aa31-bf59a290ddae",
+        "modelVersion": null
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-master-v1-20261021.png",
+        "sha256": "cebc29dadea9df160b7f0f85766122aee00b823e6c3831afe7d9afae63359aa2",
+        "nativeDimensions": {
+          "width": 1667,
+          "height": 944
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-e7c66f56-bd63-4373-a2e0-e72fddd9b5ca",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-inverse-v1-20261021.png",
+        "sha256": "c138064468438303537d5aedd9a8d74b6b5cc3bdba1b33292bad14e898002473",
+        "nativeDimensions": {
+          "width": 1666,
+          "height": 944
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-5730337f-2013-40ed-bb1f-1defd7219ab8",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-inverse-v1-20261021.png",
+        "sha256": "c138064468438303537d5aedd9a8d74b6b5cc3bdba1b33292bad14e898002473",
+        "nativeDimensions": {
+          "width": 1666,
+          "height": 944
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-5730337f-2013-40ed-bb1f-1defd7219ab8",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-20T23:36:43.598Z",
+      "wordmarkWidths": [
+        120,
+        180
+      ],
+      "markWidths": [
+        32,
+        64
+      ],
+      "notes": "Agent inspected exact alpha-composited light/inverse wordmarks; final matched consumer sheet is separately retained. All five native dark/red backgrounds are unchanged. Proposal only, no human/dealer/native/hosted approval."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-20T23:36:43.598Z",
+      "widths": [
+        32,
+        64
+      ],
+      "notes": "Dedicated compact light/inverse inputs are actual imagegen edits preserving sourced coupe/polygon identity and colorpartition; no manual stretch, recolour, filters or alpha cleanup."
+    }
+  },
+  "approvalStatus": "independent-preview-not-dealer-approved",
+  "researchConclusion": "The exact retained Autotrader page linked a distinct silver/red coupe-and-polygon dealer raster, retained byte-identical under branding/originals. Generated transparent flat light/inverse treatments preserve the source motif and color family; all treatments remain unapproved proposals.",
+  "publicSourceObservations": [
+    {
+      "observedAt": "2026-10-20T23:36:43.598Z",
+      "kind": "bounded-logo-first-page-review",
+      "observations": "Autotrader page matches Drive Select Motors atHedgleyGrove/Birmingham B339LR and exactretainedphone. Its linked actual coupe/polygon raster is retained with realdate/hash. No review/history/awards statements are adopted as new facts."
+    }
+  ],
+  "generation": {
+    "tool": "image_gen.imagegen",
+    "generationId": "exec-e7c66f56-bd63-4373-a2e0-e72fddd9b5ca",
+    "modelVersion": null,
+    "prompt": "Use case: logo-brand. Create a clean transparent light-surface proposal treatment of this actual sourced DRIVE SELECT MOTORS logo. Retain recognizable coupe silhouette, open polygon outline, red accent lines and slanted condensed lettering style. Wide horizontal composition: isolated compact simplified coupe inside the open polygon outline at LEFT with natural compact about1.8:1 aspect, ample transparent gap, exact text DRIVE SELECT above MOTORS at RIGHT. Deep charcoal #19232c replaces silver/white for white-background contrast; deep muted red #9e2538 accents. Flat opaque ink, no metallic gradient, remove tiny star glints. Car windows, gaps and canvas truly transparent; no filled backgroundplate. All text bold and readable at120/180px, compact32/64px. Clean margins. No new words, legal suffix, claims, extra badge, glow, shadow, white keyline, texture, speckles or redesigned motif. Original opaque source is retained separately; this is a transparent proposed treatment, no dealer adoption implied."
+  },
+  "compactDerivation": {
+    "operation": "actual-imagegen-dedicated-compact",
+    "artworkUnmodifiedAfterGeneration": true,
+    "alphaUnmodified": true
+  },
+  "compactOnDarkDerivation": {
+    "operation": "actual-imagegen-dedicated-compact",
+    "artworkUnmodifiedAfterGeneration": true,
+    "alphaUnmodified": true
+  },
+  "additionalGenerations": [
+    {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-0f755c43-706c-482a-9988-cbe76ee4c3cc",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand, exact compact companion image edit. Keep ONLY the LEFT emblem from the reference: coupe silhouette inside its open polygon outline and the short red accent/base lines UNDER that emblem. Remove ALL DRIVE SELECT MOTORS lettering on right and remove every horizontal line segment extending beyond the polygon. Center retained complete emblem on generous truly transparent square canvas; preserve natural proportions without stretching. Compact visible aspect about2:1, not an ultra-wide banner. Deep charcoal #19232c and muted red #9e2538, flat opaque ink. Windows/cuts/canvas genuinely transparent. Strong crisp geometry at32/64px, no tiny star glints, no new letters or symbols, no filled tile, no metallic finish, glow, shadows, gradients, white keyline, halos, speckles or texture. Same sourced coupe/polygon motif as the full treatment, independent unapproved proposal.",
+      "referencePaths": [
+        "C:\\Users\\radev\\.codex\\generated_images\\01a15a1f-d666-7482-9123-db2575e93737\\exec-e7c66f56-bd63-4373-a2e0-e72fddd9b5ca.png"
+      ],
+      "path": "branding/generated-mark-light-v1-20261021.png",
+      "sha256": "857837e77aedf6234b2a8dc5f86b9f590ffd012a7168f4e60adb95bd652bcc97"
+    },
+    {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-5730337f-2013-40ed-bb1f-1defd7219ab8",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand, faithful inverse of sourced logo treatment. Preserve EXACT coupe silhouette, polygon outline, accent lines, DRIVE SELECT over MOTORS typography, shapes, layout, spacing and proportions. Charcoal ink becomes flat opaque pale silver-grey #cbd2d8, red accents become flat opaque pale muted rose #e3c1c8. Windows/gaps/canvas genuinely transparent. Clear inverse on charcoal/navy/black/red. No metallic gradient, shadow, glow, halos, keyline, haze, texture, speckles, backgroundplate, added words or redesigned motif. Exact DRIVE SELECT MOTORS; transparent treatment remains an unapproved proposal.",
+      "referencePaths": [
+        "C:\\Users\\radev\\.codex\\generated_images\\01a15a1f-d666-7482-9123-db2575e93737\\exec-e7c66f56-bd63-4373-a2e0-e72fddd9b5ca.png"
+      ],
+      "path": "branding/generated-inverse-v1-20261021.png",
+      "sha256": "c138064468438303537d5aedd9a8d74b6b5cc3bdba1b33292bad14e898002473"
+    },
+    {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-7201995a-9e63-451b-aa31-bf59a290ddae",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand, faithful inverse compact variant. Preserve EXACT coupe silhouette, open polygon outline, short base accent lines, geometry, windows/cuts and natural proportions of this reference emblem. Charcoal ink becomes opaque flat pale silver-grey #cbd2d8; red becomes opaque flat pale muted rose #e3c1c8. Same motif and colorpartition, no lettering. All gaps/windows/canvas genuinely transparent, generous margins. Clear at32/64px on charcoal/navy/black/red. No metallic gradient, glow, halo, shadows, texture, speckles, keyline, backgroundplate, added text or redesign. Same sourced Drive Select Motors transparent treatment, independent proposal without dealer adoption.",
+      "referencePaths": [
+        "C:\\Users\\radev\\.codex\\generated_images\\01a15a1f-d666-7482-9123-db2575e93737\\exec-0f755c43-706c-482a-9988-cbe76ee4c3cc.png"
+      ],
+      "path": "branding/generated-mark-dark-v1-20261021.png",
+      "sha256": "b7f1f39796f70f27b5aafa69cd35f9fa477aafcf6bb87b53243cb9eaaa5a5c09"
+    }
+  ],
+  "sourceHistory": [
+    {
+      "reference": "branding/source-before-first-artwork-20261021-199f71c406a6ef04.json",
+      "sha256": "199f71c406a6ef04cd9e1f76f3864209868fc61f3673d4af91ab22399f82ac8d",
+      "retainedAt": "2026-10-20T23:36:43.598Z",
+      "reason": "Exact maintained input-only draft provenance before first proposal artwork"
+    }
+  ]
 }

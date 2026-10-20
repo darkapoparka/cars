@@ -1,0 +1,197 @@
+{
+  "schemaVersion": 1,
+  "dealer": "dc-car-sales",
+  "reviewed": true,
+  "reviewedAt": "2026-10-20T23:33:25.779Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "1d99b84d6f600e0b0ddebd4fe7f3732285d406e1be65ecda7797519ea8c5911e",
+      "sourceSha256": "51f40be8f8d0aabccb2f9038ad147d054ce36eb182c5293dcb2516991455b9d3"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "01b750e8c140d4d9c2b9b6b6058ee487abc2a68ba7896d970db3448a2f846c62",
+      "sourceSha256": "116075fd98ecc4a296dfcb70e19bc32e6867c8343c1655d06ed92f10aaa8a05e"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "01b750e8c140d4d9c2b9b6b6058ee487abc2a68ba7896d970db3448a2f846c62",
+      "sourceSha256": "116075fd98ecc4a296dfcb70e19bc32e6867c8343c1655d06ed92f10aaa8a05e"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "51f40be8f8d0aabccb2f9038ad147d054ce36eb182c5293dcb2516991455b9d3",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-1fa9293e-e751-4811-9c00-1889e03eeac3",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "64b4866a140b737503527f8c6b460341964547130c7d092256fadb7a6872777a",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-1fa9293e-e751-4811-9c00-1889e03eeac3",
+      "modelVersion": null
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "a2b077964a755b4fe14b223129f19f63762da1d7c3b5b96d297c1bafbb95e65c"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "51f40be8f8d0aabccb2f9038ad147d054ce36eb182c5293dcb2516991455b9d3",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1fa9293e-e751-4811-9c00-1889e03eeac3",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/dc-car-sales/branding/generated-master-v1-20261021.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "116075fd98ecc4a296dfcb70e19bc32e6867c8343c1655d06ed92f10aaa8a05e",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-5fdeb085-4938-42bc-bb56-11878a48ccfc",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/dc-car-sales/branding/generated-inverse-v1-20261021.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "116075fd98ecc4a296dfcb70e19bc32e6867c8343c1655d06ed92f10aaa8a05e",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-5fdeb085-4938-42bc-bb56-11878a48ccfc",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/dc-car-sales/branding/generated-inverse-v1-20261021.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "98f99ff1488f2510b1e8280ff02f1fe63d8b0bdc1a347f64cb7f12c4cbde8e86",
+      "sha256": "51f40be8f8d0aabccb2f9038ad147d054ce36eb182c5293dcb2516991455b9d3",
+      "crop": {
+        "left": 34,
+        "top": 203,
+        "width": 1719,
+        "height": 461
+      },
+      "sourcePath": "branding/generated-master-v1-20261021.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "952d3d8d03fc5855d11f002443ee4c8153254bd75940cb74034145eee770919d",
+      "sha256": "116075fd98ecc4a296dfcb70e19bc32e6867c8343c1655d06ed92f10aaa8a05e",
+      "crop": {
+        "left": 35,
+        "top": 202,
+        "width": 1721,
+        "height": 462
+      },
+      "sourcePath": "branding/generated-inverse-v1-20261021.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "952d3d8d03fc5855d11f002443ee4c8153254bd75940cb74034145eee770919d",
+      "sha256": "116075fd98ecc4a296dfcb70e19bc32e6867c8343c1655d06ed92f10aaa8a05e",
+      "crop": {
+        "left": 35,
+        "top": 202,
+        "width": 1721,
+        "height": 462
+      },
+      "sourcePath": "branding/generated-inverse-v1-20261021.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "76f4102d9ff070d8615f6bfc31dc67cfe86b6ee485f7338eb532c2d24356985f",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1fa9293e-e751-4811-9c00-1889e03eeac3",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/dc-car-sales/branding/generated-mark-light-v1-20261021.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "15373e9b637319f48824ceb1503856c10053d9b13bcbc56babcd580a52dbd5fd",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-5fdeb085-4938-42bc-bb56-11878a48ccfc",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/dc-car-sales/branding/generated-mark-dark-v1-20261021.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "64b4866a140b737503527f8c6b460341964547130c7d092256fadb7a6872777a",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1fa9293e-e751-4811-9c00-1889e03eeac3",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/dc-car-sales/branding/generated-mark-light-v1-20261021.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "a2b077964a755b4fe14b223129f19f63762da1d7c3b5b96d297c1bafbb95e65c",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1fa9293e-e751-4811-9c00-1889e03eeac3",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/dc-car-sales/branding/generated-mark-light-v1-20261021.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-20T23:33:25.779Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "8aed4f53b3cee089fc54c10f64d51ef050a9cf15ed6cad15db27bce6ca650c5f",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-5fdeb085-4938-42bc-bb56-11878a48ccfc",
+      "modelVersion": null
+    }
+  }
+}

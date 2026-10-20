@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "dealer": "birmingham-motors-ltd",
-  "status": "research-required",
+  "status": "reviewed",
   "realLogoFirst": true,
   "publicSources": [
     {
@@ -14,7 +14,191 @@
     }
   ],
   "originals": [],
-  "creationMethod": null,
+  "creationMethod": "imagegen-proposal",
   "dealerApproved": false,
-  "generatedInputs": null
+  "generatedInputs": {
+    "reviewedAt": "2026-10-20T23:33:14.910Z",
+    "master": {
+      "path": "branding/generated-master-v1-20261021.png",
+      "sha256": "bc9fc0e1a859600769fc6a21bdbc9877a3c2334c6ecf286c30215b7f975119dd",
+      "nativeDimensions": {
+        "width": 1916,
+        "height": 821
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-b6d70c1d-2100-4066-a0fb-40b1d9bfc31b",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark-light-v1-20261021.png",
+      "sha256": "592d5eb625e558e55baafbbe1fb2f2c0bf9ac89349b345a4f6ffd7debb52a7e4",
+      "nativeDimensions": {
+        "width": 789,
+        "height": 821
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-b6d70c1d-2100-4066-a0fb-40b1d9bfc31b",
+        "modelVersion": null
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-dark-v1-20261021.png",
+      "sha256": "5f5d1bfed33f82350829c3bef03e157f562df8f1eff8f3956624e978e09821c8",
+      "nativeDimensions": {
+        "width": 789,
+        "height": 821
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-90810f87-2a8a-4de6-9016-7a00b1e55880",
+        "modelVersion": null
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-master-v1-20261021.png",
+        "sha256": "bc9fc0e1a859600769fc6a21bdbc9877a3c2334c6ecf286c30215b7f975119dd",
+        "nativeDimensions": {
+          "width": 1916,
+          "height": 821
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-b6d70c1d-2100-4066-a0fb-40b1d9bfc31b",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-inverse-v1-20261021.png",
+        "sha256": "8101f51c89be3d1c9e98bcfa5ef15b2d374dc2866ec30cb503b251e953aee7c7",
+        "nativeDimensions": {
+          "width": 1915,
+          "height": 821
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-90810f87-2a8a-4de6-9016-7a00b1e55880",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-inverse-v1-20261021.png",
+        "sha256": "8101f51c89be3d1c9e98bcfa5ef15b2d374dc2866ec30cb503b251e953aee7c7",
+        "nativeDimensions": {
+          "width": 1915,
+          "height": 821
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-90810f87-2a8a-4de6-9016-7a00b1e55880",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-20T23:33:14.910Z",
+      "wordmarkWidths": [
+        120,
+        180
+      ],
+      "markWidths": [
+        32,
+        64
+      ],
+      "notes": "Agent inspected exact alpha-composited light/inverse wordmarks; final matched consumer sheet is separately retained. All five native dark/red backgrounds are unchanged. Proposal only, no human/dealer/native/hosted approval."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-20T23:33:14.910Z",
+      "widths": [
+        32,
+        64
+      ],
+      "notes": "Compact artwork is an exact pixel extraction of the isolated generated emblem, with a clear alpha gap to the wordmark; no recolour, filters or alpha cleanup."
+    }
+  },
+  "approvalStatus": "independent-preview-not-dealer-approved",
+  "researchConclusion": "The exact retained dealer marketplace page was checked and confirms the trading name. No usable distinct original raster was obtained in bounded checks, which does not establish absence of a logo. Independent new proposal; retained facts, stock, aliases and research remain unchanged.",
+  "publicSourceObservations": [
+    {
+      "observedAt": "2026-10-20T23:33:14.910Z",
+      "kind": "bounded-logo-first-page-review",
+      "observations": "Exact primary eBay W-A-Vehicles account displays Birmingham Motors Ltd, Meadway B330DZ and retained contacts. W-A-Vehicles is the retained seller alias; unrelated Irish/Birmingham namesakes ignored. No distinct header artwork obtained."
+    }
+  ],
+  "generation": {
+    "tool": "image_gen.imagegen",
+    "generationId": "exec-b6d70c1d-2100-4066-a0fb-40b1d9bfc31b",
+    "modelVersion": null,
+    "prompt": "Use case: logo-brand. Create ONE independent proposal for exact trading name BIRMINGHAM MOTORS LTD. Wide clean horizontal lockup, isolated compact BM monogram at LEFT occupying no more than one quarter of visible width, generous transparent gap, exact bold condensed text BIRMINGHAM above MOTORS LTD at RIGHT. Compact BM uses original interlocking angular strokes with open negative-space channels, balanced natural1.4:1 geometry, clear at32/64px. Deep navy #18283f and deep muted red #a52536, flat opaque ink contrasting strongly with white. Lettering legible at120/180px total logo width; no tiny tagline. Truly transparent canvas and counters, generous margins. No city skyline, vehicle silhouette, shield, crown, plate, slogan, history/date claims, white keylines, gradients, glow, shadow, texture or speckles. Independent new proposal for the Meadway Birmingham business; no adoption or official-logo claim."
+  },
+  "compactDerivation": {
+    "operation": "lossless-png-extract-isolated-emblem",
+    "parentPath": "branding/generated-master-v1-20261021.png",
+    "parentSha256": "bc9fc0e1a859600769fc6a21bdbc9877a3c2334c6ecf286c30215b7f975119dd",
+    "crop": {
+      "left": 0,
+      "top": 0,
+      "width": 789,
+      "height": 821
+    },
+    "emptyGap": {
+      "start": 737,
+      "end": 841,
+      "width": 104
+    },
+    "parentNativeDimensions": {
+      "width": 1916,
+      "height": 821
+    },
+    "artworkUnmodified": true,
+    "alphaUnmodified": true
+  },
+  "compactOnDarkDerivation": {
+    "operation": "lossless-png-extract-isolated-emblem",
+    "parentPath": "branding/generated-inverse-v1-20261021.png",
+    "parentSha256": "8101f51c89be3d1c9e98bcfa5ef15b2d374dc2866ec30cb503b251e953aee7c7",
+    "crop": {
+      "left": 0,
+      "top": 0,
+      "width": 789,
+      "height": 821
+    },
+    "emptyGap": {
+      "start": 739,
+      "end": 839,
+      "width": 100
+    },
+    "parentNativeDimensions": {
+      "width": 1915,
+      "height": 821
+    },
+    "artworkUnmodified": true,
+    "alphaUnmodified": true
+  },
+  "additionalGenerations": [
+    {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-90810f87-2a8a-4de6-9016-7a00b1e55880",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand, exact inverse variant. Preserve exact BM monogram at LEFT and BIRMINGHAM above MOTORS LTD at RIGHT, all letters, shapes, counters, relative size, spacing and layout. Navy ink becomes flat opaque pale silver-grey #cbd2d8; deep red becomes flat opaque pale muted rose #e3c1c8. All negative space and canvas genuinely transparent. Strong clear artwork on charcoal/navy/black/red, main text120/180px and compact32/64px. No glow, halo, gradient, shadow, keylines, haze, texture, speckles, plate, new wording or redesign. Exact BIRMINGHAM MOTORS LTD; same independent unapproved proposal.",
+      "referencePaths": [
+        "C:\\Users\\radev\\.codex\\generated_images\\01a15a1f-d666-7482-9123-db2575e93737\\exec-b6d70c1d-2100-4066-a0fb-40b1d9bfc31b.png"
+      ],
+      "path": "branding/generated-inverse-v1-20261021.png",
+      "sha256": "8101f51c89be3d1c9e98bcfa5ef15b2d374dc2866ec30cb503b251e953aee7c7"
+    }
+  ],
+  "sourceHistory": [
+    {
+      "reference": "branding/source-before-first-artwork-20261021-a09edc49990c6f86.json",
+      "sha256": "a09edc49990c6f864cbe1e93b39912134a7a6ef8c7cfbc02292f48ebd7ee7c52",
+      "retainedAt": "2026-10-20T23:33:14.910Z",
+      "reason": "Exact maintained input-only draft provenance before first proposal artwork"
+    }
+  ]
 }

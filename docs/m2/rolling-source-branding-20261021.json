@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "type": "cars-rolling-three-pack-source-branding",
+  "groups": [
+    {
+      "group": "fourth3",
+      "recordedAt": "2026-10-20T23:40:18.812Z",
+      "reviewSealSha256": "9d0e2babaab2264ed295b128a89b5b83b1f8cfa7925d181790c8b7bb3e24c4d0",
+      "totals": {
+        "packs": 3,
+        "artworkPassed": 3,
+        "sourceReviewCheckPassed": 3,
+        "existingContactHeld": 0,
+        "candidateRasterChecks": 42,
+        "actualSourceRasterChecks": 42,
+        "files": 73,
+        "bytes": 6895494,
+        "modifiedPaths": 15,
+        "addedPaths": 28,
+        "deleted": 0
+      },
+      "packs": [
+        {
+          "slug": "birmingham-motors-ltd",
+          "path": "dealers/birmingham-motors-ltd",
+          "packDigest": "99a05d1b6fe579083f9132ec56085a2e7b0c4a3daf876682773d6248595ef674",
+          "files": 24,
+          "bytes": 2328125,
+          "sourceReady": true,
+          "proposalOnly": true,
+          "maintainerConsumerReview": true,
+          "actualSourceRasters": 14,
+          "strictPublisher": {
+            "passed": true,
+            "actualExportedApplyLeadBranding": true,
+            "fixtureSourceSha256": "85d66559b60867d2ab30ff7c4cb0a9eb07f7d6b9e0fb8ef3c4ae5caeae594783",
+            "noBuild": true
+          },
+          "sourceFactsStockPhotosResearchPreserved": true,
+          "humanReview": false,
+          "dealerApproval": false,
+          "nativeApproval": false,
+          "hostedApproval": false,
+          "provenance": "dealers/birmingham-motors-ltd/branding/first-proposal-artwork-20261021.json"
+        },
+        {
+          "slug": "dc-car-sales",
+          "path": "dealers/dc-car-sales",
+          "packDigest": "995fa387c22d96b4be6e1d396ba764edd7cc2b70e1598e0a4e8fd253b45a50a5",
+          "files": 24,
+          "bytes": 1892844,
+          "sourceReady": true,
+          "proposalOnly": true,
+          "maintainerConsumerReview": true,
+          "actualSourceRasters": 14,
+          "strictPublisher": {
+            "passed": true,
+            "actualExportedApplyLeadBranding": true,
+            "fixtureSourceSha256": "85d66559b60867d2ab30ff7c4cb0a9eb07f7d6b9e0fb8ef3c4ae5caeae594783",
+            "noBuild": true
+          },
+          "sourceFactsStockPhotosResearchPreserved": true,
+          "humanReview": false,
+          "dealerApproval": false,
+          "nativeApproval": false,
+          "hostedApproval": false,
+          "provenance": "dealers/dc-car-sales/branding/first-proposal-artwork-20261021.json"
+        },
+        {
+          "slug": "drive-select-motors",
+          "path": "dealers/drive-select-motors",
+          "packDigest": "8b543ef2389ec21391165378ffcedddf93abe4665149c4accc76a1a058b7b493",
+          "files": 25,
+          "bytes": 2674525,
+          "sourceReady": true,
+          "proposalOnly": true,
+          "maintainerConsumerReview": true,
+          "actualSourceRasters": 14,
+          "strictPublisher": {
+            "passed": true,
+            "actualExportedApplyLeadBranding": true,
+            "fixtureSourceSha256": "85d66559b60867d2ab30ff7c4cb0a9eb07f7d6b9e0fb8ef3c4ae5caeae594783",
+            "noBuild": true
+          },
+          "sourceFactsStockPhotosResearchPreserved": true,
+          "humanReview": false,
+          "dealerApproval": false,
+          "nativeApproval": false,
+          "hostedApproval": false,
+          "provenance": "dealers/drive-select-motors/branding/first-proposal-artwork-20261021.json"
+        }
+      ],
+      "nativeStatus": "Awaiting exact-source dispatch after this checkpoint",
+      "nativeApproval": false,
+      "hostedApproval": false
+    }
+  ],
+  "ownerAccepted": false,
+  "outreachPerformed": false
+}
