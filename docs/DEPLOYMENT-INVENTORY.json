@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-20T18:32:21.039Z",
+  "updatedAt": "2026-10-20T18:46:52.982Z",
   "githubOwner": "darkapoparka",
   "vercelTeam": "tyj5",
   "model": "One canonical dealer folder and publishing repository; deployment provider and actual variants are declared per dealer.",
@@ -34641,6 +34641,170 @@
         "receiptSha256": "d8b515a7b6c6e88d0fa023fff39c348944106ae986e9d10add68f3ebdbdc98d0",
         "batch": 1,
         "recordedAt": "2026-10-20T18:32:21.039Z"
+      }
+    },
+    {
+      "slug": "best-cars-exporter-dxb",
+      "id": "ae-dubai-best-cars-exporter-dxb",
+      "name": "Best Cars Exporter DXB",
+      "sourceFormat": "dealer-pack",
+      "sourceOwnership": "cars-repository",
+      "sourcePath": "dealers/best-cars-exporter-dxb",
+      "localPath": "dealers/best-cars-exporter-dxb",
+      "localPresent": true,
+      "repository": "darkapoparka/cars",
+      "canonicalSourceRepository": "darkapoparka/cars",
+      "canonicalSourceRef": "10add42ed89b1dfdc08436a78b7fb83fbee46777",
+      "canonicalSourceCommit": "10add42ed89b1dfdc08436a78b7fb83fbee46777",
+      "canonicalSourceTree": "18fb6d509eabcf793a9c23784b1c56a8fe1c872d",
+      "packagingVersion": "5",
+      "variants": [
+        {
+          "key": "auto-best",
+          "base": "",
+          "entry": "/",
+          "publicUrl": "https://best-cars-exporter-dxb.webpreviews.site/",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/auto-best",
+            "tree": "cbd21f5e0b794a0cbf52bf36fdf07b25fb0bb499",
+            "digest": "90760c4c73d46ebf976a06e923171f31fc716661f69d25d864342ea856002279"
+          }
+        },
+        {
+          "key": "modern",
+          "base": "/variant-2",
+          "entry": "/variant-2/cars",
+          "publicUrl": "https://best-cars-exporter-dxb.webpreviews.site/variant-2/cars",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/modern",
+            "tree": "e1285aeebcf21730a064db00779a679e64e9d3ca",
+            "digest": "965f1003f5292e99adc72afb738d676436bdc27e7da7ec0264d2872d149a23b5"
+          }
+        },
+        {
+          "key": "import",
+          "base": "/variant-3",
+          "entry": "/variant-3/",
+          "publicUrl": "https://best-cars-exporter-dxb.webpreviews.site/variant-3/",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/import",
+            "tree": "87950ec43fdb33fd85dbf6d6b6160e1a779777c6",
+            "digest": "3c1fe9e9adef074aa7ca2e774ef8a0d955c77e527b7939418ab408e87659e50d"
+          }
+        },
+        {
+          "key": "app",
+          "base": "/variant-4",
+          "entry": "/variant-4/",
+          "publicUrl": "https://best-cars-exporter-dxb.webpreviews.site/variant-4/",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/app",
+            "tree": "ad5b8acf793545b0082cfb33e37c7a97da63ec36",
+            "digest": "524f71647d6bafa4320173f73658fce39b48bf0508171480475b980dc3565b65"
+          }
+        },
+        {
+          "key": "mobile",
+          "base": "/variant-5",
+          "entry": "/variant-5/",
+          "publicUrl": "https://best-cars-exporter-dxb.webpreviews.site/variant-5/",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/mobile",
+            "tree": "9dadfcad37e2b8909cc39d7758db3fca1cd5cf61",
+            "digest": "c85e58c9e747e68d0911f6bd4827a643b8a538dc1ea5eb7d29a78c3252585ef1"
+          }
+        },
+        {
+          "key": "karento-best",
+          "base": "/variant-6",
+          "entry": "/variant-6/",
+          "publicUrl": "https://best-cars-exporter-dxb.webpreviews.site/variant-6/",
+          "state": "live-verified",
+          "qaRecorded": true,
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+            "path": "templates/karento-best",
+            "tree": "9c2ab0e1c84f2ffbb0f20dbba757dea36d88808f",
+            "digest": "1f32f03af52daee41861d53d66bafcf3147d001f5a0a9840afbe9b6fb128a8c9"
+          }
+        }
+      ],
+      "delivery": {
+        "provider": "cloudflare",
+        "state": "live-verified",
+        "workerName": "cars-best-cars-exporter-dxb",
+        "workerId": "17071201d2c943e7ba87f428644af9c3",
+        "versionId": "fa897667-3080-4e71-a825-1ecb5e2fec7a",
+        "routeId": "b2b2766e2d5042da8bf021f0f6c020ec",
+        "configuredPublicOrigin": "https://best-cars-exporter-dxb.webpreviews.site",
+        "url": "https://best-cars-exporter-dxb.webpreviews.site/",
+        "checkedAt": "2026-10-20T18:43:21.682Z"
+      },
+      "evidence": {
+        "source": {
+          "state": "committed",
+          "repository": "darkapoparka/cars",
+          "commit": "10add42ed89b1dfdc08436a78b7fb83fbee46777",
+          "path": "dealers/best-cars-exporter-dxb",
+          "tree": "18fb6d509eabcf793a9c23784b1c56a8fe1c872d",
+          "inputFiles": 25,
+          "remoteVerified": true
+        },
+        "build": {
+          "state": "passed",
+          "outputDigest": "f0eb5a8ab394df7981debbbcc1c38eb8ba3438b5c850ba376aea75b85a89dd37",
+          "packDigest": "b39020fe544305462dc1455436f11e224a5351f7346a7f7f28c71add12b8c62e",
+          "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0"
+        },
+        "deployment": {
+          "state": "deployed",
+          "workerId": "17071201d2c943e7ba87f428644af9c3",
+          "versionId": "fa897667-3080-4e71-a825-1ecb5e2fec7a",
+          "receiptSha256": "381f064fc280336f30494c10ac14972c9443558e1679e8f972c0cf0f18b5b6ee"
+        },
+        "browser": {
+          "state": "passed",
+          "reportSha256": "58817d71cbb2dac5f720651451a2cf6b748114e0278690cfe83ab42a3dccda92",
+          "widths": [
+            390
+          ],
+          "locales": [
+            "en"
+          ]
+        },
+        "ownerReview": {
+          "state": "not-claimed",
+          "note": "Owner authorized preview deployment; this receipt does not claim dealer identity or visual approval."
+        }
+      },
+      "newPackDeployment": {
+        "queueId": "10b70e3e-8623-49b4-bc1d-3a7468c0231a",
+        "queueBranch": "cars-deploy-queue",
+        "requestId": "f5970de280e3af45894d56fa58af5be8ef01a829b5134c960df02167f1be15ea",
+        "receiptSha256": "381f064fc280336f30494c10ac14972c9443558e1679e8f972c0cf0f18b5b6ee",
+        "batch": 3,
+        "recordedAt": "2026-10-20T18:46:52.982Z"
       }
     }
   ],

@@ -2431,6 +2431,26 @@
       "sourceRepository": "darkapoparka/cars",
       "sourceCommit": "599adb6c101219eecbe8b4117e62189f7f168f16",
       "sourcePath": "dealers/za-motors"
+    },
+    {
+      "slug": "best-cars-exporter-dxb",
+      "name": "Best Cars Exporter DXB",
+      "path": "dealers/best-cars-exporter-dxb",
+      "variants": [
+        "auto-best",
+        "modern",
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
+      ],
+      "sourceState": "source-present",
+      "reviewState": "not-claimed",
+      "leadId": "ae-dubai-best-cars-exporter-dxb",
+      "sourceFormat": "dealer-pack",
+      "sourceRepository": "darkapoparka/cars",
+      "sourceCommit": "10add42ed89b1dfdc08436a78b7fb83fbee46777",
+      "sourcePath": "dealers/best-cars-exporter-dxb"
     }
   ],
   "campaignCandidatesWithoutFolders": [

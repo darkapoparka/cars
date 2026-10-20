@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 1,
+  "type": "cars-m2-expansion-runtime-evidence",
+  "recordedAt": "2026-10-20T18:48:23.343Z",
+  "slug": "best-cars-exporter-dxb",
+  "sourceBuildRunId": 39473217375,
+  "deploymentRunId": 39475368910,
+  "deploymentRunUrl": "https://github.com/darkapoparka/cars/actions/runs/39475368910",
+  "executorCommit": "10add42ed89b1dfdc08436a78b7fb83fbee46777",
+  "queueCommit": "868a48ee0bd104241fb41d8b8f83fc94ad499dcc",
+  "queueBlobId": "331e5a94f7a6e5c336e34f98a54bb179e45442a8",
+  "artifact": {
+    "id": 12289099314,
+    "sha256": "c3dffe9d99ed6f88394ea54b2d6e5945eb5343f5e9d680ea800e5010c93bfd76",
+    "member": "dealer-pack-dispatch/metrics.json",
+    "memberSha256": "8e3f604a866274072824ed24b0bfdd32728c743597da182744686b3dcc8584cc"
+  },
+  "receipt": {
+    "sha256": "381f064fc280336f30494c10ac14972c9443558e1679e8f972c0cf0f18b5b6ee",
+    "requestId": "f5970de280e3af45894d56fa58af5be8ef01a829b5134c960df02167f1be15ea",
+    "workerId": "17071201d2c943e7ba87f428644af9c3",
+    "versionId": "fa897667-3080-4e71-a825-1ecb5e2fec7a",
+    "routeId": "b2b2766e2d5042da8bf021f0f6c020ec",
+    "publicOrigin": "https://best-cars-exporter-dxb.webpreviews.site",
+    "sourceCommit": "10add42ed89b1dfdc08436a78b7fb83fbee46777",
+    "packDigest": "b39020fe544305462dc1455436f11e224a5351f7346a7f7f28c71add12b8c62e",
+    "outputDigest": "f0eb5a8ab394df7981debbbcc1c38eb8ba3438b5c850ba376aea75b85a89dd37",
+    "hostedReportSha256": "58817d71cbb2dac5f720651451a2cf6b748114e0278690cfe83ab42a3dccda92",
+    "hostedVerified": true,
+    "hostedFinishedAt": "2026-10-20T18:43:21.680Z"
+  },
+  "ciRuntime": {
+    "providerWrites": 0,
+    "reports": [
+      {
+        "schemaVersion": 1,
+        "type": "cars-dealer-pack-runtime-metrics",
+        "slug": "best-cars-exporter-dxb",
+        "workerName": "cars-best-cars-exporter-dxb",
+        "accountId": "cb0007f242077bd759331f096eb75531",
+        "window": {
+          "start": "2026-10-20T18:41:15.367Z",
+          "end": "2026-10-20T18:43:23.742Z"
+        },
+        "observedAt": "2026-10-20T18:43:24.216Z",
+        "providerWrites": 0,
+        "requests": 20,
+        "errors": 0,
+        "exceptionalStatuses": [],
+        "startupTimeMs": 66,
+        "cpuAvailable": true,
+        "memoryAvailable": true,
+        "maxP99CpuMs": 546.304,
+        "maxP99MemoryMiB": 109.9113998413086,
+        "rows": [
+          {
+            "status": "success",
+            "requests": 20,
+            "errors": 0,
+            "cpuMicroseconds": {
+              "cpuTimeP50": 85799,
+              "cpuTimeP90": 249249,
+              "cpuTimeP99": 546304,
+              "cpuTimeP999": 546304
+            },
+            "memoryBytes": {
+              "memoryUsageBytesP50": 87613440,
+              "memoryUsageBytesP90": 106577300,
+              "memoryUsageBytesP99": 115250456,
+              "memoryUsageBytesP999": 115250456
+            }
+          }
+        ],
+        "status": "observed-without-errors",
+        "cpuLimitMs": 30000,
+        "cpuLimitSource": "provider-active-version-readback",
+        "withinLimits": true,
+        "limitChecks": {
+          "startup": {
+            "withinLimit": true,
+            "observedMs": 66,
+            "limitMs": 1000
+          },
+          "cpu": {
+            "withinLimit": true,
+            "observedMaxGroupP99Ms": 546.304,
+            "limitMs": 30000
+          },
+          "memory": {
+            "withinLimit": true,
+            "observedMaxGroupP99MiB": 109.9113998413086,
+            "limitMiB": 128
+          }
+        },
+        "limitsReference": {
+          "source": "https://developers.cloudflare.com/workers/platform/limits/",
+          "verifiedAt": "2026-10-19"
+        },
+        "interpretation": "withinLimits compares measured upload startup and sampled maximum group P99 CPU/memory values against their stated limits, and requires observed invocations without errors. It is null when evidence is incomplete unless an observed failure already establishes false. These are not exact peaks, whole-window quantiles or a guarantee about every invocation. Memory is shared per V8 isolate; absent data is not zero usage. This pilot does not establish sustained production-load headroom."
+      }
+    ],
+    "complete": true
+  },
+  "scope": "Metrics query filters the exact Worker script and time window, without a version filter. Version provenance comes from the durable activation/hosted receipt. Sampled observations and upload startup are not sustained-load or exact-peak evidence.",
+  "ownerAccepted": false,
+  "outreachPerformed": false
+}

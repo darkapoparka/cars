@@ -22,7 +22,7 @@ Vercel deploys the dedicated repository. A local edit or folder move does not up
 
 ## Registered public dealer projects
 
-The registry contains 128 dealer public aliases below. These rows are generated from ../docs/DEPLOYMENT-INVENTORY.json; they are a source-location guide, not a fresh visual acceptance report.
+The registry contains 129 dealer public aliases below. These rows are generated from ../docs/DEPLOYMENT-INVENTORY.json; they are a source-location guide, not a fresh visual acceptance report.
 
 | Dealer / source folder | Source ownership | Published source | Hosting project / Worker | Public website |
 | --- | --- | --- | --- | --- |
@@ -48,6 +48,7 @@ The registry contains 128 dealer public aliases below. These rows are generated 
 | AS Motor Group — `batley-as-motor-group/` | Cars repository | [darkapoparka/cars-uk-batley-as-motor-group](https://github.com/darkapoparka/cars-uk-batley-as-motor-group) | `Not recorded` | [batley-as-motor-group.webpreviews.site](https://batley-as-motor-group.webpreviews.site/) |
 | Not recorded — `bavaria-auto-varna/` | Cars repository | [darkapoparka/cars-bavaria-auto-varna](https://github.com/darkapoparka/cars-bavaria-auto-varna) | `Not recorded` | [bavaria-auto-varna.webpreviews.site](https://bavaria-auto-varna.webpreviews.site/) |
 | Not recorded — `bavaro-varna/` | Cars repository | [darkapoparka/cars-bavaro-varna](https://github.com/darkapoparka/cars-bavaro-varna) | `Not recorded` | [bavaro-varna.webpreviews.site](https://bavaro-varna.webpreviews.site/) |
+| Best Cars Exporter DXB — `dealers/best-cars-exporter-dxb/` | Cars dealer pack | [darkapoparka/cars @ 10add42ed89b](https://github.com/darkapoparka/cars/tree/10add42ed89b1dfdc08436a78b7fb83fbee46777/dealers/best-cars-exporter-dxb/) | `cars-best-cars-exporter-dxb` | [best-cars-exporter-dxb.webpreviews.site](https://best-cars-exporter-dxb.webpreviews.site/) |
 | Not recorded — `biemaauto-varna/` | Cars repository | [darkapoparka/cars-biemaauto-varna](https://github.com/darkapoparka/cars-biemaauto-varna) | `Not recorded` | [biemaauto-varna.webpreviews.site](https://biemaauto-varna.webpreviews.site/) |
 | Square One Motors — `birmingham-square-one-motors/` | Cars repository | [darkapoparka/cars-uk-birmingham-square-one-motors](https://github.com/darkapoparka/cars-uk-birmingham-square-one-motors) | `Not recorded` | [birmingham-square-one-motors.webpreviews.site](https://birmingham-square-one-motors.webpreviews.site/) |
 | Trade Car Sales — `birmingham-trade-car-sales-grasmere/` | Cars repository | [darkapoparka/cars-uk-birmingham-trade-car-sales-grasmere](https://github.com/darkapoparka/cars-uk-birmingham-trade-car-sales-grasmere) | `Not recorded` | [birmingham-trade-car-sales-grasmere.webpreviews.site](https://birmingham-trade-car-sales-grasmere.webpreviews.site/) |

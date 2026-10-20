@@ -2,7 +2,7 @@
 
 M2 applies to new `dealers/<slug>/` packs. The owner confirmed Workers Paid, authorized 400 new previews, and explicitly approved using the final slot: account capacity 500, protected baseline 100, maximum new dealers 400, reserve 0. Deployment authority covers previews only; outreach is separate and is not authorized. The three proof dealers are members of that 400-lead expansion, not additional slots.
 
-The maintained implementation is on `astra/m2-fast-deploy`, branched from `a999878a921fb61b37bf198c43275550814f88cc`, in its own PR to `main`. PR #16 and the four `astra/batch-*` research branches are not edited by this work. Existing `clients/` workflows remain available. A malformed neighboring pack is reported and its identity reserved; it does not crash the old dealer index or unrelated builds.
+The M2 implementation was integrated into `main` by PR #17. Existing research branches retain their independent pack work; intake selected dealer directories by exact source revision while preserving the shared lock and batch identities. Existing `clients/` workflows remain available. A malformed neighboring pack is reported and its identity reserved; it does not crash the old dealer index or unrelated builds.
 
 ## Build architecture and its limits
 
@@ -16,6 +16,14 @@ There are no per-dealer source archive artifacts and no family-to-family artifac
 
 A failed pack is excluded with a reason and the remaining packs continue. Downstream reporting uses `!cancelled()` rather than an implicit success-only chain. The final CI gate remains failed if any pack was rejected or failed. Deployment can consume successful individual artifacts from such a run only after authenticating the exact source run's successful shared `contracts` job. A failure in shared guards or packaging contracts cannot be bypassed by selecting a successful dealer artifact.
 
+For a tooling or workflow checkpoint that needs shared contracts without new native builds, dispatch the maintained pipeline with `contracts_only=true`:
+
+```sh
+gh workflow run dealer-pack-pipeline.yml --ref main -f contracts_only=true
+```
+
+This runs the shared Node 26/document and Node 22 publisher checks, skips planning/native lanes, and requires successful contracts at the final gate. Normal explicit-slug and batch runs keep their existing behavior. A contracts-only run has no bundle transports and cannot be used as a deployment `source_run_id`; automatic transport inspection reports its missing manifests without queue/provider writes. It does not qualify artifacts from an older failed source run.
+
 ## Visual policy
 
 The three proof builds at `26b626c979d2cfd653b3015d94ff8fe2df724a93` passed all 54 comparisons against the final M1 bundles: **zero unexpected pixels** across 81,340,510 pixels on each side. The only changes were 29,691 pixels inside the explicitly requested FAB artwork correction and nine antialiasing pixels. See [the visual evidence and exact comparison method](m2/VISUAL-EQUIVALENCE-2026-10-19.md) and [all screenshot/report digests](m2/visual-equivalence-2026-10-19.json). This is visual equivalence with that named artwork exception, not a claim of complete pixel identity.
@@ -24,7 +32,7 @@ The continuation also authenticated the newer three proof bundles at `19feec8375
 
 After the HEAD correction, fresh native builds at `599adb6c101219eecbe8b4117e62189f7f168f16`, [run 39341160417](https://github.com/darkapoparka/cars/actions/runs/39341160417), passed all three builds and browser QA, and all shared contracts. A new direct comparison against the final M1 attempt passes **54/54 views**: every pixel outside the named FAB artwork is identical, with **zero antialiasing pixels and zero unexpected differences**. The 29,691 changed artwork pixels remain the same explicit exception; complete pixel identity is not claimed. The [fresh comparison receipt](m2/visual-equivalence-599adb6.json) binds the exact source, terminal CI jobs, six downloaded archives, build/QA reports and all 108 baseline/candidate PNG hashes. The subsequent inspection request and workflow sequencing change do not alter pack inputs, template sources or Worker output code.
 
-No template frontend or styling source is changed. Signature desktop example cards remain unchanged. V2 uses the same active-design FAB artwork as the 100 live dealers, as explicitly requested. M1 pack FABs used the dealer's mark, so that requested correction is a real, bounded visual difference from M1.
+The qualified M2 proof release changed no template frontend or styling source. Later shared template work on main is maintained separately and does not update the selected immutable release. Signature desktop example cards in that proof release remain unchanged. V2 uses the same active-design FAB artwork as the 100 live dealers, as explicitly requested. M1 pack FABs used the dealer's mark, so that requested correction is a real, bounded visual difference from M1.
 
 `scripts/compare-dealer-pack-screenshots.mjs` authenticates the final green M1 run `39284983471`, attempt 2, commit `a999878`, its exact reports and all 54 screenshot hashes. It compares all six designs at 320, 390 and 1280 pixels with threshold 0, no resizing, equal dimensions, and zero unexpected pixels. Only classified edge antialiasing is accepted. `--allow-fab-correction` additionally permits the exact verified fleet image inside the existing 46 by 34 CSS-pixel FAB image bounds; the surrounding button, count, shadow and page pixels remain strict. Its report explicitly distinguishes that authorized difference from global pixel identity.
 
@@ -40,7 +48,7 @@ The retained M1 cold/warm repeatability check passed 54/54 views: 50 were pixel-
 
 ## Compact source packs and migration from M1
 
-The four research branches were created from `a999878`. Each batch owner first incorporates the maintained M2 tooling into their own branch, then migrates the existing packs mechanically. The migration does not fetch new research, generate replacement artwork, change the selected template trees, or deploy. It retains the lead ID, facts, dated stock, source evidence, original artwork and sourced photos. If a directory must be shortened, it changes only structural dealer bindings and internal pack paths; the research identity and business prose stay intact.
+The research branches were created from `a999878`. In the maintained checkout, selected dealer directories can be integrated from an exact research commit while preserving the current shared lock and assignments. Alternatively, a batch owner can incorporate the maintained M2 tooling into their existing branch. Migrate the existing packs mechanically in the chosen source location. The migration does not fetch new research, generate replacement artwork, change the selected template trees, or deploy. It retains the lead ID, facts, dated stock, source evidence, original artwork and sourced photos. If a directory must be shortened, it changes only structural dealer bindings and internal pack paths; the research identity and business prose stay intact.
 
 Use the pipeline's Node 26.10.0 runtime. The deterministic logo recipe uses Sharp 0.35.5 and records the exact Sharp/libvips dependency versions and every derived byte hash. Install the source tool once if it is absent:
 
@@ -221,7 +229,19 @@ node scripts/inspect-dealer-pack-pilot.mjs \
 
 ### Exact batch go-live sequence
 
-Each batch owner incorporates the reviewed M2 tooling into their own branch. The coordinator does not edit the four research branches. The following sequence uses batch 1; use its own assignment number for another batch. Run the commands with Node 26.10.0 and the documented tool dependencies. `GITHUB_TOKEN` needs access to read Actions artifacts and write the dedicated queue branch. The provider token scopes are below.
+Use the maintained checkout on `main` or a suitable existing batch branch containing the reviewed M2 tooling. When integrating research into `main`, select exact dealer directories from the pinned research commit and preserve its original facts/artwork/photos; do not replace the maintained shared tooling or lock with stale research copies. The following full-batch example uses batch 1; use its own assignment number for another batch. Run the commands with Node 26.10.0 and the documented tool dependencies. `GITHUB_TOKEN` needs access to read Actions artifacts and write the dedicated queue branch. The provider token scopes are below.
+
+For selected packs on `main`, migrate/review/check each explicit slug, commit those inputs, and build only that selected subset:
+
+```sh
+node scripts/dealer-pack.mjs migrate --slug ready-pack --batch 1
+node scripts/dealer-pack.mjs migrate --slug ready-pack --batch 1 --write
+node scripts/dealer-pack.mjs check --slug ready-pack
+gh workflow run dealer-pack-pipeline.yml --repo darkapoparka/cars \
+  --ref main -f slugs=ready-pack -f batch=1
+```
+
+For a selected subset spanning assignments, omit the build's optional `batch` input; each pack still has to match its recorded assignment. Preserve explicit slugs through artifact inspection and queue intake. A successful subset does not mean the whole 100-lead assignment is complete.
 
 1. **Migrate and commit the source.**
 
