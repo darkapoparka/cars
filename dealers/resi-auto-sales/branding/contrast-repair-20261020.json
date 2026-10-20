@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "dealer": "resi-auto-sales",
+  "mode": "built-in-imagegen",
+  "independentProposal": true,
+  "dealerApproved": false,
+  "originalPackDigest": "5ffc3b4d94c4410139a69f0cd300dfced266b08bd8fb902c050a55e9865e7d73",
+  "originalSourceSha256": "53198fdc1d8ad0f750bbd7c91589442f9e86c5731f5c60b18b22acaa6dd25df7",
+  "selected": [
+    {
+      "roles": [
+        "onAccent"
+      ],
+      "filename": "contrast-on-accent-v2.png",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-f8353e87-0a16-4680-85d2-aa33f4edf07c",
+        "referenceKind": "actual-tool-output-filename",
+        "modelVersion": null
+      },
+      "prompt": "Exact single-color surface edit of this existing RESI AUTO SALES logo. Preserve the precise R-and-winding-road motif including dashed road gaps, exact spelling RESI AUTO SALES, typography, spacing, proportions and horizontal arrangement. Change EVERY positive stroke and letter, including the road and AUTO word, to one uniform very light icy blue-grey #d6e7f3. Remove every dark outline and backing stroke; keep all letter holes and intended road gaps truly transparent. No other colors anywhere. Completely transparent canvas outside the logo. Absolutely no colored halo, glow, clouds, paint, weathering, texture, speckles, gradient, shadows, backing plate or added shapes. Clean flat smooth opaque light blue-grey fills and crisp alpha. Independent preview proposal variant.",
+      "parentReference": "branding/generated-on-dark.png",
+      "rejectedOutputFile": "exec-d6f4aeaf-5731-430f-81d3-195cf6d24f0f.png",
+      "rejectedReason": "Colored halo outside artwork; not used",
+      "sourcePath": "branding/contrast-on-accent-v2.png",
+      "sha256": "84d2ee4481fcb486c3f0c46bea57da38913f7aceab96b47f85b3a47fc7291a8c",
+      "bytes": 393129,
+      "outputFile": "exec-f8353e87-0a16-4680-85d2-aa33f4edf07c.png"
+    }
+  ]
+}

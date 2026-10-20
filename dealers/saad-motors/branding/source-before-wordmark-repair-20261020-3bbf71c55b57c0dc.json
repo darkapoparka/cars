@@ -1,0 +1,211 @@
+{
+  "schemaVersion": 1,
+  "dealer": "saad-motors",
+  "realLogoFirst": true,
+  "logoKind": "proposal",
+  "publishedBranding": "text-identity-observed",
+  "publicSources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/SAAD-MOTORS-LTD?menu=1",
+      "observedAt": "2026-10-19"
+    },
+    {
+      "url": "https://www.cazoo.co.uk/dealers/saad-motors-ltd-51067/",
+      "observedAt": "2026-10-19"
+    },
+    {
+      "url": "https://www.pistonheads.com/buy/dealer/989123",
+      "observedAt": "2026-10-19"
+    }
+  ],
+  "originals": [],
+  "sourceLogoUrl": null,
+  "workingLogoPath": "branding/generated-master.png",
+  "creationMethod": "imagegen-proposal",
+  "dealerApproved": false,
+  "approvalStatus": "independent-preview-not-dealer-approved",
+  "usageStatus": "public-preview-only",
+  "observedAt": "2026-10-19",
+  "researchConclusion": "No usable original logo was obtained from bounded exact-business/locality searches and the matched public seller and directory sources. The dealer catalogue supplies a text identity and vehicle photographs; an unavailable or absent logo image does not prove that no original branding exists. This is an independent proposed identity, not an official dealer logo.",
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T19:22:56.608725Z",
+    "master": {
+      "path": "branding/generated-master.png",
+      "sha256": "86124a56bb351fd0b5cd509b073f6c5071589163452df51231580011a98025e1",
+      "nativeDimensions": {
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-15482b16-3e3d-41cd-80d3-ed386ebe271c",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "26c639e10906b1817304647743838d559a0ba759070377b55e877057f5ee8003",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-15482b16-3e3d-41cd-80d3-ed386ebe271c",
+        "modelVersion": null
+      },
+      "derivation": {
+        "operation": "pixel-exact rectangular extraction of the existing generated compact emblem; no recolouring or invented artwork",
+        "parentPath": "branding/generated-master.png",
+        "parentSha256": "86124a56bb351fd0b5cd509b073f6c5071589163452df51231580011a98025e1",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 711,
+          "height": 724
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-on-dark.png",
+      "sha256": "12a94d3f6c1b0a451974a56ad96c90f66fafaf099fe126bfd6ddab720dba05d9",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-d668e855-ee79-4e34-9d87-aa36e46ed870",
+        "modelVersion": null
+      },
+      "derivation": {
+        "operation": "pixel-exact rectangular extraction of the existing generated compact emblem; no recolouring or invented artwork",
+        "parentPath": "branding/generated-on-dark.png",
+        "parentSha256": "7400830b3fa5df963fe17ad05d258c5156dcf0f789289904561b695d12c7e232",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 691,
+          "height": 724
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-master.png",
+        "sha256": "86124a56bb351fd0b5cd509b073f6c5071589163452df51231580011a98025e1",
+        "nativeDimensions": {
+          "width": 2172,
+          "height": 724
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-15482b16-3e3d-41cd-80d3-ed386ebe271c",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "7400830b3fa5df963fe17ad05d258c5156dcf0f789289904561b695d12c7e232",
+        "nativeDimensions": {
+          "width": 2172,
+          "height": 724
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-d668e855-ee79-4e34-9d87-aa36e46ed870",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "7400830b3fa5df963fe17ad05d258c5156dcf0f789289904561b695d12c7e232",
+        "nativeDimensions": {
+          "width": 2172,
+          "height": 724
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-d668e855-ee79-4e34-9d87-aa36e46ed870",
+          "modelVersion": null
+        }
+      }
+    },
+    "marks": {
+      "onLight": {
+        "path": "branding/generated-mark.png",
+        "sha256": "26c639e10906b1817304647743838d559a0ba759070377b55e877057f5ee8003",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-15482b16-3e3d-41cd-80d3-ed386ebe271c",
+          "modelVersion": null
+        },
+        "derivation": {
+          "operation": "pixel-exact rectangular extraction of the existing generated compact emblem; no recolouring or invented artwork",
+          "parentPath": "branding/generated-master.png",
+          "parentSha256": "86124a56bb351fd0b5cd509b073f6c5071589163452df51231580011a98025e1",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 711,
+            "height": 724
+          }
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-mark-on-dark.png",
+        "sha256": "12a94d3f6c1b0a451974a56ad96c90f66fafaf099fe126bfd6ddab720dba05d9",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-d668e855-ee79-4e34-9d87-aa36e46ed870",
+          "modelVersion": null
+        },
+        "derivation": {
+          "operation": "pixel-exact rectangular extraction of the existing generated compact emblem; no recolouring or invented artwork",
+          "parentPath": "branding/generated-on-dark.png",
+          "parentSha256": "7400830b3fa5df963fe17ad05d258c5156dcf0f789289904561b695d12c7e232",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 691,
+            "height": 724
+          }
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": {
+        "onLight": [
+          "#ffffff"
+        ],
+        "onDark": [
+          "#111113",
+          "#101820"
+        ],
+        "onAccent": [
+          "#09090b",
+          "#17191c",
+          "#c40101"
+        ]
+      },
+      "wordmarkWidths": [
+        120,
+        180
+      ],
+      "reviewedAt": "2026-10-19T19:22:56.608725Z",
+      "notes": "Visually reviewed the actual deterministic transparent-padding exports at120px and180px on all six retained template surface colours. Exact name spelling, silhouette, alpha edges, spacing and clipping were checked. Light-ink variants are actual imagegen results, not deterministic recolours. Small secondary suffix text is subordinate to the principal name; compact identity is provided separately."
+    },
+    "compactMarkStatus": "independent-preview-not-dealer-approved",
+    "compactMarkDescription": "SM monogram",
+    "compactMarkReview": {
+      "reviewed": true,
+      "widths": [
+        32,
+        64
+      ],
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#101820",
+        "#09090b",
+        "#17191c",
+        "#c40101"
+      ],
+      "reviewedAt": "2026-10-19T19:22:56.608725Z",
+      "notes": "Visually inspected the actual compact exports at32px and64px on all six template backgrounds. Existing-emblem pixel crops have explicit parent hashes and exact rectangle provenance; independently generated compact marks retain their own actual generation IDs. Shape, spacing, clipping and transparent counters were checked. Dealer approval remains unknown."
+    }
+  }
+}

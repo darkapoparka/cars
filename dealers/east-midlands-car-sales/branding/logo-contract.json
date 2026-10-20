@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "dealer": "east-midlands-car-sales",
   "reviewed": true,
-  "reviewedAt": "2026-10-19T19:22:56.608725Z",
+  "reviewedAt": "2026-10-20T19:58:28.958Z",
   "status": "independent-proposal-not-dealer-approved",
   "creationMethod": "imagegen-faithful-redraw",
   "assets": {
@@ -15,14 +15,14 @@
     "onDark": {
       "sourcePath": "branding/logo-on-dark.png",
       "publicPath": "/dealer-brand/logo-on-dark.webp",
-      "sha256": "a85cb6cc68c3783b116e89f72a09758e6f053613511417741727eb2783d5602c",
-      "sourceSha256": "6f55496a80c38922f3e1a4546140229241134d0163b219e1cdc109b757b02e93"
+      "sha256": "1e883bf045992e3709bc041dd8b95c26504418968e574f0fa8d99528dabd5ffb",
+      "sourceSha256": "e661c87cc6736cb160300f4545e6ffef9651fa6782334ad50bb924874e97008e"
     },
     "onAccent": {
       "sourcePath": "branding/logo-on-accent.png",
       "publicPath": "/dealer-brand/logo-on-accent.webp",
-      "sha256": "a85cb6cc68c3783b116e89f72a09758e6f053613511417741727eb2783d5602c",
-      "sourceSha256": "6f55496a80c38922f3e1a4546140229241134d0163b219e1cdc109b757b02e93"
+      "sha256": "1e883bf045992e3709bc041dd8b95c26504418968e574f0fa8d99528dabd5ffb",
+      "sourceSha256": "e661c87cc6736cb160300f4545e6ffef9651fa6782334ad50bb924874e97008e"
     }
   },
   "surfaceBackgrounds": {
@@ -74,23 +74,23 @@
     },
     "onDark": {
       "path": "branding/logo-on-dark.png",
-      "sha256": "6f55496a80c38922f3e1a4546140229241134d0163b219e1cdc109b757b02e93",
+      "sha256": "e661c87cc6736cb160300f4545e6ffef9651fa6782334ad50bb924874e97008e",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-16497a00-a602-4ac1-b5f2-4b20cea2a25c",
+        "generationId": "exec-6f4981eb-c3dc-41fe-8e6f-17b8b34838f6",
         "modelVersion": null
       },
-      "sourceReference": "dealers/east-midlands-car-sales/branding/generated-on-dark.png"
+      "sourceReference": "dealers/east-midlands-car-sales/branding/generated-on-dark-v2-20261020.png"
     },
     "onAccent": {
       "path": "branding/logo-on-accent.png",
-      "sha256": "6f55496a80c38922f3e1a4546140229241134d0163b219e1cdc109b757b02e93",
+      "sha256": "e661c87cc6736cb160300f4545e6ffef9651fa6782334ad50bb924874e97008e",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-16497a00-a602-4ac1-b5f2-4b20cea2a25c",
+        "generationId": "exec-6f4981eb-c3dc-41fe-8e6f-17b8b34838f6",
         "modelVersion": null
       },
-      "sourceReference": "dealers/east-midlands-car-sales/branding/generated-on-dark.png"
+      "sourceReference": "dealers/east-midlands-car-sales/branding/generated-on-dark-v2-20261020.png"
     }
   },
   "transforms": {
@@ -109,28 +109,28 @@
     },
     "onDark": {
       "operation": "crop-transparent-padding-and-resize",
-      "sourceSha256": "7727f885662a5023d636c8ac977b075a7e566017f0cb35357acf6526982430c6",
-      "sha256": "6f55496a80c38922f3e1a4546140229241134d0163b219e1cdc109b757b02e93",
+      "sourceSha256": "8ce27b2079784b5359c1385b6bd0ec7a91e3c0e9bbdd4a1192e7183a92ea558e",
+      "sha256": "e661c87cc6736cb160300f4545e6ffef9651fa6782334ad50bb924874e97008e",
       "crop": {
-        "left": 64,
-        "top": 176,
-        "width": 2042,
-        "height": 376
+        "left": 62,
+        "top": 173,
+        "width": 2047,
+        "height": 373
       },
-      "sourcePath": "branding/generated-on-dark.png",
+      "sourcePath": "branding/generated-on-dark-v2-20261020.png",
       "outputPath": "branding/logo-on-dark.png"
     },
     "onAccent": {
       "operation": "crop-transparent-padding-and-resize",
-      "sourceSha256": "7727f885662a5023d636c8ac977b075a7e566017f0cb35357acf6526982430c6",
-      "sha256": "6f55496a80c38922f3e1a4546140229241134d0163b219e1cdc109b757b02e93",
+      "sourceSha256": "8ce27b2079784b5359c1385b6bd0ec7a91e3c0e9bbdd4a1192e7183a92ea558e",
+      "sha256": "e661c87cc6736cb160300f4545e6ffef9651fa6782334ad50bb924874e97008e",
       "crop": {
-        "left": 64,
-        "top": 176,
-        "width": 2042,
-        "height": 376
+        "left": 62,
+        "top": 173,
+        "width": 2047,
+        "height": 373
       },
-      "sourcePath": "branding/generated-on-dark.png",
+      "sourcePath": "branding/generated-on-dark-v2-20261020.png",
       "outputPath": "branding/logo-on-accent.png"
     }
   },
@@ -180,7 +180,7 @@
   "originalArtworkPreserved": true,
   "visualReview": {
     "reviewed": true,
-    "reviewedAt": "2026-10-19T19:22:56.608725Z",
+    "reviewedAt": "2026-10-20T19:58:28.958Z",
     "source": "branding/source.json",
     "spelling": "agent-visual-review",
     "dealerApproval": false

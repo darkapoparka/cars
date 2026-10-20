@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "rpm-shentonfield",
+  "previousSlug": "rpm-shentonfield",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:47:40.033Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-manchester-rpm-shentonfield",
+    "position": 71
+  },
+  "before": {
+    "files": 39,
+    "bytes": 4416775
+  },
+  "afterBeforeReview": {
+    "files": 23,
+    "bytes": 2303891
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 43661,
+      "sha256": "eb200b6924460aa40181c9bcd7de2e30f8eedad3241420ce1aa91fc9119a75d6"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 72593,
+      "sha256": "de6edaf05653d5740906f3d3d561fb9c722886b4da19849bd23dbbf2474d8760"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 43661,
+      "sha256": "eb200b6924460aa40181c9bcd7de2e30f8eedad3241420ce1aa91fc9119a75d6"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 149449,
+      "sha256": "6909b8b130ba211a1c5f082b647fbccecf081cca646094d1d3214220f4ef432d"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 238124,
+      "sha256": "39ef4c87647c5e519b317e04690e81a44e400797e5d0231523a88d1a1f8ac28d"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 238124,
+      "sha256": "39ef4c87647c5e519b317e04690e81a44e400797e5d0231523a88d1a1f8ac28d"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 149449,
+      "sha256": "6909b8b130ba211a1c5f082b647fbccecf081cca646094d1d3214220f4ef432d"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 43661,
+      "sha256": "eb200b6924460aa40181c9bcd7de2e30f8eedad3241420ce1aa91fc9119a75d6"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 5206,
+      "sha256": "95b96ef39fe9bcfdb60a0c8ffc0402be4e04cc834aa46d4efad4e29447b12cc1"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 238124,
+      "sha256": "39ef4c87647c5e519b317e04690e81a44e400797e5d0231523a88d1a1f8ac28d"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 159826,
+      "sha256": "b8609e941fef3335721742d968d5b0aa488c21c88fcefd9a63d44c0c0f53d13f"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 238124,
+      "sha256": "39ef4c87647c5e519b317e04690e81a44e400797e5d0231523a88d1a1f8ac28d"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 159826,
+      "sha256": "b8609e941fef3335721742d968d5b0aa488c21c88fcefd9a63d44c0c0f53d13f"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 149449,
+      "sha256": "6909b8b130ba211a1c5f082b647fbccecf081cca646094d1d3214220f4ef432d"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 107846,
+      "sha256": "76dc852058cdee0839b7e51af26bd32b9d589e50b72693f449ecd35a2adcbce6"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 49576,
+      "sha256": "c9124993f833957ada098948dedb9b34e30b2595ad0efc7eaeb4b2d119ecd9e0"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 29996,
+      "sha256": "6f09db8a08185a71f1819d3b80fa1e1e780a54abd4967498928dd9e81cca8390"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 10,
+    "bytes": 2269030,
+    "inventorySha256": "6c57d79698b6f7d283145c4c699f8436e62655e295412cfd000c7a11f4db4b73",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "rpm-shentonfield",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 25,
+    "report": "dealers/rpm-shentonfield/input-review.json"
+  },
+  "after": {
+    "files": 25,
+    "bytes": 2312743
+  }
+}

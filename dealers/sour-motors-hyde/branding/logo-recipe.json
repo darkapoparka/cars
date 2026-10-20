@@ -34,8 +34,8 @@
     "zlib-ng": "2.3.3",
     "sharp": "0.35.5"
   },
-  "sourceSha256": "84909554ab26431572e3118938ce8887eaed36eafda54615159b0911a468ef5d",
-  "contractSha256": "1aae8cbef1d482fbd5e86464bc31e340be4588f59a50881b2eb9aa067ec46121",
+  "sourceSha256": "351308aa65256de9a9c00ebfc26726d1d34cfbbb8667f48033502d5e33dfd9d4",
+  "contractSha256": "c8a360e8622f7d0d2253824a9672c0aa5646324d52ba74a4c13f43ad332db941",
   "outputs": [
     {
       "path": "branding/app-icon.png",
@@ -59,13 +59,13 @@
     },
     {
       "path": "branding/logo-on-accent.png",
-      "bytes": 172099,
-      "sha256": "9d1848824dd0d36dee92c589aedeea276214b4ff1a2232fd5943fd89fdbdb721"
+      "bytes": 92231,
+      "sha256": "1a60618093ce4cff9f350643bbca248e2b6a5de53014d2ce78688c189771c4b4"
     },
     {
       "path": "branding/logo-on-dark.png",
-      "bytes": 172099,
-      "sha256": "9d1848824dd0d36dee92c589aedeea276214b4ff1a2232fd5943fd89fdbdb721"
+      "bytes": 92231,
+      "sha256": "1a60618093ce4cff9f350643bbca248e2b6a5de53014d2ce78688c189771c4b4"
     },
     {
       "path": "branding/logo-on-light.png",
@@ -84,23 +84,23 @@
     },
     {
       "path": "dealer-brand/logo-on-accent.png",
-      "bytes": 172099,
-      "sha256": "9d1848824dd0d36dee92c589aedeea276214b4ff1a2232fd5943fd89fdbdb721"
+      "bytes": 92231,
+      "sha256": "1a60618093ce4cff9f350643bbca248e2b6a5de53014d2ce78688c189771c4b4"
     },
     {
       "path": "dealer-brand/logo-on-accent.webp",
-      "bytes": 117692,
-      "sha256": "e8c1f1b6a308d3486d0dbf361e864cc09e4ee0d67a745275be2188d606ced266"
+      "bytes": 69438,
+      "sha256": "239593c2f9d4dccc6109e696f640d4b7f578e04e80607b58b0e10a9cc5058f25"
     },
     {
       "path": "dealer-brand/logo-on-dark.png",
-      "bytes": 172099,
-      "sha256": "9d1848824dd0d36dee92c589aedeea276214b4ff1a2232fd5943fd89fdbdb721"
+      "bytes": 92231,
+      "sha256": "1a60618093ce4cff9f350643bbca248e2b6a5de53014d2ce78688c189771c4b4"
     },
     {
       "path": "dealer-brand/logo-on-dark.webp",
-      "bytes": 117692,
-      "sha256": "e8c1f1b6a308d3486d0dbf361e864cc09e4ee0d67a745275be2188d606ced266"
+      "bytes": 69438,
+      "sha256": "239593c2f9d4dccc6109e696f640d4b7f578e04e80607b58b0e10a9cc5058f25"
     },
     {
       "path": "dealer-brand/logo-on-light.png",

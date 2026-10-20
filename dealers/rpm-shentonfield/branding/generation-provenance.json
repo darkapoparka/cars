@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "dealer": "rpm-shentonfield",
+  "generations": [
+    {
+      "role": "master",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-181c7f0b-3250-4ca8-a4a1-5ad0e76957d0",
+      "modelVersion": null,
+      "prompt": "Faithfully redraw ONLY the large RPM dealership sign visible at the left of the supplied source photo. Output one transparent horizontal wordmark with exact letters RPM. Preserve its bold italic sans-serif lettering and violet/plum purple and white brand palette, but for the on-light version use solid deep muted plum-purple letters, no rectangular background. Refine spacing and geometry so all three letters remain clearly readable at a height of 32px. Broad simple strokes. No extra words, no car, no shield, no outline, no photo, no gradients, no shadow. The entire three-letter RPM wordmark will also act as the compact mark. True transparent alpha background.",
+      "promptRetained": true,
+      "sourceAssetSha256": "e5ed55b2bcf2d7a360a18d13c69662189a2ab74f368a5b7e9350f336a79ae7da",
+      "observedAt": "2026-10-19",
+      "originalResponseArtworkRetained": true
+    },
+    {
+      "role": "onDarkAndAccent",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-7d427150-b95a-4709-92a8-541de1ddbda8",
+      "modelVersion": null,
+      "prompt": "Create a refined dark-surface adaptation of the exact supplied dealer logo. Exact text MUST READ: RPM. Keep every name letter exactly, and preserve the supplied monogram/motif and proportions. The typography and dark emblem portions should be filled in SOLID OPAQUE PALE SILVER #d9e2ec inside a DARK CHARCOAL outer contour plus a thin WHITE outer keyline. Preserve copper/orange/purple accents if present inside dark contour. True TRANSPARENT alpha background and transparent letter counters. Make smooth strong solid contours without fringing, grunge, raster distress, speckles or noise. Generous clear gap between compact emblem and wording. No gradients, shadow, glowing effects, rectangle or additional content. It needs clear readable contrast on dark navy and red surfaces. Do not introduce unrelated terms such as motorsports. Exact spelling and business identity are essential.",
+      "promptRetained": true,
+      "sourceAssetSha256": "e65ee023acb4b49b2af88db09f61d22a10482084990138d2073b47edf8cc501d",
+      "observedAt": "2026-10-19",
+      "originalResponseArtworkRetained": true
+    }
+  ],
+  "exportPolicy": "Original generated PNG bytes are retained. Compact pixel-exact extractions, where used, retain their parent generation, hash and rectangle in source.json. Existing dealer-pack logo tooling performs only transparent padding removal and deterministic raster exports. No deterministic recolour is used."
+}

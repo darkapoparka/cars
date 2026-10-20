@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "slug": "raj-motors",
+  "dealerId": "gb-leicester-raj-motors",
+  "business": {
+    "name": "Raj Motors",
+    "city": "Leicester",
+    "region": "Leicestershire",
+    "countryCode": "GB",
+    "currency": "GBP",
+    "distanceUnit": "mi",
+    "locale": "en-GB",
+    "address": "143 Abbey Lane Leicester Leicestershire LE4 5QT",
+    "phone": "+441162663351",
+    "phoneDisplay": "01162663351",
+    "email": "rmcarsales1975@gmail.com",
+    "website": "",
+    "stockUrl": "https://showroom.ebaymotorspro.co.uk/RMLCARS",
+    "hours": "",
+    "sourceUrl": "https://showroom.ebaymotorspro.co.uk/RMLCARS",
+    "observedAt": "2026-10-19",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/RMLCARS",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "current-public-business-details",
+        "dated-advertised-stock-snapshot"
+      ]
+    }
+  ]
+}

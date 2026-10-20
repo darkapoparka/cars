@@ -32,7 +32,7 @@
   "observedAt": "2026-10-19",
   "researchConclusion": "No usable original logo was obtained from bounded exact-business/locality searches and the matched public seller and directory sources. The dealer catalogue supplies a text identity and vehicle photographs; an unavailable or absent logo image does not prove that no original branding exists. This is an independent proposed identity, not an official dealer logo.",
   "generatedInputs": {
-    "reviewedAt": "2026-10-19T19:22:56.608725Z",
+    "reviewedAt": "2026-10-20T19:58:35.457Z",
     "master": {
       "path": "branding/generated-master.png",
       "sha256": "d1ad63d6144cbd4f0740f61daafc3533138180f40e52550d6220f60b94c355b0",
@@ -101,28 +101,28 @@
         }
       },
       "onDark": {
-        "path": "branding/generated-on-dark.png",
-        "sha256": "067cd694ef9cac31b75e347dccecaef86161a1d0ca10c6050a2451fb168c1791",
+        "path": "branding/generated-on-dark-v2-20261020.png",
+        "sha256": "bbb14250cc485fb34cee0a6077a28efb0338c615c40fc1b41737f2db28920871",
         "nativeDimensions": {
           "width": 1983,
           "height": 793
         },
         "generation": {
           "tool": "image_gen.imagegen",
-          "generationId": "exec-72dc45fd-87ce-4df9-b726-53b3f9074741",
+          "generationId": "exec-7e382914-88b3-4c06-aabf-6cdae6d42683",
           "modelVersion": null
         }
       },
       "onAccent": {
-        "path": "branding/generated-on-dark.png",
-        "sha256": "067cd694ef9cac31b75e347dccecaef86161a1d0ca10c6050a2451fb168c1791",
+        "path": "branding/generated-on-dark-v2-20261020.png",
+        "sha256": "bbb14250cc485fb34cee0a6077a28efb0338c615c40fc1b41737f2db28920871",
         "nativeDimensions": {
           "width": 1983,
           "height": 793
         },
         "generation": {
           "tool": "image_gen.imagegen",
-          "generationId": "exec-72dc45fd-87ce-4df9-b726-53b3f9074741",
+          "generationId": "exec-7e382914-88b3-4c06-aabf-6cdae6d42683",
           "modelVersion": null
         }
       }
@@ -189,8 +189,8 @@
         120,
         180
       ],
-      "reviewedAt": "2026-10-19T19:22:56.608725Z",
-      "notes": "Visually reviewed the actual deterministic transparent-padding exports at120px and180px on all six retained template surface colours. Exact name spelling, silhouette, alpha edges, spacing and clipping were checked. Light-ink variants are actual imagegen results, not deterministic recolours. Small secondary suffix text is subordinate to the principal name; compact identity is provided separately."
+      "reviewedAt": "2026-10-20T19:58:35.457Z",
+      "notes": "Actual new light silver-grey surface wordmark reviewed at120/180px on the unchanged charcoal/navy/black/red template backgrounds. Exact business spelling, motif, counters, edges and spacing checked. Original light/master and compact artwork/provenance remain unchanged; no dealer/native/hosted approval is inferred."
     },
     "compactMarkStatus": "independent-preview-not-dealer-approved",
     "compactMarkDescription": "LS arrow motif",
@@ -211,5 +211,34 @@
       "reviewedAt": "2026-10-19T19:22:56.608725Z",
       "notes": "Visually inspected the actual compact exports at32px and64px on all six template backgrounds. Existing-emblem pixel crops have explicit parent hashes and exact rectangle provenance; independently generated compact marks retain their own actual generation IDs. Shape, spacing, clipping and transparent counters were checked. Dealer approval remains unknown."
     }
-  }
+  },
+  "additionalGenerations": [
+    {
+      "roles": [
+        "onDark",
+        "onAccent"
+      ],
+      "reference": "branding/generated-on-dark.png",
+      "path": "branding/generated-on-dark-v2-20261020.png",
+      "sha256": "bbb14250cc485fb34cee0a6077a28efb0338c615c40fc1b41737f2db28920871",
+      "nativeDimensions": {
+        "width": 1983,
+        "height": 793
+      },
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-7e382914-88b3-4c06-aabf-6cdae6d42683",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand. Faithful dark/accent-surface color edit of supplied LET'S SELL YOUR CAR lockup. Preserve the exact joined LS and right-arrow emblem at left, the wordmark LET'S SELL above YOUR CAR, apostrophe, bold letter geometry, layout, spacing and proportions. Change all existing fills and heavy black outlines to one uniform solid pale silver-grey #c8d0d8. Open counters/gaps remain transparent; do not use heavy dark borders or white strokes. Keep the same shapes and exact business spelling. Flat opaque smooth filled artwork on a truly transparent background, generous clear outer padding, no background plate, no new shapes, gradients, texture, speckles, grain, glow or shadow. No pure-white fill. Independent proposal, not dealer approved.",
+      "createdAt": "2026-10-20T19:58:35.457Z",
+      "derivation": "Actual built-in imagegen surface edit; raw returned PNG copied byte-identical without recolouring, filters or alpha cleanup."
+    }
+  ],
+  "sourceHistory": [
+    {
+      "reference": "branding/source-before-wordmark-repair-20261020-803c481c248f0403.json",
+      "sha256": "803c481c248f0403133022bd4dc89aee7f9ff33a30ffd3827eae30890b0b100f",
+      "retainedAt": "2026-10-20T19:58:35.457Z",
+      "reason": "Exact source provenance before targeted wordmark-only contrast repair"
+    }
+  ]
 }

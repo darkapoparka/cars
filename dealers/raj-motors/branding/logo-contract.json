@@ -1,0 +1,197 @@
+{
+  "schemaVersion": 1,
+  "dealer": "raj-motors",
+  "reviewed": true,
+  "reviewedAt": "2026-10-20T20:11:52.341Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-faithful-redraw",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "d12a8f4f351ef82cfc3d4067b6105c0d7ed5c1d6da76c591c2db269ddc55a571",
+      "sourceSha256": "06aadbc72743c7a621de54deca5601f34742543744da39f03445d1da6eb4e6c2"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "21b8e749eafaf69b3be1f1f9cd669c243ba605238af03e87667436e4f4ef1dba",
+      "sourceSha256": "12d7a0e37dd157bc03b06694cb45ea62f1c285d86a407d808efe4f086f17257e"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "21b8e749eafaf69b3be1f1f9cd669c243ba605238af03e87667436e4f4ef1dba",
+      "sourceSha256": "12d7a0e37dd157bc03b06694cb45ea62f1c285d86a407d808efe4f086f17257e"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "06aadbc72743c7a621de54deca5601f34742543744da39f03445d1da6eb4e6c2",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-70978c14-33c7-4e00-9665-643fed32ea68",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "ceceedea96dbcc0454c152d771fcaa5d603b66c182fc675d747911173069e77a",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-1ce9ef49-4cd0-4966-a48b-ccecbdaf952a",
+      "modelVersion": null
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "51220328b47048b47e01740841a0382191b0942c9e3c9f4bedff72d99dd21fb9"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "06aadbc72743c7a621de54deca5601f34742543744da39f03445d1da6eb4e6c2",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-70978c14-33c7-4e00-9665-643fed32ea68",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/raj-motors/branding/generated-master.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "12d7a0e37dd157bc03b06694cb45ea62f1c285d86a407d808efe4f086f17257e",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-d5dd6783-f90a-4839-846d-7834edda0236",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/raj-motors/branding/generated-on-dark-v2-20261020-2132919714009c5b.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "12d7a0e37dd157bc03b06694cb45ea62f1c285d86a407d808efe4f086f17257e",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-d5dd6783-f90a-4839-846d-7834edda0236",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/raj-motors/branding/generated-on-dark-v2-20261020-2132919714009c5b.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "487ae44137fec2ce06f5009cacae395398f77742b85f8c4e7e9c7167da5acbef",
+      "sha256": "06aadbc72743c7a621de54deca5601f34742543744da39f03445d1da6eb4e6c2",
+      "crop": {
+        "left": 0,
+        "top": 183,
+        "width": 2172,
+        "height": 368
+      },
+      "sourcePath": "branding/generated-master.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "2132919714009c5b66dc1f74eb35ee51bfc04c8904bbd4a70365e70bf4f5265f",
+      "sha256": "12d7a0e37dd157bc03b06694cb45ea62f1c285d86a407d808efe4f086f17257e",
+      "crop": {
+        "left": 0,
+        "top": 182,
+        "width": 2172,
+        "height": 368
+      },
+      "sourcePath": "branding/generated-on-dark-v2-20261020-2132919714009c5b.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "2132919714009c5b66dc1f74eb35ee51bfc04c8904bbd4a70365e70bf4f5265f",
+      "sha256": "12d7a0e37dd157bc03b06694cb45ea62f1c285d86a407d808efe4f086f17257e",
+      "crop": {
+        "left": 0,
+        "top": 182,
+        "width": 2172,
+        "height": 368
+      },
+      "sourcePath": "branding/generated-on-dark-v2-20261020-2132919714009c5b.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "33c0e866372c3939fcda023764f6dfddbca4c4cebafe1043f5464a547e54f0c7",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1ce9ef49-4cd0-4966-a48b-ccecbdaf952a",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/raj-motors/branding/generated-compact-on-light-v2-20261020-2ac8394aa5bc2790.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "3895a9c9440d366d2b52ca4d0ad9b1760dad1a94eb00e343f503a0cdd7adc939",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-5a651ff6-f19a-4b3e-aaf1-1e8afe95d998",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/raj-motors/branding/generated-compact-on-dark-v2-20261020-6ac30442e2b9df78.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "ceceedea96dbcc0454c152d771fcaa5d603b66c182fc675d747911173069e77a",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1ce9ef49-4cd0-4966-a48b-ccecbdaf952a",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/raj-motors/branding/generated-compact-on-light-v2-20261020-2ac8394aa5bc2790.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "51220328b47048b47e01740841a0382191b0942c9e3c9f4bedff72d99dd21fb9",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1ce9ef49-4cd0-4966-a48b-ccecbdaf952a",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/raj-motors/branding/generated-compact-on-light-v2-20261020-2ac8394aa5bc2790.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-20T20:11:52.341Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "a3303f3f2c3edad5f10453e8bc29242cc41269b4aad4c4e12b30acb50e95ecc9",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-5a651ff6-f19a-4b3e-aaf1-1e8afe95d998",
+      "modelVersion": null
+    }
+  }
+}

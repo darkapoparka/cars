@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "dealer": "lets-sell-your-car",
   "reviewed": true,
-  "reviewedAt": "2026-10-19T19:22:56.608725Z",
+  "reviewedAt": "2026-10-20T19:58:35.457Z",
   "status": "independent-proposal-not-dealer-approved",
   "creationMethod": "imagegen-proposal",
   "assets": {
@@ -15,14 +15,14 @@
     "onDark": {
       "sourcePath": "branding/logo-on-dark.png",
       "publicPath": "/dealer-brand/logo-on-dark.webp",
-      "sha256": "3679ddcedbd70e3a7faf52dd47608b3b8bf1b66b89128293136e1e37ea426b99",
-      "sourceSha256": "ad0a67c06c0e6e24d9af48c322b76d67cdd82a3f5da008c755cd6a13a7fa64f5"
+      "sha256": "dcecefae915b3054030341edac7bbd676314b7b9d4d1babed30e888a2c9da70e",
+      "sourceSha256": "0c74222fe9c2c556a51f3750b60633185890e5bec7ff4a551948a38a50d19b63"
     },
     "onAccent": {
       "sourcePath": "branding/logo-on-accent.png",
       "publicPath": "/dealer-brand/logo-on-accent.webp",
-      "sha256": "3679ddcedbd70e3a7faf52dd47608b3b8bf1b66b89128293136e1e37ea426b99",
-      "sourceSha256": "ad0a67c06c0e6e24d9af48c322b76d67cdd82a3f5da008c755cd6a13a7fa64f5"
+      "sha256": "dcecefae915b3054030341edac7bbd676314b7b9d4d1babed30e888a2c9da70e",
+      "sourceSha256": "0c74222fe9c2c556a51f3750b60633185890e5bec7ff4a551948a38a50d19b63"
     }
   },
   "surfaceBackgrounds": {
@@ -74,23 +74,23 @@
     },
     "onDark": {
       "path": "branding/logo-on-dark.png",
-      "sha256": "ad0a67c06c0e6e24d9af48c322b76d67cdd82a3f5da008c755cd6a13a7fa64f5",
+      "sha256": "0c74222fe9c2c556a51f3750b60633185890e5bec7ff4a551948a38a50d19b63",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-72dc45fd-87ce-4df9-b726-53b3f9074741",
+        "generationId": "exec-7e382914-88b3-4c06-aabf-6cdae6d42683",
         "modelVersion": null
       },
-      "sourceReference": "dealers/lets-sell-your-car/branding/generated-on-dark.png"
+      "sourceReference": "dealers/lets-sell-your-car/branding/generated-on-dark-v2-20261020.png"
     },
     "onAccent": {
       "path": "branding/logo-on-accent.png",
-      "sha256": "ad0a67c06c0e6e24d9af48c322b76d67cdd82a3f5da008c755cd6a13a7fa64f5",
+      "sha256": "0c74222fe9c2c556a51f3750b60633185890e5bec7ff4a551948a38a50d19b63",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-72dc45fd-87ce-4df9-b726-53b3f9074741",
+        "generationId": "exec-7e382914-88b3-4c06-aabf-6cdae6d42683",
         "modelVersion": null
       },
-      "sourceReference": "dealers/lets-sell-your-car/branding/generated-on-dark.png"
+      "sourceReference": "dealers/lets-sell-your-car/branding/generated-on-dark-v2-20261020.png"
     }
   },
   "transforms": {
@@ -109,28 +109,28 @@
     },
     "onDark": {
       "operation": "crop-transparent-padding-and-resize",
-      "sourceSha256": "067cd694ef9cac31b75e347dccecaef86161a1d0ca10c6050a2451fb168c1791",
-      "sha256": "ad0a67c06c0e6e24d9af48c322b76d67cdd82a3f5da008c755cd6a13a7fa64f5",
+      "sourceSha256": "bbb14250cc485fb34cee0a6077a28efb0338c615c40fc1b41737f2db28920871",
+      "sha256": "0c74222fe9c2c556a51f3750b60633185890e5bec7ff4a551948a38a50d19b63",
       "crop": {
-        "left": 0,
-        "top": 131,
-        "width": 1979,
-        "height": 532
+        "left": 3,
+        "top": 135,
+        "width": 1957,
+        "height": 518
       },
-      "sourcePath": "branding/generated-on-dark.png",
+      "sourcePath": "branding/generated-on-dark-v2-20261020.png",
       "outputPath": "branding/logo-on-dark.png"
     },
     "onAccent": {
       "operation": "crop-transparent-padding-and-resize",
-      "sourceSha256": "067cd694ef9cac31b75e347dccecaef86161a1d0ca10c6050a2451fb168c1791",
-      "sha256": "ad0a67c06c0e6e24d9af48c322b76d67cdd82a3f5da008c755cd6a13a7fa64f5",
+      "sourceSha256": "bbb14250cc485fb34cee0a6077a28efb0338c615c40fc1b41737f2db28920871",
+      "sha256": "0c74222fe9c2c556a51f3750b60633185890e5bec7ff4a551948a38a50d19b63",
       "crop": {
-        "left": 0,
-        "top": 131,
-        "width": 1979,
-        "height": 532
+        "left": 3,
+        "top": 135,
+        "width": 1957,
+        "height": 518
       },
-      "sourcePath": "branding/generated-on-dark.png",
+      "sourcePath": "branding/generated-on-dark-v2-20261020.png",
       "outputPath": "branding/logo-on-accent.png"
     }
   },
@@ -180,7 +180,7 @@
   "originalArtworkPreserved": true,
   "visualReview": {
     "reviewed": true,
-    "reviewedAt": "2026-10-19T19:22:56.608725Z",
+    "reviewedAt": "2026-10-20T19:58:35.457Z",
     "source": "branding/source.json",
     "spelling": "agent-visual-review",
     "dealerApproval": false

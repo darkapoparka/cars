@@ -1,0 +1,139 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-owned-compact-geometry-and-contrast-repair",
+  "dealer": "hmz-cars-dealers",
+  "createdAt": "2026-10-20T20:06:58.664Z",
+  "previousPackDigest": "cc411ae07b2520e50bc9c462d0d625d8ed8fbdf0163bef5319a936b294798ea5",
+  "previousSource": {
+    "path": "branding/source-before-compact-repair-20261020-42d0ea93cff2001b.json",
+    "sha256": "42d0ea93cff2001bd216d3c4c9d377707a306b468c8bbcc3044b5b2887c513b8"
+  },
+  "description": "Native stacked HM-over-Z compact monogram",
+  "replacements": [
+    {
+      "key": "compact-hmz-light-v3",
+      "roles": [
+        "mark"
+      ],
+      "path": "branding/generated-compact-on-light-v2-20261020-73a0e1128d1a28d6.png",
+      "sha256": "73a0e1128d1a28d6dac4a7dfeda8647ced76e4e0d4b76da1e0bdc6e81e29da99",
+      "nativeDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-b9bc2e88-0da9-453a-a560-97ba26b21c4d",
+        "modelVersion": null
+      },
+      "prompt": "Use case: logo-brand. Asset type: independent HMZ identity compact app/favicon proposal. Input1 is style/identity reference ONLY; its wide one-line arrangement must change. Create a genuinely SQUARE two-row letter monogram: exact \"HM\" on top, large \"Z\" below, reading HMZ. Retain the existing angular connected HM geometry and diagonal Z, dark navy with a fine silver edge. It is a compact alternative of the same HMZ identity, no new emblem. Bold dominant DARK NAVY ink for WHITE surface, at least85% ink dark; no large pale fills. The combined two-row monogram must occupy85-90% of square width AND75-85% of square height with balanced small transparent margins. Draw natural new letter geometry, never stretch source pixels. Robust simple strokes/counters clear at32px; no tiny words, no CARS DEALERS suffix, no background, badge, shadow, glow or gradient. Actual transparent alpha, clean edges. Exact letters H-M-Z, arranged HM over Z.",
+      "references": [
+        {
+          "path": "branding/generated-mark.png",
+          "sha256": "a13a65787eb217f29bda4b3f1c24d84f591a28155b06ebe4690c46d3c76001d5"
+        }
+      ]
+    },
+    {
+      "key": "compact-hmz-dark-v3",
+      "roles": [
+        "markOnDark"
+      ],
+      "path": "branding/generated-compact-on-dark-v2-20261020-255ec57843ee5fb1.png",
+      "sha256": "255ec57843ee5fb16c1721ee1135c8fd7dafba8d28aaaac10bcb6da03fc4dc28",
+      "nativeDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-f67dbe1a-2e5f-46bb-a772-13fb72adb558",
+        "modelVersion": null
+      },
+      "prompt": "Use case: logo-brand. Input image1 is EDIT TARGET, exact HM-over-Z compact logo geometry. Change ONLY ink treatment to a clean high-contrast inverse for dark and red backgrounds. Preserve the exact stacked \"HM\" above \"Z\" lettering, outline shapes, angled motifs, arrangement, proportions, counters, size and transparent canvas. Text reads HMZ. Fill ALL dominant letter bodies with solid light cool silver/ivory (#e3e7ee feel), not pure harsh white, with only a very thin navy detail if necessary; at least90% visible ink very light. Do not leave navy interiors. Actual transparent alpha background and clean transparent counters. No translucent haze, alpha speckle texture, gradients, shadow, glow, background tile or extra elements. Keep same naturally compact geometry; never stretch. Clear at32px on #111113,#101820,#09090b,#17191c and #c40101.",
+      "references": [
+        {
+          "path": "branding/generated-compact-on-light-v2-20261020-73a0e1128d1a28d6.png",
+          "sha256": "73a0e1128d1a28d6dac4a7dfeda8647ced76e4e0d4b76da1e0bdc6e81e29da99"
+        }
+      ]
+    },
+    {
+      "key": "wordmark-hmz-dark-v2",
+      "roles": [
+        "onDark",
+        "onAccent"
+      ],
+      "path": "branding/generated-on-dark-v2-20261020-389d5d37db9d5052.png",
+      "sha256": "389d5d37db9d50526680f3a6bea00497de6058345b4022e30262db4d1f96f10e",
+      "nativeDimensions": {
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-0c674d9b-b126-4f90-bf83-9f196f7df044",
+        "modelVersion": null
+      },
+      "prompt": "Use case: logo-brand. Input image1 is existing HMZ Cars Dealers wordmark EDIT TARGET. Create an actual transparent high-contrast inverse of the EXACT same wide identity layout: angular connected \"HMZ\" emblem LEFT, thin vertical separator, \"HMZ CARS\" above \"DEALERS\" RIGHT. Exact text verbatim: \"HMZ CARS\" and \"DEALERS\". Preserve original letter shapes, motifs, spacing, natural proportions, geometry and composition; this is only a real light-ink surface variant. Dominant ALL lettering/emblem/separator ink solid very-light cool silver/ivory (#e3e7ee feel), over95% ink light, no dark fills. Actual alpha transparent background and counters. No white spray speckles, shadow, gradient, haze, glow, badge or background tile. Crisp robust strokes and clear text at120px and180px on #111113,#101820,#09090b,#17191c and #c40101.",
+      "references": [
+        {
+          "path": "branding/generated-master.png",
+          "sha256": "ac0c99d7f245da49ae22cbeb065c1b2cad85925b57dba85d83cc1fffcf32c075"
+        }
+      ]
+    }
+  ],
+  "visualReview": {
+    "kind": "agent-visual-review",
+    "viewedAt": "2026-10-20T20:11:52.341Z",
+    "method": "Viewed exact maintained export before/after boards at wordmark180/120px and compact64/32px on six actual template backgrounds; confirmed exact identities and useful geometry. J26 revised to visibly hooked J after rejecting ambiguous first top glyph.",
+    "humanReview": false,
+    "dealerApproval": false,
+    "ownerApproval": false,
+    "comparison": {
+      "path": "J:/.artifacts/cars-source-sync/hmz-cars-dealers-compact-logo-before-after.png",
+      "bytes": 257667,
+      "sha256": "f69570e5f18bba3e57b2ee5fe26d6ccafcd7803901176f36ec4d2197bc0536b1",
+      "wordmarkWidths": [
+        120,
+        180
+      ],
+      "compactWidths": [
+        32,
+        64
+      ],
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#101820",
+        "#09090b",
+        "#17191c",
+        "#c40101"
+      ]
+    },
+    "wordmarkWidths": [
+      120,
+      180
+    ],
+    "compactWidths": [
+      32,
+      64
+    ],
+    "backgrounds": [
+      "#ffffff",
+      "#111113",
+      "#101820",
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ],
+    "nativeApproval": false,
+    "hostedApproval": false
+  },
+  "originalArtworkPreserved": true,
+  "factsStockPhotosPreserved": true,
+  "filtersApplied": false,
+  "thresholdsChanged": false,
+  "providerWrites": 0
+}

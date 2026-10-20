@@ -26,7 +26,7 @@
   "logoResearch": "Current seller-specific GCC Car Deals profile supplies a tiny image reading Samurai Motors. Identity relationship is unconfirmed, so that image is evidence only and not used as official branding. Exact-name new proposal is unapproved.",
   "visualReview": "Reviewed transparent artwork, full business-wordmark spelling and compact emblem. Deterministic crops retain the generated artwork; no vector substitute, recolouring or template changes. Compact variants are unapproved preview adaptations. Exact AL SAMMARRAIE USED CARS text; burgundy/charcoal S-road emblem proposal.",
   "generatedInputs": {
-    "reviewedAt": "2026-10-19T20:57:51.052Z",
+    "reviewedAt": "2026-10-20T20:03:02.630Z",
     "master": {
       "path": "branding/generated-primary.png",
       "sha256": "a65265ee83b5b2853c6cd7808b1ea63f05a61cadbb87008bb65481410892a747",
@@ -85,11 +85,12 @@
         }
       },
       "onAccent": {
-        "path": "branding/generated-inverse.png",
-        "sha256": "dfef6dec474f660744f45d3d7132da6885ea1eac9c0bf157f4212c1d86e376e2",
+        "path": "branding/contrast-on-accent-v2.png",
+        "sha256": "c1f289cfb7b9bca57e24e08adea3265c637aa60873b058f5c6440693141fc8d4",
         "generation": {
           "tool": "image_gen.imagegen",
-          "generationId": "exec-874a1a1f-dc46-4e9b-a0d3-d5ec6ee20688",
+          "generationId": "exec-711c076f-4b98-408b-a219-d763d6eced23",
+          "referenceKind": "actual-tool-output-filename",
           "modelVersion": null
         }
       }
@@ -110,7 +111,18 @@
           "#c40101"
         ]
       },
-      "notes": "Reviewed transparent artwork, full business-wordmark spelling and compact emblem. Deterministic crops retain the generated artwork; no vector substitute, recolouring or template changes. Compact variants are unapproved preview adaptations. Exact AL SAMMARRAIE USED CARS text; burgundy/charcoal S-road emblem proposal."
+      "notes": "Reviewed transparent artwork, full business-wordmark spelling and compact emblem. Deterministic crops retain the generated artwork; no vector substitute, recolouring or template changes. Compact variants are unapproved preview adaptations. Exact AL SAMMARRAIE USED CARS text; burgundy/charcoal S-road emblem proposal.",
+      "reviewedAt": "2026-10-20T20:03:02.630Z",
+      "wordmarkWidths": [
+        120,
+        180
+      ],
+      "markWidths": [
+        32,
+        64
+      ],
+      "method": "Agent review of exact maintained before/after source raster exports on current consumer backgrounds; unchanged technical pixel checks. New neutral/brand inverse treatment is artwork only and does not change template palettes.",
+      "review": "Exact existing spelling and emblem geometry retained. Original inputs and generation provenance remain preserved. Independent proposal; no human/dealer/native/hosted acceptance inferred."
     },
     "compactMarkStatus": "unapproved-preview-adaptation",
     "compactMarkReview": {
@@ -147,5 +159,121 @@
       "returnedArtifact": "exec-874a1a1f-dc46-4e9b-a0d3-d5ec6ee20688.png",
       "note": "The tool exposed the returned artifact identifier and did not expose a model version."
     }
-  ]
+  ],
+  "artworkHistory": [
+    {
+      "supersededAt": "2026-10-20T20:03:02.630Z",
+      "reason": "Dedicated consumer surface variants correct measured pixel contrast; existing source inputs remain retained.",
+      "generatedInputs": {
+        "reviewedAt": "2026-10-19T20:57:51.052Z",
+        "master": {
+          "path": "branding/generated-primary.png",
+          "sha256": "a65265ee83b5b2853c6cd7808b1ea63f05a61cadbb87008bb65481410892a747",
+          "generation": {
+            "tool": "image_gen.imagegen",
+            "generationId": "exec-a90ab8f1-6ae6-4ec2-b396-15e04731a233",
+            "modelVersion": null
+          }
+        },
+        "mark": {
+          "path": "branding/generated-mark.png",
+          "sha256": "79331bd2981e0ce22e711f3ac6f66bfb05c1834e38aec06b1ed01c99c9c03dea",
+          "generation": {
+            "tool": "image_gen.imagegen",
+            "generationId": "exec-a90ab8f1-6ae6-4ec2-b396-15e04731a233",
+            "modelVersion": null,
+            "transformation": {
+              "operation": "rectangular-extract-without-recolour-or-redrawing",
+              "source": "branding/generated-primary.png",
+              "sourceSha256": "a65265ee83b5b2853c6cd7808b1ea63f05a61cadbb87008bb65481410892a747",
+              "rectangle": {
+                "left": 0,
+                "top": 0,
+                "width": 451,
+                "height": 887
+              }
+            }
+          }
+        },
+        "markOnDark": {
+          "path": "branding/generated-inverse.png",
+          "sha256": "dfef6dec474f660744f45d3d7132da6885ea1eac9c0bf157f4212c1d86e376e2",
+          "generation": {
+            "tool": "image_gen.imagegen",
+            "generationId": "exec-874a1a1f-dc46-4e9b-a0d3-d5ec6ee20688",
+            "modelVersion": null
+          }
+        },
+        "surfaces": {
+          "onLight": {
+            "path": "branding/generated-primary.png",
+            "sha256": "a65265ee83b5b2853c6cd7808b1ea63f05a61cadbb87008bb65481410892a747",
+            "generation": {
+              "tool": "image_gen.imagegen",
+              "generationId": "exec-a90ab8f1-6ae6-4ec2-b396-15e04731a233",
+              "modelVersion": null
+            }
+          },
+          "onDark": {
+            "path": "branding/generated-inverse.png",
+            "sha256": "dfef6dec474f660744f45d3d7132da6885ea1eac9c0bf157f4212c1d86e376e2",
+            "generation": {
+              "tool": "image_gen.imagegen",
+              "generationId": "exec-874a1a1f-dc46-4e9b-a0d3-d5ec6ee20688",
+              "modelVersion": null
+            }
+          },
+          "onAccent": {
+            "path": "branding/generated-inverse.png",
+            "sha256": "dfef6dec474f660744f45d3d7132da6885ea1eac9c0bf157f4212c1d86e376e2",
+            "generation": {
+              "tool": "image_gen.imagegen",
+              "generationId": "exec-874a1a1f-dc46-4e9b-a0d3-d5ec6ee20688",
+              "modelVersion": null
+            }
+          }
+        },
+        "surfaceReview": {
+          "reviewed": true,
+          "backgrounds": {
+            "onLight": [
+              "#ffffff"
+            ],
+            "onDark": [
+              "#111113",
+              "#101820"
+            ],
+            "onAccent": [
+              "#09090b",
+              "#17191c",
+              "#c40101"
+            ]
+          },
+          "notes": "Reviewed transparent artwork, full business-wordmark spelling and compact emblem. Deterministic crops retain the generated artwork; no vector substitute, recolouring or template changes. Compact variants are unapproved preview adaptations. Exact AL SAMMARRAIE USED CARS text; burgundy/charcoal S-road emblem proposal."
+        },
+        "compactMarkStatus": "unapproved-preview-adaptation",
+        "compactMarkReview": {
+          "reviewed": true,
+          "reviewedAt": "2026-10-19T20:57:51.052Z",
+          "widths": [
+            32,
+            64
+          ],
+          "backgrounds": [
+            "#ffffff",
+            "#111113",
+            "#101820"
+          ],
+          "notes": "Reviewed transparent artwork, full business-wordmark spelling and compact emblem. Deterministic crops retain the generated artwork; no vector substitute, recolouring or template changes. Compact variants are unapproved preview adaptations. Exact AL SAMMARRAIE USED CARS text; burgundy/charcoal S-road emblem proposal."
+        }
+      }
+    }
+  ],
+  "contrastCorrection": {
+    "reviewedAt": "2026-10-20T20:03:02.630Z",
+    "provenance": "branding/contrast-repair-20261020.json",
+    "reason": "Measured weak contrast in the original98-pack focused pixel preflight",
+    "originalArtworkPreserved": true,
+    "dealerApproved": false
+  }
 }

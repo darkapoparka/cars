@@ -28,7 +28,7 @@
   "observedAt": "2026-10-19",
   "researchConclusion": "No usable original logo was obtained from bounded exact-business/locality searches and the matched public seller and directory sources. The dealer catalogue supplies a text identity and vehicle photographs; an unavailable or absent logo image does not prove that no original branding exists. This is an independent proposed identity, not an official dealer logo.",
   "generatedInputs": {
-    "reviewedAt": "2026-10-19T19:22:56.608725Z",
+    "reviewedAt": "2026-10-20T19:59:17.754Z",
     "master": {
       "path": "branding/generated-master.png",
       "sha256": "86124a56bb351fd0b5cd509b073f6c5071589163452df51231580011a98025e1",
@@ -97,28 +97,28 @@
         }
       },
       "onDark": {
-        "path": "branding/generated-on-dark.png",
-        "sha256": "7400830b3fa5df963fe17ad05d258c5156dcf0f789289904561b695d12c7e232",
+        "path": "branding/generated-on-dark-v2-20261020.png",
+        "sha256": "933c741ea3fd5f84e2df34c7a58af61dbe8d7b5850f14a3331006e2d95193ce5",
         "nativeDimensions": {
           "width": 2172,
           "height": 724
         },
         "generation": {
           "tool": "image_gen.imagegen",
-          "generationId": "exec-d668e855-ee79-4e34-9d87-aa36e46ed870",
+          "generationId": "exec-1b29a20e-ac7b-4a08-ba2e-c08fd64afcde",
           "modelVersion": null
         }
       },
       "onAccent": {
-        "path": "branding/generated-on-dark.png",
-        "sha256": "7400830b3fa5df963fe17ad05d258c5156dcf0f789289904561b695d12c7e232",
+        "path": "branding/generated-on-dark-v2-20261020.png",
+        "sha256": "933c741ea3fd5f84e2df34c7a58af61dbe8d7b5850f14a3331006e2d95193ce5",
         "nativeDimensions": {
           "width": 2172,
           "height": 724
         },
         "generation": {
           "tool": "image_gen.imagegen",
-          "generationId": "exec-d668e855-ee79-4e34-9d87-aa36e46ed870",
+          "generationId": "exec-1b29a20e-ac7b-4a08-ba2e-c08fd64afcde",
           "modelVersion": null
         }
       }
@@ -185,8 +185,8 @@
         120,
         180
       ],
-      "reviewedAt": "2026-10-19T19:22:56.608725Z",
-      "notes": "Visually reviewed the actual deterministic transparent-padding exports at120px and180px on all six retained template surface colours. Exact name spelling, silhouette, alpha edges, spacing and clipping were checked. Light-ink variants are actual imagegen results, not deterministic recolours. Small secondary suffix text is subordinate to the principal name; compact identity is provided separately."
+      "reviewedAt": "2026-10-20T19:59:17.754Z",
+      "notes": "Actual new light silver-grey surface wordmark reviewed at120/180px on the unchanged charcoal/navy/black/red template backgrounds. Exact business spelling, motif, counters, edges and spacing checked. Original light/master and compact artwork/provenance remain unchanged; no dealer/native/hosted approval is inferred."
     },
     "compactMarkStatus": "independent-preview-not-dealer-approved",
     "compactMarkDescription": "SM monogram",
@@ -207,5 +207,34 @@
       "reviewedAt": "2026-10-19T19:22:56.608725Z",
       "notes": "Visually inspected the actual compact exports at32px and64px on all six template backgrounds. Existing-emblem pixel crops have explicit parent hashes and exact rectangle provenance; independently generated compact marks retain their own actual generation IDs. Shape, spacing, clipping and transparent counters were checked. Dealer approval remains unknown."
     }
-  }
+  },
+  "additionalGenerations": [
+    {
+      "roles": [
+        "onDark",
+        "onAccent"
+      ],
+      "reference": "branding/generated-on-dark.png",
+      "path": "branding/generated-on-dark-v2-20261020.png",
+      "sha256": "933c741ea3fd5f84e2df34c7a58af61dbe8d7b5850f14a3331006e2d95193ce5",
+      "nativeDimensions": {
+        "width": 2172,
+        "height": 724
+      },
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-1b29a20e-ac7b-4a08-ba2e-c08fd64afcde",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand. Exact surface-color edit of supplied SAAD MOTORS LTD lockup. Preserve the interlocked SM emblem at left, exact SAAD MOTORS lettering at upper right and LTD centered below, typography, proportions, spacing, letter shapes and open counters. Replace all existing light fills and heavy black outlines with one uniform solid pale silver-grey #c8d0d8; no dark borders or white contours. No pure-white pixels. It must read on charcoal and deep red surfaces. Flat opaque smooth shapes on a genuinely transparent background; no background tile, gradient, texture, speckles, noise, shadow, glow or extra objects. Exact text SAAD MOTORS and LTD; do not omit or duplicate any letter. Keep the entire original lockup in frame with generous transparent padding. Independent proposal, not dealer approved.",
+      "createdAt": "2026-10-20T19:59:17.754Z",
+      "derivation": "Actual built-in imagegen surface edit; raw returned PNG copied byte-identical without recolouring, filters or alpha cleanup."
+    }
+  ],
+  "sourceHistory": [
+    {
+      "reference": "branding/source-before-wordmark-repair-20261020-3bbf71c55b57c0dc.json",
+      "sha256": "3bbf71c55b57c0dc32d7de9d0fa801f8e4ede197dac6eac2aea38f52bcbdb9ca",
+      "retainedAt": "2026-10-20T19:59:17.754Z",
+      "reason": "Exact source provenance before targeted wordmark-only contrast repair"
+    }
+  ]
 }

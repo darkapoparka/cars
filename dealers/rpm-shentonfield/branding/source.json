@@ -1,0 +1,244 @@
+{
+  "schemaVersion": 1,
+  "dealer": "rpm-shentonfield",
+  "realLogoFirst": true,
+  "logoKind": "redraw",
+  "publishedBranding": "real-logo-observed",
+  "publicSources": [
+    {
+      "url": "https://www.autotrader.co.uk/dealers/cheshire/manchester/rpm-10042344",
+      "observedAt": "2026-10-19"
+    }
+  ],
+  "originals": [
+    {
+      "url": "https://m.atcdn.co.uk/a/media/w1280/4312223266eb4512809959b2a0bc0c59.jpg",
+      "observedAt": "2026-10-19",
+      "sha256": "2d71b43faad67055906dc57e575ae2ea2b16f13990ff6dc93827b3b4638db72c",
+      "nativeDimensions": {
+        "width": 1280,
+        "height": 960
+      },
+      "format": "JPEG",
+      "description": "Real white italic RPM sign on a plum/purple wall in the matched Shentonfield dealer photograph; retained the RPM letters, italic motif and plum identity. The silver inverse is a surface adaptation of the same identity.",
+      "retainedContext": "Dealer sign remains visible in the separately resized first stock photograph; photo-evidence.json binds the original source bytes."
+    }
+  ],
+  "sourceLogoUrl": "https://m.atcdn.co.uk/a/media/w1280/4312223266eb4512809959b2a0bc0c59.jpg",
+  "workingLogoPath": "branding/generated-master.png",
+  "creationMethod": "imagegen-faithful-redraw",
+  "dealerApproved": false,
+  "approvalStatus": "independent-preview-not-dealer-approved",
+  "usageStatus": "public-preview-only",
+  "observedAt": "2026-10-19",
+  "researchConclusion": "A real identity was obtained and visually reviewed. Real white italic RPM sign on a plum/purple wall in the matched Shentonfield dealer photograph; retained the RPM letters, italic motif and plum identity. The silver inverse is a surface adaptation of the same identity. This is a faithful image-generated redraw for an independent preview and has not been approved by the dealer.",
+  "generatedInputs": {
+    "reviewedAt": "2026-10-20T20:11:52.341Z",
+    "master": {
+      "path": "branding/generated-master.png",
+      "sha256": "e5ed55b2bcf2d7a360a18d13c69662189a2ab74f368a5b7e9350f336a79ae7da",
+      "nativeDimensions": {
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-181c7f0b-3250-4ca8-a4a1-5ad0e76957d0",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-compact-on-light-v2-20261020-c9653684578736a0.png",
+      "sha256": "c9653684578736a065d2bc77e6362d3881052efec7b99e540e02e738aaab41e7",
+      "nativeDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1229edb0-41b6-45ba-9c55-86831b2980ac",
+        "modelVersion": null
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-compact-on-dark-v2-20261020-842d03642ad5ff99.png",
+      "sha256": "842d03642ad5ff99608a044745f833df83ec9aca33436bc41c5dade93f699496",
+      "nativeDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a7381410-915e-4593-9993-ab24dec28446",
+        "modelVersion": null
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-master.png",
+        "sha256": "e5ed55b2bcf2d7a360a18d13c69662189a2ab74f368a5b7e9350f336a79ae7da",
+        "nativeDimensions": {
+          "width": 2172,
+          "height": 724
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-181c7f0b-3250-4ca8-a4a1-5ad0e76957d0",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "e65ee023acb4b49b2af88db09f61d22a10482084990138d2073b47edf8cc501d",
+        "nativeDimensions": {
+          "width": 2172,
+          "height": 724
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-7d427150-b95a-4709-92a8-541de1ddbda8",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "e65ee023acb4b49b2af88db09f61d22a10482084990138d2073b47edf8cc501d",
+        "nativeDimensions": {
+          "width": 2172,
+          "height": 724
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-7d427150-b95a-4709-92a8-541de1ddbda8",
+          "modelVersion": null
+        }
+      }
+    },
+    "marks": {
+      "onLight": {
+        "path": "branding/generated-compact-on-light-v2-20261020-c9653684578736a0.png",
+        "sha256": "c9653684578736a065d2bc77e6362d3881052efec7b99e540e02e738aaab41e7",
+        "nativeDimensions": {
+          "width": 1254,
+          "height": 1254
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-1229edb0-41b6-45ba-9c55-86831b2980ac",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-compact-on-dark-v2-20261020-842d03642ad5ff99.png",
+        "sha256": "842d03642ad5ff99608a044745f833df83ec9aca33436bc41c5dade93f699496",
+        "nativeDimensions": {
+          "width": 1254,
+          "height": 1254
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-a7381410-915e-4593-9993-ab24dec28446",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": {
+        "onLight": [
+          "#ffffff"
+        ],
+        "onDark": [
+          "#111113",
+          "#101820"
+        ],
+        "onAccent": [
+          "#09090b",
+          "#17191c",
+          "#c40101"
+        ]
+      },
+      "wordmarkWidths": [
+        120,
+        180
+      ],
+      "reviewedAt": "2026-10-20T20:11:52.341Z",
+      "notes": "Agent viewed matched maintained exports at120/180px and32/64px on actual six template surfaces. Original/on-light wordmarks remain exact. Generated inverse and native compact variants are independent preview proposals; no dealer/native/hosted approval."
+    },
+    "compactMarkStatus": "independent-preview-not-dealer-approved",
+    "compactMarkDescription": "Native compact italic RPM lettering",
+    "compactMarkReview": {
+      "reviewed": true,
+      "widths": [
+        32,
+        64
+      ],
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#101820",
+        "#09090b",
+        "#17191c",
+        "#c40101"
+      ],
+      "reviewedAt": "2026-10-20T20:11:52.341Z",
+      "notes": "New native compact geometry and exact spelling visually reviewed at32/64px; padding/contrast thresholds unchanged; real imagegen light/dark variants, no stretched or filtered artwork."
+    }
+  },
+  "additionalGenerations": [
+    {
+      "roles": [
+        "mark"
+      ],
+      "path": "branding/generated-compact-on-light-v2-20261020-c9653684578736a0.png",
+      "sha256": "c9653684578736a065d2bc77e6362d3881052efec7b99e540e02e738aaab41e7",
+      "nativeDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-1229edb0-41b6-45ba-9c55-86831b2980ac",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand. Asset type: transparent square compact favicon/app mark for existing RPM independent dealer proposal. Input image1 is the identity reference. Generate a NEW compact geometry version preserving exact italic bold \"RPM\" letter identity and plum-purple ink, with genuinely taller, heavier letterforms and compact spacing so visible lettering fills about88% canvas width and60-70% height of a1:1 square. Natural newly drawn proportions, NOT a stretched wide logo. Text (verbatim): \"RPM\". Keep the forward slant and distinctive thick connected motorsport typography. Dark deep plum-purple ink, very high contrast on white. Balanced transparent margins, crisp strong silhouette and transparent letter counters, readable at32px, no small words, no border, no badge background, no gradients, no shadows, no decorative details, no alpha speckles. Transparent background with actual alpha. Do not reproduce the original ultra-wide empty canvas.",
+      "references": [
+        {
+          "path": "branding/generated-master.png",
+          "sha256": "e5ed55b2bcf2d7a360a18d13c69662189a2ab74f368a5b7e9350f336a79ae7da"
+        }
+      ],
+      "createdAt": "2026-10-20T20:06:58.664Z",
+      "derivation": "Actual built-in imagegen result copied byte-for-byte. Native compact geometry newly drawn; no stretch, filters, recolouring or alpha cleanup."
+    },
+    {
+      "roles": [
+        "markOnDark"
+      ],
+      "path": "branding/generated-compact-on-dark-v2-20261020-842d03642ad5ff99.png",
+      "sha256": "842d03642ad5ff99608a044745f833df83ec9aca33436bc41c5dade93f699496",
+      "nativeDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-a7381410-915e-4593-9993-ab24dec28446",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand. Input image1 is EDIT TARGET: exact new compact RPM lettering. Change ONLY its ink to clean strong near-white/silver-light to work on #111113,#101820,#09090b,#17191c and #c40101. Preserve EXACT \"RPM\" bold italic letter shapes, forward slant, compact taller geometry, letter counters, natural aspect ratio, placement and existing transparent canvas. Text verbatim \"RPM\". More than95% visible ink light; no dark purple filling, no shadow, gradient, glow, haze, background tile or badge. Crisp solid alpha silhouette, true transparent background, readable at32px. Do not widen or compress the mark.",
+      "references": [
+        {
+          "path": "branding/generated-compact-on-light-v2-20261020-c9653684578736a0.png",
+          "sha256": "c9653684578736a065d2bc77e6362d3881052efec7b99e540e02e738aaab41e7"
+        }
+      ],
+      "createdAt": "2026-10-20T20:06:58.664Z",
+      "derivation": "Actual built-in imagegen result copied byte-for-byte. Native compact geometry newly drawn; no stretch, filters, recolouring or alpha cleanup."
+    }
+  ],
+  "sourceHistory": [
+    {
+      "reference": "branding/source-before-compact-repair-20261020-f94512aff77f872a.json",
+      "sha256": "f94512aff77f872ac9803c6e72d08a71898f4a015e3732154bc52a41461aaf42",
+      "retainedAt": "2026-10-20T20:06:58.664Z",
+      "reason": "Exact source provenance before owned compact geometry and contrast repair"
+    }
+  ]
+}

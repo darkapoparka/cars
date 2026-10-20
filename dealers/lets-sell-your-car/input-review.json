@@ -3,7 +3,7 @@
   "kind": "cars-dealer-pack-input-review",
   "dealer": "lets-sell-your-car",
   "reviewed": true,
-  "reviewedAt": "2026-10-20T19:16:14.947Z",
+  "reviewedAt": "2026-10-20T19:58:38.178Z",
   "review": {
     "kind": "automated",
     "humanReview": false,
@@ -54,6 +54,10 @@
       "sha256": "d1ad63d6144cbd4f0740f61daafc3533138180f40e52550d6220f60b94c355b0"
     },
     {
+      "path": "branding/generated-on-dark-v2-20261020.png",
+      "sha256": "bbb14250cc485fb34cee0a6077a28efb0338c615c40fc1b41737f2db28920871"
+    },
+    {
       "path": "branding/generated-on-dark.png",
       "sha256": "067cd694ef9cac31b75e347dccecaef86161a1d0ca10c6050a2451fb168c1791"
     },
@@ -63,15 +67,23 @@
     },
     {
       "path": "branding/logo-contract.json",
-      "sha256": "e15f2cbcea9d163f93287fd9049f18356651137cdb8f354d004ed56e8abba121"
+      "sha256": "6c6c4c3c799da507c02cc42f7e447a9a3d0c606a3326ce8058cf4ebc66bf5f79"
     },
     {
       "path": "branding/logo-recipe.json",
-      "sha256": "6f9e4686305d69c697b7587be59adcf64fecf32bba9cc077721e25f57a9c67df"
+      "sha256": "156c64e0127d49d58b1b552efda9f6a6a79d306f760d5c700aeb8af22e51cb5b"
+    },
+    {
+      "path": "branding/source-before-wordmark-repair-20261020-803c481c248f0403.json",
+      "sha256": "803c481c248f0403133022bd4dc89aee7f9ff33a30ffd3827eae30890b0b100f"
     },
     {
       "path": "branding/source.json",
-      "sha256": "803c481c248f0403133022bd4dc89aee7f9ff33a30ffd3827eae30890b0b100f"
+      "sha256": "dc613bf2576cdea7ed83efebc87597ed3f1a8702a4dd8fef34fac07d3321bddb"
+    },
+    {
+      "path": "branding/wordmark-repair-20261020.json",
+      "sha256": "15fe45ca43d5267683ca596e1ce6001ad9de94b4ebc0d1ad9ea4eac866d9a94b"
     },
     {
       "path": "business-facts.json",
@@ -79,7 +91,7 @@
     },
     {
       "path": "copy-review.json",
-      "sha256": "24bc2e7a871deb6c83ce1e25267e90211a1285bd142082d6b083828cc4954a4d"
+      "sha256": "9aaa6157d5d978e2360a68ef9cd4d76625f4da1a8555d7f43322647c8e0ed073"
     },
     {
       "path": "dealer-stock/listing-1.jpg",
@@ -95,7 +107,7 @@
     },
     {
       "path": "identity-review.json",
-      "sha256": "98a25fa03f9029262a3d7e71316977b29566a52c712fdc9a5abdfa8e2f2c9a86"
+      "sha256": "cda90a2a6213c5bd894321b88d94a3b6a669281feb3427a0b6f9e0fc6730a953"
     },
     {
       "path": "locale.json",
@@ -111,7 +123,7 @@
     },
     {
       "path": "qualification.json",
-      "sha256": "289e3a3f9c31b38a190003f599bd081f05171e158697c9da91021f3d77598006"
+      "sha256": "64e496ed2adb1a1310a1e4c3007da9f4cdbfa6031c2e9c0435571f41a4e0ccee"
     },
     {
       "path": "research-review.json",

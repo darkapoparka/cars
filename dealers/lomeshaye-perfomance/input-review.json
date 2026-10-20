@@ -3,7 +3,7 @@
   "kind": "cars-dealer-pack-input-review",
   "dealer": "lomeshaye-perfomance",
   "reviewed": true,
-  "reviewedAt": "2026-10-20T19:16:51.037Z",
+  "reviewedAt": "2026-10-20T19:58:57.998Z",
   "review": {
     "kind": "automated",
     "humanReview": false,
@@ -54,6 +54,10 @@
       "sha256": "808db673e9794f28db9e0bee129cc0f4411bde30dc9281d1ce55e97a1569a69b"
     },
     {
+      "path": "branding/generated-on-dark-v2-20261020.png",
+      "sha256": "18680e52ae5793d86fe830567fcf2d498414837b44bba1b9a71166da4790c25e"
+    },
+    {
       "path": "branding/generated-on-dark.png",
       "sha256": "c06f4b7d33fd89417eed470bfcbca5c074ccee93dc3ad47c9d2bc756a0bd4e1c"
     },
@@ -63,15 +67,23 @@
     },
     {
       "path": "branding/logo-contract.json",
-      "sha256": "d3405e007bab6dcdfb04689771c0591f36ae3b95ba6e70cea03bde6556abdd80"
+      "sha256": "b83bba727e5acffd5458a92b58046a56efd73029585453684c88ab80665266dc"
     },
     {
       "path": "branding/logo-recipe.json",
-      "sha256": "89dbe784283fd2dad4730deaf0fb33cd6a53915b31535f9fc889a23ab007f55c"
+      "sha256": "e13174e713e11f87677c88dbc3fe8e1091adfb0d1aa8a44c6d6b31957385016f"
+    },
+    {
+      "path": "branding/source-before-wordmark-repair-20261020-1772471b02abbb09.json",
+      "sha256": "1772471b02abbb0903ad8ed3d3d641a92cba5601c4e6336b78fd95df2d2ccd47"
     },
     {
       "path": "branding/source.json",
-      "sha256": "1772471b02abbb0903ad8ed3d3d641a92cba5601c4e6336b78fd95df2d2ccd47"
+      "sha256": "1838d4e37cb3d47f9b36aca1424e37b22e758bd74efc53e9a7f185549364f036"
+    },
+    {
+      "path": "branding/wordmark-repair-20261020.json",
+      "sha256": "04327bb987c6d67191b5d92e8f1cdac00bf76d03bce8de937ad700e8d2540e77"
     },
     {
       "path": "business-facts.json",
@@ -79,7 +91,7 @@
     },
     {
       "path": "copy-review.json",
-      "sha256": "517231292d699d161b508fe603bf88315bb67ab35294cf7d20acba36b2dfd431"
+      "sha256": "6ca5a792f29f43cd374f227689fe1a619362d84d23bcfc96bff8605e2eb9b30e"
     },
     {
       "path": "dealer-stock/listing-1.jpg",
@@ -99,7 +111,7 @@
     },
     {
       "path": "identity-review.json",
-      "sha256": "121fc3b0993e574bc5397e71b8d1a433a9082a61dc51dcb3f6a4ced34394f617"
+      "sha256": "3782d98fae25f524991107bac0febe9c750144af9c3e6193146eb0653beb0cb0"
     },
     {
       "path": "locale.json",
@@ -115,7 +127,7 @@
     },
     {
       "path": "qualification.json",
-      "sha256": "2d8bb55abfce7e4882b557e73e9844e6c43be9543eaa6031e16e21d16d75ec30"
+      "sha256": "d1b5d116a0c418159c579a579f8d03f71025b7e9f74a88d800bc04913fdda2b5"
     },
     {
       "path": "research-review.json",

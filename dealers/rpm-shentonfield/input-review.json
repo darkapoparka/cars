@@ -1,0 +1,148 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-input-review",
+  "dealer": "rpm-shentonfield",
+  "reviewed": true,
+  "reviewedAt": "2026-10-20T20:12:16.136Z",
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "checks": [
+    "canonical-hosting-and-preserved-fleet-collisions",
+    "assigned-expansion-lead",
+    "public-fact-schema-and-price-omission",
+    "personal-contact-screen",
+    "retained-stock-media",
+    "companion-copy-source-binding",
+    "immutable-template-release-and-native-QA-parent",
+    "reviewed-artwork-provenance-and-regenerated-logo-hashes"
+  ],
+  "sourceArtworkReview": "Retained artwork review is separate provenance; this command does not perform visual, Arabic-expert or dealer approval.",
+  "copyReview": "Automated structure, stock hash, source text and complete EN/BG rows; no new human translation approval is inferred.",
+  "contacts": {
+    "schemaVersion": 1,
+    "kind": "cars-automated-public-contact-screen",
+    "dealer": "rpm-shentonfield",
+    "method": "heuristic; no claim that unflagged values cannot be personal",
+    "flags": [],
+    "blocking": []
+  },
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-manchester-rpm-shentonfield",
+    "position": 71
+  },
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "inputs": [
+    {
+      "path": "FACTS-AND-INVENTORY.json",
+      "sha256": "daf64e71448b6a4e13f87fd67e5ea29b729822b9ed15e91bc4036d6a499ac37f"
+    },
+    {
+      "path": "advert-detail-review.json",
+      "sha256": "9d962ab40cc7c7986a1e2a91d7766721578c7c1c19cae879cc992934e806520c"
+    },
+    {
+      "path": "branding/compact-repair-20261020.json",
+      "sha256": "9cf591f114322e7b37ea97955affe24ce86c1350b00561e1c0a0132630b1e200"
+    },
+    {
+      "path": "branding/generated-compact-on-dark-v2-20261020-842d03642ad5ff99.png",
+      "sha256": "842d03642ad5ff99608a044745f833df83ec9aca33436bc41c5dade93f699496"
+    },
+    {
+      "path": "branding/generated-compact-on-light-v2-20261020-c9653684578736a0.png",
+      "sha256": "c9653684578736a065d2bc77e6362d3881052efec7b99e540e02e738aaab41e7"
+    },
+    {
+      "path": "branding/generated-master.png",
+      "sha256": "e5ed55b2bcf2d7a360a18d13c69662189a2ab74f368a5b7e9350f336a79ae7da"
+    },
+    {
+      "path": "branding/generated-on-dark.png",
+      "sha256": "e65ee023acb4b49b2af88db09f61d22a10482084990138d2073b47edf8cc501d"
+    },
+    {
+      "path": "branding/generation-provenance.json",
+      "sha256": "52c749a173788004706f5557d159361bf79cfa68cc4def9716d49898d7032821"
+    },
+    {
+      "path": "branding/logo-contract.json",
+      "sha256": "97635f4a35c0653923ace9bd62364425b09dae81f400adaca46057d89beb3978"
+    },
+    {
+      "path": "branding/logo-recipe.json",
+      "sha256": "3b489abd452d09d1bed36cca4e87fe036851622b56c2c728314b6b5bf2316a10"
+    },
+    {
+      "path": "branding/source-before-compact-repair-20261020-f94512aff77f872a.json",
+      "sha256": "f94512aff77f872ac9803c6e72d08a71898f4a015e3732154bc52a41461aaf42"
+    },
+    {
+      "path": "branding/source.json",
+      "sha256": "84193d8bba1a88247a963955113bdc9e23710d51e6bc8a5c3d48d2e124f933a7"
+    },
+    {
+      "path": "business-facts.json",
+      "sha256": "91f4ca0b9b49a6f6a80c7617f00fc4349b721c4d1354cd0f946d8342cfca7a62"
+    },
+    {
+      "path": "copy-review.json",
+      "sha256": "b401c8a5a68cef2b7c932e10d31f1a99b8eabe11fb9123dff5d926b2e5b3b0d7"
+    },
+    {
+      "path": "dealer-stock/listing-1.jpg",
+      "sha256": "8cbe76dd5d0b0d8dea03ba850b083364323817b2c91b25c4dc7142ffd56b4d80"
+    },
+    {
+      "path": "dealer-stock/listing-2.jpg",
+      "sha256": "950c6664642b4ca143c24610f53e8673f59857a3511ffc96543f61cd60e9bb58"
+    },
+    {
+      "path": "dealer-stock/listing-3.jpg",
+      "sha256": "e2d35ba9a8cda0a1648134e7de272cfef817628df0e0f2d940053072d569a822"
+    },
+    {
+      "path": "dealer.json",
+      "sha256": "9bb058a2daa62b15ba861ce813357e84d570a937a608d26c27f8200d6ffd0d4e"
+    },
+    {
+      "path": "identity-review.json",
+      "sha256": "7e99a874abad2da81b813f52df8139d38e0a869515407f74f904e88c41acdcca"
+    },
+    {
+      "path": "locale.json",
+      "sha256": "946347f82517e02a3f0293a7437fc5143c2665359b1babebe1187b55cbc20378"
+    },
+    {
+      "path": "missing-facts.json",
+      "sha256": "4b04606f57de8595629f8acabe471c90144b110cc8e093864300b9fd7a7de612"
+    },
+    {
+      "path": "photo-evidence.json",
+      "sha256": "2099036143ab17223ab5fda8ab4ed2495c8a9b92055a95506c135c8528f7341c"
+    },
+    {
+      "path": "qualification.json",
+      "sha256": "23a679e63abfdd4a0603d38ef44fac081b4ba5b9a0395730461759d034cb3df9"
+    },
+    {
+      "path": "research-review.json",
+      "sha256": "34ba46a43a9c5f6803b015bd0052d5cde82c81115d6c17c00af689656514a89f"
+    },
+    {
+      "path": "source-evidence.json",
+      "sha256": "febd4558b5ec702cafe90e6931d22090988068981389caeb61ffc6ee28065d73"
+    },
+    {
+      "path": "stock.json",
+      "sha256": "5ba1108a742e8c488fc6a7c46f5a093ee2bfddbf7a5a6c1e09b70fc80e9a2b69"
+    }
+  ],
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "providerWrites": 0
+}

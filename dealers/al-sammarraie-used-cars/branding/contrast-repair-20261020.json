@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-sammarraie-used-cars",
+  "mode": "built-in-imagegen",
+  "independentProposal": true,
+  "dealerApproved": false,
+  "originalPackDigest": "2186671bbf35e253bdd2cedb65afa0e6877181782c41a72abb660867739ca8ee",
+  "originalSourceSha256": "c2b53db884587afb085a362a8f138ab8efcefc433e3e297609ab49c3314bfc3d",
+  "selected": [
+    {
+      "roles": [
+        "onAccent"
+      ],
+      "filename": "contrast-on-accent-v2.png",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-711c076f-4b98-408b-a219-d763d6eced23",
+        "referenceKind": "actual-tool-output-filename",
+        "modelVersion": null
+      },
+      "prompt": "Precise red-surface color edit of this exact existing Al Sammarraie S-and-road proposal emblem. Preserve every contour of the stylized S, winding road and rectangular road gaps exactly; do not add any text or alter the design. Replace the medium silver visible ink with one solid very light blue-grey #d8e2ee, fully opaque and smooth. Preserve intended negative spaces and background genuinely transparent. No pure white, dark outline, metallic gradient, texture, speckles, shadow, badge, enclosing plate or shape redesign. Crisp clean alpha and generous transparent margins. This same motif must read clearly on red #c40101. Independent preview proposal.",
+      "parentReference": "branding/generated-inverse.png",
+      "sourcePath": "branding/contrast-on-accent-v2.png",
+      "sha256": "c1f289cfb7b9bca57e24e08adea3265c637aa60873b058f5c6440693141fc8d4",
+      "bytes": 724675,
+      "outputFile": "exec-711c076f-4b98-408b-a219-d763d6eced23.png"
+    }
+  ]
+}

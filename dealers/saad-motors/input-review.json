@@ -3,7 +3,7 @@
   "kind": "cars-dealer-pack-input-review",
   "dealer": "saad-motors",
   "reviewed": true,
-  "reviewedAt": "2026-10-20T19:21:26.732Z",
+  "reviewedAt": "2026-10-20T19:59:21.455Z",
   "review": {
     "kind": "automated",
     "humanReview": false,
@@ -58,6 +58,10 @@
       "sha256": "86124a56bb351fd0b5cd509b073f6c5071589163452df51231580011a98025e1"
     },
     {
+      "path": "branding/generated-on-dark-v2-20261020.png",
+      "sha256": "933c741ea3fd5f84e2df34c7a58af61dbe8d7b5850f14a3331006e2d95193ce5"
+    },
+    {
       "path": "branding/generated-on-dark.png",
       "sha256": "7400830b3fa5df963fe17ad05d258c5156dcf0f789289904561b695d12c7e232"
     },
@@ -67,15 +71,23 @@
     },
     {
       "path": "branding/logo-contract.json",
-      "sha256": "f43672f9aac55db24a3fe69ff6693dc1b4e7d91a54870ea66c69882d26165a19"
+      "sha256": "c99a03ed4dbeb9756021b60cac858267859e6dfcb18df57d829c06134f0d3d66"
     },
     {
       "path": "branding/logo-recipe.json",
-      "sha256": "5b7af9191ae7ebf84ca5bce3633816c023935b77be67582afb4f791e4a52e70b"
+      "sha256": "67472cff565048b17d84d6e430c1d108067cbf042f72b532daed2ec76fcbe94c"
+    },
+    {
+      "path": "branding/source-before-wordmark-repair-20261020-3bbf71c55b57c0dc.json",
+      "sha256": "3bbf71c55b57c0dc32d7de9d0fa801f8e4ede197dac6eac2aea38f52bcbdb9ca"
     },
     {
       "path": "branding/source.json",
-      "sha256": "3bbf71c55b57c0dc32d7de9d0fa801f8e4ede197dac6eac2aea38f52bcbdb9ca"
+      "sha256": "c21d47eb4cadd9b993b7e3dd2ab1138d89b7ac7b8623f6ca16029070c96aa038"
+    },
+    {
+      "path": "branding/wordmark-repair-20261020.json",
+      "sha256": "f215d1f88d91ab7193850b92ac2cea9062ee89f87171b4f3931ea9e661612d7c"
     },
     {
       "path": "business-facts.json",
@@ -83,7 +95,7 @@
     },
     {
       "path": "copy-review.json",
-      "sha256": "2487175a0bb4ac30405a8728c158d546926b8653c9ca9881b920c64fd9db5b47"
+      "sha256": "404bc9790b30e1abb31c82e5bb4d1d1ee4e52991d8876325ddb76bbf03dcc0a6"
     },
     {
       "path": "dealer-stock/listing-1.jpg",
@@ -103,7 +115,7 @@
     },
     {
       "path": "identity-review.json",
-      "sha256": "43d3d1bc07fc1dae1d185100790d1937369bdfa188b98fdd73053212be2f232c"
+      "sha256": "fb8660780ee548a376720bdc73c9c470ad231160c7b244ef0426a0ecfd5f5fb3"
     },
     {
       "path": "locale.json",
@@ -119,7 +131,7 @@
     },
     {
       "path": "qualification.json",
-      "sha256": "e7c7130487db9521ff12c1abdb37e2fff10db96b9d8093e66dfd111b9d25bd73"
+      "sha256": "6320b0438fde8dedf9f5d2d451fe6842dac81a8721057459fc59ac6d2169e6d8"
     },
     {
       "path": "research-review.json",

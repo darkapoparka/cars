@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "dealer": "al-sammarraie-used-cars",
   "reviewed": true,
-  "reviewedAt": "2026-10-19T20:57:51.052Z",
+  "reviewedAt": "2026-10-20T20:03:02.630Z",
   "status": "independent-proposal-not-dealer-approved",
   "creationMethod": "imagegen-independent-logo-proposal",
   "assets": {
@@ -21,8 +21,8 @@
     "onAccent": {
       "sourcePath": "branding/logo-on-accent.png",
       "publicPath": "/dealer-brand/logo-on-accent.webp",
-      "sha256": "99451e6ea34b64dcab1d9bb68860af6e3d1f4e72509623d6265150a07fa8c6b0",
-      "sourceSha256": "d3744d8d9de430a1a210f209ef26d52c49881b85f5285fb09e21d1cf7353c48f"
+      "sha256": "f45b2fcb1dc3dfce4924c598aa0009289ae18fb3df7742bf4266b053b792726f",
+      "sourceSha256": "8aab51c6d754447fc59718710cc2c2f111e37a168ac3f889731659c8e25c1f34"
     }
   },
   "surfaceBackgrounds": {
@@ -95,13 +95,14 @@
     },
     "onAccent": {
       "path": "branding/logo-on-accent.png",
-      "sha256": "d3744d8d9de430a1a210f209ef26d52c49881b85f5285fb09e21d1cf7353c48f",
+      "sha256": "8aab51c6d754447fc59718710cc2c2f111e37a168ac3f889731659c8e25c1f34",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-874a1a1f-dc46-4e9b-a0d3-d5ec6ee20688",
+        "generationId": "exec-711c076f-4b98-408b-a219-d763d6eced23",
+        "referenceKind": "actual-tool-output-filename",
         "modelVersion": null
       },
-      "sourceReference": "dealers/al-sammarraie-used-cars/branding/generated-inverse.png"
+      "sourceReference": "dealers/al-sammarraie-used-cars/branding/contrast-on-accent-v2.png"
     }
   },
   "transforms": {
@@ -133,15 +134,15 @@
     },
     "onAccent": {
       "operation": "crop-transparent-padding-and-resize",
-      "sourceSha256": "dfef6dec474f660744f45d3d7132da6885ea1eac9c0bf157f4212c1d86e376e2",
-      "sha256": "d3744d8d9de430a1a210f209ef26d52c49881b85f5285fb09e21d1cf7353c48f",
+      "sourceSha256": "c1f289cfb7b9bca57e24e08adea3265c637aa60873b058f5c6440693141fc8d4",
+      "sha256": "8aab51c6d754447fc59718710cc2c2f111e37a168ac3f889731659c8e25c1f34",
       "crop": {
-        "left": 127,
+        "left": 128,
         "top": 160,
-        "width": 1042,
-        "height": 1027
+        "width": 1043,
+        "height": 1028
       },
-      "sourcePath": "branding/generated-inverse.png",
+      "sourcePath": "branding/contrast-on-accent-v2.png",
       "outputPath": "branding/logo-on-accent.png"
     }
   },
@@ -224,7 +225,7 @@
   "originalArtworkPreserved": true,
   "visualReview": {
     "reviewed": true,
-    "reviewedAt": "2026-10-19T20:57:51.052Z",
+    "reviewedAt": "2026-10-20T20:03:02.630Z",
     "source": "branding/source.json",
     "spelling": "agent-visual-review",
     "dealerApproval": false

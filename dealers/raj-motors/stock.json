@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "dealer": "raj-motors",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "listing-1",
+      "title": "2012 Kia Rio 1.25 1 5dr",
+      "make": "Kia",
+      "model": "Rio 1.25 1 5dr",
+      "year": 2012,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/listing-1.jpg"
+      ],
+      "sourceUrl": "https://www.ebay.co.uk/itm/900011314689",
+      "observedAt": "2026-10-19",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "transmission": "Manual",
+      "fuel": "Petrol",
+      "mileageValue": 57000,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "dealer": "resi-auto-sales",
   "reviewed": true,
-  "reviewedAt": "2026-10-19T18:56:40.960711Z",
+  "reviewedAt": "2026-10-20T20:02:56.007Z",
   "status": "independent-proposal-not-dealer-approved",
   "creationMethod": "imagegen-proposal",
   "assets": {
@@ -21,8 +21,8 @@
     "onAccent": {
       "sourcePath": "branding/logo-on-accent.png",
       "publicPath": "/dealer-brand/logo-on-accent.webp",
-      "sha256": "4c4728748ecad38aba6d03b8677a6b8e301557df151bd8bf4096cd70661de85c",
-      "sourceSha256": "1e8b9e531e2b7a3d2cfb469b59bc0437048ee0ae0e2fa4016ed460e5d3c5dfa3"
+      "sha256": "3aa496f9c43ded1fd3a3ba704a4466ecd1fa0adf90676a54d9c12f6fabfb687f",
+      "sourceSha256": "dbba5a8974d85b6e042e1d56a5b295fef0b0725d87b86f55ac6115889fd49948"
     }
   },
   "surfaceBackgrounds": {
@@ -84,13 +84,14 @@
     },
     "onAccent": {
       "path": "branding/logo-on-accent.png",
-      "sha256": "1e8b9e531e2b7a3d2cfb469b59bc0437048ee0ae0e2fa4016ed460e5d3c5dfa3",
+      "sha256": "dbba5a8974d85b6e042e1d56a5b295fef0b0725d87b86f55ac6115889fd49948",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-212e5099-7a30-42a6-954b-bb0d624ac1f0",
+        "generationId": "exec-f8353e87-0a16-4680-85d2-aa33f4edf07c",
+        "referenceKind": "actual-tool-output-filename",
         "modelVersion": null
       },
-      "sourceReference": "dealers/resi-auto-sales/branding/generated-on-dark.png"
+      "sourceReference": "dealers/resi-auto-sales/branding/contrast-on-accent-v2.png"
     }
   },
   "transforms": {
@@ -122,15 +123,15 @@
     },
     "onAccent": {
       "operation": "crop-transparent-padding-and-resize",
-      "sourceSha256": "1c0329c934ced23111fde17419d05d85017c0ec0b049d3062553ec3f0857923f",
-      "sha256": "1e8b9e531e2b7a3d2cfb469b59bc0437048ee0ae0e2fa4016ed460e5d3c5dfa3",
+      "sourceSha256": "84d2ee4481fcb486c3f0c46bea57da38913f7aceab96b47f85b3a47fc7291a8c",
+      "sha256": "dbba5a8974d85b6e042e1d56a5b295fef0b0725d87b86f55ac6115889fd49948",
       "crop": {
         "left": 0,
-        "top": 123,
+        "top": 124,
         "width": 2172,
-        "height": 464
+        "height": 459
       },
-      "sourcePath": "branding/generated-on-dark.png",
+      "sourcePath": "branding/contrast-on-accent-v2.png",
       "outputPath": "branding/logo-on-accent.png"
     }
   },
@@ -180,7 +181,7 @@
   "originalArtworkPreserved": true,
   "visualReview": {
     "reviewed": true,
-    "reviewedAt": "2026-10-19T18:56:40.960711Z",
+    "reviewedAt": "2026-10-20T20:02:56.007Z",
     "source": "branding/source.json",
     "spelling": "agent-visual-review",
     "dealerApproval": false

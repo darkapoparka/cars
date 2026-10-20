@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-targeted-wordmark-contrast-repair",
+  "dealer": "east-midlands-car-sales",
+  "createdAt": "2026-10-20T19:58:28.958Z",
+  "previousPackDigest": "b3eaf4fbcbbce1445d11078dba0a817f67d5a878736469e03e9c9fc3c92b491d",
+  "previousSource": {
+    "path": "branding/source-before-wordmark-repair-20261020-b4f16fb393f9cba3.json",
+    "sha256": "b4f16fb393f9cba33d4ab4750994d9530238e601276a8ab3d995c1d71e10c976"
+  },
+  "previousWordmarkInputs": {
+    "onDark": {
+      "path": "branding/generated-on-dark.png",
+      "sha256": "7727f885662a5023d636c8ac977b075a7e566017f0cb35357acf6526982430c6",
+      "nativeDimensions": {
+        "width": 2170,
+        "height": 725
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-16497a00-a602-4ac1-b5f2-4b20cea2a25c",
+        "modelVersion": null
+      }
+    },
+    "onAccent": {
+      "path": "branding/generated-on-dark.png",
+      "sha256": "7727f885662a5023d636c8ac977b075a7e566017f0cb35357acf6526982430c6",
+      "nativeDimensions": {
+        "width": 2170,
+        "height": 725
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-16497a00-a602-4ac1-b5f2-4b20cea2a25c",
+        "modelVersion": null
+      }
+    }
+  },
+  "replacement": {
+    "roles": [
+      "onDark",
+      "onAccent"
+    ],
+    "reference": "branding/generated-on-dark.png",
+    "path": "branding/generated-on-dark-v2-20261020.png",
+    "sha256": "8ce27b2079784b5359c1385b6bd0ec7a91e3c0e9bbdd4a1192e7183a92ea558e",
+    "nativeDimensions": {
+      "width": 2170,
+      "height": 725
+    },
+    "tool": "image_gen.imagegen",
+    "generationId": "exec-6f4981eb-c3dc-41fe-8e6f-17b8b34838f6",
+    "modelVersion": null,
+    "prompt": "Use case: logo-brand. Exact dark-surface color repair of supplied EAST MIDLANDS CAR SALES identity. Preserve the EM compact emblem and coupe-roof line at left, exact lettering EAST MIDLANDS above CAR SALES at right, both short horizontal rules, relative size, layout, spacing and all letter shapes. Make a faithful light monochrome variant using uniform solid pale silver-grey #c8d0d8. Replace both the existing white/light fills and the heavy black contour with that same light ink; do not retain dark borders or create double outlines. Keep counters and gaps transparent. No pure white pixels, no gradients, no texture or speckles, shadow or glow. Clean flat opaque shapes, smooth antialiasing and genuinely transparent background with generous outer padding. Exact words: EAST MIDLANDS and CAR SALES. No additional wording. This is a faithful preview treatment, not dealer approved.",
+    "createdAt": "2026-10-20T19:58:28.958Z",
+    "derivation": "Actual built-in imagegen surface edit; raw returned PNG copied byte-identical without recolouring, filters or alpha cleanup."
+  },
+  "visualReview": {
+    "wordmarkWidths": [
+      120,
+      180
+    ],
+    "backgrounds": [
+      "#111113",
+      "#101820",
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ],
+    "identityAndSpelling": "agent-visual-review",
+    "dealerApproval": false,
+    "nativeApproval": false,
+    "hostedApproval": false
+  },
+  "originalMasterLightCompactFactsStockPhotosPreserved": true,
+  "toolPackage": "L:/CODEX/cars/templates/karento-best/package.json",
+  "filtersApplied": false,
+  "thresholdsChanged": false,
+  "providerWrites": 0
+}

@@ -1,0 +1,188 @@
+{
+  "schemaVersion": 1,
+  "dealer": "rpm-shentonfield",
+  "realLogoFirst": true,
+  "logoKind": "redraw",
+  "publishedBranding": "real-logo-observed",
+  "publicSources": [
+    {
+      "url": "https://www.autotrader.co.uk/dealers/cheshire/manchester/rpm-10042344",
+      "observedAt": "2026-10-19"
+    }
+  ],
+  "originals": [
+    {
+      "url": "https://m.atcdn.co.uk/a/media/w1280/4312223266eb4512809959b2a0bc0c59.jpg",
+      "observedAt": "2026-10-19",
+      "sha256": "2d71b43faad67055906dc57e575ae2ea2b16f13990ff6dc93827b3b4638db72c",
+      "nativeDimensions": {
+        "width": 1280,
+        "height": 960
+      },
+      "format": "JPEG",
+      "description": "Real white italic RPM sign on a plum/purple wall in the matched Shentonfield dealer photograph; retained the RPM letters, italic motif and plum identity. The silver inverse is a surface adaptation of the same identity.",
+      "retainedContext": "Dealer sign remains visible in the separately resized first stock photograph; photo-evidence.json binds the original source bytes."
+    }
+  ],
+  "sourceLogoUrl": "https://m.atcdn.co.uk/a/media/w1280/4312223266eb4512809959b2a0bc0c59.jpg",
+  "workingLogoPath": "branding/generated-master.png",
+  "creationMethod": "imagegen-faithful-redraw",
+  "dealerApproved": false,
+  "approvalStatus": "independent-preview-not-dealer-approved",
+  "usageStatus": "public-preview-only",
+  "observedAt": "2026-10-19",
+  "researchConclusion": "A real identity was obtained and visually reviewed. Real white italic RPM sign on a plum/purple wall in the matched Shentonfield dealer photograph; retained the RPM letters, italic motif and plum identity. The silver inverse is a surface adaptation of the same identity. This is a faithful image-generated redraw for an independent preview and has not been approved by the dealer.",
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T19:22:56.608725Z",
+    "master": {
+      "path": "branding/generated-master.png",
+      "sha256": "e5ed55b2bcf2d7a360a18d13c69662189a2ab74f368a5b7e9350f336a79ae7da",
+      "nativeDimensions": {
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-181c7f0b-3250-4ca8-a4a1-5ad0e76957d0",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-master.png",
+      "sha256": "e5ed55b2bcf2d7a360a18d13c69662189a2ab74f368a5b7e9350f336a79ae7da",
+      "nativeDimensions": {
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-181c7f0b-3250-4ca8-a4a1-5ad0e76957d0",
+        "modelVersion": null
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-on-dark.png",
+      "sha256": "e65ee023acb4b49b2af88db09f61d22a10482084990138d2073b47edf8cc501d",
+      "nativeDimensions": {
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-7d427150-b95a-4709-92a8-541de1ddbda8",
+        "modelVersion": null
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-master.png",
+        "sha256": "e5ed55b2bcf2d7a360a18d13c69662189a2ab74f368a5b7e9350f336a79ae7da",
+        "nativeDimensions": {
+          "width": 2172,
+          "height": 724
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-181c7f0b-3250-4ca8-a4a1-5ad0e76957d0",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "e65ee023acb4b49b2af88db09f61d22a10482084990138d2073b47edf8cc501d",
+        "nativeDimensions": {
+          "width": 2172,
+          "height": 724
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-7d427150-b95a-4709-92a8-541de1ddbda8",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "e65ee023acb4b49b2af88db09f61d22a10482084990138d2073b47edf8cc501d",
+        "nativeDimensions": {
+          "width": 2172,
+          "height": 724
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-7d427150-b95a-4709-92a8-541de1ddbda8",
+          "modelVersion": null
+        }
+      }
+    },
+    "marks": {
+      "onLight": {
+        "path": "branding/generated-master.png",
+        "sha256": "e5ed55b2bcf2d7a360a18d13c69662189a2ab74f368a5b7e9350f336a79ae7da",
+        "nativeDimensions": {
+          "width": 2172,
+          "height": 724
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-181c7f0b-3250-4ca8-a4a1-5ad0e76957d0",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "e65ee023acb4b49b2af88db09f61d22a10482084990138d2073b47edf8cc501d",
+        "nativeDimensions": {
+          "width": 2172,
+          "height": 724
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-7d427150-b95a-4709-92a8-541de1ddbda8",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": {
+        "onLight": [
+          "#ffffff"
+        ],
+        "onDark": [
+          "#111113",
+          "#101820"
+        ],
+        "onAccent": [
+          "#09090b",
+          "#17191c",
+          "#c40101"
+        ]
+      },
+      "wordmarkWidths": [
+        120,
+        180
+      ],
+      "reviewedAt": "2026-10-19T19:22:56.608725Z",
+      "notes": "Visually reviewed the actual deterministic transparent-padding exports at120px and180px on all six retained template surface colours. Exact name spelling, silhouette, alpha edges, spacing and clipping were checked. Light-ink variants are actual imagegen results, not deterministic recolours. Small secondary suffix text is subordinate to the principal name; compact identity is provided separately."
+    },
+    "compactMarkStatus": "independent-preview-not-dealer-approved",
+    "compactMarkDescription": "The compact RPM wordmark itself",
+    "compactMarkReview": {
+      "reviewed": true,
+      "widths": [
+        32,
+        64
+      ],
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#101820",
+        "#09090b",
+        "#17191c",
+        "#c40101"
+      ],
+      "reviewedAt": "2026-10-19T19:22:56.608725Z",
+      "notes": "Visually inspected the actual compact exports at32px and64px on all six template backgrounds. Existing-emblem pixel crops have explicit parent hashes and exact rectangle provenance; independently generated compact marks retain their own actual generation IDs. Shape, spacing, clipping and transparent counters were checked. Dealer approval remains unknown."
+    }
+  }
+}

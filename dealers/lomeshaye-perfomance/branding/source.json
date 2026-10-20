@@ -20,7 +20,7 @@
   "observedAt": "2026-10-19",
   "researchConclusion": "No usable original logo was obtained from bounded exact-business/locality searches and the matched public seller and directory sources. The dealer catalogue supplies a text identity and vehicle photographs; an unavailable or absent logo image does not prove that no original branding exists. This is an independent proposed identity, not an official dealer logo.",
   "generatedInputs": {
-    "reviewedAt": "2026-10-19T19:22:56.608725Z",
+    "reviewedAt": "2026-10-20T19:58:53.726Z",
     "master": {
       "path": "branding/generated-master.png",
       "sha256": "808db673e9794f28db9e0bee129cc0f4411bde30dc9281d1ce55e97a1569a69b",
@@ -89,28 +89,28 @@
         }
       },
       "onDark": {
-        "path": "branding/generated-on-dark.png",
-        "sha256": "c06f4b7d33fd89417eed470bfcbca5c074ccee93dc3ad47c9d2bc756a0bd4e1c",
+        "path": "branding/generated-on-dark-v2-20261020.png",
+        "sha256": "18680e52ae5793d86fe830567fcf2d498414837b44bba1b9a71166da4790c25e",
         "nativeDimensions": {
           "width": 1953,
           "height": 805
         },
         "generation": {
           "tool": "image_gen.imagegen",
-          "generationId": "exec-c89a3919-9bff-4fcf-aa76-f026f85171a6",
+          "generationId": "exec-2f37b488-e9e7-43e1-954b-4e0f233e479d",
           "modelVersion": null
         }
       },
       "onAccent": {
-        "path": "branding/generated-on-dark.png",
-        "sha256": "c06f4b7d33fd89417eed470bfcbca5c074ccee93dc3ad47c9d2bc756a0bd4e1c",
+        "path": "branding/generated-on-dark-v2-20261020.png",
+        "sha256": "18680e52ae5793d86fe830567fcf2d498414837b44bba1b9a71166da4790c25e",
         "nativeDimensions": {
           "width": 1953,
           "height": 805
         },
         "generation": {
           "tool": "image_gen.imagegen",
-          "generationId": "exec-c89a3919-9bff-4fcf-aa76-f026f85171a6",
+          "generationId": "exec-2f37b488-e9e7-43e1-954b-4e0f233e479d",
           "modelVersion": null
         }
       }
@@ -177,8 +177,8 @@
         120,
         180
       ],
-      "reviewedAt": "2026-10-19T19:22:56.608725Z",
-      "notes": "Visually reviewed the actual deterministic transparent-padding exports at120px and180px on all six retained template surface colours. Exact name spelling, silhouette, alpha edges, spacing and clipping were checked. Light-ink variants are actual imagegen results, not deterministic recolours. Small secondary suffix text is subordinate to the principal name; compact identity is provided separately."
+      "reviewedAt": "2026-10-20T19:58:53.726Z",
+      "notes": "Actual new light silver-grey surface wordmark reviewed at120/180px on the unchanged charcoal/navy/black/red template backgrounds. Exact business spelling, motif, counters, edges and spacing checked. Original light/master and compact artwork/provenance remain unchanged; no dealer/native/hosted approval is inferred."
     },
     "compactMarkStatus": "independent-preview-not-dealer-approved",
     "compactMarkDescription": "LP monogram",
@@ -199,5 +199,34 @@
       "reviewedAt": "2026-10-19T19:22:56.608725Z",
       "notes": "Visually inspected the actual compact exports at32px and64px on all six template backgrounds. Existing-emblem pixel crops have explicit parent hashes and exact rectangle provenance; independently generated compact marks retain their own actual generation IDs. Shape, spacing, clipping and transparent counters were checked. Dealer approval remains unknown."
     }
-  }
+  },
+  "additionalGenerations": [
+    {
+      "roles": [
+        "onDark",
+        "onAccent"
+      ],
+      "reference": "branding/generated-on-dark.png",
+      "path": "branding/generated-on-dark-v2-20261020.png",
+      "sha256": "18680e52ae5793d86fe830567fcf2d498414837b44bba1b9a71166da4790c25e",
+      "nativeDimensions": {
+        "width": 1953,
+        "height": 805
+      },
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-2f37b488-e9e7-43e1-954b-4e0f233e479d",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand. Faithful surface-color repair of the supplied logo. Preserve exactly the LP emblem on the left, and the three lines LOMESHAYE / PERFOMANCE / LIMITED on the right, their letterforms, spacing, size and placement. The second line is deliberately spelled PERFOMANCE, P E R F O M A N C E, with no R after O; do not correct or alter it. Convert all existing light fills and heavy dark outlines into one uniform opaque pale silver-grey #c8d0d8. No dark borders, no white outlines or pure-white fill. Transparent counters and clear gaps, not a solid rectangle. Clean flat filled smooth artwork on truly transparent background, no gradients, grain, speckles, texture, shadow, glow or additional marks. Preserve exact original geometry and proportions with generous transparent outer padding. Independent preview identity, not dealer approved.",
+      "createdAt": "2026-10-20T19:58:53.726Z",
+      "derivation": "Actual built-in imagegen surface edit; raw returned PNG copied byte-identical without recolouring, filters or alpha cleanup."
+    }
+  ],
+  "sourceHistory": [
+    {
+      "reference": "branding/source-before-wordmark-repair-20261020-1772471b02abbb09.json",
+      "sha256": "1772471b02abbb0903ad8ed3d3d641a92cba5601c4e6336b78fd95df2d2ccd47",
+      "retainedAt": "2026-10-20T19:58:53.726Z",
+      "reason": "Exact source provenance before targeted wordmark-only contrast repair"
+    }
+  ]
 }

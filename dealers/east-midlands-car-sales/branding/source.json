@@ -41,7 +41,7 @@
   "observedAt": "2026-10-19",
   "researchConclusion": "A real identity was obtained and visually reviewed. Opaque 600px monochrome coupe-roof wordmark; preserved the roof motif, name and monochrome identity, with a compact EM addition. This is a faithful image-generated redraw for an independent preview and has not been approved by the dealer.",
   "generatedInputs": {
-    "reviewedAt": "2026-10-19T19:22:56.608725Z",
+    "reviewedAt": "2026-10-20T19:58:28.958Z",
     "master": {
       "path": "branding/generated-master.png",
       "sha256": "ce4c99cb012011cccf5556742ad27bec44f2c30507c8e5c94756af536269c404",
@@ -110,28 +110,28 @@
         }
       },
       "onDark": {
-        "path": "branding/generated-on-dark.png",
-        "sha256": "7727f885662a5023d636c8ac977b075a7e566017f0cb35357acf6526982430c6",
+        "path": "branding/generated-on-dark-v2-20261020.png",
+        "sha256": "8ce27b2079784b5359c1385b6bd0ec7a91e3c0e9bbdd4a1192e7183a92ea558e",
         "nativeDimensions": {
           "width": 2170,
           "height": 725
         },
         "generation": {
           "tool": "image_gen.imagegen",
-          "generationId": "exec-16497a00-a602-4ac1-b5f2-4b20cea2a25c",
+          "generationId": "exec-6f4981eb-c3dc-41fe-8e6f-17b8b34838f6",
           "modelVersion": null
         }
       },
       "onAccent": {
-        "path": "branding/generated-on-dark.png",
-        "sha256": "7727f885662a5023d636c8ac977b075a7e566017f0cb35357acf6526982430c6",
+        "path": "branding/generated-on-dark-v2-20261020.png",
+        "sha256": "8ce27b2079784b5359c1385b6bd0ec7a91e3c0e9bbdd4a1192e7183a92ea558e",
         "nativeDimensions": {
           "width": 2170,
           "height": 725
         },
         "generation": {
           "tool": "image_gen.imagegen",
-          "generationId": "exec-16497a00-a602-4ac1-b5f2-4b20cea2a25c",
+          "generationId": "exec-6f4981eb-c3dc-41fe-8e6f-17b8b34838f6",
           "modelVersion": null
         }
       }
@@ -198,8 +198,8 @@
         120,
         180
       ],
-      "reviewedAt": "2026-10-19T19:22:56.608725Z",
-      "notes": "Visually reviewed the actual deterministic transparent-padding exports at120px and180px on all six retained template surface colours. Exact name spelling, silhouette, alpha edges, spacing and clipping were checked. Light-ink variants are actual imagegen results, not deterministic recolours. Small secondary suffix text is subordinate to the principal name; compact identity is provided separately."
+      "reviewedAt": "2026-10-20T19:58:28.958Z",
+      "notes": "Actual new light silver-grey surface wordmark reviewed at120/180px on the unchanged charcoal/navy/black/red template backgrounds. Exact business spelling, motif, counters, edges and spacing checked. Original light/master and compact artwork/provenance remain unchanged; no dealer/native/hosted approval is inferred."
     },
     "compactMarkStatus": "independent-preview-not-dealer-approved",
     "compactMarkDescription": "EM monogram beneath the retained coupe-roof motif",
@@ -220,5 +220,34 @@
       "reviewedAt": "2026-10-19T19:22:56.608725Z",
       "notes": "Visually inspected the actual compact exports at32px and64px on all six template backgrounds. Existing-emblem pixel crops have explicit parent hashes and exact rectangle provenance; independently generated compact marks retain their own actual generation IDs. Shape, spacing, clipping and transparent counters were checked. Dealer approval remains unknown."
     }
-  }
+  },
+  "additionalGenerations": [
+    {
+      "roles": [
+        "onDark",
+        "onAccent"
+      ],
+      "reference": "branding/generated-on-dark.png",
+      "path": "branding/generated-on-dark-v2-20261020.png",
+      "sha256": "8ce27b2079784b5359c1385b6bd0ec7a91e3c0e9bbdd4a1192e7183a92ea558e",
+      "nativeDimensions": {
+        "width": 2170,
+        "height": 725
+      },
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-6f4981eb-c3dc-41fe-8e6f-17b8b34838f6",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand. Exact dark-surface color repair of supplied EAST MIDLANDS CAR SALES identity. Preserve the EM compact emblem and coupe-roof line at left, exact lettering EAST MIDLANDS above CAR SALES at right, both short horizontal rules, relative size, layout, spacing and all letter shapes. Make a faithful light monochrome variant using uniform solid pale silver-grey #c8d0d8. Replace both the existing white/light fills and the heavy black contour with that same light ink; do not retain dark borders or create double outlines. Keep counters and gaps transparent. No pure white pixels, no gradients, no texture or speckles, shadow or glow. Clean flat opaque shapes, smooth antialiasing and genuinely transparent background with generous outer padding. Exact words: EAST MIDLANDS and CAR SALES. No additional wording. This is a faithful preview treatment, not dealer approved.",
+      "createdAt": "2026-10-20T19:58:28.958Z",
+      "derivation": "Actual built-in imagegen surface edit; raw returned PNG copied byte-identical without recolouring, filters or alpha cleanup."
+    }
+  ],
+  "sourceHistory": [
+    {
+      "reference": "branding/source-before-wordmark-repair-20261020-b4f16fb393f9cba3.json",
+      "sha256": "b4f16fb393f9cba33d4ab4750994d9530238e601276a8ab3d995c1d71e10c976",
+      "retainedAt": "2026-10-20T19:58:28.958Z",
+      "reason": "Exact source provenance before targeted wordmark-only contrast repair"
+    }
+  ]
 }

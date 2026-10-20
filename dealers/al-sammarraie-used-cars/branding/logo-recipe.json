@@ -34,8 +34,8 @@
     "zlib-ng": "2.3.3",
     "sharp": "0.35.5"
   },
-  "sourceSha256": "c2b53db884587afb085a362a8f138ab8efcefc433e3e297609ab49c3314bfc3d",
-  "contractSha256": "eec8e3151b1892f051efa87569c5864f2a153278f3efa94997a66bd1f2d5d78d",
+  "sourceSha256": "051f5122575ae4a9400270f0cba9980e75490a7183e05fb7d0f09f510c29931f",
+  "contractSha256": "e1c5d75b9b9692dda85248ca994c3bc751545ac6731ebf4b7cadb4770842a4d9",
   "outputs": [
     {
       "path": "branding/app-icon.png",
@@ -59,8 +59,8 @@
     },
     {
       "path": "branding/logo-on-accent.png",
-      "bytes": 573127,
-      "sha256": "d3744d8d9de430a1a210f209ef26d52c49881b85f5285fb09e21d1cf7353c48f"
+      "bytes": 555461,
+      "sha256": "8aab51c6d754447fc59718710cc2c2f111e37a168ac3f889731659c8e25c1f34"
     },
     {
       "path": "branding/logo-on-dark.png",
@@ -84,13 +84,13 @@
     },
     {
       "path": "dealer-brand/logo-on-accent.png",
-      "bytes": 573127,
-      "sha256": "d3744d8d9de430a1a210f209ef26d52c49881b85f5285fb09e21d1cf7353c48f"
+      "bytes": 555461,
+      "sha256": "8aab51c6d754447fc59718710cc2c2f111e37a168ac3f889731659c8e25c1f34"
     },
     {
       "path": "dealer-brand/logo-on-accent.webp",
-      "bytes": 410572,
-      "sha256": "99451e6ea34b64dcab1d9bb68860af6e3d1f4e72509623d6265150a07fa8c6b0"
+      "bytes": 378934,
+      "sha256": "f45b2fcb1dc3dfce4924c598aa0009289ae18fb3df7742bf4266b053b792726f"
     },
     {
       "path": "dealer-brand/logo-on-dark.png",

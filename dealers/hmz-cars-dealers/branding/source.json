@@ -28,7 +28,7 @@
   "observedAt": "2026-10-19",
   "researchConclusion": "No usable original logo was obtained from bounded exact-business/locality searches and the matched public seller and directory sources. The dealer catalogue supplies a text identity and vehicle photographs; an unavailable or absent logo image does not prove that no original branding exists. This is an independent proposed identity, not an official dealer logo.",
   "generatedInputs": {
-    "reviewedAt": "2026-10-19T19:22:56.608725Z",
+    "reviewedAt": "2026-10-20T20:11:52.341Z",
     "master": {
       "path": "branding/generated-master.png",
       "sha256": "ac0c99d7f245da49ae22cbeb065c1b2cad85925b57dba85d83cc1fffcf32c075",
@@ -43,28 +43,28 @@
       }
     },
     "mark": {
-      "path": "branding/generated-mark.png",
-      "sha256": "a13a65787eb217f29bda4b3f1c24d84f591a28155b06ebe4690c46d3c76001d5",
+      "path": "branding/generated-compact-on-light-v2-20261020-73a0e1128d1a28d6.png",
+      "sha256": "73a0e1128d1a28d6dac4a7dfeda8647ced76e4e0d4b76da1e0bdc6e81e29da99",
       "nativeDimensions": {
         "width": 1254,
         "height": 1254
       },
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-92efe74d-d89f-4ffb-81d2-12a23c4c4e16",
+        "generationId": "exec-b9bc2e88-0da9-453a-a560-97ba26b21c4d",
         "modelVersion": null
       }
     },
     "markOnDark": {
-      "path": "branding/generated-mark.png",
-      "sha256": "a13a65787eb217f29bda4b3f1c24d84f591a28155b06ebe4690c46d3c76001d5",
+      "path": "branding/generated-compact-on-dark-v2-20261020-255ec57843ee5fb1.png",
+      "sha256": "255ec57843ee5fb16c1721ee1135c8fd7dafba8d28aaaac10bcb6da03fc4dc28",
       "nativeDimensions": {
         "width": 1254,
         "height": 1254
       },
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-92efe74d-d89f-4ffb-81d2-12a23c4c4e16",
+        "generationId": "exec-f67dbe1a-2e5f-46bb-a772-13fb72adb558",
         "modelVersion": null
       }
     },
@@ -83,56 +83,56 @@
         }
       },
       "onDark": {
-        "path": "branding/generated-on-dark.png",
-        "sha256": "065ba4e633aa94352a7b48b3f4e081d0b7259514d47a57556461ac300e515c48",
+        "path": "branding/generated-on-dark-v2-20261020-389d5d37db9d5052.png",
+        "sha256": "389d5d37db9d50526680f3a6bea00497de6058345b4022e30262db4d1f96f10e",
         "nativeDimensions": {
           "width": 2172,
           "height": 724
         },
         "generation": {
           "tool": "image_gen.imagegen",
-          "generationId": "exec-1d7e3ceb-87fb-403a-9dac-6b1613cf87fc",
+          "generationId": "exec-0c674d9b-b126-4f90-bf83-9f196f7df044",
           "modelVersion": null
         }
       },
       "onAccent": {
-        "path": "branding/generated-on-dark.png",
-        "sha256": "065ba4e633aa94352a7b48b3f4e081d0b7259514d47a57556461ac300e515c48",
+        "path": "branding/generated-on-dark-v2-20261020-389d5d37db9d5052.png",
+        "sha256": "389d5d37db9d50526680f3a6bea00497de6058345b4022e30262db4d1f96f10e",
         "nativeDimensions": {
           "width": 2172,
           "height": 724
         },
         "generation": {
           "tool": "image_gen.imagegen",
-          "generationId": "exec-1d7e3ceb-87fb-403a-9dac-6b1613cf87fc",
+          "generationId": "exec-0c674d9b-b126-4f90-bf83-9f196f7df044",
           "modelVersion": null
         }
       }
     },
     "marks": {
       "onLight": {
-        "path": "branding/generated-mark.png",
-        "sha256": "a13a65787eb217f29bda4b3f1c24d84f591a28155b06ebe4690c46d3c76001d5",
+        "path": "branding/generated-compact-on-light-v2-20261020-73a0e1128d1a28d6.png",
+        "sha256": "73a0e1128d1a28d6dac4a7dfeda8647ced76e4e0d4b76da1e0bdc6e81e29da99",
         "nativeDimensions": {
           "width": 1254,
           "height": 1254
         },
         "generation": {
           "tool": "image_gen.imagegen",
-          "generationId": "exec-92efe74d-d89f-4ffb-81d2-12a23c4c4e16",
+          "generationId": "exec-b9bc2e88-0da9-453a-a560-97ba26b21c4d",
           "modelVersion": null
         }
       },
       "onDark": {
-        "path": "branding/generated-mark.png",
-        "sha256": "a13a65787eb217f29bda4b3f1c24d84f591a28155b06ebe4690c46d3c76001d5",
+        "path": "branding/generated-compact-on-dark-v2-20261020-255ec57843ee5fb1.png",
+        "sha256": "255ec57843ee5fb16c1721ee1135c8fd7dafba8d28aaaac10bcb6da03fc4dc28",
         "nativeDimensions": {
           "width": 1254,
           "height": 1254
         },
         "generation": {
           "tool": "image_gen.imagegen",
-          "generationId": "exec-92efe74d-d89f-4ffb-81d2-12a23c4c4e16",
+          "generationId": "exec-f67dbe1a-2e5f-46bb-a772-13fb72adb558",
           "modelVersion": null
         }
       }
@@ -157,11 +157,11 @@
         120,
         180
       ],
-      "reviewedAt": "2026-10-19T19:22:56.608725Z",
-      "notes": "Visually reviewed the actual deterministic transparent-padding exports at120px and180px on all six retained template surface colours. Exact name spelling, silhouette, alpha edges, spacing and clipping were checked. Light-ink variants are actual imagegen results, not deterministic recolours. Small secondary suffix text is subordinate to the principal name; compact identity is provided separately."
+      "reviewedAt": "2026-10-20T20:11:52.341Z",
+      "notes": "Agent viewed matched maintained exports at120/180px and32/64px on actual six template surfaces. Original/on-light wordmarks remain exact. Generated inverse and native compact variants are independent preview proposals; no dealer/native/hosted approval."
     },
     "compactMarkStatus": "independent-preview-not-dealer-approved",
-    "compactMarkDescription": "HMZ monogram",
+    "compactMarkDescription": "Native stacked HM-over-Z compact monogram",
     "compactMarkReview": {
       "reviewed": true,
       "widths": [
@@ -176,8 +176,88 @@
         "#17191c",
         "#c40101"
       ],
-      "reviewedAt": "2026-10-19T19:22:56.608725Z",
-      "notes": "Visually inspected the actual compact exports at32px and64px on all six template backgrounds. Existing-emblem pixel crops have explicit parent hashes and exact rectangle provenance; independently generated compact marks retain their own actual generation IDs. Shape, spacing, clipping and transparent counters were checked. Dealer approval remains unknown."
+      "reviewedAt": "2026-10-20T20:11:52.341Z",
+      "notes": "New native compact geometry and exact spelling visually reviewed at32/64px; padding/contrast thresholds unchanged; real imagegen light/dark variants, no stretched or filtered artwork."
     }
-  }
+  },
+  "additionalGenerations": [
+    {
+      "roles": [
+        "mark"
+      ],
+      "path": "branding/generated-compact-on-light-v2-20261020-73a0e1128d1a28d6.png",
+      "sha256": "73a0e1128d1a28d6dac4a7dfeda8647ced76e4e0d4b76da1e0bdc6e81e29da99",
+      "nativeDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-b9bc2e88-0da9-453a-a560-97ba26b21c4d",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand. Asset type: independent HMZ identity compact app/favicon proposal. Input1 is style/identity reference ONLY; its wide one-line arrangement must change. Create a genuinely SQUARE two-row letter monogram: exact \"HM\" on top, large \"Z\" below, reading HMZ. Retain the existing angular connected HM geometry and diagonal Z, dark navy with a fine silver edge. It is a compact alternative of the same HMZ identity, no new emblem. Bold dominant DARK NAVY ink for WHITE surface, at least85% ink dark; no large pale fills. The combined two-row monogram must occupy85-90% of square width AND75-85% of square height with balanced small transparent margins. Draw natural new letter geometry, never stretch source pixels. Robust simple strokes/counters clear at32px; no tiny words, no CARS DEALERS suffix, no background, badge, shadow, glow or gradient. Actual transparent alpha, clean edges. Exact letters H-M-Z, arranged HM over Z.",
+      "references": [
+        {
+          "path": "branding/generated-mark.png",
+          "sha256": "a13a65787eb217f29bda4b3f1c24d84f591a28155b06ebe4690c46d3c76001d5"
+        }
+      ],
+      "createdAt": "2026-10-20T20:06:58.664Z",
+      "derivation": "Actual built-in imagegen result copied byte-for-byte. Native compact geometry newly drawn; no stretch, filters, recolouring or alpha cleanup."
+    },
+    {
+      "roles": [
+        "markOnDark"
+      ],
+      "path": "branding/generated-compact-on-dark-v2-20261020-255ec57843ee5fb1.png",
+      "sha256": "255ec57843ee5fb16c1721ee1135c8fd7dafba8d28aaaac10bcb6da03fc4dc28",
+      "nativeDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-f67dbe1a-2e5f-46bb-a772-13fb72adb558",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand. Input image1 is EDIT TARGET, exact HM-over-Z compact logo geometry. Change ONLY ink treatment to a clean high-contrast inverse for dark and red backgrounds. Preserve the exact stacked \"HM\" above \"Z\" lettering, outline shapes, angled motifs, arrangement, proportions, counters, size and transparent canvas. Text reads HMZ. Fill ALL dominant letter bodies with solid light cool silver/ivory (#e3e7ee feel), not pure harsh white, with only a very thin navy detail if necessary; at least90% visible ink very light. Do not leave navy interiors. Actual transparent alpha background and clean transparent counters. No translucent haze, alpha speckle texture, gradients, shadow, glow, background tile or extra elements. Keep same naturally compact geometry; never stretch. Clear at32px on #111113,#101820,#09090b,#17191c and #c40101.",
+      "references": [
+        {
+          "path": "branding/generated-compact-on-light-v2-20261020-73a0e1128d1a28d6.png",
+          "sha256": "73a0e1128d1a28d6dac4a7dfeda8647ced76e4e0d4b76da1e0bdc6e81e29da99"
+        }
+      ],
+      "createdAt": "2026-10-20T20:06:58.664Z",
+      "derivation": "Actual built-in imagegen result copied byte-for-byte. Native compact geometry newly drawn; no stretch, filters, recolouring or alpha cleanup."
+    },
+    {
+      "roles": [
+        "onDark",
+        "onAccent"
+      ],
+      "path": "branding/generated-on-dark-v2-20261020-389d5d37db9d5052.png",
+      "sha256": "389d5d37db9d50526680f3a6bea00497de6058345b4022e30262db4d1f96f10e",
+      "nativeDimensions": {
+        "width": 2172,
+        "height": 724
+      },
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-0c674d9b-b126-4f90-bf83-9f196f7df044",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand. Input image1 is existing HMZ Cars Dealers wordmark EDIT TARGET. Create an actual transparent high-contrast inverse of the EXACT same wide identity layout: angular connected \"HMZ\" emblem LEFT, thin vertical separator, \"HMZ CARS\" above \"DEALERS\" RIGHT. Exact text verbatim: \"HMZ CARS\" and \"DEALERS\". Preserve original letter shapes, motifs, spacing, natural proportions, geometry and composition; this is only a real light-ink surface variant. Dominant ALL lettering/emblem/separator ink solid very-light cool silver/ivory (#e3e7ee feel), over95% ink light, no dark fills. Actual alpha transparent background and counters. No white spray speckles, shadow, gradient, haze, glow, badge or background tile. Crisp robust strokes and clear text at120px and180px on #111113,#101820,#09090b,#17191c and #c40101.",
+      "references": [
+        {
+          "path": "branding/generated-master.png",
+          "sha256": "ac0c99d7f245da49ae22cbeb065c1b2cad85925b57dba85d83cc1fffcf32c075"
+        }
+      ],
+      "createdAt": "2026-10-20T20:06:58.664Z",
+      "derivation": "Actual built-in imagegen result copied byte-for-byte. Native compact geometry newly drawn; no stretch, filters, recolouring or alpha cleanup."
+    }
+  ],
+  "sourceHistory": [
+    {
+      "reference": "branding/source-before-compact-repair-20261020-42d0ea93cff2001b.json",
+      "sha256": "42d0ea93cff2001bd216d3c4c9d377707a306b468c8bbcc3044b5b2887c513b8",
+      "retainedAt": "2026-10-20T20:06:58.664Z",
+      "reason": "Exact source provenance before owned compact geometry and contrast repair"
+    }
+  ]
 }

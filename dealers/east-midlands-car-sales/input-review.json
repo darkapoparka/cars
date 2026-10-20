@@ -3,7 +3,7 @@
   "kind": "cars-dealer-pack-input-review",
   "dealer": "east-midlands-car-sales",
   "reviewed": true,
-  "reviewedAt": "2026-10-20T19:12:52.698Z",
+  "reviewedAt": "2026-10-20T19:58:30.078Z",
   "review": {
     "kind": "automated",
     "humanReview": false,
@@ -58,6 +58,10 @@
       "sha256": "ce4c99cb012011cccf5556742ad27bec44f2c30507c8e5c94756af536269c404"
     },
     {
+      "path": "branding/generated-on-dark-v2-20261020.png",
+      "sha256": "8ce27b2079784b5359c1385b6bd0ec7a91e3c0e9bbdd4a1192e7183a92ea558e"
+    },
+    {
       "path": "branding/generated-on-dark.png",
       "sha256": "7727f885662a5023d636c8ac977b075a7e566017f0cb35357acf6526982430c6"
     },
@@ -67,19 +71,27 @@
     },
     {
       "path": "branding/logo-contract.json",
-      "sha256": "88601fc0134a605b2283b96c431306bd1381ee438fc66043e92c80bc8be83590"
+      "sha256": "effa137e7991305fdd50eb17d48479279618712094424ee40c8b74e2a8b2f19d"
     },
     {
       "path": "branding/logo-recipe.json",
-      "sha256": "318352d85fba554e91401bb47d36b1a99246bbb05f3c7d1992307f6305ada4fc"
+      "sha256": "61eeb02362786663865e3f26f32c24bcfe26f5fc69296ad764e081ccb6c65987"
     },
     {
       "path": "branding/original-logo.png",
       "sha256": "4481b119cad38767aa96f96ac3f87233ad86a457f45f9e89d9ca160fc6f9c169"
     },
     {
-      "path": "branding/source.json",
+      "path": "branding/source-before-wordmark-repair-20261020-b4f16fb393f9cba3.json",
       "sha256": "b4f16fb393f9cba33d4ab4750994d9530238e601276a8ab3d995c1d71e10c976"
+    },
+    {
+      "path": "branding/source.json",
+      "sha256": "46570e9c48cd0d14b1c0b8a87993ea827c21b463d92b3a4f48ed5fe705e73338"
+    },
+    {
+      "path": "branding/wordmark-repair-20261020.json",
+      "sha256": "1b5562943e6fe260d49c7ee7ac45bf100d1a51a14f0ebfbbbd9e7ebd7463e455"
     },
     {
       "path": "business-facts.json",
@@ -87,7 +99,7 @@
     },
     {
       "path": "copy-review.json",
-      "sha256": "3a4d7c920c7729ce987de12f100e459aee8155d881f516db87a2fd7603c295db"
+      "sha256": "369d5ab36239b2ed27e9fe5a0b1dd8ee3e48ce3d338ee25d6917de1985ef6e92"
     },
     {
       "path": "dealer-stock/listing-1.jpg",
@@ -107,7 +119,7 @@
     },
     {
       "path": "identity-review.json",
-      "sha256": "cb991a7e20172ba33c0c910bc6daeca383f33254381d0f12c16ef9bf4f42d2e5"
+      "sha256": "fc79507ded878f6e753db879ef7ba537e96cbc0c8cfd0a5f8dcd3198adaf6464"
     },
     {
       "path": "locale.json",
@@ -123,7 +135,7 @@
     },
     {
       "path": "qualification.json",
-      "sha256": "c3144d3d720c529168052d0007df35945b9514d8b923b5dae4c585d64b1a54d2"
+      "sha256": "b1f8bd040c0ae2c639fd5ca2e5d54725ff16eae78c126dbe18034b5d36d21c46"
     },
     {
       "path": "research-review.json",

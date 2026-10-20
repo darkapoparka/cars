@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-targeted-wordmark-contrast-repair",
+  "dealer": "saad-motors",
+  "createdAt": "2026-10-20T19:59:17.754Z",
+  "previousPackDigest": "78546f8c0886b8208d3ffb54aed8f9888cc11742a14243a808fd686d397c0245",
+  "previousSource": {
+    "path": "branding/source-before-wordmark-repair-20261020-3bbf71c55b57c0dc.json",
+    "sha256": "3bbf71c55b57c0dc32d7de9d0fa801f8e4ede197dac6eac2aea38f52bcbdb9ca"
+  },
+  "previousWordmarkInputs": {
+    "onDark": {
+      "path": "branding/generated-on-dark.png",
+      "sha256": "7400830b3fa5df963fe17ad05d258c5156dcf0f789289904561b695d12c7e232",
+      "nativeDimensions": {
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-d668e855-ee79-4e34-9d87-aa36e46ed870",
+        "modelVersion": null
+      }
+    },
+    "onAccent": {
+      "path": "branding/generated-on-dark.png",
+      "sha256": "7400830b3fa5df963fe17ad05d258c5156dcf0f789289904561b695d12c7e232",
+      "nativeDimensions": {
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-d668e855-ee79-4e34-9d87-aa36e46ed870",
+        "modelVersion": null
+      }
+    }
+  },
+  "replacement": {
+    "roles": [
+      "onDark",
+      "onAccent"
+    ],
+    "reference": "branding/generated-on-dark.png",
+    "path": "branding/generated-on-dark-v2-20261020.png",
+    "sha256": "933c741ea3fd5f84e2df34c7a58af61dbe8d7b5850f14a3331006e2d95193ce5",
+    "nativeDimensions": {
+      "width": 2172,
+      "height": 724
+    },
+    "tool": "image_gen.imagegen",
+    "generationId": "exec-1b29a20e-ac7b-4a08-ba2e-c08fd64afcde",
+    "modelVersion": null,
+    "prompt": "Use case: logo-brand. Exact surface-color edit of supplied SAAD MOTORS LTD lockup. Preserve the interlocked SM emblem at left, exact SAAD MOTORS lettering at upper right and LTD centered below, typography, proportions, spacing, letter shapes and open counters. Replace all existing light fills and heavy black outlines with one uniform solid pale silver-grey #c8d0d8; no dark borders or white contours. No pure-white pixels. It must read on charcoal and deep red surfaces. Flat opaque smooth shapes on a genuinely transparent background; no background tile, gradient, texture, speckles, noise, shadow, glow or extra objects. Exact text SAAD MOTORS and LTD; do not omit or duplicate any letter. Keep the entire original lockup in frame with generous transparent padding. Independent proposal, not dealer approved.",
+    "createdAt": "2026-10-20T19:59:17.754Z",
+    "derivation": "Actual built-in imagegen surface edit; raw returned PNG copied byte-identical without recolouring, filters or alpha cleanup."
+  },
+  "visualReview": {
+    "wordmarkWidths": [
+      120,
+      180
+    ],
+    "backgrounds": [
+      "#111113",
+      "#101820",
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ],
+    "identityAndSpelling": "agent-visual-review",
+    "dealerApproval": false,
+    "nativeApproval": false,
+    "hostedApproval": false
+  },
+  "originalMasterLightCompactFactsStockPhotosPreserved": true,
+  "toolPackage": "L:/CODEX/cars/templates/karento-best/package.json",
+  "filtersApplied": false,
+  "thresholdsChanged": false,
+  "providerWrites": 0
+}

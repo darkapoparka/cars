@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "dealer": "sour-motors-hyde",
   "reviewed": true,
-  "reviewedAt": "2026-10-19T19:22:56.608725Z",
+  "reviewedAt": "2026-10-20T20:02:44.010Z",
   "status": "independent-proposal-not-dealer-approved",
   "creationMethod": "imagegen-proposal",
   "assets": {
@@ -15,14 +15,14 @@
     "onDark": {
       "sourcePath": "branding/logo-on-dark.png",
       "publicPath": "/dealer-brand/logo-on-dark.webp",
-      "sha256": "e8c1f1b6a308d3486d0dbf361e864cc09e4ee0d67a745275be2188d606ced266",
-      "sourceSha256": "9d1848824dd0d36dee92c589aedeea276214b4ff1a2232fd5943fd89fdbdb721"
+      "sha256": "239593c2f9d4dccc6109e696f640d4b7f578e04e80607b58b0e10a9cc5058f25",
+      "sourceSha256": "1a60618093ce4cff9f350643bbca248e2b6a5de53014d2ce78688c189771c4b4"
     },
     "onAccent": {
       "sourcePath": "branding/logo-on-accent.png",
       "publicPath": "/dealer-brand/logo-on-accent.webp",
-      "sha256": "e8c1f1b6a308d3486d0dbf361e864cc09e4ee0d67a745275be2188d606ced266",
-      "sourceSha256": "9d1848824dd0d36dee92c589aedeea276214b4ff1a2232fd5943fd89fdbdb721"
+      "sha256": "239593c2f9d4dccc6109e696f640d4b7f578e04e80607b58b0e10a9cc5058f25",
+      "sourceSha256": "1a60618093ce4cff9f350643bbca248e2b6a5de53014d2ce78688c189771c4b4"
     }
   },
   "surfaceBackgrounds": {
@@ -74,23 +74,25 @@
     },
     "onDark": {
       "path": "branding/logo-on-dark.png",
-      "sha256": "9d1848824dd0d36dee92c589aedeea276214b4ff1a2232fd5943fd89fdbdb721",
+      "sha256": "1a60618093ce4cff9f350643bbca248e2b6a5de53014d2ce78688c189771c4b4",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-5572ff8e-55f9-4b38-af05-521082e2f88d",
+        "generationId": "exec-28a96e14-d260-4ebf-95d1-52827be39d7a",
+        "referenceKind": "actual-tool-output-filename",
         "modelVersion": null
       },
-      "sourceReference": "dealers/sour-motors-hyde/branding/generated-on-dark.png"
+      "sourceReference": "dealers/sour-motors-hyde/branding/contrast-on-dark-v2.png"
     },
     "onAccent": {
       "path": "branding/logo-on-accent.png",
-      "sha256": "9d1848824dd0d36dee92c589aedeea276214b4ff1a2232fd5943fd89fdbdb721",
+      "sha256": "1a60618093ce4cff9f350643bbca248e2b6a5de53014d2ce78688c189771c4b4",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-5572ff8e-55f9-4b38-af05-521082e2f88d",
+        "generationId": "exec-28a96e14-d260-4ebf-95d1-52827be39d7a",
+        "referenceKind": "actual-tool-output-filename",
         "modelVersion": null
       },
-      "sourceReference": "dealers/sour-motors-hyde/branding/generated-on-dark.png"
+      "sourceReference": "dealers/sour-motors-hyde/branding/contrast-on-dark-v2.png"
     }
   },
   "transforms": {
@@ -109,28 +111,28 @@
     },
     "onDark": {
       "operation": "crop-transparent-padding-and-resize",
-      "sourceSha256": "c46f861f4c296d994a6b72baea7ea18825af21e121d7d280f5ccef5444fb1183",
-      "sha256": "9d1848824dd0d36dee92c589aedeea276214b4ff1a2232fd5943fd89fdbdb721",
+      "sourceSha256": "23b4967a930e8b566569ffd170c0c8886b9f4a59f09375482ddd5d27ffe00b60",
+      "sha256": "1a60618093ce4cff9f350643bbca248e2b6a5de53014d2ce78688c189771c4b4",
       "crop": {
-        "left": 0,
-        "top": 131,
-        "width": 2172,
-        "height": 446
+        "left": 1,
+        "top": 152,
+        "width": 2171,
+        "height": 403
       },
-      "sourcePath": "branding/generated-on-dark.png",
+      "sourcePath": "branding/contrast-on-dark-v2.png",
       "outputPath": "branding/logo-on-dark.png"
     },
     "onAccent": {
       "operation": "crop-transparent-padding-and-resize",
-      "sourceSha256": "c46f861f4c296d994a6b72baea7ea18825af21e121d7d280f5ccef5444fb1183",
-      "sha256": "9d1848824dd0d36dee92c589aedeea276214b4ff1a2232fd5943fd89fdbdb721",
+      "sourceSha256": "23b4967a930e8b566569ffd170c0c8886b9f4a59f09375482ddd5d27ffe00b60",
+      "sha256": "1a60618093ce4cff9f350643bbca248e2b6a5de53014d2ce78688c189771c4b4",
       "crop": {
-        "left": 0,
-        "top": 131,
-        "width": 2172,
-        "height": 446
+        "left": 1,
+        "top": 152,
+        "width": 2171,
+        "height": 403
       },
-      "sourcePath": "branding/generated-on-dark.png",
+      "sourcePath": "branding/contrast-on-dark-v2.png",
       "outputPath": "branding/logo-on-accent.png"
     }
   },
@@ -180,7 +182,7 @@
   "originalArtworkPreserved": true,
   "visualReview": {
     "reviewed": true,
-    "reviewedAt": "2026-10-19T19:22:56.608725Z",
+    "reviewedAt": "2026-10-20T20:02:44.010Z",
     "source": "branding/source.json",
     "spelling": "agent-visual-review",
     "dealerApproval": false

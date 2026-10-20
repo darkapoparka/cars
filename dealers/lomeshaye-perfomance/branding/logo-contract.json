@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "dealer": "lomeshaye-perfomance",
   "reviewed": true,
-  "reviewedAt": "2026-10-19T19:22:56.608725Z",
+  "reviewedAt": "2026-10-20T19:58:53.726Z",
   "status": "independent-proposal-not-dealer-approved",
   "creationMethod": "imagegen-proposal",
   "assets": {
@@ -15,14 +15,14 @@
     "onDark": {
       "sourcePath": "branding/logo-on-dark.png",
       "publicPath": "/dealer-brand/logo-on-dark.webp",
-      "sha256": "3203a8742e13b2ba1b88dea17fa013b7c68d2ec5cfef6bf5b9019a8d165f17fd",
-      "sourceSha256": "aa227eddb9bc3dc8a8f4ef1702b38a893418f00829dc583d6d99fa5d708a7692"
+      "sha256": "384bc180aecccc9fb166e65241980564d72c84068a3aab1d7fe761bbdbab1983",
+      "sourceSha256": "1aff5d7f677d000054700c4ba6b13352203ef966d04d4afb15470a379bccfaba"
     },
     "onAccent": {
       "sourcePath": "branding/logo-on-accent.png",
       "publicPath": "/dealer-brand/logo-on-accent.webp",
-      "sha256": "3203a8742e13b2ba1b88dea17fa013b7c68d2ec5cfef6bf5b9019a8d165f17fd",
-      "sourceSha256": "aa227eddb9bc3dc8a8f4ef1702b38a893418f00829dc583d6d99fa5d708a7692"
+      "sha256": "384bc180aecccc9fb166e65241980564d72c84068a3aab1d7fe761bbdbab1983",
+      "sourceSha256": "1aff5d7f677d000054700c4ba6b13352203ef966d04d4afb15470a379bccfaba"
     }
   },
   "surfaceBackgrounds": {
@@ -74,23 +74,23 @@
     },
     "onDark": {
       "path": "branding/logo-on-dark.png",
-      "sha256": "aa227eddb9bc3dc8a8f4ef1702b38a893418f00829dc583d6d99fa5d708a7692",
+      "sha256": "1aff5d7f677d000054700c4ba6b13352203ef966d04d4afb15470a379bccfaba",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-c89a3919-9bff-4fcf-aa76-f026f85171a6",
+        "generationId": "exec-2f37b488-e9e7-43e1-954b-4e0f233e479d",
         "modelVersion": null
       },
-      "sourceReference": "dealers/lomeshaye-perfomance/branding/generated-on-dark.png"
+      "sourceReference": "dealers/lomeshaye-perfomance/branding/generated-on-dark-v2-20261020.png"
     },
     "onAccent": {
       "path": "branding/logo-on-accent.png",
-      "sha256": "aa227eddb9bc3dc8a8f4ef1702b38a893418f00829dc583d6d99fa5d708a7692",
+      "sha256": "1aff5d7f677d000054700c4ba6b13352203ef966d04d4afb15470a379bccfaba",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-c89a3919-9bff-4fcf-aa76-f026f85171a6",
+        "generationId": "exec-2f37b488-e9e7-43e1-954b-4e0f233e479d",
         "modelVersion": null
       },
-      "sourceReference": "dealers/lomeshaye-perfomance/branding/generated-on-dark.png"
+      "sourceReference": "dealers/lomeshaye-perfomance/branding/generated-on-dark-v2-20261020.png"
     }
   },
   "transforms": {
@@ -109,28 +109,28 @@
     },
     "onDark": {
       "operation": "crop-transparent-padding-and-resize",
-      "sourceSha256": "c06f4b7d33fd89417eed470bfcbca5c074ccee93dc3ad47c9d2bc756a0bd4e1c",
-      "sha256": "aa227eddb9bc3dc8a8f4ef1702b38a893418f00829dc583d6d99fa5d708a7692",
+      "sourceSha256": "18680e52ae5793d86fe830567fcf2d498414837b44bba1b9a71166da4790c25e",
+      "sha256": "1aff5d7f677d000054700c4ba6b13352203ef966d04d4afb15470a379bccfaba",
       "crop": {
-        "left": 21,
-        "top": 115,
-        "width": 1932,
-        "height": 546
+        "left": 27,
+        "top": 117,
+        "width": 1926,
+        "height": 534
       },
-      "sourcePath": "branding/generated-on-dark.png",
+      "sourcePath": "branding/generated-on-dark-v2-20261020.png",
       "outputPath": "branding/logo-on-dark.png"
     },
     "onAccent": {
       "operation": "crop-transparent-padding-and-resize",
-      "sourceSha256": "c06f4b7d33fd89417eed470bfcbca5c074ccee93dc3ad47c9d2bc756a0bd4e1c",
-      "sha256": "aa227eddb9bc3dc8a8f4ef1702b38a893418f00829dc583d6d99fa5d708a7692",
+      "sourceSha256": "18680e52ae5793d86fe830567fcf2d498414837b44bba1b9a71166da4790c25e",
+      "sha256": "1aff5d7f677d000054700c4ba6b13352203ef966d04d4afb15470a379bccfaba",
       "crop": {
-        "left": 21,
-        "top": 115,
-        "width": 1932,
-        "height": 546
+        "left": 27,
+        "top": 117,
+        "width": 1926,
+        "height": 534
       },
-      "sourcePath": "branding/generated-on-dark.png",
+      "sourcePath": "branding/generated-on-dark-v2-20261020.png",
       "outputPath": "branding/logo-on-accent.png"
     }
   },
@@ -180,7 +180,7 @@
   "originalArtworkPreserved": true,
   "visualReview": {
     "reviewed": true,
-    "reviewedAt": "2026-10-19T19:22:56.608725Z",
+    "reviewedAt": "2026-10-20T19:58:53.726Z",
     "source": "branding/source.json",
     "spelling": "agent-visual-review",
     "dealerApproval": false

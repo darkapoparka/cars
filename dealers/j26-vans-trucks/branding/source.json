@@ -40,7 +40,7 @@
   "observedAt": "2026-10-19",
   "researchConclusion": "No usable original logo was obtained from bounded exact-business/locality searches and the matched public seller and directory sources. The dealer catalogue supplies a text identity and vehicle photographs; an unavailable or absent logo image does not prove that no original branding exists. This is an independent proposed identity, not an official dealer logo.",
   "generatedInputs": {
-    "reviewedAt": "2026-10-19T19:22:56.608725Z",
+    "reviewedAt": "2026-10-20T20:11:52.341Z",
     "master": {
       "path": "branding/generated-master.png",
       "sha256": "02acd8e752b271a9bebeb64440cd60ebf8da04f8629250b692af57c30abfd6af",
@@ -55,28 +55,28 @@
       }
     },
     "mark": {
-      "path": "branding/generated-mark.png",
-      "sha256": "12972970d22b356787b1c9a5ae231465bae1e2cd19410855cf4e337579c4312f",
+      "path": "branding/generated-compact-on-light-v2-20261020-07e8cba0241e9a30.png",
+      "sha256": "07e8cba0241e9a303e426b8e365fbbfa8c81a2f0064fb1895752db4abb783a84",
       "nativeDimensions": {
         "width": 1254,
         "height": 1254
       },
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-bb035834-239a-4a06-a629-43b1dcb4ba17",
+        "generationId": "exec-125b28d0-0864-411d-a5c2-51497b990c34",
         "modelVersion": null
       }
     },
     "markOnDark": {
-      "path": "branding/generated-mark.png",
-      "sha256": "12972970d22b356787b1c9a5ae231465bae1e2cd19410855cf4e337579c4312f",
+      "path": "branding/generated-compact-on-dark-v2-20261020-1023b0639f0c8591.png",
+      "sha256": "1023b0639f0c859155a3773d248a183dc23f4672b267bfedc76acd6eef3b166c",
       "nativeDimensions": {
         "width": 1254,
         "height": 1254
       },
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-bb035834-239a-4a06-a629-43b1dcb4ba17",
+        "generationId": "exec-6aae2fdd-b95f-465d-96c0-11ebc97cac2e",
         "modelVersion": null
       }
     },
@@ -123,28 +123,28 @@
     },
     "marks": {
       "onLight": {
-        "path": "branding/generated-mark.png",
-        "sha256": "12972970d22b356787b1c9a5ae231465bae1e2cd19410855cf4e337579c4312f",
+        "path": "branding/generated-compact-on-light-v2-20261020-07e8cba0241e9a30.png",
+        "sha256": "07e8cba0241e9a303e426b8e365fbbfa8c81a2f0064fb1895752db4abb783a84",
         "nativeDimensions": {
           "width": 1254,
           "height": 1254
         },
         "generation": {
           "tool": "image_gen.imagegen",
-          "generationId": "exec-bb035834-239a-4a06-a629-43b1dcb4ba17",
+          "generationId": "exec-125b28d0-0864-411d-a5c2-51497b990c34",
           "modelVersion": null
         }
       },
       "onDark": {
-        "path": "branding/generated-mark.png",
-        "sha256": "12972970d22b356787b1c9a5ae231465bae1e2cd19410855cf4e337579c4312f",
+        "path": "branding/generated-compact-on-dark-v2-20261020-1023b0639f0c8591.png",
+        "sha256": "1023b0639f0c859155a3773d248a183dc23f4672b267bfedc76acd6eef3b166c",
         "nativeDimensions": {
           "width": 1254,
           "height": 1254
         },
         "generation": {
           "tool": "image_gen.imagegen",
-          "generationId": "exec-bb035834-239a-4a06-a629-43b1dcb4ba17",
+          "generationId": "exec-6aae2fdd-b95f-465d-96c0-11ebc97cac2e",
           "modelVersion": null
         }
       }
@@ -169,11 +169,11 @@
         120,
         180
       ],
-      "reviewedAt": "2026-10-19T19:22:56.608725Z",
-      "notes": "Visually reviewed the actual deterministic transparent-padding exports at120px and180px on all six retained template surface colours. Exact name spelling, silhouette, alpha edges, spacing and clipping were checked. Light-ink variants are actual imagegen results, not deterministic recolours. Small secondary suffix text is subordinate to the principal name; compact identity is provided separately."
+      "reviewedAt": "2026-10-20T20:11:52.341Z",
+      "notes": "Agent viewed matched maintained exports at120/180px and32/64px on actual six template surfaces. Original/on-light wordmarks remain exact. Generated inverse and native compact variants are independent preview proposals; no dealer/native/hosted approval."
     },
     "compactMarkStatus": "independent-preview-not-dealer-approved",
-    "compactMarkDescription": "J26 monogram",
+    "compactMarkDescription": "Native stacked hooked-J-over-26 compact monogram",
     "compactMarkReview": {
       "reviewed": true,
       "widths": [
@@ -188,8 +188,110 @@
         "#17191c",
         "#c40101"
       ],
-      "reviewedAt": "2026-10-19T19:22:56.608725Z",
-      "notes": "Visually inspected the actual compact exports at32px and64px on all six template backgrounds. Existing-emblem pixel crops have explicit parent hashes and exact rectangle provenance; independently generated compact marks retain their own actual generation IDs. Shape, spacing, clipping and transparent counters were checked. Dealer approval remains unknown."
+      "reviewedAt": "2026-10-20T20:11:52.341Z",
+      "notes": "New native compact geometry and exact spelling visually reviewed at32/64px; padding/contrast thresholds unchanged; real imagegen light/dark variants, no stretched or filtered artwork."
     }
-  }
+  },
+  "additionalGenerations": [
+    {
+      "roles": [
+        "mark"
+      ],
+      "path": "branding/generated-compact-on-light-v2-20261020-07e8cba0241e9a30.png",
+      "sha256": "07e8cba0241e9a303e426b8e365fbbfa8c81a2f0064fb1895752db4abb783a84",
+      "nativeDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-125b28d0-0864-411d-a5c2-51497b990c34",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand. Input image1 is EDIT TARGET: J26 square compact monogram. Make ONE targeted typography correction only: the isolated TOP glyph must read unmistakably as CAPITAL LETTER J, never digit7. Preserve bottom \"26\" exactly, forward slant, two-row compact geometry, charcoal/silver styling and overall placement. Give top J a visibly rounded curved bottom-left hook/crook, a substantial right vertical/downward stem and a short top cap; the hooked curved J bottom must be clear at32px. Remove the diagonal7-like impression. Exact reading is LETTER J above digits26, \"J26\". Draw natural new J shape, no stretching. Retain strong near-black dominant fill with fine silver edge for white surfaces, balanced transparent margins and true alpha background. No gradients, shadows, glow, haze, alpha speckles, added letters, badge or background.",
+      "references": [
+        {
+          "path": "branding/generated-reference-compact-j26-light-v3-47ad2c756cecebe3.png",
+          "sha256": "47ad2c756cecebe31b6f409e611786913cf2b94a096917a7ace8bd376f53c63b"
+        }
+      ],
+      "createdAt": "2026-10-20T20:11:06.216Z",
+      "derivation": "Actual built-in imagegen result copied byte-for-byte. Native compact geometry newly drawn; no stretch, filters, recolouring or alpha cleanup."
+    },
+    {
+      "roles": [
+        "markOnDark"
+      ],
+      "path": "branding/generated-compact-on-dark-v2-20261020-1023b0639f0c8591.png",
+      "sha256": "1023b0639f0c859155a3773d248a183dc23f4672b267bfedc76acd6eef3b166c",
+      "nativeDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-6aae2fdd-b95f-465d-96c0-11ebc97cac2e",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand. Input image1 is EDIT TARGET: light-ink J26 square compact monogram. ONE targeted correction: isolated TOP glyph must be unmistakably CAPITAL LETTER J rather than digit7. Preserve bottom \"26\" exactly, forward slant, stacked composition, scale, geometry and transparent canvas. Draw a visibly rounded curved bottom-left hook/crook on J, substantial right vertical/downward stem and short top cap, so J is instantly legible at32px. No diagonal7-like glyph. Exact text reading LETTER J above digits26: \"J26\". Natural drawn J, no stretching. Keep clean solid near-white/ivory-silver dominant ink (#e3e6ec feel), over90% visible ink light for #111113,#101820,#09090b,#17191c,#c40101. Actual transparent alpha with clean counters. No shadows, gradients, glow, haze, added letters, badge/backplate or alpha speckles.",
+      "references": [
+        {
+          "path": "branding/generated-reference-compact-j26-dark-v3-767de81baa7b77af.png",
+          "sha256": "767de81baa7b77af0df02cdd484e12e803234b3d0667c258f871f80885d2a796"
+        }
+      ],
+      "createdAt": "2026-10-20T20:11:06.216Z",
+      "derivation": "Actual built-in imagegen result copied byte-for-byte. Native compact geometry newly drawn; no stretch, filters, recolouring or alpha cleanup."
+    },
+    {
+      "roles": [
+        "generation-reference-only"
+      ],
+      "path": "branding/generated-reference-compact-j26-light-v3-47ad2c756cecebe3.png",
+      "sha256": "47ad2c756cecebe31b6f409e611786913cf2b94a096917a7ace8bd376f53c63b",
+      "nativeDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-c3878053-e417-4443-9d40-52cf5f10dce5",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand. Asset type: independent J26 identity compact app/favicon proposal. Input1 is style/identity reference ONLY; replace its unsuitable ultra-wide arrangement with a native SQUARE two-row compact lockup: bold italic \"J\" centered above \"26\", reading J26. Preserve recognizable forward-slanted J, rounded2 and6 letter/counter motifs. Exact text \"J26\" only, in natural two-row geometry, no stretched pixels. Dominant charcoal/near-black ink with only fine restrained silver edge for WHITE surface; at least85% ink dark. Combined J-over-26 composition fills85-90% square width AND75-85% square height with balanced5-8% transparent margins. Strong chunky simplified strokes readable at32px; no suffix, no tiny text, no badge/backplate, shadow, glow, gradient or alpha speckles. Actual transparent alpha background. Preserve dealer identity while making a useful compact alternative.",
+      "references": [
+        {
+          "path": "branding/generated-mark.png",
+          "sha256": "12972970d22b356787b1c9a5ae231465bae1e2cd19410855cf4e337579c4312f"
+        }
+      ],
+      "createdAt": "2026-10-20T20:11:06.216Z",
+      "derivation": "Actual built-in imagegen result copied byte-for-byte. Native compact geometry newly drawn; no stretch, filters, recolouring or alpha cleanup."
+    },
+    {
+      "roles": [
+        "generation-reference-only"
+      ],
+      "path": "branding/generated-reference-compact-j26-dark-v3-767de81baa7b77af.png",
+      "sha256": "767de81baa7b77af0df02cdd484e12e803234b3d0667c258f871f80885d2a796",
+      "nativeDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-15dc037b-65f5-45e9-84da-34721329096c",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand. Input image1 is EDIT TARGET: exact J-over-26 square compact monogram. Change ONLY ink to solid light ivory/silver (#e3e6ec feel) for dark and red surfaces, keeping exact lettering \"J26\", forward slant, J-above-26 layout, all stroke contours/counters, aspect ratio, placement and transparent canvas. At least90% visible ink very light; no dark letter fills, only a very fine dark edge if necessary. Actual transparent alpha, clean transparent counters. No pure-white spray texture, alpha speckles, gradient, shadow, glow, badge or backplate. Natural compact geometry unchanged, readable at32px. Use on #111113,#101820,#09090b,#17191c and #c40101.",
+      "references": [
+        {
+          "path": "branding/generated-reference-compact-j26-light-v3-47ad2c756cecebe3.png",
+          "sha256": "47ad2c756cecebe31b6f409e611786913cf2b94a096917a7ace8bd376f53c63b"
+        }
+      ],
+      "createdAt": "2026-10-20T20:11:06.216Z",
+      "derivation": "Actual built-in imagegen result copied byte-for-byte. Native compact geometry newly drawn; no stretch, filters, recolouring or alpha cleanup."
+    }
+  ],
+  "sourceHistory": [
+    {
+      "reference": "branding/source-before-compact-repair-20261020-3a43b62f643caeaa.json",
+      "sha256": "3a43b62f643caeaa715050aa9b6a8a8d729bf01c4c3ed02780a247d4bf5e4275",
+      "retainedAt": "2026-10-20T20:11:06.216Z",
+      "reason": "Exact source provenance before owned compact geometry and contrast repair"
+    }
+  ]
 }

@@ -3,7 +3,7 @@
   "kind": "cars-dealer-pack-input-review",
   "dealer": "resi-auto-sales",
   "reviewed": true,
-  "reviewedAt": "2026-10-20T19:19:56.422Z",
+  "reviewedAt": "2026-10-20T20:05:25.130Z",
   "review": {
     "kind": "automated",
     "humanReview": false,
@@ -42,6 +42,14 @@
       "sha256": "22709523e1dba582f6f20689dee81f338c61105f81c5970140ad4971a303ea63"
     },
     {
+      "path": "branding/contrast-on-accent-v2.png",
+      "sha256": "84d2ee4481fcb486c3f0c46bea57da38913f7aceab96b47f85b3a47fc7291a8c"
+    },
+    {
+      "path": "branding/contrast-repair-20261020.json",
+      "sha256": "ab713782f3e20cb34d2d506d0097aad77b096199d893682df6bbe52b87ea7cd9"
+    },
+    {
       "path": "branding/generated-mark-on-dark.png",
       "sha256": "e2d1a5e4783aa8a8b01d792c87ca85c7fc7bbf4104009319524de61f12b54b9d"
     },
@@ -59,15 +67,15 @@
     },
     {
       "path": "branding/logo-contract.json",
-      "sha256": "c0712724f6626a3467277c7be873adac2ef7c642eb25c073d079b7757cd81631"
+      "sha256": "e7f5a8cad2f8f95c39e1e4404bada989c7bd4f3e8bbcb707bef7064608ca3880"
     },
     {
       "path": "branding/logo-recipe.json",
-      "sha256": "a1b5e50e42d8a021fa5ed79a3e2a037fa6660017b7e916bdfbf11700ebc28a34"
+      "sha256": "6ada3ea0531eb57a6b2ea718de13e70545508dc188ad72b2c56b90d13418f9d3"
     },
     {
       "path": "branding/source.json",
-      "sha256": "53198fdc1d8ad0f750bbd7c91589442f9e86c5731f5c60b18b22acaa6dd25df7"
+      "sha256": "0b73126736cd7cf0284abff73ed9c960333a492332418150468c9dfd56cfb61f"
     },
     {
       "path": "business-facts.json",
@@ -75,7 +83,7 @@
     },
     {
       "path": "copy-review.json",
-      "sha256": "1490cceb5c52e42145cd19d2d05dfba0c96cb4ae5b1d8079fc266d9a067f4b6b"
+      "sha256": "49565b98599ce9fb5c31d0e7880bd9f2fc0774b3feeafc4d0ca0f52f055ad6c9"
     },
     {
       "path": "dealer-stock/public-1.jpg",
@@ -95,7 +103,7 @@
     },
     {
       "path": "identity-review.json",
-      "sha256": "a35f4a8bb93c48cc5e2ed1865a0789eed06b27e13d172d849c7af00cefca1d02"
+      "sha256": "0b0386da334658fbaad8637a6e0dbfac166c3460a1367504834b4ba3c1d10fe0"
     },
     {
       "path": "locale.json",
@@ -107,7 +115,7 @@
     },
     {
       "path": "qualification.json",
-      "sha256": "eaec91971e31b8238bf4c260bfd54e890e982968c51af7728d3962d917fe322e"
+      "sha256": "02b9b793bd8c98c6d46c7fe64d64795e2fb82ab3b985d9477452ada0603f90d1"
     },
     {
       "path": "source-evidence.json",

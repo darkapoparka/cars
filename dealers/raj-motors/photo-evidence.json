@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "dealer": "raj-motors",
+  "photos": [
+    {
+      "id": "listing-1",
+      "listingUrl": "https://www.ebay.co.uk/itm/900011314689",
+      "catalogueUrl": "https://showroom.ebaymotorspro.co.uk/RMLCARS",
+      "imageUrl": "https://i.ebayimg.com/00/s/NzE2WDEyNTE=/z/2KUAAeSwSrxq0eXd/$_2.JPG",
+      "downloadUrl": "https://i.ebayimg.com/00/s/NzE2WDEyNTE=/z/2KUAAeSwSrxq0eXd/$_57.JPG",
+      "originalDimensions": [
+        1251,
+        716
+      ],
+      "retainedDimensions": [
+        1024,
+        586
+      ],
+      "retainedBytes": 77149,
+      "mediaPath": "dealer-stock/listing-1.jpg",
+      "retainedSha256": "510f4d246633219305bd11e3bd4b8823cb2dd7ed7ef20bdc925fabcb530cea24",
+      "operation": "Resize within1024px without enlargement and encode optimized JPEG; no change to photographed content.",
+      "originalSha256": "b16d381e0bbd2107568c431efbf9b28b45968e9dd116903cf9895b5774248b28",
+      "observedAt": "2026-10-19"
+    }
+  ],
+  "review": {
+    "reviewed": true,
+    "observedAt": "2026-10-19",
+    "method": "Viewed every selected photograph in contact sheets; checked actual vehicle content, placeholders, price cards and visible dealer identity.",
+    "maximumDimension": 1024,
+    "maximumBytes": 77149
+  }
+}

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "dealer": "saad-motors",
   "reviewed": true,
-  "reviewedAt": "2026-10-19T19:22:56.608725Z",
+  "reviewedAt": "2026-10-20T19:59:17.754Z",
   "status": "independent-proposal-not-dealer-approved",
   "creationMethod": "imagegen-proposal",
   "assets": {
@@ -15,14 +15,14 @@
     "onDark": {
       "sourcePath": "branding/logo-on-dark.png",
       "publicPath": "/dealer-brand/logo-on-dark.webp",
-      "sha256": "2bf39ef9a3ca9322cdaf3ab7797316b780916dd16962291a2e6d8ff69a87b1ed",
-      "sourceSha256": "cab78ef9a840257d23e3efa69f9431319d55f34aebf65e4083a5db7fb9b64b16"
+      "sha256": "882f16a082fa361757f30c96b675bad0a70b0b129cdf3dc71db58742fa46b870",
+      "sourceSha256": "b7b18b8d60b5d326b7b2ab0f20881387fee51abf837dd5f2c74c216930dd7071"
     },
     "onAccent": {
       "sourcePath": "branding/logo-on-accent.png",
       "publicPath": "/dealer-brand/logo-on-accent.webp",
-      "sha256": "2bf39ef9a3ca9322cdaf3ab7797316b780916dd16962291a2e6d8ff69a87b1ed",
-      "sourceSha256": "cab78ef9a840257d23e3efa69f9431319d55f34aebf65e4083a5db7fb9b64b16"
+      "sha256": "882f16a082fa361757f30c96b675bad0a70b0b129cdf3dc71db58742fa46b870",
+      "sourceSha256": "b7b18b8d60b5d326b7b2ab0f20881387fee51abf837dd5f2c74c216930dd7071"
     }
   },
   "surfaceBackgrounds": {
@@ -74,23 +74,23 @@
     },
     "onDark": {
       "path": "branding/logo-on-dark.png",
-      "sha256": "cab78ef9a840257d23e3efa69f9431319d55f34aebf65e4083a5db7fb9b64b16",
+      "sha256": "b7b18b8d60b5d326b7b2ab0f20881387fee51abf837dd5f2c74c216930dd7071",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-d668e855-ee79-4e34-9d87-aa36e46ed870",
+        "generationId": "exec-1b29a20e-ac7b-4a08-ba2e-c08fd64afcde",
         "modelVersion": null
       },
-      "sourceReference": "dealers/saad-motors/branding/generated-on-dark.png"
+      "sourceReference": "dealers/saad-motors/branding/generated-on-dark-v2-20261020.png"
     },
     "onAccent": {
       "path": "branding/logo-on-accent.png",
-      "sha256": "cab78ef9a840257d23e3efa69f9431319d55f34aebf65e4083a5db7fb9b64b16",
+      "sha256": "b7b18b8d60b5d326b7b2ab0f20881387fee51abf837dd5f2c74c216930dd7071",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-d668e855-ee79-4e34-9d87-aa36e46ed870",
+        "generationId": "exec-1b29a20e-ac7b-4a08-ba2e-c08fd64afcde",
         "modelVersion": null
       },
-      "sourceReference": "dealers/saad-motors/branding/generated-on-dark.png"
+      "sourceReference": "dealers/saad-motors/branding/generated-on-dark-v2-20261020.png"
     }
   },
   "transforms": {
@@ -109,28 +109,28 @@
     },
     "onDark": {
       "operation": "crop-transparent-padding-and-resize",
-      "sourceSha256": "7400830b3fa5df963fe17ad05d258c5156dcf0f789289904561b695d12c7e232",
-      "sha256": "cab78ef9a840257d23e3efa69f9431319d55f34aebf65e4083a5db7fb9b64b16",
+      "sourceSha256": "933c741ea3fd5f84e2df34c7a58af61dbe8d7b5850f14a3331006e2d95193ce5",
+      "sha256": "b7b18b8d60b5d326b7b2ab0f20881387fee51abf837dd5f2c74c216930dd7071",
       "crop": {
-        "left": 0,
-        "top": 100,
-        "width": 2166,
-        "height": 487
+        "left": 2,
+        "top": 105,
+        "width": 2150,
+        "height": 473
       },
-      "sourcePath": "branding/generated-on-dark.png",
+      "sourcePath": "branding/generated-on-dark-v2-20261020.png",
       "outputPath": "branding/logo-on-dark.png"
     },
     "onAccent": {
       "operation": "crop-transparent-padding-and-resize",
-      "sourceSha256": "7400830b3fa5df963fe17ad05d258c5156dcf0f789289904561b695d12c7e232",
-      "sha256": "cab78ef9a840257d23e3efa69f9431319d55f34aebf65e4083a5db7fb9b64b16",
+      "sourceSha256": "933c741ea3fd5f84e2df34c7a58af61dbe8d7b5850f14a3331006e2d95193ce5",
+      "sha256": "b7b18b8d60b5d326b7b2ab0f20881387fee51abf837dd5f2c74c216930dd7071",
       "crop": {
-        "left": 0,
-        "top": 100,
-        "width": 2166,
-        "height": 487
+        "left": 2,
+        "top": 105,
+        "width": 2150,
+        "height": 473
       },
-      "sourcePath": "branding/generated-on-dark.png",
+      "sourcePath": "branding/generated-on-dark-v2-20261020.png",
       "outputPath": "branding/logo-on-accent.png"
     }
   },
@@ -180,7 +180,7 @@
   "originalArtworkPreserved": true,
   "visualReview": {
     "reviewed": true,
-    "reviewedAt": "2026-10-19T19:22:56.608725Z",
+    "reviewedAt": "2026-10-20T19:59:17.754Z",
     "source": "branding/source.json",
     "spelling": "agent-visual-review",
     "dealerApproval": false

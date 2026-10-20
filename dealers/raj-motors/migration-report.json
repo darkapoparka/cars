@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "raj-motors",
+  "previousSlug": "raj-motors",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:47:21.385Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-leicester-raj-motors",
+    "position": 62
+  },
+  "before": {
+    "files": 38,
+    "bytes": 2524437
+  },
+  "afterBeforeReview": {
+    "files": 22,
+    "bytes": 1264921
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 34894,
+      "sha256": "a16a00b54134bf4bf8d3d3370c2f1d6037c4861369acbfca15db93b42ce84be4"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 82265,
+      "sha256": "391979af1f239643368e4b68db24d8e53c15e5a49b1a306302639c1c297d4820"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 34894,
+      "sha256": "a16a00b54134bf4bf8d3d3370c2f1d6037c4861369acbfca15db93b42ce84be4"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 69030,
+      "sha256": "06aadbc72743c7a621de54deca5601f34742543744da39f03445d1da6eb4e6c2"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 142251,
+      "sha256": "c51551e4407064cb94aa3d15038002f7158a9cc539d87d27ec32e299d32402e0"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 142251,
+      "sha256": "c51551e4407064cb94aa3d15038002f7158a9cc539d87d27ec32e299d32402e0"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 69030,
+      "sha256": "06aadbc72743c7a621de54deca5601f34742543744da39f03445d1da6eb4e6c2"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 34894,
+      "sha256": "a16a00b54134bf4bf8d3d3370c2f1d6037c4861369acbfca15db93b42ce84be4"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 3966,
+      "sha256": "daa1a353bc30cbc22f56e96ef5869807329de5f6e747edd635daebdb869dd94c"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 142251,
+      "sha256": "c51551e4407064cb94aa3d15038002f7158a9cc539d87d27ec32e299d32402e0"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 86442,
+      "sha256": "063ecef4546ed4aadb6dcbd1a249c65a46b087db1214ccbeffbd904f6da77393"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 142251,
+      "sha256": "c51551e4407064cb94aa3d15038002f7158a9cc539d87d27ec32e299d32402e0"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 86442,
+      "sha256": "063ecef4546ed4aadb6dcbd1a249c65a46b087db1214ccbeffbd904f6da77393"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 69030,
+      "sha256": "06aadbc72743c7a621de54deca5601f34742543744da39f03445d1da6eb4e6c2"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 48950,
+      "sha256": "d12a8f4f351ef82cfc3d4067b6105c0d7ed5c1d6da76c591c2db269ddc55a571"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 49792,
+      "sha256": "5fbd5f5bf7594e74dbe38dfcee047713875b3f7f9e6fc9e4621101b92fa8ddd0"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 24656,
+      "sha256": "165363646a7321d0b1ec988d5b4924578e08c237e2e27a7857ff35e2a7dfb11c"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 10,
+    "bytes": 1238560,
+    "inventorySha256": "db4e6f1ce541b09ac371fa6fd4380e45baa68113bf0b51531d64645b8f78a106",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "raj-motors",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 24,
+    "report": "dealers/raj-motors/input-review.json"
+  },
+  "after": {
+    "files": 24,
+    "bytes": 1273588
+  }
+}

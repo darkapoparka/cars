@@ -3,7 +3,7 @@
   "kind": "cars-dealer-pack-input-review",
   "dealer": "sour-motors-hyde",
   "reviewed": true,
-  "reviewedAt": "2026-10-20T19:22:32.527Z",
+  "reviewedAt": "2026-10-20T20:04:40.098Z",
   "review": {
     "kind": "automated",
     "humanReview": false,
@@ -46,6 +46,14 @@
       "sha256": "e0740bacd13163ac42b09be7c339c49ced744e57d2e338fc298f7d59288cd5d1"
     },
     {
+      "path": "branding/contrast-on-dark-v2.png",
+      "sha256": "23b4967a930e8b566569ffd170c0c8886b9f4a59f09375482ddd5d27ffe00b60"
+    },
+    {
+      "path": "branding/contrast-repair-20261020.json",
+      "sha256": "7cc685535cec63519f633005c9ae20d7f88fb473dfb1bbcae7d31c90eabd137f"
+    },
+    {
       "path": "branding/generated-mark-on-dark.png",
       "sha256": "affdfc487952cd64050fabb2e19928f18d681552b7755a7c65cd4085be05e5ac"
     },
@@ -67,15 +75,15 @@
     },
     {
       "path": "branding/logo-contract.json",
-      "sha256": "1aae8cbef1d482fbd5e86464bc31e340be4588f59a50881b2eb9aa067ec46121"
+      "sha256": "c8a360e8622f7d0d2253824a9672c0aa5646324d52ba74a4c13f43ad332db941"
     },
     {
       "path": "branding/logo-recipe.json",
-      "sha256": "9985d5422777e3353be49236891c5c8dab701d9b8393af62c2c3a7c6e9b2d1fc"
+      "sha256": "2f67670b97c59edc3d0c0dcc1ec2850dd47ceabd0a3cf9aa017471742ba05ad9"
     },
     {
       "path": "branding/source.json",
-      "sha256": "84909554ab26431572e3118938ce8887eaed36eafda54615159b0911a468ef5d"
+      "sha256": "351308aa65256de9a9c00ebfc26726d1d34cfbbb8667f48033502d5e33dfd9d4"
     },
     {
       "path": "business-facts.json",
@@ -83,7 +91,7 @@
     },
     {
       "path": "copy-review.json",
-      "sha256": "f57d9f6ba38d396f257bf0bc2aaff07e45eedd9de3a90cbdea7db69b22e89d60"
+      "sha256": "efd4bf90283ca6ddf203cd1c6477543e266ec420aefc9d0b2248cd894a709002"
     },
     {
       "path": "dealer-stock/listing-1.jpg",
@@ -103,7 +111,7 @@
     },
     {
       "path": "identity-review.json",
-      "sha256": "67ef503ed01a27cfe72874e2e791b891a24c0dd527e2519717dcfe6f5bab0917"
+      "sha256": "93feceddc1cd959a6174fcc80bd80062ba393cfe538ec989a7c8c5f630780f77"
     },
     {
       "path": "locale.json",
@@ -119,7 +127,7 @@
     },
     {
       "path": "qualification.json",
-      "sha256": "5e6fce328f2be75317dd4a0a3fd61acac5de6bd06de719b1bd4f75affb164295"
+      "sha256": "fec96c67bcadb3bb515e224d4f9c4e37b72e433806c55c814ac1f189838e8855"
     },
     {
       "path": "research-review.json",

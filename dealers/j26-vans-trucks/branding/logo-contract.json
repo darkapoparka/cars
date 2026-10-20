@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "dealer": "j26-vans-trucks",
   "reviewed": true,
-  "reviewedAt": "2026-10-19T19:22:56.608725Z",
+  "reviewedAt": "2026-10-20T20:11:52.341Z",
   "status": "independent-proposal-not-dealer-approved",
   "creationMethod": "imagegen-proposal",
   "assets": {
@@ -50,16 +50,16 @@
   },
   "mark": {
     "path": "branding/logo-mark.png",
-    "sha256": "cc5cc85893da23b5d8bbd53e34e6bf4b906f02f8d89e995ba5da6d48435fd4b0",
+    "sha256": "7cb10ef03ea6410f82b84facb699ce9fc6ba2840b90af2888462a8b77fa919f7",
     "generation": {
       "tool": "image_gen.imagegen",
-      "generationId": "exec-bb035834-239a-4a06-a629-43b1dcb4ba17",
+      "generationId": "exec-125b28d0-0864-411d-a5c2-51497b990c34",
       "modelVersion": null
     }
   },
   "favicon": {
     "path": "dealer-brand/favicon.ico",
-    "sha256": "e5706c8a86e5f4c016be53c0bca58c19d29bac84789ca14d6fb176d20d9eb275"
+    "sha256": "392b90deeac4249f4623a074d1d4f12b6f5c9c378bf23008b8e5250379d98884"
   },
   "surfaces": {
     "onLight": {
@@ -137,60 +137,60 @@
   "supplemental": {
     "mark-on-light.webp": {
       "path": "dealer-brand/mark-on-light.webp",
-      "sha256": "e2eb238d63b0369c82b6531ec4c1884555c04b0f0a11a73f58f41a9e58cfac05",
+      "sha256": "7fa00a79112fdb05078d6989d07beedc1efca4a8a2881e20904102a67da7d89f",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-bb035834-239a-4a06-a629-43b1dcb4ba17",
+        "generationId": "exec-125b28d0-0864-411d-a5c2-51497b990c34",
         "modelVersion": null
       },
-      "sourceReference": "dealers/j26-vans-trucks/branding/generated-mark.png"
+      "sourceReference": "dealers/j26-vans-trucks/branding/generated-compact-on-light-v2-20261020-07e8cba0241e9a30.png"
     },
     "mark-on-dark.webp": {
       "path": "dealer-brand/mark-on-dark.webp",
-      "sha256": "e2eb238d63b0369c82b6531ec4c1884555c04b0f0a11a73f58f41a9e58cfac05",
+      "sha256": "cbae7e6a7acf1ae391ef7b44695f9de940d45772f1ba41e15fa382c624085cda",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-bb035834-239a-4a06-a629-43b1dcb4ba17",
+        "generationId": "exec-6aae2fdd-b95f-465d-96c0-11ebc97cac2e",
         "modelVersion": null
       },
-      "sourceReference": "dealers/j26-vans-trucks/branding/generated-mark.png"
+      "sourceReference": "dealers/j26-vans-trucks/branding/generated-compact-on-dark-v2-20261020-1023b0639f0c8591.png"
     },
     "app-icon.png": {
       "path": "dealer-brand/app-icon.png",
-      "sha256": "cc5cc85893da23b5d8bbd53e34e6bf4b906f02f8d89e995ba5da6d48435fd4b0",
+      "sha256": "7cb10ef03ea6410f82b84facb699ce9fc6ba2840b90af2888462a8b77fa919f7",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-bb035834-239a-4a06-a629-43b1dcb4ba17",
+        "generationId": "exec-125b28d0-0864-411d-a5c2-51497b990c34",
         "modelVersion": null
       },
-      "sourceReference": "dealers/j26-vans-trucks/branding/generated-mark.png"
+      "sourceReference": "dealers/j26-vans-trucks/branding/generated-compact-on-light-v2-20261020-07e8cba0241e9a30.png"
     },
     "favicon.ico": {
       "path": "dealer-brand/favicon.ico",
-      "sha256": "e5706c8a86e5f4c016be53c0bca58c19d29bac84789ca14d6fb176d20d9eb275",
+      "sha256": "392b90deeac4249f4623a074d1d4f12b6f5c9c378bf23008b8e5250379d98884",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-bb035834-239a-4a06-a629-43b1dcb4ba17",
+        "generationId": "exec-125b28d0-0864-411d-a5c2-51497b990c34",
         "modelVersion": null
       },
-      "sourceReference": "dealers/j26-vans-trucks/branding/generated-mark.png"
+      "sourceReference": "dealers/j26-vans-trucks/branding/generated-compact-on-light-v2-20261020-07e8cba0241e9a30.png"
     }
   },
   "markOnDarkReady": true,
   "originalArtworkPreserved": true,
   "visualReview": {
     "reviewed": true,
-    "reviewedAt": "2026-10-19T19:22:56.608725Z",
+    "reviewedAt": "2026-10-20T20:11:52.341Z",
     "source": "branding/source.json",
     "spelling": "agent-visual-review",
     "dealerApproval": false
   },
   "markOnDark": {
     "path": "branding/logo-mark-on-dark.png",
-    "sha256": "cc5cc85893da23b5d8bbd53e34e6bf4b906f02f8d89e995ba5da6d48435fd4b0",
+    "sha256": "fd71b90a2af7fbd5781a83defc622752bb6dc2fb9277dd2a6c4750db6fdfdacc",
     "generation": {
       "tool": "image_gen.imagegen",
-      "generationId": "exec-bb035834-239a-4a06-a629-43b1dcb4ba17",
+      "generationId": "exec-6aae2fdd-b95f-465d-96c0-11ebc97cac2e",
       "modelVersion": null
     }
   }

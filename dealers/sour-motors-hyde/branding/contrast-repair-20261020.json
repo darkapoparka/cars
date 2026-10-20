@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "dealer": "sour-motors-hyde",
+  "mode": "built-in-imagegen",
+  "independentProposal": true,
+  "dealerApproved": false,
+  "originalPackDigest": "38015edf842e18d67bf545aa772890ee3d6485ca6c7866469202788db38dfb4f",
+  "originalSourceSha256": "84909554ab26431572e3118938ce8887eaed36eafda54615159b0911a468ef5d",
+  "selected": [
+    {
+      "roles": [
+        "onDark",
+        "onAccent"
+      ],
+      "filename": "contrast-on-dark-v2.png",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-28a96e14-d260-4ebf-95d1-52827be39d7a",
+        "referenceKind": "actual-tool-output-filename",
+        "modelVersion": null
+      },
+      "prompt": "Precise consumer surface edit of the existing SOUR MOTORS proposal logo. Preserve exactly the SM monogram, exact spelling SOUR MOTORS, typeface, proportions, alignment and negative spaces. Make every positive monogram and letter shape a single solid very light icy blue #cfe7ff. Remove all navy/dark outlines and backing strokes, gradients, texture, speckles and white keylines. Smooth uninterrupted opaque light-blue silhouettes, clean real alpha. Preserve letter holes and intended negative spaces transparent. No pure white, background plate, added words or redesign. This inverse variant must read on charcoal #111113 and red #c40101. Independent preview proposal, not adopted business identity.",
+      "parentReference": "branding/generated-on-dark.png",
+      "sourcePath": "branding/contrast-on-dark-v2.png",
+      "sha256": "23b4967a930e8b566569ffd170c0c8886b9f4a59f09375482ddd5d27ffe00b60",
+      "bytes": 425185,
+      "outputFile": "exec-28a96e14-d260-4ebf-95d1-52827be39d7a.png"
+    }
+  ]
+}

@@ -42,7 +42,7 @@
     }
   },
   "generatedInputs": {
-    "reviewedAt": "2026-10-19T18:56:40.960711Z",
+    "reviewedAt": "2026-10-20T20:02:56.007Z",
     "master": {
       "path": "branding/generated-master.png",
       "sha256": "855e9f80ab5656797aa28eba0eaa597c1294e997fbbd628ef42f8c6b711f6a7a",
@@ -90,11 +90,12 @@
         }
       },
       "onAccent": {
-        "path": "branding/generated-on-dark.png",
-        "sha256": "1c0329c934ced23111fde17419d05d85017c0ec0b049d3062553ec3f0857923f",
+        "path": "branding/contrast-on-accent-v2.png",
+        "sha256": "84d2ee4481fcb486c3f0c46bea57da38913f7aceab96b47f85b3a47fc7291a8c",
         "generation": {
           "tool": "image_gen.imagegen",
-          "generationId": "exec-212e5099-7a30-42a6-954b-bb0d624ac1f0",
+          "generationId": "exec-f8353e87-0a16-4680-85d2-aa33f4edf07c",
+          "referenceKind": "actual-tool-output-filename",
           "modelVersion": null
         }
       }
@@ -123,9 +124,9 @@
         32,
         64
       ],
-      "method": "Exact pipeline alpha-padding crop and resize of actual generated surface artwork. Separate light-ink generated wordmark is used on dark and accent surfaces. Compact inputs are documented actual imagegen outputs or isolated lossless crops.",
-      "reviewedAt": "2026-10-19T18:56:40.960711Z",
-      "review": "Visually reviewed the exact pipeline cropTransparentPadding exports at 120 px and 180 px wordmark widths and 32 px and 64 px compact sizes against all six required background colours. Spelling and transparency checked. Filled light wordmarks improve contrast on dark surfaces; artwork colours do not change template palettes."
+      "method": "Agent review of exact maintained before/after source raster exports on current consumer backgrounds; unchanged technical pixel checks. New neutral/brand inverse treatment is artwork only and does not change template palettes.",
+      "reviewedAt": "2026-10-20T20:02:56.007Z",
+      "review": "Exact existing spelling and emblem geometry retained. Original inputs and generation provenance remain preserved. Independent proposal; no human/dealer/native/hosted acceptance inferred."
     }
   },
   "additionalGenerations": [
@@ -153,5 +154,127 @@
       "generationId": "exec-212e5099-7a30-42a6-954b-bb0d624ac1f0",
       "modelVersion": null
     }
+  },
+  "artworkHistory": [
+    {
+      "supersededAt": "2026-10-20T20:02:56.007Z",
+      "reason": "Dedicated consumer surface variants correct measured pixel contrast; existing source inputs remain retained.",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-b56b03b0-0fe3-4f79-96e3-3a688689415b",
+        "modelVersion": null,
+        "prompt": "Use case: logo-brand. Design a professional, distinctive independent proposal logo for the UK vehicle seller \"RESI AUTO SALES\". Transparent background. Motif and colours: a strong geometric R monogram with a single sweeping road cutout; dark charcoal and warm copper. One wide horizontal lockup: compact emblem at far left, substantial transparent gap, and the exact full business name to its right in bold beautifully spaced modern lettering. Text must read \"RESI AUTO SALES\" exactly, no extra words or tagline. Keep the emblem inside the left 22% of the canvas, isolated from all text so it can be cropped for a favicon. Flat clean graphic design with thick simple forms, no gradients, no photographic textures, no 3D, no background, no mockup, no decorative tiny lines. Include a crisp white outer keyline around the dark shapes and a fine dark edge on any white shapes so this same transparent artwork remains legible on white, charcoal and dark-red website backgrounds. Restrained expert typography. Compact symbol must remain distinctive at 32px. Not a dealer-approved logo."
+      },
+      "compactDerivation": {
+        "method": "lossless-isolated-emblem-crop",
+        "parentReference": "branding/generated-master.png",
+        "parentSha256": "855e9f80ab5656797aa28eba0eaa597c1294e997fbbd628ef42f8c6b711f6a7a",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 517,
+          "height": 724
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-b56b03b0-0fe3-4f79-96e3-3a688689415b",
+          "modelVersion": null
+        }
+      },
+      "generatedInputs": {
+        "reviewedAt": "2026-10-19T18:56:40.960711Z",
+        "master": {
+          "path": "branding/generated-master.png",
+          "sha256": "855e9f80ab5656797aa28eba0eaa597c1294e997fbbd628ef42f8c6b711f6a7a",
+          "generation": {
+            "tool": "image_gen.imagegen",
+            "generationId": "exec-b56b03b0-0fe3-4f79-96e3-3a688689415b",
+            "modelVersion": null
+          }
+        },
+        "mark": {
+          "path": "branding/generated-mark.png",
+          "sha256": "7523d86bd32fa440c1c54a3ad9f8c38fab2fe65a39c08bbcb047e1a546f262d6",
+          "generation": {
+            "tool": "image_gen.imagegen",
+            "generationId": "exec-b56b03b0-0fe3-4f79-96e3-3a688689415b",
+            "modelVersion": null
+          }
+        },
+        "markOnDark": {
+          "path": "branding/generated-mark-on-dark.png",
+          "sha256": "e2d1a5e4783aa8a8b01d792c87ca85c7fc7bbf4104009319524de61f12b54b9d",
+          "generation": {
+            "tool": "image_gen.imagegen",
+            "generationId": "exec-212e5099-7a30-42a6-954b-bb0d624ac1f0",
+            "modelVersion": null
+          }
+        },
+        "surfaces": {
+          "onLight": {
+            "path": "branding/generated-master.png",
+            "sha256": "855e9f80ab5656797aa28eba0eaa597c1294e997fbbd628ef42f8c6b711f6a7a",
+            "generation": {
+              "tool": "image_gen.imagegen",
+              "generationId": "exec-b56b03b0-0fe3-4f79-96e3-3a688689415b",
+              "modelVersion": null
+            }
+          },
+          "onDark": {
+            "path": "branding/generated-on-dark.png",
+            "sha256": "1c0329c934ced23111fde17419d05d85017c0ec0b049d3062553ec3f0857923f",
+            "generation": {
+              "tool": "image_gen.imagegen",
+              "generationId": "exec-212e5099-7a30-42a6-954b-bb0d624ac1f0",
+              "modelVersion": null
+            }
+          },
+          "onAccent": {
+            "path": "branding/generated-on-dark.png",
+            "sha256": "1c0329c934ced23111fde17419d05d85017c0ec0b049d3062553ec3f0857923f",
+            "generation": {
+              "tool": "image_gen.imagegen",
+              "generationId": "exec-212e5099-7a30-42a6-954b-bb0d624ac1f0",
+              "modelVersion": null
+            }
+          }
+        },
+        "surfaceReview": {
+          "reviewed": true,
+          "backgrounds": {
+            "onLight": [
+              "#ffffff"
+            ],
+            "onDark": [
+              "#111113",
+              "#101820"
+            ],
+            "onAccent": [
+              "#09090b",
+              "#17191c",
+              "#c40101"
+            ]
+          },
+          "wordmarkWidths": [
+            120,
+            180
+          ],
+          "markWidths": [
+            32,
+            64
+          ],
+          "method": "Exact pipeline alpha-padding crop and resize of actual generated surface artwork. Separate light-ink generated wordmark is used on dark and accent surfaces. Compact inputs are documented actual imagegen outputs or isolated lossless crops.",
+          "reviewedAt": "2026-10-19T18:56:40.960711Z",
+          "review": "Visually reviewed the exact pipeline cropTransparentPadding exports at 120 px and 180 px wordmark widths and 32 px and 64 px compact sizes against all six required background colours. Spelling and transparency checked. Filled light wordmarks improve contrast on dark surfaces; artwork colours do not change template palettes."
+        }
+      }
+    }
+  ],
+  "contrastCorrection": {
+    "reviewedAt": "2026-10-20T20:02:56.007Z",
+    "provenance": "branding/contrast-repair-20261020.json",
+    "reason": "Measured weak contrast in the original98-pack focused pixel preflight",
+    "originalArtworkPreserved": true,
+    "dealerApproved": false
   }
 }

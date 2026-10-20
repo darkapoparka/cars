@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "dealer": "zed-specialist",
   "reviewed": true,
-  "reviewedAt": "2026-10-19T19:22:56.608725Z",
+  "reviewedAt": "2026-10-20T20:02:49.015Z",
   "status": "independent-proposal-not-dealer-approved",
   "creationMethod": "imagegen-proposal",
   "assets": {
@@ -15,14 +15,14 @@
     "onDark": {
       "sourcePath": "branding/logo-on-dark.png",
       "publicPath": "/dealer-brand/logo-on-dark.webp",
-      "sha256": "e72047a5103712fbcabff57674baa600bae545a4936e811114ae8046b09728ef",
-      "sourceSha256": "5c1650e02737f92e83addac926c23b4022cf4497d5a3322e75be042c949e00fc"
+      "sha256": "3b847b1c365f4a2232da75b86f70e9ad776a25905741578f22d0d1a820b387c0",
+      "sourceSha256": "dbb812eb8889acb50b77dffe52f6bea817617c15ceb4b62c9dd03e71c87568bb"
     },
     "onAccent": {
       "sourcePath": "branding/logo-on-accent.png",
       "publicPath": "/dealer-brand/logo-on-accent.webp",
-      "sha256": "e72047a5103712fbcabff57674baa600bae545a4936e811114ae8046b09728ef",
-      "sourceSha256": "5c1650e02737f92e83addac926c23b4022cf4497d5a3322e75be042c949e00fc"
+      "sha256": "3b847b1c365f4a2232da75b86f70e9ad776a25905741578f22d0d1a820b387c0",
+      "sourceSha256": "dbb812eb8889acb50b77dffe52f6bea817617c15ceb4b62c9dd03e71c87568bb"
     }
   },
   "surfaceBackgrounds": {
@@ -74,23 +74,25 @@
     },
     "onDark": {
       "path": "branding/logo-on-dark.png",
-      "sha256": "5c1650e02737f92e83addac926c23b4022cf4497d5a3322e75be042c949e00fc",
+      "sha256": "dbb812eb8889acb50b77dffe52f6bea817617c15ceb4b62c9dd03e71c87568bb",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-4a4936dd-54db-455d-a027-273b860791ab",
+        "generationId": "exec-a45d88cc-c74a-40d2-9beb-738e46200100",
+        "referenceKind": "actual-tool-output-filename",
         "modelVersion": null
       },
-      "sourceReference": "dealers/zed-specialist/branding/generated-on-dark.png"
+      "sourceReference": "dealers/zed-specialist/branding/contrast-on-dark-v2.png"
     },
     "onAccent": {
       "path": "branding/logo-on-accent.png",
-      "sha256": "5c1650e02737f92e83addac926c23b4022cf4497d5a3322e75be042c949e00fc",
+      "sha256": "dbb812eb8889acb50b77dffe52f6bea817617c15ceb4b62c9dd03e71c87568bb",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-4a4936dd-54db-455d-a027-273b860791ab",
+        "generationId": "exec-a45d88cc-c74a-40d2-9beb-738e46200100",
+        "referenceKind": "actual-tool-output-filename",
         "modelVersion": null
       },
-      "sourceReference": "dealers/zed-specialist/branding/generated-on-dark.png"
+      "sourceReference": "dealers/zed-specialist/branding/contrast-on-dark-v2.png"
     }
   },
   "transforms": {
@@ -109,28 +111,28 @@
     },
     "onDark": {
       "operation": "crop-transparent-padding-and-resize",
-      "sourceSha256": "52dfbe8b0260b4f0d339c82a75d601c379a99d27e79c29c71c97c5acf2ebb258",
-      "sha256": "5c1650e02737f92e83addac926c23b4022cf4497d5a3322e75be042c949e00fc",
+      "sourceSha256": "f8295f7c3cb12b27211360cc825ccf1465e3c3a07394a7cfca937bc014af3ac9",
+      "sha256": "dbb812eb8889acb50b77dffe52f6bea817617c15ceb4b62c9dd03e71c87568bb",
       "crop": {
-        "left": 0,
-        "top": 151,
-        "width": 2172,
-        "height": 412
+        "left": 1,
+        "top": 156,
+        "width": 2165,
+        "height": 404
       },
-      "sourcePath": "branding/generated-on-dark.png",
+      "sourcePath": "branding/contrast-on-dark-v2.png",
       "outputPath": "branding/logo-on-dark.png"
     },
     "onAccent": {
       "operation": "crop-transparent-padding-and-resize",
-      "sourceSha256": "52dfbe8b0260b4f0d339c82a75d601c379a99d27e79c29c71c97c5acf2ebb258",
-      "sha256": "5c1650e02737f92e83addac926c23b4022cf4497d5a3322e75be042c949e00fc",
+      "sourceSha256": "f8295f7c3cb12b27211360cc825ccf1465e3c3a07394a7cfca937bc014af3ac9",
+      "sha256": "dbb812eb8889acb50b77dffe52f6bea817617c15ceb4b62c9dd03e71c87568bb",
       "crop": {
-        "left": 0,
-        "top": 151,
-        "width": 2172,
-        "height": 412
+        "left": 1,
+        "top": 156,
+        "width": 2165,
+        "height": 404
       },
-      "sourcePath": "branding/generated-on-dark.png",
+      "sourcePath": "branding/contrast-on-dark-v2.png",
       "outputPath": "branding/logo-on-accent.png"
     }
   },
@@ -180,7 +182,7 @@
   "originalArtworkPreserved": true,
   "visualReview": {
     "reviewed": true,
-    "reviewedAt": "2026-10-19T19:22:56.608725Z",
+    "reviewedAt": "2026-10-20T20:02:49.015Z",
     "source": "branding/source.json",
     "spelling": "agent-visual-review",
     "dealerApproval": false

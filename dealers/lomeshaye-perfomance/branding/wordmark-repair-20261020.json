@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-targeted-wordmark-contrast-repair",
+  "dealer": "lomeshaye-perfomance",
+  "createdAt": "2026-10-20T19:58:53.726Z",
+  "previousPackDigest": "862f59fcd34fa729949876d2684187a63250d721eca405951a8b8133f7c51cce",
+  "previousSource": {
+    "path": "branding/source-before-wordmark-repair-20261020-1772471b02abbb09.json",
+    "sha256": "1772471b02abbb0903ad8ed3d3d641a92cba5601c4e6336b78fd95df2d2ccd47"
+  },
+  "previousWordmarkInputs": {
+    "onDark": {
+      "path": "branding/generated-on-dark.png",
+      "sha256": "c06f4b7d33fd89417eed470bfcbca5c074ccee93dc3ad47c9d2bc756a0bd4e1c",
+      "nativeDimensions": {
+        "width": 1953,
+        "height": 805
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-c89a3919-9bff-4fcf-aa76-f026f85171a6",
+        "modelVersion": null
+      }
+    },
+    "onAccent": {
+      "path": "branding/generated-on-dark.png",
+      "sha256": "c06f4b7d33fd89417eed470bfcbca5c074ccee93dc3ad47c9d2bc756a0bd4e1c",
+      "nativeDimensions": {
+        "width": 1953,
+        "height": 805
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-c89a3919-9bff-4fcf-aa76-f026f85171a6",
+        "modelVersion": null
+      }
+    }
+  },
+  "replacement": {
+    "roles": [
+      "onDark",
+      "onAccent"
+    ],
+    "reference": "branding/generated-on-dark.png",
+    "path": "branding/generated-on-dark-v2-20261020.png",
+    "sha256": "18680e52ae5793d86fe830567fcf2d498414837b44bba1b9a71166da4790c25e",
+    "nativeDimensions": {
+      "width": 1953,
+      "height": 805
+    },
+    "tool": "image_gen.imagegen",
+    "generationId": "exec-2f37b488-e9e7-43e1-954b-4e0f233e479d",
+    "modelVersion": null,
+    "prompt": "Use case: logo-brand. Faithful surface-color repair of the supplied logo. Preserve exactly the LP emblem on the left, and the three lines LOMESHAYE / PERFOMANCE / LIMITED on the right, their letterforms, spacing, size and placement. The second line is deliberately spelled PERFOMANCE, P E R F O M A N C E, with no R after O; do not correct or alter it. Convert all existing light fills and heavy dark outlines into one uniform opaque pale silver-grey #c8d0d8. No dark borders, no white outlines or pure-white fill. Transparent counters and clear gaps, not a solid rectangle. Clean flat filled smooth artwork on truly transparent background, no gradients, grain, speckles, texture, shadow, glow or additional marks. Preserve exact original geometry and proportions with generous transparent outer padding. Independent preview identity, not dealer approved.",
+    "createdAt": "2026-10-20T19:58:53.726Z",
+    "derivation": "Actual built-in imagegen surface edit; raw returned PNG copied byte-identical without recolouring, filters or alpha cleanup."
+  },
+  "visualReview": {
+    "wordmarkWidths": [
+      120,
+      180
+    ],
+    "backgrounds": [
+      "#111113",
+      "#101820",
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ],
+    "identityAndSpelling": "agent-visual-review",
+    "dealerApproval": false,
+    "nativeApproval": false,
+    "hostedApproval": false
+  },
+  "originalMasterLightCompactFactsStockPhotosPreserved": true,
+  "toolPackage": "L:/CODEX/cars/templates/karento-best/package.json",
+  "filtersApplied": false,
+  "thresholdsChanged": false,
+  "providerWrites": 0
+}
