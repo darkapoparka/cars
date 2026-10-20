@@ -1,0 +1,198 @@
+{
+  "schemaVersion": 1,
+  "dealer": "union-used-car-exhibition-llc",
+  "realLogoFirst": true,
+  "publishedBranding": true,
+  "creationMethod": "sourced-logo-imagegen-redraw",
+  "dealerApproved": false,
+  "approvalStatus": "redraw-and-compact-adaptation-not-dealer-approved",
+  "usageStatus": "public-preview-only",
+  "observedAt": "2026-10-19T19:58:51.772384Z",
+  "publicSources": [
+    {
+      "url": "https://www.oneclickdrive.com/company/sharjah/union-used-car-exhibition-llc",
+      "observedAt": "2026-10-19T19:58:51.772384Z"
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Chevrolet/Silverado/?id=138010",
+      "observedAt": "2026-10-19T19:58:51.772384Z"
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Chevrolet/Tahoe-LT/?id=138001",
+      "observedAt": "2026-10-19T19:58:51.772384Z"
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Nissan/Patrol-SE-Platinum/?id=138011",
+      "observedAt": "2026-10-19T19:58:51.772384Z"
+    }
+  ],
+  "originals": [
+    {
+      "path": "branding/source-original.png",
+      "sha256": "f560de9ad1b991ab2d0d63d65aae09dccf31bc23c42a708beda5e7b267041deb",
+      "url": "https://static.oneclickdrive.com/application/views/img/company/union.png",
+      "observedAt": "2026-10-19T19:58:51.772384Z",
+      "identityStatus": "public-profile-identity-reference"
+    }
+  ],
+  "logoResearch": "Exact public dealer-profile logo was visually inspected. Low-resolution or opaque artwork was faithfully redrawn with imagegen; no dealer approval is claimed.",
+  "visualReview": "Reviewed transparent artwork, full business-wordmark spelling and compact emblem. Deterministic crops retain the generated artwork; no vector substitute, recolouring or template changes. Compact variants are unapproved preview adaptations. Published black/red car, star and arc retained. Inverse wordmark with changed wording was rejected; dark surface uses the compact emblem.",
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T21:08:48.068Z",
+    "master": {
+      "path": "branding/generated-primary.png",
+      "sha256": "cf737ca0933719e9ba8745ba57f86ade96d42afacf1c5e9a01e62064abc4b67e",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-bf4a88ed-e410-46f7-a23c-33e47cf3bff9",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "f90dfd9b08aa4c03a8a97e7262f43240520130acd85ad90be40101ed9a4f8a0b",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-bf4a88ed-e410-46f7-a23c-33e47cf3bff9",
+        "modelVersion": null,
+        "transformation": {
+          "operation": "rectangular-extract-without-recolour-or-redrawing",
+          "source": "branding/generated-primary.png",
+          "sourceSha256": "cf737ca0933719e9ba8745ba57f86ade96d42afacf1c5e9a01e62064abc4b67e",
+          "rectangle": {
+            "left": 0,
+            "top": 0,
+            "width": 1032,
+            "height": 724
+          }
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-dark-surface.png",
+      "sha256": "8b171de20297344391453a5ba000cf6bfe16cbea652f49b869a72a68a4f7f0ba",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1f17c82c-1103-4151-9495-79a3ce7fb6d3",
+        "modelVersion": null,
+        "transformation": {
+          "operation": "rectangular-extract-without-recolour-or-redrawing",
+          "sourceArtifact": "exec-1f17c82c-1103-4151-9495-79a3ce7fb6d3.png",
+          "sourceSha256": "4f7cb1b58ee8eff75023224ce85c31cb6a5171a7bc44cca96ff1da21bdeb8b96",
+          "rectangle": {
+            "left": 0,
+            "top": 0,
+            "width": 1032,
+            "height": 724
+          }
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-primary.png",
+        "sha256": "cf737ca0933719e9ba8745ba57f86ade96d42afacf1c5e9a01e62064abc4b67e",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-bf4a88ed-e410-46f7-a23c-33e47cf3bff9",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-dark-surface.png",
+        "sha256": "8b171de20297344391453a5ba000cf6bfe16cbea652f49b869a72a68a4f7f0ba",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-1f17c82c-1103-4151-9495-79a3ce7fb6d3",
+          "modelVersion": null,
+          "transformation": {
+            "operation": "rectangular-extract-without-recolour-or-redrawing",
+            "sourceArtifact": "exec-1f17c82c-1103-4151-9495-79a3ce7fb6d3.png",
+            "sourceSha256": "4f7cb1b58ee8eff75023224ce85c31cb6a5171a7bc44cca96ff1da21bdeb8b96",
+            "rectangle": {
+              "left": 0,
+              "top": 0,
+              "width": 1032,
+              "height": 724
+            }
+          }
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-dark-surface.png",
+        "sha256": "8b171de20297344391453a5ba000cf6bfe16cbea652f49b869a72a68a4f7f0ba",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-1f17c82c-1103-4151-9495-79a3ce7fb6d3",
+          "modelVersion": null,
+          "transformation": {
+            "operation": "rectangular-extract-without-recolour-or-redrawing",
+            "sourceArtifact": "exec-1f17c82c-1103-4151-9495-79a3ce7fb6d3.png",
+            "sourceSha256": "4f7cb1b58ee8eff75023224ce85c31cb6a5171a7bc44cca96ff1da21bdeb8b96",
+            "rectangle": {
+              "left": 0,
+              "top": 0,
+              "width": 1032,
+              "height": 724
+            }
+          }
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": {
+        "onLight": [
+          "#ffffff"
+        ],
+        "onDark": [
+          "#111113",
+          "#101820"
+        ],
+        "onAccent": [
+          "#09090b",
+          "#17191c",
+          "#c40101"
+        ]
+      },
+      "notes": "Reviewed transparent artwork, full business-wordmark spelling and compact emblem. Deterministic crops retain the generated artwork; no vector substitute, recolouring or template changes. Compact variants are unapproved preview adaptations. Published black/red car, star and arc retained. Inverse wordmark with changed wording was rejected; dark surface uses the compact emblem."
+    },
+    "compactMarkStatus": "unapproved-preview-adaptation",
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-19T21:08:48.068Z",
+      "widths": [
+        32,
+        64
+      ],
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#101820"
+      ],
+      "notes": "Reviewed transparent artwork, full business-wordmark spelling and compact emblem. Deterministic crops retain the generated artwork; no vector substitute, recolouring or template changes. Compact variants are unapproved preview adaptations. Published black/red car, star and arc retained. Inverse wordmark with changed wording was rejected; dark surface uses the compact emblem."
+    }
+  },
+  "generationPrompts": [
+    {
+      "role": "primary",
+      "prompt": "Use case: logo-brand. Faithfully redraw this dealer logo as crisp transparent flat horizontal lockup. Keep the black/red two halves of a car, central red five-point star with white border and double circular arch above it. Make the emblem compact and clean with bold substantial essential strokes. At right put exact strong black uppercase wordmark \"UNION\", below smaller \"USED CAR EXHIBITION LLC\". Preserve red/black/white original identity exactly, no extra marks, no gradient, shadow or background plaque. Transparent3:1 canvas with generous separation between emblem and wordmark. Legible at32px with simple wheels rather than intricate spokes. Unapproved faithful design redraw.",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-bf4a88ed-e410-46f7-a23c-33e47cf3bff9",
+      "modelVersion": null,
+      "returnedArtifact": "exec-bf4a88ed-e410-46f7-a23c-33e47cf3bff9.png",
+      "returnedArtifactSha256": "cf737ca0933719e9ba8745ba57f86ade96d42afacf1c5e9a01e62064abc4b67e",
+      "note": "The tool exposed the returned artifact identifier and did not expose a model version."
+    },
+    {
+      "role": "silver",
+      "prompt": "Produce the matching LIGHT SILVER version of the attached automotive logo, in a single flat pale silver #c7d4dc. Preserve the exact spelling, letterforms, emblem shape and arrangement. Re-render with clean substantial precise geometric strokes and completely transparent negative space between strokes, in counters and between letters. Badge interiors formerly dark must become transparent with the essential motifs in pale silver strokes. No white ink, no black ink, no dark colours. No background, no glow, no shadow, no texture, no distressing, no gradients, no speckles. A clean transparent mark for dark and red surfaces, identical wide horizontal composition and exact business name.",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-1f17c82c-1103-4151-9495-79a3ce7fb6d3",
+      "modelVersion": null,
+      "returnedArtifact": "exec-1f17c82c-1103-4151-9495-79a3ce7fb6d3.png",
+      "returnedArtifactSha256": "4f7cb1b58ee8eff75023224ce85c31cb6a5171a7bc44cca96ff1da21bdeb8b96",
+      "note": "The tool exposed the returned artifact identifier and did not expose a model version. Only the reviewed emblem crop is retained; generated text outside the crop was rejected."
+    }
+  ]
+}

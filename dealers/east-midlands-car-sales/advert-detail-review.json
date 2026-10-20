@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "dealer": "east-midlands-car-sales",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T19:34:01.044Z",
+  "observedAt": "2026-10-19T19:31:40.274451+00:00",
+  "method": "Reviewed exact selected public advert bodies and marketplace vehicle-history panels. Preserve attributed dated advisories; do not infer an unspecified damage category or finance settlement.",
+  "coverage": [
+    {
+      "listingId": "listing-1",
+      "sourceUrl": "https://www.ebay.co.uk/itm/960079294609",
+      "httpStatus": 200,
+      "pageSha256": "870a8d9c6383c8b8efd4ba9b9b12d69abd8b125efa30724e3d5203d3824f549f",
+      "descriptionFetched": true,
+      "descriptionSha256": "f7054214529eae4b294a0937328859f5dd13a089b53ca0e92ff3f1ec90282022"
+    },
+    {
+      "listingId": "listing-2",
+      "sourceUrl": "https://www.ebay.co.uk/itm/960079277872",
+      "httpStatus": 200,
+      "pageSha256": "c46ec4aa26506d81fe567f97ac1cdd550e2ed6daae6cfa527486a7d289131550",
+      "descriptionFetched": true,
+      "descriptionSha256": "a59399145c615988a85fa4e5983f70cef746c8a1faef5dfb36c1a61a0ead3a68"
+    },
+    {
+      "listingId": "listing-3",
+      "sourceUrl": "https://www.ebay.co.uk/itm/960079249899",
+      "httpStatus": 200,
+      "pageSha256": "db43bec93c3238ab1bb8d016e830838d2ccead677707a6578ca86e0368d9866e",
+      "descriptionFetched": true,
+      "descriptionSha256": "dff56972257c56ad9ff0251fa7b2779f7fdda8d2b973eb9ff99b62e7a039cf0a"
+    }
+  ],
+  "findings": [
+    {
+      "listingId": "listing-1",
+      "advertId": "960079294609",
+      "stockTitle": "2013 Ford C-Max 2.0 TDCi Titanium X 5dr Powershift",
+      "sourceUrl": "https://www.ebay.co.uk/itm/960079294609",
+      "observedAt": "2026-10-19T19:26:20.452068Z",
+      "httpStatus": 200,
+      "pageSha256": "870a8d9c6383c8b8efd4ba9b9b12d69abd8b125efa30724e3d5203d3824f549f",
+      "descriptionUrl": "https://itm.ebaydesc.com/itmdesc/960079294609?t=1792244726000&category=9844&seller=eastmidlandscarsales&excSoj=1&ver=1&excTrk=1&lsite=3&ittenable=false&domain=ebay.com&descgauge=1&cspheader=1&oneClk=2&secureDesc=1&lang=en",
+      "descriptionSha256": "f7054214529eae4b294a0937328859f5dd13a089b53ca0e92ff3f1ec90282022",
+      "type": "vehicle-history",
+      "category": "S/N",
+      "finding": "The public eBay vehicle-history panel shows a Category S/N advisory without identifying which category applies.",
+      "evidenceLocation": "Public eBay description iframe; seller description and/or vehicle-history advisory panel",
+      "publicHistoryEvidence": {
+        "advisory": "Cat S/N Advisory",
+        "repairClaim": false
+      }
+    }
+  ],
+  "correctionApplied": true,
+  "copyReferences": [
+    "stock.json",
+    "copy-review.json"
+  ],
+  "rawAdvertContentRetained": false,
+  "independentlyCertified": false
+}

@@ -1,0 +1,124 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-input-review",
+  "dealer": "dms-cars-peterborough",
+  "reviewed": true,
+  "reviewedAt": "2026-10-20T19:17:37.401Z",
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "checks": [
+    "canonical-hosting-and-preserved-fleet-collisions",
+    "assigned-expansion-lead",
+    "public-fact-schema-and-price-omission",
+    "personal-contact-screen",
+    "retained-stock-media",
+    "companion-copy-source-binding",
+    "immutable-template-release-and-native-QA-parent",
+    "reviewed-artwork-provenance-and-regenerated-logo-hashes"
+  ],
+  "sourceArtworkReview": "Retained artwork review is separate provenance; this command does not perform visual, Arabic-expert or dealer approval.",
+  "copyReview": "Automated structure, stock hash, source text and complete EN/BG rows; no new human translation approval is inferred.",
+  "contacts": {
+    "schemaVersion": 1,
+    "kind": "cars-automated-public-contact-screen",
+    "dealer": "dms-cars-peterborough",
+    "method": "heuristic; no claim that unflagged values cannot be personal",
+    "flags": [],
+    "blocking": []
+  },
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-peterborough-dms-cars",
+    "position": 81
+  },
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "inputs": [
+    {
+      "path": "FACTS-AND-INVENTORY.json",
+      "sha256": "83f23f048ff5a268bad33ac8d9e1a54c66e8e74a188df93c3aed146764322bf0"
+    },
+    {
+      "path": "branding/generated-mark-on-dark.png",
+      "sha256": "460fec99450713e1164acedb19e4525538d515cc7ee5d2617ef9193a45a13957"
+    },
+    {
+      "path": "branding/generated-mark.png",
+      "sha256": "51296b958cd812187d62f46dd4ed27e76774e37e752908da43f8f6b4fc28b5ef"
+    },
+    {
+      "path": "branding/generated-master.png",
+      "sha256": "b4b3b774faa9063f9a49d2473d0424872efa6efe1eda28f90ce0248dd13818e9"
+    },
+    {
+      "path": "branding/generated-on-dark.png",
+      "sha256": "0d42ac1e07504775321562cc166b96c881b145b8b51c1048089f09caca23f53d"
+    },
+    {
+      "path": "branding/logo-contract.json",
+      "sha256": "32098730fb8464002d27be8ce403a90642ebf86eeef92a4a9605c517180569d0"
+    },
+    {
+      "path": "branding/logo-recipe.json",
+      "sha256": "b9bf19dac9ad6ec3ad8674a9accdc2db8c9ad9f1ba2cba248269c1d11bcc3198"
+    },
+    {
+      "path": "branding/source.json",
+      "sha256": "4209bcb854572bfd1db1df33765ec8845e45634d723b63632459cb1cac0f0756"
+    },
+    {
+      "path": "business-facts.json",
+      "sha256": "29ab40408db2913925b537f7486f89d7325ad4c551576610475e008f2815b2da"
+    },
+    {
+      "path": "copy-review.json",
+      "sha256": "bcd66eb7304042ee9b00fabae3d2480dc1b449dd37b8b39110c136b5ce4c2eb3"
+    },
+    {
+      "path": "dealer-stock/public-1.jpg",
+      "sha256": "c4ad2656a5046a939742808c452864a5add2e35e5d2c13ea17a9b0f747a6dbb3"
+    },
+    {
+      "path": "dealer-stock/public-2.jpg",
+      "sha256": "eb696f63066172de782b02eebb42cb1b17b81ad9ee905b766e1232d8690f0cd3"
+    },
+    {
+      "path": "dealer-stock/public-3.jpg",
+      "sha256": "503d523881b6769c8337a0618fbe706ef94b688afb6c858a7bb24174246113e0"
+    },
+    {
+      "path": "dealer.json",
+      "sha256": "2d4fd59cf48e5a1de17ebb88cf177c0e16dda694697362990129b0a5e539c28f"
+    },
+    {
+      "path": "identity-review.json",
+      "sha256": "09e6d9e682406adc5679fbdf6777db3afcc0bd57bb6719ad2eae965fba9e4928"
+    },
+    {
+      "path": "locale.json",
+      "sha256": "898fba125f34dd8b5d881d7d9ee37a321f926f1368bcc8d4b2819832a130566d"
+    },
+    {
+      "path": "missing-facts.json",
+      "sha256": "e618e33e8db15248a244557acf90901cf0af55f5eff75ce4b93741822b54e302"
+    },
+    {
+      "path": "qualification.json",
+      "sha256": "5ad0dd3b2c94908a386f6497342f4b98208ebbb2375f479d956ee6a98b0d1781"
+    },
+    {
+      "path": "source-evidence.json",
+      "sha256": "e34e980ed225a1c4e90bfefb7b1f0bc3efe6aefd0049d0d485086fd2fb15b6ed"
+    },
+    {
+      "path": "stock.json",
+      "sha256": "a23ba8e28b9643a501db8d7b7805e3743e4bba72f560b7597e74c6db8b8efb51"
+    }
+  ],
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "providerWrites": 0
+}

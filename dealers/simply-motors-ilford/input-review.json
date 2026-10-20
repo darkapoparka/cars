@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-input-review",
+  "dealer": "simply-motors-ilford",
+  "reviewed": true,
+  "reviewedAt": "2026-10-20T19:21:49.658Z",
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "checks": [
+    "canonical-hosting-and-preserved-fleet-collisions",
+    "assigned-expansion-lead",
+    "public-fact-schema-and-price-omission",
+    "personal-contact-screen",
+    "retained-stock-media",
+    "companion-copy-source-binding",
+    "immutable-template-release-and-native-QA-parent",
+    "reviewed-artwork-provenance-and-regenerated-logo-hashes"
+  ],
+  "sourceArtworkReview": "Retained artwork review is separate provenance; this command does not perform visual, Arabic-expert or dealer approval.",
+  "copyReview": "Automated structure, stock hash, source text and complete EN/BG rows; no new human translation approval is inferred.",
+  "contacts": {
+    "schemaVersion": 1,
+    "kind": "cars-automated-public-contact-screen",
+    "dealer": "simply-motors-ilford",
+    "method": "heuristic; no claim that unflagged values cannot be personal",
+    "flags": [],
+    "blocking": []
+  },
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-ilford-simply-motors",
+    "position": 53
+  },
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "inputs": [
+    {
+      "path": "FACTS-AND-INVENTORY.json",
+      "sha256": "9e1bc897eae1815da9c6baa26767264546591d7f10493671708f0479ee1a4182"
+    },
+    {
+      "path": "branding/generated-mark-on-dark.png",
+      "sha256": "e0e31d53cf93e28ce5dff96198b1022adecba6d286d411b1512b7e058ae9e373"
+    },
+    {
+      "path": "branding/generated-mark.png",
+      "sha256": "cb0e4a2504bedbd561dcf219c8437cbc11434c801499ffb4dd8f55067e0bb522"
+    },
+    {
+      "path": "branding/generated-master.png",
+      "sha256": "f3ce077890f2f74e3afd53cbaba6cf92322ee67d399745f3beb1708d525902a3"
+    },
+    {
+      "path": "branding/generated-on-dark.png",
+      "sha256": "6d6b0a6be6831d4b1075003b9b055585273b60c6e2a571d6e7f0905e05aa9c63"
+    },
+    {
+      "path": "branding/generation-provenance.json",
+      "sha256": "1b8577cc4f6521708a8810f9513689db5299598009df09df554c0f2e5f51e3dd"
+    },
+    {
+      "path": "branding/logo-contract.json",
+      "sha256": "a211819548053a164927f88e39815af1e3250c79a54a09f53c3a8da0e932fdf0"
+    },
+    {
+      "path": "branding/logo-recipe.json",
+      "sha256": "f346c45902bf10bc2cc747c61a91f40017a3f6fd63d803eab19eebee316d98ea"
+    },
+    {
+      "path": "branding/source.json",
+      "sha256": "490e14159b788f670e9bb834ea907a463b92d75136825e2c9f30f0ca4605ce9b"
+    },
+    {
+      "path": "business-facts.json",
+      "sha256": "662bc15c9246583c03a644ba069a2ce02ae8f2a5ba5aa9008744848a976408a8"
+    },
+    {
+      "path": "copy-review.json",
+      "sha256": "2277a97fcd70cb6a0a32e85221a8e1ba737d39aaf2a31c4028122e65ff696316"
+    },
+    {
+      "path": "dealer-stock/listing-1.jpg",
+      "sha256": "16c4f19ffeaaa921dbc1886d24fc4b39bd867f42e1a47095d276f3d6ddb6b0e3"
+    },
+    {
+      "path": "dealer-stock/listing-2.jpg",
+      "sha256": "73528176d67a212728d50ee3e678cc7579e9d99c4ce4a7c5550bd8158ee29f6f"
+    },
+    {
+      "path": "dealer-stock/listing-3.jpg",
+      "sha256": "41cfd1c00433042d04c2e6d73d1c2243b758df0418f333ed0663a8419df712a6"
+    },
+    {
+      "path": "dealer.json",
+      "sha256": "d83a5ce0af07297afee0934ff946fadaf39d58c61339b88cb9b550ca4a5109fc"
+    },
+    {
+      "path": "identity-review.json",
+      "sha256": "007036c4aabafdd071a54653788dac83e387c9ce39f444ff3dc025d3818a7100"
+    },
+    {
+      "path": "locale.json",
+      "sha256": "af3324965a4e8864331aa53c448ba83bcaa98dfe90627453f8ec1a39b7647605"
+    },
+    {
+      "path": "missing-facts.json",
+      "sha256": "72a417fc53818ec4a4e42b2e4c6ab59f983864c63872a9b93adb43b517da4778"
+    },
+    {
+      "path": "photo-evidence.json",
+      "sha256": "b2982fcc0cb63afe574fc28e444fac76a8c93c653aa37ad71c35fde500833063"
+    },
+    {
+      "path": "qualification.json",
+      "sha256": "68357e41303f139d81b1bbfc9a5cc79e1f6b7785de66f2524cb2dcf42aa0e832"
+    },
+    {
+      "path": "research-review.json",
+      "sha256": "6d9b47ad1f81f9c8486445819079fe2bb5760781cb9c154e09db9495dee149a8"
+    },
+    {
+      "path": "source-evidence.json",
+      "sha256": "0e425fa0575591a1a500a4c507d80d1fd20644156f99c4578a0e5b11e273c56b"
+    },
+    {
+      "path": "stock.json",
+      "sha256": "0fa3ae484acd80b013733f81f4736d66ee5120d5ce0e41056135036651428eea"
+    }
+  ],
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "providerWrites": 0
+}

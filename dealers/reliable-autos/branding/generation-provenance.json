@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "dealer": "reliable-autos",
+  "generations": [
+    {
+      "role": "master",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-79d86918-526d-4421-87a9-7dcb9fb6e66e",
+      "modelVersion": null,
+      "prompt": "Faithfully redraw this simple real RELIABLE AUTOS LTD identity into a clean professional logo. Keep exact name and monochrome black-and-white palette with bold sans-serif typography. A single horizontal lockup with a refined open RA monogram left and RELIABLE AUTOS on the right, LTD smaller below. Strong careful shapes, no extra slogan, no shield/checkmark/car, no gradients or effects. True transparent background, flat near-black ink for use on a white surface. Monogram needs broad strokes and be easily cropped independently, readable at32px. Improve the spacing and precision substantially.",
+      "promptRetained": true,
+      "sourceAssetSha256": "0e5f94f39fc49195800390a34bf4e2fe99562604534cc937b11d05d5b622323d",
+      "observedAt": "2026-10-19",
+      "originalResponseArtworkRetained": true
+    },
+    {
+      "role": "onDarkAndAccent",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-f91db7f9-70d3-4c6b-8bd0-42c4af406ad5",
+      "modelVersion": null,
+      "prompt": "Create a refined dark-surface adaptation of the exact supplied dealer logo. Exact text MUST READ: RELIABLE AUTOS with LTD below. Keep every name letter exactly, and preserve the supplied monogram/motif and proportions. The typography and dark emblem portions should be filled in SOLID OPAQUE PALE SILVER #d9e2ec inside a DARK CHARCOAL outer contour plus a thin WHITE outer keyline. Preserve copper/orange/purple accents if present inside dark contour. True TRANSPARENT alpha background and transparent letter counters. Make smooth strong solid contours without fringing, grunge, raster distress, speckles or noise. Generous clear gap between compact emblem and wording. No gradients, shadow, glowing effects, rectangle or additional content. It needs clear readable contrast on dark navy and red surfaces. Do not introduce unrelated terms such as motorsports. Exact spelling and business identity are essential.",
+      "promptRetained": true,
+      "sourceAssetSha256": "34b1fb1da06aa62e34bfe8c4f645d237fc769903a326cbee281362a36d5e461c",
+      "observedAt": "2026-10-19",
+      "originalResponseArtworkRetained": true
+    },
+    {
+      "role": "compact",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-c68072d8-92b9-433f-9d54-d662571a0e80",
+      "modelVersion": null,
+      "prompt": "Create ONLY the compact RA monogram from this supplied dealer logo, faithfully preserving the exact initial shapes, interlocking geometry and source motif. Remove all other wording; output one isolated compact monogram centered on a square transparent canvas with generous transparent margins. Strong solid pale-silver #d9e2ec fill inside a black contour with a thin white outer keyline, as a monochrome surface variant usable on white, dark navy and red. True transparent alpha including letter counters. Broad simple strokes clear at32px. No extra letters, no car, badge, background panel, gradient, shadow, reflections, speckles or raster distress. This is a precise compact extraction/reconstruction of the supplied identity, not a new design.",
+      "promptRetained": true,
+      "sourceAssetSha256": "4ce4abb660ebef4864d54f9a4b37332db8274a6fa38ff79f0b44b72645398911",
+      "observedAt": "2026-10-19",
+      "originalResponseArtworkRetained": true
+    }
+  ],
+  "exportPolicy": "Original generated PNG bytes are retained. Compact pixel-exact extractions, where used, retain their parent generation, hash and rectangle in source.json. Existing dealer-pack logo tooling performs only transparent padding removal and deterministic raster exports. No deterministic recolour is used."
+}

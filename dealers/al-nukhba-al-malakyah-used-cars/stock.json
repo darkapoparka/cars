@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-nukhba-al-malakyah-used-cars",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:00:11.597729Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "licenseplate-7188",
+      "title": "2023 Hyundai Santa Fe",
+      "make": "Hyundai",
+      "model": "Santa Fe",
+      "year": 2023,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/licenseplate-7188.webp"
+      ],
+      "sourceUrl": "https://licenseplate.ae/cars/listing/7188-hyundai-santa-fe-25-at-194-hp-sel",
+      "observedAt": "2026-10-19T20:00:11.597729Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Crossover",
+      "transmission": "Automatic",
+      "fuel": "Petrol",
+      "color": "Grey",
+      "mileageValue": 37600,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "licenseplate-7479",
+      "title": "2023 Hyundai Santa Fe",
+      "make": "Hyundai",
+      "model": "Santa Fe",
+      "year": 2023,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/licenseplate-7479.webp"
+      ],
+      "sourceUrl": "https://licenseplate.ae/cars/listing/7479-hyundai-santa-fe-25-at-4wd-194-hp-premium",
+      "observedAt": "2026-10-19T20:00:11.597729Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Crossover",
+      "transmission": "Automatic",
+      "fuel": "Petrol",
+      "color": "Silver",
+      "mileageValue": 31880,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "licenseplate-7488",
+      "title": "2023 Kia Sorento",
+      "make": "Kia",
+      "model": "Sorento",
+      "year": 2023,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/licenseplate-7488.webp"
+      ],
+      "sourceUrl": "https://licenseplate.ae/cars/listing/7488-kia-sorento-25-amt-4wd-281-hp-sx-x-line",
+      "observedAt": "2026-10-19T20:00:11.597729Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Crossover",
+      "transmission": "Automated manual",
+      "fuel": "Petrol",
+      "color": "Green",
+      "mileageValue": 45800,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

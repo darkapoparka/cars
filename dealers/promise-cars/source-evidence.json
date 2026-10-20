@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "dealer": "promise-cars",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uk.json",
+    "sha256": "6cd8d365586f9a5d5131fe4b1d50baede7de91ab384a135017c25367298b07c4"
+  },
+  "publicSources": [
+    {
+      "url": "https://www.autotrader.co.uk/dealers/west-midlands/oldbury/promise-cars-10042436",
+      "observedAt": "2026-10-19T17:36:50.039548Z",
+      "supports": [
+        "public-business-identity",
+        "public-business-contact",
+        "advertised-stock"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "publicObservations": [
+    {
+      "url": "https://www.autotrader.co.uk/dealers/west-midlands/oldbury/promise-cars-10042436",
+      "observedAt": "2026-10-19T17:36:50.039548Z",
+      "httpStatus": 200,
+      "sha256": "faa55869f1fd9d3bd8c492e8f20624725af396462e05100eeabf9a7cbf6fafbc",
+      "byteLength": 184807,
+      "retention": "Only reviewed public business fields, hashes, listing identities and compressed photographs are committed; raw HTML remains outside the public pack."
+    }
+  ],
+  "stock": [
+    {
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202608054838869",
+      "photoUrl": "https://m.atcdn.co.uk/a/media/w600/b70dd377fb7d4fa19bc6a3591c3d5cea.jpg",
+      "observedAt": "2026-10-19T17:53:30.975986Z",
+      "listingSha256": "8066bda5642bf29f480952be3cecbe1d693f823d87a55b0b715fd02b04d01550",
+      "sourcePhotoSha256": "29624b1a51115db02a0b79cd761aaf52c0854c69da195f523c44666635eb8091",
+      "sourcePhotoDimensions": [
+        600,
+        367
+      ],
+      "photoSha256": "347a873a39666569ff3ac6ac75be8bdbb10197573687645a2ac0aa8301375304",
+      "photoDimensions": [
+        600,
+        367
+      ],
+      "photoBytes": 59083,
+      "recordId": "public-listing-2",
+      "title": "2015 Audi A1 1.4 TFSI Sport Sportback S Tronic",
+      "retainedPhoto": "dealer-stock/public-2.jpg",
+      "publicPhotoReviewed": true
+    },
+    {
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202610066723455",
+      "photoUrl": "https://m.atcdn.co.uk/a/media/w600/ecbfe529b54f44ca880a7e31ef763119.jpg",
+      "observedAt": "2026-10-19T17:53:31.107440Z",
+      "listingSha256": "2d73e65f2a35252bc528ee64b67751995ce1f2dba1c751cc1ef9f1499b00bead",
+      "sourcePhotoSha256": "4c48cf65222da4749b4b397d573752f9e6f09e24b60d381bb400e3b529401295",
+      "sourcePhotoDimensions": [
+        600,
+        340
+      ],
+      "photoSha256": "5eff804b197902b3ab46fb768453f3c613ef35a949389bab82a7588a180c0d75",
+      "photoDimensions": [
+        600,
+        340
+      ],
+      "photoBytes": 46356,
+      "recordId": "public-listing-3",
+      "title": "2014 Audi A4 Avant 2.0 TFSI S line Multitronic",
+      "retainedPhoto": "dealer-stock/public-3.jpg",
+      "publicPhotoReviewed": true
+    }
+  ],
+  "review": {
+    "reviewedAt": "2026-10-19T18:24:26.752832Z",
+    "stockPhotoIdentityChecked": true,
+    "sourceClaimLimits": "Dated public adverts only; availability, repairs, vehicle condition and legal entity details are not independently certified.",
+    "omissions": [
+      "The Subaru BRZ detail page and catalogue image show an Audi rather than the advertised Subaru; excluded because the listing-photo identity conflicts."
+    ]
+  }
+}

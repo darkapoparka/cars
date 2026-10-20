@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "dealer": "lomeshaye-perfomance",
+  "generations": [
+    {
+      "role": "master",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-5e4240b8-877d-4caa-9c64-2ce64736d28b",
+      "modelVersion": null,
+      "prompt": "Create one clean independent proposed logo for LOMESHAYE PERFOMANCE LIMITED, a UK car dealer. IMPORTANT exact registered source spelling is PERFOMANCE, without the second R: spell LOMESHAYE PERFOMANCE exactly. One horizontal lockup with a distinctive bold interlocking LP monogram left and the exact words LOMESHAYE on first line, PERFOMANCE on second line, LIMITED small below. Geometric sturdy sans-serif, refined spacing. Flat near-black ink on true transparent background. Strong broad strokes, compact monogram legible at 32px. No literal car, no shield, no speedlines, no gradients, no shadows, no panel, no slogan. Clearly distinct emblem with a generous gap from text.",
+      "promptRetained": true,
+      "sourceAssetSha256": "808db673e9794f28db9e0bee129cc0f4411bde30dc9281d1ce55e97a1569a69b",
+      "observedAt": "2026-10-19",
+      "originalResponseArtworkRetained": true
+    },
+    {
+      "role": "onDarkAndAccent",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-c89a3919-9bff-4fcf-aa76-f026f85171a6",
+      "modelVersion": null,
+      "prompt": "Create a refined dark-surface adaptation of the exact supplied dealer logo. Exact text MUST READ: LOMESHAYE PERFOMANCE with LIMITED below (PERFOMANCE intentionally has only one R). Keep every name letter exactly, and preserve the supplied monogram/motif and proportions. The typography and dark emblem portions should be filled in SOLID OPAQUE PALE SILVER #d9e2ec inside a DARK CHARCOAL outer contour plus a thin WHITE outer keyline. Preserve copper/orange/purple accents if present inside dark contour. True TRANSPARENT alpha background and transparent letter counters. Make smooth strong solid contours without fringing, grunge, raster distress, speckles or noise. Generous clear gap between compact emblem and wording. No gradients, shadow, glowing effects, rectangle or additional content. It needs clear readable contrast on dark navy and red surfaces. Do not introduce unrelated terms such as motorsports. Exact spelling and business identity are essential.",
+      "promptRetained": true,
+      "sourceAssetSha256": "c06f4b7d33fd89417eed470bfcbca5c074ccee93dc3ad47c9d2bc756a0bd4e1c",
+      "observedAt": "2026-10-19",
+      "originalResponseArtworkRetained": true
+    }
+  ],
+  "exportPolicy": "Original generated PNG bytes are retained. Compact pixel-exact extractions, where used, retain their parent generation, hash and rectangle in source.json. Existing dealer-pack logo tooling performs only transparent padding removal and deterministic raster exports. No deterministic recolour is used."
+}

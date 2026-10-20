@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "dealer": "prestige-and-alma-used-cars",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://www.oneclickdrive.com/company/sharjah/prestige-and-alma-used-cars",
+      "observedAt": "2026-10-19T19:58:50.364391Z",
+      "supports": [
+        "public-business-trading-name",
+        "dealer-attributed-catalogue",
+        "business-location",
+        "public-business-phone"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Maserati/Levante-S/?id=31040",
+      "observedAt": "2026-10-19T19:58:50.364391Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Mini/Cooper-Cooper-S-JCW/?id=31098",
+      "observedAt": "2026-10-19T19:58:50.364391Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Jetour/Dashing-1.6T-Luxury/?id=31035",
+      "observedAt": "2026-10-19T19:58:50.364391Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "research": {
+    "observedAt": "2026-10-19T19:58:50.364391Z",
+    "profileUrl": "https://www.oneclickdrive.com/company/sharjah/prestige-and-alma-used-cars",
+    "profileSha256": "1e5aa6ed99dffe543e2915f141ef905f54f4cd0cc624cc28968379859193060c",
+    "classification": "public-marketplace-dealer-profile-and-listing-snapshot",
+    "directDealerPostingVerified": false,
+    "profileClaimed": false,
+    "limitation": "Seller attribution comes from the public marketplace profile. Current physical availability and direct dealer posting are not independently confirmed.",
+    "notes": [
+      "Marketplace profile and detail-page timing blocks conflict or appear generic; opening hours omitted. Platform WhatsApp relay is excluded."
+    ],
+    "contactReview": "Only business-labeled dealer call numbers retained. Marketplace relay/support numbers and personal-looking staff contacts excluded.",
+    "photoSources": [
+      {
+        "listingId": "ocd-31040",
+        "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Maserati/Levante-S/?id=31040",
+        "sourceImageUrl": "https://static.oneclickdrive.com/uploads/cars/Maserati_Levante_2017_31040_31040_27063841906-12_small.jpg",
+        "observedAt": "2026-10-19T19:58:50.364391Z",
+        "retainedPath": "dealer-stock/ocd-31040.jpg",
+        "sha256": "8d562c81b832f75f7b1b45106f1ec3e5a4f1413bb3ba094e5dd3017c6669cd2f",
+        "bytes": 36885,
+        "width": 450,
+        "height": 395,
+        "operation": "resize-within-1280-without-upscale-and-JPEG-quality-82-or-83"
+      },
+      {
+        "listingId": "ocd-31098",
+        "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Mini/Cooper-Cooper-S-JCW/?id=31098",
+        "sourceImageUrl": "https://static.oneclickdrive.com/uploads/cars/MINI_Cooper_2022_31098_31098_27172032926-19_small.jpg",
+        "observedAt": "2026-10-19T19:58:50.364391Z",
+        "retainedPath": "dealer-stock/ocd-31098.jpg",
+        "sha256": "fd2cba7cf76122db37013e276c11656b1e8ffc4395ed554766b480a9d2a3c73d",
+        "bytes": 54656,
+        "width": 450,
+        "height": 395,
+        "operation": "resize-within-1280-without-upscale-and-JPEG-quality-82-or-83"
+      },
+      {
+        "listingId": "ocd-31035",
+        "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Jetour/Dashing-1.6T-Luxury/?id=31035",
+        "sourceImageUrl": "https://static.oneclickdrive.com/uploads/cars/Jetour_Dashing_2024_31035_31035_27053614828-7_small.jpg",
+        "observedAt": "2026-10-19T19:58:50.364391Z",
+        "retainedPath": "dealer-stock/ocd-31035.jpg",
+        "sha256": "eb17d1329395506dd8ef89bd05d8086549f0bb5b9ca7f48aa04330dceaf44192",
+        "bytes": 44554,
+        "width": 450,
+        "height": 395,
+        "operation": "resize-within-1280-without-upscale-and-JPEG-quality-82-or-83"
+      }
+    ]
+  }
+}

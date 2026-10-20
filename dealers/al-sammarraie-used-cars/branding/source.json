@@ -1,0 +1,151 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-sammarraie-used-cars",
+  "realLogoFirst": true,
+  "publishedBranding": false,
+  "creationMethod": "imagegen-independent-logo-proposal",
+  "dealerApproved": false,
+  "approvalStatus": "independent-proposal-not-dealer-approved",
+  "usageStatus": "public-preview-only",
+  "observedAt": "2026-10-19T20:00:42.047781Z",
+  "publicSources": [
+    {
+      "url": "https://gcccardeals.com/en-ae/dealers/al-sammarraie-used-cars-tr-sole-proprietorship",
+      "observedAt": "2026-10-19T20:00:42.047781Z"
+    }
+  ],
+  "originals": [
+    {
+      "path": "branding/source-original.jpg",
+      "sha256": "82956855a22da5424c34e954dd3c01f2a53796a784955ed1bef60e00dba5c67a",
+      "url": "https://dbz-images.dubizzle.com/profiles/auto_agency/20171120_195027.jpg?impolicy=agency",
+      "observedAt": "2026-10-19T20:00:42.047781Z",
+      "identityStatus": "mismatched-marketplace-mark-not-adopted"
+    }
+  ],
+  "logoResearch": "Current seller-specific GCC Car Deals profile supplies a tiny image reading Samurai Motors. Identity relationship is unconfirmed, so that image is evidence only and not used as official branding. Exact-name new proposal is unapproved.",
+  "visualReview": "Reviewed transparent artwork, full business-wordmark spelling and compact emblem. Deterministic crops retain the generated artwork; no vector substitute, recolouring or template changes. Compact variants are unapproved preview adaptations. Exact AL SAMMARRAIE USED CARS text; burgundy/charcoal S-road emblem proposal.",
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T20:57:51.052Z",
+    "master": {
+      "path": "branding/generated-primary.png",
+      "sha256": "a65265ee83b5b2853c6cd7808b1ea63f05a61cadbb87008bb65481410892a747",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a90ab8f1-6ae6-4ec2-b396-15e04731a233",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "79331bd2981e0ce22e711f3ac6f66bfb05c1834e38aec06b1ed01c99c9c03dea",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a90ab8f1-6ae6-4ec2-b396-15e04731a233",
+        "modelVersion": null,
+        "transformation": {
+          "operation": "rectangular-extract-without-recolour-or-redrawing",
+          "source": "branding/generated-primary.png",
+          "sourceSha256": "a65265ee83b5b2853c6cd7808b1ea63f05a61cadbb87008bb65481410892a747",
+          "rectangle": {
+            "left": 0,
+            "top": 0,
+            "width": 451,
+            "height": 887
+          }
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-inverse.png",
+      "sha256": "dfef6dec474f660744f45d3d7132da6885ea1eac9c0bf157f4212c1d86e376e2",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-874a1a1f-dc46-4e9b-a0d3-d5ec6ee20688",
+        "modelVersion": null
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-primary.png",
+        "sha256": "a65265ee83b5b2853c6cd7808b1ea63f05a61cadbb87008bb65481410892a747",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-a90ab8f1-6ae6-4ec2-b396-15e04731a233",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-inverse.png",
+        "sha256": "dfef6dec474f660744f45d3d7132da6885ea1eac9c0bf157f4212c1d86e376e2",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-874a1a1f-dc46-4e9b-a0d3-d5ec6ee20688",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-inverse.png",
+        "sha256": "dfef6dec474f660744f45d3d7132da6885ea1eac9c0bf157f4212c1d86e376e2",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-874a1a1f-dc46-4e9b-a0d3-d5ec6ee20688",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": {
+        "onLight": [
+          "#ffffff"
+        ],
+        "onDark": [
+          "#111113",
+          "#101820"
+        ],
+        "onAccent": [
+          "#09090b",
+          "#17191c",
+          "#c40101"
+        ]
+      },
+      "notes": "Reviewed transparent artwork, full business-wordmark spelling and compact emblem. Deterministic crops retain the generated artwork; no vector substitute, recolouring or template changes. Compact variants are unapproved preview adaptations. Exact AL SAMMARRAIE USED CARS text; burgundy/charcoal S-road emblem proposal."
+    },
+    "compactMarkStatus": "unapproved-preview-adaptation",
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-19T20:57:51.052Z",
+      "widths": [
+        32,
+        64
+      ],
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#101820"
+      ],
+      "notes": "Reviewed transparent artwork, full business-wordmark spelling and compact emblem. Deterministic crops retain the generated artwork; no vector substitute, recolouring or template changes. Compact variants are unapproved preview adaptations. Exact AL SAMMARRAIE USED CARS text; burgundy/charcoal S-road emblem proposal."
+    }
+  },
+  "generationPrompts": [
+    {
+      "role": "primary",
+      "prompt": "Create an independent professional dealer logo proposal. Exact words AL SAMMARRAIE on the first line and USED CARS below. A distinctive compact left-hand monogram of two clean interlocking S ribbons, with a single open road curve between them. Deep burgundy #782538 and charcoal #171a20, flat fills on true transparent background. No background, no shadow, no texture, no gradients, no car photography. Approximately square emblem readable at 32px and balanced wide horizontal lockup. Refined sturdy modern typography, excellent spacing, substantial strokes. No claims and no additional wording. The business has not approved this proposal.",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-a90ab8f1-6ae6-4ec2-b396-15e04731a233",
+      "modelVersion": null,
+      "returnedArtifact": "exec-a90ab8f1-6ae6-4ec2-b396-15e04731a233.png",
+      "note": "The tool exposed the returned artifact identifier and did not expose a model version."
+    },
+    {
+      "role": "inverse",
+      "prompt": "Create the compact inverse surface variant of the left-hand emblem in this logo. ONLY the compact left emblem, absolutely no wordmark or business text. Preserve its existing shape, initials where they form the symbol, geometry, motif, proportions and open counters. Re-render entirely in one solid neutral cool silver #b9bec2, substantial flat strokes and smooth boundaries. Dark fills become open transparent negative space with the motif represented in silver. Center the one entire compact emblem on a square true transparent canvas, about 80% of canvas width, no other graphics. No pure white ink. No background, no mockup, no labels, no gradient, no shadow, no texture, no distressed edges, no extra lines. Clean automotive identity asset with a recognizable silhouette at 32 pixels.",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-874a1a1f-dc46-4e9b-a0d3-d5ec6ee20688",
+      "modelVersion": null,
+      "returnedArtifact": "exec-874a1a1f-dc46-4e9b-a0d3-d5ec6ee20688.png",
+      "note": "The tool exposed the returned artifact identifier and did not expose a model version."
+    }
+  ]
+}

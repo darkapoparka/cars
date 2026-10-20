@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": true,
+  "reviewedAt": "2026-10-20T19:17:28.218Z",
+  "dealer": "millions-auto-cars",
+  "dealerId": "gb-ruislip-millions-auto-cars",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "method": "Automated exact registry/pack identity, canonical hosting and batch comparison; retained public source fields were structurally checked, not human-approved.",
+  "sources": [
+    {
+      "url": "https://www.autotrader.co.uk/dealers/middlesex/ruislip/millions-auto-cars-ltd-10032341",
+      "observedAt": "2026-10-19T17:36:50.202476Z",
+      "supports": [
+        "public-business-identity",
+        "public-business-contact",
+        "advertised-stock"
+      ]
+    }
+  ],
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  }
+}

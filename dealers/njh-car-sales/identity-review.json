@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": true,
+  "reviewedAt": "2026-10-20T19:18:30.394Z",
+  "dealer": "njh-car-sales",
+  "dealerId": "gb-swansea-njh-car-sales",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "method": "Automated exact registry/pack identity, canonical hosting and batch comparison; retained public source fields were structurally checked, not human-approved.",
+  "sources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/S-D-Harris?menu=1",
+      "observedAt": "2026-10-19T17:36:51.244160Z",
+      "supports": [
+        "public-business-identity",
+        "public-business-contact",
+        "advertised-stock"
+      ]
+    },
+    {
+      "url": "https://www.autotrader.co.uk/dealers/glamorgan/swansea/njh-car-sales-10007755",
+      "observedAt": "2026-10-19T18:24:26.921748Z",
+      "supports": [
+        "public-business-identity",
+        "public-logo-banner"
+      ]
+    }
+  ],
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  }
+}

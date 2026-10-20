@@ -1,0 +1,175 @@
+{
+  "schemaVersion": 1,
+  "dealer": "burton-yj-motors",
+  "dealerId": "gb-burton-yj-motors",
+  "status": "reviewed",
+  "realLogoFirst": true,
+  "creationMethod": "imagegen-redraw",
+  "logoKind": "redraw",
+  "dealerApproved": false,
+  "approvalStatus": "independent-proposal-not-dealer-approved",
+  "observedAt": "2026-10-19",
+  "sourceLogoUrl": "https://m.atcdn.co.uk/dealer-logo/at2/adbranding/10030623/images/fpa_logo.gif",
+  "researchConclusion": "White serif name and navy palette retained in a stronger redraw; proposed compact YJ adaptation.",
+  "checkedSources": [
+    {
+      "url": "https://www.autotrader.co.uk/dealers/staffordshire/burton-on-trent/y-j-motors-10030623",
+      "observedAt": "2026-10-19",
+      "result": "Public dealer identity, current advertised vehicles and available brand artwork reviewed."
+    }
+  ],
+  "originals": [
+    {
+      "path": "branding/original-logo.gif",
+      "url": "https://m.atcdn.co.uk/dealer-logo/at2/adbranding/10030623/images/fpa_logo.gif",
+      "sha256": "d1285e332c20b93662f65ad33d813b12990dadbe7399725a8b803c3c83cdb125",
+      "observedAt": "2026-10-19",
+      "reviewed": true,
+      "assessment": "White serif name and navy palette retained in a stronger redraw; proposed compact YJ adaptation."
+    }
+  ],
+  "generation": {
+    "tool": "image_gen.imagegen",
+    "id": "exec-1539b7ce-3722-4822-b506-f9bec95bc8ff",
+    "modelVersion": null,
+    "prompt": "Produce ONE polished production logo for Y J MOTORS, a faithful substantive redraw of the attached real dealer identity. Faithfully redraw the original refined white serif Y J Motors on navy identity with stronger weight and cleaner spacing. Far LEFT a clear compact interlocked YJ serif monogram. Far RIGHT exact name Y J MOTORS with Y J large above MOTORS. Preserve navy and white colours; do not invent a new symbol beyond the initials. Horizontal 3:1 composition, icon and wordmark separated by ample transparent gap for cropping. Permanent DUAL-CONTRAST treatment: solid DARK BLACK outer outline surrounding all white or gold forms, then a thin clean WHITE outer keyline around that dark outline so this exact transparent asset reads clearly on white, charcoal and red backgrounds. Colour fields and wordmark are flat ink, crisp vector-style smooth edges, premium simplicity. Do not invent dealer approval. No rectangle, no plaque, no texture, no speckled edges, no gradient, no metallic effect, no 3D, no glow, no shadow, no mockup. True transparent alpha background and plenty of fully transparent margins. Exactly the single requested dealership logo."
+  },
+  "generationReferences": [],
+  "workingLogoPath": "branding/generated-master.png",
+  "usageStatus": "public-preview-only",
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T18:56:42.959980Z",
+    "master": {
+      "path": "branding/generated-master.png",
+      "sha256": "f749bfacde345fb64877bdac12f28f83e45ed7c3132366776f3b3ae6dcb9f6c1",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1539b7ce-3722-4822-b506-f9bec95bc8ff",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "999708f72c75067687bc639e2edbc358a0add4d35aebf16cc264d551ba4eb369",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1539b7ce-3722-4822-b506-f9bec95bc8ff",
+        "modelVersion": null
+      },
+      "derivation": {
+        "operation": "rectangular-crop-without-recolouring",
+        "sourcePath": "branding/generated-master.png",
+        "sourceSha256": "f749bfacde345fb64877bdac12f28f83e45ed7c3132366776f3b3ae6dcb9f6c1",
+        "bounds": {
+          "left": 0,
+          "top": 0,
+          "width": 814,
+          "height": 724
+        },
+        "reason": "Isolate the separately generated compact icon; all retained pixels come from the named master generation."
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-on-dark.png",
+      "sha256": "e6a09b60ebcc43d7a5b9bd830471a5d6d2343f5186b85c2b9aa361280f3d3fb6",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-10ef0414-4c19-4abf-93e7-7125ef0cf681",
+        "modelVersion": null
+      },
+      "derivation": {
+        "operation": "rectangular-crop-without-recolouring",
+        "sourcePath": "branding/generated-on-dark.png",
+        "sourceSha256": "98dc54c0fd94d3368dee3f0f4984775ee17d1e7255011a4ff8ae1bd3b4d377b6",
+        "bounds": {
+          "left": 0,
+          "top": 0,
+          "width": 807,
+          "height": 724
+        },
+        "reason": "Isolate the separately generated compact icon; all retained pixels come from the named master generation."
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-master.png",
+        "sha256": "f749bfacde345fb64877bdac12f28f83e45ed7c3132366776f3b3ae6dcb9f6c1",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-1539b7ce-3722-4822-b506-f9bec95bc8ff",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "98dc54c0fd94d3368dee3f0f4984775ee17d1e7255011a4ff8ae1bd3b4d377b6",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-10ef0414-4c19-4abf-93e7-7125ef0cf681",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "98dc54c0fd94d3368dee3f0f4984775ee17d1e7255011a4ff8ae1bd3b4d377b6",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-10ef0414-4c19-4abf-93e7-7125ef0cf681",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": {
+        "onLight": [
+          "#ffffff"
+        ],
+        "onDark": [
+          "#111113",
+          "#101820"
+        ],
+        "onAccent": [
+          "#09090b",
+          "#17191c",
+          "#c40101"
+        ]
+      },
+      "wordmarkWidths": [
+        120,
+        180
+      ],
+      "notes": "Visually reviewed at 120px and 180px wordmark widths on all six listed existing template backgrounds. Correct trading-name spelling, recognisable motif, sufficient contrast and transparent backgrounds verified. Genuine pale-silver generated variants preserve solid fills on dark/accent surfaces where needed. Template palettes and composition are unchanged. No dealer approval is claimed."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "widths": [
+        32,
+        64,
+        96
+      ],
+      "notes": "Visually reviewed at 32px, 64px and 96px on all six existing template backgrounds. The compact symbol remains recognisable without the full wordmark. Separately generated compact symbols replace overlapping text fragments for Thornton Motors, Yorkshire Car Company and Auto Club. No dealer approval is claimed."
+    },
+    "compactMarkStatus": "independent-proposal-not-dealer-approved"
+  },
+  "generationVariants": [
+    {
+      "role": "onDark-and-onAccent",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-10ef0414-4c19-4abf-93e7-7125ef0cf681",
+        "modelVersion": null
+      },
+      "prompt": "Edit this exact attached dealership logo into a strong DARK-BACKGROUND VARIANT. Preserve the exact icon, wordmark, every letter, proportions, spacing and brand identity. Change the DARK INTERIOR INK of the letters and monogram to SOLID OPAQUE PALE SILVER #d9e2ec. Retain ALL existing coloured accents unchanged: gold, lime, blue, green, yellow, red and rose petals where present. Keep the exact icon silhouette. Keep a smooth strong DARK CHARCOAL outer contour around the silver-filled forms, and the thin white outer keyline. This is fully filled solid pale silver enclosed in dark outlines, NEVER just hollow outline lettering. If the icon is already white, preserve its white appearance; only strengthen dark lettering. Gaps, counters and exterior remain genuinely transparent. No extra text. No missing patches, speckles, distress, texture, gradient, metallic lighting, glow, shadow or mockup. ONE original horizontal logo, same geometry as reference, with clean opaque light silver ink for excellent contrast on charcoal or red backgrounds.",
+      "reference": {
+        "path": "branding/generated-master.png",
+        "sha256": "f749bfacde345fb64877bdac12f28f83e45ed7c3132366776f3b3ae6dcb9f6c1",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-1539b7ce-3722-4822-b506-f9bec95bc8ff",
+          "modelVersion": null
+        }
+      }
+    }
+  ]
+}

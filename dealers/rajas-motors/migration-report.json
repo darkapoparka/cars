@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "rajas-motors",
+  "previousSlug": "rajas-motors",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:19:05.575Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-bradford-rajas-motors",
+    "position": 25
+  },
+  "before": {
+    "files": 37,
+    "bytes": 3610594
+  },
+  "afterBeforeReview": {
+    "files": 21,
+    "bytes": 1397559
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 124684,
+      "sha256": "58ccbd942b05904e4f69459d637d778f83a83a12b18c26ff9b9c79e4cc5edee0"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 114987,
+      "sha256": "972b1a3b18d983afe90bc3ac1f7caad07d292c0d161b12286eba9cc383c119de"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 124684,
+      "sha256": "58ccbd942b05904e4f69459d637d778f83a83a12b18c26ff9b9c79e4cc5edee0"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 167580,
+      "sha256": "61ac6df034973694f08c160f27f9108754a3dd13459fbf55b74357998fdda947"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 172195,
+      "sha256": "fc290c3daa3c02b8b878ba306a827bd4f1160d4bc2f4ccfb6612bdd1edd1c459"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 172195,
+      "sha256": "fc290c3daa3c02b8b878ba306a827bd4f1160d4bc2f4ccfb6612bdd1edd1c459"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 167580,
+      "sha256": "61ac6df034973694f08c160f27f9108754a3dd13459fbf55b74357998fdda947"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 124684,
+      "sha256": "58ccbd942b05904e4f69459d637d778f83a83a12b18c26ff9b9c79e4cc5edee0"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 9483,
+      "sha256": "4f83b59aa2bacf3bd1ded49a86cd40c26adeb810f9678c9c0dba99ab5a5db249"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 172195,
+      "sha256": "fc290c3daa3c02b8b878ba306a827bd4f1160d4bc2f4ccfb6612bdd1edd1c459"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 127496,
+      "sha256": "7bdfec2c89ef9974e3862c281475fd843cb2ddfacb2f83ed67f522fb8f1902ad"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 172195,
+      "sha256": "fc290c3daa3c02b8b878ba306a827bd4f1160d4bc2f4ccfb6612bdd1edd1c459"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 127496,
+      "sha256": "7bdfec2c89ef9974e3862c281475fd843cb2ddfacb2f83ed67f522fb8f1902ad"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 167580,
+      "sha256": "61ac6df034973694f08c160f27f9108754a3dd13459fbf55b74357998fdda947"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 113340,
+      "sha256": "8366e9a3ee7908e6c54cdb4f2184b4001e7032e98ed1e0e18495947339091407"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 78680,
+      "sha256": "c6c45242e9df41b98f20613eafee7338acd6e83e3dee40e2f3a91ae1d7d9c890"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 79772,
+      "sha256": "835ad3b75c2d8e8870cbb128fc11fb723c18c686b405fd06b666e1139f18dd57"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 12,
+    "bytes": 1371843,
+    "inventorySha256": "47062d756f30f855b91a4e4bdade2faa2ffa9437e1ad83ec77e9497232ef4216",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "rajas-motors",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 23,
+    "report": "dealers/rajas-motors/input-review.json"
+  },
+  "after": {
+    "files": 23,
+    "bytes": 1405972
+  }
+}

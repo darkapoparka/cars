@@ -1,0 +1,131 @@
+{
+  "schemaVersion": 1,
+  "dealer": "unique-motors-nottingham",
+  "status": "reviewed",
+  "realLogoFirst": true,
+  "publicSources": [
+    {
+      "url": "https://www.autotrader.co.uk/dealers/nottinghamshire/nottingham/unique-motors-10024219?refresh=true",
+      "observedAt": "2026-10-19T17:36:49.420721Z"
+    }
+  ],
+  "originals": [
+    {
+      "path": "branding/observed-logo.png",
+      "sha256": "7477c0db450474ef74af7232d9b31fcefc62db90d7c6afcd4e3db2cb2a4c67f7",
+      "sourceUrl": "https://m.atcdn.co.uk/dealer-logo/at2/adbranding/10024219/images/fpa_logo.gif",
+      "observedAt": "2026-10-19",
+      "kind": "published-logo-artwork"
+    }
+  ],
+  "creationMethod": "imagegen-redraw",
+  "dealerApproved": false,
+  "approvalStatus": "independent-preview-not-dealer-approved",
+  "researchConclusion": "The public logo was inspected. A clean transparent redraw preserves its name, colours and principal motif; the original bytes are retained.",
+  "generation": {
+    "tool": "image_gen.imagegen",
+    "generationId": "exec-d79cf616-df8d-4b56-b99e-57e6a1f75b84",
+    "modelVersion": null,
+    "prompt": "Use case: logo-brand. Faithfully redraw the real UNIQUE MOTORS NOTTINGHAM dealer logo shown in the reference. Preserve exact name \"UNIQUE MOTORS\" with \"NOTTINGHAM\" below, red and white/silver colours, italic motorsport lettering, and the sleek vehicle roof silhouette. Rebuild the typography and motif cleanly with a professional flat finish; remove all backdrop, city skyline, photographic textures, diagonal corner decoration, gradients and glow. Wide horizontal transparent lockup. On the far left include a compact stylized U with a simple car-roof contour; keep it generously separated from the main wordmark to allow a lossless icon crop. Strong white and red letters with a fine dark edge and white outer keyline, so this single transparent mark is clearly legible on white, charcoal and red backgrounds. No tagline or additional words. Small mark must work at 32px; no thin fussy details. This is an independent faithful redraw for preview, not dealer approved."
+  },
+  "compactDerivation": {
+    "method": "lossless-isolated-emblem-crop",
+    "parentReference": "branding/generated-master.png",
+    "parentSha256": "7334e6ef8ed8b0b7b54086a1204eef4357d8b60e49ec044aa38976c70f90ab4c",
+    "crop": {
+      "left": 0,
+      "top": 0,
+      "width": 466,
+      "height": 725
+    },
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-d79cf616-df8d-4b56-b99e-57e6a1f75b84",
+      "modelVersion": null
+    }
+  },
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T18:39:29.314Z",
+    "master": {
+      "path": "branding/generated-master.png",
+      "sha256": "7334e6ef8ed8b0b7b54086a1204eef4357d8b60e49ec044aa38976c70f90ab4c",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-d79cf616-df8d-4b56-b99e-57e6a1f75b84",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "21f2e9a57c242ba48f9393f21170ab75220757585adfe02cb2d29ce9c5f92f8e",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-d79cf616-df8d-4b56-b99e-57e6a1f75b84",
+        "modelVersion": null
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "21f2e9a57c242ba48f9393f21170ab75220757585adfe02cb2d29ce9c5f92f8e",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-d79cf616-df8d-4b56-b99e-57e6a1f75b84",
+        "modelVersion": null
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-master.png",
+        "sha256": "7334e6ef8ed8b0b7b54086a1204eef4357d8b60e49ec044aa38976c70f90ab4c",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-d79cf616-df8d-4b56-b99e-57e6a1f75b84",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-master.png",
+        "sha256": "7334e6ef8ed8b0b7b54086a1204eef4357d8b60e49ec044aa38976c70f90ab4c",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-d79cf616-df8d-4b56-b99e-57e6a1f75b84",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-master.png",
+        "sha256": "7334e6ef8ed8b0b7b54086a1204eef4357d8b60e49ec044aa38976c70f90ab4c",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-d79cf616-df8d-4b56-b99e-57e6a1f75b84",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": {
+        "onLight": [
+          "#ffffff"
+        ],
+        "onDark": [
+          "#111113"
+        ],
+        "onAccent": [
+          "#c40101"
+        ]
+      },
+      "wordmarkWidths": [
+        120,
+        180
+      ],
+      "markWidths": [
+        32,
+        64
+      ],
+      "method": "Same actual dual-contrast generated artwork on each surface; no generated colours are represented as a template palette change.",
+      "reviewedAt": "2026-10-19T18:39:29.314Z",
+      "review": "Visually reviewed exact cropTransparentPadding exports at120px and180px wordmark widths and32px/64px compact sizes on white, charcoal and red. Exact spelling retained, real alpha present, compact emblem clear. The source palette is part of the artwork only."
+    }
+  }
+}

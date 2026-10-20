@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "supreme-cars-luton",
+  "previousSlug": "supreme-cars-luton",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:23:17.695Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-luton-supreme-cars-burr",
+    "position": 66
+  },
+  "before": {
+    "files": 41,
+    "bytes": 3423886
+  },
+  "afterBeforeReview": {
+    "files": 25,
+    "bytes": 1620179
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 86839,
+      "sha256": "97df9c766baec139d02b4d75109082c6fd551f5baa5e12e9a03061248a3147de"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 241913,
+      "sha256": "26201b1dd47891ad51964a7652146e192e4847363107629175d679cec96a9e5b"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 86839,
+      "sha256": "97df9c766baec139d02b4d75109082c6fd551f5baa5e12e9a03061248a3147de"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 63373,
+      "sha256": "2e46f25af81420966e4e5e6106e057ffcf5ac54e56a87af2adde9df6014c6845"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 165663,
+      "sha256": "a7a639c3281b3c09fc045ccc5c7bdc086b520e92652f520112061e889544f67b"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 165663,
+      "sha256": "a7a639c3281b3c09fc045ccc5c7bdc086b520e92652f520112061e889544f67b"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 63373,
+      "sha256": "2e46f25af81420966e4e5e6106e057ffcf5ac54e56a87af2adde9df6014c6845"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 86839,
+      "sha256": "97df9c766baec139d02b4d75109082c6fd551f5baa5e12e9a03061248a3147de"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 7427,
+      "sha256": "9cd3b22011d4f17e1f86a260e77dbf135dff98b49ba83590e72da178306d0ce3"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 165663,
+      "sha256": "a7a639c3281b3c09fc045ccc5c7bdc086b520e92652f520112061e889544f67b"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 104630,
+      "sha256": "ea299294c64000c4e4c4741ece8b4cc5343ccfd2a01679a932d0213ff3d2274d"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 165663,
+      "sha256": "a7a639c3281b3c09fc045ccc5c7bdc086b520e92652f520112061e889544f67b"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 104630,
+      "sha256": "ea299294c64000c4e4c4741ece8b4cc5343ccfd2a01679a932d0213ff3d2274d"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 63373,
+      "sha256": "2e46f25af81420966e4e5e6106e057ffcf5ac54e56a87af2adde9df6014c6845"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 45346,
+      "sha256": "1949900b929e7dfa68f8e8d799620a04b722d6c24b13091549b64b2ac812a45c"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 135618,
+      "sha256": "d93ed768f7b68e3231e7f4d314653bfd77331dca1f1d12bc8e5a3b8077db6f10"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 54662,
+      "sha256": "0b381438bcaa5b6d3adfc5592cbc20fe574a1fb9ad5ca04843700aa06c7c907f"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 13,
+    "bytes": 1590654,
+    "inventorySha256": "410497068280adf8ec6fcb6318682e96e9e28f581794bbd84e6865f4d6f8c630",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "supreme-cars-luton",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 27,
+    "report": "dealers/supreme-cars-luton/input-review.json"
+  },
+  "after": {
+    "files": 27,
+    "bytes": 1629324
+  }
+}

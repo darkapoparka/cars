@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-input-review",
+  "dealer": "car-shop-swansea",
+  "reviewed": true,
+  "reviewedAt": "2026-10-20T19:14:58.257Z",
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "checks": [
+    "canonical-hosting-and-preserved-fleet-collisions",
+    "assigned-expansion-lead",
+    "public-fact-schema-and-price-omission",
+    "personal-contact-screen",
+    "retained-stock-media",
+    "companion-copy-source-binding",
+    "immutable-template-release-and-native-QA-parent",
+    "reviewed-artwork-provenance-and-regenerated-logo-hashes"
+  ],
+  "sourceArtworkReview": "Retained artwork review is separate provenance; this command does not perform visual, Arabic-expert or dealer approval.",
+  "copyReview": "Automated structure, stock hash, source text and complete EN/BG rows; no new human translation approval is inferred.",
+  "contacts": {
+    "schemaVersion": 1,
+    "kind": "cars-automated-public-contact-screen",
+    "dealer": "car-shop-swansea",
+    "method": "heuristic; no claim that unflagged values cannot be personal",
+    "flags": [],
+    "blocking": []
+  },
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-swansea-car-shop",
+    "position": 93
+  },
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "inputs": [
+    {
+      "path": "FACTS-AND-INVENTORY.json",
+      "sha256": "f1f78243ba3712db5f434d851af74d069b620598f029bdfe15869081eb1c29d4"
+    },
+    {
+      "path": "branding/generated-mark.png",
+      "sha256": "be16ef024ccf6179856ab415eef541e214efa097ecf1bf926ebee319e205704c"
+    },
+    {
+      "path": "branding/generated-master.png",
+      "sha256": "bed2f53d3f3a6f75f58909f2e8fa936b274ac54f67f910423bd96a2c8e898f36"
+    },
+    {
+      "path": "branding/generated-on-dark.png",
+      "sha256": "c96bd856e8b45874655baadbcd46d1093c6a5abd9b0a82fb110c52998981187a"
+    },
+    {
+      "path": "branding/logo-contract.json",
+      "sha256": "48cce03de9be2c4d746ca67f1d77c026b3db581a980793a793d19422a1d073f3"
+    },
+    {
+      "path": "branding/logo-recipe.json",
+      "sha256": "d2fb0e735eb9116d6d1a15751da8f5a85b759b5db263e4a1c41a9554901afbad"
+    },
+    {
+      "path": "branding/source.json",
+      "sha256": "7f2924b0350ac344b872fd75add2b0fd79c80c4393e5432c123d9ed179a6dd21"
+    },
+    {
+      "path": "business-facts.json",
+      "sha256": "d6145a62ee7193153884a1b2e2ca2faa3cf6c18819528b6df41fee2822d31319"
+    },
+    {
+      "path": "copy-review.json",
+      "sha256": "8f42d4de6ed4abaef9d165c0d7d9213ae57301174ef3c63f34403144bfa2b9d2"
+    },
+    {
+      "path": "dealer-stock/public-1.jpg",
+      "sha256": "da9f50c6560768bfd397a52d890f96976da8f5725eea2cc73c2080b436a579d0"
+    },
+    {
+      "path": "dealer-stock/public-2.jpg",
+      "sha256": "53b2ccb6380ffaf2f2eb7b4a6b4f80ffe3b1e3e07b97eddbcf27c45cf23c8785"
+    },
+    {
+      "path": "dealer-stock/public-3.jpg",
+      "sha256": "3dfaceaf6793b006a294db04f7a8ca5816ffb5708065c238827c387b0852eefc"
+    },
+    {
+      "path": "dealer.json",
+      "sha256": "247753df80e193c901cdada8a88997e83f2f2c2094ee2dd306d86b8d70ab05c1"
+    },
+    {
+      "path": "identity-review.json",
+      "sha256": "e002a73b538dc8a6b0cab3279f4286ec52db16fc9118a285e8b1922b449c3521"
+    },
+    {
+      "path": "locale.json",
+      "sha256": "07e82327f1af8ebc3a5c60fffefd1a457e4e8b6fe04b3b9430fa3c1c6c944a59"
+    },
+    {
+      "path": "missing-facts.json",
+      "sha256": "dfeefd70058efb59cd206a352ca408d5ccc305e48a95e97162f1cd79e0a4db3a"
+    },
+    {
+      "path": "qualification.json",
+      "sha256": "3e077beb88890279790547abc7b087febbadd20c8c639c7ad661be392f61d060"
+    },
+    {
+      "path": "source-evidence.json",
+      "sha256": "a7b98ccffb544fe31c9f51ea0dd26bfdce01fc8c5058be7f204e352796cc1252"
+    },
+    {
+      "path": "stock.json",
+      "sha256": "cc19e9450b560e0fe706632278305ecb72d4017d3c50d7348442019ff70995eb"
+    }
+  ],
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "providerWrites": 0
+}

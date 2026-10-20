@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "rh-motors-services",
+  "previousSlug": "rh-motors-services",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:20:14.739Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-london-rh-motors-services",
+    "position": 63
+  },
+  "before": {
+    "files": 40,
+    "bytes": 4049343
+  },
+  "afterBeforeReview": {
+    "files": 24,
+    "bytes": 1964639
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 82738,
+      "sha256": "e54d1937124e64244cc0ae33541ffa2caed0ff6aced5680b0f6b38420b283281"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 151012,
+      "sha256": "555840c2a7c56e00b7e7c90deff4fb62528cc9720d940ac3ea56c11727560d1a"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 82738,
+      "sha256": "e54d1937124e64244cc0ae33541ffa2caed0ff6aced5680b0f6b38420b283281"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 100698,
+      "sha256": "5943c3a44273f5a72a52597edc3bc7f576596c33b22c1920dc570443ab0138a2"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 217637,
+      "sha256": "af02cefc51909452853ff49f1967ceeb900cc1cc8e046cce0f55675b60fdc121"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 217637,
+      "sha256": "af02cefc51909452853ff49f1967ceeb900cc1cc8e046cce0f55675b60fdc121"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 100698,
+      "sha256": "5943c3a44273f5a72a52597edc3bc7f576596c33b22c1920dc570443ab0138a2"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 82738,
+      "sha256": "e54d1937124e64244cc0ae33541ffa2caed0ff6aced5680b0f6b38420b283281"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 5901,
+      "sha256": "973b42c0210866b4f3b5676341889c95d4445390f9d8147e01b473feadd184a5"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 217637,
+      "sha256": "af02cefc51909452853ff49f1967ceeb900cc1cc8e046cce0f55675b60fdc121"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 142090,
+      "sha256": "f367ee32af5c56d60e1b29e3ada196aa7596691ee695e6127c0b7d13ca22d310"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 217637,
+      "sha256": "af02cefc51909452853ff49f1967ceeb900cc1cc8e046cce0f55675b60fdc121"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 142090,
+      "sha256": "f367ee32af5c56d60e1b29e3ada196aa7596691ee695e6127c0b7d13ca22d310"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 100698,
+      "sha256": "5943c3a44273f5a72a52597edc3bc7f576596c33b22c1920dc570443ab0138a2"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 73636,
+      "sha256": "1288a92e14464750a8ec5570a2f006468678ccfff4b051439d3d9c52b6b21b60"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 96112,
+      "sha256": "6868be45a23140863bcee89d27d37421d81944d8c6ef656d5e7749f81e954b55"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 56820,
+      "sha256": "778f53cda52b036f20b7cf25f58908706cc6882197e0c79b5b4cce8aa915134f"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 12,
+    "bytes": 1934685,
+    "inventorySha256": "cad427cd17fed575abeb4805e7ad08bb3ec41daa1b28a3565ac1c344d097f8cf",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "rh-motors-services",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 26,
+    "report": "dealers/rh-motors-services/input-review.json"
+  },
+  "after": {
+    "files": 26,
+    "bytes": 1973650
+  }
+}

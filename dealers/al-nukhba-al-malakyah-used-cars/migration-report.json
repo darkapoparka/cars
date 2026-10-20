@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "al-nukhba-al-malakyah-used-cars",
+  "previousSlug": "al-nukhba-al-malakyah-used-cars",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:22:33.399Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 4,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-sharjah-al-nukhba-al-malakyah-used-cars",
+    "position": 316
+  },
+  "before": {
+    "files": 38,
+    "bytes": 7879259
+  },
+  "afterBeforeReview": {
+    "files": 22,
+    "bytes": 5007230
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 66167,
+      "sha256": "b12a7757399ca574a7650e7b5ced40f1893e541e2c526d730117702c07c347bd"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 66549,
+      "sha256": "af58968aac85ed3e8f2fa49290385af7950ca0027c9ed1b592964f655a2068bf"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 66167,
+      "sha256": "b12a7757399ca574a7650e7b5ced40f1893e541e2c526d730117702c07c347bd"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 214355,
+      "sha256": "7785fe10246c83f744c9d715c43f595456c84c851fc20de05b72c1ddf0c1f070"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 315678,
+      "sha256": "c2dc01106a4105cc02d227086ce237cd5e10547c0ff687502f398f273b5fad2c"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 315678,
+      "sha256": "c2dc01106a4105cc02d227086ce237cd5e10547c0ff687502f398f273b5fad2c"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 214355,
+      "sha256": "7785fe10246c83f744c9d715c43f595456c84c851fc20de05b72c1ddf0c1f070"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 66167,
+      "sha256": "b12a7757399ca574a7650e7b5ced40f1893e541e2c526d730117702c07c347bd"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 6725,
+      "sha256": "bd4a9e20437ef9632090d4197aa02459305f82d327e2f836d28982daaeef2dda"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 315678,
+      "sha256": "c2dc01106a4105cc02d227086ce237cd5e10547c0ff687502f398f273b5fad2c"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 225938,
+      "sha256": "3780f26b29586e1168b2b8ff61ac73c868b6828d132513857e895983f7deaac8"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 315678,
+      "sha256": "c2dc01106a4105cc02d227086ce237cd5e10547c0ff687502f398f273b5fad2c"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 225938,
+      "sha256": "3780f26b29586e1168b2b8ff61ac73c868b6828d132513857e895983f7deaac8"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 214355,
+      "sha256": "7785fe10246c83f744c9d715c43f595456c84c851fc20de05b72c1ddf0c1f070"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 153518,
+      "sha256": "722234f24c62ee064e1022f86c5b16bfedf893eaf6ead203c26a61110b7762a0"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 45792,
+      "sha256": "38013e5e9f3d1927e0c5f0a25fbb7af8dfa5a9eac4e979ac3d2f2594ae944525"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 47172,
+      "sha256": "ba08fe2ae4f5c9de3f239b406f40a9ffa4f4e6a0c21f455d4eebf795e6093a68"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 13,
+    "bytes": 4983456,
+    "inventorySha256": "a7b4330be1c54d41e8af340de680847a9523f0afac320a9e8148b220327a1a47",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "al-nukhba-al-malakyah-used-cars",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 24,
+    "report": "dealers/al-nukhba-al-malakyah-used-cars/input-review.json"
+  },
+  "after": {
+    "files": 24,
+    "bytes": 5015949
+  }
+}

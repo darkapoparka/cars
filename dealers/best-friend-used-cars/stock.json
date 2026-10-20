@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "dealer": "best-friend-used-cars",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T19:58:48.920399Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "ocd-16176",
+      "title": "Mercedes Benz C300 Luxury  2018",
+      "make": "Mercedes Benz",
+      "model": "C300 Luxury",
+      "year": 2018,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/ocd-16176.jpg"
+      ],
+      "sourceUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Mercedes-Benz/C300-Luxury-/?id=16176",
+      "observedAt": "2026-10-19T19:58:48.920399Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Coupe",
+      "transmission": "Auto",
+      "fuel": "Petrol",
+      "color": "White",
+      "mileageValue": 91750,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "ocd-16157",
+      "title": "Hyundai Kona Other 2020",
+      "make": "Hyundai",
+      "model": "Kona Other",
+      "year": 2020,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/ocd-16157.jpg"
+      ],
+      "sourceUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Hyundai/Kona-Other/?id=16157",
+      "observedAt": "2026-10-19T19:58:48.920399Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Crossover",
+      "transmission": "Auto",
+      "fuel": "Petrol",
+      "color": "Black",
+      "mileageValue": 120000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "ocd-16163",
+      "title": "Kia Sedona LX 2016",
+      "make": "Kia",
+      "model": "Sedona LX",
+      "year": 2016,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/ocd-16163.jpg"
+      ],
+      "sourceUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Kia/Sedona-LX/?id=16163",
+      "observedAt": "2026-10-19T19:58:48.920399Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Minivan",
+      "transmission": "Auto",
+      "fuel": "Petrol",
+      "color": "Brown",
+      "mileageValue": 104120,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

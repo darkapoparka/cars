@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-nayrab-used-cars",
+  "businessFacts": "business-facts.json",
+  "stock": "stock.json",
+  "inventoryKind": "dated-listing-snapshot",
+  "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+  "sources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/al-nayrab-used-cars",
+      "observedAt": "2026-10-19T20:00:04.404850Z",
+      "supports": [
+        "business-trading-name",
+        "public-business-phone",
+        "marketplace-location",
+        "dealer-catalogue"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/6936-toyota-land-cruiser-46-at-309-hp-gxr",
+      "observedAt": "2026-10-19T20:00:04.404850Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/7564-mercedes-benz-amg-gt-63-4matic-speedshift-mct-9g-585-hp-gt-63-s-4matic",
+      "observedAt": "2026-10-19T20:00:04.404850Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/7566-mercedes-benz-gle-class-350-d-4matic-9g-tronic-249-hp-gle-350",
+      "observedAt": "2026-10-19T20:00:04.404850Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    }
+  ]
+}

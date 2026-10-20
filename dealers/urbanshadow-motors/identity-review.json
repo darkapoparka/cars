@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": true,
+  "reviewedAt": "2026-10-20T19:26:40.727Z",
+  "dealer": "urbanshadow-motors",
+  "dealerId": "gb-wembley-urbanshadow-motors",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "method": "Automated exact registry/pack identity, canonical hosting and batch comparison; retained public source fields were structurally checked, not human-approved.",
+  "sources": [
+    {
+      "url": "https://www.autotrader.co.uk/dealers/middlesex/wembley/urbanshadow-motors-limited-10049178",
+      "observedAt": "2026-10-19T17:36:50.084230Z",
+      "supports": [
+        "public-business-identity",
+        "public-business-contact",
+        "advertised-stock"
+      ]
+    }
+  ],
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  }
+}

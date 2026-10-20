@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "dealer": "glasgow-craigton-cars",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uk.json",
+    "sha256": "6cd8d365586f9a5d5131fe4b1d50baede7de91ab384a135017c25367298b07c4"
+  },
+  "publicSources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/Craig-ton-cars",
+      "observedAt": "2026-10-19T17:36:00.740263Z",
+      "supports": [
+        "business-name",
+        "public-business-contact",
+        "business-location",
+        "current-listing-snapshot"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "dealerId": "gb-glasgow-craigton-cars",
+  "observedAt": "2026-10-19T17:36:00.740263Z",
+  "primaryFetch": {
+    "url": "https://showroom.ebaymotorspro.co.uk/Craig-ton-cars",
+    "status": 200,
+    "observedAt": "2026-10-19T17:36:00.740263Z",
+    "htmlSha256": "d77b7e99d2901421deb95845e76dcab48a0b066febf012bd60c27d5eea100471"
+  },
+  "stockPhotos": [
+    {
+      "recordId": "vehicle-1",
+      "catalogueUrl": "https://showroom.ebaymotorspro.co.uk/Craig-ton-cars",
+      "listingUrl": "https://www.ebay.co.uk/itm/137844567712",
+      "observedAt": "2026-10-19T17:36:00.740263Z",
+      "originalImageUrl": "https://i.ebayimg.com/00/s/OTAwWDE2MDA=/z/ZeMAAeSwttpq1cB8/$_57.JPG",
+      "resolvedImageUrl": "https://i.ebayimg.com/00/s/OTAwWDE2MDA=/z/ZeMAAeSwttpq1cB8/$_57.JPG",
+      "originalSha256": "0ee4c5bca91e32e1f4921bda3559aff015ab390b9809a7d3a7a272272176db31",
+      "originalDimensions": [
+        1600,
+        900
+      ],
+      "retainedPath": "dealer-stock/vehicle-1.jpg",
+      "retainedSha256": "055f55c479111447aaabfedf4758ec8a33ba2bf599135da41b14a139d29e03d7",
+      "retainedDimensions": [
+        1280,
+        720
+      ],
+      "retainedBytes": 193496,
+      "processing": "EXIF orientation; resize only if over 1280 pixels; JPEG compression; metadata omitted. No content alterations."
+    },
+    {
+      "recordId": "vehicle-2",
+      "catalogueUrl": "https://showroom.ebaymotorspro.co.uk/Craig-ton-cars",
+      "listingUrl": "https://www.ebay.co.uk/itm/137844558889",
+      "observedAt": "2026-10-19T17:36:00.740263Z",
+      "originalImageUrl": "https://i.ebayimg.com/00/s/OTAwWDE2MDA=/z/OmkAAeSwKudqz~ue/$_57.JPG",
+      "resolvedImageUrl": "https://i.ebayimg.com/00/s/OTAwWDE2MDA=/z/OmkAAeSwKudqz~ue/$_57.JPG",
+      "originalSha256": "079910c95fc4594dfbafafadd482cabb2cb57e39f5d1e3499e77beef4562aa01",
+      "originalDimensions": [
+        1600,
+        900
+      ],
+      "retainedPath": "dealer-stock/vehicle-2.jpg",
+      "retainedSha256": "2cabca6d2ac8bdba3891ac34e8a546e63af42ad202df21d004b488b1e215ef7d",
+      "retainedDimensions": [
+        1280,
+        720
+      ],
+      "retainedBytes": 185214,
+      "processing": "EXIF orientation; resize only if over 1280 pixels; JPEG compression; metadata omitted. No content alterations."
+    },
+    {
+      "recordId": "vehicle-3",
+      "catalogueUrl": "https://showroom.ebaymotorspro.co.uk/Craig-ton-cars",
+      "listingUrl": "https://www.ebay.co.uk/itm/137844551650",
+      "observedAt": "2026-10-19T17:36:00.740263Z",
+      "originalImageUrl": "https://i.ebayimg.com/00/s/OTAwWDE2MDA=/z/b6MAAeSwcC5q1cB9/$_57.JPG",
+      "resolvedImageUrl": "https://i.ebayimg.com/00/s/OTAwWDE2MDA=/z/b6MAAeSwcC5q1cB9/$_57.JPG",
+      "originalSha256": "89947c275018357481c87c0700dccf57b0359ae68dc8f1b3c6d46f93aeadc063",
+      "originalDimensions": [
+        1600,
+        900
+      ],
+      "retainedPath": "dealer-stock/vehicle-3.jpg",
+      "retainedSha256": "2955cd874ee0037a7501acb3a1356bad1462e0a1c54d2b7ad76413add6d47131",
+      "retainedDimensions": [
+        1280,
+        720
+      ],
+      "retainedBytes": 179178,
+      "processing": "EXIF orientation; resize only if over 1280 pixels; JPEG compression; metadata omitted. No content alterations."
+    }
+  ],
+  "publicResearchSummary": [
+    "Public vehicle seller confirmed from the current dealer catalogue.",
+    "Existing registry and clients identities checked against the exact lead and normalized trading names; no live-fleet match found.",
+    "Listing availability is not confirmed; the dated stock disclosure and price omission are retained."
+  ],
+  "stockHistoryReview": "stock-history-review.json"
+}

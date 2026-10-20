@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-input-review",
+  "dealer": "promise-cars",
+  "reviewed": true,
+  "reviewedAt": "2026-10-20T19:18:33.403Z",
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "checks": [
+    "canonical-hosting-and-preserved-fleet-collisions",
+    "assigned-expansion-lead",
+    "public-fact-schema-and-price-omission",
+    "personal-contact-screen",
+    "retained-stock-media",
+    "companion-copy-source-binding",
+    "immutable-template-release-and-native-QA-parent",
+    "reviewed-artwork-provenance-and-regenerated-logo-hashes"
+  ],
+  "sourceArtworkReview": "Retained artwork review is separate provenance; this command does not perform visual, Arabic-expert or dealer approval.",
+  "copyReview": "Automated structure, stock hash, source text and complete EN/BG rows; no new human translation approval is inferred.",
+  "contacts": {
+    "schemaVersion": 1,
+    "kind": "cars-automated-public-contact-screen",
+    "dealer": "promise-cars",
+    "method": "heuristic; no claim that unflagged values cannot be personal",
+    "flags": [],
+    "blocking": []
+  },
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-oldbury-promise-cars",
+    "position": 78
+  },
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "inputs": [
+    {
+      "path": "FACTS-AND-INVENTORY.json",
+      "sha256": "835bcb4f25a17a0e900c23624e0fc5c4e1c8ace925e381e29e0de558259db12c"
+    },
+    {
+      "path": "branding/generated-mark.png",
+      "sha256": "c0024a473abc6b560946659acac33fb31f4049f5e6daceef5d8aeb37c042a2d1"
+    },
+    {
+      "path": "branding/generated-master.png",
+      "sha256": "5b7db7532ba1f671ca4944e4afbc7e53a96bda0d81b613927412ca8d42405000"
+    },
+    {
+      "path": "branding/generated-on-dark.png",
+      "sha256": "d2762d793d3620ba1950b352e3747a3d98990f14502477708c7fe43fb7f5e39d"
+    },
+    {
+      "path": "branding/logo-contract.json",
+      "sha256": "7324989b2ab5abe55709b87ade520dc41057f08ee131f9fa94cde19d01ca909e"
+    },
+    {
+      "path": "branding/logo-recipe.json",
+      "sha256": "9c39736420de8dbd96aab9e2bc39b50e48de63f0aad0fc9f414ac91231d4989a"
+    },
+    {
+      "path": "branding/source.json",
+      "sha256": "a93ce49753f2dc77cd91afb5ff829b229b3cc2b41c73aaa2c1d250418fe19645"
+    },
+    {
+      "path": "business-facts.json",
+      "sha256": "572cdda285fb5a237c61207d9fb7462e0607049863a017d9eec4091026db5e18"
+    },
+    {
+      "path": "copy-review.json",
+      "sha256": "a044f20ffeaf42cf8dde2785eea74c2d7a1a84db337d45f6373efd24b05e9848"
+    },
+    {
+      "path": "dealer-stock/public-2.jpg",
+      "sha256": "347a873a39666569ff3ac6ac75be8bdbb10197573687645a2ac0aa8301375304"
+    },
+    {
+      "path": "dealer-stock/public-3.jpg",
+      "sha256": "5eff804b197902b3ab46fb768453f3c613ef35a949389bab82a7588a180c0d75"
+    },
+    {
+      "path": "dealer.json",
+      "sha256": "7fc3e28451c3d82599a91ded3665a113fd83fed39cfd34bf51fa425e2fb61bb3"
+    },
+    {
+      "path": "identity-review.json",
+      "sha256": "7b66dddbb4d9cf6355fcd3583a7495c171d27405d6e1da7643541daa3e9a19e0"
+    },
+    {
+      "path": "locale.json",
+      "sha256": "0dae7b7a605c732ed5ff8b9d185dd77b22ca337bbf8df81a16bbd54d233173c8"
+    },
+    {
+      "path": "missing-facts.json",
+      "sha256": "108f9d9f55df79952a1c07edfdd1fbe56b77c9be6e3489a45d9ad47171688c0c"
+    },
+    {
+      "path": "qualification.json",
+      "sha256": "162ba6fe6589d2401b60a0ddcd6bc6349b62cfbfc3424d50aabede6a35c87216"
+    },
+    {
+      "path": "source-evidence.json",
+      "sha256": "a74a3965e31353b93affba279175fabfbd97f33a4e2f544a7b04f21f792784f7"
+    },
+    {
+      "path": "stock.json",
+      "sha256": "e8d83aee6eeba7158e193eed0cb60227bcfaeed751a22841f29a05cc2405cd8f"
+    }
+  ],
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "providerWrites": 0
+}

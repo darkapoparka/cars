@@ -1,0 +1,197 @@
+{
+  "schemaVersion": 1,
+  "dealer": "leicester-motor-group",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T19:22:56.608725Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-faithful-redraw",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "29236690be0bd575428279bca00ea36f1cffd1c481d30bfd65b349c5a34656cc",
+      "sourceSha256": "d729774da9d0f82878f80fbc84299ce5051bfb3e1880c5198c601c872205129a"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "3d1cb8879cbaf5b82f88f88f0bbb92afd414dd080fbb6413d1cc7f354a339b31",
+      "sourceSha256": "0389e877ed36c37e859919be615183489b1597a8c48dcdb832f3e443260ac175"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "3d1cb8879cbaf5b82f88f88f0bbb92afd414dd080fbb6413d1cc7f354a339b31",
+      "sourceSha256": "0389e877ed36c37e859919be615183489b1597a8c48dcdb832f3e443260ac175"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "d729774da9d0f82878f80fbc84299ce5051bfb3e1880c5198c601c872205129a",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-1f959efb-f104-449f-8f2e-43e2c034a93b",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "b72be99c5f05a703d3149f38f3947d3981c276242f707727ccd13fdf1f7a0879",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-1f959efb-f104-449f-8f2e-43e2c034a93b",
+      "modelVersion": null
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "2f6e447276065e03bac9c0883011abc824fc401210cad55341f83c775a74b6ae"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "d729774da9d0f82878f80fbc84299ce5051bfb3e1880c5198c601c872205129a",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1f959efb-f104-449f-8f2e-43e2c034a93b",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/leicester-motor-group/branding/generated-master.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "0389e877ed36c37e859919be615183489b1597a8c48dcdb832f3e443260ac175",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-c77d1340-0aa6-4f43-9d40-15f24da7b80b",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/leicester-motor-group/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "0389e877ed36c37e859919be615183489b1597a8c48dcdb832f3e443260ac175",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-c77d1340-0aa6-4f43-9d40-15f24da7b80b",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/leicester-motor-group/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "243197a75b2b28eb488796100d818ea05c1af5286185dffc576b0ea38f5a5d8e",
+      "sha256": "d729774da9d0f82878f80fbc84299ce5051bfb3e1880c5198c601c872205129a",
+      "crop": {
+        "left": 8,
+        "top": 163,
+        "width": 2164,
+        "height": 385
+      },
+      "sourcePath": "branding/generated-master.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "5a999c27433f415b4b0472e1e45c57b299c95c592522e6cb72946579cc5b93f2",
+      "sha256": "0389e877ed36c37e859919be615183489b1597a8c48dcdb832f3e443260ac175",
+      "crop": {
+        "left": 0,
+        "top": 136,
+        "width": 2172,
+        "height": 419
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "5a999c27433f415b4b0472e1e45c57b299c95c592522e6cb72946579cc5b93f2",
+      "sha256": "0389e877ed36c37e859919be615183489b1597a8c48dcdb832f3e443260ac175",
+      "crop": {
+        "left": 0,
+        "top": 136,
+        "width": 2172,
+        "height": 419
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "b9d44fcfa7602ba1f2c73a7ca413b0fec55817ec333e17f27186cb82bb7271e5",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1f959efb-f104-449f-8f2e-43e2c034a93b",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/leicester-motor-group/branding/generated-mark.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "20427874df08fa94ab9babec8c980d72a902fa52ba02c203f09ba24a948e4db0",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-c77d1340-0aa6-4f43-9d40-15f24da7b80b",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/leicester-motor-group/branding/generated-mark-on-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "b72be99c5f05a703d3149f38f3947d3981c276242f707727ccd13fdf1f7a0879",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1f959efb-f104-449f-8f2e-43e2c034a93b",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/leicester-motor-group/branding/generated-mark.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "2f6e447276065e03bac9c0883011abc824fc401210cad55341f83c775a74b6ae",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1f959efb-f104-449f-8f2e-43e2c034a93b",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/leicester-motor-group/branding/generated-mark.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-19T19:22:56.608725Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "60b00bfab3a49f84439e0632b71a28011c0877c27486a4ee1a372479cc3cbaa2",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-c77d1340-0aa6-4f43-9d40-15f24da7b80b",
+      "modelVersion": null
+    }
+  }
+}

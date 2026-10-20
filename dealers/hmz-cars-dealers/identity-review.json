@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": true,
+  "reviewedAt": "2026-10-20T19:15:03.915Z",
+  "dealer": "hmz-cars-dealers",
+  "dealerId": "gb-leicester-hmz-cars-dealers",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "method": "Automated exact registry/pack identity, canonical hosting and batch comparison; retained public source fields were structurally checked, not human-approved.",
+  "sources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/I-B-MOTORS-LTD",
+      "observedAt": "2026-10-19"
+    },
+    {
+      "url": "https://www.cazoo.co.uk/dealers/hmz-cars-dealers-ltd-75205/",
+      "observedAt": "2026-10-19"
+    }
+  ],
+  "additionalReview": {
+    "observedAt": "2026-10-19",
+    "registryMatch": false,
+    "existingClientFolderMatch": false,
+    "sourceRevision": "a999878a921fb61b37bf198c43275550814f88cc"
+  },
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  }
+}

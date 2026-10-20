@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "dealer": "lomeshaye-perfomance",
+  "photos": [
+    {
+      "id": "listing-1",
+      "listingUrl": "https://www.autotrader.co.uk/car-details/202610187105688",
+      "catalogueUrl": "https://www.autotrader.co.uk/dealers/lancashire/nelson/lomeshaye-perfomance-limited-10046928",
+      "imageUrl": "https://m.atcdn.co.uk/a/media/w1280/d3132cf9141445b8b7698415d4c4a1b9.jpg",
+      "downloadUrl": "https://m.atcdn.co.uk/a/media/w1280/d3132cf9141445b8b7698415d4c4a1b9.jpg",
+      "originalDimensions": [
+        1280,
+        960
+      ],
+      "retainedDimensions": [
+        1024,
+        768
+      ],
+      "retainedBytes": 165200,
+      "mediaPath": "dealer-stock/listing-1.jpg",
+      "retainedSha256": "73fce0016a9ec475947c2813cbd3c38c7e62223874e810b138ba3e10fe782869",
+      "operation": "Resize within1024px without enlargement and encode optimized JPEG; no change to photographed content.",
+      "originalSha256": "a3859a7aa3bd32f0508d207639fbb1ee83e611380506aa04e1b08e6f4b791049",
+      "observedAt": "2026-10-19"
+    },
+    {
+      "id": "listing-2",
+      "listingUrl": "https://www.autotrader.co.uk/car-details/202610126921363",
+      "catalogueUrl": "https://www.autotrader.co.uk/dealers/lancashire/nelson/lomeshaye-perfomance-limited-10046928",
+      "imageUrl": "https://m.atcdn.co.uk/a/media/w1280/4a6b9ad614324a339337bf234f289147.jpg",
+      "downloadUrl": "https://m.atcdn.co.uk/a/media/w1280/4a6b9ad614324a339337bf234f289147.jpg",
+      "originalDimensions": [
+        1280,
+        960
+      ],
+      "retainedDimensions": [
+        1024,
+        768
+      ],
+      "retainedBytes": 182334,
+      "mediaPath": "dealer-stock/listing-2.jpg",
+      "retainedSha256": "9a214cd514b329c284b0f8ef238cef0ee1291b26f2fcab04dee963760b4ac50e",
+      "operation": "Resize within1024px without enlargement and encode optimized JPEG; no change to photographed content.",
+      "originalSha256": "d1193a07626a1df8e764211af2e58adabf278c7eea9f4ce53374e63058499598",
+      "observedAt": "2026-10-19"
+    },
+    {
+      "id": "listing-3",
+      "listingUrl": "https://www.autotrader.co.uk/car-details/202609246360643",
+      "catalogueUrl": "https://www.autotrader.co.uk/dealers/lancashire/nelson/lomeshaye-perfomance-limited-10046928",
+      "imageUrl": "https://m.atcdn.co.uk/a/media/w1280/4eeea317235241738900cc09197e7a28.jpg",
+      "downloadUrl": "https://m.atcdn.co.uk/a/media/w1280/4eeea317235241738900cc09197e7a28.jpg",
+      "originalDimensions": [
+        1280,
+        960
+      ],
+      "retainedDimensions": [
+        1024,
+        768
+      ],
+      "retainedBytes": 177120,
+      "mediaPath": "dealer-stock/listing-3.jpg",
+      "retainedSha256": "57cf9577f583340c863e0dac1396e055e6eaa8d2d8e762420c68002c748e4ea8",
+      "operation": "Resize within1024px without enlargement and encode optimized JPEG; no change to photographed content.",
+      "originalSha256": "536e793b77c500da96193f6de92984758e33f57958dbc9a92b45afc813b13e52",
+      "observedAt": "2026-10-19"
+    }
+  ],
+  "review": {
+    "reviewed": true,
+    "observedAt": "2026-10-19",
+    "method": "Viewed every selected photograph in contact sheets; checked actual vehicle content, placeholders, price cards and visible dealer identity.",
+    "maximumDimension": 1024,
+    "maximumBytes": 182334
+  }
+}

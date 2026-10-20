@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "dealer": "resi-auto-sales",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "public-listing-1",
+      "title": "2017 Nissan Juke 1.6 Tekna Xtronic",
+      "make": "Nissan",
+      "model": "Juke",
+      "year": 2017,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/public-1.jpg"
+      ],
+      "sourceUrl": "https://www.ebay.co.uk/itm/960080868274",
+      "observedAt": "2026-10-19T17:53:31.456887Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "transmission": "Automatic",
+      "fuel": "Petrol",
+      "color": "White",
+      "mileageValue": 60000,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "public-listing-2",
+      "title": "2011 Fiat 500 1.2 Lounge",
+      "make": "Fiat",
+      "model": "500",
+      "year": 2011,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/public-2.jpg"
+      ],
+      "sourceUrl": "https://www.ebay.co.uk/itm/960072306263",
+      "observedAt": "2026-10-19T17:53:31.538955Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "transmission": "Manual",
+      "fuel": "Petrol",
+      "color": "Red",
+      "mileageValue": 60000,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "public-listing-3",
+      "title": "2012 Land Rover Range Rover Evoque 2.2 SD4 Prestige Auto",
+      "make": "Land Rover",
+      "model": "Range Rover Evoque",
+      "year": 2012,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/public-3.jpg"
+      ],
+      "sourceUrl": "https://www.ebay.co.uk/itm/960068138395",
+      "observedAt": "2026-10-19T17:53:31.794976Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "fuel": "Diesel",
+      "color": "White",
+      "mileageValue": 72000,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

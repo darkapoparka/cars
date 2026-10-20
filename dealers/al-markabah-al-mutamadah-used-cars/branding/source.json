@@ -1,0 +1,163 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-markabah-al-mutamadah-used-cars",
+  "realLogoFirst": true,
+  "publishedBranding": false,
+  "creationMethod": "imagegen-independent-logo-proposal",
+  "dealerApproved": false,
+  "approvalStatus": "independent-proposal-not-dealer-approved",
+  "usageStatus": "public-preview-only",
+  "observedAt": "2026-10-19T19:58:48.748400Z",
+  "publicSources": [
+    {
+      "url": "https://www.oneclickdrive.com/company/sharjah/al-markabah-al-mutamadah-used-cars",
+      "observedAt": "2026-10-19T19:58:48.748400Z"
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Mitsubishi/Canter/?id=36059",
+      "observedAt": "2026-10-19T19:58:48.748400Z"
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Kia/Pegas-LX/?id=36047",
+      "observedAt": "2026-10-19T19:58:48.748400Z"
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Nissan/Micra-S/?id=36044",
+      "observedAt": "2026-10-19T19:58:48.748400Z"
+    }
+  ],
+  "originals": [
+    {
+      "path": "branding/source-original.png",
+      "sha256": "39c0b88a580e04bd075c3aaa2ad5532bc2ac245347cab0b6dd508a18e0985c65",
+      "url": "https://static.oneclickdrive.com/application/views/img/company/al-faisal.png",
+      "observedAt": "2026-10-19T19:58:48.748400Z",
+      "identityStatus": "mismatched-marketplace-mark-not-adopted"
+    }
+  ],
+  "logoResearch": "Exact OneClickDrive dealer profile supplies a logo reading Al Faisal Motors. No authoritative identity link was established. The mismatched mark is retained as research evidence only. New exact-name proposal is clearly unapproved.",
+  "visualReview": "Reviewed transparent artwork, full business-wordmark spelling and compact emblem. Deterministic crops retain the generated artwork; no vector substitute, recolouring or template changes. Compact variants are unapproved preview adaptations. Exact AL MARKABAH AL MUTAMADAH USED CARS wordmark, paired M/car-roof proposal.",
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T20:57:21.716Z",
+    "master": {
+      "path": "branding/generated-primary.png",
+      "sha256": "a00cfdeb5d4d767931638f8c80689719a2393cdbe4512c1a323f6f95b96897ab",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-9d983242-1776-4ac6-ae3d-4d03b2e9a468",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "e05ccfe78100efec61942fe0370216ad6d48a2dc2648fbd6993b4e43f4afb4e1",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-9d983242-1776-4ac6-ae3d-4d03b2e9a468",
+        "modelVersion": null,
+        "transformation": {
+          "operation": "rectangular-extract-without-recolour-or-redrawing",
+          "source": "branding/generated-primary.png",
+          "sourceSha256": "a00cfdeb5d4d767931638f8c80689719a2393cdbe4512c1a323f6f95b96897ab",
+          "rectangle": {
+            "left": 0,
+            "top": 0,
+            "width": 603,
+            "height": 887
+          }
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-inverse.png",
+      "sha256": "4c4a278906c31f7befe9e3a48d68581860aba10d9d0117cd8e3048f4aa6e63f6",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-cf638089-740a-4f05-b782-87ddeef1c237",
+        "modelVersion": null
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-primary.png",
+        "sha256": "a00cfdeb5d4d767931638f8c80689719a2393cdbe4512c1a323f6f95b96897ab",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-9d983242-1776-4ac6-ae3d-4d03b2e9a468",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-inverse.png",
+        "sha256": "4c4a278906c31f7befe9e3a48d68581860aba10d9d0117cd8e3048f4aa6e63f6",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-cf638089-740a-4f05-b782-87ddeef1c237",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-inverse.png",
+        "sha256": "4c4a278906c31f7befe9e3a48d68581860aba10d9d0117cd8e3048f4aa6e63f6",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-cf638089-740a-4f05-b782-87ddeef1c237",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": {
+        "onLight": [
+          "#ffffff"
+        ],
+        "onDark": [
+          "#111113",
+          "#101820"
+        ],
+        "onAccent": [
+          "#09090b",
+          "#17191c",
+          "#c40101"
+        ]
+      },
+      "notes": "Reviewed transparent artwork, full business-wordmark spelling and compact emblem. Deterministic crops retain the generated artwork; no vector substitute, recolouring or template changes. Compact variants are unapproved preview adaptations. Exact AL MARKABAH AL MUTAMADAH USED CARS wordmark, paired M/car-roof proposal."
+    },
+    "compactMarkStatus": "unapproved-preview-adaptation",
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-19T20:57:21.716Z",
+      "widths": [
+        32,
+        64
+      ],
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#101820"
+      ],
+      "notes": "Reviewed transparent artwork, full business-wordmark spelling and compact emblem. Deterministic crops retain the generated artwork; no vector substitute, recolouring or template changes. Compact variants are unapproved preview adaptations. Exact AL MARKABAH AL MUTAMADAH USED CARS wordmark, paired M/car-roof proposal."
+    }
+  },
+  "generationPrompts": [
+    {
+      "role": "primary",
+      "prompt": "Create a professional clean independent identity proposal for AL MARKABAH AL MUTAMADAH USED CARS. Exact first line AL MARKABAH, second line AL MUTAMADAH, third small line USED CARS. To the left a compact geometric paired M emblem where a single broad car-roof arch is formed by the letter shoulders; dark teal #125762 and near-black #181d23. Sturdy contemporary letterforms, carefully spaced. Transparent negative spaces, approximately square compact emblem unmistakable at 32px. Wide horizontal composition, flat colour. No background, no mockup, no gradients, no shadows, no tiny decorative detail. Do not add claims, dates, badges or any text other than the exact business name. Explicitly an unapproved proposal.",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-9d983242-1776-4ac6-ae3d-4d03b2e9a468",
+      "modelVersion": null,
+      "returnedArtifact": "exec-9d983242-1776-4ac6-ae3d-4d03b2e9a468.png",
+      "note": "The tool exposed the returned artifact identifier and did not expose a model version."
+    },
+    {
+      "role": "inverse",
+      "prompt": "Create the compact inverse surface variant of the left-hand emblem in this logo. ONLY the compact left emblem, absolutely no wordmark or business text. Preserve its existing shape, initials where they form the symbol, geometry, motif, proportions and open counters. Re-render entirely in one solid neutral cool silver #b9bec2, substantial flat strokes and smooth boundaries. Dark fills become open transparent negative space with the motif represented in silver. Center the one entire compact emblem on a square true transparent canvas, about 80% of canvas width, no other graphics. No pure white ink. No background, no mockup, no labels, no gradient, no shadow, no texture, no distressed edges, no extra lines. Clean automotive identity asset with a recognizable silhouette at 32 pixels.",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-cf638089-740a-4f05-b782-87ddeef1c237",
+      "modelVersion": null,
+      "returnedArtifact": "exec-cf638089-740a-4f05-b782-87ddeef1c237.png",
+      "note": "The tool exposed the returned artifact identifier and did not expose a model version."
+    }
+  ]
+}

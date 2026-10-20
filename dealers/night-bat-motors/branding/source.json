@@ -1,0 +1,165 @@
+{
+  "schemaVersion": 1,
+  "dealer": "night-bat-motors",
+  "status": "reviewed",
+  "realLogoFirst": true,
+  "publicSources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/H-DAutosoutlook-com",
+      "observedAt": "2026-10-19T17:36:49.980144Z"
+    },
+    {
+      "source": "alternate-public-logo-page",
+      "retainedEvidence": "source URL in real-logo research",
+      "observation": "A dealer-image URL was observed, but the image host timed out; no inaccessible image is claimed as an obtained original."
+    }
+  ],
+  "originals": [],
+  "creationMethod": "imagegen-proposal",
+  "dealerApproved": false,
+  "approvalStatus": "independent-preview-not-dealer-approved",
+  "researchConclusion": "Bounded public checks did not yield usable distinct dealer artwork. Generic text banners or unavailable image-host URLs do not prove that the dealer has no logo. This artwork is clearly an independent proposal.",
+  "generation": {
+    "tool": "image_gen.imagegen",
+    "generationId": "exec-450f2199-8137-4bd6-9fa2-239be0f03a7a",
+    "modelVersion": null,
+    "prompt": "Use case: logo-brand. Design a professional, distinctive independent proposal logo for the UK vehicle seller \"NIGHT BAT MOTORS\". Transparent background. Motif and colours: a simple original bat silhouette with two angular wings and a subtle N-shaped negative space, NOT any comic or film logo; charcoal and bright silver with one muted electric-violet detail. One wide horizontal lockup: compact emblem at far left, substantial transparent gap, and the exact full business name to its right in bold beautifully spaced modern lettering. Text must read \"NIGHT BAT MOTORS\" exactly, no extra words or tagline. Keep the emblem inside the left 22% of the canvas, isolated from all text so it can be cropped for a favicon. Flat clean graphic design with thick simple forms, no gradients, no photographic textures, no 3D, no background, no mockup, no decorative tiny lines. Include a crisp white outer keyline around the dark shapes and a fine dark edge on any white shapes so this same transparent artwork remains legible on white, charcoal and dark-red website backgrounds. Restrained expert typography. Compact symbol must remain distinctive at 32px. Not a dealer-approved logo."
+  },
+  "compactDerivation": {
+    "method": "lossless-isolated-emblem-crop",
+    "parentReference": "branding/generated-master.png",
+    "parentSha256": "c88ddc3203a5cb7f733d997f92f21c36fb310621655e195d91633ac5ba4083b9",
+    "crop": {
+      "left": 0,
+      "top": 0,
+      "width": 551,
+      "height": 724
+    },
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-450f2199-8137-4bd6-9fa2-239be0f03a7a",
+      "modelVersion": null
+    }
+  },
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T18:56:44.764978Z",
+    "master": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "4a80c91f3d451c42cd67b730d5a4ad700b84558ac0572e0683d2cffef8d5e21f",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-31124002-d16c-4251-8443-5baa4b2ce483",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "952e5e4bee93014edbfd866bfe5b0cbcd4127243819a95528e0b5fbb7c5abc52",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-450f2199-8137-4bd6-9fa2-239be0f03a7a",
+        "modelVersion": null
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-on-dark.png",
+      "sha256": "c339714ace63ba2ea972332b9092edec9e4e4a3f141f74e8472073512fdf8484",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-029f5d62-3312-4820-887c-20f002b179c6",
+        "modelVersion": null
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "4a80c91f3d451c42cd67b730d5a4ad700b84558ac0572e0683d2cffef8d5e21f",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-31124002-d16c-4251-8443-5baa4b2ce483",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "c740a55632b1f9fe0a58f9c17f9e7c44807dc1c14dca966445d8b13b323d0d76",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-029f5d62-3312-4820-887c-20f002b179c6",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "c740a55632b1f9fe0a58f9c17f9e7c44807dc1c14dca966445d8b13b323d0d76",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-029f5d62-3312-4820-887c-20f002b179c6",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": {
+        "onLight": [
+          "#ffffff"
+        ],
+        "onDark": [
+          "#111113",
+          "#101820"
+        ],
+        "onAccent": [
+          "#09090b",
+          "#17191c",
+          "#c40101"
+        ]
+      },
+      "wordmarkWidths": [
+        120,
+        180
+      ],
+      "markWidths": [
+        32,
+        64
+      ],
+      "method": "Exact pipeline alpha-padding crop and resize of actual generated surface artwork. Separate light-ink generated wordmark is used on dark and accent surfaces. Compact inputs are documented actual imagegen outputs or isolated lossless crops.",
+      "reviewedAt": "2026-10-19T18:56:44.764978Z",
+      "review": "Visually reviewed the exact pipeline cropTransparentPadding exports at 120 px and 180 px wordmark widths and 32 px and 64 px compact sizes against all six required background colours. Spelling and transparency checked. Filled light wordmarks improve contrast on dark surfaces; artwork colours do not change template palettes."
+    }
+  },
+  "additionalGenerations": [
+    {
+      "role": "onDark-and-onAccent",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-029f5d62-3312-4820-887c-20f002b179c6",
+      "modelVersion": null,
+      "reference": "branding/generated-master.png",
+      "prompt": "Use case: logo-brand, exact surface variant. This is an existing approved composition being prepared for a dark website background. Preserve its exact business name, spelling, typography, emblem motif, layout, separation and proportions. Make a faithful LIGHT-INK version on a truly TRANSPARENT background: all wordmark text should be solid bright ivory-white, filled letters, not hollow outline letters. Preserve any restrained emblem accent colours if they have contrast, and use white for the emblem's dark strokes so the compact emblem also reads on charcoal. Preserve the existing dark contour where helpful. No change of shape or concept. No added content. Do not include the background; it must remain transparent. Clean perfectly smooth edges, no speckles, no distress, no glow, no shadow, no gradients. The result must be clearly legible at180px width on charcoal #111113 and dark red #c40101. Match the reference geometry; no business names or letters may be omitted or repeated."
+    },
+    {
+      "role": "master-and-onLight",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-31124002-d16c-4251-8443-5baa4b2ce483",
+      "modelVersion": null,
+      "reference": "branding/generated-master.png",
+      "prompt": "Use case: logo-brand, exact light-surface variant. Preserve this NIGHT BAT MOTORS logo's exact wordmark, emblem and composition, but make ALL of its business name solid dark charcoal so every word is readable on a white website background. Preserve the same bat/N emblem and restrained violet detail. No hollow white letters. Thin white and dark keylines may remain for edge definition. Transparent background, crisp smooth graphic, no speckles, no distress, no gradients, no shadow, no new text or motif. Preserve the exact words NIGHT BAT MOTORS and generous separate left emblem."
+    }
+  ],
+  "compactOnDarkDerivation": {
+    "method": "lossless-isolated-emblem-crop",
+    "parentReference": "branding/generated-on-dark.png",
+    "parentSha256": "c740a55632b1f9fe0a58f9c17f9e7c44807dc1c14dca966445d8b13b323d0d76",
+    "crop": {
+      "left": 0,
+      "top": 0,
+      "width": 545,
+      "height": 724
+    },
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-029f5d62-3312-4820-887c-20f002b179c6",
+      "modelVersion": null
+    }
+  }
+}

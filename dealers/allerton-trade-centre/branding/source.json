@@ -1,0 +1,337 @@
+{
+  "schemaVersion": 1,
+  "dealer": "allerton-trade-centre",
+  "status": "reviewed",
+  "realLogoFirst": true,
+  "publicSources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/Allerton-Trade-Centre-ltd",
+      "observedAt": "2026-10-19T20:00:31.373348Z"
+    },
+    {
+      "url": "https://www.ebay.co.uk/itm/267795312582",
+      "observedAt": "2026-10-19T20:02:58.516288Z"
+    },
+    {
+      "url": "https://www.ebay.co.uk/itm/267784892007",
+      "observedAt": "2026-10-19T20:02:58.946541Z"
+    },
+    {
+      "url": "https://www.ebay.co.uk/itm/267760840215",
+      "observedAt": "2026-10-19T20:02:59.861166Z"
+    },
+    {
+      "url": "https://www.cazoo.co.uk/dealers/allerton-trade-centre-ltd-25490/",
+      "observedAt": "2026-10-19T20:03:55.277975Z"
+    }
+  ],
+  "originals": [
+    {
+      "path": "branding/observed-logo.jpg",
+      "sha256": "7916784472666b31bbca7e01673d9ee61f55ff085cdbbaade8defe8014c42f34",
+      "sourceUrl": "https://i.ebayimg.com/00/s/OTAwWDE2MDA=/z/VfkAAOSwuTxV8efe/$_3.JPG",
+      "observedAt": "2026-10-19T20:03:53.978873Z",
+      "kind": "published-dealer-logo-artwork"
+    }
+  ],
+  "creationMethod": "imagegen-redraw",
+  "dealerApproved": false,
+  "approvalStatus": "independent-preview-not-dealer-approved",
+  "researchConclusion": "The obtained public dealer logo was visually inspected. A clean transparent redraw retains the name, colours and principal motif. Original public artwork bytes and source provenance are retained.",
+  "boundedLogoChecks": [],
+  "generation": {
+    "tool": "image_gen.imagegen",
+    "generationId": "exec-b0910b1e-cb18-4f94-9ccd-b13c23b5d491",
+    "modelVersion": null,
+    "prompt": "Create one production logo asset sheet on a genuinely transparent background, not a mockup. TWO complete horizontal logo lockups stacked vertically with a very large EMPTY TRANSPARENT gap between them. No labels and no background panels. Both rows use exactly the same spelling, proportions, layout, and motif. Each row: a separate bold compact emblem on the far left, then a generous transparent horizontal gap, then the complete business name at right. The left emblem must remain unmistakable at 32 px. The complete name must be clean and legible at a small website-header size; use strong simple shapes and avoid tiny taglines. TOP ROW is the dark-ink version for WHITE backgrounds. BOTTOM ROW is the light-ink version for CHARCOAL or RED backgrounds: replace every dark text fill with solid white, preserving accent colours only where they remain readable. Use a thin contrasting keyline around coloured details so they remain visible on all backgrounds. Flat graphic design, crisp edges, no gradients, no shading, no texture, no shadow, no photography, no microtype. Real transparent alpha everywhere outside the actual shapes. Wide landscape canvas with equal row spacing and generous outer transparent margins. This is an independent dealer preview; no approval claims. Faithfully redraw the sign identity for ALLERTON TRADE CENTRE LTD. Preserve ALLERTON in clear medium blue above TRADE CENTRE LTD in bold near-black type, with a blue underline. Preserve the car motif as a clean simplified generic car silhouette at left, no manufacturer badge, no photographic detail. The left compact emblem can unite a bold blue A and a minimal roof profile, with broad strokes. On the bottom row, ALLERTON remains light blue with contrast keyline, TRADE CENTRE LTD is solid white. Keep LTD readable; no tiny superscript."
+  },
+  "additionalGenerations": [
+    {
+      "role": "master-and-surfaces",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-b0910b1e-cb18-4f94-9ccd-b13c23b5d491",
+      "modelVersion": null,
+      "prompt": "Create one production logo asset sheet on a genuinely transparent background, not a mockup. TWO complete horizontal logo lockups stacked vertically with a very large EMPTY TRANSPARENT gap between them. No labels and no background panels. Both rows use exactly the same spelling, proportions, layout, and motif. Each row: a separate bold compact emblem on the far left, then a generous transparent horizontal gap, then the complete business name at right. The left emblem must remain unmistakable at 32 px. The complete name must be clean and legible at a small website-header size; use strong simple shapes and avoid tiny taglines. TOP ROW is the dark-ink version for WHITE backgrounds. BOTTOM ROW is the light-ink version for CHARCOAL or RED backgrounds: replace every dark text fill with solid white, preserving accent colours only where they remain readable. Use a thin contrasting keyline around coloured details so they remain visible on all backgrounds. Flat graphic design, crisp edges, no gradients, no shading, no texture, no shadow, no photography, no microtype. Real transparent alpha everywhere outside the actual shapes. Wide landscape canvas with equal row spacing and generous outer transparent margins. This is an independent dealer preview; no approval claims. Faithfully redraw the sign identity for ALLERTON TRADE CENTRE LTD. Preserve ALLERTON in clear medium blue above TRADE CENTRE LTD in bold near-black type, with a blue underline. Preserve the car motif as a clean simplified generic car silhouette at left, no manufacturer badge, no photographic detail. The left compact emblem can unite a bold blue A and a minimal roof profile, with broad strokes. On the bottom row, ALLERTON remains light blue with contrast keyline, TRADE CENTRE LTD is solid white. Keep LTD readable; no tiny superscript.",
+      "sourceSheetSha256": "a1a17ccf7f4e292557d6ed3278e5a0f790bdee294d23c3982037d74fe9fd5811",
+      "sourceSheetDimensions": {
+        "width": 2089,
+        "height": 753
+      }
+    },
+    {
+      "role": "contrast-corrected-master-surfaces-and-compact",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-e939231c-5d85-4e0b-8e87-af612305ce86",
+      "modelVersion": null,
+      "prompt": "Create a clean production transparent PNG asset sheet: TWO horizontal logo lockups stacked vertically with a very large empty transparent gap, no panels or labels. Each row has a compact emblem on far left, a clear generous transparent horizontal gap, and the complete business name at right. TOP ROW is for white backgrounds: solid near-black or deep blue ink on transparent alpha, with no white outline, no white fill anywhere. BOTTOM ROW is for dark charcoal and red backgrounds: all principal shapes and all lettering filled solid warm white, with a very thin continuous charcoal keyline and only a tiny restrained colour accent. More than ninety percent of the visible ink on each bottom row emblem and wordmark must be white. No gradients, glow, shadow, metallic rendering, distressed edges, texture, photographic car detail or decorative background. Flat crisp geometric artwork with substantial strokes. Preserve exact spelling and keep the left emblem independently readable at 32px. Outer empty transparency, no mockup. Faithfully refine the supplied ALLERTON TRADE CENTRE LTD redraw. Preserve ALLERTON in bold wide capitals above TRADE CENTRE LTD and a short underline. Keep LTD on the same baseline and sufficiently large, no tiny superscript. Simplify the left emblem into a strong solid geometric A with a single broad generic car-roof profile incorporated across its lower half. Remove the complete front-view car, wheels and headlights, keeping only this clear car-roof motif. TOP: ALLERTON and A in deep medium blue, TRADE CENTRE LTD in near-black, no white ink. BOTTOM: A, car-roof line, ALLERTON and TRADE CENTRE LTD all predominantly solid white, with deep blue only as a very narrow underline/accent (less than five percent of ink), not the whole A or ALLERTON fill. Same geometry and word spelling on both rows.",
+      "referenceSha256": "e9401e8c48ad03d54dc8a9bdad2871193c0452529a15b65ec911480d896fc97c",
+      "sourceSheetSha256": "856e9f99f17605e76131acf1570c44979c41b558fc8b70908787cf3bb9d39046",
+      "derivations": {
+        "top": {
+          "left": 0,
+          "top": 0,
+          "width": 2170,
+          "height": 374
+        },
+        "bottom": {
+          "left": 0,
+          "top": 374,
+          "width": 2170,
+          "height": 351
+        },
+        "markTop": {
+          "left": 0,
+          "top": 0,
+          "width": 747,
+          "height": 374
+        },
+        "markBottom": {
+          "left": 0,
+          "top": 374,
+          "width": 747,
+          "height": 351
+        }
+      }
+    }
+  ],
+  "derivations": [
+    {
+      "role": "master-and-onLight",
+      "method": "lossless-separated-top-row-crop",
+      "parentGeneration": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-b0910b1e-cb18-4f94-9ccd-b13c23b5d491",
+        "modelVersion": null
+      },
+      "parentSha256": "a1a17ccf7f4e292557d6ed3278e5a0f790bdee294d23c3982037d74fe9fd5811",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 2089,
+        "height": 404
+      }
+    },
+    {
+      "role": "onDark-and-onAccent",
+      "method": "lossless-separated-bottom-row-crop",
+      "parentGeneration": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-b0910b1e-cb18-4f94-9ccd-b13c23b5d491",
+        "modelVersion": null
+      },
+      "parentSha256": "a1a17ccf7f4e292557d6ed3278e5a0f790bdee294d23c3982037d74fe9fd5811",
+      "crop": {
+        "left": 0,
+        "top": 404,
+        "width": 2089,
+        "height": 349
+      }
+    },
+    {
+      "role": "compact-onLight",
+      "method": "lossless-isolated-emblem-crop",
+      "parentGeneration": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-b0910b1e-cb18-4f94-9ccd-b13c23b5d491",
+        "modelVersion": null
+      },
+      "parentSha256": "a1a17ccf7f4e292557d6ed3278e5a0f790bdee294d23c3982037d74fe9fd5811",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 745,
+        "height": 404
+      }
+    },
+    {
+      "role": "compact-onDark",
+      "method": "lossless-isolated-emblem-crop",
+      "parentReference": "branding/generated-on-dark.png",
+      "parentSha256": "64e8271e62aa70f897985dade42d2c9b9255c112260ced606d0fbf084d2b4022",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 745,
+        "height": 349
+      }
+    }
+  ],
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T20:42:37.418614Z",
+    "master": {
+      "path": "branding/generated-master.png",
+      "sha256": "14be689bda4a5489e15ef05d81fc50edc105f815d30e5604faa4aa615eaafec1",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-e939231c-5d85-4e0b-8e87-af612305ce86",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "afd3fcde08b6d9b76d8a4417093f95b86f314e7b0476cf376675641b576a3bce",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-e939231c-5d85-4e0b-8e87-af612305ce86",
+        "modelVersion": null
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-on-dark.png",
+      "sha256": "34b4df71425d6179079bf757cfe4b0d3e8d798d7e46c2403407633b1c51f7cdd",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-e939231c-5d85-4e0b-8e87-af612305ce86",
+        "modelVersion": null
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-master.png",
+        "sha256": "14be689bda4a5489e15ef05d81fc50edc105f815d30e5604faa4aa615eaafec1",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-e939231c-5d85-4e0b-8e87-af612305ce86",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "8dbfa2691437b8f2859e90fb95253bba7d73a35dd5c9c644131521c1dd6b37d1",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-e939231c-5d85-4e0b-8e87-af612305ce86",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "8dbfa2691437b8f2859e90fb95253bba7d73a35dd5c9c644131521c1dd6b37d1",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-e939231c-5d85-4e0b-8e87-af612305ce86",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": {
+        "onLight": [
+          "#ffffff"
+        ],
+        "onDark": [
+          "#111113",
+          "#101820"
+        ],
+        "onAccent": [
+          "#09090b",
+          "#17191c",
+          "#c40101"
+        ]
+      },
+      "wordmarkWidths": [
+        120,
+        180
+      ],
+      "markWidths": [
+        32,
+        64
+      ],
+      "method": "Exact existing cropTransparentPadding exports from real generated RGBA inputs, composited with actual alpha at header and compact icon sizes. No template palette or composition changes.",
+      "reviewedAt": "2026-10-19T20:42:37.418614Z",
+      "review": "Visually reviewed exact pipeline exports at 120 and 180 pixel wordmark widths and 32 and 64 pixel compact sizes on all six unchanged template background colours. Actual alpha composition, spelling, crop and compact recognition checked. Affected artwork was regenerated to improve ink contrast; no shared threshold or template was changed."
+    }
+  },
+  "contrastCorrections": [
+    {
+      "reason": "The existing pipeline pixel check found less than 70% readable ink on one or more required surfaces; actual artwork regenerated, thresholds and template backgrounds unchanged.",
+      "supersededInputs": {
+        "reviewedAt": null,
+        "master": {
+          "path": "branding/generated-master.png",
+          "sha256": "e9401e8c48ad03d54dc8a9bdad2871193c0452529a15b65ec911480d896fc97c",
+          "generation": {
+            "tool": "image_gen.imagegen",
+            "generationId": "exec-b0910b1e-cb18-4f94-9ccd-b13c23b5d491",
+            "modelVersion": null
+          }
+        },
+        "mark": {
+          "path": "branding/generated-mark.png",
+          "sha256": "f8a8a7922c5a732e367ecd96cfe39165167872d972f7ed67c204f757470c39d8",
+          "generation": {
+            "tool": "image_gen.imagegen",
+            "generationId": "exec-b0910b1e-cb18-4f94-9ccd-b13c23b5d491",
+            "modelVersion": null
+          }
+        },
+        "markOnDark": {
+          "path": "branding/generated-mark-on-dark.png",
+          "sha256": "ad2b2f407b6b8a4e1a826ede6611707aeced27b5c64751b2efa1b42660e7e509",
+          "generation": {
+            "tool": "image_gen.imagegen",
+            "generationId": "exec-b0910b1e-cb18-4f94-9ccd-b13c23b5d491",
+            "modelVersion": null
+          }
+        },
+        "surfaces": {
+          "onLight": {
+            "path": "branding/generated-master.png",
+            "sha256": "e9401e8c48ad03d54dc8a9bdad2871193c0452529a15b65ec911480d896fc97c",
+            "generation": {
+              "tool": "image_gen.imagegen",
+              "generationId": "exec-b0910b1e-cb18-4f94-9ccd-b13c23b5d491",
+              "modelVersion": null
+            }
+          },
+          "onDark": {
+            "path": "branding/generated-on-dark.png",
+            "sha256": "64e8271e62aa70f897985dade42d2c9b9255c112260ced606d0fbf084d2b4022",
+            "generation": {
+              "tool": "image_gen.imagegen",
+              "generationId": "exec-b0910b1e-cb18-4f94-9ccd-b13c23b5d491",
+              "modelVersion": null
+            }
+          },
+          "onAccent": {
+            "path": "branding/generated-on-dark.png",
+            "sha256": "64e8271e62aa70f897985dade42d2c9b9255c112260ced606d0fbf084d2b4022",
+            "generation": {
+              "tool": "image_gen.imagegen",
+              "generationId": "exec-b0910b1e-cb18-4f94-9ccd-b13c23b5d491",
+              "modelVersion": null
+            }
+          }
+        },
+        "surfaceReview": {
+          "reviewed": false,
+          "backgrounds": {
+            "onLight": [
+              "#ffffff"
+            ],
+            "onDark": [
+              "#111113",
+              "#101820"
+            ],
+            "onAccent": [
+              "#09090b",
+              "#17191c",
+              "#c40101"
+            ]
+          },
+          "wordmarkWidths": [
+            120,
+            180
+          ],
+          "markWidths": [
+            32,
+            64
+          ],
+          "method": "Exact existing cropTransparentPadding exports from real generated RGBA inputs, composited with actual alpha at header and compact icon sizes. No template palette or composition changes."
+        }
+      },
+      "recordedAt": "2026-10-19T20:41:16.696Z"
+    }
+  ]
+}

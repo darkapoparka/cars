@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "slug": "dms-cars-peterborough",
+  "dealerId": "gb-peterborough-dms-cars",
+  "business": {
+    "name": "DMS Cars Ltd",
+    "city": "Peterborough",
+    "region": "Cambridgeshire",
+    "countryCode": "GB",
+    "currency": "GBP",
+    "distanceUnit": "mi",
+    "locale": "en-GB",
+    "address": "354 Padholme Road East, Peterborough PE1 5XL",
+    "phone": "+441733915213",
+    "phoneDisplay": "+441733915213",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://showroom.ebaymotorspro.co.uk/dms-cars-ltd",
+    "hours": "",
+    "sourceUrl": "https://showroom.ebaymotorspro.co.uk/dms-cars-ltd",
+    "observedAt": "2026-10-19T17:36:50.867520Z",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/dms-cars-ltd",
+      "observedAt": "2026-10-19T17:36:50.867520Z",
+      "supports": [
+        "public-business-identity",
+        "public-business-contact",
+        "advertised-stock"
+      ]
+    }
+  ]
+}

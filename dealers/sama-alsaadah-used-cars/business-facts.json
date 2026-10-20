@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "slug": "sama-alsaadah-used-cars",
+  "dealerId": "ae-sharjah-sama-alsaadah-used-cars",
+  "business": {
+    "name": "Sama Alsaadah Used Cars",
+    "city": "Sharjah",
+    "region": "Sharjah",
+    "countryCode": "AE",
+    "currency": "AED",
+    "distanceUnit": "km",
+    "locale": "en-AE",
+    "address": "Showroom 35, Cars Souq, Al Ruqa, Al Hamra, Sharjah - UAE",
+    "phone": "+971502833838",
+    "phoneDisplay": "+971502833838",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://www.oneclickdrive.com/company/sharjah/sama-alsaadah-used-cars",
+    "hours": "",
+    "sourceUrl": "https://www.oneclickdrive.com/company/sharjah/sama-alsaadah-used-cars",
+    "observedAt": "2026-10-19T19:58:51.524385Z",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://www.oneclickdrive.com/company/sharjah/sama-alsaadah-used-cars",
+      "observedAt": "2026-10-19T19:58:51.524385Z",
+      "supports": [
+        "public-business-trading-name",
+        "dealer-attributed-catalogue",
+        "business-location",
+        "public-business-phone"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Mazda/6-Sport/?id=16012",
+      "observedAt": "2026-10-19T19:58:51.524385Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Nissan/Altima-S/?id=16021",
+      "observedAt": "2026-10-19T19:58:51.524385Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Toyota/Corolla-XLI/?id=16007",
+      "observedAt": "2026-10-19T19:58:51.524385Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    }
+  ]
+}

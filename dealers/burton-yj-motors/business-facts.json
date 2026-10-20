@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "slug": "burton-yj-motors",
+  "dealerId": "gb-burton-yj-motors",
+  "business": {
+    "name": "Y J Motors",
+    "city": "Burton-on-Trent",
+    "region": "Staffordshire",
+    "countryCode": "GB",
+    "currency": "GBP",
+    "distanceUnit": "mi",
+    "locale": "en-GB",
+    "address": "St. Peters Bridge, St. Peters Street, Burton-On-Trent, Staffordshire, DE15 9AW",
+    "phone": "+447822001447",
+    "phoneDisplay": "(07822) 001447",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://www.autotrader.co.uk/dealers/staffordshire/burton-on-trent/y-j-motors-10030623",
+    "hours": "Monday–Friday 09:00–18:00; Saturday–Sunday 10:00–16:00. Viewings by appointment.",
+    "sourceUrl": "https://www.autotrader.co.uk/dealers/staffordshire/burton-on-trent/y-j-motors-10030623",
+    "observedAt": "2026-10-19T17:36:00.094994Z",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://www.autotrader.co.uk/dealers/staffordshire/burton-on-trent/y-j-motors-10030623",
+      "observedAt": "2026-10-19T17:36:00.094994Z",
+      "supports": [
+        "business-name",
+        "public-business-contact",
+        "business-location",
+        "current-listing-snapshot"
+      ]
+    }
+  ]
+}

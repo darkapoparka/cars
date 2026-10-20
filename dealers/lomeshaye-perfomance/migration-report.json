@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "lomeshaye-perfomance",
+  "previousSlug": "lomeshaye-perfomance",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:16:47.762Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-nelson-lomeshaye-perfomance",
+    "position": 73
+  },
+  "before": {
+    "files": 40,
+    "bytes": 4844585
+  },
+  "afterBeforeReview": {
+    "files": 24,
+    "bytes": 2160691
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 101667,
+      "sha256": "78886622a3f66732dda0ba9eae5b1a70cdc13627489cdf4ddd895af4902cb7ac"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 171783,
+      "sha256": "6bd2f778e0898111a0b7cf293755b9556b4e041b3651da3561c130b8f6fbadc4"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 101667,
+      "sha256": "78886622a3f66732dda0ba9eae5b1a70cdc13627489cdf4ddd895af4902cb7ac"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 135756,
+      "sha256": "3d14662a28f0440d0c97a2d75f0467fddffca3e256f56265390a023943c80b44"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 298746,
+      "sha256": "aa227eddb9bc3dc8a8f4ef1702b38a893418f00829dc583d6d99fa5d708a7692"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 298746,
+      "sha256": "aa227eddb9bc3dc8a8f4ef1702b38a893418f00829dc583d6d99fa5d708a7692"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 135756,
+      "sha256": "3d14662a28f0440d0c97a2d75f0467fddffca3e256f56265390a023943c80b44"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 101667,
+      "sha256": "78886622a3f66732dda0ba9eae5b1a70cdc13627489cdf4ddd895af4902cb7ac"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 6222,
+      "sha256": "67bbf49f00eed0ec42093a51c2ac75efb07d89cc98357b86a0957072d079eb1e"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 298746,
+      "sha256": "aa227eddb9bc3dc8a8f4ef1702b38a893418f00829dc583d6d99fa5d708a7692"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 172216,
+      "sha256": "3203a8742e13b2ba1b88dea17fa013b7c68d2ec5cfef6bf5b9019a8d165f17fd"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 298746,
+      "sha256": "aa227eddb9bc3dc8a8f4ef1702b38a893418f00829dc583d6d99fa5d708a7692"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 172216,
+      "sha256": "3203a8742e13b2ba1b88dea17fa013b7c68d2ec5cfef6bf5b9019a8d165f17fd"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 135756,
+      "sha256": "3d14662a28f0440d0c97a2d75f0467fddffca3e256f56265390a023943c80b44"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 99222,
+      "sha256": "56a7b692b706d53c3da17e55d453fc002cdb921fab6e6225f464021ecd833089"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 95682,
+      "sha256": "403f3e7b74ffcb2320490570f35030b632b9b2e5a2e2abead01a0fd587034d20"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 63126,
+      "sha256": "f142bed7c3da4277568e330330ae7e879e48605ae776a01dfe83c70be2fa3c13"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 12,
+    "bytes": 2130814,
+    "inventorySha256": "9d974906c052c0c9eacef6c025adf1c582b5fcb1a302ba068185e06575c5867c",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "lomeshaye-perfomance",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 26,
+    "report": "dealers/lomeshaye-perfomance/input-review.json"
+  },
+  "after": {
+    "files": 26,
+    "bytes": 2169721
+  }
+}

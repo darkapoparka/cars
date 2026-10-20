@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "east-midlands-car-sales",
+  "previousSlug": "east-midlands-car-sales",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:12:50.160Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-kirkby-east-midlands-car-sales",
+    "position": 55
+  },
+  "before": {
+    "files": 42,
+    "bytes": 2535568
+  },
+  "afterBeforeReview": {
+    "files": 26,
+    "bytes": 1368381
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 18593,
+      "sha256": "e216eea75ee63f7abec4a1c32f2d0baa953254a02d8ba90097f5b8b1ae1589b1"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 102737,
+      "sha256": "f0d9f8dd2a1ad25a8dc7b727786680e8635d4e870f125151e6266e2e7b58feca"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 18593,
+      "sha256": "e216eea75ee63f7abec4a1c32f2d0baa953254a02d8ba90097f5b8b1ae1589b1"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 36431,
+      "sha256": "d2898a779ca260acbc86b82c9e74b98ced8a801744e867d1e4cbe957839fa133"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 155523,
+      "sha256": "6f55496a80c38922f3e1a4546140229241134d0163b219e1cdc109b757b02e93"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 155523,
+      "sha256": "6f55496a80c38922f3e1a4546140229241134d0163b219e1cdc109b757b02e93"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 36431,
+      "sha256": "d2898a779ca260acbc86b82c9e74b98ced8a801744e867d1e4cbe957839fa133"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 18593,
+      "sha256": "e216eea75ee63f7abec4a1c32f2d0baa953254a02d8ba90097f5b8b1ae1589b1"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 3687,
+      "sha256": "928b07d1b41acd2ec28d9f8d44720d09163143f48f9a7bad3fff9d3bb88ca418"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 155523,
+      "sha256": "6f55496a80c38922f3e1a4546140229241134d0163b219e1cdc109b757b02e93"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 91996,
+      "sha256": "a85cb6cc68c3783b116e89f72a09758e6f053613511417741727eb2783d5602c"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 155523,
+      "sha256": "6f55496a80c38922f3e1a4546140229241134d0163b219e1cdc109b757b02e93"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 91996,
+      "sha256": "a85cb6cc68c3783b116e89f72a09758e6f053613511417741727eb2783d5602c"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 36431,
+      "sha256": "d2898a779ca260acbc86b82c9e74b98ced8a801744e867d1e4cbe957839fa133"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 23210,
+      "sha256": "ce0e2044c480e6f17d63e1b32a20e70e84fa89416569b8f5a9a5462205579e51"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 60154,
+      "sha256": "6b6ed1141bec1e34ad89a2df2b41e114c856f3514e5c6d4d18d16788416eb88f"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 10076,
+      "sha256": "76bac60940eb2a9aa5d6f186b28e832478b8836539ed3f499a5bcb4882f4a370"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 13,
+    "bytes": 1334663,
+    "inventorySha256": "85597709ab107609118e8ff77c90b97b6523a11b45ae857354257b16eb8e8aec",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "east-midlands-car-sales",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 28,
+    "report": "dealers/east-midlands-car-sales/input-review.json"
+  },
+  "after": {
+    "files": 28,
+    "bytes": 1377706
+  }
+}

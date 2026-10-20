@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "car-shop-swansea",
+  "previousSlug": "car-shop-swansea",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:14:54.917Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-swansea-car-shop",
+    "position": 93
+  },
+  "before": {
+    "files": 36,
+    "bytes": 6125193
+  },
+  "afterBeforeReview": {
+    "files": 20,
+    "bytes": 2901603
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 137902,
+      "sha256": "45d5c02c7ad6f2ca252277b412410402c16b8d8156f8463eee6471fead85cd7b"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 137902,
+      "sha256": "45d5c02c7ad6f2ca252277b412410402c16b8d8156f8463eee6471fead85cd7b"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 137902,
+      "sha256": "45d5c02c7ad6f2ca252277b412410402c16b8d8156f8463eee6471fead85cd7b"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 286084,
+      "sha256": "d8a7c5cdda540900c57ca0d36f000f7242d5652289f72523b6cddc66316c5d17"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 277614,
+      "sha256": "bd1020ab06f95845ef69868161faa4fa863eaa8a6709684e4512c784df1e9475"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 277614,
+      "sha256": "bd1020ab06f95845ef69868161faa4fa863eaa8a6709684e4512c784df1e9475"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 286084,
+      "sha256": "d8a7c5cdda540900c57ca0d36f000f7242d5652289f72523b6cddc66316c5d17"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 137902,
+      "sha256": "45d5c02c7ad6f2ca252277b412410402c16b8d8156f8463eee6471fead85cd7b"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 10036,
+      "sha256": "c5b820de1e23f76a44bf5e378aa60eac6a1c1f926dc4bf533aa10113e2219f22"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 277614,
+      "sha256": "bd1020ab06f95845ef69868161faa4fa863eaa8a6709684e4512c784df1e9475"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 177228,
+      "sha256": "fea0d77aa584ce5539943eaf98bca7e5133b275c0bcd7aca674c145db86846f2"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 277614,
+      "sha256": "bd1020ab06f95845ef69868161faa4fa863eaa8a6709684e4512c784df1e9475"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 177228,
+      "sha256": "fea0d77aa584ce5539943eaf98bca7e5133b275c0bcd7aca674c145db86846f2"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 286084,
+      "sha256": "d8a7c5cdda540900c57ca0d36f000f7242d5652289f72523b6cddc66316c5d17"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 177812,
+      "sha256": "2cf355d3986b421f0c92c7d889fa062097f96348b955d1f28e408affbe0e8b55"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 82382,
+      "sha256": "2ed4f9560c745b1e595cf0c8e7004c0d48827dc48df6a1c4681db1d9329b2852"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 82382,
+      "sha256": "2ed4f9560c745b1e595cf0c8e7004c0d48827dc48df6a1c4681db1d9329b2852"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 11,
+    "bytes": 2879699,
+    "inventorySha256": "da6112ff3018772e99c14dd4427e6290d29eeee1b41a6c47c59a46b5c79d90a7",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "car-shop-swansea",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 22,
+    "report": "dealers/car-shop-swansea/input-review.json"
+  },
+  "after": {
+    "files": 22,
+    "bytes": 2909853
+  }
+}

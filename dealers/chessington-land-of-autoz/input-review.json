@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-input-review",
+  "dealer": "chessington-land-of-autoz",
+  "reviewed": true,
+  "reviewedAt": "2026-10-20T19:16:28.073Z",
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "checks": [
+    "canonical-hosting-and-preserved-fleet-collisions",
+    "assigned-expansion-lead",
+    "public-fact-schema-and-price-omission",
+    "personal-contact-screen",
+    "retained-stock-media",
+    "companion-copy-source-binding",
+    "immutable-template-release-and-native-QA-parent",
+    "reviewed-artwork-provenance-and-regenerated-logo-hashes"
+  ],
+  "sourceArtworkReview": "Retained artwork review is separate provenance; this command does not perform visual, Arabic-expert or dealer approval.",
+  "copyReview": "Automated structure, stock hash, source text and complete EN/BG rows; no new human translation approval is inferred.",
+  "contacts": {
+    "schemaVersion": 1,
+    "kind": "cars-automated-public-contact-screen",
+    "dealer": "chessington-land-of-autoz",
+    "method": "heuristic; no claim that unflagged values cannot be personal",
+    "flags": [],
+    "blocking": []
+  },
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-chessington-land-of-autoz",
+    "position": 38
+  },
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "inputs": [
+    {
+      "path": "FACTS-AND-INVENTORY.json",
+      "sha256": "ef6abba77a907afb6bb9a8a42e07067a8895fdea72db751abf115218f0854473"
+    },
+    {
+      "path": "branding/generated-mark-on-dark.png",
+      "sha256": "a84eed700d3cf18c2dacc6e3cef547454a5550d364220692bfba311dc343cd2a"
+    },
+    {
+      "path": "branding/generated-mark.png",
+      "sha256": "91b9a1c542aef67fe3fb46654a0e560d6a28e55a6be9406b1d5d7a463f234cea"
+    },
+    {
+      "path": "branding/generated-master.png",
+      "sha256": "a176ea7d227bdf8ba94b5a86854462cb5d2a4f8e9668d18fdd69508d683e7f8c"
+    },
+    {
+      "path": "branding/generated-on-dark.png",
+      "sha256": "00c7ac257c0580391fd4d397202db54d1818f57643206807342dabd361349983"
+    },
+    {
+      "path": "branding/logo-contract.json",
+      "sha256": "5fa11061b9b36a1f166bbe68b49703715b80451e0f617246531a8bd4fdf5d260"
+    },
+    {
+      "path": "branding/logo-recipe.json",
+      "sha256": "6f50d8810cd254c427344cf8d3235bdc1506b6889d6ede39ce65051b57152f89"
+    },
+    {
+      "path": "branding/source.json",
+      "sha256": "cd2c5b3910a1a51caff30047da869af307ea0230dd2f5482b4b6b45bb018b11b"
+    },
+    {
+      "path": "business-facts.json",
+      "sha256": "21095322536ebde46633378c026150fafcfdff47f15e21d8cc893be44619b7a1"
+    },
+    {
+      "path": "copy-review.json",
+      "sha256": "0a017c6ae08c4257c9aef0bd436989cf2180cc80edadcaa266338b4ffac5a518"
+    },
+    {
+      "path": "dealer-stock/vehicle-1.jpg",
+      "sha256": "50a9607fdafcf101a6e0fec6c861772f6f33742a9db9af280b3f0b1bafad8037"
+    },
+    {
+      "path": "dealer-stock/vehicle-2.jpg",
+      "sha256": "da34bcc77ace5c9bf9887edf42120d07b2a833addbf7244433db49393eb17e04"
+    },
+    {
+      "path": "dealer-stock/vehicle-3.jpg",
+      "sha256": "1986edf79fdd3ec4098b763c460213f1c53911e4912b8ac900aa8893480b802b"
+    },
+    {
+      "path": "dealer.json",
+      "sha256": "37fe9a41e15b39fd1adda6fc1e7b61e3589acae63e1ca8c202b70c48e92a82fe"
+    },
+    {
+      "path": "identity-review.json",
+      "sha256": "09d530b8301ee4fe61c807273462248cfa2d3f63d7fc7fb41e4dc465e4af7857"
+    },
+    {
+      "path": "locale.json",
+      "sha256": "ccf3203df564f74c8df2ed7cdf5bd966143c23cf40812efa59b77880fb17f82e"
+    },
+    {
+      "path": "missing-facts.json",
+      "sha256": "6f4389f5cbf2e99f8115ca813de8ad6b857e34e39db2a038adc11bce5ab84ada"
+    },
+    {
+      "path": "qualification.json",
+      "sha256": "7e640a97a3081decaad7ed20a086d51c07ce856f45645bd513513b986dff1806"
+    },
+    {
+      "path": "source-evidence.json",
+      "sha256": "3044dd0df46914a4e992f23aa98bb3e550b4c26217c5d9a966fd4a996fdbd786"
+    },
+    {
+      "path": "stock-history-review.json",
+      "sha256": "df579b83c9c6c4e60e8e624a9920fd2df20466952379f7026feba8c16a8a035e"
+    },
+    {
+      "path": "stock.json",
+      "sha256": "3d3730be42d053c931e9c55897b246e4218ef5378432a5b1ffbac4e713d9adb3"
+    }
+  ],
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "providerWrites": 0
+}

@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": true,
+  "reviewedAt": "2026-10-20T19:26:13.532Z",
+  "dealer": "unlimited-motors-birmingham",
+  "dealerId": "gb-birmingham-unlimited-motors",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "method": "Automated exact registry/pack identity, canonical hosting and batch comparison; retained public source fields were structurally checked, not human-approved.",
+  "sources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/Unlimited-Motors?menu=1",
+      "observedAt": "2026-10-19T20:00:31.563792Z"
+    },
+    {
+      "url": "https://www.ebay.co.uk/itm/820256455597",
+      "observedAt": "2026-10-19T20:02:58.349190Z"
+    },
+    {
+      "url": "https://www.ebay.co.uk/itm/820249639027",
+      "observedAt": "2026-10-19T20:02:58.350908Z"
+    },
+    {
+      "url": "https://www.ebay.co.uk/itm/820248606730",
+      "observedAt": "2026-10-19T20:02:58.452025Z"
+    },
+    {
+      "url": "https://www.cazoo.co.uk/dealers/unlimited-motors-14199/",
+      "observedAt": "2026-10-19T20:03:54.161291Z"
+    }
+  ],
+  "registryReview": {
+    "source": "docs/DEPLOYMENT-INVENTORY.json",
+    "sha256": "250dd5868cb842ea8bef8a95b258a6f043bfd0e1043d10cebb57ae6bd22559fb",
+    "dealerCount": 175,
+    "matches": []
+  },
+  "clientsReview": {
+    "commit": "a999878a921fb61b37bf198c43275550814f88cc",
+    "directoryEntries": 176,
+    "matches": []
+  },
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  }
+}

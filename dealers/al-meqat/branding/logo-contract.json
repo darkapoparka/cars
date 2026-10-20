@@ -1,0 +1,197 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-meqat",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T20:25:11.275Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-independent-monogram-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "57c38efde5a256ab819aece1da4921275c5c36ff84d21b111d94bc7e81484135",
+      "sourceSha256": "c1baa5cceb8195fb3d1feff5e1268d1a568e0f50c2ea2c2291c9fe61c9811b2c"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "f9f279fc13ea3b4c1f5b4683a837ef9bf06065878b12f3e9a7bf0456ded7c1d2",
+      "sourceSha256": "69214188e45b40354f183439ea196c10b794880c3ee960de9ce47c2ed3f71d89"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "f9f279fc13ea3b4c1f5b4683a837ef9bf06065878b12f3e9a7bf0456ded7c1d2",
+      "sourceSha256": "69214188e45b40354f183439ea196c10b794880c3ee960de9ce47c2ed3f71d89"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "c1baa5cceb8195fb3d1feff5e1268d1a568e0f50c2ea2c2291c9fe61c9811b2c",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-7918cf34-242d-4120-9160-8d943ecd1885",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "e8b836b07e8475dfd9acfc187bb76d1775850387fd4bfbe9b4724e81afac5968",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-7918cf34-242d-4120-9160-8d943ecd1885",
+      "modelVersion": null
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "72765ccd54ec17d2c81b6e4efe06f23d4b4316d5b9b42fe9ce521c16a85c6d87"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "c1baa5cceb8195fb3d1feff5e1268d1a568e0f50c2ea2c2291c9fe61c9811b2c",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-7918cf34-242d-4120-9160-8d943ecd1885",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-meqat/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "69214188e45b40354f183439ea196c10b794880c3ee960de9ce47c2ed3f71d89",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-f8bbac0c-4238-41d3-bbca-55c3443931d6",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-meqat/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "69214188e45b40354f183439ea196c10b794880c3ee960de9ce47c2ed3f71d89",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-f8bbac0c-4238-41d3-bbca-55c3443931d6",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-meqat/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "fd7560d5c07408ed5c52df2108394ae388edd05e39d5264d4c0f6d376bb151d0",
+      "sha256": "c1baa5cceb8195fb3d1feff5e1268d1a568e0f50c2ea2c2291c9fe61c9811b2c",
+      "crop": {
+        "left": 3,
+        "top": 240,
+        "width": 1371,
+        "height": 714
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "d871ab70f7dbe4b21661fb74db03bcd5d88c76db5e296362cab0f535d7f533db",
+      "sha256": "69214188e45b40354f183439ea196c10b794880c3ee960de9ce47c2ed3f71d89",
+      "crop": {
+        "left": 6,
+        "top": 241,
+        "width": 1365,
+        "height": 713
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "d871ab70f7dbe4b21661fb74db03bcd5d88c76db5e296362cab0f535d7f533db",
+      "sha256": "69214188e45b40354f183439ea196c10b794880c3ee960de9ce47c2ed3f71d89",
+      "crop": {
+        "left": 6,
+        "top": 241,
+        "width": 1365,
+        "height": 713
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "8dc2128ef5915234bca75327525771a4d609b93873cd2f1ab0e32cba01267844",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-7918cf34-242d-4120-9160-8d943ecd1885",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-meqat/branding/generated-on-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "0172e591456e93cd6f542ae610a9f12c7a195430da7dd78253319bc073a77894",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-f8bbac0c-4238-41d3-bbca-55c3443931d6",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-meqat/branding/generated-on-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "e8b836b07e8475dfd9acfc187bb76d1775850387fd4bfbe9b4724e81afac5968",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-7918cf34-242d-4120-9160-8d943ecd1885",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-meqat/branding/generated-on-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "72765ccd54ec17d2c81b6e4efe06f23d4b4316d5b9b42fe9ce521c16a85c6d87",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-7918cf34-242d-4120-9160-8d943ecd1885",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-meqat/branding/generated-on-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-19T20:25:11.275Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "929514c34bb2d2c931490055f55cb63a46fe798e49bee699c94b72b2b93ec46e",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-f8bbac0c-4238-41d3-bbca-55c3443931d6",
+      "modelVersion": null
+    }
+  }
+}

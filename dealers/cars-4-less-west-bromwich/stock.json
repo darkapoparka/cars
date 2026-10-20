@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "dealer": "cars-4-less-west-bromwich",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "public-listing-1",
+      "title": "2015 Nissan Juke 1.5 dCi Visia",
+      "make": "Nissan",
+      "model": "Juke",
+      "year": 2015,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/public-1.jpg"
+      ],
+      "sourceUrl": "https://www.ebay.co.uk/itm/307224475006",
+      "observedAt": "2026-10-19T17:53:23.257599Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "transmission": "Manual",
+      "fuel": "Diesel",
+      "color": "Red",
+      "mileageValue": 89000,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "public-listing-2",
+      "title": "2017 Citroen C4 Cactus 1.6 BlueHDi Flair",
+      "make": "Citroen",
+      "model": "C4 Cactus",
+      "year": 2017,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/public-2.jpg"
+      ],
+      "sourceUrl": "https://www.ebay.co.uk/itm/307224463211",
+      "observedAt": "2026-10-19T17:53:23.520310Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "fuel": "Diesel",
+      "color": "Blue",
+      "mileageValue": 101000,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "public-listing-3",
+      "title": "2019 Volkswagen Polo 1.0 EVO SE",
+      "make": "Volkswagen",
+      "model": "Polo",
+      "year": 2019,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/public-3.jpg"
+      ],
+      "sourceUrl": "https://www.ebay.co.uk/itm/307215870489",
+      "observedAt": "2026-10-19T17:53:23.743130Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "transmission": "Manual",
+      "fuel": "Petrol",
+      "color": "Red",
+      "mileageValue": 109000,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "dealer": "burton-yj-motors",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T17:36:00.094994Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "vehicle-1",
+      "title": "2015 Vauxhall Corsa",
+      "make": "Vauxhall",
+      "model": "Corsa",
+      "year": 2015,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/vehicle-1.jpg"
+      ],
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202610026606651",
+      "observedAt": "2026-10-19T17:36:00.094994Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 98000,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "vehicle-2",
+      "title": "2013 Nissan Juke",
+      "make": "Nissan",
+      "model": "Juke",
+      "year": 2013,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/vehicle-2.jpg"
+      ],
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202608215309580",
+      "observedAt": "2026-10-19T17:36:00.094994Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 78000,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "vehicle-3",
+      "title": "2014 Volkswagen Passat",
+      "make": "Volkswagen",
+      "model": "Passat",
+      "year": 2014,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/vehicle-3.jpg"
+      ],
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202607134141822",
+      "observedAt": "2026-10-19T17:36:00.094994Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 117000,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

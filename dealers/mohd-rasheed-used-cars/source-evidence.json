@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "dealer": "mohd-rasheed-used-cars",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://www.arabwheels.ae/used-cars/dealers/mohd-rasheed-used-cars-showroom-in-uae/",
+      "observedAt": "2026-10-19T20:00:44.027770Z",
+      "supports": [
+        "public-business-trading-name",
+        "dealer-attributed-catalogue",
+        "business-location",
+        "public-business-phone"
+      ]
+    },
+    {
+      "url": "https://www.arabwheels.ae/used-cars/hyundai-staria-2023-for-sale-in-sharjah-74527",
+      "observedAt": "2026-10-19T20:00:44.027770Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    },
+    {
+      "url": "https://www.arabwheels.ae/used-cars/iveco-daily-2017-for-sale-in-sharjah-74532",
+      "observedAt": "2026-10-19T20:00:44.027770Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    },
+    {
+      "url": "https://www.arabwheels.ae/used-cars/mitsubishi-fuso-rosa-2016-for-sale-in-sharjah-74533",
+      "observedAt": "2026-10-19T20:00:44.027770Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "research": {
+    "observedAt": "2026-10-19T20:00:44.027770Z",
+    "profileUrl": "https://www.arabwheels.ae/used-cars/dealers/mohd-rasheed-used-cars-showroom-in-uae/",
+    "profileSha256": "64717331197d6eca5437aae1a9150d2298b9bbf5ad51c325ec716968bb252844",
+    "classification": "public-marketplace-dealer-profile-and-listing-snapshot",
+    "directDealerPostingVerified": false,
+    "profileClaimed": false,
+    "limitation": "Seller attribution comes from the public marketplace profile. Current physical availability and direct dealer posting are not independently confirmed.",
+    "notes": [
+      "Retained Sooq listing URL returned404; current seller-attributed ArabWheels profile and vehicle records used instead.",
+      "ArabWheels timings not supplied."
+    ],
+    "contactReview": "Only business-labeled dealer call numbers retained. Marketplace relay/support numbers and personal-looking staff contacts excluded.",
+    "photoSources": [
+      {
+        "listingId": "aw-74527",
+        "listingUrl": "https://www.arabwheels.ae/used-cars/hyundai-staria-2023-for-sale-in-sharjah-74527",
+        "sourceImageUrl": "https://cache3.arabwheels.ae/ad_pictures/3277/Slide_hyundai-staria-2023-3277710.webp",
+        "observedAt": "2026-10-19T20:00:44.027770Z",
+        "retainedPath": "dealer-stock/aw-74527.jpg",
+        "sha256": "250388181e1281c9e3c05cdaf8bf74082939f8758c3673b754582d61ff1f889c",
+        "bytes": 25558,
+        "width": 282,
+        "height": 375,
+        "operation": "resize-within-1280-without-upscale-and-JPEG-quality-82-or-83"
+      },
+      {
+        "listingId": "aw-74532",
+        "listingUrl": "https://www.arabwheels.ae/used-cars/iveco-daily-2017-for-sale-in-sharjah-74532",
+        "sourceImageUrl": "https://cache1.arabwheels.ae/ad_pictures/3277/Slide_iveco-daily-minibus-2017-3277743.webp",
+        "observedAt": "2026-10-19T20:00:44.027770Z",
+        "retainedPath": "dealer-stock/aw-74532.jpg",
+        "sha256": "6fc2208287b1e2dd0d273bb73c65ef440f17c7b035222470a7efb434f2ac791a",
+        "bytes": 27819,
+        "width": 282,
+        "height": 375,
+        "operation": "resize-within-1280-without-upscale-and-JPEG-quality-82-or-83"
+      },
+      {
+        "listingId": "aw-74533",
+        "listingUrl": "https://www.arabwheels.ae/used-cars/mitsubishi-fuso-rosa-2016-for-sale-in-sharjah-74533",
+        "sourceImageUrl": "https://cache1.arabwheels.ae/ad_pictures/3277/mitsubishi-fuso-rosa-2016-3277754.webp",
+        "observedAt": "2026-10-19T20:59:48.880640Z",
+        "retainedPath": "dealer-stock/aw-74533.jpg",
+        "sha256": "f35028a5af3eaed6ec5dbf4630c4d296e671aa411a478ec6d46ff376a58b8130",
+        "bytes": 79564,
+        "width": 563,
+        "height": 750,
+        "operation": "resize-within-1280-without-upscale-and-JPEG-quality-82-or-83",
+        "selectionNote": "Exterior vehicle photograph selected from the same public listing gallery; identification-plate thumbnail omitted."
+      }
+    ]
+  }
+}

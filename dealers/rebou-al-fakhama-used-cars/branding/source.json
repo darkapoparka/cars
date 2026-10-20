@@ -1,0 +1,163 @@
+{
+  "schemaVersion": 1,
+  "dealer": "rebou-al-fakhama-used-cars",
+  "realLogoFirst": true,
+  "publishedBranding": true,
+  "creationMethod": "sourced-logo-imagegen-redraw",
+  "dealerApproved": false,
+  "approvalStatus": "redraw-and-compact-adaptation-not-dealer-approved",
+  "usageStatus": "public-preview-only",
+  "observedAt": "2026-10-19T19:58:51.844383Z",
+  "publicSources": [
+    {
+      "url": "https://ayshei.com/v-shop/rebou_al_fakhama/inventory",
+      "observedAt": "2026-10-19T19:58:51.844383Z"
+    },
+    {
+      "url": "https://ayshei.com/ads/detail/8821814212-2019-audi-q7-american-specs-excellent-condition",
+      "observedAt": "2026-10-19T19:58:51.844383Z"
+    },
+    {
+      "url": "https://ayshei.com/ads/detail/8084758468-2023-ford-mustang-gt-premium-american-specs-excellent-condition",
+      "observedAt": "2026-10-19T19:58:51.844383Z"
+    },
+    {
+      "url": "https://ayshei.com/ads/detail/2182514939-2019-dodge-charger-gt-american-specs",
+      "observedAt": "2026-10-19T19:58:51.844383Z"
+    }
+  ],
+  "originals": [
+    {
+      "path": "branding/source-original.jpg",
+      "sha256": "c71c7ecf5f5f51ad871a6dc0110bb2fe474154f7d7bbab8cafefbc56ccf796bd",
+      "url": "https://storage.ayshei.com/prod/custom-profile/c3c0a9a8-96d7-4d31-8e02-6fdc97956745/22ae4226-14cd-4829-8879-bcd12cfde8f9.jpg",
+      "observedAt": "2026-10-19T19:58:51.844383Z",
+      "identityStatus": "public-profile-identity-reference"
+    }
+  ],
+  "logoResearch": "Dealer-published Ayshei banner supplies blue/silver car-shield identity. Banner is a marketing rendering, not evidence of actual premises. Generic profile avatar excluded.",
+  "visualReview": "Reviewed transparent artwork, full business-wordmark spelling and compact emblem. Deterministic crops retain the generated artwork; no vector substitute, recolouring or template changes. Compact variants are unapproved preview adaptations. Blue/silver badge and exact REBOU AL FAKHAMA / USED CARS name retained; building and luxury slogan omitted.",
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T20:59:17.108Z",
+    "master": {
+      "path": "branding/generated-primary.png",
+      "sha256": "9ad6432dd7e9342ab5a37d936dab685ebb8d99e31307099d0e6b918d67c444fc",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-331518fa-c159-4512-b001-d0b7ea5720b9",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "d0f6f71a14b9059c3dff414b8d3cf1f0fe0bd979df3237e69170abe69e8934ac",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-331518fa-c159-4512-b001-d0b7ea5720b9",
+        "modelVersion": null,
+        "transformation": {
+          "operation": "rectangular-extract-without-recolour-or-redrawing",
+          "source": "branding/generated-primary.png",
+          "sourceSha256": "9ad6432dd7e9342ab5a37d936dab685ebb8d99e31307099d0e6b918d67c444fc",
+          "rectangle": {
+            "left": 0,
+            "top": 0,
+            "width": 760,
+            "height": 724
+          }
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-inverse.png",
+      "sha256": "277e7da7110612c55a56707311fbb1cbe437b977636a7bd026819a9f3836fc4f",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-4d5bc152-d57e-4d87-b87d-54a00638b5fc",
+        "modelVersion": null
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-primary.png",
+        "sha256": "9ad6432dd7e9342ab5a37d936dab685ebb8d99e31307099d0e6b918d67c444fc",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-331518fa-c159-4512-b001-d0b7ea5720b9",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-inverse.png",
+        "sha256": "277e7da7110612c55a56707311fbb1cbe437b977636a7bd026819a9f3836fc4f",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-4d5bc152-d57e-4d87-b87d-54a00638b5fc",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-inverse.png",
+        "sha256": "277e7da7110612c55a56707311fbb1cbe437b977636a7bd026819a9f3836fc4f",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-4d5bc152-d57e-4d87-b87d-54a00638b5fc",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": {
+        "onLight": [
+          "#ffffff"
+        ],
+        "onDark": [
+          "#111113",
+          "#101820"
+        ],
+        "onAccent": [
+          "#09090b",
+          "#17191c",
+          "#c40101"
+        ]
+      },
+      "notes": "Reviewed transparent artwork, full business-wordmark spelling and compact emblem. Deterministic crops retain the generated artwork; no vector substitute, recolouring or template changes. Compact variants are unapproved preview adaptations. Blue/silver badge and exact REBOU AL FAKHAMA / USED CARS name retained; building and luxury slogan omitted."
+    },
+    "compactMarkStatus": "unapproved-preview-adaptation",
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-19T20:59:17.108Z",
+      "widths": [
+        32,
+        64
+      ],
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#101820"
+      ],
+      "notes": "Reviewed transparent artwork, full business-wordmark spelling and compact emblem. Deterministic crops retain the generated artwork; no vector substitute, recolouring or template changes. Compact variants are unapproved preview adaptations. Blue/silver badge and exact REBOU AL FAKHAMA / USED CARS name retained; building and luxury slogan omitted."
+    }
+  },
+  "generationPrompts": [
+    {
+      "role": "primary",
+      "prompt": "Extract the identity inspiration only from this dealer-published banner and faithfully redraw it as a clean professional transparent logo. Preserve the blue/silver shield badge with car roof at its top, exact name REBOU AL FAKHAMA and secondary USED CARS. Place a compact shield/car emblem left and the exact wordmark to the right. Deep midnight blue #12344f with restrained dark silver #586974 outlines so all strokes read on white. Do not recreate the building, photography or marketing slogan. Flat geometric shapes, no gradients, no shadows, no mockup, no background. Bold compact emblem legible at 32px, wide horizontal lockup.",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-331518fa-c159-4512-b001-d0b7ea5720b9",
+      "modelVersion": null,
+      "returnedArtifact": "exec-331518fa-c159-4512-b001-d0b7ea5720b9.png",
+      "note": "The tool exposed the returned artifact identifier and did not expose a model version."
+    },
+    {
+      "role": "inverse",
+      "prompt": "Create the compact inverse surface variant of the left-hand emblem in this logo. ONLY the compact left emblem, absolutely no wordmark or business text. Preserve its existing shape, initials where they form the symbol, geometry, motif, proportions and open counters. Re-render entirely in one solid neutral cool silver #b9bec2, substantial flat strokes and smooth boundaries. Dark fills become open transparent negative space with the motif represented in silver. Center the one entire compact emblem on a square true transparent canvas, about 80% of canvas width, no other graphics. No pure white ink. No background, no mockup, no labels, no gradient, no shadow, no texture, no distressed edges, no extra lines. Clean automotive identity asset with a recognizable silhouette at 32 pixels.",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-4d5bc152-d57e-4d87-b87d-54a00638b5fc",
+      "modelVersion": null,
+      "returnedArtifact": "exec-4d5bc152-d57e-4d87-b87d-54a00638b5fc.png",
+      "note": "The tool exposed the returned artifact identifier and did not expose a model version."
+    }
+  ]
+}

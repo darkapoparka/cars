@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "burton-yj-motors",
+  "previousSlug": "burton-yj-motors",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:14:10.344Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-burton-yj-motors",
+    "position": 31
+  },
+  "before": {
+    "files": 39,
+    "bytes": 6459878
+  },
+  "afterBeforeReview": {
+    "files": 23,
+    "bytes": 3047023
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 182893,
+      "sha256": "4dceb8e683e68a9a9b121167e08b4bed0d2575cc91afd2584e0ec1802fb66075"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 185207,
+      "sha256": "5675a545478609d0c539c3298aff9c856f46e96da008724966093b89edeedd18"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 182893,
+      "sha256": "4dceb8e683e68a9a9b121167e08b4bed0d2575cc91afd2584e0ec1802fb66075"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 275336,
+      "sha256": "733d36b318f56cd6e56141a53120e79c2faf27b6bd167c7de222c0d4fffffeb0"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 280292,
+      "sha256": "712fb8f0d43a75e2e3762844660e4827aae883b051293f48af93e3cd52669665"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 280292,
+      "sha256": "712fb8f0d43a75e2e3762844660e4827aae883b051293f48af93e3cd52669665"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 275336,
+      "sha256": "733d36b318f56cd6e56141a53120e79c2faf27b6bd167c7de222c0d4fffffeb0"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 182893,
+      "sha256": "4dceb8e683e68a9a9b121167e08b4bed0d2575cc91afd2584e0ec1802fb66075"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 12315,
+      "sha256": "33b08570ccd9a93f6d8d02c5b0cae73a5d9e132f9ea7d162293c7cd0efb20603"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 280292,
+      "sha256": "712fb8f0d43a75e2e3762844660e4827aae883b051293f48af93e3cd52669665"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 166434,
+      "sha256": "ca431903cdc9de7994e997e8ec4eb6aa2f00a4ef5c582f126b8e41072518b632"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 280292,
+      "sha256": "712fb8f0d43a75e2e3762844660e4827aae883b051293f48af93e3cd52669665"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 166434,
+      "sha256": "ca431903cdc9de7994e997e8ec4eb6aa2f00a4ef5c582f126b8e41072518b632"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 275336,
+      "sha256": "733d36b318f56cd6e56141a53120e79c2faf27b6bd167c7de222c0d4fffffeb0"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 174074,
+      "sha256": "619fb1af27e5cfad147b4f7a8f1b51cec47f7a26a2e8c435dd59764a83b98e8f"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 104554,
+      "sha256": "101a70c739a6302c2b959b58781856cb70943527614670760a06a4aeb0f188e4"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 111778,
+      "sha256": "44bf31363ae9e266494df38c8ee3dbd76603afe403d012b5c2c9d63b44cc2826"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 13,
+    "bytes": 3022964,
+    "inventorySha256": "d62c4eb02e66774c42f7f33f0af972870ae54257edda4dc191d198793f08d11b",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "burton-yj-motors",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 25,
+    "report": "dealers/burton-yj-motors/input-review.json"
+  },
+  "after": {
+    "files": 25,
+    "bytes": 3055767
+  }
+}

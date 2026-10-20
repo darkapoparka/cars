@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "dealer": "hanli-motors",
+  "missing": [
+    {
+      "field": "business.website",
+      "required": false,
+      "reason": "No current public business value was verified in the bounded source review."
+    },
+    {
+      "field": "business.hours",
+      "required": false,
+      "reason": "No current public business value was verified in the bounded source review."
+    },
+    {
+      "field": "prices",
+      "required": false,
+      "reason": "All listing prices are omitted under the public-repository scope."
+    }
+  ],
+  "blocking": []
+}

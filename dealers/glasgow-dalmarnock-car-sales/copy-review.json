@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-source-reviewed-companion-copy",
+  "dealer": "glasgow-dalmarnock-car-sales",
+  "reviewed": true,
+  "reviewedAt": "2026-10-20T19:14:01.903Z",
+  "stockSha256": "3ee03a321e10032679fb114a598d6b550158d349144c8ca70cbdedf12ee517f0",
+  "descriptions": [
+    {
+      "sourceId": "vehicle-1",
+      "sourceDescription": "The seller explicitly records Category S history. Repair quality and current condition have not been independently verified. Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+      "en": "The seller explicitly records Category S history. Repair quality and current condition have not been independently verified. Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+      "bg": "Продавачът изрично посочва история от категория S. Качеството на ремонта и текущото състояние не са независимо проверени. Примери от публични обяви, наблюдавани на 2026-10-19. Наличността не е потвърдена. Цените са пропуснати в този преглед."
+    },
+    {
+      "sourceId": "vehicle-3",
+      "sourceDescription": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+      "en": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+      "bg": "Примери от публични обяви, наблюдавани на 2026-10-19. Наличността не е потвърдена. Цените са пропуснати в този преглед."
+    }
+  ]
+}

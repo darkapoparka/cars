@@ -1,0 +1,130 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-nayrab-used-cars",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/al-nayrab-used-cars",
+      "observedAt": "2026-10-19T20:00:04.404850Z",
+      "supports": [
+        "business-trading-name",
+        "public-business-phone",
+        "marketplace-location",
+        "dealer-catalogue"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/6936-toyota-land-cruiser-46-at-309-hp-gxr",
+      "observedAt": "2026-10-19T20:00:04.404850Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/7564-mercedes-benz-amg-gt-63-4matic-speedshift-mct-9g-585-hp-gt-63-s-4matic",
+      "observedAt": "2026-10-19T20:00:04.404850Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/7566-mercedes-benz-gle-class-350-d-4matic-9g-tronic-249-hp-gle-350",
+      "observedAt": "2026-10-19T20:00:04.404850Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "research": {
+    "observedAt": "2026-10-19T20:00:04.404850Z",
+    "profileUrl": "https://licenseplate.ae/cars/dealer/al-nayrab-used-cars",
+    "profileSha256": "36e4349d495ffb792c91e8a8d13523370b4f98c3bba29d431f580e3fee8376d6",
+    "marketplaceTradingName": "Al Nayrab Used Cars",
+    "classification": "public-marketplace-dealer-profile-and-listing-snapshot",
+    "directDealerPostingVerified": false,
+    "profileClaimed": false,
+    "limitation": "The named marketplace profile may be syndicated or automatically assembled. Seller-attributed listings are dated observations; current physical stock and direct dealer posting are not confirmed.",
+    "unknownFields": [
+      "public-business-email",
+      "owned-website",
+      "opening-hours"
+    ],
+    "stockSources": [
+      {
+        "id": "licenseplate-6936",
+        "url": "https://licenseplate.ae/cars/listing/6936-toyota-land-cruiser-46-at-309-hp-gxr",
+        "observedAt": "2026-10-19T20:00:04.404850Z",
+        "sha256": "d2b63df0578eab585ea3f0ac07eedbe9396265025ff8e2c46501bcdd03f962d2",
+        "sellerName": "Al Nayrab Used Cars",
+        "sellerUrl": "https://licenseplate.ae/cars/dealer/al-nayrab-used-cars"
+      },
+      {
+        "id": "licenseplate-7564",
+        "url": "https://licenseplate.ae/cars/listing/7564-mercedes-benz-amg-gt-63-4matic-speedshift-mct-9g-585-hp-gt-63-s-4matic",
+        "observedAt": "2026-10-19T20:00:04.404850Z",
+        "sha256": "be1da6f0bd7fe64d34a5c5de2caa9806d9bbcd4bb677aea3ca940e128325612f",
+        "sellerName": "Al Nayrab Used Cars",
+        "sellerUrl": "https://licenseplate.ae/cars/dealer/al-nayrab-used-cars"
+      },
+      {
+        "id": "licenseplate-7566",
+        "url": "https://licenseplate.ae/cars/listing/7566-mercedes-benz-gle-class-350-d-4matic-9g-tronic-249-hp-gle-350",
+        "observedAt": "2026-10-19T20:00:04.404850Z",
+        "sha256": "ce9411198caa3853f7e792a3ae5fe395bb022b071a85fc9fe95bc4c53f7b3019",
+        "sellerName": "Al Nayrab Used Cars",
+        "sellerUrl": "https://licenseplate.ae/cars/dealer/al-nayrab-used-cars"
+      }
+    ],
+    "photoSources": [
+      {
+        "listingId": "licenseplate-6936",
+        "listingUrl": "https://licenseplate.ae/cars/listing/6936-toyota-land-cruiser-46-at-309-hp-gxr",
+        "sourceImageUrl": "https://licenseplate.ae/storage/listings/0/toyota-land-cruiser-46-at-309-hp-0-1789525725.webp",
+        "observedAt": "2026-10-19T20:00:04.404850Z",
+        "retainedPath": "dealer-stock/licenseplate-6936.webp",
+        "sha256": "49adb523e9361ce86d6e8307776cdadddbfe4c721a0d4b0d96127f18ae09f44c",
+        "originalSha256": "9df97740189cfd3ab82d5fe16231fc1b199e37dc635a6c02cdee19d5a2fad496",
+        "bytes": 121798,
+        "width": 1218,
+        "height": 800,
+        "operation": "rotate-to-orientation-and-resize-inside-1280-webp-quality-78"
+      },
+      {
+        "listingId": "licenseplate-7564",
+        "listingUrl": "https://licenseplate.ae/cars/listing/7564-mercedes-benz-amg-gt-63-4matic-speedshift-mct-9g-585-hp-gt-63-s-4matic",
+        "sourceImageUrl": "https://licenseplate.ae/storage/listings/0/mercedes-benz-amg-gt-63-4matic-speedshift-mct-9g-585-hp-0-1789529704.webp",
+        "observedAt": "2026-10-19T20:00:04.404850Z",
+        "retainedPath": "dealer-stock/licenseplate-7564.webp",
+        "sha256": "4f387520efe2be67654373c4de092b0361fe1dc43455ae6631ae5c54d886ed29",
+        "originalSha256": "f09736478d8a1cfd7fac4c15e08602e8bdacd80ed3f175553866a4c234b56615",
+        "bytes": 79586,
+        "width": 1066,
+        "height": 800,
+        "operation": "rotate-to-orientation-and-resize-inside-1280-webp-quality-78"
+      },
+      {
+        "listingId": "licenseplate-7566",
+        "listingUrl": "https://licenseplate.ae/cars/listing/7566-mercedes-benz-gle-class-350-d-4matic-9g-tronic-249-hp-gle-350",
+        "sourceImageUrl": "https://licenseplate.ae/storage/listings/0/mercedes-benz-gle-class-350-d-4matic-9g-tronic-249-hp-0-1789529710.webp",
+        "observedAt": "2026-10-19T20:00:04.404850Z",
+        "retainedPath": "dealer-stock/licenseplate-7566.webp",
+        "sha256": "27747c9ffba7c23f77c6218df3663f377efa9a2214c4d2706580f591df9658aa",
+        "originalSha256": "9c306bb1ba8be460b8a9e590b77738f13bdd02adf0f6b868afa5fad5694373e0",
+        "bytes": 195600,
+        "width": 1024,
+        "height": 768,
+        "operation": "rotate-to-orientation-and-resize-inside-1024-webp-quality-72"
+      }
+    ]
+  }
+}

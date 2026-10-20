@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": true,
+  "reviewedAt": "2026-10-20T19:15:41.047Z",
+  "dealer": "thahban-motors",
+  "dealerId": "ae-sharjah-thahban-motors",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "method": "Automated exact registry/pack identity, canonical hosting and batch comparison; retained public source fields were structurally checked, not human-approved.",
+  "sources": [
+    {
+      "url": "https://www.dubicars.com/dealers/sharjah-thahban-motors-2148",
+      "observedAt": "2026-10-19T20:00:26.754113Z"
+    }
+  ],
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  }
+}

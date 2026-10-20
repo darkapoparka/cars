@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "promise-cars",
+  "previousSlug": "promise-cars",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:18:29.086Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-oldbury-promise-cars",
+    "position": 78
+  },
+  "before": {
+    "files": 35,
+    "bytes": 5673616
+  },
+  "afterBeforeReview": {
+    "files": 19,
+    "bytes": 2212748
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 227228,
+      "sha256": "25dcc12acd406d2f8ec286720756cad7d16529566150152b3c6f4eff1fc5384e"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 227228,
+      "sha256": "25dcc12acd406d2f8ec286720756cad7d16529566150152b3c6f4eff1fc5384e"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 227228,
+      "sha256": "25dcc12acd406d2f8ec286720756cad7d16529566150152b3c6f4eff1fc5384e"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 240640,
+      "sha256": "7a16dbbd04c13b590c0fb9f358ac9b2c154cfae6753d2013b9d213618834ebc7"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 263055,
+      "sha256": "665e68d4ecc2b6350d7f973740be4ca80ede641089549a0b7f5782ac0cb28697"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 263055,
+      "sha256": "665e68d4ecc2b6350d7f973740be4ca80ede641089549a0b7f5782ac0cb28697"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 240640,
+      "sha256": "7a16dbbd04c13b590c0fb9f358ac9b2c154cfae6753d2013b9d213618834ebc7"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 227228,
+      "sha256": "25dcc12acd406d2f8ec286720756cad7d16529566150152b3c6f4eff1fc5384e"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 13818,
+      "sha256": "784d8cf91c1777f1d7268b01ffddfa11a634e43bc397c545e5cb7d704ebd1d45"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 263055,
+      "sha256": "665e68d4ecc2b6350d7f973740be4ca80ede641089549a0b7f5782ac0cb28697"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 168486,
+      "sha256": "7c812adfe790e137f5a945be798d6f2537bf6ea159a07cb374c9d674e54df975"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 263055,
+      "sha256": "665e68d4ecc2b6350d7f973740be4ca80ede641089549a0b7f5782ac0cb28697"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 168486,
+      "sha256": "7c812adfe790e137f5a945be798d6f2537bf6ea159a07cb374c9d674e54df975"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 240640,
+      "sha256": "7a16dbbd04c13b590c0fb9f358ac9b2c154cfae6753d2013b9d213618834ebc7"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 152070,
+      "sha256": "e73a9e7553df555341a1f3e3b06f641d0d6419f7ce476eba77cd55318fe526e6"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 139374,
+      "sha256": "7f413afcb04f9c8c2e50ba4fea0b6fbac85add0f28d92cca1ba8b1d31042f362"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 139374,
+      "sha256": "7f413afcb04f9c8c2e50ba4fea0b6fbac85add0f28d92cca1ba8b1d31042f362"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 10,
+    "bytes": 2191523,
+    "inventorySha256": "dcc95a61b718b609f3178c97202ba98d4063a208b0d89508f2864e9c82e75f40",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "promise-cars",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 21,
+    "report": "dealers/promise-cars/input-review.json"
+  },
+  "after": {
+    "files": 21,
+    "bytes": 2220845
+  }
+}

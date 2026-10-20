@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "saad-motors",
+  "previousSlug": "saad-motors",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:21:18.762Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-manchester-saad-motors",
+    "position": 72
+  },
+  "before": {
+    "files": 41,
+    "bytes": 3612565
+  },
+  "afterBeforeReview": {
+    "files": 25,
+    "bytes": 1875462
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 74100,
+      "sha256": "f601f39595f9f5db6b70d8a564aabc18485bd63694718b3008a726515ccd0e5a"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 146450,
+      "sha256": "02ed5f2c3f92bbb2f2553151b4b09edf66c147a586554a1d6990a150ccbae0aa"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 74100,
+      "sha256": "f601f39595f9f5db6b70d8a564aabc18485bd63694718b3008a726515ccd0e5a"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 71841,
+      "sha256": "b7d6409678920fee9c37c67c8f11a3040daf6b0378f84ac5413014e166533e67"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 185237,
+      "sha256": "cab78ef9a840257d23e3efa69f9431319d55f34aebf65e4083a5db7fb9b64b16"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 185237,
+      "sha256": "cab78ef9a840257d23e3efa69f9431319d55f34aebf65e4083a5db7fb9b64b16"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 71841,
+      "sha256": "b7d6409678920fee9c37c67c8f11a3040daf6b0378f84ac5413014e166533e67"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 74100,
+      "sha256": "f601f39595f9f5db6b70d8a564aabc18485bd63694718b3008a726515ccd0e5a"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 5737,
+      "sha256": "42bc886e44f5f291608c27aa3e297df5ca81df57f2df05643e0f26369ecada12"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 185237,
+      "sha256": "cab78ef9a840257d23e3efa69f9431319d55f34aebf65e4083a5db7fb9b64b16"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 112542,
+      "sha256": "2bf39ef9a3ca9322cdaf3ab7797316b780916dd16962291a2e6d8ff69a87b1ed"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 185237,
+      "sha256": "cab78ef9a840257d23e3efa69f9431319d55f34aebf65e4083a5db7fb9b64b16"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 112542,
+      "sha256": "2bf39ef9a3ca9322cdaf3ab7797316b780916dd16962291a2e6d8ff69a87b1ed"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 71841,
+      "sha256": "b7d6409678920fee9c37c67c8f11a3040daf6b0378f84ac5413014e166533e67"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 51282,
+      "sha256": "ba0f6de0daf05133d9181d1ab00eaa36e3f4276a1a4c9ab08d90ec49bbcbd704"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 84788,
+      "sha256": "f6ca068a47ee28399f771baabdf2f60afbbb8160df33c8d9e6076d271b264abf"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 48774,
+      "sha256": "297f9ea03b16dc0224fdd7ae466523fbb397312037216aedfacd60d8bc8da7e2"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 12,
+    "bytes": 1838514,
+    "inventorySha256": "c28ef21abf94117a29eb74cf57627381a61642524733cebcf0cd2db805d93478",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "saad-motors",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 27,
+    "report": "dealers/saad-motors/input-review.json"
+  },
+  "after": {
+    "files": 27,
+    "bytes": 1884561
+  }
+}

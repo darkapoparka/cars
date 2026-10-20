@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "nassem-al-sham-used-cars",
+  "previousSlug": "nassem-al-sham-used-cars",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:12:39.774Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 4,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-sharjah-nassem-al-sham-used-cars",
+    "position": 368
+  },
+  "before": {
+    "files": 39,
+    "bytes": 3135437
+  },
+  "afterBeforeReview": {
+    "files": 23,
+    "bytes": 1054195
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 132884,
+      "sha256": "e2a7dd38be286a5793d940ecffcaaf4715ec528b41d0dc3f3748e063a08a9c9b"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 146543,
+      "sha256": "22ea28218464f02cff83057d8b6db6bf5994f35373769aa89713d45d93de9839"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 132884,
+      "sha256": "e2a7dd38be286a5793d940ecffcaaf4715ec528b41d0dc3f3748e063a08a9c9b"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 134304,
+      "sha256": "962f4b84267a8ce4c11a411c959e899dcd9ff22841a34ff14c65fcbef39c2a1e"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 156172,
+      "sha256": "db66a23e9e8f3ea9b8b5577d62a18c7cd573deefd2b571a333577393b6ae37ff"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 156172,
+      "sha256": "db66a23e9e8f3ea9b8b5577d62a18c7cd573deefd2b571a333577393b6ae37ff"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 134304,
+      "sha256": "962f4b84267a8ce4c11a411c959e899dcd9ff22841a34ff14c65fcbef39c2a1e"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 132884,
+      "sha256": "e2a7dd38be286a5793d940ecffcaaf4715ec528b41d0dc3f3748e063a08a9c9b"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 11416,
+      "sha256": "ef9eab04829c8934d691e84e96c362cf78d3e04a03c3939b01cb7b6d8db79cc7"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 156172,
+      "sha256": "db66a23e9e8f3ea9b8b5577d62a18c7cd573deefd2b571a333577393b6ae37ff"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 112578,
+      "sha256": "94264d35211fc773c80b16411caa4c347f6c47a00b2af09b82a0b5f01f3f03e7"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 156172,
+      "sha256": "db66a23e9e8f3ea9b8b5577d62a18c7cd573deefd2b571a333577393b6ae37ff"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 112578,
+      "sha256": "94264d35211fc773c80b16411caa4c347f6c47a00b2af09b82a0b5f01f3f03e7"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 134304,
+      "sha256": "962f4b84267a8ce4c11a411c959e899dcd9ff22841a34ff14c65fcbef39c2a1e"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 91274,
+      "sha256": "bd2d9817c17f7562801966617f19de45ad53f1dc59670925d2a6ea328296e3a2"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 100168,
+      "sha256": "2dfd7e1c314fa6dac524dc3c1104a89b207bacccd66f5561191cc061047b96c3"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 84284,
+      "sha256": "3fc1d36843d1621f89fdb19111b85449eb5640dec3edd70d1f026332425054fa"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 13,
+    "bytes": 594241,
+    "inventorySha256": "1411f2d19a1b06e8e726281282ce7f9772be99e0637483b7666aeb456be9a2e8",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "nassem-al-sham-used-cars",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 25,
+    "report": "dealers/nassem-al-sham-used-cars/input-review.json"
+  },
+  "after": {
+    "files": 25,
+    "bytes": 1063054
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-input-review",
+  "dealer": "burton-yj-motors",
+  "reviewed": true,
+  "reviewedAt": "2026-10-20T19:14:13.442Z",
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "checks": [
+    "canonical-hosting-and-preserved-fleet-collisions",
+    "assigned-expansion-lead",
+    "public-fact-schema-and-price-omission",
+    "personal-contact-screen",
+    "retained-stock-media",
+    "companion-copy-source-binding",
+    "immutable-template-release-and-native-QA-parent",
+    "reviewed-artwork-provenance-and-regenerated-logo-hashes"
+  ],
+  "sourceArtworkReview": "Retained artwork review is separate provenance; this command does not perform visual, Arabic-expert or dealer approval.",
+  "copyReview": "Automated structure, stock hash, source text and complete EN/BG rows; no new human translation approval is inferred.",
+  "contacts": {
+    "schemaVersion": 1,
+    "kind": "cars-automated-public-contact-screen",
+    "dealer": "burton-yj-motors",
+    "method": "heuristic; no claim that unflagged values cannot be personal",
+    "flags": [],
+    "blocking": []
+  },
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-burton-yj-motors",
+    "position": 31
+  },
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "inputs": [
+    {
+      "path": "FACTS-AND-INVENTORY.json",
+      "sha256": "4a08f84f44e41881160130773a1f12319f7c5db0edf4f761ce327cfa7db0fa5a"
+    },
+    {
+      "path": "branding/generated-mark-on-dark.png",
+      "sha256": "e6a09b60ebcc43d7a5b9bd830471a5d6d2343f5186b85c2b9aa361280f3d3fb6"
+    },
+    {
+      "path": "branding/generated-mark.png",
+      "sha256": "999708f72c75067687bc639e2edbc358a0add4d35aebf16cc264d551ba4eb369"
+    },
+    {
+      "path": "branding/generated-master.png",
+      "sha256": "f749bfacde345fb64877bdac12f28f83e45ed7c3132366776f3b3ae6dcb9f6c1"
+    },
+    {
+      "path": "branding/generated-on-dark.png",
+      "sha256": "98dc54c0fd94d3368dee3f0f4984775ee17d1e7255011a4ff8ae1bd3b4d377b6"
+    },
+    {
+      "path": "branding/logo-contract.json",
+      "sha256": "b6400b7ef7f28e38b5feb26c6f81e79a80c2c08c587799f5f83d0607d3dc0fd5"
+    },
+    {
+      "path": "branding/logo-recipe.json",
+      "sha256": "cacfc0a28d4c81c7818258b476f0aeca35e83d7dc171e5d24776efc1dd5d42e0"
+    },
+    {
+      "path": "branding/original-logo.gif",
+      "sha256": "d1285e332c20b93662f65ad33d813b12990dadbe7399725a8b803c3c83cdb125"
+    },
+    {
+      "path": "branding/source.json",
+      "sha256": "87dc6beba36e791cc137312794b1a724e36205a5abf6e9a43f1f26a0fd1a886d"
+    },
+    {
+      "path": "business-facts.json",
+      "sha256": "67fa440426f563b30fc8f46e9b71ea68bee91321b54f3b52c0e228af2e9c4166"
+    },
+    {
+      "path": "copy-review.json",
+      "sha256": "6c020a894d82f87839c537a51b12955a13b92dcd36d30aaa61de68b096828fc6"
+    },
+    {
+      "path": "dealer-stock/vehicle-1.jpg",
+      "sha256": "c99eb1d7a39b1ffcdf2d8eabad4dd461699b15f975d19b7e8a21477cbb19e64f"
+    },
+    {
+      "path": "dealer-stock/vehicle-2.jpg",
+      "sha256": "b7ce6d6ce27406d17eeb73ef9707f7d981a87c59e3aa6d3231759e56230c6291"
+    },
+    {
+      "path": "dealer-stock/vehicle-3.jpg",
+      "sha256": "8c71f9b008df797eae3a26d0cc8154e8d53dd9930315f9527eb398d8002474f5"
+    },
+    {
+      "path": "dealer.json",
+      "sha256": "89777a663d8d83cc17cbff6dc0878d63e8bcf86be73dc476e4e4ab97dc3c40ba"
+    },
+    {
+      "path": "identity-review.json",
+      "sha256": "7d155b640a876be14a206ef10f37d0acf2396c7e07577ebe89588207c1eed986"
+    },
+    {
+      "path": "locale.json",
+      "sha256": "3adcf6b838a40a1d6ffe553120991a0b365fcdf68e74ce7bbbcd840998cd476e"
+    },
+    {
+      "path": "missing-facts.json",
+      "sha256": "3860653faf4333de7645c86c38b729c0111a8009bef548a95e0c44f99d6dc0f8"
+    },
+    {
+      "path": "qualification.json",
+      "sha256": "7fa1727145069a8e8d878aba44c1faac1ab06dc1711e90d1a94a941854695f6a"
+    },
+    {
+      "path": "source-evidence.json",
+      "sha256": "69e736d44edb6a74f4fb28098456a6893b7ed71e7742ae17dd641e455dff8340"
+    },
+    {
+      "path": "stock-history-review.json",
+      "sha256": "430a4f028ce2673fc51da179a765f987bfaf35ebe4238a80e43027c5cd3ceb73"
+    },
+    {
+      "path": "stock.json",
+      "sha256": "84a7d205844a6437734c80b8d5d6f0d3d6aef8efab781406047992eb818d9955"
+    }
+  ],
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "providerWrites": 0
+}

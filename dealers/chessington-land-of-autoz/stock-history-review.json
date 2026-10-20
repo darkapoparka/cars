@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "dealer": "chessington-land-of-autoz",
+  "reviewedAt": "2026-10-19T20:10:55.129003Z",
+  "scope": "Complete public advert descriptions and available vehicle-history panels for the selected stock samples. No dealer contact or independent vehicle inspection.",
+  "records": [
+    {
+      "listingId": "vehicle-1",
+      "sourceUrl": "https://www.ebay.co.uk/itm/860052490877",
+      "observedAt": "2026-10-19T20:03:59.439437Z",
+      "httpStatus": 200,
+      "pageSha256": "ca35d25318edc4428dde6b9095cddb302b990bcbd20ed714699b3e2183938b63",
+      "descriptionUrl": "https://itm.ebaydesc.com/itmdesc/860052490877?t=1792194671000&category=18290&seller=carsalesurrey&excSoj=1&ver=1&excTrk=1&lsite=3&ittenable=false&domain=ebay.com&descgauge=1&cspheader=1&oneClk=2&secureDesc=1&lang=en",
+      "descriptionSha256": "3c889d5961710a3857dd8c420872972e50a30a7ceef5fdbfda592d86c0d0ef3a",
+      "embeddedHistoryChecked": false,
+      "descriptionResult": "full-public-advert-reviewed",
+      "retained": true,
+      "finding": "No additional material condition or history disclosure identified in the reviewed public advert; this is not an independent vehicle inspection or history certificate."
+    },
+    {
+      "listingId": "vehicle-2",
+      "sourceUrl": "https://www.ebay.co.uk/itm/860047138898",
+      "observedAt": "2026-10-19T20:03:59.732535Z",
+      "httpStatus": 200,
+      "pageSha256": "b6acdf0aca5b8274113c6ad69df2482513b4266da63c299271167da6d4304c25",
+      "descriptionUrl": "https://itm.ebaydesc.com/itmdesc/860047138898?t=1792076478000&category=18270&seller=carsalesurrey&excSoj=1&ver=1&excTrk=1&lsite=3&ittenable=false&domain=ebay.com&descgauge=1&cspheader=1&oneClk=2&secureDesc=1&lang=en",
+      "descriptionSha256": "ac77762afac8e9e203917026c17b522769dd2444f196974396121461e6590b47",
+      "embeddedHistoryChecked": false,
+      "descriptionResult": "full-public-advert-reviewed",
+      "retained": true,
+      "finding": "No additional material condition or history disclosure identified in the reviewed public advert; this is not an independent vehicle inspection or history certificate."
+    },
+    {
+      "listingId": "vehicle-3",
+      "sourceUrl": "https://www.ebay.co.uk/itm/860046889243",
+      "observedAt": "2026-10-19T20:03:59.782082Z",
+      "httpStatus": 200,
+      "pageSha256": "afd78baf32c22a3438956b8941c4a59c440bfb67c4ead74b308df0278f51d5b7",
+      "descriptionUrl": "https://itm.ebaydesc.com/itmdesc/860046889243?t=1792069036000&category=29748&seller=carsalesurrey&excSoj=1&ver=1&excTrk=1&lsite=3&ittenable=false&domain=ebay.com&descgauge=1&cspheader=1&oneClk=2&secureDesc=1&lang=en",
+      "descriptionSha256": "26f4c1e9bdd1482d1bfa44c8ff069399557b184fb09d69075de497ee1ad31b99",
+      "embeddedHistoryChecked": false,
+      "descriptionResult": "full-public-advert-reviewed",
+      "retained": true,
+      "finding": "No additional material condition or history disclosure identified in the reviewed public advert; this is not an independent vehicle inspection or history certificate."
+    }
+  ]
+}

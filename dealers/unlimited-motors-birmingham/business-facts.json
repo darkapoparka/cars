@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "slug": "unlimited-motors-birmingham",
+  "dealerId": "gb-birmingham-unlimited-motors",
+  "business": {
+    "name": "Unlimited Motors",
+    "city": "Birmingham",
+    "region": "West Midlands",
+    "countryCode": "GB",
+    "currency": "GBP",
+    "distanceUnit": "mi",
+    "locale": "en-GB",
+    "address": "Unit 1C Seedbed Centre, Nechells, Birmingham B7 4NT",
+    "phone": "+441212722823",
+    "phoneDisplay": "0121 272 2823",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://showroom.ebaymotorspro.co.uk/Unlimited-Motors?menu=1",
+    "hours": "Viewings by appointment. Monday–Friday 10:00–20:00; Saturday 10:00–18:00; Sunday 11:00–16:00 by appointment only.",
+    "sourceUrl": "https://showroom.ebaymotorspro.co.uk/Unlimited-Motors?menu=1",
+    "observedAt": "2026-10-19",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/Unlimited-Motors?menu=1",
+      "observedAt": "2026-10-19T20:00:31.563792Z",
+      "supports": [
+        "current-public-business-name",
+        "public-business-contact",
+        "public-premises-or-appointment-information",
+        "current-public-stock-catalogue"
+      ]
+    },
+    {
+      "url": "https://www.ebay.co.uk/itm/820256455597",
+      "observedAt": "2026-10-19T20:02:58.349190Z",
+      "supports": [
+        "selected-current-public-stock",
+        "seller-description-and-vehicle-history-review",
+        "vehicle-photograph"
+      ]
+    },
+    {
+      "url": "https://www.ebay.co.uk/itm/820249639027",
+      "observedAt": "2026-10-19T20:02:58.350908Z",
+      "supports": [
+        "selected-current-public-stock",
+        "seller-description-and-vehicle-history-review",
+        "vehicle-photograph"
+      ]
+    },
+    {
+      "url": "https://www.ebay.co.uk/itm/820248606730",
+      "observedAt": "2026-10-19T20:02:58.452025Z",
+      "supports": [
+        "selected-current-public-stock",
+        "seller-description-and-vehicle-history-review",
+        "vehicle-photograph"
+      ]
+    },
+    {
+      "url": "https://www.cazoo.co.uk/dealers/unlimited-motors-14199/",
+      "observedAt": "2026-10-19T20:03:54.161291Z",
+      "supports": [
+        "bounded-public-logo-research"
+      ]
+    }
+  ]
+}

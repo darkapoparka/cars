@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "slug": "cars4you-bradford",
+  "dealerId": "gb-bradford-cars4you",
+  "business": {
+    "name": "CARS4YOU (Bradford / legacy EDK Cars)",
+    "city": "Bradford",
+    "region": "West Yorkshire",
+    "countryCode": "GB",
+    "currency": "GBP",
+    "distanceUnit": "mi",
+    "locale": "en-GB",
+    "address": "Unit 1 (A), Whitehead Street, Bradford BD3 9LY",
+    "phone": "+441274028318",
+    "phoneDisplay": "01274 028318",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://showroom.ebaymotorspro.co.uk/edk-cars-ltd?extendedFilter=1&menu=1&page=1",
+    "hours": "",
+    "sourceUrl": "https://showroom.ebaymotorspro.co.uk/edk-cars-ltd?extendedFilter=1&menu=1&page=1",
+    "observedAt": "2026-10-19",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/edk-cars-ltd?extendedFilter=1&menu=1&page=1",
+      "observedAt": "2026-10-19T20:00:31.691769Z",
+      "supports": [
+        "current-public-business-name",
+        "public-business-contact",
+        "public-premises-or-appointment-information",
+        "current-public-stock-catalogue"
+      ]
+    },
+    {
+      "url": "https://www.ebay.co.uk/itm/137835447979",
+      "observedAt": "2026-10-19T20:03:00.470550Z",
+      "supports": [
+        "selected-current-public-stock",
+        "seller-description-and-vehicle-history-review",
+        "vehicle-photograph"
+      ]
+    },
+    {
+      "url": "https://www.ebay.co.uk/itm/137828372894",
+      "observedAt": "2026-10-19T20:03:01.041140Z",
+      "supports": [
+        "selected-current-public-stock",
+        "seller-description-and-vehicle-history-review",
+        "vehicle-photograph"
+      ]
+    },
+    {
+      "url": "https://www.ebay.co.uk/itm/137828382384",
+      "observedAt": "2026-10-19T20:03:01.375402Z",
+      "supports": [
+        "selected-current-public-stock",
+        "seller-description-and-vehicle-history-review",
+        "vehicle-photograph"
+      ]
+    },
+    {
+      "url": "https://www.cazoo.co.uk/dealers/cars4you-43883/",
+      "observedAt": "2026-10-19T20:03:54.236846Z",
+      "supports": [
+        "bounded-public-logo-research"
+      ]
+    }
+  ]
+}

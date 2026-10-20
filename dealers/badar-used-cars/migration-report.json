@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "badar-used-cars",
+  "previousSlug": "badar-used-cars",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:25:00.952Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 4,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-sharjah-badar-used-cars",
+    "position": 338
+  },
+  "before": {
+    "files": 36,
+    "bytes": 11585338
+  },
+  "afterBeforeReview": {
+    "files": 20,
+    "bytes": 2636958
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 226347,
+      "sha256": "d4bbed49d9c3d4a825b455eb92f9084b46411f493b10aa72061951542417dca6"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 242483,
+      "sha256": "ae02e2e9a3d53b96b137d507dc044a5d053a1f3f3f46d5a4e3ae624692de952d"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 226347,
+      "sha256": "d4bbed49d9c3d4a825b455eb92f9084b46411f493b10aa72061951542417dca6"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 792340,
+      "sha256": "91eae28b82930676a354304c0326c90d6142e471ba0cf26873ba28ba5cec9997"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 866136,
+      "sha256": "592cac05166452984381235b5225902fcc60f5c15dbd8fbafdcade3b365f1fad"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 866136,
+      "sha256": "592cac05166452984381235b5225902fcc60f5c15dbd8fbafdcade3b365f1fad"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 792340,
+      "sha256": "91eae28b82930676a354304c0326c90d6142e471ba0cf26873ba28ba5cec9997"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 226347,
+      "sha256": "d4bbed49d9c3d4a825b455eb92f9084b46411f493b10aa72061951542417dca6"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 17936,
+      "sha256": "45aa5288720e1e974f478f16e3815b22eb6776ed64396ffeb612585cb2731cc2"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 866136,
+      "sha256": "592cac05166452984381235b5225902fcc60f5c15dbd8fbafdcade3b365f1fad"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 633882,
+      "sha256": "5ab95a389a59740b61b91e00ee81dadb7edbc25058e98bd3e0ba82785420c5e2"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 866136,
+      "sha256": "592cac05166452984381235b5225902fcc60f5c15dbd8fbafdcade3b365f1fad"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 633882,
+      "sha256": "5ab95a389a59740b61b91e00ee81dadb7edbc25058e98bd3e0ba82785420c5e2"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 792340,
+      "sha256": "91eae28b82930676a354304c0326c90d6142e471ba0cf26873ba28ba5cec9997"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 549928,
+      "sha256": "e6dbfd0e312e3f5446576f278b34132255af05e84fb1fead84836c9ba96fed9a"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 186888,
+      "sha256": "9e30c05a82a39db42551f04733889909bfa56e43748129061c412290f9b2b331"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 166584,
+      "sha256": "0f2a85fb9cbc599b8c0d652e1ee2cd3ff5aaa59dc3c63e388cc2f210fd494dd4"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 11,
+    "bytes": 2613658,
+    "inventorySha256": "8b5039c85fa96be68d6f6f11990438b9293c6722f13a3831c58bf3b96d88f127",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "badar-used-cars",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 22,
+    "report": "dealers/badar-used-cars/input-review.json"
+  },
+  "after": {
+    "files": 22,
+    "bytes": 2645267
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "dealer": "burton-yj-motors",
+  "reviewedAt": "2026-10-19T20:10:55.129003Z",
+  "scope": "Complete public advert descriptions and available vehicle-history panels for the selected stock samples. No dealer contact or independent vehicle inspection.",
+  "records": [
+    {
+      "listingId": "vehicle-1",
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202610026606651",
+      "observedAt": "2026-10-19T20:03:52.742866Z",
+      "httpStatus": 200,
+      "pageSha256": "e169126dcdab97294692eb881968a5e3a9a2de218c3ca9fd5d483b6ec022c01f",
+      "descriptionUrl": null,
+      "descriptionSha256": null,
+      "embeddedHistoryChecked": true,
+      "descriptionResult": "full-public-advert-reviewed",
+      "retained": true,
+      "finding": "No additional material condition or history disclosure identified in the reviewed public advert; this is not an independent vehicle inspection or history certificate."
+    },
+    {
+      "listingId": "vehicle-2",
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202608215309580",
+      "observedAt": "2026-10-19T20:03:52.823124Z",
+      "httpStatus": 200,
+      "pageSha256": "b42ed944f1a0fae429f327d9900296143589a80b2d1ed44c052539db8c59c486",
+      "descriptionUrl": null,
+      "descriptionSha256": null,
+      "embeddedHistoryChecked": true,
+      "descriptionResult": "full-public-advert-reviewed",
+      "retained": true,
+      "finding": "No additional material condition or history disclosure identified in the reviewed public advert; this is not an independent vehicle inspection or history certificate."
+    },
+    {
+      "listingId": "vehicle-3",
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202607134141822",
+      "observedAt": "2026-10-19T20:03:52.841831Z",
+      "httpStatus": 200,
+      "pageSha256": "67cb89b57cdece945cc5d53df74508b69ef3945e9993fd53a17d429a12aabbca",
+      "descriptionUrl": null,
+      "descriptionSha256": null,
+      "embeddedHistoryChecked": true,
+      "descriptionResult": "full-public-advert-reviewed",
+      "retained": true,
+      "finding": "No additional material condition or history disclosure identified in the reviewed public advert; this is not an independent vehicle inspection or history certificate."
+    }
+  ]
+}

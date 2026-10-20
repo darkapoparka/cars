@@ -1,0 +1,132 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-input-review",
+  "dealer": "danny-trading",
+  "reviewed": true,
+  "reviewedAt": "2026-10-20T19:17:21.555Z",
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "checks": [
+    "canonical-hosting-and-preserved-fleet-collisions",
+    "assigned-expansion-lead",
+    "public-fact-schema-and-price-omission",
+    "personal-contact-screen",
+    "retained-stock-media",
+    "companion-copy-source-binding",
+    "immutable-template-release-and-native-QA-parent",
+    "reviewed-artwork-provenance-and-regenerated-logo-hashes"
+  ],
+  "sourceArtworkReview": "Retained artwork review is separate provenance; this command does not perform visual, Arabic-expert or dealer approval.",
+  "copyReview": "Automated structure, stock hash, source text and complete EN/BG rows; no new human translation approval is inferred.",
+  "contacts": {
+    "schemaVersion": 1,
+    "kind": "cars-automated-public-contact-screen",
+    "dealer": "danny-trading",
+    "method": "heuristic; no claim that unflagged values cannot be personal",
+    "flags": [],
+    "blocking": []
+  },
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-leicester-danny-trading",
+    "position": 58
+  },
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "inputs": [
+    {
+      "path": "FACTS-AND-INVENTORY.json",
+      "sha256": "8201657b85800cadbcc8e9049b91db87d5ff1be9aed98da9689c4ecc1687e0b8"
+    },
+    {
+      "path": "advert-detail-review.json",
+      "sha256": "c60e6c0e4eb5217fec0bbcb31bb5a30ca50dbe9620714bed3926fc88a39d6feb"
+    },
+    {
+      "path": "branding/generated-mark.png",
+      "sha256": "8c5f8cc3b2140a7a08b0b1ed5c8338c240893e7b5265e6893156bd229fdc1c20"
+    },
+    {
+      "path": "branding/generated-master.png",
+      "sha256": "004428ab808a7e4ab9e08a6a56e1e46c12fc3b7ab15b1cf6abc796a95918d877"
+    },
+    {
+      "path": "branding/generated-on-dark.png",
+      "sha256": "5fd4030ae794d90a070bf3d41a60dea6c1ba7bcfdf59ae27c434108d203c7fe1"
+    },
+    {
+      "path": "branding/generation-provenance.json",
+      "sha256": "11ca2039a19f5ca8b9951c5246ff8d715f72d09520126b8dbd0413a9592cca6a"
+    },
+    {
+      "path": "branding/logo-contract.json",
+      "sha256": "8fdc91b427a939da2115100c2f067e5fab8c255683c6de8b37683639ec5a7ab0"
+    },
+    {
+      "path": "branding/logo-recipe.json",
+      "sha256": "87578c4d18110ae31db7cca2939782a09ff0f75041243af67a3cc6b9d422acec"
+    },
+    {
+      "path": "branding/source.json",
+      "sha256": "06ec853f8ba7f33998176c818239dc164a3d08a39dabb6c558403088403f5867"
+    },
+    {
+      "path": "business-facts.json",
+      "sha256": "4803e36f84987fa77e55a00d42fd8393d53fb0439aa0221b349468d0309336e5"
+    },
+    {
+      "path": "copy-review.json",
+      "sha256": "65c3c7d531c34423751ce94765b33e0ab4ab6106372b398d9aa75bd73271dac5"
+    },
+    {
+      "path": "dealer-stock/listing-2.jpg",
+      "sha256": "565aa567f17b7f2b4d9f17d135f7932bf8a82178b90230c07c9aa31e67e2c4e1"
+    },
+    {
+      "path": "dealer-stock/listing-3.jpg",
+      "sha256": "90c279a91f0069a1d0a34811a726f5bb570b7a75cc3194758016ff5f31d54843"
+    },
+    {
+      "path": "dealer.json",
+      "sha256": "35f481699e79e6498aa59e2453f13651b8b4ed23fd0f7a0d86f99577764d8621"
+    },
+    {
+      "path": "identity-review.json",
+      "sha256": "fff53bb92fbd76dea3eb386917e6529d4598fbbf41857f928dffbf29eebbe7ed"
+    },
+    {
+      "path": "locale.json",
+      "sha256": "b2f5004b3f48f80e6d803864894774f76ce6e6c3c817371dd93114611e8c987d"
+    },
+    {
+      "path": "missing-facts.json",
+      "sha256": "601fbfe9205b3ac3c145a8a7503514ab514d7846b307b488d8b93018f9be31c9"
+    },
+    {
+      "path": "photo-evidence.json",
+      "sha256": "b853479b00cdd52b75a23e6de84cb08780a9466a4e68009744ce2d76a409ff1a"
+    },
+    {
+      "path": "qualification.json",
+      "sha256": "2ff93710c7e2936a90834bbdbf33cdac39e8614930bcff1e510a46c0ec50b152"
+    },
+    {
+      "path": "research-review.json",
+      "sha256": "e92463333a074a40c8eea14e8936f2609e31cf347db230ae9be76ee29221975c"
+    },
+    {
+      "path": "source-evidence.json",
+      "sha256": "ad60ea63d164ff6e7a2ea51d85d2f5dba6b7973a2dd6d16cdd8e75c656cbc786"
+    },
+    {
+      "path": "stock.json",
+      "sha256": "63e29aa1695b342ad551640130888231be85b3040b2c4f7b06ff30bf83c15e2b"
+    }
+  ],
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "providerWrites": 0
+}

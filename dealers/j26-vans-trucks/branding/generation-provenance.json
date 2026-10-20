@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "dealer": "j26-vans-trucks",
+  "generations": [
+    {
+      "role": "master",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-85bcb0e9-c344-43ec-b7a9-e6851f54319d",
+      "modelVersion": null,
+      "prompt": "Create one independent proposed transparent logo for J26 VANS & TRUCKS LTD, a UK vehicle dealer. Do not imitate any Junction 26 Cars logo. Single horizontal lockup with a compact bold J26 monogram at left, and to the right exact words VANS & TRUCKS with LTD small below. Make J26 the distinct memorable symbol with broad clean strokes and open spaces so it remains readable at32px. Flat near-black ink, true transparent alpha, polished sturdy sans-serif typography. No road shield, no literal vehicle, no gradients, no shadows, no background, no claims or slogan. A restrained, useful logo with correct exact letters.",
+      "promptRetained": true,
+      "sourceAssetSha256": "02acd8e752b271a9bebeb64440cd60ebf8da04f8629250b692af57c30abfd6af",
+      "observedAt": "2026-10-19",
+      "originalResponseArtworkRetained": true
+    },
+    {
+      "role": "onDarkAndAccent",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-2759d086-bc83-4c04-b8f1-ee1b45c6b2b7",
+      "modelVersion": null,
+      "prompt": "Create a refined dark-surface adaptation of the exact supplied dealer logo. Exact text MUST READ: J26 symbol, VANS & TRUCKS with LTD below. Keep every name letter exactly, and preserve the supplied monogram/motif and proportions. The typography and dark emblem portions should be filled in SOLID OPAQUE PALE SILVER #d9e2ec inside a DARK CHARCOAL outer contour plus a thin WHITE outer keyline. Preserve copper/orange/purple accents if present inside dark contour. True TRANSPARENT alpha background and transparent letter counters. Make smooth strong solid contours without fringing, grunge, raster distress, speckles or noise. Generous clear gap between compact emblem and wording. No gradients, shadow, glowing effects, rectangle or additional content. It needs clear readable contrast on dark navy and red surfaces. Do not introduce unrelated terms such as motorsports. Exact spelling and business identity are essential.",
+      "promptRetained": true,
+      "sourceAssetSha256": "1af86034b38be5c3ee044fc3233604bd20bd50b8c071f04d44ca6a2591bb4e12",
+      "observedAt": "2026-10-19",
+      "originalResponseArtworkRetained": true
+    },
+    {
+      "role": "compact",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-bb035834-239a-4a06-a629-43b1dcb4ba17",
+      "modelVersion": null,
+      "prompt": "From the supplied dealer logo, create ONLY its compact J26 monogram at the left, keeping the same exact letters, initials, distinctive shape and motif. Remove all other wordmark text and any divider. One isolated monogram centered in a SQUARE transparent canvas with generous alpha margins. Solid opaque pale silver #d9e2ec fills, dark charcoal #111111 contour and a thin white outer keyline; preserve the blue inner contour if already present. The same actual mark must work on white, navy and red backgrounds. Broad clean solid strokes, smooth closed edges, open transparent letter counters, no speckles, no raster distress, no extra letters, no background, no shadows or gradients. Make the small 32px silhouette exceptionally legible while faithfully keeping this identity.",
+      "promptRetained": true,
+      "sourceAssetSha256": "12972970d22b356787b1c9a5ae231465bae1e2cd19410855cf4e337579c4312f",
+      "observedAt": "2026-10-19",
+      "originalResponseArtworkRetained": true
+    }
+  ],
+  "exportPolicy": "Original generated PNG bytes are retained. Compact pixel-exact extractions, where used, retain their parent generation, hash and rectangle in source.json. Existing dealer-pack logo tooling performs only transparent padding removal and deterministic raster exports. No deterministic recolour is used."
+}

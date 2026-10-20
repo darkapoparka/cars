@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "dealer": "glasgow-dalmarnock-car-sales",
+  "missing": [
+    {
+      "field": "business.email",
+      "required": false,
+      "reason": "Personal-looking email address omitted; no replacement public business mailbox verified."
+    },
+    {
+      "field": "business.website",
+      "required": false,
+      "reason": "No usable verified public business value obtained from the reviewed sources."
+    },
+    {
+      "field": "prices",
+      "required": false,
+      "reason": "All listing prices are omitted under the public-repository scope."
+    }
+  ],
+  "blocking": []
+}

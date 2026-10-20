@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "dealer": "rebou-najd-used-cars-trading",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:00:23.851965Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "dubicars-1037103",
+      "title": "Mitsubishi Pajero GLS H/L ROCKFORD PLATINUM",
+      "make": "Mitsubishi",
+      "model": "Pajero",
+      "year": 2020,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/dubicars-1037103.webp"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2020-mitsubishi-pajero-mitsuhbishi-pajero-gls-2020engine-38lv6-1037103.html",
+      "observedAt": "2026-10-19T20:00:23.851965Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 71000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "dubicars-1037098",
+      "title": "Toyota Land Cruiser VXR",
+      "make": "Toyota",
+      "model": "Land Cruiser",
+      "year": 2025,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/dubicars-1037098.webp"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2025-toyota-land-cruiser-toyota-land-cruiser-prado-2025-1037098.html",
+      "observedAt": "2026-10-19T20:00:23.851965Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 39000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "dubicars-1036920",
+      "title": "Nissan Patrol LE PLATINUM CITY",
+      "make": "Nissan",
+      "model": "Patrol",
+      "year": 2020,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/dubicars-1036920.webp"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2020-nissan-patrol-engine-56lv8-1036920.html",
+      "observedAt": "2026-10-19T20:00:23.851965Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 162000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "dealer": "promise-cars",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "public-listing-2",
+      "title": "2015 Audi A1 1.4 TFSI Sport Sportback S Tronic",
+      "make": "Audi",
+      "model": "A1",
+      "year": 2015,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/public-2.jpg"
+      ],
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202608054838869",
+      "observedAt": "2026-10-19T17:53:30.975986Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Hatchback",
+      "transmission": "Automatic",
+      "fuel": "Petrol",
+      "mileageValue": 55000,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "public-listing-3",
+      "title": "2014 Audi A4 Avant 2.0 TFSI S line Multitronic",
+      "make": "Audi",
+      "model": "A4 Avant",
+      "year": 2014,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/public-3.jpg"
+      ],
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202610066723455",
+      "observedAt": "2026-10-19T17:53:31.107440Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Estate",
+      "transmission": "Automatic",
+      "fuel": "Petrol",
+      "mileageValue": 70000,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

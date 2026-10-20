@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "car-force",
+  "previousSlug": "car-force",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:14:26.372Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-luton-car-force",
+    "position": 64
+  },
+  "before": {
+    "files": 39,
+    "bytes": 3122437
+  },
+  "afterBeforeReview": {
+    "files": 23,
+    "bytes": 1650119
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 82148,
+      "sha256": "cbd841e896865017ff72b9ea06044d9e666aa7c77c8ba3e74c24dd7362478728"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 82148,
+      "sha256": "cbd841e896865017ff72b9ea06044d9e666aa7c77c8ba3e74c24dd7362478728"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 82148,
+      "sha256": "cbd841e896865017ff72b9ea06044d9e666aa7c77c8ba3e74c24dd7362478728"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 65997,
+      "sha256": "cc4808a271a8919df5e9d277df4f99b671cf21155dccee07ed5dcec8fe369561"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 152426,
+      "sha256": "940ab296cf935aa61cf1e2d582c35e9b42c0b437d2e3ad54cf31d58cb4a1f881"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 152426,
+      "sha256": "940ab296cf935aa61cf1e2d582c35e9b42c0b437d2e3ad54cf31d58cb4a1f881"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 65997,
+      "sha256": "cc4808a271a8919df5e9d277df4f99b671cf21155dccee07ed5dcec8fe369561"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 82148,
+      "sha256": "cbd841e896865017ff72b9ea06044d9e666aa7c77c8ba3e74c24dd7362478728"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 7723,
+      "sha256": "8c610da5548c80178da7b02eba8651fed5856845cf1bda1fdd9d8b981e730032"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 152426,
+      "sha256": "940ab296cf935aa61cf1e2d582c35e9b42c0b437d2e3ad54cf31d58cb4a1f881"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 94762,
+      "sha256": "8f446fd1a21fb2005c87006f041efd85d68584b3e7805df7226d46865f01b0d8"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 152426,
+      "sha256": "940ab296cf935aa61cf1e2d582c35e9b42c0b437d2e3ad54cf31d58cb4a1f881"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 94762,
+      "sha256": "8f446fd1a21fb2005c87006f041efd85d68584b3e7805df7226d46865f01b0d8"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 65997,
+      "sha256": "cc4808a271a8919df5e9d277df4f99b671cf21155dccee07ed5dcec8fe369561"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 46236,
+      "sha256": "61fa8b4c19d54c65cebb29c8afbef96e010b189dd5e398c4d755656b413c3d0b"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 48154,
+      "sha256": "e5cee8301c582557d37664c7792932b61ebdbe2a6571a22586f7e73729d4360b"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 48154,
+      "sha256": "e5cee8301c582557d37664c7792932b61ebdbe2a6571a22586f7e73729d4360b"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 11,
+    "bytes": 1619637,
+    "inventorySha256": "4752f4b3eb585e864382bf4c02a703647243df8edf5b26d47363471dc88563c1",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "car-force",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 25,
+    "report": "dealers/car-force/input-review.json"
+  },
+  "after": {
+    "files": 25,
+    "bytes": 1658901
+  }
+}

@@ -1,0 +1,274 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-muhtaref-used-cars",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T20:57:24.832Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "sourced-logo-imagegen-redraw",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "e584749b9bdf7048bae261d56526c7d75e290656e90c55a8c0c2cddcbef12270",
+      "sourceSha256": "ba192edf74354aeed649df2e7f93d3b1928496a522e9c59ba47511f747077547"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "40502290f372e01a7401bf33f9a12979ee81674db5c64be1b056801d4733e57c",
+      "sourceSha256": "14a38e437b5ae0de59c2a4eaf2aee1c3f94a3bf018ca3b33a04a6ca05f0d19ed"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "cfc04a0eabe6df2e509bd67ff76afb76c47a295271c2fb209a8fd908f2c048ab",
+      "sourceSha256": "f888967b74d04ff71175b4349c02e390b0089188a61e0cfff5a9885a29e4e61f"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "ba192edf74354aeed649df2e7f93d3b1928496a522e9c59ba47511f747077547",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-469aa425-a6c3-41a5-97c1-5515879300f5",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "c3017ba87f456902cfec75af2a0d26631a18e741e89f2f6dcb7b3003c3ec87fd",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-479d8f47-4354-4a0f-adcc-0abad6766ad2",
+      "modelVersion": null,
+      "transformation": {
+        "operation": "rectangular-extract-without-recolour-or-redrawing",
+        "source": "branding/generated-pair.png",
+        "sourceSha256": "8bc5c94037ca2c130d85280e54947c58f1d18d79c528c8864e8c056db133d5a9",
+        "rectangle": {
+          "left": 0,
+          "top": 0,
+          "width": 887,
+          "height": 887
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "200358697c63f6e5d1fd875603614c2be08a9da48a85461c601c2ab24c49037f"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "ba192edf74354aeed649df2e7f93d3b1928496a522e9c59ba47511f747077547",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-469aa425-a6c3-41a5-97c1-5515879300f5",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-muhtaref-used-cars/branding/generated-primary.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "14a38e437b5ae0de59c2a4eaf2aee1c3f94a3bf018ca3b33a04a6ca05f0d19ed",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-479d8f47-4354-4a0f-adcc-0abad6766ad2",
+        "modelVersion": null,
+        "transformation": {
+          "operation": "rectangular-extract-without-recolour-or-redrawing",
+          "source": "branding/generated-pair.png",
+          "sourceSha256": "8bc5c94037ca2c130d85280e54947c58f1d18d79c528c8864e8c056db133d5a9",
+          "rectangle": {
+            "left": 887,
+            "top": 0,
+            "width": 887,
+            "height": 887
+          }
+        }
+      },
+      "sourceReference": "dealers/al-muhtaref-used-cars/branding/generated-dark-surface.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "f888967b74d04ff71175b4349c02e390b0089188a61e0cfff5a9885a29e4e61f",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-d2193169-06fe-4aeb-b4eb-2621fb0453f1",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-muhtaref-used-cars/branding/generated-silver.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "b51d5093b4a1af7e626ed42fb44139a77148d77da6441773dd30d12f81ada0dd",
+      "sha256": "ba192edf74354aeed649df2e7f93d3b1928496a522e9c59ba47511f747077547",
+      "crop": {
+        "left": 52,
+        "top": 0,
+        "width": 2073,
+        "height": 724
+      },
+      "sourcePath": "branding/generated-primary.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "0bf20df1e346a5d7022cffa8f7740608d59cac98bcc40134d56979f42cc99ad6",
+      "sha256": "14a38e437b5ae0de59c2a4eaf2aee1c3f94a3bf018ca3b33a04a6ca05f0d19ed",
+      "crop": {
+        "left": 138,
+        "top": 8,
+        "width": 749,
+        "height": 862
+      },
+      "sourcePath": "branding/generated-dark-surface.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "986ea524ff152fb4cf7052873a43a16c399a659c37906efe854a67dea4b049f9",
+      "sha256": "f888967b74d04ff71175b4349c02e390b0089188a61e0cfff5a9885a29e4e61f",
+      "crop": {
+        "left": 52,
+        "top": 0,
+        "width": 2075,
+        "height": 724
+      },
+      "sourcePath": "branding/generated-silver.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "00e71d8977397da45cf927891d6077bbed24b3393d71b6a1805a2514bd8366e8",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-479d8f47-4354-4a0f-adcc-0abad6766ad2",
+        "modelVersion": null,
+        "transformation": {
+          "operation": "rectangular-extract-without-recolour-or-redrawing",
+          "source": "branding/generated-pair.png",
+          "sourceSha256": "8bc5c94037ca2c130d85280e54947c58f1d18d79c528c8864e8c056db133d5a9",
+          "rectangle": {
+            "left": 0,
+            "top": 0,
+            "width": 887,
+            "height": 887
+          }
+        }
+      },
+      "sourceReference": "dealers/al-muhtaref-used-cars/branding/generated-mark.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "a7e9ed95b01d12a85b765191cf88d23d6a75da352feb3e414630671a84369da6",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-479d8f47-4354-4a0f-adcc-0abad6766ad2",
+        "modelVersion": null,
+        "transformation": {
+          "operation": "rectangular-extract-without-recolour-or-redrawing",
+          "source": "branding/generated-pair.png",
+          "sourceSha256": "8bc5c94037ca2c130d85280e54947c58f1d18d79c528c8864e8c056db133d5a9",
+          "rectangle": {
+            "left": 887,
+            "top": 0,
+            "width": 887,
+            "height": 887
+          }
+        }
+      },
+      "sourceReference": "dealers/al-muhtaref-used-cars/branding/generated-dark-surface.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "c3017ba87f456902cfec75af2a0d26631a18e741e89f2f6dcb7b3003c3ec87fd",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-479d8f47-4354-4a0f-adcc-0abad6766ad2",
+        "modelVersion": null,
+        "transformation": {
+          "operation": "rectangular-extract-without-recolour-or-redrawing",
+          "source": "branding/generated-pair.png",
+          "sourceSha256": "8bc5c94037ca2c130d85280e54947c58f1d18d79c528c8864e8c056db133d5a9",
+          "rectangle": {
+            "left": 0,
+            "top": 0,
+            "width": 887,
+            "height": 887
+          }
+        }
+      },
+      "sourceReference": "dealers/al-muhtaref-used-cars/branding/generated-mark.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "200358697c63f6e5d1fd875603614c2be08a9da48a85461c601c2ab24c49037f",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-479d8f47-4354-4a0f-adcc-0abad6766ad2",
+        "modelVersion": null,
+        "transformation": {
+          "operation": "rectangular-extract-without-recolour-or-redrawing",
+          "source": "branding/generated-pair.png",
+          "sourceSha256": "8bc5c94037ca2c130d85280e54947c58f1d18d79c528c8864e8c056db133d5a9",
+          "rectangle": {
+            "left": 0,
+            "top": 0,
+            "width": 887,
+            "height": 887
+          }
+        }
+      },
+      "sourceReference": "dealers/al-muhtaref-used-cars/branding/generated-mark.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-19T20:57:24.832Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "5deb7f74b7da0f1674bab382d2cc5e90b002bce855bfceaa33b5e7de1dd22722",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-479d8f47-4354-4a0f-adcc-0abad6766ad2",
+      "modelVersion": null,
+      "transformation": {
+        "operation": "rectangular-extract-without-recolour-or-redrawing",
+        "source": "branding/generated-pair.png",
+        "sourceSha256": "8bc5c94037ca2c130d85280e54947c58f1d18d79c528c8864e8c056db133d5a9",
+        "rectangle": {
+          "left": 887,
+          "top": 0,
+          "width": 887,
+          "height": 887
+        }
+      }
+    }
+  }
+}

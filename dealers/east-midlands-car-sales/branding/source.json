@@ -1,0 +1,224 @@
+{
+  "schemaVersion": 1,
+  "dealer": "east-midlands-car-sales",
+  "realLogoFirst": true,
+  "logoKind": "redraw",
+  "publishedBranding": "real-logo-observed",
+  "publicSources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/East-Midlands-Car-sales-LTD",
+      "observedAt": "2026-10-19"
+    },
+    {
+      "url": "https://www.autotrader.co.uk/dealers/nottinghamshire/nottingham/east-midlands-car-sales-ltd-10048908",
+      "observedAt": "2026-10-19"
+    },
+    {
+      "url": "https://find-and-update.company-information.service.gov.uk/company/15603566",
+      "observedAt": "2026-10-19"
+    }
+  ],
+  "originals": [
+    {
+      "url": "https://m.atcdn.co.uk/dealer-logo/at2/adbranding/10048908/images/fpa_logo.gif",
+      "observedAt": "2026-10-19",
+      "sha256": "4481b119cad38767aa96f96ac3f87233ad86a457f45f9e89d9ca160fc6f9c169",
+      "nativeDimensions": {
+        "width": 600,
+        "height": 100
+      },
+      "format": "PNG",
+      "description": "Opaque 600px monochrome coupe-roof wordmark; preserved the roof motif, name and monochrome identity, with a compact EM addition.",
+      "path": "branding/original-logo.png"
+    }
+  ],
+  "sourceLogoUrl": "https://m.atcdn.co.uk/dealer-logo/at2/adbranding/10048908/images/fpa_logo.gif",
+  "workingLogoPath": "branding/generated-master.png",
+  "creationMethod": "imagegen-faithful-redraw",
+  "dealerApproved": false,
+  "approvalStatus": "independent-preview-not-dealer-approved",
+  "usageStatus": "public-preview-only",
+  "observedAt": "2026-10-19",
+  "researchConclusion": "A real identity was obtained and visually reviewed. Opaque 600px monochrome coupe-roof wordmark; preserved the roof motif, name and monochrome identity, with a compact EM addition. This is a faithful image-generated redraw for an independent preview and has not been approved by the dealer.",
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T19:22:56.608725Z",
+    "master": {
+      "path": "branding/generated-master.png",
+      "sha256": "ce4c99cb012011cccf5556742ad27bec44f2c30507c8e5c94756af536269c404",
+      "nativeDimensions": {
+        "width": 2170,
+        "height": 725
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-0b7e711f-de50-4e2d-b43c-c2e3aa6099e1",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "63da5954a48db4e2f9434a5a41c2fd90c727150991c4adde86e4f866a13c88eb",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-0b7e711f-de50-4e2d-b43c-c2e3aa6099e1",
+        "modelVersion": null
+      },
+      "derivation": {
+        "operation": "pixel-exact rectangular extraction of the existing generated compact emblem; no recolouring or invented artwork",
+        "parentPath": "branding/generated-master.png",
+        "parentSha256": "ce4c99cb012011cccf5556742ad27bec44f2c30507c8e5c94756af536269c404",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 824,
+          "height": 725
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-on-dark.png",
+      "sha256": "593ff5e1a94cf8d1b14d843266dc1496b6f9381f7a9f055be7b7fb10c9d008e1",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-16497a00-a602-4ac1-b5f2-4b20cea2a25c",
+        "modelVersion": null
+      },
+      "derivation": {
+        "operation": "pixel-exact rectangular extraction of the existing generated compact emblem; no recolouring or invented artwork",
+        "parentPath": "branding/generated-on-dark.png",
+        "parentSha256": "7727f885662a5023d636c8ac977b075a7e566017f0cb35357acf6526982430c6",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 778,
+          "height": 725
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-master.png",
+        "sha256": "ce4c99cb012011cccf5556742ad27bec44f2c30507c8e5c94756af536269c404",
+        "nativeDimensions": {
+          "width": 2170,
+          "height": 725
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-0b7e711f-de50-4e2d-b43c-c2e3aa6099e1",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "7727f885662a5023d636c8ac977b075a7e566017f0cb35357acf6526982430c6",
+        "nativeDimensions": {
+          "width": 2170,
+          "height": 725
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-16497a00-a602-4ac1-b5f2-4b20cea2a25c",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "7727f885662a5023d636c8ac977b075a7e566017f0cb35357acf6526982430c6",
+        "nativeDimensions": {
+          "width": 2170,
+          "height": 725
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-16497a00-a602-4ac1-b5f2-4b20cea2a25c",
+          "modelVersion": null
+        }
+      }
+    },
+    "marks": {
+      "onLight": {
+        "path": "branding/generated-mark.png",
+        "sha256": "63da5954a48db4e2f9434a5a41c2fd90c727150991c4adde86e4f866a13c88eb",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-0b7e711f-de50-4e2d-b43c-c2e3aa6099e1",
+          "modelVersion": null
+        },
+        "derivation": {
+          "operation": "pixel-exact rectangular extraction of the existing generated compact emblem; no recolouring or invented artwork",
+          "parentPath": "branding/generated-master.png",
+          "parentSha256": "ce4c99cb012011cccf5556742ad27bec44f2c30507c8e5c94756af536269c404",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 824,
+            "height": 725
+          }
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-mark-on-dark.png",
+        "sha256": "593ff5e1a94cf8d1b14d843266dc1496b6f9381f7a9f055be7b7fb10c9d008e1",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-16497a00-a602-4ac1-b5f2-4b20cea2a25c",
+          "modelVersion": null
+        },
+        "derivation": {
+          "operation": "pixel-exact rectangular extraction of the existing generated compact emblem; no recolouring or invented artwork",
+          "parentPath": "branding/generated-on-dark.png",
+          "parentSha256": "7727f885662a5023d636c8ac977b075a7e566017f0cb35357acf6526982430c6",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 778,
+            "height": 725
+          }
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": {
+        "onLight": [
+          "#ffffff"
+        ],
+        "onDark": [
+          "#111113",
+          "#101820"
+        ],
+        "onAccent": [
+          "#09090b",
+          "#17191c",
+          "#c40101"
+        ]
+      },
+      "wordmarkWidths": [
+        120,
+        180
+      ],
+      "reviewedAt": "2026-10-19T19:22:56.608725Z",
+      "notes": "Visually reviewed the actual deterministic transparent-padding exports at120px and180px on all six retained template surface colours. Exact name spelling, silhouette, alpha edges, spacing and clipping were checked. Light-ink variants are actual imagegen results, not deterministic recolours. Small secondary suffix text is subordinate to the principal name; compact identity is provided separately."
+    },
+    "compactMarkStatus": "independent-preview-not-dealer-approved",
+    "compactMarkDescription": "EM monogram beneath the retained coupe-roof motif",
+    "compactMarkReview": {
+      "reviewed": true,
+      "widths": [
+        32,
+        64
+      ],
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#101820",
+        "#09090b",
+        "#17191c",
+        "#c40101"
+      ],
+      "reviewedAt": "2026-10-19T19:22:56.608725Z",
+      "notes": "Visually inspected the actual compact exports at32px and64px on all six template backgrounds. Existing-emblem pixel crops have explicit parent hashes and exact rectangle provenance; independently generated compact marks retain their own actual generation IDs. Shape, spacing, clipping and transparent counters were checked. Dealer approval remains unknown."
+    }
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-input-review",
+  "dealer": "king-street-motors-smethwick",
+  "reviewed": true,
+  "reviewedAt": "2026-10-20T19:15:38.221Z",
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "checks": [
+    "canonical-hosting-and-preserved-fleet-collisions",
+    "assigned-expansion-lead",
+    "public-fact-schema-and-price-omission",
+    "personal-contact-screen",
+    "retained-stock-media",
+    "companion-copy-source-binding",
+    "immutable-template-release-and-native-QA-parent",
+    "reviewed-artwork-provenance-and-regenerated-logo-hashes"
+  ],
+  "sourceArtworkReview": "Retained artwork review is separate provenance; this command does not perform visual, Arabic-expert or dealer approval.",
+  "copyReview": "Automated structure, stock hash, source text and complete EN/BG rows; no new human translation approval is inferred.",
+  "contacts": {
+    "schemaVersion": 1,
+    "kind": "cars-automated-public-contact-screen",
+    "dealer": "king-street-motors-smethwick",
+    "method": "heuristic; no claim that unflagged values cannot be personal",
+    "flags": [],
+    "blocking": []
+  },
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-smethwick-king-street-motors",
+    "position": 88
+  },
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "inputs": [
+    {
+      "path": "FACTS-AND-INVENTORY.json",
+      "sha256": "e5cf66d591103f3c4ee5934e4e628489d2afc193ad29d172c479b435d0d286b0"
+    },
+    {
+      "path": "branding/generated-mark.png",
+      "sha256": "060e48b31460bc39be7668aabbe27d9b2ae238b0a1dbdda5699a70203cc5b62c"
+    },
+    {
+      "path": "branding/generated-master.png",
+      "sha256": "466320a6dd38858c13f95bfaa66cbffc5d2ddb5e98df9284ee8d658c415c6426"
+    },
+    {
+      "path": "branding/logo-contract.json",
+      "sha256": "f5e2a43dc0448784c75e0e75f23d88daaf644be71fbb644511727160e432baf8"
+    },
+    {
+      "path": "branding/logo-recipe.json",
+      "sha256": "e750779dc5a38876d9a0b496974a59651aa84348f87880eba51ca38997543a72"
+    },
+    {
+      "path": "branding/observed-logo.gif",
+      "sha256": "259e5c0642ee457afd13276c3742f5a3a210126d3e3c459bf638c701cf8b5257"
+    },
+    {
+      "path": "branding/source.json",
+      "sha256": "16d34a93a6414af0889db794d9f8231745b9dcc25bb99182e51e7d62f5f644ff"
+    },
+    {
+      "path": "business-facts.json",
+      "sha256": "9a05fab56cf5df727b600474d8f4e121ea97ff23429308599f5de8161ff4491e"
+    },
+    {
+      "path": "copy-review.json",
+      "sha256": "c0bf8b570f56d7785b38fd022810ae86caa4fdf024b81db5c1629264c7b906a6"
+    },
+    {
+      "path": "dealer-stock/public-1.jpg",
+      "sha256": "f0c937ce21d5eeee81af18b7ae01a99dfb2416d24d20474eaab812a20274da65"
+    },
+    {
+      "path": "dealer-stock/public-2.jpg",
+      "sha256": "f8fc385f5e24e0a592585c6ece46d316e7605ebeca48a38e9fd723df9ff6746b"
+    },
+    {
+      "path": "dealer-stock/public-3.jpg",
+      "sha256": "d6debab988bc7489efb2e984e6e60e5448be8fefcb5f50d26b4d84289cf0c653"
+    },
+    {
+      "path": "dealer.json",
+      "sha256": "6d1a360439cc74f8e2dd621edea346dd3c275fa2d7b028fe01b211007ac1062e"
+    },
+    {
+      "path": "identity-review.json",
+      "sha256": "7b5c589f389140ca4e315570058c16a70ff542ce49aa40a420953a45f379f3bc"
+    },
+    {
+      "path": "locale.json",
+      "sha256": "f8864c937cc75d8d3b0af2a4d6c0020e3aa1d33b29d670ef6cab144f24a64ab8"
+    },
+    {
+      "path": "missing-facts.json",
+      "sha256": "5c0ac735fcfed07790cfd1343d58f74899c69cfd26111ff88c911bc05d167989"
+    },
+    {
+      "path": "qualification.json",
+      "sha256": "d7d6b1c8224ddce8debc97b37b32fe19a0ec7731badfcb68ba60ba0f2a8ff22c"
+    },
+    {
+      "path": "source-evidence.json",
+      "sha256": "c68ba91a1852d0293b2c5c27a912139df3a123b067e1586f60cba32bc14a4032"
+    },
+    {
+      "path": "stock.json",
+      "sha256": "b11c5dec0ad8ff02075d5e749b47380042871266c6a92578019eb817c91123f0"
+    }
+  ],
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "providerWrites": 0
+}

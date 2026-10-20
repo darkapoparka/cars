@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-input-review",
+  "dealer": "plaistow-cars-birmingham",
+  "reviewed": true,
+  "reviewedAt": "2026-10-20T19:19:08.375Z",
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "checks": [
+    "canonical-hosting-and-preserved-fleet-collisions",
+    "assigned-expansion-lead",
+    "public-fact-schema-and-price-omission",
+    "personal-contact-screen",
+    "retained-stock-media",
+    "companion-copy-source-binding",
+    "immutable-template-release-and-native-QA-parent",
+    "reviewed-artwork-provenance-and-regenerated-logo-hashes"
+  ],
+  "sourceArtworkReview": "Retained artwork review is separate provenance; this command does not perform visual, Arabic-expert or dealer approval.",
+  "copyReview": "Automated structure, stock hash, source text and complete EN/BG rows; no new human translation approval is inferred.",
+  "contacts": {
+    "schemaVersion": 1,
+    "kind": "cars-automated-public-contact-screen",
+    "dealer": "plaistow-cars-birmingham",
+    "method": "heuristic; no claim that unflagged values cannot be personal",
+    "flags": [],
+    "blocking": []
+  },
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-birmingham-plaistow-cars",
+    "position": 17
+  },
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "inputs": [
+    {
+      "path": "FACTS-AND-INVENTORY.json",
+      "sha256": "0703e6b4a60933a695bdf347d417a61a48cf2a96a51e978e6bc0be2becca3307"
+    },
+    {
+      "path": "branding/generated-mark-on-dark.png",
+      "sha256": "2fb0764cd277673e5793ae22cc1aca3841d7f76960f5ac55b4d02a8ea67d629b"
+    },
+    {
+      "path": "branding/generated-mark.png",
+      "sha256": "8bcb0fbf6035fbbabc9c247adc69fe8068d15ef53a11996bb91ad3b35ca2e7f2"
+    },
+    {
+      "path": "branding/generated-master.png",
+      "sha256": "24a7511bb7962b93859e51e2d7d075c3cdb8ddb3dee0b5d319c1fbf915d0d883"
+    },
+    {
+      "path": "branding/generated-on-dark.png",
+      "sha256": "4a82004f15a5fd7ecc03c99d55a39025017fed308ae107cf531aa4f291779f1c"
+    },
+    {
+      "path": "branding/logo-contract.json",
+      "sha256": "6f22136e817960461d38e28c9424f8ea64c7bd2da90261b8097673aeb5844f20"
+    },
+    {
+      "path": "branding/logo-recipe.json",
+      "sha256": "74297e1e90440fa93b759456d9a7d953db72cd0f74eb62d353147893943579c7"
+    },
+    {
+      "path": "branding/observed-logo.gif",
+      "sha256": "f770c9807cb8d3ba165785c2ba8c35f2f14ac8cc647911233cda1bc90392b366"
+    },
+    {
+      "path": "branding/source.json",
+      "sha256": "3d3dec6d760a20f70eb00c823845cc0c6a11e7b81fbac5bfd049716b70865e53"
+    },
+    {
+      "path": "business-facts.json",
+      "sha256": "ec8e38678ac2cec70b8fc1cfceb32294c495de47608600399c217a67ecb8e227"
+    },
+    {
+      "path": "copy-review.json",
+      "sha256": "12e9e56a2223a6a31bd6f4f275b84dcf8854ca42fee0c3e7f516901598b9ac54"
+    },
+    {
+      "path": "dealer-stock/public-1.jpg",
+      "sha256": "d49375a5fb6ea886a162910ebfb2f67886dc37b510c4728337724ec69f4a4e9b"
+    },
+    {
+      "path": "dealer-stock/public-2.jpg",
+      "sha256": "32afa4f921185d91394a5eb2061449a00819375fc964968b459fbb3a6d8ea6d8"
+    },
+    {
+      "path": "dealer-stock/public-3.jpg",
+      "sha256": "c633e2402c4da2ad991b38010450abb507b06e29439710ca264528713af0a172"
+    },
+    {
+      "path": "dealer.json",
+      "sha256": "cf7bf0184a1f2f277581ad977c06895acdee8f5fc9d5511c78053db44b80219d"
+    },
+    {
+      "path": "identity-review.json",
+      "sha256": "55da6aa1b370c3768abb42cd3993caba48347bcdfae3bf0f2712a0cc063dbef9"
+    },
+    {
+      "path": "locale.json",
+      "sha256": "5415a5f4024b8269150ae6141a3cd298f5385429679071188736edd8aa0b29d9"
+    },
+    {
+      "path": "missing-facts.json",
+      "sha256": "436a388cca385b7f0c6568d2904924aa24ff8d8d0e0e83ec875403f96245c49a"
+    },
+    {
+      "path": "qualification.json",
+      "sha256": "a211eeffa73bf382c6e4b0576743f2c8dfc6c76334c81a4821b98de3ca609d3c"
+    },
+    {
+      "path": "source-evidence.json",
+      "sha256": "8f36394253adf1664f3b5932e3da3da68e625901c2cb3f076f333c2574f55893"
+    },
+    {
+      "path": "stock.json",
+      "sha256": "8225ecd319f96fc5f1c2fc0fefe68e2f454e6f2f56f1a6f472e0e0c153ca2b5a"
+    }
+  ],
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "providerWrites": 0
+}

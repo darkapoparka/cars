@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "type": "cars-dealer-pack-draft",
+  "slug": "pearl-used-cars",
+  "dealerId": "ae-sharjah-pearl-used-cars",
+  "status": "draft",
+  "buildReady": false,
+  "providerWrites": 0,
+  "createdAt": "2026-10-19T20:30:09.862Z",
+  "inventoryKind": "dated-listing-snapshot",
+  "inventoryRecords": 3,
+  "logoReady": false,
+  "missingFacts": [
+    {
+      "field": "business.address",
+      "required": false,
+      "reason": "No usable sourced value in the retained public business record."
+    },
+    {
+      "field": "business.phone",
+      "required": false,
+      "reason": "No usable sourced value in the retained public business record."
+    },
+    {
+      "field": "business.email",
+      "required": false,
+      "reason": "No usable sourced value in the retained public business record."
+    },
+    {
+      "field": "business.hours",
+      "required": false,
+      "reason": "No usable sourced value in the retained public business record."
+    },
+    {
+      "field": "prices",
+      "required": false,
+      "reason": "All listing prices are omitted under the public-repository scope."
+    }
+  ],
+  "blocking": [
+    "branding.reviewed-assets"
+  ],
+  "stockAcquisition": "explicit-retained-public-snapshot",
+  "liveListingFetchPerformed": false,
+  "next": "Retain public listing snapshots with --stock/--media-root when available; review the real logo first, generate a proposal only when needed, and run logo preparation before building."
+}

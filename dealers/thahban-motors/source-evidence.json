@@ -1,0 +1,117 @@
+{
+  "schemaVersion": 1,
+  "dealer": "thahban-motors",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://www.dubicars.com/dealers/sharjah-thahban-motors-2148",
+      "observedAt": "2026-10-19T20:00:26.754113Z",
+      "supports": [
+        "business.name",
+        "business.city",
+        "business.countryCode",
+        "business.address",
+        "business.phone",
+        "business.hours",
+        "dated-dealer-catalogue-listings"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2018-porsche-cayenne-1000869.html",
+      "observedAt": "2026-10-19T20:00:26.754113Z",
+      "supports": [
+        "stock.dubicars-1000869"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2016-land-rover-range-rover-sport-gcc-original-paint-perfect-conditoon-v6-1037392.html",
+      "observedAt": "2026-10-19T20:00:26.754113Z",
+      "supports": [
+        "stock.dubicars-1037392"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2023-tesla-model-x-gcc-perfect-condition-low-milegea-1036580.html",
+      "observedAt": "2026-10-19T20:00:26.754113Z",
+      "supports": [
+        "stock.dubicars-1036580"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "agentResearch": {
+    "observedAt": "2026-10-19T20:00:26.754113Z",
+    "method": "Public catalogue HTML/JSON-LD and actual stock image read; fields checked before inclusion. No contact or account interaction.",
+    "identityNotes": [
+      "Profile street address conflicts with its stated emirate; exact address omitted.",
+      "Personal-looking mailbox omitted; no personal contact retained."
+    ],
+    "imageReview": "Actual three stock images visually reviewed; no price overlay or named personal contact used.",
+    "logoResearchStatus": "in-progress"
+  },
+  "stockPhotos": [
+    {
+      "listingId": "dubicars-1000869",
+      "listingUrl": "https://www.dubicars.com/2018-porsche-cayenne-1000869.html",
+      "sourceUrl": "https://www.dubicars.com/images/046284/650x380/thahban-motors/d04c094d-ee7a-46d1-9358-1707b7220799.jpeg",
+      "observedAt": "2026-10-19T20:00:26.754113Z",
+      "sourceSha256": "4351de326d9ad90975f8f11432dbd824523335b81f822ebb7fed6b5d69c3f13c",
+      "retainedPath": "dealer-stock/dubicars-1000869.webp",
+      "retainedSha256": "b682b52cf8851b6a87bd9f24f60d11c452a58f2b287fdb433535770b75c7d65e",
+      "nativeDimensions": [
+        650,
+        507
+      ],
+      "retainedDimensions": [
+        650,
+        507
+      ],
+      "retainedBytes": 34960,
+      "transformation": "Bounded resize with preserved aspect ratio and WebP compression; no watermark removal.",
+      "reusePermission": "not independently established; public-preview source attribution retained"
+    },
+    {
+      "listingId": "dubicars-1037392",
+      "listingUrl": "https://www.dubicars.com/2016-land-rover-range-rover-sport-gcc-original-paint-perfect-conditoon-v6-1037392.html",
+      "sourceUrl": "https://www.dubicars.com/images/0410e2/650x380/thahban-motors/623c2c32-266d-4340-8d7c-0890f8f1d190.jpeg",
+      "observedAt": "2026-10-19T20:00:26.754113Z",
+      "sourceSha256": "adb8da2b3a65e3036bbfedab1aa8d12d47616fb440fc822fe9d4a773c5ac70a7",
+      "retainedPath": "dealer-stock/dubicars-1037392.webp",
+      "retainedSha256": "29c168af7b7ca84528b67f2745d1a09628560ba9db4cf02d48410d75960be2bf",
+      "nativeDimensions": [
+        650,
+        515
+      ],
+      "retainedDimensions": [
+        650,
+        515
+      ],
+      "retainedBytes": 39298,
+      "transformation": "Bounded resize with preserved aspect ratio and WebP compression; no watermark removal.",
+      "reusePermission": "not independently established; public-preview source attribution retained"
+    },
+    {
+      "listingId": "dubicars-1036580",
+      "listingUrl": "https://www.dubicars.com/2023-tesla-model-x-gcc-perfect-condition-low-milegea-1036580.html",
+      "sourceUrl": "https://www.dubicars.com/images/1bcf0e/650x380/thahban-motors/f9be757c-a6fe-47b8-a777-29cddcbf9990.jpeg",
+      "observedAt": "2026-10-19T20:00:26.754113Z",
+      "sourceSha256": "e5fb9c3e9c0d39c2136b3a0e7af690c4cccd643c81fc33e6ea55401dc3bea3c8",
+      "retainedPath": "dealer-stock/dubicars-1036580.webp",
+      "retainedSha256": "0eda4068041243c57443bd85b2edfb78c95ad1c14e6cc1539fe8739017aa670b",
+      "nativeDimensions": [
+        650,
+        454
+      ],
+      "retainedDimensions": [
+        650,
+        454
+      ],
+      "retainedBytes": 35472,
+      "transformation": "Bounded resize with preserved aspect ratio and WebP compression; no watermark removal.",
+      "reusePermission": "not independently established; public-preview source attribution retained"
+    }
+  ]
+}

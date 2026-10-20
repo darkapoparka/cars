@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "dealer": "lomeshaye-perfomance",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "listing-1",
+      "title": "2018 BMW 1 Series 3.0 M140i Shadow Edition Auto Euro 6 (s/s) 5dr",
+      "make": "BMW",
+      "model": "1 Series",
+      "year": 2018,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/listing-1.jpg"
+      ],
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202610187105688",
+      "observedAt": "2026-10-19",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Hatchback",
+      "transmission": "Automatic",
+      "fuel": "Petrol",
+      "mileageValue": 79600,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-2",
+      "title": "2018 SEAT Leon 2.0 TSI Cupra 300 DSG Euro 6 (s/s) 5dr",
+      "make": "SEAT",
+      "model": "Leon",
+      "year": 2018,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/listing-2.jpg"
+      ],
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202610126921363",
+      "observedAt": "2026-10-19",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Hatchback",
+      "transmission": "Automatic",
+      "fuel": "Petrol",
+      "mileageValue": 56300,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-3",
+      "title": "2017 BMW 1 Series 3.0 M140i Auto Euro 6 (s/s) 5dr",
+      "make": "BMW",
+      "model": "1 Series",
+      "year": 2017,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/listing-3.jpg"
+      ],
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202609246360643",
+      "observedAt": "2026-10-19",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 75000,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

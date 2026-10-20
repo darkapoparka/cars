@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "prestige-and-alma-used-cars",
+  "previousSlug": "prestige-and-alma-used-cars",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:13:36.964Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 4,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-sharjah-prestige-and-alma-used-cars",
+    "position": 372
+  },
+  "before": {
+    "files": 38,
+    "bytes": 2712903
+  },
+  "afterBeforeReview": {
+    "files": 22,
+    "bytes": 1228473
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 109104,
+      "sha256": "d55d5e39dbeb4803cc7101683c2e0eb14eea3ec5e2fa29567b289f5679c30e60"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 107587,
+      "sha256": "eb181165cc90c8c61040cbd12ef71d270c5f8c760d23a4e875e1a98747942b77"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 109104,
+      "sha256": "d55d5e39dbeb4803cc7101683c2e0eb14eea3ec5e2fa29567b289f5679c30e60"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 95014,
+      "sha256": "041214c4ff4da325c978aaf9045cf927316dae4250a1a67f03c397839986d87c"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 100820,
+      "sha256": "99a8069b1a46408d330734cc52041bb8fb0e7ad7729a20ea5fced8edd1eaa1c3"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 100820,
+      "sha256": "99a8069b1a46408d330734cc52041bb8fb0e7ad7729a20ea5fced8edd1eaa1c3"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 95014,
+      "sha256": "041214c4ff4da325c978aaf9045cf927316dae4250a1a67f03c397839986d87c"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 109104,
+      "sha256": "d55d5e39dbeb4803cc7101683c2e0eb14eea3ec5e2fa29567b289f5679c30e60"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 9122,
+      "sha256": "a847939fcafd46124cc327ebeab14954c0f506f7e97d78b92c99f5a088e39fbc"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 100820,
+      "sha256": "99a8069b1a46408d330734cc52041bb8fb0e7ad7729a20ea5fced8edd1eaa1c3"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 70350,
+      "sha256": "5fd72b6c27478ecede267e1511df0687be5ed0873757d1de3f530bd01da09515"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 100820,
+      "sha256": "99a8069b1a46408d330734cc52041bb8fb0e7ad7729a20ea5fced8edd1eaa1c3"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 70350,
+      "sha256": "5fd72b6c27478ecede267e1511df0687be5ed0873757d1de3f530bd01da09515"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 95014,
+      "sha256": "041214c4ff4da325c978aaf9045cf927316dae4250a1a67f03c397839986d87c"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 65990,
+      "sha256": "8d1e5728726bf07edcdb68edd04c577322a9e8657cca60b446f4b2bcb4735e0c"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 76140,
+      "sha256": "d2d6bfc928e1922c74f317387892b7d6945a0dccd028210d7f99847ed5377f65"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 73116,
+      "sha256": "ab6e97e0e0222b52a553665009d8fb1383ee0cc62132ecd3db3a7670bc73546e"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 13,
+    "bytes": 1201961,
+    "inventorySha256": "1635f38e93b54f56196c7d0ca4549ff0dbfba460895bb51d384a03d6b5eab08a",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "prestige-and-alma-used-cars",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 24,
+    "report": "dealers/prestige-and-alma-used-cars/input-review.json"
+  },
+  "after": {
+    "files": 24,
+    "bytes": 1237186
+  }
+}

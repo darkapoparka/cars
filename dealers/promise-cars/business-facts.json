@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "slug": "promise-cars",
+  "dealerId": "gb-oldbury-promise-cars",
+  "business": {
+    "name": "Promise Cars",
+    "city": "Oldbury",
+    "region": "West Midlands",
+    "countryCode": "GB",
+    "currency": "GBP",
+    "distanceUnit": "mi",
+    "locale": "en-GB",
+    "address": "Unit 3, 1 Stone Street, Oldbury, B69 4JL",
+    "phone": "+447537145638",
+    "phoneDisplay": "(07537) 145638",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://www.autotrader.co.uk/dealers/west-midlands/oldbury/promise-cars-10042436",
+    "hours": "Mo-Fr 08:00-21:00; Sa-Su 07:00-21:00",
+    "sourceUrl": "https://www.autotrader.co.uk/dealers/west-midlands/oldbury/promise-cars-10042436",
+    "observedAt": "2026-10-19T17:36:50.039548Z",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://www.autotrader.co.uk/dealers/west-midlands/oldbury/promise-cars-10042436",
+      "observedAt": "2026-10-19T17:36:50.039548Z",
+      "supports": [
+        "public-business-identity",
+        "public-business-contact",
+        "advertised-stock"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "car-haven-manchester",
+  "previousSlug": "car-haven-manchester",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:14:42.279Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-manchester-car-haven",
+    "position": 70
+  },
+  "before": {
+    "files": 40,
+    "bytes": 4100047
+  },
+  "afterBeforeReview": {
+    "files": 24,
+    "bytes": 1872758
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 80956,
+      "sha256": "3522d0c4d4b6dadd6ac9e213b5e37a4a64f6b5eb642981a04efeee21749280d9"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 188579,
+      "sha256": "9eed617314ed9a081dedb7af664a5585d5ea759668b804fd348130a99a87390c"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 80956,
+      "sha256": "3522d0c4d4b6dadd6ac9e213b5e37a4a64f6b5eb642981a04efeee21749280d9"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 93841,
+      "sha256": "62936c6f426e3547d0257710e133a5c1b0b191ed7c926601cdba9d22ef7d3eac"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 244944,
+      "sha256": "167bc93765a915ebebcfe3fef2d0b8d64b45a3754fc38ab013f9911052bc866f"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 244944,
+      "sha256": "167bc93765a915ebebcfe3fef2d0b8d64b45a3754fc38ab013f9911052bc866f"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 93841,
+      "sha256": "62936c6f426e3547d0257710e133a5c1b0b191ed7c926601cdba9d22ef7d3eac"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 80956,
+      "sha256": "3522d0c4d4b6dadd6ac9e213b5e37a4a64f6b5eb642981a04efeee21749280d9"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 6798,
+      "sha256": "396c575d218ea91d9be39b88ab9b1f88281f95095cf6a557b425ed174a3e1408"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 244944,
+      "sha256": "167bc93765a915ebebcfe3fef2d0b8d64b45a3754fc38ab013f9911052bc866f"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 148994,
+      "sha256": "4234f7f539d6db2e54fe1e0a4b2e78d680036309723cf174f477c72489fb10aa"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 244944,
+      "sha256": "167bc93765a915ebebcfe3fef2d0b8d64b45a3754fc38ab013f9911052bc866f"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 148994,
+      "sha256": "4234f7f539d6db2e54fe1e0a4b2e78d680036309723cf174f477c72489fb10aa"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 93841,
+      "sha256": "62936c6f426e3547d0257710e133a5c1b0b191ed7c926601cdba9d22ef7d3eac"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 66792,
+      "sha256": "1a9dfb93b3331cef7f9f4da2c400fcbc75a08340cb20b9efda12534ef8524842"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 111722,
+      "sha256": "0cfdb4c5abbc798a7f3471eb0194e1d466a4d4dab59a80fbec292720ae7e6d8c"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 55050,
+      "sha256": "f75634d9251743f5ce365321833a907bf218d4012ffe3d72f44a67c40178feea"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 11,
+    "bytes": 1839567,
+    "inventorySha256": "ef1613bc0de3a8c9b489b37ebd206ad61998b56e5b6188071dd3e464e2eab8d2",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "car-haven-manchester",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 26,
+    "report": "dealers/car-haven-manchester/input-review.json"
+  },
+  "after": {
+    "files": 26,
+    "bytes": 1881768
+  }
+}

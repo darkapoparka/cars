@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "dealer": "pearl-used-cars",
+  "realLogoFirst": true,
+  "publishedBranding": true,
+  "creationMethod": "sourced-logo-imagegen-redraw",
+  "approvalStatus": "redraw-and-compact-proposal-not-dealer-approved",
+  "dealerApproved": false,
+  "usageStatus": "public-preview-only",
+  "observedAt": "2026-10-19T21:36:18.065Z",
+  "publicSources": [
+    {
+      "url": "https://www.dubicars.com/dealers/sharjah-pearl-used-cars-2618",
+      "observedAt": "2026-10-19T20:00:23.944334Z"
+    },
+    {
+      "url": "https://www.dubicars.com/2026-rox-adamas-983508.html",
+      "observedAt": "2026-10-19T20:00:23.944334Z"
+    },
+    {
+      "url": "https://www.dubicars.com/2023-rox-01-991888.html",
+      "observedAt": "2026-10-19T20:00:23.944334Z"
+    },
+    {
+      "url": "https://www.dubicars.com/2024-mercedes-benz-cla250-20l-942920.html",
+      "observedAt": "2026-10-19T20:00:23.944334Z"
+    }
+  ],
+  "originals": [
+    {
+      "path": "branding/source-original.jpg",
+      "sha256": "c94377b44cd7cd878d654f448d1642c1efa48650f0bfb70c7c1d1e5a45823f7f",
+      "url": "https://www.dubicars.com/images/b3f7fa/z_180x120/pearl-used-cars/logo-153299e0-16b5-436d-9a7a-38e645fa62a5.jpeg",
+      "observedAt": "2026-10-19T20:00:23.944334Z"
+    }
+  ],
+  "logoResearch": "Exact public dealer-catalogue avatar visually reviewed; a clean imagegen redraw preserves the actual original name, colour family and emblem.",
+  "visualReview": "Source identity and actual full and32/64px composited surface artwork checked on white, navy and red; generated inverse alpha exports inspected separately from the raw tool preview.",
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T21:36:18.065Z",
+    "master": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "eef6c44eb6fddf461d8290eba9c6e352bb5be5e0000d2c3694d1d763dac03bf7",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-c504e02e-44c6-4d6b-9e70-3d74eb84a59b",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "eef6c44eb6fddf461d8290eba9c6e352bb5be5e0000d2c3694d1d763dac03bf7",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-c504e02e-44c6-4d6b-9e70-3d74eb84a59b",
+        "modelVersion": null
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-on-dark.png",
+      "sha256": "2cf927ccdeb643680763b00b4d0f8cb7eaeeda222bf3799af5a94c74e3bcf736",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-0b836052-a03e-4cfa-ac84-8376a642ac46",
+        "modelVersion": null
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "eef6c44eb6fddf461d8290eba9c6e352bb5be5e0000d2c3694d1d763dac03bf7",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-c504e02e-44c6-4d6b-9e70-3d74eb84a59b",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "2cf927ccdeb643680763b00b4d0f8cb7eaeeda222bf3799af5a94c74e3bcf736",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-0b836052-a03e-4cfa-ac84-8376a642ac46",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "2cf927ccdeb643680763b00b4d0f8cb7eaeeda222bf3799af5a94c74e3bcf736",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-0b836052-a03e-4cfa-ac84-8376a642ac46",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": {
+        "onLight": [
+          "#ffffff"
+        ],
+        "onDark": [
+          "#111113",
+          "#101820"
+        ],
+        "onAccent": [
+          "#09090b",
+          "#17191c",
+          "#c40101"
+        ]
+      },
+      "notes": "Source identity and actual full and32/64px composited surface artwork checked on white, navy and red; generated inverse alpha exports inspected separately from the raw tool preview."
+    },
+    "compactMarkStatus": "independent-proposal-not-dealer-approved",
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-19T21:36:18.065Z",
+      "widths": [
+        32,
+        64
+      ],
+      "backgrounds": [
+        "#ffffff",
+        "#101820",
+        "#c40101"
+      ],
+      "notes": "Source identity and actual full and32/64px composited surface artwork checked on white, navy and red; generated inverse alpha exports inspected separately from the raw tool preview."
+    }
+  },
+  "generationPrompts": [
+    "Faithful professional redraw of the supplied PEARL USED CARS gold open-shell-and-pearl identity. Preserve the distinctive open pearl shell motif and gold brand family, simplifying fine ribs into bold clean wedges with a prominent circular pearl. Transparent near-square stacked logo: shell above exact bold wording 'PEARL' with 'USED CARS' beneath. All ink deep antique gold #805b0d, strong contrast on white, flat opaque geometry. Keep the real recognizable identity; omit micro Arabic/legal lettering rather than inventing it. No panel, gradient, bevel, texture, glow or added slogan. Compact silhouette legible at32px.",
+    "Generate the exact inverse companion of this PEARL USED CARS preview logo. Keep the pearl shell emblem and exact two-line wording and shapes. All visible artwork solid opaque pale champagne silver #F5EEDD, with no dark fragments, so it reads on navy and red #c40101. Actual transparent background, flat clean crisp edges, no glow, shadow, metallic texture or checkerboard. Near-square composition suitable for a 32px mark."
+  ]
+}

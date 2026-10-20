@@ -69,6 +69,19 @@ test('pipeline sparse checkouts retain the tracked task document required by wor
   }
 });
 
+test('final transport uploads retain seven days while auxiliary evidence stays bounded',()=>{
+  const uploads=workflow.split(/^    - /m).slice(1).filter(step=>/^(?:uses:|      uses:) actions\/upload-artifact@/m.test(step));
+  const transport=uploads.filter(step=>/^        name: dealer-pack-transport--/m.test(step));
+  const expected=['Retain final bundle manifest',...Array.from({length:8},(_,index)=>'Retain deduplicated final blob shard '+index)];
+  assert.deepEqual(transport.map(step=>step.match(/^name: (.+)$/m)?.[1]),expected);
+  for(const step of transport)assert.deepEqual([...step.matchAll(/^        retention-days: (\d+)$/gm)].map(match=>Number(match[1])),[7]);
+  for(const [prefix,days] of [['dealer-pack-hosted-browser--',1],['dealer-pack-plan--',3],['dealer-pack-reports--',3]]){
+    const matches=uploads.filter(step=>step.includes('        name: '+prefix));
+    assert.equal(matches.length,1,'Exactly one auxiliary upload: '+prefix);
+    assert.deepEqual([...matches[0].matchAll(/^        retention-days: (\d+)$/gm)].map(match=>Number(match[1])),[days]);
+  }
+});
+
 test('the workflow always provides HEAD but explicit and benchmark dispatch still select exactly one planner mode',async t=>{
   const root=area(t);
   const benchmark=await planDealerPackCiEnvironment({root,env:{PACK_HEAD:head,PACK_BENCHMARK:'true'},validatePack:ready});

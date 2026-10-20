@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "dealer": "supreme-cars-luton",
+  "dealerId": "gb-luton-supreme-cars-burr",
+  "reviewedAt": "2026-10-19",
+  "providerWrites": 0,
+  "dealerContactPerformed": false,
+  "primarySource": {
+    "url": "https://www.autotrader.co.uk/dealers/bedfordshire/luton/supreme-cars-10019372?channel=cars",
+    "httpStatus": 200,
+    "htmlSha256": "10e52f9c81003670f4b48ec886d3cab427020957d94b448fd234891b84f92344",
+    "observedAt": "2026-10-19"
+  },
+  "identity": {
+    "retainedLeadName": "Supreme Cars",
+    "currentSellerDisplayName": "Supreme Cars",
+    "existingRegistryOrClientMatch": false
+  },
+  "publicBusinessPhone": {
+    "source": "current dealer marketplace profile",
+    "ownership": "Public business contact; it may be a marketplace forwarding number."
+  },
+  "factsOmitted": [],
+  "limitations": [],
+  "inventory": {
+    "kind": "dated-listing-snapshot",
+    "retainedListings": 3,
+    "photos": 3,
+    "availabilityConfirmedWithDealer": false,
+    "pricesOmitted": true,
+    "rawMarketplaceHtmlRetainedInPublicPack": false
+  },
+  "researchMethod": "Opened the exact primary seller catalogue; used its current Used cars/vehicle records and excluded generic Featured advertisements. Checked matched directories and bounded exact business name plus locality searches for an official site or usable logo."
+}

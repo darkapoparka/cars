@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "dealer": "glasgow-craigton-cars",
+  "reviewedAt": "2026-10-19T20:10:55.129003Z",
+  "scope": "Complete public advert descriptions and available vehicle-history panels for the selected stock samples. No dealer contact or independent vehicle inspection.",
+  "records": [
+    {
+      "listingId": "vehicle-1",
+      "sourceUrl": "https://www.ebay.co.uk/itm/137844567712",
+      "observedAt": "2026-10-19T20:03:55.451788Z",
+      "httpStatus": 200,
+      "pageSha256": "6d3ea52fbe3e1aa2c84af222ea1fa5d46671e37c268c52f11657469cdaec4a2d",
+      "descriptionUrl": "https://itm.ebaydesc.com/itmdesc/137844567712?t=1792014444000&category=18275&seller=craigtoncars282&excSoj=1&ver=1&excTrk=1&lsite=3&ittenable=false&domain=ebay.com&descgauge=1&cspheader=1&oneClk=2&secureDesc=1&lang=en",
+      "descriptionSha256": "233e11b208043fdd2ec58b62f22dec34c870628fcdf5586ca76ecad2401b70d9",
+      "embeddedHistoryChecked": false,
+      "descriptionResult": "full-public-advert-reviewed",
+      "retained": true,
+      "finding": "No additional material condition or history disclosure identified in the reviewed public advert; this is not an independent vehicle inspection or history certificate."
+    },
+    {
+      "listingId": "vehicle-2",
+      "sourceUrl": "https://www.ebay.co.uk/itm/137844558889",
+      "observedAt": "2026-10-19T20:03:55.480048Z",
+      "httpStatus": 200,
+      "pageSha256": "bab6dbd56f93df9a2c16618ca78d3a1f3d8cb2fb1303647f3f38abd1eb61284f",
+      "descriptionUrl": "https://itm.ebaydesc.com/itmdesc/137844558889?t=1792014077000&category=9861&seller=craigtoncars282&excSoj=1&ver=1&excTrk=1&lsite=3&ittenable=false&domain=ebay.com&descgauge=1&cspheader=1&oneClk=2&secureDesc=1&lang=en",
+      "descriptionSha256": "2d0bcd945bd0844ecd6d7c28845ca0b83ff61e2554e7199e04b757af016a5854",
+      "embeddedHistoryChecked": false,
+      "descriptionResult": "full-public-advert-reviewed",
+      "retained": true,
+      "finding": "No additional material condition or history disclosure identified in the reviewed public advert; this is not an independent vehicle inspection or history certificate."
+    },
+    {
+      "listingId": "vehicle-3",
+      "sourceUrl": "https://www.ebay.co.uk/itm/137844551650",
+      "observedAt": "2026-10-19T20:03:55.545248Z",
+      "httpStatus": 200,
+      "pageSha256": "1d49c58628f6e1c5b0cbeb1d42dd0845bf08e0337a64568dc840dbc886b117bb",
+      "descriptionUrl": "https://itm.ebaydesc.com/itmdesc/137844551650?t=1792013720000&category=18308&seller=craigtoncars282&excSoj=1&ver=1&excTrk=1&lsite=3&ittenable=false&domain=ebay.com&descgauge=1&cspheader=1&oneClk=2&secureDesc=1&lang=en",
+      "descriptionSha256": "29b0c7cb65f5eae39038103d44b6712aa5b029a77142cee28d26c08a808e22f1",
+      "embeddedHistoryChecked": false,
+      "descriptionResult": "full-public-advert-reviewed",
+      "retained": true,
+      "finding": "No additional material condition or history disclosure identified in the reviewed public advert; this is not an independent vehicle inspection or history certificate."
+    }
+  ]
+}

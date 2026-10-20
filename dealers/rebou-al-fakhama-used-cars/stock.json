@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "dealer": "rebou-al-fakhama-used-cars",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T19:58:51.844383Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "ay-8821814212",
+      "title": "Audi Q7 2019",
+      "make": "Audi",
+      "model": "Q7",
+      "year": 2019,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/ay-8821814212.jpg"
+      ],
+      "sourceUrl": "https://ayshei.com/ads/detail/8821814212-2019-audi-q7-american-specs-excellent-condition",
+      "observedAt": "2026-10-19T19:58:51.844383Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "SUV",
+      "transmission": "AUTOMATIC",
+      "fuel": "Gasoline",
+      "color": "White",
+      "mileageValue": 134000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "ay-8084758468",
+      "title": "Ford Mustang 2023",
+      "make": "Ford",
+      "model": "Mustang",
+      "year": 2023,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/ay-8084758468.jpg"
+      ],
+      "sourceUrl": "https://ayshei.com/ads/detail/8084758468-2023-ford-mustang-gt-premium-american-specs-excellent-condition",
+      "observedAt": "2026-10-19T19:58:51.844383Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Coupe",
+      "transmission": "MANUAL",
+      "fuel": "Gasoline",
+      "color": "Black",
+      "mileageValue": 15703,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "ay-2182514939",
+      "title": "Dodge Charger 2019",
+      "make": "Dodge",
+      "model": "Charger",
+      "year": 2019,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/ay-2182514939.jpg"
+      ],
+      "sourceUrl": "https://ayshei.com/ads/detail/2182514939-2019-dodge-charger-gt-american-specs",
+      "observedAt": "2026-10-19T19:58:51.844383Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Sedan",
+      "transmission": "AUTOMATIC",
+      "fuel": "Gasoline",
+      "color": "Black",
+      "mileageValue": 165000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

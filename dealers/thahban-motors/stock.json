@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "dealer": "thahban-motors",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:00:26.754113Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "dubicars-1000869",
+      "title": "Porsche Cayenne STANDARD",
+      "make": "Porsche",
+      "model": "Cayenne",
+      "year": 2018,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/dubicars-1000869.webp"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2018-porsche-cayenne-1000869.html",
+      "observedAt": "2026-10-19T20:00:26.754113Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 157000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "dubicars-1037392",
+      "title": "Land Rover Range Rover Sport HSE",
+      "make": "Land Rover",
+      "model": "Range Rover Sport",
+      "year": 2016,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/dubicars-1037392.webp"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2016-land-rover-range-rover-sport-gcc-original-paint-perfect-conditoon-v6-1037392.html",
+      "observedAt": "2026-10-19T20:00:26.754113Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 89000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "dubicars-1036580",
+      "title": "Tesla Model X STANDARD",
+      "make": "Tesla",
+      "model": "Model X",
+      "year": 2023,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/dubicars-1036580.webp"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2023-tesla-model-x-gcc-perfect-condition-low-milegea-1036580.html",
+      "observedAt": "2026-10-19T20:00:26.754113Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 27000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

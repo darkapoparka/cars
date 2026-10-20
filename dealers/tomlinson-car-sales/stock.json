@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "dealer": "tomlinson-car-sales",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "public-listing-1",
+      "title": "2019 Lexus LX570 5.7 Petrol Auto",
+      "make": "Lexus",
+      "model": "LX",
+      "year": 2019,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/public-1.jpg"
+      ],
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202502139084416",
+      "observedAt": "2026-10-19T20:02:57.481700Z",
+      "availability": "Observed in the public seller catalogue on 2026-10-19; availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "transmission": "Automatic",
+      "fuel": "Petrol",
+      "mileageOnRequest": true,
+      "description": "The seller describes a Japanese import. The catalogue mileage conflicts with the kilometres and converted miles in the seller description; mileage is omitted. Registration and documents have not been independently verified. Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "public-listing-2",
+      "title": "2018 Mercedes-Benz S350Ld AMG Line G-Tronic+",
+      "make": "Mercedes-Benz",
+      "model": "S Class",
+      "year": 2018,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/public-2.jpg"
+      ],
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202608135067607",
+      "observedAt": "2026-10-19T20:02:57.483441Z",
+      "availability": "Observed in the public seller catalogue on 2026-10-19; availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "transmission": "Automatic",
+      "fuel": "Diesel",
+      "mileageValue": 122000,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "public-listing-3",
+      "title": "2019 Audi A7 40 TDI S line S Tronic",
+      "make": "Audi",
+      "model": "A7",
+      "year": 2019,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/public-3.jpg"
+      ],
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202511258123560",
+      "observedAt": "2026-10-19T20:02:58.346716Z",
+      "availability": "Observed in the public seller catalogue on 2026-10-19; availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "transmission": "Automatic",
+      "fuel": "Diesel",
+      "mileageValue": 112000,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

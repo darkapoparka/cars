@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "urbanshadow-motors",
+  "previousSlug": "urbanshadow-motors",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:26:38.328Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-wembley-urbanshadow-motors",
+    "position": 99
+  },
+  "before": {
+    "files": 38,
+    "bytes": 4311508
+  },
+  "afterBeforeReview": {
+    "files": 22,
+    "bytes": 2031079
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 152820,
+      "sha256": "e58adf0a35b4960e4fa9b05297a102e59aaf441802b689919b254fe0621927bf"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 185501,
+      "sha256": "2b063dfcf59f6245b08687ac61006fba3b90899ce4cde84b4fe49ae0e27b624e"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 152820,
+      "sha256": "e58adf0a35b4960e4fa9b05297a102e59aaf441802b689919b254fe0621927bf"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 137180,
+      "sha256": "9f0d769e2fe5c05bf42bf418d96ef014852861b2548dcc62c04f09f915eb453c"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 168154,
+      "sha256": "956b8f7013a02b8bba7e5975864d3f3ced0786d709d5e7cc8fe5d6a83dd7ce7c"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 168154,
+      "sha256": "956b8f7013a02b8bba7e5975864d3f3ced0786d709d5e7cc8fe5d6a83dd7ce7c"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 137180,
+      "sha256": "9f0d769e2fe5c05bf42bf418d96ef014852861b2548dcc62c04f09f915eb453c"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 152820,
+      "sha256": "e58adf0a35b4960e4fa9b05297a102e59aaf441802b689919b254fe0621927bf"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 11703,
+      "sha256": "0b1c5efa6dd8ecf71ef8afa0702e108c8af7f67cd8eac3e97add28d46482da94"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 168154,
+      "sha256": "956b8f7013a02b8bba7e5975864d3f3ced0786d709d5e7cc8fe5d6a83dd7ce7c"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 113876,
+      "sha256": "29b4cf66762623c44455c63b67996496affb582a5488b06c8220c693d07be689"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 168154,
+      "sha256": "956b8f7013a02b8bba7e5975864d3f3ced0786d709d5e7cc8fe5d6a83dd7ce7c"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 113876,
+      "sha256": "29b4cf66762623c44455c63b67996496affb582a5488b06c8220c693d07be689"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 137180,
+      "sha256": "9f0d769e2fe5c05bf42bf418d96ef014852861b2548dcc62c04f09f915eb453c"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 89260,
+      "sha256": "8b0fd4ef56f4c99f818e0eb763e8e970cf0fdc7543412bf9a26ef935d00b93b3"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 125956,
+      "sha256": "073fac8b97d644da90084c58884d106d65dec34016e67f46ffdd45ed098ee6ee"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 101462,
+      "sha256": "52781815f737da3449c285adf3c643b67addb48ba680c606c49f94a0ed943d68"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 13,
+    "bytes": 2008715,
+    "inventorySha256": "35785e73a2775fce27c751bacb8fbb94daac9a3bd6d204897a2379df7e8792b8",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "urbanshadow-motors",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 24,
+    "report": "dealers/urbanshadow-motors/input-review.json"
+  },
+  "after": {
+    "files": 24,
+    "bytes": 2039666
+  }
+}

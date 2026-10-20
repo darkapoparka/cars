@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "dealer": "rajas-motors",
+  "businessFacts": "business-facts.json",
+  "stock": "stock.json",
+  "inventoryKind": "dated-listing-snapshot",
+  "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+  "sources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/Rajasmotors-Ltd",
+      "observedAt": "2026-10-19T20:00:31.529165Z",
+      "supports": [
+        "current-public-business-name",
+        "public-business-contact",
+        "public-premises-or-appointment-information",
+        "current-public-stock-catalogue"
+      ]
+    },
+    {
+      "url": "https://www.ebay.co.uk/itm/860058997168",
+      "observedAt": "2026-10-19T20:03:02.288522Z",
+      "supports": [
+        "selected-current-public-stock",
+        "seller-description-and-vehicle-history-review",
+        "vehicle-photograph"
+      ]
+    },
+    {
+      "url": "https://www.ebay.co.uk/itm/860055663693",
+      "observedAt": "2026-10-19T20:03:02.525349Z",
+      "supports": [
+        "selected-current-public-stock",
+        "seller-description-and-vehicle-history-review",
+        "vehicle-photograph"
+      ]
+    },
+    {
+      "url": "https://www.ebay.co.uk/itm/860041525470",
+      "observedAt": "2026-10-19T20:03:02.742591Z",
+      "supports": [
+        "selected-current-public-stock",
+        "seller-description-and-vehicle-history-review",
+        "vehicle-photograph"
+      ]
+    },
+    {
+      "url": "https://www.cazoo.co.uk/dealers/rajas-motors-ltd-72931/",
+      "observedAt": "2026-10-19T20:03:53.980727Z",
+      "supports": [
+        "bounded-public-logo-research"
+      ]
+    }
+  ]
+}

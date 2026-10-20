@@ -1,0 +1,142 @@
+{
+  "schemaVersion": 1,
+  "dealer": "bdayt-al-khir-used-cars",
+  "realLogoFirst": true,
+  "publishedBranding": true,
+  "creationMethod": "sourced-logo-imagegen-redraw",
+  "approvalStatus": "redraw-and-compact-proposal-not-dealer-approved",
+  "dealerApproved": false,
+  "usageStatus": "public-preview-only",
+  "observedAt": "2026-10-19T21:26:51.301Z",
+  "publicSources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/bdayt-al-khir-used-cars-tr-llcsp",
+      "observedAt": "2026-10-19T20:00:18.408611Z"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/823-toyota-yaris-15-cvt-105-hp-other",
+      "observedAt": "2026-10-19T20:00:18.408611Z"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/315-mitsubishi-eclipse-cross-15-cvt-150-hp-glx",
+      "observedAt": "2026-10-19T20:00:18.408611Z"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/419-mercedes-benz-a-class-13-amt-163-hp-a-200-amg",
+      "observedAt": "2026-10-19T20:00:18.408611Z"
+    }
+  ],
+  "originals": [
+    {
+      "path": "branding/source-original.jpg",
+      "sha256": "1afb2e818544649e8c2a6afb263e42800bd0058189bf9d50d1b9de6a145429ce",
+      "url": "https://auto-ae-prod-storage.storage.googleapis.com/0db680d1b0284379b600604b239d20ae",
+      "observedAt": "2026-10-19T21:26:51.301Z"
+    }
+  ],
+  "logoResearch": {
+    "method": "Opened current named dealer profile and three seller-bound LicensePlate stock listings; searched public catalogues and exact trading names, and retrieved the current named public catalogue profile and its attributable original dealer image.",
+    "result": "Original public raster was small or opaque and needed a full clean transparent redraw. Identity and dealer city were compared with the retained lead; original name, palette and motif are preserved with surface-specific contrast adjustments.",
+    "sources": [
+      "https://licenseplate.ae/cars/dealer/bdayt-al-khir-used-cars-tr-llcsp",
+      "https://auto.ae/bdaytalkhircars/"
+    ]
+  },
+  "visualReview": "Faithful large intertwined serif BK and car-roof contour, with the sourced Latin and Arabic business name. Gold/black on white and light gold/silver on dark/accent; the original opaque 3D treatment is replaced with clean transparent contours. BK remains the compact recognition cue. No dealer approval or native-language expert sign-off is claimed.",
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T21:26:51.301Z",
+    "master": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "07071fd25b17ad266fb57dcf99acf4ce1744c576b5bbd41bafbf23a27a775799",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-40459f1b-7aaf-4777-95a9-58556fcde604",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "07071fd25b17ad266fb57dcf99acf4ce1744c576b5bbd41bafbf23a27a775799",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-40459f1b-7aaf-4777-95a9-58556fcde604",
+        "modelVersion": null
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-on-dark.png",
+      "sha256": "ca76fc9537ef7d56fb4877984755210b458263d385be08093093214b904f9fa7",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-c01de7a4-503a-45f5-bf7a-d16a09112ab4",
+        "modelVersion": null
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "07071fd25b17ad266fb57dcf99acf4ce1744c576b5bbd41bafbf23a27a775799",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-40459f1b-7aaf-4777-95a9-58556fcde604",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "ca76fc9537ef7d56fb4877984755210b458263d385be08093093214b904f9fa7",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-c01de7a4-503a-45f5-bf7a-d16a09112ab4",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "ca76fc9537ef7d56fb4877984755210b458263d385be08093093214b904f9fa7",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-c01de7a4-503a-45f5-bf7a-d16a09112ab4",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": {
+        "onLight": [
+          "#ffffff"
+        ],
+        "onDark": [
+          "#111113",
+          "#101820"
+        ],
+        "onAccent": [
+          "#09090b",
+          "#17191c",
+          "#c40101"
+        ]
+      },
+      "notes": "Faithful large intertwined serif BK and car-roof contour, with the sourced Latin and Arabic business name. Gold/black on white and light gold/silver on dark/accent; the original opaque 3D treatment is replaced with clean transparent contours. BK remains the compact recognition cue. No dealer approval or native-language expert sign-off is claimed."
+    },
+    "compactMarkStatus": "independent-proposal-not-dealer-approved",
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-19T21:26:51.301Z",
+      "widths": [
+        32,
+        64
+      ],
+      "backgrounds": [
+        "#ffffff",
+        "#101820",
+        "#c40101"
+      ],
+      "notes": "Faithful large intertwined serif BK and car-roof contour, with the sourced Latin and Arabic business name. Gold/black on white and light gold/silver on dark/accent; the original opaque 3D treatment is replaced with clean transparent contours. BK remains the compact recognition cue. No dealer approval or native-language expert sign-off is claimed."
+    }
+  },
+  "generationPrompts": [
+    "Use case: logo-brand. Faithfully redraw this genuine BDAYT ALKHIR dealership identity into a crisp flat transparent mark. Preserve the distinctive overlapping serif BK monogram interwoven with the flowing car-roof and bonnet contour, and the exact BDAYT ALKHIR name. Make BK and the roof the large dominant element; underneath set BDAYT ALKHIR in two clean balanced lines, and the Arabic business name بداية الخير as one restrained line. Near-square well-balanced lockup for website header and32px monogram recognition. Monogram and roof flat deep warm gold #90621f; business names flat black #111111. Remove black background, 3D bevels and small service slogans/lines. Genuine alpha transparency with open letter counters and clean substantial strokes. Same real name, gold/black palette and BK-car motif, no new symbol, no gradients, shadows, sparkle or texture.",
+    "Make the matching dark/accent-surface version of this exact BDAYT ALKHIR logo. Preserve the exact BK serif monogram intertwined with the car-roof and bonnet contour, Latin BDAYT ALKHIR wordmark and Arabic بداية الخير. Change gold monogram to flat light warm gold #ead399 and black text to flat pale silver #c7d4dc. Keep exact composition and generous transparent counters, genuinely transparent background, crisp substantial clean edges. No changes to name or geometry; no glow, shadow, texture, gradient, bevel, box or added words."
+  ]
+}

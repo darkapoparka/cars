@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "slug": "stanley-motor-group",
+  "dealerId": "gb-wakefield-stanley-motor-group",
+  "business": {
+    "name": "Stanley Motor Group",
+    "city": "Wakefield",
+    "region": "West Yorkshire",
+    "countryCode": "GB",
+    "currency": "GBP",
+    "distanceUnit": "mi",
+    "locale": "en-GB",
+    "address": "Glastonbury Avenue, Wakefield, WF1 4TR",
+    "phone": "+447822001296",
+    "phoneDisplay": "(07822) 001296",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://www.autotrader.co.uk/dealers/west-yorkshire/wakefield/stanley-motor-group-10032038",
+    "hours": "",
+    "sourceUrl": "https://www.autotrader.co.uk/dealers/west-yorkshire/wakefield/stanley-motor-group-10032038",
+    "observedAt": "2026-10-19T17:36:49.323710Z",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://www.autotrader.co.uk/dealers/west-yorkshire/wakefield/stanley-motor-group-10032038",
+      "observedAt": "2026-10-19T17:36:49.323710Z",
+      "supports": [
+        "public-business-identity",
+        "public-business-contact",
+        "advertised-stock"
+      ]
+    }
+  ]
+}

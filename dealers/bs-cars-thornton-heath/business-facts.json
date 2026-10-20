@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "slug": "bs-cars-thornton-heath",
+  "dealerId": "gb-thornton-heath-bs-cars",
+  "business": {
+    "name": "B&S Cars",
+    "city": "Thornton Heath",
+    "region": "Greater London",
+    "countryCode": "GB",
+    "currency": "GBP",
+    "distanceUnit": "mi",
+    "locale": "en-GB",
+    "address": "14-20 Northwood Road, Thornton Heath CR7 8HQ",
+    "phone": "+442038056895",
+    "phoneDisplay": "+442038056895",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://showroom.ebaymotorspro.co.uk/Bs-Cars?menu=1",
+    "hours": "",
+    "sourceUrl": "https://showroom.ebaymotorspro.co.uk/Bs-Cars?menu=1",
+    "observedAt": "2026-10-19T17:36:50.702381Z",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/Bs-Cars?menu=1",
+      "observedAt": "2026-10-19T17:36:50.702381Z",
+      "supports": [
+        "public-business-identity",
+        "public-business-contact",
+        "advertised-stock"
+      ]
+    }
+  ]
+}

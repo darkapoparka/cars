@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "dealer": "rolf-street-car-sales",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "public-listing-1",
+      "title": "2013 Ford Fiesta 1.25 Zetec — Cat S",
+      "make": "Ford",
+      "model": "Fiesta",
+      "year": 2013,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/public-1.jpg"
+      ],
+      "sourceUrl": "https://www.ebay.co.uk/itm/287656944905",
+      "observedAt": "2026-10-19T17:53:17.212603Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "transmission": "Manual",
+      "fuel": "Petrol",
+      "color": "Blue",
+      "mileageValue": 52000,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview. The public listing records Category S history. Vehicle condition has not been independently verified."
+    },
+    {
+      "id": "public-listing-2",
+      "title": "2018 Ford Focus 1.5 TDCi ST-Line Navigation — Cat S",
+      "make": "Ford",
+      "model": "Focus",
+      "year": 2018,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/public-2.jpg"
+      ],
+      "sourceUrl": "https://www.ebay.co.uk/itm/287633932225",
+      "observedAt": "2026-10-19T17:53:18.357201Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "transmission": "Manual",
+      "fuel": "Diesel",
+      "color": "Grey",
+      "mileageValue": 59000,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview. The public listing records Category S history and says the vehicle has been repaired. Repair quality has not been independently verified."
+    },
+    {
+      "id": "public-listing-3",
+      "title": "2022 Audi A1 25 TFSI Sport S Tronic — Cat S",
+      "make": "Audi",
+      "model": "A1",
+      "year": 2022,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/public-3.jpg"
+      ],
+      "sourceUrl": "https://www.ebay.co.uk/itm/287590783499",
+      "observedAt": "2026-10-19T17:53:18.579077Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "transmission": "Automatic",
+      "fuel": "Petrol",
+      "color": "White",
+      "mileageValue": 40000,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview. The public listing records Category S history and says the vehicle has been repaired. Repair quality has not been independently verified."
+    }
+  ]
+}

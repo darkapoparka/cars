@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "dealer": "dms-cars-peterborough",
+  "missing": [
+    {
+      "field": "business.email",
+      "required": false,
+      "reason": "Personal-looking public mailbox omitted under requested privacy rules."
+    },
+    {
+      "field": "business.website",
+      "required": false,
+      "reason": "No verified value in the bounded public source checks; omitted rather than invented."
+    },
+    {
+      "field": "business.hours",
+      "required": false,
+      "reason": "No verified value in the bounded public source checks; omitted rather than invented."
+    },
+    {
+      "field": "prices",
+      "required": false,
+      "reason": "All listing prices are omitted under the public-repository scope."
+    }
+  ],
+  "blocking": []
+}

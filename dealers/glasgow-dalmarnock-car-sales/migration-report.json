@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "glasgow-dalmarnock-car-sales",
+  "previousSlug": "glasgow-dalmarnock-car-sales",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:13:57.892Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-glasgow-dalmarnock-car-sales",
+    "position": 45
+  },
+  "before": {
+    "files": 37,
+    "bytes": 5861779
+  },
+  "afterBeforeReview": {
+    "files": 21,
+    "bytes": 2575492
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 200561,
+      "sha256": "b32ca07849c791682b637b327a71e0c8d4a1e1fd441f004a23ddd49204055667"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 228474,
+      "sha256": "c45a5bed17914efe98e2e3ce32ce10ae8d484d95a297bf920789c4a4ea5a6642"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 200561,
+      "sha256": "b32ca07849c791682b637b327a71e0c8d4a1e1fd441f004a23ddd49204055667"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 217281,
+      "sha256": "db818278a748a8c3bef6f3095cf4b0214c887bf4ac817070a51aa25295defd11"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 266196,
+      "sha256": "0182a53c2864e74f050ae194e3ace345045a3e0bc23a03c7af3d15d733b888b3"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 266196,
+      "sha256": "0182a53c2864e74f050ae194e3ace345045a3e0bc23a03c7af3d15d733b888b3"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 217281,
+      "sha256": "db818278a748a8c3bef6f3095cf4b0214c887bf4ac817070a51aa25295defd11"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 200561,
+      "sha256": "b32ca07849c791682b637b327a71e0c8d4a1e1fd441f004a23ddd49204055667"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 14235,
+      "sha256": "7de307f8b98e4e1c2674687fcee9136fd548f32a66138b631a3fe5986a5737fc"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 266196,
+      "sha256": "0182a53c2864e74f050ae194e3ace345045a3e0bc23a03c7af3d15d733b888b3"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 164496,
+      "sha256": "a1a96cf55951541dde52fe7143afd5a87ba55314af8f51b12419bbd5fffc7d0b"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 266196,
+      "sha256": "0182a53c2864e74f050ae194e3ace345045a3e0bc23a03c7af3d15d733b888b3"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 164496,
+      "sha256": "a1a96cf55951541dde52fe7143afd5a87ba55314af8f51b12419bbd5fffc7d0b"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 217281,
+      "sha256": "db818278a748a8c3bef6f3095cf4b0214c887bf4ac817070a51aa25295defd11"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 145104,
+      "sha256": "c70cf26838706c0e7029b2b17ae5d0ffdf4ec89ccd94d59bc15e7e4ae7537d6c"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 131024,
+      "sha256": "7c4a1d37b21a399928a0ee6f0e8a75768af6065852040ec38293fe5a51806477"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 124004,
+      "sha256": "084aa68f124bf14dfa3493cf9d7e35f675b371bd0f0e27e3d04276a9196ccb6b"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 11,
+    "bytes": 2550107,
+    "inventorySha256": "5e74c4051b98363234d0f7f3ad396046f33375c5efc73966f4d5696312dceb49",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "glasgow-dalmarnock-car-sales",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 23,
+    "report": "dealers/glasgow-dalmarnock-car-sales/input-review.json"
+  },
+  "after": {
+    "files": 23,
+    "bytes": 2584052
+  }
+}

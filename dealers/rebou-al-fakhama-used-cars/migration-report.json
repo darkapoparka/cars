@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "rebou-al-fakhama-used-cars",
+  "previousSlug": "rebou-al-fakhama-used-cars",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:14:00.832Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 4,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-sharjah-rebou-al-fakhama-used-cars",
+    "position": 374
+  },
+  "before": {
+    "files": 37,
+    "bytes": 6153832
+  },
+  "afterBeforeReview": {
+    "files": 21,
+    "bytes": 2266802
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 179368,
+      "sha256": "177b00f06e08f9d30635990a029866899a4772d8deb5d1d520c282dcf78c3623"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 117710,
+      "sha256": "e3548c5d9807fd4e86a258c7fe7b2a08feb99dd2471bb8ef7b34187e0063db33"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 179368,
+      "sha256": "177b00f06e08f9d30635990a029866899a4772d8deb5d1d520c282dcf78c3623"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 200558,
+      "sha256": "e2ce232b90989cad4769deac36bae53984181bf46c93e02ff455823b4e30051a"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 411874,
+      "sha256": "96114c0d4705c143b07a1e02aa977a580e8c2fa26fd89e4b08fbf3d954b8932d"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 411874,
+      "sha256": "96114c0d4705c143b07a1e02aa977a580e8c2fa26fd89e4b08fbf3d954b8932d"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 200558,
+      "sha256": "e2ce232b90989cad4769deac36bae53984181bf46c93e02ff455823b4e30051a"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 179368,
+      "sha256": "177b00f06e08f9d30635990a029866899a4772d8deb5d1d520c282dcf78c3623"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 13468,
+      "sha256": "2997647077f6e9a6203bb3abd88c49efeb553d960e36b16afd6e8fe1c1966477"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 411874,
+      "sha256": "96114c0d4705c143b07a1e02aa977a580e8c2fa26fd89e4b08fbf3d954b8932d"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 315816,
+      "sha256": "f4578cb5ffaa1698755132f4c42bca73bdd430a562ea0da3ed0d62e81d32a76d"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 411874,
+      "sha256": "96114c0d4705c143b07a1e02aa977a580e8c2fa26fd89e4b08fbf3d954b8932d"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 315816,
+      "sha256": "f4578cb5ffaa1698755132f4c42bca73bdd430a562ea0da3ed0d62e81d32a76d"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 200558,
+      "sha256": "e2ce232b90989cad4769deac36bae53984181bf46c93e02ff455823b4e30051a"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 134854,
+      "sha256": "90f8da655b56cbdc3df6201eee0c8c60091a477ee86b32f38684f5b454ac0323"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 83258,
+      "sha256": "1091e1abefb87f71abf1d18875534f61759491ed9b3b80b2c4889b047913eada"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 122696,
+      "sha256": "a45257b9ab95715c7bdb78516e312753abc7aaf824392ef74390e453cb906f39"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 12,
+    "bytes": 2240619,
+    "inventorySha256": "5c377881a4cddb6c4c81764c1be12c1d8f11f6df9779f59a3eaefc8f65c7fc39",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "rebou-al-fakhama-used-cars",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 23,
+    "report": "dealers/rebou-al-fakhama-used-cars/input-review.json"
+  },
+  "after": {
+    "files": 23,
+    "bytes": 2275382
+  }
+}

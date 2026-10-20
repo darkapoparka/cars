@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "dealer": "cars4you-bradford",
+  "missing": [
+    {
+      "field": "business.email",
+      "required": false,
+      "reason": "A personal-looking mailbox was omitted under the public-business-contact rule."
+    },
+    {
+      "field": "business.website",
+      "required": false,
+      "reason": "No current public business value was verified in the bounded source review."
+    },
+    {
+      "field": "business.hours",
+      "required": false,
+      "reason": "No current public business value was verified in the bounded source review."
+    },
+    {
+      "field": "prices",
+      "required": false,
+      "reason": "All listing prices are omitted under the public-repository scope."
+    }
+  ],
+  "blocking": []
+}

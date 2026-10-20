@@ -1,0 +1,88 @@
+{
+  "schemaVersion": 1,
+  "dealer": "j26-vans-trucks",
+  "photos": [
+    {
+      "id": "template-demo-auto-best-3",
+      "mediaPath": "dealer-stock/template-demo-3.webp",
+      "observedAt": "2026-10-19",
+      "templateSource": {
+        "repository": "darkapoparka/cars",
+        "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+        "path": "templates/auto-best",
+        "tree": "cbd21f5e0b794a0cbf52bf36fdf07b25fb0bb499",
+        "digest": "90760c4c73d46ebf976a06e923171f31fc716661f69d25d864342ea856002279"
+      },
+      "originalSha256": "d644dec8e1ef280a702dccac267a2367f0ab823e40373e1299b156e7723b3b1f",
+      "originalDimensions": [
+        1600,
+        1067
+      ],
+      "retainedSha256": "acf1c5fc615e7d75550643c399c693d9f76e2b6fc690ffdf6c9bb55481c7d9b9",
+      "retainedDimensions": [
+        1024,
+        683
+      ],
+      "retainedBytes": 68232,
+      "operation": "Resize retained illustrative template image within1024px and encodeWebP; no alteration to depicted content.",
+      "dealerStock": false
+    },
+    {
+      "id": "template-demo-auto-best-1",
+      "mediaPath": "dealer-stock/template-demo-1.webp",
+      "observedAt": "2026-10-19",
+      "templateSource": {
+        "repository": "darkapoparka/cars",
+        "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+        "path": "templates/auto-best",
+        "tree": "cbd21f5e0b794a0cbf52bf36fdf07b25fb0bb499",
+        "digest": "90760c4c73d46ebf976a06e923171f31fc716661f69d25d864342ea856002279"
+      },
+      "originalSha256": "945e6864218ab3bd5fbd415336b212ecfde645685033f8506836f906885d447c",
+      "originalDimensions": [
+        1600,
+        1067
+      ],
+      "retainedSha256": "be1613168e15b7f9a8f0ddf4d9c66a3f078459173566418b1471ceb7fb12413b",
+      "retainedDimensions": [
+        1024,
+        683
+      ],
+      "retainedBytes": 55608,
+      "operation": "Resize retained illustrative template image within1024px and encodeWebP; no alteration to depicted content.",
+      "dealerStock": false
+    },
+    {
+      "id": "template-demo-auto-best-2",
+      "mediaPath": "dealer-stock/template-demo-2.webp",
+      "observedAt": "2026-10-19",
+      "templateSource": {
+        "repository": "darkapoparka/cars",
+        "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+        "path": "templates/auto-best",
+        "tree": "cbd21f5e0b794a0cbf52bf36fdf07b25fb0bb499",
+        "digest": "90760c4c73d46ebf976a06e923171f31fc716661f69d25d864342ea856002279"
+      },
+      "originalSha256": "17689ab880bf47de81ef467c34d639223f39f0c1ebe68c90d0aaf70e3dcc6333",
+      "originalDimensions": [
+        1600,
+        1067
+      ],
+      "retainedSha256": "1cfabdfe640559eaa38e97305ea04543b7b98b44aa7beacbbf634fe08f6e9da2",
+      "retainedDimensions": [
+        1024,
+        683
+      ],
+      "retainedBytes": 83072,
+      "operation": "Resize retained illustrative template image within1024px and encodeWebP; no alteration to depicted content.",
+      "dealerStock": false
+    }
+  ],
+  "review": {
+    "reviewed": true,
+    "observedAt": "2026-10-19",
+    "method": "Visually inspected all3 illustrative retained template photos; no prices or other dealer branding visible.",
+    "maximumDimension": 1024,
+    "maximumBytes": 83072
+  }
+}

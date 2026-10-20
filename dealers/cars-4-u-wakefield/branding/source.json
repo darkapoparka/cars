@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 1,
+  "dealer": "cars-4-u-wakefield",
+  "status": "reviewed",
+  "realLogoFirst": true,
+  "publicSources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/Cars-4-U?menu=1",
+      "observedAt": "2026-10-19T17:36:51.210650Z"
+    },
+    {
+      "source": "alternate-public-logo-page",
+      "retainedEvidence": "source URL in real-logo research",
+      "observation": "A dealer-image URL was observed, but the image host timed out; no inaccessible image is claimed as an obtained original."
+    }
+  ],
+  "originals": [],
+  "creationMethod": "imagegen-proposal",
+  "dealerApproved": false,
+  "approvalStatus": "independent-preview-not-dealer-approved",
+  "researchConclusion": "Bounded public checks did not yield usable distinct dealer artwork. Generic text banners or unavailable image-host URLs do not prove that the dealer has no logo. This artwork is clearly an independent proposal.",
+  "generation": {
+    "tool": "image_gen.imagegen",
+    "generationId": "exec-fe4b1560-4394-4399-a3d5-ccc461ef751c",
+    "modelVersion": null,
+    "prompt": "Use case: logo-brand. Create one polished independent UK motor dealer identity proposal. Transparent background, flat crisp graphic, no mockup, no gradients, no shadows, no raster distress or speckles. Wide horizontal lockup, simple isolated compact emblem on left and exact business name on right with plenty of transparent gap for cropping. Emblem legible at32px, thick clean geometry, no tiny details. Design a dual-contrast outline of clean white and deep navy around every shape so it works on white, dark charcoal #111113 and red #c40101. Two-line wordmark, tight readable bold geometric letterforms, no tagline, no extra text. Business name CARS 4 U. Left emblem an original combination of a bold numeral 4 inside the curve of a U, clear exact two symbols, no roof or wheel. CARS 4 U to right as one bold line, exact spaces. Deep navy and fresh red-orange #dd513e with precise white outer keyline. Simple, highly legible, balanced."
+  },
+  "compactDerivation": {
+    "method": "lossless-isolated-emblem-crop",
+    "parentReference": "branding/generated-master.png",
+    "parentSha256": "9cd2c3ee500b05c75c4189a85acf02a8a65579067f94d64304a66cc7b0e1571a",
+    "crop": {
+      "left": 0,
+      "top": 0,
+      "width": 660,
+      "height": 728
+    },
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-fe4b1560-4394-4399-a3d5-ccc461ef751c",
+      "modelVersion": null
+    }
+  },
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T18:40:18.546Z",
+    "master": {
+      "path": "branding/generated-master.png",
+      "sha256": "9cd2c3ee500b05c75c4189a85acf02a8a65579067f94d64304a66cc7b0e1571a",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-fe4b1560-4394-4399-a3d5-ccc461ef751c",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "3087cb58f61905b74ab39c332bc2417c7be4fd885409f01ef27020549c27f2c4",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-fe4b1560-4394-4399-a3d5-ccc461ef751c",
+        "modelVersion": null
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "3087cb58f61905b74ab39c332bc2417c7be4fd885409f01ef27020549c27f2c4",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-fe4b1560-4394-4399-a3d5-ccc461ef751c",
+        "modelVersion": null
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-master.png",
+        "sha256": "9cd2c3ee500b05c75c4189a85acf02a8a65579067f94d64304a66cc7b0e1571a",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-fe4b1560-4394-4399-a3d5-ccc461ef751c",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-master.png",
+        "sha256": "9cd2c3ee500b05c75c4189a85acf02a8a65579067f94d64304a66cc7b0e1571a",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-fe4b1560-4394-4399-a3d5-ccc461ef751c",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-master.png",
+        "sha256": "9cd2c3ee500b05c75c4189a85acf02a8a65579067f94d64304a66cc7b0e1571a",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-fe4b1560-4394-4399-a3d5-ccc461ef751c",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": {
+        "onLight": [
+          "#ffffff"
+        ],
+        "onDark": [
+          "#111113"
+        ],
+        "onAccent": [
+          "#c40101"
+        ]
+      },
+      "wordmarkWidths": [
+        120,
+        180
+      ],
+      "markWidths": [
+        32,
+        64
+      ],
+      "method": "Same actual dual-contrast generated artwork on each surface; no generated colours are represented as a template palette change.",
+      "reviewedAt": "2026-10-19T18:40:18.546Z",
+      "review": "Visually reviewed exact cropTransparentPadding exports at120px and180px wordmark widths and32px/64px compact sizes on white, charcoal and red. Exact spelling retained, real alpha present, compact emblem clear. The source palette is part of the artwork only."
+    }
+  }
+}

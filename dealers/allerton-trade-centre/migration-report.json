@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "allerton-trade-centre",
+  "previousSlug": "allerton-trade-centre",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:12:21.517Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-bradford-allerton-trade-centre",
+    "position": 21
+  },
+  "before": {
+    "files": 38,
+    "bytes": 3370984
+  },
+  "afterBeforeReview": {
+    "files": 22,
+    "bytes": 1707755
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 54587,
+      "sha256": "0e11dd9300437820e205f9293e81300ac52c3152d2c330b5b2e680d80325bb6c"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 86285,
+      "sha256": "83d439492dba7c728b13624735325e4631f158315fd16c864662601a6dd30716"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 54587,
+      "sha256": "0e11dd9300437820e205f9293e81300ac52c3152d2c330b5b2e680d80325bb6c"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 108513,
+      "sha256": "4e60bde1de2bc1c0522dd3e0020f7e24aafbe71ce2e8e6a422467cf0183393ec"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 172524,
+      "sha256": "64aae3745f4a87b142b0a37379883c02bf893595a88ce49f791d0265eb705b1c"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 172524,
+      "sha256": "64aae3745f4a87b142b0a37379883c02bf893595a88ce49f791d0265eb705b1c"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 108513,
+      "sha256": "4e60bde1de2bc1c0522dd3e0020f7e24aafbe71ce2e8e6a422467cf0183393ec"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 54587,
+      "sha256": "0e11dd9300437820e205f9293e81300ac52c3152d2c330b5b2e680d80325bb6c"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 5309,
+      "sha256": "6fa0fbdc7dbcd8d63269ef0d9968e17ba0574372218e99257f57046d8d0c69e7"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 172524,
+      "sha256": "64aae3745f4a87b142b0a37379883c02bf893595a88ce49f791d0265eb705b1c"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 111304,
+      "sha256": "acb1f7de22db60f596117768403a6ffac0110aa580bcbeba676e7486c882f4ce"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 172524,
+      "sha256": "64aae3745f4a87b142b0a37379883c02bf893595a88ce49f791d0265eb705b1c"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 111304,
+      "sha256": "acb1f7de22db60f596117768403a6ffac0110aa580bcbeba676e7486c882f4ce"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 108513,
+      "sha256": "4e60bde1de2bc1c0522dd3e0020f7e24aafbe71ce2e8e6a422467cf0183393ec"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 75154,
+      "sha256": "63b672471964d57c9266abc4e39af7e6fdafeac784863c6f33abc2affd729bfa"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 58866,
+      "sha256": "91b9f6cfeb5f6fe18c3595f75103658f8a64e24d21948fc2b8619581634fab53"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 39442,
+      "sha256": "0d861580b1ee90e46c3f74a4d5bd3507605e094c920f0ac02c5c329933bccf2f"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 13,
+    "bytes": 1684435,
+    "inventorySha256": "85231ca004ecc907315583ffacf3f30fcf1e0440b625d313fc4cab9bdaa97488",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "allerton-trade-centre",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 24,
+    "report": "dealers/allerton-trade-centre/input-review.json"
+  },
+  "after": {
+    "files": 24,
+    "bytes": 1716375
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-input-review",
+  "dealer": "prestige-and-alma-used-cars",
+  "reviewed": true,
+  "reviewedAt": "2026-10-20T19:13:38.975Z",
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "checks": [
+    "canonical-hosting-and-preserved-fleet-collisions",
+    "assigned-expansion-lead",
+    "public-fact-schema-and-price-omission",
+    "personal-contact-screen",
+    "retained-stock-media",
+    "companion-copy-source-binding",
+    "immutable-template-release-and-native-QA-parent",
+    "reviewed-artwork-provenance-and-regenerated-logo-hashes"
+  ],
+  "sourceArtworkReview": "Retained artwork review is separate provenance; this command does not perform visual, Arabic-expert or dealer approval.",
+  "copyReview": "Automated structure, stock hash, source text and complete EN/BG rows; no new human translation approval is inferred.",
+  "contacts": {
+    "schemaVersion": 1,
+    "kind": "cars-automated-public-contact-screen",
+    "dealer": "prestige-and-alma-used-cars",
+    "method": "heuristic; no claim that unflagged values cannot be personal",
+    "flags": [],
+    "blocking": []
+  },
+  "batch": {
+    "number": 4,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-sharjah-prestige-and-alma-used-cars",
+    "position": 372
+  },
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "inputs": [
+    {
+      "path": "FACTS-AND-INVENTORY.json",
+      "sha256": "f98a7570ca058f918956b2dbfdaf7c91f9076b073988bbd41cd8465697d33686"
+    },
+    {
+      "path": "branding/generated-mark-dark.png",
+      "sha256": "430a0fdf509c167beadf455c727354905e8497640efe7f66f4dd06c47916f4ec"
+    },
+    {
+      "path": "branding/generated-mark.png",
+      "sha256": "2df39b64b338e39cd4a6be69b92ddbc428039a16f346c792c7efd9d02582ce41"
+    },
+    {
+      "path": "branding/generated-primary.png",
+      "sha256": "702d1aea48c13a0d18cb36fc1070dc413b250e68b2cd3a95666657dabb766d8e"
+    },
+    {
+      "path": "branding/generated-silver.png",
+      "sha256": "f5a5cf7d8bea2b00d3cfcb099e08732e02b5b9e747957795d614b120060a38e7"
+    },
+    {
+      "path": "branding/logo-contract.json",
+      "sha256": "80bf06834520a09e28f92e916d313c97ff25855ec36a9afd5c0c07f98134ad52"
+    },
+    {
+      "path": "branding/logo-recipe.json",
+      "sha256": "c9e8261c8f27c84a7f08a2845f3850c7647aaf51f893ab58f00dba3d928f589d"
+    },
+    {
+      "path": "branding/source-original.png",
+      "sha256": "d784091d5fb48d4d323e0ec39cef95984f9f3ad28b03b04aa7e2aba45a4cb66d"
+    },
+    {
+      "path": "branding/source.json",
+      "sha256": "fe1dc46c2c2d85b953c245b8c00dff4e4e0b5a472014803fda5392d642fdc3f1"
+    },
+    {
+      "path": "business-facts.json",
+      "sha256": "72647da4f4beed1d9e7982d1b8c6db69050306a1c7d99df7e85e5baca22c436b"
+    },
+    {
+      "path": "copy-review.json",
+      "sha256": "111f9aff0d4cb8555258bda80f2ced45dbb191de3a39f6900badaceee2f5bd96"
+    },
+    {
+      "path": "dealer-stock/ocd-31035.jpg",
+      "sha256": "eb17d1329395506dd8ef89bd05d8086549f0bb5b9ca7f48aa04330dceaf44192"
+    },
+    {
+      "path": "dealer-stock/ocd-31040.jpg",
+      "sha256": "8d562c81b832f75f7b1b45106f1ec3e5a4f1413bb3ba094e5dd3017c6669cd2f"
+    },
+    {
+      "path": "dealer-stock/ocd-31098.jpg",
+      "sha256": "fd2cba7cf76122db37013e276c11656b1e8ffc4395ed554766b480a9d2a3c73d"
+    },
+    {
+      "path": "dealer.json",
+      "sha256": "2d2002ef3b71a0306f28ddb70a5c06b8738dbd51896b40e23cc488a6715a5dd7"
+    },
+    {
+      "path": "identity-review.json",
+      "sha256": "91b0eda46a7494d2c9dceb65141faaab6e787ddf5ce4dab80a8191280e88090d"
+    },
+    {
+      "path": "locale.json",
+      "sha256": "e6884a0fd28c90c7e8c1f0e23242272426ee9e7d1acb89547625477dea3b449f"
+    },
+    {
+      "path": "missing-facts.json",
+      "sha256": "0e0a2d56d373c55ae860fc042939c24e2a6b02c21c58254aa3b3be497e0a7e40"
+    },
+    {
+      "path": "qualification.json",
+      "sha256": "d9be67940214daf4e5e46665949e7d079acb1036f8588a018ce598bb8e591c00"
+    },
+    {
+      "path": "source-evidence.json",
+      "sha256": "f9480b50931bd3806c62a72a0a38285f609ee957d069a8e9c7899b0a908ab790"
+    },
+    {
+      "path": "stock.json",
+      "sha256": "30a2ad8142dcba85d7a5e8f0ac1a54b89b1cb85cbc0bbd7e7e5ef82feb921d00"
+    }
+  ],
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "providerWrites": 0
+}

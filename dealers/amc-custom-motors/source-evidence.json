@@ -1,0 +1,164 @@
+{
+  "schemaVersion": 1,
+  "dealer": "amc-custom-motors",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uk.json",
+    "sha256": "6cd8d365586f9a5d5131fe4b1d50baede7de91ab384a135017c25367298b07c4"
+  },
+  "publicSources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/Acmmotors",
+      "observedAt": "2026-10-19T20:00:31.409300Z",
+      "supports": [
+        "current-public-business-name",
+        "public-business-contact",
+        "public-premises-or-appointment-information",
+        "current-public-stock-catalogue"
+      ]
+    },
+    {
+      "url": "https://www.ebay.co.uk/itm/407286856541",
+      "observedAt": "2026-10-19T20:02:59.971144Z",
+      "supports": [
+        "selected-current-public-stock",
+        "seller-description-and-vehicle-history-review",
+        "vehicle-photograph"
+      ]
+    },
+    {
+      "url": "https://www.ebay.co.uk/itm/407286847193",
+      "observedAt": "2026-10-19T20:03:00.048159Z",
+      "supports": [
+        "selected-current-public-stock",
+        "seller-description-and-vehicle-history-review",
+        "vehicle-photograph"
+      ]
+    },
+    {
+      "url": "https://www.ebay.co.uk/itm/407265143343",
+      "observedAt": "2026-10-19T20:03:00.090933Z",
+      "supports": [
+        "selected-current-public-stock",
+        "seller-description-and-vehicle-history-review",
+        "vehicle-photograph"
+      ]
+    },
+    {
+      "url": "https://www.cazoo.co.uk/dealers/amc-custom-motors-60811/",
+      "observedAt": "2026-10-19T20:03:53.983414Z",
+      "supports": [
+        "bounded-public-logo-research"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "observedAt": "2026-10-19T20:00:31.409300Z",
+  "catalogueObservation": {
+    "sourceUrl": "https://showroom.ebaymotorspro.co.uk/Acmmotors",
+    "observedAt": "2026-10-19T20:00:31.409300Z",
+    "httpStatus": 200,
+    "sha256": "9f57107621a5b64a421f0797c73e62bbeab487cd3276727819f30af75dcee60f",
+    "bytes": 37218
+  },
+  "stockReview": [
+    {
+      "sourceUrl": "https://www.ebay.co.uk/itm/407286856541",
+      "observedAt": "2026-10-19T20:02:59.971144Z",
+      "httpStatus": 200,
+      "listingSha256": "7d6f053941e4675b5d660f3c08980c75b71f5a56a59fe32f7c02b82526b73c5e",
+      "descriptionUrl": "https://itm.ebaydesc.com/itmdesc/407286856541?t=1791884715000&category=122202&seller=amc-custom-motors&excSoj=1&ver=1&excTrk=1&lsite=3&ittenable=false&domain=ebay.com&descgauge=1&cspheader=1&oneClk=2&secureDesc=1&lang=en",
+      "descriptionSha256": "faf530bb53d72c3e4ddf3164a5c76809d77032476b56b1bf51a381c339c616e4",
+      "photoUrl": "https://i.ebayimg.com/images/g/wZEAAeSwnahqzf3y/s-l1600.jpg",
+      "sourcePhotoSha256": "25cb996ebe3a985b37da2efa9c6ed5cff409c498c5874f7b63ac34cd5416abe1",
+      "sourcePhotoDimensions": [
+        1200,
+        1600
+      ],
+      "photoSha256": "d8ee06f52feba93ad0aefa51f1e18e87e3a1f287432bd8d29a743511bd55ea25",
+      "photoDimensions": [
+        768,
+        1024
+      ],
+      "photoBytes": 183019,
+      "sourceExifOrientation": null,
+      "sourceId": "public-listing-1",
+      "photoPath": "dealer-stock/public-1.jpg",
+      "historyReview": {
+        "fullDescriptionReviewed": true,
+        "vehicleHistoryPanelReviewed": true,
+        "materialDisclosure": "The seller records Category S history. Vehicle condition has not been independently verified.",
+        "sellerReportedCategory": "S"
+      }
+    },
+    {
+      "sourceUrl": "https://www.ebay.co.uk/itm/407286847193",
+      "observedAt": "2026-10-19T20:03:00.048159Z",
+      "httpStatus": 200,
+      "listingSha256": "8efe965bd4ca3251b156c036501d6b1ff4b0967be9f5cefeea939db5411e85a9",
+      "descriptionUrl": "https://itm.ebaydesc.com/itmdesc/407286847193?t=1791884355000&category=9835&seller=amc-custom-motors&excSoj=1&ver=1&excTrk=1&lsite=3&ittenable=false&domain=ebay.com&descgauge=1&cspheader=1&oneClk=2&secureDesc=1&lang=en",
+      "descriptionSha256": "6b7278e4cb6e1d70367c01fc6060315b42ec6e6c4e61ba1fa5e60fd19a1f8261",
+      "photoUrl": "https://i.ebayimg.com/images/g/JrkAAeSwJ4tqzfyB/s-l1600.jpg",
+      "sourcePhotoSha256": "a5f53c0e57b400f678bfd85752f7a87cb097ebfd05fb3e32f449b51f57092596",
+      "sourcePhotoDimensions": [
+        1200,
+        1600
+      ],
+      "photoSha256": "ac9896b0e47107aba3a3e20bb6cb2476c2f6d12bf4976e00cb9e2802445e6201",
+      "photoDimensions": [
+        768,
+        1024
+      ],
+      "photoBytes": 191725,
+      "sourceExifOrientation": null,
+      "sourceId": "public-listing-2",
+      "photoPath": "dealer-stock/public-2.jpg",
+      "historyReview": {
+        "fullDescriptionReviewed": true,
+        "vehicleHistoryPanelReviewed": true,
+        "materialDisclosure": "No additional material adverse disclosure was identified in the retrieved seller description and history fields. This is not a vehicle inspection or a clean-history guarantee."
+      }
+    },
+    {
+      "sourceUrl": "https://www.ebay.co.uk/itm/407265143343",
+      "observedAt": "2026-10-19T20:03:00.090933Z",
+      "httpStatus": 200,
+      "listingSha256": "96d744f6c174bc5e357e24f73fc5bc70a63a869e70af3cc78e1ab963fb3df5ed",
+      "descriptionUrl": "https://itm.ebaydesc.com/itmdesc/407265143343?t=1791100272000&category=36626&seller=amc-custom-motors&excSoj=1&ver=1&excTrk=1&lsite=3&ittenable=false&domain=ebay.com&descgauge=1&cspheader=1&oneClk=2&secureDesc=1&lang=en",
+      "descriptionSha256": "3cf9a3fac8b41162328c9b04f58bcac96ed2a51a70544c4f08414d075d258df7",
+      "photoUrl": "https://i.ebayimg.com/images/g/6mMAAeSwimhqwgWt/s-l1600.jpg",
+      "sourcePhotoSha256": "838066515c3993918b0904b111c26afcdf99c707f9cd19854428989e14c089e6",
+      "sourcePhotoDimensions": [
+        1500,
+        1125
+      ],
+      "photoSha256": "aa6d58ed48996ac1f02a399a966502b519fe91f9c0fdaad91f207ffd43d6e10f",
+      "photoDimensions": [
+        1280,
+        960
+      ],
+      "photoBytes": 190205,
+      "sourceExifOrientation": null,
+      "sourceId": "public-listing-3",
+      "photoPath": "dealer-stock/public-3.jpg",
+      "historyReview": {
+        "fullDescriptionReviewed": true,
+        "vehicleHistoryPanelReviewed": true,
+        "materialDisclosure": "The seller records Category N history and says previous damage has been repaired. Repair quality has not been independently verified.",
+        "sellerReportedCategory": "N"
+      }
+    }
+  ],
+  "researchNotes": [
+    "Honda Fit advert excluded because 2026 catalogue title/year conflicts with 2016 seller description.",
+    "Combo Category S and Caddy Category N repaired claim retained.",
+    "Appointment-only catalogue does not verify a street viewing location; street address omitted."
+  ],
+  "privacyReview": {
+    "publicBusinessFactsOnly": true,
+    "personalNamesOmitted": true,
+    "personalLookingContactsOmitted": false,
+    "pricesOmitted": true,
+    "rawMarketplaceHtmlNotIncluded": true,
+    "dealerContactPerformed": false
+  }
+}

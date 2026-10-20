@@ -1,0 +1,197 @@
+{
+  "schemaVersion": 1,
+  "dealer": "aventus-motors",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T18:57:00.742407Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "13b9631c62468d8208bc415759507abd01bcfcae0c10df97bf429397725892e3",
+      "sourceSha256": "aa5a1a8baf221ac4da355147b3d9e758cbba3c45a7b58a9078e5c6ffdbd02a90"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "ec839a7f7db73abdc040de225872cbcb0a4b62fe605585a09538f988d57e66e8",
+      "sourceSha256": "49746cdd65318e7f427cc8e7cc9e6a152066bd2a05a0b961e9536bb2fc7aa2da"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "ec839a7f7db73abdc040de225872cbcb0a4b62fe605585a09538f988d57e66e8",
+      "sourceSha256": "49746cdd65318e7f427cc8e7cc9e6a152066bd2a05a0b961e9536bb2fc7aa2da"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "aa5a1a8baf221ac4da355147b3d9e758cbba3c45a7b58a9078e5c6ffdbd02a90",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-e8bab0ff-af1e-4a67-b33e-a98284377e19",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "719a9d58b953386a7bf2561a0f5e489174bde23fa84813e3fbc0e4ee97ff5033",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-9606e8ed-4301-48b9-9884-1b2d4fa7b2cd",
+      "modelVersion": null
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "de0dd127e07f6542506f2b86ac279086abe72758787f341f615b9287e6f80118"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "aa5a1a8baf221ac4da355147b3d9e758cbba3c45a7b58a9078e5c6ffdbd02a90",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-e8bab0ff-af1e-4a67-b33e-a98284377e19",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/aventus-motors/branding/generated-master.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "49746cdd65318e7f427cc8e7cc9e6a152066bd2a05a0b961e9536bb2fc7aa2da",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-3186a839-19e5-48f1-bfa8-0585fb3af207",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/aventus-motors/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "49746cdd65318e7f427cc8e7cc9e6a152066bd2a05a0b961e9536bb2fc7aa2da",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-3186a839-19e5-48f1-bfa8-0585fb3af207",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/aventus-motors/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "715d1be3609d4167553db3d179f55f020b24c16e2b155616b4b078a221548676",
+      "sha256": "aa5a1a8baf221ac4da355147b3d9e758cbba3c45a7b58a9078e5c6ffdbd02a90",
+      "crop": {
+        "left": 0,
+        "top": 103,
+        "width": 2172,
+        "height": 502
+      },
+      "sourcePath": "branding/generated-master.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "49ff2fb7fd693a8ff3de1bd7276f54f1db22a055a424d95f2ced56a25a98f96c",
+      "sha256": "49746cdd65318e7f427cc8e7cc9e6a152066bd2a05a0b961e9536bb2fc7aa2da",
+      "crop": {
+        "left": 0,
+        "top": 97,
+        "width": 2172,
+        "height": 514
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "49ff2fb7fd693a8ff3de1bd7276f54f1db22a055a424d95f2ced56a25a98f96c",
+      "sha256": "49746cdd65318e7f427cc8e7cc9e6a152066bd2a05a0b961e9536bb2fc7aa2da",
+      "crop": {
+        "left": 0,
+        "top": 97,
+        "width": 2172,
+        "height": 514
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "ad2206220e96e33712732985481fc4f348d2c16f5036f7fe2367fedc2be1f7d4",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-9606e8ed-4301-48b9-9884-1b2d4fa7b2cd",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/aventus-motors/branding/generated-mark.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "ad2206220e96e33712732985481fc4f348d2c16f5036f7fe2367fedc2be1f7d4",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-9606e8ed-4301-48b9-9884-1b2d4fa7b2cd",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/aventus-motors/branding/generated-mark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "719a9d58b953386a7bf2561a0f5e489174bde23fa84813e3fbc0e4ee97ff5033",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-9606e8ed-4301-48b9-9884-1b2d4fa7b2cd",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/aventus-motors/branding/generated-mark.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "de0dd127e07f6542506f2b86ac279086abe72758787f341f615b9287e6f80118",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-9606e8ed-4301-48b9-9884-1b2d4fa7b2cd",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/aventus-motors/branding/generated-mark.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-19T18:57:00.742407Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "719a9d58b953386a7bf2561a0f5e489174bde23fa84813e3fbc0e4ee97ff5033",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-9606e8ed-4301-48b9-9884-1b2d4fa7b2cd",
+      "modelVersion": null
+    }
+  }
+}

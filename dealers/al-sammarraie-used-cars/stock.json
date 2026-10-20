@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-sammarraie-used-cars",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:00:42.047781Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "gcc-1",
+      "title": "Nissan Patrol SE 2015",
+      "make": "Nissan",
+      "model": "Patrol SE",
+      "year": 2015,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/gcc-1.jpg"
+      ],
+      "sourceUrl": "https://gcccardeals.com/en-ae/dealers/al-sammarraie-used-cars-tr-sole-proprietorship",
+      "observedAt": "2026-10-19T20:00:42.047781Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageOnRequest": true,
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "gcc-2",
+      "title": "Toyota Fortuner GXR 2015",
+      "make": "Toyota",
+      "model": "Fortuner GXR",
+      "year": 2015,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/gcc-2.jpg"
+      ],
+      "sourceUrl": "https://gcccardeals.com/en-ae/dealers/al-sammarraie-used-cars-tr-sole-proprietorship",
+      "observedAt": "2026-10-19T20:00:42.047781Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageOnRequest": true,
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "gcc-3",
+      "title": "Toyota Prado 2009",
+      "make": "Toyota",
+      "model": "Prado",
+      "year": 2009,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/gcc-3.jpg"
+      ],
+      "sourceUrl": "https://gcccardeals.com/en-ae/dealers/al-sammarraie-used-cars-tr-sole-proprietorship",
+      "observedAt": "2026-10-19T20:00:42.047781Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageOnRequest": true,
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

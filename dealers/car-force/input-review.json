@@ -1,0 +1,132 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-input-review",
+  "dealer": "car-force",
+  "reviewed": true,
+  "reviewedAt": "2026-10-20T19:14:29.485Z",
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "checks": [
+    "canonical-hosting-and-preserved-fleet-collisions",
+    "assigned-expansion-lead",
+    "public-fact-schema-and-price-omission",
+    "personal-contact-screen",
+    "retained-stock-media",
+    "companion-copy-source-binding",
+    "immutable-template-release-and-native-QA-parent",
+    "reviewed-artwork-provenance-and-regenerated-logo-hashes"
+  ],
+  "sourceArtworkReview": "Retained artwork review is separate provenance; this command does not perform visual, Arabic-expert or dealer approval.",
+  "copyReview": "Automated structure, stock hash, source text and complete EN/BG rows; no new human translation approval is inferred.",
+  "contacts": {
+    "schemaVersion": 1,
+    "kind": "cars-automated-public-contact-screen",
+    "dealer": "car-force",
+    "method": "heuristic; no claim that unflagged values cannot be personal",
+    "flags": [],
+    "blocking": []
+  },
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-luton-car-force",
+    "position": 64
+  },
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "inputs": [
+    {
+      "path": "FACTS-AND-INVENTORY.json",
+      "sha256": "85ea649a6b8ffeb25be8439764e283573ed83857fe4de32966c2d7ae0dd16b96"
+    },
+    {
+      "path": "branding/generated-mark.png",
+      "sha256": "a94a2b69e81eaa7c1cc6831893a05b2e724b0941109292d1234ec607d2278978"
+    },
+    {
+      "path": "branding/generated-master.png",
+      "sha256": "38efd4f95e05446919148e6483b1e0f4c79f73dd376cf7015319a2bf193c5c86"
+    },
+    {
+      "path": "branding/generated-on-dark.png",
+      "sha256": "8ab38c110be48acf66d03c85d52db6e5b0ffee5e3e02b10a4a74e9b8c35ae33d"
+    },
+    {
+      "path": "branding/generation-provenance.json",
+      "sha256": "2d786806c56a1a5b98db73de92ed04f20e6a293b6fd852d79af15e84fa43fb5f"
+    },
+    {
+      "path": "branding/logo-contract.json",
+      "sha256": "b09197ed81af63c6104346b9e764e0902fba2315cefcdcbe5e8bfcabc46a75b1"
+    },
+    {
+      "path": "branding/logo-recipe.json",
+      "sha256": "b1337e7f13aa7d513baef76d27997dfc1cf9b45659d3dc35982686fee854266b"
+    },
+    {
+      "path": "branding/source.json",
+      "sha256": "e018a1c91f451ee1f825521f96206285afd13abacd2a4d62b6bc6c918859a370"
+    },
+    {
+      "path": "business-facts.json",
+      "sha256": "f9d737ccbe6aa1d08cae34e8caab5fe464aa13f804547f2c93d69e2785cde840"
+    },
+    {
+      "path": "copy-review.json",
+      "sha256": "2051e7266af4b66972ff5ae4ee82153549f5624e23880305b4893e864f73f9e0"
+    },
+    {
+      "path": "dealer-stock/listing-1.jpg",
+      "sha256": "6365d54e2908443346205ddc813ce6e1f5eb9a70083aa616821e7cd8547d5daf"
+    },
+    {
+      "path": "dealer-stock/listing-2.jpg",
+      "sha256": "25a190ab8f5c1d93cf63dd15ae9c54cd0d9f3018e8aa9e45c40e54cfcbbf1de0"
+    },
+    {
+      "path": "dealer-stock/listing-3.jpg",
+      "sha256": "c7a5baa98f899c64fc49cab25eb31767d264c43bbd62a893b7b4955c3b52e527"
+    },
+    {
+      "path": "dealer.json",
+      "sha256": "53685af9267b136be8e324b3e2f42af64e1ad7df1229f2b32eab5d26d38d4654"
+    },
+    {
+      "path": "identity-review.json",
+      "sha256": "a20f07a8e07e743e94d27271905ab7980df2d64361fa54c0eb12763465f2ebfe"
+    },
+    {
+      "path": "locale.json",
+      "sha256": "c6d606b0392a8a20140f05d3e0a2c07021a714a20bcecf577d5bcd31082c09ab"
+    },
+    {
+      "path": "missing-facts.json",
+      "sha256": "87f9fa9ea0c0d8c00684fa1d36c8afae0929842da6cd3ace99bc1ad476e86420"
+    },
+    {
+      "path": "photo-evidence.json",
+      "sha256": "d988db5f91fda2c3e1c9d4ab27abe5a52f6553f6eded1ef737876799fdb2cf21"
+    },
+    {
+      "path": "qualification.json",
+      "sha256": "5be3b1648ba14e3026fdaca506550f74d286fa6753922bbe27f974ad6295cc85"
+    },
+    {
+      "path": "research-review.json",
+      "sha256": "7c336713e9a8c928248c50fbd53cd5a58073002b6c0b85e67edf6002faffb98c"
+    },
+    {
+      "path": "source-evidence.json",
+      "sha256": "e7b10abba91f5daea839e9bb699d1ff3db0e66a5af3a86e750df389f1ccb6ce0"
+    },
+    {
+      "path": "stock.json",
+      "sha256": "296f6ec0699d6a77810ef9d84f37f1b4ec16670b8b7ee66d08f2e824c78b2095"
+    }
+  ],
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "providerWrites": 0
+}

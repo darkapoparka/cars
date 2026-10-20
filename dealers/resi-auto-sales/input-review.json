@@ -1,0 +1,124 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-input-review",
+  "dealer": "resi-auto-sales",
+  "reviewed": true,
+  "reviewedAt": "2026-10-20T19:19:56.422Z",
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "checks": [
+    "canonical-hosting-and-preserved-fleet-collisions",
+    "assigned-expansion-lead",
+    "public-fact-schema-and-price-omission",
+    "personal-contact-screen",
+    "retained-stock-media",
+    "companion-copy-source-binding",
+    "immutable-template-release-and-native-QA-parent",
+    "reviewed-artwork-provenance-and-regenerated-logo-hashes"
+  ],
+  "sourceArtworkReview": "Retained artwork review is separate provenance; this command does not perform visual, Arabic-expert or dealer approval.",
+  "copyReview": "Automated structure, stock hash, source text and complete EN/BG rows; no new human translation approval is inferred.",
+  "contacts": {
+    "schemaVersion": 1,
+    "kind": "cars-automated-public-contact-screen",
+    "dealer": "resi-auto-sales",
+    "method": "heuristic; no claim that unflagged values cannot be personal",
+    "flags": [],
+    "blocking": []
+  },
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-roxwell-resi-auto-sales",
+    "position": 83
+  },
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "inputs": [
+    {
+      "path": "FACTS-AND-INVENTORY.json",
+      "sha256": "22709523e1dba582f6f20689dee81f338c61105f81c5970140ad4971a303ea63"
+    },
+    {
+      "path": "branding/generated-mark-on-dark.png",
+      "sha256": "e2d1a5e4783aa8a8b01d792c87ca85c7fc7bbf4104009319524de61f12b54b9d"
+    },
+    {
+      "path": "branding/generated-mark.png",
+      "sha256": "7523d86bd32fa440c1c54a3ad9f8c38fab2fe65a39c08bbcb047e1a546f262d6"
+    },
+    {
+      "path": "branding/generated-master.png",
+      "sha256": "855e9f80ab5656797aa28eba0eaa597c1294e997fbbd628ef42f8c6b711f6a7a"
+    },
+    {
+      "path": "branding/generated-on-dark.png",
+      "sha256": "1c0329c934ced23111fde17419d05d85017c0ec0b049d3062553ec3f0857923f"
+    },
+    {
+      "path": "branding/logo-contract.json",
+      "sha256": "c0712724f6626a3467277c7be873adac2ef7c642eb25c073d079b7757cd81631"
+    },
+    {
+      "path": "branding/logo-recipe.json",
+      "sha256": "a1b5e50e42d8a021fa5ed79a3e2a037fa6660017b7e916bdfbf11700ebc28a34"
+    },
+    {
+      "path": "branding/source.json",
+      "sha256": "53198fdc1d8ad0f750bbd7c91589442f9e86c5731f5c60b18b22acaa6dd25df7"
+    },
+    {
+      "path": "business-facts.json",
+      "sha256": "290ba08bd4af7d17081fae28eed9b398e5f271c75f29305c8230c7f3f9237c8f"
+    },
+    {
+      "path": "copy-review.json",
+      "sha256": "1490cceb5c52e42145cd19d2d05dfba0c96cb4ae5b1d8079fc266d9a067f4b6b"
+    },
+    {
+      "path": "dealer-stock/public-1.jpg",
+      "sha256": "5e189e86bc68cd8f5eba762cc89ed9277aebb44e6859095869352171254afe26"
+    },
+    {
+      "path": "dealer-stock/public-2.jpg",
+      "sha256": "774a18b9e57b34939e1898fbac7dd1668507a10c4e5186de2580d82da7e06520"
+    },
+    {
+      "path": "dealer-stock/public-3.jpg",
+      "sha256": "9d0c22fb1f69d0f2345e0bcb3352dc9e6c558515090a405f9dc9a3bacf7ee986"
+    },
+    {
+      "path": "dealer.json",
+      "sha256": "b008743a9cfba97dbd185d557324ba9a8ae7f84be01fdd36aca8159aa721c9ec"
+    },
+    {
+      "path": "identity-review.json",
+      "sha256": "a35f4a8bb93c48cc5e2ed1865a0789eed06b27e13d172d849c7af00cefca1d02"
+    },
+    {
+      "path": "locale.json",
+      "sha256": "eb1bf60f9823619c878578321dcc51005c2709e13f95103b3cefacfe893f64ae"
+    },
+    {
+      "path": "missing-facts.json",
+      "sha256": "c74a9c5cfdf41bd057b7201f95fffa925152e2b91ee28836583595573f1a55e8"
+    },
+    {
+      "path": "qualification.json",
+      "sha256": "eaec91971e31b8238bf4c260bfd54e890e982968c51af7728d3962d917fe322e"
+    },
+    {
+      "path": "source-evidence.json",
+      "sha256": "4b3176da3ef5bcf092b3dc0f6f755bc1f83a11297499f5315ade8f2a7e37eba8"
+    },
+    {
+      "path": "stock.json",
+      "sha256": "2daa8610fbaabba993b67437a3fb99f8e806aadc2de898a9f7a7e57c6da9ba4a"
+    }
+  ],
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "providerWrites": 0
+}

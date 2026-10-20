@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "dealer": "cars-4-u-wakefield",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uk.json",
+    "sha256": "6cd8d365586f9a5d5131fe4b1d50baede7de91ab384a135017c25367298b07c4"
+  },
+  "publicSources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/Cars-4-U?menu=1",
+      "observedAt": "2026-10-19T17:36:51.210650Z",
+      "supports": [
+        "public-business-identity",
+        "public-business-contact",
+        "advertised-stock"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "publicObservations": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/Cars-4-U?menu=1",
+      "observedAt": "2026-10-19T17:36:51.210650Z",
+      "httpStatus": 200,
+      "sha256": "7ebd19bc76d71f8abfeb121dccc5258d46cfd5866b6b9b50e637818d48c62513",
+      "byteLength": 35956,
+      "retention": "Only reviewed public business fields, hashes, listing identities and compressed photographs are committed; raw HTML remains outside the public pack."
+    }
+  ],
+  "stock": [
+    {
+      "sourceUrl": "https://www.ebay.co.uk/itm/267816269767",
+      "photoUrl": "https://i.ebayimg.com/images/g/q24AAeSwk8Jq1g7J/s-l1600.jpg",
+      "observedAt": "2026-10-19T17:53:29.543818Z",
+      "listingSha256": "5c5d2620b654a13b49a7cc330fbecb566fc3e32e06c1b5c516b83808c8f65930",
+      "descriptionSha256": "0b46f23909f83933e46759bd3296f410debce45abfcb329e6cbc321034d25d24",
+      "sourcePhotoSha256": "2fdd58c54b1b8a2285afbcdba3e7959c762379abf27061a610859ad97b67aa38",
+      "sourcePhotoDimensions": [
+        1500,
+        1125
+      ],
+      "photoSha256": "7a2d77f58ccd6b231b744b3fe04f944a5c5098949845fad5e0efa7717afe48bb",
+      "photoDimensions": [
+        1280,
+        960
+      ],
+      "photoBytes": 185667,
+      "photoObservedAt": "2026-10-19T18:01:45.102311Z",
+      "recordId": "public-listing-1",
+      "title": "2018 Ford Ecosport 1.0 EcoBoost ST-Line Auto",
+      "retainedPhoto": "dealer-stock/public-1.jpg",
+      "publicPhotoReviewed": true
+    },
+    {
+      "sourceUrl": "https://www.ebay.co.uk/itm/267811556308",
+      "photoUrl": "https://i.ebayimg.com/images/g/sQwAAeSwH5BqzQyK/s-l1600.jpg",
+      "observedAt": "2026-10-19T17:53:29.614813Z",
+      "listingSha256": "56ae96da9c435ab3aeff7e76067b44cc12490d59e0765362fbb2579ece2885e9",
+      "descriptionSha256": "6af2b81fd98a00d26db6a2ce399ce6d01a69438f15096b438a98c065dde59c0b",
+      "sourcePhotoSha256": "e02cea7d9af03fb88f0d31bbab25fc5463bfcf3db0e4fa4d2a1131e504ffb9db",
+      "sourcePhotoDimensions": [
+        1278,
+        832
+      ],
+      "photoSha256": "ed401ff0cbd5227c645935adae2a96b6b1e8067b08a349f6a3da0229af866cfd",
+      "photoDimensions": [
+        1278,
+        832
+      ],
+      "photoBytes": 197291,
+      "photoObservedAt": "2026-10-19T18:01:45.175843Z",
+      "recordId": "public-listing-2",
+      "title": "2012 BMW 520i M Sport Auto",
+      "retainedPhoto": "dealer-stock/public-2.jpg",
+      "publicPhotoReviewed": true
+    },
+    {
+      "sourceUrl": "https://www.ebay.co.uk/itm/267795570556",
+      "photoUrl": "https://i.ebayimg.com/images/g/s~UAAeSwZaRqtpfH/s-l1600.jpg",
+      "observedAt": "2026-10-19T17:53:30.330491Z",
+      "listingSha256": "169b8251d0c20b33a15753127eeafeec1ea8cafaec1411eb0a1c3224c04c0536",
+      "descriptionSha256": "42e865acc452f87be43d95523862b6647663131c64f55a335598d5d48c724503",
+      "sourcePhotoSha256": "91560189eb65837348e4cd3a91217f880cad3cb0dfa7ed86ae57268e438d87f1",
+      "sourcePhotoDimensions": [
+        1500,
+        1125
+      ],
+      "photoSha256": "51e1f4b0e59d3f8d8894317570dd6df51a9e5e886e94b5b16a67b55862a4abed",
+      "photoDimensions": [
+        1280,
+        960
+      ],
+      "photoBytes": 191884,
+      "photoObservedAt": "2026-10-19T18:01:45.261601Z",
+      "recordId": "public-listing-3",
+      "title": "2014 Audi A5 3.0 TDI S line Auto",
+      "retainedPhoto": "dealer-stock/public-3.jpg",
+      "publicPhotoReviewed": true
+    }
+  ],
+  "review": {
+    "reviewedAt": "2026-10-19T18:24:26.980653Z",
+    "stockPhotoIdentityChecked": true,
+    "sourceClaimLimits": "Dated public adverts only; availability, repairs, vehicle condition and legal entity details are not independently certified.",
+    "omissions": [
+      "Exact retained lead business.name preserved for the M1 identity validator; clean public trading name used in artwork."
+    ]
+  }
+}

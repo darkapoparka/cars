@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "glasgow-craigton-cars",
+  "previousSlug": "glasgow-craigton-cars",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:13:40.804Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-glasgow-craigton-cars",
+    "position": 44
+  },
+  "before": {
+    "files": 38,
+    "bytes": 6046546
+  },
+  "afterBeforeReview": {
+    "files": 22,
+    "bytes": 2740835
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 237627,
+      "sha256": "96630e8a469c69bcc5225eb8233949421e4c4ba386b5e4c8c95daaf5e67e34b3"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 279421,
+      "sha256": "3a8b170715042f48d5edec8b1fc4bb591b9db64cffbab6e7345d3103afa94257"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 237627,
+      "sha256": "96630e8a469c69bcc5225eb8233949421e4c4ba386b5e4c8c95daaf5e67e34b3"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 197748,
+      "sha256": "d64b1275a6f5f8e7cbc346f5c4a87de0c885053e69ba708885140a40c02ac211"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 246798,
+      "sha256": "2eeddea1e4c95ae792ae7cfe151cdd759f04f3cf169f9e3888edfc5eccdbaf0c"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 246798,
+      "sha256": "2eeddea1e4c95ae792ae7cfe151cdd759f04f3cf169f9e3888edfc5eccdbaf0c"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 197748,
+      "sha256": "d64b1275a6f5f8e7cbc346f5c4a87de0c885053e69ba708885140a40c02ac211"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 237627,
+      "sha256": "96630e8a469c69bcc5225eb8233949421e4c4ba386b5e4c8c95daaf5e67e34b3"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 16426,
+      "sha256": "a8d0b63475811e1a29f000938a907b1a2426cc421bba60dbc854a953736ae71b"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 246798,
+      "sha256": "2eeddea1e4c95ae792ae7cfe151cdd759f04f3cf169f9e3888edfc5eccdbaf0c"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 149676,
+      "sha256": "1e9c6a43227c6104d2d35e36a08902aed10ee7c9221c5c6058ab6fe3c6861b23"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 246798,
+      "sha256": "2eeddea1e4c95ae792ae7cfe151cdd759f04f3cf169f9e3888edfc5eccdbaf0c"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 149676,
+      "sha256": "1e9c6a43227c6104d2d35e36a08902aed10ee7c9221c5c6058ab6fe3c6861b23"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 197748,
+      "sha256": "d64b1275a6f5f8e7cbc346f5c4a87de0c885053e69ba708885140a40c02ac211"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 131408,
+      "sha256": "434c2fab43c6a015c2b390da91510ae1213ff16947b8e4a6548e31ca6dc323d8"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 150582,
+      "sha256": "71291aa33ed8f1055fdd9563984ffba41d0ec02ef049c635601bdcc21fe820ed"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 139026,
+      "sha256": "3d592e1ab91820ab712b42c31d70b4a014ad5ba61069060ff89e1e60e050a773"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 12,
+    "bytes": 2715925,
+    "inventorySha256": "4919426b150af09ff847245ef831fc2967f1129b3858facf4d7fe19be6d6d4be",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "glasgow-craigton-cars",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 24,
+    "report": "dealers/glasgow-craigton-cars/input-review.json"
+  },
+  "after": {
+    "files": 24,
+    "bytes": 2749479
+  }
+}

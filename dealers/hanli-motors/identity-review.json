@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": true,
+  "reviewedAt": "2026-10-20T19:14:48.190Z",
+  "dealer": "hanli-motors",
+  "dealerId": "gb-bradford-hanli-motors",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "method": "Automated exact registry/pack identity, canonical hosting and batch comparison; retained public source fields were structurally checked, not human-approved.",
+  "sources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/Hanli---Motors",
+      "observedAt": "2026-10-19T20:00:31.531139Z"
+    },
+    {
+      "url": "https://www.ebay.co.uk/itm/820183668852",
+      "observedAt": "2026-10-19T20:03:01.399144Z"
+    },
+    {
+      "url": "https://www.ebay.co.uk/itm/820157931832",
+      "observedAt": "2026-10-19T20:03:01.465391Z"
+    },
+    {
+      "url": "https://www.ebay.co.uk/itm/820129669539",
+      "observedAt": "2026-10-19T20:03:01.906238Z"
+    },
+    {
+      "url": "https://www.cazoo.co.uk/dealers/hanli-motors-ltd-16627/",
+      "observedAt": "2026-10-19T20:03:53.985855Z"
+    }
+  ],
+  "registryReview": {
+    "source": "docs/DEPLOYMENT-INVENTORY.json",
+    "sha256": "250dd5868cb842ea8bef8a95b258a6f043bfd0e1043d10cebb57ae6bd22559fb",
+    "dealerCount": 175,
+    "matches": []
+  },
+  "clientsReview": {
+    "commit": "a999878a921fb61b37bf198c43275550814f88cc",
+    "directoryEntries": 176,
+    "matches": []
+  },
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  }
+}

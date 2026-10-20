@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "dealer": "wortley-road-car-sales",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "listing-1",
+      "title": "2016 Audi A4 2.0 TDI ultra Sport S Tronic Euro 6 (s/s) 4dr",
+      "make": "Audi",
+      "model": "A4",
+      "year": 2016,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/listing-1.jpg"
+      ],
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202609075808246",
+      "observedAt": "2026-10-19",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 78330,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview. The public advert's history panel, last checked on 2026-09-07, as observed on 2026-10-19, reports outstanding private finance. Current settlement status has not been confirmed."
+    },
+    {
+      "id": "listing-2",
+      "title": "2018 SEAT Arona 1.0 TSI SE Technology Euro 6 (s/s) 5dr",
+      "make": "SEAT",
+      "model": "Arona",
+      "year": 2018,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/listing-2.jpg"
+      ],
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202610136956409",
+      "observedAt": "2026-10-19",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 69240,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-3",
+      "title": "2016 SKODA Superb 1.6 TDI GreenLine SE L Executive Euro 6 (s/s) 5dr",
+      "make": "Skoda",
+      "model": "Superb",
+      "year": 2016,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/listing-3.jpg"
+      ],
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202610136956760",
+      "observedAt": "2026-10-19",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 110323,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

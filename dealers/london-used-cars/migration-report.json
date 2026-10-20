@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "london-used-cars",
+  "previousSlug": "london-used-cars",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:17:06.231Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-slough-london-used-cars",
+    "position": 86
+  },
+  "before": {
+    "files": 36,
+    "bytes": 3638381
+  },
+  "afterBeforeReview": {
+    "files": 20,
+    "bytes": 1597766
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 158981,
+      "sha256": "009190ecdcca513e687379c8ac89ec675df523b93c089aa8480f34e0f78eabcc"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 158981,
+      "sha256": "009190ecdcca513e687379c8ac89ec675df523b93c089aa8480f34e0f78eabcc"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 158981,
+      "sha256": "009190ecdcca513e687379c8ac89ec675df523b93c089aa8480f34e0f78eabcc"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 134236,
+      "sha256": "6aae448281b9a0a06e3161f3b0e48ae9eea021bd095dbe1572bb900b45b00ae9"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 143658,
+      "sha256": "f06b1a66a018e988f823b0032bec7820fa586a93c8264d176d5a7c612f6cc178"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 143658,
+      "sha256": "f06b1a66a018e988f823b0032bec7820fa586a93c8264d176d5a7c612f6cc178"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 134236,
+      "sha256": "6aae448281b9a0a06e3161f3b0e48ae9eea021bd095dbe1572bb900b45b00ae9"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 158981,
+      "sha256": "009190ecdcca513e687379c8ac89ec675df523b93c089aa8480f34e0f78eabcc"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 12262,
+      "sha256": "64cee4600380b5c6a6d638ab26c66b61cbad74afc0c541d01cf43c7954f8f4f0"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 143658,
+      "sha256": "f06b1a66a018e988f823b0032bec7820fa586a93c8264d176d5a7c612f6cc178"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 89420,
+      "sha256": "8086231ff88c808554d82463368a8c527f687560002471e4ce74571c116d9200"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 143658,
+      "sha256": "f06b1a66a018e988f823b0032bec7820fa586a93c8264d176d5a7c612f6cc178"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 89420,
+      "sha256": "8086231ff88c808554d82463368a8c527f687560002471e4ce74571c116d9200"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 134236,
+      "sha256": "6aae448281b9a0a06e3161f3b0e48ae9eea021bd095dbe1572bb900b45b00ae9"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 81446,
+      "sha256": "b95131faf52035beb56fbf6e9f439832d8622775f2b82e4c206a66e23e2a5b6f"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 79304,
+      "sha256": "8ff2a60076f0f69f665c5c7d75f3f40d1d7f13ca6f8cc61de947fe3f6dbec5e1"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 79304,
+      "sha256": "8ff2a60076f0f69f665c5c7d75f3f40d1d7f13ca6f8cc61de947fe3f6dbec5e1"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 11,
+    "bytes": 1575887,
+    "inventorySha256": "4b0363faeb8050fe0556a1fd3614d5c9faf3308ff60f28205f288e9dabe862b1",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "london-used-cars",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 22,
+    "report": "dealers/london-used-cars/input-review.json"
+  },
+  "after": {
+    "files": 22,
+    "bytes": 1606027
+  }
+}

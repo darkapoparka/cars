@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "dealer": "njh-car-sales",
+  "businessFacts": "business-facts.json",
+  "stock": "stock.json",
+  "inventoryKind": "dated-listing-snapshot",
+  "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+  "sources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/S-D-Harris?menu=1",
+      "observedAt": "2026-10-19T17:36:51.244160Z",
+      "supports": [
+        "public-business-identity",
+        "public-business-contact",
+        "advertised-stock"
+      ]
+    },
+    {
+      "url": "https://www.autotrader.co.uk/dealers/glamorgan/swansea/njh-car-sales-10007755",
+      "observedAt": "2026-10-19T18:24:26.921748Z",
+      "supports": [
+        "public-business-identity",
+        "public-logo-banner"
+      ]
+    }
+  ]
+}

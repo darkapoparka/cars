@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "dealer": "unique-motors-nottingham",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uk.json",
+    "sha256": "6cd8d365586f9a5d5131fe4b1d50baede7de91ab384a135017c25367298b07c4"
+  },
+  "publicSources": [
+    {
+      "url": "https://www.autotrader.co.uk/dealers/nottinghamshire/nottingham/unique-motors-10024219?refresh=true",
+      "observedAt": "2026-10-19T17:36:49.420721Z",
+      "supports": [
+        "public-business-identity",
+        "public-business-contact",
+        "advertised-stock"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "publicObservations": [
+    {
+      "url": "https://www.autotrader.co.uk/dealers/nottinghamshire/nottingham/unique-motors-10024219?refresh=true",
+      "observedAt": "2026-10-19T17:36:49.420721Z",
+      "httpStatus": 200,
+      "sha256": "ae07a6e6a8259c4849d1bc39be3428c0fd2df3a5a5404a2c45bb8b3349f0c411",
+      "byteLength": 251312,
+      "retention": "Only reviewed public business fields, hashes, listing identities and compressed photographs are committed; raw HTML remains outside the public pack."
+    }
+  ],
+  "stock": [
+    {
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202405199875088",
+      "photoUrl": "https://m.atcdn.co.uk/a/media/w600/bc5cf744cec1419d897ec9ab7ccf5d81.jpg",
+      "observedAt": "2026-10-19T17:53:21.085458Z",
+      "listingSha256": "22d44aa1181c054edcc1254d1a416c437de94a937322dbad72800ede2e772fe6",
+      "sourcePhotoSha256": "6842cd680460e1be84ce07e82e750fbc578178ff97c9924bf0ea8f595cd2cfc3",
+      "sourcePhotoDimensions": [
+        600,
+        450
+      ],
+      "photoSha256": "9800a37591b4105b11f5c50b92c7676b4750d63f9f41a1d9661e57bcae19f3ce",
+      "photoDimensions": [
+        600,
+        450
+      ],
+      "photoBytes": 85931,
+      "recordId": "public-listing-1",
+      "title": "2018 Volkswagen Caravelle 2.0 BiTDI SE DSG",
+      "retainedPhoto": "dealer-stock/public-1.jpg",
+      "publicPhotoReviewed": true
+    },
+    {
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202405129626534",
+      "photoUrl": "https://m.atcdn.co.uk/a/media/w600/24e0fb775b03404f830066ff09b634c8.jpg",
+      "observedAt": "2026-10-19T17:53:21.589320Z",
+      "listingSha256": "d9aa7649a978eac16b9b2222605e55cd91750d54bdaa626a7a5b473a43d866db",
+      "sourcePhotoSha256": "cb26d497715edf6a326991fa58898ad749cb3310f210d1defcf6c9ce980f7fdc",
+      "sourcePhotoDimensions": [
+        600,
+        450
+      ],
+      "photoSha256": "b7f46bd7dc058c0b9a0d04c60a490798cdad33fa1b93b75b33a716fce43125ff",
+      "photoDimensions": [
+        600,
+        450
+      ],
+      "photoBytes": 80648,
+      "recordId": "public-listing-2",
+      "title": "2015 Volkswagen Transporter Shuttle 2.0 TDI SE DSG",
+      "retainedPhoto": "dealer-stock/public-2.jpg",
+      "publicPhotoReviewed": true
+    },
+    {
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202609136002078",
+      "photoUrl": "https://m.atcdn.co.uk/a/media/w600/3f36edf9eac742af81ab06d5deb03d8b.jpg",
+      "observedAt": "2026-10-19T17:53:21.647400Z",
+      "listingSha256": "6d1b46e582227fc995e7dffbc1f3b59eea855182d4935ef1ada697ac33051cf3",
+      "sourcePhotoSha256": "90b56e538e9b0bd5c19980675e602e9ad8627ebbdb40c7f0967b543db2e57e85",
+      "sourcePhotoDimensions": [
+        600,
+        450
+      ],
+      "photoSha256": "2a4d938715a8c34e16f80874effad1b3bc93028d3aa024a82bf6eccb831dea3a",
+      "photoDimensions": [
+        600,
+        450
+      ],
+      "photoBytes": 91632,
+      "recordId": "public-listing-3",
+      "title": "2014 Porsche Boxster 2.7 981 PDK",
+      "retainedPhoto": "dealer-stock/public-3.jpg",
+      "publicPhotoReviewed": true
+    }
+  ],
+  "review": {
+    "reviewedAt": "2026-10-19T18:24:26.710493Z",
+    "stockPhotoIdentityChecked": true,
+    "sourceClaimLimits": "Dated public adverts only; availability, repairs, vehicle condition and legal entity details are not independently certified.",
+    "omissions": [
+      "Caravelle mileage uses the fresh primary detail/catalogue value of 64,000; a differing search-cache value was not used."
+    ]
+  }
+}

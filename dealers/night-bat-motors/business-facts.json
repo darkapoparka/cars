@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "slug": "night-bat-motors",
+  "dealerId": "gb-sheffield-night-bat-motors",
+  "business": {
+    "name": "Night Bat Motors",
+    "city": "Sheffield",
+    "region": "South Yorkshire",
+    "countryCode": "GB",
+    "currency": "GBP",
+    "distanceUnit": "mi",
+    "locale": "en-GB",
+    "address": "296 Effingham Road, Sheffield S4 7YT",
+    "phone": "+441143996751",
+    "phoneDisplay": "+441143996751",
+    "email": "h.dautos@outlook.com",
+    "website": "",
+    "stockUrl": "https://showroom.ebaymotorspro.co.uk/H-DAutosoutlook-com",
+    "hours": "",
+    "sourceUrl": "https://showroom.ebaymotorspro.co.uk/H-DAutosoutlook-com",
+    "observedAt": "2026-10-19T17:36:49.980144Z",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/H-DAutosoutlook-com",
+      "observedAt": "2026-10-19T17:36:49.980144Z",
+      "supports": [
+        "public-business-identity",
+        "public-business-contact",
+        "advertised-stock"
+      ]
+    }
+  ]
+}

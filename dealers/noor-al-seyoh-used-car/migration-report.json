@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "noor-al-seyoh-used-car",
+  "previousSlug": "noor-al-seyoh-used-car",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:12:54.082Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 4,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-sharjah-noor-al-seyoh-used-car",
+    "position": 369
+  },
+  "before": {
+    "files": 36,
+    "bytes": 4934703
+  },
+  "afterBeforeReview": {
+    "files": 20,
+    "bytes": 1142301
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 95311,
+      "sha256": "b1448f344063833419b260562e67e02512aaf7407053f01e29e5536f85fb13d0"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 111469,
+      "sha256": "765223afe8732b87a2fe75f71730faa898bf754b0e2e1b9ae890a8ec7863056c"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 95311,
+      "sha256": "b1448f344063833419b260562e67e02512aaf7407053f01e29e5536f85fb13d0"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 315890,
+      "sha256": "1dd01c809fe0479ce17837391709f7cc165a0d221e6490e0367fa22483031651"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 376515,
+      "sha256": "31cf49067aba27c27b9f15934f0cf296c053667d177d6a2befe1bf1aa8f9e27e"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 376515,
+      "sha256": "31cf49067aba27c27b9f15934f0cf296c053667d177d6a2befe1bf1aa8f9e27e"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 315890,
+      "sha256": "1dd01c809fe0479ce17837391709f7cc165a0d221e6490e0367fa22483031651"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 95311,
+      "sha256": "b1448f344063833419b260562e67e02512aaf7407053f01e29e5536f85fb13d0"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 10222,
+      "sha256": "dff9260b79b3189632856060fe496c67084507a2d976b30a6e2d35db7508ec18"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 376515,
+      "sha256": "31cf49067aba27c27b9f15934f0cf296c053667d177d6a2befe1bf1aa8f9e27e"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 281472,
+      "sha256": "e7a107c09f76dbf592748f9926e8dc7382c4a3ba0b5b38b711dd0c131b87707a"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 376515,
+      "sha256": "31cf49067aba27c27b9f15934f0cf296c053667d177d6a2befe1bf1aa8f9e27e"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 281472,
+      "sha256": "e7a107c09f76dbf592748f9926e8dc7382c4a3ba0b5b38b711dd0c131b87707a"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 315890,
+      "sha256": "1dd01c809fe0479ce17837391709f7cc165a0d221e6490e0367fa22483031651"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 218942,
+      "sha256": "2e786a331ac176fe6b779388fbfd322df600f79c064aab662b4f93735c04f3a6"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 80948,
+      "sha256": "8aba4f9b69d24fd169f05854a47c8248d922ed52f3ed1388b931a6350353da7e"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 72052,
+      "sha256": "0e71edbc94fe275533bee10b2a416cd23cb1c45aaf97f661fdd9b8603e7fbee3"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 11,
+    "bytes": 1119338,
+    "inventorySha256": "413799786410c03b53d29f515c8678570c933ff3b078c16c5a61f6c743d17f33",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "noor-al-seyoh-used-car",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 22,
+    "report": "dealers/noor-al-seyoh-used-car/input-review.json"
+  },
+  "after": {
+    "files": 22,
+    "bytes": 1150810
+  }
+}

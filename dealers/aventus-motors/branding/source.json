@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "dealer": "aventus-motors",
+  "status": "reviewed",
+  "realLogoFirst": true,
+  "publicSources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/LEICESTER-CAR-SHOP",
+      "observedAt": "2026-10-19T17:36:50.529932Z"
+    },
+    {
+      "source": "alternate-public-logo-page",
+      "retainedEvidence": "source URL in real-logo research",
+      "observation": "A dealer-image URL was observed, but the image host timed out; no inaccessible image is claimed as an obtained original."
+    }
+  ],
+  "originals": [],
+  "creationMethod": "imagegen-proposal",
+  "dealerApproved": false,
+  "approvalStatus": "independent-preview-not-dealer-approved",
+  "researchConclusion": "Bounded public checks did not yield usable distinct dealer artwork. Generic text banners or unavailable image-host URLs do not prove that the dealer has no logo. This artwork is clearly an independent proposal.",
+  "generation": {
+    "tool": "image_gen.imagegen",
+    "generationId": "exec-e8bab0ff-af1e-4a67-b33e-a98284377e19",
+    "modelVersion": null,
+    "prompt": " Use case: logo-brand. Produce one professional dealer-logo asset on a truly transparent background. Wide horizontal lockup with a separate compact emblem at left, generous transparent gap, and the exact business name at right in bold custom geometric lettering. The emblem must stay clear at 32px, thick strokes and few shapes. Flat crisp vector-like artwork; no gradients, no shadows, no mockup, no photography, no extra text. Every dark element must have a fine white outer keyline and every white element a dark navy outline, so this identical master works on white, charcoal #111113 and dark red #c40101. Use a clean solid silhouette, not decorative outlines. This is an independent proposal, not dealer-approved artwork. Exact name: AVENTUS MOTORS. Left emblem a geometric angular A with two upward wing-like side strokes in dark navy and clear aqua #169ca6; no borrowed luxury brand symbol, no arrow checkmark. AVENTUS large, MOTORS below in clean tracking. Controlled, precise, uncluttered."
+  },
+  "compactDerivation": {
+    "method": "separate-imagegen-compact-emblem",
+    "parentReference": "branding/generated-master.png",
+    "parentSha256": "715d1be3609d4167553db3d179f55f020b24c16e2b155616b4b078a221548676",
+    "prompt": "Use case: logo-brand, derive compact logo. Reproduce ONLY the isolated emblem on the far left of the reference, omitting the adjacent business wordmark entirely. Keep exactly the same motif, lettering inside the emblem, colour palette, navy and white outlines and proportions. Center this one compact emblem on a generous square transparent canvas, no other objects or words. Strengthen only tiny outline irregularities so the emblem is perfectly smooth and clear at32px. Flat crisp graphic, absolutely no speckles, no distressed pixels, no shadows, no gradients, no new geometry or creative changes.",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-9606e8ed-4301-48b9-9884-1b2d4fa7b2cd",
+      "modelVersion": null
+    }
+  },
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T18:57:00.742407Z",
+    "master": {
+      "path": "branding/generated-master.png",
+      "sha256": "715d1be3609d4167553db3d179f55f020b24c16e2b155616b4b078a221548676",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-e8bab0ff-af1e-4a67-b33e-a98284377e19",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "25b68b382c7bbfcbe310f99b01015e18994b40502c51866caa741f62a4285fc5",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-9606e8ed-4301-48b9-9884-1b2d4fa7b2cd",
+        "modelVersion": null
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "25b68b382c7bbfcbe310f99b01015e18994b40502c51866caa741f62a4285fc5",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-9606e8ed-4301-48b9-9884-1b2d4fa7b2cd",
+        "modelVersion": null
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-master.png",
+        "sha256": "715d1be3609d4167553db3d179f55f020b24c16e2b155616b4b078a221548676",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-e8bab0ff-af1e-4a67-b33e-a98284377e19",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "49ff2fb7fd693a8ff3de1bd7276f54f1db22a055a424d95f2ced56a25a98f96c",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-3186a839-19e5-48f1-bfa8-0585fb3af207",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "49ff2fb7fd693a8ff3de1bd7276f54f1db22a055a424d95f2ced56a25a98f96c",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-3186a839-19e5-48f1-bfa8-0585fb3af207",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": {
+        "onLight": [
+          "#ffffff"
+        ],
+        "onDark": [
+          "#111113",
+          "#101820"
+        ],
+        "onAccent": [
+          "#09090b",
+          "#17191c",
+          "#c40101"
+        ]
+      },
+      "wordmarkWidths": [
+        120,
+        180
+      ],
+      "markWidths": [
+        32,
+        64
+      ],
+      "method": "Exact pipeline alpha-padding crop and resize of actual generated surface artwork. Separate light-ink generated wordmark is used on dark and accent surfaces. Compact inputs are documented actual imagegen outputs or isolated lossless crops.",
+      "reviewedAt": "2026-10-19T18:57:00.742407Z",
+      "review": "Visually reviewed the exact pipeline cropTransparentPadding exports at 120 px and 180 px wordmark widths and 32 px and 64 px compact sizes against all six required background colours. Spelling and transparency checked. Filled light wordmarks improve contrast on dark surfaces; artwork colours do not change template palettes."
+    }
+  },
+  "additionalGenerations": [
+    {
+      "role": "onDark-and-onAccent",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-3186a839-19e5-48f1-bfa8-0585fb3af207",
+      "modelVersion": null,
+      "reference": "branding/generated-master.png",
+      "prompt": "Use case: logo-brand, exact surface variant. This is an existing approved composition being prepared for a dark website background. Preserve its exact business name, spelling, typography, emblem motif, layout, separation and proportions. Make a faithful LIGHT-INK version on a truly TRANSPARENT background: all wordmark text should be solid bright ivory-white, filled letters, not hollow outline letters. Preserve any restrained emblem accent colours if they have contrast, and use white for the emblem's dark strokes so the compact emblem also reads on charcoal. Preserve the existing dark contour where helpful. No change of shape or concept. No added content. Do not include the background; it must remain transparent. Clean perfectly smooth edges, no speckles, no distress, no glow, no shadow, no gradients. The result must be clearly legible at180px width on charcoal #111113 and dark red #c40101. Match the reference geometry; no business names or letters may be omitted or repeated."
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "slug": "qasr-al-jazeera-used-cars",
+  "dealerId": "ae-sharjah-qasr-al-jazeera-used-cars",
+  "business": {
+    "name": "Qasr Al Jazeera Used Cars",
+    "city": "Sharjah",
+    "region": "Sharjah",
+    "countryCode": "AE",
+    "currency": "AED",
+    "distanceUnit": "km",
+    "locale": "en-AE",
+    "address": "Industrial Area 3, Industrial Area, Sharjah - UAE",
+    "phone": "+971559299807",
+    "phoneDisplay": "+971559299807",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://www.oneclickdrive.com/company/sharjah/qasr-al-jazeera-used-cars",
+    "hours": "",
+    "sourceUrl": "https://www.oneclickdrive.com/company/sharjah/qasr-al-jazeera-used-cars",
+    "observedAt": "2026-10-19T19:58:50.508391Z",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://www.oneclickdrive.com/company/sharjah/qasr-al-jazeera-used-cars",
+      "observedAt": "2026-10-19T19:58:50.508391Z",
+      "supports": [
+        "public-business-trading-name",
+        "dealer-attributed-catalogue",
+        "business-location",
+        "public-business-phone"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Hyundai/Sonata-Limited/?id=131291",
+      "observedAt": "2026-10-19T19:58:50.508391Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Kia/Optima-EX-Top/?id=131277",
+      "observedAt": "2026-10-19T19:58:50.508391Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Nissan/Sentra-SV/?id=131282",
+      "observedAt": "2026-10-19T19:58:50.508391Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    }
+  ]
+}

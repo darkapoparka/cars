@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "rebou-najd-used-cars-trading",
+  "previousSlug": "rebou-najd-used-cars-trading",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:14:18.317Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 4,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-sharjah-rebou-najd-used-cars-trading",
+    "position": 375
+  },
+  "before": {
+    "files": 40,
+    "bytes": 4270059
+  },
+  "afterBeforeReview": {
+    "files": 24,
+    "bytes": 1871814
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 68681,
+      "sha256": "19d6c02caf55a7575b25b12e777664ad0f5781fd0803c9be3c8a5f3d4519dd70"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 73709,
+      "sha256": "a35774f062c0644753ba57e5f7d527f3bf0db4f155c83688e4ad478ec16385ee"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 68681,
+      "sha256": "19d6c02caf55a7575b25b12e777664ad0f5781fd0803c9be3c8a5f3d4519dd70"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 214487,
+      "sha256": "a6c29dee356fd5efb237b9cde5a355c6c84c577881eb8e922fd63f38f55d9f48"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 231170,
+      "sha256": "cea7920cbe0356d3364ebc66ef5d6e5d2ac586ed9b799ff1a962a41f85215a5b"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 231170,
+      "sha256": "cea7920cbe0356d3364ebc66ef5d6e5d2ac586ed9b799ff1a962a41f85215a5b"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 214487,
+      "sha256": "a6c29dee356fd5efb237b9cde5a355c6c84c577881eb8e922fd63f38f55d9f48"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 68681,
+      "sha256": "19d6c02caf55a7575b25b12e777664ad0f5781fd0803c9be3c8a5f3d4519dd70"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 5348,
+      "sha256": "f66554321d71916f3a87a67a73dee419895d094e892ab23837c496ad7fa95cef"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 231170,
+      "sha256": "cea7920cbe0356d3364ebc66ef5d6e5d2ac586ed9b799ff1a962a41f85215a5b"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 152888,
+      "sha256": "8ff7ef15ecf2f361f7ef7ce768bc0f37af0e45878a2d152eaa701c5409e4b9fa"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 231170,
+      "sha256": "cea7920cbe0356d3364ebc66ef5d6e5d2ac586ed9b799ff1a962a41f85215a5b"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 152888,
+      "sha256": "8ff7ef15ecf2f361f7ef7ce768bc0f37af0e45878a2d152eaa701c5409e4b9fa"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 214487,
+      "sha256": "a6c29dee356fd5efb237b9cde5a355c6c84c577881eb8e922fd63f38f55d9f48"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 146158,
+      "sha256": "038d41f982bfa63b3b2c9847a7a0f89559a708abf3f8612da32f0036a4c7cf06"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 50826,
+      "sha256": "9324e6df010e9c0cf8b5b413a5e695ee0a7c310eb3cee555a385434ca1d75226"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 46110,
+      "sha256": "aebe034b69fa0ad9d1fe407f322bdfb95cffb22e0e02644503f726954d90b12e"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 12,
+    "bytes": 912963,
+    "inventorySha256": "2aa247c143d9a95e2a44715fcba185028afc7742816f174570ecfa8c08f3ed5b",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "rebou-najd-used-cars-trading",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 26,
+    "report": "dealers/rebou-najd-used-cars-trading/input-review.json"
+  },
+  "after": {
+    "files": 26,
+    "bytes": 1880948
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": true,
+  "reviewedAt": "2026-10-20T19:20:34.561Z",
+  "dealer": "al-luluah-al-baithaa-cars",
+  "dealerId": "ae-sharjah-al-luluah-al-baithaa-cars",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "method": "Automated exact registry/pack identity, canonical hosting and batch comparison; retained public source fields were structurally checked, not human-approved.",
+  "sources": [
+    {
+      "url": "https://www.arabwheels.ae/used-cars/dealers/al-luluah-al-baithaa-cars-showroom-in-uae/",
+      "observedAt": "2026-10-19T20:00:43.779771Z",
+      "supports": [
+        "public-business-trading-name",
+        "dealer-attributed-catalogue",
+        "business-location",
+        "public-business-phone"
+      ]
+    },
+    {
+      "url": "https://www.arabwheels.ae/used-cars/mercedes-benz-v-class-2022-for-sale-in-sharjah-78075",
+      "observedAt": "2026-10-19T20:00:43.779771Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    },
+    {
+      "url": "https://www.arabwheels.ae/used-cars/mercedes-benz-v-class-2024-for-sale-in-sharjah-78077",
+      "observedAt": "2026-10-19T20:00:43.779771Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    },
+    {
+      "url": "https://www.arabwheels.ae/used-cars/mercedes-benz-s-class-2015-for-sale-in-sharjah-78079",
+      "observedAt": "2026-10-19T20:00:43.779771Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    }
+  ],
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  }
+}

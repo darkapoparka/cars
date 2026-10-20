@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "elmorshedi-used-cars-tr-llc",
+  "previousSlug": "elmorshedi-used-cars-tr-llc",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:28:15.058Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 4,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-sharjah-elmorshedi-used-cars-tr-llc",
+    "position": 346
+  },
+  "before": {
+    "files": 39,
+    "bytes": 3349519
+  },
+  "afterBeforeReview": {
+    "files": 23,
+    "bytes": 1774155
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 77058,
+      "sha256": "bb5164fb112b153b0c2e777f4f02a9bfb83d9923113a2925e4d3c8f7366f56d3"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 86256,
+      "sha256": "3d9f4f5501a2f668930539743c76a0aa1baaa5aab290b68770fbcd8d29a7faba"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 77058,
+      "sha256": "bb5164fb112b153b0c2e777f4f02a9bfb83d9923113a2925e4d3c8f7366f56d3"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 111171,
+      "sha256": "d2c73dc1bf0a0be44387e242f35a8c7fc04e4fdb55dbd6d7905d8e1ed388edd8"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 132243,
+      "sha256": "e4e09b2e915d40b9de0f6d93eb9248324f990ebcb03f3d8d822b3c977b3c2e5c"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 132243,
+      "sha256": "e4e09b2e915d40b9de0f6d93eb9248324f990ebcb03f3d8d822b3c977b3c2e5c"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 111171,
+      "sha256": "d2c73dc1bf0a0be44387e242f35a8c7fc04e4fdb55dbd6d7905d8e1ed388edd8"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 77058,
+      "sha256": "bb5164fb112b153b0c2e777f4f02a9bfb83d9923113a2925e4d3c8f7366f56d3"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 5845,
+      "sha256": "d5fab501a5b992e84ccbf5ab71a8780ca88515f83a6cca2153036d7248308702"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 132243,
+      "sha256": "e4e09b2e915d40b9de0f6d93eb9248324f990ebcb03f3d8d822b3c977b3c2e5c"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 101582,
+      "sha256": "de8e9cb786123593c47ec97a470091a5521297d0aff214aa260d199abcfcbd8d"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 132243,
+      "sha256": "e4e09b2e915d40b9de0f6d93eb9248324f990ebcb03f3d8d822b3c977b3c2e5c"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 101582,
+      "sha256": "de8e9cb786123593c47ec97a470091a5521297d0aff214aa260d199abcfcbd8d"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 111171,
+      "sha256": "d2c73dc1bf0a0be44387e242f35a8c7fc04e4fdb55dbd6d7905d8e1ed388edd8"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 82884,
+      "sha256": "6a2207c743505b65658ad77484bfa8a1fa63e209a2cdfe8bfc2917b3b712c35f"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 54492,
+      "sha256": "465b6cfaa59f56af5dfe1fb357627f1fcf77c9ae8b05311b72436597786d24c0"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 52924,
+      "sha256": "d9913b92644ed89a9a3efb7005410f4b73616d67d16da239b52119d6c9bdf864"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 13,
+    "bytes": 1713853,
+    "inventorySha256": "a07a919f979ac38c4912694fc07c1548fa776a022a9d1b93c9901cd833a0a258",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "elmorshedi-used-cars-tr-llc",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 25,
+    "report": "dealers/elmorshedi-used-cars-tr-llc/input-review.json"
+  },
+  "after": {
+    "files": 25,
+    "bytes": 1783016
+  }
+}

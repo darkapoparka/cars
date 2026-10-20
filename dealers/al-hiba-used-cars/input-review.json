@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-input-review",
+  "dealer": "al-hiba-used-cars",
+  "reviewed": true,
+  "reviewedAt": "2026-10-20T19:19:53.979Z",
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "checks": [
+    "canonical-hosting-and-preserved-fleet-collisions",
+    "assigned-expansion-lead",
+    "public-fact-schema-and-price-omission",
+    "personal-contact-screen",
+    "retained-stock-media",
+    "companion-copy-source-binding",
+    "immutable-template-release-and-native-QA-parent",
+    "reviewed-artwork-provenance-and-regenerated-logo-hashes"
+  ],
+  "sourceArtworkReview": "Retained artwork review is separate provenance; this command does not perform visual, Arabic-expert or dealer approval.",
+  "copyReview": "Automated structure, stock hash, source text and complete EN/BG rows; no new human translation approval is inferred.",
+  "contacts": {
+    "schemaVersion": 1,
+    "kind": "cars-automated-public-contact-screen",
+    "dealer": "al-hiba-used-cars",
+    "method": "heuristic; no claim that unflagged values cannot be personal",
+    "flags": [],
+    "blocking": []
+  },
+  "batch": {
+    "number": 4,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-sharjah-al-hiba-used-cars",
+    "position": 303
+  },
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "inputs": [
+    {
+      "path": "FACTS-AND-INVENTORY.json",
+      "sha256": "8305615e6566de7e8f09cb519e4995660f5b76c9dafacda441b966841d679683"
+    },
+    {
+      "path": "branding/generated-on-dark.png",
+      "sha256": "8030f25b43863a58beeeda8621e57bf2e8f1217f1ac5080822caa885a5718504"
+    },
+    {
+      "path": "branding/generated-on-light.png",
+      "sha256": "7b7e661df5a4e1c0d484b88a0814debca5c9807070711241ea2c15f7ac3ac71f"
+    },
+    {
+      "path": "branding/logo-contract.json",
+      "sha256": "59910fad991b34502aa96aacfc8196c3baf0559769aaf100911ec917816ae018"
+    },
+    {
+      "path": "branding/logo-recipe.json",
+      "sha256": "13fe931295c75c88d47d1c7550029d2f9b756ee424a4a4469723497914b5ccbd"
+    },
+    {
+      "path": "branding/source.json",
+      "sha256": "6ac12849826d2e4b1ac1d82e5f327775f204e94a47bf7aa234a5a42842c19803"
+    },
+    {
+      "path": "business-facts.json",
+      "sha256": "29f50c8c282a7af525438932d3b5da279261a2111297a5f1ce5f0b337e2dc446"
+    },
+    {
+      "path": "copy-review.json",
+      "sha256": "3076db3b3b72589de4a9cac2b09fa653a0dfefa296135d589c20a157df8b0710"
+    },
+    {
+      "path": "dealer-stock/licenseplate-7754.webp",
+      "sha256": "c85b609baa03d40eb377eb0619ba60d2c7d7dd9668a4e67b569d1b66503db461"
+    },
+    {
+      "path": "dealer-stock/licenseplate-7771.webp",
+      "sha256": "5017bb27e29ffe58112f6f14affe0db6e69fe9aac910c36530fb4a04ac0206a8"
+    },
+    {
+      "path": "dealer-stock/licenseplate-7938.webp",
+      "sha256": "b5340ebe9490e1c6767b961c4694da5d6b4f574d53150db06418744e654a8848"
+    },
+    {
+      "path": "dealer.json",
+      "sha256": "43ed42a5c720096e330f87c6adb7eae309a9267448ac6c65c2f5b6ae64c39925"
+    },
+    {
+      "path": "identity-review.json",
+      "sha256": "9f430ed9de825afbae54deb9816a76da567dfccfbe3b3d4d3715d8ce6ed3a18b"
+    },
+    {
+      "path": "locale.json",
+      "sha256": "51f643227be5e9607a43f61228c010f59c0b8279daa8c1e5f7b04af859969863"
+    },
+    {
+      "path": "missing-facts.json",
+      "sha256": "65a694c9be06c00ece09c87f9b03c79b284b7916e81ef8d6ef25cd4b0bdf7764"
+    },
+    {
+      "path": "qualification.json",
+      "sha256": "8f1766a9a6ffd979d569e87d09bfb53d380753c360bdf97b652f81acf629951b"
+    },
+    {
+      "path": "source-evidence.json",
+      "sha256": "fbf6f59f40ac1115462a3b0855bef6b9721282436331eb4e9d32104ded54cd89"
+    },
+    {
+      "path": "stock.json",
+      "sha256": "417b9cfb77a07c855c2e35709474e14c6ec783ea8de7785e24883ab3bb6be85c"
+    }
+  ],
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "providerWrites": 0
+}

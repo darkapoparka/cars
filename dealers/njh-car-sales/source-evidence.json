@@ -1,0 +1,115 @@
+{
+  "schemaVersion": 1,
+  "dealer": "njh-car-sales",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uk.json",
+    "sha256": "6cd8d365586f9a5d5131fe4b1d50baede7de91ab384a135017c25367298b07c4"
+  },
+  "publicSources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/S-D-Harris?menu=1",
+      "observedAt": "2026-10-19T17:36:51.244160Z",
+      "supports": [
+        "public-business-identity",
+        "public-business-contact",
+        "advertised-stock"
+      ]
+    },
+    {
+      "url": "https://www.autotrader.co.uk/dealers/glamorgan/swansea/njh-car-sales-10007755",
+      "observedAt": "2026-10-19T18:24:26.921748Z",
+      "supports": [
+        "public-business-identity",
+        "public-logo-banner"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "publicObservations": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/S-D-Harris?menu=1",
+      "observedAt": "2026-10-19T17:36:51.244160Z",
+      "httpStatus": 200,
+      "sha256": "b6ff8ee542fb3a4f7b819b764f1b78ab6ff91d4f9f940b7b5fc848d1ac4bf45f",
+      "byteLength": 40158,
+      "retention": "Only reviewed public business fields, hashes, listing identities and compressed photographs are committed; raw HTML remains outside the public pack."
+    }
+  ],
+  "stock": [
+    {
+      "sourceUrl": "https://www.ebay.co.uk/itm/287658034081",
+      "photoUrl": "https://i.ebayimg.com/images/g/lawAAeSwfDBq1d4C/s-l1600.jpg",
+      "observedAt": "2026-10-19T17:53:15.425724Z",
+      "listingSha256": "ddffe026c8295b5b74eed4945088a62cfaa6e3b0d035cda35ff8d8f15b3268fb",
+      "descriptionSha256": "43addaaf529a8d035de52eb6b9469b0db70787408f279f222dc5b7b89695649f",
+      "sourcePhotoSha256": "f701a83687e7a3889ea1a3b03ee1d91376184da82c1d3644df6f4cada7615728",
+      "sourcePhotoDimensions": [
+        1500,
+        1125
+      ],
+      "photoSha256": "ceae05b988485e7962abf5d821ae49192ac9bc9699e886739a720e25005aead1",
+      "photoDimensions": [
+        1280,
+        960
+      ],
+      "photoBytes": 182061,
+      "photoObservedAt": "2026-10-19T18:01:44.801383Z",
+      "recordId": "public-listing-1",
+      "title": "2013 Ford Mondeo 2.0 TDCi Edge Estate",
+      "retainedPhoto": "dealer-stock/public-1.jpg",
+      "publicPhotoReviewed": true
+    },
+    {
+      "sourceUrl": "https://www.ebay.co.uk/itm/287647514494",
+      "photoUrl": "https://i.ebayimg.com/images/g/digAAeSw-xtqz1Kz/s-l1600.jpg",
+      "observedAt": "2026-10-19T17:53:15.457821Z",
+      "listingSha256": "2558f8a7cf4fda58665c1bdb676b95124bc3aebacad45cbb9087387a8b81fd70",
+      "descriptionSha256": "3dfb86269cad0a3f33bf4ca28e5b6025c89b96422b73c3ceead0059972c6799b",
+      "sourcePhotoSha256": "b8884e07ba3a325382c96e7033de7e1c1a83107bd184471188844e39a455e97f",
+      "sourcePhotoDimensions": [
+        1500,
+        1125
+      ],
+      "photoSha256": "801733b6019a937baf4e6546b120acd48a2ca1568ac2886b7f3fbc69d62f12f5",
+      "photoDimensions": [
+        1280,
+        960
+      ],
+      "photoBytes": 204661,
+      "photoObservedAt": "2026-10-19T18:01:44.804974Z",
+      "recordId": "public-listing-2",
+      "title": "2012 Volvo C30 D2 R Design Lux",
+      "retainedPhoto": "dealer-stock/public-2.jpg",
+      "publicPhotoReviewed": true
+    },
+    {
+      "sourceUrl": "https://www.ebay.co.uk/itm/287623724495",
+      "photoUrl": "https://i.ebayimg.com/images/g/kCYAAeSw1FNqwMby/s-l1600.jpg",
+      "observedAt": "2026-10-19T17:53:16.845253Z",
+      "listingSha256": "261994cddceae47b9d3968620c48dc91b074837f69dbc359752a2b625127024f",
+      "descriptionSha256": "4cbfa4552a34a7adba803f13dce84b9b575fb0b837d83eda675649957a302e63",
+      "sourcePhotoSha256": "35fd353fa9633b89ebec59145d6c14faf4ecc0b3e2427e6057258fc3398ea0d4",
+      "sourcePhotoDimensions": [
+        1500,
+        1125
+      ],
+      "photoSha256": "8dbe00a1c0a01c1fb3dc40b8f9eaa9b06d6c8839bb94136ea8ce36263857c856",
+      "photoDimensions": [
+        1280,
+        960
+      ],
+      "photoBytes": 204733,
+      "photoObservedAt": "2026-10-19T18:01:44.847200Z",
+      "recordId": "public-listing-3",
+      "title": "2013 Audi Q5 2.0 TDI quattro S line",
+      "retainedPhoto": "dealer-stock/public-3.jpg",
+      "publicPhotoReviewed": true
+    }
+  ],
+  "review": {
+    "reviewedAt": "2026-10-19T18:24:26.921748Z",
+    "stockPhotoIdentityChecked": true,
+    "sourceClaimLimits": "Dated public adverts only; availability, repairs, vehicle condition and legal entity details are not independently certified.",
+    "omissions": []
+  }
+}

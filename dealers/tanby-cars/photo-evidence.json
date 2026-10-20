@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "dealer": "tanby-cars",
+  "photos": [
+    {
+      "id": "listing-1",
+      "listingUrl": "https://www.ebay.co.uk/itm/407290440454",
+      "catalogueUrl": "https://showroom.ebaymotorspro.co.uk/TANBY-CAR-AUDIO",
+      "imageUrl": "https://i.ebayimg.com/00/s/OTAxWDE2MDA=/z/go0AAeSwdrxq1DhJ/$_2.JPG",
+      "downloadUrl": "https://i.ebayimg.com/00/s/OTAxWDE2MDA=/z/go0AAeSwdrxq1DhJ/$_57.JPG",
+      "originalDimensions": [
+        1600,
+        901
+      ],
+      "retainedDimensions": [
+        1024,
+        577
+      ],
+      "retainedBytes": 138915,
+      "mediaPath": "dealer-stock/listing-1.jpg",
+      "retainedSha256": "eff46ec96eb16c5267704aaea43b107a5e68bb2c60ff5da7f971d8935a47d23d",
+      "operation": "Resize within1024px without enlargement and encode optimized JPEG; no change to photographed content.",
+      "originalSha256": "fc3f33f3e93da7b8322cb5d9531f33834c1a4d10bb71ff7e93ff3347305745d4",
+      "observedAt": "2026-10-19"
+    },
+    {
+      "id": "listing-2",
+      "listingUrl": "https://www.ebay.co.uk/itm/407290426042",
+      "catalogueUrl": "https://showroom.ebaymotorspro.co.uk/TANBY-CAR-AUDIO",
+      "imageUrl": "https://i.ebayimg.com/00/s/OTAxWDE2MDA=/z/ub4AAeSwQv5q1DhC/$_2.JPG",
+      "downloadUrl": "https://i.ebayimg.com/00/s/OTAxWDE2MDA=/z/ub4AAeSwQv5q1DhC/$_57.JPG",
+      "originalDimensions": [
+        1600,
+        901
+      ],
+      "retainedDimensions": [
+        1024,
+        577
+      ],
+      "retainedBytes": 124988,
+      "mediaPath": "dealer-stock/listing-2.jpg",
+      "retainedSha256": "eca177b92e29ffa7e6fdac05a9519d2cb06a06073594587521c231bcbb730a93",
+      "operation": "Resize within1024px without enlargement and encode optimized JPEG; no change to photographed content.",
+      "originalSha256": "7bfdfb7738925121535d778471b9a17f5d940ba8130ce72930fee94193479746",
+      "observedAt": "2026-10-19"
+    },
+    {
+      "id": "listing-3",
+      "listingUrl": "https://www.ebay.co.uk/itm/407257861178",
+      "catalogueUrl": "https://showroom.ebaymotorspro.co.uk/TANBY-CAR-AUDIO",
+      "imageUrl": "https://i.ebayimg.com/00/s/OTAxWDE2MDA=/z/lacAAeSwx0hq1DhI/$_2.JPG",
+      "downloadUrl": "https://i.ebayimg.com/00/s/OTAxWDE2MDA=/z/lacAAeSwx0hq1DhI/$_57.JPG",
+      "originalDimensions": [
+        1600,
+        901
+      ],
+      "retainedDimensions": [
+        1024,
+        577
+      ],
+      "retainedBytes": 125763,
+      "mediaPath": "dealer-stock/listing-3.jpg",
+      "retainedSha256": "85087a48861e72f861745c480804d6ecf641ec2678791b96e5a24445f8e3629d",
+      "operation": "Resize within1024px without enlargement and encode optimized JPEG; no change to photographed content.",
+      "originalSha256": "effcda6ee30d336cf798d35c513ef3babae1c3e113520ff70664bdc377b277de",
+      "observedAt": "2026-10-19"
+    }
+  ],
+  "review": {
+    "reviewed": true,
+    "observedAt": "2026-10-19",
+    "method": "Viewed every selected photograph in contact sheets; checked actual vehicle content, placeholders, price cards and visible dealer identity.",
+    "maximumDimension": 1024,
+    "maximumBytes": 138915
+  }
+}

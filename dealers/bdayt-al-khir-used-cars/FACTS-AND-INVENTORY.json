@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "dealer": "bdayt-al-khir-used-cars",
+  "businessFacts": "business-facts.json",
+  "stock": "stock.json",
+  "inventoryKind": "dated-listing-snapshot",
+  "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+  "sources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/bdayt-al-khir-used-cars-tr-llcsp",
+      "observedAt": "2026-10-19T20:00:18.408611Z",
+      "supports": [
+        "business-trading-name",
+        "public-business-phone",
+        "marketplace-location",
+        "dealer-catalogue"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/823-toyota-yaris-15-cvt-105-hp-other",
+      "observedAt": "2026-10-19T20:00:18.408611Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/315-mitsubishi-eclipse-cross-15-cvt-150-hp-glx",
+      "observedAt": "2026-10-19T20:00:18.408611Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/419-mercedes-benz-a-class-13-amt-163-hp-a-200-amg",
+      "observedAt": "2026-10-19T20:00:18.408611Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    }
+  ]
+}

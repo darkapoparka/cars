@@ -1,0 +1,140 @@
+{
+  "schemaVersion": 1,
+  "dealer": "king-street-motors-smethwick",
+  "status": "reviewed",
+  "realLogoFirst": true,
+  "publicSources": [
+    {
+      "url": "https://www.autotrader.co.uk/dealers/west-midlands/smethwick/king-street-motors-10018271",
+      "observedAt": "2026-10-19T17:36:49.273590Z"
+    },
+    {
+      "url": "https://www.autotrader.co.uk/car-details/202609296511064",
+      "observedAt": "2026-10-19T17:53:28.806853Z"
+    },
+    {
+      "source": "alternate-public-logo-page",
+      "retainedEvidence": "source URL in real-logo research",
+      "observation": "A dealer-image URL was observed, but the image host timed out; no inaccessible image is claimed as an obtained original."
+    }
+  ],
+  "originals": [
+    {
+      "path": "branding/observed-logo.gif",
+      "sha256": "259e5c0642ee457afd13276c3742f5a3a210126d3e3c459bf638c701cf8b5257",
+      "sourceUrl": "https://m.atcdn.co.uk/dealer-logo/at2/adbranding/10018271/images/fpa_logo.gif",
+      "observedAt": "2026-10-19",
+      "kind": "published-logo-artwork"
+    }
+  ],
+  "creationMethod": "imagegen-redraw",
+  "dealerApproved": false,
+  "approvalStatus": "independent-preview-not-dealer-approved",
+  "researchConclusion": "The public logo was inspected. A clean transparent redraw preserves its name, colours and principal motif; the original bytes are retained.",
+  "generation": {
+    "tool": "image_gen.imagegen",
+    "generationId": "exec-6dcf534e-f0df-4db3-818f-b8c9ce0d861e",
+    "modelVersion": null,
+    "prompt": "Use case: logo-brand. Faithful clean redraw of the actual King Street Motors wordmark reference. Preserve exact name \"KING STREET\" over \"MOTORS\", its recognisable substantial rounded-serif lettering character, and white/silver and black colour identity. Make a clean, carefully proportioned typographic lockup, not a light touch-up. Far-left isolated K letterform using the same rounded serif, then generous transparent spacing before the full business name. Transparent background, no black rectangular banner. Flat silver-white letters with dark inner edging and precise white outer keyline to work on white, charcoal, and dark red surfaces. Keep all forms thick and simple for 32px icon legibility. No crown, no tagline, no extra motif, no gradient, no 3D, no shadow. Independent preview redraw, not dealer approved."
+  },
+  "compactDerivation": {
+    "method": "lossless-isolated-emblem-crop",
+    "parentReference": "branding/generated-master.png",
+    "parentSha256": "466320a6dd38858c13f95bfaa66cbffc5d2ddb5e98df9284ee8d658c415c6426",
+    "crop": {
+      "left": 0,
+      "top": 0,
+      "width": 528,
+      "height": 724
+    },
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-6dcf534e-f0df-4db3-818f-b8c9ce0d861e",
+      "modelVersion": null
+    }
+  },
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T18:39:55.953Z",
+    "master": {
+      "path": "branding/generated-master.png",
+      "sha256": "466320a6dd38858c13f95bfaa66cbffc5d2ddb5e98df9284ee8d658c415c6426",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-6dcf534e-f0df-4db3-818f-b8c9ce0d861e",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "060e48b31460bc39be7668aabbe27d9b2ae238b0a1dbdda5699a70203cc5b62c",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-6dcf534e-f0df-4db3-818f-b8c9ce0d861e",
+        "modelVersion": null
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "060e48b31460bc39be7668aabbe27d9b2ae238b0a1dbdda5699a70203cc5b62c",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-6dcf534e-f0df-4db3-818f-b8c9ce0d861e",
+        "modelVersion": null
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-master.png",
+        "sha256": "466320a6dd38858c13f95bfaa66cbffc5d2ddb5e98df9284ee8d658c415c6426",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-6dcf534e-f0df-4db3-818f-b8c9ce0d861e",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-master.png",
+        "sha256": "466320a6dd38858c13f95bfaa66cbffc5d2ddb5e98df9284ee8d658c415c6426",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-6dcf534e-f0df-4db3-818f-b8c9ce0d861e",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-master.png",
+        "sha256": "466320a6dd38858c13f95bfaa66cbffc5d2ddb5e98df9284ee8d658c415c6426",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-6dcf534e-f0df-4db3-818f-b8c9ce0d861e",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": {
+        "onLight": [
+          "#ffffff"
+        ],
+        "onDark": [
+          "#111113"
+        ],
+        "onAccent": [
+          "#c40101"
+        ]
+      },
+      "wordmarkWidths": [
+        120,
+        180
+      ],
+      "markWidths": [
+        32,
+        64
+      ],
+      "method": "Same actual dual-contrast generated artwork on each surface; no generated colours are represented as a template palette change.",
+      "reviewedAt": "2026-10-19T18:39:55.953Z",
+      "review": "Visually reviewed exact cropTransparentPadding exports at120px and180px wordmark widths and32px/64px compact sizes on white, charcoal and red. Exact spelling retained, real alpha present, compact emblem clear. The source palette is part of the artwork only."
+    }
+  }
+}

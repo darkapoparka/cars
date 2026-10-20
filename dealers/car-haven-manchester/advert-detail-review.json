@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "dealer": "car-haven-manchester",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T19:34:01.044Z",
+  "observedAt": "2026-10-19T19:31:40.274451+00:00",
+  "method": "Reviewed exact selected public advert bodies and marketplace vehicle-history panels. Preserve attributed dated advisories; do not infer an unspecified damage category or finance settlement.",
+  "coverage": [
+    {
+      "listingId": "listing-1",
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202610046666476",
+      "httpStatus": 200,
+      "pageSha256": "0d04b14d4f7b4a9f9d211563102bcf480b73aa5ecf75a6e781b6ac8754afc685",
+      "descriptionFetched": false,
+      "descriptionSha256": null
+    },
+    {
+      "listingId": "listing-2",
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202609186176419",
+      "httpStatus": 200,
+      "pageSha256": "f3aaa2275493c68c2e76c7c8a03828a42a02756c211224b73feb36bb0683205c",
+      "descriptionFetched": false,
+      "descriptionSha256": null
+    }
+  ],
+  "findings": [
+    {
+      "listingId": "listing-1",
+      "advertId": "202610046666476",
+      "stockTitle": "2021 Audi A1 1.0 TFSI 30 Sport Sportback S Tronic Euro 6 (s/s) 5dr",
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202610046666476",
+      "observedAt": "2026-10-19T19:26:27.005537Z",
+      "httpStatus": 200,
+      "pageSha256": "0d04b14d4f7b4a9f9d211563102bcf480b73aa5ecf75a6e781b6ac8754afc685",
+      "descriptionUrl": null,
+      "descriptionSha256": null,
+      "type": "vehicle-history",
+      "category": "N",
+      "finding": "The public AutoTrader history panel records Category N.",
+      "evidenceLocation": "window.__staticRouterHydrationData.loaderData[car-details].aggregatorAdvert.history.vehicleCheck",
+      "publicHistoryEvidence": {
+        "writeoffCategory": "N",
+        "lastChecked": {
+          "label": "Last checked:",
+          "value": "12/10/2026"
+        },
+        "checks": [
+          {
+            "id": "WRITE_OFF",
+            "label": "Recorded as Category N",
+            "status": "FAILED",
+            "failureNotificationStatus": "WARNING"
+          }
+        ]
+      }
+    },
+    {
+      "listingId": "listing-2",
+      "advertId": "202609186176419",
+      "stockTitle": "2020 Volkswagen Polo 1.0 TSI beats Euro 6 (s/s) 5dr",
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202609186176419",
+      "observedAt": "2026-10-19T19:26:27.143448Z",
+      "httpStatus": 200,
+      "pageSha256": "f3aaa2275493c68c2e76c7c8a03828a42a02756c211224b73feb36bb0683205c",
+      "descriptionUrl": null,
+      "descriptionSha256": null,
+      "type": "vehicle-history",
+      "category": "S",
+      "finding": "The public AutoTrader history panel records Category S; the seller description also reports Category S total loss.",
+      "evidenceLocation": "window.__staticRouterHydrationData.loaderData[car-details].aggregatorAdvert.history.vehicleCheck",
+      "publicHistoryEvidence": {
+        "writeoffCategory": "S",
+        "lastChecked": {
+          "label": "Last checked:",
+          "value": "24/09/2026"
+        },
+        "checks": [
+          {
+            "id": "WRITE_OFF",
+            "label": "Recorded as Category S",
+            "status": "FAILED",
+            "failureNotificationStatus": "WARNING"
+          }
+        ]
+      }
+    }
+  ],
+  "correctionApplied": true,
+  "copyReferences": [
+    "stock.json",
+    "copy-review.json"
+  ],
+  "rawAdvertContentRetained": false,
+  "independentlyCertified": false
+}

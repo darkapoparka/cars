@@ -1,0 +1,117 @@
+{
+  "schemaVersion": 1,
+  "dealer": "tj-cars-slough",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uk.json",
+    "sha256": "6cd8d365586f9a5d5131fe4b1d50baede7de91ab384a135017c25367298b07c4"
+  },
+  "publicSources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/TJ-Cars-Ltd1?menu=1",
+      "observedAt": "2026-10-19T17:36:50.850125Z",
+      "supports": [
+        "public-business-identity",
+        "public-business-contact",
+        "advertised-stock"
+      ]
+    },
+    {
+      "url": "https://www.autotrader.co.uk/dealers/buckinghamshire/slough/tj-cars-ltd-10035303",
+      "observedAt": "2026-10-19T18:24:26.842867Z",
+      "supports": [
+        "public-business-identity",
+        "public-logo-banner"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "publicObservations": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/TJ-Cars-Ltd1?menu=1",
+      "observedAt": "2026-10-19T17:36:50.850125Z",
+      "httpStatus": 200,
+      "sha256": "92c015ff72478a1183a84f58c09741a9d99da43fc83fcaceb064fb957d6c1ff3",
+      "byteLength": 36108,
+      "retention": "Only reviewed public business fields, hashes, listing identities and compressed photographs are committed; raw HTML remains outside the public pack."
+    }
+  ],
+  "stock": [
+    {
+      "sourceUrl": "https://www.ebay.co.uk/itm/168798918115",
+      "photoUrl": "https://i.ebayimg.com/images/g/tGwAAeSwNiNq0145/s-l1600.jpg",
+      "observedAt": "2026-10-19T17:53:21.732432Z",
+      "listingSha256": "1384397d32d4d701617068e50e324232cc18b074fbad4cc714b4403505fc3b2c",
+      "descriptionSha256": "7fd8b74557fea7579b1748265e8142e401255cfe55bf64b63b5c71f54a82464e",
+      "sourcePhotoSha256": "bc755fc76cbbda35a059708b18cddd410ac36743d1226c29710547dbe0306952",
+      "sourcePhotoDimensions": [
+        1500,
+        1370
+      ],
+      "photoSha256": "80424a7ca21d2768b11364d43540f66f140fa56410c3478f2c0abee14f797824",
+      "photoDimensions": [
+        1100,
+        1005
+      ],
+      "photoBytes": 200435,
+      "photoObservedAt": "2026-10-19T18:01:44.182041Z",
+      "recordId": "public-listing-1",
+      "title": "2017 Audi A3 1.4 TFSI Sport",
+      "retainedPhoto": "dealer-stock/public-1.jpg",
+      "publicPhotoReviewed": true
+    },
+    {
+      "sourceUrl": "https://www.ebay.co.uk/itm/168719566888",
+      "photoUrl": "https://i.ebayimg.com/images/g/1VIAAeSwFmBqtk1C/s-l1600.jpg",
+      "observedAt": "2026-10-19T17:53:21.796145Z",
+      "listingSha256": "b4f78de8265283d63e71c6286283519ca745f170f44cd206ce73c53cfa6af9f3",
+      "descriptionSha256": "8c1edcc75d90b2a1853dd468e9ef2b8a6bce38a8d78cb5b510413ca2e67c0dfe",
+      "sourcePhotoSha256": "cd45183207fa470d9369f6f829cea640f713ab211c675f4d91f52b1b57fa882e",
+      "sourcePhotoDimensions": [
+        1500,
+        1125
+      ],
+      "photoSha256": "273cd1e2541ab55949fada43b6d2868680996c17541c6a8b2b0adc3b6d1c711b",
+      "photoDimensions": [
+        1280,
+        960
+      ],
+      "photoBytes": 204846,
+      "photoObservedAt": "2026-10-19T18:01:44.482770Z",
+      "recordId": "public-listing-2",
+      "title": "2012 Ford Focus 1.6 Zetec",
+      "retainedPhoto": "dealer-stock/public-2.jpg",
+      "publicPhotoReviewed": true
+    },
+    {
+      "sourceUrl": "https://www.ebay.co.uk/itm/168681635566",
+      "photoUrl": "https://i.ebayimg.com/images/g/y1YAAeSwusVqpGp-/s-l1600.jpg",
+      "observedAt": "2026-10-19T17:53:21.932447Z",
+      "listingSha256": "f1c9bcc2d2b31e51ae008bd32bea6973af977d4925e3fa31ab06d45c8986449e",
+      "descriptionSha256": "796753c775cad8f0b56232fbcf94caf041504435416b7c04b0b79a67ce2a2d2d",
+      "sourcePhotoSha256": "2f9a9219bcfe004206ee1a8b5958612f9169c314d9ca19473adb6a4547716d53",
+      "sourcePhotoDimensions": [
+        1500,
+        1125
+      ],
+      "photoSha256": "13436e4eb1fa5e1bf877f199a7af02a51057f0665e8acaf32161c2a1129f4602",
+      "photoDimensions": [
+        1100,
+        825
+      ],
+      "photoBytes": 203807,
+      "photoObservedAt": "2026-10-19T18:01:44.434330Z",
+      "recordId": "public-listing-3",
+      "title": "2016 Audi A3 1.6 TDI SE Technik",
+      "retainedPhoto": "dealer-stock/public-3.jpg",
+      "publicPhotoReviewed": true
+    }
+  ],
+  "review": {
+    "reviewedAt": "2026-10-19T18:24:26.842867Z",
+    "stockPhotoIdentityChecked": true,
+    "sourceClaimLimits": "Dated public adverts only; availability, repairs, vehicle condition and legal entity details are not independently certified.",
+    "omissions": [
+      "tjcarsales.co.uk identifies a different Bridgend dealer; excluded."
+    ]
+  }
+}

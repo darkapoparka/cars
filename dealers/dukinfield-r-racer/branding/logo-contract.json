@@ -1,0 +1,197 @@
+{
+  "schemaVersion": 1,
+  "dealer": "dukinfield-r-racer",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T18:56:42.959980Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "e1789de54e392b314b47da9ddd0c4f24b9c7fa8b5629ab4ca9ebda0fb3f198c5",
+      "sourceSha256": "b28ea679b1151e96c58cf4d2d4394add14b153160a7dfe6a04e112bd6cf472ad"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "4ea42ff16dd58170d1af76f961a0863ea16803ded44833be426f63e3e9d4fdd4",
+      "sourceSha256": "5d2f0325dd836ed8fdce4909c18fc98a4361257569d485c6658490061abd7964"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "4ea42ff16dd58170d1af76f961a0863ea16803ded44833be426f63e3e9d4fdd4",
+      "sourceSha256": "5d2f0325dd836ed8fdce4909c18fc98a4361257569d485c6658490061abd7964"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "b28ea679b1151e96c58cf4d2d4394add14b153160a7dfe6a04e112bd6cf472ad",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-94bfadd4-0498-418b-ba3b-78b03cd725ea",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "bf078eca2a82b8aa0edf3bc5f902791c1d957791869fafd8220a34b1b55ef0b7",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-94bfadd4-0498-418b-ba3b-78b03cd725ea",
+      "modelVersion": null
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "9c38ee012061f1c607db05c8ae1f8b575e3b1e7fdd7099b2b0050c628580c085"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "b28ea679b1151e96c58cf4d2d4394add14b153160a7dfe6a04e112bd6cf472ad",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-94bfadd4-0498-418b-ba3b-78b03cd725ea",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/dukinfield-r-racer/branding/generated-master.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "5d2f0325dd836ed8fdce4909c18fc98a4361257569d485c6658490061abd7964",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-710c30cb-6680-4fe0-b2db-5093e403d7f1",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/dukinfield-r-racer/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "5d2f0325dd836ed8fdce4909c18fc98a4361257569d485c6658490061abd7964",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-710c30cb-6680-4fe0-b2db-5093e403d7f1",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/dukinfield-r-racer/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "89cb298020c2f6627424d521a47374793aa598c8c901bc08c486709be1113d67",
+      "sha256": "b28ea679b1151e96c58cf4d2d4394add14b153160a7dfe6a04e112bd6cf472ad",
+      "crop": {
+        "left": 0,
+        "top": 138,
+        "width": 2172,
+        "height": 440
+      },
+      "sourcePath": "branding/generated-master.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "c2d779f24e6a705487721cdd2b965c7a8b9eae07ea020872e0c7630e7179eb23",
+      "sha256": "5d2f0325dd836ed8fdce4909c18fc98a4361257569d485c6658490061abd7964",
+      "crop": {
+        "left": 0,
+        "top": 136,
+        "width": 2172,
+        "height": 445
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "c2d779f24e6a705487721cdd2b965c7a8b9eae07ea020872e0c7630e7179eb23",
+      "sha256": "5d2f0325dd836ed8fdce4909c18fc98a4361257569d485c6658490061abd7964",
+      "crop": {
+        "left": 0,
+        "top": 136,
+        "width": 2172,
+        "height": 445
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "d45efcc4e23e310f12cad9d1b256b987d91faaccdba502de4e9bd1dde4a22998",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-94bfadd4-0498-418b-ba3b-78b03cd725ea",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/dukinfield-r-racer/branding/generated-mark.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "451d86675a640ec40968c73d50775eb0d5e50b6b7b9d386aeb3788cf92e68c00",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-710c30cb-6680-4fe0-b2db-5093e403d7f1",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/dukinfield-r-racer/branding/generated-mark-on-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "bf078eca2a82b8aa0edf3bc5f902791c1d957791869fafd8220a34b1b55ef0b7",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-94bfadd4-0498-418b-ba3b-78b03cd725ea",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/dukinfield-r-racer/branding/generated-mark.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "9c38ee012061f1c607db05c8ae1f8b575e3b1e7fdd7099b2b0050c628580c085",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-94bfadd4-0498-418b-ba3b-78b03cd725ea",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/dukinfield-r-racer/branding/generated-mark.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-19T18:56:42.959980Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "6b7fb9fee03e1e06ffd676c3bedda6e4e06e404a39496c93d7b37d84456ef025",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-710c30cb-6680-4fe0-b2db-5093e403d7f1",
+      "modelVersion": null
+    }
+  }
+}

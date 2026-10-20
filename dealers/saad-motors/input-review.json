@@ -1,0 +1,140 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-input-review",
+  "dealer": "saad-motors",
+  "reviewed": true,
+  "reviewedAt": "2026-10-20T19:21:26.732Z",
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "checks": [
+    "canonical-hosting-and-preserved-fleet-collisions",
+    "assigned-expansion-lead",
+    "public-fact-schema-and-price-omission",
+    "personal-contact-screen",
+    "retained-stock-media",
+    "companion-copy-source-binding",
+    "immutable-template-release-and-native-QA-parent",
+    "reviewed-artwork-provenance-and-regenerated-logo-hashes"
+  ],
+  "sourceArtworkReview": "Retained artwork review is separate provenance; this command does not perform visual, Arabic-expert or dealer approval.",
+  "copyReview": "Automated structure, stock hash, source text and complete EN/BG rows; no new human translation approval is inferred.",
+  "contacts": {
+    "schemaVersion": 1,
+    "kind": "cars-automated-public-contact-screen",
+    "dealer": "saad-motors",
+    "method": "heuristic; no claim that unflagged values cannot be personal",
+    "flags": [],
+    "blocking": []
+  },
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-manchester-saad-motors",
+    "position": 72
+  },
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "inputs": [
+    {
+      "path": "FACTS-AND-INVENTORY.json",
+      "sha256": "e2c2fcfce6dc4d00bfb356e3dca35329b25ebc322bca3d859d7bc8124ddd07bc"
+    },
+    {
+      "path": "advert-detail-review.json",
+      "sha256": "189859e2d3351f65c84afb8a55e81bbb13d706062830d4995559da3a7f1c79d7"
+    },
+    {
+      "path": "branding/generated-mark-on-dark.png",
+      "sha256": "12a94d3f6c1b0a451974a56ad96c90f66fafaf099fe126bfd6ddab720dba05d9"
+    },
+    {
+      "path": "branding/generated-mark.png",
+      "sha256": "26c639e10906b1817304647743838d559a0ba759070377b55e877057f5ee8003"
+    },
+    {
+      "path": "branding/generated-master.png",
+      "sha256": "86124a56bb351fd0b5cd509b073f6c5071589163452df51231580011a98025e1"
+    },
+    {
+      "path": "branding/generated-on-dark.png",
+      "sha256": "7400830b3fa5df963fe17ad05d258c5156dcf0f789289904561b695d12c7e232"
+    },
+    {
+      "path": "branding/generation-provenance.json",
+      "sha256": "9dea478358273cc6124f3f1bc40d07b34f665415693e2814b19f29701730b829"
+    },
+    {
+      "path": "branding/logo-contract.json",
+      "sha256": "f43672f9aac55db24a3fe69ff6693dc1b4e7d91a54870ea66c69882d26165a19"
+    },
+    {
+      "path": "branding/logo-recipe.json",
+      "sha256": "5b7af9191ae7ebf84ca5bce3633816c023935b77be67582afb4f791e4a52e70b"
+    },
+    {
+      "path": "branding/source.json",
+      "sha256": "3bbf71c55b57c0dc32d7de9d0fa801f8e4ede197dac6eac2aea38f52bcbdb9ca"
+    },
+    {
+      "path": "business-facts.json",
+      "sha256": "f0eac855a0841d7c4b6e66e54802f8c3dd547fd9274f552691a7de0e129e1d05"
+    },
+    {
+      "path": "copy-review.json",
+      "sha256": "2487175a0bb4ac30405a8728c158d546926b8653c9ca9881b920c64fd9db5b47"
+    },
+    {
+      "path": "dealer-stock/listing-1.jpg",
+      "sha256": "fca291e4afe8fb963fe641f08fb87e97202306ffee3843b9ab85485751f89c28"
+    },
+    {
+      "path": "dealer-stock/listing-2.jpg",
+      "sha256": "7217ae244c59ed49ea3e0320b10b667f0fe4b93c859083abf2635eb74f3867a7"
+    },
+    {
+      "path": "dealer-stock/listing-3.jpg",
+      "sha256": "6b222e53373aefb27ad754abc40e5c9eabf1f9fd4cc2c8f3023904212fa4e524"
+    },
+    {
+      "path": "dealer.json",
+      "sha256": "ed45bc44deeff37979023ee514e4d1943c4c293ff706cdd998abc573417f0b57"
+    },
+    {
+      "path": "identity-review.json",
+      "sha256": "43d3d1bc07fc1dae1d185100790d1937369bdfa188b98fdd73053212be2f232c"
+    },
+    {
+      "path": "locale.json",
+      "sha256": "08404f712b33d3f4da6bab4740808bf8c93e1cd2c3fe9167b9a2ed17fd868d43"
+    },
+    {
+      "path": "missing-facts.json",
+      "sha256": "a2ebcc0fc8ac87008cd31f5cf166fc2f8e77c3ed6c98011f1219b0242a2e3f8a"
+    },
+    {
+      "path": "photo-evidence.json",
+      "sha256": "da81594240e6b434653bc63da0f59a8873c412db58c29053275b4ecf415ad2d1"
+    },
+    {
+      "path": "qualification.json",
+      "sha256": "e7c7130487db9521ff12c1abdb37e2fff10db96b9d8093e66dfd111b9d25bd73"
+    },
+    {
+      "path": "research-review.json",
+      "sha256": "962ae98a67d2e3abec1aee9c389c96bcb3495e107dedde1fe2ee0ed885f1fb24"
+    },
+    {
+      "path": "source-evidence.json",
+      "sha256": "b838059a5c86452ec7d0e4481a8061d6c472853f238e748b15a250cabe8f8372"
+    },
+    {
+      "path": "stock.json",
+      "sha256": "4f6b750a6ab9365e334918b157e996ef4c22859a08eda905cb9e5ef56f690050"
+    }
+  ],
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "providerWrites": 0
+}

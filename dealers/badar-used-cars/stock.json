@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "dealer": "badar-used-cars",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:00:18.245418Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "licenseplate-7253",
+      "title": "2025 GMC Yukon",
+      "make": "GMC",
+      "model": "Yukon",
+      "year": 2025,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/licenseplate-7253.webp"
+      ],
+      "sourceUrl": "https://licenseplate.ae/cars/listing/7253-gmc-yukon-62-at-4wd-420-hp-denali",
+      "observedAt": "2026-10-19T20:00:18.245418Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Crossover",
+      "transmission": "Automatic",
+      "fuel": "Petrol",
+      "color": "White",
+      "mileageValue": 25000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "licenseplate-7251",
+      "title": "2024 Kia EV9",
+      "make": "Kia",
+      "model": "EV9",
+      "year": 2024,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/licenseplate-7251.webp"
+      ],
+      "sourceUrl": "https://licenseplate.ae/cars/listing/7251-kia-ev9-at-218-hp-air",
+      "observedAt": "2026-10-19T20:00:18.245418Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Crossover",
+      "transmission": "Automatic",
+      "fuel": "Electric",
+      "color": "White",
+      "mileageValue": 24000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "licenseplate-7256",
+      "title": "2023 Chevrolet Silverado",
+      "make": "Chevrolet",
+      "model": "Silverado",
+      "year": 2023,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/licenseplate-7256.webp"
+      ],
+      "sourceUrl": "https://licenseplate.ae/cars/listing/7256-chevrolet-silverado-53-at-rwd-355-hp-lt-trail-boss",
+      "observedAt": "2026-10-19T20:00:18.245418Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Pickup",
+      "transmission": "Automatic",
+      "color": "White",
+      "mileageValue": 69000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

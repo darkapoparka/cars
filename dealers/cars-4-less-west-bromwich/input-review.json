@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-input-review",
+  "dealer": "cars-4-less-west-bromwich",
+  "reviewed": true,
+  "reviewedAt": "2026-10-20T19:15:33.425Z",
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "checks": [
+    "canonical-hosting-and-preserved-fleet-collisions",
+    "assigned-expansion-lead",
+    "public-fact-schema-and-price-omission",
+    "personal-contact-screen",
+    "retained-stock-media",
+    "companion-copy-source-binding",
+    "immutable-template-release-and-native-QA-parent",
+    "reviewed-artwork-provenance-and-regenerated-logo-hashes"
+  ],
+  "sourceArtworkReview": "Retained artwork review is separate provenance; this command does not perform visual, Arabic-expert or dealer approval.",
+  "copyReview": "Automated structure, stock hash, source text and complete EN/BG rows; no new human translation approval is inferred.",
+  "contacts": {
+    "schemaVersion": 1,
+    "kind": "cars-automated-public-contact-screen",
+    "dealer": "cars-4-less-west-bromwich",
+    "method": "heuristic; no claim that unflagged values cannot be personal",
+    "flags": [],
+    "blocking": []
+  },
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-west-bromwich-cars-4-less",
+    "position": 100
+  },
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "inputs": [
+    {
+      "path": "FACTS-AND-INVENTORY.json",
+      "sha256": "723e35686a3b15981c101633c48a2a6a93aa141d46e1847fd9221df669c51f31"
+    },
+    {
+      "path": "branding/generated-mark.png",
+      "sha256": "7b26afa53566214ad1901f57bf5fcb4b64b3ea4efd86f968689d90c6971d5516"
+    },
+    {
+      "path": "branding/generated-master.png",
+      "sha256": "659c94324c27eef22e7c0aead791d19cc4b78d9bc05ed6c10a994999c652758f"
+    },
+    {
+      "path": "branding/logo-contract.json",
+      "sha256": "57fa6aec9a40aa300105de44784dfea497fb3dc01ab119d3fe93282c54a135d3"
+    },
+    {
+      "path": "branding/logo-recipe.json",
+      "sha256": "62692a94712f5558d6a4f82b141be7aecc2f3578d6a9373f7c065efa85b1c87f"
+    },
+    {
+      "path": "branding/source.json",
+      "sha256": "af3649365a62d47830e857ae630e8258463f3dcce6d8e22cc934653ad92446c4"
+    },
+    {
+      "path": "business-facts.json",
+      "sha256": "57b89749766b1e5e7730b49d7efcb630b397f797eb5ecd01e194ccd0bd1cad4c"
+    },
+    {
+      "path": "copy-review.json",
+      "sha256": "4e05b31e7c1083ac3209c0b66aa684a6ade6ff0044f79ef2a87cca935bde2c68"
+    },
+    {
+      "path": "dealer-stock/public-1.jpg",
+      "sha256": "3fafc586adf3945834600b0007ede469d6aed8bb70aad3b47b3936fb0f8dc745"
+    },
+    {
+      "path": "dealer-stock/public-2.jpg",
+      "sha256": "d8d9830d83ffd513b8c5df90aebfb7b6ad14c225989f34bff2177f6193eca011"
+    },
+    {
+      "path": "dealer-stock/public-3.jpg",
+      "sha256": "8c9065071365f0e0d9862298b4ec08944baef691750db649d6c9828ae3a29a93"
+    },
+    {
+      "path": "dealer.json",
+      "sha256": "a0afb766bb550c6aa4255b7f0049096350fdb58d9b02ce10c5563b9e9d0a0d6e"
+    },
+    {
+      "path": "identity-review.json",
+      "sha256": "c8618fb5627eec76ff7917af8b5ea74b4a052c844cd564413f67edac9f7f9885"
+    },
+    {
+      "path": "locale.json",
+      "sha256": "cabf8b13228a5cacc36be5000e029c3ebdf77463a403c7745ce1f5d3b38aa9fe"
+    },
+    {
+      "path": "missing-facts.json",
+      "sha256": "f504ae05363950b4bda4a49821e50b927da1f1e23ca5c9ff62091940f67e4ec1"
+    },
+    {
+      "path": "qualification.json",
+      "sha256": "27e4ae69c361dd0a52574c4bdc0a0d6e2f5db7c0d6829d8b13f1eaf6223fd839"
+    },
+    {
+      "path": "source-evidence.json",
+      "sha256": "ad0ead318ed158930cfd3480902370e64886b3e87fdfb4e2b602e826823a07df"
+    },
+    {
+      "path": "stock.json",
+      "sha256": "797a9003daa4984e5f31292de48178183f7f982cecbb496633de718a3a7a29ed"
+    }
+  ],
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "providerWrites": 0
+}

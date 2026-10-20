@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "best-friend-used-cars",
+  "previousSlug": "best-friend-used-cars",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:27:47.009Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 4,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-sharjah-best-friend-used-cars",
+    "position": 342
+  },
+  "before": {
+    "files": 39,
+    "bytes": 3434473
+  },
+  "afterBeforeReview": {
+    "files": 23,
+    "bytes": 1756749
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 57683,
+      "sha256": "ee60f0528bf839773fc1e3e788bb85ef315c5d0237c2bf9fc4fddf90408ceeda"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 58477,
+      "sha256": "22eb7f754d2e417a86f2919a1b05d9de428179746ab1cdfc9d5f975bc6115876"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 57683,
+      "sha256": "ee60f0528bf839773fc1e3e788bb85ef315c5d0237c2bf9fc4fddf90408ceeda"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 156950,
+      "sha256": "01d69f5e1b35e97b2984fc7a3c8cb36371c88cb45e0e971686032c3b0de4c76d"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 130265,
+      "sha256": "b4538296f4950703f9a8a810328023001da6cd65b98110b2f9c6c6109f07c631"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 162107,
+      "sha256": "71ef44fbf9dc75bb6f02aff480c829e41a463b6d351cfabc6691e7f70eb3f767"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 156950,
+      "sha256": "01d69f5e1b35e97b2984fc7a3c8cb36371c88cb45e0e971686032c3b0de4c76d"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 57683,
+      "sha256": "ee60f0528bf839773fc1e3e788bb85ef315c5d0237c2bf9fc4fddf90408ceeda"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 4356,
+      "sha256": "bde783093e7a357ffd4b9729564ab82e50640d4a6761617183af5181a4c88a9c"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 130265,
+      "sha256": "b4538296f4950703f9a8a810328023001da6cd65b98110b2f9c6c6109f07c631"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 94962,
+      "sha256": "9d4d3fb5c29d19f71cf8911aa5e0ecb17022608dcc0f797cb81ab7bbfff52264"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 162107,
+      "sha256": "71ef44fbf9dc75bb6f02aff480c829e41a463b6d351cfabc6691e7f70eb3f767"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 108486,
+      "sha256": "ae9c0e9b3f3eb51e9dae4177aea788c51c0853f6f3157e1fc7e0eefe4b9fed19"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 156950,
+      "sha256": "01d69f5e1b35e97b2984fc7a3c8cb36371c88cb45e0e971686032c3b0de4c76d"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 104400,
+      "sha256": "48868ec4725d86083b2aec45e9be4d0ae3f003d1626425e3d8323a856c579ca5"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 41234,
+      "sha256": "6b60efb3ae2d895a4016ef4905e087e111299084aa0b6006688f4954bc2cf7c3"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 40996,
+      "sha256": "aaf1207e7fad3b9a85f01d0bede3286b89bc1c028f367334efa8386eda0b9b63"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 12,
+    "bytes": 927257,
+    "inventorySha256": "ee8768aeb886dfc4d95c594e3422e97077251f982022635fcefa956c81d8916d",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "best-friend-used-cars",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 25,
+    "report": "dealers/best-friend-used-cars/input-review.json"
+  },
+  "after": {
+    "files": 25,
+    "bytes": 1765558
+  }
+}

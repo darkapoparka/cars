@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "slug": "shams-al-sabah-used-cars",
+  "dealerId": "ae-sharjah-shams-al-sabah-used-cars",
+  "business": {
+    "name": "Shams Al Sabah Used Cars",
+    "city": "Sharjah",
+    "region": "Sharjah",
+    "countryCode": "AE",
+    "currency": "AED",
+    "distanceUnit": "km",
+    "locale": "en-AE",
+    "address": "Sharjah Souq Al Haraj Showroom # 403",
+    "phone": "+971545283383",
+    "phoneDisplay": "+971545283383",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://www.dubicars.com/dealers/sharjah-shams-al-sabah-used-cars-2679",
+    "hours": "",
+    "sourceUrl": "https://www.dubicars.com/dealers/sharjah-shams-al-sabah-used-cars-2679",
+    "observedAt": "2026-10-19T20:00:26.132632Z",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://www.dubicars.com/dealers/sharjah-shams-al-sabah-used-cars-2679",
+      "observedAt": "2026-10-19T20:00:26.132632Z",
+      "supports": [
+        "business.name",
+        "business.city",
+        "business.countryCode",
+        "business.address",
+        "business.phone",
+        "business.hours",
+        "dated-dealer-catalogue-listings"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2013-lexus-ls460-1003444.html",
+      "observedAt": "2026-10-19T20:00:26.132632Z",
+      "supports": [
+        "stock.dubicars-1003444"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2021-toyota-rush-ex-989381.html",
+      "observedAt": "2026-10-19T20:00:26.132632Z",
+      "supports": [
+        "stock.dubicars-989381"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2024-nissan-rogue-platinum-non-gcc-989389.html",
+      "observedAt": "2026-10-19T20:00:26.132632Z",
+      "supports": [
+        "stock.dubicars-989389"
+      ]
+    }
+  ]
+}

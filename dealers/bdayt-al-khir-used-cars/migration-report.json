@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "bdayt-al-khir-used-cars",
+  "previousSlug": "bdayt-al-khir-used-cars",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:26:00.737Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 4,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-sharjah-bdayt-al-khir-used-cars",
+    "position": 340
+  },
+  "before": {
+    "files": 36,
+    "bytes": 4940257
+  },
+  "afterBeforeReview": {
+    "files": 20,
+    "bytes": 1370006
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 89374,
+      "sha256": "c4ab74d920f3c9e0402c265a614173c4e68fb0f0019b8070ff0707d0d1b41c7a"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 105784,
+      "sha256": "a405d416846b11dba9f618124972b62b8d271fc5f779a671c29b121bcf417caa"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 89374,
+      "sha256": "c4ab74d920f3c9e0402c265a614173c4e68fb0f0019b8070ff0707d0d1b41c7a"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 300695,
+      "sha256": "0a7e5674bdffb39ec3f95be64b0cc4ed8ab4aac695b17c1bf160f66f070e838b"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 358789,
+      "sha256": "80985c311b9b12cef50f45e1d44dd6ca68ca0bbbde897607a6b072d045dd92ce"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 358789,
+      "sha256": "80985c311b9b12cef50f45e1d44dd6ca68ca0bbbde897607a6b072d045dd92ce"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 300695,
+      "sha256": "0a7e5674bdffb39ec3f95be64b0cc4ed8ab4aac695b17c1bf160f66f070e838b"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 89374,
+      "sha256": "c4ab74d920f3c9e0402c265a614173c4e68fb0f0019b8070ff0707d0d1b41c7a"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 9520,
+      "sha256": "99b9bb6e678c47f71a485a2029922260847ef43b4131c1463aed7aefdc25602b"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 358789,
+      "sha256": "80985c311b9b12cef50f45e1d44dd6ca68ca0bbbde897607a6b072d045dd92ce"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 253736,
+      "sha256": "4c3556fbcc0220337f3427a81c4e3f4fc07475f1ddb978e56ba8493e60a494c5"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 358789,
+      "sha256": "80985c311b9b12cef50f45e1d44dd6ca68ca0bbbde897607a6b072d045dd92ce"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 253736,
+      "sha256": "4c3556fbcc0220337f3427a81c4e3f4fc07475f1ddb978e56ba8493e60a494c5"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 300695,
+      "sha256": "0a7e5674bdffb39ec3f95be64b0cc4ed8ab4aac695b17c1bf160f66f070e838b"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 200792,
+      "sha256": "5ac6943f7e84bbe87a161fee0f60a469421a96b51b114bf640e6a25a2e60ca7f"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 78668,
+      "sha256": "e5516e8dea2156e206db6cfd2c2a0bd22f4e6673474fab1e85235dde401b8bf0"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 66494,
+      "sha256": "62438b4f50625b645103081af13de6ca97617ced55f44cbf49ad27c6b91676e0"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 11,
+    "bytes": 1346440,
+    "inventorySha256": "ac60792283cca35c791a57d3fd9bb8ac2b0eb7db16c84e8f0c09f92d46b54c61",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "bdayt-al-khir-used-cars",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 22,
+    "report": "dealers/bdayt-al-khir-used-cars/input-review.json"
+  },
+  "after": {
+    "files": 22,
+    "bytes": 1378369
+  }
+}

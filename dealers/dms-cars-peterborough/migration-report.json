@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "dms-cars-peterborough",
+  "previousSlug": "dms-cars-peterborough",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:17:34.356Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-peterborough-dms-cars",
+    "position": 81
+  },
+  "before": {
+    "files": 37,
+    "bytes": 3382173
+  },
+  "afterBeforeReview": {
+    "files": 21,
+    "bytes": 1753835
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 139629,
+      "sha256": "b80dadc8a3cab9a2b24d4da09131b0c18f99aaf70aeb1e2618de5df1c9c2c5cc"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 100839,
+      "sha256": "4a4d5e7ac8f70452a97159e77f79f3a9f063b0820a188392fe623a28e55bb186"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 139629,
+      "sha256": "b80dadc8a3cab9a2b24d4da09131b0c18f99aaf70aeb1e2618de5df1c9c2c5cc"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 132793,
+      "sha256": "3bcbc243fb48db5a729e2e8440092bdfa0faf2d35b9deab791ea63179c202b45"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 84865,
+      "sha256": "205dd2bc4d3dbf9df0079d655f3d0b76924db1ec288d6b200252ad33c753171a"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 84865,
+      "sha256": "205dd2bc4d3dbf9df0079d655f3d0b76924db1ec288d6b200252ad33c753171a"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 132793,
+      "sha256": "3bcbc243fb48db5a729e2e8440092bdfa0faf2d35b9deab791ea63179c202b45"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 139629,
+      "sha256": "b80dadc8a3cab9a2b24d4da09131b0c18f99aaf70aeb1e2618de5df1c9c2c5cc"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 9950,
+      "sha256": "3979c7a49857427259a97f7354fc06b0173216d60a7161f72e0c5148da13bc50"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 84865,
+      "sha256": "205dd2bc4d3dbf9df0079d655f3d0b76924db1ec288d6b200252ad33c753171a"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 61442,
+      "sha256": "2998b3984229bd90cba96c581fd96de3af2ed1118d69385dbec7ea3de087bdcf"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 84865,
+      "sha256": "205dd2bc4d3dbf9df0079d655f3d0b76924db1ec288d6b200252ad33c753171a"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 61442,
+      "sha256": "2998b3984229bd90cba96c581fd96de3af2ed1118d69385dbec7ea3de087bdcf"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 132793,
+      "sha256": "3bcbc243fb48db5a729e2e8440092bdfa0faf2d35b9deab791ea63179c202b45"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 87770,
+      "sha256": "a4a67db8b5e54ea225f74fc665d2dcffd4af5d78184946cc91513650b30ffb5f"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 67770,
+      "sha256": "d12fb6983957f53c559d1125525b25d4b572e1fb86522397a40bb02b1bcac406"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 86210,
+      "sha256": "5f4710f861cfa2f8805b56947aa730cdc475c579d79550518ef7fa47a16af524"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 12,
+    "bytes": 1731566,
+    "inventorySha256": "a6253ce6709811036b854440f8950db8def87cb7b536c48ccd865f52699acfec",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "dms-cars-peterborough",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 23,
+    "report": "dealers/dms-cars-peterborough/input-review.json"
+  },
+  "after": {
+    "files": 23,
+    "bytes": 1762266
+  }
+}

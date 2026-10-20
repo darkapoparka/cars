@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "slug": "best-friend-used-cars",
+  "dealerId": "ae-sharjah-best-friend-used-cars",
+  "business": {
+    "name": "Best Friend Used Cars",
+    "city": "Sharjah",
+    "region": "Sharjah",
+    "countryCode": "AE",
+    "currency": "AED",
+    "distanceUnit": "km",
+    "locale": "en-AE",
+    "address": "10 90 St, Industrial Area 2, Industrial Area, Sharjah - UAE",
+    "phone": "+971547500700",
+    "phoneDisplay": "+971547500700",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://www.oneclickdrive.com/company/sharjah/best-friend-used-cars",
+    "hours": "",
+    "sourceUrl": "https://www.oneclickdrive.com/company/sharjah/best-friend-used-cars",
+    "observedAt": "2026-10-19T19:58:48.920399Z",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://www.oneclickdrive.com/company/sharjah/best-friend-used-cars",
+      "observedAt": "2026-10-19T19:58:48.920399Z",
+      "supports": [
+        "public-business-trading-name",
+        "dealer-attributed-catalogue",
+        "business-location",
+        "public-business-phone"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Mercedes-Benz/C300-Luxury-/?id=16176",
+      "observedAt": "2026-10-19T19:58:48.920399Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Hyundai/Kona-Other/?id=16157",
+      "observedAt": "2026-10-19T19:58:48.920399Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Kia/Sedona-LX/?id=16163",
+      "observedAt": "2026-10-19T19:58:48.920399Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    }
+  ]
+}

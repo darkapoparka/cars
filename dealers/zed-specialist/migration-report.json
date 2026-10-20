@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "zed-specialist",
+  "previousSlug": "zed-specialist",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:27:25.878Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-luton-zed-specialist",
+    "position": 67
+  },
+  "before": {
+    "files": 40,
+    "bytes": 3163985
+  },
+  "afterBeforeReview": {
+    "files": 24,
+    "bytes": 1606205
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 81865,
+      "sha256": "0f63633bb2004ae8a06c037218573488e6556388f8936cb883cedcf144c450ca"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 152585,
+      "sha256": "eefe98114c40503928df4f69df8dc4942677e2c7ccf3fab52393ad8c2d62ad2b"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 81865,
+      "sha256": "0f63633bb2004ae8a06c037218573488e6556388f8936cb883cedcf144c450ca"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 65354,
+      "sha256": "449091a2b85d587d0ffa466f8759e9200823c695ed453acdb0bf7051fb2a52c2"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 142801,
+      "sha256": "5c1650e02737f92e83addac926c23b4022cf4497d5a3322e75be042c949e00fc"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 142801,
+      "sha256": "5c1650e02737f92e83addac926c23b4022cf4497d5a3322e75be042c949e00fc"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 65354,
+      "sha256": "449091a2b85d587d0ffa466f8759e9200823c695ed453acdb0bf7051fb2a52c2"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 81865,
+      "sha256": "0f63633bb2004ae8a06c037218573488e6556388f8936cb883cedcf144c450ca"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 5635,
+      "sha256": "e9fec56231aeb1a2dd51ecccfcd4c92a4e70bd7e9c2c1c2bb8709ffbb65b19cf"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 142801,
+      "sha256": "5c1650e02737f92e83addac926c23b4022cf4497d5a3322e75be042c949e00fc"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 91546,
+      "sha256": "e72047a5103712fbcabff57674baa600bae545a4936e811114ae8046b09728ef"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 142801,
+      "sha256": "5c1650e02737f92e83addac926c23b4022cf4497d5a3322e75be042c949e00fc"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 91546,
+      "sha256": "e72047a5103712fbcabff57674baa600bae545a4936e811114ae8046b09728ef"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 65354,
+      "sha256": "449091a2b85d587d0ffa466f8759e9200823c695ed453acdb0bf7051fb2a52c2"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 47682,
+      "sha256": "4dc7f311612c571d2cd34368059d67c09f7671408031f08872d184670a87ed50"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 102596,
+      "sha256": "eb61779bea63d99d30ef27f8d2dfcafcb055dcdeb9b70969c591a93b089ba424"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 57116,
+      "sha256": "45053d16e62e500930ec1d7413a4a005d00d10e1f37b4b5cce5daae4c9b637d7"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 12,
+    "bytes": 1577290,
+    "inventorySha256": "2682d347555b205d99f9113e544405cf5245eadfc41a0346424de2f4a32eb448",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "zed-specialist",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 26,
+    "report": "dealers/zed-specialist/input-review.json"
+  },
+  "after": {
+    "files": 26,
+    "bytes": 1615178
+  }
+}

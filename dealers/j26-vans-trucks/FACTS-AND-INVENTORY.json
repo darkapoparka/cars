@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "dealer": "j26-vans-trucks",
+  "businessFacts": "business-facts.json",
+  "stock": "stock.json",
+  "inventoryKind": "illustrative-not-dealer-stock",
+  "inventoryNotice": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
+  "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+  "sources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/j26vanstrucks-ltd?menu=1",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "current-public-business-details",
+        "dated-advertised-stock-snapshot"
+      ]
+    },
+    {
+      "url": "https://www.cazoo.co.uk/dealers/j26-vans--trucks-limited-87885/",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "matching-dealer-directory-identity"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "slug": "allerton-trade-centre",
+  "dealerId": "gb-bradford-allerton-trade-centre",
+  "business": {
+    "name": "Allerton Trade Centre Ltd",
+    "city": "Bradford",
+    "region": "West Yorkshire",
+    "countryCode": "GB",
+    "currency": "GBP",
+    "distanceUnit": "mi",
+    "locale": "en-GB",
+    "address": "71 Hammerton Street, Bradford BD3 9QN",
+    "phone": "+441274888875",
+    "phoneDisplay": "01274 888875",
+    "email": "atc_ltd@outlook.com",
+    "website": "",
+    "stockUrl": "https://showroom.ebaymotorspro.co.uk/Allerton-Trade-Centre-ltd",
+    "hours": "Viewings by appointment only.",
+    "sourceUrl": "https://showroom.ebaymotorspro.co.uk/Allerton-Trade-Centre-ltd",
+    "observedAt": "2026-10-19",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/Allerton-Trade-Centre-ltd",
+      "observedAt": "2026-10-19T20:00:31.373348Z",
+      "supports": [
+        "current-public-business-name",
+        "public-business-contact",
+        "public-premises-or-appointment-information",
+        "current-public-stock-catalogue"
+      ]
+    },
+    {
+      "url": "https://www.ebay.co.uk/itm/267795312582",
+      "observedAt": "2026-10-19T20:02:58.516288Z",
+      "supports": [
+        "selected-current-public-stock",
+        "seller-description-and-vehicle-history-review",
+        "vehicle-photograph"
+      ]
+    },
+    {
+      "url": "https://www.ebay.co.uk/itm/267784892007",
+      "observedAt": "2026-10-19T20:02:58.946541Z",
+      "supports": [
+        "selected-current-public-stock",
+        "seller-description-and-vehicle-history-review",
+        "vehicle-photograph"
+      ]
+    },
+    {
+      "url": "https://www.ebay.co.uk/itm/267760840215",
+      "observedAt": "2026-10-19T20:02:59.861166Z",
+      "supports": [
+        "selected-current-public-stock",
+        "seller-description-and-vehicle-history-review",
+        "vehicle-photograph"
+      ]
+    },
+    {
+      "url": "https://www.cazoo.co.uk/dealers/allerton-trade-centre-ltd-25490/",
+      "observedAt": "2026-10-19T20:03:55.277975Z",
+      "supports": [
+        "bounded-public-logo-research"
+      ]
+    }
+  ]
+}

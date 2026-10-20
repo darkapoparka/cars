@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "slug": "tj-cars-slough",
+  "dealerId": "gb-slough-tj-cars",
+  "business": {
+    "name": "TJ Cars Ltd",
+    "city": "Slough",
+    "region": "Berkshire",
+    "countryCode": "GB",
+    "currency": "GBP",
+    "distanceUnit": "mi",
+    "locale": "en-GB",
+    "address": "50 Wellington Street, Slough SL1 1YL",
+    "phone": "+441753362254",
+    "phoneDisplay": "+441753362254",
+    "email": "tjcarslimited@gmail.com",
+    "website": "",
+    "stockUrl": "https://showroom.ebaymotorspro.co.uk/TJ-Cars-Ltd1?menu=1",
+    "hours": "",
+    "sourceUrl": "https://showroom.ebaymotorspro.co.uk/TJ-Cars-Ltd1?menu=1",
+    "observedAt": "2026-10-19T17:36:50.850125Z",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/TJ-Cars-Ltd1?menu=1",
+      "observedAt": "2026-10-19T17:36:50.850125Z",
+      "supports": [
+        "public-business-identity",
+        "public-business-contact",
+        "advertised-stock"
+      ]
+    },
+    {
+      "url": "https://www.autotrader.co.uk/dealers/buckinghamshire/slough/tj-cars-ltd-10035303",
+      "observedAt": "2026-10-19T18:24:26.842867Z",
+      "supports": [
+        "public-business-identity",
+        "public-logo-banner"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-input-review",
+  "dealer": "najem-al-tareeq-used-cars",
+  "reviewed": true,
+  "reviewedAt": "2026-10-20T19:12:25.282Z",
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "checks": [
+    "canonical-hosting-and-preserved-fleet-collisions",
+    "assigned-expansion-lead",
+    "public-fact-schema-and-price-omission",
+    "personal-contact-screen",
+    "retained-stock-media",
+    "companion-copy-source-binding",
+    "immutable-template-release-and-native-QA-parent",
+    "reviewed-artwork-provenance-and-regenerated-logo-hashes"
+  ],
+  "sourceArtworkReview": "Retained artwork review is separate provenance; this command does not perform visual, Arabic-expert or dealer approval.",
+  "copyReview": "Automated structure, stock hash, source text and complete EN/BG rows; no new human translation approval is inferred.",
+  "contacts": {
+    "schemaVersion": 1,
+    "kind": "cars-automated-public-contact-screen",
+    "dealer": "najem-al-tareeq-used-cars",
+    "method": "heuristic; no claim that unflagged values cannot be personal",
+    "flags": [],
+    "blocking": []
+  },
+  "batch": {
+    "number": 4,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-sharjah-najem-al-tareeq-used-cars",
+    "position": 365
+  },
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "inputs": [
+    {
+      "path": "FACTS-AND-INVENTORY.json",
+      "sha256": "5e97f153fe79597790881d5d20c979a733ab3b8c21932f4fad3a2694b3c038cb"
+    },
+    {
+      "path": "branding/generated-inverse.png",
+      "sha256": "ed05013b26cbd260c6a7f3d06f40e1c8eaa95dcae85cb83904e14ac1f8ddfb0b"
+    },
+    {
+      "path": "branding/generated-mark.png",
+      "sha256": "5ec25f318ba432e1f8b71727c360bb677e78406beb2696d07a3ae4ec4dbde1c1"
+    },
+    {
+      "path": "branding/generated-primary.png",
+      "sha256": "284b657a1f142f77578dad917be45e67e7e56a052937a8f127097f58f1af4c1c"
+    },
+    {
+      "path": "branding/logo-contract.json",
+      "sha256": "c050b3569fe92e9a8b18a2ae6a4d24d9b3111a0b7359f1f3798d4dc783ccf58c"
+    },
+    {
+      "path": "branding/logo-recipe.json",
+      "sha256": "cbf78724a15b4a1bfab1927ecdaf58c0bdd2857b7916ff4e4be7fb5c90b47c01"
+    },
+    {
+      "path": "branding/source-original.png",
+      "sha256": "4febf0d8c427cece120caa5ef0d1151ddd7a62820080c4e9bca866bbf8ed0c5d"
+    },
+    {
+      "path": "branding/source.json",
+      "sha256": "0515025ca4e257663ab9f915087a1b44385e57f5a7e59dacb4d242df7c1c368a"
+    },
+    {
+      "path": "business-facts.json",
+      "sha256": "99da89dc06080f816671b5b50beee904a00b590340817d9fd77da9a698d967e8"
+    },
+    {
+      "path": "copy-review.json",
+      "sha256": "7eda1425527da396117c07aa666ce40cb4e92088a44bf7d3b690639c32c28a30"
+    },
+    {
+      "path": "dealer-stock/auto-226968.jpg",
+      "sha256": "19dd7d1ccb906ed6e6027a9b94e56f7cb68fe338ebdd8b217749a5bfdfb2ab94"
+    },
+    {
+      "path": "dealer-stock/auto-226972.jpg",
+      "sha256": "88bed4e48e47a51dcaeaf2fbce9f5628e3998a9b8f2f947961c72971ff84a384"
+    },
+    {
+      "path": "dealer-stock/auto-226974.jpg",
+      "sha256": "395f480fe1655d11ad59c2c7c28e30de77efdf452b334ddf5944582f054da5ee"
+    },
+    {
+      "path": "dealer.json",
+      "sha256": "6bb8d99c271d1f214ef8f2c565428777fb50ef15138dc465fe98419015f4a7a1"
+    },
+    {
+      "path": "identity-review.json",
+      "sha256": "292403f2d2c063b2e6374e699c291b2a8031dd8c6cd1c7e85ba011c862390216"
+    },
+    {
+      "path": "locale.json",
+      "sha256": "089b744db404830829cd888eef8edfbec57e288efc6dcd952d89c87cda6c00ff"
+    },
+    {
+      "path": "missing-facts.json",
+      "sha256": "d7e403bac7bc230d92c5ef84be880e649554345cf3c9ac0331715b53a8bc9ea2"
+    },
+    {
+      "path": "qualification.json",
+      "sha256": "f575d6ba358d7aafff2677ab8f4bd161a1c132cd8ef45221d3f27eb75e424f93"
+    },
+    {
+      "path": "source-evidence.json",
+      "sha256": "a8b20d768fbd8b9e0aeaeaa685ec81b42cddd5b33e133c5555c901e6b8cfebae"
+    },
+    {
+      "path": "stock.json",
+      "sha256": "3e0bdbd3af325cc38e74a9b81442c9a692e50ea65be640b8c909d95214c6fd44"
+    }
+  ],
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "providerWrites": 0
+}

@@ -1,0 +1,175 @@
+{
+  "schemaVersion": 1,
+  "dealer": "qasr-al-jazeera-used-cars",
+  "realLogoFirst": true,
+  "publishedBranding": true,
+  "creationMethod": "sourced-logo-imagegen-redraw",
+  "dealerApproved": false,
+  "approvalStatus": "redraw-and-compact-adaptation-not-dealer-approved",
+  "usageStatus": "public-preview-only",
+  "observedAt": "2026-10-19T19:58:50.508391Z",
+  "publicSources": [
+    {
+      "url": "https://www.oneclickdrive.com/company/sharjah/qasr-al-jazeera-used-cars",
+      "observedAt": "2026-10-19T19:58:50.508391Z"
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Hyundai/Sonata-Limited/?id=131291",
+      "observedAt": "2026-10-19T19:58:50.508391Z"
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Kia/Optima-EX-Top/?id=131277",
+      "observedAt": "2026-10-19T19:58:50.508391Z"
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Nissan/Sentra-SV/?id=131282",
+      "observedAt": "2026-10-19T19:58:50.508391Z"
+    }
+  ],
+  "originals": [
+    {
+      "path": "branding/source-original.png",
+      "sha256": "46810790e0cab4f9c98d1c20d39ce12425700a7d704103ac2e017ee2e710364a",
+      "url": "https://static.oneclickdrive.com/application/views/img/company/qasr-al-jazeera.png",
+      "observedAt": "2026-10-19T19:58:50.508391Z",
+      "identityStatus": "public-profile-identity-reference"
+    }
+  ],
+  "logoResearch": "Exact public dealer-profile logo was visually inspected. Low-resolution or opaque artwork was faithfully redrawn with imagegen; no dealer approval is claimed.",
+  "visualReview": "Reviewed transparent artwork, full business-wordmark spelling and compact emblem. Deterministic crops retain the generated artwork; no vector substitute, recolouring or template changes. Compact variants are unapproved preview adaptations. Published black serif identity retained; compact QJ adaptation is clearly unapproved.",
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T20:51:12.228Z",
+    "master": {
+      "path": "branding/generated-primary.png",
+      "sha256": "3c3e147a9a0250b1167576332c694e0be5c319e8a6fcbdda341011b221cb875b",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-f1a758fa-f900-423b-ae9f-898eeea4981b",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "9282e113972524302ef9b0b523f7f64c88489a0c8032220d4b94e7d176b5a681",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-f1a758fa-f900-423b-ae9f-898eeea4981b",
+        "modelVersion": null,
+        "transformation": {
+          "operation": "rectangular-extract-without-recolour-or-redrawing",
+          "source": "branding/generated-primary.png",
+          "sourceSha256": "3c3e147a9a0250b1167576332c694e0be5c319e8a6fcbdda341011b221cb875b",
+          "rectangle": {
+            "left": 0,
+            "top": 0,
+            "width": 467,
+            "height": 724
+          }
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-dark.png",
+      "sha256": "3c09c07c3580bf4553ca5caccfb51ed9d1e7ec51118835c599c631cd8be5c522",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-0d3194c7-1418-4664-9e15-4a6d4ce43bd7",
+        "modelVersion": null,
+        "transformation": {
+          "operation": "rectangular-extract-without-recolour-or-redrawing",
+          "source": "branding/generated-silver.png",
+          "sourceSha256": "8667897b529161df509f5f1c60e9d74ee16a8a7b3c69f91170894c7d92e688ef",
+          "rectangle": {
+            "left": 0,
+            "top": 0,
+            "width": 467,
+            "height": 724
+          }
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-primary.png",
+        "sha256": "3c3e147a9a0250b1167576332c694e0be5c319e8a6fcbdda341011b221cb875b",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-f1a758fa-f900-423b-ae9f-898eeea4981b",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-silver.png",
+        "sha256": "8667897b529161df509f5f1c60e9d74ee16a8a7b3c69f91170894c7d92e688ef",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-0d3194c7-1418-4664-9e15-4a6d4ce43bd7",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-silver.png",
+        "sha256": "8667897b529161df509f5f1c60e9d74ee16a8a7b3c69f91170894c7d92e688ef",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-0d3194c7-1418-4664-9e15-4a6d4ce43bd7",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": {
+        "onLight": [
+          "#ffffff"
+        ],
+        "onDark": [
+          "#111113",
+          "#101820"
+        ],
+        "onAccent": [
+          "#09090b",
+          "#17191c",
+          "#c40101"
+        ]
+      },
+      "notes": "Reviewed transparent artwork, full business-wordmark spelling and compact emblem. Deterministic crops retain the generated artwork; no vector substitute, recolouring or template changes. Compact variants are unapproved preview adaptations. Published black serif identity retained; compact QJ adaptation is clearly unapproved."
+    },
+    "compactMarkStatus": "unapproved-preview-adaptation",
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-19T20:51:12.228Z",
+      "widths": [
+        32,
+        64
+      ],
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#101820",
+        "#c40101"
+      ],
+      "notes": "Reviewed transparent artwork, full business-wordmark spelling and compact emblem. Deterministic crops retain the generated artwork; no vector substitute, recolouring or template changes. Compact variants are unapproved preview adaptations. Published black serif identity retained; compact QJ adaptation is clearly unapproved."
+    }
+  },
+  "generationPrompts": [
+    {
+      "role": "primary",
+      "prompt": "Use case: logo-brand. Faithfully redraw this weak low-resolution typography-only dealer logo with exact spelling and elegant serif identity. Create transparent horizontal typography lockup reading \"QASR AL JAZEERA\" and smaller \"USED CARS\". Dark charcoal strong refined serif letters, consistent spacing, no tiny since-date (not verified), no background or shadow. Add a compact QJ typographic monogram at left derived solely from the same letterforms for use as favicon; no unrelated symbol or car graphic. Square monogram and wide text at right with a generous clear separation. Simple premium restraint and readable32px compact letters. Preserve black/white identity; no new colours. Unapproved faithful redraw.",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-f1a758fa-f900-423b-ae9f-898eeea4981b",
+      "modelVersion": null,
+      "returnedArtifact": "exec-f1a758fa-f900-423b-ae9f-898eeea4981b.png",
+      "note": "The tool exposed the returned artifact identifier and did not expose a model version."
+    },
+    {
+      "role": "silver",
+      "prompt": "Produce the matching LIGHT SILVER version of the attached automotive logo, in a single flat pale silver #c7d4dc. Preserve the exact spelling, letterforms, emblem shape and arrangement. Re-render with clean substantial precise geometric strokes and completely transparent negative space between strokes, in counters and between letters. Badge interiors formerly dark must become transparent with the essential motifs in pale silver strokes. No white ink, no black ink, no dark colours. No background, no glow, no shadow, no texture, no distressing, no gradients, no speckles. A clean transparent mark for dark and red surfaces, identical wide horizontal composition and exact business name.",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-0d3194c7-1418-4664-9e15-4a6d4ce43bd7",
+      "modelVersion": null,
+      "returnedArtifact": "exec-0d3194c7-1418-4664-9e15-4a6d4ce43bd7.png",
+      "note": "The tool exposed the returned artifact identifier and did not expose a model version."
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "al-hiba-used-cars",
+  "previousSlug": "al-hiba-used-cars",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:19:51.924Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 4,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-sharjah-al-hiba-used-cars",
+    "position": 303
+  },
+  "before": {
+    "files": 35,
+    "bytes": 3640634
+  },
+  "afterBeforeReview": {
+    "files": 19,
+    "bytes": 958910
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 71140,
+      "sha256": "2315527cac84d436b10c5a65185e5f6e9b532f7492ad48c71846150dc58630b2"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 77475,
+      "sha256": "c6b4e83457033fe67d108b2917924688c612218f963648fd9b7bcf98b6b75135"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 71140,
+      "sha256": "2315527cac84d436b10c5a65185e5f6e9b532f7492ad48c71846150dc58630b2"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 243691,
+      "sha256": "e971592c2a684c2fcbb07cb6bad266f8866f1ec96440dfa0fd214842eedf4ae3"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 264379,
+      "sha256": "0c31b50c4516a03d9b403475b79be33bc1f9d9327cf2b9d2b3189c7c2055108b"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 264379,
+      "sha256": "0c31b50c4516a03d9b403475b79be33bc1f9d9327cf2b9d2b3189c7c2055108b"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 243691,
+      "sha256": "e971592c2a684c2fcbb07cb6bad266f8866f1ec96440dfa0fd214842eedf4ae3"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 71140,
+      "sha256": "2315527cac84d436b10c5a65185e5f6e9b532f7492ad48c71846150dc58630b2"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 6263,
+      "sha256": "12e7380c7b98dac890bed3c4a3ca2a165e3e3e9e38d024918395c4c267ca6c53"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 264379,
+      "sha256": "0c31b50c4516a03d9b403475b79be33bc1f9d9327cf2b9d2b3189c7c2055108b"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 172898,
+      "sha256": "d252ec1aec822232a330b888ff06eeac9193f6a0186c07cfc195f8695ad448a5"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 264379,
+      "sha256": "0c31b50c4516a03d9b403475b79be33bc1f9d9327cf2b9d2b3189c7c2055108b"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 172898,
+      "sha256": "d252ec1aec822232a330b888ff06eeac9193f6a0186c07cfc195f8695ad448a5"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 243691,
+      "sha256": "e971592c2a684c2fcbb07cb6bad266f8866f1ec96440dfa0fd214842eedf4ae3"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 155902,
+      "sha256": "9e76c6bdac7c2628d8c0a5307f0b225603ebbd79359f476d2fbccb1e2009d0e7"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 51042,
+      "sha256": "de513a4ccb1a9e285e330dc2d84711337604a53e223da373d44dcb0d618e0916"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 47048,
+      "sha256": "c6ff13296a42f3eca8f13a26254941e4ae7c01ed74bdda6e39b18913438fc6ff"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 10,
+    "bytes": 935560,
+    "inventorySha256": "e0717562298268d19417ddb4b751d349bd06aab4ca0892d308b3415cc75039dd",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "al-hiba-used-cars",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 21,
+    "report": "dealers/al-hiba-used-cars/input-review.json"
+  },
+  "after": {
+    "files": 21,
+    "bytes": 967082
+  }
+}

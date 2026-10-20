@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "type": "cars-dealer-pack-draft",
+  "slug": "burton-yj-motors",
+  "dealerId": "gb-burton-yj-motors",
+  "status": "ready",
+  "buildReady": true,
+  "providerWrites": 0,
+  "createdAt": "2026-10-19T18:17:43.997Z",
+  "inventoryKind": "dated-listing-snapshot",
+  "inventoryRecords": 3,
+  "logoReady": true,
+  "missingFacts": [
+    {
+      "field": "business.email",
+      "required": false,
+      "reason": "No usable verified public business value obtained from the reviewed sources."
+    },
+    {
+      "field": "business.website",
+      "required": false,
+      "reason": "No usable verified public business value obtained from the reviewed sources."
+    },
+    {
+      "field": "prices",
+      "required": false,
+      "reason": "All listing prices are omitted under the public-repository scope."
+    }
+  ],
+  "blocking": [],
+  "stockAcquisition": "explicit-retained-public-snapshot",
+  "liveListingFetchPerformed": true,
+  "next": "Input checks and two shared smoke builds precede review of the guarded deployment path. No provider writes have been performed.",
+  "stockHistoryReview": "stock-history-review.json"
+}

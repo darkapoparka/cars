@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": true,
+  "reviewedAt": "2026-10-20T19:15:22.194Z",
+  "dealer": "shams-al-sabah-used-cars",
+  "dealerId": "ae-sharjah-shams-al-sabah-used-cars",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "method": "Automated exact registry/pack identity, canonical hosting and batch comparison; retained public source fields were structurally checked, not human-approved.",
+  "sources": [
+    {
+      "url": "https://www.dubicars.com/dealers/sharjah-shams-al-sabah-used-cars-2679",
+      "observedAt": "2026-10-19T20:00:26.132632Z"
+    }
+  ],
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  }
+}

@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "sama-alsaadah-used-cars",
+  "previousSlug": "sama-alsaadah-used-cars",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:14:55.437Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 4,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-sharjah-sama-alsaadah-used-cars",
+    "position": 378
+  },
+  "before": {
+    "files": 39,
+    "bytes": 3588952
+  },
+  "afterBeforeReview": {
+    "files": 23,
+    "bytes": 1712793
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 94969,
+      "sha256": "b217f8d758d8dd82e7dfa5267e0195cf0f36337a05ebdd035c8d390d370b3f51"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 100928,
+      "sha256": "6e947847f39917f923e79202feb60b1c3c64a2783b98cc0155ca4e4381a68d36"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 94969,
+      "sha256": "b217f8d758d8dd82e7dfa5267e0195cf0f36337a05ebdd035c8d390d370b3f51"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 69675,
+      "sha256": "d0c25639e7a6bc7d54ba40b5a2bfa01047647e4bbc62e78e532c28928d01ee2e"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 84261,
+      "sha256": "fb2d93adb78e9ae3993adb526af3eaf522a8b55378d2868f14b975eda4ecf062"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 321737,
+      "sha256": "9d4a913867fc1fcae7f3d3e79d5f17cebd38d6ac54d0051a6247f2bc591f0765"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 69675,
+      "sha256": "d0c25639e7a6bc7d54ba40b5a2bfa01047647e4bbc62e78e532c28928d01ee2e"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 94969,
+      "sha256": "b217f8d758d8dd82e7dfa5267e0195cf0f36337a05ebdd035c8d390d370b3f51"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 8546,
+      "sha256": "5cecea0ff0fad2cfa3fd9b94ce38b867e632c0be806561fbf9b0750cf13a681f"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 84261,
+      "sha256": "fb2d93adb78e9ae3993adb526af3eaf522a8b55378d2868f14b975eda4ecf062"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 60676,
+      "sha256": "edb1d424fc290fb1a5e5727a6d209f0c662c4438b74fcf547876d783175ff90c"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 321737,
+      "sha256": "9d4a913867fc1fcae7f3d3e79d5f17cebd38d6ac54d0051a6247f2bc591f0765"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 213486,
+      "sha256": "5d1fcee0568364e44c65b49240d0c5467cbda551d5024e103c94e6ca50e8c166"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 69675,
+      "sha256": "d0c25639e7a6bc7d54ba40b5a2bfa01047647e4bbc62e78e532c28928d01ee2e"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 51620,
+      "sha256": "bd4405f33ab92503408e6e657f6172368a8ee67639374db073b2941100c61269"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 73830,
+      "sha256": "01b15f4ea4881f29ebeb490d596fc92c8982705e2c16ad8d580f642f9a21ad74"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 64980,
+      "sha256": "27734f71ba6b0f004f8e803565a8e4896527cf74a33c9c48436dcea083379630"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 13,
+    "bytes": 1237342,
+    "inventorySha256": "2d8096ec684e3ff44c6d4ea03a71334d8c88eb35745f45c5974c004b3db65dd1",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "sama-alsaadah-used-cars",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 25,
+    "report": "dealers/sama-alsaadah-used-cars/input-review.json"
+  },
+  "after": {
+    "files": 25,
+    "bytes": 1721614
+  }
+}

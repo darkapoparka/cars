@@ -1,0 +1,124 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-input-review",
+  "dealer": "hanli-motors",
+  "reviewed": true,
+  "reviewedAt": "2026-10-20T19:14:48.190Z",
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "checks": [
+    "canonical-hosting-and-preserved-fleet-collisions",
+    "assigned-expansion-lead",
+    "public-fact-schema-and-price-omission",
+    "personal-contact-screen",
+    "retained-stock-media",
+    "companion-copy-source-binding",
+    "immutable-template-release-and-native-QA-parent",
+    "reviewed-artwork-provenance-and-regenerated-logo-hashes"
+  ],
+  "sourceArtworkReview": "Retained artwork review is separate provenance; this command does not perform visual, Arabic-expert or dealer approval.",
+  "copyReview": "Automated structure, stock hash, source text and complete EN/BG rows; no new human translation approval is inferred.",
+  "contacts": {
+    "schemaVersion": 1,
+    "kind": "cars-automated-public-contact-screen",
+    "dealer": "hanli-motors",
+    "method": "heuristic; no claim that unflagged values cannot be personal",
+    "flags": [],
+    "blocking": []
+  },
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-bradford-hanli-motors",
+    "position": 24
+  },
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "inputs": [
+    {
+      "path": "FACTS-AND-INVENTORY.json",
+      "sha256": "202370eb4589aeb2cccac29c31334984781103bff8e93455a50f2fbb9e3dfa4e"
+    },
+    {
+      "path": "branding/generated-mark-on-dark.png",
+      "sha256": "47fe73fc1aae17dae402ee34a0a8e3aba70f2dceabbd980e11f1d4f4bc23f777"
+    },
+    {
+      "path": "branding/generated-mark.png",
+      "sha256": "531e3336d2213a733fc93881e3c47f8674615724e233af43d4e7c16af9b46636"
+    },
+    {
+      "path": "branding/generated-master.png",
+      "sha256": "1543c549e1b6fdfad2e8bcf70fd63cb795944b34f6d9d6f208dc184d4028a9e4"
+    },
+    {
+      "path": "branding/generated-on-dark.png",
+      "sha256": "94140dfcf0524fdb4c39ea4053dc0cf6b2376906664dfa345c84d06538289beb"
+    },
+    {
+      "path": "branding/logo-contract.json",
+      "sha256": "887f0dc3d81caf5329ed45016355660b08e997209b095f2ee911dbcaa1661407"
+    },
+    {
+      "path": "branding/logo-recipe.json",
+      "sha256": "cabdb9852c2e084e67365c10a11482da07339cc72ccdcf7bbe3ed87462230746"
+    },
+    {
+      "path": "branding/source.json",
+      "sha256": "e3cefab260cd66ff68295519acc456907d06423a38a54e035a9f85ffb78c3c1f"
+    },
+    {
+      "path": "business-facts.json",
+      "sha256": "9a4b2f3a182da3d17b4b38b8a7734e403157e737e2d3ec667c16747328e21444"
+    },
+    {
+      "path": "copy-review.json",
+      "sha256": "dddceea61fa2e35785a3a383a523659efb2c6b81a0834ace1cbf36b0f2db8777"
+    },
+    {
+      "path": "dealer-stock/public-1.jpg",
+      "sha256": "179261a76ae77488ff72ea2856fe1064e151817075fbc6ae884029edcf3ae975"
+    },
+    {
+      "path": "dealer-stock/public-2.jpg",
+      "sha256": "02f6fa38bb4e38a63a11d6a9b917754f9020d83ba7a27f85d648766b415e1858"
+    },
+    {
+      "path": "dealer-stock/public-3.jpg",
+      "sha256": "fa7f256c14f83a641d0c8407f3672fa7937854c7a75f10233b171a85a7a3438e"
+    },
+    {
+      "path": "dealer.json",
+      "sha256": "895b34dc2cf8362b347aa166e92619014ef168961b5626db16b3931462f4040f"
+    },
+    {
+      "path": "identity-review.json",
+      "sha256": "b5babf1da05069e443459496d8492559a831854ac5ba7e476cbc143681e66604"
+    },
+    {
+      "path": "locale.json",
+      "sha256": "4698fdffc0438c35476c1f6309be6a99bd09807adb96554fe5f06da12718b77f"
+    },
+    {
+      "path": "missing-facts.json",
+      "sha256": "2bb6f1dcae061f4f02be77a4750f7e292a119ec857a7037e2ad5008c419f482a"
+    },
+    {
+      "path": "qualification.json",
+      "sha256": "74c69b6bee8cf23c91b52bf7f981d1496c64af5b47cc4f0e4723ece412fbda05"
+    },
+    {
+      "path": "source-evidence.json",
+      "sha256": "3c9e0da50f0c6d392881727f2bd529f8b949c388e20ba6f865914170fe331f18"
+    },
+    {
+      "path": "stock.json",
+      "sha256": "1a0ba8901e47caae71989006f3aecafd379b06610ef7b03f882457b4c82014b9"
+    }
+  ],
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "providerWrites": 0
+}

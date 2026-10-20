@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "resi-auto-sales",
+  "previousSlug": "resi-auto-sales",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:19:52.577Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-roxwell-resi-auto-sales",
+    "position": 83
+  },
+  "before": {
+    "files": 37,
+    "bytes": 3983328
+  },
+  "afterBeforeReview": {
+    "files": 21,
+    "bytes": 1895363
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 175209,
+      "sha256": "15a4bdc7397c4f26adf283cb5042ad661b581e48c761e6d4e42dbec174cb247e"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 190242,
+      "sha256": "5bb854d34bb7e7286485f2968d6721a71a0794224776a8b70702347c58609ee7"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 175209,
+      "sha256": "15a4bdc7397c4f26adf283cb5042ad661b581e48c761e6d4e42dbec174cb247e"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 126662,
+      "sha256": "fb3bef446a8d918f0503edf3360c05de8305521091be59c8c69324c7b09741cd"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 131450,
+      "sha256": "1e8b9e531e2b7a3d2cfb469b59bc0437048ee0ae0e2fa4016ed460e5d3c5dfa3"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 131450,
+      "sha256": "1e8b9e531e2b7a3d2cfb469b59bc0437048ee0ae0e2fa4016ed460e5d3c5dfa3"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 126662,
+      "sha256": "fb3bef446a8d918f0503edf3360c05de8305521091be59c8c69324c7b09741cd"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 175209,
+      "sha256": "15a4bdc7397c4f26adf283cb5042ad661b581e48c761e6d4e42dbec174cb247e"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 12506,
+      "sha256": "202970fab461d29902723533c8d48735f158391c9b9c232d17c5128c71733791"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 131450,
+      "sha256": "1e8b9e531e2b7a3d2cfb469b59bc0437048ee0ae0e2fa4016ed460e5d3c5dfa3"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 81038,
+      "sha256": "4c4728748ecad38aba6d03b8677a6b8e301557df151bd8bf4096cd70661de85c"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 131450,
+      "sha256": "1e8b9e531e2b7a3d2cfb469b59bc0437048ee0ae0e2fa4016ed460e5d3c5dfa3"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 81038,
+      "sha256": "4c4728748ecad38aba6d03b8677a6b8e301557df151bd8bf4096cd70661de85c"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 126662,
+      "sha256": "fb3bef446a8d918f0503edf3360c05de8305521091be59c8c69324c7b09741cd"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 75916,
+      "sha256": "23be90927ccf034e16cedd290678f34273ad5a1a3f84324861a8a0794e3ceebf"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 113224,
+      "sha256": "243654c8715e9a414e8b4ef06aa18a6ea23c2b694285d9e9ff5f64ecc3f6f1ae"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 106392,
+      "sha256": "e06019d02c9315ca930a4ed018e29b7b920694d0e67738542e831dcc27248b10"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 12,
+    "bytes": 1873183,
+    "inventorySha256": "49550dc68f6597f8219a946ca7fbe356cb6934e38f530befc873dd9b64b34bf4",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "resi-auto-sales",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 23,
+    "report": "dealers/resi-auto-sales/input-review.json"
+  },
+  "after": {
+    "files": 23,
+    "bytes": 1903769
+  }
+}

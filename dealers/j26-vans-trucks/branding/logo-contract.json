@@ -1,0 +1,197 @@
+{
+  "schemaVersion": 1,
+  "dealer": "j26-vans-trucks",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T19:22:56.608725Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "9a5fe7fadd1a718cc4b839e599979132ce008c0cb82b1c389639ba1f17c13f0a",
+      "sourceSha256": "a2b2e990c3e850b4351ad53882562ab542a13d423de7bc0c77e1979e85771241"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "1ac6a51e93dc87aa57139a01a321ec5f7bce9286e4897593e012b6d5a608d50d",
+      "sourceSha256": "5795262602507335708417681fce846f12567517e794c179b971b4448230c07e"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "1ac6a51e93dc87aa57139a01a321ec5f7bce9286e4897593e012b6d5a608d50d",
+      "sourceSha256": "5795262602507335708417681fce846f12567517e794c179b971b4448230c07e"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "a2b2e990c3e850b4351ad53882562ab542a13d423de7bc0c77e1979e85771241",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-85bcb0e9-c344-43ec-b7a9-e6851f54319d",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "cc5cc85893da23b5d8bbd53e34e6bf4b906f02f8d89e995ba5da6d48435fd4b0",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-bb035834-239a-4a06-a629-43b1dcb4ba17",
+      "modelVersion": null
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "e5706c8a86e5f4c016be53c0bca58c19d29bac84789ca14d6fb176d20d9eb275"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "a2b2e990c3e850b4351ad53882562ab542a13d423de7bc0c77e1979e85771241",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-85bcb0e9-c344-43ec-b7a9-e6851f54319d",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/j26-vans-trucks/branding/generated-master.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "5795262602507335708417681fce846f12567517e794c179b971b4448230c07e",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-2759d086-bc83-4c04-b8f1-ee1b45c6b2b7",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/j26-vans-trucks/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "5795262602507335708417681fce846f12567517e794c179b971b4448230c07e",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-2759d086-bc83-4c04-b8f1-ee1b45c6b2b7",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/j26-vans-trucks/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "02acd8e752b271a9bebeb64440cd60ebf8da04f8629250b692af57c30abfd6af",
+      "sha256": "a2b2e990c3e850b4351ad53882562ab542a13d423de7bc0c77e1979e85771241",
+      "crop": {
+        "left": 20,
+        "top": 205,
+        "width": 2132,
+        "height": 331
+      },
+      "sourcePath": "branding/generated-master.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "1af86034b38be5c3ee044fc3233604bd20bd50b8c071f04d44ca6a2591bb4e12",
+      "sha256": "5795262602507335708417681fce846f12567517e794c179b971b4448230c07e",
+      "crop": {
+        "left": 0,
+        "top": 178,
+        "width": 2172,
+        "height": 369
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "1af86034b38be5c3ee044fc3233604bd20bd50b8c071f04d44ca6a2591bb4e12",
+      "sha256": "5795262602507335708417681fce846f12567517e794c179b971b4448230c07e",
+      "crop": {
+        "left": 0,
+        "top": 178,
+        "width": 2172,
+        "height": 369
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "e2eb238d63b0369c82b6531ec4c1884555c04b0f0a11a73f58f41a9e58cfac05",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-bb035834-239a-4a06-a629-43b1dcb4ba17",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/j26-vans-trucks/branding/generated-mark.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "e2eb238d63b0369c82b6531ec4c1884555c04b0f0a11a73f58f41a9e58cfac05",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-bb035834-239a-4a06-a629-43b1dcb4ba17",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/j26-vans-trucks/branding/generated-mark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "cc5cc85893da23b5d8bbd53e34e6bf4b906f02f8d89e995ba5da6d48435fd4b0",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-bb035834-239a-4a06-a629-43b1dcb4ba17",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/j26-vans-trucks/branding/generated-mark.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "e5706c8a86e5f4c016be53c0bca58c19d29bac84789ca14d6fb176d20d9eb275",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-bb035834-239a-4a06-a629-43b1dcb4ba17",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/j26-vans-trucks/branding/generated-mark.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-19T19:22:56.608725Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "cc5cc85893da23b5d8bbd53e34e6bf4b906f02f8d89e995ba5da6d48435fd4b0",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-bb035834-239a-4a06-a629-43b1dcb4ba17",
+      "modelVersion": null
+    }
+  }
+}

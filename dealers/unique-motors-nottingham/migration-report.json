@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "unique-motors-nottingham",
+  "previousSlug": "unique-motors-nottingham",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:25:28.637Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-nottingham-unique-motors",
+    "position": 76
+  },
+  "before": {
+    "files": 36,
+    "bytes": 4237702
+  },
+  "afterBeforeReview": {
+    "files": 20,
+    "bytes": 1408799
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 163215,
+      "sha256": "c465e932d2bb42f90ff8e85ea66a8551ca61c6152c81e7b41943eb65c39cbcdf"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 163215,
+      "sha256": "c465e932d2bb42f90ff8e85ea66a8551ca61c6152c81e7b41943eb65c39cbcdf"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 163215,
+      "sha256": "c465e932d2bb42f90ff8e85ea66a8551ca61c6152c81e7b41943eb65c39cbcdf"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 218394,
+      "sha256": "a9046e8bc8e6bc220aeddf5f82aa59018d155f2f710ec93ed51078b53d88d467"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 218394,
+      "sha256": "a9046e8bc8e6bc220aeddf5f82aa59018d155f2f710ec93ed51078b53d88d467"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 218394,
+      "sha256": "a9046e8bc8e6bc220aeddf5f82aa59018d155f2f710ec93ed51078b53d88d467"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 218394,
+      "sha256": "a9046e8bc8e6bc220aeddf5f82aa59018d155f2f710ec93ed51078b53d88d467"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 163215,
+      "sha256": "c465e932d2bb42f90ff8e85ea66a8551ca61c6152c81e7b41943eb65c39cbcdf"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 10699,
+      "sha256": "0f3f999073da467a0c4d37bf167cd8c2e29047fab4fa2c22fdccb3e1b6d76a55"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 218394,
+      "sha256": "a9046e8bc8e6bc220aeddf5f82aa59018d155f2f710ec93ed51078b53d88d467"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 145878,
+      "sha256": "4f253fb1e9b64eecdcdcfb341dfa611bb895c12923fade52b3402b02cbb76909"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 218394,
+      "sha256": "a9046e8bc8e6bc220aeddf5f82aa59018d155f2f710ec93ed51078b53d88d467"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 145878,
+      "sha256": "4f253fb1e9b64eecdcdcfb341dfa611bb895c12923fade52b3402b02cbb76909"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 218394,
+      "sha256": "a9046e8bc8e6bc220aeddf5f82aa59018d155f2f710ec93ed51078b53d88d467"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 145878,
+      "sha256": "4f253fb1e9b64eecdcdcfb341dfa611bb895c12923fade52b3402b02cbb76909"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 101394,
+      "sha256": "166cb4b78f55239c6ff6741469f01bffcdfd3c83b0d969d9bcd399471d6e76a9"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 101394,
+      "sha256": "166cb4b78f55239c6ff6741469f01bffcdfd3c83b0d969d9bcd399471d6e76a9"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 11,
+    "bytes": 1386670,
+    "inventorySha256": "8a55544aec98149a8fdfb95ac48aba42568815c7e6e31814f6f95ce225800ef9",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "unique-motors-nottingham",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 22,
+    "report": "dealers/unique-motors-nottingham/input-review.json"
+  },
+  "after": {
+    "files": 22,
+    "bytes": 1417111
+  }
+}

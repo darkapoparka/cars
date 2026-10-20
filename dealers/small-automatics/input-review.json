@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-input-review",
+  "dealer": "small-automatics",
+  "reviewed": true,
+  "reviewedAt": "2026-10-20T19:22:09.544Z",
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "checks": [
+    "canonical-hosting-and-preserved-fleet-collisions",
+    "assigned-expansion-lead",
+    "public-fact-schema-and-price-omission",
+    "personal-contact-screen",
+    "retained-stock-media",
+    "companion-copy-source-binding",
+    "immutable-template-release-and-native-QA-parent",
+    "reviewed-artwork-provenance-and-regenerated-logo-hashes"
+  ],
+  "sourceArtworkReview": "Retained artwork review is separate provenance; this command does not perform visual, Arabic-expert or dealer approval.",
+  "copyReview": "Automated structure, stock hash, source text and complete EN/BG rows; no new human translation approval is inferred.",
+  "contacts": {
+    "schemaVersion": 1,
+    "kind": "cars-automated-public-contact-screen",
+    "dealer": "small-automatics",
+    "method": "heuristic; no claim that unflagged values cannot be personal",
+    "flags": [],
+    "blocking": []
+  },
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-stockport-small-automatics",
+    "position": 90
+  },
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "inputs": [
+    {
+      "path": "FACTS-AND-INVENTORY.json",
+      "sha256": "cac94745dd0b7c67c86e3a6f376d2f21665720067efb53e784bca0ac8fb28bf9"
+    },
+    {
+      "path": "branding/generated-mark.png",
+      "sha256": "409eca61139f991c62104ed1f83eb83a2c3c8cd09855a73176af95982400df51"
+    },
+    {
+      "path": "branding/generated-master.png",
+      "sha256": "2b1eb383daabeb5d42438dc5633c4fc020c4085f4d66f84100a7e772ecd2458b"
+    },
+    {
+      "path": "branding/logo-contract.json",
+      "sha256": "ce2990cbb8d6703d9779a9dc2737bcb897be5ccb1cce9fa6960431ebcd3b8e49"
+    },
+    {
+      "path": "branding/logo-recipe.json",
+      "sha256": "11d6fde0a74a77e61b40c1912d382acb9c9e3acb605d06f1baa2ff3c84d2997f"
+    },
+    {
+      "path": "branding/source.json",
+      "sha256": "e3386a27e81f8e72566ac6510723f77d010d3f0d2e192c3d0cf205dcabfd2811"
+    },
+    {
+      "path": "business-facts.json",
+      "sha256": "e99b6224da6adbc5741c0ee0ca79bb37b1abb53d4e5620c241fc04b45ee9c4cb"
+    },
+    {
+      "path": "copy-review.json",
+      "sha256": "778dccb086abbea0be97f2a0b0fa6b3a0ae493d6d44493ec4d2dda9c7aef8322"
+    },
+    {
+      "path": "dealer-stock/public-1.jpg",
+      "sha256": "4c83f33c5bb79e730476d6f872ba6b7b13d69e8a280feda53a5bf9c3686f4a61"
+    },
+    {
+      "path": "dealer-stock/public-2.jpg",
+      "sha256": "be53093d8fd1e4337d4b7156246abb0bcd0c3a4a349096328299f638bd17d8b3"
+    },
+    {
+      "path": "dealer-stock/public-3.jpg",
+      "sha256": "6c0298be56aab5d8602407c987604a2b66e10b5f5bf0339b10a2d36804510603"
+    },
+    {
+      "path": "dealer.json",
+      "sha256": "825b63b074ff3652ad246439b2c755b3b12fd8082308f5627a57cf636a9c2ce7"
+    },
+    {
+      "path": "identity-review.json",
+      "sha256": "b3b0b9c56011f75389dbc921137e78c05e1c316c9de121d469f4a4f7880f92e9"
+    },
+    {
+      "path": "locale.json",
+      "sha256": "da37d0b1fe3844d9140952f23f92610b5e1efa6d744f8de951ae890fdc74de91"
+    },
+    {
+      "path": "missing-facts.json",
+      "sha256": "21c2c90f8202fa6806cfd25e1f9305c24447ff4d6b06af4705986d8094f0220f"
+    },
+    {
+      "path": "qualification.json",
+      "sha256": "0b542385bd3c2b6415b6a59f903651371d192f9f6878d067f20508914bd3feed"
+    },
+    {
+      "path": "source-evidence.json",
+      "sha256": "6bdf6806c19a5c8a067a078e05349bb31a4ad12368cfc2911f6d68a80e179220"
+    },
+    {
+      "path": "stock.json",
+      "sha256": "f3717664dd622f25345e8e9439fcbbe10eafd6607e65c4ffb7bfe701d421eca9"
+    }
+  ],
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "providerWrites": 0
+}

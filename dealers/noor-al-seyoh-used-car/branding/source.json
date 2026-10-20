@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "dealer": "noor-al-seyoh-used-car",
+  "realLogoFirst": true,
+  "publishedBranding": true,
+  "creationMethod": "sourced-logo-imagegen-redraw",
+  "approvalStatus": "redraw-and-compact-proposal-not-dealer-approved",
+  "dealerApproved": false,
+  "usageStatus": "public-preview-only",
+  "observedAt": "2026-10-19T21:34:58.611Z",
+  "publicSources": [
+    {
+      "url": "https://www.dubicars.com/dealers/sharjah-noor-al-seyoh-used-car-1581",
+      "observedAt": "2026-10-19T20:00:24.216060Z"
+    },
+    {
+      "url": "https://www.dubicars.com/2017-dodge-charger-62l-707-hp-dodge-charger-hellcat-gcc-2017-original-paint-zero-accidents-full-910598.html",
+      "observedAt": "2026-10-19T20:00:24.216060Z"
+    },
+    {
+      "url": "https://www.dubicars.com/2023-nissan-x-trail-1031081.html",
+      "observedAt": "2026-10-19T20:00:24.216060Z"
+    },
+    {
+      "url": "https://www.dubicars.com/2016-dodge-charger-srt-core-64l-967696.html",
+      "observedAt": "2026-10-19T20:00:24.216060Z"
+    }
+  ],
+  "originals": [
+    {
+      "path": "branding/source-original.jpg",
+      "sha256": "fcb8cb56ccb82cdb2b16c71017042ec5a4934f9af2703695a8e7816546fa9c49",
+      "url": "https://www.dubicars.com/images/cf77f2/z_180x120/al-qayed-used-cars/logo-738bc805-7ae9-4e42-809a-6ed4efcbef84.jpeg",
+      "observedAt": "2026-10-19T20:00:24.216060Z"
+    }
+  ],
+  "logoResearch": "Exact public dealer-catalogue avatar visually reviewed; a clean imagegen redraw preserves the actual original name, colour family and emblem.",
+  "visualReview": "Source identity and actual full and32/64px composited surface artwork checked on white, navy and red; generated inverse alpha exports inspected separately from the raw tool preview.",
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T21:34:58.611Z",
+    "master": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "5e208843568c9fc01d5a9fdc7ab25cdda065ac1e892e1b7a24c1308fee1f205d",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-ec389be5-18a6-465c-9c16-2074f6b63e07",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "5e208843568c9fc01d5a9fdc7ab25cdda065ac1e892e1b7a24c1308fee1f205d",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-ec389be5-18a6-465c-9c16-2074f6b63e07",
+        "modelVersion": null
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-on-dark.png",
+      "sha256": "b5e20f6b2716966ad41f06888c2f91fb10e914ad913d9534c9cc6f716d7a9711",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-4d364907-27c4-4059-a909-b3d79e70aae5",
+        "modelVersion": null
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "5e208843568c9fc01d5a9fdc7ab25cdda065ac1e892e1b7a24c1308fee1f205d",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-ec389be5-18a6-465c-9c16-2074f6b63e07",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "b5e20f6b2716966ad41f06888c2f91fb10e914ad913d9534c9cc6f716d7a9711",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-4d364907-27c4-4059-a909-b3d79e70aae5",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "b5e20f6b2716966ad41f06888c2f91fb10e914ad913d9534c9cc6f716d7a9711",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-4d364907-27c4-4059-a909-b3d79e70aae5",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": {
+        "onLight": [
+          "#ffffff"
+        ],
+        "onDark": [
+          "#111113",
+          "#101820"
+        ],
+        "onAccent": [
+          "#09090b",
+          "#17191c",
+          "#c40101"
+        ]
+      },
+      "notes": "Source identity and actual full and32/64px composited surface artwork checked on white, navy and red; generated inverse alpha exports inspected separately from the raw tool preview."
+    },
+    "compactMarkStatus": "independent-proposal-not-dealer-approved",
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-19T21:34:58.611Z",
+      "widths": [
+        32,
+        64
+      ],
+      "backgrounds": [
+        "#ffffff",
+        "#101820",
+        "#c40101"
+      ],
+      "notes": "Source identity and actual full and32/64px composited surface artwork checked on white, navy and red; generated inverse alpha exports inspected separately from the raw tool preview."
+    }
+  },
+  "generationPrompts": [
+    "Faithfully redraw the attached NOOR AL SEYOH car-roof logo into a compact transparent dealer identity for white backgrounds. Preserve the elegant automotive roof silhouette and exact main wording 'NOOR AL SEYOH'. Use dark charcoal/navy opaque ink. Create a strong simple car-roof emblem above a bold two-line name: 'NOOR AL' then 'SEYOH', with 'USED CARS' small below. Near-square stacked composition, emblem recognizable at32px. Refine thin curves into confident clean strokes. No black panel, no background, texture, glow, shadows, decorative extra shapes or invented claims.",
+    "Generate a faithful inverse-surface companion of this exact NOOR AL SEYOH USED CARS logo. Preserve exact name, car roof, proportions and stacked composition. Change all navy ink to flat opaque pale silver #F2F6FA so it contrasts on both dark navy and strong red #c40101. Entire background genuinely transparent. No black background, no glow, no shadow, no texture. Bold clean contours retain strong visibility at 32px. No extra words."
+  ]
+}

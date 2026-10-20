@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "dealer": "car-haven-manchester",
+  "photos": [
+    {
+      "id": "listing-1",
+      "listingUrl": "https://www.autotrader.co.uk/car-details/202610046666476",
+      "catalogueUrl": "https://www.autotrader.co.uk/dealers/manchester/manchester/car-haven-manchester-limited-10051327",
+      "imageUrl": "https://m.atcdn.co.uk/a/media/w1280/b618293a33e3448b91715f24dbec8a1f.jpg",
+      "downloadUrl": "https://m.atcdn.co.uk/a/media/w1280/b618293a33e3448b91715f24dbec8a1f.jpg",
+      "originalDimensions": [
+        1280,
+        960
+      ],
+      "retainedDimensions": [
+        1024,
+        768
+      ],
+      "retainedBytes": 173727,
+      "mediaPath": "dealer-stock/listing-1.jpg",
+      "retainedSha256": "631523588d525fcb3fb63091b1451f65c2b528dc3d11cce99db5cea2113e7d88",
+      "operation": "Resize within1024px without enlargement and encode optimized JPEG; no change to photographed content.",
+      "originalSha256": "ff11591c53ff49295b5fa87b60461f60cbfdf23925e257a916db859c8fc83f39",
+      "observedAt": "2026-10-19"
+    },
+    {
+      "id": "listing-2",
+      "listingUrl": "https://www.autotrader.co.uk/car-details/202609186176419",
+      "catalogueUrl": "https://www.autotrader.co.uk/dealers/manchester/manchester/car-haven-manchester-limited-10051327",
+      "imageUrl": "https://m.atcdn.co.uk/a/media/w1280/4e6d79c64ac24146b6f4946949e4d81b.jpg",
+      "downloadUrl": "https://m.atcdn.co.uk/a/media/w1280/4e6d79c64ac24146b6f4946949e4d81b.jpg",
+      "originalDimensions": [
+        1280,
+        960
+      ],
+      "retainedDimensions": [
+        1024,
+        768
+      ],
+      "retainedBytes": 175320,
+      "mediaPath": "dealer-stock/listing-2.jpg",
+      "retainedSha256": "f8c2755409f5560f5163ce3522ee3ae4f64c0ea5f5cd20f505c4e667415e7dc4",
+      "operation": "Resize within1024px without enlargement and encode optimized JPEG; no change to photographed content.",
+      "originalSha256": "e884d04b22ee44fce86ad6a5a5a871950e546e55d2a35e47d604ed73de61016c",
+      "observedAt": "2026-10-19"
+    }
+  ],
+  "review": {
+    "reviewed": true,
+    "observedAt": "2026-10-19",
+    "method": "Viewed every selected photograph in contact sheets; checked actual vehicle content, placeholders, price cards and visible dealer identity.",
+    "maximumDimension": 1024,
+    "maximumBytes": 175320
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "dealer": "prime-lane-motors",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uk.json",
+    "sha256": "6cd8d365586f9a5d5131fe4b1d50baede7de91ab384a135017c25367298b07c4"
+  },
+  "publicSources": [
+    {
+      "url": "https://www.autotrader.co.uk/dealers/cleveland/stockton-on-tees/yarm-lane-motors-limited-10023253",
+      "observedAt": "2026-10-19T17:36:49.330555Z",
+      "supports": [
+        "public-business-identity",
+        "public-business-contact",
+        "advertised-stock"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "publicObservations": [
+    {
+      "url": "https://www.autotrader.co.uk/dealers/cleveland/stockton-on-tees/yarm-lane-motors-limited-10023253",
+      "observedAt": "2026-10-19T17:36:49.330555Z",
+      "httpStatus": 200,
+      "sha256": "682587d2ee7905f9a1c3696499fc61a6b7096cbf392bca363aeecd3da8e6924b",
+      "byteLength": 178599,
+      "retention": "Only reviewed public business fields, hashes, listing identities and compressed photographs are committed; raw HTML remains outside the public pack."
+    }
+  ],
+  "stock": [
+    {
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202610187099024",
+      "photoUrl": "https://m.atcdn.co.uk/a/media/w600/209346e17eb2435ab2d94591ec5a13af.jpg",
+      "observedAt": "2026-10-19T17:53:20.857702Z",
+      "listingSha256": "df28658d599e7d34481b5dbbd73735d6eac0fefa8c40bb689d287e6f4e234947",
+      "sourcePhotoSha256": "b183744ef128b7607f88ef386c048e327bec40de0ddd0f673071482e3ec40eb2",
+      "sourcePhotoDimensions": [
+        600,
+        799
+      ],
+      "photoSha256": "7981b7963f2a881ea969a15ed30dd53e8e2c627b7f05dfb9dd6f62b3d0caf8fd",
+      "photoDimensions": [
+        600,
+        799
+      ],
+      "photoBytes": 106567,
+      "recordId": "public-listing-1",
+      "title": "2024 Audi A5 2.0 TFSI 35 Sport Sportback S Tronic",
+      "retainedPhoto": "dealer-stock/public-1.jpg",
+      "publicPhotoReviewed": true
+    }
+  ],
+  "review": {
+    "reviewedAt": "2026-10-19T18:24:26.892397Z",
+    "stockPhotoIdentityChecked": true,
+    "sourceClaimLimits": "Dated public adverts only; availability, repairs, vehicle condition and legal entity details are not independently certified.",
+    "omissions": [
+      "Two additional adverts use standard catalogue illustrations; only the Audi A5 with an actual dealer vehicle photograph is retained.",
+      "Exact retained lead business.name preserved for the M1 identity validator; clean public trading name used in artwork."
+    ]
+  }
+}

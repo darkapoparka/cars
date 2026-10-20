@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "chessington-land-of-autoz",
+  "previousSlug": "chessington-land-of-autoz",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:16:25.144Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-chessington-land-of-autoz",
+    "position": 38
+  },
+  "before": {
+    "files": 38,
+    "bytes": 6158893
+  },
+  "afterBeforeReview": {
+    "files": 22,
+    "bytes": 3040720
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 191646,
+      "sha256": "5781045e4467404e74d279e28ffe7145cf745b1601a581a6eb25355f99089b62"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 231772,
+      "sha256": "048726e8ff2b37e3cdfc4b67e39c3b71c8f0b2065ca9f9a20c9334f9d853aa8a"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 191646,
+      "sha256": "5781045e4467404e74d279e28ffe7145cf745b1601a581a6eb25355f99089b62"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 205362,
+      "sha256": "f4d0622e1d7a9f010273290774b7cca66281619ff97e20c141df86a4c4868837"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 247577,
+      "sha256": "71bdd510d2204b744902f98b9d68470a69e60e4e9ddc4fcf9712720dcf3620a6"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 247577,
+      "sha256": "71bdd510d2204b744902f98b9d68470a69e60e4e9ddc4fcf9712720dcf3620a6"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 205362,
+      "sha256": "f4d0622e1d7a9f010273290774b7cca66281619ff97e20c141df86a4c4868837"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 191646,
+      "sha256": "5781045e4467404e74d279e28ffe7145cf745b1601a581a6eb25355f99089b62"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 13894,
+      "sha256": "4493226cecaca135a4542d2f16b59856d1c6ef5bdfe08d3e017a50c4d806090d"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 247577,
+      "sha256": "71bdd510d2204b744902f98b9d68470a69e60e4e9ddc4fcf9712720dcf3620a6"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 147180,
+      "sha256": "f45814f99137d70f1e6fe1dbb7df8fe39b66685f94486949b3a539c0f3beb3aa"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 247577,
+      "sha256": "71bdd510d2204b744902f98b9d68470a69e60e4e9ddc4fcf9712720dcf3620a6"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 147180,
+      "sha256": "f45814f99137d70f1e6fe1dbb7df8fe39b66685f94486949b3a539c0f3beb3aa"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 205362,
+      "sha256": "f4d0622e1d7a9f010273290774b7cca66281619ff97e20c141df86a4c4868837"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 133182,
+      "sha256": "cfd25ebd0c064af2445032f5f56e37cdb2fb3587aa970f9962a414f78257f41f"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 141858,
+      "sha256": "56c3693c3bd46a6bc0758baf72da83e27b8317905ed63779a8d895ce6b57f509"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 125616,
+      "sha256": "04e6d7f05834fd7f2b5e35b3b83399a4ebe7165d31400cb60999913482e71288"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 12,
+    "bytes": 3015701,
+    "inventorySha256": "277496288f6cb259cad80c42c7178ac10794082ea132eb22f552644b907abf2b",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "chessington-land-of-autoz",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 24,
+    "report": "dealers/chessington-land-of-autoz/input-review.json"
+  },
+  "after": {
+    "files": 24,
+    "bytes": 3049396
+  }
+}

@@ -1,0 +1,296 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-shamal-al-amreci-used-cars",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T20:57:57.390Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "sourced-logo-imagegen-redraw",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "7f39bb5bfdfe0dc275d38069994f743abd5caaec36f5f999b8db50224f5bc8ad",
+      "sourceSha256": "642ef8a88660212ff339402850cc7959776b8eb0406a499f57cb2b9e684f0106"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "907750680fabbc1eb0ff5c37c0a987ba0b11ee7bf17c86b92cc41a48d184bcb3",
+      "sourceSha256": "435125f7bdb02fec3d01f5b95eddddb990bab4214393799e9308f95ec312ace8"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "cb6a3d2e61e4af7bfe9a2422edfb32120fd226d6f875e2dffba6839d8d0208f1",
+      "sourceSha256": "4f351ac9ce81f034edf480507bb9a2d891c0fc86d41595e692bc9c7b36eceef2"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "642ef8a88660212ff339402850cc7959776b8eb0406a499f57cb2b9e684f0106",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-bbe34a28-45fa-49a3-ad33-b4119f7f1544",
+      "modelVersion": null,
+      "transformation": {
+        "operation": "rectangular-extract-without-recolour-or-redrawing",
+        "source": "branding/generated-pair.png",
+        "sourceSha256": "2782cf1763065fc8da1b30d13bfd84fe73c79becc66ef2e43272de5d847b5c4a",
+        "rectangle": {
+          "left": 0,
+          "top": 0,
+          "width": 887,
+          "height": 887
+        }
+      }
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "8d2e79a4129d9c4ae3d98f25458756e14f3dbf745f6d19a91bc5f73682ec11e2",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-bbe34a28-45fa-49a3-ad33-b4119f7f1544",
+      "modelVersion": null,
+      "transformation": {
+        "operation": "rectangular-extract-without-recolour-or-redrawing",
+        "source": "branding/generated-pair.png",
+        "sourceSha256": "2782cf1763065fc8da1b30d13bfd84fe73c79becc66ef2e43272de5d847b5c4a",
+        "rectangle": {
+          "left": 0,
+          "top": 0,
+          "width": 887,
+          "height": 887
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "704b7defd75be25105cc275b7781088f53835b5e45246eaa442bb52534603a9d"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "642ef8a88660212ff339402850cc7959776b8eb0406a499f57cb2b9e684f0106",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-bbe34a28-45fa-49a3-ad33-b4119f7f1544",
+        "modelVersion": null,
+        "transformation": {
+          "operation": "rectangular-extract-without-recolour-or-redrawing",
+          "source": "branding/generated-pair.png",
+          "sourceSha256": "2782cf1763065fc8da1b30d13bfd84fe73c79becc66ef2e43272de5d847b5c4a",
+          "rectangle": {
+            "left": 0,
+            "top": 0,
+            "width": 887,
+            "height": 887
+          }
+        }
+      },
+      "sourceReference": "dealers/al-shamal-al-amreci-used-cars/branding/generated-mark.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "435125f7bdb02fec3d01f5b95eddddb990bab4214393799e9308f95ec312ace8",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-bbe34a28-45fa-49a3-ad33-b4119f7f1544",
+        "modelVersion": null,
+        "transformation": {
+          "operation": "rectangular-extract-without-recolour-or-redrawing",
+          "source": "branding/generated-pair.png",
+          "sourceSha256": "2782cf1763065fc8da1b30d13bfd84fe73c79becc66ef2e43272de5d847b5c4a",
+          "rectangle": {
+            "left": 887,
+            "top": 0,
+            "width": 887,
+            "height": 887
+          }
+        }
+      },
+      "sourceReference": "dealers/al-shamal-al-amreci-used-cars/branding/generated-dark-surface.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "4f351ac9ce81f034edf480507bb9a2d891c0fc86d41595e692bc9c7b36eceef2",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-bc16d625-dd0d-45d0-8627-ed2380881396",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-shamal-al-amreci-used-cars/branding/generated-silver.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "c617a517a63da8375c7c863de6769b351faef42739f7c24148677d3d7bff3086",
+      "sha256": "642ef8a88660212ff339402850cc7959776b8eb0406a499f57cb2b9e684f0106",
+      "crop": {
+        "left": 33,
+        "top": 200,
+        "width": 786,
+        "height": 514
+      },
+      "sourcePath": "branding/generated-mark.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "c48f4de10b4eb968c8e60924df43f50574aab4b895238f4c3d3c33031c827e5a",
+      "sha256": "435125f7bdb02fec3d01f5b95eddddb990bab4214393799e9308f95ec312ace8",
+      "crop": {
+        "left": 51,
+        "top": 200,
+        "width": 786,
+        "height": 514
+      },
+      "sourcePath": "branding/generated-dark-surface.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "52c71070e00dc0fb91af81a4eb9fbf7c72bff626a24a9d6fb3113d1d8d266706",
+      "sha256": "4f351ac9ce81f034edf480507bb9a2d891c0fc86d41595e692bc9c7b36eceef2",
+      "crop": {
+        "left": 0,
+        "top": 90,
+        "width": 2173,
+        "height": 535
+      },
+      "sourcePath": "branding/generated-silver.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "528d8a4f5ac234a0bf2878bd7fc4c206642a7fb93e6e2b63ce292238e8b9e03d",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-bbe34a28-45fa-49a3-ad33-b4119f7f1544",
+        "modelVersion": null,
+        "transformation": {
+          "operation": "rectangular-extract-without-recolour-or-redrawing",
+          "source": "branding/generated-pair.png",
+          "sourceSha256": "2782cf1763065fc8da1b30d13bfd84fe73c79becc66ef2e43272de5d847b5c4a",
+          "rectangle": {
+            "left": 0,
+            "top": 0,
+            "width": 887,
+            "height": 887
+          }
+        }
+      },
+      "sourceReference": "dealers/al-shamal-al-amreci-used-cars/branding/generated-mark.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "7a4f666118d1dd65956cc25c8a9a93e2cd7a111ead9b40dd8a590167cbc5ffcf",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-bbe34a28-45fa-49a3-ad33-b4119f7f1544",
+        "modelVersion": null,
+        "transformation": {
+          "operation": "rectangular-extract-without-recolour-or-redrawing",
+          "source": "branding/generated-pair.png",
+          "sourceSha256": "2782cf1763065fc8da1b30d13bfd84fe73c79becc66ef2e43272de5d847b5c4a",
+          "rectangle": {
+            "left": 887,
+            "top": 0,
+            "width": 887,
+            "height": 887
+          }
+        }
+      },
+      "sourceReference": "dealers/al-shamal-al-amreci-used-cars/branding/generated-dark-surface.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "8d2e79a4129d9c4ae3d98f25458756e14f3dbf745f6d19a91bc5f73682ec11e2",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-bbe34a28-45fa-49a3-ad33-b4119f7f1544",
+        "modelVersion": null,
+        "transformation": {
+          "operation": "rectangular-extract-without-recolour-or-redrawing",
+          "source": "branding/generated-pair.png",
+          "sourceSha256": "2782cf1763065fc8da1b30d13bfd84fe73c79becc66ef2e43272de5d847b5c4a",
+          "rectangle": {
+            "left": 0,
+            "top": 0,
+            "width": 887,
+            "height": 887
+          }
+        }
+      },
+      "sourceReference": "dealers/al-shamal-al-amreci-used-cars/branding/generated-mark.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "704b7defd75be25105cc275b7781088f53835b5e45246eaa442bb52534603a9d",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-bbe34a28-45fa-49a3-ad33-b4119f7f1544",
+        "modelVersion": null,
+        "transformation": {
+          "operation": "rectangular-extract-without-recolour-or-redrawing",
+          "source": "branding/generated-pair.png",
+          "sourceSha256": "2782cf1763065fc8da1b30d13bfd84fe73c79becc66ef2e43272de5d847b5c4a",
+          "rectangle": {
+            "left": 0,
+            "top": 0,
+            "width": 887,
+            "height": 887
+          }
+        }
+      },
+      "sourceReference": "dealers/al-shamal-al-amreci-used-cars/branding/generated-mark.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-19T20:57:57.390Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "4fecc1810b5f799851077db4dce84e88a6d276b84d5ae7f2a225fd5d53058862",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-bbe34a28-45fa-49a3-ad33-b4119f7f1544",
+      "modelVersion": null,
+      "transformation": {
+        "operation": "rectangular-extract-without-recolour-or-redrawing",
+        "source": "branding/generated-pair.png",
+        "sourceSha256": "2782cf1763065fc8da1b30d13bfd84fe73c79becc66ef2e43272de5d847b5c4a",
+        "rectangle": {
+          "left": 887,
+          "top": 0,
+          "width": 887,
+          "height": 887
+        }
+      }
+    }
+  }
+}

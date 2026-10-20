@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "slug": "resi-auto-sales",
+  "dealerId": "gb-roxwell-resi-auto-sales",
+  "business": {
+    "name": "Resi Auto Sales Ltd",
+    "city": "Roxwell, Chelmsford",
+    "region": "Essex",
+    "countryCode": "GB",
+    "currency": "GBP",
+    "distanceUnit": "mi",
+    "locale": "en-GB",
+    "address": "Boyton Cross Garage, Boyton Cross, Roxwell CM1 4LL",
+    "phone": "+441245204919",
+    "phoneDisplay": "+441245204919",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://showroom.ebaymotorspro.co.uk/Resi-auto-sales-ltd",
+    "hours": "",
+    "sourceUrl": "https://showroom.ebaymotorspro.co.uk/Resi-auto-sales-ltd",
+    "observedAt": "2026-10-19T17:36:50.498940Z",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/Resi-auto-sales-ltd",
+      "observedAt": "2026-10-19T17:36:50.498940Z",
+      "supports": [
+        "public-business-identity",
+        "public-business-contact",
+        "advertised-stock"
+      ]
+    }
+  ]
+}

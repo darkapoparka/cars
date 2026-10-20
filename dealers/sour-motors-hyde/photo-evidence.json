@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "dealer": "sour-motors-hyde",
+  "photos": [
+    {
+      "id": "listing-1",
+      "listingUrl": "https://www.ebay.co.uk/itm/860047187288",
+      "catalogueUrl": "https://showroom.ebaymotorspro.co.uk/MTmotors?menu=1",
+      "imageUrl": "https://i.ebayimg.com/00/s/MTIwMFgxNjAw/z/v6sAAeSwFcZq1d-L/$_2.JPG",
+      "downloadUrl": "https://i.ebayimg.com/00/s/MTIwMFgxNjAw/z/v6sAAeSwFcZq1d-L/$_57.JPG",
+      "originalDimensions": [
+        1600,
+        1200
+      ],
+      "retainedDimensions": [
+        1024,
+        768
+      ],
+      "retainedBytes": 177312,
+      "mediaPath": "dealer-stock/listing-1.jpg",
+      "retainedSha256": "72d629dfb8989db46089db96acdaa4e1006ba32e3bda8b4fa5fe0dad2e64a023",
+      "operation": "Resize within1024px without enlargement and encode optimized JPEG; no change to photographed content.",
+      "originalSha256": "ca1de35a94fea3c2724a093d4f55d293af4c3aea811f0b92e07d63611e83021f",
+      "observedAt": "2026-10-19"
+    },
+    {
+      "id": "listing-2",
+      "listingUrl": "https://www.ebay.co.uk/itm/860047175048",
+      "catalogueUrl": "https://showroom.ebaymotorspro.co.uk/MTmotors?menu=1",
+      "imageUrl": "https://i.ebayimg.com/00/s/MTYwMFgxMjAw/z/mMkAAeSwxfRq0Pkj/$_2.JPG",
+      "downloadUrl": "https://i.ebayimg.com/00/s/MTYwMFgxMjAw/z/mMkAAeSwxfRq0Pkj/$_57.JPG",
+      "originalDimensions": [
+        1200,
+        1600
+      ],
+      "retainedDimensions": [
+        768,
+        1024
+      ],
+      "retainedBytes": 164167,
+      "mediaPath": "dealer-stock/listing-2.jpg",
+      "retainedSha256": "329d929629b06d022ca43f01fabbe2404a32847204f977a7e310a7cc4c6a5725",
+      "operation": "Resize within1024px without enlargement and encode optimized JPEG; no change to photographed content.",
+      "originalSha256": "5fbb0b429e20bfdc54a764b3e48db0a7f0f1ba201116c6702690cef72d2f573f",
+      "observedAt": "2026-10-19"
+    },
+    {
+      "id": "listing-3",
+      "listingUrl": "https://www.ebay.co.uk/itm/860023504308",
+      "catalogueUrl": "https://showroom.ebaymotorspro.co.uk/MTmotors?menu=1",
+      "imageUrl": "https://i.ebayimg.com/00/s/MTIwMFgxNjAw/z/jnIAAeSwXiVqx77k/$_2.JPG",
+      "downloadUrl": "https://i.ebayimg.com/00/s/MTIwMFgxNjAw/z/jnIAAeSwXiVqx77k/$_57.JPG",
+      "originalDimensions": [
+        1600,
+        1200
+      ],
+      "retainedDimensions": [
+        1024,
+        768
+      ],
+      "retainedBytes": 161399,
+      "mediaPath": "dealer-stock/listing-3.jpg",
+      "retainedSha256": "36019b1f372dce1fca9791c850b62197ec3e580a644ff130e82baa24881047b1",
+      "operation": "Resize within1024px without enlargement and encode optimized JPEG; no change to photographed content.",
+      "originalSha256": "4c12aa75fd073a4f1b2c5edee65577e6ae99bae23ad33b14394a4e8283c6431d",
+      "observedAt": "2026-10-19"
+    }
+  ],
+  "review": {
+    "reviewed": true,
+    "observedAt": "2026-10-19",
+    "method": "Viewed every selected photograph in contact sheets; checked actual vehicle content, placeholders, price cards and visible dealer identity.",
+    "maximumDimension": 1024,
+    "maximumBytes": 177312
+  }
+}

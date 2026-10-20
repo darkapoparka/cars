@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "cars-4-u-wakefield",
+  "previousSlug": "cars-4-u-wakefield",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:15:48.518Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-wakefield-cars-4-u",
+    "position": 97
+  },
+  "before": {
+    "files": 35,
+    "bytes": 5249466
+  },
+  "afterBeforeReview": {
+    "files": 19,
+    "bytes": 1743358
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 256279,
+      "sha256": "8279c0960d97d60e3e988160225cf6d686351961818eaf3c05d795a7847601b5"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 256279,
+      "sha256": "8279c0960d97d60e3e988160225cf6d686351961818eaf3c05d795a7847601b5"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 256279,
+      "sha256": "8279c0960d97d60e3e988160225cf6d686351961818eaf3c05d795a7847601b5"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 243648,
+      "sha256": "4b02df28c5e19c27dedcb51dc63a681472ed46ad0ce6935d1ebb25df657e5e85"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 243648,
+      "sha256": "4b02df28c5e19c27dedcb51dc63a681472ed46ad0ce6935d1ebb25df657e5e85"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 243648,
+      "sha256": "4b02df28c5e19c27dedcb51dc63a681472ed46ad0ce6935d1ebb25df657e5e85"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 243648,
+      "sha256": "4b02df28c5e19c27dedcb51dc63a681472ed46ad0ce6935d1ebb25df657e5e85"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 256279,
+      "sha256": "8279c0960d97d60e3e988160225cf6d686351961818eaf3c05d795a7847601b5"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 17136,
+      "sha256": "d3d18927aa2f6e4065e259eb4baf273b9c0046da49f3467b3062bc53201d7a30"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 243648,
+      "sha256": "4b02df28c5e19c27dedcb51dc63a681472ed46ad0ce6935d1ebb25df657e5e85"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 153542,
+      "sha256": "1748337bf8203ea329e76a9bd814f25de4f3f794ba2698b926d6932e3484ffc4"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 243648,
+      "sha256": "4b02df28c5e19c27dedcb51dc63a681472ed46ad0ce6935d1ebb25df657e5e85"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 153542,
+      "sha256": "1748337bf8203ea329e76a9bd814f25de4f3f794ba2698b926d6932e3484ffc4"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 243648,
+      "sha256": "4b02df28c5e19c27dedcb51dc63a681472ed46ad0ce6935d1ebb25df657e5e85"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 153542,
+      "sha256": "1748337bf8203ea329e76a9bd814f25de4f3f794ba2698b926d6932e3484ffc4"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 150750,
+      "sha256": "56bfe211df5cc74c4a74ad05078e5c912349b02b663a099081b1f9582f9f884b"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 150750,
+      "sha256": "56bfe211df5cc74c4a74ad05078e5c912349b02b663a099081b1f9582f9f884b"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 10,
+    "bytes": 1721489,
+    "inventorySha256": "37ee2151147494e4f45f0962951a7aaca6c93bdc617ddce4acab0192316003d6",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "cars-4-u-wakefield",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 21,
+    "report": "dealers/cars-4-u-wakefield/input-review.json"
+  },
+  "after": {
+    "files": 21,
+    "bytes": 1751482
+  }
+}

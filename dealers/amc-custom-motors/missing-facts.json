@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "dealer": "amc-custom-motors",
+  "missing": [
+    {
+      "field": "business.address",
+      "required": false,
+      "reason": "The current seller catalogue gives appointment-only viewings and the Bradford BD5 9ET area; a street viewing location was not independently verified."
+    },
+    {
+      "field": "business.website",
+      "required": false,
+      "reason": "No current public business value was verified in the bounded source review."
+    },
+    {
+      "field": "prices",
+      "required": false,
+      "reason": "All listing prices are omitted under the public-repository scope."
+    }
+  ],
+  "blocking": []
+}

@@ -1,0 +1,197 @@
+{
+  "schemaVersion": 1,
+  "dealer": "hmz-cars-dealers",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T19:22:56.608725Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "d6aacd522f09c72fce8c4cf549c083688a16c7caaca8e203839be7218ca234e9",
+      "sourceSha256": "ffa9aed3b4eccc73e2fcf8ff10a9d80591aea88e62fbfb30fdb4c8fc993f145a"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "436ecda8cb4e3c1b314e60db4a2ce708290eca604f55443cf3f00e532f8ba080",
+      "sourceSha256": "5e5e3ded7c95abcf90c27003d8eca94c83f75df2e543f3ed1bcc9c144f22ae9f"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "436ecda8cb4e3c1b314e60db4a2ce708290eca604f55443cf3f00e532f8ba080",
+      "sourceSha256": "5e5e3ded7c95abcf90c27003d8eca94c83f75df2e543f3ed1bcc9c144f22ae9f"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "ffa9aed3b4eccc73e2fcf8ff10a9d80591aea88e62fbfb30fdb4c8fc993f145a",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-0ee5a7cc-4c7c-4f75-a3d8-981bcc7d1ce8",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "c6a057961b6ffdcc663d3d4f4e6e688d4b7feac791d6bafa976459388d74dd3d",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-92efe74d-d89f-4ffb-81d2-12a23c4c4e16",
+      "modelVersion": null
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "7b69c48389ff110bdc582a12d92d49ca3a311148067d6d4d74def7a2da0272d6"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "ffa9aed3b4eccc73e2fcf8ff10a9d80591aea88e62fbfb30fdb4c8fc993f145a",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-0ee5a7cc-4c7c-4f75-a3d8-981bcc7d1ce8",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/hmz-cars-dealers/branding/generated-master.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "5e5e3ded7c95abcf90c27003d8eca94c83f75df2e543f3ed1bcc9c144f22ae9f",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1d7e3ceb-87fb-403a-9dac-6b1613cf87fc",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/hmz-cars-dealers/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "5e5e3ded7c95abcf90c27003d8eca94c83f75df2e543f3ed1bcc9c144f22ae9f",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1d7e3ceb-87fb-403a-9dac-6b1613cf87fc",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/hmz-cars-dealers/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "ac0c99d7f245da49ae22cbeb065c1b2cad85925b57dba85d83cc1fffcf32c075",
+      "sha256": "ffa9aed3b4eccc73e2fcf8ff10a9d80591aea88e62fbfb30fdb4c8fc993f145a",
+      "crop": {
+        "left": 0,
+        "top": 168,
+        "width": 2172,
+        "height": 388
+      },
+      "sourcePath": "branding/generated-master.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "065ba4e633aa94352a7b48b3f4e081d0b7259514d47a57556461ac300e515c48",
+      "sha256": "5e5e3ded7c95abcf90c27003d8eca94c83f75df2e543f3ed1bcc9c144f22ae9f",
+      "crop": {
+        "left": 0,
+        "top": 137,
+        "width": 2172,
+        "height": 443
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "065ba4e633aa94352a7b48b3f4e081d0b7259514d47a57556461ac300e515c48",
+      "sha256": "5e5e3ded7c95abcf90c27003d8eca94c83f75df2e543f3ed1bcc9c144f22ae9f",
+      "crop": {
+        "left": 0,
+        "top": 137,
+        "width": 2172,
+        "height": 443
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "756fb6ec36a9db7ec9beaa1cf448780e6ad4252f9fd38e0980dfcf25f795120d",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-92efe74d-d89f-4ffb-81d2-12a23c4c4e16",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/hmz-cars-dealers/branding/generated-mark.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "756fb6ec36a9db7ec9beaa1cf448780e6ad4252f9fd38e0980dfcf25f795120d",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-92efe74d-d89f-4ffb-81d2-12a23c4c4e16",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/hmz-cars-dealers/branding/generated-mark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "c6a057961b6ffdcc663d3d4f4e6e688d4b7feac791d6bafa976459388d74dd3d",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-92efe74d-d89f-4ffb-81d2-12a23c4c4e16",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/hmz-cars-dealers/branding/generated-mark.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "7b69c48389ff110bdc582a12d92d49ca3a311148067d6d4d74def7a2da0272d6",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-92efe74d-d89f-4ffb-81d2-12a23c4c4e16",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/hmz-cars-dealers/branding/generated-mark.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-19T19:22:56.608725Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "c6a057961b6ffdcc663d3d4f4e6e688d4b7feac791d6bafa976459388d74dd3d",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-92efe74d-d89f-4ffb-81d2-12a23c4c4e16",
+      "modelVersion": null
+    }
+  }
+}

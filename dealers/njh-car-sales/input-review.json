@@ -1,0 +1,124 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-input-review",
+  "dealer": "njh-car-sales",
+  "reviewed": true,
+  "reviewedAt": "2026-10-20T19:18:30.394Z",
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "checks": [
+    "canonical-hosting-and-preserved-fleet-collisions",
+    "assigned-expansion-lead",
+    "public-fact-schema-and-price-omission",
+    "personal-contact-screen",
+    "retained-stock-media",
+    "companion-copy-source-binding",
+    "immutable-template-release-and-native-QA-parent",
+    "reviewed-artwork-provenance-and-regenerated-logo-hashes"
+  ],
+  "sourceArtworkReview": "Retained artwork review is separate provenance; this command does not perform visual, Arabic-expert or dealer approval.",
+  "copyReview": "Automated structure, stock hash, source text and complete EN/BG rows; no new human translation approval is inferred.",
+  "contacts": {
+    "schemaVersion": 1,
+    "kind": "cars-automated-public-contact-screen",
+    "dealer": "njh-car-sales",
+    "method": "heuristic; no claim that unflagged values cannot be personal",
+    "flags": [],
+    "blocking": []
+  },
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-swansea-njh-car-sales",
+    "position": 94
+  },
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "inputs": [
+    {
+      "path": "FACTS-AND-INVENTORY.json",
+      "sha256": "12d7df4c835e310494aaa8ce922b52d7e6c7f519b13681c2db0c19f5a3b0c894"
+    },
+    {
+      "path": "branding/generated-mark.png",
+      "sha256": "dabdbe47d5d79ef30e172a4d10d3843861611b04a491ebc5956a255a0db3fea5"
+    },
+    {
+      "path": "branding/generated-master.png",
+      "sha256": "a25ac49b5582997003dd4df1afca2e584f445b9aa7f372f2aff47b76c52e3418"
+    },
+    {
+      "path": "branding/generated-on-dark.png",
+      "sha256": "fdfc41f844e5d5d34e8b91709f21acf703d7dfc20cb4a43240d1c474f63f8464"
+    },
+    {
+      "path": "branding/logo-contract.json",
+      "sha256": "f3c50ce111e9cdcc1e2a7a945c819369b7dce32f606a78ebbc5281c1a4859dff"
+    },
+    {
+      "path": "branding/logo-recipe.json",
+      "sha256": "83b55ae932252d71f762083727620e6862fbb0e7fa5b0dea0505244ebee50fd4"
+    },
+    {
+      "path": "branding/observed-logo.gif",
+      "sha256": "0b403839fd876ed7244efd3ce761c0bad898febac3a124d64e0bd069eeee7f08"
+    },
+    {
+      "path": "branding/source.json",
+      "sha256": "4fb2fcbb1ed7d6a51a62eb3c9159e7b6c5a0d45098637ad1b9c687ac7eeec1a1"
+    },
+    {
+      "path": "business-facts.json",
+      "sha256": "72e18c940cb801e541f2ac5b760dc0404944d2c67cc457a624e137a2e6db873f"
+    },
+    {
+      "path": "copy-review.json",
+      "sha256": "d5275d5c3eea9904382704d65f19c7e5e74f5926d0a30a1bd26957bad58aa3a0"
+    },
+    {
+      "path": "dealer-stock/public-1.jpg",
+      "sha256": "ceae05b988485e7962abf5d821ae49192ac9bc9699e886739a720e25005aead1"
+    },
+    {
+      "path": "dealer-stock/public-2.jpg",
+      "sha256": "801733b6019a937baf4e6546b120acd48a2ca1568ac2886b7f3fbc69d62f12f5"
+    },
+    {
+      "path": "dealer-stock/public-3.jpg",
+      "sha256": "8dbe00a1c0a01c1fb3dc40b8f9eaa9b06d6c8839bb94136ea8ce36263857c856"
+    },
+    {
+      "path": "dealer.json",
+      "sha256": "f03fc9833bc8653fa307c52e21f261891dd1d9754d5ff3da28b653a76cacb102"
+    },
+    {
+      "path": "identity-review.json",
+      "sha256": "6d5239b402d3dfaeb86b7f1a3ad3ea3fdc97613b8da344069fac52dc1c55dcf0"
+    },
+    {
+      "path": "locale.json",
+      "sha256": "5643a3384be0fe4db42ce7c54bdcc54f9c0efc1ff35f1b97c294dc47534de532"
+    },
+    {
+      "path": "missing-facts.json",
+      "sha256": "cf29da03bd9bf19e621993fe68c41ec4e36c66c9b7cd80d3cc92d7a8e5b7bc29"
+    },
+    {
+      "path": "qualification.json",
+      "sha256": "e1c749ac362c0ab3a0e73539553eb0987b2013d534d8a7407692d2df682dd8ce"
+    },
+    {
+      "path": "source-evidence.json",
+      "sha256": "c771ea4a4595e0566325747cda778856a6f3044be97d5522f1bd3d9d0ade987e"
+    },
+    {
+      "path": "stock.json",
+      "sha256": "032b73a80da5f72b02055bd8e3f94a92d115450235edfbb716e4bb2ab8d2b941"
+    }
+  ],
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "providerWrites": 0
+}

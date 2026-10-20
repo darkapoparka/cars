@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "chris-automotive",
+  "previousSlug": "chris-automotive",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:16:42.097Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-maidenhead-chris-automotive",
+    "position": 68
+  },
+  "before": {
+    "files": 39,
+    "bytes": 5100630
+  },
+  "afterBeforeReview": {
+    "files": 23,
+    "bytes": 2428735
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 119267,
+      "sha256": "923e2b9db52b663959c77d0cb2f0b3ace531c8f9577f1d203ee678bf2da69da1"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 119267,
+      "sha256": "923e2b9db52b663959c77d0cb2f0b3ace531c8f9577f1d203ee678bf2da69da1"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 119267,
+      "sha256": "923e2b9db52b663959c77d0cb2f0b3ace531c8f9577f1d203ee678bf2da69da1"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 126555,
+      "sha256": "edac5f84df00dcbc28130308e35d4c1ac6dc54ed45e2a467a7f0b8bab71c3d5b"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 291101,
+      "sha256": "b83e1ad68439963a67fd423388b0e5c2c975d2c2db94a42b40ddefea825a569d"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 291101,
+      "sha256": "b83e1ad68439963a67fd423388b0e5c2c975d2c2db94a42b40ddefea825a569d"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 126555,
+      "sha256": "edac5f84df00dcbc28130308e35d4c1ac6dc54ed45e2a467a7f0b8bab71c3d5b"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 119267,
+      "sha256": "923e2b9db52b663959c77d0cb2f0b3ace531c8f9577f1d203ee678bf2da69da1"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 10705,
+      "sha256": "440214a0cf48ae7947f0afe26d9fcf82e6fe79bbd62a97ab82afdb9674e036d5"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 291101,
+      "sha256": "b83e1ad68439963a67fd423388b0e5c2c975d2c2db94a42b40ddefea825a569d"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 196460,
+      "sha256": "ead79a39065f8df5f04f389143dd92630a081873c00208ccc2aaf9ff03662a10"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 291101,
+      "sha256": "b83e1ad68439963a67fd423388b0e5c2c975d2c2db94a42b40ddefea825a569d"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 196460,
+      "sha256": "ead79a39065f8df5f04f389143dd92630a081873c00208ccc2aaf9ff03662a10"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 126555,
+      "sha256": "edac5f84df00dcbc28130308e35d4c1ac6dc54ed45e2a467a7f0b8bab71c3d5b"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 91356,
+      "sha256": "be1ea7134399a918d346c585608e5b661edb1919cb4390451a8520d01ea5e956"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 79796,
+      "sha256": "483509db18317c8c94a06d541eb927142d8f337e2236a6e7dd8cfe98aad603c1"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 79796,
+      "sha256": "483509db18317c8c94a06d541eb927142d8f337e2236a6e7dd8cfe98aad603c1"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 11,
+    "bytes": 2398218,
+    "inventorySha256": "b63ebec7ec08b7ceb58e2090c33c2b1e1442485343bd412170cb55795d1eda14",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "chris-automotive",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 25,
+    "report": "dealers/chris-automotive/input-review.json"
+  },
+  "after": {
+    "files": 25,
+    "bytes": 2437593
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "dealer": "hmz-cars-dealers",
+  "generations": [
+    {
+      "role": "master",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-0ee5a7cc-4c7c-4f75-a3d8-981bcc7d1ce8",
+      "modelVersion": null,
+      "prompt": "Create a refined independent proposed logo for HMZ CARS DEALERS. Single horizontal logo: compact bold HMZ monogram on the left; exact words HMZ CARS above DEALERS on the right, clear typographic hierarchy. Flat near-black one-colour ink, transparent backdrop with actual alpha, no gradients/shadows/textures/background. Strong geometric strokes with one disciplined diagonal negative-space cut, no vehicle illustration or shield. Mark should read HMZ at32px and be isolated on the left for cropping. Accurate text, well spaced lettering, polished professional automotive logo.",
+      "promptRetained": true,
+      "sourceAssetSha256": "ac0c99d7f245da49ae22cbeb065c1b2cad85925b57dba85d83cc1fffcf32c075",
+      "observedAt": "2026-10-19",
+      "originalResponseArtworkRetained": true
+    },
+    {
+      "role": "onDarkAndAccent",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-1d7e3ceb-87fb-403a-9dac-6b1613cf87fc",
+      "modelVersion": null,
+      "prompt": "Adapt the exact supplied logo into a refined dual-ink surface version, for readable use on dark and red backgrounds. Keep the name spelling, logo motif and layout exactly. Use pure WHITE filled lettering and emblem bounded by a clean broad deep-navy contour, finished with a narrow white outer keyline. No glow. All white areas must be solid opaque ink protected inside the navy contour. True transparent background outside. Maintain a GENEROUS TRANSPARENT GAP between compact emblem and wordmark, do not let their contours touch. No grunge, no speckles, no distressed raster texture, no holes in solid strokes, no gradients, no drop shadow, no decorative panel, no additional content. Flat precise digital artwork with smooth clean contours, professional restrained proportions.",
+      "promptRetained": true,
+      "sourceAssetSha256": "065ba4e633aa94352a7b48b3f4e081d0b7259514d47a57556461ac300e515c48",
+      "observedAt": "2026-10-19",
+      "originalResponseArtworkRetained": true
+    },
+    {
+      "role": "compact",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-92efe74d-d89f-4ffb-81d2-12a23c4c4e16",
+      "modelVersion": null,
+      "prompt": "From the supplied dealer logo, create ONLY its compact HMZ monogram at the left, keeping the same exact letters, initials, distinctive shape and motif. Remove all other wordmark text and any divider. One isolated monogram centered in a SQUARE transparent canvas with generous alpha margins. Solid opaque pale silver #d9e2ec fills, dark charcoal #111111 contour and a thin white outer keyline; preserve the blue inner contour if already present. The same actual mark must work on white, navy and red backgrounds. Broad clean solid strokes, smooth closed edges, open transparent letter counters, no speckles, no raster distress, no extra letters, no background, no shadows or gradients. Make the small 32px silhouette exceptionally legible while faithfully keeping this identity.",
+      "promptRetained": true,
+      "sourceAssetSha256": "a13a65787eb217f29bda4b3f1c24d84f591a28155b06ebe4690c46d3c76001d5",
+      "observedAt": "2026-10-19",
+      "originalResponseArtworkRetained": true
+    }
+  ],
+  "exportPolicy": "Original generated PNG bytes are retained. Compact pixel-exact extractions, where used, retain their parent generation, hash and rectangle in source.json. Existing dealer-pack logo tooling performs only transparent padding removal and deterministic raster exports. No deterministic recolour is used."
+}

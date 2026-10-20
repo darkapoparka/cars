@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "dealer": "east-midlands-car-sales",
+  "businessFacts": "business-facts.json",
+  "stock": "stock.json",
+  "inventoryKind": "dated-listing-snapshot",
+  "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+  "sources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/East-Midlands-Car-sales-LTD",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "current-public-business-details",
+        "dated-advertised-stock-snapshot"
+      ]
+    },
+    {
+      "url": "https://www.autotrader.co.uk/dealers/nottinghamshire/nottingham/east-midlands-car-sales-ltd-10048908",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "matching-dealer-identity",
+        "public-opening-hours",
+        "real-logo"
+      ]
+    }
+  ],
+  "advertDetailReview": "advert-detail-review.json"
+}

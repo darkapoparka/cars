@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "dealer": "supreme-cars-luton",
+  "photos": [
+    {
+      "id": "listing-1",
+      "listingUrl": "https://www.autotrader.co.uk/car-details/202610136931646",
+      "catalogueUrl": "https://www.autotrader.co.uk/dealers/bedfordshire/luton/supreme-cars-10019372?channel=cars",
+      "imageUrl": "https://m.atcdn.co.uk/a/media/w1280/8a9881b80d294cd3b05c33908484a5fb.jpg",
+      "downloadUrl": "https://m.atcdn.co.uk/a/media/w1280/8a9881b80d294cd3b05c33908484a5fb.jpg",
+      "originalDimensions": [
+        1280,
+        960
+      ],
+      "retainedDimensions": [
+        1024,
+        768
+      ],
+      "retainedBytes": 161501,
+      "mediaPath": "dealer-stock/listing-1.jpg",
+      "retainedSha256": "48f0bcffd3bf5eb729565e41b57b1aa52ba6e5b50e02a119067511bc808c8f7d",
+      "operation": "Resize within1024px without enlargement and encode optimized JPEG; no change to photographed content.",
+      "originalSha256": "d5992bd8593a74caf50698c5b92e9eb26152a1b678e84da4ca9029186680799f",
+      "observedAt": "2026-10-19"
+    },
+    {
+      "id": "listing-2",
+      "listingUrl": "https://www.autotrader.co.uk/car-details/202610197121024",
+      "catalogueUrl": "https://www.autotrader.co.uk/dealers/bedfordshire/luton/supreme-cars-10019372?channel=cars",
+      "imageUrl": "https://m.atcdn.co.uk/a/media/w1280/a83aa4a892c841a2801d3e55afe6e998.jpg",
+      "downloadUrl": "https://m.atcdn.co.uk/a/media/w1280/a83aa4a892c841a2801d3e55afe6e998.jpg",
+      "originalDimensions": [
+        1280,
+        960
+      ],
+      "retainedDimensions": [
+        1024,
+        768
+      ],
+      "retainedBytes": 161856,
+      "mediaPath": "dealer-stock/listing-2.jpg",
+      "retainedSha256": "8990a0c8d9cb7963d33ba1ea2bb3c5de5bd1497050b7c9800e0580678c2958d4",
+      "operation": "Resize within1024px without enlargement and encode optimized JPEG; no change to photographed content.",
+      "originalSha256": "148b2816716ee0a92c79b6d062c3e9e6e9470c0da83e29373eff93a2365f26fe",
+      "observedAt": "2026-10-19"
+    },
+    {
+      "id": "listing-3",
+      "listingUrl": "https://www.autotrader.co.uk/car-details/202609296494251",
+      "catalogueUrl": "https://www.autotrader.co.uk/dealers/bedfordshire/luton/supreme-cars-10019372?channel=cars",
+      "imageUrl": "https://m.atcdn.co.uk/a/media/w1280/e8f216dd37a94976a4cf81c30032aa97.jpg",
+      "downloadUrl": "https://m.atcdn.co.uk/a/media/w1280/e8f216dd37a94976a4cf81c30032aa97.jpg",
+      "originalDimensions": [
+        1280,
+        960
+      ],
+      "retainedDimensions": [
+        1024,
+        768
+      ],
+      "retainedBytes": 172173,
+      "mediaPath": "dealer-stock/listing-3.jpg",
+      "retainedSha256": "ecaf4e269346bbfc7f5ab9d84da24c2d647bff681b075c9a00ca68ca9c59a763",
+      "operation": "Resize within1024px without enlargement and encode optimized JPEG; no change to photographed content.",
+      "originalSha256": "973cf74c400479351a0d84792b655ed6e3b49cd148a5d4eac92de63244be74f6",
+      "observedAt": "2026-10-19"
+    }
+  ],
+  "review": {
+    "reviewed": true,
+    "observedAt": "2026-10-19",
+    "method": "Viewed every selected photograph in contact sheets; checked actual vehicle content, placeholders, price cards and visible dealer identity.",
+    "maximumDimension": 1024,
+    "maximumBytes": 172173
+  }
+}

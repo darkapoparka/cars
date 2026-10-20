@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "slug": "lifeline-cars",
+  "dealerId": "gb-orpington-lifeline-cars",
+  "business": {
+    "name": "Lifeline Cars Limited",
+    "city": "Orpington",
+    "region": "Kent",
+    "countryCode": "GB",
+    "currency": "GBP",
+    "distanceUnit": "mi",
+    "locale": "en-GB",
+    "address": "By appointment only, Court Road, Orpington BR6 9BY",
+    "phone": "+447464754649",
+    "phoneDisplay": "07464754649",
+    "email": "lifelinecarslimited@yahoo.com",
+    "website": "",
+    "stockUrl": "https://showroom.ebaymotorspro.co.uk/Lifeline-Cars-Limited",
+    "hours": "",
+    "sourceUrl": "https://showroom.ebaymotorspro.co.uk/Lifeline-Cars-Limited",
+    "observedAt": "2026-10-19T17:36:50.358372Z",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/Lifeline-Cars-Limited",
+      "observedAt": "2026-10-19T17:36:50.358372Z",
+      "supports": [
+        "public-business-identity",
+        "public-business-contact",
+        "advertised-stock"
+      ]
+    }
+  ]
+}

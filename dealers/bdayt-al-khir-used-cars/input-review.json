@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-input-review",
+  "dealer": "bdayt-al-khir-used-cars",
+  "reviewed": true,
+  "reviewedAt": "2026-10-20T19:26:11.717Z",
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "checks": [
+    "canonical-hosting-and-preserved-fleet-collisions",
+    "assigned-expansion-lead",
+    "public-fact-schema-and-price-omission",
+    "personal-contact-screen",
+    "retained-stock-media",
+    "companion-copy-source-binding",
+    "immutable-template-release-and-native-QA-parent",
+    "reviewed-artwork-provenance-and-regenerated-logo-hashes"
+  ],
+  "sourceArtworkReview": "Retained artwork review is separate provenance; this command does not perform visual, Arabic-expert or dealer approval.",
+  "copyReview": "Automated structure, stock hash, source text and complete EN/BG rows; no new human translation approval is inferred.",
+  "contacts": {
+    "schemaVersion": 1,
+    "kind": "cars-automated-public-contact-screen",
+    "dealer": "bdayt-al-khir-used-cars",
+    "method": "heuristic; no claim that unflagged values cannot be personal",
+    "flags": [],
+    "blocking": []
+  },
+  "batch": {
+    "number": 4,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-sharjah-bdayt-al-khir-used-cars",
+    "position": 340
+  },
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "inputs": [
+    {
+      "path": "FACTS-AND-INVENTORY.json",
+      "sha256": "501b765b5988b75f0bf6fc7b8ebca91b7e51e7802e9516ad66821a86a852121d"
+    },
+    {
+      "path": "branding/generated-on-dark.png",
+      "sha256": "ca76fc9537ef7d56fb4877984755210b458263d385be08093093214b904f9fa7"
+    },
+    {
+      "path": "branding/generated-on-light.png",
+      "sha256": "07071fd25b17ad266fb57dcf99acf4ce1744c576b5bbd41bafbf23a27a775799"
+    },
+    {
+      "path": "branding/logo-contract.json",
+      "sha256": "46015f7d2ed437c3bd4b9eddd97ea8e95bd9c0fb23cfc6cfd48f0776c687d669"
+    },
+    {
+      "path": "branding/logo-recipe.json",
+      "sha256": "7da1d823814ce8ab8bd3d64691ebffa9b962708cc01868ec2452d20d1e9ce2db"
+    },
+    {
+      "path": "branding/source-original.jpg",
+      "sha256": "1afb2e818544649e8c2a6afb263e42800bd0058189bf9d50d1b9de6a145429ce"
+    },
+    {
+      "path": "branding/source.json",
+      "sha256": "cf0efeda6d9c9825992568f18ef548c9ff712374de00d18e873eea05bf327a02"
+    },
+    {
+      "path": "business-facts.json",
+      "sha256": "87163c858bf53c33c3db6506788506e6b3780ab4048be15c07de0d63f6d6b38b"
+    },
+    {
+      "path": "copy-review.json",
+      "sha256": "5e9a8e3f711d185ad3d8ace130d135b18ffdaac83b8f3f2417e4ea48d8ac76e3"
+    },
+    {
+      "path": "dealer-stock/licenseplate-315.webp",
+      "sha256": "cdef958bc3d31326c59f9ca9162a61a13fec09215e1a2e6d0e4dc7d6336b5d65"
+    },
+    {
+      "path": "dealer-stock/licenseplate-419.webp",
+      "sha256": "35a5032e080f42f9a150c58c25cb962628758514a714853be53ef4a0f47918cc"
+    },
+    {
+      "path": "dealer-stock/licenseplate-823.webp",
+      "sha256": "c1a16da9dc4cec470bad1017dde7323313b8f81700ab59130cc0e1ac5ff06e3d"
+    },
+    {
+      "path": "dealer.json",
+      "sha256": "5e74c9612467483c0292fee071be7410d08db82f22f7ef12f6a5230c5bb52961"
+    },
+    {
+      "path": "identity-review.json",
+      "sha256": "3c1bf23158e937ff8171f4dab762c2bdc937772d3f3e3f33a33e451008af6727"
+    },
+    {
+      "path": "locale.json",
+      "sha256": "b102d9d78db5e8fff91e5858624376b719a1b097bce57195d1c546a7ba43b191"
+    },
+    {
+      "path": "missing-facts.json",
+      "sha256": "5dd36d397c588cd8002a2039074566b2d5e48ebecea0be902b280f1d790a4519"
+    },
+    {
+      "path": "qualification.json",
+      "sha256": "e7d10797a4d40f456104145250a4152f818df1ebe1c7f1588943796801e291ea"
+    },
+    {
+      "path": "source-evidence.json",
+      "sha256": "edf10af34b2cd6ffca4f98b2159e21d8ecc385dac1f22d43681083e7589a4647"
+    },
+    {
+      "path": "stock.json",
+      "sha256": "fcc14b3cde268404d5605904dfafb116dc9c78cf2dcbce714946ce4068fb5ceb"
+    }
+  ],
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "providerWrites": 0
+}

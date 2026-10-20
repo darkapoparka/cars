@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "dealer": "g1-autos",
+  "generations": [
+    {
+      "role": "master",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-5b0544ad-1cce-4657-9b71-ec964c06ed07",
+      "modelVersion": null,
+      "prompt": "Create a faithful clean redraw of this real G1 AUTOS logo. Keep exact name G1 AUTOS, navy-blue dominant colour, small red accent and recognizable sporting coupe motif. Replace fuzzy detailed illustration with a beautiful minimal broad-stroke coupe roof/profile integrated above a bold G1 monogram at left, and a beautifully kerned geometric G1 AUTOS wordmark to the right. No manufacturer badges, manufacturer text or photography. One horizontal logo lockup with genuine transparent background and generous clear space; dark navy ink on a light surface. Small red cue only. No gradients, shadows, glow, textures, panels, slogans. Left mark must be clear at32px and separated from wordmark for crop.",
+      "promptRetained": true,
+      "sourceAssetSha256": "da1e66136bffbfd8475015eb37bfa7fd272261c190980a371cdf941df8aeec9a",
+      "observedAt": "2026-10-19",
+      "originalResponseArtworkRetained": true
+    },
+    {
+      "role": "onDarkAndAccent",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-51384e56-6a61-464a-8824-0fe32f6f0022",
+      "modelVersion": null,
+      "prompt": "Adapt the exact supplied logo into a refined surface version for dark and red backgrounds. Keep the exact spelling, the original motif, every word, proportions and layout. Give all dark lettering and dark emblem strokes a pure WHITE fill bounded by a strong clean deep near-black #101820 contour, finished with a narrow white outer keyline. Preserve any original red or orange brand accent inside its contour. All white areas must be solid opaque ink protected inside the dark contour. True transparent alpha outside. Keep a GENEROUS TRANSPARENT GAP between compact emblem and wordmark and preserve all internal letter counters. No grunge, no speckles, no distressed raster texture, no holes in solid strokes, no gradients, no drop shadow, no decorative panel, no extra content. Smooth precise restrained digital logo, clean hard edges.",
+      "promptRetained": true,
+      "sourceAssetSha256": "31d1db7353541369a1e3cc389700323f04725c7afed0ea56fe47c1e9a1d03603",
+      "observedAt": "2026-10-19",
+      "originalResponseArtworkRetained": true
+    },
+    {
+      "role": "compact",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-7dff40a0-32e8-48db-876c-b02f52d7eed7",
+      "modelVersion": null,
+      "prompt": "Create ONLY the compact G1 monogram extracted and faithfully simplified from this G1 AUTOS logo. Keep exact G1 shape and color scheme: bold deep navy G, strong solid RED 1. No AUTOS word, no car silhouette, no other shapes or text. Give both letters a smooth white outer keyline for use on dark surfaces, with a subtle black outer contour. Broad simple filled strokes and spacious counters, strong icon readable at32px. Square canvas with centered G1 and generous TRANSPARENT margins, genuine transparent alpha outside. Preserve the supplied lettering's italic direction. No grunge, speckles, distressed texture, gradients, reflections, shadow, or opaque background. A precise compact form of this actual brand identity.",
+      "promptRetained": true,
+      "sourceAssetSha256": "6fa21d14855eeaccdef57fad2d9bee9d15702d8d2b2a8ceacaa6e08e54b7ec35",
+      "observedAt": "2026-10-19",
+      "originalResponseArtworkRetained": true
+    },
+    {
+      "role": "compactOnDark",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-19ec82ac-f1d4-4824-a50e-2bc4c665eb3c",
+      "modelVersion": null,
+      "prompt": "Create a matched inverse variant of this exact compact G1 logo. Preserve the exact G and numeral1 shapes and geometry. Make the inside of the G solid opaque pale silver #d9e2ec, retain the numeral1 solid red, preserve a thin dark navy inner outline, and add a clean thin white outer keyline. True transparent alpha including letter counters and broad transparent margins on a square canvas. No roof, no AUTOS, no other text, no distortion, no gradient, no shadow, no speckles or distress. It must be clearly readable at32px on dark navy, near-black and red backgrounds. This is the faithful light-ink inverse of the supplied real-identity G1 compact mark.",
+      "promptRetained": true,
+      "sourceAssetSha256": "94d3e112bae40203a858e3c0964a5ea4dd0243f64217d85bd149c9009ed2d2cf",
+      "observedAt": "2026-10-19",
+      "originalResponseArtworkRetained": true
+    }
+  ],
+  "exportPolicy": "Original generated PNG bytes are retained. Compact pixel-exact extractions, where used, retain their parent generation, hash and rectangle in source.json. Existing dealer-pack logo tooling performs only transparent padding removal and deterministic raster exports. No deterministic recolour is used."
+}

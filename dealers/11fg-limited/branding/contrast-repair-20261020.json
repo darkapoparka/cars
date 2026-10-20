@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "dealer": "11fg-limited",
+  "mode": "built-in-imagegen",
+  "independentProposal": true,
+  "dealerApproved": false,
+  "reason": "Native source producer39477427789 rejected the old shared dual-contrast artwork. Dedicated light/dark variants pass the unchanged pixel checks; native/hosted qualification remains separate.",
+  "selected": [
+    {
+      "name": "wordmark-on-light",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-b5fbc96d-b03a-4fcf-9341-ac7406c7d94b",
+        "referenceKind": "actual-tool-output-filename",
+        "modelVersion": null
+      },
+      "prompt": "Use case: precise-object-edit. Edit the referenced 11FG LTD transparent proposal wordmark for white website surfaces. Preserve the exact spelling 11FG LTD, horizontal arrangement, bold italic letter shapes, upper sweep and simple car motif. Make every visible stroke and letter a dark forest green (#06462f), with the sweep at most a slightly lighter dark green (#17633f). Render the car as a clean dark forest green outline with transparent interior; remove the silver/light fills. Remove the white outer keyline, gradients, speckles and residual background pixels. Keep crisp clean alpha and generous transparent margins. No added text, no contact details, no frame, no badge/background. This is a readable independent proposal variant, not an adopted business identity.",
+      "sourceFile": "exec-b5fbc96d-b03a-4fcf-9341-ac7406c7d94b.png"
+    },
+    {
+      "name": "wordmark-on-dark-v3",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-86f1d41a-1dc9-453b-899a-566f5fcf43a5",
+        "referenceKind": "actual-tool-output-filename",
+        "modelVersion": null
+      },
+      "prompt": "Edit this exact clean reference logo with one flat solid color replacement. Preserve the exact lettering 11FG LTD and clean letter silhouettes, car outline, upper arc, spacing and alpha. Replace the dark green visible ink with a very bright light LIME GREEN #d5ff96. Keep every stroke and letter fully opaque light lime green, never white. The interior areas of each stroke must be solid smooth uninterrupted light lime, no black/transparent mottling or holes. Preserve intended gaps and negative spaces transparent. Transparent canvas. No textures, weathering, speckles, outlines, gradient, shadows or background. This exact bright lime variant will be shown on charcoal and dark red. Independent dealer preview proposal.",
+      "sourceFile": "exec-86f1d41a-1dc9-453b-899a-566f5fcf43a5.png"
+    },
+    {
+      "name": "mark-on-light",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-52bed8d1-a2fd-4909-8eeb-0e5ea94ca791",
+        "referenceKind": "actual-tool-output-filename",
+        "modelVersion": null
+      },
+      "prompt": "Use case: precise-object-edit. Edit the referenced compact 11FG transparent emblem for white website surfaces and 32px favicon use. Preserve exact legible 11 above FG two-by-two arrangement, bold italic geometric character shapes, simple car roof arc and overall compact proportions. Render the four characters and roof arc in solid dark forest green (#06462f). Remove the thick backing/connected navy silhouette and the white fill/keylines; replace the spaces between characters and inside the arc with actual transparency so all four characters remain individually readable. No background plate or enclosing badge. No gradient, texture, speckles or shadow. Crisp clean alpha, thick simple strokes, generous transparent margin. No additional text. Independent proposal variant, not adopted identity.",
+      "sourceFile": "exec-52bed8d1-a2fd-4909-8eeb-0e5ea94ca791.png"
+    },
+    {
+      "name": "mark-on-dark-v3",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-22be42fd-fcdf-46ef-b0c9-65399ab891a0",
+        "referenceKind": "actual-tool-output-filename",
+        "modelVersion": null
+      },
+      "prompt": "Edit this exact clean reference compact emblem with one flat solid color replacement. Preserve the exact 11 above FG letter silhouettes, car roof arc, spacing, proportions and alpha. Replace the dark green visible ink with a very bright light LIME GREEN #d5ff96. Every stroke and letter must be fully opaque light lime green, never white. Solid smooth uninterrupted fills with no black/transparent mottling or holes. Preserve intended gaps and negative spaces transparent. Transparent canvas with generous margins. No textures, weathering, speckles, outlines, gradients, shadows or background. Independent dealer preview proposal.",
+      "sourceFile": "exec-22be42fd-fcdf-46ef-b0c9-65399ab891a0.png"
+    }
+  ],
+  "rejectedOutputFiles": [
+    "exec-055bd40f-8c82-4b7b-aa2c-156cb3d410dc.png",
+    "exec-ce6b4500-6c63-4b46-9738-9eb6bc643392.png",
+    "exec-13fbf8b6-0622-4f84-b7e1-ff024ffa2665.png",
+    "exec-fb557550-773e-4239-be77-797f54163b90.png"
+  ],
+  "rejectedReason": "Visible speckled light artwork; not used in source."
+}

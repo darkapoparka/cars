@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "aventus-motors",
+  "previousSlug": "aventus-motors",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:12:55.279Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-thurmaston-aventus-motors",
+    "position": 96
+  },
+  "before": {
+    "files": 36,
+    "bytes": 4887077
+  },
+  "afterBeforeReview": {
+    "files": 20,
+    "bytes": 2606689
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 109436,
+      "sha256": "719a9d58b953386a7bf2561a0f5e489174bde23fa84813e3fbc0e4ee97ff5033"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 109436,
+      "sha256": "719a9d58b953386a7bf2561a0f5e489174bde23fa84813e3fbc0e4ee97ff5033"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 109436,
+      "sha256": "719a9d58b953386a7bf2561a0f5e489174bde23fa84813e3fbc0e4ee97ff5033"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 166465,
+      "sha256": "aa5a1a8baf221ac4da355147b3d9e758cbba3c45a7b58a9078e5c6ffdbd02a90"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 193713,
+      "sha256": "49746cdd65318e7f427cc8e7cc9e6a152066bd2a05a0b961e9536bb2fc7aa2da"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 193713,
+      "sha256": "49746cdd65318e7f427cc8e7cc9e6a152066bd2a05a0b961e9536bb2fc7aa2da"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 166465,
+      "sha256": "aa5a1a8baf221ac4da355147b3d9e758cbba3c45a7b58a9078e5c6ffdbd02a90"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 109436,
+      "sha256": "719a9d58b953386a7bf2561a0f5e489174bde23fa84813e3fbc0e4ee97ff5033"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 9426,
+      "sha256": "de0dd127e07f6542506f2b86ac279086abe72758787f341f615b9287e6f80118"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 193713,
+      "sha256": "49746cdd65318e7f427cc8e7cc9e6a152066bd2a05a0b961e9536bb2fc7aa2da"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 136590,
+      "sha256": "ec839a7f7db73abdc040de225872cbcb0a4b62fe605585a09538f988d57e66e8"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 193713,
+      "sha256": "49746cdd65318e7f427cc8e7cc9e6a152066bd2a05a0b961e9536bb2fc7aa2da"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 136590,
+      "sha256": "ec839a7f7db73abdc040de225872cbcb0a4b62fe605585a09538f988d57e66e8"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 166465,
+      "sha256": "aa5a1a8baf221ac4da355147b3d9e758cbba3c45a7b58a9078e5c6ffdbd02a90"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 116168,
+      "sha256": "13b9631c62468d8208bc415759507abd01bcfcae0c10df97bf429397725892e3"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 86714,
+      "sha256": "ad2206220e96e33712732985481fc4f348d2c16f5036f7fe2367fedc2be1f7d4"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 86714,
+      "sha256": "ad2206220e96e33712732985481fc4f348d2c16f5036f7fe2367fedc2be1f7d4"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 11,
+    "bytes": 2584073,
+    "inventorySha256": "40680a6ac23d646e381563dd3d0826ca8879e1c0962733ca27004269562f1e52",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "aventus-motors",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 22,
+    "report": "dealers/aventus-motors/input-review.json"
+  },
+  "after": {
+    "files": 22,
+    "bytes": 2614944
+  }
+}

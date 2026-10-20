@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-saif-used-cars-trading",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:00:29.349400Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "dubicars-1036997",
+      "title": "Mini Cooper CABRIO",
+      "make": "Mini",
+      "model": "Cooper",
+      "year": 2017,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/dubicars-1036997.webp"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2017-mini-cooper-full-option-1036997.html",
+      "observedAt": "2026-10-19T20:00:29.349400Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 41200,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "dubicars-1035469",
+      "title": "Jeep Wrangler SAHARA",
+      "make": "Jeep",
+      "model": "Wrangler",
+      "year": 2023,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/dubicars-1035469.webp"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2023-jeep-wrangler-original-factory-paint-no-accidents-1035469.html",
+      "observedAt": "2026-10-19T20:00:29.349400Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 89700,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "dubicars-969957",
+      "title": "Abarth 500 Other",
+      "make": "Abarth",
+      "model": "500",
+      "year": 2012,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/dubicars-969957.webp"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2012-abarth-500-pocket-rocket-2012-abarth-500-rare-find-only-63365-km-excellent-condition-high-performance-969957.html",
+      "observedAt": "2026-10-19T20:00:29.349400Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 63365,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

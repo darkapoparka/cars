@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "prime-lane-motors",
+  "previousSlug": "prime-lane-motors",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:19:24.773Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-stockton-prime-lane-motors",
+    "position": 91
+  },
+  "before": {
+    "files": 34,
+    "bytes": 4890044
+  },
+  "afterBeforeReview": {
+    "files": 18,
+    "bytes": 1374108
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 166771,
+      "sha256": "9f1103b0fb248d40930fb1dc448f262dd3e0575e84e6410b2da0a0cf760e26ff"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 166771,
+      "sha256": "9f1103b0fb248d40930fb1dc448f262dd3e0575e84e6410b2da0a0cf760e26ff"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 166771,
+      "sha256": "9f1103b0fb248d40930fb1dc448f262dd3e0575e84e6410b2da0a0cf760e26ff"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 291890,
+      "sha256": "160c22968549057a049e931bc51cba7ffb28bed969f01816a4168f0a87475bb4"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 291890,
+      "sha256": "160c22968549057a049e931bc51cba7ffb28bed969f01816a4168f0a87475bb4"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 291890,
+      "sha256": "160c22968549057a049e931bc51cba7ffb28bed969f01816a4168f0a87475bb4"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 291890,
+      "sha256": "160c22968549057a049e931bc51cba7ffb28bed969f01816a4168f0a87475bb4"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 166771,
+      "sha256": "9f1103b0fb248d40930fb1dc448f262dd3e0575e84e6410b2da0a0cf760e26ff"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 11381,
+      "sha256": "dc91559f01e27b549bcc84d66f49532d3dc1a8278765cd5f6289cd639611bc06"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 291890,
+      "sha256": "160c22968549057a049e931bc51cba7ffb28bed969f01816a4168f0a87475bb4"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 198068,
+      "sha256": "4363b4c362f98aa8c07f9ea5ca6e7361d796dfbfdf1b0c513e359dad7f3ae102"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 291890,
+      "sha256": "160c22968549057a049e931bc51cba7ffb28bed969f01816a4168f0a87475bb4"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 198068,
+      "sha256": "4363b4c362f98aa8c07f9ea5ca6e7361d796dfbfdf1b0c513e359dad7f3ae102"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 291890,
+      "sha256": "160c22968549057a049e931bc51cba7ffb28bed969f01816a4168f0a87475bb4"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 198068,
+      "sha256": "4363b4c362f98aa8c07f9ea5ca6e7361d796dfbfdf1b0c513e359dad7f3ae102"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 101928,
+      "sha256": "6e63bbbfc063b3fce57e91b0428283bce9d4494afe218e04e755201cc7c47fdd"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 101928,
+      "sha256": "6e63bbbfc063b3fce57e91b0428283bce9d4494afe218e04e755201cc7c47fdd"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 9,
+    "bytes": 1352947,
+    "inventorySha256": "93b61f82a7d1c3d5c1750e08c3fd244f565584245764ebb0276076c3d5f041ab",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "prime-lane-motors",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 20,
+    "report": "dealers/prime-lane-motors/input-review.json"
+  },
+  "after": {
+    "files": 20,
+    "bytes": 1382103
+  }
+}

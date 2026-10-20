@@ -309,7 +309,7 @@ jobs:
         path: runtime/dealer-pack-transport/lane-${{ matrix.lane }}/manifest.json
         overwrite: true
         if-no-files-found: warn
-        retention-days: 1
+        retention-days: 7
     - name: Retain deduplicated final blob shard 0
       if: ${{ !cancelled() && needs.plan.outputs.benchmark != 'true' }}
       uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
@@ -320,7 +320,7 @@ jobs:
         if-no-files-found: ignore
         include-hidden-files: true
         compression-level: 1
-        retention-days: 1
+        retention-days: 7
     - name: Retain deduplicated final blob shard 1
       if: ${{ !cancelled() && needs.plan.outputs.benchmark != 'true' }}
       uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
@@ -331,7 +331,7 @@ jobs:
         if-no-files-found: ignore
         include-hidden-files: true
         compression-level: 1
-        retention-days: 1
+        retention-days: 7
     - name: Retain deduplicated final blob shard 2
       if: ${{ !cancelled() && needs.plan.outputs.benchmark != 'true' }}
       uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
@@ -342,7 +342,7 @@ jobs:
         if-no-files-found: ignore
         include-hidden-files: true
         compression-level: 1
-        retention-days: 1
+        retention-days: 7
     - name: Retain deduplicated final blob shard 3
       if: ${{ !cancelled() && needs.plan.outputs.benchmark != 'true' }}
       uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
@@ -353,7 +353,7 @@ jobs:
         if-no-files-found: ignore
         include-hidden-files: true
         compression-level: 1
-        retention-days: 1
+        retention-days: 7
     - name: Retain deduplicated final blob shard 4
       if: ${{ !cancelled() && needs.plan.outputs.benchmark != 'true' }}
       uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
@@ -364,7 +364,7 @@ jobs:
         if-no-files-found: ignore
         include-hidden-files: true
         compression-level: 1
-        retention-days: 1
+        retention-days: 7
     - name: Retain deduplicated final blob shard 5
       if: ${{ !cancelled() && needs.plan.outputs.benchmark != 'true' }}
       uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
@@ -375,7 +375,7 @@ jobs:
         if-no-files-found: ignore
         include-hidden-files: true
         compression-level: 1
-        retention-days: 1
+        retention-days: 7
     - name: Retain deduplicated final blob shard 6
       if: ${{ !cancelled() && needs.plan.outputs.benchmark != 'true' }}
       uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
@@ -386,7 +386,7 @@ jobs:
         if-no-files-found: ignore
         include-hidden-files: true
         compression-level: 1
-        retention-days: 1
+        retention-days: 7
     - name: Retain deduplicated final blob shard 7
       if: ${{ !cancelled() && needs.plan.outputs.benchmark != 'true' }}
       uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
@@ -397,7 +397,7 @@ jobs:
         if-no-files-found: ignore
         include-hidden-files: true
         compression-level: 1
-        retention-days: 1
+        retention-days: 7
   result:
     needs:
     - contracts

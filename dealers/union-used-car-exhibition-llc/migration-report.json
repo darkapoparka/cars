@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "union-used-car-exhibition-llc",
+  "previousSlug": "union-used-car-exhibition-llc",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:16:00.298Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 4,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-sharjah-union-used-car-exhibition-llc",
+    "position": 389
+  },
+  "before": {
+    "files": 38,
+    "bytes": 4471670
+  },
+  "afterBeforeReview": {
+    "files": 22,
+    "bytes": 1976145
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 98247,
+      "sha256": "b647d83b210ef8cf83754f16cdffda58f478fb519f114f8b93e8756bed809de6"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 84407,
+      "sha256": "dfd516144f74d747bcc18ae1804a9dc26016a72795fb0eee4dff50d2d581d83d"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 98247,
+      "sha256": "b647d83b210ef8cf83754f16cdffda58f478fb519f114f8b93e8756bed809de6"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 116382,
+      "sha256": "b8fc12d636622c36271e490d730b255b341dc65149bc1c07b22f762befdf192b"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 286173,
+      "sha256": "30607be39d21e2289be58c1bd0e0d7197e254e9c6eb16147174959824b6df764"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 286173,
+      "sha256": "30607be39d21e2289be58c1bd0e0d7197e254e9c6eb16147174959824b6df764"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 116382,
+      "sha256": "b8fc12d636622c36271e490d730b255b341dc65149bc1c07b22f762befdf192b"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 98247,
+      "sha256": "b647d83b210ef8cf83754f16cdffda58f478fb519f114f8b93e8756bed809de6"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 9005,
+      "sha256": "464be7a8293cc9702b4433b0b624b513fc6ec45cf14404c2f69da52b7551d2be"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 286173,
+      "sha256": "30607be39d21e2289be58c1bd0e0d7197e254e9c6eb16147174959824b6df764"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 206918,
+      "sha256": "6cb36b1b513c8fbb051b39419ca728fe9bda3648a5c0b44493752ee739997f45"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 286173,
+      "sha256": "30607be39d21e2289be58c1bd0e0d7197e254e9c6eb16147174959824b6df764"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 206918,
+      "sha256": "6cb36b1b513c8fbb051b39419ca728fe9bda3648a5c0b44493752ee739997f45"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 116382,
+      "sha256": "b8fc12d636622c36271e490d730b255b341dc65149bc1c07b22f762befdf192b"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 74192,
+      "sha256": "f933a387e473e81e7e8711a7fcaadb6936e3b832dd0428d74380048b86c26c3e"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 60886,
+      "sha256": "3f01303fd06fbd6de56836a3a145dd35068295ac0034ea6e1bb897c9e43903d3"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 68490,
+      "sha256": "f70e5010baaac4887c1fdf144742ae467b65e7f41cba58bb9843c83bd06b93c4"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 12,
+    "bytes": 1299940,
+    "inventorySha256": "365be33fb07165d13ce63e33281561eefcafc749cc73a52049b7ae802d6782c6",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "union-used-car-exhibition-llc",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 24,
+    "report": "dealers/union-used-car-exhibition-llc/input-review.json"
+  },
+  "after": {
+    "files": 24,
+    "bytes": 1984881
+  }
+}

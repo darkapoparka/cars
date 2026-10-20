@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-input-review",
+  "dealer": "thahban-motors",
+  "reviewed": true,
+  "reviewedAt": "2026-10-20T19:15:41.047Z",
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "checks": [
+    "canonical-hosting-and-preserved-fleet-collisions",
+    "assigned-expansion-lead",
+    "public-fact-schema-and-price-omission",
+    "personal-contact-screen",
+    "retained-stock-media",
+    "companion-copy-source-binding",
+    "immutable-template-release-and-native-QA-parent",
+    "reviewed-artwork-provenance-and-regenerated-logo-hashes"
+  ],
+  "sourceArtworkReview": "Retained artwork review is separate provenance; this command does not perform visual, Arabic-expert or dealer approval.",
+  "copyReview": "Automated structure, stock hash, source text and complete EN/BG rows; no new human translation approval is inferred.",
+  "contacts": {
+    "schemaVersion": 1,
+    "kind": "cars-automated-public-contact-screen",
+    "dealer": "thahban-motors",
+    "method": "heuristic; no claim that unflagged values cannot be personal",
+    "flags": [],
+    "blocking": []
+  },
+  "batch": {
+    "number": 4,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-sharjah-thahban-motors",
+    "position": 387
+  },
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "inputs": [
+    {
+      "path": "FACTS-AND-INVENTORY.json",
+      "sha256": "329508725a5e19593bb543d1d7976e0b8774f2c981ced6cdf4ee6c3e317c9477"
+    },
+    {
+      "path": "branding/generated-on-dark.png",
+      "sha256": "bfc4dfe5d98210b54bb21db469ab5eb2be544c914f83c883991b83c14401c744"
+    },
+    {
+      "path": "branding/generated-on-light.png",
+      "sha256": "323dd0e151ebc77897c97cf245c55716e003337d5ec81779424e10a2a40f0c3f"
+    },
+    {
+      "path": "branding/logo-contract.json",
+      "sha256": "2fd00cbfa5a1b2a80496ae300b737ab8452e7e5bab26f451c1cf3e0f490a6ee1"
+    },
+    {
+      "path": "branding/logo-recipe.json",
+      "sha256": "8ed2d859920888cfb8416b78d94444dc10e93157449de841646c20a8a39c0ba8"
+    },
+    {
+      "path": "branding/source-original.webp",
+      "sha256": "3b51ab1cad6d283ef7d5cb11e7717a815a849d589f2159d6c51a4ceecceff15b"
+    },
+    {
+      "path": "branding/source.json",
+      "sha256": "5f8f11f9933ffd9e2cb3832c6428ae9ff926084298494ec474d0991dc47b529d"
+    },
+    {
+      "path": "business-facts.json",
+      "sha256": "6b628926a0cf15ff824c6dd2e83aaf80ce9c80a17b439c78e3a53649c8a36b85"
+    },
+    {
+      "path": "copy-review.json",
+      "sha256": "49740e99a2dd8fc23c4e0bf57fc35f406f15f94e08be4e8921c9448c55e514d5"
+    },
+    {
+      "path": "dealer-stock/dubicars-1000869.webp",
+      "sha256": "b682b52cf8851b6a87bd9f24f60d11c452a58f2b287fdb433535770b75c7d65e"
+    },
+    {
+      "path": "dealer-stock/dubicars-1036580.webp",
+      "sha256": "0eda4068041243c57443bd85b2edfb78c95ad1c14e6cc1539fe8739017aa670b"
+    },
+    {
+      "path": "dealer-stock/dubicars-1037392.webp",
+      "sha256": "29c168af7b7ca84528b67f2745d1a09628560ba9db4cf02d48410d75960be2bf"
+    },
+    {
+      "path": "dealer.json",
+      "sha256": "86da056d483558ab969fb6607280fda4ab11a99225c30bfa9f53ca62172483a3"
+    },
+    {
+      "path": "identity-review.json",
+      "sha256": "4825e283ccbdd8b03c2748f263ebc035c96a445e49b6fba93d8c54eb0278fe4b"
+    },
+    {
+      "path": "locale.json",
+      "sha256": "ede842d0f04e2f06904fcd61afc464a3c218131e5f60a74ccf134bdc46f9a115"
+    },
+    {
+      "path": "missing-facts.json",
+      "sha256": "80d53dcb298ee59be4226ed2d770099a5b653ede15e2aa25a382971135682cd9"
+    },
+    {
+      "path": "qualification.json",
+      "sha256": "00af25fa6823b5da8dd74ddfbabc0fa27414ec8a5a43c6fe31bc30291a5397dd"
+    },
+    {
+      "path": "source-evidence.json",
+      "sha256": "73cede8e16baaf12d37ed480e4c7c07506762788520146e51c5fb0d8a83f193e"
+    },
+    {
+      "path": "stock.json",
+      "sha256": "468f37eeed962b6b41d66cd91653e7fa56dc30073e806199dfbedbe3625eb0a4"
+    }
+  ],
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "providerWrites": 0
+}

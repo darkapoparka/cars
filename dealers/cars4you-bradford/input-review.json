@@ -1,0 +1,124 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-input-review",
+  "dealer": "cars4you-bradford",
+  "reviewed": true,
+  "reviewedAt": "2026-10-20T19:16:12.846Z",
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "checks": [
+    "canonical-hosting-and-preserved-fleet-collisions",
+    "assigned-expansion-lead",
+    "public-fact-schema-and-price-omission",
+    "personal-contact-screen",
+    "retained-stock-media",
+    "companion-copy-source-binding",
+    "immutable-template-release-and-native-QA-parent",
+    "reviewed-artwork-provenance-and-regenerated-logo-hashes"
+  ],
+  "sourceArtworkReview": "Retained artwork review is separate provenance; this command does not perform visual, Arabic-expert or dealer approval.",
+  "copyReview": "Automated structure, stock hash, source text and complete EN/BG rows; no new human translation approval is inferred.",
+  "contacts": {
+    "schemaVersion": 1,
+    "kind": "cars-automated-public-contact-screen",
+    "dealer": "cars4you-bradford",
+    "method": "heuristic; no claim that unflagged values cannot be personal",
+    "flags": [],
+    "blocking": []
+  },
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-bradford-cars4you",
+    "position": 23
+  },
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "inputs": [
+    {
+      "path": "FACTS-AND-INVENTORY.json",
+      "sha256": "95dc6b1dca3f57f5c6ec0182acfb58b5e99daceac47038ad4896ecbd354cc26b"
+    },
+    {
+      "path": "branding/generated-mark-on-dark.png",
+      "sha256": "03dff3235625b00c964b384d1cc4a6c0c51e57be7ed0ebfdae9e481ec71a4e2e"
+    },
+    {
+      "path": "branding/generated-mark.png",
+      "sha256": "ba06c7bc1411d6ee2d26f5587981be1983d7f20c0141fe7b627ecf573c512d31"
+    },
+    {
+      "path": "branding/generated-master.png",
+      "sha256": "f7635cb95202b8e67ff36e8dbfe95ee2c6f86d94704ba18f15c67277eb5bfcb9"
+    },
+    {
+      "path": "branding/generated-on-dark.png",
+      "sha256": "e385ba050cb021380444b35fec740670a21132308080b6ed88b95a27d9c689cd"
+    },
+    {
+      "path": "branding/logo-contract.json",
+      "sha256": "0f1a6850626c58ee7ca5ab067b9f3153758eef69a3d99613be84f71f9fa85dea"
+    },
+    {
+      "path": "branding/logo-recipe.json",
+      "sha256": "31af4cc6dbc72c4f9386a76ffa3e064b2a103bea6f14e9b772b3ebb7cec1869a"
+    },
+    {
+      "path": "branding/source.json",
+      "sha256": "b4b5b3ba6a8ce9c2c49098c92fb7201ff07f1b4924ef2c2c6891688fc911884b"
+    },
+    {
+      "path": "business-facts.json",
+      "sha256": "c933560b6282e65a1d0c136582af6b2df51c591b81d5bb560de6864e7965e63d"
+    },
+    {
+      "path": "copy-review.json",
+      "sha256": "854101b9d66818824958c3a9c2db59aab28dcb5b1e689826d67d971e44101519"
+    },
+    {
+      "path": "dealer-stock/public-1.jpg",
+      "sha256": "52473df6e57f3f9b2220c37f097baaeb5718fe6b4a429e022fac640dd4ad948e"
+    },
+    {
+      "path": "dealer-stock/public-2.jpg",
+      "sha256": "4fc920eb419e2b9f6d3713b0792ed59e05e45ddcee0134283fbc198cbf54619d"
+    },
+    {
+      "path": "dealer-stock/public-3.jpg",
+      "sha256": "c930aa794a176810c1b6cb8cf2118f57399d4167b185589edea38ff262d52656"
+    },
+    {
+      "path": "dealer.json",
+      "sha256": "497c0be55931f6fe81dc89406e07ef67e4ab1dbb5b280dc80b44ba3beb1dba24"
+    },
+    {
+      "path": "identity-review.json",
+      "sha256": "e03d4d100c71b7da16003dd09fd19746f3f6a63ae4a217a7fd4817488b49cc9b"
+    },
+    {
+      "path": "locale.json",
+      "sha256": "b0402eadb127ad5b3cd0704bcb3b1f3a8d4cce3a26b4bb9951e4464dce341dbf"
+    },
+    {
+      "path": "missing-facts.json",
+      "sha256": "434ff9a6bcf8294105e1ad2c08f3858d81e7cefb41d57d53e77a052b27e5f41d"
+    },
+    {
+      "path": "qualification.json",
+      "sha256": "ffcf4af8c7bf14332819fe2220e59683d556a2785880ba3e3643a0eaa3a12112"
+    },
+    {
+      "path": "source-evidence.json",
+      "sha256": "038e17e95311371638af90b71a8cf5441c92df93c6b5fb728cf7db99203b24ab"
+    },
+    {
+      "path": "stock.json",
+      "sha256": "56e960eee55cd6aefce465005ed5125d4097ee0647ad52f207130cdd7469c358"
+    }
+  ],
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "providerWrites": 0
+}

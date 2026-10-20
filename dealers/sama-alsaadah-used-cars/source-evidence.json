@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "dealer": "sama-alsaadah-used-cars",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://www.oneclickdrive.com/company/sharjah/sama-alsaadah-used-cars",
+      "observedAt": "2026-10-19T19:58:51.524385Z",
+      "supports": [
+        "public-business-trading-name",
+        "dealer-attributed-catalogue",
+        "business-location",
+        "public-business-phone"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Mazda/6-Sport/?id=16012",
+      "observedAt": "2026-10-19T19:58:51.524385Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Nissan/Altima-S/?id=16021",
+      "observedAt": "2026-10-19T19:58:51.524385Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Toyota/Corolla-XLI/?id=16007",
+      "observedAt": "2026-10-19T19:58:51.524385Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "research": {
+    "observedAt": "2026-10-19T19:58:51.524385Z",
+    "profileUrl": "https://www.oneclickdrive.com/company/sharjah/sama-alsaadah-used-cars",
+    "profileSha256": "b33a69f0c38d30776d720d77260ec20c72b882cdd3d10958cb36a21cce60b1c0",
+    "classification": "public-marketplace-dealer-profile-and-listing-snapshot",
+    "directDealerPostingVerified": false,
+    "profileClaimed": false,
+    "limitation": "Seller attribution comes from the public marketplace profile. Current physical availability and direct dealer posting are not independently confirmed.",
+    "notes": [
+      "Marketplace profile and detail-page timing blocks conflict or appear generic; opening hours omitted. Platform WhatsApp relay is excluded."
+    ],
+    "contactReview": "Only business-labeled dealer call numbers retained. Marketplace relay/support numbers and personal-looking staff contacts excluded.",
+    "photoSources": [
+      {
+        "listingId": "ocd-16012",
+        "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Mazda/6-Sport/?id=16012",
+        "sourceImageUrl": "https://static.oneclickdrive.com/uploads/cars/Mazda_6_2022_16012_16012_9513560359-9_small.jpg",
+        "observedAt": "2026-10-19T19:58:51.524385Z",
+        "retainedPath": "dealer-stock/ocd-16012.jpg",
+        "sha256": "87c353d6873269e5f5e4a684e1ee0eabbd713b57a36b23477390431398dbf2fc",
+        "bytes": 29903,
+        "width": 450,
+        "height": 395,
+        "operation": "resize-within-1280-without-upscale-and-JPEG-quality-82-or-83"
+      },
+      {
+        "listingId": "ocd-16021",
+        "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Nissan/Altima-S/?id=16021",
+        "sourceImageUrl": "https://static.oneclickdrive.com/uploads/cars/Nissan_Altima_2021_16021_16021_9522481182-8_small.jpg",
+        "observedAt": "2026-10-19T19:58:51.524385Z",
+        "retainedPath": "dealer-stock/ocd-16021.jpg",
+        "sha256": "a044e2bad5424beaf5186dc5b9c3e34556ebd72edffc01e115ac95358c486b39",
+        "bytes": 35346,
+        "width": 450,
+        "height": 395,
+        "operation": "resize-within-1280-without-upscale-and-JPEG-quality-82-or-83"
+      },
+      {
+        "listingId": "ocd-16007",
+        "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Toyota/Corolla-XLI/?id=16007",
+        "sourceImageUrl": "https://static.oneclickdrive.com/uploads/cars/Toyota_Corolla_2021_16007_16007_9508614746-5_small.jpg",
+        "observedAt": "2026-10-19T19:58:51.524385Z",
+        "retainedPath": "dealer-stock/ocd-16007.jpg",
+        "sha256": "c6ebddd5f95480c9f87185976652ab21acedc57b217e10dbe58b3852c3dccb00",
+        "bytes": 38137,
+        "width": 450,
+        "height": 395,
+        "operation": "resize-within-1280-without-upscale-and-JPEG-quality-82-or-83"
+      }
+    ]
+  }
+}

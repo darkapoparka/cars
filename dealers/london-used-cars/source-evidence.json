@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "dealer": "london-used-cars",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uk.json",
+    "sha256": "6cd8d365586f9a5d5131fe4b1d50baede7de91ab384a135017c25367298b07c4"
+  },
+  "publicSources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/London-used-cars?menu=1",
+      "observedAt": "2026-10-19T17:36:51.252546Z",
+      "supports": [
+        "public-business-identity",
+        "public-business-contact",
+        "advertised-stock"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "publicObservations": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/London-used-cars?menu=1",
+      "observedAt": "2026-10-19T17:36:51.252546Z",
+      "httpStatus": 200,
+      "sha256": "34301c0595828016cabf2866e822016fd911de80a246290d816134716ba28e04",
+      "byteLength": 36219,
+      "retention": "Only reviewed public business fields, hashes, listing identities and compressed photographs are committed; raw HTML remains outside the public pack."
+    }
+  ],
+  "stock": [
+    {
+      "sourceUrl": "https://www.ebay.co.uk/itm/117466852856",
+      "photoUrl": "https://i.ebayimg.com/images/g/w9sAAeSwn1dqz~Pu/s-l1600.jpg",
+      "observedAt": "2026-10-19T17:53:18.803214Z",
+      "listingSha256": "4f87ef9af34fb7bee378d7efd5d8682a392add183305f2b577a9b5e4fa3988ca",
+      "descriptionSha256": "4bc2397728128555a850c6011089b8f44dcfbc13b81ab0e363a588487bb25cba",
+      "sourcePhotoSha256": "189be3bd8251426d9378e0b0e2c304d276747ca41312b57181825c202a4256cd",
+      "sourcePhotoDimensions": [
+        1290,
+        698
+      ],
+      "photoSha256": "3c7870ea317f75524c8a760e476c0fa65bea77dbfc4ccca76f9b6d5a25e99ea3",
+      "photoDimensions": [
+        1280,
+        693
+      ],
+      "photoBytes": 83940,
+      "photoObservedAt": "2026-10-19T18:01:43.570442Z",
+      "recordId": "public-listing-1",
+      "title": "2017 Land Rover Range Rover Evoque 2.0 TD4 SE Tech Auto",
+      "retainedPhoto": "dealer-stock/public-1.jpg",
+      "publicPhotoReviewed": true
+    },
+    {
+      "sourceUrl": "https://www.ebay.co.uk/itm/117466838002",
+      "photoUrl": "https://i.ebayimg.com/images/g/jXAAAeSw2ONqz~Ge/s-l1600.jpg",
+      "observedAt": "2026-10-19T17:53:18.834287Z",
+      "listingSha256": "01fdbd069b03e1d942403c0ea222df422d9651c0814abd115b0ac7417f58a106",
+      "descriptionSha256": "0f12753839b988aaede685a957c5cecc901c9c2fdf86ecb560c6b0b078d3dad8",
+      "sourcePhotoSha256": "3113a859a471a6f8a81a758a992bae49966c1ab8737d72091e63659fd73e856a",
+      "sourcePhotoDimensions": [
+        1500,
+        1125
+      ],
+      "photoSha256": "ed0a3b912058c29d38ed1878e197ebe9efb11429978087946911cffd08193988",
+      "photoDimensions": [
+        1280,
+        960
+      ],
+      "photoBytes": 196410,
+      "photoObservedAt": "2026-10-19T18:01:43.691876Z",
+      "recordId": "public-listing-2",
+      "title": "2014 BMW 420d SE Auto",
+      "retainedPhoto": "dealer-stock/public-2.jpg",
+      "publicPhotoReviewed": true
+    },
+    {
+      "sourceUrl": "https://www.ebay.co.uk/itm/117466833320",
+      "photoUrl": "https://i.ebayimg.com/images/g/ghwAAeSwkIpqz-5N/s-l1600.jpg",
+      "observedAt": "2026-10-19T17:53:19.018565Z",
+      "listingSha256": "172a3235a0ba170b6a9758b5b4ea0f3de63183ebc9e37b30bab6c5ffac248f62",
+      "descriptionSha256": "fd07789f16fc03acfd64ff7bb8f66cd3286c26146735815bbb9d69c96bc581e2",
+      "sourcePhotoSha256": "219fcdd478a8767b23a634da2be1afdae906e83cb37b42ed06281a57ae34f03e",
+      "sourcePhotoDimensions": [
+        1500,
+        1125
+      ],
+      "photoSha256": "8b9fd578cde2801880b7e04b8a0082a73f5aad338015ef6cd2dda2aed3026e9a",
+      "photoDimensions": [
+        1280,
+        960
+      ],
+      "photoBytes": 171877,
+      "photoObservedAt": "2026-10-19T18:01:43.599008Z",
+      "recordId": "public-listing-3",
+      "title": "2016 Vauxhall Mokka 1.4T Exclusiv",
+      "retainedPhoto": "dealer-stock/public-3.jpg",
+      "publicPhotoReviewed": true
+    }
+  ],
+  "review": {
+    "reviewedAt": "2026-10-19T18:24:26.830932Z",
+    "stockPhotoIdentityChecked": true,
+    "sourceClaimLimits": "Dated public adverts only; availability, repairs, vehicle condition and legal entity details are not independently certified.",
+    "omissions": [
+      "Exact retained lead business.name preserved for the M1 identity validator; clean public trading name used in artwork."
+    ]
+  }
+}

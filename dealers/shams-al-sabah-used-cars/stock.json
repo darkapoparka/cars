@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "dealer": "shams-al-sabah-used-cars",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:00:26.132632Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "dubicars-1003444",
+      "title": "Lexus LS460 PREMIER LWB",
+      "make": "Lexus",
+      "model": "Ls 460",
+      "year": 2013,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/dubicars-1003444.webp"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2013-lexus-ls460-1003444.html",
+      "observedAt": "2026-10-19T20:00:26.132632Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 175458,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "dubicars-989381",
+      "title": "Toyota Rush EX",
+      "make": "Toyota",
+      "model": "Rush",
+      "year": 2021,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/dubicars-989381.webp"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2021-toyota-rush-ex-989381.html",
+      "observedAt": "2026-10-19T20:00:26.132632Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 167849,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "dubicars-989389",
+      "title": "Nissan Rogue PLATINUM",
+      "make": "Nissan",
+      "model": "Rogue",
+      "year": 2024,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/dubicars-989389.webp"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2024-nissan-rogue-platinum-non-gcc-989389.html",
+      "observedAt": "2026-10-19T20:00:26.132632Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 45067,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

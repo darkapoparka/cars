@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "amc-custom-motors",
+  "previousSlug": "amc-custom-motors",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:12:37.369Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-bradford-amc-custom-motors",
+    "position": 22
+  },
+  "before": {
+    "files": 37,
+    "bytes": 3104448
+  },
+  "afterBeforeReview": {
+    "files": 21,
+    "bytes": 1234222
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 84138,
+      "sha256": "c5cd06009a5b8e77fc4ef355662bb70705e20526bbd2861f0d55ceff41413f13"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 99682,
+      "sha256": "700c428c27698ced0b319aae33b66f47dc5af17a11ab628437c6814218fc80db"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 84138,
+      "sha256": "c5cd06009a5b8e77fc4ef355662bb70705e20526bbd2861f0d55ceff41413f13"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 143433,
+      "sha256": "13c2eb826b1b8407e22ee7772b65dfb99085e06c6e91cab04e5343e303dcc01b"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 154524,
+      "sha256": "38d25ed638a2953e83d57d71a7f0078ab8e268f5a84efabcf6013c4fbe6dd4fd"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 154524,
+      "sha256": "38d25ed638a2953e83d57d71a7f0078ab8e268f5a84efabcf6013c4fbe6dd4fd"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 143433,
+      "sha256": "13c2eb826b1b8407e22ee7772b65dfb99085e06c6e91cab04e5343e303dcc01b"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 84138,
+      "sha256": "c5cd06009a5b8e77fc4ef355662bb70705e20526bbd2861f0d55ceff41413f13"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 7276,
+      "sha256": "007e9735f8eb12a1af642d54ed3b6dc842e4f0bfe70d375da31397b45fc5cb45"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 154524,
+      "sha256": "38d25ed638a2953e83d57d71a7f0078ab8e268f5a84efabcf6013c4fbe6dd4fd"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 118228,
+      "sha256": "0eb40702561a074373c45d27b14bfbb5ece6a4c221dc84acaf98dfd950341e50"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 154524,
+      "sha256": "38d25ed638a2953e83d57d71a7f0078ab8e268f5a84efabcf6013c4fbe6dd4fd"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 118228,
+      "sha256": "0eb40702561a074373c45d27b14bfbb5ece6a4c221dc84acaf98dfd950341e50"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 143433,
+      "sha256": "13c2eb826b1b8407e22ee7772b65dfb99085e06c6e91cab04e5343e303dcc01b"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 99198,
+      "sha256": "23de29f6c416d25d38bff4148afe77775f9f4bcb958f8096716f28b5e99bde15"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 74742,
+      "sha256": "a08677375574556534f440915d1c02d165d5d2e54e4c5ec29716bd9569c9a6bc"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 55874,
+      "sha256": "39380b1ae6a9a90c134c90f971c725489361252e3227cfa10b9a66ea5a208652"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 12,
+    "bytes": 1209697,
+    "inventorySha256": "b44fd46d4711b2a326c3f5d91f04fc9aa783d2f1a57e3097df1ac9f1251786ac",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "amc-custom-motors",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 23,
+    "report": "dealers/amc-custom-motors/input-review.json"
+  },
+  "after": {
+    "files": 23,
+    "bytes": 1242670
+  }
+}

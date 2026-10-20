@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "dealer": "simply-motors-ilford",
+  "generations": [
+    {
+      "role": "master",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-b7d4622b-0ca1-4352-84d7-ecbdce62064c",
+      "modelVersion": null,
+      "prompt": "Professional independent logo proposal, exact words SIMPLY MOTORS. A single horizontal transparent lockup. Left: compact SM monogram formed from two elegant but stout continuous bends, quietly suggesting a winding road. Right: SIMPLY MOTORS in a modern bold sans-serif, clearly separated from the symbol. Flat near-black ink, excellent kerning, no gradients, texture, backgrounds, shadows, effects, literal cars, shields or slogans. Preserve genuine alpha transparency and ample margin. Compact symbol must survive at32px. Designed for automotive website masthead, disciplined and contemporary.",
+      "promptRetained": true,
+      "sourceAssetSha256": "f3ce077890f2f74e3afd53cbaba6cf92322ee67d399745f3beb1708d525902a3",
+      "observedAt": "2026-10-19",
+      "originalResponseArtworkRetained": true
+    },
+    {
+      "role": "onDarkAndAccent",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-c34f1dfb-2b82-4e66-adc0-f0ce4c530345",
+      "modelVersion": null,
+      "prompt": "Adapt the exact supplied logo into a refined dual-ink surface version, for readable use on dark and red backgrounds. Keep the name spelling, logo motif and layout exactly. Use pure WHITE filled lettering and emblem bounded by a clean broad deep-navy contour, finished with a narrow white outer keyline. No glow. All white areas must be solid opaque ink protected inside the navy contour. True transparent background outside. Maintain a GENEROUS TRANSPARENT GAP between compact emblem and wordmark, do not let their contours touch. No grunge, no speckles, no distressed raster texture, no holes in solid strokes, no gradients, no drop shadow, no decorative panel, no additional content. Flat precise digital artwork with smooth clean contours, professional restrained proportions.",
+      "promptRetained": true,
+      "sourceAssetSha256": "6d6b0a6be6831d4b1075003b9b055585273b60c6e2a571d6e7f0905e05aa9c63",
+      "observedAt": "2026-10-19",
+      "originalResponseArtworkRetained": true
+    }
+  ],
+  "exportPolicy": "Original generated PNG bytes are retained. Compact pixel-exact extractions, where used, retain their parent generation, hash and rectangle in source.json. Existing dealer-pack logo tooling performs only transparent padding removal and deterministic raster exports. No deterministic recolour is used."
+}

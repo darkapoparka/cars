@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "sarmad-used-cars",
+  "previousSlug": "sarmad-used-cars",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:15:10.154Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 4,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-sharjah-sarmad-used-cars",
+    "position": 379
+  },
+  "before": {
+    "files": 39,
+    "bytes": 3947308
+  },
+  "afterBeforeReview": {
+    "files": 23,
+    "bytes": 2349394
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 66976,
+      "sha256": "dfe73b92e2d4771f47893376a3cca40719b5bc877d30f3df48a379c25c911487"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 95121,
+      "sha256": "b9d8c03efa6c18138dc83fa245a5c928a50d78ab74e79ae29763a312844006e1"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 66976,
+      "sha256": "dfe73b92e2d4771f47893376a3cca40719b5bc877d30f3df48a379c25c911487"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 151823,
+      "sha256": "49948589917467bf8767ff598edda8ee6c6588f6dc57c9975d4d80a9d6c7afe0"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 114250,
+      "sha256": "6368e86060b80aeae0bd647f5778ed104aef0eeff92cef1f8388e43b0761f6e1"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 114250,
+      "sha256": "6368e86060b80aeae0bd647f5778ed104aef0eeff92cef1f8388e43b0761f6e1"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 151823,
+      "sha256": "49948589917467bf8767ff598edda8ee6c6588f6dc57c9975d4d80a9d6c7afe0"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 66976,
+      "sha256": "dfe73b92e2d4771f47893376a3cca40719b5bc877d30f3df48a379c25c911487"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 7281,
+      "sha256": "8a32a1ea73306e0294b6867651e5a3a503f4381689721192021a042ec01a6f0d"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 114250,
+      "sha256": "6368e86060b80aeae0bd647f5778ed104aef0eeff92cef1f8388e43b0761f6e1"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 82106,
+      "sha256": "f3053d312d05aad1ccaa5ca8d593d322c41985a15c71c0d95dc4812e407b9e35"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 114250,
+      "sha256": "6368e86060b80aeae0bd647f5778ed104aef0eeff92cef1f8388e43b0761f6e1"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 82106,
+      "sha256": "f3053d312d05aad1ccaa5ca8d593d322c41985a15c71c0d95dc4812e407b9e35"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 151823,
+      "sha256": "49948589917467bf8767ff598edda8ee6c6588f6dc57c9975d4d80a9d6c7afe0"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 98846,
+      "sha256": "3de8a97b5a825ef269da71ddd3c99310443b7b7e4a775f6f882df0d6e97e85c4"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 68952,
+      "sha256": "ef1680120e5709f6673f291007738a8c4c23c5bd8a82eba960e07e3286f9906e"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 53908,
+      "sha256": "76fe04ec184dcdb77460c6fe9adbd711d4fef1523fe94076dd84aa7394e463dd"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 13,
+    "bytes": 1984161,
+    "inventorySha256": "9087ea995cb803b859cc6da4b25a320ae3405fc292c1c04652eaf6fc1797c1a1",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "sarmad-used-cars",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 25,
+    "report": "dealers/sarmad-used-cars/input-review.json"
+  },
+  "after": {
+    "files": 25,
+    "bytes": 2358165
+  }
+}

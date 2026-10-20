@@ -1,0 +1,117 @@
+{
+  "schemaVersion": 1,
+  "dealer": "rebou-najd-used-cars-trading",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://www.dubicars.com/dealers/sharjah-rebou-najd-used-cars-trading-1785",
+      "observedAt": "2026-10-19T20:00:23.851965Z",
+      "supports": [
+        "business.name",
+        "business.city",
+        "business.countryCode",
+        "business.address",
+        "business.phone",
+        "business.hours",
+        "dated-dealer-catalogue-listings"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2020-mitsubishi-pajero-mitsuhbishi-pajero-gls-2020engine-38lv6-1037103.html",
+      "observedAt": "2026-10-19T20:00:23.851965Z",
+      "supports": [
+        "stock.dubicars-1037103"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2025-toyota-land-cruiser-toyota-land-cruiser-prado-2025-1037098.html",
+      "observedAt": "2026-10-19T20:00:23.851965Z",
+      "supports": [
+        "stock.dubicars-1037098"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2020-nissan-patrol-engine-56lv8-1036920.html",
+      "observedAt": "2026-10-19T20:00:23.851965Z",
+      "supports": [
+        "stock.dubicars-1036920"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "agentResearch": {
+    "observedAt": "2026-10-19T20:00:23.851965Z",
+    "method": "Public catalogue HTML/JSON-LD and actual stock image read; fields checked before inclusion. No contact or account interaction.",
+    "identityNotes": [
+      "Profile street address conflicts with its stated emirate; exact address omitted.",
+      "Personal-looking mailbox omitted; no personal contact retained."
+    ],
+    "imageReview": "Actual three stock images visually reviewed; no price overlay or named personal contact used.",
+    "logoResearchStatus": "in-progress"
+  },
+  "stockPhotos": [
+    {
+      "listingId": "dubicars-1037103",
+      "listingUrl": "https://www.dubicars.com/2020-mitsubishi-pajero-mitsuhbishi-pajero-gls-2020engine-38lv6-1037103.html",
+      "sourceUrl": "https://www.dubicars.com/images/0c2b8b/650x380/rebou-najd-used-cars-trading/27b44c01-a01a-4e87-90ce-0c6b3b2c042d.jpeg",
+      "observedAt": "2026-10-19T20:00:23.851965Z",
+      "sourceSha256": "6d76ffbb3f371a89ef31a0ed0bef861248f84adb70b2ee4987487635810d8f66",
+      "retainedPath": "dealer-stock/dubicars-1037103.webp",
+      "retainedSha256": "ae992e4e96ef8fb4bf4ec1067daefdb696a83b39a9eccbc32b6d8409264a91ff",
+      "nativeDimensions": [
+        650,
+        488
+      ],
+      "retainedDimensions": [
+        650,
+        488
+      ],
+      "retainedBytes": 42806,
+      "transformation": "Bounded resize with preserved aspect ratio and WebP compression; no watermark removal.",
+      "reusePermission": "not independently established; public-preview source attribution retained"
+    },
+    {
+      "listingId": "dubicars-1037098",
+      "listingUrl": "https://www.dubicars.com/2025-toyota-land-cruiser-toyota-land-cruiser-prado-2025-1037098.html",
+      "sourceUrl": "https://www.dubicars.com/images/ba2bca/650x380/rebou-najd-used-cars-trading/63cd8144-f6ad-43d7-a7c8-0cb9cce71a68.jpeg",
+      "observedAt": "2026-10-19T20:00:23.851965Z",
+      "sourceSha256": "c6718eff98cd1730d476e0a07ff2de006aba676cf095acb7cf7e5e4f0cc1fa90",
+      "retainedPath": "dealer-stock/dubicars-1037098.webp",
+      "retainedSha256": "aaaeb70da32e2096663dcc1aaad6e9e34ccb81767c1687a217ff6d7244c5ba5c",
+      "nativeDimensions": [
+        650,
+        488
+      ],
+      "retainedDimensions": [
+        650,
+        488
+      ],
+      "retainedBytes": 57838,
+      "transformation": "Bounded resize with preserved aspect ratio and WebP compression; no watermark removal.",
+      "reusePermission": "not independently established; public-preview source attribution retained"
+    },
+    {
+      "listingId": "dubicars-1036920",
+      "listingUrl": "https://www.dubicars.com/2020-nissan-patrol-engine-56lv8-1036920.html",
+      "sourceUrl": "https://www.dubicars.com/images/62a86b/650x380/rebou-najd-used-cars-trading/2cc0ade1-656f-4f37-8f90-2549f4eea61e.jpeg",
+      "observedAt": "2026-10-19T20:00:23.851965Z",
+      "sourceSha256": "22c4177249b886de15e311d2bee3fccad9a495cefa8deaaac32772cdb97187e6",
+      "retainedPath": "dealer-stock/dubicars-1036920.webp",
+      "retainedSha256": "ec788163bc089926f68525e188c85b91aa36aa654b08c7eb6883c45592393c45",
+      "nativeDimensions": [
+        650,
+        488
+      ],
+      "retainedDimensions": [
+        650,
+        488
+      ],
+      "retainedBytes": 52124,
+      "transformation": "Bounded resize with preserved aspect ratio and WebP compression; no watermark removal.",
+      "reusePermission": "not independently established; public-preview source attribution retained"
+    }
+  ]
+}

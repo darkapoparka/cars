@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "dealer": "wortley-road-car-sales",
+  "missing": [
+    {
+      "field": "business.email",
+      "required": false,
+      "reason": "No sufficiently verified current public business value retained after source review."
+    },
+    {
+      "field": "business.website",
+      "required": false,
+      "reason": "No sufficiently verified current public business value retained after source review."
+    },
+    {
+      "field": "prices",
+      "required": false,
+      "reason": "All listing prices are omitted under the public-repository scope."
+    }
+  ],
+  "blocking": []
+}

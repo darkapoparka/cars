@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "sour-motors-hyde",
+  "previousSlug": "sour-motors-hyde",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:22:28.951Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-hyde-sour-motors",
+    "position": 52
+  },
+  "before": {
+    "files": 41,
+    "bytes": 3520765
+  },
+  "afterBeforeReview": {
+    "files": 25,
+    "bytes": 1867671
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 66230,
+      "sha256": "4f20f02a905525306dc148095fc209f57ebf30177ecf648d8aa6aeb03ab723ab"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 133002,
+      "sha256": "3e674da0ee2479c3d0ee579665ea39293b72f07b71655b4b9e1e9c24f0ce9a3b"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 66230,
+      "sha256": "4f20f02a905525306dc148095fc209f57ebf30177ecf648d8aa6aeb03ab723ab"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 70828,
+      "sha256": "904160d29223c8c0cdeee70f7ce1cbdb6db93b33f1dd9534a94f4062f41acf4a"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 172099,
+      "sha256": "9d1848824dd0d36dee92c589aedeea276214b4ff1a2232fd5943fd89fdbdb721"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 172099,
+      "sha256": "9d1848824dd0d36dee92c589aedeea276214b4ff1a2232fd5943fd89fdbdb721"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 70828,
+      "sha256": "904160d29223c8c0cdeee70f7ce1cbdb6db93b33f1dd9534a94f4062f41acf4a"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 66230,
+      "sha256": "4f20f02a905525306dc148095fc209f57ebf30177ecf648d8aa6aeb03ab723ab"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 4544,
+      "sha256": "eabfd9130b55f5647c71e8fd2e44956bda974e5b649508b42460f57990eb08dc"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 172099,
+      "sha256": "9d1848824dd0d36dee92c589aedeea276214b4ff1a2232fd5943fd89fdbdb721"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 117692,
+      "sha256": "e8c1f1b6a308d3486d0dbf361e864cc09e4ee0d67a745275be2188d606ced266"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 172099,
+      "sha256": "9d1848824dd0d36dee92c589aedeea276214b4ff1a2232fd5943fd89fdbdb721"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 117692,
+      "sha256": "e8c1f1b6a308d3486d0dbf361e864cc09e4ee0d67a745275be2188d606ced266"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 70828,
+      "sha256": "904160d29223c8c0cdeee70f7ce1cbdb6db93b33f1dd9534a94f4062f41acf4a"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 51718,
+      "sha256": "d5682e90be4f1ff737e9071e1c5a053c6f54795c22dee89b84f05179dd28b52c"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 87994,
+      "sha256": "50e894c82f356960d6f6de84ece594add5495d11e03b1ba59590d563da453d45"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 44668,
+      "sha256": "27ff9737bf8c2fdef7fb13270aa6db1a910ffa522ca402da49f5fcbd631e60dc"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 12,
+    "bytes": 1832504,
+    "inventorySha256": "10b619d56346f960036d922add4ab8252beacab1e7122c97474c84baa8a4d267",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "sour-motors-hyde",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 27,
+    "report": "dealers/sour-motors-hyde/input-review.json"
+  },
+  "after": {
+    "files": 27,
+    "bytes": 1876788
+  }
+}

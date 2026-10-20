@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "slug": "rebou-al-fakhama-used-cars",
+  "dealerId": "ae-sharjah-rebou-al-fakhama-used-cars",
+  "business": {
+    "name": "Rebou Al Fakhama Used Cars",
+    "city": "Sharjah",
+    "region": "Sharjah",
+    "countryCode": "AE",
+    "currency": "AED",
+    "distanceUnit": "km",
+    "locale": "en-AE",
+    "address": "",
+    "phone": "",
+    "phoneDisplay": "",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://ayshei.com/v-shop/rebou_al_fakhama/inventory",
+    "hours": "",
+    "sourceUrl": "https://ayshei.com/v-shop/rebou_al_fakhama/inventory",
+    "observedAt": "2026-10-19T19:58:51.844383Z",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://ayshei.com/v-shop/rebou_al_fakhama/inventory",
+      "observedAt": "2026-10-19T19:58:51.844383Z",
+      "supports": [
+        "public-business-trading-name",
+        "dealer-attributed-catalogue",
+        "business-location"
+      ]
+    },
+    {
+      "url": "https://ayshei.com/ads/detail/8821814212-2019-audi-q7-american-specs-excellent-condition",
+      "observedAt": "2026-10-19T19:58:51.844383Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    },
+    {
+      "url": "https://ayshei.com/ads/detail/8084758468-2023-ford-mustang-gt-premium-american-specs-excellent-condition",
+      "observedAt": "2026-10-19T19:58:51.844383Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    },
+    {
+      "url": "https://ayshei.com/ads/detail/2182514939-2019-dodge-charger-gt-american-specs",
+      "observedAt": "2026-10-19T19:58:51.844383Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    }
+  ]
+}

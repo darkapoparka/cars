@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "najem-al-tareeq-used-cars",
+  "previousSlug": "najem-al-tareeq-used-cars",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:12:21.581Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 4,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-sharjah-najem-al-tareeq-used-cars",
+    "position": 365
+  },
+  "before": {
+    "files": 37,
+    "bytes": 5432403
+  },
+  "afterBeforeReview": {
+    "files": 21,
+    "bytes": 1563552
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 140818,
+      "sha256": "061636f43a7f58b242f16468fb8df95e68b812317d0d01c1185f5870e7723e0e"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 150191,
+      "sha256": "2d28c4b0efbbfbb5587858ca5ed85a4b04f0d12cf9762c0d3204f2065dae65ad"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 140818,
+      "sha256": "061636f43a7f58b242f16468fb8df95e68b812317d0d01c1185f5870e7723e0e"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 118949,
+      "sha256": "b9346c31378a53079505420c333fb3113b6810cbed2fdceeb37cbef0fbec5eae"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 497220,
+      "sha256": "974e8f5be4d1487760ddb3e4e1ae67a1e2adbff8238ecdc919265e808d288bf8"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 497220,
+      "sha256": "974e8f5be4d1487760ddb3e4e1ae67a1e2adbff8238ecdc919265e808d288bf8"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 118949,
+      "sha256": "b9346c31378a53079505420c333fb3113b6810cbed2fdceeb37cbef0fbec5eae"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 140818,
+      "sha256": "061636f43a7f58b242f16468fb8df95e68b812317d0d01c1185f5870e7723e0e"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 11707,
+      "sha256": "904b5f161641f363c901b0b08199d703354f60eba9a7f6e150d4167ee32b729a"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 497220,
+      "sha256": "974e8f5be4d1487760ddb3e4e1ae67a1e2adbff8238ecdc919265e808d288bf8"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 332926,
+      "sha256": "77fbdf08a7b91959337fd3e676caeabc0d915e45bf8984a1d9cddd473e3540ea"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 497220,
+      "sha256": "974e8f5be4d1487760ddb3e4e1ae67a1e2adbff8238ecdc919265e808d288bf8"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 332926,
+      "sha256": "77fbdf08a7b91959337fd3e676caeabc0d915e45bf8984a1d9cddd473e3540ea"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 118949,
+      "sha256": "b9346c31378a53079505420c333fb3113b6810cbed2fdceeb37cbef0fbec5eae"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 83646,
+      "sha256": "6c938dbcf3927b29fa979f84e5ff271d85d4ee77b0ecdf5cbd2f712d5838b7a5"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 107008,
+      "sha256": "64b6218863ce8bcc885b7a31003a137cb42e49fe7c867353405a1307b202c2aa"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 86122,
+      "sha256": "818ca5e0fa6304fc48c6b51d3a63aaf13b0988f4aeb57598899e197095b9a829"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 12,
+    "bytes": 1538311,
+    "inventorySha256": "55ce9a1fab36d66aef1670b60237e6e38a628dab676edded68694cfd265f7248",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "najem-al-tareeq-used-cars",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 23,
+    "report": "dealers/najem-al-tareeq-used-cars/input-review.json"
+  },
+  "after": {
+    "files": 23,
+    "bytes": 1572117
+  }
+}

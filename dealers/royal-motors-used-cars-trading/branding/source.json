@@ -1,0 +1,142 @@
+{
+  "schemaVersion": 1,
+  "dealer": "royal-motors-used-cars-trading",
+  "realLogoFirst": true,
+  "publishedBranding": true,
+  "creationMethod": "sourced-logo-imagegen-redraw",
+  "approvalStatus": "redraw-and-compact-derivative-not-dealer-approved",
+  "dealerApproved": false,
+  "usageStatus": "public-preview-only",
+  "observedAt": "2026-10-19T20:36:00.335Z",
+  "publicSources": [
+    {
+      "url": "https://auto.ae/royalmotorsuaq/",
+      "observedAt": "2026-10-19T20:01:39Z"
+    }
+  ],
+  "originals": [
+    {
+      "path": "branding/source-original.jpg",
+      "sha256": "3fbd9e5c29d67e7877b08a2d6e783eaefe8dc6a1d996dbb98a7b29dc37e0fcf4",
+      "url": "https://auto-ae-prod-storage.storage.googleapis.com/c2fff3169da74802a1708c622f5f47e4",
+      "observedAt": "2026-10-19T20:01:39Z"
+    }
+  ],
+  "logoResearch": {
+    "publicProfile": "https://auto.ae/royalmotorsuaq/",
+    "originalLogoUrl": "https://auto-ae-prod-storage.storage.googleapis.com/c2fff3169da74802a1708c622f5f47e4",
+    "finding": "Existing low-resolution public logo was visually reviewed. Name, primary colours and vehicle motif are faithfully retained in a fresh clean redraw."
+  },
+  "visualReview": "Full light, dark and red-surface composites and 32px compact previews reviewed. Exact name and distinctive compact silhouette remain recognizable. Transparent negative spaces, no background plaque or visible grain. The pale silver inverse is a monochrome surface variant; full colour identity is retained on light. No dealer approval is implied.",
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T20:36:00.335Z",
+    "master": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "dcc6cafaac1d10cd75c2168432ec97fcf6e3b854febe0d94c76bd855536565d6",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-552efdd3-c794-4c15-b339-644641f500bd",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "dcc6cafaac1d10cd75c2168432ec97fcf6e3b854febe0d94c76bd855536565d6",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-552efdd3-c794-4c15-b339-644641f500bd",
+        "modelVersion": null
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-on-dark.png",
+      "sha256": "c781791b6f988769351009f7a556b1643ebf40d1a7453a8adc8f78661dfb8795",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-01c32938-cb80-43dd-af9e-9f61c3f5d9cd",
+        "modelVersion": null
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "dcc6cafaac1d10cd75c2168432ec97fcf6e3b854febe0d94c76bd855536565d6",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-552efdd3-c794-4c15-b339-644641f500bd",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "c781791b6f988769351009f7a556b1643ebf40d1a7453a8adc8f78661dfb8795",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-01c32938-cb80-43dd-af9e-9f61c3f5d9cd",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "c781791b6f988769351009f7a556b1643ebf40d1a7453a8adc8f78661dfb8795",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-01c32938-cb80-43dd-af9e-9f61c3f5d9cd",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": {
+        "onLight": [
+          "#ffffff"
+        ],
+        "onDark": [
+          "#111113",
+          "#101820"
+        ],
+        "onAccent": [
+          "#09090b",
+          "#17191c",
+          "#c40101"
+        ]
+      },
+      "notes": "Full light, dark and red-surface composites and 32px compact previews reviewed. Exact name and distinctive compact silhouette remain recognizable. Transparent negative spaces, no background plaque or visible grain. The pale silver inverse is a monochrome surface variant; full colour identity is retained on light. No dealer approval is implied."
+    },
+    "compactMarkStatus": "preview-derivative-not-dealer-approved",
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-19T20:36:00.335Z",
+      "widths": [
+        32,
+        64
+      ],
+      "backgrounds": [
+        "#ffffff",
+        "#101820",
+        "#c40101"
+      ],
+      "notes": "Full light, dark and red-surface composites and 32px compact previews reviewed. Exact name and distinctive compact silhouette remain recognizable. Transparent negative spaces, no background plaque or visible grain. The pale silver inverse is a monochrome surface variant; full colour identity is retained on light. No dealer approval is implied."
+    }
+  },
+  "generationPrompts": [
+    {
+      "role": "on-light",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-552efdd3-c794-4c15-b339-644641f500bd",
+      "generationIdKind": "tool-returned artifact filename; no separate generation ID or model exposed",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand. Faithfully redraw the supplied ROYAL MOTORS public dealer logo as a cleaner transparent professional mark. Preserve the actual identity: royal/deep blue and red, open shield with a peaked upper edge, simple blue sports-car roof and exact wording \"ROYAL\" over \"MOTORS\". Compact square-ish emblem with a generous bold ROYAL wordmark crossing the shield and smaller MOTORS underneath, clear at small sizes. Blue #243579 main ink and red #b51226 accents, clean flat shapes, simplify the car to two thick flowing strokes, remove tiny decorative side-lines. Preserve a coherent open shield and the wordmark silhouette. Genuine transparent alpha, including internal negative spaces; no opaque white disk/plaque, no gradient, no metallic effect, no shadow, no texture. Exact English lettering only, no location, contact or claims."
+    },
+    {
+      "role": "on-dark",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-01c32938-cb80-43dd-af9e-9f61c3f5d9cd",
+      "generationIdKind": "tool-returned artifact filename; no separate generation ID or model exposed",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand. Make the exact inverse surface variant of this supplied transparent logo. Preserve every letter, exact spelling, all contours, overall composition, relative scale and motif; do not redesign, add or omit lettering. Convert all existing navy/black/red/blue/gold ink to a single flat pale cool silver #c7d4dc. This is one consistent monochrome logo for dark charcoal and deep red backgrounds, so ALL visible ink must be pale silver. Keep all negative space and all surrounding canvas genuinely fully transparent alpha. No white or black background, no opaque plaque, no gradients, no texture, no glow, no shadow, no halftone, no grain. Clean solid interior ink, crisp smooth alpha edges. Match the original layout closely and retain generous transparent margin. Render only this one logo, not a side-by-side comparison."
+    }
+  ],
+  "generationProvenanceNote": "Each input is byte-exact actual imagegen output. Generation identifiers are the tool-returned artifact filenames; no separate generation ID or model version was exposed. Only the existing M1 exporter crops transparent padding, resizes and encodes display variants."
+}

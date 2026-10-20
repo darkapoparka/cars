@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "al-ishfaq-used-cars-llc",
+  "previousSlug": "al-ishfaq-used-cars-llc",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:20:03.558Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 4,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-sharjah-al-ishfaq-used-cars-llc",
+    "position": 305
+  },
+  "before": {
+    "files": 37,
+    "bytes": 5750205
+  },
+  "afterBeforeReview": {
+    "files": 21,
+    "bytes": 1500368
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 130986,
+      "sha256": "238fdb0971e1b46227953fc974cefc1240e427f18b3b83e3d68f28e70054d919"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 146404,
+      "sha256": "5e578751c76b9246a085f010e7a13063481bfc27b20b1f1eb53177f79092860b"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 130986,
+      "sha256": "238fdb0971e1b46227953fc974cefc1240e427f18b3b83e3d68f28e70054d919"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 132915,
+      "sha256": "2d02865a1b76439a4c42731dbfc1ecfc293bd282be1f70b44ce96f65d5ce9c57"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 564673,
+      "sha256": "4e07dfe87018bf08ba10eaeafb0d310eeaf8c11f51c95ac85fb8dbb1d85cd600"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 564673,
+      "sha256": "4e07dfe87018bf08ba10eaeafb0d310eeaf8c11f51c95ac85fb8dbb1d85cd600"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 132915,
+      "sha256": "2d02865a1b76439a4c42731dbfc1ecfc293bd282be1f70b44ce96f65d5ce9c57"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 130986,
+      "sha256": "238fdb0971e1b46227953fc974cefc1240e427f18b3b83e3d68f28e70054d919"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 10589,
+      "sha256": "435ee4c97dc6458f1632dc0056d59a67b625852aeed85b8d7ab2f4c51a78c45d"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 564673,
+      "sha256": "4e07dfe87018bf08ba10eaeafb0d310eeaf8c11f51c95ac85fb8dbb1d85cd600"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 386446,
+      "sha256": "c74646ddfd55645635ba01f06f585442699c775359862675fbae29830f6088c4"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 564673,
+      "sha256": "4e07dfe87018bf08ba10eaeafb0d310eeaf8c11f51c95ac85fb8dbb1d85cd600"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 386446,
+      "sha256": "c74646ddfd55645635ba01f06f585442699c775359862675fbae29830f6088c4"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 132915,
+      "sha256": "2d02865a1b76439a4c42731dbfc1ecfc293bd282be1f70b44ce96f65d5ce9c57"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 92028,
+      "sha256": "e30b26260a2ebf903981a1d68f68282b114ae0b5413bd057c660b24c84dfe844"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 99656,
+      "sha256": "10ce10463cb5a4f53710aa162a2898d80094b132ea034b99d9c2d4880b32d0dc"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 81718,
+      "sha256": "08088f59533d8d4bfc95cd6d0059da078adc5cf1d4628a769ffe81b66d6835a1"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 12,
+    "bytes": 1474731,
+    "inventorySha256": "2bc2fa1314d858cab9c44adf2e7b04dca0001fa84d1f512dd3822aa00776f805",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "al-ishfaq-used-cars-llc",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 23,
+    "report": "dealers/al-ishfaq-used-cars-llc/input-review.json"
+  },
+  "after": {
+    "files": 23,
+    "bytes": 1508911
+  }
+}

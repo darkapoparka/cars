@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-input-review",
+  "dealer": "car-haven-manchester",
+  "reviewed": true,
+  "reviewedAt": "2026-10-20T19:14:44.578Z",
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "checks": [
+    "canonical-hosting-and-preserved-fleet-collisions",
+    "assigned-expansion-lead",
+    "public-fact-schema-and-price-omission",
+    "personal-contact-screen",
+    "retained-stock-media",
+    "companion-copy-source-binding",
+    "immutable-template-release-and-native-QA-parent",
+    "reviewed-artwork-provenance-and-regenerated-logo-hashes"
+  ],
+  "sourceArtworkReview": "Retained artwork review is separate provenance; this command does not perform visual, Arabic-expert or dealer approval.",
+  "copyReview": "Automated structure, stock hash, source text and complete EN/BG rows; no new human translation approval is inferred.",
+  "contacts": {
+    "schemaVersion": 1,
+    "kind": "cars-automated-public-contact-screen",
+    "dealer": "car-haven-manchester",
+    "method": "heuristic; no claim that unflagged values cannot be personal",
+    "flags": [],
+    "blocking": []
+  },
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-manchester-car-haven",
+    "position": 70
+  },
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "inputs": [
+    {
+      "path": "FACTS-AND-INVENTORY.json",
+      "sha256": "291af62465342954baa456e53301643149e208168f9a4dad8a04b86ed8cfc43c"
+    },
+    {
+      "path": "advert-detail-review.json",
+      "sha256": "32e0a4e0456279d5746a7ae193a851d8baf4bdba934fc2d3afaa7ac5326b4ab1"
+    },
+    {
+      "path": "branding/generated-mark-on-dark.png",
+      "sha256": "2cf1ba8489fdb6b221fd784b051cb5c6972e256ec8ac9a07a7322f5a8b7b1111"
+    },
+    {
+      "path": "branding/generated-mark.png",
+      "sha256": "d1f391ee83ec58037ac6b9da085b1b00d7bed0e77c4856dcacd6830dddaa2133"
+    },
+    {
+      "path": "branding/generated-master.png",
+      "sha256": "b2b79b815abe03608696ae9ae42c2dc37fa29aa79a909559e6c5760a9ecc39aa"
+    },
+    {
+      "path": "branding/generated-on-dark.png",
+      "sha256": "a5b60609595afbea7af7d2396d0177a2529f3e54b37cba026f5eba4dcc98a3a2"
+    },
+    {
+      "path": "branding/generation-provenance.json",
+      "sha256": "21d900d58c11140ebbe02a88cfa700d2f729a85f665c4efea52477020d857160"
+    },
+    {
+      "path": "branding/logo-contract.json",
+      "sha256": "ca8c63554d9cc1886e6e23d515a007e16fcc9dcb759cdc1b925f727e9dd46597"
+    },
+    {
+      "path": "branding/logo-recipe.json",
+      "sha256": "318562402c86d16c8b1b5bf27e55b245545a03821ebdbde58735a4818f426bc6"
+    },
+    {
+      "path": "branding/source.json",
+      "sha256": "c97aa4c8ea28336335efaaacc933c909c2b49e600856ad47c96db13c9cb8903b"
+    },
+    {
+      "path": "business-facts.json",
+      "sha256": "6eec1be8d2d5c47daa3d38abff1378857de134f4da2272aa1ed5316564c3b364"
+    },
+    {
+      "path": "copy-review.json",
+      "sha256": "a634eb2c19637b3085adc1b77444a1cce4451321c9f395ed1cb2e846ad83be3b"
+    },
+    {
+      "path": "dealer-stock/listing-1.jpg",
+      "sha256": "631523588d525fcb3fb63091b1451f65c2b528dc3d11cce99db5cea2113e7d88"
+    },
+    {
+      "path": "dealer-stock/listing-2.jpg",
+      "sha256": "f8c2755409f5560f5163ce3522ee3ae4f64c0ea5f5cd20f505c4e667415e7dc4"
+    },
+    {
+      "path": "dealer.json",
+      "sha256": "c43160c0c59add7b8b9fbef9b57344441ad570d24781c4670ad67429a24a8c59"
+    },
+    {
+      "path": "identity-review.json",
+      "sha256": "d1d749a3469155d8bd3dcea9473faa437ba7c025331ecfbe25684636ef8f8a48"
+    },
+    {
+      "path": "locale.json",
+      "sha256": "ede586d84459a69728b6164b57a0ae0463ac37a73d429d931e761e395024a56a"
+    },
+    {
+      "path": "missing-facts.json",
+      "sha256": "ca91311c08420619e4c1496fb0df2aa915b3ad430af3e3f62d79ef8d6e65ca1c"
+    },
+    {
+      "path": "photo-evidence.json",
+      "sha256": "a4dce1643a00d06a6f28bfa660fda5fce1ae21d5c0e7ee5d7ef6cc4cbaeafa7a"
+    },
+    {
+      "path": "qualification.json",
+      "sha256": "b820c6fd27c87ac32ae864b95463da24bb492b193dd37442fc1db48451be3bb0"
+    },
+    {
+      "path": "research-review.json",
+      "sha256": "783fd610443baf2a05393c051449d4668094ffec66361d4fe117bd937494d28b"
+    },
+    {
+      "path": "source-evidence.json",
+      "sha256": "fc0e95713d101f59e2b3a943c44942fa47c65d4a2746a1aec1395c68662b535d"
+    },
+    {
+      "path": "stock.json",
+      "sha256": "2acc0414482e55a5e56161895d0487de3e8a610d35ab1a95f1f43c7a4d0b71f7"
+    }
+  ],
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "providerWrites": 0
+}

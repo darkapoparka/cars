@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-luluah-al-baithaa-cars",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://www.arabwheels.ae/used-cars/dealers/al-luluah-al-baithaa-cars-showroom-in-uae/",
+      "observedAt": "2026-10-19T20:00:43.779771Z",
+      "supports": [
+        "public-business-trading-name",
+        "dealer-attributed-catalogue",
+        "business-location",
+        "public-business-phone"
+      ]
+    },
+    {
+      "url": "https://www.arabwheels.ae/used-cars/mercedes-benz-v-class-2022-for-sale-in-sharjah-78075",
+      "observedAt": "2026-10-19T20:00:43.779771Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    },
+    {
+      "url": "https://www.arabwheels.ae/used-cars/mercedes-benz-v-class-2024-for-sale-in-sharjah-78077",
+      "observedAt": "2026-10-19T20:00:43.779771Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    },
+    {
+      "url": "https://www.arabwheels.ae/used-cars/mercedes-benz-s-class-2015-for-sale-in-sharjah-78079",
+      "observedAt": "2026-10-19T20:00:43.779771Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "research": {
+    "observedAt": "2026-10-19T20:00:43.779771Z",
+    "profileUrl": "https://www.arabwheels.ae/used-cars/dealers/al-luluah-al-baithaa-cars-showroom-in-uae/",
+    "profileSha256": "7ac96d1d1a416404d6d8741265facfed3d222719a44f373adefbebd1bb0d568c",
+    "classification": "public-marketplace-dealer-profile-and-listing-snapshot",
+    "directDealerPostingVerified": false,
+    "profileClaimed": false,
+    "limitation": "Seller attribution comes from the public marketplace profile. Current physical availability and direct dealer posting are not independently confirmed.",
+    "notes": [
+      "Retained Sooq listing URL returned404; current seller-attributed ArabWheels profile and vehicle records used instead.",
+      "ArabWheels timings not supplied."
+    ],
+    "contactReview": "Only business-labeled dealer call numbers retained. Marketplace relay/support numbers and personal-looking staff contacts excluded.",
+    "photoSources": [
+      {
+        "listingId": "aw-78075",
+        "listingUrl": "https://www.arabwheels.ae/used-cars/mercedes-benz-v-class-2022-for-sale-in-sharjah-78075",
+        "sourceImageUrl": "https://cache2.arabwheels.ae/ad_pictures/3355/Slide_mercedes-benz-v-class-2022-3355740.webp",
+        "observedAt": "2026-10-19T20:00:43.779771Z",
+        "retainedPath": "dealer-stock/aw-78075.jpg",
+        "sha256": "6f361e241ef16f9e55692aa3492d4a7ee7976affb6b516e33265401572372158",
+        "bytes": 58918,
+        "width": 500,
+        "height": 375,
+        "operation": "resize-within-1280-without-upscale-and-JPEG-quality-82-or-83"
+      },
+      {
+        "listingId": "aw-78077",
+        "listingUrl": "https://www.arabwheels.ae/used-cars/mercedes-benz-v-class-2024-for-sale-in-sharjah-78077",
+        "sourceImageUrl": "https://cache4.arabwheels.ae/ad_pictures/3355/Slide_mercedes-benz-v-class-2024-3355780.webp",
+        "observedAt": "2026-10-19T20:00:43.779771Z",
+        "retainedPath": "dealer-stock/aw-78077.jpg",
+        "sha256": "d3adce37914872fa88391aed96627768087e7cb1aa43bc890fdf8fee488160e0",
+        "bytes": 43687,
+        "width": 500,
+        "height": 375,
+        "operation": "resize-within-1280-without-upscale-and-JPEG-quality-82-or-83"
+      },
+      {
+        "listingId": "aw-78079",
+        "listingUrl": "https://www.arabwheels.ae/used-cars/mercedes-benz-s-class-2015-for-sale-in-sharjah-78079",
+        "sourceImageUrl": "https://cache4.arabwheels.ae/ad_pictures/3355/Slide_mercedes-benz-s-class-s-63-amg-4matic-2015-3355820.webp",
+        "observedAt": "2026-10-19T20:00:43.779771Z",
+        "retainedPath": "dealer-stock/aw-78079.jpg",
+        "sha256": "14dbc6f976b8f5fca128effb9e5714454f5dccca1441e221c185f00bf5778045",
+        "bytes": 53622,
+        "width": 500,
+        "height": 375,
+        "operation": "resize-within-1280-without-upscale-and-JPEG-quality-82-or-83"
+      }
+    ]
+  }
+}

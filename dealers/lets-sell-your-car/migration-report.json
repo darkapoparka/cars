@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "lets-sell-your-car",
+  "previousSlug": "lets-sell-your-car",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:16:12.172Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-maidstone-lets-sell-your-car",
+    "position": 69
+  },
+  "before": {
+    "files": 39,
+    "bytes": 4782392
+  },
+  "afterBeforeReview": {
+    "files": 23,
+    "bytes": 2189300
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 90932,
+      "sha256": "9d34e0b59704101506d5ddc793ddcc2e3e717bd1a99cce705a6287b8e8183400"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 167632,
+      "sha256": "b019d6d4d02b1b29d4c164bc1198fbd0310bf451fb32fd28cbe4b82ee72a4829"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 90932,
+      "sha256": "9d34e0b59704101506d5ddc793ddcc2e3e717bd1a99cce705a6287b8e8183400"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 130077,
+      "sha256": "db3dd9d497ccd30a94f37202b35217a768c2619db69c915500d30e1e0ccba1f4"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 278409,
+      "sha256": "ad0a67c06c0e6e24d9af48c322b76d67cdd82a3f5da008c755cd6a13a7fa64f5"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 278409,
+      "sha256": "ad0a67c06c0e6e24d9af48c322b76d67cdd82a3f5da008c755cd6a13a7fa64f5"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 130077,
+      "sha256": "db3dd9d497ccd30a94f37202b35217a768c2619db69c915500d30e1e0ccba1f4"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 90932,
+      "sha256": "9d34e0b59704101506d5ddc793ddcc2e3e717bd1a99cce705a6287b8e8183400"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 6433,
+      "sha256": "247089b0dcbcdaf2d8464edd488eafebd3fd58475fa6c558715374ef344416da"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 278409,
+      "sha256": "ad0a67c06c0e6e24d9af48c322b76d67cdd82a3f5da008c755cd6a13a7fa64f5"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 187946,
+      "sha256": "3679ddcedbd70e3a7faf52dd47608b3b8bf1b66b89128293136e1e37ea426b99"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 278409,
+      "sha256": "ad0a67c06c0e6e24d9af48c322b76d67cdd82a3f5da008c755cd6a13a7fa64f5"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 187946,
+      "sha256": "3679ddcedbd70e3a7faf52dd47608b3b8bf1b66b89128293136e1e37ea426b99"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 130077,
+      "sha256": "db3dd9d497ccd30a94f37202b35217a768c2619db69c915500d30e1e0ccba1f4"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 94898,
+      "sha256": "cf662c59187d5b49a6f7d640ba08de7fd5dd4e96bcc19b4d2308f3cdcb46ac88"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 112836,
+      "sha256": "d4fb1fe361b1736f720b1e4fc19351bb635985b968209b25e86ecaef95435889"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 62558,
+      "sha256": "eeeb66f35ef71bbccfab2d07e9ac8650ec0aed090e418a86084ebe65c46b2a30"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 11,
+    "bytes": 2160731,
+    "inventorySha256": "21ad6a66f2574ddccf29685c49cad9f92d089e3f66cc14646ce9c0435d27d4f2",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "lets-sell-your-car",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 25,
+    "report": "dealers/lets-sell-your-car/input-review.json"
+  },
+  "after": {
+    "files": 25,
+    "bytes": 2198178
+  }
+}

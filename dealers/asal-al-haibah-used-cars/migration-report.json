@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "asal-al-haibah-used-cars",
+  "previousSlug": "asal-al-haibah-used-cars",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:24:29.603Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 4,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-sharjah-asal-al-haibah-used-cars",
+    "position": 335
+  },
+  "before": {
+    "files": 37,
+    "bytes": 4125563
+  },
+  "afterBeforeReview": {
+    "files": 21,
+    "bytes": 1453469
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 94738,
+      "sha256": "aa2847edae984d16dec7709cb39259b039f15a4c3c1c310b417bc59f4be0b7b6"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 90113,
+      "sha256": "c036e50b215ee3ef641b96e0873c03b4459624b6c771e83aec22d0067d4d2620"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 94738,
+      "sha256": "aa2847edae984d16dec7709cb39259b039f15a4c3c1c310b417bc59f4be0b7b6"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 125509,
+      "sha256": "c9265a9fd9e77f5d2eb6d26e425cd1eccd245a2c6d9ea624bb5f5d24e8693749"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 312430,
+      "sha256": "2dd5ffefa65e002cd7849bc0b5f5a77813a774d261d4076355668fd333e1a626"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 312430,
+      "sha256": "2dd5ffefa65e002cd7849bc0b5f5a77813a774d261d4076355668fd333e1a626"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 125509,
+      "sha256": "c9265a9fd9e77f5d2eb6d26e425cd1eccd245a2c6d9ea624bb5f5d24e8693749"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 94738,
+      "sha256": "aa2847edae984d16dec7709cb39259b039f15a4c3c1c310b417bc59f4be0b7b6"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 8153,
+      "sha256": "e645c1c24bd56f8e2a4e38ae6c2fb9acdf1ecae5c24673ad3afbd475076e6173"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 312430,
+      "sha256": "2dd5ffefa65e002cd7849bc0b5f5a77813a774d261d4076355668fd333e1a626"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 218602,
+      "sha256": "90d3d31083da9898e54b699c1a9e9e5b5223e76387cd06d05671e373694204fa"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 312430,
+      "sha256": "2dd5ffefa65e002cd7849bc0b5f5a77813a774d261d4076355668fd333e1a626"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 218602,
+      "sha256": "90d3d31083da9898e54b699c1a9e9e5b5223e76387cd06d05671e373694204fa"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 125509,
+      "sha256": "c9265a9fd9e77f5d2eb6d26e425cd1eccd245a2c6d9ea624bb5f5d24e8693749"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 95038,
+      "sha256": "4ec376827a3284c81134338e6805399ac8d95efde206c331f99748b10f5ca1db"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 64354,
+      "sha256": "f2a4cadc0bc1a3382e658c6068a2a5f966b85b94fa99cf42db109a4ef33e1d5f"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 70616,
+      "sha256": "da7fdaceb91178999bbd076c694175574abf7f4031f396e4fc15b7ee6cf32bea"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 12,
+    "bytes": 1427885,
+    "inventorySha256": "ce6943b358891db10138ec06ca6f1c870ba013d1858820799d148156ece19b7a",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "asal-al-haibah-used-cars",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 23,
+    "report": "dealers/asal-al-haibah-used-cars/input-review.json"
+  },
+  "after": {
+    "files": 23,
+    "bytes": 1462011
+  }
+}

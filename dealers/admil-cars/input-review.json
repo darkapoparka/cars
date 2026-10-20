@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-input-review",
+  "dealer": "admil-cars",
+  "reviewed": true,
+  "reviewedAt": "2026-10-20T19:12:09.288Z",
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "checks": [
+    "canonical-hosting-and-preserved-fleet-collisions",
+    "assigned-expansion-lead",
+    "public-fact-schema-and-price-omission",
+    "personal-contact-screen",
+    "retained-stock-media",
+    "companion-copy-source-binding",
+    "immutable-template-release-and-native-QA-parent",
+    "reviewed-artwork-provenance-and-regenerated-logo-hashes"
+  ],
+  "sourceArtworkReview": "Retained artwork review is separate provenance; this command does not perform visual, Arabic-expert or dealer approval.",
+  "copyReview": "Automated structure, stock hash, source text and complete EN/BG rows; no new human translation approval is inferred.",
+  "contacts": {
+    "schemaVersion": 1,
+    "kind": "cars-automated-public-contact-screen",
+    "dealer": "admil-cars",
+    "method": "heuristic; no claim that unflagged values cannot be personal",
+    "flags": [],
+    "blocking": []
+  },
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-surbiton-admil-cars",
+    "position": 92
+  },
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "inputs": [
+    {
+      "path": "FACTS-AND-INVENTORY.json",
+      "sha256": "cbe689c405f791a3b92c193178e690433559c16413b1ea88a26db1e5afcf9d7e"
+    },
+    {
+      "path": "branding/generated-mark.png",
+      "sha256": "b210925fc32ebfd7647666108176873909108af26cfc25aa4905bda2bf82dd7a"
+    },
+    {
+      "path": "branding/generated-master.png",
+      "sha256": "c1f8c9a38b02fef4065a820a6fddc6feb2b70378fc91c57d0a055471e213530f"
+    },
+    {
+      "path": "branding/generated-on-dark.png",
+      "sha256": "fbb4f625923e26a74341700cfba72217441dc6d292a721cbe79c6b56ca39cfb1"
+    },
+    {
+      "path": "branding/logo-contract.json",
+      "sha256": "0b3ef517e240f2aa7f78b9ad79af13eca15608d6b3d2eeadf141b943045d893b"
+    },
+    {
+      "path": "branding/logo-recipe.json",
+      "sha256": "f5b5042351322959c93593f6f968aaea8831d980e2ab1bb2972ced62472bdb92"
+    },
+    {
+      "path": "branding/source.json",
+      "sha256": "ff1aa89d5d0713ef686bc06454695d259056ca87ca49b78d6c355148b59a1486"
+    },
+    {
+      "path": "business-facts.json",
+      "sha256": "749b94facec15aa8c36ee3a0556b84db40ad634c075313736ffb62b0bc3f619e"
+    },
+    {
+      "path": "copy-review.json",
+      "sha256": "089d91a6cbe94cc410be60022a5eeeb613158327621fd4ec5da92cfaed657f62"
+    },
+    {
+      "path": "dealer-stock/public-1.jpg",
+      "sha256": "407afad9a194865de8760a3d083f50dd80155dc2aa4133208e469ccf38fa4923"
+    },
+    {
+      "path": "dealer-stock/public-2.jpg",
+      "sha256": "67fe44b980cde17efd622483d684c90ac5d7b7ab5e5bc218383d7640a0a30fbf"
+    },
+    {
+      "path": "dealer-stock/public-3.jpg",
+      "sha256": "2ca9c0671c7adb74483c9763cc87238f215de71c39ee217736e7f7a9a423ad40"
+    },
+    {
+      "path": "dealer.json",
+      "sha256": "8e2ea52c3c05add4cab14dc10d38b0204b6ad0615a676ece7e243b59796b73d4"
+    },
+    {
+      "path": "identity-review.json",
+      "sha256": "3ebe522fc0c1ef9ee7812231a2f232129110413622654946cb4c273718e02bbe"
+    },
+    {
+      "path": "locale.json",
+      "sha256": "b3af29d2b5ae647725e34fe65c0da69a99d0914a6e668a23aa63f2acf1a6f1a3"
+    },
+    {
+      "path": "missing-facts.json",
+      "sha256": "ab880e420e5cf0c3f7c12a980919aa1b6a60dae064ecd04d373d2e5ca2e73074"
+    },
+    {
+      "path": "qualification.json",
+      "sha256": "ab84c8f4dab49ac3465566c276f835e89deef754918e106785d72ba3b6b927d6"
+    },
+    {
+      "path": "source-evidence.json",
+      "sha256": "f1e489e92a8effc880074a0d047aa6385a50bdfc1cf89074bad012d05652cc17"
+    },
+    {
+      "path": "stock.json",
+      "sha256": "b067b9c9a13936c266d2ded11f0af28272b35968a21bdba5207ae9e8e5c3b5d0"
+    }
+  ],
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "providerWrites": 0
+}

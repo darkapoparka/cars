@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-input-review",
+  "dealer": "mk-cars",
+  "reviewed": true,
+  "reviewedAt": "2026-10-20T19:11:54.834Z",
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "checks": [
+    "canonical-hosting-and-preserved-fleet-collisions",
+    "assigned-expansion-lead",
+    "public-fact-schema-and-price-omission",
+    "personal-contact-screen",
+    "retained-stock-media",
+    "companion-copy-source-binding",
+    "immutable-template-release-and-native-QA-parent",
+    "reviewed-artwork-provenance-and-regenerated-logo-hashes"
+  ],
+  "sourceArtworkReview": "Retained artwork review is separate provenance; this command does not perform visual, Arabic-expert or dealer approval.",
+  "copyReview": "Automated structure, stock hash, source text and complete EN/BG rows; no new human translation approval is inferred.",
+  "contacts": {
+    "schemaVersion": 1,
+    "kind": "cars-automated-public-contact-screen",
+    "dealer": "mk-cars",
+    "method": "heuristic; no claim that unflagged values cannot be personal",
+    "flags": [],
+    "blocking": []
+  },
+  "batch": {
+    "number": 4,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-sharjah-mk-cars",
+    "position": 362
+  },
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "inputs": [
+    {
+      "path": "FACTS-AND-INVENTORY.json",
+      "sha256": "f8d7fd7edd5662b7af9cd49f8b52de6cdaddfb3d77aee6c71cd40c7e672adadb"
+    },
+    {
+      "path": "branding/generated-on-dark.png",
+      "sha256": "97887c7eb349ee6881f15b3a85c366a1de592f360648c69a459be744cbca91f1"
+    },
+    {
+      "path": "branding/generated-on-light.png",
+      "sha256": "43000dd743f503c4338031f9080ba129cf5e6207980238bbabc47d0d4e7dc112"
+    },
+    {
+      "path": "branding/logo-contract.json",
+      "sha256": "23286f17c007dbdf216f6df7c7698a4c524099441c1c3e2d51f7e685ebfce69d"
+    },
+    {
+      "path": "branding/logo-recipe.json",
+      "sha256": "3c41adb7ff7bce3259686ac6a85284570195b16bb0fd33c0f69f0a0b87ff574c"
+    },
+    {
+      "path": "branding/source-original.jpg",
+      "sha256": "32a4553516eb517bf9eeec44bdb25af60373db51aa2a0a2878c8c5840bdc3151"
+    },
+    {
+      "path": "branding/source.json",
+      "sha256": "399187f5b30f90586a4b55b365eee167c0c7a88529e48d017a1cca32b643726e"
+    },
+    {
+      "path": "business-facts.json",
+      "sha256": "74a0063ca989796e6ce4ef29e0361d6a726e2e934266e3509706a632fe2b1c2d"
+    },
+    {
+      "path": "copy-review.json",
+      "sha256": "705071187fc970c6958aeaf55986c71eb742110357258e265b3a9589c706d463"
+    },
+    {
+      "path": "dealer-stock/listing-207013.jpg",
+      "sha256": "f2c7156bcedbaa634403c9f1c254bb115fda39c276994ea40a5b6237f15b505c"
+    },
+    {
+      "path": "dealer-stock/listing-207014.jpg",
+      "sha256": "35e700c624022bf684cbbd14aefc45af1b9186513348dd175dfa6a660d4224ca"
+    },
+    {
+      "path": "dealer-stock/listing-283771.jpg",
+      "sha256": "a4cac8141cc1ffd03e0bd379b650c818028b57bd8dc6b6bd8435c13c80d03320"
+    },
+    {
+      "path": "dealer.json",
+      "sha256": "aead6f560bcf0145d0dea872602b29aecea32f9e04b2f1eb251d48da440b6853"
+    },
+    {
+      "path": "identity-review.json",
+      "sha256": "07278a8e01ce4cbfe82a12fcf30b8444b20302059638a95350cfb06195947a47"
+    },
+    {
+      "path": "locale.json",
+      "sha256": "24d8f283787469c64a252b0fc815f7eb88f4951538c77a21d2c5d4b585277dce"
+    },
+    {
+      "path": "missing-facts.json",
+      "sha256": "900b374c71a0e63e979b803e87de545c16621996db59bf93ad24c25a75efc46c"
+    },
+    {
+      "path": "qualification.json",
+      "sha256": "07577161d0a7c44f796cb1ab0fe07e703226dded2fb3d9372b322e2871fc71b8"
+    },
+    {
+      "path": "source-evidence.json",
+      "sha256": "a8036117e629b11cc2b4907d531efe3ae509d2e95bf9f34a89de8f1f75b7919f"
+    },
+    {
+      "path": "stock.json",
+      "sha256": "d2f0749b21a010c495ead3988742c8955267d841eabc28413e227786fb3d727e"
+    }
+  ],
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "providerWrites": 0
+}

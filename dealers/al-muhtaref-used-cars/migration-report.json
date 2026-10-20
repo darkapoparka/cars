@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "al-muhtaref-used-cars",
+  "previousSlug": "al-muhtaref-used-cars",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:21:55.421Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 4,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-sharjah-al-muhtaref-used-cars",
+    "position": 312
+  },
+  "before": {
+    "files": 39,
+    "bytes": 7541895
+  },
+  "afterBeforeReview": {
+    "files": 23,
+    "bytes": 3468670
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 187330,
+      "sha256": "c3017ba87f456902cfec75af2a0d26631a18e741e89f2f6dcb7b3003c3ec87fd"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 164930,
+      "sha256": "5deb7f74b7da0f1674bab382d2cc5e90b002bce855bfceaa33b5e7de1dd22722"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 187330,
+      "sha256": "c3017ba87f456902cfec75af2a0d26631a18e741e89f2f6dcb7b3003c3ec87fd"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 202715,
+      "sha256": "ba192edf74354aeed649df2e7f93d3b1928496a522e9c59ba47511f747077547"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 199204,
+      "sha256": "f888967b74d04ff71175b4349c02e390b0089188a61e0cfff5a9885a29e4e61f"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 665336,
+      "sha256": "14a38e437b5ae0de59c2a4eaf2aee1c3f94a3bf018ca3b33a04a6ca05f0d19ed"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 202715,
+      "sha256": "ba192edf74354aeed649df2e7f93d3b1928496a522e9c59ba47511f747077547"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 187330,
+      "sha256": "c3017ba87f456902cfec75af2a0d26631a18e741e89f2f6dcb7b3003c3ec87fd"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 14186,
+      "sha256": "200358697c63f6e5d1fd875603614c2be08a9da48a85461c601c2ab24c49037f"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 199204,
+      "sha256": "f888967b74d04ff71175b4349c02e390b0089188a61e0cfff5a9885a29e4e61f"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 142408,
+      "sha256": "cfc04a0eabe6df2e509bd67ff76afb76c47a295271c2fb209a8fd908f2c048ab"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 665336,
+      "sha256": "14a38e437b5ae0de59c2a4eaf2aee1c3f94a3bf018ca3b33a04a6ca05f0d19ed"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 473410,
+      "sha256": "40502290f372e01a7401bf33f9a12979ee81674db5c64be1b056801d4733e57c"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 202715,
+      "sha256": "ba192edf74354aeed649df2e7f93d3b1928496a522e9c59ba47511f747077547"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 131650,
+      "sha256": "e584749b9bdf7048bae261d56526c7d75e290656e90c55a8c0c2cddcbef12270"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 126358,
+      "sha256": "a7e9ed95b01d12a85b765191cf88d23d6a75da352feb3e414630671a84369da6"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 124906,
+      "sha256": "00e71d8977397da45cf927891d6077bbed24b3393d71b6a1805a2514bd8366e8"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 13,
+    "bytes": 2446260,
+    "inventorySha256": "329595a460cbe00c7dbbccdfe11c0e0994e9092e17cf81ea047ef89b6d2a5702",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "al-muhtaref-used-cars",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 25,
+    "report": "dealers/al-muhtaref-used-cars/input-review.json"
+  },
+  "after": {
+    "files": 25,
+    "bytes": 3477488
+  }
+}

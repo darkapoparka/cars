@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "type": "cars-dealer-pack-draft",
+  "slug": "leicester-motor-group",
+  "dealerId": "gb-leicester-leicester-motor-group",
+  "status": "prepared-inputs",
+  "buildReady": true,
+  "providerWrites": 0,
+  "createdAt": "2026-10-19T18:23:42.729Z",
+  "inventoryKind": "dated-listing-snapshot",
+  "inventoryRecords": 3,
+  "logoReady": true,
+  "missingFacts": [
+    {
+      "field": "business.website",
+      "required": false,
+      "reason": "No sufficiently verified current public business value retained after source review."
+    },
+    {
+      "field": "business.hours",
+      "required": false,
+      "reason": "No sufficiently verified current public business value retained after source review."
+    },
+    {
+      "field": "prices",
+      "required": false,
+      "reason": "All listing prices are omitted under the public-repository scope."
+    }
+  ],
+  "blocking": [],
+  "stockAcquisition": "explicit-retained-public-snapshot",
+  "liveListingFetchPerformed": true,
+  "next": "Run the guarded build-and-deploy path after integration. No build or provider deployment was performed by this pack preparation.",
+  "initialDraftState": {
+    "status": "draft",
+    "buildReady": false,
+    "logoReady": false,
+    "blocking": [
+      "branding.reviewed-assets"
+    ],
+    "liveListingFetchPerformed": false
+  },
+  "finalizedAt": "2026-10-19T19:22:56.608725Z",
+  "researchReview": "research-review.json",
+  "inputCheckCommand": "node scripts/check-dealer-pack-inputs.mjs --slug leicester-motor-group --tool-package <sharp-0.35.5-package.json>"
+}

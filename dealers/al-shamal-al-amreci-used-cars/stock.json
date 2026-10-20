@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-shamal-al-amreci-used-cars",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T19:58:47.888405Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "ocd-10072",
+      "title": "Land Rover Range Rover Velar R-Dynamic 2023",
+      "make": "Land Rover",
+      "model": "Range Rover Velar R-Dynamic",
+      "year": 2023,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/ocd-10072.jpg"
+      ],
+      "sourceUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Land-Rover/Range-Rover-Velar-R-Dynamic/?id=10072",
+      "observedAt": "2026-10-19T19:58:47.888405Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Luxury Car",
+      "transmission": "Auto",
+      "fuel": "Petrol",
+      "color": "Red",
+      "mileageValue": 30500,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "ocd-10073",
+      "title": "Nissan Rogue SV 2020",
+      "make": "Nissan",
+      "model": "Rogue SV",
+      "year": 2020,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/ocd-10073.jpg"
+      ],
+      "sourceUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Nissan/Rogue-SV/?id=10073",
+      "observedAt": "2026-10-19T19:58:47.888405Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Crossover",
+      "transmission": "Auto",
+      "fuel": "Petrol",
+      "color": "White",
+      "mileageValue": 105000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "ocd-10064",
+      "title": "Lexus IS-Series F Sport 2014",
+      "make": "Lexus",
+      "model": "IS-Series F Sport",
+      "year": 2014,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/ocd-10064.jpg"
+      ],
+      "sourceUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Lexus/IS-Series-F-Sport/?id=10064",
+      "observedAt": "2026-10-19T19:58:47.888405Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Sedan",
+      "transmission": "Auto",
+      "fuel": "Petrol",
+      "color": "Silver",
+      "mileageValue": 200000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

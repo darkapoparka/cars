@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-nayrab-used-cars",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:00:04.404850Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "licenseplate-6936",
+      "title": "2015 Toyota Land Cruiser",
+      "make": "Toyota",
+      "model": "Land Cruiser",
+      "year": 2015,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/licenseplate-6936.webp"
+      ],
+      "sourceUrl": "https://licenseplate.ae/cars/listing/6936-toyota-land-cruiser-46-at-309-hp-gxr",
+      "observedAt": "2026-10-19T20:00:04.404850Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Crossover",
+      "transmission": "Automatic",
+      "fuel": "Petrol",
+      "color": "White",
+      "mileageValue": 145000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "licenseplate-7564",
+      "title": "2019 Mercedes-Benz AMG GT",
+      "make": "Mercedes-Benz",
+      "model": "AMG GT",
+      "year": 2019,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/licenseplate-7564.webp"
+      ],
+      "sourceUrl": "https://licenseplate.ae/cars/listing/7564-mercedes-benz-amg-gt-63-4matic-speedshift-mct-9g-585-hp-gt-63-s-4matic",
+      "observedAt": "2026-10-19T20:00:04.404850Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Liftback",
+      "transmission": "Automatic",
+      "fuel": "Petrol",
+      "color": "Blue",
+      "mileageValue": 76000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "licenseplate-7566",
+      "title": "2020 Mercedes-Benz GLE-Class",
+      "make": "Mercedes-Benz",
+      "model": "GLE-Class",
+      "year": 2020,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/licenseplate-7566.webp"
+      ],
+      "sourceUrl": "https://licenseplate.ae/cars/listing/7566-mercedes-benz-gle-class-350-d-4matic-9g-tronic-249-hp-gle-350",
+      "observedAt": "2026-10-19T20:00:04.404850Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Crossover",
+      "transmission": "Automatic",
+      "fuel": "Diesel",
+      "color": "Blue",
+      "mileageValue": 140000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

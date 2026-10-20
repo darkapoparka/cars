@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "slug": "al-luluah-al-baithaa-cars",
+  "dealerId": "ae-sharjah-al-luluah-al-baithaa-cars",
+  "business": {
+    "name": "Al Luluah Al Baithaa Cars",
+    "city": "Sharjah",
+    "region": "Sharjah",
+    "countryCode": "AE",
+    "currency": "AED",
+    "distanceUnit": "km",
+    "locale": "en-AE",
+    "address": "Souq Al Haraj / Tasjeel Village, Saif Zone (Sharjah International Airport Free Zone), Sharjah, UAE",
+    "phone": "+971566956626",
+    "phoneDisplay": "+971566956626",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://www.arabwheels.ae/used-cars/dealers/al-luluah-al-baithaa-cars-showroom-in-uae/",
+    "hours": "",
+    "sourceUrl": "https://www.arabwheels.ae/used-cars/dealers/al-luluah-al-baithaa-cars-showroom-in-uae/",
+    "observedAt": "2026-10-19T20:00:43.779771Z",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://www.arabwheels.ae/used-cars/dealers/al-luluah-al-baithaa-cars-showroom-in-uae/",
+      "observedAt": "2026-10-19T20:00:43.779771Z",
+      "supports": [
+        "public-business-trading-name",
+        "dealer-attributed-catalogue",
+        "business-location",
+        "public-business-phone"
+      ]
+    },
+    {
+      "url": "https://www.arabwheels.ae/used-cars/mercedes-benz-v-class-2022-for-sale-in-sharjah-78075",
+      "observedAt": "2026-10-19T20:00:43.779771Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    },
+    {
+      "url": "https://www.arabwheels.ae/used-cars/mercedes-benz-v-class-2024-for-sale-in-sharjah-78077",
+      "observedAt": "2026-10-19T20:00:43.779771Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    },
+    {
+      "url": "https://www.arabwheels.ae/used-cars/mercedes-benz-s-class-2015-for-sale-in-sharjah-78079",
+      "observedAt": "2026-10-19T20:00:43.779771Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-input-review",
+  "dealer": "aventus-motors",
+  "reviewed": true,
+  "reviewedAt": "2026-10-20T19:12:59.231Z",
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "checks": [
+    "canonical-hosting-and-preserved-fleet-collisions",
+    "assigned-expansion-lead",
+    "public-fact-schema-and-price-omission",
+    "personal-contact-screen",
+    "retained-stock-media",
+    "companion-copy-source-binding",
+    "immutable-template-release-and-native-QA-parent",
+    "reviewed-artwork-provenance-and-regenerated-logo-hashes"
+  ],
+  "sourceArtworkReview": "Retained artwork review is separate provenance; this command does not perform visual, Arabic-expert or dealer approval.",
+  "copyReview": "Automated structure, stock hash, source text and complete EN/BG rows; no new human translation approval is inferred.",
+  "contacts": {
+    "schemaVersion": 1,
+    "kind": "cars-automated-public-contact-screen",
+    "dealer": "aventus-motors",
+    "method": "heuristic; no claim that unflagged values cannot be personal",
+    "flags": [],
+    "blocking": []
+  },
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-thurmaston-aventus-motors",
+    "position": 96
+  },
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "inputs": [
+    {
+      "path": "FACTS-AND-INVENTORY.json",
+      "sha256": "9b9206a487d0c804cb0e7082098697e93bbfc9fa761a0897350d367609c0b20f"
+    },
+    {
+      "path": "branding/generated-mark.png",
+      "sha256": "25b68b382c7bbfcbe310f99b01015e18994b40502c51866caa741f62a4285fc5"
+    },
+    {
+      "path": "branding/generated-master.png",
+      "sha256": "715d1be3609d4167553db3d179f55f020b24c16e2b155616b4b078a221548676"
+    },
+    {
+      "path": "branding/generated-on-dark.png",
+      "sha256": "49ff2fb7fd693a8ff3de1bd7276f54f1db22a055a424d95f2ced56a25a98f96c"
+    },
+    {
+      "path": "branding/logo-contract.json",
+      "sha256": "393312fb0156b1fb3b04e0226e1d76dbfb64620deb2486ee2ed9dbbb73e7ae99"
+    },
+    {
+      "path": "branding/logo-recipe.json",
+      "sha256": "80ae54667c02b6ad63516b493f9345b253205ba52bb2069e88903730b24b5869"
+    },
+    {
+      "path": "branding/source.json",
+      "sha256": "ec546c4624b50f3a01c33b1aba1814992944b5c70cbb317e307058b0a6674742"
+    },
+    {
+      "path": "business-facts.json",
+      "sha256": "1916761ea8bc5a5f6bb2e829c899a92aa8d5516f78d03cb065cfa0098d27773e"
+    },
+    {
+      "path": "copy-review.json",
+      "sha256": "1582b483300665bff522d4f2f036c6422c8c0cacc6ed3ba3dd4b97b8aa529c7f"
+    },
+    {
+      "path": "dealer-stock/public-1.jpg",
+      "sha256": "14fa6826df5262042f69c1585d5a46105e345aa06a5b205572d902cf90d21cd8"
+    },
+    {
+      "path": "dealer-stock/public-2.jpg",
+      "sha256": "c4d8f87bfbc5e94aac06f48a0892f6398f42d89b47519338715e7e4e017126c1"
+    },
+    {
+      "path": "dealer-stock/public-3.jpg",
+      "sha256": "f20f3b0144a708315a531cbc94ee01eea65c269b71bbe9c87b8f61692e8af344"
+    },
+    {
+      "path": "dealer.json",
+      "sha256": "269c323036792138a5e8a4a031be848f13946ce89fc8bb5dffc47ed4f8b7a624"
+    },
+    {
+      "path": "identity-review.json",
+      "sha256": "467bb17de4695f6ad26b42c2884c999a7c26d3c1a0fecba9a2d21462be5347c5"
+    },
+    {
+      "path": "locale.json",
+      "sha256": "8f7bde688616a9fdf54eb49a3d58473e9d1b75dc25a65ad54620a2f722572ff9"
+    },
+    {
+      "path": "missing-facts.json",
+      "sha256": "ed5a41ad7a663e7855ae2588eb686120589ac9089e5a40dfb1d35c6df968a988"
+    },
+    {
+      "path": "qualification.json",
+      "sha256": "77cb0a89fa31a96a7ab7a0fd60136121a74c5518d4415e20557d7597ec0c52c5"
+    },
+    {
+      "path": "source-evidence.json",
+      "sha256": "6639c4a47bf0f9e13765b2c5ebee530b3cdf032ebd859f62dea927574f97b394"
+    },
+    {
+      "path": "stock.json",
+      "sha256": "fa99f5a4d2fc25160ea88250afdff348d32466fd2b9603a1781ed8e0964aad70"
+    }
+  ],
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "providerWrites": 0
+}

@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-saif-used-cars-trading",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://www.dubicars.com/dealers/umm-al-quwain-al-saif-used-cars-trading-3226",
+      "observedAt": "2026-10-19T20:00:29.349400Z",
+      "supports": [
+        "business.name",
+        "business.city",
+        "business.countryCode",
+        "business.address",
+        "business.phone",
+        "business.hours",
+        "dated-dealer-catalogue-listings"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2017-mini-cooper-full-option-1036997.html",
+      "observedAt": "2026-10-19T20:00:29.349400Z",
+      "supports": [
+        "stock.dubicars-1036997"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2023-jeep-wrangler-original-factory-paint-no-accidents-1035469.html",
+      "observedAt": "2026-10-19T20:00:29.349400Z",
+      "supports": [
+        "stock.dubicars-1035469"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2012-abarth-500-pocket-rocket-2012-abarth-500-rare-find-only-63365-km-excellent-condition-high-performance-969957.html",
+      "observedAt": "2026-10-19T20:00:29.349400Z",
+      "supports": [
+        "stock.dubicars-969957"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "agentResearch": {
+    "observedAt": "2026-10-19T20:00:29.349400Z",
+    "method": "Public catalogue HTML/JSON-LD and actual stock image read; fields checked before inclusion. No contact or account interaction.",
+    "identityNotes": [
+      "Personal-looking mailbox omitted; no personal contact retained."
+    ],
+    "imageReview": "Actual three stock images visually reviewed; no price overlay or named personal contact used.",
+    "logoResearchStatus": "in-progress"
+  },
+  "stockPhotos": [
+    {
+      "listingId": "dubicars-1036997",
+      "listingUrl": "https://www.dubicars.com/2017-mini-cooper-full-option-1036997.html",
+      "sourceUrl": "https://www.dubicars.com/images/5d4105/650x380/al-saif-used-cars-trading/96cd969a-d8a2-4db7-ab56-ddff2c2fab59.jpeg",
+      "observedAt": "2026-10-19T20:00:29.349400Z",
+      "sourceSha256": "5ada913753d7ff6a5528569b3518aa17d89cfa6c6d8a08b18965d6965133b1b1",
+      "retainedPath": "dealer-stock/dubicars-1036997.webp",
+      "retainedSha256": "325e260f8918301f51586df374fd8420a9d597eb630921ee90ca45c09c84bc9a",
+      "nativeDimensions": [
+        650,
+        650
+      ],
+      "retainedDimensions": [
+        650,
+        650
+      ],
+      "retainedBytes": 90834,
+      "transformation": "Bounded resize with preserved aspect ratio and WebP compression; no watermark removal.",
+      "reusePermission": "not independently established; public-preview source attribution retained"
+    },
+    {
+      "listingId": "dubicars-1035469",
+      "listingUrl": "https://www.dubicars.com/2023-jeep-wrangler-original-factory-paint-no-accidents-1035469.html",
+      "sourceUrl": "https://www.dubicars.com/images/39d8be/650x380/al-saif-used-cars-trading/65282f67-adee-4db4-89e7-9508783a6585.jpeg",
+      "observedAt": "2026-10-19T20:00:29.349400Z",
+      "sourceSha256": "dc7cdbef7ab229da483a629e1fa83c2216b128085051054ed68b2827c19543b6",
+      "retainedPath": "dealer-stock/dubicars-1035469.webp",
+      "retainedSha256": "cfe8c4eb29cd21bf01fb0d1c41b206f64bda5d773065d1b8775347ef10ce95c4",
+      "nativeDimensions": [
+        650,
+        650
+      ],
+      "retainedDimensions": [
+        650,
+        650
+      ],
+      "retainedBytes": 85406,
+      "transformation": "Bounded resize with preserved aspect ratio and WebP compression; no watermark removal.",
+      "reusePermission": "not independently established; public-preview source attribution retained"
+    },
+    {
+      "listingId": "dubicars-969957",
+      "listingUrl": "https://www.dubicars.com/2012-abarth-500-pocket-rocket-2012-abarth-500-rare-find-only-63365-km-excellent-condition-high-performance-969957.html",
+      "sourceUrl": "https://www.dubicars.com/images/e550ae/650x380/al-saif-used-cars-trading/43a5ca3d-4b1f-4c51-9e72-ac679a9408c3.jpeg",
+      "observedAt": "2026-10-19T20:00:29.349400Z",
+      "sourceSha256": "9985805b187a35a3494e25808c9306698731ea1bc2c3a65156a0f2fe13585621",
+      "retainedPath": "dealer-stock/dubicars-969957.webp",
+      "retainedSha256": "3c99988b1a31482f4a854fd07c788f92f88f601691bfbb221b8546619aeb44e7",
+      "nativeDimensions": [
+        650,
+        366
+      ],
+      "retainedDimensions": [
+        650,
+        366
+      ],
+      "retainedBytes": 43600,
+      "transformation": "Bounded resize with preserved aspect ratio and WebP compression; no watermark removal.",
+      "reusePermission": "not independently established; public-preview source attribution retained"
+    }
+  ]
+}

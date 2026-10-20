@@ -1,0 +1,241 @@
+{
+  "schemaVersion": 1,
+  "dealer": "asal-al-haibah-used-cars",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T20:58:18.845Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "sourced-logo-imagegen-redraw",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "4ec376827a3284c81134338e6805399ac8d95efde206c331f99748b10f5ca1db",
+      "sourceSha256": "c9265a9fd9e77f5d2eb6d26e425cd1eccd245a2c6d9ea624bb5f5d24e8693749"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "90d3d31083da9898e54b699c1a9e9e5b5223e76387cd06d05671e373694204fa",
+      "sourceSha256": "2dd5ffefa65e002cd7849bc0b5f5a77813a774d261d4076355668fd333e1a626"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "90d3d31083da9898e54b699c1a9e9e5b5223e76387cd06d05671e373694204fa",
+      "sourceSha256": "2dd5ffefa65e002cd7849bc0b5f5a77813a774d261d4076355668fd333e1a626"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "c9265a9fd9e77f5d2eb6d26e425cd1eccd245a2c6d9ea624bb5f5d24e8693749",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-400bb3d9-af1d-4196-a80d-2bdbad0e23aa",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "aa2847edae984d16dec7709cb39259b039f15a4c3c1c310b417bc59f4be0b7b6",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-400bb3d9-af1d-4196-a80d-2bdbad0e23aa",
+      "modelVersion": null,
+      "transformation": {
+        "operation": "rectangular-extract-without-recolour-or-redrawing",
+        "source": "branding/generated-primary.png",
+        "sourceSha256": "3b5072ad7b93fbe187ea185e9e60da1e055d17f5ec3e0ce1f0c24a9619f52c1e",
+        "rectangle": {
+          "left": 0,
+          "top": 0,
+          "width": 882,
+          "height": 724
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "e645c1c24bd56f8e2a4e38ae6c2fb9acdf1ecae5c24673ad3afbd475076e6173"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "c9265a9fd9e77f5d2eb6d26e425cd1eccd245a2c6d9ea624bb5f5d24e8693749",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-400bb3d9-af1d-4196-a80d-2bdbad0e23aa",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/asal-al-haibah-used-cars/branding/generated-primary.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "2dd5ffefa65e002cd7849bc0b5f5a77813a774d261d4076355668fd333e1a626",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-143d5c28-9cd6-486a-a852-1ff06de39fb3",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/asal-al-haibah-used-cars/branding/generated-inverse.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "2dd5ffefa65e002cd7849bc0b5f5a77813a774d261d4076355668fd333e1a626",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-143d5c28-9cd6-486a-a852-1ff06de39fb3",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/asal-al-haibah-used-cars/branding/generated-inverse.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "3b5072ad7b93fbe187ea185e9e60da1e055d17f5ec3e0ce1f0c24a9619f52c1e",
+      "sha256": "c9265a9fd9e77f5d2eb6d26e425cd1eccd245a2c6d9ea624bb5f5d24e8693749",
+      "crop": {
+        "left": 0,
+        "top": 89,
+        "width": 2172,
+        "height": 553
+      },
+      "sourcePath": "branding/generated-primary.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "cacac92949f6f4755887604797cec33b6a71a3d2b7eb7544aca7c687d0208dd0",
+      "sha256": "2dd5ffefa65e002cd7849bc0b5f5a77813a774d261d4076355668fd333e1a626",
+      "crop": {
+        "left": 4,
+        "top": 275,
+        "width": 1247,
+        "height": 697
+      },
+      "sourcePath": "branding/generated-inverse.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "cacac92949f6f4755887604797cec33b6a71a3d2b7eb7544aca7c687d0208dd0",
+      "sha256": "2dd5ffefa65e002cd7849bc0b5f5a77813a774d261d4076355668fd333e1a626",
+      "crop": {
+        "left": 4,
+        "top": 275,
+        "width": 1247,
+        "height": 697
+      },
+      "sourcePath": "branding/generated-inverse.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "da7fdaceb91178999bbd076c694175574abf7f4031f396e4fc15b7ee6cf32bea",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-400bb3d9-af1d-4196-a80d-2bdbad0e23aa",
+        "modelVersion": null,
+        "transformation": {
+          "operation": "rectangular-extract-without-recolour-or-redrawing",
+          "source": "branding/generated-primary.png",
+          "sourceSha256": "3b5072ad7b93fbe187ea185e9e60da1e055d17f5ec3e0ce1f0c24a9619f52c1e",
+          "rectangle": {
+            "left": 0,
+            "top": 0,
+            "width": 882,
+            "height": 724
+          }
+        }
+      },
+      "sourceReference": "dealers/asal-al-haibah-used-cars/branding/generated-mark.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "f2a4cadc0bc1a3382e658c6068a2a5f966b85b94fa99cf42db109a4ef33e1d5f",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-143d5c28-9cd6-486a-a852-1ff06de39fb3",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/asal-al-haibah-used-cars/branding/generated-inverse.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "aa2847edae984d16dec7709cb39259b039f15a4c3c1c310b417bc59f4be0b7b6",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-400bb3d9-af1d-4196-a80d-2bdbad0e23aa",
+        "modelVersion": null,
+        "transformation": {
+          "operation": "rectangular-extract-without-recolour-or-redrawing",
+          "source": "branding/generated-primary.png",
+          "sourceSha256": "3b5072ad7b93fbe187ea185e9e60da1e055d17f5ec3e0ce1f0c24a9619f52c1e",
+          "rectangle": {
+            "left": 0,
+            "top": 0,
+            "width": 882,
+            "height": 724
+          }
+        }
+      },
+      "sourceReference": "dealers/asal-al-haibah-used-cars/branding/generated-mark.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "e645c1c24bd56f8e2a4e38ae6c2fb9acdf1ecae5c24673ad3afbd475076e6173",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-400bb3d9-af1d-4196-a80d-2bdbad0e23aa",
+        "modelVersion": null,
+        "transformation": {
+          "operation": "rectangular-extract-without-recolour-or-redrawing",
+          "source": "branding/generated-primary.png",
+          "sourceSha256": "3b5072ad7b93fbe187ea185e9e60da1e055d17f5ec3e0ce1f0c24a9619f52c1e",
+          "rectangle": {
+            "left": 0,
+            "top": 0,
+            "width": 882,
+            "height": 724
+          }
+        }
+      },
+      "sourceReference": "dealers/asal-al-haibah-used-cars/branding/generated-mark.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-19T20:58:18.845Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "c036e50b215ee3ef641b96e0873c03b4459624b6c771e83aec22d0067d4d2620",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-143d5c28-9cd6-486a-a852-1ff06de39fb3",
+      "modelVersion": null
+    }
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-input-review",
+  "dealer": "london-used-cars",
+  "reviewed": true,
+  "reviewedAt": "2026-10-20T19:17:10.048Z",
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "checks": [
+    "canonical-hosting-and-preserved-fleet-collisions",
+    "assigned-expansion-lead",
+    "public-fact-schema-and-price-omission",
+    "personal-contact-screen",
+    "retained-stock-media",
+    "companion-copy-source-binding",
+    "immutable-template-release-and-native-QA-parent",
+    "reviewed-artwork-provenance-and-regenerated-logo-hashes"
+  ],
+  "sourceArtworkReview": "Retained artwork review is separate provenance; this command does not perform visual, Arabic-expert or dealer approval.",
+  "copyReview": "Automated structure, stock hash, source text and complete EN/BG rows; no new human translation approval is inferred.",
+  "contacts": {
+    "schemaVersion": 1,
+    "kind": "cars-automated-public-contact-screen",
+    "dealer": "london-used-cars",
+    "method": "heuristic; no claim that unflagged values cannot be personal",
+    "flags": [],
+    "blocking": []
+  },
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-slough-london-used-cars",
+    "position": 86
+  },
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "inputs": [
+    {
+      "path": "FACTS-AND-INVENTORY.json",
+      "sha256": "fd9218d267f782a824de55a4a834ec65ae8cbcd7c105eca33b52eec7c4a71fa9"
+    },
+    {
+      "path": "branding/generated-mark.png",
+      "sha256": "4210e2463595eea8ab597cd066d9146e740a90d0683838084984521025cb996d"
+    },
+    {
+      "path": "branding/generated-master.png",
+      "sha256": "fb9f7198320673b8dda4b3496b71af689bbf12cbc11a24fb3b85386ffe346deb"
+    },
+    {
+      "path": "branding/generated-on-dark.png",
+      "sha256": "febe3962f4f288b20a50273f5626af1661e0f10f919f78e3156249ba05cc6b43"
+    },
+    {
+      "path": "branding/logo-contract.json",
+      "sha256": "e61e575112ae6025b7f69d258e878d1d07e0aa88426cc27bd6b82c45b46a49f8"
+    },
+    {
+      "path": "branding/logo-recipe.json",
+      "sha256": "5ab94accc79fbd6b946f5d70a5a9257e5e4d72e02bf5eaa0318ef7aeb6f47d7c"
+    },
+    {
+      "path": "branding/source.json",
+      "sha256": "f7411a2b2808797e70208b4c71c5e5753c7cc61f3a8a150b58c8167b7ed9b965"
+    },
+    {
+      "path": "business-facts.json",
+      "sha256": "a2618875e19192f6b7d2b8106cbc21d4ee8ccfc635cecf9873e24f490ec527fe"
+    },
+    {
+      "path": "copy-review.json",
+      "sha256": "06d73b68224ffbe3914555ec1baf94fab62d0d5f59405fb7d7b7ae15e0e33a85"
+    },
+    {
+      "path": "dealer-stock/public-1.jpg",
+      "sha256": "3c7870ea317f75524c8a760e476c0fa65bea77dbfc4ccca76f9b6d5a25e99ea3"
+    },
+    {
+      "path": "dealer-stock/public-2.jpg",
+      "sha256": "ed0a3b912058c29d38ed1878e197ebe9efb11429978087946911cffd08193988"
+    },
+    {
+      "path": "dealer-stock/public-3.jpg",
+      "sha256": "8b9fd578cde2801880b7e04b8a0082a73f5aad338015ef6cd2dda2aed3026e9a"
+    },
+    {
+      "path": "dealer.json",
+      "sha256": "65255bd4b159d7ea310d17f2954879bec55575882986cd4b38d4f1bcee1f43a2"
+    },
+    {
+      "path": "identity-review.json",
+      "sha256": "c1aefbdeea042104c639c8d7917bf267ab90bcf6b9bdfaf920978ff01628ce02"
+    },
+    {
+      "path": "locale.json",
+      "sha256": "d2e37bb6365723fcfcc2497b51525139c86077ff41b3fc338b7565594e52c547"
+    },
+    {
+      "path": "missing-facts.json",
+      "sha256": "b4a505e9d31712d169c76b70057f612b8c281a43ea3877ed4946590aa78c6674"
+    },
+    {
+      "path": "qualification.json",
+      "sha256": "82988e160a2d705a1666f75b92aee4223b6a8f62eee46a0a2fe6f50157e265bb"
+    },
+    {
+      "path": "source-evidence.json",
+      "sha256": "5d8b0354b6f6e3bf85813c2de4f62093a7748d852691963ea2ddb0aa0ba95780"
+    },
+    {
+      "path": "stock.json",
+      "sha256": "68ff62e86c9c0ea1ed538c63fa232d7c276c7a05fbd45f947f98d57109015fff"
+    }
+  ],
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "providerWrites": 0
+}

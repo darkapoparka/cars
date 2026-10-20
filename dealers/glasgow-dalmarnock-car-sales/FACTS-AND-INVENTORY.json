@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "dealer": "glasgow-dalmarnock-car-sales",
+  "businessFacts": "business-facts.json",
+  "stock": "stock.json",
+  "inventoryKind": "dated-listing-snapshot",
+  "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+  "sources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/Aman-Motors",
+      "observedAt": "2026-10-19T17:36:00.712402Z",
+      "supports": [
+        "business-name",
+        "public-business-contact",
+        "business-location",
+        "current-listing-snapshot"
+      ]
+    },
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/Aman-Motors?aboutUs=&expandOpeningHours=1&expandAboutUs=1",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "opening-hours"
+      ]
+    }
+  ]
+}

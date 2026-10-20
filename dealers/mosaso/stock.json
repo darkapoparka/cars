@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "dealer": "mosaso",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "public-listing-1",
+      "title": "2020 Peugeot E-208 50kWh Allure Auto",
+      "make": "Peugeot",
+      "model": "E-208",
+      "year": 2020,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/public-1.jpg"
+      ],
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202610056697236",
+      "observedAt": "2026-10-19T17:53:12.405363Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Hatchback",
+      "transmission": "Automatic",
+      "fuel": "Electric",
+      "mileageValue": 83842,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "public-listing-2",
+      "title": "2016 BMW 520d SE Auto",
+      "make": "BMW",
+      "model": "5 Series",
+      "year": 2016,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/public-2.jpg"
+      ],
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202610116890314",
+      "observedAt": "2026-10-19T17:53:12.406957Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Saloon",
+      "transmission": "Automatic",
+      "fuel": "Diesel",
+      "mileageValue": 123200,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "public-listing-3",
+      "title": "2013 Chevrolet Orlando 1.8 LT Auto",
+      "make": "Chevrolet",
+      "model": "Orlando",
+      "year": 2013,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/public-3.jpg"
+      ],
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202610036641763",
+      "observedAt": "2026-10-19T17:53:13.326339Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "MPV",
+      "transmission": "Automatic",
+      "fuel": "Petrol",
+      "mileageValue": 44733,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

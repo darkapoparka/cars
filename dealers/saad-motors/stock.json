@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "dealer": "saad-motors",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "listing-1",
+      "title": "2022 Nissan Juke 1.0 DiG-T 114 N-Connecta 5dr",
+      "make": "Nissan",
+      "model": "Juke 1.0 DiG-T 114 N-Connecta 5dr",
+      "year": 2022,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/listing-1.jpg"
+      ],
+      "sourceUrl": "https://www.ebay.co.uk/itm/267817165986",
+      "observedAt": "2026-10-19",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "transmission": "Manual",
+      "fuel": "Petrol",
+      "mileageValue": 33000,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview. The seller advert records Category S history and says light damage has been repaired. The repair claim and vehicle condition have not been independently verified."
+    },
+    {
+      "id": "listing-2",
+      "title": "2016 Nissan Juke 1.2 DiG-T N-Connecta 5dr",
+      "make": "Nissan",
+      "model": "Juke 1.2 DiG-T N-Connecta 5dr",
+      "year": 2016,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/listing-2.jpg"
+      ],
+      "sourceUrl": "https://www.ebay.co.uk/itm/267817153160",
+      "observedAt": "2026-10-19",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "transmission": "Manual",
+      "fuel": "Petrol",
+      "mileageValue": 62000,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview. The seller advert records Category N history and says light damage has been repaired. The repair claim and vehicle condition have not been independently verified."
+    },
+    {
+      "id": "listing-3",
+      "title": "2015 Honda HR-V 1.6 i-DTEC SE Navi 5dr",
+      "make": "Honda",
+      "model": "HR-V 1.6 i-DTEC SE Navi 5dr",
+      "year": 2015,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/listing-3.jpg"
+      ],
+      "sourceUrl": "https://www.ebay.co.uk/itm/267810893463",
+      "observedAt": "2026-10-19",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "transmission": "Manual",
+      "fuel": "Diesel",
+      "mileageValue": 88000,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview. The seller advert records Category N history and says light damage has been repaired. The repair claim and vehicle condition have not been independently verified."
+    }
+  ]
+}

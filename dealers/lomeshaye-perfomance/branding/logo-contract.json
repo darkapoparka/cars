@@ -1,0 +1,197 @@
+{
+  "schemaVersion": 1,
+  "dealer": "lomeshaye-perfomance",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T19:22:56.608725Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "56a7b692b706d53c3da17e55d453fc002cdb921fab6e6225f464021ecd833089",
+      "sourceSha256": "3d14662a28f0440d0c97a2d75f0467fddffca3e256f56265390a023943c80b44"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "3203a8742e13b2ba1b88dea17fa013b7c68d2ec5cfef6bf5b9019a8d165f17fd",
+      "sourceSha256": "aa227eddb9bc3dc8a8f4ef1702b38a893418f00829dc583d6d99fa5d708a7692"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "3203a8742e13b2ba1b88dea17fa013b7c68d2ec5cfef6bf5b9019a8d165f17fd",
+      "sourceSha256": "aa227eddb9bc3dc8a8f4ef1702b38a893418f00829dc583d6d99fa5d708a7692"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "3d14662a28f0440d0c97a2d75f0467fddffca3e256f56265390a023943c80b44",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-5e4240b8-877d-4caa-9c64-2ce64736d28b",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "78886622a3f66732dda0ba9eae5b1a70cdc13627489cdf4ddd895af4902cb7ac",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-5e4240b8-877d-4caa-9c64-2ce64736d28b",
+      "modelVersion": null
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "67bbf49f00eed0ec42093a51c2ac75efb07d89cc98357b86a0957072d079eb1e"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "3d14662a28f0440d0c97a2d75f0467fddffca3e256f56265390a023943c80b44",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-5e4240b8-877d-4caa-9c64-2ce64736d28b",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/lomeshaye-perfomance/branding/generated-master.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "aa227eddb9bc3dc8a8f4ef1702b38a893418f00829dc583d6d99fa5d708a7692",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-c89a3919-9bff-4fcf-aa76-f026f85171a6",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/lomeshaye-perfomance/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "aa227eddb9bc3dc8a8f4ef1702b38a893418f00829dc583d6d99fa5d708a7692",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-c89a3919-9bff-4fcf-aa76-f026f85171a6",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/lomeshaye-perfomance/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "808db673e9794f28db9e0bee129cc0f4411bde30dc9281d1ce55e97a1569a69b",
+      "sha256": "3d14662a28f0440d0c97a2d75f0467fddffca3e256f56265390a023943c80b44",
+      "crop": {
+        "left": 53,
+        "top": 135,
+        "width": 1882,
+        "height": 508
+      },
+      "sourcePath": "branding/generated-master.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "c06f4b7d33fd89417eed470bfcbca5c074ccee93dc3ad47c9d2bc756a0bd4e1c",
+      "sha256": "aa227eddb9bc3dc8a8f4ef1702b38a893418f00829dc583d6d99fa5d708a7692",
+      "crop": {
+        "left": 21,
+        "top": 115,
+        "width": 1932,
+        "height": 546
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "c06f4b7d33fd89417eed470bfcbca5c074ccee93dc3ad47c9d2bc756a0bd4e1c",
+      "sha256": "aa227eddb9bc3dc8a8f4ef1702b38a893418f00829dc583d6d99fa5d708a7692",
+      "crop": {
+        "left": 21,
+        "top": 115,
+        "width": 1932,
+        "height": 546
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "f142bed7c3da4277568e330330ae7e879e48605ae776a01dfe83c70be2fa3c13",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-5e4240b8-877d-4caa-9c64-2ce64736d28b",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/lomeshaye-perfomance/branding/generated-mark.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "403f3e7b74ffcb2320490570f35030b632b9b2e5a2e2abead01a0fd587034d20",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-c89a3919-9bff-4fcf-aa76-f026f85171a6",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/lomeshaye-perfomance/branding/generated-mark-on-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "78886622a3f66732dda0ba9eae5b1a70cdc13627489cdf4ddd895af4902cb7ac",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-5e4240b8-877d-4caa-9c64-2ce64736d28b",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/lomeshaye-perfomance/branding/generated-mark.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "67bbf49f00eed0ec42093a51c2ac75efb07d89cc98357b86a0957072d079eb1e",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-5e4240b8-877d-4caa-9c64-2ce64736d28b",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/lomeshaye-perfomance/branding/generated-mark.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-19T19:22:56.608725Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "6bd2f778e0898111a0b7cf293755b9556b4e041b3651da3561c130b8f6fbadc4",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-c89a3919-9bff-4fcf-aa76-f026f85171a6",
+      "modelVersion": null
+    }
+  }
+}

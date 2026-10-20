@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "dealer": "admil-cars",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uk.json",
+    "sha256": "6cd8d365586f9a5d5131fe4b1d50baede7de91ab384a135017c25367298b07c4"
+  },
+  "publicSources": [
+    {
+      "url": "https://www.autotrader.co.uk/dealers/essex/romford/admil-cars-10049378",
+      "observedAt": "2026-10-19T17:36:49.969107Z",
+      "supports": [
+        "public-business-identity",
+        "public-business-contact",
+        "advertised-stock"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "publicObservations": [
+    {
+      "url": "https://www.autotrader.co.uk/dealers/essex/romford/admil-cars-10049378",
+      "observedAt": "2026-10-19T17:36:49.969107Z",
+      "httpStatus": 200,
+      "sha256": "e65d4eff29098a3413c91e5ca5da78d3fdab1095854440220e6951028b749216",
+      "byteLength": 208961,
+      "retention": "Only reviewed public business fields, hashes, listing identities and compressed photographs are committed; raw HTML remains outside the public pack."
+    }
+  ],
+  "stock": [
+    {
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202610026625130",
+      "photoUrl": "https://m.atcdn.co.uk/a/media/w600/c7f2b5b84fd945df892ee95ecdfaf13e.jpg",
+      "observedAt": "2026-10-19T17:53:22.128206Z",
+      "listingSha256": "572ee11c2af3c9a85493bc8c08aa26bfacf3202e5222b314a18f09cd6ee325eb",
+      "sourcePhotoSha256": "5bcf61d3619bba128eee14d9f01d14020ba37dffc590144a73f6c4a8df821220",
+      "sourcePhotoDimensions": [
+        600,
+        450
+      ],
+      "photoSha256": "407afad9a194865de8760a3d083f50dd80155dc2aa4133208e469ccf38fa4923",
+      "photoDimensions": [
+        600,
+        450
+      ],
+      "photoBytes": 50023,
+      "recordId": "public-listing-1",
+      "title": "2024 BMW 320i M Sport Auto",
+      "retainedPhoto": "dealer-stock/public-1.jpg",
+      "publicPhotoReviewed": true
+    },
+    {
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202605092262302",
+      "photoUrl": "https://m.atcdn.co.uk/a/media/w600/35e774168d034e458534d7d2b1b588e0.jpg",
+      "observedAt": "2026-10-19T17:53:22.468821Z",
+      "listingSha256": "6d90ffba8aded01e24c57723b909a79b5108eaf0d3211ed6e578c2dd2ab14f81",
+      "sourcePhotoSha256": "8cbc5cfbdc7b190190d1185a1a88dd52c1629cef2793a869939286ec0f0f9576",
+      "sourcePhotoDimensions": [
+        600,
+        450
+      ],
+      "photoSha256": "67fe44b980cde17efd622483d684c90ac5d7b7ab5e5bc218383d7640a0a30fbf",
+      "photoDimensions": [
+        600,
+        450
+      ],
+      "photoBytes": 55589,
+      "recordId": "public-listing-2",
+      "title": "2022 Mercedes-Benz C200h MHEV Sport G-Tronic+",
+      "retainedPhoto": "dealer-stock/public-2.jpg",
+      "publicPhotoReviewed": true
+    },
+    {
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202610116885400",
+      "photoUrl": "https://m.atcdn.co.uk/a/media/w600/fffe786028404d0389e73e8b65a350bb.jpg",
+      "observedAt": "2026-10-19T17:53:22.689401Z",
+      "listingSha256": "93f6f6bfd9215ce9ffe0a3c3e9046aad5edf42eaa625512225fb5fe4e7953ff4",
+      "sourcePhotoSha256": "7ecbabd969734cb52a7136f36a5c29f2a5c074af00a6eef6d0436b739669ab74",
+      "sourcePhotoDimensions": [
+        600,
+        450
+      ],
+      "photoSha256": "2ca9c0671c7adb74483c9763cc87238f215de71c39ee217736e7f7a9a423ad40",
+      "photoDimensions": [
+        600,
+        450
+      ],
+      "photoBytes": 46826,
+      "recordId": "public-listing-3",
+      "title": "2018 Mercedes-Benz E220d SE Premium G-Tronic+",
+      "retainedPhoto": "dealer-stock/public-3.jpg",
+      "publicPhotoReviewed": true
+    }
+  ],
+  "review": {
+    "reviewedAt": "2026-10-19T18:24:26.897428Z",
+    "stockPhotoIdentityChecked": true,
+    "sourceClaimLimits": "Dated public adverts only; availability, repairs, vehicle condition and legal entity details are not independently certified.",
+    "omissions": []
+  }
+}

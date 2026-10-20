@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "cars4you-bradford",
+  "previousSlug": "cars4you-bradford",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:16:09.243Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-bradford-cars4you",
+    "position": 23
+  },
+  "before": {
+    "files": 37,
+    "bytes": 3103572
+  },
+  "afterBeforeReview": {
+    "files": 21,
+    "bytes": 1326834
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 167280,
+      "sha256": "a08b280ac9a0d2ee55e5ff5588368e8c50acb7fb242bfd389c8d543e62fcc046"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 165680,
+      "sha256": "e2cc4018800da51a7b7509bcee6b0735f75968f3c6c1fdac1d50c5f8bd51e836"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 167280,
+      "sha256": "a08b280ac9a0d2ee55e5ff5588368e8c50acb7fb242bfd389c8d543e62fcc046"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 101164,
+      "sha256": "f9644edd17efd0e781d28f1a95a4fc3f863d343fd1b18939100c13a076722212"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 102935,
+      "sha256": "2376588f2c8ce5b2578b27a2dbef076e9430560318950536d56e29da47689ac3"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 102935,
+      "sha256": "2376588f2c8ce5b2578b27a2dbef076e9430560318950536d56e29da47689ac3"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 101164,
+      "sha256": "f9644edd17efd0e781d28f1a95a4fc3f863d343fd1b18939100c13a076722212"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 167280,
+      "sha256": "a08b280ac9a0d2ee55e5ff5588368e8c50acb7fb242bfd389c8d543e62fcc046"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 12924,
+      "sha256": "c340ec264105b121673d3c9457f9bc12918c19b05389bb43c325960f8dab1b0f"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 102935,
+      "sha256": "2376588f2c8ce5b2578b27a2dbef076e9430560318950536d56e29da47689ac3"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 72318,
+      "sha256": "058856f7caff5189fc81878175855b11f829978d14b515ce5e2906806febcf96"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 102935,
+      "sha256": "2376588f2c8ce5b2578b27a2dbef076e9430560318950536d56e29da47689ac3"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 72318,
+      "sha256": "058856f7caff5189fc81878175855b11f829978d14b515ce5e2906806febcf96"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 101164,
+      "sha256": "f9644edd17efd0e781d28f1a95a4fc3f863d343fd1b18939100c13a076722212"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 64680,
+      "sha256": "2ae606af45c6c93759d8dc5b01b2e0947df1b5e7b02885bc78865d6cc4e9b6e7"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 92388,
+      "sha256": "f5c4eb9d86e2a634fdcd784566d3919808c33cc58eda12d5de9c9233a622b15c"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 83154,
+      "sha256": "124bc761301a5c54bc17e7ec5b620cc7c876551c32dfbdc6a6ae831f9af07ffd"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 12,
+    "bytes": 1302992,
+    "inventorySha256": "611ef9cc894b78718d4d1cc7786b7415b4b8f8d8026a682d16aaced659562fb5",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "cars4you-bradford",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 23,
+    "report": "dealers/cars4you-bradford/input-review.json"
+  },
+  "after": {
+    "files": 23,
+    "bytes": 1335267
+  }
+}

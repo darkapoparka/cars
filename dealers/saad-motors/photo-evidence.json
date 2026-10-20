@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "dealer": "saad-motors",
+  "photos": [
+    {
+      "id": "listing-1",
+      "listingUrl": "https://www.ebay.co.uk/itm/267817165986",
+      "catalogueUrl": "https://showroom.ebaymotorspro.co.uk/SAAD-MOTORS-LTD?menu=1",
+      "imageUrl": "https://i.ebayimg.com/00/s/MTIyNlgxNjAw/z/luYAAeSwRVxq1SVf/$_2.JPG",
+      "downloadUrl": "https://i.ebayimg.com/00/s/MTIyNlgxNjAw/z/luYAAeSwRVxq1SVf/$_57.JPG",
+      "originalDimensions": [
+        1600,
+        1226
+      ],
+      "retainedDimensions": [
+        1024,
+        785
+      ],
+      "retainedBytes": 174918,
+      "mediaPath": "dealer-stock/listing-1.jpg",
+      "retainedSha256": "fca291e4afe8fb963fe641f08fb87e97202306ffee3843b9ab85485751f89c28",
+      "operation": "Resize within1024px without enlargement and encode optimized JPEG; no change to photographed content.",
+      "originalSha256": "6985e1acc715395838b56a7a9cc6dfb24044c2e41f5281a39af96f3a42150f0a",
+      "observedAt": "2026-10-19"
+    },
+    {
+      "id": "listing-2",
+      "listingUrl": "https://www.ebay.co.uk/itm/267817153160",
+      "catalogueUrl": "https://showroom.ebaymotorspro.co.uk/SAAD-MOTORS-LTD?menu=1",
+      "imageUrl": "https://i.ebayimg.com/00/s/MTIwM1gxNjAw/z/YWgAAeSwcoNq1SVg/$_2.JPG",
+      "downloadUrl": "https://i.ebayimg.com/00/s/MTIwM1gxNjAw/z/YWgAAeSwcoNq1SVg/$_57.JPG",
+      "originalDimensions": [
+        1600,
+        1203
+      ],
+      "retainedDimensions": [
+        1024,
+        770
+      ],
+      "retainedBytes": 174538,
+      "mediaPath": "dealer-stock/listing-2.jpg",
+      "retainedSha256": "7217ae244c59ed49ea3e0320b10b667f0fe4b93c859083abf2635eb74f3867a7",
+      "operation": "Resize within1024px without enlargement and encode optimized JPEG; no change to photographed content.",
+      "originalSha256": "ae1f99b275d3341f0c89ec4adb84a28d04747db31728bc236049bc5858f12712",
+      "observedAt": "2026-10-19"
+    },
+    {
+      "id": "listing-3",
+      "listingUrl": "https://www.ebay.co.uk/itm/267810893463",
+      "catalogueUrl": "https://showroom.ebaymotorspro.co.uk/SAAD-MOTORS-LTD?menu=1",
+      "imageUrl": "https://i.ebayimg.com/00/s/MTIyN1gxNjAw/z/kYwAAeSw--Vq1aha/$_2.JPG",
+      "downloadUrl": "https://i.ebayimg.com/00/s/MTIyN1gxNjAw/z/kYwAAeSw--Vq1aha/$_57.JPG",
+      "originalDimensions": [
+        1600,
+        1227
+      ],
+      "retainedDimensions": [
+        1024,
+        786
+      ],
+      "retainedBytes": 189594,
+      "mediaPath": "dealer-stock/listing-3.jpg",
+      "retainedSha256": "6b222e53373aefb27ad754abc40e5c9eabf1f9fd4cc2c8f3023904212fa4e524",
+      "operation": "Resize within1024px without enlargement and encode optimized JPEG; no change to photographed content.",
+      "originalSha256": "1e3c5b69b3d854f784b61231ce6e70fb95a03e13fe86768b697d1338a1dd5f94",
+      "observedAt": "2026-10-19"
+    }
+  ],
+  "review": {
+    "reviewed": true,
+    "observedAt": "2026-10-19",
+    "method": "Viewed every selected photograph in contact sheets; checked actual vehicle content, placeholders, price cards and visible dealer identity.",
+    "maximumDimension": 1024,
+    "maximumBytes": 189594
+  }
+}

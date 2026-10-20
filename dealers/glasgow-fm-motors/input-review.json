@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-input-review",
+  "dealer": "glasgow-fm-motors",
+  "reviewed": true,
+  "reviewedAt": "2026-10-20T19:14:17.505Z",
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "checks": [
+    "canonical-hosting-and-preserved-fleet-collisions",
+    "assigned-expansion-lead",
+    "public-fact-schema-and-price-omission",
+    "personal-contact-screen",
+    "retained-stock-media",
+    "companion-copy-source-binding",
+    "immutable-template-release-and-native-QA-parent",
+    "reviewed-artwork-provenance-and-regenerated-logo-hashes"
+  ],
+  "sourceArtworkReview": "Retained artwork review is separate provenance; this command does not perform visual, Arabic-expert or dealer approval.",
+  "copyReview": "Automated structure, stock hash, source text and complete EN/BG rows; no new human translation approval is inferred.",
+  "contacts": {
+    "schemaVersion": 1,
+    "kind": "cars-automated-public-contact-screen",
+    "dealer": "glasgow-fm-motors",
+    "method": "heuristic; no claim that unflagged values cannot be personal",
+    "flags": [],
+    "blocking": []
+  },
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-glasgow-fm-motors",
+    "position": 46
+  },
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "inputs": [
+    {
+      "path": "FACTS-AND-INVENTORY.json",
+      "sha256": "0f0b756522cdce42cb1980710ecf9c302039d1466b747ff5b05cf420c8f615e9"
+    },
+    {
+      "path": "branding/generated-mark-on-dark.png",
+      "sha256": "d4af40c439ad0a26168767df571e57fb4890ba2ed187625e3355b69eeab388e6"
+    },
+    {
+      "path": "branding/generated-mark.png",
+      "sha256": "f266caa5942c91dcf27a954e02edfd134a1ce34f5d37745711578a5d2ae60663"
+    },
+    {
+      "path": "branding/generated-master.png",
+      "sha256": "7b16db32769c36890d0d69c4c37ceb0a8c0d783179951eea8656921664aa66cd"
+    },
+    {
+      "path": "branding/generated-on-dark.png",
+      "sha256": "f75083192f346e955fa4147e12633ece31df9429073b684b4166dc5f2eb905e3"
+    },
+    {
+      "path": "branding/logo-contract.json",
+      "sha256": "fccaba7e2adce99c5c77a52ca2a1f2bf4513035771f25a76b51d08265e9df113"
+    },
+    {
+      "path": "branding/logo-recipe.json",
+      "sha256": "4c0d1017fb05589298fb00b440133c1e43b8e322980f413ab3bc6b67e2e4a992"
+    },
+    {
+      "path": "branding/source.json",
+      "sha256": "a32cb27f8abe4fe8a0575686bc4385c9d20e4cc82cf883510dae8637ce044a3e"
+    },
+    {
+      "path": "business-facts.json",
+      "sha256": "5933fabc74e2b5f4547b705c48e50ccb3ad017348921744bc59451d80f791f79"
+    },
+    {
+      "path": "copy-review.json",
+      "sha256": "ea59a977faebe4e2feedc8387d1b996b4e388d7397881f498a986b33ab875555"
+    },
+    {
+      "path": "dealer-stock/vehicle-1.jpg",
+      "sha256": "f2dde65f87fa2121321110ed642030ed037f508ddc69cb93199540979f51b7b2"
+    },
+    {
+      "path": "dealer-stock/vehicle-2.jpg",
+      "sha256": "e498327549acaf48267e2f21dcd7578ee44c6dc471394617721ff50ee8a02c13"
+    },
+    {
+      "path": "dealer-stock/vehicle-3.jpg",
+      "sha256": "03ce5841194a4ee3ca297933113004362286b5b419768d6407eb0d9d94ca6c4f"
+    },
+    {
+      "path": "dealer.json",
+      "sha256": "c9b04df20f2777b9ebb9ef734525f73f2c24bcc07d02851e022956c0c3db67f3"
+    },
+    {
+      "path": "identity-review.json",
+      "sha256": "596dedcf0b7dc70f9ff6567a90e0dc4b12671d4749d0c42ecdb496ac563540fe"
+    },
+    {
+      "path": "locale.json",
+      "sha256": "9833289cc41547fbe7acaadd221eec9ae1ee5e9db79fdb90bb8acbd7f2c73959"
+    },
+    {
+      "path": "missing-facts.json",
+      "sha256": "5119661114f06be04521285e557e87095898f100487442d328d05d29eb0668b2"
+    },
+    {
+      "path": "qualification.json",
+      "sha256": "89e3658666e43dcc1734ccebfdc13db15c717d708dd383b3148ba9293d466bae"
+    },
+    {
+      "path": "source-evidence.json",
+      "sha256": "bfdd5376c76326570c28d3af57cd5f0035b89b483fdcd7716054e9101ff012cb"
+    },
+    {
+      "path": "stock-history-review.json",
+      "sha256": "19a1c2d3a21a6c618eeadcbde33c05548782c17c513eac4cb21f1a3a8ed1d69a"
+    },
+    {
+      "path": "stock.json",
+      "sha256": "367d5b1d5c36da3ea389f7bfb8c8911f2d4cc50eeb220b109e5fd2d33539a9d0"
+    }
+  ],
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "providerWrites": 0
+}

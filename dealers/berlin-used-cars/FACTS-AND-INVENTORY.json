@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "dealer": "berlin-used-cars",
+  "businessFacts": "business-facts.json",
+  "stock": "stock.json",
+  "inventoryKind": "dated-listing-snapshot",
+  "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+  "sources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/berlin-used-cars-trllc-sp",
+      "observedAt": "2026-10-19T20:00:18.885044Z",
+      "supports": [
+        "business-trading-name",
+        "public-business-phone",
+        "marketplace-location",
+        "dealer-catalogue"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/7726-land-rover-range-rover-sport-30-v6-supercharged-at-awd-340-hp-hse",
+      "observedAt": "2026-10-19T20:00:18.885044Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/7727-land-rover-range-rover-50-v8-supercharged-at-awd-565-hp-vogue-se",
+      "observedAt": "2026-10-19T20:00:18.885044Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/7728-chevrolet-camaro-62-at-455-hp-zl1",
+      "observedAt": "2026-10-19T20:00:18.885044Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "dealer": "chris-automotive",
+  "generations": [
+    {
+      "role": "master",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-fc05ed46-0add-44ac-81e1-82212bb65457",
+      "modelVersion": null,
+      "prompt": "Create a polished independent logo proposal for CHRIS AUTOMOTIVE, a UK used-car dealership. A single horizontal transparent lockup: left a compact geometric CA monogram, open C wrapping a strong triangular A, right exact text CHRIS above AUTOMOTIVE in a clean bold elegant sans serif. The logo should feel professional and approachable, with disciplined optical balance and a distinctive simple mark legible at32px. Flat near-black ink, ample alpha-transparent padding, clear gap for cropping the symbol. No gradients, shadows, background, textures, car illustration, slogan or badge. Exact text CHRIS AUTOMOTIVE.",
+      "promptRetained": true,
+      "sourceAssetSha256": "81d4f57fb6f3fc720d7d4aa1cf1634b133030ce21d243333d60aaff2d002c639",
+      "observedAt": "2026-10-19",
+      "originalResponseArtworkRetained": true
+    },
+    {
+      "role": "onDarkAndAccent",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-27825418-41a3-4d93-91ce-0678f0c81a96",
+      "modelVersion": null,
+      "prompt": "Adapt the exact supplied logo into a refined surface version for dark and red backgrounds. Keep the exact spelling, the original motif, every word, proportions and layout. Give all dark lettering and dark emblem strokes a pure WHITE fill bounded by a strong clean deep near-black #101820 contour, finished with a narrow white outer keyline. Preserve any original red or orange brand accent inside its contour. All white areas must be solid opaque ink protected inside the dark contour. True transparent alpha outside. Keep a GENEROUS TRANSPARENT GAP between compact emblem and wordmark and preserve all internal letter counters. No grunge, no speckles, no distressed raster texture, no holes in solid strokes, no gradients, no drop shadow, no decorative panel, no extra content. Smooth precise restrained digital logo, clean hard edges.",
+      "promptRetained": true,
+      "sourceAssetSha256": "25abf2a157f0b909c07ab81873e31472c496dc8d315d0f0869bed49a2c46ca3b",
+      "observedAt": "2026-10-19",
+      "originalResponseArtworkRetained": true
+    },
+    {
+      "role": "compact",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-fbbf3b18-1f81-4d39-98df-af792575329c",
+      "modelVersion": null,
+      "prompt": "Create ONLY the compact CA monogram from this supplied dealer logo, faithfully preserving the exact initial shapes, interlocking geometry and source motif. Remove all other wording; output one isolated compact monogram centered on a square transparent canvas with generous transparent margins. Strong solid pale-silver #d9e2ec fill inside a black contour with a thin white outer keyline, as a monochrome surface variant usable on white, dark navy and red. True transparent alpha including letter counters. Broad simple strokes clear at32px. No extra letters, no car, badge, background panel, gradient, shadow, reflections, speckles or raster distress. This is a precise compact extraction/reconstruction of the supplied identity, not a new design.",
+      "promptRetained": true,
+      "sourceAssetSha256": "b74cef42486f22bec1b653c8724a805d182eb15653ca136448aa87db2e834766",
+      "observedAt": "2026-10-19",
+      "originalResponseArtworkRetained": true
+    }
+  ],
+  "exportPolicy": "Original generated PNG bytes are retained. Compact pixel-exact extractions, where used, retain their parent generation, hash and rectangle in source.json. Existing dealer-pack logo tooling performs only transparent padding removal and deterministic raster exports. No deterministic recolour is used."
+}

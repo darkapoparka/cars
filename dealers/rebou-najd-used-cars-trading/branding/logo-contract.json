@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "dealer": "rebou-najd-used-cars-trading",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T21:46:42.567Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "sourced-logo-imagegen-redraw",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "038d41f982bfa63b3b2c9847a7a0f89559a708abf3f8612da32f0036a4c7cf06",
+      "sourceSha256": "a6c29dee356fd5efb237b9cde5a355c6c84c577881eb8e922fd63f38f55d9f48"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "8ff7ef15ecf2f361f7ef7ce768bc0f37af0e45878a2d152eaa701c5409e4b9fa",
+      "sourceSha256": "cea7920cbe0356d3364ebc66ef5d6e5d2ac586ed9b799ff1a962a41f85215a5b"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "8ff7ef15ecf2f361f7ef7ce768bc0f37af0e45878a2d152eaa701c5409e4b9fa",
+      "sourceSha256": "cea7920cbe0356d3364ebc66ef5d6e5d2ac586ed9b799ff1a962a41f85215a5b"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "a6c29dee356fd5efb237b9cde5a355c6c84c577881eb8e922fd63f38f55d9f48",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-653eece5-7a6d-4257-b405-1ebb7a87b99c",
+      "modelVersion": null,
+      "transformation": {
+        "operation": "rectangular-extract-without-recolour-or-redrawing",
+        "source": "branding/generated-primary.png",
+        "sourceSha256": "becee3af89a4bd7e30ddae399eb49c03e0f195cabb97422943b84ca84b292fa4",
+        "rectangle": {
+          "left": 0,
+          "top": 0,
+          "width": 887,
+          "height": 505
+        }
+      }
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "19d6c02caf55a7575b25b12e777664ad0f5781fd0803c9be3c8a5f3d4519dd70",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-653eece5-7a6d-4257-b405-1ebb7a87b99c",
+      "modelVersion": null,
+      "transformation": {
+        "operation": "rectangular-extract-without-recolour-or-redrawing",
+        "source": "branding/generated-primary.png",
+        "sourceSha256": "becee3af89a4bd7e30ddae399eb49c03e0f195cabb97422943b84ca84b292fa4",
+        "rectangle": {
+          "left": 0,
+          "top": 532,
+          "width": 887,
+          "height": 355
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "f66554321d71916f3a87a67a73dee419895d094e892ab23837c496ad7fa95cef"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "a6c29dee356fd5efb237b9cde5a355c6c84c577881eb8e922fd63f38f55d9f48",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-653eece5-7a6d-4257-b405-1ebb7a87b99c",
+        "modelVersion": null,
+        "transformation": {
+          "operation": "rectangular-extract-without-recolour-or-redrawing",
+          "source": "branding/generated-primary.png",
+          "sourceSha256": "becee3af89a4bd7e30ddae399eb49c03e0f195cabb97422943b84ca84b292fa4",
+          "rectangle": {
+            "left": 0,
+            "top": 0,
+            "width": 887,
+            "height": 505
+          }
+        }
+      },
+      "sourceReference": "dealers/rebou-najd-used-cars-trading/branding/generated-master.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "cea7920cbe0356d3364ebc66ef5d6e5d2ac586ed9b799ff1a962a41f85215a5b",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-041d6302-b2ee-4944-a185-24d12b031d31",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/rebou-najd-used-cars-trading/branding/generated-inverse.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "cea7920cbe0356d3364ebc66ef5d6e5d2ac586ed9b799ff1a962a41f85215a5b",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-041d6302-b2ee-4944-a185-24d12b031d31",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/rebou-najd-used-cars-trading/branding/generated-inverse.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "ade7001ef9f7d616218aa11707f83c600fef4615128a5602a64d3b74a3cbbf11",
+      "sha256": "a6c29dee356fd5efb237b9cde5a355c6c84c577881eb8e922fd63f38f55d9f48",
+      "crop": {
+        "left": 39,
+        "top": 119,
+        "width": 824,
+        "height": 366
+      },
+      "sourcePath": "branding/generated-master.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "3dc15d07bb6f3d79eab5e231da39df2b3fe323ca412c82fbacf376e58f041df8",
+      "sha256": "cea7920cbe0356d3364ebc66ef5d6e5d2ac586ed9b799ff1a962a41f85215a5b",
+      "crop": {
+        "left": 161,
+        "top": 395,
+        "width": 932,
+        "height": 452
+      },
+      "sourcePath": "branding/generated-inverse.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "3dc15d07bb6f3d79eab5e231da39df2b3fe323ca412c82fbacf376e58f041df8",
+      "sha256": "cea7920cbe0356d3364ebc66ef5d6e5d2ac586ed9b799ff1a962a41f85215a5b",
+      "crop": {
+        "left": 161,
+        "top": 395,
+        "width": 932,
+        "height": 452
+      },
+      "sourcePath": "branding/generated-inverse.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "aebe034b69fa0ad9d1fe407f322bdfb95cffb22e0e02644503f726954d90b12e",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-653eece5-7a6d-4257-b405-1ebb7a87b99c",
+        "modelVersion": null,
+        "transformation": {
+          "operation": "rectangular-extract-without-recolour-or-redrawing",
+          "source": "branding/generated-primary.png",
+          "sourceSha256": "becee3af89a4bd7e30ddae399eb49c03e0f195cabb97422943b84ca84b292fa4",
+          "rectangle": {
+            "left": 0,
+            "top": 532,
+            "width": 887,
+            "height": 355
+          }
+        }
+      },
+      "sourceReference": "dealers/rebou-najd-used-cars-trading/branding/generated-mark.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "9324e6df010e9c0cf8b5b413a5e695ee0a7c310eb3cee555a385434ca1d75226",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-041d6302-b2ee-4944-a185-24d12b031d31",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/rebou-najd-used-cars-trading/branding/generated-inverse.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "19d6c02caf55a7575b25b12e777664ad0f5781fd0803c9be3c8a5f3d4519dd70",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-653eece5-7a6d-4257-b405-1ebb7a87b99c",
+        "modelVersion": null,
+        "transformation": {
+          "operation": "rectangular-extract-without-recolour-or-redrawing",
+          "source": "branding/generated-primary.png",
+          "sourceSha256": "becee3af89a4bd7e30ddae399eb49c03e0f195cabb97422943b84ca84b292fa4",
+          "rectangle": {
+            "left": 0,
+            "top": 532,
+            "width": 887,
+            "height": 355
+          }
+        }
+      },
+      "sourceReference": "dealers/rebou-najd-used-cars-trading/branding/generated-mark.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "f66554321d71916f3a87a67a73dee419895d094e892ab23837c496ad7fa95cef",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-653eece5-7a6d-4257-b405-1ebb7a87b99c",
+        "modelVersion": null,
+        "transformation": {
+          "operation": "rectangular-extract-without-recolour-or-redrawing",
+          "source": "branding/generated-primary.png",
+          "sourceSha256": "becee3af89a4bd7e30ddae399eb49c03e0f195cabb97422943b84ca84b292fa4",
+          "rectangle": {
+            "left": 0,
+            "top": 532,
+            "width": 887,
+            "height": 355
+          }
+        }
+      },
+      "sourceReference": "dealers/rebou-najd-used-cars-trading/branding/generated-mark.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-19T21:46:42.567Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "a35774f062c0644753ba57e5f7d527f3bf0db4f155c83688e4ad478ec16385ee",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-041d6302-b2ee-4944-a185-24d12b031d31",
+      "modelVersion": null
+    }
+  }
+}

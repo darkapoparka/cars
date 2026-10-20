@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "slug": "al-meqat",
+  "dealerId": "ae-sharjah-al-meqat",
+  "business": {
+    "name": "Al Meqat",
+    "city": "Sharjah",
+    "region": "Sharjah",
+    "countryCode": "AE",
+    "currency": "AED",
+    "distanceUnit": "km",
+    "locale": "en-AE",
+    "address": "",
+    "phone": "+971561214174",
+    "phoneDisplay": "+971561214174",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://licenseplate.ae/cars/dealer/al-meqat-cars",
+    "hours": "",
+    "sourceUrl": "https://licenseplate.ae/cars/dealer/al-meqat-cars",
+    "observedAt": "2026-10-19T20:00:04.403200Z",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/al-meqat-cars",
+      "observedAt": "2026-10-19T20:00:04.403200Z",
+      "supports": [
+        "business-trading-name",
+        "public-business-phone",
+        "marketplace-location",
+        "dealer-catalogue"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/7097-lexus-lx-570-at-367-hp-lx-570-platinum",
+      "observedAt": "2026-10-19T20:00:04.403200Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/7368-toyota-fortuner-40-at-4wd-238-hp-vxr",
+      "observedAt": "2026-10-19T20:00:04.403200Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/3340-toyota-c-hr-18-cvt-hybrid-98-hp-g",
+      "observedAt": "2026-10-19T20:00:04.403200Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    }
+  ]
+}

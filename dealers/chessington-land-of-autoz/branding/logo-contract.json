@@ -1,0 +1,197 @@
+{
+  "schemaVersion": 1,
+  "dealer": "chessington-land-of-autoz",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T18:56:42.959980Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "cfd25ebd0c064af2445032f5f56e37cdb2fb3587aa970f9962a414f78257f41f",
+      "sourceSha256": "f4d0622e1d7a9f010273290774b7cca66281619ff97e20c141df86a4c4868837"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "f45814f99137d70f1e6fe1dbb7df8fe39b66685f94486949b3a539c0f3beb3aa",
+      "sourceSha256": "71bdd510d2204b744902f98b9d68470a69e60e4e9ddc4fcf9712720dcf3620a6"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "f45814f99137d70f1e6fe1dbb7df8fe39b66685f94486949b3a539c0f3beb3aa",
+      "sourceSha256": "71bdd510d2204b744902f98b9d68470a69e60e4e9ddc4fcf9712720dcf3620a6"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "f4d0622e1d7a9f010273290774b7cca66281619ff97e20c141df86a4c4868837",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-fe858984-76ee-454e-aab5-7836f7c4e2b6",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "5781045e4467404e74d279e28ffe7145cf745b1601a581a6eb25355f99089b62",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-fe858984-76ee-454e-aab5-7836f7c4e2b6",
+      "modelVersion": null
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "4493226cecaca135a4542d2f16b59856d1c6ef5bdfe08d3e017a50c4d806090d"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "f4d0622e1d7a9f010273290774b7cca66281619ff97e20c141df86a4c4868837",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-fe858984-76ee-454e-aab5-7836f7c4e2b6",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/chessington-land-of-autoz/branding/generated-master.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "71bdd510d2204b744902f98b9d68470a69e60e4e9ddc4fcf9712720dcf3620a6",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-22af2e90-28f8-4d72-8c05-ef482480e12e",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/chessington-land-of-autoz/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "71bdd510d2204b744902f98b9d68470a69e60e4e9ddc4fcf9712720dcf3620a6",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-22af2e90-28f8-4d72-8c05-ef482480e12e",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/chessington-land-of-autoz/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "a176ea7d227bdf8ba94b5a86854462cb5d2a4f8e9668d18fdd69508d683e7f8c",
+      "sha256": "f4d0622e1d7a9f010273290774b7cca66281619ff97e20c141df86a4c4868837",
+      "crop": {
+        "left": 0,
+        "top": 26,
+        "width": 2172,
+        "height": 619
+      },
+      "sourcePath": "branding/generated-master.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "00c7ac257c0580391fd4d397202db54d1818f57643206807342dabd361349983",
+      "sha256": "71bdd510d2204b744902f98b9d68470a69e60e4e9ddc4fcf9712720dcf3620a6",
+      "crop": {
+        "left": 0,
+        "top": 22,
+        "width": 2172,
+        "height": 630
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "00c7ac257c0580391fd4d397202db54d1818f57643206807342dabd361349983",
+      "sha256": "71bdd510d2204b744902f98b9d68470a69e60e4e9ddc4fcf9712720dcf3620a6",
+      "crop": {
+        "left": 0,
+        "top": 22,
+        "width": 2172,
+        "height": 630
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "04e6d7f05834fd7f2b5e35b3b83399a4ebe7165d31400cb60999913482e71288",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-fe858984-76ee-454e-aab5-7836f7c4e2b6",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/chessington-land-of-autoz/branding/generated-mark.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "56c3693c3bd46a6bc0758baf72da83e27b8317905ed63779a8d895ce6b57f509",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-22af2e90-28f8-4d72-8c05-ef482480e12e",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/chessington-land-of-autoz/branding/generated-mark-on-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "5781045e4467404e74d279e28ffe7145cf745b1601a581a6eb25355f99089b62",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-fe858984-76ee-454e-aab5-7836f7c4e2b6",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/chessington-land-of-autoz/branding/generated-mark.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "4493226cecaca135a4542d2f16b59856d1c6ef5bdfe08d3e017a50c4d806090d",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-fe858984-76ee-454e-aab5-7836f7c4e2b6",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/chessington-land-of-autoz/branding/generated-mark.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-19T18:56:42.959980Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "048726e8ff2b37e3cdfc4b67e39c3b71c8f0b2065ca9f9a20c9334f9d853aa8a",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-22af2e90-28f8-4d72-8c05-ef482480e12e",
+      "modelVersion": null
+    }
+  }
+}

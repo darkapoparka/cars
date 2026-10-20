@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "slug": "east-midlands-car-sales",
+  "dealerId": "gb-kirkby-east-midlands-car-sales",
+  "business": {
+    "name": "East Midlands Car Sales Ltd",
+    "city": "Kirkby-in-Ashfield",
+    "region": "Nottinghamshire",
+    "countryCode": "GB",
+    "currency": "GBP",
+    "distanceUnit": "mi",
+    "locale": "en-GB",
+    "address": "Mayfield House 12 Pinxton Lane Nottingham, Kirkby-in-Ashfield Nottinghamshire NG17 8LT",
+    "phone": "+441623705996",
+    "phoneDisplay": "+441623705996",
+    "email": "eastmidlandscars@gmail.com",
+    "website": "",
+    "stockUrl": "https://showroom.ebaymotorspro.co.uk/East-Midlands-Car-sales-LTD",
+    "hours": "Monday–Friday 09:00–17:30; Saturday 10:00–16:00; Sunday 10:00–15:00.",
+    "sourceUrl": "https://showroom.ebaymotorspro.co.uk/East-Midlands-Car-sales-LTD",
+    "observedAt": "2026-10-19",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/East-Midlands-Car-sales-LTD",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "current-public-business-details",
+        "dated-advertised-stock-snapshot"
+      ]
+    },
+    {
+      "url": "https://www.autotrader.co.uk/dealers/nottinghamshire/nottingham/east-midlands-car-sales-ltd-10048908",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "matching-dealer-identity",
+        "public-opening-hours",
+        "real-logo"
+      ]
+    }
+  ]
+}

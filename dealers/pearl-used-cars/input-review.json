@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-input-review",
+  "dealer": "pearl-used-cars",
+  "reviewed": true,
+  "reviewedAt": "2026-10-20T19:13:21.159Z",
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "checks": [
+    "canonical-hosting-and-preserved-fleet-collisions",
+    "assigned-expansion-lead",
+    "public-fact-schema-and-price-omission",
+    "personal-contact-screen",
+    "retained-stock-media",
+    "companion-copy-source-binding",
+    "immutable-template-release-and-native-QA-parent",
+    "reviewed-artwork-provenance-and-regenerated-logo-hashes"
+  ],
+  "sourceArtworkReview": "Retained artwork review is separate provenance; this command does not perform visual, Arabic-expert or dealer approval.",
+  "copyReview": "Automated structure, stock hash, source text and complete EN/BG rows; no new human translation approval is inferred.",
+  "contacts": {
+    "schemaVersion": 1,
+    "kind": "cars-automated-public-contact-screen",
+    "dealer": "pearl-used-cars",
+    "method": "heuristic; no claim that unflagged values cannot be personal",
+    "flags": [],
+    "blocking": []
+  },
+  "batch": {
+    "number": 4,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-sharjah-pearl-used-cars",
+    "position": 370
+  },
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "inputs": [
+    {
+      "path": "FACTS-AND-INVENTORY.json",
+      "sha256": "b4117c2ec0807da630da3b761b4ed2c947670e273654050854edd2e3592043be"
+    },
+    {
+      "path": "branding/generated-on-dark.png",
+      "sha256": "2cf927ccdeb643680763b00b4d0f8cb7eaeeda222bf3799af5a94c74e3bcf736"
+    },
+    {
+      "path": "branding/generated-on-light.png",
+      "sha256": "eef6c44eb6fddf461d8290eba9c6e352bb5be5e0000d2c3694d1d763dac03bf7"
+    },
+    {
+      "path": "branding/logo-contract.json",
+      "sha256": "362d1ca0c16dc8fbd1709c6c44e1022f903c5bfdd28f56d53c78872320c8fb83"
+    },
+    {
+      "path": "branding/logo-recipe.json",
+      "sha256": "152efd96927f4e03099007b8e455139fc6a12b81b1903974ba76d495d7756b80"
+    },
+    {
+      "path": "branding/source-original.jpg",
+      "sha256": "c94377b44cd7cd878d654f448d1642c1efa48650f0bfb70c7c1d1e5a45823f7f"
+    },
+    {
+      "path": "branding/source.json",
+      "sha256": "a7d3f5e871e5ef0ca49ed1b3f537e1f4e0dbd5f7abab587e0dc210c3dc45c2f4"
+    },
+    {
+      "path": "business-facts.json",
+      "sha256": "06ecb0ce073fd5189cb40f1ee10b787c038cef730594e62e9f8016f42bdab7fa"
+    },
+    {
+      "path": "copy-review.json",
+      "sha256": "8a641a600350818d4869cab187eb3e4e44e44a56d55536b2093b86319935a884"
+    },
+    {
+      "path": "dealer-stock/dubicars-942920.webp",
+      "sha256": "3c3f181b5efd9c398711fd1ac6eda8a93e9b9dc47d5e1ee4530dee897d43e2a8"
+    },
+    {
+      "path": "dealer-stock/dubicars-983508.webp",
+      "sha256": "87546b30217a6d4c24bd36120d350d0f4569c92ea52100b29e7c17529f357c60"
+    },
+    {
+      "path": "dealer-stock/dubicars-991888.webp",
+      "sha256": "ed7d1ca222b21ef8fbebd68e684326bf9897fe3f56df66c78f15f30ceb02035a"
+    },
+    {
+      "path": "dealer.json",
+      "sha256": "e8b4ae78c69022ea8735f542e271e50640a9599d0fae9dbd658afbb35752d27b"
+    },
+    {
+      "path": "identity-review.json",
+      "sha256": "bf6101db3f28bc1f3e1a835ec36551e3eb3814f14c59104f98e39fcf1841f8f9"
+    },
+    {
+      "path": "locale.json",
+      "sha256": "f3a5e28404648f6914ebbb685991ca6ae644eec30b4a7e3e7c4b37c0f6329f24"
+    },
+    {
+      "path": "missing-facts.json",
+      "sha256": "f53f64f0d9de6c5a7958791db19749666b84a910099a21639e97c0733c52a115"
+    },
+    {
+      "path": "qualification.json",
+      "sha256": "5d10662dca2a9f268143cd85a02ad59f793fead373c9640ba73e335e4b79192b"
+    },
+    {
+      "path": "source-evidence.json",
+      "sha256": "af98e1a2d36d02037babe8c785c27acc4ce04736f054e9de46057d0db6330824"
+    },
+    {
+      "path": "stock.json",
+      "sha256": "8ddcfe0f7a4d237fe7a7b126c0094234f9522d85e06b54d88272d0111723ec54"
+    }
+  ],
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "providerWrites": 0
+}

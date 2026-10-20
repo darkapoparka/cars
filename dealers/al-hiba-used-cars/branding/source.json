@@ -1,0 +1,141 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-hiba-used-cars",
+  "realLogoFirst": true,
+  "publishedBranding": false,
+  "creationMethod": "imagegen-independent-monogram-proposal",
+  "approvalStatus": "independent-proposal-not-dealer-approved",
+  "dealerApproved": false,
+  "usageStatus": "public-preview-only",
+  "observedAt": "2026-10-19T20:13:47.637Z",
+  "publicSources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/al-hiba-used-cars",
+      "observedAt": "2026-10-19T20:00:04.402735Z"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/7754-mitsubishi-l200-24-d-mt-154-hp-other",
+      "observedAt": "2026-10-19T20:00:04.402735Z"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/7771-toyota-hiace-27-mt-151-hp-standard",
+      "observedAt": "2026-10-19T20:00:04.402735Z"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/7938-toyota-hiace-27-mt-151-hp-other",
+      "observedAt": "2026-10-19T20:00:04.402735Z"
+    }
+  ],
+  "originals": [],
+  "logoResearch": {
+    "method": "Opened current named LicensePlate dealer profile and seller-bound listings, searched exact business name with location/logo/official terms in two search engines, and checked image search and a dealer-attributed Dubizzle URL.",
+    "result": "Current catalogue uses an AH initials placeholder. Bounded research did not obtain an attributable usable original logo. The similarly named Iraqi Al Haiba shipping logo was excluded as a different business. A Dubizzle result identified the dealer but its public response supplied no usable artwork.",
+    "sources": [
+      "https://licenseplate.ae/cars/dealer/al-hiba-used-cars",
+      "https://2gis.ae/sharjah/firm/70000001023975758",
+      "https://sharjah.dubizzle.com/motors/used-cars/hyundai/h1/2025/10/22/hyundai-h1-2016-12-passenger-12-924---b5516a8caf3346a6b9db6b755f2ba8bb/"
+    ],
+    "queries": [
+      "\"Al Hiba Used Cars\" Sharjah logo",
+      "\"Al Hiba Used Cars\" official logo hours contact",
+      "\"Al Hiba Used Cars\" logo"
+    ]
+  },
+  "visualReview": "Reviewed bold AH proposal with a single sweeping bridge and open triangular counter. Dark navy treatment is for white; pale silver treatment is for dark and red surfaces. Clear monogram remains recognizable at 32px; business name stays in factual site copy. No official logo or dealer approval is claimed.",
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T20:13:47.637Z",
+    "master": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "7b7e661df5a4e1c0d484b88a0814debca5c9807070711241ea2c15f7ac3ac71f",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-d49a64d4-a0bb-4c4c-87c2-68ac2f073f6c",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "7b7e661df5a4e1c0d484b88a0814debca5c9807070711241ea2c15f7ac3ac71f",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-d49a64d4-a0bb-4c4c-87c2-68ac2f073f6c",
+        "modelVersion": null
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-on-dark.png",
+      "sha256": "8030f25b43863a58beeeda8621e57bf2e8f1217f1ac5080822caa885a5718504",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-ac41a591-c497-4d74-a783-4db6a40906c4",
+        "modelVersion": null
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "7b7e661df5a4e1c0d484b88a0814debca5c9807070711241ea2c15f7ac3ac71f",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-d49a64d4-a0bb-4c4c-87c2-68ac2f073f6c",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "8030f25b43863a58beeeda8621e57bf2e8f1217f1ac5080822caa885a5718504",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-ac41a591-c497-4d74-a783-4db6a40906c4",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "8030f25b43863a58beeeda8621e57bf2e8f1217f1ac5080822caa885a5718504",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-ac41a591-c497-4d74-a783-4db6a40906c4",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": {
+        "onLight": [
+          "#ffffff"
+        ],
+        "onDark": [
+          "#111113",
+          "#101820"
+        ],
+        "onAccent": [
+          "#09090b",
+          "#17191c",
+          "#c40101"
+        ]
+      },
+      "notes": "Reviewed bold AH proposal with a single sweeping bridge and open triangular counter. Dark navy treatment is for white; pale silver treatment is for dark and red surfaces. Clear monogram remains recognizable at 32px; business name stays in factual site copy. No official logo or dealer approval is claimed."
+    },
+    "compactMarkStatus": "independent-proposal-not-dealer-approved",
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-19T20:13:47.637Z",
+      "widths": [
+        32,
+        64
+      ],
+      "backgrounds": [
+        "#ffffff",
+        "#101820",
+        "#c40101"
+      ],
+      "notes": "Reviewed bold AH proposal with a single sweeping bridge and open triangular counter. Dark navy treatment is for white; pale silver treatment is for dark and red surfaces. Clear monogram remains recognizable at 32px; business name stays in factual site copy. No official logo or dealer approval is claimed."
+    }
+  },
+  "generationPrompts": [
+    "Use case: logo-brand. New production raster logo for Al Hiba Used Cars. Single isolated compact AH monogram in solid light silver #c7d4dc, on genuinely transparent background. Very clean geometric A and H letters joined with a single strong sweeping horizontal bridge suggesting a road. The A is a clear triangular letter at the left with a large transparent triangular counter; the H is a vertical post at the right and an upper short post at center. Simple smooth hard boundaries and large negative spaces; professionally constructed bold logo readable at32px. Use exactly one flat light silver ink for the entire mark. No navy, no black, no white, no outline, no tiny dashed road details. No texture, gradient, shadows, distress, mottling, speckled alpha, background, badges, mockups or additional text. Square canvas with balanced padding. The logo must be a polished clean asset, not a sketch.",
+    "Produce the matching dark-ink surface version of this AH monogram. Preserve this exact simple AH letter geometry, smooth sweeping bridge, spacing and transparent knockout areas. Re-render all visible ink as flat solid very dark navy #10232b. Remove tiny detached specks so empty spaces are entirely transparent. The artwork must have clean crisp graphic edges, no texture, no shading, no new forms, no text and no background. True transparent background. It must remain a faithful variant of this same AH monogram."
+  ]
+}

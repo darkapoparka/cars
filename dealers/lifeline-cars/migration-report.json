@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "lifeline-cars",
+  "previousSlug": "lifeline-cars",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:16:26.430Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-orpington-lifeline-cars",
+    "position": 79
+  },
+  "before": {
+    "files": 37,
+    "bytes": 5062803
+  },
+  "afterBeforeReview": {
+    "files": 21,
+    "bytes": 2249311
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 239014,
+      "sha256": "2e4db09e359fddb816908483c70bfa2e11d65a59df44bcf63051d51a4f455e21"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 228030,
+      "sha256": "2b10a13e9e63a40da68ea8efe7d6f701bd6cadb2796ceb207fce116d5850d5c3"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 239014,
+      "sha256": "2e4db09e359fddb816908483c70bfa2e11d65a59df44bcf63051d51a4f455e21"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 166732,
+      "sha256": "ac6b9ece6056962462bdacb16c8954a978354a89d0ef6db649815baa03e4a107"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 187654,
+      "sha256": "8bf1ddb560541f23b492bc4992da828262bc42484341c4e2043a3344efdc5ace"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 187654,
+      "sha256": "8bf1ddb560541f23b492bc4992da828262bc42484341c4e2043a3344efdc5ace"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 166732,
+      "sha256": "ac6b9ece6056962462bdacb16c8954a978354a89d0ef6db649815baa03e4a107"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 239014,
+      "sha256": "2e4db09e359fddb816908483c70bfa2e11d65a59df44bcf63051d51a4f455e21"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 15731,
+      "sha256": "05fd5740105036d95bf6a051a7e3ae08a430873dfbeac355383464c0df449f61"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 187654,
+      "sha256": "8bf1ddb560541f23b492bc4992da828262bc42484341c4e2043a3344efdc5ace"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 117662,
+      "sha256": "725387c82295607224cbc81b0b8fe25dfbe8448289c7efe07ec3f8665f366db1"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 187654,
+      "sha256": "8bf1ddb560541f23b492bc4992da828262bc42484341c4e2043a3344efdc5ace"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 117662,
+      "sha256": "725387c82295607224cbc81b0b8fe25dfbe8448289c7efe07ec3f8665f366db1"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 166732,
+      "sha256": "ac6b9ece6056962462bdacb16c8954a978354a89d0ef6db649815baa03e4a107"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 102778,
+      "sha256": "ebe64160e2c152a408517a34cbb312a2dcd96fdcd899515843e06d29aa5cb010"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 131068,
+      "sha256": "2b098aac1d86990b4b4ec1b3bbe76b104fca16e67cb11adaca8b43550597fbc7"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 136508,
+      "sha256": "7204305927e28775e362cadbc27ca950851b2bbb08f38157661ea9e59dca194e"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 12,
+    "bytes": 2227481,
+    "inventorySha256": "a371286abfb411aaf310b59af21bf0d2422b3abcae7faa739c080de29aca3c87",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "lifeline-cars",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 23,
+    "report": "dealers/lifeline-cars/input-review.json"
+  },
+  "after": {
+    "files": 23,
+    "bytes": 2257708
+  }
+}

@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "rolf-street-car-sales",
+  "previousSlug": "rolf-street-car-sales",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:20:33.152Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-smethwick-rolf-street-car-sales",
+    "position": 89
+  },
+  "before": {
+    "files": 37,
+    "bytes": 4465408
+  },
+  "afterBeforeReview": {
+    "files": 21,
+    "bytes": 1999884
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 217064,
+      "sha256": "23654f077de68873804d9ec871ba1c419bddb6520db646ac05dca1134aabb8eb"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 216914,
+      "sha256": "e231561c72f624dffe4d9cefc95459de2623a4c5c1107d5a93b24cc42f032080"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 217064,
+      "sha256": "23654f077de68873804d9ec871ba1c419bddb6520db646ac05dca1134aabb8eb"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 142271,
+      "sha256": "9dd6fe6645a417f0178adfb23ef99bb8a536e5d05888c48b0ac1c99a8ed6f8cd"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 151882,
+      "sha256": "fd80d14be4d488e9818574a3476f72e3c7c3b8d41e6af607f6634e35bcbf4f12"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 151882,
+      "sha256": "fd80d14be4d488e9818574a3476f72e3c7c3b8d41e6af607f6634e35bcbf4f12"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 142271,
+      "sha256": "9dd6fe6645a417f0178adfb23ef99bb8a536e5d05888c48b0ac1c99a8ed6f8cd"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 217064,
+      "sha256": "23654f077de68873804d9ec871ba1c419bddb6520db646ac05dca1134aabb8eb"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 14135,
+      "sha256": "9c28dd7231abede22e714ec6393659c8bf5fd122a8fe93264971a8a5e1d14a87"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 151882,
+      "sha256": "fd80d14be4d488e9818574a3476f72e3c7c3b8d41e6af607f6634e35bcbf4f12"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 98888,
+      "sha256": "d7ce741f6a665cddec4f5fa10c256d825c139cf1b6816a6abed2082ba6fb5d82"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 151882,
+      "sha256": "fd80d14be4d488e9818574a3476f72e3c7c3b8d41e6af607f6634e35bcbf4f12"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 98888,
+      "sha256": "d7ce741f6a665cddec4f5fa10c256d825c139cf1b6816a6abed2082ba6fb5d82"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 142271,
+      "sha256": "9dd6fe6645a417f0178adfb23ef99bb8a536e5d05888c48b0ac1c99a8ed6f8cd"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 91812,
+      "sha256": "3e8029cdc1ef6fcd3f0ebf716a58bb12e52ec2d7e6f4fe08847fee8b20b86513"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 132798,
+      "sha256": "341c430bd0ce718c227d433f541664ee195ced8a85d09d1bc32b7df9809e8923"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 130394,
+      "sha256": "f28b95a2b7381925781da0446d8527c3a3a2e7488996edbdeeea364b2a9b0249"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 12,
+    "bytes": 1976077,
+    "inventorySha256": "52c498ba070fdb8a547a4d6e2eaabc85c513c5fafab7835a3370df24acd7e815",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "rolf-street-car-sales",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 23,
+    "report": "dealers/rolf-street-car-sales/input-review.json"
+  },
+  "after": {
+    "files": 23,
+    "bytes": 2008342
+  }
+}

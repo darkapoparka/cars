@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-input-review",
+  "dealer": "glasgow-craigton-cars",
+  "reviewed": true,
+  "reviewedAt": "2026-10-20T19:13:44.733Z",
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "checks": [
+    "canonical-hosting-and-preserved-fleet-collisions",
+    "assigned-expansion-lead",
+    "public-fact-schema-and-price-omission",
+    "personal-contact-screen",
+    "retained-stock-media",
+    "companion-copy-source-binding",
+    "immutable-template-release-and-native-QA-parent",
+    "reviewed-artwork-provenance-and-regenerated-logo-hashes"
+  ],
+  "sourceArtworkReview": "Retained artwork review is separate provenance; this command does not perform visual, Arabic-expert or dealer approval.",
+  "copyReview": "Automated structure, stock hash, source text and complete EN/BG rows; no new human translation approval is inferred.",
+  "contacts": {
+    "schemaVersion": 1,
+    "kind": "cars-automated-public-contact-screen",
+    "dealer": "glasgow-craigton-cars",
+    "method": "heuristic; no claim that unflagged values cannot be personal",
+    "flags": [],
+    "blocking": []
+  },
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-glasgow-craigton-cars",
+    "position": 44
+  },
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "inputs": [
+    {
+      "path": "FACTS-AND-INVENTORY.json",
+      "sha256": "680bd30bbf5ed3e936d45a700a03c63cd0ac19f75b765042d9e26347615e9ca3"
+    },
+    {
+      "path": "branding/generated-mark-on-dark.png",
+      "sha256": "7cdb4b614f21dc247d3d904273e2a5b740deca67215154fccd02c930636cd58e"
+    },
+    {
+      "path": "branding/generated-mark.png",
+      "sha256": "00be50207e508c1783f15f9074402bd22627dad310563c8a07f27be1d78091d6"
+    },
+    {
+      "path": "branding/generated-master.png",
+      "sha256": "8a244218e8c53b289061c136d6a4fe7934fbdd246ff0a0450261504a7f5ab6f8"
+    },
+    {
+      "path": "branding/generated-on-dark.png",
+      "sha256": "603db2824203551f9f018959375b1daba0ade963c3236f20b7ec15b9043c4359"
+    },
+    {
+      "path": "branding/logo-contract.json",
+      "sha256": "002848829d4a42ab17645f3be9b198a676d3ce58ebd01f820f05214377db1b58"
+    },
+    {
+      "path": "branding/logo-recipe.json",
+      "sha256": "a342571d2332b372f0fb9994b9d285fe489b7f7c6b47693f17aa6f0a15627046"
+    },
+    {
+      "path": "branding/source.json",
+      "sha256": "ee6faa88a2df2ccd1f1adb3c62c02b382562ce328774ae2cdfa2b47199d5f226"
+    },
+    {
+      "path": "business-facts.json",
+      "sha256": "c66938ec20415c234094b1e034b2e98f2ef8856e3ade99f2bedfcfc8d5f14113"
+    },
+    {
+      "path": "copy-review.json",
+      "sha256": "0fbc1a4ebd8351364f8965217d8146ccfe2fd4d3ce2db5485e40c80ce314f6c0"
+    },
+    {
+      "path": "dealer-stock/vehicle-1.jpg",
+      "sha256": "055f55c479111447aaabfedf4758ec8a33ba2bf599135da41b14a139d29e03d7"
+    },
+    {
+      "path": "dealer-stock/vehicle-2.jpg",
+      "sha256": "2cabca6d2ac8bdba3891ac34e8a546e63af42ad202df21d004b488b1e215ef7d"
+    },
+    {
+      "path": "dealer-stock/vehicle-3.jpg",
+      "sha256": "2955cd874ee0037a7501acb3a1356bad1462e0a1c54d2b7ad76413add6d47131"
+    },
+    {
+      "path": "dealer.json",
+      "sha256": "390daf2cc2c973af475cbadac3ff694eac605d822dc31e934d591e14ad13513a"
+    },
+    {
+      "path": "identity-review.json",
+      "sha256": "09304b629d17f1b3de13f72f14e3cbc71c8a7807b1968ac5b4662cdef7776bb0"
+    },
+    {
+      "path": "locale.json",
+      "sha256": "4605397e25589a17a22fd605053861da709685563f97726b1d9ab6603da678e7"
+    },
+    {
+      "path": "missing-facts.json",
+      "sha256": "a06d1d58b704cd15d2360d9b1dc8584112177cd597243c317f26dc0daf369fc3"
+    },
+    {
+      "path": "qualification.json",
+      "sha256": "e8c5659940255b5c705e0c2a25ec32fa6ba4631583c487d129039fedeb0838eb"
+    },
+    {
+      "path": "source-evidence.json",
+      "sha256": "54238924a1932cbdb5caa24f249f2498996a7823a437a423eb321f923d13a854"
+    },
+    {
+      "path": "stock-history-review.json",
+      "sha256": "b94b50bdf848098aae4b9bb157ad4ec5f10bcb5d6f3290ff4c34bbccab23d03d"
+    },
+    {
+      "path": "stock.json",
+      "sha256": "c6a33148e339a40e79ff08c52080efdae64652afe5abbb880d1ead077aa83177"
+    }
+  ],
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "providerWrites": 0
+}

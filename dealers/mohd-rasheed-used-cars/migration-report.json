@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "mohd-rasheed-used-cars",
+  "previousSlug": "mohd-rasheed-used-cars",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:12:05.130Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 4,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-sharjah-mohd-rasheed-used-cars",
+    "position": 363
+  },
+  "before": {
+    "files": 37,
+    "bytes": 4455945
+  },
+  "afterBeforeReview": {
+    "files": 21,
+    "bytes": 1545720
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 91240,
+      "sha256": "b7485646ef992f09bdd830c3242510720d5303d5aab541d68d8167822cc77724"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 103633,
+      "sha256": "b6613fdd775fadd9154d74fc2fb91ef128adcbafad929847d1f310ded3208161"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 91240,
+      "sha256": "b7485646ef992f09bdd830c3242510720d5303d5aab541d68d8167822cc77724"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 133502,
+      "sha256": "fbbf1c4eaae7e0eee3445b3c8d925cabd6b8f42ae91233dd55543bbd399ca012"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 353071,
+      "sha256": "2ff44237136d43733fb323284d6e0a2f324b0030514f99f046d4295dcc1fed52"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 353071,
+      "sha256": "2ff44237136d43733fb323284d6e0a2f324b0030514f99f046d4295dcc1fed52"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 133502,
+      "sha256": "fbbf1c4eaae7e0eee3445b3c8d925cabd6b8f42ae91233dd55543bbd399ca012"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 91240,
+      "sha256": "b7485646ef992f09bdd830c3242510720d5303d5aab541d68d8167822cc77724"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 7760,
+      "sha256": "724d33dd75ddddb44881dc6b801fef2f5b125ffbdca2d11f5b52880a2a6a9e71"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 353071,
+      "sha256": "2ff44237136d43733fb323284d6e0a2f324b0030514f99f046d4295dcc1fed52"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 241816,
+      "sha256": "210e0ddb8d9c786411a709d249a7beb67081471963f6ff1c4c9c2bb16e187415"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 353071,
+      "sha256": "2ff44237136d43733fb323284d6e0a2f324b0030514f99f046d4295dcc1fed52"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 241816,
+      "sha256": "210e0ddb8d9c786411a709d249a7beb67081471963f6ff1c4c9c2bb16e187415"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 133502,
+      "sha256": "fbbf1c4eaae7e0eee3445b3c8d925cabd6b8f42ae91233dd55543bbd399ca012"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 96594,
+      "sha256": "e51e097594b002a3e3b97cc00329d17e833090b57acf72abfcd4f48cdfbce8a2"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 74956,
+      "sha256": "2b45c4d49001a0ac1d9f04c6fc1833bad2662303b3ef86ce0760e4c056d26a9a"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 60976,
+      "sha256": "79293dfef9976c6747777245cd38d99c162129272c580617a9454fb2586d5033"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 12,
+    "bytes": 1520204,
+    "inventorySha256": "9ba97894156e70de5951712871e9b32ed27d5bd9be5ed146f25fe4a5d55ce359",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "mohd-rasheed-used-cars",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 23,
+    "report": "dealers/mohd-rasheed-used-cars/input-review.json"
+  },
+  "after": {
+    "files": 23,
+    "bytes": 1554247
+  }
+}

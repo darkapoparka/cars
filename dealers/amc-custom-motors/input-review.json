@@ -1,0 +1,124 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-input-review",
+  "dealer": "amc-custom-motors",
+  "reviewed": true,
+  "reviewedAt": "2026-10-20T19:12:40.672Z",
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "checks": [
+    "canonical-hosting-and-preserved-fleet-collisions",
+    "assigned-expansion-lead",
+    "public-fact-schema-and-price-omission",
+    "personal-contact-screen",
+    "retained-stock-media",
+    "companion-copy-source-binding",
+    "immutable-template-release-and-native-QA-parent",
+    "reviewed-artwork-provenance-and-regenerated-logo-hashes"
+  ],
+  "sourceArtworkReview": "Retained artwork review is separate provenance; this command does not perform visual, Arabic-expert or dealer approval.",
+  "copyReview": "Automated structure, stock hash, source text and complete EN/BG rows; no new human translation approval is inferred.",
+  "contacts": {
+    "schemaVersion": 1,
+    "kind": "cars-automated-public-contact-screen",
+    "dealer": "amc-custom-motors",
+    "method": "heuristic; no claim that unflagged values cannot be personal",
+    "flags": [],
+    "blocking": []
+  },
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-bradford-amc-custom-motors",
+    "position": 22
+  },
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "inputs": [
+    {
+      "path": "FACTS-AND-INVENTORY.json",
+      "sha256": "34895e41255dcd1c257c74778dee9e375729a5dfe9ced63bd68fa70e22cf235b"
+    },
+    {
+      "path": "branding/generated-mark-on-dark.png",
+      "sha256": "866bb8cc26aff094d0ae09b1b35d6519a76946397ad68f4024d7eddce3311802"
+    },
+    {
+      "path": "branding/generated-mark.png",
+      "sha256": "967105785323efc8bb5b56d38cf4f8eb69c38f5a56a6dba2fa69d6fa6cc2d90e"
+    },
+    {
+      "path": "branding/generated-master.png",
+      "sha256": "760ac0a415a0e3f8fc509e3ff6d448dbdb46df43f33eeecec55fb639c9afd46a"
+    },
+    {
+      "path": "branding/generated-on-dark.png",
+      "sha256": "0fcdfe837ce7e0412c73755fe7b7c19a0974ee3d8daee1fd1322b6eea005de0e"
+    },
+    {
+      "path": "branding/logo-contract.json",
+      "sha256": "5925a2df0937c6d40a6effd1e89c0ab73822094964ab1666a374c04f7b6a23c8"
+    },
+    {
+      "path": "branding/logo-recipe.json",
+      "sha256": "e1961332812b56049b734224ecf2b471fa93c49d59e0abab25ce31de847a9030"
+    },
+    {
+      "path": "branding/source.json",
+      "sha256": "3537e1c2cab16f6ff5ab7eb4aaa1f0e2687ecf86d6e4eb0fd481d5a5da63383e"
+    },
+    {
+      "path": "business-facts.json",
+      "sha256": "94cb4e52125775131123493055764a79cf45216e7baf4750e66840ac57663648"
+    },
+    {
+      "path": "copy-review.json",
+      "sha256": "62f9185281b09006fdde5cf4e997c227f58b3902c1b948fc0a768d1f16023af5"
+    },
+    {
+      "path": "dealer-stock/public-1.jpg",
+      "sha256": "d8ee06f52feba93ad0aefa51f1e18e87e3a1f287432bd8d29a743511bd55ea25"
+    },
+    {
+      "path": "dealer-stock/public-2.jpg",
+      "sha256": "ac9896b0e47107aba3a3e20bb6cb2476c2f6d12bf4976e00cb9e2802445e6201"
+    },
+    {
+      "path": "dealer-stock/public-3.jpg",
+      "sha256": "aa6d58ed48996ac1f02a399a966502b519fe91f9c0fdaad91f207ffd43d6e10f"
+    },
+    {
+      "path": "dealer.json",
+      "sha256": "c8d232869ea159de754e6b40b131fb98b92fbdac832102e1737555716eca246a"
+    },
+    {
+      "path": "identity-review.json",
+      "sha256": "9fb7679b7f0545126acd084c56b19ef3837415679193683745929ce680ec1039"
+    },
+    {
+      "path": "locale.json",
+      "sha256": "a08768beddc5d2048397cd7741eca77e9d6ef70ab73bc44dd5efc6b6279f1793"
+    },
+    {
+      "path": "missing-facts.json",
+      "sha256": "ec4b7e8b381e15b2ff7d4fd8b575aed5293067e5bfaa3c47ef96f9cc3b67725f"
+    },
+    {
+      "path": "qualification.json",
+      "sha256": "6f42dd617229daa6d2644e3acd378e66346bcba8b0c47ac952251019b6045a39"
+    },
+    {
+      "path": "source-evidence.json",
+      "sha256": "860e4e274a6b37df58a3a6dec561e5bf0f0f1df98214a29d19bbba667f385b79"
+    },
+    {
+      "path": "stock.json",
+      "sha256": "5092d1099d7d7db5677592a8794a28615196a7cf5dedd61de7e48582d6b499f6"
+    }
+  ],
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "providerWrites": 0
+}

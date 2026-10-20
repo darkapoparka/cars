@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": true,
+  "reviewedAt": "2026-10-20T19:13:21.159Z",
+  "dealer": "pearl-used-cars",
+  "dealerId": "ae-sharjah-pearl-used-cars",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "method": "Automated exact registry/pack identity, canonical hosting and batch comparison; retained public source fields were structurally checked, not human-approved.",
+  "sources": [
+    {
+      "url": "https://www.dubicars.com/dealers/sharjah-pearl-used-cars-2618",
+      "observedAt": "2026-10-19T20:00:23.944334Z"
+    },
+    {
+      "url": "https://sharrai.ae/car/gmc-yukon-2021/90888002",
+      "observedAt": "2026-10-19T20:00:23.944334Z"
+    },
+    {
+      "url": "https://www.pearlusedcars.com/",
+      "observedAt": "2026-10-19T20:00:23.944334Z"
+    }
+  ],
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  }
+}

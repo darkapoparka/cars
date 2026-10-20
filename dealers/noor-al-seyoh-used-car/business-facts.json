@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "slug": "noor-al-seyoh-used-car",
+  "dealerId": "ae-sharjah-noor-al-seyoh-used-car",
+  "business": {
+    "name": "Noor Al Seyoh Used Car",
+    "city": "Sharjah",
+    "region": "Sharjah",
+    "countryCode": "AE",
+    "currency": "AED",
+    "distanceUnit": "km",
+    "locale": "en-AE",
+    "address": "79 Souq Al Haraj For Cars - E311 - Sharjah - United Arab Emirates",
+    "phone": "+97165618444",
+    "phoneDisplay": "+97165618444",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://www.dubicars.com/dealers/sharjah-noor-al-seyoh-used-car-1581",
+    "hours": "Mo-Th 09:00-14:00; Mo-Th 16:00-22:00; Fr 16:00-22:00; Sa-Su 09:00-14:00; Sa-Su 16:00-22:00",
+    "sourceUrl": "https://www.dubicars.com/dealers/sharjah-noor-al-seyoh-used-car-1581",
+    "observedAt": "2026-10-19T20:00:24.216060Z",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://www.dubicars.com/dealers/sharjah-noor-al-seyoh-used-car-1581",
+      "observedAt": "2026-10-19T20:00:24.216060Z",
+      "supports": [
+        "business.name",
+        "business.city",
+        "business.countryCode",
+        "business.address",
+        "business.phone",
+        "business.hours",
+        "dated-dealer-catalogue-listings"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2017-dodge-charger-62l-707-hp-dodge-charger-hellcat-gcc-2017-original-paint-zero-accidents-full-910598.html",
+      "observedAt": "2026-10-19T20:00:24.216060Z",
+      "supports": [
+        "stock.dubicars-910598"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2023-nissan-x-trail-1031081.html",
+      "observedAt": "2026-10-19T20:00:24.216060Z",
+      "supports": [
+        "stock.dubicars-1031081"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2016-dodge-charger-srt-core-64l-967696.html",
+      "observedAt": "2026-10-19T20:00:24.216060Z",
+      "supports": [
+        "stock.dubicars-967696"
+      ]
+    }
+  ]
+}

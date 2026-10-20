@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "slug": "chris-automotive",
+  "dealerId": "gb-maidenhead-chris-automotive",
+  "business": {
+    "name": "Chris Automotive",
+    "city": "Maidenhead",
+    "region": "Berkshire",
+    "countryCode": "GB",
+    "currency": "GBP",
+    "distanceUnit": "mi",
+    "locale": "en-GB",
+    "address": "Trump Farm, Drift Road, Maidenhead, SL6 3SU",
+    "phone": "+447457401022",
+    "phoneDisplay": "(07457) 401022",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://www.autotrader.co.uk/dealers/berkshire/maidenhead/chris-automotive-10048966",
+    "hours": "Viewing by appointment only. Monday–Friday 09:00–19:00; Sunday 10:00–16:00; Saturday 09:00–17:30",
+    "sourceUrl": "https://www.autotrader.co.uk/dealers/berkshire/maidenhead/chris-automotive-10048966",
+    "observedAt": "2026-10-19",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://www.autotrader.co.uk/dealers/berkshire/maidenhead/chris-automotive-10048966",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "current-public-business-details",
+        "dated-advertised-stock-snapshot"
+      ]
+    }
+  ]
+}

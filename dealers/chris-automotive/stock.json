@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "dealer": "chris-automotive",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "listing-1",
+      "title": "2014 Audi RS6 Avant 4.0 TFSI V8 Tiptronic quattro Euro 5 (s/s) 5dr",
+      "make": "Audi",
+      "model": "RS6 Avant",
+      "year": 2014,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/listing-1.jpg"
+      ],
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202605142392510",
+      "observedAt": "2026-10-19",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Estate",
+      "transmission": "Automatic",
+      "fuel": "Petrol",
+      "mileageValue": 99000,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-2",
+      "title": "2003 Porsche 911 3.6 996 Carrera 4S Tiptronic S AWD 2dr",
+      "make": "Porsche",
+      "model": "911",
+      "year": 2003,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/listing-2.jpg"
+      ],
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202610106867649",
+      "observedAt": "2026-10-19",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Coupe",
+      "transmission": "Automatic",
+      "fuel": "Petrol",
+      "mileageValue": 105000,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-3",
+      "title": "2018 Volkswagen Tiguan Allspace 2.0 TDI R-Line Euro 6 (s/s) 5dr",
+      "make": "Volkswagen",
+      "model": "Tiguan Allspace",
+      "year": 2018,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/listing-3.jpg"
+      ],
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202609186175176",
+      "observedAt": "2026-10-19",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 110000,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

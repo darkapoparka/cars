@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "njh-car-sales",
+  "previousSlug": "njh-car-sales",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:18:25.153Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-swansea-njh-car-sales",
+    "position": 94
+  },
+  "before": {
+    "files": 37,
+    "bytes": 7545763
+  },
+  "afterBeforeReview": {
+    "files": 21,
+    "bytes": 3052792
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 282011,
+      "sha256": "1bad4ecd027cd328fa18fd51d6b93f398ed902d8efac1752a81e3ac6db7cac13"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 282011,
+      "sha256": "1bad4ecd027cd328fa18fd51d6b93f398ed902d8efac1752a81e3ac6db7cac13"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 282011,
+      "sha256": "1bad4ecd027cd328fa18fd51d6b93f398ed902d8efac1752a81e3ac6db7cac13"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 355050,
+      "sha256": "0d7359ea9cb0a488ab55dc3a35ff6118ca6006db6c84b0f25c4eb1941551c911"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 328042,
+      "sha256": "32d43cb894c269513166ba8a9811aec19d01202a4b0ea5da9e42059b271cd96c"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 328042,
+      "sha256": "32d43cb894c269513166ba8a9811aec19d01202a4b0ea5da9e42059b271cd96c"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 355050,
+      "sha256": "0d7359ea9cb0a488ab55dc3a35ff6118ca6006db6c84b0f25c4eb1941551c911"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 282011,
+      "sha256": "1bad4ecd027cd328fa18fd51d6b93f398ed902d8efac1752a81e3ac6db7cac13"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 18714,
+      "sha256": "a1c4ecd7407973cd7fe364c5af02610ac6d5bed1497ea000d1ee690e2f3dca7e"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 328042,
+      "sha256": "32d43cb894c269513166ba8a9811aec19d01202a4b0ea5da9e42059b271cd96c"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 213018,
+      "sha256": "566dd6315fe4ec518601d45443e915b096560bf95d68477b754f12f983f7aaac"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 328042,
+      "sha256": "32d43cb894c269513166ba8a9811aec19d01202a4b0ea5da9e42059b271cd96c"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 213018,
+      "sha256": "566dd6315fe4ec518601d45443e915b096560bf95d68477b754f12f983f7aaac"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 355050,
+      "sha256": "0d7359ea9cb0a488ab55dc3a35ff6118ca6006db6c84b0f25c4eb1941551c911"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 212836,
+      "sha256": "b8fc8eb76a20dd21d24c3711c6b82ae77e59da3a33de0e9b4e608c64e910cadd"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 166910,
+      "sha256": "c09a456a26a0f87e090372659a2b01ec0eecc33f646433c4b2009e66be4c978e"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 166910,
+      "sha256": "c09a456a26a0f87e090372659a2b01ec0eecc33f646433c4b2009e66be4c978e"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 12,
+    "bytes": 3030499,
+    "inventorySha256": "4cf64e19c3173ff041a2196c949a222d3bccab77370deae11456b625bf4bf44c",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "njh-car-sales",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 23,
+    "report": "dealers/njh-car-sales/input-review.json"
+  },
+  "after": {
+    "files": 23,
+    "bytes": 3061176
+  }
+}

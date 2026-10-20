@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "al-saif-used-cars-trading",
+  "previousSlug": "al-saif-used-cars-trading",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:23:02.295Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 4,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-umm-al-quwain-al-saif-used-cars-trading",
+    "position": 395
+  },
+  "before": {
+    "files": 36,
+    "bytes": 7434589
+  },
+  "afterBeforeReview": {
+    "files": 20,
+    "bytes": 1617027
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 155059,
+      "sha256": "d7e9936492b5d0a27feb923ea31f4e10f7dbf8aee55ce91753c1ce1bda68d1d8"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 154425,
+      "sha256": "b5a065f93a4685d020ff73647084014f4c6103b7892679782664d652bd6f2456"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 155059,
+      "sha256": "d7e9936492b5d0a27feb923ea31f4e10f7dbf8aee55ce91753c1ce1bda68d1d8"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 529725,
+      "sha256": "0546b3767adbcf18d9e2d8138d61c0c108638f04af5e1db59aedce7e23a4b4b6"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 550850,
+      "sha256": "49cb35ee2044c8a173d3129de321f257809c04b4b6b4791b9e8f7b665797a158"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 550850,
+      "sha256": "49cb35ee2044c8a173d3129de321f257809c04b4b6b4791b9e8f7b665797a158"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 529725,
+      "sha256": "0546b3767adbcf18d9e2d8138d61c0c108638f04af5e1db59aedce7e23a4b4b6"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 155059,
+      "sha256": "d7e9936492b5d0a27feb923ea31f4e10f7dbf8aee55ce91753c1ce1bda68d1d8"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 13247,
+      "sha256": "a2c4a94608c325b8ed767639615016e65c89f4e561417e31762080bc1b7c0e57"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 550850,
+      "sha256": "49cb35ee2044c8a173d3129de321f257809c04b4b6b4791b9e8f7b665797a158"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 401940,
+      "sha256": "928c79a6689db874dbf251e595295f853168d6224b5d57fd49b9eb0ad5727544"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 550850,
+      "sha256": "49cb35ee2044c8a173d3129de321f257809c04b4b6b4791b9e8f7b665797a158"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 401940,
+      "sha256": "928c79a6689db874dbf251e595295f853168d6224b5d57fd49b9eb0ad5727544"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 529725,
+      "sha256": "0546b3767adbcf18d9e2d8138d61c0c108638f04af5e1db59aedce7e23a4b4b6"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 361658,
+      "sha256": "1a394a3609b5de6588e2453333b101599eae50ef6b9c40265a5b10396aa8f7e8"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 117428,
+      "sha256": "df71f4c4d881a85b775f131cc7ddb34663114c037d8063b36703fbb4f0b5833a"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 113042,
+      "sha256": "1d65f3bf5fe8d7f95226ab2942c0bd7f2d4fa1e07123d1860e8cfc8988a7e1ff"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 11,
+    "bytes": 1593720,
+    "inventorySha256": "69544623832de20ec03ce65e691273aa75398ecda66841d9b2aed82efdae5e25",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "al-saif-used-cars-trading",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 22,
+    "report": "dealers/al-saif-used-cars-trading/input-review.json"
+  },
+  "after": {
+    "files": 22,
+    "bytes": 1625578
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "dealer": "ep-cars-kirby-cross",
+  "generations": [
+    {
+      "role": "master",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-97d5223f-a69a-49c9-9583-5f29b99ae4ed",
+      "modelVersion": null,
+      "prompt": "Create one high quality independent proposed automotive logo for E P CARS. Single horizontal lockup, left a bold geometric EP monogram with clean negative space, right exact text E P CARS in custom bold sans serif. Flat near-black one-colour graphic, genuine transparent background. Strong legibility at32px for the cropped left monogram, generous horizontal separation from the type. No slogan, car picture, badge, gradient, glow, shadows, background or texture. Restrained confident professional typography, accurate letter spacing. Exact text E P CARS.",
+      "promptRetained": true,
+      "sourceAssetSha256": "60dd42832104b92187a13faef3c8108cab42f98de4b88d0c2b814c6f861d6968",
+      "observedAt": "2026-10-19",
+      "originalResponseArtworkRetained": true
+    },
+    {
+      "role": "onDarkAndAccent",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-ea5f7091-fd17-4fea-9952-179ba11d2175",
+      "modelVersion": null,
+      "prompt": "Adapt the exact supplied logo into a refined dual-ink surface version, for readable use on dark and red backgrounds. Keep the name spelling, logo motif and layout exactly. Use pure WHITE filled lettering and emblem bounded by a clean broad deep-navy contour, finished with a narrow white outer keyline. No glow. All white areas must be solid opaque ink protected inside the navy contour. True transparent background outside. Maintain a GENEROUS TRANSPARENT GAP between compact emblem and wordmark, do not let their contours touch. No grunge, no speckles, no distressed raster texture, no holes in solid strokes, no gradients, no drop shadow, no decorative panel, no additional content. Flat precise digital artwork with smooth clean contours, professional restrained proportions.",
+      "promptRetained": true,
+      "sourceAssetSha256": "18b7d5f8fa5d75a6734aa22db34b091808ded7f0bf67774b3492ae1c9bce5508",
+      "observedAt": "2026-10-19",
+      "originalResponseArtworkRetained": true
+    }
+  ],
+  "exportPolicy": "Original generated PNG bytes are retained. Compact pixel-exact extractions, where used, retain their parent generation, hash and rectangle in source.json. Existing dealer-pack logo tooling performs only transparent padding removal and deterministic raster exports. No deterministic recolour is used."
+}

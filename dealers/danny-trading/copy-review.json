@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-source-reviewed-companion-copy",
+  "dealer": "danny-trading",
+  "reviewed": true,
+  "reviewedAt": "2026-10-20T19:17:21.555Z",
+  "stockSha256": "63e29aa1695b342ad551640130888231be85b3040b2c4f7b06ff30bf83c15e2b",
+  "descriptions": [
+    {
+      "sourceId": "listing-2",
+      "sourceDescription": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview. The public advert's vehicle-history panel shows a Cat C/D Advisory. The reviewed advisory does not identify which of these categories applies. This history has not been independently verified.",
+      "en": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview. The public advert's vehicle-history panel shows a Cat C/D Advisory. The reviewed advisory does not identify which of these categories applies. This history has not been independently verified.",
+      "bg": "Примери от публични обяви, наблюдавани на 2026-10-19. Наличността не е потвърдена. Цените са пропуснати в този преглед. В раздела за историята на автомобила в публичната обява е посочено „Cat C/D Advisory“. Прегледаното предупреждение не уточнява коя от тези категории се отнася за автомобила. Данните не са независимо проверени."
+    },
+    {
+      "sourceId": "listing-3",
+      "sourceDescription": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+      "en": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+      "bg": "Примери от публични обяви, наблюдавани на 2026-10-19. Наличността не е потвърдена. Цените са пропуснати в този преглед."
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-nukhba-al-malakyah-used-cars",
+  "businessFacts": "business-facts.json",
+  "stock": "stock.json",
+  "inventoryKind": "dated-listing-snapshot",
+  "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+  "sources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/al-nukhba-al-malakyah-used-cars",
+      "observedAt": "2026-10-19T20:00:11.597729Z",
+      "supports": [
+        "business-trading-name",
+        "public-business-phone",
+        "marketplace-location",
+        "dealer-catalogue"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/7188-hyundai-santa-fe-25-at-194-hp-sel",
+      "observedAt": "2026-10-19T20:00:11.597729Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/7479-hyundai-santa-fe-25-at-4wd-194-hp-premium",
+      "observedAt": "2026-10-19T20:00:11.597729Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/7488-kia-sorento-25-amt-4wd-281-hp-sx-x-line",
+      "observedAt": "2026-10-19T20:00:11.597729Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    }
+  ]
+}

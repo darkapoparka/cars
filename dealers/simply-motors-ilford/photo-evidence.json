@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "dealer": "simply-motors-ilford",
+  "photos": [
+    {
+      "id": "listing-1",
+      "listingUrl": "https://www.ebay.co.uk/itm/307205804601",
+      "catalogueUrl": "https://showroom.ebaymotorspro.co.uk/simply-motors?extendedFilter=1",
+      "imageUrl": "https://i.ebayimg.com/00/s/MTIwMFgxNjAw/z/vS4AAeSwRwVq1JGB/$_2.JPG",
+      "downloadUrl": "https://i.ebayimg.com/00/s/MTIwMFgxNjAw/z/vS4AAeSwRwVq1JGB/$_57.JPG",
+      "originalDimensions": [
+        1600,
+        1200
+      ],
+      "retainedDimensions": [
+        1024,
+        768
+      ],
+      "retainedBytes": 187372,
+      "mediaPath": "dealer-stock/listing-1.jpg",
+      "retainedSha256": "16c4f19ffeaaa921dbc1886d24fc4b39bd867f42e1a47095d276f3d6ddb6b0e3",
+      "operation": "Resize within1024px without enlargement and encode optimized JPEG; no change to photographed content.",
+      "originalSha256": "e7e05250b542f2d6f98f06a06fc1d7008b6afcd2126621fd2527d86c536e72d8",
+      "observedAt": "2026-10-19"
+    },
+    {
+      "id": "listing-2",
+      "listingUrl": "https://www.ebay.co.uk/itm/307197100340",
+      "catalogueUrl": "https://showroom.ebaymotorspro.co.uk/simply-motors?extendedFilter=1",
+      "imageUrl": "https://i.ebayimg.com/00/s/MTIwMFgxNjAw/z/SP8AAeSwUKVqy6Sj/$_2.JPG",
+      "downloadUrl": "https://i.ebayimg.com/00/s/MTIwMFgxNjAw/z/SP8AAeSwUKVqy6Sj/$_57.JPG",
+      "originalDimensions": [
+        1600,
+        1200
+      ],
+      "retainedDimensions": [
+        1024,
+        768
+      ],
+      "retainedBytes": 167116,
+      "mediaPath": "dealer-stock/listing-2.jpg",
+      "retainedSha256": "73528176d67a212728d50ee3e678cc7579e9d99c4ce4a7c5550bd8158ee29f6f",
+      "operation": "Resize within1024px without enlargement and encode optimized JPEG; no change to photographed content.",
+      "originalSha256": "51479c2c2f0df112d686cc39b16f41eaaf037fc38b5c05570c7a675ed4a8c275",
+      "observedAt": "2026-10-19"
+    },
+    {
+      "id": "listing-3",
+      "listingUrl": "https://www.ebay.co.uk/itm/307189409857",
+      "catalogueUrl": "https://showroom.ebaymotorspro.co.uk/simply-motors?extendedFilter=1",
+      "imageUrl": "https://i.ebayimg.com/00/s/MTIwMFgxNjAw/z/P9IAAeSw2vlq1d6i/$_2.JPG",
+      "downloadUrl": "https://i.ebayimg.com/00/s/MTIwMFgxNjAw/z/P9IAAeSw2vlq1d6i/$_57.JPG",
+      "originalDimensions": [
+        1600,
+        1200
+      ],
+      "retainedDimensions": [
+        1024,
+        768
+      ],
+      "retainedBytes": 165307,
+      "mediaPath": "dealer-stock/listing-3.jpg",
+      "retainedSha256": "41cfd1c00433042d04c2e6d73d1c2243b758df0418f333ed0663a8419df712a6",
+      "operation": "Resize within1024px without enlargement and encode optimized JPEG; no change to photographed content.",
+      "originalSha256": "1cb59dee64e4885c25149ff9aeecd82cd4e24c26aff204e9a031917f585c3841",
+      "observedAt": "2026-10-19"
+    }
+  ],
+  "review": {
+    "reviewed": true,
+    "observedAt": "2026-10-19",
+    "method": "Viewed every selected photograph in contact sheets; checked actual vehicle content, placeholders, price cards and visible dealer identity.",
+    "maximumDimension": 1024,
+    "maximumBytes": 187372
+  }
+}

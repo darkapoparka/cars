@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": true,
+  "reviewedAt": "2026-10-20T19:26:11.717Z",
+  "dealer": "bdayt-al-khir-used-cars",
+  "dealerId": "ae-sharjah-bdayt-al-khir-used-cars",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "method": "Automated exact registry/pack identity, canonical hosting and batch comparison; retained public source fields were structurally checked, not human-approved.",
+  "sources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/bdayt-al-khir-used-cars-tr-llcsp",
+      "observedAt": "2026-10-19T20:00:18.408611Z"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/823-toyota-yaris-15-cvt-105-hp-other",
+      "observedAt": "2026-10-19T20:00:18.408611Z"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/315-mitsubishi-eclipse-cross-15-cvt-150-hp-glx",
+      "observedAt": "2026-10-19T20:00:18.408611Z"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/419-mercedes-benz-a-class-13-amt-163-hp-a-200-amg",
+      "observedAt": "2026-10-19T20:00:18.408611Z"
+    }
+  ],
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  }
+}

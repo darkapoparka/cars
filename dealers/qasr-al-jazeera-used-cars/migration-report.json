@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "qasr-al-jazeera-used-cars",
+  "previousSlug": "qasr-al-jazeera-used-cars",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:13:48.017Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 4,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-sharjah-qasr-al-jazeera-used-cars",
+    "position": 373
+  },
+  "before": {
+    "files": 38,
+    "bytes": 2108370
+  },
+  "afterBeforeReview": {
+    "files": 22,
+    "bytes": 939316
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 85287,
+      "sha256": "6c438f0515a11680e6fc3e0c7526f81eb78d5460d0998c034a6500e687dbd82d"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 114332,
+      "sha256": "53de6a2fd16a7d90279f406233bdf9d0afb691ebd51bf0349b6d3cb54dc8fe29"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 85287,
+      "sha256": "6c438f0515a11680e6fc3e0c7526f81eb78d5460d0998c034a6500e687dbd82d"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 59005,
+      "sha256": "bd28dbc651f2bef40808ff5d8221703253bc4da5f7b2b18a2302ae4f34398662"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 82161,
+      "sha256": "35aae4ea947afadbd8cd466d573630842467a640a84c377da0775362f1357958"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 82161,
+      "sha256": "35aae4ea947afadbd8cd466d573630842467a640a84c377da0775362f1357958"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 59005,
+      "sha256": "bd28dbc651f2bef40808ff5d8221703253bc4da5f7b2b18a2302ae4f34398662"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 85287,
+      "sha256": "6c438f0515a11680e6fc3e0c7526f81eb78d5460d0998c034a6500e687dbd82d"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 7334,
+      "sha256": "6b4ed57f37d4464cbd06658a11fb93d1a413d7c2318ef1b706c1aee7a97daf86"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 82161,
+      "sha256": "35aae4ea947afadbd8cd466d573630842467a640a84c377da0775362f1357958"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 57582,
+      "sha256": "3a3cdfac3fb223faacb33ce956bdc1e57c2b1e0a5365f3cc6bfce6409dffa43d"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 82161,
+      "sha256": "35aae4ea947afadbd8cd466d573630842467a640a84c377da0775362f1357958"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 57582,
+      "sha256": "3a3cdfac3fb223faacb33ce956bdc1e57c2b1e0a5365f3cc6bfce6409dffa43d"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 59005,
+      "sha256": "bd28dbc651f2bef40808ff5d8221703253bc4da5f7b2b18a2302ae4f34398662"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 41346,
+      "sha256": "9e120f809eb003113df2e88038771a988705cf2f4129688659b9928100826e68"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 76990,
+      "sha256": "5ad15ae8ba3bde1a373d6d93453d06eb265628f809635de94f8269370761f6ba"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 56210,
+      "sha256": "2e547d5e29798787595db9211afd66397e0f30309c8344d49e775d3f376415f0"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 13,
+    "bytes": 912888,
+    "inventorySha256": "5597578ce9fbf4b631e5967eead529ad658e081a835db2c79da90439abdc75a6",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "qasr-al-jazeera-used-cars",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 24,
+    "report": "dealers/qasr-al-jazeera-used-cars/input-review.json"
+  },
+  "after": {
+    "files": 24,
+    "bytes": 948006
+  }
+}

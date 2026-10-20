@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-input-review",
+  "dealer": "stanley-motor-group",
+  "reviewed": true,
+  "reviewedAt": "2026-10-20T19:22:58.259Z",
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "checks": [
+    "canonical-hosting-and-preserved-fleet-collisions",
+    "assigned-expansion-lead",
+    "public-fact-schema-and-price-omission",
+    "personal-contact-screen",
+    "retained-stock-media",
+    "companion-copy-source-binding",
+    "immutable-template-release-and-native-QA-parent",
+    "reviewed-artwork-provenance-and-regenerated-logo-hashes"
+  ],
+  "sourceArtworkReview": "Retained artwork review is separate provenance; this command does not perform visual, Arabic-expert or dealer approval.",
+  "copyReview": "Automated structure, stock hash, source text and complete EN/BG rows; no new human translation approval is inferred.",
+  "contacts": {
+    "schemaVersion": 1,
+    "kind": "cars-automated-public-contact-screen",
+    "dealer": "stanley-motor-group",
+    "method": "heuristic; no claim that unflagged values cannot be personal",
+    "flags": [],
+    "blocking": []
+  },
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-wakefield-stanley-motor-group",
+    "position": 98
+  },
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "inputs": [
+    {
+      "path": "FACTS-AND-INVENTORY.json",
+      "sha256": "48892cf0df3886310a8eaec79477b17433065f2138d73767dc908acc79db7d9a"
+    },
+    {
+      "path": "branding/generated-mark.png",
+      "sha256": "033946a00b280ff30ebfa7838e020e29bab54929b9a0162728950ea6eb92b865"
+    },
+    {
+      "path": "branding/generated-master.png",
+      "sha256": "2515315c9f96d184343abfd92ca53ca1ea4fde954833377161cff4ab09f37c7e"
+    },
+    {
+      "path": "branding/logo-contract.json",
+      "sha256": "cfaaf956f7d08185ffc64f6967bbf5c07fa2edd8e797b8cb75a3384a0a27aa5b"
+    },
+    {
+      "path": "branding/logo-recipe.json",
+      "sha256": "52b386a7de9982e00126cae53a563a852c8d35342be491e88db300d414cb59a3"
+    },
+    {
+      "path": "branding/observed-logo.gif",
+      "sha256": "c5c08e39351ff7a639cd716122863e7f7afb3106db97c690b8774867f993da7c"
+    },
+    {
+      "path": "branding/source.json",
+      "sha256": "f3864dced1c4dfce4e7999c5bfa696f8834a404689b4bf47a7432e99d7be9387"
+    },
+    {
+      "path": "business-facts.json",
+      "sha256": "bc1b5372ff499b3190da519762cf81192f2574b40877dba0a3e02e8d2fc73894"
+    },
+    {
+      "path": "copy-review.json",
+      "sha256": "992c2d577babc6d767937808e776d74293aa414f6b216801e07dcb3add847c87"
+    },
+    {
+      "path": "dealer-stock/public-1.jpg",
+      "sha256": "8518892cd1672a9d89e584def2348e665214abcbc1aacb2ae0c5b44b4eef0840"
+    },
+    {
+      "path": "dealer-stock/public-2.jpg",
+      "sha256": "2c72bb5c72bc9e13fad973d5b9f8f85cc423c7c0359dcafc5c1429b411209ba6"
+    },
+    {
+      "path": "dealer-stock/public-3.jpg",
+      "sha256": "35615e2274f4906d79e57bf9c686554d69fb2be24c9eb215f25b9039946e4096"
+    },
+    {
+      "path": "dealer.json",
+      "sha256": "b0dd85c5f1431f23f52c6912491ded515b8078ca2e6a060be2a3db408058315c"
+    },
+    {
+      "path": "identity-review.json",
+      "sha256": "44133ef507c75cd2d486989be82d634b2cef527b1d20d00882f519eb845ffe4a"
+    },
+    {
+      "path": "locale.json",
+      "sha256": "f148968f06202b269372953864f3d2413f150c7927d2ee2eb7583b1055dda094"
+    },
+    {
+      "path": "missing-facts.json",
+      "sha256": "d6b1581e97b91db3ca2e050ebf2e00d2f75e2f7c5b70882d7e2e89d9e0483afa"
+    },
+    {
+      "path": "qualification.json",
+      "sha256": "711443a3714d1551656b48e17291772e30749a2b4cbc74a6ef90e19b96a05253"
+    },
+    {
+      "path": "source-evidence.json",
+      "sha256": "e6621764c590aa422b18b9c89c9b17290248ac2b16ab189b76286e4826a7341a"
+    },
+    {
+      "path": "stock.json",
+      "sha256": "da9f6eeefe69eab5aa734db8665ece53da8f97c33195dd50a7de3f73d90bb53a"
+    }
+  ],
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "providerWrites": 0
+}

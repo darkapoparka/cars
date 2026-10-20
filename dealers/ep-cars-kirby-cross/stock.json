@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "dealer": "ep-cars-kirby-cross",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "listing-1",
+      "title": "2016 Mercedes-Benz B Class B180d AMG Line Premium 5dr",
+      "make": "Mercedes-Benz",
+      "model": "B Class B180d AMG Line Premium 5dr",
+      "year": 2016,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/listing-1.jpg"
+      ],
+      "sourceUrl": "https://www.ebay.co.uk/itm/820241211288",
+      "observedAt": "2026-10-19",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "transmission": "Manual",
+      "fuel": "Diesel",
+      "mileageValue": 94000,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-2",
+      "title": "2015 Kia Soul 1.6 CRDi Maxx 5dr",
+      "make": "Kia",
+      "model": "Soul 1.6 CRDi Maxx 5dr",
+      "year": 2015,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/listing-2.jpg"
+      ],
+      "sourceUrl": "https://www.ebay.co.uk/itm/820175315447",
+      "observedAt": "2026-10-19",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "transmission": "Manual",
+      "fuel": "Diesel",
+      "mileageValue": 89000,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-3",
+      "title": "2009 BMW 6 Series 635d Sport 2dr Auto",
+      "make": "BMW",
+      "model": "6 Series 635d Sport 2dr Auto",
+      "year": 2009,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/listing-3.jpg"
+      ],
+      "sourceUrl": "https://www.ebay.co.uk/itm/358891349471",
+      "observedAt": "2026-10-19",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "transmission": "Automatic",
+      "fuel": "Diesel",
+      "mileageValue": 102000,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

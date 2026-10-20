@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "glasgow-fm-motors",
+  "previousSlug": "glasgow-fm-motors",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:14:14.326Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-glasgow-fm-motors",
+    "position": 46
+  },
+  "before": {
+    "files": 38,
+    "bytes": 5538857
+  },
+  "afterBeforeReview": {
+    "files": 22,
+    "bytes": 2879482
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 118873,
+      "sha256": "0cb95622f48127365f1f69e2db66a6eb212301d7236db094db0b9f4bf00995c2"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 151038,
+      "sha256": "72f10a166120f13d7be4fe1a3952180085a4bba8b1093274a286f3d4af52d2c7"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 118873,
+      "sha256": "0cb95622f48127365f1f69e2db66a6eb212301d7236db094db0b9f4bf00995c2"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 184143,
+      "sha256": "ec04f09597c58ebf6a62b2b0a803b1aac6b9f79b98c4adaa93106fdcdb866f0a"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 253836,
+      "sha256": "53e504c37700eff48e04aaf6ecfb9ce49be722e3e9852ed054fd54007d04ac3e"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 253836,
+      "sha256": "53e504c37700eff48e04aaf6ecfb9ce49be722e3e9852ed054fd54007d04ac3e"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 184143,
+      "sha256": "ec04f09597c58ebf6a62b2b0a803b1aac6b9f79b98c4adaa93106fdcdb866f0a"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 118873,
+      "sha256": "0cb95622f48127365f1f69e2db66a6eb212301d7236db094db0b9f4bf00995c2"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 9639,
+      "sha256": "4ce73c13fb8335d178aac30045a2fabd49401dd9ef6b5a5c9c857789266bf01b"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 253836,
+      "sha256": "53e504c37700eff48e04aaf6ecfb9ce49be722e3e9852ed054fd54007d04ac3e"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 147022,
+      "sha256": "532e960012856351a44379856d63ef1f30942ace06d20c045d69080ee2399b42"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 253836,
+      "sha256": "53e504c37700eff48e04aaf6ecfb9ce49be722e3e9852ed054fd54007d04ac3e"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 147022,
+      "sha256": "532e960012856351a44379856d63ef1f30942ace06d20c045d69080ee2399b42"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 184143,
+      "sha256": "ec04f09597c58ebf6a62b2b0a803b1aac6b9f79b98c4adaa93106fdcdb866f0a"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 116228,
+      "sha256": "54f8d75195ed21bd2dbae8c0630a0666848138088c79fca6725b319b7d59ff54"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 91100,
+      "sha256": "b5088f15b279ac103923e06539690ef075082abb46f2c00b403db43e6aeb63a6"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 76732,
+      "sha256": "d28b797105ecae02248ccfbfb064c3fc546774f435ce5428b42e8169f0130fa9"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 12,
+    "bytes": 2854697,
+    "inventorySha256": "8afbafe71cdb9157189d3c12e6c5a748157c2dd1378c974f730b7bd31770a046",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "glasgow-fm-motors",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 24,
+    "report": "dealers/glasgow-fm-motors/input-review.json"
+  },
+  "after": {
+    "files": 24,
+    "bytes": 2888091
+  }
+}

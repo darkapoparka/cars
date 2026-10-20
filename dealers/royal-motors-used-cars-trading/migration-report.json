@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "royal-motors-used-cars-trading",
+  "previousSlug": "royal-motors-used-cars-trading",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:14:35.783Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 4,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-umm-al-quwain-royal-motors-used-cars",
+    "position": 397
+  },
+  "before": {
+    "files": 36,
+    "bytes": 6653461
+  },
+  "afterBeforeReview": {
+    "files": 20,
+    "bytes": 1918721
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 125966,
+      "sha256": "d2f1754499c8c58f7f9d128123d7e874ab2e2cbe2486581e176909e10f3c94de"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 133999,
+      "sha256": "2985fc971a269dddc93c5a66962b598e939901d06884c14c6fe1ab41d0a8085d"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 125966,
+      "sha256": "d2f1754499c8c58f7f9d128123d7e874ab2e2cbe2486581e176909e10f3c94de"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 414691,
+      "sha256": "ed6b0457e07b9b23206057da2f296224a3e93a50fd543c6df0bc190f45f21e3c"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 459615,
+      "sha256": "d94877b5614d0925ccaaa1dbbbbbfc9897619d4a9daaa5307865cbd8693f36a4"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 459615,
+      "sha256": "d94877b5614d0925ccaaa1dbbbbbfc9897619d4a9daaa5307865cbd8693f36a4"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 414691,
+      "sha256": "ed6b0457e07b9b23206057da2f296224a3e93a50fd543c6df0bc190f45f21e3c"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 125966,
+      "sha256": "d2f1754499c8c58f7f9d128123d7e874ab2e2cbe2486581e176909e10f3c94de"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 12801,
+      "sha256": "b15185c1d814b12082c342028113970d0e2e055d468e52e0a1b0a7a2208f1cc5"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 459615,
+      "sha256": "d94877b5614d0925ccaaa1dbbbbbfc9897619d4a9daaa5307865cbd8693f36a4"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 334238,
+      "sha256": "0a75e61f6d35616c486b0592d05a9a1c2ed00b9010771d112b5c778747abe90c"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 459615,
+      "sha256": "d94877b5614d0925ccaaa1dbbbbbfc9897619d4a9daaa5307865cbd8693f36a4"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 334238,
+      "sha256": "0a75e61f6d35616c486b0592d05a9a1c2ed00b9010771d112b5c778747abe90c"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 414691,
+      "sha256": "ed6b0457e07b9b23206057da2f296224a3e93a50fd543c6df0bc190f45f21e3c"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 277026,
+      "sha256": "c246797d5e1ef33108764a9c7bcf4cb2add747568e9ab622250f16d372350f69"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 94600,
+      "sha256": "be4efcee25ac2a8e3b1fed305c6897ed598a48c0635ca599627490307d963c95"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 91284,
+      "sha256": "1be761ac07fb351ef52f9f239120f06d2eb2eea5d0e1384f8150a3291bc6e8e7"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 11,
+    "bytes": 1896130,
+    "inventorySha256": "acfb62d7bc9b53f6a07fc8bd963a98ce97a486b1d9c81bdf522b9635bab11db5",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "royal-motors-used-cars-trading",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 22,
+    "report": "dealers/royal-motors-used-cars-trading/input-review.json"
+  },
+  "after": {
+    "files": 22,
+    "bytes": 1927167
+  }
+}

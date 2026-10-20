@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "slug": "unique-motors-nottingham",
+  "dealerId": "gb-nottingham-unique-motors",
+  "business": {
+    "name": "Unique Motors Nottingham",
+    "city": "Nottingham",
+    "region": "Nottinghamshire",
+    "countryCode": "GB",
+    "currency": "GBP",
+    "distanceUnit": "mi",
+    "locale": "en-GB",
+    "address": "248 WOLLATON VALE, Nottingham, NG8 2GP",
+    "phone": "+447912035453",
+    "phoneDisplay": "(07912) 035453",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://www.autotrader.co.uk/dealers/nottinghamshire/nottingham/unique-motors-10024219?refresh=true",
+    "hours": "Mo-Su 09:00-20:00",
+    "sourceUrl": "https://www.autotrader.co.uk/dealers/nottinghamshire/nottingham/unique-motors-10024219?refresh=true",
+    "observedAt": "2026-10-19T17:36:49.420721Z",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://www.autotrader.co.uk/dealers/nottinghamshire/nottingham/unique-motors-10024219?refresh=true",
+      "observedAt": "2026-10-19T17:36:49.420721Z",
+      "supports": [
+        "public-business-identity",
+        "public-business-contact",
+        "advertised-stock"
+      ]
+    }
+  ]
+}

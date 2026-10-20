@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "dealer": "thahban-motors",
+  "realLogoFirst": true,
+  "publishedBranding": true,
+  "creationMethod": "sourced-logo-imagegen-redraw",
+  "approvalStatus": "redraw-and-compact-proposal-not-dealer-approved",
+  "dealerApproved": false,
+  "usageStatus": "public-preview-only",
+  "observedAt": "2026-10-19T21:58:53.134Z",
+  "publicSources": [
+    {
+      "url": "https://www.dubicars.com/dealers/sharjah-thahban-motors-2148",
+      "observedAt": "2026-10-19T20:00:26.754113Z"
+    },
+    {
+      "url": "https://www.dubicars.com/2018-porsche-cayenne-1000869.html",
+      "observedAt": "2026-10-19T20:00:26.754113Z"
+    },
+    {
+      "url": "https://www.dubicars.com/2016-land-rover-range-rover-sport-gcc-original-paint-perfect-conditoon-v6-1037392.html",
+      "observedAt": "2026-10-19T20:00:26.754113Z"
+    },
+    {
+      "url": "https://www.dubicars.com/2023-tesla-model-x-gcc-perfect-condition-low-milegea-1036580.html",
+      "observedAt": "2026-10-19T20:00:26.754113Z"
+    }
+  ],
+  "originals": [
+    {
+      "path": "branding/source-original.webp",
+      "sha256": "3b51ab1cad6d283ef7d5cb11e7717a815a849d589f2159d6c51a4ceecceff15b",
+      "url": "https://dbz-images.dubizzle.com/profiles/auto_agency/result_2.jpeg?impolicy=agency",
+      "observedAt": "2026-10-19T21:50:00Z"
+    }
+  ],
+  "logoResearch": "The exact named GCC Car Deals seller profile publishes this low-resolution red car and THAHBAN MOTORS name avatar. Original visually reviewed; a substantial clean redraw keeps the car motif and red/charcoal identity. Conflicting DubiCars street location omitted.",
+  "visualReview": "Actual alpha-composited exports inspected on white, navy and red, including 32px and64px previews. Exact business spelling checked; main emblem silhouette remains recognizable. Final pixel and input gates also required.",
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T21:58:53.134Z",
+    "master": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "323dd0e151ebc77897c97cf245c55716e003337d5ec81779424e10a2a40f0c3f",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-4a8e2c13-1e72-42ca-9121-9070e2b75144",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "323dd0e151ebc77897c97cf245c55716e003337d5ec81779424e10a2a40f0c3f",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-4a8e2c13-1e72-42ca-9121-9070e2b75144",
+        "modelVersion": null
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-on-dark.png",
+      "sha256": "bfc4dfe5d98210b54bb21db469ab5eb2be544c914f83c883991b83c14401c744",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-891b8016-ea37-47fd-97d8-1e1f1dd93eeb",
+        "modelVersion": null
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "323dd0e151ebc77897c97cf245c55716e003337d5ec81779424e10a2a40f0c3f",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-4a8e2c13-1e72-42ca-9121-9070e2b75144",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "bfc4dfe5d98210b54bb21db469ab5eb2be544c914f83c883991b83c14401c744",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-891b8016-ea37-47fd-97d8-1e1f1dd93eeb",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "bfc4dfe5d98210b54bb21db469ab5eb2be544c914f83c883991b83c14401c744",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-891b8016-ea37-47fd-97d8-1e1f1dd93eeb",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": {
+        "onLight": [
+          "#ffffff"
+        ],
+        "onDark": [
+          "#111113",
+          "#101820"
+        ],
+        "onAccent": [
+          "#09090b",
+          "#17191c",
+          "#c40101"
+        ]
+      },
+      "notes": "Actual alpha-composited exports inspected on white, navy and red, including 32px and64px previews. Exact business spelling checked; main emblem silhouette remains recognizable. Final pixel and input gates also required."
+    },
+    "compactMarkStatus": "independent-proposal-not-dealer-approved",
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-19T21:58:53.134Z",
+      "widths": [
+        32,
+        64
+      ],
+      "backgrounds": [
+        "#ffffff",
+        "#101820",
+        "#c40101"
+      ],
+      "notes": "Actual alpha-composited exports inspected on white, navy and red, including 32px and64px previews. Exact business spelling checked; main emblem silhouette remains recognizable. Final pixel and input gates also required."
+    }
+  },
+  "generationPrompts": [
+    "Faithfully and decisively redraw the published THAHBAN MOTORS dealer identity from this poor small original. Preserve the recognizable red sports-car motif at the top and the dark trading name THAHBAN MOTORS. Clean flat transparent near-square emblem: strong front-facing sports-car silhouette in deep red #9d1625 above two bold stacked lines THAHBAN / MOTORS in charcoal #14171b. Omit the unrelated photographic showroom and toy-car collage background; only retain the original red-car/name identity. No new claims or slogans, no crest, no fake establishment date. Actual transparent background. Crisp geometric professional lettering, strong strokes so the car silhouette survives32px. All artwork solid dark ink for excellent contrast on white.",
+    "Create the inverse companion of this exact logo. Preserve all exact lettering, emblem geometry, proportions and layout. Change every intended ink area to opaque pale silver #f0f3f5; original empty and white background areas must remain genuinely transparent so the mark reads cleanly on both deep navy and red #c40101. Flat solid visible strokes, no glow, shadow, gradients, black background, checkerboard or texture. Do not add, delete, misspell or crop any word. Keep bold clean edges and balanced composition. Exact name is THAHBAN MOTORS."
+  ]
+}

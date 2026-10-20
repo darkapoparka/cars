@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "dealer": "dukinfield-r-racer",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T17:36:00.262636Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "vehicle-1",
+      "title": "2017 Vauxhall Astra",
+      "make": "Vauxhall",
+      "model": "Astra",
+      "year": 2017,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/vehicle-1.jpg"
+      ],
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202610076739349",
+      "observedAt": "2026-10-19T17:36:00.262636Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 91250,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "vehicle-2",
+      "title": "2013 MINI Countryman",
+      "make": "MINI",
+      "model": "Countryman",
+      "year": 2013,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/vehicle-2.jpg"
+      ],
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202610146989471",
+      "observedAt": "2026-10-19T17:36:00.262636Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 84100,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "vehicle-3",
+      "title": "2014 Kia Sportage",
+      "make": "Kia",
+      "model": "Sportage",
+      "year": 2014,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/vehicle-3.jpg"
+      ],
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202608145111222",
+      "observedAt": "2026-10-19T17:36:00.262636Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 103450,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

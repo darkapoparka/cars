@@ -1,0 +1,124 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-input-review",
+  "dealer": "tomlinson-car-sales",
+  "reviewed": true,
+  "reviewedAt": "2026-10-20T19:25:01.138Z",
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "checks": [
+    "canonical-hosting-and-preserved-fleet-collisions",
+    "assigned-expansion-lead",
+    "public-fact-schema-and-price-omission",
+    "personal-contact-screen",
+    "retained-stock-media",
+    "companion-copy-source-binding",
+    "immutable-template-release-and-native-QA-parent",
+    "reviewed-artwork-provenance-and-regenerated-logo-hashes"
+  ],
+  "sourceArtworkReview": "Retained artwork review is separate provenance; this command does not perform visual, Arabic-expert or dealer approval.",
+  "copyReview": "Automated structure, stock hash, source text and complete EN/BG rows; no new human translation approval is inferred.",
+  "contacts": {
+    "schemaVersion": 1,
+    "kind": "cars-automated-public-contact-screen",
+    "dealer": "tomlinson-car-sales",
+    "method": "heuristic; no claim that unflagged values cannot be personal",
+    "flags": [],
+    "blocking": []
+  },
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-birmingham-tomlinson-car-sales",
+    "position": 18
+  },
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "inputs": [
+    {
+      "path": "FACTS-AND-INVENTORY.json",
+      "sha256": "3edd541c0e8c6f2f16140346f8d63cd40d10e8661ba71391ec65e5e6949b9c22"
+    },
+    {
+      "path": "branding/generated-mark-on-dark.png",
+      "sha256": "77d50bddda2977d5415d4d915620960883e25b9a64d62d6e20cb067ce4f1ae6b"
+    },
+    {
+      "path": "branding/generated-mark.png",
+      "sha256": "b657260c592f1dbe4f2794e62530fc6f4fac5d2bce09c012549e9faaa513a2b2"
+    },
+    {
+      "path": "branding/generated-master.png",
+      "sha256": "e5eb22f2e019fe52d6a56c96e3a29eae972a33cea4d657ca6c0277c65c4a4cbc"
+    },
+    {
+      "path": "branding/generated-on-dark.png",
+      "sha256": "cac7526f95374ae213c2246e4e750718a1c02a30246b39bb56df1c2dcdb31c3d"
+    },
+    {
+      "path": "branding/logo-contract.json",
+      "sha256": "17af214c1fe8b69a2d66cc7c619bb1b4b1f70600b8c97de19f0a603e6b4f852d"
+    },
+    {
+      "path": "branding/logo-recipe.json",
+      "sha256": "6f2290ff54cbaac3f20d46045c81a1e87cb73c19693e95865aa180c95588638b"
+    },
+    {
+      "path": "branding/source.json",
+      "sha256": "da385196d9d6601b1b368d35281a25ecb0147b3a987186854cd79c627c1500f4"
+    },
+    {
+      "path": "business-facts.json",
+      "sha256": "c998dc9f5833661f26a6447a43216ff4765d938b377ba2103531b749c63b536f"
+    },
+    {
+      "path": "copy-review.json",
+      "sha256": "7d3a22308639ea9dd168e45b74fdea9382eb1009165671b87b9e82d4fe772847"
+    },
+    {
+      "path": "dealer-stock/public-1.jpg",
+      "sha256": "527c799efcf81747aed807c27a56001a623972f38038ff6d060b9070b5a6b8c8"
+    },
+    {
+      "path": "dealer-stock/public-2.jpg",
+      "sha256": "a300b52b440749fefa479dca66095b0807c4d7fe24e3d1ed3078f07173573e44"
+    },
+    {
+      "path": "dealer-stock/public-3.jpg",
+      "sha256": "7a95d391bd3c72a43f59fc9ebb048835cc711b90649e7949f81d56e6af5b65dd"
+    },
+    {
+      "path": "dealer.json",
+      "sha256": "2aa2369bd126b038df9cebe8f819d47d337949815824e3accf9fa37d6d85a377"
+    },
+    {
+      "path": "identity-review.json",
+      "sha256": "6aa0e20dc947c8d8d3eba080da045bfd612060ad09b88863e7f43e21047baf0d"
+    },
+    {
+      "path": "locale.json",
+      "sha256": "8c573ff230113694d06ef96b5b313053b72fe147518ebebae1b63a8332f3a369"
+    },
+    {
+      "path": "missing-facts.json",
+      "sha256": "c3709bcc0976c9b0d79a8c247cb02f4586d4b2ccf6b7898d804cf49672e0724f"
+    },
+    {
+      "path": "qualification.json",
+      "sha256": "d0a884329d332f623b170f6fc4b80e7ba22534c2df27c18d0c4100d49e3b1de4"
+    },
+    {
+      "path": "source-evidence.json",
+      "sha256": "616146824d7d0fb54ed5071f55d2eebd2b4d46a9a0896289304a398ba9ab962a"
+    },
+    {
+      "path": "stock.json",
+      "sha256": "61c58d9500df8352953fab020c39bb36a67fbc7d3445b02c410f47ab792d9793"
+    }
+  ],
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "providerWrites": 0
+}

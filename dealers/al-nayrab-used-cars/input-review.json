@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-input-review",
+  "dealer": "al-nayrab-used-cars",
+  "reviewed": true,
+  "reviewedAt": "2026-10-20T19:22:20.823Z",
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "checks": [
+    "canonical-hosting-and-preserved-fleet-collisions",
+    "assigned-expansion-lead",
+    "public-fact-schema-and-price-omission",
+    "personal-contact-screen",
+    "retained-stock-media",
+    "companion-copy-source-binding",
+    "immutable-template-release-and-native-QA-parent",
+    "reviewed-artwork-provenance-and-regenerated-logo-hashes"
+  ],
+  "sourceArtworkReview": "Retained artwork review is separate provenance; this command does not perform visual, Arabic-expert or dealer approval.",
+  "copyReview": "Automated structure, stock hash, source text and complete EN/BG rows; no new human translation approval is inferred.",
+  "contacts": {
+    "schemaVersion": 1,
+    "kind": "cars-automated-public-contact-screen",
+    "dealer": "al-nayrab-used-cars",
+    "method": "heuristic; no claim that unflagged values cannot be personal",
+    "flags": [],
+    "blocking": []
+  },
+  "batch": {
+    "number": 4,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-sharjah-al-nayrab-used-cars",
+    "position": 314
+  },
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "inputs": [
+    {
+      "path": "FACTS-AND-INVENTORY.json",
+      "sha256": "7e1c47416ee7b70861de78e1473a6f980182c03587a8af018a54012cb03c2265"
+    },
+    {
+      "path": "branding/generated-on-dark.png",
+      "sha256": "e1f2a23fd54e66a37277a86ad2294a6bb03dc3efa22ef46e5ebc21ec681ad46e"
+    },
+    {
+      "path": "branding/generated-on-light.png",
+      "sha256": "e337b77935a3c99b3264af1b6a9635f885f51574a414cec8a1c7211776b6aeaf"
+    },
+    {
+      "path": "branding/logo-contract.json",
+      "sha256": "d78a4eeaaf3162df6e176d6c0a42cc734e580519051356723710ea86aabb3669"
+    },
+    {
+      "path": "branding/logo-recipe.json",
+      "sha256": "db6ed60e3b4581720c805bb916d99dde5076453592ae42c5eea010647fadb0ea"
+    },
+    {
+      "path": "branding/source-original.jpeg",
+      "sha256": "3fb9f3176ae6a1e92c98f7628f9f702a5ac308799d1390360f464ccdef2d14f0"
+    },
+    {
+      "path": "branding/source.json",
+      "sha256": "3892cbbd53bd9e1aa32e7fbfe84f3fb48f5972308f7ea53d2f2930f952cab6cc"
+    },
+    {
+      "path": "business-facts.json",
+      "sha256": "60500cf8717dd793496ac7eb2fb6ddfb07df368cf03e0d52a727ca2e8efc08e0"
+    },
+    {
+      "path": "copy-review.json",
+      "sha256": "e46d2718554394a3400b930df5ddf2d7fb904bd01fcc4695ab51d5bd500cbe78"
+    },
+    {
+      "path": "dealer-stock/licenseplate-6936.webp",
+      "sha256": "49adb523e9361ce86d6e8307776cdadddbfe4c721a0d4b0d96127f18ae09f44c"
+    },
+    {
+      "path": "dealer-stock/licenseplate-7564.webp",
+      "sha256": "4f387520efe2be67654373c4de092b0361fe1dc43455ae6631ae5c54d886ed29"
+    },
+    {
+      "path": "dealer-stock/licenseplate-7566.webp",
+      "sha256": "27747c9ffba7c23f77c6218df3663f377efa9a2214c4d2706580f591df9658aa"
+    },
+    {
+      "path": "dealer.json",
+      "sha256": "5749f1ab77494bf3bd93d2f39c1656f06635f16fcfa4772bfb14d8dde23d400f"
+    },
+    {
+      "path": "identity-review.json",
+      "sha256": "4c736a39d123732986999bf37a94547b3e11a096e8bfc97902f35f5cfcc8e078"
+    },
+    {
+      "path": "locale.json",
+      "sha256": "7272eb09c92d03b3441ccecce5fa23c8aa8270829a25c2d0b7c6807c57e6308c"
+    },
+    {
+      "path": "missing-facts.json",
+      "sha256": "fee56db324077e3a5207c3cbfc15c33180333b30876657c5be325fe453185017"
+    },
+    {
+      "path": "qualification.json",
+      "sha256": "e4793c985d216573d1dd366d24ca894be130f3470046f0a4aad12f34790abca5"
+    },
+    {
+      "path": "source-evidence.json",
+      "sha256": "703923bb8337f5d15c5f4dab0dbb46f8f74f6eba937d39c82c0f908fd2ac5990"
+    },
+    {
+      "path": "stock.json",
+      "sha256": "ca22bf86c28d0327231ace68926364dbdf69bc9dddade1e7bf05d4722c97278c"
+    }
+  ],
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "providerWrites": 0
+}

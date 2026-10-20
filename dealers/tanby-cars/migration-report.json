@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "tanby-cars",
+  "previousSlug": "tanby-cars",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:23:34.344Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-huddersfield-tanby-cars",
+    "position": 51
+  },
+  "before": {
+    "files": 40,
+    "bytes": 2311198
+  },
+  "afterBeforeReview": {
+    "files": 24,
+    "bytes": 1266488
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 62277,
+      "sha256": "96ffea4d90e429794a76be0abadd1e6d2a2859f194bdad9a4b1cafbad8394c3b"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 76233,
+      "sha256": "3eaf48dbefe93ab4d32025982e0fb698e73684a11b69a1254fb5abe44caf756c"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 62277,
+      "sha256": "96ffea4d90e429794a76be0abadd1e6d2a2859f194bdad9a4b1cafbad8394c3b"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 63294,
+      "sha256": "b704d3b6a453cc417de3000017fddff6427c1a34eecf52d2e6ab1166a1ffd077"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 81632,
+      "sha256": "f79da281bc742227ee3a28d29d3f655c837aab5adbebf936c54d23b8ca025468"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 81632,
+      "sha256": "f79da281bc742227ee3a28d29d3f655c837aab5adbebf936c54d23b8ca025468"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 63294,
+      "sha256": "b704d3b6a453cc417de3000017fddff6427c1a34eecf52d2e6ab1166a1ffd077"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 62277,
+      "sha256": "96ffea4d90e429794a76be0abadd1e6d2a2859f194bdad9a4b1cafbad8394c3b"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 4891,
+      "sha256": "81b4975cacb2ccb44d3c6c2347f45d97f6db74bb4af9502f1cbaeff14c35ad06"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 81632,
+      "sha256": "f79da281bc742227ee3a28d29d3f655c837aab5adbebf936c54d23b8ca025468"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 58954,
+      "sha256": "d803b707d515e8b3a9bfb6a9c9dd4959209909d46f1d79b2b18a76d2b0cf95b0"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 81632,
+      "sha256": "f79da281bc742227ee3a28d29d3f655c837aab5adbebf936c54d23b8ca025468"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 58954,
+      "sha256": "d803b707d515e8b3a9bfb6a9c9dd4959209909d46f1d79b2b18a76d2b0cf95b0"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 63294,
+      "sha256": "b704d3b6a453cc417de3000017fddff6427c1a34eecf52d2e6ab1166a1ffd077"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 46416,
+      "sha256": "98b1bdf44999760650cc241e3ff79c12e2aee4900262be7ee628193ad39a4cec"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 55162,
+      "sha256": "ddfa60147337cf1aa8128ca8db37231a70eafc64dd5a18545444c4f930707c5a"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 44634,
+      "sha256": "6815b54fa8025c66c71dcad368c80470cb827a105c43b666be113ab50b062aa6"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 12,
+    "bytes": 1234958,
+    "inventorySha256": "3eb15a511f7357b9cc4f3cfcf07e0e1a8df291a48c5c404f9c23315bea233239",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "tanby-cars",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 26,
+    "report": "dealers/tanby-cars/input-review.json"
+  },
+  "after": {
+    "files": 26,
+    "bytes": 1275437
+  }
+}

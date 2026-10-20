@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "al-markabah-al-mutamadah-used-cars",
+  "previousSlug": "al-markabah-al-mutamadah-used-cars",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:21:14.915Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 4,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-sharjah-al-markabah-al-mutamadah-used-cars",
+    "position": 309
+  },
+  "before": {
+    "files": 37,
+    "bytes": 4575954
+  },
+  "afterBeforeReview": {
+    "files": 21,
+    "bytes": 1311536
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 122242,
+      "sha256": "6825eb221bdd1ecfa6f5c14d6bdb9b18b05a0805d953b996e5f905d504a5d428"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 106836,
+      "sha256": "139f77785b3c0c117f81f6a5bf14195c1a36ae99e8d23a192d389691407e1556"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 122242,
+      "sha256": "6825eb221bdd1ecfa6f5c14d6bdb9b18b05a0805d953b996e5f905d504a5d428"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 172018,
+      "sha256": "c12c7238137018385d817440291511bc9b07a89dc0611100c42dde7e030e6ac2"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 372832,
+      "sha256": "95e0f70a6d4a1e6470f3baa5e75fdaa5e7cf7028ce8ab487bf6f5b7db3b47f9c"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 372832,
+      "sha256": "95e0f70a6d4a1e6470f3baa5e75fdaa5e7cf7028ce8ab487bf6f5b7db3b47f9c"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 172018,
+      "sha256": "c12c7238137018385d817440291511bc9b07a89dc0611100c42dde7e030e6ac2"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 122242,
+      "sha256": "6825eb221bdd1ecfa6f5c14d6bdb9b18b05a0805d953b996e5f905d504a5d428"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 9704,
+      "sha256": "93f3beccf78c2b16897d55a1cfe95cb2fb588a2260fe560605c7d66a90504451"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 372832,
+      "sha256": "95e0f70a6d4a1e6470f3baa5e75fdaa5e7cf7028ce8ab487bf6f5b7db3b47f9c"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 256778,
+      "sha256": "6fe3ec19667b78eef1af9bc852375f5f0c8f41f94355a4c02efd427458a057bb"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 372832,
+      "sha256": "95e0f70a6d4a1e6470f3baa5e75fdaa5e7cf7028ce8ab487bf6f5b7db3b47f9c"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 256778,
+      "sha256": "6fe3ec19667b78eef1af9bc852375f5f0c8f41f94355a4c02efd427458a057bb"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 172018,
+      "sha256": "c12c7238137018385d817440291511bc9b07a89dc0611100c42dde7e030e6ac2"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 116910,
+      "sha256": "b181d9c75574d50d0065bb9dfd61f0229a9ad23a59d673e5f19a64e11f24f1b3"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 73214,
+      "sha256": "230a1aa1d00fe27efc340a693b01d81f5e18f488c53af8e279cf03540e65b4bd"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 73990,
+      "sha256": "2a38cfee49fe748a5e64804347066c76b9c3ea923451b456f00a2db213841ae9"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 12,
+    "bytes": 1285620,
+    "inventorySha256": "0dffebc4193d3e0ab6fb70340530812b2ff12ff2e6debcda63695975b7a4c16f",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "al-markabah-al-mutamadah-used-cars",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 23,
+    "report": "dealers/al-markabah-al-mutamadah-used-cars/input-review.json"
+  },
+  "after": {
+    "files": 23,
+    "bytes": 1320166
+  }
+}

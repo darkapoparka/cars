@@ -1,0 +1,215 @@
+{
+  "schemaVersion": 1,
+  "dealer": "rh-motors-services",
+  "realLogoFirst": true,
+  "logoKind": "proposal",
+  "publishedBranding": "text-identity-observed",
+  "publicSources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/Rh-Motors-Services-Ltd?menu=1",
+      "observedAt": "2026-10-19"
+    },
+    {
+      "url": "https://www.cazoo.co.uk/dealers/rh-motors-services-ltd-47706/",
+      "observedAt": "2026-10-19"
+    },
+    {
+      "url": "https://find-and-update.company-information.service.gov.uk/company/11300772",
+      "observedAt": "2026-10-19"
+    },
+    {
+      "url": "https://www.gumtree.com/p/smart/2015-smart-forfour-1.0-passion-5dr-hatchback-petrol-manual/1803432786",
+      "observedAt": "2026-10-19"
+    }
+  ],
+  "originals": [],
+  "sourceLogoUrl": null,
+  "workingLogoPath": "branding/generated-master.png",
+  "creationMethod": "imagegen-proposal",
+  "dealerApproved": false,
+  "approvalStatus": "independent-preview-not-dealer-approved",
+  "usageStatus": "public-preview-only",
+  "observedAt": "2026-10-19",
+  "researchConclusion": "No usable original logo was obtained from bounded exact-business/locality searches and the matched public seller and directory sources. The dealer catalogue supplies a text identity and vehicle photographs; an unavailable or absent logo image does not prove that no original branding exists. This is an independent proposed identity, not an official dealer logo.",
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T19:22:56.608725Z",
+    "master": {
+      "path": "branding/generated-master.png",
+      "sha256": "8a02c096162464d36c389ee7db9979e9ea512f4446db1ea14c40db1a1d6914be",
+      "nativeDimensions": {
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-3fe14077-785d-4c1c-97de-3f6719295b30",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "805c9264bd314dfe90b93a9ce0223e13b7f896e7dd3a67c26e40b20dbfb92333",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-3fe14077-785d-4c1c-97de-3f6719295b30",
+        "modelVersion": null
+      },
+      "derivation": {
+        "operation": "pixel-exact rectangular extraction of the existing generated compact emblem; no recolouring or invented artwork",
+        "parentPath": "branding/generated-master.png",
+        "parentSha256": "8a02c096162464d36c389ee7db9979e9ea512f4446db1ea14c40db1a1d6914be",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 753,
+          "height": 724
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-on-dark.png",
+      "sha256": "6d910182d5e44887d0d6e2e537f26399d942e0f08becd7229ee3fe6098094b2c",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-669161b4-6be6-4b78-96f6-ddd2ff904145",
+        "modelVersion": null
+      },
+      "derivation": {
+        "operation": "pixel-exact rectangular extraction of the existing generated compact emblem; no recolouring or invented artwork",
+        "parentPath": "branding/generated-on-dark.png",
+        "parentSha256": "fe3e673b5f6eed77f08ed8880ddeb738b569eb80eb290484b17a603325fb2d4b",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 733,
+          "height": 724
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-master.png",
+        "sha256": "8a02c096162464d36c389ee7db9979e9ea512f4446db1ea14c40db1a1d6914be",
+        "nativeDimensions": {
+          "width": 2172,
+          "height": 724
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-3fe14077-785d-4c1c-97de-3f6719295b30",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "fe3e673b5f6eed77f08ed8880ddeb738b569eb80eb290484b17a603325fb2d4b",
+        "nativeDimensions": {
+          "width": 2172,
+          "height": 724
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-669161b4-6be6-4b78-96f6-ddd2ff904145",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "fe3e673b5f6eed77f08ed8880ddeb738b569eb80eb290484b17a603325fb2d4b",
+        "nativeDimensions": {
+          "width": 2172,
+          "height": 724
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-669161b4-6be6-4b78-96f6-ddd2ff904145",
+          "modelVersion": null
+        }
+      }
+    },
+    "marks": {
+      "onLight": {
+        "path": "branding/generated-mark.png",
+        "sha256": "805c9264bd314dfe90b93a9ce0223e13b7f896e7dd3a67c26e40b20dbfb92333",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-3fe14077-785d-4c1c-97de-3f6719295b30",
+          "modelVersion": null
+        },
+        "derivation": {
+          "operation": "pixel-exact rectangular extraction of the existing generated compact emblem; no recolouring or invented artwork",
+          "parentPath": "branding/generated-master.png",
+          "parentSha256": "8a02c096162464d36c389ee7db9979e9ea512f4446db1ea14c40db1a1d6914be",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 753,
+            "height": 724
+          }
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-mark-on-dark.png",
+        "sha256": "6d910182d5e44887d0d6e2e537f26399d942e0f08becd7229ee3fe6098094b2c",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-669161b4-6be6-4b78-96f6-ddd2ff904145",
+          "modelVersion": null
+        },
+        "derivation": {
+          "operation": "pixel-exact rectangular extraction of the existing generated compact emblem; no recolouring or invented artwork",
+          "parentPath": "branding/generated-on-dark.png",
+          "parentSha256": "fe3e673b5f6eed77f08ed8880ddeb738b569eb80eb290484b17a603325fb2d4b",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 733,
+            "height": 724
+          }
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": {
+        "onLight": [
+          "#ffffff"
+        ],
+        "onDark": [
+          "#111113",
+          "#101820"
+        ],
+        "onAccent": [
+          "#09090b",
+          "#17191c",
+          "#c40101"
+        ]
+      },
+      "wordmarkWidths": [
+        120,
+        180
+      ],
+      "reviewedAt": "2026-10-19T19:22:56.608725Z",
+      "notes": "Visually reviewed the actual deterministic transparent-padding exports at120px and180px on all six retained template surface colours. Exact name spelling, silhouette, alpha edges, spacing and clipping were checked. Light-ink variants are actual imagegen results, not deterministic recolours. Small secondary suffix text is subordinate to the principal name; compact identity is provided separately."
+    },
+    "compactMarkStatus": "independent-preview-not-dealer-approved",
+    "compactMarkDescription": "R&H monogram",
+    "compactMarkReview": {
+      "reviewed": true,
+      "widths": [
+        32,
+        64
+      ],
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#101820",
+        "#09090b",
+        "#17191c",
+        "#c40101"
+      ],
+      "reviewedAt": "2026-10-19T19:22:56.608725Z",
+      "notes": "Visually inspected the actual compact exports at32px and64px on all six template backgrounds. Existing-emblem pixel crops have explicit parent hashes and exact rectangle provenance; independently generated compact marks retain their own actual generation IDs. Shape, spacing, clipping and transparent counters were checked. Dealer approval remains unknown."
+    }
+  }
+}

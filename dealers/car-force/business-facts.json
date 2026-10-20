@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "slug": "car-force",
+  "dealerId": "gb-luton-car-force",
+  "business": {
+    "name": "Car Force Ltd",
+    "city": "Luton / Leighton Buzzard",
+    "region": "Bedfordshire",
+    "countryCode": "GB",
+    "currency": "GBP",
+    "distanceUnit": "mi",
+    "locale": "en-GB",
+    "address": "",
+    "phone": "+441582280642",
+    "phoneDisplay": "+441582280642",
+    "email": "info.carforce@gmail.com",
+    "website": "",
+    "stockUrl": "https://showroom.ebaymotorspro.co.uk/CAR-FORCE-LTD?menu=1",
+    "hours": "",
+    "sourceUrl": "https://showroom.ebaymotorspro.co.uk/CAR-FORCE-LTD?menu=1",
+    "observedAt": "2026-10-19",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/CAR-FORCE-LTD?menu=1",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "current-public-business-details",
+        "dated-advertised-stock-snapshot"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "dealer": "glasgow-matts-motors",
+  "reviewedAt": "2026-10-19T20:10:55.129003Z",
+  "scope": "Complete public advert descriptions and available vehicle-history panels for the selected stock samples. No dealer contact or independent vehicle inspection.",
+  "records": [
+    {
+      "listingId": "vehicle-1",
+      "sourceUrl": "https://www.ebay.co.uk/itm/920044432380",
+      "observedAt": "2026-10-19T20:03:54.505309Z",
+      "httpStatus": 200,
+      "pageSha256": "4c21b533e243e914ed7a76ab0b32003dd2c88c6d66c49bfd53b0b696803946e4",
+      "descriptionUrl": "https://itm.ebaydesc.com/itmdesc/920044432380?t=1792139951000&category=18275&seller=jmcars1&excSoj=1&ver=1&excTrk=1&lsite=3&ittenable=false&domain=ebay.com&descgauge=1&cspheader=1&oneClk=2&secureDesc=1&lang=en",
+      "descriptionSha256": "acdfcceae683063a4ddcd7a74c3be7db81a5f9edcd452c847aeae4209e062e11",
+      "embeddedHistoryChecked": false,
+      "descriptionResult": "full-public-advert-reviewed",
+      "retained": true,
+      "finding": "No additional material condition or history disclosure identified in the reviewed public advert; this is not an independent vehicle inspection or history certificate."
+    },
+    {
+      "listingId": "vehicle-2",
+      "sourceUrl": "https://www.ebay.co.uk/itm/920017379789",
+      "observedAt": "2026-10-19T20:03:54.560405Z",
+      "httpStatus": 200,
+      "pageSha256": "523d1d2676aa0966ca89863c2a7851a66143abadb684f1b3a9784f20600cb4cf",
+      "descriptionUrl": "https://itm.ebaydesc.com/itmdesc/920017379789?t=1791376421000&category=9837&seller=jmcars1&excSoj=1&ver=1&excTrk=1&lsite=3&ittenable=false&domain=ebay.com&descgauge=1&cspheader=1&oneClk=2&secureDesc=1&lang=en",
+      "descriptionSha256": "f1125c7f697073d537cc94f78263d89c503612a98692450847f44fffd4d3300f",
+      "embeddedHistoryChecked": false,
+      "descriptionResult": "full-public-advert-reviewed",
+      "retained": true,
+      "finding": "The public eBay history panel shows a Category S/N advisory without identifying which category applies. Repair quality and current condition have not been independently verified."
+    },
+    {
+      "listingId": "vehicle-3",
+      "sourceUrl": "https://www.ebay.co.uk/itm/920013859678",
+      "observedAt": "2026-10-19T20:03:54.739170Z",
+      "httpStatus": 200,
+      "pageSha256": "1b36834cb48375d46a74aef9413ccb96f643a07b0547b803da7bd4905a2aa2e6",
+      "descriptionUrl": "https://itm.ebaydesc.com/itmdesc/920013859678?t=1791291679000&category=9844&seller=jmcars1&excSoj=1&ver=1&excTrk=1&lsite=3&ittenable=false&domain=ebay.com&descgauge=1&cspheader=1&oneClk=2&secureDesc=1&lang=en",
+      "descriptionSha256": "e20a717a9727290707d3189519c990c414c3aefa6fb3c61e1d4b76ce3989321d",
+      "embeddedHistoryChecked": false,
+      "descriptionResult": "full-public-advert-reviewed",
+      "retained": true,
+      "finding": "The public eBay history panel shows a Category S/N advisory without identifying which category applies. Repair quality and current condition have not been independently verified."
+    }
+  ]
+}

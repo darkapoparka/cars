@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "simply-motors-ilford",
+  "previousSlug": "simply-motors-ilford",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:21:46.043Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-ilford-simply-motors",
+    "position": 53
+  },
+  "before": {
+    "files": 40,
+    "bytes": 3107315
+  },
+  "afterBeforeReview": {
+    "files": 24,
+    "bytes": 1671939
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 53430,
+      "sha256": "edb7fa1f24bc928636aecd15caa796761658ec6b33bb623dfa2497c29ea1460e"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 116976,
+      "sha256": "964593d3d72dd6452b5b58ed8e14926c952bfe8e1a689aa46e728de445c556d3"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 53430,
+      "sha256": "edb7fa1f24bc928636aecd15caa796761658ec6b33bb623dfa2497c29ea1460e"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 56822,
+      "sha256": "b049af0cd6f189a3d0111c65fe69b486a57be2680ab7f5a5ae845d18855e20eb"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 155480,
+      "sha256": "64fb3383125b12ecb11d00f7ce28e62314190f53edbf2108c69d7e14562a4320"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 155480,
+      "sha256": "64fb3383125b12ecb11d00f7ce28e62314190f53edbf2108c69d7e14562a4320"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 56822,
+      "sha256": "b049af0cd6f189a3d0111c65fe69b486a57be2680ab7f5a5ae845d18855e20eb"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 53430,
+      "sha256": "edb7fa1f24bc928636aecd15caa796761658ec6b33bb623dfa2497c29ea1460e"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 4480,
+      "sha256": "daa432a6f90e70d3e8cc91fa7fa7280ad1cd1d9a822df7e70c0679cabe1d8868"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 155480,
+      "sha256": "64fb3383125b12ecb11d00f7ce28e62314190f53edbf2108c69d7e14562a4320"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 105300,
+      "sha256": "a24b0d7db6effab9919efa52841f9fbcd2250263504a65e29c7a739366418d05"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 155480,
+      "sha256": "64fb3383125b12ecb11d00f7ce28e62314190f53edbf2108c69d7e14562a4320"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 105300,
+      "sha256": "a24b0d7db6effab9919efa52841f9fbcd2250263504a65e29c7a739366418d05"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 56822,
+      "sha256": "b049af0cd6f189a3d0111c65fe69b486a57be2680ab7f5a5ae845d18855e20eb"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 41290,
+      "sha256": "bc8e8c93cc0fc4781452cbbf473bbf2945d5070767a739bfc2b03063b314dc35"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 77578,
+      "sha256": "2d3dd92b7245b46784885a6b2013900f5f358b0247424c3af455bd11d138011a"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 35582,
+      "sha256": "282917d8666043964403fb6766b9db32b5b6a6146741f637b4033d52c08b6b56"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 12,
+    "bytes": 1642419,
+    "inventorySha256": "e86c702976b6dead3f7b98a69bc7dd893cdf2f6fb104a714b79eedaa108c481e",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "simply-motors-ilford",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 26,
+    "report": "dealers/simply-motors-ilford/input-review.json"
+  },
+  "after": {
+    "files": 26,
+    "bytes": 1680949
+  }
+}

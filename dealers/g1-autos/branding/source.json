@@ -1,0 +1,196 @@
+{
+  "schemaVersion": 1,
+  "dealer": "g1-autos",
+  "realLogoFirst": true,
+  "logoKind": "redraw",
+  "publishedBranding": "real-logo-observed",
+  "publicSources": [
+    {
+      "url": "https://www.autotrader.co.uk/dealers/bedfordshire/luton/g1-autos-ltd-10046522",
+      "observedAt": "2026-10-19"
+    },
+    {
+      "url": "https://www.cargurus.co.uk/Cars/m-G1-Autos-LTD-sp526685",
+      "observedAt": "2026-10-19"
+    },
+    {
+      "url": "https://www.theaa.com/used-cars/dealers/local/bedfordshire",
+      "observedAt": "2026-10-19"
+    }
+  ],
+  "originals": [
+    {
+      "url": "https://m.atcdn.co.uk/dealer-logo/at2/adbranding/10046522/images/fpa_logo.gif",
+      "observedAt": "2026-10-19",
+      "sha256": "17e2e3b0cab5a81a035bc34ae9c86042d27e02d30b292002ad8d1c43242f628d",
+      "nativeDimensions": {
+        "width": 600,
+        "height": 100
+      },
+      "format": "PNG",
+      "description": "Opaque 600px coupe silhouette and G1 AUTOS with red numeral 1; retained the coupe, navy/gray/red identity and exact name.",
+      "path": "branding/original-logo.png"
+    }
+  ],
+  "sourceLogoUrl": "https://m.atcdn.co.uk/dealer-logo/at2/adbranding/10046522/images/fpa_logo.gif",
+  "workingLogoPath": "branding/generated-master.png",
+  "creationMethod": "imagegen-faithful-redraw",
+  "dealerApproved": false,
+  "approvalStatus": "independent-preview-not-dealer-approved",
+  "usageStatus": "public-preview-only",
+  "observedAt": "2026-10-19",
+  "researchConclusion": "A real identity was obtained and visually reviewed. Opaque 600px coupe silhouette and G1 AUTOS with red numeral 1; retained the coupe, navy/gray/red identity and exact name. This is a faithful image-generated redraw for an independent preview and has not been approved by the dealer.",
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T19:22:56.608725Z",
+    "master": {
+      "path": "branding/generated-master.png",
+      "sha256": "da1e66136bffbfd8475015eb37bfa7fd272261c190980a371cdf941df8aeec9a",
+      "nativeDimensions": {
+        "width": 2170,
+        "height": 725
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-5b0544ad-1cce-4657-9b71-ec964c06ed07",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "6fa21d14855eeaccdef57fad2d9bee9d15702d8d2b2a8ceacaa6e08e54b7ec35",
+      "nativeDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-7dff40a0-32e8-48db-876c-b02f52d7eed7",
+        "modelVersion": null
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-on-dark.png",
+      "sha256": "94d3e112bae40203a858e3c0964a5ea4dd0243f64217d85bd149c9009ed2d2cf",
+      "nativeDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-19ec82ac-f1d4-4824-a50e-2bc4c665eb3c",
+        "modelVersion": null
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-master.png",
+        "sha256": "da1e66136bffbfd8475015eb37bfa7fd272261c190980a371cdf941df8aeec9a",
+        "nativeDimensions": {
+          "width": 2170,
+          "height": 725
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-5b0544ad-1cce-4657-9b71-ec964c06ed07",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "31d1db7353541369a1e3cc389700323f04725c7afed0ea56fe47c1e9a1d03603",
+        "nativeDimensions": {
+          "width": 2169,
+          "height": 725
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-51384e56-6a61-464a-8824-0fe32f6f0022",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "31d1db7353541369a1e3cc389700323f04725c7afed0ea56fe47c1e9a1d03603",
+        "nativeDimensions": {
+          "width": 2169,
+          "height": 725
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-51384e56-6a61-464a-8824-0fe32f6f0022",
+          "modelVersion": null
+        }
+      }
+    },
+    "marks": {
+      "onLight": {
+        "path": "branding/generated-mark.png",
+        "sha256": "6fa21d14855eeaccdef57fad2d9bee9d15702d8d2b2a8ceacaa6e08e54b7ec35",
+        "nativeDimensions": {
+          "width": 1254,
+          "height": 1254
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-7dff40a0-32e8-48db-876c-b02f52d7eed7",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-mark-on-dark.png",
+        "sha256": "94d3e112bae40203a858e3c0964a5ea4dd0243f64217d85bd149c9009ed2d2cf",
+        "nativeDimensions": {
+          "width": 1254,
+          "height": 1254
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-19ec82ac-f1d4-4824-a50e-2bc4c665eb3c",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": {
+        "onLight": [
+          "#ffffff"
+        ],
+        "onDark": [
+          "#111113",
+          "#101820"
+        ],
+        "onAccent": [
+          "#09090b",
+          "#17191c",
+          "#c40101"
+        ]
+      },
+      "wordmarkWidths": [
+        120,
+        180
+      ],
+      "reviewedAt": "2026-10-19T19:22:56.608725Z",
+      "notes": "Visually reviewed the actual deterministic transparent-padding exports at120px and180px on all six retained template surface colours. Exact name spelling, silhouette, alpha edges, spacing and clipping were checked. Light-ink variants are actual imagegen results, not deterministic recolours. Small secondary suffix text is subordinate to the principal name; compact identity is provided separately."
+    },
+    "compactMarkStatus": "independent-preview-not-dealer-approved",
+    "compactMarkDescription": "G1 initials with the retained red numeral",
+    "compactMarkReview": {
+      "reviewed": true,
+      "widths": [
+        32,
+        64
+      ],
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#101820",
+        "#09090b",
+        "#17191c",
+        "#c40101"
+      ],
+      "reviewedAt": "2026-10-19T19:22:56.608725Z",
+      "notes": "Visually inspected the actual compact exports at32px and64px on all six template backgrounds. Existing-emblem pixel crops have explicit parent hashes and exact rectangle provenance; independently generated compact marks retain their own actual generation IDs. Shape, spacing, clipping and transparent counters were checked. Dealer approval remains unknown."
+    }
+  }
+}

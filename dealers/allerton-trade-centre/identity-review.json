@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": true,
+  "reviewedAt": "2026-10-20T19:12:24.243Z",
+  "dealer": "allerton-trade-centre",
+  "dealerId": "gb-bradford-allerton-trade-centre",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "method": "Automated exact registry/pack identity, canonical hosting and batch comparison; retained public source fields were structurally checked, not human-approved.",
+  "sources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/Allerton-Trade-Centre-ltd",
+      "observedAt": "2026-10-19T20:00:31.373348Z"
+    },
+    {
+      "url": "https://www.ebay.co.uk/itm/267795312582",
+      "observedAt": "2026-10-19T20:02:58.516288Z"
+    },
+    {
+      "url": "https://www.ebay.co.uk/itm/267784892007",
+      "observedAt": "2026-10-19T20:02:58.946541Z"
+    },
+    {
+      "url": "https://www.ebay.co.uk/itm/267760840215",
+      "observedAt": "2026-10-19T20:02:59.861166Z"
+    },
+    {
+      "url": "https://www.cazoo.co.uk/dealers/allerton-trade-centre-ltd-25490/",
+      "observedAt": "2026-10-19T20:03:55.277975Z"
+    }
+  ],
+  "registryReview": {
+    "source": "docs/DEPLOYMENT-INVENTORY.json",
+    "sha256": "250dd5868cb842ea8bef8a95b258a6f043bfd0e1043d10cebb57ae6bd22559fb",
+    "dealerCount": 175,
+    "matches": []
+  },
+  "clientsReview": {
+    "commit": "a999878a921fb61b37bf198c43275550814f88cc",
+    "directoryEntries": 176,
+    "matches": []
+  },
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  }
+}

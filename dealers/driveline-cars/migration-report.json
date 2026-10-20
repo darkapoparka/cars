@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "driveline-cars",
+  "previousSlug": "driveline-cars",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:17:49.289Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-leicester-driveline-cars",
+    "position": 59
+  },
+  "before": {
+    "files": 41,
+    "bytes": 3652416
+  },
+  "afterBeforeReview": {
+    "files": 25,
+    "bytes": 1864319
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 31068,
+      "sha256": "96c74d787890a596dbc865cc5cfb62cbe273ba5a6d82d1ed08e266e1bb7f3a0d"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 209566,
+      "sha256": "7b1f6092e4b250d396fe5504e9421750119e8538e052ea53d450837eb8e4c13d"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 31068,
+      "sha256": "96c74d787890a596dbc865cc5cfb62cbe273ba5a6d82d1ed08e266e1bb7f3a0d"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 38722,
+      "sha256": "e7d3976ca0c818a369113024a698090f04143ccf8a8e16626bdd87d022a94a1f"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 227168,
+      "sha256": "8ce3764b2b8ca4d54d522a19ddf4c6d78ab8e1eb0c060c85cc8df5cc1b0bfa34"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 227168,
+      "sha256": "8ce3764b2b8ca4d54d522a19ddf4c6d78ab8e1eb0c060c85cc8df5cc1b0bfa34"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 38722,
+      "sha256": "e7d3976ca0c818a369113024a698090f04143ccf8a8e16626bdd87d022a94a1f"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 31068,
+      "sha256": "96c74d787890a596dbc865cc5cfb62cbe273ba5a6d82d1ed08e266e1bb7f3a0d"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 4880,
+      "sha256": "9f262089f07d1ae434825afb400d94cb04e7ff5770b803db911ce4d205f119fd"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 227168,
+      "sha256": "8ce3764b2b8ca4d54d522a19ddf4c6d78ab8e1eb0c060c85cc8df5cc1b0bfa34"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 145550,
+      "sha256": "7d6e9f6c4559021eace365e6c77ee588ad5e2a27c4f714143532396f0639c494"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 227168,
+      "sha256": "8ce3764b2b8ca4d54d522a19ddf4c6d78ab8e1eb0c060c85cc8df5cc1b0bfa34"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 145550,
+      "sha256": "7d6e9f6c4559021eace365e6c77ee588ad5e2a27c4f714143532396f0639c494"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 38722,
+      "sha256": "e7d3976ca0c818a369113024a698090f04143ccf8a8e16626bdd87d022a94a1f"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 22462,
+      "sha256": "6b8b54b4a60c7425e371e2bac1ee26886a309699aa3feca187e9cf98874b4d83"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 130330,
+      "sha256": "595289d15be5510ca1d85abc3ca20f618e0ac5ef9aa6b3ac4fbbfb2389edd5ff"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 15514,
+      "sha256": "6dc5494cb94537b03ba8b47d26a98303957be2103f218d02e01a5ede1ffaa176"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 13,
+    "bytes": 1835229,
+    "inventorySha256": "bd5f0ce3d992a2384bcc3c6b5e7bb804709b7f8ade018419cb01fb69c820b67b",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "driveline-cars",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 27,
+    "report": "dealers/driveline-cars/input-review.json"
+  },
+  "after": {
+    "files": 27,
+    "bytes": 1873442
+  }
+}

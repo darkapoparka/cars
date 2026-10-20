@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "dealer": "prestige-and-alma-used-cars",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T19:58:50.364391Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "ocd-31040",
+      "title": "Maserati Levante S 2017",
+      "make": "Maserati",
+      "model": "Levante S",
+      "year": 2017,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/ocd-31040.jpg"
+      ],
+      "sourceUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Maserati/Levante-S/?id=31040",
+      "observedAt": "2026-10-19T19:58:50.364391Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "SUV",
+      "transmission": "Auto",
+      "fuel": "Petrol",
+      "color": "White",
+      "mileageValue": 100000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "ocd-31098",
+      "title": "Mini Cooper Cooper S JCW 2022",
+      "make": "Mini",
+      "model": "Cooper Cooper S JCW",
+      "year": 2022,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/ocd-31098.jpg"
+      ],
+      "sourceUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Mini/Cooper-Cooper-S-JCW/?id=31098",
+      "observedAt": "2026-10-19T19:58:50.364391Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Compact",
+      "transmission": "Auto",
+      "fuel": "Petrol",
+      "color": "Blue",
+      "mileageValue": 60000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "ocd-31035",
+      "title": "Jetour Dashing 1.6T Luxury 2024",
+      "make": "Jetour",
+      "model": "Dashing 1.6T Luxury",
+      "year": 2024,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/ocd-31035.jpg"
+      ],
+      "sourceUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Jetour/Dashing-1.6T-Luxury/?id=31035",
+      "observedAt": "2026-10-19T19:58:50.364391Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "SUV",
+      "transmission": "Auto",
+      "fuel": "Petrol",
+      "color": "Gray",
+      "mileageValue": 0,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "dealer": "rebou-al-fakhama-used-cars",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://ayshei.com/v-shop/rebou_al_fakhama/inventory",
+      "observedAt": "2026-10-19T19:58:51.844383Z",
+      "supports": [
+        "public-business-trading-name",
+        "dealer-attributed-catalogue",
+        "business-location"
+      ]
+    },
+    {
+      "url": "https://ayshei.com/ads/detail/8821814212-2019-audi-q7-american-specs-excellent-condition",
+      "observedAt": "2026-10-19T19:58:51.844383Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    },
+    {
+      "url": "https://ayshei.com/ads/detail/8084758468-2023-ford-mustang-gt-premium-american-specs-excellent-condition",
+      "observedAt": "2026-10-19T19:58:51.844383Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    },
+    {
+      "url": "https://ayshei.com/ads/detail/2182514939-2019-dodge-charger-gt-american-specs",
+      "observedAt": "2026-10-19T19:58:51.844383Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "research": {
+    "observedAt": "2026-10-19T19:58:51.844383Z",
+    "profileUrl": "https://ayshei.com/v-shop/rebou_al_fakhama/inventory",
+    "profileSha256": "9f31487d38b12cfbb8a7f6f6961244073b2e8e48868163be79a0cbc19a11aab0",
+    "classification": "public-marketplace-dealer-profile-and-listing-snapshot",
+    "directDealerPostingVerified": false,
+    "profileClaimed": false,
+    "limitation": "Seller attribution comes from the public marketplace profile. Current physical availability and direct dealer posting are not independently confirmed.",
+    "notes": [
+      "Ayshei avatar is a generic placeholder. Marketplace support number is excluded.",
+      "Dealer business phone, email, website and hours not exposed in the read profile."
+    ],
+    "contactReview": "Only business-labeled dealer call numbers retained. Marketplace relay/support numbers and personal-looking staff contacts excluded.",
+    "photoSources": [
+      {
+        "listingId": "ay-8821814212",
+        "listingUrl": "https://ayshei.com/ads/detail/8821814212-2019-audi-q7-american-specs-excellent-condition",
+        "sourceImageUrl": "https://storage.ayshei.com/prod/public/drafts/5feb6717-8c3e-43a3-88ec-29d0763a08ae/web/image1_1200.webp",
+        "observedAt": "2026-10-19T19:58:51.844383Z",
+        "retainedPath": "dealer-stock/ay-8821814212.jpg",
+        "sha256": "b9e87e6ea62fd61de39dec5c2f7592c6d2ff9f84e9b4b084068ecd3d1ab61cec",
+        "bytes": 148718,
+        "width": 960,
+        "height": 1280,
+        "operation": "resize-within-1280-without-upscale-and-JPEG-quality-82-or-83"
+      },
+      {
+        "listingId": "ay-8084758468",
+        "listingUrl": "https://ayshei.com/ads/detail/8084758468-2023-ford-mustang-gt-premium-american-specs-excellent-condition",
+        "sourceImageUrl": "https://storage.ayshei.com/prod/public/drafts/cb4b02cd-3b97-4bd6-80b3-4af9b1e9c276/web/image1_1200.webp",
+        "observedAt": "2026-10-19T19:58:51.844383Z",
+        "retainedPath": "dealer-stock/ay-8084758468.jpg",
+        "sha256": "4c18b0282047047d97a338058822423b748583fae5cae62fafd6469181d3b6bf",
+        "bytes": 136561,
+        "width": 960,
+        "height": 1280,
+        "operation": "resize-within-1280-without-upscale-and-JPEG-quality-82-or-83"
+      },
+      {
+        "listingId": "ay-2182514939",
+        "listingUrl": "https://ayshei.com/ads/detail/2182514939-2019-dodge-charger-gt-american-specs",
+        "sourceImageUrl": "https://storage.ayshei.com/prod/public/drafts/ea2c8a54-31f1-4875-8af1-f93687886655/web/image1_1200.webp",
+        "observedAt": "2026-10-19T19:58:51.844383Z",
+        "retainedPath": "dealer-stock/ay-2182514939.jpg",
+        "sha256": "84582b16ab957baf4718d7ad8885184c11ea683c1bc43b5ba8d90b4dedd45c04",
+        "bytes": 145188,
+        "width": 1200,
+        "height": 901,
+        "operation": "resize-within-1280-without-upscale-and-JPEG-quality-82-or-83"
+      }
+    ]
+  }
+}

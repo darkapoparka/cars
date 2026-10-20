@@ -1,0 +1,197 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-hiba-used-cars",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T20:13:47.637Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-independent-monogram-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "9e76c6bdac7c2628d8c0a5307f0b225603ebbd79359f476d2fbccb1e2009d0e7",
+      "sourceSha256": "e971592c2a684c2fcbb07cb6bad266f8866f1ec96440dfa0fd214842eedf4ae3"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "d252ec1aec822232a330b888ff06eeac9193f6a0186c07cfc195f8695ad448a5",
+      "sourceSha256": "0c31b50c4516a03d9b403475b79be33bc1f9d9327cf2b9d2b3189c7c2055108b"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "d252ec1aec822232a330b888ff06eeac9193f6a0186c07cfc195f8695ad448a5",
+      "sourceSha256": "0c31b50c4516a03d9b403475b79be33bc1f9d9327cf2b9d2b3189c7c2055108b"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "e971592c2a684c2fcbb07cb6bad266f8866f1ec96440dfa0fd214842eedf4ae3",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-d49a64d4-a0bb-4c4c-87c2-68ac2f073f6c",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "2315527cac84d436b10c5a65185e5f6e9b532f7492ad48c71846150dc58630b2",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-d49a64d4-a0bb-4c4c-87c2-68ac2f073f6c",
+      "modelVersion": null
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "12e7380c7b98dac890bed3c4a3ca2a165e3e3e9e38d024918395c4c267ca6c53"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "e971592c2a684c2fcbb07cb6bad266f8866f1ec96440dfa0fd214842eedf4ae3",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-d49a64d4-a0bb-4c4c-87c2-68ac2f073f6c",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-hiba-used-cars/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "0c31b50c4516a03d9b403475b79be33bc1f9d9327cf2b9d2b3189c7c2055108b",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-ac41a591-c497-4d74-a783-4db6a40906c4",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-hiba-used-cars/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "0c31b50c4516a03d9b403475b79be33bc1f9d9327cf2b9d2b3189c7c2055108b",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-ac41a591-c497-4d74-a783-4db6a40906c4",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-hiba-used-cars/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "7b7e661df5a4e1c0d484b88a0814debca5c9807070711241ea2c15f7ac3ac71f",
+      "sha256": "e971592c2a684c2fcbb07cb6bad266f8866f1ec96440dfa0fd214842eedf4ae3",
+      "crop": {
+        "left": 19,
+        "top": 275,
+        "width": 1193,
+        "height": 705
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "8030f25b43863a58beeeda8621e57bf2e8f1217f1ac5080822caa885a5718504",
+      "sha256": "0c31b50c4516a03d9b403475b79be33bc1f9d9327cf2b9d2b3189c7c2055108b",
+      "crop": {
+        "left": 29,
+        "top": 277,
+        "width": 1179,
+        "height": 699
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "8030f25b43863a58beeeda8621e57bf2e8f1217f1ac5080822caa885a5718504",
+      "sha256": "0c31b50c4516a03d9b403475b79be33bc1f9d9327cf2b9d2b3189c7c2055108b",
+      "crop": {
+        "left": 29,
+        "top": 277,
+        "width": 1179,
+        "height": 699
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "c6ff13296a42f3eca8f13a26254941e4ae7c01ed74bdda6e39b18913438fc6ff",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-d49a64d4-a0bb-4c4c-87c2-68ac2f073f6c",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-hiba-used-cars/branding/generated-on-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "de513a4ccb1a9e285e330dc2d84711337604a53e223da373d44dcb0d618e0916",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-ac41a591-c497-4d74-a783-4db6a40906c4",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-hiba-used-cars/branding/generated-on-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "2315527cac84d436b10c5a65185e5f6e9b532f7492ad48c71846150dc58630b2",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-d49a64d4-a0bb-4c4c-87c2-68ac2f073f6c",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-hiba-used-cars/branding/generated-on-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "12e7380c7b98dac890bed3c4a3ca2a165e3e3e9e38d024918395c4c267ca6c53",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-d49a64d4-a0bb-4c4c-87c2-68ac2f073f6c",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-hiba-used-cars/branding/generated-on-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-19T20:13:47.637Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "c6b4e83457033fe67d108b2917924688c612218f963648fd9b7bcf98b6b75135",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-ac41a591-c497-4d74-a783-4db6a40906c4",
+      "modelVersion": null
+    }
+  }
+}

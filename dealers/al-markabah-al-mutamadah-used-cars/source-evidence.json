@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-markabah-al-mutamadah-used-cars",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://www.oneclickdrive.com/company/sharjah/al-markabah-al-mutamadah-used-cars",
+      "observedAt": "2026-10-19T19:58:48.748400Z",
+      "supports": [
+        "public-business-trading-name",
+        "dealer-attributed-catalogue",
+        "business-location",
+        "public-business-phone"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Mitsubishi/Canter/?id=36059",
+      "observedAt": "2026-10-19T19:58:48.748400Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Kia/Pegas-LX/?id=36047",
+      "observedAt": "2026-10-19T19:58:48.748400Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Nissan/Micra-S/?id=36044",
+      "observedAt": "2026-10-19T19:58:48.748400Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "research": {
+    "observedAt": "2026-10-19T19:58:48.748400Z",
+    "profileUrl": "https://www.oneclickdrive.com/company/sharjah/al-markabah-al-mutamadah-used-cars",
+    "profileSha256": "daf53383762f19e8ed118c4b7b85ccd92853caa39d46bdd06f430435c6c51dda",
+    "classification": "public-marketplace-dealer-profile-and-listing-snapshot",
+    "directDealerPostingVerified": false,
+    "profileClaimed": false,
+    "limitation": "Seller attribution comes from the public marketplace profile. Current physical availability and direct dealer posting are not independently confirmed.",
+    "notes": [
+      "Marketplace profile and detail-page timing blocks conflict or appear generic; opening hours omitted. Platform WhatsApp relay is excluded."
+    ],
+    "contactReview": "Only business-labeled dealer call numbers retained. Marketplace relay/support numbers and personal-looking staff contacts excluded.",
+    "photoSources": [
+      {
+        "listingId": "ocd-36059",
+        "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Mitsubishi/Canter/?id=36059",
+        "sourceImageUrl": "https://static.oneclickdrive.com/uploads/cars/Mitsubishi-Canter-2017_36059_1900106794879-9_small.jpg",
+        "observedAt": "2026-10-19T19:58:48.748400Z",
+        "retainedPath": "dealer-stock/ocd-36059.jpg",
+        "sha256": "6177ddeab6bcbbf4dced5422cdf7dddbe58ed5ea2a998615a5794cbaa110861f",
+        "bytes": 28382,
+        "width": 450,
+        "height": 395,
+        "operation": "resize-within-1280-without-upscale-and-JPEG-quality-82-or-83"
+      },
+      {
+        "listingId": "ocd-36047",
+        "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Kia/Pegas-LX/?id=36047",
+        "sourceImageUrl": "https://static.oneclickdrive.com/uploads/cars/Kia-Pegas-2021_36047_1900136435863-10_small.jpg",
+        "observedAt": "2026-10-19T19:58:48.748400Z",
+        "retainedPath": "dealer-stock/ocd-36047.jpg",
+        "sha256": "c7d86ce71bffa55ae04dbce5173ad8cc6255475a9a72e488c30d869669bcc2c6",
+        "bytes": 40463,
+        "width": 450,
+        "height": 395,
+        "operation": "resize-within-1280-without-upscale-and-JPEG-quality-82-or-83"
+      },
+      {
+        "listingId": "ocd-36044",
+        "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Nissan/Micra-S/?id=36044",
+        "sourceImageUrl": "https://static.oneclickdrive.com/uploads/cars/Nissan-Micra-2020_36044_1900143537054-10_small.jpg",
+        "observedAt": "2026-10-19T19:58:48.748400Z",
+        "retainedPath": "dealer-stock/ocd-36044.jpg",
+        "sha256": "a09583409519bfe299d000c6c2da4f5cf0d4959b5cda43a02888bad147ed81bc",
+        "bytes": 33530,
+        "width": 450,
+        "height": 395,
+        "operation": "resize-within-1280-without-upscale-and-JPEG-quality-82-or-83"
+      }
+    ]
+  }
+}

@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "night-bat-motors",
+  "previousSlug": "night-bat-motors",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:17:58.867Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-sheffield-night-bat-motors",
+    "position": 85
+  },
+  "before": {
+    "files": 38,
+    "bytes": 3570030
+  },
+  "afterBeforeReview": {
+    "files": 22,
+    "bytes": 1981980
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 120355,
+      "sha256": "26bbafcfbf59bfa5ae039fe2a2ee192c014974123f53b0d98dec3e0b8a2cdd50"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 115337,
+      "sha256": "df09dd241564dc84bf7b8be7145b810f898a4e9586b026b39f3b5477057f5dc4"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 120355,
+      "sha256": "26bbafcfbf59bfa5ae039fe2a2ee192c014974123f53b0d98dec3e0b8a2cdd50"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 115929,
+      "sha256": "5c50c880e8d002dfd91f080dc5207ee19fadc590aecf21102c3f71bf4b942296"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 104259,
+      "sha256": "79b9db26264ad8ba141d907dc38df5e6113cea2140096a7ba90dc4dbf19659a8"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 104259,
+      "sha256": "79b9db26264ad8ba141d907dc38df5e6113cea2140096a7ba90dc4dbf19659a8"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 115929,
+      "sha256": "5c50c880e8d002dfd91f080dc5207ee19fadc590aecf21102c3f71bf4b942296"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 120355,
+      "sha256": "26bbafcfbf59bfa5ae039fe2a2ee192c014974123f53b0d98dec3e0b8a2cdd50"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 8613,
+      "sha256": "c55d506ec413ac2e9f6fb11fac53dccfe188c5def832c585329ef459c2cf46ef"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 104259,
+      "sha256": "79b9db26264ad8ba141d907dc38df5e6113cea2140096a7ba90dc4dbf19659a8"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 66242,
+      "sha256": "9690d72399eec461bbf9e9c9d2c741a9f9c1b09cd3d1f0b78f3ddd64d4af85a8"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 104259,
+      "sha256": "79b9db26264ad8ba141d907dc38df5e6113cea2140096a7ba90dc4dbf19659a8"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 66242,
+      "sha256": "9690d72399eec461bbf9e9c9d2c741a9f9c1b09cd3d1f0b78f3ddd64d4af85a8"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 115929,
+      "sha256": "5c50c880e8d002dfd91f080dc5207ee19fadc590aecf21102c3f71bf4b942296"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 67318,
+      "sha256": "001fe4eb7a6f4467e7d1c1db1523c22444690681f421c67a40aa7e57a1d8a254"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 70546,
+      "sha256": "3586e5771607c2b72f3e5bc1dbe56372042a2819d0aa963ae6777b328d6b9561"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 71674,
+      "sha256": "eb5c616fd354095c9af15186b53f73971cc2265b09fc2a79d10275404f5edc57"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 12,
+    "bytes": 1561935,
+    "inventorySha256": "a273bda43fa180cf98ecb7b8a24109beb64fba1dd22c58a4ceeb3214d3f56a01",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "night-bat-motors",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 24,
+    "report": "dealers/night-bat-motors/input-review.json"
+  },
+  "after": {
+    "files": 24,
+    "bytes": 1990540
+  }
+}

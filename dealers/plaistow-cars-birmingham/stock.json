@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "dealer": "plaistow-cars-birmingham",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "public-listing-1",
+      "title": "2008 Lexus IS F 5.0 V8 Auto",
+      "make": "Lexus",
+      "model": "IS F",
+      "year": 2008,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/public-1.jpg"
+      ],
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202609236329942",
+      "observedAt": "2026-10-19T20:02:57.478786Z",
+      "availability": "Observed in the public seller catalogue on 2026-10-19; availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "transmission": "Automatic",
+      "fuel": "Petrol",
+      "mileageOnRequest": true,
+      "description": "The seller describes this as an imported car whose odometer remains in kilometres. The catalogue labels the mileage in miles; mileage is omitted because the units are unresolved. Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "public-listing-2",
+      "title": "2013 Toyota Mark X 3.5 V6 G's Edition Auto",
+      "make": "Toyota",
+      "model": "Mark X",
+      "year": 2013,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/public-2.jpg"
+      ],
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202610106872162",
+      "observedAt": "2026-10-19T20:02:57.479751Z",
+      "availability": "Observed in the public seller catalogue on 2026-10-19; availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "transmission": "Automatic",
+      "fuel": "Petrol",
+      "mileageOnRequest": true,
+      "description": "The seller describes this as an imported car whose odometer remains in kilometres. The catalogue labels the mileage in miles; mileage is omitted because the units are unresolved. Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "public-listing-3",
+      "title": "2016 BMW X6 30d M Sport Auto xDrive",
+      "make": "BMW",
+      "model": "X6",
+      "year": 2016,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/public-3.jpg"
+      ],
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202602280299090",
+      "observedAt": "2026-10-19T20:02:57.480411Z",
+      "availability": "Observed in the public seller catalogue on 2026-10-19; availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "transmission": "Automatic",
+      "fuel": "Diesel",
+      "mileageValue": 144000,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

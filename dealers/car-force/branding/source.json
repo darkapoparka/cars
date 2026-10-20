@@ -1,0 +1,195 @@
+{
+  "schemaVersion": 1,
+  "dealer": "car-force",
+  "realLogoFirst": true,
+  "logoKind": "proposal",
+  "publishedBranding": "text-identity-observed",
+  "publicSources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/CAR-FORCE-LTD?menu=1",
+      "observedAt": "2026-10-19"
+    },
+    {
+      "url": "https://find-and-update.company-information.service.gov.uk/company/16311859",
+      "observedAt": "2026-10-19"
+    },
+    {
+      "url": "https://www.cargurus.co.uk/Cars/dealers-Leighton-Buzzard-L2249043",
+      "observedAt": "2026-10-19"
+    },
+    {
+      "url": "https://find-and-update.company-information.service.gov.uk/company/15888667",
+      "observedAt": "2026-10-19"
+    },
+    {
+      "url": "https://www.autotrader.co.uk/dealers/bedfordshire/leighton-buzzard/crown-autoz-ltd-10042879",
+      "observedAt": "2026-10-19"
+    },
+    {
+      "url": "https://linktr.ee/CROWNAUTOZLTD",
+      "observedAt": "2026-10-19"
+    }
+  ],
+  "originals": [],
+  "sourceLogoUrl": null,
+  "workingLogoPath": "branding/generated-master.png",
+  "creationMethod": "imagegen-proposal",
+  "dealerApproved": false,
+  "approvalStatus": "independent-preview-not-dealer-approved",
+  "usageStatus": "public-preview-only",
+  "observedAt": "2026-10-19",
+  "researchConclusion": "No usable original logo was obtained from bounded exact-business/locality searches and the matched public seller and directory sources. The dealer catalogue supplies a text identity and vehicle photographs; an unavailable or absent logo image does not prove that no original branding exists. This is an independent proposed identity, not an official dealer logo.",
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T19:22:56.608725Z",
+    "master": {
+      "path": "branding/generated-master.png",
+      "sha256": "38efd4f95e05446919148e6483b1e0f4c79f73dd376cf7015319a2bf193c5c86",
+      "nativeDimensions": {
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-ebc21ed2-f6fa-4b90-b486-5a71b0a4f4e5",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "a94a2b69e81eaa7c1cc6831893a05b2e724b0941109292d1234ec607d2278978",
+      "nativeDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-f2aa2c8d-e0fe-4174-b7b4-7fdc22ac6a32",
+        "modelVersion": null
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "a94a2b69e81eaa7c1cc6831893a05b2e724b0941109292d1234ec607d2278978",
+      "nativeDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-f2aa2c8d-e0fe-4174-b7b4-7fdc22ac6a32",
+        "modelVersion": null
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-master.png",
+        "sha256": "38efd4f95e05446919148e6483b1e0f4c79f73dd376cf7015319a2bf193c5c86",
+        "nativeDimensions": {
+          "width": 2172,
+          "height": 724
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-ebc21ed2-f6fa-4b90-b486-5a71b0a4f4e5",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "8ab38c110be48acf66d03c85d52db6e5b0ffee5e3e02b10a4a74e9b8c35ae33d",
+        "nativeDimensions": {
+          "width": 2172,
+          "height": 724
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-c328be37-cbeb-426e-941c-60c077b027a4",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "8ab38c110be48acf66d03c85d52db6e5b0ffee5e3e02b10a4a74e9b8c35ae33d",
+        "nativeDimensions": {
+          "width": 2172,
+          "height": 724
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-c328be37-cbeb-426e-941c-60c077b027a4",
+          "modelVersion": null
+        }
+      }
+    },
+    "marks": {
+      "onLight": {
+        "path": "branding/generated-mark.png",
+        "sha256": "a94a2b69e81eaa7c1cc6831893a05b2e724b0941109292d1234ec607d2278978",
+        "nativeDimensions": {
+          "width": 1254,
+          "height": 1254
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-f2aa2c8d-e0fe-4174-b7b4-7fdc22ac6a32",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-mark.png",
+        "sha256": "a94a2b69e81eaa7c1cc6831893a05b2e724b0941109292d1234ec607d2278978",
+        "nativeDimensions": {
+          "width": 1254,
+          "height": 1254
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-f2aa2c8d-e0fe-4174-b7b4-7fdc22ac6a32",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": {
+        "onLight": [
+          "#ffffff"
+        ],
+        "onDark": [
+          "#111113",
+          "#101820"
+        ],
+        "onAccent": [
+          "#09090b",
+          "#17191c",
+          "#c40101"
+        ]
+      },
+      "wordmarkWidths": [
+        120,
+        180
+      ],
+      "reviewedAt": "2026-10-19T19:22:56.608725Z",
+      "notes": "Visually reviewed the actual deterministic transparent-padding exports at120px and180px on all six retained template surface colours. Exact name spelling, silhouette, alpha edges, spacing and clipping were checked. Light-ink variants are actual imagegen results, not deterministic recolours. Small secondary suffix text is subordinate to the principal name; compact identity is provided separately."
+    },
+    "compactMarkStatus": "independent-preview-not-dealer-approved",
+    "compactMarkDescription": "CF monogram",
+    "compactMarkReview": {
+      "reviewed": true,
+      "widths": [
+        32,
+        64
+      ],
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#101820",
+        "#09090b",
+        "#17191c",
+        "#c40101"
+      ],
+      "reviewedAt": "2026-10-19T19:22:56.608725Z",
+      "notes": "Visually inspected the actual compact exports at32px and64px on all six template backgrounds. Existing-emblem pixel crops have explicit parent hashes and exact rectangle provenance; independently generated compact marks retain their own actual generation IDs. Shape, spacing, clipping and transparent counters were checked. Dealer approval remains unknown."
+    }
+  }
+}

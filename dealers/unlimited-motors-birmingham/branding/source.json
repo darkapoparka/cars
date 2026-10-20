@@ -1,0 +1,309 @@
+{
+  "schemaVersion": 1,
+  "dealer": "unlimited-motors-birmingham",
+  "status": "reviewed",
+  "realLogoFirst": true,
+  "publicSources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/Unlimited-Motors?menu=1",
+      "observedAt": "2026-10-19T20:00:31.563792Z"
+    },
+    {
+      "url": "https://www.ebay.co.uk/itm/820256455597",
+      "observedAt": "2026-10-19T20:02:58.349190Z"
+    },
+    {
+      "url": "https://www.ebay.co.uk/itm/820249639027",
+      "observedAt": "2026-10-19T20:02:58.350908Z"
+    },
+    {
+      "url": "https://www.ebay.co.uk/itm/820248606730",
+      "observedAt": "2026-10-19T20:02:58.452025Z"
+    },
+    {
+      "url": "https://www.cazoo.co.uk/dealers/unlimited-motors-14199/",
+      "observedAt": "2026-10-19T20:03:54.161291Z"
+    }
+  ],
+  "originals": [
+    {
+      "path": "branding/observed-logo.jpg",
+      "sha256": "50ff448daa69b5c38b52161c1302fd038979e5323b24aef1b04bfc162c6d292b",
+      "sourceUrl": "https://i.ebayimg.com/00/s/NDI5WDEwNDU=/z/fu0AAOSwBu1mDruJ/$_3.JPG",
+      "observedAt": "2026-10-19T20:03:54.104761Z",
+      "kind": "published-dealer-logo-artwork"
+    }
+  ],
+  "creationMethod": "imagegen-redraw",
+  "dealerApproved": false,
+  "approvalStatus": "independent-preview-not-dealer-approved",
+  "researchConclusion": "The obtained public dealer logo was visually inspected. A clean transparent redraw retains the name, colours and principal motif. Original public artwork bytes and source provenance are retained.",
+  "boundedLogoChecks": [],
+  "generation": {
+    "tool": "image_gen.imagegen",
+    "generationId": "exec-67fdfa69-cc86-40ee-9169-fa34b12e39ca",
+    "modelVersion": null,
+    "prompt": "Create one production logo asset sheet on a genuinely transparent background, not a mockup. TWO complete horizontal logo lockups stacked vertically with a very large EMPTY TRANSPARENT gap between them. No labels and no background panels. Both rows use exactly the same spelling, proportions, layout, and motif. Each row: a separate bold compact emblem on the far left, then a generous transparent horizontal gap, then the complete business name at right. The left emblem must remain unmistakable at 32 px. The complete name must be clean and legible at a small website-header size; use strong simple shapes and avoid tiny taglines. TOP ROW is the dark-ink version for WHITE backgrounds. BOTTOM ROW is the light-ink version for CHARCOAL or RED backgrounds: replace every dark text fill with solid white, preserving accent colours only where they remain readable. Use a thin contrasting keyline around coloured details so they remain visible on all backgrounds. Flat graphic design, crisp edges, no gradients, no shading, no texture, no shadow, no photography, no microtype. Real transparent alpha everywhere outside the actual shapes. Wide landscape canvas with equal row spacing and generous outer transparent margins. This is an independent dealer preview; no approval claims. Faithfully redraw the dealer identity UNLIMITED MOTORS from the provided public logo. Preserve its charcoal and mint-teal palette, bold geometric automotive lettering, and sports-car silhouette motif. Make a fresh clean simplified silhouette, not a traced raster; remove all stock-watermark wording from the new artwork, no Design.com text. Compact emblem at left is a sturdy mint U integrated with a minimal sports-car roof. Complete name UNLIMITED MOTORS at right in two strong lines. Top uses charcoal words; bottom uses solid white words with mint accents."
+  },
+  "additionalGenerations": [
+    {
+      "role": "master-and-surfaces",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-67fdfa69-cc86-40ee-9169-fa34b12e39ca",
+      "modelVersion": null,
+      "prompt": "Create one production logo asset sheet on a genuinely transparent background, not a mockup. TWO complete horizontal logo lockups stacked vertically with a very large EMPTY TRANSPARENT gap between them. No labels and no background panels. Both rows use exactly the same spelling, proportions, layout, and motif. Each row: a separate bold compact emblem on the far left, then a generous transparent horizontal gap, then the complete business name at right. The left emblem must remain unmistakable at 32 px. The complete name must be clean and legible at a small website-header size; use strong simple shapes and avoid tiny taglines. TOP ROW is the dark-ink version for WHITE backgrounds. BOTTOM ROW is the light-ink version for CHARCOAL or RED backgrounds: replace every dark text fill with solid white, preserving accent colours only where they remain readable. Use a thin contrasting keyline around coloured details so they remain visible on all backgrounds. Flat graphic design, crisp edges, no gradients, no shading, no texture, no shadow, no photography, no microtype. Real transparent alpha everywhere outside the actual shapes. Wide landscape canvas with equal row spacing and generous outer transparent margins. This is an independent dealer preview; no approval claims. Faithfully redraw the dealer identity UNLIMITED MOTORS from the provided public logo. Preserve its charcoal and mint-teal palette, bold geometric automotive lettering, and sports-car silhouette motif. Make a fresh clean simplified silhouette, not a traced raster; remove all stock-watermark wording from the new artwork, no Design.com text. Compact emblem at left is a sturdy mint U integrated with a minimal sports-car roof. Complete name UNLIMITED MOTORS at right in two strong lines. Top uses charcoal words; bottom uses solid white words with mint accents.",
+      "sourceSheetSha256": "e883ca29db161d7867814a23b13bef10234c4db667aadfd227869aecce49c0b3",
+      "sourceSheetDimensions": {
+        "width": 1983,
+        "height": 793
+      }
+    },
+    {
+      "role": "compact-mark-both-surfaces",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-7f100a53-4e17-402f-8a73-d30b75e0cab3",
+      "modelVersion": null,
+      "reference": "branding/generated-master.png",
+      "prompt": "Create ONLY a compact square companion emblem for the supplied UNLIMITED MOTORS logo, on real transparent alpha. A very bold uppercase U in the exact muted mint-teal palette, with a single simple sports-car roof arc integrated immediately above the U. Do not draw a whole car, wheels, windscreen, headlights, or any words. The U must occupy almost all of a square silhouette, remain immediately recognizable at 32 pixels, and retain broad open internal spacing. Flat solid fills, thick charcoal outline and a crisp thin white outer keyline around the entire actual emblem so it remains clear on white, dark charcoal, or red backgrounds. No square background, no shield, no badge frame, no circles, no gradients, no texture, no shadows, no bevel. One emblem only, not a sheet. Clean geometric professional artwork, no manufacturer marks. Generous transparent padding around the emblem."
+    },
+    {
+      "role": "contrast-corrected-onDark-onAccent",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-1e9cc187-74dc-4380-9a25-e5c5c8fa1077",
+      "modelVersion": null,
+      "prompt": "Create a clean transparent PNG dark-surface variant of the supplied UNLIMITED MOTORS redraw, preserving exact name, bold geometric two-line wordmark, U and generic sports-car motif, and same horizontal arrangement with generous separation between left emblem and words. All principal wordmark and emblem fills must become solid warm white. The car is a simplified WHITE silhouette, with its few internal roof/window/tyre cuts TRANSPARENT, not a large opaque charcoal body. U also solid white. Retain muted mint-teal only in a short small roof accent, less than five percent of the ink. More than ninety percent of all visible ink must be white. A thin charcoal keyline around actual shapes is acceptable, no thick dark inset masses. This variant must read clearly on charcoal #111113 and red #c40101. No background, no labels, no extra rows, no shadows, no glow, no gradients, no texture. Clean precise antialiased alpha edges. One complete logo only.",
+      "referenceSha256": "4bae61cb4320b613965736d72364cd27b514f29edd63b4f289739d46f8f1f1a7"
+    },
+    {
+      "role": "contrast-corrected-mark-onLight-and-favicon",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-722256a2-5292-4908-8d6b-7f24cd300c15",
+      "modelVersion": null,
+      "prompt": "Refine this compact U-and-car-roof emblem for use on WHITE backgrounds. Keep the same sturdy square U silhouette and single roof arc, but make the U body solid very dark charcoal, not mint. Mint appears only as a narrow roof inset, less than five percent of all ink. Remove all white outlines, white keylines, white fills and pale glow. Transparent counters and genuinely transparent background. At least ninety percent of the actual emblem ink is dark charcoal so it has strong contrast on white. Thick simple forms, clear at 32 pixels. No full car, no wheels, no words, no gradients, no shadows, no texture, no square backdrop. One isolated emblem with generous outer transparent padding. Same companion identity for UNLIMITED MOTORS.",
+      "referenceSha256": "6102a8955fd953cb97a9a52c13778af280ee93d7e0c9d82d638aa97686d01f0a"
+    }
+  ],
+  "derivations": [
+    {
+      "role": "master-and-onLight",
+      "method": "lossless-separated-top-row-crop",
+      "parentGeneration": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-67fdfa69-cc86-40ee-9169-fa34b12e39ca",
+        "modelVersion": null
+      },
+      "parentSha256": "e883ca29db161d7867814a23b13bef10234c4db667aadfd227869aecce49c0b3",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1983,
+        "height": 403
+      }
+    },
+    {
+      "role": "onDark-and-onAccent",
+      "method": "lossless-separated-bottom-row-crop",
+      "parentGeneration": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-67fdfa69-cc86-40ee-9169-fa34b12e39ca",
+        "modelVersion": null
+      },
+      "parentSha256": "e883ca29db161d7867814a23b13bef10234c4db667aadfd227869aecce49c0b3",
+      "crop": {
+        "left": 0,
+        "top": 403,
+        "width": 1983,
+        "height": 390
+      }
+    },
+    {
+      "role": "compact-both-surfaces",
+      "method": "separate-actual-imagegen-compact-emblem",
+      "parentReference": "branding/generated-master.png",
+      "parentSha256": "4bae61cb4320b613965736d72364cd27b514f29edd63b4f289739d46f8f1f1a7",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-7f100a53-4e17-402f-8a73-d30b75e0cab3",
+        "modelVersion": null
+      }
+    }
+  ],
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T20:42:24.216931Z",
+    "master": {
+      "path": "branding/generated-master.png",
+      "sha256": "4bae61cb4320b613965736d72364cd27b514f29edd63b4f289739d46f8f1f1a7",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-67fdfa69-cc86-40ee-9169-fa34b12e39ca",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "6d9edb306662936a0bd3eee14d579eefe8189766849eb3ba5b0171835743001d",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-722256a2-5292-4908-8d6b-7f24cd300c15",
+        "modelVersion": null
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-on-dark.png",
+      "sha256": "6102a8955fd953cb97a9a52c13778af280ee93d7e0c9d82d638aa97686d01f0a",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-7f100a53-4e17-402f-8a73-d30b75e0cab3",
+        "modelVersion": null
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-master.png",
+        "sha256": "4bae61cb4320b613965736d72364cd27b514f29edd63b4f289739d46f8f1f1a7",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-67fdfa69-cc86-40ee-9169-fa34b12e39ca",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "ebcc032060af39290c61a1ca5ce05e3ae794a86e86d6ded44f0b87e4ae49ea94",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-1e9cc187-74dc-4380-9a25-e5c5c8fa1077",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "ebcc032060af39290c61a1ca5ce05e3ae794a86e86d6ded44f0b87e4ae49ea94",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-1e9cc187-74dc-4380-9a25-e5c5c8fa1077",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": {
+        "onLight": [
+          "#ffffff"
+        ],
+        "onDark": [
+          "#111113",
+          "#101820"
+        ],
+        "onAccent": [
+          "#09090b",
+          "#17191c",
+          "#c40101"
+        ]
+      },
+      "wordmarkWidths": [
+        120,
+        180
+      ],
+      "markWidths": [
+        32,
+        64
+      ],
+      "method": "Exact existing cropTransparentPadding exports from real generated RGBA inputs, composited with actual alpha at header and compact icon sizes. No template palette or composition changes.",
+      "reviewedAt": "2026-10-19T20:42:24.216931Z",
+      "review": "Visually reviewed exact pipeline exports at 120 and 180 pixel wordmark widths and 32 and 64 pixel compact sizes on all six unchanged template background colours. Actual alpha composition, spelling, crop and compact recognition checked. Affected artwork was regenerated to improve ink contrast; no shared threshold or template was changed."
+    }
+  },
+  "contrastCorrections": [
+    {
+      "reason": "The existing pipeline pixel check found less than 70% readable ink on one or more required surfaces; actual artwork regenerated, thresholds and template backgrounds unchanged.",
+      "supersededInputs": {
+        "reviewedAt": null,
+        "master": {
+          "path": "branding/generated-master.png",
+          "sha256": "4bae61cb4320b613965736d72364cd27b514f29edd63b4f289739d46f8f1f1a7",
+          "generation": {
+            "tool": "image_gen.imagegen",
+            "generationId": "exec-67fdfa69-cc86-40ee-9169-fa34b12e39ca",
+            "modelVersion": null
+          }
+        },
+        "mark": {
+          "path": "branding/generated-mark.png",
+          "sha256": "6102a8955fd953cb97a9a52c13778af280ee93d7e0c9d82d638aa97686d01f0a",
+          "generation": {
+            "tool": "image_gen.imagegen",
+            "generationId": "exec-7f100a53-4e17-402f-8a73-d30b75e0cab3",
+            "modelVersion": null
+          }
+        },
+        "markOnDark": {
+          "path": "branding/generated-mark.png",
+          "sha256": "6102a8955fd953cb97a9a52c13778af280ee93d7e0c9d82d638aa97686d01f0a",
+          "generation": {
+            "tool": "image_gen.imagegen",
+            "generationId": "exec-7f100a53-4e17-402f-8a73-d30b75e0cab3",
+            "modelVersion": null
+          }
+        },
+        "surfaces": {
+          "onLight": {
+            "path": "branding/generated-master.png",
+            "sha256": "4bae61cb4320b613965736d72364cd27b514f29edd63b4f289739d46f8f1f1a7",
+            "generation": {
+              "tool": "image_gen.imagegen",
+              "generationId": "exec-67fdfa69-cc86-40ee-9169-fa34b12e39ca",
+              "modelVersion": null
+            }
+          },
+          "onDark": {
+            "path": "branding/generated-on-dark.png",
+            "sha256": "cae5ff1ff0789ddf7c18ebb5a3cf912e264b4031ca71b94e266031574fc0a5b2",
+            "generation": {
+              "tool": "image_gen.imagegen",
+              "generationId": "exec-67fdfa69-cc86-40ee-9169-fa34b12e39ca",
+              "modelVersion": null
+            }
+          },
+          "onAccent": {
+            "path": "branding/generated-on-dark.png",
+            "sha256": "cae5ff1ff0789ddf7c18ebb5a3cf912e264b4031ca71b94e266031574fc0a5b2",
+            "generation": {
+              "tool": "image_gen.imagegen",
+              "generationId": "exec-67fdfa69-cc86-40ee-9169-fa34b12e39ca",
+              "modelVersion": null
+            }
+          }
+        },
+        "surfaceReview": {
+          "reviewed": false,
+          "backgrounds": {
+            "onLight": [
+              "#ffffff"
+            ],
+            "onDark": [
+              "#111113",
+              "#101820"
+            ],
+            "onAccent": [
+              "#09090b",
+              "#17191c",
+              "#c40101"
+            ]
+          },
+          "wordmarkWidths": [
+            120,
+            180
+          ],
+          "markWidths": [
+            32,
+            64
+          ],
+          "method": "Exact existing cropTransparentPadding exports from real generated RGBA inputs, composited with actual alpha at header and compact icon sizes. No template palette or composition changes."
+        }
+      },
+      "recordedAt": "2026-10-19T20:41:16.014Z"
+    }
+  ]
+}

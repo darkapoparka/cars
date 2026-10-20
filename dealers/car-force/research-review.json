@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "dealer": "car-force",
+  "dealerId": "gb-luton-car-force",
+  "reviewedAt": "2026-10-19",
+  "providerWrites": 0,
+  "dealerContactPerformed": false,
+  "primarySource": {
+    "url": "https://showroom.ebaymotorspro.co.uk/CAR-FORCE-LTD?menu=1",
+    "httpStatus": 200,
+    "htmlSha256": "18bb8bb8469a3bb660e6819cc92ce6227aeec808649e6b3e6b64bed00810787c",
+    "observedAt": "2026-10-19"
+  },
+  "identity": {
+    "retainedLeadName": "Car Force Ltd",
+    "currentSellerDisplayName": "CAR FORCE LTD",
+    "existingRegistryOrClientMatch": false
+  },
+  "publicBusinessPhone": {
+    "source": "current dealer marketplace profile",
+    "ownership": "Public business contact; it may be a marketplace forwarding number."
+  },
+  "factsOmitted": [],
+  "limitations": [
+    "The retained residential/administrative address was not confirmed as a customer viewing forecourt and is omitted; the current viewing location remains unresolved."
+  ],
+  "inventory": {
+    "kind": "dated-listing-snapshot",
+    "retainedListings": 3,
+    "photos": 3,
+    "availabilityConfirmedWithDealer": false,
+    "pricesOmitted": true,
+    "rawMarketplaceHtmlRetainedInPublicPack": false
+  },
+  "researchMethod": "Opened the exact primary seller catalogue; used its current Used cars/vehicle records and excluded generic Featured advertisements. Checked matched directories and bounded exact business name plus locality searches for an official site or usable logo."
+}

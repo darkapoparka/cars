@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 1,
+  "dealer": "resi-auto-sales",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uk.json",
+    "sha256": "6cd8d365586f9a5d5131fe4b1d50baede7de91ab384a135017c25367298b07c4"
+  },
+  "publicSources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/Resi-auto-sales-ltd",
+      "observedAt": "2026-10-19T17:36:50.498940Z",
+      "supports": [
+        "public-business-identity",
+        "public-business-contact",
+        "advertised-stock"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "publicObservations": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/Resi-auto-sales-ltd",
+      "observedAt": "2026-10-19T17:36:50.498940Z",
+      "httpStatus": 200,
+      "sha256": "c3331ec1ad840ae985929dc3a403c4def756ce5b86459ad207ccf6d2263837ab",
+      "byteLength": 37189,
+      "retention": "Only reviewed public business fields, hashes, listing identities and compressed photographs are committed; raw HTML remains outside the public pack."
+    }
+  ],
+  "stock": [
+    {
+      "sourceUrl": "https://www.ebay.co.uk/itm/960080868274",
+      "photoUrl": "https://i.ebayimg.com/images/g/juAAAeSwK~Vq1AOJ/s-l1600.jpg",
+      "observedAt": "2026-10-19T17:53:31.456887Z",
+      "listingSha256": "e97f3d0c752f1f54eac2cf783f7e205053db3350952a12d21ce4e58470a3992b",
+      "descriptionSha256": "e6618e7faec9f16b96a379639644acc4f1ee282197f269a82eb5d965b3943bb5",
+      "sourcePhotoSha256": "a8e700a3265438dde6995c0e6309320461cc3220d8187b949f640ea5e5449869",
+      "sourcePhotoDimensions": [
+        1500,
+        1125
+      ],
+      "photoSha256": "5e189e86bc68cd8f5eba762cc89ed9277aebb44e6859095869352171254afe26",
+      "photoDimensions": [
+        1100,
+        825
+      ],
+      "photoBytes": 188147,
+      "photoObservedAt": "2026-10-19T18:01:43.261366Z",
+      "recordId": "public-listing-1",
+      "title": "2017 Nissan Juke 1.6 Tekna Xtronic",
+      "retainedPhoto": "dealer-stock/public-1.jpg",
+      "publicPhotoReviewed": true
+    },
+    {
+      "sourceUrl": "https://www.ebay.co.uk/itm/960072306263",
+      "photoUrl": "https://i.ebayimg.com/images/g/BzUAAeSwJzhq0V9t/s-l1600.jpg",
+      "observedAt": "2026-10-19T17:53:31.538955Z",
+      "listingSha256": "8cf4e4bad1b3204de724a4e0b77ab97939e40ba590f015d4e3a4aae4b6ef7ae4",
+      "descriptionSha256": "dee50c20b9e107a43f9328bb280db2d110479cac898cb0942a4d81c45c4629fa",
+      "sourcePhotoSha256": "6e7925d4a7763211ce877e695df68830dc8ec0f5dad51c587686c668527c0999",
+      "sourcePhotoDimensions": [
+        1500,
+        1125
+      ],
+      "photoSha256": "774a18b9e57b34939e1898fbac7dd1668507a10c4e5186de2580d82da7e06520",
+      "photoDimensions": [
+        1100,
+        825
+      ],
+      "photoBytes": 194036,
+      "photoObservedAt": "2026-10-19T18:01:43.252472Z",
+      "recordId": "public-listing-2",
+      "title": "2011 Fiat 500 1.2 Lounge",
+      "retainedPhoto": "dealer-stock/public-2.jpg",
+      "publicPhotoReviewed": true
+    },
+    {
+      "sourceUrl": "https://www.ebay.co.uk/itm/960068138395",
+      "photoUrl": "https://i.ebayimg.com/images/g/uhoAAeSwQLRq0A9M/s-l1600.jpg",
+      "observedAt": "2026-10-19T17:53:31.794976Z",
+      "listingSha256": "ccfb5b1688665cef0ec27d8e64178d2f7c3197000ef5c1e65820fa0aeab42954",
+      "descriptionSha256": "da39a0b81daa478a5a46a18291c7b0eb35f549e50db658c67762b8b6014809db",
+      "sourcePhotoSha256": "b8d5a4537ee7e99c2f257980aebc3e0e99ac32d451fae6b99b998116f1041cb4",
+      "sourcePhotoDimensions": [
+        1500,
+        1125
+      ],
+      "photoSha256": "9d0c22fb1f69d0f2345e0bcb3352dc9e6c558515090a405f9dc9a3bacf7ee986",
+      "photoDimensions": [
+        1280,
+        960
+      ],
+      "photoBytes": 202067,
+      "photoObservedAt": "2026-10-19T18:01:43.034842Z",
+      "recordId": "public-listing-3",
+      "title": "2012 Land Rover Range Rover Evoque 2.2 SD4 Prestige Auto",
+      "retainedPhoto": "dealer-stock/public-3.jpg",
+      "publicPhotoReviewed": true
+    }
+  ],
+  "review": {
+    "reviewedAt": "2026-10-19T18:24:26.797743Z",
+    "stockPhotoIdentityChecked": true,
+    "sourceClaimLimits": "Dated public adverts only; availability, repairs, vehicle condition and legal entity details are not independently certified.",
+    "omissions": [
+      "Personal-looking mailbox omitted; no replacement business email invented.",
+      "Exact retained lead business.name preserved for the M1 identity validator; clean public trading name used in artwork."
+    ]
+  }
+}

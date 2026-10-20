@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "dealer": "saad-motors",
+  "generations": [
+    {
+      "role": "master",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-15482b16-3e3d-41cd-80d3-ed386ebe271c",
+      "modelVersion": null,
+      "prompt": "Create one polished independent proposed logo for SAAD MOTORS LTD, a UK used-car dealership. Single horizontal transparent lockup: left compact distinctive SM monogram with a smooth upper S and bold squared M, separate to the right exact words SAAD MOTORS with LTD beneath. Refined bold sans-serif, clean geometry, good letter counters, generous symbol-to-text gap. Flat near-black ink, true transparent alpha background, no gradients, shadows, textures, panels, clipart cars, slogans or badges. Compact mark should work at32px; exact spelling SAAD MOTORS LTD.",
+      "promptRetained": true,
+      "sourceAssetSha256": "86124a56bb351fd0b5cd509b073f6c5071589163452df51231580011a98025e1",
+      "observedAt": "2026-10-19",
+      "originalResponseArtworkRetained": true
+    },
+    {
+      "role": "onDarkAndAccent",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-d668e855-ee79-4e34-9d87-aa36e46ed870",
+      "modelVersion": null,
+      "prompt": "Create a refined dark-surface adaptation of the exact supplied dealer logo. Exact text MUST READ: SAAD MOTORS with LTD below. Keep every name letter exactly, and preserve the supplied monogram/motif and proportions. The typography and dark emblem portions should be filled in SOLID OPAQUE PALE SILVER #d9e2ec inside a DARK CHARCOAL outer contour plus a thin WHITE outer keyline. Preserve copper/orange/purple accents if present inside dark contour. True TRANSPARENT alpha background and transparent letter counters. Make smooth strong solid contours without fringing, grunge, raster distress, speckles or noise. Generous clear gap between compact emblem and wording. No gradients, shadow, glowing effects, rectangle or additional content. It needs clear readable contrast on dark navy and red surfaces. Do not introduce unrelated terms such as motorsports. Exact spelling and business identity are essential.",
+      "promptRetained": true,
+      "sourceAssetSha256": "7400830b3fa5df963fe17ad05d258c5156dcf0f789289904561b695d12c7e232",
+      "observedAt": "2026-10-19",
+      "originalResponseArtworkRetained": true
+    }
+  ],
+  "exportPolicy": "Original generated PNG bytes are retained. Compact pixel-exact extractions, where used, retain their parent generation, hash and rectangle in source.json. Existing dealer-pack logo tooling performs only transparent padding removal and deterministic raster exports. No deterministic recolour is used."
+}

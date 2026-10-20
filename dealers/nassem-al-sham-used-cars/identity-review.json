@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": true,
+  "reviewedAt": "2026-10-20T19:12:41.943Z",
+  "dealer": "nassem-al-sham-used-cars",
+  "dealerId": "ae-sharjah-nassem-al-sham-used-cars",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "method": "Automated exact registry/pack identity, canonical hosting and batch comparison; retained public source fields were structurally checked, not human-approved.",
+  "sources": [
+    {
+      "url": "https://www.dubicars.com/dealers/sharjah-nassem-al-sham-used-cars-2211",
+      "observedAt": "2026-10-19T20:00:20.646591Z"
+    },
+    {
+      "url": "https://www.dubicars.com/2014-toyota-land-cruiser-1033975.html",
+      "observedAt": "2026-10-19T20:00:20.646591Z"
+    },
+    {
+      "url": "https://www.instagram.com/naseemalsham_usedcars/",
+      "observedAt": "2026-10-19T20:00:20.646591Z"
+    },
+    {
+      "url": "https://www.instagram.com/naseemalsham_usedcars/p/DeJs1UuoFzl/",
+      "observedAt": "2026-10-19T20:00:20.646591Z"
+    },
+    {
+      "url": "https://auto.ae/nassemalsham/",
+      "observedAt": "2026-10-19T21:17:50.246357Z"
+    }
+  ],
+  "websiteResearch": {
+    "excludedFromIdentityProof": [
+      {
+        "url": "http://www.nassemalshamusedcars.com/",
+        "observedAt": "2026-10-19T20:00:20.646591Z"
+      },
+      {
+        "url": "https://www.nassemalshamusedcars.com/contact-us/",
+        "observedAt": "2026-10-19T20:00:20.646591Z"
+      }
+    ],
+    "reason": "The imported HTTP website URL is not accepted by the HTTPS-only source contract. Its HTTPS home/contact requests returned503 or timed out during direct research; neither failed request is used to prove business facts or website ownership. Current independently fetched HTTPS marketplace identity sources remain.",
+    "inputErrorResolved": "Explicit reviewed absence/ownership research required"
+  },
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  }
+}

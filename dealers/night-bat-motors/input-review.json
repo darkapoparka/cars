@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-input-review",
+  "dealer": "night-bat-motors",
+  "reviewed": true,
+  "reviewedAt": "2026-10-20T19:18:01.792Z",
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "checks": [
+    "canonical-hosting-and-preserved-fleet-collisions",
+    "assigned-expansion-lead",
+    "public-fact-schema-and-price-omission",
+    "personal-contact-screen",
+    "retained-stock-media",
+    "companion-copy-source-binding",
+    "immutable-template-release-and-native-QA-parent",
+    "reviewed-artwork-provenance-and-regenerated-logo-hashes"
+  ],
+  "sourceArtworkReview": "Retained artwork review is separate provenance; this command does not perform visual, Arabic-expert or dealer approval.",
+  "copyReview": "Automated structure, stock hash, source text and complete EN/BG rows; no new human translation approval is inferred.",
+  "contacts": {
+    "schemaVersion": 1,
+    "kind": "cars-automated-public-contact-screen",
+    "dealer": "night-bat-motors",
+    "method": "heuristic; no claim that unflagged values cannot be personal",
+    "flags": [],
+    "blocking": []
+  },
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-sheffield-night-bat-motors",
+    "position": 85
+  },
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "inputs": [
+    {
+      "path": "FACTS-AND-INVENTORY.json",
+      "sha256": "1ca80c683f209ce6ac4d1f9cfce26e31176f234f72bca576ac326a84b05cc9eb"
+    },
+    {
+      "path": "branding/generated-mark-on-dark.png",
+      "sha256": "c339714ace63ba2ea972332b9092edec9e4e4a3f141f74e8472073512fdf8484"
+    },
+    {
+      "path": "branding/generated-mark.png",
+      "sha256": "952e5e4bee93014edbfd866bfe5b0cbcd4127243819a95528e0b5fbb7c5abc52"
+    },
+    {
+      "path": "branding/generated-master.png",
+      "sha256": "c88ddc3203a5cb7f733d997f92f21c36fb310621655e195d91633ac5ba4083b9"
+    },
+    {
+      "path": "branding/generated-on-dark.png",
+      "sha256": "c740a55632b1f9fe0a58f9c17f9e7c44807dc1c14dca966445d8b13b323d0d76"
+    },
+    {
+      "path": "branding/generated-on-light.png",
+      "sha256": "4a80c91f3d451c42cd67b730d5a4ad700b84558ac0572e0683d2cffef8d5e21f"
+    },
+    {
+      "path": "branding/logo-contract.json",
+      "sha256": "376eae95b33d73b09fab81db377726e75575ce40f24f4847495252e816012101"
+    },
+    {
+      "path": "branding/logo-recipe.json",
+      "sha256": "3f713b5c01f4d95a202e710705a7a08559e6db6fc75701ecfbe2f985404e3a47"
+    },
+    {
+      "path": "branding/source.json",
+      "sha256": "4e78e14c8379e6861ae205ffe25cd6ce8eb57f53470429186e34ece2ea7b944b"
+    },
+    {
+      "path": "business-facts.json",
+      "sha256": "b1971486cef7e373af7d6bb2d75e4c547926bd97f8aef6132541a577e9be4b2a"
+    },
+    {
+      "path": "copy-review.json",
+      "sha256": "b36648ecb80902012b1ca041dbd51f517a3d47c7e09e245005e998e85051ec3c"
+    },
+    {
+      "path": "dealer-stock/public-1.jpg",
+      "sha256": "bd3d6b0937ef49cb9aebb3387c9a28f51ce2b9051deecac99b47c91074f50f09"
+    },
+    {
+      "path": "dealer-stock/public-2.jpg",
+      "sha256": "e0f35f414fc354f70522751d80d963d060dd1d98db9894ef90b53b2d6dea97c7"
+    },
+    {
+      "path": "dealer-stock/public-3.jpg",
+      "sha256": "810ad9dd0c0f55f72c4571412056ee093bff956b46054d138ad4c46fec208345"
+    },
+    {
+      "path": "dealer.json",
+      "sha256": "03b4ccb60c49535f548bf434846cd9b21f9b1fbfa1ccdf6cecd74293020db25f"
+    },
+    {
+      "path": "identity-review.json",
+      "sha256": "ad9a2aac455c5b7589e8493eaa6eafc0f225efc94abe28c7f2c3c1387c1c6a11"
+    },
+    {
+      "path": "locale.json",
+      "sha256": "9e8327d03b67c8a063c4400793c4c1554efc6a8545794e1a5228d489ac73ced6"
+    },
+    {
+      "path": "missing-facts.json",
+      "sha256": "180bdb21fdc6d5d9dc7dcd52dbcb4f9d714a7dd7ca313857c402f0dce0343ac2"
+    },
+    {
+      "path": "qualification.json",
+      "sha256": "ad0e414228784f5b58d9d8799e662bae5042f40544458ba3e62072b83ebdb716"
+    },
+    {
+      "path": "source-evidence.json",
+      "sha256": "1392168eab62607e81a825d880809dd234f3bae906656bc8ee8f3f6b96911687"
+    },
+    {
+      "path": "stock.json",
+      "sha256": "03a565dee76f16833ff6c3c18cbf358f144699e4f11c949a5e5c7b122a18da54"
+    }
+  ],
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "providerWrites": 0
+}

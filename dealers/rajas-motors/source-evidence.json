@@ -1,0 +1,160 @@
+{
+  "schemaVersion": 1,
+  "dealer": "rajas-motors",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uk.json",
+    "sha256": "6cd8d365586f9a5d5131fe4b1d50baede7de91ab384a135017c25367298b07c4"
+  },
+  "publicSources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/Rajasmotors-Ltd",
+      "observedAt": "2026-10-19T20:00:31.529165Z",
+      "supports": [
+        "current-public-business-name",
+        "public-business-contact",
+        "public-premises-or-appointment-information",
+        "current-public-stock-catalogue"
+      ]
+    },
+    {
+      "url": "https://www.ebay.co.uk/itm/860058997168",
+      "observedAt": "2026-10-19T20:03:02.288522Z",
+      "supports": [
+        "selected-current-public-stock",
+        "seller-description-and-vehicle-history-review",
+        "vehicle-photograph"
+      ]
+    },
+    {
+      "url": "https://www.ebay.co.uk/itm/860055663693",
+      "observedAt": "2026-10-19T20:03:02.525349Z",
+      "supports": [
+        "selected-current-public-stock",
+        "seller-description-and-vehicle-history-review",
+        "vehicle-photograph"
+      ]
+    },
+    {
+      "url": "https://www.ebay.co.uk/itm/860041525470",
+      "observedAt": "2026-10-19T20:03:02.742591Z",
+      "supports": [
+        "selected-current-public-stock",
+        "seller-description-and-vehicle-history-review",
+        "vehicle-photograph"
+      ]
+    },
+    {
+      "url": "https://www.cazoo.co.uk/dealers/rajas-motors-ltd-72931/",
+      "observedAt": "2026-10-19T20:03:53.980727Z",
+      "supports": [
+        "bounded-public-logo-research"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "observedAt": "2026-10-19T20:00:31.529165Z",
+  "catalogueObservation": {
+    "sourceUrl": "https://showroom.ebaymotorspro.co.uk/Rajasmotors-Ltd",
+    "observedAt": "2026-10-19T20:00:31.529165Z",
+    "httpStatus": 200,
+    "sha256": "8851470cc9676fe99b80a8dba82aa717453ce4fb4f1f010158addcc222de7885",
+    "bytes": 37457
+  },
+  "stockReview": [
+    {
+      "sourceUrl": "https://www.ebay.co.uk/itm/860058997168",
+      "observedAt": "2026-10-19T20:03:02.288522Z",
+      "httpStatus": 200,
+      "listingSha256": "176fdc4641669fc89bc872829f32a41b7e3517e1468e8e988f26beb067fa182f",
+      "descriptionUrl": "https://itm.ebaydesc.com/itmdesc/860058997168?t=1792352596000&category=18206&seller=rajasmotors786&excSoj=1&ver=1&excTrk=1&lsite=3&ittenable=false&domain=ebay.com&descgauge=1&cspheader=1&oneClk=2&secureDesc=1&lang=en",
+      "descriptionSha256": "743fdb2da2582af61c1e3ce9d78153d204ea07667205237427098d1175866466",
+      "photoUrl": "https://i.ebayimg.com/images/g/hSMAAeSwgOtq1SGR/s-l1600.jpg",
+      "sourcePhotoSha256": "358fc2c50635a4dd647ada98289fcf3f0d94d8cdad3d1afbdf67bcc50acd9ada",
+      "sourcePhotoDimensions": [
+        1500,
+        1125
+      ],
+      "photoSha256": "faca64836ec0297a11928676eee799c11521aab254a2bce0a95fc944e701b739",
+      "photoDimensions": [
+        1280,
+        960
+      ],
+      "photoBytes": 193120,
+      "sourceExifOrientation": null,
+      "sourceId": "public-listing-1",
+      "photoPath": "dealer-stock/public-1.jpg",
+      "historyReview": {
+        "fullDescriptionReviewed": true,
+        "vehicleHistoryPanelReviewed": true,
+        "materialDisclosure": "The seller describes this vehicle as an import from Japan. Mileage is retained in the units advertised by the seller; the odometer conversion and registration documents have not been independently verified."
+      }
+    },
+    {
+      "sourceUrl": "https://www.ebay.co.uk/itm/860055663693",
+      "observedAt": "2026-10-19T20:03:02.525349Z",
+      "httpStatus": 200,
+      "listingSha256": "2227d09b86a5334ccf45e421a0d4f1c9f1c7b4cf4ab7c90be274c550c39c93bc",
+      "descriptionUrl": "https://itm.ebaydesc.com/itmdesc/860055663693?t=1792276274000&category=9837&seller=rajasmotors786&excSoj=1&ver=1&excTrk=1&lsite=3&ittenable=false&domain=ebay.com&descgauge=1&cspheader=1&oneClk=2&secureDesc=1&lang=en",
+      "descriptionSha256": "3960cbcfc30d3f3929e9473d649f2edf1d127a78d248ff1823a96f731152ba68",
+      "photoUrl": "https://i.ebayimg.com/images/g/uQsAAeSwBoFq0~dv/s-l1600.jpg",
+      "sourcePhotoSha256": "fe0dec1979eec24a9c149c641a821a651821dd1a726b51e62deeaf064a077597",
+      "sourcePhotoDimensions": [
+        1500,
+        751
+      ],
+      "photoSha256": "d60eb63fae0d61e73947abf4da841e868b0aae0f0a27e092060fc667b5127b20",
+      "photoDimensions": [
+        1280,
+        641
+      ],
+      "photoBytes": 132989,
+      "sourceExifOrientation": null,
+      "sourceId": "public-listing-2",
+      "photoPath": "dealer-stock/public-2.jpg",
+      "historyReview": {
+        "fullDescriptionReviewed": true,
+        "vehicleHistoryPanelReviewed": true,
+        "materialDisclosure": "The seller describes this vehicle as an import from Japan. Mileage is retained in the units advertised by the seller; the odometer conversion and registration documents have not been independently verified."
+      }
+    },
+    {
+      "sourceUrl": "https://www.ebay.co.uk/itm/860041525470",
+      "observedAt": "2026-10-19T20:03:02.742591Z",
+      "httpStatus": 200,
+      "listingSha256": "82acc264cc55264109f29b23e70b00be5d30a945559a0ab44006ae53a0a756b6",
+      "descriptionUrl": "https://itm.ebaydesc.com/itmdesc/860041525470?t=1791917475000&category=18174&seller=rajasmotors786&excSoj=1&ver=1&excTrk=1&lsite=3&ittenable=false&domain=ebay.com&descgauge=1&cspheader=1&oneClk=2&secureDesc=1&lang=en",
+      "descriptionSha256": "d7ec8d26d0e2b23b103068b5b7d3fca06ace23ac16c40655089e16874dbebc5f",
+      "photoUrl": "https://i.ebayimg.com/images/g/c4UAAeSwfmhqzn3i/s-l1600.jpg",
+      "sourcePhotoSha256": "00ea0cbb40691db7fb70e2d3f1fb83e101bec65e68fa47aa562e07e8ac2f3458",
+      "sourcePhotoDimensions": [
+        1500,
+        943
+      ],
+      "photoSha256": "bc31ffc8757ae11c2a8832b9fdab2028f11314bb61c47fcf6f3862c490fc1553",
+      "photoDimensions": [
+        1280,
+        805
+      ],
+      "photoBytes": 194809,
+      "sourceExifOrientation": null,
+      "sourceId": "public-listing-3",
+      "photoPath": "dealer-stock/public-3.jpg",
+      "historyReview": {
+        "fullDescriptionReviewed": true,
+        "vehicleHistoryPanelReviewed": true,
+        "materialDisclosure": "The seller describes this vehicle as an import from Japan. Mileage is retained in the units advertised by the seller; the odometer conversion and registration documents have not been independently verified."
+      }
+    }
+  ],
+  "researchNotes": [
+    "All three selected adverts describe Japanese imports; import status and mileage-unit verification limits retained."
+  ],
+  "privacyReview": {
+    "publicBusinessFactsOnly": true,
+    "personalNamesOmitted": true,
+    "personalLookingContactsOmitted": false,
+    "pricesOmitted": true,
+    "rawMarketplaceHtmlNotIncluded": true,
+    "dealerContactPerformed": false
+  }
+}

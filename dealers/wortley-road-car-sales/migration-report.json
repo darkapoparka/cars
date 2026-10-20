@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "wortley-road-car-sales",
+  "previousSlug": "wortley-road-car-sales",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:26:56.866Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-leeds-wortley-road-car-sales",
+    "position": 56
+  },
+  "before": {
+    "files": 42,
+    "bytes": 4672747
+  },
+  "afterBeforeReview": {
+    "files": 26,
+    "bytes": 2199205
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 121054,
+      "sha256": "e070bb9e2ad8b0a958610495c00cd6a413ed6c9edb937e1d6d9bd2f57b6d9c7f"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 273580,
+      "sha256": "dbf0d5e0931ece7c4ee549836180e88aeb5180ad6b908c13f07d04aac20cb796"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 121054,
+      "sha256": "e070bb9e2ad8b0a958610495c00cd6a413ed6c9edb937e1d6d9bd2f57b6d9c7f"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 105666,
+      "sha256": "478ae71a6f99fddfda37260adce3f4d72ff64ef2002c003ef6e0bcb361b004f2"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 217881,
+      "sha256": "5e3729ebc70c248b647b6dda60f5407c79f8d342bfabcd625b40f777e51e2877"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 217881,
+      "sha256": "5e3729ebc70c248b647b6dda60f5407c79f8d342bfabcd625b40f777e51e2877"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 105666,
+      "sha256": "478ae71a6f99fddfda37260adce3f4d72ff64ef2002c003ef6e0bcb361b004f2"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 121054,
+      "sha256": "e070bb9e2ad8b0a958610495c00cd6a413ed6c9edb937e1d6d9bd2f57b6d9c7f"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 10794,
+      "sha256": "9a26219d7ace473adf4fc9219b5b6eb2a00dd7740a367417c18504e51ac27e44"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 217881,
+      "sha256": "5e3729ebc70c248b647b6dda60f5407c79f8d342bfabcd625b40f777e51e2877"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 145454,
+      "sha256": "c576f508316036af5b94a896fc2f3328f1b88c5981bc35d6b525daa7514042b3"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 217881,
+      "sha256": "5e3729ebc70c248b647b6dda60f5407c79f8d342bfabcd625b40f777e51e2877"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 145454,
+      "sha256": "c576f508316036af5b94a896fc2f3328f1b88c5981bc35d6b525daa7514042b3"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 105666,
+      "sha256": "478ae71a6f99fddfda37260adce3f4d72ff64ef2002c003ef6e0bcb361b004f2"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 76684,
+      "sha256": "746a48af586b9321b8e8d40de164f4a56a6b52ac5bd9ff82882d6ef0014bb63d"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 186340,
+      "sha256": "17fc2611c1ecdf80f9c701922fae3190532f8d4f055f15596f0d875ade79deab"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 87388,
+      "sha256": "d53dfbf7522bd77b266689d471bb51964b7145d087b219980a85e434d67e743e"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 13,
+    "bytes": 2165728,
+    "inventorySha256": "f9b4bc165025c1324b3faa61eae5f69be28c4c8dae9d7f9733c5cdf2a20cbe89",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "wortley-road-car-sales",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 28,
+    "report": "dealers/wortley-road-car-sales/input-review.json"
+  },
+  "after": {
+    "files": 28,
+    "bytes": 2208530
+  }
+}

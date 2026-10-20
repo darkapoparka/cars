@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "dealer": "urbanshadow-motors",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uk.json",
+    "sha256": "6cd8d365586f9a5d5131fe4b1d50baede7de91ab384a135017c25367298b07c4"
+  },
+  "publicSources": [
+    {
+      "url": "https://www.autotrader.co.uk/dealers/middlesex/wembley/urbanshadow-motors-limited-10049178",
+      "observedAt": "2026-10-19T17:36:50.084230Z",
+      "supports": [
+        "public-business-identity",
+        "public-business-contact",
+        "advertised-stock"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "publicObservations": [
+    {
+      "url": "https://www.autotrader.co.uk/dealers/middlesex/wembley/urbanshadow-motors-limited-10049178",
+      "observedAt": "2026-10-19T17:36:50.084230Z",
+      "httpStatus": 200,
+      "sha256": "401473f8de4a7b15029ff2a100232b5881c22e0e2efc9fdc72fba1b519a84295",
+      "byteLength": 189729,
+      "retention": "Only reviewed public business fields, hashes, listing identities and compressed photographs are committed; raw HTML remains outside the public pack."
+    }
+  ],
+  "stock": [
+    {
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202606273685467",
+      "photoUrl": "https://m.atcdn.co.uk/a/media/w600/69e1456179a14270a2a3df42f6a9d29e.jpg",
+      "observedAt": "2026-10-19T17:53:14.343155Z",
+      "listingSha256": "ce128494cec2cfd939f02aeac422f3de194652c65e1c3f21baadd980b265ce44",
+      "sourcePhotoSha256": "4bec9fa4889474f2c5d71910969236ccdcc1bc6d330db0d4dc18e7c4f6301fb0",
+      "sourcePhotoDimensions": [
+        600,
+        450
+      ],
+      "photoSha256": "dc7a445cdf3e173867ed932f767be50e5427dd667e2478f7931e73e278034fab",
+      "photoDimensions": [
+        600,
+        450
+      ],
+      "photoBytes": 43956,
+      "recordId": "public-listing-1",
+      "title": "2016 Mercedes-Benz G63 V8 BiTurbo AMG",
+      "retainedPhoto": "dealer-stock/public-1.jpg",
+      "publicPhotoReviewed": true
+    },
+    {
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202609166094508",
+      "photoUrl": "https://m.atcdn.co.uk/a/media/w600/d0c71310eb1e4654bfa2caf5831d5fb6.jpg",
+      "observedAt": "2026-10-19T17:53:14.763275Z",
+      "listingSha256": "1375664f8fd76b30a57ccf591afbd07f693d53351358ebc682a2af8a350d52bd",
+      "sourcePhotoSha256": "beeff3199013afd8eb409389b14054eaadd641596684f369f60823315db95fa0",
+      "sourcePhotoDimensions": [
+        600,
+        451
+      ],
+      "photoSha256": "860a5a6168f086bd80397c20a71067a15810593b977654a4fc42f209fb694d7b",
+      "photoDimensions": [
+        600,
+        451
+      ],
+      "photoBytes": 45419,
+      "recordId": "public-listing-2",
+      "title": "2017 Audi SQ5 3.0 TFSI V6 Tiptronic quattro",
+      "retainedPhoto": "dealer-stock/public-2.jpg",
+      "publicPhotoReviewed": true
+    },
+    {
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202604221780235",
+      "photoUrl": "https://m.atcdn.co.uk/a/media/w600/a5c3d7c6ea8e4e759d001edccc5261f5.jpg",
+      "observedAt": "2026-10-19T17:53:14.769701Z",
+      "listingSha256": "f0d88e055e8dbc6e4d8815d67d4e48f1ecc14a5cf40b2ffae17c946b148b3180",
+      "sourcePhotoSha256": "7874554709e28ed7b816f319d2ffa850a3192fc5110c1951f78c04ead7ed92e2",
+      "sourcePhotoDimensions": [
+        600,
+        450
+      ],
+      "photoSha256": "f94a7556b898899e71949c47fd0d30ee46a1e24367f9888975f777069188c56b",
+      "photoDimensions": [
+        600,
+        450
+      ],
+      "photoBytes": 37260,
+      "recordId": "public-listing-3",
+      "title": "2015 Porsche Macan 3.6T V6 Turbo PDK",
+      "retainedPhoto": "dealer-stock/public-3.jpg",
+      "publicPhotoReviewed": true
+    }
+  ],
+  "review": {
+    "reviewedAt": "2026-10-19T18:24:27.002033Z",
+    "stockPhotoIdentityChecked": true,
+    "sourceClaimLimits": "Dated public adverts only; availability, repairs, vehicle condition and legal entity details are not independently certified.",
+    "omissions": [
+      "Fresh AutoTrader address is 2A, Bridgewater Road; retained lead used Unit A2. Fresh primary spelling is retained without merging the two forms."
+    ]
+  }
+}

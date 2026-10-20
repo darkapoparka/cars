@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "danny-trading",
+  "previousSlug": "danny-trading",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:17:18.309Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-leicester-danny-trading",
+    "position": 58
+  },
+  "before": {
+    "files": 39,
+    "bytes": 3766309
+  },
+  "afterBeforeReview": {
+    "files": 23,
+    "bytes": 1948804
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 120566,
+      "sha256": "85aeb91444a889706806b2e27968a8a9281c2ff6ed2e0c515917213adf24ed86"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 120566,
+      "sha256": "85aeb91444a889706806b2e27968a8a9281c2ff6ed2e0c515917213adf24ed86"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 120566,
+      "sha256": "85aeb91444a889706806b2e27968a8a9281c2ff6ed2e0c515917213adf24ed86"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 69416,
+      "sha256": "1180652af39979d219d404b4fb95ed9370f2459c85ce2c95783e494677df02b8"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 168909,
+      "sha256": "4ea4b43b02c3b20632e5c20615cae90f14965439403b63c349787fcb6d53ab92"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 168909,
+      "sha256": "4ea4b43b02c3b20632e5c20615cae90f14965439403b63c349787fcb6d53ab92"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 69416,
+      "sha256": "1180652af39979d219d404b4fb95ed9370f2459c85ce2c95783e494677df02b8"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 120566,
+      "sha256": "85aeb91444a889706806b2e27968a8a9281c2ff6ed2e0c515917213adf24ed86"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 9589,
+      "sha256": "cf1f7b8c881990a9d594f1df399772f9e22c209507fc2c2bc952ee68715350a5"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 168909,
+      "sha256": "4ea4b43b02c3b20632e5c20615cae90f14965439403b63c349787fcb6d53ab92"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 115890,
+      "sha256": "60eea59af287c32cb065ecab9437d7dcacd872a8d70e4faf29fb2a1091099812"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 168909,
+      "sha256": "4ea4b43b02c3b20632e5c20615cae90f14965439403b63c349787fcb6d53ab92"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 115890,
+      "sha256": "60eea59af287c32cb065ecab9437d7dcacd872a8d70e4faf29fb2a1091099812"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 69416,
+      "sha256": "1180652af39979d219d404b4fb95ed9370f2459c85ce2c95783e494677df02b8"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 50082,
+      "sha256": "926e23f334952391c006b639971c5b8f39d9635df34ff46d0f40c4ef29b91931"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 81850,
+      "sha256": "c5fc79e7e36bf46a204215a648fa653e98e658c7363c9003402163f8fe82b40d"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 81850,
+      "sha256": "c5fc79e7e36bf46a204215a648fa653e98e658c7363c9003402163f8fe82b40d"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 10,
+    "bytes": 1916414,
+    "inventorySha256": "0dffaede564a227f19b394f448a4a38b90e876a8b637735701ddb6bd8c37a79b",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "danny-trading",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 25,
+    "report": "dealers/danny-trading/input-review.json"
+  },
+  "after": {
+    "files": 25,
+    "bytes": 1957631
+  }
+}

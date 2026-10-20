@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "al-luluah-al-baithaa-cars",
+  "previousSlug": "al-luluah-al-baithaa-cars",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:20:30.208Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 4,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-sharjah-al-luluah-al-baithaa-cars",
+    "position": 308
+  },
+  "before": {
+    "files": 37,
+    "bytes": 6020615
+  },
+  "afterBeforeReview": {
+    "files": 21,
+    "bytes": 1895483
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 153460,
+      "sha256": "cc396560d02a01fab229b80cb36ab8d01d9d769eebae23537309e3f3e456915e"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 138426,
+      "sha256": "a14522908e1f355ceae0255107457df112deabb3c64eafb70c29ea05dd979962"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 153460,
+      "sha256": "cc396560d02a01fab229b80cb36ab8d01d9d769eebae23537309e3f3e456915e"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 175006,
+      "sha256": "104238e294ca0256d78e5aa4b478da1f3979e857b5f71c32b1a0fa95a07d5f69"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 486202,
+      "sha256": "ef70a50ea2b5a9ea336cd8a5c7f85796800c65a33d62a1d815cd4a417d698c61"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 486202,
+      "sha256": "ef70a50ea2b5a9ea336cd8a5c7f85796800c65a33d62a1d815cd4a417d698c61"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 175006,
+      "sha256": "104238e294ca0256d78e5aa4b478da1f3979e857b5f71c32b1a0fa95a07d5f69"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 153460,
+      "sha256": "cc396560d02a01fab229b80cb36ab8d01d9d769eebae23537309e3f3e456915e"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 13129,
+      "sha256": "7533442f51d04e3b7fd2498cbc167cb813047563e5366f918637ce4225a12f20"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 486202,
+      "sha256": "ef70a50ea2b5a9ea336cd8a5c7f85796800c65a33d62a1d815cd4a417d698c61"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 353840,
+      "sha256": "23bffe8fac80793717696c946f7a1908602f10c8d340e1bbe56f04b5596cfc96"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 486202,
+      "sha256": "ef70a50ea2b5a9ea336cd8a5c7f85796800c65a33d62a1d815cd4a417d698c61"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 353840,
+      "sha256": "23bffe8fac80793717696c946f7a1908602f10c8d340e1bbe56f04b5596cfc96"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 175006,
+      "sha256": "104238e294ca0256d78e5aa4b478da1f3979e857b5f71c32b1a0fa95a07d5f69"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 129966,
+      "sha256": "894a336184a7d48e59ed7417b5e1e2a0b7365891518749f1133dd26ae0776807"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 97858,
+      "sha256": "db90a399350ad652d2f0976434609b4738feb02f9d8da5b801cfd15f71dfd922"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 111724,
+      "sha256": "b7babafc6e0fefc0f61a129f460c92c446f40628c9ecc02ca78189d07f07ef89"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 12,
+    "bytes": 1869836,
+    "inventorySha256": "5e23317e48b86d41807d399110ee9d0b6d5c82b87d125d9a19d6bb51b6853eda",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "al-luluah-al-baithaa-cars",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 23,
+    "report": "dealers/al-luluah-al-baithaa-cars/input-review.json"
+  },
+  "after": {
+    "files": 23,
+    "bytes": 1904041
+  }
+}

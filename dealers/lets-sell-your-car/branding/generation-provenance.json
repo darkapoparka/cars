@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "dealer": "lets-sell-your-car",
+  "generations": [
+    {
+      "role": "master",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-e3ad5715-dabe-4816-9d59-79c843ffcbba",
+      "modelVersion": null,
+      "prompt": "Create one expertly crafted independent proposed logo for LET'S SELL YOUR CAR. Single horizontal logo lockup with a compact LC monogram integrated with a minimal forward arrow at left, and the exact words LET'S SELL above YOUR CAR at right. Bold modern sans serif, clear apostrophe, excellent kerning, friendly confident automotive business tone. Flat near-black one-colour ink, genuine transparent background, no panel, shadow, gradients, glow, texture, slogans or clipart cars. Left symbol stands apart with a clear gap and must be legible at32px. Spell exactly LET'S SELL YOUR CAR.",
+      "promptRetained": true,
+      "sourceAssetSha256": "d1ad63d6144cbd4f0740f61daafc3533138180f40e52550d6220f60b94c355b0",
+      "observedAt": "2026-10-19",
+      "originalResponseArtworkRetained": true
+    },
+    {
+      "role": "onDarkAndAccent",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-72dc45fd-87ce-4df9-b726-53b3f9074741",
+      "modelVersion": null,
+      "prompt": "Adapt the exact supplied logo into a refined surface version for dark and red backgrounds. Keep the exact spelling, the original motif, every word, proportions and layout. Give all dark lettering and dark emblem strokes a pure WHITE fill bounded by a strong clean deep near-black #101820 contour, finished with a narrow white outer keyline. Preserve any original red or orange brand accent inside its contour. All white areas must be solid opaque ink protected inside the dark contour. True transparent alpha outside. Keep a GENEROUS TRANSPARENT GAP between compact emblem and wordmark and preserve all internal letter counters. No grunge, no speckles, no distressed raster texture, no holes in solid strokes, no gradients, no drop shadow, no decorative panel, no extra content. Smooth precise restrained digital logo, clean hard edges.",
+      "promptRetained": true,
+      "sourceAssetSha256": "067cd694ef9cac31b75e347dccecaef86161a1d0ca10c6050a2451fb168c1791",
+      "observedAt": "2026-10-19",
+      "originalResponseArtworkRetained": true
+    }
+  ],
+  "exportPolicy": "Original generated PNG bytes are retained. Compact pixel-exact extractions, where used, retain their parent generation, hash and rectangle in source.json. Existing dealer-pack logo tooling performs only transparent padding removal and deterministic raster exports. No deterministic recolour is used."
+}

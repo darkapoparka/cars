@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "dealer": "glasgow-matts-motors",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uk.json",
+    "sha256": "6cd8d365586f9a5d5131fe4b1d50baede7de91ab384a135017c25367298b07c4"
+  },
+  "publicSources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/JMcars?menu=1",
+      "observedAt": "2026-10-19T17:36:00.763760Z",
+      "supports": [
+        "business-name",
+        "public-business-contact",
+        "business-location",
+        "current-listing-snapshot"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "dealerId": "gb-glasgow-matts-motors",
+  "observedAt": "2026-10-19T17:36:00.763760Z",
+  "primaryFetch": {
+    "url": "https://showroom.ebaymotorspro.co.uk/JMcars?menu=1",
+    "status": 200,
+    "observedAt": "2026-10-19T17:36:00.763760Z",
+    "htmlSha256": "7334d6d88dc9ccf4526852476f319b79a882ee95ebc2284b2904005d59e580fa"
+  },
+  "stockPhotos": [
+    {
+      "recordId": "vehicle-1",
+      "catalogueUrl": "https://showroom.ebaymotorspro.co.uk/JMcars?menu=1",
+      "listingUrl": "https://www.ebay.co.uk/itm/920044432380",
+      "observedAt": "2026-10-19T17:36:00.763760Z",
+      "originalImageUrl": "https://i.ebayimg.com/00/s/MTYwMFgxMjAw/z/n98AAeSwlHhq1G7l/$_57.JPG",
+      "resolvedImageUrl": "https://i.ebayimg.com/00/s/MTYwMFgxMjAw/z/n98AAeSwlHhq1G7l/$_57.JPG",
+      "originalSha256": "06f2cf0633fd2ac088f866ccfda485af429842967916e417e1f29ff5d9bcf2a8",
+      "originalDimensions": [
+        1200,
+        1600
+      ],
+      "retainedPath": "dealer-stock/vehicle-1.jpg",
+      "retainedSha256": "dbb226fda432f1847519a0551f758661ec2e25a60a7cd516f4a51d189a2ced22",
+      "retainedDimensions": [
+        960,
+        1280
+      ],
+      "retainedBytes": 188433,
+      "processing": "EXIF orientation; resize only if over 1280 pixels; JPEG compression; metadata omitted. No content alterations."
+    },
+    {
+      "recordId": "vehicle-2",
+      "catalogueUrl": "https://showroom.ebaymotorspro.co.uk/JMcars?menu=1",
+      "listingUrl": "https://www.ebay.co.uk/itm/920017379789",
+      "observedAt": "2026-10-19T17:36:00.763760Z",
+      "originalImageUrl": "https://i.ebayimg.com/00/s/MTIwMFgxNjAw/z/Xo4AAeSwn65q1b95/$_57.JPG",
+      "resolvedImageUrl": "https://i.ebayimg.com/00/s/MTIwMFgxNjAw/z/Xo4AAeSwn65q1b95/$_57.JPG",
+      "originalSha256": "43f8711eba877ec6e82537fbd4529abf90d61d5c3178f8e5989f4be51b664152",
+      "originalDimensions": [
+        1600,
+        1200
+      ],
+      "retainedPath": "dealer-stock/vehicle-2.jpg",
+      "retainedSha256": "1bc47dbd655b9c36114c9868abb5d33789b95c374bba5b02075f5ec53619f157",
+      "retainedDimensions": [
+        1280,
+        960
+      ],
+      "retainedBytes": 178066,
+      "processing": "EXIF orientation; resize only if over 1280 pixels; JPEG compression; metadata omitted. No content alterations."
+    },
+    {
+      "recordId": "vehicle-3",
+      "catalogueUrl": "https://showroom.ebaymotorspro.co.uk/JMcars?menu=1",
+      "listingUrl": "https://www.ebay.co.uk/itm/920013859678",
+      "observedAt": "2026-10-19T17:36:00.763760Z",
+      "originalImageUrl": "https://i.ebayimg.com/00/s/MTIwMFgxNjAw/z/OzEAAeSwlrxq1G7g/$_57.JPG",
+      "resolvedImageUrl": "https://i.ebayimg.com/00/s/MTIwMFgxNjAw/z/OzEAAeSwlrxq1G7g/$_57.JPG",
+      "originalSha256": "45474bafd6b72f45c7574e9da4944e0ca5c8d2becb1dd5a8216cc91fb735edea",
+      "originalDimensions": [
+        1600,
+        1200
+      ],
+      "retainedPath": "dealer-stock/vehicle-3.jpg",
+      "retainedSha256": "0931e9ba186ff59b91d27683b82e883255af623e5168714d8649242a04c10b74",
+      "retainedDimensions": [
+        1280,
+        960
+      ],
+      "retainedBytes": 184965,
+      "processing": "EXIF orientation; resize only if over 1280 pixels; JPEG compression; metadata omitted. No content alterations."
+    }
+  ],
+  "publicResearchSummary": [
+    "Public vehicle seller confirmed from the current dealer catalogue.",
+    "Existing registry and clients identities checked against the exact lead and normalized trading names; no live-fleet match found.",
+    "Listing availability is not confirmed; the dated stock disclosure and price omission are retained."
+  ],
+  "stockHistoryReview": "stock-history-review.json"
+}

@@ -1,0 +1,197 @@
+{
+  "schemaVersion": 1,
+  "dealer": "car-shop-swansea",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T18:56:54.326861Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "2cf355d3986b421f0c92c7d889fa062097f96348b955d1f28e408affbe0e8b55",
+      "sourceSha256": "d8a7c5cdda540900c57ca0d36f000f7242d5652289f72523b6cddc66316c5d17"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "fea0d77aa584ce5539943eaf98bca7e5133b275c0bcd7aca674c145db86846f2",
+      "sourceSha256": "bd1020ab06f95845ef69868161faa4fa863eaa8a6709684e4512c784df1e9475"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "fea0d77aa584ce5539943eaf98bca7e5133b275c0bcd7aca674c145db86846f2",
+      "sourceSha256": "bd1020ab06f95845ef69868161faa4fa863eaa8a6709684e4512c784df1e9475"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "d8a7c5cdda540900c57ca0d36f000f7242d5652289f72523b6cddc66316c5d17",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-3b8abde3-3d98-4464-91c1-74ebfa1295fe",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "45d5c02c7ad6f2ca252277b412410402c16b8d8156f8463eee6471fead85cd7b",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-0f3f93b5-ac22-47b6-82d3-875153f1be1e",
+      "modelVersion": null
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "c5b820de1e23f76a44bf5e378aa60eac6a1c1f926dc4bf533aa10113e2219f22"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "d8a7c5cdda540900c57ca0d36f000f7242d5652289f72523b6cddc66316c5d17",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-3b8abde3-3d98-4464-91c1-74ebfa1295fe",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/car-shop-swansea/branding/generated-master.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "bd1020ab06f95845ef69868161faa4fa863eaa8a6709684e4512c784df1e9475",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-0c14d3d2-cb1a-42d8-8180-f3087ee07c85",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/car-shop-swansea/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "bd1020ab06f95845ef69868161faa4fa863eaa8a6709684e4512c784df1e9475",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-0c14d3d2-cb1a-42d8-8180-f3087ee07c85",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/car-shop-swansea/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "bed2f53d3f3a6f75f58909f2e8fa936b274ac54f67f910423bd96a2c8e898f36",
+      "sha256": "d8a7c5cdda540900c57ca0d36f000f7242d5652289f72523b6cddc66316c5d17",
+      "crop": {
+        "left": 0,
+        "top": 112,
+        "width": 1983,
+        "height": 557
+      },
+      "sourcePath": "branding/generated-master.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "c96bd856e8b45874655baadbcd46d1093c6a5abd9b0a82fb110c52998981187a",
+      "sha256": "bd1020ab06f95845ef69868161faa4fa863eaa8a6709684e4512c784df1e9475",
+      "crop": {
+        "left": 0,
+        "top": 110,
+        "width": 1983,
+        "height": 561
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "c96bd856e8b45874655baadbcd46d1093c6a5abd9b0a82fb110c52998981187a",
+      "sha256": "bd1020ab06f95845ef69868161faa4fa863eaa8a6709684e4512c784df1e9475",
+      "crop": {
+        "left": 0,
+        "top": 110,
+        "width": 1983,
+        "height": 561
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "2ed4f9560c745b1e595cf0c8e7004c0d48827dc48df6a1c4681db1d9329b2852",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-0f3f93b5-ac22-47b6-82d3-875153f1be1e",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/car-shop-swansea/branding/generated-mark.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "2ed4f9560c745b1e595cf0c8e7004c0d48827dc48df6a1c4681db1d9329b2852",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-0f3f93b5-ac22-47b6-82d3-875153f1be1e",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/car-shop-swansea/branding/generated-mark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "45d5c02c7ad6f2ca252277b412410402c16b8d8156f8463eee6471fead85cd7b",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-0f3f93b5-ac22-47b6-82d3-875153f1be1e",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/car-shop-swansea/branding/generated-mark.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "c5b820de1e23f76a44bf5e378aa60eac6a1c1f926dc4bf533aa10113e2219f22",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-0f3f93b5-ac22-47b6-82d3-875153f1be1e",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/car-shop-swansea/branding/generated-mark.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-19T18:56:54.326861Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "45d5c02c7ad6f2ca252277b412410402c16b8d8156f8463eee6471fead85cd7b",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-0f3f93b5-ac22-47b6-82d3-875153f1be1e",
+      "modelVersion": null
+    }
+  }
+}

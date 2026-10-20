@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": true,
+  "reviewedAt": "2026-10-20T19:19:08.375Z",
+  "dealer": "plaistow-cars-birmingham",
+  "dealerId": "gb-birmingham-plaistow-cars",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "method": "Automated exact registry/pack identity, canonical hosting and batch comparison; retained public source fields were structurally checked, not human-approved.",
+  "sources": [
+    {
+      "url": "https://www.autotrader.co.uk/dealers/warwickshire/birmingham/plaistow-cars-685182",
+      "observedAt": "2026-10-19T20:00:30.914605Z"
+    },
+    {
+      "url": "https://www.autotrader.co.uk/car-details/202609236329942",
+      "observedAt": "2026-10-19T20:02:57.478786Z"
+    },
+    {
+      "url": "https://www.autotrader.co.uk/car-details/202610106872162",
+      "observedAt": "2026-10-19T20:02:57.479751Z"
+    },
+    {
+      "url": "https://www.autotrader.co.uk/car-details/202602280299090",
+      "observedAt": "2026-10-19T20:02:57.480411Z"
+    }
+  ],
+  "registryReview": {
+    "source": "docs/DEPLOYMENT-INVENTORY.json",
+    "sha256": "250dd5868cb842ea8bef8a95b258a6f043bfd0e1043d10cebb57ae6bd22559fb",
+    "dealerCount": 175,
+    "matches": []
+  },
+  "clientsReview": {
+    "commit": "a999878a921fb61b37bf198c43275550814f88cc",
+    "directoryEntries": 176,
+    "matches": []
+  },
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  }
+}

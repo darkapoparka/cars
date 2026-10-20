@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "dealer": "wortley-road-car-sales",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T19:34:01.044Z",
+  "observedAt": "2026-10-19T19:31:40.274451+00:00",
+  "method": "Reviewed exact selected public advert bodies and marketplace vehicle-history panels. Preserve attributed dated advisories; do not infer an unspecified damage category or finance settlement.",
+  "coverage": [
+    {
+      "listingId": "listing-1",
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202609075808246",
+      "httpStatus": 200,
+      "pageSha256": "b3ebb221c8302c4bfd6eaad477acbaf9474b1586876509cc65476f810d68d8a8",
+      "descriptionFetched": false,
+      "descriptionSha256": null
+    },
+    {
+      "listingId": "listing-2",
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202610136956409",
+      "httpStatus": 200,
+      "pageSha256": "37d37cef3bef31d00c8fdf49e74c2d94083ac730b06f8f45e8002a03017790bf",
+      "descriptionFetched": false,
+      "descriptionSha256": null
+    },
+    {
+      "listingId": "listing-3",
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202610136956760",
+      "httpStatus": 200,
+      "pageSha256": "6256415c16ea022d97f863b3ac0b0cbc463848c7be2363ac6d5d4e8cfa813d08",
+      "descriptionFetched": false,
+      "descriptionSha256": null
+    }
+  ],
+  "findings": [
+    {
+      "listingId": "listing-1",
+      "advertId": "202609075808246",
+      "stockTitle": "2016 Audi A4 2.0 TDI ultra Sport S Tronic Euro 6 (s/s) 4dr",
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202609075808246",
+      "observedAt": "2026-10-19T19:26:20.863396Z",
+      "httpStatus": 200,
+      "pageSha256": "b3ebb221c8302c4bfd6eaad477acbaf9474b1586876509cc65476f810d68d8a8",
+      "descriptionUrl": null,
+      "descriptionSha256": null,
+      "type": "dated-finance-status",
+      "finding": "The dated public AutoTrader history panel reports outstanding private finance. This is a marketplace observation; no assumption is made about current settlement or dealer conduct.",
+      "evidenceLocation": "window.__staticRouterHydrationData.loaderData[car-details].aggregatorAdvert.history.vehicleCheck",
+      "publicHistoryEvidence": {
+        "lastChecked": {
+          "label": "Last checked:",
+          "value": "07/09/2026"
+        },
+        "checks": [
+          {
+            "id": "PRIVATE_FINANCE",
+            "label": "There's outstanding private finance",
+            "status": "FAILED",
+            "failureNotificationStatus": "INFORMATION"
+          }
+        ]
+      }
+    }
+  ],
+  "correctionApplied": true,
+  "copyReferences": [
+    "stock.json",
+    "copy-review.json"
+  ],
+  "rawAdvertContentRetained": false,
+  "independentlyCertified": false
+}

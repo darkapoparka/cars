@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-input-review",
+  "dealer": "al-saif-used-cars-trading",
+  "reviewed": true,
+  "reviewedAt": "2026-10-20T19:23:09.174Z",
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "checks": [
+    "canonical-hosting-and-preserved-fleet-collisions",
+    "assigned-expansion-lead",
+    "public-fact-schema-and-price-omission",
+    "personal-contact-screen",
+    "retained-stock-media",
+    "companion-copy-source-binding",
+    "immutable-template-release-and-native-QA-parent",
+    "reviewed-artwork-provenance-and-regenerated-logo-hashes"
+  ],
+  "sourceArtworkReview": "Retained artwork review is separate provenance; this command does not perform visual, Arabic-expert or dealer approval.",
+  "copyReview": "Automated structure, stock hash, source text and complete EN/BG rows; no new human translation approval is inferred.",
+  "contacts": {
+    "schemaVersion": 1,
+    "kind": "cars-automated-public-contact-screen",
+    "dealer": "al-saif-used-cars-trading",
+    "method": "heuristic; no claim that unflagged values cannot be personal",
+    "flags": [],
+    "blocking": []
+  },
+  "batch": {
+    "number": 4,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-umm-al-quwain-al-saif-used-cars-trading",
+    "position": 395
+  },
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "inputs": [
+    {
+      "path": "FACTS-AND-INVENTORY.json",
+      "sha256": "bec77ea1a947bb749b13fe5ab25fd039da090d3086f8cd04cb0a126d6d4abdf9"
+    },
+    {
+      "path": "branding/generated-on-dark.png",
+      "sha256": "09d773bbc8ff8964ec3f8c4f9fe4ecc0ea2e4e608814bb119f64b9d32f82995e"
+    },
+    {
+      "path": "branding/generated-on-light.png",
+      "sha256": "c90b9555a9af780c055bf6ce1854846ca4f48c115c2459cecf847de7ef849ce8"
+    },
+    {
+      "path": "branding/logo-contract.json",
+      "sha256": "2c129a8d1edde62d64cfb14cc9b3dbc56aa147a88e5d1d72f4a9c309db635bd7"
+    },
+    {
+      "path": "branding/logo-recipe.json",
+      "sha256": "ade3020c36756f5d3df409bb17dcc04d90ec0e005d664ced917f9003ec871812"
+    },
+    {
+      "path": "branding/source-original.png",
+      "sha256": "cec8efe26e4dd07853be817f8ca8e4ef3ad3c62067e046248097ab0c94990e69"
+    },
+    {
+      "path": "branding/source.json",
+      "sha256": "2c1b027ccda345e9a32bbd6edd6f5d4e3e5b844f6ef929d56b39b2fb56dae1f3"
+    },
+    {
+      "path": "business-facts.json",
+      "sha256": "8e6d5828b7a01569e945b40ba156dc1642844b86340aa31ca71f31b1bd459924"
+    },
+    {
+      "path": "copy-review.json",
+      "sha256": "701b42de42b44ebb9456c4123aca49c8503c318629417dcff7225370289e20ea"
+    },
+    {
+      "path": "dealer-stock/dubicars-1035469.webp",
+      "sha256": "cfe8c4eb29cd21bf01fb0d1c41b206f64bda5d773065d1b8775347ef10ce95c4"
+    },
+    {
+      "path": "dealer-stock/dubicars-1036997.webp",
+      "sha256": "325e260f8918301f51586df374fd8420a9d597eb630921ee90ca45c09c84bc9a"
+    },
+    {
+      "path": "dealer-stock/dubicars-969957.webp",
+      "sha256": "3c99988b1a31482f4a854fd07c788f92f88f601691bfbb221b8546619aeb44e7"
+    },
+    {
+      "path": "dealer.json",
+      "sha256": "121b2022ef76146bf8123b88be075929e61c61aa806c83f2776b65a8d2e09df7"
+    },
+    {
+      "path": "identity-review.json",
+      "sha256": "0010d862a827d6618889288143bd6d9bb19bf72019da447a87ef296b228555f2"
+    },
+    {
+      "path": "locale.json",
+      "sha256": "62ab3a1fd0d29ebd5d18b52fc3c841f2503a96f894e20a4040fb8eca079a3998"
+    },
+    {
+      "path": "missing-facts.json",
+      "sha256": "873ef84cc8941e5d792f2eaac3e62109570d0ead10205a9482e95aeebd27b929"
+    },
+    {
+      "path": "qualification.json",
+      "sha256": "a8da304ad8a4bab0a855aceba1b619475aab6f755fc4a9939d405a8331a3923a"
+    },
+    {
+      "path": "source-evidence.json",
+      "sha256": "7b2ef9cd61310f24288193e9ad9f40b8efdbe90b7377029ccb2a81bb7f8e2ff0"
+    },
+    {
+      "path": "stock.json",
+      "sha256": "e2d3c7682d5932e116970b5cfe6ecb186dc14a8751594e24937341385f14eea9"
+    }
+  ],
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "providerWrites": 0
+}

@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-input-review",
+  "dealer": "allerton-trade-centre",
+  "reviewed": true,
+  "reviewedAt": "2026-10-20T19:12:24.243Z",
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "checks": [
+    "canonical-hosting-and-preserved-fleet-collisions",
+    "assigned-expansion-lead",
+    "public-fact-schema-and-price-omission",
+    "personal-contact-screen",
+    "retained-stock-media",
+    "companion-copy-source-binding",
+    "immutable-template-release-and-native-QA-parent",
+    "reviewed-artwork-provenance-and-regenerated-logo-hashes"
+  ],
+  "sourceArtworkReview": "Retained artwork review is separate provenance; this command does not perform visual, Arabic-expert or dealer approval.",
+  "copyReview": "Automated structure, stock hash, source text and complete EN/BG rows; no new human translation approval is inferred.",
+  "contacts": {
+    "schemaVersion": 1,
+    "kind": "cars-automated-public-contact-screen",
+    "dealer": "allerton-trade-centre",
+    "method": "heuristic; no claim that unflagged values cannot be personal",
+    "flags": [],
+    "blocking": []
+  },
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-bradford-allerton-trade-centre",
+    "position": 21
+  },
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "inputs": [
+    {
+      "path": "FACTS-AND-INVENTORY.json",
+      "sha256": "92877e56791c555ffbb86c5a2a634a89a77ed0ece39a91eba423afbe1eac1457"
+    },
+    {
+      "path": "branding/generated-mark-on-dark.png",
+      "sha256": "34b4df71425d6179079bf757cfe4b0d3e8d798d7e46c2403407633b1c51f7cdd"
+    },
+    {
+      "path": "branding/generated-mark.png",
+      "sha256": "afd3fcde08b6d9b76d8a4417093f95b86f314e7b0476cf376675641b576a3bce"
+    },
+    {
+      "path": "branding/generated-master.png",
+      "sha256": "14be689bda4a5489e15ef05d81fc50edc105f815d30e5604faa4aa615eaafec1"
+    },
+    {
+      "path": "branding/generated-on-dark.png",
+      "sha256": "8dbfa2691437b8f2859e90fb95253bba7d73a35dd5c9c644131521c1dd6b37d1"
+    },
+    {
+      "path": "branding/logo-contract.json",
+      "sha256": "edf9672a3e44c8d11107cda153b93bedc86f185441be26bfa745bea96ca207fd"
+    },
+    {
+      "path": "branding/logo-recipe.json",
+      "sha256": "e46c6943360d8a25e7b344cdeec25da79f47e79696b54da1d96e0024fd5b9410"
+    },
+    {
+      "path": "branding/observed-logo.jpg",
+      "sha256": "7916784472666b31bbca7e01673d9ee61f55ff085cdbbaade8defe8014c42f34"
+    },
+    {
+      "path": "branding/source.json",
+      "sha256": "c9cbb2f9c45676ac8bb2910ea7fc53a6c081ef362e110884ce4c6f7517fbb00c"
+    },
+    {
+      "path": "business-facts.json",
+      "sha256": "f0f8fc99d5a38acff9a4a1e2e1197a58c5e3a22ddad18c78665c22aa6b970a4c"
+    },
+    {
+      "path": "copy-review.json",
+      "sha256": "544efaa9c2b4ac35c1739305d4568e3631a40cee8bee8653fc682f830ea92d2c"
+    },
+    {
+      "path": "dealer-stock/public-1.jpg",
+      "sha256": "75f883e9a0862c7d7cf7ec3311bf9f8d162410d10eec3d2642156e97281b14b2"
+    },
+    {
+      "path": "dealer-stock/public-2.jpg",
+      "sha256": "cca0867aa7e07952839cccdb3be76d08e794f6fdd9a81991ecc70e818650d9f8"
+    },
+    {
+      "path": "dealer-stock/public-3.jpg",
+      "sha256": "acb75956617ed53dc15d629d68a76628e8b7c233f6ba367263ae95697a410dcb"
+    },
+    {
+      "path": "dealer.json",
+      "sha256": "4b818dda25d2ac2af3e9fdfbf6f1d77a1de4fbd1d20422525bb1bb79030ea718"
+    },
+    {
+      "path": "identity-review.json",
+      "sha256": "14d2738e4aee8e93c41642a056623bff439ed0291c6e386a0902dcc52a35c8ca"
+    },
+    {
+      "path": "locale.json",
+      "sha256": "6420c6bc4678f47e5de1e8e92e603d7a340cd0e0321e45342099746ca42c1d5b"
+    },
+    {
+      "path": "missing-facts.json",
+      "sha256": "9fd9ce7457c3dc8442d80493cdf8c966a85f7e4cf89a52c596b70b40bf011086"
+    },
+    {
+      "path": "qualification.json",
+      "sha256": "9bcd07062473987638fd1f227525378edf10365969fb0b598e9c875f859a1b69"
+    },
+    {
+      "path": "source-evidence.json",
+      "sha256": "d5bc51194cbfdd1f31a7a9bf77183d3ee7cbb4448244bcd0f97ffa2831d7ff7d"
+    },
+    {
+      "path": "stock.json",
+      "sha256": "ca704907be3f2dba4b6eb755fb8f7b3850ba517e8b1a95012656abf034235e96"
+    }
+  ],
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "providerWrites": 0
+}

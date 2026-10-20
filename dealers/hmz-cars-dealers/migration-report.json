@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "hmz-cars-dealers",
+  "previousSlug": "hmz-cars-dealers",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:15:00.321Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-leicester-hmz-cars-dealers",
+    "position": 60
+  },
+  "before": {
+    "files": 40,
+    "bytes": 4218660
+  },
+  "afterBeforeReview": {
+    "files": 24,
+    "bytes": 2217759
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 101954,
+      "sha256": "c6a057961b6ffdcc663d3d4f4e6e688d4b7feac791d6bafa976459388d74dd3d"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 101954,
+      "sha256": "c6a057961b6ffdcc663d3d4f4e6e688d4b7feac791d6bafa976459388d74dd3d"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 101954,
+      "sha256": "c6a057961b6ffdcc663d3d4f4e6e688d4b7feac791d6bafa976459388d74dd3d"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 76676,
+      "sha256": "ffa9aed3b4eccc73e2fcf8ff10a9d80591aea88e62fbfb30fdb4c8fc993f145a"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 223610,
+      "sha256": "5e5e3ded7c95abcf90c27003d8eca94c83f75df2e543f3ed1bcc9c144f22ae9f"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 223610,
+      "sha256": "5e5e3ded7c95abcf90c27003d8eca94c83f75df2e543f3ed1bcc9c144f22ae9f"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 76676,
+      "sha256": "ffa9aed3b4eccc73e2fcf8ff10a9d80591aea88e62fbfb30fdb4c8fc993f145a"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 101954,
+      "sha256": "c6a057961b6ffdcc663d3d4f4e6e688d4b7feac791d6bafa976459388d74dd3d"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 8726,
+      "sha256": "7b69c48389ff110bdc582a12d92d49ca3a311148067d6d4d74def7a2da0272d6"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 223610,
+      "sha256": "5e5e3ded7c95abcf90c27003d8eca94c83f75df2e543f3ed1bcc9c144f22ae9f"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 143554,
+      "sha256": "436ecda8cb4e3c1b314e60db4a2ce708290eca604f55443cf3f00e532f8ba080"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 223610,
+      "sha256": "5e5e3ded7c95abcf90c27003d8eca94c83f75df2e543f3ed1bcc9c144f22ae9f"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 143554,
+      "sha256": "436ecda8cb4e3c1b314e60db4a2ce708290eca604f55443cf3f00e532f8ba080"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 76676,
+      "sha256": "ffa9aed3b4eccc73e2fcf8ff10a9d80591aea88e62fbfb30fdb4c8fc993f145a"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 55664,
+      "sha256": "d6aacd522f09c72fce8c4cf549c083688a16c7caaca8e203839be7218ca234e9"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 60464,
+      "sha256": "756fb6ec36a9db7ec9beaa1cf448780e6ad4252f9fd38e0980dfcf25f795120d"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 60464,
+      "sha256": "756fb6ec36a9db7ec9beaa1cf448780e6ad4252f9fd38e0980dfcf25f795120d"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 11,
+    "bytes": 2183301,
+    "inventorySha256": "4b2b98b86f7c45f817a2c2947ecb7166b2f67ca287ef8e18f08a3091d0b59f56",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "hmz-cars-dealers",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 26,
+    "report": "dealers/hmz-cars-dealers/input-review.json"
+  },
+  "after": {
+    "files": 26,
+    "bytes": 2226750
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-input-review",
+  "dealer": "rolf-street-car-sales",
+  "reviewed": true,
+  "reviewedAt": "2026-10-20T19:20:37.330Z",
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "checks": [
+    "canonical-hosting-and-preserved-fleet-collisions",
+    "assigned-expansion-lead",
+    "public-fact-schema-and-price-omission",
+    "personal-contact-screen",
+    "retained-stock-media",
+    "companion-copy-source-binding",
+    "immutable-template-release-and-native-QA-parent",
+    "reviewed-artwork-provenance-and-regenerated-logo-hashes"
+  ],
+  "sourceArtworkReview": "Retained artwork review is separate provenance; this command does not perform visual, Arabic-expert or dealer approval.",
+  "copyReview": "Automated structure, stock hash, source text and complete EN/BG rows; no new human translation approval is inferred.",
+  "contacts": {
+    "schemaVersion": 1,
+    "kind": "cars-automated-public-contact-screen",
+    "dealer": "rolf-street-car-sales",
+    "method": "heuristic; no claim that unflagged values cannot be personal",
+    "flags": [],
+    "blocking": []
+  },
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-smethwick-rolf-street-car-sales",
+    "position": 89
+  },
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "inputs": [
+    {
+      "path": "FACTS-AND-INVENTORY.json",
+      "sha256": "20fedb0d7948f9cd9a64dbab144c349705be41cb48f34c8d60921417cec2eefd"
+    },
+    {
+      "path": "branding/generated-mark-on-dark.png",
+      "sha256": "612691f3aeea8a2fea095c951b5fc91822ae9bd459d2838bc9f837353a847366"
+    },
+    {
+      "path": "branding/generated-mark.png",
+      "sha256": "027180dfedbe9d6e7cea3a2f7260b8922198b1b38d17ee014bd32c65f03c3d93"
+    },
+    {
+      "path": "branding/generated-master.png",
+      "sha256": "7f987315cf01ca5a9d5cfd53a46d04b9fba6c1301d465e48af204d6e965089fb"
+    },
+    {
+      "path": "branding/generated-on-dark.png",
+      "sha256": "39efa98f285c535e02b1dbde4529193d69d33def3872e1d4afedaf4fa433a73c"
+    },
+    {
+      "path": "branding/logo-contract.json",
+      "sha256": "d2a5edd4b120eca880eeee67d2b1dc6a4666c8a9717088c43be22a57f9c90c16"
+    },
+    {
+      "path": "branding/logo-recipe.json",
+      "sha256": "1c64a889d5564d77bb592e5fbe80382981bfc5e54ddd1fcca7614e377b539ab7"
+    },
+    {
+      "path": "branding/source.json",
+      "sha256": "27123519c307d9f844b8e081bcd74017ccd25979c80eb6501a4f677b932815a3"
+    },
+    {
+      "path": "business-facts.json",
+      "sha256": "d77ce40ee45727c485a0e5a05326175fc586b0a18a6461b1577564e854ece7bb"
+    },
+    {
+      "path": "copy-review.json",
+      "sha256": "7d50ebb18566df515b2f479bc4f48513fdf29d1b14a291a073400096ce09287a"
+    },
+    {
+      "path": "dealer-stock/public-1.jpg",
+      "sha256": "a6b24634f8caa992285cddbed0d3c769612ecdea42123b240c77a86cd159f0bf"
+    },
+    {
+      "path": "dealer-stock/public-2.jpg",
+      "sha256": "76599a89736bb82af02382880dc55229bac578b6c2d31fe92757e699237953cf"
+    },
+    {
+      "path": "dealer-stock/public-3.jpg",
+      "sha256": "c1fd47c8d10fc0ac560e8b2a2b4c4a29428556981afd7251477b71b79e3b7165"
+    },
+    {
+      "path": "dealer.json",
+      "sha256": "99a1a4e71b3d9fa16a4407d3fd27743ab732fcd430aa9cd95546489c69d3f3bc"
+    },
+    {
+      "path": "identity-review.json",
+      "sha256": "a1504274a8a21df00a357c714d3aa2a627ce6e591fc05c3066432e97713a69cc"
+    },
+    {
+      "path": "locale.json",
+      "sha256": "1e256bf42778c94d776e7ff0124f072b4bcdc63304357920bf3097afc0d39f77"
+    },
+    {
+      "path": "missing-facts.json",
+      "sha256": "fa3a84786d5cbe74b5dfd274997e1897af52b53ca580593e4157c5e9ea1d1c4d"
+    },
+    {
+      "path": "qualification.json",
+      "sha256": "6e249e87b846eef973bfaa50f0b337e31e3f81aaceafb17a286ffd7991ef17f4"
+    },
+    {
+      "path": "source-evidence.json",
+      "sha256": "b6e5e01fc891e34ecc99693fa7e44b381cc1747df2a9a3b041e59152129012f4"
+    },
+    {
+      "path": "stock.json",
+      "sha256": "b43644dffe3cbce77c6c29398e25b34c1e95be7a14bc24ce79bfdb9578db11a3"
+    }
+  ],
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "providerWrites": 0
+}

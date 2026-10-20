@@ -1,0 +1,163 @@
+{
+  "schemaVersion": 1,
+  "dealer": "najem-al-tareeq-used-cars",
+  "realLogoFirst": true,
+  "publishedBranding": true,
+  "creationMethod": "sourced-logo-imagegen-redraw",
+  "dealerApproved": false,
+  "approvalStatus": "redraw-and-compact-adaptation-not-dealer-approved",
+  "usageStatus": "public-preview-only",
+  "observedAt": "2026-10-19T20:00:42.619778Z",
+  "publicSources": [
+    {
+      "url": "https://auto.ae/najemaltareeq/",
+      "observedAt": "2026-10-19T20:00:42.619778Z"
+    },
+    {
+      "url": "https://auto.ae/sharjah/sale/car/mitsubishi/mitsubishi-pajero-iv-facelift-1-2014/id/226974/",
+      "observedAt": "2026-10-19T20:00:42.619778Z"
+    },
+    {
+      "url": "https://auto.ae/sharjah/sale/car/kia/kia-optima-iv-2018/id/226972/",
+      "observedAt": "2026-10-19T20:00:42.619778Z"
+    },
+    {
+      "url": "https://auto.ae/sharjah/sale/car/gmc/gmc-yukon-iv-gmt-k2ug-2015/id/226968/",
+      "observedAt": "2026-10-19T20:00:42.619778Z"
+    }
+  ],
+  "originals": [
+    {
+      "path": "branding/source-original.png",
+      "sha256": "4febf0d8c427cece120caa5ef0d1151ddd7a62820080c4e9bca866bbf8ed0c5d",
+      "url": "https://auto-ae-prod-storage.storage.googleapis.com/62fa8f76cad34d7bbf988498e3814c1e",
+      "observedAt": "2026-10-19T20:00:42.619778Z",
+      "identityStatus": "public-profile-identity-reference"
+    }
+  ],
+  "logoResearch": "Exact AUTO.AE dealer profile includes a gold sign bearing the full public business trading name. Sign typography was faithfully redrawn; the NT compact monogram is an explicit unapproved proposal.",
+  "visualReview": "Reviewed transparent artwork, full business-wordmark spelling and compact emblem. Deterministic crops retain the generated artwork; no vector substitute, recolouring or template changes. Compact variants are unapproved preview adaptations. Gold block wordmark retained, NT compact adaptation. Opening hours are explicitly listed on AUTO.AE.",
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T20:59:01.539Z",
+    "master": {
+      "path": "branding/generated-primary.png",
+      "sha256": "284b657a1f142f77578dad917be45e67e7e56a052937a8f127097f58f1af4c1c",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-c5d60483-c6ac-4cd6-a4cd-50c36bd9ebb2",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "5ec25f318ba432e1f8b71727c360bb677e78406beb2696d07a3ae4ec4dbde1c1",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-c5d60483-c6ac-4cd6-a4cd-50c36bd9ebb2",
+        "modelVersion": null,
+        "transformation": {
+          "operation": "rectangular-extract-without-recolour-or-redrawing",
+          "source": "branding/generated-primary.png",
+          "sourceSha256": "284b657a1f142f77578dad917be45e67e7e56a052937a8f127097f58f1af4c1c",
+          "rectangle": {
+            "left": 0,
+            "top": 0,
+            "width": 437,
+            "height": 724
+          }
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-inverse.png",
+      "sha256": "ed05013b26cbd260c6a7f3d06f40e1c8eaa95dcae85cb83904e14ac1f8ddfb0b",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a4c08981-c1fc-477d-b59e-9e869bcca9cd",
+        "modelVersion": null
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-primary.png",
+        "sha256": "284b657a1f142f77578dad917be45e67e7e56a052937a8f127097f58f1af4c1c",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-c5d60483-c6ac-4cd6-a4cd-50c36bd9ebb2",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-inverse.png",
+        "sha256": "ed05013b26cbd260c6a7f3d06f40e1c8eaa95dcae85cb83904e14ac1f8ddfb0b",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-a4c08981-c1fc-477d-b59e-9e869bcca9cd",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-inverse.png",
+        "sha256": "ed05013b26cbd260c6a7f3d06f40e1c8eaa95dcae85cb83904e14ac1f8ddfb0b",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-a4c08981-c1fc-477d-b59e-9e869bcca9cd",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": {
+        "onLight": [
+          "#ffffff"
+        ],
+        "onDark": [
+          "#111113",
+          "#101820"
+        ],
+        "onAccent": [
+          "#09090b",
+          "#17191c",
+          "#c40101"
+        ]
+      },
+      "notes": "Reviewed transparent artwork, full business-wordmark spelling and compact emblem. Deterministic crops retain the generated artwork; no vector substitute, recolouring or template changes. Compact variants are unapproved preview adaptations. Gold block wordmark retained, NT compact adaptation. Opening hours are explicitly listed on AUTO.AE."
+    },
+    "compactMarkStatus": "unapproved-preview-adaptation",
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-19T20:59:01.539Z",
+      "widths": [
+        32,
+        64
+      ],
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#101820"
+      ],
+      "notes": "Reviewed transparent artwork, full business-wordmark spelling and compact emblem. Deterministic crops retain the generated artwork; no vector substitute, recolouring or template changes. Compact variants are unapproved preview adaptations. Gold block wordmark retained, NT compact adaptation. Opening hours are explicitly listed on AUTO.AE."
+    }
+  },
+  "generationPrompts": [
+    {
+      "role": "primary",
+      "prompt": "Create a faithful clean logo redraw of the business name visible on this actual dealer sign. Preserve the warm gold and simple block type. Exact text NAJEM AL TAREEQ, second line USED CARS TR L.L.C. Introduce a clearly designed compact NT monogram in the same plain block typographic style to the left as a proposed compact sign-derived mark. Dark gold #8b641e and deep near-black #141a21 for readability on white. True transparent background. Clean flat geometric typography, no facade, no photographic material, no texture, no gradient, no shadow, no slogan. Wide horizontal lockup with square NT emblem readable at 32px.",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-c5d60483-c6ac-4cd6-a4cd-50c36bd9ebb2",
+      "modelVersion": null,
+      "returnedArtifact": "exec-c5d60483-c6ac-4cd6-a4cd-50c36bd9ebb2.png",
+      "note": "The tool exposed the returned artifact identifier and did not expose a model version."
+    },
+    {
+      "role": "inverse",
+      "prompt": "Create the compact inverse surface variant of the left-hand emblem in this logo. ONLY the compact left emblem, absolutely no wordmark or business text. Preserve its existing shape, initials where they form the symbol, geometry, motif, proportions and open counters. Re-render entirely in one solid neutral cool silver #b9bec2, substantial flat strokes and smooth boundaries. Dark fills become open transparent negative space with the motif represented in silver. Center the one entire compact emblem on a square true transparent canvas, about 80% of canvas width, no other graphics. No pure white ink. No background, no mockup, no labels, no gradient, no shadow, no texture, no distressed edges, no extra lines. Clean automotive identity asset with a recognizable silhouette at 32 pixels.",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-a4c08981-c1fc-477d-b59e-9e869bcca9cd",
+      "modelVersion": null,
+      "returnedArtifact": "exec-a4c08981-c1fc-477d-b59e-9e869bcca9cd.png",
+      "note": "The tool exposed the returned artifact identifier and did not expose a model version."
+    }
+  ]
+}

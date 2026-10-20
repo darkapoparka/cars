@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "dealer": "leicester-motor-group",
+  "dealerId": "gb-leicester-leicester-motor-group",
+  "reviewedAt": "2026-10-19",
+  "providerWrites": 0,
+  "dealerContactPerformed": false,
+  "primarySource": {
+    "url": "https://showroom.ebaymotorspro.co.uk/Leicester-Autos--Sales-LTD?menu=1",
+    "httpStatus": 200,
+    "htmlSha256": "50bca0448d2ec786251bac0280d1d3608f27f984270a51521e6fc65dd655d541",
+    "observedAt": "2026-10-19"
+  },
+  "identity": {
+    "retainedLeadName": "Leicester Motor Group Ltd",
+    "currentSellerDisplayName": "LEICESTER MOTOR GROUP LTD",
+    "existingRegistryOrClientMatch": false
+  },
+  "publicBusinessPhone": {
+    "source": "current dealer marketplace profile",
+    "ownership": "Public business contact; it may be a marketplace forwarding number."
+  },
+  "factsOmitted": [],
+  "limitations": [],
+  "inventory": {
+    "kind": "dated-listing-snapshot",
+    "retainedListings": 3,
+    "photos": 3,
+    "availabilityConfirmedWithDealer": false,
+    "pricesOmitted": true,
+    "rawMarketplaceHtmlRetainedInPublicPack": false
+  },
+  "researchMethod": "Opened the exact primary seller catalogue; used its current Used cars/vehicle records and excluded generic Featured advertisements. Checked matched directories and bounded exact business name plus locality searches for an official site or usable logo."
+}

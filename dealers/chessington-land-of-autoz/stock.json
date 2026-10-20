@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "dealer": "chessington-land-of-autoz",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T17:36:01.499945Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "vehicle-1",
+      "title": "2017 Toyota RAV4",
+      "make": "Toyota",
+      "model": "RAV4",
+      "year": 2017,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/vehicle-1.jpg"
+      ],
+      "sourceUrl": "https://www.ebay.co.uk/itm/860052490877",
+      "observedAt": "2026-10-19T17:36:01.499945Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 149000,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "vehicle-2",
+      "title": "2014 SEAT Ibiza",
+      "make": "SEAT",
+      "model": "Ibiza",
+      "year": 2014,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/vehicle-2.jpg"
+      ],
+      "sourceUrl": "https://www.ebay.co.uk/itm/860047138898",
+      "observedAt": "2026-10-19T17:36:01.499945Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 106000,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "vehicle-3",
+      "title": "2020 Land Rover Discovery",
+      "make": "Land Rover",
+      "model": "Discovery",
+      "year": 2020,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/vehicle-3.jpg"
+      ],
+      "sourceUrl": "https://www.ebay.co.uk/itm/860046889243",
+      "observedAt": "2026-10-19T17:36:01.499945Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 112000,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

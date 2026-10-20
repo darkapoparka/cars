@@ -1,0 +1,143 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-nayrab-used-cars",
+  "realLogoFirst": true,
+  "publishedBranding": true,
+  "creationMethod": "sourced-logo-imagegen-redraw",
+  "approvalStatus": "redraw-and-compact-proposal-not-dealer-approved",
+  "dealerApproved": false,
+  "usageStatus": "public-preview-only",
+  "observedAt": "2026-10-19T20:35:19.163Z",
+  "publicSources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/al-nayrab-used-cars",
+      "observedAt": "2026-10-19T20:00:04.404850Z"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/6936-toyota-land-cruiser-46-at-309-hp-gxr",
+      "observedAt": "2026-10-19T20:00:04.404850Z"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/7564-mercedes-benz-amg-gt-63-4matic-speedshift-mct-9g-585-hp-gt-63-s-4matic",
+      "observedAt": "2026-10-19T20:00:04.404850Z"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/7566-mercedes-benz-gle-class-350-d-4matic-9g-tronic-249-hp-gle-350",
+      "observedAt": "2026-10-19T20:00:04.404850Z"
+    }
+  ],
+  "originals": [
+    {
+      "path": "branding/source-original.jpeg",
+      "sha256": "3fb9f3176ae6a1e92c98f7628f9f702a5ac308799d1390360f464ccdef2d14f0",
+      "url": "https://d2souf30ck18jq.cloudfront.net/al-nayrab-used-cars/logo-e22f8034-30d6-4cea-ab01-45ea7e05e3e6.jpeg",
+      "observedAt": "2026-10-19T20:35:19.163Z"
+    }
+  ],
+  "logoResearch": {
+    "method": "Current seller-bound LicensePlate profile and exact-name public searches; independently checked named GCCCarDeals profile for artwork attribution.",
+    "result": "Current named GCCCarDeals profile attributes this black Arabic calligraphy/AL NAYRAB logo. A historical DubiCars listing now associates its inventory with Altamayoz Al Aali, so its dealer contacts and linked website were excluded. Current names and branding differ; no duplicate dealer identity was established.",
+    "sources": [
+      "https://licenseplate.ae/cars/dealer/al-nayrab-used-cars",
+      "https://gcccardeals.com/ar-ae/dealers/al-nayrab-used-cars"
+    ],
+    "excludedAmbiguousWebsite": "https://www.alnayrabusedcarstrading.com"
+  },
+  "visualReview": "Preserved the distinctive black Arabic calligraphy silhouette and exact AL NAYRAB / USED CARS Latin identity in a clean transparent redraw. Pale silver surface variant uses the same calligraphic motif. Full stacked logo doubles as compact mark; calligraphy remains the recognizable feature at32px while small secondary text is intended for header sizes. Not dealer-approved and no native-language expert review is claimed.",
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T20:35:19.163Z",
+    "master": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "e337b77935a3c99b3264af1b6a9635f885f51574a414cec8a1c7211776b6aeaf",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-07440c6a-196b-4121-b879-7e43258056b2",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "e337b77935a3c99b3264af1b6a9635f885f51574a414cec8a1c7211776b6aeaf",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-07440c6a-196b-4121-b879-7e43258056b2",
+        "modelVersion": null
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-on-dark.png",
+      "sha256": "e1f2a23fd54e66a37277a86ad2294a6bb03dc3efa22ef46e5ebc21ec681ad46e",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a5c61816-1a3e-4626-af54-ed915feabd0f",
+        "modelVersion": null
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "e337b77935a3c99b3264af1b6a9635f885f51574a414cec8a1c7211776b6aeaf",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-07440c6a-196b-4121-b879-7e43258056b2",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "e1f2a23fd54e66a37277a86ad2294a6bb03dc3efa22ef46e5ebc21ec681ad46e",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-a5c61816-1a3e-4626-af54-ed915feabd0f",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "e1f2a23fd54e66a37277a86ad2294a6bb03dc3efa22ef46e5ebc21ec681ad46e",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-a5c61816-1a3e-4626-af54-ed915feabd0f",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": {
+        "onLight": [
+          "#ffffff"
+        ],
+        "onDark": [
+          "#111113",
+          "#101820"
+        ],
+        "onAccent": [
+          "#09090b",
+          "#17191c",
+          "#c40101"
+        ]
+      },
+      "notes": "Preserved the distinctive black Arabic calligraphy silhouette and exact AL NAYRAB / USED CARS Latin identity in a clean transparent redraw. Pale silver surface variant uses the same calligraphic motif. Full stacked logo doubles as compact mark; calligraphy remains the recognizable feature at32px while small secondary text is intended for header sizes. Not dealer-approved and no native-language expert review is claimed."
+    },
+    "compactMarkStatus": "independent-proposal-not-dealer-approved",
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-19T20:35:19.163Z",
+      "widths": [
+        32,
+        64
+      ],
+      "backgrounds": [
+        "#ffffff",
+        "#101820",
+        "#c40101"
+      ],
+      "notes": "Preserved the distinctive black Arabic calligraphy silhouette and exact AL NAYRAB / USED CARS Latin identity in a clean transparent redraw. Pale silver surface variant uses the same calligraphic motif. Full stacked logo doubles as compact mark; calligraphy remains the recognizable feature at32px while small secondary text is intended for header sizes. Not dealer-approved and no native-language expert review is claimed."
+    }
+  },
+  "generationPrompts": [
+    "Use case: logo-brand. Faithful clean redraw of this real Al Nayrab Used Cars logo as a premium transparent raster. Preserve the exact distinctive Arabic calligraphy motif above and the exact business name text below: AL NAYRAB with small USED CARS. Same black ink identity, no added colors. Rebuild the original shape and lettering cleanly with consistent strokes, crisp contours and professional optical spacing; not merely a background erasure. The Arabic silhouette remains recognizable, the square Latin letters remain carefully drawn, the entire stacked mark is near-square with balanced padding and clear at small sizes. Remove the white/grey background entirely; real transparent alpha. No gradients, shadows, bevels, decorations, mockup, watermark or additional text. Keep the name, color and calligraphic motif faithful to the source.",
+    "A matching pale-silver ink surface variant of this exact Al Nayrab Used Cars logo. Preserve this exact Arabic calligraphy silhouette and exact English words AL NAYRAB and USED CARS, the square letterforms, proportions and spacing. Change all visible black ink to flat pale silver #c7d4dc, suitable for deep charcoal and red backgrounds. Genuine fully transparent background and transparent counters; crisp clean graphic edges. No gradients, texture, shadows, glows, decorations, additional text or white rectangle. Faithful identity variant only."
+  ]
+}

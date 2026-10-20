@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "dealer": "king-street-motors-smethwick",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uk.json",
+    "sha256": "6cd8d365586f9a5d5131fe4b1d50baede7de91ab384a135017c25367298b07c4"
+  },
+  "publicSources": [
+    {
+      "url": "https://www.autotrader.co.uk/dealers/west-midlands/smethwick/king-street-motors-10018271",
+      "observedAt": "2026-10-19T17:36:49.273590Z",
+      "supports": [
+        "public-business-identity",
+        "public-business-contact",
+        "advertised-stock"
+      ]
+    },
+    {
+      "url": "https://www.autotrader.co.uk/car-details/202609296511064",
+      "observedAt": "2026-10-19T17:53:28.806853Z",
+      "supports": [
+        "advertised-opening-hours"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "publicObservations": [
+    {
+      "url": "https://www.autotrader.co.uk/dealers/west-midlands/smethwick/king-street-motors-10018271",
+      "observedAt": "2026-10-19T17:36:49.273590Z",
+      "httpStatus": 200,
+      "sha256": "d380d3a5ee4e5b01c484e514e77d839da66ea4eef0fd14f1aa6da99112114a05",
+      "byteLength": 180684,
+      "retention": "Only reviewed public business fields, hashes, listing identities and compressed photographs are committed; raw HTML remains outside the public pack."
+    }
+  ],
+  "stock": [
+    {
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202204144679276",
+      "photoUrl": "https://m.atcdn.co.uk/a/media/w600/2f1f8ecc0bb74f6a90d0fbea0b67b0ef.jpg",
+      "observedAt": "2026-10-19T17:53:28.568323Z",
+      "listingSha256": "ff26965ef0a1fb98827431585865d6a05abaa6bbc1afc6337cbd7e8b7e71bbc6",
+      "sourcePhotoSha256": "50314083f5040ebfd6f28ae91d39eb10bdc7eededba5deb4d1ef24bca9809f42",
+      "sourcePhotoDimensions": [
+        600,
+        392
+      ],
+      "photoSha256": "f0c937ce21d5eeee81af18b7ae01a99dfb2416d24d20474eaab812a20274da65",
+      "photoDimensions": [
+        600,
+        392
+      ],
+      "photoBytes": 47471,
+      "recordId": "public-listing-1",
+      "title": "2015 Land Rover Range Rover 4.4 SD V8 Autobiography Auto",
+      "retainedPhoto": "dealer-stock/public-1.jpg",
+      "publicPhotoReviewed": true
+    },
+    {
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202609296511064",
+      "photoUrl": "https://m.atcdn.co.uk/a/media/w600/fa7fba1460c1472b8b6cd8965fd1c251.jpg",
+      "observedAt": "2026-10-19T17:53:28.806853Z",
+      "listingSha256": "9311cb32c5cc30b99daf26786fb3efaec9a42dc34ac7f4f8c192700388751c24",
+      "sourcePhotoSha256": "ef9a64b1d9afced11aa7f9603a822256d072555a702dd8a7c03e95846df5e405",
+      "sourcePhotoDimensions": [
+        600,
+        450
+      ],
+      "photoSha256": "f8fc385f5e24e0a592585c6ece46d316e7605ebeca48a38e9fd723df9ff6746b",
+      "photoDimensions": [
+        600,
+        450
+      ],
+      "photoBytes": 50498,
+      "recordId": "public-listing-2",
+      "title": "2018 BMW 530d M Sport Touring Auto xDrive — Cat S",
+      "retainedPhoto": "dealer-stock/public-2.jpg",
+      "publicPhotoReviewed": true,
+      "conditionDisclosure": "The public listing records Category S history. Vehicle condition has not been independently verified."
+    },
+    {
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202509076132271",
+      "photoUrl": "https://m.atcdn.co.uk/a/media/w600/970ce6c0edd146b8aa736ce2fd9f22cf.jpg",
+      "observedAt": "2026-10-19T17:53:29.537756Z",
+      "listingSha256": "c55a7f905f87b7b1f802b2f51e20c2741e16c174798d2ab19d11ed3893bcdbe9",
+      "sourcePhotoSha256": "9a9dc0defedae3939685dacaf1a32575c86308d2c503baa639b51aa06548f523",
+      "sourcePhotoDimensions": [
+        600,
+        450
+      ],
+      "photoSha256": "d6debab988bc7489efb2e984e6e60e5448be8fefcb5f50d26b4d84289cf0c653",
+      "photoDimensions": [
+        600,
+        450
+      ],
+      "photoBytes": 47805,
+      "recordId": "public-listing-3",
+      "title": "2015 Audi A3 2.0 TDI S line S Tronic — Cat S",
+      "retainedPhoto": "dealer-stock/public-3.jpg",
+      "publicPhotoReviewed": true,
+      "conditionDisclosure": "The public listing records Category S history and says the buyer must apply for the logbook. Vehicle condition and documents have not been independently verified."
+    }
+  ],
+  "review": {
+    "reviewedAt": "2026-10-19T18:24:26.858020Z",
+    "stockPhotoIdentityChecked": true,
+    "sourceClaimLimits": "Dated public adverts only; availability, repairs, vehicle condition and legal entity details are not independently certified.",
+    "omissions": [
+      "Exact retained lead business.name preserved for the M1 identity validator; clean public trading name used in artwork."
+    ]
+  }
+}

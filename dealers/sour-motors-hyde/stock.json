@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "dealer": "sour-motors-hyde",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "listing-1",
+      "title": "2011 Vauxhall Astra 1.6i 16V SRi 5dr",
+      "make": "Vauxhall",
+      "model": "Astra 1.6i 16V SRi 5dr",
+      "year": 2011,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/listing-1.jpg"
+      ],
+      "sourceUrl": "https://www.ebay.co.uk/itm/860047187288",
+      "observedAt": "2026-10-19",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "transmission": "Manual",
+      "fuel": "Petrol",
+      "mileageValue": 110000,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview. The public advert's vehicle-history panel shows a Cat S/N Advisory. The reviewed advisory does not identify which of these categories applies. This history has not been independently verified."
+    },
+    {
+      "id": "listing-2",
+      "title": "2017 Ford Focus 1.0 EcoBoost 125 ST-Line 5dr",
+      "make": "Ford",
+      "model": "Focus 1.0 EcoBoost 125 ST-Line 5dr",
+      "year": 2017,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/listing-2.jpg"
+      ],
+      "sourceUrl": "https://www.ebay.co.uk/itm/860047175048",
+      "observedAt": "2026-10-19",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "transmission": "Manual",
+      "fuel": "Petrol",
+      "mileageValue": 84000,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-3",
+      "title": "2009 Honda Jazz 1.4 i-VTEC ES 5dr",
+      "make": "Honda",
+      "model": "Jazz 1.4 i-VTEC ES 5dr",
+      "year": 2009,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/listing-3.jpg"
+      ],
+      "sourceUrl": "https://www.ebay.co.uk/itm/860023504308",
+      "observedAt": "2026-10-19",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "transmission": "Manual",
+      "fuel": "Petrol",
+      "mileageValue": 121000,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview. The public advert's vehicle-history panel shows a Cat S/N Advisory. The reviewed advisory does not identify which of these categories applies. This history has not been independently verified."
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "type": "cars-dealer-pack-draft",
+  "slug": "car-shop-swansea",
+  "dealerId": "gb-swansea-car-shop",
+  "status": "ready",
+  "buildReady": true,
+  "providerWrites": 0,
+  "createdAt": "2026-10-19T18:18:52.937Z",
+  "inventoryKind": "dated-listing-snapshot",
+  "inventoryRecords": 3,
+  "logoReady": true,
+  "missingFacts": [
+    {
+      "field": "business.website",
+      "required": false,
+      "reason": "No verified value in the bounded public source checks; omitted rather than invented."
+    },
+    {
+      "field": "business.hours",
+      "required": false,
+      "reason": "No verified value in the bounded public source checks; omitted rather than invented."
+    },
+    {
+      "field": "prices",
+      "required": false,
+      "reason": "All listing prices are omitted under the public-repository scope."
+    }
+  ],
+  "blocking": [],
+  "stockAcquisition": "fresh-public-catalogue-and-detail-page-snapshot",
+  "liveListingFetchPerformed": true,
+  "next": "Ready for the guarded build path; no deployment performed.",
+  "stockPhotoReview": {
+    "reviewedAt": "2026-10-19T18:24:26.905939Z",
+    "visiblePricesOmitted": true,
+    "vehicleIdentityMatched": true
+  }
+}

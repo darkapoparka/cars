@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "stanley-motor-group",
+  "previousSlug": "stanley-motor-group",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:22:51.875Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-wakefield-stanley-motor-group",
+    "position": 98
+  },
+  "before": {
+    "files": 36,
+    "bytes": 4393565
+  },
+  "afterBeforeReview": {
+    "files": 20,
+    "bytes": 1261628
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 191421,
+      "sha256": "357ed8cf74a476624926aab4eb75f0ca6dadacff0a6f6157db46efc89096af90"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 191421,
+      "sha256": "357ed8cf74a476624926aab4eb75f0ca6dadacff0a6f6157db46efc89096af90"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 191421,
+      "sha256": "357ed8cf74a476624926aab4eb75f0ca6dadacff0a6f6157db46efc89096af90"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 236166,
+      "sha256": "9aff01d2c87f44268f3d50f77e6445de70b62068db09894840d516eec53d47e0"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 236166,
+      "sha256": "9aff01d2c87f44268f3d50f77e6445de70b62068db09894840d516eec53d47e0"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 236166,
+      "sha256": "9aff01d2c87f44268f3d50f77e6445de70b62068db09894840d516eec53d47e0"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 236166,
+      "sha256": "9aff01d2c87f44268f3d50f77e6445de70b62068db09894840d516eec53d47e0"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 191421,
+      "sha256": "357ed8cf74a476624926aab4eb75f0ca6dadacff0a6f6157db46efc89096af90"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 13898,
+      "sha256": "58a80d3bfbde18b7a2d46a137936a8b8f7dfcbccf307088928174385ea9721b6"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 236166,
+      "sha256": "9aff01d2c87f44268f3d50f77e6445de70b62068db09894840d516eec53d47e0"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 152332,
+      "sha256": "898a2bf42a5e7d3b122fa2a2665612bcdd0d885b4b645ac65310cb29b6ecd6d3"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 236166,
+      "sha256": "9aff01d2c87f44268f3d50f77e6445de70b62068db09894840d516eec53d47e0"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 152332,
+      "sha256": "898a2bf42a5e7d3b122fa2a2665612bcdd0d885b4b645ac65310cb29b6ecd6d3"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 236166,
+      "sha256": "9aff01d2c87f44268f3d50f77e6445de70b62068db09894840d516eec53d47e0"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 152332,
+      "sha256": "898a2bf42a5e7d3b122fa2a2665612bcdd0d885b4b645ac65310cb29b6ecd6d3"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 123014,
+      "sha256": "f018ff685abbe7c314dac49bdaf3d779665db3c7b7c10f39b0d79d152c85ffc5"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 123014,
+      "sha256": "f018ff685abbe7c314dac49bdaf3d779665db3c7b7c10f39b0d79d152c85ffc5"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 11,
+    "bytes": 1239246,
+    "inventorySha256": "d8dd281c1c19c8a9e117dfcb8c41821db671c5367fb4b60dee7fcd65d7c5a8b0",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "stanley-motor-group",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 22,
+    "report": "dealers/stanley-motor-group/input-review.json"
+  },
+  "after": {
+    "files": 22,
+    "bytes": 1269920
+  }
+}

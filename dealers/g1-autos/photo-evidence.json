@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "dealer": "g1-autos",
+  "photos": [
+    {
+      "id": "listing-1",
+      "listingUrl": "https://www.autotrader.co.uk/car-details/202512088448004",
+      "catalogueUrl": "https://www.autotrader.co.uk/dealers/bedfordshire/luton/g1-autos-ltd-10046522",
+      "imageUrl": "https://m.atcdn.co.uk/a/media/w1280/7b22c54e02634f569bca94e4067d6466.jpg",
+      "downloadUrl": "https://m.atcdn.co.uk/a/media/w1280/7b22c54e02634f569bca94e4067d6466.jpg",
+      "originalDimensions": [
+        1280,
+        960
+      ],
+      "retainedDimensions": [
+        1024,
+        768
+      ],
+      "retainedBytes": 142425,
+      "mediaPath": "dealer-stock/listing-1.jpg",
+      "retainedSha256": "ec2a1ade5c56dfd8c73443f37039bb68f13dfb1e8fa0e4688495c2d6d65c2c15",
+      "operation": "Resize within1024px without enlargement and encode optimized JPEG; no change to photographed content.",
+      "originalSha256": "9f2125c581c28dd3f1975ba96017f7e7db625b0f251ab01d63e46af6f334193f",
+      "observedAt": "2026-10-19"
+    },
+    {
+      "id": "listing-2",
+      "listingUrl": "https://www.autotrader.co.uk/car-details/202604091417312",
+      "catalogueUrl": "https://www.autotrader.co.uk/dealers/bedfordshire/luton/g1-autos-ltd-10046522",
+      "imageUrl": "https://m.atcdn.co.uk/a/media/w1280/582c1efd12d844058dff1d6d045f6a03.jpg",
+      "downloadUrl": "https://m.atcdn.co.uk/a/media/w1280/582c1efd12d844058dff1d6d045f6a03.jpg",
+      "originalDimensions": [
+        1280,
+        960
+      ],
+      "retainedDimensions": [
+        1024,
+        768
+      ],
+      "retainedBytes": 179416,
+      "mediaPath": "dealer-stock/listing-2.jpg",
+      "retainedSha256": "eef9b4e551fd2e73e11035f2dd8152867b910541db50c54daf634649c9e6ef4e",
+      "operation": "Resize within1024px without enlargement and encode optimized JPEG; no change to photographed content.",
+      "originalSha256": "b4fc4ec2128c0d55601a32ff2cfa15268c4d26371bac9c3f8bdecfa24df60d4f",
+      "observedAt": "2026-10-19"
+    },
+    {
+      "id": "listing-3",
+      "listingUrl": "https://www.autotrader.co.uk/car-details/202607184296778",
+      "catalogueUrl": "https://www.autotrader.co.uk/dealers/bedfordshire/luton/g1-autos-ltd-10046522",
+      "imageUrl": "https://m.atcdn.co.uk/a/media/w1280/9e9229c221654b688a9a6bd0be71a270.jpg",
+      "downloadUrl": "https://m.atcdn.co.uk/a/media/w1280/9e9229c221654b688a9a6bd0be71a270.jpg",
+      "originalDimensions": [
+        1280,
+        960
+      ],
+      "retainedDimensions": [
+        1024,
+        768
+      ],
+      "retainedBytes": 116425,
+      "mediaPath": "dealer-stock/listing-3.jpg",
+      "retainedSha256": "fc7e54f542a972620ae87484eba88a9fde988e50127536243a910556ac7d1bdd",
+      "operation": "Resize within1024px without enlargement and encode optimized JPEG; no change to photographed content.",
+      "originalSha256": "e0161aacdd3849e7adc50de06a0ba3ce6cc86f2483435ddbbc45a90821b30068",
+      "observedAt": "2026-10-19"
+    }
+  ],
+  "review": {
+    "reviewed": true,
+    "observedAt": "2026-10-19",
+    "method": "Viewed every selected photograph in contact sheets; checked actual vehicle content, placeholders, price cards and visible dealer identity.",
+    "maximumDimension": 1024,
+    "maximumBytes": 179416
+  }
+}

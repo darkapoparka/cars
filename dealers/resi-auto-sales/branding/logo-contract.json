@@ -1,0 +1,197 @@
+{
+  "schemaVersion": 1,
+  "dealer": "resi-auto-sales",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T18:56:40.960711Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "23be90927ccf034e16cedd290678f34273ad5a1a3f84324861a8a0794e3ceebf",
+      "sourceSha256": "fb3bef446a8d918f0503edf3360c05de8305521091be59c8c69324c7b09741cd"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "4c4728748ecad38aba6d03b8677a6b8e301557df151bd8bf4096cd70661de85c",
+      "sourceSha256": "1e8b9e531e2b7a3d2cfb469b59bc0437048ee0ae0e2fa4016ed460e5d3c5dfa3"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "4c4728748ecad38aba6d03b8677a6b8e301557df151bd8bf4096cd70661de85c",
+      "sourceSha256": "1e8b9e531e2b7a3d2cfb469b59bc0437048ee0ae0e2fa4016ed460e5d3c5dfa3"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "fb3bef446a8d918f0503edf3360c05de8305521091be59c8c69324c7b09741cd",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-b56b03b0-0fe3-4f79-96e3-3a688689415b",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "15a4bdc7397c4f26adf283cb5042ad661b581e48c761e6d4e42dbec174cb247e",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-b56b03b0-0fe3-4f79-96e3-3a688689415b",
+      "modelVersion": null
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "202970fab461d29902723533c8d48735f158391c9b9c232d17c5128c71733791"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "fb3bef446a8d918f0503edf3360c05de8305521091be59c8c69324c7b09741cd",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-b56b03b0-0fe3-4f79-96e3-3a688689415b",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/resi-auto-sales/branding/generated-master.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "1e8b9e531e2b7a3d2cfb469b59bc0437048ee0ae0e2fa4016ed460e5d3c5dfa3",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-212e5099-7a30-42a6-954b-bb0d624ac1f0",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/resi-auto-sales/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "1e8b9e531e2b7a3d2cfb469b59bc0437048ee0ae0e2fa4016ed460e5d3c5dfa3",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-212e5099-7a30-42a6-954b-bb0d624ac1f0",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/resi-auto-sales/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "855e9f80ab5656797aa28eba0eaa597c1294e997fbbd628ef42f8c6b711f6a7a",
+      "sha256": "fb3bef446a8d918f0503edf3360c05de8305521091be59c8c69324c7b09741cd",
+      "crop": {
+        "left": 0,
+        "top": 129,
+        "width": 2172,
+        "height": 456
+      },
+      "sourcePath": "branding/generated-master.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "1c0329c934ced23111fde17419d05d85017c0ec0b049d3062553ec3f0857923f",
+      "sha256": "1e8b9e531e2b7a3d2cfb469b59bc0437048ee0ae0e2fa4016ed460e5d3c5dfa3",
+      "crop": {
+        "left": 0,
+        "top": 123,
+        "width": 2172,
+        "height": 464
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "1c0329c934ced23111fde17419d05d85017c0ec0b049d3062553ec3f0857923f",
+      "sha256": "1e8b9e531e2b7a3d2cfb469b59bc0437048ee0ae0e2fa4016ed460e5d3c5dfa3",
+      "crop": {
+        "left": 0,
+        "top": 123,
+        "width": 2172,
+        "height": 464
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "e06019d02c9315ca930a4ed018e29b7b920694d0e67738542e831dcc27248b10",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-b56b03b0-0fe3-4f79-96e3-3a688689415b",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/resi-auto-sales/branding/generated-mark.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "243654c8715e9a414e8b4ef06aa18a6ea23c2b694285d9e9ff5f64ecc3f6f1ae",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-212e5099-7a30-42a6-954b-bb0d624ac1f0",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/resi-auto-sales/branding/generated-mark-on-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "15a4bdc7397c4f26adf283cb5042ad661b581e48c761e6d4e42dbec174cb247e",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-b56b03b0-0fe3-4f79-96e3-3a688689415b",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/resi-auto-sales/branding/generated-mark.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "202970fab461d29902723533c8d48735f158391c9b9c232d17c5128c71733791",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-b56b03b0-0fe3-4f79-96e3-3a688689415b",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/resi-auto-sales/branding/generated-mark.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-19T18:56:40.960711Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "5bb854d34bb7e7286485f2968d6721a71a0794224776a8b70702347c58609ee7",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-212e5099-7a30-42a6-954b-bb0d624ac1f0",
+      "modelVersion": null
+    }
+  }
+}

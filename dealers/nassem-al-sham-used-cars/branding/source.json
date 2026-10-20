@@ -1,0 +1,218 @@
+{
+  "schemaVersion": 1,
+  "dealer": "nassem-al-sham-used-cars",
+  "realLogoFirst": true,
+  "publishedBranding": false,
+  "creationMethod": "imagegen-independent-logo-proposal",
+  "dealerApproved": false,
+  "approvalStatus": "independent-proposal-not-dealer-approved",
+  "usageStatus": "public-preview-only",
+  "observedAt": "2026-10-19T21:38:36.514857Z",
+  "publicSources": [
+    {
+      "url": "https://www.dubicars.com/dealers/sharjah-nassem-al-sham-used-cars-2211",
+      "observedAt": "2026-10-19T20:00:20.646591Z"
+    },
+    {
+      "url": "https://www.dubicars.com/2017-toyota-land-cruiser-gxr-v6-upgrade-2025-1002015.html",
+      "observedAt": "2026-10-19T20:00:20.646591Z"
+    },
+    {
+      "url": "https://www.dubicars.com/2018-toyota-land-cruiser-gxr-v6-964728.html",
+      "observedAt": "2026-10-19T20:00:20.646591Z"
+    },
+    {
+      "url": "https://www.dubicars.com/2010-toyota-land-cruiser-1033532.html",
+      "observedAt": "2026-10-19T20:00:20.646591Z"
+    },
+    {
+      "url": "https://www.arabwheels.ae/used-cars/dealers/nassem-al-sham-used-cars-showroom-in-uae/",
+      "observedAt": "2026-10-19T21:38:36.514857Z"
+    },
+    {
+      "url": "https://auto.ae/nassemalsham/",
+      "observedAt": "2026-10-19T21:38:36.514857Z"
+    }
+  ],
+  "originals": [
+    {
+      "path": "branding/source-original.img",
+      "sha256": "0fff8ea7691934fa63f97818d3e7f912fada31d2119abba65368907c36cbefbb",
+      "url": "https://cache3.arabwheels.ae/system/dealerships/dealers/000/000/448/original/448.?1731472920",
+      "observedAt": "2026-10-19T21:38:36.514857Z",
+      "identityStatus": "generic-placeholder-not-adopted"
+    }
+  ],
+  "logoResearch": "Exact DubiCars and GCC profiles have no attributable logo. Exact AUTO account has an empty logo_url and null avatar; exact ArabWheels profile returns the generic person/car placeholder. Named owned website returned503 during direct research. The new NS identity is a clearly unapproved proposal.",
+  "visualReview": "Reviewed transparent artwork, full business-wordmark spelling and compact emblem. Deterministic crops retain the generated artwork; no vector substitute, recolouring or template changes. Compact variants are unapproved preview adaptations. Exact retained business-name spelling, paired full lockups and compact emblems reviewed. This identity is an independent unapproved proposal.",
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T21:51:30.803Z",
+    "master": {
+      "path": "branding/generated-master.png",
+      "sha256": "4e6d790789b40d30d5a025a5c0eee62301fc8d7b69c2fb595bf00d8b5905105f",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-bf7093af-1739-4096-b9ca-66d56010f155",
+        "modelVersion": null,
+        "transformation": {
+          "operation": "rectangular-extract-without-recolour-or-redrawing",
+          "source": "branding/generated-primary.png",
+          "sourceSha256": "28342c955757114d8ca0dfaa311f97ac5c6c445529a7fe1e59fd2346c2acbaa3",
+          "rectangle": {
+            "left": 0,
+            "top": 0,
+            "width": 887,
+            "height": 443
+          }
+        }
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "f55780b665f87cea742e6a101d23078bafb04e3e5c69b1bb2495c1330f0e2487",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-bf7093af-1739-4096-b9ca-66d56010f155",
+        "modelVersion": null,
+        "transformation": {
+          "operation": "rectangular-extract-without-recolour-or-redrawing",
+          "source": "branding/generated-primary.png",
+          "sourceSha256": "28342c955757114d8ca0dfaa311f97ac5c6c445529a7fe1e59fd2346c2acbaa3",
+          "rectangle": {
+            "left": 0,
+            "top": 443,
+            "width": 887,
+            "height": 444
+          }
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-dark.png",
+      "sha256": "9fc57c2e18afac47c6ce8f99084931d0bedab0f65c563316dec899c0d6928769",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-bf7093af-1739-4096-b9ca-66d56010f155",
+        "modelVersion": null,
+        "transformation": {
+          "operation": "rectangular-extract-without-recolour-or-redrawing",
+          "source": "branding/generated-primary.png",
+          "sourceSha256": "28342c955757114d8ca0dfaa311f97ac5c6c445529a7fe1e59fd2346c2acbaa3",
+          "rectangle": {
+            "left": 887,
+            "top": 443,
+            "width": 887,
+            "height": 444
+          }
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-master.png",
+        "sha256": "4e6d790789b40d30d5a025a5c0eee62301fc8d7b69c2fb595bf00d8b5905105f",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-bf7093af-1739-4096-b9ca-66d56010f155",
+          "modelVersion": null,
+          "transformation": {
+            "operation": "rectangular-extract-without-recolour-or-redrawing",
+            "source": "branding/generated-primary.png",
+            "sourceSha256": "28342c955757114d8ca0dfaa311f97ac5c6c445529a7fe1e59fd2346c2acbaa3",
+            "rectangle": {
+              "left": 0,
+              "top": 0,
+              "width": 887,
+              "height": 443
+            }
+          }
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-dark-surface.png",
+        "sha256": "de687945b9adf322c9d9d9e03cbddb365c821c9199a893b162d9f1f8c70e31cf",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-bf7093af-1739-4096-b9ca-66d56010f155",
+          "modelVersion": null,
+          "transformation": {
+            "operation": "rectangular-extract-without-recolour-or-redrawing",
+            "source": "branding/generated-primary.png",
+            "sourceSha256": "28342c955757114d8ca0dfaa311f97ac5c6c445529a7fe1e59fd2346c2acbaa3",
+            "rectangle": {
+              "left": 887,
+              "top": 0,
+              "width": 887,
+              "height": 443
+            }
+          }
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-dark-surface.png",
+        "sha256": "de687945b9adf322c9d9d9e03cbddb365c821c9199a893b162d9f1f8c70e31cf",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-bf7093af-1739-4096-b9ca-66d56010f155",
+          "modelVersion": null,
+          "transformation": {
+            "operation": "rectangular-extract-without-recolour-or-redrawing",
+            "source": "branding/generated-primary.png",
+            "sourceSha256": "28342c955757114d8ca0dfaa311f97ac5c6c445529a7fe1e59fd2346c2acbaa3",
+            "rectangle": {
+              "left": 887,
+              "top": 0,
+              "width": 887,
+              "height": 443
+            }
+          }
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": {
+        "onLight": [
+          "#ffffff"
+        ],
+        "onDark": [
+          "#111113",
+          "#101820"
+        ],
+        "onAccent": [
+          "#09090b",
+          "#17191c",
+          "#c40101"
+        ]
+      },
+      "notes": "Reviewed transparent artwork, full business-wordmark spelling and compact emblem. Deterministic crops retain the generated artwork; no vector substitute, recolouring or template changes. Compact variants are unapproved preview adaptations. Exact retained business-name spelling, paired full lockups and compact emblems reviewed. This identity is an independent unapproved proposal."
+    },
+    "compactMarkStatus": "unapproved-preview-adaptation",
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-19T21:51:30.803Z",
+      "widths": [
+        32,
+        64
+      ],
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#101820"
+      ],
+      "notes": "Reviewed transparent artwork, full business-wordmark spelling and compact emblem. Deterministic crops retain the generated artwork; no vector substitute, recolouring or template changes. Compact variants are unapproved preview adaptations. Exact retained business-name spelling, paired full lockups and compact emblems reviewed. This identity is an independent unapproved proposal."
+    }
+  },
+  "generationPrompts": [
+    {
+      "role": "primary",
+      "prompt": "Use case: flat logo-brand artwork. Create one professional transparent RGBA asset sheet arranged in FOUR separate, well-spaced quadrants. Upper left is the full logo in dark ink. Upper right is the SAME full logo in uniform opaque cool silver #c4ccd0. Lower left is the compact emblem only, in dark ink. Lower right is the SAME emblem in uniform opaque cool silver #c4ccd0. Leave wide transparent gutters around all four assets so they can be extracted without overlap. All shapes are flat, solid print ink with crisp smooth edges; outside shapes is entirely transparent, with NO glow, fuzzy halo, texture, shadow, background, lighting or photographic material. The compact emblem must read clearly at 32px, with broad strokes and open counters. Keep each design inside its own quadrant. No quadrant labels. No slogans, year, contact info, claim, badge or extra wording. This is an independent unapproved dealership-logo proposal. Exact full logo words NASSEM AL SHAM, smaller USED CARS below. Compact emblem to the left: an elegant bold NS monogram formed with one rounded dark-teal ribbon crossing a sturdy vertical stem, open negative spaces and a small forward notch. Sophisticated flat dark teal #125665 and charcoal #17242b, simple sturdy contemporary lettering, balanced horizontal lockup. No car clipart, shield, crest, wave decoration or speed lines. A restrained new monogram proposal, immediately legible at 32px.",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-bf7093af-1739-4096-b9ca-66d56010f155",
+      "modelVersion": null,
+      "returnedArtifact": "exec-bf7093af-1739-4096-b9ca-66d56010f155.png",
+      "returnedArtifactSha256": "28342c955757114d8ca0dfaa311f97ac5c6c445529a7fe1e59fd2346c2acbaa3",
+      "note": "The tool exposed the returned artifact identifier and did not expose a model version."
+    }
+  ]
+}

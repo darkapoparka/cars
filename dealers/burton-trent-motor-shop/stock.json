@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "dealer": "burton-trent-motor-shop",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T17:36:00.062141Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "vehicle-1",
+      "title": "2024 Land Rover Range Rover Evoque",
+      "make": "Land Rover",
+      "model": "Range Rover Evoque",
+      "year": 2024,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/vehicle-1.jpg"
+      ],
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202607104083242",
+      "observedAt": "2026-10-19T17:36:00.062141Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 27000,
+      "mileageUnit": "mi",
+      "description": "The public AutoTrader history panel records Category N. The seller discloses bodywork damage and a fault preventing the 12V battery from charging. Current condition and repairs are unverified. Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "vehicle-2",
+      "title": "2015 BMW 5 Series",
+      "make": "BMW",
+      "model": "5 Series",
+      "year": 2015,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/vehicle-2.jpg"
+      ],
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202610197135361",
+      "observedAt": "2026-10-19T17:36:00.062141Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 76000,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "vehicle-3",
+      "title": "2015 BMW 2 Series Active Tourer",
+      "make": "BMW",
+      "model": "2 Series Active Tourer",
+      "year": 2015,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/vehicle-3.jpg"
+      ],
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202608145099452",
+      "observedAt": "2026-10-19T17:36:00.062141Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 66000,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

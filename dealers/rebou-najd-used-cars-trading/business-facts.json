@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "slug": "rebou-najd-used-cars-trading",
+  "dealerId": "ae-sharjah-rebou-najd-used-cars-trading",
+  "business": {
+    "name": "Rebou Najd Used Cars Trading",
+    "city": "Sharjah",
+    "region": "Sharjah",
+    "countryCode": "AE",
+    "currency": "AED",
+    "distanceUnit": "km",
+    "locale": "en-AE",
+    "address": "",
+    "phone": "+971564408242",
+    "phoneDisplay": "+971564408242",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://www.dubicars.com/dealers/sharjah-rebou-najd-used-cars-trading-1785",
+    "hours": "Mo-Th 09:00-13:00; Mo-Th 16:00-21:00; Fr 16:00-21:00; Sa-Su 09:00-13:00; Sa-Su 16:00-21:00",
+    "sourceUrl": "https://www.dubicars.com/dealers/sharjah-rebou-najd-used-cars-trading-1785",
+    "observedAt": "2026-10-19T20:00:23.851965Z",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://www.dubicars.com/dealers/sharjah-rebou-najd-used-cars-trading-1785",
+      "observedAt": "2026-10-19T20:00:23.851965Z",
+      "supports": [
+        "business.name",
+        "business.city",
+        "business.countryCode",
+        "business.address",
+        "business.phone",
+        "business.hours",
+        "dated-dealer-catalogue-listings"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2020-mitsubishi-pajero-mitsuhbishi-pajero-gls-2020engine-38lv6-1037103.html",
+      "observedAt": "2026-10-19T20:00:23.851965Z",
+      "supports": [
+        "stock.dubicars-1037103"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2025-toyota-land-cruiser-toyota-land-cruiser-prado-2025-1037098.html",
+      "observedAt": "2026-10-19T20:00:23.851965Z",
+      "supports": [
+        "stock.dubicars-1037098"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2020-nissan-patrol-engine-56lv8-1036920.html",
+      "observedAt": "2026-10-19T20:00:23.851965Z",
+      "supports": [
+        "stock.dubicars-1036920"
+      ]
+    }
+  ]
+}

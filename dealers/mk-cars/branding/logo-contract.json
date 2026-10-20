@@ -1,0 +1,197 @@
+{
+  "schemaVersion": 1,
+  "dealer": "mk-cars",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T20:35:29.246Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-independent-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "7850e20c6e303b226474db3dd5e1810257e47a4a8eb3ca8238d55facd231c1c8",
+      "sourceSha256": "6583f0066b6fc737b6072087295b1416930a638f9842e9d61024f776d324141e"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "f4c7596f5aed7a4cc9bcbe6b180a88f961d7f028b97b2a05af9997fb88ad6f22",
+      "sourceSha256": "33bdd8691b412abebf43ff507f19cf0f41f8c98a61dc5e30764d0b0f7048f519"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "f4c7596f5aed7a4cc9bcbe6b180a88f961d7f028b97b2a05af9997fb88ad6f22",
+      "sourceSha256": "33bdd8691b412abebf43ff507f19cf0f41f8c98a61dc5e30764d0b0f7048f519"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "6583f0066b6fc737b6072087295b1416930a638f9842e9d61024f776d324141e",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-1377dae4-5d56-4b74-b77b-7fc061dbd1a8",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "01b6973ab077efc3ab7c625c4ed37b9dba8134c315c9a0f283fb2a871f42d23b",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-1377dae4-5d56-4b74-b77b-7fc061dbd1a8",
+      "modelVersion": null
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "0ae3917304b84824fc98c79d328ba910a2ae6378d4245ca4efb0c76e0e280f33"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "6583f0066b6fc737b6072087295b1416930a638f9842e9d61024f776d324141e",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1377dae4-5d56-4b74-b77b-7fc061dbd1a8",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/mk-cars/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "33bdd8691b412abebf43ff507f19cf0f41f8c98a61dc5e30764d0b0f7048f519",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-b465b305-4fbd-4229-8bb9-ba7596b5e7a2",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/mk-cars/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "33bdd8691b412abebf43ff507f19cf0f41f8c98a61dc5e30764d0b0f7048f519",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-b465b305-4fbd-4229-8bb9-ba7596b5e7a2",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/mk-cars/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "43000dd743f503c4338031f9080ba129cf5e6207980238bbabc47d0d4e7dc112",
+      "sha256": "6583f0066b6fc737b6072087295b1416930a638f9842e9d61024f776d324141e",
+      "crop": {
+        "left": 118,
+        "top": 298,
+        "width": 1015,
+        "height": 721
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "97887c7eb349ee6881f15b3a85c366a1de592f360648c69a459be744cbca91f1",
+      "sha256": "33bdd8691b412abebf43ff507f19cf0f41f8c98a61dc5e30764d0b0f7048f519",
+      "crop": {
+        "left": 117,
+        "top": 297,
+        "width": 1018,
+        "height": 723
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "97887c7eb349ee6881f15b3a85c366a1de592f360648c69a459be744cbca91f1",
+      "sha256": "33bdd8691b412abebf43ff507f19cf0f41f8c98a61dc5e30764d0b0f7048f519",
+      "crop": {
+        "left": 117,
+        "top": 297,
+        "width": 1018,
+        "height": 723
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "7a8d528c64f612e6627856d5681f39fe7d07c00aa21317bcc2c43188bf1ba91f",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1377dae4-5d56-4b74-b77b-7fc061dbd1a8",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/mk-cars/branding/generated-on-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "3a07b6b68a322a15f2bbcecb3888079e512913d836b83d2ae6e76fe3f26f121e",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-b465b305-4fbd-4229-8bb9-ba7596b5e7a2",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/mk-cars/branding/generated-on-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "01b6973ab077efc3ab7c625c4ed37b9dba8134c315c9a0f283fb2a871f42d23b",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1377dae4-5d56-4b74-b77b-7fc061dbd1a8",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/mk-cars/branding/generated-on-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "0ae3917304b84824fc98c79d328ba910a2ae6378d4245ca4efb0c76e0e280f33",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1377dae4-5d56-4b74-b77b-7fc061dbd1a8",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/mk-cars/branding/generated-on-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-19T20:35:29.246Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "7872605be35aa441062d177cabd6462835015350e19d329e54ff551f784e64ff",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-b465b305-4fbd-4229-8bb9-ba7596b5e7a2",
+      "modelVersion": null
+    }
+  }
+}

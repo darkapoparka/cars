@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-input-review",
+  "dealer": "qasr-al-jazeera-used-cars",
+  "reviewed": true,
+  "reviewedAt": "2026-10-20T19:13:50.007Z",
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "checks": [
+    "canonical-hosting-and-preserved-fleet-collisions",
+    "assigned-expansion-lead",
+    "public-fact-schema-and-price-omission",
+    "personal-contact-screen",
+    "retained-stock-media",
+    "companion-copy-source-binding",
+    "immutable-template-release-and-native-QA-parent",
+    "reviewed-artwork-provenance-and-regenerated-logo-hashes"
+  ],
+  "sourceArtworkReview": "Retained artwork review is separate provenance; this command does not perform visual, Arabic-expert or dealer approval.",
+  "copyReview": "Automated structure, stock hash, source text and complete EN/BG rows; no new human translation approval is inferred.",
+  "contacts": {
+    "schemaVersion": 1,
+    "kind": "cars-automated-public-contact-screen",
+    "dealer": "qasr-al-jazeera-used-cars",
+    "method": "heuristic; no claim that unflagged values cannot be personal",
+    "flags": [],
+    "blocking": []
+  },
+  "batch": {
+    "number": 4,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-sharjah-qasr-al-jazeera-used-cars",
+    "position": 373
+  },
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "inputs": [
+    {
+      "path": "FACTS-AND-INVENTORY.json",
+      "sha256": "42fd7beaad1c5e640016e0daca2a41be89d81fe2380a5ad4f6aacaf5b45e03e3"
+    },
+    {
+      "path": "branding/generated-mark-dark.png",
+      "sha256": "3c09c07c3580bf4553ca5caccfb51ed9d1e7ec51118835c599c631cd8be5c522"
+    },
+    {
+      "path": "branding/generated-mark.png",
+      "sha256": "9282e113972524302ef9b0b523f7f64c88489a0c8032220d4b94e7d176b5a681"
+    },
+    {
+      "path": "branding/generated-primary.png",
+      "sha256": "3c3e147a9a0250b1167576332c694e0be5c319e8a6fcbdda341011b221cb875b"
+    },
+    {
+      "path": "branding/generated-silver.png",
+      "sha256": "8667897b529161df509f5f1c60e9d74ee16a8a7b3c69f91170894c7d92e688ef"
+    },
+    {
+      "path": "branding/logo-contract.json",
+      "sha256": "c16a92ca462235bfb94ce6ffb3845aee9b0751b19fec2f6a734d7ecc7c7397c0"
+    },
+    {
+      "path": "branding/logo-recipe.json",
+      "sha256": "8db53424a21f3d48c5d27734b10ea325c8402a9711358a10da25ce9386d19778"
+    },
+    {
+      "path": "branding/source-original.png",
+      "sha256": "46810790e0cab4f9c98d1c20d39ce12425700a7d704103ac2e017ee2e710364a"
+    },
+    {
+      "path": "branding/source.json",
+      "sha256": "b237aac6d2fe74e1f6a9037c21be6221700ac3e8216a9ffc1bd4df0783b68f55"
+    },
+    {
+      "path": "business-facts.json",
+      "sha256": "398b8b8d7ca1464a546cf3a6df53854bbfd82f526f930131c4bf138f8541b5de"
+    },
+    {
+      "path": "copy-review.json",
+      "sha256": "ad11874465c7f9212a259bf211d5afd16b5bb8e2ef5baaee1b5d496730425555"
+    },
+    {
+      "path": "dealer-stock/ocd-131277.jpg",
+      "sha256": "e351049082a01f7409d3db671e03fd8c6d51cdc45027bf3e19e1159f3174ab8d"
+    },
+    {
+      "path": "dealer-stock/ocd-131282.jpg",
+      "sha256": "897fce7d5047a0f295c5add0e4599546def838c6b47dbdab3c4053bb76c660d6"
+    },
+    {
+      "path": "dealer-stock/ocd-131291.jpg",
+      "sha256": "43531a397ad3d5f0713338051c2573ad6868885bdd674d115136ca2e36e50aa3"
+    },
+    {
+      "path": "dealer.json",
+      "sha256": "14e20353276b2520f1b2b3b5b09af66f295adc4f6d650dd1aa917cf1b93a3645"
+    },
+    {
+      "path": "identity-review.json",
+      "sha256": "cf980e14350afd5cc4b9230609a674151cb22559a10cf880d965bd7ff430cad2"
+    },
+    {
+      "path": "locale.json",
+      "sha256": "cd3a31370c867f098815349868aa33548b6c9b9936c07d76e49a667a76e89ffc"
+    },
+    {
+      "path": "missing-facts.json",
+      "sha256": "1e62210aeee6054278cf63396e6cb4bbf6941cfef496692e8a324c46ab3a0411"
+    },
+    {
+      "path": "qualification.json",
+      "sha256": "51710b7730ba39b1daf0f297d58b9bc95f43ac9d36f9e3ab3d63c6825eaf0631"
+    },
+    {
+      "path": "source-evidence.json",
+      "sha256": "632d8647c27c7f9e3741d324fced600fcbd1e8d695273a5ea692f01d703f7157"
+    },
+    {
+      "path": "stock.json",
+      "sha256": "cda934a7a8a26f8d4750979f2819813c3b11c05716a8f9c9b08906e31f76ad51"
+    }
+  ],
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "providerWrites": 0
+}

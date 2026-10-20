@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "dealer": "hanli-motors",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "public-listing-1",
+      "title": "2019 Citroen Grand C4 1.5 BlueHDi 130 Flair",
+      "make": "Citroen",
+      "model": "Grand C4",
+      "year": 2019,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/public-1.jpg"
+      ],
+      "sourceUrl": "https://www.ebay.co.uk/itm/820183668852",
+      "observedAt": "2026-10-19T20:03:01.399144Z",
+      "availability": "Observed in the public seller catalogue on 2026-10-19; availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "transmission": "Manual",
+      "fuel": "Diesel",
+      "mileageValue": 122000,
+      "mileageUnit": "mi",
+      "description": "The catalogue calls this Grand C4 Spacetourer and the individual advert header calls it Grand C4 Picasso. The broad Grand C4 model name is retained pending clarification of the suffix. Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "public-listing-2",
+      "title": "2017 Mercedes-Benz C250d SE Executive Edition 9G-Tronic",
+      "make": "Mercedes-Benz",
+      "model": "C Class",
+      "year": 2017,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/public-2.jpg"
+      ],
+      "sourceUrl": "https://www.ebay.co.uk/itm/820157931832",
+      "observedAt": "2026-10-19T20:03:01.465391Z",
+      "availability": "Observed in the public seller catalogue on 2026-10-19; availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "transmission": "Automatic",
+      "fuel": "Diesel",
+      "mileageValue": 184000,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "public-listing-3",
+      "title": "2014 Ford Focus 1.0 EcoBoost Zetec",
+      "make": "Ford",
+      "model": "Focus",
+      "year": 2014,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/public-3.jpg"
+      ],
+      "sourceUrl": "https://www.ebay.co.uk/itm/820129669539",
+      "observedAt": "2026-10-19T20:03:01.906238Z",
+      "availability": "Observed in the public seller catalogue on 2026-10-19; availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "transmission": "Manual",
+      "fuel": "Petrol",
+      "mileageValue": 39000,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

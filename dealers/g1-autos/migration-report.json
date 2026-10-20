@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "g1-autos",
+  "previousSlug": "g1-autos",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:13:23.232Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-luton-g1-autos",
+    "position": 65
+  },
+  "before": {
+    "files": 42,
+    "bytes": 5163457
+  },
+  "afterBeforeReview": {
+    "files": 26,
+    "bytes": 2803077
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 102367,
+      "sha256": "f7191e1e66afbf5f0ed06f96bd75ae1b42bd5c2c400aef7f076adec1fe96074b"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 122625,
+      "sha256": "1ed823be7627e643da5f4a2e0b2a8bc852e1715caaf65dc8447d9dce4ffd0a12"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 102367,
+      "sha256": "f7191e1e66afbf5f0ed06f96bd75ae1b42bd5c2c400aef7f076adec1fe96074b"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 110271,
+      "sha256": "6c9733e4e9a09d9cc31dbd0ab4acc757e24fdd1537d2451c6d32290d549d1764"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 259397,
+      "sha256": "64a87804fd100fefaa8351cd0c0df026f1486535266f642cfbab022fc4c92720"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 259397,
+      "sha256": "64a87804fd100fefaa8351cd0c0df026f1486535266f642cfbab022fc4c92720"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 110271,
+      "sha256": "6c9733e4e9a09d9cc31dbd0ab4acc757e24fdd1537d2451c6d32290d549d1764"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 102367,
+      "sha256": "f7191e1e66afbf5f0ed06f96bd75ae1b42bd5c2c400aef7f076adec1fe96074b"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 8613,
+      "sha256": "c5059f5f3218c4dd7fb75b8163e25bf27e293ace786fe08d85e13ea0540b9bdf"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 259397,
+      "sha256": "64a87804fd100fefaa8351cd0c0df026f1486535266f642cfbab022fc4c92720"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 168046,
+      "sha256": "af16080b74139826a277a0b732910a8c98e83453c34f35d2927a6df7d13af4d9"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 259397,
+      "sha256": "64a87804fd100fefaa8351cd0c0df026f1486535266f642cfbab022fc4c92720"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 168046,
+      "sha256": "af16080b74139826a277a0b732910a8c98e83453c34f35d2927a6df7d13af4d9"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 110271,
+      "sha256": "6c9733e4e9a09d9cc31dbd0ab4acc757e24fdd1537d2451c6d32290d549d1764"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 76938,
+      "sha256": "ca8224025bd21333d21b128ea3a156672d9553039a92d25b723dd4eacc122fcb"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 77364,
+      "sha256": "b84df01ecfd40e98a6066704497a79440892e4a733539a27a5d7d887d4e96630"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 67010,
+      "sha256": "7da4ff1061444ca2fe2aec335287eec7d047d3ea559feac53ae46105203d4019"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 13,
+    "bytes": 2768218,
+    "inventorySha256": "ca6e12a271fb47c4af64655e37cf5fe1c9ea011f520b6c00d7c44c9ca4f78743",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "g1-autos",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 28,
+    "report": "dealers/g1-autos/input-review.json"
+  },
+  "after": {
+    "files": 28,
+    "bytes": 2812288
+  }
+}

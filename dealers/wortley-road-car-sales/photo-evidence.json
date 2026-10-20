@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "dealer": "wortley-road-car-sales",
+  "photos": [
+    {
+      "id": "listing-1",
+      "listingUrl": "https://www.autotrader.co.uk/car-details/202609075808246",
+      "catalogueUrl": "https://www.autotrader.co.uk/dealers/yorkshire/leeds/wortley-road-car-sales-10041304",
+      "imageUrl": "https://m.atcdn.co.uk/a/media/w1280/622ad952b6614d42a58a1942ed6ebcda.jpg",
+      "downloadUrl": "https://m.atcdn.co.uk/a/media/w1280/622ad952b6614d42a58a1942ed6ebcda.jpg",
+      "originalDimensions": [
+        1280,
+        960
+      ],
+      "retainedDimensions": [
+        1024,
+        768
+      ],
+      "retainedBytes": 170848,
+      "mediaPath": "dealer-stock/listing-1.jpg",
+      "retainedSha256": "da1ab02845ce39ac95e406db0547fb8c231eb2da0f964fe8bf7883ca5e96c9dd",
+      "operation": "Resize within1024px without enlargement and encode optimized JPEG; no change to photographed content.",
+      "originalSha256": "cb710c3df63e08aa4c2091c39fb21143bf5058e0948763489a009438d20e3a3e",
+      "observedAt": "2026-10-19"
+    },
+    {
+      "id": "listing-2",
+      "listingUrl": "https://www.autotrader.co.uk/car-details/202610136956409",
+      "catalogueUrl": "https://www.autotrader.co.uk/dealers/yorkshire/leeds/wortley-road-car-sales-10041304",
+      "imageUrl": "https://m.atcdn.co.uk/a/media/w1280/016d95691f914509b6462173a49d9eeb.jpg",
+      "downloadUrl": "https://m.atcdn.co.uk/a/media/w1280/016d95691f914509b6462173a49d9eeb.jpg",
+      "originalDimensions": [
+        1280,
+        960
+      ],
+      "retainedDimensions": [
+        1024,
+        768
+      ],
+      "retainedBytes": 180524,
+      "mediaPath": "dealer-stock/listing-2.jpg",
+      "retainedSha256": "e89e81dff6498befce3ab907c3fe64919fde0a353f0decee926cf3d4d44e3cd2",
+      "operation": "Resize within1024px without enlargement and encode optimized JPEG; no change to photographed content.",
+      "originalSha256": "729e9dc80a12415a3951e6818ada42c85487f0a73bf43f574a692852722fa8c9",
+      "observedAt": "2026-10-19"
+    },
+    {
+      "id": "listing-3",
+      "listingUrl": "https://www.autotrader.co.uk/car-details/202610136956760",
+      "catalogueUrl": "https://www.autotrader.co.uk/dealers/yorkshire/leeds/wortley-road-car-sales-10041304",
+      "imageUrl": "https://m.atcdn.co.uk/a/media/w1280/bd67563441ab4b649b5dc0eb1cc8c9c6.jpg",
+      "downloadUrl": "https://m.atcdn.co.uk/a/media/w1280/bd67563441ab4b649b5dc0eb1cc8c9c6.jpg",
+      "originalDimensions": [
+        1280,
+        960
+      ],
+      "retainedDimensions": [
+        1024,
+        768
+      ],
+      "retainedBytes": 173625,
+      "mediaPath": "dealer-stock/listing-3.jpg",
+      "retainedSha256": "3d33801a7e77b9b7747dcd9d24bbf06e5829227be41aa95866d6978fc0c2ab1a",
+      "operation": "Resize within1024px without enlargement and encode optimized JPEG; no change to photographed content.",
+      "originalSha256": "53745685df77a9c63ecd99b45f247f5bd7d73bfa1ba7b7afa0e5fb35033b2814",
+      "observedAt": "2026-10-19"
+    }
+  ],
+  "review": {
+    "reviewed": true,
+    "observedAt": "2026-10-19",
+    "method": "Viewed every selected photograph in contact sheets; checked actual vehicle content, placeholders, price cards and visible dealer identity.",
+    "maximumDimension": 1024,
+    "maximumBytes": 180524
+  }
+}

@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "burton-trent-motor-shop",
+  "previousSlug": "burton-trent-motor-shop",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:13:52.329Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-burton-trent-motor-shop",
+    "position": 30
+  },
+  "before": {
+    "files": 39,
+    "bytes": 5106982
+  },
+  "afterBeforeReview": {
+    "files": 23,
+    "bytes": 2778330
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 111096,
+      "sha256": "f3120d7a2395a7ac86d3d0de083cd55a9895a26dd6e34f5dc71fa8382cb21698"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 150371,
+      "sha256": "dcabb143790c22d1530f60ff5b5be6331b1579e6466a2d07544891bd7184adaf"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 111096,
+      "sha256": "f3120d7a2395a7ac86d3d0de083cd55a9895a26dd6e34f5dc71fa8382cb21698"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 155332,
+      "sha256": "6778a83135364e9a52211d56d1392db30ee85265effdcf044f7c5d586a5101e3"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 218781,
+      "sha256": "4b093af6feb8d4c8276ff2fd406c7050e1e31a9c3447ba403551032c73987802"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 218781,
+      "sha256": "4b093af6feb8d4c8276ff2fd406c7050e1e31a9c3447ba403551032c73987802"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 155332,
+      "sha256": "6778a83135364e9a52211d56d1392db30ee85265effdcf044f7c5d586a5101e3"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 111096,
+      "sha256": "f3120d7a2395a7ac86d3d0de083cd55a9895a26dd6e34f5dc71fa8382cb21698"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 8416,
+      "sha256": "7506889f993f7bd6afed0befff576e3047f24a873364108a94ba482fb91746c4"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 218781,
+      "sha256": "4b093af6feb8d4c8276ff2fd406c7050e1e31a9c3447ba403551032c73987802"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 123598,
+      "sha256": "1e40e8dd61200df629053f1bd7c9bb175c852414c55c87e37004f6f16a88753e"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 218781,
+      "sha256": "4b093af6feb8d4c8276ff2fd406c7050e1e31a9c3447ba403551032c73987802"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 123598,
+      "sha256": "1e40e8dd61200df629053f1bd7c9bb175c852414c55c87e37004f6f16a88753e"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 155332,
+      "sha256": "6778a83135364e9a52211d56d1392db30ee85265effdcf044f7c5d586a5101e3"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 95430,
+      "sha256": "9bd24f2f0b19db6ad4107c624d877ae10a8491dbd2d149a6bf3583355fd37703"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 86020,
+      "sha256": "ff93b0598e4f1be6e6d35c88d635d3cec4cd82fcbf928f3db8108f4bb1efb770"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 70638,
+      "sha256": "b226b3780e81cd03a580343b9f373c40413f75a94122d59cf110437e3aab48e0"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 13,
+    "bytes": 2753263,
+    "inventorySha256": "0980750ceedf2fec80ac1127947ca7da817aed71ebd5460ecd81d61f69efe510",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "burton-trent-motor-shop",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 25,
+    "report": "dealers/burton-trent-motor-shop/input-review.json"
+  },
+  "after": {
+    "files": 25,
+    "bytes": 2787131
+  }
+}

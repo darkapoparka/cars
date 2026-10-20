@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "king-street-motors-smethwick",
+  "previousSlug": "king-street-motors-smethwick",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:15:34.387Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-smethwick-king-street-motors",
+    "position": 88
+  },
+  "before": {
+    "files": 36,
+    "bytes": 3952610
+  },
+  "afterBeforeReview": {
+    "files": 20,
+    "bytes": 1237299
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 169347,
+      "sha256": "41aa65379cc8249cc2827cd41d84e93ab46e999954ba39b7544dac7e20332f6b"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 169347,
+      "sha256": "41aa65379cc8249cc2827cd41d84e93ab46e999954ba39b7544dac7e20332f6b"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 169347,
+      "sha256": "41aa65379cc8249cc2827cd41d84e93ab46e999954ba39b7544dac7e20332f6b"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 204940,
+      "sha256": "2f534187821873d9377a2b9bf69a5c4a79d565d410ebf4bb8cbcdafc1b2d6c96"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 204940,
+      "sha256": "2f534187821873d9377a2b9bf69a5c4a79d565d410ebf4bb8cbcdafc1b2d6c96"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 204940,
+      "sha256": "2f534187821873d9377a2b9bf69a5c4a79d565d410ebf4bb8cbcdafc1b2d6c96"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 204940,
+      "sha256": "2f534187821873d9377a2b9bf69a5c4a79d565d410ebf4bb8cbcdafc1b2d6c96"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 169347,
+      "sha256": "41aa65379cc8249cc2827cd41d84e93ab46e999954ba39b7544dac7e20332f6b"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 11439,
+      "sha256": "faa26aefd887350e55a9ab5e497544f6b020bdf271b341e40fe40664fae0f9d2"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 204940,
+      "sha256": "2f534187821873d9377a2b9bf69a5c4a79d565d410ebf4bb8cbcdafc1b2d6c96"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 130320,
+      "sha256": "1e169def019fb98185433ea03227c950b26da741165f2d431b5a05d4a497a904"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 204940,
+      "sha256": "2f534187821873d9377a2b9bf69a5c4a79d565d410ebf4bb8cbcdafc1b2d6c96"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 130320,
+      "sha256": "1e169def019fb98185433ea03227c950b26da741165f2d431b5a05d4a497a904"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 204940,
+      "sha256": "2f534187821873d9377a2b9bf69a5c4a79d565d410ebf4bb8cbcdafc1b2d6c96"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 130320,
+      "sha256": "1e169def019fb98185433ea03227c950b26da741165f2d431b5a05d4a497a904"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 102400,
+      "sha256": "65a641d5c33d261054f4605d18fcf218fd8235a85402e67a0bcdfc943137a77b"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 102400,
+      "sha256": "65a641d5c33d261054f4605d18fcf218fd8235a85402e67a0bcdfc943137a77b"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 11,
+    "bytes": 1213623,
+    "inventorySha256": "935c55743e40a4f525301d794295874c76f7d97f5fd06ae8f785dcc11f75ee25",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "king-street-motors-smethwick",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 22,
+    "report": "dealers/king-street-motors-smethwick/input-review.json"
+  },
+  "after": {
+    "files": 22,
+    "bytes": 1245643
+  }
+}

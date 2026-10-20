@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "hanli-motors",
+  "previousSlug": "hanli-motors",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:14:45.436Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-bradford-hanli-motors",
+    "position": 24
+  },
+  "before": {
+    "files": 37,
+    "bytes": 3332743
+  },
+  "afterBeforeReview": {
+    "files": 21,
+    "bytes": 1037030
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 113265,
+      "sha256": "82ff92404603fdde1e9cef5272039519f41fe3df5f68bc07765d562cc0c79266"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 120987,
+      "sha256": "4baa18c8296ac1e2d03538e53420bfca729edfeeffca269c9fcafd9205e2416e"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 113265,
+      "sha256": "82ff92404603fdde1e9cef5272039519f41fe3df5f68bc07765d562cc0c79266"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 182184,
+      "sha256": "4f72f09e965da72eb7d2e3c48a46baab37e86eba4664eebfd342e0c45f5b248d"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 187361,
+      "sha256": "b05f954cf242db6c543cca3ff43b87bb14642c5c54758c3d842a8438477c27e8"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 187361,
+      "sha256": "b05f954cf242db6c543cca3ff43b87bb14642c5c54758c3d842a8438477c27e8"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 182184,
+      "sha256": "4f72f09e965da72eb7d2e3c48a46baab37e86eba4664eebfd342e0c45f5b248d"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 113265,
+      "sha256": "82ff92404603fdde1e9cef5272039519f41fe3df5f68bc07765d562cc0c79266"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 9748,
+      "sha256": "a76aca068a973e3c655385e5d8a5881f13e62238a20813c63e46bf2bee1635b8"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 187361,
+      "sha256": "b05f954cf242db6c543cca3ff43b87bb14642c5c54758c3d842a8438477c27e8"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 134190,
+      "sha256": "85af408440e961455cf82176fe1dab7c4315acef57c178cbc436f2b6f20f78b1"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 187361,
+      "sha256": "b05f954cf242db6c543cca3ff43b87bb14642c5c54758c3d842a8438477c27e8"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 134190,
+      "sha256": "85af408440e961455cf82176fe1dab7c4315acef57c178cbc436f2b6f20f78b1"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 182184,
+      "sha256": "4f72f09e965da72eb7d2e3c48a46baab37e86eba4664eebfd342e0c45f5b248d"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 118392,
+      "sha256": "ab064493fe5cb1cb69104534b406d64eb34725db5ca084afbd06c7a56e0f417d"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 79762,
+      "sha256": "4a1cb4feee463fa0bca77f148d6eb7f4bd01c91626e94ef81fc9729bb0499fb4"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 66444,
+      "sha256": "fe18e7860839755ffbaef1be19562de2f9433bcf903c3c322eafc2312d387c64"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 12,
+    "bytes": 1013019,
+    "inventorySha256": "709f094eb9a2ae30f9b624768c787d02fd0e9d0ca7d9da8815864beb14f286ea",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "hanli-motors",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 23,
+    "report": "dealers/hanli-motors/input-review.json"
+  },
+  "after": {
+    "files": 23,
+    "bytes": 1045443
+  }
+}

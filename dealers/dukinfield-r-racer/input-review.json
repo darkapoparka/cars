@@ -1,0 +1,132 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-input-review",
+  "dealer": "dukinfield-r-racer",
+  "reviewed": true,
+  "reviewedAt": "2026-10-20T19:18:04.494Z",
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "checks": [
+    "canonical-hosting-and-preserved-fleet-collisions",
+    "assigned-expansion-lead",
+    "public-fact-schema-and-price-omission",
+    "personal-contact-screen",
+    "retained-stock-media",
+    "companion-copy-source-binding",
+    "immutable-template-release-and-native-QA-parent",
+    "reviewed-artwork-provenance-and-regenerated-logo-hashes"
+  ],
+  "sourceArtworkReview": "Retained artwork review is separate provenance; this command does not perform visual, Arabic-expert or dealer approval.",
+  "copyReview": "Automated structure, stock hash, source text and complete EN/BG rows; no new human translation approval is inferred.",
+  "contacts": {
+    "schemaVersion": 1,
+    "kind": "cars-automated-public-contact-screen",
+    "dealer": "dukinfield-r-racer",
+    "method": "heuristic; no claim that unflagged values cannot be personal",
+    "flags": [],
+    "blocking": []
+  },
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-dukinfield-r-racer",
+    "position": 43
+  },
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "inputs": [
+    {
+      "path": "FACTS-AND-INVENTORY.json",
+      "sha256": "1fc9c4b9f4f5ba973f3b8c4f77a80dc6d30a5412c58af46338c2576eafe3a6ea"
+    },
+    {
+      "path": "branding/generated-mark-on-dark.png",
+      "sha256": "cafbb5ce87c0c5f4aca8a9b401ac53fc693a971c968acabae8c4f6c695a0a3f6"
+    },
+    {
+      "path": "branding/generated-mark.png",
+      "sha256": "5bed0512a34b691732a90002a9536d88a2d89e560805768367f0f4821f1f70ea"
+    },
+    {
+      "path": "branding/generated-master.png",
+      "sha256": "89cb298020c2f6627424d521a47374793aa598c8c901bc08c486709be1113d67"
+    },
+    {
+      "path": "branding/generated-on-dark.png",
+      "sha256": "c2d779f24e6a705487721cdd2b965c7a8b9eae07ea020872e0c7630e7179eb23"
+    },
+    {
+      "path": "branding/logo-contract.json",
+      "sha256": "cdb89e2a83cb5f3485e143f4f3ea819dfeb1b7cebc044b6c911a11b705295572"
+    },
+    {
+      "path": "branding/logo-recipe.json",
+      "sha256": "8113e2adb0d98564c19c45ed1e4fb6a2933d80d452b10b1b157fcdd08fed749a"
+    },
+    {
+      "path": "branding/proposal-reference.png",
+      "sha256": "31779ea40962c675c9f916892f52c43f7270fecb0bb09a7ccf93b6a47d2930a4"
+    },
+    {
+      "path": "branding/source.json",
+      "sha256": "ebb043845fd03aef9027303c99a89278b14a1e17aba1542912515d0ac9bd6221"
+    },
+    {
+      "path": "business-facts.json",
+      "sha256": "229f1159bdc2bd7624fb5b8fd424dd8bc96ef4cb2ebaf58ef14cad36435322ee"
+    },
+    {
+      "path": "copy-review.json",
+      "sha256": "ed3a253ee50d98848dddd62e668187ad01c05c4cde13e681515736cb9f0595dc"
+    },
+    {
+      "path": "dealer-stock/vehicle-1.jpg",
+      "sha256": "b6ef898bf4010ccd302d324b585ac29bb2b7f2cbff5df6b99261790d3bc2d80a"
+    },
+    {
+      "path": "dealer-stock/vehicle-2.jpg",
+      "sha256": "25da4bc3b529dd68321306ff5d850cf0a10d69c60858d3834340da3972009249"
+    },
+    {
+      "path": "dealer-stock/vehicle-3.jpg",
+      "sha256": "549c492a313ad36192e71ef457ad11e931dc683e3b453e8b89786873ba50cddc"
+    },
+    {
+      "path": "dealer.json",
+      "sha256": "928dde9c34481597e67af0b9561abdcc731b9c9cba6b287cd1de448bd219fcaf"
+    },
+    {
+      "path": "identity-review.json",
+      "sha256": "93fafe17d751b87a399559e9d2cbd58d7c15cb760965c10d8d84ca6cf82c0d68"
+    },
+    {
+      "path": "locale.json",
+      "sha256": "bf8865b2be77b5f3a7f28e6099e02bef4df100606777149e3ffb4097a1f99788"
+    },
+    {
+      "path": "missing-facts.json",
+      "sha256": "1c2e619c89d28d32b85f6fe6b840e43291c2f5b6bb0ca695826afd4f26093ff6"
+    },
+    {
+      "path": "qualification.json",
+      "sha256": "ed09a8e3db6456b98495247a3a73b41cc23b7049de25b1197e383814fe98d452"
+    },
+    {
+      "path": "source-evidence.json",
+      "sha256": "21c33e57bfe82d5a8ee2d254474cd6c86053f076357ea53a677f1d2500a966f0"
+    },
+    {
+      "path": "stock-history-review.json",
+      "sha256": "60de2b84217de0ea859fc3b88738b3cbb26a6984508c7815e2596ff3cbae4f2b"
+    },
+    {
+      "path": "stock.json",
+      "sha256": "4d25a67b2ffed48d2f4a409175a1c649e38a930b8f823116514b5e8d3d356af9"
+    }
+  ],
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "providerWrites": 0
+}

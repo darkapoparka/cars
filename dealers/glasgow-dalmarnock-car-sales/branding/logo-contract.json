@@ -1,0 +1,197 @@
+{
+  "schemaVersion": 1,
+  "dealer": "glasgow-dalmarnock-car-sales",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T18:56:42.959980Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "c70cf26838706c0e7029b2b17ae5d0ffdf4ec89ccd94d59bc15e7e4ae7537d6c",
+      "sourceSha256": "db818278a748a8c3bef6f3095cf4b0214c887bf4ac817070a51aa25295defd11"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "a1a96cf55951541dde52fe7143afd5a87ba55314af8f51b12419bbd5fffc7d0b",
+      "sourceSha256": "0182a53c2864e74f050ae194e3ace345045a3e0bc23a03c7af3d15d733b888b3"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "a1a96cf55951541dde52fe7143afd5a87ba55314af8f51b12419bbd5fffc7d0b",
+      "sourceSha256": "0182a53c2864e74f050ae194e3ace345045a3e0bc23a03c7af3d15d733b888b3"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "db818278a748a8c3bef6f3095cf4b0214c887bf4ac817070a51aa25295defd11",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-3871c23a-98f3-47c9-8eda-5a59c0c7f19b",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "b32ca07849c791682b637b327a71e0c8d4a1e1fd441f004a23ddd49204055667",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-3871c23a-98f3-47c9-8eda-5a59c0c7f19b",
+      "modelVersion": null
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "7de307f8b98e4e1c2674687fcee9136fd548f32a66138b631a3fe5986a5737fc"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "db818278a748a8c3bef6f3095cf4b0214c887bf4ac817070a51aa25295defd11",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-3871c23a-98f3-47c9-8eda-5a59c0c7f19b",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/glasgow-dalmarnock-car-sales/branding/generated-master.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "0182a53c2864e74f050ae194e3ace345045a3e0bc23a03c7af3d15d733b888b3",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-8749ecce-5b48-442f-8dae-d09ec24fb547",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/glasgow-dalmarnock-car-sales/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "0182a53c2864e74f050ae194e3ace345045a3e0bc23a03c7af3d15d733b888b3",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-8749ecce-5b48-442f-8dae-d09ec24fb547",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/glasgow-dalmarnock-car-sales/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "6581eeada470eb871c919b8dfadf5358db5b59ac1d485c1b0b85ab900644864e",
+      "sha256": "db818278a748a8c3bef6f3095cf4b0214c887bf4ac817070a51aa25295defd11",
+      "crop": {
+        "left": 15,
+        "top": 80,
+        "width": 2157,
+        "height": 535
+      },
+      "sourcePath": "branding/generated-master.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "0ede549632a2f8077e8a22f2c4bf0d22d36f000b333e1344bedfc6c586598730",
+      "sha256": "0182a53c2864e74f050ae194e3ace345045a3e0bc23a03c7af3d15d733b888b3",
+      "crop": {
+        "left": 9,
+        "top": 72,
+        "width": 2154,
+        "height": 541
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "0ede549632a2f8077e8a22f2c4bf0d22d36f000b333e1344bedfc6c586598730",
+      "sha256": "0182a53c2864e74f050ae194e3ace345045a3e0bc23a03c7af3d15d733b888b3",
+      "crop": {
+        "left": 9,
+        "top": 72,
+        "width": 2154,
+        "height": 541
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "084aa68f124bf14dfa3493cf9d7e35f675b371bd0f0e27e3d04276a9196ccb6b",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-3871c23a-98f3-47c9-8eda-5a59c0c7f19b",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/glasgow-dalmarnock-car-sales/branding/generated-mark.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "7c4a1d37b21a399928a0ee6f0e8a75768af6065852040ec38293fe5a51806477",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-8749ecce-5b48-442f-8dae-d09ec24fb547",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/glasgow-dalmarnock-car-sales/branding/generated-mark-on-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "b32ca07849c791682b637b327a71e0c8d4a1e1fd441f004a23ddd49204055667",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-3871c23a-98f3-47c9-8eda-5a59c0c7f19b",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/glasgow-dalmarnock-car-sales/branding/generated-mark.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "7de307f8b98e4e1c2674687fcee9136fd548f32a66138b631a3fe5986a5737fc",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-3871c23a-98f3-47c9-8eda-5a59c0c7f19b",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/glasgow-dalmarnock-car-sales/branding/generated-mark.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-19T18:56:42.959980Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "c45a5bed17914efe98e2e3ce32ce10ae8d484d95a297bf920789c4a4ea5a6642",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-8749ecce-5b48-442f-8dae-d09ec24fb547",
+      "modelVersion": null
+    }
+  }
+}

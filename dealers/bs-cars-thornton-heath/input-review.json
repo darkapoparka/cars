@@ -1,0 +1,124 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-input-review",
+  "dealer": "bs-cars-thornton-heath",
+  "reviewed": true,
+  "reviewedAt": "2026-10-20T19:13:37.334Z",
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "checks": [
+    "canonical-hosting-and-preserved-fleet-collisions",
+    "assigned-expansion-lead",
+    "public-fact-schema-and-price-omission",
+    "personal-contact-screen",
+    "retained-stock-media",
+    "companion-copy-source-binding",
+    "immutable-template-release-and-native-QA-parent",
+    "reviewed-artwork-provenance-and-regenerated-logo-hashes"
+  ],
+  "sourceArtworkReview": "Retained artwork review is separate provenance; this command does not perform visual, Arabic-expert or dealer approval.",
+  "copyReview": "Automated structure, stock hash, source text and complete EN/BG rows; no new human translation approval is inferred.",
+  "contacts": {
+    "schemaVersion": 1,
+    "kind": "cars-automated-public-contact-screen",
+    "dealer": "bs-cars-thornton-heath",
+    "method": "heuristic; no claim that unflagged values cannot be personal",
+    "flags": [],
+    "blocking": []
+  },
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-thornton-heath-bs-cars",
+    "position": 95
+  },
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "inputs": [
+    {
+      "path": "FACTS-AND-INVENTORY.json",
+      "sha256": "43a102c123f10bfa630ece0462e5d2e82072261f17e25a75e688a22db4023fce"
+    },
+    {
+      "path": "branding/generated-mark-on-dark.png",
+      "sha256": "8ffdd9ee1c647e21bad60497786c4144aa1b6cf7e7d241cd8e7c1548927326a3"
+    },
+    {
+      "path": "branding/generated-mark.png",
+      "sha256": "d3e53bd2e4e04ed73ee08e1def02686cc2043c66de24dd2c7aeae1bcac58d838"
+    },
+    {
+      "path": "branding/generated-master.png",
+      "sha256": "b769b82f5064e156233744817a3d53829fa4e085dedd540ba544339de9ceabc7"
+    },
+    {
+      "path": "branding/generated-on-dark.png",
+      "sha256": "9f790585b6bc62ba5563d7f63039dc227ff494d8d4b0a9003cec4fefc323ddf9"
+    },
+    {
+      "path": "branding/logo-contract.json",
+      "sha256": "70c91145b25fb9bebdb1b81154d9bbf2a3419b8499b6865daf2dab2afcdfa687"
+    },
+    {
+      "path": "branding/logo-recipe.json",
+      "sha256": "41e0856a1851381c0530ddf95dd265babe431355f6012167f274af5229775916"
+    },
+    {
+      "path": "branding/source.json",
+      "sha256": "3d519c875fe0b1829349b311383b84d56787edf718265dfb10c9679b03a88901"
+    },
+    {
+      "path": "business-facts.json",
+      "sha256": "7e9ec38f79df929590c070cbe5d176371fc681cdefc1ab96b1ee16e488955243"
+    },
+    {
+      "path": "copy-review.json",
+      "sha256": "2e1941f201ed021d64abecade911e8abfb7a1b4fa085f6c414741795f0a230a7"
+    },
+    {
+      "path": "dealer-stock/public-1.jpg",
+      "sha256": "dd02e78a487943511d0685d2523fb40a6942d2000e3e574b494704a5f187163e"
+    },
+    {
+      "path": "dealer-stock/public-2.jpg",
+      "sha256": "35901ffaffb8ce12a8101872820eaf07610a0e32d83512b8a87a2247a94331b0"
+    },
+    {
+      "path": "dealer-stock/public-3.jpg",
+      "sha256": "38734a1502a1e7779ff6197a0d90ff7c71fcea687979033ca794ab53ebd86a84"
+    },
+    {
+      "path": "dealer.json",
+      "sha256": "d2b2ad89a08dd5a82abc4e3de698bab0e97b0e44a06ee84ad027522efb41b78f"
+    },
+    {
+      "path": "identity-review.json",
+      "sha256": "cd598e4a7241edd0280e21210069cc9d3f6a31b6555bda209c18f11007183112"
+    },
+    {
+      "path": "locale.json",
+      "sha256": "b6d8079820affc4d9f3c91ac8796010db6522e3acbfda3f4a2bbb5d8f008f4fc"
+    },
+    {
+      "path": "missing-facts.json",
+      "sha256": "2a7e526d179e92a6cf50d0c412ec5a52c5dccf34b2f3a66f0cedcd5629bb7214"
+    },
+    {
+      "path": "qualification.json",
+      "sha256": "67b38429ddf2da918c4b7dfb2056baa2bb4403de1c92266bb20bceef591b3b96"
+    },
+    {
+      "path": "source-evidence.json",
+      "sha256": "50f1bd71d2f1cace7757420928581f47cd0a53fcbc00d4a3907e8de6ef5f360d"
+    },
+    {
+      "path": "stock.json",
+      "sha256": "f58c92773e6214294f5a64c13cb1270902d9726fee5d7f927cf9f04b0230f221"
+    }
+  ],
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "providerWrites": 0
+}

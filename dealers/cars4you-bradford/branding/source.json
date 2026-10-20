@@ -1,0 +1,211 @@
+{
+  "schemaVersion": 1,
+  "dealer": "cars4you-bradford",
+  "status": "reviewed",
+  "realLogoFirst": true,
+  "publicSources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/edk-cars-ltd?extendedFilter=1&menu=1&page=1",
+      "observedAt": "2026-10-19T20:00:31.691769Z"
+    },
+    {
+      "url": "https://www.ebay.co.uk/itm/137835447979",
+      "observedAt": "2026-10-19T20:03:00.470550Z"
+    },
+    {
+      "url": "https://www.ebay.co.uk/itm/137828372894",
+      "observedAt": "2026-10-19T20:03:01.041140Z"
+    },
+    {
+      "url": "https://www.ebay.co.uk/itm/137828382384",
+      "observedAt": "2026-10-19T20:03:01.375402Z"
+    },
+    {
+      "url": "https://www.cazoo.co.uk/dealers/cars4you-43883/",
+      "observedAt": "2026-10-19T20:03:54.236846Z"
+    }
+  ],
+  "originals": [],
+  "creationMethod": "imagegen-proposal",
+  "dealerApproved": false,
+  "approvalStatus": "independent-preview-not-dealer-approved",
+  "researchConclusion": "Bounded public checks did not yield usable distinct original dealer artwork. An unavailable image URL is not evidence that no real logo exists. This artwork is an independent proposal and is not dealer approved.",
+  "boundedLogoChecks": [
+    {
+      "sourceUrl": "https://cdn.autoexposure.co.uk/motorscdn/motors/dealer-images/43883/motors-car-details-logo.jpg",
+      "sourcePage": "https://www.cazoo.co.uk/dealers/cars4you-43883/",
+      "observedAt": "2026-10-19T20:06:20.388347Z",
+      "outcome": "The read operation timed out",
+      "originalObtained": false
+    }
+  ],
+  "generation": {
+    "tool": "image_gen.imagegen",
+    "generationId": "exec-609dbfe6-8384-4a25-a2f4-cdf8d08464ea",
+    "modelVersion": null,
+    "prompt": "Create one production logo asset sheet on a genuinely transparent background, not a mockup. TWO complete horizontal logo lockups stacked vertically with a very large EMPTY TRANSPARENT gap between them. No labels and no background panels. Both rows use exactly the same spelling, proportions, layout, and motif. Each row: a separate bold compact emblem on the far left, then a generous transparent horizontal gap, then the complete business name at right. The left emblem must remain unmistakable at 32 px. The complete name must be clean and legible at a small website-header size; use strong simple shapes and avoid tiny taglines. TOP ROW is the dark-ink version for WHITE backgrounds. BOTTOM ROW is the light-ink version for CHARCOAL or RED backgrounds: replace every dark text fill with solid white, preserving accent colours only where they remain readable. Use a thin contrasting keyline around coloured details so they remain visible on all backgrounds. Flat graphic design, crisp edges, no gradients, no shading, no texture, no shadow, no photography, no microtype. Real transparent alpha everywhere outside the actual shapes. Wide landscape canvas with equal row spacing and generous outer transparent margins. This is an independent dealer preview; no approval claims. Create an independent proposal for the Bradford trading name CARS4YOU. One continuous bold custom wordmark CARS4YOU, with the numeral 4 emphasized in a warm saturated orange, other letters charcoal on top and white on bottom. The compact left emblem is a single strong angular 4 with a clean rounded-road corner, thick enough for 32 px; do not place CARS4YOU inside the emblem. No location text or tagline. Modern restrained automotive identity with excellent small-size clarity."
+  },
+  "additionalGenerations": [
+    {
+      "role": "master-and-surfaces",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-609dbfe6-8384-4a25-a2f4-cdf8d08464ea",
+      "modelVersion": null,
+      "prompt": "Create one production logo asset sheet on a genuinely transparent background, not a mockup. TWO complete horizontal logo lockups stacked vertically with a very large EMPTY TRANSPARENT gap between them. No labels and no background panels. Both rows use exactly the same spelling, proportions, layout, and motif. Each row: a separate bold compact emblem on the far left, then a generous transparent horizontal gap, then the complete business name at right. The left emblem must remain unmistakable at 32 px. The complete name must be clean and legible at a small website-header size; use strong simple shapes and avoid tiny taglines. TOP ROW is the dark-ink version for WHITE backgrounds. BOTTOM ROW is the light-ink version for CHARCOAL or RED backgrounds: replace every dark text fill with solid white, preserving accent colours only where they remain readable. Use a thin contrasting keyline around coloured details so they remain visible on all backgrounds. Flat graphic design, crisp edges, no gradients, no shading, no texture, no shadow, no photography, no microtype. Real transparent alpha everywhere outside the actual shapes. Wide landscape canvas with equal row spacing and generous outer transparent margins. This is an independent dealer preview; no approval claims. Create an independent proposal for the Bradford trading name CARS4YOU. One continuous bold custom wordmark CARS4YOU, with the numeral 4 emphasized in a warm saturated orange, other letters charcoal on top and white on bottom. The compact left emblem is a single strong angular 4 with a clean rounded-road corner, thick enough for 32 px; do not place CARS4YOU inside the emblem. No location text or tagline. Modern restrained automotive identity with excellent small-size clarity.",
+      "sourceSheetSha256": "fa1fb041d0f835634679ee50c0353b2e2ec8ca3d2d998c95b66fcf8c65ab9e13",
+      "sourceSheetDimensions": {
+        "width": 1942,
+        "height": 809
+      }
+    }
+  ],
+  "derivations": [
+    {
+      "role": "master-and-onLight",
+      "method": "lossless-separated-top-row-crop",
+      "parentGeneration": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-609dbfe6-8384-4a25-a2f4-cdf8d08464ea",
+        "modelVersion": null
+      },
+      "parentSha256": "fa1fb041d0f835634679ee50c0353b2e2ec8ca3d2d998c95b66fcf8c65ab9e13",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1942,
+        "height": 398
+      }
+    },
+    {
+      "role": "onDark-and-onAccent",
+      "method": "lossless-separated-bottom-row-crop",
+      "parentGeneration": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-609dbfe6-8384-4a25-a2f4-cdf8d08464ea",
+        "modelVersion": null
+      },
+      "parentSha256": "fa1fb041d0f835634679ee50c0353b2e2ec8ca3d2d998c95b66fcf8c65ab9e13",
+      "crop": {
+        "left": 0,
+        "top": 398,
+        "width": 1942,
+        "height": 411
+      }
+    },
+    {
+      "role": "compact-onLight",
+      "method": "lossless-isolated-emblem-crop",
+      "parentGeneration": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-609dbfe6-8384-4a25-a2f4-cdf8d08464ea",
+        "modelVersion": null
+      },
+      "parentSha256": "fa1fb041d0f835634679ee50c0353b2e2ec8ca3d2d998c95b66fcf8c65ab9e13",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 440,
+        "height": 398
+      }
+    },
+    {
+      "role": "compact-onDark",
+      "method": "lossless-isolated-emblem-crop",
+      "parentReference": "branding/generated-on-dark.png",
+      "parentSha256": "e385ba050cb021380444b35fec740670a21132308080b6ed88b95a27d9c689cd",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 440,
+        "height": 411
+      }
+    }
+  ],
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T20:42:41.783745Z",
+    "master": {
+      "path": "branding/generated-master.png",
+      "sha256": "f7635cb95202b8e67ff36e8dbfe95ee2c6f86d94704ba18f15c67277eb5bfcb9",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-609dbfe6-8384-4a25-a2f4-cdf8d08464ea",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "ba06c7bc1411d6ee2d26f5587981be1983d7f20c0141fe7b627ecf573c512d31",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-609dbfe6-8384-4a25-a2f4-cdf8d08464ea",
+        "modelVersion": null
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-on-dark.png",
+      "sha256": "03dff3235625b00c964b384d1cc4a6c0c51e57be7ed0ebfdae9e481ec71a4e2e",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-609dbfe6-8384-4a25-a2f4-cdf8d08464ea",
+        "modelVersion": null
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-master.png",
+        "sha256": "f7635cb95202b8e67ff36e8dbfe95ee2c6f86d94704ba18f15c67277eb5bfcb9",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-609dbfe6-8384-4a25-a2f4-cdf8d08464ea",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "e385ba050cb021380444b35fec740670a21132308080b6ed88b95a27d9c689cd",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-609dbfe6-8384-4a25-a2f4-cdf8d08464ea",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "e385ba050cb021380444b35fec740670a21132308080b6ed88b95a27d9c689cd",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-609dbfe6-8384-4a25-a2f4-cdf8d08464ea",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": {
+        "onLight": [
+          "#ffffff"
+        ],
+        "onDark": [
+          "#111113",
+          "#101820"
+        ],
+        "onAccent": [
+          "#09090b",
+          "#17191c",
+          "#c40101"
+        ]
+      },
+      "wordmarkWidths": [
+        120,
+        180
+      ],
+      "markWidths": [
+        32,
+        64
+      ],
+      "method": "Exact existing cropTransparentPadding exports from real generated RGBA inputs, composited with actual alpha at header and compact icon sizes. No template palette or composition changes.",
+      "reviewedAt": "2026-10-19T20:42:41.783745Z",
+      "review": "Visually reviewed exact pipeline exports at 120 and 180 pixel wordmark widths and 32 and 64 pixel compact sizes on all six unchanged template background colours. Actual alpha composition, spelling, crop and compact recognition checked. Affected artwork was regenerated to improve ink contrast; no shared threshold or template was changed."
+    }
+  }
+}

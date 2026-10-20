@@ -1,0 +1,1313 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-expansion-checked-source-checkpoint",
+  "checkedAt": "2026-10-20T19:32:05.831Z",
+  "protectedBaseline": 100,
+  "newAssigned": 400,
+  "capacity": 500,
+  "metadataReconciliation": {
+    "presentDirectories": 226,
+    "sourceCandidates": 155,
+    "researchHeld": 71,
+    "missingDirectories": 174,
+    "selectedHeadsOnly": true
+  },
+  "additionalPrepared": {
+    "packs": 142,
+    "files": 3419,
+    "bytes": 279906232
+  },
+  "preservation": {
+    "retainedFactsStockOriginalArtworkPhotosProvenance": "byte-identical to selected source",
+    "reproducibleExportsRemoved": 2414,
+    "mechanicalReviewMetadata": "maintained migration and explicit automated input review"
+  },
+  "approval": {
+    "humanReview": false,
+    "dealerApproval": false,
+    "nativeApproval": false,
+    "hostedApproval": false,
+    "ownerAcceptance": false
+  },
+  "note": "This record is source preparation only. Native qualification, durable deployment receipts, public checks and runtime observations are separate. The containing Git commit authenticates these source inputs.",
+  "packs": [
+    {
+      "slug": "best-wheels-specialized-vehicles",
+      "batch": 3,
+      "researchCommit": "f36b3cbc600a564aaef80f8d40f89658318b5457",
+      "researchSubtree": "5792f72bd30f60f083ae72b63ffdfe5e43d8092e",
+      "packDigest": "176c653215724047359a8d3abb74c13251401a4eeda819e90b31e2ea5b03cbfc",
+      "files": 24,
+      "bytes": 3252006
+    },
+    {
+      "slug": "car-4-me-fz",
+      "batch": 3,
+      "researchCommit": "f36b3cbc600a564aaef80f8d40f89658318b5457",
+      "researchSubtree": "e5eade1f38adb7490a7842e4649c08034cce5a21",
+      "packDigest": "9fdd955468dfb3abc0abae68fd991166e2c9c992625103d2c25b9fcd465fbb41",
+      "files": 24,
+      "bytes": 3255924
+    },
+    {
+      "slug": "car-nation-dubai",
+      "batch": 3,
+      "researchCommit": "f36b3cbc600a564aaef80f8d40f89658318b5457",
+      "researchSubtree": "a0b1f01f3692a40fc3e36d6db19a35f3b59ec555",
+      "packDigest": "2a12425cb2f981d66beece7152c443c931c2b0eee85a7a5cbfe0ec19df4b0639",
+      "files": 24,
+      "bytes": 3143556
+    },
+    {
+      "slug": "day-feliz-general-trading",
+      "batch": 3,
+      "researchCommit": "f36b3cbc600a564aaef80f8d40f89658318b5457",
+      "researchSubtree": "44218371e701ea5b390677797681c1cdf0cebc38",
+      "packDigest": "63535cf59cc71d39c07f2ee13b55efadb5ae19f301fc93cd8878c588b614d0cb",
+      "files": 24,
+      "bytes": 3422508
+    },
+    {
+      "slug": "global-network-motors",
+      "batch": 3,
+      "researchCommit": "f36b3cbc600a564aaef80f8d40f89658318b5457",
+      "researchSubtree": "03336379af3d3687af28d17a2d33ef3e71d339e7",
+      "packDigest": "8acb03d1cf5184ff31e26fe43ba094bc479fd4e28bfbb7595aa99926e7d18eb9",
+      "files": 23,
+      "bytes": 2822968
+    },
+    {
+      "slug": "gma-star-used-automobile-trading-for-export",
+      "batch": 3,
+      "researchCommit": "f36b3cbc600a564aaef80f8d40f89658318b5457",
+      "researchSubtree": "0de55949d37343d0a50ccff622481dfbf4e4de15",
+      "packDigest": "3bdf4563a229c3503bdc04b32e073083bde1e6a8d152c5a09997abef95e22ee6",
+      "files": 25,
+      "bytes": 1090483
+    },
+    {
+      "slug": "golden-century-motors",
+      "batch": 3,
+      "researchCommit": "f36b3cbc600a564aaef80f8d40f89658318b5457",
+      "researchSubtree": "708e4828e02f6f32982d53f23cb08bfe2c24a9cc",
+      "packDigest": "e5afebf5bf5722d2b13f55c260cb977c021a01eee803159877fa50fe1ed4dd16",
+      "files": 25,
+      "bytes": 2317582
+    },
+    {
+      "slug": "golden-coast-auto",
+      "batch": 3,
+      "researchCommit": "f36b3cbc600a564aaef80f8d40f89658318b5457",
+      "researchSubtree": "d15e85db6d341dc8685bd5860de2e1c9c448cabc",
+      "packDigest": "3bd3bddf37bf5089f2d5ea23f04c8e6887874201fbfb58f8c47b29f8a0991a1e",
+      "files": 25,
+      "bytes": 1337933
+    },
+    {
+      "slug": "great-west-east-auto",
+      "batch": 3,
+      "researchCommit": "f36b3cbc600a564aaef80f8d40f89658318b5457",
+      "researchSubtree": "f0312d684cfb2def1f7fd9d52ca4b6116dbdd870",
+      "packDigest": "a6fb10a21ed2248ddf2164ea175d27f2c2ab5e9650cd53eff422f07d06e30f10",
+      "files": 25,
+      "bytes": 2913126
+    },
+    {
+      "slug": "haroon-sharif-motors-fze",
+      "batch": 3,
+      "researchCommit": "f36b3cbc600a564aaef80f8d40f89658318b5457",
+      "researchSubtree": "e8a3e42c32b073d065324f00727fa6fd90db1e07",
+      "packDigest": "4b331d02adfa67757056cb5845914a5c0b05e44f83ade3b838f842d243cd96dc",
+      "files": 25,
+      "bytes": 1265745
+    },
+    {
+      "slug": "hh-motors-corporation",
+      "batch": 3,
+      "researchCommit": "f36b3cbc600a564aaef80f8d40f89658318b5457",
+      "researchSubtree": "2d54459c7a6a00e85d0053528466b06c1dabc821",
+      "packDigest": "6d9655fe3d12f3629eb72d7f950e6ebaa56c6a51364db915b4db5bbc2b917c25",
+      "files": 25,
+      "bytes": 1162402
+    },
+    {
+      "slug": "hk-used-automobile-trading",
+      "batch": 3,
+      "researchCommit": "f36b3cbc600a564aaef80f8d40f89658318b5457",
+      "researchSubtree": "2ee6babdbd27c6230e444ea8dc9d23c513fd6ded",
+      "packDigest": "b85ac42194f660367c490d209c12916b98173de14d999384c6feed3c85a3b7db",
+      "files": 25,
+      "bytes": 2966212
+    },
+    {
+      "slug": "huapeng-automobile-trading-fze",
+      "batch": 3,
+      "researchCommit": "f36b3cbc600a564aaef80f8d40f89658318b5457",
+      "researchSubtree": "eb738ed3a0afb9f420661a6f292612c51da81688",
+      "packDigest": "6dec4b3a50e0ce6abb50d7ac9b84b7324301fd9b0e9c42afe45b9a7a11fbc818",
+      "files": 25,
+      "bytes": 1505485
+    },
+    {
+      "slug": "impera-motors-llc",
+      "batch": 3,
+      "researchCommit": "f36b3cbc600a564aaef80f8d40f89658318b5457",
+      "researchSubtree": "9b3bf269f521c3d126f21ce0ef372f2a4a042e92",
+      "packDigest": "2609fa2cb18927e2e2664a4e0f32dc8da3a2d2f4089122c83f7ad3eb2d5b09cd",
+      "files": 25,
+      "bytes": 898983
+    },
+    {
+      "slug": "intercars",
+      "batch": 3,
+      "researchCommit": "f36b3cbc600a564aaef80f8d40f89658318b5457",
+      "researchSubtree": "24c97d6350a00a3e66aa19a5d7e4fbfaef12cf78",
+      "packDigest": "855f8043c2354bbf1fe50c078b72a50720fab168602761e00abddc51d34e1f1f",
+      "files": 25,
+      "bytes": 1711540
+    },
+    {
+      "slug": "jr-auto-fzco",
+      "batch": 3,
+      "researchCommit": "f36b3cbc600a564aaef80f8d40f89658318b5457",
+      "researchSubtree": "0bb345be838f871bd50067dcacc6ededf26d4ee6",
+      "packDigest": "82df8888e6041440fe8bf5aaaa154e8cb232ff3a293d8a4b85fa0747449a272f",
+      "files": 25,
+      "bytes": 1097930
+    },
+    {
+      "slug": "jump-sky-automobile-trading-fze",
+      "batch": 3,
+      "researchCommit": "f36b3cbc600a564aaef80f8d40f89658318b5457",
+      "researchSubtree": "fa21fe1b9372f035291e3628eb9296fdfcacbfed",
+      "packDigest": "1b5cd0701445e9eb542e8aeead29a5791cc371fe532956eb539f6cd92ea8f345",
+      "files": 24,
+      "bytes": 1049737
+    },
+    {
+      "slug": "leader-automobile",
+      "batch": 3,
+      "researchCommit": "f36b3cbc600a564aaef80f8d40f89658318b5457",
+      "researchSubtree": "41641520d442f6f6d382d7383f998b4d5272674c",
+      "packDigest": "c5e1208cff29b898a0bcbc1177af034db211abbdc137dd7889519b69ad953de7",
+      "files": 24,
+      "bytes": 2469362
+    },
+    {
+      "slug": "liana-used-cars-trading-llc",
+      "batch": 3,
+      "researchCommit": "f36b3cbc600a564aaef80f8d40f89658318b5457",
+      "researchSubtree": "60b84ef7525943a2b2e961115b8da26eae255a10",
+      "packDigest": "05f9e779672c3e801651fd2897451e74f3a5c1760b547e3cd0a36741aa48714a",
+      "files": 25,
+      "bytes": 1654823
+    },
+    {
+      "slug": "low-mileage-llc-fz",
+      "batch": 3,
+      "researchCommit": "f36b3cbc600a564aaef80f8d40f89658318b5457",
+      "researchSubtree": "6cc98efbaec31860eb270e5b89fbdd3db1cbda6a",
+      "packDigest": "b74ddf12cd89a80c83dc4f50a134e67fcbdc0db763256d3e67b4c116cfa8bc5e",
+      "files": 24,
+      "bytes": 2455132
+    },
+    {
+      "slug": "mabuhay-motors-used-cars-trading-llc",
+      "batch": 3,
+      "researchCommit": "f36b3cbc600a564aaef80f8d40f89658318b5457",
+      "researchSubtree": "6f37b35944083df8592ca15ecb78c5bbc9aed2f5",
+      "packDigest": "577117573183c54a080cbf65e7b9c8f1e54079923b5ab0ede6ada4757ee6ad58",
+      "files": 25,
+      "bytes": 1138287
+    },
+    {
+      "slug": "macan-luxury-cars",
+      "batch": 3,
+      "researchCommit": "f36b3cbc600a564aaef80f8d40f89658318b5457",
+      "researchSubtree": "4f1d4cb04ece53d8bf5a6bc2e677b4c10214e602",
+      "packDigest": "4b708065ceb6a8d330a15c753ad7c6c6bc2432a258476db39bb2ecd837dd56f1",
+      "files": 25,
+      "bytes": 682685
+    },
+    {
+      "slug": "mangame-motors",
+      "batch": 3,
+      "researchCommit": "f36b3cbc600a564aaef80f8d40f89658318b5457",
+      "researchSubtree": "8cf4f5862006301b01c1fb90a40266234f33cffd",
+      "packDigest": "1c67ba0a366d10e3f05150f118b900366519e3bd79d1e3353564bac8887b16cf",
+      "files": 25,
+      "bytes": 2831874
+    },
+    {
+      "slug": "master-cars-used-car-trading-llc-fz",
+      "batch": 3,
+      "researchCommit": "f36b3cbc600a564aaef80f8d40f89658318b5457",
+      "researchSubtree": "1ad1dc0b173ebab01381852a1466bf49edf17324",
+      "packDigest": "0cbf581c2d5dd68e43126d57b280a24849c43ffcbf59b65ae89ee9a8682d1f89",
+      "files": 25,
+      "bytes": 2747769
+    },
+    {
+      "slug": "mehran-motors-fzco",
+      "batch": 3,
+      "researchCommit": "f36b3cbc600a564aaef80f8d40f89658318b5457",
+      "researchSubtree": "a449b9d3801da6a76acdb1ec3e9a1edc3e35d644",
+      "packDigest": "53b2d81bb7de83acf81b2e46f3a9561ccb4bfbf4726d5552aa00877680dfbe85",
+      "files": 25,
+      "bytes": 2596090
+    },
+    {
+      "slug": "metro-motors-llc",
+      "batch": 3,
+      "researchCommit": "f36b3cbc600a564aaef80f8d40f89658318b5457",
+      "researchSubtree": "ea1a9affa51303cc0007c9b57163716b26cc5c33",
+      "packDigest": "1621d0587ce90784a5f3b890a6b8af5dd058870f4b6acb9397ff768fa287f509",
+      "files": 25,
+      "bytes": 925609
+    },
+    {
+      "slug": "miran-motors-fzco",
+      "batch": 3,
+      "researchCommit": "f36b3cbc600a564aaef80f8d40f89658318b5457",
+      "researchSubtree": "94f4a90126d3b45ad207ff407ec366e0da939e09",
+      "packDigest": "8f9317e8cd79b13f4ce5459bec070dc33895ca73619d5be8569a72cfb5367145",
+      "files": 23,
+      "bytes": 2494677
+    },
+    {
+      "slug": "mirza-automobile-fze",
+      "batch": 3,
+      "researchCommit": "f36b3cbc600a564aaef80f8d40f89658318b5457",
+      "researchSubtree": "04fdb75677229869c2758fb591c0a6579160a0cc",
+      "packDigest": "ec153116b338eca5139887e4bc4f66dab9b4bc44f25cf5146f0dea9baddfe7d8",
+      "files": 25,
+      "bytes": 2590256
+    },
+    {
+      "slug": "mizdawy-motors",
+      "batch": 3,
+      "researchCommit": "f36b3cbc600a564aaef80f8d40f89658318b5457",
+      "researchSubtree": "f0980f25398ddf4f8f3a6a8d74e173a28e555947",
+      "packDigest": "ec63042e5dc0b3d1c1645d95fd14b9a7fa06a7706bc2756c65c2b76c217d8e7a",
+      "files": 23,
+      "bytes": 1341942
+    },
+    {
+      "slug": "motorx-group",
+      "batch": 3,
+      "researchCommit": "f36b3cbc600a564aaef80f8d40f89658318b5457",
+      "researchSubtree": "920f1804e81b65f9799a97bdb52d46beb4beaf0c",
+      "packDigest": "50e680733df0d043618baf71b6cb744ad0b188697690cc7cb7a75ec300a94656",
+      "files": 25,
+      "bytes": 1123176
+    },
+    {
+      "slug": "mpi-middle-east",
+      "batch": 3,
+      "researchCommit": "f36b3cbc600a564aaef80f8d40f89658318b5457",
+      "researchSubtree": "dd07e9e529da49a08d85daf0dacfa32116d3d880",
+      "packDigest": "7db36a98b973545fd4bbbb5d6ccf1896eae65b77ea852fc6ee69156e4253fe4f",
+      "files": 24,
+      "bytes": 1001719
+    },
+    {
+      "slug": "muscle-cars-fze",
+      "batch": 3,
+      "researchCommit": "f36b3cbc600a564aaef80f8d40f89658318b5457",
+      "researchSubtree": "6d42de089262b419e819497bf067cdcf4ceaa562",
+      "packDigest": "6f1569be43745acd7fdaef5f31a038b7bc54331ba395dbad5a7edab115397153",
+      "files": 25,
+      "bytes": 2994450
+    },
+    {
+      "slug": "my-way-motors",
+      "batch": 3,
+      "researchCommit": "f36b3cbc600a564aaef80f8d40f89658318b5457",
+      "researchSubtree": "9ca72eccea0b6da69f31069024c58fbd3faf53ed",
+      "packDigest": "504b33e4634cbea829976f5637976f891720bec3c5eb940b000f0fa4d60f0204",
+      "files": 25,
+      "bytes": 1377148
+    },
+    {
+      "slug": "new-abu-taj-motors",
+      "batch": 3,
+      "researchCommit": "f36b3cbc600a564aaef80f8d40f89658318b5457",
+      "researchSubtree": "acde628b2340bf3b1e156ffbdf56fad909caf84e",
+      "packDigest": "3db4291fe7725e129a8f49630394e4298e3f0dc7fc92d3e9322218b5ded1f232",
+      "files": 25,
+      "bytes": 2773620
+    },
+    {
+      "slug": "noor-al-islam-used-cars",
+      "batch": 3,
+      "researchCommit": "f36b3cbc600a564aaef80f8d40f89658318b5457",
+      "researchSubtree": "7eb320f85fb32689b7eb2dce3949b97db3970d19",
+      "packDigest": "1a904c9293b2c3df0d448c43609212396c6ef901e61e78e35671bef4cce4911a",
+      "files": 24,
+      "bytes": 2598802
+    },
+    {
+      "slug": "passion-motors",
+      "batch": 3,
+      "researchCommit": "f36b3cbc600a564aaef80f8d40f89658318b5457",
+      "researchSubtree": "66a931ff96366f10fb9aab0ef0e9f7cad2b93c36",
+      "packDigest": "02255efce222f31a5439978dd033fc8a2ac6fea6eb3d95120faab70eb6e0e15b",
+      "files": 25,
+      "bytes": 937102
+    },
+    {
+      "slug": "pegasus-automobile-fze",
+      "batch": 3,
+      "researchCommit": "f36b3cbc600a564aaef80f8d40f89658318b5457",
+      "researchSubtree": "9532474fdb0053d10a67b55d4b87d55aad828d04",
+      "packDigest": "3d7547511a0844a69795398b1184eb9086bfccb0ecdbe33abfa02b3c4701505b",
+      "files": 25,
+      "bytes": 1110728
+    },
+    {
+      "slug": "pinnacle-automotive",
+      "batch": 3,
+      "researchCommit": "f36b3cbc600a564aaef80f8d40f89658318b5457",
+      "researchSubtree": "253e373d69e5eefdd24b026599d1ca9798c753f1",
+      "packDigest": "0805b9ca1a242bb30518a5ea637d38a706468c23069ce5f9b07ecfb56236125f",
+      "files": 25,
+      "bytes": 1093880
+    },
+    {
+      "slug": "quick-cars",
+      "batch": 3,
+      "researchCommit": "f36b3cbc600a564aaef80f8d40f89658318b5457",
+      "researchSubtree": "80bd73b4cba1ca510aa197c071c8ae837c911822",
+      "packDigest": "4b33fbddfe824ddc6d50e1a8231f710812506f3e776ef10b3a1fc174066812c5",
+      "files": 25,
+      "bytes": 2468001
+    },
+    {
+      "slug": "ramna-international-motors",
+      "batch": 3,
+      "researchCommit": "f36b3cbc600a564aaef80f8d40f89658318b5457",
+      "researchSubtree": "fad1f5764baf83a9d4417bbebb5579a490da7686",
+      "packDigest": "636fb74bc0d5d0fb16816cb6952bf53f8725b3f4b42abc09ce74c90e4f9054ab",
+      "files": 25,
+      "bytes": 1056432
+    },
+    {
+      "slug": "resource-motors",
+      "batch": 3,
+      "researchCommit": "f36b3cbc600a564aaef80f8d40f89658318b5457",
+      "researchSubtree": "dfbad7662669c977e6afc676c67a417c45d28e06",
+      "packDigest": "33ecd2bb1411101a7383e71bfcb9bc3a841c3ed78641b11f77ecea9b19b5c4bc",
+      "files": 25,
+      "bytes": 2591868
+    },
+    {
+      "slug": "rose-auto",
+      "batch": 3,
+      "researchCommit": "f36b3cbc600a564aaef80f8d40f89658318b5457",
+      "researchSubtree": "4d4657274fa2c1f700423b7406d5cb583f531d5d",
+      "packDigest": "6cbf1cbafef3e15c36849482ad46f30624cd2c4481fddc0e572da228a8de54bd",
+      "files": 25,
+      "bytes": 858453
+    },
+    {
+      "slug": "roseva-motors",
+      "batch": 3,
+      "researchCommit": "f36b3cbc600a564aaef80f8d40f89658318b5457",
+      "researchSubtree": "e9581c1b6ac4294ee5f769a76f38c1c92bce7fa3",
+      "packDigest": "e0695d73086b59a3cbb6a0a30d44ddd2501c864de45f1f351a19e441a3fd482e",
+      "files": 25,
+      "bytes": 3457614
+    },
+    {
+      "slug": "royal-diamond-motors",
+      "batch": 3,
+      "researchCommit": "f36b3cbc600a564aaef80f8d40f89658318b5457",
+      "researchSubtree": "1f16af07884452d6bdd362c5c06277d0533b63bc",
+      "packDigest": "8193264ed5b2802005b2a0127aafe416ab3db6e6772e6eed5071341609050a80",
+      "files": 25,
+      "bytes": 3112230
+    },
+    {
+      "slug": "admil-cars",
+      "batch": 1,
+      "researchCommit": "ae4073318d83ab4916a8737b3df0fb181279dab6",
+      "researchSubtree": "b1b2e00d27b9879b79426bb885f195142215e7a7",
+      "packDigest": "0407bb003bb6d9fc6b5615fe5e338945d00da21b5ad471033bb8ad673787f395",
+      "files": 22,
+      "bytes": 2568067
+    },
+    {
+      "slug": "allerton-trade-centre",
+      "batch": 1,
+      "researchCommit": "ae4073318d83ab4916a8737b3df0fb181279dab6",
+      "researchSubtree": "20b08cfcffe8cdb8d93c859e0494313926ce7d0a",
+      "packDigest": "838f8cb45f404528cc0532472565b33fdf007ac4632450d9775357943c087576",
+      "files": 24,
+      "bytes": 1716375
+    },
+    {
+      "slug": "amc-custom-motors",
+      "batch": 1,
+      "researchCommit": "ae4073318d83ab4916a8737b3df0fb181279dab6",
+      "researchSubtree": "ae80ffe0fb43ac9e37d901747e722cb080005366",
+      "packDigest": "7a2992aa58b522c2c7c0e2a634bc340281cb40e728646b6b89ca09fb3b860842",
+      "files": 23,
+      "bytes": 1242670
+    },
+    {
+      "slug": "aventus-motors",
+      "batch": 1,
+      "researchCommit": "ae4073318d83ab4916a8737b3df0fb181279dab6",
+      "researchSubtree": "d5e162299446f6833aad890c53c99d57a9fd2e07",
+      "packDigest": "9b0cfdb64fda274e659f00e47642dc565b0b1f5fc1c33769eb6847f084418d88",
+      "files": 22,
+      "bytes": 2614944
+    },
+    {
+      "slug": "aym-cars",
+      "batch": 1,
+      "researchCommit": "ae4073318d83ab4916a8737b3df0fb181279dab6",
+      "researchSubtree": "a797f7ef4751de4608da36ef0a8173107782d888",
+      "packDigest": "fc78061f9ba1505fb85c0e0d7491ec24069a3e9a3b4d8d33eb24aab1ee1e0496",
+      "files": 25,
+      "bytes": 1733269
+    },
+    {
+      "slug": "bs-cars-thornton-heath",
+      "batch": 1,
+      "researchCommit": "ae4073318d83ab4916a8737b3df0fb181279dab6",
+      "researchSubtree": "a30906ee5c3a19a494ca4df38b38175bffea8af0",
+      "packDigest": "09369860c5f5b0ccf1354b1faccf1ea6ffa425a76a06d8c90e76b37bef35aaac",
+      "files": 23,
+      "bytes": 3272934
+    },
+    {
+      "slug": "burton-trent-motor-shop",
+      "batch": 1,
+      "researchCommit": "ae4073318d83ab4916a8737b3df0fb181279dab6",
+      "researchSubtree": "3cfb391e2bd0929dfb8033932337aba85826b86a",
+      "packDigest": "95ee5e12cc816133f97432336483bc460895b6d1ea3cb6da7df3e006e43482c2",
+      "files": 25,
+      "bytes": 2787131
+    },
+    {
+      "slug": "burton-yj-motors",
+      "batch": 1,
+      "researchCommit": "ae4073318d83ab4916a8737b3df0fb181279dab6",
+      "researchSubtree": "51d2d6692e41825528c027f7d3c4164094fb49ea",
+      "packDigest": "1506e4937724fb0feb0627808f071e151e4a571e7c07490bdb60c44a2777cec3",
+      "files": 25,
+      "bytes": 3055767
+    },
+    {
+      "slug": "car-force",
+      "batch": 1,
+      "researchCommit": "ae4073318d83ab4916a8737b3df0fb181279dab6",
+      "researchSubtree": "e2fbb2f9ea6fa35ee8ede023c78dcec253c9df5a",
+      "packDigest": "b1ef0a6cbaa91002bccda5f9596b978ed3df7abb1dfaf40b75b75fe0cf5729b2",
+      "files": 25,
+      "bytes": 1658901
+    },
+    {
+      "slug": "car-haven-manchester",
+      "batch": 1,
+      "researchCommit": "ae4073318d83ab4916a8737b3df0fb181279dab6",
+      "researchSubtree": "a91877e1d71184b35e8ef0f64297825c6bc89f65",
+      "packDigest": "b2ab4669f23dd6e01f314b74edb851a539c000eb8226c08a0a303f24ebed9b0f",
+      "files": 26,
+      "bytes": 1881768
+    },
+    {
+      "slug": "car-shop-swansea",
+      "batch": 1,
+      "researchCommit": "ae4073318d83ab4916a8737b3df0fb181279dab6",
+      "researchSubtree": "1fceba734ccf3c99024fa795f3d5ff6dec92ed9f",
+      "packDigest": "2fc9a77ffe85bb6b2080be8a9528932a7efde082b03188b88aee1fd664c0d83f",
+      "files": 22,
+      "bytes": 2909853
+    },
+    {
+      "slug": "cardiff-fusion-autos",
+      "batch": 1,
+      "researchCommit": "ae4073318d83ab4916a8737b3df0fb181279dab6",
+      "researchSubtree": "48b3d32d7a8642b8a7e766f8d6940f85c981b834",
+      "packDigest": "4d72a2c65bc0ec0496ec8b8972990903ec0254bc2d6941b74d43a2e5babfa814",
+      "files": 24,
+      "bytes": 2377713
+    },
+    {
+      "slug": "cars-4-less-west-bromwich",
+      "batch": 1,
+      "researchCommit": "ae4073318d83ab4916a8737b3df0fb181279dab6",
+      "researchSubtree": "32bbfd0028bfeddb4e9094c1738a21c08b3353c6",
+      "packDigest": "6146c234cc25f822f2b32b99c1d70f1cfde426a94b0735f5e03bbc79e3512070",
+      "files": 21,
+      "bytes": 1779050
+    },
+    {
+      "slug": "cars-4-u-wakefield",
+      "batch": 1,
+      "researchCommit": "ae4073318d83ab4916a8737b3df0fb181279dab6",
+      "researchSubtree": "6031e1bcd7798b08eeee0278251e4ba353747f4e",
+      "packDigest": "561d9e96d521f1a1209f13151631d7d4d9091f8ae09c189130091dcc4210191e",
+      "files": 21,
+      "bytes": 1751482
+    },
+    {
+      "slug": "cars4you-bradford",
+      "batch": 1,
+      "researchCommit": "ae4073318d83ab4916a8737b3df0fb181279dab6",
+      "researchSubtree": "17ba0875bf2ed65a14d5526018c453d1fa3af477",
+      "packDigest": "7805b2d7fe4828688c62e3f8109526e0d6ad30c66bd994978d9531b0b11da0c9",
+      "files": 23,
+      "bytes": 1335267
+    },
+    {
+      "slug": "chessington-land-of-autoz",
+      "batch": 1,
+      "researchCommit": "ae4073318d83ab4916a8737b3df0fb181279dab6",
+      "researchSubtree": "508d83e9f5cd0fe2601966e03468e4a5123350be",
+      "packDigest": "50b082c70993df3dcfa074fd08287fe41c89ac9ab3e459df1d285e113d2c466b",
+      "files": 24,
+      "bytes": 3049396
+    },
+    {
+      "slug": "chris-automotive",
+      "batch": 1,
+      "researchCommit": "ae4073318d83ab4916a8737b3df0fb181279dab6",
+      "researchSubtree": "6677e5df97c8bf1882d29086d3f09731123aadb8",
+      "packDigest": "99134f824816f65cd319ef8454fab807e005250c8f98066d6317a87d2a94dc34",
+      "files": 25,
+      "bytes": 2437593
+    },
+    {
+      "slug": "coventry-cars-and-van",
+      "batch": 1,
+      "researchCommit": "ae4073318d83ab4916a8737b3df0fb181279dab6",
+      "researchSubtree": "9dd8cbb997c67b9836ff9d2f06fada444a7e45ac",
+      "packDigest": "6bf2900690da94d6c785cb6f67f9897e5e3ec6b41e5a902d74d04931f60a5558",
+      "files": 24,
+      "bytes": 3344733
+    },
+    {
+      "slug": "danny-trading",
+      "batch": 1,
+      "researchCommit": "ae4073318d83ab4916a8737b3df0fb181279dab6",
+      "researchSubtree": "828d2efad6bc8a481cc44e2356d2be1e480d9f3b",
+      "packDigest": "5840d759fc2d6d7bc2825124152a8f24ac0f16077e1e82e29f2d32e948bf4eaf",
+      "files": 25,
+      "bytes": 1957631
+    },
+    {
+      "slug": "dms-cars-peterborough",
+      "batch": 1,
+      "researchCommit": "ae4073318d83ab4916a8737b3df0fb181279dab6",
+      "researchSubtree": "14cb4de689dfd84d496dbccf303e1df1211bae3e",
+      "packDigest": "034b8c55c6df319cc94fc5116750019bef9c62984bf144557c793d9851bf4b03",
+      "files": 23,
+      "bytes": 1762266
+    },
+    {
+      "slug": "driveline-cars",
+      "batch": 1,
+      "researchCommit": "ae4073318d83ab4916a8737b3df0fb181279dab6",
+      "researchSubtree": "808f5b6f6dce7c66b4c7599489ccbf2df6582442",
+      "packDigest": "325212c97fd54856de34249fdbc18daa0dccfc51a5a6ce6e65956bf90787a5e2",
+      "files": 27,
+      "bytes": 1873442
+    },
+    {
+      "slug": "dukinfield-r-racer",
+      "batch": 1,
+      "researchCommit": "ae4073318d83ab4916a8737b3df0fb181279dab6",
+      "researchSubtree": "35e13aad669ea4d6ed6366c10e11354fc73ad4fd",
+      "packDigest": "48b79e1d31ca2587309d02c74636cc4d5cd2af4f1ab7fd57c3f15615841191ad",
+      "files": 25,
+      "bytes": 2335998
+    },
+    {
+      "slug": "east-midlands-car-sales",
+      "batch": 1,
+      "researchCommit": "ae4073318d83ab4916a8737b3df0fb181279dab6",
+      "researchSubtree": "9c011ad17f064cbe821fd9b450593081a795a0d9",
+      "packDigest": "b3eaf4fbcbbce1445d11078dba0a817f67d5a878736469e03e9c9fc3c92b491d",
+      "files": 28,
+      "bytes": 1377706
+    },
+    {
+      "slug": "ep-cars-kirby-cross",
+      "batch": 1,
+      "researchCommit": "ae4073318d83ab4916a8737b3df0fb181279dab6",
+      "researchSubtree": "bed0152ca4366b28cfe8edfb2ce9feec60f7d5ec",
+      "packDigest": "9d0f2a84602865ae80577268593f226a76e860c063c3693f56a70f34cf683e5c",
+      "files": 26,
+      "bytes": 1741441
+    },
+    {
+      "slug": "g1-autos",
+      "batch": 1,
+      "researchCommit": "ae4073318d83ab4916a8737b3df0fb181279dab6",
+      "researchSubtree": "45965bfb79ad8b282babafa496a1c49d5ed451e6",
+      "packDigest": "ee1f1e38ce30cb0ff3a369de61b978b5543e8fd65b56f459fd2b7e1c56ab35cf",
+      "files": 28,
+      "bytes": 2812288
+    },
+    {
+      "slug": "glasgow-craigton-cars",
+      "batch": 1,
+      "researchCommit": "ae4073318d83ab4916a8737b3df0fb181279dab6",
+      "researchSubtree": "12c97cf5b33fa5d2772b8049be8475957fd47782",
+      "packDigest": "22b26dbd061183c48c70ec9b8c68581daf52591fadb271418464cdcf59a4845f",
+      "files": 24,
+      "bytes": 2749479
+    },
+    {
+      "slug": "glasgow-dalmarnock-car-sales",
+      "batch": 1,
+      "researchCommit": "ae4073318d83ab4916a8737b3df0fb181279dab6",
+      "researchSubtree": "5b04fb3eefd6888d5422a811ff17ce9fdd8de95e",
+      "packDigest": "ecd15bb1d3753dc7ffeb0f3ef96a85b230eff63b50d8cc646af715315df6f361",
+      "files": 23,
+      "bytes": 2584052
+    },
+    {
+      "slug": "glasgow-fm-motors",
+      "batch": 1,
+      "researchCommit": "ae4073318d83ab4916a8737b3df0fb181279dab6",
+      "researchSubtree": "c5ca0c2a96ae6eac8db4437e0e9a703a6ad57a1f",
+      "packDigest": "e8eb6873edcc6db9983c18f217d5012747e5621c0d733381db5c8e2c404b3c70",
+      "files": 24,
+      "bytes": 2888091
+    },
+    {
+      "slug": "glasgow-matts-motors",
+      "batch": 1,
+      "researchCommit": "ae4073318d83ab4916a8737b3df0fb181279dab6",
+      "researchSubtree": "d9be58f9513f0b76315c40cc3cc75d5461a5228d",
+      "packDigest": "4e68174b9d0bb01cf11d087ff69c1404d918609c2d15bae56ab7d60267157ab8",
+      "files": 24,
+      "bytes": 3116441
+    },
+    {
+      "slug": "hanli-motors",
+      "batch": 1,
+      "researchCommit": "ae4073318d83ab4916a8737b3df0fb181279dab6",
+      "researchSubtree": "429d6fe3b61362ec566bc2dc5c283f4aed4ed28d",
+      "packDigest": "32f036f2c07e6ce06fe9190fca3b0c9c2f3c0b20c71ad7ae6a3db5da1da6ddcf",
+      "files": 23,
+      "bytes": 1045443
+    },
+    {
+      "slug": "hmz-cars-dealers",
+      "batch": 1,
+      "researchCommit": "ae4073318d83ab4916a8737b3df0fb181279dab6",
+      "researchSubtree": "c1f8e63386c468989383e0455b20cb1c52844f7b",
+      "packDigest": "cc411ae07b2520e50bc9c462d0d625d8ed8fbdf0163bef5319a936b294798ea5",
+      "files": 26,
+      "bytes": 2226750
+    },
+    {
+      "slug": "j26-vans-trucks",
+      "batch": 1,
+      "researchCommit": "ae4073318d83ab4916a8737b3df0fb181279dab6",
+      "researchSubtree": "8275b2f2a3c4034a1691791f5c55309380e31a69",
+      "packDigest": "a77325c2fc9c3b5765f228e1ba9610862428023e56b72ba191e316664e44529d",
+      "files": 25,
+      "bytes": 1559459
+    },
+    {
+      "slug": "king-street-motors-smethwick",
+      "batch": 1,
+      "researchCommit": "ae4073318d83ab4916a8737b3df0fb181279dab6",
+      "researchSubtree": "ac350b85da08257f9726f7ae1d2ad3cd1c4796cf",
+      "packDigest": "22610d4008b3a593165be26f2ed6837a844db1113b13838871a7b1ab17618220",
+      "files": 22,
+      "bytes": 1245643
+    },
+    {
+      "slug": "leicester-motor-group",
+      "batch": 1,
+      "researchCommit": "ae4073318d83ab4916a8737b3df0fb181279dab6",
+      "researchSubtree": "f2b010fe19d9e5fe4a96eaec1242a963f42d75ea",
+      "packDigest": "730258ea2280b84c6440c43cd86be8b47cf18c05de53db9bdae355e5ac79b465",
+      "files": 27,
+      "bytes": 1858917
+    },
+    {
+      "slug": "lets-sell-your-car",
+      "batch": 1,
+      "researchCommit": "ae4073318d83ab4916a8737b3df0fb181279dab6",
+      "researchSubtree": "0ac6c03cbd89677fc9bc08929c20f45e62bc5a3f",
+      "packDigest": "c855376386d0c67a905c34b0aee4f0accd7dac1c71c9acebacb3b6eff98944be",
+      "files": 25,
+      "bytes": 2198178
+    },
+    {
+      "slug": "lifeline-cars",
+      "batch": 1,
+      "researchCommit": "ae4073318d83ab4916a8737b3df0fb181279dab6",
+      "researchSubtree": "74e635d72f09c2315379994bb037e766eac1bf98",
+      "packDigest": "8b819ce88e6ac6e0d6e4a55c34145f3f6a8827a3341c8edad720d4396ac6f52e",
+      "files": 23,
+      "bytes": 2257708
+    },
+    {
+      "slug": "lomeshaye-perfomance",
+      "batch": 1,
+      "researchCommit": "ae4073318d83ab4916a8737b3df0fb181279dab6",
+      "researchSubtree": "82bf7107bd9d20211b89233d2c36be1caba679df",
+      "packDigest": "862f59fcd34fa729949876d2684187a63250d721eca405951a8b8133f7c51cce",
+      "files": 26,
+      "bytes": 2169721
+    },
+    {
+      "slug": "london-used-cars",
+      "batch": 1,
+      "researchCommit": "ae4073318d83ab4916a8737b3df0fb181279dab6",
+      "researchSubtree": "f8871236eee9332817364d981bd6af26d91a18d4",
+      "packDigest": "271768dbe42d7636c86a2d0d7d2c374c467a5279a0ba5fc78fb4471ebb5c4c7e",
+      "files": 22,
+      "bytes": 1606027
+    },
+    {
+      "slug": "millions-auto-cars",
+      "batch": 1,
+      "researchCommit": "ae4073318d83ab4916a8737b3df0fb181279dab6",
+      "researchSubtree": "8c22920283276946ac60344cff0aac7d8ddd86b9",
+      "packDigest": "af1b9abb30349c59c0348b9c2758557cc3d4b4871b106817f67705136e3762ba",
+      "files": 22,
+      "bytes": 1391574
+    },
+    {
+      "slug": "mosaso",
+      "batch": 1,
+      "researchCommit": "ae4073318d83ab4916a8737b3df0fb181279dab6",
+      "researchSubtree": "ca4081d09de5b843d8f1542e5029f170e1f97be5",
+      "packDigest": "654b1164a0aee80bc23614d3b3f6f9eacfd06989dbcabc40706d77138d4df8ef",
+      "files": 24,
+      "bytes": 1935749
+    },
+    {
+      "slug": "night-bat-motors",
+      "batch": 1,
+      "researchCommit": "ae4073318d83ab4916a8737b3df0fb181279dab6",
+      "researchSubtree": "1b94c62bfa80f743ccfb1fb843cfa5192449ef73",
+      "packDigest": "de5d6d1f774f73f59ef2a5c121f910ee715c6f16aea021aaa5418a595ae2acad",
+      "files": 24,
+      "bytes": 1990540
+    },
+    {
+      "slug": "njh-car-sales",
+      "batch": 1,
+      "researchCommit": "ae4073318d83ab4916a8737b3df0fb181279dab6",
+      "researchSubtree": "88ee80282e9880a32a4f3eacdb5bb9c72b678a17",
+      "packDigest": "2dba397d06a0e3bb1bed15ad6101f9d6e8894d4e5df7f1940adfeaebe58035d3",
+      "files": 23,
+      "bytes": 3061176
+    },
+    {
+      "slug": "plaistow-cars-birmingham",
+      "batch": 1,
+      "researchCommit": "ae4073318d83ab4916a8737b3df0fb181279dab6",
+      "researchSubtree": "42aebc5e6a3c1fd4edc959731eabe525a6eb305a",
+      "packDigest": "dbe06e76bd4a874906f9565926ce108fd7a4fd259346901d74fe807cb86c7212",
+      "files": 24,
+      "bytes": 1188667
+    },
+    {
+      "slug": "prime-lane-motors",
+      "batch": 1,
+      "researchCommit": "ae4073318d83ab4916a8737b3df0fb181279dab6",
+      "researchSubtree": "25faec0d141d22fd23959ba124c9a214a1fda070",
+      "packDigest": "b99ffb08a11c315767086b60a2d556c61b0e014e3205a0d4ea5a3b991994dcdf",
+      "files": 20,
+      "bytes": 1382103
+    },
+    {
+      "slug": "promise-cars",
+      "batch": 1,
+      "researchCommit": "ae4073318d83ab4916a8737b3df0fb181279dab6",
+      "researchSubtree": "3db68540c8fd5e6243bf6a1036c130ed9443f4ac",
+      "packDigest": "2223ed1dc3f051837ef52eac68d8d1a4e68b5b0b84cea8fb42be5c379f1b0136",
+      "files": 21,
+      "bytes": 2220845
+    },
+    {
+      "slug": "rajas-motors",
+      "batch": 1,
+      "researchCommit": "ae4073318d83ab4916a8737b3df0fb181279dab6",
+      "researchSubtree": "aa2a06609f38f382c823e42fdb7a87a2a53709e7",
+      "packDigest": "a8ab416c83e3b3430b5a631ef1ba3f80e5526e622f057fdb4506298dfe96deb7",
+      "files": 23,
+      "bytes": 1405972
+    },
+    {
+      "slug": "reliable-autos",
+      "batch": 1,
+      "researchCommit": "ae4073318d83ab4916a8737b3df0fb181279dab6",
+      "researchSubtree": "2ddc30512292f2b326d952f45becdda22c204a52",
+      "packDigest": "5d3eafb6cd534b0bd1d5cd2edbb91b2086239456380aaf43b8694284e48b2e1e",
+      "files": 27,
+      "bytes": 1702421
+    },
+    {
+      "slug": "resi-auto-sales",
+      "batch": 1,
+      "researchCommit": "ae4073318d83ab4916a8737b3df0fb181279dab6",
+      "researchSubtree": "fe26cbb274567d2c8e08207463daeb65ee2e5a5c",
+      "packDigest": "5ffc3b4d94c4410139a69f0cd300dfced266b08bd8fb902c050a55e9865e7d73",
+      "files": 23,
+      "bytes": 1903769
+    },
+    {
+      "slug": "rh-motors-services",
+      "batch": 1,
+      "researchCommit": "ae4073318d83ab4916a8737b3df0fb181279dab6",
+      "researchSubtree": "1dec23a2f21708f2f4b12c6fabe9c4e5a0354ce4",
+      "packDigest": "8fdbb43e6b5406b3af893de9c0e04a36597868b81907a07b37a965d0f765f282",
+      "files": 26,
+      "bytes": 1973650
+    },
+    {
+      "slug": "rolf-street-car-sales",
+      "batch": 1,
+      "researchCommit": "ae4073318d83ab4916a8737b3df0fb181279dab6",
+      "researchSubtree": "c7383f63488a39e28af3906201dbdf228f5d9838",
+      "packDigest": "6e86bc9d1d0c0529125e28e639c6fb71d3c018b0fd99794933d463b24457f4c5",
+      "files": 23,
+      "bytes": 2008342
+    },
+    {
+      "slug": "saad-motors",
+      "batch": 1,
+      "researchCommit": "ae4073318d83ab4916a8737b3df0fb181279dab6",
+      "researchSubtree": "3dcd4499dad55a02ec6121259db5bdce072f2dd1",
+      "packDigest": "78546f8c0886b8208d3ffb54aed8f9888cc11742a14243a808fd686d397c0245",
+      "files": 27,
+      "bytes": 1884561
+    },
+    {
+      "slug": "simply-motors-ilford",
+      "batch": 1,
+      "researchCommit": "ae4073318d83ab4916a8737b3df0fb181279dab6",
+      "researchSubtree": "9859d0b5234f478f0b31c6488f4e544c2f6124bb",
+      "packDigest": "76448fb09ba926f5a2db29c6a55df3204996f80e2b22cffffd743a53dd39ecce",
+      "files": 26,
+      "bytes": 1680949
+    },
+    {
+      "slug": "small-automatics",
+      "batch": 1,
+      "researchCommit": "ae4073318d83ab4916a8737b3df0fb181279dab6",
+      "researchSubtree": "cb17ff308a9865a5b2fead0e857e7015171f0f5b",
+      "packDigest": "55a13ea663ba67decf27b12aa930841e68c70fe51d54ef6576fc584af2077142",
+      "files": 21,
+      "bytes": 1792946
+    },
+    {
+      "slug": "sour-motors-hyde",
+      "batch": 1,
+      "researchCommit": "ae4073318d83ab4916a8737b3df0fb181279dab6",
+      "researchSubtree": "eb957fe56c16bf502835f32163962921a93854c4",
+      "packDigest": "38015edf842e18d67bf545aa772890ee3d6485ca6c7866469202788db38dfb4f",
+      "files": 27,
+      "bytes": 1876788
+    },
+    {
+      "slug": "stanley-motor-group",
+      "batch": 1,
+      "researchCommit": "ae4073318d83ab4916a8737b3df0fb181279dab6",
+      "researchSubtree": "d64ebb2c4a764a4fedeb073c9f5505d7b6dde6a7",
+      "packDigest": "0da53622ba430b38a28eae5da92bdb982523da44de758ea451b5c4e3747c77cb",
+      "files": 22,
+      "bytes": 1269920
+    },
+    {
+      "slug": "supreme-cars-luton",
+      "batch": 1,
+      "researchCommit": "ae4073318d83ab4916a8737b3df0fb181279dab6",
+      "researchSubtree": "90d424a04e31cc541bb6d7f2f51b849aa53bd950",
+      "packDigest": "1d969cdda58d74b3254a36c222e381a26f7cb25454481eb607fd75ab62751246",
+      "files": 27,
+      "bytes": 1629324
+    },
+    {
+      "slug": "tanby-cars",
+      "batch": 1,
+      "researchCommit": "ae4073318d83ab4916a8737b3df0fb181279dab6",
+      "researchSubtree": "6f469a091acb8dbf7405c4f9d3fc386b5fef258c",
+      "packDigest": "a1fff886d862db1c00b16eadee5b9b392e03788d7f71a2e98bc0b06552562f1a",
+      "files": 26,
+      "bytes": 1275437
+    },
+    {
+      "slug": "tecno-motors",
+      "batch": 1,
+      "researchCommit": "ae4073318d83ab4916a8737b3df0fb181279dab6",
+      "researchSubtree": "80a6255fd03df6897f38a06c12f21a8d54b7bfde",
+      "packDigest": "164f5ba8b75dd262fe6e6493bd911c384acf9f1f61c332c804b7cdffc1162024",
+      "files": 22,
+      "bytes": 2770991
+    },
+    {
+      "slug": "tj-cars-slough",
+      "batch": 1,
+      "researchCommit": "ae4073318d83ab4916a8737b3df0fb181279dab6",
+      "researchSubtree": "6b133bb5faeea8ae8a6047d3cc1626c7b5665d73",
+      "packDigest": "61622f2d271eb6aee84daf60c390765c0399420640d9420297446e11ccb64ff1",
+      "files": 22,
+      "bytes": 2294356
+    },
+    {
+      "slug": "tomlinson-car-sales",
+      "batch": 1,
+      "researchCommit": "ae4073318d83ab4916a8737b3df0fb181279dab6",
+      "researchSubtree": "d841822f2a372ebb335c5fa57f4b4e838be040ea",
+      "packDigest": "67fc4f32814bfeb661e3c17a1d8420b4c108ba4cd8c3082a26176da42eb0e54e",
+      "files": 23,
+      "bytes": 1397238
+    },
+    {
+      "slug": "unique-motors-nottingham",
+      "batch": 1,
+      "researchCommit": "ae4073318d83ab4916a8737b3df0fb181279dab6",
+      "researchSubtree": "758e93fb0c71d8964923485e5fd4cae1a374f8dc",
+      "packDigest": "a7c9c9a4fe782f8c4d025fca1748fb03229d2e474b6f1a115d6c97b96cb504d7",
+      "files": 22,
+      "bytes": 1417111
+    },
+    {
+      "slug": "unlimited-motors-birmingham",
+      "batch": 1,
+      "researchCommit": "ae4073318d83ab4916a8737b3df0fb181279dab6",
+      "researchSubtree": "1c3ec58fc11c3af7a8d40a2caf0ba40d029ccc84",
+      "packDigest": "6b6e1954ef6f4e3a7be455135d55dcd5e8e591768bdd1433f257f8fbfe933155",
+      "files": 24,
+      "bytes": 2978332
+    },
+    {
+      "slug": "urbanshadow-motors",
+      "batch": 1,
+      "researchCommit": "ae4073318d83ab4916a8737b3df0fb181279dab6",
+      "researchSubtree": "ffa64117a8f7b129d4f1e76da752574b61a9c07a",
+      "packDigest": "bd755b195800e00965650fd43e3a88046deda86444537f05facc2192d65ae22f",
+      "files": 24,
+      "bytes": 2039666
+    },
+    {
+      "slug": "wortley-road-car-sales",
+      "batch": 1,
+      "researchCommit": "ae4073318d83ab4916a8737b3df0fb181279dab6",
+      "researchSubtree": "bd8144046201b2d6f6c30a952b9b9ee821510029",
+      "packDigest": "3e588914dd971628995de3a8f58015aa4e7252df7f134fc4d3554fa7fb8c3360",
+      "files": 28,
+      "bytes": 2208530
+    },
+    {
+      "slug": "zed-specialist",
+      "batch": 1,
+      "researchCommit": "ae4073318d83ab4916a8737b3df0fb181279dab6",
+      "researchSubtree": "d13bb82aee82583e1225ae99b3b1841f7c0c4658",
+      "packDigest": "d8623af6f565b6bc784169d3a89701aa7131617c4f737fd6f44b9ab734c7654c",
+      "files": 26,
+      "bytes": 1615178
+    },
+    {
+      "slug": "al-hiba-used-cars",
+      "batch": 4,
+      "researchCommit": "bb4699670daeb5827051d6230d5be6f995ef4da6",
+      "researchSubtree": "23d843a409c9862488228579ee8e7dc36e584a19",
+      "packDigest": "91283bcd1aa1bc3d453e17628a9a8e0388428f185d3ef1bdcb6b449d236baedc",
+      "files": 21,
+      "bytes": 967082
+    },
+    {
+      "slug": "al-ishfaq-used-cars-llc",
+      "batch": 4,
+      "researchCommit": "bb4699670daeb5827051d6230d5be6f995ef4da6",
+      "researchSubtree": "a20ea07ee1cdb1b0e1a70bc1cff3c5c4081f9255",
+      "packDigest": "de3ca6c3a40af16ed47fe54c011a0ddc6514d3219d6ec279f2e13021ddc33202",
+      "files": 23,
+      "bytes": 1508911
+    },
+    {
+      "slug": "al-luluah-al-baithaa-cars",
+      "batch": 4,
+      "researchCommit": "bb4699670daeb5827051d6230d5be6f995ef4da6",
+      "researchSubtree": "dbd16d8de74b78d0b6a8427fc8ce56c840383821",
+      "packDigest": "0250fd874b953ef1b3b1dad6a03450fa6699a38aebd8ed833eb503b8f526a7d6",
+      "files": 23,
+      "bytes": 1904041
+    },
+    {
+      "slug": "al-markabah-al-mutamadah-used-cars",
+      "batch": 4,
+      "researchCommit": "bb4699670daeb5827051d6230d5be6f995ef4da6",
+      "researchSubtree": "5e52ad081070fedf9a4a79ccbc780eb756c685c1",
+      "packDigest": "13969b579f2cc5081f5d7f01a17aed48ef470cff4a3010be656ee5049c8bd589",
+      "files": 23,
+      "bytes": 1320166
+    },
+    {
+      "slug": "al-meqat",
+      "batch": 4,
+      "researchCommit": "bb4699670daeb5827051d6230d5be6f995ef4da6",
+      "researchSubtree": "a77716a81fb545ec61fb68187d9d13c86e9c5960",
+      "packDigest": "d16495e775a30fb2f26f2504c49cc1999a8cd64803f966dae04e13587229492b",
+      "files": 21,
+      "bytes": 1372226
+    },
+    {
+      "slug": "al-muhtaref-used-cars",
+      "batch": 4,
+      "researchCommit": "bb4699670daeb5827051d6230d5be6f995ef4da6",
+      "researchSubtree": "bf26b7efcf5ad989125fb6d6de1be23f2f67a9f1",
+      "packDigest": "0f3c7cead143b9cbfe49d8a135e5ebcfa7b60b44a1ae9e6cdc841d0f6fa4ed0a",
+      "files": 25,
+      "bytes": 3477488
+    },
+    {
+      "slug": "al-nayrab-used-cars",
+      "batch": 4,
+      "researchCommit": "bb4699670daeb5827051d6230d5be6f995ef4da6",
+      "researchSubtree": "b7fba479667819202345e32288f5f1ac59b6dbed",
+      "packDigest": "27dc74615965f87a7443cb78bc6e7e9bb05b0be6fd83bc9c3c6c2b4c92c91a5f",
+      "files": 22,
+      "bytes": 1192335
+    },
+    {
+      "slug": "al-nukhba-al-malakyah-used-cars",
+      "batch": 4,
+      "researchCommit": "bb4699670daeb5827051d6230d5be6f995ef4da6",
+      "researchSubtree": "4590bfa06fcb843ca69c17c8f7e48b2daf9c8d07",
+      "packDigest": "4d55c6d97c006f8d478025a6c41563e1838c54d08f45ce3cd4bd6b1718bf3863",
+      "files": 24,
+      "bytes": 5015949
+    },
+    {
+      "slug": "al-saif-used-cars-trading",
+      "batch": 4,
+      "researchCommit": "bb4699670daeb5827051d6230d5be6f995ef4da6",
+      "researchSubtree": "8106ba0dbd3f54f19ac5ea00b7e22079f436bd82",
+      "packDigest": "aefe60b887cfe991cdbcb859f57c954225a7b2073632b5b1932ab537417de354",
+      "files": 22,
+      "bytes": 1625578
+    },
+    {
+      "slug": "al-sammarraie-used-cars",
+      "batch": 4,
+      "researchCommit": "bb4699670daeb5827051d6230d5be6f995ef4da6",
+      "researchSubtree": "c92adb9a49cd060f6e5697ee78e69720af6f0cd6",
+      "packDigest": "2186671bbf35e253bdd2cedb65afa0e6877181782c41a72abb660867739ca8ee",
+      "files": 23,
+      "bytes": 1831993
+    },
+    {
+      "slug": "al-shamal-al-amreci-used-cars",
+      "batch": 4,
+      "researchCommit": "bb4699670daeb5827051d6230d5be6f995ef4da6",
+      "researchSubtree": "50a317feb09ae0b2460712aad2453ac29b383b32",
+      "packDigest": "7fc004f41865f46dbbc6b3b67ba7b4be37b2c3911894c1aadb66309a6091968a",
+      "files": 25,
+      "bytes": 2024450
+    },
+    {
+      "slug": "asal-al-haibah-used-cars",
+      "batch": 4,
+      "researchCommit": "bb4699670daeb5827051d6230d5be6f995ef4da6",
+      "researchSubtree": "d56632da3727857deaa920c92b9904226f34524a",
+      "packDigest": "03a55d44233c6d5cbf09599b9a9bb194c63d9f487d4a48dd22a1274e7688de6c",
+      "files": 23,
+      "bytes": 1462011
+    },
+    {
+      "slug": "badar-used-cars",
+      "batch": 4,
+      "researchCommit": "bb4699670daeb5827051d6230d5be6f995ef4da6",
+      "researchSubtree": "188972891b9fa19c9156094f09d0d28553a58dd4",
+      "packDigest": "907018fcb3ceba8b5e4e11909931ccb35b2384bd5063addd584cd59feacfb253",
+      "files": 22,
+      "bytes": 2645267
+    },
+    {
+      "slug": "bdayt-al-khir-used-cars",
+      "batch": 4,
+      "researchCommit": "bb4699670daeb5827051d6230d5be6f995ef4da6",
+      "researchSubtree": "6efcaba6cf03387a9474ba006679cc1796326907",
+      "packDigest": "a90c08e87104b48ac94c68943b7bd9b2d9ae74ffd7d21eabfac883348f0e17d7",
+      "files": 22,
+      "bytes": 1378369
+    },
+    {
+      "slug": "berlin-used-cars",
+      "batch": 4,
+      "researchCommit": "bb4699670daeb5827051d6230d5be6f995ef4da6",
+      "researchSubtree": "2041890374b7d093f0db1c2ffc81c6698f18fda8",
+      "packDigest": "358c05a1a46fb60a2736fd7670f511edd46c3ec868e4fdcc1bdc12d21176c778",
+      "files": 22,
+      "bytes": 2005866
+    },
+    {
+      "slug": "best-friend-used-cars",
+      "batch": 4,
+      "researchCommit": "bb4699670daeb5827051d6230d5be6f995ef4da6",
+      "researchSubtree": "26fb6a7659410c76b99f20286791c12c1953e4d7",
+      "packDigest": "48299cd67e51ff8d99080ddb71d55029416f7048fa639f93112cc9aa35f911d4",
+      "files": 25,
+      "bytes": 1765558
+    },
+    {
+      "slug": "elmorshedi-used-cars-tr-llc",
+      "batch": 4,
+      "researchCommit": "bb4699670daeb5827051d6230d5be6f995ef4da6",
+      "researchSubtree": "2ba89923363eebadafec8dde9a1800ae127ebef5",
+      "packDigest": "e6d6f41b2052d6c1edd7f4001315b0e53cf6c68507da73e445f56cb7d3df08c4",
+      "files": 25,
+      "bytes": 1783016
+    },
+    {
+      "slug": "mk-cars",
+      "batch": 4,
+      "researchCommit": "bb4699670daeb5827051d6230d5be6f995ef4da6",
+      "researchSubtree": "4e2b6f4625f1a04cf6ae359a3aab851be7c6010b",
+      "packDigest": "ed10c13b387a7bdb8f1347f50c497a061f5845aac65f0121249a18478e20f8ca",
+      "files": 22,
+      "bytes": 1748512
+    },
+    {
+      "slug": "mohd-rasheed-used-cars",
+      "batch": 4,
+      "researchCommit": "bb4699670daeb5827051d6230d5be6f995ef4da6",
+      "researchSubtree": "a741931c33f61e4c14d87d300670423742527a8d",
+      "packDigest": "ae774fa399deb2dec940e982a0aedb99efebe98e045be35312156df0ac1bb5d5",
+      "files": 23,
+      "bytes": 1554247
+    },
+    {
+      "slug": "najem-al-tareeq-used-cars",
+      "batch": 4,
+      "researchCommit": "bb4699670daeb5827051d6230d5be6f995ef4da6",
+      "researchSubtree": "5138640b4cae85c0c2bfd93b253efa55de8b71da",
+      "packDigest": "930de7b53fb5f7602ed3567adde7ff3a76b7eaa3f54e612e3c7f9f3238d7015d",
+      "files": 23,
+      "bytes": 1572117
+    },
+    {
+      "slug": "nassem-al-sham-used-cars",
+      "batch": 4,
+      "researchCommit": "bb4699670daeb5827051d6230d5be6f995ef4da6",
+      "researchSubtree": "4e25cf6408dba72eb02624120efbeb8f5182c4cd",
+      "packDigest": "239357ee8c2d24e358f3fef9b7861ff885281639dc0a7feca43fb745d8406c32",
+      "files": 25,
+      "bytes": 1063054
+    },
+    {
+      "slug": "noor-al-seyoh-used-car",
+      "batch": 4,
+      "researchCommit": "bb4699670daeb5827051d6230d5be6f995ef4da6",
+      "researchSubtree": "7640349f2147dc4d67f548a8830a31c125b40145",
+      "packDigest": "8edb59ceaf88f8474044a72bb82e0fc80e561f74529e750e66429fdb37398f93",
+      "files": 22,
+      "bytes": 1150810
+    },
+    {
+      "slug": "pearl-used-cars",
+      "batch": 4,
+      "researchCommit": "bb4699670daeb5827051d6230d5be6f995ef4da6",
+      "researchSubtree": "98edaebf79c345d55935ad63edc6da47a9440d5f",
+      "packDigest": "c8ee0586fa20dc6c01661e99a17265bb48b3be63843f1592bcbb67fb512118c4",
+      "files": 22,
+      "bytes": 1840454
+    },
+    {
+      "slug": "prestige-and-alma-used-cars",
+      "batch": 4,
+      "researchCommit": "bb4699670daeb5827051d6230d5be6f995ef4da6",
+      "researchSubtree": "1a89a2202d6a1ef9945f9d5330adafc16b8c439a",
+      "packDigest": "cfc04f5d5b0f5e4ff5ae2c209c0bb4ae5726be7e847a0d1d46df5d112b2d6c3d",
+      "files": 24,
+      "bytes": 1237186
+    },
+    {
+      "slug": "qasr-al-jazeera-used-cars",
+      "batch": 4,
+      "researchCommit": "bb4699670daeb5827051d6230d5be6f995ef4da6",
+      "researchSubtree": "742d05d0fbf0bb8c4e2357fe269188d159e5a8dc",
+      "packDigest": "9fd962f5c4bca867d25736ae373109702da59292e909550a9532135a09f72e22",
+      "files": 24,
+      "bytes": 948006
+    },
+    {
+      "slug": "rebou-al-fakhama-used-cars",
+      "batch": 4,
+      "researchCommit": "bb4699670daeb5827051d6230d5be6f995ef4da6",
+      "researchSubtree": "fda23f705c404214685361a7f9b91a3e147e47f4",
+      "packDigest": "07cc592943e99c0ff36b24411bda9fbd5693db2174a85bacf2333223baff8d68",
+      "files": 23,
+      "bytes": 2275382
+    },
+    {
+      "slug": "rebou-najd-used-cars-trading",
+      "batch": 4,
+      "researchCommit": "bb4699670daeb5827051d6230d5be6f995ef4da6",
+      "researchSubtree": "80cca4ec6196b945cfcdffdd9d5fd456b066ecbb",
+      "packDigest": "4ade3257432d214312d3e74ce05f116d5b70be5a04e594fe40188b286c90aa02",
+      "files": 26,
+      "bytes": 1880948
+    },
+    {
+      "slug": "royal-motors-used-cars-trading",
+      "batch": 4,
+      "researchCommit": "bb4699670daeb5827051d6230d5be6f995ef4da6",
+      "researchSubtree": "832182dc5e5f8d77556b79063f9bd130476f3585",
+      "packDigest": "280ab19d75a4f79c826aeeb8bd196af0587b95b196ed35dc74ba5ce991399902",
+      "files": 22,
+      "bytes": 1927167
+    },
+    {
+      "slug": "sama-alsaadah-used-cars",
+      "batch": 4,
+      "researchCommit": "bb4699670daeb5827051d6230d5be6f995ef4da6",
+      "researchSubtree": "ea76e4b7f40b03cea2e4d1e181588eab9bd65dd2",
+      "packDigest": "1be70a85fb0fa28c18427d2c323d8d9d04f93fb2205b834d8fe0aebb3c36777d",
+      "files": 25,
+      "bytes": 1721614
+    },
+    {
+      "slug": "sarmad-used-cars",
+      "batch": 4,
+      "researchCommit": "bb4699670daeb5827051d6230d5be6f995ef4da6",
+      "researchSubtree": "bd9043a65a8d4ac7342407a6650a5d30fb5f6a5f",
+      "packDigest": "bfa2e42671985b53a2256f155b1f2d87ec0646ad0646a105ceea2dd26efccc57",
+      "files": 25,
+      "bytes": 2358165
+    },
+    {
+      "slug": "shams-al-sabah-used-cars",
+      "batch": 4,
+      "researchCommit": "bb4699670daeb5827051d6230d5be6f995ef4da6",
+      "researchSubtree": "1a219072e21dbe56f8c03e296f9896910db98268",
+      "packDigest": "78c4209f5b442994442e7c458348fabc6e6328edc3ac31977411840175243854",
+      "files": 24,
+      "bytes": 897740
+    },
+    {
+      "slug": "thahban-motors",
+      "batch": 4,
+      "researchCommit": "bb4699670daeb5827051d6230d5be6f995ef4da6",
+      "researchSubtree": "5046274daf042bb47219f31d9a8bc643f3baa350",
+      "packDigest": "5a82fc2928f3848984c9baf33eeb2f4c067182a4320478157fb047f17f82ef0e",
+      "files": 22,
+      "bytes": 1588065
+    },
+    {
+      "slug": "union-used-car-exhibition-llc",
+      "batch": 4,
+      "researchCommit": "bb4699670daeb5827051d6230d5be6f995ef4da6",
+      "researchSubtree": "b0adb429c9b6e79596f56a5fd2f66903bcff50fe",
+      "packDigest": "bbe54c20fccc8a0c2b5190c33767038fbca34d3c3e499eb505f1e010c6da5dbb",
+      "files": 24,
+      "bytes": 1984881
+    }
+  ]
+}

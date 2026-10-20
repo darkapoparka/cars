@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "dealer": "dms-cars-peterborough",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "public-listing-1",
+      "title": "2018 Hyundai Tucson 1.7 CRDi SE Nav DCT",
+      "make": "Hyundai",
+      "model": "Tucson",
+      "year": 2018,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/public-1.jpg"
+      ],
+      "sourceUrl": "https://www.ebay.co.uk/itm/900022316953",
+      "observedAt": "2026-10-19T17:53:27.756281Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "fuel": "Diesel",
+      "color": "Red",
+      "mileageOnRequest": true,
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "public-listing-2",
+      "title": "2014 Ford Fiesta 1.5 TDCi Zetec",
+      "make": "Ford",
+      "model": "Fiesta",
+      "year": 2014,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/public-2.jpg"
+      ],
+      "sourceUrl": "https://www.ebay.co.uk/itm/900021969688",
+      "observedAt": "2026-10-19T17:53:28.243968Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "transmission": "Manual",
+      "fuel": "Diesel",
+      "color": "Silver",
+      "mileageValue": 103000,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "public-listing-3",
+      "title": "2016 Hyundai i40 1.7 CRDi SE Nav",
+      "make": "Hyundai",
+      "model": "i40",
+      "year": 2016,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/public-3.jpg"
+      ],
+      "sourceUrl": "https://www.ebay.co.uk/itm/900018390039",
+      "observedAt": "2026-10-19T17:53:28.365447Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "transmission": "Manual",
+      "fuel": "Diesel",
+      "color": "Silver",
+      "mileageValue": 113000,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "reliable-autos",
+  "previousSlug": "reliable-autos",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:19:26.254Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-nottingham-reliable-autos",
+    "position": 75
+  },
+  "before": {
+    "files": 41,
+    "bytes": 3201124
+  },
+  "afterBeforeReview": {
+    "files": 25,
+    "bytes": 1693310
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 78297,
+      "sha256": "efe668b99dcd0bacad0cefeb253e5567ea5c68276f8e40954494de1c4944cb08"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 78297,
+      "sha256": "efe668b99dcd0bacad0cefeb253e5567ea5c68276f8e40954494de1c4944cb08"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 78297,
+      "sha256": "efe668b99dcd0bacad0cefeb253e5567ea5c68276f8e40954494de1c4944cb08"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 65191,
+      "sha256": "468ffe2ad2d78db7b547370de4132f9e9296c6859ec5600db0cbf9ed0b60c269"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 163274,
+      "sha256": "c60322083e410c452f600e083b95d2ea685f8d67dfdb37fd5c2409aa16c91ea2"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 163274,
+      "sha256": "c60322083e410c452f600e083b95d2ea685f8d67dfdb37fd5c2409aa16c91ea2"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 65191,
+      "sha256": "468ffe2ad2d78db7b547370de4132f9e9296c6859ec5600db0cbf9ed0b60c269"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 78297,
+      "sha256": "efe668b99dcd0bacad0cefeb253e5567ea5c68276f8e40954494de1c4944cb08"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 7420,
+      "sha256": "8f0f154d56c28edc9cae5d968ad26663cd43f9e9c7040c48edba642f754f38d4"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 163274,
+      "sha256": "c60322083e410c452f600e083b95d2ea685f8d67dfdb37fd5c2409aa16c91ea2"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 96120,
+      "sha256": "73f40b6dbf9de20b1f5d5cba9d3ad0c666847cd805223eed60f60498b87d6d88"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 163274,
+      "sha256": "c60322083e410c452f600e083b95d2ea685f8d67dfdb37fd5c2409aa16c91ea2"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 96120,
+      "sha256": "73f40b6dbf9de20b1f5d5cba9d3ad0c666847cd805223eed60f60498b87d6d88"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 65191,
+      "sha256": "468ffe2ad2d78db7b547370de4132f9e9296c6859ec5600db0cbf9ed0b60c269"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 45880,
+      "sha256": "bea0c543690b262a9df7d80155588b0f5e2c6c60ef80b39c8aede986431f87ae"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 52106,
+      "sha256": "b39d62556aa99c1412a1c5d3eca6e1f944697f9c16347a0432324ed320448439"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 52106,
+      "sha256": "b39d62556aa99c1412a1c5d3eca6e1f944697f9c16347a0432324ed320448439"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 12,
+    "bytes": 1659000,
+    "inventorySha256": "2f434ec05333b6156449c85608f60841797a40299aa546114864234ad72a5046",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "reliable-autos",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 27,
+    "report": "dealers/reliable-autos/input-review.json"
+  },
+  "after": {
+    "files": 27,
+    "bytes": 1702421
+  }
+}

@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "tj-cars-slough",
+  "previousSlug": "tj-cars-slough",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:24:20.323Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-slough-tj-cars",
+    "position": 87
+  },
+  "before": {
+    "files": 36,
+    "bytes": 5433825
+  },
+  "afterBeforeReview": {
+    "files": 20,
+    "bytes": 2286124
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 168159,
+      "sha256": "542f0645d1d781cfaa3aac0b97992b16f01fba51da4b5a6daea190179b8d602c"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 168159,
+      "sha256": "542f0645d1d781cfaa3aac0b97992b16f01fba51da4b5a6daea190179b8d602c"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 168159,
+      "sha256": "542f0645d1d781cfaa3aac0b97992b16f01fba51da4b5a6daea190179b8d602c"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 252576,
+      "sha256": "3aa4cac9b9d81457fb41ad3cea689ef49e75aa60710d5ca07d2adf07052b9e2a"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 252576,
+      "sha256": "3aa4cac9b9d81457fb41ad3cea689ef49e75aa60710d5ca07d2adf07052b9e2a"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 252576,
+      "sha256": "3aa4cac9b9d81457fb41ad3cea689ef49e75aa60710d5ca07d2adf07052b9e2a"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 252576,
+      "sha256": "3aa4cac9b9d81457fb41ad3cea689ef49e75aa60710d5ca07d2adf07052b9e2a"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 168159,
+      "sha256": "542f0645d1d781cfaa3aac0b97992b16f01fba51da4b5a6daea190179b8d602c"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 12133,
+      "sha256": "919e97c1bea881d197d995e44145283e358787fc71850321b7075f0fe0566676"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 252576,
+      "sha256": "3aa4cac9b9d81457fb41ad3cea689ef49e75aa60710d5ca07d2adf07052b9e2a"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 154758,
+      "sha256": "f7db90f51adc323dcac2117ec5451996606a6cf46484c0ff7d3d64f986c62d16"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 252576,
+      "sha256": "3aa4cac9b9d81457fb41ad3cea689ef49e75aa60710d5ca07d2adf07052b9e2a"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 154758,
+      "sha256": "f7db90f51adc323dcac2117ec5451996606a6cf46484c0ff7d3d64f986c62d16"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 252576,
+      "sha256": "3aa4cac9b9d81457fb41ad3cea689ef49e75aa60710d5ca07d2adf07052b9e2a"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 154758,
+      "sha256": "f7db90f51adc323dcac2117ec5451996606a6cf46484c0ff7d3d64f986c62d16"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 117206,
+      "sha256": "dcf706391439bca560bc01c8dbd6e82f999bcb57572d4c82f39ad5219fccd847"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 117206,
+      "sha256": "dcf706391439bca560bc01c8dbd6e82f999bcb57572d4c82f39ad5219fccd847"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 11,
+    "bytes": 2263857,
+    "inventorySha256": "6c116f15034ca41e9f914883e263d160f5f209469b2fb182d455122bfd5e894c",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "tj-cars-slough",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 22,
+    "report": "dealers/tj-cars-slough/input-review.json"
+  },
+  "after": {
+    "files": 22,
+    "bytes": 2294356
+  }
+}

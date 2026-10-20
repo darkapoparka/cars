@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "dealer": "east-midlands-car-sales",
+  "dealerId": "gb-kirkby-east-midlands-car-sales",
+  "reviewedAt": "2026-10-19",
+  "providerWrites": 0,
+  "dealerContactPerformed": false,
+  "primarySource": {
+    "url": "https://showroom.ebaymotorspro.co.uk/East-Midlands-Car-sales-LTD",
+    "httpStatus": 200,
+    "htmlSha256": "c0742ab661620f29b006e813f370d7fdfc78ced91d13b6a9afad1816f4c778c1",
+    "observedAt": "2026-10-19"
+  },
+  "identity": {
+    "retainedLeadName": "East Midlands Car Sales Ltd",
+    "currentSellerDisplayName": "East Midlands Car sales LTD",
+    "existingRegistryOrClientMatch": false
+  },
+  "publicBusinessPhone": {
+    "source": "current dealer marketplace profile",
+    "ownership": "Public business contact; it may be a marketplace forwarding number."
+  },
+  "factsOmitted": [],
+  "limitations": [],
+  "inventory": {
+    "kind": "dated-listing-snapshot",
+    "retainedListings": 3,
+    "photos": 3,
+    "availabilityConfirmedWithDealer": false,
+    "pricesOmitted": true,
+    "rawMarketplaceHtmlRetainedInPublicPack": false,
+    "advertDetailReview": {
+      "reference": "advert-detail-review.json",
+      "reviewedAt": "2026-10-19T19:34:01.044Z",
+      "retainedDisclosures": [
+        {
+          "listingId": "listing-1",
+          "type": "vehicle-history",
+          "category": "S/N"
+        }
+      ],
+      "publicSourceReportsOnly": true
+    }
+  },
+  "researchMethod": "Opened the exact primary seller catalogue; used its current Used cars/vehicle records and excluded generic Featured advertisements. Checked matched directories and bounded exact business name plus locality searches for an official site or usable logo.",
+  "secondarySource": {
+    "url": "https://www.autotrader.co.uk/dealers/nottinghamshire/nottingham/east-midlands-car-sales-ltd-10048908",
+    "httpStatus": 200,
+    "htmlSha256": "1dae18c8f09b2df46ca2d9b82b1d9cdb17ecd736e675bb5b721355629d53214e",
+    "observedAt": "2026-10-19"
+  }
+}

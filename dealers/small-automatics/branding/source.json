@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 1,
+  "dealer": "small-automatics",
+  "status": "reviewed",
+  "realLogoFirst": true,
+  "publicSources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/Ulez-automatics?extendedFilter=1",
+      "observedAt": "2026-10-19T17:36:50.653721Z"
+    },
+    {
+      "source": "alternate-public-logo-page",
+      "retainedEvidence": "source URL in real-logo research",
+      "observation": "A dealer-image URL was observed, but the image host timed out; no inaccessible image is claimed as an obtained original."
+    }
+  ],
+  "originals": [],
+  "creationMethod": "imagegen-proposal",
+  "dealerApproved": false,
+  "approvalStatus": "independent-preview-not-dealer-approved",
+  "researchConclusion": "Bounded public checks did not yield usable distinct dealer artwork. Generic text banners or unavailable image-host URLs do not prove that the dealer has no logo. This artwork is clearly an independent proposal.",
+  "generation": {
+    "tool": "image_gen.imagegen",
+    "generationId": "exec-27a3dd67-8fd7-4025-918c-2d6f0c6198c1",
+    "modelVersion": null,
+    "prompt": " Use case: logo-brand. Produce one professional dealer-logo asset on a truly transparent background. Wide horizontal lockup with a separate compact emblem at left, generous transparent gap, and the exact business name at right in bold custom geometric lettering. The emblem must stay clear at 32px, thick strokes and few shapes. Flat crisp vector-like artwork; no gradients, no shadows, no mockup, no photography, no extra text. Every dark element must have a fine white outer keyline and every white element a dark navy outline, so this identical master works on white, charcoal #111113 and dark red #c40101. Use a clean solid silhouette, not decorative outlines. This is an independent proposal, not dealer-approved artwork. Exact name: SMALL AUTOMATICS. Left emblem a compact S inside one rounded-corner open-square form, inspired by simple automatic gear selection but without tiny letters or gear teeth. Royal blue #255bba and white with dark navy. Exact two-line wordmark SMALL / AUTOMATICS; both lines bold legible, no tiny tagline."
+  },
+  "compactDerivation": {
+    "method": "lossless-isolated-emblem-crop",
+    "parentReference": "branding/generated-master.png",
+    "parentSha256": "2b1eb383daabeb5d42438dc5633c4fc020c4085f4d66f84100a7e772ecd2458b",
+    "crop": {
+      "left": 0,
+      "top": 0,
+      "width": 613,
+      "height": 724
+    },
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-27a3dd67-8fd7-4025-918c-2d6f0c6198c1",
+      "modelVersion": null
+    }
+  },
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T18:40:02.999Z",
+    "master": {
+      "path": "branding/generated-master.png",
+      "sha256": "2b1eb383daabeb5d42438dc5633c4fc020c4085f4d66f84100a7e772ecd2458b",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-27a3dd67-8fd7-4025-918c-2d6f0c6198c1",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "409eca61139f991c62104ed1f83eb83a2c3c8cd09855a73176af95982400df51",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-27a3dd67-8fd7-4025-918c-2d6f0c6198c1",
+        "modelVersion": null
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "409eca61139f991c62104ed1f83eb83a2c3c8cd09855a73176af95982400df51",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-27a3dd67-8fd7-4025-918c-2d6f0c6198c1",
+        "modelVersion": null
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-master.png",
+        "sha256": "2b1eb383daabeb5d42438dc5633c4fc020c4085f4d66f84100a7e772ecd2458b",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-27a3dd67-8fd7-4025-918c-2d6f0c6198c1",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-master.png",
+        "sha256": "2b1eb383daabeb5d42438dc5633c4fc020c4085f4d66f84100a7e772ecd2458b",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-27a3dd67-8fd7-4025-918c-2d6f0c6198c1",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-master.png",
+        "sha256": "2b1eb383daabeb5d42438dc5633c4fc020c4085f4d66f84100a7e772ecd2458b",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-27a3dd67-8fd7-4025-918c-2d6f0c6198c1",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": {
+        "onLight": [
+          "#ffffff"
+        ],
+        "onDark": [
+          "#111113"
+        ],
+        "onAccent": [
+          "#c40101"
+        ]
+      },
+      "wordmarkWidths": [
+        120,
+        180
+      ],
+      "markWidths": [
+        32,
+        64
+      ],
+      "method": "Same actual dual-contrast generated artwork on each surface; no generated colours are represented as a template palette change.",
+      "reviewedAt": "2026-10-19T18:40:02.999Z",
+      "review": "Visually reviewed exact cropTransparentPadding exports at120px and180px wordmark widths and32px/64px compact sizes on white, charcoal and red. Exact spelling retained, real alpha present, compact emblem clear. The source palette is part of the artwork only."
+    }
+  }
+}

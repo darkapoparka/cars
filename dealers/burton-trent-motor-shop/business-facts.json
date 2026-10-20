@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "slug": "burton-trent-motor-shop",
+  "dealerId": "gb-burton-trent-motor-shop",
+  "business": {
+    "name": "Trent Motor Shop",
+    "city": "Burton-on-Trent",
+    "region": "Staffordshire",
+    "countryCode": "GB",
+    "currency": "GBP",
+    "distanceUnit": "mi",
+    "locale": "en-GB",
+    "address": "14 Thornley Street, Burton-On-Trent, Staffordshire, DE14 2QW",
+    "phone": "+447457401071",
+    "phoneDisplay": "(07457) 401071",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://www.autotrader.co.uk/dealers/staffordshire/burton-on-trent/trent-motor-shop-10037753",
+    "hours": "Monday–Saturday 09:00–19:00; Sunday closed. Viewings by appointment.",
+    "sourceUrl": "https://www.autotrader.co.uk/dealers/staffordshire/burton-on-trent/trent-motor-shop-10037753",
+    "observedAt": "2026-10-19T17:36:00.062141Z",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://www.autotrader.co.uk/dealers/staffordshire/burton-on-trent/trent-motor-shop-10037753",
+      "observedAt": "2026-10-19T17:36:00.062141Z",
+      "supports": [
+        "business-name",
+        "public-business-contact",
+        "business-location",
+        "current-listing-snapshot"
+      ]
+    }
+  ]
+}

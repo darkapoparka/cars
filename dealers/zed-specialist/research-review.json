@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "dealer": "zed-specialist",
+  "dealerId": "gb-luton-zed-specialist",
+  "reviewedAt": "2026-10-19",
+  "providerWrites": 0,
+  "dealerContactPerformed": false,
+  "primarySource": {
+    "url": "https://showroom.ebaymotorspro.co.uk/Zed-Specialist",
+    "httpStatus": 200,
+    "htmlSha256": "defa41b802a8095c316870fe8e878bdd701210311a7bbdc9112872bf29ae904d",
+    "observedAt": "2026-10-19"
+  },
+  "identity": {
+    "retainedLeadName": "Zed Specialist",
+    "currentSellerDisplayName": "Zed Specialist",
+    "existingRegistryOrClientMatch": false
+  },
+  "publicBusinessPhone": {
+    "source": "current dealer marketplace profile",
+    "ownership": "Public business contact; it may be a marketplace forwarding number."
+  },
+  "factsOmitted": [],
+  "limitations": [],
+  "inventory": {
+    "kind": "dated-listing-snapshot",
+    "retainedListings": 3,
+    "photos": 3,
+    "availabilityConfirmedWithDealer": false,
+    "pricesOmitted": true,
+    "rawMarketplaceHtmlRetainedInPublicPack": false
+  },
+  "researchMethod": "Opened the exact primary seller catalogue; used its current Used cars/vehicle records and excluded generic Featured advertisements. Checked matched directories and bounded exact business name plus locality searches for an official site or usable logo."
+}

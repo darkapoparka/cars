@@ -1,0 +1,197 @@
+{
+  "schemaVersion": 1,
+  "dealer": "berlin-used-cars",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T21:27:11.874Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "sourced-logo-imagegen-redraw",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "a3c77b0baca37e20dde8d4e049363c4b549cca05cec10554c39cf7e4def53d4d",
+      "sourceSha256": "0c1f1b6f502a65e4575b4ad3ff248d5701aff80605d0026db389b0a99d9c4eae"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "0c53a111e61a3a8b0fb87a670678012cb81d5c3e3f2468f9707938002042976f",
+      "sourceSha256": "3de5728ee18ac705de993156da9d72a41da6c4eb234bdb33c6a7a413ae912d11"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "0c53a111e61a3a8b0fb87a670678012cb81d5c3e3f2468f9707938002042976f",
+      "sourceSha256": "3de5728ee18ac705de993156da9d72a41da6c4eb234bdb33c6a7a413ae912d11"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "0c1f1b6f502a65e4575b4ad3ff248d5701aff80605d0026db389b0a99d9c4eae",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-1cd9d1e9-69e9-4677-bd15-3b6fa3e361d2",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "054d687b03b6bc222e39aac297a67d0c95ccb2467d06ee163ba24a602d993a68",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-1cd9d1e9-69e9-4677-bd15-3b6fa3e361d2",
+      "modelVersion": null
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "0720d1a1ec8b6a6406363be62b7ce76ef25c5b9e04919f8c2b0b2347b78a66f0"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "0c1f1b6f502a65e4575b4ad3ff248d5701aff80605d0026db389b0a99d9c4eae",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1cd9d1e9-69e9-4677-bd15-3b6fa3e361d2",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/berlin-used-cars/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "3de5728ee18ac705de993156da9d72a41da6c4eb234bdb33c6a7a413ae912d11",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-36d70dba-bb01-42e4-93e3-f6f0524110e8",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/berlin-used-cars/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "3de5728ee18ac705de993156da9d72a41da6c4eb234bdb33c6a7a413ae912d11",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-36d70dba-bb01-42e4-93e3-f6f0524110e8",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/berlin-used-cars/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "88002a363cd366d92af42772a746000947a13890a787545ad41a72e78787f1a9",
+      "sha256": "0c1f1b6f502a65e4575b4ad3ff248d5701aff80605d0026db389b0a99d9c4eae",
+      "crop": {
+        "left": 36,
+        "top": 59,
+        "width": 1183,
+        "height": 1144
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "ea16dfc46473bb2c8188f927e56a831d3d8ddb402025a5ff89c110bc09896f5b",
+      "sha256": "3de5728ee18ac705de993156da9d72a41da6c4eb234bdb33c6a7a413ae912d11",
+      "crop": {
+        "left": 35,
+        "top": 56,
+        "width": 1185,
+        "height": 1145
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "ea16dfc46473bb2c8188f927e56a831d3d8ddb402025a5ff89c110bc09896f5b",
+      "sha256": "3de5728ee18ac705de993156da9d72a41da6c4eb234bdb33c6a7a413ae912d11",
+      "crop": {
+        "left": 35,
+        "top": 56,
+        "width": 1185,
+        "height": 1145
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "17c374df13c0c2aab176e8ca7dc59baec5cf0c42736154f2571686ce12a54ebd",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1cd9d1e9-69e9-4677-bd15-3b6fa3e361d2",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/berlin-used-cars/branding/generated-on-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "65e3d1b8a5a3734ccd8622b50c63c38b3a7307baf1730b1ed8dd906719a11b0a",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-36d70dba-bb01-42e4-93e3-f6f0524110e8",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/berlin-used-cars/branding/generated-on-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "054d687b03b6bc222e39aac297a67d0c95ccb2467d06ee163ba24a602d993a68",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1cd9d1e9-69e9-4677-bd15-3b6fa3e361d2",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/berlin-used-cars/branding/generated-on-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "0720d1a1ec8b6a6406363be62b7ce76ef25c5b9e04919f8c2b0b2347b78a66f0",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1cd9d1e9-69e9-4677-bd15-3b6fa3e361d2",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/berlin-used-cars/branding/generated-on-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-19T21:27:11.874Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "c67bce6653087b39ecc3bd442b8d18ba43a9e8fa040046305a995834a0251d11",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-36d70dba-bb01-42e4-93e3-f6f0524110e8",
+      "modelVersion": null
+    }
+  }
+}

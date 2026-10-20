@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "dealer": "driveline-cars",
+  "photos": [
+    {
+      "id": "listing-1",
+      "listingUrl": "https://www.autotrader.co.uk/car-details/202610066704623",
+      "catalogueUrl": "https://www.autotrader.co.uk/dealers/leicestershire/leicester/driveline-cars-10049555",
+      "imageUrl": "https://m.atcdn.co.uk/a/media/w1280/64b5b38251824fe69901cafbcfbea87a.jpg",
+      "downloadUrl": "https://m.atcdn.co.uk/a/media/w1280/64b5b38251824fe69901cafbcfbea87a.jpg",
+      "originalDimensions": [
+        1280,
+        960
+      ],
+      "retainedDimensions": [
+        1024,
+        768
+      ],
+      "retainedBytes": 187040,
+      "mediaPath": "dealer-stock/listing-1.jpg",
+      "retainedSha256": "84a713040039594c22329eb5254abd9b6cbeab953a9895ac694d5921348b7ca2",
+      "operation": "Resize within1024px without enlargement and encode optimized JPEG; no change to photographed content.",
+      "originalSha256": "51440b86f8a82cb7c1d391b75eefd26984d4476c0addaf6234d913abaf72a8a0",
+      "observedAt": "2026-10-19"
+    },
+    {
+      "id": "listing-2",
+      "listingUrl": "https://www.autotrader.co.uk/car-details/202610146999047",
+      "catalogueUrl": "https://www.autotrader.co.uk/dealers/leicestershire/leicester/driveline-cars-10049555",
+      "imageUrl": "https://m.atcdn.co.uk/a/media/w1280/bb6c75199431427498625072c62a0834.jpg",
+      "downloadUrl": "https://m.atcdn.co.uk/a/media/w1280/bb6c75199431427498625072c62a0834.jpg",
+      "originalDimensions": [
+        1280,
+        960
+      ],
+      "retainedDimensions": [
+        1024,
+        768
+      ],
+      "retainedBytes": 165989,
+      "mediaPath": "dealer-stock/listing-2.jpg",
+      "retainedSha256": "81eb96afce6cfceffe9a81b995998b3fb311c975fa4b8567b0da3af8cd3e415e",
+      "operation": "Resize within1024px without enlargement and encode optimized JPEG; no change to photographed content.",
+      "originalSha256": "8c85862ce92aa58b83cb10e50eb5f5b0002c90fa8a674fc1c05fc7c3f85d522b",
+      "observedAt": "2026-10-19"
+    },
+    {
+      "id": "listing-3",
+      "listingUrl": "https://www.autotrader.co.uk/car-details/202610146999060",
+      "catalogueUrl": "https://www.autotrader.co.uk/dealers/leicestershire/leicester/driveline-cars-10049555",
+      "imageUrl": "https://m.atcdn.co.uk/a/media/w1280/eb1bf7a819584f8091e095008ab4a29e.jpg",
+      "downloadUrl": "https://m.atcdn.co.uk/a/media/w1280/eb1bf7a819584f8091e095008ab4a29e.jpg",
+      "originalDimensions": [
+        1280,
+        960
+      ],
+      "retainedDimensions": [
+        1024,
+        768
+      ],
+      "retainedBytes": 178290,
+      "mediaPath": "dealer-stock/listing-3.jpg",
+      "retainedSha256": "6e68bbd5f7d7736a1dafa9469650a33bee7703f224a783bd5d613f5e944590d9",
+      "operation": "Resize within1024px without enlargement and encode optimized JPEG; no change to photographed content.",
+      "originalSha256": "104f4d5b9bd83b170af0a67a36f36b524a3ffa7ca11e2a0d052a3bb909b3faeb",
+      "observedAt": "2026-10-19"
+    }
+  ],
+  "review": {
+    "reviewed": true,
+    "observedAt": "2026-10-19",
+    "method": "Viewed every selected photograph in contact sheets; checked actual vehicle content, placeholders, price cards and visible dealer identity.",
+    "maximumDimension": 1024,
+    "maximumBytes": 187040
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-input-review",
+  "dealer": "glasgow-dalmarnock-car-sales",
+  "reviewed": true,
+  "reviewedAt": "2026-10-20T19:14:01.903Z",
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "checks": [
+    "canonical-hosting-and-preserved-fleet-collisions",
+    "assigned-expansion-lead",
+    "public-fact-schema-and-price-omission",
+    "personal-contact-screen",
+    "retained-stock-media",
+    "companion-copy-source-binding",
+    "immutable-template-release-and-native-QA-parent",
+    "reviewed-artwork-provenance-and-regenerated-logo-hashes"
+  ],
+  "sourceArtworkReview": "Retained artwork review is separate provenance; this command does not perform visual, Arabic-expert or dealer approval.",
+  "copyReview": "Automated structure, stock hash, source text and complete EN/BG rows; no new human translation approval is inferred.",
+  "contacts": {
+    "schemaVersion": 1,
+    "kind": "cars-automated-public-contact-screen",
+    "dealer": "glasgow-dalmarnock-car-sales",
+    "method": "heuristic; no claim that unflagged values cannot be personal",
+    "flags": [],
+    "blocking": []
+  },
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-glasgow-dalmarnock-car-sales",
+    "position": 45
+  },
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "inputs": [
+    {
+      "path": "FACTS-AND-INVENTORY.json",
+      "sha256": "e0d5ee370b8c799adf20a08148def70db1e39c75a5ec0fd2938f3680538021e9"
+    },
+    {
+      "path": "branding/generated-mark-on-dark.png",
+      "sha256": "53708587d47ed8496e8a413a52903e88a8fb9d88f86a4ba3999f23a58922f9f2"
+    },
+    {
+      "path": "branding/generated-mark.png",
+      "sha256": "156aba5f26deedbdf955321db386cb92cc2e01b53e26f9ceebf3a15ceaab9ed3"
+    },
+    {
+      "path": "branding/generated-master.png",
+      "sha256": "6581eeada470eb871c919b8dfadf5358db5b59ac1d485c1b0b85ab900644864e"
+    },
+    {
+      "path": "branding/generated-on-dark.png",
+      "sha256": "0ede549632a2f8077e8a22f2c4bf0d22d36f000b333e1344bedfc6c586598730"
+    },
+    {
+      "path": "branding/logo-contract.json",
+      "sha256": "b2f5aea1d197ba8927f8f180bcd4d53813b576699099637aa57b0d11fdaa939e"
+    },
+    {
+      "path": "branding/logo-recipe.json",
+      "sha256": "eca895d1b9bfcf6ec4f69c9821f595007b6da9848a1d13fc0b314d41de03bfaf"
+    },
+    {
+      "path": "branding/source.json",
+      "sha256": "4883b15adee6ceb996c344471e462d74ce10d10257dbaa30effc3bd9b8dbff37"
+    },
+    {
+      "path": "business-facts.json",
+      "sha256": "ab4c19b9bc072631cf0358423130e9f6c00bd51a14e19cb7beb336447c790308"
+    },
+    {
+      "path": "copy-review.json",
+      "sha256": "d6ba95ca251d368132b18aa2bdcf1e4bd184f0b7fd1d8d585d17e0cc7d91c311"
+    },
+    {
+      "path": "dealer-stock/vehicle-1.jpg",
+      "sha256": "3c099511146046c09ceb41fd3de0b28adbe2149c1cfd63bb9cb867768ac63179"
+    },
+    {
+      "path": "dealer-stock/vehicle-3.jpg",
+      "sha256": "e354c83e3cb282e83fd4ade5245e88f368bd391b2f5bb5e95f23076c80fcefbd"
+    },
+    {
+      "path": "dealer.json",
+      "sha256": "2048b39c5fe1215fddaefe99e3123961605c5689a8a31cd5370ada2cbc5456c5"
+    },
+    {
+      "path": "identity-review.json",
+      "sha256": "32eff4a5eb73f3d020fbd7db3162e163643f8f4c316aa1915ebc9fabbe652b4e"
+    },
+    {
+      "path": "locale.json",
+      "sha256": "4875de24d3a801713431eff0d2dbb1df32b56ee96d0b46d8299fc97dd02a9faa"
+    },
+    {
+      "path": "missing-facts.json",
+      "sha256": "ab7cfc5eeffc6b820cf69d2db633f4ab1bd06d794cd780fc886f256139c9faec"
+    },
+    {
+      "path": "qualification.json",
+      "sha256": "0872a24e33f46613224ab224b9000d5334e11e63ff7f4d9c492b63aa37ed583b"
+    },
+    {
+      "path": "source-evidence.json",
+      "sha256": "045679b7814a092511a5b3542bcc05fbaf67c3caf9e5c9e319052af1fdac23b0"
+    },
+    {
+      "path": "stock-history-review.json",
+      "sha256": "2d89b09014d7e6975b9cfc8c5359ca08b0d818873209ae9af6c4f42b9b0285c6"
+    },
+    {
+      "path": "stock.json",
+      "sha256": "3ee03a321e10032679fb114a598d6b550158d349144c8ca70cbdedf12ee517f0"
+    }
+  ],
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "providerWrites": 0
+}

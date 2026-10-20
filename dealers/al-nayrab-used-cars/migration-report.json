@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "al-nayrab-used-cars",
+  "previousSlug": "al-nayrab-used-cars",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:22:18.036Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 4,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-sharjah-al-nayrab-used-cars",
+    "position": 314
+  },
+  "before": {
+    "files": 36,
+    "bytes": 4128915
+  },
+  "afterBeforeReview": {
+    "files": 20,
+    "bytes": 1184001
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 41699,
+      "sha256": "a88cbbca47ec723b5e8afe80b0976651f658e008ad9830a628e1ad6305a5609b"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 114192,
+      "sha256": "85f760e29ee5663773d8aade99d528597b401961486570b22b28d8f371898f60"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 41699,
+      "sha256": "a88cbbca47ec723b5e8afe80b0976651f658e008ad9830a628e1ad6305a5609b"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 126796,
+      "sha256": "d8bd23f8d425914dbec61b5980990553ac225f95f3659e7fda0a535c2c28cbc2"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 396283,
+      "sha256": "7326b55314aa2762e901530bfa5dde0b93b96c0838e6f645b9e352b45b041036"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 396283,
+      "sha256": "7326b55314aa2762e901530bfa5dde0b93b96c0838e6f645b9e352b45b041036"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 126796,
+      "sha256": "d8bd23f8d425914dbec61b5980990553ac225f95f3659e7fda0a535c2c28cbc2"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 41699,
+      "sha256": "a88cbbca47ec723b5e8afe80b0976651f658e008ad9830a628e1ad6305a5609b"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 6038,
+      "sha256": "9ee3fdb818c5aaf8c982fdc2ec59b035c41eaea5225ec643ae91bf389716c891"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 396283,
+      "sha256": "7326b55314aa2762e901530bfa5dde0b93b96c0838e6f645b9e352b45b041036"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 280222,
+      "sha256": "6360c8e8267148691ebf468f996d71db2c7da82838f3397f75acbdeeade03809"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 396283,
+      "sha256": "7326b55314aa2762e901530bfa5dde0b93b96c0838e6f645b9e352b45b041036"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 280222,
+      "sha256": "6360c8e8267148691ebf468f996d71db2c7da82838f3397f75acbdeeade03809"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 126796,
+      "sha256": "d8bd23f8d425914dbec61b5980990553ac225f95f3659e7fda0a535c2c28cbc2"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 70726,
+      "sha256": "8d9e1727590895535732b00bf56b96f7991b295e3e974bd310826574817be994"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 80044,
+      "sha256": "1ffbc6542941ec76b18d30cf02b2b95ee923a2cbecbb1536b889cac113a27d9d"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 26674,
+      "sha256": "ae1eb80319278f73d3faaa68ae3bed26ed8d32d3ed16be506d8a3d9fa66df42b"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 11,
+    "bytes": 1160466,
+    "inventorySha256": "48c68631bed0cb7263fc3924efff17d256beb279a8d360bad20ef667ba883703",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "al-nayrab-used-cars",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 22,
+    "report": "dealers/al-nayrab-used-cars/input-review.json"
+  },
+  "after": {
+    "files": 22,
+    "bytes": 1192335
+  }
+}

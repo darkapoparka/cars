@@ -1,0 +1,142 @@
+{
+  "schemaVersion": 1,
+  "dealer": "berlin-used-cars",
+  "realLogoFirst": true,
+  "publishedBranding": true,
+  "creationMethod": "sourced-logo-imagegen-redraw",
+  "approvalStatus": "redraw-and-compact-proposal-not-dealer-approved",
+  "dealerApproved": false,
+  "usageStatus": "public-preview-only",
+  "observedAt": "2026-10-19T21:27:11.874Z",
+  "publicSources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/berlin-used-cars-trllc-sp",
+      "observedAt": "2026-10-19T20:00:18.885044Z"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/7726-land-rover-range-rover-sport-30-v6-supercharged-at-awd-340-hp-hse",
+      "observedAt": "2026-10-19T20:00:18.885044Z"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/7727-land-rover-range-rover-50-v8-supercharged-at-awd-565-hp-vogue-se",
+      "observedAt": "2026-10-19T20:00:18.885044Z"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/7728-chevrolet-camaro-62-at-455-hp-zl1",
+      "observedAt": "2026-10-19T20:00:18.885044Z"
+    }
+  ],
+  "originals": [
+    {
+      "path": "branding/source-original.jpg",
+      "sha256": "7d635ce06804ec3b85ac6e570cf91e961503f4f62446a2041b20e22a5c9a999c",
+      "url": "https://auto-ae-prod-storage.storage.googleapis.com/577fc18c433247bab5d969baa67006f3",
+      "observedAt": "2026-10-19T21:27:11.874Z"
+    }
+  ],
+  "logoResearch": {
+    "method": "Opened current named dealer profile and three seller-bound LicensePlate stock listings; searched public catalogues and exact trading names, and retrieved the current named public catalogue profile and its attributable original dealer image.",
+    "result": "Original public raster was small or opaque and needed a full clean transparent redraw. Identity and dealer city were compared with the retained lead; original name, palette and motif are preserved with surface-specific contrast adjustments.",
+    "sources": [
+      "https://licenseplate.ae/cars/dealer/berlin-used-cars-trllc-sp",
+      "https://auto.ae/berlin/"
+    ]
+  },
+  "visualReview": "Faithful gold B shield, three wing steps per side and five stars. Deep gold/black on white and light gold/silver on dark or accent surfaces. The original metallic rendering becomes a clean transparent mark; the prominent B shield remains recognizable at32px. No dealer approval is claimed.",
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T21:27:11.874Z",
+    "master": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "88002a363cd366d92af42772a746000947a13890a787545ad41a72e78787f1a9",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1cd9d1e9-69e9-4677-bd15-3b6fa3e361d2",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "88002a363cd366d92af42772a746000947a13890a787545ad41a72e78787f1a9",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1cd9d1e9-69e9-4677-bd15-3b6fa3e361d2",
+        "modelVersion": null
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-on-dark.png",
+      "sha256": "ea16dfc46473bb2c8188f927e56a831d3d8ddb402025a5ff89c110bc09896f5b",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-36d70dba-bb01-42e4-93e3-f6f0524110e8",
+        "modelVersion": null
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "88002a363cd366d92af42772a746000947a13890a787545ad41a72e78787f1a9",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-1cd9d1e9-69e9-4677-bd15-3b6fa3e361d2",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "ea16dfc46473bb2c8188f927e56a831d3d8ddb402025a5ff89c110bc09896f5b",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-36d70dba-bb01-42e4-93e3-f6f0524110e8",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "ea16dfc46473bb2c8188f927e56a831d3d8ddb402025a5ff89c110bc09896f5b",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-36d70dba-bb01-42e4-93e3-f6f0524110e8",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": {
+        "onLight": [
+          "#ffffff"
+        ],
+        "onDark": [
+          "#111113",
+          "#101820"
+        ],
+        "onAccent": [
+          "#09090b",
+          "#17191c",
+          "#c40101"
+        ]
+      },
+      "notes": "Faithful gold B shield, three wing steps per side and five stars. Deep gold/black on white and light gold/silver on dark or accent surfaces. The original metallic rendering becomes a clean transparent mark; the prominent B shield remains recognizable at32px. No dealer approval is claimed."
+    },
+    "compactMarkStatus": "independent-proposal-not-dealer-approved",
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-19T21:27:11.874Z",
+      "widths": [
+        32,
+        64
+      ],
+      "backgrounds": [
+        "#ffffff",
+        "#101820",
+        "#c40101"
+      ],
+      "notes": "Faithful gold B shield, three wing steps per side and five stars. Deep gold/black on white and light gold/silver on dark or accent surfaces. The original metallic rendering becomes a clean transparent mark; the prominent B shield remains recognizable at32px. No dealer approval is claimed."
+    }
+  },
+  "generationPrompts": [
+    "Use case: logo-brand. Create a full faithful clean flat redraw of this real BERLIN used-car trading logo on a genuine transparent background. Preserve the strong serif B inside a double-outline pointed shield, exactly three stepped broad wings each side and five small stars over the B. Use rich deep flat gold #96671e for the emblem. Place exact BERLIN below in bold dark charcoal #111111, with smaller USED CARS TRADING L.L.C below only if it remains comfortably spaced. Large emblem and compact near-square proportions, crisp substantial contours and generous transparent counters, suited to recognisable B shield at32px. Keep name, gold/black palette and winged-shield motif. Remove the black backdrop and all metallic/3D effects; no gradient, glow, shadow, textures, mockup or extra text.",
+    "Create the matching dark/accent-surface version of this exact BERLIN logo, preserving the double-outline B shield, three wings each side, five stars and exact BERLIN / USED CARS TRADING L.L.C wording. Change gold emblem to flat light warm gold #ead399 and black lettering to flat pale silver #c7d4dc. All background and counters remain genuinely transparent. Crisp substantial flat graphic contours; no texture, metallic effects, gradients, shadows, glow or added marks. Same proportions and identity, high contrast on charcoal and red."
+  ]
+}

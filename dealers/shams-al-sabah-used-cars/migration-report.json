@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "shams-al-sabah-used-cars",
+  "previousSlug": "shams-al-sabah-used-cars",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:15:20.149Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 4,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-sharjah-shams-al-sabah-used-cars",
+    "position": 380
+  },
+  "before": {
+    "files": 38,
+    "bytes": 2970988
+  },
+  "afterBeforeReview": {
+    "files": 22,
+    "bytes": 888923
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 132056,
+      "sha256": "ab7ac95bd6503f496fdea17ef2e1d5255bab7157bc731e012957b14e02ff0838"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 145780,
+      "sha256": "6d89d9f07270572a732df1c1ad0f688d22f4b2117fe08ff2ffd45bdc9496f566"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 132056,
+      "sha256": "ab7ac95bd6503f496fdea17ef2e1d5255bab7157bc731e012957b14e02ff0838"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 132980,
+      "sha256": "1ade6cc196881d0936c82a1487faf375926b71aaab672ff5467e12a27bd28a04"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 155542,
+      "sha256": "acff6133f7938e8a7ad08fc249ffb638b23076f17e68725908c76871b1f21f15"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 155542,
+      "sha256": "acff6133f7938e8a7ad08fc249ffb638b23076f17e68725908c76871b1f21f15"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 132980,
+      "sha256": "1ade6cc196881d0936c82a1487faf375926b71aaab672ff5467e12a27bd28a04"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 132056,
+      "sha256": "ab7ac95bd6503f496fdea17ef2e1d5255bab7157bc731e012957b14e02ff0838"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 11938,
+      "sha256": "bdc9195e94170a139a6d25c89bcdc6533ccecc1cdef16fcecd1c095088be9b70"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 155542,
+      "sha256": "acff6133f7938e8a7ad08fc249ffb638b23076f17e68725908c76871b1f21f15"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 113526,
+      "sha256": "09c2625c3bac3e128a81a5306915984d6e139cf9b74fc99e58041c65d9d194f5"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 155542,
+      "sha256": "acff6133f7938e8a7ad08fc249ffb638b23076f17e68725908c76871b1f21f15"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 113526,
+      "sha256": "09c2625c3bac3e128a81a5306915984d6e139cf9b74fc99e58041c65d9d194f5"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 132980,
+      "sha256": "1ade6cc196881d0936c82a1487faf375926b71aaab672ff5467e12a27bd28a04"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 95778,
+      "sha256": "8fbb02c6b1a214848f3c05fe1a96cf718c169de065b417fd306ed7720d4b880f"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 101412,
+      "sha256": "80caec3d7c46fc5308c349372d15c5787b4f872bc8269d030b640bdde5c7b64b"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 86680,
+      "sha256": "ff0179ca16f98d73bb49a329defd04daec09878ec0fe33db2699c658f7371714"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 12,
+    "bytes": 461251,
+    "inventorySha256": "fa9707b4f0669aac9218d8da27e6beaa0a62c21ec389c2c14d78876cd85955fb",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "shams-al-sabah-used-cars",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 24,
+    "report": "dealers/shams-al-sabah-used-cars/input-review.json"
+  },
+  "after": {
+    "files": 24,
+    "bytes": 897740
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "dealer": "asal-al-haibah-used-cars",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:00:47.391752Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "aw-73717",
+      "title": "Jeep Cherokee 2019",
+      "make": "Jeep",
+      "model": "Cherokee",
+      "year": 2019,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/aw-73717.jpg"
+      ],
+      "sourceUrl": "https://www.arabwheels.ae/used-cars/jeep-cherokee-2019-for-sale-in-sharjah-73717",
+      "observedAt": "2026-10-19T20:00:47.391752Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "SUV",
+      "transmission": "Automatic",
+      "fuel": "Petrol",
+      "color": "Grey",
+      "mileageValue": 141000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "aw-73733",
+      "title": "Chevrolet Silverado 2022",
+      "make": "Chevrolet",
+      "model": "Silverado",
+      "year": 2022,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/aw-73733.jpg"
+      ],
+      "sourceUrl": "https://www.arabwheels.ae/used-cars/chevrolet-silverado-2022-for-sale-in-sharjah-73733",
+      "observedAt": "2026-10-19T20:00:47.391752Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "transmission": "Automatic",
+      "fuel": "Petrol",
+      "color": "Black",
+      "mileageValue": 116000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "aw-73753",
+      "title": "Toyota Land Cruiser 2021",
+      "make": "Toyota",
+      "model": "Land Cruiser",
+      "year": 2021,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/aw-73753.jpg"
+      ],
+      "sourceUrl": "https://www.arabwheels.ae/used-cars/toyota-land-cruiser-2021-for-sale-in-sharjah-73753",
+      "observedAt": "2026-10-19T20:00:47.391752Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "transmission": "Automatic",
+      "fuel": "Petrol",
+      "color": "White",
+      "mileageValue": 145000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

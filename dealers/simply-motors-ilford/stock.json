@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "dealer": "simply-motors-ilford",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "listing-1",
+      "title": "2019 Audi A1 25 TFSI Technik 5dr SPORTBACK",
+      "make": "Audi",
+      "model": "A1 25 TFSI Technik 5dr SPORTBACK",
+      "year": 2019,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/listing-1.jpg"
+      ],
+      "sourceUrl": "https://www.ebay.co.uk/itm/307205804601",
+      "observedAt": "2026-10-19",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 118000,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-2",
+      "title": "2016 Toyota Yaris 1.5 Hybrid Excel 5dr CVT AUTOMATIC HYBRID",
+      "make": "Toyota",
+      "model": "Yaris 1.5 Hybrid Excel 5dr CVT AUTOMATIC HYBRID",
+      "year": 2016,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/listing-2.jpg"
+      ],
+      "sourceUrl": "https://www.ebay.co.uk/itm/307197100340",
+      "observedAt": "2026-10-19",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "transmission": "Automatic",
+      "fuel": "Petrol Hybrid",
+      "mileageValue": 170000,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-3",
+      "title": "2013 Audi A1 1.4 TFSI Amplified Edition 5dr MANUAL",
+      "make": "Audi",
+      "model": "A1 1.4 TFSI Amplified Edition 5dr MANUAL",
+      "year": 2013,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/listing-3.jpg"
+      ],
+      "sourceUrl": "https://www.ebay.co.uk/itm/307189409857",
+      "observedAt": "2026-10-19",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "transmission": "Manual",
+      "mileageValue": 107000,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

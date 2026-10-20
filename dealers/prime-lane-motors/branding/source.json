@@ -1,0 +1,131 @@
+{
+  "schemaVersion": 1,
+  "dealer": "prime-lane-motors",
+  "status": "reviewed",
+  "realLogoFirst": true,
+  "publicSources": [
+    {
+      "url": "https://www.autotrader.co.uk/dealers/cleveland/stockton-on-tees/yarm-lane-motors-limited-10023253",
+      "observedAt": "2026-10-19T17:36:49.330555Z"
+    }
+  ],
+  "originals": [
+    {
+      "path": "branding/observed-logo.png",
+      "sha256": "08f6f48a143a8966d0d7e844dc2ec816d818234c0881d0077da59f189fe9467c",
+      "sourceUrl": "https://m.atcdn.co.uk/dealer-logo/at2/adbranding/10023253/images/fpa_logo.gif",
+      "observedAt": "2026-10-19",
+      "kind": "published-logo-artwork"
+    }
+  ],
+  "creationMethod": "imagegen-redraw",
+  "dealerApproved": false,
+  "approvalStatus": "independent-preview-not-dealer-approved",
+  "researchConclusion": "The public logo was inspected. A clean transparent redraw preserves its name, colours and principal motif; the original bytes are retained.",
+  "generation": {
+    "tool": "image_gen.imagegen",
+    "generationId": "exec-fc93d20a-2200-4a00-a7f7-481f30fb61c9",
+    "modelVersion": null,
+    "prompt": "Use case: logo-brand. Faithful professional redraw of the real Prime Lane Motors Ltd logo in the reference. Preserve the exact name \"PRIME LANE\" over \"MOTORS LTD\", gold and near-black palette, elegant serif lettering, and its sleek car side/roof silhouette. Omit the tiny town caption and black rectangle. Rebuild the thin artwork as clean decisive strokes with enough weight for website headers. Transparent wide horizontal lockup: far-left a compact P/L monogram incorporating one gold roof sweep, then a generous transparent gap and the full name on the right. Flat gold rather than metallic gradient; no background, textures, 3D, shadow or glow. Fine dark edging plus a clean white outer keyline lets gold stay readable on white, charcoal and dark red backgrounds. Emblem must work at 32px. Same identity and motif, refreshed artwork, no dealer approval claimed."
+  },
+  "compactDerivation": {
+    "method": "lossless-isolated-emblem-crop",
+    "parentReference": "branding/generated-master.png",
+    "parentSha256": "7c5ecd3419df4121ab7a9d0c5337de9cca9661862e79250b228e8aca5fffc9fd",
+    "crop": {
+      "left": 0,
+      "top": 0,
+      "width": 646,
+      "height": 725
+    },
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-fc93d20a-2200-4a00-a7f7-481f30fb61c9",
+      "modelVersion": null
+    }
+  },
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T18:40:12.472Z",
+    "master": {
+      "path": "branding/generated-master.png",
+      "sha256": "7c5ecd3419df4121ab7a9d0c5337de9cca9661862e79250b228e8aca5fffc9fd",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-fc93d20a-2200-4a00-a7f7-481f30fb61c9",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "3daf2eded9c36d8114c085b3e63cdb0946af9bea0b96e3334fc380546bcac77a",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-fc93d20a-2200-4a00-a7f7-481f30fb61c9",
+        "modelVersion": null
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "3daf2eded9c36d8114c085b3e63cdb0946af9bea0b96e3334fc380546bcac77a",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-fc93d20a-2200-4a00-a7f7-481f30fb61c9",
+        "modelVersion": null
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-master.png",
+        "sha256": "7c5ecd3419df4121ab7a9d0c5337de9cca9661862e79250b228e8aca5fffc9fd",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-fc93d20a-2200-4a00-a7f7-481f30fb61c9",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-master.png",
+        "sha256": "7c5ecd3419df4121ab7a9d0c5337de9cca9661862e79250b228e8aca5fffc9fd",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-fc93d20a-2200-4a00-a7f7-481f30fb61c9",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-master.png",
+        "sha256": "7c5ecd3419df4121ab7a9d0c5337de9cca9661862e79250b228e8aca5fffc9fd",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-fc93d20a-2200-4a00-a7f7-481f30fb61c9",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": {
+        "onLight": [
+          "#ffffff"
+        ],
+        "onDark": [
+          "#111113"
+        ],
+        "onAccent": [
+          "#c40101"
+        ]
+      },
+      "wordmarkWidths": [
+        120,
+        180
+      ],
+      "markWidths": [
+        32,
+        64
+      ],
+      "method": "Same actual dual-contrast generated artwork on each surface; no generated colours are represented as a template palette change.",
+      "reviewedAt": "2026-10-19T18:40:12.472Z",
+      "review": "Visually reviewed exact cropTransparentPadding exports at120px and180px wordmark widths and32px/64px compact sizes on white, charcoal and red. Exact spelling retained, real alpha present, compact emblem clear. The source palette is part of the artwork only."
+    }
+  }
+}

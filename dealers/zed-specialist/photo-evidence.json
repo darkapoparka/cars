@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "dealer": "zed-specialist",
+  "photos": [
+    {
+      "id": "listing-1",
+      "listingUrl": "https://www.ebay.co.uk/itm/860055775983",
+      "catalogueUrl": "https://showroom.ebaymotorspro.co.uk/Zed-Specialist",
+      "imageUrl": "https://i.ebayimg.com/00/s/MTIwMFgxNjAw/z/hkIAAeSwSAJq1ciH/$_2.JPG",
+      "downloadUrl": "https://i.ebayimg.com/00/s/MTIwMFgxNjAw/z/hkIAAeSwSAJq1ciH/$_57.JPG",
+      "originalDimensions": [
+        1600,
+        1200
+      ],
+      "retainedDimensions": [
+        1024,
+        768
+      ],
+      "retainedBytes": 170943,
+      "mediaPath": "dealer-stock/listing-1.jpg",
+      "retainedSha256": "fb64317d798d772fb72b78191bf41cceafdfbd5d99297940b866f5ca11ea28bd",
+      "operation": "Resize within1024px without enlargement and encode optimized JPEG; no change to photographed content.",
+      "originalSha256": "b333802e40dcb3abdf6ff2615e5398d280373096134d51ee8754350d128995c8",
+      "observedAt": "2026-10-19"
+    },
+    {
+      "id": "listing-2",
+      "listingUrl": "https://www.ebay.co.uk/itm/860055773688",
+      "catalogueUrl": "https://showroom.ebaymotorspro.co.uk/Zed-Specialist",
+      "imageUrl": "https://i.ebayimg.com/00/s/MTEyNVgxNTAw/z/sX8AAeSwwd1q1j8k/$_2.JPG",
+      "downloadUrl": "https://i.ebayimg.com/00/s/MTEyNVgxNTAw/z/sX8AAeSwwd1q1j8k/$_57.JPG",
+      "originalDimensions": [
+        1500,
+        1125
+      ],
+      "retainedDimensions": [
+        1024,
+        768
+      ],
+      "retainedBytes": 165891,
+      "mediaPath": "dealer-stock/listing-2.jpg",
+      "retainedSha256": "4307746133653e4b1421b22195f149ea5af5fda7790804e68eedb76d34e1d6bf",
+      "operation": "Resize within1024px without enlargement and encode optimized JPEG; no change to photographed content.",
+      "originalSha256": "08efc54ff1a061a3f904d118be8eec17a5af7e4d15c6e73e5345c6f34d0eda29",
+      "observedAt": "2026-10-19"
+    },
+    {
+      "id": "listing-3",
+      "listingUrl": "https://www.ebay.co.uk/itm/860055772521",
+      "catalogueUrl": "https://showroom.ebaymotorspro.co.uk/Zed-Specialist",
+      "imageUrl": "https://i.ebayimg.com/00/s/MTEyNVgxNTAw/z/8fwAAeSwm-dq1jyE/$_2.JPG",
+      "downloadUrl": "https://i.ebayimg.com/00/s/MTEyNVgxNTAw/z/8fwAAeSwm-dq1jyE/$_57.JPG",
+      "originalDimensions": [
+        1500,
+        1125
+      ],
+      "retainedDimensions": [
+        1024,
+        768
+      ],
+      "retainedBytes": 172535,
+      "mediaPath": "dealer-stock/listing-3.jpg",
+      "retainedSha256": "6387dded6d46cde95d81f676290e025b517cca776725a63668511169958349b8",
+      "operation": "Resize within1024px without enlargement and encode optimized JPEG; no change to photographed content.",
+      "originalSha256": "cdfef1239e041476a84fba764374b622ac12796485d2676b5cd14067bd573555",
+      "observedAt": "2026-10-19"
+    }
+  ],
+  "review": {
+    "reviewed": true,
+    "observedAt": "2026-10-19",
+    "method": "Viewed every selected photograph in contact sheets; checked actual vehicle content, placeholders, price cards and visible dealer identity.",
+    "maximumDimension": 1024,
+    "maximumBytes": 172535
+  }
+}

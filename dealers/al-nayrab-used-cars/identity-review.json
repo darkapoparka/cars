@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": true,
+  "reviewedAt": "2026-10-20T19:22:20.823Z",
+  "dealer": "al-nayrab-used-cars",
+  "dealerId": "ae-sharjah-al-nayrab-used-cars",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "method": "Automated exact registry/pack identity, canonical hosting and batch comparison; retained public source fields were structurally checked, not human-approved.",
+  "sources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/al-nayrab-used-cars",
+      "observedAt": "2026-10-19T20:00:04.404850Z"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/6936-toyota-land-cruiser-46-at-309-hp-gxr",
+      "observedAt": "2026-10-19T20:00:04.404850Z"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/7564-mercedes-benz-amg-gt-63-4matic-speedshift-mct-9g-585-hp-gt-63-s-4matic",
+      "observedAt": "2026-10-19T20:00:04.404850Z"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/7566-mercedes-benz-gle-class-350-d-4matic-9g-tronic-249-hp-gle-350",
+      "observedAt": "2026-10-19T20:00:04.404850Z"
+    }
+  ],
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  }
+}

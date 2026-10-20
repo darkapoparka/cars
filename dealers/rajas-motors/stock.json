@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "dealer": "rajas-motors",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "public-listing-1",
+      "title": "2016 Honda Odyssey 2.4 VTEC CVT",
+      "make": "Honda",
+      "model": "Odyssey",
+      "year": 2016,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/public-1.jpg"
+      ],
+      "sourceUrl": "https://www.ebay.co.uk/itm/860058997168",
+      "observedAt": "2026-10-19T20:03:02.288522Z",
+      "availability": "Observed in the public seller catalogue on 2026-10-19; availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "transmission": "Automatic",
+      "fuel": "Petrol",
+      "mileageValue": 39679,
+      "mileageUnit": "mi",
+      "description": "The seller describes this vehicle as an import from Japan. Mileage is retained in the units advertised by the seller; the odometer conversion and registration documents have not been independently verified. Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "public-listing-2",
+      "title": "2016 BMW 216d Gran Tourer Luxury Step Auto",
+      "make": "BMW",
+      "model": "2 Series Gran Tourer",
+      "year": 2016,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/public-2.jpg"
+      ],
+      "sourceUrl": "https://www.ebay.co.uk/itm/860055663693",
+      "observedAt": "2026-10-19T20:03:02.525349Z",
+      "availability": "Observed in the public seller catalogue on 2026-10-19; availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "transmission": "Automatic",
+      "fuel": "Diesel",
+      "mileageValue": 34569,
+      "mileageUnit": "mi",
+      "description": "The seller describes this vehicle as an import from Japan. Mileage is retained in the units advertised by the seller; the odometer conversion and registration documents have not been independently verified. Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "public-listing-3",
+      "title": "2016 Citroen C3 1.2 PureTech 82 Edition Auto",
+      "make": "Citroen",
+      "model": "C3",
+      "year": 2016,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/public-3.jpg"
+      ],
+      "sourceUrl": "https://www.ebay.co.uk/itm/860041525470",
+      "observedAt": "2026-10-19T20:03:02.742591Z",
+      "availability": "Observed in the public seller catalogue on 2026-10-19; availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "transmission": "Automatic",
+      "fuel": "Petrol",
+      "mileageValue": 49712,
+      "mileageUnit": "mi",
+      "description": "The seller describes this vehicle as an import from Japan. Mileage is retained in the units advertised by the seller; the odometer conversion and registration documents have not been independently verified. Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

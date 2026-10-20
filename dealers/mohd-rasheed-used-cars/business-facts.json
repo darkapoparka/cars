@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "slug": "mohd-rasheed-used-cars",
+  "dealerId": "ae-sharjah-mohd-rasheed-used-cars",
+  "business": {
+    "name": "Mohd Rasheed Used Cars",
+    "city": "Sharjah",
+    "region": "Sharjah",
+    "countryCode": "AE",
+    "currency": "AED",
+    "distanceUnit": "km",
+    "locale": "en-AE",
+    "address": "Souq al haraj Showroom 409 - Sharjah - United Arab Emirates",
+    "phone": "+971565699942",
+    "phoneDisplay": "+971565699942",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://www.arabwheels.ae/used-cars/dealers/mohd-rasheed-used-cars-showroom-in-uae/",
+    "hours": "",
+    "sourceUrl": "https://www.arabwheels.ae/used-cars/dealers/mohd-rasheed-used-cars-showroom-in-uae/",
+    "observedAt": "2026-10-19T20:00:44.027770Z",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://www.arabwheels.ae/used-cars/dealers/mohd-rasheed-used-cars-showroom-in-uae/",
+      "observedAt": "2026-10-19T20:00:44.027770Z",
+      "supports": [
+        "public-business-trading-name",
+        "dealer-attributed-catalogue",
+        "business-location",
+        "public-business-phone"
+      ]
+    },
+    {
+      "url": "https://www.arabwheels.ae/used-cars/hyundai-staria-2023-for-sale-in-sharjah-74527",
+      "observedAt": "2026-10-19T20:00:44.027770Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    },
+    {
+      "url": "https://www.arabwheels.ae/used-cars/iveco-daily-2017-for-sale-in-sharjah-74532",
+      "observedAt": "2026-10-19T20:00:44.027770Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    },
+    {
+      "url": "https://www.arabwheels.ae/used-cars/mitsubishi-fuso-rosa-2016-for-sale-in-sharjah-74533",
+      "observedAt": "2026-10-19T20:00:44.027770Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "cars-4-less-west-bromwich",
+  "previousSlug": "cars-4-less-west-bromwich",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:15:28.014Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-west-bromwich-cars-4-less",
+    "position": 100
+  },
+  "before": {
+    "files": 35,
+    "bytes": 4409598
+  },
+  "afterBeforeReview": {
+    "files": 19,
+    "bytes": 1770868
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 171635,
+      "sha256": "440996fd3fc3da482ce0d8e81c4736325a1639774b23c37594ee347a0aaeecc3"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 171635,
+      "sha256": "440996fd3fc3da482ce0d8e81c4736325a1639774b23c37594ee347a0aaeecc3"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 171635,
+      "sha256": "440996fd3fc3da482ce0d8e81c4736325a1639774b23c37594ee347a0aaeecc3"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 194009,
+      "sha256": "9e14ec7eb528639b885fe394ab9df9f6a0b9ff7eb79a27645a0bfeb4b73d11d6"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 194009,
+      "sha256": "9e14ec7eb528639b885fe394ab9df9f6a0b9ff7eb79a27645a0bfeb4b73d11d6"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 194009,
+      "sha256": "9e14ec7eb528639b885fe394ab9df9f6a0b9ff7eb79a27645a0bfeb4b73d11d6"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 194009,
+      "sha256": "9e14ec7eb528639b885fe394ab9df9f6a0b9ff7eb79a27645a0bfeb4b73d11d6"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 171635,
+      "sha256": "440996fd3fc3da482ce0d8e81c4736325a1639774b23c37594ee347a0aaeecc3"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 10873,
+      "sha256": "46a9156cd553cd44f3c87b9aa4dc285916da9929c2445428ee8d486c0d22f283"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 194009,
+      "sha256": "9e14ec7eb528639b885fe394ab9df9f6a0b9ff7eb79a27645a0bfeb4b73d11d6"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 121452,
+      "sha256": "134a5698ba630e81938cea4ef8451557e89584ccad66a72d7356ef2e6485d90b"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 194009,
+      "sha256": "9e14ec7eb528639b885fe394ab9df9f6a0b9ff7eb79a27645a0bfeb4b73d11d6"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 121452,
+      "sha256": "134a5698ba630e81938cea4ef8451557e89584ccad66a72d7356ef2e6485d90b"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 194009,
+      "sha256": "9e14ec7eb528639b885fe394ab9df9f6a0b9ff7eb79a27645a0bfeb4b73d11d6"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 121452,
+      "sha256": "134a5698ba630e81938cea4ef8451557e89584ccad66a72d7356ef2e6485d90b"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 111370,
+      "sha256": "8580493a3ad1a8e4ac9c96c77bca5dd638799a848ff21e2e198146571c462a73"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 111370,
+      "sha256": "8580493a3ad1a8e4ac9c96c77bca5dd638799a848ff21e2e198146571c462a73"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 10,
+    "bytes": 1748797,
+    "inventorySha256": "099be5f409d821b37a3f1e862770e41f7e084b9dfca86787bb0427f526b94dc2",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "cars-4-less-west-bromwich",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 21,
+    "report": "dealers/cars-4-less-west-bromwich/input-review.json"
+  },
+  "after": {
+    "files": 21,
+    "bytes": 1779050
+  }
+}

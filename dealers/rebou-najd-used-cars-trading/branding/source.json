@@ -1,0 +1,191 @@
+{
+  "schemaVersion": 1,
+  "dealer": "rebou-najd-used-cars-trading",
+  "realLogoFirst": true,
+  "publishedBranding": true,
+  "creationMethod": "sourced-logo-imagegen-redraw",
+  "dealerApproved": false,
+  "approvalStatus": "redraw-and-compact-adaptation-not-dealer-approved",
+  "usageStatus": "public-preview-only",
+  "observedAt": "2026-10-19T21:24:14.441095Z",
+  "publicSources": [
+    {
+      "url": "https://www.dubicars.com/dealers/sharjah-rebou-najd-used-cars-trading-1785",
+      "observedAt": "2026-10-19T20:00:23.851965Z"
+    },
+    {
+      "url": "https://www.dubicars.com/2020-mitsubishi-pajero-mitsuhbishi-pajero-gls-2020engine-38lv6-1037103.html",
+      "observedAt": "2026-10-19T20:00:23.851965Z"
+    },
+    {
+      "url": "https://www.dubicars.com/2025-toyota-land-cruiser-toyota-land-cruiser-prado-2025-1037098.html",
+      "observedAt": "2026-10-19T20:00:23.851965Z"
+    },
+    {
+      "url": "https://www.dubicars.com/2020-nissan-patrol-engine-56lv8-1036920.html",
+      "observedAt": "2026-10-19T20:00:23.851965Z"
+    },
+    {
+      "url": "https://auto.ae/rebound/",
+      "observedAt": "2026-10-19T21:24:14.441095Z"
+    }
+  ],
+  "originals": [
+    {
+      "path": "branding/source-original.img",
+      "sha256": "eac2235e219fd1673889c1e2c1c40df61f165345dc42072647bfa9341c09711e",
+      "url": "https://auto-ae-prod-storage.storage.googleapis.com/64955e79e3864ddea19b6f404f71a776",
+      "observedAt": "2026-10-19T21:24:14.441095Z",
+      "identityStatus": "public-profile-identity-reference"
+    }
+  ],
+  "logoResearch": "Exact AUTO Rebou Najd Used Cars profile publishes the same REBOU NAJD / USED CARS TR. showroom sign visible in current seller-bound DubiCars photos. The cream/black typography is redrawn; RN compact companion is a new unapproved adaptation. An older Yandex entry says shut down, conflicting with current inventories on DubiCars, OneClickDrive and AUTO; opening is not confirmed.",
+  "visualReview": "Reviewed transparent artwork, full business-wordmark spelling and compact emblem. Deterministic crops retain the generated artwork; no vector substitute, recolouring or template changes. Compact variants are unapproved preview adaptations. Exact source-name wordmark and RN compact mark reviewed. The original sheet inverse had visible fringe and was rejected; a separate image-generated RN compact inverse supplies all dark/accent consumers with matched broad geometry.",
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T21:46:42.567Z",
+    "master": {
+      "path": "branding/generated-master.png",
+      "sha256": "ade7001ef9f7d616218aa11707f83c600fef4615128a5602a64d3b74a3cbbf11",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-653eece5-7a6d-4257-b405-1ebb7a87b99c",
+        "modelVersion": null,
+        "transformation": {
+          "operation": "rectangular-extract-without-recolour-or-redrawing",
+          "source": "branding/generated-primary.png",
+          "sourceSha256": "becee3af89a4bd7e30ddae399eb49c03e0f195cabb97422943b84ca84b292fa4",
+          "rectangle": {
+            "left": 0,
+            "top": 0,
+            "width": 887,
+            "height": 505
+          }
+        }
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "f0699fcd04dbe5f74e7e4b67cd8af18ec32c22527d1d5fb31d93b2f569122236",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-653eece5-7a6d-4257-b405-1ebb7a87b99c",
+        "modelVersion": null,
+        "transformation": {
+          "operation": "rectangular-extract-without-recolour-or-redrawing",
+          "source": "branding/generated-primary.png",
+          "sourceSha256": "becee3af89a4bd7e30ddae399eb49c03e0f195cabb97422943b84ca84b292fa4",
+          "rectangle": {
+            "left": 0,
+            "top": 532,
+            "width": 887,
+            "height": 355
+          }
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-inverse.png",
+      "sha256": "3dc15d07bb6f3d79eab5e231da39df2b3fe323ca412c82fbacf376e58f041df8",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-041d6302-b2ee-4944-a185-24d12b031d31",
+        "modelVersion": null
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-master.png",
+        "sha256": "ade7001ef9f7d616218aa11707f83c600fef4615128a5602a64d3b74a3cbbf11",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-653eece5-7a6d-4257-b405-1ebb7a87b99c",
+          "modelVersion": null,
+          "transformation": {
+            "operation": "rectangular-extract-without-recolour-or-redrawing",
+            "source": "branding/generated-primary.png",
+            "sourceSha256": "becee3af89a4bd7e30ddae399eb49c03e0f195cabb97422943b84ca84b292fa4",
+            "rectangle": {
+              "left": 0,
+              "top": 0,
+              "width": 887,
+              "height": 505
+            }
+          }
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-inverse.png",
+        "sha256": "3dc15d07bb6f3d79eab5e231da39df2b3fe323ca412c82fbacf376e58f041df8",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-041d6302-b2ee-4944-a185-24d12b031d31",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-inverse.png",
+        "sha256": "3dc15d07bb6f3d79eab5e231da39df2b3fe323ca412c82fbacf376e58f041df8",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-041d6302-b2ee-4944-a185-24d12b031d31",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": {
+        "onLight": [
+          "#ffffff"
+        ],
+        "onDark": [
+          "#111113",
+          "#101820"
+        ],
+        "onAccent": [
+          "#09090b",
+          "#17191c",
+          "#c40101"
+        ]
+      },
+      "notes": "Reviewed transparent artwork, full business-wordmark spelling and compact emblem. Deterministic crops retain the generated artwork; no vector substitute, recolouring or template changes. Compact variants are unapproved preview adaptations. Exact source-name wordmark and RN compact mark reviewed. The original sheet inverse had visible fringe and was rejected; a separate image-generated RN compact inverse supplies all dark/accent consumers with matched broad geometry."
+    },
+    "compactMarkStatus": "unapproved-preview-adaptation",
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-19T21:46:42.567Z",
+      "widths": [
+        32,
+        64
+      ],
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#101820"
+      ],
+      "notes": "Reviewed transparent artwork, full business-wordmark spelling and compact emblem. Deterministic crops retain the generated artwork; no vector substitute, recolouring or template changes. Compact variants are unapproved preview adaptations. Exact source-name wordmark and RN compact mark reviewed. The original sheet inverse had visible fringe and was rejected; a separate image-generated RN compact inverse supplies all dark/accent consumers with matched broad geometry."
+    }
+  },
+  "generationPrompts": [
+    {
+      "role": "primary",
+      "prompt": "Create ONE transparent RGBA logo asset sheet as a precise 2-column by 2-row grid with FOUR isolated designs, no gridlines, labels, mockups, frames, background cards, glow, bevels, gradients or shadows. Each design centered within its own quadrant with large clear gutters. Top left: a horizontal full logo for white surfaces, using dark flat ink. Top right: exactly the same full logo geometry, all artwork including lettering in flat pale silver #e0e5e8, for black and red surfaces. Bottom left: only the compact emblem, dark on-light version. Bottom right: exactly the same compact emblem, flat pale silver #e0e5e8. Keep artwork off all quadrant boundaries. Transparent negative space within letters and symbols. Compact emblem must remain obvious at 32px, with broad solid strokes and open counters. No extra wording, numbers or contact details. Every quadrant contains the same dealer identity. Faithfully redraw the attached public REBOU NAJD showroom wordmark. Exact large words REBOU NAJD, smaller exact line USED CARS TR. Preserve the confident broad sans-serif lettering and cream/black identity of the sign, cleaned professionally. Top-left full wordmark is near-black #17191c on transparent. No building, Arabic duplicate line, LLC suffix, showroom number, spotlights, strings or background. Bottom-left compact mark is a new, restrained, clear RN ligature formed with two broad architectural strokes, near-black, open counters and no enclosing shield, car clipart or ornament. Right quadrants use matching flat pale silver #e0e5e8, no yellow glow, and transparent counters. This is the same lettering identity with a proposed compact companion.",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-653eece5-7a6d-4257-b405-1ebb7a87b99c",
+      "modelVersion": null,
+      "returnedArtifact": "exec-653eece5-7a6d-4257-b405-1ebb7a87b99c.png",
+      "returnedArtifactSha256": "becee3af89a4bd7e30ddae399eb49c03e0f195cabb97422943b84ca84b292fa4",
+      "note": "The tool exposed the returned artifact identifier and did not expose a model version."
+    },
+    {
+      "role": "inverse",
+      "prompt": "Create a precise flat raster inverse variant of the attached RN compact monogram. Keep the same RN ligature geometry, same broad strokes and open counter, with no added text. Fill the monogram ONLY with a single solid cool silver #c4ccd0. The outside and counter spaces must be entirely transparent. Crisp smooth hard graphic edges. This is flat printing ink, not a luminous sign; no glow, halo, shadow, speckles, gradient, texture, scene, border, background or white fringe. One isolated centered RN symbol, generous transparent padding, square canvas. Preserve exactly the recognisable R and N relationship of the attached reference, so the emblem remains readable at32px. Unapproved compact adaptation for Rebou Najd Used Cars Trading.",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-041d6302-b2ee-4944-a185-24d12b031d31",
+      "modelVersion": null,
+      "returnedArtifact": "exec-041d6302-b2ee-4944-a185-24d12b031d31.png",
+      "returnedArtifactSha256": "3dc15d07bb6f3d79eab5e231da39df2b3fe323ca412c82fbacf376e58f041df8",
+      "note": "The tool exposed the returned artifact identifier and did not expose a model version."
+    }
+  ]
+}

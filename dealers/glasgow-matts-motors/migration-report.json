@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "glasgow-matts-motors",
+  "previousSlug": "glasgow-matts-motors",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:14:29.255Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-glasgow-matts-motors",
+    "position": 47
+  },
+  "before": {
+    "files": 38,
+    "bytes": 6407229
+  },
+  "afterBeforeReview": {
+    "files": 22,
+    "bytes": 3107806
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 170154,
+      "sha256": "1a805bafc5fdb3b2c3861084d4a5c4d342c979bb5b65717d877ee2a4f9933576"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 218675,
+      "sha256": "c3cb2578f98ae1c314889c7d515300f1bb28ebe72fd854ce3aa4db00c5c182d1"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 170154,
+      "sha256": "1a805bafc5fdb3b2c3861084d4a5c4d342c979bb5b65717d877ee2a4f9933576"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 224805,
+      "sha256": "6324ec02c922befeaac4498f2757ef4114f03ad58e51977c7ef206fe929458d3"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 295179,
+      "sha256": "4c32b4740fa0bacdbe9f8cfbffc90936306cb372487e18fa80b4c18df3d36587"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 295179,
+      "sha256": "4c32b4740fa0bacdbe9f8cfbffc90936306cb372487e18fa80b4c18df3d36587"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 224805,
+      "sha256": "6324ec02c922befeaac4498f2757ef4114f03ad58e51977c7ef206fe929458d3"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 170154,
+      "sha256": "1a805bafc5fdb3b2c3861084d4a5c4d342c979bb5b65717d877ee2a4f9933576"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 11888,
+      "sha256": "2894e29a823c2fe4c0edeec6a99cad372ca17df48113b6c51683f60e6b00deef"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 295179,
+      "sha256": "4c32b4740fa0bacdbe9f8cfbffc90936306cb372487e18fa80b4c18df3d36587"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 176692,
+      "sha256": "1e1bde4cc80dea2646fb22b726914220556d10a44bba1efd387d5fc1046224a8"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 295179,
+      "sha256": "4c32b4740fa0bacdbe9f8cfbffc90936306cb372487e18fa80b4c18df3d36587"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 176692,
+      "sha256": "1e1bde4cc80dea2646fb22b726914220556d10a44bba1efd387d5fc1046224a8"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 224805,
+      "sha256": "6324ec02c922befeaac4498f2757ef4114f03ad58e51977c7ef206fe929458d3"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 140462,
+      "sha256": "53652a8c92e76226d3fad7dae4bbfb0293dabe34e325496577573e59c0262d5c"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 116230,
+      "sha256": "258c4efb16609717e4685177a7d4a723cd82f716519ced1fbb861fc294513af0"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 97006,
+      "sha256": "da08e3ab0653e6a91b09cfeeb18fd8b87f70cef8687cacdb3c30a43ad786b81d"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 12,
+    "bytes": 3081557,
+    "inventorySha256": "992f730d641c4dc20662cbe6fb973ceb1d5d30ea58a0b16c6dcc381b3dc18ccf",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "glasgow-matts-motors",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 24,
+    "report": "dealers/glasgow-matts-motors/input-review.json"
+  },
+  "after": {
+    "files": 24,
+    "bytes": 3116441
+  }
+}

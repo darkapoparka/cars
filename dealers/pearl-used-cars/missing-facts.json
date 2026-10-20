@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "dealer": "pearl-used-cars",
+  "missing": [
+    {
+      "field": "business.website",
+      "required": false,
+      "reason": "No reliable business-scoped value adopted from reviewed sources."
+    },
+    {
+      "field": "business.hours",
+      "required": false,
+      "reason": "No reliable business-scoped value adopted from reviewed sources."
+    },
+    {
+      "field": "prices",
+      "required": false,
+      "reason": "Prices omitted under the public-repository scope."
+    }
+  ],
+  "blocking": []
+}

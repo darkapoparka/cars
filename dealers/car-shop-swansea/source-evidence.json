@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 1,
+  "dealer": "car-shop-swansea",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uk.json",
+    "sha256": "6cd8d365586f9a5d5131fe4b1d50baede7de91ab384a135017c25367298b07c4"
+  },
+  "publicSources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/Twk-vehicle-sales-ltd?extendedFilter=1",
+      "observedAt": "2026-10-19T17:36:51.463232Z",
+      "supports": [
+        "public-business-identity",
+        "public-business-contact",
+        "advertised-stock"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "publicObservations": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/Twk-vehicle-sales-ltd?extendedFilter=1",
+      "observedAt": "2026-10-19T17:36:51.463232Z",
+      "httpStatus": 200,
+      "sha256": "95470fb79358ab0fd1d66b8994663017a6390ab6fdf699dd903c8da08860dd92",
+      "byteLength": 36629,
+      "retention": "Only reviewed public business fields, hashes, listing identities and compressed photographs are committed; raw HTML remains outside the public pack."
+    }
+  ],
+  "stock": [
+    {
+      "sourceUrl": "https://www.ebay.co.uk/itm/407299635659",
+      "photoUrl": "https://i.ebayimg.com/images/g/wwkAAeSwsy1q1Trb/s-l1600.jpg",
+      "observedAt": "2026-10-19T17:53:23.893090Z",
+      "listingSha256": "dbeb5dd5660d052020562840d9c6e0f9b1860464b12a536f77dd284c6c674cd8",
+      "descriptionSha256": "7056c19741113582cbb305a61a4c76656fff41b2f48d6a68d9dcc5c377a25d33",
+      "sourcePhotoSha256": "faa154e72148d169d72f11052efdcad2c013756846c8b620a78de9e9da60a4c6",
+      "sourcePhotoDimensions": [
+        1500,
+        844
+      ],
+      "photoSha256": "da9f50c6560768bfd397a52d890f96976da8f5725eea2cc73c2080b436a579d0",
+      "photoDimensions": [
+        1280,
+        720
+      ],
+      "photoBytes": 65072,
+      "photoObservedAt": "2026-10-19T18:01:44.723361Z",
+      "recordId": "public-listing-1",
+      "title": "2016 Fiat 500X 1.6 E-torQ Pop Star",
+      "retainedPhoto": "dealer-stock/public-1.jpg",
+      "publicPhotoReviewed": true
+    },
+    {
+      "sourceUrl": "https://www.ebay.co.uk/itm/407290793172",
+      "photoUrl": "https://i.ebayimg.com/images/g/khYAAeSwkIpqz-9I/s-l1600.jpg",
+      "observedAt": "2026-10-19T17:53:24.019319Z",
+      "listingSha256": "5741c402ce61340a5cd233db281d4cefd0c8cf22894831dd9911d00e2d697261",
+      "descriptionSha256": "94fbcbbb718ac5b1afb34bc4958fd92c256b1cb14ba0c31d777bb63f7a40cac4",
+      "sourcePhotoSha256": "e8367546ba65bbe58b9f816c73bb360fe582a800816cb8dab88606b3ecdc9642",
+      "sourcePhotoDimensions": [
+        1500,
+        1125
+      ],
+      "photoSha256": "53b2ccb6380ffaf2f2eb7b4a6b4f80ffe3b1e3e07b97eddbcf27c45cf23c8785",
+      "photoDimensions": [
+        1280,
+        960
+      ],
+      "photoBytes": 194874,
+      "photoObservedAt": "2026-10-19T18:01:44.738868Z",
+      "recordId": "public-listing-2",
+      "title": "2013 Renault Scenic Xmod 1.5 dCi Dynamique TomTom",
+      "retainedPhoto": "dealer-stock/public-2.jpg",
+      "publicPhotoReviewed": true
+    },
+    {
+      "sourceUrl": "https://www.ebay.co.uk/itm/407290777097",
+      "photoUrl": "https://i.ebayimg.com/images/g/V7wAAeSwd5xqz-u4/s-l1600.jpg",
+      "observedAt": "2026-10-19T17:53:24.530781Z",
+      "listingSha256": "24bded5423dbed8e3652d5a157857fdf4db5d5d23c5ff7391168930c667fcd4e",
+      "descriptionSha256": "55a450981896eb5f75b8494e57a51035dd936a80ac462485d129a456b4edbf96",
+      "sourcePhotoSha256": "801d9839f6aee9bf65668a043ad41e64535a4ae9bc554b58f3fef7e463a65a0a",
+      "sourcePhotoDimensions": [
+        1500,
+        1125
+      ],
+      "photoSha256": "3dfaceaf6793b006a294db04f7a8ca5816ffb5708065c238827c387b0852eefc",
+      "photoDimensions": [
+        1280,
+        960
+      ],
+      "photoBytes": 201121,
+      "photoObservedAt": "2026-10-19T18:01:44.952379Z",
+      "recordId": "public-listing-3",
+      "title": "2014 Renault Megane 1.5 dCi Knight Edition",
+      "retainedPhoto": "dealer-stock/public-3.jpg",
+      "publicPhotoReviewed": true
+    }
+  ],
+  "review": {
+    "reviewedAt": "2026-10-19T18:24:26.905939Z",
+    "stockPhotoIdentityChecked": true,
+    "sourceClaimLimits": "Dated public adverts only; availability, repairs, vehicle condition and legal entity details are not independently certified.",
+    "omissions": [
+      "Current Car Shop Swansea trading name matches the TWK seller alias and retained premises. A working owned domain was not verified.",
+      "Exact retained lead business.name preserved for the M1 identity validator; clean public trading name used in artwork."
+    ]
+  }
+}

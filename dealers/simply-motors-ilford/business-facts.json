@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "slug": "simply-motors-ilford",
+  "dealerId": "gb-ilford-simply-motors",
+  "business": {
+    "name": "Simply Motors (Ilford, Stradbroke Grove)",
+    "city": "Ilford",
+    "region": "Essex / Greater London",
+    "countryCode": "GB",
+    "currency": "GBP",
+    "distanceUnit": "mi",
+    "locale": "en-GB",
+    "address": "Stradbroke Grove Ilford Essex IG5 0DQ",
+    "phone": "+441708204899",
+    "phoneDisplay": "+441708204899",
+    "email": "simply.motors@yahoo.com",
+    "website": "",
+    "stockUrl": "https://showroom.ebaymotorspro.co.uk/simply-motors?extendedFilter=1",
+    "hours": "",
+    "sourceUrl": "https://showroom.ebaymotorspro.co.uk/simply-motors?extendedFilter=1",
+    "observedAt": "2026-10-19",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/simply-motors?extendedFilter=1",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "current-public-business-details",
+        "dated-advertised-stock-snapshot"
+      ]
+    },
+    {
+      "url": "https://www.cazoo.co.uk/dealers/simply-motors-81238/",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "matching-dealer-directory-identity"
+      ]
+    }
+  ]
+}

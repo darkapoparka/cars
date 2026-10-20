@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "dealer": "rolf-street-car-sales",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uk.json",
+    "sha256": "6cd8d365586f9a5d5131fe4b1d50baede7de91ab384a135017c25367298b07c4"
+  },
+  "publicSources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/Aran-used-car?menu=1",
+      "observedAt": "2026-10-19T17:36:51.341464Z",
+      "supports": [
+        "public-business-identity",
+        "public-business-contact",
+        "advertised-stock"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "publicObservations": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/Aran-used-car?menu=1",
+      "observedAt": "2026-10-19T17:36:51.341464Z",
+      "httpStatus": 200,
+      "sha256": "ff1d306f19fd60f523fa717e640aeb89b3b2862fa1a6179655fc6cb558a27892",
+      "byteLength": 37914,
+      "retention": "Only reviewed public business fields, hashes, listing identities and compressed photographs are committed; raw HTML remains outside the public pack."
+    }
+  ],
+  "stock": [
+    {
+      "sourceUrl": "https://www.ebay.co.uk/itm/287656944905",
+      "photoUrl": "https://i.ebayimg.com/images/g/10kAAeSwqipq1TEB/s-l1600.jpg",
+      "observedAt": "2026-10-19T17:53:17.212603Z",
+      "listingSha256": "0e47be0708a4541b5ce40401b3814564affca6971341c653f092454db90a6abd",
+      "descriptionSha256": "707dea418e38e9ffdb9d50df245fabb3c3ad7f7ca52ecea82bddd5f2d4c306e2",
+      "sourcePhotoSha256": "6a5a8911c9662742ff7557adb440b519821db3396bafc6b6df9d341e6d852d02",
+      "sourcePhotoDimensions": [
+        1200,
+        1600
+      ],
+      "photoSha256": "a6b24634f8caa992285cddbed0d3c769612ecdea42123b240c77a86cd159f0bf",
+      "photoDimensions": [
+        960,
+        1280
+      ],
+      "photoBytes": 195316,
+      "photoObservedAt": "2026-10-19T18:01:44.291598Z",
+      "recordId": "public-listing-1",
+      "title": "2013 Ford Fiesta 1.25 Zetec — Cat S",
+      "retainedPhoto": "dealer-stock/public-1.jpg",
+      "publicPhotoReviewed": true,
+      "conditionDisclosure": "The public listing records Category S history. Vehicle condition has not been independently verified."
+    },
+    {
+      "sourceUrl": "https://www.ebay.co.uk/itm/287633932225",
+      "photoUrl": "https://i.ebayimg.com/images/g/G-UAAeSw6Mhqxrj2/s-l1600.jpg",
+      "observedAt": "2026-10-19T17:53:18.357201Z",
+      "listingSha256": "397c818f00179d6f258c8dbfc3a93a819880295c0272327280d95c7de800f05b",
+      "descriptionSha256": "453dc2277edac029d11d0978cba0fad41fdb548df11bc6fc981c3ec308e37734",
+      "sourcePhotoSha256": "12ccae1de422171c71a12a854be3143401c6c0a15d8edc08577d9590ef15ff2d",
+      "sourcePhotoDimensions": [
+        1500,
+        1125
+      ],
+      "photoSha256": "76599a89736bb82af02382880dc55229bac578b6c2d31fe92757e699237953cf",
+      "photoDimensions": [
+        1280,
+        960
+      ],
+      "photoBytes": 204665,
+      "photoObservedAt": "2026-10-19T18:01:44.447279Z",
+      "recordId": "public-listing-2",
+      "title": "2018 Ford Focus 1.5 TDCi ST-Line Navigation — Cat S",
+      "retainedPhoto": "dealer-stock/public-2.jpg",
+      "publicPhotoReviewed": true,
+      "conditionDisclosure": "The public listing records Category S history and says the vehicle has been repaired. Repair quality has not been independently verified."
+    },
+    {
+      "sourceUrl": "https://www.ebay.co.uk/itm/287590783499",
+      "photoUrl": "https://i.ebayimg.com/images/g/xukAAeSwXf5qqwIB/s-l1600.jpg",
+      "observedAt": "2026-10-19T17:53:18.579077Z",
+      "listingSha256": "aeab0b1f11a2665401db52f65d26ad455a260e4957070456d383f2a03c5af540",
+      "descriptionSha256": "2bacdd9b0178a23d5ccba935595a8e4f778192fe57cf43dcdff131643a2e321b",
+      "sourcePhotoSha256": "e165b118ed50ab284c513fff851d54299797dac2f09815c81af78feaff34a6b1",
+      "sourcePhotoDimensions": [
+        1500,
+        1125
+      ],
+      "photoSha256": "c1fd47c8d10fc0ac560e8b2a2b4c4a29428556981afd7251477b71b79e3b7165",
+      "photoDimensions": [
+        1280,
+        960
+      ],
+      "photoBytes": 186856,
+      "photoObservedAt": "2026-10-19T18:01:44.158503Z",
+      "recordId": "public-listing-3",
+      "title": "2022 Audi A1 25 TFSI Sport S Tronic — Cat S",
+      "retainedPhoto": "dealer-stock/public-3.jpg",
+      "publicPhotoReviewed": true,
+      "conditionDisclosure": "The public listing records Category S history and says the vehicle has been repaired. Repair quality has not been independently verified."
+    }
+  ],
+  "review": {
+    "reviewedAt": "2026-10-19T18:24:26.868770Z",
+    "stockPhotoIdentityChecked": true,
+    "sourceClaimLimits": "Dated public adverts only; availability, repairs, vehicle condition and legal entity details are not independently certified.",
+    "omissions": [
+      "Personal-looking mailbox omitted; no replacement business email invented.",
+      "Exact retained lead business.name preserved for the M1 identity validator; clean public trading name used in artwork."
+    ]
+  }
+}

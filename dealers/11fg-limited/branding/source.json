@@ -24,89 +24,101 @@
   "researchConclusion": "The public logo was inspected. A clean transparent redraw preserves its name, colours and principal motif; the original bytes are retained.",
   "generation": {
     "tool": "image_gen.imagegen",
-    "generationId": "exec-94f85820-bd93-4db3-b87b-387ec4f21368",
+    "generationId": "exec-b5fbc96d-b03a-4fcf-9341-ac7406c7d94b",
+    "referenceKind": "actual-tool-output-filename",
     "modelVersion": null,
-    "prompt": "Use case: logo-brand. Faithfully redraw the actual 11FG dealer identity in the reference into a clean professional transparent logo, retaining the name \"11FG LTD\", deep forest green, lighter green sweep and silver automotive motif. Replace the low-resolution photographic car with a simple clean silver car silhouette integrated above the text. Omit the email, street address and border entirely. Wide horizontal lockup: strong compact \"11FG\" emblem to the left and full \"11FG LTD\" name to the right with generous transparent separation, so the emblem can be cropped independently for a favicon. Flat confident shapes, no gradient, no shadows, no photographic vehicle, no background. Thick simple lettering and clean white outer keyline around green strokes to remain readable on white, charcoal and red website surfaces. It must be legible at 32px as a compact mark. Retain exact spelling and brand colour relationships. This redraw is for an independent preview and is not dealer approved."
+    "prompt": "Use case: precise-object-edit. Edit the referenced 11FG LTD transparent proposal wordmark for white website surfaces. Preserve the exact spelling 11FG LTD, horizontal arrangement, bold italic letter shapes, upper sweep and simple car motif. Make every visible stroke and letter a dark forest green (#06462f), with the sweep at most a slightly lighter dark green (#17633f). Render the car as a clean dark forest green outline with transparent interior; remove the silver/light fills. Remove the white outer keyline, gradients, speckles and residual background pixels. Keep crisp clean alpha and generous transparent margins. No added text, no contact details, no frame, no badge/background. This is a readable independent proposal variant, not an adopted business identity."
   },
   "compactDerivation": {
-    "method": "separate-imagegen-compact-emblem",
-    "parentReference": "branding/generated-master.png",
-    "parentSha256": "e00d579b325c126c88f9a26957505e8fdfa3fcac8d7db2ea77309f01669e14c3",
-    "prompt": "Use case: logo-brand. Create one compact professional automotive dealer logo emblem ONLY, no wordmark beside it. Exact identity 11FG. Use a two-by-two compact arrangement with 11 on upper row and FG below, all four characters clearly legible as 11FG, geometric bold italic type. Preserve green #00a451 and silver/white motif of 11FG Limited automotive branding. One smooth silver car roof arc above if it remains simple. Thick clean dark navy outline and precise white outer keyline, visible on white, charcoal #111113 and red #c40101. Transparent background. Clear at32px, flat crisp graphic, absolutely no speckles, no gradients, no shadow, no fake metallic texture, no mockup, no other text.",
+    "method": "separate-imagegen-compact-emblem-contrast-variant",
+    "parentReference": "branding/generated-mark.png",
+    "parentSha256": "680ddd266aa8a42b89b298d7865a1a064d190cb94f574c5f959c584d8ca9fe92",
+    "prompt": "Use case: precise-object-edit. Edit the referenced compact 11FG transparent emblem for white website surfaces and 32px favicon use. Preserve exact legible 11 above FG two-by-two arrangement, bold italic geometric character shapes, simple car roof arc and overall compact proportions. Render the four characters and roof arc in solid dark forest green (#06462f). Remove the thick backing/connected navy silhouette and the white fill/keylines; replace the spaces between characters and inside the arc with actual transparency so all four characters remain individually readable. No background plate or enclosing badge. No gradient, texture, speckles or shadow. Crisp clean alpha, thick simple strokes, generous transparent margin. No additional text. Independent proposal variant, not adopted identity.",
     "generation": {
       "tool": "image_gen.imagegen",
-      "generationId": "exec-c2b98b7b-f280-4b05-82ce-0c818204c756",
+      "generationId": "exec-52bed8d1-a2fd-4909-8eeb-0e5ea94ca791",
+      "referenceKind": "actual-tool-output-filename",
       "modelVersion": null
     }
   },
   "generatedInputs": {
-    "reviewedAt": "2026-10-19T18:39:36.384Z",
+    "reviewedAt": "2026-10-20T19:25:45.337Z",
     "master": {
-      "path": "branding/generated-master.png",
-      "sha256": "e00d579b325c126c88f9a26957505e8fdfa3fcac8d7db2ea77309f01669e14c3",
+      "path": "branding/contrast-wordmark-on-light-v2.png",
+      "sha256": "3fb1133fd3620dd5033b1820ecfcc124e0b2fa4cee1ed84e90504574389ab1a2",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-94f85820-bd93-4db3-b87b-387ec4f21368",
+        "generationId": "exec-b5fbc96d-b03a-4fcf-9341-ac7406c7d94b",
+        "referenceKind": "actual-tool-output-filename",
         "modelVersion": null
       }
     },
     "mark": {
-      "path": "branding/generated-mark.png",
-      "sha256": "680ddd266aa8a42b89b298d7865a1a064d190cb94f574c5f959c584d8ca9fe92",
+      "path": "branding/contrast-mark-on-light-v2.png",
+      "sha256": "a17a9093b793af4b2feaff7f8a4ccedd9fc653b834706d8950d1c8dc97ab1aa7",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-c2b98b7b-f280-4b05-82ce-0c818204c756",
+        "generationId": "exec-52bed8d1-a2fd-4909-8eeb-0e5ea94ca791",
+        "referenceKind": "actual-tool-output-filename",
         "modelVersion": null
       }
     },
     "markOnDark": {
-      "path": "branding/generated-mark.png",
-      "sha256": "680ddd266aa8a42b89b298d7865a1a064d190cb94f574c5f959c584d8ca9fe92",
+      "path": "branding/contrast-mark-on-dark-v2.png",
+      "sha256": "4f8340777784db05196e4f90ee79980ff4ad399e3a6f34c5e3b74ad8e59dca5f",
       "generation": {
         "tool": "image_gen.imagegen",
-        "generationId": "exec-c2b98b7b-f280-4b05-82ce-0c818204c756",
+        "generationId": "exec-22be42fd-fcdf-46ef-b0c9-65399ab891a0",
+        "referenceKind": "actual-tool-output-filename",
         "modelVersion": null
       }
     },
     "surfaces": {
       "onLight": {
-        "path": "branding/generated-master.png",
-        "sha256": "e00d579b325c126c88f9a26957505e8fdfa3fcac8d7db2ea77309f01669e14c3",
+        "path": "branding/contrast-wordmark-on-light-v2.png",
+        "sha256": "3fb1133fd3620dd5033b1820ecfcc124e0b2fa4cee1ed84e90504574389ab1a2",
         "generation": {
           "tool": "image_gen.imagegen",
-          "generationId": "exec-94f85820-bd93-4db3-b87b-387ec4f21368",
+          "generationId": "exec-b5fbc96d-b03a-4fcf-9341-ac7406c7d94b",
+          "referenceKind": "actual-tool-output-filename",
           "modelVersion": null
         }
       },
       "onDark": {
-        "path": "branding/generated-master.png",
-        "sha256": "e00d579b325c126c88f9a26957505e8fdfa3fcac8d7db2ea77309f01669e14c3",
+        "path": "branding/contrast-wordmark-on-dark-v2.png",
+        "sha256": "d82c397b2c71f1862ed069f3baebdc8bb5fd05af02aa9e0d35b66f618898e311",
         "generation": {
           "tool": "image_gen.imagegen",
-          "generationId": "exec-94f85820-bd93-4db3-b87b-387ec4f21368",
+          "generationId": "exec-86f1d41a-1dc9-453b-899a-566f5fcf43a5",
+          "referenceKind": "actual-tool-output-filename",
           "modelVersion": null
         }
       },
       "onAccent": {
-        "path": "branding/generated-master.png",
-        "sha256": "e00d579b325c126c88f9a26957505e8fdfa3fcac8d7db2ea77309f01669e14c3",
+        "path": "branding/contrast-wordmark-on-dark-v2.png",
+        "sha256": "d82c397b2c71f1862ed069f3baebdc8bb5fd05af02aa9e0d35b66f618898e311",
         "generation": {
           "tool": "image_gen.imagegen",
-          "generationId": "exec-94f85820-bd93-4db3-b87b-387ec4f21368",
+          "generationId": "exec-86f1d41a-1dc9-453b-899a-566f5fcf43a5",
+          "referenceKind": "actual-tool-output-filename",
           "modelVersion": null
         }
       }
     },
     "surfaceReview": {
       "reviewed": true,
+      "reviewedAt": "2026-10-20T19:25:45.337Z",
       "backgrounds": {
         "onLight": [
           "#ffffff"
         ],
         "onDark": [
-          "#111113"
+          "#111113",
+          "#101820"
         ],
         "onAccent": [
+          "#09090b",
+          "#17191c",
           "#c40101"
         ]
       },
@@ -118,9 +130,122 @@
         32,
         64
       ],
-      "method": "Same actual dual-contrast generated artwork on each surface; no generated colours are represented as a template palette change.",
-      "reviewedAt": "2026-10-19T18:39:36.384Z",
-      "review": "Visually reviewed exact cropTransparentPadding exports at120px and180px wordmark widths and32px/64px compact sizes on white, charcoal and red. Exact spelling retained, real alpha present, compact emblem clear. The source palette is part of the artwork only."
+      "method": "Agent visual review of exact maintained crop exports on the recorded consumer backgrounds at identical before/after sizes; unchanged maintained contrast and native favicon checks also passed.",
+      "review": "11FG LTD and 11 above FG are legible, with dark green on white and bright pale green on dark/accent. Original motif/geometry retained. This is source artwork review; no dealer, owner, native or hosted approval is inferred."
     }
+  },
+  "artworkHistory": [
+    {
+      "supersededAt": "2026-10-20T19:25:45.337Z",
+      "reason": "Dedicated surface variants replace artwork rejected by native logo QA; all original inputs remain retained.",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-94f85820-bd93-4db3-b87b-387ec4f21368",
+        "modelVersion": null,
+        "prompt": "Use case: logo-brand. Faithfully redraw the actual 11FG dealer identity in the reference into a clean professional transparent logo, retaining the name \"11FG LTD\", deep forest green, lighter green sweep and silver automotive motif. Replace the low-resolution photographic car with a simple clean silver car silhouette integrated above the text. Omit the email, street address and border entirely. Wide horizontal lockup: strong compact \"11FG\" emblem to the left and full \"11FG LTD\" name to the right with generous transparent separation, so the emblem can be cropped independently for a favicon. Flat confident shapes, no gradient, no shadows, no photographic vehicle, no background. Thick simple lettering and clean white outer keyline around green strokes to remain readable on white, charcoal and red website surfaces. It must be legible at 32px as a compact mark. Retain exact spelling and brand colour relationships. This redraw is for an independent preview and is not dealer approved."
+      },
+      "compactDerivation": {
+        "method": "separate-imagegen-compact-emblem",
+        "parentReference": "branding/generated-master.png",
+        "parentSha256": "e00d579b325c126c88f9a26957505e8fdfa3fcac8d7db2ea77309f01669e14c3",
+        "prompt": "Use case: logo-brand. Create one compact professional automotive dealer logo emblem ONLY, no wordmark beside it. Exact identity 11FG. Use a two-by-two compact arrangement with 11 on upper row and FG below, all four characters clearly legible as 11FG, geometric bold italic type. Preserve green #00a451 and silver/white motif of 11FG Limited automotive branding. One smooth silver car roof arc above if it remains simple. Thick clean dark navy outline and precise white outer keyline, visible on white, charcoal #111113 and red #c40101. Transparent background. Clear at32px, flat crisp graphic, absolutely no speckles, no gradients, no shadow, no fake metallic texture, no mockup, no other text.",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-c2b98b7b-f280-4b05-82ce-0c818204c756",
+          "modelVersion": null
+        }
+      },
+      "generatedInputs": {
+        "reviewedAt": "2026-10-19T18:39:36.384Z",
+        "master": {
+          "path": "branding/generated-master.png",
+          "sha256": "e00d579b325c126c88f9a26957505e8fdfa3fcac8d7db2ea77309f01669e14c3",
+          "generation": {
+            "tool": "image_gen.imagegen",
+            "generationId": "exec-94f85820-bd93-4db3-b87b-387ec4f21368",
+            "modelVersion": null
+          }
+        },
+        "mark": {
+          "path": "branding/generated-mark.png",
+          "sha256": "680ddd266aa8a42b89b298d7865a1a064d190cb94f574c5f959c584d8ca9fe92",
+          "generation": {
+            "tool": "image_gen.imagegen",
+            "generationId": "exec-c2b98b7b-f280-4b05-82ce-0c818204c756",
+            "modelVersion": null
+          }
+        },
+        "markOnDark": {
+          "path": "branding/generated-mark.png",
+          "sha256": "680ddd266aa8a42b89b298d7865a1a064d190cb94f574c5f959c584d8ca9fe92",
+          "generation": {
+            "tool": "image_gen.imagegen",
+            "generationId": "exec-c2b98b7b-f280-4b05-82ce-0c818204c756",
+            "modelVersion": null
+          }
+        },
+        "surfaces": {
+          "onLight": {
+            "path": "branding/generated-master.png",
+            "sha256": "e00d579b325c126c88f9a26957505e8fdfa3fcac8d7db2ea77309f01669e14c3",
+            "generation": {
+              "tool": "image_gen.imagegen",
+              "generationId": "exec-94f85820-bd93-4db3-b87b-387ec4f21368",
+              "modelVersion": null
+            }
+          },
+          "onDark": {
+            "path": "branding/generated-master.png",
+            "sha256": "e00d579b325c126c88f9a26957505e8fdfa3fcac8d7db2ea77309f01669e14c3",
+            "generation": {
+              "tool": "image_gen.imagegen",
+              "generationId": "exec-94f85820-bd93-4db3-b87b-387ec4f21368",
+              "modelVersion": null
+            }
+          },
+          "onAccent": {
+            "path": "branding/generated-master.png",
+            "sha256": "e00d579b325c126c88f9a26957505e8fdfa3fcac8d7db2ea77309f01669e14c3",
+            "generation": {
+              "tool": "image_gen.imagegen",
+              "generationId": "exec-94f85820-bd93-4db3-b87b-387ec4f21368",
+              "modelVersion": null
+            }
+          }
+        },
+        "surfaceReview": {
+          "reviewed": true,
+          "backgrounds": {
+            "onLight": [
+              "#ffffff"
+            ],
+            "onDark": [
+              "#111113"
+            ],
+            "onAccent": [
+              "#c40101"
+            ]
+          },
+          "wordmarkWidths": [
+            120,
+            180
+          ],
+          "markWidths": [
+            32,
+            64
+          ],
+          "method": "Same actual dual-contrast generated artwork on each surface; no generated colours are represented as a template palette change.",
+          "reviewedAt": "2026-10-19T18:39:36.384Z",
+          "review": "Visually reviewed exact cropTransparentPadding exports at120px and180px wordmark widths and32px/64px compact sizes on white, charcoal and red. Exact spelling retained, real alpha present, compact emblem clear. The source palette is part of the artwork only."
+        }
+      }
+    }
+  ],
+  "contrastCorrection": {
+    "reviewedAt": "2026-10-20T19:25:45.337Z",
+    "provenance": "branding/contrast-repair-20261020.json",
+    "failedProducerRun": "39477427789",
+    "originalArtworkPreserved": true,
+    "dealerApproved": false
   }
 }

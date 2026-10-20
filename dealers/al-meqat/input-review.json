@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-input-review",
+  "dealer": "al-meqat",
+  "reviewed": true,
+  "reviewedAt": "2026-10-20T19:21:41.438Z",
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "checks": [
+    "canonical-hosting-and-preserved-fleet-collisions",
+    "assigned-expansion-lead",
+    "public-fact-schema-and-price-omission",
+    "personal-contact-screen",
+    "retained-stock-media",
+    "companion-copy-source-binding",
+    "immutable-template-release-and-native-QA-parent",
+    "reviewed-artwork-provenance-and-regenerated-logo-hashes"
+  ],
+  "sourceArtworkReview": "Retained artwork review is separate provenance; this command does not perform visual, Arabic-expert or dealer approval.",
+  "copyReview": "Automated structure, stock hash, source text and complete EN/BG rows; no new human translation approval is inferred.",
+  "contacts": {
+    "schemaVersion": 1,
+    "kind": "cars-automated-public-contact-screen",
+    "dealer": "al-meqat",
+    "method": "heuristic; no claim that unflagged values cannot be personal",
+    "flags": [],
+    "blocking": []
+  },
+  "batch": {
+    "number": 4,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-sharjah-al-meqat",
+    "position": 311
+  },
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "inputs": [
+    {
+      "path": "FACTS-AND-INVENTORY.json",
+      "sha256": "0a3c14945ff82b841268b4b3b6079f0918f7eed711a3ac64bfada07a2f30f0df"
+    },
+    {
+      "path": "branding/generated-on-dark.png",
+      "sha256": "d871ab70f7dbe4b21661fb74db03bcd5d88c76db5e296362cab0f535d7f533db"
+    },
+    {
+      "path": "branding/generated-on-light.png",
+      "sha256": "fd7560d5c07408ed5c52df2108394ae388edd05e39d5264d4c0f6d376bb151d0"
+    },
+    {
+      "path": "branding/logo-contract.json",
+      "sha256": "c31994e6da3dcb3d06591640bd76bc9a71215bf7edc59c0684c5a81ec3d98342"
+    },
+    {
+      "path": "branding/logo-recipe.json",
+      "sha256": "b10567c7129b168aa9540d395961b91cd37bf63ee738dff2ff0779911b0f94d2"
+    },
+    {
+      "path": "branding/source.json",
+      "sha256": "ec7a2ef95db6e8aa26c87bbbc6369590fb74c2125f47f6f1ff75df9ac7936161"
+    },
+    {
+      "path": "business-facts.json",
+      "sha256": "3272459255624d039b16645f1aa9ad9a1d14a6c28e5c49e9d6169d52f4c8e2a6"
+    },
+    {
+      "path": "copy-review.json",
+      "sha256": "f3b5f99a4f575f3ee09e955b792ae002ea6ca5f103dfd4f33ae3885ce8eb8f04"
+    },
+    {
+      "path": "dealer-stock/licenseplate-3340.webp",
+      "sha256": "938dc303840068ab6257ec074a095b32d934b1ed84aa251a40489ebc40b1c7f4"
+    },
+    {
+      "path": "dealer-stock/licenseplate-7097.webp",
+      "sha256": "78f33893c82edd5602c0459c2e3fe73ad8150a4abc2dff8df1d7e66f10fbe0eb"
+    },
+    {
+      "path": "dealer-stock/licenseplate-7368.webp",
+      "sha256": "098e01ec79bd87e00cc4948862490534437f1be286e54ac58303daaebe0dda6a"
+    },
+    {
+      "path": "dealer.json",
+      "sha256": "cf0e2a6ea10cb180b1710402b62e72af94890ce94277f9b10501c90051875fda"
+    },
+    {
+      "path": "identity-review.json",
+      "sha256": "792a61f592692d69ac76deb4fa7753391433b94bd56a83cc5cea83c5f893dd1a"
+    },
+    {
+      "path": "locale.json",
+      "sha256": "54889b18e8c008fefe6082a0ed7f4d74ec281309e1b66742ed3d23bc38daba35"
+    },
+    {
+      "path": "missing-facts.json",
+      "sha256": "41f888a0e9656cd2aed4bc82fbadda432b5fe3a0db3405a8f5b0149514467338"
+    },
+    {
+      "path": "qualification.json",
+      "sha256": "9bcc79d45692aeec4856f4ed0c2a970c32d454d902963604b8af571de8b575e1"
+    },
+    {
+      "path": "source-evidence.json",
+      "sha256": "30116b91223a0ed2ea854c9461ea2ccffdfe21d47b1297ed1d00fcfb9ea40ebc"
+    },
+    {
+      "path": "stock.json",
+      "sha256": "7c3d70b6d65d3b2ccd529a8d01d238d1d68984d223be3cce2c41eeb7736e7847"
+    }
+  ],
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "providerWrites": 0
+}

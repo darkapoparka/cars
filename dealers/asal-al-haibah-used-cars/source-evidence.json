@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "dealer": "asal-al-haibah-used-cars",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://www.arabwheels.ae/used-cars/dealers/asal-al-haibah-used-cars-showroom-in-uae/",
+      "observedAt": "2026-10-19T20:00:47.391752Z",
+      "supports": [
+        "public-business-trading-name",
+        "dealer-attributed-catalogue",
+        "business-location",
+        "public-business-phone"
+      ]
+    },
+    {
+      "url": "https://www.arabwheels.ae/used-cars/jeep-cherokee-2019-for-sale-in-sharjah-73717",
+      "observedAt": "2026-10-19T20:00:47.391752Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    },
+    {
+      "url": "https://www.arabwheels.ae/used-cars/chevrolet-silverado-2022-for-sale-in-sharjah-73733",
+      "observedAt": "2026-10-19T20:00:47.391752Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    },
+    {
+      "url": "https://www.arabwheels.ae/used-cars/toyota-land-cruiser-2021-for-sale-in-sharjah-73753",
+      "observedAt": "2026-10-19T20:00:47.391752Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "research": {
+    "observedAt": "2026-10-19T20:00:47.391752Z",
+    "profileUrl": "https://www.arabwheels.ae/used-cars/dealers/asal-al-haibah-used-cars-showroom-in-uae/",
+    "profileSha256": "98475eec0d283f703f56404fe83bf88d55a2ca62de0713c1628c9480dccc891c",
+    "classification": "public-marketplace-dealer-profile-and-listing-snapshot",
+    "directDealerPostingVerified": false,
+    "profileClaimed": false,
+    "limitation": "Seller attribution comes from the public marketplace profile. Current physical availability and direct dealer posting are not independently confirmed.",
+    "notes": [
+      "Retained Sooq listing URL returned404; current seller-attributed ArabWheels profile and vehicle records used instead.",
+      "ArabWheels timings not supplied."
+    ],
+    "contactReview": "Only business-labeled dealer call numbers retained. Marketplace relay/support numbers and personal-looking staff contacts excluded.",
+    "photoSources": [
+      {
+        "listingId": "aw-73717",
+        "listingUrl": "https://www.arabwheels.ae/used-cars/jeep-cherokee-2019-for-sale-in-sharjah-73717",
+        "sourceImageUrl": "https://cache3.arabwheels.ae/ad_pictures/3264/Slide_jeep-cherokee-2-4l-sport-2019-3264421.webp",
+        "observedAt": "2026-10-19T20:00:47.391752Z",
+        "retainedPath": "dealer-stock/aw-73717.jpg",
+        "sha256": "9597636e4b4945ea03614db50e1eac81b4038b67b974238faadc8600dced412d",
+        "bytes": 34452,
+        "width": 500,
+        "height": 375,
+        "operation": "resize-within-1280-without-upscale-and-JPEG-quality-82-or-83"
+      },
+      {
+        "listingId": "aw-73733",
+        "listingUrl": "https://www.arabwheels.ae/used-cars/chevrolet-silverado-2022-for-sale-in-sharjah-73733",
+        "sourceImageUrl": "https://cache2.arabwheels.ae/ad_pictures/3264/Slide_chevrolet-silverado-2022-3264707.webp",
+        "observedAt": "2026-10-19T20:00:47.391752Z",
+        "retainedPath": "dealer-stock/aw-73733.jpg",
+        "sha256": "485bf94482c924d81abaaa830f6491240b5249faa1eb34db9a57f0461180d0c2",
+        "bytes": 44203,
+        "width": 500,
+        "height": 375,
+        "operation": "resize-within-1280-without-upscale-and-JPEG-quality-82-or-83"
+      },
+      {
+        "listingId": "aw-73753",
+        "listingUrl": "https://www.arabwheels.ae/used-cars/toyota-land-cruiser-2021-for-sale-in-sharjah-73753",
+        "sourceImageUrl": "https://cache1.arabwheels.ae/ad_pictures/3265/Slide_toyota-land-cruiser-2021-3265074.webp",
+        "observedAt": "2026-10-19T20:00:47.391752Z",
+        "retainedPath": "dealer-stock/aw-73753.jpg",
+        "sha256": "9c63f9fa487463ca7f78e2531f77d7a0509aaea3754f6af28b45b051dfb16740",
+        "bytes": 37442,
+        "width": 500,
+        "height": 375,
+        "operation": "resize-within-1280-without-upscale-and-JPEG-quality-82-or-83"
+      }
+    ]
+  }
+}

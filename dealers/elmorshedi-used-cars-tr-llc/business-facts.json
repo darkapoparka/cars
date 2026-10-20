@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "slug": "elmorshedi-used-cars-tr-llc",
+  "dealerId": "ae-sharjah-elmorshedi-used-cars-tr-llc",
+  "business": {
+    "name": "Elmorshedi Used Cars TR LLC",
+    "city": "Sharjah",
+    "region": "Sharjah",
+    "countryCode": "AE",
+    "currency": "AED",
+    "distanceUnit": "km",
+    "locale": "en-AE",
+    "address": "Souq Al Haraj, Tasjeel Village, Saif Zone, Sharjah - UAE",
+    "phone": "+971561896000",
+    "phoneDisplay": "+971561896000",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://www.oneclickdrive.com/company/sharjah/elmorshedi-used-cars-tr-llc",
+    "hours": "",
+    "sourceUrl": "https://www.oneclickdrive.com/company/sharjah/elmorshedi-used-cars-tr-llc",
+    "observedAt": "2026-10-19T19:58:49.340397Z",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://www.oneclickdrive.com/company/sharjah/elmorshedi-used-cars-tr-llc",
+      "observedAt": "2026-10-19T19:58:49.340397Z",
+      "supports": [
+        "public-business-trading-name",
+        "dealer-attributed-catalogue",
+        "business-location",
+        "public-business-phone"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Hyundai/Accent-Comfort/?id=137143",
+      "observedAt": "2026-10-19T19:58:49.340397Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Mercedes-Benz/S63-AMG-4Matic-Plus/?id=137132",
+      "observedAt": "2026-10-19T19:58:49.340397Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Kia/Cerato-EX/?id=137144",
+      "observedAt": "2026-10-19T19:58:49.340397Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    }
+  ]
+}

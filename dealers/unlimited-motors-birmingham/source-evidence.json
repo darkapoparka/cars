@@ -1,0 +1,161 @@
+{
+  "schemaVersion": 1,
+  "dealer": "unlimited-motors-birmingham",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uk.json",
+    "sha256": "6cd8d365586f9a5d5131fe4b1d50baede7de91ab384a135017c25367298b07c4"
+  },
+  "publicSources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/Unlimited-Motors?menu=1",
+      "observedAt": "2026-10-19T20:00:31.563792Z",
+      "supports": [
+        "current-public-business-name",
+        "public-business-contact",
+        "public-premises-or-appointment-information",
+        "current-public-stock-catalogue"
+      ]
+    },
+    {
+      "url": "https://www.ebay.co.uk/itm/820256455597",
+      "observedAt": "2026-10-19T20:02:58.349190Z",
+      "supports": [
+        "selected-current-public-stock",
+        "seller-description-and-vehicle-history-review",
+        "vehicle-photograph"
+      ]
+    },
+    {
+      "url": "https://www.ebay.co.uk/itm/820249639027",
+      "observedAt": "2026-10-19T20:02:58.350908Z",
+      "supports": [
+        "selected-current-public-stock",
+        "seller-description-and-vehicle-history-review",
+        "vehicle-photograph"
+      ]
+    },
+    {
+      "url": "https://www.ebay.co.uk/itm/820248606730",
+      "observedAt": "2026-10-19T20:02:58.452025Z",
+      "supports": [
+        "selected-current-public-stock",
+        "seller-description-and-vehicle-history-review",
+        "vehicle-photograph"
+      ]
+    },
+    {
+      "url": "https://www.cazoo.co.uk/dealers/unlimited-motors-14199/",
+      "observedAt": "2026-10-19T20:03:54.161291Z",
+      "supports": [
+        "bounded-public-logo-research"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "observedAt": "2026-10-19T20:00:31.563792Z",
+  "catalogueObservation": {
+    "sourceUrl": "https://showroom.ebaymotorspro.co.uk/Unlimited-Motors?menu=1",
+    "observedAt": "2026-10-19T20:00:31.563792Z",
+    "httpStatus": 200,
+    "sha256": "18ea59cb0e8da6418bcd6d87378036045518cd2cdac4bdfea2c416fba0ab1bce",
+    "bytes": 41928
+  },
+  "stockReview": [
+    {
+      "sourceUrl": "https://www.ebay.co.uk/itm/820256455597",
+      "observedAt": "2026-10-19T20:02:58.349190Z",
+      "httpStatus": 200,
+      "listingSha256": "bb513e546759d6df53ae37709b8cbd74f0e0126b2f0ff0313cf2d73d94552161",
+      "descriptionUrl": "https://itm.ebaydesc.com/itmdesc/820256455597?t=1792438752000&category=29748&seller=unlimited_motors&excSoj=1&ver=1&excTrk=1&lsite=3&ittenable=false&domain=ebay.com&descgauge=1&cspheader=1&oneClk=2&secureDesc=1&lang=en",
+      "descriptionSha256": "ee25199c2c5f70dfcf67905bd06517171800355d611169e916fe3c081a7a0324",
+      "photoUrl": "https://i.ebayimg.com/images/g/XnEAAeSwZddq1nIc/s-l1600.jpg",
+      "sourcePhotoSha256": "e36668c38642478750575be8981a35b2f96487ac2f3da56dc259bd8f3d5afd34",
+      "sourcePhotoDimensions": [
+        1500,
+        1125
+      ],
+      "photoSha256": "cd948a5a999a2571471e6f08e4267083e28f05fa2fe95af9015c3c14c50a4b12",
+      "photoDimensions": [
+        1024,
+        768
+      ],
+      "photoBytes": 188313,
+      "sourceExifOrientation": null,
+      "sourceId": "public-listing-1",
+      "photoPath": "dealer-stock/public-1.jpg",
+      "historyReview": {
+        "fullDescriptionReviewed": true,
+        "vehicleHistoryPanelReviewed": true,
+        "materialDisclosure": "No additional material adverse disclosure was identified in the retrieved seller description and history fields. This is not a vehicle inspection or a clean-history guarantee."
+      }
+    },
+    {
+      "sourceUrl": "https://www.ebay.co.uk/itm/820249639027",
+      "observedAt": "2026-10-19T20:02:58.350908Z",
+      "httpStatus": 200,
+      "listingSha256": "80535489dfde5832f80ebba5967ab6c48203f40534654d42c32aa3235b3a4899",
+      "descriptionUrl": "https://itm.ebaydesc.com/itmdesc/820249639027?t=1792270392000&category=9844&seller=unlimited_motors&excSoj=1&ver=1&excTrk=1&lsite=3&ittenable=false&domain=ebay.com&descgauge=1&cspheader=1&oneClk=2&secureDesc=1&lang=en",
+      "descriptionSha256": "b48c3f2a1e33a92eb5201e4429783320cc31abe973af8d8fd0b7aee058b1cb9a",
+      "photoUrl": "https://i.ebayimg.com/images/g/ttYAAeSwdfNq0-B1/s-l1600.jpg",
+      "sourcePhotoSha256": "6443d8ea821628da37dd214e4f0f195780d4362920b63b74f623c6b9b40a7931",
+      "sourcePhotoDimensions": [
+        1500,
+        1125
+      ],
+      "photoSha256": "026a4ac729de87103e645e9b0dccd03cbdf226a4c8c511064f78f6dba2a24f5c",
+      "photoDimensions": [
+        1280,
+        960
+      ],
+      "photoBytes": 192144,
+      "sourceExifOrientation": null,
+      "sourceId": "public-listing-2",
+      "photoPath": "dealer-stock/public-2.jpg",
+      "historyReview": {
+        "fullDescriptionReviewed": true,
+        "vehicleHistoryPanelReviewed": true,
+        "materialDisclosure": "No additional material adverse disclosure was identified in the retrieved seller description and history fields. This is not a vehicle inspection or a clean-history guarantee."
+      }
+    },
+    {
+      "sourceUrl": "https://www.ebay.co.uk/itm/820248606730",
+      "observedAt": "2026-10-19T20:02:58.452025Z",
+      "httpStatus": 200,
+      "listingSha256": "4f3011730b4566882e2fdc80b43e6c3b4a0bf0d20032949ee7b0816304c7cac1",
+      "descriptionUrl": "https://itm.ebaydesc.com/itmdesc/820248606730?t=1792245080000&category=9844&seller=unlimited_motors&excSoj=1&ver=1&excTrk=1&lsite=3&ittenable=false&domain=ebay.com&descgauge=1&cspheader=1&oneClk=2&secureDesc=1&lang=en",
+      "descriptionSha256": "ff251cc55e8eddcee6e9f90f720788c4d56b979cb95989ba7ea798b25c83ff90",
+      "photoUrl": "https://i.ebayimg.com/images/g/ZJIAAeSwojpq032W/s-l1600.jpg",
+      "sourcePhotoSha256": "36faccaad5650629ebf09cd2b8c7387b1a60678bb141d958f0249972578af606",
+      "sourcePhotoDimensions": [
+        1200,
+        1600
+      ],
+      "photoSha256": "ab0a43a15bfd6bc4e537c47efc48fff0a8e21d1ec315649fe882932f8cc827f7",
+      "photoDimensions": [
+        960,
+        1280
+      ],
+      "photoBytes": 192951,
+      "sourceExifOrientation": null,
+      "sourceId": "public-listing-3",
+      "photoPath": "dealer-stock/public-3.jpg",
+      "historyReview": {
+        "fullDescriptionReviewed": true,
+        "vehicleHistoryPanelReviewed": true,
+        "materialDisclosure": "No additional material adverse disclosure was identified in the retrieved seller description and history fields. This is not a vehicle inspection or a clean-history guarantee."
+      }
+    }
+  ],
+  "researchNotes": [
+    "Personal-looking email omitted.",
+    "US Unlimited Motors businesses excluded from identity and website research."
+  ],
+  "privacyReview": {
+    "publicBusinessFactsOnly": true,
+    "personalNamesOmitted": true,
+    "personalLookingContactsOmitted": true,
+    "pricesOmitted": true,
+    "rawMarketplaceHtmlNotIncluded": true,
+    "dealerContactPerformed": false
+  }
+}

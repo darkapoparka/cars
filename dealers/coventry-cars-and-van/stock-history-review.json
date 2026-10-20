@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "dealer": "coventry-cars-and-van",
+  "reviewedAt": "2026-10-19T20:10:55.129003Z",
+  "scope": "Complete public advert descriptions and available vehicle-history panels for the selected stock samples. No dealer contact or independent vehicle inspection.",
+  "records": [
+    {
+      "listingId": "vehicle-1",
+      "sourceUrl": "https://www.ebay.co.uk/itm/960088145806",
+      "observedAt": "2026-10-19T20:03:58.221883Z",
+      "httpStatus": 200,
+      "pageSha256": "9f0ac0b56474fdbdc9dce1cc478a7bebd29ce800c6e6fce934742a57d403a30c",
+      "descriptionUrl": "https://itm.ebaydesc.com/itmdesc/960088145806?t=1792428795000&category=122202&seller=deliveringyourvehicle&excSoj=1&ver=1&excTrk=1&lsite=3&ittenable=false&domain=ebay.com&descgauge=1&cspheader=1&oneClk=2&secureDesc=1&lang=en",
+      "descriptionSha256": "ec4e649af0a9e687f789f5d6877cf3383ad742011dd18725d9a5bd94c4809d4e",
+      "embeddedHistoryChecked": false,
+      "descriptionResult": "full-public-advert-reviewed",
+      "retained": true,
+      "finding": "No additional material condition or history disclosure identified in the reviewed public advert; this is not an independent vehicle inspection or history certificate."
+    },
+    {
+      "listingId": "vehicle-2",
+      "sourceUrl": "https://www.ebay.co.uk/itm/960079050486",
+      "observedAt": "2026-10-19T20:03:58.439061Z",
+      "httpStatus": 200,
+      "pageSha256": "9378f617320b5b12cd93f7b0815cda11558cd4962a607326ab58c45778aec214",
+      "descriptionUrl": "https://itm.ebaydesc.com/itmdesc/960079050486?t=1792313230000&category=122202&seller=deliveringyourvehicle&excSoj=1&ver=1&excTrk=1&lsite=3&ittenable=false&domain=ebay.com&descgauge=1&cspheader=1&oneClk=2&secureDesc=1&lang=en",
+      "descriptionSha256": "78e48b528abe600a62f33f807c1f25f36a481efb6aa30fdb5ad6a06179de51b7",
+      "embeddedHistoryChecked": false,
+      "descriptionResult": "full-public-advert-reviewed",
+      "retained": true,
+      "finding": "No additional material condition or history disclosure identified in the reviewed public advert; this is not an independent vehicle inspection or history certificate."
+    },
+    {
+      "listingId": "vehicle-3",
+      "sourceUrl": "https://www.ebay.co.uk/itm/960071338180",
+      "observedAt": "2026-10-19T20:03:58.550104Z",
+      "httpStatus": 200,
+      "pageSha256": "b7ec562ffc7a4362db31ac0298721d26b3107aae07d8430a1a77675aa20f49c1",
+      "descriptionUrl": "https://itm.ebaydesc.com/itmdesc/960071338180?t=1792086082000&category=29748&seller=deliveringyourvehicle&excSoj=1&ver=1&excTrk=1&lsite=3&ittenable=false&domain=ebay.com&descgauge=1&cspheader=1&oneClk=2&secureDesc=1&lang=en",
+      "descriptionSha256": "d298dbde8fa914c043e30bbd58a7872750a2cdc64b25d5b5196faa8ba8759a53",
+      "embeddedHistoryChecked": false,
+      "descriptionResult": "full-public-advert-reviewed",
+      "retained": true,
+      "finding": "No additional material condition or history disclosure identified in the reviewed public advert; this is not an independent vehicle inspection or history certificate."
+    }
+  ]
+}

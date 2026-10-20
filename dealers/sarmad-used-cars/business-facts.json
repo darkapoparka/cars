@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "slug": "sarmad-used-cars",
+  "dealerId": "ae-sharjah-sarmad-used-cars",
+  "business": {
+    "name": "Sarmad Used Cars",
+    "city": "Sharjah",
+    "region": "Sharjah",
+    "countryCode": "AE",
+    "currency": "AED",
+    "distanceUnit": "km",
+    "locale": "en-AE",
+    "address": "Showroom No 107, Souq, Sharjah Used Car Market,Sharjah - UAE",
+    "phone": "+971585518122",
+    "phoneDisplay": "+971585518122",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://www.oneclickdrive.com/company/sharjah/sarmad-used-cars",
+    "hours": "",
+    "sourceUrl": "https://www.oneclickdrive.com/company/sharjah/sarmad-used-cars",
+    "observedAt": "2026-10-19T19:58:51.936383Z",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://www.oneclickdrive.com/company/sharjah/sarmad-used-cars",
+      "observedAt": "2026-10-19T19:58:51.936383Z",
+      "supports": [
+        "public-business-trading-name",
+        "dealer-attributed-catalogue",
+        "business-location",
+        "public-business-phone"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Lexus/IS-Series/?id=917821",
+      "observedAt": "2026-10-19T19:58:51.936383Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Chevrolet/Silverado-1500-LT/?id=875861",
+      "observedAt": "2026-10-19T19:58:51.936383Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Skoda/Kodiaq/?id=875873",
+      "observedAt": "2026-10-19T19:58:51.936383Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    }
+  ]
+}

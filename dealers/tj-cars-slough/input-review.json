@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-input-review",
+  "dealer": "tj-cars-slough",
+  "reviewed": true,
+  "reviewedAt": "2026-10-20T19:24:26.949Z",
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "checks": [
+    "canonical-hosting-and-preserved-fleet-collisions",
+    "assigned-expansion-lead",
+    "public-fact-schema-and-price-omission",
+    "personal-contact-screen",
+    "retained-stock-media",
+    "companion-copy-source-binding",
+    "immutable-template-release-and-native-QA-parent",
+    "reviewed-artwork-provenance-and-regenerated-logo-hashes"
+  ],
+  "sourceArtworkReview": "Retained artwork review is separate provenance; this command does not perform visual, Arabic-expert or dealer approval.",
+  "copyReview": "Automated structure, stock hash, source text and complete EN/BG rows; no new human translation approval is inferred.",
+  "contacts": {
+    "schemaVersion": 1,
+    "kind": "cars-automated-public-contact-screen",
+    "dealer": "tj-cars-slough",
+    "method": "heuristic; no claim that unflagged values cannot be personal",
+    "flags": [],
+    "blocking": []
+  },
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-slough-tj-cars",
+    "position": 87
+  },
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "inputs": [
+    {
+      "path": "FACTS-AND-INVENTORY.json",
+      "sha256": "28a7e53c128126efa9046c5f3a9a8e8515c8209fc6c0dc93460eb1b1d9ce1434"
+    },
+    {
+      "path": "branding/generated-mark.png",
+      "sha256": "30a86494142df0ff3ecd85e6d0dcedb8fcbc2fea9faaa109153ca32c910cdc12"
+    },
+    {
+      "path": "branding/generated-master.png",
+      "sha256": "435b2e5d62af7849ff97b9f29652bd5c035205c9813df6d312028609e97268b9"
+    },
+    {
+      "path": "branding/logo-contract.json",
+      "sha256": "3178daf8133a5a8210d668a5208cf4392a9148045cc68c993ec3d1ac1476673e"
+    },
+    {
+      "path": "branding/logo-recipe.json",
+      "sha256": "d64e2e7fd49395ce4bdb6ba84b2f2853754a964ee6b297a0b6ab81f8eae6c1ab"
+    },
+    {
+      "path": "branding/observed-logo.gif",
+      "sha256": "2673cbd2cfeeec33ca85ec327389a1c10a60c9ab442a4168c08a98fc24bbef17"
+    },
+    {
+      "path": "branding/source.json",
+      "sha256": "b235baa688cba486e00e57b3509d66b4c8ce2ab9235ff301cd26eddd2be1fdcc"
+    },
+    {
+      "path": "business-facts.json",
+      "sha256": "3b981b0e7747c82b51f34a5f0529dea55e04321276fbf0d69335fa34e2437609"
+    },
+    {
+      "path": "copy-review.json",
+      "sha256": "9f7baa2c8eee8be5244f3e756386ad4ec16da65b118bd89ba97b55355d8e80d6"
+    },
+    {
+      "path": "dealer-stock/public-1.jpg",
+      "sha256": "80424a7ca21d2768b11364d43540f66f140fa56410c3478f2c0abee14f797824"
+    },
+    {
+      "path": "dealer-stock/public-2.jpg",
+      "sha256": "273cd1e2541ab55949fada43b6d2868680996c17541c6a8b2b0adc3b6d1c711b"
+    },
+    {
+      "path": "dealer-stock/public-3.jpg",
+      "sha256": "13436e4eb1fa5e1bf877f199a7af02a51057f0665e8acaf32161c2a1129f4602"
+    },
+    {
+      "path": "dealer.json",
+      "sha256": "61837f257c18c5df2a9fa40a74b347ce06de6de694b12074408c4e0b4cb81c8f"
+    },
+    {
+      "path": "identity-review.json",
+      "sha256": "2e323f6b77a46607a69cfc894f7d344d7f5d41eae3953e50e5c763a457dfc347"
+    },
+    {
+      "path": "locale.json",
+      "sha256": "97956ddb99ac7398518e5bf32a961de77060b822716dc3623c1d5154e500577b"
+    },
+    {
+      "path": "missing-facts.json",
+      "sha256": "dc6fec8f80c69fafc7fab6407e3be96e27bd4041bfa55c28386f82dc7e1cf283"
+    },
+    {
+      "path": "qualification.json",
+      "sha256": "5e9cf7efec3ed972b16cf3b5580b7cb73cd84d0b6331f293b8d04017fa8b3e32"
+    },
+    {
+      "path": "source-evidence.json",
+      "sha256": "bde42a4aa8cb2586d671ed252252f5991f36013fc6eb9f66e6085be09357be67"
+    },
+    {
+      "path": "stock.json",
+      "sha256": "ed66e167a97ffbfc57903983fef766c71867bb2c3d9cdd2eabf3edbf9039fec3"
+    }
+  ],
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "providerWrites": 0
+}

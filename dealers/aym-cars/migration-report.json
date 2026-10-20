@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "aym-cars",
+  "previousSlug": "aym-cars",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:13:17.228Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-leicester-aym-cars",
+    "position": 57
+  },
+  "before": {
+    "files": 39,
+    "bytes": 3309036
+  },
+  "afterBeforeReview": {
+    "files": 23,
+    "bytes": 1724475
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 51391,
+      "sha256": "a6144eb9a4327f6a65484c4094d1ffd31562e2695fdde7b8dda0e964a9daf9ca"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 113561,
+      "sha256": "d8a413c5267671969b85fcbce08b78605711dcb60b22d5145065aa17797c5314"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 51391,
+      "sha256": "a6144eb9a4327f6a65484c4094d1ffd31562e2695fdde7b8dda0e964a9daf9ca"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 61845,
+      "sha256": "50250ef787fb058346ab11b8cc5d3fe06e362874c1dc271884686e9c3101f9c9"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 180127,
+      "sha256": "ae436ddb804513813a5dc981c4260e94b030c317076b5fe9fbcf1b686f00cfc7"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 180127,
+      "sha256": "ae436ddb804513813a5dc981c4260e94b030c317076b5fe9fbcf1b686f00cfc7"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 61845,
+      "sha256": "50250ef787fb058346ab11b8cc5d3fe06e362874c1dc271884686e9c3101f9c9"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 51391,
+      "sha256": "a6144eb9a4327f6a65484c4094d1ffd31562e2695fdde7b8dda0e964a9daf9ca"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 4734,
+      "sha256": "16869e2dd713b51b4f56bfca00d2285a8c26506dd4788f17479603e15cae6a45"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 180127,
+      "sha256": "ae436ddb804513813a5dc981c4260e94b030c317076b5fe9fbcf1b686f00cfc7"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 125858,
+      "sha256": "5d0560e2f3d22682a2099b7f1432f0d3adeafa932a1c3b07b55f3469b520c75d"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 180127,
+      "sha256": "ae436ddb804513813a5dc981c4260e94b030c317076b5fe9fbcf1b686f00cfc7"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 125858,
+      "sha256": "5d0560e2f3d22682a2099b7f1432f0d3adeafa932a1c3b07b55f3469b520c75d"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 61845,
+      "sha256": "50250ef787fb058346ab11b8cc5d3fe06e362874c1dc271884686e9c3101f9c9"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 43878,
+      "sha256": "1389f9173f0e7d946fafbcacc5f46b7f6747d65678f2d4b4752c9d775d52c749"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 78522,
+      "sha256": "d03b0a2494b6edaf13bf3b8a3e0443476396b9eeb727466ca29807bc6da6877d"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 35700,
+      "sha256": "82a892be8af6c11a9ef4a783523081393ee9fde1b965bb1b96f7c478f29b478c"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 11,
+    "bytes": 1697057,
+    "inventorySha256": "131d3c2e4f7c0201bba5d7aca554e78b58045a672360b8bb92527b1ad4c76f47",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "aym-cars",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 25,
+    "report": "dealers/aym-cars/input-review.json"
+  },
+  "after": {
+    "files": 25,
+    "bytes": 1733269
+  }
+}

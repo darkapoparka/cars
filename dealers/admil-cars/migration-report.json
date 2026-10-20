@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "admil-cars",
+  "previousSlug": "admil-cars",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:12:06.566Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-surbiton-admil-cars",
+    "position": 92
+  },
+  "before": {
+    "files": 36,
+    "bytes": 5589226
+  },
+  "afterBeforeReview": {
+    "files": 20,
+    "bytes": 2559847
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 125737,
+      "sha256": "06e78ee1533d0a988c897cf6405395bf0d98c76a3340d9b6ba0f8566b37ed3b1"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 125737,
+      "sha256": "06e78ee1533d0a988c897cf6405395bf0d98c76a3340d9b6ba0f8566b37ed3b1"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 125737,
+      "sha256": "06e78ee1533d0a988c897cf6405395bf0d98c76a3340d9b6ba0f8566b37ed3b1"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 275352,
+      "sha256": "f2240f0036941487444511cb5f648df469ff8b5f759e3d33ce367c6ea0db3047"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 251563,
+      "sha256": "8760e7845ba958cbca4114eaeb6ad31ed704e9b72650b753904254697f096854"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 251563,
+      "sha256": "8760e7845ba958cbca4114eaeb6ad31ed704e9b72650b753904254697f096854"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 275352,
+      "sha256": "f2240f0036941487444511cb5f648df469ff8b5f759e3d33ce367c6ea0db3047"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 125737,
+      "sha256": "06e78ee1533d0a988c897cf6405395bf0d98c76a3340d9b6ba0f8566b37ed3b1"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 10005,
+      "sha256": "77aedcd7ed31f8a0ccd61131875a03680e01fed6e0eb80ef22d563e859796ba3"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 251563,
+      "sha256": "8760e7845ba958cbca4114eaeb6ad31ed704e9b72650b753904254697f096854"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 169840,
+      "sha256": "3bf893302775651672ef8707703969c448aa252f4e283d378f5a76359fb80b44"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 251563,
+      "sha256": "8760e7845ba958cbca4114eaeb6ad31ed704e9b72650b753904254697f096854"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 169840,
+      "sha256": "3bf893302775651672ef8707703969c448aa252f4e283d378f5a76359fb80b44"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 275352,
+      "sha256": "f2240f0036941487444511cb5f648df469ff8b5f759e3d33ce367c6ea0db3047"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 175216,
+      "sha256": "8f5cf7b337bbbc65272f2b6c3ecf6d64a03cda3005cca408186028578e3116e1"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 86502,
+      "sha256": "72c0b0c6caefeec7aee5e063200ed51464096cbd63bde4a528516defaede5e38"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 86502,
+      "sha256": "72c0b0c6caefeec7aee5e063200ed51464096cbd63bde4a528516defaede5e38"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 11,
+    "bytes": 2538107,
+    "inventorySha256": "7432f2b7c54f1b09a8ca018d6bebe0679bc1b46256210ef97e36b1c414dc440b",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "admil-cars",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 22,
+    "report": "dealers/admil-cars/input-review.json"
+  },
+  "after": {
+    "files": 22,
+    "bytes": 2568067
+  }
+}

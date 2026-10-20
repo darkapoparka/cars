@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "dealer": "aym-cars",
+  "generations": [
+    {
+      "role": "master",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-abe64008-2eb2-4296-a3c4-4a422f44be25",
+      "modelVersion": null,
+      "prompt": "Create a polished independent logo proposal for exact business name AYM CARS. One horizontal lockup on real transparent background. Left: an elegant bold AYM monogram with a simplified triangular A and connected M, clear and balanced at32px. Right: AYM CARS in beautifully kerned geometric sans-serif capitals. Solid near-black ink, no gradients, shadows, textures, panels, background or slogans. Avoid clipart cars and generic shields. Spatially separate left monogram from lettering with a generous gap for crop. Premium editorial automotive identity, entirely flat and legible.",
+      "promptRetained": true,
+      "sourceAssetSha256": "4d981970cc2038f2d6497b8a6f87c05364d8754953038ee407481303f2ffbea9",
+      "observedAt": "2026-10-19",
+      "originalResponseArtworkRetained": true
+    },
+    {
+      "role": "onDarkAndAccent",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-4bce4ea7-983d-4ffc-b772-ec3176e5156d",
+      "modelVersion": null,
+      "prompt": "Adapt the exact supplied logo into a refined dual-ink surface version, for readable use on dark and red backgrounds. Keep the name spelling, logo motif and layout exactly. Use pure WHITE filled lettering and emblem bounded by a clean broad deep-navy contour, finished with a narrow white outer keyline. No glow. All white areas must be solid opaque ink protected inside the navy contour. True transparent background outside. Maintain a GENEROUS TRANSPARENT GAP between compact emblem and wordmark, do not let their contours touch. No grunge, no speckles, no distressed raster texture, no holes in solid strokes, no gradients, no drop shadow, no decorative panel, no additional content. Flat precise digital artwork with smooth clean contours, professional restrained proportions.",
+      "promptRetained": true,
+      "sourceAssetSha256": "5922b200c57841b9dc677bb4fca6d91bf94d87d3ae2029ebf40f10e8ea2074c7",
+      "observedAt": "2026-10-19",
+      "originalResponseArtworkRetained": true
+    }
+  ],
+  "exportPolicy": "Original generated PNG bytes are retained. Compact pixel-exact extractions, where used, retain their parent generation, hash and rectangle in source.json. Existing dealer-pack logo tooling performs only transparent padding removal and deterministic raster exports. No deterministic recolour is used."
+}

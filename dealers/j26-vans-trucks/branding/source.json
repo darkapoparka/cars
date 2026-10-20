@@ -1,0 +1,195 @@
+{
+  "schemaVersion": 1,
+  "dealer": "j26-vans-trucks",
+  "realLogoFirst": true,
+  "logoKind": "proposal",
+  "publishedBranding": "text-identity-observed",
+  "publicSources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/j26vanstrucks-ltd?menu=1",
+      "observedAt": "2026-10-19"
+    },
+    {
+      "url": "https://www.cazoo.co.uk/dealers/j26-vans--trucks-limited-87885/",
+      "observedAt": "2026-10-19"
+    },
+    {
+      "url": "https://nextdoor.co.uk/pages/j26-vans-trucks-ltd-nottingham-gb-eng/",
+      "observedAt": "2026-10-19"
+    },
+    {
+      "url": "https://find-and-update.company-information.service.gov.uk/company/12752700",
+      "observedAt": "2026-10-19"
+    },
+    {
+      "url": "https://dns.google/resolve?name=j26vanstrucksltd.com&type=A",
+      "observedAt": "2026-10-19"
+    },
+    {
+      "url": "https://j26vanstrucksltd.com/",
+      "observedAt": "2026-10-19"
+    }
+  ],
+  "originals": [],
+  "sourceLogoUrl": null,
+  "workingLogoPath": "branding/generated-master.png",
+  "creationMethod": "imagegen-proposal",
+  "dealerApproved": false,
+  "approvalStatus": "independent-preview-not-dealer-approved",
+  "usageStatus": "public-preview-only",
+  "observedAt": "2026-10-19",
+  "researchConclusion": "No usable original logo was obtained from bounded exact-business/locality searches and the matched public seller and directory sources. The dealer catalogue supplies a text identity and vehicle photographs; an unavailable or absent logo image does not prove that no original branding exists. This is an independent proposed identity, not an official dealer logo.",
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T19:22:56.608725Z",
+    "master": {
+      "path": "branding/generated-master.png",
+      "sha256": "02acd8e752b271a9bebeb64440cd60ebf8da04f8629250b692af57c30abfd6af",
+      "nativeDimensions": {
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-85bcb0e9-c344-43ec-b7a9-e6851f54319d",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "12972970d22b356787b1c9a5ae231465bae1e2cd19410855cf4e337579c4312f",
+      "nativeDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-bb035834-239a-4a06-a629-43b1dcb4ba17",
+        "modelVersion": null
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "12972970d22b356787b1c9a5ae231465bae1e2cd19410855cf4e337579c4312f",
+      "nativeDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-bb035834-239a-4a06-a629-43b1dcb4ba17",
+        "modelVersion": null
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-master.png",
+        "sha256": "02acd8e752b271a9bebeb64440cd60ebf8da04f8629250b692af57c30abfd6af",
+        "nativeDimensions": {
+          "width": 2172,
+          "height": 724
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-85bcb0e9-c344-43ec-b7a9-e6851f54319d",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "1af86034b38be5c3ee044fc3233604bd20bd50b8c071f04d44ca6a2591bb4e12",
+        "nativeDimensions": {
+          "width": 2172,
+          "height": 724
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-2759d086-bc83-4c04-b8f1-ee1b45c6b2b7",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "1af86034b38be5c3ee044fc3233604bd20bd50b8c071f04d44ca6a2591bb4e12",
+        "nativeDimensions": {
+          "width": 2172,
+          "height": 724
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-2759d086-bc83-4c04-b8f1-ee1b45c6b2b7",
+          "modelVersion": null
+        }
+      }
+    },
+    "marks": {
+      "onLight": {
+        "path": "branding/generated-mark.png",
+        "sha256": "12972970d22b356787b1c9a5ae231465bae1e2cd19410855cf4e337579c4312f",
+        "nativeDimensions": {
+          "width": 1254,
+          "height": 1254
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-bb035834-239a-4a06-a629-43b1dcb4ba17",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-mark.png",
+        "sha256": "12972970d22b356787b1c9a5ae231465bae1e2cd19410855cf4e337579c4312f",
+        "nativeDimensions": {
+          "width": 1254,
+          "height": 1254
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-bb035834-239a-4a06-a629-43b1dcb4ba17",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": {
+        "onLight": [
+          "#ffffff"
+        ],
+        "onDark": [
+          "#111113",
+          "#101820"
+        ],
+        "onAccent": [
+          "#09090b",
+          "#17191c",
+          "#c40101"
+        ]
+      },
+      "wordmarkWidths": [
+        120,
+        180
+      ],
+      "reviewedAt": "2026-10-19T19:22:56.608725Z",
+      "notes": "Visually reviewed the actual deterministic transparent-padding exports at120px and180px on all six retained template surface colours. Exact name spelling, silhouette, alpha edges, spacing and clipping were checked. Light-ink variants are actual imagegen results, not deterministic recolours. Small secondary suffix text is subordinate to the principal name; compact identity is provided separately."
+    },
+    "compactMarkStatus": "independent-preview-not-dealer-approved",
+    "compactMarkDescription": "J26 monogram",
+    "compactMarkReview": {
+      "reviewed": true,
+      "widths": [
+        32,
+        64
+      ],
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#101820",
+        "#09090b",
+        "#17191c",
+        "#c40101"
+      ],
+      "reviewedAt": "2026-10-19T19:22:56.608725Z",
+      "notes": "Visually inspected the actual compact exports at32px and64px on all six template backgrounds. Existing-emblem pixel crops have explicit parent hashes and exact rectangle provenance; independently generated compact marks retain their own actual generation IDs. Shape, spacing, clipping and transparent counters were checked. Dealer approval remains unknown."
+    }
+  }
+}

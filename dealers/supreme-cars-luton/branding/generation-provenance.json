@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "dealer": "supreme-cars-luton",
+  "generations": [
+    {
+      "role": "master",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-9e4f7976-fc3e-450e-9ab9-e03d5fc537c8",
+      "modelVersion": null,
+      "prompt": "Make a faithful clean redraw of this weak real Supreme Cars wordmark for a UK dealer preview. Preserve exact name Supreme Cars, clean sans-serif style, black-and-white palette. Create one balanced horizontal lockup: at left a compact bold SC monogram made of two simple interlocking curves, at right Supreme Cars in refined bold mixed-case lettering. Improve proportions and spacing substantially. Genuine transparent background, near-black ink for use on white surfaces, no rectangular background. Generous gap between monogram and text. Compact monogram clear at32px. No gradients, shadows, texture, slogans, crowns, shields or literal cars.",
+      "promptRetained": true,
+      "sourceAssetSha256": "d4676b5159769b9882077e633b2efccb8e24d9d95cec4d4f46f0cc813ce667e8",
+      "observedAt": "2026-10-19",
+      "originalResponseArtworkRetained": true
+    },
+    {
+      "role": "onDarkAndAccent",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-18274f9d-a8b7-4df8-b4fa-fc0c6148ce23",
+      "modelVersion": null,
+      "prompt": "Create a refined dark-surface adaptation of the exact supplied dealer logo. Exact text MUST READ: Supreme Cars. Keep every name letter exactly, and preserve the supplied monogram/motif and proportions. The typography and dark emblem portions should be filled in SOLID OPAQUE PALE SILVER #d9e2ec inside a DARK CHARCOAL outer contour plus a thin WHITE outer keyline. Preserve copper/orange/purple accents if present inside dark contour. True TRANSPARENT alpha background and transparent letter counters. Make smooth strong solid contours without fringing, grunge, raster distress, speckles or noise. Generous clear gap between compact emblem and wording. No gradients, shadow, glowing effects, rectangle or additional content. It needs clear readable contrast on dark navy and red surfaces. Do not introduce unrelated terms such as motorsports. Exact spelling and business identity are essential.",
+      "promptRetained": true,
+      "sourceAssetSha256": "811b9be4853ca3d2519242b38a518c65f43272425d6969360378504bcb2e8ad8",
+      "observedAt": "2026-10-19",
+      "originalResponseArtworkRetained": true
+    }
+  ],
+  "exportPolicy": "Original generated PNG bytes are retained. Compact pixel-exact extractions, where used, retain their parent generation, hash and rectangle in source.json. Existing dealer-pack logo tooling performs only transparent padding removal and deterministic raster exports. No deterministic recolour is used."
+}

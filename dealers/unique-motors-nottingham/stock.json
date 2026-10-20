@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "dealer": "unique-motors-nottingham",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "public-listing-1",
+      "title": "2018 Volkswagen Caravelle 2.0 BiTDI SE DSG",
+      "make": "Volkswagen",
+      "model": "Caravelle",
+      "year": 2018,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/public-1.jpg"
+      ],
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202405199875088",
+      "observedAt": "2026-10-19T17:53:21.085458Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "MPV",
+      "transmission": "Automatic",
+      "fuel": "Diesel",
+      "mileageValue": 64000,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "public-listing-2",
+      "title": "2015 Volkswagen Transporter Shuttle 2.0 TDI SE DSG",
+      "make": "Volkswagen",
+      "model": "Transporter Shuttle",
+      "year": 2015,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/public-2.jpg"
+      ],
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202405129626534",
+      "observedAt": "2026-10-19T17:53:21.589320Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Minibus",
+      "transmission": "Automatic",
+      "fuel": "Diesel",
+      "mileageValue": 109500,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "public-listing-3",
+      "title": "2014 Porsche Boxster 2.7 981 PDK",
+      "make": "Porsche",
+      "model": "Boxster",
+      "year": 2014,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/public-3.jpg"
+      ],
+      "sourceUrl": "https://www.autotrader.co.uk/car-details/202609136002078",
+      "observedAt": "2026-10-19T17:53:21.647400Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Convertible",
+      "transmission": "Automatic",
+      "fuel": "Petrol",
+      "mileageValue": 127380,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

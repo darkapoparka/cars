@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "al-sammarraie-used-cars",
+  "previousSlug": "al-sammarraie-used-cars",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:23:36.734Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 4,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-sharjah-al-sammarraie-used-cars",
+    "position": 324
+  },
+  "before": {
+    "files": 37,
+    "bytes": 6425499
+  },
+  "afterBeforeReview": {
+    "files": 21,
+    "bytes": 1823460
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 166903,
+      "sha256": "6ea438363ab7b95c418acdcc0946b90eded95055293046a098b988cfdf0d6a11"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 162032,
+      "sha256": "407e4a7b47c8e9133da88d05765deac18c5e4bd1ef75cb453dcd29002606317b"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 166903,
+      "sha256": "6ea438363ab7b95c418acdcc0946b90eded95055293046a098b988cfdf0d6a11"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 158502,
+      "sha256": "85539dd3707c72bab18e59deceab0a6e2b2b661325e6ae3832fec48f204a6afa"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 573127,
+      "sha256": "d3744d8d9de430a1a210f209ef26d52c49881b85f5285fb09e21d1cf7353c48f"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 573127,
+      "sha256": "d3744d8d9de430a1a210f209ef26d52c49881b85f5285fb09e21d1cf7353c48f"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 158502,
+      "sha256": "85539dd3707c72bab18e59deceab0a6e2b2b661325e6ae3832fec48f204a6afa"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 166903,
+      "sha256": "6ea438363ab7b95c418acdcc0946b90eded95055293046a098b988cfdf0d6a11"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 12522,
+      "sha256": "d6662e94a2823b7fdbb880d90728e26c52d5157efd84d2883696f39413da3f8f"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 573127,
+      "sha256": "d3744d8d9de430a1a210f209ef26d52c49881b85f5285fb09e21d1cf7353c48f"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 410572,
+      "sha256": "99451e6ea34b64dcab1d9bb68860af6e3d1f4e72509623d6265150a07fa8c6b0"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 573127,
+      "sha256": "d3744d8d9de430a1a210f209ef26d52c49881b85f5285fb09e21d1cf7353c48f"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 410572,
+      "sha256": "99451e6ea34b64dcab1d9bb68860af6e3d1f4e72509623d6265150a07fa8c6b0"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 158502,
+      "sha256": "85539dd3707c72bab18e59deceab0a6e2b2b661325e6ae3832fec48f204a6afa"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 115478,
+      "sha256": "a8560c43932a9fa66f1f1508b655f09d0983fcd9e381e5050ff3d3b5404918d3"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 114918,
+      "sha256": "fa1db9c88ed7434def7b8acdf26d5d51851bee8863e95cc795ff44edb1b16a2d"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 111070,
+      "sha256": "3e3a2d783549cb9e8327264bf2cef4298d1ce1c6bc36e3c187e2102604b5f740"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 12,
+    "bytes": 1799108,
+    "inventorySha256": "d6daa3a7ba3439d66f2488178889d10537088cdd8453210b416c4ca17792e434",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "al-sammarraie-used-cars",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 23,
+    "report": "dealers/al-sammarraie-used-cars/input-review.json"
+  },
+  "after": {
+    "files": 23,
+    "bytes": 1831993
+  }
+}

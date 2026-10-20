@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "dealer": "cardiff-fusion-autos",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T17:36:00.984400Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "vehicle-1",
+      "title": "2015 Ford Transit Custom",
+      "make": "Ford",
+      "model": "Transit Custom",
+      "year": 2015,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/vehicle-1.jpg"
+      ],
+      "sourceUrl": "https://www.ebay.co.uk/itm/128118747071",
+      "observedAt": "2026-10-19T17:36:00.984400Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 152887,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "vehicle-2",
+      "title": "2013 Volkswagen Golf",
+      "make": "Volkswagen",
+      "model": "Golf",
+      "year": 2013,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/vehicle-2.jpg"
+      ],
+      "sourceUrl": "https://www.ebay.co.uk/itm/128109904918",
+      "observedAt": "2026-10-19T17:36:00.984400Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 129522,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "vehicle-3",
+      "title": "2009 Honda Jazz",
+      "make": "Honda",
+      "model": "Jazz",
+      "year": 2009,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/vehicle-3.jpg"
+      ],
+      "sourceUrl": "https://www.ebay.co.uk/itm/128109885647",
+      "observedAt": "2026-10-19T17:36:00.984400Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 113441,
+      "mileageUnit": "mi",
+      "description": "The public eBay history panel shows a Category S/N advisory without identifying which category applies. The seller also reports rear sill repairs. Repair quality and current condition are unverified. Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

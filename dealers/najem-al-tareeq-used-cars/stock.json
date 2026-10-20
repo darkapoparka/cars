@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "dealer": "najem-al-tareeq-used-cars",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:00:42.619778Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "auto-226974",
+      "title": "Mitsubishi Pajero 2014",
+      "make": "Mitsubishi",
+      "model": "Pajero",
+      "year": 2014,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/auto-226974.jpg"
+      ],
+      "sourceUrl": "https://auto.ae/sharjah/sale/car/mitsubishi/mitsubishi-pajero-iv-facelift-1-2014/id/226974/",
+      "observedAt": "2026-10-19T20:00:42.619778Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 142000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "auto-226972",
+      "title": "Kia Optima 2018",
+      "make": "Kia",
+      "model": "Optima",
+      "year": 2018,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/auto-226972.jpg"
+      ],
+      "sourceUrl": "https://auto.ae/sharjah/sale/car/kia/kia-optima-iv-2018/id/226972/",
+      "observedAt": "2026-10-19T20:00:42.619778Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 107000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "auto-226968",
+      "title": "GMC Yukon 2015",
+      "make": "GMC",
+      "model": "Yukon",
+      "year": 2015,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/auto-226968.jpg"
+      ],
+      "sourceUrl": "https://auto.ae/sharjah/sale/car/gmc/gmc-yukon-iv-gmt-k2ug-2015/id/226968/",
+      "observedAt": "2026-10-19T20:00:42.619778Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 161000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

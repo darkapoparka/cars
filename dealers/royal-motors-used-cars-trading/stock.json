@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "dealer": "royal-motors-used-cars-trading",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:01:39Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "listing-239852",
+      "title": "Toyota Camry 2019",
+      "make": "Toyota",
+      "model": "Camry",
+      "year": 2019,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-239852.jpg"
+      ],
+      "sourceUrl": "https://auto.ae/umm-al-quwain/sale/car/toyota/toyota-camry-viii-xv70-2019/id/239852",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 105000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-239847",
+      "title": "Ford Edge 2014",
+      "make": "Ford",
+      "model": "Edge",
+      "year": 2014,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-239847.jpg"
+      ],
+      "sourceUrl": "https://auto.ae/umm-al-quwain/sale/car/ford/ford-edge-i-facelift-2014/id/239847",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 204000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-239836",
+      "title": "Nissan X-Trail 2021",
+      "make": "Nissan",
+      "model": "X-Trail",
+      "year": 2021,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-239836.jpg"
+      ],
+      "sourceUrl": "https://auto.ae/umm-al-quwain/sale/car/nissan/nissan-x-trail-iv-2021/id/239836",
+      "observedAt": "2026-10-19T20:01:39Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 110000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

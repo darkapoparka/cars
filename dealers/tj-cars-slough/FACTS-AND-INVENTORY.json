@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "dealer": "tj-cars-slough",
+  "businessFacts": "business-facts.json",
+  "stock": "stock.json",
+  "inventoryKind": "dated-listing-snapshot",
+  "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+  "sources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/TJ-Cars-Ltd1?menu=1",
+      "observedAt": "2026-10-19T17:36:50.850125Z",
+      "supports": [
+        "public-business-identity",
+        "public-business-contact",
+        "advertised-stock"
+      ]
+    },
+    {
+      "url": "https://www.autotrader.co.uk/dealers/buckinghamshire/slough/tj-cars-ltd-10035303",
+      "observedAt": "2026-10-19T18:24:26.842867Z",
+      "supports": [
+        "public-business-identity",
+        "public-logo-banner"
+      ]
+    }
+  ]
+}

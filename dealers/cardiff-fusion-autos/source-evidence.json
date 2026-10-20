@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "dealer": "cardiff-fusion-autos",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uk.json",
+    "sha256": "6cd8d365586f9a5d5131fe4b1d50baede7de91ab384a135017c25367298b07c4"
+  },
+  "publicSources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/Fusion-Autos-Limited",
+      "observedAt": "2026-10-19T17:36:00.984400Z",
+      "supports": [
+        "business-name",
+        "public-business-contact",
+        "business-location",
+        "current-listing-snapshot"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "dealerId": "gb-cardiff-fusion-autos",
+  "observedAt": "2026-10-19T17:36:00.984400Z",
+  "primaryFetch": {
+    "url": "https://showroom.ebaymotorspro.co.uk/Fusion-Autos-Limited",
+    "status": 200,
+    "observedAt": "2026-10-19T17:36:00.984400Z",
+    "htmlSha256": "65f613bd6d7ab9d6129944a4031dd35b724b543a5b3802abf6fb77dc85f2ea4c"
+  },
+  "stockPhotos": [
+    {
+      "recordId": "vehicle-1",
+      "catalogueUrl": "https://showroom.ebaymotorspro.co.uk/Fusion-Autos-Limited",
+      "listingUrl": "https://www.ebay.co.uk/itm/128118747071",
+      "observedAt": "2026-10-19T17:36:00.984400Z",
+      "originalImageUrl": "https://i.ebayimg.com/00/s/MTIwMFgxNjAw/z/G~IAAeSwRVxq1ZEW/$_57.JPG",
+      "resolvedImageUrl": "https://i.ebayimg.com/00/s/MTIwMFgxNjAw/z/G~IAAeSwRVxq1ZEW/$_57.JPG",
+      "originalSha256": "7a490b34321e09f8ea6306c3a72a0015362b9c82d3215385d0ecb4505dfa5765",
+      "originalDimensions": [
+        1600,
+        1200
+      ],
+      "retainedPath": "dealer-stock/vehicle-1.jpg",
+      "retainedSha256": "a03a6606393d36d039913dcd207b5566318861b3a2a7582b6f4083dbd96c7ced",
+      "retainedDimensions": [
+        1280,
+        960
+      ],
+      "retainedBytes": 171462,
+      "processing": "EXIF orientation; resize only if over 1280 pixels; JPEG compression; metadata omitted. No content alterations."
+    },
+    {
+      "recordId": "vehicle-2",
+      "catalogueUrl": "https://showroom.ebaymotorspro.co.uk/Fusion-Autos-Limited",
+      "listingUrl": "https://www.ebay.co.uk/itm/128109904918",
+      "observedAt": "2026-10-19T17:36:00.984400Z",
+      "originalImageUrl": "https://i.ebayimg.com/00/s/MTI4MFg5NjA=/z/~G4AAeSwvy9q1ZEf/$_57.JPG",
+      "resolvedImageUrl": "https://i.ebayimg.com/00/s/MTI4MFg5NjA=/z/~G4AAeSwvy9q1ZEf/$_57.JPG",
+      "originalSha256": "51a5bf5e6eb372b6bffcdbc43fef36dd4ac384818be3c032b6aaf4abbe5413bb",
+      "originalDimensions": [
+        960,
+        1280
+      ],
+      "retainedPath": "dealer-stock/vehicle-2.jpg",
+      "retainedSha256": "01ff4b41ba290895952aae4b51e9fa79904d7ecfba2f03485368f692608ef5d4",
+      "retainedDimensions": [
+        960,
+        1280
+      ],
+      "retainedBytes": 125226,
+      "processing": "EXIF orientation; resize only if over 1280 pixels; JPEG compression; metadata omitted. No content alterations."
+    },
+    {
+      "recordId": "vehicle-3",
+      "catalogueUrl": "https://showroom.ebaymotorspro.co.uk/Fusion-Autos-Limited",
+      "listingUrl": "https://www.ebay.co.uk/itm/128109885647",
+      "observedAt": "2026-10-19T17:36:00.984400Z",
+      "originalImageUrl": "https://i.ebayimg.com/00/s/MTI4MFg5NjA=/z/je8AAeSw4dhq1D3f/$_57.JPG",
+      "resolvedImageUrl": "https://i.ebayimg.com/00/s/MTI4MFg5NjA=/z/je8AAeSw4dhq1D3f/$_57.JPG",
+      "originalSha256": "0b1ff20eb1815f2a192f4916bfe534ad39080ebd0826b20ba21e49cba6cf0d5d",
+      "originalDimensions": [
+        960,
+        1280
+      ],
+      "retainedPath": "dealer-stock/vehicle-3.jpg",
+      "retainedSha256": "7f2b33f66647f7bb3933b9b7473e10ae1c5e0daee12766fb5f84a521ddd9f04c",
+      "retainedDimensions": [
+        960,
+        1280
+      ],
+      "retainedBytes": 123204,
+      "processing": "EXIF orientation; resize only if over 1280 pixels; JPEG compression; metadata omitted. No content alterations."
+    }
+  ],
+  "publicResearchSummary": [
+    "Public vehicle seller confirmed from the current dealer catalogue.",
+    "Existing registry and clients identities checked against the exact lead and normalized trading names; no live-fleet match found.",
+    "Listing availability is not confirmed; the dated stock disclosure and price omission are retained."
+  ],
+  "stockHistoryReview": "stock-history-review.json"
+}

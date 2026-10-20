@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "dealer": "danny-trading",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "listing-2",
+      "title": "2004 Mercedes-Benz SL 55 AMG F1 5.5 V8 Kompressor",
+      "make": "Mercedes-Benz",
+      "model": "SL 55 AMG F1 5.5 V8 Kompressor",
+      "year": 2004,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/listing-2.jpg"
+      ],
+      "sourceUrl": "https://www.ebay.co.uk/itm/128111050186",
+      "observedAt": "2026-10-19",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "transmission": "Automatic",
+      "fuel": "Petrol",
+      "mileageValue": 57000,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview. The public advert's vehicle-history panel shows a Cat C/D Advisory. The reviewed advisory does not identify which of these categories applies. This history has not been independently verified."
+    },
+    {
+      "id": "listing-3",
+      "title": "2019 Mercedes-Benz S Class S350d L Grand Edition Executive 4dr 9G-Tronic",
+      "make": "Mercedes-Benz",
+      "model": "S Class S350d L Grand Edition Executive 4dr 9G-Tronic",
+      "year": 2019,
+      "currency": "GBP",
+      "images": [
+        "/dealer-stock/listing-3.jpg"
+      ],
+      "sourceUrl": "https://www.ebay.co.uk/itm/128110912767",
+      "observedAt": "2026-10-19",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 135000,
+      "mileageUnit": "mi",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

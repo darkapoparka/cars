@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "al-shamal-al-amreci-used-cars",
+  "previousSlug": "al-shamal-al-amreci-used-cars",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:24:09.463Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 4,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-sharjah-al-shamal-al-amreci-used-cars",
+    "position": 326
+  },
+  "before": {
+    "files": 39,
+    "bytes": 4841746
+  },
+  "afterBeforeReview": {
+    "files": 23,
+    "bytes": 2015576
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 99686,
+      "sha256": "8d2e79a4129d9c4ae3d98f25458756e14f3dbf745f6d19a91bc5f73682ec11e2"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 96144,
+      "sha256": "4fecc1810b5f799851077db4dce84e88a6d276b84d5ae7f2a225fd5d53058862"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 99686,
+      "sha256": "8d2e79a4129d9c4ae3d98f25458756e14f3dbf745f6d19a91bc5f73682ec11e2"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 311492,
+      "sha256": "642ef8a88660212ff339402850cc7959776b8eb0406a499f57cb2b9e684f0106"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 116284,
+      "sha256": "4f351ac9ce81f034edf480507bb9a2d891c0fc86d41595e692bc9c7b36eceef2"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 306607,
+      "sha256": "435125f7bdb02fec3d01f5b95eddddb990bab4214393799e9308f95ec312ace8"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 311492,
+      "sha256": "642ef8a88660212ff339402850cc7959776b8eb0406a499f57cb2b9e684f0106"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 99686,
+      "sha256": "8d2e79a4129d9c4ae3d98f25458756e14f3dbf745f6d19a91bc5f73682ec11e2"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 8352,
+      "sha256": "704b7defd75be25105cc275b7781088f53835b5e45246eaa442bb52534603a9d"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 116284,
+      "sha256": "4f351ac9ce81f034edf480507bb9a2d891c0fc86d41595e692bc9c7b36eceef2"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 82290,
+      "sha256": "cb6a3d2e61e4af7bfe9a2422edfb32120fd226d6f875e2dffba6839d8d0208f1"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 306607,
+      "sha256": "435125f7bdb02fec3d01f5b95eddddb990bab4214393799e9308f95ec312ace8"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 213706,
+      "sha256": "907750680fabbc1eb0ff5c37c0a987ba0b11ee7bf17c86b92cc41a48d184bcb3"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 311492,
+      "sha256": "642ef8a88660212ff339402850cc7959776b8eb0406a499f57cb2b9e684f0106"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 208984,
+      "sha256": "7f39bb5bfdfe0dc275d38069994f743abd5caaec36f5f999b8db50224f5bc8ad"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 68900,
+      "sha256": "7a4f666118d1dd65956cc25c8a9a93e2cd7a111ead9b40dd8a590167cbc5ffcf"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 72348,
+      "sha256": "528d8a4f5ac234a0bf2878bd7fc4c206642a7fb93e6e2b63ce292238e8b9e03d"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 12,
+    "bytes": 1082969,
+    "inventorySha256": "37a4b42949ae6730a8c7ce833cca336bcc7c8df5b4d8cf881d24659668e438cf",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "al-shamal-al-amreci-used-cars",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 25,
+    "report": "dealers/al-shamal-al-amreci-used-cars/input-review.json"
+  },
+  "after": {
+    "files": 25,
+    "bytes": 2024450
+  }
+}
