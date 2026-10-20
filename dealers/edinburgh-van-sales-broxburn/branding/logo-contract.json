@@ -1,0 +1,197 @@
+{
+  "schemaVersion": 1,
+  "dealer": "edinburgh-van-sales-broxburn",
+  "reviewed": true,
+  "reviewedAt": "2026-10-20T23:45:17.025Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "512acad84e3e355b095676ec7895590a1c95ab0cb02aee0a72cdf06b76b6859f",
+      "sourceSha256": "7efde13450812ec997fac6ba2521bd8ce4d223cac20a6ed377504fd0d5fca4ab"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "099aeb55552c13eba28cc23d7f20c3b87b4a14a559ccb7b9fc53260715777e03",
+      "sourceSha256": "18831c9fde0e9d515059be475e6376a8687aba3db58d48314e42c935119c0ab1"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "099aeb55552c13eba28cc23d7f20c3b87b4a14a559ccb7b9fc53260715777e03",
+      "sourceSha256": "18831c9fde0e9d515059be475e6376a8687aba3db58d48314e42c935119c0ab1"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "7efde13450812ec997fac6ba2521bd8ce4d223cac20a6ed377504fd0d5fca4ab",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-c0d344c1-ea77-4ed4-9351-6b75d981806f",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "aa32e163f6d45f1247565a020ba2d262ca40fdca6138b2eb8f44905e4434001e",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-c0d344c1-ea77-4ed4-9351-6b75d981806f",
+      "modelVersion": null
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "b10e2b2623f2f7e486a88c2b10d6c0f771f6748c411af7929d3af1bf5361b855"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "7efde13450812ec997fac6ba2521bd8ce4d223cac20a6ed377504fd0d5fca4ab",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-c0d344c1-ea77-4ed4-9351-6b75d981806f",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/edinburgh-van-sales-broxburn/branding/generated-master-v1-20261021.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "18831c9fde0e9d515059be475e6376a8687aba3db58d48314e42c935119c0ab1",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-25cba9ec-492e-485b-8c8b-d169c0343a70",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/edinburgh-van-sales-broxburn/branding/generated-inverse-v1-20261021.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "18831c9fde0e9d515059be475e6376a8687aba3db58d48314e42c935119c0ab1",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-25cba9ec-492e-485b-8c8b-d169c0343a70",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/edinburgh-van-sales-broxburn/branding/generated-inverse-v1-20261021.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "ec6603b501ed76f5ab721a4b35e571c7ac24245d86129f19e75418cefba8dd9f",
+      "sha256": "7efde13450812ec997fac6ba2521bd8ce4d223cac20a6ed377504fd0d5fca4ab",
+      "crop": {
+        "left": 48,
+        "top": 115,
+        "width": 2044,
+        "height": 585
+      },
+      "sourcePath": "branding/generated-master-v1-20261021.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "c4cc9054e04c128f4c747455dea2653e068206c74341acc1511cda7cbaeb05ae",
+      "sha256": "18831c9fde0e9d515059be475e6376a8687aba3db58d48314e42c935119c0ab1",
+      "crop": {
+        "left": 46,
+        "top": 110,
+        "width": 2040,
+        "height": 585
+      },
+      "sourcePath": "branding/generated-inverse-v1-20261021.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "c4cc9054e04c128f4c747455dea2653e068206c74341acc1511cda7cbaeb05ae",
+      "sha256": "18831c9fde0e9d515059be475e6376a8687aba3db58d48314e42c935119c0ab1",
+      "crop": {
+        "left": 46,
+        "top": 110,
+        "width": 2040,
+        "height": 585
+      },
+      "sourcePath": "branding/generated-inverse-v1-20261021.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "dbd6f37a226a153d9af36bd285a5199aafacea9b20f0b6335bd6c604a9906822",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-c0d344c1-ea77-4ed4-9351-6b75d981806f",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/edinburgh-van-sales-broxburn/branding/generated-mark-light-v1-20261021.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "b69dab3cb671c057720fbdb0cff4d28d3f37fa41fab05f7873652c2c48241995",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-25cba9ec-492e-485b-8c8b-d169c0343a70",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/edinburgh-van-sales-broxburn/branding/generated-mark-dark-v1-20261021.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "aa32e163f6d45f1247565a020ba2d262ca40fdca6138b2eb8f44905e4434001e",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-c0d344c1-ea77-4ed4-9351-6b75d981806f",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/edinburgh-van-sales-broxburn/branding/generated-mark-light-v1-20261021.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "b10e2b2623f2f7e486a88c2b10d6c0f771f6748c411af7929d3af1bf5361b855",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-c0d344c1-ea77-4ed4-9351-6b75d981806f",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/edinburgh-van-sales-broxburn/branding/generated-mark-light-v1-20261021.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-20T23:45:17.025Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "12419af58f38d0ccc61edf9090062207575755c3a9990e5de5b47b7c4dc965eb",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-25cba9ec-492e-485b-8c8b-d169c0343a70",
+      "modelVersion": null
+    }
+  }
+}

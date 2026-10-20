@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "dealer": "edinburgh-van-sales-broxburn",
-  "status": "research-required",
+  "status": "reviewed",
   "realLogoFirst": true,
   "publicSources": [
     {
@@ -18,7 +18,192 @@
     }
   ],
   "originals": [],
-  "creationMethod": null,
+  "creationMethod": "imagegen-proposal",
   "dealerApproved": false,
-  "generatedInputs": null
+  "generatedInputs": {
+    "reviewedAt": "2026-10-20T23:45:17.025Z",
+    "master": {
+      "path": "branding/generated-master-v1-20261021.png",
+      "sha256": "ec6603b501ed76f5ab721a4b35e571c7ac24245d86129f19e75418cefba8dd9f",
+      "nativeDimensions": {
+        "width": 2103,
+        "height": 748
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-c0d344c1-ea77-4ed4-9351-6b75d981806f",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark-light-v1-20261021.png",
+      "sha256": "306a362bd454c969e0318f0fc8127c0e48fef0264dfbf6c55ee904680d9bd0f6",
+      "nativeDimensions": {
+        "width": 761,
+        "height": 748
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-c0d344c1-ea77-4ed4-9351-6b75d981806f",
+        "modelVersion": null
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-dark-v1-20261021.png",
+      "sha256": "2f61966cb389180d923f70579cf03d7bb0cc9493c61a5bc1dab0e54eec6aff5f",
+      "nativeDimensions": {
+        "width": 758,
+        "height": 748
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-25cba9ec-492e-485b-8c8b-d169c0343a70",
+        "modelVersion": null
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-master-v1-20261021.png",
+        "sha256": "ec6603b501ed76f5ab721a4b35e571c7ac24245d86129f19e75418cefba8dd9f",
+        "nativeDimensions": {
+          "width": 2103,
+          "height": 748
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-c0d344c1-ea77-4ed4-9351-6b75d981806f",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-inverse-v1-20261021.png",
+        "sha256": "c4cc9054e04c128f4c747455dea2653e068206c74341acc1511cda7cbaeb05ae",
+        "nativeDimensions": {
+          "width": 2103,
+          "height": 748
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-25cba9ec-492e-485b-8c8b-d169c0343a70",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-inverse-v1-20261021.png",
+        "sha256": "c4cc9054e04c128f4c747455dea2653e068206c74341acc1511cda7cbaeb05ae",
+        "nativeDimensions": {
+          "width": 2103,
+          "height": 748
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-25cba9ec-492e-485b-8c8b-d169c0343a70",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-20T23:45:17.025Z",
+      "wordmarkWidths": [
+        120,
+        180
+      ],
+      "markWidths": [
+        32,
+        64
+      ],
+      "notes": "Agent inspected exact alpha-composited light/inverse wordmarks; final matched consumer sheet is separately retained. All five native dark/red backgrounds are unchanged. Proposal only, no human/dealer/native/hosted approval."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-20T23:45:17.025Z",
+      "widths": [
+        32,
+        64
+      ],
+      "notes": "Compact artwork is an exact pixel extraction of the isolated generated emblem, with a clear alpha gap to the wordmark; no recolour, filters or alpha cleanup."
+    }
+  },
+  "approvalStatus": "independent-preview-not-dealer-approved",
+  "researchConclusion": "Exact retained seller pages were checked for the published trading name. Primary eBay pages expose text and stock pictures, with no distinct dealer logo image. Current Cazoo artwork fetches were rate-limited; bounded cached text supports the retained identity. No usable standalone logo obtained; this does not establish that no logo exists. These independently generated proposals do not change factual identity, contacts, stock or retained research.",
+  "publicSourceObservations": [
+    {
+      "observedAt": "2026-10-20T23:45:17.025Z",
+      "kind": "bounded-logo-first-page-review",
+      "sourcePage": "https://showroom.ebaymotorspro.co.uk/EdinburghVanSales?page=1",
+      "observations": "Exact primary seller displays Edinburgh Van Sales at the retained Broxburn location; no distinct dealer logo raster in page source. Cazoo retained-page text supports identity; direct artwork read was HTTP429."
+    }
+  ],
+  "generation": {
+    "tool": "image_gen.imagegen",
+    "generationId": "exec-c0d344c1-ea77-4ed4-9351-6b75d981806f",
+    "modelVersion": null,
+    "prompt": "Use case: logo-brand. Create one polished, independently proposed automotive dealer logo for Edinburgh Van Sales (Broxburn). This is a first proposal, not a claim of an official adopted identity.\nAsset type: genuinely transparent raster logo for web headers and a matching compact favicon.\nComposition: horizontal lockup, visually balanced. Put ONLY the isolated compact emblem on the left, approximately the left 28 percent; keep a completely empty transparent vertical gap at least 9 percent of total width between emblem and wordmark, so the emblem can be extracted losslessly. The emblem is a compact distinctive EV monogram with a single broad roof line suggesting a panel van; form a nearly square solid emblem, simple open counters and thick strokes readable at 32 pixels, no elaborate van illustration. Its visible geometry should be as wide as it is tall, with thick clean edges and no tiny loose details. On the right, set the exact business text in bold crisp modern sans-serif, balanced across the following lines:\nEDINBURGH\nVAN SALES\n(BROXBURN)\nTypography: exact spelling and punctuation; substantial readable letterforms, open counters, no thin subtitle. No slogans, dates, badge claims, URLs or other text.\nColor: solid deep ink #101820 throughout the emblem and lettering, intended to be highly legible on white. No gradients, metallic finish, shadows, glows, texture or faint outlines.\nBackground: real transparent alpha, no white rectangle or checkerboard painted into the artwork. Smooth clean antialiased edges, opaque solid interiors, zero haze or translucent halo. Keep margins modest. One logo only, no mockup, no scene, no border around the canvas. Preserve the separate emblem and clear transparent gap."
+  },
+  "compactDerivation": {
+    "operation": "lossless-png-extract-isolated-emblem",
+    "parentPath": "branding/generated-master-v1-20261021.png",
+    "parentSha256": "ec6603b501ed76f5ab721a4b35e571c7ac24245d86129f19e75418cefba8dd9f",
+    "crop": {
+      "left": 0,
+      "top": 0,
+      "width": 761,
+      "height": 748
+    },
+    "emptyGap": {
+      "start": 701,
+      "end": 821,
+      "width": 120
+    },
+    "parentNativeDimensions": {
+      "width": 2103,
+      "height": 748
+    },
+    "artworkUnmodified": true,
+    "alphaUnmodified": true
+  },
+  "compactOnDarkDerivation": {
+    "operation": "lossless-png-extract-isolated-emblem",
+    "parentPath": "branding/generated-inverse-v1-20261021.png",
+    "parentSha256": "c4cc9054e04c128f4c747455dea2653e068206c74341acc1511cda7cbaeb05ae",
+    "crop": {
+      "left": 0,
+      "top": 0,
+      "width": 758,
+      "height": 748
+    },
+    "emptyGap": {
+      "start": 698,
+      "end": 818,
+      "width": 120
+    },
+    "parentNativeDimensions": {
+      "width": 2103,
+      "height": 748
+    },
+    "artworkUnmodified": true,
+    "alphaUnmodified": true
+  },
+  "additionalGenerations": [
+    {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-25cba9ec-492e-485b-8c8b-d169c0343a70",
+      "modelVersion": null,
+      "prompt": "Use case: identity-preserve / logo-brand variant. Edit the attached transparent logo only. Preserve its exact emblem geometry, all letterforms, spelling, punctuation, relative positions, line breaks and transparent separation between the isolated emblem and the wordmark. Change all visible deep ink artwork into fully opaque near-white #F8FAFC for use on dark charcoal and red web header backgrounds. Retain a genuine transparent alpha background and crisp clean contours. The logo must remain the exact same Edinburgh Van Sales (Broxburn) proposal. No new text, no shadows, glows, gray haze, outline halos, drop shadows, textures, added border or background panel. Interior strokes must be solid opaque near-white, not transparent or faded. Keep the isolated left emblem separate so the matching compact icon can be losslessly extracted. One precise inverse-color treatment, no mockup.",
+      "referencePaths": [
+        "J:/.artifacts/cars-source-sync/local-next3-branding-inputs/edinburgh-van-sales-broxburn-word-light.png"
+      ],
+      "path": "branding/generated-inverse-v1-20261021.png",
+      "sha256": "c4cc9054e04c128f4c747455dea2653e068206c74341acc1511cda7cbaeb05ae"
+    }
+  ],
+  "sourceHistory": [
+    {
+      "reference": "branding/source-before-first-artwork-20261021-9085bebb1b72a683.json",
+      "sha256": "9085bebb1b72a683584e9355765066baed50d159289125e0b0afe0a83f9c6a7a",
+      "retainedAt": "2026-10-20T23:45:17.025Z",
+      "reason": "Exact maintained input-only draft provenance before first proposal artwork"
+    }
+  ]
 }

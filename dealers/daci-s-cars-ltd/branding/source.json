@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "dealer": "daci-s-cars-ltd",
-  "status": "research-required",
+  "status": "reviewed",
   "realLogoFirst": true,
   "publicSources": [
     {
@@ -10,7 +10,192 @@
     }
   ],
   "originals": [],
-  "creationMethod": null,
+  "creationMethod": "imagegen-proposal",
   "dealerApproved": false,
-  "generatedInputs": null
+  "generatedInputs": {
+    "reviewedAt": "2026-10-20T23:44:55.744Z",
+    "master": {
+      "path": "branding/generated-master-v1-20261021.png",
+      "sha256": "9bc1ae700db535405951cb82c7a0c5e124dd497f02a7a5976f32d3478a0f3534",
+      "nativeDimensions": {
+        "width": 1942,
+        "height": 809
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-c4061207-ae71-4355-a899-5c880331eae8",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark-light-v1-20261021.png",
+      "sha256": "b46247bb0c63828dd060997b63c5841435c2bc8f9fd34fecef94b541fd7618ca",
+      "nativeDimensions": {
+        "width": 621,
+        "height": 809
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-c4061207-ae71-4355-a899-5c880331eae8",
+        "modelVersion": null
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-dark-v1-20261021.png",
+      "sha256": "1cebf6e09e9053c93521fdda36ec747058ad1a249781d7cd1c0340cdb85e6d5b",
+      "nativeDimensions": {
+        "width": 622,
+        "height": 809
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-40c11fc4-48f0-4dfa-8bec-f3f78158171c",
+        "modelVersion": null
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-master-v1-20261021.png",
+        "sha256": "9bc1ae700db535405951cb82c7a0c5e124dd497f02a7a5976f32d3478a0f3534",
+        "nativeDimensions": {
+          "width": 1942,
+          "height": 809
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-c4061207-ae71-4355-a899-5c880331eae8",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-inverse-v1-20261021.png",
+        "sha256": "17b7b6797197bcb97838480461aa0afaf2e648a17ae62aa795719e9348f8bf79",
+        "nativeDimensions": {
+          "width": 1944,
+          "height": 809
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-40c11fc4-48f0-4dfa-8bec-f3f78158171c",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-inverse-v1-20261021.png",
+        "sha256": "17b7b6797197bcb97838480461aa0afaf2e648a17ae62aa795719e9348f8bf79",
+        "nativeDimensions": {
+          "width": 1944,
+          "height": 809
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-40c11fc4-48f0-4dfa-8bec-f3f78158171c",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-20T23:44:55.744Z",
+      "wordmarkWidths": [
+        120,
+        180
+      ],
+      "markWidths": [
+        32,
+        64
+      ],
+      "notes": "Agent inspected exact alpha-composited light/inverse wordmarks; final matched consumer sheet is separately retained. All five native dark/red backgrounds are unchanged. Proposal only, no human/dealer/native/hosted approval."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-20T23:44:55.744Z",
+      "widths": [
+        32,
+        64
+      ],
+      "notes": "Compact artwork is an exact pixel extraction of the isolated generated emblem, with a clear alpha gap to the wordmark; no recolour, filters or alpha cleanup."
+    }
+  },
+  "approvalStatus": "independent-preview-not-dealer-approved",
+  "researchConclusion": "Exact retained seller pages were checked for the published trading name. Primary eBay pages expose text and stock pictures, with no distinct dealer logo image. Current Cazoo artwork fetches were rate-limited; bounded cached text supports the retained identity. No usable standalone logo obtained; this does not establish that no logo exists. These independently generated proposals do not change factual identity, contacts, stock or retained research.",
+  "publicSourceObservations": [
+    {
+      "observedAt": "2026-10-20T23:44:55.744Z",
+      "kind": "bounded-logo-first-page-review",
+      "sourcePage": "https://showroom.ebaymotorspro.co.uk/DACIS-CARS-LTD",
+      "observations": "Exact primary seller displays DACI'S CARS LTD. No distinct dealer logo raster was exposed in the bounded page source; Cazoo platform branding is not dealer art."
+    }
+  ],
+  "generation": {
+    "tool": "image_gen.imagegen",
+    "generationId": "exec-c4061207-ae71-4355-a899-5c880331eae8",
+    "modelVersion": null,
+    "prompt": "Use case: logo-brand. Create one polished, independently proposed automotive dealer logo for Daci's Cars Ltd. This is a first proposal, not a claim of an official adopted identity.\nAsset type: genuinely transparent raster logo for web headers and a matching compact favicon.\nComposition: horizontal lockup, visually balanced. Put ONLY the isolated compact emblem on the left, approximately the left 28 percent; keep a completely empty transparent vertical gap at least 9 percent of total width between emblem and wordmark, so the emblem can be extracted losslessly. The emblem is a compact strong uppercase D monogram with one simple inset road line; a bold nearly square D silhouette with a clearly open interior, no shield, no wing or car-manufacturer styling. Its visible geometry should be as wide as it is tall, with thick clean edges and no tiny loose details. On the right, set the exact business text in bold crisp modern sans-serif, balanced across the following lines:\nDACI'S CARS\nLTD\nTypography: exact spelling and punctuation; substantial readable letterforms, open counters, no thin subtitle. No slogans, dates, badge claims, URLs or other text.\nColor: solid deep ink #101820 throughout the emblem and lettering, intended to be highly legible on white. No gradients, metallic finish, shadows, glows, texture or faint outlines.\nBackground: real transparent alpha, no white rectangle or checkerboard painted into the artwork. Smooth clean antialiased edges, opaque solid interiors, zero haze or translucent halo. Keep margins modest. One logo only, no mockup, no scene, no border around the canvas. Preserve the separate emblem and clear transparent gap."
+  },
+  "compactDerivation": {
+    "operation": "lossless-png-extract-isolated-emblem",
+    "parentPath": "branding/generated-master-v1-20261021.png",
+    "parentSha256": "9bc1ae700db535405951cb82c7a0c5e124dd497f02a7a5976f32d3478a0f3534",
+    "crop": {
+      "left": 0,
+      "top": 0,
+      "width": 621,
+      "height": 809
+    },
+    "emptyGap": {
+      "start": 575,
+      "end": 668,
+      "width": 93
+    },
+    "parentNativeDimensions": {
+      "width": 1942,
+      "height": 809
+    },
+    "artworkUnmodified": true,
+    "alphaUnmodified": true
+  },
+  "compactOnDarkDerivation": {
+    "operation": "lossless-png-extract-isolated-emblem",
+    "parentPath": "branding/generated-inverse-v1-20261021.png",
+    "parentSha256": "17b7b6797197bcb97838480461aa0afaf2e648a17ae62aa795719e9348f8bf79",
+    "crop": {
+      "left": 0,
+      "top": 0,
+      "width": 622,
+      "height": 809
+    },
+    "emptyGap": {
+      "start": 577,
+      "end": 668,
+      "width": 91
+    },
+    "parentNativeDimensions": {
+      "width": 1944,
+      "height": 809
+    },
+    "artworkUnmodified": true,
+    "alphaUnmodified": true
+  },
+  "additionalGenerations": [
+    {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-40c11fc4-48f0-4dfa-8bec-f3f78158171c",
+      "modelVersion": null,
+      "prompt": "Use case: identity-preserve / logo-brand variant. Edit the attached transparent logo only. Preserve its exact emblem geometry, all letterforms, spelling, punctuation, relative positions, line breaks and transparent separation between the isolated emblem and the wordmark. Change all visible deep ink artwork into fully opaque near-white #F8FAFC for use on dark charcoal and red web header backgrounds. Retain a genuine transparent alpha background and crisp clean contours. The logo must remain the exact same Daci's Cars Ltd proposal. No new text, no shadows, glows, gray haze, outline halos, drop shadows, textures, added border or background panel. Interior strokes must be solid opaque near-white, not transparent or faded. Keep the isolated left emblem separate so the matching compact icon can be losslessly extracted. One precise inverse-color treatment, no mockup.",
+      "referencePaths": [
+        "J:/.artifacts/cars-source-sync/local-next3-branding-inputs/daci-s-cars-ltd-word-light.png"
+      ],
+      "path": "branding/generated-inverse-v1-20261021.png",
+      "sha256": "17b7b6797197bcb97838480461aa0afaf2e648a17ae62aa795719e9348f8bf79"
+    }
+  ],
+  "sourceHistory": [
+    {
+      "reference": "branding/source-before-first-artwork-20261021-1d451638e6a45a48.json",
+      "sha256": "1d451638e6a45a4838e0e290ff910b4708fe5904c52504ab6247df0577760931",
+      "retainedAt": "2026-10-20T23:44:55.744Z",
+      "reason": "Exact maintained input-only draft provenance before first proposal artwork"
+    }
+  ]
 }

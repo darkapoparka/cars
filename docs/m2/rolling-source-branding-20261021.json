@@ -192,6 +192,108 @@
           "provenance": "dealers/thornton-motors-cars-vans/branding/first-proposal-artwork-20261021.json"
         }
       ],
+      "nativeStatus": "dispatched; qualification not inferred from dispatch",
+      "nativeApproval": false,
+      "hostedApproval": false,
+      "nativeRun": {
+        "runId": 39517241113,
+        "sourceCommit": "3ac342896a2c8ec5eb015f640a00b72b9e4cb323",
+        "url": "https://github.com/darkapoparka/cars/actions/runs/39517241113",
+        "slugs": [
+          "evelyn-motors",
+          "newtown-autos-ltd",
+          "thornton-motors-cars-vans"
+        ]
+      }
+    },
+    {
+      "group": "local-next3",
+      "recordedAt": "2026-10-20T23:50:31.568Z",
+      "reviewSealSha256": "3f637f676846aa6da7f31a539771d33dd0dabe38b0cbb99bbb0b55d23bc835cb",
+      "totals": {
+        "packs": 3,
+        "artworkPassed": 3,
+        "sourceReviewCheckPassed": 3,
+        "existingContactHeld": 0,
+        "candidateRasterChecks": 42,
+        "actualSourceRasterChecks": 42,
+        "files": 72,
+        "bytes": 6355048,
+        "modifiedPaths": 15,
+        "addedPaths": 27,
+        "deleted": 0
+      },
+      "packs": [
+        {
+          "slug": "daci-s-cars-ltd",
+          "path": "dealers/daci-s-cars-ltd",
+          "packDigest": "b19a20ef2141f37db6367c5a0c9930036b45be6d8c0e4f51748a9f0962835984",
+          "files": 24,
+          "bytes": 1864055,
+          "sourceReady": true,
+          "proposalOnly": true,
+          "maintainerConsumerReview": true,
+          "actualSourceRasters": 14,
+          "strictPublisher": {
+            "passed": true,
+            "actualExportedApplyLeadBranding": true,
+            "fixtureSourceSha256": "85d66559b60867d2ab30ff7c4cb0a9eb07f7d6b9e0fb8ef3c4ae5caeae594783",
+            "noBuild": true
+          },
+          "sourceFactsStockPhotosResearchPreserved": true,
+          "humanReview": false,
+          "dealerApproval": false,
+          "nativeApproval": false,
+          "hostedApproval": false,
+          "provenance": "dealers/daci-s-cars-ltd/branding/first-proposal-artwork-20261021.json"
+        },
+        {
+          "slug": "d-t-cars-bristol-ltd",
+          "path": "dealers/d-t-cars-bristol-ltd",
+          "packDigest": "70710b71434769e0a76af9811b0cd4397672edf91af5413ed9646773eac17aa5",
+          "files": 24,
+          "bytes": 2208479,
+          "sourceReady": true,
+          "proposalOnly": true,
+          "maintainerConsumerReview": true,
+          "actualSourceRasters": 14,
+          "strictPublisher": {
+            "passed": true,
+            "actualExportedApplyLeadBranding": true,
+            "fixtureSourceSha256": "85d66559b60867d2ab30ff7c4cb0a9eb07f7d6b9e0fb8ef3c4ae5caeae594783",
+            "noBuild": true
+          },
+          "sourceFactsStockPhotosResearchPreserved": true,
+          "humanReview": false,
+          "dealerApproval": false,
+          "nativeApproval": false,
+          "hostedApproval": false,
+          "provenance": "dealers/d-t-cars-bristol-ltd/branding/first-proposal-artwork-20261021.json"
+        },
+        {
+          "slug": "edinburgh-van-sales-broxburn",
+          "path": "dealers/edinburgh-van-sales-broxburn",
+          "packDigest": "2d1820e74dfcb029490aa9bc19cb4cdf6ad88c612b3878ae1654114995a3d75b",
+          "files": 24,
+          "bytes": 2282514,
+          "sourceReady": true,
+          "proposalOnly": true,
+          "maintainerConsumerReview": true,
+          "actualSourceRasters": 14,
+          "strictPublisher": {
+            "passed": true,
+            "actualExportedApplyLeadBranding": true,
+            "fixtureSourceSha256": "85d66559b60867d2ab30ff7c4cb0a9eb07f7d6b9e0fb8ef3c4ae5caeae594783",
+            "noBuild": true
+          },
+          "sourceFactsStockPhotosResearchPreserved": true,
+          "humanReview": false,
+          "dealerApproval": false,
+          "nativeApproval": false,
+          "hostedApproval": false,
+          "provenance": "dealers/edinburgh-van-sales-broxburn/branding/first-proposal-artwork-20261021.json"
+        }
+      ],
       "nativeStatus": "Awaiting exact-source dispatch after this checkpoint",
       "nativeApproval": false,
       "hostedApproval": false

@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "D. T. Cars (Bristol) Ltd",
     "publicOrigin": "https://d-t-cars-bristol-ltd.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "89400513adf2c0a7311cda506adaaccad6c0ded928f1b4c356683fd7bcf6603d",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "49e01ab7b9982af72605f8e7e3ec6331bd4bdad8205b7d9d971f6da34c96ab5e"
+    }
   }
 }

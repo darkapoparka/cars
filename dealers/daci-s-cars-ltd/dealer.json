@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Daci's Cars Ltd",
     "publicOrigin": "https://daci-s-cars-ltd.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "fded38f506ce7c029ca39d2e8cf831feec30d045b15ec784d3bfff6a7fe12ddb",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "2706b3172d68879a86f0a3fadcf2fc0976c4331ff421bb759250235ddf5b312c"
+    }
   }
 }

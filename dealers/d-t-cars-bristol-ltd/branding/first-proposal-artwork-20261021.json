@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-first-missing-source-proposal-artwork",
+  "dealer": "d-t-cars-bristol-ltd",
+  "createdAt": "2026-10-20T23:45:03.378Z",
+  "inputRows": [
+    {
+      "role": "wordLight",
+      "path": "branding/generated-master-v1-20261021.png",
+      "sha256": "8e87a834b3ce2605f1a1ce220b863419f05667a63080c21cdf70a914517f475f",
+      "nativeDimensions": {
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-62a16d67-c63c-43d7-a994-7b0a10e29037",
+        "modelVersion": null
+      },
+      "artifact": "J:/.artifacts/cars-source-sync/local-next3-branding-inputs/d-t-cars-bristol-ltd-word-light.png",
+      "prompt": "Use case: logo-brand. Create one polished, independently proposed automotive dealer logo for D. T. Cars (Bristol) Ltd. This is a first proposal, not a claim of an official adopted identity.\nAsset type: genuinely transparent raster logo for web headers and a matching compact favicon.\nComposition: horizontal lockup, visually balanced. Put ONLY the isolated compact emblem on the left, approximately the left 28 percent; keep a completely empty transparent vertical gap at least 9 percent of total width between emblem and wordmark, so the emblem can be extracted losslessly. The emblem is a compact interlocking D and T monogram in a nearly square rounded outline; both initials must be obvious and simple at 32 pixels, no extra letters or car-manufacturer styling. Its visible geometry should be as wide as it is tall, with thick clean edges and no tiny loose details. On the right, set the exact business text in bold crisp modern sans-serif, balanced across the following lines:\nD. T. CARS\n(BRISTOL) LTD\nTypography: exact spelling and punctuation; substantial readable letterforms, open counters, no thin subtitle. No slogans, dates, badge claims, URLs or other text.\nColor: solid deep ink #101820 throughout the emblem and lettering, intended to be highly legible on white. No gradients, metallic finish, shadows, glows, texture or faint outlines.\nBackground: real transparent alpha, no white rectangle or checkerboard painted into the artwork. Smooth clean antialiased edges, opaque solid interiors, zero haze or translucent halo. Keep margins modest. One logo only, no mockup, no scene, no border around the canvas. Preserve the separate emblem and clear transparent gap.",
+      "referencePaths": []
+    },
+    {
+      "role": "markLight",
+      "path": "branding/generated-mark-light-v1-20261021.png",
+      "sha256": "dc1b37a5117822ea87e861ae44313885f60aa8cca048f208e1e7b5c39745fc39",
+      "nativeDimensions": {
+        "width": 617,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-62a16d67-c63c-43d7-a994-7b0a10e29037",
+        "modelVersion": null
+      },
+      "artifact": "J:/.artifacts/cars-source-sync/local-next3-branding-inputs/d-t-cars-bristol-ltd/markLight.png",
+      "prompt": "Use case: logo-brand. Create one polished, independently proposed automotive dealer logo for D. T. Cars (Bristol) Ltd. This is a first proposal, not a claim of an official adopted identity.\nAsset type: genuinely transparent raster logo for web headers and a matching compact favicon.\nComposition: horizontal lockup, visually balanced. Put ONLY the isolated compact emblem on the left, approximately the left 28 percent; keep a completely empty transparent vertical gap at least 9 percent of total width between emblem and wordmark, so the emblem can be extracted losslessly. The emblem is a compact interlocking D and T monogram in a nearly square rounded outline; both initials must be obvious and simple at 32 pixels, no extra letters or car-manufacturer styling. Its visible geometry should be as wide as it is tall, with thick clean edges and no tiny loose details. On the right, set the exact business text in bold crisp modern sans-serif, balanced across the following lines:\nD. T. CARS\n(BRISTOL) LTD\nTypography: exact spelling and punctuation; substantial readable letterforms, open counters, no thin subtitle. No slogans, dates, badge claims, URLs or other text.\nColor: solid deep ink #101820 throughout the emblem and lettering, intended to be highly legible on white. No gradients, metallic finish, shadows, glows, texture or faint outlines.\nBackground: real transparent alpha, no white rectangle or checkerboard painted into the artwork. Smooth clean antialiased edges, opaque solid interiors, zero haze or translucent halo. Keep margins modest. One logo only, no mockup, no scene, no border around the canvas. Preserve the separate emblem and clear transparent gap.",
+      "referencePaths": [
+        "J:/.artifacts/cars-source-sync/local-next3-branding-inputs/d-t-cars-bristol-ltd-word-light.png"
+      ],
+      "derivation": {
+        "operation": "lossless-png-extract-isolated-emblem",
+        "parentPath": "branding/generated-master-v1-20261021.png",
+        "parentSha256": "8e87a834b3ce2605f1a1ce220b863419f05667a63080c21cdf70a914517f475f",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 617,
+          "height": 724
+        },
+        "emptyGap": {
+          "start": 566,
+          "end": 668,
+          "width": 102
+        },
+        "parentNativeDimensions": {
+          "width": 2172,
+          "height": 724
+        },
+        "artworkUnmodified": true,
+        "alphaUnmodified": true
+      }
+    },
+    {
+      "role": "wordDark",
+      "path": "branding/generated-inverse-v1-20261021.png",
+      "sha256": "e42712fb0836382c90878b9adbf389cbda72706d269b0a5bc117284937500b4f",
+      "nativeDimensions": {
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-0787ee98-c574-4759-a34c-913471437eb9",
+        "modelVersion": null
+      },
+      "artifact": "J:/.artifacts/cars-source-sync/local-next3-branding-inputs/d-t-cars-bristol-ltd-word-dark.png",
+      "prompt": "Use case: identity-preserve / logo-brand variant. Edit the attached transparent logo only. Preserve its exact emblem geometry, all letterforms, spelling, punctuation, relative positions, line breaks and transparent separation between the isolated emblem and the wordmark. Change all visible deep ink artwork into fully opaque near-white #F8FAFC for use on dark charcoal and red web header backgrounds. Retain a genuine transparent alpha background and crisp clean contours. The logo must remain the exact same D. T. Cars (Bristol) Ltd proposal. No new text, no shadows, glows, gray haze, outline halos, drop shadows, textures, added border or background panel. Interior strokes must be solid opaque near-white, not transparent or faded. Keep the isolated left emblem separate so the matching compact icon can be losslessly extracted. One precise inverse-color treatment, no mockup.",
+      "referencePaths": [
+        "J:/.artifacts/cars-source-sync/local-next3-branding-inputs/d-t-cars-bristol-ltd-word-light.png"
+      ]
+    },
+    {
+      "role": "markDark",
+      "path": "branding/generated-mark-dark-v1-20261021.png",
+      "sha256": "9ba7cf4ee92e174bc6c85b6ea916dec578d49206395202420c9943d7cfe122dc",
+      "nativeDimensions": {
+        "width": 617,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-0787ee98-c574-4759-a34c-913471437eb9",
+        "modelVersion": null
+      },
+      "artifact": "J:/.artifacts/cars-source-sync/local-next3-branding-inputs/d-t-cars-bristol-ltd/markDark.png",
+      "prompt": "Use case: identity-preserve / logo-brand variant. Edit the attached transparent logo only. Preserve its exact emblem geometry, all letterforms, spelling, punctuation, relative positions, line breaks and transparent separation between the isolated emblem and the wordmark. Change all visible deep ink artwork into fully opaque near-white #F8FAFC for use on dark charcoal and red web header backgrounds. Retain a genuine transparent alpha background and crisp clean contours. The logo must remain the exact same D. T. Cars (Bristol) Ltd proposal. No new text, no shadows, glows, gray haze, outline halos, drop shadows, textures, added border or background panel. Interior strokes must be solid opaque near-white, not transparent or faded. Keep the isolated left emblem separate so the matching compact icon can be losslessly extracted. One precise inverse-color treatment, no mockup.",
+      "referencePaths": [
+        "J:/.artifacts/cars-source-sync/local-next3-branding-inputs/d-t-cars-bristol-ltd-word-dark.png"
+      ],
+      "derivation": {
+        "operation": "lossless-png-extract-isolated-emblem",
+        "parentPath": "branding/generated-inverse-v1-20261021.png",
+        "parentSha256": "e42712fb0836382c90878b9adbf389cbda72706d269b0a5bc117284937500b4f",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 617,
+          "height": 724
+        },
+        "emptyGap": {
+          "start": 567,
+          "end": 667,
+          "width": 100
+        },
+        "parentNativeDimensions": {
+          "width": 2172,
+          "height": 724
+        },
+        "artworkUnmodified": true,
+        "alphaUnmodified": true
+      }
+    }
+  ],
+  "sourceFactNamePreserved": true,
+  "publicTradingText": "D. T. Cars (Bristol) Ltd",
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "dealerApproval": false,
+  "humanReview": false,
+  "providerWrites": 0,
+  "filtersApplied": false,
+  "thresholdsChanged": false
+}

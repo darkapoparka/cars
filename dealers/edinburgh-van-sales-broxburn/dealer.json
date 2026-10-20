@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Edinburgh Van Sales (Broxburn)",
     "publicOrigin": "https://edinburgh-van-sales-broxburn.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "7efde13450812ec997fac6ba2521bd8ce4d223cac20a6ed377504fd0d5fca4ab",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "aa32e163f6d45f1247565a020ba2d262ca40fdca6138b2eb8f44905e4434001e"
+    }
   }
 }
