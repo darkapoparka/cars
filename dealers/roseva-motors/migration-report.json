@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "roseva-motors",
+  "previousSlug": "roseva-motors",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:10:55.877Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 3,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-dubai-roseva-motors",
+    "position": 265
+  },
+  "before": {
+    "files": 39,
+    "bytes": 8481369
+  },
+  "afterBeforeReview": {
+    "files": 23,
+    "bytes": 3448862
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 135321,
+      "sha256": "8389fb53450a80b034716c65ae0382da46d21a7d1273ab9096ef7c0d34463922"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 121971,
+      "sha256": "82ca0f3207fa738d3fdb923eae2508bddd9b70d9da66e537adc78366dff1dc2e"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 135321,
+      "sha256": "8389fb53450a80b034716c65ae0382da46d21a7d1273ab9096ef7c0d34463922"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 529026,
+      "sha256": "e68e5891b03b48538d7f63e597b74d3fd139327c296ea49b3a4893c95cc71c89"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 443762,
+      "sha256": "31f8ade79bd4311300c14a91b44ce217afd4646889288e1490db3799e31f4198"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 443762,
+      "sha256": "31f8ade79bd4311300c14a91b44ce217afd4646889288e1490db3799e31f4198"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 529026,
+      "sha256": "e68e5891b03b48538d7f63e597b74d3fd139327c296ea49b3a4893c95cc71c89"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 135321,
+      "sha256": "8389fb53450a80b034716c65ae0382da46d21a7d1273ab9096ef7c0d34463922"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 11631,
+      "sha256": "34ddb560969ca711f88a2f06ffba80fff3bfe4f2be9e91c74b814f5503569b14"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 443762,
+      "sha256": "31f8ade79bd4311300c14a91b44ce217afd4646889288e1490db3799e31f4198"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 305654,
+      "sha256": "15c7618a203f6c6bce0ee1aff2478c79696de8df350c7f0513f5e108e95ea586"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 443762,
+      "sha256": "31f8ade79bd4311300c14a91b44ce217afd4646889288e1490db3799e31f4198"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 305654,
+      "sha256": "15c7618a203f6c6bce0ee1aff2478c79696de8df350c7f0513f5e108e95ea586"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 529026,
+      "sha256": "e68e5891b03b48538d7f63e597b74d3fd139327c296ea49b3a4893c95cc71c89"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 349932,
+      "sha256": "c00ac61d2d67139dd7b1e2822e20cc84063b5f5b322acd2541a99f9fba247421"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 80290,
+      "sha256": "363f4dd5d6ad427df455c8837dbe1ab6c6cd5bd43a698d458bdb902233c5ba26"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 93078,
+      "sha256": "ccce428860d149f99fb527ee1cb366c262a8f6467a12f6962d8fbdc9f6a3b5ee"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 13,
+    "bytes": 1990919,
+    "inventorySha256": "78875fedc21bcc1d61d60b147c38c1dc20ce9bfcd8a0ad1c8cd7e0b880bb1539",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "roseva-motors",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 25,
+    "report": "dealers/roseva-motors/input-review.json"
+  },
+  "after": {
+    "files": 25,
+    "bytes": 3457614
+  }
+}

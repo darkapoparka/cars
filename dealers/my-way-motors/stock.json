@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "dealer": "my-way-motors",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:55:17Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "listing-1",
+      "title": "Ferrari AMALFI",
+      "make": "Ferrari",
+      "model": "Amalfi",
+      "year": 2026,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-1.jpg"
+      ],
+      "sourceUrl": "https://mywayautos.com/listings/ferrari-amalfi/",
+      "observedAt": "2026-10-19T20:55:17Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageOnRequest": true,
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-2",
+      "title": "Ferrari Purosangue",
+      "make": "Ferrari",
+      "model": "Purosangue",
+      "year": 2026,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-2.jpg"
+      ],
+      "sourceUrl": "https://mywayautos.com/listings/ferrari-purosangue/",
+      "observedAt": "2026-10-19T20:55:17Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageOnRequest": true,
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-3",
+      "title": "Chevrolet Equinox",
+      "make": "Chevrolet",
+      "model": "Equinox",
+      "year": 2025,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-3.jpg"
+      ],
+      "sourceUrl": "https://mywayautos.com/listings/chevrolet-equinox-activ/",
+      "observedAt": "2026-10-19T20:55:17Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageOnRequest": true,
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

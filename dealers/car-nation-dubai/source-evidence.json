@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "dealer": "car-nation-dubai",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://www.dubicars.com/dealers/dubai-car-nation-used-automobile-trading-for-export-llc-3369",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/dealers/dubai-car-nation-used-automobile-trading-for-export-llc-3369",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "business-name",
+        "public-dealer-contact",
+        "public-location-if-shown",
+        "dated-stock-sample"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "researchedAt": "2026-10-19",
+  "catalogueResponseSha256": "f4dea0ce048be68e850aada95a8cfe6e311f353b1121d14d787588a583087283",
+  "stockSources": [
+    {
+      "listingUrl": "https://www.dubicars.com/2023-toyota-corolla-2023-toyota-corolla-16-xli-1025498.html",
+      "catalogueUrl": "https://www.dubicars.com/dealers/dubai-car-nation-used-automobile-trading-for-export-llc-3369",
+      "imageUrl": "https://www.dubicars.com/images/0f7259/650x380/car-nation-used-automobile-trading-for-export-llc/487c66bf-174d-4062-8948-9a5a0e7bed42.jpeg",
+      "observedAt": "2026-10-19",
+      "imageSourceSha256": "887f285eeb0c78d5ac49d322d2b6f4eb3475b572e4f41989dbddfb6b02319c1d",
+      "retainedPath": "dealer-stock/stock-1.webp",
+      "retainedSha256": "9ce864e710f21902b2b7834bed3cd11cb7b51c78a6bc98e004fb475d4b958c96",
+      "originalDimensions": [
+        650,
+        481
+      ],
+      "retainedDimensions": [
+        650,
+        481
+      ],
+      "retainedBytes": 80062,
+      "transformation": "Proportional downscale only if needed to maximum 1280 pixels; WebP quality 80; no visual content edits."
+    },
+    {
+      "listingUrl": "https://www.dubicars.com/2018-nissan-altima-1032064.html",
+      "catalogueUrl": "https://www.dubicars.com/dealers/dubai-car-nation-used-automobile-trading-for-export-llc-3369",
+      "imageUrl": "https://www.dubicars.com/images/83f63d/650x380/car-nation-used-automobile-trading-for-export-llc/1f370952-7b09-4a60-b322-67535054aabf.jpeg",
+      "observedAt": "2026-10-19",
+      "imageSourceSha256": "408f4319cc07980d2307b4ca3bb00c93a41b61c4eee6237c1bac4366c3a5a359",
+      "retainedPath": "dealer-stock/stock-2.webp",
+      "retainedSha256": "077b1f68d3410b52148a814f3635bc6c4b37392eb134766a08345472f498853a",
+      "originalDimensions": [
+        650,
+        479
+      ],
+      "retainedDimensions": [
+        650,
+        479
+      ],
+      "retainedBytes": 67140,
+      "transformation": "Proportional downscale only if needed to maximum 1280 pixels; WebP quality 80; no visual content edits."
+    },
+    {
+      "listingUrl": "https://www.dubicars.com/2005-gmc-envoy-2005-gmc-envoy-v6-1032067.html",
+      "catalogueUrl": "https://www.dubicars.com/dealers/dubai-car-nation-used-automobile-trading-for-export-llc-3369",
+      "imageUrl": "https://www.dubicars.com/images/1d58e0/650x380/car-nation-used-automobile-trading-for-export-llc/dcd895de-29bf-4563-b38b-dcf309a64a5e.jpeg",
+      "observedAt": "2026-10-19",
+      "imageSourceSha256": "e8e5cccd2c32038501bb270f159245b2966073c8b6445a3d3d93cdd69ebaf198",
+      "retainedPath": "dealer-stock/stock-3.webp",
+      "retainedSha256": "752ab63088fb04e02d638c54e8ff294048d492368ab9c50767ac3c14cdc5e057",
+      "originalDimensions": [
+        650,
+        433
+      ],
+      "retainedDimensions": [
+        650,
+        433
+      ],
+      "retainedBytes": 55276,
+      "transformation": "Proportional downscale only if needed to maximum 1280 pixels; WebP quality 80; no visual content edits."
+    }
+  ],
+  "omissions": [
+    "Personal-looking or unverified emails omitted; no private contact fields retained.",
+    "Unknown official website, exact address or hours left empty; marketplace-wide defaults not imported."
+  ]
+}

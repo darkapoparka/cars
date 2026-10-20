@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "dealer": "golden-century-motors",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:03:53.574830Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "listing-1513",
+      "title": "2026 Rox Adamas 1.5 AT AWD (475 hp) First-Class",
+      "make": "Rox",
+      "model": "Adamas",
+      "year": 2026,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-1513.jpg"
+      ],
+      "sourceUrl": "https://licenseplate.ae/cars/listing/1513-rox-adamas-15-at-awd-475-hp-first-class",
+      "observedAt": "2026-10-19T20:03:53.574830Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Crossover",
+      "transmission": "Automatic",
+      "fuel": "Hybrid",
+      "color": "Gold",
+      "mileageValue": 25,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-1396",
+      "title": "2020 Mercedes-Benz X-Class X 350 d 7G-Tronic Plus 4Matic (258 hp) X 350 d",
+      "make": "Mercedes-Benz",
+      "model": "X-Class",
+      "year": 2020,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-1396.jpg"
+      ],
+      "sourceUrl": "https://licenseplate.ae/cars/listing/1396-mercedes-benz-x-class-x-350-d-7g-tronic-plus-4matic-258-hp-x-350-d",
+      "observedAt": "2026-10-19T20:03:53.574830Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Pickup",
+      "transmission": "Automatic",
+      "fuel": "Diesel",
+      "color": "Grey",
+      "mileageValue": 72500,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-1441",
+      "title": "2023 Toyota Tundra 3.4 AT (389 hp) Double Cab SR5",
+      "make": "Toyota",
+      "model": "Tundra",
+      "year": 2023,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-1441.jpg"
+      ],
+      "sourceUrl": "https://licenseplate.ae/cars/listing/1441-toyota-tundra-34-at-389-hp-double-cab-sr5",
+      "observedAt": "2026-10-19T20:03:53.574830Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Pickup",
+      "transmission": "Automatic",
+      "fuel": "Petrol",
+      "color": "Grey",
+      "mileageValue": 500,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

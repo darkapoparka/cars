@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "dealer": "mirza-automobile-fze",
+  "researchId": "ae-dubai-mirza-automobile-fze",
+  "observedAt": "2026-10-19T20:03:54.028828Z",
+  "liveFetchPerformed": true,
+  "businessSources": [
+    {
+      "url": "https://www.oneclickdrive.com/company/dubai/mirza-automobile-fze",
+      "observedAt": "2026-10-19T20:03:54.028828Z",
+      "supports": [
+        "dealer-name",
+        "dealer-attributed-listings",
+        "dealer-attributed-photos",
+        "public-business-call-line",
+        "address"
+      ]
+    }
+  ],
+  "stockMode": "dated-listing-snapshot",
+  "inventoryCountMeaning": "Selected currently advertised public records, not a count or confirmation of available physical stock.",
+  "media": [
+    {
+      "path": "dealer-stock/listing-815438.jpg",
+      "sourceUrl": "https://static.oneclickdrive.com/uploads/cars/Chrysler-300C-Other_815438_209698745448-1_small.jpg",
+      "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/Chrysler/300C/?id=815438",
+      "observedAt": "2026-10-19T20:03:54.028828Z",
+      "downloadedSha256": "1a9bcac2c92c5e6345051aea345376b5ddfe7a209e432f7a980bd87ca66dad48",
+      "downloadedDimensions": [
+        450,
+        395
+      ],
+      "sha256": "7eeb67ff42a5d135ea239066638eab97fc251b03db1a60b0780ca37dc2e15dc2",
+      "bytes": 38648,
+      "dimensions": [
+        450,
+        395
+      ],
+      "modification": "Proportional resize without enlargement to at most 1280px; JPEG encode; no content changes."
+    },
+    {
+      "path": "dealer-stock/listing-815440.jpg",
+      "sourceUrl": "https://static.oneclickdrive.com/uploads/cars/Ford-Explorer-XLT_815440_209699076600-1_small.jpg",
+      "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/Ford/Explorer-XLT/?id=815440",
+      "observedAt": "2026-10-19T20:03:54.028828Z",
+      "downloadedSha256": "b40c91b33fd74c39b51a39e5e9e0ff69a9b29cb5cbeb2822e6e731b157e8e023",
+      "downloadedDimensions": [
+        450,
+        395
+      ],
+      "sha256": "e961db6c05f1aba7410095169b93f6b03e4c358382ef91cf18b6be5cd5e739e0",
+      "bytes": 41355,
+      "dimensions": [
+        450,
+        395
+      ],
+      "modification": "Proportional resize without enlargement to at most 1280px; JPEG encode; no content changes."
+    },
+    {
+      "path": "dealer-stock/listing-815441.jpg",
+      "sourceUrl": "https://static.oneclickdrive.com/uploads/cars/BMW-3-Series-323i_815441_2096992762510-1_small.jpg",
+      "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/BMW/323i/?id=815441",
+      "observedAt": "2026-10-19T20:03:54.028828Z",
+      "downloadedSha256": "43a720c44643593d7929e7e842baed5c8d289b3f374be7abf71cfd110e14ab4f",
+      "downloadedDimensions": [
+        450,
+        395
+      ],
+      "sha256": "269b2997315074e292938300ec207a268cea54efc80c22ada1f4bdf68585fb99",
+      "bytes": 40891,
+      "dimensions": [
+        450,
+        395
+      ],
+      "modification": "Proportional resize without enlargement to at most 1280px; JPEG encode; no content changes."
+    }
+  ],
+  "researchLimitations": [
+    "Marketplace relay numbers excluded; source catalogue provides address and published shop hours.",
+    "Phone is the dealer-attributed call link in the public vehicle card; common platform WhatsApp relay omitted.",
+    "Opening hours omitted because the platform repeats a generic schedule and independent verification is unavailable."
+  ],
+  "excludedSourceContent": [
+    "Personal names and personal or ambiguous emails",
+    "Marketplace relay numbers",
+    "Prices",
+    "Unsupported warranties, inspections, ratings and finance promises"
+  ],
+  "dealerApproval": "unknown"
+}

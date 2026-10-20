@@ -1,0 +1,158 @@
+{
+  "schemaVersion": 1,
+  "dealer": "leader-automobile",
+  "sourcePage": "https://www.dubicars.com/dealers/dubai-leader-automobile-124",
+  "observedAt": "2026-10-19T20:03:53.753313Z",
+  "creationMethod": "imagegen-proposal",
+  "approvalStatus": "independent-preview-not-dealer-approved",
+  "dealerApproved": false,
+  "visualReview": "DubiCars and YallaMotor both publish generic logo placeholders for this dealer; bounded public research did not establish an attributed original. Navy geometric LA and LEADER AUTOMOBILE wordmark are clearly marked independent proposals, not approved dealer branding.",
+  "generationPrompt": "Use case: logo-brand. ONE transparent RGBA sprite for ONE dealer, 4 matching assets in 2 columns x 2 rows with LARGE fully transparent gutters. Top-left compact near-square mark in dark ink for WHITE backgrounds; top-right matching mark entirely WHITE. Bottom-left horizontal logo in dark brand colour; bottom-right matching logo entirely WHITE. Flat crisp solid artwork with truly empty transparent space between all strokes and letters, open counters, no shadow/glow/halo/fog/texture/background. Keep letter spacing generous and counter spaces open; avoid solid dense wordmark blocks. Independent logo proposal for LEADER AUTOMOBILE, a Dubai vehicle seller whose reviewed catalogues have no published logo. Compact symbol a distinctive geometric LA monogram: upright L base supports an open angular A with a small forward diagonal cut. Shape near-square, simple powerful navy #192E42, with broad transparent negative space. Full horizontal logo has monogram left and exact 'LEADER' above 'AUTOMOBILE' right in calm geometric sans-serif capitals. White inverse fully white. Refined modern dealership identity, legible at 32px. No car silhouette, shield, crown, invented slogan or quality certification. Proposal label belongs to metadata, not artwork.",
+  "workingLogoPath": "branding/generated-onLight.png",
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T21:10:50.195240Z",
+    "master": {
+      "path": "branding/generated-onLight.png",
+      "sha256": "7b977b565e8fff681103131315ae019b3593d6087adf06dac42c22a51f98a414",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-bdad76cc-cf4c-434f-b346-e75a641b7a31",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "75628065be303168b5c739e4dc4d39774524a3d89f2f6b77a2bb49f9461f027a",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          0,
+          614,
+          768,
+          1024
+        ]
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "6c938b6cafcfc1a6583732959f34e132331770ed55acda1049443f06002519f9",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-bdad76cc-cf4c-434f-b346-e75a641b7a31",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "75628065be303168b5c739e4dc4d39774524a3d89f2f6b77a2bb49f9461f027a",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          0,
+          0,
+          768,
+          614
+        ]
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-markOnDark.png",
+      "sha256": "387b5e392ff9da9e25bc4bbb9148c8dd1a9b65e43a37f5b44c1b8cb0054b8921",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-bdad76cc-cf4c-434f-b346-e75a641b7a31",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "75628065be303168b5c739e4dc4d39774524a3d89f2f6b77a2bb49f9461f027a",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          768,
+          0,
+          1536,
+          614
+        ]
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-onLight.png",
+        "sha256": "7b977b565e8fff681103131315ae019b3593d6087adf06dac42c22a51f98a414",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-bdad76cc-cf4c-434f-b346-e75a641b7a31",
+          "modelVersion": null,
+          "sourcePath": "branding/generation-source.png",
+          "sourceSha256": "75628065be303168b5c739e4dc4d39774524a3d89f2f6b77a2bb49f9461f027a",
+          "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+          "crop": [
+            0,
+            614,
+            768,
+            1024
+          ]
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-onDark.png",
+        "sha256": "862d19f4b838fa54ae632ba04593da4ed3a187dcfe9d37689d71bcc26440492c",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-bdad76cc-cf4c-434f-b346-e75a641b7a31",
+          "modelVersion": null,
+          "sourcePath": "branding/generation-source.png",
+          "sourceSha256": "75628065be303168b5c739e4dc4d39774524a3d89f2f6b77a2bb49f9461f027a",
+          "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+          "crop": [
+            768,
+            614,
+            1536,
+            1024
+          ]
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-onDark.png",
+        "sha256": "862d19f4b838fa54ae632ba04593da4ed3a187dcfe9d37689d71bcc26440492c",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-bdad76cc-cf4c-434f-b346-e75a641b7a31",
+          "modelVersion": null,
+          "sourcePath": "branding/generation-source.png",
+          "sourceSha256": "75628065be303168b5c739e4dc4d39774524a3d89f2f6b77a2bb49f9461f027a",
+          "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+          "crop": [
+            768,
+            614,
+            1536,
+            1024
+          ]
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#101820",
+        "#09090b",
+        "#17191c",
+        "#c40101"
+      ],
+      "wordmarkWidths": [
+        120,
+        180
+      ],
+      "notes": "DubiCars and YallaMotor both publish generic logo placeholders for this dealer; bounded public research did not establish an attributed original. Navy geometric LA and LEADER AUTOMOBILE wordmark are clearly marked independent proposals, not approved dealer branding."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-19T21:10:50.195240Z",
+      "widths": [
+        32,
+        64,
+        96
+      ],
+      "backgrounds": [
+        "#ffffff",
+        "#101820",
+        "#c40101"
+      ],
+      "notes": "Open angular LA monogram remains legible at 32px and in a matching white inverse."
+    },
+    "compactMarkStatus": "proposed-compact-adaptation-not-dealer-approved"
+  },
+  "usageStatus": "public-preview-only"
+}

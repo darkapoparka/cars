@@ -1,0 +1,162 @@
+{
+  "schemaVersion": 1,
+  "dealer": "liana-used-cars-trading-llc",
+  "sourceLogoUrl": "https://static.oneclickdrive.com/application/views/img/company/liana-used-cars.png",
+  "sourcePath": "branding/source-original.png",
+  "sourceSha256": "92a3d59617aa81ecf43f610b7e188bf1fff2b59b4862768cf4bdd61787f27795",
+  "publishedBranding": true,
+  "sourcePage": "https://www.oneclickdrive.com/company/dubai/liana-used-cars-trading-llc",
+  "observedAt": "2026-10-19T20:03:53.765432Z",
+  "creationMethod": "sourced-logo-imagegen-redraw",
+  "approvalStatus": "independent-preview-not-dealer-approved",
+  "dealerApproved": false,
+  "visualReview": "Faithful redraw preserves the source charcoal rings, sports-car silhouette and red speed slashes. Proposed LIANA USED CARS wordmark adds the retained business trading name; clean white inverse uses matching geometry.",
+  "generationPrompt": "Use case: logo-brand. ONE transparent RGBA sprite for ONE dealer, four related assets in a 2-column by 2-row arrangement with large fully transparent gutters. Top left bold near-SQUARE compact mark for white backgrounds; top right exact same mark ENTIRELY WHITE for dark/red backgrounds. Bottom left full horizontal logo in source colours; bottom right exact same horizontal logo ENTIRELY WHITE. Crisp professional flat solid shapes, no shading, textures, glow, shadows, panels, background or labels. Compact mark must read at 32px, simplify tiny secondary details. Faithful clean redraw of supplied LIANA used-cars emblem: preserve its dark charcoal open circular rings, confident sports-car front/roof silhouette, and red diagonal speed slashes at upper right. Compact mark must use a simplified bold car front inside the round charcoal arc, with at most two dark-red speed slashes and no tiny headlights or wheel details. Full horizontal logo: same source emblem at left and exact clear text 'LIANA' above 'USED CARS' at right. Use dark charcoal #16222C and dark red #B10015 on-light; all parts of inverse including car, rings and slashes pure white. No new initials or unrelated motif.",
+  "workingLogoPath": "branding/generated-onLight.png",
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T20:47:43.092881Z",
+    "master": {
+      "path": "branding/generated-onLight.png",
+      "sha256": "b8f65736186c13e249515dd8cb3e42b57c980e9b319e1c9587f7b9743fdfa74e",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a461d274-ad35-418e-a2a7-d29968a8f6e7",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "b7cfe7a97c5ffbcfecb6ab64e7bcb7a6c477471f32b79f4e00c74098aa8562f5",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          0,
+          532,
+          887,
+          887
+        ]
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "6c51058ef2004076cdc1906c443e0f6e2d7dd660031047f1d3670eee4a7e2a52",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a461d274-ad35-418e-a2a7-d29968a8f6e7",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "b7cfe7a97c5ffbcfecb6ab64e7bcb7a6c477471f32b79f4e00c74098aa8562f5",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          0,
+          0,
+          887,
+          532
+        ]
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-markOnDark.png",
+      "sha256": "e58dc7eb078ba53f33aa36f7e2e7407211088e469d82cf31fc84213d4f9dfdc6",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a461d274-ad35-418e-a2a7-d29968a8f6e7",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "b7cfe7a97c5ffbcfecb6ab64e7bcb7a6c477471f32b79f4e00c74098aa8562f5",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          887,
+          0,
+          1774,
+          532
+        ]
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-onLight.png",
+        "sha256": "b8f65736186c13e249515dd8cb3e42b57c980e9b319e1c9587f7b9743fdfa74e",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-a461d274-ad35-418e-a2a7-d29968a8f6e7",
+          "modelVersion": null,
+          "sourcePath": "branding/generation-source.png",
+          "sourceSha256": "b7cfe7a97c5ffbcfecb6ab64e7bcb7a6c477471f32b79f4e00c74098aa8562f5",
+          "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+          "crop": [
+            0,
+            532,
+            887,
+            887
+          ]
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-onDark.png",
+        "sha256": "dfffa9dc199193c8ee93ff5d38f0d5067310a0a55a06bfb643a1d0aed3a1ae55",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-a461d274-ad35-418e-a2a7-d29968a8f6e7",
+          "modelVersion": null,
+          "sourcePath": "branding/generation-source.png",
+          "sourceSha256": "b7cfe7a97c5ffbcfecb6ab64e7bcb7a6c477471f32b79f4e00c74098aa8562f5",
+          "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+          "crop": [
+            887,
+            532,
+            1774,
+            887
+          ]
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-onDark.png",
+        "sha256": "dfffa9dc199193c8ee93ff5d38f0d5067310a0a55a06bfb643a1d0aed3a1ae55",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-a461d274-ad35-418e-a2a7-d29968a8f6e7",
+          "modelVersion": null,
+          "sourcePath": "branding/generation-source.png",
+          "sourceSha256": "b7cfe7a97c5ffbcfecb6ab64e7bcb7a6c477471f32b79f4e00c74098aa8562f5",
+          "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+          "crop": [
+            887,
+            532,
+            1774,
+            887
+          ]
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#101820",
+        "#09090b",
+        "#17191c",
+        "#c40101"
+      ],
+      "wordmarkWidths": [
+        120,
+        180
+      ],
+      "notes": "Faithful redraw preserves the source charcoal rings, sports-car silhouette and red speed slashes. Proposed LIANA USED CARS wordmark adds the retained business trading name; clean white inverse uses matching geometry."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-19T20:47:43.092881Z",
+      "widths": [
+        32,
+        64,
+        96
+      ],
+      "backgrounds": [
+        "#ffffff",
+        "#101820",
+        "#c40101"
+      ],
+      "notes": "Round car emblem remains recognizable at 32px with simplified headlights and wheel details."
+    },
+    "compactMarkStatus": "proposed-compact-adaptation-not-dealer-approved"
+  },
+  "usageStatus": "public-preview-only"
+}

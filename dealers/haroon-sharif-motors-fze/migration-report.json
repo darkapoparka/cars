@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "haroon-sharif-motors-fze",
+  "previousSlug": "haroon-sharif-motors-fze",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:04:03.389Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 3,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-dubai-haroon-sharif-motors-fze",
+    "position": 231
+  },
+  "before": {
+    "files": 39,
+    "bytes": 3508417
+  },
+  "afterBeforeReview": {
+    "files": 23,
+    "bytes": 1256890
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 129022,
+      "sha256": "795e54596d4fd2324ce1d7686ff44896b133f7a3b7d7b372aa3dbec09028804a"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 145768,
+      "sha256": "cff60ca21b91c4638164575a4b24a78ff26b1af3c60db8402bd9a5eb872546b7"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 129022,
+      "sha256": "795e54596d4fd2324ce1d7686ff44896b133f7a3b7d7b372aa3dbec09028804a"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 163698,
+      "sha256": "96e204147aa6b7caad0fe4fee0cfdbde257ae7d9b5b510e1fb49bc4f1c8abba5"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 168549,
+      "sha256": "c863cf1f1edd9279b14f2b12e9ac3dec7ad083530948de4df3efcd08c796ad29"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 168549,
+      "sha256": "c863cf1f1edd9279b14f2b12e9ac3dec7ad083530948de4df3efcd08c796ad29"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 163698,
+      "sha256": "96e204147aa6b7caad0fe4fee0cfdbde257ae7d9b5b510e1fb49bc4f1c8abba5"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 129022,
+      "sha256": "795e54596d4fd2324ce1d7686ff44896b133f7a3b7d7b372aa3dbec09028804a"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 12233,
+      "sha256": "df33068ba0f3b8e93927b974975e4e6f5aa072a5f62f69299bbca6501f54474a"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 168549,
+      "sha256": "c863cf1f1edd9279b14f2b12e9ac3dec7ad083530948de4df3efcd08c796ad29"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 122862,
+      "sha256": "026767b7d1eac44f31cd4b9e0619ded7ccc2a7b3cb018dc5b72b217121ee2581"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 168549,
+      "sha256": "c863cf1f1edd9279b14f2b12e9ac3dec7ad083530948de4df3efcd08c796ad29"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 122862,
+      "sha256": "026767b7d1eac44f31cd4b9e0619ded7ccc2a7b3cb018dc5b72b217121ee2581"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 163698,
+      "sha256": "96e204147aa6b7caad0fe4fee0cfdbde257ae7d9b5b510e1fb49bc4f1c8abba5"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 107830,
+      "sha256": "d9b6f2abcf9af62b1a633c7072fc12223b3f5c49cc51c40e6779789c68e73b87"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 104346,
+      "sha256": "29733a8c27a7bbe9f57e11755a1afdaebffb68cd4f585b19a3914477451536ab"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 87118,
+      "sha256": "49b8c1878f20561bc7febf09004c82b9ed7ee11fc99a3cfec3d6a3fd1b39bcc2"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 12,
+    "bytes": 628918,
+    "inventorySha256": "38337af2262213cb87389fbe13eba912071f6252b5033afde0c15dc392e44601",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "haroon-sharif-motors-fze",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 25,
+    "report": "dealers/haroon-sharif-motors-fze/input-review.json"
+  },
+  "after": {
+    "files": 25,
+    "bytes": 1265745
+  }
+}

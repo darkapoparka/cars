@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "dealer": "mirza-automobile-fze",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:03:54.028828Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "listing-815438",
+      "title": "2005 Chrysler 300C",
+      "make": "Chrysler",
+      "model": "300C",
+      "year": 2005,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-815438.jpg"
+      ],
+      "sourceUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/Chrysler/300C/?id=815438",
+      "observedAt": "2026-10-19T20:03:54.028828Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Sedan",
+      "transmission": "Auto",
+      "fuel": "Petrol",
+      "color": "Black",
+      "mileageValue": 73076,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-815440",
+      "title": "2010 Ford Explorer XLT",
+      "make": "Ford",
+      "model": "Explorer XLT",
+      "year": 2010,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-815440.jpg"
+      ],
+      "sourceUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/Ford/Explorer-XLT/?id=815440",
+      "observedAt": "2026-10-19T20:03:54.028828Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "SUV",
+      "transmission": "Auto",
+      "fuel": "Petrol",
+      "color": "Blue",
+      "mileageValue": 84346,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-815441",
+      "title": "2006 BMW 323i",
+      "make": "BMW",
+      "model": "323i",
+      "year": 2006,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-815441.jpg"
+      ],
+      "sourceUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/BMW/323i/?id=815441",
+      "observedAt": "2026-10-19T20:03:54.028828Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Sedan",
+      "transmission": "Auto",
+      "fuel": "Petrol",
+      "color": "Black",
+      "mileageValue": 115000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

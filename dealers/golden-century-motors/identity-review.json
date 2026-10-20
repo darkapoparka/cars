@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": true,
+  "reviewedAt": "2026-10-20T19:03:28.992Z",
+  "dealer": "golden-century-motors",
+  "dealerId": "ae-dubai-golden-century-motors",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "method": "Automated exact registry/pack identity, canonical hosting and batch comparison; retained public source fields were structurally checked, not human-approved.",
+  "sources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/golden-century-motors",
+      "observedAt": "2026-10-19T20:03:53.574830Z",
+      "supports": [
+        "dealer-name",
+        "dealer-attributed-listings",
+        "dealer-attributed-photos",
+        "public-business-call-line",
+        "address"
+      ]
+    },
+    {
+      "url": "https://uae.autotraders.ae/dealers/?limit=21&page=3",
+      "observedAt": "2026-10-19T20:03:53.574830Z",
+      "supports": [
+        "published-dealer-logo"
+      ]
+    },
+    {
+      "url": "https://uae.autotraders.ae/dealers/golden-century-motors-1898",
+      "observedAt": "2026-10-19T20:03:53.574830Z",
+      "supports": [
+        "published-dealer-logo",
+        "dealer-name"
+      ]
+    }
+  ],
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  }
+}

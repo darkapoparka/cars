@@ -1,0 +1,162 @@
+{
+  "schemaVersion": 1,
+  "dealer": "great-west-east-auto",
+  "sourceLogoUrl": "https://auto-ae-prod-storage.storage.googleapis.com/55aacdb84cd3449d833a9fbe65bec503",
+  "sourcePath": "branding/source-original.jpg",
+  "sourceSha256": "8f57c7fa35e415f6cb6483606167ba6b750d00cc35fd9a228690e4941cc6a4b4",
+  "publishedBranding": true,
+  "sourcePage": "https://auto.ae/geartweauto/",
+  "observedAt": "2026-10-19T20:03:53.586498Z",
+  "creationMethod": "sourced-logo-imagegen-redraw",
+  "approvalStatus": "independent-preview-not-dealer-approved",
+  "dealerApproved": false,
+  "visualReview": "Faithful redraw retains sourced red GWE/car-front identity and exact GREAT WEST EAST AUTOS wording. The revised open wordmark and line spacing supply genuine transparent gaps for the existing downstream raster boundary; template styling is unchanged.",
+  "generationPrompt": "Use case: logo-brand. ONE transparent RGBA sprite for ONE dealer, 4 matching assets in 2 columns x 2 rows with LARGE fully transparent gutters. Top-left compact near-square mark in dark ink for WHITE backgrounds; top-right matching mark entirely WHITE. Bottom-left horizontal logo in dark brand colour; bottom-right matching logo entirely WHITE. Flat crisp solid artwork with truly empty transparent space between all strokes and letters, open counters, no shadow/glow/halo/fog/texture/background. Keep letter spacing generous and counter spaces open; avoid solid dense wordmark blocks. Faithful clean redraw of supplied red GWE/car-front dealership identity. Compact top marks: bold upright GW over E in a near-square arrangement, one short car roof stroke over GW; dark red #AD0015 on left and white on right. Bottom wordmarks: the recognizable red GWE with a simple car-nose line on left, followed by exact 'GREAT WEST EAST' over 'AUTOS' in medium-bold dark-charcoal sans serif with generous tracking and clear open gaps. In inverse, every stroke white. Maintain a LARGE empty gap between emblem and lettering, a clear empty band between the two text lines, and generously open letters. Wordmark artwork should have at least half of its tightly bounded rectangle empty of ink; do not fill the rectangle with heavy block lettering. Preserve source red automotive motif and full English trading name.",
+  "workingLogoPath": "branding/generated-onLight.png",
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T21:10:22.097563Z",
+    "master": {
+      "path": "branding/generated-onLight.png",
+      "sha256": "7e00851f13dfa0596d7279afcb9e08d7303579bed6a1fcffe70a82fceb40ef13",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a695bce2-02ad-4013-8490-ccef969ee988",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "aa8e9c90715fde0e28bda503879af702f0c9829b89537f89509e306d3b43ac12",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          0,
+          614,
+          768,
+          1024
+        ]
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "dfd3798ef2764b1c5651ba26135eaa9cdaafffc9f1e669999b3705eea2380ab4",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a695bce2-02ad-4013-8490-ccef969ee988",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "aa8e9c90715fde0e28bda503879af702f0c9829b89537f89509e306d3b43ac12",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          0,
+          0,
+          768,
+          614
+        ]
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-markOnDark.png",
+      "sha256": "c1ee2b07da6cdaaf2be58de8243dcea99abfd7d2b43bcf03a592af647e23c8ec",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a695bce2-02ad-4013-8490-ccef969ee988",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "aa8e9c90715fde0e28bda503879af702f0c9829b89537f89509e306d3b43ac12",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          768,
+          0,
+          1536,
+          614
+        ]
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-onLight.png",
+        "sha256": "7e00851f13dfa0596d7279afcb9e08d7303579bed6a1fcffe70a82fceb40ef13",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-a695bce2-02ad-4013-8490-ccef969ee988",
+          "modelVersion": null,
+          "sourcePath": "branding/generation-source.png",
+          "sourceSha256": "aa8e9c90715fde0e28bda503879af702f0c9829b89537f89509e306d3b43ac12",
+          "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+          "crop": [
+            0,
+            614,
+            768,
+            1024
+          ]
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-onDark.png",
+        "sha256": "239d44b3ec8342d9d463efccf39faafdd6290f3b723f953b0a6ae1f1320e46f0",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-a695bce2-02ad-4013-8490-ccef969ee988",
+          "modelVersion": null,
+          "sourcePath": "branding/generation-source.png",
+          "sourceSha256": "aa8e9c90715fde0e28bda503879af702f0c9829b89537f89509e306d3b43ac12",
+          "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+          "crop": [
+            768,
+            614,
+            1536,
+            1024
+          ]
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-onDark.png",
+        "sha256": "239d44b3ec8342d9d463efccf39faafdd6290f3b723f953b0a6ae1f1320e46f0",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-a695bce2-02ad-4013-8490-ccef969ee988",
+          "modelVersion": null,
+          "sourcePath": "branding/generation-source.png",
+          "sourceSha256": "aa8e9c90715fde0e28bda503879af702f0c9829b89537f89509e306d3b43ac12",
+          "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+          "crop": [
+            768,
+            614,
+            1536,
+            1024
+          ]
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#101820",
+        "#09090b",
+        "#17191c",
+        "#c40101"
+      ],
+      "wordmarkWidths": [
+        120,
+        180
+      ],
+      "notes": "Faithful redraw retains sourced red GWE/car-front identity and exact GREAT WEST EAST AUTOS wording. The revised open wordmark and line spacing supply genuine transparent gaps for the existing downstream raster boundary; template styling is unchanged."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-19T21:10:22.097563Z",
+      "widths": [
+        32,
+        64,
+        96
+      ],
+      "backgrounds": [
+        "#ffffff",
+        "#101820",
+        "#c40101"
+      ],
+      "notes": "Proposed GW/E stacking makes the original wide GWE letters compact at 32px while retaining the car roof; matching white inverse uses the same composition."
+    },
+    "compactMarkStatus": "proposed-compact-adaptation-not-dealer-approved"
+  },
+  "usageStatus": "public-preview-only"
+}

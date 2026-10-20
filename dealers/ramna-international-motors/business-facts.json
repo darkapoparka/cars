@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "slug": "ramna-international-motors",
+  "dealerId": "ae-dubai-ramna-international-motors-fzco",
+  "business": {
+    "name": "Ramna International Motors FZCO",
+    "city": "Dubai",
+    "region": "Dubai",
+    "countryCode": "AE",
+    "currency": "AED",
+    "distanceUnit": "km",
+    "locale": "en-AE",
+    "address": "Ras Al Khor, Dubai, UAE",
+    "phone": "+971504064999",
+    "phoneDisplay": "+971504064999",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://www.oneclickdrive.com/company/dubai/ramna-international-motors-fzco",
+    "hours": "",
+    "sourceUrl": "https://www.oneclickdrive.com/company/dubai/ramna-international-motors-fzco",
+    "observedAt": "2026-10-19T20:43:14Z",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://www.oneclickdrive.com/company/dubai/ramna-international-motors-fzco",
+      "observedAt": "2026-10-19T20:43:14Z",
+      "supports": [
+        "public-business-identity",
+        "business-contact",
+        "address",
+        "attributed-public-stock"
+      ]
+    }
+  ]
+}

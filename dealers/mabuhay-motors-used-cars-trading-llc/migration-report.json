@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "mabuhay-motors-used-cars-trading-llc",
+  "previousSlug": "mabuhay-motors-used-cars-trading-llc",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:09:53.994Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 3,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-dubai-mabuhay-motors-used-cars-trading-llc",
+    "position": 242
+  },
+  "before": {
+    "files": 39,
+    "bytes": 3051883
+  },
+  "afterBeforeReview": {
+    "files": 23,
+    "bytes": 1129345
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 70024,
+      "sha256": "8ba56a1b6e1bbc4f33e428b29bc2fedb7c45d9141254790d44c54e80e61fcc40"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 68696,
+      "sha256": "1730dddd7b0ed029a458019118e065a54a4c92f37831989d1a70cfd750aa46e8"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 70024,
+      "sha256": "8ba56a1b6e1bbc4f33e428b29bc2fedb7c45d9141254790d44c54e80e61fcc40"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 188696,
+      "sha256": "1c3523cb7978be7bf70fc7116c0ca5ab939dcfe12d8732cc9d8c44a4777b2651"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 160182,
+      "sha256": "f2d01700a2959df185aa4a94a901e60add2c8c051c5fa51d3301be07db95dde0"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 160182,
+      "sha256": "f2d01700a2959df185aa4a94a901e60add2c8c051c5fa51d3301be07db95dde0"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 188696,
+      "sha256": "1c3523cb7978be7bf70fc7116c0ca5ab939dcfe12d8732cc9d8c44a4777b2651"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 70024,
+      "sha256": "8ba56a1b6e1bbc4f33e428b29bc2fedb7c45d9141254790d44c54e80e61fcc40"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 6800,
+      "sha256": "b6661d9d02dabd457d8f410784c6a5ce3f861a6e3cbdb210e7b13aa570b8cd75"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 160182,
+      "sha256": "f2d01700a2959df185aa4a94a901e60add2c8c051c5fa51d3301be07db95dde0"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 110976,
+      "sha256": "f30fabe056434ea1803b075ef1b59f43690bdff09b332e25e4569f270b2e227f"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 160182,
+      "sha256": "f2d01700a2959df185aa4a94a901e60add2c8c051c5fa51d3301be07db95dde0"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 110976,
+      "sha256": "f30fabe056434ea1803b075ef1b59f43690bdff09b332e25e4569f270b2e227f"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 188696,
+      "sha256": "1c3523cb7978be7bf70fc7116c0ca5ab939dcfe12d8732cc9d8c44a4777b2651"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 121926,
+      "sha256": "6596511ea1f6148e489fa31bd9475f3d5d6e40a2c94fdaee3648797ae6ef6cc0"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 49268,
+      "sha256": "8777c9cbd988b415290eb1babb0c41c8795358b57acdf7fc7324877f29e7fc84"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 40910,
+      "sha256": "efe381dc769ee2ed15a921fccfe65e53451adc43788ba59da8d2eb2806bc265d"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 12,
+    "bytes": 576520,
+    "inventorySha256": "f3d42f24686dc158ecd94aeab0924ae6adbeeaddc047a1b780b43df94aecc908",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "mabuhay-motors-used-cars-trading-llc",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 25,
+    "report": "dealers/mabuhay-motors-used-cars-trading-llc/input-review.json"
+  },
+  "after": {
+    "files": 25,
+    "bytes": 1138287
+  }
+}

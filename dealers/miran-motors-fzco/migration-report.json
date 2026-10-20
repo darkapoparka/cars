@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "miran-motors-fzco",
+  "previousSlug": "miran-motors-fzco",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:03:28.558Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 3,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-dubai-miran-motors-fzco",
+    "position": 248
+  },
+  "before": {
+    "files": 37,
+    "bytes": 4725609
+  },
+  "afterBeforeReview": {
+    "files": 21,
+    "bytes": 2486164
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 123860,
+      "sha256": "96f2c9cecff169893e07e5ab11fecf07554bd72f6f6a36090293e52c298e3b15"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 112203,
+      "sha256": "b038847fd4344f45dbfff88a8cb5049d54bfe8179b6d57ad4af1e162b3ced04d"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 123860,
+      "sha256": "96f2c9cecff169893e07e5ab11fecf07554bd72f6f6a36090293e52c298e3b15"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 193522,
+      "sha256": "50ea9f45fdf1dbf589f2f7a4f48b7a57edd6e5961171588648aef8d5469181c1"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 168994,
+      "sha256": "2b951af84ff742cdf6c499c915e266b19b3ab68115e005447e36a0b67981c450"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 168994,
+      "sha256": "2b951af84ff742cdf6c499c915e266b19b3ab68115e005447e36a0b67981c450"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 193522,
+      "sha256": "50ea9f45fdf1dbf589f2f7a4f48b7a57edd6e5961171588648aef8d5469181c1"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 123860,
+      "sha256": "96f2c9cecff169893e07e5ab11fecf07554bd72f6f6a36090293e52c298e3b15"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 10592,
+      "sha256": "fb0b4593a0d28e6395987c2ac0fb9f8643c1871cc208c8bfe48f7abc06b7ba99"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 168994,
+      "sha256": "2b951af84ff742cdf6c499c915e266b19b3ab68115e005447e36a0b67981c450"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 112228,
+      "sha256": "94e001ee0a7bc5dea39f70c4e24c0206877d77f7eabd312a1e8ed7754b6ef12d"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 168994,
+      "sha256": "2b951af84ff742cdf6c499c915e266b19b3ab68115e005447e36a0b67981c450"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 112228,
+      "sha256": "94e001ee0a7bc5dea39f70c4e24c0206877d77f7eabd312a1e8ed7754b6ef12d"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 193522,
+      "sha256": "50ea9f45fdf1dbf589f2f7a4f48b7a57edd6e5961171588648aef8d5469181c1"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 117098,
+      "sha256": "1a62d0b9b033ae490e9d2838ca97bd4f856cd95c3f095b18f13245132d40f801"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 77170,
+      "sha256": "05e4f89cd9ad49b64e2ad4967ae786320f77bda225fca342ccf524effaadfd4d"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 73616,
+      "sha256": "6b2cbe4d7979be3c3415b0ca9754ab4efb58bf64badb6e187c66eab6520c49d4"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 10,
+    "bytes": 1214120,
+    "inventorySha256": "82fbaa8da4568878b61232d6b92fa03a32c2912dde0b102b0e7469e8c7a5b0d3",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "miran-motors-fzco",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 23,
+    "report": "dealers/miran-motors-fzco/input-review.json"
+  },
+  "after": {
+    "files": 23,
+    "bytes": 2494677
+  }
+}

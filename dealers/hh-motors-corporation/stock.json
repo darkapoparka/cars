@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "dealer": "hh-motors-corporation",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:03:53.639119Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "listing-964472",
+      "title": "2020 Toyota Prado",
+      "make": "Toyota",
+      "model": "Prado",
+      "year": 2020,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-964472.jpg"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2020-toyota-prado-964472.html",
+      "observedAt": "2026-10-19T20:03:53.639119Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 39291,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-965070",
+      "title": "2022 Toyota Land Cruiser GXR",
+      "make": "Toyota",
+      "model": "Land Cruiser",
+      "year": 2022,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-965070.jpg"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2022-toyota-land-cruiser-model-2022-35l-twin-turbo-gcc-specification-full-option-965070.html",
+      "observedAt": "2026-10-19T20:03:53.639119Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 49300,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-965083",
+      "title": "2016 Toyota Land Cruiser GXR",
+      "make": "Toyota",
+      "model": "Land Cruiser",
+      "year": 2016,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-965083.jpg"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2016-toyota-land-cruiser-46l-vip-965083.html",
+      "observedAt": "2026-10-19T20:03:53.639119Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 47096,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

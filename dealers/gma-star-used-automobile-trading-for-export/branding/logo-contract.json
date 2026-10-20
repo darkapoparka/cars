@@ -1,0 +1,287 @@
+{
+  "schemaVersion": 1,
+  "dealer": "gma-star-used-automobile-trading-for-export",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T20:17:07.086200Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "sourced-logo-imagegen-redraw",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "c03768a0912ceaf3ef0fba2b25d7908df82d159eb650f00ec80f9b4c03b0988b",
+      "sourceSha256": "27131aeae5186dc7aa5922f600a78883dfe0cf8c2839b0642533a47426553114"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "c7e55ee4c3dbba887faeaf7e9c377c5501a260b40b4ca28b94f3c54392011b32",
+      "sourceSha256": "a014f309a004455efac46d60e58c1f227f852923762b741c9932c4cbc5d409d9"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "c7e55ee4c3dbba887faeaf7e9c377c5501a260b40b4ca28b94f3c54392011b32",
+      "sourceSha256": "a014f309a004455efac46d60e58c1f227f852923762b741c9932c4cbc5d409d9"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "27131aeae5186dc7aa5922f600a78883dfe0cf8c2839b0642533a47426553114",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-b4f00dd6-4463-4f73-819e-481047082709",
+      "modelVersion": null,
+      "sourcePath": "branding/generation-source.png",
+      "sourceSha256": "fa13d3bbe765d4c7764d215146a319b15c033e5780c23a5e4106a6345236cb92",
+      "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+      "crop": [
+        0,
+        524,
+        887,
+        887
+      ]
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "1669abba9177a3e03143b4a8930a9e76c97e3fd8a6415424c2e34cdfc6fd6d79",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-b4f00dd6-4463-4f73-819e-481047082709",
+      "modelVersion": null,
+      "sourcePath": "branding/generation-source.png",
+      "sourceSha256": "fa13d3bbe765d4c7764d215146a319b15c033e5780c23a5e4106a6345236cb92",
+      "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+      "crop": [
+        0,
+        0,
+        887,
+        524
+      ]
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "ab70066c862b1a44954c84affe48ab973f8bd6d4eda21e3b25dcab284acf2529"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "27131aeae5186dc7aa5922f600a78883dfe0cf8c2839b0642533a47426553114",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-b4f00dd6-4463-4f73-819e-481047082709",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "fa13d3bbe765d4c7764d215146a319b15c033e5780c23a5e4106a6345236cb92",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          0,
+          524,
+          887,
+          887
+        ]
+      },
+      "sourceReference": "dealers/gma-star-used-automobile-trading-for-export/branding/generated-onLight.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "a014f309a004455efac46d60e58c1f227f852923762b741c9932c4cbc5d409d9",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-b4f00dd6-4463-4f73-819e-481047082709",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "fa13d3bbe765d4c7764d215146a319b15c033e5780c23a5e4106a6345236cb92",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          887,
+          524,
+          1774,
+          887
+        ]
+      },
+      "sourceReference": "dealers/gma-star-used-automobile-trading-for-export/branding/generated-onDark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "a014f309a004455efac46d60e58c1f227f852923762b741c9932c4cbc5d409d9",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-b4f00dd6-4463-4f73-819e-481047082709",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "fa13d3bbe765d4c7764d215146a319b15c033e5780c23a5e4106a6345236cb92",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          887,
+          524,
+          1774,
+          887
+        ]
+      },
+      "sourceReference": "dealers/gma-star-used-automobile-trading-for-export/branding/generated-onDark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "c8770322f50c1acfba3ce4fe05262d5153644cd374920ae74e1e9a1f11290545",
+      "sha256": "27131aeae5186dc7aa5922f600a78883dfe0cf8c2839b0642533a47426553114",
+      "crop": {
+        "left": 27,
+        "top": 0,
+        "width": 844,
+        "height": 284
+      },
+      "sourcePath": "branding/generated-onLight.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "df551214f64b3a946ed05042e8ff2b4e325a8ecf39c7d6c99f5eed468dbd224a",
+      "sha256": "a014f309a004455efac46d60e58c1f227f852923762b741c9932c4cbc5d409d9",
+      "crop": {
+        "left": 25,
+        "top": 0,
+        "width": 844,
+        "height": 284
+      },
+      "sourcePath": "branding/generated-onDark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "df551214f64b3a946ed05042e8ff2b4e325a8ecf39c7d6c99f5eed468dbd224a",
+      "sha256": "a014f309a004455efac46d60e58c1f227f852923762b741c9932c4cbc5d409d9",
+      "crop": {
+        "left": 25,
+        "top": 0,
+        "width": 844,
+        "height": 284
+      },
+      "sourcePath": "branding/generated-onDark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "a69db7f85fb2720ec219aa407264ab0dd3732a0ff4adbbd25added1c566f0fd6",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-b4f00dd6-4463-4f73-819e-481047082709",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "fa13d3bbe765d4c7764d215146a319b15c033e5780c23a5e4106a6345236cb92",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          0,
+          0,
+          887,
+          524
+        ]
+      },
+      "sourceReference": "dealers/gma-star-used-automobile-trading-for-export/branding/generated-mark.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "06a20a7bac083d568ae856369b7e790acd095fe632bd42ae02f00e3622a088f2",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-b4f00dd6-4463-4f73-819e-481047082709",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "fa13d3bbe765d4c7764d215146a319b15c033e5780c23a5e4106a6345236cb92",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          887,
+          0,
+          1774,
+          524
+        ]
+      },
+      "sourceReference": "dealers/gma-star-used-automobile-trading-for-export/branding/generated-markOnDark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "1669abba9177a3e03143b4a8930a9e76c97e3fd8a6415424c2e34cdfc6fd6d79",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-b4f00dd6-4463-4f73-819e-481047082709",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "fa13d3bbe765d4c7764d215146a319b15c033e5780c23a5e4106a6345236cb92",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          0,
+          0,
+          887,
+          524
+        ]
+      },
+      "sourceReference": "dealers/gma-star-used-automobile-trading-for-export/branding/generated-mark.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "ab70066c862b1a44954c84affe48ab973f8bd6d4eda21e3b25dcab284acf2529",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-b4f00dd6-4463-4f73-819e-481047082709",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "fa13d3bbe765d4c7764d215146a319b15c033e5780c23a5e4106a6345236cb92",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          0,
+          0,
+          887,
+          524
+        ]
+      },
+      "sourceReference": "dealers/gma-star-used-automobile-trading-for-export/branding/generated-mark.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-19T20:17:07.086200Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "f74a3f25d85fe83173b75774fcb27475f18cec13776f375ff8bd3c3415aeabd6",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-b4f00dd6-4463-4f73-819e-481047082709",
+      "modelVersion": null,
+      "sourcePath": "branding/generation-source.png",
+      "sourceSha256": "fa13d3bbe765d4c7764d215146a319b15c033e5780c23a5e4106a6345236cb92",
+      "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+      "crop": [
+        887,
+        0,
+        1774,
+        524
+      ]
+    }
+  }
+}

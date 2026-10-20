@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "best-wheels-specialized-vehicles",
+  "previousSlug": "best-wheels-specialized-vehicles",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:02:16.968Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 3,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-dubai-best-wheels-specialized-vehicles",
+    "position": 202
+  },
+  "before": {
+    "files": 38,
+    "bytes": 6220234
+  },
+  "afterBeforeReview": {
+    "files": 22,
+    "bytes": 3243166
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 82056,
+      "sha256": "0deb4fa2422af45b197f8be90d4988e1e69ddc7d3f77c6d69644f07822246e4c"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 89083,
+      "sha256": "862bf94a8af3236c55c8bb4d514a88859b89029d00bee30f872a73668c39bf49"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 82056,
+      "sha256": "0deb4fa2422af45b197f8be90d4988e1e69ddc7d3f77c6d69644f07822246e4c"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 256585,
+      "sha256": "8b2d3d61f9a34bb3bee3ba32a9cdf66e1a62fb228a0c3add3ed8d26e1efbc440"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 289702,
+      "sha256": "41e78cbf313fff06628efe2ed03fae7b17fd9909a26574d79a5c16bdda01ac76"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 289702,
+      "sha256": "41e78cbf313fff06628efe2ed03fae7b17fd9909a26574d79a5c16bdda01ac76"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 256585,
+      "sha256": "8b2d3d61f9a34bb3bee3ba32a9cdf66e1a62fb228a0c3add3ed8d26e1efbc440"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 82056,
+      "sha256": "0deb4fa2422af45b197f8be90d4988e1e69ddc7d3f77c6d69644f07822246e4c"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 7276,
+      "sha256": "b78729c402e716b7b10c5bedbc07cc63d05c3da1cc89a62d1dc4fe947744d4c1"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 289702,
+      "sha256": "41e78cbf313fff06628efe2ed03fae7b17fd9909a26574d79a5c16bdda01ac76"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 211306,
+      "sha256": "248627ce64530c5545f67ea03ba266985d8d8b23a22d6c83ac2d7ba11c19b4ff"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 289702,
+      "sha256": "41e78cbf313fff06628efe2ed03fae7b17fd9909a26574d79a5c16bdda01ac76"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 211306,
+      "sha256": "248627ce64530c5545f67ea03ba266985d8d8b23a22d6c83ac2d7ba11c19b4ff"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 256585,
+      "sha256": "8b2d3d61f9a34bb3bee3ba32a9cdf66e1a62fb228a0c3add3ed8d26e1efbc440"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 168712,
+      "sha256": "ade369fe3044c292a3b59da344d20440455d2a0053ec51f56397bb1a34f9a5be"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 62746,
+      "sha256": "6ad848c9b042cac369eac89bd9c3bc8ec771f4a9a76d042e04af91c2849fe09b"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 55790,
+      "sha256": "122776e4d1d0343e5b798547131c23521592a7225f909a95c3a94f875e9335c6"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 12,
+    "bytes": 1912402,
+    "inventorySha256": "afb8d0e828a08ec636fd08d7940497f22b2a94c19c33dfcfeb49ddaacc131cf3",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "best-wheels-specialized-vehicles",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 24,
+    "report": "dealers/best-wheels-specialized-vehicles/input-review.json"
+  },
+  "after": {
+    "files": 24,
+    "bytes": 3252006
+  }
+}

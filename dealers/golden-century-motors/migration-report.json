@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "golden-century-motors",
+  "previousSlug": "golden-century-motors",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:03:27.863Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 3,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-dubai-golden-century-motors",
+    "position": 228
+  },
+  "before": {
+    "files": 39,
+    "bytes": 4982990
+  },
+  "afterBeforeReview": {
+    "files": 23,
+    "bytes": 2308752
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 176328,
+      "sha256": "f1d0ef939eb97acfd426cb1104e5878fa6bfc58d1710c6c06a825a1129cbab22"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 161485,
+      "sha256": "025290fd9158598ffc188f28c0599e522798dfef64c3f0de282d523730573712"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 176328,
+      "sha256": "f1d0ef939eb97acfd426cb1104e5878fa6bfc58d1710c6c06a825a1129cbab22"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 198471,
+      "sha256": "fb1b7858c9be99448fd583b4b65e86dd1dcc33bc7279a031ee48e44005373394"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 182266,
+      "sha256": "1528e2bbabf1452ca6643e4d8989ea3053f461f4a7dee789d2bf399dd715ebd5"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 182266,
+      "sha256": "1528e2bbabf1452ca6643e4d8989ea3053f461f4a7dee789d2bf399dd715ebd5"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 198471,
+      "sha256": "fb1b7858c9be99448fd583b4b65e86dd1dcc33bc7279a031ee48e44005373394"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 176328,
+      "sha256": "f1d0ef939eb97acfd426cb1104e5878fa6bfc58d1710c6c06a825a1129cbab22"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 12864,
+      "sha256": "87e1713a6265a54b8df5b583313d003e0f418ae156e776e7462290efa983fce9"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 182266,
+      "sha256": "1528e2bbabf1452ca6643e4d8989ea3053f461f4a7dee789d2bf399dd715ebd5"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 131966,
+      "sha256": "ad10baf841ba2f5b40145c1d600d76c0fab453144802ff6188958ac1cfd8b2c1"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 182266,
+      "sha256": "1528e2bbabf1452ca6643e4d8989ea3053f461f4a7dee789d2bf399dd715ebd5"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 131966,
+      "sha256": "ad10baf841ba2f5b40145c1d600d76c0fab453144802ff6188958ac1cfd8b2c1"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 198471,
+      "sha256": "fb1b7858c9be99448fd583b4b65e86dd1dcc33bc7279a031ee48e44005373394"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 139186,
+      "sha256": "7df243543f8164082ab457a41de65b9fb9eeaf4b608a1f788b8e2dd96c6c7ddc"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 116530,
+      "sha256": "6081f2934600fa383c734beff1f36ec39e1b8e8cc11d0b2b1f8ba0c401197f1f"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 130614,
+      "sha256": "73500e3f7190b4830fd6add2b66c38bc4ef0bd7b70c32c8c0de0456d75a822c5"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 12,
+    "bytes": 1346369,
+    "inventorySha256": "183d91f465b15e5a35a9c9a074120d1e4962c54fb2da4a8ed8dd028dc289b6f3",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "golden-century-motors",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 25,
+    "report": "dealers/golden-century-motors/input-review.json"
+  },
+  "after": {
+    "files": 25,
+    "bytes": 2317582
+  }
+}

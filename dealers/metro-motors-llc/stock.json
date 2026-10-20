@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "dealer": "metro-motors-llc",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:03:53.980957Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "listing-45591",
+      "title": "2024 ROX 01 Captain ETE",
+      "make": "ROX",
+      "model": "01 Captain ETE",
+      "year": 2024,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-45591.jpg"
+      ],
+      "sourceUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/ROX/01-Captain-ETE/?id=45591",
+      "observedAt": "2026-10-19T20:03:53.980957Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "SUV",
+      "transmission": "Auto",
+      "fuel": "Hybrid",
+      "color": "White",
+      "mileageValue": 43,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-45589",
+      "title": "2019 Dodge Durango GT",
+      "make": "Dodge",
+      "model": "Durango GT",
+      "year": 2019,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-45589.jpg"
+      ],
+      "sourceUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/Dodge/Durango-GT/?id=45589",
+      "observedAt": "2026-10-19T20:03:53.980957Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "SUV",
+      "transmission": "Auto",
+      "fuel": "Petrol",
+      "color": "White",
+      "mileageValue": 111000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-45598",
+      "title": "2020 Nissan Micra S",
+      "make": "Nissan",
+      "model": "Micra S",
+      "year": 2020,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-45598.jpg"
+      ],
+      "sourceUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/Nissan/Micra-S/?id=45598",
+      "observedAt": "2026-10-19T20:03:53.980957Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Compact",
+      "transmission": "Auto",
+      "fuel": "Petrol",
+      "color": "Silver",
+      "mileageValue": 108000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

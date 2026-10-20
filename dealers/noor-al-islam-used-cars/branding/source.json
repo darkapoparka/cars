@@ -1,0 +1,175 @@
+{
+  "schemaVersion": 1,
+  "dealer": "noor-al-islam-used-cars",
+  "status": "reviewed-independent-proposal",
+  "realLogoFirst": true,
+  "publicSources": [
+    {
+      "url": "https://uae.yallamotor.com/auto-companies/noor-al-islam-used-cars-10946",
+      "observedAt": "2026-10-19T21:00:01Z"
+    }
+  ],
+  "originals": [],
+  "creationMethod": "imagegen-independent-proposal",
+  "dealerApproved": false,
+  "logoSource": "proposal",
+  "researchSummary": "The current YallaMotor dealer profile and bounded exact-name search expose no confidently matched usable public logo. This is an independent proposed identity, not official or approved.",
+  "generation": {
+    "tool": "image_gen",
+    "generationId": "exec-f4100204-b5b8-436c-829b-b3f28ed279ea",
+    "identifierKind": "tool-execution-output-identifier",
+    "modelVersion": null,
+    "sourcePath": "branding/generation-source.png",
+    "sourceSha256": "94d303deb48e01f3032f0a1a2cdf48d54b83d65f47d28192901fe2a3629470be",
+    "nativeDimensions": {
+      "width": 1536,
+      "height": 1024
+    },
+    "prompt": "Design an independent proposed identity for NOOR AL ISLAM USED CARS. Exact full logo text: NOOR AL ISLAM on first line, USED CARS on second. Contemporary clear geometric sans, confident and welcoming. Distinctive compact N monogram built from a broad rounded arch and diagonal road stroke, simple navy #16324a with dark teal #00655c accent. No religious iconography, no emblem seal, no slogan. Balanced generous letter spacing, substantial legible name. Compact N symbol square and strong at favicon size. Output exactly four production variants on truly transparent alpha, in a two by two grid with large clear gutters and ample margins. TOP LEFT: full logo in dark ink for white background. TOP RIGHT: same full logo in pure-white monochrome for dark and red backgrounds. BOTTOM LEFT: compact emblem in dark ink; BOTTOM RIGHT: same compact emblem in pure white. No panel, background fill, shadows, glow, gradients, texture, photographic mockup or labels. Flat crisp brand artwork with transparent internal cutouts. Compact emblem substantially square and legible at 32px."
+  },
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T21:00:01Z",
+    "master": {
+      "path": "branding/input-onLight.png",
+      "sha256": "57bb67ad33a5b5fddf69a1d5f51cc258da200e0251df01e63128c1c5e0871ad6",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-f4100204-b5b8-436c-829b-b3f28ed279ea",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "94d303deb48e01f3032f0a1a2cdf48d54b83d65f47d28192901fe2a3629470be",
+        "outputFileName": "exec-f4100204-b5b8-436c-829b-b3f28ed279ea.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 779,
+          "height": 550
+        }
+      }
+    },
+    "mark": {
+      "path": "branding/input-mark.png",
+      "sha256": "cd152beaa4276dd8e7a90e413673240288fe4a718c6bbac30874b5a6a1e740ec",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-f4100204-b5b8-436c-829b-b3f28ed279ea",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "94d303deb48e01f3032f0a1a2cdf48d54b83d65f47d28192901fe2a3629470be",
+        "outputFileName": "exec-f4100204-b5b8-436c-829b-b3f28ed279ea.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 0,
+          "top": 550,
+          "width": 779,
+          "height": 474
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/input-markOnDark.png",
+      "sha256": "c9aaf078bd05882bbd3a4199541f3503f007065cd37b63f9df1cbee06295520e",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-f4100204-b5b8-436c-829b-b3f28ed279ea",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "94d303deb48e01f3032f0a1a2cdf48d54b83d65f47d28192901fe2a3629470be",
+        "outputFileName": "exec-f4100204-b5b8-436c-829b-b3f28ed279ea.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 779,
+          "top": 550,
+          "width": 757,
+          "height": 474
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/input-onLight.png",
+        "sha256": "57bb67ad33a5b5fddf69a1d5f51cc258da200e0251df01e63128c1c5e0871ad6",
+        "generation": {
+          "tool": "image_gen",
+          "generationId": "exec-f4100204-b5b8-436c-829b-b3f28ed279ea",
+          "identifierKind": "tool-execution-output-identifier",
+          "providerGenerationIdExposed": false,
+          "modelVersion": null,
+          "sourcePath": "branding/generation-source.png",
+          "sourceSha256": "94d303deb48e01f3032f0a1a2cdf48d54b83d65f47d28192901fe2a3629470be",
+          "outputFileName": "exec-f4100204-b5b8-436c-829b-b3f28ed279ea.png",
+          "operation": "deterministic-sprite-crop",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 779,
+            "height": 550
+          }
+        }
+      },
+      "onDark": {
+        "path": "branding/input-onDark.png",
+        "sha256": "1906e68f15d4082b3bbe74ca1a088600d2860a704c8415647827b288b12309b7",
+        "generation": {
+          "tool": "image_gen",
+          "generationId": "exec-f4100204-b5b8-436c-829b-b3f28ed279ea",
+          "identifierKind": "tool-execution-output-identifier",
+          "providerGenerationIdExposed": false,
+          "modelVersion": null,
+          "sourcePath": "branding/generation-source.png",
+          "sourceSha256": "94d303deb48e01f3032f0a1a2cdf48d54b83d65f47d28192901fe2a3629470be",
+          "outputFileName": "exec-f4100204-b5b8-436c-829b-b3f28ed279ea.png",
+          "operation": "deterministic-sprite-crop",
+          "crop": {
+            "left": 779,
+            "top": 0,
+            "width": 757,
+            "height": 550
+          }
+        }
+      },
+      "onAccent": {
+        "path": "branding/input-onDark.png",
+        "sha256": "1906e68f15d4082b3bbe74ca1a088600d2860a704c8415647827b288b12309b7",
+        "generation": {
+          "tool": "image_gen",
+          "generationId": "exec-f4100204-b5b8-436c-829b-b3f28ed279ea",
+          "identifierKind": "tool-execution-output-identifier",
+          "providerGenerationIdExposed": false,
+          "modelVersion": null,
+          "sourcePath": "branding/generation-source.png",
+          "sourceSha256": "94d303deb48e01f3032f0a1a2cdf48d54b83d65f47d28192901fe2a3629470be",
+          "outputFileName": "exec-f4100204-b5b8-436c-829b-b3f28ed279ea.png",
+          "operation": "deterministic-sprite-crop",
+          "crop": {
+            "left": 779,
+            "top": 0,
+            "width": 757,
+            "height": 550
+          }
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-19T21:00:01Z",
+      "method": "Agent reviewed generated artwork spelling, matching identity and transparent crop. White, charcoal and red contact sheet inspected; 32px compact marks reviewed.",
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#101820",
+        "#09090b",
+        "#17191c",
+        "#c40101"
+      ],
+      "dealerApproval": false
+    }
+  }
+}

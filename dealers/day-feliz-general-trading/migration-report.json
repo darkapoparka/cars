@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "day-feliz-general-trading",
+  "previousSlug": "day-feliz-general-trading",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:02:54.460Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 3,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-dubai-day-feliz-general-trading",
+    "position": 211
+  },
+  "before": {
+    "files": 38,
+    "bytes": 6366222
+  },
+  "afterBeforeReview": {
+    "files": 22,
+    "bytes": 3413724
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 96349,
+      "sha256": "3f2cbf04e10a1fd2b81025452547e42d3336cc770510b00de9dc383818046d48"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 81864,
+      "sha256": "f101de74a1667d97f36aa8fdbeb46282342695e57d23d35c57bf1f35939f50a0"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 96349,
+      "sha256": "3f2cbf04e10a1fd2b81025452547e42d3336cc770510b00de9dc383818046d48"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 291807,
+      "sha256": "d58288d6219b7b8c6d2fcda0c3d8cdde28d3aadecb7727a8c13601284fcac9d3"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 253793,
+      "sha256": "957d730fa8830417e21435606df4deb7a376839ab392bea257f22ce5c89dfb74"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 253793,
+      "sha256": "957d730fa8830417e21435606df4deb7a376839ab392bea257f22ce5c89dfb74"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 291807,
+      "sha256": "d58288d6219b7b8c6d2fcda0c3d8cdde28d3aadecb7727a8c13601284fcac9d3"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 96349,
+      "sha256": "3f2cbf04e10a1fd2b81025452547e42d3336cc770510b00de9dc383818046d48"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 8203,
+      "sha256": "1711dc05ca3accf1feacb6afc4529f6b3fdb44ab4b70ba3e0c00c7086efcb401"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 253793,
+      "sha256": "957d730fa8830417e21435606df4deb7a376839ab392bea257f22ce5c89dfb74"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 186362,
+      "sha256": "63c3394b71a0131ac669c69cef25fe1cd216542d1093754407fde5d880054c0e"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 253793,
+      "sha256": "957d730fa8830417e21435606df4deb7a376839ab392bea257f22ce5c89dfb74"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 186362,
+      "sha256": "63c3394b71a0131ac669c69cef25fe1cd216542d1093754407fde5d880054c0e"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 291807,
+      "sha256": "d58288d6219b7b8c6d2fcda0c3d8cdde28d3aadecb7727a8c13601284fcac9d3"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 194746,
+      "sha256": "5246044b7a471d06b0a424992c8808f24775035a4269d033cf07c2b43f5212fc"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 55290,
+      "sha256": "03b69ec38a7d765b5a57555da667442e8498dc80f7731292f1736eb1568485e4"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 63878,
+      "sha256": "1ce7bc4b5e0f2275a3b951c2cc144fb1644e6e2f72ca994e615db0f9eb776b65"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 12,
+    "bytes": 2040939,
+    "inventorySha256": "418362a449a35f87942bc61694a7f277d85b7af8793883f8978bf18873d883b1",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "day-feliz-general-trading",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 24,
+    "report": "dealers/day-feliz-general-trading/input-review.json"
+  },
+  "after": {
+    "files": 24,
+    "bytes": 3422508
+  }
+}

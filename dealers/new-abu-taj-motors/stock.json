@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "dealer": "new-abu-taj-motors",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:10:47Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "listing-1",
+      "title": "Toyota Land Cruiser VX",
+      "make": "Toyota",
+      "model": "Land Cruiser",
+      "year": 2022,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-1.jpg"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2022-toyota-land-cruiser-gcc-specs-diesel-v6-35-excellent-condition-1018706.html",
+      "observedAt": "2026-10-19T20:10:47Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 43000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-2",
+      "title": "Lexus RX450h F-SPORT",
+      "make": "Lexus",
+      "model": "Rx 450",
+      "year": 2018,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-2.jpg"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2018-lexus-rx450h-1019105.html",
+      "observedAt": "2026-10-19T20:10:47Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 75600,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-3",
+      "title": "Nissan Patrol SE PLATINUM CITY",
+      "make": "Nissan",
+      "model": "Patrol",
+      "year": 2020,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-3.jpg"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2020-nissan-patrol-gcc-specs-v6-40l-2020-interior-and-exterior-excellent-condition-1019579.html",
+      "observedAt": "2026-10-19T20:10:47Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 89367,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

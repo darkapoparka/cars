@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "dealer": "mabuhay-motors-used-cars-trading-llc",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:03:53.817943Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "listing-8539",
+      "title": "2022 Toyota Raize TURBO G",
+      "make": "Toyota",
+      "model": "Raize TURBO G",
+      "year": 2022,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-8539.jpg"
+      ],
+      "sourceUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/Toyota/Raize-TURBO-G/?id=8539",
+      "observedAt": "2026-10-19T20:03:53.817943Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "SUV",
+      "transmission": "Auto",
+      "fuel": "Petrol",
+      "color": "White",
+      "mileageValue": 24000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-8540",
+      "title": "2023 Fengon 580 Other",
+      "make": "Fengon",
+      "model": "580 Other",
+      "year": 2023,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-8540.jpg"
+      ],
+      "sourceUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/Fengon/580-Other/?id=8540",
+      "observedAt": "2026-10-19T20:03:53.817943Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "SUV",
+      "transmission": "Auto",
+      "fuel": "Petrol",
+      "color": "Red",
+      "mileageValue": 45000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-8541",
+      "title": "2020 Toyota Fortuner EXR",
+      "make": "Toyota",
+      "model": "Fortuner EXR",
+      "year": 2020,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-8541.jpg"
+      ],
+      "sourceUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/Toyota/Fortuner-EXR/?id=8541",
+      "observedAt": "2026-10-19T20:03:53.817943Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "SUV",
+      "transmission": "Auto",
+      "fuel": "Petrol",
+      "color": "White",
+      "mileageValue": 89000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

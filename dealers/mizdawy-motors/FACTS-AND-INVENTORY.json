@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "dealer": "mizdawy-motors",
+  "businessFacts": "business-facts.json",
+  "stock": "stock.json",
+  "inventoryKind": "dated-listing-snapshot",
+  "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+  "sources": [
+    {
+      "url": "https://www.oneclickdrive.com/company/dubai/mizdawy-motors",
+      "observedAt": "2026-10-19T20:03:54.057713Z",
+      "supports": [
+        "dealer-name",
+        "dealer-attributed-listings",
+        "dealer-attributed-photos",
+        "public-business-call-line",
+        "address"
+      ]
+    },
+    {
+      "url": "https://auto.ae/dubai/sale/car/rox/rox-adamas-2026/id/269318/",
+      "observedAt": "2026-10-19T20:03:54.057713Z",
+      "supports": [
+        "seller-name",
+        "vehicle-identity",
+        "seller-attributed-listing-photo"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "slug": "pegasus-automobile-fze",
+  "dealerId": "ae-dubai-pegasus-automobile-fze",
+  "business": {
+    "name": "Pegasus Automobile FZE",
+    "city": "Dubai",
+    "region": "Dubai",
+    "countryCode": "AE",
+    "currency": "AED",
+    "distanceUnit": "km",
+    "locale": "en-AE",
+    "address": "59CG+V6C - Ras Al Khor Industrial Area - Ras Al Khor Industrial Area 3 - Dubai",
+    "phone": "+971502036610",
+    "phoneDisplay": "+971502036610",
+    "email": "",
+    "website": "https://pegasusautomobiles.com/",
+    "stockUrl": "https://www.dubicars.com/dealers/dubai-pegasus-automobile-2488",
+    "hours": "",
+    "sourceUrl": "https://www.dubicars.com/dealers/dubai-pegasus-automobile-2488",
+    "observedAt": "2026-10-19T20:16:36Z",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://www.dubicars.com/dealers/dubai-pegasus-automobile-2488",
+      "observedAt": "2026-10-19T20:16:36Z",
+      "supports": [
+        "public-business-identity",
+        "business-contact",
+        "address",
+        "attributed-public-stock"
+      ]
+    }
+  ]
+}

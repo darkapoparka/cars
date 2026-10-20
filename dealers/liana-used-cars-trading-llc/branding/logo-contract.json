@@ -1,0 +1,287 @@
+{
+  "schemaVersion": 1,
+  "dealer": "liana-used-cars-trading-llc",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T20:47:43.092881Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "sourced-logo-imagegen-redraw",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "d2681d206e440fc27f5ee86944e4edb77871abc5f9d6b8b65b2b0a7d3b4cd5d3",
+      "sourceSha256": "b6b106c317f202669f5c7b6be8b36f6b1c0389d48897260a6d356bf6ef1981f3"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "bfcc6d4dea4c5c205d2fec064aa220a4e592f56784129984102550c24f74984d",
+      "sourceSha256": "006652d72e18edc552fd9e81ce68f1648ec0a1255e8ddbadd3d1f0cc18ad61ff"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "bfcc6d4dea4c5c205d2fec064aa220a4e592f56784129984102550c24f74984d",
+      "sourceSha256": "006652d72e18edc552fd9e81ce68f1648ec0a1255e8ddbadd3d1f0cc18ad61ff"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "b6b106c317f202669f5c7b6be8b36f6b1c0389d48897260a6d356bf6ef1981f3",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-a461d274-ad35-418e-a2a7-d29968a8f6e7",
+      "modelVersion": null,
+      "sourcePath": "branding/generation-source.png",
+      "sourceSha256": "b7cfe7a97c5ffbcfecb6ab64e7bcb7a6c477471f32b79f4e00c74098aa8562f5",
+      "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+      "crop": [
+        0,
+        532,
+        887,
+        887
+      ]
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "2af773a5bd5de2c8664a8f6ecfd73fdbbc26c98d15e812a8f35d5d64612a4406",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-a461d274-ad35-418e-a2a7-d29968a8f6e7",
+      "modelVersion": null,
+      "sourcePath": "branding/generation-source.png",
+      "sourceSha256": "b7cfe7a97c5ffbcfecb6ab64e7bcb7a6c477471f32b79f4e00c74098aa8562f5",
+      "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+      "crop": [
+        0,
+        0,
+        887,
+        532
+      ]
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "2f8773ed6f8baff5260058dbc6cacc85032eb5b58b9367a8f6b3f6d17a11bdde"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "b6b106c317f202669f5c7b6be8b36f6b1c0389d48897260a6d356bf6ef1981f3",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a461d274-ad35-418e-a2a7-d29968a8f6e7",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "b7cfe7a97c5ffbcfecb6ab64e7bcb7a6c477471f32b79f4e00c74098aa8562f5",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          0,
+          532,
+          887,
+          887
+        ]
+      },
+      "sourceReference": "dealers/liana-used-cars-trading-llc/branding/generated-onLight.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "006652d72e18edc552fd9e81ce68f1648ec0a1255e8ddbadd3d1f0cc18ad61ff",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a461d274-ad35-418e-a2a7-d29968a8f6e7",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "b7cfe7a97c5ffbcfecb6ab64e7bcb7a6c477471f32b79f4e00c74098aa8562f5",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          887,
+          532,
+          1774,
+          887
+        ]
+      },
+      "sourceReference": "dealers/liana-used-cars-trading-llc/branding/generated-onDark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "006652d72e18edc552fd9e81ce68f1648ec0a1255e8ddbadd3d1f0cc18ad61ff",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a461d274-ad35-418e-a2a7-d29968a8f6e7",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "b7cfe7a97c5ffbcfecb6ab64e7bcb7a6c477471f32b79f4e00c74098aa8562f5",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          887,
+          532,
+          1774,
+          887
+        ]
+      },
+      "sourceReference": "dealers/liana-used-cars-trading-llc/branding/generated-onDark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "b8f65736186c13e249515dd8cb3e42b57c980e9b319e1c9587f7b9743fdfa74e",
+      "sha256": "b6b106c317f202669f5c7b6be8b36f6b1c0389d48897260a6d356bf6ef1981f3",
+      "crop": {
+        "left": 7,
+        "top": 26,
+        "width": 880,
+        "height": 297
+      },
+      "sourcePath": "branding/generated-onLight.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "dfffa9dc199193c8ee93ff5d38f0d5067310a0a55a06bfb643a1d0aed3a1ae55",
+      "sha256": "006652d72e18edc552fd9e81ce68f1648ec0a1255e8ddbadd3d1f0cc18ad61ff",
+      "crop": {
+        "left": 23,
+        "top": 28,
+        "width": 861,
+        "height": 290
+      },
+      "sourcePath": "branding/generated-onDark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "dfffa9dc199193c8ee93ff5d38f0d5067310a0a55a06bfb643a1d0aed3a1ae55",
+      "sha256": "006652d72e18edc552fd9e81ce68f1648ec0a1255e8ddbadd3d1f0cc18ad61ff",
+      "crop": {
+        "left": 23,
+        "top": 28,
+        "width": 861,
+        "height": 290
+      },
+      "sourcePath": "branding/generated-onDark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "962de9377a2adb5bc5a3bf2239b7fde54ea6bc414a97613444a378263ac2d3be",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a461d274-ad35-418e-a2a7-d29968a8f6e7",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "b7cfe7a97c5ffbcfecb6ab64e7bcb7a6c477471f32b79f4e00c74098aa8562f5",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          0,
+          0,
+          887,
+          532
+        ]
+      },
+      "sourceReference": "dealers/liana-used-cars-trading-llc/branding/generated-mark.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "1e8f3ee3c9a6c691bd4a72aa3aad94c65487fb8dce1cdea23c869fb27a8aeee3",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a461d274-ad35-418e-a2a7-d29968a8f6e7",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "b7cfe7a97c5ffbcfecb6ab64e7bcb7a6c477471f32b79f4e00c74098aa8562f5",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          887,
+          0,
+          1774,
+          532
+        ]
+      },
+      "sourceReference": "dealers/liana-used-cars-trading-llc/branding/generated-markOnDark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "2af773a5bd5de2c8664a8f6ecfd73fdbbc26c98d15e812a8f35d5d64612a4406",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a461d274-ad35-418e-a2a7-d29968a8f6e7",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "b7cfe7a97c5ffbcfecb6ab64e7bcb7a6c477471f32b79f4e00c74098aa8562f5",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          0,
+          0,
+          887,
+          532
+        ]
+      },
+      "sourceReference": "dealers/liana-used-cars-trading-llc/branding/generated-mark.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "2f8773ed6f8baff5260058dbc6cacc85032eb5b58b9367a8f6b3f6d17a11bdde",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a461d274-ad35-418e-a2a7-d29968a8f6e7",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "b7cfe7a97c5ffbcfecb6ab64e7bcb7a6c477471f32b79f4e00c74098aa8562f5",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          0,
+          0,
+          887,
+          532
+        ]
+      },
+      "sourceReference": "dealers/liana-used-cars-trading-llc/branding/generated-mark.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-19T20:47:43.092881Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "bad726714a7ffc02a19684ad2a61fcdd9fda157f04fdbaf656979d9cab6c8cb9",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-a461d274-ad35-418e-a2a7-d29968a8f6e7",
+      "modelVersion": null,
+      "sourcePath": "branding/generation-source.png",
+      "sourceSha256": "b7cfe7a97c5ffbcfecb6ab64e7bcb7a6c477471f32b79f4e00c74098aa8562f5",
+      "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+      "crop": [
+        887,
+        0,
+        1774,
+        532
+      ]
+    }
+  }
+}

@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "golden-coast-auto",
+  "previousSlug": "golden-coast-auto",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:03:36.653Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 3,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-dubai-golden-coast-auto",
+    "position": 229
+  },
+  "before": {
+    "files": 39,
+    "bytes": 4023016
+  },
+  "afterBeforeReview": {
+    "files": 23,
+    "bytes": 1329131
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 218603,
+      "sha256": "b9ba376ce11765b3a170d6f50a6ba36cf6e9a1e7623243360822fe9c0ef81a35"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 134924,
+      "sha256": "8f4a6b5f1a857e93e992ba5e951465db7b8a1e40a2604484584c8c687d15019a"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 218603,
+      "sha256": "b9ba376ce11765b3a170d6f50a6ba36cf6e9a1e7623243360822fe9c0ef81a35"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 209546,
+      "sha256": "c993d672e02b315f6ca4c43c7a63b04d6d524efd04e7cd779e63807d4b44fd11"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 173389,
+      "sha256": "30058a985e6b7c3614e5acba15f38b588d5e0b68a394e1aa4e336287e944d228"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 173389,
+      "sha256": "30058a985e6b7c3614e5acba15f38b588d5e0b68a394e1aa4e336287e944d228"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 209546,
+      "sha256": "c993d672e02b315f6ca4c43c7a63b04d6d524efd04e7cd779e63807d4b44fd11"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 218603,
+      "sha256": "b9ba376ce11765b3a170d6f50a6ba36cf6e9a1e7623243360822fe9c0ef81a35"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 15523,
+      "sha256": "1f05a439c92ea4a42bec9a7d47624beacf14f25964ce080ec2e2925a2988fe47"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 173389,
+      "sha256": "30058a985e6b7c3614e5acba15f38b588d5e0b68a394e1aa4e336287e944d228"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 118488,
+      "sha256": "98b2148d754c11ff2c588df0c1865cac08e124b751a0aaa19d8a95bd91c13581"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 173389,
+      "sha256": "30058a985e6b7c3614e5acba15f38b588d5e0b68a394e1aa4e336287e944d228"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 118488,
+      "sha256": "98b2148d754c11ff2c588df0c1865cac08e124b751a0aaa19d8a95bd91c13581"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 209546,
+      "sha256": "c993d672e02b315f6ca4c43c7a63b04d6d524efd04e7cd779e63807d4b44fd11"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 116310,
+      "sha256": "e08c697a89aca109d14faa2751563c59fed08976476c14469ed0a7ed18cf4b9a"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 93628,
+      "sha256": "dff9f49f58754e0755c1e903a3b53d0ce5b34d90f4a0ae8f66ea44af340f130d"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 122334,
+      "sha256": "d899a8cec8d7ce10c6a692c4c545ab277e551cb9932779612865984bc6c3fcb3"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 12,
+    "bytes": 693079,
+    "inventorySha256": "75b9830b7129b77282303a3949e1a07297170aee4f0d67e4a9281308106b170b",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "golden-coast-auto",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 25,
+    "report": "dealers/golden-coast-auto/input-review.json"
+  },
+  "after": {
+    "files": 25,
+    "bytes": 1337933
+  }
+}

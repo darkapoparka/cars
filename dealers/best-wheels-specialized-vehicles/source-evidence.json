@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "dealer": "best-wheels-specialized-vehicles",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/best-wheels-specialized-vehicles",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/1421-mazda-cx-3-20-at-121-hp-gs",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/dealer/best-wheels-specialized-vehicles",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "business-name",
+        "public-dealer-contact",
+        "public-location-if-shown",
+        "dated-stock-sample"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "researchedAt": "2026-10-19",
+  "catalogueResponseSha256": "da5f798a15186303e140544d7093520558b7ad30bb433edde6100c1bd79a5c1c",
+  "stockSources": [
+    {
+      "listingUrl": "https://licenseplate.ae/cars/listing/1421-mazda-cx-3-20-at-121-hp-gs",
+      "catalogueUrl": "https://licenseplate.ae/cars/dealer/best-wheels-specialized-vehicles",
+      "imageUrl": "https://licenseplate.ae/storage/listings/0/mazda-cx-3-20-at-121-hp-0-1789492467.webp",
+      "observedAt": "2026-10-19",
+      "imageSourceSha256": "c30e68617534d1f29a322a537baf160ff283da99dc0626cc82897e53b93f11a2",
+      "retainedPath": "dealer-stock/stock-1.webp",
+      "retainedSha256": "395e8d2964c3c1ab7e65a3d7f57463b14720f405de4c38691b3049503e8edf02",
+      "originalDimensions": [
+        761,
+        1024
+      ],
+      "retainedDimensions": [
+        761,
+        1024
+      ],
+      "retainedBytes": 93344,
+      "transformation": "Proportional downscale only if needed to maximum 1280 pixels; WebP quality 80; no visual content edits."
+    },
+    {
+      "listingUrl": "https://licenseplate.ae/cars/listing/1419-toyota-corolla-16-cvt-132-hp-xli",
+      "catalogueUrl": "https://licenseplate.ae/cars/dealer/best-wheels-specialized-vehicles",
+      "imageUrl": "https://licenseplate.ae/storage/listings/0/toyota-corolla-16-cvt-132-hp-0-1789492458.webp",
+      "observedAt": "2026-10-19",
+      "imageSourceSha256": "01b2fa6961748c487676596f96df1bd3e4a95ab127ad5c38fb5c331e3f0205b2",
+      "retainedPath": "dealer-stock/stock-2.webp",
+      "retainedSha256": "7ff8a7f8648f1aa5300f0e94d01ea1c48f5da0b2082f48fe3b1833753bba19ef",
+      "originalDimensions": [
+        800,
+        961
+      ],
+      "retainedDimensions": [
+        800,
+        961
+      ],
+      "retainedBytes": 63146,
+      "transformation": "Proportional downscale only if needed to maximum 1280 pixels; WebP quality 80; no visual content edits."
+    },
+    {
+      "listingUrl": "https://licenseplate.ae/cars/listing/1657-toyota-yaris-15-cvt-105-hp-se",
+      "catalogueUrl": "https://licenseplate.ae/cars/dealer/best-wheels-specialized-vehicles",
+      "imageUrl": "https://licenseplate.ae/storage/listings/0/toyota-yaris-15-cvt-105-hp-0-1789493922.webp",
+      "observedAt": "2026-10-19",
+      "imageSourceSha256": "9771d7ebde4d123071ef933bc7c8a60edaf178c9378bcabcf36932fd74d90703",
+      "retainedPath": "dealer-stock/stock-3.webp",
+      "retainedSha256": "683c07720c55f33bee5958c79bd5e20ddd3535ab8519aefca0370411e3ee6cea",
+      "originalDimensions": [
+        1170,
+        800
+      ],
+      "retainedDimensions": [
+        1170,
+        800
+      ],
+      "retainedBytes": 158302,
+      "transformation": "Proportional downscale only if needed to maximum 1280 pixels; WebP quality 80; no visual content edits."
+    }
+  ],
+  "omissions": [
+    "Personal-looking or unverified emails omitted; no private contact fields retained.",
+    "Unknown official website, exact address or hours left empty; marketplace-wide defaults not imported."
+  ]
+}

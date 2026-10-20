@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "resource-motors",
+  "previousSlug": "resource-motors",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:10:21.885Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 3,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-dubai-resource-motors",
+    "position": 263
+  },
+  "before": {
+    "files": 39,
+    "bytes": 5290490
+  },
+  "afterBeforeReview": {
+    "files": 23,
+    "bytes": 2583100
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 120646,
+      "sha256": "6c37abddb8d647bc0bec802b2e2d340b595abd29d7218cb0095588daf64b3f11"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 111430,
+      "sha256": "5fd3c39689922b2d599621baaa11e84194eb89e79bcd9bd62dc4eecf2192c5b0"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 120646,
+      "sha256": "6c37abddb8d647bc0bec802b2e2d340b595abd29d7218cb0095588daf64b3f11"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 236622,
+      "sha256": "26b86a7da2ef2d07940dd0b2352443852e3ec416c3a2d3b9585151dc90d68d4a"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 224627,
+      "sha256": "18e0801e82626cad8d83217eb629f622440633a695db21abe9761504c9457f68"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 224627,
+      "sha256": "18e0801e82626cad8d83217eb629f622440633a695db21abe9761504c9457f68"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 236622,
+      "sha256": "26b86a7da2ef2d07940dd0b2352443852e3ec416c3a2d3b9585151dc90d68d4a"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 120646,
+      "sha256": "6c37abddb8d647bc0bec802b2e2d340b595abd29d7218cb0095588daf64b3f11"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 10518,
+      "sha256": "f551ee9219b0c34ac9e4cecae2203d82f3b0ee34f6a5a24a48466398c5708342"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 224627,
+      "sha256": "18e0801e82626cad8d83217eb629f622440633a695db21abe9761504c9457f68"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 159752,
+      "sha256": "4e73b077bcf8e9e21937b7829ebbb1ae0fde65a7137d4d1c110f2a4fd51a9d31"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 224627,
+      "sha256": "18e0801e82626cad8d83217eb629f622440633a695db21abe9761504c9457f68"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 159752,
+      "sha256": "4e73b077bcf8e9e21937b7829ebbb1ae0fde65a7137d4d1c110f2a4fd51a9d31"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 236622,
+      "sha256": "26b86a7da2ef2d07940dd0b2352443852e3ec416c3a2d3b9585151dc90d68d4a"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 146332,
+      "sha256": "927a56a259438d6a9accca68e8e1095f9efd0f12768dbc232ddacc5682f89de9"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 76928,
+      "sha256": "8363fa2404682b4b54092e753b1591fae4952536538f40979ff83c9d510f912f"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 76168,
+      "sha256": "b554534f76837e6f27776bec7a1d0576d72ea6b8c867b7676d036efe3952988f"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 13,
+    "bytes": 1289451,
+    "inventorySha256": "d95f45d193a05dfc03ea22112854a5bd2cba34c58264bac83b0189818ccbd934",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "resource-motors",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 25,
+    "report": "dealers/resource-motors/input-review.json"
+  },
+  "after": {
+    "files": 25,
+    "bytes": 2591868
+  }
+}

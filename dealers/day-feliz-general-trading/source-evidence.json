@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "dealer": "day-feliz-general-trading",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://www.dubicars.com/dealers/dubai-day-feliz-general-trading-3187",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/dealers/dubai-day-feliz-general-trading-3187",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "business-name",
+        "public-dealer-contact",
+        "public-location-if-shown",
+        "dated-stock-sample"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "researchedAt": "2026-10-19",
+  "catalogueResponseSha256": "775595880f698e8d0390f5378e7f7e227b01499764c952013a26b6766ea4c7f5",
+  "stockSources": [
+    {
+      "listingUrl": "https://www.dubicars.com/2024-bmw-325i-other-971196.html",
+      "catalogueUrl": "https://www.dubicars.com/dealers/dubai-day-feliz-general-trading-3187",
+      "imageUrl": "https://www.dubicars.com/images/a0598e/650x380/day-feliz-general-trading/b493e363-ae84-4a0c-b50c-acd53f658c23.jpeg",
+      "observedAt": "2026-10-19",
+      "imageSourceSha256": "46d3e9ecabc6a99a522783dc67b36bdb89259a579e13828fe210a080d67494ad",
+      "retainedPath": "dealer-stock/stock-1.webp",
+      "retainedSha256": "bf14a293c4a9d47609bb18a2cf531ce319e3a61855e0f235d2ab33cde4cc9a70",
+      "originalDimensions": [
+        650,
+        867
+      ],
+      "retainedDimensions": [
+        650,
+        867
+      ],
+      "retainedBytes": 116398,
+      "transformation": "Proportional downscale only if needed to maximum 1280 pixels; WebP quality 80; no visual content edits."
+    },
+    {
+      "listingUrl": "https://www.dubicars.com/2026-bmw-x5-m-980641.html",
+      "catalogueUrl": "https://www.dubicars.com/dealers/dubai-day-feliz-general-trading-3187",
+      "imageUrl": "https://www.dubicars.com/images/fccd3d/650x380/day-feliz-general-trading/27c85edc-8537-41c3-a683-46e784b88562.jpeg",
+      "observedAt": "2026-10-19",
+      "imageSourceSha256": "520dae881233084fe7283dd7cd67a6ed9fedf2e0697cdbdc772ca98fff47b93e",
+      "retainedPath": "dealer-stock/stock-2.webp",
+      "retainedSha256": "51011f8d62b0294eb6f6750b744a4bc858aaab9f9604b3806bee79685f854ce4",
+      "originalDimensions": [
+        650,
+        488
+      ],
+      "retainedDimensions": [
+        650,
+        488
+      ],
+      "retainedBytes": 51934,
+      "transformation": "Proportional downscale only if needed to maximum 1280 pixels; WebP quality 80; no visual content edits."
+    },
+    {
+      "listingUrl": "https://www.dubicars.com/2026-bmw-x5-xdrive40i-m-sport-995537.html",
+      "catalogueUrl": "https://www.dubicars.com/dealers/dubai-day-feliz-general-trading-3187",
+      "imageUrl": "https://www.dubicars.com/images/f66aba/650x380/day-feliz-general-trading/15965fbf-c211-41dd-9a57-f73e13645d72.jpeg",
+      "observedAt": "2026-10-19",
+      "imageSourceSha256": "532595db93aa11752097406ef8a62651847bb7dbb17c78715fd208f30eb44656",
+      "retainedPath": "dealer-stock/stock-3.webp",
+      "retainedSha256": "4ea750048f446fb03e9a4704f41f36b7c8dd9e1bf293cdae27e17b5d55c1507f",
+      "originalDimensions": [
+        650,
+        365
+      ],
+      "retainedDimensions": [
+        650,
+        365
+      ],
+      "retainedBytes": 32378,
+      "transformation": "Proportional downscale only if needed to maximum 1280 pixels; WebP quality 80; no visual content edits."
+    }
+  ],
+  "omissions": [
+    "Personal-looking or unverified emails omitted; no private contact fields retained.",
+    "Unknown official website, exact address or hours left empty; marketplace-wide defaults not imported."
+  ]
+}

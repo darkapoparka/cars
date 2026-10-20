@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "quick-cars",
+  "previousSlug": "quick-cars",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:09:35.138Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 3,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-dubai-quick-cars",
+    "position": 261
+  },
+  "before": {
+    "files": 39,
+    "bytes": 4165158
+  },
+  "afterBeforeReview": {
+    "files": 23,
+    "bytes": 2459279
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 83492,
+      "sha256": "e324b32157a8466ab7ffb4faaac89fd68f785bc7dc62ff92683e3b545fc65e5a"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 76562,
+      "sha256": "49cae5665c23341f4a7304669fce11ec1f987d9c8c18834786b93f3af9104d92"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 83492,
+      "sha256": "e324b32157a8466ab7ffb4faaac89fd68f785bc7dc62ff92683e3b545fc65e5a"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 121226,
+      "sha256": "459a13cb68bd0109cf1a1ed393d212230a9b9da3e471642cefc8fb81f2544fbb"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 150209,
+      "sha256": "f2a5f91810254b38690366f55f761878d06d888dbd98f51e09c634a06ae8976b"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 150209,
+      "sha256": "f2a5f91810254b38690366f55f761878d06d888dbd98f51e09c634a06ae8976b"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 121226,
+      "sha256": "459a13cb68bd0109cf1a1ed393d212230a9b9da3e471642cefc8fb81f2544fbb"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 83492,
+      "sha256": "e324b32157a8466ab7ffb4faaac89fd68f785bc7dc62ff92683e3b545fc65e5a"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 7042,
+      "sha256": "4ffc9b13edb90ec9d289ba4523d6eccd74922df6655825f6ac1d5a1d481235f1"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 150209,
+      "sha256": "f2a5f91810254b38690366f55f761878d06d888dbd98f51e09c634a06ae8976b"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 113000,
+      "sha256": "0f4a358dc64e823bdbcf7b7f24343c172e6b729cd95bbb76e1c922c94bc98217"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 150209,
+      "sha256": "f2a5f91810254b38690366f55f761878d06d888dbd98f51e09c634a06ae8976b"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 113000,
+      "sha256": "0f4a358dc64e823bdbcf7b7f24343c172e6b729cd95bbb76e1c922c94bc98217"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 121226,
+      "sha256": "459a13cb68bd0109cf1a1ed393d212230a9b9da3e471642cefc8fb81f2544fbb"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 77062,
+      "sha256": "1a78f842f77dca48959e63127208b058f55798e5316a2dfd6a75c5e39255abbb"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 53784,
+      "sha256": "00d4d17380ce89b3c2e46b78668371463e6b273638a69a5182278a18e137effc"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 54210,
+      "sha256": "73e16cd6fea551701ab5aba263f235b52c3d5b2f3c8a2018ad48ab5f64b65bae"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 13,
+    "bytes": 1233888,
+    "inventorySha256": "f490e04b9e2bae2e12a4683ccafe70e37230a9cfd030671d90e0beecea4fb78d",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "quick-cars",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 25,
+    "report": "dealers/quick-cars/input-review.json"
+  },
+  "after": {
+    "files": 25,
+    "bytes": 2468001
+  }
+}

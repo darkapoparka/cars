@@ -1,0 +1,182 @@
+{
+  "schemaVersion": 1,
+  "dealer": "motorx-group",
+  "status": "reviewed-independent-redraw",
+  "realLogoFirst": true,
+  "publicSources": [
+    {
+      "url": "https://www.dubicars.com/dealers/dubai-motorx-group-3189",
+      "observedAt": "2026-10-19T20:30:19Z"
+    }
+  ],
+  "originals": [
+    {
+      "path": "branding/public-original.png",
+      "sha256": "fd8cee6676e1a66eb408eea701e15a9b7649d6c8c066e81d1119db0c218eef83",
+      "url": "https://static.oneclickdrive.com/application/views/img/company/motorx-group.png?ok=1.12&height=70&width=auto&fit=resize",
+      "observedAt": "2026-10-19T20:30:19Z"
+    }
+  ],
+  "creationMethod": "imagegen-faithful-clean-redraw",
+  "dealerApproved": false,
+  "logoSource": "redraw",
+  "researchSummary": "DubiCars showed a placeholder. A matched OneClickDrive listing exposed the original red compass-X artwork, retained and faithfully redrawn; an earlier speculative design was rejected.",
+  "generation": {
+    "tool": "image_gen",
+    "generationId": "exec-8442328e-b3aa-4a77-8865-75b13324d8b3",
+    "identifierKind": "tool-execution-output-identifier",
+    "modelVersion": null,
+    "sourcePath": "branding/generation-source.png",
+    "sourceSha256": "bb0a28d56a41c0d8a75185c589e8143e00f4e90bdddb075a107ee7c882fb7a7b",
+    "nativeDimensions": {
+      "width": 1254,
+      "height": 1254
+    },
+    "prompt": "Faithful high-quality redraw of actual MOTORX GROUP reference. Preserve red four-point compass/star X inside the fine circular outline, black geometric MOTORX and small GROUP beneath. Strengthen thin circular stroke, correct balanced star proportions and make typography elegant and precise. Text exactly \"MOTORX\" and \"GROUP\". Compact emblem is the red compass X with open dark ring, no other letters. This replaces an earlier unrelated concept and MUST faithfully match the reference. Make exactly FOUR separated production assets on square transparent canvas with a precise 2 by 2 grid. Top-left full logo in its authentic brand colours, dark ink for white surfaces. Top-right same complete identity drawn ENTIRELY SOLID WHITE MONOCHROME for dark and red surfaces, all letters and symbol white. Bottom-left emblem alone in dark/brand colours. Bottom-right identical emblem alone entirely solid white. No filled background, all empty spaces alpha transparent; open contours. Generous clear gutters and outer margin. No labels, gradients, glow, shading, shadows or bevels. Distinctive refined flat forms and clean typography, compact emblem legible at 32px."
+  },
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T20:30:19Z",
+    "master": {
+      "path": "branding/input-onLight.png",
+      "sha256": "b5a6d654fe77d55056e1c967bc88d4618a5fea3443e2efd977910a9e4ca22033",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-8442328e-b3aa-4a77-8865-75b13324d8b3",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "bb0a28d56a41c0d8a75185c589e8143e00f4e90bdddb075a107ee7c882fb7a7b",
+        "outputFileName": "exec-8442328e-b3aa-4a77-8865-75b13324d8b3.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 627,
+          "height": 659
+        }
+      }
+    },
+    "mark": {
+      "path": "branding/input-mark.png",
+      "sha256": "48846150917fded122ab2a7629e159a0636e2329c12f6d196c8c56e61cef45b5",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-8442328e-b3aa-4a77-8865-75b13324d8b3",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "bb0a28d56a41c0d8a75185c589e8143e00f4e90bdddb075a107ee7c882fb7a7b",
+        "outputFileName": "exec-8442328e-b3aa-4a77-8865-75b13324d8b3.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 0,
+          "top": 659,
+          "width": 627,
+          "height": 595
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/input-markOnDark.png",
+      "sha256": "9d5189111d211bf4ea6c39168b6f3d19e1d856d728bcb0a590fe78b72c1dc8a1",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-8442328e-b3aa-4a77-8865-75b13324d8b3",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "bb0a28d56a41c0d8a75185c589e8143e00f4e90bdddb075a107ee7c882fb7a7b",
+        "outputFileName": "exec-8442328e-b3aa-4a77-8865-75b13324d8b3.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 627,
+          "top": 659,
+          "width": 627,
+          "height": 595
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/input-onLight.png",
+        "sha256": "b5a6d654fe77d55056e1c967bc88d4618a5fea3443e2efd977910a9e4ca22033",
+        "generation": {
+          "tool": "image_gen",
+          "generationId": "exec-8442328e-b3aa-4a77-8865-75b13324d8b3",
+          "identifierKind": "tool-execution-output-identifier",
+          "providerGenerationIdExposed": false,
+          "modelVersion": null,
+          "sourcePath": "branding/generation-source.png",
+          "sourceSha256": "bb0a28d56a41c0d8a75185c589e8143e00f4e90bdddb075a107ee7c882fb7a7b",
+          "outputFileName": "exec-8442328e-b3aa-4a77-8865-75b13324d8b3.png",
+          "operation": "deterministic-sprite-crop",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 627,
+            "height": 659
+          }
+        }
+      },
+      "onDark": {
+        "path": "branding/input-onDark.png",
+        "sha256": "cfa5a24518178c434921ed033955b9f038ee20f4d1550a542a5b1adaa46a9579",
+        "generation": {
+          "tool": "image_gen",
+          "generationId": "exec-8442328e-b3aa-4a77-8865-75b13324d8b3",
+          "identifierKind": "tool-execution-output-identifier",
+          "providerGenerationIdExposed": false,
+          "modelVersion": null,
+          "sourcePath": "branding/generation-source.png",
+          "sourceSha256": "bb0a28d56a41c0d8a75185c589e8143e00f4e90bdddb075a107ee7c882fb7a7b",
+          "outputFileName": "exec-8442328e-b3aa-4a77-8865-75b13324d8b3.png",
+          "operation": "deterministic-sprite-crop",
+          "crop": {
+            "left": 627,
+            "top": 0,
+            "width": 627,
+            "height": 659
+          }
+        }
+      },
+      "onAccent": {
+        "path": "branding/input-onDark.png",
+        "sha256": "cfa5a24518178c434921ed033955b9f038ee20f4d1550a542a5b1adaa46a9579",
+        "generation": {
+          "tool": "image_gen",
+          "generationId": "exec-8442328e-b3aa-4a77-8865-75b13324d8b3",
+          "identifierKind": "tool-execution-output-identifier",
+          "providerGenerationIdExposed": false,
+          "modelVersion": null,
+          "sourcePath": "branding/generation-source.png",
+          "sourceSha256": "bb0a28d56a41c0d8a75185c589e8143e00f4e90bdddb075a107ee7c882fb7a7b",
+          "outputFileName": "exec-8442328e-b3aa-4a77-8865-75b13324d8b3.png",
+          "operation": "deterministic-sprite-crop",
+          "crop": {
+            "left": 627,
+            "top": 0,
+            "width": 627,
+            "height": 659
+          }
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-19T20:30:19Z",
+      "method": "Agent reviewed generated artwork spelling, matching identity and transparent crop. White, charcoal and red contact sheet inspected; 32px compact marks reviewed.",
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#101820",
+        "#09090b",
+        "#17191c",
+        "#c40101"
+      ],
+      "dealerApproval": false
+    }
+  }
+}

@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "global-network-motors",
+  "previousSlug": "global-network-motors",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:03:07.220Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 3,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-dubai-global-network-motors",
+    "position": 226
+  },
+  "before": {
+    "files": 37,
+    "bytes": 4815095
+  },
+  "afterBeforeReview": {
+    "files": 21,
+    "bytes": 2814429
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 83849,
+      "sha256": "52ade6c0885e7d93810ae81b0d4f27280682d44e8bb324cf1e128fa7e913dc26"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 95116,
+      "sha256": "9e5bc5364ab23cffc83a911dfb573b191488d6692783bbb01b54d44d8792cf62"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 83849,
+      "sha256": "52ade6c0885e7d93810ae81b0d4f27280682d44e8bb324cf1e128fa7e913dc26"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 160136,
+      "sha256": "8346a598ad6077da90475ab729723f27b1f96d92b128153e159d45c2b0e8a101"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 172426,
+      "sha256": "16c47bdac25ac0198335bcf9e3e965ffc0974d3a8a9cce28d655496231ad10a4"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 172426,
+      "sha256": "16c47bdac25ac0198335bcf9e3e965ffc0974d3a8a9cce28d655496231ad10a4"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 160136,
+      "sha256": "8346a598ad6077da90475ab729723f27b1f96d92b128153e159d45c2b0e8a101"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 83849,
+      "sha256": "52ade6c0885e7d93810ae81b0d4f27280682d44e8bb324cf1e128fa7e913dc26"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 8256,
+      "sha256": "b49d2b085f2c8b267cc354022329b1565e02c5bdc7973e07f6b81817f14bb892"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 172426,
+      "sha256": "16c47bdac25ac0198335bcf9e3e965ffc0974d3a8a9cce28d655496231ad10a4"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 126290,
+      "sha256": "9481c7aaf18b48e9651aebffd24ad1f926cf998f33769e8e8a5a86a32d50ec41"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 172426,
+      "sha256": "16c47bdac25ac0198335bcf9e3e965ffc0974d3a8a9cce28d655496231ad10a4"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 126290,
+      "sha256": "9481c7aaf18b48e9651aebffd24ad1f926cf998f33769e8e8a5a86a32d50ec41"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 160136,
+      "sha256": "8346a598ad6077da90475ab729723f27b1f96d92b128153e159d45c2b0e8a101"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 104320,
+      "sha256": "91eb08621e2fe903f4a0bfe3ca0eb2d24fc653ff257f158aef944c5d2e795e1c"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 65602,
+      "sha256": "8dda54b1897402bf59a179b8b1ffc0ca80ef38a39c6a562eb3ff1018e60bab81"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 56960,
+      "sha256": "fe66bc0dc82be111afc02cbc91d39faa09b5c2dbe953057d5161c859fd0e9855"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 10,
+    "bytes": 1208638,
+    "inventorySha256": "9eb33f84a338c15daf070b512521bb8cdb1d9878ecbf509f442263fbdd31becf",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "global-network-motors",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 23,
+    "report": "dealers/global-network-motors/input-review.json"
+  },
+  "after": {
+    "files": 23,
+    "bytes": 2822968
+  }
+}

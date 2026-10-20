@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "dealer": "great-west-east-auto",
+  "businessFacts": "business-facts.json",
+  "stock": "stock.json",
+  "inventoryKind": "dated-listing-snapshot",
+  "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+  "sources": [
+    {
+      "url": "https://auto.ae/geartweauto/",
+      "observedAt": "2026-10-19T20:03:53.586498Z",
+      "supports": [
+        "dealer-name",
+        "dealer-attributed-listings",
+        "dealer-attributed-photos",
+        "public-business-call-line",
+        "address",
+        "published-hours"
+      ]
+    }
+  ]
+}

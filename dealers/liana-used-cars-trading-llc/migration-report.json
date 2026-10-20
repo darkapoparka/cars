@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "liana-used-cars-trading-llc",
+  "previousSlug": "liana-used-cars-trading-llc",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:09:04.390Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 3,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-dubai-liana-used-cars-trading-llc",
+    "position": 240
+  },
+  "before": {
+    "files": 39,
+    "bytes": 4540090
+  },
+  "afterBeforeReview": {
+    "files": 23,
+    "bytes": 1645940
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 164138,
+      "sha256": "2af773a5bd5de2c8664a8f6ecfd73fdbbc26c98d15e812a8f35d5d64612a4406"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 153332,
+      "sha256": "bad726714a7ffc02a19684ad2a61fcdd9fda157f04fdbaf656979d9cab6c8cb9"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 164138,
+      "sha256": "2af773a5bd5de2c8664a8f6ecfd73fdbbc26c98d15e812a8f35d5d64612a4406"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 225154,
+      "sha256": "b6b106c317f202669f5c7b6be8b36f6b1c0389d48897260a6d356bf6ef1981f3"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 217416,
+      "sha256": "006652d72e18edc552fd9e81ce68f1648ec0a1255e8ddbadd3d1f0cc18ad61ff"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 217416,
+      "sha256": "006652d72e18edc552fd9e81ce68f1648ec0a1255e8ddbadd3d1f0cc18ad61ff"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 225154,
+      "sha256": "b6b106c317f202669f5c7b6be8b36f6b1c0389d48897260a6d356bf6ef1981f3"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 164138,
+      "sha256": "2af773a5bd5de2c8664a8f6ecfd73fdbbc26c98d15e812a8f35d5d64612a4406"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 12654,
+      "sha256": "2f8773ed6f8baff5260058dbc6cacc85032eb5b58b9367a8f6b3f6d17a11bdde"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 217416,
+      "sha256": "006652d72e18edc552fd9e81ce68f1648ec0a1255e8ddbadd3d1f0cc18ad61ff"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 155008,
+      "sha256": "bfcc6d4dea4c5c205d2fec064aa220a4e592f56784129984102550c24f74984d"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 217416,
+      "sha256": "006652d72e18edc552fd9e81ce68f1648ec0a1255e8ddbadd3d1f0cc18ad61ff"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 155008,
+      "sha256": "bfcc6d4dea4c5c205d2fec064aa220a4e592f56784129984102550c24f74984d"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 225154,
+      "sha256": "b6b106c317f202669f5c7b6be8b36f6b1c0389d48897260a6d356bf6ef1981f3"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 151284,
+      "sha256": "d2681d206e440fc27f5ee86944e4edb77871abc5f9d6b8b65b2b0a7d3b4cd5d3"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 117012,
+      "sha256": "1e8f3ee3c9a6c691bd4a72aa3aad94c65487fb8dce1cdea23c869fb27a8aeee3"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 116176,
+      "sha256": "962de9377a2adb5bc5a3bf2239b7fde54ea6bc414a97613444a378263ac2d3be"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 12,
+    "bytes": 832850,
+    "inventorySha256": "d2cbc8568bbe7292c680033c8970dfc9ea47cfddd912d5dec06d38c1700e04c2",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "liana-used-cars-trading-llc",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 25,
+    "report": "dealers/liana-used-cars-trading-llc/input-review.json"
+  },
+  "after": {
+    "files": 25,
+    "bytes": 1654823
+  }
+}

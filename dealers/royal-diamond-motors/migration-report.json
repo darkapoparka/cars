@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "royal-diamond-motors",
+  "previousSlug": "royal-diamond-motors",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:11:15.563Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 3,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-dubai-royal-diamond-motors",
+    "position": 266
+  },
+  "before": {
+    "files": 39,
+    "bytes": 7316995
+  },
+  "afterBeforeReview": {
+    "files": 23,
+    "bytes": 3103427
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 99725,
+      "sha256": "70518fe50129e8b4442b2dbe22debe75acd02e7c5949db4256cdcc1111d9ee0b"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 83825,
+      "sha256": "ddee1f406ddc73f14f5ad255e95ab98c846cac73d60a2f88b03eb17d61aa4e50"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 99725,
+      "sha256": "70518fe50129e8b4442b2dbe22debe75acd02e7c5949db4256cdcc1111d9ee0b"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 453723,
+      "sha256": "f61420a4bdca3c7f19108473e2e8d25d9b46012a7f002899e7837b6634c2c0e3"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 386299,
+      "sha256": "74273610ffcbdc88f37c1775478ab7bd27090ba19eca8f5d7ef486787fb3570b"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 386299,
+      "sha256": "74273610ffcbdc88f37c1775478ab7bd27090ba19eca8f5d7ef486787fb3570b"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 453723,
+      "sha256": "f61420a4bdca3c7f19108473e2e8d25d9b46012a7f002899e7837b6634c2c0e3"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 99725,
+      "sha256": "70518fe50129e8b4442b2dbe22debe75acd02e7c5949db4256cdcc1111d9ee0b"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 7555,
+      "sha256": "e7e92103a43c5da6d35c7cf76c972f7b5526492b4117d549f5ceea873dcbe600"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 386299,
+      "sha256": "74273610ffcbdc88f37c1775478ab7bd27090ba19eca8f5d7ef486787fb3570b"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 255050,
+      "sha256": "c51c05b553f31e1f3fc7eb35c43740f0e00233b7053710ab454e37b8c95fdf41"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 386299,
+      "sha256": "74273610ffcbdc88f37c1775478ab7bd27090ba19eca8f5d7ef486787fb3570b"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 255050,
+      "sha256": "c51c05b553f31e1f3fc7eb35c43740f0e00233b7053710ab454e37b8c95fdf41"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 453723,
+      "sha256": "f61420a4bdca3c7f19108473e2e8d25d9b46012a7f002899e7837b6634c2c0e3"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 289406,
+      "sha256": "63a1f22ad2dfed4b66742122326e977dd492fbfa706a6eb59c88dc0e07307125"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 58750,
+      "sha256": "ca6a5af4039f01aa05d8a56b587c1fddf3a914fbf2fc250143bb3feecacd4ee5"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 62214,
+      "sha256": "64c6f3da49ad7ee219d3a0c63e6283ab36fe9ce0e991bec6a04049d6b1c5b3c0"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 13,
+    "bytes": 1675985,
+    "inventorySha256": "ca75fc6e10ae94598044cdde5ad8961131031ac03c3a8560de60311137fb2625",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "royal-diamond-motors",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 25,
+    "report": "dealers/royal-diamond-motors/input-review.json"
+  },
+  "after": {
+    "files": 25,
+    "bytes": 3112230
+  }
+}

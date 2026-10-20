@@ -1,0 +1,162 @@
+{
+  "schemaVersion": 1,
+  "dealer": "global-network-motors",
+  "sourceLogoUrl": "https://auto-ae-prod-storage.storage.googleapis.com/a8d88920697846fc9777b5b2065c8ba9",
+  "sourcePath": "branding/source-original.jpg",
+  "sourceSha256": "903218e470d722443ce5e29bacc84f0694232994cb3e90a1f044edd1aa26f989",
+  "publishedBranding": true,
+  "sourcePage": "https://auto.ae/globalnw/",
+  "observedAt": "2026-10-19T20:03:53.556086Z",
+  "creationMethod": "sourced-logo-imagegen-redraw",
+  "approvalStatus": "independent-preview-not-dealer-approved",
+  "dealerApproved": false,
+  "visualReview": "Simplified the sourced GN globe/orbit and navy identity into clear matched navy and white variants. Name spelling and transparent source pixels reviewed. This is a proposed redraw, not an official replacement.",
+  "generationPrompt": "Faithful navy blue Global Network Cars GN globe-orbit refinement, four matching transparent compact and horizontal variants, clean thick GN, no map details or background. Exact lettering GLOBAL NETWORK CARS.",
+  "workingLogoPath": "branding/generated-onLight.png",
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T20:12:28.227352Z",
+    "master": {
+      "path": "branding/generated-onLight.png",
+      "sha256": "ecad7719394871ea4fce295ba7f60dc268fdae30119aa774d3d29ffd039791cb",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-3bc97335-586d-4520-8fd5-47cbf7ec625a",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "6f9163c62162099feaa53188bc111fc6ac819017cab2b6285a22db28e6e3e440",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          0,
+          620,
+          768,
+          1024
+        ]
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "93d508016ce628744ef75849c3ef42977ee56a83363bea03ab9b2a27ef28aa55",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-3bc97335-586d-4520-8fd5-47cbf7ec625a",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "6f9163c62162099feaa53188bc111fc6ac819017cab2b6285a22db28e6e3e440",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          0,
+          0,
+          768,
+          620
+        ]
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-markOnDark.png",
+      "sha256": "c82de679b062d1df13bcf7113bb87960bfce41967ed0fe0054878dd80a5a0fe1",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-3bc97335-586d-4520-8fd5-47cbf7ec625a",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "6f9163c62162099feaa53188bc111fc6ac819017cab2b6285a22db28e6e3e440",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          768,
+          0,
+          1536,
+          620
+        ]
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-onLight.png",
+        "sha256": "ecad7719394871ea4fce295ba7f60dc268fdae30119aa774d3d29ffd039791cb",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-3bc97335-586d-4520-8fd5-47cbf7ec625a",
+          "modelVersion": null,
+          "sourcePath": "branding/generation-source.png",
+          "sourceSha256": "6f9163c62162099feaa53188bc111fc6ac819017cab2b6285a22db28e6e3e440",
+          "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+          "crop": [
+            0,
+            620,
+            768,
+            1024
+          ]
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-onDark.png",
+        "sha256": "cee9f4bff0354a4c8626f207f69e56084ae09e27a53bf79157accc90f175c5cb",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-3bc97335-586d-4520-8fd5-47cbf7ec625a",
+          "modelVersion": null,
+          "sourcePath": "branding/generation-source.png",
+          "sourceSha256": "6f9163c62162099feaa53188bc111fc6ac819017cab2b6285a22db28e6e3e440",
+          "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+          "crop": [
+            768,
+            620,
+            1536,
+            1024
+          ]
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-onDark.png",
+        "sha256": "cee9f4bff0354a4c8626f207f69e56084ae09e27a53bf79157accc90f175c5cb",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-3bc97335-586d-4520-8fd5-47cbf7ec625a",
+          "modelVersion": null,
+          "sourcePath": "branding/generation-source.png",
+          "sourceSha256": "6f9163c62162099feaa53188bc111fc6ac819017cab2b6285a22db28e6e3e440",
+          "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+          "crop": [
+            768,
+            620,
+            1536,
+            1024
+          ]
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#101820",
+        "#09090b",
+        "#17191c",
+        "#c40101"
+      ],
+      "wordmarkWidths": [
+        120,
+        180
+      ],
+      "notes": "Simplified the sourced GN globe/orbit and navy identity into clear matched navy and white variants. Name spelling and transparent source pixels reviewed. This is a proposed redraw, not an official replacement."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-19T20:12:28.227352Z",
+      "widths": [
+        32,
+        64,
+        96
+      ],
+      "backgrounds": [
+        "#ffffff",
+        "#101820",
+        "#c40101"
+      ],
+      "notes": "Bold GN remains recognizable at 32px; a single orbit and open counter avoid the source barcode and globe-map clutter. White variant reviewed on dark and red."
+    },
+    "compactMarkStatus": "proposed-compact-adaptation-not-dealer-approved"
+  },
+  "usageStatus": "public-preview-only"
+}

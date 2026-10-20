@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "slug": "mabuhay-motors-used-cars-trading-llc",
+  "dealerId": "ae-dubai-mabuhay-motors-used-cars-trading-llc",
+  "business": {
+    "name": "Mabuhay Motors Used Cars Trading LLC",
+    "city": "Dubai",
+    "region": "Dubai",
+    "countryCode": "AE",
+    "currency": "AED",
+    "distanceUnit": "km",
+    "locale": "en-AE",
+    "address": "Shop No. 67, Ras Al Khor, Used Car Market, Dubai - UAE",
+    "phone": "+971585454123",
+    "phoneDisplay": "+971585454123",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://www.oneclickdrive.com/company/dubai/mabuhay-motors-used-cars-trading-llc",
+    "hours": "",
+    "sourceUrl": "https://www.oneclickdrive.com/company/dubai/mabuhay-motors-used-cars-trading-llc",
+    "observedAt": "2026-10-19T20:03:53.817943Z",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://www.oneclickdrive.com/company/dubai/mabuhay-motors-used-cars-trading-llc",
+      "observedAt": "2026-10-19T20:03:53.817943Z",
+      "supports": [
+        "dealer-name",
+        "dealer-attributed-listings",
+        "dealer-attributed-photos",
+        "public-business-call-line",
+        "address"
+      ]
+    }
+  ]
+}

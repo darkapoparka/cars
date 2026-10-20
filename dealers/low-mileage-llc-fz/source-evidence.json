@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 1,
+  "dealer": "low-mileage-llc-fz",
+  "researchId": "ae-dubai-low-mileage-llc-fz",
+  "observedAt": "2026-10-19T20:03:53.788122Z",
+  "liveFetchPerformed": true,
+  "businessSources": [
+    {
+      "url": "https://www.oneclickdrive.com/company/dubai/low-mileage-l.l.c-fz",
+      "observedAt": "2026-10-19T20:03:53.788122Z",
+      "supports": [
+        "dealer-name",
+        "dealer-attributed-listings",
+        "dealer-attributed-photos",
+        "public-business-call-line",
+        "address"
+      ]
+    }
+  ],
+  "stockMode": "dated-listing-snapshot",
+  "inventoryCountMeaning": "Selected currently advertised public records, not a count or confirmation of available physical stock.",
+  "media": [
+    {
+      "path": "dealer-stock/listing-11660.jpg",
+      "sourceUrl": "https://static.oneclickdrive.com/uploads/cars/Mercedes-Benz-E43-2018_11660_74848663925-14_small.jpg",
+      "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/Mercedes-Benz/AMG-E43/?id=11660",
+      "observedAt": "2026-10-19T20:03:53.788122Z",
+      "downloadedSha256": "c2401b708b00ecf139737b5c255c016b6b19648b8643d5730a32163c59043ee2",
+      "downloadedDimensions": [
+        450,
+        395
+      ],
+      "sha256": "f3a8f787f444c649dfb44f83cab097dd6bfec3b9f68ef44a71106ef8a49c32ce",
+      "bytes": 23236,
+      "dimensions": [
+        450,
+        395
+      ],
+      "modification": "Proportional resize without enlargement to at most 1280px; JPEG encode; no content changes."
+    },
+    {
+      "path": "dealer-stock/listing-11648.jpg",
+      "sourceUrl": "https://static.oneclickdrive.com/uploads/cars/BMW_7-Series_2018_11648_11648_8185647846-6_small.jpg",
+      "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/BMW/750Li/?id=11648",
+      "observedAt": "2026-10-19T20:03:53.788122Z",
+      "downloadedSha256": "c624922102abe919a031b5b769cad36402661bf947634b776a4069a0020cee2d",
+      "downloadedDimensions": [
+        450,
+        395
+      ],
+      "sha256": "d6b42858797b2a4abbf15f53f07457c2d0670e705c165f18016a7aa15d099112",
+      "bytes": 37678,
+      "dimensions": [
+        450,
+        395
+      ],
+      "modification": "Proportional resize without enlargement to at most 1280px; JPEG encode; no content changes."
+    },
+    {
+      "path": "dealer-stock/listing-11654.jpg",
+      "sourceUrl": "https://static.oneclickdrive.com/uploads/cars/Land-Rover_Range-Rover-Evoque_2019_11654_11654_8197587948-6_small.jpg",
+      "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/Land-Rover/Range-Rover-Vogue/?id=11654",
+      "observedAt": "2026-10-19T20:03:53.788122Z",
+      "downloadedSha256": "5f4225b9df4ccae7b1beae58ee7846af028d84d12d0c3342358e1065cf33a4bb",
+      "downloadedDimensions": [
+        450,
+        395
+      ],
+      "sha256": "b242ab0336a46a7f5474d0302ed4a393fc93f041c46fcb01637c8b9458a53be3",
+      "bytes": 35367,
+      "dimensions": [
+        450,
+        395
+      ],
+      "modification": "Proportional resize without enlargement to at most 1280px; JPEG encode; no content changes."
+    }
+  ],
+  "researchLimitations": [
+    "Marketplace relay numbers excluded; source catalogue provides address and published shop hours.",
+    "Phone is the dealer-attributed call link in the public vehicle card; common platform WhatsApp relay omitted.",
+    "Opening hours omitted because the platform repeats a generic schedule and independent verification is unavailable.",
+    "Catalogue uses a generic company/1.png placeholder; no attributable published logo found in bounded name-based research. Independent logo proposal prepared."
+  ],
+  "excludedSourceContent": [
+    "Personal names and personal or ambiguous emails",
+    "Marketplace relay numbers",
+    "Prices",
+    "Unsupported warranties, inspections, ratings and finance promises"
+  ],
+  "dealerApproval": "unknown"
+}

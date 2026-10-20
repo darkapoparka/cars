@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "macan-luxury-cars",
+  "previousSlug": "macan-luxury-cars",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:10:12.699Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 3,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-dubai-macan-luxury-cars",
+    "position": 243
+  },
+  "before": {
+    "files": 39,
+    "bytes": 1705050
+  },
+  "afterBeforeReview": {
+    "files": 23,
+    "bytes": 673901
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 21819,
+      "sha256": "e38cdd8513117efd2caf99cba999d6b8e5400704f30f2620644a91e1eb0a02c1"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 65833,
+      "sha256": "3b0458c869eb92fb0aaa8f8ab933cfccc8a38f9247d2e3b733c7ddd7d8bcf5fa"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 21819,
+      "sha256": "e38cdd8513117efd2caf99cba999d6b8e5400704f30f2620644a91e1eb0a02c1"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 52967,
+      "sha256": "d318016e1f728a5c9d2265abe12eccc6e17f75cb6fd5db8c58a82419066134f9"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 120464,
+      "sha256": "bdb1265b4a16fcdd39a01d43675b76fee8876d9c6e82aef5380b231793001892"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 120464,
+      "sha256": "bdb1265b4a16fcdd39a01d43675b76fee8876d9c6e82aef5380b231793001892"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 52967,
+      "sha256": "d318016e1f728a5c9d2265abe12eccc6e17f75cb6fd5db8c58a82419066134f9"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 21819,
+      "sha256": "e38cdd8513117efd2caf99cba999d6b8e5400704f30f2620644a91e1eb0a02c1"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 3457,
+      "sha256": "975b98a4c18f8d7c8f33708292f9b4ff65f41d3eb0c594561ec7f1931a7c362c"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 120464,
+      "sha256": "bdb1265b4a16fcdd39a01d43675b76fee8876d9c6e82aef5380b231793001892"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 86458,
+      "sha256": "65963236ee8a062f3b3011b736088f6f20a5736916be50747eec07c565ca1c9b"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 120464,
+      "sha256": "bdb1265b4a16fcdd39a01d43675b76fee8876d9c6e82aef5380b231793001892"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 86458,
+      "sha256": "65963236ee8a062f3b3011b736088f6f20a5736916be50747eec07c565ca1c9b"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 52967,
+      "sha256": "d318016e1f728a5c9d2265abe12eccc6e17f75cb6fd5db8c58a82419066134f9"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 29388,
+      "sha256": "59f712706b5ef8afe51ca1d5a7a1b1c3314ba602ed326dc798c9ce2346e73ef5"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 44458,
+      "sha256": "bbd566a5057b96d3baf36fdd1f31c83fec2414fe4b038c1909e6a1e059ae81d4"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 12684,
+      "sha256": "beae555eea46c13f8b7d74eedacabb9f88c3218bcb3fe1bcb54bd9518c2425eb"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 12,
+    "bytes": 347391,
+    "inventorySha256": "559754b455a4bc8289008dddb9fbe33e83ecb987039a918107cc750bdf2f33a2",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "macan-luxury-cars",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 25,
+    "report": "dealers/macan-luxury-cars/input-review.json"
+  },
+  "after": {
+    "files": 25,
+    "bytes": 682685
+  }
+}

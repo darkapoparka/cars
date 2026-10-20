@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "slug": "muscle-cars-fze",
+  "dealerId": "ae-dubai-muscle-cars-fze",
+  "business": {
+    "name": "Muscle Cars FZE",
+    "city": "Dubai",
+    "region": "Dubai",
+    "countryCode": "AE",
+    "currency": "AED",
+    "distanceUnit": "km",
+    "locale": "en-AE",
+    "address": "Al Quoz, Dubai, UAE",
+    "phone": "+971502008719",
+    "phoneDisplay": "+971502008719",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://www.oneclickdrive.com/company/dubai/muscle-cars-fze",
+    "hours": "",
+    "sourceUrl": "https://www.oneclickdrive.com/company/dubai/muscle-cars-fze",
+    "observedAt": "2026-10-19T20:55:17Z",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://www.oneclickdrive.com/company/dubai/muscle-cars-fze",
+      "observedAt": "2026-10-19T20:55:17Z",
+      "supports": [
+        "public-business-identity",
+        "business-contact",
+        "address",
+        "attributed-public-stock"
+      ]
+    }
+  ]
+}

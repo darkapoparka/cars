@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "huapeng-automobile-trading-fze",
+  "previousSlug": "huapeng-automobile-trading-fze",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:05:15.719Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 3,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-dubai-huapeng-automobile-trading-fze",
+    "position": 234
+  },
+  "before": {
+    "files": 39,
+    "bytes": 4763866
+  },
+  "afterBeforeReview": {
+    "files": 23,
+    "bytes": 1496578
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 111729,
+      "sha256": "560c6a10843671db1e904a62f5c117e51db9a196e106eaa1217d664de843af37"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 117504,
+      "sha256": "9fad96c174b1b5aaff7fd4c4f4f16f3f19e63c6193981ddd76e48917a6b8b709"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 111729,
+      "sha256": "560c6a10843671db1e904a62f5c117e51db9a196e106eaa1217d664de843af37"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 282859,
+      "sha256": "df01358a9dfd25be2e2037355d1891d18f1f2cacaeb3fd68a88fe1ae21c6bdc4"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 299752,
+      "sha256": "0afdead315f09d79c716f09f90d27ef4ceb32b339bad8aad359f9a472da6d3e1"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 299752,
+      "sha256": "0afdead315f09d79c716f09f90d27ef4ceb32b339bad8aad359f9a472da6d3e1"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 282859,
+      "sha256": "df01358a9dfd25be2e2037355d1891d18f1f2cacaeb3fd68a88fe1ae21c6bdc4"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 111729,
+      "sha256": "560c6a10843671db1e904a62f5c117e51db9a196e106eaa1217d664de843af37"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 9056,
+      "sha256": "a43c23f15db5c7117a56a6f00df4a4ee8ac46b9de7b6351a5d6305f16441c7cd"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 299752,
+      "sha256": "0afdead315f09d79c716f09f90d27ef4ceb32b339bad8aad359f9a472da6d3e1"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 209906,
+      "sha256": "830702f1b632e4f9550205b7469835c2d53dded8cbba32337f027d8dde540d3a"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 299752,
+      "sha256": "0afdead315f09d79c716f09f90d27ef4ceb32b339bad8aad359f9a472da6d3e1"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 209906,
+      "sha256": "830702f1b632e4f9550205b7469835c2d53dded8cbba32337f027d8dde540d3a"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 282859,
+      "sha256": "df01358a9dfd25be2e2037355d1891d18f1f2cacaeb3fd68a88fe1ae21c6bdc4"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 186080,
+      "sha256": "85ffbe802fa3a6afe6247df303a473df856b0657ae3a3c4b8668367c296bf97d"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 83246,
+      "sha256": "967cd7ab726c6c1ef889bc89786b1402584bcdc92ad2f04002dc67096a20489a"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 72694,
+      "sha256": "b2e12be742081ff2d98e4d105dc79dfcc5566ecc61df48c2a60a33a64e91ecad"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 12,
+    "bytes": 788306,
+    "inventorySha256": "eeae3ea6e77cc817a78c0924b0e483cdecf3606f9c049732e8dbe5ec769ff7cc",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "huapeng-automobile-trading-fze",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 25,
+    "report": "dealers/huapeng-automobile-trading-fze/input-review.json"
+  },
+  "after": {
+    "files": 25,
+    "bytes": 1505485
+  }
+}

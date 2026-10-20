@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "my-way-motors",
+  "previousSlug": "my-way-motors",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:05:46.233Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 3,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-dubai-my-way-motors",
+    "position": 255
+  },
+  "before": {
+    "files": 39,
+    "bytes": 2818111
+  },
+  "afterBeforeReview": {
+    "files": 23,
+    "bytes": 1368408
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 98037,
+      "sha256": "e5c0b7a538c6a6b3e72eb9d2243454b4779e3e98d7ee0978241c61c21f3c2b84"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 91116,
+      "sha256": "59a893d9d0080c131760d97d7873c967be4f1c1ba379ec5a63921069772c35b8"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 98037,
+      "sha256": "e5c0b7a538c6a6b3e72eb9d2243454b4779e3e98d7ee0978241c61c21f3c2b84"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 86077,
+      "sha256": "5c502f25e433f832554494d9ddfc7edfd5812e5f9fead1fdb954962417f67696"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 112320,
+      "sha256": "c3c6a94c7aca144f0522d104fc3fa0fb580f46f1ea59a82f76fcbef1cda78a4b"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 112320,
+      "sha256": "c3c6a94c7aca144f0522d104fc3fa0fb580f46f1ea59a82f76fcbef1cda78a4b"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 86077,
+      "sha256": "5c502f25e433f832554494d9ddfc7edfd5812e5f9fead1fdb954962417f67696"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 98037,
+      "sha256": "e5c0b7a538c6a6b3e72eb9d2243454b4779e3e98d7ee0978241c61c21f3c2b84"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 8214,
+      "sha256": "f731c166753427ba0c0eb447b9ed38d34f4740ca2b479819975523cddc2ea47a"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 112320,
+      "sha256": "c3c6a94c7aca144f0522d104fc3fa0fb580f46f1ea59a82f76fcbef1cda78a4b"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 78908,
+      "sha256": "b4ec30d89860c58f042866f858bc89d0a8970c85444a9d5afd74ce65240be295"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 112320,
+      "sha256": "c3c6a94c7aca144f0522d104fc3fa0fb580f46f1ea59a82f76fcbef1cda78a4b"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 78908,
+      "sha256": "b4ec30d89860c58f042866f858bc89d0a8970c85444a9d5afd74ce65240be295"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 86077,
+      "sha256": "5c502f25e433f832554494d9ddfc7edfd5812e5f9fead1fdb954962417f67696"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 60462,
+      "sha256": "40ddbf94834a7dd67b23d6b786b60e65a36f7702a0a8860d99888ed9b0184cf4"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 65596,
+      "sha256": "3aece387650db1939a0384e845e755bf9ebc9750a3ae91d2033ec7d64c5819f8"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 68658,
+      "sha256": "5cf0f2b37c849c2594dfbed842fa000e0df741d664e52e1112995b242480143a"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 12,
+    "bytes": 768133,
+    "inventorySha256": "e86ee752060708ea9e064774a36d0793bd0b143f9807a76df002ad4317e576e2",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "my-way-motors",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 25,
+    "report": "dealers/my-way-motors/input-review.json"
+  },
+  "after": {
+    "files": 25,
+    "bytes": 1377148
+  }
+}

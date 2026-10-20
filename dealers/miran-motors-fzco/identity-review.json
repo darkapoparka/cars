@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": true,
+  "reviewedAt": "2026-10-20T19:03:30.135Z",
+  "dealer": "miran-motors-fzco",
+  "dealerId": "ae-dubai-miran-motors-fzco",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "method": "Automated exact registry/pack identity, canonical hosting and batch comparison; retained public source fields were structurally checked, not human-approved.",
+  "sources": [
+    {
+      "url": "https://www.oneclickdrive.com/company/dubai/miran-motors-fzco",
+      "observedAt": "2026-10-19T20:03:54.011522Z",
+      "supports": [
+        "dealer-name",
+        "dealer-attributed-listings",
+        "dealer-attributed-photos",
+        "public-business-call-line",
+        "address"
+      ]
+    },
+    {
+      "url": "https://sooq-cars.com/ae/en/ready/cars/2156949",
+      "observedAt": "2026-10-19T20:03:54.011522Z",
+      "supports": [
+        "dealer-attributed-listing",
+        "dealer-attributed-photo"
+      ]
+    },
+    {
+      "url": "https://www.yellowpages-uae.com/miran-motors-fzco-182346",
+      "observedAt": "2026-10-19T20:03:54.011522Z",
+      "supports": [
+        "dealer-name",
+        "Ras-Al-Khor-location"
+      ]
+    }
+  ],
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  }
+}

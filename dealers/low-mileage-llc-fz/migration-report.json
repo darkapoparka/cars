@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "low-mileage-llc-fz",
+  "previousSlug": "low-mileage-llc-fz",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:09:35.305Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 3,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-dubai-low-mileage-llc-fz",
+    "position": 241
+  },
+  "before": {
+    "files": 38,
+    "bytes": 4082823
+  },
+  "afterBeforeReview": {
+    "files": 22,
+    "bytes": 2446471
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 115105,
+      "sha256": "e9b0f6d9a968caf18e34f4264139445cb8d7b16cf99f78e7d6e13002a4b81ba0"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 111891,
+      "sha256": "dcb5fff33e80010c801c3bd3a9004c8f3185962e4941db618c0e4a5700ea5739"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 115105,
+      "sha256": "e9b0f6d9a968caf18e34f4264139445cb8d7b16cf99f78e7d6e13002a4b81ba0"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 112520,
+      "sha256": "273f5ba6574c0440bc7c987984f30e2d7f9d2c3c27629125754581724e60544d"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 115928,
+      "sha256": "3a85ff49b6fde8ae8e117185994067e3ef09597f2228df0b6433acb3827437b4"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 115928,
+      "sha256": "3a85ff49b6fde8ae8e117185994067e3ef09597f2228df0b6433acb3827437b4"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 112520,
+      "sha256": "273f5ba6574c0440bc7c987984f30e2d7f9d2c3c27629125754581724e60544d"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 115105,
+      "sha256": "e9b0f6d9a968caf18e34f4264139445cb8d7b16cf99f78e7d6e13002a4b81ba0"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 9563,
+      "sha256": "b649ac0ab8aa82e34e33bb75980981a3d5cd9fe4490e8d2c9c4a02d52ae5df55"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 115928,
+      "sha256": "3a85ff49b6fde8ae8e117185994067e3ef09597f2228df0b6433acb3827437b4"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 78626,
+      "sha256": "5a2d7d850ce7e2ca604984b1b17b7a1704e4c4b50cbd2f4399e1540b61fc35e9"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 115928,
+      "sha256": "3a85ff49b6fde8ae8e117185994067e3ef09597f2228df0b6433acb3827437b4"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 78626,
+      "sha256": "5a2d7d850ce7e2ca604984b1b17b7a1704e4c4b50cbd2f4399e1540b61fc35e9"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 112520,
+      "sha256": "273f5ba6574c0440bc7c987984f30e2d7f9d2c3c27629125754581724e60544d"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 69258,
+      "sha256": "d03697b060479a81047368ea30ee57018cce71e7e9238dc4b324f776528d13db"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 74620,
+      "sha256": "aeaf54a0edb13329438de2300ec043fec6643b7e0e479dd0c9e0974988711062"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 70994,
+      "sha256": "c3dffe9334fe53947230d0214fe9b63745733cd90b156347aec5697d58bb3a06"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 12,
+    "bytes": 1203053,
+    "inventorySha256": "464f083832d9d2bd9fdcd9c2c771a7f95e8969b8ef7ebdc49e7061ec57dbf909",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "low-mileage-llc-fz",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 24,
+    "report": "dealers/low-mileage-llc-fz/input-review.json"
+  },
+  "after": {
+    "files": 24,
+    "bytes": 2455132
+  }
+}

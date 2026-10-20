@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "dealer": "leader-automobile",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:03:53.753313Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "listing-1019419",
+      "title": "2012 Mercedes Benz E250 STANDARD",
+      "make": "Mercedes Benz",
+      "model": "E 250",
+      "year": 2012,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-1019419.jpg"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2012-mercedes-benz-e250-1019419.html",
+      "observedAt": "2026-10-19T20:03:53.753313Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 113700,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-1024352",
+      "title": "2015 Bentley Flying Spur W12",
+      "make": "Bentley",
+      "model": "Flying Spur",
+      "year": 2015,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-1024352.jpg"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2015-bentley-flying-spur-excellent-condition-1024352.html",
+      "observedAt": "2026-10-19T20:03:53.753313Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 63434,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-603945",
+      "title": "2019 Mercedes Benz GLS 550",
+      "make": "Mercedes Benz",
+      "model": "Gls 550",
+      "year": 2019,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-603945.jpg"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2019-mercedes-benz-gls-550-std-603945.html",
+      "observedAt": "2026-10-19T20:03:53.753313Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 112000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

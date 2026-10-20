@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "impera-motors-llc",
+  "previousSlug": "impera-motors-llc",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:06:04.183Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 3,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-dubai-impera-motors-llc",
+    "position": 235
+  },
+  "before": {
+    "files": 39,
+    "bytes": 2177652
+  },
+  "afterBeforeReview": {
+    "files": 23,
+    "bytes": 890192
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 65280,
+      "sha256": "47ccf11203988121501154a8cb89f59c3481e4ff16b5a6f403db6f42c622a006"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 80535,
+      "sha256": "84849f486e6a410746ec7a9bc2d6d9b7f73626159b7d994e563f552c86eefaf0"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 65280,
+      "sha256": "47ccf11203988121501154a8cb89f59c3481e4ff16b5a6f403db6f42c622a006"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 60158,
+      "sha256": "688434dce19fa49793488bdaa4428da1e07edb0d64cfa9f75109b0f4e87a761e"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 127306,
+      "sha256": "502a955c130ab6bcb2038155410c926f6a49ab1b79dea3c4be6d91f4cf20b551"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 127306,
+      "sha256": "502a955c130ab6bcb2038155410c926f6a49ab1b79dea3c4be6d91f4cf20b551"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 60158,
+      "sha256": "688434dce19fa49793488bdaa4428da1e07edb0d64cfa9f75109b0f4e87a761e"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 65280,
+      "sha256": "47ccf11203988121501154a8cb89f59c3481e4ff16b5a6f403db6f42c622a006"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 5288,
+      "sha256": "89d4e7364a1904ab49c4eb314c58f316a50bfadc5ac61e7e103f87da78ececd9"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 127306,
+      "sha256": "502a955c130ab6bcb2038155410c926f6a49ab1b79dea3c4be6d91f4cf20b551"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 93786,
+      "sha256": "d6984a9bd00622f7897f16c62d58dac8b47f973d4a4c45accc26fef1563a1b67"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 127306,
+      "sha256": "502a955c130ab6bcb2038155410c926f6a49ab1b79dea3c4be6d91f4cf20b551"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 93786,
+      "sha256": "d6984a9bd00622f7897f16c62d58dac8b47f973d4a4c45accc26fef1563a1b67"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 60158,
+      "sha256": "688434dce19fa49793488bdaa4428da1e07edb0d64cfa9f75109b0f4e87a761e"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 35708,
+      "sha256": "544393e87acc380084d110f28febfb4155b0b64a1af77dd1beebd75ad0dcbfb5"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 54944,
+      "sha256": "ecdf5571e4ce7f25cc50d3a640ae6675cf645f7341dffa72255ba88a326aa0b7"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 41676,
+      "sha256": "7bfe61c57b00b4d67ebd0fb6c0b7c52e9d5c44071060713dd5f300950b4176a5"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 12,
+    "bytes": 510867,
+    "inventorySha256": "ac70aa6b0aa6bf985f99c4e347333eb5a3fa8c369d8bead579ec92cc358666bf",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "impera-motors-llc",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 25,
+    "report": "dealers/impera-motors-llc/input-review.json"
+  },
+  "after": {
+    "files": 25,
+    "bytes": 898983
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "type": "cars-dealer-pack-draft",
+  "slug": "mpi-middle-east",
+  "dealerId": "ae-dubai-mpi-middle-east",
+  "status": "input-review-complete",
+  "buildReady": false,
+  "providerWrites": 0,
+  "createdAt": "2026-10-19T20:10:47.906Z",
+  "inventoryKind": "dated-listing-snapshot",
+  "inventoryRecords": 3,
+  "logoReady": true,
+  "missingFacts": [
+    {
+      "field": "business.email",
+      "required": false,
+      "reason": "No usable sourced value in the retained public business record."
+    },
+    {
+      "field": "business.website",
+      "required": false,
+      "reason": "No usable sourced value in the retained public business record."
+    },
+    {
+      "field": "business.hours",
+      "required": false,
+      "reason": "No usable sourced value in the retained public business record."
+    },
+    {
+      "field": "prices",
+      "required": false,
+      "reason": "All listing prices are omitted under the public-repository scope."
+    },
+    {
+      "field": "business.email",
+      "required": false,
+      "reason": "Omitted a named, personal-looking or ambiguous mailbox; no value retained."
+    },
+    {
+      "field": "business.email",
+      "required": false,
+      "reason": "Omitted a named, personal-looking or ambiguous mailbox; no value retained."
+    }
+  ],
+  "blocking": [],
+  "stockAcquisition": "explicit-retained-public-snapshot",
+  "liveListingFetchPerformed": true,
+  "next": "Run existing input checks. Native smoke build and hosted approval remain separate."
+}

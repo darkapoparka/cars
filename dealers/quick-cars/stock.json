@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "dealer": "quick-cars",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T21:00:01Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "listing-1",
+      "title": "Alfa Romeo Giulietta Veloce",
+      "make": "Alfa Romeo",
+      "model": "Giulietta",
+      "year": 2020,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-1.jpg"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2020-alfa-romeo-giulietta-2020-alfa-romeo-giulietta-veloce-gcc-specs-57546-km-panoramic-sunroof-1029070.html",
+      "observedAt": "2026-10-19T21:00:01Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 57546,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-2",
+      "title": "GAC GN6 GE",
+      "make": "Gac",
+      "model": "Gn6",
+      "year": 2022,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-2.jpg"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2022-gac-gn6-2022-gac-gn6-ge-gcc-specs-45953-km-agency-serviced-1029150.html",
+      "observedAt": "2026-10-19T21:00:01Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 45953,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-3",
+      "title": "Jetour X70 Plus LUX",
+      "make": "Jetour",
+      "model": "X70 Plus",
+      "year": 2025,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-3.jpg"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2025-jetour-x70-plus-2025-jetour-x70-plus-luxury-gcc-specs-33234-km-spacious-family-suv-1034373.html",
+      "observedAt": "2026-10-19T21:00:01Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 67999,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

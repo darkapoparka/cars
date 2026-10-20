@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "muscle-cars-fze",
+  "previousSlug": "muscle-cars-fze",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:05:02.528Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 3,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-dubai-muscle-cars-fze",
+    "position": 254
+  },
+  "before": {
+    "files": 39,
+    "bytes": 7437344
+  },
+  "afterBeforeReview": {
+    "files": 23,
+    "bytes": 2985683
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 116104,
+      "sha256": "be7dd7536ece8c9748667ab9324b650b75d87733760bac83595134fc5bdc489f"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 103561,
+      "sha256": "22213041ec14f50ad9f6fdf242740aea277189a4c6b3c9a627c4fbe094730781"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 116104,
+      "sha256": "be7dd7536ece8c9748667ab9324b650b75d87733760bac83595134fc5bdc489f"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 440674,
+      "sha256": "c423b52cd0ec56d26a5ec52a17b8033fab99f0626532b3cafc3b2c17328da751"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 416349,
+      "sha256": "c7099b33fb7bc01fb3ea45246cb6e4a1b95ba4a616d2f671809392af9b41ff8b"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 416349,
+      "sha256": "c7099b33fb7bc01fb3ea45246cb6e4a1b95ba4a616d2f671809392af9b41ff8b"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 440674,
+      "sha256": "c423b52cd0ec56d26a5ec52a17b8033fab99f0626532b3cafc3b2c17328da751"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 116104,
+      "sha256": "be7dd7536ece8c9748667ab9324b650b75d87733760bac83595134fc5bdc489f"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 8283,
+      "sha256": "1126c0688a2e8402dafcd88310192155bc42925856126a7e323866806a2ffa80"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 416349,
+      "sha256": "c7099b33fb7bc01fb3ea45246cb6e4a1b95ba4a616d2f671809392af9b41ff8b"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 294532,
+      "sha256": "e9e948618bf37e315c03ec0a18135694861271904541b22691e1b9061530e522"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 416349,
+      "sha256": "c7099b33fb7bc01fb3ea45246cb6e4a1b95ba4a616d2f671809392af9b41ff8b"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 294532,
+      "sha256": "e9e948618bf37e315c03ec0a18135694861271904541b22691e1b9061530e522"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 440674,
+      "sha256": "c423b52cd0ec56d26a5ec52a17b8033fab99f0626532b3cafc3b2c17328da751"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 265622,
+      "sha256": "be885a626eae0ef271127c7137957a86557b8f71716823c1670db4b86c9e36a9"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 74528,
+      "sha256": "5c1c69cbe9382e24bca9797aa16e2fea3f1fd2938c14339d9b9061fafb9d9b07"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 78674,
+      "sha256": "c3e93c5f4c9f6d3d5341dfe0262c14e287a1636e0b23228bd0e54e6ad1692dc7"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 13,
+    "bytes": 1487280,
+    "inventorySha256": "23b97796441688290c1a6107752c241b09d3321d9f4bb8acb96036ade7967b94",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "muscle-cars-fze",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 25,
+    "report": "dealers/muscle-cars-fze/input-review.json"
+  },
+  "after": {
+    "files": 25,
+    "bytes": 2994450
+  }
+}

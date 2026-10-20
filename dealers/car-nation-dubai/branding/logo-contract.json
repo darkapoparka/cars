@@ -1,0 +1,227 @@
+{
+  "schemaVersion": 1,
+  "dealer": "car-nation-dubai",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T20:50:45.111Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "d9f3337cb9c2cad3e8c8e2faf4a9090f67a9e9361b86ee028ecc07ac30870e46",
+      "sourceSha256": "2679cd5b793a52fae42825415f50aee8a48a5a0f6a7413a13929787b2a9ea557"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "9a2b34cefd2b8e8d1483b0b828ff3e21b54f54fbd6f449c990c2d06c81f5ef98",
+      "sourceSha256": "9a17e1fd05fc0313333aeb1fb8a4b3df872d460d52b209fcedcb93ffa8d50db5"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "9a2b34cefd2b8e8d1483b0b828ff3e21b54f54fbd6f449c990c2d06c81f5ef98",
+      "sourceSha256": "9a17e1fd05fc0313333aeb1fb8a4b3df872d460d52b209fcedcb93ffa8d50db5"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "2679cd5b793a52fae42825415f50aee8a48a5a0f6a7413a13929787b2a9ea557",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-1c31ee74-fbf6-4254-bf9d-6cbe1769c9f7",
+      "generationIdKind": "exposed-tool-execution-output-identifier",
+      "modelVersion": null,
+      "outputReference": "branding/generated-sheet.png",
+      "outputSha256": "68105751d64050e4628b92952c1ee0931292f049bf89e564c4648b7f0978cb79"
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "f27cf98576eb6af5053086b00ce0c73e91f3a45b6f6f3da85d846eba6780d9d7",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-1c31ee74-fbf6-4254-bf9d-6cbe1769c9f7",
+      "generationIdKind": "exposed-tool-execution-output-identifier",
+      "modelVersion": null,
+      "outputReference": "branding/generated-sheet.png",
+      "outputSha256": "68105751d64050e4628b92952c1ee0931292f049bf89e564c4648b7f0978cb79"
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "8626bc3836ec0d393d34c8872514eeb6bf1242c0747af0a1199b1d7852b6aec7"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "2679cd5b793a52fae42825415f50aee8a48a5a0f6a7413a13929787b2a9ea557",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1c31ee74-fbf6-4254-bf9d-6cbe1769c9f7",
+        "generationIdKind": "exposed-tool-execution-output-identifier",
+        "modelVersion": null,
+        "outputReference": "branding/generated-sheet.png",
+        "outputSha256": "68105751d64050e4628b92952c1ee0931292f049bf89e564c4648b7f0978cb79"
+      },
+      "sourceReference": "dealers/car-nation-dubai/branding/reviewed-onLight.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "9a17e1fd05fc0313333aeb1fb8a4b3df872d460d52b209fcedcb93ffa8d50db5",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1c31ee74-fbf6-4254-bf9d-6cbe1769c9f7",
+        "generationIdKind": "exposed-tool-execution-output-identifier",
+        "modelVersion": null,
+        "outputReference": "branding/generated-sheet.png",
+        "outputSha256": "68105751d64050e4628b92952c1ee0931292f049bf89e564c4648b7f0978cb79"
+      },
+      "sourceReference": "dealers/car-nation-dubai/branding/reviewed-onDark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "9a17e1fd05fc0313333aeb1fb8a4b3df872d460d52b209fcedcb93ffa8d50db5",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1c31ee74-fbf6-4254-bf9d-6cbe1769c9f7",
+        "generationIdKind": "exposed-tool-execution-output-identifier",
+        "modelVersion": null,
+        "outputReference": "branding/generated-sheet.png",
+        "outputSha256": "68105751d64050e4628b92952c1ee0931292f049bf89e564c4648b7f0978cb79"
+      },
+      "sourceReference": "dealers/car-nation-dubai/branding/reviewed-onDark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "c042c050e36afa1b9ddb78a6e2f0e3b0831d07a9edeaa411491622f625fa3819",
+      "sha256": "2679cd5b793a52fae42825415f50aee8a48a5a0f6a7413a13929787b2a9ea557",
+      "crop": {
+        "left": 48,
+        "top": 67,
+        "width": 714,
+        "height": 454
+      },
+      "sourcePath": "branding/reviewed-onLight.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "38daaa191325e17941b54236e07d03073cc04d53a2d384221a3da2b0aa7a9f34",
+      "sha256": "9a17e1fd05fc0313333aeb1fb8a4b3df872d460d52b209fcedcb93ffa8d50db5",
+      "crop": {
+        "left": 32,
+        "top": 69,
+        "width": 700,
+        "height": 454
+      },
+      "sourcePath": "branding/reviewed-onDark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "38daaa191325e17941b54236e07d03073cc04d53a2d384221a3da2b0aa7a9f34",
+      "sha256": "9a17e1fd05fc0313333aeb1fb8a4b3df872d460d52b209fcedcb93ffa8d50db5",
+      "crop": {
+        "left": 32,
+        "top": 69,
+        "width": 700,
+        "height": 454
+      },
+      "sourcePath": "branding/reviewed-onDark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "fe30b7961873621da39b154c2bebd1d8c8d3926340f98224161b2fbc093a809e",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1c31ee74-fbf6-4254-bf9d-6cbe1769c9f7",
+        "generationIdKind": "exposed-tool-execution-output-identifier",
+        "modelVersion": null,
+        "outputReference": "branding/generated-sheet.png",
+        "outputSha256": "68105751d64050e4628b92952c1ee0931292f049bf89e564c4648b7f0978cb79"
+      },
+      "sourceReference": "dealers/car-nation-dubai/branding/reviewed-mark.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "9d755a3cf5aa28961da2f9eb9d55fb7e3d9a650d2d4cd58667151b4240d50254",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1c31ee74-fbf6-4254-bf9d-6cbe1769c9f7",
+        "generationIdKind": "exposed-tool-execution-output-identifier",
+        "modelVersion": null,
+        "outputReference": "branding/generated-sheet.png",
+        "outputSha256": "68105751d64050e4628b92952c1ee0931292f049bf89e564c4648b7f0978cb79"
+      },
+      "sourceReference": "dealers/car-nation-dubai/branding/reviewed-markOnDark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "f27cf98576eb6af5053086b00ce0c73e91f3a45b6f6f3da85d846eba6780d9d7",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1c31ee74-fbf6-4254-bf9d-6cbe1769c9f7",
+        "generationIdKind": "exposed-tool-execution-output-identifier",
+        "modelVersion": null,
+        "outputReference": "branding/generated-sheet.png",
+        "outputSha256": "68105751d64050e4628b92952c1ee0931292f049bf89e564c4648b7f0978cb79"
+      },
+      "sourceReference": "dealers/car-nation-dubai/branding/reviewed-mark.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "8626bc3836ec0d393d34c8872514eeb6bf1242c0747af0a1199b1d7852b6aec7",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1c31ee74-fbf6-4254-bf9d-6cbe1769c9f7",
+        "generationIdKind": "exposed-tool-execution-output-identifier",
+        "modelVersion": null,
+        "outputReference": "branding/generated-sheet.png",
+        "outputSha256": "68105751d64050e4628b92952c1ee0931292f049bf89e564c4648b7f0978cb79"
+      },
+      "sourceReference": "dealers/car-nation-dubai/branding/reviewed-mark.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-19T20:50:45.111Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "04a99ef2b25878deea7c73ad4e2804a781d8a6da0a13e902119acbfffe703e51",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-1c31ee74-fbf6-4254-bf9d-6cbe1769c9f7",
+      "generationIdKind": "exposed-tool-execution-output-identifier",
+      "modelVersion": null,
+      "outputReference": "branding/generated-sheet.png",
+      "outputSha256": "68105751d64050e4628b92952c1ee0931292f049bf89e564c4648b7f0978cb79"
+    }
+  }
+}

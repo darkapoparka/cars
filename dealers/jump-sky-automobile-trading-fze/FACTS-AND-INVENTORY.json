@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "dealer": "jump-sky-automobile-trading-fze",
+  "businessFacts": "business-facts.json",
+  "stock": "stock.json",
+  "inventoryKind": "dated-listing-snapshot",
+  "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+  "sources": [
+    {
+      "url": "https://www.dubicars.com/dealers/dubai-jump-sky-automobile-trading-fze-3348",
+      "observedAt": "2026-10-19T20:03:53.743081Z",
+      "supports": [
+        "dealer-name",
+        "dealer-attributed-listings",
+        "dealer-attributed-photos",
+        "public-business-call-line"
+      ]
+    }
+  ]
+}

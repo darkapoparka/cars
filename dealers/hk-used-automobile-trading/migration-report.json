@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "hk-used-automobile-trading",
+  "previousSlug": "hk-used-automobile-trading",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:04:49.874Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 3,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-dubai-hk-used-automobile-trading",
+    "position": 233
+  },
+  "before": {
+    "files": 39,
+    "bytes": 5191574
+  },
+  "afterBeforeReview": {
+    "files": 23,
+    "bytes": 2957339
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 123727,
+      "sha256": "e5aa3060e10b2d7ff6ce4e6f3eaa7ea100ea6da05f730bad8a63bdd12a697dca"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 122159,
+      "sha256": "5a248b4a89722385d9450235162fe0d149d705b7e68c3ecfb725632c46d7f287"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 123727,
+      "sha256": "e5aa3060e10b2d7ff6ce4e6f3eaa7ea100ea6da05f730bad8a63bdd12a697dca"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 180554,
+      "sha256": "0b33a3d1ab2ecd8c4e2edb5d2523f08dbe0ef70db86043a1fccd6d6b2e22e4b8"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 166238,
+      "sha256": "7176195bea53c0a227510034901eb6f6871f653b6198b1dc744756f3a3a2e07c"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 166238,
+      "sha256": "7176195bea53c0a227510034901eb6f6871f653b6198b1dc744756f3a3a2e07c"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 180554,
+      "sha256": "0b33a3d1ab2ecd8c4e2edb5d2523f08dbe0ef70db86043a1fccd6d6b2e22e4b8"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 123727,
+      "sha256": "e5aa3060e10b2d7ff6ce4e6f3eaa7ea100ea6da05f730bad8a63bdd12a697dca"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 9853,
+      "sha256": "8d871ec344d0a25b301a096583c1dc7618800a36a5da10137dfe42dd606ac445"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 166238,
+      "sha256": "7176195bea53c0a227510034901eb6f6871f653b6198b1dc744756f3a3a2e07c"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 118698,
+      "sha256": "92ef03af106c470f577e87cf976660efff3a74c306f7ce2223dab5af97ae0981"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 166238,
+      "sha256": "7176195bea53c0a227510034901eb6f6871f653b6198b1dc744756f3a3a2e07c"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 118698,
+      "sha256": "92ef03af106c470f577e87cf976660efff3a74c306f7ce2223dab5af97ae0981"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 180554,
+      "sha256": "0b33a3d1ab2ecd8c4e2edb5d2523f08dbe0ef70db86043a1fccd6d6b2e22e4b8"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 115614,
+      "sha256": "bc8193d883629981b91cceac73f759e4115ec7f426d1cf36f59aa89031def343"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 87580,
+      "sha256": "68f559f412e9383a957e34fa3c089c3348dd8a64ac15b427a71830a0bb5a4938"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 87694,
+      "sha256": "d644f4652101fa728f2215d9959fb15aff391e286d90f491953a186c30aa087a"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 12,
+    "bytes": 1315516,
+    "inventorySha256": "e220699912ba2a37551ab447f0b9176791c8edbbee77e7a96f69358286caf562",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "hk-used-automobile-trading",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 25,
+    "report": "dealers/hk-used-automobile-trading/input-review.json"
+  },
+  "after": {
+    "files": 25,
+    "bytes": 2966212
+  }
+}

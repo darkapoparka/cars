@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "mehran-motors-fzco",
+  "previousSlug": "mehran-motors-fzco",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:03:09.597Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 3,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-dubai-mehran-motors-fzco",
+    "position": 246
+  },
+  "before": {
+    "files": 39,
+    "bytes": 5115920
+  },
+  "afterBeforeReview": {
+    "files": 23,
+    "bytes": 2587282
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 103340,
+      "sha256": "4c3b338b179a7212d28f628ec475e6b78c7e816898cea891f90e9c73ee554c01"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 83036,
+      "sha256": "d60ab07ac7b3660a1e341c67a9ec6049e8283c3d513afb3099c14be08ca93aa3"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 103340,
+      "sha256": "4c3b338b179a7212d28f628ec475e6b78c7e816898cea891f90e9c73ee554c01"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 243324,
+      "sha256": "451075318630e09a0e4cdaee1938bebe7f36d81debc4c3072094412742e0a74f"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 207123,
+      "sha256": "46a4a83b9179b0717a08b2aba31fda24b89c8bce5200c16885b60ca2090fe3f7"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 207123,
+      "sha256": "46a4a83b9179b0717a08b2aba31fda24b89c8bce5200c16885b60ca2090fe3f7"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 243324,
+      "sha256": "451075318630e09a0e4cdaee1938bebe7f36d81debc4c3072094412742e0a74f"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 103340,
+      "sha256": "4c3b338b179a7212d28f628ec475e6b78c7e816898cea891f90e9c73ee554c01"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 7413,
+      "sha256": "3d3aac0adfeae5be1a8a08e5dcacf97e76e059b87d106d098188fc748417513e"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 207123,
+      "sha256": "46a4a83b9179b0717a08b2aba31fda24b89c8bce5200c16885b60ca2090fe3f7"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 144604,
+      "sha256": "4c11c13ce140f4c82e1407c17421d3d58cd8a651d9d03aac7bc14c2a046828b7"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 207123,
+      "sha256": "46a4a83b9179b0717a08b2aba31fda24b89c8bce5200c16885b60ca2090fe3f7"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 144604,
+      "sha256": "4c11c13ce140f4c82e1407c17421d3d58cd8a651d9d03aac7bc14c2a046828b7"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 243324,
+      "sha256": "451075318630e09a0e4cdaee1938bebe7f36d81debc4c3072094412742e0a74f"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 161096,
+      "sha256": "f935cd3c4df126187863daf86af2e40b501231db5c10cec5a0f8e90d5bc5b255"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 55390,
+      "sha256": "4c519dc2fb12f1c0115d676951a4d6048f81fb5972d0290b25fe473855c6e035"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 67826,
+      "sha256": "1c00e82fabefb260ded7540a59cf800e4d2a965d454f025d68bedf9b61de2925"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 12,
+    "bytes": 1313389,
+    "inventorySha256": "2ba39e49796ce72a719d761c5eb270c2c8bd07348f7a4c149f22f074a87cb880",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "mehran-motors-fzco",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 25,
+    "report": "dealers/mehran-motors-fzco/input-review.json"
+  },
+  "after": {
+    "files": 25,
+    "bytes": 2596090
+  }
+}

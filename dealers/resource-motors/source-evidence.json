@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "dealer": "resource-motors",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://www.oneclickdrive.com/company/dubai/resource-motors",
+      "observedAt": "2026-10-19T21:00:01Z",
+      "supports": [
+        "public-business-identity",
+        "business-contact",
+        "address",
+        "attributed-public-stock"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "observedAt": "2026-10-19T21:00:01Z",
+  "stockMedia": [
+    {
+      "path": "dealer-stock/listing-1.jpg",
+      "sourceUrl": "https://static.oneclickdrive.com/uploads/cars/Mitsubishi_L200_2015_59355_59355_57028752100-11_small.jpg",
+      "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/Mitsubishi/L200-Double-Cab/?id=59355",
+      "observedAt": "2026-10-19T21:00:01Z",
+      "sourceSha256": "df20bd85f60ae35d4bb0f9a2456fec03916a14001afb07e46ac5a6afbd7e9ae1",
+      "sha256": "f679ccdf4843555e77e8742c7141be61aaa9390bdf6a563449138dabcc29fd40",
+      "width": 450,
+      "height": 395,
+      "bytes": 45345,
+      "transformation": "Bounded resize to at most 1280px; optimized JPEG quality 87."
+    },
+    {
+      "path": "dealer-stock/listing-2.jpg",
+      "sourceUrl": "https://static.oneclickdrive.com/uploads/cars/Toyota_Prado_2007_59366_59366_57044528005-16_small.jpg",
+      "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/Toyota/Prado-GXR/?id=59366",
+      "observedAt": "2026-10-19T21:00:01Z",
+      "sourceSha256": "f4a9d7d1a05d3273ea051b424595df817ef7ab7d07e0163c9df2e418e51c460a",
+      "sha256": "779c18ccf805ec66d5bbfaea7a1d0c0133ff052e3fb874515656e2f6850d4be7",
+      "width": 450,
+      "height": 395,
+      "bytes": 50945,
+      "transformation": "Bounded resize to at most 1280px; optimized JPEG quality 87."
+    },
+    {
+      "path": "dealer-stock/listing-3.jpg",
+      "sourceUrl": "https://static.oneclickdrive.com/uploads/cars/Toyota_Fortuner_2015_59365_59365_57042785129-12_small.jpg",
+      "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/Toyota/Fortuner-EXR/?id=59365",
+      "observedAt": "2026-10-19T21:00:01Z",
+      "sourceSha256": "dd9b5d5165cb7cd18c7421d7857e73efba6b5ca6fa2eb59ccaf3b2442c46b4f9",
+      "sha256": "7a58d9a0ac73c5f330474866bb414e424e46f31e49539db47a90de5873e1ee8f",
+      "width": 450,
+      "height": 395,
+      "bytes": 51519,
+      "transformation": "Bounded resize to at most 1280px; optimized JPEG quality 87."
+    }
+  ],
+  "researchNotes": "First catalogue item had a malformed model name and was excluded; following three fully named public listing samples retained. Marketplace default logo does not identify this dealer; proposal is explicitly independent.",
+  "contactReview": {
+    "namedPersonalContactsOmitted": true,
+    "outreachPerformed": false,
+    "businessPhoneBasis": "Dealer-level public business contact field; not an individual staff contact."
+  }
+}

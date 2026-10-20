@@ -1,0 +1,317 @@
+{
+  "schemaVersion": 1,
+  "dealer": "pinnacle-automotive",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T20:16:36Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-faithful-clean-redraw",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "1c6e5e021dfb21f2fd15c06b0aedb874388011af1991485f5487a3f70fed0b5c",
+      "sourceSha256": "bc36e5105f9f26addf4492d3756c4f2172a6f52666b02873cb0e8d222448ca91"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "93ad1884fc36b0ebb541ff2fa58b5867fe76e89c7ad7fd32d363930939571593",
+      "sourceSha256": "b8a093eef948c7a053f15d012f09aa7fc251f74a5ca5c10b25ebd918f0874c60"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "93ad1884fc36b0ebb541ff2fa58b5867fe76e89c7ad7fd32d363930939571593",
+      "sourceSha256": "b8a093eef948c7a053f15d012f09aa7fc251f74a5ca5c10b25ebd918f0874c60"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "bc36e5105f9f26addf4492d3756c4f2172a6f52666b02873cb0e8d222448ca91",
+    "generation": {
+      "tool": "image_gen",
+      "generationId": "exec-03a6f1b0-bb1d-4c82-be71-0558210e0fb4",
+      "identifierKind": "tool-execution-output-identifier",
+      "providerGenerationIdExposed": false,
+      "modelVersion": null,
+      "sourcePath": "branding/generation-source.png",
+      "sourceSha256": "faff294543f2ef06fc2a996af799b166fa43b42a674ca82692a1c7919719536c",
+      "outputFileName": "exec-03a6f1b0-bb1d-4c82-be71-0558210e0fb4.png",
+      "operation": "deterministic-sprite-crop",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 633,
+        "height": 684
+      }
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "c89d86c32989bca9c4645104a5e9dfde784ec586c530ec4162737881e8157dc7",
+    "generation": {
+      "tool": "image_gen",
+      "generationId": "exec-03a6f1b0-bb1d-4c82-be71-0558210e0fb4",
+      "identifierKind": "tool-execution-output-identifier",
+      "providerGenerationIdExposed": false,
+      "modelVersion": null,
+      "sourcePath": "branding/generation-source.png",
+      "sourceSha256": "faff294543f2ef06fc2a996af799b166fa43b42a674ca82692a1c7919719536c",
+      "outputFileName": "exec-03a6f1b0-bb1d-4c82-be71-0558210e0fb4.png",
+      "operation": "deterministic-sprite-crop",
+      "crop": {
+        "left": 0,
+        "top": 684,
+        "width": 633,
+        "height": 570
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "7b1be0fb07b5ad26e184852c4a002591fb8b25091e5ee739161ffa56df8a0949"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "bc36e5105f9f26addf4492d3756c4f2172a6f52666b02873cb0e8d222448ca91",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-03a6f1b0-bb1d-4c82-be71-0558210e0fb4",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "faff294543f2ef06fc2a996af799b166fa43b42a674ca82692a1c7919719536c",
+        "outputFileName": "exec-03a6f1b0-bb1d-4c82-be71-0558210e0fb4.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 633,
+          "height": 684
+        }
+      },
+      "sourceReference": "dealers/pinnacle-automotive/branding/input-onLight.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "b8a093eef948c7a053f15d012f09aa7fc251f74a5ca5c10b25ebd918f0874c60",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-03a6f1b0-bb1d-4c82-be71-0558210e0fb4",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "faff294543f2ef06fc2a996af799b166fa43b42a674ca82692a1c7919719536c",
+        "outputFileName": "exec-03a6f1b0-bb1d-4c82-be71-0558210e0fb4.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 633,
+          "top": 0,
+          "width": 621,
+          "height": 684
+        }
+      },
+      "sourceReference": "dealers/pinnacle-automotive/branding/input-onDark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "b8a093eef948c7a053f15d012f09aa7fc251f74a5ca5c10b25ebd918f0874c60",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-03a6f1b0-bb1d-4c82-be71-0558210e0fb4",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "faff294543f2ef06fc2a996af799b166fa43b42a674ca82692a1c7919719536c",
+        "outputFileName": "exec-03a6f1b0-bb1d-4c82-be71-0558210e0fb4.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 633,
+          "top": 0,
+          "width": 621,
+          "height": 684
+        }
+      },
+      "sourceReference": "dealers/pinnacle-automotive/branding/input-onDark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "c6d8108e183c5e4962622eeafb1b03ffe0dfda4238c68c21d8acee30624ab8e6",
+      "sha256": "bc36e5105f9f26addf4492d3756c4f2172a6f52666b02873cb0e8d222448ca91",
+      "crop": {
+        "left": 93,
+        "top": 128,
+        "width": 516,
+        "height": 481
+      },
+      "sourcePath": "branding/input-onLight.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "9ee1604b79f46580ceb878bc038fcf51c133fe3f419480da5976652eaa1b8dbd",
+      "sha256": "b8a093eef948c7a053f15d012f09aa7fc251f74a5ca5c10b25ebd918f0874c60",
+      "crop": {
+        "left": 24,
+        "top": 129,
+        "width": 516,
+        "height": 480
+      },
+      "sourcePath": "branding/input-onDark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "9ee1604b79f46580ceb878bc038fcf51c133fe3f419480da5976652eaa1b8dbd",
+      "sha256": "b8a093eef948c7a053f15d012f09aa7fc251f74a5ca5c10b25ebd918f0874c60",
+      "crop": {
+        "left": 24,
+        "top": 129,
+        "width": 516,
+        "height": 480
+      },
+      "sourcePath": "branding/input-onDark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "017ea84f787ce6c21161f44c6b3ec864703e2c9796fa3a9c62e72dc535eac320",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-03a6f1b0-bb1d-4c82-be71-0558210e0fb4",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "faff294543f2ef06fc2a996af799b166fa43b42a674ca82692a1c7919719536c",
+        "outputFileName": "exec-03a6f1b0-bb1d-4c82-be71-0558210e0fb4.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 0,
+          "top": 684,
+          "width": 633,
+          "height": 570
+        }
+      },
+      "sourceReference": "dealers/pinnacle-automotive/branding/input-mark.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "05bc1acb3f5c4bc7096715f1b1865849606b062376986daf363a21949fa4bce0",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-03a6f1b0-bb1d-4c82-be71-0558210e0fb4",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "faff294543f2ef06fc2a996af799b166fa43b42a674ca82692a1c7919719536c",
+        "outputFileName": "exec-03a6f1b0-bb1d-4c82-be71-0558210e0fb4.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 633,
+          "top": 684,
+          "width": 621,
+          "height": 570
+        }
+      },
+      "sourceReference": "dealers/pinnacle-automotive/branding/input-markOnDark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "c89d86c32989bca9c4645104a5e9dfde784ec586c530ec4162737881e8157dc7",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-03a6f1b0-bb1d-4c82-be71-0558210e0fb4",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "faff294543f2ef06fc2a996af799b166fa43b42a674ca82692a1c7919719536c",
+        "outputFileName": "exec-03a6f1b0-bb1d-4c82-be71-0558210e0fb4.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 0,
+          "top": 684,
+          "width": 633,
+          "height": 570
+        }
+      },
+      "sourceReference": "dealers/pinnacle-automotive/branding/input-mark.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "7b1be0fb07b5ad26e184852c4a002591fb8b25091e5ee739161ffa56df8a0949",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-03a6f1b0-bb1d-4c82-be71-0558210e0fb4",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "faff294543f2ef06fc2a996af799b166fa43b42a674ca82692a1c7919719536c",
+        "outputFileName": "exec-03a6f1b0-bb1d-4c82-be71-0558210e0fb4.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 0,
+          "top": 684,
+          "width": 633,
+          "height": 570
+        }
+      },
+      "sourceReference": "dealers/pinnacle-automotive/branding/input-mark.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-19T20:16:36Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "95c23af50f61261fa8a43f35a259bda5904acd04d15ec08e471357792e9b0823",
+    "generation": {
+      "tool": "image_gen",
+      "generationId": "exec-03a6f1b0-bb1d-4c82-be71-0558210e0fb4",
+      "identifierKind": "tool-execution-output-identifier",
+      "providerGenerationIdExposed": false,
+      "modelVersion": null,
+      "sourcePath": "branding/generation-source.png",
+      "sourceSha256": "faff294543f2ef06fc2a996af799b166fa43b42a674ca82692a1c7919719536c",
+      "outputFileName": "exec-03a6f1b0-bb1d-4c82-be71-0558210e0fb4.png",
+      "operation": "deterministic-sprite-crop",
+      "crop": {
+        "left": 633,
+        "top": 684,
+        "width": 621,
+        "height": 570
+      }
+    }
+  }
+}

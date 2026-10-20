@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "dealer": "hk-used-automobile-trading",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:03:53.653789Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "listing-102647",
+      "title": "2021 Toyota Fortuner",
+      "make": "Toyota",
+      "model": "Fortuner",
+      "year": 2021,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-102647.jpg"
+      ],
+      "sourceUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/Toyota/Fortuner/?id=102647",
+      "observedAt": "2026-10-19T20:03:53.653789Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "SUV",
+      "transmission": "Auto",
+      "fuel": "Petrol",
+      "color": "Black",
+      "mileageValue": 30000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-102627",
+      "title": "2020 Toyota Prado",
+      "make": "Toyota",
+      "model": "Prado",
+      "year": 2020,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-102627.jpg"
+      ],
+      "sourceUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/Toyota/Prado/?id=102627",
+      "observedAt": "2026-10-19T20:03:53.653789Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "SUV",
+      "transmission": "Auto",
+      "fuel": "Petrol",
+      "color": "White",
+      "mileageValue": 32000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-102665",
+      "title": "2019 Toyota Land Cruiser",
+      "make": "Toyota",
+      "model": "Land Cruiser",
+      "year": 2019,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-102665.jpg"
+      ],
+      "sourceUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/Toyota/Land-Cruiser/?id=102665",
+      "observedAt": "2026-10-19T20:03:53.653789Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "SUV",
+      "transmission": "Auto",
+      "fuel": "Petrol",
+      "color": "Black",
+      "mileageValue": 88000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

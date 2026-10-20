@@ -1,0 +1,132 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-input-review",
+  "dealer": "macan-luxury-cars",
+  "reviewed": true,
+  "reviewedAt": "2026-10-20T19:10:14.150Z",
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "checks": [
+    "canonical-hosting-and-preserved-fleet-collisions",
+    "assigned-expansion-lead",
+    "public-fact-schema-and-price-omission",
+    "personal-contact-screen",
+    "retained-stock-media",
+    "companion-copy-source-binding",
+    "immutable-template-release-and-native-QA-parent",
+    "reviewed-artwork-provenance-and-regenerated-logo-hashes"
+  ],
+  "sourceArtworkReview": "Retained artwork review is separate provenance; this command does not perform visual, Arabic-expert or dealer approval.",
+  "copyReview": "Automated structure, stock hash, source text and complete EN/BG rows; no new human translation approval is inferred.",
+  "contacts": {
+    "schemaVersion": 1,
+    "kind": "cars-automated-public-contact-screen",
+    "dealer": "macan-luxury-cars",
+    "method": "heuristic; no claim that unflagged values cannot be personal",
+    "flags": [],
+    "blocking": []
+  },
+  "batch": {
+    "number": 3,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-dubai-macan-luxury-cars",
+    "position": 243
+  },
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "inputs": [
+    {
+      "path": "FACTS-AND-INVENTORY.json",
+      "sha256": "4c9bd38c4c2f84abfc90b293e9004cc36355065095b2553903a75171dca69e68"
+    },
+    {
+      "path": "branding/generated-mark.png",
+      "sha256": "49b35be041768647585908a714ac843267841619976219788990c9d73133b36b"
+    },
+    {
+      "path": "branding/generated-markOnDark.png",
+      "sha256": "07c1f75f53ea7a12fe3ebc997ddee6a8b6546e1f4282bec436d7e3e5e38f9075"
+    },
+    {
+      "path": "branding/generated-onDark.png",
+      "sha256": "be3490b80c22aea27601e77eb10462c815a549ce1f180c49b5345f98c32031b2"
+    },
+    {
+      "path": "branding/generated-onLight.png",
+      "sha256": "d47c4f69295d4f7d79c19d406be59c58d61be3e649371f94d918a88e47ea696f"
+    },
+    {
+      "path": "branding/generation-source.png",
+      "sha256": "dc02d24f390c0776687550080f174d0eb2f7694077eec96c1b2ae88e045a175c"
+    },
+    {
+      "path": "branding/logo-contract.json",
+      "sha256": "8d8f31ce4d2c08a7cee5339ca8d43205f74e54f89ba46acb046da222b20ae4a5"
+    },
+    {
+      "path": "branding/logo-recipe.json",
+      "sha256": "1ee4f1da70d99c21b4eb4ef04b1d258a07277ca2f208051855ca55f30f672cbd"
+    },
+    {
+      "path": "branding/source-original.png",
+      "sha256": "65901420704468642ce5e111f19108afc6219fe1960f2f2de2b5158ec6cb775c"
+    },
+    {
+      "path": "branding/source.json",
+      "sha256": "f843f4910753ae412d31e5dc3d9612718169c3974791356038e712e081fbb59c"
+    },
+    {
+      "path": "business-facts.json",
+      "sha256": "b0a3e52349e57439760ec0bdfb672cf509e9c41a7f1740bd8ba7ed2f933db66c"
+    },
+    {
+      "path": "copy-review.json",
+      "sha256": "e2493cac8f722f9ea03ad3eaccf646fe3173cb8aba701de3751a4a6945942236"
+    },
+    {
+      "path": "dealer-stock/listing-4368.jpg",
+      "sha256": "80acea35367dbada0948ad9c7c4bf38529ab022e70d543e0de07e4299957eac0"
+    },
+    {
+      "path": "dealer-stock/listing-44066.jpg",
+      "sha256": "772b8c9d9b2e9dbb75181be0599f009689f038482a58d2c204cabdf05a448653"
+    },
+    {
+      "path": "dealer-stock/listing-57111.jpg",
+      "sha256": "22bcefd149ef611c71f1a8f0b62c576a06083ad3c12e4abc1d99df4fb1a054a0"
+    },
+    {
+      "path": "dealer.json",
+      "sha256": "ca493860943793d695acdbb1697f76ba4a626146cc7c8671179196a263e1c36b"
+    },
+    {
+      "path": "identity-review.json",
+      "sha256": "da169e24c3648d0adadbe23371a60dfd9dba93e4bc507e9467bf83826c1aa4ff"
+    },
+    {
+      "path": "locale.json",
+      "sha256": "e69d7461e67597ee4e77c9f857f8e9fb46bcabfb22205e7ec68de6e8f1befb49"
+    },
+    {
+      "path": "missing-facts.json",
+      "sha256": "ad1b30a033a48eaf58ceb80bad21c80fdbfd19dd44631e6a5f79d3bca9027817"
+    },
+    {
+      "path": "qualification.json",
+      "sha256": "705c4a29c18f5378193b5a1f1dbee4997179e4cc6d50e9349e6297ba1f5c6fb5"
+    },
+    {
+      "path": "source-evidence.json",
+      "sha256": "eb4949c4528c2f3530f501dd29ec9b8c21bd22bc9f3d42531dfb765b303739b3"
+    },
+    {
+      "path": "stock.json",
+      "sha256": "b60ada4eea278f1314bd45231e94c965347d3185df812842f0bfc5cdbbcb4185"
+    }
+  ],
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "providerWrites": 0
+}

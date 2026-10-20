@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "dealer": "noor-al-islam-used-cars",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://uae.yallamotor.com/auto-companies/noor-al-islam-used-cars-10946",
+      "observedAt": "2026-10-19T21:00:01Z",
+      "supports": [
+        "public-business-identity",
+        "business-contact",
+        "address",
+        "attributed-public-stock"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "observedAt": "2026-10-19T21:00:01Z",
+  "stockMedia": [
+    {
+      "path": "dealer-stock/listing-1.jpg",
+      "sourceUrl": "https://ymimg1.b8cdn.com/resized/used_car/2026/5/18/2112148/pictures/16759487/webp_mobile_listing_main_suzuki_ciaz_2023_in_dubai_2112148.webp",
+      "listingUrl": "https://uae.yallamotor.com/used-cars/suzuki/ciaz/2023/used-suzuki-ciaz-2023-dubai-2112148",
+      "observedAt": "2026-10-19T21:00:01Z",
+      "sourceSha256": "85d9c774b3cdf6d3920489f515a68ddf0bab151adbf92d22d71e5019506c6e3c",
+      "sha256": "864b7466c689f0b6662eb6a66a2bb5001fa7bb6aea902842dc6b68c318738257",
+      "width": 480,
+      "height": 360,
+      "bytes": 48760,
+      "transformation": "Bounded resize to at most 1280px; optimized JPEG quality 87."
+    },
+    {
+      "path": "dealer-stock/listing-2.jpg",
+      "sourceUrl": "https://ymimg1.b8cdn.com/resized/used_car/2026/5/19/2112245/pictures/16760701/webp_mobile_listing_main_nissan_sunny_2023_in_dubai_2112245.webp",
+      "listingUrl": "https://uae.yallamotor.com/used-cars/nissan/sunny/2023/used-nissan-sunny-2023-dubai-2112245",
+      "observedAt": "2026-10-19T21:00:01Z",
+      "sourceSha256": "ee2e9e4c197a854a63a838042c4c8a990c40857591ab98af5bcec3e668bc143d",
+      "sha256": "28ca13d6eb569665b2a789939987e459c63b0426a68a0c359194d83a212b35a0",
+      "width": 480,
+      "height": 360,
+      "bytes": 58745,
+      "transformation": "Bounded resize to at most 1280px; optimized JPEG quality 87."
+    },
+    {
+      "path": "dealer-stock/listing-3.jpg",
+      "sourceUrl": "https://ymimg1.b8cdn.com/resized/used_car/2026/9/16/2139689/pictures/17108043/webp_mobile_listing_main_nissan_xterra_2023_in_dubai_2139689.webp",
+      "listingUrl": "https://uae.yallamotor.com/used-cars/nissan/xterra/2023/used-nissan-xterra-2023-dubai-2139689",
+      "observedAt": "2026-10-19T21:00:01Z",
+      "sourceSha256": "aba73fe7fe597322b146dea47a47c720d01c52dce0106e835721443f2c42a380",
+      "sha256": "d9da814b1bdce3bf4632f5701d1fc0df00ed7a8f46ff7887b4c4c0c63ae6619e",
+      "width": 480,
+      "height": 360,
+      "bytes": 51161,
+      "transformation": "Bounded resize to at most 1280px; optimized JPEG quality 87."
+    }
+  ],
+  "researchNotes": "",
+  "contactReview": {
+    "namedPersonalContactsOmitted": true,
+    "outreachPerformed": false,
+    "businessPhoneBasis": "Dealer-level public business contact field; not an individual staff contact."
+  }
+}

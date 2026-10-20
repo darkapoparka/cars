@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "motorx-group",
+  "previousSlug": "motorx-group",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:03:58.970Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 3,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-dubai-motorx-group",
+    "position": 252
+  },
+  "before": {
+    "files": 39,
+    "bytes": 4378590
+  },
+  "afterBeforeReview": {
+    "files": 23,
+    "bytes": 1114434
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 109314,
+      "sha256": "d9f8db31e6e3a159a18f64f843d90a8b39b5783db284c0229fd32762af31474d"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 113613,
+      "sha256": "516bf4c12ae95c1e10494e553adebe9f608425875f520dfdc02a4507b3a0b04a"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 109314,
+      "sha256": "d9f8db31e6e3a159a18f64f843d90a8b39b5783db284c0229fd32762af31474d"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 281487,
+      "sha256": "845cd6d69cc5c6e86376614f69dbefc92915aec90f2679edbec43374624a9187"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 310530,
+      "sha256": "3125a2bf0e49f81b3a59046ede0de7f10e8a2d2bfb613b345e3cd94c7ddf2072"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 310530,
+      "sha256": "3125a2bf0e49f81b3a59046ede0de7f10e8a2d2bfb613b345e3cd94c7ddf2072"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 281487,
+      "sha256": "845cd6d69cc5c6e86376614f69dbefc92915aec90f2679edbec43374624a9187"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 109314,
+      "sha256": "d9f8db31e6e3a159a18f64f843d90a8b39b5783db284c0229fd32762af31474d"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 9858,
+      "sha256": "67273e08ac3deb97a13164e8ae4d055cb95f472a261643a1459304fefc96dcb6"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 310530,
+      "sha256": "3125a2bf0e49f81b3a59046ede0de7f10e8a2d2bfb613b345e3cd94c7ddf2072"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 202416,
+      "sha256": "0e0e71a3413eaf212cf34144a7c735b467b0d8344189ddfa63e5ac54c4ddc4a5"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 310530,
+      "sha256": "3125a2bf0e49f81b3a59046ede0de7f10e8a2d2bfb613b345e3cd94c7ddf2072"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 202416,
+      "sha256": "0e0e71a3413eaf212cf34144a7c735b467b0d8344189ddfa63e5ac54c4ddc4a5"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 281487,
+      "sha256": "845cd6d69cc5c6e86376614f69dbefc92915aec90f2679edbec43374624a9187"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 177104,
+      "sha256": "e7cd13bf9c891d89f2008c7bbc1dc293c6b2cc7ae7ae67724f097bd894ae1a65"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 76104,
+      "sha256": "46ceba08fb7682c87b8ea820ef766af8516e92396a074888db19b553a41cd8ea"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 71908,
+      "sha256": "30ff531ea795394d2aa933e9581caf47ad54d3e747a7c03f32c3161be9a0925a"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 13,
+    "bytes": 621214,
+    "inventorySha256": "d63ee80a328cce502bb84fcc363d3a8558c617327214a736e453009855c70155",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "motorx-group",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 25,
+    "report": "dealers/motorx-group/input-review.json"
+  },
+  "after": {
+    "files": 25,
+    "bytes": 1123176
+  }
+}

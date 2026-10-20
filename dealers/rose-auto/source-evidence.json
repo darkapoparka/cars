@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "dealer": "rose-auto",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://www.dubicars.com/dealers/dubai-rose-auto-3267",
+      "observedAt": "2026-10-19T20:16:36Z",
+      "supports": [
+        "public-business-identity",
+        "business-contact",
+        "address",
+        "attributed-public-stock"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "observedAt": "2026-10-19T20:16:36Z",
+  "stockMedia": [
+    {
+      "path": "dealer-stock/listing-1.jpg",
+      "sourceUrl": "https://www.dubicars.com/images/d86b55/650x380/rose-auto/20734cbc-1049-4a74-9816-6bc3f6d30ca3.jpeg",
+      "listingUrl": "https://www.dubicars.com/2026-changan-x5-plus-pioneer-997742.html",
+      "observedAt": "2026-10-19T20:16:36Z",
+      "sourceSha256": "988f909af336411d935c92e6cea03adb8a0ff426e8e992e1d616bb6343725e2f",
+      "sha256": "c152a60362545a981c79c9b84fabb616e418cfbd069693790675012fd3e0081e",
+      "width": 650,
+      "height": 367,
+      "bytes": 43154,
+      "transformation": "Bounded resize to at most 1280px; optimized JPEG quality 87."
+    },
+    {
+      "path": "dealer-stock/listing-2.jpg",
+      "sourceUrl": "https://www.dubicars.com/images/1b2473/650x380/rose-auto/e786af66-01f3-43f7-ba05-f302f05ce02d.jpeg",
+      "listingUrl": "https://www.dubicars.com/2026-toyota-highlander-1006993.html",
+      "observedAt": "2026-10-19T20:16:36Z",
+      "sourceSha256": "ab3f82a848a0cb51c38c5913115c9adf80de4c6833c2f8bdbce79f3ac116706b",
+      "sha256": "ab3cbadd077d3056b943ccda9131c5cf8f2707f424d7bee24357a4751070c85c",
+      "width": 650,
+      "height": 445,
+      "bytes": 62612,
+      "transformation": "Bounded resize to at most 1280px; optimized JPEG quality 87."
+    },
+    {
+      "path": "dealer-stock/listing-3.jpg",
+      "sourceUrl": "https://www.dubicars.com/images/266125/650x380/rose-auto/6fe37278-9664-499f-87b4-144985c64ab9.jpeg",
+      "listingUrl": "https://www.dubicars.com/2026-toyota-land-cruiser-1006699.html",
+      "observedAt": "2026-10-19T20:16:36Z",
+      "sourceSha256": "feb427587e6647c279da84c0383c3e5680e3e7f86a5da852698c7959552a9ee7",
+      "sha256": "2c51138277f0a268466745e07ca46a73ee7f5b7f7407a9e9316fc8abee451700",
+      "width": 650,
+      "height": 867,
+      "bytes": 167160,
+      "transformation": "Bounded resize to at most 1280px; optimized JPEG quality 87."
+    }
+  ],
+  "contactReview": {
+    "namedPersonalContactsOmitted": true,
+    "outreachPerformed": false,
+    "businessPhoneBasis": "Dealer-level public business contact field; not an individual staff contact."
+  }
+}

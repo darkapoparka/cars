@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "dealer": "roseva-motors",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:55:17Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "listing-1",
+      "title": "2023 Mercedes-Benz EQE 350",
+      "make": "Mercedes-Benz",
+      "model": "EQE 350",
+      "year": 2023,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-1.jpg"
+      ],
+      "sourceUrl": "https://www.rosevamotors.com/vehicle/58178919-915b-4273-ad46-6e47a9cabcdf",
+      "observedAt": "2026-10-19T20:55:17Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageOnRequest": true,
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-2",
+      "title": "2022 Mercedes-Benz EQS 450+",
+      "make": "Mercedes-Benz",
+      "model": "EQS 450+",
+      "year": 2022,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-2.jpg"
+      ],
+      "sourceUrl": "https://www.rosevamotors.com/vehicle/9d6633d2-4a60-4739-aa3a-343b6b2b1bc1",
+      "observedAt": "2026-10-19T20:55:17Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageOnRequest": true,
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-3",
+      "title": "2023 Mercedes-Benz S-Class S450 L",
+      "make": "Mercedes-Benz",
+      "model": "S-Class S450 L",
+      "year": 2023,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-3.jpg"
+      ],
+      "sourceUrl": "https://www.rosevamotors.com/vehicle/38541da9-b20c-4841-8321-8c6da1519d9a",
+      "observedAt": "2026-10-19T20:55:17Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageOnRequest": true,
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

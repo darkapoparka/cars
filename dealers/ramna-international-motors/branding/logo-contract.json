@@ -1,0 +1,317 @@
+{
+  "schemaVersion": 1,
+  "dealer": "ramna-international-motors",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T20:43:14Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-faithful-clean-redraw",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "8d801d98b9ddad215302095e0a6905d9ca1a039ecea7b890d687126cd8c80727",
+      "sourceSha256": "d9a93273bbac62e5f0b3b345cbe13add25e2636f91c8c56e65ad0fa600127488"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "4eb06e530b9ef7f40217cb5a9d5e7a0e581cd525562d48bf2e5c303f49ded765",
+      "sourceSha256": "9c44fbc4d14c134bb07add5589a5bb95353f86f580103aa5c2792c96e2383280"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "4eb06e530b9ef7f40217cb5a9d5e7a0e581cd525562d48bf2e5c303f49ded765",
+      "sourceSha256": "9c44fbc4d14c134bb07add5589a5bb95353f86f580103aa5c2792c96e2383280"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "d9a93273bbac62e5f0b3b345cbe13add25e2636f91c8c56e65ad0fa600127488",
+    "generation": {
+      "tool": "image_gen",
+      "generationId": "exec-c3f33506-f034-42c4-b872-93d87bba5397",
+      "identifierKind": "tool-execution-output-identifier",
+      "providerGenerationIdExposed": false,
+      "modelVersion": null,
+      "sourcePath": "branding/generation-source.png",
+      "sourceSha256": "531ec0a9851ec2cda0eb53bd45069220ef992905d9e54a7e94aa531f74b87cc3",
+      "outputFileName": "exec-c3f33506-f034-42c4-b872-93d87bba5397.png",
+      "operation": "deterministic-sprite-crop",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 631,
+        "height": 725
+      }
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "d30c1cce89796521677e2338531b12838246220b2b37ed54b0ac336db54495b0",
+    "generation": {
+      "tool": "image_gen",
+      "generationId": "exec-c3f33506-f034-42c4-b872-93d87bba5397",
+      "identifierKind": "tool-execution-output-identifier",
+      "providerGenerationIdExposed": false,
+      "modelVersion": null,
+      "sourcePath": "branding/generation-source.png",
+      "sourceSha256": "531ec0a9851ec2cda0eb53bd45069220ef992905d9e54a7e94aa531f74b87cc3",
+      "outputFileName": "exec-c3f33506-f034-42c4-b872-93d87bba5397.png",
+      "operation": "deterministic-sprite-crop",
+      "crop": {
+        "left": 0,
+        "top": 725,
+        "width": 631,
+        "height": 529
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "aae8d02a5ed5ebe632d1fde4deb2128be46d0b7a173ac89a34f84bd538f5c9a6"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "d9a93273bbac62e5f0b3b345cbe13add25e2636f91c8c56e65ad0fa600127488",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-c3f33506-f034-42c4-b872-93d87bba5397",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "531ec0a9851ec2cda0eb53bd45069220ef992905d9e54a7e94aa531f74b87cc3",
+        "outputFileName": "exec-c3f33506-f034-42c4-b872-93d87bba5397.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 631,
+          "height": 725
+        }
+      },
+      "sourceReference": "dealers/ramna-international-motors/branding/input-onLight.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "9c44fbc4d14c134bb07add5589a5bb95353f86f580103aa5c2792c96e2383280",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-c3f33506-f034-42c4-b872-93d87bba5397",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "531ec0a9851ec2cda0eb53bd45069220ef992905d9e54a7e94aa531f74b87cc3",
+        "outputFileName": "exec-c3f33506-f034-42c4-b872-93d87bba5397.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 631,
+          "top": 0,
+          "width": 623,
+          "height": 725
+        }
+      },
+      "sourceReference": "dealers/ramna-international-motors/branding/input-onDark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "9c44fbc4d14c134bb07add5589a5bb95353f86f580103aa5c2792c96e2383280",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-c3f33506-f034-42c4-b872-93d87bba5397",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "531ec0a9851ec2cda0eb53bd45069220ef992905d9e54a7e94aa531f74b87cc3",
+        "outputFileName": "exec-c3f33506-f034-42c4-b872-93d87bba5397.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 631,
+          "top": 0,
+          "width": 623,
+          "height": 725
+        }
+      },
+      "sourceReference": "dealers/ramna-international-motors/branding/input-onDark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "07b5d68b3538ec8bd08a14e0d54e50c3decae61cd1ad502fd9ea9f7f1c30fe49",
+      "sha256": "d9a93273bbac62e5f0b3b345cbe13add25e2636f91c8c56e65ad0fa600127488",
+      "crop": {
+        "left": 63,
+        "top": 105,
+        "width": 526,
+        "height": 573
+      },
+      "sourcePath": "branding/input-onLight.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "7e4b34e920b8427b122d99a5f009f849688891cd346ea32fbe03afebb6519de6",
+      "sha256": "9c44fbc4d14c134bb07add5589a5bb95353f86f580103aa5c2792c96e2383280",
+      "crop": {
+        "left": 42,
+        "top": 105,
+        "width": 528,
+        "height": 573
+      },
+      "sourcePath": "branding/input-onDark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "7e4b34e920b8427b122d99a5f009f849688891cd346ea32fbe03afebb6519de6",
+      "sha256": "9c44fbc4d14c134bb07add5589a5bb95353f86f580103aa5c2792c96e2383280",
+      "crop": {
+        "left": 42,
+        "top": 105,
+        "width": 528,
+        "height": 573
+      },
+      "sourcePath": "branding/input-onDark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "bbeb93f8640de4eeaae7e2e5b977fd382eb29afc57873777cc02a3a3565c5964",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-c3f33506-f034-42c4-b872-93d87bba5397",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "531ec0a9851ec2cda0eb53bd45069220ef992905d9e54a7e94aa531f74b87cc3",
+        "outputFileName": "exec-c3f33506-f034-42c4-b872-93d87bba5397.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 0,
+          "top": 725,
+          "width": 631,
+          "height": 529
+        }
+      },
+      "sourceReference": "dealers/ramna-international-motors/branding/input-mark.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "6321e1f366222990f2a76969c448b42ee2643890ea2e659e392a7a2c2498ea80",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-c3f33506-f034-42c4-b872-93d87bba5397",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "531ec0a9851ec2cda0eb53bd45069220ef992905d9e54a7e94aa531f74b87cc3",
+        "outputFileName": "exec-c3f33506-f034-42c4-b872-93d87bba5397.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 631,
+          "top": 725,
+          "width": 623,
+          "height": 529
+        }
+      },
+      "sourceReference": "dealers/ramna-international-motors/branding/input-markOnDark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "d30c1cce89796521677e2338531b12838246220b2b37ed54b0ac336db54495b0",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-c3f33506-f034-42c4-b872-93d87bba5397",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "531ec0a9851ec2cda0eb53bd45069220ef992905d9e54a7e94aa531f74b87cc3",
+        "outputFileName": "exec-c3f33506-f034-42c4-b872-93d87bba5397.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 0,
+          "top": 725,
+          "width": 631,
+          "height": 529
+        }
+      },
+      "sourceReference": "dealers/ramna-international-motors/branding/input-mark.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "aae8d02a5ed5ebe632d1fde4deb2128be46d0b7a173ac89a34f84bd538f5c9a6",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-c3f33506-f034-42c4-b872-93d87bba5397",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "531ec0a9851ec2cda0eb53bd45069220ef992905d9e54a7e94aa531f74b87cc3",
+        "outputFileName": "exec-c3f33506-f034-42c4-b872-93d87bba5397.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 0,
+          "top": 725,
+          "width": 631,
+          "height": 529
+        }
+      },
+      "sourceReference": "dealers/ramna-international-motors/branding/input-mark.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-19T20:43:14Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "52f2351ab1f4ad767e0234cdf02078b6ff2129c232f67e2f6bf82a29250430d8",
+    "generation": {
+      "tool": "image_gen",
+      "generationId": "exec-c3f33506-f034-42c4-b872-93d87bba5397",
+      "identifierKind": "tool-execution-output-identifier",
+      "providerGenerationIdExposed": false,
+      "modelVersion": null,
+      "sourcePath": "branding/generation-source.png",
+      "sourceSha256": "531ec0a9851ec2cda0eb53bd45069220ef992905d9e54a7e94aa531f74b87cc3",
+      "outputFileName": "exec-c3f33506-f034-42c4-b872-93d87bba5397.png",
+      "operation": "deterministic-sprite-crop",
+      "crop": {
+        "left": 631,
+        "top": 725,
+        "width": 623,
+        "height": 529
+      }
+    }
+  }
+}

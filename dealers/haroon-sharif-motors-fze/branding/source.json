@@ -1,0 +1,162 @@
+{
+  "schemaVersion": 1,
+  "dealer": "haroon-sharif-motors-fze",
+  "sourceLogoUrl": "https://static.oneclickdrive.com/application/views/img/company/haroon-sharif.png",
+  "sourcePath": "branding/source-original.png",
+  "sourceSha256": "39602f42371e67e740d6d7235baaa1ae73fec5643c80a4e42359434c06b1961b",
+  "publishedBranding": true,
+  "sourcePage": "https://www.oneclickdrive.com/company/dubai/haroon-sharif-motors-fze",
+  "observedAt": "2026-10-19T20:03:53.608743Z",
+  "creationMethod": "sourced-logo-imagegen-redraw",
+  "approvalStatus": "independent-preview-not-dealer-approved",
+  "dealerApproved": false,
+  "visualReview": "Faithful clean redraw retaining source blue/red opposed arcs and HSM identity; exact business trading-name lettering reviewed with navy/black/red and white inverse treatments.",
+  "generationPrompt": "Create ONE transparent RGBA logo sprite for ONE dealer. Exactly four matched assets, 2 columns x 2 rows, generous transparent gutters, no grid/labels/panels. Top left a bold compact mark for light backgrounds; top right its matching white inverse for dark/red backgrounds; bottom left horizontal full wordmark in dark/brand colours; bottom right identical full wordmark in white. Use flat smooth solid ink, crisp substantial strokes, no textures, shadows, glow or background. Compact mark must be legible at 32px; simplify secondary detail. Faithful redraw of supplied Haroon Sharif identity. Preserve the blue and red opposed circular arcs and bold HSM letters. Compact HSM centered within the red/blue arcs, thick open shape; white inverse has white arcs and HSM. Full logo: circle HSM at left, exact text 'HAROON SHARIF' above 'MOTORS' at right, black HAROON and red SHARIF, blue secondary text; matching white full logo. No individual people, no tiny legal suffixes.",
+  "workingLogoPath": "branding/generated-onLight.png",
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T20:24:27.376198Z",
+    "master": {
+      "path": "branding/generated-onLight.png",
+      "sha256": "6dd8c695a5478cccce1ef91fe5d68fce6a675b8e41616cdc64196ea696539b8f",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-4a66a77a-aab2-4d88-a98a-bd34e9f00d7d",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "57759e1c97618b191005ae5e0f5d28da246599002376863afce1b7a49b146cbe",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          0,
+          553,
+          894,
+          887
+        ]
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "c03835354d50b806798f56cbd33920890dde127ac474f564f4e4b4f3997f9527",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-4a66a77a-aab2-4d88-a98a-bd34e9f00d7d",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "57759e1c97618b191005ae5e0f5d28da246599002376863afce1b7a49b146cbe",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          0,
+          0,
+          894,
+          553
+        ]
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-markOnDark.png",
+      "sha256": "69da28e3432aa667fe65b5430256ea370b753e45a44cba98795fad4099ba858a",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-4a66a77a-aab2-4d88-a98a-bd34e9f00d7d",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "57759e1c97618b191005ae5e0f5d28da246599002376863afce1b7a49b146cbe",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          894,
+          0,
+          1774,
+          553
+        ]
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-onLight.png",
+        "sha256": "6dd8c695a5478cccce1ef91fe5d68fce6a675b8e41616cdc64196ea696539b8f",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-4a66a77a-aab2-4d88-a98a-bd34e9f00d7d",
+          "modelVersion": null,
+          "sourcePath": "branding/generation-source.png",
+          "sourceSha256": "57759e1c97618b191005ae5e0f5d28da246599002376863afce1b7a49b146cbe",
+          "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+          "crop": [
+            0,
+            553,
+            894,
+            887
+          ]
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-onDark.png",
+        "sha256": "9d4a9782d28a02975694ea6b138ee9dc7e45605879709fa1506a9b2594047218",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-4a66a77a-aab2-4d88-a98a-bd34e9f00d7d",
+          "modelVersion": null,
+          "sourcePath": "branding/generation-source.png",
+          "sourceSha256": "57759e1c97618b191005ae5e0f5d28da246599002376863afce1b7a49b146cbe",
+          "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+          "crop": [
+            894,
+            553,
+            1774,
+            887
+          ]
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-onDark.png",
+        "sha256": "9d4a9782d28a02975694ea6b138ee9dc7e45605879709fa1506a9b2594047218",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-4a66a77a-aab2-4d88-a98a-bd34e9f00d7d",
+          "modelVersion": null,
+          "sourcePath": "branding/generation-source.png",
+          "sourceSha256": "57759e1c97618b191005ae5e0f5d28da246599002376863afce1b7a49b146cbe",
+          "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+          "crop": [
+            894,
+            553,
+            1774,
+            887
+          ]
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#101820",
+        "#09090b",
+        "#17191c",
+        "#c40101"
+      ],
+      "wordmarkWidths": [
+        120,
+        180
+      ],
+      "notes": "Faithful clean redraw retaining source blue/red opposed arcs and HSM identity; exact business trading-name lettering reviewed with navy/black/red and white inverse treatments."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-19T20:24:27.376198Z",
+      "widths": [
+        32,
+        64,
+        96
+      ],
+      "backgrounds": [
+        "#ffffff",
+        "#101820",
+        "#c40101"
+      ],
+      "notes": "HSM is bold within the circular arcs at 32px; inverse white keeps the open centre on dark/red."
+    },
+    "compactMarkStatus": "proposed-compact-adaptation-not-dealer-approved"
+  },
+  "usageStatus": "public-preview-only"
+}

@@ -1,0 +1,317 @@
+{
+  "schemaVersion": 1,
+  "dealer": "noor-al-islam-used-cars",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T21:00:01Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-independent-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "7fab55ace7f50508fbed495a7fb92939c8f5504fa48542f9536f31a5db9d5d39",
+      "sourceSha256": "966aad3c87e37095346c31263b77c84a894cbc5a5f0c86a831ad2000f314da93"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "9b465202093123146b201711cf5962488d311b2f4ae1569e3ab4d68b665fb55c",
+      "sourceSha256": "5c0e0ef1b5e5cf3948d3b0d10f7baf38759893e1c59d99cd8f3d7c6730b77403"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "9b465202093123146b201711cf5962488d311b2f4ae1569e3ab4d68b665fb55c",
+      "sourceSha256": "5c0e0ef1b5e5cf3948d3b0d10f7baf38759893e1c59d99cd8f3d7c6730b77403"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "966aad3c87e37095346c31263b77c84a894cbc5a5f0c86a831ad2000f314da93",
+    "generation": {
+      "tool": "image_gen",
+      "generationId": "exec-f4100204-b5b8-436c-829b-b3f28ed279ea",
+      "identifierKind": "tool-execution-output-identifier",
+      "providerGenerationIdExposed": false,
+      "modelVersion": null,
+      "sourcePath": "branding/generation-source.png",
+      "sourceSha256": "94d303deb48e01f3032f0a1a2cdf48d54b83d65f47d28192901fe2a3629470be",
+      "outputFileName": "exec-f4100204-b5b8-436c-829b-b3f28ed279ea.png",
+      "operation": "deterministic-sprite-crop",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 779,
+        "height": 550
+      }
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "82cb3f656701523e935b0f91a98089390690319f0f5f6c0bd942ce74c3f24ce7",
+    "generation": {
+      "tool": "image_gen",
+      "generationId": "exec-f4100204-b5b8-436c-829b-b3f28ed279ea",
+      "identifierKind": "tool-execution-output-identifier",
+      "providerGenerationIdExposed": false,
+      "modelVersion": null,
+      "sourcePath": "branding/generation-source.png",
+      "sourceSha256": "94d303deb48e01f3032f0a1a2cdf48d54b83d65f47d28192901fe2a3629470be",
+      "outputFileName": "exec-f4100204-b5b8-436c-829b-b3f28ed279ea.png",
+      "operation": "deterministic-sprite-crop",
+      "crop": {
+        "left": 0,
+        "top": 550,
+        "width": 779,
+        "height": 474
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "429e055e3e7e301ea157c7517edb4ab5b0d90a6dabc34cd9c33a4fb0b0d825d8"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "966aad3c87e37095346c31263b77c84a894cbc5a5f0c86a831ad2000f314da93",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-f4100204-b5b8-436c-829b-b3f28ed279ea",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "94d303deb48e01f3032f0a1a2cdf48d54b83d65f47d28192901fe2a3629470be",
+        "outputFileName": "exec-f4100204-b5b8-436c-829b-b3f28ed279ea.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 779,
+          "height": 550
+        }
+      },
+      "sourceReference": "dealers/noor-al-islam-used-cars/branding/input-onLight.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "5c0e0ef1b5e5cf3948d3b0d10f7baf38759893e1c59d99cd8f3d7c6730b77403",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-f4100204-b5b8-436c-829b-b3f28ed279ea",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "94d303deb48e01f3032f0a1a2cdf48d54b83d65f47d28192901fe2a3629470be",
+        "outputFileName": "exec-f4100204-b5b8-436c-829b-b3f28ed279ea.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 779,
+          "top": 0,
+          "width": 757,
+          "height": 550
+        }
+      },
+      "sourceReference": "dealers/noor-al-islam-used-cars/branding/input-onDark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "5c0e0ef1b5e5cf3948d3b0d10f7baf38759893e1c59d99cd8f3d7c6730b77403",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-f4100204-b5b8-436c-829b-b3f28ed279ea",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "94d303deb48e01f3032f0a1a2cdf48d54b83d65f47d28192901fe2a3629470be",
+        "outputFileName": "exec-f4100204-b5b8-436c-829b-b3f28ed279ea.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 779,
+          "top": 0,
+          "width": 757,
+          "height": 550
+        }
+      },
+      "sourceReference": "dealers/noor-al-islam-used-cars/branding/input-onDark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "57bb67ad33a5b5fddf69a1d5f51cc258da200e0251df01e63128c1c5e0871ad6",
+      "sha256": "966aad3c87e37095346c31263b77c84a894cbc5a5f0c86a831ad2000f314da93",
+      "crop": {
+        "left": 43,
+        "top": 86,
+        "width": 681,
+        "height": 419
+      },
+      "sourcePath": "branding/input-onLight.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "1906e68f15d4082b3bbe74ca1a088600d2860a704c8415647827b288b12309b7",
+      "sha256": "5c0e0ef1b5e5cf3948d3b0d10f7baf38759893e1c59d99cd8f3d7c6730b77403",
+      "crop": {
+        "left": 57,
+        "top": 86,
+        "width": 664,
+        "height": 420
+      },
+      "sourcePath": "branding/input-onDark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "1906e68f15d4082b3bbe74ca1a088600d2860a704c8415647827b288b12309b7",
+      "sha256": "5c0e0ef1b5e5cf3948d3b0d10f7baf38759893e1c59d99cd8f3d7c6730b77403",
+      "crop": {
+        "left": 57,
+        "top": 86,
+        "width": 664,
+        "height": 420
+      },
+      "sourcePath": "branding/input-onDark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "9158f243efd7c5923ac03a6d885aeaef9f8ec1222990f4f90b459ecde6d44219",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-f4100204-b5b8-436c-829b-b3f28ed279ea",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "94d303deb48e01f3032f0a1a2cdf48d54b83d65f47d28192901fe2a3629470be",
+        "outputFileName": "exec-f4100204-b5b8-436c-829b-b3f28ed279ea.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 0,
+          "top": 550,
+          "width": 779,
+          "height": 474
+        }
+      },
+      "sourceReference": "dealers/noor-al-islam-used-cars/branding/input-mark.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "bae6b151d0b01a15b92e3e498a70c5084e10e73a489be648b1f9daf8a1d38ade",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-f4100204-b5b8-436c-829b-b3f28ed279ea",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "94d303deb48e01f3032f0a1a2cdf48d54b83d65f47d28192901fe2a3629470be",
+        "outputFileName": "exec-f4100204-b5b8-436c-829b-b3f28ed279ea.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 779,
+          "top": 550,
+          "width": 757,
+          "height": 474
+        }
+      },
+      "sourceReference": "dealers/noor-al-islam-used-cars/branding/input-markOnDark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "82cb3f656701523e935b0f91a98089390690319f0f5f6c0bd942ce74c3f24ce7",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-f4100204-b5b8-436c-829b-b3f28ed279ea",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "94d303deb48e01f3032f0a1a2cdf48d54b83d65f47d28192901fe2a3629470be",
+        "outputFileName": "exec-f4100204-b5b8-436c-829b-b3f28ed279ea.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 0,
+          "top": 550,
+          "width": 779,
+          "height": 474
+        }
+      },
+      "sourceReference": "dealers/noor-al-islam-used-cars/branding/input-mark.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "429e055e3e7e301ea157c7517edb4ab5b0d90a6dabc34cd9c33a4fb0b0d825d8",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-f4100204-b5b8-436c-829b-b3f28ed279ea",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "94d303deb48e01f3032f0a1a2cdf48d54b83d65f47d28192901fe2a3629470be",
+        "outputFileName": "exec-f4100204-b5b8-436c-829b-b3f28ed279ea.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 0,
+          "top": 550,
+          "width": 779,
+          "height": 474
+        }
+      },
+      "sourceReference": "dealers/noor-al-islam-used-cars/branding/input-mark.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-19T21:00:01Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "7d3b235b244fc8c54a1a8ed86789a564b0d44d9a86b291c732eef5f4d40709d6",
+    "generation": {
+      "tool": "image_gen",
+      "generationId": "exec-f4100204-b5b8-436c-829b-b3f28ed279ea",
+      "identifierKind": "tool-execution-output-identifier",
+      "providerGenerationIdExposed": false,
+      "modelVersion": null,
+      "sourcePath": "branding/generation-source.png",
+      "sourceSha256": "94d303deb48e01f3032f0a1a2cdf48d54b83d65f47d28192901fe2a3629470be",
+      "outputFileName": "exec-f4100204-b5b8-436c-829b-b3f28ed279ea.png",
+      "operation": "deterministic-sprite-crop",
+      "crop": {
+        "left": 779,
+        "top": 550,
+        "width": 757,
+        "height": 474
+      }
+    }
+  }
+}

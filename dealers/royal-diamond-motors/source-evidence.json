@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "dealer": "royal-diamond-motors",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://royaldiamondmotors.ae/ourcars/",
+      "observedAt": "2026-10-19T20:55:17Z",
+      "supports": [
+        "public-business-identity",
+        "business-contact",
+        "address",
+        "attributed-public-stock"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "observedAt": "2026-10-19T20:55:17Z",
+  "stockMedia": [
+    {
+      "path": "dealer-stock/listing-1.jpg",
+      "sourceUrl": "https://royaldiamondmotors.ae/wp-content/uploads/2026/05/02.jpg",
+      "listingUrl": "https://royaldiamondmotors.ae/cars/range-rover-sport-hse-dynamic-2022-0-down-payment/",
+      "observedAt": "2026-10-19T20:55:17Z",
+      "sourceSha256": "6086846a19a9c3bfb6681789587f586fea88ee8cef1c741f1aa8d7890ed742eb",
+      "sha256": "191933a90302a643c6aee100e573718d3bfd8f133b9f1bf99c2de3c81f11029f",
+      "width": 1000,
+      "height": 667,
+      "bytes": 130295,
+      "transformation": "Bounded resize to at most 1280px; optimized JPEG quality 87."
+    },
+    {
+      "path": "dealer-stock/listing-2.jpg",
+      "sourceUrl": "https://royaldiamondmotors.ae/wp-content/uploads/2025/11/01-10.jpg",
+      "listingUrl": "https://royaldiamondmotors.ae/cars/porsche-panamera-standard-2025-0-down-payment/",
+      "observedAt": "2026-10-19T20:55:17Z",
+      "sourceSha256": "a764169b7f19e31347205f48f0772f8e6e5264c1ce6461b2200360835e291a05",
+      "sha256": "34f16d544f56db153df8eec0fdf6660507ba773a966b0bfe4fbfdbfba17725db",
+      "width": 1000,
+      "height": 667,
+      "bytes": 139025,
+      "transformation": "Bounded resize to at most 1280px; optimized JPEG quality 87."
+    },
+    {
+      "path": "dealer-stock/listing-3.jpg",
+      "sourceUrl": "https://royaldiamondmotors.ae/wp-content/uploads/2025/11/01-9.jpg",
+      "listingUrl": "https://royaldiamondmotors.ae/cars/bmw-x5-xdrive40i-m-sport-2022-0-down-payment/",
+      "observedAt": "2026-10-19T20:55:17Z",
+      "sourceSha256": "9d58c920805a8e9b4d6b035ba1d9aa7488b95c7b11595eb9bbf03c0740a349e8",
+      "sha256": "1a47e21bd2734ffb73fadb3068f3d479532c9ccb56e4f26e7b66c2daf75a4e53",
+      "width": 1000,
+      "height": 667,
+      "bytes": 132085,
+      "transformation": "Bounded resize to at most 1280px; optimized JPEG quality 87."
+    }
+  ],
+  "researchNotes": "Three catalogue cards without Sold label retained; asking prices, monthly amounts and finance copy omitted.",
+  "contactReview": {
+    "namedPersonalContactsOmitted": true,
+    "outreachPerformed": false,
+    "businessPhoneBasis": "Dealer-level public business contact field; not an individual staff contact."
+  }
+}

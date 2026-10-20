@@ -1,0 +1,182 @@
+{
+  "schemaVersion": 1,
+  "dealer": "roseva-motors",
+  "status": "reviewed-independent-redraw",
+  "realLogoFirst": true,
+  "publicSources": [
+    {
+      "url": "https://www.rosevamotors.com/",
+      "observedAt": "2026-10-19T20:55:17Z"
+    }
+  ],
+  "originals": [
+    {
+      "path": "branding/public-original.jpg",
+      "sha256": "4eed6040ce318dd9e33020aab2d7379996e09f72f8e76cb81450111992fa00d5",
+      "url": "https://www.rosevamotors.com/images/logo.png",
+      "observedAt": "2026-10-19T20:55:17Z"
+    }
+  ],
+  "creationMethod": "imagegen-faithful-clean-redraw",
+  "dealerApproved": false,
+  "logoSource": "redraw",
+  "researchSummary": "Public dealer artwork reviewed; original retained and matched identity redrawn for transparent surfaces.",
+  "generation": {
+    "tool": "image_gen",
+    "generationId": "exec-c988e8ff-ec2f-4dcf-bd72-264a85d4839d",
+    "identifierKind": "tool-execution-output-identifier",
+    "modelVersion": null,
+    "sourcePath": "branding/generation-source.png",
+    "sourceSha256": "71eebf81e090ec7145e363d27e7cab6c5c3074c6b43031bf6a77a2f4e95031d0",
+    "nativeDimensions": {
+      "width": 1536,
+      "height": 1024
+    },
+    "prompt": "Create a faithful clean flat redraw of ROSEVA MOTORS. Existing emblem uses gold circular outline, bold elegant serif ROSEVA above a sweeping car side profile and MOTORS below. Retain round open outline, serif name, car profile and dark antique-gold #8b631d. Omit tiny slogan. Full logo has these elements. Compact mark is bold R with car roof above within open circular outline, no small text. Right versions all pure-white. The entire inside of circle is transparent, no solid disc. No embossing. Deliver a single production asset sheet with four isolated logos on transparent alpha, arranged in a precise two by two grid with very generous clear margins. Top left full logo dark on transparent; top right full logo all WHITE on transparent; bottom left compact mark dark on transparent; bottom right compact mark all WHITE on transparent. Use FLAT solid ink, sharp contours, transparent cutouts, bold uncomplicated strokes. No glow, no soft edges, no shadow, no background, no panels, no texture, no labels. Compact marks must be substantially square and legible at 32 pixels. Full logo type must be very clear."
+  },
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T20:55:17Z",
+    "master": {
+      "path": "branding/input-onLight.png",
+      "sha256": "883a089a162f9ce1064071548de696bc4b2173c1ec4249ee871f0cbfc9c1644c",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-c988e8ff-ec2f-4dcf-bd72-264a85d4839d",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "71eebf81e090ec7145e363d27e7cab6c5c3074c6b43031bf6a77a2f4e95031d0",
+        "outputFileName": "exec-c988e8ff-ec2f-4dcf-bd72-264a85d4839d.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 769,
+          "height": 533
+        }
+      }
+    },
+    "mark": {
+      "path": "branding/input-mark.png",
+      "sha256": "1ba37146304293e80fdeae48a531bd04c238c4797771c145769def9211e988d4",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-c988e8ff-ec2f-4dcf-bd72-264a85d4839d",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "71eebf81e090ec7145e363d27e7cab6c5c3074c6b43031bf6a77a2f4e95031d0",
+        "outputFileName": "exec-c988e8ff-ec2f-4dcf-bd72-264a85d4839d.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 0,
+          "top": 533,
+          "width": 769,
+          "height": 491
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/input-markOnDark.png",
+      "sha256": "2236ddaaff4437e52da283f8f3b70a97f4edf17191375227bfb004fcf2f539b3",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-c988e8ff-ec2f-4dcf-bd72-264a85d4839d",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "71eebf81e090ec7145e363d27e7cab6c5c3074c6b43031bf6a77a2f4e95031d0",
+        "outputFileName": "exec-c988e8ff-ec2f-4dcf-bd72-264a85d4839d.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 769,
+          "top": 533,
+          "width": 767,
+          "height": 491
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/input-onLight.png",
+        "sha256": "883a089a162f9ce1064071548de696bc4b2173c1ec4249ee871f0cbfc9c1644c",
+        "generation": {
+          "tool": "image_gen",
+          "generationId": "exec-c988e8ff-ec2f-4dcf-bd72-264a85d4839d",
+          "identifierKind": "tool-execution-output-identifier",
+          "providerGenerationIdExposed": false,
+          "modelVersion": null,
+          "sourcePath": "branding/generation-source.png",
+          "sourceSha256": "71eebf81e090ec7145e363d27e7cab6c5c3074c6b43031bf6a77a2f4e95031d0",
+          "outputFileName": "exec-c988e8ff-ec2f-4dcf-bd72-264a85d4839d.png",
+          "operation": "deterministic-sprite-crop",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 769,
+            "height": 533
+          }
+        }
+      },
+      "onDark": {
+        "path": "branding/input-onDark.png",
+        "sha256": "a81c3321e0f937f72692fc9790ac41fa881c8e4e1f81b961c6f632eb904f50d1",
+        "generation": {
+          "tool": "image_gen",
+          "generationId": "exec-c988e8ff-ec2f-4dcf-bd72-264a85d4839d",
+          "identifierKind": "tool-execution-output-identifier",
+          "providerGenerationIdExposed": false,
+          "modelVersion": null,
+          "sourcePath": "branding/generation-source.png",
+          "sourceSha256": "71eebf81e090ec7145e363d27e7cab6c5c3074c6b43031bf6a77a2f4e95031d0",
+          "outputFileName": "exec-c988e8ff-ec2f-4dcf-bd72-264a85d4839d.png",
+          "operation": "deterministic-sprite-crop",
+          "crop": {
+            "left": 769,
+            "top": 0,
+            "width": 767,
+            "height": 533
+          }
+        }
+      },
+      "onAccent": {
+        "path": "branding/input-onDark.png",
+        "sha256": "a81c3321e0f937f72692fc9790ac41fa881c8e4e1f81b961c6f632eb904f50d1",
+        "generation": {
+          "tool": "image_gen",
+          "generationId": "exec-c988e8ff-ec2f-4dcf-bd72-264a85d4839d",
+          "identifierKind": "tool-execution-output-identifier",
+          "providerGenerationIdExposed": false,
+          "modelVersion": null,
+          "sourcePath": "branding/generation-source.png",
+          "sourceSha256": "71eebf81e090ec7145e363d27e7cab6c5c3074c6b43031bf6a77a2f4e95031d0",
+          "outputFileName": "exec-c988e8ff-ec2f-4dcf-bd72-264a85d4839d.png",
+          "operation": "deterministic-sprite-crop",
+          "crop": {
+            "left": 769,
+            "top": 0,
+            "width": 767,
+            "height": 533
+          }
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-19T20:55:17Z",
+      "method": "Agent reviewed generated artwork spelling, matching identity and transparent crop. White, charcoal and red contact sheet inspected; 32px compact marks reviewed.",
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#101820",
+        "#09090b",
+        "#17191c",
+        "#c40101"
+      ],
+      "dealerApproval": false
+    }
+  }
+}

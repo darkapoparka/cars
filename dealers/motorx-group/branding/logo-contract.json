@@ -1,0 +1,317 @@
+{
+  "schemaVersion": 1,
+  "dealer": "motorx-group",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T20:30:19Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-faithful-clean-redraw",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "e7cd13bf9c891d89f2008c7bbc1dc293c6b2cc7ae7ae67724f097bd894ae1a65",
+      "sourceSha256": "845cd6d69cc5c6e86376614f69dbefc92915aec90f2679edbec43374624a9187"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "0e0e71a3413eaf212cf34144a7c735b467b0d8344189ddfa63e5ac54c4ddc4a5",
+      "sourceSha256": "3125a2bf0e49f81b3a59046ede0de7f10e8a2d2bfb613b345e3cd94c7ddf2072"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "0e0e71a3413eaf212cf34144a7c735b467b0d8344189ddfa63e5ac54c4ddc4a5",
+      "sourceSha256": "3125a2bf0e49f81b3a59046ede0de7f10e8a2d2bfb613b345e3cd94c7ddf2072"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "845cd6d69cc5c6e86376614f69dbefc92915aec90f2679edbec43374624a9187",
+    "generation": {
+      "tool": "image_gen",
+      "generationId": "exec-8442328e-b3aa-4a77-8865-75b13324d8b3",
+      "identifierKind": "tool-execution-output-identifier",
+      "providerGenerationIdExposed": false,
+      "modelVersion": null,
+      "sourcePath": "branding/generation-source.png",
+      "sourceSha256": "bb0a28d56a41c0d8a75185c589e8143e00f4e90bdddb075a107ee7c882fb7a7b",
+      "outputFileName": "exec-8442328e-b3aa-4a77-8865-75b13324d8b3.png",
+      "operation": "deterministic-sprite-crop",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 627,
+        "height": 659
+      }
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "d9f8db31e6e3a159a18f64f843d90a8b39b5783db284c0229fd32762af31474d",
+    "generation": {
+      "tool": "image_gen",
+      "generationId": "exec-8442328e-b3aa-4a77-8865-75b13324d8b3",
+      "identifierKind": "tool-execution-output-identifier",
+      "providerGenerationIdExposed": false,
+      "modelVersion": null,
+      "sourcePath": "branding/generation-source.png",
+      "sourceSha256": "bb0a28d56a41c0d8a75185c589e8143e00f4e90bdddb075a107ee7c882fb7a7b",
+      "outputFileName": "exec-8442328e-b3aa-4a77-8865-75b13324d8b3.png",
+      "operation": "deterministic-sprite-crop",
+      "crop": {
+        "left": 0,
+        "top": 659,
+        "width": 627,
+        "height": 595
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "67273e08ac3deb97a13164e8ae4d055cb95f472a261643a1459304fefc96dcb6"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "845cd6d69cc5c6e86376614f69dbefc92915aec90f2679edbec43374624a9187",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-8442328e-b3aa-4a77-8865-75b13324d8b3",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "bb0a28d56a41c0d8a75185c589e8143e00f4e90bdddb075a107ee7c882fb7a7b",
+        "outputFileName": "exec-8442328e-b3aa-4a77-8865-75b13324d8b3.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 627,
+          "height": 659
+        }
+      },
+      "sourceReference": "dealers/motorx-group/branding/input-onLight.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "3125a2bf0e49f81b3a59046ede0de7f10e8a2d2bfb613b345e3cd94c7ddf2072",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-8442328e-b3aa-4a77-8865-75b13324d8b3",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "bb0a28d56a41c0d8a75185c589e8143e00f4e90bdddb075a107ee7c882fb7a7b",
+        "outputFileName": "exec-8442328e-b3aa-4a77-8865-75b13324d8b3.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 627,
+          "top": 0,
+          "width": 627,
+          "height": 659
+        }
+      },
+      "sourceReference": "dealers/motorx-group/branding/input-onDark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "3125a2bf0e49f81b3a59046ede0de7f10e8a2d2bfb613b345e3cd94c7ddf2072",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-8442328e-b3aa-4a77-8865-75b13324d8b3",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "bb0a28d56a41c0d8a75185c589e8143e00f4e90bdddb075a107ee7c882fb7a7b",
+        "outputFileName": "exec-8442328e-b3aa-4a77-8865-75b13324d8b3.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 627,
+          "top": 0,
+          "width": 627,
+          "height": 659
+        }
+      },
+      "sourceReference": "dealers/motorx-group/branding/input-onDark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "b5a6d654fe77d55056e1c967bc88d4618a5fea3443e2efd977910a9e4ca22033",
+      "sha256": "845cd6d69cc5c6e86376614f69dbefc92915aec90f2679edbec43374624a9187",
+      "crop": {
+        "left": 63,
+        "top": 123,
+        "width": 541,
+        "height": 450
+      },
+      "sourcePath": "branding/input-onLight.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "cfa5a24518178c434921ed033955b9f038ee20f4d1550a542a5b1adaa46a9579",
+      "sha256": "3125a2bf0e49f81b3a59046ede0de7f10e8a2d2bfb613b345e3cd94c7ddf2072",
+      "crop": {
+        "left": 24,
+        "top": 123,
+        "width": 540,
+        "height": 451
+      },
+      "sourcePath": "branding/input-onDark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "cfa5a24518178c434921ed033955b9f038ee20f4d1550a542a5b1adaa46a9579",
+      "sha256": "3125a2bf0e49f81b3a59046ede0de7f10e8a2d2bfb613b345e3cd94c7ddf2072",
+      "crop": {
+        "left": 24,
+        "top": 123,
+        "width": 540,
+        "height": 451
+      },
+      "sourcePath": "branding/input-onDark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "30ff531ea795394d2aa933e9581caf47ad54d3e747a7c03f32c3161be9a0925a",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-8442328e-b3aa-4a77-8865-75b13324d8b3",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "bb0a28d56a41c0d8a75185c589e8143e00f4e90bdddb075a107ee7c882fb7a7b",
+        "outputFileName": "exec-8442328e-b3aa-4a77-8865-75b13324d8b3.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 0,
+          "top": 659,
+          "width": 627,
+          "height": 595
+        }
+      },
+      "sourceReference": "dealers/motorx-group/branding/input-mark.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "46ceba08fb7682c87b8ea820ef766af8516e92396a074888db19b553a41cd8ea",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-8442328e-b3aa-4a77-8865-75b13324d8b3",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "bb0a28d56a41c0d8a75185c589e8143e00f4e90bdddb075a107ee7c882fb7a7b",
+        "outputFileName": "exec-8442328e-b3aa-4a77-8865-75b13324d8b3.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 627,
+          "top": 659,
+          "width": 627,
+          "height": 595
+        }
+      },
+      "sourceReference": "dealers/motorx-group/branding/input-markOnDark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "d9f8db31e6e3a159a18f64f843d90a8b39b5783db284c0229fd32762af31474d",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-8442328e-b3aa-4a77-8865-75b13324d8b3",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "bb0a28d56a41c0d8a75185c589e8143e00f4e90bdddb075a107ee7c882fb7a7b",
+        "outputFileName": "exec-8442328e-b3aa-4a77-8865-75b13324d8b3.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 0,
+          "top": 659,
+          "width": 627,
+          "height": 595
+        }
+      },
+      "sourceReference": "dealers/motorx-group/branding/input-mark.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "67273e08ac3deb97a13164e8ae4d055cb95f472a261643a1459304fefc96dcb6",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-8442328e-b3aa-4a77-8865-75b13324d8b3",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "bb0a28d56a41c0d8a75185c589e8143e00f4e90bdddb075a107ee7c882fb7a7b",
+        "outputFileName": "exec-8442328e-b3aa-4a77-8865-75b13324d8b3.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 0,
+          "top": 659,
+          "width": 627,
+          "height": 595
+        }
+      },
+      "sourceReference": "dealers/motorx-group/branding/input-mark.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-19T20:30:19Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "516bf4c12ae95c1e10494e553adebe9f608425875f520dfdc02a4507b3a0b04a",
+    "generation": {
+      "tool": "image_gen",
+      "generationId": "exec-8442328e-b3aa-4a77-8865-75b13324d8b3",
+      "identifierKind": "tool-execution-output-identifier",
+      "providerGenerationIdExposed": false,
+      "modelVersion": null,
+      "sourcePath": "branding/generation-source.png",
+      "sourceSha256": "bb0a28d56a41c0d8a75185c589e8143e00f4e90bdddb075a107ee7c882fb7a7b",
+      "outputFileName": "exec-8442328e-b3aa-4a77-8865-75b13324d8b3.png",
+      "operation": "deterministic-sprite-crop",
+      "crop": {
+        "left": 627,
+        "top": 659,
+        "width": 627,
+        "height": 595
+      }
+    }
+  }
+}

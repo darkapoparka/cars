@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "dealer": "huapeng-automobile-trading-fze",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:03:53.675734Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "listing-1032760",
+      "title": "2025 BYD Song L STANDARD",
+      "make": "Byd",
+      "model": "Song L",
+      "year": 2025,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-1032760.jpg"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2025-byd-song-l-dm-i-112km-beyond-2025-for-export-1032760.html",
+      "observedAt": "2026-10-19T20:03:53.675734Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageOnRequest": true,
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-1027467",
+      "title": "2025 BYD Atto 3 PREMIUM",
+      "make": "Byd",
+      "model": "Atto 3",
+      "year": 2025,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-1027467.jpg"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2025-byd-atto-3-for-export-to-djibouti-1027467.html",
+      "observedAt": "2026-10-19T20:03:53.675734Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageOnRequest": true,
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-1023370",
+      "title": "2025 BYD Sealion 05 STANDARD",
+      "make": "Byd",
+      "model": "Sealion 05",
+      "year": 2025,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-1023370.jpg"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2025-byd-sealion-05-05-dm-i-75km-prestige-type-2025-whiteblack-for-export-1023370.html",
+      "observedAt": "2026-10-19T20:03:53.675734Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageOnRequest": true,
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

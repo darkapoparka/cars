@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "noor-al-islam-used-cars",
+  "previousSlug": "noor-al-islam-used-cars",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:07:12.078Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 3,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-dubai-noor-al-islam-used-cars",
+    "position": 257
+  },
+  "before": {
+    "files": 38,
+    "bytes": 5243645
+  },
+  "afterBeforeReview": {
+    "files": 22,
+    "bytes": 2590112
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 131873,
+      "sha256": "82cb3f656701523e935b0f91a98089390690319f0f5f6c0bd942ce74c3f24ce7"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 112597,
+      "sha256": "7d3b235b244fc8c54a1a8ed86789a564b0d44d9a86b291c732eef5f4d40709d6"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 131873,
+      "sha256": "82cb3f656701523e935b0f91a98089390690319f0f5f6c0bd942ce74c3f24ce7"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 230062,
+      "sha256": "966aad3c87e37095346c31263b77c84a894cbc5a5f0c86a831ad2000f314da93"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 214116,
+      "sha256": "5c0e0ef1b5e5cf3948d3b0d10f7baf38759893e1c59d99cd8f3d7c6730b77403"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 214116,
+      "sha256": "5c0e0ef1b5e5cf3948d3b0d10f7baf38759893e1c59d99cd8f3d7c6730b77403"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 230062,
+      "sha256": "966aad3c87e37095346c31263b77c84a894cbc5a5f0c86a831ad2000f314da93"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 131873,
+      "sha256": "82cb3f656701523e935b0f91a98089390690319f0f5f6c0bd942ce74c3f24ce7"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 11391,
+      "sha256": "429e055e3e7e301ea157c7517edb4ab5b0d90a6dabc34cd9c33a4fb0b0d825d8"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 214116,
+      "sha256": "5c0e0ef1b5e5cf3948d3b0d10f7baf38759893e1c59d99cd8f3d7c6730b77403"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 144040,
+      "sha256": "9b465202093123146b201711cf5962488d311b2f4ae1569e3ab4d68b665fb55c"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 214116,
+      "sha256": "5c0e0ef1b5e5cf3948d3b0d10f7baf38759893e1c59d99cd8f3d7c6730b77403"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 144040,
+      "sha256": "9b465202093123146b201711cf5962488d311b2f4ae1569e3ab4d68b665fb55c"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 230062,
+      "sha256": "966aad3c87e37095346c31263b77c84a894cbc5a5f0c86a831ad2000f314da93"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 144980,
+      "sha256": "7fab55ace7f50508fbed495a7fb92939c8f5504fa48542f9536f31a5db9d5d39"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 76052,
+      "sha256": "bae6b151d0b01a15b92e3e498a70c5084e10e73a489be648b1f9daf8a1d38ade"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 82006,
+      "sha256": "9158f243efd7c5923ac03a6d885aeaef9f8ec1222990f4f90b459ecde6d44219"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 12,
+    "bytes": 1296786,
+    "inventorySha256": "5a592642a0c44f1df4e53ed2e74ef08ebc9f177b348a41607ba832f49b62b224",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "noor-al-islam-used-cars",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 24,
+    "report": "dealers/noor-al-islam-used-cars/input-review.json"
+  },
+  "after": {
+    "files": 24,
+    "bytes": 2598802
+  }
+}

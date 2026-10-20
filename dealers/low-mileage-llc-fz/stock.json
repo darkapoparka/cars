@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "dealer": "low-mileage-llc-fz",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:03:53.788122Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "listing-11660",
+      "title": "2018 Mercedes Benz AMG E43",
+      "make": "Mercedes Benz",
+      "model": "AMG E43",
+      "year": 2018,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-11660.jpg"
+      ],
+      "sourceUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/Mercedes-Benz/AMG-E43/?id=11660",
+      "observedAt": "2026-10-19T20:03:53.788122Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Luxury Car",
+      "transmission": "Auto",
+      "fuel": "Petrol",
+      "color": "Red",
+      "mileageValue": 33000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-11648",
+      "title": "2018 BMW 750Li",
+      "make": "BMW",
+      "model": "750Li",
+      "year": 2018,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-11648.jpg"
+      ],
+      "sourceUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/BMW/750Li/?id=11648",
+      "observedAt": "2026-10-19T20:03:53.788122Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Sedan",
+      "transmission": "Auto",
+      "fuel": "Petrol",
+      "color": "Black",
+      "mileageValue": 62000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-11654",
+      "title": "2019 Land Rover Range Rover Vogue",
+      "make": "Land Rover",
+      "model": "Range Rover Vogue",
+      "year": 2019,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-11654.jpg"
+      ],
+      "sourceUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/Land-Rover/Range-Rover-Vogue/?id=11654",
+      "observedAt": "2026-10-19T20:03:53.788122Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Luxury Car",
+      "transmission": "Auto",
+      "fuel": "Petrol",
+      "color": "Black",
+      "mileageValue": 107000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

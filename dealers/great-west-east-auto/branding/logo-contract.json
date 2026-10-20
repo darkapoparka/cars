@@ -1,0 +1,287 @@
+{
+  "schemaVersion": 1,
+  "dealer": "great-west-east-auto",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T21:10:22.097563Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "sourced-logo-imagegen-redraw",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "350b0931a67d3843287c976ed5ab900eae0c246799944ebfb177fc572314b463",
+      "sourceSha256": "bc26ba3629583ad4a8140adefb0abd43b6210514b3b7c74ba29263286c20b597"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "3a14b6b47a2f3dfd9f8cc80d6e4d7cb4b987382f27f8d94b8c241ee3f4b52d6a",
+      "sourceSha256": "f5e35fb07569ade8473da68d9fe043b61b967168d4484964ea753403ea2c58b8"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "3a14b6b47a2f3dfd9f8cc80d6e4d7cb4b987382f27f8d94b8c241ee3f4b52d6a",
+      "sourceSha256": "f5e35fb07569ade8473da68d9fe043b61b967168d4484964ea753403ea2c58b8"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "bc26ba3629583ad4a8140adefb0abd43b6210514b3b7c74ba29263286c20b597",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-a695bce2-02ad-4013-8490-ccef969ee988",
+      "modelVersion": null,
+      "sourcePath": "branding/generation-source.png",
+      "sourceSha256": "aa8e9c90715fde0e28bda503879af702f0c9829b89537f89509e306d3b43ac12",
+      "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+      "crop": [
+        0,
+        614,
+        768,
+        1024
+      ]
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "97f50a5256050ac25b0379d7fa7b556b3c06574557ad1d622469eda0416046e4",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-a695bce2-02ad-4013-8490-ccef969ee988",
+      "modelVersion": null,
+      "sourcePath": "branding/generation-source.png",
+      "sourceSha256": "aa8e9c90715fde0e28bda503879af702f0c9829b89537f89509e306d3b43ac12",
+      "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+      "crop": [
+        0,
+        0,
+        768,
+        614
+      ]
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "8baa560404a2d90f26bfadc3494cd560b5c0915a1b2ff2a015800eab9fe982b9"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "bc26ba3629583ad4a8140adefb0abd43b6210514b3b7c74ba29263286c20b597",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a695bce2-02ad-4013-8490-ccef969ee988",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "aa8e9c90715fde0e28bda503879af702f0c9829b89537f89509e306d3b43ac12",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          0,
+          614,
+          768,
+          1024
+        ]
+      },
+      "sourceReference": "dealers/great-west-east-auto/branding/generated-onLight.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "f5e35fb07569ade8473da68d9fe043b61b967168d4484964ea753403ea2c58b8",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a695bce2-02ad-4013-8490-ccef969ee988",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "aa8e9c90715fde0e28bda503879af702f0c9829b89537f89509e306d3b43ac12",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          768,
+          614,
+          1536,
+          1024
+        ]
+      },
+      "sourceReference": "dealers/great-west-east-auto/branding/generated-onDark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "f5e35fb07569ade8473da68d9fe043b61b967168d4484964ea753403ea2c58b8",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a695bce2-02ad-4013-8490-ccef969ee988",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "aa8e9c90715fde0e28bda503879af702f0c9829b89537f89509e306d3b43ac12",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          768,
+          614,
+          1536,
+          1024
+        ]
+      },
+      "sourceReference": "dealers/great-west-east-auto/branding/generated-onDark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "7e00851f13dfa0596d7279afcb9e08d7303579bed6a1fcffe70a82fceb40ef13",
+      "sha256": "bc26ba3629583ad4a8140adefb0abd43b6210514b3b7c74ba29263286c20b597",
+      "crop": {
+        "left": 40,
+        "top": 5,
+        "width": 728,
+        "height": 353
+      },
+      "sourcePath": "branding/generated-onLight.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "239d44b3ec8342d9d463efccf39faafdd6290f3b723f953b0a6ae1f1320e46f0",
+      "sha256": "f5e35fb07569ade8473da68d9fe043b61b967168d4484964ea753403ea2c58b8",
+      "crop": {
+        "left": 21,
+        "top": 5,
+        "width": 714,
+        "height": 348
+      },
+      "sourcePath": "branding/generated-onDark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "239d44b3ec8342d9d463efccf39faafdd6290f3b723f953b0a6ae1f1320e46f0",
+      "sha256": "f5e35fb07569ade8473da68d9fe043b61b967168d4484964ea753403ea2c58b8",
+      "crop": {
+        "left": 21,
+        "top": 5,
+        "width": 714,
+        "height": 348
+      },
+      "sourcePath": "branding/generated-onDark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "a19e4420decf8f75acdadbfc6dad7e5289eac7ab0da8c342f3ff3d71f201867a",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a695bce2-02ad-4013-8490-ccef969ee988",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "aa8e9c90715fde0e28bda503879af702f0c9829b89537f89509e306d3b43ac12",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          0,
+          0,
+          768,
+          614
+        ]
+      },
+      "sourceReference": "dealers/great-west-east-auto/branding/generated-mark.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "95dbcf76ab0eb61db097a8abdc6324ab39076aa50961eaca078fdaf3cd6dbce8",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a695bce2-02ad-4013-8490-ccef969ee988",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "aa8e9c90715fde0e28bda503879af702f0c9829b89537f89509e306d3b43ac12",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          768,
+          0,
+          1536,
+          614
+        ]
+      },
+      "sourceReference": "dealers/great-west-east-auto/branding/generated-markOnDark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "97f50a5256050ac25b0379d7fa7b556b3c06574557ad1d622469eda0416046e4",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a695bce2-02ad-4013-8490-ccef969ee988",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "aa8e9c90715fde0e28bda503879af702f0c9829b89537f89509e306d3b43ac12",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          0,
+          0,
+          768,
+          614
+        ]
+      },
+      "sourceReference": "dealers/great-west-east-auto/branding/generated-mark.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "8baa560404a2d90f26bfadc3494cd560b5c0915a1b2ff2a015800eab9fe982b9",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a695bce2-02ad-4013-8490-ccef969ee988",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "aa8e9c90715fde0e28bda503879af702f0c9829b89537f89509e306d3b43ac12",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          0,
+          0,
+          768,
+          614
+        ]
+      },
+      "sourceReference": "dealers/great-west-east-auto/branding/generated-mark.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-19T21:10:22.097563Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "33d2258d723d90d55b36bde644454b9885b3faa04cf5c10d19d4a954415868ba",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-a695bce2-02ad-4013-8490-ccef969ee988",
+      "modelVersion": null,
+      "sourcePath": "branding/generation-source.png",
+      "sourceSha256": "aa8e9c90715fde0e28bda503879af702f0c9829b89537f89509e306d3b43ac12",
+      "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+      "crop": [
+        768,
+        0,
+        1536,
+        614
+      ]
+    }
+  }
+}

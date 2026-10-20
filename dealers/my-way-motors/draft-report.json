@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "type": "cars-dealer-pack-draft",
+  "slug": "my-way-motors",
+  "dealerId": "ae-dubai-my-way-motors",
+  "status": "input-review-complete",
+  "buildReady": false,
+  "providerWrites": 0,
+  "createdAt": "2026-10-19T20:56:11.648Z",
+  "inventoryKind": "dated-listing-snapshot",
+  "inventoryRecords": 3,
+  "logoReady": true,
+  "missingFacts": [
+    {
+      "field": "prices",
+      "required": false,
+      "reason": "All listing prices are omitted under the public-repository scope."
+    }
+  ],
+  "blocking": [],
+  "stockAcquisition": "explicit-retained-public-snapshot",
+  "liveListingFetchPerformed": true,
+  "next": "Run existing input checks. Native smoke build and hosted approval remain separate."
+}

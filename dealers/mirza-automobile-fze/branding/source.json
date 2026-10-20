@@ -1,0 +1,162 @@
+{
+  "schemaVersion": 1,
+  "dealer": "mirza-automobile-fze",
+  "sourceLogoUrl": "https://static.oneclickdrive.com/application/views/img/company/mirza.png",
+  "sourcePath": "branding/source-original.png",
+  "sourceSha256": "95e0d548bde2d740541b76f3639aa30657122f18edbe3033dbca2a00dcc098d9",
+  "publishedBranding": true,
+  "sourcePage": "https://www.oneclickdrive.com/company/dubai/mirza-automobile-fze",
+  "observedAt": "2026-10-19T20:03:54.028828Z",
+  "creationMethod": "sourced-logo-imagegen-redraw",
+  "approvalStatus": "independent-preview-not-dealer-approved",
+  "dealerApproved": false,
+  "visualReview": "Faithful redraw preserves the published red MIRZA Roman serif lettering and adds the retained AUTOMOBILE FZE designation as secondary text. Compact serif M and white inverse remain stylistically consistent.",
+  "generationPrompt": "Use case: logo-brand. ONE transparent RGBA sprite for ONE dealer, 4 matching assets laid out 2 columns x 2 rows with large fully transparent gutters. Top-left near-square compact mark in dark source colour for WHITE background; top-right matching compact mark entirely WHITE. Bottom-left full horizontal wordmark for white background; bottom-right exactly matching full wordmark entirely WHITE. Crisp flat professional solid ink, bold enough at 32px and 120px. No labels, panels, textures, shadows, glow, gradients or background. Faithful refinement of supplied red MIRZA classical serif wordmark. Preserve exact 'MIRZA' in elegant substantial Roman serif capitals, dark red #AB0D16 with crisp thick stems. Full horizontal logo has 'MIRZA' with small dark-charcoal 'AUTOMOBILE FZE' below, adding the retained business designation without a new motif. Compact mark is the same bold serif M alone, near-square, dark red. Entire inverse white. Keep a quiet, straightforward typographic identity; no shield, crown, car silhouette or extraneous ornament.",
+  "workingLogoPath": "branding/generated-onLight.png",
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T21:00:09.612198Z",
+    "master": {
+      "path": "branding/generated-onLight.png",
+      "sha256": "6490b5841ffeea8ca8283fb29e437877404fb9ca7eea91be2b17344959951cb3",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-9e657c00-e579-4782-888e-36c96b495753",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "33e518f464d4fabe356eff3963cb713269c126ab4ade3837db70b0251d746c26",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          0,
+          614,
+          768,
+          1024
+        ]
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "0bfbfd1c011f3aa17993772ba014e571be417aac504896cb43d3cf81979788a1",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-9e657c00-e579-4782-888e-36c96b495753",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "33e518f464d4fabe356eff3963cb713269c126ab4ade3837db70b0251d746c26",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          0,
+          0,
+          768,
+          614
+        ]
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-markOnDark.png",
+      "sha256": "feaf5f72889bc061fee3436b8852bf06d3d7d5aad185b639b907747846eb9050",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-9e657c00-e579-4782-888e-36c96b495753",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "33e518f464d4fabe356eff3963cb713269c126ab4ade3837db70b0251d746c26",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          768,
+          0,
+          1536,
+          614
+        ]
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-onLight.png",
+        "sha256": "6490b5841ffeea8ca8283fb29e437877404fb9ca7eea91be2b17344959951cb3",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-9e657c00-e579-4782-888e-36c96b495753",
+          "modelVersion": null,
+          "sourcePath": "branding/generation-source.png",
+          "sourceSha256": "33e518f464d4fabe356eff3963cb713269c126ab4ade3837db70b0251d746c26",
+          "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+          "crop": [
+            0,
+            614,
+            768,
+            1024
+          ]
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-onDark.png",
+        "sha256": "2d2eacfe0895676af795740b3867ecdd6c2c760686333c27fe286532f2f32666",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-9e657c00-e579-4782-888e-36c96b495753",
+          "modelVersion": null,
+          "sourcePath": "branding/generation-source.png",
+          "sourceSha256": "33e518f464d4fabe356eff3963cb713269c126ab4ade3837db70b0251d746c26",
+          "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+          "crop": [
+            768,
+            614,
+            1536,
+            1024
+          ]
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-onDark.png",
+        "sha256": "2d2eacfe0895676af795740b3867ecdd6c2c760686333c27fe286532f2f32666",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-9e657c00-e579-4782-888e-36c96b495753",
+          "modelVersion": null,
+          "sourcePath": "branding/generation-source.png",
+          "sourceSha256": "33e518f464d4fabe356eff3963cb713269c126ab4ade3837db70b0251d746c26",
+          "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+          "crop": [
+            768,
+            614,
+            1536,
+            1024
+          ]
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#101820",
+        "#09090b",
+        "#17191c",
+        "#c40101"
+      ],
+      "wordmarkWidths": [
+        120,
+        180
+      ],
+      "notes": "Faithful redraw preserves the published red MIRZA Roman serif lettering and adds the retained AUTOMOBILE FZE designation as secondary text. Compact serif M and white inverse remain stylistically consistent."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-19T21:00:09.612198Z",
+      "widths": [
+        32,
+        64,
+        96
+      ],
+      "backgrounds": [
+        "#ffffff",
+        "#101820",
+        "#c40101"
+      ],
+      "notes": "Substantial serif M is readable at 32px without fine hairlines or ornament."
+    },
+    "compactMarkStatus": "proposed-compact-adaptation-not-dealer-approved"
+  },
+  "usageStatus": "public-preview-only"
+}

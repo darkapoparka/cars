@@ -1,0 +1,317 @@
+{
+  "schemaVersion": 1,
+  "dealer": "passion-motors",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T20:43:14Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-faithful-clean-redraw",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "5273242f188d4157638c4f0a2c5255506edec9f2c938f69f973dda2ac00309b0",
+      "sourceSha256": "8a421cfdceba889c2ca67bf60705cba9d73137d9048cfd2deb3a7ce066f50c57"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "cc24e75df033b7594e1594b9d056e5ce1931b744313ce0c12aa2e3bf8e66a8be",
+      "sourceSha256": "5bd80685730c5b4e6e864285bdcc33d9c6f7f537626cf56f0d7612d90f4a39e7"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "cc24e75df033b7594e1594b9d056e5ce1931b744313ce0c12aa2e3bf8e66a8be",
+      "sourceSha256": "5bd80685730c5b4e6e864285bdcc33d9c6f7f537626cf56f0d7612d90f4a39e7"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "8a421cfdceba889c2ca67bf60705cba9d73137d9048cfd2deb3a7ce066f50c57",
+    "generation": {
+      "tool": "image_gen",
+      "generationId": "exec-dd1f5ff5-6093-4564-8c4b-5aa6ac573097",
+      "identifierKind": "tool-execution-output-identifier",
+      "providerGenerationIdExposed": false,
+      "modelVersion": null,
+      "sourcePath": "branding/generation-source.png",
+      "sourceSha256": "09b71d5f77c2d2365a3f6aa59630498db16d7abf85878608a34d62fe27a553d6",
+      "outputFileName": "exec-dd1f5ff5-6093-4564-8c4b-5aa6ac573097.png",
+      "operation": "deterministic-sprite-crop",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 638,
+        "height": 647
+      }
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "1cd835f16fba06131d14d48e21e78cbb8148598e73939d1e5112b9da790655ac",
+    "generation": {
+      "tool": "image_gen",
+      "generationId": "exec-dd1f5ff5-6093-4564-8c4b-5aa6ac573097",
+      "identifierKind": "tool-execution-output-identifier",
+      "providerGenerationIdExposed": false,
+      "modelVersion": null,
+      "sourcePath": "branding/generation-source.png",
+      "sourceSha256": "09b71d5f77c2d2365a3f6aa59630498db16d7abf85878608a34d62fe27a553d6",
+      "outputFileName": "exec-dd1f5ff5-6093-4564-8c4b-5aa6ac573097.png",
+      "operation": "deterministic-sprite-crop",
+      "crop": {
+        "left": 0,
+        "top": 647,
+        "width": 638,
+        "height": 607
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "460ce67c3d5c454f696f687301958a2bc9705e5e2c534e2a700f727517bb4730"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "8a421cfdceba889c2ca67bf60705cba9d73137d9048cfd2deb3a7ce066f50c57",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-dd1f5ff5-6093-4564-8c4b-5aa6ac573097",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "09b71d5f77c2d2365a3f6aa59630498db16d7abf85878608a34d62fe27a553d6",
+        "outputFileName": "exec-dd1f5ff5-6093-4564-8c4b-5aa6ac573097.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 638,
+          "height": 647
+        }
+      },
+      "sourceReference": "dealers/passion-motors/branding/input-onLight.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "5bd80685730c5b4e6e864285bdcc33d9c6f7f537626cf56f0d7612d90f4a39e7",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-dd1f5ff5-6093-4564-8c4b-5aa6ac573097",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "09b71d5f77c2d2365a3f6aa59630498db16d7abf85878608a34d62fe27a553d6",
+        "outputFileName": "exec-dd1f5ff5-6093-4564-8c4b-5aa6ac573097.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 638,
+          "top": 0,
+          "width": 616,
+          "height": 647
+        }
+      },
+      "sourceReference": "dealers/passion-motors/branding/input-onDark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "5bd80685730c5b4e6e864285bdcc33d9c6f7f537626cf56f0d7612d90f4a39e7",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-dd1f5ff5-6093-4564-8c4b-5aa6ac573097",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "09b71d5f77c2d2365a3f6aa59630498db16d7abf85878608a34d62fe27a553d6",
+        "outputFileName": "exec-dd1f5ff5-6093-4564-8c4b-5aa6ac573097.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 638,
+          "top": 0,
+          "width": 616,
+          "height": 647
+        }
+      },
+      "sourceReference": "dealers/passion-motors/branding/input-onDark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "ab7991e74ee9412592574230f24efbebf8ec29cc9aa3c1e3237b524f6fb28595",
+      "sha256": "8a421cfdceba889c2ca67bf60705cba9d73137d9048cfd2deb3a7ce066f50c57",
+      "crop": {
+        "left": 14,
+        "top": 272,
+        "width": 619,
+        "height": 181
+      },
+      "sourcePath": "branding/input-onLight.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "81949c846aa0e7ea2afc8c31f1c5411f4c814574d85a9e61f706c3f2e24a7e16",
+      "sha256": "5bd80685730c5b4e6e864285bdcc33d9c6f7f537626cf56f0d7612d90f4a39e7",
+      "crop": {
+        "left": 5,
+        "top": 272,
+        "width": 602,
+        "height": 182
+      },
+      "sourcePath": "branding/input-onDark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "81949c846aa0e7ea2afc8c31f1c5411f4c814574d85a9e61f706c3f2e24a7e16",
+      "sha256": "5bd80685730c5b4e6e864285bdcc33d9c6f7f537626cf56f0d7612d90f4a39e7",
+      "crop": {
+        "left": 5,
+        "top": 272,
+        "width": 602,
+        "height": 182
+      },
+      "sourcePath": "branding/input-onDark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "6284d1090afb427d4b48472876aa58fc38ccedb19062ae549a0f4d29585862fa",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-dd1f5ff5-6093-4564-8c4b-5aa6ac573097",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "09b71d5f77c2d2365a3f6aa59630498db16d7abf85878608a34d62fe27a553d6",
+        "outputFileName": "exec-dd1f5ff5-6093-4564-8c4b-5aa6ac573097.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 0,
+          "top": 647,
+          "width": 638,
+          "height": 607
+        }
+      },
+      "sourceReference": "dealers/passion-motors/branding/input-mark.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "f420644b4ca3feec3b762d6046ef5f14b68868618a77415d8458aa2030eead63",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-dd1f5ff5-6093-4564-8c4b-5aa6ac573097",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "09b71d5f77c2d2365a3f6aa59630498db16d7abf85878608a34d62fe27a553d6",
+        "outputFileName": "exec-dd1f5ff5-6093-4564-8c4b-5aa6ac573097.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 638,
+          "top": 647,
+          "width": 616,
+          "height": 607
+        }
+      },
+      "sourceReference": "dealers/passion-motors/branding/input-markOnDark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "1cd835f16fba06131d14d48e21e78cbb8148598e73939d1e5112b9da790655ac",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-dd1f5ff5-6093-4564-8c4b-5aa6ac573097",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "09b71d5f77c2d2365a3f6aa59630498db16d7abf85878608a34d62fe27a553d6",
+        "outputFileName": "exec-dd1f5ff5-6093-4564-8c4b-5aa6ac573097.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 0,
+          "top": 647,
+          "width": 638,
+          "height": 607
+        }
+      },
+      "sourceReference": "dealers/passion-motors/branding/input-mark.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "460ce67c3d5c454f696f687301958a2bc9705e5e2c534e2a700f727517bb4730",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-dd1f5ff5-6093-4564-8c4b-5aa6ac573097",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "09b71d5f77c2d2365a3f6aa59630498db16d7abf85878608a34d62fe27a553d6",
+        "outputFileName": "exec-dd1f5ff5-6093-4564-8c4b-5aa6ac573097.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 0,
+          "top": 647,
+          "width": 638,
+          "height": 607
+        }
+      },
+      "sourceReference": "dealers/passion-motors/branding/input-mark.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-19T20:43:14Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "c21876e28912e635f0ac3b8a3aa4163a74a42722b8229a27ddfed1f7b2050a99",
+    "generation": {
+      "tool": "image_gen",
+      "generationId": "exec-dd1f5ff5-6093-4564-8c4b-5aa6ac573097",
+      "identifierKind": "tool-execution-output-identifier",
+      "providerGenerationIdExposed": false,
+      "modelVersion": null,
+      "sourcePath": "branding/generation-source.png",
+      "sourceSha256": "09b71d5f77c2d2365a3f6aa59630498db16d7abf85878608a34d62fe27a553d6",
+      "outputFileName": "exec-dd1f5ff5-6093-4564-8c4b-5aa6ac573097.png",
+      "operation": "deterministic-sprite-crop",
+      "crop": {
+        "left": 638,
+        "top": 647,
+        "width": 616,
+        "height": 607
+      }
+    }
+  }
+}

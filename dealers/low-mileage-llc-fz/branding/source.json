@@ -1,0 +1,158 @@
+{
+  "schemaVersion": 1,
+  "dealer": "low-mileage-llc-fz",
+  "sourcePage": "https://www.oneclickdrive.com/company/dubai/low-mileage-l.l.c-fz",
+  "observedAt": "2026-10-19T20:03:53.788122Z",
+  "creationMethod": "imagegen-proposal",
+  "approvalStatus": "independent-preview-not-dealer-approved",
+  "dealerApproved": false,
+  "visualReview": "The source catalogue provides a generic company/1.png placeholder, and no attributable published original was found in bounded public research. Dark-teal LM/dial and LOW MILEAGE LLC FZ wordmark are a clearly marked independent proposal.",
+  "generationPrompt": "Use case: logo-brand. ONE transparent RGBA sprite for ONE dealer, 4 matching assets in 2 columns x 2 rows with LARGE fully transparent gutters. Top-left compact near-square mark in dark ink for WHITE backgrounds; top-right matching mark entirely WHITE. Bottom-left horizontal logo in dark brand colour; bottom-right matching logo entirely WHITE. Flat crisp solid artwork with truly empty transparent space between all strokes and letters, open counters, no shadow/glow/halo/fog/texture/background. Keep letter spacing generous and counter spaces open; avoid solid dense wordmark blocks. Independent logo proposal for LOW MILEAGE, a Dubai vehicle seller whose catalogue uses a generic logo placeholder. Compact symbol: distinctive robust joined LM monogram inside an incomplete round dial, with only two small tick cuts, suggesting an odometer without numbers or speed claims. Near-square, dark teal #145B55 for light backgrounds. Full horizontal logo same compact symbol left and exact 'LOW MILEAGE' over smaller 'LLC FZ' right in clean substantial uppercase sans serif, generous tracking. Entire inverse pure white. Clear professional restrained dealership identity with no car silhouette, shield, crown, made-up slogan, mileage numbers, endorsement or certification. Proposal label belongs to metadata, not artwork.",
+  "workingLogoPath": "branding/generated-onLight.png",
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T21:11:18.645923Z",
+    "master": {
+      "path": "branding/generated-onLight.png",
+      "sha256": "2ef2f349c89aed37a5fcd092cc63dc734d07319489ea36e7d9ebba82107e436f",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-62556b7a-0d8e-4292-8018-c3ff8f19b22c",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "6fbdac73d3ad828b53eda782e8e62bc3115807081710cdb2c6c0e8d7a3aa69e9",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          0,
+          614,
+          768,
+          1024
+        ]
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "c51ac55b761ab81cf02b21500b09a74fd493f361def0c413eee2c11719cfe583",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-62556b7a-0d8e-4292-8018-c3ff8f19b22c",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "6fbdac73d3ad828b53eda782e8e62bc3115807081710cdb2c6c0e8d7a3aa69e9",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          0,
+          0,
+          768,
+          614
+        ]
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-markOnDark.png",
+      "sha256": "64b9b4575daa4ad3c5dae9b659535dea9008f8716b89330216a28f1fa03717a8",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-62556b7a-0d8e-4292-8018-c3ff8f19b22c",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "6fbdac73d3ad828b53eda782e8e62bc3115807081710cdb2c6c0e8d7a3aa69e9",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          768,
+          0,
+          1536,
+          614
+        ]
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-onLight.png",
+        "sha256": "2ef2f349c89aed37a5fcd092cc63dc734d07319489ea36e7d9ebba82107e436f",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-62556b7a-0d8e-4292-8018-c3ff8f19b22c",
+          "modelVersion": null,
+          "sourcePath": "branding/generation-source.png",
+          "sourceSha256": "6fbdac73d3ad828b53eda782e8e62bc3115807081710cdb2c6c0e8d7a3aa69e9",
+          "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+          "crop": [
+            0,
+            614,
+            768,
+            1024
+          ]
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-onDark.png",
+        "sha256": "ea98ebddb2951afb1eaf38651ed7a8477b6aea150c335b3d85eeb67770bf6f25",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-62556b7a-0d8e-4292-8018-c3ff8f19b22c",
+          "modelVersion": null,
+          "sourcePath": "branding/generation-source.png",
+          "sourceSha256": "6fbdac73d3ad828b53eda782e8e62bc3115807081710cdb2c6c0e8d7a3aa69e9",
+          "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+          "crop": [
+            768,
+            614,
+            1536,
+            1024
+          ]
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-onDark.png",
+        "sha256": "ea98ebddb2951afb1eaf38651ed7a8477b6aea150c335b3d85eeb67770bf6f25",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-62556b7a-0d8e-4292-8018-c3ff8f19b22c",
+          "modelVersion": null,
+          "sourcePath": "branding/generation-source.png",
+          "sourceSha256": "6fbdac73d3ad828b53eda782e8e62bc3115807081710cdb2c6c0e8d7a3aa69e9",
+          "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+          "crop": [
+            768,
+            614,
+            1536,
+            1024
+          ]
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#101820",
+        "#09090b",
+        "#17191c",
+        "#c40101"
+      ],
+      "wordmarkWidths": [
+        120,
+        180
+      ],
+      "notes": "The source catalogue provides a generic company/1.png placeholder, and no attributable published original was found in bounded public research. Dark-teal LM/dial and LOW MILEAGE LLC FZ wordmark are a clearly marked independent proposal."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-19T21:11:18.645923Z",
+      "widths": [
+        32,
+        64,
+        96
+      ],
+      "backgrounds": [
+        "#ffffff",
+        "#101820",
+        "#c40101"
+      ],
+      "notes": "Simple LM within an interrupted dial is reviewed at 32px on white/dark/accent; no mileage number or service claim is implied."
+    },
+    "compactMarkStatus": "proposed-compact-adaptation-not-dealer-approved"
+  },
+  "usageStatus": "public-preview-only"
+}

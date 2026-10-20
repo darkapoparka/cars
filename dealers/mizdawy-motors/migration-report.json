@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "mizdawy-motors",
+  "previousSlug": "mizdawy-motors",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:03:47.181Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 3,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-dubai-mizdawy-motors",
+    "position": 250
+  },
+  "before": {
+    "files": 37,
+    "bytes": 3667766
+  },
+  "afterBeforeReview": {
+    "files": 21,
+    "bytes": 1333455
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 127314,
+      "sha256": "6b8b04a24d54c4d96f8842f029e0a58629f17b526386f4c52aae3187f1156207"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 121611,
+      "sha256": "924e1de8cbc8b1677fac0a1bc51cfce1459bed38aad022a3a3e97b191b6253ff"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 127314,
+      "sha256": "6b8b04a24d54c4d96f8842f029e0a58629f17b526386f4c52aae3187f1156207"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 191750,
+      "sha256": "db2055d8b68e3da3971104fa1f3b24d19805dc35bc71feec72dfdf879fdec258"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 175956,
+      "sha256": "53611ca8824ca76f24a3b140ee199e08c46d08920c343dd82793716ad6c4a2d2"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 175956,
+      "sha256": "53611ca8824ca76f24a3b140ee199e08c46d08920c343dd82793716ad6c4a2d2"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 191750,
+      "sha256": "db2055d8b68e3da3971104fa1f3b24d19805dc35bc71feec72dfdf879fdec258"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 127314,
+      "sha256": "6b8b04a24d54c4d96f8842f029e0a58629f17b526386f4c52aae3187f1156207"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 10587,
+      "sha256": "d2ad33d4a845493364a20a894dbdb7e722e0f51267ca1c299c6aa8d0e87501a1"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 175956,
+      "sha256": "53611ca8824ca76f24a3b140ee199e08c46d08920c343dd82793716ad6c4a2d2"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 122292,
+      "sha256": "be9459e63c8b401b359568bcce11da37bba647be7da1bd83326c1839bdf2f4b9"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 175956,
+      "sha256": "53611ca8824ca76f24a3b140ee199e08c46d08920c343dd82793716ad6c4a2d2"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 122292,
+      "sha256": "be9459e63c8b401b359568bcce11da37bba647be7da1bd83326c1839bdf2f4b9"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 191750,
+      "sha256": "db2055d8b68e3da3971104fa1f3b24d19805dc35bc71feec72dfdf879fdec258"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 126786,
+      "sha256": "e3938c85ea49915f1a6198560214d0d83008bc2b266ab57d801d00ed2e82ab68"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 83310,
+      "sha256": "bfb6da59e45636eef5ce8f3015f8eeb0ff36e12f9770a3203608451241dfb856"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 90214,
+      "sha256": "1d60a3807f78e8f27e9ec8c389b3c405040ee5836ded49488d2b724251f170c5"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 10,
+    "bytes": 661049,
+    "inventorySha256": "cf5a4ac01659342428319859c245c72e05e1e00f0a5cb2bafee3c3b4a9845f13",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "mizdawy-motors",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 23,
+    "report": "dealers/mizdawy-motors/input-review.json"
+  },
+  "after": {
+    "files": 23,
+    "bytes": 1341942
+  }
+}

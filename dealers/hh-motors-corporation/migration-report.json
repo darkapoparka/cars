@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "hh-motors-corporation",
+  "previousSlug": "hh-motors-corporation",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:04:22.993Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 3,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-dubai-hh-motors-corporation",
+    "position": 232
+  },
+  "before": {
+    "files": 39,
+    "bytes": 2433343
+  },
+  "afterBeforeReview": {
+    "files": 23,
+    "bytes": 1153579
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 45348,
+      "sha256": "4bb76694dc0b30f396b5a206a0bbc1d63dd339b43a2f716180623d2bee865b6b"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 125146,
+      "sha256": "d2b9bef76674364227c28b05e597d3adf0abbed0da39078166a80549f331d620"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 45348,
+      "sha256": "4bb76694dc0b30f396b5a206a0bbc1d63dd339b43a2f716180623d2bee865b6b"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 61394,
+      "sha256": "6c4979b65de67702f714d686f634d85cd4f9d22366e0c58b9309db4ce46f2781"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 126428,
+      "sha256": "69e346a51931c62b05f32abb949a5b63e119206ced388d25a46ea930c53d8710"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 126428,
+      "sha256": "69e346a51931c62b05f32abb949a5b63e119206ced388d25a46ea930c53d8710"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 61394,
+      "sha256": "6c4979b65de67702f714d686f634d85cd4f9d22366e0c58b9309db4ce46f2781"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 45348,
+      "sha256": "4bb76694dc0b30f396b5a206a0bbc1d63dd339b43a2f716180623d2bee865b6b"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 6252,
+      "sha256": "7558fa296d45f5e035234337b9149d3266b73675f87703a70275677940c5a34c"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 126428,
+      "sha256": "69e346a51931c62b05f32abb949a5b63e119206ced388d25a46ea930c53d8710"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 87556,
+      "sha256": "4330c031c9860ccbdd87d6755bc2fd1a8d72eb647e5e0829ead78529b978d64a"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 126428,
+      "sha256": "69e346a51931c62b05f32abb949a5b63e119206ced388d25a46ea930c53d8710"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 87556,
+      "sha256": "4330c031c9860ccbdd87d6755bc2fd1a8d72eb647e5e0829ead78529b978d64a"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 61394,
+      "sha256": "6c4979b65de67702f714d686f634d85cd4f9d22366e0c58b9309db4ce46f2781"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 34108,
+      "sha256": "475affa3abfe52ce9adc7e6f73658c2c80caf0b961cbe8a3f7525e544d985949"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 90538,
+      "sha256": "0bda011839bd9fc52f7ce070435b0b4ffb95bab573264471f8a18cc82f7f7db8"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 26492,
+      "sha256": "851172f06ca9c95aca473b3c46422f0c8a51e0c9df08696e3e74d1f096d97769"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 12,
+    "bytes": 577146,
+    "inventorySha256": "0c59894ddaa5d26614783374d69de6c382332001e4ac3b3b2bf0559789dad0b8",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "hh-motors-corporation",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 25,
+    "report": "dealers/hh-motors-corporation/input-review.json"
+  },
+  "after": {
+    "files": 25,
+    "bytes": 1162402
+  }
+}

@@ -1,0 +1,301 @@
+{
+  "schemaVersion": 1,
+  "dealer": "my-way-motors",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T21:08:42Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "retained-original-with-imagegen-surface-and-compact-variants",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "40ddbf94834a7dd67b23d6b786b60e65a36f7702a0a8860d99888ed9b0184cf4",
+      "sourceSha256": "5c502f25e433f832554494d9ddfc7edfd5812e5f9fead1fdb954962417f67696"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "b4ec30d89860c58f042866f858bc89d0a8970c85444a9d5afd74ce65240be295",
+      "sourceSha256": "c3c6a94c7aca144f0522d104fc3fa0fb580f46f1ea59a82f76fcbef1cda78a4b"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "b4ec30d89860c58f042866f858bc89d0a8970c85444a9d5afd74ce65240be295",
+      "sourceSha256": "c3c6a94c7aca144f0522d104fc3fa0fb580f46f1ea59a82f76fcbef1cda78a4b"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "5c502f25e433f832554494d9ddfc7edfd5812e5f9fead1fdb954962417f67696",
+    "retainedSource": {
+      "kind": "retained-reviewed-raster",
+      "reference": "dealers/my-way-motors/branding/public-original.png",
+      "sha256": "be33742e2e58138707fb75318ebc9f9cd0c4ddf0d5710c654ead251a357c0711",
+      "reviewReference": "dealers/my-way-motors/branding/source.json",
+      "reviewSha256": "17c2bdd68390f534d97a9f4f1e9af5bcf4e1156dbe15b2a91b1fa223f7bdbf18",
+      "sourceUrl": "https://mywayautos.com/wp-content/uploads/2025/07/My-Way-MOTORS-FZE-2-1-e1753367852190.png",
+      "observedAt": "2026-10-19T20:55:17Z"
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "e5c0b7a538c6a6b3e72eb9d2243454b4779e3e98d7ee0978241c61c21f3c2b84",
+    "generation": {
+      "tool": "image_gen",
+      "generationId": "exec-c9a8875c-80dd-429c-b956-a9f23cb7eceb",
+      "identifierKind": "tool-execution-output-identifier",
+      "providerGenerationIdExposed": false,
+      "modelVersion": null,
+      "sourcePath": "branding/generation-source.png",
+      "sourceSha256": "2ab50587d0a10eeafb0fa96b25a7ca30341b1ea6c8ca774299af2a366e82d88e",
+      "outputFileName": "exec-c9a8875c-80dd-429c-b956-a9f23cb7eceb.png",
+      "operation": "deterministic-sprite-crop",
+      "crop": {
+        "left": 0,
+        "top": 447,
+        "width": 883,
+        "height": 440
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "f731c166753427ba0c0eb447b9ed38d34f4740ca2b479819975523cddc2ea47a"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "5c502f25e433f832554494d9ddfc7edfd5812e5f9fead1fdb954962417f67696",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "dealers/my-way-motors/branding/public-original.png",
+        "sha256": "be33742e2e58138707fb75318ebc9f9cd0c4ddf0d5710c654ead251a357c0711",
+        "reviewReference": "dealers/my-way-motors/branding/source.json",
+        "reviewSha256": "17c2bdd68390f534d97a9f4f1e9af5bcf4e1156dbe15b2a91b1fa223f7bdbf18",
+        "sourceUrl": "https://mywayautos.com/wp-content/uploads/2025/07/My-Way-MOTORS-FZE-2-1-e1753367852190.png",
+        "observedAt": "2026-10-19T20:55:17Z"
+      },
+      "sourceReference": "dealers/my-way-motors/branding/public-original.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "c3c6a94c7aca144f0522d104fc3fa0fb580f46f1ea59a82f76fcbef1cda78a4b",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-c9a8875c-80dd-429c-b956-a9f23cb7eceb",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "2ab50587d0a10eeafb0fa96b25a7ca30341b1ea6c8ca774299af2a366e82d88e",
+        "outputFileName": "exec-c9a8875c-80dd-429c-b956-a9f23cb7eceb.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 883,
+          "top": 0,
+          "width": 891,
+          "height": 447
+        }
+      },
+      "sourceReference": "dealers/my-way-motors/branding/input-onDark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "c3c6a94c7aca144f0522d104fc3fa0fb580f46f1ea59a82f76fcbef1cda78a4b",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-c9a8875c-80dd-429c-b956-a9f23cb7eceb",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "2ab50587d0a10eeafb0fa96b25a7ca30341b1ea6c8ca774299af2a366e82d88e",
+        "outputFileName": "exec-c9a8875c-80dd-429c-b956-a9f23cb7eceb.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 883,
+          "top": 0,
+          "width": 891,
+          "height": 447
+        }
+      },
+      "sourceReference": "dealers/my-way-motors/branding/input-onDark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "be33742e2e58138707fb75318ebc9f9cd0c4ddf0d5710c654ead251a357c0711",
+      "sha256": "5c502f25e433f832554494d9ddfc7edfd5812e5f9fead1fdb954962417f67696",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1396,
+        "height": 276
+      },
+      "sourcePath": "branding/public-original.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "bf7a79ea13050d67ec45a3fb625bde072a9093ca0e2557f55dcd5ae5933985b6",
+      "sha256": "c3c6a94c7aca144f0522d104fc3fa0fb580f46f1ea59a82f76fcbef1cda78a4b",
+      "crop": {
+        "left": 9,
+        "top": 152,
+        "width": 882,
+        "height": 196
+      },
+      "sourcePath": "branding/input-onDark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "bf7a79ea13050d67ec45a3fb625bde072a9093ca0e2557f55dcd5ae5933985b6",
+      "sha256": "c3c6a94c7aca144f0522d104fc3fa0fb580f46f1ea59a82f76fcbef1cda78a4b",
+      "crop": {
+        "left": 9,
+        "top": 152,
+        "width": 882,
+        "height": 196
+      },
+      "sourcePath": "branding/input-onDark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "5cf0f2b37c849c2594dfbed842fa000e0df741d664e52e1112995b242480143a",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-c9a8875c-80dd-429c-b956-a9f23cb7eceb",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "2ab50587d0a10eeafb0fa96b25a7ca30341b1ea6c8ca774299af2a366e82d88e",
+        "outputFileName": "exec-c9a8875c-80dd-429c-b956-a9f23cb7eceb.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 0,
+          "top": 447,
+          "width": 883,
+          "height": 440
+        }
+      },
+      "sourceReference": "dealers/my-way-motors/branding/input-mark.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "3aece387650db1939a0384e845e755bf9ebc9750a3ae91d2033ec7d64c5819f8",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-c9a8875c-80dd-429c-b956-a9f23cb7eceb",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "2ab50587d0a10eeafb0fa96b25a7ca30341b1ea6c8ca774299af2a366e82d88e",
+        "outputFileName": "exec-c9a8875c-80dd-429c-b956-a9f23cb7eceb.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 883,
+          "top": 447,
+          "width": 891,
+          "height": 440
+        }
+      },
+      "sourceReference": "dealers/my-way-motors/branding/input-markOnDark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "e5c0b7a538c6a6b3e72eb9d2243454b4779e3e98d7ee0978241c61c21f3c2b84",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-c9a8875c-80dd-429c-b956-a9f23cb7eceb",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "2ab50587d0a10eeafb0fa96b25a7ca30341b1ea6c8ca774299af2a366e82d88e",
+        "outputFileName": "exec-c9a8875c-80dd-429c-b956-a9f23cb7eceb.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 0,
+          "top": 447,
+          "width": 883,
+          "height": 440
+        }
+      },
+      "sourceReference": "dealers/my-way-motors/branding/input-mark.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "f731c166753427ba0c0eb447b9ed38d34f4740ca2b479819975523cddc2ea47a",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-c9a8875c-80dd-429c-b956-a9f23cb7eceb",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "2ab50587d0a10eeafb0fa96b25a7ca30341b1ea6c8ca774299af2a366e82d88e",
+        "outputFileName": "exec-c9a8875c-80dd-429c-b956-a9f23cb7eceb.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 0,
+          "top": 447,
+          "width": 883,
+          "height": 440
+        }
+      },
+      "sourceReference": "dealers/my-way-motors/branding/input-mark.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-19T21:08:42Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "59a893d9d0080c131760d97d7873c967be4f1c1ba379ec5a63921069772c35b8",
+    "generation": {
+      "tool": "image_gen",
+      "generationId": "exec-c9a8875c-80dd-429c-b956-a9f23cb7eceb",
+      "identifierKind": "tool-execution-output-identifier",
+      "providerGenerationIdExposed": false,
+      "modelVersion": null,
+      "sourcePath": "branding/generation-source.png",
+      "sourceSha256": "2ab50587d0a10eeafb0fa96b25a7ca30341b1ea6c8ca774299af2a366e82d88e",
+      "outputFileName": "exec-c9a8875c-80dd-429c-b956-a9f23cb7eceb.png",
+      "operation": "deterministic-sprite-crop",
+      "crop": {
+        "left": 883,
+        "top": 447,
+        "width": 891,
+        "height": 440
+      }
+    }
+  }
+}

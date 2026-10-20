@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "slug": "motorx-group",
+  "dealerId": "ae-dubai-motorx-group",
+  "business": {
+    "name": "MotorX Group",
+    "city": "Dubai",
+    "region": "Dubai",
+    "countryCode": "AE",
+    "currency": "AED",
+    "distanceUnit": "km",
+    "locale": "en-AE",
+    "address": "Meydan , Nad Al shiba ,  Dubai , UAE",
+    "phone": "+971504524998",
+    "phoneDisplay": "+971504524998",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://www.dubicars.com/dealers/dubai-motorx-group-3189",
+    "hours": "",
+    "sourceUrl": "https://www.dubicars.com/dealers/dubai-motorx-group-3189",
+    "observedAt": "2026-10-19T20:30:19Z",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://www.dubicars.com/dealers/dubai-motorx-group-3189",
+      "observedAt": "2026-10-19T20:30:19Z",
+      "supports": [
+        "public-business-identity",
+        "business-contact",
+        "address",
+        "attributed-public-stock"
+      ]
+    }
+  ]
+}

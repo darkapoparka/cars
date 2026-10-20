@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "dealer": "great-west-east-auto",
+  "researchId": "ae-dubai-great-west-east-auto",
+  "observedAt": "2026-10-19T20:03:53.586498Z",
+  "liveFetchPerformed": true,
+  "businessSources": [
+    {
+      "url": "https://auto.ae/geartweauto/",
+      "observedAt": "2026-10-19T20:03:53.586498Z",
+      "supports": [
+        "dealer-name",
+        "dealer-attributed-listings",
+        "dealer-attributed-photos",
+        "public-business-call-line",
+        "address",
+        "published-hours"
+      ]
+    }
+  ],
+  "stockMode": "dated-listing-snapshot",
+  "inventoryCountMeaning": "Selected currently advertised public records, not a count or confirmation of available physical stock.",
+  "media": [
+    {
+      "path": "dealer-stock/listing-259902.jpg",
+      "sourceUrl": "https://auto.ae/image/ae/s:332/plain/https://auto-ae-prod-storage.storage.googleapis.com/auto_dubai_nissan_patrol_sale_259902774053500t",
+      "listingUrl": "https://auto.ae/dubai/sale/car/nissan/nissan-patrol-vii-y63-2026/id/259902/",
+      "observedAt": "2026-10-19T20:03:53.586498Z",
+      "downloadedSha256": "9bc4162b7be2d39651910c459bf6b3307024bbcafd3b81cb735d8d8880d46419",
+      "downloadedDimensions": [
+        332,
+        249
+      ],
+      "sha256": "0d9ba2c0b9b2a61db412cbb0c51927380c527db60001a154475254d8b09dfceb",
+      "bytes": 16822,
+      "dimensions": [
+        332,
+        249
+      ],
+      "modification": "Proportional resize without enlargement to at most 1280px; JPEG encode; no content changes."
+    },
+    {
+      "path": "dealer-stock/listing-259900.jpg",
+      "sourceUrl": "https://auto.ae/image/ae/s:332/plain/https://auto-ae-prod-storage.storage.googleapis.com/auto_dubai_nissan_patrol_sale_259900774052680t",
+      "listingUrl": "https://auto.ae/dubai/sale/car/nissan/nissan-patrol-vii-y63-2026/id/259900/",
+      "observedAt": "2026-10-19T20:03:53.586498Z",
+      "downloadedSha256": "f5ddf1f31aa1c7dff5f28c0c7f5fd1d0ec6bcc1b3da0de136a15f73316290530",
+      "downloadedDimensions": [
+        332,
+        187
+      ],
+      "sha256": "48d06b4c1302513f13629a531cfb3dc51b1905fc58013b28b0ddc377f034e438",
+      "bytes": 16051,
+      "dimensions": [
+        332,
+        187
+      ],
+      "modification": "Proportional resize without enlargement to at most 1280px; JPEG encode; no content changes."
+    },
+    {
+      "path": "dealer-stock/listing-259898.jpg",
+      "sourceUrl": "https://auto.ae/image/ae/s:332/plain/https://auto-ae-prod-storage.storage.googleapis.com/auto_dubai_nissan_patrol_sale_259898774051230t",
+      "listingUrl": "https://auto.ae/dubai/sale/car/nissan/nissan-patrol-vii-y63-2026/id/259898/",
+      "observedAt": "2026-10-19T20:03:53.586498Z",
+      "downloadedSha256": "1349ada4f90f4745b604c7a17f5cfa4886325f6bf5f87287d303ec4093174d3d",
+      "downloadedDimensions": [
+        332,
+        443
+      ],
+      "sha256": "3be3fc7259f553e0af709771af006e73b2c33c5f3f7b485fdd944d5239de47b1",
+      "bytes": 36991,
+      "dimensions": [
+        332,
+        443
+      ],
+      "modification": "Proportional resize without enlargement to at most 1280px; JPEG encode; no content changes."
+    }
+  ],
+  "researchLimitations": [
+    "Published hours from AUTO.AE showroom page; not independently confirmed."
+  ],
+  "excludedSourceContent": [
+    "Personal names and personal or ambiguous emails",
+    "Marketplace relay numbers",
+    "Prices",
+    "Unsupported warranties, inspections, ratings and finance promises"
+  ],
+  "dealerApproval": "unknown"
+}

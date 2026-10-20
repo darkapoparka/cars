@@ -1,0 +1,182 @@
+{
+  "schemaVersion": 1,
+  "dealer": "pinnacle-automotive",
+  "status": "reviewed-independent-redraw",
+  "realLogoFirst": true,
+  "publicSources": [
+    {
+      "url": "https://www.dubicars.com/dealers/dubai-pinnacle-automotive-international-2545",
+      "observedAt": "2026-10-19T20:16:36Z"
+    }
+  ],
+  "originals": [
+    {
+      "path": "branding/public-original.jpg",
+      "sha256": "07d165f22b7d306307826bc677c29b42c37327b1bc8d9e4da06c19f9f91334a9",
+      "url": "https://www.dubicars.com/images/89d10d/z_180x120/pinnacle-automotive-international-fzc/logo-29391c12-98b7-4dec-9f25-1e76a71ddac2.jpg",
+      "observedAt": "2026-10-19T20:16:36Z"
+    }
+  ],
+  "creationMethod": "imagegen-faithful-clean-redraw",
+  "dealerApproved": false,
+  "logoSource": "redraw",
+  "researchSummary": "Public dealer artwork reviewed; original retained and matched identity redrawn for transparent surfaces.",
+  "generation": {
+    "tool": "image_gen",
+    "generationId": "exec-03a6f1b0-bb1d-4c82-be71-0558210e0fb4",
+    "identifierKind": "tool-execution-output-identifier",
+    "modelVersion": null,
+    "sourcePath": "branding/generation-source.png",
+    "sourceSha256": "faff294543f2ef06fc2a996af799b166fa43b42a674ca82692a1c7919719536c",
+    "nativeDimensions": {
+      "width": 1254,
+      "height": 1254
+    },
+    "prompt": "Faithful professional redraw of this PINNACLE AUTOMOTIVE logo. Preserve angular folded P emblem and strong red colour. The polished wordmark should read exactly \"PINNACLE\" with \"AUTOMOTIVE\" below. Keep compact mark as the original unique angular P form; do not add mountains or automobiles. Crisp flat geometry, carefully balanced typography. Exactly four separated production assets on one transparent square canvas in a 2 by 2 grid. Top left full logo in its authentic dark/brand colours for white. Top right the SAME full logo drawn entirely in solid WHITE INK, all text and emblem white monochrome for charcoal and RED backgrounds. Bottom left compact emblem alone in brand/dark colours. Bottom right same compact emblem entirely WHITE monochrome. Each well inside its quadrant with broad transparent margins and gutters. Entire empty backdrop truly transparent alpha. No labels, no panels, no lines, no shadows, no 3D, no gradients. Correct spelling, beautiful legible typography and clean vector-like edges. Compact mark bold enough for 32px."
+  },
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T20:16:36Z",
+    "master": {
+      "path": "branding/input-onLight.png",
+      "sha256": "c6d8108e183c5e4962622eeafb1b03ffe0dfda4238c68c21d8acee30624ab8e6",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-03a6f1b0-bb1d-4c82-be71-0558210e0fb4",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "faff294543f2ef06fc2a996af799b166fa43b42a674ca82692a1c7919719536c",
+        "outputFileName": "exec-03a6f1b0-bb1d-4c82-be71-0558210e0fb4.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 633,
+          "height": 684
+        }
+      }
+    },
+    "mark": {
+      "path": "branding/input-mark.png",
+      "sha256": "d42df11ba33c04cc87d0a90f4f215356a3da11b9cc742271273a5c5c8a3b89b9",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-03a6f1b0-bb1d-4c82-be71-0558210e0fb4",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "faff294543f2ef06fc2a996af799b166fa43b42a674ca82692a1c7919719536c",
+        "outputFileName": "exec-03a6f1b0-bb1d-4c82-be71-0558210e0fb4.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 0,
+          "top": 684,
+          "width": 633,
+          "height": 570
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/input-markOnDark.png",
+      "sha256": "f82555d11d4a1c3e910c1f690e905bbb4ce7be06c19effe85e150e170d0de77e",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-03a6f1b0-bb1d-4c82-be71-0558210e0fb4",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "faff294543f2ef06fc2a996af799b166fa43b42a674ca82692a1c7919719536c",
+        "outputFileName": "exec-03a6f1b0-bb1d-4c82-be71-0558210e0fb4.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 633,
+          "top": 684,
+          "width": 621,
+          "height": 570
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/input-onLight.png",
+        "sha256": "c6d8108e183c5e4962622eeafb1b03ffe0dfda4238c68c21d8acee30624ab8e6",
+        "generation": {
+          "tool": "image_gen",
+          "generationId": "exec-03a6f1b0-bb1d-4c82-be71-0558210e0fb4",
+          "identifierKind": "tool-execution-output-identifier",
+          "providerGenerationIdExposed": false,
+          "modelVersion": null,
+          "sourcePath": "branding/generation-source.png",
+          "sourceSha256": "faff294543f2ef06fc2a996af799b166fa43b42a674ca82692a1c7919719536c",
+          "outputFileName": "exec-03a6f1b0-bb1d-4c82-be71-0558210e0fb4.png",
+          "operation": "deterministic-sprite-crop",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 633,
+            "height": 684
+          }
+        }
+      },
+      "onDark": {
+        "path": "branding/input-onDark.png",
+        "sha256": "9ee1604b79f46580ceb878bc038fcf51c133fe3f419480da5976652eaa1b8dbd",
+        "generation": {
+          "tool": "image_gen",
+          "generationId": "exec-03a6f1b0-bb1d-4c82-be71-0558210e0fb4",
+          "identifierKind": "tool-execution-output-identifier",
+          "providerGenerationIdExposed": false,
+          "modelVersion": null,
+          "sourcePath": "branding/generation-source.png",
+          "sourceSha256": "faff294543f2ef06fc2a996af799b166fa43b42a674ca82692a1c7919719536c",
+          "outputFileName": "exec-03a6f1b0-bb1d-4c82-be71-0558210e0fb4.png",
+          "operation": "deterministic-sprite-crop",
+          "crop": {
+            "left": 633,
+            "top": 0,
+            "width": 621,
+            "height": 684
+          }
+        }
+      },
+      "onAccent": {
+        "path": "branding/input-onDark.png",
+        "sha256": "9ee1604b79f46580ceb878bc038fcf51c133fe3f419480da5976652eaa1b8dbd",
+        "generation": {
+          "tool": "image_gen",
+          "generationId": "exec-03a6f1b0-bb1d-4c82-be71-0558210e0fb4",
+          "identifierKind": "tool-execution-output-identifier",
+          "providerGenerationIdExposed": false,
+          "modelVersion": null,
+          "sourcePath": "branding/generation-source.png",
+          "sourceSha256": "faff294543f2ef06fc2a996af799b166fa43b42a674ca82692a1c7919719536c",
+          "outputFileName": "exec-03a6f1b0-bb1d-4c82-be71-0558210e0fb4.png",
+          "operation": "deterministic-sprite-crop",
+          "crop": {
+            "left": 633,
+            "top": 0,
+            "width": 621,
+            "height": 684
+          }
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-19T20:16:36Z",
+      "method": "Agent reviewed generated artwork spelling, matching identity and transparent crop. White, charcoal and red contact sheet inspected; 32px compact marks reviewed.",
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#101820",
+        "#09090b",
+        "#17191c",
+        "#c40101"
+      ],
+      "dealerApproval": false
+    }
+  }
+}

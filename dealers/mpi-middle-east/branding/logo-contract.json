@@ -1,0 +1,317 @@
+{
+  "schemaVersion": 1,
+  "dealer": "mpi-middle-east",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T21:07:30Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-independent-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "3b2ef3b745d1f354cccf33a80719bf95f2ce84cc80748188b2c81918961f4c0e",
+      "sourceSha256": "db296cf6ddb80e3e5df7509157f3f1db045f29c40ff9eb27e4de8c3b534e98ed"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "978bbc3b295c789dd148d6e41daf4005a71226969089894324981176119c00a2",
+      "sourceSha256": "8ebfe42f57043327e1611fa29fa0217e4b86c47723abcd6310ac591b612f9b81"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "978bbc3b295c789dd148d6e41daf4005a71226969089894324981176119c00a2",
+      "sourceSha256": "8ebfe42f57043327e1611fa29fa0217e4b86c47723abcd6310ac591b612f9b81"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "db296cf6ddb80e3e5df7509157f3f1db045f29c40ff9eb27e4de8c3b534e98ed",
+    "generation": {
+      "tool": "image_gen",
+      "generationId": "exec-e065a334-7b1d-489b-95c2-90ad9dd8f4df",
+      "identifierKind": "tool-execution-output-identifier",
+      "providerGenerationIdExposed": false,
+      "modelVersion": null,
+      "sourcePath": "branding/generation-source.png",
+      "sourceSha256": "bfcccadadbff2327ca968ec5a2cc71ed3fc407b30eaef816765ec72dcb99ce8f",
+      "outputFileName": "exec-e065a334-7b1d-489b-95c2-90ad9dd8f4df.png",
+      "operation": "deterministic-sprite-crop",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 633,
+        "height": 761
+      }
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "d49d43f1f37d9e1ad80951218834a5721eaa557d1ca2c6a005c1783353a52343",
+    "generation": {
+      "tool": "image_gen",
+      "generationId": "exec-e065a334-7b1d-489b-95c2-90ad9dd8f4df",
+      "identifierKind": "tool-execution-output-identifier",
+      "providerGenerationIdExposed": false,
+      "modelVersion": null,
+      "sourcePath": "branding/generation-source.png",
+      "sourceSha256": "bfcccadadbff2327ca968ec5a2cc71ed3fc407b30eaef816765ec72dcb99ce8f",
+      "outputFileName": "exec-e065a334-7b1d-489b-95c2-90ad9dd8f4df.png",
+      "operation": "deterministic-sprite-crop",
+      "crop": {
+        "left": 0,
+        "top": 761,
+        "width": 633,
+        "height": 493
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "e2f19032e162a8fcfd8e068a3b6f3556e5aa81b04e4e0e2cbe9f4244e086cdbb"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "db296cf6ddb80e3e5df7509157f3f1db045f29c40ff9eb27e4de8c3b534e98ed",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-e065a334-7b1d-489b-95c2-90ad9dd8f4df",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "bfcccadadbff2327ca968ec5a2cc71ed3fc407b30eaef816765ec72dcb99ce8f",
+        "outputFileName": "exec-e065a334-7b1d-489b-95c2-90ad9dd8f4df.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 633,
+          "height": 761
+        }
+      },
+      "sourceReference": "dealers/mpi-middle-east/branding/input-onLight.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "8ebfe42f57043327e1611fa29fa0217e4b86c47723abcd6310ac591b612f9b81",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-e065a334-7b1d-489b-95c2-90ad9dd8f4df",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "bfcccadadbff2327ca968ec5a2cc71ed3fc407b30eaef816765ec72dcb99ce8f",
+        "outputFileName": "exec-e065a334-7b1d-489b-95c2-90ad9dd8f4df.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 633,
+          "top": 0,
+          "width": 621,
+          "height": 761
+        }
+      },
+      "sourceReference": "dealers/mpi-middle-east/branding/input-onDark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "8ebfe42f57043327e1611fa29fa0217e4b86c47723abcd6310ac591b612f9b81",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-e065a334-7b1d-489b-95c2-90ad9dd8f4df",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "bfcccadadbff2327ca968ec5a2cc71ed3fc407b30eaef816765ec72dcb99ce8f",
+        "outputFileName": "exec-e065a334-7b1d-489b-95c2-90ad9dd8f4df.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 633,
+          "top": 0,
+          "width": 621,
+          "height": 761
+        }
+      },
+      "sourceReference": "dealers/mpi-middle-east/branding/input-onDark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "9d3590aa0601df89ec267c0242a232bbb9ecda655f35f3a03c93d6b2752accbd",
+      "sha256": "db296cf6ddb80e3e5df7509157f3f1db045f29c40ff9eb27e4de8c3b534e98ed",
+      "crop": {
+        "left": 62,
+        "top": 131,
+        "width": 526,
+        "height": 603
+      },
+      "sourcePath": "branding/input-onLight.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "ae084907cfd6f925fd534d351280605a19838bba1dd99f2edc69c5c3ea247f69",
+      "sha256": "8ebfe42f57043327e1611fa29fa0217e4b86c47723abcd6310ac591b612f9b81",
+      "crop": {
+        "left": 45,
+        "top": 131,
+        "width": 527,
+        "height": 605
+      },
+      "sourcePath": "branding/input-onDark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "ae084907cfd6f925fd534d351280605a19838bba1dd99f2edc69c5c3ea247f69",
+      "sha256": "8ebfe42f57043327e1611fa29fa0217e4b86c47723abcd6310ac591b612f9b81",
+      "crop": {
+        "left": 45,
+        "top": 131,
+        "width": 527,
+        "height": 605
+      },
+      "sourcePath": "branding/input-onDark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "aa36321e3f1ab63e70e9f219173d325ce5ef1d53f1121fe696e11e364998644a",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-e065a334-7b1d-489b-95c2-90ad9dd8f4df",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "bfcccadadbff2327ca968ec5a2cc71ed3fc407b30eaef816765ec72dcb99ce8f",
+        "outputFileName": "exec-e065a334-7b1d-489b-95c2-90ad9dd8f4df.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 0,
+          "top": 761,
+          "width": 633,
+          "height": 493
+        }
+      },
+      "sourceReference": "dealers/mpi-middle-east/branding/input-mark.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "6ed93c449610e4e936f0cb7f2897160bb6ddfd34bfc71ad8c28b516ed2afc5f4",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-e065a334-7b1d-489b-95c2-90ad9dd8f4df",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "bfcccadadbff2327ca968ec5a2cc71ed3fc407b30eaef816765ec72dcb99ce8f",
+        "outputFileName": "exec-e065a334-7b1d-489b-95c2-90ad9dd8f4df.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 633,
+          "top": 761,
+          "width": 621,
+          "height": 493
+        }
+      },
+      "sourceReference": "dealers/mpi-middle-east/branding/input-markOnDark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "d49d43f1f37d9e1ad80951218834a5721eaa557d1ca2c6a005c1783353a52343",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-e065a334-7b1d-489b-95c2-90ad9dd8f4df",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "bfcccadadbff2327ca968ec5a2cc71ed3fc407b30eaef816765ec72dcb99ce8f",
+        "outputFileName": "exec-e065a334-7b1d-489b-95c2-90ad9dd8f4df.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 0,
+          "top": 761,
+          "width": 633,
+          "height": 493
+        }
+      },
+      "sourceReference": "dealers/mpi-middle-east/branding/input-mark.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "e2f19032e162a8fcfd8e068a3b6f3556e5aa81b04e4e0e2cbe9f4244e086cdbb",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-e065a334-7b1d-489b-95c2-90ad9dd8f4df",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "bfcccadadbff2327ca968ec5a2cc71ed3fc407b30eaef816765ec72dcb99ce8f",
+        "outputFileName": "exec-e065a334-7b1d-489b-95c2-90ad9dd8f4df.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 0,
+          "top": 761,
+          "width": 633,
+          "height": 493
+        }
+      },
+      "sourceReference": "dealers/mpi-middle-east/branding/input-mark.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-19T21:07:30Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "396edbcbf7d27b67650c1b59faacccc0f19ddfa185aeecc1b7c2e37e2f8db566",
+    "generation": {
+      "tool": "image_gen",
+      "generationId": "exec-e065a334-7b1d-489b-95c2-90ad9dd8f4df",
+      "identifierKind": "tool-execution-output-identifier",
+      "providerGenerationIdExposed": false,
+      "modelVersion": null,
+      "sourcePath": "branding/generation-source.png",
+      "sourceSha256": "bfcccadadbff2327ca968ec5a2cc71ed3fc407b30eaef816765ec72dcb99ce8f",
+      "outputFileName": "exec-e065a334-7b1d-489b-95c2-90ad9dd8f4df.png",
+      "operation": "deterministic-sprite-crop",
+      "crop": {
+        "left": 633,
+        "top": 761,
+        "width": 621,
+        "height": 493
+      }
+    }
+  }
+}

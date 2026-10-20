@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "dealer": "car-4-me-fz",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "car-4-me-fz-stock-1",
+      "title": "2022 Lexus ES",
+      "make": "Lexus",
+      "model": "ES",
+      "year": 2022,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/stock-1.webp"
+      ],
+      "sourceUrl": "https://licenseplate.ae/cars/listing/10298-lexus-es-25-cvt-218-hp-es-300h-platinum",
+      "observedAt": "2026-10-19",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Sedan",
+      "transmission": "CVT",
+      "fuel": "Hybrid",
+      "mileageValue": 68000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "car-4-me-fz-stock-2",
+      "title": "2026 Jetour T2",
+      "make": "Jetour",
+      "model": "T2",
+      "year": 2026,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/stock-2.webp"
+      ],
+      "sourceUrl": "https://licenseplate.ae/cars/listing/10328-jetour-t2-20-amt-4wd-245-hp-traveler-plus",
+      "observedAt": "2026-10-19",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Crossover",
+      "transmission": "Automated manual",
+      "fuel": "Petrol",
+      "mileageValue": 26000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "car-4-me-fz-stock-3",
+      "title": "2023 Toyota Rush",
+      "make": "Toyota",
+      "model": "Rush",
+      "year": 2023,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/stock-3.webp"
+      ],
+      "sourceUrl": "https://licenseplate.ae/cars/listing/10527-toyota-rush-15-at-104-hp-gx",
+      "observedAt": "2026-10-19",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Crossover",
+      "transmission": "Automatic",
+      "fuel": "Petrol",
+      "mileageValue": 51000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

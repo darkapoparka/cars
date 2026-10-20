@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "mpi-middle-east",
+  "previousSlug": "mpi-middle-east",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:04:25.954Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 3,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-dubai-mpi-middle-east",
+    "position": 253
+  },
+  "before": {
+    "files": 38,
+    "bytes": 4244324
+  },
+  "afterBeforeReview": {
+    "files": 22,
+    "bytes": 993100
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 77594,
+      "sha256": "d49d43f1f37d9e1ad80951218834a5721eaa557d1ca2c6a005c1783353a52343"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 93085,
+      "sha256": "396edbcbf7d27b67650c1b59faacccc0f19ddfa185aeecc1b7c2e37e2f8db566"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 77594,
+      "sha256": "d49d43f1f37d9e1ad80951218834a5721eaa557d1ca2c6a005c1783353a52343"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 279641,
+      "sha256": "db296cf6ddb80e3e5df7509157f3f1db045f29c40ff9eb27e4de8c3b534e98ed"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 346533,
+      "sha256": "8ebfe42f57043327e1611fa29fa0217e4b86c47723abcd6310ac591b612f9b81"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 346533,
+      "sha256": "8ebfe42f57043327e1611fa29fa0217e4b86c47723abcd6310ac591b612f9b81"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 279641,
+      "sha256": "db296cf6ddb80e3e5df7509157f3f1db045f29c40ff9eb27e4de8c3b534e98ed"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 77594,
+      "sha256": "d49d43f1f37d9e1ad80951218834a5721eaa557d1ca2c6a005c1783353a52343"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 7529,
+      "sha256": "e2f19032e162a8fcfd8e068a3b6f3556e5aa81b04e4e0e2cbe9f4244e086cdbb"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 346533,
+      "sha256": "8ebfe42f57043327e1611fa29fa0217e4b86c47723abcd6310ac591b612f9b81"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 207458,
+      "sha256": "978bbc3b295c789dd148d6e41daf4005a71226969089894324981176119c00a2"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 346533,
+      "sha256": "8ebfe42f57043327e1611fa29fa0217e4b86c47723abcd6310ac591b612f9b81"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 207458,
+      "sha256": "978bbc3b295c789dd148d6e41daf4005a71226969089894324981176119c00a2"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 279641,
+      "sha256": "db296cf6ddb80e3e5df7509157f3f1db045f29c40ff9eb27e4de8c3b534e98ed"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 169770,
+      "sha256": "3b2ef3b745d1f354cccf33a80719bf95f2ce84cc80748188b2c81918961f4c0e"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 62908,
+      "sha256": "6ed93c449610e4e936f0cb7f2897160bb6ddfd34bfc71ad8c28b516ed2afc5f4"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 48976,
+      "sha256": "aa36321e3f1ab63e70e9f219173d325ce5ef1d53f1121fe696e11e364998644a"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 12,
+    "bytes": 555007,
+    "inventorySha256": "7522e3c9b2397aefe653f9bc77e5371ba2951fe41cb664ad6dc02dc6fa7cf6e0",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "mpi-middle-east",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 24,
+    "report": "dealers/mpi-middle-east/input-review.json"
+  },
+  "after": {
+    "files": 24,
+    "bytes": 1001719
+  }
+}

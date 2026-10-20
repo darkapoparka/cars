@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "dealer": "miran-motors-fzco",
+  "businessFacts": "business-facts.json",
+  "stock": "stock.json",
+  "inventoryKind": "dated-listing-snapshot",
+  "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+  "sources": [
+    {
+      "url": "https://www.oneclickdrive.com/company/dubai/miran-motors-fzco",
+      "observedAt": "2026-10-19T20:03:54.011522Z",
+      "supports": [
+        "dealer-name",
+        "dealer-attributed-listings",
+        "dealer-attributed-photos",
+        "public-business-call-line",
+        "address"
+      ]
+    },
+    {
+      "url": "https://sooq-cars.com/ae/en/ready/cars/2156949",
+      "observedAt": "2026-10-19T20:03:54.011522Z",
+      "supports": [
+        "dealer-attributed-listing",
+        "dealer-attributed-photo"
+      ]
+    },
+    {
+      "url": "https://www.yellowpages-uae.com/miran-motors-fzco-182346",
+      "observedAt": "2026-10-19T20:03:54.011522Z",
+      "supports": [
+        "dealer-name",
+        "Ras-Al-Khor-location"
+      ]
+    }
+  ]
+}

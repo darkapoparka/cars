@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "intercars",
+  "previousSlug": "intercars",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:06:43.128Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 3,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-dubai-intercars",
+    "position": 236
+  },
+  "before": {
+    "files": 39,
+    "bytes": 5279753
+  },
+  "afterBeforeReview": {
+    "files": 23,
+    "bytes": 1702800
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 174276,
+      "sha256": "959b7a441984213fec97ebc54907f945ea9e27c31fd250edd89072f2df744e0e"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 161956,
+      "sha256": "bd2dc520e45e54b11d5759d30a28ef6c1d2bdc1b0ce85cae1d7030eaf74b0fa1"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 174276,
+      "sha256": "959b7a441984213fec97ebc54907f945ea9e27c31fd250edd89072f2df744e0e"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 310828,
+      "sha256": "917b5868be50e772da3ce42efe60655fa9e16ff2bfaf58c61d02e31013b1bcf7"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 276971,
+      "sha256": "b62d0be57608805418b7aa799c970188d140f9779329159173fd6f312ab5ae86"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 276971,
+      "sha256": "b62d0be57608805418b7aa799c970188d140f9779329159173fd6f312ab5ae86"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 310828,
+      "sha256": "917b5868be50e772da3ce42efe60655fa9e16ff2bfaf58c61d02e31013b1bcf7"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 174276,
+      "sha256": "959b7a441984213fec97ebc54907f945ea9e27c31fd250edd89072f2df744e0e"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 13431,
+      "sha256": "44bdcc5583a6fd2865d8a5de1bac4e27f516fd7a37b588025bd343cbc5d4d29a"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 276971,
+      "sha256": "b62d0be57608805418b7aa799c970188d140f9779329159173fd6f312ab5ae86"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 198394,
+      "sha256": "ae3d4c452f95f818299c70e66f48998d9fe33cad2b478742ef5fe649306577e8"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 276971,
+      "sha256": "b62d0be57608805418b7aa799c970188d140f9779329159173fd6f312ab5ae86"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 198394,
+      "sha256": "ae3d4c452f95f818299c70e66f48998d9fe33cad2b478742ef5fe649306577e8"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 310828,
+      "sha256": "917b5868be50e772da3ce42efe60655fa9e16ff2bfaf58c61d02e31013b1bcf7"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 209974,
+      "sha256": "b8debbfb90e7ccb6327bb4e9c1d71807471cec8eae76f43af83e2abc12364030"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 113824,
+      "sha256": "deb14662a1a2007d97fdb5a9552a9464c51d2a1b3d3d8a5618705052b84d8be8"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 121558,
+      "sha256": "05453f79eeabe9a32c26789c3f591acd162ee21993dc07fc95121dc66590c4d4"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 12,
+    "bytes": 910237,
+    "inventorySha256": "864b704cb83f2c96fc50af41a809436d1168809d32b59b0ff31467048f505840",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "intercars",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 25,
+    "report": "dealers/intercars/input-review.json"
+  },
+  "after": {
+    "files": 25,
+    "bytes": 1711540
+  }
+}

@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "rose-auto",
+  "previousSlug": "rose-auto",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:10:38.947Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 3,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-dubai-rose-auto",
+    "position": 264
+  },
+  "before": {
+    "files": 39,
+    "bytes": 2551873
+  },
+  "afterBeforeReview": {
+    "files": 23,
+    "bytes": 849742
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 64407,
+      "sha256": "9d37ebff087e7c97bc43fa54e063095e53ea21f46e029cd6d93ecc2f913441d7"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 64984,
+      "sha256": "2120acf35a140cbb54ab8a2cb367ed5d6791eb52b03f5669c1c24625a34eebe8"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 64407,
+      "sha256": "9d37ebff087e7c97bc43fa54e063095e53ea21f46e029cd6d93ecc2f913441d7"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 131888,
+      "sha256": "bc39f625cf192983a6f95aa2a8a8efa52ac5b48d377ebbb7c7a5168b1a007041"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 168561,
+      "sha256": "9a9bcd564f463ddaade8d866eca60ae96ef4b8b14c9d519024557620a8dec950"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 168561,
+      "sha256": "9a9bcd564f463ddaade8d866eca60ae96ef4b8b14c9d519024557620a8dec950"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 131888,
+      "sha256": "bc39f625cf192983a6f95aa2a8a8efa52ac5b48d377ebbb7c7a5168b1a007041"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 64407,
+      "sha256": "9d37ebff087e7c97bc43fa54e063095e53ea21f46e029cd6d93ecc2f913441d7"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 6506,
+      "sha256": "c8fae0f52e063807e69cbcbc4f9ee9c2126238ba3e2d990a05ca7a60e11f77b1"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 168561,
+      "sha256": "9a9bcd564f463ddaade8d866eca60ae96ef4b8b14c9d519024557620a8dec950"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 110268,
+      "sha256": "b0ccd0852df710f6ab2e8e2013cabfbe8e822be051e1f4b4aded5bb9e131d1c4"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 168561,
+      "sha256": "9a9bcd564f463ddaade8d866eca60ae96ef4b8b14c9d519024557620a8dec950"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 110268,
+      "sha256": "b0ccd0852df710f6ab2e8e2013cabfbe8e822be051e1f4b4aded5bb9e131d1c4"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 131888,
+      "sha256": "bc39f625cf192983a6f95aa2a8a8efa52ac5b48d377ebbb7c7a5168b1a007041"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 72116,
+      "sha256": "aa4ddf231c778ddc29e12c99db980e9bd0b9bd281b2f53ec7c6c43208e98c1ef"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 42176,
+      "sha256": "9a16b26ce19825badc2c4178e8d1ed4209fd225c882f45ff16c23141f8a1c3a8"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 36450,
+      "sha256": "c6548208f5e7c3c16d876eb61499317472f1215137314de96a4f93ac0345ce2e"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 13,
+    "bytes": 529772,
+    "inventorySha256": "030a278f38fdf81c32554bd6a33ff5b17e7a3777a424bdd2d0c93a3984be48ac",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "rose-auto",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 25,
+    "report": "dealers/rose-auto/input-review.json"
+  },
+  "after": {
+    "files": 25,
+    "bytes": 858453
+  }
+}

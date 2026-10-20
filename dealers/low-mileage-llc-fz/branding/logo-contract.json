@@ -1,0 +1,287 @@
+{
+  "schemaVersion": 1,
+  "dealer": "low-mileage-llc-fz",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T21:11:18.645923Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "d03697b060479a81047368ea30ee57018cce71e7e9238dc4b324f776528d13db",
+      "sourceSha256": "273f5ba6574c0440bc7c987984f30e2d7f9d2c3c27629125754581724e60544d"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "5a2d7d850ce7e2ca604984b1b17b7a1704e4c4b50cbd2f4399e1540b61fc35e9",
+      "sourceSha256": "3a85ff49b6fde8ae8e117185994067e3ef09597f2228df0b6433acb3827437b4"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "5a2d7d850ce7e2ca604984b1b17b7a1704e4c4b50cbd2f4399e1540b61fc35e9",
+      "sourceSha256": "3a85ff49b6fde8ae8e117185994067e3ef09597f2228df0b6433acb3827437b4"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "273f5ba6574c0440bc7c987984f30e2d7f9d2c3c27629125754581724e60544d",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-62556b7a-0d8e-4292-8018-c3ff8f19b22c",
+      "modelVersion": null,
+      "sourcePath": "branding/generation-source.png",
+      "sourceSha256": "6fbdac73d3ad828b53eda782e8e62bc3115807081710cdb2c6c0e8d7a3aa69e9",
+      "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+      "crop": [
+        0,
+        614,
+        768,
+        1024
+      ]
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "e9b0f6d9a968caf18e34f4264139445cb8d7b16cf99f78e7d6e13002a4b81ba0",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-62556b7a-0d8e-4292-8018-c3ff8f19b22c",
+      "modelVersion": null,
+      "sourcePath": "branding/generation-source.png",
+      "sourceSha256": "6fbdac73d3ad828b53eda782e8e62bc3115807081710cdb2c6c0e8d7a3aa69e9",
+      "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+      "crop": [
+        0,
+        0,
+        768,
+        614
+      ]
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "b649ac0ab8aa82e34e33bb75980981a3d5cd9fe4490e8d2c9c4a02d52ae5df55"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "273f5ba6574c0440bc7c987984f30e2d7f9d2c3c27629125754581724e60544d",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-62556b7a-0d8e-4292-8018-c3ff8f19b22c",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "6fbdac73d3ad828b53eda782e8e62bc3115807081710cdb2c6c0e8d7a3aa69e9",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          0,
+          614,
+          768,
+          1024
+        ]
+      },
+      "sourceReference": "dealers/low-mileage-llc-fz/branding/generated-onLight.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "3a85ff49b6fde8ae8e117185994067e3ef09597f2228df0b6433acb3827437b4",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-62556b7a-0d8e-4292-8018-c3ff8f19b22c",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "6fbdac73d3ad828b53eda782e8e62bc3115807081710cdb2c6c0e8d7a3aa69e9",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          768,
+          614,
+          1536,
+          1024
+        ]
+      },
+      "sourceReference": "dealers/low-mileage-llc-fz/branding/generated-onDark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "3a85ff49b6fde8ae8e117185994067e3ef09597f2228df0b6433acb3827437b4",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-62556b7a-0d8e-4292-8018-c3ff8f19b22c",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "6fbdac73d3ad828b53eda782e8e62bc3115807081710cdb2c6c0e8d7a3aa69e9",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          768,
+          614,
+          1536,
+          1024
+        ]
+      },
+      "sourceReference": "dealers/low-mileage-llc-fz/branding/generated-onDark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "2ef2f349c89aed37a5fcd092cc63dc734d07319489ea36e7d9ebba82107e436f",
+      "sha256": "273f5ba6574c0440bc7c987984f30e2d7f9d2c3c27629125754581724e60544d",
+      "crop": {
+        "left": 49,
+        "top": 68,
+        "width": 714,
+        "height": 207
+      },
+      "sourcePath": "branding/generated-onLight.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "ea98ebddb2951afb1eaf38651ed7a8477b6aea150c335b3d85eeb67770bf6f25",
+      "sha256": "3a85ff49b6fde8ae8e117185994067e3ef09597f2228df0b6433acb3827437b4",
+      "crop": {
+        "left": 34,
+        "top": 68,
+        "width": 693,
+        "height": 207
+      },
+      "sourcePath": "branding/generated-onDark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "ea98ebddb2951afb1eaf38651ed7a8477b6aea150c335b3d85eeb67770bf6f25",
+      "sha256": "3a85ff49b6fde8ae8e117185994067e3ef09597f2228df0b6433acb3827437b4",
+      "crop": {
+        "left": 34,
+        "top": 68,
+        "width": 693,
+        "height": 207
+      },
+      "sourcePath": "branding/generated-onDark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "c3dffe9334fe53947230d0214fe9b63745733cd90b156347aec5697d58bb3a06",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-62556b7a-0d8e-4292-8018-c3ff8f19b22c",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "6fbdac73d3ad828b53eda782e8e62bc3115807081710cdb2c6c0e8d7a3aa69e9",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          0,
+          0,
+          768,
+          614
+        ]
+      },
+      "sourceReference": "dealers/low-mileage-llc-fz/branding/generated-mark.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "aeaf54a0edb13329438de2300ec043fec6643b7e0e479dd0c9e0974988711062",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-62556b7a-0d8e-4292-8018-c3ff8f19b22c",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "6fbdac73d3ad828b53eda782e8e62bc3115807081710cdb2c6c0e8d7a3aa69e9",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          768,
+          0,
+          1536,
+          614
+        ]
+      },
+      "sourceReference": "dealers/low-mileage-llc-fz/branding/generated-markOnDark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "e9b0f6d9a968caf18e34f4264139445cb8d7b16cf99f78e7d6e13002a4b81ba0",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-62556b7a-0d8e-4292-8018-c3ff8f19b22c",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "6fbdac73d3ad828b53eda782e8e62bc3115807081710cdb2c6c0e8d7a3aa69e9",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          0,
+          0,
+          768,
+          614
+        ]
+      },
+      "sourceReference": "dealers/low-mileage-llc-fz/branding/generated-mark.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "b649ac0ab8aa82e34e33bb75980981a3d5cd9fe4490e8d2c9c4a02d52ae5df55",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-62556b7a-0d8e-4292-8018-c3ff8f19b22c",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "6fbdac73d3ad828b53eda782e8e62bc3115807081710cdb2c6c0e8d7a3aa69e9",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          0,
+          0,
+          768,
+          614
+        ]
+      },
+      "sourceReference": "dealers/low-mileage-llc-fz/branding/generated-mark.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-19T21:11:18.645923Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "dcb5fff33e80010c801c3bd3a9004c8f3185962e4941db618c0e4a5700ea5739",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-62556b7a-0d8e-4292-8018-c3ff8f19b22c",
+      "modelVersion": null,
+      "sourcePath": "branding/generation-source.png",
+      "sourceSha256": "6fbdac73d3ad828b53eda782e8e62bc3115807081710cdb2c6c0e8d7a3aa69e9",
+      "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+      "crop": [
+        768,
+        0,
+        1536,
+        614
+      ]
+    }
+  }
+}

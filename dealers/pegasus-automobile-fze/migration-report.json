@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "pegasus-automobile-fze",
+  "previousSlug": "pegasus-automobile-fze",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:08:12.818Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 3,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-dubai-pegasus-automobile-fze",
+    "position": 259
+  },
+  "before": {
+    "files": 39,
+    "bytes": 4783229
+  },
+  "afterBeforeReview": {
+    "files": 23,
+    "bytes": 1101910
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 86496,
+      "sha256": "50d10f5b73ccc25048e80eb22545d75ed6e69ca9cf431fe50338d4650c14f0f3"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 95361,
+      "sha256": "ebc8cd330e5592b23d0bd95f490407c99f70f32929895a19fe2f2cd22c609952"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 86496,
+      "sha256": "50d10f5b73ccc25048e80eb22545d75ed6e69ca9cf431fe50338d4650c14f0f3"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 338174,
+      "sha256": "144ca8b6a963cf048cf3afdef47cb30e4659c0b1ed704290c78878d0e89e8817"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 370562,
+      "sha256": "33f96ddd39648ee897d730a598c51d85ca2cdbc70fc2add0fe47788b2edadb9b"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 370562,
+      "sha256": "33f96ddd39648ee897d730a598c51d85ca2cdbc70fc2add0fe47788b2edadb9b"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 338174,
+      "sha256": "144ca8b6a963cf048cf3afdef47cb30e4659c0b1ed704290c78878d0e89e8817"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 86496,
+      "sha256": "50d10f5b73ccc25048e80eb22545d75ed6e69ca9cf431fe50338d4650c14f0f3"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 7406,
+      "sha256": "f3722f8b3768a460862a1be9e5d5eb948dd90a3a266b8c870f8df8a56d9cee0d"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 370562,
+      "sha256": "33f96ddd39648ee897d730a598c51d85ca2cdbc70fc2add0fe47788b2edadb9b"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 242904,
+      "sha256": "6b7877974a204270b56882e78fe035d592ec7cb720ccafd29523c842556cf9b7"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 370562,
+      "sha256": "33f96ddd39648ee897d730a598c51d85ca2cdbc70fc2add0fe47788b2edadb9b"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 242904,
+      "sha256": "6b7877974a204270b56882e78fe035d592ec7cb720ccafd29523c842556cf9b7"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 338174,
+      "sha256": "144ca8b6a963cf048cf3afdef47cb30e4659c0b1ed704290c78878d0e89e8817"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 212846,
+      "sha256": "24f5d804bbec41c6c85d9d6aab0840ff4a26e632b833eb97bf1cd541cd38d828"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 66414,
+      "sha256": "1d5a7fc3030179b0bc01911eca0ef839bdadfa20abfcc7f9c456c8286c62c383"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 61058,
+      "sha256": "907e3536ea977bd871d807e87b1273e0f25ccd7b38710a8400332423c815fa84"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 13,
+    "bytes": 583259,
+    "inventorySha256": "19ef4c485361679fa2992031152fc5e2e9f5cd3ff5752750adc038666bc7a0fe",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "pegasus-automobile-fze",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 25,
+    "report": "dealers/pegasus-automobile-fze/input-review.json"
+  },
+  "after": {
+    "files": 25,
+    "bytes": 1110728
+  }
+}

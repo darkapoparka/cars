@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "gma-star-used-automobile-trading-for-export",
+  "previousSlug": "gma-star-used-automobile-trading-for-export",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:03:17.031Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 3,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-dubai-gma-star-used-automobile-trading-for-export",
+    "position": 227
+  },
+  "before": {
+    "files": 39,
+    "bytes": 2906094
+  },
+  "afterBeforeReview": {
+    "files": 23,
+    "bytes": 1081479
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 61754,
+      "sha256": "1669abba9177a3e03143b4a8930a9e76c97e3fd8a6415424c2e34cdfc6fd6d79"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 109869,
+      "sha256": "f74a3f25d85fe83173b75774fcb27475f18cec13776f375ff8bd3c3415aeabd6"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 61754,
+      "sha256": "1669abba9177a3e03143b4a8930a9e76c97e3fd8a6415424c2e34cdfc6fd6d79"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 106286,
+      "sha256": "27131aeae5186dc7aa5922f600a78883dfe0cf8c2839b0642533a47426553114"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 192138,
+      "sha256": "a014f309a004455efac46d60e58c1f227f852923762b741c9932c4cbc5d409d9"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 192138,
+      "sha256": "a014f309a004455efac46d60e58c1f227f852923762b741c9932c4cbc5d409d9"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 106286,
+      "sha256": "27131aeae5186dc7aa5922f600a78883dfe0cf8c2839b0642533a47426553114"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 61754,
+      "sha256": "1669abba9177a3e03143b4a8930a9e76c97e3fd8a6415424c2e34cdfc6fd6d79"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 6233,
+      "sha256": "ab70066c862b1a44954c84affe48ab973f8bd6d4eda21e3b25dcab284acf2529"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 192138,
+      "sha256": "a014f309a004455efac46d60e58c1f227f852923762b741c9932c4cbc5d409d9"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 133274,
+      "sha256": "c7e55ee4c3dbba887faeaf7e9c377c5501a260b40b4ca28b94f3c54392011b32"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 192138,
+      "sha256": "a014f309a004455efac46d60e58c1f227f852923762b741c9932c4cbc5d409d9"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 133274,
+      "sha256": "c7e55ee4c3dbba887faeaf7e9c377c5501a260b40b4ca28b94f3c54392011b32"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 106286,
+      "sha256": "27131aeae5186dc7aa5922f600a78883dfe0cf8c2839b0642533a47426553114"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 60424,
+      "sha256": "c03768a0912ceaf3ef0fba2b25d7908df82d159eb650f00ec80f9b4c03b0988b"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 75150,
+      "sha256": "06a20a7bac083d568ae856369b7e790acd095fe632bd42ae02f00e3622a088f2"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 37656,
+      "sha256": "a69db7f85fb2720ec219aa407264ab0dd3732a0ff4adbbd25added1c566f0fd6"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 12,
+    "bytes": 630946,
+    "inventorySha256": "f020ec73601a9f2f2caa6b0366448fca95d29b1ac434089d6cb4e2d18779c4c1",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "gma-star-used-automobile-trading-for-export",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 25,
+    "report": "dealers/gma-star-used-automobile-trading-for-export/input-review.json"
+  },
+  "after": {
+    "files": 25,
+    "bytes": 1090483
+  }
+}

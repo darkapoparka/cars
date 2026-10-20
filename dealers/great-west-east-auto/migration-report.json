@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "great-west-east-auto",
+  "previousSlug": "great-west-east-auto",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:03:48.387Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 3,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-dubai-great-west-east-auto",
+    "position": 230
+  },
+  "before": {
+    "files": 39,
+    "bytes": 5712449
+  },
+  "afterBeforeReview": {
+    "files": 23,
+    "bytes": 2904305
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 89229,
+      "sha256": "97f50a5256050ac25b0379d7fa7b556b3c06574557ad1d622469eda0416046e4"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 83791,
+      "sha256": "33d2258d723d90d55b36bde644454b9885b3faa04cf5c10d19d4a954415868ba"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 89229,
+      "sha256": "97f50a5256050ac25b0379d7fa7b556b3c06574557ad1d622469eda0416046e4"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 258457,
+      "sha256": "bc26ba3629583ad4a8140adefb0abd43b6210514b3b7c74ba29263286c20b597"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 253169,
+      "sha256": "f5e35fb07569ade8473da68d9fe043b61b967168d4484964ea753403ea2c58b8"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 253169,
+      "sha256": "f5e35fb07569ade8473da68d9fe043b61b967168d4484964ea753403ea2c58b8"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 258457,
+      "sha256": "bc26ba3629583ad4a8140adefb0abd43b6210514b3b7c74ba29263286c20b597"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 89229,
+      "sha256": "97f50a5256050ac25b0379d7fa7b556b3c06574557ad1d622469eda0416046e4"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 7463,
+      "sha256": "8baa560404a2d90f26bfadc3494cd560b5c0915a1b2ff2a015800eab9fe982b9"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 253169,
+      "sha256": "f5e35fb07569ade8473da68d9fe043b61b967168d4484964ea753403ea2c58b8"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 185772,
+      "sha256": "3a14b6b47a2f3dfd9f8cc80d6e4d7cb4b987382f27f8d94b8c241ee3f4b52d6a"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 253169,
+      "sha256": "f5e35fb07569ade8473da68d9fe043b61b967168d4484964ea753403ea2c58b8"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 185772,
+      "sha256": "3a14b6b47a2f3dfd9f8cc80d6e4d7cb4b987382f27f8d94b8c241ee3f4b52d6a"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 258457,
+      "sha256": "bc26ba3629583ad4a8140adefb0abd43b6210514b3b7c74ba29263286c20b597"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 172016,
+      "sha256": "350b0931a67d3843287c976ed5ab900eae0c246799944ebfb177fc572314b463"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 59390,
+      "sha256": "95dbcf76ab0eb61db097a8abdc6324ab39076aa50961eaca078fdaf3cd6dbce8"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 62028,
+      "sha256": "a19e4420decf8f75acdadbfc6dad7e5289eac7ab0da8c342f3ff3d71f201867a"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 12,
+    "bytes": 1328205,
+    "inventorySha256": "1eb8b0758ddf00fbaabe5ecca16df4f6c1b10958704ac8c44e7f59307afd4e22",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "great-west-east-auto",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 25,
+    "report": "dealers/great-west-east-auto/input-review.json"
+  },
+  "after": {
+    "files": 25,
+    "bytes": 2913126
+  }
+}

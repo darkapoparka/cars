@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "type": "cars-dealer-pack-draft",
+  "slug": "gma-star-used-automobile-trading-for-export",
+  "dealerId": "ae-dubai-gma-star-used-automobile-trading-for-export",
+  "status": "ready",
+  "buildReady": true,
+  "providerWrites": 0,
+  "createdAt": "2026-10-19T20:17:07.357Z",
+  "inventoryKind": "dated-listing-snapshot",
+  "inventoryRecords": 3,
+  "logoReady": true,
+  "missingFacts": [
+    {
+      "field": "business.website",
+      "required": false,
+      "reason": "No consistent public business value established from the reviewed sources."
+    },
+    {
+      "field": "business.address",
+      "required": false,
+      "reason": "No consistent public business value established from the reviewed sources."
+    },
+    {
+      "field": "business.hours",
+      "required": false,
+      "reason": "No consistent public business value established from the reviewed sources."
+    },
+    {
+      "field": "prices",
+      "required": false,
+      "reason": "All prices are omitted under the public-repository scope."
+    }
+  ],
+  "blocking": [],
+  "stockAcquisition": "explicit-retained-public-snapshot",
+  "liveListingFetchPerformed": true,
+  "next": "Pack input checks passed; awaiting the separately authorized native build path."
+}

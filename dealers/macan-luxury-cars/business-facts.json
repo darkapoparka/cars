@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "slug": "macan-luxury-cars",
+  "dealerId": "ae-dubai-macan-luxury-cars",
+  "business": {
+    "name": "Macan Luxury Cars",
+    "city": "Dubai",
+    "region": "Dubai",
+    "countryCode": "AE",
+    "currency": "AED",
+    "distanceUnit": "km",
+    "locale": "en-AE",
+    "address": "Al Qalam Center Building, Al Quoz, Al Quoz Industrial Area 2, Dubai - UAE",
+    "phone": "+971523099408",
+    "phoneDisplay": "+971523099408",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://www.oneclickdrive.com/company/dubai/macan-luxury-cars",
+    "hours": "",
+    "sourceUrl": "https://www.oneclickdrive.com/company/dubai/macan-luxury-cars",
+    "observedAt": "2026-10-19T20:03:53.853587Z",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://www.oneclickdrive.com/company/dubai/macan-luxury-cars",
+      "observedAt": "2026-10-19T20:03:53.853587Z",
+      "supports": [
+        "dealer-name",
+        "dealer-attributed-listings",
+        "dealer-attributed-photos",
+        "public-business-call-line",
+        "address"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "mangame-motors",
+  "previousSlug": "mangame-motors",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:02:53.366Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 3,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-dubai-mangame-motors",
+    "position": 244
+  },
+  "before": {
+    "files": 39,
+    "bytes": 5265408
+  },
+  "afterBeforeReview": {
+    "files": 23,
+    "bytes": 2823093
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 125508,
+      "sha256": "ceda96a807f75a60b1bae9cd82606b685a6a80931da72f20a0dd30d05564d608"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 109109,
+      "sha256": "aee3d773484b78779eff3e68a43cc6461cd25fc5bff7f34fa5aca71a81b6a2d0"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 125508,
+      "sha256": "ceda96a807f75a60b1bae9cd82606b685a6a80931da72f20a0dd30d05564d608"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 216528,
+      "sha256": "6a90cb085e92442afc1a56d191d0e08df0f669e35c0a9a7d402cd294e79755ee"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 183898,
+      "sha256": "8ffbf8c9437b830b91f9fe11b2b777ffc349c1c32d6bce2997e3e6207baff379"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 183898,
+      "sha256": "8ffbf8c9437b830b91f9fe11b2b777ffc349c1c32d6bce2997e3e6207baff379"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 216528,
+      "sha256": "6a90cb085e92442afc1a56d191d0e08df0f669e35c0a9a7d402cd294e79755ee"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 125508,
+      "sha256": "ceda96a807f75a60b1bae9cd82606b685a6a80931da72f20a0dd30d05564d608"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 10661,
+      "sha256": "a3133db6fca9db84f401338e9414844045c53ad8513e0841b66156dfddd061b7"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 183898,
+      "sha256": "8ffbf8c9437b830b91f9fe11b2b777ffc349c1c32d6bce2997e3e6207baff379"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 131298,
+      "sha256": "ca7b521f53ba6cdc638caa1ef6704499bd3785031b33c36c4d9cb69f41306463"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 183898,
+      "sha256": "8ffbf8c9437b830b91f9fe11b2b777ffc349c1c32d6bce2997e3e6207baff379"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 131298,
+      "sha256": "ca7b521f53ba6cdc638caa1ef6704499bd3785031b33c36c4d9cb69f41306463"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 216528,
+      "sha256": "6a90cb085e92442afc1a56d191d0e08df0f669e35c0a9a7d402cd294e79755ee"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 145634,
+      "sha256": "109ece7e364d75204fe1c43aa761dffc0c4260d39e73427ed6321c768b13ee8b"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 74558,
+      "sha256": "83ee91ef9b590550f2b9bed1188811eca51357a1ebf269d09e736cbc16661342"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 81854,
+      "sha256": "4c4181fd5f59428b8605c7fc7896ed38f9552936a1e5a1073f1dd165da7eae50"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 12,
+    "bytes": 1409702,
+    "inventorySha256": "ebe49c4d5678e9396c3b6a2cf727888edc58d821829db49ebc1b4d18b145abdb",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "mangame-motors",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 25,
+    "report": "dealers/mangame-motors/input-review.json"
+  },
+  "after": {
+    "files": 25,
+    "bytes": 2831874
+  }
+}

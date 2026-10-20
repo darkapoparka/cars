@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "dealer": "ramna-international-motors",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://www.oneclickdrive.com/company/dubai/ramna-international-motors-fzco",
+      "observedAt": "2026-10-19T20:43:14Z",
+      "supports": [
+        "public-business-identity",
+        "business-contact",
+        "address",
+        "attributed-public-stock"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "observedAt": "2026-10-19T20:43:14Z",
+  "stockMedia": [
+    {
+      "path": "dealer-stock/listing-1.jpg",
+      "sourceUrl": "https://static.oneclickdrive.com/uploads/cars/Toyota_Avanza_2019_45625_45625_45217569765-11_small.jpg",
+      "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/Toyota/Avanza-G/?id=45625",
+      "observedAt": "2026-10-19T20:43:14Z",
+      "sourceSha256": "48b53ee7ae7e867e8210299f16f1fd2ef38a172836aea36c46b9c75d66bd65f6",
+      "sha256": "d580cb82fbb11933111905190740a00503b64b29f0b6fddee8dd49210441ef9b",
+      "width": 450,
+      "height": 395,
+      "bytes": 45794,
+      "transformation": "Bounded resize to at most 1280px; optimized JPEG quality 87."
+    },
+    {
+      "path": "dealer-stock/listing-2.jpg",
+      "sourceUrl": "https://static.oneclickdrive.com/uploads/cars/Toyota_Rav-4_2017_45623_45623_45213878541-6_small.jpg",
+      "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/Toyota/RAV4/?id=45623",
+      "observedAt": "2026-10-19T20:43:14Z",
+      "sourceSha256": "3e5d7d0cc0973e37cb93364e40ceb9b6bfa88188432f24013d59ccbc1e55a848",
+      "sha256": "3dcad0f28d127bca52737d221671b72530cf150eaa89feda5eeb900f2ec984d3",
+      "width": 450,
+      "height": 395,
+      "bytes": 50393,
+      "transformation": "Bounded resize to at most 1280px; optimized JPEG quality 87."
+    },
+    {
+      "path": "dealer-stock/listing-3.jpg",
+      "sourceUrl": "https://static.oneclickdrive.com/uploads/cars/Honda_CR-V_2009_45626_45626_45218774270-7_small.jpg",
+      "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/Honda/CR-V-EX-Full-Option/?id=45626",
+      "observedAt": "2026-10-19T20:43:14Z",
+      "sourceSha256": "01604a3c350e8a8685c8d3af56a9a0491b7acaff120ee0564eba557e3468e0e4",
+      "sha256": "181dccd934c10dcf08500f53d489820ac366c02b99aa482ccdd71f9653136792",
+      "width": 450,
+      "height": 395,
+      "bytes": 45686,
+      "transformation": "Bounded resize to at most 1280px; optimized JPEG quality 87."
+    }
+  ],
+  "contactReview": {
+    "namedPersonalContactsOmitted": true,
+    "outreachPerformed": false,
+    "businessPhoneBasis": "Dealer-level public business contact field; not an individual staff contact."
+  }
+}

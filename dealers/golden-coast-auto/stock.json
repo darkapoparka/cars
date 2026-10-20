@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "dealer": "golden-coast-auto",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:03:53.583442Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "listing-959114",
+      "title": "2024 Isuzu NPR 85",
+      "make": "Isuzu",
+      "model": "Npr",
+      "year": 2024,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-959114.jpg"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2024-isuzu-npr-isuzu-npr85h22-cab-chassis-truck-2024-959114.html",
+      "observedAt": "2026-10-19T20:03:53.583442Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageOnRequest": true,
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-959190",
+      "title": "2024 Toyota Liteace",
+      "make": "Toyota",
+      "model": "Lite Ace",
+      "year": 2024,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-959190.jpg"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2024-toyota-liteace-toyota-liteace-van-2024-959190.html",
+      "observedAt": "2026-10-19T20:03:53.583442Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageOnRequest": true,
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-911175",
+      "title": "2025 Isuzu D-MAX STANDARD",
+      "make": "Isuzu",
+      "model": "D Max",
+      "year": 2025,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-911175.jpg"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2025-isuzu-d-max-19l-4x2-rba-single-cab-2-doors-my-2025-made-in-india-911175.html",
+      "observedAt": "2026-10-19T20:03:53.583442Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageOnRequest": true,
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

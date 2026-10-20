@@ -1,0 +1,182 @@
+{
+  "schemaVersion": 1,
+  "dealer": "rose-auto",
+  "status": "reviewed-independent-redraw",
+  "realLogoFirst": true,
+  "publicSources": [
+    {
+      "url": "https://www.dubicars.com/dealers/dubai-rose-auto-3267",
+      "observedAt": "2026-10-19T20:16:36Z"
+    }
+  ],
+  "originals": [
+    {
+      "path": "branding/public-original.jpg",
+      "sha256": "bf9c2a46c258983eb2ef4b154fb8158a8e890d1e843eaed8b2bb4bc494e0818d",
+      "url": "https://www.dubicars.com/images/f6a54b/z_180x120/rose-auto/logo-d2d8ae4f-7a1d-407c-92ef-2305bd518e08.jpeg",
+      "observedAt": "2026-10-19T20:16:36Z"
+    }
+  ],
+  "creationMethod": "imagegen-faithful-clean-redraw",
+  "dealerApproved": false,
+  "logoSource": "redraw",
+  "researchSummary": "Public dealer artwork reviewed; original retained and matched identity redrawn for transparent surfaces.",
+  "generation": {
+    "tool": "image_gen",
+    "generationId": "exec-f0c52b50-ec75-41ad-b379-b47e30b2e4d7",
+    "identifierKind": "tool-execution-output-identifier",
+    "modelVersion": null,
+    "sourcePath": "branding/generation-source.png",
+    "sourceSha256": "5399901a57bc3ca152e385521f001cc266ccb39f222b4966e60f06ed8354f173",
+    "nativeDimensions": {
+      "width": 1254,
+      "height": 1254
+    },
+    "prompt": "Faithful professional redraw of this ROSE AUTO logo. Preserve its burgundy sweeping ribbon forming a lower-case r and its detached black circular dot, with elegant spaced uppercase text \"ROSE\" and \"AUTO\". Refine geometry and kerning; retain the real motif and palette, flat burgundy ink no gradients. Compact emblem is the same ribbon and dot. Exactly four separated production assets on one transparent square canvas in a 2 by 2 grid. Top left full logo in its authentic dark/brand colours for white. Top right the SAME full logo drawn entirely in solid WHITE INK, all text and emblem white monochrome for charcoal and RED backgrounds. Bottom left compact emblem alone in brand/dark colours. Bottom right same compact emblem entirely WHITE monochrome. Each well inside its quadrant with broad transparent margins and gutters. Entire empty backdrop truly transparent alpha. No labels, no panels, no lines, no shadows, no 3D, no gradients. Correct spelling, beautiful legible typography and clean vector-like edges. Compact mark bold enough for 32px."
+  },
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T20:16:36Z",
+    "master": {
+      "path": "branding/input-onLight.png",
+      "sha256": "04e1dbbd71cd93ef8ad81fb982492b66c36b194529ac9ffcd6f904ca7bb790a3",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-f0c52b50-ec75-41ad-b379-b47e30b2e4d7",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "5399901a57bc3ca152e385521f001cc266ccb39f222b4966e60f06ed8354f173",
+        "outputFileName": "exec-f0c52b50-ec75-41ad-b379-b47e30b2e4d7.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 624,
+          "height": 663
+        }
+      }
+    },
+    "mark": {
+      "path": "branding/input-mark.png",
+      "sha256": "fb037569d2240383d10c9ce6b740bb7da5bd3e5e0bf9e365692487539ab21bc6",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-f0c52b50-ec75-41ad-b379-b47e30b2e4d7",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "5399901a57bc3ca152e385521f001cc266ccb39f222b4966e60f06ed8354f173",
+        "outputFileName": "exec-f0c52b50-ec75-41ad-b379-b47e30b2e4d7.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 0,
+          "top": 663,
+          "width": 624,
+          "height": 591
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/input-markOnDark.png",
+      "sha256": "7e985518412ab74474ab073a039db408c92f8c1f0cb2dd6e5e1fbb0a7a17b38c",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-f0c52b50-ec75-41ad-b379-b47e30b2e4d7",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "5399901a57bc3ca152e385521f001cc266ccb39f222b4966e60f06ed8354f173",
+        "outputFileName": "exec-f0c52b50-ec75-41ad-b379-b47e30b2e4d7.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 624,
+          "top": 663,
+          "width": 630,
+          "height": 591
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/input-onLight.png",
+        "sha256": "04e1dbbd71cd93ef8ad81fb982492b66c36b194529ac9ffcd6f904ca7bb790a3",
+        "generation": {
+          "tool": "image_gen",
+          "generationId": "exec-f0c52b50-ec75-41ad-b379-b47e30b2e4d7",
+          "identifierKind": "tool-execution-output-identifier",
+          "providerGenerationIdExposed": false,
+          "modelVersion": null,
+          "sourcePath": "branding/generation-source.png",
+          "sourceSha256": "5399901a57bc3ca152e385521f001cc266ccb39f222b4966e60f06ed8354f173",
+          "outputFileName": "exec-f0c52b50-ec75-41ad-b379-b47e30b2e4d7.png",
+          "operation": "deterministic-sprite-crop",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 624,
+            "height": 663
+          }
+        }
+      },
+      "onDark": {
+        "path": "branding/input-onDark.png",
+        "sha256": "9f3fc62671bf2dde0700be4b28ffe707ba7d459ebd70a6eebd9a0b1c38244133",
+        "generation": {
+          "tool": "image_gen",
+          "generationId": "exec-f0c52b50-ec75-41ad-b379-b47e30b2e4d7",
+          "identifierKind": "tool-execution-output-identifier",
+          "providerGenerationIdExposed": false,
+          "modelVersion": null,
+          "sourcePath": "branding/generation-source.png",
+          "sourceSha256": "5399901a57bc3ca152e385521f001cc266ccb39f222b4966e60f06ed8354f173",
+          "outputFileName": "exec-f0c52b50-ec75-41ad-b379-b47e30b2e4d7.png",
+          "operation": "deterministic-sprite-crop",
+          "crop": {
+            "left": 624,
+            "top": 0,
+            "width": 630,
+            "height": 663
+          }
+        }
+      },
+      "onAccent": {
+        "path": "branding/input-onDark.png",
+        "sha256": "9f3fc62671bf2dde0700be4b28ffe707ba7d459ebd70a6eebd9a0b1c38244133",
+        "generation": {
+          "tool": "image_gen",
+          "generationId": "exec-f0c52b50-ec75-41ad-b379-b47e30b2e4d7",
+          "identifierKind": "tool-execution-output-identifier",
+          "providerGenerationIdExposed": false,
+          "modelVersion": null,
+          "sourcePath": "branding/generation-source.png",
+          "sourceSha256": "5399901a57bc3ca152e385521f001cc266ccb39f222b4966e60f06ed8354f173",
+          "outputFileName": "exec-f0c52b50-ec75-41ad-b379-b47e30b2e4d7.png",
+          "operation": "deterministic-sprite-crop",
+          "crop": {
+            "left": 624,
+            "top": 0,
+            "width": 630,
+            "height": 663
+          }
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-19T20:16:36Z",
+      "method": "Agent reviewed generated artwork spelling, matching identity and transparent crop. White, charcoal and red contact sheet inspected; 32px compact marks reviewed.",
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#101820",
+        "#09090b",
+        "#17191c",
+        "#c40101"
+      ],
+      "dealerApproval": false
+    }
+  }
+}

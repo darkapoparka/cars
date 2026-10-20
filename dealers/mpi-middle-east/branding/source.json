@@ -1,0 +1,175 @@
+{
+  "schemaVersion": 1,
+  "dealer": "mpi-middle-east",
+  "status": "reviewed-independent-proposal",
+  "realLogoFirst": true,
+  "publicSources": [
+    {
+      "url": "https://www.dubicars.com/dealers/dubai-mpi-middle-east-2184",
+      "observedAt": "2026-10-19T21:07:30Z"
+    }
+  ],
+  "originals": [],
+  "creationMethod": "imagegen-independent-proposal",
+  "dealerApproved": false,
+  "logoSource": "proposal",
+  "researchSummary": "No confidently matched real MPI artwork was found. Public listing photos carry another trading-name watermark that was not treated as a verified alias. This independently proposed identity was revised to increase transparent internal gaps after the first smoke build detected dense source alpha.",
+  "generation": {
+    "tool": "image_gen",
+    "generationId": "exec-e065a334-7b1d-489b-95c2-90ad9dd8f4df",
+    "identifierKind": "tool-execution-output-identifier",
+    "modelVersion": null,
+    "sourcePath": "branding/generation-source.png",
+    "sourceSha256": "bfcccadadbff2327ca968ec5a2cc71ed3fc407b30eaef816765ec72dcb99ce8f",
+    "nativeDimensions": {
+      "width": 1254,
+      "height": 1254
+    },
+    "prompt": "Create a refined open geometric MPI MIDDLE EAST independent proposed dealer logo, navy #082d47 with small dark-teal #006971 arrow accent. Existing concept is an angular MPI monogram forming an upward-right arrow. Redesign this concept with NARROWER robust strokes and VERY LARGE open transparent gaps between each stroke, to avoid any filled block or solid badge appearance. Aim an airy outline-like symbol with over sixty percent empty space inside its bounding rectangle. Name exactly MPI, medium-weight geometric sans with open counters and broad letter spacing, with MIDDLE EAST clearly below. Full logo vertical emblem above the name, but leave substantial clear gap between emblem, MPI and subtitle. Compact logo only same open MPI arrow monogram, clear at32px. Exactly four isolated production variants on a transparent square canvas, arranged2by2 with clear empty gutters: top-left full logo in navy/teal; top-right same full logo entirely pure white; bottom-left compact navy/teal symbol; bottom-right compact purewhite symbol. Every internal gap and background fully transparent. FLAT solid strokes, no bevels, gradients, shadows, glow, texture or opaque panel. The important feature is broad empty negative space between the monogram strokes and letters. Crisp clear typography, four matching variants."
+  },
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T21:07:30Z",
+    "master": {
+      "path": "branding/input-onLight.png",
+      "sha256": "9d3590aa0601df89ec267c0242a232bbb9ecda655f35f3a03c93d6b2752accbd",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-e065a334-7b1d-489b-95c2-90ad9dd8f4df",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "bfcccadadbff2327ca968ec5a2cc71ed3fc407b30eaef816765ec72dcb99ce8f",
+        "outputFileName": "exec-e065a334-7b1d-489b-95c2-90ad9dd8f4df.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 633,
+          "height": 761
+        }
+      }
+    },
+    "mark": {
+      "path": "branding/input-mark.png",
+      "sha256": "12914a42f766b812ccfdc219efe3c9d46dd453be81931d4ae499c786cd4ce846",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-e065a334-7b1d-489b-95c2-90ad9dd8f4df",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "bfcccadadbff2327ca968ec5a2cc71ed3fc407b30eaef816765ec72dcb99ce8f",
+        "outputFileName": "exec-e065a334-7b1d-489b-95c2-90ad9dd8f4df.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 0,
+          "top": 761,
+          "width": 633,
+          "height": 493
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/input-markOnDark.png",
+      "sha256": "7400d2faf813a17fe8080baf516ea24ce2f99db9e09af8dc5d60f434bb4482ae",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-e065a334-7b1d-489b-95c2-90ad9dd8f4df",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "bfcccadadbff2327ca968ec5a2cc71ed3fc407b30eaef816765ec72dcb99ce8f",
+        "outputFileName": "exec-e065a334-7b1d-489b-95c2-90ad9dd8f4df.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 633,
+          "top": 761,
+          "width": 621,
+          "height": 493
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/input-onLight.png",
+        "sha256": "9d3590aa0601df89ec267c0242a232bbb9ecda655f35f3a03c93d6b2752accbd",
+        "generation": {
+          "tool": "image_gen",
+          "generationId": "exec-e065a334-7b1d-489b-95c2-90ad9dd8f4df",
+          "identifierKind": "tool-execution-output-identifier",
+          "providerGenerationIdExposed": false,
+          "modelVersion": null,
+          "sourcePath": "branding/generation-source.png",
+          "sourceSha256": "bfcccadadbff2327ca968ec5a2cc71ed3fc407b30eaef816765ec72dcb99ce8f",
+          "outputFileName": "exec-e065a334-7b1d-489b-95c2-90ad9dd8f4df.png",
+          "operation": "deterministic-sprite-crop",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 633,
+            "height": 761
+          }
+        }
+      },
+      "onDark": {
+        "path": "branding/input-onDark.png",
+        "sha256": "ae084907cfd6f925fd534d351280605a19838bba1dd99f2edc69c5c3ea247f69",
+        "generation": {
+          "tool": "image_gen",
+          "generationId": "exec-e065a334-7b1d-489b-95c2-90ad9dd8f4df",
+          "identifierKind": "tool-execution-output-identifier",
+          "providerGenerationIdExposed": false,
+          "modelVersion": null,
+          "sourcePath": "branding/generation-source.png",
+          "sourceSha256": "bfcccadadbff2327ca968ec5a2cc71ed3fc407b30eaef816765ec72dcb99ce8f",
+          "outputFileName": "exec-e065a334-7b1d-489b-95c2-90ad9dd8f4df.png",
+          "operation": "deterministic-sprite-crop",
+          "crop": {
+            "left": 633,
+            "top": 0,
+            "width": 621,
+            "height": 761
+          }
+        }
+      },
+      "onAccent": {
+        "path": "branding/input-onDark.png",
+        "sha256": "ae084907cfd6f925fd534d351280605a19838bba1dd99f2edc69c5c3ea247f69",
+        "generation": {
+          "tool": "image_gen",
+          "generationId": "exec-e065a334-7b1d-489b-95c2-90ad9dd8f4df",
+          "identifierKind": "tool-execution-output-identifier",
+          "providerGenerationIdExposed": false,
+          "modelVersion": null,
+          "sourcePath": "branding/generation-source.png",
+          "sourceSha256": "bfcccadadbff2327ca968ec5a2cc71ed3fc407b30eaef816765ec72dcb99ce8f",
+          "outputFileName": "exec-e065a334-7b1d-489b-95c2-90ad9dd8f4df.png",
+          "operation": "deterministic-sprite-crop",
+          "crop": {
+            "left": 633,
+            "top": 0,
+            "width": 621,
+            "height": 761
+          }
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-19T21:07:30Z",
+      "method": "Agent reviewed generated artwork spelling, matching identity and transparent crop. White, charcoal and red contact sheet inspected; 32px compact marks reviewed.",
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#101820",
+        "#09090b",
+        "#17191c",
+        "#c40101"
+      ],
+      "dealerApproval": false
+    }
+  }
+}

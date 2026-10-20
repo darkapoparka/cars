@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "new-abu-taj-motors",
+  "previousSlug": "new-abu-taj-motors",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:06:18.479Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 3,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-dubai-new-abu-taj-motors",
+    "position": 256
+  },
+  "before": {
+    "files": 39,
+    "bytes": 5939918
+  },
+  "afterBeforeReview": {
+    "files": 23,
+    "bytes": 2764833
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 87727,
+      "sha256": "ce243ad061c023e967da8205a98edd0ba10d90b15312ceb7a91fcad01f37d5ba"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 89317,
+      "sha256": "71e70d154890b4b025a0c51ecc351729c52c2732d3ba64d4d36e0367193b748b"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 87727,
+      "sha256": "ce243ad061c023e967da8205a98edd0ba10d90b15312ceb7a91fcad01f37d5ba"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 298371,
+      "sha256": "34e5ad0b89fddac41fbad7a0e33c8c60d2b14145ca4d0d4e2611f73686eb811e"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 288879,
+      "sha256": "71a9e2da3467dd95cd3207d0ee6c73b997745aed2478f103fa2da2195e75e87a"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 288879,
+      "sha256": "71a9e2da3467dd95cd3207d0ee6c73b997745aed2478f103fa2da2195e75e87a"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 298371,
+      "sha256": "34e5ad0b89fddac41fbad7a0e33c8c60d2b14145ca4d0d4e2611f73686eb811e"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 87727,
+      "sha256": "ce243ad061c023e967da8205a98edd0ba10d90b15312ceb7a91fcad01f37d5ba"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 7848,
+      "sha256": "936245c38eba6c9de3050dcd019b0b9eecf7c178577f62cdd3a5305d48245566"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 288879,
+      "sha256": "71a9e2da3467dd95cd3207d0ee6c73b997745aed2478f103fa2da2195e75e87a"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 218258,
+      "sha256": "7c62a601fe68817ee424ef68a84afda2cb6e129ca22046e6018aeb01ff689988"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 288879,
+      "sha256": "71a9e2da3467dd95cd3207d0ee6c73b997745aed2478f103fa2da2195e75e87a"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 218258,
+      "sha256": "7c62a601fe68817ee424ef68a84afda2cb6e129ca22046e6018aeb01ff689988"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 298371,
+      "sha256": "34e5ad0b89fddac41fbad7a0e33c8c60d2b14145ca4d0d4e2611f73686eb811e"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 198164,
+      "sha256": "048f857cd780b135abe022908a7391c7bcbed4cf75b4648fe7721bad2c27da31"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 70588,
+      "sha256": "5c7de689da650d74b9de342cbb289f1f066231c76327a53f279ed576ae1cd652"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 62654,
+      "sha256": "ef61a7682902830e22b7b92f683935020148c3558c37332f7117537ac670a11f"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 13,
+    "bytes": 1403894,
+    "inventorySha256": "01cdb5e9933d687b7a53269e84299688d6fcde6ecd14ba2e350424ac4c340e59",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "new-abu-taj-motors",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 25,
+    "report": "dealers/new-abu-taj-motors/input-review.json"
+  },
+  "after": {
+    "files": 25,
+    "bytes": 2773620
+  }
+}

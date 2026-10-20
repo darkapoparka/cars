@@ -1,0 +1,182 @@
+{
+  "schemaVersion": 1,
+  "dealer": "quick-cars",
+  "status": "reviewed-independent-redraw",
+  "realLogoFirst": true,
+  "publicSources": [
+    {
+      "url": "https://www.dubicars.com/dealers/dubai-quick-cars-2977",
+      "observedAt": "2026-10-19T21:00:01Z"
+    }
+  ],
+  "originals": [
+    {
+      "path": "branding/public-original.jpg",
+      "sha256": "cbacf4591e7d7633ad967df00dc9e272ef4b1bf05f2016ac0e6ca4d20e9b419f",
+      "url": "https://static.oneclickdrive.com/application/views/img/company/1747643044.jpeg?height=160&width=auto&fit=resize",
+      "observedAt": "2026-10-19T21:00:01Z"
+    }
+  ],
+  "creationMethod": "imagegen-faithful-clean-redraw",
+  "dealerApproved": false,
+  "logoSource": "redraw",
+  "researchSummary": "Public dealer artwork reviewed; original retained and matched identity redrawn for transparent surfaces.",
+  "generation": {
+    "tool": "image_gen",
+    "generationId": "exec-f2785d01-b5d5-4e00-93c7-d17961afc14b",
+    "identifierKind": "tool-execution-output-identifier",
+    "modelVersion": null,
+    "sourcePath": "branding/generation-source.png",
+    "sourceSha256": "b32f6602b8c7e85eb8bfcf3dbf600c2e7d1d83c554b83007b9feef7fc559e5f1",
+    "nativeDimensions": {
+      "width": 1536,
+      "height": 1024
+    },
+    "prompt": "Faithful clean redraw of QUICK CARS: existing real motif is a low angular red racing-car side silhouette above a distinctive futuristic black uppercase QUICK CARS wordmark. Keep the exact name, red #b7001b and black, car motif and clean futuristic letterforms. Avoid unreadable experimental letters. Compact mark is a bold Q with red car-roof stroke above it, square and simple. No slogan. Output exactly four production variants on truly transparent alpha, in a two by two grid with large clear gutters and ample margins. TOP LEFT: full logo in dark ink for white background. TOP RIGHT: same full logo in pure-white monochrome for dark and red backgrounds. BOTTOM LEFT: compact emblem in dark ink; BOTTOM RIGHT: same compact emblem in pure white. No panel, background fill, shadows, glow, gradients, texture, photographic mockup or labels. Flat crisp brand artwork with transparent internal cutouts. Compact emblem substantially square and legible at 32px."
+  },
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T21:00:01Z",
+    "master": {
+      "path": "branding/input-onLight.png",
+      "sha256": "81e5ac6bc2699e105ba435fbc7856f10f24273f3202b150cce1ff5d6da222b0c",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-f2785d01-b5d5-4e00-93c7-d17961afc14b",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "b32f6602b8c7e85eb8bfcf3dbf600c2e7d1d83c554b83007b9feef7fc559e5f1",
+        "outputFileName": "exec-f2785d01-b5d5-4e00-93c7-d17961afc14b.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 780,
+          "height": 493
+        }
+      }
+    },
+    "mark": {
+      "path": "branding/input-mark.png",
+      "sha256": "1886646073a36fefe326e1812ba62ffdf0a1d361df74a41a9ac0fe93205c39cb",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-f2785d01-b5d5-4e00-93c7-d17961afc14b",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "b32f6602b8c7e85eb8bfcf3dbf600c2e7d1d83c554b83007b9feef7fc559e5f1",
+        "outputFileName": "exec-f2785d01-b5d5-4e00-93c7-d17961afc14b.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 0,
+          "top": 493,
+          "width": 780,
+          "height": 531
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/input-markOnDark.png",
+      "sha256": "8aa5feeba012756dc3477473a888b893f6f5084fe645f5e01cfafcbec09660ba",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-f2785d01-b5d5-4e00-93c7-d17961afc14b",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "b32f6602b8c7e85eb8bfcf3dbf600c2e7d1d83c554b83007b9feef7fc559e5f1",
+        "outputFileName": "exec-f2785d01-b5d5-4e00-93c7-d17961afc14b.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 780,
+          "top": 493,
+          "width": 756,
+          "height": 531
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/input-onLight.png",
+        "sha256": "81e5ac6bc2699e105ba435fbc7856f10f24273f3202b150cce1ff5d6da222b0c",
+        "generation": {
+          "tool": "image_gen",
+          "generationId": "exec-f2785d01-b5d5-4e00-93c7-d17961afc14b",
+          "identifierKind": "tool-execution-output-identifier",
+          "providerGenerationIdExposed": false,
+          "modelVersion": null,
+          "sourcePath": "branding/generation-source.png",
+          "sourceSha256": "b32f6602b8c7e85eb8bfcf3dbf600c2e7d1d83c554b83007b9feef7fc559e5f1",
+          "outputFileName": "exec-f2785d01-b5d5-4e00-93c7-d17961afc14b.png",
+          "operation": "deterministic-sprite-crop",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 780,
+            "height": 493
+          }
+        }
+      },
+      "onDark": {
+        "path": "branding/input-onDark.png",
+        "sha256": "338a29319795ae4d5073fc26cfceb7bdf51fa203379e6648798de3490c5d282b",
+        "generation": {
+          "tool": "image_gen",
+          "generationId": "exec-f2785d01-b5d5-4e00-93c7-d17961afc14b",
+          "identifierKind": "tool-execution-output-identifier",
+          "providerGenerationIdExposed": false,
+          "modelVersion": null,
+          "sourcePath": "branding/generation-source.png",
+          "sourceSha256": "b32f6602b8c7e85eb8bfcf3dbf600c2e7d1d83c554b83007b9feef7fc559e5f1",
+          "outputFileName": "exec-f2785d01-b5d5-4e00-93c7-d17961afc14b.png",
+          "operation": "deterministic-sprite-crop",
+          "crop": {
+            "left": 780,
+            "top": 0,
+            "width": 756,
+            "height": 493
+          }
+        }
+      },
+      "onAccent": {
+        "path": "branding/input-onDark.png",
+        "sha256": "338a29319795ae4d5073fc26cfceb7bdf51fa203379e6648798de3490c5d282b",
+        "generation": {
+          "tool": "image_gen",
+          "generationId": "exec-f2785d01-b5d5-4e00-93c7-d17961afc14b",
+          "identifierKind": "tool-execution-output-identifier",
+          "providerGenerationIdExposed": false,
+          "modelVersion": null,
+          "sourcePath": "branding/generation-source.png",
+          "sourceSha256": "b32f6602b8c7e85eb8bfcf3dbf600c2e7d1d83c554b83007b9feef7fc559e5f1",
+          "outputFileName": "exec-f2785d01-b5d5-4e00-93c7-d17961afc14b.png",
+          "operation": "deterministic-sprite-crop",
+          "crop": {
+            "left": 780,
+            "top": 0,
+            "width": 756,
+            "height": 493
+          }
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-19T21:00:01Z",
+      "method": "Agent reviewed generated artwork spelling, matching identity and transparent crop. White, charcoal and red contact sheet inspected; 32px compact marks reviewed.",
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#101820",
+        "#09090b",
+        "#17191c",
+        "#c40101"
+      ],
+      "dealerApproval": false
+    }
+  }
+}

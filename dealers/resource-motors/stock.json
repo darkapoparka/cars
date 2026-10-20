@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "dealer": "resource-motors",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T21:00:01Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "listing-1",
+      "title": "Mitsubishi L200 Double Cab 2015",
+      "make": "Mitsubishi",
+      "model": "L200 Double Cab",
+      "year": 2015,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-1.jpg"
+      ],
+      "sourceUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/Mitsubishi/L200-Double-Cab/?id=59355",
+      "observedAt": "2026-10-19T21:00:01Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageOnRequest": true,
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-2",
+      "title": "Toyota Prado GXR 2007",
+      "make": "Toyota",
+      "model": "Prado GXR",
+      "year": 2007,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-2.jpg"
+      ],
+      "sourceUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/Toyota/Prado-GXR/?id=59366",
+      "observedAt": "2026-10-19T21:00:01Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageOnRequest": true,
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-3",
+      "title": "Toyota Fortuner EXR 2015",
+      "make": "Toyota",
+      "model": "Fortuner EXR",
+      "year": 2015,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-3.jpg"
+      ],
+      "sourceUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/Toyota/Fortuner-EXR/?id=59365",
+      "observedAt": "2026-10-19T21:00:01Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageOnRequest": true,
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

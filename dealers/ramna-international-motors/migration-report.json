@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "ramna-international-motors",
+  "previousSlug": "ramna-international-motors",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:09:58.456Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 3,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-dubai-ramna-international-motors-fzco",
+    "position": 262
+  },
+  "before": {
+    "files": 39,
+    "bytes": 4904432
+  },
+  "afterBeforeReview": {
+    "files": 23,
+    "bytes": 1047571
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 94620,
+      "sha256": "d30c1cce89796521677e2338531b12838246220b2b37ed54b0ac336db54495b0"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 112960,
+      "sha256": "52f2351ab1f4ad767e0234cdf02078b6ff2129c232f67e2f6bf82a29250430d8"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 94620,
+      "sha256": "d30c1cce89796521677e2338531b12838246220b2b37ed54b0ac336db54495b0"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 340538,
+      "sha256": "d9a93273bbac62e5f0b3b345cbe13add25e2636f91c8c56e65ad0fa600127488"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 392500,
+      "sha256": "9c44fbc4d14c134bb07add5589a5bb95353f86f580103aa5c2792c96e2383280"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 392500,
+      "sha256": "9c44fbc4d14c134bb07add5589a5bb95353f86f580103aa5c2792c96e2383280"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 340538,
+      "sha256": "d9a93273bbac62e5f0b3b345cbe13add25e2636f91c8c56e65ad0fa600127488"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 94620,
+      "sha256": "d30c1cce89796521677e2338531b12838246220b2b37ed54b0ac336db54495b0"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 8164,
+      "sha256": "aae8d02a5ed5ebe632d1fde4deb2128be46d0b7a173ac89a34f84bd538f5c9a6"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 392500,
+      "sha256": "9c44fbc4d14c134bb07add5589a5bb95353f86f580103aa5c2792c96e2383280"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 248948,
+      "sha256": "4eb06e530b9ef7f40217cb5a9d5e7a0e581cd525562d48bf2e5c303f49ded765"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 392500,
+      "sha256": "9c44fbc4d14c134bb07add5589a5bb95353f86f580103aa5c2792c96e2383280"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 248948,
+      "sha256": "4eb06e530b9ef7f40217cb5a9d5e7a0e581cd525562d48bf2e5c303f49ded765"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 340538,
+      "sha256": "d9a93273bbac62e5f0b3b345cbe13add25e2636f91c8c56e65ad0fa600127488"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 225288,
+      "sha256": "8d801d98b9ddad215302095e0a6905d9ca1a039ecea7b890d687126cd8c80727"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 73698,
+      "sha256": "6321e1f366222990f2a76969c448b42ee2643890ea2e659e392a7a2c2498ea80"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 67244,
+      "sha256": "bbeb93f8640de4eeaae7e2e5b977fd382eb29afc57873777cc02a3a3565c5964"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 13,
+    "bytes": 560560,
+    "inventorySha256": "e1899eb53e380e799bd33b748621b3efac911b97a54c7dd92322ddf61bfdf186",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "ramna-international-motors",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 25,
+    "report": "dealers/ramna-international-motors/input-review.json"
+  },
+  "after": {
+    "files": 25,
+    "bytes": 1056432
+  }
+}

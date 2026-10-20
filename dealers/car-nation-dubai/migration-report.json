@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "car-nation-dubai",
+  "previousSlug": "car-nation-dubai",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:02:45.395Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 3,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-dubai-car-nation-used-automobile-trading-for-export-llc",
+    "position": 207
+  },
+  "before": {
+    "files": 38,
+    "bytes": 5929738
+  },
+  "afterBeforeReview": {
+    "files": 22,
+    "bytes": 3134774
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 108946,
+      "sha256": "f27cf98576eb6af5053086b00ce0c73e91f3a45b6f6f3da85d846eba6780d9d7"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 107668,
+      "sha256": "04a99ef2b25878deea7c73ad4e2804a781d8a6da0a13e902119acbfffe703e51"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 108946,
+      "sha256": "f27cf98576eb6af5053086b00ce0c73e91f3a45b6f6f3da85d846eba6780d9d7"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 238985,
+      "sha256": "2679cd5b793a52fae42825415f50aee8a48a5a0f6a7413a13929787b2a9ea557"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 250695,
+      "sha256": "9a17e1fd05fc0313333aeb1fb8a4b3df872d460d52b209fcedcb93ffa8d50db5"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 250695,
+      "sha256": "9a17e1fd05fc0313333aeb1fb8a4b3df872d460d52b209fcedcb93ffa8d50db5"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 238985,
+      "sha256": "2679cd5b793a52fae42825415f50aee8a48a5a0f6a7413a13929787b2a9ea557"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 108946,
+      "sha256": "f27cf98576eb6af5053086b00ce0c73e91f3a45b6f6f3da85d846eba6780d9d7"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 9171,
+      "sha256": "8626bc3836ec0d393d34c8872514eeb6bf1242c0747af0a1199b1d7852b6aec7"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 250695,
+      "sha256": "9a17e1fd05fc0313333aeb1fb8a4b3df872d460d52b209fcedcb93ffa8d50db5"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 170046,
+      "sha256": "9a2b34cefd2b8e8d1483b0b828ff3e21b54f54fbd6f449c990c2d06c81f5ef98"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 250695,
+      "sha256": "9a17e1fd05fc0313333aeb1fb8a4b3df872d460d52b209fcedcb93ffa8d50db5"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 170046,
+      "sha256": "9a2b34cefd2b8e8d1483b0b828ff3e21b54f54fbd6f449c990c2d06c81f5ef98"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 238985,
+      "sha256": "2679cd5b793a52fae42825415f50aee8a48a5a0f6a7413a13929787b2a9ea557"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 152946,
+      "sha256": "d9f3337cb9c2cad3e8c8e2faf4a9090f67a9e9361b86ee028ecc07ac30870e46"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 74140,
+      "sha256": "9d755a3cf5aa28961da2f9eb9d55fb7e3d9a650d2d4cd58667151b4240d50254"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 68246,
+      "sha256": "fe30b7961873621da39b154c2bebd1d8c8d3926340f98224161b2fbc093a809e"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 12,
+    "bytes": 1837395,
+    "inventorySha256": "3c9b3bba30d42f1e9918134a485c1c0a62270c408d8ab9fdca7575426bf5fc67",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "car-nation-dubai",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 24,
+    "report": "dealers/car-nation-dubai/input-review.json"
+  },
+  "after": {
+    "files": 24,
+    "bytes": 3143556
+  }
+}

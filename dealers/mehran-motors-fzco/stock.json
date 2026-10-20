@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "dealer": "mehran-motors-fzco",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:03:53.953359Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "listing-912652",
+      "title": "2025 Toyota Hilux GR SPORT",
+      "make": "Toyota",
+      "model": "Hilux",
+      "year": 2025,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-912652.jpg"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2025-toyota-hilux-adv-40l-912652.html",
+      "observedAt": "2026-10-19T20:03:53.953359Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageOnRequest": true,
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-900801",
+      "title": "2025 Volkswagen Golf",
+      "make": "Volkswagen",
+      "model": "Golf",
+      "year": 2025,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-900801.jpg"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2025-volkswagen-golf-900801.html",
+      "observedAt": "2026-10-19T20:03:53.953359Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageOnRequest": true,
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-998810",
+      "title": "2026 Toyota Hilux SR5",
+      "make": "Toyota",
+      "model": "Hilux",
+      "year": 2026,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-998810.jpg"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2026-toyota-hilux-sr5-non-gcc-998810.html",
+      "observedAt": "2026-10-19T20:03:53.953359Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageOnRequest": true,
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

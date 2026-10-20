@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "dealer": "quick-cars",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://www.dubicars.com/dealers/dubai-quick-cars-2977",
+      "observedAt": "2026-10-19T21:00:01Z",
+      "supports": [
+        "public-business-identity",
+        "business-contact",
+        "address",
+        "attributed-public-stock"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/Jetour/X70-Plus/?id=818011",
+      "observedAt": "2026-10-19T20:56:24Z",
+      "supports": [
+        "public-dealer-logo"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "observedAt": "2026-10-19T21:00:01Z",
+  "stockMedia": [
+    {
+      "path": "dealer-stock/listing-1.jpg",
+      "sourceUrl": "https://www.dubicars.com/images/0ea731/650x380/quick-cars/f45d37f0-a77d-40b3-9511-e6a74414fa75.jpeg",
+      "listingUrl": "https://www.dubicars.com/2020-alfa-romeo-giulietta-2020-alfa-romeo-giulietta-veloce-gcc-specs-57546-km-panoramic-sunroof-1029070.html",
+      "observedAt": "2026-10-19T21:00:01Z",
+      "sourceSha256": "a651087125524526dc61767cb6af7f320a4bf414b75673ae5f8846c4676cd9c1",
+      "sha256": "0c8bfac8e892ea914f13633c3e5ad2ff683accc5753ffd8f96adfda07e080f92",
+      "width": 650,
+      "height": 488,
+      "bytes": 57158,
+      "transformation": "Bounded resize to at most 1280px; optimized JPEG quality 87."
+    },
+    {
+      "path": "dealer-stock/listing-2.jpg",
+      "sourceUrl": "https://www.dubicars.com/images/171dec/650x380/quick-cars/dc111dfd-955b-4a77-9beb-5900cfb0cb8c.jpeg",
+      "listingUrl": "https://www.dubicars.com/2022-gac-gn6-2022-gac-gn6-ge-gcc-specs-45953-km-agency-serviced-1029150.html",
+      "observedAt": "2026-10-19T21:00:01Z",
+      "sourceSha256": "87b4fdb99a1480bb97b20189fabd45cfa4bed060db78ea28f109057b0c837c47",
+      "sha256": "5e6b9a364f6172d5c2cafcf7a6c4ba0fc8ebca3eb87d454d7373381d5b8e4c0f",
+      "width": 650,
+      "height": 488,
+      "bytes": 63830,
+      "transformation": "Bounded resize to at most 1280px; optimized JPEG quality 87."
+    },
+    {
+      "path": "dealer-stock/listing-3.jpg",
+      "sourceUrl": "https://www.dubicars.com/images/d73570/650x380/quick-cars/7bd11beb-540e-4e31-80b7-78ea4749352c.jpeg",
+      "listingUrl": "https://www.dubicars.com/2025-jetour-x70-plus-2025-jetour-x70-plus-luxury-gcc-specs-33234-km-spacious-family-suv-1034373.html",
+      "observedAt": "2026-10-19T21:00:01Z",
+      "sourceSha256": "514b08e8eced74e62e6133e9baf855e16435ab338f8afb5e009a6eb5a34ce3ad",
+      "sha256": "543f9f7b56c3bda4df8d46c5bf44bdc7eaff383aa6be7e15d71a841bb547f726",
+      "width": 650,
+      "height": 488,
+      "bytes": 31115,
+      "transformation": "Bounded resize to at most 1280px; optimized JPEG quality 87."
+    }
+  ],
+  "researchNotes": "Dealer website was unavailable; public dealer catalogue supplies current facts and stock. Real logo retained from matched Quick Cars LLC FZ stock listing on OneClickDrive.",
+  "contactReview": {
+    "namedPersonalContactsOmitted": true,
+    "outreachPerformed": false,
+    "businessPhoneBasis": "Dealer-level public business contact field; not an individual staff contact."
+  }
+}

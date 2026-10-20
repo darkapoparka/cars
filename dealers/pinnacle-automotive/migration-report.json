@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "pinnacle-automotive",
+  "previousSlug": "pinnacle-automotive",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:08:56.320Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 3,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-dubai-pinnacle-automotive-international",
+    "position": 260
+  },
+  "before": {
+    "files": 39,
+    "bytes": 4093188
+  },
+  "afterBeforeReview": {
+    "files": 23,
+    "bytes": 1085058
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 75647,
+      "sha256": "c89d86c32989bca9c4645104a5e9dfde784ec586c530ec4162737881e8157dc7"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 83169,
+      "sha256": "95c23af50f61261fa8a43f35a259bda5904acd04d15ec08e471357792e9b0823"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 75647,
+      "sha256": "c89d86c32989bca9c4645104a5e9dfde784ec586c530ec4162737881e8157dc7"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 268096,
+      "sha256": "bc36e5105f9f26addf4492d3756c4f2172a6f52666b02873cb0e8d222448ca91"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 313206,
+      "sha256": "b8a093eef948c7a053f15d012f09aa7fc251f74a5ca5c10b25ebd918f0874c60"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 313206,
+      "sha256": "b8a093eef948c7a053f15d012f09aa7fc251f74a5ca5c10b25ebd918f0874c60"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 268096,
+      "sha256": "bc36e5105f9f26addf4492d3756c4f2172a6f52666b02873cb0e8d222448ca91"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 75647,
+      "sha256": "c89d86c32989bca9c4645104a5e9dfde784ec586c530ec4162737881e8157dc7"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 5289,
+      "sha256": "7b1be0fb07b5ad26e184852c4a002591fb8b25091e5ee739161ffa56df8a0949"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 313206,
+      "sha256": "b8a093eef948c7a053f15d012f09aa7fc251f74a5ca5c10b25ebd918f0874c60"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 191168,
+      "sha256": "93ad1884fc36b0ebb541ff2fa58b5867fe76e89c7ad7fd32d363930939571593"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 313206,
+      "sha256": "b8a093eef948c7a053f15d012f09aa7fc251f74a5ca5c10b25ebd918f0874c60"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 191168,
+      "sha256": "93ad1884fc36b0ebb541ff2fa58b5867fe76e89c7ad7fd32d363930939571593"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 268096,
+      "sha256": "bc36e5105f9f26addf4492d3756c4f2172a6f52666b02873cb0e8d222448ca91"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 154634,
+      "sha256": "1c6e5e021dfb21f2fd15c06b0aedb874388011af1991485f5487a3f70fed0b5c"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 55160,
+      "sha256": "05bc1acb3f5c4bc7096715f1b1865849606b062376986daf363a21949fa4bce0"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 47334,
+      "sha256": "017ea84f787ce6c21161f44c6b3ec864703e2c9796fa3a9c62e72dc535eac320"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 13,
+    "bytes": 566706,
+    "inventorySha256": "8437d757b2d22ce1d538430ab69ad87afcacd2a6dcc994d645947fb985b3f154",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "pinnacle-automotive",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 25,
+    "report": "dealers/pinnacle-automotive/input-review.json"
+  },
+  "after": {
+    "files": 25,
+    "bytes": 1093880
+  }
+}

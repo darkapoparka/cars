@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "dealer": "metro-motors-llc",
+  "researchId": "ae-dubai-metro-motors-llc",
+  "observedAt": "2026-10-19T20:03:53.980957Z",
+  "liveFetchPerformed": true,
+  "businessSources": [
+    {
+      "url": "https://www.oneclickdrive.com/company/dubai/metro-motors-llc",
+      "observedAt": "2026-10-19T20:03:53.980957Z",
+      "supports": [
+        "dealer-name",
+        "dealer-attributed-listings",
+        "dealer-attributed-photos",
+        "public-business-call-line",
+        "address"
+      ]
+    }
+  ],
+  "stockMode": "dated-listing-snapshot",
+  "inventoryCountMeaning": "Selected currently advertised public records, not a count or confirmation of available physical stock.",
+  "media": [
+    {
+      "path": "dealer-stock/listing-45591.jpg",
+      "sourceUrl": "https://static.oneclickdrive.com/uploads/cars/Rox_01_2024_45591_45591_4515881656-5_small.jpg",
+      "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/ROX/01-Captain-ETE/?id=45591",
+      "observedAt": "2026-10-19T20:03:53.980957Z",
+      "downloadedSha256": "dbd0cb3cbd63af0d89091f49907cad502c08bd7f61511bb7307aa85425d05b74",
+      "downloadedDimensions": [
+        450,
+        395
+      ],
+      "sha256": "5d09c6fe84930d626d6938e1dd3566a715748350fcfdc9c6b57f64d811a9f15b",
+      "bytes": 44098,
+      "dimensions": [
+        450,
+        395
+      ],
+      "modification": "Proportional resize without enlargement to at most 1280px; JPEG encode; no content changes."
+    },
+    {
+      "path": "dealer-stock/listing-45589.jpg",
+      "sourceUrl": "https://static.oneclickdrive.com/uploads/cars/Dodge_Durango_2019_45589_45589_4515577635-13_small.jpg",
+      "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/Dodge/Durango-GT/?id=45589",
+      "observedAt": "2026-10-19T20:03:53.980957Z",
+      "downloadedSha256": "95d05c44a5fd33c7791abb1d31b7a4718777cf76849f5b27d75783b551c7e648",
+      "downloadedDimensions": [
+        450,
+        395
+      ],
+      "sha256": "d0edadbddd1d2b6c6936d22481f89374f6e56cf4b2a3f93b74811801d6a93dfc",
+      "bytes": 43353,
+      "dimensions": [
+        450,
+        395
+      ],
+      "modification": "Proportional resize without enlargement to at most 1280px; JPEG encode; no content changes."
+    },
+    {
+      "path": "dealer-stock/listing-45598.jpg",
+      "sourceUrl": "https://static.oneclickdrive.com/uploads/cars/Nissan_Micra_2020_45598_45598_45172555885-5_small.jpg",
+      "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/Nissan/Micra-S/?id=45598",
+      "observedAt": "2026-10-19T20:03:53.980957Z",
+      "downloadedSha256": "c88e5bde2feb6bf8c28e8aad23fa0487fed0eb4cfc24e931d0083b1b5698916b",
+      "downloadedDimensions": [
+        450,
+        395
+      ],
+      "sha256": "a7f5ac31fbc161354482eb2f2f588929d4d5fcaa155cb4b8921539f9de1c96d0",
+      "bytes": 48880,
+      "dimensions": [
+        450,
+        395
+      ],
+      "modification": "Proportional resize without enlargement to at most 1280px; JPEG encode; no content changes."
+    }
+  ],
+  "researchLimitations": [
+    "Marketplace relay numbers excluded; source catalogue provides address and published shop hours.",
+    "Phone is the dealer-attributed call link in the public vehicle card; common platform WhatsApp relay omitted.",
+    "Opening hours omitted because the platform repeats a generic schedule and independent verification is unavailable."
+  ],
+  "excludedSourceContent": [
+    "Personal names and personal or ambiguous emails",
+    "Marketplace relay numbers",
+    "Prices",
+    "Unsupported warranties, inspections, ratings and finance promises"
+  ],
+  "dealerApproval": "unknown"
+}

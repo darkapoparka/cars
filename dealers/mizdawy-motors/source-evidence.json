@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "dealer": "mizdawy-motors",
+  "researchId": "ae-dubai-mizdawy-motors",
+  "observedAt": "2026-10-19T20:03:54.057713Z",
+  "liveFetchPerformed": true,
+  "businessSources": [
+    {
+      "url": "https://www.oneclickdrive.com/company/dubai/mizdawy-motors",
+      "observedAt": "2026-10-19T20:03:54.057713Z",
+      "supports": [
+        "dealer-name",
+        "dealer-attributed-listings",
+        "dealer-attributed-photos",
+        "public-business-call-line",
+        "address"
+      ]
+    },
+    {
+      "url": "https://auto.ae/dubai/sale/car/rox/rox-adamas-2026/id/269318/",
+      "observedAt": "2026-10-19T20:03:54.057713Z",
+      "supports": [
+        "seller-name",
+        "vehicle-identity",
+        "seller-attributed-listing-photo"
+      ]
+    }
+  ],
+  "stockMode": "dated-listing-snapshot",
+  "inventoryCountMeaning": "Selected currently advertised public records, not a count or confirmation of available physical stock.",
+  "media": [
+    {
+      "path": "dealer-stock/listing-269318.jpg",
+      "sourceUrl": "https://auto.ae/image/ae/s:683/plain/https://auto-ae-prod-storage.storage.googleapis.com/auto_dubai_rox_adamas_sale_269318800677080",
+      "listingUrl": "https://auto.ae/dubai/sale/car/rox/rox-adamas-2026/id/269318/",
+      "observedAt": "2026-10-19T20:03:54.057713Z",
+      "downloadedSha256": "d10083d333cbe436d1dc46181c0ea704dc37d46645a1ec715671a590a3f3c895",
+      "downloadedDimensions": [
+        683,
+        911
+      ],
+      "sha256": "9d7e5da8a8f6f492d978b45b7f03022cf3cac66936bc0982253a54c29d5c715f",
+      "bytes": 127452,
+      "dimensions": [
+        683,
+        911
+      ],
+      "modification": "Proportional resize without enlargement to at most 1280px; JPEG encode; no content changes."
+    }
+  ],
+  "researchLimitations": [
+    "Marketplace relay numbers excluded; source catalogue provides address and published shop hours.",
+    "Phone is the dealer-attributed call link in the public vehicle card; common platform WhatsApp relay omitted.",
+    "Opening hours omitted because the platform repeats a generic schedule and independent verification is unavailable.",
+    "OneClickDrive generic manufacturer photos excluded; real dealer-attributed Rox Adamas photo retained from AUTO.AE."
+  ],
+  "excludedSourceContent": [
+    "Personal names and personal or ambiguous emails",
+    "Marketplace relay numbers",
+    "Prices",
+    "Unsupported warranties, inspections, ratings and finance promises"
+  ],
+  "dealerApproval": "unknown"
+}

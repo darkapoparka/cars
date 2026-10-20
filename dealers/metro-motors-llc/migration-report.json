@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "metro-motors-llc",
+  "previousSlug": "metro-motors-llc",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:03:18.020Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 3,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-dubai-metro-motors-llc",
+    "position": 247
+  },
+  "before": {
+    "files": 39,
+    "bytes": 2723927
+  },
+  "afterBeforeReview": {
+    "files": 23,
+    "bytes": 916826
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 77758,
+      "sha256": "a2f418f77582db189b9b9a901f8d05e04da5b74f06206455ec67c5f02ece8d9c"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 79225,
+      "sha256": "68f4f29172853e4fc7933f5ff49aca11fb1c343c4c588457756502764ff87055"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 77758,
+      "sha256": "a2f418f77582db189b9b9a901f8d05e04da5b74f06206455ec67c5f02ece8d9c"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 158089,
+      "sha256": "9a87c5bb9d4be721e075387b7569eb19a21507453933d6728bc689274d3e5ee9"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 149992,
+      "sha256": "67deb4dc109e560beeb205b58032a4d4b85fe1ce73c55ab67a6d984888df3964"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 149992,
+      "sha256": "67deb4dc109e560beeb205b58032a4d4b85fe1ce73c55ab67a6d984888df3964"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 158089,
+      "sha256": "9a87c5bb9d4be721e075387b7569eb19a21507453933d6728bc689274d3e5ee9"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 77758,
+      "sha256": "a2f418f77582db189b9b9a901f8d05e04da5b74f06206455ec67c5f02ece8d9c"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 6663,
+      "sha256": "453b906f2ae510b06d5fc3e74ec5e898552caf5aec680476975b3444a7b1b626"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 149992,
+      "sha256": "67deb4dc109e560beeb205b58032a4d4b85fe1ce73c55ab67a6d984888df3964"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 105414,
+      "sha256": "37ba19ffc6a641c7ec38dd7e51c1ad219d0d0f12016bb720275464633bbdbf95"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 149992,
+      "sha256": "67deb4dc109e560beeb205b58032a4d4b85fe1ce73c55ab67a6d984888df3964"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 105414,
+      "sha256": "37ba19ffc6a641c7ec38dd7e51c1ad219d0d0f12016bb720275464633bbdbf95"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 158089,
+      "sha256": "9a87c5bb9d4be721e075387b7569eb19a21507453933d6728bc689274d3e5ee9"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 101018,
+      "sha256": "14267c3e844ad97a86ed70e0208fa2f16626dec30f2dd02a8a47636920da9929"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 55008,
+      "sha256": "074fe53e5b578fec3fc7d277e2d5ed3658384a80a72012254b9839bf58d932d2"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 50652,
+      "sha256": "83f8775f44a7cb2e22a6288a5101ba9e352b877963440153bd6103b94bfd571a"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 12,
+    "bytes": 486620,
+    "inventorySha256": "b91734b318f39d18caa37c3d3bb13fb70e1de9aaf5a12671cf9de65a2eb1249d",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "metro-motors-llc",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 25,
+    "report": "dealers/metro-motors-llc/input-review.json"
+  },
+  "after": {
+    "files": 25,
+    "bytes": 925609
+  }
+}

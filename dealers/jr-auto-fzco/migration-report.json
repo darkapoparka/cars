@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "jr-auto-fzco",
+  "previousSlug": "jr-auto-fzco",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:07:26.897Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 3,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-dubai-jr-auto-fzco",
+    "position": 237
+  },
+  "before": {
+    "files": 39,
+    "bytes": 2951238
+  },
+  "afterBeforeReview": {
+    "files": 23,
+    "bytes": 1089178
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 86727,
+      "sha256": "3f87f71a40ce426c2c49c0543a7ba61aac51ac5009d8b6f8c74075a602200065"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 91026,
+      "sha256": "f1c7e2d61f637c9124d1700368e4bc19d49ff03f62e90a12a5f3af1528a7dce6"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 86727,
+      "sha256": "3f87f71a40ce426c2c49c0543a7ba61aac51ac5009d8b6f8c74075a602200065"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 129635,
+      "sha256": "a4b6154a190d0a1c8bf34abeb0a3fbaa3c11835e541ea932d8fb4acd83822bdf"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 173546,
+      "sha256": "2f2ba7abd7d24197626180d340a9bd6a6eb4b861b5ed91518821c83313fc2b8b"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 173546,
+      "sha256": "2f2ba7abd7d24197626180d340a9bd6a6eb4b861b5ed91518821c83313fc2b8b"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 129635,
+      "sha256": "a4b6154a190d0a1c8bf34abeb0a3fbaa3c11835e541ea932d8fb4acd83822bdf"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 86727,
+      "sha256": "3f87f71a40ce426c2c49c0543a7ba61aac51ac5009d8b6f8c74075a602200065"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 7621,
+      "sha256": "d0a9b14d5447c8f559801b9bce53c785cce18847bb8d373be6ced28d19e63650"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 173546,
+      "sha256": "2f2ba7abd7d24197626180d340a9bd6a6eb4b861b5ed91518821c83313fc2b8b"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 115316,
+      "sha256": "135be186d25798da564992f6713ea298d1985e75d56c8623c3665c6aed0ef2d5"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 173546,
+      "sha256": "2f2ba7abd7d24197626180d340a9bd6a6eb4b861b5ed91518821c83313fc2b8b"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 115316,
+      "sha256": "135be186d25798da564992f6713ea298d1985e75d56c8623c3665c6aed0ef2d5"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 129635,
+      "sha256": "a4b6154a190d0a1c8bf34abeb0a3fbaa3c11835e541ea932d8fb4acd83822bdf"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 75534,
+      "sha256": "39a99977198ac3d86f44b1e833c0ae694c29649c2609b5ea4461eda83afb65aa"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 62580,
+      "sha256": "a503e999417d95357f37802c6dbf43684b1663a34482b28709aa5c2100ae1a20"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 55178,
+      "sha256": "d50ee228a858bd82840fda3da9d821218a55f4ea3385a5144eaacbf75e1fc406"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 12,
+    "bytes": 537908,
+    "inventorySha256": "35d39fc6a4e45dff8cd7f3526740c424f44614de8ee5983778e7c44f5065b853",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "jr-auto-fzco",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 25,
+    "report": "dealers/jr-auto-fzco/input-review.json"
+  },
+  "after": {
+    "files": 25,
+    "bytes": 1097930
+  }
+}

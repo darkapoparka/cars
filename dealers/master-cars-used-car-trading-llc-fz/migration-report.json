@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "master-cars-used-car-trading-llc-fz",
+  "previousSlug": "master-cars-used-car-trading-llc-fz",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-20T19:03:00.949Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 3,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-dubai-master-cars-used-car-trading-llc-fz",
+    "position": 245
+  },
+  "before": {
+    "files": 39,
+    "bytes": 5057407
+  },
+  "afterBeforeReview": {
+    "files": 23,
+    "bytes": 2738824
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 115733,
+      "sha256": "d9cbdf421d25f0e250f257430fc8955445e36f2e0c8d7bac7752ccc0ce33a7b2"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 108732,
+      "sha256": "b41ef8ec5964be37d4aeb124a237e5e8bac97fad7f1537c858d63fb3b9e1feef"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 115733,
+      "sha256": "d9cbdf421d25f0e250f257430fc8955445e36f2e0c8d7bac7752ccc0ce33a7b2"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 202487,
+      "sha256": "8a7e80ff0647d9ce255966b27cf0ff4fea73a12bd335975d3bcf170cdd18e223"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 181572,
+      "sha256": "e01edf0ba2e2fc1d0c7ccfe9bf62d78113fa6d9601ada391bc4a24bb28d5ee3d"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 181572,
+      "sha256": "e01edf0ba2e2fc1d0c7ccfe9bf62d78113fa6d9601ada391bc4a24bb28d5ee3d"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 202487,
+      "sha256": "8a7e80ff0647d9ce255966b27cf0ff4fea73a12bd335975d3bcf170cdd18e223"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 115733,
+      "sha256": "d9cbdf421d25f0e250f257430fc8955445e36f2e0c8d7bac7752ccc0ce33a7b2"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 9886,
+      "sha256": "35a2b448dee334a989d6a45b28fdebeb0c535a45f9d618837b8929093d8c83c9"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 181572,
+      "sha256": "e01edf0ba2e2fc1d0c7ccfe9bf62d78113fa6d9601ada391bc4a24bb28d5ee3d"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 125228,
+      "sha256": "9af788edbab97b8aba0bbe00b448bb4959f1850d489b48ea5f8e62a5d8d8aa10"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 181572,
+      "sha256": "e01edf0ba2e2fc1d0c7ccfe9bf62d78113fa6d9601ada391bc4a24bb28d5ee3d"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 125228,
+      "sha256": "9af788edbab97b8aba0bbe00b448bb4959f1850d489b48ea5f8e62a5d8d8aa10"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 202487,
+      "sha256": "8a7e80ff0647d9ce255966b27cf0ff4fea73a12bd335975d3bcf170cdd18e223"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 126682,
+      "sha256": "23ef630109b6d6d7102964609d217529320ca471f1325e8c447f19d53a529882"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 72092,
+      "sha256": "86de822d9782afae99a002ee9567cfd8a3bd66264c62e5747ef7ad073a7f3a0a"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 73688,
+      "sha256": "9766fc833ce47048cda1c210e64663a54c446e3d3fe1597b87db85f3a68dbb4c"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 12,
+    "bytes": 1342744,
+    "inventorySha256": "e596add25c687a0cd0c55e00737634e4bcb5b53474905858572a3d2eb3784138",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "master-cars-used-car-trading-llc-fz",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 25,
+    "report": "dealers/master-cars-used-car-trading-llc-fz/input-review.json"
+  },
+  "after": {
+    "files": 25,
+    "bytes": 2747769
+  }
+}

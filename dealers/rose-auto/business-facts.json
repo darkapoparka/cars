@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "slug": "rose-auto",
+  "dealerId": "ae-dubai-rose-auto",
+  "business": {
+    "name": "Rose Auto",
+    "city": "Dubai",
+    "region": "Dubai",
+    "countryCode": "AE",
+    "currency": "AED",
+    "distanceUnit": "km",
+    "locale": "en-AE",
+    "address": "UAE - Dubai",
+    "phone": "+971552889063",
+    "phoneDisplay": "+971552889063",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://www.dubicars.com/dealers/dubai-rose-auto-3267",
+    "hours": "",
+    "sourceUrl": "https://www.dubicars.com/dealers/dubai-rose-auto-3267",
+    "observedAt": "2026-10-19T20:16:36Z",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://www.dubicars.com/dealers/dubai-rose-auto-3267",
+      "observedAt": "2026-10-19T20:16:36Z",
+      "supports": [
+        "public-business-identity",
+        "business-contact",
+        "address",
+        "attributed-public-stock"
+      ]
+    }
+  ]
+}

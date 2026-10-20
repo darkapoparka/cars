@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "type": "cars-dealer-pack-draft",
+  "slug": "muscle-cars-fze",
+  "dealerId": "ae-dubai-muscle-cars-fze",
+  "status": "input-review-complete",
+  "buildReady": false,
+  "providerWrites": 0,
+  "createdAt": "2026-10-19T20:55:37.538Z",
+  "inventoryKind": "dated-listing-snapshot",
+  "inventoryRecords": 3,
+  "logoReady": true,
+  "missingFacts": [
+    {
+      "field": "business.email",
+      "required": false,
+      "reason": "No usable sourced value in the retained public business record."
+    },
+    {
+      "field": "business.website",
+      "required": false,
+      "reason": "No usable sourced value in the retained public business record."
+    },
+    {
+      "field": "business.hours",
+      "required": false,
+      "reason": "No usable sourced value in the retained public business record."
+    },
+    {
+      "field": "prices",
+      "required": false,
+      "reason": "All listing prices are omitted under the public-repository scope."
+    }
+  ],
+  "blocking": [],
+  "stockAcquisition": "explicit-retained-public-snapshot",
+  "liveListingFetchPerformed": true,
+  "next": "Run existing input checks. Native smoke build and hosted approval remain separate."
+}

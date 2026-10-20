@@ -1,0 +1,317 @@
+{
+  "schemaVersion": 1,
+  "dealer": "resource-motors",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T21:00:01Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-independent-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "927a56a259438d6a9accca68e8e1095f9efd0f12768dbc232ddacc5682f89de9",
+      "sourceSha256": "26b86a7da2ef2d07940dd0b2352443852e3ec416c3a2d3b9585151dc90d68d4a"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "4e73b077bcf8e9e21937b7829ebbb1ae0fde65a7137d4d1c110f2a4fd51a9d31",
+      "sourceSha256": "18e0801e82626cad8d83217eb629f622440633a695db21abe9761504c9457f68"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "4e73b077bcf8e9e21937b7829ebbb1ae0fde65a7137d4d1c110f2a4fd51a9d31",
+      "sourceSha256": "18e0801e82626cad8d83217eb629f622440633a695db21abe9761504c9457f68"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "26b86a7da2ef2d07940dd0b2352443852e3ec416c3a2d3b9585151dc90d68d4a",
+    "generation": {
+      "tool": "image_gen",
+      "generationId": "exec-b8e8e402-9307-4e4d-94ac-56f889cbcdc8",
+      "identifierKind": "tool-execution-output-identifier",
+      "providerGenerationIdExposed": false,
+      "modelVersion": null,
+      "sourcePath": "branding/generation-source.png",
+      "sourceSha256": "640f9c559b66d5f9b1a1daefd41cc49bb8bad1c279ceb4e81d334a335a00a369",
+      "outputFileName": "exec-b8e8e402-9307-4e4d-94ac-56f889cbcdc8.png",
+      "operation": "deterministic-sprite-crop",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 770,
+        "height": 558
+      }
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "6c37abddb8d647bc0bec802b2e2d340b595abd29d7218cb0095588daf64b3f11",
+    "generation": {
+      "tool": "image_gen",
+      "generationId": "exec-b8e8e402-9307-4e4d-94ac-56f889cbcdc8",
+      "identifierKind": "tool-execution-output-identifier",
+      "providerGenerationIdExposed": false,
+      "modelVersion": null,
+      "sourcePath": "branding/generation-source.png",
+      "sourceSha256": "640f9c559b66d5f9b1a1daefd41cc49bb8bad1c279ceb4e81d334a335a00a369",
+      "outputFileName": "exec-b8e8e402-9307-4e4d-94ac-56f889cbcdc8.png",
+      "operation": "deterministic-sprite-crop",
+      "crop": {
+        "left": 0,
+        "top": 558,
+        "width": 770,
+        "height": 466
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "f551ee9219b0c34ac9e4cecae2203d82f3b0ee34f6a5a24a48466398c5708342"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "26b86a7da2ef2d07940dd0b2352443852e3ec416c3a2d3b9585151dc90d68d4a",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-b8e8e402-9307-4e4d-94ac-56f889cbcdc8",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "640f9c559b66d5f9b1a1daefd41cc49bb8bad1c279ceb4e81d334a335a00a369",
+        "outputFileName": "exec-b8e8e402-9307-4e4d-94ac-56f889cbcdc8.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 770,
+          "height": 558
+        }
+      },
+      "sourceReference": "dealers/resource-motors/branding/input-onLight.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "18e0801e82626cad8d83217eb629f622440633a695db21abe9761504c9457f68",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-b8e8e402-9307-4e4d-94ac-56f889cbcdc8",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "640f9c559b66d5f9b1a1daefd41cc49bb8bad1c279ceb4e81d334a335a00a369",
+        "outputFileName": "exec-b8e8e402-9307-4e4d-94ac-56f889cbcdc8.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 770,
+          "top": 0,
+          "width": 766,
+          "height": 558
+        }
+      },
+      "sourceReference": "dealers/resource-motors/branding/input-onDark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "18e0801e82626cad8d83217eb629f622440633a695db21abe9761504c9457f68",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-b8e8e402-9307-4e4d-94ac-56f889cbcdc8",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "640f9c559b66d5f9b1a1daefd41cc49bb8bad1c279ceb4e81d334a335a00a369",
+        "outputFileName": "exec-b8e8e402-9307-4e4d-94ac-56f889cbcdc8.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 770,
+          "top": 0,
+          "width": 766,
+          "height": 558
+        }
+      },
+      "sourceReference": "dealers/resource-motors/branding/input-onDark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "80b69643cadc590e3281d83a2dd8a5c56232dcd88436436aeaf260f07255397a",
+      "sha256": "26b86a7da2ef2d07940dd0b2352443852e3ec416c3a2d3b9585151dc90d68d4a",
+      "crop": {
+        "left": 59,
+        "top": 95,
+        "width": 664,
+        "height": 425
+      },
+      "sourcePath": "branding/input-onLight.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "a234afcc7b6dfd6b2d2f61182eb577954dd81971fa4c976ea1f879a4b7289359",
+      "sha256": "18e0801e82626cad8d83217eb629f622440633a695db21abe9761504c9457f68",
+      "crop": {
+        "left": 48,
+        "top": 97,
+        "width": 662,
+        "height": 423
+      },
+      "sourcePath": "branding/input-onDark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "a234afcc7b6dfd6b2d2f61182eb577954dd81971fa4c976ea1f879a4b7289359",
+      "sha256": "18e0801e82626cad8d83217eb629f622440633a695db21abe9761504c9457f68",
+      "crop": {
+        "left": 48,
+        "top": 97,
+        "width": 662,
+        "height": 423
+      },
+      "sourcePath": "branding/input-onDark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "b554534f76837e6f27776bec7a1d0576d72ea6b8c867b7676d036efe3952988f",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-b8e8e402-9307-4e4d-94ac-56f889cbcdc8",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "640f9c559b66d5f9b1a1daefd41cc49bb8bad1c279ceb4e81d334a335a00a369",
+        "outputFileName": "exec-b8e8e402-9307-4e4d-94ac-56f889cbcdc8.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 0,
+          "top": 558,
+          "width": 770,
+          "height": 466
+        }
+      },
+      "sourceReference": "dealers/resource-motors/branding/input-mark.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "8363fa2404682b4b54092e753b1591fae4952536538f40979ff83c9d510f912f",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-b8e8e402-9307-4e4d-94ac-56f889cbcdc8",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "640f9c559b66d5f9b1a1daefd41cc49bb8bad1c279ceb4e81d334a335a00a369",
+        "outputFileName": "exec-b8e8e402-9307-4e4d-94ac-56f889cbcdc8.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 770,
+          "top": 558,
+          "width": 766,
+          "height": 466
+        }
+      },
+      "sourceReference": "dealers/resource-motors/branding/input-markOnDark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "6c37abddb8d647bc0bec802b2e2d340b595abd29d7218cb0095588daf64b3f11",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-b8e8e402-9307-4e4d-94ac-56f889cbcdc8",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "640f9c559b66d5f9b1a1daefd41cc49bb8bad1c279ceb4e81d334a335a00a369",
+        "outputFileName": "exec-b8e8e402-9307-4e4d-94ac-56f889cbcdc8.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 0,
+          "top": 558,
+          "width": 770,
+          "height": 466
+        }
+      },
+      "sourceReference": "dealers/resource-motors/branding/input-mark.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "f551ee9219b0c34ac9e4cecae2203d82f3b0ee34f6a5a24a48466398c5708342",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-b8e8e402-9307-4e4d-94ac-56f889cbcdc8",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "640f9c559b66d5f9b1a1daefd41cc49bb8bad1c279ceb4e81d334a335a00a369",
+        "outputFileName": "exec-b8e8e402-9307-4e4d-94ac-56f889cbcdc8.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 0,
+          "top": 558,
+          "width": 770,
+          "height": 466
+        }
+      },
+      "sourceReference": "dealers/resource-motors/branding/input-mark.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-19T21:00:01Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "5fd3c39689922b2d599621baaa11e84194eb89e79bcd9bd62dc4eecf2192c5b0",
+    "generation": {
+      "tool": "image_gen",
+      "generationId": "exec-b8e8e402-9307-4e4d-94ac-56f889cbcdc8",
+      "identifierKind": "tool-execution-output-identifier",
+      "providerGenerationIdExposed": false,
+      "modelVersion": null,
+      "sourcePath": "branding/generation-source.png",
+      "sourceSha256": "640f9c559b66d5f9b1a1daefd41cc49bb8bad1c279ceb4e81d334a335a00a369",
+      "outputFileName": "exec-b8e8e402-9307-4e4d-94ac-56f889cbcdc8.png",
+      "operation": "deterministic-sprite-crop",
+      "crop": {
+        "left": 770,
+        "top": 558,
+        "width": 766,
+        "height": 466
+      }
+    }
+  }
+}

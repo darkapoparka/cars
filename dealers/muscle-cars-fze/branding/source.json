@@ -1,0 +1,182 @@
+{
+  "schemaVersion": 1,
+  "dealer": "muscle-cars-fze",
+  "status": "reviewed-independent-redraw",
+  "realLogoFirst": true,
+  "publicSources": [
+    {
+      "url": "https://www.oneclickdrive.com/company/dubai/muscle-cars-fze",
+      "observedAt": "2026-10-19T20:55:17Z"
+    }
+  ],
+  "originals": [
+    {
+      "path": "branding/public-original.png",
+      "sha256": "f8f8ba7bd500af140f802c9062704f159cc889e789f5ea967ace6023e9aba6b8",
+      "url": "https://static.oneclickdrive.com/application/views/img/company/muscle-cars.png?ok=1.12&height=70&width=auto&fit=resize",
+      "observedAt": "2026-10-19T20:55:17Z"
+    }
+  ],
+  "creationMethod": "imagegen-faithful-clean-redraw",
+  "dealerApproved": false,
+  "logoSource": "redraw",
+  "researchSummary": "Public dealer artwork reviewed; original retained and matched identity redrawn for transparent surfaces.",
+  "generation": {
+    "tool": "image_gen",
+    "generationId": "exec-0794d8ef-6a86-47c4-9492-300134d0af73",
+    "identifierKind": "tool-execution-output-identifier",
+    "modelVersion": null,
+    "sourcePath": "branding/generation-source.png",
+    "sourceSha256": "3d9e05b6d5125d2034bb226228e84d7a8257fd49b95b5df864e180ed820aa577",
+    "nativeDimensions": {
+      "width": 1536,
+      "height": 1024
+    },
+    "prompt": "Faithful polished redraw of the supplied MUSCLE CARS logo. Preserve round front-view muscular car flanked by two flexed biceps, bold name MUSCLE CARS, small FZE underneath. Omit the phone number. Primary dark charcoal with small deep burnt-orange accents, preserve original orange family but use dark orange for high contrast. Simplify biceps into strong geometric outlines, car grille clear. Mark is car front plus flexed biceps in compact nearly-square arrangement, no small text. Production logo assets on truly transparent alpha canvas. EXACTLY four separate assets in a regular 2 by 2 grid, each centered inside its quadrant with very wide empty margins and a large clear central gutter. Top left full name plus emblem in dark ink for white. Top right identical full name plus emblem in solid pure-white ink for black and red. Bottom left bold compact emblem in dark ink; bottom right same compact emblem in pure-white ink. Each emblem roughly square and clear at 32 pixels. Background and internal empty spaces fully transparent. Flat vector-like crisp edges; no gradients, shadows, glow, fuzzy halo, textures, panels, labels or tiny decorative text."
+  },
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T20:55:17Z",
+    "master": {
+      "path": "branding/input-onLight.png",
+      "sha256": "02445f35b003dd7dec4dfb146155407e888a556af076ad7c21d88e30436283b1",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-0794d8ef-6a86-47c4-9492-300134d0af73",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "3d9e05b6d5125d2034bb226228e84d7a8257fd49b95b5df864e180ed820aa577",
+        "outputFileName": "exec-0794d8ef-6a86-47c4-9492-300134d0af73.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 767,
+          "height": 582
+        }
+      }
+    },
+    "mark": {
+      "path": "branding/input-mark.png",
+      "sha256": "7e3761beeaa61859c7100f8d81056b79fa25615076227492289e76476cbd62c8",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-0794d8ef-6a86-47c4-9492-300134d0af73",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "3d9e05b6d5125d2034bb226228e84d7a8257fd49b95b5df864e180ed820aa577",
+        "outputFileName": "exec-0794d8ef-6a86-47c4-9492-300134d0af73.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 0,
+          "top": 582,
+          "width": 767,
+          "height": 442
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/input-markOnDark.png",
+      "sha256": "86a187ddec3924805a16875b0ab3f78cd8ac80a72d122ad9c959d7001ab8c797",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-0794d8ef-6a86-47c4-9492-300134d0af73",
+        "identifierKind": "tool-execution-output-identifier",
+        "providerGenerationIdExposed": false,
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "3d9e05b6d5125d2034bb226228e84d7a8257fd49b95b5df864e180ed820aa577",
+        "outputFileName": "exec-0794d8ef-6a86-47c4-9492-300134d0af73.png",
+        "operation": "deterministic-sprite-crop",
+        "crop": {
+          "left": 767,
+          "top": 582,
+          "width": 769,
+          "height": 442
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/input-onLight.png",
+        "sha256": "02445f35b003dd7dec4dfb146155407e888a556af076ad7c21d88e30436283b1",
+        "generation": {
+          "tool": "image_gen",
+          "generationId": "exec-0794d8ef-6a86-47c4-9492-300134d0af73",
+          "identifierKind": "tool-execution-output-identifier",
+          "providerGenerationIdExposed": false,
+          "modelVersion": null,
+          "sourcePath": "branding/generation-source.png",
+          "sourceSha256": "3d9e05b6d5125d2034bb226228e84d7a8257fd49b95b5df864e180ed820aa577",
+          "outputFileName": "exec-0794d8ef-6a86-47c4-9492-300134d0af73.png",
+          "operation": "deterministic-sprite-crop",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 767,
+            "height": 582
+          }
+        }
+      },
+      "onDark": {
+        "path": "branding/input-onDark.png",
+        "sha256": "d015ba8e625cf47c5c202318b1f95f96b17fc706ba6c7a4fe3537ddbc07d90f6",
+        "generation": {
+          "tool": "image_gen",
+          "generationId": "exec-0794d8ef-6a86-47c4-9492-300134d0af73",
+          "identifierKind": "tool-execution-output-identifier",
+          "providerGenerationIdExposed": false,
+          "modelVersion": null,
+          "sourcePath": "branding/generation-source.png",
+          "sourceSha256": "3d9e05b6d5125d2034bb226228e84d7a8257fd49b95b5df864e180ed820aa577",
+          "outputFileName": "exec-0794d8ef-6a86-47c4-9492-300134d0af73.png",
+          "operation": "deterministic-sprite-crop",
+          "crop": {
+            "left": 767,
+            "top": 0,
+            "width": 769,
+            "height": 582
+          }
+        }
+      },
+      "onAccent": {
+        "path": "branding/input-onDark.png",
+        "sha256": "d015ba8e625cf47c5c202318b1f95f96b17fc706ba6c7a4fe3537ddbc07d90f6",
+        "generation": {
+          "tool": "image_gen",
+          "generationId": "exec-0794d8ef-6a86-47c4-9492-300134d0af73",
+          "identifierKind": "tool-execution-output-identifier",
+          "providerGenerationIdExposed": false,
+          "modelVersion": null,
+          "sourcePath": "branding/generation-source.png",
+          "sourceSha256": "3d9e05b6d5125d2034bb226228e84d7a8257fd49b95b5df864e180ed820aa577",
+          "outputFileName": "exec-0794d8ef-6a86-47c4-9492-300134d0af73.png",
+          "operation": "deterministic-sprite-crop",
+          "crop": {
+            "left": 767,
+            "top": 0,
+            "width": 769,
+            "height": 582
+          }
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-19T20:55:17Z",
+      "method": "Agent reviewed generated artwork spelling, matching identity and transparent crop. White, charcoal and red contact sheet inspected; 32px compact marks reviewed.",
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#101820",
+        "#09090b",
+        "#17191c",
+        "#c40101"
+      ],
+      "dealerApproval": false
+    }
+  }
+}

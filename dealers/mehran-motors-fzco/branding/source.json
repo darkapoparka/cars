@@ -1,0 +1,162 @@
+{
+  "schemaVersion": 1,
+  "dealer": "mehran-motors-fzco",
+  "sourceLogoUrl": "https://d2souf30ck18jq.cloudfront.net/mehran-motors-fzco/logo-c807b2d0-91c0-49b5-b4a9-56b1b2f82450.jpeg",
+  "sourcePath": "branding/source-original.jpg",
+  "sourceSha256": "1ca8d3606e4374ce89d5ebd8a903d2fa7bd17ddc99c1f1e753e732f9fba2dcef",
+  "publishedBranding": true,
+  "sourcePage": "https://www.dubicars.com/dealers/dubai-mehran-motors-2749",
+  "observedAt": "2026-10-19T20:03:53.953359Z",
+  "creationMethod": "sourced-logo-imagegen-redraw",
+  "approvalStatus": "independent-preview-not-dealer-approved",
+  "dealerApproved": false,
+  "visualReview": "Faithful navy/white refinement retains the source oversized shared italic M and stacked MEHRAN MOTORS FZCO wording. No new badge or motif added; compact M follows published lettering.",
+  "generationPrompt": "Use case: logo-brand. ONE transparent RGBA sprite for ONE dealer, 4 matching assets laid out 2 columns x 2 rows with large fully transparent gutters. Top-left near-square compact mark in dark source colour for WHITE background; top-right matching compact mark entirely WHITE. Bottom-left full horizontal wordmark for white background; bottom-right exactly matching full wordmark entirely WHITE. Crisp flat professional solid ink, bold enough at 32px and 120px. No labels, panels, textures, shadows, glow, gradients or background. Faithful redraw of supplied MEHRAN MOTORS FZCO wordmark. Preserve the dominant oversized bold italic M shared by MEHRAN and MOTORS stacked at right, with FZCO smaller below. Full exact words 'MEHRAN MOTORS FZCO', same confident italic sans-serif source lettering and relative sizes. Compact mark is its bold slanted M alone, near-square with strong diagonal strokes. Use deep navy #223759 for on-light and pure white inverse. No new emblem or car roof; the M is the identity.",
+  "workingLogoPath": "branding/generated-onLight.png",
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T20:58:49.696616Z",
+    "master": {
+      "path": "branding/generated-onLight.png",
+      "sha256": "2ed287e2b2516ab59b893de7e00000fc1b2e956e8cb782d8eed60692b242eef5",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-32fe3eee-e962-4a09-902f-fdf82059ee27",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "1311b9b3f4bc7b7a435eacaee99290f1da93e5c46b4a0bcbceeea1c8acdcd0d8",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          0,
+          614,
+          768,
+          1024
+        ]
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "57123149cdf9dc0b399e5f69353f636d91d168ecadee2fa999875c699229ac77",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-32fe3eee-e962-4a09-902f-fdf82059ee27",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "1311b9b3f4bc7b7a435eacaee99290f1da93e5c46b4a0bcbceeea1c8acdcd0d8",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          0,
+          0,
+          768,
+          614
+        ]
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-markOnDark.png",
+      "sha256": "070671eff01ed8d890ba0366cb3c73071b39ca1f6d470629312c104f75c5a02e",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-32fe3eee-e962-4a09-902f-fdf82059ee27",
+        "modelVersion": null,
+        "sourcePath": "branding/generation-source.png",
+        "sourceSha256": "1311b9b3f4bc7b7a435eacaee99290f1da93e5c46b4a0bcbceeea1c8acdcd0d8",
+        "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+        "crop": [
+          768,
+          0,
+          1536,
+          614
+        ]
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-onLight.png",
+        "sha256": "2ed287e2b2516ab59b893de7e00000fc1b2e956e8cb782d8eed60692b242eef5",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-32fe3eee-e962-4a09-902f-fdf82059ee27",
+          "modelVersion": null,
+          "sourcePath": "branding/generation-source.png",
+          "sourceSha256": "1311b9b3f4bc7b7a435eacaee99290f1da93e5c46b4a0bcbceeea1c8acdcd0d8",
+          "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+          "crop": [
+            0,
+            614,
+            768,
+            1024
+          ]
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-onDark.png",
+        "sha256": "5282dfcc643b767998ee9ca0997f96229eb4cb2c38f71ff002fdd46ce6f75449",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-32fe3eee-e962-4a09-902f-fdf82059ee27",
+          "modelVersion": null,
+          "sourcePath": "branding/generation-source.png",
+          "sourceSha256": "1311b9b3f4bc7b7a435eacaee99290f1da93e5c46b4a0bcbceeea1c8acdcd0d8",
+          "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+          "crop": [
+            768,
+            614,
+            1536,
+            1024
+          ]
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-onDark.png",
+        "sha256": "5282dfcc643b767998ee9ca0997f96229eb4cb2c38f71ff002fdd46ce6f75449",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-32fe3eee-e962-4a09-902f-fdf82059ee27",
+          "modelVersion": null,
+          "sourcePath": "branding/generation-source.png",
+          "sourceSha256": "1311b9b3f4bc7b7a435eacaee99290f1da93e5c46b4a0bcbceeea1c8acdcd0d8",
+          "operation": "Crop one quadrant of the actual generated same-dealer variant sprite without recolouring.",
+          "crop": [
+            768,
+            614,
+            1536,
+            1024
+          ]
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#101820",
+        "#09090b",
+        "#17191c",
+        "#c40101"
+      ],
+      "wordmarkWidths": [
+        120,
+        180
+      ],
+      "notes": "Faithful navy/white refinement retains the source oversized shared italic M and stacked MEHRAN MOTORS FZCO wording. No new badge or motif added; compact M follows published lettering."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-19T20:58:49.696616Z",
+      "widths": [
+        32,
+        64,
+        96
+      ],
+      "backgrounds": [
+        "#ffffff",
+        "#101820",
+        "#c40101"
+      ],
+      "notes": "Bold italic M is clear at 32px with matching white inverse and no fine detail."
+    },
+    "compactMarkStatus": "proposed-compact-adaptation-not-dealer-approved"
+  },
+  "usageStatus": "public-preview-only"
+}

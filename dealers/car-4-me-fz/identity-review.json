@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": true,
+  "reviewedAt": "2026-10-20T19:02:37.077Z",
+  "dealer": "car-4-me-fz",
+  "dealerId": "ae-dubai-car-4-me-fz",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "method": "Automated exact registry/pack identity, canonical hosting and batch comparison; retained public source fields were structurally checked, not human-approved.",
+  "sources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/car-4-me-fz",
+      "observedAt": "2026-10-19"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/10298-lexus-es-25-cvt-218-hp-es-300h-platinum",
+      "observedAt": "2026-10-19"
+    }
+  ],
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "dealer": "impera-motors-llc",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:03:53.687242Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "listing-1035282",
+      "title": "2026 BMW X3",
+      "make": "Bmw",
+      "model": "X3",
+      "year": 2026,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-1035282.jpg"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2026-bmw-x3-20-xdrive-m-sport-pro-1035282.html",
+      "observedAt": "2026-10-19T20:03:53.687242Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 5600,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-1035281",
+      "title": "2026 Porsche Cayenne S",
+      "make": "Porsche",
+      "model": "Cayenne",
+      "year": 2026,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-1035281.jpg"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2026-porsche-cayenne-1035281.html",
+      "observedAt": "2026-10-19T20:03:53.687242Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 800,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "listing-1035290",
+      "title": "2025 Mercedes Maybach S680 Maybach",
+      "make": "Maybach",
+      "model": "S680 Maybach",
+      "year": 2025,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/listing-1035290.jpg"
+      ],
+      "sourceUrl": "https://www.dubicars.com/2025-mercedes-maybach-s680-maybach-s-680-gcc-specs-1035290.html",
+      "observedAt": "2026-10-19T20:03:53.687242Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "mileageValue": 3000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}
