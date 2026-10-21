@@ -3,8 +3,8 @@
   "dealer": "al-fajr-automobile-showroom",
   "businessFacts": "business-facts.json",
   "stock": "stock.json",
-  "inventoryKind": "illustrative-not-dealer-stock",
-  "inventoryNotice": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
+  "inventoryKind": "dated-listing-snapshot",
+  "inventoryNotice": "Dated public seller listing snapshot observed on 21 October 2026. Current stock and availability have not been confirmed. Listing prices are omitted in this preview.",
   "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
   "sources": [
     {
@@ -19,6 +19,34 @@
       "observedAt": "2026-10-18",
       "supports": [
         "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/dealer/al-fajr-automobile-showroom",
+      "observedAt": "2026-10-21",
+      "supports": [
+        "public-business-name",
+        "public-business-location",
+        "public-business-address",
+        "public-business-phone"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/5062-nissan-patrol-35-at-awd-495-hp-le-platinum",
+      "observedAt": "2026-10-21",
+      "supports": [
+        "dated-public-seller-listing",
+        "vehicle-identity",
+        "vehicle-year",
+        "vehicle-mileage",
+        "retained-stock-photos"
+      ]
+    },
+    {
+      "url": "https://auto.ae/ar/alfajrautomobileshowroom/",
+      "observedAt": "2026-10-21",
+      "supports": [
+        "public-brand-reference"
       ]
     }
   ]

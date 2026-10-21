@@ -1,27 +1,27 @@
 {
   "schemaVersion": 1,
   "kind": "cars-new-dealer-identity-review",
-  "reviewed": false,
-  "reviewedAt": null,
+  "reviewed": true,
+  "reviewedAt": "2026-10-21T13:20:12.463Z",
   "dealer": "auto-club",
   "dealerId": "gb-cardiff-auto-club",
   "repository": "darkapoparka/cars",
   "existingIdentityFound": false,
   "sourceOwnership": "cars-canonical",
   "review": {
-    "kind": "pending",
+    "kind": "automated",
     "humanReview": false,
     "dealerApproval": false
   },
-  "method": "Draft identity only; run automated pack input review before building.",
+  "method": "Automated exact registry/pack identity, canonical hosting and batch comparison; retained public source fields were structurally checked, not human-approved.",
   "sources": [
     {
-      "url": "https://showroom.ebaymotorspro.co.uk/AUTO-CLUB?menu=1",
-      "observedAt": "2026-10-18"
+      "url": "https://showroom.ebaymotorspro.co.uk/AUTO-CLUB",
+      "observedAt": "2026-10-21T12:51:23.991962Z"
     },
     {
-      "url": "https://www.cazoo.co.uk/dealers/auto-club-60978/",
-      "observedAt": "2026-10-18"
+      "url": "https://www.auto-club.co.uk/used/cars/",
+      "observedAt": "2026-10-21T12:51:26.316692Z"
     }
   ]
 }

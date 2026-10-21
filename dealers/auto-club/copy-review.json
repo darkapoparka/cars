@@ -2,27 +2,27 @@
   "schemaVersion": 1,
   "kind": "cars-new-source-reviewed-companion-copy",
   "dealer": "auto-club",
-  "reviewed": false,
-  "reviewedAt": null,
-  "stockSha256": "e3dcc5347d8c769186f724d0b49e6ba6dfbcdeebbbcff6c3d64a4775fd919b78",
+  "reviewed": true,
+  "reviewedAt": "2026-10-21T13:20:12.463Z",
+  "stockSha256": "4e3490b54988fc160ca7d09f1b03ddfc46482c086fbc6e172bd30c3dc0ea428a",
   "descriptions": [
     {
-      "sourceId": "template-demo-auto-best-1",
-      "sourceDescription": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
-      "en": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
-      "bg": "Илюстративни демонстрационни автомобили от запазения шаблон Cars; те не са наличности на тази автокъща. Наличността не е проверена. Цените са пропуснати в този преглед."
+      "sourceId": "official-10120",
+      "sourceDescription": "2018 BMW 5 Series. Public seller listing observed on 21 October 2026; current availability must be confirmed with the dealer.",
+      "en": "2018 BMW 5 Series. Public seller listing observed on 21 October 2026; current availability must be confirmed with the dealer.",
+      "bg": "2018 BMW 5 Series. Публична обява на търговеца, прегледана на 21 октомври 2026 г.; актуалната наличност трябва да се потвърди с търговеца."
     },
     {
-      "sourceId": "template-demo-auto-best-2",
-      "sourceDescription": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
-      "en": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
-      "bg": "Илюстративни демонстрационни автомобили от запазения шаблон Cars; те не са наличности на тази автокъща. Наличността не е проверена. Цените са пропуснати в този преглед."
+      "sourceId": "official-10098",
+      "sourceDescription": "2017 Volkswagen Tiguan. Public seller listing observed on 21 October 2026; current availability must be confirmed with the dealer.",
+      "en": "2017 Volkswagen Tiguan. Public seller listing observed on 21 October 2026; current availability must be confirmed with the dealer.",
+      "bg": "2017 Volkswagen Tiguan. Публична обява на търговеца, прегледана на 21 октомври 2026 г.; актуалната наличност трябва да се потвърди с търговеца."
     },
     {
-      "sourceId": "template-demo-auto-best-3",
-      "sourceDescription": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
-      "en": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
-      "bg": "Илюстративни демонстрационни автомобили от запазения шаблон Cars; те не са наличности на тази автокъща. Наличността не е проверена. Цените са пропуснати в този преглед."
+      "sourceId": "official-10137",
+      "sourceDescription": "2019 Nissan Qashqai. Public seller listing observed on 21 October 2026; current availability must be confirmed with the dealer.",
+      "en": "2019 Nissan Qashqai. Public seller listing observed on 21 October 2026; current availability must be confirmed with the dealer.",
+      "bg": "2019 Nissan Qashqai. Публична обява на търговеца, прегледана на 21 октомври 2026 г.; актуалната наличност трябва да се потвърди с търговеца."
     }
   ]
 }

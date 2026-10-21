@@ -135,7 +135,7 @@
   "pack": {
     "schemaVersion": 2,
     "source": "leads/expansion-2026-10-18",
-    "observedAt": "2026-10-18",
+    "observedAt": "2026-10-21T13:19:09.970415Z",
     "proposal": true,
     "dealerApproved": false,
     "providerWrites": false,
@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Address Motors FZCO",
     "publicOrigin": "https://address-motors-fzco.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "1aad5a820e1b5286a7d6b7e391a13a0173dff4e67bae0472212e8b84f0fae7e4",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "4f7628da11bad899a4a0de6c56a6aaf64698fb1d8cbf567e2060e114d111c02f"
+    }
   }
 }

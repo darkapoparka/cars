@@ -1,0 +1,469 @@
+{
+  "schemaVersion": 1,
+  "dealer": "auto-club",
+  "reviewed": true,
+  "reviewedAt": "2026-10-21T13:18:53.809628Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "Retained official Auto Club header raster on a reviewed flat black canvas; maintained explicit monochrome matte export with derived transparency and no new geometry.",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "29b18029bbd723982f9890f4af16cf9800367f7d47996fa7ff53342ce24bff9b",
+      "sourceSha256": "8cefef574df1ee3380e0da849a8fd6f917998d84fb1b123dab9355fc4e5d76c1"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "0c4a88efce449eb6fb71275c0336c1eefeff25d45aa8ef96352917acf412f06e",
+      "sourceSha256": "50fb76875a1f5a26b2a187ab15bb21a245cb77b5efc064093ac4f6a7ea090ad1"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "0c4a88efce449eb6fb71275c0336c1eefeff25d45aa8ef96352917acf412f06e",
+      "sourceSha256": "50fb76875a1f5a26b2a187ab15bb21a245cb77b5efc064093ac4f6a7ea090ad1"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "8cefef574df1ee3380e0da849a8fd6f917998d84fb1b123dab9355fc4e5d76c1",
+    "retainedSource": {
+      "kind": "retained-reviewed-raster",
+      "reference": "dealers/auto-club/branding/original-public-header-20261021.png",
+      "sha256": "1292ce6ad88a8a66a380c161a18ca088ef71fecc451e04ae1750992f16a39b36",
+      "reviewReference": "dealers/auto-club/branding/source.json",
+      "reviewSha256": "3c7a0f1493811b8db0b053f2bffc7b0a0266b13bf871f63b90b815454e76db18",
+      "sourceUrl": "https://www.auto-club.co.uk/media/logo.jpg",
+      "observedAt": "2026-10-21T12:52:39.176570Z",
+      "exportTreatment": {
+        "kind": "reviewed-black-matte-solid-ink-v1",
+        "ink": "solid-black",
+        "sourceSha256": "1292ce6ad88a8a66a380c161a18ca088ef71fecc451e04ae1750992f16a39b36",
+        "background": "#000000",
+        "derivedTransparency": true,
+        "originalAlphaPreserved": false,
+        "matteReviewSha256": "fa0bf3e9cacb6caaef8d9e22127e9bbc407fe1011d213ebda05f9b739db20e22",
+        "newGeometry": false
+      }
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "11c1bc7d4ea34afef8e1223552b271441432d0ca0ab763585a908ef9e183e270",
+    "retainedSource": {
+      "kind": "retained-reviewed-raster",
+      "reference": "dealers/auto-club/branding/original-public-header-20261021.png",
+      "sha256": "1292ce6ad88a8a66a380c161a18ca088ef71fecc451e04ae1750992f16a39b36",
+      "reviewReference": "dealers/auto-club/branding/source.json",
+      "reviewSha256": "3c7a0f1493811b8db0b053f2bffc7b0a0266b13bf871f63b90b815454e76db18",
+      "sourceUrl": "https://www.auto-club.co.uk/media/logo.jpg",
+      "observedAt": "2026-10-21T12:52:39.176570Z",
+      "exportTreatment": {
+        "kind": "reviewed-black-matte-solid-ink-v1",
+        "ink": "solid-black",
+        "sourceSha256": "1292ce6ad88a8a66a380c161a18ca088ef71fecc451e04ae1750992f16a39b36",
+        "background": "#000000",
+        "derivedTransparency": true,
+        "originalAlphaPreserved": false,
+        "matteReviewSha256": "fa0bf3e9cacb6caaef8d9e22127e9bbc407fe1011d213ebda05f9b739db20e22",
+        "newGeometry": false
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "8e77329c91c870a2c1ac630db91b6bc377f403a7b24505ae4a81cdb485434df6"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "8cefef574df1ee3380e0da849a8fd6f917998d84fb1b123dab9355fc4e5d76c1",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "dealers/auto-club/branding/original-public-header-20261021.png",
+        "sha256": "1292ce6ad88a8a66a380c161a18ca088ef71fecc451e04ae1750992f16a39b36",
+        "reviewReference": "dealers/auto-club/branding/source.json",
+        "reviewSha256": "3c7a0f1493811b8db0b053f2bffc7b0a0266b13bf871f63b90b815454e76db18",
+        "sourceUrl": "https://www.auto-club.co.uk/media/logo.jpg",
+        "observedAt": "2026-10-21T12:52:39.176570Z",
+        "exportTreatment": {
+          "kind": "reviewed-black-matte-solid-ink-v1",
+          "ink": "solid-black",
+          "sourceSha256": "1292ce6ad88a8a66a380c161a18ca088ef71fecc451e04ae1750992f16a39b36",
+          "background": "#000000",
+          "derivedTransparency": true,
+          "originalAlphaPreserved": false,
+          "matteReviewSha256": "fa0bf3e9cacb6caaef8d9e22127e9bbc407fe1011d213ebda05f9b739db20e22",
+          "newGeometry": false
+        }
+      },
+      "sourceReference": "dealers/auto-club/branding/original-public-header-20261021.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "50fb76875a1f5a26b2a187ab15bb21a245cb77b5efc064093ac4f6a7ea090ad1",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "dealers/auto-club/branding/original-public-header-20261021.png",
+        "sha256": "1292ce6ad88a8a66a380c161a18ca088ef71fecc451e04ae1750992f16a39b36",
+        "reviewReference": "dealers/auto-club/branding/source.json",
+        "reviewSha256": "3c7a0f1493811b8db0b053f2bffc7b0a0266b13bf871f63b90b815454e76db18",
+        "sourceUrl": "https://www.auto-club.co.uk/media/logo.jpg",
+        "observedAt": "2026-10-21T12:52:39.176570Z",
+        "exportTreatment": {
+          "kind": "reviewed-black-matte-solid-ink-v1",
+          "ink": "solid-white",
+          "sourceSha256": "1292ce6ad88a8a66a380c161a18ca088ef71fecc451e04ae1750992f16a39b36",
+          "background": "#000000",
+          "derivedTransparency": true,
+          "originalAlphaPreserved": false,
+          "matteReviewSha256": "fa0bf3e9cacb6caaef8d9e22127e9bbc407fe1011d213ebda05f9b739db20e22",
+          "newGeometry": false
+        }
+      },
+      "sourceReference": "dealers/auto-club/branding/original-public-header-20261021.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "50fb76875a1f5a26b2a187ab15bb21a245cb77b5efc064093ac4f6a7ea090ad1",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "dealers/auto-club/branding/original-public-header-20261021.png",
+        "sha256": "1292ce6ad88a8a66a380c161a18ca088ef71fecc451e04ae1750992f16a39b36",
+        "reviewReference": "dealers/auto-club/branding/source.json",
+        "reviewSha256": "3c7a0f1493811b8db0b053f2bffc7b0a0266b13bf871f63b90b815454e76db18",
+        "sourceUrl": "https://www.auto-club.co.uk/media/logo.jpg",
+        "observedAt": "2026-10-21T12:52:39.176570Z",
+        "exportTreatment": {
+          "kind": "reviewed-black-matte-solid-ink-v1",
+          "ink": "solid-white",
+          "sourceSha256": "1292ce6ad88a8a66a380c161a18ca088ef71fecc451e04ae1750992f16a39b36",
+          "background": "#000000",
+          "derivedTransparency": true,
+          "originalAlphaPreserved": false,
+          "matteReviewSha256": "fa0bf3e9cacb6caaef8d9e22127e9bbc407fe1011d213ebda05f9b739db20e22",
+          "newGeometry": false
+        }
+      },
+      "sourceReference": "dealers/auto-club/branding/original-public-header-20261021.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "reviewed-black-matte-crop-and-resize",
+      "sourceSha256": "1292ce6ad88a8a66a380c161a18ca088ef71fecc451e04ae1750992f16a39b36",
+      "sha256": "8cefef574df1ee3380e0da849a8fd6f917998d84fb1b123dab9355fc4e5d76c1",
+      "crop": {
+        "left": 22,
+        "top": 18,
+        "width": 152,
+        "height": 118
+      },
+      "rasterTreatment": {
+        "kind": "reviewed-black-matte-solid-ink-v1",
+        "ink": "solid-black",
+        "background": "#000000",
+        "blackNoiseCeiling": 5,
+        "alphaRule": "preserve original opaque foreground alpha; only source pixels within five RGB levels of black become transparent",
+        "originalAlphaUnchangedBeforeCropAndResize": false,
+        "originalWasFullyOpaque": true,
+        "derivedTransparency": true,
+        "originalWidth": 196,
+        "originalHeight": 151,
+        "blackCanvasPixels": 23980,
+        "borderBlackFraction": 1,
+        "derivedPixelSha256": "7eed05b0e565d9255e9e76b4aac3f04925b4ddb088b7a008221d6a834976add2",
+        "newGeometry": false
+      },
+      "sourcePath": "branding/original-public-header-20261021.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "reviewed-black-matte-crop-and-resize",
+      "sourceSha256": "1292ce6ad88a8a66a380c161a18ca088ef71fecc451e04ae1750992f16a39b36",
+      "sha256": "50fb76875a1f5a26b2a187ab15bb21a245cb77b5efc064093ac4f6a7ea090ad1",
+      "crop": {
+        "left": 22,
+        "top": 18,
+        "width": 152,
+        "height": 118
+      },
+      "rasterTreatment": {
+        "kind": "reviewed-black-matte-solid-ink-v1",
+        "ink": "solid-white",
+        "background": "#000000",
+        "blackNoiseCeiling": 5,
+        "alphaRule": "preserve original opaque foreground alpha; only source pixels within five RGB levels of black become transparent",
+        "originalAlphaUnchangedBeforeCropAndResize": false,
+        "originalWasFullyOpaque": true,
+        "derivedTransparency": true,
+        "originalWidth": 196,
+        "originalHeight": 151,
+        "blackCanvasPixels": 23980,
+        "borderBlackFraction": 1,
+        "derivedPixelSha256": "c3f78b8194950a5716dcf472209f89a80f9e36f78f2544727f0c7280d3051b7c",
+        "newGeometry": false
+      },
+      "sourcePath": "branding/original-public-header-20261021.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "reviewed-black-matte-crop-and-resize",
+      "sourceSha256": "1292ce6ad88a8a66a380c161a18ca088ef71fecc451e04ae1750992f16a39b36",
+      "sha256": "50fb76875a1f5a26b2a187ab15bb21a245cb77b5efc064093ac4f6a7ea090ad1",
+      "crop": {
+        "left": 22,
+        "top": 18,
+        "width": 152,
+        "height": 118
+      },
+      "rasterTreatment": {
+        "kind": "reviewed-black-matte-solid-ink-v1",
+        "ink": "solid-white",
+        "background": "#000000",
+        "blackNoiseCeiling": 5,
+        "alphaRule": "preserve original opaque foreground alpha; only source pixels within five RGB levels of black become transparent",
+        "originalAlphaUnchangedBeforeCropAndResize": false,
+        "originalWasFullyOpaque": true,
+        "derivedTransparency": true,
+        "originalWidth": 196,
+        "originalHeight": 151,
+        "blackCanvasPixels": 23980,
+        "borderBlackFraction": 1,
+        "derivedPixelSha256": "c3f78b8194950a5716dcf472209f89a80f9e36f78f2544727f0c7280d3051b7c",
+        "newGeometry": false
+      },
+      "sourcePath": "branding/original-public-header-20261021.png",
+      "outputPath": "branding/logo-on-accent.png"
+    },
+    "master": {
+      "operation": "reviewed-black-matte-crop-and-resize",
+      "sourceSha256": "1292ce6ad88a8a66a380c161a18ca088ef71fecc451e04ae1750992f16a39b36",
+      "sha256": "8cefef574df1ee3380e0da849a8fd6f917998d84fb1b123dab9355fc4e5d76c1",
+      "crop": {
+        "left": 22,
+        "top": 18,
+        "width": 152,
+        "height": 118
+      },
+      "rasterTreatment": {
+        "kind": "reviewed-black-matte-solid-ink-v1",
+        "ink": "solid-black",
+        "background": "#000000",
+        "blackNoiseCeiling": 5,
+        "alphaRule": "preserve original opaque foreground alpha; only source pixels within five RGB levels of black become transparent",
+        "originalAlphaUnchangedBeforeCropAndResize": false,
+        "originalWasFullyOpaque": true,
+        "derivedTransparency": true,
+        "originalWidth": 196,
+        "originalHeight": 151,
+        "blackCanvasPixels": 23980,
+        "borderBlackFraction": 1,
+        "derivedPixelSha256": "7eed05b0e565d9255e9e76b4aac3f04925b4ddb088b7a008221d6a834976add2",
+        "newGeometry": false
+      },
+      "sourcePath": "branding/original-public-header-20261021.png"
+    },
+    "mark": {
+      "operation": "reviewed-black-matte-crop-and-resize",
+      "sourceSha256": "1292ce6ad88a8a66a380c161a18ca088ef71fecc451e04ae1750992f16a39b36",
+      "sha256": "11c1bc7d4ea34afef8e1223552b271441432d0ca0ab763585a908ef9e183e270",
+      "crop": {
+        "left": 22,
+        "top": 18,
+        "width": 152,
+        "height": 118
+      },
+      "rasterTreatment": {
+        "kind": "reviewed-black-matte-solid-ink-v1",
+        "ink": "solid-black",
+        "background": "#000000",
+        "blackNoiseCeiling": 5,
+        "alphaRule": "preserve original opaque foreground alpha; only source pixels within five RGB levels of black become transparent",
+        "originalAlphaUnchangedBeforeCropAndResize": false,
+        "originalWasFullyOpaque": true,
+        "derivedTransparency": true,
+        "originalWidth": 196,
+        "originalHeight": 151,
+        "blackCanvasPixels": 23980,
+        "borderBlackFraction": 1,
+        "derivedPixelSha256": "7eed05b0e565d9255e9e76b4aac3f04925b4ddb088b7a008221d6a834976add2",
+        "newGeometry": false
+      },
+      "sourcePath": "branding/original-public-header-20261021.png"
+    },
+    "markOnDark": {
+      "operation": "reviewed-black-matte-crop-and-resize",
+      "sourceSha256": "1292ce6ad88a8a66a380c161a18ca088ef71fecc451e04ae1750992f16a39b36",
+      "sha256": "0bb4d52aeb538715923cda480063d698d42c580ef61256eb941c9e2ddcfecd71",
+      "crop": {
+        "left": 22,
+        "top": 18,
+        "width": 152,
+        "height": 118
+      },
+      "rasterTreatment": {
+        "kind": "reviewed-black-matte-solid-ink-v1",
+        "ink": "solid-white",
+        "background": "#000000",
+        "blackNoiseCeiling": 5,
+        "alphaRule": "preserve original opaque foreground alpha; only source pixels within five RGB levels of black become transparent",
+        "originalAlphaUnchangedBeforeCropAndResize": false,
+        "originalWasFullyOpaque": true,
+        "derivedTransparency": true,
+        "originalWidth": 196,
+        "originalHeight": 151,
+        "blackCanvasPixels": 23980,
+        "borderBlackFraction": 1,
+        "derivedPixelSha256": "c3f78b8194950a5716dcf472209f89a80f9e36f78f2544727f0c7280d3051b7c",
+        "newGeometry": false
+      },
+      "sourcePath": "branding/original-public-header-20261021.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "b458f79479678f0449ba8d190e5dda5e4d4e82868092cb932f1f4370aa51c353",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "dealers/auto-club/branding/original-public-header-20261021.png",
+        "sha256": "1292ce6ad88a8a66a380c161a18ca088ef71fecc451e04ae1750992f16a39b36",
+        "reviewReference": "dealers/auto-club/branding/source.json",
+        "reviewSha256": "3c7a0f1493811b8db0b053f2bffc7b0a0266b13bf871f63b90b815454e76db18",
+        "sourceUrl": "https://www.auto-club.co.uk/media/logo.jpg",
+        "observedAt": "2026-10-21T12:52:39.176570Z",
+        "exportTreatment": {
+          "kind": "reviewed-black-matte-solid-ink-v1",
+          "ink": "solid-black",
+          "sourceSha256": "1292ce6ad88a8a66a380c161a18ca088ef71fecc451e04ae1750992f16a39b36",
+          "background": "#000000",
+          "derivedTransparency": true,
+          "originalAlphaPreserved": false,
+          "matteReviewSha256": "fa0bf3e9cacb6caaef8d9e22127e9bbc407fe1011d213ebda05f9b739db20e22",
+          "newGeometry": false
+        }
+      },
+      "sourceReference": "dealers/auto-club/branding/original-public-header-20261021.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "a5e08c7ed0eea34177ba6f8451573b38a7d02e3e85b440fb741a973ac1bba5f2",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "dealers/auto-club/branding/original-public-header-20261021.png",
+        "sha256": "1292ce6ad88a8a66a380c161a18ca088ef71fecc451e04ae1750992f16a39b36",
+        "reviewReference": "dealers/auto-club/branding/source.json",
+        "reviewSha256": "3c7a0f1493811b8db0b053f2bffc7b0a0266b13bf871f63b90b815454e76db18",
+        "sourceUrl": "https://www.auto-club.co.uk/media/logo.jpg",
+        "observedAt": "2026-10-21T12:52:39.176570Z",
+        "exportTreatment": {
+          "kind": "reviewed-black-matte-solid-ink-v1",
+          "ink": "solid-white",
+          "sourceSha256": "1292ce6ad88a8a66a380c161a18ca088ef71fecc451e04ae1750992f16a39b36",
+          "background": "#000000",
+          "derivedTransparency": true,
+          "originalAlphaPreserved": false,
+          "matteReviewSha256": "fa0bf3e9cacb6caaef8d9e22127e9bbc407fe1011d213ebda05f9b739db20e22",
+          "newGeometry": false
+        }
+      },
+      "sourceReference": "dealers/auto-club/branding/original-public-header-20261021.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "11c1bc7d4ea34afef8e1223552b271441432d0ca0ab763585a908ef9e183e270",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "dealers/auto-club/branding/original-public-header-20261021.png",
+        "sha256": "1292ce6ad88a8a66a380c161a18ca088ef71fecc451e04ae1750992f16a39b36",
+        "reviewReference": "dealers/auto-club/branding/source.json",
+        "reviewSha256": "3c7a0f1493811b8db0b053f2bffc7b0a0266b13bf871f63b90b815454e76db18",
+        "sourceUrl": "https://www.auto-club.co.uk/media/logo.jpg",
+        "observedAt": "2026-10-21T12:52:39.176570Z",
+        "exportTreatment": {
+          "kind": "reviewed-black-matte-solid-ink-v1",
+          "ink": "solid-black",
+          "sourceSha256": "1292ce6ad88a8a66a380c161a18ca088ef71fecc451e04ae1750992f16a39b36",
+          "background": "#000000",
+          "derivedTransparency": true,
+          "originalAlphaPreserved": false,
+          "matteReviewSha256": "fa0bf3e9cacb6caaef8d9e22127e9bbc407fe1011d213ebda05f9b739db20e22",
+          "newGeometry": false
+        }
+      },
+      "sourceReference": "dealers/auto-club/branding/original-public-header-20261021.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "8e77329c91c870a2c1ac630db91b6bc377f403a7b24505ae4a81cdb485434df6",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "dealers/auto-club/branding/original-public-header-20261021.png",
+        "sha256": "1292ce6ad88a8a66a380c161a18ca088ef71fecc451e04ae1750992f16a39b36",
+        "reviewReference": "dealers/auto-club/branding/source.json",
+        "reviewSha256": "3c7a0f1493811b8db0b053f2bffc7b0a0266b13bf871f63b90b815454e76db18",
+        "sourceUrl": "https://www.auto-club.co.uk/media/logo.jpg",
+        "observedAt": "2026-10-21T12:52:39.176570Z",
+        "exportTreatment": {
+          "kind": "reviewed-black-matte-solid-ink-v1",
+          "ink": "solid-black",
+          "sourceSha256": "1292ce6ad88a8a66a380c161a18ca088ef71fecc451e04ae1750992f16a39b36",
+          "background": "#000000",
+          "derivedTransparency": true,
+          "originalAlphaPreserved": false,
+          "matteReviewSha256": "fa0bf3e9cacb6caaef8d9e22127e9bbc407fe1011d213ebda05f9b739db20e22",
+          "newGeometry": false
+        }
+      },
+      "sourceReference": "dealers/auto-club/branding/original-public-header-20261021.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-21T13:18:53.809628Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "0bb4d52aeb538715923cda480063d698d42c580ef61256eb941c9e2ddcfecd71",
+    "retainedSource": {
+      "kind": "retained-reviewed-raster",
+      "reference": "dealers/auto-club/branding/original-public-header-20261021.png",
+      "sha256": "1292ce6ad88a8a66a380c161a18ca088ef71fecc451e04ae1750992f16a39b36",
+      "reviewReference": "dealers/auto-club/branding/source.json",
+      "reviewSha256": "3c7a0f1493811b8db0b053f2bffc7b0a0266b13bf871f63b90b815454e76db18",
+      "sourceUrl": "https://www.auto-club.co.uk/media/logo.jpg",
+      "observedAt": "2026-10-21T12:52:39.176570Z",
+      "exportTreatment": {
+        "kind": "reviewed-black-matte-solid-ink-v1",
+        "ink": "solid-white",
+        "sourceSha256": "1292ce6ad88a8a66a380c161a18ca088ef71fecc451e04ae1750992f16a39b36",
+        "background": "#000000",
+        "derivedTransparency": true,
+        "originalAlphaPreserved": false,
+        "matteReviewSha256": "fa0bf3e9cacb6caaef8d9e22127e9bbc407fe1011d213ebda05f9b739db20e22",
+        "newGeometry": false
+      }
+    }
+  }
+}

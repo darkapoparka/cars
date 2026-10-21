@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "dealer": "auto-club",
-  "status": "research-required",
+  "status": "retained-public-original-with-reviewed-black-matte",
   "realLogoFirst": true,
   "publicSources": [
     {
@@ -15,10 +15,173 @@
     {
       "url": "https://www.auto-club.co.uk/media/logo.jpg",
       "observedAt": "2026-10-21"
+    },
+    {
+      "url": "https://www.auto-club.co.uk/favicon.png",
+      "observedAt": "2026-10-21T12:52:39.117499Z"
     }
   ],
-  "originals": [],
-  "creationMethod": null,
+  "originals": [
+    {
+      "path": "branding/original-public-mark-20261021.png",
+      "sha256": "efbc0c6664f2314172d7bc349146a4ab50b6761cdff0b65f898e35739f4bf431",
+      "url": "https://www.auto-club.co.uk/favicon.png",
+      "observedAt": "2026-10-21T12:52:39.117499Z"
+    },
+    {
+      "path": "branding/original-public-header-20261021.png",
+      "sha256": "1292ce6ad88a8a66a380c161a18ca088ef71fecc451e04ae1750992f16a39b36",
+      "url": "https://www.auto-club.co.uk/media/logo.jpg",
+      "observedAt": "2026-10-21T12:52:39.176570Z",
+      "role": "retained-identity-reference-opaque-header"
+    }
+  ],
+  "creationMethod": "Retained official Auto Club header raster on a reviewed flat black canvas; maintained explicit monochrome matte export with derived transparency and no new geometry.",
   "dealerApproved": false,
-  "generatedInputs": null
+  "generatedInputs": null,
+  "unusedFaviconObservation": {
+    "faviconNativeSize": [
+      100,
+      100
+    ],
+    "alphaZeroPixels": 1996,
+    "totalPixels": 10000,
+    "alphaZeroFraction": 0.1996,
+    "maintainedPrepareError": "Logo requires substantial real transparency and visible artwork"
+  },
+  "pixelObservation": {
+    "sourcePath": "branding/original-public-header-20261021.png",
+    "width": 196,
+    "height": 151,
+    "fullyOpaque": true,
+    "blackCanvasFraction": 0.8102446276523855,
+    "blackBorderFraction": 1.0,
+    "rgbBlackCeiling": 5
+  },
+  "reviewedInputs": {
+    "reviewedAt": "2026-10-21T13:18:53.809628Z",
+    "master": {
+      "path": "branding/original-public-header-20261021.png",
+      "sha256": "1292ce6ad88a8a66a380c161a18ca088ef71fecc451e04ae1750992f16a39b36",
+      "retainedSource": {
+        "kind": "retained-original-raster",
+        "sha256": "1292ce6ad88a8a66a380c161a18ca088ef71fecc451e04ae1750992f16a39b36",
+        "url": "https://www.auto-club.co.uk/media/logo.jpg",
+        "observedAt": "2026-10-21T12:52:39.176570Z"
+      },
+      "rasterTreatment": "reviewed-black-matte-black",
+      "matteReview": {
+        "kind": "reviewed-flat-black-canvas",
+        "reviewed": true,
+        "background": "#000000",
+        "noBlackForegroundArtwork": true,
+        "sourceSha256": "1292ce6ad88a8a66a380c161a18ca088ef71fecc451e04ae1750992f16a39b36",
+        "reviewedAt": "2026-10-21T13:18:53.809628Z"
+      }
+    },
+    "mark": {
+      "path": "branding/original-public-header-20261021.png",
+      "sha256": "1292ce6ad88a8a66a380c161a18ca088ef71fecc451e04ae1750992f16a39b36",
+      "retainedSource": {
+        "kind": "retained-original-raster",
+        "sha256": "1292ce6ad88a8a66a380c161a18ca088ef71fecc451e04ae1750992f16a39b36",
+        "url": "https://www.auto-club.co.uk/media/logo.jpg",
+        "observedAt": "2026-10-21T12:52:39.176570Z"
+      },
+      "rasterTreatment": "reviewed-black-matte-black",
+      "matteReview": {
+        "kind": "reviewed-flat-black-canvas",
+        "reviewed": true,
+        "background": "#000000",
+        "noBlackForegroundArtwork": true,
+        "sourceSha256": "1292ce6ad88a8a66a380c161a18ca088ef71fecc451e04ae1750992f16a39b36",
+        "reviewedAt": "2026-10-21T13:18:53.809628Z"
+      }
+    },
+    "markOnDark": {
+      "path": "branding/original-public-header-20261021.png",
+      "sha256": "1292ce6ad88a8a66a380c161a18ca088ef71fecc451e04ae1750992f16a39b36",
+      "retainedSource": {
+        "kind": "retained-original-raster",
+        "sha256": "1292ce6ad88a8a66a380c161a18ca088ef71fecc451e04ae1750992f16a39b36",
+        "url": "https://www.auto-club.co.uk/media/logo.jpg",
+        "observedAt": "2026-10-21T12:52:39.176570Z"
+      },
+      "rasterTreatment": "reviewed-black-matte-white",
+      "matteReview": {
+        "kind": "reviewed-flat-black-canvas",
+        "reviewed": true,
+        "background": "#000000",
+        "noBlackForegroundArtwork": true,
+        "sourceSha256": "1292ce6ad88a8a66a380c161a18ca088ef71fecc451e04ae1750992f16a39b36",
+        "reviewedAt": "2026-10-21T13:18:53.809628Z"
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/original-public-header-20261021.png",
+        "sha256": "1292ce6ad88a8a66a380c161a18ca088ef71fecc451e04ae1750992f16a39b36",
+        "retainedSource": {
+          "kind": "retained-original-raster",
+          "sha256": "1292ce6ad88a8a66a380c161a18ca088ef71fecc451e04ae1750992f16a39b36",
+          "url": "https://www.auto-club.co.uk/media/logo.jpg",
+          "observedAt": "2026-10-21T12:52:39.176570Z"
+        },
+        "rasterTreatment": "reviewed-black-matte-black",
+        "matteReview": {
+          "kind": "reviewed-flat-black-canvas",
+          "reviewed": true,
+          "background": "#000000",
+          "noBlackForegroundArtwork": true,
+          "sourceSha256": "1292ce6ad88a8a66a380c161a18ca088ef71fecc451e04ae1750992f16a39b36",
+          "reviewedAt": "2026-10-21T13:18:53.809628Z"
+        }
+      },
+      "onDark": {
+        "path": "branding/original-public-header-20261021.png",
+        "sha256": "1292ce6ad88a8a66a380c161a18ca088ef71fecc451e04ae1750992f16a39b36",
+        "retainedSource": {
+          "kind": "retained-original-raster",
+          "sha256": "1292ce6ad88a8a66a380c161a18ca088ef71fecc451e04ae1750992f16a39b36",
+          "url": "https://www.auto-club.co.uk/media/logo.jpg",
+          "observedAt": "2026-10-21T12:52:39.176570Z"
+        },
+        "rasterTreatment": "reviewed-black-matte-white",
+        "matteReview": {
+          "kind": "reviewed-flat-black-canvas",
+          "reviewed": true,
+          "background": "#000000",
+          "noBlackForegroundArtwork": true,
+          "sourceSha256": "1292ce6ad88a8a66a380c161a18ca088ef71fecc451e04ae1750992f16a39b36",
+          "reviewedAt": "2026-10-21T13:18:53.809628Z"
+        }
+      },
+      "onAccent": {
+        "path": "branding/original-public-header-20261021.png",
+        "sha256": "1292ce6ad88a8a66a380c161a18ca088ef71fecc451e04ae1750992f16a39b36",
+        "retainedSource": {
+          "kind": "retained-original-raster",
+          "sha256": "1292ce6ad88a8a66a380c161a18ca088ef71fecc451e04ae1750992f16a39b36",
+          "url": "https://www.auto-club.co.uk/media/logo.jpg",
+          "observedAt": "2026-10-21T12:52:39.176570Z"
+        },
+        "rasterTreatment": "reviewed-black-matte-white",
+        "matteReview": {
+          "kind": "reviewed-flat-black-canvas",
+          "reviewed": true,
+          "background": "#000000",
+          "noBlackForegroundArtwork": true,
+          "sourceSha256": "1292ce6ad88a8a66a380c161a18ca088ef71fecc451e04ae1750992f16a39b36",
+          "reviewedAt": "2026-10-21T13:18:53.809628Z"
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "method": "Agent visual inspection of exact official header: silver and red AUTOCLUB / CAR SALES CARDIFF lettering and outlined car artwork on a flat black canvas; no separate black foreground artwork. The original alpha-bearing favicon is not used for preparation.",
+      "nativeOriginalWidth": 196,
+      "nativeOriginalHeight": 151,
+      "dealerApproval": false
+    }
+  }
 }

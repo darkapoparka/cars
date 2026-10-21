@@ -3,16 +3,70 @@
   "dealer": "address-motors-fzco",
   "businessFacts": "business-facts.json",
   "stock": "stock.json",
-  "inventoryKind": "illustrative-not-dealer-stock",
-  "inventoryNotice": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
+  "inventoryKind": "dated-listing-snapshot",
+  "inventoryNotice": "Dated public listing samples observed on 2026-10-21. Availability has not been confirmed. Listing prices are omitted in this preview.",
   "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
   "sources": [
     {
       "url": "https://www.dubicars.com/dealers/dubai-address-motors-3294",
-      "observedAt": "2026-10-18",
+      "finalUrl": "https://www.dubicars.com/dealers/dubai-address-motors-3294",
+      "httpStatus": 200,
+      "observedAt": "2026-10-21T13:10:51.154253Z",
+      "sha256": "fddeea920cac621e380207f865d87b7526e6b562fde918015776352164b860a4",
+      "bytes": 807995,
       "supports": [
-        "retained-public-business-research"
+        "exact-published-dealer-identity",
+        "Dubai",
+        "seller-account-binding",
+        "published-original-logo"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2025-toyota-hilux-28l-955139.html",
+      "finalUrl": "https://www.dubicars.com/2025-toyota-hilux-28l-955139.html",
+      "httpStatus": 200,
+      "observedAt": "2026-10-21T13:19:08.538732Z",
+      "sha256": "a9f2e6b1df654171236347cd73a941c6a4dc8f531aff3935dfa3c4831dc21ef6",
+      "bytes": 352166,
+      "supports": [
+        "exact-seller-account",
+        "dated-vehicle-facts",
+        "listing-photo-binding"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2025-toyota-tacoma-toyota-tacoma-24l-v4-trd-pro-i-force-max-hybrid-957812.html",
+      "finalUrl": "https://www.dubicars.com/2025-toyota-tacoma-toyota-tacoma-24l-v4-trd-pro-i-force-max-hybrid-957812.html",
+      "httpStatus": 200,
+      "observedAt": "2026-10-21T13:19:09.266001Z",
+      "sha256": "96a9de426d22a23d25eece19863928b8b593c442c25ec237d66a8b2394d5d53c",
+      "bytes": 363208,
+      "supports": [
+        "exact-seller-account",
+        "dated-vehicle-facts",
+        "listing-photo-binding"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2026-toyota-land-cruiser-pick-up-toyota-land-cruiser-pick-up-2026-toyota-land-cruiser-dc-40l-at-petrol-full-option-978318.html",
+      "finalUrl": "https://www.dubicars.com/2026-toyota-land-cruiser-pick-up-toyota-land-cruiser-pick-up-2026-toyota-land-cruiser-dc-40l-at-petrol-full-option-978318.html",
+      "httpStatus": 200,
+      "observedAt": "2026-10-21T13:19:09.970415Z",
+      "sha256": "3fdd2c00859f42cca848e22f33cd1cb367487465cf9da05f3ef762773d15253b",
+      "bytes": 378193,
+      "supports": [
+        "exact-seller-account",
+        "dated-vehicle-facts",
+        "listing-photo-binding"
       ]
     }
+  ],
+  "sourceLimitations": [
+    "Every selected detail page binds its seller organization to the exact retained dealer profile.",
+    "Make, model, model year, mileage where explicit, body, transmission, fuel and colour come from those exact detail pages.",
+    "Promotional warranty, accident, condition, service-history and finance claims are not copied. Listing prices are omitted.",
+    "New/used condition is omitted because the profile and detail JSON-LD differ on some cars.",
+    "Optional contacts, street address, hours and independent website are omitted where a verified unambiguous value was not retained.",
+    "The old template demo files remain unreferenced historical assets; stock.json references only the three newly retained real listing photos."
   ]
 }

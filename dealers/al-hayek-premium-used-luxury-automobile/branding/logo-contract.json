@@ -1,0 +1,469 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-hayek-premium-used-luxury-automobile",
+  "reviewed": true,
+  "reviewedAt": "2026-10-21T13:21:21.538210Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "retained-public-original-reviewed-black-matte-solid-ink",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "06d6d98ad153581b9ad245a9b5d57409a2bc0c8f90c776ebcd772bd1c726d040",
+      "sourceSha256": "aff671a8121375f5794f718dd863267a67054aca1d083500aacd74c7a3b83396"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "f274407371183b81adb0841f643f0f227af6aa462a9f4f6ec583d2d93adebe39",
+      "sourceSha256": "36c7a08cf9b21426b1ec94dfaf834ffee562bf1f3f1863f6548befb7e7e1a50e"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "f274407371183b81adb0841f643f0f227af6aa462a9f4f6ec583d2d93adebe39",
+      "sourceSha256": "36c7a08cf9b21426b1ec94dfaf834ffee562bf1f3f1863f6548befb7e7e1a50e"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "aff671a8121375f5794f718dd863267a67054aca1d083500aacd74c7a3b83396",
+    "retainedSource": {
+      "kind": "retained-reviewed-raster",
+      "reference": "dealers/al-hayek-premium-used-luxury-automobile/branding/public-original-artsmiley-20261021.jpg",
+      "sha256": "8c2c60b564e75959cf4f8b0365081a2a608170dba77ca283f852929ff16eaecc",
+      "reviewReference": "dealers/al-hayek-premium-used-luxury-automobile/branding/source.json",
+      "reviewSha256": "73885eabb893226e501518855c5341ba84ebf3d991c363db8589f82181ea57ce",
+      "sourceUrl": "https://artsmileybiz.com/wp-content/uploads/2024/05/Al-Hayek-Premium-Motors_150x150px.jpg",
+      "observedAt": "2026-10-21",
+      "exportTreatment": {
+        "kind": "reviewed-black-matte-solid-ink-v1",
+        "ink": "solid-black",
+        "sourceSha256": "8c2c60b564e75959cf4f8b0365081a2a608170dba77ca283f852929ff16eaecc",
+        "background": "#000000",
+        "derivedTransparency": true,
+        "originalAlphaPreserved": false,
+        "matteReviewSha256": "d0b0f8f1717d3690b5d64f958fd11c99b717576ce5118749537602c060d87543",
+        "newGeometry": false
+      }
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "33e91c8246bf32228a3decb12f989c11ad0c1b63a7901b8494a2e166d8a84020",
+    "retainedSource": {
+      "kind": "retained-reviewed-raster",
+      "reference": "dealers/al-hayek-premium-used-luxury-automobile/branding/public-original-artsmiley-20261021.jpg",
+      "sha256": "8c2c60b564e75959cf4f8b0365081a2a608170dba77ca283f852929ff16eaecc",
+      "reviewReference": "dealers/al-hayek-premium-used-luxury-automobile/branding/source.json",
+      "reviewSha256": "73885eabb893226e501518855c5341ba84ebf3d991c363db8589f82181ea57ce",
+      "sourceUrl": "https://artsmileybiz.com/wp-content/uploads/2024/05/Al-Hayek-Premium-Motors_150x150px.jpg",
+      "observedAt": "2026-10-21",
+      "exportTreatment": {
+        "kind": "reviewed-black-matte-solid-ink-v1",
+        "ink": "solid-black",
+        "sourceSha256": "8c2c60b564e75959cf4f8b0365081a2a608170dba77ca283f852929ff16eaecc",
+        "background": "#000000",
+        "derivedTransparency": true,
+        "originalAlphaPreserved": false,
+        "matteReviewSha256": "d0b0f8f1717d3690b5d64f958fd11c99b717576ce5118749537602c060d87543",
+        "newGeometry": false
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "960c41800e3fc9cf7c8eda4b801536780bd366643152a970d90bae0188868e3d"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "aff671a8121375f5794f718dd863267a67054aca1d083500aacd74c7a3b83396",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "dealers/al-hayek-premium-used-luxury-automobile/branding/public-original-artsmiley-20261021.jpg",
+        "sha256": "8c2c60b564e75959cf4f8b0365081a2a608170dba77ca283f852929ff16eaecc",
+        "reviewReference": "dealers/al-hayek-premium-used-luxury-automobile/branding/source.json",
+        "reviewSha256": "73885eabb893226e501518855c5341ba84ebf3d991c363db8589f82181ea57ce",
+        "sourceUrl": "https://artsmileybiz.com/wp-content/uploads/2024/05/Al-Hayek-Premium-Motors_150x150px.jpg",
+        "observedAt": "2026-10-21",
+        "exportTreatment": {
+          "kind": "reviewed-black-matte-solid-ink-v1",
+          "ink": "solid-black",
+          "sourceSha256": "8c2c60b564e75959cf4f8b0365081a2a608170dba77ca283f852929ff16eaecc",
+          "background": "#000000",
+          "derivedTransparency": true,
+          "originalAlphaPreserved": false,
+          "matteReviewSha256": "d0b0f8f1717d3690b5d64f958fd11c99b717576ce5118749537602c060d87543",
+          "newGeometry": false
+        }
+      },
+      "sourceReference": "dealers/al-hayek-premium-used-luxury-automobile/branding/public-original-artsmiley-20261021.jpg"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "36c7a08cf9b21426b1ec94dfaf834ffee562bf1f3f1863f6548befb7e7e1a50e",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "dealers/al-hayek-premium-used-luxury-automobile/branding/public-original-artsmiley-20261021.jpg",
+        "sha256": "8c2c60b564e75959cf4f8b0365081a2a608170dba77ca283f852929ff16eaecc",
+        "reviewReference": "dealers/al-hayek-premium-used-luxury-automobile/branding/source.json",
+        "reviewSha256": "73885eabb893226e501518855c5341ba84ebf3d991c363db8589f82181ea57ce",
+        "sourceUrl": "https://artsmileybiz.com/wp-content/uploads/2024/05/Al-Hayek-Premium-Motors_150x150px.jpg",
+        "observedAt": "2026-10-21",
+        "exportTreatment": {
+          "kind": "reviewed-black-matte-solid-ink-v1",
+          "ink": "solid-white",
+          "sourceSha256": "8c2c60b564e75959cf4f8b0365081a2a608170dba77ca283f852929ff16eaecc",
+          "background": "#000000",
+          "derivedTransparency": true,
+          "originalAlphaPreserved": false,
+          "matteReviewSha256": "d0b0f8f1717d3690b5d64f958fd11c99b717576ce5118749537602c060d87543",
+          "newGeometry": false
+        }
+      },
+      "sourceReference": "dealers/al-hayek-premium-used-luxury-automobile/branding/public-original-artsmiley-20261021.jpg"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "36c7a08cf9b21426b1ec94dfaf834ffee562bf1f3f1863f6548befb7e7e1a50e",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "dealers/al-hayek-premium-used-luxury-automobile/branding/public-original-artsmiley-20261021.jpg",
+        "sha256": "8c2c60b564e75959cf4f8b0365081a2a608170dba77ca283f852929ff16eaecc",
+        "reviewReference": "dealers/al-hayek-premium-used-luxury-automobile/branding/source.json",
+        "reviewSha256": "73885eabb893226e501518855c5341ba84ebf3d991c363db8589f82181ea57ce",
+        "sourceUrl": "https://artsmileybiz.com/wp-content/uploads/2024/05/Al-Hayek-Premium-Motors_150x150px.jpg",
+        "observedAt": "2026-10-21",
+        "exportTreatment": {
+          "kind": "reviewed-black-matte-solid-ink-v1",
+          "ink": "solid-white",
+          "sourceSha256": "8c2c60b564e75959cf4f8b0365081a2a608170dba77ca283f852929ff16eaecc",
+          "background": "#000000",
+          "derivedTransparency": true,
+          "originalAlphaPreserved": false,
+          "matteReviewSha256": "d0b0f8f1717d3690b5d64f958fd11c99b717576ce5118749537602c060d87543",
+          "newGeometry": false
+        }
+      },
+      "sourceReference": "dealers/al-hayek-premium-used-luxury-automobile/branding/public-original-artsmiley-20261021.jpg"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "reviewed-black-matte-crop-and-resize",
+      "sourceSha256": "8c2c60b564e75959cf4f8b0365081a2a608170dba77ca283f852929ff16eaecc",
+      "sha256": "aff671a8121375f5794f718dd863267a67054aca1d083500aacd74c7a3b83396",
+      "crop": {
+        "left": 4,
+        "top": 56,
+        "width": 142,
+        "height": 38
+      },
+      "rasterTreatment": {
+        "kind": "reviewed-black-matte-solid-ink-v1",
+        "ink": "solid-black",
+        "background": "#000000",
+        "blackNoiseCeiling": 5,
+        "alphaRule": "preserve original opaque foreground alpha; only source pixels within five RGB levels of black become transparent",
+        "originalAlphaUnchangedBeforeCropAndResize": false,
+        "originalWasFullyOpaque": true,
+        "derivedTransparency": true,
+        "originalWidth": 150,
+        "originalHeight": 150,
+        "blackCanvasPixels": 21121,
+        "borderBlackFraction": 1,
+        "derivedPixelSha256": "981a4ee89004dcd9225704aa6c7caa18dbd6fc384300db7eddda3b8c98e91338",
+        "newGeometry": false
+      },
+      "sourcePath": "branding/public-original-artsmiley-20261021.jpg",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "reviewed-black-matte-crop-and-resize",
+      "sourceSha256": "8c2c60b564e75959cf4f8b0365081a2a608170dba77ca283f852929ff16eaecc",
+      "sha256": "36c7a08cf9b21426b1ec94dfaf834ffee562bf1f3f1863f6548befb7e7e1a50e",
+      "crop": {
+        "left": 4,
+        "top": 56,
+        "width": 142,
+        "height": 38
+      },
+      "rasterTreatment": {
+        "kind": "reviewed-black-matte-solid-ink-v1",
+        "ink": "solid-white",
+        "background": "#000000",
+        "blackNoiseCeiling": 5,
+        "alphaRule": "preserve original opaque foreground alpha; only source pixels within five RGB levels of black become transparent",
+        "originalAlphaUnchangedBeforeCropAndResize": false,
+        "originalWasFullyOpaque": true,
+        "derivedTransparency": true,
+        "originalWidth": 150,
+        "originalHeight": 150,
+        "blackCanvasPixels": 21121,
+        "borderBlackFraction": 1,
+        "derivedPixelSha256": "92d3241b93b30f9d35a2d1b8907cb21ba775b2ea5319e036e7c51a0066ece7e1",
+        "newGeometry": false
+      },
+      "sourcePath": "branding/public-original-artsmiley-20261021.jpg",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "reviewed-black-matte-crop-and-resize",
+      "sourceSha256": "8c2c60b564e75959cf4f8b0365081a2a608170dba77ca283f852929ff16eaecc",
+      "sha256": "36c7a08cf9b21426b1ec94dfaf834ffee562bf1f3f1863f6548befb7e7e1a50e",
+      "crop": {
+        "left": 4,
+        "top": 56,
+        "width": 142,
+        "height": 38
+      },
+      "rasterTreatment": {
+        "kind": "reviewed-black-matte-solid-ink-v1",
+        "ink": "solid-white",
+        "background": "#000000",
+        "blackNoiseCeiling": 5,
+        "alphaRule": "preserve original opaque foreground alpha; only source pixels within five RGB levels of black become transparent",
+        "originalAlphaUnchangedBeforeCropAndResize": false,
+        "originalWasFullyOpaque": true,
+        "derivedTransparency": true,
+        "originalWidth": 150,
+        "originalHeight": 150,
+        "blackCanvasPixels": 21121,
+        "borderBlackFraction": 1,
+        "derivedPixelSha256": "92d3241b93b30f9d35a2d1b8907cb21ba775b2ea5319e036e7c51a0066ece7e1",
+        "newGeometry": false
+      },
+      "sourcePath": "branding/public-original-artsmiley-20261021.jpg",
+      "outputPath": "branding/logo-on-accent.png"
+    },
+    "master": {
+      "operation": "reviewed-black-matte-crop-and-resize",
+      "sourceSha256": "8c2c60b564e75959cf4f8b0365081a2a608170dba77ca283f852929ff16eaecc",
+      "sha256": "aff671a8121375f5794f718dd863267a67054aca1d083500aacd74c7a3b83396",
+      "crop": {
+        "left": 4,
+        "top": 56,
+        "width": 142,
+        "height": 38
+      },
+      "rasterTreatment": {
+        "kind": "reviewed-black-matte-solid-ink-v1",
+        "ink": "solid-black",
+        "background": "#000000",
+        "blackNoiseCeiling": 5,
+        "alphaRule": "preserve original opaque foreground alpha; only source pixels within five RGB levels of black become transparent",
+        "originalAlphaUnchangedBeforeCropAndResize": false,
+        "originalWasFullyOpaque": true,
+        "derivedTransparency": true,
+        "originalWidth": 150,
+        "originalHeight": 150,
+        "blackCanvasPixels": 21121,
+        "borderBlackFraction": 1,
+        "derivedPixelSha256": "981a4ee89004dcd9225704aa6c7caa18dbd6fc384300db7eddda3b8c98e91338",
+        "newGeometry": false
+      },
+      "sourcePath": "branding/public-original-artsmiley-20261021.jpg"
+    },
+    "mark": {
+      "operation": "reviewed-black-matte-crop-and-resize",
+      "sourceSha256": "8c2c60b564e75959cf4f8b0365081a2a608170dba77ca283f852929ff16eaecc",
+      "sha256": "33e91c8246bf32228a3decb12f989c11ad0c1b63a7901b8494a2e166d8a84020",
+      "crop": {
+        "left": 4,
+        "top": 56,
+        "width": 142,
+        "height": 38
+      },
+      "rasterTreatment": {
+        "kind": "reviewed-black-matte-solid-ink-v1",
+        "ink": "solid-black",
+        "background": "#000000",
+        "blackNoiseCeiling": 5,
+        "alphaRule": "preserve original opaque foreground alpha; only source pixels within five RGB levels of black become transparent",
+        "originalAlphaUnchangedBeforeCropAndResize": false,
+        "originalWasFullyOpaque": true,
+        "derivedTransparency": true,
+        "originalWidth": 150,
+        "originalHeight": 150,
+        "blackCanvasPixels": 21121,
+        "borderBlackFraction": 1,
+        "derivedPixelSha256": "981a4ee89004dcd9225704aa6c7caa18dbd6fc384300db7eddda3b8c98e91338",
+        "newGeometry": false
+      },
+      "sourcePath": "branding/public-original-artsmiley-20261021.jpg"
+    },
+    "markOnDark": {
+      "operation": "reviewed-black-matte-crop-and-resize",
+      "sourceSha256": "8c2c60b564e75959cf4f8b0365081a2a608170dba77ca283f852929ff16eaecc",
+      "sha256": "a559affdf4d7784066bb40129c2bb8311356ca6cc82f48e39791b2885525ed8d",
+      "crop": {
+        "left": 4,
+        "top": 56,
+        "width": 142,
+        "height": 38
+      },
+      "rasterTreatment": {
+        "kind": "reviewed-black-matte-solid-ink-v1",
+        "ink": "solid-white",
+        "background": "#000000",
+        "blackNoiseCeiling": 5,
+        "alphaRule": "preserve original opaque foreground alpha; only source pixels within five RGB levels of black become transparent",
+        "originalAlphaUnchangedBeforeCropAndResize": false,
+        "originalWasFullyOpaque": true,
+        "derivedTransparency": true,
+        "originalWidth": 150,
+        "originalHeight": 150,
+        "blackCanvasPixels": 21121,
+        "borderBlackFraction": 1,
+        "derivedPixelSha256": "92d3241b93b30f9d35a2d1b8907cb21ba775b2ea5319e036e7c51a0066ece7e1",
+        "newGeometry": false
+      },
+      "sourcePath": "branding/public-original-artsmiley-20261021.jpg"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "f75397b0e487c40c44206ce4d3f0af90b34c98f2bde9d54a42720d43411ba9f8",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "dealers/al-hayek-premium-used-luxury-automobile/branding/public-original-artsmiley-20261021.jpg",
+        "sha256": "8c2c60b564e75959cf4f8b0365081a2a608170dba77ca283f852929ff16eaecc",
+        "reviewReference": "dealers/al-hayek-premium-used-luxury-automobile/branding/source.json",
+        "reviewSha256": "73885eabb893226e501518855c5341ba84ebf3d991c363db8589f82181ea57ce",
+        "sourceUrl": "https://artsmileybiz.com/wp-content/uploads/2024/05/Al-Hayek-Premium-Motors_150x150px.jpg",
+        "observedAt": "2026-10-21",
+        "exportTreatment": {
+          "kind": "reviewed-black-matte-solid-ink-v1",
+          "ink": "solid-black",
+          "sourceSha256": "8c2c60b564e75959cf4f8b0365081a2a608170dba77ca283f852929ff16eaecc",
+          "background": "#000000",
+          "derivedTransparency": true,
+          "originalAlphaPreserved": false,
+          "matteReviewSha256": "d0b0f8f1717d3690b5d64f958fd11c99b717576ce5118749537602c060d87543",
+          "newGeometry": false
+        }
+      },
+      "sourceReference": "dealers/al-hayek-premium-used-luxury-automobile/branding/public-original-artsmiley-20261021.jpg"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "aa4facc7bfd0d5c06f373712555c917010c48c906536f806022b7d6cd5349826",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "dealers/al-hayek-premium-used-luxury-automobile/branding/public-original-artsmiley-20261021.jpg",
+        "sha256": "8c2c60b564e75959cf4f8b0365081a2a608170dba77ca283f852929ff16eaecc",
+        "reviewReference": "dealers/al-hayek-premium-used-luxury-automobile/branding/source.json",
+        "reviewSha256": "73885eabb893226e501518855c5341ba84ebf3d991c363db8589f82181ea57ce",
+        "sourceUrl": "https://artsmileybiz.com/wp-content/uploads/2024/05/Al-Hayek-Premium-Motors_150x150px.jpg",
+        "observedAt": "2026-10-21",
+        "exportTreatment": {
+          "kind": "reviewed-black-matte-solid-ink-v1",
+          "ink": "solid-white",
+          "sourceSha256": "8c2c60b564e75959cf4f8b0365081a2a608170dba77ca283f852929ff16eaecc",
+          "background": "#000000",
+          "derivedTransparency": true,
+          "originalAlphaPreserved": false,
+          "matteReviewSha256": "d0b0f8f1717d3690b5d64f958fd11c99b717576ce5118749537602c060d87543",
+          "newGeometry": false
+        }
+      },
+      "sourceReference": "dealers/al-hayek-premium-used-luxury-automobile/branding/public-original-artsmiley-20261021.jpg"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "33e91c8246bf32228a3decb12f989c11ad0c1b63a7901b8494a2e166d8a84020",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "dealers/al-hayek-premium-used-luxury-automobile/branding/public-original-artsmiley-20261021.jpg",
+        "sha256": "8c2c60b564e75959cf4f8b0365081a2a608170dba77ca283f852929ff16eaecc",
+        "reviewReference": "dealers/al-hayek-premium-used-luxury-automobile/branding/source.json",
+        "reviewSha256": "73885eabb893226e501518855c5341ba84ebf3d991c363db8589f82181ea57ce",
+        "sourceUrl": "https://artsmileybiz.com/wp-content/uploads/2024/05/Al-Hayek-Premium-Motors_150x150px.jpg",
+        "observedAt": "2026-10-21",
+        "exportTreatment": {
+          "kind": "reviewed-black-matte-solid-ink-v1",
+          "ink": "solid-black",
+          "sourceSha256": "8c2c60b564e75959cf4f8b0365081a2a608170dba77ca283f852929ff16eaecc",
+          "background": "#000000",
+          "derivedTransparency": true,
+          "originalAlphaPreserved": false,
+          "matteReviewSha256": "d0b0f8f1717d3690b5d64f958fd11c99b717576ce5118749537602c060d87543",
+          "newGeometry": false
+        }
+      },
+      "sourceReference": "dealers/al-hayek-premium-used-luxury-automobile/branding/public-original-artsmiley-20261021.jpg"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "960c41800e3fc9cf7c8eda4b801536780bd366643152a970d90bae0188868e3d",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "dealers/al-hayek-premium-used-luxury-automobile/branding/public-original-artsmiley-20261021.jpg",
+        "sha256": "8c2c60b564e75959cf4f8b0365081a2a608170dba77ca283f852929ff16eaecc",
+        "reviewReference": "dealers/al-hayek-premium-used-luxury-automobile/branding/source.json",
+        "reviewSha256": "73885eabb893226e501518855c5341ba84ebf3d991c363db8589f82181ea57ce",
+        "sourceUrl": "https://artsmileybiz.com/wp-content/uploads/2024/05/Al-Hayek-Premium-Motors_150x150px.jpg",
+        "observedAt": "2026-10-21",
+        "exportTreatment": {
+          "kind": "reviewed-black-matte-solid-ink-v1",
+          "ink": "solid-black",
+          "sourceSha256": "8c2c60b564e75959cf4f8b0365081a2a608170dba77ca283f852929ff16eaecc",
+          "background": "#000000",
+          "derivedTransparency": true,
+          "originalAlphaPreserved": false,
+          "matteReviewSha256": "d0b0f8f1717d3690b5d64f958fd11c99b717576ce5118749537602c060d87543",
+          "newGeometry": false
+        }
+      },
+      "sourceReference": "dealers/al-hayek-premium-used-luxury-automobile/branding/public-original-artsmiley-20261021.jpg"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-21T13:21:21.538210Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "a559affdf4d7784066bb40129c2bb8311356ca6cc82f48e39791b2885525ed8d",
+    "retainedSource": {
+      "kind": "retained-reviewed-raster",
+      "reference": "dealers/al-hayek-premium-used-luxury-automobile/branding/public-original-artsmiley-20261021.jpg",
+      "sha256": "8c2c60b564e75959cf4f8b0365081a2a608170dba77ca283f852929ff16eaecc",
+      "reviewReference": "dealers/al-hayek-premium-used-luxury-automobile/branding/source.json",
+      "reviewSha256": "73885eabb893226e501518855c5341ba84ebf3d991c363db8589f82181ea57ce",
+      "sourceUrl": "https://artsmileybiz.com/wp-content/uploads/2024/05/Al-Hayek-Premium-Motors_150x150px.jpg",
+      "observedAt": "2026-10-21",
+      "exportTreatment": {
+        "kind": "reviewed-black-matte-solid-ink-v1",
+        "ink": "solid-white",
+        "sourceSha256": "8c2c60b564e75959cf4f8b0365081a2a608170dba77ca283f852929ff16eaecc",
+        "background": "#000000",
+        "derivedTransparency": true,
+        "originalAlphaPreserved": false,
+        "matteReviewSha256": "d0b0f8f1717d3690b5d64f958fd11c99b717576ce5118749537602c060d87543",
+        "newGeometry": false
+      }
+    }
+  }
+}

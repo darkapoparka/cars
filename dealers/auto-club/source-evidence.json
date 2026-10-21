@@ -7,19 +7,173 @@
   },
   "publicSources": [
     {
-      "url": "https://showroom.ebaymotorspro.co.uk/AUTO-CLUB?menu=1",
-      "observedAt": "2026-10-18",
+      "url": "https://showroom.ebaymotorspro.co.uk/AUTO-CLUB",
+      "observedAt": "2026-10-21T12:51:23.991962Z",
       "supports": [
-        "retained-public-business-research"
+        "business-name",
+        "business-location",
+        "published-business-phone",
+        "published-business-contact-email"
       ]
     },
     {
-      "url": "https://www.cazoo.co.uk/dealers/auto-club-60978/",
-      "observedAt": "2026-10-18",
+      "url": "https://www.auto-club.co.uk/used/cars/",
+      "observedAt": "2026-10-21T12:51:26.316692Z",
       "supports": [
-        "retained-public-business-research"
+        "dated-seller-stock",
+        "actual-listing-photo-bindings"
+      ]
+    },
+    {
+      "url": "https://www.auto-club.co.uk/",
+      "observedAt": "2026-10-21T12:51:26.121635Z",
+      "supports": [
+        "official-business-website",
+        "original-brand-mark",
+        "identity-match-by-name-location-and-two-overlapping-listings"
       ]
     }
   ],
-  "liveFetchPerformed": false
+  "liveFetchPerformed": true,
+  "pageObservations": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/AUTO-CLUB",
+      "observedAt": "2026-10-21T12:51:23.991962+00:00",
+      "sha256": "2e3b327d316675e79607cbff7b5d2d9322d147eedd8f68acc1caf968b6ca42cf",
+      "bytes": 36376,
+      "status": 200
+    },
+    {
+      "url": "https://www.auto-club.co.uk/used/cars/",
+      "observedAt": "2026-10-21T12:51:26.316692+00:00",
+      "sha256": "1dd4b6df9238a6094e138ea69d289a01f7b8bce19dd99da2210f805ccc4da0fe",
+      "bytes": 164506,
+      "status": 200
+    },
+    {
+      "url": "https://www.auto-club.co.uk/",
+      "observedAt": "2026-10-21T12:51:26.121635+00:00",
+      "sha256": "e1b202c7524a5c7316dc3c0e1ab6aaeab41c2effd42a0a690b99ff2a33fcce38",
+      "bytes": 119357,
+      "status": 200
+    }
+  ],
+  "stockObservations": [
+    {
+      "sourceId": "official-10120",
+      "sellerPage": "https://www.auto-club.co.uk/used/cars/",
+      "sellerPageSha256": "1dd4b6df9238a6094e138ea69d289a01f7b8bce19dd99da2210f805ccc4da0fe",
+      "listingUrl": "https://www.auto-club.co.uk/used/cars/bmw-5-series-20-530e-92kwh-m-sport-auto-euro-6-ss-4dr-10120/",
+      "observedAt": "2026-10-21T12:51:26.316692Z",
+      "sourceTitle": "2018 BMW 5 Series 2.0 530e 9.2kWh M Sport Auto Euro 6 (s/s) 4dr",
+      "sourceDetails": {
+        "Body": "Saloon",
+        "Mileage": "91,688",
+        "Fuel Type": "Petrol PHEV",
+        "Gearbox": "Automatic",
+        "Engine Size": "2.0L",
+        "MPG Combined": "141mpg",
+        "CO2": "46g/km",
+        "Tax 12 Month Rate": "£200",
+        "Interior Colour": ""
+      },
+      "image": {
+        "url": "https://www.auto-club.co.uk/photos/13072/682cf3d0-bf0f-4bb3-8f1a-e48a0bec8e74_i800x600.jpg",
+        "observedAt": "2026-10-21T13:01:28.806270Z",
+        "httpStatus": 200,
+        "sha256": "e2de689e77b41a3a9535367301be75f5cabb8a38c501ed27b456588c9b5c34b1",
+        "bytes": 145516,
+        "width": 800,
+        "height": 600
+      },
+      "retainedImage": "dealer-stock/public-20261021-official-10120.jpg",
+      "canonicalLabelNotes": [
+        "Source fuel label Petrol PHEV expanded to Petrol plug-in hybrid.",
+        "Source body label Saloon expressed as Sedan for the maintained adapter."
+      ]
+    },
+    {
+      "sourceId": "official-10098",
+      "sellerPage": "https://www.auto-club.co.uk/used/cars/",
+      "sellerPageSha256": "1dd4b6df9238a6094e138ea69d289a01f7b8bce19dd99da2210f805ccc4da0fe",
+      "listingUrl": "https://www.auto-club.co.uk/used/cars/volkswagen-tiguan-20-tdi-se-navigation-dsg-euro-6-ss-5dr-10098/",
+      "observedAt": "2026-10-21T12:51:26.316692Z",
+      "sourceTitle": "2017 Volkswagen Tiguan 2.0 TDI SE Navigation DSG Euro 6 (s/s) 5dr",
+      "sourceDetails": {
+        "Body": "SUV",
+        "Mileage": "127,259",
+        "Fuel Type": "Diesel",
+        "Gearbox": "Automatic",
+        "Engine Size": "2.0L",
+        "MPG Combined": "57mpg",
+        "CO2": "129g/km",
+        "Tax 12 Month Rate": "£200",
+        "Interior Colour": ""
+      },
+      "image": {
+        "url": "https://www.auto-club.co.uk/photos/13072/872d61b9-4c89-4a3b-b6cf-a4469f30e578_i800x600.jpg",
+        "observedAt": "2026-10-21T13:01:28.829509Z",
+        "httpStatus": 200,
+        "sha256": "e616bea82dc4a799bab1f0dd7f5a8150801c0abf3c8dfe0e29e6855a41fb0a0e",
+        "bytes": 156054,
+        "width": 800,
+        "height": 600
+      },
+      "retainedImage": "dealer-stock/public-20261021-official-10098.jpg"
+    },
+    {
+      "sourceId": "official-10137",
+      "sellerPage": "https://www.auto-club.co.uk/used/cars/",
+      "sellerPageSha256": "1dd4b6df9238a6094e138ea69d289a01f7b8bce19dd99da2210f805ccc4da0fe",
+      "listingUrl": "https://www.auto-club.co.uk/used/cars/nissan-qashqai-17-dci-tekna-plus-euro-6-ss-5dr-10137/",
+      "observedAt": "2026-10-21T12:51:26.316692Z",
+      "sourceTitle": "2019 Nissan Qashqai 1.7 dCi Tekna+ Euro 6 (s/s) 5dr",
+      "sourceDetails": {
+        "Body": "SUV",
+        "Mileage": "83,307",
+        "Fuel Type": "Diesel",
+        "Gearbox": "Manual",
+        "Engine Size": "1.7L",
+        "MPG Combined": "49mpg",
+        "CO2": "127g/km",
+        "Tax 12 Month Rate": "£200",
+        "Interior Colour": ""
+      },
+      "image": {
+        "url": "https://www.auto-club.co.uk/photos/13072/3c986f9e-6051-4b92-bae8-b1f4c66fa4f6_i800x600.jpg",
+        "observedAt": "2026-10-21T13:01:28.877070Z",
+        "httpStatus": 200,
+        "sha256": "8299493c9d183810d613e280e5094445e7646c14a158bea2903eb43be7d27df6",
+        "bytes": 137885,
+        "width": 800,
+        "height": 600
+      },
+      "retainedImage": "dealer-stock/public-20261021-official-10137.jpg"
+    }
+  ],
+  "unknownOptionalFactsOmitted": true,
+  "dealerApproval": false,
+  "publicIdentityMatch": {
+    "website": "https://www.auto-club.co.uk/",
+    "evidence": [
+      "Same business name and Bessemer Road, Cardiff CF11 8BE location in the retained seller page and official site.",
+      "Both sources list a 2012 Land Rover Range Rover Evoque with 119,000 miles and a 2017 Kia Optima with 68,000 miles."
+    ],
+    "sources": [
+      "https://showroom.ebaymotorspro.co.uk/AUTO-CLUB",
+      "https://www.auto-club.co.uk/used/cars/"
+    ],
+    "observedAt": "2026-10-21T12:51:23.991962Z"
+  },
+  "logoObservation": {
+    "url": "https://www.auto-club.co.uk/media/logo.jpg",
+    "observedAt": "2026-10-21T12:52:39.176570Z",
+    "sha256": "1292ce6ad88a8a66a380c161a18ca088ef71fecc451e04ae1750992f16a39b36",
+    "retainedPath": "branding/original-public-header-20261021.png",
+    "width": 196,
+    "height": 151,
+    "sellerWebsite": "https://www.auto-club.co.uk/",
+    "binding": "Official header logo on the same public dealer website confirmed by name, address and overlapping listings.",
+    "blackCanvasReview": "Silver/red foreground on an opaque flat black canvas, with no separate black foreground artwork; derived transparency is recorded explicitly by the maintained tool."
+  }
 }

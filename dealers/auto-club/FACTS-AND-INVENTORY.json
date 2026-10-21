@@ -3,22 +3,35 @@
   "dealer": "auto-club",
   "businessFacts": "business-facts.json",
   "stock": "stock.json",
-  "inventoryKind": "illustrative-not-dealer-stock",
-  "inventoryNotice": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
+  "inventoryKind": "dated-listing-snapshot",
+  "inventoryNotice": "Dated public seller listings observed on 21 October 2026. Availability is not live; confirm with the dealer. Listing prices are omitted in this preview.",
   "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
   "sources": [
     {
-      "url": "https://showroom.ebaymotorspro.co.uk/AUTO-CLUB?menu=1",
-      "observedAt": "2026-10-18",
+      "url": "https://showroom.ebaymotorspro.co.uk/AUTO-CLUB",
+      "observedAt": "2026-10-21T12:51:23.991962Z",
       "supports": [
-        "retained-public-business-research"
+        "business-name",
+        "business-location",
+        "published-business-phone",
+        "published-business-contact-email"
       ]
     },
     {
-      "url": "https://www.cazoo.co.uk/dealers/auto-club-60978/",
-      "observedAt": "2026-10-18",
+      "url": "https://www.auto-club.co.uk/used/cars/",
+      "observedAt": "2026-10-21T12:51:26.316692Z",
       "supports": [
-        "retained-public-business-research"
+        "dated-seller-stock",
+        "actual-listing-photo-bindings"
+      ]
+    },
+    {
+      "url": "https://www.auto-club.co.uk/",
+      "observedAt": "2026-10-21T12:51:26.121635Z",
+      "supports": [
+        "official-business-website",
+        "original-brand-mark",
+        "identity-match-by-name-location-and-two-overlapping-listings"
       ]
     }
   ]

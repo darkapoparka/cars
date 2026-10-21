@@ -2,27 +2,27 @@
   "schemaVersion": 1,
   "kind": "cars-new-source-reviewed-companion-copy",
   "dealer": "address-motors-fzco",
-  "reviewed": false,
-  "reviewedAt": null,
-  "stockSha256": "426e0a87e51ac8e4d54776e32f90c0891ace978e555176362f1b2bac808d9365",
+  "reviewed": true,
+  "reviewedAt": "2026-10-21T13:25:38.550Z",
+  "stockSha256": "49e3373cd8d0055a15dbfc7b248813657a60941cd373dbf6a03eb685207f3f58",
   "descriptions": [
     {
-      "sourceId": "template-demo-auto-best-1",
-      "sourceDescription": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
-      "en": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
-      "bg": "Илюстративни демонстрационни автомобили от запазения шаблон Cars; те не са наличности на тази автокъща. Наличността не е проверена. Цените са пропуснати в този преглед."
+      "sourceId": "toyota-hilux-2025",
+      "sourceDescription": "Dated public listing samples observed on 2026-10-21. Availability has not been confirmed. Listing prices are omitted in this preview.",
+      "en": "Dated public listing samples observed on 2026-10-21. Availability has not been confirmed. Listing prices are omitted in this preview.",
+      "bg": "Примери от публични обяви, наблюдавани на 2026-10-21. Наличността не е потвърдена. Цените са пропуснати в този преглед."
     },
     {
-      "sourceId": "template-demo-auto-best-2",
-      "sourceDescription": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
-      "en": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
-      "bg": "Илюстративни демонстрационни автомобили от запазения шаблон Cars; те не са наличности на тази автокъща. Наличността не е проверена. Цените са пропуснати в този преглед."
+      "sourceId": "toyota-tacoma-2025",
+      "sourceDescription": "Dated public listing samples observed on 2026-10-21. Availability has not been confirmed. Listing prices are omitted in this preview.",
+      "en": "Dated public listing samples observed on 2026-10-21. Availability has not been confirmed. Listing prices are omitted in this preview.",
+      "bg": "Примери от публични обяви, наблюдавани на 2026-10-21. Наличността не е потвърдена. Цените са пропуснати в този преглед."
     },
     {
-      "sourceId": "template-demo-auto-best-3",
-      "sourceDescription": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
-      "en": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
-      "bg": "Илюстративни демонстрационни автомобили от запазения шаблон Cars; те не са наличности на тази автокъща. Наличността не е проверена. Цените са пропуснати в този преглед."
+      "sourceId": "toyota-land-cruiser-pick-up-2026",
+      "sourceDescription": "Dated public listing samples observed on 2026-10-21. Availability has not been confirmed. Listing prices are omitted in this preview.",
+      "en": "Dated public listing samples observed on 2026-10-21. Availability has not been confirmed. Listing prices are omitted in this preview.",
+      "bg": "Примери от публични обяви, наблюдавани на 2026-10-21. Наличността не е потвърдена. Цените са пропуснати в този преглед."
     }
   ]
 }

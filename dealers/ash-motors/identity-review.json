@@ -1,23 +1,72 @@
 {
   "schemaVersion": 1,
   "kind": "cars-new-dealer-identity-review",
-  "reviewed": false,
-  "reviewedAt": null,
+  "reviewed": true,
+  "reviewedAt": "2026-10-21T13:25:37.714Z",
   "dealer": "ash-motors",
   "dealerId": "ae-dubai-ash-motors",
   "repository": "darkapoparka/cars",
   "existingIdentityFound": false,
   "sourceOwnership": "cars-canonical",
   "review": {
-    "kind": "pending",
+    "kind": "automated",
     "humanReview": false,
     "dealerApproval": false
   },
-  "method": "Draft identity only; run automated pack input review before building.",
+  "method": "Automated exact registry/pack identity, canonical hosting and batch comparison; retained public source fields were structurally checked, not human-approved.",
   "sources": [
     {
       "url": "https://www.dubicars.com/dealers/dubai-ash-motors-2643",
-      "observedAt": "2026-10-18"
+      "finalUrl": "https://www.dubicars.com/dealers/dubai-ash-motors-2643",
+      "httpStatus": 200,
+      "observedAt": "2026-10-21T13:10:51.253747Z",
+      "sha256": "b54671ba6df16159f9ea5144523741e3c1c881e56f5c8f544b9780456a326396",
+      "bytes": 511805,
+      "supports": [
+        "exact-published-dealer-identity",
+        "Dubai",
+        "seller-account-binding",
+        "published-original-logo"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2024-mclaren-artura-performance-30l-v6-twin-turbo-hybrid-1030040.html",
+      "finalUrl": "https://www.dubicars.com/2024-mclaren-artura-performance-30l-v6-twin-turbo-hybrid-1030040.html",
+      "httpStatus": 200,
+      "observedAt": "2026-10-21T13:19:06.727591Z",
+      "sha256": "421953e593ea2d9fe104c985ba98ca7b41682d4fe562f39a9ef67b4fa7c2783f",
+      "bytes": 385394,
+      "supports": [
+        "exact-seller-account",
+        "dated-vehicle-facts",
+        "listing-photo-binding"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2022-mercedes-benz-g63-amg-g63-amg-japanese-specs-57500-km-full-service-history-1031245.html",
+      "finalUrl": "https://www.dubicars.com/2022-mercedes-benz-g63-amg-g63-amg-japanese-specs-57500-km-full-service-history-1031245.html",
+      "httpStatus": 200,
+      "observedAt": "2026-10-21T13:19:07.000213Z",
+      "sha256": "b5e48534e59ff7da56aa34fd7ecf1b66fb1622a3c535e9ec6ce989f36562659c",
+      "bytes": 460526,
+      "supports": [
+        "exact-seller-account",
+        "dated-vehicle-facts",
+        "listing-photo-binding"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/2025-porsche-911-9922-sport-chrono-package-japanese-spec-brand-condition-1030038.html",
+      "finalUrl": "https://www.dubicars.com/2025-porsche-911-9922-sport-chrono-package-japanese-spec-brand-condition-1030038.html",
+      "httpStatus": 200,
+      "observedAt": "2026-10-21T13:19:07.236312Z",
+      "sha256": "afd69830750e0d23d988365d0f267ad5645b074bbba1357310e349a21622cc36",
+      "bytes": 437644,
+      "supports": [
+        "exact-seller-account",
+        "dated-vehicle-facts",
+        "listing-photo-binding"
+      ]
     }
   ]
 }

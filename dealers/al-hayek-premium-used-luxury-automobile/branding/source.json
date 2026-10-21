@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "dealer": "al-hayek-premium-used-luxury-automobile",
-  "status": "research-required",
+  "status": "reviewed-public-original",
   "realLogoFirst": true,
   "publicSources": [
     {
@@ -15,10 +15,204 @@
     {
       "url": "https://www.dubicars.com/dealers/dubai-al-hayek-premium-motors-2703",
       "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.dubicars.com/dealers/dubai-al-hayek-premium-motors-2703",
+      "observedAt": "2026-10-21"
+    },
+    {
+      "url": "https://artsmileybiz.com/wallpaper-services-dubai-uae/",
+      "observedAt": "2026-10-21"
+    },
+    {
+      "url": "https://www.dubicars.com/news/al-hayek-premium-motors-dubicars-partnership.html",
+      "observedAt": "2026-10-21"
     }
   ],
-  "originals": [],
-  "creationMethod": null,
+  "originals": [
+    {
+      "kind": "public-brand-reference-only",
+      "path": "branding/public-reference-20261021.jpg",
+      "url": "https://www.dubicars.com/images/a34ef7/z_400x234/al-hayek-premium-used-luxury-automobile-trading-llc/logo-90543403-6d4c-4e9a-8af4-6355491a926a.jpeg",
+      "sourcePage": "https://www.dubicars.com/dealers/dubai-al-hayek-premium-motors-2703",
+      "observedAt": "2026-10-21",
+      "sha256": "4a8356f7f23d3bb6602a4a371fdc38fc3b3e4c16fa2ee19a4a3e49e285d549c3",
+      "format": "JPEG",
+      "width": 400,
+      "height": 248,
+      "transparentPixelFraction": 0.0,
+      "acceptedAsPreparedArtwork": false,
+      "reason": "The profile displays Premium Motors artwork; the retained JPEG is opaque and cannot satisfy the unchanged transparent artwork gate."
+    },
+    {
+      "kind": "retained-original-raster",
+      "path": "branding/public-original-artsmiley-20261021.jpg",
+      "url": "https://artsmileybiz.com/wp-content/uploads/2024/05/Al-Hayek-Premium-Motors_150x150px.jpg",
+      "sourcePage": "https://artsmileybiz.com/wallpaper-services-dubai-uae/",
+      "observedAt": "2026-10-21",
+      "sha256": "8c2c60b564e75959cf4f8b0365081a2a608170dba77ca283f852929ff16eaecc",
+      "bytes": 4748,
+      "format": "JPEG",
+      "width": 150,
+      "height": 150,
+      "transparentPixelFraction": 0,
+      "acceptedAsPreparedArtwork": true,
+      "reason": "Eligible public flat-black original; use the maintained reviewed-black-matte monochrome export with exact provenance.",
+      "visualFinding": "The exact public original contains a white Premium Motors shield and wordmark on a flat black canvas. The shield, letter shapes and underline match the independently retained DubiCars dealer logo; black areas are the canvas and open counters, with no black foreground drawing. Source is a third-party client portfolio, not a claim of dealer approval.",
+      "qualityCaveat": "The genuine source is a 150 by 150 raster. Exact matte exports keep a recognizable Premium Motors shield and wordmark but show jagged/bold edges and limited legibility of the small MOTORS line at enlarged display sizes. No redrawing, sharpening or lettering replacement is performed."
+    }
+  ],
+  "creationMethod": "retained-public-original-reviewed-black-matte-solid-ink",
   "dealerApproved": false,
-  "generatedInputs": null
+  "sourceBlockers": [],
+  "reviewedInputs": {
+    "reviewedAt": "2026-10-21T13:21:21.538210Z",
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewKind": "agent-visual-review",
+      "humanReview": false,
+      "dealerApproval": false,
+      "finding": "Monochrome surfaces derive from the exact public original. Original source bytes are retained; only explicitly reviewed canvas pixels receive derived transparency, with no new geometry. Actual white, dark and red surface exports were inspected; the source resolution produces visibly jagged edges and fragile small text, recorded in the quality caveat."
+    },
+    "master": {
+      "path": "branding/public-original-artsmiley-20261021.jpg",
+      "sha256": "8c2c60b564e75959cf4f8b0365081a2a608170dba77ca283f852929ff16eaecc",
+      "rasterTreatment": "reviewed-black-matte-black",
+      "retainedSource": {
+        "kind": "retained-original-raster",
+        "sha256": "8c2c60b564e75959cf4f8b0365081a2a608170dba77ca283f852929ff16eaecc",
+        "url": "https://artsmileybiz.com/wp-content/uploads/2024/05/Al-Hayek-Premium-Motors_150x150px.jpg",
+        "observedAt": "2026-10-21"
+      },
+      "matteReview": {
+        "kind": "reviewed-flat-black-canvas",
+        "reviewed": true,
+        "reviewKind": "agent-visual-review",
+        "humanReview": false,
+        "dealerApproval": false,
+        "background": "#000000",
+        "noBlackForegroundArtwork": true,
+        "sourceSha256": "8c2c60b564e75959cf4f8b0365081a2a608170dba77ca283f852929ff16eaecc",
+        "reviewedAt": "2026-10-21T13:21:21.538210Z",
+        "finding": "The exact public original contains a white Premium Motors shield and wordmark on a flat black canvas. The shield, letter shapes and underline match the independently retained DubiCars dealer logo; black areas are the canvas and open counters, with no black foreground drawing. Source is a third-party client portfolio, not a claim of dealer approval."
+      }
+    },
+    "mark": {
+      "path": "branding/public-original-artsmiley-20261021.jpg",
+      "sha256": "8c2c60b564e75959cf4f8b0365081a2a608170dba77ca283f852929ff16eaecc",
+      "rasterTreatment": "reviewed-black-matte-black",
+      "retainedSource": {
+        "kind": "retained-original-raster",
+        "sha256": "8c2c60b564e75959cf4f8b0365081a2a608170dba77ca283f852929ff16eaecc",
+        "url": "https://artsmileybiz.com/wp-content/uploads/2024/05/Al-Hayek-Premium-Motors_150x150px.jpg",
+        "observedAt": "2026-10-21"
+      },
+      "matteReview": {
+        "kind": "reviewed-flat-black-canvas",
+        "reviewed": true,
+        "reviewKind": "agent-visual-review",
+        "humanReview": false,
+        "dealerApproval": false,
+        "background": "#000000",
+        "noBlackForegroundArtwork": true,
+        "sourceSha256": "8c2c60b564e75959cf4f8b0365081a2a608170dba77ca283f852929ff16eaecc",
+        "reviewedAt": "2026-10-21T13:21:21.538210Z",
+        "finding": "The exact public original contains a white Premium Motors shield and wordmark on a flat black canvas. The shield, letter shapes and underline match the independently retained DubiCars dealer logo; black areas are the canvas and open counters, with no black foreground drawing. Source is a third-party client portfolio, not a claim of dealer approval."
+      }
+    },
+    "markOnDark": {
+      "path": "branding/public-original-artsmiley-20261021.jpg",
+      "sha256": "8c2c60b564e75959cf4f8b0365081a2a608170dba77ca283f852929ff16eaecc",
+      "rasterTreatment": "reviewed-black-matte-white",
+      "retainedSource": {
+        "kind": "retained-original-raster",
+        "sha256": "8c2c60b564e75959cf4f8b0365081a2a608170dba77ca283f852929ff16eaecc",
+        "url": "https://artsmileybiz.com/wp-content/uploads/2024/05/Al-Hayek-Premium-Motors_150x150px.jpg",
+        "observedAt": "2026-10-21"
+      },
+      "matteReview": {
+        "kind": "reviewed-flat-black-canvas",
+        "reviewed": true,
+        "reviewKind": "agent-visual-review",
+        "humanReview": false,
+        "dealerApproval": false,
+        "background": "#000000",
+        "noBlackForegroundArtwork": true,
+        "sourceSha256": "8c2c60b564e75959cf4f8b0365081a2a608170dba77ca283f852929ff16eaecc",
+        "reviewedAt": "2026-10-21T13:21:21.538210Z",
+        "finding": "The exact public original contains a white Premium Motors shield and wordmark on a flat black canvas. The shield, letter shapes and underline match the independently retained DubiCars dealer logo; black areas are the canvas and open counters, with no black foreground drawing. Source is a third-party client portfolio, not a claim of dealer approval."
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/public-original-artsmiley-20261021.jpg",
+        "sha256": "8c2c60b564e75959cf4f8b0365081a2a608170dba77ca283f852929ff16eaecc",
+        "rasterTreatment": "reviewed-black-matte-black",
+        "retainedSource": {
+          "kind": "retained-original-raster",
+          "sha256": "8c2c60b564e75959cf4f8b0365081a2a608170dba77ca283f852929ff16eaecc",
+          "url": "https://artsmileybiz.com/wp-content/uploads/2024/05/Al-Hayek-Premium-Motors_150x150px.jpg",
+          "observedAt": "2026-10-21"
+        },
+        "matteReview": {
+          "kind": "reviewed-flat-black-canvas",
+          "reviewed": true,
+          "reviewKind": "agent-visual-review",
+          "humanReview": false,
+          "dealerApproval": false,
+          "background": "#000000",
+          "noBlackForegroundArtwork": true,
+          "sourceSha256": "8c2c60b564e75959cf4f8b0365081a2a608170dba77ca283f852929ff16eaecc",
+          "reviewedAt": "2026-10-21T13:21:21.538210Z",
+          "finding": "The exact public original contains a white Premium Motors shield and wordmark on a flat black canvas. The shield, letter shapes and underline match the independently retained DubiCars dealer logo; black areas are the canvas and open counters, with no black foreground drawing. Source is a third-party client portfolio, not a claim of dealer approval."
+        }
+      },
+      "onDark": {
+        "path": "branding/public-original-artsmiley-20261021.jpg",
+        "sha256": "8c2c60b564e75959cf4f8b0365081a2a608170dba77ca283f852929ff16eaecc",
+        "rasterTreatment": "reviewed-black-matte-white",
+        "retainedSource": {
+          "kind": "retained-original-raster",
+          "sha256": "8c2c60b564e75959cf4f8b0365081a2a608170dba77ca283f852929ff16eaecc",
+          "url": "https://artsmileybiz.com/wp-content/uploads/2024/05/Al-Hayek-Premium-Motors_150x150px.jpg",
+          "observedAt": "2026-10-21"
+        },
+        "matteReview": {
+          "kind": "reviewed-flat-black-canvas",
+          "reviewed": true,
+          "reviewKind": "agent-visual-review",
+          "humanReview": false,
+          "dealerApproval": false,
+          "background": "#000000",
+          "noBlackForegroundArtwork": true,
+          "sourceSha256": "8c2c60b564e75959cf4f8b0365081a2a608170dba77ca283f852929ff16eaecc",
+          "reviewedAt": "2026-10-21T13:21:21.538210Z",
+          "finding": "The exact public original contains a white Premium Motors shield and wordmark on a flat black canvas. The shield, letter shapes and underline match the independently retained DubiCars dealer logo; black areas are the canvas and open counters, with no black foreground drawing. Source is a third-party client portfolio, not a claim of dealer approval."
+        }
+      },
+      "onAccent": {
+        "path": "branding/public-original-artsmiley-20261021.jpg",
+        "sha256": "8c2c60b564e75959cf4f8b0365081a2a608170dba77ca283f852929ff16eaecc",
+        "rasterTreatment": "reviewed-black-matte-white",
+        "retainedSource": {
+          "kind": "retained-original-raster",
+          "sha256": "8c2c60b564e75959cf4f8b0365081a2a608170dba77ca283f852929ff16eaecc",
+          "url": "https://artsmileybiz.com/wp-content/uploads/2024/05/Al-Hayek-Premium-Motors_150x150px.jpg",
+          "observedAt": "2026-10-21"
+        },
+        "matteReview": {
+          "kind": "reviewed-flat-black-canvas",
+          "reviewed": true,
+          "reviewKind": "agent-visual-review",
+          "humanReview": false,
+          "dealerApproval": false,
+          "background": "#000000",
+          "noBlackForegroundArtwork": true,
+          "sourceSha256": "8c2c60b564e75959cf4f8b0365081a2a608170dba77ca283f852929ff16eaecc",
+          "reviewedAt": "2026-10-21T13:21:21.538210Z",
+          "finding": "The exact public original contains a white Premium Motors shield and wordmark on a flat black canvas. The shield, letter shapes and underline match the independently retained DubiCars dealer logo; black areas are the canvas and open counters, with no black foreground drawing. Source is a third-party client portfolio, not a claim of dealer approval."
+        }
+      }
+    }
+  }
 }

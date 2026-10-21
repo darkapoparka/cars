@@ -26,7 +26,125 @@
       "supports": [
         "retained-public-business-research"
       ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/dealer/al-hayek-premium-used-luxury-automobile",
+      "observedAt": "2026-10-21",
+      "supports": [
+        "public-business-name",
+        "public-business-location",
+        "public-business-address",
+        "public-business-phone"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/12988-rolls-royce-cullinan-68-at-4wd-571-hp-black-badge",
+      "observedAt": "2026-10-21",
+      "supports": [
+        "dated-public-seller-listing",
+        "vehicle-identity",
+        "vehicle-year",
+        "vehicle-mileage",
+        "retained-stock-photos"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/dealers/dubai-al-hayek-premium-motors-2703",
+      "observedAt": "2026-10-21",
+      "supports": [
+        "public-brand-reference"
+      ]
+    },
+    {
+      "url": "https://artsmileybiz.com/wallpaper-services-dubai-uae/",
+      "observedAt": "2026-10-21",
+      "supports": [
+        "public-original-artwork-attribution"
+      ]
+    },
+    {
+      "url": "https://www.dubicars.com/news/al-hayek-premium-motors-dubicars-partnership.html",
+      "observedAt": "2026-10-21",
+      "supports": [
+        "public-original-artwork-attribution"
+      ]
+    },
+    {
+      "url": "https://artsmileybiz.com/wp-json/wp/v2/media?search=Al-Hayek&per_page=10",
+      "observedAt": "2026-10-21",
+      "supports": [
+        "publisher-full-original-is-150-by-150-raster"
+      ]
     }
   ],
-  "liveFetchPerformed": false
+  "liveFetchPerformed": true,
+  "observedAt": "2026-10-21",
+  "retainedMedia": [
+    {
+      "path": "dealer-stock/public-12988-1.webp",
+      "sourceUrl": "https://licenseplate.ae/storage/listings/0/rolls-royce-cullinan-68-at-4wd-571-hp-0-1792179392.webp",
+      "listingUrl": "https://licenseplate.ae/cars/listing/12988-rolls-royce-cullinan-68-at-4wd-571-hp-black-badge",
+      "observedAt": "2026-10-21T12:59:03.782088Z",
+      "sha256": "9b952d2bdc6b332279c881d911e112b488c829280f7e2fdf0fab05bdef2d660a",
+      "bytes": 113008,
+      "width": 1200,
+      "height": 800,
+      "format": "WEBP",
+      "transformation": "none; exact downloaded source bytes"
+    },
+    {
+      "path": "dealer-stock/public-12988-2.webp",
+      "sourceUrl": "https://licenseplate.ae/storage/listings/0/rolls-royce-cullinan-68-at-4wd-571-hp-0-1792179392-2.webp",
+      "listingUrl": "https://licenseplate.ae/cars/listing/12988-rolls-royce-cullinan-68-at-4wd-571-hp-black-badge",
+      "observedAt": "2026-10-21T12:59:03.850112Z",
+      "sha256": "4c04b3605a667a36838606cc85f36b27ab3755d615de2a3e606913606a79ff11",
+      "bytes": 115274,
+      "width": 1200,
+      "height": 800,
+      "format": "WEBP",
+      "transformation": "none; exact downloaded source bytes"
+    },
+    {
+      "path": "dealer-stock/public-12988-3.webp",
+      "sourceUrl": "https://licenseplate.ae/storage/listings/0/rolls-royce-cullinan-68-at-4wd-571-hp-0-1792179393.webp",
+      "listingUrl": "https://licenseplate.ae/cars/listing/12988-rolls-royce-cullinan-68-at-4wd-571-hp-black-badge",
+      "observedAt": "2026-10-21T12:59:03.938724Z",
+      "sha256": "bba8fe7fb2c28df2905e9e73a080c3513349b4c7bc4bb3201a3513d54aa24f76",
+      "bytes": 112794,
+      "width": 1200,
+      "height": 800,
+      "format": "WEBP",
+      "transformation": "none; exact downloaded source bytes"
+    }
+  ],
+  "publicPageEvidence": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/al-hayek-premium-used-luxury-automobile",
+      "observedAt": "2026-10-21",
+      "sha256": "6b6de60f53ed4ecafe3664e4d2fec74e1ad80289e5ece6ca71be84084a2fdc89"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/12988-rolls-royce-cullinan-68-at-4wd-571-hp-black-badge",
+      "observedAt": "2026-10-21",
+      "sha256": "692db3ed972bd18ba11bc2d524367f3a41c389e6e2b120d788d968e81a23350f"
+    },
+    {
+      "url": "https://artsmileybiz.com/wallpaper-services-dubai-uae/",
+      "observedAt": "2026-10-21",
+      "sha256": "83f7e4497b3c9930d9d247e45ef04787d3b0d378c2608d15c4e130592f8df5c3",
+      "finding": "Page HTML includes an image with Al-Hayek-Premium-Motors_150x150px in its source path and alt text."
+    }
+  ],
+  "artworkReady": true,
+  "artworkReview": {
+    "reviewKind": "agent-visual-review",
+    "reviewedAt": "2026-10-21T13:21:21.538210Z",
+    "sourceSha256": "8c2c60b564e75959cf4f8b0365081a2a608170dba77ca283f852929ff16eaecc",
+    "sourceUrl": "https://artsmileybiz.com/wp-content/uploads/2024/05/Al-Hayek-Premium-Motors_150x150px.jpg",
+    "sourcePage": "https://artsmileybiz.com/wallpaper-services-dubai-uae/",
+    "finding": "The exact public original contains a white Premium Motors shield and wordmark on a flat black canvas. The shield, letter shapes and underline match the independently retained DubiCars dealer logo; black areas are the canvas and open counters, with no black foreground drawing. Source is a third-party client portfolio, not a claim of dealer approval.",
+    "qualityCaveat": "The genuine source is a 150 by 150 raster. Exact matte exports keep a recognizable Premium Motors shield and wordmark but show jagged/bold edges and limited legibility of the small MOTORS line at enlarged display sizes. No redrawing, sharpening or lettering replacement is performed.",
+    "humanReview": false,
+    "dealerApproval": false
+  }
 }

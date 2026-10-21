@@ -19,7 +19,105 @@
       "supports": [
         "retained-public-business-research"
       ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/dealer/al-fajr-automobile-showroom",
+      "observedAt": "2026-10-21",
+      "supports": [
+        "public-business-name",
+        "public-business-location",
+        "public-business-address",
+        "public-business-phone"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/5062-nissan-patrol-35-at-awd-495-hp-le-platinum",
+      "observedAt": "2026-10-21",
+      "supports": [
+        "dated-public-seller-listing",
+        "vehicle-identity",
+        "vehicle-year",
+        "vehicle-mileage",
+        "retained-stock-photos"
+      ]
+    },
+    {
+      "url": "https://auto.ae/ar/alfajrautomobileshowroom/",
+      "observedAt": "2026-10-21",
+      "supports": [
+        "public-brand-reference"
+      ]
+    },
+    {
+      "url": "https://uae.dubizzle.com/motors/used-cars/nissan/patrol/2026/09/02/-3-647---1e17176143da45c18c854e6e61761ed2/",
+      "observedAt": "2026-10-21",
+      "supports": [
+        "public-original-artwork-attribution"
+      ]
     }
   ],
-  "liveFetchPerformed": false
+  "liveFetchPerformed": true,
+  "observedAt": "2026-10-21",
+  "retainedMedia": [
+    {
+      "path": "dealer-stock/public-5062-1.webp",
+      "sourceUrl": "https://licenseplate.ae/storage/listings/0/nissan-patrol-35-at-awd-495-hp-0-1789515462.webp",
+      "listingUrl": "https://licenseplate.ae/cars/listing/5062-nissan-patrol-35-at-awd-495-hp-le-platinum",
+      "observedAt": "2026-10-21T12:59:03.627410Z",
+      "sha256": "8c68c47993b4465a25131d1100ddef5cf5a889269ae2c2ef38eaa49ff79dc5fc",
+      "bytes": 44348,
+      "width": 1003,
+      "height": 800,
+      "format": "WEBP",
+      "transformation": "none; exact downloaded source bytes"
+    },
+    {
+      "path": "dealer-stock/public-5062-2.webp",
+      "sourceUrl": "https://licenseplate.ae/storage/listings/0/nissan-patrol-35-at-awd-495-hp-0-1789515463.webp",
+      "listingUrl": "https://licenseplate.ae/cars/listing/5062-nissan-patrol-35-at-awd-495-hp-le-platinum",
+      "observedAt": "2026-10-21T12:59:03.621783Z",
+      "sha256": "e9e095fbe1f3ec7d117f3747de7d49a237fd5559661d8a447be9f0c08f88a446",
+      "bytes": 42188,
+      "width": 982,
+      "height": 800,
+      "format": "WEBP",
+      "transformation": "none; exact downloaded source bytes"
+    },
+    {
+      "path": "dealer-stock/public-5062-3.webp",
+      "sourceUrl": "https://licenseplate.ae/storage/listings/0/nissan-patrol-35-at-awd-495-hp-0-1789515463-2.webp",
+      "listingUrl": "https://licenseplate.ae/cars/listing/5062-nissan-patrol-35-at-awd-495-hp-le-platinum",
+      "observedAt": "2026-10-21T12:59:03.681123Z",
+      "sha256": "ce1bde8b9a3ff81fa3edf22ecc1e2ce32fd5a0ea008e4ecc5b65eb70e321c2c8",
+      "bytes": 44366,
+      "width": 959,
+      "height": 800,
+      "format": "WEBP",
+      "transformation": "none; exact downloaded source bytes"
+    }
+  ],
+  "publicPageEvidence": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/al-fajr-automobile-showroom",
+      "observedAt": "2026-10-21",
+      "sha256": "c4e63eadaba8e923b0cecf90d86a235fb884ae00b7137b67502aa819219c54fa"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/5062-nissan-patrol-35-at-awd-495-hp-le-platinum",
+      "observedAt": "2026-10-21",
+      "sha256": "0920de21a81326c74246d68b79e8f8e13b1b89be084c2132b60df8b947ef40d6"
+    }
+  ],
+  "artworkReady": true,
+  "artworkReview": {
+    "reviewKind": "agent-visual-review",
+    "reviewedAt": "2026-10-21T13:21:21.538210Z",
+    "sourceSha256": "44fdfdf1eb11226e562a255daa1bfcdfa916207b97ad719c54bec2485ffb9222",
+    "sourceUrl": "https://dbz-images.dubizzle.com/profiles/auto_agency/Al_Fajr_Logo.PNG",
+    "sourcePage": "https://uae.dubizzle.com/motors/used-cars/nissan/patrol/2026/09/02/-3-647---1e17176143da45c18c854e6e61761ed2/",
+    "finding": "The exact public seller logo contains black Arabic and English lettering on a flat white canvas. White areas are background and open letter counters, with no white foreground drawing. The source listing explicitly identifies Al Fajr Automobile Showroom and links this logo; source lettering is preserved without retyping or Arabic-expert approval.",
+    "qualityCaveat": "The public original is served as a 520 by 160 WebP despite its PNG URL. Letter edges are soft in the original; exports retain original geometry and do not redraw the text.",
+    "humanReview": false,
+    "dealerApproval": false
+  }
 }

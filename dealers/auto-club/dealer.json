@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Auto Club",
     "publicOrigin": "https://auto-club.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "8cefef574df1ee3380e0da849a8fd6f917998d84fb1b123dab9355fc4e5d76c1",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "11c1bc7d4ea34afef8e1223552b271441432d0ca0ab763585a908ef9e183e270"
+    }
   }
 }

@@ -1,16 +1,193 @@
 {
   "schemaVersion": 1,
   "dealer": "address-motors-fzco",
-  "status": "research-required",
+  "status": "reviewed-public-original",
   "realLogoFirst": true,
   "publicSources": [
     {
       "url": "https://www.dubicars.com/dealers/dubai-address-motors-3294",
-      "observedAt": "2026-10-18"
+      "finalUrl": "https://www.dubicars.com/dealers/dubai-address-motors-3294",
+      "httpStatus": 200,
+      "observedAt": "2026-10-21T13:10:51.154253Z",
+      "sha256": "fddeea920cac621e380207f865d87b7526e6b562fde918015776352164b860a4",
+      "bytes": 807995,
+      "supports": [
+        "exact-published-dealer-identity",
+        "Dubai",
+        "seller-account-binding",
+        "published-original-logo"
+      ]
+    },
+    {
+      "url": "https://d2souf30ck18jq.cloudfront.net/address-motors/logo-18f1ac0c-7dcf-4c4f-86a1-9f33314c176d.jpeg",
+      "finalUrl": "https://d2souf30ck18jq.cloudfront.net/address-motors/logo-18f1ac0c-7dcf-4c4f-86a1-9f33314c176d.jpeg",
+      "httpStatus": 200,
+      "observedAt": "2026-10-21T13:11:48.376266Z",
+      "sha256": "efcc94bfeb48a13327304ade2540cf670ae301789e4076b8dbb7fddedf51a5b8",
+      "bytes": 13141,
+      "supports": [
+        "exact-published-original-logo"
+      ]
     }
   ],
-  "originals": [],
-  "creationMethod": null,
+  "originals": [
+    {
+      "path": "branding/original-public-dubicars-20261021.jpg",
+      "sha256": "efcc94bfeb48a13327304ade2540cf670ae301789e4076b8dbb7fddedf51a5b8",
+      "url": "https://d2souf30ck18jq.cloudfront.net/address-motors/logo-18f1ac0c-7dcf-4c4f-86a1-9f33314c176d.jpeg",
+      "observedAt": "2026-10-21T13:11:48.376266Z"
+    }
+  ],
+  "creationMethod": "retained-public-raster-reviewed-black-canvas-monochrome",
   "dealerApproved": false,
-  "generatedInputs": null
+  "sourceIdentity": {
+    "profileUrl": "https://www.dubicars.com/dealers/dubai-address-motors-3294",
+    "binding": "The retained exact dealer profile publishes this logo; the stock detail pages bind the same seller organization."
+  },
+  "reviewedInputs": {
+    "reviewedAt": "2026-10-21T13:22:52.012891Z",
+    "master": {
+      "path": "branding/original-public-dubicars-20261021.jpg",
+      "sha256": "efcc94bfeb48a13327304ade2540cf670ae301789e4076b8dbb7fddedf51a5b8",
+      "retainedSource": {
+        "kind": "retained-original-raster",
+        "sha256": "efcc94bfeb48a13327304ade2540cf670ae301789e4076b8dbb7fddedf51a5b8",
+        "url": "https://d2souf30ck18jq.cloudfront.net/address-motors/logo-18f1ac0c-7dcf-4c4f-86a1-9f33314c176d.jpeg",
+        "observedAt": "2026-10-21T13:11:48.376266Z"
+      },
+      "rasterTreatment": "reviewed-black-matte-black",
+      "matteReview": {
+        "kind": "reviewed-flat-black-canvas",
+        "reviewed": true,
+        "background": "#000000",
+        "noBlackForegroundArtwork": true,
+        "sourceSha256": "efcc94bfeb48a13327304ade2540cf670ae301789e4076b8dbb7fddedf51a5b8",
+        "reviewedAt": "2026-10-21T13:22:52.012891Z"
+      }
+    },
+    "mark": {
+      "path": "branding/original-public-dubicars-20261021.jpg",
+      "sha256": "efcc94bfeb48a13327304ade2540cf670ae301789e4076b8dbb7fddedf51a5b8",
+      "retainedSource": {
+        "kind": "retained-original-raster",
+        "sha256": "efcc94bfeb48a13327304ade2540cf670ae301789e4076b8dbb7fddedf51a5b8",
+        "url": "https://d2souf30ck18jq.cloudfront.net/address-motors/logo-18f1ac0c-7dcf-4c4f-86a1-9f33314c176d.jpeg",
+        "observedAt": "2026-10-21T13:11:48.376266Z"
+      },
+      "rasterTreatment": "reviewed-black-matte-black",
+      "matteReview": {
+        "kind": "reviewed-flat-black-canvas",
+        "reviewed": true,
+        "background": "#000000",
+        "noBlackForegroundArtwork": true,
+        "sourceSha256": "efcc94bfeb48a13327304ade2540cf670ae301789e4076b8dbb7fddedf51a5b8",
+        "reviewedAt": "2026-10-21T13:22:52.012891Z"
+      }
+    },
+    "markOnDark": {
+      "path": "branding/original-public-dubicars-20261021.jpg",
+      "sha256": "efcc94bfeb48a13327304ade2540cf670ae301789e4076b8dbb7fddedf51a5b8",
+      "retainedSource": {
+        "kind": "retained-original-raster",
+        "sha256": "efcc94bfeb48a13327304ade2540cf670ae301789e4076b8dbb7fddedf51a5b8",
+        "url": "https://d2souf30ck18jq.cloudfront.net/address-motors/logo-18f1ac0c-7dcf-4c4f-86a1-9f33314c176d.jpeg",
+        "observedAt": "2026-10-21T13:11:48.376266Z"
+      },
+      "rasterTreatment": "reviewed-black-matte-white",
+      "matteReview": {
+        "kind": "reviewed-flat-black-canvas",
+        "reviewed": true,
+        "background": "#000000",
+        "noBlackForegroundArtwork": true,
+        "sourceSha256": "efcc94bfeb48a13327304ade2540cf670ae301789e4076b8dbb7fddedf51a5b8",
+        "reviewedAt": "2026-10-21T13:22:52.012891Z"
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/original-public-dubicars-20261021.jpg",
+        "sha256": "efcc94bfeb48a13327304ade2540cf670ae301789e4076b8dbb7fddedf51a5b8",
+        "retainedSource": {
+          "kind": "retained-original-raster",
+          "sha256": "efcc94bfeb48a13327304ade2540cf670ae301789e4076b8dbb7fddedf51a5b8",
+          "url": "https://d2souf30ck18jq.cloudfront.net/address-motors/logo-18f1ac0c-7dcf-4c4f-86a1-9f33314c176d.jpeg",
+          "observedAt": "2026-10-21T13:11:48.376266Z"
+        },
+        "rasterTreatment": "reviewed-black-matte-black",
+        "matteReview": {
+          "kind": "reviewed-flat-black-canvas",
+          "reviewed": true,
+          "background": "#000000",
+          "noBlackForegroundArtwork": true,
+          "sourceSha256": "efcc94bfeb48a13327304ade2540cf670ae301789e4076b8dbb7fddedf51a5b8",
+          "reviewedAt": "2026-10-21T13:22:52.012891Z"
+        }
+      },
+      "onDark": {
+        "path": "branding/original-public-dubicars-20261021.jpg",
+        "sha256": "efcc94bfeb48a13327304ade2540cf670ae301789e4076b8dbb7fddedf51a5b8",
+        "retainedSource": {
+          "kind": "retained-original-raster",
+          "sha256": "efcc94bfeb48a13327304ade2540cf670ae301789e4076b8dbb7fddedf51a5b8",
+          "url": "https://d2souf30ck18jq.cloudfront.net/address-motors/logo-18f1ac0c-7dcf-4c4f-86a1-9f33314c176d.jpeg",
+          "observedAt": "2026-10-21T13:11:48.376266Z"
+        },
+        "rasterTreatment": "reviewed-black-matte-white",
+        "matteReview": {
+          "kind": "reviewed-flat-black-canvas",
+          "reviewed": true,
+          "background": "#000000",
+          "noBlackForegroundArtwork": true,
+          "sourceSha256": "efcc94bfeb48a13327304ade2540cf670ae301789e4076b8dbb7fddedf51a5b8",
+          "reviewedAt": "2026-10-21T13:22:52.012891Z"
+        }
+      },
+      "onAccent": {
+        "path": "branding/original-public-dubicars-20261021.jpg",
+        "sha256": "efcc94bfeb48a13327304ade2540cf670ae301789e4076b8dbb7fddedf51a5b8",
+        "retainedSource": {
+          "kind": "retained-original-raster",
+          "sha256": "efcc94bfeb48a13327304ade2540cf670ae301789e4076b8dbb7fddedf51a5b8",
+          "url": "https://d2souf30ck18jq.cloudfront.net/address-motors/logo-18f1ac0c-7dcf-4c4f-86a1-9f33314c176d.jpeg",
+          "observedAt": "2026-10-21T13:11:48.376266Z"
+        },
+        "rasterTreatment": "reviewed-black-matte-white",
+        "matteReview": {
+          "kind": "reviewed-flat-black-canvas",
+          "reviewed": true,
+          "background": "#000000",
+          "noBlackForegroundArtwork": true,
+          "sourceSha256": "efcc94bfeb48a13327304ade2540cf670ae301789e4076b8dbb7fddedf51a5b8",
+          "reviewedAt": "2026-10-21T13:22:52.012891Z"
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "kind": "agent-public-original-visual-review",
+      "humanReview": false,
+      "dealerApproval": false,
+      "notes": "Inspected exact public original. ADDRESS MOTORS wordmark and red/white location-and-car mark lie on a flat black canvas; black areas are background and counterspace, including the map-pin aperture, with no black foreground artwork. Original byte file retained. Only maintained exact reviewed-black-matte membership and monochrome exports are requested; no redraw, added lettering or generated artwork.",
+      "derivedExportReview": {
+        "reviewedAt": "2026-10-21T13:25:22.910633Z",
+        "kind": "agent-visual-review",
+        "humanReview": false,
+        "dealerApproval": false,
+        "sizesPx": [
+          24,
+          32,
+          64
+        ],
+        "backgrounds": [
+          "#ffffff",
+          "#111113",
+          "#101820",
+          "#09090b",
+          "#17191c",
+          "#c40101"
+        ],
+        "notes": "Inspected actual maintained exports against the retained original. The map-pin/car silhouette is retained; the small ADDRESS MOTORS lettering and original JPEG edge noise limit small-size readability. Native page-render and logo gates remain required; no geometry cleanup was performed."
+      }
+    }
+  }
 }

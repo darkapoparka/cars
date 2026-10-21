@@ -3,13 +3,13 @@
   "type": "cars-dealer-pack-draft",
   "slug": "ash-motors",
   "dealerId": "ae-dubai-ash-motors",
-  "status": "draft",
-  "buildReady": false,
+  "status": "input-reviewed",
+  "buildReady": true,
   "providerWrites": 0,
   "createdAt": "2026-10-20T22:45:27.279Z",
-  "inventoryKind": "illustrative-not-dealer-stock",
+  "inventoryKind": "dated-listing-snapshot",
   "inventoryRecords": 3,
-  "logoReady": false,
+  "logoReady": true,
   "missingFacts": [
     {
       "field": "business.address",
@@ -50,11 +50,18 @@
     "flags": [],
     "blocking": []
   },
-  "blocking": [
-    "branding.reviewed-assets",
-    "automated-input-review"
-  ],
-  "stockAcquisition": "maintained-disclosed-demo",
-  "liveListingFetchPerformed": false,
-  "next": "Retain public listing snapshots with --stock/--media-root when available; review source artwork, prepare the logo, then run dealer-pack review. Automated input review does not imply human, dealer or hosted approval."
+  "blocking": [],
+  "stockAcquisition": "explicit-retained-public-snapshot",
+  "liveListingFetchPerformed": true,
+  "next": "Ready for the existing source publication and native build pipeline after the maintained black-canvas tool is published. Input review and deterministic logo byte checks passed; native and hosted approvals remain required.",
+  "sourceResearchCompletedAt": "2026-10-21T13:22:52.012891Z",
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "inputCheck": {
+    "success": true,
+    "checkedAt": "2026-10-21T13:26:04.858Z",
+    "regeneratedExports": 17,
+    "providerWrites": 0,
+    "imageGenerationPerformed": false
+  }
 }

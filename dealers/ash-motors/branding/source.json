@@ -1,16 +1,193 @@
 {
   "schemaVersion": 1,
   "dealer": "ash-motors",
-  "status": "research-required",
+  "status": "reviewed-public-original",
   "realLogoFirst": true,
   "publicSources": [
     {
       "url": "https://www.dubicars.com/dealers/dubai-ash-motors-2643",
-      "observedAt": "2026-10-18"
+      "finalUrl": "https://www.dubicars.com/dealers/dubai-ash-motors-2643",
+      "httpStatus": 200,
+      "observedAt": "2026-10-21T13:10:51.253747Z",
+      "sha256": "b54671ba6df16159f9ea5144523741e3c1c881e56f5c8f544b9780456a326396",
+      "bytes": 511805,
+      "supports": [
+        "exact-published-dealer-identity",
+        "Dubai",
+        "seller-account-binding",
+        "published-original-logo"
+      ]
+    },
+    {
+      "url": "https://d2souf30ck18jq.cloudfront.net/ash-motors/logo-e1460940-1d49-48ff-8e5b-dc0c5c701169.png",
+      "finalUrl": "https://d2souf30ck18jq.cloudfront.net/ash-motors/logo-e1460940-1d49-48ff-8e5b-dc0c5c701169.png",
+      "httpStatus": 200,
+      "observedAt": "2026-10-21T13:11:48.801823Z",
+      "sha256": "ac5209ea2bf6dc7e1740c48981fd21a3c1e63db636c9bf6bedf9d58149d1f5be",
+      "bytes": 133112,
+      "supports": [
+        "exact-published-original-logo"
+      ]
     }
   ],
-  "originals": [],
-  "creationMethod": null,
+  "originals": [
+    {
+      "path": "branding/original-public-dubicars-20261021.png",
+      "sha256": "ac5209ea2bf6dc7e1740c48981fd21a3c1e63db636c9bf6bedf9d58149d1f5be",
+      "url": "https://d2souf30ck18jq.cloudfront.net/ash-motors/logo-e1460940-1d49-48ff-8e5b-dc0c5c701169.png",
+      "observedAt": "2026-10-21T13:11:48.801823Z"
+    }
+  ],
+  "creationMethod": "retained-public-raster-reviewed-black-canvas-monochrome",
   "dealerApproved": false,
-  "generatedInputs": null
+  "sourceIdentity": {
+    "profileUrl": "https://www.dubicars.com/dealers/dubai-ash-motors-2643",
+    "binding": "The retained exact dealer profile publishes this logo; the stock detail pages bind the same seller organization."
+  },
+  "reviewedInputs": {
+    "reviewedAt": "2026-10-21T13:22:52.012891Z",
+    "master": {
+      "path": "branding/original-public-dubicars-20261021.png",
+      "sha256": "ac5209ea2bf6dc7e1740c48981fd21a3c1e63db636c9bf6bedf9d58149d1f5be",
+      "retainedSource": {
+        "kind": "retained-original-raster",
+        "sha256": "ac5209ea2bf6dc7e1740c48981fd21a3c1e63db636c9bf6bedf9d58149d1f5be",
+        "url": "https://d2souf30ck18jq.cloudfront.net/ash-motors/logo-e1460940-1d49-48ff-8e5b-dc0c5c701169.png",
+        "observedAt": "2026-10-21T13:11:48.801823Z"
+      },
+      "rasterTreatment": "reviewed-black-matte-black",
+      "matteReview": {
+        "kind": "reviewed-flat-black-canvas",
+        "reviewed": true,
+        "background": "#000000",
+        "noBlackForegroundArtwork": true,
+        "sourceSha256": "ac5209ea2bf6dc7e1740c48981fd21a3c1e63db636c9bf6bedf9d58149d1f5be",
+        "reviewedAt": "2026-10-21T13:22:52.012891Z"
+      }
+    },
+    "mark": {
+      "path": "branding/original-public-dubicars-20261021.png",
+      "sha256": "ac5209ea2bf6dc7e1740c48981fd21a3c1e63db636c9bf6bedf9d58149d1f5be",
+      "retainedSource": {
+        "kind": "retained-original-raster",
+        "sha256": "ac5209ea2bf6dc7e1740c48981fd21a3c1e63db636c9bf6bedf9d58149d1f5be",
+        "url": "https://d2souf30ck18jq.cloudfront.net/ash-motors/logo-e1460940-1d49-48ff-8e5b-dc0c5c701169.png",
+        "observedAt": "2026-10-21T13:11:48.801823Z"
+      },
+      "rasterTreatment": "reviewed-black-matte-black",
+      "matteReview": {
+        "kind": "reviewed-flat-black-canvas",
+        "reviewed": true,
+        "background": "#000000",
+        "noBlackForegroundArtwork": true,
+        "sourceSha256": "ac5209ea2bf6dc7e1740c48981fd21a3c1e63db636c9bf6bedf9d58149d1f5be",
+        "reviewedAt": "2026-10-21T13:22:52.012891Z"
+      }
+    },
+    "markOnDark": {
+      "path": "branding/original-public-dubicars-20261021.png",
+      "sha256": "ac5209ea2bf6dc7e1740c48981fd21a3c1e63db636c9bf6bedf9d58149d1f5be",
+      "retainedSource": {
+        "kind": "retained-original-raster",
+        "sha256": "ac5209ea2bf6dc7e1740c48981fd21a3c1e63db636c9bf6bedf9d58149d1f5be",
+        "url": "https://d2souf30ck18jq.cloudfront.net/ash-motors/logo-e1460940-1d49-48ff-8e5b-dc0c5c701169.png",
+        "observedAt": "2026-10-21T13:11:48.801823Z"
+      },
+      "rasterTreatment": "reviewed-black-matte-white",
+      "matteReview": {
+        "kind": "reviewed-flat-black-canvas",
+        "reviewed": true,
+        "background": "#000000",
+        "noBlackForegroundArtwork": true,
+        "sourceSha256": "ac5209ea2bf6dc7e1740c48981fd21a3c1e63db636c9bf6bedf9d58149d1f5be",
+        "reviewedAt": "2026-10-21T13:22:52.012891Z"
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/original-public-dubicars-20261021.png",
+        "sha256": "ac5209ea2bf6dc7e1740c48981fd21a3c1e63db636c9bf6bedf9d58149d1f5be",
+        "retainedSource": {
+          "kind": "retained-original-raster",
+          "sha256": "ac5209ea2bf6dc7e1740c48981fd21a3c1e63db636c9bf6bedf9d58149d1f5be",
+          "url": "https://d2souf30ck18jq.cloudfront.net/ash-motors/logo-e1460940-1d49-48ff-8e5b-dc0c5c701169.png",
+          "observedAt": "2026-10-21T13:11:48.801823Z"
+        },
+        "rasterTreatment": "reviewed-black-matte-black",
+        "matteReview": {
+          "kind": "reviewed-flat-black-canvas",
+          "reviewed": true,
+          "background": "#000000",
+          "noBlackForegroundArtwork": true,
+          "sourceSha256": "ac5209ea2bf6dc7e1740c48981fd21a3c1e63db636c9bf6bedf9d58149d1f5be",
+          "reviewedAt": "2026-10-21T13:22:52.012891Z"
+        }
+      },
+      "onDark": {
+        "path": "branding/original-public-dubicars-20261021.png",
+        "sha256": "ac5209ea2bf6dc7e1740c48981fd21a3c1e63db636c9bf6bedf9d58149d1f5be",
+        "retainedSource": {
+          "kind": "retained-original-raster",
+          "sha256": "ac5209ea2bf6dc7e1740c48981fd21a3c1e63db636c9bf6bedf9d58149d1f5be",
+          "url": "https://d2souf30ck18jq.cloudfront.net/ash-motors/logo-e1460940-1d49-48ff-8e5b-dc0c5c701169.png",
+          "observedAt": "2026-10-21T13:11:48.801823Z"
+        },
+        "rasterTreatment": "reviewed-black-matte-white",
+        "matteReview": {
+          "kind": "reviewed-flat-black-canvas",
+          "reviewed": true,
+          "background": "#000000",
+          "noBlackForegroundArtwork": true,
+          "sourceSha256": "ac5209ea2bf6dc7e1740c48981fd21a3c1e63db636c9bf6bedf9d58149d1f5be",
+          "reviewedAt": "2026-10-21T13:22:52.012891Z"
+        }
+      },
+      "onAccent": {
+        "path": "branding/original-public-dubicars-20261021.png",
+        "sha256": "ac5209ea2bf6dc7e1740c48981fd21a3c1e63db636c9bf6bedf9d58149d1f5be",
+        "retainedSource": {
+          "kind": "retained-original-raster",
+          "sha256": "ac5209ea2bf6dc7e1740c48981fd21a3c1e63db636c9bf6bedf9d58149d1f5be",
+          "url": "https://d2souf30ck18jq.cloudfront.net/ash-motors/logo-e1460940-1d49-48ff-8e5b-dc0c5c701169.png",
+          "observedAt": "2026-10-21T13:11:48.801823Z"
+        },
+        "rasterTreatment": "reviewed-black-matte-white",
+        "matteReview": {
+          "kind": "reviewed-flat-black-canvas",
+          "reviewed": true,
+          "background": "#000000",
+          "noBlackForegroundArtwork": true,
+          "sourceSha256": "ac5209ea2bf6dc7e1740c48981fd21a3c1e63db636c9bf6bedf9d58149d1f5be",
+          "reviewedAt": "2026-10-21T13:22:52.012891Z"
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "kind": "agent-public-original-visual-review",
+      "humanReview": false,
+      "dealerApproval": false,
+      "notes": "Inspected exact public original. ASH MOTORS wordmark and coloured stripes lie on a flat black canvas; black areas are background and counterspace, with no black foreground artwork. Original byte file retained. Only maintained exact reviewed-black-matte membership and monochrome exports are requested; no redraw, added lettering or generated artwork.",
+      "derivedExportReview": {
+        "reviewedAt": "2026-10-21T13:25:22.910176Z",
+        "kind": "agent-visual-review",
+        "humanReview": false,
+        "dealerApproval": false,
+        "sizesPx": [
+          24,
+          32,
+          64
+        ],
+        "backgrounds": [
+          "#ffffff",
+          "#111113",
+          "#101820",
+          "#09090b",
+          "#17191c",
+          "#c40101"
+        ],
+        "notes": "Inspected actual maintained exports against the retained original. ASH wordmark, stripes and counterspace remain legible on the listed surfaces."
+      }
+    }
+  }
 }

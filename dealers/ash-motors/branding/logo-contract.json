@@ -1,0 +1,469 @@
+{
+  "schemaVersion": 1,
+  "dealer": "ash-motors",
+  "reviewed": true,
+  "reviewedAt": "2026-10-21T13:22:52.012891Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "retained-public-raster-reviewed-black-canvas-monochrome",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "5e42621c5f8ff31227767db8b498f94934bfa16532a2306d1dd932d890b8f1d3",
+      "sourceSha256": "481fe04a5c68a13ca7ae4810e578724292db98460f520b27c04635c54d5d902a"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "2690ecb79019b4d0c65ec582901e94d4a72fa92b58b6ccdb2f237592bf1361b8",
+      "sourceSha256": "064bcabf92877b9c5f1b4ec89501d94ccfbfdbdd9f850ae3a99792cf45c1f09c"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "2690ecb79019b4d0c65ec582901e94d4a72fa92b58b6ccdb2f237592bf1361b8",
+      "sourceSha256": "064bcabf92877b9c5f1b4ec89501d94ccfbfdbdd9f850ae3a99792cf45c1f09c"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "481fe04a5c68a13ca7ae4810e578724292db98460f520b27c04635c54d5d902a",
+    "retainedSource": {
+      "kind": "retained-reviewed-raster",
+      "reference": "dealers/ash-motors/branding/original-public-dubicars-20261021.png",
+      "sha256": "ac5209ea2bf6dc7e1740c48981fd21a3c1e63db636c9bf6bedf9d58149d1f5be",
+      "reviewReference": "dealers/ash-motors/branding/source.json",
+      "reviewSha256": "51543b39c7e6bc58bb0183ca03b73ea14211dfeb4d80a5d809d5d9a56f09316f",
+      "sourceUrl": "https://d2souf30ck18jq.cloudfront.net/ash-motors/logo-e1460940-1d49-48ff-8e5b-dc0c5c701169.png",
+      "observedAt": "2026-10-21T13:11:48.801823Z",
+      "exportTreatment": {
+        "kind": "reviewed-black-matte-solid-ink-v1",
+        "ink": "solid-black",
+        "sourceSha256": "ac5209ea2bf6dc7e1740c48981fd21a3c1e63db636c9bf6bedf9d58149d1f5be",
+        "background": "#000000",
+        "derivedTransparency": true,
+        "originalAlphaPreserved": false,
+        "matteReviewSha256": "d59b7cc481c2494e9e8c2d0810a7e7b23f8fa5a5a51cd6c6567f13ae4e61bf2c",
+        "newGeometry": false
+      }
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "2deaf8ca54a615269d3dea5aa3cd64d062c9714d17f2ab5daf1dc2cdaff91cef",
+    "retainedSource": {
+      "kind": "retained-reviewed-raster",
+      "reference": "dealers/ash-motors/branding/original-public-dubicars-20261021.png",
+      "sha256": "ac5209ea2bf6dc7e1740c48981fd21a3c1e63db636c9bf6bedf9d58149d1f5be",
+      "reviewReference": "dealers/ash-motors/branding/source.json",
+      "reviewSha256": "51543b39c7e6bc58bb0183ca03b73ea14211dfeb4d80a5d809d5d9a56f09316f",
+      "sourceUrl": "https://d2souf30ck18jq.cloudfront.net/ash-motors/logo-e1460940-1d49-48ff-8e5b-dc0c5c701169.png",
+      "observedAt": "2026-10-21T13:11:48.801823Z",
+      "exportTreatment": {
+        "kind": "reviewed-black-matte-solid-ink-v1",
+        "ink": "solid-black",
+        "sourceSha256": "ac5209ea2bf6dc7e1740c48981fd21a3c1e63db636c9bf6bedf9d58149d1f5be",
+        "background": "#000000",
+        "derivedTransparency": true,
+        "originalAlphaPreserved": false,
+        "matteReviewSha256": "d59b7cc481c2494e9e8c2d0810a7e7b23f8fa5a5a51cd6c6567f13ae4e61bf2c",
+        "newGeometry": false
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "e4e6d0826510257f3a24f99a6473bb65e2c57739af668ea728262f43b6d8e45b"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "481fe04a5c68a13ca7ae4810e578724292db98460f520b27c04635c54d5d902a",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "dealers/ash-motors/branding/original-public-dubicars-20261021.png",
+        "sha256": "ac5209ea2bf6dc7e1740c48981fd21a3c1e63db636c9bf6bedf9d58149d1f5be",
+        "reviewReference": "dealers/ash-motors/branding/source.json",
+        "reviewSha256": "51543b39c7e6bc58bb0183ca03b73ea14211dfeb4d80a5d809d5d9a56f09316f",
+        "sourceUrl": "https://d2souf30ck18jq.cloudfront.net/ash-motors/logo-e1460940-1d49-48ff-8e5b-dc0c5c701169.png",
+        "observedAt": "2026-10-21T13:11:48.801823Z",
+        "exportTreatment": {
+          "kind": "reviewed-black-matte-solid-ink-v1",
+          "ink": "solid-black",
+          "sourceSha256": "ac5209ea2bf6dc7e1740c48981fd21a3c1e63db636c9bf6bedf9d58149d1f5be",
+          "background": "#000000",
+          "derivedTransparency": true,
+          "originalAlphaPreserved": false,
+          "matteReviewSha256": "d59b7cc481c2494e9e8c2d0810a7e7b23f8fa5a5a51cd6c6567f13ae4e61bf2c",
+          "newGeometry": false
+        }
+      },
+      "sourceReference": "dealers/ash-motors/branding/original-public-dubicars-20261021.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "064bcabf92877b9c5f1b4ec89501d94ccfbfdbdd9f850ae3a99792cf45c1f09c",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "dealers/ash-motors/branding/original-public-dubicars-20261021.png",
+        "sha256": "ac5209ea2bf6dc7e1740c48981fd21a3c1e63db636c9bf6bedf9d58149d1f5be",
+        "reviewReference": "dealers/ash-motors/branding/source.json",
+        "reviewSha256": "51543b39c7e6bc58bb0183ca03b73ea14211dfeb4d80a5d809d5d9a56f09316f",
+        "sourceUrl": "https://d2souf30ck18jq.cloudfront.net/ash-motors/logo-e1460940-1d49-48ff-8e5b-dc0c5c701169.png",
+        "observedAt": "2026-10-21T13:11:48.801823Z",
+        "exportTreatment": {
+          "kind": "reviewed-black-matte-solid-ink-v1",
+          "ink": "solid-white",
+          "sourceSha256": "ac5209ea2bf6dc7e1740c48981fd21a3c1e63db636c9bf6bedf9d58149d1f5be",
+          "background": "#000000",
+          "derivedTransparency": true,
+          "originalAlphaPreserved": false,
+          "matteReviewSha256": "d59b7cc481c2494e9e8c2d0810a7e7b23f8fa5a5a51cd6c6567f13ae4e61bf2c",
+          "newGeometry": false
+        }
+      },
+      "sourceReference": "dealers/ash-motors/branding/original-public-dubicars-20261021.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "064bcabf92877b9c5f1b4ec89501d94ccfbfdbdd9f850ae3a99792cf45c1f09c",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "dealers/ash-motors/branding/original-public-dubicars-20261021.png",
+        "sha256": "ac5209ea2bf6dc7e1740c48981fd21a3c1e63db636c9bf6bedf9d58149d1f5be",
+        "reviewReference": "dealers/ash-motors/branding/source.json",
+        "reviewSha256": "51543b39c7e6bc58bb0183ca03b73ea14211dfeb4d80a5d809d5d9a56f09316f",
+        "sourceUrl": "https://d2souf30ck18jq.cloudfront.net/ash-motors/logo-e1460940-1d49-48ff-8e5b-dc0c5c701169.png",
+        "observedAt": "2026-10-21T13:11:48.801823Z",
+        "exportTreatment": {
+          "kind": "reviewed-black-matte-solid-ink-v1",
+          "ink": "solid-white",
+          "sourceSha256": "ac5209ea2bf6dc7e1740c48981fd21a3c1e63db636c9bf6bedf9d58149d1f5be",
+          "background": "#000000",
+          "derivedTransparency": true,
+          "originalAlphaPreserved": false,
+          "matteReviewSha256": "d59b7cc481c2494e9e8c2d0810a7e7b23f8fa5a5a51cd6c6567f13ae4e61bf2c",
+          "newGeometry": false
+        }
+      },
+      "sourceReference": "dealers/ash-motors/branding/original-public-dubicars-20261021.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "reviewed-black-matte-crop-and-resize",
+      "sourceSha256": "ac5209ea2bf6dc7e1740c48981fd21a3c1e63db636c9bf6bedf9d58149d1f5be",
+      "sha256": "481fe04a5c68a13ca7ae4810e578724292db98460f520b27c04635c54d5d902a",
+      "crop": {
+        "left": 24,
+        "top": 79,
+        "width": 538,
+        "height": 148
+      },
+      "rasterTreatment": {
+        "kind": "reviewed-black-matte-solid-ink-v1",
+        "ink": "solid-black",
+        "background": "#000000",
+        "blackNoiseCeiling": 5,
+        "alphaRule": "preserve original opaque foreground alpha; only source pixels within five RGB levels of black become transparent",
+        "originalAlphaUnchangedBeforeCropAndResize": false,
+        "originalWasFullyOpaque": true,
+        "derivedTransparency": true,
+        "originalWidth": 600,
+        "originalHeight": 300,
+        "blackCanvasPixels": 158603,
+        "borderBlackFraction": 1,
+        "derivedPixelSha256": "84baa407fb177989888e8b0bfd4872406978204ae0efd171b983dbe2de04f17f",
+        "newGeometry": false
+      },
+      "sourcePath": "branding/original-public-dubicars-20261021.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "reviewed-black-matte-crop-and-resize",
+      "sourceSha256": "ac5209ea2bf6dc7e1740c48981fd21a3c1e63db636c9bf6bedf9d58149d1f5be",
+      "sha256": "064bcabf92877b9c5f1b4ec89501d94ccfbfdbdd9f850ae3a99792cf45c1f09c",
+      "crop": {
+        "left": 24,
+        "top": 79,
+        "width": 538,
+        "height": 148
+      },
+      "rasterTreatment": {
+        "kind": "reviewed-black-matte-solid-ink-v1",
+        "ink": "solid-white",
+        "background": "#000000",
+        "blackNoiseCeiling": 5,
+        "alphaRule": "preserve original opaque foreground alpha; only source pixels within five RGB levels of black become transparent",
+        "originalAlphaUnchangedBeforeCropAndResize": false,
+        "originalWasFullyOpaque": true,
+        "derivedTransparency": true,
+        "originalWidth": 600,
+        "originalHeight": 300,
+        "blackCanvasPixels": 158603,
+        "borderBlackFraction": 1,
+        "derivedPixelSha256": "5fccdfa5e3dd346c1947d7b0f877fabd040cef5b2c3d85464de4556c9843f0e8",
+        "newGeometry": false
+      },
+      "sourcePath": "branding/original-public-dubicars-20261021.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "reviewed-black-matte-crop-and-resize",
+      "sourceSha256": "ac5209ea2bf6dc7e1740c48981fd21a3c1e63db636c9bf6bedf9d58149d1f5be",
+      "sha256": "064bcabf92877b9c5f1b4ec89501d94ccfbfdbdd9f850ae3a99792cf45c1f09c",
+      "crop": {
+        "left": 24,
+        "top": 79,
+        "width": 538,
+        "height": 148
+      },
+      "rasterTreatment": {
+        "kind": "reviewed-black-matte-solid-ink-v1",
+        "ink": "solid-white",
+        "background": "#000000",
+        "blackNoiseCeiling": 5,
+        "alphaRule": "preserve original opaque foreground alpha; only source pixels within five RGB levels of black become transparent",
+        "originalAlphaUnchangedBeforeCropAndResize": false,
+        "originalWasFullyOpaque": true,
+        "derivedTransparency": true,
+        "originalWidth": 600,
+        "originalHeight": 300,
+        "blackCanvasPixels": 158603,
+        "borderBlackFraction": 1,
+        "derivedPixelSha256": "5fccdfa5e3dd346c1947d7b0f877fabd040cef5b2c3d85464de4556c9843f0e8",
+        "newGeometry": false
+      },
+      "sourcePath": "branding/original-public-dubicars-20261021.png",
+      "outputPath": "branding/logo-on-accent.png"
+    },
+    "master": {
+      "operation": "reviewed-black-matte-crop-and-resize",
+      "sourceSha256": "ac5209ea2bf6dc7e1740c48981fd21a3c1e63db636c9bf6bedf9d58149d1f5be",
+      "sha256": "481fe04a5c68a13ca7ae4810e578724292db98460f520b27c04635c54d5d902a",
+      "crop": {
+        "left": 24,
+        "top": 79,
+        "width": 538,
+        "height": 148
+      },
+      "rasterTreatment": {
+        "kind": "reviewed-black-matte-solid-ink-v1",
+        "ink": "solid-black",
+        "background": "#000000",
+        "blackNoiseCeiling": 5,
+        "alphaRule": "preserve original opaque foreground alpha; only source pixels within five RGB levels of black become transparent",
+        "originalAlphaUnchangedBeforeCropAndResize": false,
+        "originalWasFullyOpaque": true,
+        "derivedTransparency": true,
+        "originalWidth": 600,
+        "originalHeight": 300,
+        "blackCanvasPixels": 158603,
+        "borderBlackFraction": 1,
+        "derivedPixelSha256": "84baa407fb177989888e8b0bfd4872406978204ae0efd171b983dbe2de04f17f",
+        "newGeometry": false
+      },
+      "sourcePath": "branding/original-public-dubicars-20261021.png"
+    },
+    "mark": {
+      "operation": "reviewed-black-matte-crop-and-resize",
+      "sourceSha256": "ac5209ea2bf6dc7e1740c48981fd21a3c1e63db636c9bf6bedf9d58149d1f5be",
+      "sha256": "2deaf8ca54a615269d3dea5aa3cd64d062c9714d17f2ab5daf1dc2cdaff91cef",
+      "crop": {
+        "left": 24,
+        "top": 79,
+        "width": 538,
+        "height": 148
+      },
+      "rasterTreatment": {
+        "kind": "reviewed-black-matte-solid-ink-v1",
+        "ink": "solid-black",
+        "background": "#000000",
+        "blackNoiseCeiling": 5,
+        "alphaRule": "preserve original opaque foreground alpha; only source pixels within five RGB levels of black become transparent",
+        "originalAlphaUnchangedBeforeCropAndResize": false,
+        "originalWasFullyOpaque": true,
+        "derivedTransparency": true,
+        "originalWidth": 600,
+        "originalHeight": 300,
+        "blackCanvasPixels": 158603,
+        "borderBlackFraction": 1,
+        "derivedPixelSha256": "84baa407fb177989888e8b0bfd4872406978204ae0efd171b983dbe2de04f17f",
+        "newGeometry": false
+      },
+      "sourcePath": "branding/original-public-dubicars-20261021.png"
+    },
+    "markOnDark": {
+      "operation": "reviewed-black-matte-crop-and-resize",
+      "sourceSha256": "ac5209ea2bf6dc7e1740c48981fd21a3c1e63db636c9bf6bedf9d58149d1f5be",
+      "sha256": "c63d14811b3f747bf0414733c5ed050c79444e89e9b206c0ce147fe9afbfb92e",
+      "crop": {
+        "left": 24,
+        "top": 79,
+        "width": 538,
+        "height": 148
+      },
+      "rasterTreatment": {
+        "kind": "reviewed-black-matte-solid-ink-v1",
+        "ink": "solid-white",
+        "background": "#000000",
+        "blackNoiseCeiling": 5,
+        "alphaRule": "preserve original opaque foreground alpha; only source pixels within five RGB levels of black become transparent",
+        "originalAlphaUnchangedBeforeCropAndResize": false,
+        "originalWasFullyOpaque": true,
+        "derivedTransparency": true,
+        "originalWidth": 600,
+        "originalHeight": 300,
+        "blackCanvasPixels": 158603,
+        "borderBlackFraction": 1,
+        "derivedPixelSha256": "5fccdfa5e3dd346c1947d7b0f877fabd040cef5b2c3d85464de4556c9843f0e8",
+        "newGeometry": false
+      },
+      "sourcePath": "branding/original-public-dubicars-20261021.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "c7f86ffb692ce99a88b01842d37d0664c771f6c3d9e2b0d94681fbe2a1b5a18d",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "dealers/ash-motors/branding/original-public-dubicars-20261021.png",
+        "sha256": "ac5209ea2bf6dc7e1740c48981fd21a3c1e63db636c9bf6bedf9d58149d1f5be",
+        "reviewReference": "dealers/ash-motors/branding/source.json",
+        "reviewSha256": "51543b39c7e6bc58bb0183ca03b73ea14211dfeb4d80a5d809d5d9a56f09316f",
+        "sourceUrl": "https://d2souf30ck18jq.cloudfront.net/ash-motors/logo-e1460940-1d49-48ff-8e5b-dc0c5c701169.png",
+        "observedAt": "2026-10-21T13:11:48.801823Z",
+        "exportTreatment": {
+          "kind": "reviewed-black-matte-solid-ink-v1",
+          "ink": "solid-black",
+          "sourceSha256": "ac5209ea2bf6dc7e1740c48981fd21a3c1e63db636c9bf6bedf9d58149d1f5be",
+          "background": "#000000",
+          "derivedTransparency": true,
+          "originalAlphaPreserved": false,
+          "matteReviewSha256": "d59b7cc481c2494e9e8c2d0810a7e7b23f8fa5a5a51cd6c6567f13ae4e61bf2c",
+          "newGeometry": false
+        }
+      },
+      "sourceReference": "dealers/ash-motors/branding/original-public-dubicars-20261021.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "14cf4d9b12ea9c23a351c71110536de1b76f10f0d666dd1d729b6705cee91f0b",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "dealers/ash-motors/branding/original-public-dubicars-20261021.png",
+        "sha256": "ac5209ea2bf6dc7e1740c48981fd21a3c1e63db636c9bf6bedf9d58149d1f5be",
+        "reviewReference": "dealers/ash-motors/branding/source.json",
+        "reviewSha256": "51543b39c7e6bc58bb0183ca03b73ea14211dfeb4d80a5d809d5d9a56f09316f",
+        "sourceUrl": "https://d2souf30ck18jq.cloudfront.net/ash-motors/logo-e1460940-1d49-48ff-8e5b-dc0c5c701169.png",
+        "observedAt": "2026-10-21T13:11:48.801823Z",
+        "exportTreatment": {
+          "kind": "reviewed-black-matte-solid-ink-v1",
+          "ink": "solid-white",
+          "sourceSha256": "ac5209ea2bf6dc7e1740c48981fd21a3c1e63db636c9bf6bedf9d58149d1f5be",
+          "background": "#000000",
+          "derivedTransparency": true,
+          "originalAlphaPreserved": false,
+          "matteReviewSha256": "d59b7cc481c2494e9e8c2d0810a7e7b23f8fa5a5a51cd6c6567f13ae4e61bf2c",
+          "newGeometry": false
+        }
+      },
+      "sourceReference": "dealers/ash-motors/branding/original-public-dubicars-20261021.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "2deaf8ca54a615269d3dea5aa3cd64d062c9714d17f2ab5daf1dc2cdaff91cef",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "dealers/ash-motors/branding/original-public-dubicars-20261021.png",
+        "sha256": "ac5209ea2bf6dc7e1740c48981fd21a3c1e63db636c9bf6bedf9d58149d1f5be",
+        "reviewReference": "dealers/ash-motors/branding/source.json",
+        "reviewSha256": "51543b39c7e6bc58bb0183ca03b73ea14211dfeb4d80a5d809d5d9a56f09316f",
+        "sourceUrl": "https://d2souf30ck18jq.cloudfront.net/ash-motors/logo-e1460940-1d49-48ff-8e5b-dc0c5c701169.png",
+        "observedAt": "2026-10-21T13:11:48.801823Z",
+        "exportTreatment": {
+          "kind": "reviewed-black-matte-solid-ink-v1",
+          "ink": "solid-black",
+          "sourceSha256": "ac5209ea2bf6dc7e1740c48981fd21a3c1e63db636c9bf6bedf9d58149d1f5be",
+          "background": "#000000",
+          "derivedTransparency": true,
+          "originalAlphaPreserved": false,
+          "matteReviewSha256": "d59b7cc481c2494e9e8c2d0810a7e7b23f8fa5a5a51cd6c6567f13ae4e61bf2c",
+          "newGeometry": false
+        }
+      },
+      "sourceReference": "dealers/ash-motors/branding/original-public-dubicars-20261021.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "e4e6d0826510257f3a24f99a6473bb65e2c57739af668ea728262f43b6d8e45b",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "dealers/ash-motors/branding/original-public-dubicars-20261021.png",
+        "sha256": "ac5209ea2bf6dc7e1740c48981fd21a3c1e63db636c9bf6bedf9d58149d1f5be",
+        "reviewReference": "dealers/ash-motors/branding/source.json",
+        "reviewSha256": "51543b39c7e6bc58bb0183ca03b73ea14211dfeb4d80a5d809d5d9a56f09316f",
+        "sourceUrl": "https://d2souf30ck18jq.cloudfront.net/ash-motors/logo-e1460940-1d49-48ff-8e5b-dc0c5c701169.png",
+        "observedAt": "2026-10-21T13:11:48.801823Z",
+        "exportTreatment": {
+          "kind": "reviewed-black-matte-solid-ink-v1",
+          "ink": "solid-black",
+          "sourceSha256": "ac5209ea2bf6dc7e1740c48981fd21a3c1e63db636c9bf6bedf9d58149d1f5be",
+          "background": "#000000",
+          "derivedTransparency": true,
+          "originalAlphaPreserved": false,
+          "matteReviewSha256": "d59b7cc481c2494e9e8c2d0810a7e7b23f8fa5a5a51cd6c6567f13ae4e61bf2c",
+          "newGeometry": false
+        }
+      },
+      "sourceReference": "dealers/ash-motors/branding/original-public-dubicars-20261021.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-21T13:22:52.012891Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "c63d14811b3f747bf0414733c5ed050c79444e89e9b206c0ce147fe9afbfb92e",
+    "retainedSource": {
+      "kind": "retained-reviewed-raster",
+      "reference": "dealers/ash-motors/branding/original-public-dubicars-20261021.png",
+      "sha256": "ac5209ea2bf6dc7e1740c48981fd21a3c1e63db636c9bf6bedf9d58149d1f5be",
+      "reviewReference": "dealers/ash-motors/branding/source.json",
+      "reviewSha256": "51543b39c7e6bc58bb0183ca03b73ea14211dfeb4d80a5d809d5d9a56f09316f",
+      "sourceUrl": "https://d2souf30ck18jq.cloudfront.net/ash-motors/logo-e1460940-1d49-48ff-8e5b-dc0c5c701169.png",
+      "observedAt": "2026-10-21T13:11:48.801823Z",
+      "exportTreatment": {
+        "kind": "reviewed-black-matte-solid-ink-v1",
+        "ink": "solid-white",
+        "sourceSha256": "ac5209ea2bf6dc7e1740c48981fd21a3c1e63db636c9bf6bedf9d58149d1f5be",
+        "background": "#000000",
+        "derivedTransparency": true,
+        "originalAlphaPreserved": false,
+        "matteReviewSha256": "d59b7cc481c2494e9e8c2d0810a7e7b23f8fa5a5a51cd6c6567f13ae4e61bf2c",
+        "newGeometry": false
+      }
+    }
+  }
+}

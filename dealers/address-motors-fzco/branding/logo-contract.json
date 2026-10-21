@@ -1,0 +1,469 @@
+{
+  "schemaVersion": 1,
+  "dealer": "address-motors-fzco",
+  "reviewed": true,
+  "reviewedAt": "2026-10-21T13:22:52.012891Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "retained-public-raster-reviewed-black-canvas-monochrome",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "685c8235db2944827ee6db8c55269a2f82ede437ac5f7bdd6edef0047832563e",
+      "sourceSha256": "1aad5a820e1b5286a7d6b7e391a13a0173dff4e67bae0472212e8b84f0fae7e4"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "b0b0e983d8ca921ceb889b78a1faca1d59fb346744b97c4db26007e3a2cf4cd5",
+      "sourceSha256": "21ed647d66694c0a087a40c444cc9eb6259d161786b95489f6a3806cf425cb6a"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "b0b0e983d8ca921ceb889b78a1faca1d59fb346744b97c4db26007e3a2cf4cd5",
+      "sourceSha256": "21ed647d66694c0a087a40c444cc9eb6259d161786b95489f6a3806cf425cb6a"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "1aad5a820e1b5286a7d6b7e391a13a0173dff4e67bae0472212e8b84f0fae7e4",
+    "retainedSource": {
+      "kind": "retained-reviewed-raster",
+      "reference": "dealers/address-motors-fzco/branding/original-public-dubicars-20261021.jpg",
+      "sha256": "efcc94bfeb48a13327304ade2540cf670ae301789e4076b8dbb7fddedf51a5b8",
+      "reviewReference": "dealers/address-motors-fzco/branding/source.json",
+      "reviewSha256": "e6ae3ca91470ac30d0773b165face8858a824d0d3093f68816a63cb4594ce19a",
+      "sourceUrl": "https://d2souf30ck18jq.cloudfront.net/address-motors/logo-18f1ac0c-7dcf-4c4f-86a1-9f33314c176d.jpeg",
+      "observedAt": "2026-10-21T13:11:48.376266Z",
+      "exportTreatment": {
+        "kind": "reviewed-black-matte-solid-ink-v1",
+        "ink": "solid-black",
+        "sourceSha256": "efcc94bfeb48a13327304ade2540cf670ae301789e4076b8dbb7fddedf51a5b8",
+        "background": "#000000",
+        "derivedTransparency": true,
+        "originalAlphaPreserved": false,
+        "matteReviewSha256": "155477320fc826df0be26a9f5347657c7f7269948730861102ddcd81a5752f37",
+        "newGeometry": false
+      }
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "4f7628da11bad899a4a0de6c56a6aaf64698fb1d8cbf567e2060e114d111c02f",
+    "retainedSource": {
+      "kind": "retained-reviewed-raster",
+      "reference": "dealers/address-motors-fzco/branding/original-public-dubicars-20261021.jpg",
+      "sha256": "efcc94bfeb48a13327304ade2540cf670ae301789e4076b8dbb7fddedf51a5b8",
+      "reviewReference": "dealers/address-motors-fzco/branding/source.json",
+      "reviewSha256": "e6ae3ca91470ac30d0773b165face8858a824d0d3093f68816a63cb4594ce19a",
+      "sourceUrl": "https://d2souf30ck18jq.cloudfront.net/address-motors/logo-18f1ac0c-7dcf-4c4f-86a1-9f33314c176d.jpeg",
+      "observedAt": "2026-10-21T13:11:48.376266Z",
+      "exportTreatment": {
+        "kind": "reviewed-black-matte-solid-ink-v1",
+        "ink": "solid-black",
+        "sourceSha256": "efcc94bfeb48a13327304ade2540cf670ae301789e4076b8dbb7fddedf51a5b8",
+        "background": "#000000",
+        "derivedTransparency": true,
+        "originalAlphaPreserved": false,
+        "matteReviewSha256": "155477320fc826df0be26a9f5347657c7f7269948730861102ddcd81a5752f37",
+        "newGeometry": false
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "e0e4dfaf5eb84a031c2811e34ed1799585abb78a01eb1084dfaebce6613f4bc0"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "1aad5a820e1b5286a7d6b7e391a13a0173dff4e67bae0472212e8b84f0fae7e4",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "dealers/address-motors-fzco/branding/original-public-dubicars-20261021.jpg",
+        "sha256": "efcc94bfeb48a13327304ade2540cf670ae301789e4076b8dbb7fddedf51a5b8",
+        "reviewReference": "dealers/address-motors-fzco/branding/source.json",
+        "reviewSha256": "e6ae3ca91470ac30d0773b165face8858a824d0d3093f68816a63cb4594ce19a",
+        "sourceUrl": "https://d2souf30ck18jq.cloudfront.net/address-motors/logo-18f1ac0c-7dcf-4c4f-86a1-9f33314c176d.jpeg",
+        "observedAt": "2026-10-21T13:11:48.376266Z",
+        "exportTreatment": {
+          "kind": "reviewed-black-matte-solid-ink-v1",
+          "ink": "solid-black",
+          "sourceSha256": "efcc94bfeb48a13327304ade2540cf670ae301789e4076b8dbb7fddedf51a5b8",
+          "background": "#000000",
+          "derivedTransparency": true,
+          "originalAlphaPreserved": false,
+          "matteReviewSha256": "155477320fc826df0be26a9f5347657c7f7269948730861102ddcd81a5752f37",
+          "newGeometry": false
+        }
+      },
+      "sourceReference": "dealers/address-motors-fzco/branding/original-public-dubicars-20261021.jpg"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "21ed647d66694c0a087a40c444cc9eb6259d161786b95489f6a3806cf425cb6a",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "dealers/address-motors-fzco/branding/original-public-dubicars-20261021.jpg",
+        "sha256": "efcc94bfeb48a13327304ade2540cf670ae301789e4076b8dbb7fddedf51a5b8",
+        "reviewReference": "dealers/address-motors-fzco/branding/source.json",
+        "reviewSha256": "e6ae3ca91470ac30d0773b165face8858a824d0d3093f68816a63cb4594ce19a",
+        "sourceUrl": "https://d2souf30ck18jq.cloudfront.net/address-motors/logo-18f1ac0c-7dcf-4c4f-86a1-9f33314c176d.jpeg",
+        "observedAt": "2026-10-21T13:11:48.376266Z",
+        "exportTreatment": {
+          "kind": "reviewed-black-matte-solid-ink-v1",
+          "ink": "solid-white",
+          "sourceSha256": "efcc94bfeb48a13327304ade2540cf670ae301789e4076b8dbb7fddedf51a5b8",
+          "background": "#000000",
+          "derivedTransparency": true,
+          "originalAlphaPreserved": false,
+          "matteReviewSha256": "155477320fc826df0be26a9f5347657c7f7269948730861102ddcd81a5752f37",
+          "newGeometry": false
+        }
+      },
+      "sourceReference": "dealers/address-motors-fzco/branding/original-public-dubicars-20261021.jpg"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "21ed647d66694c0a087a40c444cc9eb6259d161786b95489f6a3806cf425cb6a",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "dealers/address-motors-fzco/branding/original-public-dubicars-20261021.jpg",
+        "sha256": "efcc94bfeb48a13327304ade2540cf670ae301789e4076b8dbb7fddedf51a5b8",
+        "reviewReference": "dealers/address-motors-fzco/branding/source.json",
+        "reviewSha256": "e6ae3ca91470ac30d0773b165face8858a824d0d3093f68816a63cb4594ce19a",
+        "sourceUrl": "https://d2souf30ck18jq.cloudfront.net/address-motors/logo-18f1ac0c-7dcf-4c4f-86a1-9f33314c176d.jpeg",
+        "observedAt": "2026-10-21T13:11:48.376266Z",
+        "exportTreatment": {
+          "kind": "reviewed-black-matte-solid-ink-v1",
+          "ink": "solid-white",
+          "sourceSha256": "efcc94bfeb48a13327304ade2540cf670ae301789e4076b8dbb7fddedf51a5b8",
+          "background": "#000000",
+          "derivedTransparency": true,
+          "originalAlphaPreserved": false,
+          "matteReviewSha256": "155477320fc826df0be26a9f5347657c7f7269948730861102ddcd81a5752f37",
+          "newGeometry": false
+        }
+      },
+      "sourceReference": "dealers/address-motors-fzco/branding/original-public-dubicars-20261021.jpg"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "reviewed-black-matte-crop-and-resize",
+      "sourceSha256": "efcc94bfeb48a13327304ade2540cf670ae301789e4076b8dbb7fddedf51a5b8",
+      "sha256": "1aad5a820e1b5286a7d6b7e391a13a0173dff4e67bae0472212e8b84f0fae7e4",
+      "crop": {
+        "left": 168,
+        "top": 60,
+        "width": 273,
+        "height": 301
+      },
+      "rasterTreatment": {
+        "kind": "reviewed-black-matte-solid-ink-v1",
+        "ink": "solid-black",
+        "background": "#000000",
+        "blackNoiseCeiling": 5,
+        "alphaRule": "preserve original opaque foreground alpha; only source pixels within five RGB levels of black become transparent",
+        "originalAlphaUnchangedBeforeCropAndResize": false,
+        "originalWasFullyOpaque": true,
+        "derivedTransparency": true,
+        "originalWidth": 600,
+        "originalHeight": 399,
+        "blackCanvasPixels": 207034,
+        "borderBlackFraction": 1,
+        "derivedPixelSha256": "9cdeb832848fc27cff6c399963a715886bd8fb505384eee5c5e20ecd95a4b9c6",
+        "newGeometry": false
+      },
+      "sourcePath": "branding/original-public-dubicars-20261021.jpg",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "reviewed-black-matte-crop-and-resize",
+      "sourceSha256": "efcc94bfeb48a13327304ade2540cf670ae301789e4076b8dbb7fddedf51a5b8",
+      "sha256": "21ed647d66694c0a087a40c444cc9eb6259d161786b95489f6a3806cf425cb6a",
+      "crop": {
+        "left": 168,
+        "top": 60,
+        "width": 273,
+        "height": 301
+      },
+      "rasterTreatment": {
+        "kind": "reviewed-black-matte-solid-ink-v1",
+        "ink": "solid-white",
+        "background": "#000000",
+        "blackNoiseCeiling": 5,
+        "alphaRule": "preserve original opaque foreground alpha; only source pixels within five RGB levels of black become transparent",
+        "originalAlphaUnchangedBeforeCropAndResize": false,
+        "originalWasFullyOpaque": true,
+        "derivedTransparency": true,
+        "originalWidth": 600,
+        "originalHeight": 399,
+        "blackCanvasPixels": 207034,
+        "borderBlackFraction": 1,
+        "derivedPixelSha256": "f4d515d6195a0ab135843d8854308317fae96622ad8369d6ae54fad58918e7fd",
+        "newGeometry": false
+      },
+      "sourcePath": "branding/original-public-dubicars-20261021.jpg",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "reviewed-black-matte-crop-and-resize",
+      "sourceSha256": "efcc94bfeb48a13327304ade2540cf670ae301789e4076b8dbb7fddedf51a5b8",
+      "sha256": "21ed647d66694c0a087a40c444cc9eb6259d161786b95489f6a3806cf425cb6a",
+      "crop": {
+        "left": 168,
+        "top": 60,
+        "width": 273,
+        "height": 301
+      },
+      "rasterTreatment": {
+        "kind": "reviewed-black-matte-solid-ink-v1",
+        "ink": "solid-white",
+        "background": "#000000",
+        "blackNoiseCeiling": 5,
+        "alphaRule": "preserve original opaque foreground alpha; only source pixels within five RGB levels of black become transparent",
+        "originalAlphaUnchangedBeforeCropAndResize": false,
+        "originalWasFullyOpaque": true,
+        "derivedTransparency": true,
+        "originalWidth": 600,
+        "originalHeight": 399,
+        "blackCanvasPixels": 207034,
+        "borderBlackFraction": 1,
+        "derivedPixelSha256": "f4d515d6195a0ab135843d8854308317fae96622ad8369d6ae54fad58918e7fd",
+        "newGeometry": false
+      },
+      "sourcePath": "branding/original-public-dubicars-20261021.jpg",
+      "outputPath": "branding/logo-on-accent.png"
+    },
+    "master": {
+      "operation": "reviewed-black-matte-crop-and-resize",
+      "sourceSha256": "efcc94bfeb48a13327304ade2540cf670ae301789e4076b8dbb7fddedf51a5b8",
+      "sha256": "1aad5a820e1b5286a7d6b7e391a13a0173dff4e67bae0472212e8b84f0fae7e4",
+      "crop": {
+        "left": 168,
+        "top": 60,
+        "width": 273,
+        "height": 301
+      },
+      "rasterTreatment": {
+        "kind": "reviewed-black-matte-solid-ink-v1",
+        "ink": "solid-black",
+        "background": "#000000",
+        "blackNoiseCeiling": 5,
+        "alphaRule": "preserve original opaque foreground alpha; only source pixels within five RGB levels of black become transparent",
+        "originalAlphaUnchangedBeforeCropAndResize": false,
+        "originalWasFullyOpaque": true,
+        "derivedTransparency": true,
+        "originalWidth": 600,
+        "originalHeight": 399,
+        "blackCanvasPixels": 207034,
+        "borderBlackFraction": 1,
+        "derivedPixelSha256": "9cdeb832848fc27cff6c399963a715886bd8fb505384eee5c5e20ecd95a4b9c6",
+        "newGeometry": false
+      },
+      "sourcePath": "branding/original-public-dubicars-20261021.jpg"
+    },
+    "mark": {
+      "operation": "reviewed-black-matte-crop-and-resize",
+      "sourceSha256": "efcc94bfeb48a13327304ade2540cf670ae301789e4076b8dbb7fddedf51a5b8",
+      "sha256": "4f7628da11bad899a4a0de6c56a6aaf64698fb1d8cbf567e2060e114d111c02f",
+      "crop": {
+        "left": 168,
+        "top": 60,
+        "width": 273,
+        "height": 301
+      },
+      "rasterTreatment": {
+        "kind": "reviewed-black-matte-solid-ink-v1",
+        "ink": "solid-black",
+        "background": "#000000",
+        "blackNoiseCeiling": 5,
+        "alphaRule": "preserve original opaque foreground alpha; only source pixels within five RGB levels of black become transparent",
+        "originalAlphaUnchangedBeforeCropAndResize": false,
+        "originalWasFullyOpaque": true,
+        "derivedTransparency": true,
+        "originalWidth": 600,
+        "originalHeight": 399,
+        "blackCanvasPixels": 207034,
+        "borderBlackFraction": 1,
+        "derivedPixelSha256": "9cdeb832848fc27cff6c399963a715886bd8fb505384eee5c5e20ecd95a4b9c6",
+        "newGeometry": false
+      },
+      "sourcePath": "branding/original-public-dubicars-20261021.jpg"
+    },
+    "markOnDark": {
+      "operation": "reviewed-black-matte-crop-and-resize",
+      "sourceSha256": "efcc94bfeb48a13327304ade2540cf670ae301789e4076b8dbb7fddedf51a5b8",
+      "sha256": "7b1fdaed48e25a2bb9a1c45e74b414c96f4d01fced94e6da1458eac7954bb860",
+      "crop": {
+        "left": 168,
+        "top": 60,
+        "width": 273,
+        "height": 301
+      },
+      "rasterTreatment": {
+        "kind": "reviewed-black-matte-solid-ink-v1",
+        "ink": "solid-white",
+        "background": "#000000",
+        "blackNoiseCeiling": 5,
+        "alphaRule": "preserve original opaque foreground alpha; only source pixels within five RGB levels of black become transparent",
+        "originalAlphaUnchangedBeforeCropAndResize": false,
+        "originalWasFullyOpaque": true,
+        "derivedTransparency": true,
+        "originalWidth": 600,
+        "originalHeight": 399,
+        "blackCanvasPixels": 207034,
+        "borderBlackFraction": 1,
+        "derivedPixelSha256": "f4d515d6195a0ab135843d8854308317fae96622ad8369d6ae54fad58918e7fd",
+        "newGeometry": false
+      },
+      "sourcePath": "branding/original-public-dubicars-20261021.jpg"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "bd2d3ea4817cd3e146537dd8fb9f3cd3f3ae1e9fe0cc74732db8702dd5a3fdce",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "dealers/address-motors-fzco/branding/original-public-dubicars-20261021.jpg",
+        "sha256": "efcc94bfeb48a13327304ade2540cf670ae301789e4076b8dbb7fddedf51a5b8",
+        "reviewReference": "dealers/address-motors-fzco/branding/source.json",
+        "reviewSha256": "e6ae3ca91470ac30d0773b165face8858a824d0d3093f68816a63cb4594ce19a",
+        "sourceUrl": "https://d2souf30ck18jq.cloudfront.net/address-motors/logo-18f1ac0c-7dcf-4c4f-86a1-9f33314c176d.jpeg",
+        "observedAt": "2026-10-21T13:11:48.376266Z",
+        "exportTreatment": {
+          "kind": "reviewed-black-matte-solid-ink-v1",
+          "ink": "solid-black",
+          "sourceSha256": "efcc94bfeb48a13327304ade2540cf670ae301789e4076b8dbb7fddedf51a5b8",
+          "background": "#000000",
+          "derivedTransparency": true,
+          "originalAlphaPreserved": false,
+          "matteReviewSha256": "155477320fc826df0be26a9f5347657c7f7269948730861102ddcd81a5752f37",
+          "newGeometry": false
+        }
+      },
+      "sourceReference": "dealers/address-motors-fzco/branding/original-public-dubicars-20261021.jpg"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "a80147010dc06df5324a9cacfb987dd45442b5952e5fe84287a7a61a00715f64",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "dealers/address-motors-fzco/branding/original-public-dubicars-20261021.jpg",
+        "sha256": "efcc94bfeb48a13327304ade2540cf670ae301789e4076b8dbb7fddedf51a5b8",
+        "reviewReference": "dealers/address-motors-fzco/branding/source.json",
+        "reviewSha256": "e6ae3ca91470ac30d0773b165face8858a824d0d3093f68816a63cb4594ce19a",
+        "sourceUrl": "https://d2souf30ck18jq.cloudfront.net/address-motors/logo-18f1ac0c-7dcf-4c4f-86a1-9f33314c176d.jpeg",
+        "observedAt": "2026-10-21T13:11:48.376266Z",
+        "exportTreatment": {
+          "kind": "reviewed-black-matte-solid-ink-v1",
+          "ink": "solid-white",
+          "sourceSha256": "efcc94bfeb48a13327304ade2540cf670ae301789e4076b8dbb7fddedf51a5b8",
+          "background": "#000000",
+          "derivedTransparency": true,
+          "originalAlphaPreserved": false,
+          "matteReviewSha256": "155477320fc826df0be26a9f5347657c7f7269948730861102ddcd81a5752f37",
+          "newGeometry": false
+        }
+      },
+      "sourceReference": "dealers/address-motors-fzco/branding/original-public-dubicars-20261021.jpg"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "4f7628da11bad899a4a0de6c56a6aaf64698fb1d8cbf567e2060e114d111c02f",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "dealers/address-motors-fzco/branding/original-public-dubicars-20261021.jpg",
+        "sha256": "efcc94bfeb48a13327304ade2540cf670ae301789e4076b8dbb7fddedf51a5b8",
+        "reviewReference": "dealers/address-motors-fzco/branding/source.json",
+        "reviewSha256": "e6ae3ca91470ac30d0773b165face8858a824d0d3093f68816a63cb4594ce19a",
+        "sourceUrl": "https://d2souf30ck18jq.cloudfront.net/address-motors/logo-18f1ac0c-7dcf-4c4f-86a1-9f33314c176d.jpeg",
+        "observedAt": "2026-10-21T13:11:48.376266Z",
+        "exportTreatment": {
+          "kind": "reviewed-black-matte-solid-ink-v1",
+          "ink": "solid-black",
+          "sourceSha256": "efcc94bfeb48a13327304ade2540cf670ae301789e4076b8dbb7fddedf51a5b8",
+          "background": "#000000",
+          "derivedTransparency": true,
+          "originalAlphaPreserved": false,
+          "matteReviewSha256": "155477320fc826df0be26a9f5347657c7f7269948730861102ddcd81a5752f37",
+          "newGeometry": false
+        }
+      },
+      "sourceReference": "dealers/address-motors-fzco/branding/original-public-dubicars-20261021.jpg"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "e0e4dfaf5eb84a031c2811e34ed1799585abb78a01eb1084dfaebce6613f4bc0",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "dealers/address-motors-fzco/branding/original-public-dubicars-20261021.jpg",
+        "sha256": "efcc94bfeb48a13327304ade2540cf670ae301789e4076b8dbb7fddedf51a5b8",
+        "reviewReference": "dealers/address-motors-fzco/branding/source.json",
+        "reviewSha256": "e6ae3ca91470ac30d0773b165face8858a824d0d3093f68816a63cb4594ce19a",
+        "sourceUrl": "https://d2souf30ck18jq.cloudfront.net/address-motors/logo-18f1ac0c-7dcf-4c4f-86a1-9f33314c176d.jpeg",
+        "observedAt": "2026-10-21T13:11:48.376266Z",
+        "exportTreatment": {
+          "kind": "reviewed-black-matte-solid-ink-v1",
+          "ink": "solid-black",
+          "sourceSha256": "efcc94bfeb48a13327304ade2540cf670ae301789e4076b8dbb7fddedf51a5b8",
+          "background": "#000000",
+          "derivedTransparency": true,
+          "originalAlphaPreserved": false,
+          "matteReviewSha256": "155477320fc826df0be26a9f5347657c7f7269948730861102ddcd81a5752f37",
+          "newGeometry": false
+        }
+      },
+      "sourceReference": "dealers/address-motors-fzco/branding/original-public-dubicars-20261021.jpg"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-21T13:22:52.012891Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "7b1fdaed48e25a2bb9a1c45e74b414c96f4d01fced94e6da1458eac7954bb860",
+    "retainedSource": {
+      "kind": "retained-reviewed-raster",
+      "reference": "dealers/address-motors-fzco/branding/original-public-dubicars-20261021.jpg",
+      "sha256": "efcc94bfeb48a13327304ade2540cf670ae301789e4076b8dbb7fddedf51a5b8",
+      "reviewReference": "dealers/address-motors-fzco/branding/source.json",
+      "reviewSha256": "e6ae3ca91470ac30d0773b165face8858a824d0d3093f68816a63cb4594ce19a",
+      "sourceUrl": "https://d2souf30ck18jq.cloudfront.net/address-motors/logo-18f1ac0c-7dcf-4c4f-86a1-9f33314c176d.jpeg",
+      "observedAt": "2026-10-21T13:11:48.376266Z",
+      "exportTreatment": {
+        "kind": "reviewed-black-matte-solid-ink-v1",
+        "ink": "solid-white",
+        "sourceSha256": "efcc94bfeb48a13327304ade2540cf670ae301789e4076b8dbb7fddedf51a5b8",
+        "background": "#000000",
+        "derivedTransparency": true,
+        "originalAlphaPreserved": false,
+        "matteReviewSha256": "155477320fc826df0be26a9f5347657c7f7269948730861102ddcd81a5752f37",
+        "newGeometry": false
+      }
+    }
+  }
+}

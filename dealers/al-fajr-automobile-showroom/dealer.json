@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Al Fajr Automobile Showroom",
     "publicOrigin": "https://al-fajr-automobile-showroom.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "5ce9ae601f427ba7921817910424cb67cf2e60a39aef1ca804adcc2df1736ccd",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "bd733dc7c54f9bc218cf96db30c0c40a87b8b3bd887204f30b59d926a214102f"
+    }
   }
 }

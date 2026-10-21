@@ -1,0 +1,124 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-input-review",
+  "dealer": "address-motors-fzco",
+  "reviewed": true,
+  "reviewedAt": "2026-10-21T13:25:38.550Z",
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "checks": [
+    "canonical-hosting-and-preserved-fleet-collisions",
+    "assigned-expansion-lead",
+    "public-fact-schema-and-price-omission",
+    "personal-contact-screen",
+    "retained-stock-media",
+    "companion-copy-source-binding",
+    "immutable-template-release-and-native-QA-parent",
+    "reviewed-artwork-provenance-and-regenerated-logo-hashes"
+  ],
+  "sourceArtworkReview": "Retained artwork review is separate provenance; this command does not perform visual, Arabic-expert or dealer approval.",
+  "copyReview": "Automated structure, stock hash, source text and complete EN/BG rows; no new human translation approval is inferred.",
+  "contacts": {
+    "schemaVersion": 1,
+    "kind": "cars-automated-public-contact-screen",
+    "dealer": "address-motors-fzco",
+    "method": "heuristic; no claim that unflagged values cannot be personal",
+    "flags": [],
+    "blocking": []
+  },
+  "batch": {
+    "number": 2,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-dubai-address-motors-fzco",
+    "position": 186
+  },
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "inputs": [
+    {
+      "path": "FACTS-AND-INVENTORY.json",
+      "sha256": "5d81300ed2ef26cd3d35aae63d2300dd78007e566aee2744de4efc793ca556cb"
+    },
+    {
+      "path": "branding/logo-contract.json",
+      "sha256": "0f36a8cf27bbe95f2a878d4d5d1745efe426952449bd3c6998d406623f040a92"
+    },
+    {
+      "path": "branding/logo-recipe.json",
+      "sha256": "c401208e230a574adc4dc5e131126246e99e1a461f7885ca2d9e17a25c51f8df"
+    },
+    {
+      "path": "branding/original-public-dubicars-20261021.jpg",
+      "sha256": "efcc94bfeb48a13327304ade2540cf670ae301789e4076b8dbb7fddedf51a5b8"
+    },
+    {
+      "path": "branding/source.json",
+      "sha256": "e6ae3ca91470ac30d0773b165face8858a824d0d3093f68816a63cb4594ce19a"
+    },
+    {
+      "path": "business-facts.json",
+      "sha256": "377d745475ed2bd82a351a07397db173fbab58b58affb1b88cfff187702d9b61"
+    },
+    {
+      "path": "copy-review.json",
+      "sha256": "3236bd9ff0229e97223d9e0335f0ee7e8d880fcdeed4db9a7b0662fe7d33aad7"
+    },
+    {
+      "path": "dealer-stock/public-20261021-toyota-hilux-2025.jpg",
+      "sha256": "101a93b9a297f48fb29fbdc406c88fd32dad6cb753501616fbb09cfee9de9ede"
+    },
+    {
+      "path": "dealer-stock/public-20261021-toyota-land-cruiser-pick-up-2026.jpg",
+      "sha256": "168c8ddfef5adfa40005cced119982fccc09d3a741ed1d55956268f00c97d54d"
+    },
+    {
+      "path": "dealer-stock/public-20261021-toyota-tacoma-2025.jpg",
+      "sha256": "582c70cfc62233fe27a778cf97736845ceec6ee2db7e1fd9cb5b32bbf67d72cb"
+    },
+    {
+      "path": "dealer-stock/template-demo-1.webp",
+      "sha256": "945e6864218ab3bd5fbd415336b212ecfde645685033f8506836f906885d447c"
+    },
+    {
+      "path": "dealer-stock/template-demo-2.webp",
+      "sha256": "17689ab880bf47de81ef467c34d639223f39f0c1ebe68c90d0aaf70e3dcc6333"
+    },
+    {
+      "path": "dealer-stock/template-demo-3.webp",
+      "sha256": "d644dec8e1ef280a702dccac267a2367f0ab823e40373e1299b156e7723b3b1f"
+    },
+    {
+      "path": "dealer.json",
+      "sha256": "40363f2b8458dd4110088303ae062634a674ca353cb63df8cb67a22cb6e275f2"
+    },
+    {
+      "path": "identity-review.json",
+      "sha256": "cd6e5a9fa72cc19483aa35411a816d8c9456dc7d3df215a749fd267433abe31b"
+    },
+    {
+      "path": "locale.json",
+      "sha256": "e563bd1d2228f1214620d61aac721d716ea9af26f0af7955cf45b35b68238a0d"
+    },
+    {
+      "path": "missing-facts.json",
+      "sha256": "fbe2c773068248b9af82e985b4cbcd4605c4b9add8d5ca477c591d1128d7d55b"
+    },
+    {
+      "path": "qualification.json",
+      "sha256": "94a44478342027bfd417c016da2d5f7748f7a39161fd80573be0547715d3fdb1"
+    },
+    {
+      "path": "source-evidence.json",
+      "sha256": "4482fba2a8096e0a8beb0d376be909fc41f61e9f94fb89a371d30cc8104b1172"
+    },
+    {
+      "path": "stock.json",
+      "sha256": "49e3373cd8d0055a15dbfc7b248813657a60941cd373dbf6a03eb685207f3f58"
+    }
+  ],
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "providerWrites": 0
+}
