@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-input-review",
+  "dealer": "mirage-auto-sales",
+  "reviewed": true,
+  "reviewedAt": "2026-10-21T08:51:29.465Z",
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "checks": [
+    "canonical-hosting-and-preserved-fleet-collisions",
+    "assigned-expansion-lead",
+    "public-fact-schema-and-price-omission",
+    "personal-contact-screen",
+    "retained-stock-media",
+    "companion-copy-source-binding",
+    "immutable-template-release-and-native-QA-parent",
+    "reviewed-artwork-provenance-and-regenerated-logo-hashes"
+  ],
+  "sourceArtworkReview": "Retained artwork review is separate provenance; this command does not perform visual, Arabic-expert or dealer approval.",
+  "copyReview": "Automated structure, stock hash, source text and complete EN/BG rows; no new human translation approval is inferred.",
+  "contacts": {
+    "schemaVersion": 1,
+    "kind": "cars-automated-public-contact-screen",
+    "dealer": "mirage-auto-sales",
+    "method": "heuristic; no claim that unflagged values cannot be personal",
+    "flags": [],
+    "blocking": []
+  },
+  "batch": {
+    "number": 2,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "us-ca-sacramento-mirage-auto-sales",
+    "position": 107
+  },
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "inputs": [
+    {
+      "path": "FACTS-AND-INVENTORY.json",
+      "sha256": "d20b516bf5c74228f3d4faa3720c8923b914abc706962cbf62dafd5b2ff01714"
+    },
+    {
+      "path": "branding/logo-contract.json",
+      "sha256": "d275771ab868d906c1ae20262fb2862fad11f9210a1c89ac85ceec7dbf356887"
+    },
+    {
+      "path": "branding/logo-recipe.json",
+      "sha256": "8e6cc881287e153ce7a78e0f0b520e3c13202fe60b16be1cf6e2b0706305450e"
+    },
+    {
+      "path": "branding/original-mirage-public.png",
+      "sha256": "6d44a1afc600986856672da8dd0bf6d1a48c0396311ea957ee0b8977fd9665cc"
+    },
+    {
+      "path": "branding/source.json",
+      "sha256": "ea0a976c82d92b4b01489eef3715b445c8804d62cbad042859a7dc73aac51958"
+    },
+    {
+      "path": "business-facts.json",
+      "sha256": "e6fbfb37b8b1b1921d326a27f1e970a12d057d9668e7afb805c2a36a4aebb9db"
+    },
+    {
+      "path": "copy-review.json",
+      "sha256": "915944549e217e4b2144e3cfdbd7e529af5f65ab75f9dce79aaf2cfef55bf192"
+    },
+    {
+      "path": "dealer-stock/public-2012-acura-mdx-sh-awd-w-tech-w-res.jpg",
+      "sha256": "eebc5ee60cafa7494df3db007c480f4540551f1315797abc5ddea1a6f9531844"
+    },
+    {
+      "path": "dealer-stock/public-2013-acura-tl-w-tech.jpg",
+      "sha256": "f3e6f96cc7afd923cb14f105048a02609993ef33625e2c89bc1690671d5478a1"
+    },
+    {
+      "path": "dealer-stock/public-2014-acura-mdx-w-tech.jpg",
+      "sha256": "4e9a7205c8c5f24a61fb5d0c7229bd0da5629727662d1737d9fc2f6be43b0aec"
+    },
+    {
+      "path": "dealer.json",
+      "sha256": "02752011c00bb9dbccdce068230623fba18a402ea6dd6c98fc215b747aa25bc2"
+    },
+    {
+      "path": "identity-review.json",
+      "sha256": "40cbc2c3bf14c177d1770f4ce9581fc0e2bdd716c87f306fb6cfc1ecb9234428"
+    },
+    {
+      "path": "locale.json",
+      "sha256": "a259909bdd1cf3b6e7bf60a476c0bc59119278a4f325e04b59a57792abba0415"
+    },
+    {
+      "path": "missing-facts.json",
+      "sha256": "84ddb1831cbe04eabfeffb4e12b0d55ebccb24a218f802c1b608e8fadbf9f83f"
+    },
+    {
+      "path": "qualification.json",
+      "sha256": "c7a34f51bf74731c8616f73e750a31bd06965321e94fd54c291f09fbef84b9d5"
+    },
+    {
+      "path": "source-evidence.json",
+      "sha256": "472e2260e7f9c6cbf0948292076de7efd3db0f4db5177c4c749e5a8e7456e6aa"
+    },
+    {
+      "path": "stock.json",
+      "sha256": "04350a39d3de80cae6e5aafe2c107e05d89338ace00645e679ce283cc24309d7"
+    }
+  ],
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "providerWrites": 0
+}

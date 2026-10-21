@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Mirage Auto Sales",
     "publicOrigin": "https://mirage-auto-sales.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "99c874d1767914628eb43e3aac4d04399aa79be1335b89d699db0309575b40e4",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "8cb70e9338dfc982fd92519bc19ffd1a3c2f8c5997e73485198b755ca83f45de"
+    }
   }
 }

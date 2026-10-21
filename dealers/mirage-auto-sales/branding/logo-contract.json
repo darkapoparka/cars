@@ -1,0 +1,369 @@
+{
+  "schemaVersion": 1,
+  "dealer": "mirage-auto-sales",
+  "reviewed": true,
+  "reviewedAt": "2026-10-21T08:15:58.340Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "public-original-alpha-preserving-surface-exports",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "e40cd4242991cdec3e1c57b4f6a11a303367562ed70ef65e460ac3ce0b37212b",
+      "sourceSha256": "99c874d1767914628eb43e3aac4d04399aa79be1335b89d699db0309575b40e4"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "a37adcbb53369adb523fd3714c9fb102e9b22898b230934886cbf9b80b65aec4",
+      "sourceSha256": "bece546a117e22cffc351be4167a5ebda82892ac8baa596026e21e09ca22ff62"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "a37adcbb53369adb523fd3714c9fb102e9b22898b230934886cbf9b80b65aec4",
+      "sourceSha256": "bece546a117e22cffc351be4167a5ebda82892ac8baa596026e21e09ca22ff62"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "99c874d1767914628eb43e3aac4d04399aa79be1335b89d699db0309575b40e4",
+    "retainedSource": {
+      "kind": "retained-reviewed-raster",
+      "reference": "dealers/mirage-auto-sales/branding/original-mirage-public.png",
+      "sha256": "6d44a1afc600986856672da8dd0bf6d1a48c0396311ea957ee0b8977fd9665cc",
+      "reviewReference": "dealers/mirage-auto-sales/branding/source.json",
+      "reviewSha256": "ea0a976c82d92b4b01489eef3715b445c8804d62cbad042859a7dc73aac51958",
+      "sourceUrl": "https://cdn07.carsforsale.com/dealerlogos/532452/Logo206236.521ab7ca.png",
+      "observedAt": "2026-10-21T08:15:58.340Z",
+      "exportTreatment": {
+        "kind": "alpha-preserving-solid-ink-v1",
+        "ink": "solid-black",
+        "sourceSha256": "6d44a1afc600986856672da8dd0bf6d1a48c0396311ea957ee0b8977fd9665cc",
+        "newGeometry": false
+      }
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "8cb70e9338dfc982fd92519bc19ffd1a3c2f8c5997e73485198b755ca83f45de",
+    "retainedSource": {
+      "kind": "retained-reviewed-raster",
+      "reference": "dealers/mirage-auto-sales/branding/original-mirage-public.png",
+      "sha256": "6d44a1afc600986856672da8dd0bf6d1a48c0396311ea957ee0b8977fd9665cc",
+      "reviewReference": "dealers/mirage-auto-sales/branding/source.json",
+      "reviewSha256": "ea0a976c82d92b4b01489eef3715b445c8804d62cbad042859a7dc73aac51958",
+      "sourceUrl": "https://cdn07.carsforsale.com/dealerlogos/532452/Logo206236.521ab7ca.png",
+      "observedAt": "2026-10-21T08:15:58.340Z",
+      "exportTreatment": {
+        "kind": "alpha-preserving-solid-ink-v1",
+        "ink": "solid-black",
+        "sourceSha256": "6d44a1afc600986856672da8dd0bf6d1a48c0396311ea957ee0b8977fd9665cc",
+        "newGeometry": false
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "28c66a7d88845337f6411c14a5125547265f7f84ffaa94940c11c9d2f3bc0087"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "99c874d1767914628eb43e3aac4d04399aa79be1335b89d699db0309575b40e4",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "dealers/mirage-auto-sales/branding/original-mirage-public.png",
+        "sha256": "6d44a1afc600986856672da8dd0bf6d1a48c0396311ea957ee0b8977fd9665cc",
+        "reviewReference": "dealers/mirage-auto-sales/branding/source.json",
+        "reviewSha256": "ea0a976c82d92b4b01489eef3715b445c8804d62cbad042859a7dc73aac51958",
+        "sourceUrl": "https://cdn07.carsforsale.com/dealerlogos/532452/Logo206236.521ab7ca.png",
+        "observedAt": "2026-10-21T08:15:58.340Z",
+        "exportTreatment": {
+          "kind": "alpha-preserving-solid-ink-v1",
+          "ink": "solid-black",
+          "sourceSha256": "6d44a1afc600986856672da8dd0bf6d1a48c0396311ea957ee0b8977fd9665cc",
+          "newGeometry": false
+        }
+      },
+      "sourceReference": "dealers/mirage-auto-sales/branding/original-mirage-public.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "bece546a117e22cffc351be4167a5ebda82892ac8baa596026e21e09ca22ff62",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "dealers/mirage-auto-sales/branding/original-mirage-public.png",
+        "sha256": "6d44a1afc600986856672da8dd0bf6d1a48c0396311ea957ee0b8977fd9665cc",
+        "reviewReference": "dealers/mirage-auto-sales/branding/source.json",
+        "reviewSha256": "ea0a976c82d92b4b01489eef3715b445c8804d62cbad042859a7dc73aac51958",
+        "sourceUrl": "https://cdn07.carsforsale.com/dealerlogos/532452/Logo206236.521ab7ca.png",
+        "observedAt": "2026-10-21T08:15:58.340Z",
+        "exportTreatment": {
+          "kind": "alpha-preserving-solid-ink-v1",
+          "ink": "solid-white",
+          "sourceSha256": "6d44a1afc600986856672da8dd0bf6d1a48c0396311ea957ee0b8977fd9665cc",
+          "newGeometry": false
+        }
+      },
+      "sourceReference": "dealers/mirage-auto-sales/branding/original-mirage-public.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "bece546a117e22cffc351be4167a5ebda82892ac8baa596026e21e09ca22ff62",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "dealers/mirage-auto-sales/branding/original-mirage-public.png",
+        "sha256": "6d44a1afc600986856672da8dd0bf6d1a48c0396311ea957ee0b8977fd9665cc",
+        "reviewReference": "dealers/mirage-auto-sales/branding/source.json",
+        "reviewSha256": "ea0a976c82d92b4b01489eef3715b445c8804d62cbad042859a7dc73aac51958",
+        "sourceUrl": "https://cdn07.carsforsale.com/dealerlogos/532452/Logo206236.521ab7ca.png",
+        "observedAt": "2026-10-21T08:15:58.340Z",
+        "exportTreatment": {
+          "kind": "alpha-preserving-solid-ink-v1",
+          "ink": "solid-white",
+          "sourceSha256": "6d44a1afc600986856672da8dd0bf6d1a48c0396311ea957ee0b8977fd9665cc",
+          "newGeometry": false
+        }
+      },
+      "sourceReference": "dealers/mirage-auto-sales/branding/original-mirage-public.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "6d44a1afc600986856672da8dd0bf6d1a48c0396311ea957ee0b8977fd9665cc",
+      "sha256": "99c874d1767914628eb43e3aac4d04399aa79be1335b89d699db0309575b40e4",
+      "crop": {
+        "left": 439,
+        "top": 2,
+        "width": 301,
+        "height": 298
+      },
+      "rasterTreatment": {
+        "kind": "alpha-preserving-solid-ink-v1",
+        "ink": "solid-black",
+        "originalAlphaUnchangedBeforeCropAndResize": true,
+        "newGeometry": false
+      },
+      "sourcePath": "branding/original-mirage-public.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "6d44a1afc600986856672da8dd0bf6d1a48c0396311ea957ee0b8977fd9665cc",
+      "sha256": "bece546a117e22cffc351be4167a5ebda82892ac8baa596026e21e09ca22ff62",
+      "crop": {
+        "left": 439,
+        "top": 2,
+        "width": 301,
+        "height": 298
+      },
+      "rasterTreatment": {
+        "kind": "alpha-preserving-solid-ink-v1",
+        "ink": "solid-white",
+        "originalAlphaUnchangedBeforeCropAndResize": true,
+        "newGeometry": false
+      },
+      "sourcePath": "branding/original-mirage-public.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "6d44a1afc600986856672da8dd0bf6d1a48c0396311ea957ee0b8977fd9665cc",
+      "sha256": "bece546a117e22cffc351be4167a5ebda82892ac8baa596026e21e09ca22ff62",
+      "crop": {
+        "left": 439,
+        "top": 2,
+        "width": 301,
+        "height": 298
+      },
+      "rasterTreatment": {
+        "kind": "alpha-preserving-solid-ink-v1",
+        "ink": "solid-white",
+        "originalAlphaUnchangedBeforeCropAndResize": true,
+        "newGeometry": false
+      },
+      "sourcePath": "branding/original-mirage-public.png",
+      "outputPath": "branding/logo-on-accent.png"
+    },
+    "master": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "6d44a1afc600986856672da8dd0bf6d1a48c0396311ea957ee0b8977fd9665cc",
+      "sha256": "99c874d1767914628eb43e3aac4d04399aa79be1335b89d699db0309575b40e4",
+      "crop": {
+        "left": 439,
+        "top": 2,
+        "width": 301,
+        "height": 298
+      },
+      "rasterTreatment": {
+        "kind": "alpha-preserving-solid-ink-v1",
+        "ink": "solid-black",
+        "originalAlphaUnchangedBeforeCropAndResize": true,
+        "newGeometry": false
+      },
+      "sourcePath": "branding/original-mirage-public.png"
+    },
+    "mark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "6d44a1afc600986856672da8dd0bf6d1a48c0396311ea957ee0b8977fd9665cc",
+      "sha256": "8cb70e9338dfc982fd92519bc19ffd1a3c2f8c5997e73485198b755ca83f45de",
+      "crop": {
+        "left": 439,
+        "top": 2,
+        "width": 301,
+        "height": 298
+      },
+      "rasterTreatment": {
+        "kind": "alpha-preserving-solid-ink-v1",
+        "ink": "solid-black",
+        "originalAlphaUnchangedBeforeCropAndResize": true,
+        "newGeometry": false
+      },
+      "sourcePath": "branding/original-mirage-public.png"
+    },
+    "markOnDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "6d44a1afc600986856672da8dd0bf6d1a48c0396311ea957ee0b8977fd9665cc",
+      "sha256": "49949212a0da72fa20d520daa86247802fdc988b2f4332f001d55cec34f4b3a8",
+      "crop": {
+        "left": 439,
+        "top": 2,
+        "width": 301,
+        "height": 298
+      },
+      "rasterTreatment": {
+        "kind": "alpha-preserving-solid-ink-v1",
+        "ink": "solid-white",
+        "originalAlphaUnchangedBeforeCropAndResize": true,
+        "newGeometry": false
+      },
+      "sourcePath": "branding/original-mirage-public.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "5ca715fc1aa2878945c1f5bd183b70437bb9e853a52bec7731ccc6af42557187",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "dealers/mirage-auto-sales/branding/original-mirage-public.png",
+        "sha256": "6d44a1afc600986856672da8dd0bf6d1a48c0396311ea957ee0b8977fd9665cc",
+        "reviewReference": "dealers/mirage-auto-sales/branding/source.json",
+        "reviewSha256": "ea0a976c82d92b4b01489eef3715b445c8804d62cbad042859a7dc73aac51958",
+        "sourceUrl": "https://cdn07.carsforsale.com/dealerlogos/532452/Logo206236.521ab7ca.png",
+        "observedAt": "2026-10-21T08:15:58.340Z",
+        "exportTreatment": {
+          "kind": "alpha-preserving-solid-ink-v1",
+          "ink": "solid-black",
+          "sourceSha256": "6d44a1afc600986856672da8dd0bf6d1a48c0396311ea957ee0b8977fd9665cc",
+          "newGeometry": false
+        }
+      },
+      "sourceReference": "dealers/mirage-auto-sales/branding/original-mirage-public.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "181d2e126c03207c0b91cccec2aa49140cc9156d369977c3c7d4c711452f97cf",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "dealers/mirage-auto-sales/branding/original-mirage-public.png",
+        "sha256": "6d44a1afc600986856672da8dd0bf6d1a48c0396311ea957ee0b8977fd9665cc",
+        "reviewReference": "dealers/mirage-auto-sales/branding/source.json",
+        "reviewSha256": "ea0a976c82d92b4b01489eef3715b445c8804d62cbad042859a7dc73aac51958",
+        "sourceUrl": "https://cdn07.carsforsale.com/dealerlogos/532452/Logo206236.521ab7ca.png",
+        "observedAt": "2026-10-21T08:15:58.340Z",
+        "exportTreatment": {
+          "kind": "alpha-preserving-solid-ink-v1",
+          "ink": "solid-white",
+          "sourceSha256": "6d44a1afc600986856672da8dd0bf6d1a48c0396311ea957ee0b8977fd9665cc",
+          "newGeometry": false
+        }
+      },
+      "sourceReference": "dealers/mirage-auto-sales/branding/original-mirage-public.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "8cb70e9338dfc982fd92519bc19ffd1a3c2f8c5997e73485198b755ca83f45de",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "dealers/mirage-auto-sales/branding/original-mirage-public.png",
+        "sha256": "6d44a1afc600986856672da8dd0bf6d1a48c0396311ea957ee0b8977fd9665cc",
+        "reviewReference": "dealers/mirage-auto-sales/branding/source.json",
+        "reviewSha256": "ea0a976c82d92b4b01489eef3715b445c8804d62cbad042859a7dc73aac51958",
+        "sourceUrl": "https://cdn07.carsforsale.com/dealerlogos/532452/Logo206236.521ab7ca.png",
+        "observedAt": "2026-10-21T08:15:58.340Z",
+        "exportTreatment": {
+          "kind": "alpha-preserving-solid-ink-v1",
+          "ink": "solid-black",
+          "sourceSha256": "6d44a1afc600986856672da8dd0bf6d1a48c0396311ea957ee0b8977fd9665cc",
+          "newGeometry": false
+        }
+      },
+      "sourceReference": "dealers/mirage-auto-sales/branding/original-mirage-public.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "28c66a7d88845337f6411c14a5125547265f7f84ffaa94940c11c9d2f3bc0087",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "dealers/mirage-auto-sales/branding/original-mirage-public.png",
+        "sha256": "6d44a1afc600986856672da8dd0bf6d1a48c0396311ea957ee0b8977fd9665cc",
+        "reviewReference": "dealers/mirage-auto-sales/branding/source.json",
+        "reviewSha256": "ea0a976c82d92b4b01489eef3715b445c8804d62cbad042859a7dc73aac51958",
+        "sourceUrl": "https://cdn07.carsforsale.com/dealerlogos/532452/Logo206236.521ab7ca.png",
+        "observedAt": "2026-10-21T08:15:58.340Z",
+        "exportTreatment": {
+          "kind": "alpha-preserving-solid-ink-v1",
+          "ink": "solid-black",
+          "sourceSha256": "6d44a1afc600986856672da8dd0bf6d1a48c0396311ea957ee0b8977fd9665cc",
+          "newGeometry": false
+        }
+      },
+      "sourceReference": "dealers/mirage-auto-sales/branding/original-mirage-public.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-21T08:15:58.340Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "49949212a0da72fa20d520daa86247802fdc988b2f4332f001d55cec34f4b3a8",
+    "retainedSource": {
+      "kind": "retained-reviewed-raster",
+      "reference": "dealers/mirage-auto-sales/branding/original-mirage-public.png",
+      "sha256": "6d44a1afc600986856672da8dd0bf6d1a48c0396311ea957ee0b8977fd9665cc",
+      "reviewReference": "dealers/mirage-auto-sales/branding/source.json",
+      "reviewSha256": "ea0a976c82d92b4b01489eef3715b445c8804d62cbad042859a7dc73aac51958",
+      "sourceUrl": "https://cdn07.carsforsale.com/dealerlogos/532452/Logo206236.521ab7ca.png",
+      "observedAt": "2026-10-21T08:15:58.340Z",
+      "exportTreatment": {
+        "kind": "alpha-preserving-solid-ink-v1",
+        "ink": "solid-white",
+        "sourceSha256": "6d44a1afc600986856672da8dd0bf6d1a48c0396311ea957ee0b8977fd9665cc",
+        "newGeometry": false
+      }
+    }
+  }
+}

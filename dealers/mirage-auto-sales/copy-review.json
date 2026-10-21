@@ -2,27 +2,27 @@
   "schemaVersion": 1,
   "kind": "cars-new-source-reviewed-companion-copy",
   "dealer": "mirage-auto-sales",
-  "reviewed": false,
-  "reviewedAt": null,
-  "stockSha256": "f491da201b9bd44d21fc74ea2eef04bcca6ae7b2d6370fadaecda1efacde5fee",
+  "reviewed": true,
+  "reviewedAt": "2026-10-21T08:51:29.465Z",
+  "stockSha256": "04350a39d3de80cae6e5aafe2c107e05d89338ace00645e679ce283cc24309d7",
   "descriptions": [
     {
-      "sourceId": "template-demo-auto-best-1",
-      "sourceDescription": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
-      "en": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
-      "bg": "Илюстративни демонстрационни автомобили от запазения шаблон Cars; те не са наличности на тази автокъща. Наличността не е проверена. Цените са пропуснати в този преглед."
+      "sourceId": "2014-acura-mdx-w-tech",
+      "sourceDescription": "Dated public listing samples observed on 2026-10-21. Availability has not been confirmed. Listing prices and mileage are omitted in this preview.",
+      "en": "Dated public listing samples observed on 2026-10-21. Availability has not been confirmed. Listing prices and mileage are omitted in this preview.",
+      "bg": "??????? ?? ???????? ?????, ??????????? ?? 2026-10-21. ??????????? ?? ? ??????????. ?????? ? ???????? ?? ?????????? ? ???? ???????."
     },
     {
-      "sourceId": "template-demo-auto-best-2",
-      "sourceDescription": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
-      "en": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
-      "bg": "Илюстративни демонстрационни автомобили от запазения шаблон Cars; те не са наличности на тази автокъща. Наличността не е проверена. Цените са пропуснати в този преглед."
+      "sourceId": "2012-acura-mdx-sh-awd-w-tech-w-res",
+      "sourceDescription": "Dated public listing samples observed on 2026-10-21. Availability has not been confirmed. Listing prices and mileage are omitted in this preview.",
+      "en": "Dated public listing samples observed on 2026-10-21. Availability has not been confirmed. Listing prices and mileage are omitted in this preview.",
+      "bg": "??????? ?? ???????? ?????, ??????????? ?? 2026-10-21. ??????????? ?? ? ??????????. ?????? ? ???????? ?? ?????????? ? ???? ???????."
     },
     {
-      "sourceId": "template-demo-auto-best-3",
-      "sourceDescription": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
-      "en": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
-      "bg": "Илюстративни демонстрационни автомобили от запазения шаблон Cars; те не са наличности на тази автокъща. Наличността не е проверена. Цените са пропуснати в този преглед."
+      "sourceId": "2013-acura-tl-w-tech",
+      "sourceDescription": "Dated public listing samples observed on 2026-10-21. Availability has not been confirmed. Listing prices and mileage are omitted in this preview.",
+      "en": "Dated public listing samples observed on 2026-10-21. Availability has not been confirmed. Listing prices and mileage are omitted in this preview.",
+      "bg": "??????? ?? ???????? ?????, ??????????? ?? 2026-10-21. ??????????? ?? ? ??????????. ?????? ? ???????? ?? ?????????? ? ???? ???????."
     }
   ]
 }

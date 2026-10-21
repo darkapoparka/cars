@@ -26,7 +26,119 @@
       "supports": [
         "retained-public-business-research"
       ]
+    },
+    {
+      "url": "https://www.mirageauto.net/",
+      "observedAt": "2026-10-21T08:15:58.340Z",
+      "supports": [
+        "business.name",
+        "business.address",
+        "business.phone",
+        "published-dealer-logo"
+      ],
+      "htmlSha256": "a87fb82d34b484a8fbe13efb87a78f267af2c5bf4ba91d5b52ab3408525d3326"
+    },
+    {
+      "url": "https://www.mirageauto.net/cars-for-sale",
+      "observedAt": "2026-10-21T08:48:40.461Z",
+      "supports": [
+        "business.name",
+        "business.address",
+        "business.phone",
+        "current-public-inventory"
+      ],
+      "htmlSha256": "db4b17d42790ab8b8cb09e30a02a4e1c841a5c4d66794b0aa23bab8cfdf9bf2b"
+    },
+    {
+      "url": "https://www.mirageauto.net/details/used-2014-acura-mdx/88123075",
+      "observedAt": "2026-10-21T08:48:40.806Z",
+      "supports": [
+        "stock.2014-acura-mdx-w-tech"
+      ],
+      "htmlSha256": "09b959b3f5c0b1c11ad31e20bed3a59d2e4cb1bf9c0cc8d1bc5d108cd2970cbc"
+    },
+    {
+      "url": "https://www.mirageauto.net/details/used-2012-acura-mdx/85298001",
+      "observedAt": "2026-10-21T08:48:41.014Z",
+      "supports": [
+        "stock.2012-acura-mdx-sh-awd-w-tech-w-res"
+      ],
+      "htmlSha256": "10a4f3182c4e4a5b55e0c3a84de97440fb6b5adf78ca76208a03c9f7e90d9ba2"
+    },
+    {
+      "url": "https://www.mirageauto.net/details/used-2013-acura-tl/84311388",
+      "observedAt": "2026-10-21T08:48:41.233Z",
+      "supports": [
+        "stock.2013-acura-tl-w-tech"
+      ],
+      "htmlSha256": "15e5179bd92fc5d576686f7c4c7d8e26bc2d30384e75459e25c9ded2e1018aff"
     }
   ],
-  "liveFetchPerformed": false
+  "liveFetchPerformed": true,
+  "stockSources": [
+    {
+      "id": "2014-acura-mdx-w-tech",
+      "sourceUrl": "https://www.mirageauto.net/details/used-2014-acura-mdx/88123075",
+      "observedAt": "2026-10-21T08:48:40.806Z",
+      "httpStatus": 200,
+      "htmlSha256": "09b959b3f5c0b1c11ad31e20bed3a59d2e4cb1bf9c0cc8d1bc5d108cd2970cbc",
+      "sourceTitle": "2014 Acura MDX For Sale in Sacramento, CA - Mirage Auto Sales",
+      "titlePolicy": "Published year/make/model/trim retained. Listing prices, mileage and availability claims are not promoted as current verified facts.",
+      "photo": {
+        "sourceUrl": "https://cdn05.carsforsale.com/0099ab143b6e27b107d37610987f13ba76/800x600/2014-acura-mdx-w-tech-4dr-suv-w-technology-package.jpg",
+        "httpStatus": 200,
+        "observedAt": "2026-10-21T08:50:35.141Z",
+        "path": "dealer-stock/public-2014-acura-mdx-w-tech.jpg",
+        "bytes": 76072,
+        "sha256": "4e9a7205c8c5f24a61fb5d0c7229bd0da5629727662d1737d9fc2f6be43b0aec",
+        "width": 800,
+        "height": 600
+      }
+    },
+    {
+      "id": "2012-acura-mdx-sh-awd-w-tech-w-res",
+      "sourceUrl": "https://www.mirageauto.net/details/used-2012-acura-mdx/85298001",
+      "observedAt": "2026-10-21T08:48:41.014Z",
+      "httpStatus": 200,
+      "htmlSha256": "10a4f3182c4e4a5b55e0c3a84de97440fb6b5adf78ca76208a03c9f7e90d9ba2",
+      "sourceTitle": "2012 Acura MDX For Sale in Sacramento, CA - Mirage Auto Sales",
+      "titlePolicy": "Published year/make/model/trim retained. Listing prices, mileage and availability claims are not promoted as current verified facts.",
+      "photo": {
+        "sourceUrl": "https://cdn05.carsforsale.com/00aa7304e02ef11ad8d71081665b3219e8/800x600/2012-acura-mdx-sh-awd-w-tech-w-res-4dr-suv-w-technology-and-enter.jpg",
+        "httpStatus": 200,
+        "observedAt": "2026-10-21T08:50:35.310Z",
+        "path": "dealer-stock/public-2012-acura-mdx-sh-awd-w-tech-w-res.jpg",
+        "bytes": 78751,
+        "sha256": "eebc5ee60cafa7494df3db007c480f4540551f1315797abc5ddea1a6f9531844",
+        "width": 800,
+        "height": 600
+      }
+    },
+    {
+      "id": "2013-acura-tl-w-tech",
+      "sourceUrl": "https://www.mirageauto.net/details/used-2013-acura-tl/84311388",
+      "observedAt": "2026-10-21T08:48:41.233Z",
+      "httpStatus": 200,
+      "htmlSha256": "15e5179bd92fc5d576686f7c4c7d8e26bc2d30384e75459e25c9ded2e1018aff",
+      "sourceTitle": "2013 Acura TL For Sale in Sacramento, CA - Mirage Auto Sales",
+      "titlePolicy": "Published year/make/model/trim retained. Listing prices, mileage and availability claims are not promoted as current verified facts.",
+      "photo": {
+        "sourceUrl": "https://cdn05.carsforsale.com/513c0ef344ab28cb5825e0ce7f9d818e/800x600/2013-acura-tl-w-tech-4dr-sedan-w-technology-package.jpg",
+        "httpStatus": 200,
+        "observedAt": "2026-10-21T08:50:35.481Z",
+        "path": "dealer-stock/public-2013-acura-tl-w-tech.jpg",
+        "bytes": 70503,
+        "sha256": "f3e6f96cc7afd923cb14f105048a02609993ef33625e2c89bc1690671d5478a1",
+        "width": 800,
+        "height": 600
+      }
+    }
+  ],
+  "sourceRefresh": {
+    "at": "2026-10-21T08:50:35.484Z",
+    "publishedParent": "2266459e658f245d6761945094e551075006e20c",
+    "priorStockSha256": "f491da201b9bd44d21fc74ea2eef04bcca6ae7b2d6370fadaecda1efacde5fee",
+    "priorFactsSha256": "176b11d3bdf755e7008f776c6bf5913646f67dda8f07df2e591bdb029e484dde",
+    "method": "Replace disclosed template examples with three dated seller listings and their exact public photos; omit prices, mileage and current-availability claims."
+  }
 }

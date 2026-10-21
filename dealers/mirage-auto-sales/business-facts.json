@@ -18,8 +18,8 @@
     "stockUrl": "https://www.mirageauto.net/cars-for-sale",
     "hours": "",
     "sourceUrl": "https://www.mirageauto.net/",
-    "observedAt": "2026-10-18",
-    "inventoryNotice": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
+    "observedAt": "2026-10-21T08:48:40.461Z",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-21. Availability has not been confirmed. Listing prices and mileage are omitted in this preview.",
     "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
     "logo": "/dealer-brand/logo-on-light.png",
     "logoLight": "/dealer-brand/logo-on-light.png",
@@ -46,6 +46,52 @@
       "supports": [
         "retained-public-business-research"
       ]
+    },
+    {
+      "url": "https://www.mirageauto.net/",
+      "observedAt": "2026-10-21T08:15:58.340Z",
+      "supports": [
+        "business.name",
+        "business.address",
+        "business.phone",
+        "published-dealer-logo"
+      ],
+      "htmlSha256": "a87fb82d34b484a8fbe13efb87a78f267af2c5bf4ba91d5b52ab3408525d3326"
+    },
+    {
+      "url": "https://www.mirageauto.net/cars-for-sale",
+      "observedAt": "2026-10-21T08:48:40.461Z",
+      "supports": [
+        "business.name",
+        "business.address",
+        "business.phone",
+        "current-public-inventory"
+      ],
+      "htmlSha256": "db4b17d42790ab8b8cb09e30a02a4e1c841a5c4d66794b0aa23bab8cfdf9bf2b"
+    },
+    {
+      "url": "https://www.mirageauto.net/details/used-2014-acura-mdx/88123075",
+      "observedAt": "2026-10-21T08:48:40.806Z",
+      "supports": [
+        "stock.2014-acura-mdx-w-tech"
+      ],
+      "htmlSha256": "09b959b3f5c0b1c11ad31e20bed3a59d2e4cb1bf9c0cc8d1bc5d108cd2970cbc"
+    },
+    {
+      "url": "https://www.mirageauto.net/details/used-2012-acura-mdx/85298001",
+      "observedAt": "2026-10-21T08:48:41.014Z",
+      "supports": [
+        "stock.2012-acura-mdx-sh-awd-w-tech-w-res"
+      ],
+      "htmlSha256": "10a4f3182c4e4a5b55e0c3a84de97440fb6b5adf78ca76208a03c9f7e90d9ba2"
+    },
+    {
+      "url": "https://www.mirageauto.net/details/used-2013-acura-tl/84311388",
+      "observedAt": "2026-10-21T08:48:41.233Z",
+      "supports": [
+        "stock.2013-acura-tl-w-tech"
+      ],
+      "htmlSha256": "15e5179bd92fc5d576686f7c4c7d8e26bc2d30384e75459e25c9ded2e1018aff"
     }
   ]
 }

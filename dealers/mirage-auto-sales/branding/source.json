@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "dealer": "mirage-auto-sales",
-  "status": "research-required",
+  "status": "reviewed-public-originals",
   "realLogoFirst": true,
   "publicSources": [
     {
@@ -15,10 +15,121 @@
     {
       "url": "https://www.cargurus.com/Cars/m-Mirage-Auto-Sales-sp280586",
       "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.mirageauto.net/",
+      "observedAt": "2026-10-21T08:15:58.340Z",
+      "supports": [
+        "official-published-business-identity"
+      ],
+      "responseSha256": "a87fb82d34b484a8fbe13efb87a78f267af2c5bf4ba91d5b52ab3408525d3326"
+    },
+    {
+      "url": "https://cdn07.carsforsale.com/dealerlogos/532452/Logo206236.521ab7ca.png",
+      "observedAt": "2026-10-21T08:15:58.340Z",
+      "supports": [
+        "exact-public-original-raster"
+      ],
+      "sha256": "6d44a1afc600986856672da8dd0bf6d1a48c0396311ea957ee0b8977fd9665cc"
     }
   ],
-  "originals": [],
-  "creationMethod": null,
+  "originals": [
+    {
+      "path": "branding/original-mirage-public.png",
+      "sha256": "6d44a1afc600986856672da8dd0bf6d1a48c0396311ea957ee0b8977fd9665cc",
+      "url": "https://cdn07.carsforsale.com/dealerlogos/532452/Logo206236.521ab7ca.png",
+      "observedAt": "2026-10-21T08:15:58.340Z"
+    }
+  ],
+  "creationMethod": "public-original-alpha-preserving-surface-exports",
   "dealerApproved": false,
-  "generatedInputs": null
+  "reviewedInputs": {
+    "reviewedAt": "2026-10-21T08:15:58.340Z",
+    "master": {
+      "path": "branding/original-mirage-public.png",
+      "sha256": "6d44a1afc600986856672da8dd0bf6d1a48c0396311ea957ee0b8977fd9665cc",
+      "retainedSource": {
+        "kind": "retained-original-raster",
+        "sha256": "6d44a1afc600986856672da8dd0bf6d1a48c0396311ea957ee0b8977fd9665cc",
+        "observedAt": "2026-10-21T08:15:58.340Z",
+        "url": "https://cdn07.carsforsale.com/dealerlogos/532452/Logo206236.521ab7ca.png"
+      },
+      "rasterTreatment": "solid-black"
+    },
+    "mark": {
+      "path": "branding/original-mirage-public.png",
+      "sha256": "6d44a1afc600986856672da8dd0bf6d1a48c0396311ea957ee0b8977fd9665cc",
+      "retainedSource": {
+        "kind": "retained-original-raster",
+        "sha256": "6d44a1afc600986856672da8dd0bf6d1a48c0396311ea957ee0b8977fd9665cc",
+        "observedAt": "2026-10-21T08:15:58.340Z",
+        "url": "https://cdn07.carsforsale.com/dealerlogos/532452/Logo206236.521ab7ca.png"
+      },
+      "rasterTreatment": "solid-black"
+    },
+    "markOnDark": {
+      "path": "branding/original-mirage-public.png",
+      "sha256": "6d44a1afc600986856672da8dd0bf6d1a48c0396311ea957ee0b8977fd9665cc",
+      "retainedSource": {
+        "kind": "retained-original-raster",
+        "sha256": "6d44a1afc600986856672da8dd0bf6d1a48c0396311ea957ee0b8977fd9665cc",
+        "observedAt": "2026-10-21T08:15:58.340Z",
+        "url": "https://cdn07.carsforsale.com/dealerlogos/532452/Logo206236.521ab7ca.png"
+      },
+      "rasterTreatment": "solid-white"
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/original-mirage-public.png",
+        "sha256": "6d44a1afc600986856672da8dd0bf6d1a48c0396311ea957ee0b8977fd9665cc",
+        "retainedSource": {
+          "kind": "retained-original-raster",
+          "sha256": "6d44a1afc600986856672da8dd0bf6d1a48c0396311ea957ee0b8977fd9665cc",
+          "observedAt": "2026-10-21T08:15:58.340Z",
+          "url": "https://cdn07.carsforsale.com/dealerlogos/532452/Logo206236.521ab7ca.png"
+        },
+        "rasterTreatment": "solid-black"
+      },
+      "onDark": {
+        "path": "branding/original-mirage-public.png",
+        "sha256": "6d44a1afc600986856672da8dd0bf6d1a48c0396311ea957ee0b8977fd9665cc",
+        "retainedSource": {
+          "kind": "retained-original-raster",
+          "sha256": "6d44a1afc600986856672da8dd0bf6d1a48c0396311ea957ee0b8977fd9665cc",
+          "observedAt": "2026-10-21T08:15:58.340Z",
+          "url": "https://cdn07.carsforsale.com/dealerlogos/532452/Logo206236.521ab7ca.png"
+        },
+        "rasterTreatment": "solid-white"
+      },
+      "onAccent": {
+        "path": "branding/original-mirage-public.png",
+        "sha256": "6d44a1afc600986856672da8dd0bf6d1a48c0396311ea957ee0b8977fd9665cc",
+        "retainedSource": {
+          "kind": "retained-original-raster",
+          "sha256": "6d44a1afc600986856672da8dd0bf6d1a48c0396311ea957ee0b8977fd9665cc",
+          "observedAt": "2026-10-21T08:15:58.340Z",
+          "url": "https://cdn07.carsforsale.com/dealerlogos/532452/Logo206236.521ab7ca.png"
+        },
+        "rasterTreatment": "solid-white"
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "kind": "genuine-public-artwork-agent-visual-review",
+      "dealerApproval": false,
+      "notes": "Retain the exact published Mirage emblem silhouette. Black and white exports recolour only existing non-transparent pixels; no geometry, letters, background removal or dealer approval are added."
+    }
+  },
+  "originalDraftSha256": "e78ed0647d7631d10df4555994b7f0351dc6146ef8c9fb0aba7c528138213973",
+  "sourceReadinessEvidence": {
+    "checkedAt": "2026-10-21T08:51:28.596Z",
+    "pixelChecks": 8,
+    "allPassed": true,
+    "reportSha256": "446a501a092da9d42fbc6c81733fd57da1ac0842703cb9da4edcdb3916db98af",
+    "consumerRasterSha256": "68b6d5d4b6e46aec3a759063537546aee66947f4cf61767e83fafda81cc7f86b",
+    "reviewScope": "Agent visual inspection of the exact retained emblem at generated 360x140 surfaces, 512px marks, and actual 32/64px favicon consumers using the unchanged maintained raster gates.",
+    "nativeApproval": false,
+    "hostedApproval": false,
+    "generatedArtwork": false
+  }
 }
