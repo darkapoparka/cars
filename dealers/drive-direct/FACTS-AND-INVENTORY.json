@@ -3,8 +3,8 @@
   "dealer": "drive-direct",
   "businessFacts": "business-facts.json",
   "stock": "stock.json",
-  "inventoryKind": "illustrative-not-dealer-stock",
-  "inventoryNotice": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
+  "inventoryKind": "dated-listing-snapshot",
+  "inventoryNotice": "Dated public listing samples observed on 2026-10-21. Availability has not been confirmed. Listing prices are omitted in this preview.",
   "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
   "sources": [
     {
@@ -26,6 +26,33 @@
       "observedAt": "2026-10-18",
       "supports": [
         "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/Drive-Direct?menu=1",
+      "observedAt": "2026-10-21T09:42:43.472Z",
+      "htmlSha256": "e2478cb1ff657e506549238cad37a22a525afc7153b8ad7aa77f7606721eaeec",
+      "supports": [
+        "business.name",
+        "public-business-contact",
+        "dealer-stock-source",
+        "published-original-logo"
+      ]
+    },
+    {
+      "url": "https://www.ebay.co.uk/itm/860067229070",
+      "observedAt": "2026-10-21T09:42:43.472Z",
+      "htmlSha256": "e2478cb1ff657e506549238cad37a22a525afc7153b8ad7aa77f7606721eaeec",
+      "supports": [
+        "stock.ebay-860067229070"
+      ]
+    },
+    {
+      "url": "https://www.ebay.co.uk/itm/860063458415",
+      "observedAt": "2026-10-21T09:42:43.472Z",
+      "htmlSha256": "e2478cb1ff657e506549238cad37a22a525afc7153b8ad7aa77f7606721eaeec",
+      "supports": [
+        "stock.ebay-860063458415"
       ]
     }
   ]

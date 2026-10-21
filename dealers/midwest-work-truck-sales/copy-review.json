@@ -2,27 +2,27 @@
   "schemaVersion": 1,
   "kind": "cars-new-source-reviewed-companion-copy",
   "dealer": "midwest-work-truck-sales",
-  "reviewed": false,
-  "reviewedAt": null,
-  "stockSha256": "717ffc99e01c0a40ce90a21b82c14257e6236178e7caaf975c2958769eb082f3",
+  "reviewed": true,
+  "reviewedAt": "2026-10-21T09:42:52.386Z",
+  "stockSha256": "22ea0fb4cf80fdd5432e79610d7643c7969ad77039409424323f3496fecf1e5c",
   "descriptions": [
     {
-      "sourceId": "template-demo-auto-best-1",
-      "sourceDescription": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
-      "en": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
-      "bg": "Илюстративни демонстрационни автомобили от запазения шаблон Cars; те не са наличности на тази автокъща. Наличността не е проверена. Цените са пропуснати в този преглед."
+      "sourceId": "2014-ram-4500-service-truck",
+      "sourceDescription": "Dated public listing samples observed on 2026-10-21. Availability has not been confirmed. Listing prices are omitted in this preview.",
+      "en": "Dated public listing samples observed on 2026-10-21. Availability has not been confirmed. Listing prices are omitted in this preview.",
+      "bg": "Примери от публични обяви, наблюдавани на 2026-10-21. Наличността не е потвърдена. Цените са пропуснати в този преглед."
     },
     {
-      "sourceId": "template-demo-auto-best-2",
-      "sourceDescription": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
-      "en": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
-      "bg": "Илюстративни демонстрационни автомобили от запазения шаблон Cars; те не са наличности на тази автокъща. Наличността не е проверена. Цените са пропуснати в този преглед."
+      "sourceId": "2020-ford-f550-service-truck",
+      "sourceDescription": "Dated public listing samples observed on 2026-10-21. Availability has not been confirmed. Listing prices are omitted in this preview.",
+      "en": "Dated public listing samples observed on 2026-10-21. Availability has not been confirmed. Listing prices are omitted in this preview.",
+      "bg": "Примери от публични обяви, наблюдавани на 2026-10-21. Наличността не е потвърдена. Цените са пропуснати в този преглед."
     },
     {
-      "sourceId": "template-demo-auto-best-3",
-      "sourceDescription": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
-      "en": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
-      "bg": "Илюстративни демонстрационни автомобили от запазения шаблон Cars; те не са наличности на тази автокъща. Наличността не е проверена. Цените са пропуснати в този преглед."
+      "sourceId": "2014-ram-5500-crew-cab",
+      "sourceDescription": "Dated public listing samples observed on 2026-10-21. Availability has not been confirmed. Listing prices are omitted in this preview.",
+      "en": "Dated public listing samples observed on 2026-10-21. Availability has not been confirmed. Listing prices are omitted in this preview.",
+      "bg": "Примери от публични обяви, наблюдавани на 2026-10-21. Наличността не е потвърдена. Цените са пропуснати в този преглед."
     }
   ]
 }

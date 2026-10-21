@@ -10,7 +10,7 @@
     "currency": "GBP",
     "distanceUnit": "mi",
     "locale": "en-GB",
-    "address": "Yard 3, 318 Aston Church Road, Saltley, Birmingham B8 1QA (AutoTrader); eBay gives appointment-only B27 6EJ",
+    "address": "",
     "phone": "+441212700365",
     "phoneDisplay": "+441212700365",
     "email": "nasar0121@outlook.com",
@@ -18,8 +18,8 @@
     "stockUrl": "https://showroom.ebaymotorspro.co.uk/Drive-Direct?menu=1",
     "hours": "",
     "sourceUrl": "https://showroom.ebaymotorspro.co.uk/Drive-Direct?menu=1",
-    "observedAt": "2026-10-18",
-    "inventoryNotice": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
+    "observedAt": "2026-10-21T09:42:43.472Z",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-21. Availability has not been confirmed. Listing prices are omitted in this preview.",
     "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
     "logo": "/dealer-brand/logo-on-light.png",
     "logoLight": "/dealer-brand/logo-on-light.png",
@@ -45,6 +45,33 @@
       "observedAt": "2026-10-18",
       "supports": [
         "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/Drive-Direct?menu=1",
+      "observedAt": "2026-10-21T09:42:43.472Z",
+      "htmlSha256": "e2478cb1ff657e506549238cad37a22a525afc7153b8ad7aa77f7606721eaeec",
+      "supports": [
+        "business.name",
+        "public-business-contact",
+        "dealer-stock-source",
+        "published-original-logo"
+      ]
+    },
+    {
+      "url": "https://www.ebay.co.uk/itm/860067229070",
+      "observedAt": "2026-10-21T09:42:43.472Z",
+      "htmlSha256": "e2478cb1ff657e506549238cad37a22a525afc7153b8ad7aa77f7606721eaeec",
+      "supports": [
+        "stock.ebay-860067229070"
+      ]
+    },
+    {
+      "url": "https://www.ebay.co.uk/itm/860063458415",
+      "observedAt": "2026-10-21T09:42:43.472Z",
+      "htmlSha256": "e2478cb1ff657e506549238cad37a22a525afc7153b8ad7aa77f7606721eaeec",
+      "supports": [
+        "stock.ebay-860063458415"
       ]
     }
   ]

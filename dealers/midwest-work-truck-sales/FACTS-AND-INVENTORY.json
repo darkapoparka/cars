@@ -3,8 +3,8 @@
   "dealer": "midwest-work-truck-sales",
   "businessFacts": "business-facts.json",
   "stock": "stock.json",
-  "inventoryKind": "illustrative-not-dealer-stock",
-  "inventoryNotice": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
+  "inventoryKind": "dated-listing-snapshot",
+  "inventoryNotice": "Dated public listing samples observed on 2026-10-21. Availability has not been confirmed. Listing prices are omitted in this preview.",
   "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
   "sources": [
     {
@@ -54,6 +54,41 @@
       "observedAt": "2026-10-18",
       "supports": [
         "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.mwworktrucks.com/",
+      "observedAt": "2026-10-21T09:42:49.419Z",
+      "htmlSha256": "7ca7ca855ee28735e2c0b0832366c6dbac8b9826f2fbc752e112a8fc5a213f6c",
+      "supports": [
+        "business.name",
+        "public-business-contact",
+        "dealer-stock-source",
+        "published-original-logo"
+      ]
+    },
+    {
+      "url": "https://www.mwworktrucks.com/product-page/2014-ram-4500-service-truck-6-7l-cummins-diesel",
+      "observedAt": "2026-10-21T09:42:49.585Z",
+      "htmlSha256": "32ce4cc07ae72595c93e2f74e7979b2459d0b34fb945e1af433d8ce4e86465c0",
+      "supports": [
+        "stock.2014-ram-4500-service-truck"
+      ]
+    },
+    {
+      "url": "https://www.mwworktrucks.com/product-page/2020-ford-f-550-crew-cab-service-truck",
+      "observedAt": "2026-10-21T09:42:49.935Z",
+      "htmlSha256": "593600ac13197916543f80ececa72e27a2898411d65f870d6bb410a0a1ddc8d8",
+      "supports": [
+        "stock.2020-ford-f550-service-truck"
+      ]
+    },
+    {
+      "url": "https://www.mwworktrucks.com/product-page/2014-ram-5500-4x4-crew-cab-flatbed",
+      "observedAt": "2026-10-21T09:42:50.310Z",
+      "htmlSha256": "dce69e3b235a76e765e821c0298a3ea72fd411df01ea3d54be0ebc2d1da2fdc4",
+      "supports": [
+        "stock.2014-ram-5500-crew-cab"
       ]
     }
   ]

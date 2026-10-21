@@ -16,6 +16,11 @@
       "field": "prices",
       "required": false,
       "reason": "All listing prices are omitted under the public-repository scope."
+    },
+    {
+      "field": "business.address",
+      "required": false,
+      "reason": "Retained AutoTrader premises B8 1QA disagree with current eBay appointment-only B27 6EJ. Street/postcode omitted until reconciled; Birmingham remains sourced."
     }
   ],
   "blocking": []

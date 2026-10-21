@@ -1,0 +1,469 @@
+{
+  "schemaVersion": 1,
+  "dealer": "midwest-work-truck-sales",
+  "reviewed": true,
+  "reviewedAt": "2026-10-21T09:42:49.442Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "retained-public-raster-reviewed-white-canvas-monochrome",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "99bb6dc67de8f77da8669fb55f066b03336250cfcf0029835eba3bab2ca655d1",
+      "sourceSha256": "2c270f37fb70a4e38936f446864f32a34d9444e5a057a04c87be87db0a5b24b8"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "3fe08f3b0ee49dad3549f077f9edc195c974a39976cd3bc20892ace75f63fc08",
+      "sourceSha256": "6e1fbce3caca0f0b3bfdc171a0f08e76f7ee4406d510e3a0a06dd6be3916d61b"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "3fe08f3b0ee49dad3549f077f9edc195c974a39976cd3bc20892ace75f63fc08",
+      "sourceSha256": "6e1fbce3caca0f0b3bfdc171a0f08e76f7ee4406d510e3a0a06dd6be3916d61b"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "2c270f37fb70a4e38936f446864f32a34d9444e5a057a04c87be87db0a5b24b8",
+    "retainedSource": {
+      "kind": "retained-reviewed-raster",
+      "reference": "dealers/midwest-work-truck-sales/branding/original-public-midwest-work-truck-sales.png",
+      "sha256": "7b6b7e38d76ccba2535a0f7bd74ad083ac6ffe92d9b2a82ab68dcf4ba52f0823",
+      "reviewReference": "dealers/midwest-work-truck-sales/branding/source.json",
+      "reviewSha256": "956e70a89d27504a508c2274dd0af81e22276167e82ec88129753dcab166b93f",
+      "sourceUrl": "https://static.wixstatic.com/media/b915d1_b34eb3fcd17544a3bcb3d97ff4b2d2a1~mv2.png",
+      "observedAt": "2026-10-21T09:42:49.442Z",
+      "exportTreatment": {
+        "kind": "reviewed-white-matte-solid-ink-v1",
+        "ink": "solid-black",
+        "sourceSha256": "7b6b7e38d76ccba2535a0f7bd74ad083ac6ffe92d9b2a82ab68dcf4ba52f0823",
+        "background": "#ffffff",
+        "derivedTransparency": true,
+        "originalAlphaPreserved": false,
+        "matteReviewSha256": "6221b19aab1554032a5f9105764cf9e2c8b18247201b1bf34c11bf8eca79eb18",
+        "newGeometry": false
+      }
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "f1cbc69e9b891bc27e5abb7c6ca219317cb0063c936aef63c814a11e5ab57f3d",
+    "retainedSource": {
+      "kind": "retained-reviewed-raster",
+      "reference": "dealers/midwest-work-truck-sales/branding/original-public-midwest-work-truck-sales.png",
+      "sha256": "7b6b7e38d76ccba2535a0f7bd74ad083ac6ffe92d9b2a82ab68dcf4ba52f0823",
+      "reviewReference": "dealers/midwest-work-truck-sales/branding/source.json",
+      "reviewSha256": "956e70a89d27504a508c2274dd0af81e22276167e82ec88129753dcab166b93f",
+      "sourceUrl": "https://static.wixstatic.com/media/b915d1_b34eb3fcd17544a3bcb3d97ff4b2d2a1~mv2.png",
+      "observedAt": "2026-10-21T09:42:49.442Z",
+      "exportTreatment": {
+        "kind": "reviewed-white-matte-solid-ink-v1",
+        "ink": "solid-black",
+        "sourceSha256": "7b6b7e38d76ccba2535a0f7bd74ad083ac6ffe92d9b2a82ab68dcf4ba52f0823",
+        "background": "#ffffff",
+        "derivedTransparency": true,
+        "originalAlphaPreserved": false,
+        "matteReviewSha256": "6221b19aab1554032a5f9105764cf9e2c8b18247201b1bf34c11bf8eca79eb18",
+        "newGeometry": false
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "7f205c4fd6f78d204d3d05f162c2f78c1bf27fcf53855c7105a80c352bcc3fb8"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "2c270f37fb70a4e38936f446864f32a34d9444e5a057a04c87be87db0a5b24b8",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "dealers/midwest-work-truck-sales/branding/original-public-midwest-work-truck-sales.png",
+        "sha256": "7b6b7e38d76ccba2535a0f7bd74ad083ac6ffe92d9b2a82ab68dcf4ba52f0823",
+        "reviewReference": "dealers/midwest-work-truck-sales/branding/source.json",
+        "reviewSha256": "956e70a89d27504a508c2274dd0af81e22276167e82ec88129753dcab166b93f",
+        "sourceUrl": "https://static.wixstatic.com/media/b915d1_b34eb3fcd17544a3bcb3d97ff4b2d2a1~mv2.png",
+        "observedAt": "2026-10-21T09:42:49.442Z",
+        "exportTreatment": {
+          "kind": "reviewed-white-matte-solid-ink-v1",
+          "ink": "solid-black",
+          "sourceSha256": "7b6b7e38d76ccba2535a0f7bd74ad083ac6ffe92d9b2a82ab68dcf4ba52f0823",
+          "background": "#ffffff",
+          "derivedTransparency": true,
+          "originalAlphaPreserved": false,
+          "matteReviewSha256": "6221b19aab1554032a5f9105764cf9e2c8b18247201b1bf34c11bf8eca79eb18",
+          "newGeometry": false
+        }
+      },
+      "sourceReference": "dealers/midwest-work-truck-sales/branding/original-public-midwest-work-truck-sales.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "6e1fbce3caca0f0b3bfdc171a0f08e76f7ee4406d510e3a0a06dd6be3916d61b",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "dealers/midwest-work-truck-sales/branding/original-public-midwest-work-truck-sales.png",
+        "sha256": "7b6b7e38d76ccba2535a0f7bd74ad083ac6ffe92d9b2a82ab68dcf4ba52f0823",
+        "reviewReference": "dealers/midwest-work-truck-sales/branding/source.json",
+        "reviewSha256": "956e70a89d27504a508c2274dd0af81e22276167e82ec88129753dcab166b93f",
+        "sourceUrl": "https://static.wixstatic.com/media/b915d1_b34eb3fcd17544a3bcb3d97ff4b2d2a1~mv2.png",
+        "observedAt": "2026-10-21T09:42:49.442Z",
+        "exportTreatment": {
+          "kind": "reviewed-white-matte-solid-ink-v1",
+          "ink": "solid-white",
+          "sourceSha256": "7b6b7e38d76ccba2535a0f7bd74ad083ac6ffe92d9b2a82ab68dcf4ba52f0823",
+          "background": "#ffffff",
+          "derivedTransparency": true,
+          "originalAlphaPreserved": false,
+          "matteReviewSha256": "6221b19aab1554032a5f9105764cf9e2c8b18247201b1bf34c11bf8eca79eb18",
+          "newGeometry": false
+        }
+      },
+      "sourceReference": "dealers/midwest-work-truck-sales/branding/original-public-midwest-work-truck-sales.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "6e1fbce3caca0f0b3bfdc171a0f08e76f7ee4406d510e3a0a06dd6be3916d61b",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "dealers/midwest-work-truck-sales/branding/original-public-midwest-work-truck-sales.png",
+        "sha256": "7b6b7e38d76ccba2535a0f7bd74ad083ac6ffe92d9b2a82ab68dcf4ba52f0823",
+        "reviewReference": "dealers/midwest-work-truck-sales/branding/source.json",
+        "reviewSha256": "956e70a89d27504a508c2274dd0af81e22276167e82ec88129753dcab166b93f",
+        "sourceUrl": "https://static.wixstatic.com/media/b915d1_b34eb3fcd17544a3bcb3d97ff4b2d2a1~mv2.png",
+        "observedAt": "2026-10-21T09:42:49.442Z",
+        "exportTreatment": {
+          "kind": "reviewed-white-matte-solid-ink-v1",
+          "ink": "solid-white",
+          "sourceSha256": "7b6b7e38d76ccba2535a0f7bd74ad083ac6ffe92d9b2a82ab68dcf4ba52f0823",
+          "background": "#ffffff",
+          "derivedTransparency": true,
+          "originalAlphaPreserved": false,
+          "matteReviewSha256": "6221b19aab1554032a5f9105764cf9e2c8b18247201b1bf34c11bf8eca79eb18",
+          "newGeometry": false
+        }
+      },
+      "sourceReference": "dealers/midwest-work-truck-sales/branding/original-public-midwest-work-truck-sales.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "reviewed-white-matte-crop-and-resize",
+      "sourceSha256": "7b6b7e38d76ccba2535a0f7bd74ad083ac6ffe92d9b2a82ab68dcf4ba52f0823",
+      "sha256": "2c270f37fb70a4e38936f446864f32a34d9444e5a057a04c87be87db0a5b24b8",
+      "crop": {
+        "left": 56,
+        "top": 396,
+        "width": 1888,
+        "height": 1208
+      },
+      "rasterTreatment": {
+        "kind": "reviewed-white-matte-solid-ink-v1",
+        "ink": "solid-black",
+        "background": "#ffffff",
+        "whiteNoiseCeiling": 5,
+        "alphaRule": "preserve original opaque foreground alpha; only source pixels within five RGB levels of white become transparent",
+        "originalAlphaUnchangedBeforeCropAndResize": false,
+        "originalWasFullyOpaque": true,
+        "derivedTransparency": true,
+        "originalWidth": 2000,
+        "originalHeight": 2000,
+        "whiteCanvasPixels": 3120000,
+        "borderWhiteFraction": 1,
+        "derivedPixelSha256": "c0d1bb2b17a6e368800b04606213f27cea87f40c1590509c3e9cb6688c584d7d",
+        "newGeometry": false
+      },
+      "sourcePath": "branding/original-public-midwest-work-truck-sales.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "reviewed-white-matte-crop-and-resize",
+      "sourceSha256": "7b6b7e38d76ccba2535a0f7bd74ad083ac6ffe92d9b2a82ab68dcf4ba52f0823",
+      "sha256": "6e1fbce3caca0f0b3bfdc171a0f08e76f7ee4406d510e3a0a06dd6be3916d61b",
+      "crop": {
+        "left": 56,
+        "top": 396,
+        "width": 1888,
+        "height": 1208
+      },
+      "rasterTreatment": {
+        "kind": "reviewed-white-matte-solid-ink-v1",
+        "ink": "solid-white",
+        "background": "#ffffff",
+        "whiteNoiseCeiling": 5,
+        "alphaRule": "preserve original opaque foreground alpha; only source pixels within five RGB levels of white become transparent",
+        "originalAlphaUnchangedBeforeCropAndResize": false,
+        "originalWasFullyOpaque": true,
+        "derivedTransparency": true,
+        "originalWidth": 2000,
+        "originalHeight": 2000,
+        "whiteCanvasPixels": 3120000,
+        "borderWhiteFraction": 1,
+        "derivedPixelSha256": "f9afa08c665cc9f7a306ade1650a6f3f20965bef2f4f3dc71724b6a5c9101792",
+        "newGeometry": false
+      },
+      "sourcePath": "branding/original-public-midwest-work-truck-sales.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "reviewed-white-matte-crop-and-resize",
+      "sourceSha256": "7b6b7e38d76ccba2535a0f7bd74ad083ac6ffe92d9b2a82ab68dcf4ba52f0823",
+      "sha256": "6e1fbce3caca0f0b3bfdc171a0f08e76f7ee4406d510e3a0a06dd6be3916d61b",
+      "crop": {
+        "left": 56,
+        "top": 396,
+        "width": 1888,
+        "height": 1208
+      },
+      "rasterTreatment": {
+        "kind": "reviewed-white-matte-solid-ink-v1",
+        "ink": "solid-white",
+        "background": "#ffffff",
+        "whiteNoiseCeiling": 5,
+        "alphaRule": "preserve original opaque foreground alpha; only source pixels within five RGB levels of white become transparent",
+        "originalAlphaUnchangedBeforeCropAndResize": false,
+        "originalWasFullyOpaque": true,
+        "derivedTransparency": true,
+        "originalWidth": 2000,
+        "originalHeight": 2000,
+        "whiteCanvasPixels": 3120000,
+        "borderWhiteFraction": 1,
+        "derivedPixelSha256": "f9afa08c665cc9f7a306ade1650a6f3f20965bef2f4f3dc71724b6a5c9101792",
+        "newGeometry": false
+      },
+      "sourcePath": "branding/original-public-midwest-work-truck-sales.png",
+      "outputPath": "branding/logo-on-accent.png"
+    },
+    "master": {
+      "operation": "reviewed-white-matte-crop-and-resize",
+      "sourceSha256": "7b6b7e38d76ccba2535a0f7bd74ad083ac6ffe92d9b2a82ab68dcf4ba52f0823",
+      "sha256": "2c270f37fb70a4e38936f446864f32a34d9444e5a057a04c87be87db0a5b24b8",
+      "crop": {
+        "left": 56,
+        "top": 396,
+        "width": 1888,
+        "height": 1208
+      },
+      "rasterTreatment": {
+        "kind": "reviewed-white-matte-solid-ink-v1",
+        "ink": "solid-black",
+        "background": "#ffffff",
+        "whiteNoiseCeiling": 5,
+        "alphaRule": "preserve original opaque foreground alpha; only source pixels within five RGB levels of white become transparent",
+        "originalAlphaUnchangedBeforeCropAndResize": false,
+        "originalWasFullyOpaque": true,
+        "derivedTransparency": true,
+        "originalWidth": 2000,
+        "originalHeight": 2000,
+        "whiteCanvasPixels": 3120000,
+        "borderWhiteFraction": 1,
+        "derivedPixelSha256": "c0d1bb2b17a6e368800b04606213f27cea87f40c1590509c3e9cb6688c584d7d",
+        "newGeometry": false
+      },
+      "sourcePath": "branding/original-public-midwest-work-truck-sales.png"
+    },
+    "mark": {
+      "operation": "reviewed-white-matte-crop-and-resize",
+      "sourceSha256": "7b6b7e38d76ccba2535a0f7bd74ad083ac6ffe92d9b2a82ab68dcf4ba52f0823",
+      "sha256": "f1cbc69e9b891bc27e5abb7c6ca219317cb0063c936aef63c814a11e5ab57f3d",
+      "crop": {
+        "left": 56,
+        "top": 396,
+        "width": 1888,
+        "height": 1208
+      },
+      "rasterTreatment": {
+        "kind": "reviewed-white-matte-solid-ink-v1",
+        "ink": "solid-black",
+        "background": "#ffffff",
+        "whiteNoiseCeiling": 5,
+        "alphaRule": "preserve original opaque foreground alpha; only source pixels within five RGB levels of white become transparent",
+        "originalAlphaUnchangedBeforeCropAndResize": false,
+        "originalWasFullyOpaque": true,
+        "derivedTransparency": true,
+        "originalWidth": 2000,
+        "originalHeight": 2000,
+        "whiteCanvasPixels": 3120000,
+        "borderWhiteFraction": 1,
+        "derivedPixelSha256": "c0d1bb2b17a6e368800b04606213f27cea87f40c1590509c3e9cb6688c584d7d",
+        "newGeometry": false
+      },
+      "sourcePath": "branding/original-public-midwest-work-truck-sales.png"
+    },
+    "markOnDark": {
+      "operation": "reviewed-white-matte-crop-and-resize",
+      "sourceSha256": "7b6b7e38d76ccba2535a0f7bd74ad083ac6ffe92d9b2a82ab68dcf4ba52f0823",
+      "sha256": "0cbd755a7c2df123ae5c60b2845878dfbac82696fdb7179527342cf037b0ff71",
+      "crop": {
+        "left": 56,
+        "top": 396,
+        "width": 1888,
+        "height": 1208
+      },
+      "rasterTreatment": {
+        "kind": "reviewed-white-matte-solid-ink-v1",
+        "ink": "solid-white",
+        "background": "#ffffff",
+        "whiteNoiseCeiling": 5,
+        "alphaRule": "preserve original opaque foreground alpha; only source pixels within five RGB levels of white become transparent",
+        "originalAlphaUnchangedBeforeCropAndResize": false,
+        "originalWasFullyOpaque": true,
+        "derivedTransparency": true,
+        "originalWidth": 2000,
+        "originalHeight": 2000,
+        "whiteCanvasPixels": 3120000,
+        "borderWhiteFraction": 1,
+        "derivedPixelSha256": "f9afa08c665cc9f7a306ade1650a6f3f20965bef2f4f3dc71724b6a5c9101792",
+        "newGeometry": false
+      },
+      "sourcePath": "branding/original-public-midwest-work-truck-sales.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "85960821addbd54ad27eec4a607a55f87cfb0d901287586f2517d4fec36d41e7",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "dealers/midwest-work-truck-sales/branding/original-public-midwest-work-truck-sales.png",
+        "sha256": "7b6b7e38d76ccba2535a0f7bd74ad083ac6ffe92d9b2a82ab68dcf4ba52f0823",
+        "reviewReference": "dealers/midwest-work-truck-sales/branding/source.json",
+        "reviewSha256": "956e70a89d27504a508c2274dd0af81e22276167e82ec88129753dcab166b93f",
+        "sourceUrl": "https://static.wixstatic.com/media/b915d1_b34eb3fcd17544a3bcb3d97ff4b2d2a1~mv2.png",
+        "observedAt": "2026-10-21T09:42:49.442Z",
+        "exportTreatment": {
+          "kind": "reviewed-white-matte-solid-ink-v1",
+          "ink": "solid-black",
+          "sourceSha256": "7b6b7e38d76ccba2535a0f7bd74ad083ac6ffe92d9b2a82ab68dcf4ba52f0823",
+          "background": "#ffffff",
+          "derivedTransparency": true,
+          "originalAlphaPreserved": false,
+          "matteReviewSha256": "6221b19aab1554032a5f9105764cf9e2c8b18247201b1bf34c11bf8eca79eb18",
+          "newGeometry": false
+        }
+      },
+      "sourceReference": "dealers/midwest-work-truck-sales/branding/original-public-midwest-work-truck-sales.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "0f7ca2572daa1d6c77892945f5999f3b8ca34199f6bea31c6ff9340a9485ec18",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "dealers/midwest-work-truck-sales/branding/original-public-midwest-work-truck-sales.png",
+        "sha256": "7b6b7e38d76ccba2535a0f7bd74ad083ac6ffe92d9b2a82ab68dcf4ba52f0823",
+        "reviewReference": "dealers/midwest-work-truck-sales/branding/source.json",
+        "reviewSha256": "956e70a89d27504a508c2274dd0af81e22276167e82ec88129753dcab166b93f",
+        "sourceUrl": "https://static.wixstatic.com/media/b915d1_b34eb3fcd17544a3bcb3d97ff4b2d2a1~mv2.png",
+        "observedAt": "2026-10-21T09:42:49.442Z",
+        "exportTreatment": {
+          "kind": "reviewed-white-matte-solid-ink-v1",
+          "ink": "solid-white",
+          "sourceSha256": "7b6b7e38d76ccba2535a0f7bd74ad083ac6ffe92d9b2a82ab68dcf4ba52f0823",
+          "background": "#ffffff",
+          "derivedTransparency": true,
+          "originalAlphaPreserved": false,
+          "matteReviewSha256": "6221b19aab1554032a5f9105764cf9e2c8b18247201b1bf34c11bf8eca79eb18",
+          "newGeometry": false
+        }
+      },
+      "sourceReference": "dealers/midwest-work-truck-sales/branding/original-public-midwest-work-truck-sales.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "f1cbc69e9b891bc27e5abb7c6ca219317cb0063c936aef63c814a11e5ab57f3d",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "dealers/midwest-work-truck-sales/branding/original-public-midwest-work-truck-sales.png",
+        "sha256": "7b6b7e38d76ccba2535a0f7bd74ad083ac6ffe92d9b2a82ab68dcf4ba52f0823",
+        "reviewReference": "dealers/midwest-work-truck-sales/branding/source.json",
+        "reviewSha256": "956e70a89d27504a508c2274dd0af81e22276167e82ec88129753dcab166b93f",
+        "sourceUrl": "https://static.wixstatic.com/media/b915d1_b34eb3fcd17544a3bcb3d97ff4b2d2a1~mv2.png",
+        "observedAt": "2026-10-21T09:42:49.442Z",
+        "exportTreatment": {
+          "kind": "reviewed-white-matte-solid-ink-v1",
+          "ink": "solid-black",
+          "sourceSha256": "7b6b7e38d76ccba2535a0f7bd74ad083ac6ffe92d9b2a82ab68dcf4ba52f0823",
+          "background": "#ffffff",
+          "derivedTransparency": true,
+          "originalAlphaPreserved": false,
+          "matteReviewSha256": "6221b19aab1554032a5f9105764cf9e2c8b18247201b1bf34c11bf8eca79eb18",
+          "newGeometry": false
+        }
+      },
+      "sourceReference": "dealers/midwest-work-truck-sales/branding/original-public-midwest-work-truck-sales.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "7f205c4fd6f78d204d3d05f162c2f78c1bf27fcf53855c7105a80c352bcc3fb8",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "dealers/midwest-work-truck-sales/branding/original-public-midwest-work-truck-sales.png",
+        "sha256": "7b6b7e38d76ccba2535a0f7bd74ad083ac6ffe92d9b2a82ab68dcf4ba52f0823",
+        "reviewReference": "dealers/midwest-work-truck-sales/branding/source.json",
+        "reviewSha256": "956e70a89d27504a508c2274dd0af81e22276167e82ec88129753dcab166b93f",
+        "sourceUrl": "https://static.wixstatic.com/media/b915d1_b34eb3fcd17544a3bcb3d97ff4b2d2a1~mv2.png",
+        "observedAt": "2026-10-21T09:42:49.442Z",
+        "exportTreatment": {
+          "kind": "reviewed-white-matte-solid-ink-v1",
+          "ink": "solid-black",
+          "sourceSha256": "7b6b7e38d76ccba2535a0f7bd74ad083ac6ffe92d9b2a82ab68dcf4ba52f0823",
+          "background": "#ffffff",
+          "derivedTransparency": true,
+          "originalAlphaPreserved": false,
+          "matteReviewSha256": "6221b19aab1554032a5f9105764cf9e2c8b18247201b1bf34c11bf8eca79eb18",
+          "newGeometry": false
+        }
+      },
+      "sourceReference": "dealers/midwest-work-truck-sales/branding/original-public-midwest-work-truck-sales.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-21T09:42:49.442Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "0cbd755a7c2df123ae5c60b2845878dfbac82696fdb7179527342cf037b0ff71",
+    "retainedSource": {
+      "kind": "retained-reviewed-raster",
+      "reference": "dealers/midwest-work-truck-sales/branding/original-public-midwest-work-truck-sales.png",
+      "sha256": "7b6b7e38d76ccba2535a0f7bd74ad083ac6ffe92d9b2a82ab68dcf4ba52f0823",
+      "reviewReference": "dealers/midwest-work-truck-sales/branding/source.json",
+      "reviewSha256": "956e70a89d27504a508c2274dd0af81e22276167e82ec88129753dcab166b93f",
+      "sourceUrl": "https://static.wixstatic.com/media/b915d1_b34eb3fcd17544a3bcb3d97ff4b2d2a1~mv2.png",
+      "observedAt": "2026-10-21T09:42:49.442Z",
+      "exportTreatment": {
+        "kind": "reviewed-white-matte-solid-ink-v1",
+        "ink": "solid-white",
+        "sourceSha256": "7b6b7e38d76ccba2535a0f7bd74ad083ac6ffe92d9b2a82ab68dcf4ba52f0823",
+        "background": "#ffffff",
+        "derivedTransparency": true,
+        "originalAlphaPreserved": false,
+        "matteReviewSha256": "6221b19aab1554032a5f9105764cf9e2c8b18247201b1bf34c11bf8eca79eb18",
+        "newGeometry": false
+      }
+    }
+  }
+}
