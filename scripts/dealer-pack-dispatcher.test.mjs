@@ -58,9 +58,9 @@ test('latest actual shared contracts attempt controls reruns; a prior pass canno
   await assert.rejects(()=>readPackContractsGate({run:sourceRun,readGithub:async()=>({status:200,body:{total_count:1,jobs:[{...gate,conclusion:'failure'}]}})}),/contracts/);
 });
 
-function producerFixture(){
-  const run={...sourceRun,status:'in_progress',conclusion:null},prefix='dealer-pack-transport--123--lane-0',contracts={jobId:5,runId:123,sourceCommit:run.head_sha,attempt:2,conclusion:'success'},time=second=>'2026-10-19T20:00:0'+second+'Z';
-  const step=(name,number,start,end)=>({name,number,status:'completed',conclusion:'success',started_at:time(start),completed_at:time(end)}),job={id:66,name:'dealer-pack-producer-lane-0',run_id:123,run_attempt:2,head_sha:run.head_sha,status:'completed',conclusion:'success',started_at:time(0),completed_at:time(6),steps:[step('Build and verify all lane packs independently',1,1,2),step('Seal deduplicated final bundle transport',2,2,3),step('Retain final bundle manifest',3,3,4),step('Retain deduplicated final blob shard 0',4,4,5)]};
+function producerFixture(lane=0){
+  const run={...sourceRun,status:'in_progress',conclusion:null},prefix='dealer-pack-transport--123--lane-'+lane,contracts={jobId:5,runId:123,sourceCommit:run.head_sha,attempt:2,conclusion:'success'},time=second=>'2026-10-19T20:00:0'+second+'Z';
+  const step=(name,number,start,end)=>({name,number,status:'completed',conclusion:'success',started_at:time(start),completed_at:time(end)}),job={id:66,name:'dealer-pack-producer-lane-'+lane,run_id:123,run_attempt:2,head_sha:run.head_sha,status:'completed',conclusion:'success',started_at:time(0),completed_at:time(6),steps:[step('Build and verify all lane packs independently',1,1,2),step('Seal deduplicated final bundle transport',2,2,3),step('Retain final bundle manifest',3,3,4),step('Retain deduplicated final blob shard 0',4,4,5)]};
   const artifacts=['manifest','shard-0'].map((suffix,index)=>({id:7+index,name:prefix+'--'+suffix,expired:false,digest:'sha256:'+sha(suffix),size_in_bytes:32+index,workflow_run:{id:123,head_sha:run.head_sha},created_at:time(3+index),updated_at:time(3+index)}));
   const block=(artifact,second)=>['100 ##[group]Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02','200 SHA256 digest of uploaded artifact zip is '+artifact.digest.slice(7),'300 Artifact '+artifact.name+' has been successfully uploaded! Final size is '+artifact.size_in_bytes+' bytes. Artifact ID is '+artifact.id].map(value=>'2026-10-19T20:00:0'+second+'.'+value.slice(0,3)+'Z '+value.slice(4)+'\n').join('');
   const log=artifacts.map((row,index)=>block(row,3+index)).join('');return {run,prefix,contracts,job,artifacts,log,block};
@@ -73,6 +73,16 @@ test('completed positive producing lane admits exact artifacts while another lan
   // Legacy failed source/lane survivors retain terminal behavior, with no new
   // requirement that a failed producer job or its old display name pass.
   assert.equal((await readPackProducerGate({run:sourceRun,readGithub:async()=>assert.fail('No producer gate for a terminal legacy run'),readJobLog:async()=>assert.fail('No legacy log requirement')})).mode,'completed-run');
+});
+
+test('multi-digit lane fourteen requires its own completed job and exact artifact upload proof',async()=>{
+  const fixture=producerFixture(14),other={...fixture.job,id:67,name:'dealer-pack-producer-lane-4'};
+  const proof=await readPackProducerGate({...fixture,readGithub:async()=>({status:200,body:{total_count:2,jobs:[other,fixture.job]}}),
+    readJobLog:async({jobId})=>{assert.equal(jobId,fixture.job.id);return fixture.log;}});
+  assert.equal(proof.prefix,'dealer-pack-transport--123--lane-14');assert.equal(proof.jobId,fixture.job.id);
+  await assert.rejects(readPackProducerGate({...fixture,readGithub:async()=>({status:200,body:{total_count:1,jobs:[other]}}),
+    readJobLog:async()=>assert.fail('A different numeric lane cannot supply producing proof')}),error=>error.code==='PACK_PRODUCER_PENDING');
+  assert.throws(()=>validatePackProducerJob(fixture.job,{...fixture,log:fixture.log.replaceAll('--lane-14--','--lane-4--')}),/upload log/);
 });
 
 test('early intake refuses foreign, stale, running, failed or incompletely verified producing jobs',()=>{

@@ -14,6 +14,8 @@ const assert = (ok, message) => {if (!ok) throw Error(message);};
 const hex40 = value => typeof value === 'string' && /^[a-f0-9]{40}$/.test(value);
 const hex64 = value => typeof value === 'string' && /^[a-f0-9]{64}$/.test(value);
 const benchmarkMix = Object.freeze([{sourceSlug: 'za-motors', count: 7}, {sourceSlug: 'granada-auto-sales', count: 1}, {sourceSlug: 'wadishee-used-cars', count: 17}]);
+export const PACK_CI_MAX_LANES = 14;
+export const PACK_CI_BENCHMARK_LANES = 7;
 
 export function parsePlanSlugs(value) {
   const rows = Array.isArray(value) ? value : typeof value === 'string' && value.trim().startsWith('[') ? JSON.parse(value) : String(value ?? '').split(/[\s,]+/).filter(Boolean);
@@ -46,19 +48,20 @@ export function benchmarkDealerPackDescriptors() {
   return rows;
 }
 
-export function distributeDealerPackLanes(valid, {maxLanes = 7, benchmarkClones = []} = {}) {
-  assert(Number.isInteger(maxLanes) && maxLanes >= 1 && maxLanes <= 7, 'Use one to seven CI dealer lanes');
+export function distributeDealerPackLanes(valid, {maxLanes = PACK_CI_MAX_LANES, benchmarkClones = []} = {}) {
+  assert(Number.isInteger(maxLanes) && maxLanes >= 1 && maxLanes <= PACK_CI_MAX_LANES, 'Use one to ' + PACK_CI_MAX_LANES + ' CI dealer lanes');
   const include = Array.from({length: Math.min(maxLanes, valid.length)}, (_, index) => ({lane: index + 1, slugs: [], benchmarkClones: []}));
   const descriptors = new Map(benchmarkClones.map(row => [row.slug, row]));
   valid.forEach((slug, index) => {const lane = include[index % include.length]; lane.slugs.push(slug); if (descriptors.has(slug)) lane.benchmarkClones.push(descriptors.get(slug));});
   return {include};
 }
 
-export async function planDealerPackCi({root = ROOT, base, head, slugs, batch, benchmark25 = false, maxLanes = 7,
+export async function planDealerPackCi({root = ROOT, base, head, slugs, batch, benchmark25 = false,
+  maxLanes = benchmark25 ? PACK_CI_BENCHMARK_LANES : PACK_CI_MAX_LANES,
   toolPackage, validatePack = checkDealerPackInputs, readGit = git, now = new Date().toISOString()} = {}) {
   const modes = [slugs !== undefined, batch !== undefined, benchmark25, base !== undefined || head !== undefined].filter(Boolean).length;
   assert(modes === 1, 'Choose exactly one planning source: explicit slugs, one assigned batch, benchmark25, or PR base/head');
-  assert(Number.isInteger(maxLanes) && maxLanes >= 1 && maxLanes <= 7, 'Use one to seven CI dealer lanes');
+  assert(Number.isInteger(maxLanes) && maxLanes >= 1 && maxLanes <= PACK_CI_MAX_LANES, 'Use one to ' + PACK_CI_MAX_LANES + ' CI dealer lanes');
   const rejected = [], checked = new Map(); let requested, descriptors = [];
   if (benchmark25) {descriptors = benchmarkDealerPackDescriptors(); requested = descriptors.map(row => row.slug);}
   else if (slugs !== undefined) requested = parsePlanSlugs(slugs);
@@ -103,7 +106,7 @@ export async function bootstrapDealerPackCiLane({root = ROOT, plan, lane, toolPa
   clonePack = cloneBenchmarkDealerPack, loadPack = loadPreparedDealerPack} = {}) {
   assert(plan?.schemaVersion === 1 && plan.kind === 'cars-dealer-pack-ci-plan' && Array.isArray(plan.lanes?.include), 'Use an actual retained dealer-pack CI plan');
   const selected = plan.lanes.include.find(row => row.lane === Number(lane));
-  assert(selected && Number.isInteger(selected.lane) && selected.lane >= 1 && selected.lane <= 7 && Array.isArray(selected.slugs) &&
+  assert(selected && Number.isInteger(selected.lane) && selected.lane >= 1 && selected.lane <= PACK_CI_MAX_LANES && Array.isArray(selected.slugs) &&
     selected.slugs.length > 0 && selected.slugs.length <= 100 && new Set(selected.slugs).size === selected.slugs.length && selected.slugs.every(validPackSlug), 'Use one exact bounded lane from the retained plan');
   assert(Array.isArray(plan.valid) && selected.slugs.every(slug => plan.valid.includes(slug)), 'Lane requests differ from the validated pack selection');
   const expected = new Map(benchmarkDealerPackDescriptors().map(row => [row.slug, row.sourceSlug])), descriptors = selected.benchmarkClones ?? [];
@@ -141,7 +144,7 @@ export function writeDealerPackPlanOutputs(value, file) {
 }
 
 export async function runDealerPackPlanCli(argv = process.argv.slice(2)) {
-  if (argv.includes('--help')) {console.log('Usage: plan-dealer-pack-ci.mjs plan --base SHA --head SHA | --slugs CSV_OR_JSON | --batch N | --benchmark25 [--max-lanes 7] [--report runtime/plan.json] [--github-output]\n       plan-dealer-pack-ci.mjs bootstrap --plan runtime/plan.json --lane N [--report runtime/lane.json] [--github-output]\nRejected packs remain reported while valid lanes continue. Planning makes no source packs and never deploys. Benchmark bootstrap creates only its exact temporary, deployment-forbidden descriptors.'); return;}
+  if (argv.includes('--help')) {console.log('Usage: plan-dealer-pack-ci.mjs plan --base SHA --head SHA | --slugs CSV_OR_JSON | --batch N | --benchmark25 [--max-lanes 1..' + PACK_CI_MAX_LANES + '] [--report runtime/plan.json] [--github-output]\n       plan-dealer-pack-ci.mjs bootstrap --plan runtime/plan.json --lane N [--report runtime/lane.json] [--github-output]\nNormal plans default to ' + PACK_CI_MAX_LANES + ' lanes; benchmark25 defaults to ' + PACK_CI_BENCHMARK_LANES + '. Rejected packs remain reported while valid lanes continue. Planning makes no source packs and never deploys. Benchmark bootstrap creates only its exact temporary, deployment-forbidden descriptors.'); return;}
   const [first, ...remaining] = argv, command = first?.startsWith('--') ? 'plan' : first ?? 'plan', rest = first?.startsWith('--') ? argv : remaining, options = {};
   assert(['plan', 'bootstrap'].includes(command), 'Use plan or bootstrap');
   const valued = new Set(['--base', '--head', '--slugs', '--batch', '--max-lanes', '--tool-package', '--report', '--plan', '--lane']);
@@ -152,7 +155,7 @@ export async function runDealerPackPlanCli(argv = process.argv.slice(2)) {
   }
   const result = command === 'bootstrap'
     ? await bootstrapDealerPackCiLane({plan: JSON.parse(fs.readFileSync(options['--plan'], 'utf8')), lane: Number(options['--lane']), toolPackage: options['--tool-package']})
-    : await planDealerPackCi({base: options['--base'], head: options['--head'], slugs: options['--slugs'], batch: options['--batch'], benchmark25: Boolean(options['--benchmark25']), maxLanes: Number(options['--max-lanes'] ?? 7), toolPackage: options['--tool-package']});
+    : await planDealerPackCi({base: options['--base'], head: options['--head'], slugs: options['--slugs'], batch: options['--batch'], benchmark25: Boolean(options['--benchmark25']), maxLanes: options['--max-lanes'] === undefined ? undefined : Number(options['--max-lanes']), toolPackage: options['--tool-package']});
   if (options['--report']) {const report = inside(ROOT, path.relative(ROOT, path.resolve(options['--report']))); assert(report.startsWith(path.join(ROOT, 'runtime') + path.sep), 'Write planner reports only under ignored runtime/'); writeJson(report, result);}
   if (options['--github-output']) writeDealerPackPlanOutputs(result, process.env.GITHUB_OUTPUT);
   return result;

@@ -4,6 +4,7 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import {planDealerPackCiEnvironment} from './run-dealer-pack-ci.mjs';
+import {PACK_CI_MAX_LANES} from './plan-dealer-pack-ci.mjs';
 import {buildPackBatchAssignments,PACK_BATCH_FILE} from './lib/dealer-pack-identity.mjs';
 
 const ready=async()=>({success:true,packDigest:'a'.repeat(64),releaseId:'cars-six-'+'b'.repeat(64)});
@@ -23,6 +24,14 @@ const workflowCondition=(name,{event='workflow_dispatch',contractsOnly,hasWork='
     {event_name:event,event:{head_commit:{message}}},{contracts_only:contractsOnly},{plan:{outputs:{has_work:hasWork}}},
     (value,needle)=>String(value).includes(needle),()=>cancelled);
 };
+
+test('workflow native fanout matches the centrally bounded normal lane cap',()=>{
+  assert.equal(PACK_CI_MAX_LANES,14);
+  assert.equal(Number(workflowJob('lane').match(/^      max-parallel: (\d+)$/m)?.[1]),PACK_CI_MAX_LANES);
+  assert.equal((workflow.match(/^  contracts:\s*$/gm)??[]).length,1);
+  assert.match(workflowJob('lane'),/needs: plan/);
+  assert.match(fs.readFileSync(new URL('./run-dealer-pack-ci.mjs',import.meta.url),'utf8'),/familyConcurrency:1/);
+});
 
 test('pipeline contracts-only dispatch skips planning and native lanes while preserving normal triggers',()=>{
   const input=workflow.match(/^      contracts_only:\n((?: {8}.+\n)+)/m)?.[1];
@@ -86,8 +95,15 @@ test('the workflow always provides HEAD but explicit and benchmark dispatch stil
   const root=area(t);
   const benchmark=await planDealerPackCiEnvironment({root,env:{PACK_HEAD:head,PACK_BENCHMARK:'true'},validatePack:ready});
   assert.equal(benchmark.valid.length,25);assert.equal(benchmark.source,'benchmark25');assert.equal(benchmark.base,undefined);
+  assert.equal(benchmark.lanes.include.length,7);
   const explicit=await planDealerPackCiEnvironment({root,env:{PACK_HEAD:head,PACK_BASE:'2'.repeat(40),PACK_SLUGS:'ready-one,ready-two'},validatePack:ready});
   assert.deepEqual(explicit.valid,['ready-one','ready-two']);assert.equal(explicit.source,'explicit');assert.equal(explicit.base,undefined);
+});
+
+test('the workflow environment uses fourteen normal lanes without overriding the benchmark default',async t=>{
+  const slugs=Array.from({length:14},(_,index)=>'ready-pack-'+index),plan=await planDealerPackCiEnvironment({root:area(t),
+    env:{PACK_HEAD:head,PACK_SLUGS:JSON.stringify(slugs)},validatePack:ready});
+  assert.equal(plan.source,'explicit');assert.deepEqual(plan.lanes.include.map(row=>row.slugs),slugs.map(slug=>[slug]));
 });
 
 test('explicit slugs plus a batch validate every selected slug against that batch without changing selection mode',async t=>{

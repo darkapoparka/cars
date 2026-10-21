@@ -15,7 +15,7 @@ export async function planDealerPackCiEnvironment({env=process.env,root=process.
   const benchmark25=env.PACK_BENCHMARK==='true',slugs=env.PACK_SLUGS?.trim()||undefined,batch=env.PACK_BATCH?.trim()||undefined;
   if(benchmark25&&(slugs||batch))throw Error('Benchmark planning cannot also select business slugs or an assigned batch');
   if(batch&&!/^[1-4]$/.test(batch))throw Error('Use an assigned batch from1 to4');
-  const common={root,maxLanes:7,toolPackage:root+'/runtime/dealer-pack-tools/package.json',...(readGit?{readGit}: {})};
+  const common={root,toolPackage:root+'/runtime/dealer-pack-tools/package.json',...(readGit?{readGit}: {})};
   if(benchmark25)return planDealerPackCi({...common,benchmark25:true,validatePack});
   if(slugs)return planDealerPackCi({...common,slugs,validatePack:options=>validatePack({...options,...(batch?{batch}: {})})});
   if(batch)return planDealerPackCi({...common,batch,validatePack});

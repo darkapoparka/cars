@@ -90,7 +90,7 @@
           "provenance": "dealers/drive-select-motors/branding/first-proposal-artwork-20261021.json"
         }
       ],
-      "nativeStatus": "dispatched; qualification not inferred from dispatch",
+      "nativeStatus": "dispatched; native and hosted qualification remain separately pending",
       "nativeApproval": false,
       "hostedApproval": false,
       "nativeRun": {
@@ -192,7 +192,7 @@
           "provenance": "dealers/thornton-motors-cars-vans/branding/first-proposal-artwork-20261021.json"
         }
       ],
-      "nativeStatus": "dispatched; qualification not inferred from dispatch",
+      "nativeStatus": "dispatched; native and hosted qualification remain separately pending",
       "nativeApproval": false,
       "hostedApproval": false,
       "nativeRun": {
@@ -294,9 +294,22 @@
           "provenance": "dealers/edinburgh-van-sales-broxburn/branding/first-proposal-artwork-20261021.json"
         }
       ],
-      "nativeStatus": "Awaiting exact-source dispatch after this checkpoint",
+      "nativeStatus": "dispatched; native and hosted qualification remain separately pending",
       "nativeApproval": false,
-      "hostedApproval": false
+      "hostedApproval": false,
+      "nativeRun": {
+        "runId": 39517822303,
+        "sourceCommit": "7bdacdb6465bfaf68327be58d33a7f06596c5dd2",
+        "url": "https://github.com/darkapoparka/cars/actions/runs/39517822303",
+        "slugs": [
+          "daci-s-cars-ltd",
+          "d-t-cars-bristol-ltd",
+          "edinburgh-van-sales-broxburn",
+          "car-hub-carinvest-limited-tradin-85541efea8",
+          "chilton-motoring",
+          "jdm-direct-imports-coventry"
+        ]
+      }
     },
     {
       "group": "fifth3",
@@ -386,9 +399,22 @@
           "provenance": "dealers/jdm-direct-imports-coventry/branding/first-proposal-artwork-20261021.json"
         }
       ],
-      "nativeStatus": "Awaiting exact-source dispatch after this checkpoint",
+      "nativeStatus": "dispatched; native and hosted qualification remain separately pending",
       "nativeApproval": false,
-      "hostedApproval": false
+      "hostedApproval": false,
+      "nativeRun": {
+        "runId": 39517822303,
+        "sourceCommit": "7bdacdb6465bfaf68327be58d33a7f06596c5dd2",
+        "url": "https://github.com/darkapoparka/cars/actions/runs/39517822303",
+        "slugs": [
+          "daci-s-cars-ltd",
+          "d-t-cars-bristol-ltd",
+          "edinburgh-van-sales-broxburn",
+          "car-hub-carinvest-limited-tradin-85541efea8",
+          "chilton-motoring",
+          "jdm-direct-imports-coventry"
+        ]
+      }
     }
   ],
   "ownerAccepted": false,

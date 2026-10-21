@@ -4,7 +4,7 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import {parsePlanSlugs, changedDealerPackSlugs, benchmarkDealerPackDescriptors, distributeDealerPackLanes,
-  planDealerPackCi, bootstrapDealerPackCiLane, writeDealerPackPlanOutputs} from './plan-dealer-pack-ci.mjs';
+  PACK_CI_MAX_LANES, PACK_CI_BENCHMARK_LANES, planDealerPackCi, bootstrapDealerPackCiLane, writeDealerPackPlanOutputs} from './plan-dealer-pack-ci.mjs';
 import {buildPackBatchAssignments, PACK_BATCH_FILE} from './lib/dealer-pack-identity.mjs';
 
 const digest = 'a'.repeat(64), releaseId = 'cars-six-' + 'b'.repeat(64);
@@ -56,17 +56,33 @@ test('batch selection reports missing and conflicted assignments but keeps the m
 
 test('explicit requests and lane fanout have bounded sizes without dropping or duplicating dealers', () => {
   const slugs = Array.from({length: 100}, (_, index) => 'pack-' + index), lanes = distributeDealerPackLanes(slugs);
-  assert.equal(lanes.include.length, 7); assert.equal(Math.max(...lanes.include.map(row => row.slugs.length)), 15);
+  assert.equal(lanes.include.length, 14); assert.equal(Math.max(...lanes.include.map(row => row.slugs.length)), 8);
   assert.deepEqual([...new Set(lanes.include.flatMap(row => row.slugs))].sort(), [...slugs].sort());
+  for (let maxLanes = 1; maxLanes <= PACK_CI_MAX_LANES; maxLanes++) {
+    const selected = distributeDealerPackLanes(slugs, {maxLanes}).include;
+    assert.equal(selected.length, maxLanes); assert.deepEqual(selected.map(row => row.lane), Array.from({length: maxLanes}, (_, index) => index + 1));
+    assert.deepEqual(selected.flatMap(row => row.slugs).sort(), [...slugs].sort());
+  }
   assert.deepEqual(parsePlanSlugs('["pack-one","pack-two"]'), ['pack-one', 'pack-two']);
   for (const value of ['', [], Array(101).fill('x'), ['same', 'same']]) assert.throws(() => parsePlanSlugs(value));
-  assert.throws(() => distributeDealerPackLanes(slugs, {maxLanes: 8}), /one to seven/);
+  for (const maxLanes of [0, 15, 20, 1.5, NaN]) assert.throws(() => distributeDealerPackLanes(slugs, {maxLanes}), /one to 14/);
+});
+
+test('a twelve-pack normal cohort has one source per lane and retains explicit lower caps', async t => {
+  const root = area(t), slugs = Array.from({length: 12}, (_, index) => 'ready-pack-' + index), checked = [];
+  const plan = await planDealerPackCi({root, slugs, validatePack: async ({slug}) => {checked.push(slug); return ready();}});
+  assert.deepEqual(checked, slugs); assert.equal(plan.lanes.include.length, 12);
+  assert.deepEqual(plan.lanes.include.map(row => row.slugs), slugs.map(slug => [slug]));
+  const capped = await planDealerPackCi({root, slugs, maxLanes: 3, validatePack: ready});
+  assert.equal(capped.lanes.include.length, 3); assert(capped.lanes.include.every(row => row.slugs.length === 4));
+  for (const maxLanes of [0, 15, 1.5]) await assert.rejects(planDealerPackCi({root, slugs, maxLanes, validatePack: () => assert.fail('Invalid cap must fail before source validation')}), /one to 14/);
 });
 
 test('benchmark25 plans the required 7/1/17 mix without creating any source directories', async t => {
   const root = area(t), checked = [];
   const plan = await planDealerPackCi({root, benchmark25: true, validatePack: async ({slug}) => {checked.push(slug); return ready();}});
   assert.equal(checked.length, 3); assert.equal(plan.requested.length, 25); assert.equal(plan.valid.length, 25);
+  assert.equal(PACK_CI_BENCHMARK_LANES, 7); assert.equal(plan.lanes.include.length, PACK_CI_BENCHMARK_LANES);
   const descriptors = plan.lanes.include.flatMap(row => row.benchmarkClones), counts = Object.fromEntries(checked.map(slug => [slug, descriptors.filter(row => row.sourceSlug === slug).length]));
   assert.deepEqual(counts, {'wadishee-used-cars': 17, 'za-motors': 7, 'granada-auto-sales': 1});
   assert(descriptors.every(row => row.sourcePackDigest === digest && row.neverDeploy === true && row.benchmarkOnly === true));
@@ -97,6 +113,22 @@ test('lane bootstrap creates only exact authorized descriptors and preserves unr
   assert.equal(created[0].sourcePackDigest, digest); assert.equal(created[0].slug, four.slug);
   assert.equal(fs.readFileSync(path.join(root, 'dealers/' + two.slug + '/retained.txt'), 'utf8'), 'do not overwrite');
   assert.equal(result.results[0].reused, true); assert.equal(result.status, 'partial-failure');
+});
+
+test('lane fourteen bootstraps only its exact retained normal or benchmark selection', async t => {
+  const root = area(t), slugs = Array.from({length: 14}, (_, index) => 'ready-pack-' + index);
+  const normal = await planDealerPackCi({root, slugs, validatePack: ready});
+  const selected = await bootstrapDealerPackCiLane({root, plan: normal, lane: 14,
+    clonePack: () => assert.fail('Normal source must not be cloned'), loadPack: () => assert.fail('Normal source must not be substituted')});
+  assert.deepEqual(selected.slugs, [slugs[13]]); assert.equal(selected.lane, 14); assert.equal(selected.providerWrites, 0);
+  await assert.rejects(bootstrapDealerPackCiLane({root, plan: normal, lane: 15}), /exact bounded lane/);
+  const benchmark = await planDealerPackCi({root, benchmark25: true, maxLanes: 14, validatePack: ready}), created = [];
+  const result = await bootstrapDealerPackCiLane({root, plan: benchmark, lane: 14,
+    loadPack: async () => ({packDigest: digest, manifest: {dealerId: 'exact-source'}}),
+    clonePack: async options => {created.push(options); return {slug: options.slug};}});
+  const descriptors = benchmark.lanes.include.find(row => row.lane === 14).benchmarkClones;
+  assert.deepEqual(result.slugs, descriptors.map(row => row.slug)); assert.deepEqual(created.map(row => row.slug), result.slugs);
+  assert(result.results.every(row => row.benchmarkOnly === true && row.neverDeploy === true)); assert.equal(result.rejected.length, 0);
 });
 
 test('bootstrap refuses invented benchmark names and refuses a descriptor outside its retained valid selection', async t => {

@@ -1,0 +1,212 @@
+{
+  "schemaVersion": 1,
+  "type": "cars-normal-native-fourteen-lane-source-checkpoint",
+  "recordedAt": "2026-10-21T00:02:52.837Z",
+  "baseRevision": "7bdacdb6465bfaf68327be58d33a7f06596c5dd2",
+  "sourceFiles": [
+    {
+      "path": "scripts/plan-dealer-pack-ci.mjs",
+      "absolutePath": "L:/CODEX/cars/scripts/plan-dealer-pack-ci.mjs",
+      "bytes": 14954,
+      "sha256": "6041ec1c9e90714f920dd074c2e4e4b6c311d5bac3d7b988ff695385d55c9f0c",
+      "beforeSha256": "fd34e6362466d44dc0c9d71955606c761c0fc6f8636860948ccf0e0425c89db1"
+    },
+    {
+      "path": "scripts/plan-dealer-pack-ci.test.mjs",
+      "absolutePath": "L:/CODEX/cars/scripts/plan-dealer-pack-ci.test.mjs",
+      "bytes": 12861,
+      "sha256": "3a66cc4fa2fc9dd980b6dac546a75b397efa03aa22bd0148891e4573fd43b6c2",
+      "beforeSha256": "b572f8c3c582f9c9dff213bf033faf32d7a3bf13b8de97a007105464495b2df6"
+    },
+    {
+      "path": ".github/workflows/dealer-pack-pipeline.yml",
+      "absolutePath": "L:/CODEX/cars/.github/workflows/dealer-pack-pipeline.yml",
+      "bytes": 20111,
+      "sha256": "d367b254b9cd9b5e6b1096372e3bbce0cfad528889cc6ef32658097b48e9191a",
+      "beforeSha256": "be7e1d601279dd54d9ddb62e92c63eba6278b03709a7220f32fe45c00a4caec3"
+    },
+    {
+      "path": "docs/PIPELINE.md",
+      "absolutePath": "L:/CODEX/cars/docs/PIPELINE.md",
+      "bytes": 55376,
+      "sha256": "c7ee6fcef2d0b8799812f6ae205c76277217596a8bc547d760bd1b58599570f6",
+      "beforeSha256": "7aa9834e7540a0d9031c9071461a00ba9bcca563e7ff9e318c425f5545fc2c8e"
+    },
+    {
+      "path": "scripts/run-dealer-pack-ci.mjs",
+      "absolutePath": "L:/CODEX/cars/scripts/run-dealer-pack-ci.mjs",
+      "bytes": 4735,
+      "sha256": "97e9dbc167845ab6dbba7c50e610ebb8a547750be52aa47aa04668161d347e85",
+      "beforeSha256": "e5aa8c4059abec1a67a120a9dd6fdcc597e8c957311b68e6c87d9be928f524ac"
+    },
+    {
+      "path": "scripts/run-dealer-pack-ci.test.mjs",
+      "absolutePath": "L:/CODEX/cars/scripts/run-dealer-pack-ci.test.mjs",
+      "bytes": 10426,
+      "sha256": "cc914eccaddd90f91e438d37a404afea53f61f6da39f42022d78f8cf6d63dd71",
+      "beforeSha256": "d933e3f9346864beed301dea42b8f5ddba04ce3372ffc2e5d635effee5310757"
+    },
+    {
+      "path": "scripts/dealer-pack-dispatcher.test.mjs",
+      "absolutePath": "L:/CODEX/cars/scripts/dealer-pack-dispatcher.test.mjs",
+      "bytes": 29130,
+      "sha256": "0b447594acb943885e72e1a7ce30dc33a7127cf6374c9f75def7330b49c7ec1c",
+      "beforeSha256": "082b7c917918fc3408097d5859ab715dcfcc5780288ca74db2574d92688c3620"
+    }
+  ],
+  "proof": {
+    "schemaVersion": 1,
+    "kind": "cars-native-producer-lanes14-implementation-seal",
+    "recordedAt": "2026-10-20T23:53:37.716Z",
+    "sourceFrozen": true,
+    "files": [
+      {
+        "path": "scripts/plan-dealer-pack-ci.mjs",
+        "absolutePath": "L:/CODEX/cars/scripts/plan-dealer-pack-ci.mjs",
+        "bytes": 14954,
+        "sha256": "6041ec1c9e90714f920dd074c2e4e4b6c311d5bac3d7b988ff695385d55c9f0c",
+        "beforeSha256": "fd34e6362466d44dc0c9d71955606c761c0fc6f8636860948ccf0e0425c89db1"
+      },
+      {
+        "path": "scripts/plan-dealer-pack-ci.test.mjs",
+        "absolutePath": "L:/CODEX/cars/scripts/plan-dealer-pack-ci.test.mjs",
+        "bytes": 12861,
+        "sha256": "3a66cc4fa2fc9dd980b6dac546a75b397efa03aa22bd0148891e4573fd43b6c2",
+        "beforeSha256": "b572f8c3c582f9c9dff213bf033faf32d7a3bf13b8de97a007105464495b2df6"
+      },
+      {
+        "path": ".github/workflows/dealer-pack-pipeline.yml",
+        "absolutePath": "L:/CODEX/cars/.github/workflows/dealer-pack-pipeline.yml",
+        "bytes": 20111,
+        "sha256": "d367b254b9cd9b5e6b1096372e3bbce0cfad528889cc6ef32658097b48e9191a",
+        "beforeSha256": "be7e1d601279dd54d9ddb62e92c63eba6278b03709a7220f32fe45c00a4caec3"
+      },
+      {
+        "path": "docs/PIPELINE.md",
+        "absolutePath": "L:/CODEX/cars/docs/PIPELINE.md",
+        "bytes": 55376,
+        "sha256": "c7ee6fcef2d0b8799812f6ae205c76277217596a8bc547d760bd1b58599570f6",
+        "beforeSha256": "7aa9834e7540a0d9031c9071461a00ba9bcca563e7ff9e318c425f5545fc2c8e"
+      },
+      {
+        "path": "scripts/run-dealer-pack-ci.mjs",
+        "absolutePath": "L:/CODEX/cars/scripts/run-dealer-pack-ci.mjs",
+        "bytes": 4735,
+        "sha256": "97e9dbc167845ab6dbba7c50e610ebb8a547750be52aa47aa04668161d347e85",
+        "beforeSha256": "e5aa8c4059abec1a67a120a9dd6fdcc597e8c957311b68e6c87d9be928f524ac"
+      },
+      {
+        "path": "scripts/run-dealer-pack-ci.test.mjs",
+        "absolutePath": "L:/CODEX/cars/scripts/run-dealer-pack-ci.test.mjs",
+        "bytes": 10426,
+        "sha256": "cc914eccaddd90f91e438d37a404afea53f61f6da39f42022d78f8cf6d63dd71",
+        "beforeSha256": "d933e3f9346864beed301dea42b8f5ddba04ce3372ffc2e5d635effee5310757"
+      },
+      {
+        "path": "scripts/dealer-pack-dispatcher.test.mjs",
+        "absolutePath": "L:/CODEX/cars/scripts/dealer-pack-dispatcher.test.mjs",
+        "bytes": 29130,
+        "sha256": "0b447594acb943885e72e1a7ce30dc33a7127cf6374c9f75def7330b49c7ec1c",
+        "beforeSha256": "082b7c917918fc3408097d5859ab715dcfcc5780288ca74db2574d92688c3620"
+      }
+    ],
+    "changedPaths": [
+      "scripts/plan-dealer-pack-ci.mjs",
+      "scripts/plan-dealer-pack-ci.test.mjs",
+      ".github/workflows/dealer-pack-pipeline.yml",
+      "docs/PIPELINE.md",
+      "scripts/run-dealer-pack-ci.mjs",
+      "scripts/run-dealer-pack-ci.test.mjs",
+      "scripts/dealer-pack-dispatcher.test.mjs"
+    ],
+    "policy": {
+      "normalDefault": 14,
+      "maximum": 14,
+      "explicitRange": [
+        1,
+        14
+      ],
+      "benchmark25Default": 7,
+      "familyConcurrency": 1,
+      "contractsPerSourceRun": 1,
+      "providerClaimChanged": false,
+      "dealerConcurrency": 1
+    },
+    "validation": {
+      "focusedCommand": "node --test --test-concurrency=1 scripts/plan-dealer-pack-ci.test.mjs scripts/run-dealer-pack-ci.test.mjs scripts/dealer-pack-dispatcher.test.mjs",
+      "focusedTests": 40,
+      "passed": 40,
+      "failed": 0,
+      "skipped": 0,
+      "nodeCheckFiles": 5,
+      "diffCheck": "passed",
+      "workflowDocumentCheck": "passed",
+      "log": "J:/.artifacts/cars-source-sync/native-lanes-14-focused-tests.log",
+      "coverage": [
+        "twelve normal packs map one per lane with exact once-only source validation",
+        "100 normal packs cover every slug exactly once across14lanes,max8perlane",
+        "all integer explicit caps1..14 and invalid0/15/20/fraction/NaN refusal",
+        "normal and explicit benchmark lane14 bootstrap authenticate only retained selection",
+        "benchmark25 default7 and original7/1/17source mix preserved",
+        "thin workflow router no longer overrides centralized defaults",
+        "workflow max-parallel14 matches exported cap; familyConcurrency1 and one shared contracts job retained",
+        "lane14 producing job/exact uploadID,digest,bytes,times proof accepted;lane4cannot supply its job/log",
+        "existing wrong-source/expired/digest/producer/automatic duplicate/ZIP/retention regressions preserved"
+      ]
+    },
+    "compatibility": {
+      "intakeProductionChanged": false,
+      "lanePrefix": "lane-[0-9]+ already accepts14",
+      "laneManifestLimit": 32,
+      "perLaneShardIndices": [
+        0,
+        7
+      ],
+      "transportRetentionDays": 7,
+      "releasePinsChanged": false,
+      "templateCompositionChanged": false,
+      "cache": "Existing lane artifact IDs and exact source/release cache ownership unchanged; more lanes can duplicate immutable common bytes between lanes.",
+      "historicalBenchmarkTimingsChanged": false,
+      "currentSourceRunsChanged": false
+    },
+    "observations": {
+      "runId": 39515430757,
+      "sourceCommit": "34c99454e362b72a5e4a4f5921e83fc86c37b1ab",
+      "contracts": "success",
+      "plan": "success",
+      "nativeJobs": 7,
+      "allStarted": "2026-10-20T23:33:05Z..23:33:06Z",
+      "lane6Completed": "2026-10-20T23:48:00Z",
+      "lane6Seconds": 894,
+      "scope": "Metadata snapshot only; existing runs remain pinned to old7lane source."
+    },
+    "benefit": "With available runners, up to14ready packs each get one producing job, avoiding a second serial pack delaying the first pack lane handoff. Larger cohorts shorten the serial tail per lane; framework/native/QA work per dealer remains required. No measured speedup is claimed.",
+    "limits": [
+      "Account/organization hard Actions concurrency capacity was not authenticated; workflow max-parallel is a cap,not a reservation. Other workflows can queue behind shared account limits.",
+      "Additional runners repeat setup and reduce per-lane common-blob/dependency amortization. Historical7lane timings remain historical and are not extrapolated to claim14lane acceptance.",
+      "No existing run was restarted,cancelled or rebuilt. No billing,provider/account claim,queue/schema/intake guard changes."
+    ],
+    "writes": {
+      "sourcePaths": 7,
+      "repositoryGitWrites": 0,
+      "providerWrites": 0,
+      "queueWrites": 0,
+      "actionsDispatches": 0,
+      "newBuilds": 0,
+      "fixtures": "Existing focused GitCAS/ZIP tests used isolated disposable TEMP on J; no maintained repository/index/ref mutation."
+    }
+  },
+  "independentReview": {
+    "result": "passed",
+    "reviewer": "local_preview",
+    "testsRepeated": false
+  },
+  "boundaries": {
+    "currentNativeRunsRebuilt": false,
+    "providerQueueChanged": false,
+    "live14LaneMeasurement": false,
+    "accountConcurrencyAllowanceVerified": false,
+    "ownerAccepted": false
+  },
+  "all400SourceScheduling": "In progress as separate preparation campaign on the existing queue branch; no registration/deployment claim yet"
+}
