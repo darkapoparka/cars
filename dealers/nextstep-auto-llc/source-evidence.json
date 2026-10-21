@@ -33,7 +33,103 @@
       "supports": [
         "retained-public-business-research"
       ]
+    },
+    {
+      "url": "https://www.nextstepautoga.com/",
+      "observedAt": "2026-10-21T08:14:15.478Z",
+      "supports": [
+        "business.name",
+        "business.address",
+        "business.phone",
+        "business.email",
+        "published-header-logo"
+      ],
+      "htmlSha256": "c6b958ed2c119f789af7e501c4f1d4d6167d0e5a1f248ad2b4f74cb19b9c2d66"
+    },
+    {
+      "url": "https://www.nextstepautoga.com/product-page/2013-ford-edge-limited",
+      "observedAt": "2026-10-21T08:19:12.789Z",
+      "supports": [
+        "stock.2013-ford-edge-limited"
+      ],
+      "htmlSha256": "873c9647c362edf9270bb6ce47c11e36d008d04f9937ca65cacf885ecb2792f1"
+    },
+    {
+      "url": "https://www.nextstepautoga.com/product-page/low-miles-2022-ford-escape-se-awd",
+      "observedAt": "2026-10-21T08:19:14.470Z",
+      "supports": [
+        "stock.2022-ford-escape-se-awd"
+      ],
+      "htmlSha256": "f54908ff9325e043506e940580ae1821bd2eedb84d3cdb683490c580449f1ac3"
+    },
+    {
+      "url": "https://www.nextstepautoga.com/product-page/extremely-reliable-2020-toyota-4runner-sr5-premium",
+      "observedAt": "2026-10-21T08:19:15.952Z",
+      "supports": [
+        "stock.2020-toyota-4runner-sr5-premium"
+      ],
+      "htmlSha256": "1faa1bb20df8ff29c4f2b8f13bc794065ec0c7f9cb17f0b043807e23c4832a53"
     }
   ],
-  "liveFetchPerformed": false
+  "liveFetchPerformed": true,
+  "stockSources": [
+    {
+      "id": "2013-ford-edge-limited",
+      "sourceUrl": "https://www.nextstepautoga.com/product-page/2013-ford-edge-limited",
+      "observedAt": "2026-10-21T08:19:12.789Z",
+      "httpStatus": 200,
+      "htmlSha256": "873c9647c362edf9270bb6ce47c11e36d008d04f9937ca65cacf885ecb2792f1",
+      "sourceTitle": "2013 FORD EDGE LIMITED",
+      "titlePolicy": "Model identity retained; promotional adjectives omitted. Approximate mileage and condition claims are not promoted to verified facts.",
+      "photo": {
+        "sourceUrl": "https://static.wixstatic.com/media/df41ea_c274a7cef8244b0ca0e729767c7217f0~mv2.png/v1/fit/w_500,h_500,q_90/file.png",
+        "httpStatus": 200,
+        "observedAt": "2026-10-21T08:25:32.938Z",
+        "path": "dealer-stock/public-2013-ford-edge-limited.png",
+        "bytes": 423726,
+        "sha256": "47e5bc3129e3b87e88c9a0b757d5c21e4e6ad39fed839a4fba7b516386967649"
+      }
+    },
+    {
+      "id": "2022-ford-escape-se-awd",
+      "sourceUrl": "https://www.nextstepautoga.com/product-page/low-miles-2022-ford-escape-se-awd",
+      "observedAt": "2026-10-21T08:19:14.470Z",
+      "httpStatus": 200,
+      "htmlSha256": "f54908ff9325e043506e940580ae1821bd2eedb84d3cdb683490c580449f1ac3",
+      "sourceTitle": "LOW MILES 2022 FORD ESCAPE SE AWD",
+      "titlePolicy": "Model identity retained; promotional adjectives omitted. Approximate mileage and condition claims are not promoted to verified facts.",
+      "photo": {
+        "sourceUrl": "https://static.wixstatic.com/media/df41ea_9c782ed03a854952b3a9906296f93110~mv2.png/v1/fit/w_500,h_500,q_90/file.png",
+        "httpStatus": 200,
+        "observedAt": "2026-10-21T08:25:33.475Z",
+        "path": "dealer-stock/public-2022-ford-escape-se-awd.png",
+        "bytes": 450986,
+        "sha256": "1869f73bdaa1265167f12ffcd97753f100aac05f2bfe18924908554cc72c3945"
+      }
+    },
+    {
+      "id": "2020-toyota-4runner-sr5-premium",
+      "sourceUrl": "https://www.nextstepautoga.com/product-page/extremely-reliable-2020-toyota-4runner-sr5-premium",
+      "observedAt": "2026-10-21T08:19:15.952Z",
+      "httpStatus": 200,
+      "htmlSha256": "1faa1bb20df8ff29c4f2b8f13bc794065ec0c7f9cb17f0b043807e23c4832a53",
+      "sourceTitle": "EXTREMELY RELIABLE 2020 TOYOTA 4RUNNER SR5 PREMIUM",
+      "titlePolicy": "Model identity retained; promotional adjectives omitted. Approximate mileage and condition claims are not promoted to verified facts.",
+      "photo": {
+        "sourceUrl": "https://static.wixstatic.com/media/df41ea_321e2ba93c73437283f21b03eedd6962~mv2.png/v1/fit/w_500,h_500,q_90/file.png",
+        "httpStatus": 200,
+        "observedAt": "2026-10-21T08:25:34.396Z",
+        "path": "dealer-stock/public-2020-toyota-4runner-sr5-premium.png",
+        "bytes": 482392,
+        "sha256": "33f6e7666919a60bd32dd7e2868c56b2591079de1af3f9a5bd3d5af65a99e579"
+      }
+    }
+  ],
+  "sourceRefresh": {
+    "at": "2026-10-21T08:27:00.999Z",
+    "publishedParent": "cca282d25e5e88f134d44e4391396be5df993113",
+    "priorStockSha256": "449ed88b806d951f89d08eeb5dc4fd83c698189e0a02d4ab0e5fd616079eb166",
+    "priorFactsSha256": "b1444085a6ff09aea1899d884fd6e215e62b65cea7a4e89821711e8e4e3cf562",
+    "method": "Replace explicit demo records with three actual dated seller listings and their exact public photos; omit prices, promotional claims and rounded mileage. Historical source bytes remain in the recorded published parent."
+  }
 }

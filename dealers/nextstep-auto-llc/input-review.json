@@ -3,7 +3,7 @@
   "kind": "cars-dealer-pack-input-review",
   "dealer": "nextstep-auto-llc",
   "reviewed": true,
-  "reviewedAt": "2026-10-21T08:09:54.012Z",
+  "reviewedAt": "2026-10-21T08:31:10.314Z",
   "review": {
     "kind": "automated",
     "humanReview": false,
@@ -39,7 +39,7 @@
   "inputs": [
     {
       "path": "FACTS-AND-INVENTORY.json",
-      "sha256": "cc473b62fc99a56ac64efa2d5a6db149da450ecd621f8f820a89c9875cbddd77"
+      "sha256": "2d8b61ebefcdc92a67e751eef6ee7dcbf611bcad19f3efb70ae627edb59b9ba3"
     },
     {
       "path": "branding/logo-contract.json",
@@ -59,11 +59,23 @@
     },
     {
       "path": "business-facts.json",
-      "sha256": "b1444085a6ff09aea1899d884fd6e215e62b65cea7a4e89821711e8e4e3cf562"
+      "sha256": "aa86ef38d1102ee6e5815d55148bc0a387807eff0408809e27142b0d36c84729"
     },
     {
       "path": "copy-review.json",
-      "sha256": "2cdfe07ec89de6c847570b14e1f9d89ce3f5130f7588ca4a5408d60a223dcb74"
+      "sha256": "8b794cd6df29b76ff45b5ade51eeb44c728e55279ea36db8a68abc164ab0383c"
+    },
+    {
+      "path": "dealer-stock/public-2013-ford-edge-limited.png",
+      "sha256": "47e5bc3129e3b87e88c9a0b757d5c21e4e6ad39fed839a4fba7b516386967649"
+    },
+    {
+      "path": "dealer-stock/public-2020-toyota-4runner-sr5-premium.png",
+      "sha256": "33f6e7666919a60bd32dd7e2868c56b2591079de1af3f9a5bd3d5af65a99e579"
+    },
+    {
+      "path": "dealer-stock/public-2022-ford-escape-se-awd.png",
+      "sha256": "1869f73bdaa1265167f12ffcd97753f100aac05f2bfe18924908554cc72c3945"
     },
     {
       "path": "dealer-stock/template-demo-1.webp",
@@ -83,7 +95,7 @@
     },
     {
       "path": "identity-review.json",
-      "sha256": "fa6b722e113b508ca0a79314b442522cb7c1a8671ae95193451eb9a4612ed9e7"
+      "sha256": "be73f85908161b285c7ab87b7a95f344dd4a4636f232726b5711d93a84523832"
     },
     {
       "path": "locale.json",
@@ -95,15 +107,15 @@
     },
     {
       "path": "qualification.json",
-      "sha256": "c78c597cc28753a8e167b59ef52e6c2c7c283ed82d8199785b45c3c6650fb44b"
+      "sha256": "3c4a9bd5abac3d3451ec5cdceffc2efe80661e7d32f9dd7b7641d7784569a9d5"
     },
     {
       "path": "source-evidence.json",
-      "sha256": "f0d01f34b1538437548f542ed3d3a4f03810308a22d3cdb631869c060c2a7551"
+      "sha256": "761f43f95b8f9bdc2255d7f03a1d36eb48137fbe7235a1c7b470f327feae081a"
     },
     {
       "path": "stock.json",
-      "sha256": "449ed88b806d951f89d08eeb5dc4fd83c698189e0a02d4ab0e5fd616079eb166"
+      "sha256": "93425f7b4d3cf3acec61d5c665ac958a086999736a9ddde5e38b52535634ffc7"
     }
   ],
   "nativeApproval": false,

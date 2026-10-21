@@ -3,8 +3,8 @@
   "dealer": "nextstep-auto-llc",
   "businessFacts": "business-facts.json",
   "stock": "stock.json",
-  "inventoryKind": "illustrative-not-dealer-stock",
-  "inventoryNotice": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
+  "inventoryKind": "dated-listing-snapshot",
+  "inventoryNotice": "Dated public listing samples observed on 2026-10-21. Availability has not been confirmed. Listing prices are omitted in this preview.",
   "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
   "sources": [
     {
@@ -34,6 +34,42 @@
       "supports": [
         "retained-public-business-research"
       ]
+    },
+    {
+      "url": "https://www.nextstepautoga.com/",
+      "observedAt": "2026-10-21T08:14:15.478Z",
+      "supports": [
+        "business.name",
+        "business.address",
+        "business.phone",
+        "business.email",
+        "published-header-logo"
+      ],
+      "htmlSha256": "c6b958ed2c119f789af7e501c4f1d4d6167d0e5a1f248ad2b4f74cb19b9c2d66"
+    },
+    {
+      "url": "https://www.nextstepautoga.com/product-page/2013-ford-edge-limited",
+      "observedAt": "2026-10-21T08:19:12.789Z",
+      "supports": [
+        "stock.2013-ford-edge-limited"
+      ],
+      "htmlSha256": "873c9647c362edf9270bb6ce47c11e36d008d04f9937ca65cacf885ecb2792f1"
+    },
+    {
+      "url": "https://www.nextstepautoga.com/product-page/low-miles-2022-ford-escape-se-awd",
+      "observedAt": "2026-10-21T08:19:14.470Z",
+      "supports": [
+        "stock.2022-ford-escape-se-awd"
+      ],
+      "htmlSha256": "f54908ff9325e043506e940580ae1821bd2eedb84d3cdb683490c580449f1ac3"
+    },
+    {
+      "url": "https://www.nextstepautoga.com/product-page/extremely-reliable-2020-toyota-4runner-sr5-premium",
+      "observedAt": "2026-10-21T08:19:15.952Z",
+      "supports": [
+        "stock.2020-toyota-4runner-sr5-premium"
+      ],
+      "htmlSha256": "1faa1bb20df8ff29c4f2b8f13bc794065ec0c7f9cb17f0b043807e23c4832a53"
     }
   ]
 }
