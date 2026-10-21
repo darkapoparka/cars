@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "dealer": "jak-prestige",
-  "status": "research-required",
+  "status": "reviewed",
   "realLogoFirst": true,
   "publicSources": [
     {
@@ -10,7 +10,192 @@
     }
   ],
   "originals": [],
-  "creationMethod": null,
+  "creationMethod": "imagegen-proposal",
   "dealerApproved": false,
-  "generatedInputs": null
+  "generatedInputs": {
+    "reviewedAt": "2026-10-21T00:37:57.500Z",
+    "master": {
+      "path": "branding/generated-master-v1-20261021.png",
+      "sha256": "ad71558891575bbfc72919eb8dcfd441f3436a677cb9fc8376a8b90f7ba3447e",
+      "nativeDimensions": {
+        "width": 1774,
+        "height": 887
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-5416897e-0fcb-43e0-977c-1b84880deb35",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark-light-v1-20261021.png",
+      "sha256": "112c76a70667e137f5be17c68bd423de28bc3a938db4b1bbb8ba2e32f5f77497",
+      "nativeDimensions": {
+        "width": 706,
+        "height": 887
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-5416897e-0fcb-43e0-977c-1b84880deb35",
+        "modelVersion": null
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-dark-v1-20261021.png",
+      "sha256": "33de8024039f1211135fee6801056979cca4ef0aeacfec785f6e6d859692dc07",
+      "nativeDimensions": {
+        "width": 705,
+        "height": 887
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-bf52c6c3-6f9f-4d98-950f-d796d819ba55",
+        "modelVersion": null
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-master-v1-20261021.png",
+        "sha256": "ad71558891575bbfc72919eb8dcfd441f3436a677cb9fc8376a8b90f7ba3447e",
+        "nativeDimensions": {
+          "width": 1774,
+          "height": 887
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-5416897e-0fcb-43e0-977c-1b84880deb35",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-inverse-v1-20261021.png",
+        "sha256": "2158e171da1ef54a3560017c31e29e18946c4306435dfe3a6d62e721d47915d4",
+        "nativeDimensions": {
+          "width": 1774,
+          "height": 887
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-bf52c6c3-6f9f-4d98-950f-d796d819ba55",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-inverse-v1-20261021.png",
+        "sha256": "2158e171da1ef54a3560017c31e29e18946c4306435dfe3a6d62e721d47915d4",
+        "nativeDimensions": {
+          "width": 1774,
+          "height": 887
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-bf52c6c3-6f9f-4d98-950f-d796d819ba55",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-21T00:37:57.500Z",
+      "wordmarkWidths": [
+        120,
+        180
+      ],
+      "markWidths": [
+        32,
+        64
+      ],
+      "notes": "Agent inspected exact alpha-composited light/inverse wordmarks; final matched consumer sheet is separately retained. All five native dark/red backgrounds are unchanged. Proposal only, no human/dealer/native/hosted approval."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-21T00:37:57.500Z",
+      "widths": [
+        32,
+        64
+      ],
+      "notes": "Compact artwork is an exact pixel extraction of the isolated generated emblem, with a clear alpha gap to the wordmark; no recolour, filters or alpha cleanup."
+    }
+  },
+  "approvalStatus": "independent-preview-not-dealer-approved",
+  "researchConclusion": "Exact retained primary Autotrader page confirms Jak Prestige at Colne Valley Business Park, Linthwaite Huddersfield and retained contact. Its linked cars/default.jpg is a generic marketplace placeholder, not dealer artwork. No distinct original was obtained in bounded source-logo checks; absence is not asserted. This is a new independent proposal with no history or adoption claim.",
+  "publicSourceObservations": [
+    {
+      "observedAt": "2026-10-21T00:37:57.500Z",
+      "kind": "bounded-logo-first-page-review",
+      "sourcePage": "https://www.autotrader.co.uk/dealers/yorkshire/huddersfield/jak-prestige-10045873?refresh=true",
+      "observations": "Exact primary page matched retained trading text, location and phone. Generic default vehicle header artwork excluded; facts, contacts, inventory and legal records unchanged."
+    }
+  ],
+  "generation": {
+    "tool": "image_gen.imagegen",
+    "generationId": "exec-5416897e-0fcb-43e0-977c-1b84880deb35",
+    "modelVersion": null,
+    "prompt": "Use case: logo-brand. Design one clean flat transparent white-surface logo proposal for exact trading name JAK PRESTIGE. Wide horizontal lockup: at LEFT an isolated naturally near-square JP companion monogram, substantial geometric strokes and open counters; clear transparent gap to text at RIGHT, two bold lines JAK over PRESTIGE. Deep navy-charcoal #182936 main text/J, deep burgundy #9a283d accent/P. Contemporary premium dealership typography with restrained geometric character, no luxury badge/crown/car silhouette. Compact monogram visible mass must fill a balanced square after normal transparent padding crop, not a long underline. No other text, background, plates, thin keylines, white ink, gradients, reflections, glow, shadow, texture or speckles. Solid opaque artwork with fully transparent background and negative spaces. Readable at actual120/180wordmark widths and32/64mark widths. Independent proposal; no official or adopted claim."
+  },
+  "compactDerivation": {
+    "operation": "lossless-png-extract-isolated-emblem",
+    "parentPath": "branding/generated-master-v1-20261021.png",
+    "parentSha256": "ad71558891575bbfc72919eb8dcfd441f3436a677cb9fc8376a8b90f7ba3447e",
+    "crop": {
+      "left": 0,
+      "top": 0,
+      "width": 706,
+      "height": 887
+    },
+    "emptyGap": {
+      "start": 681,
+      "end": 731,
+      "width": 50
+    },
+    "parentNativeDimensions": {
+      "width": 1774,
+      "height": 887
+    },
+    "artworkUnmodified": true,
+    "alphaUnmodified": true
+  },
+  "compactOnDarkDerivation": {
+    "operation": "lossless-png-extract-isolated-emblem",
+    "parentPath": "branding/generated-inverse-v1-20261021.png",
+    "parentSha256": "2158e171da1ef54a3560017c31e29e18946c4306435dfe3a6d62e721d47915d4",
+    "crop": {
+      "left": 0,
+      "top": 0,
+      "width": 705,
+      "height": 887
+    },
+    "emptyGap": {
+      "start": 680,
+      "end": 730,
+      "width": 50
+    },
+    "parentNativeDimensions": {
+      "width": 1774,
+      "height": 887
+    },
+    "artworkUnmodified": true,
+    "alphaUnmodified": true
+  },
+  "additionalGenerations": [
+    {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-bf52c6c3-6f9f-4d98-950f-d796d819ba55",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand. Edit the supplied actual transparent JAK PRESTIGE logo into a matching flat DARK-SURFACE and RED-SURFACE inverse treatment. Preserve the exact lettering, spelling, line arrangement, monogram geometry, proportions, isolated left emblem and large clear transparent gap. Use pale cool grey #cbd2d8 for J and JAK, pale rose #e3c1c8 for P and PRESTIGE. Substantial solid opaque strokes and fully transparent background/negative spaces. Keep clean edges and useful small-size counters. No pure white, glow, halo, keyline, shadows, gradients, bevel, plate, texture, speckling or other new decoration. Readable at120/180pixel wordmark and32/64pixel emblem size on nearblack and #c40101 backgrounds. Proposal only; no dealer adoption or historical claim.",
+      "referencePaths": [
+        "C:\\Users\\radev\\.codex\\generated_images\\01a15a1f-d666-7482-9123-db2575e93737\\exec-5416897e-0fcb-43e0-977c-1b84880deb35.png"
+      ],
+      "path": "branding/generated-inverse-v1-20261021.png",
+      "sha256": "2158e171da1ef54a3560017c31e29e18946c4306435dfe3a6d62e721d47915d4"
+    }
+  ],
+  "sourceHistory": [
+    {
+      "reference": "branding/source-before-first-artwork-20261021-d10a047e89f014fe.json",
+      "sha256": "d10a047e89f014feb0610766e7add41adc80b7f62028933418c752a9f46cb5cb",
+      "retainedAt": "2026-10-21T00:37:57.500Z",
+      "reason": "Exact maintained input-only draft provenance before first proposal artwork"
+    }
+  ]
 }

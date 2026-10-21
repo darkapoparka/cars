@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Sterling and Drake Motors",
     "publicOrigin": "https://sterling-and-drake-motors.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "b917c5d36e418ab977a509ab282db313ec5d20a97a258223524c53f50a422e54",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "3ba4b7b4fb207adfd1dfa7958c62698aefc661b8a68aae28d30d97be8610d190"
+    }
   }
 }

@@ -38,15 +38,15 @@
     "actualProviderWritesBySourceScheduler": 0
   },
   "liveDeploymentSnapshot": {
-    "generation": 572,
+    "generation": 587,
     "totalRequests": 171,
-    "queued": 134,
+    "queued": 133,
     "active": {
       "owner": "github:39515213505",
-      "requestId": "287b1d888e37d8e9da12b01ebfded7cac75beca52421b82322ed5b6eb64ebbfb"
+      "requestId": "009bc707bedc4b6b4f2e3a557b8b9c30fe4a8f12897208b5c92c608aa80c02ef"
     },
-    "activated": 36,
-    "hostedPassed": 34,
+    "activated": 37,
+    "hostedPassed": 35,
     "historicalHostedFailures": 2
   },
   "nativeFailuresUnderSeparateDiagnosis": [
@@ -78,10 +78,10 @@
     "runId": 39521618242,
     "runUrl": "https://github.com/darkapoparka/cars/actions/runs/39521618242",
     "sourceCommit": "ee5a714089546d722f2d8bdf730671156f37072f",
-    "observedAt": "2026-10-21T00:31:44.472Z",
+    "observedAt": "2026-10-21T00:41:06.380Z",
     "targets": 400,
     "assignmentDigest": "c7f26a0f6f54a5bd7b967c3213bcd422c0b75b7fab68a33a5f5ada227ad551b4",
-    "stateRevision": "d6c638deb9cc4ce1546dcd7a2eeaeff19c3761be",
+    "stateRevision": "c566453fafb9116bfe1029994f6661334b321bcd",
     "baselinePreserved": true,
     "existingHistoryPreserved": true
   },
@@ -114,11 +114,10 @@
   },
   "newReadyGroups": [
     {
-      "group": "pilot-sixth3",
+      "group": "sixth3-first2",
       "slugs": [
-        "motonation-motonation-pro-ltd",
-        "forge-lane-cars-ltd",
-        "le10-motors-company-ltd"
+        "jak-prestige",
+        "sterling-and-drake-motors"
       ],
       "sourceApproved": true,
       "nativeApproved": false,

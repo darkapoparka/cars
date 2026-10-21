@@ -1,0 +1,197 @@
+{
+  "schemaVersion": 1,
+  "dealer": "jak-prestige",
+  "reviewed": true,
+  "reviewedAt": "2026-10-21T00:37:57.500Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "0263dca7c3eedda9bf87b50f550068689a466d126a658d0ed573e7360d20a2f7",
+      "sourceSha256": "02bc750b1800c13b1faac9dc8142af589eae3d61fdda88d7eee016c4d6f1132f"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "69e519facb338e256ff76314844d4bb6fe722c6f5b50d21d563a99be68e590c6",
+      "sourceSha256": "e889fa04ca477e36f93775a2564e1fd0e820bf9fd14ebec8c29c2c8d65c640d6"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "69e519facb338e256ff76314844d4bb6fe722c6f5b50d21d563a99be68e590c6",
+      "sourceSha256": "e889fa04ca477e36f93775a2564e1fd0e820bf9fd14ebec8c29c2c8d65c640d6"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "02bc750b1800c13b1faac9dc8142af589eae3d61fdda88d7eee016c4d6f1132f",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-5416897e-0fcb-43e0-977c-1b84880deb35",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "053bc0f5649445a8a048a8df19903f784285ebc7fde5b078b45a7bddc1d01a68",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-5416897e-0fcb-43e0-977c-1b84880deb35",
+      "modelVersion": null
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "58acfe7ebb885b20a5b24ec96bda6872f1f45a97ccbb024a707f1985fecbd43a"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "02bc750b1800c13b1faac9dc8142af589eae3d61fdda88d7eee016c4d6f1132f",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-5416897e-0fcb-43e0-977c-1b84880deb35",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/jak-prestige/branding/generated-master-v1-20261021.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "e889fa04ca477e36f93775a2564e1fd0e820bf9fd14ebec8c29c2c8d65c640d6",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-bf52c6c3-6f9f-4d98-950f-d796d819ba55",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/jak-prestige/branding/generated-inverse-v1-20261021.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "e889fa04ca477e36f93775a2564e1fd0e820bf9fd14ebec8c29c2c8d65c640d6",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-bf52c6c3-6f9f-4d98-950f-d796d819ba55",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/jak-prestige/branding/generated-inverse-v1-20261021.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "ad71558891575bbfc72919eb8dcfd441f3436a677cb9fc8376a8b90f7ba3447e",
+      "sha256": "02bc750b1800c13b1faac9dc8142af589eae3d61fdda88d7eee016c4d6f1132f",
+      "crop": {
+        "left": 21,
+        "top": 165,
+        "width": 1731,
+        "height": 536
+      },
+      "sourcePath": "branding/generated-master-v1-20261021.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "2158e171da1ef54a3560017c31e29e18946c4306435dfe3a6d62e721d47915d4",
+      "sha256": "e889fa04ca477e36f93775a2564e1fd0e820bf9fd14ebec8c29c2c8d65c640d6",
+      "crop": {
+        "left": 22,
+        "top": 164,
+        "width": 1731,
+        "height": 537
+      },
+      "sourcePath": "branding/generated-inverse-v1-20261021.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "2158e171da1ef54a3560017c31e29e18946c4306435dfe3a6d62e721d47915d4",
+      "sha256": "e889fa04ca477e36f93775a2564e1fd0e820bf9fd14ebec8c29c2c8d65c640d6",
+      "crop": {
+        "left": 22,
+        "top": 164,
+        "width": 1731,
+        "height": 537
+      },
+      "sourcePath": "branding/generated-inverse-v1-20261021.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "a72673da60f22d00b658b081040f5561a3eacccbcf7b28869e254caccc743a0d",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-5416897e-0fcb-43e0-977c-1b84880deb35",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/jak-prestige/branding/generated-mark-light-v1-20261021.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "2b524c421256470ee817e8a9fbbe0b388d897bd68118e32cbe243724d75d3d1b",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-bf52c6c3-6f9f-4d98-950f-d796d819ba55",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/jak-prestige/branding/generated-mark-dark-v1-20261021.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "053bc0f5649445a8a048a8df19903f784285ebc7fde5b078b45a7bddc1d01a68",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-5416897e-0fcb-43e0-977c-1b84880deb35",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/jak-prestige/branding/generated-mark-light-v1-20261021.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "58acfe7ebb885b20a5b24ec96bda6872f1f45a97ccbb024a707f1985fecbd43a",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-5416897e-0fcb-43e0-977c-1b84880deb35",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/jak-prestige/branding/generated-mark-light-v1-20261021.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-21T00:37:57.500Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "88f13b70519ebb3ea1aed6275e9db5bbc558dc65579301de596f6641197914bc",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-bf52c6c3-6f9f-4d98-950f-d796d819ba55",
+      "modelVersion": null
+    }
+  }
+}

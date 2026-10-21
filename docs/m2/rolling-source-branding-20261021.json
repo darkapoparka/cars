@@ -507,6 +507,75 @@
       "nativeStatus": "Ready for the existing400 source campaign; no separate manual native dispatch",
       "nativeApproval": false,
       "hostedApproval": false
+    },
+    {
+      "group": "sixth3-first2",
+      "recordedAt": "2026-10-21T00:41:33.931Z",
+      "reviewSealSha256": "81707a2dd1befe5215870ca1a434d73714211f1cf424d91629d8a7119a0bc3fe",
+      "totals": {
+        "packs": 2,
+        "artworkPassed": 2,
+        "sourceReviewCheckPassed": 2,
+        "existingContactHeld": 0,
+        "candidateRasterChecks": 28,
+        "actualSourceRasterChecks": 28,
+        "files": 48,
+        "bytes": 4121287,
+        "modifiedPaths": 10,
+        "addedPaths": 18,
+        "deleted": 0
+      },
+      "packs": [
+        {
+          "slug": "jak-prestige",
+          "path": "dealers/jak-prestige",
+          "packDigest": "73a8eda2e80636d25b2514b53bc3f7845580b0590381d6621343241292fec007",
+          "files": 24,
+          "bytes": 1853604,
+          "sourceReady": true,
+          "proposalOnly": true,
+          "maintainerConsumerReview": true,
+          "actualSourceRasters": 14,
+          "strictPublisher": {
+            "passed": true,
+            "actualExportedApplyLeadBranding": true,
+            "fixtureSourceSha256": "85d66559b60867d2ab30ff7c4cb0a9eb07f7d6b9e0fb8ef3c4ae5caeae594783",
+            "noBuild": true
+          },
+          "sourceFactsStockPhotosResearchPreserved": true,
+          "humanReview": false,
+          "dealerApproval": false,
+          "nativeApproval": false,
+          "hostedApproval": false,
+          "provenance": "dealers/jak-prestige/branding/first-proposal-artwork-20261021.json"
+        },
+        {
+          "slug": "sterling-and-drake-motors",
+          "path": "dealers/sterling-and-drake-motors",
+          "packDigest": "6e7479da973e360317bc19d68069e6fd3e9decf09f9692f7a5b864ddb640e6d1",
+          "files": 24,
+          "bytes": 2267683,
+          "sourceReady": true,
+          "proposalOnly": true,
+          "maintainerConsumerReview": true,
+          "actualSourceRasters": 14,
+          "strictPublisher": {
+            "passed": true,
+            "actualExportedApplyLeadBranding": true,
+            "fixtureSourceSha256": "85d66559b60867d2ab30ff7c4cb0a9eb07f7d6b9e0fb8ef3c4ae5caeae594783",
+            "noBuild": true
+          },
+          "sourceFactsStockPhotosResearchPreserved": true,
+          "humanReview": false,
+          "dealerApproval": false,
+          "nativeApproval": false,
+          "hostedApproval": false,
+          "provenance": "dealers/sterling-and-drake-motors/branding/first-proposal-artwork-20261021.json"
+        }
+      ],
+      "nativeStatus": "Ready for the existing400 source campaign; no separate manual native dispatch",
+      "nativeApproval": false,
+      "hostedApproval": false
     }
   ],
   "ownerAccepted": false,

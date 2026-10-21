@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "dealer": "sterling-and-drake-motors",
-  "status": "research-required",
+  "status": "reviewed",
   "realLogoFirst": true,
   "publicSources": [
     {
@@ -18,7 +18,192 @@
     }
   ],
   "originals": [],
-  "creationMethod": null,
+  "creationMethod": "imagegen-proposal",
   "dealerApproved": false,
-  "generatedInputs": null
+  "generatedInputs": {
+    "reviewedAt": "2026-10-21T00:38:04.607Z",
+    "master": {
+      "path": "branding/generated-master-v1-20261021.png",
+      "sha256": "4a32feffd9f295fc826e4fa4a96574b4e54de39f5b72c894b2c7ecdbb3f95adb",
+      "nativeDimensions": {
+        "width": 1774,
+        "height": 887
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-4cb16614-e4f8-4456-8079-be45d86ed714",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark-light-v1-20261021.png",
+      "sha256": "8f5eb63d11f0286686736348faa841b24d5018d4c8e0719a8ed05b5a3890093d",
+      "nativeDimensions": {
+        "width": 609,
+        "height": 887
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-4cb16614-e4f8-4456-8079-be45d86ed714",
+        "modelVersion": null
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-dark-v1-20261021.png",
+      "sha256": "b435900ad8d34e3cad075ed729210919a871bac90c4ead7df9b2c5a79dad8d23",
+      "nativeDimensions": {
+        "width": 609,
+        "height": 887
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-bc7e71df-7d50-4f61-8b3c-7159139fa36b",
+        "modelVersion": null
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-master-v1-20261021.png",
+        "sha256": "4a32feffd9f295fc826e4fa4a96574b4e54de39f5b72c894b2c7ecdbb3f95adb",
+        "nativeDimensions": {
+          "width": 1774,
+          "height": 887
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-4cb16614-e4f8-4456-8079-be45d86ed714",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-inverse-v1-20261021.png",
+        "sha256": "68013708f14326fd7ba08d07d2b6a1a0b92dae1f925397e847c2302e60616e97",
+        "nativeDimensions": {
+          "width": 1774,
+          "height": 887
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-bc7e71df-7d50-4f61-8b3c-7159139fa36b",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-inverse-v1-20261021.png",
+        "sha256": "68013708f14326fd7ba08d07d2b6a1a0b92dae1f925397e847c2302e60616e97",
+        "nativeDimensions": {
+          "width": 1774,
+          "height": 887
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-bc7e71df-7d50-4f61-8b3c-7159139fa36b",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-21T00:38:04.607Z",
+      "wordmarkWidths": [
+        120,
+        180
+      ],
+      "markWidths": [
+        32,
+        64
+      ],
+      "notes": "Agent inspected exact alpha-composited light/inverse wordmarks; final matched consumer sheet is separately retained. All five native dark/red backgrounds are unchanged. Proposal only, no human/dealer/native/hosted approval."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-21T00:38:04.607Z",
+      "widths": [
+        32,
+        64
+      ],
+      "notes": "Compact artwork is an exact pixel extraction of the isolated generated emblem, with a clear alpha gap to the wordmark; no recolour, filters or alpha cleanup."
+    }
+  },
+  "approvalStatus": "independent-preview-not-dealer-approved",
+  "researchConclusion": "Exact retained Royal-motors marketplace page displays Sterling and Drake Motors and matching retained contact/address. Royal Exchange/Royal-motors references are retained aliases for this one record, not separate invented entities. Available header logo is platform Cazoo artwork and other images are stock; none is adopted as dealer art. No distinct usable dealer original obtained in bounded checks. New independent proposal; no operator/history/adoption claim.",
+  "publicSourceObservations": [
+    {
+      "observedAt": "2026-10-21T00:38:04.607Z",
+      "kind": "bounded-logo-first-page-review",
+      "sourcePage": "https://showroom.ebaymotorspro.co.uk/Royal-motors",
+      "observations": "Current primary header confirms Sterling and Drake Motors at84 Bromford Lane, West Bromwich and retained phone. Retained postcode discrepancy left unchanged. Platform Cazoo logo and stock photographs excluded as dealer artwork."
+    }
+  ],
+  "generation": {
+    "tool": "image_gen.imagegen",
+    "generationId": "exec-4cb16614-e4f8-4456-8079-be45d86ed714",
+    "modelVersion": null,
+    "prompt": "Use case: logo-brand. Design one flat transparent white-surface proposal logo for exact name STERLING AND DRAKE MOTORS. Horizontal lockup: naturally square SD companion monogram LEFT occupying aboutonequarter total width, clear large transparent gap, at RIGHT three strong readable text lines STERLING / AND DRAKE / MOTORS. All words exact, no ampersand. Bold simple elegant sans typography, medium tracking, generous counters. Deep blue #21344b main text/S; warm bronze #805a25 restrained accent/D and MOTORS. Clean commercial automotive identity, no car silhouette, crown, shield, crest, flags, founding year or legal/history statements. Monogram thick enough at32pixels, not a thin ornamental outline. No plate, white fill, gradient, bevel, glow, shadow, texture, speckles. Truly transparent canvas and negative spaces, generous margins. Actual120/180wordmark and32/64compact use. New independent proposal, no adoption implied."
+  },
+  "compactDerivation": {
+    "operation": "lossless-png-extract-isolated-emblem",
+    "parentPath": "branding/generated-master-v1-20261021.png",
+    "parentSha256": "4a32feffd9f295fc826e4fa4a96574b4e54de39f5b72c894b2c7ecdbb3f95adb",
+    "crop": {
+      "left": 0,
+      "top": 0,
+      "width": 609,
+      "height": 887
+    },
+    "emptyGap": {
+      "start": 585,
+      "end": 634,
+      "width": 49
+    },
+    "parentNativeDimensions": {
+      "width": 1774,
+      "height": 887
+    },
+    "artworkUnmodified": true,
+    "alphaUnmodified": true
+  },
+  "compactOnDarkDerivation": {
+    "operation": "lossless-png-extract-isolated-emblem",
+    "parentPath": "branding/generated-inverse-v1-20261021.png",
+    "parentSha256": "68013708f14326fd7ba08d07d2b6a1a0b92dae1f925397e847c2302e60616e97",
+    "crop": {
+      "left": 0,
+      "top": 0,
+      "width": 609,
+      "height": 887
+    },
+    "emptyGap": {
+      "start": 586,
+      "end": 633,
+      "width": 47
+    },
+    "parentNativeDimensions": {
+      "width": 1774,
+      "height": 887
+    },
+    "artworkUnmodified": true,
+    "alphaUnmodified": true
+  },
+  "additionalGenerations": [
+    {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-bc7e71df-7d50-4f61-8b3c-7159139fa36b",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand. Edit the supplied actual transparent STERLING AND DRAKE MOTORS logo into a matching flat DARK-SURFACE and RED-SURFACE inverse treatment. Preserve the exact lettering, spelling, line arrangement, monogram geometry, proportions, isolated left emblem and large clear transparent gap. Use pale cool grey #cbd2d8 for S and STERLING AND DRAKE, soft champagne #e5d4a5 for D and MOTORS. Substantial solid opaque strokes and fully transparent background/negative spaces. Keep clean edges and useful small-size counters. No pure white, glow, halo, keyline, shadows, gradients, bevel, plate, texture, speckling or other new decoration. Readable at120/180pixel wordmark and32/64pixel emblem size on nearblack and #c40101 backgrounds. Proposal only; no dealer adoption or historical claim.",
+      "referencePaths": [
+        "C:\\Users\\radev\\.codex\\generated_images\\01a15a1f-d666-7482-9123-db2575e93737\\exec-4cb16614-e4f8-4456-8079-be45d86ed714.png"
+      ],
+      "path": "branding/generated-inverse-v1-20261021.png",
+      "sha256": "68013708f14326fd7ba08d07d2b6a1a0b92dae1f925397e847c2302e60616e97"
+    }
+  ],
+  "sourceHistory": [
+    {
+      "reference": "branding/source-before-first-artwork-20261021-50b5e27305b814fb.json",
+      "sha256": "50b5e27305b814fb1c27ecbdadd543aff686bbd403f12e4a5e6a45cd24ab869a",
+      "retainedAt": "2026-10-21T00:38:04.607Z",
+      "reason": "Exact maintained input-only draft provenance before first proposal artwork"
+    }
+  ]
 }

@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-first-missing-source-proposal-artwork",
+  "dealer": "sterling-and-drake-motors",
+  "createdAt": "2026-10-21T00:38:04.607Z",
+  "inputRows": [
+    {
+      "role": "wordLight",
+      "path": "branding/generated-master-v1-20261021.png",
+      "sha256": "4a32feffd9f295fc826e4fa4a96574b4e54de39f5b72c894b2c7ecdbb3f95adb",
+      "nativeDimensions": {
+        "width": 1774,
+        "height": 887
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-4cb16614-e4f8-4456-8079-be45d86ed714",
+        "modelVersion": null
+      },
+      "artifact": "C:\\Users\\radev\\.codex\\generated_images\\01a15a1f-d666-7482-9123-db2575e93737\\exec-4cb16614-e4f8-4456-8079-be45d86ed714.png",
+      "prompt": "Use case: logo-brand. Design one flat transparent white-surface proposal logo for exact name STERLING AND DRAKE MOTORS. Horizontal lockup: naturally square SD companion monogram LEFT occupying aboutonequarter total width, clear large transparent gap, at RIGHT three strong readable text lines STERLING / AND DRAKE / MOTORS. All words exact, no ampersand. Bold simple elegant sans typography, medium tracking, generous counters. Deep blue #21344b main text/S; warm bronze #805a25 restrained accent/D and MOTORS. Clean commercial automotive identity, no car silhouette, crown, shield, crest, flags, founding year or legal/history statements. Monogram thick enough at32pixels, not a thin ornamental outline. No plate, white fill, gradient, bevel, glow, shadow, texture, speckles. Truly transparent canvas and negative spaces, generous margins. Actual120/180wordmark and32/64compact use. New independent proposal, no adoption implied.",
+      "referencePaths": []
+    },
+    {
+      "role": "markLight",
+      "path": "branding/generated-mark-light-v1-20261021.png",
+      "sha256": "8f5eb63d11f0286686736348faa841b24d5018d4c8e0719a8ed05b5a3890093d",
+      "nativeDimensions": {
+        "width": 609,
+        "height": 887
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-4cb16614-e4f8-4456-8079-be45d86ed714",
+        "modelVersion": null
+      },
+      "artifact": "J:/.artifacts/cars-source-sync/sixth3-branding-inputs/sterling-and-drake-motors/markLight.png",
+      "prompt": "Use case: logo-brand. Design one flat transparent white-surface proposal logo for exact name STERLING AND DRAKE MOTORS. Horizontal lockup: naturally square SD companion monogram LEFT occupying aboutonequarter total width, clear large transparent gap, at RIGHT three strong readable text lines STERLING / AND DRAKE / MOTORS. All words exact, no ampersand. Bold simple elegant sans typography, medium tracking, generous counters. Deep blue #21344b main text/S; warm bronze #805a25 restrained accent/D and MOTORS. Clean commercial automotive identity, no car silhouette, crown, shield, crest, flags, founding year or legal/history statements. Monogram thick enough at32pixels, not a thin ornamental outline. No plate, white fill, gradient, bevel, glow, shadow, texture, speckles. Truly transparent canvas and negative spaces, generous margins. Actual120/180wordmark and32/64compact use. New independent proposal, no adoption implied.",
+      "referencePaths": [
+        "C:\\Users\\radev\\.codex\\generated_images\\01a15a1f-d666-7482-9123-db2575e93737\\exec-4cb16614-e4f8-4456-8079-be45d86ed714.png"
+      ],
+      "derivation": {
+        "operation": "lossless-png-extract-isolated-emblem",
+        "parentPath": "branding/generated-master-v1-20261021.png",
+        "parentSha256": "4a32feffd9f295fc826e4fa4a96574b4e54de39f5b72c894b2c7ecdbb3f95adb",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 609,
+          "height": 887
+        },
+        "emptyGap": {
+          "start": 585,
+          "end": 634,
+          "width": 49
+        },
+        "parentNativeDimensions": {
+          "width": 1774,
+          "height": 887
+        },
+        "artworkUnmodified": true,
+        "alphaUnmodified": true
+      }
+    },
+    {
+      "role": "wordDark",
+      "path": "branding/generated-inverse-v1-20261021.png",
+      "sha256": "68013708f14326fd7ba08d07d2b6a1a0b92dae1f925397e847c2302e60616e97",
+      "nativeDimensions": {
+        "width": 1774,
+        "height": 887
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-bc7e71df-7d50-4f61-8b3c-7159139fa36b",
+        "modelVersion": null
+      },
+      "artifact": "C:\\Users\\radev\\.codex\\generated_images\\01a15a1f-d666-7482-9123-db2575e93737\\exec-bc7e71df-7d50-4f61-8b3c-7159139fa36b.png",
+      "prompt": "Use case: logo-brand. Edit the supplied actual transparent STERLING AND DRAKE MOTORS logo into a matching flat DARK-SURFACE and RED-SURFACE inverse treatment. Preserve the exact lettering, spelling, line arrangement, monogram geometry, proportions, isolated left emblem and large clear transparent gap. Use pale cool grey #cbd2d8 for S and STERLING AND DRAKE, soft champagne #e5d4a5 for D and MOTORS. Substantial solid opaque strokes and fully transparent background/negative spaces. Keep clean edges and useful small-size counters. No pure white, glow, halo, keyline, shadows, gradients, bevel, plate, texture, speckling or other new decoration. Readable at120/180pixel wordmark and32/64pixel emblem size on nearblack and #c40101 backgrounds. Proposal only; no dealer adoption or historical claim.",
+      "referencePaths": [
+        "C:\\Users\\radev\\.codex\\generated_images\\01a15a1f-d666-7482-9123-db2575e93737\\exec-4cb16614-e4f8-4456-8079-be45d86ed714.png"
+      ]
+    },
+    {
+      "role": "markDark",
+      "path": "branding/generated-mark-dark-v1-20261021.png",
+      "sha256": "b435900ad8d34e3cad075ed729210919a871bac90c4ead7df9b2c5a79dad8d23",
+      "nativeDimensions": {
+        "width": 609,
+        "height": 887
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-bc7e71df-7d50-4f61-8b3c-7159139fa36b",
+        "modelVersion": null
+      },
+      "artifact": "J:/.artifacts/cars-source-sync/sixth3-branding-inputs/sterling-and-drake-motors/markDark.png",
+      "prompt": "Use case: logo-brand. Edit the supplied actual transparent STERLING AND DRAKE MOTORS logo into a matching flat DARK-SURFACE and RED-SURFACE inverse treatment. Preserve the exact lettering, spelling, line arrangement, monogram geometry, proportions, isolated left emblem and large clear transparent gap. Use pale cool grey #cbd2d8 for S and STERLING AND DRAKE, soft champagne #e5d4a5 for D and MOTORS. Substantial solid opaque strokes and fully transparent background/negative spaces. Keep clean edges and useful small-size counters. No pure white, glow, halo, keyline, shadows, gradients, bevel, plate, texture, speckling or other new decoration. Readable at120/180pixel wordmark and32/64pixel emblem size on nearblack and #c40101 backgrounds. Proposal only; no dealer adoption or historical claim.",
+      "referencePaths": [
+        "C:\\Users\\radev\\.codex\\generated_images\\01a15a1f-d666-7482-9123-db2575e93737\\exec-bc7e71df-7d50-4f61-8b3c-7159139fa36b.png"
+      ],
+      "derivation": {
+        "operation": "lossless-png-extract-isolated-emblem",
+        "parentPath": "branding/generated-inverse-v1-20261021.png",
+        "parentSha256": "68013708f14326fd7ba08d07d2b6a1a0b92dae1f925397e847c2302e60616e97",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 609,
+          "height": 887
+        },
+        "emptyGap": {
+          "start": 586,
+          "end": 633,
+          "width": 47
+        },
+        "parentNativeDimensions": {
+          "width": 1774,
+          "height": 887
+        },
+        "artworkUnmodified": true,
+        "alphaUnmodified": true
+      }
+    }
+  ],
+  "sourceFactNamePreserved": true,
+  "publicTradingText": "Sterling and Drake Motors",
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "dealerApproval": false,
+  "humanReview": false,
+  "providerWrites": 0,
+  "filtersApplied": false,
+  "thresholdsChanged": false
+}

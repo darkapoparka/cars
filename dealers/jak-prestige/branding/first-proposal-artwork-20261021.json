@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-first-missing-source-proposal-artwork",
+  "dealer": "jak-prestige",
+  "createdAt": "2026-10-21T00:37:57.500Z",
+  "inputRows": [
+    {
+      "role": "wordLight",
+      "path": "branding/generated-master-v1-20261021.png",
+      "sha256": "ad71558891575bbfc72919eb8dcfd441f3436a677cb9fc8376a8b90f7ba3447e",
+      "nativeDimensions": {
+        "width": 1774,
+        "height": 887
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-5416897e-0fcb-43e0-977c-1b84880deb35",
+        "modelVersion": null
+      },
+      "artifact": "C:\\Users\\radev\\.codex\\generated_images\\01a15a1f-d666-7482-9123-db2575e93737\\exec-5416897e-0fcb-43e0-977c-1b84880deb35.png",
+      "prompt": "Use case: logo-brand. Design one clean flat transparent white-surface logo proposal for exact trading name JAK PRESTIGE. Wide horizontal lockup: at LEFT an isolated naturally near-square JP companion monogram, substantial geometric strokes and open counters; clear transparent gap to text at RIGHT, two bold lines JAK over PRESTIGE. Deep navy-charcoal #182936 main text/J, deep burgundy #9a283d accent/P. Contemporary premium dealership typography with restrained geometric character, no luxury badge/crown/car silhouette. Compact monogram visible mass must fill a balanced square after normal transparent padding crop, not a long underline. No other text, background, plates, thin keylines, white ink, gradients, reflections, glow, shadow, texture or speckles. Solid opaque artwork with fully transparent background and negative spaces. Readable at actual120/180wordmark widths and32/64mark widths. Independent proposal; no official or adopted claim.",
+      "referencePaths": []
+    },
+    {
+      "role": "markLight",
+      "path": "branding/generated-mark-light-v1-20261021.png",
+      "sha256": "112c76a70667e137f5be17c68bd423de28bc3a938db4b1bbb8ba2e32f5f77497",
+      "nativeDimensions": {
+        "width": 706,
+        "height": 887
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-5416897e-0fcb-43e0-977c-1b84880deb35",
+        "modelVersion": null
+      },
+      "artifact": "J:/.artifacts/cars-source-sync/sixth3-branding-inputs/jak-prestige/markLight.png",
+      "prompt": "Use case: logo-brand. Design one clean flat transparent white-surface logo proposal for exact trading name JAK PRESTIGE. Wide horizontal lockup: at LEFT an isolated naturally near-square JP companion monogram, substantial geometric strokes and open counters; clear transparent gap to text at RIGHT, two bold lines JAK over PRESTIGE. Deep navy-charcoal #182936 main text/J, deep burgundy #9a283d accent/P. Contemporary premium dealership typography with restrained geometric character, no luxury badge/crown/car silhouette. Compact monogram visible mass must fill a balanced square after normal transparent padding crop, not a long underline. No other text, background, plates, thin keylines, white ink, gradients, reflections, glow, shadow, texture or speckles. Solid opaque artwork with fully transparent background and negative spaces. Readable at actual120/180wordmark widths and32/64mark widths. Independent proposal; no official or adopted claim.",
+      "referencePaths": [
+        "C:\\Users\\radev\\.codex\\generated_images\\01a15a1f-d666-7482-9123-db2575e93737\\exec-5416897e-0fcb-43e0-977c-1b84880deb35.png"
+      ],
+      "derivation": {
+        "operation": "lossless-png-extract-isolated-emblem",
+        "parentPath": "branding/generated-master-v1-20261021.png",
+        "parentSha256": "ad71558891575bbfc72919eb8dcfd441f3436a677cb9fc8376a8b90f7ba3447e",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 706,
+          "height": 887
+        },
+        "emptyGap": {
+          "start": 681,
+          "end": 731,
+          "width": 50
+        },
+        "parentNativeDimensions": {
+          "width": 1774,
+          "height": 887
+        },
+        "artworkUnmodified": true,
+        "alphaUnmodified": true
+      }
+    },
+    {
+      "role": "wordDark",
+      "path": "branding/generated-inverse-v1-20261021.png",
+      "sha256": "2158e171da1ef54a3560017c31e29e18946c4306435dfe3a6d62e721d47915d4",
+      "nativeDimensions": {
+        "width": 1774,
+        "height": 887
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-bf52c6c3-6f9f-4d98-950f-d796d819ba55",
+        "modelVersion": null
+      },
+      "artifact": "C:\\Users\\radev\\.codex\\generated_images\\01a15a1f-d666-7482-9123-db2575e93737\\exec-bf52c6c3-6f9f-4d98-950f-d796d819ba55.png",
+      "prompt": "Use case: logo-brand. Edit the supplied actual transparent JAK PRESTIGE logo into a matching flat DARK-SURFACE and RED-SURFACE inverse treatment. Preserve the exact lettering, spelling, line arrangement, monogram geometry, proportions, isolated left emblem and large clear transparent gap. Use pale cool grey #cbd2d8 for J and JAK, pale rose #e3c1c8 for P and PRESTIGE. Substantial solid opaque strokes and fully transparent background/negative spaces. Keep clean edges and useful small-size counters. No pure white, glow, halo, keyline, shadows, gradients, bevel, plate, texture, speckling or other new decoration. Readable at120/180pixel wordmark and32/64pixel emblem size on nearblack and #c40101 backgrounds. Proposal only; no dealer adoption or historical claim.",
+      "referencePaths": [
+        "C:\\Users\\radev\\.codex\\generated_images\\01a15a1f-d666-7482-9123-db2575e93737\\exec-5416897e-0fcb-43e0-977c-1b84880deb35.png"
+      ]
+    },
+    {
+      "role": "markDark",
+      "path": "branding/generated-mark-dark-v1-20261021.png",
+      "sha256": "33de8024039f1211135fee6801056979cca4ef0aeacfec785f6e6d859692dc07",
+      "nativeDimensions": {
+        "width": 705,
+        "height": 887
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-bf52c6c3-6f9f-4d98-950f-d796d819ba55",
+        "modelVersion": null
+      },
+      "artifact": "J:/.artifacts/cars-source-sync/sixth3-branding-inputs/jak-prestige/markDark.png",
+      "prompt": "Use case: logo-brand. Edit the supplied actual transparent JAK PRESTIGE logo into a matching flat DARK-SURFACE and RED-SURFACE inverse treatment. Preserve the exact lettering, spelling, line arrangement, monogram geometry, proportions, isolated left emblem and large clear transparent gap. Use pale cool grey #cbd2d8 for J and JAK, pale rose #e3c1c8 for P and PRESTIGE. Substantial solid opaque strokes and fully transparent background/negative spaces. Keep clean edges and useful small-size counters. No pure white, glow, halo, keyline, shadows, gradients, bevel, plate, texture, speckling or other new decoration. Readable at120/180pixel wordmark and32/64pixel emblem size on nearblack and #c40101 backgrounds. Proposal only; no dealer adoption or historical claim.",
+      "referencePaths": [
+        "C:\\Users\\radev\\.codex\\generated_images\\01a15a1f-d666-7482-9123-db2575e93737\\exec-bf52c6c3-6f9f-4d98-950f-d796d819ba55.png"
+      ],
+      "derivation": {
+        "operation": "lossless-png-extract-isolated-emblem",
+        "parentPath": "branding/generated-inverse-v1-20261021.png",
+        "parentSha256": "2158e171da1ef54a3560017c31e29e18946c4306435dfe3a6d62e721d47915d4",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 705,
+          "height": 887
+        },
+        "emptyGap": {
+          "start": 680,
+          "end": 730,
+          "width": 50
+        },
+        "parentNativeDimensions": {
+          "width": 1774,
+          "height": 887
+        },
+        "artworkUnmodified": true,
+        "alphaUnmodified": true
+      }
+    }
+  ],
+  "sourceFactNamePreserved": true,
+  "publicTradingText": "Jak Prestige",
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "dealerApproval": false,
+  "humanReview": false,
+  "providerWrites": 0,
+  "filtersApplied": false,
+  "thresholdsChanged": false
+}

@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Jak Prestige",
     "publicOrigin": "https://jak-prestige.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "02bc750b1800c13b1faac9dc8142af589eae3d61fdda88d7eee016c4d6f1132f",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "053bc0f5649445a8a048a8df19903f784285ebc7fde5b078b45a7bddc1d01a68"
+    }
   }
 }

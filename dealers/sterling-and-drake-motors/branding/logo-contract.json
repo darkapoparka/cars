@@ -1,0 +1,197 @@
+{
+  "schemaVersion": 1,
+  "dealer": "sterling-and-drake-motors",
+  "reviewed": true,
+  "reviewedAt": "2026-10-21T00:38:04.607Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "da687ecf720f81b9686027055efccb8686043a1a83b6ba2b89b820d482dd34bc",
+      "sourceSha256": "b917c5d36e418ab977a509ab282db313ec5d20a97a258223524c53f50a422e54"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "343b2a6e26b5bc1b9b32c23d1d7a1d63c0bc03f12e1fdd5c96a780c157e4d0c4",
+      "sourceSha256": "385982d432d4735877fb98252d5150541aff867aa426668cc8a8a7127d89a7fc"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "343b2a6e26b5bc1b9b32c23d1d7a1d63c0bc03f12e1fdd5c96a780c157e4d0c4",
+      "sourceSha256": "385982d432d4735877fb98252d5150541aff867aa426668cc8a8a7127d89a7fc"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "b917c5d36e418ab977a509ab282db313ec5d20a97a258223524c53f50a422e54",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-4cb16614-e4f8-4456-8079-be45d86ed714",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "3ba4b7b4fb207adfd1dfa7958c62698aefc661b8a68aae28d30d97be8610d190",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-4cb16614-e4f8-4456-8079-be45d86ed714",
+      "modelVersion": null
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "ee74bca0b93ed44c6c0447cd92a0385ac82df516b8014d09ef5d33b4e238c83d"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "b917c5d36e418ab977a509ab282db313ec5d20a97a258223524c53f50a422e54",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-4cb16614-e4f8-4456-8079-be45d86ed714",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/sterling-and-drake-motors/branding/generated-master-v1-20261021.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "385982d432d4735877fb98252d5150541aff867aa426668cc8a8a7127d89a7fc",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-bc7e71df-7d50-4f61-8b3c-7159139fa36b",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/sterling-and-drake-motors/branding/generated-inverse-v1-20261021.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "385982d432d4735877fb98252d5150541aff867aa426668cc8a8a7127d89a7fc",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-bc7e71df-7d50-4f61-8b3c-7159139fa36b",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/sterling-and-drake-motors/branding/generated-inverse-v1-20261021.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "4a32feffd9f295fc826e4fa4a96574b4e54de39f5b72c894b2c7ecdbb3f95adb",
+      "sha256": "b917c5d36e418ab977a509ab282db313ec5d20a97a258223524c53f50a422e54",
+      "crop": {
+        "left": 24,
+        "top": 197,
+        "width": 1735,
+        "height": 537
+      },
+      "sourcePath": "branding/generated-master-v1-20261021.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "68013708f14326fd7ba08d07d2b6a1a0b92dae1f925397e847c2302e60616e97",
+      "sha256": "385982d432d4735877fb98252d5150541aff867aa426668cc8a8a7127d89a7fc",
+      "crop": {
+        "left": 23,
+        "top": 198,
+        "width": 1737,
+        "height": 536
+      },
+      "sourcePath": "branding/generated-inverse-v1-20261021.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "68013708f14326fd7ba08d07d2b6a1a0b92dae1f925397e847c2302e60616e97",
+      "sha256": "385982d432d4735877fb98252d5150541aff867aa426668cc8a8a7127d89a7fc",
+      "crop": {
+        "left": 23,
+        "top": 198,
+        "width": 1737,
+        "height": 536
+      },
+      "sourcePath": "branding/generated-inverse-v1-20261021.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "f5542383c0ab8c72aad0729ac6c06f5046d27c04b6afcfc48abab239371c80d8",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-4cb16614-e4f8-4456-8079-be45d86ed714",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/sterling-and-drake-motors/branding/generated-mark-light-v1-20261021.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "8ddf0ca8b4a75b9bab0ac4fd6cdecccddc4bec676302460fbfbd207a73022d82",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-bc7e71df-7d50-4f61-8b3c-7159139fa36b",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/sterling-and-drake-motors/branding/generated-mark-dark-v1-20261021.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "3ba4b7b4fb207adfd1dfa7958c62698aefc661b8a68aae28d30d97be8610d190",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-4cb16614-e4f8-4456-8079-be45d86ed714",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/sterling-and-drake-motors/branding/generated-mark-light-v1-20261021.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "ee74bca0b93ed44c6c0447cd92a0385ac82df516b8014d09ef5d33b4e238c83d",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-4cb16614-e4f8-4456-8079-be45d86ed714",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/sterling-and-drake-motors/branding/generated-mark-light-v1-20261021.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-21T00:38:04.607Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "cecf0b41eac4abf278b4ee619e088ab632ee098403d206099c3ddbe78ba3fdb3",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-bc7e71df-7d50-4f61-8b3c-7159139fa36b",
+      "modelVersion": null
+    }
+  }
+}
