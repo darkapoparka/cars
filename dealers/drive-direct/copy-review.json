@@ -2,27 +2,21 @@
   "schemaVersion": 1,
   "kind": "cars-new-source-reviewed-companion-copy",
   "dealer": "drive-direct",
-  "reviewed": false,
-  "reviewedAt": null,
-  "stockSha256": "54d0985c161b7e0778ff3f330a43c0189df61b8e92aa0519a46a662098804fbd",
+  "reviewed": true,
+  "reviewedAt": "2026-10-21T09:42:44.267Z",
+  "stockSha256": "16205e8b26107f772ef2a90bec7a9fe1c301be7afbf01c6a0c921efa0422e68b",
   "descriptions": [
     {
-      "sourceId": "template-demo-auto-best-1",
-      "sourceDescription": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
-      "en": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
-      "bg": "Илюстративни демонстрационни автомобили от запазения шаблон Cars; те не са наличности на тази автокъща. Наличността не е проверена. Цените са пропуснати в този преглед."
+      "sourceId": "ebay-860067229070",
+      "sourceDescription": "Dated public listing samples observed on 2026-10-21. Availability has not been confirmed. Listing prices are omitted in this preview.",
+      "en": "Dated public listing samples observed on 2026-10-21. Availability has not been confirmed. Listing prices are omitted in this preview.",
+      "bg": "Примери от публични обяви, наблюдавани на 2026-10-21. Наличността не е потвърдена. Цените са пропуснати в този преглед."
     },
     {
-      "sourceId": "template-demo-auto-best-2",
-      "sourceDescription": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
-      "en": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
-      "bg": "Илюстративни демонстрационни автомобили от запазения шаблон Cars; те не са наличности на тази автокъща. Наличността не е проверена. Цените са пропуснати в този преглед."
-    },
-    {
-      "sourceId": "template-demo-auto-best-3",
-      "sourceDescription": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
-      "en": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
-      "bg": "Илюстративни демонстрационни автомобили от запазения шаблон Cars; те не са наличности на тази автокъща. Наличността не е проверена. Цените са пропуснати в този преглед."
+      "sourceId": "ebay-860063458415",
+      "sourceDescription": "Dated public listing samples observed on 2026-10-21. Availability has not been confirmed. Listing prices are omitted in this preview.",
+      "en": "Dated public listing samples observed on 2026-10-21. Availability has not been confirmed. Listing prices are omitted in this preview.",
+      "bg": "Примери от публични обяви, наблюдавани на 2026-10-21. Наличността не е потвърдена. Цените са пропуснати в този преглед."
     }
   ]
 }

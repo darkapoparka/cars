@@ -26,7 +26,92 @@
       "supports": [
         "retained-public-business-research"
       ]
+    },
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/Drive-Direct?menu=1",
+      "observedAt": "2026-10-21T09:42:43.472Z",
+      "htmlSha256": "e2478cb1ff657e506549238cad37a22a525afc7153b8ad7aa77f7606721eaeec",
+      "supports": [
+        "business.name",
+        "public-business-contact",
+        "dealer-stock-source",
+        "published-original-logo"
+      ]
+    },
+    {
+      "url": "https://www.ebay.co.uk/itm/860067229070",
+      "observedAt": "2026-10-21T09:42:43.472Z",
+      "htmlSha256": "e2478cb1ff657e506549238cad37a22a525afc7153b8ad7aa77f7606721eaeec",
+      "supports": [
+        "stock.ebay-860067229070"
+      ]
+    },
+    {
+      "url": "https://www.ebay.co.uk/itm/860063458415",
+      "observedAt": "2026-10-21T09:42:43.472Z",
+      "htmlSha256": "e2478cb1ff657e506549238cad37a22a525afc7153b8ad7aa77f7606721eaeec",
+      "supports": [
+        "stock.ebay-860063458415"
+      ]
     }
   ],
-  "liveFetchPerformed": false
+  "liveFetchPerformed": true,
+  "addressConflict": {
+    "priorValue": "Yard 3, 318 Aston Church Road, Saltley, Birmingham B8 1QA (AutoTrader); eBay gives appointment-only B27 6EJ",
+    "action": "omit-unresolved-optional-address",
+    "sourceUrl": "https://showroom.ebaymotorspro.co.uk/Drive-Direct?menu=1",
+    "observedAt": "2026-10-21T09:42:43.472Z",
+    "htmlSha256": "e2478cb1ff657e506549238cad37a22a525afc7153b8ad7aa77f7606721eaeec"
+  },
+  "stockSources": [
+    {
+      "id": "ebay-860067229070",
+      "sourceUrl": "https://www.ebay.co.uk/itm/860067229070",
+      "sourceTitle": "HONDA CR-V 2.0 PETROL I-VTEC SPORT 5DR AUTO AUTOMATIC CRV  ULEZ COMPLIANT civic",
+      "sellerPage": "https://showroom.ebaymotorspro.co.uk/Drive-Direct?menu=1",
+      "observedAt": "2026-10-21T09:42:43.472Z",
+      "htmlSha256": "e2478cb1ff657e506549238cad37a22a525afc7153b8ad7aa77f7606721eaeec",
+      "sourceObservationUrl": "https://showroom.ebaymotorspro.co.uk/Drive-Direct?menu=1",
+      "photo": {
+        "url": "https://i.ebayimg.com/00/s/MTIwMFgxNjAw/z/rxMAAeSw~ttq2BzT/$_2.JPG",
+        "finalUrl": "https://i.ebayimg.com/00/s/MTIwMFgxNjAw/z/rxMAAeSw~ttq2BzT/$_2.JPG",
+        "httpStatus": 200,
+        "observedAt": "2026-10-21T09:42:43.612Z",
+        "bytes": 14312,
+        "sha256": "0a335dfb0f2175d82d03ac3d1a07c9c0b91cba5db83a16f8ecf28855c32d8a62",
+        "path": "dealer-stock/public-ebay-860067229070.jpg",
+        "width": 200,
+        "height": 150
+      },
+      "claimsPolicy": "Only sourced vehicle identity, explicit year and exact stated mileage where provided. Prices and unverified promotional condition claims omitted."
+    },
+    {
+      "id": "ebay-860063458415",
+      "sourceUrl": "https://www.ebay.co.uk/itm/860063458415",
+      "sourceTitle": "JEEP CHEROKEE 2.8 CRD DIESEL AUTO AUTOMATIC LIMITED 5DR *TOWBAR FITTED* 4X4 SUV",
+      "sellerPage": "https://showroom.ebaymotorspro.co.uk/Drive-Direct?menu=1",
+      "observedAt": "2026-10-21T09:42:43.472Z",
+      "htmlSha256": "e2478cb1ff657e506549238cad37a22a525afc7153b8ad7aa77f7606721eaeec",
+      "sourceObservationUrl": "https://showroom.ebaymotorspro.co.uk/Drive-Direct?menu=1",
+      "photo": {
+        "url": "https://i.ebayimg.com/00/s/MTIwMFgxNjAw/z/aBYAAeSwKhdq1r1a/$_2.JPG",
+        "finalUrl": "https://i.ebayimg.com/00/s/MTIwMFgxNjAw/z/aBYAAeSwKhdq1r1a/$_2.JPG",
+        "httpStatus": 200,
+        "observedAt": "2026-10-21T09:42:43.685Z",
+        "bytes": 14131,
+        "sha256": "1978fc3d530289aac5aa25d9df16e84edc5d71271963d8a3187b3feee159a929",
+        "path": "dealer-stock/public-ebay-860063458415.jpg",
+        "width": 200,
+        "height": 150
+      },
+      "claimsPolicy": "Only sourced vehicle identity, explicit year and exact stated mileage where provided. Prices and unverified promotional condition claims omitted."
+    }
+  ],
+  "sourceRefresh": {
+    "sourceParent": "381c78e238d20f2c60d3988bcf17191e27875eb7",
+    "priorFactsSha256": "e1ca14cb84e5e862a06e94c8c2a25a02533e419e6c19c6b01d12bf91dc362aff",
+    "priorStockSha256": "54d0985c161b7e0778ff3f330a43c0189df61b8e92aa0519a46a662098804fbd",
+    "observedAt": "2026-10-21T09:42:43.533Z",
+    "method": "Exact public original artwork and seller listing snapshots replace held branding and disclosed demo stock; previous source bytes remain retained in published history."
+  }
 }

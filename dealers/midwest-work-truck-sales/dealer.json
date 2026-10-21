@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Midwest Work Truck Sales",
     "publicOrigin": "https://midwest-work-truck-sales.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "2c270f37fb70a4e38936f446864f32a34d9444e5a057a04c87be87db0a5b24b8",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "f1cbc69e9b891bc27e5abb7c6ca219317cb0063c936aef63c814a11e5ab57f3d"
+    }
   }
 }

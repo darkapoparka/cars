@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Drive Direct",
     "publicOrigin": "https://drive-direct.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "dbb3aa317185050c3816ade431e3228cbaedd3d40a93646a21a1d1f330b043fa",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "3d1a091d3f0570e5505da7766f704f3b34f9a024788a682ff2e8266459c38fa9"
+    }
   }
 }

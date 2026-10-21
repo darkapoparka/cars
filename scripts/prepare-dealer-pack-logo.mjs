@@ -24,7 +24,14 @@ function reviewedInputs(source) {
 
 function artworkProvenance(row, {slug, sourceSha256, retainedAllowed}) {
   assert(safePackPath(row?.path) && /^branding\//.test(row.path) && /^[a-f0-9]{64}$/.test(row.sha256 ?? ''), 'Use a retained branding raster and its exact hash');
-  assert(row.rasterTreatment === undefined || ['solid-black', 'solid-white'].includes(row.rasterTreatment), 'Only explicit black/white alpha-preserving raster exports are supported');
+  assert(row.rasterTreatment === undefined || ['solid-black', 'solid-white', ...matteTreatments].includes(row.rasterTreatment), 'Only explicit black/white raster exports are supported');
+  if (matteTreatments.has(row.rasterTreatment)) {
+    const review = row.matteReview;
+    assert(retainedAllowed && !row.generation && review?.kind === 'reviewed-flat-white-canvas' && review.reviewed === true &&
+      review.background === '#ffffff' && review.noWhiteForegroundArtwork === true && review.sourceSha256 === row.sha256 &&
+      typeof review.reviewedAt === 'string' && Number.isFinite(Date.parse(review.reviewedAt)),
+      'White-matte preparation requires a dated exact-original visual review of a flat white canvas with no white foreground artwork');
+  }
   if (row.generation !== undefined && row.generation !== null) {
     assert(row.rasterTreatment === undefined, 'Solid-ink exports require a dated public original, not a generated-artwork claim');
     assert(row.retainedSource === undefined && typeof row.generation.generationId === 'string' && row.generation.generationId.trim() &&
@@ -42,35 +49,74 @@ function artworkProvenance(row, {slug, sourceSha256, retainedAllowed}) {
     'A retained original requires a public source URL without credentials');
   return {retainedSource: {kind: 'retained-reviewed-raster', reference: 'dealers/' + slug + '/' + row.path, sha256: row.sha256,
     reviewReference: 'dealers/' + slug + '/branding/source.json', reviewSha256: sourceSha256, sourceUrl: url.href, observedAt: original.observedAt,
-    ...(row.rasterTreatment ? {exportTreatment: {kind: 'alpha-preserving-solid-ink-v1', ink: row.rasterTreatment, sourceSha256: row.sha256, newGeometry: false}} : {})}};
+    ...(row.rasterTreatment ? {exportTreatment: matteTreatments.has(row.rasterTreatment) ?
+      {kind: 'reviewed-white-matte-solid-ink-v1', ink: row.rasterTreatment.endsWith('-white') ? 'solid-white' : 'solid-black',
+        sourceSha256: row.sha256, background: '#ffffff', derivedTransparency: true, originalAlphaPreserved: false,
+        matteReviewSha256: sha256(encodePackJson(row.matteReview)), newGeometry: false} :
+      {kind: 'alpha-preserving-solid-ink-v1', ink: row.rasterTreatment, sourceSha256: row.sha256, newGeometry: false}} : {})}};
+}
+
+const matteTreatments = new Set(['reviewed-white-matte-black', 'reviewed-white-matte-white']);
+
+/** Explicitly reviewed opaque white canvases only. No shape synthesis, tracing,
+ * dilation, lettering replacement or inferred background colour is performed.
+ * Preserve the original bytes; label this transparency derived, not original.
+ */
+export function reviewedWhiteMattePixels(input, ink) {
+  const {width, height, channels} = input.info;
+  assert(Number.isSafeInteger(width) && Number.isSafeInteger(height) && width > 0 && height > 0 &&
+    width * height <= 64 * 1024 ** 2 && channels === 4 && Buffer.isBuffer(input.data) && input.data.length === width * height * 4 &&
+    ['solid-black', 'solid-white'].includes(ink), 'Exact bounded RGBA canvas and monochrome ink required');
+  let white = 0, borderWhite = 0, border = 0;
+  for (let y = 0; y < height; y++) for (let x = 0; x < width; x++) {
+    const at = (y * width + x) * 4;
+    assert(input.data[at + 3] === 255, 'White-matte preparation requires a fully opaque original; transparent white artwork cannot be relabelled as a matte');
+    const isWhite = Math.min(input.data[at], input.data[at + 1], input.data[at + 2]) >= 250;
+    if (isWhite) white++;
+    if (x === 0 || y === 0 || x === width - 1 || y === height - 1) {border++; if (isWhite) borderWhite++;}
+  }
+  assert(white >= width * height * .35 && borderWhite >= border * .99,
+    'Original does not have the reviewed bounded flat white canvas; preserve it and hold for suitable artwork');
+  const data = Buffer.from(input.data), value = ink === 'solid-white' ? 255 : 0;
+  for (let at = 0; at < data.length; at += 4) {
+    const distance = 255 - Math.min(data[at], data[at + 1], data[at + 2]);
+    data.fill(value, at, at + 3); data[at + 3] = distance <= 5 ? 0 : 255;
+  }
+  return {data, proof: {kind: 'reviewed-white-matte-solid-ink-v1', ink, background: '#ffffff', whiteNoiseCeiling: 5,
+    alphaRule: 'preserve original opaque foreground alpha; only source pixels within five RGB levels of white become transparent',
+    originalAlphaUnchangedBeforeCropAndResize: false, originalWasFullyOpaque: true, derivedTransparency: true,
+    originalWidth: width, originalHeight: height, whiteCanvasPixels: white, borderWhiteFraction: borderWhite / border,
+    derivedPixelSha256: sha256(data), newGeometry: false}};
 }
 
 const provenanceFields = row => Object.fromEntries(['generation', 'retainedSource'].filter(key => row?.[key] !== undefined).map(key => [key, row[key]]));
 
 export async function cropTransparentPadding(bytes, sharp, {mark = false, rasterTreatment} = {}) {
-  assert(rasterTreatment === undefined || ['solid-black', 'solid-white'].includes(rasterTreatment), 'Unsupported raster treatment');
+  assert(rasterTreatment === undefined || ['solid-black', 'solid-white', ...matteTreatments].includes(rasterTreatment), 'Unsupported raster treatment');
   const input = await sharp(bytes, {limitInputPixels: 64 * 1024 ** 2}).ensureAlpha().raw().toBuffer({resolveWithObject: true});
   const {width, height, channels} = input.info; assert(channels === 4, 'Logo needs RGBA pixels');
+  const matte = matteTreatments.has(rasterTreatment) ? reviewedWhiteMattePixels(input, rasterTreatment.endsWith('-white') ? 'solid-white' : 'solid-black') : null;
+  const preparedPixels = matte?.data ?? input.data;
   let x0 = width, x1 = -1, y0 = height, y1 = -1, empty = 0;
   for (let y = 0; y < height; y++) for (let x = 0; x < width; x++) {
-    const alpha = input.data[(y * width + x) * 4 + 3]; if (alpha === 0) empty++;
+    const alpha = preparedPixels[(y * width + x) * 4 + 3]; if (alpha === 0) empty++;
     if (alpha >= 24) {x0 = Math.min(x0, x); x1 = Math.max(x1, x); y0 = Math.min(y0, y); y1 = Math.max(y1, y);}
   }
   assert(x1 >= x0 && empty > width * height * .25, 'Logo requires substantial real transparency and visible artwork');
   const padding = Math.max(2, Math.ceil(Math.max(x1 - x0 + 1, y1 - y0 + 1) * .025));
   const left = Math.max(0, x0 - padding), top = Math.max(0, y0 - padding), right = Math.min(width, x1 + padding + 1), bottom = Math.min(height, y1 + padding + 1);
-  // A requested monochrome surface uses exactly the original alpha silhouette.
-  // No background removal, new letters, tracing or invented geometry is allowed.
-  let prepared = sharp(bytes);
-  if (rasterTreatment) {
+  // Ordinary monochrome exports preserve original alpha. The separate opt-in
+  // matte path requires a dated exact-original review and opaque-white proof.
+  let prepared = matte ? sharp(matte.data, {raw: {width, height, channels: 4}}) : sharp(bytes);
+  if (rasterTreatment && !matte) {
     const pixels = Buffer.from(input.data), ink = rasterTreatment === 'solid-white' ? 255 : 0;
     for (let at = 0; at < pixels.length; at += 4) pixels.fill(ink, at, at + 3);
     prepared = sharp(pixels, {raw: {width, height, channels: 4}});
   }
   const cropped = prepared.extract({left, top, width: right - left, height: bottom - top});
   const png = await (mark ? cropped.resize(512, 512, {fit: 'contain', background: '#00000000'}) : cropped.resize({width: 1024})).png().toBuffer();
-  return {png, operation: 'crop-transparent-padding-and-resize', sourceSha256: sha256(bytes), sha256: sha256(png), crop: {left, top, width: right - left, height: bottom - top},
-    ...(rasterTreatment ? {rasterTreatment: {kind: 'alpha-preserving-solid-ink-v1', ink: rasterTreatment, originalAlphaUnchangedBeforeCropAndResize: true, newGeometry: false}} : {})};
+  return {png, operation: matte ? 'reviewed-white-matte-crop-and-resize' : 'crop-transparent-padding-and-resize', sourceSha256: sha256(bytes), sha256: sha256(png), crop: {left, top, width: right - left, height: bottom - top},
+    ...(rasterTreatment ? {rasterTreatment: matte?.proof ?? {kind: 'alpha-preserving-solid-ink-v1', ink: rasterTreatment, originalAlphaUnchangedBeforeCropAndResize: true, newGeometry: false}} : {})};
 }
 
 function ico(images) {
@@ -152,7 +198,7 @@ export async function prepareDealerPackLogo({root = ROOT, slug, persist = true, 
       save('dealer.json', encodePackJson(manifest));
     }
   }
-  const recipe = {schemaVersion: 1, kind: 'cars-dealer-pack-logo-recipe', dealer: slug, transformVersion: Object.values(rows).some(row => row.rasterTreatment) ? 'transparent-crop-solid-ink-v1' : 'transparent-crop-v1',
+  const recipe = {schemaVersion: 1, kind: 'cars-dealer-pack-logo-recipe', dealer: slug, transformVersion: Object.values(rows).some(row => matteTreatments.has(row.rasterTreatment)) ? 'reviewed-white-matte-crop-v1' : Object.values(rows).some(row => row.rasterTreatment) ? 'transparent-crop-solid-ink-v1' : 'transparent-crop-v1',
     toolchain: {...sharp.versions}, sourceSha256: sha256(sourceBytes), contractSha256: sha256(encodePackJson(contract)),
     outputs: [...generatedFiles].filter(([name]) => /\.(?:png|webp|ico)$/.test(name)).sort(([a], [b]) => a.localeCompare(b, 'en'))
       .map(([name, bytes]) => ({path: name, bytes: bytes.length, sha256: sha256(bytes)}))};
@@ -168,7 +214,7 @@ export async function loadPreparedDealerPack(root = ROOT, slug, options = {}) {
   pack.sourceFiles = new Map(pack.files);
   if (!pack.logoRecipe) return pack;
   const recipe = pack.logoRecipe;
-  assert(recipe.schemaVersion === 1 && recipe.kind === 'cars-dealer-pack-logo-recipe' && recipe.dealer === slug && ['transparent-crop-v1', 'transparent-crop-solid-ink-v1'].includes(recipe.transformVersion) &&
+  assert(recipe.schemaVersion === 1 && recipe.kind === 'cars-dealer-pack-logo-recipe' && recipe.dealer === slug && ['transparent-crop-v1', 'transparent-crop-solid-ink-v1', 'reviewed-white-matte-crop-v1'].includes(recipe.transformVersion) &&
     recipe.sourceSha256 === sha256(pack.files.get('branding/source.json')) && recipe.contractSha256 === sha256(pack.files.get('branding/logo-contract.json')), 'Logo regeneration recipe or retained source changed');
   const generated = await prepareDealerPackLogo({root, slug, toolPackage: options.toolPackage, persist: false, sourceFiles: pack.files});
   assert(isDeepStrictEqual(recipe.toolchain, generated.recipe.toolchain), 'Logo recipe requires its exact retained sharp/libvips toolchain');

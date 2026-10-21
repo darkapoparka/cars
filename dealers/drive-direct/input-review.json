@@ -1,0 +1,132 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-input-review",
+  "dealer": "drive-direct",
+  "reviewed": true,
+  "reviewedAt": "2026-10-21T09:42:44.267Z",
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "checks": [
+    "canonical-hosting-and-preserved-fleet-collisions",
+    "assigned-expansion-lead",
+    "public-fact-schema-and-price-omission",
+    "personal-contact-screen",
+    "retained-stock-media",
+    "companion-copy-source-binding",
+    "immutable-template-release-and-native-QA-parent",
+    "reviewed-artwork-provenance-and-regenerated-logo-hashes"
+  ],
+  "sourceArtworkReview": "Retained artwork review is separate provenance; this command does not perform visual, Arabic-expert or dealer approval.",
+  "copyReview": "Automated structure, stock hash, source text and complete EN/BG rows; no new human translation approval is inferred.",
+  "contacts": {
+    "schemaVersion": 1,
+    "kind": "cars-automated-public-contact-screen",
+    "dealer": "drive-direct",
+    "method": "heuristic; no claim that unflagged values cannot be personal",
+    "flags": [
+      {
+        "field": "business.email",
+        "valueSha256": "703963114678c0944849006642825932bad114ff6c765366fe0747da4c325839",
+        "code": "PERSONAL_CONTACT_REVIEW_REQUIRED",
+        "reason": "Mailbox resembles an individual or an unbranded personal-provider address; confirm its published business role or omit it.",
+        "resolvedByPublicBusinessEvidence": true
+      }
+    ],
+    "blocking": []
+  },
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-birmingham-drive-direct",
+    "position": 13
+  },
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "inputs": [
+    {
+      "path": "FACTS-AND-INVENTORY.json",
+      "sha256": "7331fa787940d857d0b2fa3888f63cc8fe615e075a1954f3c306587c92b85e8e"
+    },
+    {
+      "path": "branding/logo-contract.json",
+      "sha256": "d3c83016c5db83909e77c9532eecbaeb69b55baba10b033e26dc25185c225fcf"
+    },
+    {
+      "path": "branding/logo-recipe.json",
+      "sha256": "94f844c79977dc50b76044104a27cdc7d11e669081b1502784fc95b9fd1010d1"
+    },
+    {
+      "path": "branding/original-public-drive-direct.jpg",
+      "sha256": "ded6c7eee0d63abf0da203d46f14ffe7a23e310ab46a35b41b2e258b4e9face7"
+    },
+    {
+      "path": "branding/source.json",
+      "sha256": "a04ac7a18e46e891741273acc01695351a5c291f8f92c2de20c8c19171c13f5b"
+    },
+    {
+      "path": "business-facts.json",
+      "sha256": "2008ffeba2293067f1eea7992ca5413f14c9c31546479eb7033bfae0a6b5eefa"
+    },
+    {
+      "path": "contact-review.json",
+      "sha256": "1ca4c3277b2228f213f0e01f9a718a3ad01c9ecbd3d796eab10b6fdf675fcd19"
+    },
+    {
+      "path": "copy-review.json",
+      "sha256": "c4afaa723cc4b21afdea7324df88ecfd3f6fe53dc452f23e09ef800860b7d43f"
+    },
+    {
+      "path": "dealer-stock/public-ebay-860063458415.jpg",
+      "sha256": "1978fc3d530289aac5aa25d9df16e84edc5d71271963d8a3187b3feee159a929"
+    },
+    {
+      "path": "dealer-stock/public-ebay-860067229070.jpg",
+      "sha256": "0a335dfb0f2175d82d03ac3d1a07c9c0b91cba5db83a16f8ecf28855c32d8a62"
+    },
+    {
+      "path": "dealer-stock/template-demo-1.webp",
+      "sha256": "945e6864218ab3bd5fbd415336b212ecfde645685033f8506836f906885d447c"
+    },
+    {
+      "path": "dealer-stock/template-demo-2.webp",
+      "sha256": "17689ab880bf47de81ef467c34d639223f39f0c1ebe68c90d0aaf70e3dcc6333"
+    },
+    {
+      "path": "dealer-stock/template-demo-3.webp",
+      "sha256": "d644dec8e1ef280a702dccac267a2367f0ab823e40373e1299b156e7723b3b1f"
+    },
+    {
+      "path": "dealer.json",
+      "sha256": "2852c92ee8be3c00b69ebb577bf693e8f3d0bc51b162203b1af9f66304ec28d9"
+    },
+    {
+      "path": "identity-review.json",
+      "sha256": "d6956454d605f3ec697cf4e7e1b7555c36ff4a5611043b5916dcb7649d12ce01"
+    },
+    {
+      "path": "locale.json",
+      "sha256": "87f544a4c0bd237dba1a8da061577962c13fa11d1b97089ab7d6e32e8289d691"
+    },
+    {
+      "path": "missing-facts.json",
+      "sha256": "7a746077467e6624287cef1c13375f29477ccca056d4d8213c92223d4c87b34a"
+    },
+    {
+      "path": "qualification.json",
+      "sha256": "b49a02aeaa4d03142ea3ba92f613c928405bc3066ae6a21c7e356cb2a3bc9c03"
+    },
+    {
+      "path": "source-evidence.json",
+      "sha256": "b5b94addbb0b8d75d55c88372ffffa1537b58da64bc737868bb3230e02ee01a4"
+    },
+    {
+      "path": "stock.json",
+      "sha256": "16205e8b26107f772ef2a90bec7a9fe1c301be7afbf01c6a0c921efa0422e68b"
+    }
+  ],
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "providerWrites": 0
+}

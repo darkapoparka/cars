@@ -54,7 +54,114 @@
       "supports": [
         "retained-public-business-research"
       ]
+    },
+    {
+      "url": "https://www.mwworktrucks.com/",
+      "observedAt": "2026-10-21T09:42:49.419Z",
+      "htmlSha256": "7ca7ca855ee28735e2c0b0832366c6dbac8b9826f2fbc752e112a8fc5a213f6c",
+      "supports": [
+        "business.name",
+        "public-business-contact",
+        "dealer-stock-source",
+        "published-original-logo"
+      ]
+    },
+    {
+      "url": "https://www.mwworktrucks.com/product-page/2014-ram-4500-service-truck-6-7l-cummins-diesel",
+      "observedAt": "2026-10-21T09:42:49.585Z",
+      "htmlSha256": "32ce4cc07ae72595c93e2f74e7979b2459d0b34fb945e1af433d8ce4e86465c0",
+      "supports": [
+        "stock.2014-ram-4500-service-truck"
+      ]
+    },
+    {
+      "url": "https://www.mwworktrucks.com/product-page/2020-ford-f-550-crew-cab-service-truck",
+      "observedAt": "2026-10-21T09:42:49.935Z",
+      "htmlSha256": "593600ac13197916543f80ececa72e27a2898411d65f870d6bb410a0a1ddc8d8",
+      "supports": [
+        "stock.2020-ford-f550-service-truck"
+      ]
+    },
+    {
+      "url": "https://www.mwworktrucks.com/product-page/2014-ram-5500-4x4-crew-cab-flatbed",
+      "observedAt": "2026-10-21T09:42:50.310Z",
+      "htmlSha256": "dce69e3b235a76e765e821c0298a3ea72fd411df01ea3d54be0ebc2d1da2fdc4",
+      "supports": [
+        "stock.2014-ram-5500-crew-cab"
+      ]
     }
   ],
-  "liveFetchPerformed": false
+  "liveFetchPerformed": true,
+  "stockSources": [
+    {
+      "id": "2014-ram-4500-service-truck",
+      "sourceUrl": "https://www.mwworktrucks.com/product-page/2014-ram-4500-service-truck-6-7l-cummins-diesel",
+      "sourceTitle": "2014 RAM 4500 Service Truck – 6.7L Cummins Diesel",
+      "sellerPage": "https://www.mwworktrucks.com/",
+      "observedAt": "2026-10-21T09:42:49.585Z",
+      "htmlSha256": "32ce4cc07ae72595c93e2f74e7979b2459d0b34fb945e1af433d8ce4e86465c0",
+      "sourceObservationUrl": "https://www.mwworktrucks.com/product-page/2014-ram-4500-service-truck-6-7l-cummins-diesel",
+      "photo": {
+        "url": "https://static.wixstatic.com/media/5a969d_fafebca8c7794a07afea7023f50aa261~mv2.jpg/v1/fit/w_960,h_540,q_90/file.jpg/v1/fit/w_500,h_500,q_90/file.jpg",
+        "finalUrl": "https://static.wixstatic.com/media/5a969d_fafebca8c7794a07afea7023f50aa261~mv2.jpg/v1/fit/w_960,h_540,q_90/file.jpg/v1/fit/w_500,h_500,q_90/file.jpg",
+        "httpStatus": 200,
+        "observedAt": "2026-10-21T09:42:49.870Z",
+        "bytes": 64454,
+        "sha256": "e5ff7ebe30655a5e94c3af962a8f0d5a488c0aa4617bc7b73e543b7a3f9d7620",
+        "path": "dealer-stock/public-2014-ram-4500-service-truck.jpg",
+        "width": 500,
+        "height": 281
+      },
+      "claimsPolicy": "Only sourced vehicle identity, explicit year and exact stated mileage where provided. Prices and unverified promotional condition claims omitted."
+    },
+    {
+      "id": "2020-ford-f550-service-truck",
+      "sourceUrl": "https://www.mwworktrucks.com/product-page/2020-ford-f-550-crew-cab-service-truck",
+      "sourceTitle": "2020 Ford F-550 Crew Cab Service Truck",
+      "sellerPage": "https://www.mwworktrucks.com/",
+      "observedAt": "2026-10-21T09:42:49.935Z",
+      "htmlSha256": "593600ac13197916543f80ececa72e27a2898411d65f870d6bb410a0a1ddc8d8",
+      "sourceObservationUrl": "https://www.mwworktrucks.com/product-page/2020-ford-f-550-crew-cab-service-truck",
+      "photo": {
+        "url": "https://static.wixstatic.com/media/f4d5d1_e89ad23a144b42b4b4f3a9a957a0cdd8~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg",
+        "finalUrl": "https://static.wixstatic.com/media/f4d5d1_e89ad23a144b42b4b4f3a9a957a0cdd8~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg",
+        "httpStatus": 200,
+        "observedAt": "2026-10-21T09:42:50.239Z",
+        "bytes": 45473,
+        "sha256": "0ea8015cdd2b9d39444d3221c3c7fa9c8758ee46adf6a7c72daa8b3425622867",
+        "path": "dealer-stock/public-2020-ford-f550-service-truck.jpg",
+        "width": 500,
+        "height": 375
+      },
+      "claimsPolicy": "Only sourced vehicle identity, explicit year and exact stated mileage where provided. Prices and unverified promotional condition claims omitted."
+    },
+    {
+      "id": "2014-ram-5500-crew-cab",
+      "sourceUrl": "https://www.mwworktrucks.com/product-page/2014-ram-5500-4x4-crew-cab-flatbed",
+      "sourceTitle": "2014 RAM 5500 4x4 Crew Cab Flatbed",
+      "sellerPage": "https://www.mwworktrucks.com/",
+      "observedAt": "2026-10-21T09:42:50.310Z",
+      "htmlSha256": "dce69e3b235a76e765e821c0298a3ea72fd411df01ea3d54be0ebc2d1da2fdc4",
+      "sourceObservationUrl": "https://www.mwworktrucks.com/product-page/2014-ram-5500-4x4-crew-cab-flatbed",
+      "photo": {
+        "url": "https://static.wixstatic.com/media/f4d5d1_f411dd9aca914014853a0a6a445ef9fd~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg",
+        "finalUrl": "https://static.wixstatic.com/media/f4d5d1_f411dd9aca914014853a0a6a445ef9fd~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg",
+        "httpStatus": 200,
+        "observedAt": "2026-10-21T09:42:50.500Z",
+        "bytes": 66081,
+        "sha256": "0f95934bc152643080caee2f1dd517ecc9efda8be4815488550da3fe4007c8ba",
+        "path": "dealer-stock/public-2014-ram-5500-crew-cab.jpg",
+        "width": 500,
+        "height": 375
+      },
+      "claimsPolicy": "Only sourced vehicle identity, explicit year and exact stated mileage where provided. Prices and unverified promotional condition claims omitted."
+    }
+  ],
+  "sourceRefresh": {
+    "sourceParent": "381c78e238d20f2c60d3988bcf17191e27875eb7",
+    "priorFactsSha256": "c9c05652ffcb57f1b69219609958f6511cd3e9e29b3bcfccc725966521145aad",
+    "priorStockSha256": "717ffc99e01c0a40ce90a21b82c14257e6236178e7caaf975c2958769eb082f3",
+    "observedAt": "2026-10-21T09:42:49.442Z",
+    "method": "Exact public original artwork and seller listing snapshots replace held branding and disclosed demo stock; previous source bytes remain retained in published history."
+  }
 }
