@@ -6,6 +6,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {spawnSync} from 'node:child_process';
 import {randomUUID} from 'node:crypto';
+import {runQueueGitOperation} from './dealer-pack-git-operation.mjs';
 import {PACK_QUEUE_REPOSITORY,PACK_QUEUE_BRANCH,PACK_QUEUE_PATH,validatePackQueue} from './dealer-pack-queue.mjs';
 
 const assert=(ok,message)=>{if(!ok)throw Error(message);};
@@ -17,8 +18,8 @@ export function gitPackQueueStore({directory,token=process.env.GH_TOKEN??process
   fs.mkdirSync(directory,{recursive:true,mode:0o700});
   const env={...process.env,GIT_TERMINAL_PROMPT:'0',GCM_INTERACTIVE:'never',GIT_AUTHOR_NAME:'Cars deployment queue',GIT_AUTHOR_EMAIL:'cars-deploy-queue@users.noreply.github.com',GIT_COMMITTER_NAME:'Cars deployment queue',GIT_COMMITTER_EMAIL:'cars-deploy-queue@users.noreply.github.com'};
   if(!allowLocalTestRemote){env.GIT_CONFIG_COUNT='1';env.GIT_CONFIG_KEY_0='http.https://github.com/.extraheader';env.GIT_CONFIG_VALUE_0='AUTHORIZATION: basic '+Buffer.from('x-access-token:'+token).toString('base64');}
-  const run=(args,{input,allowFailure=false}={})=>{const result=spawnSync('git',['-C',directory,...args],{env,encoding:'utf8',input,maxBuffer:20*1024**2,timeout:120000});
-    if(!allowFailure)assert(result.status===0&&!result.signal&&typeof result.stdout==='string','Durable Git queue operation failed; credentials and command output were suppressed');return result;};
+  const run=(args,{input,allowFailure=false}={})=>runQueueGitOperation({args,allowFailure,
+    execute:()=>spawnSync('git',['-C',directory,...args],{env,encoding:'utf8',input,maxBuffer:20*1024**2,timeout:120000})});
   if(!fs.existsSync(path.join(directory,'HEAD'))){run(['init','--bare','--quiet']);run(['config','remote.origin.url',remote]);run(['config','remote.origin.promisor','true']);run(['config','remote.origin.partialclonefilter','blob:none']);}
   assert(run(['config','--get','remote.origin.url']).stdout.trim()===remote,'Existing queue cache points to another repository');
   return {
