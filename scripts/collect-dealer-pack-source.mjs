@@ -38,9 +38,13 @@ const kit=path.join(out,'source');fs.mkdirSync(kit,{recursive:true});
 let copiedBytes=0;
 function copy(from,to){const info=fs.lstatSync(from);assert(!info.isSymbolicLink(),'No source symlink');if(info.isDirectory()){fs.mkdirSync(to,{recursive:true});for(const file of fs.readdirSync(from))copy(path.join(from,file),path.join(to,file));}else{assert(info.isFile()&&info.size<25*1024**2,'Source file bound exceeded');copiedBytes+=info.size;assert(copiedBytes<150*1024**2,'Source acquisition archive exceeds bound');fs.mkdirSync(path.dirname(to),{recursive:true});fs.copyFileSync(from,to);}}
 for(const name of ['scripts','leads/expansion-2026-10-18','templates.lock.json','workspace.json','catalog.json','clients/index.json','dealers/templates.lock.json'])copy(name,path.join(kit,name));
-for(const directory of ['docs']){
- const walk=(at)=>{for(const file of fs.readdirSync(at,{withFileTypes:true})){const p=path.join(at,file.name);if(file.isDirectory())walk(p);else if(/\.(json|md)$/.test(p))copy(p,path.join(kit,p));}};walk(directory);
-}
+// Retain only exact qualification references, not the unrelated historical
+// fleet evidence archive under docs/. The ordinary qualification validators
+// still verify every required referenced file and digest after extraction.
+const references=new Set(['docs/DEPLOYMENT-INVENTORY.json']);
+const collectReferences=value=>{if(typeof value==='string'&&/^docs\/[A-Za-z0-9._/-]+\.(json|md)$/.test(value))references.add(value);else if(Array.isArray(value))value.forEach(collectReferences);else if(value&&typeof value==='object')Object.values(value).forEach(collectReferences);};
+for(const name of ['templates.lock.json','dealers/templates.lock.json'])collectReferences(JSON.parse(fs.readFileSync(name)));
+for(const name of references){assert(fs.existsSync(name),'Qualification source reference unavailable: '+name);copy(name,path.join(kit,name));}
 // All assigned manifests remain available for identity collision checks; only
 // explicitly selected compact packs carry their other factual/media inputs.
 for(const entry of fs.readdirSync('dealers',{withFileTypes:true}))if(entry.isDirectory()){
@@ -58,7 +62,10 @@ const urls=[
  ['midwest-f550','https://www.mwworktrucks.com/product-page/2020-ford-f-550-crew-cab-service-truck'],
  ['midwest-ram5500','https://www.mwworktrucks.com/product-page/2014-ram-5500-4x4-crew-cab-flatbed'],
  ['al-kuwait-seller','https://www.dubicars.com/dealers/sharjah-al-kuwait-used-cars-exhibition-2717'],
- ['al-kuwait-logo','https://www.dubicars.com/images/960363/z_400x234/al-kuwait-used-cars-exhibition/logo-e8f061bc-ab72-43f4-9c34-890eee3eeb2d.jpeg']
+ ['al-kuwait-logo','https://www.dubicars.com/images/960363/z_400x234/al-kuwait-used-cars-exhibition/logo-e8f061bc-ab72-43f4-9c34-890eee3eeb2d.jpeg'],
+ ['al-kuwait-formacar','https://www.formacar.com/en/shop/0a0006a5-9807-1782-8198-55afc394782d'],
+ ['drive-direct-honda-photo','https://i.ebayimg.com/00/s/MTIwMFgxNjAw/z/rxMAAeSw~ttq2BzT/$_2.JPG'],
+ ['drive-direct-jeep-photo','https://i.ebayimg.com/00/s/MTIwMFgxNjAw/z/aBYAAeSwKhdq1r1a/$_2.JPG']
 ];
 const downloads=[];
 for(const [name,url] of urls){try{const response=await fetch(url,{signal:AbortSignal.timeout(25000)}),bytes=Buffer.from(await response.arrayBuffer());assert(bytes.length<=6*1024**2,'Public source response exceeds bound');const mime=response.headers.get('content-type')??'',ext=mime.includes('html')?'html':mime.includes('png')?'png':mime.includes('jpeg')?'jpg':'txt',file='public/'+name+'.'+ext;fs.mkdirSync(path.join(out,'public'),{recursive:true});fs.writeFileSync(path.join(out,file),bytes);downloads.push({name,url,finalUrl:response.url,status:response.status,mime,bytes:bytes.length,sha256:sha(bytes),observedAt:new Date().toISOString(),file});}catch(error){downloads.push({name,url,error:error.message});}}
