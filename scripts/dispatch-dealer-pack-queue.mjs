@@ -15,6 +15,7 @@ import {gitPackQueueStore} from './lib/dealer-pack-queue-git.mjs';
 import {cloudflarePackProvider,tokenCloudflareTransport} from './lib/dealer-pack-cloudflare.mjs';
 import {githubPackTransport,inspectPackDeploymentIntake,inspectExactPackDeployment,drainPackDeployments} from './deploy-dealer-packs.mjs';
 import {validatePackDeploymentIdentity,validatePackProviderSnapshot,validatePackTargetForWrite} from './lib/dealer-pack-deployment.mjs';
+import {runPackGithubRead} from './lib/dealer-pack-github-read.mjs';
 
 const assert=(ok,message)=>{if(!ok)throw Error(message);};
 const hex40=value=>/^[a-f0-9]{40}$/.test(value??'');
@@ -117,17 +118,23 @@ export async function readPackProducerGate({run,prefix,artifacts,contracts,readG
 /** GET the authenticated archive location, then send no account credential to
  * the signed object URL. Verify full compressed bytes before reading any entry.
  */
-export async function downloadPackActionArtifact({artifact,out,token=process.env.GITHUB_TOKEN,fetchImpl=fetch}={}) {
-  assert(typeof token==='string'&&token.length>10&&Number.isSafeInteger(artifact?.id)&&artifact.size_in_bytes<=archiveLimit,'Actions read token and bounded artifact required');
-  if(fs.existsSync(out)){assert(fs.statSync(out).size===artifact.size_in_bytes&&'sha256:'+sha256(fs.readFileSync(out))===artifact.digest,'Cached artifact changed');return out;}
+export async function downloadPackActionArtifact({artifact,out,token=process.env.GITHUB_TOKEN,fetchImpl=fetch,retryWait,transportClock,transportDiagnostic}={}) {
+  assert(typeof token==='string'&&token.length>10&&Number.isSafeInteger(artifact?.id)&&artifact.id>0&&Number.isSafeInteger(artifact.size_in_bytes)&&artifact.size_in_bytes>0&&artifact.size_in_bytes<=archiveLimit&&/^sha256:[a-f0-9]{64}$/.test(artifact.digest??''),'Actions read token and bounded artifact required');
+  const expected={id:artifact.id,bytes:artifact.size_in_bytes,digest:artifact.digest};
+  if(fs.existsSync(out)){assert(fs.statSync(out).size===expected.bytes&&'sha256:'+sha256(fs.readFileSync(out))===expected.digest,'Cached artifact changed');return out;}
   fs.mkdirSync(path.dirname(out),{recursive:true});
-  let response=await fetchImpl('https://api.github.com'+apiRoot+'/actions/artifacts/'+artifact.id+'/zip',{headers:{Authorization:'Bearer '+token,Accept:'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28'},redirect:'manual',signal:AbortSignal.timeout(30000)});
-  if(response.status===302)response=await fetchImpl(objectLocation(response.headers.get('location')),{headers:{'Accept-Encoding':'identity'},redirect:'error',signal:AbortSignal.timeout(180000)});
-  assert(response.status===200&&response.body,'Actions archive download failed');
-  const partial=out+'.partial',file=fs.openSync(partial,'wx',0o600),digest=createHash('sha256');let bytes=0;
-  try{for await(const value of response.body){const chunk=Buffer.from(value);bytes+=chunk.length;assert(bytes<=artifact.size_in_bytes&&bytes<=archiveLimit,'Archive download exceeded its authenticated size');digest.update(chunk);fs.writeSync(file,chunk);}assert(bytes===artifact.size_in_bytes&&'sha256:'+digest.digest('hex')===artifact.digest,'Downloaded artifact bytes differ from their authenticated digest');}
-  catch(error){fs.closeSync(file);fs.rmSync(partial,{force:true});throw error;}
-  fs.closeSync(file);fs.renameSync(partial,out);return out;
+  return runPackGithubRead({operation:'artifact-download',resource:'artifact',artifactId:expected.id,expectedBytes:expected.bytes,fetchImpl,retryWait,transportClock,transportDiagnostic,execute:async read=>{
+    let response=await read.get('https://api.github.com'+apiRoot+'/actions/artifacts/'+expected.id+'/zip',{headers:{Authorization:'Bearer '+token,Accept:'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28'}});
+    if(response.status===302)response=await read.get(objectLocation(response.headers.get('location')),{headers:{'Accept-Encoding':'identity'},redirect:'error',object:true});
+    assert(response.status===200&&response.body,'Actions archive download failed');
+    const partial=out+'.partial',file=fs.openSync(partial,'wx',0o600),digest=createHash('sha256');let bytes=0,iterator;
+    try{
+      iterator=response.body[Symbol.asyncIterator]();
+      for(;;){const {done,value}=await read.body(()=>iterator.next());if(done)break;const chunk=Buffer.from(value);bytes+=chunk.length;read.received(bytes);assert(bytes<=expected.bytes&&bytes<=archiveLimit,'Archive download exceeded its authenticated size');digest.update(chunk);fs.writeSync(file,chunk);}
+      assert(bytes===expected.bytes&&'sha256:'+digest.digest('hex')===expected.digest,'Downloaded artifact bytes differ from their authenticated digest');
+    }catch(error){fs.closeSync(file);fs.rmSync(partial,{force:true});try{await iterator?.return?.();}catch{}throw error;}
+    fs.closeSync(file);fs.renameSync(partial,out);return out;
+  }});
 }
 
 export function extractDeclaredPackArchive({archive,out,files}) {

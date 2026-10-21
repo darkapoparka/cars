@@ -1,4 +1,4 @@
-/** Hand off a successful bounded drain; never claim, enqueue or deploy here. */
+/** Hand off an authenticated bounded drain; never claim, enqueue or deploy here. */
 import fs from 'node:fs';
 import path from 'node:path';
 import {ROOT} from './lib/workflow.mjs';
@@ -34,8 +34,11 @@ export async function continuePackQueue({drain,env=process.env,readGithub=github
   const runId=Number(env.GITHUB_RUN_ID),attempt=Number(env.GITHUB_RUN_ATTEMPT),sourceSha=env.PACK_EXECUTOR_SHA;
   if(!normal(env.GITHUB_EVENT_NAME,env.PACK_ACTION))return skip('Only normal drains may continue; inspection and recovery cannot self-dispatch');
   if(env.GITHUB_REPOSITORY!==PACK_QUEUE_REPOSITORY||env.GITHUB_REF!=='refs/heads/main'||env.GITHUB_WORKFLOW_REF!==PACK_QUEUE_REPOSITORY+'/'+workflow+'@refs/heads/main'||!hex40(sourceSha)||sourceSha!==env.GITHUB_SHA||sourceSha!==env.GITHUB_WORKFLOW_SHA||!Number.isSafeInteger(runId)||runId<1||attempt!==1)return skip('Not the original execution of the exact published main workflow source');
-  if(drain?.status!=='completed'||!Array.isArray(drain.results)||drain.results.length<1||drain.results.length>10||drain.results.some(row=>row.status!=='deployed'||row.claimRetained||row.error||!row.receipt))return skip('Drain did not complete one to ten successful deployments');
-  report.parentRunId=runId;report.sourceSha=sourceSha;report.completed=drain.results.length;
+  if(!['completed','completed-with-failures'].includes(drain?.status)||!Array.isArray(drain.results)||drain.results.length<1||drain.results.length>10||drain.results.some(row=>!['deployed','failed'].includes(row.status)||row.claimRetained||row.status==='deployed'&&(row.error||!row.receipt)||row.status==='failed'&&(!/^[a-f0-9]{64}$/.test(row.requestId??'')||typeof row.error!=='string'||!row.error)))return skip('Drain did not complete one to ten bounded deployment results');
+  const deployed=drain.results.filter(row=>row.status==='deployed').length,failed=drain.results.length-deployed;
+  // A completely failed batch needs diagnosis rather than automatic fan-out.
+  if(!deployed||drain.status!==(failed?'completed-with-failures':'completed'))return skip('Drain made no verified progress or its terminal status differs from its results');
+  report.parentRunId=runId;report.sourceSha=sourceSha;report.completed=drain.results.length;report.deployed=deployed;report.failed=failed;
   const current=await readGithub({method:'GET',path:api+'/actions/runs/'+runId});
   const run=current.body;
   if(current.status!==200||run?.id!==runId||run.run_attempt!==attempt||run.repository?.full_name!==PACK_QUEUE_REPOSITORY||run.head_repository?.full_name!==PACK_QUEUE_REPOSITORY||run.path!==workflow||run.head_branch!=='main'||run.head_sha!==sourceSha||run.event!==env.GITHUB_EVENT_NAME||run.status!=='in_progress'||run.conclusion!==null)return skip('Current authenticated executor identity is unavailable or differs');
@@ -53,9 +56,24 @@ export async function continuePackQueue({drain,env=process.env,readGithub=github
   if(state.active||Object.values(state.requests).some(row=>['active','needs-reconciliation'].includes(row.status)))return skip('An active or uncertain account publication claim remains held');
   const ids=new Set();
   for(const result of drain.results){
-    const receipt=result.receipt,row=state.requests[receipt.requestId],digest=queueDigest(receipt);
-    if(ids.has(receipt.requestId)||receipt.queueId!==state.queueId||receipt.status!=='deployed'||receipt.hostedVerified!==true||row?.status!=='deployed'||row.request.slug!==receipt.slug||row.receiptSha256!==digest||!row.events.some(event=>event.kind==='claimed'&&event.owner==='github:'+runId)||!state.receipts[receipt.slug]?.some(item=>item.sha256===digest&&queueDigest(item.receipt)===digest))return skip('Successful drain receipts are not retained by this exact queue and executor');
-    ids.add(receipt.requestId);
+    const receipt=result.receipt,id=result.status==='deployed'?receipt.requestId:result.requestId,row=state.requests[id];
+    if(ids.has(id)||!row||row.status!==result.status||row.events.findLast(event=>event.kind==='claimed')?.owner!=='github:'+runId)return skip('Drain results are not distinct terminal requests owned by this exact executor');
+    if(receipt){
+      const digest=queueDigest(receipt);
+      if(receipt.requestId!==id||receipt.queueId!==state.queueId||receipt.status!=='deployed'||row.request.slug!==receipt.slug||row.receiptSha256!==digest||!state.receipts[receipt.slug]?.some(item=>item.sha256===digest&&queueDigest(item.receipt)===digest))return skip('Drain receipt is not retained by this exact queue and executor');
+    }
+    if(result.status==='deployed'){
+      if(receipt.hostedVerified!==true)return skip('Successful drain receipt lacks passing hosted evidence');
+    }else{
+      const last=row.events.at(-1),claimIndex=row.events.findLastIndex(event=>event.kind==='claimed'),afterClaim=row.events.slice(claimIndex+1);
+      const expectedError=(receipt?'Hosted verification failed: '+result.error:result.error).slice(0,2000);
+      const finishedAt=Date.parse(row.finishedAt),terminalAt=Date.parse(last?.at),claimedAt=Date.parse(row.events[claimIndex]?.at);
+      if(last?.kind!=='failed'||last.error!==expectedError||row.error!==expectedError||![finishedAt,terminalAt,claimedAt].every(Number.isFinite)||finishedAt<claimedAt||terminalAt<finishedAt)return skip('Failed result lacks its exact durable terminal failure');
+      if(receipt){
+        if(receipt.hostedVerified!==false||receipt.hostedFailure!==result.error||!afterClaim.some(event=>event.kind==='deployment-established'&&event.receipt?.requestId===id&&event.receipt?.versionId===receipt.versionId))return skip('Hosted failure lacks its retained established deployment');
+      }else if(result.claimRetained!==false||result.slug!==row.request.slug||row.receiptSha256||afterClaim.some(event=>event.kind!=='failed'))return skip('Receipt-free failure did not stop before provider intents');
+    }
+    ids.add(id);
   }
   // Failed and rolled-back rows stay terminal; only the existing queued rows count.
   report.pending=state.order.filter(id=>state.requests[id].status==='queued').length;

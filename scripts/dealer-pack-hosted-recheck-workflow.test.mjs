@@ -12,7 +12,7 @@ function condition(value,{event='workflow_dispatch',action='verify-hosted',token
   if(!/\b(?:success|failure|always|cancelled)\s*\(/.test(expression)&&!succeeded)return false;
   return Function('github','inputs','steps','success','cancelled','return ('+expression+');')(
     {event_name:event,ref:'refs/heads/main'},{action},
-    {token:{outputs:{present:token}},executor_guard:{conclusion:guard},reconcile:{conclusion:'success'},drain:{conclusion:'success'}},()=>succeeded,()=>cancelled);
+    {token:{outputs:{present:token}},executor_guard:{conclusion:guard},reconcile:{conclusion:'success'},source_rollout:{conclusion:'success'},metrics:{conclusion:'success',outputs:{complete:'true'}},drain:{conclusion:'success'}},()=>succeeded,()=>cancelled);
 }
 
 test('hosted recheck requires the explicit manual action, successful guards and a credential',()=>{
@@ -31,7 +31,7 @@ test('manual hosted recheck cannot intake, schedule, reconcile, drain, read drai
     'Reconcile only an explicitly selected stopped request',
     'Drain all retained batches through the single account claim',
     'Read startup, sampled CPU, memory and error evidence for this drain',
-    'Continue a successful nonempty normal drain on exact current main',
+    'Continue authenticated terminal progress on exact current main',
   ])assert.equal(condition(step(name)),false,name);
 });
 

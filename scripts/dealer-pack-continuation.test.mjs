@@ -48,10 +48,67 @@ test('schedule, producer completion and manual normal drains use the same guarde
   }
 });
 
-test('empty, partial, failed, uncertain and rollback drains cannot dispatch',async()=>{
+test('empty, inconsistent, unbound failure, uncertain and rollback drains cannot dispatch',async()=>{
   for(const change of [f=>f.drain.results=[],f=>f.drain.status='queued',f=>f.drain.status='completed-with-failures',f=>f.drain.results[0].status='failed',f=>f.drain.results[0].status='rolled-back',f=>f.drain.results[0].claimRetained=true,f=>f.drain.results[0].error='failure',f=>f.drain.results=Array.from({length:11},()=>f.drain.results[0])]){
     const f=fixture();change(f);assert.equal((await continuePackQueue(f)).status,'skipped');assert.equal(f.calls.length,0);
   }
+});
+
+function terminalFailure(f,{hosted=false}={}){
+  const row=f.state.requests[f.failed.id],error=hosted?'Exact hosted logo check failed':'Immutable artifact download timed out';
+  const result={status:'failed',requestId:f.failed.id,error,...(hosted?{}:{slug:f.failed.slug,claimRetained:false})};
+  row.events=[{kind:'claimed',owner:'github:123',at}];row.finishedAt=at;
+  row.error=hosted?'Hosted verification failed: '+error:error;
+  if(hosted){
+    const receipt={status:'deployed',hostedVerified:false,queueId:f.state.queueId,requestId:f.failed.id,slug:f.failed.slug,versionId:'11111111-1111-4111-8111-111111111111',hostedFailure:error,finishedAt:at};
+    result.receipt=receipt;row.receiptSha256=queueDigest(receipt);f.state.receipts[receipt.slug]=[{receipt:structuredClone(receipt),sha256:row.receiptSha256}];
+    row.events.push({kind:'deployment-established',at,receipt:{requestId:f.failed.id,versionId:receipt.versionId}});
+  }
+  row.events.push({kind:'failed',at,error:row.error});f.drain.status='completed-with-failures';f.drain.results.push(result);
+  return {row,result};
+}
+
+test('retained pre-provider and hosted failures permit other queued work without relabeling any failure',async()=>{
+  for(const hosted of [false,true]){
+    const f=fixture();terminalFailure(f,{hosted});const before=JSON.stringify(f.state),drainBefore=JSON.stringify(f.drain);
+    const report=await continuePackQueue(f);
+    assert.equal(report.status,'dispatched');assert.equal(report.deployed,1);assert.equal(report.failed,1);assert.equal(report.pending,1);
+    assert.equal(report.providerWrites,0);assert.equal(report.queueWrites,0);assert.equal(report.dispatches,1);
+    assert.equal(JSON.stringify(f.state),before);assert.equal(JSON.stringify(f.drain),drainBefore);
+    assert.equal(f.state.requests[f.failed.id].status,'failed');
+  }
+});
+
+test('all-failed batches, duplicate results and incomplete terminal failure proof cannot continue',async()=>{
+  const changes=[
+    (f,x)=>f.drain.results.shift(),
+    (f,x)=>f.drain.results.push(x.result),
+    (f,x)=>delete x.result.requestId,
+    (f,x)=>x.result.requestId=f.pending.id,
+    (f,x)=>delete x.result.claimRetained,
+    (f,x)=>x.result.claimRetained=true,
+    (f,x)=>x.result.slug='another-slug',
+    (f,x)=>x.result.error='unretained error',
+    (f,x)=>x.row.events[0].owner='github:456',
+    (f,x)=>x.row.events.at(-1).kind='needs-reconciliation',
+    (f,x)=>x.row.error='another durable error',
+    (f,x)=>delete x.row.finishedAt,
+    (f,x)=>x.row.events.at(-1).at='2026-10-20T00:00:00.000Z',
+    (f,x)=>x.row.events.splice(1,0,{kind:'worker-create-intent',at}),
+  ];
+  for(const change of changes){const f=fixture(),x=terminalFailure(f);change(f,x);const report=await continuePackQueue(f);assert.equal(report.status,'skipped');assert.ok(!f.calls.some(row=>row.method==='DISPATCH'));}
+});
+
+test('failed hosted receipts must retain exact queue hashes and positively established version',async()=>{
+  for(const change of [
+    (f,x)=>x.result.receipt.hostedVerified=true,
+    (f,x)=>x.result.receipt.hostedFailure='other failure',
+    (f,x)=>x.result.receipt.requestId=f.pending.id,
+    (f,x)=>x.row.events.splice(1,1),
+    (f,x)=>x.row.events[1].receipt.versionId='22222222-2222-4222-8222-222222222222',
+    (f,x)=>f.state.receipts[x.result.receipt.slug]=[],
+    (f,x)=>x.row.receiptSha256=queueDigest('missing receipt'),
+  ]){const f=fixture(),x=terminalFailure(f,{hosted:true});change(f,x);assert.equal((await continuePackQueue(f)).status,'skipped');assert.ok(!f.calls.some(row=>row.method==='DISPATCH'));}
 });
 
 test('inspection, recovery, rerun and non-main source contexts cannot continue',async()=>{
@@ -119,21 +176,46 @@ test('dispatch uses a single scoped POST and handles the empty 204 response',asy
 });
 
 const workflowText=fs.readFileSync(new URL('../.github/workflows/dealer-pack-deploy.yml',import.meta.url),'utf8');
-const continuation=workflowText.split(/^      - /m).find(row=>row.startsWith('name: Continue a successful nonempty normal drain'));
-function condition({event='workflow_dispatch',action='drain',succeeded=true,drain='success'}={}){
+const continuation=workflowText.split(/^      - /m).find(row=>row.startsWith('name: Continue authenticated terminal progress'));
+function condition({event='workflow_dispatch',action='drain',cancelled=false,guard='success',source='success',token='true',metrics='success',complete='true',drain='success'}={}){
   const expression=continuation.match(/^        if: \$\{\{ (.+) \}\}$/m)?.[1];assert.ok(expression);
-  return Function('github','inputs','steps','success',`return (${expression});`)({event_name:event},{action},{drain:{conclusion:drain}},()=>succeeded);
+  return Function('github','inputs','steps','cancelled',`return (${expression});`)({event_name:event},{action},{drain:{conclusion:drain},executor_guard:{conclusion:guard},source_rollout:{conclusion:source},token:{outputs:{present:token}},metrics:{conclusion:metrics,outputs:{complete}}},()=>cancelled);
 }
-test('workflow continuation requires successful preceding checks and excludes recovery',()=>{
+test('workflow continuation permits terminal drain failure but requires runtime and executor checks and excludes recovery',()=>{
   assert.equal(condition(),true);assert.equal(condition({event:'schedule'}),true);assert.equal(condition({event:'workflow_run'}),true);
   for(const action of ['inspect','recover-inspect','recover-and-drain'])assert.equal(condition({action}),false);
-  assert.equal(condition({succeeded:false}),false);
-  for(const drain of ['skipped','cancelled','failure'])assert.equal(condition({drain}),false);
+  assert.equal(condition({drain:'failure'}),true);
+  for(const patch of [{cancelled:true},{guard:'failure'},{source:'skipped'},{source:'failure'},{token:'false'},{metrics:'failure'},{metrics:'skipped'},{complete:'false'},{complete:''},{complete:null}])assert.equal(condition(patch),false);
+  for(const drain of ['skipped','cancelled'])assert.equal(condition({drain}),false);
   assert.match(workflowText,/id: drain/);assert.match(workflowText,/PACK_EXECUTOR_SHA: \$\{\{ steps\.executor_source\.outputs\.commit \}\}/);
   assert.match(workflowText,/contents: write\n      actions: write/);
   assert.match(workflowText,/--max 10 --report runtime\/dealer-pack-dispatch\/drain\.json/);
-  assert.ok(workflowText.indexOf('name: Read startup, sampled CPU')<workflowText.indexOf('name: Continue a successful'));
+  assert.match(workflowText,/name: Read startup, sampled CPU[^\n]*\n        id: metrics/);
+  assert.ok(workflowText.indexOf('name: Read startup, sampled CPU')<workflowText.indexOf('name: Continue authenticated'));
   assert.equal((workflowText.match(/run: node scripts\/continue-dealer-pack-queue\.mjs/g)??[]).length,1);
+});
+
+test('runtime completeness requires measured passing evidence for every retained owned receipt',async()=>{
+  const step=workflowText.split(/^      - /m).find(row=>row.startsWith('name: Read startup, sampled CPU'));
+  const script=step.match(/node --input-type=module <<'NODE'\n([\s\S]*?)\n          NODE/)?.[1];assert.ok(script);
+  const body=script.replace(/^          import .*;\n/gm,'');
+  const run=new (Object.getPrototypeOf(async function(){}).constructor)('fs','readPackMetrics','console','process',body);
+  const valid={deployedAt:at,slug:'done',runtime:{startupTimeMs:30,cpuLimitMs:30000,cpuLimitSource:'provider-active-version-readback'}};
+  for(const [receipts,measurement,complete,failed] of [
+    [[valid],{status:'observed-without-errors',withinLimits:true},true,false],
+    [[{slug:'missing-date'}],{status:'observed-without-errors',withinLimits:true},false,true],
+    [[valid,{slug:'missing-date'}],{status:'observed-without-errors',withinLimits:true},false,true],
+    [[valid],{status:'awaiting-ingestion',withinLimits:null},false,true],
+    [[],{status:'observed-without-errors',withinLimits:true},false,false],
+  ]){
+    let report,output='';const process={env:{GITHUB_OUTPUT:'outputs'}},fs={existsSync:()=>true,readFileSync:()=>JSON.stringify({results:receipts.map(receipt=>({receipt}))}),writeFileSync:(file,value)=>{report=JSON.parse(value);},appendFileSync:(file,value)=>{assert.equal(file,'outputs');output+=value;}};
+    await run(fs,async()=>measurement,{log(){},error(){}},process);
+    assert.equal(report.complete,complete);assert.equal(output,'complete='+complete+'\n');assert.equal(process.exitCode===1,failed);
+    assert.equal(condition({complete:String(complete)}),complete);
+  }
+  const process={env:{GITHUB_OUTPUT:'outputs'}};let wrote=false;
+  await run({existsSync:()=>false,appendFileSync:()=>{wrote=true;}},()=>assert.fail('No report must not read metrics'),{log(){},error(){}},process);
+  assert.equal(wrote,false);assert.equal(condition({complete:''}),false);
 });
 
 test('child job refuses the main-branch race before any steps or provider writes',()=>{

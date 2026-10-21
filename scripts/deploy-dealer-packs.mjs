@@ -11,17 +11,23 @@ import {PACK_QUEUE_REPOSITORY,queueCanonical,packDeploymentRequest,validatePackQ
 import {validatePackDeploymentIdentity,latestOwnedPackReceipt,executeQueuedPackDeployment,validatePackProviderSnapshot,validatePackTargetForWrite} from './lib/dealer-pack-deployment.mjs';
 import {cloudflarePackProvider,tokenCloudflareTransport} from './lib/dealer-pack-cloudflare.mjs';
 import {gitPackQueueStore} from './lib/dealer-pack-queue-git.mjs';
+import {packGithubReadResource,runPackGithubRead} from './lib/dealer-pack-github-read.mjs';
 
 const assert=(ok,message)=>{if(!ok)throw Error(message);};
 const hex40=value=>/^[a-f0-9]{40}$/.test(value??'');
 const hex64=value=>/^[a-f0-9]{64}$/.test(value??'');
 const git=(root,args)=>{const result=spawnSync('git',['-C',root,...args],{encoding:'utf8',maxBuffer:16*1024**2,timeout:120000,windowsHide:true});assert(result.status===0&&!result.signal&&typeof result.stdout==='string','Exact committed pack source could not be read'+(result.error?.code?' ('+result.error.code+')':''));return result.stdout;};
 
-export function githubPackTransport({token=process.env.GH_TOKEN??process.env.GITHUB_TOKEN,fetchImpl=fetch}={}) {
+export function githubPackTransport({token=process.env.GH_TOKEN??process.env.GITHUB_TOKEN,fetchImpl=fetch,retryWait,transportClock,transportDiagnostic}={}) {
   return async({method,path:requestPath,query,body})=>{
     assert(requestPath.startsWith('/repos/'+PACK_QUEUE_REPOSITORY+'/'),'Unexpected GitHub repository');
     if(method!=='GET')assert(typeof token==='string'&&token.length>10,'Durable enqueue/drain needs GitHub contents:write authentication; use the connected GitHub adapter when CI credentials are unavailable');
     const url=new URL('https://api.github.com'+requestPath);for(const [key,value] of Object.entries(query??{}))url.searchParams.set(key,String(value));
+    if(method==='GET')return runPackGithubRead({operation:'repository-metadata',resource:packGithubReadResource(requestPath),fetchImpl,retryWait,transportClock,transportDiagnostic,execute:async read=>{
+      assert(!body,'GitHub GET request body is not supported');
+      const response=await read.get(url,{headers:{Accept:'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28',...(token?{Authorization:'Bearer '+token}:{})},redirect:'follow'});
+      return {status:response.status,body:await read.body(()=>response.json())};
+    }});
     const response=await fetchImpl(url,{method,headers:{Accept:'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28',...(token?{Authorization:'Bearer '+token}:{}),...(body?{'Content-Type':'application/json'}:{})},...(body?{body:JSON.stringify(body)}:{}),signal:AbortSignal.timeout(30000)});
     return {status:response.status,body:await response.json()};
   };

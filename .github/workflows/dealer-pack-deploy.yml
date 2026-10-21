@@ -158,7 +158,7 @@ jobs:
           runtime/dealer-pack-deploy-tools/node_modules/.bin/playwright install --with-deps chromium
       - name: Check executor intake and recovery guards
         id: executor_guard
-        run: node --test scripts/dealer-pack-dispatcher.test.mjs scripts/dealer-pack-ready-intake.test.mjs scripts/dealer-pack-recovery-workflow.test.mjs scripts/dealer-pack-automatic-intake.test.mjs scripts/inspect-dealer-pack-pilot.test.mjs scripts/dealer-pack-continuation.test.mjs scripts/dealer-pack-provider.test.mjs scripts/dealer-pack-asset-transport.test.mjs scripts/dealer-pack-upload-members.test.mjs scripts/dealer-pack-source-campaign.test.mjs scripts/dealer-pack-source-discovery.test.mjs scripts/dealer-pack-source-scheduler.test.mjs scripts/dealer-pack-source-rollout-workflow.test.mjs scripts/notify-dealer-pack-source-complete.test.mjs scripts/reverify-hosted-dealer-pack.test.mjs scripts/dealer-pack-hosted-recheck-workflow.test.mjs
+        run: node --test scripts/dealer-pack-dispatcher.test.mjs scripts/dealer-pack-github-read.test.mjs scripts/dealer-pack-deployment.test.mjs scripts/dealer-pack-ready-intake.test.mjs scripts/dealer-pack-recovery-workflow.test.mjs scripts/dealer-pack-automatic-intake.test.mjs scripts/inspect-dealer-pack-pilot.test.mjs scripts/dealer-pack-continuation.test.mjs scripts/dealer-pack-provider.test.mjs scripts/dealer-pack-asset-transport.test.mjs scripts/dealer-pack-upload-members.test.mjs scripts/dealer-pack-source-campaign.test.mjs scripts/dealer-pack-source-discovery.test.mjs scripts/dealer-pack-source-scheduler.test.mjs scripts/dealer-pack-source-rollout-workflow.test.mjs scripts/notify-dealer-pack-source-complete.test.mjs scripts/reverify-hosted-dealer-pack.test.mjs scripts/dealer-pack-hosted-recheck-workflow.test.mjs
       - name: Check deployment credential presence without exposing it
         id: token
         env:
@@ -252,6 +252,7 @@ jobs:
           # off queued work without expiring or replacing any account claim.
           node scripts/dispatch-dealer-pack-queue.mjs drain --owner "github:${{ github.run_id }}" --write --max 10 --report runtime/dealer-pack-dispatch/drain.json
       - name: Read startup, sampled CPU, memory and error evidence for this drain
+        id: metrics
         if: ${{ !cancelled() && steps.executor_guard.conclusion == 'success' && steps.token.outputs.present == 'true' && (github.event_name == 'schedule' || github.event_name == 'workflow_run' || (github.event_name == 'workflow_dispatch' && (inputs.action == 'enqueue-and-deploy' || inputs.action == 'drain' || (inputs.action == 'recover-and-drain' && steps.reconcile.conclusion == 'success')))) }}
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
@@ -267,14 +268,16 @@ jobs:
               try{reports.push(await readPackMetrics({slug:receipt.slug,start:new Date(Date.parse(receipt.deployedAt)-60000).toISOString(),end:new Date().toISOString(),startupTimeMs:receipt.runtime?.startupTimeMs??null,cpuLimitMs:receipt.runtime?.cpuLimitMs??null,cpuLimitSource:receipt.runtime?.cpuLimitSource??null}));}
               catch(error){reports.push({slug:receipt.slug,status:'unavailable',providerWrites:0,reason:error.message});}
             }
-            const complete=reports.length>0&&reports.every(row=>row.status==='observed-without-errors'&&row.withinLimits===true);
+            const ownedReceipts=(drain.results??[]).filter(row=>row.receipt).length;
+            const complete=reports.length>0&&reports.length===ownedReceipts&&reports.every(row=>row.status==='observed-without-errors'&&row.withinLimits===true);
             fs.writeFileSync('runtime/dealer-pack-dispatch/metrics.json',JSON.stringify({providerWrites:0,reports,complete},null,2)+'\n');
+            fs.appendFileSync(process.env.GITHUB_OUTPUT,'complete='+complete+'\n');
             console.log('Retained '+reports.length+' runtime reports; missing or lagged samples remain explicitly unavailable.');
-            if(reports.length&&!complete){console.error('Runtime acceptance is incomplete or outside limits; repeat the read-only metrics check after ingestion. Existing deployment receipts remain retained.');process.exitCode=1;}
+            if(ownedReceipts&&!complete){console.error('Runtime acceptance is incomplete or outside limits; repeat the read-only metrics check after ingestion. Existing deployment receipts remain retained.');process.exitCode=1;}
           }
           NODE
-      - name: Continue a successful nonempty normal drain on exact current main
-        if: ${{ success() && steps.drain.conclusion == 'success' && (github.event_name == 'schedule' || github.event_name == 'workflow_run' || (github.event_name == 'workflow_dispatch' && (inputs.action == 'enqueue-and-deploy' || inputs.action == 'drain'))) }}
+      - name: Continue authenticated terminal progress on exact current main
+        if: ${{ !cancelled() && steps.executor_guard.conclusion == 'success' && steps.source_rollout.conclusion == 'success' && steps.token.outputs.present == 'true' && (steps.drain.conclusion == 'success' || steps.drain.conclusion == 'failure') && steps.metrics.conclusion == 'success' && steps.metrics.outputs.complete == 'true' && (github.event_name == 'schedule' || github.event_name == 'workflow_run' || (github.event_name == 'workflow_dispatch' && (inputs.action == 'enqueue-and-deploy' || inputs.action == 'drain'))) }}
         env:
           GITHUB_TOKEN: ${{ github.token }}
           PACK_ACTION: ${{ inputs.action }}

@@ -228,14 +228,14 @@ export async function executeQueuedPackDeployment({store,claim,provider,inspectC
       const receipt={...baseReceipt,hostedVerified:false,hostedFailure:error.message,finishedAt:time()};
       // Known owned deployment remains recorded. A QA failure does not lose the
       // receipt, rewrite another Worker, or stop independent queued packs.
-      await finishPackDeployment(store,claim,{status:'failed',receipt,error:'Hosted verification failed: '+error.message},{now:time});return {status:'failed',receipt,error:error.message};
+      await finishPackDeployment(store,claim,{status:'failed',receipt,error:'Hosted verification failed: '+error.message},{now:time});return {status:'failed',requestId:request.id,receipt,error:error.message};
     }
     const receipt={...baseReceipt,hostedVerified:true,hosted:packHostedReceiptEvidence(hosted),finishedAt:time()};
     await finishPackDeployment(store,claim,{status:'deployed',receipt},{now:time});return {status:'deployed',receipt};
   }catch(error){
     const uncertain=providerWriteStarted&&(!(providerOutcomeKnown||error.providerOutcomeKnown===true)||(workerCreated||versionActivated)&&!ownershipEstablished);
     try{await finishPackDeployment(store,claim,{status:uncertain?'needs-reconciliation':'failed',error:error.message,uncertain},{now:time});}catch{}
-    return {status:uncertain?'needs-reconciliation':'failed',slug:request.slug,error:error.message,claimRetained:uncertain};
+    return {status:uncertain?'needs-reconciliation':'failed',requestId:request.id,slug:request.slug,error:error.message,claimRetained:uncertain};
   }
 }
 

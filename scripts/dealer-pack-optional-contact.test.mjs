@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
+import os from 'node:os';
 import test from 'node:test';
 import {createRequire} from 'node:module';
 import {runInNewContext} from 'node:vm';
@@ -8,6 +9,7 @@ import {applyDealerPackOptionalContact} from './lib/dealer-pack-optional-contact
 import {UK_IMPORT_PHONE_INPUT_PATHS, repairImportUkOptionalPhone} from './lib/client-refresh-uk-native.mjs';
 import {applyOptionalContactFallback, applyModernOptionalContactFallback, MODERN_PHONE_BOUNDARIES} from './publishing/dealer-contact-fallback.mjs';
 import {applyAutoBestOptionalContactFallback, AUTO_BEST_PHONE_BOUNDARIES} from './publishing/auto-best-optional-contact.mjs';
+import {refreshAdapterInternals} from './lib/client-refresh-adapters.mjs';
 
 const root = path.resolve(import.meta.dirname, '..');
 const require = createRequire(process.env.CARS_ESBUILD_RESOLVE_FROM || path.join(root, 'runtime/dealer-pack-tools/package.json'));
@@ -97,4 +99,49 @@ test('a sourced phone is preserved and empty street address composes with absent
   const schema=loadTypescript(String(absent.files.get('modern/packages/marketplace-domain/site-config.ts')));
   assert.equal(schema.publicSiteSchema.shape.contact.shape.address.safeParse('').success,true);
   assert.match(String(absent.files.get('modern/packages/marketplace/lead-site.ts')),/address: ""/);
+});
+
+for (const country of ['GB','AE','US']) test(country+' optional phone composes with the maintained Svelte identity personalizer', t => {
+  const {files,profile}=fixture(country), home='src/lib/components/home1/Home1Hero.svelte';
+  Object.assign(profile.business,{name:'Recorded dealer',shortName:'Recorded dealer'});
+  const candidate=fs.mkdtempSync(path.join(os.tmpdir(),'cars-optional-phone-'));
+  t.after(()=>fs.rmSync(candidate,{recursive:true,force:true}));
+  const target=path.join(candidate,home);
+  fs.mkdirSync(path.dirname(target),{recursive:true});
+  fs.writeFileSync(target,native('import/'+home));
+  refreshAdapterInternals.patchImportText(candidate,profile,{typescript});
+  const personalized=fs.readFileSync(target);
+  assert.match(String(personalized),/const mobileShowroomPhoneHref = "tel:";/);
+  files.set('import/'+home,personalized);
+  const facts=files.get('import/src/lib/config/dealer.ts'), originalProfile=structuredClone(profile);
+  if(country==='GB') {
+    const relative=new Map(UK_IMPORT_PHONE_INPUT_PATHS.map(name=>[name,files.get('import/'+name)]));
+    for(const name of repairImportUkOptionalPhone(relative,profile)) files.set('import/'+name,relative.get(name));
+  } else {
+    const receipt=applyDealerPackOptionalContact(files,manifest,{profile,typescript});
+    assert.equal(receipt.phoneInvented,false);
+  }
+  const prepared=String(files.get('import/'+home));
+  assert.match(prepared,/const mobileShowroomPhoneHref = site.contact.phoneHref;/);
+  assert.match(prepared,/\{#if mobileShowroomPhoneHref\}/);
+  assert.doesNotMatch(prepared,/tel:0877733110|const mobileShowroomPhoneHref = ["']tel:["'];/);
+  assert.equal(files.get('import/src/lib/config/dealer.ts'),facts);
+  assert.deepEqual(profile,originalProfile);
+});
+
+test('absent Import phone binding still rejects nonempty, unknown and duplicate literals atomically', () => {
+  const name='import/src/lib/components/home1/Home1Hero.svelte';
+  const original="\tconst mobileShowroomPhoneHref = 'tel:';";
+  for(const replacement of [
+    '\tconst mobileShowroomPhoneHref = "tel:+971500000000";',
+    '\tconst mobileShowroomPhoneHref = `tel:`;',
+    original+'\n'+original,
+    original+'\n\tconst mobileShowroomPhoneHref = "tel:";'
+  ]) {
+    const {files,profile}=fixture('AE');
+    files.set(name,Buffer.from(String(files.get(name)).replace(original,replacement)));
+    const before=[...files];
+    assert.throws(()=>applyDealerPackOptionalContact(files,manifest,{profile,typescript}),/absent phone binding/);
+    assert.deepEqual([...files],before);
+  }
 });

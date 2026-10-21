@@ -201,7 +201,14 @@ export function repairImportUkOptionalPhone(files, profile, {factPolicy} = {}) {
     if (name.endsWith('/Home1Hero.svelte')) {
       source = once(source, "\timport { resolve } from '$app/paths';",
         "\timport { resolve } from '$app/paths';\n\timport { site } from '$lib/config/site';", name + ' site binding');
-      source = once(source, "\tconst mobileShowroomPhoneHref = 'tel:';",
+      // The maintained Svelte personalizer JSON-encodes changed literals.
+      // Accept its empty-phone spelling and the retained legacy spelling only.
+      const absentPhoneBindings = [
+        "\tconst mobileShowroomPhoneHref = 'tel:';",
+        '\tconst mobileShowroomPhoneHref = "tel:";'
+      ].filter(binding => source.includes(binding));
+      if (absentPhoneBindings.length !== 1) throw Error('UK native boundary changed: ' + name + ' absent phone binding');
+      source = once(source, absentPhoneBindings[0],
         '\tconst mobileShowroomPhoneHref = site.contact.phoneHref;', name + ' absent phone binding');
     }
     updates.set(name, wrapCalls(source, boundary));

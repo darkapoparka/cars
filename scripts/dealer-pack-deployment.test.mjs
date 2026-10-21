@@ -122,7 +122,14 @@ test('a missing route after known upload retains ownership intent for recovery',
   const f=fixture();f.provider.createRoute=async()=>{throw Error('Unknown route write outcome');};const result=await f.execute();assert.equal(result.status,'needs-reconciliation');assert.equal(f.workers.size,101);const events=f.store.state.requests[input().id].events;assert.ok(events.some(row=>row.kind==='worker-create-observed'&&row.workerId));assert.ok(events.some(row=>row.kind==='worker-upload-observed'&&row.versionId));
 });
 test('hosted failure keeps a complete own receipt and allows unrelated packs to continue',async()=>{
-  const f=fixture();const bad=await f.execute(input(),{verifyHosted:async options=>({...f.hosted(options),success:false})});assert.equal(bad.status,'failed');assert.equal(bad.receipt.hostedVerified,false);assert.ok(f.store.state.receipts['dealer-one']);assert.equal(f.store.state.active,null);assert.equal((await f.execute(input('dealer-two'))).status,'deployed');
+  const f=fixture();const bad=await f.execute(input(),{verifyHosted:async options=>({...f.hosted(options),success:false})});assert.equal(bad.status,'failed');assert.equal(bad.requestId,input().id);assert.equal(bad.requestId,bad.receipt.requestId);assert.equal(bad.receipt.hostedVerified,false);assert.ok(f.store.state.receipts['dealer-one']);assert.equal(f.store.state.active,null);assert.equal((await f.execute(input('dealer-two'))).status,'deployed');
+});
+test('pre-provider materialization failure identifies its exact terminal request and releases the claim',async()=>{
+  const f=fixture(),request=input(),result=await f.execute(request,{inspectCandidate:async()=>{throw Error('Immutable artifact download timed out');}});
+  assert.equal(result.status,'failed');assert.equal(result.requestId,request.id);assert.equal(result.claimRetained,false);assert.equal(result.receipt,undefined);
+  assert.deepEqual(f.calls,[]);assert.equal(f.store.state.active,null);assert.equal(f.store.state.requests[request.id].status,'failed');
+  assert.deepEqual(f.store.state.requests[request.id].events.map(row=>row.kind),['claimed','failed']);
+  assert.equal((await f.execute(input('dealer-two'))).status,'deployed');assert.equal(f.store.state.requests[request.id].status,'failed');
 });
 test('successful GET cannot finalize a deployment when any design lacks or fails HEAD evidence',async()=>{
   const mutations=[row=>{delete row.headStatus;delete row.headHttpStatus;},row=>{row.headStatus='failed';},row=>{row.headHttpStatus=500;}];
