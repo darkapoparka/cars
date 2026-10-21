@@ -11,7 +11,7 @@ import {readPackBatchAssignments} from './lib/dealer-pack-identity.mjs';
 import {PACK_QUEUE_REPOSITORY, githubPackQueueStore, validatePackQueue, queueDigest} from './lib/dealer-pack-queue.mjs';
 import {registerSourceCampaign, validateSourceCampaign, mutateSourceCampaign, gitSourceCampaignStore,
   reserveSourceCohort, bindSourceCohortRun, finishSourceCohort, holdSourceCohort, syncSourceCampaignTargets,
-  hasAttemptedSourceMaterial, observeSourceExternalRuns, completeSourceExternalRunIntake, completeSourceOwnedRunIntake, SOURCE_COHORT_MAX} from './lib/dealer-pack-source-campaign.mjs';
+  hasAttemptedSourceMaterial, observeSourceExternalRuns, completeSourceExternalRunIntake, completeSourceExternalOwnedAlias, completeSourceOwnedRunIntake, SOURCE_COHORT_MAX} from './lib/dealer-pack-source-campaign.mjs';
 import {discoverSourcePipelineRuns} from './lib/dealer-pack-source-discovery.mjs';
 import {checkDealerPackInputs} from './check-dealer-pack-inputs.mjs';
 import {githubPackTransport} from './deploy-dealer-packs.mjs';
@@ -152,8 +152,11 @@ export async function scheduleDealerPackSource({root = ROOT, assignment = readPa
     if (!runs.length) return;
     current = await mutate(state => {
       const owned = new Set(Object.values(state.reservations).map(row => row.run?.id).filter(Boolean));
+      const pendingOwned = Object.values(state.reservations).filter(row => row.run === null && state.activeReservationId === row.id);
+      const matchesPendingOwner = run => pendingOwned.some(row => run.display_title === 'Cars rollout ' + row.id &&
+        run.head_sha === row.sourceSha && run.run_attempt === 1);
       if (reservationRunId) owned.add(reservationRunId);
-      const external = runs.filter(run => !owned.has(run.id)).map(run => ({runId: run.id, sourceSha: run.head_sha}));
+      const external = runs.filter(run => !owned.has(run.id) && !matchesPendingOwner(run)).map(run => ({runId: run.id, sourceSha: run.head_sha}));
       return external.length ? observeSourceExternalRuns(state, {runs: external, now: time()}) : state;
     });
   };
@@ -244,15 +247,26 @@ export async function scheduleDealerPackSource({root = ROOT, assignment = readPa
     discovery = await discoverRuns({readGithub, externalRuns: Object.values(current.state.externalRuns).filter(row => !row.terminalIntakeComplete), now: clock(now)});
     for (const row of discovery.externalRunStatuses ?? []) {
       if (row.needsReconciliation || !row.run || row.run.status !== 'completed') continue;
+      const owned = Object.values(current.state.reservations).find(reservation => reservation.run?.id === row.runId && reservation.sourceSha === row.sourceSha &&
+        ['source-finished', 'held'].includes(reservation.status) && reservation.run.status === 'completed');
+      if (owned && (row.run.conclusion === 'cancelled' || current.state.ownedIntakes?.[owned.id])) {
+        try {
+          current = await mutate(state => completeSourceExternalOwnedAlias(state, {runId: row.runId, sourceSha: row.sourceSha, reservationId: owned.id, run: row.run, now: time()}));
+        } catch {return finishReport('needs-reconciliation', 'An observed external alias lacks exact handled owned-terminal source proof; its barrier remains held');}
+        continue;
+      }
+      if (!['success', 'failure'].includes(row.run.conclusion)) return finishReport('needs-reconciliation', 'An external terminal run has no admissible intake or exact handled owned alias; its barrier remains held');
       if (!ensureTerminalIntake) return finishReport('waiting-external-intake', 'An exact prior native run requires maintained automatic terminal intake before new source');
       report.terminalIntakeCalls++;
-      const intake = await ensureTerminalIntake({runId: row.runId});
-      assert(intake?.runId === row.runId && intake.sourceCommit === row.sourceSha && Array.isArray(intake.requests) && Array.isArray(intake.failures) &&
-        Array.isArray(intake.failedMaterials) && intake.failedMaterials.length === new Set(intake.failures.map(failure => failure.slug)).size &&
-        intake.contracts?.runId === row.runId && intake.contracts.sourceCommit === row.sourceSha && intake.contracts.conclusion === 'success', 'Prior source intake did not positively finish exact authenticated shared-contract inspection');
-      current = await mutate(state => completeSourceExternalRunIntake(state, {runId: row.runId, sourceSha: row.sourceSha,
-        intake: {runId: intake.runId, sourceCommit: intake.sourceCommit, run: row.run, completed: true,
-          failures: intake.failures, failedMaterials: intake.failedMaterials}, now: time()}));
+      try {
+        const intake = await ensureTerminalIntake({runId: row.runId});
+        assert(intake?.runId === row.runId && intake.sourceCommit === row.sourceSha && Array.isArray(intake.requests) && Array.isArray(intake.failures) &&
+          Array.isArray(intake.failedMaterials) && intake.failedMaterials.length === new Set(intake.failures.map(failure => failure.slug)).size &&
+          intake.contracts?.runId === row.runId && intake.contracts.sourceCommit === row.sourceSha && intake.contracts.conclusion === 'success', 'Prior source intake did not positively finish exact authenticated shared-contract inspection');
+        current = await mutate(state => completeSourceExternalRunIntake(state, {runId: row.runId, sourceSha: row.sourceSha,
+          intake: {runId: intake.runId, sourceCommit: intake.sourceCommit, run: row.run, completed: true,
+            failures: intake.failures, failedMaterials: intake.failedMaterials}, now: time()}));
+      } catch {return finishReport('needs-reconciliation', 'Exact external terminal intake is incomplete or refused; its original source barrier remains held');}
     }
     current = await mutate(async state => syncSourceCampaignTargets(state, {queue: await queue(), now: time()}));
     if (Object.values(current.state.externalRuns).some(row => !row.terminalIntakeComplete)) return finishReport('waiting-external-source', 'Existing native runs remain active, unknown or awaiting exact terminal intake; their source is not rebuilt');

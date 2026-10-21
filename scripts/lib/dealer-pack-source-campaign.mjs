@@ -52,6 +52,13 @@ function assertOwnedIntake(state,id,receipt){
   for(const row of receipt.retained){const selected=reservation.selections.find(item=>item.dealerId===row.dealerId&&item.slug===row.slug),target=state.targets[row.dealerId];assert(selected&&!seen.has(row.slug)&&Array.isArray(row.requestIds)&&row.requestIds.length>0&&new Set(row.requestIds).size===row.requestIds.length&&row.requestIds.every(id=>hex64(id)&&target.retainedRequestIds.includes(id)),'Owned intake retained members must reference permanent qualified queue identities');seen.add(row.slug);}
   for(const proof of receipt.failedMaterialProofs){assertFailedMaterial(proof,{sourceSha:reservation.sourceSha});const selected=reservation.selections.find(item=>item.dealerId===proof.dealerId&&item.slug===proof.slug);assert(selected&&materialMatches(selected,proof)&&!seen.has(proof.slug),'Owned intake failed proof differs from the selected exact material');seen.add(proof.slug);}
 }
+function assertExternalOwnedAlias(state,external){
+  const reservation=state.reservations[external.ownedReservationId];
+  assert(reservation&&['source-finished','held'].includes(reservation.status)&&reservation.sourceSha===external.sourceSha&&reservation.run?.id===external.runId&&external.terminalRun?.id===external.runId&&isDeepStrictEqual(reservation.run,external.terminalRun),'External alias needs the exact retained terminal owned run proof');
+  assertRun(external.terminalRun,reservation);
+  assert(external.terminalRun.status==='completed'&&(external.terminalRun.conclusion==='cancelled'||['success','failure'].includes(external.terminalRun.conclusion)&&state.ownedIntakes?.[reservation.id]?.runId===external.runId),'External owned alias requires cancelled source or completed owned intake acknowledgement');
+  assert(Array.isArray(external.failureSlugs)&&external.failureSlugs.length===0&&Array.isArray(external.failedMaterialProofs)&&external.failedMaterialProofs.length===0,'An owned alias must preserve its outcomes in the original reservation/intake proof');
+}
 
 export function createSourceCampaign({assignment,queue,sourceSha,targets=[],now=new Date().toISOString()}={}){
   validatePackQueue(queue);assert(hex40(sourceSha)&&timestamp(now),'Exact initial published source and date required');
@@ -100,7 +107,7 @@ export function validateSourceCampaign(state,{assignment}={}){
   assert(state.externalRuns&&typeof state.externalRuns==='object'&&!Array.isArray(state.externalRuns)&&Object.keys(state.externalRuns).length<=100,'At most100 durable external native run barriers are permitted');
   for(const [id,run]of Object.entries(state.externalRuns)){
     assert(Number.isSafeInteger(run.runId)&&run.runId>0&&String(run.runId)===id&&hex40(run.sourceSha)&&timestamp(run.observedAt)&&typeof run.terminalIntakeComplete==='boolean'&&(run.terminalIntakeComplete?timestamp(run.completedAt):run.completedAt===null),'Exact external source run/intake barrier required');
-    if(run.terminalIntakeComplete){assertExternalTerminalRun(run.terminalRun,run);assert(Array.isArray(run.failedMaterialProofs)&&run.failedMaterialProofs.length<=100&&new Set(run.failedMaterialProofs.map(row=>row.slug)).size===run.failedMaterialProofs.length&&Array.isArray(run.failureSlugs)&&isDeepStrictEqual(run.failureSlugs,[...new Set(run.failedMaterialProofs.map(row=>row.slug))].sort()),'Terminal intake failure/material coverage differs');for(const proof of run.failedMaterialProofs){assertFailedMaterial(proof,run);const target=state.targets[proof.dealerId];assert(target?.slug===proof.slug&&hasAttemptedSourceMaterial(state,proof),'Every failed legacy member must retain its exact material attempt');}}
+    if(run.terminalIntakeComplete){if(run.ownedReservationId!==undefined){assertExternalOwnedAlias(state,run);continue;}assertExternalTerminalRun(run.terminalRun,run);assert(Array.isArray(run.failedMaterialProofs)&&run.failedMaterialProofs.length<=100&&new Set(run.failedMaterialProofs.map(row=>row.slug)).size===run.failedMaterialProofs.length&&Array.isArray(run.failureSlugs)&&isDeepStrictEqual(run.failureSlugs,[...new Set(run.failedMaterialProofs.map(row=>row.slug))].sort()),'Terminal intake failure/material coverage differs');for(const proof of run.failedMaterialProofs){assertFailedMaterial(proof,run);const target=state.targets[proof.dealerId];assert(target?.slug===proof.slug&&hasAttemptedSourceMaterial(state,proof),'Every failed legacy member must retain its exact material attempt');}}
   }
   if(state.ownedIntakes!==undefined){assert(state.ownedIntakes&&typeof state.ownedIntakes==='object'&&!Array.isArray(state.ownedIntakes),'Owned source intake ledger must be a record');for(const [id,receipt]of Object.entries(state.ownedIntakes))assertOwnedIntake(state,id,receipt);}
   assert(Buffer.byteLength(JSON.stringify(state))<=SOURCE_CAMPAIGN_MAX_BYTES,'Source campaign exceeds its1MiB bound');
@@ -197,6 +204,18 @@ export function completeSourceExternalRunIntake(state,{runId,sourceSha,intake,no
   run.failedMaterialProofs=proofs;run.failureSlugs=failureSlugs;run.terminalRun=terminalRun;
   for(const proof of proofs){const target=next.targets[proof.dealerId];target.slug=proof.slug;if(!hasAttemptedSourceMaterial(next,proof))target.materials.push({...proof,externalRunId:runId});if(!retained(target)&&!['reserved','building','needs-reconciliation'].includes(target.status)){target.status='held';target.reason='Exact legacy native material held; original failure reason retained with its external run proof';}}
   run.terminalIntakeComplete=true;run.completedAt=now;return validateSourceCampaign(next);
+}
+
+/** Reconcile a pre-binding observation of our own run without qualifying a
+ * cancelled producer or rewriting its original source attempt. */
+export function completeSourceExternalOwnedAlias(state,{runId,sourceSha,reservationId,run,now=new Date().toISOString()}={}){
+  validateSourceCampaign(state);const next=clone(state),external=next.externalRuns[String(runId)];
+  assert(external&&external.runId===runId&&external.sourceSha===sourceSha&&timestamp(now),'Exact observed external alias and source required');
+  const proposed={...external,ownedReservationId:reservationId,terminalRun:runProof(run),failureSlugs:[],failedMaterialProofs:[],terminalIntakeComplete:true,completedAt:external.completedAt??now};
+  assertExternalOwnedAlias(next,proposed);
+  if(external.terminalIntakeComplete)assert(isDeepStrictEqual(external,proposed),'Completed external source alias cannot be replaced');
+  else next.externalRuns[String(runId)]=proposed;
+  return validateSourceCampaign(next);
 }
 
 function immutable(previous,next){

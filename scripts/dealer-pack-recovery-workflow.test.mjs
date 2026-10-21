@@ -69,12 +69,12 @@ test('ordinary retained-queue service remains independent of intake inspection',
 });
 
 test('missing credentials block both recovery actions with a failed result', () => {
-  for (const action of ['recover-inspect', 'recover-and-drain']) {
+  for (const action of ['recover-inspect', 'recover-and-drain', 'verify-hosted']) {
     assert.equal(condition(recovery, {action, token: 'false'}), false);
     assert.equal(condition(blocked, {action, token: 'false'}), true);
     assert.equal(condition(blocked, {action}), false);
   }
-  assert.match(blocked, /if\(\['recover-inspect','recover-and-drain'\]\.includes\(process\.env\.PACK_ACTION\)\)process\.exitCode=1;/);
+  assert.match(blocked, /if\(\['recover-inspect','recover-and-drain','verify-hosted'\]\.includes\(process\.env\.PACK_ACTION\)\)process\.exitCode=1;/);
 });
 
 test('an exact request ID is required before any provider reconciliation', async () => {
@@ -112,3 +112,4 @@ test('a refused provider observation or resume fails recovery', async () => {
   }), /original owner is running/);
   assert.deepEqual(calls, ['inspect', 'resume']);
 });
+

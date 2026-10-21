@@ -121,7 +121,7 @@ for(const mode of ['HTTP refusal','ambiguous timeout'])test('bucket '+mode+' sto
   const f=bucketFixture(t),control=uploadControl(f.keys);let settled=false;
   const provider=cloudflarePackProvider({api:async()=>ok({jwt:'test-session-private',buckets:f.buckets}),assetFetch:control.assetFetch});
   const pending=provider.prepareAssets({candidate:f.candidate,request,beforeWrite:async()=>{}});
-  const rejected=assert.rejects(pending,mode==='HTTP refusal'?/Static asset upload failed/:/ambiguous timeout/).then(()=>{settled=true;});
+  const rejected=assert.rejects(pending,mode==='HTTP refusal'?/Static asset upload failed/:/asset-bucket-upload transport failed/).then(()=>{settled=true;});
   await Promise.all(control.started.slice(0,3).map(row=>row.promise));
   if(mode==='HTTP refusal')control.responses[1].resolve({status:500,json:async()=>({success:false,result:{}})});else control.responses[1].reject(Error('ambiguous timeout'));
   await nextTurn();assert.deepEqual(control.calls,[0,1,2]);assert.equal(settled,false,'Unknown outcome is not returned while uploads remain in flight');assert.equal(control.active,2);
@@ -207,3 +207,4 @@ test('connector RPC rejects mismatched responses and timeouts without retaining 
   await assert.rejects(()=>rpc('github',{method:'GET',path:'/repos/darkapoparka/cars/contents/queue.json'}),/identity differs/);assert.deepEqual(listPackConnectorRequests(directory),[]);
   const blocked=createPackConnectorRpc({directory,pollMs:1,timeoutMs:5});await assert.rejects(()=>blocked('cloudflare',{method:'POST',path:'/accounts/'+PACK_DEPLOY_ACCOUNT+'/workers/workers'}),/retains its durable claim/);assert.deepEqual(listPackConnectorRequests(directory),[]);
 });
+

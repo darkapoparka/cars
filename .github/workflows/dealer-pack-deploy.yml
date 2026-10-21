@@ -18,7 +18,7 @@ on:
         required: true
         default: inspect
         type: choice
-        options: [inspect, enqueue-and-deploy, drain, recover-inspect, recover-and-drain, queue-all]
+        options: [inspect, enqueue-and-deploy, drain, recover-inspect, recover-and-drain, queue-all, verify-hosted]
       request_id:
         description: Exact retained request SHA-256; required only for recovery
         required: false
@@ -37,7 +37,7 @@ on:
         required: false
         type: string
       slugs:
-        description: Optional comma-separated or JSON list of exact ready slugs
+        description: Optional exact ready slugs; comma-separated explicit slugs required for verify-hosted
         required: false
         type: string
       batch:
@@ -158,7 +158,7 @@ jobs:
           runtime/dealer-pack-deploy-tools/node_modules/.bin/playwright install --with-deps chromium
       - name: Check executor intake and recovery guards
         id: executor_guard
-        run: node --test scripts/dealer-pack-dispatcher.test.mjs scripts/dealer-pack-ready-intake.test.mjs scripts/dealer-pack-recovery-workflow.test.mjs scripts/dealer-pack-automatic-intake.test.mjs scripts/inspect-dealer-pack-pilot.test.mjs scripts/dealer-pack-continuation.test.mjs scripts/dealer-pack-provider.test.mjs scripts/dealer-pack-upload-members.test.mjs scripts/dealer-pack-source-campaign.test.mjs scripts/dealer-pack-source-discovery.test.mjs scripts/dealer-pack-source-scheduler.test.mjs scripts/dealer-pack-source-rollout-workflow.test.mjs scripts/notify-dealer-pack-source-complete.test.mjs
+        run: node --test scripts/dealer-pack-dispatcher.test.mjs scripts/dealer-pack-ready-intake.test.mjs scripts/dealer-pack-recovery-workflow.test.mjs scripts/dealer-pack-automatic-intake.test.mjs scripts/inspect-dealer-pack-pilot.test.mjs scripts/dealer-pack-continuation.test.mjs scripts/dealer-pack-provider.test.mjs scripts/dealer-pack-asset-transport.test.mjs scripts/dealer-pack-upload-members.test.mjs scripts/dealer-pack-source-campaign.test.mjs scripts/dealer-pack-source-discovery.test.mjs scripts/dealer-pack-source-scheduler.test.mjs scripts/dealer-pack-source-rollout-workflow.test.mjs scripts/notify-dealer-pack-source-complete.test.mjs scripts/reverify-hosted-dealer-pack.test.mjs scripts/dealer-pack-hosted-recheck-workflow.test.mjs
       - name: Check deployment credential presence without exposing it
         id: token
         env:
@@ -211,6 +211,18 @@ jobs:
           else
             node scripts/schedule-dealer-pack-source.mjs --report runtime/dealer-pack-dispatch/source-rollout.json
           fi
+      - name: Recheck exact retained hosted versions without provider or queue writes
+        id: hosted_recheck
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.action == 'verify-hosted' && steps.executor_guard.conclusion == 'success' && steps.token.outputs.present == 'true' }}
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          PACK_RECHECK_SLUGS: ${{ inputs.slugs }}
+        run: |
+          node --input-type=module <<'NODE'
+          import {runHostedRecheckCli} from './scripts/reverify-hosted-dealer-pack.mjs';
+          await runHostedRecheckCli(['--slugs',process.env.PACK_RECHECK_SLUGS ?? '', '--report','runtime/dealer-pack-dispatch/hosted-recheck.json']);
+          NODE
       - name: Reconcile only an explicitly selected stopped request
         id: reconcile
         if: ${{ github.event_name == 'workflow_dispatch' && steps.token.outputs.present == 'true' && (inputs.action == 'recover-inspect' || inputs.action == 'recover-and-drain') }}
@@ -269,7 +281,7 @@ jobs:
           PACK_EXECUTOR_SHA: ${{ steps.executor_source.outputs.commit }}
         run: node scripts/continue-dealer-pack-queue.mjs --drain runtime/dealer-pack-dispatch/drain.json --report runtime/dealer-pack-dispatch/continuation.json
       - name: Record an unavailable deployment credential as a blocked write request
-        if: ${{ !cancelled() && steps.executor_guard.conclusion == 'success' && steps.token.outputs.present != 'true' && (github.event_name == 'schedule' || github.event_name == 'workflow_run' || (github.event_name == 'workflow_dispatch' && (inputs.action == 'enqueue-and-deploy' || inputs.action == 'drain' || inputs.action == 'recover-inspect' || inputs.action == 'recover-and-drain'))) }}
+        if: ${{ !cancelled() && steps.executor_guard.conclusion == 'success' && steps.token.outputs.present != 'true' && (github.event_name == 'schedule' || github.event_name == 'workflow_run' || (github.event_name == 'workflow_dispatch' && (inputs.action == 'enqueue-and-deploy' || inputs.action == 'drain' || inputs.action == 'recover-inspect' || inputs.action == 'recover-and-drain' || inputs.action == 'verify-hosted'))) }}
         env:
           PACK_ACTION: ${{ inputs.action }}
         run: |
@@ -278,7 +290,7 @@ jobs:
           fs.mkdirSync('runtime/dealer-pack-dispatch',{recursive:true});
           fs.writeFileSync('runtime/dealer-pack-dispatch/blocked.json',JSON.stringify({status:'blocked',reason:'CLOUDFLARE_API_TOKEN is missing; queued requests remain durable',providerWrites:0,connectorFallback:'scripts/dealer-pack-connector-bridge.mjs'},null,2)+'\n');
           console.log('Deployment remains blocked until the token is supplied or the authorized connector executor services these exact requests.');
-          if(['recover-inspect','recover-and-drain'].includes(process.env.PACK_ACTION))process.exitCode=1;
+          if(['recover-inspect','recover-and-drain','verify-hosted'].includes(process.env.PACK_ACTION))process.exitCode=1;
           NODE
       - name: Retain compact inspection, deployment and hosted evidence
         if: ${{ !cancelled() }}
@@ -292,3 +304,4 @@ jobs:
           if-no-files-found: warn
           retention-days: 3
           compression-level: 6
+

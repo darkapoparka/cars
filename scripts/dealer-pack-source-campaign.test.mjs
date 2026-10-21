@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import {buildPackBatchAssignments,PACK_BATCH_FILE} from './lib/dealer-pack-identity.mjs';
 import {PACK_DEPLOY_ACCOUNT,PACK_DEPLOY_ZONE,PACK_QUEUE_BRANCH,PACK_QUEUE_PATH,PACK_QUEUE_REPOSITORY,queueDigest,createPackDeploymentQueue,packDeploymentRequest,enqueuePackDeployments} from './lib/dealer-pack-queue.mjs';
-import {SOURCE_CAMPAIGN_PATH,SOURCE_CAMPAIGN_MAX_BYTES,createSourceCampaign,validateSourceCampaign,registerSourceCampaign,mutateSourceCampaign,gitSourceCampaignStore,reserveSourceCohort,bindSourceCohortRun,finishSourceCohort,holdSourceCohort,syncSourceCampaignTargets,hasAttemptedSourceMaterial,observeSourceExternalRuns,completeSourceExternalRunIntake,completeSourceOwnedRunIntake} from './lib/dealer-pack-source-campaign.mjs';
+import {SOURCE_CAMPAIGN_PATH,SOURCE_CAMPAIGN_MAX_BYTES,createSourceCampaign,validateSourceCampaign,registerSourceCampaign,mutateSourceCampaign,gitSourceCampaignStore,reserveSourceCohort,bindSourceCohortRun,finishSourceCohort,holdSourceCohort,syncSourceCampaignTargets,hasAttemptedSourceMaterial,observeSourceExternalRuns,completeSourceExternalRunIntake,completeSourceOwnedRunIntake,completeSourceExternalOwnedAlias} from './lib/dealer-pack-source-campaign.mjs';
 
 const now='2026-10-21T00:00:00.000Z',later='2026-10-21T01:00:00.000Z',sha='a'.repeat(40),hash=value=>createHash('sha256').update(value).digest('hex');
 const assignment=buildPackBatchAssignments({priorityResearchIds:Array.from({length:400},(_,index)=>'gb-dealer-'+String(index).padStart(3,'0'))});
@@ -128,6 +128,36 @@ test('owned intake can finish atomically with its live reservation and cannot be
  await assert.rejects(mutateSourceCampaign(store,state=>{delete state.ownedIntakes;return state;},{now:later}),/cannot be removed or rewritten/);
  await assert.rejects(mutateSourceCampaign(store,state=>{state.ownedIntakes[f.reservationId].completedAt='2026-11-01T00:00:00.000Z';return state;},{now:later}),/cannot be removed or rewritten/);
  const old=campaign();delete old.ownedIntakes;assert.equal(validateSourceCampaign(old),old);
+});
+
+test('a pre-binding external observation can acknowledge the exact cancelled owned attempt without qualification',()=>{
+ const initial=reserved(),reservationId=initial.activeReservationId,terminalRun=run(initial,{status:'completed',conclusion:'cancelled'});
+ const observed=observeSourceExternalRuns(initial,{runs:[{runId:terminalRun.id,sourceSha:sha}],now}),finished=finishSourceCohort(observed,{reservationId,run:terminalRun,now:later}),before=structuredClone(finished);
+ const args={runId:terminalRun.id,sourceSha:sha,reservationId,run:terminalRun,now:later},next=completeSourceExternalOwnedAlias(finished,args);
+ assert.deepEqual(finished,before);assert.deepEqual(next.reservations,before.reservations);assert.deepEqual(next.targets,before.targets);assert.deepEqual(next.ownedIntakes,{});
+ assert.equal(next.externalRuns[String(terminalRun.id)].ownedReservationId,reservationId);assert.equal(next.externalRuns[String(terminalRun.id)].terminalIntakeComplete,true);assert.deepEqual(next.externalRuns[String(terminalRun.id)].failedMaterialProofs,[]);
+ assert.deepEqual(completeSourceExternalOwnedAlias(next,{...args,now:'2026-11-01T00:00:00.000Z'}),next);
+ assert(reserved(next,{id:hash('corrected-shared-source'),selections:[selection(0,{buildFingerprint:hash('corrected-shared-source')})]}).activeReservationId);
+ assert.throws(()=>completeSourceExternalRunIntake(finished,{runId:terminalRun.id,sourceSha:sha,intake:externalIntake({runId:terminalRun.id,run:terminalRun}),now:later}),/terminal native run proof/);
+});
+
+test('owned external alias refuses foreign, changed, nonterminal and unqualified positive runs',async()=>{
+ const initial=reserved(),reservationId=initial.activeReservationId,terminalRun=run(initial,{status:'completed',conclusion:'cancelled'}),observed=observeSourceExternalRuns(initial,{runs:[{runId:terminalRun.id,sourceSha:sha}],now}),finished=finishSourceCohort(observed,{reservationId,run:terminalRun,now:later});
+ const args={runId:terminalRun.id,sourceSha:sha,reservationId,run:terminalRun,now:later};
+ for(const change of[{reservationId:hash('foreign-reservation')},{sourceSha:'b'.repeat(40)},{run:{...terminalRun,id:999}},{run:{...terminalRun,head_sha:'b'.repeat(40)}},{run:{...terminalRun,conclusion:'failure'}},{run:{...terminalRun,run_attempt:2}},{run:{...terminalRun,display_title:'Unowned cancellation'}}])assert.throws(()=>completeSourceExternalOwnedAlias(finished,{...args,...change}));
+ assert.throws(()=>completeSourceExternalOwnedAlias(observed,args),/terminal owned run proof/);
+ const f=await ownedIntakeFixture(),pendingAlias=observeSourceExternalRuns(f.initial,{runs:[{runId:f.run.id,sourceSha:sha}],now}),unacknowledged=finishSourceCohort(syncSourceCampaignTargets(pendingAlias,{queue:f.queue,now:later}),{reservationId:f.reservationId,run:f.run,now:later}),positiveArgs={runId:f.run.id,sourceSha:sha,reservationId:f.reservationId,run:f.run,now:later};
+ assert.throws(()=>completeSourceExternalOwnedAlias(unacknowledged,positiveArgs),/completed owned intake acknowledgement/);
+ const acknowledged=completeSourceOwnedRunIntake(unacknowledged,{...f,now:later}),resolved=completeSourceExternalOwnedAlias(acknowledged,positiveArgs);
+ assert.deepEqual(resolved.ownedIntakes,acknowledged.ownedIntakes);assert.equal(resolved.externalRuns[String(f.run.id)].terminalIntakeComplete,true);
+});
+
+test('completed external owned aliases remain immutable with original history and baseline',async()=>{
+ const initial=reserved(),reservationId=initial.activeReservationId,terminalRun=run(initial,{status:'completed',conclusion:'cancelled'}),observed=observeSourceExternalRuns(initial,{runs:[{runId:terminalRun.id,sourceSha:sha}],now}),finished=finishSourceCohort(observed,{reservationId,run:terminalRun,now:later}),store=memoryStore(finished),baseline=structuredClone(finished.baseline);
+ await mutateSourceCampaign(store,state=>completeSourceExternalOwnedAlias(state,{runId:terminalRun.id,sourceSha:sha,reservationId,run:terminalRun,now:later}),{now:later});
+ assert.deepEqual(store.state.baseline,baseline);assert.deepEqual(store.state.reservations,finished.reservations);
+ await assert.rejects(mutateSourceCampaign(store,state=>{delete state.externalRuns[String(terminalRun.id)];return state;},{now:later}),/cannot be removed/);
+ await assert.rejects(mutateSourceCampaign(store,state=>{state.externalRuns[String(terminalRun.id)].completedAt='2026-11-01T00:00:00.000Z';return state;},{now:later}),/cannot be removed/);
 });
 
 test('legacy native terminal-event gap remains barred until exact positive maintained intake completion',()=>{

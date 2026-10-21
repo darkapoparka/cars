@@ -17,6 +17,27 @@ const zone='/zones/'+PACK_DEPLOY_ZONE;
 const hash=bytes=>createHash('sha256').update(bytes).digest('hex');
 const exactRequest=request=>assert(request?.workerName==='cars-'+request.slug&&request.publicOrigin==='https://'+request.slug+'.webpreviews.site'&&/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(request.slug)&&request.slug.length<=43,'Unsafe pack provider identity');
 const successful=(response,label)=>{assert(response?.success===true&&response.status>=200&&response.status<300,'Cloudflare '+label+' failed ('+(response?.status??'no response')+'); reconcile any unknown write outcome');return response.result;};
+const retryableCodes=new Set(['ECONNRESET','ECONNREFUSED','ETIMEDOUT','EPIPE','EAI_AGAIN','ENETUNREACH','EHOSTUNREACH','UND_ERR_SOCKET','UND_ERR_CONNECT_TIMEOUT','UND_ERR_HEADERS_TIMEOUT','UND_ERR_BODY_TIMEOUT','UND_ERR_DESTROYED','UND_ERR_CLOSED']);
+const errorNames=new Set(['Error','TypeError','SyntaxError','AbortError','TimeoutError','AggregateError']);
+const transportCodes=error=>{
+  const pending=[error],seen=new Set(),codes=new Set();
+  while(pending.length&&seen.size<8){const value=pending.shift();if(!value||typeof value!=='object'||seen.has(value))continue;seen.add(value);if(retryableCodes.has(value.code))codes.add(value.code);if(value.cause)pending.push(value.cause);if(Array.isArray(value.errors))pending.push(...value.errors.slice(0,8));}
+  return [...codes].sort();
+};
+const retryableAssetTransport=error=>transportCodes(error).length>0||['AbortError','TimeoutError'].includes(error?.name)||error?.name==='TypeError'&&error.message==='fetch failed';
+const waitForAssetRetry=milliseconds=>new Promise(resolve=>setTimeout(resolve,milliseconds));
+export const PACK_ASSET_TRANSPORT_RETRY=Object.freeze({attempts:3,timeoutMs:120000,delaysMs:Object.freeze([1000,2000])});
+
+/** Keep only bounded, known transport metadata. Never retain an original error,
+ * request, headers, signed URL, JWT, response body, or free-form cause message. */
+export function packProviderTransportFailure(error,{operation,method,attempt=1,maximumAttempts=1,elapsedMs,timeoutMs,responseStatus=null,bucketIndex,bucketCount,assetFiles,assetBytes}={}) {
+  const names=new Set(['asset-bucket-upload','asset-manifest-session','worker-create','worker-version-upload','worker-activation','worker-subdomain','worker-route','workers-api-read','workers-api-write']);
+  assert(names.has(operation)&&['GET','POST','PUT','PATCH','DELETE'].includes(method),'Known provider diagnostic operation required');
+  const details={operation,method,attempt,maximumAttempts,errorName:errorNames.has(error?.name)?error.name:'Error',causeCodes:transportCodes(error),
+    elapsedMs:Number.isFinite(elapsedMs)?Math.max(0,Math.round(elapsedMs)):null,timeoutMs,responseStatus:Number.isSafeInteger(responseStatus)&&responseStatus>=100&&responseStatus<=599?responseStatus:null};
+  for(const [key,value] of Object.entries({bucketIndex,bucketCount,assetFiles,assetBytes}))if(Number.isSafeInteger(value)&&value>=0)details[key]=value;
+  const failure=Error('Cloudflare '+operation+' transport failed: '+JSON.stringify(details));failure.name='PackProviderTransportError';failure.transport=details;return failure;
+}
 // Confirmed against the current Paid HTTP limits and version-upload API on
 // 2026-10-19. The explicit default preserves the platform's existing budget.
 export const PACK_RUNTIME_LIMITS=Object.freeze({defaultCpuMs:30000,maximumCpuMs:300000,startupMs:1000,memoryBytes:128*1024**2,
@@ -109,7 +130,7 @@ async function activeVersion(api,workerName,worker) {
   return {versionId,versionTraffic:current.versions,bindings:version.bindings,limits:version.limits??null,undeployed:false,deploymentId:current.id,startupTimeMs:version.startup_time_ms??null,annotations:version.annotations??{}};
 }
 
-export function cloudflarePackProvider({api,assetFetch=fetch,uploadAssets,uploadModules,now=()=>new Date().toISOString()}={}) {
+export function cloudflarePackProvider({api,assetFetch=fetch,uploadAssets,uploadModules,now=()=>new Date().toISOString(),assetRetryWait=waitForAssetRetry,transportClock=Date.now,transportDiagnostic=value=>console.warn(JSON.stringify(value))}={}) {
   assert(typeof api==='function','Authenticated Cloudflare API callback required');
   return {
     async snapshot({request,challenge}){
@@ -137,19 +158,42 @@ export function cloudflarePackProvider({api,assetFetch=fetch,uploadAssets,upload
       let nextBucket=0,failed=false,firstError;
       const uploadBuckets=async()=>{
         while(!failed&&nextBucket<session.buckets.length){
-          const bucket=session.buckets[nextBucket++];
+          const bucketIndex=nextBucket++,bucket=session.buckets[bucketIndex];
           try{
-            // Match Wrangler's three bulk uploads; materialize only a running
-            // bucket, never the whole session's base64/FormData payloads.
-            const form=new FormData();for(const key of bucket){const asset=byHash.get(key),content=readPackUploadFile(candidate,asset.row).toString('base64');form.append(key,new Blob([content],{type:asset.mime}),key);}
-            await beforeWrite();if(failed)return;
-            const response=await assetFetch('https://api.cloudflare.com/client/v4'+account+'/workers/assets/upload?base64=true',{method:'POST',headers:{Authorization:'Bearer '+session.jwt},body:form,signal:AbortSignal.timeout(120000)});
-            const body=await response.json();assert([201,202].includes(response.status)&&body.success===true,'Static asset upload failed; the session token was not persisted');if(body.result?.jwt)completionToken=body.result.jwt;
+            // Only this content-addressed bucket may retry, under its original
+            // session JWT and still-live account claim. Rehash on EVERY attempt.
+            // Cloudflare's maintained deploy-helpers also retries bulk buckets:
+            // packages/deploy-helpers/src/deploy/helpers/assets.ts (2026-10-21).
+            for(let attempt=1;attempt<=PACK_ASSET_TRANSPORT_RETRY.attempts;attempt++){
+              if(failed)return;
+              const form=new FormData();let assetBytes=0;
+              for(const key of bucket){const asset=byHash.get(key),bytes=readPackUploadFile(candidate,asset.row);assetBytes+=bytes.length;form.append(key,new Blob([bytes.toString('base64')],{type:asset.mime}),key);}
+              // Fence errors and changed sealed bytes are outside retry handling.
+              await beforeWrite();if(failed)return;
+              const started=transportClock();let response,body;
+              try{
+                response=await assetFetch('https://api.cloudflare.com/client/v4'+account+'/workers/assets/upload?base64=true',{method:'POST',headers:{Authorization:'Bearer '+session.jwt},body:form,signal:AbortSignal.timeout(PACK_ASSET_TRANSPORT_RETRY.timeoutMs)});
+                body=await response.json();
+              }catch(error){
+                const failure=packProviderTransportFailure(error,{operation:'asset-bucket-upload',method:'POST',attempt,maximumAttempts:PACK_ASSET_TRANSPORT_RETRY.attempts,elapsedMs:transportClock()-started,timeoutMs:PACK_ASSET_TRANSPORT_RETRY.timeoutMs,responseStatus:response?.status,bucketIndex:bucketIndex+1,bucketCount:session.buckets.length,assetFiles:bucket.length,assetBytes});
+                if(!failed&&(!response||[201,202].includes(response.status))&&retryableAssetTransport(error)&&attempt<PACK_ASSET_TRANSPORT_RETRY.attempts){
+                  const retryInMs=PACK_ASSET_TRANSPORT_RETRY.delaysMs[attempt-1];
+                  transportDiagnostic({type:'cars-pack-asset-transport-retry',...failure.transport,retryInMs});
+                  await assetRetryWait(retryInMs);continue;
+                }
+                throw failure;
+              }
+              // Explicit HTTP/auth/validation refusals are not transport retries.
+              assert([201,202].includes(response.status)&&body.success===true,'Static asset upload failed (HTTP '+response.status+'); the session token was not persisted');
+              if(body.result?.jwt)completionToken=body.result.jwt;
+              break;
+            }
           }catch(error){if(!failed){failed=true;firstError=error;}}
         }
       };
       // Workers catch locally, so this waits for EVERY in-flight response before
-      // the caller may record an uncertain outcome. No bucket POST is retried.
+      // the caller may record an uncertain outcome. Exhausted transport retries
+      // never mark an unacknowledged bucket successful or release the claim.
       await Promise.all(Array.from({length:Math.min(3,session.buckets.length)},()=>uploadBuckets()));
       if(failed)throw firstError;
       assert(typeof completionToken==='string','Provider did not return an asset completion token');return {completionToken,manifestDigest,assetFiles:Object.keys(manifest).length,uploadedFiles:seen.size};
@@ -176,12 +220,21 @@ export function cloudflarePackProvider({api,assetFetch=fetch,uploadAssets,upload
 }
 
 /** Tokens stay in this closure. Errors/logs never interpolate headers or bodies. */
-export function tokenCloudflareTransport({token=process.env.CLOUDFLARE_API_TOKEN,fetchImpl=fetch}={}) {
+export function tokenCloudflareTransport({token=process.env.CLOUDFLARE_API_TOKEN,fetchImpl=fetch,transportClock=Date.now}={}) {
   assert(typeof token==='string'&&token.length>10,'CLOUDFLARE_API_TOKEN is required for CI; the connector adapter uses the same guarded core without exporting its token');
   return async({method,path:requestPath,query,body})=>{
     assert(requestPath.startsWith(account+'/workers/')||requestPath.startsWith(zone+'/workers/'),'Provider path exceeds authorized Workers and route scope');
     const url=new URL('https://api.cloudflare.com/client/v4'+requestPath);for(const [key,value] of Object.entries(query??{}))url.searchParams.set(key,String(value));
-    const response=await fetchImpl(url,{method,headers:{Authorization:'Bearer '+token,...(body?{'Content-Type':'application/json'}:{})},...(body?{body:JSON.stringify(body)}:{}),signal:AbortSignal.timeout(method==='GET'?30000:180000)});
-    const result=await response.json();return {...result,status:response.status};
+    const timeoutMs=method==='GET'?30000:180000,started=transportClock();let response;
+    try{
+      response=await fetchImpl(url,{method,headers:{Authorization:'Bearer '+token,...(body?{'Content-Type':'application/json'}:{})},...(body?{body:JSON.stringify(body)}:{}),signal:AbortSignal.timeout(timeoutMs)});
+      const result=await response.json();return {...result,status:response.status};
+    }catch(error){
+      const operation=method==='GET'?'workers-api-read':requestPath.endsWith('/assets-upload-session')?'asset-manifest-session':requestPath.endsWith('/versions')?'worker-version-upload':requestPath.endsWith('/deployments')?'worker-activation':requestPath.endsWith('/subdomain')?'worker-subdomain':requestPath.endsWith('/routes')?'worker-route':requestPath.endsWith('/workers/workers')?'worker-create':'workers-api-write';
+      // No API operation is retried here: uncertain create/upload/activation and
+      // route outcomes must keep the existing reconciliation requirement.
+      throw packProviderTransportFailure(error,{operation,method,elapsedMs:transportClock()-started,timeoutMs,responseStatus:response?.status});
+    }
   };
 }
+

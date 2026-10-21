@@ -7,7 +7,7 @@ import {createHash} from 'node:crypto';
 import {scheduleDealerPackSource, dispatchDealerPackSource, dealerPackSourceBuildFingerprint, inspectSourcePackMaterial, createDealerPackTerminalIntake, runDealerPackSourceScheduler} from './schedule-dealer-pack-source.mjs';
 import {buildPackBatchAssignments} from './lib/dealer-pack-identity.mjs';
 import {PACK_QUEUE_REPOSITORY, PACK_DEPLOY_ACCOUNT, PACK_DEPLOY_ZONE, createPackDeploymentQueue, packDeploymentRequest, queueDigest} from './lib/dealer-pack-queue.mjs';
-import {finishSourceCohort, mutateSourceCampaign} from './lib/dealer-pack-source-campaign.mjs';
+import {finishSourceCohort, mutateSourceCampaign, observeSourceExternalRuns} from './lib/dealer-pack-source-campaign.mjs';
 
 const at = '2026-10-21T00:00:00.000Z', sourceSha = 'a'.repeat(40), sharedMaterial = {scriptsTree: '1'.repeat(40), lockBlob: '2'.repeat(40), nativeWorkflowBlob: '3'.repeat(40)},
   changedMaterial = {...sharedMaterial, scriptsTree: '4'.repeat(40)}, buildFingerprint = queueDigest({kind: 'cars-source-build-material-v1', ...sharedMaterial});
@@ -151,6 +151,51 @@ test('unknown POST and empty204 visibility preserve one intent and never retry b
   assert.equal((await scheduleDealerPackSource(g.options)).status, 'needs-reconciliation'); await scheduleDealerPackSource(g.options); assert.equal(g.posts.length, 1);
 });
 
+test('an owned nonce observed before positive run binding never becomes a duplicate external producer', async () => {
+  for (const mismatch of ['none', 'source', 'attempt']) {
+    const f = fixture({available: 1}); f.state.visible = false;
+    const dispatch = f.options.dispatch;
+    f.options.dispatch = async value => {const result = await dispatch(value); const run = nativeRun({id: value.rolloutRequestId, sourceSha}, {id: 456});
+      f.state.active = [{...run, ...(mismatch === 'source' ? {head_sha: 'b'.repeat(40)} : mismatch === 'attempt' ? {run_attempt: 2} : {})}]; return result;};
+    assert.equal((await scheduleDealerPackSource(f.options)).status, 'needs-reconciliation');
+    const externalCount = mismatch === 'none' ? 0 : 1;
+    assert.equal(Object.keys(f.store.state.externalRuns).length, externalCount); assert.equal(f.posts.length, 1);
+    if (externalCount) assert.equal(f.store.state.externalRuns['456'].terminalIntakeComplete, false);
+    assert.equal(f.store.state.reservations[f.store.state.activeReservationId].run, null);
+    await scheduleDealerPackSource(f.options); assert.equal(Object.keys(f.store.state.externalRuns).length, externalCount); assert.equal(f.posts.length, 1);
+  }
+});
+
+test('a legacy pending external alias of an exact owned cancelled run clears by owned proof without artifact intake', async () => {
+  for (const mismatch of ['none', 'source', 'nonce']) {
+    const f = fixture({available: 1}); f.state.visible = false; await scheduleDealerPackSource(f.options);
+    const id = f.store.state.activeReservationId, reservation = f.store.state.reservations[id];
+    await mutateSourceCampaign(f.store, state => observeSourceExternalRuns(state, {runs: [{runId: 456, sourceSha}], now: at}), {now: at});
+    f.state.visible = true; f.state.runStatus = 'completed'; f.state.conclusion = 'cancelled'; f.state.externalCompleted = true; f.state.externalConclusion = 'cancelled';
+    f.options.listPacks = () => [0, 1].map(n => ({slug: 'dealer-' + n, dealerId: ids[n], valid: true}));
+    const discover = f.options.discover;
+    f.options.discover = async options => {const found = await discover(options);return {...found, externalRunStatuses: found.externalRunStatuses.map(row => ({...row,
+      run: {...nativeRun(reservation, {id: 456, status: 'completed', conclusion: 'cancelled'}), ...(mismatch === 'source' ? {head_sha: 'b'.repeat(40)} : mismatch === 'nonce' ? {display_title: 'Cars rollout ' + 'f'.repeat(64)} : {})}}))};};
+    f.options.ensureTerminalIntake = async () => assert.fail('Cancelled owned alias is not an artifact-intake success');
+    const result = await scheduleDealerPackSource(f.options), alias = f.store.state.externalRuns['456'];
+    assert.equal(result.terminalIntakeCalls, 0); assert.equal(f.store.state.reservations[id].run.conclusion, 'cancelled');
+    assert.equal(f.store.state.reservations[id].status, 'held'); assert.equal(f.queue.order.length, 0);
+    if (mismatch === 'none') {assert.equal(alias.terminalIntakeComplete, true); assert.equal(alias.ownedReservationId, id); assert.deepEqual(f.posts[1].slugs, ['dealer-1']);}
+    else {assert.equal(result.status, 'needs-reconciliation'); assert.equal(alias.terminalIntakeComplete, false); assert.equal(f.posts.length, 1);}
+  }
+});
+
+test('a generic cancelled external producer or a refused admissible intake stays held as a report without an unhandled throw', async () => {
+  for (const conclusion of ['cancelled', 'failure']) {
+    const f = fixture({available: 1}); f.state.active = [{...nativeRun({id: queueDigest('foreign'), sourceSha}, {id: 901}), display_title: 'Legacy source'}];
+    await scheduleDealerPackSource(f.options); f.state.active = []; f.state.externalCompleted = true; f.state.externalConclusion = conclusion;
+    let callbacks = 0; f.options.ensureTerminalIntake = async () => {callbacks++; throw Error('Maintained intake refused this terminal source');};
+    const result = await scheduleDealerPackSource(f.options);
+    assert.equal(result.status, 'needs-reconciliation'); assert.equal(f.store.state.externalRuns['901'].terminalIntakeComplete, false);
+    assert.equal(callbacks, conclusion === 'cancelled' ? 0 : 1); assert.equal(f.posts.length, 0);
+  }
+});
+
 test('known failed material is held across unrelated main commits and only changed pack/build material is eligible again', async () => {
   const f = fixture({available: 1}); f.state.runStatus = 'completed'; f.state.conclusion = 'failure';
   f.options.ensureTerminalIntake = ownedTerminalIntake(f);
@@ -201,7 +246,7 @@ test('a global or unauthenticated terminal intake failure leaves the external so
   const f = fixture({available: 1}); f.state.active = [{...nativeRun({id: queueDigest('external'), sourceSha}, {id: 901}), display_title: 'Legacy'}];
   await scheduleDealerPackSource(f.options); f.state.active = []; f.state.externalCompleted = true;
   f.options.ensureTerminalIntake = async () => ({runId: 901, sourceCommit: 'b'.repeat(40), contracts: {}, requests: [], failures: [], failedMaterials: []});
-  await assert.rejects(scheduleDealerPackSource(f.options), /exact authenticated/); assert.equal(f.posts.length, 0);
+  assert.equal((await scheduleDealerPackSource(f.options)).status, 'needs-reconciliation'); assert.equal(f.posts.length, 0);
   assert.equal(f.store.state.externalRuns['901'].terminalIntakeComplete, false);
 });
 
@@ -238,7 +283,7 @@ test('foreign source observed during our live campaign remains a terminal-intake
     if (options.runId !== 456) return {runId: 901, sourceCommit: 'b'.repeat(40)};
     const result = await ownIntake(options); f.state.runStatus = 'in_progress'; f.state.conclusion = null; return result;
   };
-  await assert.rejects(scheduleDealerPackSource(f.options), /exact authenticated/);
+  assert.equal((await scheduleDealerPackSource(f.options)).status, 'needs-reconciliation');
   assert.equal(f.store.state.activeReservationId, null); assert.equal(f.posts.length, 1);
   f.options.ensureTerminalIntake = async ({runId}) => ({runId, sourceCommit: sourceSha, contracts: {runId, sourceCommit: sourceSha, conclusion: 'success'},
     requests: [], failures: [{slug: 'dealer-14', reason: 'Exact failed native gate'}], failedMaterials: [{dealerId: ids[14], slug: 'dealer-14', packDigest: packDigest(14),
@@ -414,4 +459,24 @@ test('dispatch issues one exact main POST and handles204/200 without accepting f
   assert.equal((await dispatchDealerPackSource({...options, fetchImpl: async () => ({status: 200, json: async () => body})})).runId, 456);
   await assert.rejects(dispatchDealerPackSource({...options, fetchImpl: async () => ({status: 200, json: async () => ({...body, run_url: 'https://foreign.test/456'})})}), /authenticated run locator/);
   let attempts = 0; await assert.rejects(dispatchDealerPackSource({...options, fetchImpl: async () => {attempts++; throw Error('Unknown POST');}}), /Unknown POST/); assert.equal(attempts, 1);
+});
+
+
+test('a different run reusing a historical owned title retains its terminal-intake barrier after leaving active listings', async () => {
+  for (const mismatch of ['id', 'source', 'attempt']) {
+    const f = fixture({available: 1});
+    f.state.runStatus = 'completed'; f.state.conclusion = 'cancelled';
+    await scheduleDealerPackSource(f.options);
+    const old = Object.values(f.store.state.reservations)[0];
+    assert.equal(old.status, 'held'); assert.equal(f.store.state.activeReservationId, null);
+    f.state.active = [{...nativeRun(old, {id: 901}), ...(mismatch === 'source' ? {head_sha: 'b'.repeat(40)} : mismatch === 'attempt' ? {run_attempt: 2} : {})}];
+    assert.equal((await scheduleDealerPackSource(f.options)).status, 'waiting-external-source');
+    const barrier = f.store.state.externalRuns['901'];
+    assert(barrier); assert.equal(barrier.terminalIntakeComplete, false);
+    assert.equal(barrier.sourceSha, f.state.active[0].head_sha);
+    f.state.active = []; f.state.externalCompleted = true; f.state.externalConclusion = 'failure';
+    f.options.listPacks = () => [0, 1].map(n => ({slug: 'dealer-' + n, dealerId: ids[n], valid: true}));
+    assert.equal((await scheduleDealerPackSource(f.options)).status, 'waiting-external-intake');
+    assert.equal(f.posts.length, 1); assert.equal(f.store.state.externalRuns['901'].terminalIntakeComplete, false);
+  }
 });
