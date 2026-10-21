@@ -1,0 +1,124 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-input-review",
+  "dealer": "nova-motors-limited",
+  "reviewed": true,
+  "reviewedAt": "2026-10-21T13:14:29.948Z",
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "checks": [
+    "canonical-hosting-and-preserved-fleet-collisions",
+    "assigned-expansion-lead",
+    "public-fact-schema-and-price-omission",
+    "personal-contact-screen",
+    "retained-stock-media",
+    "companion-copy-source-binding",
+    "immutable-template-release-and-native-QA-parent",
+    "reviewed-artwork-provenance-and-regenerated-logo-hashes"
+  ],
+  "sourceArtworkReview": "Retained artwork review is separate provenance; this command does not perform visual, Arabic-expert or dealer approval.",
+  "copyReview": "Automated structure, stock hash, source text and complete EN/BG rows; no new human translation approval is inferred.",
+  "contacts": {
+    "schemaVersion": 1,
+    "kind": "cars-automated-public-contact-screen",
+    "dealer": "nova-motors-limited",
+    "method": "heuristic; no claim that unflagged values cannot be personal",
+    "flags": [],
+    "blocking": []
+  },
+  "batch": {
+    "number": 2,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-west-drayton-nova-motors",
+    "position": 104
+  },
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "inputs": [
+    {
+      "path": "FACTS-AND-INVENTORY.json",
+      "sha256": "99a4f861d785fff3f7480deb663177c735281db7e299b3f9188823f87d4975f5"
+    },
+    {
+      "path": "branding/logo-contract.json",
+      "sha256": "d3eccea13aa234fed13173dfed98b306a059fe7b71c720ac5f4c5f2298a3a23a"
+    },
+    {
+      "path": "branding/logo-recipe.json",
+      "sha256": "63e0a98b5c5cc9839eb301c0e39000e254127ae2548cd9a334953dc3fdfe431c"
+    },
+    {
+      "path": "branding/original-public-logo-1266-20261021.jpg",
+      "sha256": "f8ba1d44cec0f72a31a50d9366b5d06217250a5db3067509295f10477f2100a5"
+    },
+    {
+      "path": "branding/original-public-logo-20261021.jpg",
+      "sha256": "44e63457d7ed14015682c794dc72c55196bdb7d6ccc96175eb6b9097cf812fc9"
+    },
+    {
+      "path": "branding/source.json",
+      "sha256": "8282571637119f4348f58daa61697be524cd34b0f04694c9649b9b071108f6eb"
+    },
+    {
+      "path": "business-facts.json",
+      "sha256": "a07621a3d707803800ed5ca6a6725c325a214fbf33c51d179cbc5f19f00331e5"
+    },
+    {
+      "path": "copy-review.json",
+      "sha256": "07637274b028be43a07128f12f1c3b9def959589c28ec33737ef0a1ca8abeb8f"
+    },
+    {
+      "path": "dealer-stock/public-20261021-autotrader-202510056901407.jpg",
+      "sha256": "6f5b70a0ede87c4ce2e86e457ab2ec10552c81c383ee77ea882b5cd049ca04b3"
+    },
+    {
+      "path": "dealer-stock/public-20261021-autotrader-202604201716838.jpg",
+      "sha256": "67b46ece245ba1a36e812e9d63e1b1371fdea0001cc753ae6e95ab22ee1f5c58"
+    },
+    {
+      "path": "dealer-stock/template-demo-1.webp",
+      "sha256": "945e6864218ab3bd5fbd415336b212ecfde645685033f8506836f906885d447c"
+    },
+    {
+      "path": "dealer-stock/template-demo-2.webp",
+      "sha256": "17689ab880bf47de81ef467c34d639223f39f0c1ebe68c90d0aaf70e3dcc6333"
+    },
+    {
+      "path": "dealer-stock/template-demo-3.webp",
+      "sha256": "d644dec8e1ef280a702dccac267a2367f0ab823e40373e1299b156e7723b3b1f"
+    },
+    {
+      "path": "dealer.json",
+      "sha256": "12fff7cd79affe6dd158e68594e176a4e50dba9b9d412ed10927ac6ce4864315"
+    },
+    {
+      "path": "identity-review.json",
+      "sha256": "2de379713e0cc0f05132036ded913d0a10e7cf41194c0749068364d82e503968"
+    },
+    {
+      "path": "locale.json",
+      "sha256": "f1f754a6158885675b330648da4cd55b2622ec5b58e9ccdc81b3afdf9b296519"
+    },
+    {
+      "path": "missing-facts.json",
+      "sha256": "d8fd535e684dbf831a3049c06261a4ae0fc732300e8b43a738442b1e45dc85f3"
+    },
+    {
+      "path": "qualification.json",
+      "sha256": "cc53b28f15af1f6f2c767487af707a07bad8df105fcff5871f42b10b78bb49a9"
+    },
+    {
+      "path": "source-evidence.json",
+      "sha256": "a8980602ad36bdb55e12318461fa6419921969a9a1911e47961a50c8dcb320b6"
+    },
+    {
+      "path": "stock.json",
+      "sha256": "0debf82b27d080bc023303e9fb14faa07c4777daa40e51a0cf4159ba946960e1"
+    }
+  ],
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "providerWrites": 0
+}

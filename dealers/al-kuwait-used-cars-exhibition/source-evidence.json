@@ -1,0 +1,188 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-kuwait-used-cars-exhibition",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://ayshei.com/v-shop/al_kuwait_used_cars_exhibition_llc/inventory",
+      "finalUrl": "https://ayshei.com/v-shop/al_kuwait_used_cars_exhibition_llc/inventory",
+      "httpStatus": 200,
+      "observedAt": "2026-10-21T12:57:55.916664Z",
+      "sha256": "413966da3c01ca0d5f63e2bff1e14a205431d1b7e097250204134937cadeacd8",
+      "bytes": 671831,
+      "supports": [
+        "exact-seller-identity",
+        "Sharjah",
+        "seller-account-id",
+        "published-KC-logo"
+      ]
+    },
+    {
+      "url": "https://ayshei.com/ads/detail/4005081620-toyota-belta-standard-std-toyota-belta-1-5l-automatic-2023",
+      "finalUrl": "https://ayshei.com/ads/detail/4005081620-toyota-belta-standard-std-toyota-belta-1-5l-automatic-2023",
+      "httpStatus": 200,
+      "observedAt": "2026-10-21T13:00:13.408030Z",
+      "sha256": "aaadf875163fbe4769786486f46e89b51a494ac3ca1770eaf44835949d2bfc0c",
+      "bytes": 238572,
+      "supports": [
+        "exact-seller-binding",
+        "dated-vehicle-identity",
+        "photo-source"
+      ]
+    },
+    {
+      "url": "https://ayshei.com/ads/detail/6948648014-suzuki-ertiga-glx-1-5p-at-my2023",
+      "finalUrl": "https://ayshei.com/ads/detail/6948648014-suzuki-ertiga-glx-1-5p-at-my2023",
+      "httpStatus": 200,
+      "observedAt": "2026-10-21T13:00:13.408634Z",
+      "sha256": "0bb477d003b18f15a1df2c53a7bcb04ecda50d78532049e176429138d63202a6",
+      "bytes": 217571,
+      "supports": [
+        "exact-seller-binding",
+        "dated-vehicle-identity",
+        "photo-source"
+      ]
+    },
+    {
+      "url": "https://ayshei.com/ads/detail/5628223867-toyota-prado-gxr-toyota-prado-limited-250-txl-2-7-2024-black",
+      "finalUrl": "https://ayshei.com/ads/detail/5628223867-toyota-prado-gxr-toyota-prado-limited-250-txl-2-7-2024-black",
+      "httpStatus": 200,
+      "observedAt": "2026-10-21T13:00:13.630202Z",
+      "sha256": "f4e8f6d0ff30ed8a7bed9e0d0383b0e9808617ea31e4d62edc47c082cdf327dc",
+      "bytes": 245108,
+      "supports": [
+        "exact-seller-binding",
+        "dated-vehicle-identity",
+        "photo-source"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "fetchedAt": "2026-10-21T13:07:37.652Z",
+  "acquisition": "public-http-200-pages-and-exact-unmodified-photos",
+  "stockMedia": [
+    {
+      "url": "https://storage.ayshei.com/prod/public/drafts/9d1a9ce8-9c8c-49b1-9f6f-93785748b8c2/web/image1_1200.webp",
+      "finalUrl": "https://storage.ayshei.com/prod/public/drafts/9d1a9ce8-9c8c-49b1-9f6f-93785748b8c2/web/image1_1200.webp",
+      "httpStatus": 200,
+      "observedAt": "2026-10-21T13:01:00.980969Z",
+      "sha256": "8566cc822d3525414bbf459a5a7e14c1ce582f5d3b61a0cb570ddf834717fd6c",
+      "bytes": 117600,
+      "supports": [
+        "exact-listing-photo"
+      ],
+      "packPath": "dealer-stock/toyota-belta-2023.webp"
+    },
+    {
+      "url": "https://storage.ayshei.com/prod/public/drafts/41933a83-6a4a-4e2c-8c8e-791771f1e37a/web/image1_1200.webp",
+      "finalUrl": "https://storage.ayshei.com/prod/public/drafts/41933a83-6a4a-4e2c-8c8e-791771f1e37a/web/image1_1200.webp",
+      "httpStatus": 200,
+      "observedAt": "2026-10-21T13:01:00.981774Z",
+      "sha256": "0bd11d3e3ffda3feecb8c23f6d3bffb6dabc281d75764994b525ca5335993b00",
+      "bytes": 130510,
+      "supports": [
+        "exact-listing-photo"
+      ],
+      "packPath": "dealer-stock/suzuki-ertiga-2023.webp"
+    },
+    {
+      "url": "https://storage.ayshei.com/prod/public/drafts/41683088-481a-43be-aad2-c621d33e5336/web/image1_1200.webp",
+      "finalUrl": "https://storage.ayshei.com/prod/public/drafts/41683088-481a-43be-aad2-c621d33e5336/web/image1_1200.webp",
+      "httpStatus": 200,
+      "observedAt": "2026-10-21T13:01:00.982799Z",
+      "sha256": "f915a2238d9064a0e028c948915963043134b7f803c4d98dfb45c5a24ff065c3",
+      "bytes": 73852,
+      "supports": [
+        "exact-listing-photo"
+      ],
+      "packPath": "dealer-stock/toyota-prado-2024.webp"
+    }
+  ],
+  "factReview": {
+    "reviewKind": "source-evidence",
+    "reviewedAt": "2026-10-21T13:07:37.652Z",
+    "humanReview": false,
+    "dealerApproval": false,
+    "notes": [
+      "Business name remains the exact retained expansion identity. Ayshei displays Al Kuwait Used Cars Exhibition LLC and Sharjah.",
+      "All three vehicle detail pages link the exact seller account; the Ertiga source photo also visibly carries the ALKUWAIT CARS Sharjah watermark.",
+      "Listing prices are omitted. Mileage is not stated in the selected public detail fields and is left on request.",
+      "Toyota Belta body type is omitted because the marketplace incorrectly labels it SUV while the retained photo depicts a sedan. No corrected type is invented.",
+      "Toyota Prado title contains differing trim labels; only the unambiguous make, model and 2024 year are used.",
+      "Optional street address, phone, email, website and hours remain blank because public source values are conflicting or absent. Dealer contact and availability have not been confirmed."
+    ]
+  },
+  "excludedOrConflictingSources": [
+    {
+      "url": "https://www.dubicars.com/dealers/sharjah-al-kuwait-used-cars-exhibition-2717",
+      "observedAt": "2026-10-21",
+      "httpStatus": 200,
+      "sha256": "2884de383348d35013b0403b0e22a368d8ef220571663ed2ccb337a1cb214f72",
+      "bytes": 955314,
+      "supports": [
+        "original-expansion-source"
+      ]
+    },
+    {
+      "url": "https://d2souf30ck18jq.cloudfront.net/al-kuwait-used-cars-exhibition/logo-e8f061bc-ab72-43f4-9c34-890eee3eeb2d.jpeg",
+      "finalUrl": "https://d2souf30ck18jq.cloudfront.net/al-kuwait-used-cars-exhibition/logo-e8f061bc-ab72-43f4-9c34-890eee3eeb2d.jpeg",
+      "httpStatus": 200,
+      "observedAt": "2026-10-21T12:56:52.694002Z",
+      "sha256": "5ba24aa0febed73a5d1b44983e927255c16a38672978e80f541253fecfc53409",
+      "bytes": 6840,
+      "supports": [
+        "excluded-artwork"
+      ],
+      "reason": "Visually reads TARGET MOTORS, not the assigned Al Kuwait dealer; excluded from all pack branding."
+    },
+    {
+      "url": "https://www.dubicars.com/2020-nissan-patrol-super-safari-1026064.html",
+      "finalUrl": "https://www.dubicars.com/2020-nissan-patrol-super-safari-1026064.html",
+      "httpStatus": 200,
+      "observedAt": "2026-10-21T12:56:53.016064Z",
+      "sha256": "7ab2951e665f7a6055b7b5173ee20a99d562d4ccde29b815d96693e1186b81af",
+      "bytes": 396566,
+      "supports": [
+        "excluded-stock-source"
+      ],
+      "reason": "Photo shows a different showroom sign. Not imported; selected real stock comes from the exact Ayshei seller instead."
+    },
+    {
+      "url": "https://www.dubicars.com/2014-audi-s7-top-40l-420-hp-977456.html",
+      "finalUrl": "https://www.dubicars.com/2014-audi-s7-top-40l-420-hp-977456.html",
+      "httpStatus": 200,
+      "observedAt": "2026-10-21T12:56:53.335751Z",
+      "sha256": "75e3ca65e578cdc10d848cbc8f113da5ad5747bfa3982f105c069db2b67c5105",
+      "bytes": 383888,
+      "supports": [
+        "excluded-stock-source"
+      ],
+      "reason": "Photo shows a different showroom sign. Not imported."
+    },
+    {
+      "url": "https://www.arabwheels.ae/used-cars/dealers/al-kuwait-used-cars-showroom-in-uae/",
+      "observedAt": "2026-10-21",
+      "httpStatus": 200,
+      "sha256": "99d62ccdb15ea651eb586d97a3d978439d43c10ac441c9fd26fd6f1b9dcd170a",
+      "bytes": 197345,
+      "supports": [
+        "secondary-identity"
+      ]
+    },
+    {
+      "url": "https://cdn-i.formacar.com/f_auto/http://s3/shop-images-bucket/0a0006a5-9807-1782-8198-55afc394782d_507f3e60-4681-4ab2-9bec-e7f8340df2ef_photo_",
+      "finalUrl": "https://cdn-i.formacar.com/f_auto/http://s3/shop-images-bucket/0a0006a5-9807-1782-8198-55afc394782d_507f3e60-4681-4ab2-9bec-e7f8340df2ef_photo_",
+      "httpStatus": 200,
+      "observedAt": "2026-10-21T12:58:39.583009Z",
+      "sha256": "0dfdfef2e8846355f10a8e0d0d4cee923bbc4f2ecf9f1b6a018f76cd8c817017",
+      "bytes": 16084,
+      "supports": [
+        "secondary-published-artwork"
+      ],
+      "reason": "ALKUWAIT CARS Sharjah on dark background; retained as research evidence only, not an export input."
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "slug": "al-kuwait-used-cars-exhibition",
+  "dealerId": "ae-sharjah-al-kuwait-used-cars-exhibition",
+  "business": {
+    "name": "Al Kuwait Used Cars Exhibition",
+    "city": "Sharjah",
+    "region": "Sharjah",
+    "countryCode": "AE",
+    "currency": "AED",
+    "distanceUnit": "km",
+    "locale": "en-AE",
+    "address": "",
+    "phone": "",
+    "phoneDisplay": "",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://ayshei.com/v-shop/al_kuwait_used_cars_exhibition_llc/inventory",
+    "hours": "",
+    "sourceUrl": "https://ayshei.com/v-shop/al_kuwait_used_cars_exhibition_llc/inventory",
+    "observedAt": "2026-10-21",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-21. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://ayshei.com/v-shop/al_kuwait_used_cars_exhibition_llc/inventory",
+      "finalUrl": "https://ayshei.com/v-shop/al_kuwait_used_cars_exhibition_llc/inventory",
+      "httpStatus": 200,
+      "observedAt": "2026-10-21T12:57:55.916664Z",
+      "sha256": "413966da3c01ca0d5f63e2bff1e14a205431d1b7e097250204134937cadeacd8",
+      "bytes": 671831,
+      "supports": [
+        "exact-seller-identity",
+        "Sharjah",
+        "seller-account-id",
+        "published-KC-logo"
+      ]
+    },
+    {
+      "url": "https://ayshei.com/ads/detail/4005081620-toyota-belta-standard-std-toyota-belta-1-5l-automatic-2023",
+      "finalUrl": "https://ayshei.com/ads/detail/4005081620-toyota-belta-standard-std-toyota-belta-1-5l-automatic-2023",
+      "httpStatus": 200,
+      "observedAt": "2026-10-21T13:00:13.408030Z",
+      "sha256": "aaadf875163fbe4769786486f46e89b51a494ac3ca1770eaf44835949d2bfc0c",
+      "bytes": 238572,
+      "supports": [
+        "exact-seller-binding",
+        "dated-vehicle-identity",
+        "photo-source"
+      ]
+    },
+    {
+      "url": "https://ayshei.com/ads/detail/6948648014-suzuki-ertiga-glx-1-5p-at-my2023",
+      "finalUrl": "https://ayshei.com/ads/detail/6948648014-suzuki-ertiga-glx-1-5p-at-my2023",
+      "httpStatus": 200,
+      "observedAt": "2026-10-21T13:00:13.408634Z",
+      "sha256": "0bb477d003b18f15a1df2c53a7bcb04ecda50d78532049e176429138d63202a6",
+      "bytes": 217571,
+      "supports": [
+        "exact-seller-binding",
+        "dated-vehicle-identity",
+        "photo-source"
+      ]
+    },
+    {
+      "url": "https://ayshei.com/ads/detail/5628223867-toyota-prado-gxr-toyota-prado-limited-250-txl-2-7-2024-black",
+      "finalUrl": "https://ayshei.com/ads/detail/5628223867-toyota-prado-gxr-toyota-prado-limited-250-txl-2-7-2024-black",
+      "httpStatus": 200,
+      "observedAt": "2026-10-21T13:00:13.630202Z",
+      "sha256": "f4e8f6d0ff30ed8a7bed9e0d0383b0e9808617ea31e4d62edc47c082cdf327dc",
+      "bytes": 245108,
+      "supports": [
+        "exact-seller-binding",
+        "dated-vehicle-identity",
+        "photo-source"
+      ]
+    }
+  ]
+}

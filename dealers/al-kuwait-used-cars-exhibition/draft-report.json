@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "type": "cars-dealer-pack-draft",
+  "slug": "al-kuwait-used-cars-exhibition",
+  "dealerId": "ae-sharjah-al-kuwait-used-cars-exhibition",
+  "status": "input-reviewed",
+  "buildReady": true,
+  "providerWrites": 0,
+  "createdAt": "2026-10-21T13:07:36.848Z",
+  "inventoryKind": "dated-listing-snapshot",
+  "inventoryRecords": 3,
+  "logoReady": true,
+  "missingFacts": [
+    {
+      "field": "business.address",
+      "required": false,
+      "reason": "No unambiguous current value retained; conflicting or absent public values are omitted."
+    },
+    {
+      "field": "business.phone",
+      "required": false,
+      "reason": "No unambiguous current value retained; conflicting or absent public values are omitted."
+    },
+    {
+      "field": "business.email",
+      "required": false,
+      "reason": "No unambiguous current value retained; conflicting or absent public values are omitted."
+    },
+    {
+      "field": "business.website",
+      "required": false,
+      "reason": "No unambiguous current value retained; conflicting or absent public values are omitted."
+    },
+    {
+      "field": "business.hours",
+      "required": false,
+      "reason": "No unambiguous current value retained; conflicting or absent public values are omitted."
+    },
+    {
+      "field": "prices",
+      "required": false,
+      "reason": "Listing prices are omitted from every preview record."
+    }
+  ],
+  "contactScreen": {
+    "schemaVersion": 1,
+    "kind": "cars-automated-public-contact-screen",
+    "dealer": "al-kuwait-used-cars-exhibition",
+    "method": "heuristic; no claim that unflagged values cannot be personal",
+    "flags": [],
+    "blocking": []
+  },
+  "blocking": [],
+  "stockAcquisition": "explicit-retained-public-snapshot",
+  "liveListingFetchPerformed": true,
+  "next": "Ready for the existing source publication and native build pipeline. Automated input review and deterministic logo-byte verification passed; native build and hosted approval are still required.",
+  "sourceResearchCompletedAt": "2026-10-21T13:07:37.652Z",
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "inputCheck": {
+    "success": true,
+    "checkedAt": "2026-10-21T13:13:10.369Z",
+    "regeneratedExports": 17,
+    "providerWrites": 0,
+    "imageGenerationPerformed": false
+  }
+}

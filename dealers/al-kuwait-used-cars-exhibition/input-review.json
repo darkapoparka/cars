@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-input-review",
+  "dealer": "al-kuwait-used-cars-exhibition",
+  "reviewed": true,
+  "reviewedAt": "2026-10-21T13:13:04.269Z",
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "checks": [
+    "canonical-hosting-and-preserved-fleet-collisions",
+    "assigned-expansion-lead",
+    "public-fact-schema-and-price-omission",
+    "personal-contact-screen",
+    "retained-stock-media",
+    "companion-copy-source-binding",
+    "immutable-template-release-and-native-QA-parent",
+    "reviewed-artwork-provenance-and-regenerated-logo-hashes"
+  ],
+  "sourceArtworkReview": "Retained artwork review is separate provenance; this command does not perform visual, Arabic-expert or dealer approval.",
+  "copyReview": "Automated structure, stock hash, source text and complete EN/BG rows; no new human translation approval is inferred.",
+  "contacts": {
+    "schemaVersion": 1,
+    "kind": "cars-automated-public-contact-screen",
+    "dealer": "al-kuwait-used-cars-exhibition",
+    "method": "heuristic; no claim that unflagged values cannot be personal",
+    "flags": [],
+    "blocking": []
+  },
+  "batch": {
+    "number": 4,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-sharjah-al-kuwait-used-cars-exhibition",
+    "position": 306
+  },
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "inputs": [
+    {
+      "path": "FACTS-AND-INVENTORY.json",
+      "sha256": "1882b6c0f2c1db59a805a986be2fe3e83c4f55f836c9ad9e37785f63c825fb35"
+    },
+    {
+      "path": "branding/logo-contract.json",
+      "sha256": "d31e6868ce8298507c94fe536f8a1d453176c669b8fca8f60fb22e8e7846394e"
+    },
+    {
+      "path": "branding/logo-recipe.json",
+      "sha256": "5350df919bfef77f1a1477813b5444ef3172533d9541b1d9a94053361172f5d4"
+    },
+    {
+      "path": "branding/original-public-ayshei-kc.jpeg",
+      "sha256": "0ef33c25177eb9ccd5ce0c2683e0afb662110a4f195e1f5a25fa2292bd6bdd26"
+    },
+    {
+      "path": "branding/source.json",
+      "sha256": "fcce2306a72a0d511101917bbbfcfa529adac2921f325661543f1d76a029550d"
+    },
+    {
+      "path": "business-facts.json",
+      "sha256": "fcb14ea3876f4455d9f01a985983b3a4d935b8f451889d94292c3ab464726dc1"
+    },
+    {
+      "path": "copy-review.json",
+      "sha256": "119fc8b75a8a05c56087d4dd0a896a31094bb3aba2923df32feea9f2be4a1148"
+    },
+    {
+      "path": "dealer-stock/suzuki-ertiga-2023.webp",
+      "sha256": "0bd11d3e3ffda3feecb8c23f6d3bffb6dabc281d75764994b525ca5335993b00"
+    },
+    {
+      "path": "dealer-stock/toyota-belta-2023.webp",
+      "sha256": "8566cc822d3525414bbf459a5a7e14c1ce582f5d3b61a0cb570ddf834717fd6c"
+    },
+    {
+      "path": "dealer-stock/toyota-prado-2024.webp",
+      "sha256": "f915a2238d9064a0e028c948915963043134b7f803c4d98dfb45c5a24ff065c3"
+    },
+    {
+      "path": "dealer.json",
+      "sha256": "b6bfc7669b4ce5cd1126720f276587004a5cf75c6ff52b5eebe13fc9eaafa448"
+    },
+    {
+      "path": "identity-review.json",
+      "sha256": "e4b563fbc8f6d0e3a34e588447eb37c3e9e5fe696e530168c61ef90c304a7477"
+    },
+    {
+      "path": "locale.json",
+      "sha256": "3a9f74883dd380ba14f228f092cd9d0cd27252ef8386a05f2334be918d982bb7"
+    },
+    {
+      "path": "missing-facts.json",
+      "sha256": "02a953f9a2ad1215187c60ace6c59085a4a49baa884ee30e438a159909520f51"
+    },
+    {
+      "path": "qualification.json",
+      "sha256": "5c43e84fde3ddd6811bc02a0ec119bf3b37398e1adc16c99a02f287179d4076f"
+    },
+    {
+      "path": "source-evidence.json",
+      "sha256": "9f34afc7ea8c1cf0d51b82e8a31041d2d3fe0ee861e1e8a5b76a537b665c0094"
+    },
+    {
+      "path": "stock.json",
+      "sha256": "23b3a016ba8f5713b7bdb561317d9cf3ae9d86fcbee801634533c1adeb54c5a1"
+    }
+  ],
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "providerWrites": 0
+}

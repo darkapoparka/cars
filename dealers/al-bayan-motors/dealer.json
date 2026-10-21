@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Al Bayan Motors",
     "publicOrigin": "https://al-bayan-motors.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "e90a826db89efda29a8c233aa08132da0ee841fc8a8f4cfd85d1da5801c3d22e",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "41e50186541efb3fa9ce9e72cdac05607313b2153b99d582f1c1179f6023368c"
+    }
   }
 }

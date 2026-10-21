@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "dealer": "nova-motors-limited",
-  "status": "research-required",
+  "status": "retained-public-original-with-reviewed-matte",
   "realLogoFirst": true,
   "publicSources": [
     {
@@ -11,10 +11,157 @@
     {
       "url": "https://find-and-update.company-information.service.gov.uk/company/15736938/filing-history",
       "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://m.atcdn.co.uk/retailer/media/w768/c0c798e8-341e-4abb-b532-c0919f07aaf2.jpg",
+      "observedAt": "2026-10-21T12:57:15.612885Z"
+    },
+    {
+      "url": "https://m.atcdn.co.uk/retailer/media/w1266/c0c798e8-341e-4abb-b532-c0919f07aaf2.jpg",
+      "observedAt": "2026-10-21T13:11:52.673601Z"
     }
   ],
-  "originals": [],
-  "creationMethod": null,
+  "originals": [
+    {
+      "path": "branding/original-public-logo-20261021.jpg",
+      "sha256": "44e63457d7ed14015682c794dc72c55196bdb7d6ccc96175eb6b9097cf812fc9",
+      "url": "https://m.atcdn.co.uk/retailer/media/w768/c0c798e8-341e-4abb-b532-c0919f07aaf2.jpg",
+      "observedAt": "2026-10-21T12:57:15.612885Z"
+    },
+    {
+      "path": "branding/original-public-logo-1266-20261021.jpg",
+      "sha256": "f8ba1d44cec0f72a31a50d9366b5d06217250a5db3067509295f10477f2100a5",
+      "url": "https://m.atcdn.co.uk/retailer/media/w1266/c0c798e8-341e-4abb-b532-c0919f07aaf2.jpg",
+      "observedAt": "2026-10-21T13:11:52.673601Z"
+    }
+  ],
+  "creationMethod": "Retained original NOVA MOTORS public raster on a reviewed flat white canvas; maintained explicit monochrome matte export with derived transparency and no new geometry.",
   "dealerApproved": false,
-  "generatedInputs": null
+  "generatedInputs": null,
+  "reviewedInputs": {
+    "reviewedAt": "2026-10-21T13:12:40.473660Z",
+    "master": {
+      "path": "branding/original-public-logo-1266-20261021.jpg",
+      "sha256": "f8ba1d44cec0f72a31a50d9366b5d06217250a5db3067509295f10477f2100a5",
+      "retainedSource": {
+        "kind": "retained-original-raster",
+        "sha256": "f8ba1d44cec0f72a31a50d9366b5d06217250a5db3067509295f10477f2100a5",
+        "url": "https://m.atcdn.co.uk/retailer/media/w1266/c0c798e8-341e-4abb-b532-c0919f07aaf2.jpg",
+        "observedAt": "2026-10-21T13:11:52.673601Z"
+      },
+      "rasterTreatment": "reviewed-white-matte-black",
+      "matteReview": {
+        "kind": "reviewed-flat-white-canvas",
+        "reviewed": true,
+        "background": "#ffffff",
+        "noWhiteForegroundArtwork": true,
+        "sourceSha256": "f8ba1d44cec0f72a31a50d9366b5d06217250a5db3067509295f10477f2100a5",
+        "reviewedAt": "2026-10-21T13:12:40.473660Z"
+      }
+    },
+    "mark": {
+      "path": "branding/original-public-logo-1266-20261021.jpg",
+      "sha256": "f8ba1d44cec0f72a31a50d9366b5d06217250a5db3067509295f10477f2100a5",
+      "retainedSource": {
+        "kind": "retained-original-raster",
+        "sha256": "f8ba1d44cec0f72a31a50d9366b5d06217250a5db3067509295f10477f2100a5",
+        "url": "https://m.atcdn.co.uk/retailer/media/w1266/c0c798e8-341e-4abb-b532-c0919f07aaf2.jpg",
+        "observedAt": "2026-10-21T13:11:52.673601Z"
+      },
+      "rasterTreatment": "reviewed-white-matte-black",
+      "matteReview": {
+        "kind": "reviewed-flat-white-canvas",
+        "reviewed": true,
+        "background": "#ffffff",
+        "noWhiteForegroundArtwork": true,
+        "sourceSha256": "f8ba1d44cec0f72a31a50d9366b5d06217250a5db3067509295f10477f2100a5",
+        "reviewedAt": "2026-10-21T13:12:40.473660Z"
+      }
+    },
+    "markOnDark": {
+      "path": "branding/original-public-logo-1266-20261021.jpg",
+      "sha256": "f8ba1d44cec0f72a31a50d9366b5d06217250a5db3067509295f10477f2100a5",
+      "retainedSource": {
+        "kind": "retained-original-raster",
+        "sha256": "f8ba1d44cec0f72a31a50d9366b5d06217250a5db3067509295f10477f2100a5",
+        "url": "https://m.atcdn.co.uk/retailer/media/w1266/c0c798e8-341e-4abb-b532-c0919f07aaf2.jpg",
+        "observedAt": "2026-10-21T13:11:52.673601Z"
+      },
+      "rasterTreatment": "reviewed-white-matte-white",
+      "matteReview": {
+        "kind": "reviewed-flat-white-canvas",
+        "reviewed": true,
+        "background": "#ffffff",
+        "noWhiteForegroundArtwork": true,
+        "sourceSha256": "f8ba1d44cec0f72a31a50d9366b5d06217250a5db3067509295f10477f2100a5",
+        "reviewedAt": "2026-10-21T13:12:40.473660Z"
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/original-public-logo-1266-20261021.jpg",
+        "sha256": "f8ba1d44cec0f72a31a50d9366b5d06217250a5db3067509295f10477f2100a5",
+        "retainedSource": {
+          "kind": "retained-original-raster",
+          "sha256": "f8ba1d44cec0f72a31a50d9366b5d06217250a5db3067509295f10477f2100a5",
+          "url": "https://m.atcdn.co.uk/retailer/media/w1266/c0c798e8-341e-4abb-b532-c0919f07aaf2.jpg",
+          "observedAt": "2026-10-21T13:11:52.673601Z"
+        },
+        "rasterTreatment": "reviewed-white-matte-black",
+        "matteReview": {
+          "kind": "reviewed-flat-white-canvas",
+          "reviewed": true,
+          "background": "#ffffff",
+          "noWhiteForegroundArtwork": true,
+          "sourceSha256": "f8ba1d44cec0f72a31a50d9366b5d06217250a5db3067509295f10477f2100a5",
+          "reviewedAt": "2026-10-21T13:12:40.473660Z"
+        }
+      },
+      "onDark": {
+        "path": "branding/original-public-logo-1266-20261021.jpg",
+        "sha256": "f8ba1d44cec0f72a31a50d9366b5d06217250a5db3067509295f10477f2100a5",
+        "retainedSource": {
+          "kind": "retained-original-raster",
+          "sha256": "f8ba1d44cec0f72a31a50d9366b5d06217250a5db3067509295f10477f2100a5",
+          "url": "https://m.atcdn.co.uk/retailer/media/w1266/c0c798e8-341e-4abb-b532-c0919f07aaf2.jpg",
+          "observedAt": "2026-10-21T13:11:52.673601Z"
+        },
+        "rasterTreatment": "reviewed-white-matte-white",
+        "matteReview": {
+          "kind": "reviewed-flat-white-canvas",
+          "reviewed": true,
+          "background": "#ffffff",
+          "noWhiteForegroundArtwork": true,
+          "sourceSha256": "f8ba1d44cec0f72a31a50d9366b5d06217250a5db3067509295f10477f2100a5",
+          "reviewedAt": "2026-10-21T13:12:40.473660Z"
+        }
+      },
+      "onAccent": {
+        "path": "branding/original-public-logo-1266-20261021.jpg",
+        "sha256": "f8ba1d44cec0f72a31a50d9366b5d06217250a5db3067509295f10477f2100a5",
+        "retainedSource": {
+          "kind": "retained-original-raster",
+          "sha256": "f8ba1d44cec0f72a31a50d9366b5d06217250a5db3067509295f10477f2100a5",
+          "url": "https://m.atcdn.co.uk/retailer/media/w1266/c0c798e8-341e-4abb-b532-c0919f07aaf2.jpg",
+          "observedAt": "2026-10-21T13:11:52.673601Z"
+        },
+        "rasterTreatment": "reviewed-white-matte-white",
+        "matteReview": {
+          "kind": "reviewed-flat-white-canvas",
+          "reviewed": true,
+          "background": "#ffffff",
+          "noWhiteForegroundArtwork": true,
+          "sourceSha256": "f8ba1d44cec0f72a31a50d9366b5d06217250a5db3067509295f10477f2100a5",
+          "reviewedAt": "2026-10-21T13:12:40.473660Z"
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "method": "Agent visual review of exact public srcset original: black NM symbol and NOVA MOTORS lettering on a flat white canvas; no white foreground artwork. All original image renditions retained.",
+      "nativeOriginalWidth": 1266,
+      "nativeOriginalHeight": 1243,
+      "dealerApproval": false
+    }
+  }
 }

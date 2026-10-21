@@ -18,8 +18,8 @@
     "stockUrl": "https://www.autotrader.co.uk/dealers/middlesex/west-drayton/nova-motors-limited-10043632",
     "hours": "",
     "sourceUrl": "https://www.autotrader.co.uk/dealers/middlesex/west-drayton/nova-motors-limited-10043632",
-    "observedAt": "2026-10-18",
-    "inventoryNotice": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
+    "observedAt": "2026-10-21T12:51:23.742494Z",
+    "inventoryNotice": "Dated public seller listings observed on 21 October 2026. Availability is not live; confirm with the dealer. Listing prices are omitted in this preview.",
     "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
     "logo": "/dealer-brand/logo-on-light.png",
     "logoLight": "/dealer-brand/logo-on-light.png",
@@ -28,16 +28,11 @@
   "sources": [
     {
       "url": "https://www.autotrader.co.uk/dealers/middlesex/west-drayton/nova-motors-limited-10043632",
-      "observedAt": "2026-10-18",
+      "observedAt": "2026-10-21T12:51:23.742494Z",
       "supports": [
-        "retained-public-business-research"
-      ]
-    },
-    {
-      "url": "https://find-and-update.company-information.service.gov.uk/company/15736938/filing-history",
-      "observedAt": "2026-10-18",
-      "supports": [
-        "retained-public-business-research"
+        "business-name",
+        "business-location",
+        "published-business-phone"
       ]
     }
   ]

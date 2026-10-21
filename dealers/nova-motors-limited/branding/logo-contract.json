@@ -1,0 +1,469 @@
+{
+  "schemaVersion": 1,
+  "dealer": "nova-motors-limited",
+  "reviewed": true,
+  "reviewedAt": "2026-10-21T13:12:40.473660Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "Retained original NOVA MOTORS public raster on a reviewed flat white canvas; maintained explicit monochrome matte export with derived transparency and no new geometry.",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "7c9af48761a42c252a5b93305831ae371dc16e32e15f32428773d1ade1a998f8",
+      "sourceSha256": "be4bba15198cd69048bbaae69f8f83de4326290fcafab2ce6886ba0e943a8164"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "5474aad87d69c4b9ebdb2b16f2105e862b3b6f81d60b44182bc86fab15c75464",
+      "sourceSha256": "33ced2e3013a644d3612477fdb8c95962d0a95ff8641f1e508ae657e71b1f7ff"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "5474aad87d69c4b9ebdb2b16f2105e862b3b6f81d60b44182bc86fab15c75464",
+      "sourceSha256": "33ced2e3013a644d3612477fdb8c95962d0a95ff8641f1e508ae657e71b1f7ff"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "be4bba15198cd69048bbaae69f8f83de4326290fcafab2ce6886ba0e943a8164",
+    "retainedSource": {
+      "kind": "retained-reviewed-raster",
+      "reference": "dealers/nova-motors-limited/branding/original-public-logo-1266-20261021.jpg",
+      "sha256": "f8ba1d44cec0f72a31a50d9366b5d06217250a5db3067509295f10477f2100a5",
+      "reviewReference": "dealers/nova-motors-limited/branding/source.json",
+      "reviewSha256": "8282571637119f4348f58daa61697be524cd34b0f04694c9649b9b071108f6eb",
+      "sourceUrl": "https://m.atcdn.co.uk/retailer/media/w1266/c0c798e8-341e-4abb-b532-c0919f07aaf2.jpg",
+      "observedAt": "2026-10-21T13:11:52.673601Z",
+      "exportTreatment": {
+        "kind": "reviewed-white-matte-solid-ink-v1",
+        "ink": "solid-black",
+        "sourceSha256": "f8ba1d44cec0f72a31a50d9366b5d06217250a5db3067509295f10477f2100a5",
+        "background": "#ffffff",
+        "derivedTransparency": true,
+        "originalAlphaPreserved": false,
+        "matteReviewSha256": "7fd9902eff34833e386e6c9b18a0fa8bfb5b5f337ec7a20b9731c5e17ec9c798",
+        "newGeometry": false
+      }
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "dbf3d9abfd77288767b618046730a9e203a9969c7b4bec86dc689cc602741698",
+    "retainedSource": {
+      "kind": "retained-reviewed-raster",
+      "reference": "dealers/nova-motors-limited/branding/original-public-logo-1266-20261021.jpg",
+      "sha256": "f8ba1d44cec0f72a31a50d9366b5d06217250a5db3067509295f10477f2100a5",
+      "reviewReference": "dealers/nova-motors-limited/branding/source.json",
+      "reviewSha256": "8282571637119f4348f58daa61697be524cd34b0f04694c9649b9b071108f6eb",
+      "sourceUrl": "https://m.atcdn.co.uk/retailer/media/w1266/c0c798e8-341e-4abb-b532-c0919f07aaf2.jpg",
+      "observedAt": "2026-10-21T13:11:52.673601Z",
+      "exportTreatment": {
+        "kind": "reviewed-white-matte-solid-ink-v1",
+        "ink": "solid-black",
+        "sourceSha256": "f8ba1d44cec0f72a31a50d9366b5d06217250a5db3067509295f10477f2100a5",
+        "background": "#ffffff",
+        "derivedTransparency": true,
+        "originalAlphaPreserved": false,
+        "matteReviewSha256": "7fd9902eff34833e386e6c9b18a0fa8bfb5b5f337ec7a20b9731c5e17ec9c798",
+        "newGeometry": false
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "347046097c652e182215063a152cabe6075334419689eaf4ad938bd70477d347"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "be4bba15198cd69048bbaae69f8f83de4326290fcafab2ce6886ba0e943a8164",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "dealers/nova-motors-limited/branding/original-public-logo-1266-20261021.jpg",
+        "sha256": "f8ba1d44cec0f72a31a50d9366b5d06217250a5db3067509295f10477f2100a5",
+        "reviewReference": "dealers/nova-motors-limited/branding/source.json",
+        "reviewSha256": "8282571637119f4348f58daa61697be524cd34b0f04694c9649b9b071108f6eb",
+        "sourceUrl": "https://m.atcdn.co.uk/retailer/media/w1266/c0c798e8-341e-4abb-b532-c0919f07aaf2.jpg",
+        "observedAt": "2026-10-21T13:11:52.673601Z",
+        "exportTreatment": {
+          "kind": "reviewed-white-matte-solid-ink-v1",
+          "ink": "solid-black",
+          "sourceSha256": "f8ba1d44cec0f72a31a50d9366b5d06217250a5db3067509295f10477f2100a5",
+          "background": "#ffffff",
+          "derivedTransparency": true,
+          "originalAlphaPreserved": false,
+          "matteReviewSha256": "7fd9902eff34833e386e6c9b18a0fa8bfb5b5f337ec7a20b9731c5e17ec9c798",
+          "newGeometry": false
+        }
+      },
+      "sourceReference": "dealers/nova-motors-limited/branding/original-public-logo-1266-20261021.jpg"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "33ced2e3013a644d3612477fdb8c95962d0a95ff8641f1e508ae657e71b1f7ff",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "dealers/nova-motors-limited/branding/original-public-logo-1266-20261021.jpg",
+        "sha256": "f8ba1d44cec0f72a31a50d9366b5d06217250a5db3067509295f10477f2100a5",
+        "reviewReference": "dealers/nova-motors-limited/branding/source.json",
+        "reviewSha256": "8282571637119f4348f58daa61697be524cd34b0f04694c9649b9b071108f6eb",
+        "sourceUrl": "https://m.atcdn.co.uk/retailer/media/w1266/c0c798e8-341e-4abb-b532-c0919f07aaf2.jpg",
+        "observedAt": "2026-10-21T13:11:52.673601Z",
+        "exportTreatment": {
+          "kind": "reviewed-white-matte-solid-ink-v1",
+          "ink": "solid-white",
+          "sourceSha256": "f8ba1d44cec0f72a31a50d9366b5d06217250a5db3067509295f10477f2100a5",
+          "background": "#ffffff",
+          "derivedTransparency": true,
+          "originalAlphaPreserved": false,
+          "matteReviewSha256": "7fd9902eff34833e386e6c9b18a0fa8bfb5b5f337ec7a20b9731c5e17ec9c798",
+          "newGeometry": false
+        }
+      },
+      "sourceReference": "dealers/nova-motors-limited/branding/original-public-logo-1266-20261021.jpg"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "33ced2e3013a644d3612477fdb8c95962d0a95ff8641f1e508ae657e71b1f7ff",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "dealers/nova-motors-limited/branding/original-public-logo-1266-20261021.jpg",
+        "sha256": "f8ba1d44cec0f72a31a50d9366b5d06217250a5db3067509295f10477f2100a5",
+        "reviewReference": "dealers/nova-motors-limited/branding/source.json",
+        "reviewSha256": "8282571637119f4348f58daa61697be524cd34b0f04694c9649b9b071108f6eb",
+        "sourceUrl": "https://m.atcdn.co.uk/retailer/media/w1266/c0c798e8-341e-4abb-b532-c0919f07aaf2.jpg",
+        "observedAt": "2026-10-21T13:11:52.673601Z",
+        "exportTreatment": {
+          "kind": "reviewed-white-matte-solid-ink-v1",
+          "ink": "solid-white",
+          "sourceSha256": "f8ba1d44cec0f72a31a50d9366b5d06217250a5db3067509295f10477f2100a5",
+          "background": "#ffffff",
+          "derivedTransparency": true,
+          "originalAlphaPreserved": false,
+          "matteReviewSha256": "7fd9902eff34833e386e6c9b18a0fa8bfb5b5f337ec7a20b9731c5e17ec9c798",
+          "newGeometry": false
+        }
+      },
+      "sourceReference": "dealers/nova-motors-limited/branding/original-public-logo-1266-20261021.jpg"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "reviewed-white-matte-crop-and-resize",
+      "sourceSha256": "f8ba1d44cec0f72a31a50d9366b5d06217250a5db3067509295f10477f2100a5",
+      "sha256": "be4bba15198cd69048bbaae69f8f83de4326290fcafab2ce6886ba0e943a8164",
+      "crop": {
+        "left": 203,
+        "top": 419,
+        "width": 852,
+        "height": 490
+      },
+      "rasterTreatment": {
+        "kind": "reviewed-white-matte-solid-ink-v1",
+        "ink": "solid-black",
+        "background": "#ffffff",
+        "whiteNoiseCeiling": 5,
+        "alphaRule": "preserve original opaque foreground alpha; only source pixels within five RGB levels of white become transparent",
+        "originalAlphaUnchangedBeforeCropAndResize": false,
+        "originalWasFullyOpaque": true,
+        "derivedTransparency": true,
+        "originalWidth": 1266,
+        "originalHeight": 1243,
+        "whiteCanvasPixels": 1507393,
+        "borderWhiteFraction": 1,
+        "derivedPixelSha256": "bf854f00adab17987cc2a9f29fa2135a983479c22d6416cdbf640218d00a588f",
+        "newGeometry": false
+      },
+      "sourcePath": "branding/original-public-logo-1266-20261021.jpg",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "reviewed-white-matte-crop-and-resize",
+      "sourceSha256": "f8ba1d44cec0f72a31a50d9366b5d06217250a5db3067509295f10477f2100a5",
+      "sha256": "33ced2e3013a644d3612477fdb8c95962d0a95ff8641f1e508ae657e71b1f7ff",
+      "crop": {
+        "left": 203,
+        "top": 419,
+        "width": 852,
+        "height": 490
+      },
+      "rasterTreatment": {
+        "kind": "reviewed-white-matte-solid-ink-v1",
+        "ink": "solid-white",
+        "background": "#ffffff",
+        "whiteNoiseCeiling": 5,
+        "alphaRule": "preserve original opaque foreground alpha; only source pixels within five RGB levels of white become transparent",
+        "originalAlphaUnchangedBeforeCropAndResize": false,
+        "originalWasFullyOpaque": true,
+        "derivedTransparency": true,
+        "originalWidth": 1266,
+        "originalHeight": 1243,
+        "whiteCanvasPixels": 1507393,
+        "borderWhiteFraction": 1,
+        "derivedPixelSha256": "98441175cc197b9b2174d4e317ca9b3c9ee8b6006c185dab7f68f4dde5665cec",
+        "newGeometry": false
+      },
+      "sourcePath": "branding/original-public-logo-1266-20261021.jpg",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "reviewed-white-matte-crop-and-resize",
+      "sourceSha256": "f8ba1d44cec0f72a31a50d9366b5d06217250a5db3067509295f10477f2100a5",
+      "sha256": "33ced2e3013a644d3612477fdb8c95962d0a95ff8641f1e508ae657e71b1f7ff",
+      "crop": {
+        "left": 203,
+        "top": 419,
+        "width": 852,
+        "height": 490
+      },
+      "rasterTreatment": {
+        "kind": "reviewed-white-matte-solid-ink-v1",
+        "ink": "solid-white",
+        "background": "#ffffff",
+        "whiteNoiseCeiling": 5,
+        "alphaRule": "preserve original opaque foreground alpha; only source pixels within five RGB levels of white become transparent",
+        "originalAlphaUnchangedBeforeCropAndResize": false,
+        "originalWasFullyOpaque": true,
+        "derivedTransparency": true,
+        "originalWidth": 1266,
+        "originalHeight": 1243,
+        "whiteCanvasPixels": 1507393,
+        "borderWhiteFraction": 1,
+        "derivedPixelSha256": "98441175cc197b9b2174d4e317ca9b3c9ee8b6006c185dab7f68f4dde5665cec",
+        "newGeometry": false
+      },
+      "sourcePath": "branding/original-public-logo-1266-20261021.jpg",
+      "outputPath": "branding/logo-on-accent.png"
+    },
+    "master": {
+      "operation": "reviewed-white-matte-crop-and-resize",
+      "sourceSha256": "f8ba1d44cec0f72a31a50d9366b5d06217250a5db3067509295f10477f2100a5",
+      "sha256": "be4bba15198cd69048bbaae69f8f83de4326290fcafab2ce6886ba0e943a8164",
+      "crop": {
+        "left": 203,
+        "top": 419,
+        "width": 852,
+        "height": 490
+      },
+      "rasterTreatment": {
+        "kind": "reviewed-white-matte-solid-ink-v1",
+        "ink": "solid-black",
+        "background": "#ffffff",
+        "whiteNoiseCeiling": 5,
+        "alphaRule": "preserve original opaque foreground alpha; only source pixels within five RGB levels of white become transparent",
+        "originalAlphaUnchangedBeforeCropAndResize": false,
+        "originalWasFullyOpaque": true,
+        "derivedTransparency": true,
+        "originalWidth": 1266,
+        "originalHeight": 1243,
+        "whiteCanvasPixels": 1507393,
+        "borderWhiteFraction": 1,
+        "derivedPixelSha256": "bf854f00adab17987cc2a9f29fa2135a983479c22d6416cdbf640218d00a588f",
+        "newGeometry": false
+      },
+      "sourcePath": "branding/original-public-logo-1266-20261021.jpg"
+    },
+    "mark": {
+      "operation": "reviewed-white-matte-crop-and-resize",
+      "sourceSha256": "f8ba1d44cec0f72a31a50d9366b5d06217250a5db3067509295f10477f2100a5",
+      "sha256": "dbf3d9abfd77288767b618046730a9e203a9969c7b4bec86dc689cc602741698",
+      "crop": {
+        "left": 203,
+        "top": 419,
+        "width": 852,
+        "height": 490
+      },
+      "rasterTreatment": {
+        "kind": "reviewed-white-matte-solid-ink-v1",
+        "ink": "solid-black",
+        "background": "#ffffff",
+        "whiteNoiseCeiling": 5,
+        "alphaRule": "preserve original opaque foreground alpha; only source pixels within five RGB levels of white become transparent",
+        "originalAlphaUnchangedBeforeCropAndResize": false,
+        "originalWasFullyOpaque": true,
+        "derivedTransparency": true,
+        "originalWidth": 1266,
+        "originalHeight": 1243,
+        "whiteCanvasPixels": 1507393,
+        "borderWhiteFraction": 1,
+        "derivedPixelSha256": "bf854f00adab17987cc2a9f29fa2135a983479c22d6416cdbf640218d00a588f",
+        "newGeometry": false
+      },
+      "sourcePath": "branding/original-public-logo-1266-20261021.jpg"
+    },
+    "markOnDark": {
+      "operation": "reviewed-white-matte-crop-and-resize",
+      "sourceSha256": "f8ba1d44cec0f72a31a50d9366b5d06217250a5db3067509295f10477f2100a5",
+      "sha256": "0e4b00c70627dfa693e5aa981b78959b57b30e51845f4fd5be1d57912ce0fdc3",
+      "crop": {
+        "left": 203,
+        "top": 419,
+        "width": 852,
+        "height": 490
+      },
+      "rasterTreatment": {
+        "kind": "reviewed-white-matte-solid-ink-v1",
+        "ink": "solid-white",
+        "background": "#ffffff",
+        "whiteNoiseCeiling": 5,
+        "alphaRule": "preserve original opaque foreground alpha; only source pixels within five RGB levels of white become transparent",
+        "originalAlphaUnchangedBeforeCropAndResize": false,
+        "originalWasFullyOpaque": true,
+        "derivedTransparency": true,
+        "originalWidth": 1266,
+        "originalHeight": 1243,
+        "whiteCanvasPixels": 1507393,
+        "borderWhiteFraction": 1,
+        "derivedPixelSha256": "98441175cc197b9b2174d4e317ca9b3c9ee8b6006c185dab7f68f4dde5665cec",
+        "newGeometry": false
+      },
+      "sourcePath": "branding/original-public-logo-1266-20261021.jpg"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "e60059a267e99b808cc249e4b1c1a9c1c1857999220d8f7cd1f846d19ba5273b",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "dealers/nova-motors-limited/branding/original-public-logo-1266-20261021.jpg",
+        "sha256": "f8ba1d44cec0f72a31a50d9366b5d06217250a5db3067509295f10477f2100a5",
+        "reviewReference": "dealers/nova-motors-limited/branding/source.json",
+        "reviewSha256": "8282571637119f4348f58daa61697be524cd34b0f04694c9649b9b071108f6eb",
+        "sourceUrl": "https://m.atcdn.co.uk/retailer/media/w1266/c0c798e8-341e-4abb-b532-c0919f07aaf2.jpg",
+        "observedAt": "2026-10-21T13:11:52.673601Z",
+        "exportTreatment": {
+          "kind": "reviewed-white-matte-solid-ink-v1",
+          "ink": "solid-black",
+          "sourceSha256": "f8ba1d44cec0f72a31a50d9366b5d06217250a5db3067509295f10477f2100a5",
+          "background": "#ffffff",
+          "derivedTransparency": true,
+          "originalAlphaPreserved": false,
+          "matteReviewSha256": "7fd9902eff34833e386e6c9b18a0fa8bfb5b5f337ec7a20b9731c5e17ec9c798",
+          "newGeometry": false
+        }
+      },
+      "sourceReference": "dealers/nova-motors-limited/branding/original-public-logo-1266-20261021.jpg"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "e0b1e5614e6471cef3eacbb5e2ca993a44f43a0adeed4d84b8a8aa03a64da555",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "dealers/nova-motors-limited/branding/original-public-logo-1266-20261021.jpg",
+        "sha256": "f8ba1d44cec0f72a31a50d9366b5d06217250a5db3067509295f10477f2100a5",
+        "reviewReference": "dealers/nova-motors-limited/branding/source.json",
+        "reviewSha256": "8282571637119f4348f58daa61697be524cd34b0f04694c9649b9b071108f6eb",
+        "sourceUrl": "https://m.atcdn.co.uk/retailer/media/w1266/c0c798e8-341e-4abb-b532-c0919f07aaf2.jpg",
+        "observedAt": "2026-10-21T13:11:52.673601Z",
+        "exportTreatment": {
+          "kind": "reviewed-white-matte-solid-ink-v1",
+          "ink": "solid-white",
+          "sourceSha256": "f8ba1d44cec0f72a31a50d9366b5d06217250a5db3067509295f10477f2100a5",
+          "background": "#ffffff",
+          "derivedTransparency": true,
+          "originalAlphaPreserved": false,
+          "matteReviewSha256": "7fd9902eff34833e386e6c9b18a0fa8bfb5b5f337ec7a20b9731c5e17ec9c798",
+          "newGeometry": false
+        }
+      },
+      "sourceReference": "dealers/nova-motors-limited/branding/original-public-logo-1266-20261021.jpg"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "dbf3d9abfd77288767b618046730a9e203a9969c7b4bec86dc689cc602741698",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "dealers/nova-motors-limited/branding/original-public-logo-1266-20261021.jpg",
+        "sha256": "f8ba1d44cec0f72a31a50d9366b5d06217250a5db3067509295f10477f2100a5",
+        "reviewReference": "dealers/nova-motors-limited/branding/source.json",
+        "reviewSha256": "8282571637119f4348f58daa61697be524cd34b0f04694c9649b9b071108f6eb",
+        "sourceUrl": "https://m.atcdn.co.uk/retailer/media/w1266/c0c798e8-341e-4abb-b532-c0919f07aaf2.jpg",
+        "observedAt": "2026-10-21T13:11:52.673601Z",
+        "exportTreatment": {
+          "kind": "reviewed-white-matte-solid-ink-v1",
+          "ink": "solid-black",
+          "sourceSha256": "f8ba1d44cec0f72a31a50d9366b5d06217250a5db3067509295f10477f2100a5",
+          "background": "#ffffff",
+          "derivedTransparency": true,
+          "originalAlphaPreserved": false,
+          "matteReviewSha256": "7fd9902eff34833e386e6c9b18a0fa8bfb5b5f337ec7a20b9731c5e17ec9c798",
+          "newGeometry": false
+        }
+      },
+      "sourceReference": "dealers/nova-motors-limited/branding/original-public-logo-1266-20261021.jpg"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "347046097c652e182215063a152cabe6075334419689eaf4ad938bd70477d347",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "dealers/nova-motors-limited/branding/original-public-logo-1266-20261021.jpg",
+        "sha256": "f8ba1d44cec0f72a31a50d9366b5d06217250a5db3067509295f10477f2100a5",
+        "reviewReference": "dealers/nova-motors-limited/branding/source.json",
+        "reviewSha256": "8282571637119f4348f58daa61697be524cd34b0f04694c9649b9b071108f6eb",
+        "sourceUrl": "https://m.atcdn.co.uk/retailer/media/w1266/c0c798e8-341e-4abb-b532-c0919f07aaf2.jpg",
+        "observedAt": "2026-10-21T13:11:52.673601Z",
+        "exportTreatment": {
+          "kind": "reviewed-white-matte-solid-ink-v1",
+          "ink": "solid-black",
+          "sourceSha256": "f8ba1d44cec0f72a31a50d9366b5d06217250a5db3067509295f10477f2100a5",
+          "background": "#ffffff",
+          "derivedTransparency": true,
+          "originalAlphaPreserved": false,
+          "matteReviewSha256": "7fd9902eff34833e386e6c9b18a0fa8bfb5b5f337ec7a20b9731c5e17ec9c798",
+          "newGeometry": false
+        }
+      },
+      "sourceReference": "dealers/nova-motors-limited/branding/original-public-logo-1266-20261021.jpg"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-21T13:12:40.473660Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "0e4b00c70627dfa693e5aa981b78959b57b30e51845f4fd5be1d57912ce0fdc3",
+    "retainedSource": {
+      "kind": "retained-reviewed-raster",
+      "reference": "dealers/nova-motors-limited/branding/original-public-logo-1266-20261021.jpg",
+      "sha256": "f8ba1d44cec0f72a31a50d9366b5d06217250a5db3067509295f10477f2100a5",
+      "reviewReference": "dealers/nova-motors-limited/branding/source.json",
+      "reviewSha256": "8282571637119f4348f58daa61697be524cd34b0f04694c9649b9b071108f6eb",
+      "sourceUrl": "https://m.atcdn.co.uk/retailer/media/w1266/c0c798e8-341e-4abb-b532-c0919f07aaf2.jpg",
+      "observedAt": "2026-10-21T13:11:52.673601Z",
+      "exportTreatment": {
+        "kind": "reviewed-white-matte-solid-ink-v1",
+        "ink": "solid-white",
+        "sourceSha256": "f8ba1d44cec0f72a31a50d9366b5d06217250a5db3067509295f10477f2100a5",
+        "background": "#ffffff",
+        "derivedTransparency": true,
+        "originalAlphaPreserved": false,
+        "matteReviewSha256": "7fd9902eff34833e386e6c9b18a0fa8bfb5b5f337ec7a20b9731c5e17ec9c798",
+        "newGeometry": false
+      }
+    }
+  }
+}

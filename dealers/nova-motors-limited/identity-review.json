@@ -1,27 +1,23 @@
 {
   "schemaVersion": 1,
   "kind": "cars-new-dealer-identity-review",
-  "reviewed": false,
-  "reviewedAt": null,
+  "reviewed": true,
+  "reviewedAt": "2026-10-21T13:14:29.948Z",
   "dealer": "nova-motors-limited",
   "dealerId": "gb-west-drayton-nova-motors",
   "repository": "darkapoparka/cars",
   "existingIdentityFound": false,
   "sourceOwnership": "cars-canonical",
   "review": {
-    "kind": "pending",
+    "kind": "automated",
     "humanReview": false,
     "dealerApproval": false
   },
-  "method": "Draft identity only; run automated pack input review before building.",
+  "method": "Automated exact registry/pack identity, canonical hosting and batch comparison; retained public source fields were structurally checked, not human-approved.",
   "sources": [
     {
       "url": "https://www.autotrader.co.uk/dealers/middlesex/west-drayton/nova-motors-limited-10043632",
-      "observedAt": "2026-10-18"
-    },
-    {
-      "url": "https://find-and-update.company-information.service.gov.uk/company/15736938/filing-history",
-      "observedAt": "2026-10-18"
+      "observedAt": "2026-10-21T12:51:23.742494Z"
     }
   ]
 }

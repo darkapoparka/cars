@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-kuwait-used-cars-exhibition",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-21T13:01:01.000Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-21. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "toyota-belta-2023",
+      "title": "Toyota Belta 1.5L 2023",
+      "make": "Toyota",
+      "model": "Belta",
+      "year": 2023,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/toyota-belta-2023.webp"
+      ],
+      "sourceUrl": "https://ayshei.com/ads/detail/4005081620-toyota-belta-standard-std-toyota-belta-1-5l-automatic-2023",
+      "observedAt": "2026-10-21T13:01:01.000Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "transmission": "Automatic",
+      "fuel": "Gasoline",
+      "mileageOnRequest": true,
+      "description": "Dated public listing samples observed on 2026-10-21. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "suzuki-ertiga-2023",
+      "title": "Suzuki Ertiga GLX 2023",
+      "make": "Suzuki",
+      "model": "Ertiga GLX",
+      "year": 2023,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/suzuki-ertiga-2023.webp"
+      ],
+      "sourceUrl": "https://ayshei.com/ads/detail/6948648014-suzuki-ertiga-glx-1-5p-at-my2023",
+      "observedAt": "2026-10-21T13:01:01.000Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Van",
+      "transmission": "Automatic",
+      "fuel": "Gasoline",
+      "mileageOnRequest": true,
+      "description": "Dated public listing samples observed on 2026-10-21. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "toyota-prado-2024",
+      "title": "Toyota Prado 2024",
+      "make": "Toyota",
+      "model": "Prado",
+      "year": 2024,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/toyota-prado-2024.webp"
+      ],
+      "sourceUrl": "https://ayshei.com/ads/detail/5628223867-toyota-prado-gxr-toyota-prado-limited-250-txl-2-7-2024-black",
+      "observedAt": "2026-10-21T13:01:01.000Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "SUV",
+      "transmission": "Automatic",
+      "fuel": "Gasoline",
+      "mileageOnRequest": true,
+      "description": "Dated public listing samples observed on 2026-10-21. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

@@ -1,0 +1,469 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-kuwait-used-cars-exhibition",
+  "reviewed": true,
+  "reviewedAt": "2026-10-21T13:07:37.652Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "retained-public-raster-reviewed-white-canvas-monochrome",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "beb0a3bc07d5b9065edb1e8a79b4f582f55e3620316a6db7897d475451a33ffa",
+      "sourceSha256": "b7f4ecdb5031ee5bf55ae320009f03f9a7d3de9c61b011117070e8dd2af9b5d2"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "3efb7d981c4a808a0d0c1d27326e41cfb25892f4b70e00d4300934992e656e59",
+      "sourceSha256": "2ad324a82b8feef8d503dacf50ee224ba08bd45e22e92ce7c8a96b0bd4b39bd8"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "3efb7d981c4a808a0d0c1d27326e41cfb25892f4b70e00d4300934992e656e59",
+      "sourceSha256": "2ad324a82b8feef8d503dacf50ee224ba08bd45e22e92ce7c8a96b0bd4b39bd8"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "b7f4ecdb5031ee5bf55ae320009f03f9a7d3de9c61b011117070e8dd2af9b5d2",
+    "retainedSource": {
+      "kind": "retained-reviewed-raster",
+      "reference": "dealers/al-kuwait-used-cars-exhibition/branding/original-public-ayshei-kc.jpeg",
+      "sha256": "0ef33c25177eb9ccd5ce0c2683e0afb662110a4f195e1f5a25fa2292bd6bdd26",
+      "reviewReference": "dealers/al-kuwait-used-cars-exhibition/branding/source.json",
+      "reviewSha256": "fcce2306a72a0d511101917bbbfcfa529adac2921f325661543f1d76a029550d",
+      "sourceUrl": "https://storage.ayshei.com/prod/users/2fd1453d-f927-4a5d-82e7-eff83b5861df/avatar/img-1758687756.jpeg",
+      "observedAt": "2026-10-21T12:58:39.581887Z",
+      "exportTreatment": {
+        "kind": "reviewed-white-matte-solid-ink-v1",
+        "ink": "solid-black",
+        "sourceSha256": "0ef33c25177eb9ccd5ce0c2683e0afb662110a4f195e1f5a25fa2292bd6bdd26",
+        "background": "#ffffff",
+        "derivedTransparency": true,
+        "originalAlphaPreserved": false,
+        "matteReviewSha256": "fe74021c481e9b09d2a2bd5776c5ba6e69e2096f90c990284206f651d11a17c2",
+        "newGeometry": false
+      }
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "534c416d72d31898e5a3f31ff1713afa7ec2d7d7df5366dba240514e9b6b37e1",
+    "retainedSource": {
+      "kind": "retained-reviewed-raster",
+      "reference": "dealers/al-kuwait-used-cars-exhibition/branding/original-public-ayshei-kc.jpeg",
+      "sha256": "0ef33c25177eb9ccd5ce0c2683e0afb662110a4f195e1f5a25fa2292bd6bdd26",
+      "reviewReference": "dealers/al-kuwait-used-cars-exhibition/branding/source.json",
+      "reviewSha256": "fcce2306a72a0d511101917bbbfcfa529adac2921f325661543f1d76a029550d",
+      "sourceUrl": "https://storage.ayshei.com/prod/users/2fd1453d-f927-4a5d-82e7-eff83b5861df/avatar/img-1758687756.jpeg",
+      "observedAt": "2026-10-21T12:58:39.581887Z",
+      "exportTreatment": {
+        "kind": "reviewed-white-matte-solid-ink-v1",
+        "ink": "solid-black",
+        "sourceSha256": "0ef33c25177eb9ccd5ce0c2683e0afb662110a4f195e1f5a25fa2292bd6bdd26",
+        "background": "#ffffff",
+        "derivedTransparency": true,
+        "originalAlphaPreserved": false,
+        "matteReviewSha256": "fe74021c481e9b09d2a2bd5776c5ba6e69e2096f90c990284206f651d11a17c2",
+        "newGeometry": false
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "cbadadc24fd6b646f8c923a98e4386060bdab3cf0337729e77a41120c73e26fd"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "b7f4ecdb5031ee5bf55ae320009f03f9a7d3de9c61b011117070e8dd2af9b5d2",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "dealers/al-kuwait-used-cars-exhibition/branding/original-public-ayshei-kc.jpeg",
+        "sha256": "0ef33c25177eb9ccd5ce0c2683e0afb662110a4f195e1f5a25fa2292bd6bdd26",
+        "reviewReference": "dealers/al-kuwait-used-cars-exhibition/branding/source.json",
+        "reviewSha256": "fcce2306a72a0d511101917bbbfcfa529adac2921f325661543f1d76a029550d",
+        "sourceUrl": "https://storage.ayshei.com/prod/users/2fd1453d-f927-4a5d-82e7-eff83b5861df/avatar/img-1758687756.jpeg",
+        "observedAt": "2026-10-21T12:58:39.581887Z",
+        "exportTreatment": {
+          "kind": "reviewed-white-matte-solid-ink-v1",
+          "ink": "solid-black",
+          "sourceSha256": "0ef33c25177eb9ccd5ce0c2683e0afb662110a4f195e1f5a25fa2292bd6bdd26",
+          "background": "#ffffff",
+          "derivedTransparency": true,
+          "originalAlphaPreserved": false,
+          "matteReviewSha256": "fe74021c481e9b09d2a2bd5776c5ba6e69e2096f90c990284206f651d11a17c2",
+          "newGeometry": false
+        }
+      },
+      "sourceReference": "dealers/al-kuwait-used-cars-exhibition/branding/original-public-ayshei-kc.jpeg"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "2ad324a82b8feef8d503dacf50ee224ba08bd45e22e92ce7c8a96b0bd4b39bd8",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "dealers/al-kuwait-used-cars-exhibition/branding/original-public-ayshei-kc.jpeg",
+        "sha256": "0ef33c25177eb9ccd5ce0c2683e0afb662110a4f195e1f5a25fa2292bd6bdd26",
+        "reviewReference": "dealers/al-kuwait-used-cars-exhibition/branding/source.json",
+        "reviewSha256": "fcce2306a72a0d511101917bbbfcfa529adac2921f325661543f1d76a029550d",
+        "sourceUrl": "https://storage.ayshei.com/prod/users/2fd1453d-f927-4a5d-82e7-eff83b5861df/avatar/img-1758687756.jpeg",
+        "observedAt": "2026-10-21T12:58:39.581887Z",
+        "exportTreatment": {
+          "kind": "reviewed-white-matte-solid-ink-v1",
+          "ink": "solid-white",
+          "sourceSha256": "0ef33c25177eb9ccd5ce0c2683e0afb662110a4f195e1f5a25fa2292bd6bdd26",
+          "background": "#ffffff",
+          "derivedTransparency": true,
+          "originalAlphaPreserved": false,
+          "matteReviewSha256": "fe74021c481e9b09d2a2bd5776c5ba6e69e2096f90c990284206f651d11a17c2",
+          "newGeometry": false
+        }
+      },
+      "sourceReference": "dealers/al-kuwait-used-cars-exhibition/branding/original-public-ayshei-kc.jpeg"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "2ad324a82b8feef8d503dacf50ee224ba08bd45e22e92ce7c8a96b0bd4b39bd8",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "dealers/al-kuwait-used-cars-exhibition/branding/original-public-ayshei-kc.jpeg",
+        "sha256": "0ef33c25177eb9ccd5ce0c2683e0afb662110a4f195e1f5a25fa2292bd6bdd26",
+        "reviewReference": "dealers/al-kuwait-used-cars-exhibition/branding/source.json",
+        "reviewSha256": "fcce2306a72a0d511101917bbbfcfa529adac2921f325661543f1d76a029550d",
+        "sourceUrl": "https://storage.ayshei.com/prod/users/2fd1453d-f927-4a5d-82e7-eff83b5861df/avatar/img-1758687756.jpeg",
+        "observedAt": "2026-10-21T12:58:39.581887Z",
+        "exportTreatment": {
+          "kind": "reviewed-white-matte-solid-ink-v1",
+          "ink": "solid-white",
+          "sourceSha256": "0ef33c25177eb9ccd5ce0c2683e0afb662110a4f195e1f5a25fa2292bd6bdd26",
+          "background": "#ffffff",
+          "derivedTransparency": true,
+          "originalAlphaPreserved": false,
+          "matteReviewSha256": "fe74021c481e9b09d2a2bd5776c5ba6e69e2096f90c990284206f651d11a17c2",
+          "newGeometry": false
+        }
+      },
+      "sourceReference": "dealers/al-kuwait-used-cars-exhibition/branding/original-public-ayshei-kc.jpeg"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "reviewed-white-matte-crop-and-resize",
+      "sourceSha256": "0ef33c25177eb9ccd5ce0c2683e0afb662110a4f195e1f5a25fa2292bd6bdd26",
+      "sha256": "b7f4ecdb5031ee5bf55ae320009f03f9a7d3de9c61b011117070e8dd2af9b5d2",
+      "crop": {
+        "left": 32,
+        "top": 211,
+        "width": 536,
+        "height": 255
+      },
+      "rasterTreatment": {
+        "kind": "reviewed-white-matte-solid-ink-v1",
+        "ink": "solid-black",
+        "background": "#ffffff",
+        "whiteNoiseCeiling": 5,
+        "alphaRule": "preserve original opaque foreground alpha; only source pixels within five RGB levels of white become transparent",
+        "originalAlphaUnchangedBeforeCropAndResize": false,
+        "originalWasFullyOpaque": true,
+        "derivedTransparency": true,
+        "originalWidth": 674,
+        "originalHeight": 674,
+        "whiteCanvasPixels": 406704,
+        "borderWhiteFraction": 1,
+        "derivedPixelSha256": "ce0499f45501b34d6ad7926eb2989635d78677b291ec1e4f646c5371a259d5ef",
+        "newGeometry": false
+      },
+      "sourcePath": "branding/original-public-ayshei-kc.jpeg",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "reviewed-white-matte-crop-and-resize",
+      "sourceSha256": "0ef33c25177eb9ccd5ce0c2683e0afb662110a4f195e1f5a25fa2292bd6bdd26",
+      "sha256": "2ad324a82b8feef8d503dacf50ee224ba08bd45e22e92ce7c8a96b0bd4b39bd8",
+      "crop": {
+        "left": 32,
+        "top": 211,
+        "width": 536,
+        "height": 255
+      },
+      "rasterTreatment": {
+        "kind": "reviewed-white-matte-solid-ink-v1",
+        "ink": "solid-white",
+        "background": "#ffffff",
+        "whiteNoiseCeiling": 5,
+        "alphaRule": "preserve original opaque foreground alpha; only source pixels within five RGB levels of white become transparent",
+        "originalAlphaUnchangedBeforeCropAndResize": false,
+        "originalWasFullyOpaque": true,
+        "derivedTransparency": true,
+        "originalWidth": 674,
+        "originalHeight": 674,
+        "whiteCanvasPixels": 406704,
+        "borderWhiteFraction": 1,
+        "derivedPixelSha256": "64090d360a379943534dd6e39ce13420414535399b287ddb04fa55f8104d6e42",
+        "newGeometry": false
+      },
+      "sourcePath": "branding/original-public-ayshei-kc.jpeg",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "reviewed-white-matte-crop-and-resize",
+      "sourceSha256": "0ef33c25177eb9ccd5ce0c2683e0afb662110a4f195e1f5a25fa2292bd6bdd26",
+      "sha256": "2ad324a82b8feef8d503dacf50ee224ba08bd45e22e92ce7c8a96b0bd4b39bd8",
+      "crop": {
+        "left": 32,
+        "top": 211,
+        "width": 536,
+        "height": 255
+      },
+      "rasterTreatment": {
+        "kind": "reviewed-white-matte-solid-ink-v1",
+        "ink": "solid-white",
+        "background": "#ffffff",
+        "whiteNoiseCeiling": 5,
+        "alphaRule": "preserve original opaque foreground alpha; only source pixels within five RGB levels of white become transparent",
+        "originalAlphaUnchangedBeforeCropAndResize": false,
+        "originalWasFullyOpaque": true,
+        "derivedTransparency": true,
+        "originalWidth": 674,
+        "originalHeight": 674,
+        "whiteCanvasPixels": 406704,
+        "borderWhiteFraction": 1,
+        "derivedPixelSha256": "64090d360a379943534dd6e39ce13420414535399b287ddb04fa55f8104d6e42",
+        "newGeometry": false
+      },
+      "sourcePath": "branding/original-public-ayshei-kc.jpeg",
+      "outputPath": "branding/logo-on-accent.png"
+    },
+    "master": {
+      "operation": "reviewed-white-matte-crop-and-resize",
+      "sourceSha256": "0ef33c25177eb9ccd5ce0c2683e0afb662110a4f195e1f5a25fa2292bd6bdd26",
+      "sha256": "b7f4ecdb5031ee5bf55ae320009f03f9a7d3de9c61b011117070e8dd2af9b5d2",
+      "crop": {
+        "left": 32,
+        "top": 211,
+        "width": 536,
+        "height": 255
+      },
+      "rasterTreatment": {
+        "kind": "reviewed-white-matte-solid-ink-v1",
+        "ink": "solid-black",
+        "background": "#ffffff",
+        "whiteNoiseCeiling": 5,
+        "alphaRule": "preserve original opaque foreground alpha; only source pixels within five RGB levels of white become transparent",
+        "originalAlphaUnchangedBeforeCropAndResize": false,
+        "originalWasFullyOpaque": true,
+        "derivedTransparency": true,
+        "originalWidth": 674,
+        "originalHeight": 674,
+        "whiteCanvasPixels": 406704,
+        "borderWhiteFraction": 1,
+        "derivedPixelSha256": "ce0499f45501b34d6ad7926eb2989635d78677b291ec1e4f646c5371a259d5ef",
+        "newGeometry": false
+      },
+      "sourcePath": "branding/original-public-ayshei-kc.jpeg"
+    },
+    "mark": {
+      "operation": "reviewed-white-matte-crop-and-resize",
+      "sourceSha256": "0ef33c25177eb9ccd5ce0c2683e0afb662110a4f195e1f5a25fa2292bd6bdd26",
+      "sha256": "534c416d72d31898e5a3f31ff1713afa7ec2d7d7df5366dba240514e9b6b37e1",
+      "crop": {
+        "left": 32,
+        "top": 211,
+        "width": 536,
+        "height": 255
+      },
+      "rasterTreatment": {
+        "kind": "reviewed-white-matte-solid-ink-v1",
+        "ink": "solid-black",
+        "background": "#ffffff",
+        "whiteNoiseCeiling": 5,
+        "alphaRule": "preserve original opaque foreground alpha; only source pixels within five RGB levels of white become transparent",
+        "originalAlphaUnchangedBeforeCropAndResize": false,
+        "originalWasFullyOpaque": true,
+        "derivedTransparency": true,
+        "originalWidth": 674,
+        "originalHeight": 674,
+        "whiteCanvasPixels": 406704,
+        "borderWhiteFraction": 1,
+        "derivedPixelSha256": "ce0499f45501b34d6ad7926eb2989635d78677b291ec1e4f646c5371a259d5ef",
+        "newGeometry": false
+      },
+      "sourcePath": "branding/original-public-ayshei-kc.jpeg"
+    },
+    "markOnDark": {
+      "operation": "reviewed-white-matte-crop-and-resize",
+      "sourceSha256": "0ef33c25177eb9ccd5ce0c2683e0afb662110a4f195e1f5a25fa2292bd6bdd26",
+      "sha256": "17dc783bc97f6b70603f4e1ebd5d59d6d7037f3f454dc60954bfe8b0e7a0c9f4",
+      "crop": {
+        "left": 32,
+        "top": 211,
+        "width": 536,
+        "height": 255
+      },
+      "rasterTreatment": {
+        "kind": "reviewed-white-matte-solid-ink-v1",
+        "ink": "solid-white",
+        "background": "#ffffff",
+        "whiteNoiseCeiling": 5,
+        "alphaRule": "preserve original opaque foreground alpha; only source pixels within five RGB levels of white become transparent",
+        "originalAlphaUnchangedBeforeCropAndResize": false,
+        "originalWasFullyOpaque": true,
+        "derivedTransparency": true,
+        "originalWidth": 674,
+        "originalHeight": 674,
+        "whiteCanvasPixels": 406704,
+        "borderWhiteFraction": 1,
+        "derivedPixelSha256": "64090d360a379943534dd6e39ce13420414535399b287ddb04fa55f8104d6e42",
+        "newGeometry": false
+      },
+      "sourcePath": "branding/original-public-ayshei-kc.jpeg"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "b843eaac82c6416ad649e84ec66a52530cf5ad9614d677e4e875375f36e4d51f",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "dealers/al-kuwait-used-cars-exhibition/branding/original-public-ayshei-kc.jpeg",
+        "sha256": "0ef33c25177eb9ccd5ce0c2683e0afb662110a4f195e1f5a25fa2292bd6bdd26",
+        "reviewReference": "dealers/al-kuwait-used-cars-exhibition/branding/source.json",
+        "reviewSha256": "fcce2306a72a0d511101917bbbfcfa529adac2921f325661543f1d76a029550d",
+        "sourceUrl": "https://storage.ayshei.com/prod/users/2fd1453d-f927-4a5d-82e7-eff83b5861df/avatar/img-1758687756.jpeg",
+        "observedAt": "2026-10-21T12:58:39.581887Z",
+        "exportTreatment": {
+          "kind": "reviewed-white-matte-solid-ink-v1",
+          "ink": "solid-black",
+          "sourceSha256": "0ef33c25177eb9ccd5ce0c2683e0afb662110a4f195e1f5a25fa2292bd6bdd26",
+          "background": "#ffffff",
+          "derivedTransparency": true,
+          "originalAlphaPreserved": false,
+          "matteReviewSha256": "fe74021c481e9b09d2a2bd5776c5ba6e69e2096f90c990284206f651d11a17c2",
+          "newGeometry": false
+        }
+      },
+      "sourceReference": "dealers/al-kuwait-used-cars-exhibition/branding/original-public-ayshei-kc.jpeg"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "abe01a851a4c2f6ffbf46a53f125526bf8494c795725a1ebdd5068aa48217975",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "dealers/al-kuwait-used-cars-exhibition/branding/original-public-ayshei-kc.jpeg",
+        "sha256": "0ef33c25177eb9ccd5ce0c2683e0afb662110a4f195e1f5a25fa2292bd6bdd26",
+        "reviewReference": "dealers/al-kuwait-used-cars-exhibition/branding/source.json",
+        "reviewSha256": "fcce2306a72a0d511101917bbbfcfa529adac2921f325661543f1d76a029550d",
+        "sourceUrl": "https://storage.ayshei.com/prod/users/2fd1453d-f927-4a5d-82e7-eff83b5861df/avatar/img-1758687756.jpeg",
+        "observedAt": "2026-10-21T12:58:39.581887Z",
+        "exportTreatment": {
+          "kind": "reviewed-white-matte-solid-ink-v1",
+          "ink": "solid-white",
+          "sourceSha256": "0ef33c25177eb9ccd5ce0c2683e0afb662110a4f195e1f5a25fa2292bd6bdd26",
+          "background": "#ffffff",
+          "derivedTransparency": true,
+          "originalAlphaPreserved": false,
+          "matteReviewSha256": "fe74021c481e9b09d2a2bd5776c5ba6e69e2096f90c990284206f651d11a17c2",
+          "newGeometry": false
+        }
+      },
+      "sourceReference": "dealers/al-kuwait-used-cars-exhibition/branding/original-public-ayshei-kc.jpeg"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "534c416d72d31898e5a3f31ff1713afa7ec2d7d7df5366dba240514e9b6b37e1",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "dealers/al-kuwait-used-cars-exhibition/branding/original-public-ayshei-kc.jpeg",
+        "sha256": "0ef33c25177eb9ccd5ce0c2683e0afb662110a4f195e1f5a25fa2292bd6bdd26",
+        "reviewReference": "dealers/al-kuwait-used-cars-exhibition/branding/source.json",
+        "reviewSha256": "fcce2306a72a0d511101917bbbfcfa529adac2921f325661543f1d76a029550d",
+        "sourceUrl": "https://storage.ayshei.com/prod/users/2fd1453d-f927-4a5d-82e7-eff83b5861df/avatar/img-1758687756.jpeg",
+        "observedAt": "2026-10-21T12:58:39.581887Z",
+        "exportTreatment": {
+          "kind": "reviewed-white-matte-solid-ink-v1",
+          "ink": "solid-black",
+          "sourceSha256": "0ef33c25177eb9ccd5ce0c2683e0afb662110a4f195e1f5a25fa2292bd6bdd26",
+          "background": "#ffffff",
+          "derivedTransparency": true,
+          "originalAlphaPreserved": false,
+          "matteReviewSha256": "fe74021c481e9b09d2a2bd5776c5ba6e69e2096f90c990284206f651d11a17c2",
+          "newGeometry": false
+        }
+      },
+      "sourceReference": "dealers/al-kuwait-used-cars-exhibition/branding/original-public-ayshei-kc.jpeg"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "cbadadc24fd6b646f8c923a98e4386060bdab3cf0337729e77a41120c73e26fd",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "dealers/al-kuwait-used-cars-exhibition/branding/original-public-ayshei-kc.jpeg",
+        "sha256": "0ef33c25177eb9ccd5ce0c2683e0afb662110a4f195e1f5a25fa2292bd6bdd26",
+        "reviewReference": "dealers/al-kuwait-used-cars-exhibition/branding/source.json",
+        "reviewSha256": "fcce2306a72a0d511101917bbbfcfa529adac2921f325661543f1d76a029550d",
+        "sourceUrl": "https://storage.ayshei.com/prod/users/2fd1453d-f927-4a5d-82e7-eff83b5861df/avatar/img-1758687756.jpeg",
+        "observedAt": "2026-10-21T12:58:39.581887Z",
+        "exportTreatment": {
+          "kind": "reviewed-white-matte-solid-ink-v1",
+          "ink": "solid-black",
+          "sourceSha256": "0ef33c25177eb9ccd5ce0c2683e0afb662110a4f195e1f5a25fa2292bd6bdd26",
+          "background": "#ffffff",
+          "derivedTransparency": true,
+          "originalAlphaPreserved": false,
+          "matteReviewSha256": "fe74021c481e9b09d2a2bd5776c5ba6e69e2096f90c990284206f651d11a17c2",
+          "newGeometry": false
+        }
+      },
+      "sourceReference": "dealers/al-kuwait-used-cars-exhibition/branding/original-public-ayshei-kc.jpeg"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-21T13:07:37.652Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "17dc783bc97f6b70603f4e1ebd5d59d6d7037f3f454dc60954bfe8b0e7a0c9f4",
+    "retainedSource": {
+      "kind": "retained-reviewed-raster",
+      "reference": "dealers/al-kuwait-used-cars-exhibition/branding/original-public-ayshei-kc.jpeg",
+      "sha256": "0ef33c25177eb9ccd5ce0c2683e0afb662110a4f195e1f5a25fa2292bd6bdd26",
+      "reviewReference": "dealers/al-kuwait-used-cars-exhibition/branding/source.json",
+      "reviewSha256": "fcce2306a72a0d511101917bbbfcfa529adac2921f325661543f1d76a029550d",
+      "sourceUrl": "https://storage.ayshei.com/prod/users/2fd1453d-f927-4a5d-82e7-eff83b5861df/avatar/img-1758687756.jpeg",
+      "observedAt": "2026-10-21T12:58:39.581887Z",
+      "exportTreatment": {
+        "kind": "reviewed-white-matte-solid-ink-v1",
+        "ink": "solid-white",
+        "sourceSha256": "0ef33c25177eb9ccd5ce0c2683e0afb662110a4f195e1f5a25fa2292bd6bdd26",
+        "background": "#ffffff",
+        "derivedTransparency": true,
+        "originalAlphaPreserved": false,
+        "matteReviewSha256": "fe74021c481e9b09d2a2bd5776c5ba6e69e2096f90c990284206f651d11a17c2",
+        "newGeometry": false
+      }
+    }
+  }
+}

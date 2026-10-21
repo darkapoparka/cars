@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Nova Motors Limited",
     "publicOrigin": "https://nova-motors-limited.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "be4bba15198cd69048bbaae69f8f83de4326290fcafab2ce6886ba0e943a8164",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "dbf3d9abfd77288767b618046730a9e203a9969c7b4bec86dc689cc602741698"
+    }
   }
 }

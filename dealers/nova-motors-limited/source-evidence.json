@@ -8,18 +8,93 @@
   "publicSources": [
     {
       "url": "https://www.autotrader.co.uk/dealers/middlesex/west-drayton/nova-motors-limited-10043632",
-      "observedAt": "2026-10-18",
+      "observedAt": "2026-10-21T12:51:23.742494Z",
       "supports": [
-        "retained-public-business-research"
+        "business-name",
+        "business-location",
+        "published-business-phone"
       ]
     },
     {
-      "url": "https://find-and-update.company-information.service.gov.uk/company/15736938/filing-history",
-      "observedAt": "2026-10-18",
+      "url": "https://www.autotrader.co.uk/dealers/middlesex/west-drayton/nova-motors-limited-10043632",
+      "observedAt": "2026-10-21T12:51:23.742494Z",
       "supports": [
-        "retained-public-business-research"
+        "dated-seller-stock",
+        "actual-listing-photo-bindings"
+      ]
+    },
+    {
+      "url": "https://m.atcdn.co.uk/retailer/media/w1266/c0c798e8-341e-4abb-b532-c0919f07aaf2.jpg",
+      "observedAt": "2026-10-21T13:11:52.673601Z",
+      "supports": [
+        "original-public-dealer-logo"
       ]
     }
   ],
-  "liveFetchPerformed": false
+  "liveFetchPerformed": true,
+  "pageObservations": [
+    {
+      "url": "https://www.autotrader.co.uk/dealers/middlesex/west-drayton/nova-motors-limited-10043632",
+      "observedAt": "2026-10-21T12:51:23.742494+00:00",
+      "sha256": "7f6e8b487627c3f3823de248b7701fd0e2f3b55a24f5121119bfbfe310083fb0",
+      "bytes": 217269,
+      "status": 200
+    }
+  ],
+  "stockObservations": [
+    {
+      "sourceId": "autotrader-202604201716838",
+      "sellerPage": "https://www.autotrader.co.uk/dealers/middlesex/west-drayton/nova-motors-limited-10043632",
+      "sellerPageSha256": "7f6e8b487627c3f3823de248b7701fd0e2f3b55a24f5121119bfbfe310083fb0",
+      "listingUrl": "https://www.autotrader.co.uk/car-details/202604201716838",
+      "observedAt": "2026-10-21T12:51:23.742494Z",
+      "sourceTitle": "BMW X6 3.0 M50d Auto xDrive Euro 6 (s/s) 5dr",
+      "sourceDetails": "5 door Automatic Diesel SUV",
+      "image": {
+        "url": "https://m.atcdn.co.uk/a/media/w600/799af33c6f99456bbb1eca909fa42a34.jpg",
+        "observedAt": "2026-10-21T13:01:28.888675Z",
+        "httpStatus": 200,
+        "sha256": "67b46ece245ba1a36e812e9d63e1b1371fdea0001cc753ae6e95ab22ee1f5c58",
+        "bytes": 63403,
+        "width": 600,
+        "height": 450
+      },
+      "retainedImage": "dealer-stock/public-20261021-autotrader-202604201716838.jpg"
+    },
+    {
+      "sourceId": "autotrader-202510056901407",
+      "sellerPage": "https://www.autotrader.co.uk/dealers/middlesex/west-drayton/nova-motors-limited-10043632",
+      "sellerPageSha256": "7f6e8b487627c3f3823de248b7701fd0e2f3b55a24f5121119bfbfe310083fb0",
+      "listingUrl": "https://www.autotrader.co.uk/car-details/202510056901407",
+      "observedAt": "2026-10-21T12:51:23.742494Z",
+      "sourceTitle": "BMW X5 3.0 40d M Sport Auto xDrive Euro 6 (s/s) 5dr",
+      "sourceDetails": "5 door Automatic Diesel SUV",
+      "image": {
+        "url": "https://m.atcdn.co.uk/a/media/w600/83ad958fbb1a4e9db37c2c9c876e16d9.jpg",
+        "observedAt": "2026-10-21T13:01:28.925881Z",
+        "httpStatus": 200,
+        "sha256": "6f5b70a0ede87c4ce2e86e457ab2ec10552c81c383ee77ea882b5cd049ca04b3",
+        "bytes": 57256,
+        "width": 600,
+        "height": 450
+      },
+      "retainedImage": "dealer-stock/public-20261021-autotrader-202510056901407.jpg"
+    }
+  ],
+  "unknownOptionalFactsOmitted": true,
+  "dealerApproval": false,
+  "logoObservation": {
+    "file": "nova-logo-1266.jpg",
+    "url": "https://m.atcdn.co.uk/retailer/media/w1266/c0c798e8-341e-4abb-b532-c0919f07aaf2.jpg",
+    "status": 200,
+    "sha256": "f8ba1d44cec0f72a31a50d9366b5d06217250a5db3067509295f10477f2100a5",
+    "bytes": 21931,
+    "width": 1266,
+    "height": 1243,
+    "observedAt": "2026-10-21T13:11:52.673601Z",
+    "retainedPath": "branding/original-public-logo-1266-20261021.jpg",
+    "sellerPage": "https://www.autotrader.co.uk/dealers/middlesex/west-drayton/nova-motors-limited-10043632",
+    "binding": "Exact seller-page srcset logo image identifier c0c798e8-341e-4abb-b532-c0919f07aaf2; visually reads NOVA MOTORS.",
+    "whiteCanvasReview": "Black logo and lettering, no white foreground artwork; derived transparency is explicitly recorded by the maintained tool."
+  }
 }

@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-kuwait-used-cars-exhibition",
+  "missing": [
+    {
+      "field": "business.address",
+      "required": false,
+      "reason": "No unambiguous current value retained; conflicting or absent public values are omitted."
+    },
+    {
+      "field": "business.phone",
+      "required": false,
+      "reason": "No unambiguous current value retained; conflicting or absent public values are omitted."
+    },
+    {
+      "field": "business.email",
+      "required": false,
+      "reason": "No unambiguous current value retained; conflicting or absent public values are omitted."
+    },
+    {
+      "field": "business.website",
+      "required": false,
+      "reason": "No unambiguous current value retained; conflicting or absent public values are omitted."
+    },
+    {
+      "field": "business.hours",
+      "required": false,
+      "reason": "No unambiguous current value retained; conflicting or absent public values are omitted."
+    },
+    {
+      "field": "prices",
+      "required": false,
+      "reason": "Listing prices are omitted from every preview record."
+    }
+  ],
+  "blocking": []
+}

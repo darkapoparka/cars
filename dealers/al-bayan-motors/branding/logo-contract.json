@@ -1,0 +1,469 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-bayan-motors",
+  "reviewed": true,
+  "reviewedAt": "2026-10-21T13:10:28.925465Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "retained-public-original-reviewed-white-matte-solid-ink",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "9a948b8abae4143b06d7fd1e8894162bdf82b03c427d39a68450a7ba83bcd097",
+      "sourceSha256": "e90a826db89efda29a8c233aa08132da0ee841fc8a8f4cfd85d1da5801c3d22e"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "24f7513323efa8b9345a614c94407d1b89b8177eafa4f32f5c91bab3a853e485",
+      "sourceSha256": "91fd6f07750026b36ec7beffae913c82312d7c045504d0ed7bded860768f2606"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "24f7513323efa8b9345a614c94407d1b89b8177eafa4f32f5c91bab3a853e485",
+      "sourceSha256": "91fd6f07750026b36ec7beffae913c82312d7c045504d0ed7bded860768f2606"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "e90a826db89efda29a8c233aa08132da0ee841fc8a8f4cfd85d1da5801c3d22e",
+    "retainedSource": {
+      "kind": "retained-reviewed-raster",
+      "reference": "dealers/al-bayan-motors/branding/public-reference-20261021.jpg",
+      "sha256": "4d208b05daf268cd9e4a023d671f71706007ee811e3488141aedb1ad02a88f3c",
+      "reviewReference": "dealers/al-bayan-motors/branding/source.json",
+      "reviewSha256": "a7426672760a29921017a091bcf101fc38eb219d6f2e4290a62c29b032a582fb",
+      "sourceUrl": "https://ugc.production.linktr.ee/ed1ff19b-52b2-4937-bbb0-10e17d310992_.jpeg",
+      "observedAt": "2026-10-21",
+      "exportTreatment": {
+        "kind": "reviewed-white-matte-solid-ink-v1",
+        "ink": "solid-black",
+        "sourceSha256": "4d208b05daf268cd9e4a023d671f71706007ee811e3488141aedb1ad02a88f3c",
+        "background": "#ffffff",
+        "derivedTransparency": true,
+        "originalAlphaPreserved": false,
+        "matteReviewSha256": "1cb4f6f1b88576595653a99cb21ba8ff38c3c86ee6768004c19d399bbb20b4cf",
+        "newGeometry": false
+      }
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "41e50186541efb3fa9ce9e72cdac05607313b2153b99d582f1c1179f6023368c",
+    "retainedSource": {
+      "kind": "retained-reviewed-raster",
+      "reference": "dealers/al-bayan-motors/branding/public-reference-20261021.jpg",
+      "sha256": "4d208b05daf268cd9e4a023d671f71706007ee811e3488141aedb1ad02a88f3c",
+      "reviewReference": "dealers/al-bayan-motors/branding/source.json",
+      "reviewSha256": "a7426672760a29921017a091bcf101fc38eb219d6f2e4290a62c29b032a582fb",
+      "sourceUrl": "https://ugc.production.linktr.ee/ed1ff19b-52b2-4937-bbb0-10e17d310992_.jpeg",
+      "observedAt": "2026-10-21",
+      "exportTreatment": {
+        "kind": "reviewed-white-matte-solid-ink-v1",
+        "ink": "solid-black",
+        "sourceSha256": "4d208b05daf268cd9e4a023d671f71706007ee811e3488141aedb1ad02a88f3c",
+        "background": "#ffffff",
+        "derivedTransparency": true,
+        "originalAlphaPreserved": false,
+        "matteReviewSha256": "1cb4f6f1b88576595653a99cb21ba8ff38c3c86ee6768004c19d399bbb20b4cf",
+        "newGeometry": false
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "2ab3f842d46b69d5fa9628e41c3961d047894b4e7e0c5651c48f63acdc8b0ccf"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "e90a826db89efda29a8c233aa08132da0ee841fc8a8f4cfd85d1da5801c3d22e",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "dealers/al-bayan-motors/branding/public-reference-20261021.jpg",
+        "sha256": "4d208b05daf268cd9e4a023d671f71706007ee811e3488141aedb1ad02a88f3c",
+        "reviewReference": "dealers/al-bayan-motors/branding/source.json",
+        "reviewSha256": "a7426672760a29921017a091bcf101fc38eb219d6f2e4290a62c29b032a582fb",
+        "sourceUrl": "https://ugc.production.linktr.ee/ed1ff19b-52b2-4937-bbb0-10e17d310992_.jpeg",
+        "observedAt": "2026-10-21",
+        "exportTreatment": {
+          "kind": "reviewed-white-matte-solid-ink-v1",
+          "ink": "solid-black",
+          "sourceSha256": "4d208b05daf268cd9e4a023d671f71706007ee811e3488141aedb1ad02a88f3c",
+          "background": "#ffffff",
+          "derivedTransparency": true,
+          "originalAlphaPreserved": false,
+          "matteReviewSha256": "1cb4f6f1b88576595653a99cb21ba8ff38c3c86ee6768004c19d399bbb20b4cf",
+          "newGeometry": false
+        }
+      },
+      "sourceReference": "dealers/al-bayan-motors/branding/public-reference-20261021.jpg"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "91fd6f07750026b36ec7beffae913c82312d7c045504d0ed7bded860768f2606",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "dealers/al-bayan-motors/branding/public-reference-20261021.jpg",
+        "sha256": "4d208b05daf268cd9e4a023d671f71706007ee811e3488141aedb1ad02a88f3c",
+        "reviewReference": "dealers/al-bayan-motors/branding/source.json",
+        "reviewSha256": "a7426672760a29921017a091bcf101fc38eb219d6f2e4290a62c29b032a582fb",
+        "sourceUrl": "https://ugc.production.linktr.ee/ed1ff19b-52b2-4937-bbb0-10e17d310992_.jpeg",
+        "observedAt": "2026-10-21",
+        "exportTreatment": {
+          "kind": "reviewed-white-matte-solid-ink-v1",
+          "ink": "solid-white",
+          "sourceSha256": "4d208b05daf268cd9e4a023d671f71706007ee811e3488141aedb1ad02a88f3c",
+          "background": "#ffffff",
+          "derivedTransparency": true,
+          "originalAlphaPreserved": false,
+          "matteReviewSha256": "1cb4f6f1b88576595653a99cb21ba8ff38c3c86ee6768004c19d399bbb20b4cf",
+          "newGeometry": false
+        }
+      },
+      "sourceReference": "dealers/al-bayan-motors/branding/public-reference-20261021.jpg"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "91fd6f07750026b36ec7beffae913c82312d7c045504d0ed7bded860768f2606",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "dealers/al-bayan-motors/branding/public-reference-20261021.jpg",
+        "sha256": "4d208b05daf268cd9e4a023d671f71706007ee811e3488141aedb1ad02a88f3c",
+        "reviewReference": "dealers/al-bayan-motors/branding/source.json",
+        "reviewSha256": "a7426672760a29921017a091bcf101fc38eb219d6f2e4290a62c29b032a582fb",
+        "sourceUrl": "https://ugc.production.linktr.ee/ed1ff19b-52b2-4937-bbb0-10e17d310992_.jpeg",
+        "observedAt": "2026-10-21",
+        "exportTreatment": {
+          "kind": "reviewed-white-matte-solid-ink-v1",
+          "ink": "solid-white",
+          "sourceSha256": "4d208b05daf268cd9e4a023d671f71706007ee811e3488141aedb1ad02a88f3c",
+          "background": "#ffffff",
+          "derivedTransparency": true,
+          "originalAlphaPreserved": false,
+          "matteReviewSha256": "1cb4f6f1b88576595653a99cb21ba8ff38c3c86ee6768004c19d399bbb20b4cf",
+          "newGeometry": false
+        }
+      },
+      "sourceReference": "dealers/al-bayan-motors/branding/public-reference-20261021.jpg"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "reviewed-white-matte-crop-and-resize",
+      "sourceSha256": "4d208b05daf268cd9e4a023d671f71706007ee811e3488141aedb1ad02a88f3c",
+      "sha256": "e90a826db89efda29a8c233aa08132da0ee841fc8a8f4cfd85d1da5801c3d22e",
+      "crop": {
+        "left": 39,
+        "top": 72,
+        "width": 372,
+        "height": 305
+      },
+      "rasterTreatment": {
+        "kind": "reviewed-white-matte-solid-ink-v1",
+        "ink": "solid-black",
+        "background": "#ffffff",
+        "whiteNoiseCeiling": 5,
+        "alphaRule": "preserve original opaque foreground alpha; only source pixels within five RGB levels of white become transparent",
+        "originalAlphaUnchangedBeforeCropAndResize": false,
+        "originalWasFullyOpaque": true,
+        "derivedTransparency": true,
+        "originalWidth": 452,
+        "originalHeight": 452,
+        "whiteCanvasPixels": 153414,
+        "borderWhiteFraction": 1,
+        "derivedPixelSha256": "3812bb3e5c254dfa74874b78f84f65955b65050c28feeabbc9a4d66fe0ad0b09",
+        "newGeometry": false
+      },
+      "sourcePath": "branding/public-reference-20261021.jpg",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "reviewed-white-matte-crop-and-resize",
+      "sourceSha256": "4d208b05daf268cd9e4a023d671f71706007ee811e3488141aedb1ad02a88f3c",
+      "sha256": "91fd6f07750026b36ec7beffae913c82312d7c045504d0ed7bded860768f2606",
+      "crop": {
+        "left": 39,
+        "top": 72,
+        "width": 372,
+        "height": 305
+      },
+      "rasterTreatment": {
+        "kind": "reviewed-white-matte-solid-ink-v1",
+        "ink": "solid-white",
+        "background": "#ffffff",
+        "whiteNoiseCeiling": 5,
+        "alphaRule": "preserve original opaque foreground alpha; only source pixels within five RGB levels of white become transparent",
+        "originalAlphaUnchangedBeforeCropAndResize": false,
+        "originalWasFullyOpaque": true,
+        "derivedTransparency": true,
+        "originalWidth": 452,
+        "originalHeight": 452,
+        "whiteCanvasPixels": 153414,
+        "borderWhiteFraction": 1,
+        "derivedPixelSha256": "b3c9c0308ebf793445c9a6e593adfe6bc137754cf111cbf04a9e9f36a7496a4f",
+        "newGeometry": false
+      },
+      "sourcePath": "branding/public-reference-20261021.jpg",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "reviewed-white-matte-crop-and-resize",
+      "sourceSha256": "4d208b05daf268cd9e4a023d671f71706007ee811e3488141aedb1ad02a88f3c",
+      "sha256": "91fd6f07750026b36ec7beffae913c82312d7c045504d0ed7bded860768f2606",
+      "crop": {
+        "left": 39,
+        "top": 72,
+        "width": 372,
+        "height": 305
+      },
+      "rasterTreatment": {
+        "kind": "reviewed-white-matte-solid-ink-v1",
+        "ink": "solid-white",
+        "background": "#ffffff",
+        "whiteNoiseCeiling": 5,
+        "alphaRule": "preserve original opaque foreground alpha; only source pixels within five RGB levels of white become transparent",
+        "originalAlphaUnchangedBeforeCropAndResize": false,
+        "originalWasFullyOpaque": true,
+        "derivedTransparency": true,
+        "originalWidth": 452,
+        "originalHeight": 452,
+        "whiteCanvasPixels": 153414,
+        "borderWhiteFraction": 1,
+        "derivedPixelSha256": "b3c9c0308ebf793445c9a6e593adfe6bc137754cf111cbf04a9e9f36a7496a4f",
+        "newGeometry": false
+      },
+      "sourcePath": "branding/public-reference-20261021.jpg",
+      "outputPath": "branding/logo-on-accent.png"
+    },
+    "master": {
+      "operation": "reviewed-white-matte-crop-and-resize",
+      "sourceSha256": "4d208b05daf268cd9e4a023d671f71706007ee811e3488141aedb1ad02a88f3c",
+      "sha256": "e90a826db89efda29a8c233aa08132da0ee841fc8a8f4cfd85d1da5801c3d22e",
+      "crop": {
+        "left": 39,
+        "top": 72,
+        "width": 372,
+        "height": 305
+      },
+      "rasterTreatment": {
+        "kind": "reviewed-white-matte-solid-ink-v1",
+        "ink": "solid-black",
+        "background": "#ffffff",
+        "whiteNoiseCeiling": 5,
+        "alphaRule": "preserve original opaque foreground alpha; only source pixels within five RGB levels of white become transparent",
+        "originalAlphaUnchangedBeforeCropAndResize": false,
+        "originalWasFullyOpaque": true,
+        "derivedTransparency": true,
+        "originalWidth": 452,
+        "originalHeight": 452,
+        "whiteCanvasPixels": 153414,
+        "borderWhiteFraction": 1,
+        "derivedPixelSha256": "3812bb3e5c254dfa74874b78f84f65955b65050c28feeabbc9a4d66fe0ad0b09",
+        "newGeometry": false
+      },
+      "sourcePath": "branding/public-reference-20261021.jpg"
+    },
+    "mark": {
+      "operation": "reviewed-white-matte-crop-and-resize",
+      "sourceSha256": "4d208b05daf268cd9e4a023d671f71706007ee811e3488141aedb1ad02a88f3c",
+      "sha256": "41e50186541efb3fa9ce9e72cdac05607313b2153b99d582f1c1179f6023368c",
+      "crop": {
+        "left": 39,
+        "top": 72,
+        "width": 372,
+        "height": 305
+      },
+      "rasterTreatment": {
+        "kind": "reviewed-white-matte-solid-ink-v1",
+        "ink": "solid-black",
+        "background": "#ffffff",
+        "whiteNoiseCeiling": 5,
+        "alphaRule": "preserve original opaque foreground alpha; only source pixels within five RGB levels of white become transparent",
+        "originalAlphaUnchangedBeforeCropAndResize": false,
+        "originalWasFullyOpaque": true,
+        "derivedTransparency": true,
+        "originalWidth": 452,
+        "originalHeight": 452,
+        "whiteCanvasPixels": 153414,
+        "borderWhiteFraction": 1,
+        "derivedPixelSha256": "3812bb3e5c254dfa74874b78f84f65955b65050c28feeabbc9a4d66fe0ad0b09",
+        "newGeometry": false
+      },
+      "sourcePath": "branding/public-reference-20261021.jpg"
+    },
+    "markOnDark": {
+      "operation": "reviewed-white-matte-crop-and-resize",
+      "sourceSha256": "4d208b05daf268cd9e4a023d671f71706007ee811e3488141aedb1ad02a88f3c",
+      "sha256": "4648578b6eddc7c9b12604651fe417a6401de56f5ee2ac82f9676d5b16b8d884",
+      "crop": {
+        "left": 39,
+        "top": 72,
+        "width": 372,
+        "height": 305
+      },
+      "rasterTreatment": {
+        "kind": "reviewed-white-matte-solid-ink-v1",
+        "ink": "solid-white",
+        "background": "#ffffff",
+        "whiteNoiseCeiling": 5,
+        "alphaRule": "preserve original opaque foreground alpha; only source pixels within five RGB levels of white become transparent",
+        "originalAlphaUnchangedBeforeCropAndResize": false,
+        "originalWasFullyOpaque": true,
+        "derivedTransparency": true,
+        "originalWidth": 452,
+        "originalHeight": 452,
+        "whiteCanvasPixels": 153414,
+        "borderWhiteFraction": 1,
+        "derivedPixelSha256": "b3c9c0308ebf793445c9a6e593adfe6bc137754cf111cbf04a9e9f36a7496a4f",
+        "newGeometry": false
+      },
+      "sourcePath": "branding/public-reference-20261021.jpg"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "c40c1b8789d7156153c9efb1011f83afdf4b240c57bdcecb31549b598083ece9",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "dealers/al-bayan-motors/branding/public-reference-20261021.jpg",
+        "sha256": "4d208b05daf268cd9e4a023d671f71706007ee811e3488141aedb1ad02a88f3c",
+        "reviewReference": "dealers/al-bayan-motors/branding/source.json",
+        "reviewSha256": "a7426672760a29921017a091bcf101fc38eb219d6f2e4290a62c29b032a582fb",
+        "sourceUrl": "https://ugc.production.linktr.ee/ed1ff19b-52b2-4937-bbb0-10e17d310992_.jpeg",
+        "observedAt": "2026-10-21",
+        "exportTreatment": {
+          "kind": "reviewed-white-matte-solid-ink-v1",
+          "ink": "solid-black",
+          "sourceSha256": "4d208b05daf268cd9e4a023d671f71706007ee811e3488141aedb1ad02a88f3c",
+          "background": "#ffffff",
+          "derivedTransparency": true,
+          "originalAlphaPreserved": false,
+          "matteReviewSha256": "1cb4f6f1b88576595653a99cb21ba8ff38c3c86ee6768004c19d399bbb20b4cf",
+          "newGeometry": false
+        }
+      },
+      "sourceReference": "dealers/al-bayan-motors/branding/public-reference-20261021.jpg"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "98872130df2fd5cbe05ab81d6e4eb57d51f7206dacc6995cca452cdb41d8e199",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "dealers/al-bayan-motors/branding/public-reference-20261021.jpg",
+        "sha256": "4d208b05daf268cd9e4a023d671f71706007ee811e3488141aedb1ad02a88f3c",
+        "reviewReference": "dealers/al-bayan-motors/branding/source.json",
+        "reviewSha256": "a7426672760a29921017a091bcf101fc38eb219d6f2e4290a62c29b032a582fb",
+        "sourceUrl": "https://ugc.production.linktr.ee/ed1ff19b-52b2-4937-bbb0-10e17d310992_.jpeg",
+        "observedAt": "2026-10-21",
+        "exportTreatment": {
+          "kind": "reviewed-white-matte-solid-ink-v1",
+          "ink": "solid-white",
+          "sourceSha256": "4d208b05daf268cd9e4a023d671f71706007ee811e3488141aedb1ad02a88f3c",
+          "background": "#ffffff",
+          "derivedTransparency": true,
+          "originalAlphaPreserved": false,
+          "matteReviewSha256": "1cb4f6f1b88576595653a99cb21ba8ff38c3c86ee6768004c19d399bbb20b4cf",
+          "newGeometry": false
+        }
+      },
+      "sourceReference": "dealers/al-bayan-motors/branding/public-reference-20261021.jpg"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "41e50186541efb3fa9ce9e72cdac05607313b2153b99d582f1c1179f6023368c",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "dealers/al-bayan-motors/branding/public-reference-20261021.jpg",
+        "sha256": "4d208b05daf268cd9e4a023d671f71706007ee811e3488141aedb1ad02a88f3c",
+        "reviewReference": "dealers/al-bayan-motors/branding/source.json",
+        "reviewSha256": "a7426672760a29921017a091bcf101fc38eb219d6f2e4290a62c29b032a582fb",
+        "sourceUrl": "https://ugc.production.linktr.ee/ed1ff19b-52b2-4937-bbb0-10e17d310992_.jpeg",
+        "observedAt": "2026-10-21",
+        "exportTreatment": {
+          "kind": "reviewed-white-matte-solid-ink-v1",
+          "ink": "solid-black",
+          "sourceSha256": "4d208b05daf268cd9e4a023d671f71706007ee811e3488141aedb1ad02a88f3c",
+          "background": "#ffffff",
+          "derivedTransparency": true,
+          "originalAlphaPreserved": false,
+          "matteReviewSha256": "1cb4f6f1b88576595653a99cb21ba8ff38c3c86ee6768004c19d399bbb20b4cf",
+          "newGeometry": false
+        }
+      },
+      "sourceReference": "dealers/al-bayan-motors/branding/public-reference-20261021.jpg"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "2ab3f842d46b69d5fa9628e41c3961d047894b4e7e0c5651c48f63acdc8b0ccf",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "dealers/al-bayan-motors/branding/public-reference-20261021.jpg",
+        "sha256": "4d208b05daf268cd9e4a023d671f71706007ee811e3488141aedb1ad02a88f3c",
+        "reviewReference": "dealers/al-bayan-motors/branding/source.json",
+        "reviewSha256": "a7426672760a29921017a091bcf101fc38eb219d6f2e4290a62c29b032a582fb",
+        "sourceUrl": "https://ugc.production.linktr.ee/ed1ff19b-52b2-4937-bbb0-10e17d310992_.jpeg",
+        "observedAt": "2026-10-21",
+        "exportTreatment": {
+          "kind": "reviewed-white-matte-solid-ink-v1",
+          "ink": "solid-black",
+          "sourceSha256": "4d208b05daf268cd9e4a023d671f71706007ee811e3488141aedb1ad02a88f3c",
+          "background": "#ffffff",
+          "derivedTransparency": true,
+          "originalAlphaPreserved": false,
+          "matteReviewSha256": "1cb4f6f1b88576595653a99cb21ba8ff38c3c86ee6768004c19d399bbb20b4cf",
+          "newGeometry": false
+        }
+      },
+      "sourceReference": "dealers/al-bayan-motors/branding/public-reference-20261021.jpg"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-21T13:10:28.925465Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "4648578b6eddc7c9b12604651fe417a6401de56f5ee2ac82f9676d5b16b8d884",
+    "retainedSource": {
+      "kind": "retained-reviewed-raster",
+      "reference": "dealers/al-bayan-motors/branding/public-reference-20261021.jpg",
+      "sha256": "4d208b05daf268cd9e4a023d671f71706007ee811e3488141aedb1ad02a88f3c",
+      "reviewReference": "dealers/al-bayan-motors/branding/source.json",
+      "reviewSha256": "a7426672760a29921017a091bcf101fc38eb219d6f2e4290a62c29b032a582fb",
+      "sourceUrl": "https://ugc.production.linktr.ee/ed1ff19b-52b2-4937-bbb0-10e17d310992_.jpeg",
+      "observedAt": "2026-10-21",
+      "exportTreatment": {
+        "kind": "reviewed-white-matte-solid-ink-v1",
+        "ink": "solid-white",
+        "sourceSha256": "4d208b05daf268cd9e4a023d671f71706007ee811e3488141aedb1ad02a88f3c",
+        "background": "#ffffff",
+        "derivedTransparency": true,
+        "originalAlphaPreserved": false,
+        "matteReviewSha256": "1cb4f6f1b88576595653a99cb21ba8ff38c3c86ee6768004c19d399bbb20b4cf",
+        "newGeometry": false
+      }
+    }
+  }
+}

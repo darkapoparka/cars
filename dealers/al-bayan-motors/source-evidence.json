@@ -19,7 +19,89 @@
       "supports": [
         "retained-public-business-research"
       ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/dealer/al-bayan-motors",
+      "observedAt": "2026-10-21",
+      "supports": [
+        "public-business-name",
+        "public-business-location",
+        "public-business-address",
+        "public-business-phone"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/5111-nissan-patrol-56-at-405-hp-se-platinum",
+      "observedAt": "2026-10-21",
+      "supports": [
+        "dated-public-seller-listing",
+        "vehicle-identity",
+        "vehicle-year",
+        "vehicle-mileage",
+        "retained-stock-photos"
+      ]
+    },
+    {
+      "url": "https://linktr.ee/AlBayanMotors",
+      "observedAt": "2026-10-21",
+      "supports": [
+        "public-brand-reference",
+        "public-business-phone"
+      ]
     }
   ],
-  "liveFetchPerformed": false
+  "liveFetchPerformed": true,
+  "observedAt": "2026-10-21",
+  "retainedMedia": [
+    {
+      "path": "dealer-stock/public-5111-1.webp",
+      "sourceUrl": "https://licenseplate.ae/storage/listings/0/nissan-patrol-56-at-405-hp-0-1789515701.webp",
+      "listingUrl": "https://licenseplate.ae/cars/listing/5111-nissan-patrol-56-at-405-hp-se-platinum",
+      "observedAt": "2026-10-21T12:59:03.127784Z",
+      "sha256": "fe923e75854406fc5f8eee3a4ea0cc8188b9a29d420f92af88c7d0ed2b6c80c7",
+      "bytes": 64594,
+      "width": 1066,
+      "height": 800,
+      "format": "WEBP",
+      "transformation": "none; exact downloaded source bytes"
+    },
+    {
+      "path": "dealer-stock/public-5111-2.webp",
+      "sourceUrl": "https://licenseplate.ae/storage/listings/0/nissan-patrol-56-at-405-hp-0-1789515701-2.webp",
+      "listingUrl": "https://licenseplate.ae/cars/listing/5111-nissan-patrol-56-at-405-hp-se-platinum",
+      "observedAt": "2026-10-21T12:59:02.968778Z",
+      "sha256": "1d0ba56a466f9bef5578e0bb074e8f2665b91b627e797a2679b272e3a6c76ef7",
+      "bytes": 70778,
+      "width": 1066,
+      "height": 800,
+      "format": "WEBP",
+      "transformation": "none; exact downloaded source bytes"
+    },
+    {
+      "path": "dealer-stock/public-5111-3.webp",
+      "sourceUrl": "https://licenseplate.ae/storage/listings/0/nissan-patrol-56-at-405-hp-0-1789515702.webp",
+      "listingUrl": "https://licenseplate.ae/cars/listing/5111-nissan-patrol-56-at-405-hp-se-platinum",
+      "observedAt": "2026-10-21T12:59:03.274668Z",
+      "sha256": "1c13f559212754c159ee93995737b5a842c521d2467a01badc80909f8580dd90",
+      "bytes": 79460,
+      "width": 1066,
+      "height": 800,
+      "format": "WEBP",
+      "transformation": "none; exact downloaded source bytes"
+    }
+  ],
+  "publicPageEvidence": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/al-bayan-motors",
+      "observedAt": "2026-10-21",
+      "sha256": "d364f643a3e0362aaa67a4d1d3c0e885dc1463efe77fc39380f1ce3574447bdf"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/5111-nissan-patrol-56-at-405-hp-se-platinum",
+      "observedAt": "2026-10-21",
+      "sha256": "f87e81ffe080339e57f1a48f6a9a4000d0cb15a12a9c8882a48584eb92acefd4"
+    }
+  ],
+  "artworkReady": true,
+  "artworkMethod": "reviewed-white-matte-solid-ink-v1; derived transparency, exact original retained"
 }
