@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "dealer": "bashar-karoomi-used-cars",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://www.oneclickdrive.com/company/sharjah/bashar-karoomi-used-cars",
+      "observedAt": "2026-10-19T19:58:49.152398Z",
+      "supports": [
+        "public-business-trading-name",
+        "dealer-attributed-catalogue",
+        "business-location",
+        "public-business-phone"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Land-Rover/Range-Rover-Vogue-Supercharged/?id=66510",
+      "observedAt": "2026-10-19T19:58:49.152398Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Toyota/Avalon-Limited/?id=66529",
+      "observedAt": "2026-10-19T19:58:49.152398Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Ford/Mustang-EcoBoost/?id=66522",
+      "observedAt": "2026-10-19T19:58:49.152398Z",
+      "supports": [
+        "seller-attributed-public-listing",
+        "vehicle-identity",
+        "public-stock-photo"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "research": {
+    "observedAt": "2026-10-19T19:58:49.152398Z",
+    "profileUrl": "https://www.oneclickdrive.com/company/sharjah/bashar-karoomi-used-cars",
+    "profileSha256": "c375cb18df6c3181e2799fe73aa1ba716f1eb42b04d6c3f450140f90f8c2084d",
+    "classification": "public-marketplace-dealer-profile-and-listing-snapshot",
+    "directDealerPostingVerified": false,
+    "profileClaimed": false,
+    "limitation": "Seller attribution comes from the public marketplace profile. Current physical availability and direct dealer posting are not independently confirmed.",
+    "notes": [
+      "Marketplace profile and detail-page timing blocks conflict or appear generic; opening hours omitted. Platform WhatsApp relay is excluded."
+    ],
+    "contactReview": "Only business-labeled dealer call numbers retained. Marketplace relay/support numbers and personal-looking staff contacts excluded.",
+    "photoSources": [
+      {
+        "listingId": "ocd-66510",
+        "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Land-Rover/Range-Rover-Vogue-Supercharged/?id=66510",
+        "sourceImageUrl": "https://static.oneclickdrive.com/uploads/cars/Land-Rover_Range-Rover_2016_66510_66510_6585925864-5_small.jpg",
+        "observedAt": "2026-10-19T19:58:49.152398Z",
+        "retainedPath": "dealer-stock/ocd-66510.jpg",
+        "sha256": "09f7851ee13790c2fe2c5e38b4250024e63ee71a98c9f9ea89e88cd9cf87e0db",
+        "bytes": 40088,
+        "width": 450,
+        "height": 395,
+        "operation": "resize-within-1280-without-upscale-and-JPEG-quality-82-or-83"
+      },
+      {
+        "listingId": "ocd-66529",
+        "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Toyota/Avalon-Limited/?id=66529",
+        "sourceImageUrl": "https://static.oneclickdrive.com/uploads/cars/Toyota_Avalon_2013_66529_66529_65886815501-12_small.jpg",
+        "observedAt": "2026-10-19T19:58:49.152398Z",
+        "retainedPath": "dealer-stock/ocd-66529.jpg",
+        "sha256": "7aad308b1e6c93737a980326683dd0b82c24ec13819d112daa83159c0efc4242",
+        "bytes": 42737,
+        "width": 450,
+        "height": 395,
+        "operation": "resize-within-1280-without-upscale-and-JPEG-quality-82-or-83"
+      },
+      {
+        "listingId": "ocd-66522",
+        "listingUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Ford/Mustang-EcoBoost/?id=66522",
+        "sourceImageUrl": "https://static.oneclickdrive.com/uploads/cars/Ford_Mustang_2020_66522_66522_65876131462-13_small.jpg",
+        "observedAt": "2026-10-19T19:58:49.152398Z",
+        "retainedPath": "dealer-stock/ocd-66522.jpg",
+        "sha256": "c815347ca203fae851b3171bc610d2265e059d7a167df229f8ecd8db04555e33",
+        "bytes": 42462,
+        "width": 450,
+        "height": 395,
+        "operation": "resize-within-1280-without-upscale-and-JPEG-quality-82-or-83"
+      }
+    ]
+  }
+}

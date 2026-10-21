@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "dealer": "bashar-karoomi-used-cars",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T19:58:49.152398Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "ocd-66510",
+      "title": "Land Rover Range Rover Vogue Supercharged 2016",
+      "make": "Land Rover",
+      "model": "Range Rover Vogue Supercharged",
+      "year": 2016,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/ocd-66510.jpg"
+      ],
+      "sourceUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Land-Rover/Range-Rover-Vogue-Supercharged/?id=66510",
+      "observedAt": "2026-10-19T19:58:49.152398Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "SUV",
+      "transmission": "Auto",
+      "fuel": "Petrol",
+      "color": "Gray",
+      "mileageValue": 250000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "ocd-66529",
+      "title": "Toyota Avalon Limited 2013",
+      "make": "Toyota",
+      "model": "Avalon Limited",
+      "year": 2013,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/ocd-66529.jpg"
+      ],
+      "sourceUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Toyota/Avalon-Limited/?id=66529",
+      "observedAt": "2026-10-19T19:58:49.152398Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Sedan",
+      "transmission": "Auto",
+      "fuel": "Petrol",
+      "color": "Black",
+      "mileageValue": 198000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "ocd-66522",
+      "title": "Ford Mustang EcoBoost 2020",
+      "make": "Ford",
+      "model": "Mustang EcoBoost",
+      "year": 2020,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/ocd-66522.jpg"
+      ],
+      "sourceUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Ford/Mustang-EcoBoost/?id=66522",
+      "observedAt": "2026-10-19T19:58:49.152398Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Muscle",
+      "transmission": "Auto",
+      "fuel": "Petrol",
+      "color": "Orange",
+      "mileageValue": 189000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

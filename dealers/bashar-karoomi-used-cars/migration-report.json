@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "bashar-karoomi-used-cars",
+  "previousSlug": "bashar-karoomi-used-cars",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-21T05:51:43.591Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 4,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-sharjah-bashar-karoomi-used-cars",
+    "position": 339
+  },
+  "before": {
+    "files": 38,
+    "bytes": 5375555
+  },
+  "afterBeforeReview": {
+    "files": 22,
+    "bytes": 2356335
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 272503,
+      "sha256": "07427355c121750cf8764870ca487911aea4fb477b6ed57f97393e0cfb939c72"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 175700,
+      "sha256": "e9eedb7290108cd3c8b46a600821309bc777f2e6ee46628cf5fa8b77c4356a39"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 272503,
+      "sha256": "07427355c121750cf8764870ca487911aea4fb477b6ed57f97393e0cfb939c72"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 199734,
+      "sha256": "b06585a0acd32b87d2177630997ee55aa397d778a62e48c70d1b35320f8840c1"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 183401,
+      "sha256": "c1210bafe05da103acf8f0aee776029e7f195bfca2b37e86a40275d40f04437f"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 183401,
+      "sha256": "c1210bafe05da103acf8f0aee776029e7f195bfca2b37e86a40275d40f04437f"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 199734,
+      "sha256": "b06585a0acd32b87d2177630997ee55aa397d778a62e48c70d1b35320f8840c1"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 272503,
+      "sha256": "07427355c121750cf8764870ca487911aea4fb477b6ed57f97393e0cfb939c72"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 16170,
+      "sha256": "934185af43a4154a314fb0b2aab165ff25144bd6d130bea278d6d63ef91c4545"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 183401,
+      "sha256": "c1210bafe05da103acf8f0aee776029e7f195bfca2b37e86a40275d40f04437f"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 131304,
+      "sha256": "ccb64e5ed79409a373119b0c4e637f39c82ee4c141641e645b020ddf3aebdc79"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 183401,
+      "sha256": "c1210bafe05da103acf8f0aee776029e7f195bfca2b37e86a40275d40f04437f"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 131304,
+      "sha256": "ccb64e5ed79409a373119b0c4e637f39c82ee4c141641e645b020ddf3aebdc79"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 199734,
+      "sha256": "b06585a0acd32b87d2177630997ee55aa397d778a62e48c70d1b35320f8840c1"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 130404,
+      "sha256": "b906a1af0f3e56b7d17c0f5939521605eabd80cef37a94d3fc2508a9da9d0ea8"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 127370,
+      "sha256": "30dbe5ded558912436c8024806c04fef43d8e6ea8d7147575eac90e7d59ae136"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 160506,
+      "sha256": "4e9467e742369b72414fc38ce8706cb73299a9dbe91bbdd58a3f5f64437e155f"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 13,
+    "bytes": 2329877,
+    "inventorySha256": "f4acd7e184f06f592b8157c9b6a1789ad689be1b41e60c1476be45db594d9fac",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "bashar-karoomi-used-cars",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 24,
+    "report": "dealers/bashar-karoomi-used-cars/input-review.json"
+  },
+  "after": {
+    "files": 24,
+    "bytes": 2365033
+  }
+}

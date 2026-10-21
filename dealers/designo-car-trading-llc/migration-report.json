@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "designo-car-trading-llc",
+  "previousSlug": "designo-car-trading-llc",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-21T05:51:26.829Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 3,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-dubai-designo-car-trading-llc",
+    "position": 213
+  },
+  "before": {
+    "files": 39,
+    "bytes": 2000770
+  },
+  "afterBeforeReview": {
+    "files": 23,
+    "bytes": 619233
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 70420,
+      "sha256": "2f317f21efb77c27ffeda9422dee703e16eea6256046bec5a98798f46901c1e3"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 86654,
+      "sha256": "88f4a9f52fc533e0ccc2bda451feaf31399dcc4afd87eada5a74ed86e27ed721"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 70420,
+      "sha256": "2f317f21efb77c27ffeda9422dee703e16eea6256046bec5a98798f46901c1e3"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 85905,
+      "sha256": "8ef5389588a8959be0c2ac2b21fb595102f6a5963df0fbeacdb56cc734b86691"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 127525,
+      "sha256": "ade5eb36430f1537597c704f77e1787b0d383027043dfa85d696513e48e9741a"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 127525,
+      "sha256": "ade5eb36430f1537597c704f77e1787b0d383027043dfa85d696513e48e9741a"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 85905,
+      "sha256": "8ef5389588a8959be0c2ac2b21fb595102f6a5963df0fbeacdb56cc734b86691"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 70420,
+      "sha256": "2f317f21efb77c27ffeda9422dee703e16eea6256046bec5a98798f46901c1e3"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 5405,
+      "sha256": "ac224e90e179fbcde987b0cdf5dd1772c5787821c77c7ab824a9b1c50530d6b3"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 127525,
+      "sha256": "ade5eb36430f1537597c704f77e1787b0d383027043dfa85d696513e48e9741a"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 82580,
+      "sha256": "fbb3e192f75fcd3831b88ae8606af61a33a4a6809942fb985f49360826b1a563"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 127525,
+      "sha256": "ade5eb36430f1537597c704f77e1787b0d383027043dfa85d696513e48e9741a"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 82580,
+      "sha256": "fbb3e192f75fcd3831b88ae8606af61a33a4a6809942fb985f49360826b1a563"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 85905,
+      "sha256": "8ef5389588a8959be0c2ac2b21fb595102f6a5963df0fbeacdb56cc734b86691"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 48768,
+      "sha256": "3bafd3ff3f33255898159b8e7608af47d7c8e1cd0c7a022a4781048edf011488"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 59398,
+      "sha256": "7856e24f6adf7ccd4bf50dcf7917d9039ea8a077009d3ae9a1534893b811c141"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 40908,
+      "sha256": "fe15e36e09684a1fbebdf0327ec986485cfe623338dfde27f287fbe539b88db0"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 13,
+    "bytes": 330654,
+    "inventorySha256": "d16082d0e0de6b4f8a1a078da6a8502ea59f500e1b133dbcff20c4e12ed8e6da",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "designo-car-trading-llc",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 25,
+    "report": "dealers/designo-car-trading-llc/input-review.json"
+  },
+  "after": {
+    "files": 25,
+    "bytes": 628132
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "dealer": "designo-car-trading-llc",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "designo-car-trading-ll-stock-1",
+      "title": "2020 Mercedes Benz GLA 250 4MATIC",
+      "make": "Mercedes Benz",
+      "model": "GLA 250 4MATIC",
+      "year": 2020,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/stock-1.webp"
+      ],
+      "sourceUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/Mercedes-Benz/GLA-250-4MATIC/?id=689209",
+      "observedAt": "2026-10-19",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Hatchback",
+      "fuel": "Petrol",
+      "mileageValue": 64000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "designo-car-trading-ll-stock-2",
+      "title": "2021 Nissan XTrail S",
+      "make": "Nissan",
+      "model": "XTrail S",
+      "year": 2021,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/stock-2.webp"
+      ],
+      "sourceUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/Nissan/XTrail-S/?id=689201",
+      "observedAt": "2026-10-19",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Crossover",
+      "fuel": "Petrol",
+      "mileageValue": 99500,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "designo-car-trading-ll-stock-3",
+      "title": "2022 Toyota RAV4",
+      "make": "Toyota",
+      "model": "RAV4",
+      "year": 2022,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/stock-3.webp"
+      ],
+      "sourceUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/Toyota/RAV4/?id=689197",
+      "observedAt": "2026-10-19",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "SUV",
+      "fuel": "Petrol",
+      "mileageValue": 42000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

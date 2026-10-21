@@ -1,0 +1,175 @@
+{
+  "schemaVersion": 1,
+  "dealer": "bashar-karoomi-used-cars",
+  "realLogoFirst": true,
+  "publishedBranding": true,
+  "creationMethod": "sourced-logo-imagegen-redraw",
+  "dealerApproved": false,
+  "approvalStatus": "redraw-and-compact-adaptation-not-dealer-approved",
+  "usageStatus": "public-preview-only",
+  "observedAt": "2026-10-19T19:58:49.152398Z",
+  "publicSources": [
+    {
+      "url": "https://www.oneclickdrive.com/company/sharjah/bashar-karoomi-used-cars",
+      "observedAt": "2026-10-19T19:58:49.152398Z"
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Land-Rover/Range-Rover-Vogue-Supercharged/?id=66510",
+      "observedAt": "2026-10-19T19:58:49.152398Z"
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Toyota/Avalon-Limited/?id=66529",
+      "observedAt": "2026-10-19T19:58:49.152398Z"
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Ford/Mustang-EcoBoost/?id=66522",
+      "observedAt": "2026-10-19T19:58:49.152398Z"
+    }
+  ],
+  "originals": [
+    {
+      "path": "branding/source-original.png",
+      "sha256": "a0c629da7f83b2d5e01b33b43d1d0fbb5bf31f9fb357537b135114ee4b606ba5",
+      "url": "https://static.oneclickdrive.com/application/views/img/company/bashar-karoomi.png",
+      "observedAt": "2026-10-19T19:58:49.152398Z",
+      "identityStatus": "public-profile-identity-reference"
+    }
+  ],
+  "logoResearch": "Exact public dealer-profile logo was visually inspected. Low-resolution or opaque artwork was faithfully redrawn with imagegen; no dealer approval is claimed.",
+  "visualReview": "Reviewed transparent artwork, full business-wordmark spelling and compact emblem. Deterministic crops retain the generated artwork; no vector substitute, recolouring or template changes. Compact variants are unapproved preview adaptations. Published navy shield, silver outlines, three stars and car retained.",
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T20:49:19.991Z",
+    "master": {
+      "path": "branding/generated-primary.png",
+      "sha256": "23359db02b24a5a62b52c938ccaad97dfeed40be4589eeabadbbe87e41018f2e",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a19b1ae4-738c-4f98-8571-b78cdb5de528",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "d7f4b1f45ce715efafd4dfda99a469bf7ccb008da4b3aed1342c96732b993dff",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a19b1ae4-738c-4f98-8571-b78cdb5de528",
+        "modelVersion": null,
+        "transformation": {
+          "operation": "rectangular-extract-without-recolour-or-redrawing",
+          "source": "branding/generated-primary.png",
+          "sourceSha256": "23359db02b24a5a62b52c938ccaad97dfeed40be4589eeabadbbe87e41018f2e",
+          "rectangle": {
+            "left": 0,
+            "top": 0,
+            "width": 738,
+            "height": 724
+          }
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-dark.png",
+      "sha256": "527a31b8f625b431295c557dd1597227ea4f47c839a0ac77331991c9bf2b5dd0",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-110a230e-b5ba-45e0-af7b-5be6959e6ad0",
+        "modelVersion": null,
+        "transformation": {
+          "operation": "rectangular-extract-without-recolour-or-redrawing",
+          "source": "branding/generated-silver.png",
+          "sourceSha256": "ed7819c723ec711ba189b3bfb55fba19965fec8d43611e9508957ad34c079ec5",
+          "rectangle": {
+            "left": 0,
+            "top": 0,
+            "width": 738,
+            "height": 724
+          }
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-primary.png",
+        "sha256": "23359db02b24a5a62b52c938ccaad97dfeed40be4589eeabadbbe87e41018f2e",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-a19b1ae4-738c-4f98-8571-b78cdb5de528",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-silver.png",
+        "sha256": "ed7819c723ec711ba189b3bfb55fba19965fec8d43611e9508957ad34c079ec5",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-110a230e-b5ba-45e0-af7b-5be6959e6ad0",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-silver.png",
+        "sha256": "ed7819c723ec711ba189b3bfb55fba19965fec8d43611e9508957ad34c079ec5",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-110a230e-b5ba-45e0-af7b-5be6959e6ad0",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": {
+        "onLight": [
+          "#ffffff"
+        ],
+        "onDark": [
+          "#111113",
+          "#101820"
+        ],
+        "onAccent": [
+          "#09090b",
+          "#17191c",
+          "#c40101"
+        ]
+      },
+      "notes": "Reviewed transparent artwork, full business-wordmark spelling and compact emblem. Deterministic crops retain the generated artwork; no vector substitute, recolouring or template changes. Compact variants are unapproved preview adaptations. Published navy shield, silver outlines, three stars and car retained."
+    },
+    "compactMarkStatus": "unapproved-preview-adaptation",
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-19T20:49:19.991Z",
+      "widths": [
+        32,
+        64
+      ],
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#101820",
+        "#c40101"
+      ],
+      "notes": "Reviewed transparent artwork, full business-wordmark spelling and compact emblem. Deterministic crops retain the generated artwork; no vector substitute, recolouring or template changes. Compact variants are unapproved preview adaptations. Published navy shield, silver outlines, three stars and car retained."
+    }
+  },
+  "generationPrompts": [
+    {
+      "role": "primary",
+      "prompt": "Use case: logo-brand. Faithfully redraw attached weak dealer logo as a crisp flat transparent horizontal brand asset. Keep the blue/silver shield, sleek car profile and small stars above the car. Make a bolder simpler shield/car emblem on left, remove illegible interior miniature typography. At right exact English wordmark in substantial dark navy uppercase: \"BASHAR KAROOMI\" and smaller \"USED CARS\". Existing identity and blue/silver colours must remain recognizable. No gradients, no shadows, no navy background box, no mockup. Transparent canvas. Horizontal3:1 arrangement with clear separation between square emblem and wordmark. Strong compact emblem legible at32px; text exact and crisp. Unapproved faithful design proposal.",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-a19b1ae4-738c-4f98-8571-b78cdb5de528",
+      "modelVersion": null,
+      "returnedArtifact": "exec-a19b1ae4-738c-4f98-8571-b78cdb5de528.png",
+      "note": "The tool exposed the returned artifact identifier and did not expose a model version."
+    },
+    {
+      "role": "silver",
+      "prompt": "Use case: logo-brand. Produce the matching LIGHT SILVER surface version of this logo. RE-RENDER with exactly one flat light silver ink #c7d4dc for all visible artwork. Preserve the exact business name, letterforms, spacing, emblem shape and arrangement. Transparent knockout areas between strokes must stay open and completely transparent. For the badge interiors, turn the dark solid fill into transparent negative space and preserve the car/crown/star/outline essential motifs as substantial silver strokes. Very smooth clean geometric hard boundaries. No white ink, no black ink, no dark navy ink. Do not distress the mark. No texture, no gradient, no shading, no shadow, no speckles, no background. A true transparent flat raster identity asset in pale silver. Maintain wide horizontal composition with emblem at left and wordmark at right. Keep the full exact same business text with correct spelling.",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-110a230e-b5ba-45e0-af7b-5be6959e6ad0",
+      "modelVersion": null,
+      "returnedArtifact": "exec-110a230e-b5ba-45e0-af7b-5be6959e6ad0.png",
+      "note": "The tool exposed the returned artifact identifier and did not expose a model version."
+    }
+  ]
+}
