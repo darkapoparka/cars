@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "dealer": "tripler-automotive-ltd",
-  "status": "research-required",
+  "status": "reviewed",
   "realLogoFirst": true,
   "publicSources": [
     {
@@ -17,8 +17,196 @@
       "observedAt": "2026-10-18"
     }
   ],
-  "originals": [],
-  "creationMethod": null,
+  "originals": [
+    {
+      "path": "branding/originals/tripler-autotrader-original-20261021.jpg",
+      "sha256": "6addc32a2cd6369364ca38d9acdf16dfca5115d8d222d02d67fa3b1804e3ee03",
+      "bytes": 19491,
+      "nativeDimensions": {
+        "width": 768,
+        "height": 576
+      },
+      "url": "https://m.atcdn.co.uk/retailer/media/w768/2e130003-19a8-43af-9790-8a43136c6f57.jpg",
+      "observedAt": "2026-10-21T00:31:01.302Z",
+      "sourcePage": "https://www.autotrader.co.uk/dealers/west-midlands/west-bromwich/tripler-automotive-ltd-10049673",
+      "kind": "retained-public-original-raster",
+      "dealerApproval": false
+    }
+  ],
+  "creationMethod": "imagegen-proposal",
   "dealerApproved": false,
-  "generatedInputs": null
+  "generatedInputs": {
+    "reviewedAt": "2026-10-21T00:42:12.134Z",
+    "master": {
+      "path": "branding/generated-master-v1-20261021.png",
+      "sha256": "22565532b4598bb8ddb69707b6ed467f3e14d7bd7e7886a978d725e354c2dee2",
+      "nativeDimensions": {
+        "width": 1881,
+        "height": 836
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-2bd8e443-cc07-4643-b8f7-7465a3b43386",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark-light-v1-20261021.png",
+      "sha256": "376b78f3b7cac0a7c902a27bbc64fff202dbf41072b703d08c5a46650e7a44d3",
+      "nativeDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-bc399460-4474-4d1d-9d73-c2fb0365a7f2",
+        "modelVersion": null
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-dark-v1-20261021.png",
+      "sha256": "082bd571c1c774fd32337038e38b0939a341213538d091634b26cccb56e30764",
+      "nativeDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-494d280d-d7ea-48f0-96bf-8d1b7380aa2e",
+        "modelVersion": null
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-master-v1-20261021.png",
+        "sha256": "22565532b4598bb8ddb69707b6ed467f3e14d7bd7e7886a978d725e354c2dee2",
+        "nativeDimensions": {
+          "width": 1881,
+          "height": 836
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-2bd8e443-cc07-4643-b8f7-7465a3b43386",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-inverse-v1-20261021.png",
+        "sha256": "8f73a1570c1fa70954a12e8c874875c3cc2d17ce684ca4a30209b91d2b172883",
+        "nativeDimensions": {
+          "width": 1882,
+          "height": 836
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-f662eab4-1893-4fb8-ae86-7895dc677770",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-inverse-v1-20261021.png",
+        "sha256": "8f73a1570c1fa70954a12e8c874875c3cc2d17ce684ca4a30209b91d2b172883",
+        "nativeDimensions": {
+          "width": 1882,
+          "height": 836
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-f662eab4-1893-4fb8-ae86-7895dc677770",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-21T00:42:12.134Z",
+      "wordmarkWidths": [
+        120,
+        180
+      ],
+      "markWidths": [
+        32,
+        64
+      ],
+      "notes": "Agent inspected exact alpha-composited light/inverse wordmarks; final matched consumer sheet is separately retained. All five native dark/red backgrounds are unchanged. Proposal only, no human/dealer/native/hosted approval."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-21T00:42:12.134Z",
+      "widths": [
+        32,
+        64
+      ],
+      "notes": "Compact artwork is a dedicated actual built-in imagegen treatment of the retained source motif, with original output bytes preserved; no recolour, filters, alpha cleanup or stretching."
+    }
+  },
+  "approvalStatus": "independent-preview-not-dealer-approved",
+  "researchConclusion": "Exact retained primary Autotrader page links a distinct Tripler Automotive logo. Original JPEG retained byte-identical under branding/originals. Generated flat transparent light/inverse treatments preserve the bronze/black source family, mirrored double-R/two upright pillars motif and wording. Treatments remain unapproved proposals, with retained Ltd fact name and all original records unchanged.",
+  "publicSourceObservations": [
+    {
+      "observedAt": "2026-10-21T00:42:12.134Z",
+      "kind": "bounded-logo-first-page-review",
+      "sourcePage": "https://www.autotrader.co.uk/dealers/west-midlands/west-bromwich/tripler-automotive-ltd-10049673",
+      "observations": "Exact primary page matches Tripler Automotive Ltd, rear of68 High Street West Bromwich and retained phone. Actual linked original logo is bronze mirrored double-R/two upright pillars over TRIPLER AUTOMOTIVE on grey gradient. No new family, warranty, review, history or adoption statement added."
+    }
+  ],
+  "generation": {
+    "tool": "image_gen.imagegen",
+    "generationId": "exec-2bd8e443-cc07-4643-b8f7-7465a3b43386",
+    "modelVersion": null,
+    "prompt": "Use case: logo-brand. Create a transparent flat WHITE-SURFACE treatment of this actual sourced TRIPLER AUTOMOTIVE logo. Preserve the recognizable mirrored double-R/two-vertical-pillar monogram silhouette and bronze/black identity, including its open curves and distinct upright pillars. Isolated naturally near-square monogram at LEFT aboutonequarter visible total width, large clean transparent gap to text at RIGHT: TRIPLER on first line, AUTOMOTIVE on second line, source-like spaced geometric capitals but bold enough to read at120/180pixels. Use flat opaque bronze #86502e for emblem and near-black #20252b for text; no metallic gradient/bevel. Keep source spelling/motif, no added LTD or claims. Background and every opening transparent. No grey background, plate, white keyline, shadow, reflection, glow, texture, speckles or photographic effects. Strong compact32/64pixel retention with substantial smooth curves, preserve monogram geometry rather than inventing a different symbol. Transparent treatment proposal, dealer adoption not claimed."
+  },
+  "compactDerivation": {
+    "operation": "actual-imagegen-dedicated-compact",
+    "artworkUnmodifiedAfterGeneration": true,
+    "alphaUnmodified": true
+  },
+  "compactOnDarkDerivation": {
+    "operation": "actual-imagegen-dedicated-compact",
+    "artworkUnmodifiedAfterGeneration": true,
+    "alphaUnmodified": true
+  },
+  "additionalGenerations": [
+    {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-bc399460-4474-4d1d-9d73-c2fb0365a7f2",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand. Edit this source-derived TRIPLER logo to output ONLY its isolated mirrored double-R/two-upright-pillar emblem. Remove all text completely, including every fragment of TRIPLER and AUTOMOTIVE. One emblem, centered naturally in a square transparent canvas; preserve original open curves, two upright pillars, both broad sweeping R curves and tapered lower tail. Source bronze #86502e, solid opaque flat artwork. Maintain enough stroke mass and open counters to be useful at32/64pixels, without altering recognisable motif or squashing/stretching. Clear fully transparent surrounding margin and counters. No letters outside monogram, no wordmark, no mini-logo, no comparison, no shadows, plates, gradients, glow, halos, keyline or decorative speckles. This is a proposed transparent compact treatment of the retained actual source, not an adoption claim.",
+      "referencePaths": [
+        "C:\\Users\\radev\\.codex\\generated_images\\01a15a1f-d666-7482-9123-db2575e93737\\exec-2bd8e443-cc07-4643-b8f7-7465a3b43386.png"
+      ],
+      "path": "branding/generated-mark-light-v1-20261021.png",
+      "sha256": "376b78f3b7cac0a7c902a27bbc64fff202dbf41072b703d08c5a46650e7a44d3"
+    },
+    {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-f662eab4-1893-4fb8-ae86-7895dc677770",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand. Edit this reference into ONE SINGLE horizontal TRIPLER AUTOMOTIVE inverse logo, one emblem left and one text block right. Exactly one copy, one row; never duplicate, stack, show a comparison or alternate. Preserve the source mirrored double-R/two upright pillars silhouette, exact text spelling and two-line arrangement. Recolor emblem flat soft champagne #e5d4a5, text flat pale grey #cfd3d8. Preserve spacing and geometry of the supplied single light logo. Fully transparent background and openings. Solid clean substantial artwork, no gradient, shadow, glow, outline, background plate, texture or decorative speckling. No pure-white ink. Strong legibility at120/180wordmark width and32/64emblem size over nearblack/red. Single transparent treatment proposal, no adoption claim.",
+      "referencePaths": [
+        "C:\\Users\\radev\\.codex\\generated_images\\01a15a1f-d666-7482-9123-db2575e93737\\exec-2bd8e443-cc07-4643-b8f7-7465a3b43386.png"
+      ],
+      "path": "branding/generated-inverse-v1-20261021.png",
+      "sha256": "8f73a1570c1fa70954a12e8c874875c3cc2d17ce684ca4a30209b91d2b172883"
+    },
+    {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-494d280d-d7ea-48f0-96bf-8d1b7380aa2e",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand. Edit this TRIPLER inverse reference to output ONLY its isolated mirrored double-R/two-upright-pillar emblem, in soft champagne #e5d4a5. Remove all TRIPLER/AUTOMOTIVE text and every letter fragment outside emblem. One matching emblem centered in a square transparent canvas with clean margin. Preserve source open curves, two upright pillars, broad mirrored R curves and sweeping lower tail. Flat solid opaque strokes, useful32/64pixel counters, no stretch/squash. Fully transparent background/negative spaces, no pure white, plates, gradient, bevel, glow, halo, outline, shadows or decorative speckles. Single proposed compact treatment, no adoption claim.",
+      "referencePaths": [
+        "C:\\Users\\radev\\.codex\\generated_images\\01a15a1f-d666-7482-9123-db2575e93737\\exec-f662eab4-1893-4fb8-ae86-7895dc677770.png"
+      ],
+      "path": "branding/generated-mark-dark-v1-20261021.png",
+      "sha256": "082bd571c1c774fd32337038e38b0939a341213538d091634b26cccb56e30764"
+    }
+  ],
+  "sourceHistory": [
+    {
+      "reference": "branding/source-before-first-artwork-20261021-283a6ee1ea33a169.json",
+      "sha256": "283a6ee1ea33a169d28cc799f6b0eda604c59199a6744074c42c206648c118dd",
+      "retainedAt": "2026-10-21T00:42:12.134Z",
+      "reason": "Exact maintained input-only draft provenance before first proposal artwork"
+    }
+  ]
 }

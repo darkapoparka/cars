@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-input-review",
+  "dealer": "tripler-automotive-ltd",
+  "reviewed": true,
+  "reviewedAt": "2026-10-21T00:42:35.032Z",
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "checks": [
+    "canonical-hosting-and-preserved-fleet-collisions",
+    "assigned-expansion-lead",
+    "public-fact-schema-and-price-omission",
+    "personal-contact-screen",
+    "retained-stock-media",
+    "companion-copy-source-binding",
+    "immutable-template-release-and-native-QA-parent",
+    "reviewed-artwork-provenance-and-regenerated-logo-hashes"
+  ],
+  "sourceArtworkReview": "Retained artwork review is separate provenance; this command does not perform visual, Arabic-expert or dealer approval.",
+  "copyReview": "Automated structure, stock hash, source text and complete EN/BG rows; no new human translation approval is inferred.",
+  "contacts": {
+    "schemaVersion": 1,
+    "kind": "cars-automated-public-contact-screen",
+    "dealer": "tripler-automotive-ltd",
+    "method": "heuristic; no claim that unflagged values cannot be personal",
+    "flags": [],
+    "blocking": []
+  },
+  "batch": {
+    "number": 2,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-west-bromwich-tripler-automotive",
+    "position": 103
+  },
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "inputs": [
+    {
+      "path": "FACTS-AND-INVENTORY.json",
+      "sha256": "7602ca729b44d19a6a5ad6279b0169f8232d095010f7841444fa598481907b6d"
+    },
+    {
+      "path": "branding/first-proposal-artwork-20261021.json",
+      "sha256": "71c5059c7b6660621e71d5af404fa3316096222a857a407bbfdb0d9d52358296"
+    },
+    {
+      "path": "branding/generated-inverse-v1-20261021.png",
+      "sha256": "8f73a1570c1fa70954a12e8c874875c3cc2d17ce684ca4a30209b91d2b172883"
+    },
+    {
+      "path": "branding/generated-mark-dark-v1-20261021.png",
+      "sha256": "082bd571c1c774fd32337038e38b0939a341213538d091634b26cccb56e30764"
+    },
+    {
+      "path": "branding/generated-mark-light-v1-20261021.png",
+      "sha256": "376b78f3b7cac0a7c902a27bbc64fff202dbf41072b703d08c5a46650e7a44d3"
+    },
+    {
+      "path": "branding/generated-master-v1-20261021.png",
+      "sha256": "22565532b4598bb8ddb69707b6ed467f3e14d7bd7e7886a978d725e354c2dee2"
+    },
+    {
+      "path": "branding/logo-contract.json",
+      "sha256": "1df46df2bb1cb9f3a1a8e5e64f1545cdc4af916858465bcfda9ec0c04b67a2d3"
+    },
+    {
+      "path": "branding/logo-recipe.json",
+      "sha256": "67c095bab83c91f6f22cff7e0e4650bb738889ff0fa6894acdb27717827a7202"
+    },
+    {
+      "path": "branding/originals/tripler-autotrader-original-20261021.jpg",
+      "sha256": "6addc32a2cd6369364ca38d9acdf16dfca5115d8d222d02d67fa3b1804e3ee03"
+    },
+    {
+      "path": "branding/source-before-first-artwork-20261021-283a6ee1ea33a169.json",
+      "sha256": "283a6ee1ea33a169d28cc799f6b0eda604c59199a6744074c42c206648c118dd"
+    },
+    {
+      "path": "branding/source.json",
+      "sha256": "d29cfb4530c762df0ad4bf29a23705ae1fa699408fd12d9a0821219008d04fb6"
+    },
+    {
+      "path": "business-facts.json",
+      "sha256": "8d0832ff00a7e9bc8dd32aa497e644725e55259a0e842133a44e7176b0f19954"
+    },
+    {
+      "path": "copy-review.json",
+      "sha256": "ec438d638aa4718fcd829351e6a9c685fb8c67dbeccf33e0c32efd54e6b49382"
+    },
+    {
+      "path": "dealer-stock/template-demo-1.webp",
+      "sha256": "945e6864218ab3bd5fbd415336b212ecfde645685033f8506836f906885d447c"
+    },
+    {
+      "path": "dealer-stock/template-demo-2.webp",
+      "sha256": "17689ab880bf47de81ef467c34d639223f39f0c1ebe68c90d0aaf70e3dcc6333"
+    },
+    {
+      "path": "dealer-stock/template-demo-3.webp",
+      "sha256": "d644dec8e1ef280a702dccac267a2367f0ab823e40373e1299b156e7723b3b1f"
+    },
+    {
+      "path": "dealer.json",
+      "sha256": "84dcd383757e5c0722347652873f2109d41674c5c1646c07637b976209164839"
+    },
+    {
+      "path": "identity-review.json",
+      "sha256": "fbc3a43633fa006abe2a88c02083aa7a837098dae510776d9918beded9add2a0"
+    },
+    {
+      "path": "locale.json",
+      "sha256": "b429870b2242c9ba067c14e7ba667fe268a666862fa57beb30ec5c0a6f750bbb"
+    },
+    {
+      "path": "missing-facts.json",
+      "sha256": "a35ca5dd58d9da144b01ae01f29c0267fff8166c51a2866fb42e438decb0a3b9"
+    },
+    {
+      "path": "qualification.json",
+      "sha256": "2d9d9a6fcf88ed0e34811e33c13cb8d55a98954992ab6e150aa670a43eab1d76"
+    },
+    {
+      "path": "source-evidence.json",
+      "sha256": "bcb10cb03b23306857ba0500ba5d17fae818368046b658b11134c70b3811fcbb"
+    },
+    {
+      "path": "stock.json",
+      "sha256": "8923e9f706ad3d8a5005c95c263152ac242cfcef6e57b93604af18118232f87f"
+    }
+  ],
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "providerWrites": 0
+}

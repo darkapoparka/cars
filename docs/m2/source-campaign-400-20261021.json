@@ -38,7 +38,7 @@
     "actualProviderWritesBySourceScheduler": 0
   },
   "liveDeploymentSnapshot": {
-    "generation": 587,
+    "generation": 597,
     "totalRequests": 171,
     "queued": 133,
     "active": {
@@ -78,10 +78,10 @@
     "runId": 39521618242,
     "runUrl": "https://github.com/darkapoparka/cars/actions/runs/39521618242",
     "sourceCommit": "ee5a714089546d722f2d8bdf730671156f37072f",
-    "observedAt": "2026-10-21T00:41:06.380Z",
+    "observedAt": "2026-10-21T00:43:27.872Z",
     "targets": 400,
     "assignmentDigest": "c7f26a0f6f54a5bd7b967c3213bcd422c0b75b7fab68a33a5f5ada227ad551b4",
-    "stateRevision": "c566453fafb9116bfe1029994f6661334b321bcd",
+    "stateRevision": "180a898223eb566b557a47fab5e7682a7e001742",
     "baselinePreserved": true,
     "existingHistoryPreserved": true
   },
@@ -114,10 +114,9 @@
   },
   "newReadyGroups": [
     {
-      "group": "sixth3-first2",
+      "group": "sixth3-tripler",
       "slugs": [
-        "jak-prestige",
-        "sterling-and-drake-motors"
+        "tripler-automotive-ltd"
       ],
       "sourceApproved": true,
       "nativeApproved": false,

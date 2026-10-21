@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Tripler Automotive Ltd",
     "publicOrigin": "https://tripler-automotive-ltd.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "383be30dc10979e594a0f42f698075f94335d511e404a491cd4bb24734376d1a",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "1d48b5f427510676be099a739c74f308879c23c3e928aff67db8b5234c3ffdf7"
+    }
   }
 }

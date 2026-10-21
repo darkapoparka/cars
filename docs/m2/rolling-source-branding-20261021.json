@@ -576,6 +576,52 @@
       "nativeStatus": "Ready for the existing400 source campaign; no separate manual native dispatch",
       "nativeApproval": false,
       "hostedApproval": false
+    },
+    {
+      "group": "sixth3-tripler",
+      "recordedAt": "2026-10-21T00:43:27.969Z",
+      "reviewSealSha256": "417a6ce86d60731304d003c7df21639e0d88740ff1e148112fb6be6c932a4ee7",
+      "totals": {
+        "packs": 1,
+        "artworkPassed": 1,
+        "sourceReviewCheckPassed": 1,
+        "existingContactHeld": 0,
+        "candidateRasterChecks": 14,
+        "actualSourceRasterChecks": 14,
+        "files": 25,
+        "bytes": 2585087,
+        "modifiedPaths": 5,
+        "addedPaths": 10,
+        "deleted": 0
+      },
+      "packs": [
+        {
+          "slug": "tripler-automotive-ltd",
+          "path": "dealers/tripler-automotive-ltd",
+          "packDigest": "f2e27de73599039f493858d7f1f712e84d36c37d4c10f7334ecbd3805616fa20",
+          "files": 25,
+          "bytes": 2585087,
+          "sourceReady": true,
+          "proposalOnly": true,
+          "maintainerConsumerReview": true,
+          "actualSourceRasters": 14,
+          "strictPublisher": {
+            "passed": true,
+            "actualExportedApplyLeadBranding": true,
+            "fixtureSourceSha256": "85d66559b60867d2ab30ff7c4cb0a9eb07f7d6b9e0fb8ef3c4ae5caeae594783",
+            "noBuild": true
+          },
+          "sourceFactsStockPhotosResearchPreserved": true,
+          "humanReview": false,
+          "dealerApproval": false,
+          "nativeApproval": false,
+          "hostedApproval": false,
+          "provenance": "dealers/tripler-automotive-ltd/branding/first-proposal-artwork-20261021.json"
+        }
+      ],
+      "nativeStatus": "Ready for the existing400 source campaign; no separate manual native dispatch",
+      "nativeApproval": false,
+      "hostedApproval": false
     }
   ],
   "ownerAccepted": false,

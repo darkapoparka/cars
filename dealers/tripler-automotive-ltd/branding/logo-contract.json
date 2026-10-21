@@ -1,0 +1,197 @@
+{
+  "schemaVersion": 1,
+  "dealer": "tripler-automotive-ltd",
+  "reviewed": true,
+  "reviewedAt": "2026-10-21T00:42:12.134Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "883006e7f863f6b1b3b736b8e13ca2c5c1e6a6dbc753f6f6dc86f703cddf0b10",
+      "sourceSha256": "383be30dc10979e594a0f42f698075f94335d511e404a491cd4bb24734376d1a"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "e5fc421053be62b1c123a43f576f5d36355c2ea748eb9b0ec966bd63e59090ec",
+      "sourceSha256": "7007e43dc717735c64be54f86b4dfa896fcd7ed189512c8d07c94dbf93e61269"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "e5fc421053be62b1c123a43f576f5d36355c2ea748eb9b0ec966bd63e59090ec",
+      "sourceSha256": "7007e43dc717735c64be54f86b4dfa896fcd7ed189512c8d07c94dbf93e61269"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "383be30dc10979e594a0f42f698075f94335d511e404a491cd4bb24734376d1a",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-2bd8e443-cc07-4643-b8f7-7465a3b43386",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "1d48b5f427510676be099a739c74f308879c23c3e928aff67db8b5234c3ffdf7",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-bc399460-4474-4d1d-9d73-c2fb0365a7f2",
+      "modelVersion": null
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "8cc7bea1c467fd4758f635d7ed9832c680d5a0b2053dba7b46cbd5bfdc16c80a"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "383be30dc10979e594a0f42f698075f94335d511e404a491cd4bb24734376d1a",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-2bd8e443-cc07-4643-b8f7-7465a3b43386",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/tripler-automotive-ltd/branding/generated-master-v1-20261021.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "7007e43dc717735c64be54f86b4dfa896fcd7ed189512c8d07c94dbf93e61269",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-f662eab4-1893-4fb8-ae86-7895dc677770",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/tripler-automotive-ltd/branding/generated-inverse-v1-20261021.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "7007e43dc717735c64be54f86b4dfa896fcd7ed189512c8d07c94dbf93e61269",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-f662eab4-1893-4fb8-ae86-7895dc677770",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/tripler-automotive-ltd/branding/generated-inverse-v1-20261021.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "22565532b4598bb8ddb69707b6ed467f3e14d7bd7e7886a978d725e354c2dee2",
+      "sha256": "383be30dc10979e594a0f42f698075f94335d511e404a491cd4bb24734376d1a",
+      "crop": {
+        "left": 71,
+        "top": 74,
+        "width": 1755,
+        "height": 700
+      },
+      "sourcePath": "branding/generated-master-v1-20261021.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "8f73a1570c1fa70954a12e8c874875c3cc2d17ce684ca4a30209b91d2b172883",
+      "sha256": "7007e43dc717735c64be54f86b4dfa896fcd7ed189512c8d07c94dbf93e61269",
+      "crop": {
+        "left": 70,
+        "top": 68,
+        "width": 1759,
+        "height": 705
+      },
+      "sourcePath": "branding/generated-inverse-v1-20261021.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "8f73a1570c1fa70954a12e8c874875c3cc2d17ce684ca4a30209b91d2b172883",
+      "sha256": "7007e43dc717735c64be54f86b4dfa896fcd7ed189512c8d07c94dbf93e61269",
+      "crop": {
+        "left": 70,
+        "top": 68,
+        "width": 1759,
+        "height": 705
+      },
+      "sourcePath": "branding/generated-inverse-v1-20261021.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "06eb79e8ceab415fd7a2ff87ea075e19940b1d1b3bd64607210fe0376ff8654f",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-bc399460-4474-4d1d-9d73-c2fb0365a7f2",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/tripler-automotive-ltd/branding/generated-mark-light-v1-20261021.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "ce776c7c128152c44cad56c139d6ca75a997641e6933cde44996696666603764",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-494d280d-d7ea-48f0-96bf-8d1b7380aa2e",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/tripler-automotive-ltd/branding/generated-mark-dark-v1-20261021.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "1d48b5f427510676be099a739c74f308879c23c3e928aff67db8b5234c3ffdf7",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-bc399460-4474-4d1d-9d73-c2fb0365a7f2",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/tripler-automotive-ltd/branding/generated-mark-light-v1-20261021.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "8cc7bea1c467fd4758f635d7ed9832c680d5a0b2053dba7b46cbd5bfdc16c80a",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-bc399460-4474-4d1d-9d73-c2fb0365a7f2",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/tripler-automotive-ltd/branding/generated-mark-light-v1-20261021.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-21T00:42:12.134Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "ee2ebd3ab9e5b2040f7be22600c4a25aa2c3f078693bf0c084bf37f39295f962",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-494d280d-d7ea-48f0-96bf-8d1b7380aa2e",
+      "modelVersion": null
+    }
+  }
+}
