@@ -17,7 +17,8 @@ const evaluate=(value,{event='workflow_dispatch',action='queue-all',ref='refs/he
 const job=name=>{const value=native.split(new RegExp('^  '+name+':\\r?\\n','m'))[1];assert.ok(value);return value.split(/^  [a-z][\w-]*:/m)[0];};
 
 test('queue-all is an explicit source action and never authorizes a provider drain',()=>{
- assert.match(deploy,/options: \[[^\n]*queue-all\]/);assert.equal(evaluate(source),true);
+ const actionChoices=deploy.match(/^\s+options: \[([^\n]+)\]$/m)?.[1].split(',').map(value=>value.trim());
+ assert.ok(actionChoices?.includes('queue-all'),'queue-all must remain an explicit workflow action');assert.equal(evaluate(source),true);
  const drain=step('Drain all retained batches through the single account claim');
  assert(!expression(drain).includes("inputs.action == 'queue-all'"));
  assert.equal(evaluate(source,{action:'inspect'}),false);assert.equal(evaluate(source,{action:'recover-and-drain'}),false);
