@@ -41,6 +41,17 @@ function assertRun(run,reservation){
 function runProof(run){return {id:run.id,path:run.path,repository:{full_name:run.repository.full_name},head_repository:{full_name:run.head_repository.full_name},head_branch:run.head_branch,event:run.event,head_sha:run.head_sha,run_attempt:run.run_attempt,display_title:run.display_title,status:run.status,conclusion:run.conclusion};}
 function assertExternalTerminalRun(run,external){assert(run?.id===external.runId&&run.path===workflow&&run.repository?.full_name===PACK_QUEUE_REPOSITORY&&run.head_repository?.full_name===PACK_QUEUE_REPOSITORY&&run.head_branch==='main'&&run.event==='workflow_dispatch'&&run.head_sha===external.sourceSha&&run.run_attempt===1&&run.status==='completed'&&['success','failure'].includes(run.conclusion),'Authenticated exact external terminal native run proof required');}
 function assertFailedMaterial(row,external){assert(row&&slug(row.slug)&&hex64(row.packDigest)&&hex64(row.buildFingerprint)&&row.sourceSha===external.sourceSha&&[row.packTree,row.scriptsTree,row.lockBlob,row.nativeWorkflowBlob].every(hex40)&&typeof row.reason==='string'&&row.reason.trim().length>0&&row.reason.length<=2000,'Exact pinned failed native material/source/tree proof required');assert(row.buildFingerprint===queueDigest({kind:'cars-source-build-material-v1',scriptsTree:row.scriptsTree,lockBlob:row.lockBlob,nativeWorkflowBlob:row.nativeWorkflowBlob}),'Failed native build fingerprint differs from its pinned Git object identities');}
+function assertOwnedIntake(state,id,receipt){
+  const reservation=state.reservations[id];
+  assert(reservation&&hex64(id)&&receipt?.reservationId===id&&receipt.runId===receipt.terminalRun?.id&&receipt.sourceSha===reservation.sourceSha&&timestamp(receipt.completedAt),'Exact owned source intake receipt required');
+  assertRun(receipt.terminalRun,reservation);assert(receipt.terminalRun.status==='completed'&&['success','failure'].includes(receipt.terminalRun.conclusion),'Owned intake needs an admissible completed original run');
+  if(reservation.run?.status==='completed')assert(isDeepStrictEqual(receipt.terminalRun,reservation.run),'Owned intake cannot replace a retained terminal run proof');
+  assert(receipt.contracts?.runId===receipt.runId&&receipt.contracts.sourceCommit===reservation.sourceSha&&receipt.contracts.conclusion==='success','Owned intake shared contracts must match the original run/source');
+  assert(Array.isArray(receipt.retained)&&Array.isArray(receipt.failedMaterialProofs)&&receipt.retained.length+receipt.failedMaterialProofs.length===reservation.selections.length,'Every selected owned source member needs retained queue identity or exact failed material');
+  const seen=new Set();
+  for(const row of receipt.retained){const selected=reservation.selections.find(item=>item.dealerId===row.dealerId&&item.slug===row.slug),target=state.targets[row.dealerId];assert(selected&&!seen.has(row.slug)&&Array.isArray(row.requestIds)&&row.requestIds.length>0&&new Set(row.requestIds).size===row.requestIds.length&&row.requestIds.every(id=>hex64(id)&&target.retainedRequestIds.includes(id)),'Owned intake retained members must reference permanent qualified queue identities');seen.add(row.slug);}
+  for(const proof of receipt.failedMaterialProofs){assertFailedMaterial(proof,{sourceSha:reservation.sourceSha});const selected=reservation.selections.find(item=>item.dealerId===proof.dealerId&&item.slug===proof.slug);assert(selected&&materialMatches(selected,proof)&&!seen.has(proof.slug),'Owned intake failed proof differs from the selected exact material');seen.add(proof.slug);}
+}
 
 export function createSourceCampaign({assignment,queue,sourceSha,targets=[],now=new Date().toISOString()}={}){
   validatePackQueue(queue);assert(hex40(sourceSha)&&timestamp(now),'Exact initial published source and date required');
@@ -50,7 +61,7 @@ export function createSourceCampaign({assignment,queue,sourceSha,targets=[],now=
   const state={schemaVersion:1,type:'cars-dealer-pack-source-campaign',repository:PACK_QUEUE_REPOSITORY,branch:PACK_QUEUE_BRANCH,path:SOURCE_CAMPAIGN_PATH,
     assignment:clone(assignment),assignmentDigest:assignment.assignmentDigest,baseline:baselineOf(queue),
     sourceEnvelope:{repository:PACK_QUEUE_REPOSITORY,branch:'main',initialSourceSha:sourceSha,assignmentPath:PACK_BATCH_FILE,assignmentDigest:assignment.assignmentDigest},
-    generation:0,createdAt:now,updatedAt:now,order:rows.map(row=>row.dealerId),targets:Object.fromEntries(rows.map(row=>[row.dealerId,{...row,slug:known.get(row.dealerId)??null,status:'waiting-inputs',reason:'Waiting for reviewed factual and branding inputs',materials:[],retainedRequestIds:[],retainedRequests:[]}])) ,reservations:{},activeReservationId:null,externalRuns:{}};
+    generation:0,createdAt:now,updatedAt:now,order:rows.map(row=>row.dealerId),targets:Object.fromEntries(rows.map(row=>[row.dealerId,{...row,slug:known.get(row.dealerId)??null,status:'waiting-inputs',reason:'Waiting for reviewed factual and branding inputs',materials:[],retainedRequestIds:[],retainedRequests:[]}])) ,reservations:{},activeReservationId:null,externalRuns:{},ownedIntakes:{}};
   return validateSourceCampaign(state,{assignment});
 }
 
@@ -91,6 +102,7 @@ export function validateSourceCampaign(state,{assignment}={}){
     assert(Number.isSafeInteger(run.runId)&&run.runId>0&&String(run.runId)===id&&hex40(run.sourceSha)&&timestamp(run.observedAt)&&typeof run.terminalIntakeComplete==='boolean'&&(run.terminalIntakeComplete?timestamp(run.completedAt):run.completedAt===null),'Exact external source run/intake barrier required');
     if(run.terminalIntakeComplete){assertExternalTerminalRun(run.terminalRun,run);assert(Array.isArray(run.failedMaterialProofs)&&run.failedMaterialProofs.length<=100&&new Set(run.failedMaterialProofs.map(row=>row.slug)).size===run.failedMaterialProofs.length&&Array.isArray(run.failureSlugs)&&isDeepStrictEqual(run.failureSlugs,[...new Set(run.failedMaterialProofs.map(row=>row.slug))].sort()),'Terminal intake failure/material coverage differs');for(const proof of run.failedMaterialProofs){assertFailedMaterial(proof,run);const target=state.targets[proof.dealerId];assert(target?.slug===proof.slug&&hasAttemptedSourceMaterial(state,proof),'Every failed legacy member must retain its exact material attempt');}}
   }
+  if(state.ownedIntakes!==undefined){assert(state.ownedIntakes&&typeof state.ownedIntakes==='object'&&!Array.isArray(state.ownedIntakes),'Owned source intake ledger must be a record');for(const [id,receipt]of Object.entries(state.ownedIntakes))assertOwnedIntake(state,id,receipt);}
   assert(Buffer.byteLength(JSON.stringify(state))<=SOURCE_CAMPAIGN_MAX_BYTES,'Source campaign exceeds its1MiB bound');
   return state;
 }
@@ -130,6 +142,23 @@ export function finishSourceCohort(state,{reservationId,run,now=new Date().toISO
   assert(!Object.values(next.reservations).some(other=>other.id!==reservationId&&other.run?.id===run.id),'Another source reservation already owns this run');
   reservation.run=runProof(run);reservation.status=run.conclusion==='success'?'source-finished':'held';reservation.finishedAt=now;next.activeReservationId=null;
   for(const selected of reservation.selections){const target=next.targets[selected.dealerId];if(!retained(target)){target.status=reservation.status;target.reason=run.conclusion==='success'?'Native source run finished; authenticated artifact intake remains mandatory':'Native source run ended '+run.conclusion+'; exact material stays held';}}
+  return validateSourceCampaign(next);
+}
+
+/** Additive acknowledgement: terminal reservation history stays unchanged, and
+ * failed members never require repeated reads of eventually expired artifacts. */
+export function completeSourceOwnedRunIntake(state,{reservationId,run,intake,now=new Date().toISOString()}={}){
+  validateSourceCampaign(state);const next=clone(state),reservation=next.reservations[reservationId];
+  assert(reservation&&timestamp(now),'Exact retained owned reservation and completion date required');assertRun(run,reservation);
+  assert(run.status==='completed'&&['success','failure'].includes(run.conclusion)&&intake?.completed===true&&intake.runId===run.id&&intake.sourceCommit===reservation.sourceSha,'Owned terminal intake must positively match the original completed run/source');
+  assert(Array.isArray(intake.requests)&&Array.isArray(intake.pending)&&intake.pending.length===0&&Array.isArray(intake.failures)&&Array.isArray(intake.failedMaterials),'Owned intake must finish every source member without pending or global ambiguity');
+  const failureSlugs=intake.failures.map(row=>{assert(slug(row?.slug),'Global or unbound owned intake failures remain held');return row.slug;});
+  assert(new Set(failureSlugs).size===failureSlugs.length&&new Set(intake.failedMaterials.map(row=>row.slug)).size===intake.failedMaterials.length&&isDeepStrictEqual([...failureSlugs].sort(),intake.failedMaterials.map(row=>row.slug).sort()),'Every owned intake failure needs one exact material proof');
+  const failed=new Set(failureSlugs),retained=reservation.selections.filter(row=>!failed.has(row.slug)).map(row=>({dealerId:row.dealerId,slug:row.slug,requestIds:[...next.targets[row.dealerId].retainedRequestIds].sort()}));
+  const receipt={reservationId,runId:run.id,sourceSha:reservation.sourceSha,completedAt:next.ownedIntakes?.[reservationId]?.completedAt??now,terminalRun:runProof(run),contracts:{runId:intake.contracts?.runId,sourceCommit:intake.contracts?.sourceCommit,conclusion:intake.contracts?.conclusion},retained,
+    failedMaterialProofs:intake.failedMaterials.map(row=>({dealerId:row.dealerId,slug:row.slug,packDigest:row.packDigest,buildFingerprint:row.buildFingerprint,sourceSha:row.sourceSha,packTree:row.packTree,scriptsTree:row.scriptsTree,lockBlob:row.lockBlob,nativeWorkflowBlob:row.nativeWorkflowBlob,reason:row.reason})).sort((a,b)=>a.slug.localeCompare(b.slug,'en'))};
+  assertOwnedIntake(next,reservationId,receipt);next.ownedIntakes??={};
+  if(next.ownedIntakes[reservationId])assert(isDeepStrictEqual(next.ownedIntakes[reservationId],receipt),'Completed owned intake proof cannot be replaced');else next.ownedIntakes[reservationId]=receipt;
   return validateSourceCampaign(next);
 }
 
@@ -175,6 +204,7 @@ function immutable(previous,next){
   for(const id of previous.order){const a=previous.targets[id],b=next.targets[id];assert(a.dealerId===b.dealerId&&a.batch===b.batch&&a.position===b.position&&(!a.slug||a.slug===b.slug),'Assigned target identity cannot change');assert(a.materials.every(item=>b.materials.some(value=>isDeepStrictEqual(item,value)))&&a.retainedRequestIds.every(value=>b.retainedRequestIds.includes(value)),'Source attempt/retained identity history cannot be removed');}
   for(const [id,a]of Object.entries(previous.reservations)){const b=next.reservations[id];assert(b&&a.id===b.id&&a.owner===b.owner&&a.sourceSha===b.sourceSha&&a.createdAt===b.createdAt&&isDeepStrictEqual(a.selections,b.selections)&&a.dispatchIntent===b.dispatchIntent&&(!a.run||a.run.id===b.run?.id),'Source reservation/POST intent cannot be rewritten or removed');if(['source-finished','held'].includes(a.status))assert(isDeepStrictEqual(a,b),'Terminal source attempts cannot reopen');}
   for(const [id,a]of Object.entries(previous.externalRuns)){const b=next.externalRuns[id];assert(b&&a.runId===b.runId&&a.sourceSha===b.sourceSha&&a.observedAt===b.observedAt&&(!a.terminalIntakeComplete||isDeepStrictEqual(a,b)),'External native/intake barriers cannot be removed, rebound or reopened');}
+  for(const [id,receipt]of Object.entries(previous.ownedIntakes??{}))assert(isDeepStrictEqual(receipt,next.ownedIntakes?.[id]),'Completed owned source intake receipts cannot be removed or rewritten');
 }
 
 export async function mutateSourceCampaign(store,mutator,{now=()=>new Date().toISOString(),attempts=20}={}){

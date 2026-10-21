@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import {buildPackBatchAssignments,PACK_BATCH_FILE} from './lib/dealer-pack-identity.mjs';
 import {PACK_DEPLOY_ACCOUNT,PACK_DEPLOY_ZONE,PACK_QUEUE_BRANCH,PACK_QUEUE_PATH,PACK_QUEUE_REPOSITORY,queueDigest,createPackDeploymentQueue,packDeploymentRequest,enqueuePackDeployments} from './lib/dealer-pack-queue.mjs';
-import {SOURCE_CAMPAIGN_PATH,SOURCE_CAMPAIGN_MAX_BYTES,createSourceCampaign,validateSourceCampaign,registerSourceCampaign,mutateSourceCampaign,gitSourceCampaignStore,reserveSourceCohort,bindSourceCohortRun,finishSourceCohort,holdSourceCohort,syncSourceCampaignTargets,hasAttemptedSourceMaterial,observeSourceExternalRuns,completeSourceExternalRunIntake} from './lib/dealer-pack-source-campaign.mjs';
+import {SOURCE_CAMPAIGN_PATH,SOURCE_CAMPAIGN_MAX_BYTES,createSourceCampaign,validateSourceCampaign,registerSourceCampaign,mutateSourceCampaign,gitSourceCampaignStore,reserveSourceCohort,bindSourceCohortRun,finishSourceCohort,holdSourceCohort,syncSourceCampaignTargets,hasAttemptedSourceMaterial,observeSourceExternalRuns,completeSourceExternalRunIntake,completeSourceOwnedRunIntake} from './lib/dealer-pack-source-campaign.mjs';
 
 const now='2026-10-21T00:00:00.000Z',later='2026-10-21T01:00:00.000Z',sha='a'.repeat(40),hash=value=>createHash('sha256').update(value).digest('hex');
 const assignment=buildPackBatchAssignments({priorityResearchIds:Array.from({length:400},(_,index)=>'gb-dealer-'+String(index).padStart(3,'0'))});
@@ -90,6 +90,44 @@ test('factual readiness observations keep all targets pending and cannot erase m
  for(const key of ['assignment','baseline','sourceEnvelope']){await assert.rejects(mutateSourceCampaign(store,state=>{state[key]={};return state;},{now}));}
  await mutateSourceCampaign(store,state=>reserved(state),{now});await assert.rejects(mutateSourceCampaign(store,state=>{state.targets[first].materials=[];return state;},{now}),/history|binding/);
  await assert.rejects(mutateSourceCampaign(store,state=>{state.generation++;return state;},{now}),/must not increment/);assert.equal(store.state.generation,1);
+});
+
+async function ownedIntakeFixture({partial=true,terminal=true}={}){
+ const failed=failedMaterial({...selection(1),buildFingerprint:failedMaterial().buildFingerprint}),selections=[selection(),...(partial?[failed]:[])];
+ const initial=reserved(campaign(),{selections}),reservationId=initial.activeReservationId,terminalRun=run(initial,{status:'completed',conclusion:partial?'failure':'success'}),s=selections[0];
+ const request=packDeploymentRequest({...s,batch:1,workerName:'cars-'+s.slug,publicOrigin:'https://'+s.slug+'.webpreviews.site',releaseId:'cars-six-'+hash('release'),releaseDigest:hash('release'),outputDigest:hash('output'),sourceCommit:sha});
+ const qStore=memoryStore(queue());await enqueuePackDeployments(qStore,[request]);
+ const synced=syncSourceCampaignTargets(initial,{queue:qStore.state,now:later}),state=terminal?finishSourceCohort(synced,{reservationId,run:terminalRun,now:later}):synced;
+ const intake={completed:true,runId:terminalRun.id,sourceCommit:sha,contracts:{runId:terminalRun.id,sourceCommit:sha,conclusion:'success'},pending:[],requests:[request],failures:partial?[{slug:failed.slug,reason:failed.reason}]:[],failedMaterials:partial?[failed]:[]};
+ return {state,initial,reservationId,run:terminalRun,intake,request,failed,queue:qStore.state};
+}
+
+test('owned terminal intake has an additive permanent receipt without rewriting terminal attempts',async()=>{
+ for(const partial of[false,true]){
+  const f=await ownedIntakeFixture({partial}),before=structuredClone(f.state),next=completeSourceOwnedRunIntake(f.state,{...f,now:later}),receipt=next.ownedIntakes[f.reservationId];
+  assert.deepEqual(f.state,before);assert.deepEqual(next.reservations,before.reservations);assert.deepEqual(next.baseline,before.baseline);assert(!Object.hasOwn(next,'requests'));
+  assert.deepEqual(receipt.retained,[{dealerId:selection().dealerId,slug:selection().slug,requestIds:[f.request.id]}]);assert.equal(receipt.failedMaterialProofs.length,partial?1:0);
+  assert.deepEqual(completeSourceOwnedRunIntake(next,{...f,now:'2026-11-01T00:00:00.000Z'}),next);
+  assert.equal(next.targets[selection().dealerId].status,'retained');if(partial)assert(hasAttemptedSourceMaterial(next,f.failed));
+ }
+});
+
+test('owned intake refuses incomplete, global, unbound and unretained member outcomes',async()=>{
+ const f=await ownedIntakeFixture(),complete=(intake=f.intake,run=f.run,state=f.state)=>completeSourceOwnedRunIntake(state,{reservationId:f.reservationId,run,intake,now:later});
+ assert.throws(()=>complete(f.intake,f.run,f.initial),/permanent qualified queue/);
+ for(const change of[{completed:false},{sourceCommit:'f'.repeat(40)},{runId:999},{contracts:{...f.intake.contracts,conclusion:'failure'}},{pending:[{slug:f.failed.slug}]},{requests:undefined},{failedMaterials:[]},{failures:[{reason:'Artifact inventory unavailable'}]},{failedMaterials:[{...f.failed,packDigest:hash('unbound')}]},{failedMaterials:[{...f.failed,packTree:'unknown'}]},{failedMaterials:[{...f.failed,buildFingerprint:hash('unbound')}]},{failedMaterials:[{...f.failed,sourceSha:'f'.repeat(40)}]}])assert.throws(()=>complete({...f.intake,...change}));
+ for(const change of[{id:999},{run_attempt:2},{head_sha:'f'.repeat(40)},{conclusion:'cancelled'},{status:'in_progress',conclusion:null}])assert.throws(()=>complete(f.intake,{...f.run,...change}));
+ const cancelled=finishSourceCohort(syncSourceCampaignTargets(f.initial,{queue:f.queue,now:later}),{reservationId:f.reservationId,run:{...f.run,conclusion:'cancelled'},now:later});
+ assert.throws(()=>complete(f.intake,f.run,cancelled),/terminal run proof/);
+});
+
+test('owned intake can finish atomically with its live reservation and cannot be erased later',async()=>{
+ const f=await ownedIntakeFixture({terminal:false}),store=memoryStore(f.state);
+ await mutateSourceCampaign(store,state=>finishSourceCohort(completeSourceOwnedRunIntake(state,{...f,now:later}),{reservationId:f.reservationId,run:f.run,now:later}),{now:later});
+ assert.equal(store.state.activeReservationId,null);assert(store.state.ownedIntakes[f.reservationId]);
+ await assert.rejects(mutateSourceCampaign(store,state=>{delete state.ownedIntakes;return state;},{now:later}),/cannot be removed or rewritten/);
+ await assert.rejects(mutateSourceCampaign(store,state=>{state.ownedIntakes[f.reservationId].completedAt='2026-11-01T00:00:00.000Z';return state;},{now:later}),/cannot be removed or rewritten/);
+ const old=campaign();delete old.ownedIntakes;assert.equal(validateSourceCampaign(old),old);
 });
 
 test('legacy native terminal-event gap remains barred until exact positive maintained intake completion',()=>{

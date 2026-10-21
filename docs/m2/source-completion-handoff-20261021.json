@@ -1,0 +1,153 @@
+{
+  "schemaVersion": 1,
+  "type": "cars-400-source-completion-handoff-checkpoint",
+  "recordedAt": "2026-10-21T01:18:12.570Z",
+  "parentSource": "7bfebbf444c474df443f1243c02f438560d8337e",
+  "problem": "Owned native completion could release source ownership before exact terminal intake; a changed shared build fingerprint could rebuild successful siblings. Token-created native runs also require an explicit completion dispatch.",
+  "behavior": {
+    "ownedCompletion": "Exact original run and all selected slugs enter maintained automatic intake, then fresh queue sync, immutable owned acknowledgement and source release share one CAS",
+    "historicalCompletion": "Unacknowledged completed cohorts reconcile once without rewriting terminal reservation history; failed members retain exact source material and no expired artifact reread is required after acknowledgement",
+    "callback": "Exact original main scheduler result explicitly dispatches strict automatic enqueue-and-deploy once, including partial survivors; retained intent forbids retry after ambiguous outcomes",
+    "provider": "Existing account claim, exact qualified source/artifacts, capacity, public six-design checks and runtime acceptance remain mandatory",
+    "missingInputs": "All400 stay registered; inputs without reviewed facts/branding remain waiting"
+  },
+  "actualRuns": {
+    "registration": 39521618242,
+    "previousPartialSource": 39522714188,
+    "previousPartialNativePassed": 9,
+    "previousPartialNativeFailed": 1,
+    "redundantSourceCancelled": 39524843821,
+    "preservedNormalProvider": 39524652949
+  },
+  "stockIdentityCorrection": {
+    "slug": "millions-auto-cars",
+    "packDigest": "9cc68f78e824f84ea8e9b6bb09bfd6d55a5fa859dbab60a8035b5426cacc7de7",
+    "sourcedVehicleTitle": "2019 MG ZS 44.5kWh Exclusive Auto",
+    "sourceOrAssetChanges": 0,
+    "classification": "Only exact source titles and native record/destination/photo owners; generic identity and phone checks remain strict"
+  },
+  "validation": {
+    "executorGuards": {
+      "passed": 164,
+      "failed": 0,
+      "logSha256": "8aceb50927ebeaf702e78fb8957ac1472ae01c75c2331b7479d4b0798e8413aa",
+      "tools": "Existing pinned local tools and Git unzip; no installation"
+    },
+    "identityFocusedPassed": 8,
+    "nativeWrapperFixtures": 6,
+    "adversarialControls": 60,
+    "yaml": {
+      "status": "passed",
+      "parser": "existing Playwright bundled yaml",
+      "workflows": 2,
+      "deploymentDispatchInputs": 8,
+      "completionInvocations": 1
+    },
+    "independentReview": "Owned campaign ledger, scheduler, callback/workflows and exact stock-owner verifier independently reviewed PASS"
+  },
+  "liveSnapshot": {
+    "schemaVersion": 1,
+    "type": "cars-400-source-campaign-live-registration-proof",
+    "observedAt": "2026-10-21T01:14:12.516Z",
+    "revision": "aefc48b3eda23e34b4787d6d67e9e3f32ee4e2b8",
+    "sourceCampaignBlob": "2e02d20a4fea551c9ffb8523004f1b0009fab40c",
+    "queueBlob": "d8e0db5c4417a5397e44cac5908111b7fc78a2b0",
+    "assignmentDigest": "c7f26a0f6f54a5bd7b967c3213bcd422c0b75b7fab68a33a5f5ada227ad551b4",
+    "targets": 400,
+    "generation": 15,
+    "initialSourceSha": "ee5a714089546d722f2d8bdf730671156f37072f",
+    "states": {
+      "retained": 169,
+      "waiting-inputs": 215,
+      "needs-reconciliation": 13,
+      "held": 3
+    },
+    "retainedDeploymentTargets": 171,
+    "baselinePreserved": true,
+    "existingHistoryPreserved": true,
+    "activeSourceReservation": {
+      "id": "636cee3fa3a4f856a951962ec3e98a0a136968895ac61c0eb1528d08f20f548b",
+      "sourceSha": "7bfebbf444c474df443f1243c02f438560d8337e",
+      "status": "needs-reconciliation",
+      "selected": 13,
+      "runId": null
+    },
+    "queue": {
+      "generation": 632,
+      "totalRequests": 171,
+      "queued": 130,
+      "active": {
+        "owner": "github:39524652949",
+        "requestId": "56189cc403858c6d4e67055b02110a9e6d1eded6f2899f0a34df85aa0d738902"
+      },
+      "activated": 40,
+      "hostedPassed": 38,
+      "historicalHostedFailures": 2
+    }
+  },
+  "limitations": [
+    "No fresh native or hosted qualification is claimed for the corrected Millions source",
+    "Nine old successful outputs still require actual retained intake; the exact next cohort is not inferred from unit tests",
+    "400 registrations are not400 deployed sites"
+  ],
+  "primarySources": [
+    "https://docs.github.com/en/actions/how-tos/write-workflows/choose-when-workflows-run/trigger-a-workflow"
+  ],
+  "files": [
+    {
+      "path": "scripts/lib/dealer-pack-source-campaign.mjs",
+      "bytes": 38476,
+      "sha256": "f0a561ce9ac74551bae0e983abd2500f073802976f099584cfdf87ba4494e711"
+    },
+    {
+      "path": "scripts/dealer-pack-source-campaign.test.mjs",
+      "bytes": 29072,
+      "sha256": "9b805b15a584a41871cab109961f342dcbe1e482379b22fd8a410ae74b35674e"
+    },
+    {
+      "path": "scripts/schedule-dealer-pack-source.mjs",
+      "bytes": 29890,
+      "sha256": "54c2f76c0473bcfcddf0cdb0ecee8559b02c5207a5abf0a2e3dd52dff8441e6c"
+    },
+    {
+      "path": "scripts/dealer-pack-source-scheduler.test.mjs",
+      "bytes": 41336,
+      "sha256": "ef04bafbd206a120aa9927245adec32e705eea399382c3dec168a19d3e9e1045"
+    },
+    {
+      "path": "scripts/notify-dealer-pack-source-complete.mjs",
+      "bytes": 7933,
+      "sha256": "b6a254d75033b83e384a8e89918f7fe2e1fe288fec3c6552b5b5e23f148b1074"
+    },
+    {
+      "path": "scripts/notify-dealer-pack-source-complete.test.mjs",
+      "bytes": 12176,
+      "sha256": "3480c3026fc0a193c7a2d7cb342f4d43f62b92c7dbd29ed155d235f7ebd32bde"
+    },
+    {
+      "path": "scripts/verify-dealer-pack.mjs",
+      "bytes": 73836,
+      "sha256": "016947d9028c58dfa17ab95b20ab66579e9e388c791b9327b086bef72885db3f"
+    },
+    {
+      "path": "scripts/verify-dealer-pack.test.mjs",
+      "bytes": 72103,
+      "sha256": "df6fb873cc92604553f6d180c93b592ff8b1df118f1c505b9641742e43ca5359"
+    },
+    {
+      "path": "scripts/dealer-pack-source-rollout-workflow.test.mjs",
+      "bytes": 9117,
+      "sha256": "c7ac58d375cb000d8a375aca39c4c5cb91ccdf9e37eb396dfadcda52cb8e32d8"
+    },
+    {
+      "path": ".github/workflows/dealer-pack-pipeline.yml",
+      "bytes": 24166,
+      "sha256": "896c021bee4bee9145419d51ff9492a1ca28c9d05c428a94dfa2f3796330cf6f"
+    },
+    {
+      "path": ".github/workflows/dealer-pack-deploy.yml",
+      "bytes": 18858,
+      "sha256": "e60dab898eea74789f6322c315821cb984e9d1845ebbda4aa3490db17b1f2e1f"
+    }
+  ]
+}

@@ -188,6 +188,35 @@ test('real Modern desktop showroom fact ownership separates Electric and Auto wi
  fuel.childNodes.push(make('a',{},[text(' Electric Auto')]));assert.equal(read().identityContext.status,'unavailable');assert.equal(leaks(read()).length,1,'A foreign link inside a fact keeps the strict fallback');
 });
 
+test('exact retained vehicle titles in native owners are distinct from dealer identity without dropping other text',()=>{
+ const stock=JSON.parse(fs.readFileSync(new URL('../dealers/millions-auto-cars/stock.json',import.meta.url),'utf8')),record=stock.records.find(row=>row.id==='public-listing-2'),before=JSON.stringify(stock);
+ assert.equal(record.title,'2019 MG ZS 44.5kWh Exclusive Auto');assert.equal(record.sourceUrl,'https://www.autotrader.co.uk/car-details/202607124111384');assert.equal(record.observedAt,'2026-10-19T17:53:14.128521Z');
+ const fleet={records:[{slug:'exclusive-auto-varna',names:['Exclusive Auto'],phones:['+359877733110']}]},vehicle={vehicleOwner:'modern',vehicleHref:'http://127.0.0.1:8787/variant-2/en/listing/mg-zs-2019-public-listing-2',vehicleOrigin:'http://127.0.0.1:8787'};
+ const title=text=>({channel:'vehicle-title',owner:'h2[data-slot="vehicle-card-title"]',text,...vehicle}),context=segments=>({schemaVersion:1,status:'complete',segments}),body={channel:'body',owner:'body',text:'Honest Motors'};
+ const read=(segments,extra={})=>findForeignIdentity({text:segments.map(row=>row.text).join('\n'),identityContext:context(segments),ownSlug:manifest.slug,ownFacts:facts,ownStock:stock,fleet,...extra});
+ for(const text of [record.title,'MG ZS 44.5kWh Exclusive Auto','ZS 44.5kWh Exclusive Auto'])assert.deepEqual(read([body,title(text)]),[],'Complete selected Modern native display form');
+ for(const [vehicleOwner,route]of [['auto-best','/en/listing-detail-v1/2'],['modern','/variant-2/en/listing/mg-zs-2019-public-listing-2'],['import','/variant-3/inventory/public-listing-2'],['import-site','/variant-3/inventory/public-listing-2?lang=en'],['signature','/variant-6/vehicle?id=public-listing-2'],['signature-mobile','/variant-6/vehicle?id=public-listing-2&lang=en']]){
+  const binding={...vehicle,vehicleOwner,vehicleHref:vehicle.vehicleOrigin+route};assert.deepEqual(read([body,{...title(record.title),...binding}],{additionalText:[{channel:'image-alt',owner:'native stock photograph',text:record.title,vehiclePhoto:vehicle.vehicleOrigin+record.images[0],...binding}]}),[],vehicleOwner+' actual maintained route identity');
+  assert(read([body,{...title(record.title),...binding,vehicleHref:binding.vehicleHref.replace(/(?:public-listing-2|\/2)(?=[?&]|$)/,'other')}]).some(row=>row.type==='name'),vehicleOwner+' refuses a different source record');
+ }
+ assert.deepEqual(read([body,title(record.title)],{additionalText:[{channel:'link-aria-label',owner:'a native image link',text:'View '+record.title,...vehicle},{channel:'image-alt',owner:'img native vehicle photo',text:record.title,vehiclePhoto:'http://127.0.0.1:8787/variant-2/dealer-stock/public-2.jpg',...vehicle}]}),[]);
+ for(const update of [{ownStock:undefined},{identityContext:undefined},{identityContext:{schemaVersion:1,status:'incomplete',segments:[body,title(record.title)]}}])assert(read([body,title(record.title)],update).some(row=>row.type==='name'));
+ for(const segment of [{...title(record.title),channel:'body'},{...title(record.title),vehicleOwner:'unowned'},title(record.title+' — Exclusive Auto'),title('2019 MG ZS Exclusive Auto'),title('Exclusive Auto'),{...title(record.title),vehicleHref:'https://foreign.example/listing/mg-zs-2019-public-listing-2'},{...title(record.title),vehicleHref:'http://127.0.0.1:8787/variant-2/en/listing/another-car'}])assert(read([body,segment]).some(row=>row.type==='name'));
+ for(const channel of ['body','metadata','link-aria-label','image-alt'])assert(read([body,title(record.title)],{additionalText:[{channel,owner:'ordinary page branding',text:record.title}]}).some(row=>row.type==='name'),channel+' cannot borrow source ownership');
+ for(const additionalText of [[{channel:'link-aria-label',owner:'a native',text:'View '+record.title+' / Exclusive Auto',...vehicle}],[{channel:'image-alt',owner:'img native',text:record.title,vehiclePhoto:'http://127.0.0.1:8787/dealer-stock/public-1.jpg',...vehicle}],[{channel:'image-alt',owner:'img native',text:record.title,vehiclePhoto:'https://foreign.example/dealer-stock/public-2.jpg',...vehicle}],[{channel:'metadata',owner:'title',text:record.title,...vehicle}]])assert(read([body,title(record.title)],{additionalText}).some(row=>row.type==='name'));
+ assert(read([body,title(record.title)],{phones:['tel:+359877733110']}).some(row=>row.type==='phone'));
+ assert(read([body,title(record.title),{channel:'body',owner:'footer',text:'Exclusive Auto'}]).some(row=>row.context?.owner==='footer'));
+ assert.equal(JSON.stringify(stock),before,'Retained dated stock and title stay unchanged');
+});
+
+test('route assessment keeps native stock photos separate from ordinary images and dealer logos',()=>{
+ const stock={records:[{title:'2019 MG ZS 44.5kWh Exclusive Auto',make:'MG',model:'ZS',year:2019,images:['/dealer-stock/public-2.jpg']}]},title=stock.records[0].title,fleet={records:[{slug:'exclusive-auto-varna',names:['Exclusive Auto'],phones:[]}]};
+ const vehicle={vehicleOwner:'auto-best',vehicleHref:'http://127.0.0.1:8787/en/listing-detail-v1/1',vehicleOrigin:'http://127.0.0.1:8787'},page=snapshot();page.text+='\n'+title;page.identityContext={schemaVersion:1,status:'complete',segments:[{channel:'body',owner:'body',text:snapshot().text},{channel:'vehicle-title',owner:'h3.dn-vehicle-card__name',text:title,...vehicle}]};page.images.push({src:'http://127.0.0.1:8787/dealer-stock/public-2.jpg',alt:title,visible:true,loaded:true,...vehicle});
+ const read=()=>assessPageSnapshot({snapshot:page,facts,stock,manifest,variant:variants[0],fleet});assert.equal(read().status,'passed');
+ page.images.at(-1).dealerLogo=true;assert(read().findings.includes('foreign-dealer-identity'),'A logo cannot use a stock-photo exception');page.images.at(-1).dealerLogo=false;
+ delete page.images.at(-1).vehicleOwner;assert(read().findings.includes('foreign-dealer-identity'),'An ordinary image cannot use a stock-photo exception');
+});
+
 test('HTTP 200, an unrendered logo or a five-design FAB cannot masquerade as successful dealer QA',()=>{
  assert.equal(assess(snapshot()).status,'passed');
  for(const [update,failure] of [[page=>page.status=500,'route-response'],[page=>page.text='OK','route-response'],[page=>page.images[0].loaded=false,'dealer-logo'],[page=>page.images[0].dealerLogo=false,'dealer-logo'],[page=>page.phones=['tel:+359888123456'],'dealer-phone'],[page=>page.designChoices.pop(),'six-design-fab'],[page=>page.designChoices.push(page.designChoices[0]),'six-design-fab'],[page=>page.designChoices[1].href='https://foreign.example/','fab-destination'],[page=>page.adminLinks=[],'shared-admin-link']]){

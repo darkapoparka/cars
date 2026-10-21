@@ -12,6 +12,7 @@ import {canonicalPackJson,validatePackExecution,validatePackSourceReleases,valid
 import {previewJourney,previewDetail} from './verify-dealer-preview.mjs';
 import {dismissAppWelcome} from './verify-priselci-public-browser.mjs';
 import {dealerPackFabPolicy,fleetDesignFabHashes} from './lib/dealer-pack-switcher-logo.mjs';
+import {refreshNormalizeInternals} from './lib/client-refresh-normalize.mjs';
 
 const assert=(ok,message)=>{if(!ok)throw Error(message);};
 const hex64=value=>/^[a-f0-9]{64}$/.test(value??'');
@@ -23,7 +24,38 @@ const digits=value=>String(value??'').replace(/\D/g,'');
 const business=facts=>facts?.business??facts??{};
 const includesName=(text,name)=>clean(name).length>=3&&(' '+clean(text)+' ').includes(' '+clean(name)+' ');
 const visibleText=value=>String(value??'').replace(/\s+/g,' ').trim();
-const completeIdentityContext=(text,context)=>context?.schemaVersion===1&&context.status==='complete'&&Array.isArray(context.segments)&&context.segments.length>0&&context.segments.length<=4096&&context.segments.every(row=>typeof row.text==='string'&&typeof row.owner==='string'&&['body','vehicle-fact'].includes(row.channel))&&visibleText(context.segments.map(row=>row.text).join('\n'))===visibleText(text);
+const completeIdentityContext=(text,context)=>context?.schemaVersion===1&&context.status==='complete'&&Array.isArray(context.segments)&&context.segments.length>0&&context.segments.length<=4096&&context.segments.every(row=>typeof row.text==='string'&&typeof row.owner==='string'&&['body','vehicle-fact','vehicle-title'].includes(row.channel))&&visibleText(context.segments.map(row=>row.text).join('\n'))===visibleText(text);
+const nativeVehicleOwners=new Set(['modern','auto-best','import','import-site','signature','signature-mobile']);
+function sourcedVehicleText(segment,stock){
+  if(!nativeVehicleOwners.has(segment.vehicleOwner)||!Array.isArray(stock?.records)||stock.records.length>1000)return false;
+  const titleChannel=segment.channel==='vehicle-title',linkChannel=['link-aria-label','link-title'].includes(segment.channel),photoChannel=segment.channel==='image-alt';
+  if(!titleChannel&&!linkChannel&&!photoChannel)return false;
+  let destination;try{destination=new URL(segment.vehicleHref);if(!['http:','https:'].includes(destination.protocol)||destination.origin!==segment.vehicleOrigin||destination.username||destination.password)return false;}catch{return false;}
+  const value=visibleText(segment.text);
+  return stock.records.some((row,index)=>{
+    if(typeof row?.title!=='string'||!row.title.trim())return false;
+    let listing;try{listing=refreshNormalizeInternals.normalizeListing(row,index,{});}catch{return false;}
+    // Use the same record normalization as assembly and the actual native route
+    // constructors: a matching title on an unrelated vehicle is not evidence.
+    const suffix=segment.vehicleOwner==='modern'?'/listing/'+listing.slug:segment.vehicleOwner==='auto-best'?'/listing-detail-v1/'+(index+1):['import','import-site'].includes(segment.vehicleOwner)?'/inventory/'+encodeURIComponent(listing.sourceId):null;
+    if(suffix?!destination.pathname.replace(/\/$/,'').endsWith(suffix):!(/\/vehicle\/?$/.test(destination.pathname)&&destination.searchParams.getAll('id').length===1&&destination.searchParams.get('id')===listing.id))return false;
+    const full=visibleText(row.title),titles=new Set([full]);
+    // These are the selected Modern getVehicleCardTitle/getMobileVehicleCardHeading
+    // and Auto Best modelTitle transformations, not arbitrary substring matching.
+    if(segment.vehicleOwner==='modern'||segment.vehicleOwner==='auto-best'){
+      let display=full;
+      if(segment.vehicleOwner==='modern'&&Number.isInteger(row.year)&&display.startsWith(row.year+' ')){display=display.slice(String(row.year).length+1);titles.add(display);}
+      if(typeof row.make==='string'&&row.make.trim()&&display.startsWith(row.make.trim()+' '))titles.add(display.slice(row.make.trim().length+1));
+    }
+    if(titleChannel)return titles.has(value);
+    if(linkChannel)return value===full||value==='View '+full;
+    if(value!==full||!Array.isArray(row.images)||typeof segment.vehiclePhoto!=='string')return false;
+    // Only a source-bound stock photograph may carry its exact vehicle title.
+    // Ordinary images, dealer logos and metadata retain the strict name scan.
+    let actual;try{actual=new URL(segment.vehiclePhoto);if(!['http:','https:'].includes(actual.protocol)||actual.origin!==segment.vehicleOrigin)return false;}catch{return false;}
+    return row.images.some(image=>{if(typeof image!=='string'||!image.startsWith('/dealer-stock/'))return false;return actual.pathname===image||/^\/variant-[2-6]\//.test(actual.pathname)&&actual.pathname.slice('/variant-2'.length)===image;});
+  });
+}
 const samePhone=(a,b)=>{a=digits(a);b=digits(b);return a.length>=7&&b.length>=7&&(a===b||a.length>=9&&b.length>=9&&a.slice(-9)===b.slice(-9));};
 const textPhones=text=>[...String(text??'').matchAll(/(?<!\d)(?:\+|00)?\d[\d \t()./-]{5,}\d(?!\d)/g)].map(match=>match[0]).filter(value=>digits(value).length>=7&&digits(value).length<=15);
 const noProviderEnv=env=>Object.fromEntries(Object.entries(env).filter(([key])=>!/^(?:GH_TOKEN|GITHUB_TOKEN|(?:CLOUDFLARE|CF)_(?:API|AUTH|TOKEN|ACCOUNT)|WRANGLER_(?:API_TOKEN|TOKEN))/.test(key)));
@@ -167,7 +199,7 @@ export function loadFleetIdentities(root,registry=json(path.join(root,'docs/DEPL
     note:'Registered and new-pack public business identities are scanned. Malformed neighboring facts are reported without stopping other packs; missing public phones are not invented.'}};
 }
 
-export function findForeignIdentity({text,phones=[],ownSlug,ownFacts,fleet,identityContext,additionalText=[]}) {
+export function findForeignIdentity({text,phones=[],ownSlug,ownFacts,ownStock,fleet,identityContext,additionalText=[]}) {
   const own=business(ownFacts),ownNames=[own.name,own.shortName].filter(Boolean),hits=[];
   // Segmentation is evidence about semantic field boundaries, never permission
   // to omit stock text. Missing or incomplete coverage keeps the strict scan.
@@ -183,7 +215,7 @@ export function findForeignIdentity({text,phones=[],ownSlug,ownFacts,fleet,ident
   const observedPhones=[...phones,...visiblePhones];
   for(const record of fleet.records){
     if(record.slug===ownSlug)continue;
-    for(const name of record.names)if(!ownNames.some(value=>clean(value)===clean(name))){const segment=segments.find(row=>includesName(row.text,name));if(segment)hits.push({dealer:record.slug,type:'name',value:name,context:context(segment,name)});}
+    for(const name of record.names)if(!ownNames.some(value=>clean(value)===clean(name))){const segment=segments.find(row=>includesName(row.text,name)&&!(complete&&sourcedVehicleText(row,ownStock)));if(segment)hits.push({dealer:record.slug,type:'name',value:name,context:context(segment,name)});}
     for(const phone of record.phones)if(!samePhone(phone,own.phone)&&observedPhones.some(value=>samePhone(value,phone)))hits.push({dealer:record.slug,type:'phone',value:phone});
   }
   return hits.filter((row,index)=>hits.findIndex(other=>other.dealer===row.dealer&&other.type===row.type&&other.value===row.value)===index);
@@ -199,7 +231,7 @@ export function dealerPackIdentityRequirements(label) {
 }
 
 /** Inspect observed DOM, not receipt claims or source-only success flags. */
-export function assessPageSnapshot({snapshot,facts,manifest,variant,fleet,demoStock=false,requireDisclosure=true,identityRequirements}) {
+export function assessPageSnapshot({snapshot,facts,stock,manifest,variant,fleet,demoStock=false,requireDisclosure=true,identityRequirements}) {
   const own=business(facts),findings=[];
   const requested=identityRequirements??{name:true,phone:true,logo:true};
   assert(requested&&Object.keys(requested).sort().join(',')==='logo,name,phone'&&Object.values(requested).every(value=>typeof value==='boolean'),'Identity requirements must explicitly name each factual check');
@@ -231,9 +263,9 @@ export function assessPageSnapshot({snapshot,facts,manifest,variant,fleet,demoSt
   if(admins.length!==1)findings.push('shared-admin-link');
   else{let url;try{url=new URL(admins[0].href,snapshot.url);}catch{}if(!url||url.origin!=='https://cars-admin-blue.vercel.app'||url.pathname!=='/'||url.username||url.password||admins[0].target!=='_blank'||!['noopener','noreferrer'].every(value=>admins[0].rel?.split(/\s+/).includes(value)))findings.push('shared-admin-link');}
   const additionalText=[{channel:'metadata',owner:'page title, descriptions and structured data',text:String(snapshot.metadata??'')},
-    ...(snapshot.identityLinks??[]),...pageImages.filter(image=>image.visible&&image.alt).map(image=>({channel:'image-alt',owner:'img '+String(image.src).slice(0,100),text:image.alt}))];
+    ...(snapshot.identityLinks??[]),...pageImages.filter(image=>image.visible&&image.alt).map(image=>({channel:'image-alt',owner:'img '+String(image.src).slice(0,100),text:image.alt,...(image.vehicleOwner&&!image.dealerLogo&&!image.dealerFabLogo?{vehicleOwner:image.vehicleOwner,vehiclePhoto:image.src,vehicleHref:image.vehicleHref,vehicleOrigin:image.vehicleOrigin}:{})}))];
   const leakText=completeIdentityContext(snapshot.text,snapshot.identityContext)?snapshot.text:[snapshot.text,snapshot.metadata].join('\n');
-  const leaks=findForeignIdentity({text:leakText,identityContext:snapshot.identityContext,additionalText,phones:snapshot.phones,ownSlug:manifest.slug,ownFacts:facts,fleet});
+  const leaks=findForeignIdentity({text:leakText,identityContext:snapshot.identityContext,additionalText,phones:snapshot.phones,ownSlug:manifest.slug,ownFacts:facts,ownStock:stock,fleet});
   if(leaks.length)findings.push('foreign-dealer-identity');
   if(placeholders.test([snapshot.text,snapshot.metadata].join('\n')))findings.push('placeholder-copy');
   if(invalidMileage.test(snapshot.text??''))findings.push('invalid-mileage-value');
@@ -506,13 +538,36 @@ export function readDealerPackDom() {
     const roots=[document];for(let i=0;i<roots.length;i++)for(const element of roots[i].querySelectorAll('*'))if(element.shadowRoot)roots.push(element.shadowRoot);
     const all=selector=>roots.flatMap(root=>[...root.querySelectorAll(selector)]);
     const visible=element=>{const r=element.getBoundingClientRect();if(!element.getClientRects().length||r.width<=0||r.height<=0)return false;for(let node=element;node;node=node.parentElement??node.getRootNode?.().host){const style=getComputedStyle(node);if(style.visibility==='hidden'||style.display==='none'||style.opacity==='0')return false;}return true;};
+    const vehicleContracts=[
+      {kind:'modern',card:'article[data-slot="vehicle-card"]',title:'[data-slot="vehicle-card-title"]',photo:'[data-slot="vehicle-card-media"] img',link:'a[data-slot="vehicle-card-content"]'},
+      {kind:'auto-best',card:'article.dn-vehicle-card',title:'.dn-vehicle-card__name',photo:'.dn-vehicle-card__image img',link:'a.dn-vehicle-card__link'},
+      {kind:'import',card:'.card-box.card-box-style-1',title:'.card-box__title > a',photo:'.image img',facts:'.daynight-card-specs'},
+      {kind:'import-site',card:'article.site-vehicle-card',title:'.site-vehicle-card__body > h2 > a',photo:'.site-vehicle-card__media img',facts:'.site-vehicle-card__metadata'},
+      {kind:'signature',card:'.card-journey-small',title:'.card-info .card-title > a',photo:'.card-image img',facts:'.card-program'},
+      {kind:'signature-mobile',card:'article.mobile-vehicle-card',title:'.mobile-vehicle-title',photo:'.mobile-vehicle-photo img',facts:'.mobile-vehicle-facts'},
+    ];
+    const nativeVehicle=(element,role)=>{
+      if(element.closest?.('header,footer,nav'))return null;
+      for(const contract of vehicleContracts){
+        const card=element.closest?.(contract.card);if(!card||contract.facts&&!card.querySelector(contract.facts))continue;
+        const title=card.querySelector(contract.title);if(!title)continue;
+        const link=title.closest('a')??(contract.link&&card.querySelector(contract.link));if(!link)continue;
+        let href;try{href=new URL(link.getAttribute('href'),location.href);}catch{continue;}
+        if(href.origin!==new URL(location.href).origin||!(/\/(?:listing|inventory|listing-detail-v1)\/[^/]+\/?$/.test(href.pathname)||/\/vehicle\/?$/.test(href.pathname)&&Boolean(href.searchParams.get('id'))))continue;
+        if(role==='title'&&!element.matches(contract.title)||role==='photo'&&!element.matches(contract.photo))continue;
+        if(role==='link'){let actual;try{actual=new URL(element.getAttribute('href'),location.href);}catch{continue;}if(actual.href!==href.href)continue;}
+        if(role==='photo'){let src;try{src=new URL(element.currentSrc||element.src,location.href);}catch{continue;}if(src.origin!==href.origin)continue;}
+        return {vehicleOwner:contract.kind,vehicleHref:href.href,vehicleOrigin:href.origin};
+      }
+      return null;
+    };
     const images=all('img').map(element=>{const inSwitcher=element.getRootNode?.().host?.tagName==='DEALER-DESIGN-SWITCHER',bounds=element.getBoundingClientRect();return {src:element.currentSrc||element.src,alt:element.alt,visible:visible(element),complete:element.complete,loaded:element.complete&&element.naturalWidth>0,width:element.width,height:element.height,
       bounds:{x:bounds.x,y:bounds.y,width:bounds.width,height:bounds.height},
-      consumer:inSwitcher?(element.closest('button.fab')?'fab':'switcher'):'page'};});
+      consumer:inSwitcher?(element.closest('button.fab')?'fab':'switcher'):'page',...nativeVehicle(element,'photo')};});
     const text=[document.body.innerText,...roots.slice(1).flatMap(root=>[...root.children].filter(visible).map(element=>element.innerText??''))].join('\n');
     const metadata=[document.title,...all('meta[name="description"],meta[property^="og:"]').map(element=>element.content),...all('script[type="application/ld+json"]').map(element=>element.textContent)].join('\n');
     const owner=element=>[element.tagName?.toLowerCase(),element.id?'#'+element.id:'',typeof element.className==='string'?'.'+element.className.trim().split(/\s+/).slice(0,3).join('.'):''].join('').slice(0,160);
-    const identityLinks=all('a').filter(visible).flatMap(element=>['aria-label','title','href'].map(attribute=>({channel:'link-'+attribute,owner:owner(element),text:element.getAttribute(attribute)??''})).filter(row=>row.text));
+    const identityLinks=all('a').filter(visible).flatMap(element=>['aria-label','title','href'].map(attribute=>({channel:'link-'+attribute,owner:owner(element),text:element.getAttribute(attribute)??'',...nativeVehicle(element,'link')})).filter(row=>row.text));
     let identityContext;
     try{
       const factSelector='[data-slot="vehicle-card-spec-pills"] > [data-slot="vehicle-card-spec"],[data-slot="showroom-vehicle-facts"] > li[data-fact],.dn-vehicle-card__specs > .dn-vehicle-card__spec,.dn-vehicle-card__mobile-meta > .dn-vehicle-card__fact,.mobile-vehicle-card ul[aria-label] > li,.site-vehicle-card__metadata > ul > li,.daynight-card-specs > li';
@@ -523,6 +578,11 @@ export function readDealerPackDom() {
         if(node.nodeType!==1)return;
         if(['SCRIPT','STYLE','TEMPLATE','NOSCRIPT'].includes(node.tagName))return;
         const style=getComputedStyle(node);if(style.display==='none'||style.visibility==='hidden')return;
+        const vehicle=nativeVehicle(node,'title');
+        if(vehicle){
+          if(node.querySelector('header,footer,nav,h1,h2,h3')||node.querySelector('a')&&node.tagName!=='A')throw Error('Unexpected nested content in a native vehicle title');
+          flush();segments.push({channel:'vehicle-title',owner:owner(node),text:node.innerText,...vehicle});return;
+        }
         if(node.matches(factSelector)){
           if(node.querySelector(factSelector)||node.querySelector('a,header,footer,nav,h1,h2,h3'))throw Error('Unexpected nested content in a native vehicle fact');
           flush();segments.push({channel:'vehicle-fact',owner:owner(node),text:node.innerText});return;
@@ -627,7 +687,7 @@ export async function verifyDealerPack({root=ROOT,slug,bundleRoot,plan,previewUr
         const screenshotPreparation=screenshot?await prepareDealerPackScreenshot(page):null;
         if(screenshotPreparation?.status==='failed')check('screenshot-readiness:'+variant.key+':'+width,'failed',screenshotPreparation);
         const snapshot=await pageSnapshot(page,response,branding,imageDigests,errors);
-        const result=assessPageSnapshot({snapshot,facts:pack.facts,manifest:pack.manifest,variant,fleet,demoStock,requireDisclosure,identityRequirements:dealerPackIdentityRequirements(label)});
+        const result=assessPageSnapshot({snapshot,facts:pack.facts,stock:pack.stock,manifest:pack.manifest,variant,fleet,demoStock,requireDisclosure,identityRequirements:dealerPackIdentityRequirements(label)});
         result.label=label;result.width=width;result.welcome=welcome;
         if(screenshotPreparation)result.screenshotPreparation=screenshotPreparation;
         result.logoImages=snapshot.images.filter(image=>image.dealerLogo&&image.consumer==='page').map(imageEvidence);result.fabMarks=snapshot.fabMarks;

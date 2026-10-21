@@ -7,8 +7,10 @@ import {createHash} from 'node:crypto';
 import {scheduleDealerPackSource, dispatchDealerPackSource, dealerPackSourceBuildFingerprint, inspectSourcePackMaterial, createDealerPackTerminalIntake, runDealerPackSourceScheduler} from './schedule-dealer-pack-source.mjs';
 import {buildPackBatchAssignments} from './lib/dealer-pack-identity.mjs';
 import {PACK_QUEUE_REPOSITORY, PACK_DEPLOY_ACCOUNT, PACK_DEPLOY_ZONE, createPackDeploymentQueue, packDeploymentRequest, queueDigest} from './lib/dealer-pack-queue.mjs';
+import {finishSourceCohort, mutateSourceCampaign} from './lib/dealer-pack-source-campaign.mjs';
 
-const at = '2026-10-21T00:00:00.000Z', sourceSha = 'a'.repeat(40), buildFingerprint = queueDigest('shared-source');
+const at = '2026-10-21T00:00:00.000Z', sourceSha = 'a'.repeat(40), sharedMaterial = {scriptsTree: '1'.repeat(40), lockBlob: '2'.repeat(40), nativeWorkflowBlob: '3'.repeat(40)},
+  changedMaterial = {...sharedMaterial, scriptsTree: '4'.repeat(40)}, buildFingerprint = queueDigest({kind: 'cars-source-build-material-v1', ...sharedMaterial});
 const assignment = buildPackBatchAssignments({priorityResearchIds: Array.from({length: 400}, (_, n) => 'gb-dealer-' + String(n).padStart(3, '0'))});
 const ids = assignment.batches.flatMap(row => row.leadIds), packDigest = n => queueDigest('pack-' + n);
 const policy = {schemaVersion: 1, kind: 'cars-owner-authorized-pack-deployment', accountId: PACK_DEPLOY_ACCOUNT, zoneId: PACK_DEPLOY_ZONE,
@@ -46,12 +48,32 @@ function fixture({available = 20, retained = 0} = {}) {
     validateReadyPack: async ({slug}) => {checked.push(slug); return {success: true, packDigest: packDigest(Number(slug.slice(7))), benchmarkOnly: false};},
     discover: async ({reservation, externalRuns = []}) => ({unknownActive: state.active.length > 0, activeRuns: state.active,
       needsReconciliation: Boolean(reservation && !state.visible), reservationRun: reservation && state.visible ? nativeRun(reservation, {
-        id: 456 + Object.keys(store.state.reservations).indexOf(reservation.id), status: state.runStatus, conclusion: state.conclusion}) : null,
+        id: 456 + Object.keys(store.state.reservations).indexOf(reservation.id), status: reservation.run?.status === 'completed' ? 'completed' : state.runStatus,
+        conclusion: reservation.run?.status === 'completed' ? reservation.run.conclusion : state.conclusion}) : null,
       externalRunStatuses: externalRuns.map(row => ({...row, needsReconciliation: false, run: {...nativeRun({id: queueDigest('external'), sourceSha: row.sourceSha},
         {id: row.runId, status: state.externalCompleted ? 'completed' : 'in_progress', conclusion: state.externalCompleted ? state.externalConclusion : null}), display_title: 'Legacy owner-selected source'}})), reasons: []}),
     dispatch: async value => {assert.equal(store.state.activeReservationId, value.rolloutRequestId); assert.equal(store.state.reservations[value.rolloutRequestId].dispatchIntent, true);
       posts.push(value); return {httpStatus: 204};}};
   return {options, store, checked, posts, state, queue, add};
+}
+
+function ownedTerminalIntake(f) {
+  return async ({runId, slugs}) => {
+    const reservation = Object.values(f.store.state.reservations).find((row, index) => (row.run?.id ?? 456 + index) === runId);
+    assert(reservation, 'Exact synthetic owned reservation');
+    assert.deepEqual(slugs, reservation.selections.map(row => row.slug));
+    const failed = (reservation.run?.status === 'completed' ? reservation.run.conclusion : f.state.conclusion) === 'failure';
+    const failures = failed ? reservation.selections.map(row => ({slug: row.slug, reason: 'Exact per-pack native fixture refusal'})) : [];
+    if (!failed) for (const row of reservation.selections) if (!Object.values(f.queue.requests).some(entry => entry.request.dealerId === row.dealerId)) f.add(Number(row.slug.slice(7)));
+    return {runId, sourceCommit: reservation.sourceSha, contracts: {runId, sourceCommit: reservation.sourceSha, conclusion: 'success'}, pending: [],
+      requests: [], failures, failedMaterials: failed ? reservation.selections.map(row => ownedFailedMaterial(row, reservation.sourceSha)) : []};
+  };
+}
+
+function ownedFailedMaterial(row, sourceSha) {
+  const material = row.buildFingerprint === buildFingerprint ? sharedMaterial : changedMaterial;
+  assert.equal(row.buildFingerprint, queueDigest({kind: 'cars-source-build-material-v1', ...material}));
+  return {...row, sourceSha, ...material, packTree: '5'.repeat(40), reason: 'Exact per-pack native fixture refusal'};
 }
 
 test('canonical400 registers once, keeps unreviewed/missing targets, and never manufactures deployment requests', async () => {
@@ -131,13 +153,14 @@ test('unknown POST and empty204 visibility preserve one intent and never retry b
 
 test('known failed material is held across unrelated main commits and only changed pack/build material is eligible again', async () => {
   const f = fixture({available: 1}); f.state.runStatus = 'completed'; f.state.conclusion = 'failure';
+  f.options.ensureTerminalIntake = ownedTerminalIntake(f);
   await scheduleDealerPackSource(f.options); assert.equal(f.store.state.activeReservationId, null); assert.equal(f.store.state.targets[ids[0]].status, 'held');
   f.state.main = 'b'.repeat(40); f.options.sourceSha = f.state.main;
   await scheduleDealerPackSource(f.options); assert.equal(f.posts.length, 1);
   f.options.inspectMaterial = () => ({packDigest: queueDigest('changed-pack')});
   f.options.validateReadyPack = async () => ({success: true, packDigest: queueDigest('changed-pack')});
   await scheduleDealerPackSource(f.options); assert.equal(f.posts.length, 2);
-  f.options.buildFingerprint = queueDigest('changed-build'); await scheduleDealerPackSource(f.options); assert.equal(f.posts.length, 3);
+  f.options.buildFingerprint = queueDigest({kind: 'cars-source-build-material-v1', ...changedMaterial}); await scheduleDealerPackSource(f.options); assert.equal(f.posts.length, 3);
 });
 
 test('queue retained statuses are excluded and current24 legacy work blocks every new source until exact terminal intake', async () => {
@@ -210,7 +233,12 @@ test('foreign source observed during our live campaign remains a terminal-intake
   assert.equal(f.store.state.externalRuns['901'].terminalIntakeComplete, false);
   assert.equal(f.posts.length, 1);
   f.state.active = []; f.state.runStatus = 'completed'; f.state.conclusion = 'success';
-  assert.equal((await scheduleDealerPackSource(f.options)).status, 'waiting-external-intake');
+  const ownIntake = ownedTerminalIntake(f);
+  f.options.ensureTerminalIntake = async options => {
+    if (options.runId !== 456) return {runId: 901, sourceCommit: 'b'.repeat(40)};
+    const result = await ownIntake(options); f.state.runStatus = 'in_progress'; f.state.conclusion = null; return result;
+  };
+  await assert.rejects(scheduleDealerPackSource(f.options), /exact authenticated/);
   assert.equal(f.store.state.activeReservationId, null); assert.equal(f.posts.length, 1);
   f.options.ensureTerminalIntake = async ({runId}) => ({runId, sourceCommit: sourceSha, contracts: {runId, sourceCommit: sourceSha, conclusion: 'success'},
     requests: [], failures: [{slug: 'dealer-14', reason: 'Exact failed native gate'}], failedMaterials: [{dealerId: ids[14], slug: 'dealer-14', packDigest: packDigest(14),
@@ -225,9 +253,99 @@ test('foreign source observed during our live campaign remains a terminal-intake
 
 test('an exact old reserved run finishes after main advances without relabelling source completion as qualification', async () => {
   const f = fixture({available: 1}); await scheduleDealerPackSource(f.options);
+  f.options.ensureTerminalIntake = ownedTerminalIntake(f);
   f.state.main = 'b'.repeat(40); f.options.sourceSha = f.state.main; f.state.runStatus = 'completed'; f.state.conclusion = 'success';
   const result = await scheduleDealerPackSource(f.options); assert.equal(result.sourceCompletion.status, 'source-finished');
-  assert.equal(f.store.state.targets[ids[0]].status, 'source-finished'); assert.equal(f.queue.order.length, 0); assert.equal(f.posts.length, 1);
+  assert.equal(f.store.state.targets[ids[0]].status, 'retained'); assert.equal(f.queue.order.length, 1); assert.equal(f.posts.length, 1);
+});
+
+test('owned completion intakes the exact old source and freshly retains outputs before advanced code can plan another cohort', async () => {
+  const f = fixture({available: 9}); await scheduleDealerPackSource(f.options);
+  const id = f.store.state.activeReservationId, old = f.store.state.reservations[id], events = [], read = f.options.queueStore.read, intake = ownedTerminalIntake(f);
+  f.options.queueStore.read = async () => {events.push('queue-read'); return read();};
+  f.state.main = 'b'.repeat(40); f.options.sourceSha = f.state.main; f.options.buildFingerprint = queueDigest('advanced-shared-code');
+  f.state.runStatus = 'completed'; f.state.conclusion = 'success';
+  f.options.listPacks = () => Array.from({length: 10}, (_, n) => ({slug: 'dealer-' + n, dealerId: ids[n], valid: true}));
+  f.options.ensureTerminalIntake = async options => {assert.equal(options.runId, old.run.id); assert.deepEqual(options.slugs, old.selections.map(row => row.slug));
+    events.push('intake'); const result = await intake(options); f.queue.requests[f.queue.order[0]].status = 'deployed'; f.state.runStatus = 'in_progress'; f.state.conclusion = null; return result;};
+  const dispatch = f.options.dispatch; f.options.dispatch = async value => {assert.equal(f.store.state.targets[ids[0]].retainedRequests[0].status, 'deployed');
+    assert(events.slice(events.indexOf('intake') + 1).includes('queue-read')); events.push('next-post'); return dispatch(value);};
+  const result = await scheduleDealerPackSource(f.options);
+  assert.equal(result.terminalIntakeCalls, 1); assert.equal(result.retained, 9); assert.deepEqual(f.posts[1].slugs, ['dealer-9']);
+  assert.equal(f.store.state.reservations[id].status, 'source-finished'); assert.equal(f.store.state.reservations[id].sourceSha, sourceSha);
+  assert.deepEqual(f.store.state.reservations[id].selections, old.selections); assert(events.indexOf('intake') < events.indexOf('next-post'));
+});
+
+test('an interrupted owned intake repeats idempotently against the same run before release and never repeats its source POST', async () => {
+  const f = fixture({available: 1}); await scheduleDealerPackSource(f.options);
+  const id = f.store.state.activeReservationId, selection = f.store.state.reservations[id].selections, intake = ownedTerminalIntake(f); let attempts = 0;
+  f.state.main = 'b'.repeat(40); f.options.sourceSha = f.state.main; f.options.buildFingerprint = queueDigest('new-code'); f.state.runStatus = 'completed'; f.state.conclusion = 'success';
+  f.options.ensureTerminalIntake = async options => {attempts++; const result = await intake(options); if (attempts === 1) throw Error('Interruption after durable queue enqueue'); return result;};
+  assert.equal((await scheduleDealerPackSource(f.options)).status, 'needs-reconciliation');
+  assert.equal(f.store.state.activeReservationId, id); assert.equal(f.queue.order.length, 1); assert.equal(f.posts.length, 1);
+  const recovered = await scheduleDealerPackSource(f.options); assert.equal(recovered.retained, 1); assert.equal(attempts, 2);
+  assert.equal(f.store.state.activeReservationId, null); assert.deepEqual(f.store.state.reservations[id].selections, selection);
+  assert.equal(f.queue.order.length, 1); assert.equal(f.posts.length, 1);
+});
+
+test('owned global, unbound, pending, mismatched or unretained terminal intake never releases its reservation', async () => {
+  for (const defect of ['throw', 'global', 'unbound', 'pending', 'source', 'unretained']) {
+    const f = fixture({available: 1}); await scheduleDealerPackSource(f.options); const id = f.store.state.activeReservationId;
+    f.state.runStatus = 'completed'; f.state.conclusion = 'failure'; f.state.main = 'b'.repeat(40); f.options.sourceSha = f.state.main; f.options.buildFingerprint = queueDigest('advanced-code');
+    f.options.ensureTerminalIntake = async () => {
+      if (defect === 'throw') throw Error('Intake interrupted');
+      return {runId: 456, sourceCommit: defect === 'source' ? f.state.main : sourceSha, contracts: {runId: 456, sourceCommit: sourceSha, conclusion: 'success'}, requests: [], failedMaterials: [],
+        pending: defect === 'pending' ? [{slugs: ['dealer-0']}] : [], failures: defect === 'global' ? [{artifact: 'unbound', reason: 'Broken artifact'}] : defect === 'unbound' ? [{slug: 'foreign-pack', reason: 'Different source member'}] : []};
+    };
+    assert.equal((await scheduleDealerPackSource(f.options)).status, 'needs-reconciliation', defect);
+    assert.equal(f.store.state.activeReservationId, id); assert.equal(f.store.state.reservations[id].status, 'needs-reconciliation'); assert.equal(f.posts.length, 1);
+    await scheduleDealerPackSource(f.options); assert.equal(f.posts.length, 1, defect);
+  }
+});
+
+test('cancelled prequalification can release as held without terminal intake or reopening unchanged source material', async () => {
+  const f = fixture({available: 1}); await scheduleDealerPackSource(f.options);
+  const id = f.store.state.activeReservationId; f.state.runStatus = 'completed'; f.state.conclusion = 'cancelled';
+  f.options.ensureTerminalIntake = async () => assert.fail('Cancelled prequalification is not admissible intake');
+  const result = await scheduleDealerPackSource(f.options);
+  assert.equal(result.terminalIntakeCalls, 0); assert.equal(f.store.state.activeReservationId, null); assert.equal(f.store.state.reservations[id].status, 'held'); assert.equal(f.posts.length, 1);
+});
+
+test('historical partial own source retains nine survivors and missing-lane material before advanced-source planning without rewriting history', async () => {
+  const f = fixture({available: 10}); await scheduleDealerPackSource(f.options); const id = f.store.state.activeReservationId, old = f.store.state.reservations[id];
+  const run = nativeRun(old, {status: 'completed', conclusion: 'failure'});
+  await mutateSourceCampaign(f.store, state => finishSourceCohort(state, {reservationId: id, run, now: at}), {now: at});
+  const frozen = f.store.state.reservations[id]; assert.equal(f.queue.order.length, 0);
+  f.state.main = 'b'.repeat(40); f.options.sourceSha = f.state.main; f.options.buildFingerprint = queueDigest('fixed-new-code');
+  f.options.listPacks = () => Array.from({length: 13}, (_, n) => ({slug: 'dealer-' + n, dealerId: ids[n], valid: true}));
+  let intakes = 0;
+  f.options.ensureTerminalIntake = async options => {intakes++; assert.equal(options.runId, 456); assert.deepEqual(options.slugs, old.selections.map(row => row.slug));
+    for (let n = 0; n < 9; n++) if (!f.queue.order.some(requestId => f.queue.requests[requestId].request.dealerId === ids[n])) f.add(n);
+    const failed = old.selections[9]; return {runId: 456, sourceCommit: sourceSha, contracts: {runId: 456, sourceCommit: sourceSha, conclusion: 'success'}, requests: [], pending: [],
+      failures: [{slug: failed.slug, reason: 'Requested slug has no qualified artifact in this source run'}], failedMaterials: [ownedFailedMaterial(failed, sourceSha)]};};
+  const result = await scheduleDealerPackSource(f.options);
+  assert.equal(result.retained, 9); assert.equal(intakes, 1); assert.deepEqual(f.posts[1].slugs, ['dealer-9', 'dealer-10', 'dealer-11', 'dealer-12']);
+  assert.deepEqual(f.store.state.reservations[id], frozen); assert.equal(f.store.state.targets[ids[9]].materials[0].reservationId, id);
+  assert.equal(f.store.state.targets[ids[9]].materials.length, 2);
+  assert.equal(f.store.state.ownedIntakes[id].failedMaterialProofs.length, 1);
+  const discover = f.options.discover; f.options.discover = async options => {assert.notEqual(options.reservation?.id, id, 'Expired historical source must not even be reread'); return discover(options);};
+  f.options.now = () => Date.parse(at) + 8 * 24 * 3600 * 1000; f.state.runStatus = 'completed'; f.state.conclusion = 'cancelled';
+  f.options.dispatch = async () => assert.fail('Unchanged material never redispatches');
+  f.options.ensureTerminalIntake = async () => assert.fail('Durable historical intake must not reread expired artifacts');
+  assert.equal((await scheduleDealerPackSource(f.options)).status, 'waiting-inputs'); assert.equal(intakes, 1);
+  assert.deepEqual(f.store.state.reservations[id], frozen);
+});
+
+test('historical intake never trusts a fresh run with a different source or a global unbound result', async () => {
+  for (const defect of ['source', 'global']) {
+    const f = fixture({available: 1}); await scheduleDealerPackSource(f.options); const id = f.store.state.activeReservationId, old = f.store.state.reservations[id];
+    await mutateSourceCampaign(f.store, state => finishSourceCohort(state, {reservationId: id, run: nativeRun(old, {status: 'completed', conclusion: 'failure'}), now: at}), {now: at});
+    const frozen = f.store.state.reservations[id]; f.state.main = 'b'.repeat(40); f.options.sourceSha = f.state.main; f.options.buildFingerprint = queueDigest('new-source-code');
+    const discover = f.options.discover; f.options.discover = async options => {const found = await discover(options); return defect === 'source' && found.reservationRun ? {...found, reservationRun: {...found.reservationRun, head_sha: f.state.main}} : found;};
+    let callbacks = 0; f.options.ensureTerminalIntake = async () => {callbacks++; return {runId: 456, sourceCommit: sourceSha, contracts: {runId: 456, sourceCommit: sourceSha, conclusion: 'success'}, requests: [], pending: [], failedMaterials: [], failures: [{artifact: 'unbound', reason: 'Unresolved artifact failure'}]};};
+    assert.equal((await scheduleDealerPackSource(f.options)).status, 'needs-reconciliation');
+    assert.equal(callbacks, defect === 'source' ? 0 : 1); assert.equal(f.posts.length, 1); assert.deepEqual(f.store.state.reservations[id], frozen); assert.equal(f.store.state.ownedIntakes[id], undefined);
+  }
 });
 
 test('bad published source fails before bootstrap, and source advances during input checks prevent POST', async () => {
@@ -273,12 +391,13 @@ test('terminal intake reuses the pinned resolver source, seals failed bytes and 
     return [...files].map(([name, bytes]) => '100644 blob ' + createHash('sha1').update('blob ' + bytes.length + '\0').update(bytes).digest('hex') + '\tdealers/owned-pack/' + name + '\0').join('');};
   let sourceReads = 0; const resolver = {async source(sha) {assert.equal(sha, sourceSha); sourceReads++; return root;}};
   const before = process.exitCode, runDispatcher = async (argv, options) => {assert.equal(options.resolver, resolver); assert(argv.includes('--automatic')); process.exitCode = 9;
-    return {runId: 901, sourceCommit: sourceSha, requests: [], failures: [{slug: 'owned-pack', reason: 'Exact failed native gate'}]};};
-  const intake = createDealerPackTerminalIntake({root, resolver, runDispatcher, git}), result = await intake({runId: 901});
+    assert(argv.includes('--slugs')); assert.deepEqual(JSON.parse(fs.readFileSync(argv[argv.indexOf('--slugs') + 1], 'utf8')), ['owned-pack']);
+    return {runId: 901, sourceCommit: sourceSha, requests: [], failures: [{slug: 'owned-pack', reason: 'Requested slug has no qualified artifact in this source run'}]};};
+  const intake = createDealerPackTerminalIntake({root, resolver, runDispatcher, git}), result = await intake({runId: 901, slugs: ['owned-pack']});
   assert.equal(process.exitCode, before); assert.equal(sourceReads, 1); assert.equal(result.failedMaterials.length, 1);
   assert.deepEqual({...result.failedMaterials[0], packDigest: 'checked separately'}, {dealerId: ids[0], slug: 'owned-pack', packDigest: 'checked separately',
     scriptsTree, lockBlob, nativeWorkflowBlob, buildFingerprint: queueDigest({kind: 'cars-source-build-material-v1', scriptsTree, lockBlob, nativeWorkflowBlob}),
-    sourceSha, packTree, reason: 'Exact failed native gate'});
+    sourceSha, packTree, reason: 'Requested slug has no qualified artifact in this source run'});
   assert.equal(result.failedMaterials[0].packDigest, inspectSourcePackMaterial({root, slug: 'owned-pack', dealerId: ids[0], sourceSha, git}).packDigest);
   const bad = createDealerPackTerminalIntake({root, resolver, git, runDispatcher: async () => {process.exitCode = 7; return {runId: 901, sourceCommit: sourceSha, failures: [{artifact: 'unbound', reason: 'Global failure'}]};}});
   await assert.rejects(bad({runId: 901}), /Global or artifact/); assert.equal(process.exitCode, before); assert.equal(sourceReads, 1);

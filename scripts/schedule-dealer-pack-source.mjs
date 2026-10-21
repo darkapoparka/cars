@@ -11,7 +11,7 @@ import {readPackBatchAssignments} from './lib/dealer-pack-identity.mjs';
 import {PACK_QUEUE_REPOSITORY, githubPackQueueStore, validatePackQueue, queueDigest} from './lib/dealer-pack-queue.mjs';
 import {registerSourceCampaign, validateSourceCampaign, mutateSourceCampaign, gitSourceCampaignStore,
   reserveSourceCohort, bindSourceCohortRun, finishSourceCohort, holdSourceCohort, syncSourceCampaignTargets,
-  hasAttemptedSourceMaterial, observeSourceExternalRuns, completeSourceExternalRunIntake, SOURCE_COHORT_MAX} from './lib/dealer-pack-source-campaign.mjs';
+  hasAttemptedSourceMaterial, observeSourceExternalRuns, completeSourceExternalRunIntake, completeSourceOwnedRunIntake, SOURCE_COHORT_MAX} from './lib/dealer-pack-source-campaign.mjs';
 import {discoverSourcePipelineRuns} from './lib/dealer-pack-source-discovery.mjs';
 import {checkDealerPackInputs} from './check-dealer-pack-inputs.mjs';
 import {githubPackTransport} from './deploy-dealer-packs.mjs';
@@ -87,11 +87,19 @@ export async function dispatchDealerPackSource({sourceSha, rolloutRequestId, slu
  * materials are observations, never replacement qualified deployment requests. */
 export function createDealerPackTerminalIntake({root = ROOT, resolver: suppliedResolver, runDispatcher, git = readGit} = {}) {
   let resolver = suppliedResolver;
-  return async ({runId}) => {
+  return async ({runId, slugs}) => {
+    assert(Number.isSafeInteger(runId) && runId > 0, 'Exact terminal source run ID required');
+    let slugArguments = [];
+    if (slugs !== undefined) {
+      assert(Array.isArray(slugs) && slugs.length > 0 && slugs.length <= SOURCE_COHORT_MAX && new Set(slugs).size === slugs.length && slugs.every(validPackSlug), 'Exact bounded owned source selection required');
+      const file = path.join(root, 'runtime/dealer-pack-source/intake-' + runId + '-slugs.json');
+      fs.mkdirSync(path.dirname(file), {recursive: true}); fs.writeFileSync(file, JSON.stringify(slugs) + '\n');
+      slugArguments = ['--slugs', file];
+    }
     const commands = runDispatcher ? null : await import('./dispatch-dealer-pack-queue.mjs');
     resolver ??= commands.packArtifactResolver({root});
     const exitCode = process.exitCode; let intake;
-    try {intake = await (runDispatcher ?? commands.runPackQueueDispatcher)(['enqueue', '--run', String(runId), '--automatic', '--report',
+    try {intake = await (runDispatcher ?? commands.runPackQueueDispatcher)(['enqueue', '--run', String(runId), '--automatic', ...slugArguments, '--report',
       path.join(root, 'runtime/dealer-pack-source/intake-' + runId + '.json')], {root, resolver});}
     finally {process.exitCode = exitCode;}
     assert(intake?.runId === runId && hex(intake.sourceCommit, 40) && Array.isArray(intake.failures), 'Exact maintained terminal intake report required');
@@ -154,6 +162,40 @@ export async function scheduleDealerPackSource({root = ROOT, assignment = readPa
     await rememberExternalRuns(found.activeRuns, found.reservationRun?.id);
     return found;
   };
+  const retainedRuns = new Set();
+  const retainOwnCompleted = async (reservation, run, {finish = false} = {}) => {
+    assert(run?.path === '.github/workflows/dealer-pack-pipeline.yml' && run.repository?.full_name === PACK_QUEUE_REPOSITORY &&
+      run.head_repository?.full_name === PACK_QUEUE_REPOSITORY && run.head_branch === 'main' && run.event === 'workflow_dispatch' &&
+      run.head_sha === reservation.sourceSha && run.run_attempt === 1 && run.display_title === 'Cars rollout ' + reservation.id &&
+      run.status === 'completed' && ['success', 'failure'].includes(run.conclusion) && (!reservation.run || reservation.run.id === run.id), 'Authenticated exact owned terminal run required');
+    assert(typeof ensureTerminalIntake === 'function', 'Maintained terminal intake is required');
+    report.terminalIntakeCalls++;
+    const selected = new Map(reservation.selections.map(row => [row.slug, row])), intake = await ensureTerminalIntake({runId: run.id, slugs: [...selected.keys()]});
+    assert(intake?.runId === run.id && intake.sourceCommit === reservation.sourceSha && Array.isArray(intake.requests) && Array.isArray(intake.failures) &&
+      (!intake.pending || Array.isArray(intake.pending) && intake.pending.length === 0) && Array.isArray(intake.failedMaterials) &&
+      intake.contracts?.runId === run.id && intake.contracts.sourceCommit === reservation.sourceSha && intake.contracts.conclusion === 'success', 'Exact completed source intake proof required');
+    assert(intake.requests.every(row => selected.get(row.slug)?.dealerId === row.dealerId && row.sourceCommit === reservation.sourceSha) &&
+      intake.failures.every(row => selected.has(row.slug) && typeof row.reason === 'string' && row.reason.trim()) &&
+      intake.failedMaterials.length === new Set(intake.failures.map(row => row.slug)).size &&
+      new Set(intake.failedMaterials.map(row => row.slug)).size === intake.failedMaterials.length && intake.failedMaterials.every(row => {
+        const member = selected.get(row.slug);
+        return member && intake.failures.some(failure => failure.slug === row.slug) && row.dealerId === member.dealerId && row.packDigest === member.packDigest &&
+          row.buildFingerprint === member.buildFingerprint && row.sourceSha === reservation.sourceSha;
+      }), 'Completed source intake contains a global, unbound or different material outcome');
+    // Retain successful outputs before releasing source ownership. A lost
+    // callback/CAS response can safely repeat exact automatic intake; it
+    // never authorizes another source POST or drops the original intent.
+    current = await mutate(async state => {
+      const fresh = await queue();
+      assert(reservation.selections.every(member => intake.failures.some(row => row.slug === member.slug) ||
+        Object.values(fresh.requests).some(row => row.request.dealerId === member.dealerId && row.request.slug === member.slug)), 'Every completed member needs retained qualified queue identity or its exact held outcome');
+      const retained = syncSourceCampaignTargets(state, {queue: fresh, now: time()});
+      const completed = completeSourceOwnedRunIntake(retained, {reservationId: reservation.id, run, intake: {...intake, completed: true}, now: time()});
+      return finish ? finishSourceCohort(completed, {reservationId: reservation.id, run, now: time()}) : completed;
+    });
+    retainedRuns.add(run.id);
+    (report.sourceIntakes ??= []).push({runId: run.id, sourceSha: reservation.sourceSha, members: reservation.selections.length});
+  };
   const reconcile = async (reservation, acknowledgement) => {
     // A legacy producer can finish while our own run is still building. Retain
     // its exact identity now, so disappearing from active listings cannot erase
@@ -162,7 +204,17 @@ export async function scheduleDealerPackSource({root = ROOT, assignment = readPa
     if (found.needsReconciliation || !found.reservationRun) return hold(reservation.id, 'Retained native dispatch needs one positive exact nonce/source/run observation; no POST will be retried');
     const run = found.reservationRun;
     if (run.status === 'completed') {
-      current = await mutate(state => finishSourceCohort(state, {reservationId: reservation.id, run, now: time()}));
+      if (['success', 'failure'].includes(run.conclusion)) {
+        try {
+          await retainOwnCompleted(reservation, run, {finish: true});
+        } catch {
+          current = await store.read();
+          const reason = 'Exact completed source intake or fresh qualified-queue retention is incomplete; original reservation remains held before any new source dispatch';
+          return current.state.activeReservationId === reservation.id ? hold(reservation.id, reason) : finishReport('needs-reconciliation', reason);
+        }
+      } else if (run.conclusion === 'cancelled') {
+        current = await mutate(state => finishSourceCohort(state, {reservationId: reservation.id, run, now: time()}));
+      } else return hold(reservation.id, 'Completed native run has no admissible terminal intake conclusion; retain its exact source reservation for reconciliation');
       report.sourceCompletion = {reservationId: reservation.id, runId: run.id, conclusion: run.conclusion, status: current.state.reservations[reservation.id].status,
         qualification: 'Source run finished; exact artifact intake and per-dealer native/hosted outcomes remain separate'};
       return null;
@@ -172,6 +224,20 @@ export async function scheduleDealerPackSource({root = ROOT, assignment = readPa
   };
   if (current.state.activeReservationId) {
     const result = await reconcile(current.state.reservations[current.state.activeReservationId]); if (result) return result;
+  }
+  // Older executors may have released an owned terminal run before its
+  // qualified outputs entered queue.json. Recover that handoff from immutable
+  // reservation history without reopening or rewriting the terminal record.
+  for (const reservation of Object.values(current.state.reservations)) {
+    if (!['source-finished', 'held'].includes(reservation.status) || !['success', 'failure'].includes(reservation.run?.conclusion) ||
+      current.state.ownedIntakes?.[reservation.id] || retainedRuns.has(reservation.run.id) || reservation.selections.every(row => current.state.targets[row.dealerId].retainedRequestIds.length)) continue;
+    try {
+      const found = await discoverRuns({readGithub, reservation, now: clock(now)}), run = found.reservationRun;
+      assert(!found.needsReconciliation && run?.status === 'completed' && run.id === reservation.run.id && ['success', 'failure'].includes(run.conclusion), 'Exact historical terminal source proof required');
+      await retainOwnCompleted(reservation, run);
+    } catch {
+      return finishReport('needs-reconciliation', 'Retained historical source outputs require exact terminal intake and fresh queue retention before any source replan');
+    }
   }
   let discovery = await discoverRuns({readGithub, externalRuns: Object.values(current.state.externalRuns).filter(row => !row.terminalIntakeComplete), now: clock(now)});
   if (Object.values(current.state.externalRuns).some(row => !row.terminalIntakeComplete)) {
@@ -194,6 +260,7 @@ export async function scheduleDealerPackSource({root = ROOT, assignment = readPa
   }
   if (discovery.unknownActive || discovery.needsReconciliation) return finishReport('waiting-external-source', 'Untracked or incomplete native-run evidence defers all new source work');
   if (await mainSource(readGithub) !== sourceSha) return finishReport('waiting-source', 'Published main advanced; a scheduler at its exact new source must continue');
+  current = await mutate(async state => syncSourceCampaignTargets(state, {queue: await queue(), now: time()}));
   const packs = listPacks(root), byId = new Map();
   for (const pack of packs) if (current.state.targets[pack.dealerId]) {const matches = byId.get(pack.dealerId) ?? []; matches.push(pack); byId.set(pack.dealerId, matches);}
   const selections = [];
@@ -220,7 +287,7 @@ export async function scheduleDealerPackSource({root = ROOT, assignment = readPa
       selections.push(selection);
     } catch {observe('Maintained exact source/identity/branding/input verification is held; no build was requested');}
   }
-  if (report.observations.length) current = await mutate(state => syncSourceCampaignTargets(state, {queue: initialQueue, observations: report.observations, now: time()}));
+  if (report.observations.length) current = await mutate(async state => syncSourceCampaignTargets(state, {queue: await queue(), observations: report.observations, now: time()}));
   if (!selections.length) return finishReport('waiting-inputs', 'All400 targets remain tracked; no new reviewed unprocessed material is ready');
   // Recheck mutable run/main/qualified-queue state after potentially slow raster checks.
   discovery = await discoverRuns({readGithub, now: clock(now)});

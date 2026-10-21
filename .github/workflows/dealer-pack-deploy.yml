@@ -27,6 +27,11 @@ on:
         description: Dealer pack pipeline run with a qualified completed producer; omit for drain or recovery
         required: false
         type: string
+      automatic_intake:
+        description: Internal native completion callback; require the existing strict automatic intake guards
+        required: false
+        default: false
+        type: boolean
       artifact_prefix:
         description: Optional exact dealer-pack-transport--RUN--lane-N prefix
         required: false
@@ -153,7 +158,7 @@ jobs:
           runtime/dealer-pack-deploy-tools/node_modules/.bin/playwright install --with-deps chromium
       - name: Check executor intake and recovery guards
         id: executor_guard
-        run: node --test scripts/dealer-pack-dispatcher.test.mjs scripts/dealer-pack-ready-intake.test.mjs scripts/dealer-pack-recovery-workflow.test.mjs scripts/dealer-pack-automatic-intake.test.mjs scripts/inspect-dealer-pack-pilot.test.mjs scripts/dealer-pack-continuation.test.mjs scripts/dealer-pack-provider.test.mjs scripts/dealer-pack-upload-members.test.mjs scripts/dealer-pack-source-campaign.test.mjs scripts/dealer-pack-source-discovery.test.mjs scripts/dealer-pack-source-scheduler.test.mjs scripts/dealer-pack-source-rollout-workflow.test.mjs
+        run: node --test scripts/dealer-pack-dispatcher.test.mjs scripts/dealer-pack-ready-intake.test.mjs scripts/dealer-pack-recovery-workflow.test.mjs scripts/dealer-pack-automatic-intake.test.mjs scripts/inspect-dealer-pack-pilot.test.mjs scripts/dealer-pack-continuation.test.mjs scripts/dealer-pack-provider.test.mjs scripts/dealer-pack-upload-members.test.mjs scripts/dealer-pack-source-campaign.test.mjs scripts/dealer-pack-source-discovery.test.mjs scripts/dealer-pack-source-scheduler.test.mjs scripts/dealer-pack-source-rollout-workflow.test.mjs scripts/notify-dealer-pack-source-complete.test.mjs
       - name: Check deployment credential presence without exposing it
         id: token
         env:
@@ -172,7 +177,7 @@ jobs:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           SOURCE_RUN_ID: ${{ github.event.workflow_run.id || inputs.source_run_id }}
           PACK_ACTION: ${{ github.event_name == 'workflow_run' && 'enqueue-and-deploy' || inputs.action }}
-          PACK_AUTOMATIC: ${{ github.event_name == 'workflow_run' && 'true' || 'false' }}
+          PACK_AUTOMATIC: ${{ (github.event_name == 'workflow_run' || inputs.automatic_intake == true) && 'true' || 'false' }}
           PACK_PREFIX: ${{ inputs.artifact_prefix }}
           PACK_SLUGS: ${{ inputs.slugs }}
           PACK_BATCH: ${{ inputs.batch }}

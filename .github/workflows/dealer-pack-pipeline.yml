@@ -418,6 +418,9 @@ jobs:
     - lane
     if: ${{ !cancelled() }}
     runs-on: ubuntu-24.04
+    permissions:
+      contents: read
+      actions: write
     steps:
     - name: Report independent outcomes without hiding rejected packs
       env:
@@ -432,3 +435,40 @@ jobs:
         fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY,JSON.stringify(rows,null,2)+'\n');
         if(rows.contracts!=='success'||!['success','skipped'].includes(rows.plan)||!['success','skipped'].includes(rows.lanes)||rows.rejected>0)process.exitCode=1;
         NODE
+    - name: Check out the exact reserved source completion callback
+      if: ${{ !cancelled() && github.event_name == 'workflow_dispatch' && github.repository == 'darkapoparka/cars' && github.ref == 'refs/heads/main' && github.run_attempt == 1 && inputs.rollout_request_id && inputs.rollout_source_sha == github.sha && inputs.rollout_source_sha == github.workflow_sha && needs.contracts.result == 'success' && needs.plan.result == 'success' && needs.plan.outputs.has_work == 'true' && needs.plan.outputs.benchmark == 'false' }}
+      uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      with:
+        ref: ${{ github.sha }}
+        fetch-depth: 1
+        persist-credentials: false
+        sparse-checkout-cone-mode: false
+        sparse-checkout: |
+          /scripts/notify-dealer-pack-source-complete.mjs
+          /scripts/lib/cli-entrypoint.mjs
+    - name: Use the pinned native completion runtime
+      if: ${{ !cancelled() && github.event_name == 'workflow_dispatch' && github.repository == 'darkapoparka/cars' && github.ref == 'refs/heads/main' && github.run_attempt == 1 && inputs.rollout_request_id && inputs.rollout_source_sha == github.sha && inputs.rollout_source_sha == github.workflow_sha && needs.contracts.result == 'success' && needs.plan.result == 'success' && needs.plan.outputs.has_work == 'true' && needs.plan.outputs.benchmark == 'false' }}
+      uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+      with:
+        node-version: 26.10.0
+        package-manager-cache: false
+    - name: Hand qualified native survivors to the existing deployment queue
+      if: ${{ !cancelled() && github.event_name == 'workflow_dispatch' && github.repository == 'darkapoparka/cars' && github.ref == 'refs/heads/main' && github.run_attempt == 1 && inputs.rollout_request_id && inputs.rollout_source_sha == github.sha && inputs.rollout_source_sha == github.workflow_sha && needs.contracts.result == 'success' && needs.plan.result == 'success' && needs.plan.outputs.has_work == 'true' && needs.plan.outputs.benchmark == 'false' }}
+      env:
+        GITHUB_TOKEN: ${{ github.token }}
+        CONTRACTS_RESULT: ${{ needs.contracts.result }}
+        PLAN_RESULT: ${{ needs.plan.result }}
+        LANE_RESULT: ${{ needs.lane.result }}
+        HAS_WORK: ${{ needs.plan.outputs.has_work }}
+        BENCHMARK: ${{ needs.plan.outputs.benchmark }}
+        ROLLOUT_REQUEST_ID: ${{ inputs.rollout_request_id }}
+        ROLLOUT_SOURCE_SHA: ${{ inputs.rollout_source_sha }}
+      run: node scripts/notify-dealer-pack-source-complete.mjs --report runtime/dealer-pack-source/notify-complete.json
+    - name: Retain the exact native completion handoff outcome
+      if: ${{ !cancelled() }}
+      uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+      with:
+        name: dealer-pack-source-completion--${{ github.run_id }}
+        path: runtime/dealer-pack-source/notify-complete.json
+        if-no-files-found: ignore
+        retention-days: 3
