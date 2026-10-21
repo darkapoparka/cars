@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": false,
+  "reviewedAt": null,
+  "dealer": "affordable-motors-birmingham",
+  "dealerId": "gb-birmingham-affordable-motors",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "review": {
+    "kind": "pending",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "method": "Draft identity only; run automated pack input review before building.",
+  "sources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/Affordable-motors",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.cargurus.co.uk/Cars/m-Affordable-Motors-Birmingham-sp525539",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.pistonheads.com/buy/dealer/1005138",
+      "observedAt": "2026-10-18"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-public-business-contact-review",
+  "dealer": "yorkshire-car-company-of-castleford",
+  "checks": [
+    {
+      "field": "business.email",
+      "valueSha256": "949e89c8f9f42f2a47d1ea133558f0a6ebb75f0c359a46639828346157e4cd9e",
+      "classification": "public-business",
+      "reviewed": true,
+      "reviewKind": "source-evidence",
+      "sourceUrl": "https://showroom.ebaymotorspro.co.uk/Yorkshire-Car-Company-Of-Castleford?menu=1",
+      "observedAt": "2026-10-21",
+      "evidence": "The Yorkshire Car Company of Castleford public eBay Motors Pro showroom publishes the unchanged email under its business contact section. Dealer name, telephone and Barnsdale Road premises match the existing business facts."
+    }
+  ]
+}
+

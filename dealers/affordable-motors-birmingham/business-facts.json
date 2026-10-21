@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "slug": "affordable-motors-birmingham",
+  "dealerId": "gb-birmingham-affordable-motors",
+  "business": {
+    "name": "Affordable Motors Birmingham",
+    "city": "Birmingham",
+    "region": "West Midlands",
+    "countryCode": "GB",
+    "currency": "GBP",
+    "distanceUnit": "mi",
+    "locale": "en-GB",
+    "address": "456 Alum Rock Road, Birmingham B8 3HU",
+    "phone": "+441216618621",
+    "phoneDisplay": "+441216618621",
+    "email": "ibraaheemakram@gmail.com",
+    "website": "",
+    "stockUrl": "https://showroom.ebaymotorspro.co.uk/Affordable-motors",
+    "hours": "",
+    "sourceUrl": "https://showroom.ebaymotorspro.co.uk/Affordable-motors",
+    "observedAt": "2026-10-18",
+    "inventoryNotice": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/Affordable-motors",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.cargurus.co.uk/Cars/m-Affordable-Motors-Birmingham-sp525539",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.pistonheads.com/buy/dealer/1005138",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    }
+  ]
+}

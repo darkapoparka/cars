@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-public-business-contact-review",
+  "dealer": "l4c-car-sale",
+  "checks": [
+    {
+      "field": "business.email",
+      "valueSha256": "fa702105681274ab624c840675df5f1f9a8af5e2bfcbb32eda14bb98df4fb897",
+      "classification": "public-business",
+      "reviewed": true,
+      "reviewKind": "source-evidence",
+      "sourceUrl": "https://showroom.ebaymotorspro.co.uk/Kobani-Motors",
+      "observedAt": "2026-10-21",
+      "evidence": "The public eBay Motors Pro page displays L4C Car Sale despite its historical Kobani-Motors URL. It publishes the unchanged email under its business contact section; displayed dealer name, telephone and Grice Street premises match the existing business facts."
+    }
+  ]
+}
+

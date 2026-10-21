@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-public-business-contact-review",
+  "dealer": "affordable-motors-birmingham",
+  "checks": [
+    {
+      "field": "business.email",
+      "valueSha256": "c837ccb7889dde476ca01333b2e6514115fef82f7cdc1a035218b593f02b08a0",
+      "classification": "public-business",
+      "reviewed": true,
+      "reviewKind": "source-evidence",
+      "sourceUrl": "https://showroom.ebaymotorspro.co.uk/Affordable-motors",
+      "observedAt": "2026-10-21",
+      "evidence": "The dealer's public eBay Motors Pro showroom publishes the unchanged email under its business contact section. Dealer name, telephone and Alum Rock Road premises match the existing business facts."
+    }
+  ]
+}
+

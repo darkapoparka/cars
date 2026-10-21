@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-public-business-contact-review",
+  "dealer": "auto-club",
+  "checks": [
+    {
+      "field": "business.email",
+      "valueSha256": "0ae43ae4ba1612a5056bd799bf4c19cbc10b1f353a2627dec2100064d1fbd522",
+      "classification": "public-business",
+      "reviewed": true,
+      "reviewKind": "source-evidence",
+      "sourceUrl": "https://showroom.ebaymotorspro.co.uk/AUTO-CLUB?menu=1",
+      "observedAt": "2026-10-21",
+      "evidence": "The Auto Club public eBay Motors Pro showroom publishes the unchanged email under its business contact section. Dealer name, telephone and Wholesale Fruit Centre premises match the existing business facts."
+    }
+  ]
+}
+

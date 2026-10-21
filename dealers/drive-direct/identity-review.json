@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": false,
+  "reviewedAt": null,
+  "dealer": "drive-direct",
+  "dealerId": "gb-birmingham-drive-direct",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "review": {
+    "kind": "pending",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "method": "Draft identity only; run automated pack input review before building.",
+  "sources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/Drive-Direct?menu=1",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.autotrader.co.uk/dealers/warwickshire/birmingham/drive-direct-10048383",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.cazoo.co.uk/dealers/drive-direct-53102/",
+      "observedAt": "2026-10-18"
+    }
+  ]
+}

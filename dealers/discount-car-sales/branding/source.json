@@ -1,0 +1,204 @@
+{
+  "schemaVersion": 1,
+  "dealer": "discount-car-sales",
+  "status": "reviewed",
+  "realLogoFirst": true,
+  "publicSources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/hetton-motors",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.cazoo.co.uk/dealers/discount-car-sales-91481/",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "originals": [],
+  "creationMethod": "imagegen-proposal",
+  "dealerApproved": false,
+  "generatedInputs": {
+    "reviewedAt": "2026-10-20T22:53:00.654Z",
+    "master": {
+      "path": "branding/generated-master-v1-20261021.png",
+      "sha256": "11679c93999d2531623a1429934d142744b8170654e764e0f355efc1047b14fa",
+      "nativeDimensions": {
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-60ba87f8-96a3-4d19-9a2d-a6cacb10fdc1",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark-light-v1-20261021.png",
+      "sha256": "9112e657e5c8ef4ccafcb4f124f3f0b7f13c1d6f4fc8c48568ce769d292d5cad",
+      "nativeDimensions": {
+        "width": 813,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-60ba87f8-96a3-4d19-9a2d-a6cacb10fdc1",
+        "modelVersion": null
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-dark-v1-20261021.png",
+      "sha256": "64442e4b8cc59dd6c67aec297bd38aca589da769ef352ab713280ac78649e896",
+      "nativeDimensions": {
+        "width": 813,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-7af21d65-774d-4228-84bc-26b74ff75299",
+        "modelVersion": null
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-master-v1-20261021.png",
+        "sha256": "11679c93999d2531623a1429934d142744b8170654e764e0f355efc1047b14fa",
+        "nativeDimensions": {
+          "width": 2172,
+          "height": 724
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-60ba87f8-96a3-4d19-9a2d-a6cacb10fdc1",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-inverse-v1-20261021.png",
+        "sha256": "8d0d06e647f491a1759c1ee59f8d91697418d27b4287e35a78da2bdf3dee395e",
+        "nativeDimensions": {
+          "width": 2172,
+          "height": 724
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-7af21d65-774d-4228-84bc-26b74ff75299",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-inverse-v1-20261021.png",
+        "sha256": "8d0d06e647f491a1759c1ee59f8d91697418d27b4287e35a78da2bdf3dee395e",
+        "nativeDimensions": {
+          "width": 2172,
+          "height": 724
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-7af21d65-774d-4228-84bc-26b74ff75299",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-20T22:53:00.654Z",
+      "wordmarkWidths": [
+        120,
+        180
+      ],
+      "markWidths": [
+        32,
+        64
+      ],
+      "notes": "Agent inspected exact alpha-composited light/inverse wordmarks; final matched consumer sheet is separately retained. All five native dark/red backgrounds are unchanged. Proposal only, no human/dealer/native/hosted approval."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-20T22:53:00.654Z",
+      "widths": [
+        32,
+        64
+      ],
+      "notes": "Compact artwork is an exact pixel extraction of the isolated generated emblem, with a clear alpha gap to the wordmark; no recolour, filters or alpha cleanup."
+    }
+  },
+  "approvalStatus": "independent-preview-not-dealer-approved",
+  "researchConclusion": "Bounded retained/public-page checks did not obtain a usable distinct original raster. This does not establish absence of a dealer logo. Independent new proposal only; source facts and original lead name retained unchanged.",
+  "publicSourceObservations": [
+    {
+      "observedAt": "2026-10-20T22:53:00.654Z",
+      "kind": "bounded-logo-first-page-review",
+      "observations": "Retained eBay source returned404 and Cazoo detail redirected to generic directory. Retained dated source record is unchanged; no current identity, availability or contact approval inferred."
+    }
+  ],
+  "generation": {
+    "tool": "image_gen.imagegen",
+    "generationId": "exec-60ba87f8-96a3-4d19-9a2d-a6cacb10fdc1",
+    "modelVersion": null,
+    "prompt": "Use case: logo-brand. Create ONE independent proposal for the UK used-car dealer named \"DISCOUNT CAR SALES\" in Ashington. Exact text: DISCOUNT on first line, CAR SALES on second. Wide horizontal lockup, original open DCS monogram emblem isolated at left with generous transparent gap from bold friendly geometric wordmark on right. Deep blue #153151 lettering and muted brick red #a63038 small emblem accent. Flat opaque artwork, substantial strokes and large open counters, simple unambiguous monogram readable at32px and wording legible at120/180px. Truly transparent background with generous margins. No price/sale claims, taglines, ticks, crown, shield, generic car silhouette, backgroundplate, white keyline, gradient, glow, shadow, texture, speckles or extra text. This is a new independent artwork proposal based on retained trading name; never portray adoption or official status."
+  },
+  "compactDerivation": {
+    "operation": "lossless-png-extract-isolated-emblem",
+    "parentPath": "branding/generated-master-v1-20261021.png",
+    "parentSha256": "11679c93999d2531623a1429934d142744b8170654e764e0f355efc1047b14fa",
+    "crop": {
+      "left": 0,
+      "top": 0,
+      "width": 813,
+      "height": 724
+    },
+    "emptyGap": {
+      "start": 791,
+      "end": 835,
+      "width": 44
+    },
+    "parentNativeDimensions": {
+      "width": 2172,
+      "height": 724
+    },
+    "artworkUnmodified": true,
+    "alphaUnmodified": true
+  },
+  "compactOnDarkDerivation": {
+    "operation": "lossless-png-extract-isolated-emblem",
+    "parentPath": "branding/generated-inverse-v1-20261021.png",
+    "parentSha256": "8d0d06e647f491a1759c1ee59f8d91697418d27b4287e35a78da2bdf3dee395e",
+    "crop": {
+      "left": 0,
+      "top": 0,
+      "width": 813,
+      "height": 724
+    },
+    "emptyGap": {
+      "start": 792,
+      "end": 834,
+      "width": 42
+    },
+    "parentNativeDimensions": {
+      "width": 2172,
+      "height": 724
+    },
+    "artworkUnmodified": true,
+    "alphaUnmodified": true
+  },
+  "additionalGenerations": [
+    {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-7af21d65-774d-4228-84bc-26b74ff75299",
+      "modelVersion": null,
+      "prompt": "Use case: logo-brand, faithful inverse-colour edit. Preserve EXACT DCS interlocking monogram at left and DISCOUNT over CAR SALES at right, exact letterforms, layout, proportions, gaps, counters and spacing. All deep-blue artwork becomes uniform solid opaque pale silver-grey #cbd2d8; burgundy C accent becomes pale muted rose #e4c3c5. No dark ink remains. Truly transparent canvas and all negative space, generous margins. Crisp on charcoal/navy/black/red surfaces. No glow, shadows, gradients, halos, speckles, distress, keylines, backgroundplate, extra text or redesign. Exact spelling DISCOUNT CAR SALES. Independent proposal, never an official/adoption claim.",
+      "referencePaths": [
+        "C:\\Users\\radev\\.codex\\generated_images\\01a15a1f-d666-7482-9123-db2575e93737\\exec-60ba87f8-96a3-4d19-9a2d-a6cacb10fdc1.png"
+      ],
+      "path": "branding/generated-inverse-v1-20261021.png",
+      "sha256": "8d0d06e647f491a1759c1ee59f8d91697418d27b4287e35a78da2bdf3dee395e"
+    }
+  ],
+  "sourceHistory": [
+    {
+      "reference": "branding/source-before-first-artwork-20261021-5ed829bb3c884579.json",
+      "sha256": "5ed829bb3c88457992d9b01d7ef2c48613a207fab658eab9e754cec32246fb22",
+      "retainedAt": "2026-10-20T22:53:00.654Z",
+      "reason": "Exact maintained input-only draft provenance before first proposal artwork"
+    }
+  ]
+}

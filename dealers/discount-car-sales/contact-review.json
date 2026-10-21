@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-public-business-contact-review",
+  "dealer": "discount-car-sales",
+  "checks": [
+    {
+      "field": "business.email",
+      "valueSha256": "da7110795227018b5398193b81e09359ef902c46d799b1116ef947f7deb6e1c2",
+      "classification": "public-business",
+      "reviewed": true,
+      "reviewKind": "source-evidence",
+      "sourceUrl": "https://showroom.ebaymotorspro.co.uk/hetton-motors",
+      "observedAt": "2026-10-21",
+      "evidence": "The indexed original eBay Motors Pro dealer showroom identifies Discount Car Sales and publishes the exact unchanged email in its business contact section, matching the retained dealer phone and Jubilee Industrial Estate premises. The same exact public-business attribution is present in retained research dated 2026-10-18. The source's current direct page returned HTTP 404 during this review; the retrievable index is labeled crawled two weeks ago (base page) and last week (extended-filter page). This receipt establishes the documented public business role of the mailbox; it makes no claim of current page availability, mailbox reachability or dealer approval.",
+      "corroboratingSourceUrl": "https://showroom.ebaymotorspro.co.uk/hetton-motors?extendedFilter=1",
+      "retrievalMethod": "indexed-primary-source-and-retained-research",
+      "currentDirectPageAvailable": false
+    }
+  ]
+}

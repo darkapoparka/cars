@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-public-business-contact-review",
+  "dealer": "michael-andrew-cars-ltd",
+  "checks": [
+    {
+      "field": "business.email",
+      "valueSha256": "de89ce44e8b2c571e93e4356ec4cd26b01066460e6c8669b2cb8678cc25b3135",
+      "classification": "public-business",
+      "reviewed": true,
+      "reviewKind": "source-evidence",
+      "sourceUrl": "https://showroom.ebaymotorspro.co.uk/Michael-Andrew-Cars-Ltd",
+      "observedAt": "2026-10-21",
+      "evidence": "The Michael Andrew Cars Ltd public eBay Motors Pro showroom publishes the unchanged email under its business contact section. Dealer name, telephone and South Crosland premises match the existing business facts."
+    }
+  ]
+}
+

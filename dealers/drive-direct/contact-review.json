@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-public-business-contact-review",
+  "dealer": "drive-direct",
+  "checks": [
+    {
+      "field": "business.email",
+      "valueSha256": "703963114678c0944849006642825932bad114ff6c765366fe0747da4c325839",
+      "classification": "public-business",
+      "reviewed": true,
+      "reviewKind": "source-evidence",
+      "sourceUrl": "https://showroom.ebaymotorspro.co.uk/Drive-Direct?menu=1",
+      "observedAt": "2026-10-21",
+      "evidence": "The Drive Direct public eBay Motors Pro showroom publishes the unchanged email and telephone under its business contact section. This receipt resolves the email's published business role only. The existing facts explicitly retain disagreement between the AutoTrader premises and eBay appointment-only postcode; that address issue is not resolved by this receipt."
+    }
+  ]
+}
+

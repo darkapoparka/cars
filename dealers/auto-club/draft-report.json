@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "type": "cars-dealer-pack-draft",
+  "slug": "auto-club",
+  "dealerId": "gb-cardiff-auto-club",
+  "status": "draft",
+  "buildReady": false,
+  "providerWrites": 0,
+  "createdAt": "2026-10-20T22:45:27.279Z",
+  "inventoryKind": "illustrative-not-dealer-stock",
+  "inventoryRecords": 3,
+  "logoReady": false,
+  "missingFacts": [
+    {
+      "field": "business.website",
+      "required": false,
+      "reason": "No usable sourced value in the retained public business record."
+    },
+    {
+      "field": "business.hours",
+      "required": false,
+      "reason": "No usable sourced value in the retained public business record."
+    },
+    {
+      "field": "prices",
+      "required": false,
+      "reason": "All listing prices are omitted under the public-repository scope."
+    }
+  ],
+  "contactScreen": {
+    "schemaVersion": 1,
+    "kind": "cars-automated-public-contact-screen",
+    "dealer": "auto-club",
+    "method": "heuristic; no claim that unflagged values cannot be personal",
+    "flags": [
+      {
+        "field": "business.email",
+        "valueSha256": "0ae43ae4ba1612a5056bd799bf4c19cbc10b1f353a2627dec2100064d1fbd522",
+        "code": "PERSONAL_CONTACT_REVIEW_REQUIRED",
+        "reason": "Mailbox resembles an individual or an unbranded personal-provider address; confirm its published business role or omit it.",
+        "resolvedByPublicBusinessEvidence": false
+      }
+    ],
+    "blocking": [
+      "business.email"
+    ]
+  },
+  "blocking": [
+    "business.email",
+    "branding.reviewed-assets",
+    "automated-input-review"
+  ],
+  "stockAcquisition": "maintained-disclosed-demo",
+  "liveListingFetchPerformed": false,
+  "next": "Retain public listing snapshots with --stock/--media-root when available; review source artwork, prepare the logo, then run dealer-pack review. Automated input review does not imply human, dealer or hosted approval."
+}

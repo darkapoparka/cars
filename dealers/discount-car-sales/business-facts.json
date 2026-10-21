@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "slug": "discount-car-sales",
+  "dealerId": "gb-ashington-discount-car-sales",
+  "business": {
+    "name": "Discount Car Sales",
+    "city": "Ashington",
+    "region": "Northumberland",
+    "countryCode": "GB",
+    "currency": "GBP",
+    "distanceUnit": "mi",
+    "locale": "en-GB",
+    "address": "Unit 4 Jubilee Industrial Estate, Ashington NE63 8UB",
+    "phone": "+441670332679",
+    "phoneDisplay": "+441670332679",
+    "email": "graystephen829@gmail.com",
+    "website": "",
+    "stockUrl": "https://showroom.ebaymotorspro.co.uk/hetton-motors",
+    "hours": "",
+    "sourceUrl": "https://showroom.ebaymotorspro.co.uk/hetton-motors",
+    "observedAt": "2026-10-18",
+    "inventoryNotice": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/hetton-motors",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.cazoo.co.uk/dealers/discount-car-sales-91481/",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    }
+  ]
+}
