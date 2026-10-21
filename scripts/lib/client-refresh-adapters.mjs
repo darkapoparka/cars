@@ -1714,6 +1714,43 @@ function personalizeImportTypeScript(source, replacements, typescript, file) {
   return source;
 }
 
+function personalizeImportSvelte(source, replacements, typescript, file) {
+  // Resolve the already installed sibling compiler of the existing TypeScript
+  // toolchain. Preparation never installs packages or consults a download cache.
+  const compiler = createRequire(typescript.sys.getExecutingFilePath())('svelte/compiler');
+  const ast = compiler.parse(source, {modern: true, filename: file}), edits = [], seen = new Set();
+  const contains = value => replacements.some(([from]) => value.includes(from));
+  const html = value => value.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;').replaceAll("'", '&#39;').replaceAll('{', '&#123;').replaceAll('}', '&#125;');
+  const json = value => JSON.stringify(value).replaceAll('<', '\\u003c');
+  const copyOwner = parents => {
+    let child = parents.at(-1).node;
+    for (let index=parents.length-2;index>=0;index--) {
+      const parent=parents[index].node;
+      if (['ArrowFunctionExpression','FunctionExpression','FunctionDeclaration'].includes(parent.type)) return false;
+      if (parent.type==='CallExpression') {
+        if (parent.callee.type==='MemberExpression'&&['replace','replaceAll'].includes(parent.callee.property.name)) return parent.arguments[1]===child;
+        if (!(parent.callee.type==='Identifier'&&parent.callee.name==='escapeHtml'&&parent.arguments.length===1&&parent.arguments[0]===child)) return false;
+      }
+      child=parent;
+    }
+    return false;
+  };
+  const replace = (value, parents) => {for(const [from,to] of replacements)value=value.split(from).join(copyOwner(parents)?String(to).split('$').join('$$'):to);return value;};
+  function visit(node,parents=[]) {
+    if (!node||typeof node!=='object'||seen.has(node)) return;seen.add(node);const context=[...parents,{node}];
+    if (node.type==='TaggedTemplateExpression'&&contains(source.slice(node.quasi.start,node.quasi.end))) throw Error('Import identity in a tagged template requires review: '+file);
+    if (node.type==='Literal'&&typeof node.value==='string'&&contains(node.value)) edits.push({start:node.start,end:node.end,value:json(replace(node.value,context))});
+    else if (node.type==='TemplateElement'&&typeof node.value.cooked==='string'&&contains(node.value.cooked)) edits.push({start:node.start,end:node.end,value:json(replace(node.value.cooked,context)).slice(1,-1).replaceAll('`','\\`').replaceAll('${','\\${')});
+    else if (node.type==='Text'&&contains(node.data)) {
+      let value=node.data;for(const [from,to]of replacements)value=value.split(from).join(to);
+      edits.push({start:node.start,end:node.end,value:html(value)});
+    }
+    for(const value of Object.values(node)){if(Array.isArray(value))for(const child of value)visit(child,context);else if(value&&typeof value==='object')visit(value,context);}
+  }
+  visit(ast);for(const edit of edits.sort((a,b)=>b.start-a.start))source=source.slice(0,edit.start)+edit.value+source.slice(edit.end);
+  compiler.parse(source,{modern:true,filename:file});return source;
+}
+
 function personalizeImportMessageText(source, replacements) {
   const replace=(text,rows)=>{for(const [from,to] of rows)text=text.split(from).join(to);return text;};
   const replacementStart=source.indexOf('const auxeroBgReplacements:'),replacementEnd=source.indexOf('\n];',replacementStart)+3;
@@ -1773,6 +1810,8 @@ function patchImportText(candidate, profile, {typescript} = {}) {
       if(staticCatalogs.has(relative))return personalizeImportCatalogStrings(value,replacements);
       if(relative.endsWith('.ts'))return replacements.some(([from])=>value.includes(from))
         ? personalizeImportTypeScript(value,replacements,resolveImportTypeScript(candidate,typescript),relative) : value;
+      if(relative.endsWith('.svelte'))return replacements.some(([from])=>value.includes(from))
+        ? personalizeImportSvelte(value,replacements,resolveImportTypeScript(candidate,typescript),relative) : value;
       for(const [from,to] of replacements)value=value.split(from).join(to);return value;
     })
     .map((file) => path.relative(candidate, file).replaceAll('\\', '/'));

@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "type": "cars-native-svelte-and-modern-facts-repair",
+  "recordedAt": "2026-10-21T00:28:16.214Z",
+  "parentSource": "6ad2497aed3c93bcb52c4809bb98a54517f1f332",
+  "failedSourceRuns": [
+    39515430757,
+    39517822303
+  ],
+  "actualCauses": {
+    "import": "Plain Svelte string replacement left factual apostrophes unescaped inside script literals and markup JavaScript expressions. Current source was used; this was not a stale cache.",
+    "modern": "Adjacent desktop vehicle facts Electric and Auto were scanned together as the different dealer Electric Auto because the actual showroom fact wrapper was missing from DOM segmentation."
+  },
+  "changes": {
+    "import": "Use the existing pinned Svelte compiler AST for JavaScript literal ranges and encoded HTML text; preserve code, regular expressions and native replacement semantics.",
+    "modern": "Recognize only the exact existing native showroom facts child selector; keep every visible value and scan each fact separately.",
+    "nativeToolchain": "Existing native tools install now includes svelte@5.57.2, matching shared component checks."
+  },
+  "validation": {
+    "node": "26.10.0",
+    "svelteCompiler": "5.57.2",
+    "typescript": "6.0.3",
+    "importFocusedTests": 14,
+    "verifierFocusedTests": 3,
+    "actualIdentitySvelteComponents": 39,
+    "componentIdentityCases": 4,
+    "existingTypeScriptFixtures": 56,
+    "existingTypeScriptIdentityCases": 3,
+    "browserProofSha256": "37ccde350d0d1bbeeff132e5288c99e6a9ed7323aa05fc59eadd790252455e96",
+    "oldNativeFalsePositive": 1,
+    "newNativeFalsePositive": 0,
+    "realForeignBrowserControls": 3,
+    "visibleTextPreserved": true,
+    "fixtureScope": "The exact native Modern component facts wrapper rendered in Chromium at1280px, not a new full dealer build",
+    "independentReview": "Passed against exact frozen4source hashes and bound fixture/browser evidence; no blockers"
+  },
+  "exactSource": [
+    {
+      "path": "scripts/lib/client-refresh-adapters.mjs",
+      "bytes": 101280,
+      "sha256": "acad1a4309dab17ac35248f99efd34ed49cf728fdf2cb7e713f856192bc23ca1"
+    },
+    {
+      "path": "scripts/dealer-pack-import-identity-literals.test.mjs",
+      "bytes": 27910,
+      "sha256": "23adce6443dc143e4bc083353b520a90db66b3a74490436260d4b5f4b674aac2"
+    },
+    {
+      "path": "scripts/verify-dealer-pack.mjs",
+      "bytes": 67586,
+      "sha256": "ff60a30bcb659e07aca5cba76e1ca40ad1eb8e1dd61c2a5305667ca1ac3209a7"
+    },
+    {
+      "path": "scripts/verify-dealer-pack.test.mjs",
+      "bytes": 66191,
+      "sha256": "2b6881ed5185b4b369819da0245ab6f9fda9584fd75642222981581f2148ef1a"
+    }
+  ],
+  "authenticatedFailedArtifacts": [
+    {
+      "id": 12309825373,
+      "name": "dealer-pack-reports--lane-4--39515430757",
+      "digest": "sha256:09d01a5eb9b2e1715950997a1365be53dbc529c50f795b9e6384360c108ea623",
+      "sourceCommit": "34c99454e362b72a5e4a4f5921e83fc86c37b1ab"
+    },
+    {
+      "id": 12309655171,
+      "name": "dealer-pack-reports--lane-3--39515430757",
+      "digest": "sha256:85dc1941056be7b970744f7dc33dc3c95b618e75f6ac0b8ff2ef4c176d38f1b6",
+      "sourceCommit": "34c99454e362b72a5e4a4f5921e83fc86c37b1ab"
+    },
+    {
+      "id": 12308626127,
+      "name": "dealer-pack-reports--lane-1--39515430757",
+      "digest": "sha256:fa983029959356f6f4f009e07780f3d0145ca680a8f8d6027990da4ae5b00095",
+      "sourceCommit": "34c99454e362b72a5e4a4f5921e83fc86c37b1ab"
+    },
+    {
+      "id": 12308219321,
+      "name": "dealer-pack-reports--lane-2--39515430757",
+      "digest": "sha256:90818c591acfebbf5c1bdedc3e3a826fbc35621d47c7c0dd3cf12e9bce3e968c",
+      "sourceCommit": "34c99454e362b72a5e4a4f5921e83fc86c37b1ab"
+    },
+    {
+      "id": 12307293646,
+      "name": "dealer-pack-plan--39515430757",
+      "digest": "sha256:1113f94dee24a04aa30627076a53451e69200a043cecef1ce13acdad70c551d7",
+      "sourceCommit": "34c99454e362b72a5e4a4f5921e83fc86c37b1ab"
+    },
+    {
+      "id": 12310720658,
+      "name": "dealer-pack-reports--lane-1--39517822303",
+      "digest": "sha256:e676f13709a566ca8da0155cf59dd12cc956f605443b97f000f17531bb9b0dca",
+      "sourceCommit": "7bdacdb6465bfaf68327be58d33a7f06596c5dd2"
+    },
+    {
+      "id": 12309830441,
+      "name": "dealer-pack-plan--39517822303",
+      "digest": "sha256:8084f498ddcaa007580d90d7f0606702188163fb453487cc38fc3ae378364f1b",
+      "sourceCommit": "7bdacdb6465bfaf68327be58d33a7f06596c5dd2"
+    }
+  ],
+  "selectedSvelteFixtures": {
+    "metadataSha256": "cf65ad825acab2f42687dec24aa57d992cfc43082ff33800987cf2d53736e621",
+    "components": 39,
+    "identityCases": 4
+  },
+  "nativeBuildRepeated": false,
+  "nativeQualificationClaimed": false,
+  "hostedQualificationClaimed": false,
+  "next": "Register all400 against the corrected published source; the existing source campaign must produce and qualify fresh native outputs for the seven failed dealers."
+}

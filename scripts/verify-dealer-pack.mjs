@@ -515,7 +515,7 @@ export function readDealerPackDom() {
     const identityLinks=all('a').filter(visible).flatMap(element=>['aria-label','title','href'].map(attribute=>({channel:'link-'+attribute,owner:owner(element),text:element.getAttribute(attribute)??''})).filter(row=>row.text));
     let identityContext;
     try{
-      const factSelector='[data-slot="vehicle-card-spec-pills"] > [data-slot="vehicle-card-spec"],.dn-vehicle-card__specs > .dn-vehicle-card__spec,.dn-vehicle-card__mobile-meta > .dn-vehicle-card__fact,.mobile-vehicle-card ul[aria-label] > li,.site-vehicle-card__metadata > ul > li,.daynight-card-specs > li';
+      const factSelector='[data-slot="vehicle-card-spec-pills"] > [data-slot="vehicle-card-spec"],[data-slot="showroom-vehicle-facts"] > li[data-fact],.dn-vehicle-card__specs > .dn-vehicle-card__spec,.dn-vehicle-card__mobile-meta > .dn-vehicle-card__fact,.mobile-vehicle-card ul[aria-label] > li,.site-vehicle-card__metadata > ul > li,.daynight-card-specs > li';
       const segments=[];let pending='';
       const flush=()=>{if(pending.trim())segments.push({channel:'body',owner:'body outside native vehicle-fact fields',text:pending});pending='';};
       const visit=node=>{

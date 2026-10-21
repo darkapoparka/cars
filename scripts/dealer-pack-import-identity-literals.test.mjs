@@ -203,6 +203,200 @@ test('Import template text is escaped while each expression, comment and regex i
   assert.equal(context.calls,3); assert.equal(context.injected,undefined,'Sourced literal interpolation never executes');
 });
 
+
+const selectedSvelte = [
+  [
+    "src/lib/components/account/AccountListingForm.svelte",
+    "cb4135a80762c129406f992344ec7a3c0c84a2aa"
+  ],
+  [
+    "src/lib/components/account/AccountMessagesMobilePage.svelte",
+    "890069211b11aed98c34bcc7701820701fec9c3b"
+  ],
+  [
+    "src/lib/components/account/AccountProfileForm.svelte",
+    "e510d752fbee8e91da7789046a3d58f83a003fea"
+  ],
+  [
+    "src/lib/components/account/DashliteDashboardShell.svelte",
+    "736b7e4c5fafe64856b31797271441c2cdff7be0"
+  ],
+  [
+    "src/lib/components/account/MobileAccountListings.svelte",
+    "4076b30d1237dda081b0954bf164314047354a45"
+  ],
+  [
+    "src/lib/components/admin/AdminListingEditor.svelte",
+    "eb22677a2bd4bf82210de88c774d9884a050f787"
+  ],
+  [
+    "src/lib/components/admin/AdminShell.svelte",
+    "332b1c48b1f3905d96ae115bc0658f82c0994fa5"
+  ],
+  [
+    "src/lib/components/agents/AgentDetailSidebar.svelte",
+    "c86beb47e4fa8a1e521429a4964894368077c560"
+  ],
+  [
+    "src/lib/components/agents/AgentDetailTemplatePage.svelte",
+    "a7256ca8182e172d97e07ec087037afcf9ba3e37"
+  ],
+  [
+    "src/lib/components/agents/AgentsTemplatePage.svelte",
+    "397ba9594ea813743b436348302f6412501eec0b"
+  ],
+  [
+    "src/lib/components/compare/AuxeroCompareTable.svelte",
+    "7b4d8aa948e6f599b3c2e323e291479446334564"
+  ],
+  [
+    "src/lib/components/compare/CompareTemplatePage.svelte",
+    "54b8dd356eed39ab0f4f0160cf34421def8d8f72"
+  ],
+  [
+    "src/lib/components/forms/AuthModal.svelte",
+    "73e69506f58118e14a698197d7fd99f2f633b66a"
+  ],
+  [
+    "src/lib/components/home/clean/HeroClean.svelte",
+    "d47446ea5c9d235a79caa5c096bedd6f903b7c19"
+  ],
+  [
+    "src/lib/components/home/clean/NewsSectionClean.svelte",
+    "226c1ee2dad77e9495600c84c1952935174bba13"
+  ],
+  [
+    "src/lib/components/home/HomeFiveModals.svelte",
+    "fa206fbdba59ffdad9b38fd4a8063ce08fa2d9af"
+  ],
+  [
+    "src/lib/components/home1/Home1Hero.svelte",
+    "a68abf28b5828de3cf4a7f6810e4c7d1f314b861"
+  ],
+  [
+    "src/lib/components/layout/CleanSiteHeader.svelte",
+    "484428f7ebea4c6ac25467a48f4e866d2188e34c"
+  ],
+  [
+    "src/lib/components/layout/SiteFooter.svelte",
+    "8a46db36cf511fa2084ddc60c9440d3ad5656e50"
+  ],
+  [
+    "src/lib/components/layout/SiteHeader.svelte",
+    "daca8829865bec27ba797365b6382520b6c66d00"
+  ],
+  [
+    "src/routes/admin/+page.svelte",
+    "10bb3b74fb58d2acb79311731ce577f6bebc0e26"
+  ],
+  [
+    "src/routes/admin/agents/+page.svelte",
+    "011eaf10118bf92bb0cd6f6685320d6ace9b521a"
+  ],
+  [
+    "src/routes/admin/agents/[slug]/+page.svelte",
+    "9d47d5c8f0e353286e5104716d9608c17d4e4508"
+  ],
+  [
+    "src/routes/admin/analytics/+page.svelte",
+    "0f2a70ba23d93ac0917d2acadb511214e2601ac5"
+  ],
+  [
+    "src/routes/admin/copilot/+page.svelte",
+    "2474023f83bb1f1afe0073dc79713b110b94e953"
+  ],
+  [
+    "src/routes/admin/imports/+page.svelte",
+    "4e413977ac32fe8e6a301521141ff91045936083"
+  ],
+  [
+    "src/routes/admin/inquiries/+page.svelte",
+    "8a2d7130a4028897a74a36969eba9068484db204"
+  ],
+  [
+    "src/routes/admin/inventory/+page.svelte",
+    "e2b2b4dbfc1146135887e3a87b02f1f5b0392a1d"
+  ],
+  [
+    "src/routes/admin/inventory/edit/[id]/+page.svelte",
+    "1173e63c7b4e5857157cda96da371d80ab12bc41"
+  ],
+  [
+    "src/routes/admin/inventory/new/+page.svelte",
+    "af350a2977307d8d57c6c21e6022ce27e466929f"
+  ],
+  [
+    "src/routes/admin/listings/[id]/+page.svelte",
+    "5661360b5dc71898ba4c6b188323115426d33493"
+  ],
+  [
+    "src/routes/admin/login/+page.svelte",
+    "ef455f81eeb72bd917a23a86e03f0bafd46a0d16"
+  ],
+  [
+    "src/routes/admin/messages/+page.svelte",
+    "53e04bc9c5939c036c557d3f65f68e4482a0595b"
+  ],
+  [
+    "src/routes/admin/posts/+page.svelte",
+    "14ef8ded03bd09b3655e20b1a6856826101bc8a2"
+  ],
+  [
+    "src/routes/admin/settings/+page.svelte",
+    "4675e45d853b12dab19086e356b0d8d7ef4c252c"
+  ],
+  [
+    "src/routes/admin/users/+page.svelte",
+    "b80194b9b17628125b0072a8eb587f2e6144a3f2"
+  ],
+  [
+    "src/routes/compare-clean/+page.svelte",
+    "2f2e93d5647664af809781ddf660102fd9b9eb68"
+  ],
+  [
+    "src/routes/home2/+page.svelte",
+    "a973916f219c4c054fa0d4c7d1b878878b8003a9"
+  ],
+  [
+    "src/routes/offer/+page.svelte",
+    "fe2eb3d8f4d7c094c9f23ec5b98cf004a8c96191"
+  ]
+];
+const svelteCompiler=createRequire(ts.sys.getExecutingFilePath())('svelte/compiler');
+function componentValues(source,filename){
+  const ast=svelteCompiler.parse(source,{modern:true,filename}),nodes=[],seen=new Set();
+  const visit=node=>{if(!node||typeof node!=='object'||seen.has(node))return;seen.add(node);if(node.type==='Literal'&&typeof node.value==='string')nodes.push({start:node.start,end:node.end,value:node.value});else if(node.type==='TemplateElement')nodes.push({start:node.start,end:node.end,value:node.value.cooked});else if(node.type==='Text')nodes.push({start:node.start,end:node.end,value:node.data});for(const value of Object.values(node)){if(Array.isArray(value))value.forEach(visit);else if(value&&typeof value==='object')visit(value);}};
+  visit(ast);return nodes.sort((a,b)=>a.start-b.start);
+}
+for(const name of [...names.slice(0,2),"Daci's Cars Ltd",names[2]])test('selected actual Import Svelte components preserve syntax/display: '+name,t=>{
+  assert.equal(svelteCompiler.VERSION,'5.57.2');
+  const candidate=candidateFor(t),original=new Map();
+  for(const [relative,oid]of selectedSvelte){const bytes=Buffer.from(fs.readFileSync(path.join(root,'templates/import',relative),'utf8').replaceAll('\r\n','\n'));assert.equal(createHash('sha1').update('blob '+bytes.length+'\0').update(bytes).digest('hex'),oid,relative+' exact selected component');original.set(relative,bytes.toString());write(candidate,relative,bytes);}
+  const profile={business:{name,shortName:name,phoneE164:'+441234567890',phoneDisplay:'+44 1234 567890',address:'12 "King\'s" Road \\ North'}},before=JSON.stringify(profile),rows=replacements(profile);
+  adapters.patchImportText(candidate,profile,{typescript:ts});
+  let changed=0;
+  for(const [relative,source]of original){const emitted=fs.readFileSync(path.join(candidate,relative),'utf8'),a=componentValues(source,relative),b=componentValues(emitted,relative);assert.equal(a.length,b.length,relative+' no injected markup/expressions');const changedA=[],changedB=[];for(let i=0;i<a.length;i++){const expected=substituted(a[i].value,rows);assert.equal(b[i].value,expected,relative+' exact cooked text at'+i);if(expected!==a[i].value){changed++;changedA.push(a[i]);changedB.push(b[i]);}}
+    const mask=(text,nodes)=>{for(const n of [...nodes].sort((a,b)=>b.start-a.start))text=text.slice(0,n.start)+'<changed-literal>'+text.slice(n.end);return text;};
+    assert.equal(mask(emitted,changedB),mask(source,changedA),relative+' bytes outside actual edited text/literal ranges unchanged');
+    if(/(?:SiteFooter|AdminShell|CompareTemplatePage|AdminListingEditor|Home1Hero|AccountMessagesMobilePage|MobileAccountListings)\.svelte$/.test(relative))svelteCompiler.compile(emitted,{generate:'server',filename:relative});
+  }
+  for(const relative of ['src/lib/components/layout/SiteFooter.svelte','src/lib/components/admin/AdminShell.svelte','src/lib/components/compare/CompareTemplatePage.svelte'])assert.throws(()=>svelteCompiler.parse(substituted(original.get(relative),rows),{modern:true,filename:relative}),'Raw released fallback reproduces native quote failure');
+  assert.equal(selectedSvelte.length,39);assert(changed>50,'Actual script AND markup-expression/display slots covered');assert.equal(JSON.stringify(profile),before,'Factual inputs unchanged');
+});
+
+test('Svelte replacement-copy dollars and template expressions retain native execution semantics',t=>{
+ const candidate=candidateFor(t),name=names[2],source='<script lang="ts">\n// Day Night Auto comment stays exact.\nconst pattern=/Day Night Auto/;\nconst copied="ORIGINAL".replace(/ORIGINAL/,"Day Night Auto");\nconst callback="ORIGINAL".replace(/ORIGINAL/,()=>"Day Night Auto");\nconst message=`Day Night Auto ${next()} API`;\n</script><h1>Day Night Auto</h1><p>{true ? "Day Night Auto" : "Other"}</p>',relative='src/lib/components/identity-execution.svelte',file=write(candidate,relative,source);
+ adapters.patchImportText(candidate,{business:{name,shortName:name,phoneE164:'',phoneDisplay:'',address:''}},{typescript:ts});
+ const output=fs.readFileSync(file,'utf8'),ast=svelteCompiler.parse(output,{modern:true,filename:relative}),script=output.slice(ast.instance.content.start,ast.instance.content.end),context={next:()=>{context.calls++;return 'Admin';},calls:0};
+ const result=runInNewContext(stripTypeScriptTypes(script)+';({copied,callback,message});',context);
+ assert.equal(result.copied,name);assert.equal(result.callback,name);assert.equal(result.message,name+' Admin API');assert.equal(context.calls,1);assert.equal(context.injected,undefined);assert.match(output,/\/\/ Day Night Auto comment stays exact\./);assert.match(output,/const pattern=\/Day Night Auto\//);
+});
+
+test('matching Svelte raw-tag semantics fail before writing the component',t=>{
+ const candidate=candidateFor(t),source='<script>const brand=String.raw`Day Night Auto`;</script><h1>Day Night Auto</h1>',file=write(candidate,'src/lib/components/tagged.svelte',source);
+ assert.throws(()=>adapters.patchImportText(candidate,{business:{name:"Daci\'s Cars Ltd",phoneE164:'',phoneDisplay:'',address:''}},{typescript:ts}),/tagged template requires review/);assert.equal(fs.readFileSync(file,'utf8'),source);
+});
+
 test('selected Import pattern and raw-template contexts remain explicitly bounded', () => {
   assert.equal(ts.version,'6.0.3'); const patternStrings = [], tagged = [], regexFiles = new Set();
   for (const [relative] of selected) {
