@@ -123,7 +123,7 @@ for(const mode of ['HTTP refusal','ambiguous timeout'])test('bucket '+mode+' sto
   const pending=provider.prepareAssets({candidate:f.candidate,request,beforeWrite:async()=>{}});
   const rejected=assert.rejects(pending,mode==='HTTP refusal'?/Static asset upload failed/:/asset-bucket-upload transport failed/).then(()=>{settled=true;});
   await Promise.all(control.started.slice(0,3).map(row=>row.promise));
-  if(mode==='HTTP refusal')control.responses[1].resolve({status:500,json:async()=>({success:false,result:{}})});else control.responses[1].reject(Error('ambiguous timeout'));
+  if(mode==='HTTP refusal')control.responses[1].resolve({status:403,json:async()=>({success:false,result:{}})});else control.responses[1].reject(Error('ambiguous timeout'));
   await nextTurn();assert.deepEqual(control.calls,[0,1,2]);assert.equal(settled,false,'Unknown outcome is not returned while uploads remain in flight');assert.equal(control.active,2);
   control.acknowledge(0,'test-token-cannot-hide-failure');await nextTurn();assert.equal(settled,false);assert.deepEqual(control.calls,[0,1,2]);
   control.acknowledge(2);await rejected;assert.equal(control.active,0);assert.deepEqual(control.calls,[0,1,2],'No new request or retry follows an observed failure');

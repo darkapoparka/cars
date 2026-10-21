@@ -30,7 +30,7 @@ const nextTurn=()=>new Promise(resolve=>setImmediate(resolve));
 test('lost transport acknowledgement retries only the same exact bucket/session with a new claim fence and payload',async t=>{
   const f=fixture(t),fetch=f.assetFetch;let first=true;
   const result=await prepare(f,{assetFetch:async(url,options)=>{const res=await fetch(url,options);if(first){first=false;throw socketFailure();}return res;}});
-  assert.deepEqual(PACK_ASSET_TRANSPORT_RETRY,{attempts:3,timeoutMs:120000,delaysMs:[1000,2000]});
+  assert.deepEqual(PACK_ASSET_TRANSPORT_RETRY,{attempts:3,timeoutMs:120000,delaysMs:[1000,2000],statuses:[500,502,503,504]});
   assert.equal(f.operations.length,1);assert.equal(f.calls.length,2);assert.equal(f.fences,3);assert.deepEqual(f.waits,[1000]);assert.equal(result.completionToken,completion);
   assert.notEqual(f.calls[0].options.body,f.calls[1].options.body);assert.notEqual(f.calls[0].options.signal,f.calls[1].options.signal);
   for(const {url,options} of f.calls){assert.equal(url,'https://api.cloudflare.com/client/v4/accounts/'+PACK_DEPLOY_ACCOUNT+'/workers/assets/upload?base64=true');assert.equal(options.method,'POST');assert.equal(options.headers.Authorization,'Bearer '+token);assert.deepEqual([...options.body.keys()],[f.keys[0]]);assert.equal(hash(Buffer.from(await options.body.get(f.keys[0]).text(),'base64')),f.candidate.files[0].sha256);}
@@ -58,18 +58,76 @@ test('bounded own-request timeouts can retry, while arbitrary TypeErrors and mal
   }
 });
 
-test('explicit HTTP/auth/size/rate-limit/server refusals are not silently retried or treated as successful',async t=>{
-  for(const status of [400,401,403,413,429,500,502,503,504]){
+test('auth, validation, conflict, rate-limit and unselected HTTP refusals are never retried or treated as successful',async t=>{
+  for(const status of [200,204,400,401,403,404,408,409,413,422,429,501,505]){
     const f=fixture(t);let posts=0;await assert.rejects(()=>prepare(f,{assetFetch:async()=>{posts++;return response(status);}}),new RegExp('Static asset upload failed \\(HTTP '+status+'\\)'));assert.equal(posts,1);assert.deepEqual(f.waits,[]);
   }
 });
 
 test('an explicit HTTP refusal is never retried even if reading its response body loses the connection',async t=>{
-  for(const status of [401,403,429,500,503]){
+  for(const status of [400,401,403,404,408,409,413,422,429,501,505]){
     const f=fixture(t);let posts=0;
     await assert.rejects(()=>prepare(f,{assetFetch:async()=>{posts++;return {status,json:async()=>{throw socketFailure();}};}}),error=>error.transport.responseStatus===status);
     assert.equal(posts,1);assert.deepEqual(f.waits,[]);assert.deepEqual(f.diagnostics,[]);
   }
+});
+
+test('selected transient HTTP failures retry the same session and sealed bucket with fresh claim fences',async t=>{
+  assert(Object.isFrozen(PACK_ASSET_TRANSPORT_RETRY)&&Object.isFrozen(PACK_ASSET_TRANSPORT_RETRY.statuses));
+  for(const status of [500,502,503,504]){
+    const f=fixture(t),fetch=f.assetFetch;let posts=0;
+    const result=await prepare(f,{assetFetch:async(url,options)=>{await fetch(url,options);return ++posts===1?{status,json:async()=>({success:true,result:{jwt:'must-not-accept-'+token},errors:[{message:token}]})}:response();}});
+    assert.equal(result.completionToken,completion);assert.equal(f.operations.length,1);assert.equal(posts,2);assert.equal(f.fences,3);assert.deepEqual(f.waits,[1000]);
+    assert.notEqual(f.calls[0].options.body,f.calls[1].options.body);assert.notEqual(f.calls[0].options.signal,f.calls[1].options.signal);
+    for(const {url,options} of f.calls){assert.equal(url,f.calls[0].url);assert.equal(options.method,'POST');assert.equal(options.headers.Authorization,'Bearer '+token);assert.deepEqual([...options.body.keys()],[f.keys[0]]);assert.equal(hash(Buffer.from(await options.body.get(f.keys[0]).text(),'base64')),f.candidate.files[0].sha256);}
+    assert.equal(f.diagnostics[0].responseStatus,status);assert.equal(f.diagnostics[0].operation,'asset-bucket-upload');assert.equal(f.diagnostics[0].attempt,1);assert.equal(f.diagnostics[0].maximumAttempts,3);assert.deepEqual(f.diagnostics[0].causeCodes,[]);assert.equal(JSON.stringify(f.diagnostics).includes(token),false);
+  }
+});
+
+test('transient HTTP failures remain retryable when their error body is HTML or loses the connection',async t=>{
+  for(const status of [500,502,503,504])for(const error of [new SyntaxError('private HTML '+token),socketFailure('UND_ERR_BODY_TIMEOUT')]){
+    const f=fixture(t);let posts=0;
+    const result=await prepare(f,{assetFetch:async()=>++posts===1?{status,json:async()=>{throw error;}}:response()});
+    assert.equal(result.completionToken,completion);assert.equal(posts,2);assert.equal(f.fences,3);assert.deepEqual(f.waits,[1000]);assert.equal(f.diagnostics[0].responseStatus,status);assert.equal(JSON.stringify(f.diagnostics).includes(token),false);
+  }
+});
+
+test('transient HTTP exhaustion stays uncertain and cannot accept an error-response completion token',async t=>{
+  for(const status of [500,502,503,504]){
+    const f=fixture(t);let posts=0;
+    await assert.rejects(()=>prepare(f,{assetFetch:async()=>{posts++;return {status,json:async()=>({success:true,result:{jwt:completion}})};}}),error=>{assert.match(error.message,new RegExp('Static asset upload failed \\(HTTP '+status+'\\)'));assert.equal(error.providerOutcomeKnown,undefined);assert.equal(error.message.includes(completion),false);return true;});
+    assert.equal(posts,3);assert.equal(f.fences,4);assert.deepEqual(f.waits,[1000,2000]);assert.equal(f.operations.length,1);assert.deepEqual(f.diagnostics.map(row=>[row.attempt,row.responseStatus]),[[1,status],[2,status]]);
+  }
+});
+
+test('network and HTTP failures share one three-attempt budget, including a malformed terminal server response',async t=>{
+  const f=fixture(t);let posts=0;
+  await assert.rejects(()=>prepare(f,{assetFetch:async()=>{posts++;if(posts===1)throw socketFailure();if(posts===2)return response(500);return {status:503,json:async()=>{throw new SyntaxError('private '+token);}};}}),error=>error.name==='PackProviderTransportError'&&error.transport.attempt===3&&error.transport.responseStatus===503&&error.providerOutcomeKnown===undefined&&!error.message.includes(token));
+  assert.equal(posts,3);assert.equal(f.fences,4);assert.deepEqual(f.waits,[1000,2000]);assert.equal(f.operations.length,1);assert.deepEqual(f.diagnostics.map(row=>row.responseStatus),[null,500]);
+});
+
+test('malformed acknowledged success and explicit failure envelopes do not become HTTP retries',async t=>{
+  for(const status of [201,202])for(const mode of ['json','envelope']){
+    const f=fixture(t);let posts=0;
+    await assert.rejects(()=>prepare(f,{assetFetch:async()=>{posts++;return {status,json:async()=>{if(mode==='json')throw new SyntaxError('private '+token);return {success:false,result:{jwt:completion}};}};}}));
+    assert.equal(posts,1);assert.deepEqual(f.waits,[]);assert.deepEqual(f.diagnostics,[]);
+  }
+});
+
+test('a lost claim or changed sealed bytes during HTTP backoff prevents another upload',async t=>{
+  for(const mode of ['claim','bytes']){
+    const f=fixture(t);let posts=0,lost=false;
+    await assert.rejects(()=>prepare(f,{assetFetch:async()=>{posts++;return response(500);},assetRetryWait:async ms=>{f.waits.push(ms);if(mode==='claim')lost=true;else fs.appendFileSync(path.join(f.candidate.directory,f.candidate.files[0].path),'changed');},beforeWrite:async()=>{if(lost)throw Error('current claim lost');}}),mode==='claim'?/current claim lost/:/sealed inventory/);
+    assert.equal(posts,1);assert.deepEqual(f.waits,[1000]);assert.equal(f.operations.length,1);
+  }
+});
+
+test('HTTP retries stop behind a permanent sibling refusal and still wait for in-flight uploads',async t=>{
+  const f=fixture(t,4),started=[deferred(),deferred(),deferred()],replies=[deferred(),deferred(),deferred()],backoff=deferred(),waiting=deferred(),posts=[];let settled=false;
+  const pending=prepare(f,{assetFetch:async(url,options)=>{const index=f.keys.indexOf([...options.body.keys()][0]);posts.push(index);started[index]?.resolve();return replies[index].promise;},assetRetryWait:async()=>{waiting.resolve();await backoff.promise;}});
+  const rejected=assert.rejects(pending,/Static asset upload failed/).then(()=>{settled=true;});
+  await Promise.all(started.map(row=>row.promise));replies[0].resolve(response(500));await waiting.promise;replies[1].resolve(response(403));await nextTurn();backoff.resolve();await nextTurn();assert.equal(settled,false);assert.deepEqual(posts,[0,1,2]);
+  replies[2].resolve(response(201));await rejected;assert.deepEqual(posts,[0,1,2]);assert.equal(settled,true);
 });
 
 test('a lost claim during backoff blocks the retry before sending another POST',async t=>{
@@ -107,9 +165,9 @@ test('API transport gives precise sanitized operation/cause but never retries an
   }
 });
 
-test('API response-body failures retain HTTP status without persisting response content',async()=>{
-  let calls=0;const transport=tokenCloudflareTransport({token,fetchImpl:async()=>{calls++;return {status:502,json:async()=>{throw new SyntaxError('private content '+token);}};}});
-  await assert.rejects(()=>transport({method:'GET',path:'/accounts/'+PACK_DEPLOY_ACCOUNT+'/workers/workers'}),error=>{assert.equal(error.transport.operation,'workers-api-read');assert.equal(error.transport.responseStatus,502);assert.equal(error.transport.errorName,'SyntaxError');assert.equal(error.transport.timeoutMs,30000);assert.equal(error.message.includes(token),false);return true;});assert.equal(calls,1);
+test('API response-body failures retain HTTP status after bounded GET retries without persisting response content',async()=>{
+  let calls=0;const transport=tokenCloudflareTransport({token,readRetryWait:async()=>{},transportDiagnostic:()=>{},fetchImpl:async()=>{calls++;return {status:502,json:async()=>{throw new SyntaxError('private content '+token);}};}});
+  await assert.rejects(()=>transport({method:'GET',path:'/accounts/'+PACK_DEPLOY_ACCOUNT+'/workers/workers'}),error=>{assert.equal(error.transport.operation,'workers-api-read');assert.equal(error.transport.responseStatus,502);assert.equal(error.transport.errorName,'SyntaxError');assert.equal(error.transport.attempt,3);assert.equal(error.transport.maximumAttempts,3);assert.equal(error.transport.timeoutMs,30000);assert.equal(error.message.includes(token),false);return true;});assert.equal(calls,3);
 });
 
 test('diagnostics collect bounded known nested socket codes without retaining arbitrary causes or headers',()=>{

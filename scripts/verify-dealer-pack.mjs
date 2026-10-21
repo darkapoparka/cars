@@ -541,9 +541,12 @@ export function readDealerPackDom() {
     const vehicleContracts=[
       {kind:'modern',card:'article[data-slot="vehicle-card"]',title:'[data-slot="vehicle-card-title"]',photo:'[data-slot="vehicle-card-media"] img',link:'a[data-slot="vehicle-card-content"]'},
       {kind:'auto-best',card:'article.dn-vehicle-card',title:'.dn-vehicle-card__name',photo:'.dn-vehicle-card__image img',link:'a.dn-vehicle-card__link'},
+      {kind:'auto-best',card:'a.dn-detail-related-card',title:'.dn-detail-related-card > span > strong',photo:'.dn-detail-related-card > img'},
       {kind:'import',card:'.card-box.card-box-style-1',title:'.card-box__title > a',photo:'.image img',facts:'.daynight-card-specs'},
+      {kind:'import',card:'a.mobile-vehicle-card',title:'.mobile-vehicle-card__body > h2',photo:'.mobile-vehicle-card__image img',facts:'.mobile-vehicle-card__body > ul[aria-label]'},
       {kind:'import-site',card:'article.site-vehicle-card',title:'.site-vehicle-card__body > h2 > a',photo:'.site-vehicle-card__media img',facts:'.site-vehicle-card__metadata'},
       {kind:'signature',card:'.card-journey-small',title:'.card-info .card-title > a',photo:'.card-image img',facts:'.card-program'},
+      {kind:'signature',card:'article.discovery-card',title:'.car-copy > h3',photo:'.car-photo img',facts:'.car-meta'},
       {kind:'signature-mobile',card:'article.mobile-vehicle-card',title:'.mobile-vehicle-title',photo:'.mobile-vehicle-photo img',facts:'.mobile-vehicle-facts'},
     ];
     const nativeVehicle=(element,role)=>{
@@ -578,6 +581,8 @@ export function readDealerPackDom() {
         if(node.nodeType!==1)return;
         if(['SCRIPT','STYLE','TEMPLATE','NOSCRIPT'].includes(node.tagName))return;
         const style=getComputedStyle(node);if(style.display==='none'||style.visibility==='hidden')return;
+        // A closed native disclosure renders its first direct summary, not its hidden contents.
+        if(node.tagName==='DETAILS'&&!node.open){const summary=[...node.children].find(child=>child.tagName==='SUMMARY');if(summary)visit(summary);return;}
         const vehicle=nativeVehicle(node,'title');
         if(vehicle){
           if(node.querySelector('header,footer,nav,h1,h2,h3')||node.querySelector('a')&&node.tagName!=='A')throw Error('Unexpected nested content in a native vehicle title');

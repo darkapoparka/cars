@@ -26,7 +26,8 @@ const transportCodes=error=>{
 };
 const retryableAssetTransport=error=>transportCodes(error).length>0||['AbortError','TimeoutError'].includes(error?.name)||error?.name==='TypeError'&&error.message==='fetch failed';
 const waitForAssetRetry=milliseconds=>new Promise(resolve=>setTimeout(resolve,milliseconds));
-export const PACK_ASSET_TRANSPORT_RETRY=Object.freeze({attempts:3,timeoutMs:120000,delaysMs:Object.freeze([1000,2000])});
+export const PACK_ASSET_TRANSPORT_RETRY=Object.freeze({attempts:3,timeoutMs:120000,delaysMs:Object.freeze([1000,2000]),statuses:Object.freeze([500,502,503,504])});
+export const PACK_API_READ_RETRY=Object.freeze({attempts:3,timeoutMs:30000,delaysMs:Object.freeze([1000,2000]),statuses:Object.freeze([500,502,503,504])});
 
 /** Keep only bounded, known transport metadata. Never retain an original error,
  * request, headers, signed URL, JWT, response body, or free-form cause message. */
@@ -176,14 +177,25 @@ export function cloudflarePackProvider({api,assetFetch=fetch,uploadAssets,upload
                 body=await response.json();
               }catch(error){
                 const failure=packProviderTransportFailure(error,{operation:'asset-bucket-upload',method:'POST',attempt,maximumAttempts:PACK_ASSET_TRANSPORT_RETRY.attempts,elapsedMs:transportClock()-started,timeoutMs:PACK_ASSET_TRANSPORT_RETRY.timeoutMs,responseStatus:response?.status,bucketIndex:bucketIndex+1,bucketCount:session.buckets.length,assetFiles:bucket.length,assetBytes});
-                if(!failed&&(!response||[201,202].includes(response.status))&&retryableAssetTransport(error)&&attempt<PACK_ASSET_TRANSPORT_RETRY.attempts){
+                const retryable=PACK_ASSET_TRANSPORT_RETRY.statuses.includes(response?.status)||(!response||[201,202].includes(response.status))&&retryableAssetTransport(error);
+                if(!failed&&retryable&&attempt<PACK_ASSET_TRANSPORT_RETRY.attempts){
                   const retryInMs=PACK_ASSET_TRANSPORT_RETRY.delaysMs[attempt-1];
                   transportDiagnostic({type:'cars-pack-asset-transport-retry',...failure.transport,retryInMs});
                   await assetRetryWait(retryInMs);continue;
                 }
                 throw failure;
               }
-              // Explicit HTTP/auth/validation refusals are not transport retries.
+              // The same manifest-bound bucket may retry selected transient server
+              // failures even when their error body is valid JSON. Never accept
+              // their JWT/result; only an acknowledged201/202 can complete it.
+              if(!failed&&PACK_ASSET_TRANSPORT_RETRY.statuses.includes(response.status)&&attempt<PACK_ASSET_TRANSPORT_RETRY.attempts){
+                const failure=packProviderTransportFailure(Error('Transient asset HTTP status'),{operation:'asset-bucket-upload',method:'POST',attempt,maximumAttempts:PACK_ASSET_TRANSPORT_RETRY.attempts,elapsedMs:transportClock()-started,timeoutMs:PACK_ASSET_TRANSPORT_RETRY.timeoutMs,responseStatus:response.status,bucketIndex:bucketIndex+1,bucketCount:session.buckets.length,assetFiles:bucket.length,assetBytes});
+                const retryInMs=PACK_ASSET_TRANSPORT_RETRY.delaysMs[attempt-1];
+                transportDiagnostic({type:'cars-pack-asset-transport-retry',...failure.transport,retryInMs});
+                await assetRetryWait(retryInMs);continue;
+              }
+              // Auth, validation, conflicts, rate limits and all other statuses
+              // remain terminal; exhausted transient failures stay uncertain.
               assert([201,202].includes(response.status)&&body.success===true,'Static asset upload failed (HTTP '+response.status+'); the session token was not persisted');
               if(body.result?.jwt)completionToken=body.result.jwt;
               break;
@@ -220,20 +232,37 @@ export function cloudflarePackProvider({api,assetFetch=fetch,uploadAssets,upload
 }
 
 /** Tokens stay in this closure. Errors/logs never interpolate headers or bodies. */
-export function tokenCloudflareTransport({token=process.env.CLOUDFLARE_API_TOKEN,fetchImpl=fetch,transportClock=Date.now}={}) {
+export function tokenCloudflareTransport({token=process.env.CLOUDFLARE_API_TOKEN,fetchImpl=fetch,transportClock=Date.now,readRetryWait=waitForAssetRetry,transportDiagnostic=value=>console.warn(JSON.stringify(value))}={}) {
   assert(typeof token==='string'&&token.length>10,'CLOUDFLARE_API_TOKEN is required for CI; the connector adapter uses the same guarded core without exporting its token');
   return async({method,path:requestPath,query,body})=>{
     assert(requestPath.startsWith(account+'/workers/')||requestPath.startsWith(zone+'/workers/'),'Provider path exceeds authorized Workers and route scope');
     const url=new URL('https://api.cloudflare.com/client/v4'+requestPath);for(const [key,value] of Object.entries(query??{}))url.searchParams.set(key,String(value));
-    const timeoutMs=method==='GET'?30000:180000,started=transportClock();let response;
-    try{
-      response=await fetchImpl(url,{method,headers:{Authorization:'Bearer '+token,...(body?{'Content-Type':'application/json'}:{})},...(body?{body:JSON.stringify(body)}:{}),signal:AbortSignal.timeout(timeoutMs)});
-      const result=await response.json();return {...result,status:response.status};
-    }catch(error){
-      const operation=method==='GET'?'workers-api-read':requestPath.endsWith('/assets-upload-session')?'asset-manifest-session':requestPath.endsWith('/versions')?'worker-version-upload':requestPath.endsWith('/deployments')?'worker-activation':requestPath.endsWith('/subdomain')?'worker-subdomain':requestPath.endsWith('/routes')?'worker-route':requestPath.endsWith('/workers/workers')?'worker-create':'workers-api-write';
-      // No API operation is retried here: uncertain create/upload/activation and
-      // route outcomes must keep the existing reconciliation requirement.
-      throw packProviderTransportFailure(error,{operation,method,elapsedMs:transportClock()-started,timeoutMs,responseStatus:response?.status});
+    const read=method==='GET',maximumAttempts=read?PACK_API_READ_RETRY.attempts:1,timeoutMs=read?PACK_API_READ_RETRY.timeoutMs:180000;
+    const operation=read?'workers-api-read':requestPath.endsWith('/assets-upload-session')?'asset-manifest-session':requestPath.endsWith('/versions')?'worker-version-upload':requestPath.endsWith('/deployments')?'worker-activation':requestPath.endsWith('/subdomain')?'worker-subdomain':requestPath.endsWith('/routes')?'worker-route':requestPath.endsWith('/workers/workers')?'worker-create':'workers-api-write';
+    for(let attempt=1;attempt<=maximumAttempts;attempt++){
+      const started=transportClock();let response,result,failure;
+      try{
+        response=await fetchImpl(url,{method,headers:{Authorization:'Bearer '+token,...(body?{'Content-Type':'application/json'}:{})},...(body?{body:JSON.stringify(body)}:{}),signal:AbortSignal.timeout(timeoutMs)});
+        result=await response.json();
+      }catch(error){
+        failure=packProviderTransportFailure(error,{operation,method,attempt,maximumAttempts,elapsedMs:transportClock()-started,timeoutMs,responseStatus:response?.status});
+        // A received auth/validation refusal wins even if its body read also
+        // loses the socket. Malformed successful JSON is not a network retry.
+        const transientStatus=PACK_API_READ_RETRY.statuses.includes(response?.status);
+        const networkRetry=(!response||response.status>=200&&response.status<300)&&retryableAssetTransport(error);
+        if(!read||!transientStatus&&!networkRetry||attempt===maximumAttempts)throw failure;
+      }
+      if(!failure){
+        if(!read||!PACK_API_READ_RETRY.statuses.includes(response.status)||attempt===maximumAttempts)return {...result,status:response.status};
+        failure=packProviderTransportFailure(Error('Transient Workers API read status'),{operation,method,attempt,maximumAttempts,elapsedMs:transportClock()-started,timeoutMs,responseStatus:response.status});
+      }
+      // Retry only a fresh GET of the same scoped endpoint. All API mutations
+      // remain single-attempt; terminal read failures keep the caller's existing
+      // reconciliation/claim behavior. Three 30s attempts plus 1s/2s backoff bound
+      // one read to 93s; no cached or partial provider response is accepted.
+      const retryInMs=PACK_API_READ_RETRY.delaysMs[attempt-1];
+      transportDiagnostic({type:'cars-pack-api-read-retry',...failure.transport,retryInMs});
+      await readRetryWait(retryInMs);
     }
   };
 }
