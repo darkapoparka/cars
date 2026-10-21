@@ -1,0 +1,194 @@
+{
+  "schemaVersion": 1,
+  "dealer": "mahmoud-al-akkaoui-used-cars",
+  "realLogoFirst": true,
+  "publishedBranding": true,
+  "creationMethod": "sourced-logo-imagegen-redraw",
+  "dealerApproved": false,
+  "approvalStatus": "redraw-and-compact-adaptation-not-dealer-approved",
+  "usageStatus": "public-preview-only",
+  "observedAt": "2026-10-19T19:58:49.372397Z",
+  "publicSources": [
+    {
+      "url": "https://www.oneclickdrive.com/company/sharjah/mahmoud-al-akkaoui-used-cars",
+      "observedAt": "2026-10-19T19:58:49.372397Z"
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Toyota/Tundra-Limited/?id=44548",
+      "observedAt": "2026-10-19T19:58:49.372397Z"
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Nissan/Pathfinder-SV/?id=44550",
+      "observedAt": "2026-10-19T19:58:49.372397Z"
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Ford/F-Series-Pickup-SVT-Raptor/?id=44562",
+      "observedAt": "2026-10-19T19:58:49.372397Z"
+    }
+  ],
+  "originals": [
+    {
+      "path": "branding/source-original.png",
+      "sha256": "db989886bf2d53e9049632fcdcd2d0e8e769fade064bc9777543461e0ccde1da",
+      "url": "https://static.oneclickdrive.com/application/views/img/company/mahmoud.png",
+      "observedAt": "2026-10-19T19:58:49.372397Z",
+      "identityStatus": "public-profile-identity-reference"
+    }
+  ],
+  "logoResearch": "Exact public dealer-profile logo was visually inspected. Low-resolution or opaque artwork was faithfully redrawn with imagegen; no dealer approval is claimed.",
+  "visualReview": "Reviewed transparent artwork, full business-wordmark spelling and compact emblem. Deterministic crops retain the generated artwork; no vector substitute, recolouring or template changes. Compact variants are unapproved preview adaptations. Published orange/black roof curve retained in full wordmark. Compact MA/car adaptation is explicitly proposed.",
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T20:58:33.509Z",
+    "master": {
+      "path": "branding/generated-primary.png",
+      "sha256": "3a2c60cdfb7ef0ab164d2dd7dd3e185b12fc644c319dd9a0881a7f8c08e26629",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-e3a2050c-8afd-4336-80c1-3c57dc52a85b",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark.png",
+      "sha256": "6f7f359e85b0bcc54b65c7cd7b3896e70aaf09308d1d8b5a8a61f3307e8e2a92",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-4d031f6f-a1bb-4a50-8fae-361852747f00",
+        "modelVersion": null,
+        "transformation": {
+          "operation": "rectangular-extract-without-recolour-or-redrawing",
+          "source": "branding/generated-pair.png",
+          "sourceSha256": "347fe51f281136a3fe270d2d3338616c2ba3341c775492236825b8bcfcab4f81",
+          "rectangle": {
+            "left": 0,
+            "top": 0,
+            "width": 887,
+            "height": 887
+          }
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-dark-surface.png",
+      "sha256": "368f85d3f814c8f3e6052b755b24a61ff2a6488920966aad19f9e2e8a1d37d87",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-4d031f6f-a1bb-4a50-8fae-361852747f00",
+        "modelVersion": null,
+        "transformation": {
+          "operation": "rectangular-extract-without-recolour-or-redrawing",
+          "source": "branding/generated-pair.png",
+          "sourceSha256": "347fe51f281136a3fe270d2d3338616c2ba3341c775492236825b8bcfcab4f81",
+          "rectangle": {
+            "left": 887,
+            "top": 0,
+            "width": 887,
+            "height": 887
+          }
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-primary.png",
+        "sha256": "3a2c60cdfb7ef0ab164d2dd7dd3e185b12fc644c319dd9a0881a7f8c08e26629",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-e3a2050c-8afd-4336-80c1-3c57dc52a85b",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-dark-surface.png",
+        "sha256": "368f85d3f814c8f3e6052b755b24a61ff2a6488920966aad19f9e2e8a1d37d87",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-4d031f6f-a1bb-4a50-8fae-361852747f00",
+          "modelVersion": null,
+          "transformation": {
+            "operation": "rectangular-extract-without-recolour-or-redrawing",
+            "source": "branding/generated-pair.png",
+            "sourceSha256": "347fe51f281136a3fe270d2d3338616c2ba3341c775492236825b8bcfcab4f81",
+            "rectangle": {
+              "left": 887,
+              "top": 0,
+              "width": 887,
+              "height": 887
+            }
+          }
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-silver.png",
+        "sha256": "a0446ffa00a005573fe1e7c7ba85c8baf3c693ce81b6e9a27ab19d2d0ffe31a3",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-9b24b505-7a1e-44e7-b63d-23d7ac9ef063",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": {
+        "onLight": [
+          "#ffffff"
+        ],
+        "onDark": [
+          "#111113",
+          "#101820"
+        ],
+        "onAccent": [
+          "#09090b",
+          "#17191c",
+          "#c40101"
+        ]
+      },
+      "notes": "Reviewed transparent artwork, full business-wordmark spelling and compact emblem. Deterministic crops retain the generated artwork; no vector substitute, recolouring or template changes. Compact variants are unapproved preview adaptations. Published orange/black roof curve retained in full wordmark. Compact MA/car adaptation is explicitly proposed."
+    },
+    "compactMarkStatus": "unapproved-preview-adaptation",
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-19T20:58:33.509Z",
+      "widths": [
+        32,
+        64
+      ],
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#101820"
+      ],
+      "notes": "Reviewed transparent artwork, full business-wordmark spelling and compact emblem. Deterministic crops retain the generated artwork; no vector substitute, recolouring or template changes. Compact variants are unapproved preview adaptations. Published orange/black roof curve retained in full wordmark. Compact MA/car adaptation is explicitly proposed."
+    }
+  },
+  "generationPrompts": [
+    {
+      "role": "primary",
+      "prompt": "Use case: logo-brand. Faithful clean redraw of attached low resolution dealer mark. Keep its orange/copper sleek car-profile swoosh motif and same brand identity. Make a crisp compact flat car-profile emblem at left, with exact wordmark at right: \"MAHMOUD AL AKKAOUI\" and smaller descriptor \"USED CARS\". Strong highly legible gently italic sans serif lettering in dark charcoal, subtle copper/orange accent for car motif, simplify weak thin details into deliberate substantial strokes. Correct exact name. Transparent background, no plaque/rectangle, no gradients/shadows, no phone numbers. Horizontal3:1 lockup with clear separation so left emblem can become favicon. Unapproved faithful redraw.",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-e3a2050c-8afd-4336-80c1-3c57dc52a85b",
+      "modelVersion": null,
+      "returnedArtifact": "exec-e3a2050c-8afd-4336-80c1-3c57dc52a85b.png",
+      "note": "The tool exposed the returned artifact identifier and did not expose a model version."
+    },
+    {
+      "role": "pair",
+      "prompt": "Use case: professional logo variant artwork. On ONE truly transparent canvas place TWO separated versions of the SAME compact emblem, equal sized, side by side with a wide empty transparent gap. NO WORDS ANYWHERE. The LEFT emblem should faithfully adapt the provided dealer logo using its orange and black car silhouette. Make a compact upright MA monogram with the orange roof contour forming the top. This is a proposed compact adaptation of the source identity. Use warm orange #bc491b and near-black. The RIGHT emblem must repeat EXACTLY the same geometry in one uniform medium-light grey #b9bec2, with all counters completely transparent. No pure white ink at all. Each emblem must be approximately square with substantial strokes, clean vector-like boundaries and all negative spaces transparent. No background, no label, no text, no shadow, no gradient, no glow, no texture, no distressed edges, no tiny lines, no mockup. Both emblems should be crisp, beautifully balanced, and legible at 32 pixels. Fit each entire symbol within its own square half of a 2:1 canvas, margins around each and clear central gap.",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-4d031f6f-a1bb-4a50-8fae-361852747f00",
+      "modelVersion": null,
+      "returnedArtifact": "exec-4d031f6f-a1bb-4a50-8fae-361852747f00.png",
+      "note": "The tool exposed the returned artifact identifier and did not expose a model version."
+    },
+    {
+      "role": "silver",
+      "prompt": "Use case: logo-brand. Produce the matching LIGHT SILVER surface version of this logo. RE-RENDER with exactly one flat light silver ink #c7d4dc for all visible artwork. Preserve the exact business name, letterforms, spacing, emblem shape and arrangement. Transparent knockout areas between strokes must stay open and completely transparent. For the badge interiors, turn the dark solid fill into transparent negative space and preserve the car/crown/star/outline essential motifs as substantial silver strokes. Very smooth clean geometric hard boundaries. No white ink, no black ink, no dark navy ink. Do not distress the mark. No texture, no gradient, no shading, no shadow, no speckles, no background. A true transparent flat raster identity asset in pale silver. Maintain wide horizontal composition with emblem at left and wordmark at right. Keep the full exact same business text with correct spelling.",
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-9b24b505-7a1e-44e7-b63d-23d7ac9ef063",
+      "modelVersion": null,
+      "returnedArtifact": "exec-9b24b505-7a1e-44e7-b63d-23d7ac9ef063.png",
+      "note": "The tool exposed the returned artifact identifier and did not expose a model version."
+    }
+  ]
+}

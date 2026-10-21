@@ -1,0 +1,227 @@
+{
+  "schemaVersion": 1,
+  "dealer": "designo-cars-trading",
+  "reviewed": true,
+  "reviewedAt": "2026-10-19T21:17:27.218Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-faithful-redraw",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "5bd3bac2be3c9daed2ca10d19be15429465902462ad326719598531f3100026a",
+      "sourceSha256": "f2a31c3f51debf1b3c3691962713a5ce848bc012ad07475fce9298694cafa853"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "2c8280bd91c1ece11612325c9717ad70117cc0d8f3a9daa40ae4a4374a9e6b2b",
+      "sourceSha256": "08021364e8f7604b5dd7c9c6daad3b74d636c7ab9af93787acd99e48bfd59224"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "2c8280bd91c1ece11612325c9717ad70117cc0d8f3a9daa40ae4a4374a9e6b2b",
+      "sourceSha256": "08021364e8f7604b5dd7c9c6daad3b74d636c7ab9af93787acd99e48bfd59224"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "f2a31c3f51debf1b3c3691962713a5ce848bc012ad07475fce9298694cafa853",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-9188df5c-17b4-4707-84c3-4e2a665402b1",
+      "generationIdKind": "exposed-tool-execution-output-identifier",
+      "modelVersion": null,
+      "outputReference": "branding/generated-sheet.png",
+      "outputSha256": "951144b734e32ff6ef132a651e76a949e848cc0c9cf9da87344493c0f4359c05"
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "d0364d83463391a58997dd0dec807ac3f4baf4581ad838b29f673757ac1e02d8",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-9188df5c-17b4-4707-84c3-4e2a665402b1",
+      "generationIdKind": "exposed-tool-execution-output-identifier",
+      "modelVersion": null,
+      "outputReference": "branding/generated-sheet.png",
+      "outputSha256": "951144b734e32ff6ef132a651e76a949e848cc0c9cf9da87344493c0f4359c05"
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "2aa3e431449fa1f0ba4fcbc88c4ccb64173ff0b4f592a35a0af98708c8b7d8b8"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "f2a31c3f51debf1b3c3691962713a5ce848bc012ad07475fce9298694cafa853",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-9188df5c-17b4-4707-84c3-4e2a665402b1",
+        "generationIdKind": "exposed-tool-execution-output-identifier",
+        "modelVersion": null,
+        "outputReference": "branding/generated-sheet.png",
+        "outputSha256": "951144b734e32ff6ef132a651e76a949e848cc0c9cf9da87344493c0f4359c05"
+      },
+      "sourceReference": "dealers/designo-cars-trading/branding/reviewed-onLight.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "08021364e8f7604b5dd7c9c6daad3b74d636c7ab9af93787acd99e48bfd59224",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-9188df5c-17b4-4707-84c3-4e2a665402b1",
+        "generationIdKind": "exposed-tool-execution-output-identifier",
+        "modelVersion": null,
+        "outputReference": "branding/generated-sheet.png",
+        "outputSha256": "951144b734e32ff6ef132a651e76a949e848cc0c9cf9da87344493c0f4359c05"
+      },
+      "sourceReference": "dealers/designo-cars-trading/branding/reviewed-onDark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "08021364e8f7604b5dd7c9c6daad3b74d636c7ab9af93787acd99e48bfd59224",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-9188df5c-17b4-4707-84c3-4e2a665402b1",
+        "generationIdKind": "exposed-tool-execution-output-identifier",
+        "modelVersion": null,
+        "outputReference": "branding/generated-sheet.png",
+        "outputSha256": "951144b734e32ff6ef132a651e76a949e848cc0c9cf9da87344493c0f4359c05"
+      },
+      "sourceReference": "dealers/designo-cars-trading/branding/reviewed-onDark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "e4e396953ef182b67ed65dce36556ab31da2b447a5381c1698b81cec20d06dcc",
+      "sha256": "f2a31c3f51debf1b3c3691962713a5ce848bc012ad07475fce9298694cafa853",
+      "crop": {
+        "left": 55,
+        "top": 43,
+        "width": 560,
+        "height": 694
+      },
+      "sourcePath": "branding/reviewed-onLight.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "3b45cc6c5ec0ac18c3234badcb74972c2db61ecd1059ada6e0fa3c47ec6bf2c9",
+      "sha256": "08021364e8f7604b5dd7c9c6daad3b74d636c7ab9af93787acd99e48bfd59224",
+      "crop": {
+        "left": 20,
+        "top": 43,
+        "width": 555,
+        "height": 695
+      },
+      "sourcePath": "branding/reviewed-onDark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "3b45cc6c5ec0ac18c3234badcb74972c2db61ecd1059ada6e0fa3c47ec6bf2c9",
+      "sha256": "08021364e8f7604b5dd7c9c6daad3b74d636c7ab9af93787acd99e48bfd59224",
+      "crop": {
+        "left": 20,
+        "top": 43,
+        "width": 555,
+        "height": 695
+      },
+      "sourcePath": "branding/reviewed-onDark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "a1a1595f46a420b8c886e490f35eefecd9ea7b70fe924270651b14a044db6e52",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-9188df5c-17b4-4707-84c3-4e2a665402b1",
+        "generationIdKind": "exposed-tool-execution-output-identifier",
+        "modelVersion": null,
+        "outputReference": "branding/generated-sheet.png",
+        "outputSha256": "951144b734e32ff6ef132a651e76a949e848cc0c9cf9da87344493c0f4359c05"
+      },
+      "sourceReference": "dealers/designo-cars-trading/branding/reviewed-mark.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "46ae947ec83a096831b4f17fc440959819dbda2796b949f003f3fd51e8baa54f",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-9188df5c-17b4-4707-84c3-4e2a665402b1",
+        "generationIdKind": "exposed-tool-execution-output-identifier",
+        "modelVersion": null,
+        "outputReference": "branding/generated-sheet.png",
+        "outputSha256": "951144b734e32ff6ef132a651e76a949e848cc0c9cf9da87344493c0f4359c05"
+      },
+      "sourceReference": "dealers/designo-cars-trading/branding/reviewed-markOnDark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "d0364d83463391a58997dd0dec807ac3f4baf4581ad838b29f673757ac1e02d8",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-9188df5c-17b4-4707-84c3-4e2a665402b1",
+        "generationIdKind": "exposed-tool-execution-output-identifier",
+        "modelVersion": null,
+        "outputReference": "branding/generated-sheet.png",
+        "outputSha256": "951144b734e32ff6ef132a651e76a949e848cc0c9cf9da87344493c0f4359c05"
+      },
+      "sourceReference": "dealers/designo-cars-trading/branding/reviewed-mark.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "2aa3e431449fa1f0ba4fcbc88c4ccb64173ff0b4f592a35a0af98708c8b7d8b8",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-9188df5c-17b4-4707-84c3-4e2a665402b1",
+        "generationIdKind": "exposed-tool-execution-output-identifier",
+        "modelVersion": null,
+        "outputReference": "branding/generated-sheet.png",
+        "outputSha256": "951144b734e32ff6ef132a651e76a949e848cc0c9cf9da87344493c0f4359c05"
+      },
+      "sourceReference": "dealers/designo-cars-trading/branding/reviewed-mark.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-19T21:17:27.218Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "ed58f8fbe41a9a5155282681d95378722f8c36542fa29c68095dd4a43f65de56",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-9188df5c-17b4-4707-84c3-4e2a665402b1",
+      "generationIdKind": "exposed-tool-execution-output-identifier",
+      "modelVersion": null,
+      "outputReference": "branding/generated-sheet.png",
+      "outputSha256": "951144b734e32ff6ef132a651e76a949e848cc0c9cf9da87344493c0f4359c05"
+    }
+  }
+}

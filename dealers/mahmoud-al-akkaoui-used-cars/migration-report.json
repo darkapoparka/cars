@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "mahmoud-al-akkaoui-used-cars",
+  "previousSlug": "mahmoud-al-akkaoui-used-cars",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-21T06:02:27.302Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 4,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-sharjah-mahmoud-al-akkaoui-used-cars",
+    "position": 360
+  },
+  "before": {
+    "files": 39,
+    "bytes": 3790190
+  },
+  "afterBeforeReview": {
+    "files": 23,
+    "bytes": 1906150
+  },
+  "generatedExportsRemoved": [
+    {
+      "path": "branding/app-icon.png",
+      "bytes": 94390,
+      "sha256": "af4fd9c46e48687b824576190156151f9bf8f7db7a7aa0fb0b61b48bfc0836bd"
+    },
+    {
+      "path": "branding/logo-mark-on-dark.png",
+      "bytes": 97416,
+      "sha256": "9a31a8938df65b2415104904dbf091a406a5dc3385b4d63e83481fdb2a450d2c"
+    },
+    {
+      "path": "branding/logo-mark.png",
+      "bytes": 94390,
+      "sha256": "af4fd9c46e48687b824576190156151f9bf8f7db7a7aa0fb0b61b48bfc0836bd"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "bytes": 70440,
+      "sha256": "5fb093339d26bfe4d6429489a265b4c19aa6f3bf6b4577026441d7d19684546b"
+    },
+    {
+      "path": "branding/logo-on-accent.png",
+      "bytes": 81204,
+      "sha256": "22060951fb3e358be80763fda676eaf1baf31cc93b0cab25958dcb783b0d1ce0"
+    },
+    {
+      "path": "branding/logo-on-dark.png",
+      "bytes": 317998,
+      "sha256": "065dc4d8c5d771bd9014977d10543f729c4e223ddbc99b2a9872982498b6dd98"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "bytes": 70440,
+      "sha256": "5fb093339d26bfe4d6429489a265b4c19aa6f3bf6b4577026441d7d19684546b"
+    },
+    {
+      "path": "dealer-brand/app-icon.png",
+      "bytes": 94390,
+      "sha256": "af4fd9c46e48687b824576190156151f9bf8f7db7a7aa0fb0b61b48bfc0836bd"
+    },
+    {
+      "path": "dealer-brand/favicon.ico",
+      "bytes": 8523,
+      "sha256": "4a9646fec38a96d78ff2a0ad4aba6dc4393152d084881d944d6b8cb7efeb6564"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.png",
+      "bytes": 81204,
+      "sha256": "22060951fb3e358be80763fda676eaf1baf31cc93b0cab25958dcb783b0d1ce0"
+    },
+    {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "bytes": 59048,
+      "sha256": "17e484b5ed749679bc6e7c9c3b2dd72438031f39cd0b9aec1edf3619277e5e64"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.png",
+      "bytes": 317998,
+      "sha256": "065dc4d8c5d771bd9014977d10543f729c4e223ddbc99b2a9872982498b6dd98"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "bytes": 228258,
+      "sha256": "7c3df7f9b89245359951447e8e79c8dcc82d4e3029d02c3c68369573b1d45e87"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.png",
+      "bytes": 70440,
+      "sha256": "5fb093339d26bfe4d6429489a265b4c19aa6f3bf6b4577026441d7d19684546b"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "bytes": 54424,
+      "sha256": "d1fd5aa81eaa9aea32ff0a20ccd79075f5b274cec42261d06facf2e0cba76d1f"
+    },
+    {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "bytes": 76178,
+      "sha256": "1a957f4160b60766df0cb73afe5b1dbda197b6fa42c7a3c8b99b4b757ec3a1dd"
+    },
+    {
+      "path": "dealer-brand/mark-on-light.webp",
+      "bytes": 71158,
+      "sha256": "49b66ac734a9d866f80316c95d64c7e9c84f00d697a242fa6c746b6d6e01c172"
+    }
+  ],
+  "retainedOriginals": {
+    "files": 13,
+    "bytes": 1302632,
+    "inventorySha256": "056270480d4d4efebcd8540d4daae2aace7acdc8685ae598c514cfc606ca08dc",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": false,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "mahmoud-al-akkaoui-used-cars",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 25,
+    "report": "dealers/mahmoud-al-akkaoui-used-cars/input-review.json"
+  },
+  "after": {
+    "files": 25,
+    "bytes": 1915010
+  }
+}

@@ -1,0 +1,191 @@
+{
+  "schemaVersion": 1,
+  "dealer": "designo-cars-trading",
+  "publishedBranding": "retained-public-logo",
+  "sourceLogoUrl": "https://auto-ae-prod-storage.storage.googleapis.com/20c319f8a2b5471096a9253fd272063d",
+  "creationMethod": "imagegen-faithful-redraw",
+  "approvalStatus": "independent-proposal-not-dealer-approved",
+  "dealerApproved": false,
+  "observedAt": "2026-10-19",
+  "checkedSources": [
+    "https://auto-ae-prod-storage.storage.googleapis.com/20c319f8a2b5471096a9253fd272063d",
+    "https://auto.ae/designocars/"
+  ],
+  "researchConclusion": "The public dealer logo was retained as evidence. The redraw keeps its published name, colours and identifying motif; compact adaptations and inverse variants are independent and unapproved.",
+  "originals": [
+    {
+      "path": "branding/original-logo.jpg",
+      "url": "https://auto-ae-prod-storage.storage.googleapis.com/20c319f8a2b5471096a9253fd272063d",
+      "observedAt": "2026-10-19",
+      "sha256": "4f8a42af616a9581c969664e456acd4612ce77003bf47057dda256d6954531ef"
+    }
+  ],
+  "generation": {
+    "tool": "image_gen.imagegen",
+    "generationId": "exec-9188df5c-17b4-4707-84c3-4e2a665402b1",
+    "generationIdKind": "exposed-tool-execution-output-identifier",
+    "modelVersion": null,
+    "outputReference": "branding/generated-sheet.png",
+    "outputSha256": "951144b734e32ff6ef132a651e76a949e848cc0c9cf9da87344493c0f4359c05",
+    "prompt": "Faithful professional redraw/export of the attached public dealer identity. Main name: \"DESIGNO\". Smaller descriptor: \"CARS TRADING\". Keep the attached dealer's red outlined shield containing the distinctive D, with simple DESIGNO wordmark. Deep red #a91522 and charcoal only on left; no shiny metal or filled dark interior. Compact shield D must be bold and square enough at 32px.\nUse crisp flat forms, no 3D, no gradients, no glow, no shadow, no invented warranty/award/approval text. The brand name appears EXACTLY ONCE in each full lockup. Do not repeat a script name inside the car and then repeat it below.\nDeliver one actual-transparent 2 by 2 export sheet for this ONE dealership: full matching light and inverse lockups across the top 60%, compact standalone near-square emblems across the bottom 40%. Clear large alpha gutters separate the cells; no panels, guides or role labels.\nLEFT full and compact artwork is mostly dark ink, with any existing brand colour kept deep enough on white. RIGHT full and compact artwork must be 100% PURE WHITE INK FOR EVERY SHAPE AND LETTER, no coloured accent at all, no black fill or background, so it contrasts on charcoal AND bright red. White inverse uses the same geometry as left. Shape counters and badge interiors must be truly transparent, not filled black. All compact elements need thick readable strokes and a near-square silhouette that stays clear at 32px. No checkerboard baked into pixels.",
+    "sourceRasterDimensions": {
+      "width": 1254,
+      "height": 1254
+    }
+  },
+  "generatedInputs": {
+    "reviewedAt": "2026-10-19T21:17:27.218Z",
+    "master": {
+      "path": "branding/reviewed-onLight.png",
+      "sha256": "e4e396953ef182b67ed65dce36556ab31da2b447a5381c1698b81cec20d06dcc",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-9188df5c-17b4-4707-84c3-4e2a665402b1",
+        "generationIdKind": "exposed-tool-execution-output-identifier",
+        "modelVersion": null,
+        "outputReference": "branding/generated-sheet.png",
+        "outputSha256": "951144b734e32ff6ef132a651e76a949e848cc0c9cf9da87344493c0f4359c05"
+      },
+      "export": {
+        "operation": "deterministic-artboard-cell-extraction",
+        "crop": [
+          0,
+          0,
+          627,
+          760
+        ]
+      }
+    },
+    "mark": {
+      "path": "branding/reviewed-mark.png",
+      "sha256": "eb251bc6a2be460c3bfa053a55b9997efe7c77455f231b2e69513413ca51d4ff",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-9188df5c-17b4-4707-84c3-4e2a665402b1",
+        "generationIdKind": "exposed-tool-execution-output-identifier",
+        "modelVersion": null,
+        "outputReference": "branding/generated-sheet.png",
+        "outputSha256": "951144b734e32ff6ef132a651e76a949e848cc0c9cf9da87344493c0f4359c05"
+      },
+      "export": {
+        "operation": "deterministic-artboard-cell-extraction",
+        "crop": [
+          0,
+          760,
+          627,
+          1254
+        ]
+      }
+    },
+    "markOnDark": {
+      "path": "branding/reviewed-markOnDark.png",
+      "sha256": "e10812b6e01cfe12268f01320710453de66bdad3d994837a936f93743d66485e",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-9188df5c-17b4-4707-84c3-4e2a665402b1",
+        "generationIdKind": "exposed-tool-execution-output-identifier",
+        "modelVersion": null,
+        "outputReference": "branding/generated-sheet.png",
+        "outputSha256": "951144b734e32ff6ef132a651e76a949e848cc0c9cf9da87344493c0f4359c05"
+      },
+      "export": {
+        "operation": "deterministic-artboard-cell-extraction",
+        "crop": [
+          627,
+          760,
+          1254,
+          1254
+        ]
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/reviewed-onLight.png",
+        "sha256": "e4e396953ef182b67ed65dce36556ab31da2b447a5381c1698b81cec20d06dcc",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-9188df5c-17b4-4707-84c3-4e2a665402b1",
+          "generationIdKind": "exposed-tool-execution-output-identifier",
+          "modelVersion": null,
+          "outputReference": "branding/generated-sheet.png",
+          "outputSha256": "951144b734e32ff6ef132a651e76a949e848cc0c9cf9da87344493c0f4359c05"
+        },
+        "export": {
+          "operation": "deterministic-artboard-cell-extraction",
+          "crop": [
+            0,
+            0,
+            627,
+            760
+          ]
+        }
+      },
+      "onDark": {
+        "path": "branding/reviewed-onDark.png",
+        "sha256": "3b45cc6c5ec0ac18c3234badcb74972c2db61ecd1059ada6e0fa3c47ec6bf2c9",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-9188df5c-17b4-4707-84c3-4e2a665402b1",
+          "generationIdKind": "exposed-tool-execution-output-identifier",
+          "modelVersion": null,
+          "outputReference": "branding/generated-sheet.png",
+          "outputSha256": "951144b734e32ff6ef132a651e76a949e848cc0c9cf9da87344493c0f4359c05"
+        },
+        "export": {
+          "operation": "deterministic-artboard-cell-extraction",
+          "crop": [
+            627,
+            0,
+            1254,
+            760
+          ]
+        }
+      },
+      "onAccent": {
+        "path": "branding/reviewed-onDark.png",
+        "sha256": "3b45cc6c5ec0ac18c3234badcb74972c2db61ecd1059ada6e0fa3c47ec6bf2c9",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-9188df5c-17b4-4707-84c3-4e2a665402b1",
+          "generationIdKind": "exposed-tool-execution-output-identifier",
+          "modelVersion": null,
+          "outputReference": "branding/generated-sheet.png",
+          "outputSha256": "951144b734e32ff6ef132a651e76a949e848cc0c9cf9da87344493c0f4359c05"
+        },
+        "export": {
+          "operation": "deterministic-artboard-cell-extraction",
+          "crop": [
+            627,
+            0,
+            1254,
+            760
+          ]
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "backgrounds": {
+        "onLight": "#ffffff",
+        "onDark": "#101820",
+        "onAccent": "#c40101"
+      },
+      "wordmarkWidths": [
+        120,
+        180
+      ],
+      "notes": "Actual-alpha artwork reviewed on white, charcoal and red; faithful name and motif retained, with a white inverse for dark and accent template surfaces."
+    },
+    "compactMarkStatus": "independent-proposal-not-dealer-approved",
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-19T21:17:27.218Z",
+      "widths": [
+        32,
+        64
+      ],
+      "notes": "Compact emblem reviewed at 32px and 64px. Simplified derivative preserves the identifying motif without tiny legal descriptors."
+    }
+  },
+  "usageStatus": "public-preview-only"
+}

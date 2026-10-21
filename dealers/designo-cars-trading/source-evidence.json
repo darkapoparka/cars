@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "dealer": "designo-cars-trading",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://auto.ae/designocars/",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/ar/cars/listing/12245-mercedes-benz-gla-250-7g-dct-4matic-211-hp-gla-250-4matic",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.formacar.com/tr/shops/0a000651-9615-1833-8196-34ae4d8252ca",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.arabwheels.ae/used-cars/dealers/designo-cars-showroom-in-uae/",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://auto.ae/designocars/",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "business-name",
+        "public-dealer-contact",
+        "public-location-if-shown",
+        "dated-stock-sample"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "researchedAt": "2026-10-19",
+  "catalogueResponseSha256": "bf54fe177967a6055649953191680ee6e6c2824c988e0b4412bf4fb5b7dde427",
+  "stockSources": [
+    {
+      "listingUrl": "https://auto.ae/dubai/sale/car/ford/ford-expedition-ii-2004/id/285940/",
+      "catalogueUrl": "https://auto.ae/designocars/",
+      "imageUrl": "https://auto-ae-prod-storage.storage.googleapis.com/auto_dubai_ford_expedition_sale_285940871574620",
+      "observedAt": "2026-10-19",
+      "imageSourceSha256": "c1a96239ba2e5cd648a8650fffd2b8e4a918a9060f3d7b68513cad64a2f396b1",
+      "retainedPath": "dealer-stock/stock-1.webp",
+      "retainedSha256": "10656843c9baba8f565639fb8bda2c70f299b43eb9a8c5fb69fd0f1f947869f9",
+      "originalDimensions": [
+        768,
+        1024
+      ],
+      "retainedDimensions": [
+        720,
+        960
+      ],
+      "retainedBytes": 138114,
+      "transformation": "Proportional downscale to maximum960pixels, WebP quality74; no visual content edits. Retained preview recompressed from the sourced photograph."
+    },
+    {
+      "listingUrl": "https://auto.ae/dubai/sale/car/bmw/bmw-3-series-vi-f3x-facelift-2015/id/285939/",
+      "catalogueUrl": "https://auto.ae/designocars/",
+      "imageUrl": "https://auto-ae-prod-storage.storage.googleapis.com/auto_dubai_bmw_3_series_sale_285939871574940",
+      "observedAt": "2026-10-19",
+      "imageSourceSha256": "287a59f2e1727b8dbd6b31c5995936cb2b87386fafb4137195e2f0f678757b4d",
+      "retainedPath": "dealer-stock/stock-2.webp",
+      "retainedSha256": "a0a431493df98209d09eaf94a2de6690f2cc5b7161b95391204ad0b0452e6a75",
+      "originalDimensions": [
+        1067,
+        800
+      ],
+      "retainedDimensions": [
+        1067,
+        800
+      ],
+      "retainedBytes": 169208,
+      "transformation": "Proportional downscale to maximum 1280 pixels; WebP quality 80; no visual content edits."
+    },
+    {
+      "listingUrl": "https://auto.ae/dubai/sale/car/audi/audi-q5-ii-fy-facelift-2020/id/285938/",
+      "catalogueUrl": "https://auto.ae/designocars/",
+      "imageUrl": "https://auto-ae-prod-storage.storage.googleapis.com/auto_dubai_audi_q5_sale_285938871575250",
+      "observedAt": "2026-10-19",
+      "imageSourceSha256": "ac8e030159c59748fc2127599a9454fd21ebc4c622904f55290294fc2b1edce9",
+      "retainedPath": "dealer-stock/stock-3.webp",
+      "retainedSha256": "15ec114673f623353a51991b73f887778eb57ae492dce72d30fddc8add0e943e",
+      "originalDimensions": [
+        1066,
+        800
+      ],
+      "retainedDimensions": [
+        1066,
+        800
+      ],
+      "retainedBytes": 153286,
+      "transformation": "Proportional downscale to maximum 1280 pixels; WebP quality 80; no visual content edits."
+    }
+  ],
+  "omissions": [
+    "Personal-looking or unverified emails omitted; no private contact fields retained.",
+    "Unknown official website, exact address or hours left empty; marketplace-wide defaults not imported."
+  ]
+}

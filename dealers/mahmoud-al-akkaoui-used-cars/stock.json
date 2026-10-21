@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "dealer": "mahmoud-al-akkaoui-used-cars",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T19:58:49.372397Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "ocd-44548",
+      "title": "Toyota Tundra Limited 2023",
+      "make": "Toyota",
+      "model": "Tundra Limited",
+      "year": 2023,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/ocd-44548.jpg"
+      ],
+      "sourceUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Toyota/Tundra-Limited/?id=44548",
+      "observedAt": "2026-10-19T19:58:49.372397Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "SUV",
+      "transmission": "Auto",
+      "fuel": "Petrol",
+      "color": "Blue",
+      "mileageValue": 22500,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "ocd-44550",
+      "title": "Nissan Pathfinder SV 2022",
+      "make": "Nissan",
+      "model": "Pathfinder SV",
+      "year": 2022,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/ocd-44550.jpg"
+      ],
+      "sourceUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Nissan/Pathfinder-SV/?id=44550",
+      "observedAt": "2026-10-19T19:58:49.372397Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "SUV",
+      "transmission": "Auto",
+      "fuel": "Petrol",
+      "color": "Blue",
+      "mileageValue": 120000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "ocd-44562",
+      "title": "Ford F Series Pickup SVT Raptor 2023",
+      "make": "Ford",
+      "model": "F Series Pickup SVT Raptor",
+      "year": 2023,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/ocd-44562.jpg"
+      ],
+      "sourceUrl": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Ford/F-Series-Pickup-SVT-Raptor/?id=44562",
+      "observedAt": "2026-10-19T19:58:49.372397Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Pickup Truck",
+      "transmission": "Auto",
+      "fuel": "Petrol",
+      "color": "Black",
+      "mileageValue": 26400,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "slug": "designo-cars-trading",
+  "dealerId": "ae-dubai-designo-cars-trading",
+  "business": {
+    "name": "Designo Cars Trading",
+    "city": "Dubai",
+    "region": "Dubai",
+    "countryCode": "AE",
+    "currency": "AED",
+    "distanceUnit": "km",
+    "locale": "en-AE",
+    "address": "Designo Car Trading LLC, 59F9+3R4 - Nad Al Hamar Rd - Ras Al Khor Industrial Area - Ras Al Khor Industrial Area 3 - Dubai - Unit",
+    "phone": "+971507474770",
+    "phoneDisplay": "+971 50 747 4770",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://auto.ae/designocars/",
+    "hours": "",
+    "sourceUrl": "https://auto.ae/designocars/",
+    "observedAt": "2026-10-19",
+    "inventoryNotice": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://auto.ae/designocars/",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/ar/cars/listing/12245-mercedes-benz-gla-250-7g-dct-4matic-211-hp-gla-250-4matic",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.formacar.com/tr/shops/0a000651-9615-1833-8196-34ae4d8252ca",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.arabwheels.ae/used-cars/dealers/designo-cars-showroom-in-uae/",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://auto.ae/designocars/",
+      "observedAt": "2026-10-19",
+      "supports": [
+        "business-name",
+        "public-dealer-contact",
+        "public-location-if-shown",
+        "dated-stock-sample"
+      ]
+    }
+  ]
+}
