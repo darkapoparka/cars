@@ -70,7 +70,7 @@ test('pipeline contracts-only result accepts skipped build jobs but never bypass
 });
 
 test('pipeline sparse checkouts retain the tracked task document required by workflow links',()=>{
-  assert.equal((workflow.match(/^        sparse-checkout: \|$/gm)||[]).length,3);
+  assert.equal((workflow.match(/^        sparse-checkout: \|$/gm)||[]).length,4);
   for(const name of ['contracts','plan','lane']){
     const sparse=workflowJob(name).match(/^        sparse-checkout: \|\n((?: {10}.+\n)+)/m)?.[1];
     assert.ok(sparse,'Missing sparse checkout: '+name);
