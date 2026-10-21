@@ -1,0 +1,96 @@
+name: Dealer public source preparation
+on:
+  push:
+    branches: [astra/source-prep]
+    paths:
+      - .github/workflows/dealer-pack-source-prep.yml
+      - scripts/collect-dealer-pack-source.mjs
+permissions:
+  contents: read
+jobs:
+  source:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 1
+          persist-credentials: false
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /scripts/
+            /dealers/
+            /docs/**/*.json
+            /docs/**/*.md
+            /leads/expansion-2026-10-18/
+            /templates.lock.json
+            /workspace.json
+            /catalog.json
+            /clients/index.json
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: '26.10.0'
+          package-manager-cache: false
+      - run: npm install --prefix runtime/source-prep-tools --ignore-scripts --no-audit --no-fund --save-exact sharp@0.35.5
+      - name: Retain exact source inputs and public evidence; no ledger or provider writes
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: node scripts/collect-dealer-pack-source.mjs
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: ${{ !cancelled() }}
+        with:
+          name: public-dealer-source--${{ github.run_id }}
+          path: |
+            runtime/public-source-preparation/*.json
+            runtime/public-source-preparation/*.tgz
+            runtime/public-source-preparation/public/
+          retention-days: 3
+          if-no-files-found: error
+  inspect-stopped-request:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    permissions:
+      contents: read
+      actions: write
+    if: ${{ github.run_attempt == 1 }}
+    steps:
+      - name: Request the existing read-only recovery inspection once
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 - <<'PY'
+          import os,json,urllib.request,datetime
+          repo='darkapoparka/cars'
+          endpoint='https://api.github.com/repos/'+repo
+          headers={'Authorization':'Bearer '+os.environ['GH_TOKEN'],'Accept':'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28'}
+          def get(path,raw=False):
+              h=dict(headers)
+              if raw:h['Accept']='application/vnd.github.raw+json'
+              with urllib.request.urlopen(urllib.request.Request(endpoint+path,headers=h),timeout=30) as r:return json.load(r)
+          owner=39570401613
+          request='8fcc6d7188796da8f3302ca8777495cef9b22ce503e484bd0cc7933204835907'
+          state=get('/contents/queue.json?ref=cars-deploy-queue',True)
+          active=state.get('active') or {}
+          row=state['requests'].get(request,{})
+          if active.get('requestId')!=request or active.get('owner')!='github:'+str(owner) or row.get('status')!='needs-reconciliation':
+              print('No dispatch: the exact stopped request is no longer the uncertain account owner.');raise SystemExit(0)
+          run=get('/actions/runs/'+str(owner))
+          assert run['status']=='completed' and run['conclusion'] in ['failure','cancelled','timed_out']
+          assert run['repository']['full_name']==repo and run['head_repository']['full_name']==repo
+          assert run['head_branch']=='main' and run['head_sha']=='2266459e658f245d6761945094e551075006e20c'
+          assert run['path']=='.github/workflows/dealer-pack-deploy.yml' and run['run_attempt']==1
+          for status in ['in_progress','queued']:
+              listing=get('/actions/runs?branch=main&status='+status+'&per_page=100')
+              assert listing['total_count']<=100
+              if any(r['path']=='.github/workflows/dealer-pack-deploy.yml' for r in listing['workflow_runs']):
+                  print('No dispatch: an existing deploy-queue run is still pending or active.');raise SystemExit(0)
+          body=json.dumps({'ref':'main','inputs':{'action':'recover-inspect','batch':'auto','request_id':request}}).encode()
+          print(json.dumps({'action':'recover-inspect','requestId':request,'stoppedOwner':owner,'queueGeneration':state['generation'],'providerWrites':0,'dispatchAttempts':1}))
+          # Never retry a dispatch POST: an ambiguous response needs a run lookup.
+          req=urllib.request.Request(endpoint+'/actions/workflows/dealer-pack-deploy.yml/dispatches',data=body,headers={**headers,'Content-Type':'application/json'},method='POST')
+          with urllib.request.urlopen(req,timeout=30) as response:
+              assert response.status in [200,204]
+              print('Recovery inspection dispatch acknowledged: HTTP '+str(response.status))
+              if response.status==200:print(response.read().decode())
+          PY
