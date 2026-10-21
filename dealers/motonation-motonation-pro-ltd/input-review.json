@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-input-review",
+  "dealer": "motonation-motonation-pro-ltd",
+  "reviewed": true,
+  "reviewedAt": "2026-10-21T00:29:38.570Z",
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "checks": [
+    "canonical-hosting-and-preserved-fleet-collisions",
+    "assigned-expansion-lead",
+    "public-fact-schema-and-price-omission",
+    "personal-contact-screen",
+    "retained-stock-media",
+    "companion-copy-source-binding",
+    "immutable-template-release-and-native-QA-parent",
+    "reviewed-artwork-provenance-and-regenerated-logo-hashes"
+  ],
+  "sourceArtworkReview": "Retained artwork review is separate provenance; this command does not perform visual, Arabic-expert or dealer approval.",
+  "copyReview": "Automated structure, stock hash, source text and complete EN/BG rows; no new human translation approval is inferred.",
+  "contacts": {
+    "schemaVersion": 1,
+    "kind": "cars-automated-public-contact-screen",
+    "dealer": "motonation-motonation-pro-ltd",
+    "method": "heuristic; no claim that unflagged values cannot be personal",
+    "flags": [],
+    "blocking": []
+  },
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-coventry-motonation-pro",
+    "position": 41
+  },
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "inputs": [
+    {
+      "path": "FACTS-AND-INVENTORY.json",
+      "sha256": "3eab1982a1f5d46dfd141d11c6a4e8b6903dfbfddbf62e885a8bb0e6053dfe19"
+    },
+    {
+      "path": "branding/first-proposal-artwork-20261021.json",
+      "sha256": "5eec353ed007c3c78ce4c930a7d5dff3ac7b6de1e9db366093943dc33469b3de"
+    },
+    {
+      "path": "branding/generated-inverse-v1-20261021.png",
+      "sha256": "eedea83785a3e85384651da149a8712aac361620bb35c026fbc2f14383f1e93b"
+    },
+    {
+      "path": "branding/generated-mark-dark-v1-20261021.png",
+      "sha256": "edff2e7aba97d3edd45b5b7c5f881e69e3781362d3a8db2d8fdeeee62c216d3a"
+    },
+    {
+      "path": "branding/generated-mark-light-v1-20261021.png",
+      "sha256": "993baaf0c0e50c157c52670800caf20695568627a3e8bd1df9fb08c898e1384e"
+    },
+    {
+      "path": "branding/generated-master-v1-20261021.png",
+      "sha256": "089d510fa7b7f3ea0c6bbc1e9039fc38a5a4e62e2ce01ce9577d6c6d9dd2c4df"
+    },
+    {
+      "path": "branding/logo-contract.json",
+      "sha256": "4eb9dcb30dfa856df4f9bcbd95b918f9ef3cf9ff6d0080198dc0d17e37c22ef4"
+    },
+    {
+      "path": "branding/logo-recipe.json",
+      "sha256": "08f035a9e9d8f931a0980fc4a5dc59e408117eafff3d8cd669c0a73fb1de6b96"
+    },
+    {
+      "path": "branding/originals/motonation-aa-logo-20261021.gif",
+      "sha256": "eaebe1ed30754423e90aa39e8aa66f65123a1dd7d7afedc7eb29e889192f4a3c"
+    },
+    {
+      "path": "branding/source-before-first-artwork-20261021-c9a4e3c9bf017578.json",
+      "sha256": "c9a4e3c9bf017578becb5885601a7e6f3c8308623e12dc0b9d52c5e8c2487507"
+    },
+    {
+      "path": "branding/source.json",
+      "sha256": "af28eaf71e74c826f477cafe8f47177f4d94ed14cf4beee381fd3a28f898c408"
+    },
+    {
+      "path": "business-facts.json",
+      "sha256": "00d95d2515c014a88710e5946142bb03ecc935e26e3e33a4e675b6f485d92ca3"
+    },
+    {
+      "path": "copy-review.json",
+      "sha256": "f832a6af2939d13ba7f45b458b6a590751eaa9b0e847b325a5c696251ab4cec0"
+    },
+    {
+      "path": "dealer-stock/template-demo-1.webp",
+      "sha256": "945e6864218ab3bd5fbd415336b212ecfde645685033f8506836f906885d447c"
+    },
+    {
+      "path": "dealer-stock/template-demo-2.webp",
+      "sha256": "17689ab880bf47de81ef467c34d639223f39f0c1ebe68c90d0aaf70e3dcc6333"
+    },
+    {
+      "path": "dealer-stock/template-demo-3.webp",
+      "sha256": "d644dec8e1ef280a702dccac267a2367f0ab823e40373e1299b156e7723b3b1f"
+    },
+    {
+      "path": "dealer.json",
+      "sha256": "ce33ddf85771a05bb8c870243da42c4ffc1f6ab54e7d9ab0c441dd5ea4245917"
+    },
+    {
+      "path": "identity-review.json",
+      "sha256": "01a699d5f5ff493e1604d18a15203b11d7fbaee756ae9dfbfc27e009de89be00"
+    },
+    {
+      "path": "locale.json",
+      "sha256": "cdb166ad0152475d03c2e128e8830f3894fc97347b12e68128091512876ca5d7"
+    },
+    {
+      "path": "missing-facts.json",
+      "sha256": "3faa379d365ad915240a08e6de5ecdb1f5912a24cd4237b18a52497d2efc837f"
+    },
+    {
+      "path": "qualification.json",
+      "sha256": "1306c68179fec6c5be3496b1560c6be93911706c2d576892081cdc36c15facc3"
+    },
+    {
+      "path": "source-evidence.json",
+      "sha256": "4f3d3d685807b9c8044028fdb1886ee39235c09f4e93235142f87cacceed4900"
+    },
+    {
+      "path": "stock.json",
+      "sha256": "29dac45c93ca0e1da4b9cd5df31869e718332d7151368aae35d1fba5860b7fc9"
+    }
+  ],
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "providerWrites": 0
+}

@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-first-missing-source-proposal-artwork",
+  "dealer": "forge-lane-cars-ltd",
+  "createdAt": "2026-10-21T00:29:11.738Z",
+  "inputRows": [
+    {
+      "role": "wordLight",
+      "path": "branding/generated-master-v1-20261021.png",
+      "sha256": "f4d37c36dc70016ec33cc10ba2a29d74499fafc61aabf9b705e2f5f2665d0264",
+      "nativeDimensions": {
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-09e59eba-2d75-4e32-9fa2-6eade0c7c460",
+        "modelVersion": null
+      },
+      "artifact": "J:/.artifacts/cars-source-sync/pilot-sixth3-branding-inputs/forge-lane-cars-ltd-light.png",
+      "prompt": "Use case: logo-brand. Create ONE professional transparent raster logo PROPOSAL for the sourced UK trading business \"FORGE LANE CARS LTD\". This is an independent website proposal, not adopted official branding. Wide horizontal lockup: isolated bold square FL monogram/road emblem on LEFT, generous completely transparent vertical gap, then large crisp exact words FORGE LANE above CARS LTD on RIGHT. Contemporary straightforward sans-serif lettering, confident heavy filled shapes, open counters, simple geometry designed to remain clear at32px compact and120px full wordmark. Solid near-black #101820 ink ONLY for white background; no gray/silver. Real zero-alpha transparent empty areas and useful clear outer margins. No background, shadow, glow, gradients, mockup, silhouette of another brand, phone, location, slogan, stars, awards, flags, manufacturer badge or extra text. Spell exact \"FORGE LANE\" and \"CARS LTD\". Keep left emblem isolated from all text for a clean lossless crop.",
+      "referencePaths": []
+    },
+    {
+      "role": "markLight",
+      "path": "branding/generated-mark-light-v1-20261021.png",
+      "sha256": "361582ea386a612c4c2aaf93daff6abc1901afe25cd2c4a0924c494d79440fa2",
+      "nativeDimensions": {
+        "width": 724,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-09e59eba-2d75-4e32-9fa2-6eade0c7c460",
+        "modelVersion": null
+      },
+      "artifact": "J:/.artifacts/cars-source-sync/pilot-sixth3-branding-inputs/forge-lane-cars-ltd/markLight.png",
+      "prompt": "Use case: logo-brand. Create ONE professional transparent raster logo PROPOSAL for the sourced UK trading business \"FORGE LANE CARS LTD\". This is an independent website proposal, not adopted official branding. Wide horizontal lockup: isolated bold square FL monogram/road emblem on LEFT, generous completely transparent vertical gap, then large crisp exact words FORGE LANE above CARS LTD on RIGHT. Contemporary straightforward sans-serif lettering, confident heavy filled shapes, open counters, simple geometry designed to remain clear at32px compact and120px full wordmark. Solid near-black #101820 ink ONLY for white background; no gray/silver. Real zero-alpha transparent empty areas and useful clear outer margins. No background, shadow, glow, gradients, mockup, silhouette of another brand, phone, location, slogan, stars, awards, flags, manufacturer badge or extra text. Spell exact \"FORGE LANE\" and \"CARS LTD\". Keep left emblem isolated from all text for a clean lossless crop.",
+      "referencePaths": [
+        "J:/.artifacts/cars-source-sync/pilot-sixth3-branding-inputs/forge-lane-cars-ltd-light.png"
+      ],
+      "derivation": {
+        "operation": "lossless-png-extract-isolated-emblem",
+        "parentPath": "branding/generated-master-v1-20261021.png",
+        "parentSha256": "f4d37c36dc70016ec33cc10ba2a29d74499fafc61aabf9b705e2f5f2665d0264",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 724,
+          "height": 724
+        },
+        "emptyGap": {
+          "start": 700,
+          "end": 748,
+          "width": 48
+        },
+        "parentNativeDimensions": {
+          "width": 2172,
+          "height": 724
+        },
+        "artworkUnmodified": true,
+        "alphaUnmodified": true
+      }
+    },
+    {
+      "role": "wordDark",
+      "path": "branding/generated-inverse-v1-20261021.png",
+      "sha256": "cd6647df0fe3f5cf1e140f87188773934d9249ea10604540d686670fb9389f54",
+      "nativeDimensions": {
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-8912888a-bfdb-431a-9723-3434b8f730d9",
+        "modelVersion": null
+      },
+      "artifact": "J:/.artifacts/cars-source-sync/pilot-sixth3-branding-inputs/forge-lane-cars-ltd-dark.png",
+      "prompt": "Edit the attached forge-lane-cars-ltd website proposal into its exactly matching inverse treatment. Preserve the exact isolated left emblem, right wordmark, spelling, line breaks, geometry, proportions, stroke weight, placement, and generous transparent separation. Change ALL near-black artwork to solid pure WHITE ink for the unchanged dark and red website surfaces. Use a genuinely transparent background with fully ZERO-alpha empty regions/open counters and useful outer margins. No gray, black edge, glow, shadow, checkerboard, rectangle, gradient, mockup, extra text, redesign or new details. The actual approved artwork in the reference is the only shape/content source. Keep the left emblem entirely separate for lossless extraction.",
+      "referencePaths": [
+        "J:/.artifacts/cars-source-sync/pilot-sixth3-branding-inputs/forge-lane-cars-ltd-light.png"
+      ]
+    },
+    {
+      "role": "markDark",
+      "path": "branding/generated-mark-dark-v1-20261021.png",
+      "sha256": "8638fd713c1354ac04438f5262b4268cb20220fd016dd4682d9ef69beaf72a34",
+      "nativeDimensions": {
+        "width": 720,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-8912888a-bfdb-431a-9723-3434b8f730d9",
+        "modelVersion": null
+      },
+      "artifact": "J:/.artifacts/cars-source-sync/pilot-sixth3-branding-inputs/forge-lane-cars-ltd/markDark.png",
+      "prompt": "Edit the attached forge-lane-cars-ltd website proposal into its exactly matching inverse treatment. Preserve the exact isolated left emblem, right wordmark, spelling, line breaks, geometry, proportions, stroke weight, placement, and generous transparent separation. Change ALL near-black artwork to solid pure WHITE ink for the unchanged dark and red website surfaces. Use a genuinely transparent background with fully ZERO-alpha empty regions/open counters and useful outer margins. No gray, black edge, glow, shadow, checkerboard, rectangle, gradient, mockup, extra text, redesign or new details. The actual approved artwork in the reference is the only shape/content source. Keep the left emblem entirely separate for lossless extraction.",
+      "referencePaths": [
+        "J:/.artifacts/cars-source-sync/pilot-sixth3-branding-inputs/forge-lane-cars-ltd-dark.png"
+      ],
+      "derivation": {
+        "operation": "lossless-png-extract-isolated-emblem",
+        "parentPath": "branding/generated-inverse-v1-20261021.png",
+        "parentSha256": "cd6647df0fe3f5cf1e140f87188773934d9249ea10604540d686670fb9389f54",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 720,
+          "height": 724
+        },
+        "emptyGap": {
+          "start": 697,
+          "end": 743,
+          "width": 46
+        },
+        "parentNativeDimensions": {
+          "width": 2172,
+          "height": 724
+        },
+        "artworkUnmodified": true,
+        "alphaUnmodified": true
+      }
+    }
+  ],
+  "sourceFactNamePreserved": true,
+  "publicTradingText": "Forge Lane Cars Ltd",
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "dealerApproval": false,
+  "humanReview": false,
+  "providerWrites": 0,
+  "filtersApplied": false,
+  "thresholdsChanged": false
+}

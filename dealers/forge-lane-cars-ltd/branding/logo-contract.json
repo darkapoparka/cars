@@ -1,0 +1,197 @@
+{
+  "schemaVersion": 1,
+  "dealer": "forge-lane-cars-ltd",
+  "reviewed": true,
+  "reviewedAt": "2026-10-21T00:29:11.738Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "5d784fe3e3a4ca4162ed18f3a209be82e3f84ea741a6c9ac962a407455391bc9",
+      "sourceSha256": "f3262b473a660a9f16eadcf50c86709745f80e8db5bc2c84b143e06c3f0ff46b"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "949b7355beaa9f784a24de6d2b7e61c6a2bf6606728e6257f24df05f503c4169",
+      "sourceSha256": "4a1aa65ce38ef451bcfb194278507ed6160af519b08e61a75613aa5fa7bf30ca"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "949b7355beaa9f784a24de6d2b7e61c6a2bf6606728e6257f24df05f503c4169",
+      "sourceSha256": "4a1aa65ce38ef451bcfb194278507ed6160af519b08e61a75613aa5fa7bf30ca"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "f3262b473a660a9f16eadcf50c86709745f80e8db5bc2c84b143e06c3f0ff46b",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-09e59eba-2d75-4e32-9fa2-6eade0c7c460",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "782b52ab98bfd3687b0b61f0673320fa4b4082cb3053a0103c3f12c48bbbe2cd",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-09e59eba-2d75-4e32-9fa2-6eade0c7c460",
+      "modelVersion": null
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "a64fb24c821fbd6a916995a5e7c9bcecd527b89195cd59aef4dcdd1d27910e01"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "f3262b473a660a9f16eadcf50c86709745f80e8db5bc2c84b143e06c3f0ff46b",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-09e59eba-2d75-4e32-9fa2-6eade0c7c460",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/forge-lane-cars-ltd/branding/generated-master-v1-20261021.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "4a1aa65ce38ef451bcfb194278507ed6160af519b08e61a75613aa5fa7bf30ca",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-8912888a-bfdb-431a-9723-3434b8f730d9",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/forge-lane-cars-ltd/branding/generated-inverse-v1-20261021.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "4a1aa65ce38ef451bcfb194278507ed6160af519b08e61a75613aa5fa7bf30ca",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-8912888a-bfdb-431a-9723-3434b8f730d9",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/forge-lane-cars-ltd/branding/generated-inverse-v1-20261021.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "f4d37c36dc70016ec33cc10ba2a29d74499fafc61aabf9b705e2f5f2665d0264",
+      "sha256": "f3262b473a660a9f16eadcf50c86709745f80e8db5bc2c84b143e06c3f0ff46b",
+      "crop": {
+        "left": 0,
+        "top": 84,
+        "width": 2168,
+        "height": 535
+      },
+      "sourcePath": "branding/generated-master-v1-20261021.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "cd6647df0fe3f5cf1e140f87188773934d9249ea10604540d686670fb9389f54",
+      "sha256": "4a1aa65ce38ef451bcfb194278507ed6160af519b08e61a75613aa5fa7bf30ca",
+      "crop": {
+        "left": 0,
+        "top": 84,
+        "width": 2160,
+        "height": 533
+      },
+      "sourcePath": "branding/generated-inverse-v1-20261021.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "cd6647df0fe3f5cf1e140f87188773934d9249ea10604540d686670fb9389f54",
+      "sha256": "4a1aa65ce38ef451bcfb194278507ed6160af519b08e61a75613aa5fa7bf30ca",
+      "crop": {
+        "left": 0,
+        "top": 84,
+        "width": 2160,
+        "height": 533
+      },
+      "sourcePath": "branding/generated-inverse-v1-20261021.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "3a45ddacd97d828ea8e3ca5075393abd80eeb0b11d33b8d6b8cc60a29ce25e1a",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-09e59eba-2d75-4e32-9fa2-6eade0c7c460",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/forge-lane-cars-ltd/branding/generated-mark-light-v1-20261021.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "c8ecbbce1538f4e70f92ce9d56bea21528249e0e6ddc017e247caf06f18a1880",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-8912888a-bfdb-431a-9723-3434b8f730d9",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/forge-lane-cars-ltd/branding/generated-mark-dark-v1-20261021.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "782b52ab98bfd3687b0b61f0673320fa4b4082cb3053a0103c3f12c48bbbe2cd",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-09e59eba-2d75-4e32-9fa2-6eade0c7c460",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/forge-lane-cars-ltd/branding/generated-mark-light-v1-20261021.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "a64fb24c821fbd6a916995a5e7c9bcecd527b89195cd59aef4dcdd1d27910e01",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-09e59eba-2d75-4e32-9fa2-6eade0c7c460",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/forge-lane-cars-ltd/branding/generated-mark-light-v1-20261021.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-21T00:29:11.738Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "9063e022d15d2ecc291cf05d9f39a06ce9ab8f08a04a848a71c0fe19d0639955",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-8912888a-bfdb-431a-9723-3434b8f730d9",
+      "modelVersion": null
+    }
+  }
+}
