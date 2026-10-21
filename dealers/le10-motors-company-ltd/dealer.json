@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "LE10 Motors Company Ltd",
     "publicOrigin": "https://le10-motors-company-ltd.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "2f32350f39c01c106b7e93581a1169311e3de6cffeb8c9505a055a980068cbc5",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "a797893a0d351c03d023ffdc41b9ca0ba9d0288e4ad04164649bd9423f2716a9"
+    }
   }
 }

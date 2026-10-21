@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Forge Lane Cars Ltd",
     "publicOrigin": "https://forge-lane-cars-ltd.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "f3262b473a660a9f16eadcf50c86709745f80e8db5bc2c84b143e06c3f0ff46b",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "782b52ab98bfd3687b0b61f0673320fa4b4082cb3053a0103c3f12c48bbbe2cd"
+    }
   }
 }

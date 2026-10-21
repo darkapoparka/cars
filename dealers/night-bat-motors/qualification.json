@@ -4,7 +4,7 @@
   "dealer": "night-bat-motors",
   "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
   "sourceCommit": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
-  "reviewed": true,
+  "reviewed": false,
   "reviewedAt": "2026-10-20T19:18:01.792Z",
   "review": {
     "kind": "automated",
@@ -13,5 +13,20 @@
   },
   "nativeApproval": false,
   "hostedApproval": false,
-  "globalReleaseApproval": false
+  "globalReleaseApproval": false,
+  "sourceHold": {
+    "active": true,
+    "reason": "Artwork remains held after failed required source raster checks and a rejected image-generation repair. Original artwork and business inputs are preserved; no new identity is claimed approved.",
+    "recordedAt": "2026-10-21T00:34:25.402Z",
+    "priorAutomatedReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-20T19:18:01.792Z",
+      "review": {
+        "kind": "automated",
+        "humanReview": false,
+        "dealerApproval": false
+      }
+    },
+    "evidence": "docs/m2/artwork-corrections-20261020.json"
+  }
 }

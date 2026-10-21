@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Motonation / Motonation Pro Ltd",
     "publicOrigin": "https://motonation-motonation-pro-ltd.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "48d084352777bf54c378e33f18f5075309a7adf597cb6241cd7154e9f527b6ab",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "1ec410273dc689c722ab538caf6c7dd24a118753120edfc4cbd467df46e6f30e"
+    }
   }
 }

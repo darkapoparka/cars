@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "dealer": "le10-motors-company-ltd",
-  "status": "research-required",
+  "status": "reviewed",
   "realLogoFirst": true,
   "publicSources": [
     {
@@ -22,7 +22,195 @@
     }
   ],
   "originals": [],
-  "creationMethod": null,
+  "creationMethod": "imagegen-proposal",
   "dealerApproved": false,
-  "generatedInputs": null
+  "generatedInputs": {
+    "reviewedAt": "2026-10-21T00:29:11.597Z",
+    "master": {
+      "path": "branding/generated-master-v1-20261021.png",
+      "sha256": "f083267b98bca2a7712986ee7e0ae7c440d18fde271a16817479bd9e3168e2ec",
+      "nativeDimensions": {
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-570e3c72-fcde-4bec-aee3-313aebee2635",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark-light-v1-20261021.png",
+      "sha256": "fe53fd006057e69fe570db97512e668c0c2b42fc024032b5bfce57688dd9824e",
+      "nativeDimensions": {
+        "width": 491,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-570e3c72-fcde-4bec-aee3-313aebee2635",
+        "modelVersion": null
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-dark-v1-20261021.png",
+      "sha256": "ea27662766a720659d4fb49f5ff32613addbf5a0b8073dbcca298279d3911f9c",
+      "nativeDimensions": {
+        "width": 485,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-4590f8d2-2fa1-4d19-9d4d-3f35bc7cee6d",
+        "modelVersion": null
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-master-v1-20261021.png",
+        "sha256": "f083267b98bca2a7712986ee7e0ae7c440d18fde271a16817479bd9e3168e2ec",
+        "nativeDimensions": {
+          "width": 2172,
+          "height": 724
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-570e3c72-fcde-4bec-aee3-313aebee2635",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-inverse-v1-20261021.png",
+        "sha256": "e5eaca7d1f95b279c98c64223ad7a59f5a6d60527a952cfd5627109a4efcff81",
+        "nativeDimensions": {
+          "width": 2172,
+          "height": 724
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-4590f8d2-2fa1-4d19-9d4d-3f35bc7cee6d",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-inverse-v1-20261021.png",
+        "sha256": "e5eaca7d1f95b279c98c64223ad7a59f5a6d60527a952cfd5627109a4efcff81",
+        "nativeDimensions": {
+          "width": 2172,
+          "height": 724
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-4590f8d2-2fa1-4d19-9d4d-3f35bc7cee6d",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-21T00:29:11.597Z",
+      "wordmarkWidths": [
+        120,
+        180
+      ],
+      "markWidths": [
+        32,
+        64
+      ],
+      "notes": "Agent inspected exact alpha-composited light/inverse wordmarks; final matched consumer sheet is separately retained. All five native dark/red backgrounds are unchanged. Proposal only, no human/dealer/native/hosted approval."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-21T00:29:11.597Z",
+      "widths": [
+        32,
+        64
+      ],
+      "notes": "Compact artwork is an exact pixel extraction of the visually isolated generated emblem, with a clear alpha gap to the wordmark; no forced crop, recolour, filters or alpha cleanup."
+    }
+  },
+  "approvalStatus": "independent-preview-not-dealer-approved",
+  "researchConclusion": "Exact retained eBay and Cazoo dealer profiles confirm LE10 Motors Company Ltd, Hinckley, with matching retained business email/phone. The eBay header image was retrieved and visually inspected: it is an80x80 generic stacked-photo placeholder, not a dealer logo, and is excluded from the branding source. Image search returned unrelated L10/Leapmotor identities, all excluded. No usable standalone original was obtained; this is not a claim that no logo exists. Generated LE10 wordmark and compact treatments are independent unapproved proposals.",
+  "publicSourceObservations": [
+    {
+      "observedAt": "2026-10-21T00:28:58.000Z",
+      "kind": "bounded-logo-first-primary-page-review",
+      "sourcePages": [
+        "https://showroom.ebaymotorspro.co.uk/le10motors?extendedFilter=1&menu=1",
+        "https://www.cazoo.co.uk/dealers/le10-motors-company-ltd-54376/"
+      ],
+      "observations": "Exact eBay header Image resolves to E9MAAOSw0w9eGcfd/$_3.JPG,1359B SHAa567462f4edd496bdf5cd00da5bbde64131c283e3cf396bfd58c0fac26b13d9a. Native80x80 placeholder inspected as excluded research evidence only. Dated retained business facts, disclosed template-demo stock, photos and research are preserved."
+    }
+  ],
+  "generation": {
+    "tool": "image_gen.imagegen",
+    "generationId": "exec-570e3c72-fcde-4bec-aee3-313aebee2635",
+    "modelVersion": null,
+    "prompt": "Use case: logo-brand. Create ONE clean professional transparent raster logo PROPOSAL for the actual UK business \"LE10 MOTORS COMPANY LTD\". This is an independent unapproved website concept, not a claim of an adopted identity. Wide horizontal lockup: on LEFT a compact approximately square bold geometric LE10 monogram, LE above10, with open counters and robust strokes readable at32px; then a generous completely transparent vertical gap; on RIGHT large exact text LE10 MOTORS above COMPANY LTD. Strong crisp sans-serif lettering and balanced useful proportions so all words remain clear at120px. All artwork flat solid near-black #101820 ink for white website background. Real zero-alpha transparency, ample clear outer margins. No gray, silver, gradients, shadow, glow, solid background, mockup, manufacturer badge, phone, address, awards, slogan or extra text. Keep isolated left LE10 emblem entirely separate from words for lossless compact extraction. Exact text L E 1 0 M O T O R S / C O M P A N Y L T D."
+  },
+  "compactDerivation": {
+    "operation": "lossless-png-extract-isolated-emblem",
+    "parentPath": "branding/generated-master-v1-20261021.png",
+    "parentSha256": "f083267b98bca2a7712986ee7e0ae7c440d18fde271a16817479bd9e3168e2ec",
+    "crop": {
+      "left": 0,
+      "top": 0,
+      "width": 491,
+      "height": 724
+    },
+    "emptyGap": {
+      "start": 426,
+      "end": 556,
+      "width": 130
+    },
+    "parentNativeDimensions": {
+      "width": 2172,
+      "height": 724
+    },
+    "artworkUnmodified": true,
+    "alphaUnmodified": true
+  },
+  "compactOnDarkDerivation": {
+    "operation": "lossless-png-extract-isolated-emblem",
+    "parentPath": "branding/generated-inverse-v1-20261021.png",
+    "parentSha256": "e5eaca7d1f95b279c98c64223ad7a59f5a6d60527a952cfd5627109a4efcff81",
+    "crop": {
+      "left": 0,
+      "top": 0,
+      "width": 485,
+      "height": 724
+    },
+    "emptyGap": {
+      "start": 421,
+      "end": 550,
+      "width": 129
+    },
+    "parentNativeDimensions": {
+      "width": 2172,
+      "height": 724
+    },
+    "artworkUnmodified": true,
+    "alphaUnmodified": true
+  },
+  "additionalGenerations": [
+    {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-4590f8d2-2fa1-4d19-9d4d-3f35bc7cee6d",
+      "modelVersion": null,
+      "prompt": "Edit the attached le10-motors-company-ltd website proposal into its exactly matching inverse treatment. Preserve the exact isolated left emblem, right wordmark, spelling, line breaks, geometry, proportions, stroke weight, placement, and generous transparent separation. Change ALL near-black artwork to solid pure WHITE ink for the unchanged dark and red website surfaces. Use a genuinely transparent background with fully ZERO-alpha empty regions/open counters and useful outer margins. No gray, black edge, glow, shadow, checkerboard, rectangle, gradient, mockup, extra text, redesign or new details. The actual approved artwork in the reference is the only shape/content source. Keep the left emblem entirely separate for lossless extraction.",
+      "referencePaths": [
+        "J:/.artifacts/cars-source-sync/pilot-sixth3-branding-inputs/le10-motors-company-ltd-light.png"
+      ],
+      "path": "branding/generated-inverse-v1-20261021.png",
+      "sha256": "e5eaca7d1f95b279c98c64223ad7a59f5a6d60527a952cfd5627109a4efcff81"
+    }
+  ],
+  "sourceHistory": [
+    {
+      "reference": "branding/source-before-first-artwork-20261021-b3806ce6134379e4.json",
+      "sha256": "b3806ce6134379e422980d7e93477df6e44c976c86573252802fa96371715b4b",
+      "retainedAt": "2026-10-21T00:29:11.597Z",
+      "reason": "Exact maintained input-only draft provenance before first proposal artwork"
+    }
+  ]
 }

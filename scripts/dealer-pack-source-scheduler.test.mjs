@@ -62,6 +62,31 @@ test('canonical400 registers once, keeps unreviewed/missing targets, and never m
   await scheduleDealerPackSource(f.options); assert.equal(f.store.writes, writes); assert.equal(f.store.state.sourceEnvelope.initialSourceSha, sourceSha);
 });
 
+test('an explicit active source hold overrides stale reviewed flags before material checks while ready siblings continue', async () => {
+  for (const heldQualification of [
+    {reviewed: true, sourceHold: {active: true, reason: 'Required artwork is explicitly held after pixel review'}},
+    {reviewed: false, sourceHold: {active: true, reason: 'Required artwork is explicitly held after pixel review'}},
+    {reviewed: true, sourceHold: {active: 'true', reason: 'Malformed active flag'}},
+    {reviewed: true, sourceHold: {active: 'false', reason: 'Malformed inactive flag'}},
+    {reviewed: true, sourceHold: {active: true, reason: '   '}},
+    {reviewed: true, sourceHold: null},
+    {reviewed: true, sourceHold: []},
+  ]) {
+    const f = fixture({available: 2}), inspected = [];
+    f.options.readQualification = ({slug}) => slug === 'dealer-0' ? heldQualification : {reviewed: true};
+    f.options.inspectMaterial = ({slug}) => {inspected.push(slug); return {packDigest: packDigest(Number(slug.slice(7)))};};
+    const result = await scheduleDealerPackSource(f.options);
+    assert.equal(result.dispatches, 1); assert.deepEqual(f.posts[0].slugs, ['dealer-1']);
+    assert.deepEqual(inspected, ['dealer-1']); assert.deepEqual(f.checked, ['dealer-1']);
+    assert.equal(result.selected.some(row => row.slug === 'dealer-0'), false);
+    assert(result.observations.some(row => row.dealerId === ids[0] && /Explicit source hold is active|verification is held/.test(row.reason)));
+    assert.equal(f.store.state.targets[ids[0]].materials.length, 0);
+  }
+  const resolved = fixture({available: 1});
+  resolved.options.readQualification = () => ({reviewed: true, sourceHold: {active: false, reason: 'Explicitly resolved in reviewed source'}});
+  assert.equal((await scheduleDealerPackSource(resolved.options)).dispatches, 1); assert.deepEqual(resolved.posts[0].slugs, ['dealer-0']);
+});
+
 test('the actual CLI requires explicit register-all once and an absent normal drain performs no CAS or dispatch', async t => {
   t.mock.method(console, 'log', () => {});
   const f = fixture({available: 1}), dependencies = {...f.options, env: {GITHUB_RUN_ID: '123'}};

@@ -204,7 +204,14 @@ export async function scheduleDealerPackSource({root = ROOT, assignment = readPa
     const observe = reason => report.observations.push({dealerId, reason});
     if (matches.length !== 1 || source.valid !== true || source.benchmarkOnly || !validPackSlug(source.slug) || target.slug && target.slug !== source.slug) {observe('Waiting for one exact existing assigned pack identity'); continue;}
     try {
-      if (readQualification({root, slug: source.slug}).reviewed !== true) {observe('Waiting for reviewed factual and branding inputs'); continue;}
+      const qualification = readQualification({root, slug: source.slug});
+      if (Object.hasOwn(qualification, 'sourceHold')) {
+        const hold = qualification.sourceHold;
+        assert(hold && typeof hold === 'object' && !Array.isArray(hold) && typeof hold.active === 'boolean' &&
+          (!hold.active || typeof hold.reason === 'string' && hold.reason.trim()), 'Explicit source hold metadata requires a boolean active flag and a nonempty active reason');
+      }
+      if (qualification.sourceHold?.active === true) {observe('Explicit source hold is active; waiting for its reviewed resolution'); continue;}
+      if (qualification.reviewed !== true) {observe('Waiting for reviewed factual and branding inputs'); continue;}
       const material = await inspectMaterial({root, slug: source.slug, dealerId, sourceSha}), selection = {dealerId, slug: source.slug, packDigest: material.packDigest, buildFingerprint};
       assert(hex(selection.packDigest, 64), 'Source material has no exact input digest');
       if (hasAttemptedSourceMaterial(current.state, selection)) {observe('This exact pack/build material already has a retained source attempt'); continue;}

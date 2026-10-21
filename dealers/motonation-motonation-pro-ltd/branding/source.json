@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "dealer": "motonation-motonation-pro-ltd",
-  "status": "research-required",
+  "status": "reviewed",
   "realLogoFirst": true,
   "publicSources": [
     {
@@ -21,8 +21,212 @@
       "observedAt": "2026-10-18"
     }
   ],
-  "originals": [],
-  "creationMethod": null,
+  "originals": [
+    {
+      "path": "branding/originals/motonation-aa-logo-20261021.gif",
+      "sha256": "eaebe1ed30754423e90aa39e8aa66f65123a1dd7d7afedc7eb29e889192f4a3c",
+      "bytes": 4675,
+      "nativeDimensions": {
+        "width": 180,
+        "height": 75
+      },
+      "url": "https://logo.vcars.co.uk/49552.gif",
+      "observedAt": "2026-10-21T00:24:28.4541974Z",
+      "sourcePage": "https://www.theaa.com/used-cars/dealers/motonation-pro-ltd-coventry",
+      "kind": "retained-public-dealer-logo",
+      "dealerApproval": false
+    }
+  ],
+  "creationMethod": "imagegen-proposal",
   "dealerApproved": false,
-  "generatedInputs": null
+  "generatedInputs": {
+    "reviewedAt": "2026-10-21T00:28:58.507Z",
+    "master": {
+      "path": "branding/generated-master-v1-20261021.png",
+      "sha256": "089d510fa7b7f3ea0c6bbc1e9039fc38a5a4e62e2ce01ce9577d6c6d9dd2c4df",
+      "nativeDimensions": {
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-45ef94f4-98f7-423c-91b8-adc4bfca99c0",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark-light-v1-20261021.png",
+      "sha256": "993baaf0c0e50c157c52670800caf20695568627a3e8bd1df9fb08c898e1384e",
+      "nativeDimensions": {
+        "width": 698,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-45ef94f4-98f7-423c-91b8-adc4bfca99c0",
+        "modelVersion": null
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-dark-v1-20261021.png",
+      "sha256": "edff2e7aba97d3edd45b5b7c5f881e69e3781362d3a8db2d8fdeeee62c216d3a",
+      "nativeDimensions": {
+        "width": 699,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-75a5ead4-d1f3-4038-8203-1338ad94c6e4",
+        "modelVersion": null
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-master-v1-20261021.png",
+        "sha256": "089d510fa7b7f3ea0c6bbc1e9039fc38a5a4e62e2ce01ce9577d6c6d9dd2c4df",
+        "nativeDimensions": {
+          "width": 2172,
+          "height": 724
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-45ef94f4-98f7-423c-91b8-adc4bfca99c0",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-inverse-v1-20261021.png",
+        "sha256": "eedea83785a3e85384651da149a8712aac361620bb35c026fbc2f14383f1e93b",
+        "nativeDimensions": {
+          "width": 2172,
+          "height": 724
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-75a5ead4-d1f3-4038-8203-1338ad94c6e4",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-inverse-v1-20261021.png",
+        "sha256": "eedea83785a3e85384651da149a8712aac361620bb35c026fbc2f14383f1e93b",
+        "nativeDimensions": {
+          "width": 2172,
+          "height": 724
+        },
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-75a5ead4-d1f3-4038-8203-1338ad94c6e4",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-21T00:28:58.507Z",
+      "wordmarkWidths": [
+        120,
+        180
+      ],
+      "markWidths": [
+        32,
+        64
+      ],
+      "notes": "Agent inspected exact alpha-composited light/inverse wordmarks; final matched consumer sheet is separately retained. All five native dark/red backgrounds are unchanged. Proposal only, no human/dealer/native/hosted approval."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-21T00:28:58.507Z",
+      "widths": [
+        32,
+        64
+      ],
+      "notes": "Compact artwork is an exact pixel extraction of the visually isolated generated emblem, with a clear alpha gap to the wordmark; no forced crop, recolour, filters or alpha cleanup."
+    }
+  },
+  "approvalStatus": "independent-preview-not-dealer-approved",
+  "researchConclusion": "The exact retained AA Cars dealer page links an actual Motonation logo: a white flowing sports-car outline above bold MOTONATION on black. Its original GIF is retained byte-identical with source URL and real read timestamp. The generated transparent responsive refresh preserves that car motif, lettering and black/white character, and remains an independent unapproved proposal. Retained business name, conflicting dated address observations, contacts and stock remain unchanged.",
+  "publicSourceObservations": [
+    {
+      "observedAt": "2026-10-21T00:28:58.000Z",
+      "kind": "bounded-logo-first-primary-page-review",
+      "sourcePages": [
+        "https://www.theaa.com/used-cars/dealers/motonation-pro-ltd-coventry",
+        "https://showroom.ebaymotorspro.co.uk/Motonation?menu=1",
+        "https://motonationltd.co.uk/"
+      ],
+      "observations": "AA Cars exact dealer profile names Motonation Pro Ltd, Coventry, at629 StoneyStantonRoad and links the retained dealer website. Original logo.vcars.co.uk/49552.gif fetched200 image/gif,4675B SHAeaebe1ed30754423e90aa39e8aa66f65123a1dd7d7afedc7eb29e889192f4a3c, native180x75. The old eBay Motonation profile and retained website show different historic contacts; none are adopted or changed. Current image searches returned unrelated Motorpoint/Motonet identities, which were excluded."
+    }
+  ],
+  "generation": {
+    "tool": "image_gen.imagegen",
+    "generationId": "exec-45ef94f4-98f7-423c-91b8-adc4bfca99c0",
+    "modelVersion": null,
+    "prompt": "Use case: logo-brand. Create ONE production transparent raster responsive logo refresh PROPOSAL for the Coventry business MOTONATION, using the provided actual public dealer logo as the identity reference. Retain its recognizable flowing sports-car roof silhouette and bold clear MOTONATION lettering, black-and-white identity, and exact spelling. This is an independent unapproved website proposal, not an assertion of official adoption. Horizontal lockup: a bold compact approximately square M-and-car-roof emblem on the LEFT, a generous completely transparent vertical gap, then large exceptionally legible MOTONATION on the RIGHT. The left compact motif must use robust thick strokes/open counters and remain identifiable at32px. Strong clean sans-serif lettering. All artwork solid near-black #101820 ink for WHITE website background, not gray/silver. Actual zero-alpha transparent empty space, ample outer margins. No backdrop, black rectangle, shadow, glow, gradients, mockup, phone, address, slogan, extra text, manufacturer badge, checkerboard or watermark. Keep isolated left emblem separate from wordmark for lossless compact extraction. Exact text \"MOTONATION\"."
+  },
+  "compactDerivation": {
+    "operation": "lossless-png-extract-isolated-emblem",
+    "parentPath": "branding/generated-master-v1-20261021.png",
+    "parentSha256": "089d510fa7b7f3ea0c6bbc1e9039fc38a5a4e62e2ce01ce9577d6c6d9dd2c4df",
+    "crop": {
+      "left": 0,
+      "top": 0,
+      "width": 698,
+      "height": 724
+    },
+    "emptyGap": {
+      "start": 678,
+      "end": 718,
+      "width": 40
+    },
+    "parentNativeDimensions": {
+      "width": 2172,
+      "height": 724
+    },
+    "artworkUnmodified": true,
+    "alphaUnmodified": true
+  },
+  "compactOnDarkDerivation": {
+    "operation": "lossless-png-extract-isolated-emblem",
+    "parentPath": "branding/generated-inverse-v1-20261021.png",
+    "parentSha256": "eedea83785a3e85384651da149a8712aac361620bb35c026fbc2f14383f1e93b",
+    "crop": {
+      "left": 0,
+      "top": 0,
+      "width": 699,
+      "height": 724
+    },
+    "emptyGap": {
+      "start": 680,
+      "end": 718,
+      "width": 38
+    },
+    "parentNativeDimensions": {
+      "width": 2172,
+      "height": 724
+    },
+    "artworkUnmodified": true,
+    "alphaUnmodified": true
+  },
+  "additionalGenerations": [
+    {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-75a5ead4-d1f3-4038-8203-1338ad94c6e4",
+      "modelVersion": null,
+      "prompt": "Edit the attached motonation-motonation-pro-ltd website proposal into its exactly matching inverse treatment. Preserve the exact isolated left emblem, right wordmark, spelling, line breaks, geometry, proportions, stroke weight, placement, and generous transparent separation. Change ALL near-black artwork to solid pure WHITE ink for the unchanged dark and red website surfaces. Use a genuinely transparent background with fully ZERO-alpha empty regions/open counters and useful outer margins. No gray, black edge, glow, shadow, checkerboard, rectangle, gradient, mockup, extra text, redesign or new details. The actual approved artwork in the reference is the only shape/content source. Keep the left emblem entirely separate for lossless extraction.",
+      "referencePaths": [
+        "J:/.artifacts/cars-source-sync/pilot-sixth3-branding-inputs/motonation-motonation-pro-ltd-light.png"
+      ],
+      "path": "branding/generated-inverse-v1-20261021.png",
+      "sha256": "eedea83785a3e85384651da149a8712aac361620bb35c026fbc2f14383f1e93b"
+    }
+  ],
+  "sourceHistory": [
+    {
+      "reference": "branding/source-before-first-artwork-20261021-c9a4e3c9bf017578.json",
+      "sha256": "c9a4e3c9bf017578becb5885601a7e6f3c8308623e12dc0b9d52c5e8c2487507",
+      "retainedAt": "2026-10-21T00:28:58.507Z",
+      "reason": "Exact maintained input-only draft provenance before first proposal artwork"
+    }
+  ]
 }

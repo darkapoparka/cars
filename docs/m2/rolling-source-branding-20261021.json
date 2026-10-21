@@ -415,6 +415,98 @@
           "jdm-direct-imports-coventry"
         ]
       }
+    },
+    {
+      "group": "pilot-sixth3",
+      "recordedAt": "2026-10-21T00:36:56.072Z",
+      "reviewSealSha256": "e9bb350a225a3404cad7912beb166bb402583d07d4480b431fe88a64f916e55b",
+      "totals": {
+        "packs": 3,
+        "artworkPassed": 3,
+        "sourceReviewCheckPassed": 3,
+        "existingContactHeld": 0,
+        "candidateRasterChecks": 42,
+        "actualSourceRasterChecks": 42,
+        "files": 73,
+        "bytes": 5511459,
+        "modifiedPaths": 15,
+        "addedPaths": 28,
+        "deleted": 0
+      },
+      "packs": [
+        {
+          "slug": "motonation-motonation-pro-ltd",
+          "path": "dealers/motonation-motonation-pro-ltd",
+          "packDigest": "62846faf66a1387a314b1a3c50dfc6281d1254a32931c28ea1a9a65d4c599be0",
+          "files": 25,
+          "bytes": 1644184,
+          "sourceReady": true,
+          "proposalOnly": true,
+          "maintainerConsumerReview": true,
+          "actualSourceRasters": 14,
+          "strictPublisher": {
+            "passed": true,
+            "actualExportedApplyLeadBranding": true,
+            "fixtureSourceSha256": "85d66559b60867d2ab30ff7c4cb0a9eb07f7d6b9e0fb8ef3c4ae5caeae594783",
+            "noBuild": true
+          },
+          "sourceFactsStockPhotosResearchPreserved": true,
+          "humanReview": false,
+          "dealerApproval": false,
+          "nativeApproval": false,
+          "hostedApproval": false,
+          "provenance": "dealers/motonation-motonation-pro-ltd/branding/first-proposal-artwork-20261021.json"
+        },
+        {
+          "slug": "forge-lane-cars-ltd",
+          "path": "dealers/forge-lane-cars-ltd",
+          "packDigest": "ee8d26d6c0aa04c58d689a477598d2a635d370e0db51c56b74c01e14656b51e2",
+          "files": 24,
+          "bytes": 1971483,
+          "sourceReady": true,
+          "proposalOnly": true,
+          "maintainerConsumerReview": true,
+          "actualSourceRasters": 14,
+          "strictPublisher": {
+            "passed": true,
+            "actualExportedApplyLeadBranding": true,
+            "fixtureSourceSha256": "85d66559b60867d2ab30ff7c4cb0a9eb07f7d6b9e0fb8ef3c4ae5caeae594783",
+            "noBuild": true
+          },
+          "sourceFactsStockPhotosResearchPreserved": true,
+          "humanReview": false,
+          "dealerApproval": false,
+          "nativeApproval": false,
+          "hostedApproval": false,
+          "provenance": "dealers/forge-lane-cars-ltd/branding/first-proposal-artwork-20261021.json"
+        },
+        {
+          "slug": "le10-motors-company-ltd",
+          "path": "dealers/le10-motors-company-ltd",
+          "packDigest": "7839739ba3342ec4a191f1de558c58c4af544780341819ed382ac3c8b24876e3",
+          "files": 24,
+          "bytes": 1895792,
+          "sourceReady": true,
+          "proposalOnly": true,
+          "maintainerConsumerReview": true,
+          "actualSourceRasters": 14,
+          "strictPublisher": {
+            "passed": true,
+            "actualExportedApplyLeadBranding": true,
+            "fixtureSourceSha256": "85d66559b60867d2ab30ff7c4cb0a9eb07f7d6b9e0fb8ef3c4ae5caeae594783",
+            "noBuild": true
+          },
+          "sourceFactsStockPhotosResearchPreserved": true,
+          "humanReview": false,
+          "dealerApproval": false,
+          "nativeApproval": false,
+          "hostedApproval": false,
+          "provenance": "dealers/le10-motors-company-ltd/branding/first-proposal-artwork-20261021.json"
+        }
+      ],
+      "nativeStatus": "Ready for the existing400 source campaign; no separate manual native dispatch",
+      "nativeApproval": false,
+      "hostedApproval": false
     }
   ],
   "ownerAccepted": false,
