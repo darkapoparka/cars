@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Romero's Auto Sales & Service",
     "publicOrigin": "https://romero-s-auto-sales-service.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "fef15319570ee2476c7a50ee603e8b0f02cf3355505c02e7648d8046fd049bf0",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "f2b2a8209f8781bad29a4e75db68a0551a2a1e0be5e5a7ba89a656898aeb7fad"
+    }
   }
 }

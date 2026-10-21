@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-input-review",
+  "dealer": "romero-s-auto-sales-service",
+  "reviewed": true,
+  "reviewedAt": "2026-10-21T07:33:36.843Z",
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "checks": [
+    "canonical-hosting-and-preserved-fleet-collisions",
+    "assigned-expansion-lead",
+    "public-fact-schema-and-price-omission",
+    "personal-contact-screen",
+    "retained-stock-media",
+    "companion-copy-source-binding",
+    "immutable-template-release-and-native-QA-parent",
+    "reviewed-artwork-provenance-and-regenerated-logo-hashes"
+  ],
+  "sourceArtworkReview": "Retained artwork review is separate provenance; this command does not perform visual, Arabic-expert or dealer approval.",
+  "copyReview": "Automated structure, stock hash, source text and complete EN/BG rows; no new human translation approval is inferred.",
+  "contacts": {
+    "schemaVersion": 1,
+    "kind": "cars-automated-public-contact-screen",
+    "dealer": "romero-s-auto-sales-service",
+    "method": "heuristic; no claim that unflagged values cannot be personal",
+    "flags": [],
+    "blocking": []
+  },
+  "batch": {
+    "number": 2,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "us-pa-allentown-romeros-auto-sales-service",
+    "position": 119
+  },
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "inputs": [
+    {
+      "path": "FACTS-AND-INVENTORY.json",
+      "sha256": "3886294c08e465b85bf660fda53a295c26cea3a00567f2c1e1e0181df5050cb7"
+    },
+    {
+      "path": "branding/logo-contract.json",
+      "sha256": "ba69fb9ac83ab1b7f8ec2cdd30952ab662d9c0b81ba4abb5516f466da2efb40e"
+    },
+    {
+      "path": "branding/logo-recipe.json",
+      "sha256": "30d7689cc976d4eab60efa666fe23e7a0be94bbd42f2a93f779d945891036d69"
+    },
+    {
+      "path": "branding/original-romero-logo2.png",
+      "sha256": "83aae179c280fc7d04de47888500f2dcec1a8dceaf53e8c8e3a484c2c9ffe3d8"
+    },
+    {
+      "path": "branding/original-romero-original.png",
+      "sha256": "ed3f94ce314452836b9ec2cfde095ee6594c3ee42b13dedeb69e6e8e1662f378"
+    },
+    {
+      "path": "branding/source.json",
+      "sha256": "0bac77ac86b74ae88808211299d0d34ed657b4867472e21935907a6719a44c90"
+    },
+    {
+      "path": "business-facts.json",
+      "sha256": "579143da7ad1fd46e1644050b29ca3f922304ee4f787d5f14bd94b8e97a2ad41"
+    },
+    {
+      "path": "copy-review.json",
+      "sha256": "f46af692c54244272434c7d90180f6d0bcb1cf846783db3739739b5f523e2652"
+    },
+    {
+      "path": "dealer-stock/template-demo-1.webp",
+      "sha256": "945e6864218ab3bd5fbd415336b212ecfde645685033f8506836f906885d447c"
+    },
+    {
+      "path": "dealer-stock/template-demo-2.webp",
+      "sha256": "17689ab880bf47de81ef467c34d639223f39f0c1ebe68c90d0aaf70e3dcc6333"
+    },
+    {
+      "path": "dealer-stock/template-demo-3.webp",
+      "sha256": "d644dec8e1ef280a702dccac267a2367f0ab823e40373e1299b156e7723b3b1f"
+    },
+    {
+      "path": "dealer.json",
+      "sha256": "c8b9cc2ffec8c934b39ce21a942d4a33af33e9d749d1e7833076f05966b6954f"
+    },
+    {
+      "path": "identity-review.json",
+      "sha256": "16c3a5057063e6d65453e2411af1568021b8e07841f011a3e83e820317b965d0"
+    },
+    {
+      "path": "locale.json",
+      "sha256": "3d1fefa0140d38e6df83355780faf90f3b7667e09ddfe825882ac1f5f2880321"
+    },
+    {
+      "path": "missing-facts.json",
+      "sha256": "e21b31e44d58c77e00f1aa7282c9bd6d397080408f3d0c3b1e412312dd421a08"
+    },
+    {
+      "path": "qualification.json",
+      "sha256": "1d701c7c7aabc306d9e8ce0bb213407993ae2f230548f765c14f478021c0a72f"
+    },
+    {
+      "path": "source-evidence.json",
+      "sha256": "1a80e5536f09b0c9bd41a601c6fa3c1891fc66becac18706aad36c3b13c5155f"
+    },
+    {
+      "path": "stock.json",
+      "sha256": "9b2e21d4570ec441e1d3fb3511ecb364e985d71c7ddb2545e1db1d543e1bb15c"
+    }
+  ],
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "providerWrites": 0
+}

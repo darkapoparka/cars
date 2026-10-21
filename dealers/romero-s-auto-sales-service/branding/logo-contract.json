@@ -1,0 +1,333 @@
+{
+  "schemaVersion": 1,
+  "dealer": "romero-s-auto-sales-service",
+  "reviewed": true,
+  "reviewedAt": "2026-10-21T07:33:35.351Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "public-original-alpha-preserving-surface-exports",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "92ec6605c7b0d6d53e73e4cf9a1c64918e3cfa9e9f024e29d542fc2b821baa74",
+      "sourceSha256": "fef15319570ee2476c7a50ee603e8b0f02cf3355505c02e7648d8046fd049bf0"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "b0f99166cee0b8d8d9d027b51484bde1160a13c64c3007eb4b7b6d010200eabd",
+      "sourceSha256": "ff51c490a6e081f50daf97d2951cf918f78a61a0575f926b0d13350ae09a4768"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "b0f99166cee0b8d8d9d027b51484bde1160a13c64c3007eb4b7b6d010200eabd",
+      "sourceSha256": "ff51c490a6e081f50daf97d2951cf918f78a61a0575f926b0d13350ae09a4768"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "fef15319570ee2476c7a50ee603e8b0f02cf3355505c02e7648d8046fd049bf0",
+    "retainedSource": {
+      "kind": "retained-reviewed-raster",
+      "reference": "dealers/romero-s-auto-sales-service/branding/original-romero-original.png",
+      "sha256": "ed3f94ce314452836b9ec2cfde095ee6594c3ee42b13dedeb69e6e8e1662f378",
+      "reviewReference": "dealers/romero-s-auto-sales-service/branding/source.json",
+      "reviewSha256": "0bac77ac86b74ae88808211299d0d34ed657b4867472e21935907a6719a44c90",
+      "sourceUrl": "https://romerosautos.com/wp-content/uploads/2024/12/logo.png",
+      "observedAt": "2026-10-21T07:33:35.351Z"
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "f2b2a8209f8781bad29a4e75db68a0551a2a1e0be5e5a7ba89a656898aeb7fad",
+    "retainedSource": {
+      "kind": "retained-reviewed-raster",
+      "reference": "dealers/romero-s-auto-sales-service/branding/original-romero-logo2.png",
+      "sha256": "83aae179c280fc7d04de47888500f2dcec1a8dceaf53e8c8e3a484c2c9ffe3d8",
+      "reviewReference": "dealers/romero-s-auto-sales-service/branding/source.json",
+      "reviewSha256": "0bac77ac86b74ae88808211299d0d34ed657b4867472e21935907a6719a44c90",
+      "sourceUrl": "https://romerosautos.com/wp-content/uploads/2024/12/logo2.png",
+      "observedAt": "2026-10-21T07:33:35.351Z",
+      "exportTreatment": {
+        "kind": "alpha-preserving-solid-ink-v1",
+        "ink": "solid-black",
+        "sourceSha256": "83aae179c280fc7d04de47888500f2dcec1a8dceaf53e8c8e3a484c2c9ffe3d8",
+        "newGeometry": false
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "e518dc11c7606f97b168170bcb18a088890b7fdc19b9d20f2cbd8a5fc8415e26"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "fef15319570ee2476c7a50ee603e8b0f02cf3355505c02e7648d8046fd049bf0",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "dealers/romero-s-auto-sales-service/branding/original-romero-original.png",
+        "sha256": "ed3f94ce314452836b9ec2cfde095ee6594c3ee42b13dedeb69e6e8e1662f378",
+        "reviewReference": "dealers/romero-s-auto-sales-service/branding/source.json",
+        "reviewSha256": "0bac77ac86b74ae88808211299d0d34ed657b4867472e21935907a6719a44c90",
+        "sourceUrl": "https://romerosautos.com/wp-content/uploads/2024/12/logo.png",
+        "observedAt": "2026-10-21T07:33:35.351Z"
+      },
+      "sourceReference": "dealers/romero-s-auto-sales-service/branding/original-romero-original.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "ff51c490a6e081f50daf97d2951cf918f78a61a0575f926b0d13350ae09a4768",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "dealers/romero-s-auto-sales-service/branding/original-romero-original.png",
+        "sha256": "ed3f94ce314452836b9ec2cfde095ee6594c3ee42b13dedeb69e6e8e1662f378",
+        "reviewReference": "dealers/romero-s-auto-sales-service/branding/source.json",
+        "reviewSha256": "0bac77ac86b74ae88808211299d0d34ed657b4867472e21935907a6719a44c90",
+        "sourceUrl": "https://romerosautos.com/wp-content/uploads/2024/12/logo.png",
+        "observedAt": "2026-10-21T07:33:35.351Z",
+        "exportTreatment": {
+          "kind": "alpha-preserving-solid-ink-v1",
+          "ink": "solid-white",
+          "sourceSha256": "ed3f94ce314452836b9ec2cfde095ee6594c3ee42b13dedeb69e6e8e1662f378",
+          "newGeometry": false
+        }
+      },
+      "sourceReference": "dealers/romero-s-auto-sales-service/branding/original-romero-original.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "ff51c490a6e081f50daf97d2951cf918f78a61a0575f926b0d13350ae09a4768",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "dealers/romero-s-auto-sales-service/branding/original-romero-original.png",
+        "sha256": "ed3f94ce314452836b9ec2cfde095ee6594c3ee42b13dedeb69e6e8e1662f378",
+        "reviewReference": "dealers/romero-s-auto-sales-service/branding/source.json",
+        "reviewSha256": "0bac77ac86b74ae88808211299d0d34ed657b4867472e21935907a6719a44c90",
+        "sourceUrl": "https://romerosautos.com/wp-content/uploads/2024/12/logo.png",
+        "observedAt": "2026-10-21T07:33:35.351Z",
+        "exportTreatment": {
+          "kind": "alpha-preserving-solid-ink-v1",
+          "ink": "solid-white",
+          "sourceSha256": "ed3f94ce314452836b9ec2cfde095ee6594c3ee42b13dedeb69e6e8e1662f378",
+          "newGeometry": false
+        }
+      },
+      "sourceReference": "dealers/romero-s-auto-sales-service/branding/original-romero-original.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "ed3f94ce314452836b9ec2cfde095ee6594c3ee42b13dedeb69e6e8e1662f378",
+      "sha256": "fef15319570ee2476c7a50ee603e8b0f02cf3355505c02e7648d8046fd049bf0",
+      "crop": {
+        "left": 0,
+        "top": 2,
+        "width": 360,
+        "height": 95
+      },
+      "sourcePath": "branding/original-romero-original.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "ed3f94ce314452836b9ec2cfde095ee6594c3ee42b13dedeb69e6e8e1662f378",
+      "sha256": "ff51c490a6e081f50daf97d2951cf918f78a61a0575f926b0d13350ae09a4768",
+      "crop": {
+        "left": 0,
+        "top": 2,
+        "width": 360,
+        "height": 95
+      },
+      "rasterTreatment": {
+        "kind": "alpha-preserving-solid-ink-v1",
+        "ink": "solid-white",
+        "originalAlphaUnchangedBeforeCropAndResize": true,
+        "newGeometry": false
+      },
+      "sourcePath": "branding/original-romero-original.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "ed3f94ce314452836b9ec2cfde095ee6594c3ee42b13dedeb69e6e8e1662f378",
+      "sha256": "ff51c490a6e081f50daf97d2951cf918f78a61a0575f926b0d13350ae09a4768",
+      "crop": {
+        "left": 0,
+        "top": 2,
+        "width": 360,
+        "height": 95
+      },
+      "rasterTreatment": {
+        "kind": "alpha-preserving-solid-ink-v1",
+        "ink": "solid-white",
+        "originalAlphaUnchangedBeforeCropAndResize": true,
+        "newGeometry": false
+      },
+      "sourcePath": "branding/original-romero-original.png",
+      "outputPath": "branding/logo-on-accent.png"
+    },
+    "mark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "83aae179c280fc7d04de47888500f2dcec1a8dceaf53e8c8e3a484c2c9ffe3d8",
+      "sha256": "f2b2a8209f8781bad29a4e75db68a0551a2a1e0be5e5a7ba89a656898aeb7fad",
+      "crop": {
+        "left": 20,
+        "top": 0,
+        "width": 268,
+        "height": 300
+      },
+      "rasterTreatment": {
+        "kind": "alpha-preserving-solid-ink-v1",
+        "ink": "solid-black",
+        "originalAlphaUnchangedBeforeCropAndResize": true,
+        "newGeometry": false
+      },
+      "sourcePath": "branding/original-romero-logo2.png"
+    },
+    "markOnDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "83aae179c280fc7d04de47888500f2dcec1a8dceaf53e8c8e3a484c2c9ffe3d8",
+      "sha256": "d401346f2d37e9397f96e87960db32a68e62f46232e2b0f4c642439e3bb98489",
+      "crop": {
+        "left": 20,
+        "top": 0,
+        "width": 268,
+        "height": 300
+      },
+      "rasterTreatment": {
+        "kind": "alpha-preserving-solid-ink-v1",
+        "ink": "solid-white",
+        "originalAlphaUnchangedBeforeCropAndResize": true,
+        "newGeometry": false
+      },
+      "sourcePath": "branding/original-romero-logo2.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "5840f1f4db95afcabdf858557c72e40bb90fced4064152ad3261bf6dbbe1d39e",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "dealers/romero-s-auto-sales-service/branding/original-romero-logo2.png",
+        "sha256": "83aae179c280fc7d04de47888500f2dcec1a8dceaf53e8c8e3a484c2c9ffe3d8",
+        "reviewReference": "dealers/romero-s-auto-sales-service/branding/source.json",
+        "reviewSha256": "0bac77ac86b74ae88808211299d0d34ed657b4867472e21935907a6719a44c90",
+        "sourceUrl": "https://romerosautos.com/wp-content/uploads/2024/12/logo2.png",
+        "observedAt": "2026-10-21T07:33:35.351Z",
+        "exportTreatment": {
+          "kind": "alpha-preserving-solid-ink-v1",
+          "ink": "solid-black",
+          "sourceSha256": "83aae179c280fc7d04de47888500f2dcec1a8dceaf53e8c8e3a484c2c9ffe3d8",
+          "newGeometry": false
+        }
+      },
+      "sourceReference": "dealers/romero-s-auto-sales-service/branding/original-romero-logo2.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "a5382440ce4d261bace5ac1d204d011b00ffa499d84d5371a77b4ed98feede8d",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "dealers/romero-s-auto-sales-service/branding/original-romero-logo2.png",
+        "sha256": "83aae179c280fc7d04de47888500f2dcec1a8dceaf53e8c8e3a484c2c9ffe3d8",
+        "reviewReference": "dealers/romero-s-auto-sales-service/branding/source.json",
+        "reviewSha256": "0bac77ac86b74ae88808211299d0d34ed657b4867472e21935907a6719a44c90",
+        "sourceUrl": "https://romerosautos.com/wp-content/uploads/2024/12/logo2.png",
+        "observedAt": "2026-10-21T07:33:35.351Z",
+        "exportTreatment": {
+          "kind": "alpha-preserving-solid-ink-v1",
+          "ink": "solid-white",
+          "sourceSha256": "83aae179c280fc7d04de47888500f2dcec1a8dceaf53e8c8e3a484c2c9ffe3d8",
+          "newGeometry": false
+        }
+      },
+      "sourceReference": "dealers/romero-s-auto-sales-service/branding/original-romero-logo2.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "f2b2a8209f8781bad29a4e75db68a0551a2a1e0be5e5a7ba89a656898aeb7fad",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "dealers/romero-s-auto-sales-service/branding/original-romero-logo2.png",
+        "sha256": "83aae179c280fc7d04de47888500f2dcec1a8dceaf53e8c8e3a484c2c9ffe3d8",
+        "reviewReference": "dealers/romero-s-auto-sales-service/branding/source.json",
+        "reviewSha256": "0bac77ac86b74ae88808211299d0d34ed657b4867472e21935907a6719a44c90",
+        "sourceUrl": "https://romerosautos.com/wp-content/uploads/2024/12/logo2.png",
+        "observedAt": "2026-10-21T07:33:35.351Z",
+        "exportTreatment": {
+          "kind": "alpha-preserving-solid-ink-v1",
+          "ink": "solid-black",
+          "sourceSha256": "83aae179c280fc7d04de47888500f2dcec1a8dceaf53e8c8e3a484c2c9ffe3d8",
+          "newGeometry": false
+        }
+      },
+      "sourceReference": "dealers/romero-s-auto-sales-service/branding/original-romero-logo2.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "e518dc11c7606f97b168170bcb18a088890b7fdc19b9d20f2cbd8a5fc8415e26",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "dealers/romero-s-auto-sales-service/branding/original-romero-logo2.png",
+        "sha256": "83aae179c280fc7d04de47888500f2dcec1a8dceaf53e8c8e3a484c2c9ffe3d8",
+        "reviewReference": "dealers/romero-s-auto-sales-service/branding/source.json",
+        "reviewSha256": "0bac77ac86b74ae88808211299d0d34ed657b4867472e21935907a6719a44c90",
+        "sourceUrl": "https://romerosautos.com/wp-content/uploads/2024/12/logo2.png",
+        "observedAt": "2026-10-21T07:33:35.351Z",
+        "exportTreatment": {
+          "kind": "alpha-preserving-solid-ink-v1",
+          "ink": "solid-black",
+          "sourceSha256": "83aae179c280fc7d04de47888500f2dcec1a8dceaf53e8c8e3a484c2c9ffe3d8",
+          "newGeometry": false
+        }
+      },
+      "sourceReference": "dealers/romero-s-auto-sales-service/branding/original-romero-logo2.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-21T07:33:35.351Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "d401346f2d37e9397f96e87960db32a68e62f46232e2b0f4c642439e3bb98489",
+    "retainedSource": {
+      "kind": "retained-reviewed-raster",
+      "reference": "dealers/romero-s-auto-sales-service/branding/original-romero-logo2.png",
+      "sha256": "83aae179c280fc7d04de47888500f2dcec1a8dceaf53e8c8e3a484c2c9ffe3d8",
+      "reviewReference": "dealers/romero-s-auto-sales-service/branding/source.json",
+      "reviewSha256": "0bac77ac86b74ae88808211299d0d34ed657b4867472e21935907a6719a44c90",
+      "sourceUrl": "https://romerosautos.com/wp-content/uploads/2024/12/logo2.png",
+      "observedAt": "2026-10-21T07:33:35.351Z",
+      "exportTreatment": {
+        "kind": "alpha-preserving-solid-ink-v1",
+        "ink": "solid-white",
+        "sourceSha256": "83aae179c280fc7d04de47888500f2dcec1a8dceaf53e8c8e3a484c2c9ffe3d8",
+        "newGeometry": false
+      }
+    }
+  }
+}
