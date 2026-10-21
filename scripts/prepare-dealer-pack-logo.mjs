@@ -24,7 +24,9 @@ function reviewedInputs(source) {
 
 function artworkProvenance(row, {slug, sourceSha256, retainedAllowed}) {
   assert(safePackPath(row?.path) && /^branding\//.test(row.path) && /^[a-f0-9]{64}$/.test(row.sha256 ?? ''), 'Use a retained branding raster and its exact hash');
+  assert(row.rasterTreatment === undefined || ['solid-black', 'solid-white'].includes(row.rasterTreatment), 'Only explicit black/white alpha-preserving raster exports are supported');
   if (row.generation !== undefined && row.generation !== null) {
+    assert(row.rasterTreatment === undefined, 'Solid-ink exports require a dated public original, not a generated-artwork claim');
     assert(row.retainedSource === undefined && typeof row.generation.generationId === 'string' && row.generation.generationId.trim() &&
       ['image_gen', 'image_gen.imagegen'].includes(row.generation.tool), 'Use actual imagegen provenance without a conflicting retained source');
     return {generation: row.generation};
@@ -39,12 +41,14 @@ function artworkProvenance(row, {slug, sourceSha256, retainedAllowed}) {
     !/^(?:localhost|127\.|10\.|192\.168\.|169\.254\.)/.test(url.hostname) && ![...url.searchParams.keys()].some(key => /token|secret|signature|api.?key|password|auth/i.test(key)),
     'A retained original requires a public source URL without credentials');
   return {retainedSource: {kind: 'retained-reviewed-raster', reference: 'dealers/' + slug + '/' + row.path, sha256: row.sha256,
-    reviewReference: 'dealers/' + slug + '/branding/source.json', reviewSha256: sourceSha256, sourceUrl: url.href, observedAt: original.observedAt}};
+    reviewReference: 'dealers/' + slug + '/branding/source.json', reviewSha256: sourceSha256, sourceUrl: url.href, observedAt: original.observedAt,
+    ...(row.rasterTreatment ? {exportTreatment: {kind: 'alpha-preserving-solid-ink-v1', ink: row.rasterTreatment, sourceSha256: row.sha256, newGeometry: false}} : {})}};
 }
 
 const provenanceFields = row => Object.fromEntries(['generation', 'retainedSource'].filter(key => row?.[key] !== undefined).map(key => [key, row[key]]));
 
-export async function cropTransparentPadding(bytes, sharp, {mark = false} = {}) {
+export async function cropTransparentPadding(bytes, sharp, {mark = false, rasterTreatment} = {}) {
+  assert(rasterTreatment === undefined || ['solid-black', 'solid-white'].includes(rasterTreatment), 'Unsupported raster treatment');
   const input = await sharp(bytes, {limitInputPixels: 64 * 1024 ** 2}).ensureAlpha().raw().toBuffer({resolveWithObject: true});
   const {width, height, channels} = input.info; assert(channels === 4, 'Logo needs RGBA pixels');
   let x0 = width, x1 = -1, y0 = height, y1 = -1, empty = 0;
@@ -55,9 +59,18 @@ export async function cropTransparentPadding(bytes, sharp, {mark = false} = {}) 
   assert(x1 >= x0 && empty > width * height * .25, 'Logo requires substantial real transparency and visible artwork');
   const padding = Math.max(2, Math.ceil(Math.max(x1 - x0 + 1, y1 - y0 + 1) * .025));
   const left = Math.max(0, x0 - padding), top = Math.max(0, y0 - padding), right = Math.min(width, x1 + padding + 1), bottom = Math.min(height, y1 + padding + 1);
-  const cropped = sharp(bytes).extract({left, top, width: right - left, height: bottom - top});
+  // A requested monochrome surface uses exactly the original alpha silhouette.
+  // No background removal, new letters, tracing or invented geometry is allowed.
+  let prepared = sharp(bytes);
+  if (rasterTreatment) {
+    const pixels = Buffer.from(input.data), ink = rasterTreatment === 'solid-white' ? 255 : 0;
+    for (let at = 0; at < pixels.length; at += 4) pixels.fill(ink, at, at + 3);
+    prepared = sharp(pixels, {raw: {width, height, channels: 4}});
+  }
+  const cropped = prepared.extract({left, top, width: right - left, height: bottom - top});
   const png = await (mark ? cropped.resize(512, 512, {fit: 'contain', background: '#00000000'}) : cropped.resize({width: 1024})).png().toBuffer();
-  return {png, operation: 'crop-transparent-padding-and-resize', sourceSha256: sha256(bytes), sha256: sha256(png), crop: {left, top, width: right - left, height: bottom - top}};
+  return {png, operation: 'crop-transparent-padding-and-resize', sourceSha256: sha256(bytes), sha256: sha256(png), crop: {left, top, width: right - left, height: bottom - top},
+    ...(rasterTreatment ? {rasterTreatment: {kind: 'alpha-preserving-solid-ink-v1', ink: rasterTreatment, originalAlphaUnchangedBeforeCropAndResize: true, newGeometry: false}} : {})};
 }
 
 function ico(images) {
@@ -92,7 +105,7 @@ export async function prepareDealerPackLogo({root = ROOT, slug, persist = true, 
   };
   const assets = {}, transforms = {}, surfaces = {}, supplemental = {};
   for (const [role, name] of Object.entries(roles)) {
-    const row = inputs.surfaces[role], result = await cropTransparentPadding(artwork[role].bytes, sharp);
+    const row = inputs.surfaces[role], result = await cropTransparentPadding(artwork[role].bytes, sharp, {rasterTreatment: row.rasterTreatment});
     const pngPath = 'branding/logo-' + name + '.png', webpPath = 'dealer-brand/logo-' + name + '.webp';
     save(pngPath, result.png); save('dealer-brand/logo-' + name + '.png', result.png);
     const webp = await sharp(result.png).webp({lossless: true, effort: 6}).toBuffer(); save(webpPath, webp);
@@ -100,10 +113,13 @@ export async function prepareDealerPackLogo({root = ROOT, slug, persist = true, 
     transforms[role] = {...result, png: undefined, sourcePath: row.path, outputPath: pngPath};
     surfaces[role] = {path: pngPath, sha256: sha256(result.png), ...artwork[role].provenance, sourceReference: 'dealers/' + slug + '/' + row.path};
   }
-  const master = await cropTransparentPadding(artwork.master.bytes, sharp), mark = await cropTransparentPadding(artwork.mark.bytes, sharp, {mark: true});
+  const master = await cropTransparentPadding(artwork.master.bytes, sharp, {rasterTreatment: inputs.master.rasterTreatment}), mark = await cropTransparentPadding(artwork.mark.bytes, sharp, {mark: true, rasterTreatment: inputs.mark.rasterTreatment});
+  for (const [role, result] of [['master', master], ['mark', mark]]) if (result.rasterTreatment) transforms[role] = {...result, png: undefined, sourcePath: rows[role].path};
   save('branding/logo-master.png', master.png); save('branding/logo-mark.png', mark.png);
   const darkMarkInput = inputs.markOnDark;
-  const darkMark = darkMarkInput ? (await cropTransparentPadding(artwork.markOnDark.bytes, sharp, {mark: true})).png : null;
+  const darkMarkResult = darkMarkInput ? await cropTransparentPadding(artwork.markOnDark.bytes, sharp, {mark: true, rasterTreatment: darkMarkInput.rasterTreatment}) : null;
+  const darkMark = darkMarkResult?.png ?? null;
+  if (darkMarkResult?.rasterTreatment) transforms.markOnDark = {...darkMarkResult, png: undefined, sourcePath: darkMarkInput.path};
   for (const [name, png] of [['on-light', mark.png], ['on-dark', darkMark ?? mark.png]]) {
     const webp = await sharp(png).webp({lossless: true, effort: 6}).toBuffer();
     const role = name === 'on-dark' && darkMarkInput ? 'markOnDark' : 'mark', input = rows[role];
@@ -117,7 +133,7 @@ export async function prepareDealerPackLogo({root = ROOT, slug, persist = true, 
   supplemental['favicon.ico'] = {...save('dealer-brand/favicon.ico', favicon),
     ...artwork.mark.provenance, sourceReference: 'dealers/' + slug + '/' + inputs.mark.path};
   const contract = {schemaVersion: 1, dealer: slug, reviewed: true, reviewedAt: inputs.reviewedAt,
-    status: Object.values(artwork).every(row => row.provenance.retainedSource) ? 'retained-original-preview-not-dealer-approved' : 'independent-proposal-not-dealer-approved', creationMethod: source.creationMethod,
+    status: Object.values(artwork).every(row => row.provenance.retainedSource) && !Object.values(rows).some(row => row.rasterTreatment) ? 'retained-original-preview-not-dealer-approved' : 'independent-proposal-not-dealer-approved', creationMethod: source.creationMethod,
     assets, surfaceBackgrounds: PACK_LOGO_BACKGROUNDS,
     master: {path: 'branding/logo-master.png', sha256: sha256(master.png), ...artwork.master.provenance},
     mark: {path: 'branding/logo-mark.png', sha256: sha256(mark.png), ...artwork.mark.provenance},
@@ -136,7 +152,7 @@ export async function prepareDealerPackLogo({root = ROOT, slug, persist = true, 
       save('dealer.json', encodePackJson(manifest));
     }
   }
-  const recipe = {schemaVersion: 1, kind: 'cars-dealer-pack-logo-recipe', dealer: slug, transformVersion: 'transparent-crop-v1',
+  const recipe = {schemaVersion: 1, kind: 'cars-dealer-pack-logo-recipe', dealer: slug, transformVersion: Object.values(rows).some(row => row.rasterTreatment) ? 'transparent-crop-solid-ink-v1' : 'transparent-crop-v1',
     toolchain: {...sharp.versions}, sourceSha256: sha256(sourceBytes), contractSha256: sha256(encodePackJson(contract)),
     outputs: [...generatedFiles].filter(([name]) => /\.(?:png|webp|ico)$/.test(name)).sort(([a], [b]) => a.localeCompare(b, 'en'))
       .map(([name, bytes]) => ({path: name, bytes: bytes.length, sha256: sha256(bytes)}))};
@@ -152,11 +168,11 @@ export async function loadPreparedDealerPack(root = ROOT, slug, options = {}) {
   pack.sourceFiles = new Map(pack.files);
   if (!pack.logoRecipe) return pack;
   const recipe = pack.logoRecipe;
-  assert(recipe.schemaVersion === 1 && recipe.kind === 'cars-dealer-pack-logo-recipe' && recipe.dealer === slug && recipe.transformVersion === 'transparent-crop-v1' &&
+  assert(recipe.schemaVersion === 1 && recipe.kind === 'cars-dealer-pack-logo-recipe' && recipe.dealer === slug && ['transparent-crop-v1', 'transparent-crop-solid-ink-v1'].includes(recipe.transformVersion) &&
     recipe.sourceSha256 === sha256(pack.files.get('branding/source.json')) && recipe.contractSha256 === sha256(pack.files.get('branding/logo-contract.json')), 'Logo regeneration recipe or retained source changed');
   const generated = await prepareDealerPackLogo({root, slug, toolPackage: options.toolPackage, persist: false, sourceFiles: pack.files});
   assert(isDeepStrictEqual(recipe.toolchain, generated.recipe.toolchain), 'Logo recipe requires its exact retained sharp/libvips toolchain');
-  assert(isDeepStrictEqual(recipe.outputs, generated.recipe.outputs), 'Deterministic logo regeneration differs from its reviewed byte inventory');
+  assert(recipe.transformVersion === generated.recipe.transformVersion && isDeepStrictEqual(recipe.outputs, generated.recipe.outputs), 'Deterministic logo regeneration differs from its reviewed byte inventory');
   assert(generated.generatedFiles.get('branding/logo-contract.json').equals(pack.files.get('branding/logo-contract.json')), 'Regenerated logo provenance differs from the retained contract');
   for (const row of recipe.outputs) {
     const bytes = generated.generatedFiles.get(row.path);
