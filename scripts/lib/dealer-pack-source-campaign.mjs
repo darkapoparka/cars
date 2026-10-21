@@ -39,6 +39,20 @@ function assertRun(run,reservation){
   if(reservation.run)assert(reservation.run.id===run.id&&reservation.run.head_sha===run.head_sha,'A retained reservation cannot bind another native run');
 }
 function runProof(run){return {id:run.id,path:run.path,repository:{full_name:run.repository.full_name},head_repository:{full_name:run.head_repository.full_name},head_branch:run.head_branch,event:run.event,head_sha:run.head_sha,run_attempt:run.run_attempt,display_title:run.display_title,status:run.status,conclusion:run.conclusion};}
+/** A failed shared gate can acknowledge only the original owned attempt. Its
+ * complete terminal job inventory preserves lane outcomes without qualifying
+ * any artifact or treating a successful lane as a successful shared contract. */
+export function assertSourceFailedContractsProof({contracts,run,reservationId,sourceSha}={}){
+  assert(hex64(reservationId)&&hex40(sourceSha),'Exact failed-contract source reservation required');
+  assertRun(run,{id:reservationId,sourceSha});
+  assert(run.status==='completed'&&run.conclusion==='failure','Failed shared contracts need the completed failed original run');
+  assert(contracts?.kind==='cars-owned-source-failed-contracts-v1'&&contracts.reservationId===reservationId&&contracts.runId===run.id&&contracts.sourceCommit===sourceSha&&contracts.attempt===1&&contracts.conclusion==='failure','Exact original failed shared-contract binding required');
+  assert(Array.isArray(contracts.jobs)&&contracts.jobs.length>0&&contracts.jobs.length<=2000&&contracts.totalCount===contracts.jobs.length&&new Set(contracts.jobs.map(job=>job.id)).size===contracts.jobs.length,'Complete distinct original-attempt terminal job inventory required');
+  for(const job of contracts.jobs)assert(Number.isSafeInteger(job.id)&&job.id>0&&job.runId===run.id&&job.sourceCommit===sourceSha&&job.attempt===1&&typeof job.name==='string'&&job.name.length>0&&job.name.length<=500&&job.status==='completed'&&['success','failure','cancelled','timed_out','action_required','neutral','skipped','stale','startup_failure'].includes(job.conclusion),'Every failed-contract observation must retain its original terminal job outcome');
+  const matches=contracts.jobs.filter(job=>job.name==='contracts');
+  assert(matches.length===1&&matches[0].id===contracts.jobId&&matches[0].conclusion==='failure','Exactly one completed failed shared-contract job is required');
+  return contracts;
+}
 function assertExternalTerminalRun(run,external){assert(run?.id===external.runId&&run.path===workflow&&run.repository?.full_name===PACK_QUEUE_REPOSITORY&&run.head_repository?.full_name===PACK_QUEUE_REPOSITORY&&run.head_branch==='main'&&run.event==='workflow_dispatch'&&run.head_sha===external.sourceSha&&run.run_attempt===1&&run.status==='completed'&&['success','failure'].includes(run.conclusion),'Authenticated exact external terminal native run proof required');}
 function assertFailedMaterial(row,external){assert(row&&slug(row.slug)&&hex64(row.packDigest)&&hex64(row.buildFingerprint)&&row.sourceSha===external.sourceSha&&[row.packTree,row.scriptsTree,row.lockBlob,row.nativeWorkflowBlob].every(hex40)&&typeof row.reason==='string'&&row.reason.trim().length>0&&row.reason.length<=2000,'Exact pinned failed native material/source/tree proof required');assert(row.buildFingerprint===queueDigest({kind:'cars-source-build-material-v1',scriptsTree:row.scriptsTree,lockBlob:row.lockBlob,nativeWorkflowBlob:row.nativeWorkflowBlob}),'Failed native build fingerprint differs from its pinned Git object identities');}
 function assertOwnedIntake(state,id,receipt){
@@ -46,8 +60,11 @@ function assertOwnedIntake(state,id,receipt){
   assert(reservation&&hex64(id)&&receipt?.reservationId===id&&receipt.runId===receipt.terminalRun?.id&&receipt.sourceSha===reservation.sourceSha&&timestamp(receipt.completedAt),'Exact owned source intake receipt required');
   assertRun(receipt.terminalRun,reservation);assert(receipt.terminalRun.status==='completed'&&['success','failure'].includes(receipt.terminalRun.conclusion),'Owned intake needs an admissible completed original run');
   if(reservation.run?.status==='completed')assert(isDeepStrictEqual(receipt.terminalRun,reservation.run),'Owned intake cannot replace a retained terminal run proof');
-  assert(receipt.contracts?.runId===receipt.runId&&receipt.contracts.sourceCommit===reservation.sourceSha&&receipt.contracts.conclusion==='success','Owned intake shared contracts must match the original run/source');
   assert(Array.isArray(receipt.retained)&&Array.isArray(receipt.failedMaterialProofs)&&receipt.retained.length+receipt.failedMaterialProofs.length===reservation.selections.length,'Every selected owned source member needs retained queue identity or exact failed material');
+  if(receipt.contracts?.kind==='cars-owned-source-failed-contracts-v1'){
+    assertSourceFailedContractsProof({contracts:receipt.contracts,run:receipt.terminalRun,reservationId:id,sourceSha:reservation.sourceSha});
+    assert(receipt.retained.length===0&&receipt.failedMaterialProofs.length===reservation.selections.length,'Failed shared contracts cannot retain qualified outputs and must fail every selected material');
+  }else assert(receipt.contracts?.runId===receipt.runId&&receipt.contracts.sourceCommit===reservation.sourceSha&&receipt.contracts.conclusion==='success','Owned intake shared contracts must match the original run/source');
   const seen=new Set();
   for(const row of receipt.retained){const selected=reservation.selections.find(item=>item.dealerId===row.dealerId&&item.slug===row.slug),target=state.targets[row.dealerId];assert(selected&&!seen.has(row.slug)&&Array.isArray(row.requestIds)&&row.requestIds.length>0&&new Set(row.requestIds).size===row.requestIds.length&&row.requestIds.every(id=>hex64(id)&&target.retainedRequestIds.includes(id)),'Owned intake retained members must reference permanent qualified queue identities');seen.add(row.slug);}
   for(const proof of receipt.failedMaterialProofs){assertFailedMaterial(proof,{sourceSha:reservation.sourceSha});const selected=reservation.selections.find(item=>item.dealerId===proof.dealerId&&item.slug===proof.slug);assert(selected&&materialMatches(selected,proof)&&!seen.has(proof.slug),'Owned intake failed proof differs from the selected exact material');seen.add(proof.slug);}
@@ -159,10 +176,12 @@ export function completeSourceOwnedRunIntake(state,{reservationId,run,intake,now
   assert(reservation&&timestamp(now),'Exact retained owned reservation and completion date required');assertRun(run,reservation);
   assert(run.status==='completed'&&['success','failure'].includes(run.conclusion)&&intake?.completed===true&&intake.runId===run.id&&intake.sourceCommit===reservation.sourceSha,'Owned terminal intake must positively match the original completed run/source');
   assert(Array.isArray(intake.requests)&&Array.isArray(intake.pending)&&intake.pending.length===0&&Array.isArray(intake.failures)&&Array.isArray(intake.failedMaterials),'Owned intake must finish every source member without pending or global ambiguity');
+  const failedContracts=intake.contracts?.kind==='cars-owned-source-failed-contracts-v1';
+  if(failedContracts)assert(intake.requests.length===0&&intake.failures.length===reservation.selections.length,'Failed shared contracts cannot qualify requests and must cover the whole owned selection');
   const failureSlugs=intake.failures.map(row=>{assert(slug(row?.slug),'Global or unbound owned intake failures remain held');return row.slug;});
   assert(new Set(failureSlugs).size===failureSlugs.length&&new Set(intake.failedMaterials.map(row=>row.slug)).size===intake.failedMaterials.length&&isDeepStrictEqual([...failureSlugs].sort(),intake.failedMaterials.map(row=>row.slug).sort()),'Every owned intake failure needs one exact material proof');
   const failed=new Set(failureSlugs),retained=reservation.selections.filter(row=>!failed.has(row.slug)).map(row=>({dealerId:row.dealerId,slug:row.slug,requestIds:[...next.targets[row.dealerId].retainedRequestIds].sort()}));
-  const receipt={reservationId,runId:run.id,sourceSha:reservation.sourceSha,completedAt:next.ownedIntakes?.[reservationId]?.completedAt??now,terminalRun:runProof(run),contracts:{runId:intake.contracts?.runId,sourceCommit:intake.contracts?.sourceCommit,conclusion:intake.contracts?.conclusion},retained,
+  const receipt={reservationId,runId:run.id,sourceSha:reservation.sourceSha,completedAt:next.ownedIntakes?.[reservationId]?.completedAt??now,terminalRun:runProof(run),contracts:failedContracts?clone(intake.contracts):{runId:intake.contracts?.runId,sourceCommit:intake.contracts?.sourceCommit,conclusion:intake.contracts?.conclusion},retained,
     failedMaterialProofs:intake.failedMaterials.map(row=>({dealerId:row.dealerId,slug:row.slug,packDigest:row.packDigest,buildFingerprint:row.buildFingerprint,sourceSha:row.sourceSha,packTree:row.packTree,scriptsTree:row.scriptsTree,lockBlob:row.lockBlob,nativeWorkflowBlob:row.nativeWorkflowBlob,reason:row.reason})).sort((a,b)=>a.slug.localeCompare(b.slug,'en'))};
   assertOwnedIntake(next,reservationId,receipt);next.ownedIntakes??={};
   if(next.ownedIntakes[reservationId])assert(isDeepStrictEqual(next.ownedIntakes[reservationId],receipt),'Completed owned intake proof cannot be replaced');else next.ownedIntakes[reservationId]=receipt;

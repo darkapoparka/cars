@@ -130,6 +130,44 @@ test('owned intake can finish atomically with its live reservation and cannot be
  const old=campaign();delete old.ownedIntakes;assert.equal(validateSourceCampaign(old),old);
 });
 
+function failedContractsFixture(){
+ const materials=[0,1].map(index=>failedMaterial({...selection(index),buildFingerprint:failedMaterial().buildFingerprint})),state=reserved(campaign(),{selections:materials}),reservationId=state.activeReservationId,terminalRun=run(state,{status:'completed',conclusion:'failure'});
+ const jobs=[['contracts','failure'],['producer (lane 1)','success'],['producer (lane 2)','failure']].map(([name,conclusion],index)=>({id:1000+index,runId:terminalRun.id,sourceCommit:sha,attempt:1,name,status:'completed',conclusion}));
+ const contracts={kind:'cars-owned-source-failed-contracts-v1',reservationId,runId:terminalRun.id,sourceCommit:sha,attempt:1,jobId:1000,conclusion:'failure',totalCount:jobs.length,jobs};
+ const intake={completed:true,runId:terminalRun.id,sourceCommit:sha,contracts,requests:[],pending:[],failures:materials.map(row=>({slug:row.slug,reason:row.reason})),failedMaterials:materials};
+ return {state,reservationId,run:terminalRun,intake};
+}
+
+test('exact failed shared contracts acknowledge every owned material while preserving original lane outcomes and history',async()=>{
+ const f=failedContractsFixture(),before=structuredClone(f.state),store=memoryStore(f.state);
+ await mutateSourceCampaign(store,state=>finishSourceCohort(completeSourceOwnedRunIntake(state,{...f,now:later}),{reservationId:f.reservationId,run:f.run,now:later}),{now:later});
+ const finished=store.state,receipt=finished.ownedIntakes[f.reservationId];
+ assert.equal(finished.activeReservationId,null);assert.equal(finished.reservations[f.reservationId].status,'held');assert.equal(finished.reservations[f.reservationId].run.conclusion,'failure');
+ assert.deepEqual(receipt.contracts,f.intake.contracts);assert.deepEqual(receipt.retained,[]);assert.equal(receipt.failedMaterialProofs.length,2);assert.deepEqual(receipt.contracts.jobs.map(row=>row.conclusion),['failure','success','failure']);
+ assert.deepEqual(finished.baseline,before.baseline);assert.deepEqual(finished.reservations[f.reservationId].selections,before.reservations[f.reservationId].selections);
+ for(const material of f.intake.failedMaterials){assert.equal(finished.targets[material.dealerId].status,'held');assert.deepEqual(finished.targets[material.dealerId].retainedRequestIds,[]);assert(hasAttemptedSourceMaterial(finished,material));}
+ assert.deepEqual(completeSourceOwnedRunIntake(finished,{...f,now:'2026-11-01T00:00:00.000Z'}),finished);
+ assert.throws(()=>reserved(finished,{id:hash('unrelated-main'),sourceSha:'f'.repeat(40),selections:f.intake.failedMaterials}),/already has a retained source attempt/);
+ assert(reserved(finished,{id:hash('corrected-shared-material'),sourceSha:'f'.repeat(40),selections:f.intake.failedMaterials.map(row=>({...row,buildFingerprint:hash('corrected-source-code')}))}).activeReservationId);
+ await assert.rejects(mutateSourceCampaign(store,state=>{state.ownedIntakes[f.reservationId].contracts.jobs[1].conclusion='failure';return state;},{now:later}),/cannot be removed or rewritten/);
+ assert.deepEqual(f.state,before);
+});
+
+test('negative shared-contract acknowledgement refuses partial outcomes, invented qualification and mismatched original proof',()=>{
+ const f=failedContractsFixture(),complete=(intake=f.intake,terminalRun=f.run)=>completeSourceOwnedRunIntake(f.state,{reservationId:f.reservationId,run:terminalRun,intake,now:later});
+ for(const change of [{reservationId:hash('other')},{runId:999},{sourceCommit:'f'.repeat(40)},{attempt:2},{jobId:9999},{conclusion:'success'},{totalCount:999},{jobs:[]},
+  {jobs:f.intake.contracts.jobs.map((row,index)=>index===0?{...row,conclusion:'cancelled'}:row)},
+  {jobs:f.intake.contracts.jobs.map((row,index)=>index===1?{...row,status:'in_progress',conclusion:null}:row)},
+  {jobs:f.intake.contracts.jobs.map((row,index)=>index===1?{...row,runId:999}:row)},
+  {jobs:f.intake.contracts.jobs.map((row,index)=>index===1?{...row,attempt:2}:row)},
+  {jobs:f.intake.contracts.jobs.map((row,index)=>index===1?{...row,sourceCommit:'f'.repeat(40)}:row)},
+  {jobs:f.intake.contracts.jobs.map((row,index)=>index===1?{...row,name:'contracts'}:row)}])assert.throws(()=>complete({...f.intake,contracts:{...f.intake.contracts,...change}}));
+ for(const change of [{requests:[{slug:'dealer-0'}]},{pending:[{slug:'dealer-0'}]},{failures:f.intake.failures.slice(1),failedMaterials:f.intake.failedMaterials.slice(1)},
+  {contracts:{runId:f.run.id,sourceCommit:sha,conclusion:'failure'}},{failedMaterials:f.intake.failedMaterials.map((row,index)=>index===0?{...row,packDigest:hash('other-pack')}:row)}])assert.throws(()=>complete({...f.intake,...change}));
+ for(const change of [{conclusion:'success'},{conclusion:'cancelled'},{run_attempt:2},{display_title:'Cars rollout '+hash('foreign-nonce')},{head_sha:'f'.repeat(40)},{head_repository:{full_name:'foreign/cars'}},{status:'in_progress',conclusion:null}])assert.throws(()=>complete(f.intake,{...f.run,...change}));
+ assert.equal(f.state.activeReservationId,f.reservationId);assert.deepEqual(f.state.ownedIntakes,{});
+});
+
 test('a pre-binding external observation can acknowledge the exact cancelled owned attempt without qualification',()=>{
  const initial=reserved(),reservationId=initial.activeReservationId,terminalRun=run(initial,{status:'completed',conclusion:'cancelled'});
  const observed=observeSourceExternalRuns(initial,{runs:[{runId:terminalRun.id,sourceSha:sha}],now}),finished=finishSourceCohort(observed,{reservationId,run:terminalRun,now:later}),before=structuredClone(finished);

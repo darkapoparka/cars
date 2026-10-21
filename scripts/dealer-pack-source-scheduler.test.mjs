@@ -76,6 +76,19 @@ function ownedFailedMaterial(row, sourceSha) {
   return {...row, sourceSha, ...material, packTree: '5'.repeat(40), reason: 'Exact per-pack native fixture refusal'};
 }
 
+function failedSharedContracts(reservation, runId = 456) {
+  const jobs = [['contracts', 'failure'], ['producer (lane 1)', 'success'], ['producer (lane 2)', 'failure']].map(([name, conclusion], index) =>
+    ({id: 1000 + index, runId, sourceCommit: reservation.sourceSha, attempt: 1, name, status: 'completed', conclusion}));
+  return {kind: 'cars-owned-source-failed-contracts-v1', reservationId: reservation.id, runId, sourceCommit: reservation.sourceSha,
+    attempt: 1, jobId: 1000, conclusion: 'failure', totalCount: jobs.length, jobs};
+}
+
+function failedSharedIntake(reservation, runId = 456) {
+  return {runId, sourceCommit: reservation.sourceSha, contracts: failedSharedContracts(reservation, runId), requests: [], pending: [],
+    failures: reservation.selections.map(row => ({slug: row.slug, reason: 'Original shared contracts failed'})),
+    failedMaterials: reservation.selections.map(row => ({...ownedFailedMaterial(row, reservation.sourceSha), reason: 'Original shared contracts failed'}))};
+}
+
 test('canonical400 registers once, keeps unreviewed/missing targets, and never manufactures deployment requests', async () => {
   const f = fixture({available: 2}), before = structuredClone(f.queue); f.options.readQualification = () => ({reviewed: false});
   const first = await scheduleDealerPackSource(f.options), writes = f.store.writes;
@@ -348,6 +361,48 @@ test('owned global, unbound, pending, mismatched or unretained terminal intake n
   }
 });
 
+test('exact failed shared-contract intake releases only source ownership and permits only changed material to run again', async () => {
+  const f = fixture({available: 2}), queueBefore = structuredClone(f.queue); await scheduleDealerPackSource(f.options);
+  const id = f.store.state.activeReservationId, original = f.store.state.reservations[id];
+  f.state.runStatus = 'completed'; f.state.conclusion = 'failure'; f.state.main = 'b'.repeat(40); f.options.sourceSha = f.state.main;
+  f.options.ensureTerminalIntake = async ({runId, slugs, ownedSource}) => {
+    assert.deepEqual(ownedSource, {reservationId: id, sourceSha}); assert.deepEqual(slugs, ['dealer-0', 'dealer-1']);
+    return failedSharedIntake(original, runId);
+  };
+  const result = await scheduleDealerPackSource(f.options), completed = f.store.state;
+  assert.equal(result.sourceCompletion.status, 'held'); assert.equal(result.providerWrites, 0); assert.equal(result.directQueueWrites, 0);
+  assert.equal(completed.activeReservationId, null); assert.equal(completed.reservations[id].run.conclusion, 'failure');
+  assert.deepEqual(completed.reservations[id].selections, original.selections); assert.deepEqual(completed.ownedIntakes[id].retained, []);
+  assert.equal(completed.ownedIntakes[id].failedMaterialProofs.length, 2); assert.deepEqual(completed.ownedIntakes[id].contracts.jobs.map(row => row.conclusion), ['failure', 'success', 'failure']);
+  assert.deepEqual(f.queue, queueBefore); assert.equal(f.posts.length, 1);
+  await scheduleDealerPackSource(f.options); assert.equal(f.posts.length, 1); assert.deepEqual(f.store.state.ownedIntakes, completed.ownedIntakes);
+  f.options.buildFingerprint = queueDigest({kind: 'cars-source-build-material-v1', ...changedMaterial}); f.state.runStatus = 'in_progress'; f.state.conclusion = null;
+  const next = await scheduleDealerPackSource(f.options); assert.equal(next.dispatches, 1); assert.equal(f.posts.length, 2); assert.deepEqual(f.posts[1].slugs, ['dealer-0', 'dealer-1']);
+  assert.deepEqual(f.store.state.reservations[id], completed.reservations[id]); assert.deepEqual(f.store.state.ownedIntakes, completed.ownedIntakes); assert.deepEqual(f.queue, queueBefore);
+});
+
+test('incomplete or foreign negative contract proof never clears the owned source barrier', async () => {
+  for (const defect of ['unqualified-request', 'missing-member', 'pending', 'wrong-nonce', 'wrong-attempt', 'live-job', 'missing-contracts', 'unknown-kind']) {
+    const f = fixture({available: 2}); await scheduleDealerPackSource(f.options); const id = f.store.state.activeReservationId, reservation = f.store.state.reservations[id];
+    f.state.runStatus = 'completed'; f.state.conclusion = 'failure';
+    f.options.ensureTerminalIntake = async () => {
+      const result = failedSharedIntake(reservation);
+      if (defect === 'unqualified-request') result.requests.push({slug: 'dealer-0', dealerId: ids[0], sourceCommit: sourceSha});
+      if (defect === 'missing-member') {result.failures.pop(); result.failedMaterials.pop();}
+      if (defect === 'pending') result.pending.push({slug: 'dealer-0'});
+      if (defect === 'wrong-nonce') result.contracts.reservationId = queueDigest('another-reservation');
+      if (defect === 'wrong-attempt') result.contracts.jobs[1].attempt = 2;
+      if (defect === 'live-job') {result.contracts.jobs[1].status = 'in_progress'; result.contracts.jobs[1].conclusion = null;}
+      if (defect === 'missing-contracts') result.contracts.jobs[0].name = 'other-job';
+      if (defect === 'unknown-kind') delete result.contracts.kind;
+      return result;
+    };
+    const result = await scheduleDealerPackSource(f.options);
+    assert.equal(result.status, 'needs-reconciliation', defect); assert.equal(f.store.state.activeReservationId, id, defect);
+    assert.equal(f.posts.length, 1, defect); assert.deepEqual(f.store.state.ownedIntakes, {}, defect); assert.equal(f.queue.order.length, 0, defect);
+  }
+});
+
 test('cancelled prequalification can release as held without terminal intake or reopening unchanged source material', async () => {
   const f = fixture({available: 1}); await scheduleDealerPackSource(f.options);
   const id = f.store.state.activeReservationId; f.state.runStatus = 'completed'; f.state.conclusion = 'cancelled';
@@ -446,6 +501,80 @@ test('terminal intake reuses the pinned resolver source, seals failed bytes and 
   assert.equal(result.failedMaterials[0].packDigest, inspectSourcePackMaterial({root, slug: 'owned-pack', dealerId: ids[0], sourceSha, git}).packDigest);
   const bad = createDealerPackTerminalIntake({root, resolver, git, runDispatcher: async () => {process.exitCode = 7; return {runId: 901, sourceCommit: sourceSha, failures: [{artifact: 'unbound', reason: 'Global failure'}]};}});
   await assert.rejects(bad({runId: 901}), /Global or artifact/); assert.equal(process.exitCode, before); assert.equal(sourceReads, 1);
+});
+
+function pinnedFailedContractsFixture(t) {
+  const root = fs.mkdtempSync(path.join(os.tmpdir(), 'cars-failed-shared-contracts-')); t.after(() => fs.rmSync(root, {recursive: true, force: true}));
+  const ownedSource = {reservationId: queueDigest('original-owned-shared-failure'), sourceSha}, slugs = ['owned-pack', 'second-pack'], files = new Map();
+  for (const [index, slug] of slugs.entries()) {
+    const directory = path.join(root, 'dealers', slug), members = new Map([['dealer.json', Buffer.from(JSON.stringify({slug, dealerId: ids[index]}))], ['stock.json', Buffer.from('{"records":[]}')]]);
+    fs.mkdirSync(directory, {recursive: true}); for (const [name, bytes] of members) fs.writeFileSync(path.join(directory, name), bytes); files.set(slug, members);
+  }
+  const reservation = {id: ownedSource.reservationId, sourceSha}, run = nativeRun(reservation, {id: 901, status: 'completed', conclusion: 'failure'});
+  const jobs = failedSharedContracts(reservation, run.id).jobs.map(row => ({id: row.id, run_id: row.runId, head_sha: row.sourceCommit, run_attempt: row.attempt, name: row.name, status: row.status, conclusion: row.conclusion}));
+  const state = {run, jobs, sourceReads: 0, dispatches: 0, calls: [], jobReply: null};
+  const readGithub = async operation => {
+    state.calls.push(operation); assert.equal(operation.method, 'GET');
+    if (operation.path === '/repos/' + PACK_QUEUE_REPOSITORY + '/actions/runs/901') return {status: 200, body: structuredClone(state.run)};
+    assert.equal(operation.path, '/repos/' + PACK_QUEUE_REPOSITORY + '/actions/runs/901/attempts/1/jobs'); assert.equal(operation.query.per_page, 100);
+    return state.jobReply ? state.jobReply(operation.query.page) : {status: 200, body: {total_count: state.jobs.length, jobs: structuredClone(state.jobs)}};
+  };
+  const git = (location, args) => {
+    assert.equal(location, root);
+    if (args[0] === 'rev-parse') {assert(args.slice(1).every(value => value.startsWith(sourceSha + ':'))); return args.length === 4 ? Object.values(sharedMaterial).join('\n') : '4'.repeat(40);}
+    assert.equal(args[4], sourceSha); const prefix = args.at(-1), slug = prefix.split('/')[1];
+    return [...files.get(slug)].map(([name, bytes]) => '100644 blob ' + createHash('sha1').update('blob ' + bytes.length + '\0').update(bytes).digest('hex') + '\t' + prefix + name + '\0').join('');
+  };
+  const resolver = {async source(sha) {assert.equal(sha, sourceSha); state.sourceReads++; return root;}, async discover() {assert.fail('Failed contracts must never inspect or qualify artifacts');}};
+  const runDispatcher = async () => {state.dispatches++; return {runId: run.id, sourceCommit: sourceSha, contracts: {runId: run.id, sourceCommit: sourceSha, conclusion: 'success'}, requests: [], pending: [], failures: []};};
+  return {root, ownedSource, slugs, state, git, resolver, runDispatcher, readGithub,
+    callback: createDealerPackTerminalIntake({root, resolver, runDispatcher, git, readGithub}), args: {runId: run.id, slugs, ownedSource}};
+}
+
+test('failed shared-contract callback authenticates original jobs and exact pack bytes without artifact or queue intake', async t => {
+  const f = pinnedFailedContractsFixture(t), result = await f.callback(f.args);
+  assert.equal(f.state.dispatches, 0); assert.equal(f.state.sourceReads, 1); assert(f.state.calls.every(row => row.method === 'GET'));
+  assert.equal(result.contracts.kind, 'cars-owned-source-failed-contracts-v1'); assert.equal(result.contracts.attempt, 1);
+  assert.deepEqual(result.contracts.jobs.map(row => row.conclusion), ['failure', 'success', 'failure']);
+  assert.deepEqual(result.requests, []); assert.deepEqual(result.pending, []); assert.deepEqual(result.failures.map(row => row.slug), f.slugs);
+  assert.equal(result.failedMaterials.length, 2); assert.equal(fs.existsSync(path.join(f.root, 'runtime')), false);
+  for (const material of result.failedMaterials) {assert.equal(material.sourceSha, sourceSha); assert.equal(material.buildFingerprint, buildFingerprint);
+    assert.equal(material.packDigest, inspectSourcePackMaterial({root: f.root, slug: material.slug, dealerId: material.dealerId, sourceSha, git: f.git}).packDigest);}
+  fs.appendFileSync(path.join(f.root, 'dealers/owned-pack/stock.json'), '\n');
+  await assert.rejects(f.callback(f.args), /Physical pack bytes differ/); assert.equal(f.state.dispatches, 0);
+});
+
+test('negative callback refuses foreign attempts and incomplete terminal job proof before source or artifact reads', async t => {
+  const f = pinnedFailedContractsFixture(t), originalRun = structuredClone(f.state.run), originalJobs = structuredClone(f.state.jobs);
+  for (const change of [{id: 902}, {head_sha: 'b'.repeat(40)}, {display_title: 'Cars rollout ' + queueDigest('another')}, {run_attempt: 2},
+    {head_branch: 'other'}, {event: 'push'}, {repository: {full_name: 'foreign/cars'}}, {head_repository: {full_name: 'foreign/cars'}},
+    {path: '.github/workflows/other.yml'}, {status: 'in_progress', conclusion: null}, {conclusion: 'cancelled'}]) {
+    f.state.run = {...originalRun, ...change}; await assert.rejects(f.callback(f.args), /original owned terminal run/);
+  }
+  f.state.run = originalRun;
+  for (const change of [jobs => jobs[0].conclusion = 'skipped', jobs => jobs[0].name = 'missing-contracts', jobs => jobs[1].name = 'contracts',
+    jobs => jobs[1].id = jobs[0].id, jobs => jobs[1].run_id = 902, jobs => jobs[1].head_sha = 'b'.repeat(40), jobs => jobs[1].run_attempt = 2,
+    jobs => {jobs[1].status = 'in_progress'; jobs[1].conclusion = null;}]) {
+    f.state.jobs = structuredClone(originalJobs); change(f.state.jobs); await assert.rejects(f.callback(f.args));
+  }
+  f.state.jobs = originalJobs;
+  for (const defect of ['empty-page', 'changed-total', 'too-many', 'refused']) {
+    f.state.jobReply = page => ({status: defect === 'refused' ? 403 : 200, body: {total_count: defect === 'too-many' ? 2001 : page === 2 && defect === 'changed-total' ? 4 : 3,
+      jobs: page === 1 ? originalJobs.slice(0, 2) : defect === 'empty-page' ? [] : originalJobs.slice(2)}});
+    await assert.rejects(f.callback(f.args), /inventory/);
+  }
+  assert.equal(f.state.sourceReads, 0); assert.equal(f.state.dispatches, 0); assert.equal(fs.existsSync(path.join(f.root, 'runtime')), false);
+});
+
+test('complete paginated failed job proof is sealed but successful shared contracts still use maintained artifact intake', async t => {
+  const f = pinnedFailedContractsFixture(t);
+  f.state.jobReply = page => ({status: 200, body: {total_count: 3, jobs: page === 1 ? f.state.jobs.slice(0, 2) : f.state.jobs.slice(2)}});
+  const failed = await f.callback(f.args); assert.equal(failed.failedMaterials.length, 2); assert.equal(f.state.dispatches, 0);
+  assert.deepEqual(f.state.calls.filter(row => row.query).map(row => row.query.page), [1, 2]);
+  f.state.jobReply = null; f.state.jobs[0].conclusion = 'success';
+  const partial = await f.callback(f.args); assert.equal(partial.contracts.conclusion, 'success'); assert.equal(f.state.dispatches, 1); assert.deepEqual(partial.failedMaterials, []);
+  f.state.run.conclusion = 'success';
+  const success = await f.callback(f.args); assert.equal(success.contracts.conclusion, 'success'); assert.equal(f.state.dispatches, 2);
 });
 
 test('dispatch issues one exact main POST and handles204/200 without accepting foreign run URLs', async () => {

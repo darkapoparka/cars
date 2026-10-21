@@ -11,7 +11,7 @@ import {readPackBatchAssignments} from './lib/dealer-pack-identity.mjs';
 import {PACK_QUEUE_REPOSITORY, githubPackQueueStore, validatePackQueue, queueDigest} from './lib/dealer-pack-queue.mjs';
 import {registerSourceCampaign, validateSourceCampaign, mutateSourceCampaign, gitSourceCampaignStore,
   reserveSourceCohort, bindSourceCohortRun, finishSourceCohort, holdSourceCohort, syncSourceCampaignTargets,
-  hasAttemptedSourceMaterial, observeSourceExternalRuns, completeSourceExternalRunIntake, completeSourceExternalOwnedAlias, completeSourceOwnedRunIntake, SOURCE_COHORT_MAX} from './lib/dealer-pack-source-campaign.mjs';
+  hasAttemptedSourceMaterial, observeSourceExternalRuns, completeSourceExternalRunIntake, completeSourceExternalOwnedAlias, completeSourceOwnedRunIntake, assertSourceFailedContractsProof, SOURCE_COHORT_MAX} from './lib/dealer-pack-source-campaign.mjs';
 import {discoverSourcePipelineRuns} from './lib/dealer-pack-source-discovery.mjs';
 import {checkDealerPackInputs} from './check-dealer-pack-inputs.mjs';
 import {githubPackTransport} from './deploy-dealer-packs.mjs';
@@ -85,23 +85,59 @@ export async function dispatchDealerPackSource({sourceSha, rolloutRequestId, slu
 
 /** Reuse the maintained resolver's already authenticated pinned source. Failed
  * materials are observations, never replacement qualified deployment requests. */
-export function createDealerPackTerminalIntake({root = ROOT, resolver: suppliedResolver, runDispatcher, git = readGit} = {}) {
+export function createDealerPackTerminalIntake({root = ROOT, resolver: suppliedResolver, runDispatcher, git = readGit, readGithub} = {}) {
   let resolver = suppliedResolver;
-  return async ({runId, slugs}) => {
+  return async ({runId, slugs, ownedSource}) => {
     assert(Number.isSafeInteger(runId) && runId > 0, 'Exact terminal source run ID required');
-    let slugArguments = [];
+    let slugArguments = [], intake;
     if (slugs !== undefined) {
       assert(Array.isArray(slugs) && slugs.length > 0 && slugs.length <= SOURCE_COHORT_MAX && new Set(slugs).size === slugs.length && slugs.every(validPackSlug), 'Exact bounded owned source selection required');
+    }
+    if (ownedSource !== undefined) {
+      assert(hex(ownedSource?.reservationId, 64) && hex(ownedSource.sourceSha, 40) && slugs?.length, 'Exact owned reservation and selection required for shared-contract inspection');
+      const request = readGithub ?? githubPackTransport(), reply = await request({method: 'GET', path: api + '/actions/runs/' + runId}), run = reply?.body;
+      assert(reply?.status === 200 && run?.id === runId && run.path === '.github/workflows/dealer-pack-pipeline.yml' &&
+        run.repository?.full_name === PACK_QUEUE_REPOSITORY && run.head_repository?.full_name === PACK_QUEUE_REPOSITORY &&
+        run.head_branch === 'main' && run.event === 'workflow_dispatch' && run.head_sha === ownedSource.sourceSha &&
+        run.run_attempt === 1 && run.display_title === 'Cars rollout ' + ownedSource.reservationId && run.status === 'completed' &&
+        ['success', 'failure'].includes(run.conclusion), 'Fresh authenticated original owned terminal run required');
+      if (run.conclusion === 'failure') {
+        const jobs = []; let total;
+        for (let page = 1; page <= 20; page++) {
+          const result = await request({method: 'GET', path: api + '/actions/runs/' + runId + '/attempts/1/jobs', query: {per_page: 100, page}}), body = result?.body;
+          assert(result?.status === 200 && Number.isSafeInteger(body?.total_count) && body.total_count > 0 && body.total_count <= 2000 &&
+            Array.isArray(body.jobs) && body.jobs.length > 0 && body.jobs.length <= 100 && (total === undefined || total === body.total_count), 'Complete stable original-attempt job inventory required');
+          total ??= body.total_count; jobs.push(...body.jobs);
+          assert(jobs.length <= total, 'Original-attempt jobs exceed their authenticated inventory');
+          if (jobs.length === total) break;
+        }
+        assert(jobs.length === total && new Set(jobs.map(job => job.id)).size === jobs.length, 'Original-attempt terminal job inventory is incomplete or duplicated');
+        const matches = jobs.filter(job => job.name === 'contracts');
+        assert(matches.length === 1 && ['success', 'failure'].includes(matches[0].conclusion), 'Exact completed original shared-contract conclusion required');
+        if (matches[0].conclusion === 'failure') {
+          const contracts = {kind: 'cars-owned-source-failed-contracts-v1', reservationId: ownedSource.reservationId, runId, sourceCommit: ownedSource.sourceSha,
+            attempt: 1, jobId: matches[0].id, conclusion: 'failure', totalCount: total,
+            jobs: jobs.map(job => ({id: job.id, runId: job.run_id, sourceCommit: job.head_sha, attempt: job.run_attempt,
+              name: job.name, status: job.status, conclusion: job.conclusion})).sort((a, b) => a.id - b.id)};
+          assertSourceFailedContractsProof({contracts, run, ...ownedSource});
+          intake = {runId, sourceCommit: ownedSource.sourceSha, contracts, requests: [], pending: [],
+            failures: slugs.map(slug => ({slug, reason: 'Original shared-contract job ' + contracts.jobId + ' failed in source run ' + runId + ' attempt 1; no artifact qualifies from this shared gate'}))};
+        }
+      }
+    }
+    if (!intake && slugs !== undefined) {
       const file = path.join(root, 'runtime/dealer-pack-source/intake-' + runId + '-slugs.json');
       fs.mkdirSync(path.dirname(file), {recursive: true}); fs.writeFileSync(file, JSON.stringify(slugs) + '\n');
       slugArguments = ['--slugs', file];
     }
     const commands = runDispatcher ? null : await import('./dispatch-dealer-pack-queue.mjs');
     resolver ??= commands.packArtifactResolver({root});
-    const exitCode = process.exitCode; let intake;
-    try {intake = await (runDispatcher ?? commands.runPackQueueDispatcher)(['enqueue', '--run', String(runId), '--automatic', ...slugArguments, '--report',
-      path.join(root, 'runtime/dealer-pack-source/intake-' + runId + '.json')], {root, resolver});}
-    finally {process.exitCode = exitCode;}
+    if (!intake) {
+      const exitCode = process.exitCode;
+      try {intake = await (runDispatcher ?? commands.runPackQueueDispatcher)(['enqueue', '--run', String(runId), '--automatic', ...slugArguments, '--report',
+        path.join(root, 'runtime/dealer-pack-source/intake-' + runId + '.json')], {root, resolver});}
+      finally {process.exitCode = exitCode;}
+    }
     assert(intake?.runId === runId && hex(intake.sourceCommit, 40) && Array.isArray(intake.failures), 'Exact maintained terminal intake report required');
     const failedMaterials = [];
     if (intake.failures.length) {
@@ -173,10 +209,17 @@ export async function scheduleDealerPackSource({root = ROOT, assignment = readPa
       run.status === 'completed' && ['success', 'failure'].includes(run.conclusion) && (!reservation.run || reservation.run.id === run.id), 'Authenticated exact owned terminal run required');
     assert(typeof ensureTerminalIntake === 'function', 'Maintained terminal intake is required');
     report.terminalIntakeCalls++;
-    const selected = new Map(reservation.selections.map(row => [row.slug, row])), intake = await ensureTerminalIntake({runId: run.id, slugs: [...selected.keys()]});
+    const selected = new Map(reservation.selections.map(row => [row.slug, row])), intake = await ensureTerminalIntake({runId: run.id, slugs: [...selected.keys()],
+      ownedSource: {reservationId: reservation.id, sourceSha: reservation.sourceSha}});
+    const failedContracts = intake?.contracts?.kind === 'cars-owned-source-failed-contracts-v1';
+    if (failedContracts) {
+      assertSourceFailedContractsProof({contracts: intake.contracts, run, reservationId: reservation.id, sourceSha: reservation.sourceSha});
+      assert(Array.isArray(intake.requests) && intake.requests.length === 0 && intake.failures?.length === selected.size, 'Failed shared contracts must acknowledge every selected member without qualified requests');
+    }
     assert(intake?.runId === run.id && intake.sourceCommit === reservation.sourceSha && Array.isArray(intake.requests) && Array.isArray(intake.failures) &&
       (!intake.pending || Array.isArray(intake.pending) && intake.pending.length === 0) && Array.isArray(intake.failedMaterials) &&
-      intake.contracts?.runId === run.id && intake.contracts.sourceCommit === reservation.sourceSha && intake.contracts.conclusion === 'success', 'Exact completed source intake proof required');
+      intake.contracts?.runId === run.id && intake.contracts.sourceCommit === reservation.sourceSha &&
+      (intake.contracts.conclusion === 'success' || failedContracts), 'Exact completed source intake proof required');
     assert(intake.requests.every(row => selected.get(row.slug)?.dealerId === row.dealerId && row.sourceCommit === reservation.sourceSha) &&
       intake.failures.every(row => selected.has(row.slug) && typeof row.reason === 'string' && row.reason.trim()) &&
       intake.failedMaterials.length === new Set(intake.failures.map(row => row.slug)).size &&
