@@ -3,6 +3,8 @@
  * https://developers.cloudflare.com/analytics/graphql-api/tutorials/querying-workers-metrics/
  * https://developers.cloudflare.com/changelog/post/2026-06-30-memory-usage-metrics/
  * https://developers.cloudflare.com/analytics/graphql-api/getting-started/authentication/api-token-auth/
+ * Successful invocation classes (including clientDisconnected):
+ * https://developers.cloudflare.com/workers/observability/metrics-and-analytics/
  */
 import fs from 'node:fs';
 import path from 'node:path';
@@ -12,6 +14,7 @@ import {expectedPackHosting} from './lib/dealer-pack-identity.mjs';
 import {PACK_RUNTIME_LIMITS} from './lib/dealer-pack-cloudflare.mjs';
 
 const assert=(ok,message)=>{if(!ok)throw Error(message);};
+const successfulInvocationStatuses=['success','clientDisconnected'];
 export const PACK_METRICS_QUERY=`query CarsPackMetrics($accountTag: string!, $scriptName: string!, $start: Time!, $end: Time!) {
   viewer {
     accounts(filter: {accountTag: $accountTag}) {
@@ -39,15 +42,16 @@ export function assessPackMetrics(response,{slug,start,end,startupTimeMs=null,cp
   const values=rows.map(row=>({status:row.dimensions.status,requests:row.sum.requests,errors:row.sum.errors,cpuMicroseconds:Object.fromEntries(Object.entries(row.quantiles??{}).filter(([key])=>key.startsWith('cpuTime'))),memoryBytes:Object.fromEntries(Object.entries(row.quantiles??{}).filter(([key])=>key.startsWith('memoryUsageBytes')))}));
   assert(values.every(row=>Object.values({...row.cpuMicroseconds,...row.memoryBytes}).every(value=>value===null||Number.isFinite(value)&&value>=0)),'Runtime metrics contain invalid or negative units');
   const requests=values.reduce((sum,row)=>sum+row.requests,0),errors=values.reduce((sum,row)=>sum+row.errors,0),observed=values.filter(row=>row.requests>0),cpuAvailable=observed.length>0&&observed.every(row=>['cpuTimeP50','cpuTimeP99'].every(key=>Number.isFinite(row.cpuMicroseconds[key]))),memoryAvailable=observed.length>0&&observed.every(row=>['memoryUsageBytesP50','memoryUsageBytesP99'].every(key=>Number.isFinite(row.memoryBytes[key])));
-  const exceptional=values.filter(row=>row.requests>0&&row.status!=='success'),maxP99CpuMs=cpuAvailable?Math.max(...observed.map(row=>row.cpuMicroseconds.cpuTimeP99))/1000:null,maxP99MemoryMiB=memoryAvailable?Math.max(...observed.map(row=>row.memoryBytes.memoryUsageBytesP99))/(1024**2):null;
+  const clientDisconnectedRequests=values.filter(row=>row.status==='clientDisconnected').reduce((sum,row)=>sum+row.requests,0),exceptional=values.filter(row=>row.requests>0&&!successfulInvocationStatuses.includes(row.status)),maxP99CpuMs=cpuAvailable?Math.max(...observed.map(row=>row.cpuMicroseconds.cpuTimeP99))/1000:null,maxP99MemoryMiB=memoryAvailable?Math.max(...observed.map(row=>row.memoryBytes.memoryUsageBytesP99))/(1024**2):null;
   const startupWithinLimit=startupTimeMs===null?null:startupTimeMs<=PACK_RUNTIME_LIMITS.startupMs,cpuWithinLimit=cpuAvailable&&cpuLimitMs!==null?maxP99CpuMs<=cpuLimitMs:null,memoryWithinLimit=memoryAvailable?maxP99MemoryMiB<=PACK_RUNTIME_LIMITS.memoryBytes/(1024**2):null;
-  const checks=[startupWithinLimit,cpuWithinLimit,memoryWithinLimit,requests>0?errors===0&&exceptional.length===0:null],withinLimits=checks.includes(false)?false:checks.every(value=>value===true)?true:null;
-  const status=requests===0?'awaiting-ingestion':errors||exceptional.length?'observed-errors':[startupWithinLimit,cpuWithinLimit,memoryWithinLimit].includes(false)?'observed-limits-exceeded':withinLimits===null?'incomplete':'observed-without-errors';
-  return {schemaVersion:1,type:'cars-dealer-pack-runtime-metrics',slug,workerName,accountId:PACK_DEPLOY_ACCOUNT,window:{start,end},observedAt:new Date().toISOString(),providerWrites:0,requests,errors,exceptionalStatuses:exceptional.map(row=>({status:row.status,requests:row.requests})),startupTimeMs,
+  const checks=[startupWithinLimit,cpuWithinLimit,memoryWithinLimit,errors||exceptional.length?false:requests>0?true:null],withinLimits=checks.includes(false)?false:checks.every(value=>value===true)?true:null;
+  const status=errors||exceptional.length?'observed-errors':requests===0?'awaiting-ingestion':[startupWithinLimit,cpuWithinLimit,memoryWithinLimit].includes(false)?'observed-limits-exceeded':withinLimits===null?'incomplete':'observed-without-errors';
+  return {schemaVersion:1,type:'cars-dealer-pack-runtime-metrics',slug,workerName,accountId:PACK_DEPLOY_ACCOUNT,window:{start,end},observedAt:new Date().toISOString(),providerWrites:0,requests,errors,clientDisconnectedRequests,exceptionalStatuses:exceptional.map(row=>({status:row.status,requests:row.requests})),startupTimeMs,
     cpuAvailable,memoryAvailable,maxP99CpuMs,maxP99MemoryMiB,rows:values,status,cpuLimitMs,cpuLimitSource:limitSource,withinLimits,
     limitChecks:{startup:{withinLimit:startupWithinLimit,observedMs:startupTimeMs,limitMs:PACK_RUNTIME_LIMITS.startupMs},cpu:{withinLimit:cpuWithinLimit,observedMaxGroupP99Ms:maxP99CpuMs,limitMs:cpuLimitMs},memory:{withinLimit:memoryWithinLimit,observedMaxGroupP99MiB:maxP99MemoryMiB,limitMiB:PACK_RUNTIME_LIMITS.memoryBytes/(1024**2)}},
     limitsReference:{source:PACK_RUNTIME_LIMITS.source,verifiedAt:PACK_RUNTIME_LIMITS.verifiedAt},
-    interpretation:'withinLimits compares measured upload startup and sampled maximum group P99 CPU/memory values against their stated limits, and requires observed invocations without errors. It is null when evidence is incomplete unless an observed failure already establishes false. These are not exact peaks, whole-window quantiles or a guarantee about every invocation. Memory is shared per V8 isolate; absent data is not zero usage. This pilot does not establish sustained production-load headroom.'};
+    invocationStatusReference:'https://developers.cloudflare.com/workers/observability/metrics-and-analytics/',
+    interpretation:'withinLimits compares measured upload startup and sampled maximum group P99 CPU/memory values against their stated limits, and requires observed invocations without errors. Client disconnect counts and raw statuses are retained separately and count as successful invocations per Cloudflare; reported errors or any other observed status still block acceptance. It is null when evidence is incomplete unless an observed failure already establishes false. These are not exact peaks, whole-window quantiles or a guarantee about every invocation. Memory is shared per V8 isolate; absent data is not zero usage. This pilot does not establish sustained production-load headroom.'};
 }
 export async function readPackMetrics({slug,start,end,startupTimeMs,cpuLimitMs,cpuLimitSource,api}={}) {
   if(!api){const token=process.env.CLOUDFLARE_API_TOKEN;assert(typeof token==='string'&&token.length>10,'CLOUDFLARE_API_TOKEN needs Account Analytics Read, or use the authorized connector');api=async operation=>{const response=await fetch('https://api.cloudflare.com/client/v4/graphql',{method:'POST',headers:{Authorization:'Bearer '+token,'Content-Type':'application/json'},body:JSON.stringify(operation.body),signal:AbortSignal.timeout(30000)}),body=await response.json();return {status:response.status,success:response.ok&&!body.errors?.length,errors:body.errors??[],result:body.data};};}

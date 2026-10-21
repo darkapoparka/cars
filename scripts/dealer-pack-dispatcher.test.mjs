@@ -187,3 +187,27 @@ test('runtime acceptance needs an explicit CPU cap and startup and compares obse
   delete row.quantiles.memoryUsageBytesP99;assert.equal(assessPackMetrics(reply,options).withinLimits,null);
   row.sum.errors=1;const errors=assessPackMetrics(reply,options);assert.equal(errors.withinLimits,false);assert.equal(errors.status,'observed-errors');
 });
+
+test('runtime client disconnects retain their counts and samples as documented successful invocations',()=>{
+  const options={slug:'dealer-one',start:at,end,startupTimeMs:75,cpuLimitMs:30000,cpuLimitSource:'provider-active-version-readback'},rows=[
+    {dimensions:{scriptName:'cars-dealer-one',status:'success'},sum:{requests:81,errors:0},quantiles:{cpuTimeP50:2500,cpuTimeP99:15000,memoryUsageBytesP50:1024**2,memoryUsageBytesP99:1.5*1024**2}},
+    {dimensions:{scriptName:'cars-dealer-one',status:'clientDisconnected'},sum:{requests:1,errors:0},quantiles:{cpuTimeP50:12000,cpuTimeP99:375751,memoryUsageBytesP50:100*1024**2,memoryUsageBytesP99:115*1024**2}},
+  ],reply={status:200,success:true,result:{viewer:{accounts:[{workersInvocationsAdaptive:rows}]}}},before=structuredClone(reply),report=assessPackMetrics(reply,options);
+  assert.equal(report.status,'observed-without-errors');assert.equal(report.withinLimits,true);assert.equal(report.requests,82);assert.equal(report.errors,0);assert.equal(report.clientDisconnectedRequests,1);assert.deepEqual(report.exceptionalStatuses,[]);
+  assert.equal(report.rows[1].status,'clientDisconnected');assert.equal(report.rows[1].requests,1);assert.deepEqual(report.rows[1].cpuMicroseconds,{cpuTimeP50:12000,cpuTimeP99:375751});assert.equal(report.maxP99CpuMs,375.751);assert.equal(report.maxP99MemoryMiB,115);assert.deepEqual(reply,before);
+  reply.result.viewer.accounts[0].workersInvocationsAdaptive=[rows[1]];const onlyDisconnects=assessPackMetrics(reply,options);assert.equal(onlyDisconnects.withinLimits,true);assert.equal(onlyDisconnects.clientDisconnectedRequests,1);assert.equal(onlyDisconnects.requests,1);
+});
+
+test('runtime client disconnect classification never admits Worker failures, unknown statuses or reported errors',()=>{
+  const options={slug:'dealer-one',start:at,end,startupTimeMs:75,cpuLimitMs:30000},row={dimensions:{scriptName:'cars-dealer-one',status:'clientDisconnected'},sum:{requests:1,errors:0},quantiles:{cpuTimeP50:2500,cpuTimeP99:15000,memoryUsageBytesP50:1024**2,memoryUsageBytesP99:1.5*1024**2}},reply={status:200,success:true,result:{viewer:{accounts:[{workersInvocationsAdaptive:[row]}]}}};
+  for(const status of ['scriptThrewException','exceededResources','internalError','futureProviderStatus','Success',undefined]){row.dimensions.status=status;const report=assessPackMetrics(reply,options);assert.equal(report.status,'observed-errors',String(status));assert.equal(report.withinLimits,false,String(status));assert.deepEqual(report.exceptionalStatuses,[{status,requests:1}]);assert.equal(report.clientDisconnectedRequests,0);}
+  for(const status of ['success','clientDisconnected']){row.dimensions.status=status;row.sum.errors=1;for(const requests of [1,0]){row.sum.requests=requests;const report=assessPackMetrics(reply,options);assert.equal(report.errors,1);assert.equal(report.status,'observed-errors');assert.equal(report.withinLimits,false);}}
+});
+
+test('runtime client disconnect samples still require complete measurements and obey every budget',()=>{
+  const options={slug:'dealer-one',start:at,end,startupTimeMs:75,cpuLimitMs:30000},row={dimensions:{scriptName:'cars-dealer-one',status:'clientDisconnected'},sum:{requests:1,errors:0},quantiles:{cpuTimeP50:2500,cpuTimeP99:15000,memoryUsageBytesP50:1024**2,memoryUsageBytesP99:1.5*1024**2}},base={status:200,success:true,result:{viewer:{accounts:[{workersInvocationsAdaptive:[row]}]}}};
+  for(const key of ['cpuTimeP50','cpuTimeP99','memoryUsageBytesP50','memoryUsageBytesP99']){const reply=structuredClone(base);delete reply.result.viewer.accounts[0].workersInvocationsAdaptive[0].quantiles[key];const report=assessPackMetrics(reply,options);assert.equal(report.status,'incomplete',key);assert.equal(report.withinLimits,null,key);assert.equal(report.clientDisconnectedRequests,1);}
+  for(const missing of [{startupTimeMs:null},{cpuLimitMs:null}])assert.equal(assessPackMetrics(base,{...options,...missing}).withinLimits,null);
+  for(const [key,value]of [['cpuTimeP99',30001000],['memoryUsageBytesP99',129*1024**2]]){const reply=structuredClone(base);reply.result.viewer.accounts[0].workersInvocationsAdaptive[0].quantiles[key]=value;const report=assessPackMetrics(reply,options);assert.equal(report.status,'observed-limits-exceeded');assert.equal(report.withinLimits,false);assert.equal(report.clientDisconnectedRequests,1);}
+  const startup=assessPackMetrics(base,{...options,startupTimeMs:1001});assert.equal(startup.status,'observed-limits-exceeded');assert.equal(startup.withinLimits,false);
+});
