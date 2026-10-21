@@ -83,11 +83,21 @@ export function artifactInventory(directory, identity = {}, {writeFile} = {}) {
   return manifest;
 }
 
+// Only the synchronous directory verifier creates this private lookup, after
+// validating the whole manifest. Physical bytes still get checked at every use.
+function verifyValidatedInventoryBytes(rows, name, bytes) {
+  const row = rows.get(name);
+  if (!row || row.bytes !== bytes.length || row.sha256 !== sha256(bytes)) {
+    throw Error('Artifact receipt bytes differ: ' + name);
+  }
+}
+
 export function verifyArtifactDirectory(directory) {
   const manifest = validateFileInventory(JSON.parse(fs.readFileSync(inside(directory,'artifact-manifest.json',{mustExist:true}),'utf8')));
   const actual = filesAt(directory,{filter:()=>true}).filter(name=>name!=='artifact-manifest.json');
   if (JSON.stringify(actual) !== JSON.stringify(manifest.files.map(row=>row.path).sort())) throw Error('Artifact contains missing or undeclared files.');
-  for (const row of manifest.files) verifyInventoryBytes(manifest,row.path,fs.readFileSync(inside(directory,row.path,{mustExist:true})));
+  const rows = new Map(manifest.files.map(row=>[row.path,row]));
+  for (const row of manifest.files) verifyValidatedInventoryBytes(rows,row.path,fs.readFileSync(inside(directory,row.path,{mustExist:true})));
   return manifest;
 }
 
