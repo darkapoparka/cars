@@ -2,16 +2,23 @@ name: Dealer pack deploy queue
 
 on:
   push:
-    branches: [astra/m2-fast-deploy]
-    paths: [docs/m2/pilot-inspection-request.json]
+    branches: [astra/m2-fast-deploy, main]
+    paths:
+      - docs/m2/pilot-inspection-request.json
+      - dealers/**
+      - scripts/**
+      - leads/expansion-2026-10-18/manifest.json
+      - leads/expansion-2026-10-18/batches-2026-10-19.json
+      - .github/workflows/dealer-pack-pipeline.yml
+      - .github/workflows/dealer-pack-deploy.yml
   workflow_dispatch:
     inputs:
       action:
-        description: Inspect a build, enqueue and deploy, drain, or reconcile an exact stopped request
+        description: Queue all400 targets, inspect a build, deploy, drain, or reconcile an exact stopped request
         required: true
         default: inspect
         type: choice
-        options: [inspect, enqueue-and-deploy, drain, recover-inspect, recover-and-drain]
+        options: [inspect, enqueue-and-deploy, drain, recover-inspect, recover-and-drain, queue-all]
       request_id:
         description: Exact retained request SHA-256; required only for recovery
         required: false
@@ -54,7 +61,7 @@ permissions:
 # Exact producer/source/artifact checks and the durable account claim remain gates.
 jobs:
   inspect-pilot:
-    if: ${{ github.event_name == 'push' }}
+    if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/astra/m2-fast-deploy' }}
     runs-on: ubuntu-24.04
     timeout-minutes: 45
     permissions:
@@ -103,7 +110,7 @@ jobs:
           if-no-files-found: error
           retention-days: 3
   deploy:
-    if: ${{ (github.event_name == 'workflow_dispatch' || github.event_name == 'schedule' || github.event_name == 'workflow_run') && (github.event_name != 'workflow_run' || (github.event.workflow_run.head_repository.full_name == github.repository && github.event.workflow_run.head_branch == 'main' && github.event.workflow_run.event == 'workflow_dispatch' && (github.event.workflow_run.conclusion == 'success' || github.event.workflow_run.conclusion == 'failure'))) && (!inputs.continuation_source_sha || (github.event_name == 'workflow_dispatch' && inputs.action == 'drain' && github.ref == 'refs/heads/main' && inputs.continuation_source_sha == github.sha && inputs.continuation_source_sha == github.workflow_sha)) }}
+    if: ${{ (github.event_name == 'workflow_dispatch' || github.event_name == 'schedule' || github.event_name == 'workflow_run' || (github.event_name == 'push' && github.ref == 'refs/heads/main')) && (github.event_name != 'workflow_run' || (github.event.workflow_run.head_repository.full_name == github.repository && github.event.workflow_run.head_branch == 'main' && github.event.workflow_run.event == 'workflow_dispatch' && (github.event.workflow_run.conclusion == 'success' || github.event.workflow_run.conclusion == 'failure'))) && (!inputs.continuation_source_sha || (github.event_name == 'workflow_dispatch' && inputs.action == 'drain' && github.ref == 'refs/heads/main' && inputs.continuation_source_sha == github.sha && inputs.continuation_source_sha == github.workflow_sha)) }}
     runs-on: ubuntu-24.04
     timeout-minutes: 350
     permissions:
@@ -146,7 +153,7 @@ jobs:
           runtime/dealer-pack-deploy-tools/node_modules/.bin/playwright install --with-deps chromium
       - name: Check executor intake and recovery guards
         id: executor_guard
-        run: node --test scripts/dealer-pack-dispatcher.test.mjs scripts/dealer-pack-ready-intake.test.mjs scripts/dealer-pack-recovery-workflow.test.mjs scripts/dealer-pack-automatic-intake.test.mjs scripts/inspect-dealer-pack-pilot.test.mjs scripts/dealer-pack-continuation.test.mjs scripts/dealer-pack-provider.test.mjs scripts/dealer-pack-upload-members.test.mjs
+        run: node --test scripts/dealer-pack-dispatcher.test.mjs scripts/dealer-pack-ready-intake.test.mjs scripts/dealer-pack-recovery-workflow.test.mjs scripts/dealer-pack-automatic-intake.test.mjs scripts/inspect-dealer-pack-pilot.test.mjs scripts/dealer-pack-continuation.test.mjs scripts/dealer-pack-provider.test.mjs scripts/dealer-pack-upload-members.test.mjs scripts/dealer-pack-source-campaign.test.mjs scripts/dealer-pack-source-discovery.test.mjs scripts/dealer-pack-source-scheduler.test.mjs scripts/dealer-pack-source-rollout-workflow.test.mjs
       - name: Check deployment credential presence without exposing it
         id: token
         env:
@@ -182,10 +189,23 @@ jobs:
           await runPackQueueDispatcher(args);
           NODE
       - name: Retain qualified completed producers from active main builds
-        if: ${{ github.event_name == 'schedule' }}
+        if: ${{ github.event_name == 'schedule' || (github.event_name == 'push' && github.ref == 'refs/heads/main') || (github.event_name == 'workflow_dispatch' && inputs.action == 'queue-all') }}
         env:
           GITHUB_TOKEN: ${{ github.token }}
         run: node scripts/intake-ready-dealer-pack-runs.mjs --report runtime/dealer-pack-dispatch/ready-intake.json
+      - name: Advance registered source targets after authenticated native intake
+        id: source_rollout
+        if: ${{ success() && steps.executor_guard.conclusion == 'success' && (github.event_name == 'schedule' || github.event_name == 'workflow_run' || (github.event_name == 'push' && github.ref == 'refs/heads/main') || (github.event_name == 'workflow_dispatch' && (inputs.action == 'queue-all' || inputs.action == 'drain' || inputs.action == 'enqueue-and-deploy'))) }}
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          PACK_EXECUTOR_SHA: ${{ steps.executor_source.outputs.commit }}
+          PACK_REGISTER_ALL: ${{ github.event_name == 'workflow_dispatch' && inputs.action == 'queue-all' && 'true' || 'false' }}
+        run: |
+          if [ "$PACK_REGISTER_ALL" = true ]; then
+            node scripts/schedule-dealer-pack-source.mjs --register-all --report runtime/dealer-pack-dispatch/source-rollout.json
+          else
+            node scripts/schedule-dealer-pack-source.mjs --report runtime/dealer-pack-dispatch/source-rollout.json
+          fi
       - name: Reconcile only an explicitly selected stopped request
         id: reconcile
         if: ${{ github.event_name == 'workflow_dispatch' && steps.token.outputs.present == 'true' && (inputs.action == 'recover-inspect' || inputs.action == 'recover-and-drain') }}

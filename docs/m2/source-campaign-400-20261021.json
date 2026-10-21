@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "type": "cars-400-source-campaign-checkpoint",
+  "recordedAt": "2026-10-21T00:21:38.601Z",
+  "parentSource": "245fe94678fe93269ae607d54fa9176cf5ef10d9",
+  "scope": {
+    "newDealerTargets": 400,
+    "protectedBaseline": 100,
+    "assignmentDigest": "c7f26a0f6f54a5bd7b967c3213bcd422c0b75b7fab68a33a5f5ada227ad551b4"
+  },
+  "state": {
+    "branch": "cars-deploy-queue",
+    "preparation": "source-campaign.json",
+    "qualifiedDeployment": "queue.json",
+    "separateFacts": true,
+    "registration": "Published implementation; actual queue-all registration receipt must be observed separately"
+  },
+  "automation": {
+    "action": "queue-all",
+    "initialSource": "exact published main",
+    "cohortMaximum": 14,
+    "triggers": [
+      "existing fifteen-minute schedule",
+      "authenticated native completion",
+      "relevant main source pushes"
+    ],
+    "oneShotDispatch": true,
+    "unknownOutcome": "Retain original reservation; no automatic POST retry",
+    "missingInputs": "Wait in the same400 campaign",
+    "existingDeploymentHistory": "Retain existing identity including failures; no source redispatch",
+    "providerPath": "Existing authenticated artifact intake, account claim, capacity checks, hosted verification and continuation"
+  },
+  "validation": {
+    "sourceIntegrationPassed": 50,
+    "workflowContinuationRecoveryPassed": 26,
+    "focusedDocumentCheck": "12 active documents and command help passed",
+    "independentReview": "Campaign, discovery, final scheduler and workflow integration passed before publication",
+    "actualProviderWritesBySourceScheduler": 0
+  },
+  "liveDeploymentSnapshot": {
+    "observedAt": "2026-10-21T00:21:37.959Z",
+    "generation": 552,
+    "revision": "20e141f8d4b75efc9be8a10bb28a3168a2684ab9",
+    "totalRequests": 171,
+    "activated": 34,
+    "hostedPassed": 32,
+    "historicalHostedFailures": 2,
+    "queued": 136,
+    "active": 1,
+    "activeOwner": "github:39515213505"
+  },
+  "nativeFailuresUnderSeparateDiagnosis": [
+    {
+      "runId": 39515430757,
+      "slugs": [
+        "reliable-autos",
+        "mosaso",
+        "badar-used-cars",
+        "al-ishfaq-used-cars-llc",
+        "lets-sell-your-car",
+        "millions-auto-cars"
+      ]
+    },
+    {
+      "runId": 39517822303,
+      "slugs": [
+        "daci-s-cars-ltd"
+      ]
+    }
+  ],
+  "boundaries": [
+    "400 registered targets do not mean400 qualified builds or live sites",
+    "Proposal artwork is not claimed adopted",
+    "No outreach or owner acceptance",
+    "Existing publisher remains active and is not interrupted"
+  ]
+}

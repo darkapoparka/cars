@@ -1,6 +1,7 @@
 # Independent build lanes never share an Actions concurrency group.
 # Package downloads are cached by release; source/native intermediates never leave their lane.
 name: Dealer pack pipeline
+run-name: ${{ inputs.rollout_request_id && format('Cars rollout {0}', inputs.rollout_request_id) || github.workflow }}
 'on':
   workflow_dispatch:
     inputs:
@@ -20,6 +21,14 @@ name: Dealer pack pipeline
         description: Verify shared contracts without planning native build lanes
         default: false
         type: boolean
+      rollout_request_id:
+        description: Internal source-campaign reservation nonce
+        required: false
+        type: string
+      rollout_source_sha:
+        description: Internal exact published source binding
+        required: false
+        type: string
   pull_request:
     paths:
     - dealers/**
@@ -38,6 +47,7 @@ env:
   WRANGLER_LOG_SANITIZE: 'true'
 jobs:
   contracts:
+    if: ${{ !inputs.rollout_request_id && !inputs.rollout_source_sha || (inputs.rollout_request_id && inputs.rollout_source_sha && github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main' && inputs.rollout_source_sha == github.sha && inputs.rollout_source_sha == github.workflow_sha) }}
     runs-on: ubuntu-24.04
     timeout-minutes: 25
     steps:
@@ -122,7 +132,7 @@ jobs:
         console.log('CLOUDFLARE_API_TOKEN present: '+process.env.CF_TOKEN_PRESENT);
         NODE
   plan:
-    if: ${{ inputs.contracts_only != true && (github.event_name != 'push' || contains(github.event.head_commit.message, '[benchmark25]')) }}
+    if: ${{ inputs.contracts_only != true && (github.event_name != 'push' || contains(github.event.head_commit.message, '[benchmark25]')) && ((!inputs.rollout_request_id && !inputs.rollout_source_sha) || (inputs.rollout_request_id && inputs.rollout_source_sha && github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main' && inputs.rollout_source_sha == github.sha && inputs.rollout_source_sha == github.workflow_sha)) }}
     runs-on: ubuntu-24.04
     timeout-minutes: 15
     outputs:
@@ -273,7 +283,7 @@ jobs:
         key: dealer-pack-downloads-v2-${{ runner.os }}-${{ runner.arch }}-${{ needs.plan.outputs.release_key }}
     - name: Install source and browser tools once for the lane
       run: |-
-        npm install --prefix runtime/dealer-pack-tools --ignore-scripts --no-audit --no-fund --save-exact sharp@0.35.5 prettier@3.8.1 typescript@6.0.3 playwright@1.62.1 wrangler@4.149.0
+        npm install --prefix runtime/dealer-pack-tools --ignore-scripts --no-audit --no-fund --save-exact sharp@0.35.5 prettier@3.8.1 typescript@6.0.3 svelte@5.57.2 playwright@1.62.1 wrangler@4.149.0
         runtime/dealer-pack-tools/node_modules/.bin/playwright install --with-deps chromium
     - name: Retain the exact M2 pilot headless browser for connector hosted QA
       if: ${{ !cancelled() && matrix.lane == 1 && needs.plan.outputs.benchmark != 'true' && (github.head_ref || github.ref_name) == 'astra/m2-fast-deploy' && contains(matrix.slugs, 'granada-auto-sales') }}
