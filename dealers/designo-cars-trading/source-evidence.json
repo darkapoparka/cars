@@ -43,6 +43,14 @@
         "public-location-if-shown",
         "dated-stock-sample"
       ]
+    },
+    {
+      "url": "https://auto.ae/designocars/",
+      "observedAt": "2026-10-21T07:10:13.285205Z",
+      "supports": [
+        "public-dealer-contact",
+        "public-address-structured-data"
+      ]
     }
   ],
   "liveFetchPerformed": true,
@@ -110,5 +118,40 @@
   "omissions": [
     "Personal-looking or unverified emails omitted; no private contact fields retained.",
     "Unknown official website, exact address or hours left empty; marketplace-wide defaults not imported."
-  ]
+  ],
+  "addressCorrection": {
+    "observedAt": "2026-10-21T07:10:13.285205Z",
+    "previousAddress": "Designo Car Trading LLC, 59F9+3R4 - Nad Al Hamar Rd - Ras Al Khor Industrial Area - Ras Al Khor Industrial Area 3 - Dubai - Unit",
+    "address": "59F9+3R4 - Nad Al Hamar Rd - Ras Al Khor Industrial Area - Ras Al Khor Industrial Area 3 - Dubai",
+    "sourceUrl": "https://auto.ae/designocars/",
+    "sourceResponseSha256": "aaea95483a65ba720d5bb5a3e27f16cfd2455de97f766c060b84b052d471d8c5",
+    "sourceRepresentation": "application/ld+json LocalBusiness",
+    "matchingName": "Designo Cars Trading",
+    "matchingPhone": "+971507474770",
+    "method": "Normalize the address from the same public dealer profile with matching retained name and phone: remove the embedded company-name prefix and incomplete unit suffix, preserving every street/locality/plus-code component. No new location, dealer alias or shared ownership is inferred.",
+    "removedPrefix": "Designo Car Trading LLC, ",
+    "removedIncompleteSuffix": " - Unit",
+    "otherTargetPreserved": {
+      "slug": "designo-car-trading-llc",
+      "dealerId": "ae-dubai-designo-car-trading-llc",
+      "phone": "+971551414969"
+    },
+    "nativeFailurePreserved": {
+      "runId": 39557609464,
+      "jobId": 119081671318,
+      "sourceCommit": "c154cb30a5ae0806fe8f165e24242ebbe8f548c5",
+      "artifactId": 12327081884,
+      "artifactSha256": "608feb028ffaf943e93185f5d14b7f38666af0d370873fd0a60ac47402fb1d26",
+      "failedChecks": [
+        "rendered-routes",
+        "design-identities"
+      ],
+      "observedCause": "Other target business name embedded in business.address rendered as foreign-dealer-identity."
+    },
+    "artworkChanged": false,
+    "stockChanged": false,
+    "phoneChanged": false,
+    "nativeApproval": false,
+    "hostedApproval": false
+  }
 }
