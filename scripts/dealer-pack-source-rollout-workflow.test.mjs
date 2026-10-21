@@ -9,10 +9,12 @@ const deploySteps=deploy.split(/^      - /m).slice(1);
 const step=name=>{const value=deploySteps.find(s=>s.startsWith('name: '+name+'\n'));assert.ok(value,'Missing step '+name);return value;};
 const source=step('Advance registered source targets after authenticated native intake');
 const expression=value=>{const result=value.match(/^\s+if: \$\{\{ (.+) \}\}$/m)?.[1];assert.ok(result);return result;};
-const evaluate=(value,{event='workflow_dispatch',action='queue-all',ref='refs/heads/main',success=true,guard='success',inputs={},sha:actualSha=sha,workflowSha=sha}={})=>{
- const rule=expression(value);return Boolean(Function('github','inputs','steps','success','contains','cancelled','return ('+rule+');')(
+const evaluate=(value,{event='workflow_dispatch',action='queue-all',ref='refs/heads/main',success=true,cancelled=false,guard='success',token='true',reconcile='success',drain='success',metrics='success',complete='true',sourceStatus='success',inputs={},sha:actualSha=sha,workflowSha=sha}={})=>{
+ const rule=expression(value);
+ if(!/\b(?:success|failure|always|cancelled)\s*\(/.test(rule)&&(!success||cancelled))return false;
+ return Boolean(Function('github','inputs','steps','success','contains','cancelled','return ('+rule+');')(
   {event_name:event,ref,sha:actualSha,workflow_sha:workflowSha,event:{head_commit:{message:''}}},
-  {action,...inputs},{executor_guard:{conclusion:guard}},()=>success,(text,item)=>String(text).includes(item),()=>false));
+  {action,...inputs},{executor_guard:{conclusion:guard},token:{outputs:{present:token}},reconcile:{conclusion:reconcile},drain:{conclusion:drain},metrics:{conclusion:metrics,outputs:{complete}},source_rollout:{conclusion:sourceStatus}},()=>success,(text,item)=>String(text).includes(item),()=>cancelled));
 };
 const job=name=>{const value=native.split(new RegExp('^  '+name+':\\r?\\n','m'))[1];assert.ok(value);return value.split(/^  [a-z][\w-]*:/m)[0];};
 
@@ -104,8 +106,89 @@ test('reserved native completion explicitly dispatches strict intake even after 
 test('the completion callback uses the same automatic intake and executor guards',()=>{
  assert.match(deploy,/automatic_intake:\n\s+description:[^\n]*\n\s+required: false\n\s+default: false\n\s+type: boolean/);
  const intake=step('Intake qualified owner-selected main builds or perform a manual inspection');
- assert.match(intake,/PACK_AUTOMATIC: \$\{\{ \(github.event_name == 'workflow_run' \|\| inputs.automatic_intake == true\) && 'true' \|\| 'false' \}\}/);
+ assert.match(intake,/PACK_AUTOMATIC: \$\{\{ \(github.event_name == 'workflow_run' \|\| \(inputs.action != 'enqueue' && inputs.automatic_intake == true\)\) && 'true' \|\| 'false' \}\}/);
  assert.match(intake,/if\(process.env.PACK_AUTOMATIC==='true'\)args.push\('--automatic'\)/);
  assert.match(step('Check executor intake and recovery guards'),/scripts\/notify-dealer-pack-source-complete.test.mjs/);
  assert.match(native,/scripts\/\*dealer-pack\*\.test\.mjs/);
+});
+
+const actionSteps={
+ intake:'Intake qualified owner-selected main builds or perform a manual inspection',
+ ready:'Retain qualified completed producers from active main builds',
+ source:'Advance registered source targets after authenticated native intake',
+ hosted:'Recheck exact retained hosted versions without provider or queue writes',
+ recovery:'Reconcile only an explicitly selected stopped request',
+ drain:'Drain all retained batches through the single account claim',
+ metrics:'Read startup, sampled CPU, memory and error evidence for this drain',
+ continuation:'Continue authenticated terminal progress on exact current main',
+ blocked:'Record an unavailable deployment credential as a blocked write request',
+};
+
+test('manual enqueue adds only authenticated intake while every existing action keeps its step boundaries',()=>{
+ const expected={
+  inspect:['intake'],
+  enqueue:['intake'],
+  'enqueue-and-deploy':['intake','source','drain','metrics','continuation'],
+  drain:['source','drain','metrics','continuation'],
+  'recover-inspect':['recovery'],
+  'recover-and-drain':['recovery','drain','metrics'],
+  'queue-all':['ready','source'],
+  'verify-hosted':['hosted'],
+ };
+ const choices=deploy.match(/^\s+options: \[([^\n]+)\]$/m)?.[1].split(',').map(value=>value.trim());
+ assert.deepEqual(choices,Object.keys(expected));
+ for(const [action,enabled] of Object.entries(expected)){
+  const actual=Object.entries(actionSteps).filter(([,name])=>evaluate(step(name),{action})).map(([key])=>key);
+  assert.deepEqual(actual,enabled,action);
+ }
+ for(const [event,enabled] of [
+  ['schedule',['ready','source','drain','metrics','continuation']],
+  ['workflow_run',['intake','source','drain','metrics','continuation']],
+  ['push',['ready','source']],
+  ['pull_request',[]],
+ ]){
+  const actual=Object.entries(actionSteps).filter(([,name])=>evaluate(step(name),{event,action:''})).map(([key])=>key);
+  assert.deepEqual(actual,enabled,event);
+ }
+ assert.match(step(actionSteps.drain),/--write --max 10 --report runtime\/dealer-pack-dispatch\/drain.json/);
+});
+
+test('manual enqueue stays isolated with missing provider credentials, failed guards, cancellation or callback inputs',()=>{
+ for(const token of ['true','false',''])for(const success of [true,false])for(const cancelled of [true,false]){
+  const context={action:'enqueue',token,success,cancelled,guard:success?'success':'failure',inputs:{automatic_intake:true}};
+  assert.equal(evaluate(step(actionSteps.intake),context),success&&!cancelled);
+  for(const [key,name] of Object.entries(actionSteps))if(key!=='intake')assert.equal(evaluate(step(name),context),false,key);
+ }
+});
+
+const intakeEnvironment=(changes={})=>{
+ const body=step(actionSteps.intake),github={event_name:'workflow_dispatch',event:{workflow_run:{id:39670944225}},...changes.github};
+ const inputs={action:'enqueue',automatic_intake:false,...changes.inputs};
+ return Object.fromEntries(['PACK_ACTION','PACK_AUTOMATIC'].map(name=>{
+  const rule=body.match(new RegExp('^          '+name+': \\$\\{\\{ (.+) \\}\\}$','m'))?.[1];assert.ok(rule,name);
+  return [name,Function('github','inputs','return ('+rule+');')(github,inputs)];
+ }));
+};
+
+test('enqueue always uses manual admission while native completion retains strict automatic admission',()=>{
+ for(const automatic_intake of [false,true]){
+  assert.deepEqual(intakeEnvironment({inputs:{automatic_intake}}),{PACK_ACTION:'enqueue',PACK_AUTOMATIC:'false'});
+  for(const action of ['inspect','enqueue-and-deploy'])assert.deepEqual(intakeEnvironment({inputs:{action,automatic_intake}}),{PACK_ACTION:action,PACK_AUTOMATIC:automatic_intake?'true':'false'});
+  assert.deepEqual(intakeEnvironment({github:{event_name:'workflow_run'},inputs:{action:'',automatic_intake}}),{PACK_ACTION:'enqueue-and-deploy',PACK_AUTOMATIC:'true'});
+ }
+});
+
+test('manual enqueue forwards the exact source selection to the maintained dispatcher without live or drain flags',async()=>{
+ const body=step(actionSteps.intake).match(/          node --input-type=module <<'NODE'\n([\s\S]+?)          NODE\n/)?.[1]
+  .replace(/^          /gm,'').replace(/^import fs from 'node:fs';\n/,'')
+  .replace(/^import \{runPackQueueDispatcher\} from '.\/scripts\/dispatch-dealer-pack-queue.mjs';\n/,'');
+ assert.ok(body);const AsyncFunction=Object.getPrototypeOf(async()=>{}).constructor;
+ for(const selected of ['hmz-cars-dealers','["hmz-cars-dealers"]']){
+  const calls=[],writes=[],env={...intakeEnvironment({inputs:{automatic_intake:true}}),SOURCE_RUN_ID:'39670944225',PACK_PREFIX:'dealer-pack-transport--39670944225--lane-1',PACK_SLUGS:selected,PACK_BATCH:'1',CLOUDFLARE_API_TOKEN:'present-test-credential'};
+  const filesystem={mkdirSync(){},writeFileSync:(...args)=>writes.push(args)};
+  await new AsyncFunction('process','fs','runPackQueueDispatcher',body)({env},filesystem,async args=>calls.push(args));
+  assert.deepEqual(writes,[['runtime/dealer-pack-dispatch/slugs.json','["hmz-cars-dealers"]']]);
+  assert.deepEqual(calls,[['enqueue','--run','39670944225','--report','runtime/dealer-pack-dispatch/inspection.json','--prefix','dealer-pack-transport--39670944225--lane-1','--batch','1','--slugs','runtime/dealer-pack-dispatch/slugs.json']]);
+  await assert.rejects(new AsyncFunction('process','fs','runPackQueueDispatcher',body)({env},filesystem,async()=>{throw Error('Authenticated source or artifact identity differs');}),/Authenticated source or artifact identity differs/);
+ }
 });

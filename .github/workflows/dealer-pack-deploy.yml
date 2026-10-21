@@ -18,7 +18,7 @@ on:
         required: true
         default: inspect
         type: choice
-        options: [inspect, enqueue-and-deploy, drain, recover-inspect, recover-and-drain, queue-all, verify-hosted]
+        options: [inspect, enqueue, enqueue-and-deploy, drain, recover-inspect, recover-and-drain, queue-all, verify-hosted]
       request_id:
         description: Exact retained request SHA-256; required only for recovery
         required: false
@@ -171,13 +171,13 @@ jobs:
           if(!present) console.log('CLOUDFLARE_API_TOKEN is absent. Ready requests can be retained, but CI cannot perform live preflight or deploy. Minimum scopes: Account Workers Scripts Edit; webpreviews.site Workers Routes Edit. Account Analytics Read is also required for CPU/memory metrics.');
           NODE
       - name: Intake qualified owner-selected main builds or perform a manual inspection
-        if: ${{ github.event_name == 'workflow_run' || (github.event_name == 'workflow_dispatch' && (inputs.action == 'inspect' || inputs.action == 'enqueue-and-deploy')) }}
+        if: ${{ github.event_name == 'workflow_run' || (github.event_name == 'workflow_dispatch' && (inputs.action == 'inspect' || inputs.action == 'enqueue' || inputs.action == 'enqueue-and-deploy')) }}
         env:
           GITHUB_TOKEN: ${{ github.token }}
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           SOURCE_RUN_ID: ${{ github.event.workflow_run.id || inputs.source_run_id }}
           PACK_ACTION: ${{ github.event_name == 'workflow_run' && 'enqueue-and-deploy' || inputs.action }}
-          PACK_AUTOMATIC: ${{ (github.event_name == 'workflow_run' || inputs.automatic_intake == true) && 'true' || 'false' }}
+          PACK_AUTOMATIC: ${{ (github.event_name == 'workflow_run' || (inputs.action != 'enqueue' && inputs.automatic_intake == true)) && 'true' || 'false' }}
           PACK_PREFIX: ${{ inputs.artifact_prefix }}
           PACK_SLUGS: ${{ inputs.slugs }}
           PACK_BATCH: ${{ inputs.batch }}
