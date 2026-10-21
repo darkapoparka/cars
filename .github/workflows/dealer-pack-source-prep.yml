@@ -9,6 +9,7 @@ permissions:
   contents: read
 jobs:
   source:
+    if: ${{ !startsWith(github.event.head_commit.message, 'recovery:') }}
     runs-on: ubuntu-24.04
     timeout-minutes: 20
     steps:
@@ -47,3 +48,59 @@ jobs:
             runtime/public-source-preparation/public/
           retention-days: 3
           if-no-files-found: error
+  resume-inspected-request:
+    if: ${{ startsWith(github.event.head_commit.message, 'recovery:') && github.run_attempt == 1 }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    permissions:
+      contents: read
+      actions: write
+    steps:
+      - name: Request existing recover-and-drain for the inspected stopped RH request once
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 - <<'PY'
+          import os,json,urllib.request
+          repo='darkapoparka/cars';endpoint='https://api.github.com/repos/'+repo
+          headers={'Authorization':'Bearer '+os.environ['GH_TOKEN'],'Accept':'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28'}
+          def get(path,raw=False):
+              h=dict(headers)
+              if raw:h['Accept']='application/vnd.github.raw+json'
+              with urllib.request.urlopen(urllib.request.Request(endpoint+path,headers=h),timeout=30) as r:return json.load(r)
+          owner=39570401613;inspection=39575664271
+          request='8fcc6d7188796da8f3302ca8777495cef9b22ce503e484bd0cc7933204835907'
+          source='381c78e238d20f2c60d3988bcf17191e27875eb7'
+          proof=get('/actions/runs/'+str(inspection))
+          assert proof['id']==inspection and proof['run_attempt']==1 and proof['status']=='completed' and proof['conclusion']=='success'
+          assert proof['repository']['full_name']==repo and proof['head_repository']['full_name']==repo and proof['head_branch']=='main'
+          assert proof['head_sha']==source and proof['path']=='.github/workflows/dealer-pack-deploy.yml' and proof['event']=='workflow_dispatch'
+          artifact=get('/actions/artifacts/12333493321')
+          assert artifact['workflow_run']['id']==inspection and not artifact['expired']
+          assert artifact['digest']=='sha256:4c1f73ae4446ff492c558cb7f5038b274fda93871807afec416cb156e3db6fe0'
+          assert artifact['name']=='dealer-pack-deploy-reports--39575664271' and artifact['size_in_bytes']==986
+          # The exact ZIP above was downloaded and reviewed before this request:
+          # ready-to-resume, owned-create-pending, Worker 8dd17d46ec3343a1a983287893392797.
+          # The existing recovery workflow must perform its own fresh inspection.
+          current=get('/git/ref/heads/main');assert current['object']['sha']==source
+          state=get('/contents/queue.json?ref=cars-deploy-queue',True)
+          active=state.get('active') or {};row=state['requests'].get(request,{})
+          if active.get('requestId')!=request or active.get('owner')!='github:'+str(owner) or row.get('status')!='needs-reconciliation':
+              print('No dispatch: exact stopped ownership changed.');raise SystemExit(0)
+          stopped=get('/actions/runs/'+str(owner))
+          assert stopped['status']=='completed' and stopped['conclusion']=='failure' and stopped['run_attempt']==1
+          assert stopped['repository']['full_name']==repo and stopped['head_repository']['full_name']==repo
+          assert stopped['head_sha']=='2266459e658f245d6761945094e551075006e20c' and stopped['path']=='.github/workflows/dealer-pack-deploy.yml'
+          for status in ['queued','in_progress']:
+              listing=get('/actions/runs?branch=main&status='+status+'&per_page=100');assert listing['total_count']<=100
+              if any(r['path']=='.github/workflows/dealer-pack-deploy.yml' for r in listing['workflow_runs']):
+                  print('No dispatch: an existing provider-capable queue run is pending or active.');raise SystemExit(0)
+          print(json.dumps({'action':'recover-and-drain','requestId':request,'inspectionRun':inspection,'inspectionArtifact':artifact['id'],'queueGeneration':state['generation'],'directProviderWrites':0,'dispatchAttempts':1}))
+          body=json.dumps({'ref':'main','inputs':{'action':'recover-and-drain','batch':'auto','request_id':request}}).encode()
+          req=urllib.request.Request(endpoint+'/actions/workflows/dealer-pack-deploy.yml/dispatches',data=body,headers={**headers,'Content-Type':'application/json'},method='POST')
+          # An ambiguous dispatch POST is never repeated by this job.
+          with urllib.request.urlopen(req,timeout=30) as response:
+              assert response.status in [200,204]
+              print('Recover-and-drain dispatch acknowledged: HTTP '+str(response.status))
+              if response.status==200:print(response.read().decode())
+          PY
