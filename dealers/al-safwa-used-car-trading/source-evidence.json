@@ -12,7 +12,38 @@
       "supports": [
         "retained-public-business-research"
       ]
+    },
+    {
+      "url": "http://www.alsafwa-cars.com/wp-content/themes/templatefour/css/gfx/safwa-logo.png",
+      "observedAt": "2026-10-21T20:41:38.937722Z",
+      "sha256": "e615b0c972adce8950211fdec4abaac0e7d56c375ac8682e13f31df01a202d30",
+      "bytes": 26610,
+      "httpStatus": 200,
+      "supports": [
+        "genuine-public-logo-original"
+      ]
+    },
+    {
+      "url": "http://www.alsafwa-cars.com/contact-us/",
+      "observedAt": "2026-10-21T20:41:39.667988Z",
+      "sha256": "169c5e46bbf1079d9529ab6601caf6c2ec731e87a748adbd4d220a33b286e11d",
+      "bytes": 7839,
+      "httpStatus": 200,
+      "supports": [
+        "same-business-public-source-identity"
+      ]
     }
   ],
-  "liveFetchPerformed": false
+  "liveFetchPerformed": true,
+  "sourceReview": {
+    "reviewedAt": "2026-10-21T20:43:36.859003Z",
+    "kind": "agent-public-source-review",
+    "humanReview": false,
+    "dealerApproval": false,
+    "identityFinding": "Own contact page states Ajman Car Market, Showroom 58 and serves the exact retained Al Safwa original. This supports source identity only; retained business facts, illustrative stock, omitted prices and blank contact fields were not changed.",
+    "originalSha256": "e615b0c972adce8950211fdec4abaac0e7d56c375ac8682e13f31df01a202d30",
+    "contactPageSha256": "169c5e46bbf1079d9529ab6601caf6c2ec731e87a748adbd4d220a33b286e11d",
+    "nativeApproval": false,
+    "hostedApproval": false
+  }
 }

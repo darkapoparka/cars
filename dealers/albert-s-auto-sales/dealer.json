@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Albert's Auto Sales",
     "publicOrigin": "https://albert-s-auto-sales.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "62013867fd198f51de7b45ba83fd4ad357e605844355c317adc2740fed2f0c01",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "cc7f5a3d9dff72286eed940122765c52a4930a7b0628909990fec0ea5f10de77"
+    }
   }
 }

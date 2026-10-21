@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-input-review",
+  "dealer": "al-safwa-used-car-trading",
+  "reviewed": true,
+  "reviewedAt": "2026-10-21T20:43:38.725Z",
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "checks": [
+    "canonical-hosting-and-preserved-fleet-collisions",
+    "assigned-expansion-lead",
+    "public-fact-schema-and-price-omission",
+    "personal-contact-screen",
+    "retained-stock-media",
+    "companion-copy-source-binding",
+    "immutable-template-release-and-native-QA-parent",
+    "reviewed-artwork-provenance-and-regenerated-logo-hashes"
+  ],
+  "sourceArtworkReview": "Retained artwork review is separate provenance; this command does not perform visual, Arabic-expert or dealer approval.",
+  "copyReview": "Automated structure, stock hash, source text and complete EN/BG rows; no new human translation approval is inferred.",
+  "contacts": {
+    "schemaVersion": 1,
+    "kind": "cars-automated-public-contact-screen",
+    "dealer": "al-safwa-used-car-trading",
+    "method": "heuristic; no claim that unflagged values cannot be personal",
+    "flags": [],
+    "blocking": []
+  },
+  "batch": {
+    "number": 2,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-ajman-al-safwa-used-car-trading",
+    "position": 153
+  },
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "inputs": [
+    {
+      "path": "FACTS-AND-INVENTORY.json",
+      "sha256": "57361587476866766d0a97219e4b369d2ad7463e8d5b97e6964c45f93af52c13"
+    },
+    {
+      "path": "branding/logo-contract.json",
+      "sha256": "4612f308492c7520a5c898d75c2771b1f60d265426350d27ad3e20f29e5e67ca"
+    },
+    {
+      "path": "branding/logo-recipe.json",
+      "sha256": "3a1a9815e0e4dea64fef4095bdb5176ee86cdc031598b4521ca1c3caa504712d"
+    },
+    {
+      "path": "branding/public-original-20261021.png",
+      "sha256": "e615b0c972adce8950211fdec4abaac0e7d56c375ac8682e13f31df01a202d30"
+    },
+    {
+      "path": "branding/source.json",
+      "sha256": "8175ddf47c17c4403e110be0606ee199af4818bf3a41b83f3ff588b16f5e3239"
+    },
+    {
+      "path": "business-facts.json",
+      "sha256": "fe7db2b9c702850718fff8a83f2e6fe148a2b8e998c17ac0ff1efc12b744071e"
+    },
+    {
+      "path": "copy-review.json",
+      "sha256": "3567f1c6d8823a181716ce66a7dbe04330e494f45ab684229cd537a1f51779fd"
+    },
+    {
+      "path": "dealer-stock/template-demo-1.webp",
+      "sha256": "945e6864218ab3bd5fbd415336b212ecfde645685033f8506836f906885d447c"
+    },
+    {
+      "path": "dealer-stock/template-demo-2.webp",
+      "sha256": "17689ab880bf47de81ef467c34d639223f39f0c1ebe68c90d0aaf70e3dcc6333"
+    },
+    {
+      "path": "dealer-stock/template-demo-3.webp",
+      "sha256": "d644dec8e1ef280a702dccac267a2367f0ab823e40373e1299b156e7723b3b1f"
+    },
+    {
+      "path": "dealer.json",
+      "sha256": "a73a541f2942150f30015ab508658d636f335f5b471143778ddf4065963dc48f"
+    },
+    {
+      "path": "identity-review.json",
+      "sha256": "29c4f12ffa485c3d9fe06a3b3c0a9e8204851622ac7cb8949453c88a23a3edb0"
+    },
+    {
+      "path": "locale.json",
+      "sha256": "69e3d7c7bdb20762acfc71e6fe18172aafa8594808344ea51b22322f14fd273d"
+    },
+    {
+      "path": "missing-facts.json",
+      "sha256": "b0958e9de518a274d68438eaf98b9374f7128f956bf4f939ba4a51acc43e350f"
+    },
+    {
+      "path": "qualification.json",
+      "sha256": "43498223dcb1311ec9c95c209c0f6789e18ce50820cd814bfe2422d97499b78c"
+    },
+    {
+      "path": "source-evidence.json",
+      "sha256": "42b6c660fdcc5f81e639b161b7b0524d24cf7afcef1d20fc274649dd770176ba"
+    },
+    {
+      "path": "stock.json",
+      "sha256": "0f9a75d473993ddf05481781c97bc2a134a763e070b3e918c1454f9d136e722f"
+    }
+  ],
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "providerWrites": 0
+}

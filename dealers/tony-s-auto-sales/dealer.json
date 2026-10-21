@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Tony's Auto Sales",
     "publicOrigin": "https://tony-s-auto-sales.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "e1fc50857ef0000e95bb2c7486eb0a1b7bc056e190a44d80ae34ccd9245b38c5",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "e74213d622c79565aaad32da4d346c4bdc30039c8baee5d85e2d1d71291b32b0"
+    }
   }
 }

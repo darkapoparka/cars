@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": true,
+  "reviewedAt": "2026-10-21T20:40:18.754Z",
+  "dealer": "al-qubtan-al-thahbi-used-cars",
+  "dealerId": "ae-sharjah-al-qubtan-al-thahbi-used-cars",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "method": "Automated exact registry/pack identity, canonical hosting and batch comparison; retained public source fields were structurally checked, not human-approved.",
+  "sources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/al-qubtan-al-thahbi-used-cars",
+      "observedAt": "2026-10-19T20:00:11.849876Z"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/6779-kia-sportage-20-at-186-hp-other",
+      "observedAt": "2026-10-19T20:00:11.849876Z"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/6782-hyundai-avante-16-cvt-123-hp-other",
+      "observedAt": "2026-10-19T20:00:11.849876Z"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/7582-chevrolet-impala-36-at-309-hp-ltz",
+      "observedAt": "2026-10-19T20:00:11.849876Z"
+    }
+  ],
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  }
+}

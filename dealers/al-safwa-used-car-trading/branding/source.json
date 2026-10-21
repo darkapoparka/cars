@@ -1,16 +1,124 @@
 {
   "schemaVersion": 1,
   "dealer": "al-safwa-used-car-trading",
-  "status": "research-required",
+  "status": "retained-original-reviewed-for-preview",
   "realLogoFirst": true,
   "publicSources": [
     {
       "url": "https://www.dubicars.com/dealers/ajman-al-safwa-used-car-trading-1455",
       "observedAt": "2026-10-18"
+    },
+    {
+      "url": "http://www.alsafwa-cars.com/contact-us/",
+      "observedAt": "2026-10-21T20:41:39.667988Z",
+      "sha256": "169c5e46bbf1079d9529ab6601caf6c2ec731e87a748adbd4d220a33b286e11d",
+      "supports": [
+        "same-dealer-website-identity",
+        "genuine-logo-source"
+      ]
     }
   ],
-  "originals": [],
-  "creationMethod": null,
+  "originals": [
+    {
+      "kind": "retained-original-raster",
+      "path": "branding/public-original-20261021.png",
+      "url": "http://www.alsafwa-cars.com/wp-content/themes/templatefour/css/gfx/safwa-logo.png",
+      "sourcePage": "http://www.alsafwa-cars.com/contact-us/",
+      "observedAt": "2026-10-21T20:41:38.937722Z",
+      "sha256": "e615b0c972adce8950211fdec4abaac0e7d56c375ac8682e13f31df01a202d30",
+      "bytes": 26610,
+      "format": "PNG",
+      "width": 255,
+      "height": 151,
+      "transparentPixelFraction": 0.6629009219581873,
+      "acceptedAsPreparedArtwork": true,
+      "visualFinding": "The transparent original contains a car outline beneath a gauge motif and the English lettering AL SAFWA / USED CARS TRADING. The original orange-yellow-red artwork is retained on dark surfaces. The maintained black and white exports preserve the exact original alpha and geometry before ordinary padding crop and resize.",
+      "qualityCaveat": "The genuine public source is a 255 by 151 raster; enlarged letter edges retain the original softness. Full lettering is kept inside compact marks; no new initials, shape or abbreviated text is introduced."
+    }
+  ],
+  "creationMethod": "Retained genuine public original with alpha-preserving solid-black and solid-white exports; no new artwork, tracing, text replacement or partial crop.",
   "dealerApproved": false,
-  "generatedInputs": null
+  "sourceBlockers": [],
+  "reviewedInputs": {
+    "reviewedAt": "2026-10-21T20:43:36.859003Z",
+    "master": {
+      "path": "branding/public-original-20261021.png",
+      "sha256": "e615b0c972adce8950211fdec4abaac0e7d56c375ac8682e13f31df01a202d30",
+      "retainedSource": {
+        "kind": "retained-original-raster",
+        "url": "http://www.alsafwa-cars.com/wp-content/themes/templatefour/css/gfx/safwa-logo.png",
+        "observedAt": "2026-10-21T20:41:38.937722Z",
+        "sha256": "e615b0c972adce8950211fdec4abaac0e7d56c375ac8682e13f31df01a202d30"
+      },
+      "rasterTreatment": "solid-black"
+    },
+    "mark": {
+      "path": "branding/public-original-20261021.png",
+      "sha256": "e615b0c972adce8950211fdec4abaac0e7d56c375ac8682e13f31df01a202d30",
+      "retainedSource": {
+        "kind": "retained-original-raster",
+        "url": "http://www.alsafwa-cars.com/wp-content/themes/templatefour/css/gfx/safwa-logo.png",
+        "observedAt": "2026-10-21T20:41:38.937722Z",
+        "sha256": "e615b0c972adce8950211fdec4abaac0e7d56c375ac8682e13f31df01a202d30"
+      },
+      "rasterTreatment": "solid-black"
+    },
+    "markOnDark": {
+      "path": "branding/public-original-20261021.png",
+      "sha256": "e615b0c972adce8950211fdec4abaac0e7d56c375ac8682e13f31df01a202d30",
+      "retainedSource": {
+        "kind": "retained-original-raster",
+        "url": "http://www.alsafwa-cars.com/wp-content/themes/templatefour/css/gfx/safwa-logo.png",
+        "observedAt": "2026-10-21T20:41:38.937722Z",
+        "sha256": "e615b0c972adce8950211fdec4abaac0e7d56c375ac8682e13f31df01a202d30"
+      },
+      "rasterTreatment": "solid-white"
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/public-original-20261021.png",
+        "sha256": "e615b0c972adce8950211fdec4abaac0e7d56c375ac8682e13f31df01a202d30",
+        "retainedSource": {
+          "kind": "retained-original-raster",
+          "url": "http://www.alsafwa-cars.com/wp-content/themes/templatefour/css/gfx/safwa-logo.png",
+          "observedAt": "2026-10-21T20:41:38.937722Z",
+          "sha256": "e615b0c972adce8950211fdec4abaac0e7d56c375ac8682e13f31df01a202d30"
+        },
+        "rasterTreatment": "solid-black"
+      },
+      "onDark": {
+        "path": "branding/public-original-20261021.png",
+        "sha256": "e615b0c972adce8950211fdec4abaac0e7d56c375ac8682e13f31df01a202d30",
+        "retainedSource": {
+          "kind": "retained-original-raster",
+          "url": "http://www.alsafwa-cars.com/wp-content/themes/templatefour/css/gfx/safwa-logo.png",
+          "observedAt": "2026-10-21T20:41:38.937722Z",
+          "sha256": "e615b0c972adce8950211fdec4abaac0e7d56c375ac8682e13f31df01a202d30"
+        }
+      },
+      "onAccent": {
+        "path": "branding/public-original-20261021.png",
+        "sha256": "e615b0c972adce8950211fdec4abaac0e7d56c375ac8682e13f31df01a202d30",
+        "retainedSource": {
+          "kind": "retained-original-raster",
+          "url": "http://www.alsafwa-cars.com/wp-content/themes/templatefour/css/gfx/safwa-logo.png",
+          "observedAt": "2026-10-21T20:41:38.937722Z",
+          "sha256": "e615b0c972adce8950211fdec4abaac0e7d56c375ac8682e13f31df01a202d30"
+        },
+        "rasterTreatment": "solid-white"
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-21T20:43:36.859003Z",
+      "reviewKind": "agent-visual-review",
+      "humanReview": false,
+      "dealerApproval": false,
+      "method": "Inspected the exact public original, maintained alpha-preserving exports and composite views on white, dark charcoal and the retained red accent. No dealer or human-expert approval is claimed.",
+      "onLight": "Solid black preserves the supplied shapes and reads on white.",
+      "onDark": "The genuine orange-yellow-red original reads on the maintained dark backgrounds.",
+      "onAccent": "Solid white preserves the supplied shapes and reads on all maintained accent backgrounds.",
+      "compact": "The complete source artwork is square-contained with its natural aspect ratio; no partial crop or new mark was made."
+    }
+  }
 }

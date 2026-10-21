@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-qubtan-al-thahbi-used-cars",
+  "missing": [
+    {
+      "field": "business.email",
+      "required": false,
+      "reason": "No unambiguous current public business value established."
+    },
+    {
+      "field": "business.website",
+      "required": false,
+      "reason": "No unambiguous current public business value established."
+    },
+    {
+      "field": "business.hours",
+      "required": false,
+      "reason": "No unambiguous current public business value established."
+    },
+    {
+      "field": "prices",
+      "required": false,
+      "reason": "All listing prices are omitted under the public-repository scope."
+    }
+  ],
+  "blocking": []
+}

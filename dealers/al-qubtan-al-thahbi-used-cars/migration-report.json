@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-migration",
+  "dealer": "al-qubtan-al-thahbi-used-cars",
+  "previousSlug": "al-qubtan-al-thahbi-used-cars",
+  "fromVersion": 1,
+  "toVersion": 2,
+  "createdAt": "2026-10-21T20:40:18.106Z",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "batch": {
+    "number": 4,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-sharjah-al-qubtan-al-thahbi-used-cars",
+    "position": 319
+  },
+  "before": {
+    "files": 17,
+    "bytes": 334952
+  },
+  "afterBeforeReview": {
+    "files": 19,
+    "bytes": 352542
+  },
+  "generatedExportsRemoved": [],
+  "retainedOriginals": {
+    "files": 10,
+    "bytes": 322514,
+    "inventorySha256": "e5163194cac1ac7fcfc67cd00aa0d15fb79943391e0952b9ff754194d2372eea",
+    "byteIdentical": true
+  },
+  "sizeTargetBytes": 512000,
+  "sizeTargetMet": true,
+  "sourceArtworkOrPhotoRecompression": false,
+  "researchRepeated": false,
+  "imageGenerationRepeated": false,
+  "providerWrites": 0,
+  "write": true,
+  "automatedReview": {
+    "dealer": "al-qubtan-al-thahbi-used-cars",
+    "success": true,
+    "reviewKind": "automated",
+    "humanReview": false,
+    "providerWrites": 0,
+    "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+    "files": 21,
+    "report": "dealers/al-qubtan-al-thahbi-used-cars/input-review.json"
+  },
+  "after": {
+    "files": 21,
+    "bytes": 358039
+  }
+}

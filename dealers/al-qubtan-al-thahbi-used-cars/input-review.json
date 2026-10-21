@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-input-review",
+  "dealer": "al-qubtan-al-thahbi-used-cars",
+  "reviewed": true,
+  "reviewedAt": "2026-10-21T20:40:18.754Z",
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "checks": [
+    "canonical-hosting-and-preserved-fleet-collisions",
+    "assigned-expansion-lead",
+    "public-fact-schema-and-price-omission",
+    "personal-contact-screen",
+    "retained-stock-media",
+    "companion-copy-source-binding",
+    "immutable-template-release-and-native-QA-parent",
+    "reviewed-artwork-provenance-and-regenerated-logo-hashes"
+  ],
+  "sourceArtworkReview": "Retained artwork review is separate provenance; this command does not perform visual, Arabic-expert or dealer approval.",
+  "copyReview": "Automated structure, stock hash, source text and complete EN/BG rows; no new human translation approval is inferred.",
+  "contacts": {
+    "schemaVersion": 1,
+    "kind": "cars-automated-public-contact-screen",
+    "dealer": "al-qubtan-al-thahbi-used-cars",
+    "method": "heuristic; no claim that unflagged values cannot be personal",
+    "flags": [],
+    "blocking": []
+  },
+  "batch": {
+    "number": 4,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-sharjah-al-qubtan-al-thahbi-used-cars",
+    "position": 319
+  },
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "inputs": [
+    {
+      "path": "FACTS-AND-INVENTORY.json",
+      "sha256": "3a45234571c41a7dd5fcab92c5de2f311a57c56a53dfc67e4a35322d8561ccba"
+    },
+    {
+      "path": "branding/logo-contract.json",
+      "sha256": "3649cbcf0e8d1e1cce01ebaf1bd1aaf1ad8e86f949896081b66fd38cdd7b5fea"
+    },
+    {
+      "path": "branding/logo-recipe.json",
+      "sha256": "e04f9b0dc1697efeff3f9b0157b34b5fa33e6915dabf8adfedd36acbe020af2f"
+    },
+    {
+      "path": "branding/originals/elkoptan-favicon-96x96.png",
+      "sha256": "ace2cf924a2c6ccba2db06db8d032c48a6f4132da1d8b99366aba518bd7ba0f1"
+    },
+    {
+      "path": "branding/originals/elkoptan-header.png",
+      "sha256": "d605404a38bf9b45b846a29672ded502810737df8cb9b2b79635c6f47eefa7fa"
+    },
+    {
+      "path": "branding/source.json",
+      "sha256": "15b3022ae7785581508988f9710ced230ba2f90cae6740ee14990e074764c3c3"
+    },
+    {
+      "path": "business-facts.json",
+      "sha256": "92816ab11907b6317b901a366df57e7dc109730eb360bbd568757e208d328321"
+    },
+    {
+      "path": "copy-review.json",
+      "sha256": "68c5433a631f10acc327d53aac34acbf3e79bc90d3f58d39ea98ab3b357a2d9e"
+    },
+    {
+      "path": "dealer-stock/licenseplate-6779.webp",
+      "sha256": "1b74365841358c4ee74fba759e8b38cef16ca38fc4a877c763a4e60c68eedf67"
+    },
+    {
+      "path": "dealer-stock/licenseplate-6782.webp",
+      "sha256": "5092fba8725bb5069c274321c80cebdc6dc865e19d13ff68d4fde43760b4de67"
+    },
+    {
+      "path": "dealer-stock/licenseplate-7582.webp",
+      "sha256": "97857261f4907eaefb5c06ff4316f547255b11401b10b1225153e7356895e31b"
+    },
+    {
+      "path": "dealer.json",
+      "sha256": "127a25312e711982d7972a0f7a43d7216faad9ad0b4837db8b69ea288126fe6c"
+    },
+    {
+      "path": "identity-review.json",
+      "sha256": "ec3155c157e92bffa8f824d2bec1b126bdfbc61df07a519a89e2ddbb37ffefd7"
+    },
+    {
+      "path": "locale.json",
+      "sha256": "5cd3719219d682cad8d0f8720403a9844f4142b3cb9f5b233731e120a16ec867"
+    },
+    {
+      "path": "missing-facts.json",
+      "sha256": "76188ffcd3f90155f0edec44c021bb0fdf95dea5a97151a95502129b78fb99fd"
+    },
+    {
+      "path": "qualification.json",
+      "sha256": "c0cff41d473eeea21a49d067eb97033960f83deee6fd2d8a478c1b81cc3f7061"
+    },
+    {
+      "path": "source-evidence.json",
+      "sha256": "480e5c17f2f10d7e82d15755a66a49fe3bc367acde34b8be342be9abf8eed038"
+    },
+    {
+      "path": "stock.json",
+      "sha256": "be33790935333f64fbfbd1039917677bcfcd8e63e07be6e2c7f20333c6d158f5"
+    }
+  ],
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "providerWrites": 0
+}

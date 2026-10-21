@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-input-review",
+  "dealer": "albert-s-auto-sales",
+  "reviewed": true,
+  "reviewedAt": "2026-10-21T20:57:22.882Z",
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "checks": [
+    "canonical-hosting-and-preserved-fleet-collisions",
+    "assigned-expansion-lead",
+    "public-fact-schema-and-price-omission",
+    "personal-contact-screen",
+    "retained-stock-media",
+    "companion-copy-source-binding",
+    "immutable-template-release-and-native-QA-parent",
+    "reviewed-artwork-provenance-and-regenerated-logo-hashes"
+  ],
+  "sourceArtworkReview": "Retained artwork review is separate provenance; this command does not perform visual, Arabic-expert or dealer approval.",
+  "copyReview": "Automated structure, stock hash, source text and complete EN/BG rows; no new human translation approval is inferred.",
+  "contacts": {
+    "schemaVersion": 1,
+    "kind": "cars-automated-public-contact-screen",
+    "dealer": "albert-s-auto-sales",
+    "method": "heuristic; no claim that unflagged values cannot be personal",
+    "flags": [],
+    "blocking": []
+  },
+  "batch": {
+    "number": 2,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "us-pa-reading-alberts-auto-sales",
+    "position": 120
+  },
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "inputs": [
+    {
+      "path": "FACTS-AND-INVENTORY.json",
+      "sha256": "0aa186810548e672a9ec968d3e343be6cc3db163c0ff24431d6fac2a21fa8dd9"
+    },
+    {
+      "path": "branding/corroborating-storefront-20261021.jpg",
+      "sha256": "57234c101270a9e7610bbab36efa11b6525f9b206f2be12f0829ab058a49c341"
+    },
+    {
+      "path": "branding/logo-contract.json",
+      "sha256": "a564751758940214ae214661cff279e85fa6da63f2db26f1ff7330beed3328f8"
+    },
+    {
+      "path": "branding/logo-recipe.json",
+      "sha256": "014a9b3da56f9d1f9b69465169085aacd6837800e460bce87c8501cd8d8334b1"
+    },
+    {
+      "path": "branding/public-original-20261021.png",
+      "sha256": "d6ad8c9b16e1ef43ba5c032aa880340e94ca6f9f4960c37fc96b0bf33554146a"
+    },
+    {
+      "path": "branding/source.json",
+      "sha256": "3770da6b4500c25369f03fedd8dc268d5410337628e30c9df8f1b2be5037561c"
+    },
+    {
+      "path": "business-facts.json",
+      "sha256": "264ea7600d632003b3e2a2a9a8b2e466ab0502e3eb193c2031a7bcac302f1770"
+    },
+    {
+      "path": "copy-review.json",
+      "sha256": "351585f485e9122f71b7109cadcf86ed110ceb7fdbefeafe076e2551b6943c3f"
+    },
+    {
+      "path": "dealer-stock/template-demo-1.webp",
+      "sha256": "945e6864218ab3bd5fbd415336b212ecfde645685033f8506836f906885d447c"
+    },
+    {
+      "path": "dealer-stock/template-demo-2.webp",
+      "sha256": "17689ab880bf47de81ef467c34d639223f39f0c1ebe68c90d0aaf70e3dcc6333"
+    },
+    {
+      "path": "dealer-stock/template-demo-3.webp",
+      "sha256": "d644dec8e1ef280a702dccac267a2367f0ab823e40373e1299b156e7723b3b1f"
+    },
+    {
+      "path": "dealer.json",
+      "sha256": "4606ccc4cb50747170b350fdc90bcdcba1eb88c8bfb3fab5c2e116b01974fd68"
+    },
+    {
+      "path": "identity-review.json",
+      "sha256": "bb2d9007f828fe5ab488cfc60d21a17aee07a83a3f27ca6d385daad61437c593"
+    },
+    {
+      "path": "locale.json",
+      "sha256": "6e0615b82022e226856034cde3b85c5b348ab34c854a10fc55cf07c672fd684a"
+    },
+    {
+      "path": "missing-facts.json",
+      "sha256": "96f18816c05e1703aa6cadeb5fdd59775ddaf5f2d6f9784478311360ae0d1b3c"
+    },
+    {
+      "path": "qualification.json",
+      "sha256": "2eddf5211c84c813c941048630de96b5535e2812b2c4d018e5057da96e8550e0"
+    },
+    {
+      "path": "source-evidence.json",
+      "sha256": "4a4b59ef2e9e5b81ffbc8b5d8b8a5a6854ef97fbd01a1f303029288abfc56758"
+    },
+    {
+      "path": "stock.json",
+      "sha256": "0ce8e89557fbbae35baf819aa9661c0cf70d354f6eadf6d50ca959b9dee06102"
+    }
+  ],
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "providerWrites": 0
+}

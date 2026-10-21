@@ -1,0 +1,177 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-qubtan-al-thahbi-used-cars",
+  "status": "independent-proposal-not-dealer-approved",
+  "realLogoFirst": true,
+  "publicSources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/al-qubtan-al-thahbi-used-cars",
+      "observedAt": "2026-10-19T20:00:11.849876Z"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/6779-kia-sportage-20-at-186-hp-other",
+      "observedAt": "2026-10-19T20:00:11.849876Z"
+    },
+    {
+      "url": "https://www.elkoptanautomotive.com/en-EG",
+      "observedAt": "2026-10-21T20:38:30.293566Z",
+      "sha256": "832e2297d2f049743f4ef05c8f14eedb9aa6e272468b52ea1134768354d7455a",
+      "supports": [
+        "public-original-header-and-favicon"
+      ]
+    },
+    {
+      "url": "https://www.elkoptanautomotive.com/en-EG/contact",
+      "observedAt": "2026-10-21T20:38:30.126150Z",
+      "sha256": "bcb65ac7e08d6d9d33c25a3dda03954dab7e23c806b22b6eeea6c97f4154e2fc",
+      "supports": [
+        "exact-retained-business-phone-match",
+        "matching-sharjah-souq-al-haraj-branch"
+      ]
+    }
+  ],
+  "originals": [
+    {
+      "path": "branding/originals/elkoptan-header.png",
+      "url": "https://www.elkoptanautomotive.com/assets/images/resources/logo-1.png",
+      "observedAt": "2026-10-21T20:38:29.888297Z",
+      "sha256": "d605404a38bf9b45b846a29672ded502810737df8cb9b2b79635c6f47eefa7fa",
+      "bytes": 3898,
+      "nativeWidth": 200,
+      "nativeHeight": 40,
+      "originalBytesPreserved": true
+    },
+    {
+      "path": "branding/originals/elkoptan-favicon-96x96.png",
+      "url": "https://www.elkoptanautomotive.com/fav/favicon-96x96.png",
+      "observedAt": "2026-10-21T20:38:29.925087Z",
+      "sha256": "ace2cf924a2c6ccba2db06db8d032c48a6f4132da1d8b99366aba518bd7ba0f1",
+      "bytes": 5223,
+      "nativeWidth": 96,
+      "nativeHeight": 96,
+      "originalBytesPreserved": true
+    }
+  ],
+  "creationMethod": "public-original-alpha-preserving-surface-exports",
+  "dealerApproved": false,
+  "generatedInputs": null,
+  "imageGenerationPerformed": false,
+  "identityAssociationReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-21T20:40:17.728690Z",
+    "kind": "agent-source-evidence-inference",
+    "canonicalBusinessName": "Al Qubtan Al Thahbi Used Cars",
+    "observedArtworkName": "ELKOPTAN",
+    "method": "Associate the public ELKOPTAN artwork by the exact retained public business telephone and the matching Sharjah Souq Al Haraj branch; do not infer identity from visual name similarity alone.",
+    "matchedPhone": "+971508040499",
+    "officialContactDisplay": "(+971)508040499",
+    "officialBranch": "Souq Al Haraj Cars - Showroom 418 - Sharjah",
+    "contactPage": {
+      "url": "https://www.elkoptanautomotive.com/en-EG/contact",
+      "sha256": "bcb65ac7e08d6d9d33c25a3dda03954dab7e23c806b22b6eeea6c97f4154e2fc",
+      "observedAt": "2026-10-21T20:38:30.126150Z"
+    },
+    "retainedFactsSha256": "92816ab11907b6317b901a366df57e7dc109730eb360bbd568757e208d328321",
+    "limitations": [
+      "This is an evidence-based association for an independent preview, not dealer confirmation or a claim that the branding proposal was adopted.",
+      "Canonical trading name, contact fields, stock, facts, location and locale files remain the retained research bytes."
+    ],
+    "dealerApproval": false,
+    "humanReview": false
+  },
+  "reviewedInputs": {
+    "reviewedAt": "2026-10-21T20:40:17.728690Z",
+    "master": {
+      "path": "branding/originals/elkoptan-header.png",
+      "sha256": "d605404a38bf9b45b846a29672ded502810737df8cb9b2b79635c6f47eefa7fa",
+      "retainedSource": {
+        "kind": "retained-original-raster",
+        "url": "https://www.elkoptanautomotive.com/assets/images/resources/logo-1.png",
+        "sha256": "d605404a38bf9b45b846a29672ded502810737df8cb9b2b79635c6f47eefa7fa",
+        "observedAt": "2026-10-21T20:38:29.888297Z"
+      }
+    },
+    "mark": {
+      "path": "branding/originals/elkoptan-favicon-96x96.png",
+      "sha256": "ace2cf924a2c6ccba2db06db8d032c48a6f4132da1d8b99366aba518bd7ba0f1",
+      "retainedSource": {
+        "kind": "retained-original-raster",
+        "url": "https://www.elkoptanautomotive.com/fav/favicon-96x96.png",
+        "sha256": "ace2cf924a2c6ccba2db06db8d032c48a6f4132da1d8b99366aba518bd7ba0f1",
+        "observedAt": "2026-10-21T20:38:29.925087Z"
+      }
+    },
+    "markOnDark": {
+      "path": "branding/originals/elkoptan-favicon-96x96.png",
+      "sha256": "ace2cf924a2c6ccba2db06db8d032c48a6f4132da1d8b99366aba518bd7ba0f1",
+      "retainedSource": {
+        "kind": "retained-original-raster",
+        "url": "https://www.elkoptanautomotive.com/fav/favicon-96x96.png",
+        "sha256": "ace2cf924a2c6ccba2db06db8d032c48a6f4132da1d8b99366aba518bd7ba0f1",
+        "observedAt": "2026-10-21T20:38:29.925087Z"
+      },
+      "rasterTreatment": "solid-white"
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/originals/elkoptan-header.png",
+        "sha256": "d605404a38bf9b45b846a29672ded502810737df8cb9b2b79635c6f47eefa7fa",
+        "retainedSource": {
+          "kind": "retained-original-raster",
+          "url": "https://www.elkoptanautomotive.com/assets/images/resources/logo-1.png",
+          "sha256": "d605404a38bf9b45b846a29672ded502810737df8cb9b2b79635c6f47eefa7fa",
+          "observedAt": "2026-10-21T20:38:29.888297Z"
+        }
+      },
+      "onDark": {
+        "path": "branding/originals/elkoptan-header.png",
+        "sha256": "d605404a38bf9b45b846a29672ded502810737df8cb9b2b79635c6f47eefa7fa",
+        "retainedSource": {
+          "kind": "retained-original-raster",
+          "url": "https://www.elkoptanautomotive.com/assets/images/resources/logo-1.png",
+          "sha256": "d605404a38bf9b45b846a29672ded502810737df8cb9b2b79635c6f47eefa7fa",
+          "observedAt": "2026-10-21T20:38:29.888297Z"
+        },
+        "rasterTreatment": "solid-white"
+      },
+      "onAccent": {
+        "path": "branding/originals/elkoptan-header.png",
+        "sha256": "d605404a38bf9b45b846a29672ded502810737df8cb9b2b79635c6f47eefa7fa",
+        "retainedSource": {
+          "kind": "retained-original-raster",
+          "url": "https://www.elkoptanautomotive.com/assets/images/resources/logo-1.png",
+          "sha256": "d605404a38bf9b45b846a29672ded502810737df8cb9b2b79635c6f47eefa7fa",
+          "observedAt": "2026-10-21T20:38:29.888297Z"
+        },
+        "rasterTreatment": "solid-white"
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-21T20:40:17.728690Z",
+      "method": "Agent visual inspection of exact public originals and maintained helper output on white, dark and existing red accent backgrounds.",
+      "wordmarkWidths": [
+        220,
+        180,
+        120
+      ],
+      "markWidths": [
+        64,
+        32,
+        24,
+        16
+      ],
+      "observations": [
+        "The complete ELKOPTAN lettering remains visible without clipping on all reviewed backgrounds.",
+        "The original red/gray wordmark and red compact K are used on light surfaces.",
+        "Explicit white-ink outputs preserve original alpha and geometry for dark/accent surfaces and the dark compact mark.",
+        "Native header source is 200 by 40 and native favicon is 96 by 96; larger exports do not add original detail.",
+        "Small-size pixel checks do not claim full wordmark legibility at favicon sizes."
+      ],
+      "spelling": "ELKOPTAN as visible in the original public wordmark",
+      "geometryPreserved": true,
+      "dealerApproval": false,
+      "arabicExpertReview": false
+    }
+  }
+}

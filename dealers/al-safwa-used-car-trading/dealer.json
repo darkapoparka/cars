@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Al Safwa Used Car Trading",
     "publicOrigin": "https://al-safwa-used-car-trading.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "6b2f2a2a8723c51e625e6be3ba7438b3cbf5d1fd8446114746cf20d0a37562ce",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "3314e31372b0bbcb813893a46cae324a42af007e26e62ad3dfb9c7aee53154c8"
+    }
   }
 }

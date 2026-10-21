@@ -1,0 +1,357 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-safwa-used-car-trading",
+  "reviewed": true,
+  "reviewedAt": "2026-10-21T20:43:36.859003Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "Retained genuine public original with alpha-preserving solid-black and solid-white exports; no new artwork, tracing, text replacement or partial crop.",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "f53632acc94bc89922fdef0eeb52b43b5745e8d792df24fddbca99d846a6eda6",
+      "sourceSha256": "6b2f2a2a8723c51e625e6be3ba7438b3cbf5d1fd8446114746cf20d0a37562ce"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "a782529ffc8563683ecec1e7dcf65fa25fb0f73b1092166223c628f5d5de0ec3",
+      "sourceSha256": "a33276fe9fc184259d9d320098e1ce387b3e7eee80c7e00eba3609d480ae7cef"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "faa8806dc3239875ac4c3aea50a650faeabc1c0be878d97d95d0e993d25aaeca",
+      "sourceSha256": "de2a21b4f7baa27167d3bf51f1296f506839dcdfa743d4dbb07666867064ff84"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "6b2f2a2a8723c51e625e6be3ba7438b3cbf5d1fd8446114746cf20d0a37562ce",
+    "retainedSource": {
+      "kind": "retained-reviewed-raster",
+      "reference": "dealers/al-safwa-used-car-trading/branding/public-original-20261021.png",
+      "sha256": "e615b0c972adce8950211fdec4abaac0e7d56c375ac8682e13f31df01a202d30",
+      "reviewReference": "dealers/al-safwa-used-car-trading/branding/source.json",
+      "reviewSha256": "8175ddf47c17c4403e110be0606ee199af4818bf3a41b83f3ff588b16f5e3239",
+      "sourceUrl": "http://www.alsafwa-cars.com/wp-content/themes/templatefour/css/gfx/safwa-logo.png",
+      "observedAt": "2026-10-21T20:41:38.937722Z",
+      "exportTreatment": {
+        "kind": "alpha-preserving-solid-ink-v1",
+        "ink": "solid-black",
+        "sourceSha256": "e615b0c972adce8950211fdec4abaac0e7d56c375ac8682e13f31df01a202d30",
+        "newGeometry": false
+      }
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "3314e31372b0bbcb813893a46cae324a42af007e26e62ad3dfb9c7aee53154c8",
+    "retainedSource": {
+      "kind": "retained-reviewed-raster",
+      "reference": "dealers/al-safwa-used-car-trading/branding/public-original-20261021.png",
+      "sha256": "e615b0c972adce8950211fdec4abaac0e7d56c375ac8682e13f31df01a202d30",
+      "reviewReference": "dealers/al-safwa-used-car-trading/branding/source.json",
+      "reviewSha256": "8175ddf47c17c4403e110be0606ee199af4818bf3a41b83f3ff588b16f5e3239",
+      "sourceUrl": "http://www.alsafwa-cars.com/wp-content/themes/templatefour/css/gfx/safwa-logo.png",
+      "observedAt": "2026-10-21T20:41:38.937722Z",
+      "exportTreatment": {
+        "kind": "alpha-preserving-solid-ink-v1",
+        "ink": "solid-black",
+        "sourceSha256": "e615b0c972adce8950211fdec4abaac0e7d56c375ac8682e13f31df01a202d30",
+        "newGeometry": false
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "361037b5e99f919b78b8aa846b73241fcda9a1ff2694065a5a5d4e84fb5e9020"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "6b2f2a2a8723c51e625e6be3ba7438b3cbf5d1fd8446114746cf20d0a37562ce",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "dealers/al-safwa-used-car-trading/branding/public-original-20261021.png",
+        "sha256": "e615b0c972adce8950211fdec4abaac0e7d56c375ac8682e13f31df01a202d30",
+        "reviewReference": "dealers/al-safwa-used-car-trading/branding/source.json",
+        "reviewSha256": "8175ddf47c17c4403e110be0606ee199af4818bf3a41b83f3ff588b16f5e3239",
+        "sourceUrl": "http://www.alsafwa-cars.com/wp-content/themes/templatefour/css/gfx/safwa-logo.png",
+        "observedAt": "2026-10-21T20:41:38.937722Z",
+        "exportTreatment": {
+          "kind": "alpha-preserving-solid-ink-v1",
+          "ink": "solid-black",
+          "sourceSha256": "e615b0c972adce8950211fdec4abaac0e7d56c375ac8682e13f31df01a202d30",
+          "newGeometry": false
+        }
+      },
+      "sourceReference": "dealers/al-safwa-used-car-trading/branding/public-original-20261021.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "a33276fe9fc184259d9d320098e1ce387b3e7eee80c7e00eba3609d480ae7cef",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "dealers/al-safwa-used-car-trading/branding/public-original-20261021.png",
+        "sha256": "e615b0c972adce8950211fdec4abaac0e7d56c375ac8682e13f31df01a202d30",
+        "reviewReference": "dealers/al-safwa-used-car-trading/branding/source.json",
+        "reviewSha256": "8175ddf47c17c4403e110be0606ee199af4818bf3a41b83f3ff588b16f5e3239",
+        "sourceUrl": "http://www.alsafwa-cars.com/wp-content/themes/templatefour/css/gfx/safwa-logo.png",
+        "observedAt": "2026-10-21T20:41:38.937722Z"
+      },
+      "sourceReference": "dealers/al-safwa-used-car-trading/branding/public-original-20261021.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "de2a21b4f7baa27167d3bf51f1296f506839dcdfa743d4dbb07666867064ff84",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "dealers/al-safwa-used-car-trading/branding/public-original-20261021.png",
+        "sha256": "e615b0c972adce8950211fdec4abaac0e7d56c375ac8682e13f31df01a202d30",
+        "reviewReference": "dealers/al-safwa-used-car-trading/branding/source.json",
+        "reviewSha256": "8175ddf47c17c4403e110be0606ee199af4818bf3a41b83f3ff588b16f5e3239",
+        "sourceUrl": "http://www.alsafwa-cars.com/wp-content/themes/templatefour/css/gfx/safwa-logo.png",
+        "observedAt": "2026-10-21T20:41:38.937722Z",
+        "exportTreatment": {
+          "kind": "alpha-preserving-solid-ink-v1",
+          "ink": "solid-white",
+          "sourceSha256": "e615b0c972adce8950211fdec4abaac0e7d56c375ac8682e13f31df01a202d30",
+          "newGeometry": false
+        }
+      },
+      "sourceReference": "dealers/al-safwa-used-car-trading/branding/public-original-20261021.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "e615b0c972adce8950211fdec4abaac0e7d56c375ac8682e13f31df01a202d30",
+      "sha256": "6b2f2a2a8723c51e625e6be3ba7438b3cbf5d1fd8446114746cf20d0a37562ce",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 253,
+        "height": 151
+      },
+      "rasterTreatment": {
+        "kind": "alpha-preserving-solid-ink-v1",
+        "ink": "solid-black",
+        "originalAlphaUnchangedBeforeCropAndResize": true,
+        "newGeometry": false
+      },
+      "sourcePath": "branding/public-original-20261021.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "e615b0c972adce8950211fdec4abaac0e7d56c375ac8682e13f31df01a202d30",
+      "sha256": "a33276fe9fc184259d9d320098e1ce387b3e7eee80c7e00eba3609d480ae7cef",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 253,
+        "height": 151
+      },
+      "sourcePath": "branding/public-original-20261021.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "e615b0c972adce8950211fdec4abaac0e7d56c375ac8682e13f31df01a202d30",
+      "sha256": "de2a21b4f7baa27167d3bf51f1296f506839dcdfa743d4dbb07666867064ff84",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 253,
+        "height": 151
+      },
+      "rasterTreatment": {
+        "kind": "alpha-preserving-solid-ink-v1",
+        "ink": "solid-white",
+        "originalAlphaUnchangedBeforeCropAndResize": true,
+        "newGeometry": false
+      },
+      "sourcePath": "branding/public-original-20261021.png",
+      "outputPath": "branding/logo-on-accent.png"
+    },
+    "master": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "e615b0c972adce8950211fdec4abaac0e7d56c375ac8682e13f31df01a202d30",
+      "sha256": "6b2f2a2a8723c51e625e6be3ba7438b3cbf5d1fd8446114746cf20d0a37562ce",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 253,
+        "height": 151
+      },
+      "rasterTreatment": {
+        "kind": "alpha-preserving-solid-ink-v1",
+        "ink": "solid-black",
+        "originalAlphaUnchangedBeforeCropAndResize": true,
+        "newGeometry": false
+      },
+      "sourcePath": "branding/public-original-20261021.png"
+    },
+    "mark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "e615b0c972adce8950211fdec4abaac0e7d56c375ac8682e13f31df01a202d30",
+      "sha256": "3314e31372b0bbcb813893a46cae324a42af007e26e62ad3dfb9c7aee53154c8",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 253,
+        "height": 151
+      },
+      "rasterTreatment": {
+        "kind": "alpha-preserving-solid-ink-v1",
+        "ink": "solid-black",
+        "originalAlphaUnchangedBeforeCropAndResize": true,
+        "newGeometry": false
+      },
+      "sourcePath": "branding/public-original-20261021.png"
+    },
+    "markOnDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "e615b0c972adce8950211fdec4abaac0e7d56c375ac8682e13f31df01a202d30",
+      "sha256": "0103ddee08118f944e296778960ef237a65873223eb58dacdb111b3a63feed1e",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 253,
+        "height": 151
+      },
+      "rasterTreatment": {
+        "kind": "alpha-preserving-solid-ink-v1",
+        "ink": "solid-white",
+        "originalAlphaUnchangedBeforeCropAndResize": true,
+        "newGeometry": false
+      },
+      "sourcePath": "branding/public-original-20261021.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "2137b35124617e14d9c50c22e6ad56048f3fecf3f93868d74dd9ed63e921a0bb",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "dealers/al-safwa-used-car-trading/branding/public-original-20261021.png",
+        "sha256": "e615b0c972adce8950211fdec4abaac0e7d56c375ac8682e13f31df01a202d30",
+        "reviewReference": "dealers/al-safwa-used-car-trading/branding/source.json",
+        "reviewSha256": "8175ddf47c17c4403e110be0606ee199af4818bf3a41b83f3ff588b16f5e3239",
+        "sourceUrl": "http://www.alsafwa-cars.com/wp-content/themes/templatefour/css/gfx/safwa-logo.png",
+        "observedAt": "2026-10-21T20:41:38.937722Z",
+        "exportTreatment": {
+          "kind": "alpha-preserving-solid-ink-v1",
+          "ink": "solid-black",
+          "sourceSha256": "e615b0c972adce8950211fdec4abaac0e7d56c375ac8682e13f31df01a202d30",
+          "newGeometry": false
+        }
+      },
+      "sourceReference": "dealers/al-safwa-used-car-trading/branding/public-original-20261021.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "495839f77ad69d6ca2b34934b95b8ac91158de15b20053e9501e36fb40e7ce34",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "dealers/al-safwa-used-car-trading/branding/public-original-20261021.png",
+        "sha256": "e615b0c972adce8950211fdec4abaac0e7d56c375ac8682e13f31df01a202d30",
+        "reviewReference": "dealers/al-safwa-used-car-trading/branding/source.json",
+        "reviewSha256": "8175ddf47c17c4403e110be0606ee199af4818bf3a41b83f3ff588b16f5e3239",
+        "sourceUrl": "http://www.alsafwa-cars.com/wp-content/themes/templatefour/css/gfx/safwa-logo.png",
+        "observedAt": "2026-10-21T20:41:38.937722Z",
+        "exportTreatment": {
+          "kind": "alpha-preserving-solid-ink-v1",
+          "ink": "solid-white",
+          "sourceSha256": "e615b0c972adce8950211fdec4abaac0e7d56c375ac8682e13f31df01a202d30",
+          "newGeometry": false
+        }
+      },
+      "sourceReference": "dealers/al-safwa-used-car-trading/branding/public-original-20261021.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "3314e31372b0bbcb813893a46cae324a42af007e26e62ad3dfb9c7aee53154c8",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "dealers/al-safwa-used-car-trading/branding/public-original-20261021.png",
+        "sha256": "e615b0c972adce8950211fdec4abaac0e7d56c375ac8682e13f31df01a202d30",
+        "reviewReference": "dealers/al-safwa-used-car-trading/branding/source.json",
+        "reviewSha256": "8175ddf47c17c4403e110be0606ee199af4818bf3a41b83f3ff588b16f5e3239",
+        "sourceUrl": "http://www.alsafwa-cars.com/wp-content/themes/templatefour/css/gfx/safwa-logo.png",
+        "observedAt": "2026-10-21T20:41:38.937722Z",
+        "exportTreatment": {
+          "kind": "alpha-preserving-solid-ink-v1",
+          "ink": "solid-black",
+          "sourceSha256": "e615b0c972adce8950211fdec4abaac0e7d56c375ac8682e13f31df01a202d30",
+          "newGeometry": false
+        }
+      },
+      "sourceReference": "dealers/al-safwa-used-car-trading/branding/public-original-20261021.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "361037b5e99f919b78b8aa846b73241fcda9a1ff2694065a5a5d4e84fb5e9020",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "dealers/al-safwa-used-car-trading/branding/public-original-20261021.png",
+        "sha256": "e615b0c972adce8950211fdec4abaac0e7d56c375ac8682e13f31df01a202d30",
+        "reviewReference": "dealers/al-safwa-used-car-trading/branding/source.json",
+        "reviewSha256": "8175ddf47c17c4403e110be0606ee199af4818bf3a41b83f3ff588b16f5e3239",
+        "sourceUrl": "http://www.alsafwa-cars.com/wp-content/themes/templatefour/css/gfx/safwa-logo.png",
+        "observedAt": "2026-10-21T20:41:38.937722Z",
+        "exportTreatment": {
+          "kind": "alpha-preserving-solid-ink-v1",
+          "ink": "solid-black",
+          "sourceSha256": "e615b0c972adce8950211fdec4abaac0e7d56c375ac8682e13f31df01a202d30",
+          "newGeometry": false
+        }
+      },
+      "sourceReference": "dealers/al-safwa-used-car-trading/branding/public-original-20261021.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-21T20:43:36.859003Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "0103ddee08118f944e296778960ef237a65873223eb58dacdb111b3a63feed1e",
+    "retainedSource": {
+      "kind": "retained-reviewed-raster",
+      "reference": "dealers/al-safwa-used-car-trading/branding/public-original-20261021.png",
+      "sha256": "e615b0c972adce8950211fdec4abaac0e7d56c375ac8682e13f31df01a202d30",
+      "reviewReference": "dealers/al-safwa-used-car-trading/branding/source.json",
+      "reviewSha256": "8175ddf47c17c4403e110be0606ee199af4818bf3a41b83f3ff588b16f5e3239",
+      "sourceUrl": "http://www.alsafwa-cars.com/wp-content/themes/templatefour/css/gfx/safwa-logo.png",
+      "observedAt": "2026-10-21T20:41:38.937722Z",
+      "exportTreatment": {
+        "kind": "alpha-preserving-solid-ink-v1",
+        "ink": "solid-white",
+        "sourceSha256": "e615b0c972adce8950211fdec4abaac0e7d56c375ac8682e13f31df01a202d30",
+        "newGeometry": false
+      }
+    }
+  }
+}

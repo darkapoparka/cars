@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-input-review",
+  "dealer": "tony-s-auto-sales",
+  "reviewed": true,
+  "reviewedAt": "2026-10-21T20:47:06.663Z",
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "checks": [
+    "canonical-hosting-and-preserved-fleet-collisions",
+    "assigned-expansion-lead",
+    "public-fact-schema-and-price-omission",
+    "personal-contact-screen",
+    "retained-stock-media",
+    "companion-copy-source-binding",
+    "immutable-template-release-and-native-QA-parent",
+    "reviewed-artwork-provenance-and-regenerated-logo-hashes"
+  ],
+  "sourceArtworkReview": "Retained artwork review is separate provenance; this command does not perform visual, Arabic-expert or dealer approval.",
+  "copyReview": "Automated structure, stock hash, source text and complete EN/BG rows; no new human translation approval is inferred.",
+  "contacts": {
+    "schemaVersion": 1,
+    "kind": "cars-automated-public-contact-screen",
+    "dealer": "tony-s-auto-sales",
+    "method": "heuristic; no claim that unflagged values cannot be personal",
+    "flags": [],
+    "blocking": []
+  },
+  "batch": {
+    "number": 2,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "us-ms-pascagoula-tonys-auto-sales",
+    "position": 117
+  },
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "inputs": [
+    {
+      "path": "FACTS-AND-INVENTORY.json",
+      "sha256": "8b27dbe8982930beda46bb5b1638d6428424a9e785e84cebcfcc309e668e8a4e"
+    },
+    {
+      "path": "branding/logo-contract.json",
+      "sha256": "6128717622c92f7fc2a26bfabb058b5e57b4c31ff689b8266c9f25f8aea082f4"
+    },
+    {
+      "path": "branding/logo-recipe.json",
+      "sha256": "f0ef02ef6267a7b5f70eeaecf75263dd00999b196c4ef606235d2234d7ba0e99"
+    },
+    {
+      "path": "branding/public-original-20261021.png",
+      "sha256": "54cd88374686f9c325960da1c420714952fe9eb03488e1d3a69fdc1cfa7cf521"
+    },
+    {
+      "path": "branding/source.json",
+      "sha256": "0b8cfdb213c7b6824f0d11bda961da1689a94877a6ae2af7435deb2f3ebbd570"
+    },
+    {
+      "path": "business-facts.json",
+      "sha256": "9868d136a72bd2d0eeba200e9b1b7d48cafca2ccda813d625cd5d83e70c5cada"
+    },
+    {
+      "path": "copy-review.json",
+      "sha256": "30c06dc519bb9895e881caa2086e5afa580a3d5a29a1bc39e2f47a222f9517a7"
+    },
+    {
+      "path": "dealer-stock/template-demo-1.webp",
+      "sha256": "945e6864218ab3bd5fbd415336b212ecfde645685033f8506836f906885d447c"
+    },
+    {
+      "path": "dealer-stock/template-demo-2.webp",
+      "sha256": "17689ab880bf47de81ef467c34d639223f39f0c1ebe68c90d0aaf70e3dcc6333"
+    },
+    {
+      "path": "dealer-stock/template-demo-3.webp",
+      "sha256": "d644dec8e1ef280a702dccac267a2367f0ab823e40373e1299b156e7723b3b1f"
+    },
+    {
+      "path": "dealer.json",
+      "sha256": "b1605103b7a5bde77dc1d59e659ea34121b0b6d631dd749588511bcbeb32329c"
+    },
+    {
+      "path": "identity-review.json",
+      "sha256": "a740bf15e48af9e2fe49d8fae119ab39d98582fa055f1ce7351567b55f5dbc19"
+    },
+    {
+      "path": "locale.json",
+      "sha256": "e41af5030c1defebfe883d7e83e7668e4770876e63b86b259beaabf21d4fd185"
+    },
+    {
+      "path": "missing-facts.json",
+      "sha256": "1327890a479d1bb89ff1548ce94e4b02c7a31a79fbb6a0ebfe9a7be524ee17bd"
+    },
+    {
+      "path": "qualification.json",
+      "sha256": "5321b068288a51ed1d62af92987efb6772d2a63a701809bece05d2a67c351ba0"
+    },
+    {
+      "path": "source-evidence.json",
+      "sha256": "71bdfeebbfdc3386f26da7c08a1420a2640816b9dec61f7e79d1fbbcdbb685ae"
+    },
+    {
+      "path": "stock.json",
+      "sha256": "5f9c5cdd729392df373b895b3885c389e4ab7dcef1e841404d757d5af8b00348"
+    }
+  ],
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "providerWrites": 0
+}

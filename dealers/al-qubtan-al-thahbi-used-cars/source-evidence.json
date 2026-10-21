@@ -1,0 +1,130 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-qubtan-al-thahbi-used-cars",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/al-qubtan-al-thahbi-used-cars",
+      "observedAt": "2026-10-19T20:00:11.849876Z",
+      "supports": [
+        "business-trading-name",
+        "public-business-phone",
+        "marketplace-location",
+        "dealer-catalogue"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/6779-kia-sportage-20-at-186-hp-other",
+      "observedAt": "2026-10-19T20:00:11.849876Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/6782-hyundai-avante-16-cvt-123-hp-other",
+      "observedAt": "2026-10-19T20:00:11.849876Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/7582-chevrolet-impala-36-at-309-hp-ltz",
+      "observedAt": "2026-10-19T20:00:11.849876Z",
+      "supports": [
+        "dealer-attributed-vehicle-listing",
+        "public-stock-photo",
+        "vehicle-identity"
+      ]
+    }
+  ],
+  "liveFetchPerformed": true,
+  "research": {
+    "observedAt": "2026-10-19T20:00:11.849876Z",
+    "profileUrl": "https://licenseplate.ae/cars/dealer/al-qubtan-al-thahbi-used-cars",
+    "profileSha256": "61b73175ecf30925bb1f6eef3edd9e8f05fbf3dee3482a68a71a978d386e1709",
+    "marketplaceTradingName": "Al Qubtan Al Thahbi Used Cars",
+    "classification": "public-marketplace-dealer-profile-and-listing-snapshot",
+    "directDealerPostingVerified": false,
+    "profileClaimed": false,
+    "limitation": "The named marketplace profile may be syndicated or automatically assembled. Seller-attributed listings are dated observations; current physical stock and direct dealer posting are not confirmed.",
+    "unknownFields": [
+      "public-business-email",
+      "owned-website",
+      "opening-hours"
+    ],
+    "stockSources": [
+      {
+        "id": "licenseplate-6779",
+        "url": "https://licenseplate.ae/cars/listing/6779-kia-sportage-20-at-186-hp-other",
+        "observedAt": "2026-10-19T20:00:11.849876Z",
+        "sha256": "24fe992e24cc17085cccb4290cc014e9b3b211ae1d318aaebd2f944052ff076f",
+        "sellerName": "Al Qubtan Al Thahbi Used Cars",
+        "sellerUrl": "https://licenseplate.ae/cars/dealer/al-qubtan-al-thahbi-used-cars"
+      },
+      {
+        "id": "licenseplate-6782",
+        "url": "https://licenseplate.ae/cars/listing/6782-hyundai-avante-16-cvt-123-hp-other",
+        "observedAt": "2026-10-19T20:00:11.849876Z",
+        "sha256": "1e76cec2163049a3d28078e68c75acb50f242660bfee7d54ed864413b4afac57",
+        "sellerName": "Al Qubtan Al Thahbi Used Cars",
+        "sellerUrl": "https://licenseplate.ae/cars/dealer/al-qubtan-al-thahbi-used-cars"
+      },
+      {
+        "id": "licenseplate-7582",
+        "url": "https://licenseplate.ae/cars/listing/7582-chevrolet-impala-36-at-309-hp-ltz",
+        "observedAt": "2026-10-19T20:00:11.849876Z",
+        "sha256": "4f49e12d0827671df950ae687a28d1279cae1665034e4eec507f933f6f24c2c0",
+        "sellerName": "Al Qubtan Al Thahbi Used Cars",
+        "sellerUrl": "https://licenseplate.ae/cars/dealer/al-qubtan-al-thahbi-used-cars"
+      }
+    ],
+    "photoSources": [
+      {
+        "listingId": "licenseplate-6779",
+        "listingUrl": "https://licenseplate.ae/cars/listing/6779-kia-sportage-20-at-186-hp-other",
+        "sourceImageUrl": "https://licenseplate.ae/storage/listings/0/kia-sportage-20-at-186-hp-0-1789524783.webp",
+        "observedAt": "2026-10-19T20:00:11.849876Z",
+        "retainedPath": "dealer-stock/licenseplate-6779.webp",
+        "sha256": "1b74365841358c4ee74fba759e8b38cef16ca38fc4a877c763a4e60c68eedf67",
+        "originalSha256": "c04bf684d1ffd57044ef5fac595629c0ba1f12a8bcb69a6058e149f924cd723e",
+        "bytes": 101424,
+        "width": 768,
+        "height": 1024,
+        "operation": "rotate-to-orientation-and-resize-inside-1280-webp-quality-78"
+      },
+      {
+        "listingId": "licenseplate-6782",
+        "listingUrl": "https://licenseplate.ae/cars/listing/6782-hyundai-avante-16-cvt-123-hp-other",
+        "sourceImageUrl": "https://licenseplate.ae/storage/listings/0/hyundai-avante-16-cvt-123-hp-0-1789524798.webp",
+        "observedAt": "2026-10-19T20:00:11.849876Z",
+        "retainedPath": "dealer-stock/licenseplate-6782.webp",
+        "sha256": "5092fba8725bb5069c274321c80cebdc6dc865e19d13ff68d4fde43760b4de67",
+        "originalSha256": "3fe997321ef88e05f95f430b33a0422e7c56bb6a4e34b95d0e082e9a02953262",
+        "bytes": 78326,
+        "width": 800,
+        "height": 800,
+        "operation": "rotate-to-orientation-and-resize-inside-1280-webp-quality-78"
+      },
+      {
+        "listingId": "licenseplate-7582",
+        "listingUrl": "https://licenseplate.ae/cars/listing/7582-chevrolet-impala-36-at-309-hp-ltz",
+        "sourceImageUrl": "https://licenseplate.ae/storage/listings/0/chevrolet-impala-36-at-309-hp-0-1789529799.webp",
+        "observedAt": "2026-10-19T20:00:11.849876Z",
+        "retainedPath": "dealer-stock/licenseplate-7582.webp",
+        "sha256": "97857261f4907eaefb5c06ff4316f547255b11401b10b1225153e7356895e31b",
+        "originalSha256": "e63b10c6e9e4569d1dfa252708ea2fb4a23051291720132cca2819868a41fd4d",
+        "bytes": 114644,
+        "width": 768,
+        "height": 1024,
+        "operation": "rotate-to-orientation-and-resize-inside-1280-webp-quality-78"
+      }
+    ]
+  }
+}

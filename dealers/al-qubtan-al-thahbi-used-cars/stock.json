@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-qubtan-al-thahbi-used-cars",
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-19T20:00:11.849876Z",
+  "disclosure": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview.",
+  "records": [
+    {
+      "id": "licenseplate-6779",
+      "title": "2019 Kia Sportage",
+      "make": "Kia",
+      "model": "Sportage",
+      "year": 2019,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/licenseplate-6779.webp"
+      ],
+      "sourceUrl": "https://licenseplate.ae/cars/listing/6779-kia-sportage-20-at-186-hp-other",
+      "observedAt": "2026-10-19T20:00:11.849876Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Crossover",
+      "transmission": "Automatic",
+      "fuel": "Diesel",
+      "color": "Silver",
+      "mileageValue": 156000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "licenseplate-6782",
+      "title": "2021 Hyundai Avante",
+      "make": "Hyundai",
+      "model": "Avante",
+      "year": 2021,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/licenseplate-6782.webp"
+      ],
+      "sourceUrl": "https://licenseplate.ae/cars/listing/6782-hyundai-avante-16-cvt-123-hp-other",
+      "observedAt": "2026-10-19T20:00:11.849876Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Sedan",
+      "transmission": "CVT",
+      "fuel": "Petrol",
+      "color": "White",
+      "mileageValue": 131000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "licenseplate-7582",
+      "title": "2016 Chevrolet Impala",
+      "make": "Chevrolet",
+      "model": "Impala",
+      "year": 2016,
+      "currency": "AED",
+      "images": [
+        "/dealer-stock/licenseplate-7582.webp"
+      ],
+      "sourceUrl": "https://licenseplate.ae/cars/listing/7582-chevrolet-impala-36-at-309-hp-ltz",
+      "observedAt": "2026-10-19T20:00:11.849876Z",
+      "availability": "Advertised in the retained public listing; current availability has not been independently confirmed.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "bodyType": "Sedan",
+      "transmission": "Automatic",
+      "fuel": "Petrol",
+      "color": "Black",
+      "mileageValue": 150000,
+      "mileageUnit": "km",
+      "description": "Dated public listing samples observed on 2026-10-19. Availability has not been confirmed. Listing prices are omitted in this preview."
+    }
+  ]
+}
