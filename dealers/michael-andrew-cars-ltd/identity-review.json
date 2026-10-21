@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": false,
+  "reviewedAt": null,
+  "dealer": "michael-andrew-cars-ltd",
+  "dealerId": "gb-huddersfield-michael-andrew-cars",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "review": {
+    "kind": "pending",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "method": "Draft identity only; run automated pack input review before building.",
+  "sources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/Michael-Andrew-Cars-Ltd",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.autotrader.co.uk/dealers/yorkshire/huddersfield/michael-andrew-cars-limited-10051135",
+      "observedAt": "2026-10-18"
+    }
+  ]
+}

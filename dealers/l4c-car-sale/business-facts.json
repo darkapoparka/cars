@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "slug": "l4c-car-sale",
+  "dealerId": "gb-west-bromwich-l4c-car-sale",
+  "business": {
+    "name": "L4C Car Sale",
+    "city": "West Bromwich",
+    "region": "West Midlands",
+    "countryCode": "GB",
+    "currency": "GBP",
+    "distanceUnit": "mi",
+    "locale": "en-GB",
+    "address": "34 Grice Street, West Bromwich B70 7EZ",
+    "phone": "+441384493522",
+    "phoneDisplay": "+441384493522",
+    "email": "hawkaraziz899@gmail.com",
+    "website": "",
+    "stockUrl": "https://showroom.ebaymotorspro.co.uk/Kobani-Motors",
+    "hours": "",
+    "sourceUrl": "https://showroom.ebaymotorspro.co.uk/Kobani-Motors",
+    "observedAt": "2026-10-18",
+    "inventoryNotice": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/Kobani-Motors",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.cazoo.co.uk/dealers/l4c-car-sale-19538/",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    }
+  ]
+}
