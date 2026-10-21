@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "dealer": "nextstep-auto-llc",
-  "status": "research-required",
+  "status": "reviewed-public-originals",
   "realLogoFirst": true,
   "publicSources": [
     {
@@ -19,10 +19,119 @@
     {
       "url": "https://www.peachtreecornersga.gov/Archive.aspx?ADID=1322",
       "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.nextstepautoga.com/",
+      "observedAt": "2026-10-21T08:09:52.637Z",
+      "supports": [
+        "exact-current-public-business-phone",
+        "official-header-artwork"
+      ],
+      "responseSha256": "c6b958ed2c119f789af7e501c4f1d4d6167d0e5a1f248ad2b4f74cb19b9c2d66"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/df41ea_6e3ab2fff5d743d99fc2eed96f04526a~mv2.png",
+      "observedAt": "2026-10-21T08:09:52.637Z",
+      "supports": [
+        "exact-public-original-raster"
+      ],
+      "sha256": "d5c99ee1f99803ac4fa9adb969bb22f14e362a27cca6f244e45ace20df6331bf"
     }
   ],
-  "originals": [],
-  "creationMethod": null,
+  "originals": [
+    {
+      "path": "branding/original-nextstep-header.png",
+      "sha256": "d5c99ee1f99803ac4fa9adb969bb22f14e362a27cca6f244e45ace20df6331bf",
+      "url": "https://static.wixstatic.com/media/df41ea_6e3ab2fff5d743d99fc2eed96f04526a~mv2.png",
+      "observedAt": "2026-10-21T08:09:52.637Z"
+    }
+  ],
+  "creationMethod": "public-original-alpha-preserving-surface-exports",
   "dealerApproved": false,
-  "generatedInputs": null
+  "reviewedInputs": {
+    "reviewedAt": "2026-10-21T08:09:52.637Z",
+    "master": {
+      "path": "branding/original-nextstep-header.png",
+      "sha256": "d5c99ee1f99803ac4fa9adb969bb22f14e362a27cca6f244e45ace20df6331bf",
+      "retainedSource": {
+        "kind": "retained-original-raster",
+        "sha256": "d5c99ee1f99803ac4fa9adb969bb22f14e362a27cca6f244e45ace20df6331bf",
+        "observedAt": "2026-10-21T08:09:52.637Z",
+        "url": "https://static.wixstatic.com/media/df41ea_6e3ab2fff5d743d99fc2eed96f04526a~mv2.png"
+      },
+      "rasterTreatment": "solid-black"
+    },
+    "mark": {
+      "path": "branding/original-nextstep-header.png",
+      "sha256": "d5c99ee1f99803ac4fa9adb969bb22f14e362a27cca6f244e45ace20df6331bf",
+      "retainedSource": {
+        "kind": "retained-original-raster",
+        "sha256": "d5c99ee1f99803ac4fa9adb969bb22f14e362a27cca6f244e45ace20df6331bf",
+        "observedAt": "2026-10-21T08:09:52.637Z",
+        "url": "https://static.wixstatic.com/media/df41ea_6e3ab2fff5d743d99fc2eed96f04526a~mv2.png"
+      },
+      "rasterTreatment": "solid-black"
+    },
+    "markOnDark": {
+      "path": "branding/original-nextstep-header.png",
+      "sha256": "d5c99ee1f99803ac4fa9adb969bb22f14e362a27cca6f244e45ace20df6331bf",
+      "retainedSource": {
+        "kind": "retained-original-raster",
+        "sha256": "d5c99ee1f99803ac4fa9adb969bb22f14e362a27cca6f244e45ace20df6331bf",
+        "observedAt": "2026-10-21T08:09:52.637Z",
+        "url": "https://static.wixstatic.com/media/df41ea_6e3ab2fff5d743d99fc2eed96f04526a~mv2.png"
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/original-nextstep-header.png",
+        "sha256": "d5c99ee1f99803ac4fa9adb969bb22f14e362a27cca6f244e45ace20df6331bf",
+        "retainedSource": {
+          "kind": "retained-original-raster",
+          "sha256": "d5c99ee1f99803ac4fa9adb969bb22f14e362a27cca6f244e45ace20df6331bf",
+          "observedAt": "2026-10-21T08:09:52.637Z",
+          "url": "https://static.wixstatic.com/media/df41ea_6e3ab2fff5d743d99fc2eed96f04526a~mv2.png"
+        },
+        "rasterTreatment": "solid-black"
+      },
+      "onDark": {
+        "path": "branding/original-nextstep-header.png",
+        "sha256": "d5c99ee1f99803ac4fa9adb969bb22f14e362a27cca6f244e45ace20df6331bf",
+        "retainedSource": {
+          "kind": "retained-original-raster",
+          "sha256": "d5c99ee1f99803ac4fa9adb969bb22f14e362a27cca6f244e45ace20df6331bf",
+          "observedAt": "2026-10-21T08:09:52.637Z",
+          "url": "https://static.wixstatic.com/media/df41ea_6e3ab2fff5d743d99fc2eed96f04526a~mv2.png"
+        }
+      },
+      "onAccent": {
+        "path": "branding/original-nextstep-header.png",
+        "sha256": "d5c99ee1f99803ac4fa9adb969bb22f14e362a27cca6f244e45ace20df6331bf",
+        "retainedSource": {
+          "kind": "retained-original-raster",
+          "sha256": "d5c99ee1f99803ac4fa9adb969bb22f14e362a27cca6f244e45ace20df6331bf",
+          "observedAt": "2026-10-21T08:09:52.637Z",
+          "url": "https://static.wixstatic.com/media/df41ea_6e3ab2fff5d743d99fc2eed96f04526a~mv2.png"
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "kind": "genuine-public-artwork-agent-visual-review",
+      "dealerApproval": false,
+      "notes": "Retain the exact official NextStep shield/wordmark/chevron raster. Black variants recolour existing alpha geometry only; no new compact monogram or adopted branding is claimed."
+    }
+  },
+  "sourceReadinessEvidence": {
+    "checkedAt": "2026-10-21T08:08:40.753Z",
+    "pixelChecks": 14,
+    "allPassed": true,
+    "reportSha256": "8c24583d2cd2a00ed016f6fc27698a5b8d9c4b266a0b8c569ad515a81b0e09cc",
+    "consumerRasterSha256": "04188f21b11e73de17a13936a946945a6fe68b8c7f2b18b4e9a503e787b68332",
+    "reviewScope": "Agent visual inspection of the genuine shield at actual 32px wordmark and 32/64px compact consumers; no new geometry or human/dealer approval.",
+    "nativeApproval": false,
+    "hostedApproval": false,
+    "generatedArtwork": false
+  },
+  "originalDraftSha256": "eac598ef163ded9a473eb941f0ab74e9a23aadc5c4966c614928597f30a85731"
 }

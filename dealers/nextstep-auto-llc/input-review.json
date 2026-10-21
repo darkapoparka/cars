@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-input-review",
+  "dealer": "nextstep-auto-llc",
+  "reviewed": true,
+  "reviewedAt": "2026-10-21T08:09:54.012Z",
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "checks": [
+    "canonical-hosting-and-preserved-fleet-collisions",
+    "assigned-expansion-lead",
+    "public-fact-schema-and-price-omission",
+    "personal-contact-screen",
+    "retained-stock-media",
+    "companion-copy-source-binding",
+    "immutable-template-release-and-native-QA-parent",
+    "reviewed-artwork-provenance-and-regenerated-logo-hashes"
+  ],
+  "sourceArtworkReview": "Retained artwork review is separate provenance; this command does not perform visual, Arabic-expert or dealer approval.",
+  "copyReview": "Automated structure, stock hash, source text and complete EN/BG rows; no new human translation approval is inferred.",
+  "contacts": {
+    "schemaVersion": 1,
+    "kind": "cars-automated-public-contact-screen",
+    "dealer": "nextstep-auto-llc",
+    "method": "heuristic; no claim that unflagged values cannot be personal",
+    "flags": [],
+    "blocking": []
+  },
+  "batch": {
+    "number": 2,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "us-ga-peachtree-corners-nextstep-auto",
+    "position": 111
+  },
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "inputs": [
+    {
+      "path": "FACTS-AND-INVENTORY.json",
+      "sha256": "cc473b62fc99a56ac64efa2d5a6db149da450ecd621f8f820a89c9875cbddd77"
+    },
+    {
+      "path": "branding/logo-contract.json",
+      "sha256": "0404de3f12747e9f84751bec4a5670eab6b108520eefc808d8244109802b4313"
+    },
+    {
+      "path": "branding/logo-recipe.json",
+      "sha256": "49063867a51bbb4e7c191092ad82ec4e39ed43ad2cd3fa559dd2d6fdf2ec5f27"
+    },
+    {
+      "path": "branding/original-nextstep-header.png",
+      "sha256": "d5c99ee1f99803ac4fa9adb969bb22f14e362a27cca6f244e45ace20df6331bf"
+    },
+    {
+      "path": "branding/source.json",
+      "sha256": "9e9db63ab998f7a37b468c8944ec01633bb0623541dd2a5906cde4f17ed319a2"
+    },
+    {
+      "path": "business-facts.json",
+      "sha256": "b1444085a6ff09aea1899d884fd6e215e62b65cea7a4e89821711e8e4e3cf562"
+    },
+    {
+      "path": "copy-review.json",
+      "sha256": "2cdfe07ec89de6c847570b14e1f9d89ce3f5130f7588ca4a5408d60a223dcb74"
+    },
+    {
+      "path": "dealer-stock/template-demo-1.webp",
+      "sha256": "945e6864218ab3bd5fbd415336b212ecfde645685033f8506836f906885d447c"
+    },
+    {
+      "path": "dealer-stock/template-demo-2.webp",
+      "sha256": "17689ab880bf47de81ef467c34d639223f39f0c1ebe68c90d0aaf70e3dcc6333"
+    },
+    {
+      "path": "dealer-stock/template-demo-3.webp",
+      "sha256": "d644dec8e1ef280a702dccac267a2367f0ab823e40373e1299b156e7723b3b1f"
+    },
+    {
+      "path": "dealer.json",
+      "sha256": "db8b12dd8e3444301f729823b91e04f5ba12d81d5fe926d739b7b98a7aece321"
+    },
+    {
+      "path": "identity-review.json",
+      "sha256": "fa6b722e113b508ca0a79314b442522cb7c1a8671ae95193451eb9a4612ed9e7"
+    },
+    {
+      "path": "locale.json",
+      "sha256": "2728e1e87282c9bec043cb5b0affcd152cac5164e91160f9aeb9e33d08288d84"
+    },
+    {
+      "path": "missing-facts.json",
+      "sha256": "ecc69c6dd0cf337480902ae9ab143341518692e4e7381626c7c86fd5c5e69360"
+    },
+    {
+      "path": "qualification.json",
+      "sha256": "c78c597cc28753a8e167b59ef52e6c2c7c283ed82d8199785b45c3c6650fb44b"
+    },
+    {
+      "path": "source-evidence.json",
+      "sha256": "f0d01f34b1538437548f542ed3d3a4f03810308a22d3cdb631869c060c2a7551"
+    },
+    {
+      "path": "stock.json",
+      "sha256": "449ed88b806d951f89d08eeb5dc4fd83c698189e0a02d4ab0e5fd616079eb166"
+    }
+  ],
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "providerWrites": 0
+}

@@ -1,0 +1,315 @@
+{
+  "schemaVersion": 1,
+  "dealer": "nextstep-auto-llc",
+  "reviewed": true,
+  "reviewedAt": "2026-10-21T08:09:52.637Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "public-original-alpha-preserving-surface-exports",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "0a711673edbb97ee3da6131c5d6ce22233796fa18bfd37e2c474a7327e774a56",
+      "sourceSha256": "1e2123cf6e14d49f3d838d7163f2df6e585ce2782d521b641ae8f6a4f3bab370"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "8ec01166faa8562c2f43ae205bd9eeb238b0672ed6466a3fc011eecf935a5adc",
+      "sourceSha256": "b182b48e1676c36610d234bf0c26321ed0cf5fab7ad5a6e9fbffe178fb28568c"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "8ec01166faa8562c2f43ae205bd9eeb238b0672ed6466a3fc011eecf935a5adc",
+      "sourceSha256": "b182b48e1676c36610d234bf0c26321ed0cf5fab7ad5a6e9fbffe178fb28568c"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "1e2123cf6e14d49f3d838d7163f2df6e585ce2782d521b641ae8f6a4f3bab370",
+    "retainedSource": {
+      "kind": "retained-reviewed-raster",
+      "reference": "dealers/nextstep-auto-llc/branding/original-nextstep-header.png",
+      "sha256": "d5c99ee1f99803ac4fa9adb969bb22f14e362a27cca6f244e45ace20df6331bf",
+      "reviewReference": "dealers/nextstep-auto-llc/branding/source.json",
+      "reviewSha256": "9e9db63ab998f7a37b468c8944ec01633bb0623541dd2a5906cde4f17ed319a2",
+      "sourceUrl": "https://static.wixstatic.com/media/df41ea_6e3ab2fff5d743d99fc2eed96f04526a~mv2.png",
+      "observedAt": "2026-10-21T08:09:52.637Z",
+      "exportTreatment": {
+        "kind": "alpha-preserving-solid-ink-v1",
+        "ink": "solid-black",
+        "sourceSha256": "d5c99ee1f99803ac4fa9adb969bb22f14e362a27cca6f244e45ace20df6331bf",
+        "newGeometry": false
+      }
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "fafeb1a3fc1404d52f6120f1ed94cd894ae07af911686da96cdb0a85a1aeacd4",
+    "retainedSource": {
+      "kind": "retained-reviewed-raster",
+      "reference": "dealers/nextstep-auto-llc/branding/original-nextstep-header.png",
+      "sha256": "d5c99ee1f99803ac4fa9adb969bb22f14e362a27cca6f244e45ace20df6331bf",
+      "reviewReference": "dealers/nextstep-auto-llc/branding/source.json",
+      "reviewSha256": "9e9db63ab998f7a37b468c8944ec01633bb0623541dd2a5906cde4f17ed319a2",
+      "sourceUrl": "https://static.wixstatic.com/media/df41ea_6e3ab2fff5d743d99fc2eed96f04526a~mv2.png",
+      "observedAt": "2026-10-21T08:09:52.637Z",
+      "exportTreatment": {
+        "kind": "alpha-preserving-solid-ink-v1",
+        "ink": "solid-black",
+        "sourceSha256": "d5c99ee1f99803ac4fa9adb969bb22f14e362a27cca6f244e45ace20df6331bf",
+        "newGeometry": false
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "832200bff45440fe8dc773a7efa520a2f5cbb1da3c614b54e6597c277934ba1b"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "1e2123cf6e14d49f3d838d7163f2df6e585ce2782d521b641ae8f6a4f3bab370",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "dealers/nextstep-auto-llc/branding/original-nextstep-header.png",
+        "sha256": "d5c99ee1f99803ac4fa9adb969bb22f14e362a27cca6f244e45ace20df6331bf",
+        "reviewReference": "dealers/nextstep-auto-llc/branding/source.json",
+        "reviewSha256": "9e9db63ab998f7a37b468c8944ec01633bb0623541dd2a5906cde4f17ed319a2",
+        "sourceUrl": "https://static.wixstatic.com/media/df41ea_6e3ab2fff5d743d99fc2eed96f04526a~mv2.png",
+        "observedAt": "2026-10-21T08:09:52.637Z",
+        "exportTreatment": {
+          "kind": "alpha-preserving-solid-ink-v1",
+          "ink": "solid-black",
+          "sourceSha256": "d5c99ee1f99803ac4fa9adb969bb22f14e362a27cca6f244e45ace20df6331bf",
+          "newGeometry": false
+        }
+      },
+      "sourceReference": "dealers/nextstep-auto-llc/branding/original-nextstep-header.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "b182b48e1676c36610d234bf0c26321ed0cf5fab7ad5a6e9fbffe178fb28568c",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "dealers/nextstep-auto-llc/branding/original-nextstep-header.png",
+        "sha256": "d5c99ee1f99803ac4fa9adb969bb22f14e362a27cca6f244e45ace20df6331bf",
+        "reviewReference": "dealers/nextstep-auto-llc/branding/source.json",
+        "reviewSha256": "9e9db63ab998f7a37b468c8944ec01633bb0623541dd2a5906cde4f17ed319a2",
+        "sourceUrl": "https://static.wixstatic.com/media/df41ea_6e3ab2fff5d743d99fc2eed96f04526a~mv2.png",
+        "observedAt": "2026-10-21T08:09:52.637Z"
+      },
+      "sourceReference": "dealers/nextstep-auto-llc/branding/original-nextstep-header.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "b182b48e1676c36610d234bf0c26321ed0cf5fab7ad5a6e9fbffe178fb28568c",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "dealers/nextstep-auto-llc/branding/original-nextstep-header.png",
+        "sha256": "d5c99ee1f99803ac4fa9adb969bb22f14e362a27cca6f244e45ace20df6331bf",
+        "reviewReference": "dealers/nextstep-auto-llc/branding/source.json",
+        "reviewSha256": "9e9db63ab998f7a37b468c8944ec01633bb0623541dd2a5906cde4f17ed319a2",
+        "sourceUrl": "https://static.wixstatic.com/media/df41ea_6e3ab2fff5d743d99fc2eed96f04526a~mv2.png",
+        "observedAt": "2026-10-21T08:09:52.637Z"
+      },
+      "sourceReference": "dealers/nextstep-auto-llc/branding/original-nextstep-header.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "d5c99ee1f99803ac4fa9adb969bb22f14e362a27cca6f244e45ace20df6331bf",
+      "sha256": "1e2123cf6e14d49f3d838d7163f2df6e585ce2782d521b641ae8f6a4f3bab370",
+      "crop": {
+        "left": 127,
+        "top": 135,
+        "width": 760,
+        "height": 682
+      },
+      "rasterTreatment": {
+        "kind": "alpha-preserving-solid-ink-v1",
+        "ink": "solid-black",
+        "originalAlphaUnchangedBeforeCropAndResize": true,
+        "newGeometry": false
+      },
+      "sourcePath": "branding/original-nextstep-header.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "d5c99ee1f99803ac4fa9adb969bb22f14e362a27cca6f244e45ace20df6331bf",
+      "sha256": "b182b48e1676c36610d234bf0c26321ed0cf5fab7ad5a6e9fbffe178fb28568c",
+      "crop": {
+        "left": 127,
+        "top": 135,
+        "width": 760,
+        "height": 682
+      },
+      "sourcePath": "branding/original-nextstep-header.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "d5c99ee1f99803ac4fa9adb969bb22f14e362a27cca6f244e45ace20df6331bf",
+      "sha256": "b182b48e1676c36610d234bf0c26321ed0cf5fab7ad5a6e9fbffe178fb28568c",
+      "crop": {
+        "left": 127,
+        "top": 135,
+        "width": 760,
+        "height": 682
+      },
+      "sourcePath": "branding/original-nextstep-header.png",
+      "outputPath": "branding/logo-on-accent.png"
+    },
+    "master": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "d5c99ee1f99803ac4fa9adb969bb22f14e362a27cca6f244e45ace20df6331bf",
+      "sha256": "1e2123cf6e14d49f3d838d7163f2df6e585ce2782d521b641ae8f6a4f3bab370",
+      "crop": {
+        "left": 127,
+        "top": 135,
+        "width": 760,
+        "height": 682
+      },
+      "rasterTreatment": {
+        "kind": "alpha-preserving-solid-ink-v1",
+        "ink": "solid-black",
+        "originalAlphaUnchangedBeforeCropAndResize": true,
+        "newGeometry": false
+      },
+      "sourcePath": "branding/original-nextstep-header.png"
+    },
+    "mark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "d5c99ee1f99803ac4fa9adb969bb22f14e362a27cca6f244e45ace20df6331bf",
+      "sha256": "fafeb1a3fc1404d52f6120f1ed94cd894ae07af911686da96cdb0a85a1aeacd4",
+      "crop": {
+        "left": 127,
+        "top": 135,
+        "width": 760,
+        "height": 682
+      },
+      "rasterTreatment": {
+        "kind": "alpha-preserving-solid-ink-v1",
+        "ink": "solid-black",
+        "originalAlphaUnchangedBeforeCropAndResize": true,
+        "newGeometry": false
+      },
+      "sourcePath": "branding/original-nextstep-header.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "5d6d4a6590d52acc4404652167e264f0dc1a20c665d273a3dedf7b77d4f4a11b",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "dealers/nextstep-auto-llc/branding/original-nextstep-header.png",
+        "sha256": "d5c99ee1f99803ac4fa9adb969bb22f14e362a27cca6f244e45ace20df6331bf",
+        "reviewReference": "dealers/nextstep-auto-llc/branding/source.json",
+        "reviewSha256": "9e9db63ab998f7a37b468c8944ec01633bb0623541dd2a5906cde4f17ed319a2",
+        "sourceUrl": "https://static.wixstatic.com/media/df41ea_6e3ab2fff5d743d99fc2eed96f04526a~mv2.png",
+        "observedAt": "2026-10-21T08:09:52.637Z",
+        "exportTreatment": {
+          "kind": "alpha-preserving-solid-ink-v1",
+          "ink": "solid-black",
+          "sourceSha256": "d5c99ee1f99803ac4fa9adb969bb22f14e362a27cca6f244e45ace20df6331bf",
+          "newGeometry": false
+        }
+      },
+      "sourceReference": "dealers/nextstep-auto-llc/branding/original-nextstep-header.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "57ae85300356add606c6a61076d79c4cc56735b20244dc7e38284f1e30218d20",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "dealers/nextstep-auto-llc/branding/original-nextstep-header.png",
+        "sha256": "d5c99ee1f99803ac4fa9adb969bb22f14e362a27cca6f244e45ace20df6331bf",
+        "reviewReference": "dealers/nextstep-auto-llc/branding/source.json",
+        "reviewSha256": "9e9db63ab998f7a37b468c8944ec01633bb0623541dd2a5906cde4f17ed319a2",
+        "sourceUrl": "https://static.wixstatic.com/media/df41ea_6e3ab2fff5d743d99fc2eed96f04526a~mv2.png",
+        "observedAt": "2026-10-21T08:09:52.637Z"
+      },
+      "sourceReference": "dealers/nextstep-auto-llc/branding/original-nextstep-header.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "fafeb1a3fc1404d52f6120f1ed94cd894ae07af911686da96cdb0a85a1aeacd4",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "dealers/nextstep-auto-llc/branding/original-nextstep-header.png",
+        "sha256": "d5c99ee1f99803ac4fa9adb969bb22f14e362a27cca6f244e45ace20df6331bf",
+        "reviewReference": "dealers/nextstep-auto-llc/branding/source.json",
+        "reviewSha256": "9e9db63ab998f7a37b468c8944ec01633bb0623541dd2a5906cde4f17ed319a2",
+        "sourceUrl": "https://static.wixstatic.com/media/df41ea_6e3ab2fff5d743d99fc2eed96f04526a~mv2.png",
+        "observedAt": "2026-10-21T08:09:52.637Z",
+        "exportTreatment": {
+          "kind": "alpha-preserving-solid-ink-v1",
+          "ink": "solid-black",
+          "sourceSha256": "d5c99ee1f99803ac4fa9adb969bb22f14e362a27cca6f244e45ace20df6331bf",
+          "newGeometry": false
+        }
+      },
+      "sourceReference": "dealers/nextstep-auto-llc/branding/original-nextstep-header.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "832200bff45440fe8dc773a7efa520a2f5cbb1da3c614b54e6597c277934ba1b",
+      "retainedSource": {
+        "kind": "retained-reviewed-raster",
+        "reference": "dealers/nextstep-auto-llc/branding/original-nextstep-header.png",
+        "sha256": "d5c99ee1f99803ac4fa9adb969bb22f14e362a27cca6f244e45ace20df6331bf",
+        "reviewReference": "dealers/nextstep-auto-llc/branding/source.json",
+        "reviewSha256": "9e9db63ab998f7a37b468c8944ec01633bb0623541dd2a5906cde4f17ed319a2",
+        "sourceUrl": "https://static.wixstatic.com/media/df41ea_6e3ab2fff5d743d99fc2eed96f04526a~mv2.png",
+        "observedAt": "2026-10-21T08:09:52.637Z",
+        "exportTreatment": {
+          "kind": "alpha-preserving-solid-ink-v1",
+          "ink": "solid-black",
+          "sourceSha256": "d5c99ee1f99803ac4fa9adb969bb22f14e362a27cca6f244e45ace20df6331bf",
+          "newGeometry": false
+        }
+      },
+      "sourceReference": "dealers/nextstep-auto-llc/branding/original-nextstep-header.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-21T08:09:52.637Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "02081dd6cc73cdf5fb8053bead3fe683480ca6e86f2963b75d79184730693a24",
+    "retainedSource": {
+      "kind": "retained-reviewed-raster",
+      "reference": "dealers/nextstep-auto-llc/branding/original-nextstep-header.png",
+      "sha256": "d5c99ee1f99803ac4fa9adb969bb22f14e362a27cca6f244e45ace20df6331bf",
+      "reviewReference": "dealers/nextstep-auto-llc/branding/source.json",
+      "reviewSha256": "9e9db63ab998f7a37b468c8944ec01633bb0623541dd2a5906cde4f17ed319a2",
+      "sourceUrl": "https://static.wixstatic.com/media/df41ea_6e3ab2fff5d743d99fc2eed96f04526a~mv2.png",
+      "observedAt": "2026-10-21T08:09:52.637Z"
+    }
+  }
+}
