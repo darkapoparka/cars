@@ -48,7 +48,7 @@ export function personalizeDemoStockDisclosure(source, key, profile) {
     const styled = disclosure.replace('style="margin:0;', 'style="margin:24px auto 0;')
       .replace('padding:0.75rem 1rem;', 'padding:14px 20px;')
       .replace('box-sizing:border-box;', 'box-sizing:border-box;border-top:1px solid #e7e7eb;background:#f6f6f8;color:#61616a;');
-    return source.replace(afterContent, '  {@render children()}\n  ' + styled + '\n</SiteShell>');
+    return source.replace(afterContent, () => '  {@render children()}\n  ' + styled + '\n</SiteShell>');
   }
   // Import's route owns its header/footer; keep this outside its next conditional.
   return source.replace(anchor, () => key === 'import' ? disclosure + '\n' + anchor : anchor + '\n' + disclosure);
