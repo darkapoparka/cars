@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "dealer": "wyze-motors-ltd",
+  "exactBusinessName": "Wyze Motors Ltd",
+  "status": "first-pass-generated-proposal-not-deploy-ready",
+  "identityStatus": "independent-website-concept-not-adopted",
+  "dealerApproval": false,
+  "ownerApproval": false,
+  "sourcePackModified": false,
+  "sourceEvidence": {
+    "observedOn": "2026-10-22",
+    "publicIdentityUrls": [
+      "https://www.theaa.com/used-cars/dealers/wyze-motors-ltd-windsor",
+      "https://showroom.ebaymotorspro.co.uk/Wyze-Motors-Ltd?menu=1"
+    ],
+    "publishedLogoRasterVerified": false,
+    "note": "Public same-name dealer listings confirm identity leads, but no source-logo raster was reviewed as a suitable edit target in this proposal pass. If a recognizable published logo is confirmed, preserve it instead of replacing it with this concept."
+  },
+  "generation": {
+    "tool": "image_gen.imagegen",
+    "modelVersion": null,
+    "toolResultId": null,
+    "toolResultIdAvailability": "Not returned; no identifier invented.",
+    "prompt": "Use case: logo-brand\nAsset type: original independent automotive dealer logo proposal, transparent PNG master\nPrimary request: a distinctive professional brand identity for the EXACT business text \"Wyze Motors Ltd\", rendered only once.\nIdentity idea: create a clever but understated bespoke angular W emblem subtly suggesting a forward road convergence through negative space, WITHOUT literal steering wheel or car outline. Wordmark \"Wyze Motors Ltd\" alongside in exquisite geometric sans typography.\nStyle: premium British automotive retail, precise vector-like flat artwork, confident clean letterforms, careful spacing, simple silhouette.\nPalette: deep midnight navy and cool desaturated teal, flat solid inks; no gradients or gloss.\nComposition: horizontal lockup, emblem on left and wordmark on right, modest safe transparent margins, legible in mobile website header; icon able to stand alone at 32px.\nConstraints: exact text \"Wyze Motors Ltd\", genuine transparent alpha; no slogans, no additional words, no stock badges, no mockup, no background rectangle or checkerboard, no watermark, no 3D, no car clipart. Independent proposal, not an official brand claim.",
+    "transparentBackgroundRequested": true,
+    "asset": {
+      "path": "master-generated.png",
+      "sha256": "94485b316be6b3da5b24f60be9d06884e577ce71fc06244147ef7e740cd4a3ff",
+      "gitBlobSha1": "3a92edd7ec53230448fc01205bc7104a8e2be6d4",
+      "bytes": 361160,
+      "width": 2172,
+      "height": 724,
+      "pngColorType": "rgba"
+    }
+  },
+  "qa": {
+    "firstPassAgentVisualInspection": true,
+    "correctTextVisuallyAppears": true,
+    "alphaPixelsIndependentlyChecked": false,
+    "wordmarkAtSmallSizesReviewed": false,
+    "compactMarkReady": false,
+    "onLightReady": false,
+    "onDarkReady": false,
+    "onAccentReady": false,
+    "allSixDesignScreensReviewed": false,
+    "contactSheetReady": false
+  },
+  "holdReasons": [
+    "Concept not compared with recognizable same-business published logo",
+    "No separate 32/48/64px compact mark and on-dark/accent exports",
+    "No maintained source-pack hashes or six-template screenshot review",
+    "No dealer adoption/approval"
+  ],
+  "deployed": false
+}

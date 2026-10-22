@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "dealer": "c-car-sales-ltd",
+  "exactBusinessName": "C-Car Sales Ltd",
+  "status": "first-pass-generated-proposal-not-deploy-ready",
+  "identityStatus": "independent-website-concept-not-adopted",
+  "dealerApproval": false,
+  "ownerApproval": false,
+  "sourcePackModified": false,
+  "sourceEvidence": {
+    "observedOn": "2026-10-22",
+    "publicIdentityUrls": [
+      "https://www.cazoo.co.uk/dealers/c-car-sales-ltd-97867/",
+      "https://showroom.ebaymotorspro.co.uk/ccarsales-ltd"
+    ],
+    "publishedLogoRasterVerified": false,
+    "note": "Public same-name dealer listings confirm identity leads, but no source-logo raster was reviewed as a suitable edit target in this proposal pass. If a recognizable published logo is confirmed, preserve it instead of replacing it with this concept."
+  },
+  "generation": {
+    "tool": "image_gen.imagegen",
+    "modelVersion": null,
+    "toolResultId": null,
+    "toolResultIdAvailability": "Not returned; no identifier invented.",
+    "prompt": "Use case: logo-brand\nAsset type: original independent logo concept for dealer preview, transparent PNG master\nPrimary request: design a striking contemporary specialist used-car retailer identity with exact brand text \"C-Car Sales Ltd\" and no other words.\nIdentity idea: a custom negative-space double-C ligature inside a compact near-square geometric motif, refined and instantly readable. To the right, clear type \"C-Car Sales Ltd\" with very balanced proportions and high legibility.\nStyle: exceptionally polished Swiss editorial identity, clean flat vector-like edges, thoughtful optical kerning, mature rather than flashy.\nPalette: nearly black charcoal with restrained burnt-copper/orange accent, no gradients.\nComposition: wide horizontal wordmark plus separable compact emblem, all centered with generous genuine transparent padding.\nConstraints: spell \"C-Car Sales Ltd\" exactly with the hyphen, never \"C&Car\" or a different name; no watermark, no white/colored box background, no faux transparency grid, no vehicle silhouette, no wing logo, no badge clutter, no 3D mockup. Independent proposal, not dealer approved.",
+    "transparentBackgroundRequested": true,
+    "asset": {
+      "path": "master-generated.png",
+      "sha256": "cf8c50878d92d5146c55467fab6f27448650c139dd87e9da5882090edfb6a2b9",
+      "gitBlobSha1": "ab9c292a069adcfb43d85ba18c214ad77e338ad5",
+      "bytes": 368080,
+      "width": 2172,
+      "height": 724,
+      "pngColorType": "rgba"
+    }
+  },
+  "qa": {
+    "firstPassAgentVisualInspection": true,
+    "correctTextVisuallyAppears": true,
+    "alphaPixelsIndependentlyChecked": false,
+    "wordmarkAtSmallSizesReviewed": false,
+    "compactMarkReady": false,
+    "onLightReady": false,
+    "onDarkReady": false,
+    "onAccentReady": false,
+    "allSixDesignScreensReviewed": false,
+    "contactSheetReady": false
+  },
+  "holdReasons": [
+    "Concept not compared with recognizable same-business published logo",
+    "No separate 32/48/64px compact mark and on-dark/accent exports",
+    "No maintained source-pack hashes or six-template screenshot review",
+    "No dealer adoption/approval"
+  ],
+  "deployed": false
+}

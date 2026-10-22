@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "dealer": "jwg-auto-sales-llc",
+  "exactBusinessName": "JWG Auto Sales LLC",
+  "status": "first-pass-generated-proposal-not-deploy-ready",
+  "identityStatus": "independent-website-concept-not-adopted",
+  "dealerApproval": false,
+  "ownerApproval": false,
+  "sourcePackModified": false,
+  "sourceEvidence": {
+    "observedOn": "2026-10-22",
+    "publicIdentityUrls": [
+      "https://www.jwgautosales.com/"
+    ],
+    "publishedLogoRasterVerified": false,
+    "note": "Public same-name dealer listings confirm identity leads, but no source-logo raster was reviewed as a suitable edit target in this proposal pass. If a recognizable published logo is confirmed, preserve it instead of replacing it with this concept."
+  },
+  "generation": {
+    "tool": "image_gen.imagegen",
+    "modelVersion": null,
+    "toolResultId": null,
+    "toolResultIdAvailability": "Not returned; no identifier invented.",
+    "prompt": "Use case: logo-brand\nAsset type: original independent automotive retailer logo concept, transparent PNG master\nPrimary request: create a tasteful robust identity for \"JWG Auto Sales LLC\", using those exact letters and no other text.\nIdentity idea: a custom bold interlocking \"JWG\" typographic symbol that feels engineered and balanced, with distinctive negative-space cuts, paired with a clean smaller \"AUTO SALES LLC\" subtitle. No car drawing.\nStyle: sophisticated Colorado independent dealer; timeless American modernist signmaking, exceptionally clear flat-vector geometry and generous internal counters; works at small header and square social icon sizes.\nPalette: dark ink black and an energetic restrained golden amber accent, solid fills.\nComposition: one centered horizontal/stacked logo lockup on truly transparent background, margins free of stray pixels, crisp letterforms.\nConstraints: exact spelling \"JWG Auto Sales LLC\" (not \"JWG Auto Sale\"), no slogans, no watermark, no mockup, no photos, no gradient, no strokes too thin to survive 32px, no shield/crown/wings/gear/steering wheel. Independent website proposal, not official.",
+    "transparentBackgroundRequested": true,
+    "asset": {
+      "path": "master-generated.png",
+      "sha256": "09014016b4201d9145c2edd4d863b3429a8b704e9e9e24810d0453e998a6adbf",
+      "gitBlobSha1": "d5e78f8a055eadfd0f77cb783f93db65854dd0ad",
+      "bytes": 621150,
+      "width": 1774,
+      "height": 887,
+      "pngColorType": "rgba"
+    }
+  },
+  "qa": {
+    "firstPassAgentVisualInspection": true,
+    "correctTextVisuallyAppears": true,
+    "alphaPixelsIndependentlyChecked": false,
+    "wordmarkAtSmallSizesReviewed": false,
+    "compactMarkReady": false,
+    "onLightReady": false,
+    "onDarkReady": false,
+    "onAccentReady": false,
+    "allSixDesignScreensReviewed": false,
+    "contactSheetReady": false
+  },
+  "holdReasons": [
+    "Concept not compared with recognizable same-business published logo",
+    "No separate 32/48/64px compact mark and on-dark/accent exports",
+    "No maintained source-pack hashes or six-template screenshot review",
+    "No dealer adoption/approval"
+  ],
+  "deployed": false
+}

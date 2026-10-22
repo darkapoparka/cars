@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "dealer": "l4c-car-sale",
+  "exactBusinessName": "L4C Car Sale",
+  "status": "first-pass-generated-proposal-not-deploy-ready",
+  "identityStatus": "independent-website-concept-not-adopted",
+  "dealerApproval": false,
+  "ownerApproval": false,
+  "sourcePackModified": false,
+  "sourceEvidence": {
+    "observedOn": "2026-10-22",
+    "publicIdentityUrls": [
+      "https://www.cazoo.co.uk/dealers/l4c-car-sale-19538/",
+      "https://showroom.ebaymotorspro.co.uk/Kobani-Motors"
+    ],
+    "publishedLogoRasterVerified": false,
+    "note": "Public same-name dealer listings confirm identity leads, but no source-logo raster was reviewed as a suitable edit target in this proposal pass. If a recognizable published logo is confirmed, preserve it instead of replacing it with this concept."
+  },
+  "generation": {
+    "tool": "image_gen.imagegen",
+    "modelVersion": null,
+    "toolResultId": null,
+    "toolResultIdAvailability": "Not returned; no identifier invented.",
+    "prompt": "Use case: logo-brand\nAsset type: original independent logo proposal for a Cars Studio dealer preview; one logo asset, transparent PNG.\nPrimary request: Design a distinctive premium yet approachable automotive retailer logo for the EXACT dealership name \"L4C Car Sale\". The brand name spelling and capitalization must be exactly \"L4C Car Sale\"; no other text.\nIdentity idea: Give \"L4C\" a bespoke, sharply constructed geometric letter-and-number monogram with integrated negative-space cuts. Pair with a confident restrained sans-serif wordmark \"Car Sale\" below or alongside, sized for a 180px wide website header.\nStyle/medium: meticulously flat vector-like brand identity, confident Swiss modernist proportions; crisp contours; clean optical alignment and careful kerning; understated automotive design sophistication.\nPalette: deep graphite with one limited vivid cobalt-blue accent. Use solid fills, no gradients.\nComposition: ONE complete lockup with icon and wordmark, centered on a genuinely transparent background, generous transparent safe padding; icon must remain recognizable at 32px and wordmark legible when scaled.\nConstraints: pristine professional logo, exact spelling \"L4C Car Sale\" only, readable type, balanced horizontal/compact proportions, full alpha transparency, no white rectangle, no texture, no shadow, no watermark, no car clipart, no shields, no crowns, no generic swoosh, no mockup or sheet. This is an independent website concept, not an official dealership logo.",
+    "transparentBackgroundRequested": true,
+    "asset": {
+      "path": "master-generated.png",
+      "sha256": "97e731b3c445dcd7c19ab6a10bf5a0ba69c2a5f8313d5f48fbd30f931a013f21",
+      "gitBlobSha1": "808df94c6a54b38742eb295731b1f0857d83722c",
+      "bytes": 422778,
+      "width": 1774,
+      "height": 887,
+      "pngColorType": "rgba"
+    }
+  },
+  "qa": {
+    "firstPassAgentVisualInspection": true,
+    "correctTextVisuallyAppears": true,
+    "alphaPixelsIndependentlyChecked": false,
+    "wordmarkAtSmallSizesReviewed": false,
+    "compactMarkReady": false,
+    "onLightReady": false,
+    "onDarkReady": false,
+    "onAccentReady": false,
+    "allSixDesignScreensReviewed": false,
+    "contactSheetReady": false
+  },
+  "holdReasons": [
+    "Concept not compared with recognizable same-business published logo",
+    "No separate 32/48/64px compact mark and on-dark/accent exports",
+    "No maintained source-pack hashes or six-template screenshot review",
+    "No dealer adoption/approval"
+  ],
+  "deployed": false
+}

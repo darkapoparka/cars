@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-logo-first-pass-generated-proposal-batch",
+  "batch": 1,
+  "observedOn": "2026-10-22",
+  "sourceAuditBranch": "astra/logo-quality-20261022",
+  "sourceHead": "b824bf68ac7d75bcb91ee5c18e092cf9bda2467d",
+  "targetBranch": "astra/logo-only-proposals-20261022",
+  "purpose": "Original design concepts only; preserve and visually verify authentic dealer branding before any source-pack integration.",
+  "generatedProposalCount": 4,
+  "releaseReadyCount": 0,
+  "sourcePacksModified": 0,
+  "cloudflareDeployments": 0,
+  "logos": [
+    {
+      "dealer": "l4c-car-sale",
+      "displayName": "L4C Car Sale",
+      "path": "docs/logo-quality/2026-10-22/proposals/l4c-car-sale/master-generated.png",
+      "sha256": "97e731b3c445dcd7c19ab6a10bf5a0ba69c2a5f8313d5f48fbd30f931a013f21",
+      "gitBlobSha1": "808df94c6a54b38742eb295731b1f0857d83722c",
+      "status": "first-pass-generated-proposal-not-deploy-ready"
+    },
+    {
+      "dealer": "wyze-motors-ltd",
+      "displayName": "Wyze Motors Ltd",
+      "path": "docs/logo-quality/2026-10-22/proposals/wyze-motors-ltd/master-generated.png",
+      "sha256": "94485b316be6b3da5b24f60be9d06884e577ce71fc06244147ef7e740cd4a3ff",
+      "gitBlobSha1": "3a92edd7ec53230448fc01205bc7104a8e2be6d4",
+      "status": "first-pass-generated-proposal-not-deploy-ready"
+    },
+    {
+      "dealer": "c-car-sales-ltd",
+      "displayName": "C-Car Sales Ltd",
+      "path": "docs/logo-quality/2026-10-22/proposals/c-car-sales-ltd/master-generated.png",
+      "sha256": "cf8c50878d92d5146c55467fab6f27448650c139dd87e9da5882090edfb6a2b9",
+      "gitBlobSha1": "ab9c292a069adcfb43d85ba18c214ad77e338ad5",
+      "status": "first-pass-generated-proposal-not-deploy-ready"
+    },
+    {
+      "dealer": "jwg-auto-sales-llc",
+      "displayName": "JWG Auto Sales LLC",
+      "path": "docs/logo-quality/2026-10-22/proposals/jwg-auto-sales-llc/master-generated.png",
+      "sha256": "09014016b4201d9145c2edd4d863b3429a8b704e9e9e24810d0453e998a6adbf",
+      "gitBlobSha1": "d5e78f8a055eadfd0f77cb783f93db65854dd0ad",
+      "status": "first-pass-generated-proposal-not-deploy-ready"
+    }
+  ]
+}
