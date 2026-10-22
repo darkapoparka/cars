@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-logo-first-pass-generated-proposal-batch",
+  "batch": 2,
+  "observedOn": "2026-10-22",
+  "sourceAuditBranch": "astra/logo-quality-20261022",
+  "targetBranch": "astra/logo-only-proposals-20261022",
+  "generatedProposalCount": 4,
+  "releaseReadyCount": 0,
+  "sourcePacksModified": 0,
+  "cloudflareDeployments": 0,
+  "logos": [
+    {
+      "dealer": "affordable-motors-birmingham",
+      "displayName": "Affordable Motors Birmingham",
+      "path": "docs/logo-quality/2026-10-22/proposals/affordable-motors-birmingham/master-generated.png",
+      "sha256": "3827e8c87317c64d44355d455c2f102f30e1081e3743b7bfdfba46b3c431f7f4",
+      "gitBlobSha1": "62db39795420515bd0190b980d879d767cd8cf3e",
+      "status": "first-pass-generated-proposal-not-deploy-ready"
+    },
+    {
+      "dealer": "yorkshire-car-company-of-castleford",
+      "displayName": "Yorkshire Car Company of Castleford",
+      "path": "docs/logo-quality/2026-10-22/proposals/yorkshire-car-company-of-castleford/master-generated.png",
+      "sha256": "d124fd29b20437427ad35e8a3f6d46b3ada5df4495d9bc6c088a770cf52242ec",
+      "gitBlobSha1": "ebc6a5a17fc5cacb024fb228146c36365c051c33",
+      "status": "first-pass-generated-proposal-not-deploy-ready"
+    },
+    {
+      "dealer": "michael-andrew-cars-ltd",
+      "displayName": "Michael Andrew Cars Ltd",
+      "path": "docs/logo-quality/2026-10-22/proposals/michael-andrew-cars-ltd/master-generated.png",
+      "sha256": "973c7d9841e6cc83afc6dd92ab7c482b97f5dc8fc98d16249a833af71bf0e1fb",
+      "gitBlobSha1": "873e5922cd14511d96c62ec2b2f46dea834c43f8",
+      "status": "first-pass-generated-proposal-not-deploy-ready"
+    },
+    {
+      "dealer": "three-camels-trading",
+      "displayName": "Three Camels Trading",
+      "path": "docs/logo-quality/2026-10-22/proposals/three-camels-trading/master-generated.png",
+      "sha256": "815e119b982505e95eb062efc69f3d42b67e85b4b95a9e6de50ab41ba70ecb16",
+      "gitBlobSha1": "0e9f5ad88052c11be15054ecfb402a917f845c7f",
+      "status": "first-pass-generated-proposal-not-deploy-ready"
+    }
+  ]
+}

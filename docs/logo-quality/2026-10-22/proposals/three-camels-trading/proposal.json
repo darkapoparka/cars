@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "dealer": "three-camels-trading",
+  "exactBusinessName": "Three Camels Trading",
+  "status": "first-pass-generated-proposal-not-deploy-ready",
+  "identityStatus": "independent-website-concept-not-adopted",
+  "dealerApproval": false,
+  "ownerApproval": false,
+  "sourcePackModified": false,
+  "sourceEvidence": {
+    "observedOn": "2026-10-22",
+    "publicIdentityUrls": [
+      "https://www.dubicars.com/dealers/dubai-three-camels-trading-3021"
+    ],
+    "publishedLogoRasterVerified": false,
+    "note": "Source identity listing available but original dealer logo not selected for an edit. Concept is a proposal only; preserve any recognizable published mark after visual verification."
+  },
+  "generation": {
+    "tool": "image_gen.imagegen",
+    "toolResultId": null,
+    "modelVersion": null,
+    "toolResultIdAvailability": "Not returned by image-generation tool; not invented",
+    "prompt": "Use case: logo-brand\nAsset type: original premium dealership website logo proposal, truly transparent PNG.\nPrimary request: original contemporary brand logo for the exact trading name \"Three Camels Trading\", with those exact three words only.\nConcept: a beautiful geometric triplet of three interlocking rising desert-dune arches forming an abstract monogram, paired with confident legible typography. Sophisticated Gulf trade identity, respectful and clean; avoid literal animal clip art.\nStyle: minimal vector-like flat identity, exquisitely restrained Arabian modernism, balanced negative space and strong silhouette.\nPalette: deep ink black with warm sandstone ochre accent, solid inks, not metallic, no gradients.\nComposition: one horizontal wordmark and separable symbolic motif, centered, generous transparent margins, suitable for a car sales preview's header and small social mark.\nConstraints: spell \"Three Camels Trading\" exactly, no Arabic lettering added, no other text, no camel illustration, no car outline, no 3D, no background or watermark. Proposal only, no dealer approval claimed.",
+    "transparentBackgroundRequested": true,
+    "asset": {
+      "path": "master-generated.png",
+      "sha256": "815e119b982505e95eb062efc69f3d42b67e85b4b95a9e6de50ab41ba70ecb16",
+      "gitBlobSha1": "0e9f5ad88052c11be15054ecfb402a917f845c7f",
+      "bytes": 545401,
+      "width": 2103,
+      "height": 748,
+      "pngColorType": "rgba"
+    }
+  },
+  "qa": {
+    "firstPassAgentVisualInspection": true,
+    "correctTextVisuallyAppears": true,
+    "alphaPixelsIndependentlyChecked": false,
+    "wordmarkAtSmallSizesReviewed": false,
+    "compactMarkReady": false,
+    "onLightReady": false,
+    "onDarkReady": false,
+    "onAccentReady": false,
+    "allSixDesignScreensReviewed": false,
+    "contactSheetReady": false
+  },
+  "holdReasons": [
+    "Original same-business published branding not fully visually compared",
+    "Compact/32/48/64px and inverse surface exports not yet generated",
+    "No source pack or six-template screenshot validation",
+    "No dealer/owner adoption"
+  ],
+  "deployed": false
+}

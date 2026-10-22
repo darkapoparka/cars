@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "dealer": "yorkshire-car-company-of-castleford",
+  "exactBusinessName": "Yorkshire Car Company of Castleford",
+  "status": "first-pass-generated-proposal-not-deploy-ready",
+  "identityStatus": "independent-website-concept-not-adopted",
+  "dealerApproval": false,
+  "ownerApproval": false,
+  "sourcePackModified": false,
+  "sourceEvidence": {
+    "observedOn": "2026-10-22",
+    "publicIdentityUrls": [
+      "https://showroom.ebaymotorspro.co.uk/Yorkshire-Car-Company-Of-Castleford?menu=1",
+      "https://www.cazoo.co.uk/dealers/yorkshire-car-company-99510/"
+    ],
+    "publishedLogoRasterVerified": false,
+    "note": "Source identity listing available but original dealer logo not selected for an edit. Concept is a proposal only; preserve any recognizable published mark after visual verification."
+  },
+  "generation": {
+    "tool": "image_gen.imagegen",
+    "toolResultId": null,
+    "modelVersion": null,
+    "toolResultIdAvailability": "Not returned by image-generation tool; not invented",
+    "prompt": "Use case: logo-brand\nAsset type: original independent dealership logo proposal for a six-design website; transparent PNG.\nPrimary request: elegant credible identity for the exact dealer name \"Yorkshire Car Company of Castleford\". Preserve these words, no invented tagline.\nVisual direction: nuanced northern-English motoring craft meets confident contemporary typography. Develop a compact custom YCC letterform emblem with quietly structured positive and negative geometry, then a highly readable wordmark arranged \"Yorkshire Car Company\" with smaller \"of Castleford\".\nStyle: precision flat-vector identity, British editorial sans-serif, understated weight, high craft in typography; not retro kitsch.\nPalette: deep slate blue and warm restrained copper accent, solid fills.\nComposition: centered horizontal or gently stacked complete logo with actual transparent padding; mark separable and legible at 32px.\nConstraints: no imagery of county crest/flag, no steering wheel, no generic automobile outline, no paper/mockup/background box, no light effects; exact lettering must be legible, no watermark. Independent proposal, not dealership adoption.",
+    "transparentBackgroundRequested": true,
+    "asset": {
+      "path": "master-generated.png",
+      "sha256": "d124fd29b20437427ad35e8a3f6d46b3ada5df4495d9bc6c088a770cf52242ec",
+      "gitBlobSha1": "ebc6a5a17fc5cacb024fb228146c36365c051c33",
+      "bytes": 486781,
+      "width": 1983,
+      "height": 793,
+      "pngColorType": "rgba"
+    }
+  },
+  "qa": {
+    "firstPassAgentVisualInspection": true,
+    "correctTextVisuallyAppears": true,
+    "alphaPixelsIndependentlyChecked": false,
+    "wordmarkAtSmallSizesReviewed": false,
+    "compactMarkReady": false,
+    "onLightReady": false,
+    "onDarkReady": false,
+    "onAccentReady": false,
+    "allSixDesignScreensReviewed": false,
+    "contactSheetReady": false
+  },
+  "holdReasons": [
+    "Original same-business published branding not fully visually compared",
+    "Compact/32/48/64px and inverse surface exports not yet generated",
+    "No source pack or six-template screenshot validation",
+    "No dealer/owner adoption"
+  ],
+  "deployed": false
+}

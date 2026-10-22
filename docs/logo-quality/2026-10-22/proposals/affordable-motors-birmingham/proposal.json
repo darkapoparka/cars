@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "dealer": "affordable-motors-birmingham",
+  "exactBusinessName": "Affordable Motors Birmingham",
+  "status": "first-pass-generated-proposal-not-deploy-ready",
+  "identityStatus": "independent-website-concept-not-adopted",
+  "dealerApproval": false,
+  "ownerApproval": false,
+  "sourcePackModified": false,
+  "sourceEvidence": {
+    "observedOn": "2026-10-22",
+    "publicIdentityUrls": [
+      "https://showroom.ebaymotorspro.co.uk/Affordable-motors",
+      "https://www.cargurus.co.uk/Cars/m-Affordable-Motors-Birmingham-sp525539"
+    ],
+    "publishedLogoRasterVerified": false,
+    "note": "Source identity listing available but original dealer logo not selected for an edit. Concept is a proposal only; preserve any recognizable published mark after visual verification."
+  },
+  "generation": {
+    "tool": "image_gen.imagegen",
+    "toolResultId": null,
+    "modelVersion": null,
+    "toolResultIdAvailability": "Not returned by image-generation tool; not invented",
+    "prompt": "Use case: logo-brand\nAsset type: original proposal for an independently branded Cars Studio automotive dealer website, transparent PNG master.\nPrimary request: professionally art-direct a dealer logo with the exact name \"Affordable Motors Birmingham\". Do not invent any other words.\nVisual direction: trustworthy contemporary British car retailer, no budget-store clichés. A bold but optically precise AM geometric monogram with a single angled inner channel that suggests a road intersection very subtly; approachable clean wordmark on two balanced rows \"Affordable Motors\" and smaller \"Birmingham\".\nStyle: sober modern corporate identity, truly flat vector-like artwork, purposeful negative space, crisp typography, no decorative ornaments.\nPalette: graphite black with measured deep forest-green accent.\nComposition: one complete horizontal lockup centered on transparent background with generous alpha margins; strong icon suitable to derive small app mark, readable dealership name in web headers.\nConstraints: exact spelling \"Affordable Motors Birmingham\" and nothing else; no white/colored background, no transparency checkerboard, no gradients, glossy effects, car silhouette, steering wheel, money icons, arrow clip-art, mockups or watermarks. Independent not dealer-approved concept.",
+    "transparentBackgroundRequested": true,
+    "asset": {
+      "path": "master-generated.png",
+      "sha256": "3827e8c87317c64d44355d455c2f102f30e1081e3743b7bfdfba46b3c431f7f4",
+      "gitBlobSha1": "62db39795420515bd0190b980d879d767cd8cf3e",
+      "bytes": 358470,
+      "width": 2035,
+      "height": 773,
+      "pngColorType": "rgba"
+    }
+  },
+  "qa": {
+    "firstPassAgentVisualInspection": true,
+    "correctTextVisuallyAppears": true,
+    "alphaPixelsIndependentlyChecked": false,
+    "wordmarkAtSmallSizesReviewed": false,
+    "compactMarkReady": false,
+    "onLightReady": false,
+    "onDarkReady": false,
+    "onAccentReady": false,
+    "allSixDesignScreensReviewed": false,
+    "contactSheetReady": false
+  },
+  "holdReasons": [
+    "Original same-business published branding not fully visually compared",
+    "Compact/32/48/64px and inverse surface exports not yet generated",
+    "No source pack or six-template screenshot validation",
+    "No dealer/owner adoption"
+  ],
+  "deployed": false
+}

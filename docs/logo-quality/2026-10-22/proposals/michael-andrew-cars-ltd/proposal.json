@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "dealer": "michael-andrew-cars-ltd",
+  "exactBusinessName": "Michael Andrew Cars Ltd",
+  "status": "first-pass-generated-proposal-not-deploy-ready",
+  "identityStatus": "independent-website-concept-not-adopted",
+  "dealerApproval": false,
+  "ownerApproval": false,
+  "sourcePackModified": false,
+  "sourceEvidence": {
+    "observedOn": "2026-10-22",
+    "publicIdentityUrls": [
+      "https://showroom.ebaymotorspro.co.uk/Michael-Andrew-Cars-Ltd",
+      "https://www.autotrader.co.uk/dealers/yorkshire/huddersfield/michael-andrew-cars-limited-10051135"
+    ],
+    "publishedLogoRasterVerified": false,
+    "note": "Source identity listing available but original dealer logo not selected for an edit. Concept is a proposal only; preserve any recognizable published mark after visual verification."
+  },
+  "generation": {
+    "tool": "image_gen.imagegen",
+    "toolResultId": null,
+    "modelVersion": null,
+    "toolResultIdAvailability": "Not returned by image-generation tool; not invented",
+    "prompt": "Use case: logo-brand\nAsset type: sophisticated original independent automotive retailer logo, transparent PNG master.\nPrimary request: design a refined identity reading EXACTLY \"Michael Andrew Cars Ltd\" with no other text. A confident two-letter \"MA\" editorial monogram with refined architectural cuts, married to measured wordmark typography.\nVisual direction: boutique British independent car showroom, quiet confidence; differentiated from mass-market generic automotive logos.\nStyle: immaculate flat-vector geometry, perfectly balanced generous letter spacing, premium humanist sans wordmark, no thin fragile details.\nPalette: midnight ink with one limited muted sage/sea-green accent; solid color blocks.\nComposition: flexible wide lockup with MA emblem on left and text on right, true transparent alpha and modest safe border; clean when downscaled for a 180px site header.\nConstraints: exact visible wording \"Michael Andrew Cars Ltd\", no extra tagline, no 3D, gradients, brushed metal, vehicles, oval rings, wings, crowns, shields, or watermarks. Independent concept, not official dealer mark.",
+    "transparentBackgroundRequested": true,
+    "asset": {
+      "path": "master-generated.png",
+      "sha256": "973c7d9841e6cc83afc6dd92ab7c482b97f5dc8fc98d16249a833af71bf0e1fb",
+      "gitBlobSha1": "873e5922cd14511d96c62ec2b2f46dea834c43f8",
+      "bytes": 274770,
+      "width": 2172,
+      "height": 724,
+      "pngColorType": "rgba"
+    }
+  },
+  "qa": {
+    "firstPassAgentVisualInspection": true,
+    "correctTextVisuallyAppears": true,
+    "alphaPixelsIndependentlyChecked": false,
+    "wordmarkAtSmallSizesReviewed": false,
+    "compactMarkReady": false,
+    "onLightReady": false,
+    "onDarkReady": false,
+    "onAccentReady": false,
+    "allSixDesignScreensReviewed": false,
+    "contactSheetReady": false
+  },
+  "holdReasons": [
+    "Original same-business published branding not fully visually compared",
+    "Compact/32/48/64px and inverse surface exports not yet generated",
+    "No source pack or six-template screenshot validation",
+    "No dealer/owner adoption"
+  ],
+  "deployed": false
+}
