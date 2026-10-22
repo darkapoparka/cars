@@ -545,11 +545,15 @@ test('raster checks reject opaque, padded, blank and low-contrast images at actu
  const width=256,height=96,rgba=Buffer.alloc(width*height*4);
  for(let y=8;y<88;y++)for(let x=12;x<244;x++)if((x%24)<16){const offset=(y*width+x)*4;rgba[offset]=17;rgba[offset+1]=17;rgba[offset+2]=19;rgba[offset+3]=255;}
  const bytes=await sharp(rgba,{raw:{width,height,channels:4}}).png().toBuffer();
- const good=await inspectLogoPixels(bytes,{sharp,backgrounds:['#ffffff']});assert.equal(good.status,'passed');assert.equal(good.spellingVerified,false);assert.deepEqual(good.smallSizes.map(row=>row.height),[32,64]);
+ const good=await inspectLogoPixels(bytes,{sharp,backgrounds:['#ffffff']});assert.equal(good.status,'passed');assert.equal(good.spellingVerified,false);assert.deepEqual(good.smallSizes.map(row=>row.height),[32,48,64]);
  const dark=await inspectLogoPixels(bytes,{sharp,backgrounds:['#111113']});assert(dark.findings.some(value=>value.startsWith('weak-contrast:')));
  const padded=await sharp(bytes).extend({top:200,bottom:200,left:200,right:200,background:'#00000000'}).png().toBuffer();assert((await inspectLogoPixels(padded,{sharp,backgrounds:['#ffffff']})).findings.includes('excessive-transparent-padding'));
  const opaque=await sharp({create:{width,height,channels:4,background:'#ffffff'}}).png().toBuffer();assert((await inspectLogoPixels(opaque,{sharp,backgrounds:['#111113']})).findings.includes('opaque-or-empty'));
  const blank=await sharp({create:{width,height,channels:4,background:'#00000000'}}).png().toBuffer();assert((await inspectLogoPixels(blank,{sharp,backgrounds:['#ffffff']})).findings.includes('opaque-or-empty'));
+ const square=Buffer.alloc(256*256*4);
+ for(let y=107;y<148;y++)for(let x=20;x<236;x++){const at=(y*256+x)*4;square[at]=square[at+1]=square[at+2]=10;square[at+3]=255;}
+ const pseudoMark=await sharp(square,{raw:{width:256,height:256,channels:4}}).png().toBuffer();
+ assert((await inspectLogoPixels(pseudoMark,{sharp,backgrounds:['#ffffff'],role:'mark'})).findings.includes('compact-mark-wordmark-aspect'));
 });
 
 test('logo QA binds distinct source PNG and lossless public WebP bytes and real 32/64 favicon images',{skip:!sharp&&'Existing sharp installation unavailable'},async t=>{
@@ -569,10 +573,28 @@ test('logo QA binds distinct source PNG and lossless public WebP bytes and real 
  const favicon=Buffer.concat([header,...images.map(row=>row.png)]);contract.favicon={path:'dealer-brand/favicon.ico',sha256:sha256(favicon)};put(directory,contract.favicon.path,favicon);put(bundleRoot,'public/'+contract.favicon.path,favicon);
  assert.deepEqual(readFaviconPngs(favicon).map(row=>row.size),[16,32,48,64]);
  const corrupted=Buffer.from(favicon);corrupted.writeUInt32LE(0,18);assert.throws(()=>readFaviconPngs(corrupted),/overlapping favicon/);
- const pack={directory,manifest,branding:contract},result=await verifyPackLogoAssets({pack,sharp,bundleRoot});assert.equal(result.status,'passed',JSON.stringify(result.roles.map(row=>({role:row.role,findings:row.findings}))));assert.equal(result.visualReview.status,'not-recorded');
+ const pack={directory,manifest,facts,branding:contract},result=await verifyPackLogoAssets({pack,sharp,bundleRoot});
+ assert.equal(result.technicalStatus,'passed',JSON.stringify(result.roles.map(row=>({role:row.role,findings:row.findings}))));
+ assert.equal(result.status,'failed');assert(result.qualityDecision.findings.includes('logo-quality-review-missing'));
+ assert.equal(result.visualReview.status,'not-recorded');
  contract.creationMethod='retained-reviewed-raster';contract.visualReview={spelling:'agent-visual-review',dealerApproval:false};
  contract.surfaces=Object.fromEntries(Object.entries(contract.assets).map(([role,asset])=>[role,{...asset,retainedSource:{kind:'retained-reviewed-raster',reference:asset.sourcePath,sha256:asset.sourceSha256,sourceUrl:'https://dealer.example/logo.png',observedAt:'2026-10-19T00:00:00Z'}}]));
- const original=await verifyPackLogoAssets({pack,sharp,bundleRoot});assert.equal(original.status,'passed');
+ // A legacy spelling-review contract flag alone is not quality evidence.
+ assert.equal((await verifyPackLogoAssets({pack,sharp,bundleRoot})).status,'failed');
+ const source=Buffer.from('{"reviewedInputs":{}}\n');put(directory,'branding/source.json',source);
+ put(directory,'branding/logo-contract.json',contract);
+ const sheet=await sharp({create:{width:800,height:560,channels:3,background:'#eeeeee'}}).png().toBuffer();
+ put(directory,'branding/qa/logo-contact-sheet.png',sheet);
+ const qualityChecks=Object.fromEntries(['correctDealerName','legibleLettering','wordmarkProportions','transparentSurfaces','compactMarkIndependentlyLegible','contrast','safePadding','noBackgroundBox','noStretch','noClipping','noAwkwardTypography'].map(name=>[name,true]));
+ const review={schemaVersion:1,dealer:manifest.slug,displayName:facts.business.name,decision:'pass',
+  reviewer:{kind:'agent-visual-review',reviewedAt:'2026-10-22T10:00:00Z'},dealerApproved:false,
+  identity:{kind:'retained-dealer-identity',exactDealerNameVerified:true,dealerAdoptionClaimed:false},
+  sourceSha256:sha256(source),contractSha256:sha256(fs.readFileSync(path.join(directory,'branding/logo-contract.json'))),
+  contactSheet:{path:'branding/qa/logo-contact-sheet.png',sha256:sha256(sheet)},
+  surfacesReviewed:['onLight','onDark','onAccent'],smallSizesReviewed:[32,48,64],checks,
+  notes:['Reviewed native favicon scale and transparent light/dark/accent surfaces with the exact retained identity.']};
+ put(directory,'branding/logo-quality-review.json',review);
+ const original=await verifyPackLogoAssets({pack,sharp,bundleRoot});assert.equal(original.status,'passed',JSON.stringify(original.qualityDecision));
  assert.deepEqual(original.generationReferences,{onLight:null,onDark:null,onAccent:null});assert.deepEqual(original.visualReview,{spelling:'agent-visual-review',dealerApproval:false});assert(original.roles.every(row=>row.spellingVerified===false));
  // Real assembly content-addresses the public branding directory; the path
  // rewrite must still require the exact reviewed public asset bytes.
