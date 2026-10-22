@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "dealer": "precision-auto-sales",
+  "exactBusinessName": "Precision Auto Sales",
+  "status": "first-pass-generated-proposal-not-deploy-ready",
+  "identityStatus": "independent-website-concept-not-adopted",
+  "dealerApproval": false,
+  "ownerApproval": false,
+  "sourcePackModified": false,
+  "sourceEvidence": {
+    "observedOn": "2026-10-22",
+    "publicIdentityUrls": [
+      "https://www.precisionautonm.com/",
+      "https://www.precisionautonm.com/category/all-products"
+    ],
+    "publishedLogoRasterVerified": false,
+    "note": "Retained dealer sources identify the trading name, but original published logo has not been chosen as the edit target. This new artwork is a proposal only."
+  },
+  "generation": {
+    "tool": "image_gen.imagegen",
+    "toolResultId": null,
+    "modelVersion": null,
+    "toolResultIdAvailability": "Tool did not expose a result id; no fabricated receipt",
+    "prompt": "Use case: logo-brand\nAsset type: original dealership identity proposal for transparent PNG website header.\nPrimary request: professional high-quality logo with exact text \"Precision Auto Sales\".\nConcept: custom geometric letter P formed from two perfectly aligned machining-caliper-inspired bars with a precise inner radius (subtle and abstract); elegant technical typography spells \"PRECISION\", secondary \"AUTO SALES\". Feel meticulous and trustworthy.\nStyle: clean controlled premium industrial graphic design; flat vector-like illustration, no cliché racing styling.\nPalette: ink-black and one crisp desaturated cyan-blue accent; flat solids.\nComposition: complete horizontal icon+wordmark and separable compact symbol, generous actual transparent borders, clear at 32px when symbol alone.\nConstraints: correct text, no cars/steering wheels/chequered flags, no gradient, shine, shadow, 3D mockup, frame or watermark. Independent proposal not official brand.",
+    "transparentBackgroundRequested": true,
+    "asset": {
+      "path": "master-generated.png",
+      "sha256": "93a239d30b691689df926ffb25d8c670c1a0e3081bf27008752c409ddb8d5071",
+      "gitBlobSha1": "e77cebd80b5b3b76ceb40141f7db1be44b456313",
+      "bytes": 335801,
+      "width": 2161,
+      "height": 728,
+      "pngColorType": "rgba"
+    }
+  },
+  "qa": {
+    "firstPassAgentVisualInspection": true,
+    "correctTextVisuallyAppears": true,
+    "alphaPixelsIndependentlyChecked": false,
+    "wordmarkAtSmallSizesReviewed": false,
+    "compactMarkReady": false,
+    "onLightReady": false,
+    "onDarkReady": false,
+    "onAccentReady": false,
+    "allSixDesignScreensReviewed": false,
+    "contactSheetReady": false
+  },
+  "holdReasons": [
+    "Need compare source branding and retain genuine identity if suitable",
+    "Need 32/48/64px mark, contrast variants and proper transparent-alpha QA",
+    "Need maintained pack and six-design verification before potential use",
+    "Not adopted by dealer"
+  ],
+  "deployed": false
+}

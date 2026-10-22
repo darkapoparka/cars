@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "dealer": "islandwide-auto-sales-llc",
+  "exactBusinessName": "Islandwide Auto Sales LLC",
+  "status": "first-pass-generated-proposal-not-deploy-ready",
+  "identityStatus": "independent-website-concept-not-adopted",
+  "dealerApproval": false,
+  "ownerApproval": false,
+  "sourcePackModified": false,
+  "sourceEvidence": {
+    "observedOn": "2026-10-22",
+    "publicIdentityUrls": [
+      "https://www.islandwideautosales.com/",
+      "https://www.islandwideautosales.com/inventory",
+      "https://www.islandwideautosales.com/about",
+      "https://www.islandwideautosales.com/product-page/pre-owned-upfitted-2024-ford-f-550-4wd-9ft-flatbed-cab-chassis",
+      "https://www.islandwideautosales.com/product-page/2012-ford-f-450-diesel-4x4-utility-service-truck",
+      "https://www.islandwideautosales.com/product-page/sale-2016-ford-f-550-8ft-heavy-duty-stainless-steel-dump-bed"
+    ],
+    "publishedLogoRasterVerified": false,
+    "note": "Retained dealer sources identify the trading name, but original published logo has not been chosen as the edit target. This new artwork is a proposal only."
+  },
+  "generation": {
+    "tool": "image_gen.imagegen",
+    "toolResultId": null,
+    "modelVersion": null,
+    "toolResultIdAvailability": "Tool did not expose a result id; no fabricated receipt",
+    "prompt": "Use case: logo-brand\nAsset type: professional original independent automotive logo concept on true transparent PNG.\nPrimary request: create distinct and credible visual identity with the exact text \"Islandwide Auto Sales LLC\".\nConcept: bold IW monogram with a simple horizon-line cut integrated into the negative space—a subtle connection to 'islandwide', not literal palm trees or waves. Robust trustworthy work-truck dealership feel, strong typographic presence.\nStyle: engineered flat vector branding, durable American signmaking, balanced professional wordmark, excellent optics.\nPalette: deep navy/slate and muted rust-orange accent, solid inks only.\nComposition: complete horizontal logo with emblem on left and two-line wordmark, truly transparent background and safe crop.\nConstraints: spell \"Islandwide Auto Sales LLC\" exactly; no extra slogan, no island clipart, no palms, no truck illustration, no faux transparent checkerboard, no gradients, 3D, watermark or mockup. Independent concept.",
+    "transparentBackgroundRequested": true,
+    "asset": {
+      "path": "master-generated.png",
+      "sha256": "094fb750f5a63038e614a662f8da8a9dba0e529af208bee2cefd4226fed962ea",
+      "gitBlobSha1": "54f89f8d62478e35dfaa3a043f1c1d5aff3e791d",
+      "bytes": 665533,
+      "width": 2118,
+      "height": 742,
+      "pngColorType": "rgba"
+    }
+  },
+  "qa": {
+    "firstPassAgentVisualInspection": true,
+    "correctTextVisuallyAppears": true,
+    "alphaPixelsIndependentlyChecked": false,
+    "wordmarkAtSmallSizesReviewed": false,
+    "compactMarkReady": false,
+    "onLightReady": false,
+    "onDarkReady": false,
+    "onAccentReady": false,
+    "allSixDesignScreensReviewed": false,
+    "contactSheetReady": false
+  },
+  "holdReasons": [
+    "Need compare source branding and retain genuine identity if suitable",
+    "Need 32/48/64px mark, contrast variants and proper transparent-alpha QA",
+    "Need maintained pack and six-design verification before potential use",
+    "Not adopted by dealer"
+  ],
+  "deployed": false
+}

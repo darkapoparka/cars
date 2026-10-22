@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "dealer": "first-choice-auto-sales",
+  "exactBusinessName": "First Choice Auto Sales",
+  "status": "first-pass-generated-proposal-not-deploy-ready",
+  "identityStatus": "independent-website-concept-not-adopted",
+  "dealerApproval": false,
+  "ownerApproval": false,
+  "sourcePackModified": false,
+  "sourceEvidence": {
+    "observedOn": "2026-10-22",
+    "publicIdentityUrls": [
+      "https://www.1choiceautos.com/",
+      "https://www.1choiceautos.com/search/",
+      "https://www.1choiceautos.com/privacy/",
+      "https://www.1choiceautos.com/listing/acura-rdx/",
+      "https://www.1choiceautos.com/listing/subaru-outback/",
+      "https://www.1choiceautos.com/listing/jeep-renegade-latitude/"
+    ],
+    "publishedLogoRasterVerified": false,
+    "note": "Retained dealer sources identify the trading name, but original published logo has not been chosen as the edit target. This new artwork is a proposal only."
+  },
+  "generation": {
+    "tool": "image_gen.imagegen",
+    "toolResultId": null,
+    "modelVersion": null,
+    "toolResultIdAvailability": "Tool did not expose a result id; no fabricated receipt",
+    "prompt": "Use case: logo-brand\nAsset type: original independent used-car dealer branding proposal on transparent PNG.\nPrimary request: original logo with the exact business name \"First Choice Auto Sales\", no additional words.\nConcept: typographic '1' seamlessly paired with a compact open C to signal first choice, not a generic #1 medal or trophy. Pair with clear distinctive wordmark \"First Choice\" and supporting \"Auto Sales\".\nStyle: modern credible retail design, refined flat-vector curves and geometric counters, friendly confident sans type.\nPalette: very dark graphite with a single rich marigold-yellow accent, solid inks, no gradients.\nComposition: horizontal logo with clear icon left and balanced text right, generous transparent alpha margins.\nConstraints: no badge, trophy, car shape, checkmark, laurel, wings, watermark, mockup, colored/white background panel, or 3D shine. Spell \"First Choice Auto Sales\" exactly. Independent preview proposal.",
+    "transparentBackgroundRequested": true,
+    "asset": {
+      "path": "master-generated.png",
+      "sha256": "4c9349c26b94f670b9a9f7cf8509bf2b96fab3098a0a8a071e89f611fcdccfeb",
+      "gitBlobSha1": "73e6d00d2272a91d6516fe81f69468c822bdf6a7",
+      "bytes": 460506,
+      "width": 2172,
+      "height": 724,
+      "pngColorType": "rgba"
+    }
+  },
+  "qa": {
+    "firstPassAgentVisualInspection": true,
+    "correctTextVisuallyAppears": true,
+    "alphaPixelsIndependentlyChecked": false,
+    "wordmarkAtSmallSizesReviewed": false,
+    "compactMarkReady": false,
+    "onLightReady": false,
+    "onDarkReady": false,
+    "onAccentReady": false,
+    "allSixDesignScreensReviewed": false,
+    "contactSheetReady": false
+  },
+  "holdReasons": [
+    "Need compare source branding and retain genuine identity if suitable",
+    "Need 32/48/64px mark, contrast variants and proper transparent-alpha QA",
+    "Need maintained pack and six-design verification before potential use",
+    "Not adopted by dealer"
+  ],
+  "deployed": false
+}

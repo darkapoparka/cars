@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "dealer": "gasper-auto-sales-llc",
+  "exactBusinessName": "Gasper Auto Sales LLC",
+  "status": "first-pass-generated-proposal-not-deploy-ready",
+  "identityStatus": "independent-website-concept-not-adopted",
+  "dealerApproval": false,
+  "ownerApproval": false,
+  "sourcePackModified": false,
+  "sourceEvidence": {
+    "observedOn": "2026-10-22",
+    "publicIdentityUrls": [
+      "https://www.facebook.com/profile.php?id=100057612182407",
+      "https://www.facebook.com/permalink.php?story_fbid=pfbid08yGXs1feGtrUBMQEXZboY3nNevo2TvQSCDo48K3zRBieKiu97itXvaZdtPx7r4kFl&id=100057612182407",
+      "https://www.autoyas.com/US/Lakeland/259372398095957/Gasper-Auto-Sales-LLC",
+      "https://ci.lakeland.mn.us/vertical/sites/%7BF87BEF79-D520-4F87-86D1-CB82984CEB20%7D/uploads/February_21_2023.pdf"
+    ],
+    "publishedLogoRasterVerified": false,
+    "note": "Retained dealer sources identify the trading name, but original published logo has not been chosen as the edit target. This new artwork is a proposal only."
+  },
+  "generation": {
+    "tool": "image_gen.imagegen",
+    "toolResultId": null,
+    "modelVersion": null,
+    "toolResultIdAvailability": "Tool did not expose a result id; no fabricated receipt",
+    "prompt": "Use case: logo-brand\nAsset type: independent generated car dealer logo master for website use, transparent PNG.\nPrimary request: exceptionally clean original typographic identity for exact dealership name \"Gasper Auto Sales LLC\".\nConcept: solid custom G emblem built from modular rectangular geometry with a small square counter, understated and recognizable; accompanied by the word \"GASPER\" prominent and \"AUTO SALES LLC\" beneath with strong modern sans-serif hierarchy.\nStyle: robust friendly dealership branding; vector-like flat edges, expert kerning, readable small.\nPalette: strong charcoal black and restrained burnt-red accent, solid fills only.\nComposition: tight but breathing horizontal/stacked lockup centered with full real alpha transparency.\nConstraints: exactly \"Gasper Auto Sales LLC\", no invented geographic words, no car icons, gears, swooshes, gradients, 3D, drop shadow, watermark or background rectangle. Independent proposal, not dealer-approved.",
+    "transparentBackgroundRequested": true,
+    "asset": {
+      "path": "master-generated.png",
+      "sha256": "c7e4d999eb20a79cd438a360c2f7653daf87377d9e1afe6a92d065d6e9caad32",
+      "gitBlobSha1": "ae52b8d51b4086ad73959a86682098c493ca850e",
+      "bytes": 361770,
+      "width": 1774,
+      "height": 887,
+      "pngColorType": "rgba"
+    }
+  },
+  "qa": {
+    "firstPassAgentVisualInspection": true,
+    "correctTextVisuallyAppears": true,
+    "alphaPixelsIndependentlyChecked": false,
+    "wordmarkAtSmallSizesReviewed": false,
+    "compactMarkReady": false,
+    "onLightReady": false,
+    "onDarkReady": false,
+    "onAccentReady": false,
+    "allSixDesignScreensReviewed": false,
+    "contactSheetReady": false
+  },
+  "holdReasons": [
+    "Need compare source branding and retain genuine identity if suitable",
+    "Need 32/48/64px mark, contrast variants and proper transparent-alpha QA",
+    "Need maintained pack and six-design verification before potential use",
+    "Not adopted by dealer"
+  ],
+  "deployed": false
+}

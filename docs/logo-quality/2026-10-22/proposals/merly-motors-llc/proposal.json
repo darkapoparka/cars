@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "dealer": "merly-motors-llc",
+  "exactBusinessName": "Merly Motors LLC",
+  "status": "first-pass-generated-proposal-not-deploy-ready",
+  "identityStatus": "independent-website-concept-not-adopted",
+  "dealerApproval": false,
+  "ownerApproval": false,
+  "sourcePackModified": false,
+  "sourceEvidence": {
+    "observedOn": "2026-10-22",
+    "publicIdentityUrls": [
+      "https://www.merlymotors.com/inventory",
+      "https://www.merlymotors.com/"
+    ],
+    "publishedLogoRasterVerified": false,
+    "note": "Retained dealer sources identify the trading name, but original published logo has not been chosen as the edit target. This new artwork is a proposal only."
+  },
+  "generation": {
+    "tool": "image_gen.imagegen",
+    "toolResultId": null,
+    "modelVersion": null,
+    "toolResultIdAvailability": "Tool did not expose a result id; no fabricated receipt",
+    "prompt": "Use case: logo-brand\nAsset type: original independent auto dealership logo proposal, transparent PNG master.\nPrimary request: a polished, contemporary brand lockup with exact words \"Merly Motors LLC\" and no other copy.\nConcept: a beautifully engineered italicized custom M with gently swept upper terminal, paired with crisp elegant \"Merly Motors\" wordmark and a very small but legible \"LLC\". Not a generic speed swoosh.\nStyle: sophisticated small-business luxury identity, flat vector-like geometry, immaculate alignment, clear at website header widths.\nPalette: midnight charcoal plus cool sapphire-blue accent; no gradients.\nComposition: horizontal lockup, transparent alpha background, generous margins, custom M usable as a compact icon.\nConstraints: exact spelling \"Merly Motors LLC\", no car drawings, no metallic chrome, no 3D, no texture, no badges, no outer box, no shadows or watermark. Independent proposal, not official dealership mark.",
+    "transparentBackgroundRequested": true,
+    "asset": {
+      "path": "master-generated.png",
+      "sha256": "3906746dc124d9788ebfe49ec10cd4611ee6a2648425ed20de40e9a68c72fe89",
+      "gitBlobSha1": "3fcc9ca4c8d6ad664e4f0a2ccad705b9d076ebe9",
+      "bytes": 409523,
+      "width": 2172,
+      "height": 724,
+      "pngColorType": "rgba"
+    }
+  },
+  "qa": {
+    "firstPassAgentVisualInspection": true,
+    "correctTextVisuallyAppears": true,
+    "alphaPixelsIndependentlyChecked": false,
+    "wordmarkAtSmallSizesReviewed": false,
+    "compactMarkReady": false,
+    "onLightReady": false,
+    "onDarkReady": false,
+    "onAccentReady": false,
+    "allSixDesignScreensReviewed": false,
+    "contactSheetReady": false
+  },
+  "holdReasons": [
+    "Need compare source branding and retain genuine identity if suitable",
+    "Need 32/48/64px mark, contrast variants and proper transparent-alpha QA",
+    "Need maintained pack and six-design verification before potential use",
+    "Not adopted by dealer"
+  ],
+  "deployed": false
+}

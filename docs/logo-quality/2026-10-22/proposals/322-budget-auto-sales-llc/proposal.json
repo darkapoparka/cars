@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "dealer": "322-budget-auto-sales-llc",
+  "exactBusinessName": "322 Budget Auto Sales LLC",
+  "status": "first-pass-generated-proposal-not-deploy-ready",
+  "identityStatus": "independent-website-concept-not-adopted",
+  "dealerApproval": false,
+  "ownerApproval": false,
+  "sourcePackModified": false,
+  "sourceEvidence": {
+    "observedOn": "2026-10-22",
+    "publicIdentityUrls": [
+      "https://www.budgetautosalesllc.com/",
+      "https://www.budgetautosalesllc.com/pre-owned",
+      "https://www.budgetautosalesllc.com/general-1-2"
+    ],
+    "publishedLogoRasterVerified": false,
+    "note": "Retained dealer sources identify the trading name, but original published logo has not been chosen as the edit target. This new artwork is a proposal only."
+  },
+  "generation": {
+    "tool": "image_gen.imagegen",
+    "toolResultId": null,
+    "modelVersion": null,
+    "toolResultIdAvailability": "Tool did not expose a result id; no fabricated receipt",
+    "prompt": "Use case: logo-brand\nAsset type: original independent vehicle retailer logo concept, transparent PNG logo master.\nPrimary request: create a distinctive, high-trust professional car dealer identity with exact business text \"322 Budget Auto Sales LLC\".\nConcept: large custom numerals \"322\" in clean condensed block proportions, with small engineered parallel negative-space accents; understated and solid, not low-price clipart. Clear wordmark \"Budget Auto Sales LLC\" beneath or to the right.\nStyle: crisp modern industrial flat-vector mark, balanced technical typography, accessible but not cheap.\nPalette: black/charcoal and strong orange-red accent, strictly solid.\nComposition: complete compact-horizontal lockup centered with fully transparent background, appropriate padding and icon 322 readable at favicon sizes.\nConstraints: exact text and digits, no discount signs, no currencies, no steering wheel, no vehicle silhouette, no gradients, shadows, 3D, watermark or boxed background. Independent proposal, not dealership-adopted.",
+    "transparentBackgroundRequested": true,
+    "asset": {
+      "path": "master-generated.png",
+      "sha256": "2e8be8863aa1596c444dd741a217e9d75452866f79e837d7f383502d603d7171",
+      "gitBlobSha1": "c79ef061f90b92378f566433b9d6cfd4c679d778",
+      "bytes": 727659,
+      "width": 1983,
+      "height": 793,
+      "pngColorType": "rgba"
+    }
+  },
+  "qa": {
+    "firstPassAgentVisualInspection": true,
+    "correctTextVisuallyAppears": true,
+    "alphaPixelsIndependentlyChecked": false,
+    "wordmarkAtSmallSizesReviewed": false,
+    "compactMarkReady": false,
+    "onLightReady": false,
+    "onDarkReady": false,
+    "onAccentReady": false,
+    "allSixDesignScreensReviewed": false,
+    "contactSheetReady": false
+  },
+  "holdReasons": [
+    "Need compare source branding and retain genuine identity if suitable",
+    "Need 32/48/64px mark, contrast variants and proper transparent-alpha QA",
+    "Need maintained pack and six-design verification before potential use",
+    "Not adopted by dealer"
+  ],
+  "deployed": false
+}

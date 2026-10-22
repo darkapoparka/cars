@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-logo-first-pass-generated-proposal-batch",
+  "batch": 4,
+  "observedOn": "2026-10-22",
+  "targetBranch": "astra/logo-only-proposals-20261022",
+  "generatedProposalCount": 6,
+  "releaseReadyCount": 0,
+  "sourcePacksModified": 0,
+  "cloudflareDeployments": 0,
+  "logos": [
+    {
+      "dealer": "merly-motors-llc",
+      "displayName": "Merly Motors LLC",
+      "path": "docs/logo-quality/2026-10-22/proposals/merly-motors-llc/master-generated.png",
+      "sha256": "3906746dc124d9788ebfe49ec10cd4611ee6a2648425ed20de40e9a68c72fe89",
+      "gitBlobSha1": "3fcc9ca4c8d6ad664e4f0a2ccad705b9d076ebe9",
+      "status": "first-pass-generated-proposal-not-deploy-ready"
+    },
+    {
+      "dealer": "islandwide-auto-sales-llc",
+      "displayName": "Islandwide Auto Sales LLC",
+      "path": "docs/logo-quality/2026-10-22/proposals/islandwide-auto-sales-llc/master-generated.png",
+      "sha256": "094fb750f5a63038e614a662f8da8a9dba0e529af208bee2cefd4226fed962ea",
+      "gitBlobSha1": "54f89f8d62478e35dfaa3a043f1c1d5aff3e791d",
+      "status": "first-pass-generated-proposal-not-deploy-ready"
+    },
+    {
+      "dealer": "gasper-auto-sales-llc",
+      "displayName": "Gasper Auto Sales LLC",
+      "path": "docs/logo-quality/2026-10-22/proposals/gasper-auto-sales-llc/master-generated.png",
+      "sha256": "c7e4d999eb20a79cd438a360c2f7653daf87377d9e1afe6a92d065d6e9caad32",
+      "gitBlobSha1": "ae52b8d51b4086ad73959a86682098c493ca850e",
+      "status": "first-pass-generated-proposal-not-deploy-ready"
+    },
+    {
+      "dealer": "precision-auto-sales",
+      "displayName": "Precision Auto Sales",
+      "path": "docs/logo-quality/2026-10-22/proposals/precision-auto-sales/master-generated.png",
+      "sha256": "93a239d30b691689df926ffb25d8c670c1a0e3081bf27008752c409ddb8d5071",
+      "gitBlobSha1": "e77cebd80b5b3b76ceb40141f7db1be44b456313",
+      "status": "first-pass-generated-proposal-not-deploy-ready"
+    },
+    {
+      "dealer": "first-choice-auto-sales",
+      "displayName": "First Choice Auto Sales",
+      "path": "docs/logo-quality/2026-10-22/proposals/first-choice-auto-sales/master-generated.png",
+      "sha256": "4c9349c26b94f670b9a9f7cf8509bf2b96fab3098a0a8a071e89f611fcdccfeb",
+      "gitBlobSha1": "73e6d00d2272a91d6516fe81f69468c822bdf6a7",
+      "status": "first-pass-generated-proposal-not-deploy-ready"
+    },
+    {
+      "dealer": "322-budget-auto-sales-llc",
+      "displayName": "322 Budget Auto Sales LLC",
+      "path": "docs/logo-quality/2026-10-22/proposals/322-budget-auto-sales-llc/master-generated.png",
+      "sha256": "2e8be8863aa1596c444dd741a217e9d75452866f79e837d7f383502d603d7171",
+      "gitBlobSha1": "c79ef061f90b92378f566433b9d6cfd4c679d778",
+      "status": "first-pass-generated-proposal-not-deploy-ready"
+    }
+  ]
+}
