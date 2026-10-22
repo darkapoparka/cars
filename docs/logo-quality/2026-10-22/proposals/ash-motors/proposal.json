@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "dealer": "ash-motors",
+  "exactBusinessName": "Ash Motors",
+  "status": "visually-reviewed-proposal-hold-not-release-ready",
+  "approvedByDealer": false,
+  "adoptedByDealer": false,
+  "websiteUseOnly": true,
+  "original": {
+    "path": "dealers/ash-motors/branding/original-public-dubicars-20261021.png",
+    "sha256": "ac5209ea2bf6dc7e1740c48981fd21a3c1e63db636c9bf6bedf9d58149d1f5be",
+    "url": "https://d2souf30ck18jq.cloudfront.net/ash-motors/logo-e1460940-1d49-48ff-8e5b-dc0c5c701169.png",
+    "observedAt": "2026-10-21T13:11:48.801823Z",
+    "note": "Retain this actual published dealership wordmark and preserve the full source identity."
+  },
+  "generatedProposal": {
+    "kind": "independent-compact-symbol",
+    "tool": "image_gen.imagegen",
+    "toolResultId": null,
+    "toolResultIdAvailability": "Not provided in this image-generation tool result; no ID invented.",
+    "observedOutputAt": "2026-10-22T17:43:27.264Z",
+    "output": "mark-v2-transparent.png",
+    "sha256": "a87972036a79f17bbce0273c3da7997f403a8173e522ef1c937abe88ddc9d0b0",
+    "bytes": 448722,
+    "width": 1254,
+    "height": 1254,
+    "alphaPreserved": true,
+    "subject": "abstract angular A with three diagonal red/ochre slashes based on visibly present ASH Motors brand cues",
+    "earlierRejectedAttempt": {
+      "sha256": "9de3a317c7bfdb46ffdec2aeeb146ef301f1bb9cb220f8e8211bd1e6017abe79",
+      "reason": "too shallow as an independent compact symbol"
+    }
+  },
+  "derivedAccent": {
+    "path": "mark-on-accent-white.png",
+    "sha256": "80681673dd05a56c041e8e1244a6a65b6a6563654e892a6c4d763061fa91b27c",
+    "bytes": 79649,
+    "operation": "Sharp 0.35.5: crop to alpha-detected bounds {left:140,top:317,width:999,height:649}; set RGB=255 preserving exact original alpha and pixel geometry",
+    "surface": "#c40101"
+  },
+  "contactSheet": {
+    "path": "contact-sheet.png",
+    "sha256": "e96ac285cadf44589b9afb320183afae1755d8d152fe17756ba985705b3cf57f",
+    "bytes": 195505,
+    "width": 1200,
+    "height": 790,
+    "checks": [
+      {
+        "background": "#ffffff",
+        "sizes": [
+          32,
+          48,
+          64
+        ],
+        "assessment": "Candidate legible, red/ochre angular geometry shows"
+      },
+      {
+        "background": "#111113",
+        "sizes": [
+          32,
+          48,
+          64
+        ],
+        "assessment": "Candidate legible on dark"
+      },
+      {
+        "background": "#c40101",
+        "sizes": [
+          32,
+          48,
+          64
+        ],
+        "assessment": "Colored source failed; separate white alpha-preserving compact export appears legible"
+      }
+    ]
+  },
+  "releaseGate": {
+    "status": "blocked",
+    "sourcePackChanged": false,
+    "logoContractRegenerated": false,
+    "nativeQA": false,
+    "sixDesignScreensVisuallyApproved": 0,
+    "hostedVerified": false,
+    "blockedOn": [
+      "Full retained wordmark plus compact/markOnDark and all three matching surfaces not integrated into audited source inputs",
+      "Generator did not return a genuine generationId required by current strict pipeline; cannot invent one or relabel generated geometry as original",
+      "Need six-design screenshots at 320/390/desktop, independent release review receipt and deterministic export hashes",
+      "Need native build/queue deployment only after all checks pass"
+    ]
+  },
+  "note": "This is a proposed website compact mark derived visually from dealer-published artwork, not proof that the dealer owns, commissioned or adopted the proposal."
+}
