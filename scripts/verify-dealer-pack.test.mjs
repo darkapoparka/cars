@@ -13,6 +13,7 @@ import {artifactInventory} from './lib/uk-cloudflare-artifacts.mjs';
 import {assessBundleLimits,inspectDealerPackBundle,loadFleetIdentities,findForeignIdentity,assessPageSnapshot,dealerPackIdentityRequirements,assessDealerPackDesignIdentity,completeDealerPackWelcome,prepareDealerPackScreenshot,readDealerPackDom,observeDealerPackImages,inspectLogoPixels,readFaviconPngs,verifyPackLogoAssets,stockIsDemo,verifyDealerPack,parseDealerPackVerificationArgs} from './verify-dealer-pack.mjs';
 import {inspectDealerPackBatch,readDealerPackBatch,parseDeploymentArgs} from './deploy-dealer-single-worker.mjs';
 import {dealerPackFabPolicy,fleetDesignFabHashes} from './lib/dealer-pack-switcher-logo.mjs';
+import {assessHostedPackSnapshot} from './verify-hosted-dealer-pack.mjs';
 
 const area=t=>{const root=fs.mkdtempSync(path.join(os.tmpdir(),'cars-pack-qa-'));t.after(()=>fs.rmSync(root,{recursive:true,force:true}));return root;};
 const put=(root,name,content)=>{const file=path.join(root,name);fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file,typeof content==='string'||Buffer.isBuffer(content)?content:JSON.stringify(content,null,2)+'\n');};
@@ -207,6 +208,27 @@ test('exact retained vehicle titles in native owners are distinct from dealer id
  assert(read([body,title(record.title)],{phones:['tel:+359877733110']}).some(row=>row.type==='phone'));
  assert(read([body,title(record.title),{channel:'body',owner:'footer',text:'Exclusive Auto'}]).some(row=>row.context?.owner==='footer'));
  assert.equal(JSON.stringify(stock),before,'Retained dated stock and title stay unchanged');
+});
+
+test('hosted identity uses source-bound real vehicle trims and still rejects foreign dealership copy',()=>{
+  const stock=JSON.parse(fs.readFileSync(new URL('../dealers/millions-auto-cars/stock.json',import.meta.url),'utf8'));
+  const listing=stock.records.find(row=>row.id==='public-listing-2');
+  assert.equal(listing.title,'2019 MG ZS 44.5kWh Exclusive Auto');
+  const page=snapshot(),origin='http://127.0.0.1:8787',body=page.text;
+  page.text+='\\n'+listing.title;
+  page.identityContext={schemaVersion:1,status:'complete',segments:[
+    {channel:'body',owner:'body',text:body},
+    {channel:'vehicle-title',owner:'h3.dn-vehicle-card__name',text:listing.title,
+      vehicleOwner:'auto-best',vehicleHref:origin+'/en/listing-detail-v1/2',vehicleOrigin:origin},
+  ]};
+  const pack={facts,stock,manifest},fleet={records:[{slug:'exclusive-auto-varna',names:['Exclusive Auto'],phones:[]}]};
+  const inspect=()=>assessHostedPackSnapshot({snapshot:page,pack,variant:variants[0],fleet,label:'home'});
+  assert.equal(inspect().status,'passed','Authenticated source listing is not another dealership');
+  page.metadata='Exclusive Auto dealership';
+  assert(inspect().findings.includes('foreign-dealer-identity'),'Page branding is still strictly scanned');
+  page.metadata='Honest Motors';
+  page.identityContext.segments[1].vehicleHref=origin+'/en/listing-detail-v1/1';
+  assert(inspect().findings.includes('foreign-dealer-identity'),'Another listing cannot borrow the source exception');
 });
 
 test('route assessment keeps native stock photos separate from ordinary images and dealer logos',()=>{
