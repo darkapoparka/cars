@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "dealer": "tao-cars",
+  "exactBusinessName": "Tao Cars",
+  "status": "first-pass-generated-proposal-not-deploy-ready",
+  "identityStatus": "independent-website-concept-not-adopted",
+  "dealerApproval": false,
+  "ownerApproval": false,
+  "sourcePackModified": false,
+  "sourceEvidence": {
+    "observedOn": "2026-10-22",
+    "publicIdentityUrls": [
+      "https://www.dubicars.com/dealers/dubai-tao-cars-3170"
+    ],
+    "publishedLogoRasterVerified": false,
+    "note": "Dealer source URLs retained from prior research ledger, but published mark was not selected as a suitable image-edit target. Concept is not an official replacement."
+  },
+  "generation": {
+    "tool": "image_gen.imagegen",
+    "modelVersion": null,
+    "toolResultId": null,
+    "toolResultIdAvailability": "Not exposed; do not invent",
+    "prompt": "Use case: logo-brand\nAsset type: clean transparent-background flat logo asset for a website; do not render a poster or mockup.\nPrimary request: a precise original logo for the text \"Tao Cars\". Exact spelling, only these two words.\nLogo: a single simple custom angular T glyph made of solid deep graphite with a small terracotta cutout, paired with clean large solid-ink sans-serif type \"Tao Cars\". Similar precision to a well-executed Swiss typographic identity.\nComposition: ONE professional compact horizontal wordmark with emblem; floating on REAL ALPHA TRANSPARENCY. Background must be fully transparent outside the exact colored logo shape, including in all corners; no black, gray, colored, blurred, gradient, or textured pixels outside the logo shapes.\nPalette: exactly solid graphite #17191C and terracotta #BD6037. Absolutely NO gradients, light sources, shading, vignettes, glows, blur, shadows, bevel, soft edges, smoke or atmospheric effects.\nConstraints: text exactly \"Tao Cars\", simple flat vector-like surfaces, decisive hard edges, clean proportions, ample transparent padding, no extra text, no car icon, no yin-yang, no 3D. Must be a transparent PNG logo, not a design presentation. Independent proposal not the dealer's official mark.",
+    "transparentBackgroundRequested": true,
+    "asset": {
+      "path": "master-generated.png",
+      "sha256": "35b8502c20f7091fbef4a3cc82686b9545d76fad5bf001d87373280c01898730",
+      "gitBlobSha1": "5cb68d291e408c2c6012e81c090b60a4ffbf8eee",
+      "bytes": 383674,
+      "width": 2172,
+      "height": 724,
+      "pngColorType": "rgba"
+    },
+    "rejectedPredecessor": {
+      "reason": "First attempt had opaque dark poster background and glow despite transparent request; discarded; second clean transparent logo generated."
+    }
+  },
+  "qa": {
+    "firstPassAgentVisualInspection": true,
+    "correctTextVisuallyAppears": true,
+    "alphaPixelsIndependentlyChecked": false,
+    "wordmarkAtSmallSizesReviewed": false,
+    "compactMarkReady": false,
+    "onLightReady": false,
+    "onDarkReady": false,
+    "onAccentReady": false,
+    "allSixDesignScreensReviewed": false,
+    "contactSheetReady": false
+  },
+  "holdReasons": [
+    "Genuine source branding not visually compared against concept",
+    "Separate compact mark and on-dark/accent variants incomplete",
+    "No maintained pack or six-design visual release checks",
+    "Not dealer approved"
+  ],
+  "deployed": false
+}

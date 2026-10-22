@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "dealer": "fiyafe-cars",
+  "exactBusinessName": "Fiyafe Cars",
+  "status": "first-pass-generated-proposal-not-deploy-ready",
+  "identityStatus": "independent-website-concept-not-adopted",
+  "dealerApproval": false,
+  "ownerApproval": false,
+  "sourcePackModified": false,
+  "sourceEvidence": {
+    "observedOn": "2026-10-22",
+    "publicIdentityUrls": [
+      "https://www.dubicars.com/dealers/dubai-fiyafe-cars-3266"
+    ],
+    "publishedLogoRasterVerified": false,
+    "note": "Dealer source URLs retained from prior research ledger, but published mark was not selected as a suitable image-edit target. Concept is not an official replacement."
+  },
+  "generation": {
+    "tool": "image_gen.imagegen",
+    "modelVersion": null,
+    "toolResultId": null,
+    "toolResultIdAvailability": "Not exposed; do not invent",
+    "prompt": "Use case: logo-brand\nAsset type: clean high-end original independent dealership identity for transparent PNG website asset.\nPrimary request: logo for EXACT name \"Fiyafe Cars\"—six letters F-I-Y-A-F-E and word \"Cars\"; no extra words.\nConcept: dynamic yet restrained bespoke \"F\" motif made of two high-precision crossing beams with a small aspirational chevron negative space; distinctly modern Gulf automotive retail, not generic dealership clipart.\nStyle: meticulous flat vector logo, confident typographic detail, balanced sans serif lettering, strong silhouette.\nPalette: rich ink-black with bright-but-controlled deep coral-red accent; no gradients.\nComposition: centered horizontal mark plus wordmark with genuine alpha padding; icon legible alone at favicon scale; text readable at 180px width.\nConstraints: exact \"Fiyafe Cars\" spelling, no transliteration/Arabic text, no car illustration, no road swoosh, no box, no watermark, no 3D effect. Independent website design concept, not official.",
+    "transparentBackgroundRequested": true,
+    "asset": {
+      "path": "master-generated.png",
+      "sha256": "2a2c5282f1f21186295c884cffe092ad7928338256a081187d31cbaf080b00ce",
+      "gitBlobSha1": "6a512546c9a69ab246bea20939e7bb4c1cff6cb3",
+      "bytes": 417153,
+      "width": 2172,
+      "height": 724,
+      "pngColorType": "rgba"
+    },
+    "rejectedPredecessor": null
+  },
+  "qa": {
+    "firstPassAgentVisualInspection": true,
+    "correctTextVisuallyAppears": true,
+    "alphaPixelsIndependentlyChecked": false,
+    "wordmarkAtSmallSizesReviewed": false,
+    "compactMarkReady": false,
+    "onLightReady": false,
+    "onDarkReady": false,
+    "onAccentReady": false,
+    "allSixDesignScreensReviewed": false,
+    "contactSheetReady": false
+  },
+  "holdReasons": [
+    "Genuine source branding not visually compared against concept",
+    "Separate compact mark and on-dark/accent variants incomplete",
+    "No maintained pack or six-design visual release checks",
+    "Not dealer approved"
+  ],
+  "deployed": false
+}

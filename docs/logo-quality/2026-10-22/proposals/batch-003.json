@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-logo-first-pass-generated-proposal-batch",
+  "batch": 3,
+  "observedOn": "2026-10-22",
+  "sourceAuditBranch": "astra/logo-quality-20261022",
+  "targetBranch": "astra/logo-only-proposals-20261022",
+  "generatedProposalCount": 6,
+  "releaseReadyCount": 0,
+  "sourcePacksModified": 0,
+  "cloudflareDeployments": 0,
+  "logos": [
+    {
+      "dealer": "chiron-used-cars-trading",
+      "displayName": "Chiron Used Cars Trading",
+      "path": "docs/logo-quality/2026-10-22/proposals/chiron-used-cars-trading/master-generated.png",
+      "sha256": "d4ade420dfd2b0f0facbe949a24253d47950acef770856c13d13d22cbaae3389",
+      "gitBlobSha1": "ec39e071a87fff216ead4f3301718e2618882aec",
+      "status": "first-pass-generated-proposal-not-deploy-ready"
+    },
+    {
+      "dealer": "eco-international-motors",
+      "displayName": "Eco International Motors",
+      "path": "docs/logo-quality/2026-10-22/proposals/eco-international-motors/master-generated.png",
+      "sha256": "08056f85836ad3f6c2caa71d6d9e0764afe25a26fc05cd5b2bf69adc4ed24a4e",
+      "gitBlobSha1": "9325c58d668b8a92f40768bef96586a7ea1f4a56",
+      "status": "first-pass-generated-proposal-not-deploy-ready"
+    },
+    {
+      "dealer": "fiyafe-cars",
+      "displayName": "Fiyafe Cars",
+      "path": "docs/logo-quality/2026-10-22/proposals/fiyafe-cars/master-generated.png",
+      "sha256": "2a2c5282f1f21186295c884cffe092ad7928338256a081187d31cbaf080b00ce",
+      "gitBlobSha1": "6a512546c9a69ab246bea20939e7bb4c1cff6cb3",
+      "status": "first-pass-generated-proposal-not-deploy-ready"
+    },
+    {
+      "dealer": "ginza-motors",
+      "displayName": "Ginza Motors",
+      "path": "docs/logo-quality/2026-10-22/proposals/ginza-motors/master-generated.png",
+      "sha256": "07ee9e7503faeee67f89192510f624693f029bae2f027e80a88ec3d10e5c1ec7",
+      "gitBlobSha1": "6400ce2e099b2ce9a51131ffb930eb04d891219b",
+      "status": "first-pass-generated-proposal-not-deploy-ready"
+    },
+    {
+      "dealer": "style-motors",
+      "displayName": "Style Motors",
+      "path": "docs/logo-quality/2026-10-22/proposals/style-motors/master-generated.png",
+      "sha256": "4c0a9b63a23dafe95e3181a386f3694aef706d0ea9a4fb506949ad15c0e5596e",
+      "gitBlobSha1": "1f38805183422d7c1a6c2c12542744d3bc37bf09",
+      "status": "first-pass-generated-proposal-not-deploy-ready"
+    },
+    {
+      "dealer": "tao-cars",
+      "displayName": "Tao Cars",
+      "path": "docs/logo-quality/2026-10-22/proposals/tao-cars/master-generated.png",
+      "sha256": "35b8502c20f7091fbef4a3cc82686b9545d76fad5bf001d87373280c01898730",
+      "gitBlobSha1": "5cb68d291e408c2c6012e81c090b60a4ffbf8eee",
+      "status": "first-pass-generated-proposal-not-deploy-ready"
+    }
+  ]
+}

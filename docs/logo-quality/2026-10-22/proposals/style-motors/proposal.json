@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "dealer": "style-motors",
+  "exactBusinessName": "Style Motors",
+  "status": "first-pass-generated-proposal-not-deploy-ready",
+  "identityStatus": "independent-website-concept-not-adopted",
+  "dealerApproval": false,
+  "ownerApproval": false,
+  "sourcePackModified": false,
+  "sourceEvidence": {
+    "observedOn": "2026-10-22",
+    "publicIdentityUrls": [
+      "https://www.dubicars.com/dealers/dubai-style-motors-2538",
+      "https://importkey.com/i/style-motors-fze",
+      "https://stylemotors.ae/"
+    ],
+    "publishedLogoRasterVerified": false,
+    "note": "Dealer source URLs retained from prior research ledger, but published mark was not selected as a suitable image-edit target. Concept is not an official replacement."
+  },
+  "generation": {
+    "tool": "image_gen.imagegen",
+    "modelVersion": null,
+    "toolResultId": null,
+    "toolResultIdAvailability": "Not exposed; do not invent",
+    "prompt": "Use case: logo-brand\nAsset type: authentic-looking but clearly independent premium dealer-preview logo proposal, transparent PNG master.\nPrimary request: refined original website logo for the exact dealership name \"Style Motors\", no slogans.\nConcept: sculpt a sleek custom SM typographic ligature with one slanted terminal that gives fashionable forward motion; matching airy editorial wordmark \"Style Motors\" that remains clear at small size. Urban car retailer with genuine design taste.\nStyle: restrained high-end automotive graphic identity, superb optical spacing, geometric yet warm flat vector.\nPalette: midnight charcoal and a single desaturated electric-violet accent; solid inks.\nComposition: complete emblem-and-wordmark lockup on genuinely transparent background, no background panel, safe margins, compact mark plausible at 32px.\nConstraints: no car silhouette, steering wheel, wings, racing checkers, clipart, reflective chrome, textures, gradients, watermark or text other than \"Style Motors\". Independent website proposal; dealer not claimed to have accepted.",
+    "transparentBackgroundRequested": true,
+    "asset": {
+      "path": "master-generated.png",
+      "sha256": "4c0a9b63a23dafe95e3181a386f3694aef706d0ea9a4fb506949ad15c0e5596e",
+      "gitBlobSha1": "1f38805183422d7c1a6c2c12542744d3bc37bf09",
+      "bytes": 379209,
+      "width": 1774,
+      "height": 887,
+      "pngColorType": "rgba"
+    },
+    "rejectedPredecessor": null
+  },
+  "qa": {
+    "firstPassAgentVisualInspection": true,
+    "correctTextVisuallyAppears": true,
+    "alphaPixelsIndependentlyChecked": false,
+    "wordmarkAtSmallSizesReviewed": false,
+    "compactMarkReady": false,
+    "onLightReady": false,
+    "onDarkReady": false,
+    "onAccentReady": false,
+    "allSixDesignScreensReviewed": false,
+    "contactSheetReady": false
+  },
+  "holdReasons": [
+    "Genuine source branding not visually compared against concept",
+    "Separate compact mark and on-dark/accent variants incomplete",
+    "No maintained pack or six-design visual release checks",
+    "Not dealer approved"
+  ],
+  "deployed": false
+}
