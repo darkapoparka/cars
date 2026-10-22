@@ -459,7 +459,7 @@ test('six-design packages inject the native locale presentation once without ano
   assert.match(presentation.textContent, /max-height:calc\(100dvh/);
   // A source template may already render its own chevron. Compact mode must not
   // paint a second one on top of the shared select background icon.
-  assert.ok(presentation.textContent.includes('dialog[data-locale-dialog] .cars-locale-select-arrow{display:none!important}'));
+  assert.ok(presentation.textContent.includes('dialog[data-locale-dialog] .cars-locale-select-arrow,dialog[data-locale-dialog] [data-locale-country-chevron]{display:none!important}'));
   assert.equal(r.timers.length, 0);
   vm.runInContext(r.script, r.context, { timeout: 1000 });
   assert.equal(r.document.head.children.length, 1);
