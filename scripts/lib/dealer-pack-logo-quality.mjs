@@ -38,7 +38,7 @@ const fail=(findings)=>({status:'failed',findings:[...new Set(findings)],dealerA
  * Do not auto-create this file during an automated build or infer it from image
  * dimensions; a visual reviewer must supply it after inspecting the artwork.
  */
-export function assessLogoQualityDecision({pack,contract=pack?.branding,screenshots,sharpMetadata}={}){
+export function assessLogoQualityDecision({pack,contract=pack?.branding,screenshots}={}){
   const findings=[],review=parseReceipt(pack),dealer=pack?.manifest?.slug,displayName=exactName(pack?.facts?.business?.name);
   if(!review)return fail(['logo-quality-review-missing']);
   if(review.schemaVersion!==1||review.dealer!==dealer||exactName(review.displayName)!==displayName||!displayName)
@@ -66,8 +66,10 @@ export function assessLogoQualityDecision({pack,contract=pack?.branding,screensh
     const bytes=packBytes(pack,sheet.path);
     if(!bytes||hash(bytes)!==sheet.sha256||!bytes.subarray(0,8).equals(Buffer.from([137,80,78,71,13,10,26,10])))
       findings.push('logo-review-contact-sheet-hash');
-    else if(bytes.length<2048) findings.push('logo-review-contact-sheet-empty');
-    if(sharpMetadata&&bytes){const meta=sharpMetadata(bytes);if(meta?.width<640||meta?.height<480)findings.push('logo-review-contact-sheet-too-small');}
+    else if(bytes.length<2048||bytes.length<33||bytes.readUInt32BE(8)!==13||bytes.subarray(12,16).toString('ascii')!=='IHDR')
+      findings.push('logo-review-contact-sheet-empty');
+    else if(bytes.readUInt32BE(16)<640||bytes.readUInt32BE(16)>8192||bytes.readUInt32BE(20)<480||bytes.readUInt32BE(20)>8192)
+      findings.push('logo-review-contact-sheet-dimensions');
   }
   if(screenshots!==undefined){
     const actual=Array.isArray(screenshots)?screenshots:[],reviewed=review.sixDesignScreens;
