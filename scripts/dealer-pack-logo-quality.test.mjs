@@ -4,7 +4,7 @@ import {createHash} from 'node:crypto';
 import {assessLogoQualityDecision,REVIEW_DESIGNS,REVIEW_WIDTHS,REVIEW_PATH} from './lib/dealer-pack-logo-quality.mjs';
 
 const sha=bytes=>createHash('sha256').update(bytes).digest('hex');
-const tinyPng=()=>{const bytes=Buffer.alloc(3500,17);Buffer.from([137,80,78,71,13,10,26,10]).copy(bytes);bytes.writeUInt32BE(800,16);bytes.writeUInt32BE(560,20);return bytes;};
+const tinyPng=()=>{const bytes=Buffer.alloc(3500,17);Buffer.from([137,80,78,71,13,10,26,10]).copy(bytes);bytes.writeUInt32BE(13,8);Buffer.from('IHDR').copy(bytes,12);bytes.writeUInt32BE(800,16);bytes.writeUInt32BE(560,20);return bytes;};
 const checks=Object.fromEntries(['correctDealerName','legibleLettering','wordmarkProportions','transparentSurfaces','compactMarkIndependentlyLegible','contrast','safePadding','noBackgroundBox','noStretch','noClipping','noAwkwardTypography'].map(key=>[key,true]));
 const views=()=>REVIEW_DESIGNS.flatMap(key=>REVIEW_WIDTHS.map(width=>({key,width,route:'home',sha256:sha(key+width)})));
 function fixture(){
