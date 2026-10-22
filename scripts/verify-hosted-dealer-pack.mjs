@@ -10,6 +10,14 @@ import {dealerPackFabPolicy,fleetDesignFabHashes} from './lib/dealer-pack-switch
 import {readDealerPackDom,observeDealerPackImages,assessPageSnapshot,completeDealerPackWelcome,prepareDealerPackScreenshot,verifyPackLogoAssets,loadFleetIdentities,stockIsDemo} from './verify-dealer-pack.mjs';
 
 const assert=(ok,message)=>{if(!ok)throw Error(message);};
+
+/** Keep hosted and native leak checks bound to the same reviewed stock records. */
+export function assessHostedPackSnapshot({snapshot,pack,variant,fleet,label}) {
+  assert(label==='home'||label==='contact','Hosted assessment requires home or contact');
+  return assessPageSnapshot({snapshot,facts:pack.facts,stock:pack.stock,manifest:pack.manifest,variant,fleet,
+    demoStock:stockIsDemo(pack),requireDisclosure:false,
+    identityRequirements:{name:label==='home',logo:label==='home',phone:label==='contact'}});
+}
 const hex64=value=>/^[a-f0-9]{64}$/.test(value??'');
 const dependency=(root,name)=>{
   for(const file of [process.env.CARS_QA_RESOLVE_FROM,path.join(root,'runtime/dealer-pack-tools/package.json'),path.join(root,'runtime/dealer-pack-preview-tools/package.json')].filter(Boolean))try{return createRequire(path.resolve(file))(name);}catch{}
@@ -77,8 +85,7 @@ export async function verifyHostedDealerPack({root=ROOT,request,receipt,pack,can
         const snapshot=await page.evaluate(readDealerPackDom);
         await observeDealerPackImages(snapshot.images,{origin:identity.publicOrigin,logoHashes,fabLogoHashes,logoPaths,imageDigests});
         Object.assign(snapshot,{fabMarks:snapshot.images.filter(image=>image.consumer==='fab'),status:response?.status()??null,contentType:response?.headers()['content-type']??'',errors:[...errors]});
-        const assessed=assessPageSnapshot({snapshot,facts:pack.facts,manifest:pack.manifest,variant,fleet,demoStock:stockIsDemo(pack),requireDisclosure:false,
-          identityRequirements:{name:label==='home',logo:label==='home',phone:label==='contact'}});
+        const assessed=assessHostedPackSnapshot({snapshot,pack,variant,fleet,label});
         assessed.head=await verifyHostedHead({origin:identity.publicOrigin,href:target.href});
         if(assessed.head.status!=='passed'){assessed.status='failed';assessed.findings.push(...assessed.head.findings.map(finding=>'head: '+finding));}
         assessed.label=label;assessed.width=390;result.routes.push(assessed);
