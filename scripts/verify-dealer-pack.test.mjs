@@ -215,7 +215,7 @@ test('hosted identity uses source-bound real vehicle trims and still rejects for
   const listing=stock.records.find(row=>row.id==='public-listing-2');
   assert.equal(listing.title,'2019 MG ZS 44.5kWh Exclusive Auto');
   const page=snapshot(),origin='http://127.0.0.1:8787',body=page.text;
-  page.text+='\\n'+listing.title;
+  page.text+='\n'+listing.title;
   page.identityContext={schemaVersion:1,status:'complete',segments:[
     {channel:'body',owner:'body',text:body},
     {channel:'vehicle-title',owner:'h3.dn-vehicle-card__name',text:listing.title,
