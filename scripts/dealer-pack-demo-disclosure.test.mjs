@@ -38,7 +38,13 @@ for (const [key, file] of Object.entries(DEMO_STOCK_LAYOUT_PATHS)) test(`${key} 
   const output = personalizeDemoStockDisclosure(original, key, profile);
   const nodes = [...output.matchAll(/<p data-dealer-stock-disclosure [^>]+>\{[^\n]+\}<\/p>/g)];
   assert.equal(nodes.length, 1);
-  assert.equal(output.replace(key === 'import' ? nodes[0][0] + '\n' : '\n' + nodes[0][0], ''), original, 'preserve all native layout composition and consumers');
+  const inserted = key === 'import' ? nodes[0][0] + '\n' : key === 'auto-best' ? '  ' + nodes[0][0] + '\n' : '\n' + nodes[0][0];
+  assert.equal(output.replace(inserted, ''), original, 'preserve all native layout composition and consumers');
+  if (key === 'auto-best') {
+    assert.ok(output.indexOf(nodes[0][0]) > output.indexOf('{@render children()}'), 'disclosure must follow the absolute-header homepage');
+    assert.ok(output.indexOf(nodes[0][0]) < output.indexOf('</SiteShell>'), 'disclosure must stay inside shared main flow');
+    assert.match(nodes[0][0], /background:#f6f6f8/);
+  }
   assert.match(nodes[0][0], /width: ?(?:"100%"|100%)/);
   assert.doesNotMatch(nodes[0][0], /display:none|hidden|position:fixed|position:absolute/);
   if (key === 'modern') {
@@ -100,7 +106,9 @@ test('strict inventory/detail QA still refuses absent disclosure and accepts the
   const manifest = { slug: 'j26-vans-trucks', packaging: { version: '5' }, variants };
   const base = { url: 'http://127.0.0.1:8787/', status: 200, contentType: 'text/html', text: 'J26 Vans & Trucks Ltd. Browse the vehicle examples and contact the showroom before visiting to confirm current availability.', metadata: '', phones: [], fabMarks: [{ visible: true, loaded: true, dealerFabLogo: true }], designChoices: variants.map(v => ({ key: v.key, href: v.entry })), adminLinks: [{ href: 'https://cars-admin-blue.vercel.app/', target: '_blank', rel: 'noopener noreferrer' }], errors: [], brokenImages: [], overflow: 0 };
   const options = { facts: { business: { name: 'J26 Vans & Trucks Ltd' } }, manifest, variant: variants[0], fleet: { records: [] }, demoStock: true, requireDisclosure: true };
-  const markup = personalizeDemoStockDisclosure('<SiteShell {presentation}>', 'auto-best', profile).split('\n')[1];
+  const selectedLayout = fs.readFileSync('templates/auto-best/src/routes/+layout.svelte', 'utf8');
+  const markup = personalizeDemoStockDisclosure(selectedLayout, 'auto-best', profile)
+    .match(/<p data-dealer-stock-disclosure [^>]+>\{[^\n]+\}<\/p>/)[0];
   const text = (await renderNotice(markup)).replace(/<[^>]*>/g, '');
   for (const label of ['inventory', 'detail']) {
     const args = { ...options, identityRequirements: dealerPackIdentityRequirements(label) };

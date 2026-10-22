@@ -39,6 +39,17 @@ export function personalizeDemoStockDisclosure(source, key, profile) {
     ? 'style={{ margin: 0, padding: "0.75rem 1rem", fontSize: "0.875rem", lineHeight: 1.5, width: "100%", boxSizing: "border-box", gridColumn: "1 / -1", flexBasis: "100%" }}'
     : 'style="margin:0;padding:0.75rem 1rem;font-size:0.875rem;line-height:1.5;width:100%;box-sizing:border-box;grid-column:1 / -1;flex-basis:100%"';
   const disclosure = `<p data-dealer-stock-disclosure ${spacing}>{${JSON.stringify(notice)}}</p>`;
+  // Auto Best's absolute header overlays the top of <main>. Keep its stock disclosure
+  // inside the common main region but *after* the native page, before the footer.
+  // That preserves disclosure on every route without covering the header or hero.
+  if (key === 'auto-best') {
+    const afterContent = '  {@render children()}\n</SiteShell>';
+    if (source.split(afterContent).length !== 2) throw Error('auto-best: demo stock requires exactly one reviewed public layout boundary');
+    const styled = disclosure.replace('style="margin:0;', 'style="margin:24px auto 0;')
+      .replace('padding:0.75rem 1rem;', 'padding:14px 20px;')
+      .replace('box-sizing:border-box;', 'box-sizing:border-box;border-top:1px solid #e7e7eb;background:#f6f6f8;color:#61616a;');
+    return source.replace(afterContent, () => '  {@render children()}\n  ' + styled + '\n</SiteShell>');
+  }
   // Import's route owns its header/footer; keep this outside its next conditional.
   return source.replace(anchor, () => key === 'import' ? disclosure + '\n' + anchor : anchor + '\n' + disclosure);
 }
