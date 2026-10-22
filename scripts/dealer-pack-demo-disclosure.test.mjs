@@ -106,7 +106,9 @@ test('strict inventory/detail QA still refuses absent disclosure and accepts the
   const manifest = { slug: 'j26-vans-trucks', packaging: { version: '5' }, variants };
   const base = { url: 'http://127.0.0.1:8787/', status: 200, contentType: 'text/html', text: 'J26 Vans & Trucks Ltd. Browse the vehicle examples and contact the showroom before visiting to confirm current availability.', metadata: '', phones: [], fabMarks: [{ visible: true, loaded: true, dealerFabLogo: true }], designChoices: variants.map(v => ({ key: v.key, href: v.entry })), adminLinks: [{ href: 'https://cars-admin-blue.vercel.app/', target: '_blank', rel: 'noopener noreferrer' }], errors: [], brokenImages: [], overflow: 0 };
   const options = { facts: { business: { name: 'J26 Vans & Trucks Ltd' } }, manifest, variant: variants[0], fleet: { records: [] }, demoStock: true, requireDisclosure: true };
-  const markup = personalizeDemoStockDisclosure('<SiteShell {presentation}>', 'auto-best', profile).split('\n')[1];
+  const selectedLayout = fs.readFileSync('templates/auto-best/src/routes/+layout.svelte', 'utf8');
+  const markup = personalizeDemoStockDisclosure(selectedLayout, 'auto-best', profile)
+    .match(/<p data-dealer-stock-disclosure [^>]+>\{[^\n]+\}<\/p>/)[0];
   const text = (await renderNotice(markup)).replace(/<[^>]*>/g, '');
   for (const label of ['inventory', 'detail']) {
     const args = { ...options, identityRequirements: dealerPackIdentityRequirements(label) };
