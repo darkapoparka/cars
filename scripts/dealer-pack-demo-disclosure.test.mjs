@@ -38,7 +38,13 @@ for (const [key, file] of Object.entries(DEMO_STOCK_LAYOUT_PATHS)) test(`${key} 
   const output = personalizeDemoStockDisclosure(original, key, profile);
   const nodes = [...output.matchAll(/<p data-dealer-stock-disclosure [^>]+>\{[^\n]+\}<\/p>/g)];
   assert.equal(nodes.length, 1);
-  assert.equal(output.replace(key === 'import' ? nodes[0][0] + '\n' : '\n' + nodes[0][0], ''), original, 'preserve all native layout composition and consumers');
+  const inserted = key === 'import' ? nodes[0][0] + '\n' : key === 'auto-best' ? '  ' + nodes[0][0] + '\n' : '\n' + nodes[0][0];
+  assert.equal(output.replace(inserted, ''), original, 'preserve all native layout composition and consumers');
+  if (key === 'auto-best') {
+    assert.ok(output.indexOf(nodes[0][0]) > output.indexOf('{@render children()}'), 'disclosure must follow the absolute-header homepage');
+    assert.ok(output.indexOf(nodes[0][0]) < output.indexOf('</SiteShell>'), 'disclosure must stay inside shared main flow');
+    assert.match(nodes[0][0], /background:#f6f6f8/);
+  }
   assert.match(nodes[0][0], /width: ?(?:"100%"|100%)/);
   assert.doesNotMatch(nodes[0][0], /display:none|hidden|position:fixed|position:absolute/);
   if (key === 'modern') {
