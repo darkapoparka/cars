@@ -6,9 +6,10 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import {createHash} from 'node:crypto';
+import {SIX_DESIGN_KEYS} from './six-design-release.mjs';
 
 export const REVIEW_PATH='branding/logo-quality-review.json';
-export const REVIEW_DESIGNS=Object.freeze(['modern','auto-best','import','import-site','signature','signature-mobile']);
+export const REVIEW_DESIGNS=Object.freeze([...SIX_DESIGN_KEYS]);
 export const REVIEW_WIDTHS=Object.freeze([320,390,1280]);
 
 const hash=bytes=>createHash('sha256').update(bytes).digest('hex');
