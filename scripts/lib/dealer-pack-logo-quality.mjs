@@ -95,7 +95,7 @@ export function assessLogoQualityDecision({pack,contract=pack?.branding,screensh
     dealerApproval:false,visualReviewPerformed:findings.length===0,
     reviewerKind:review.reviewer?.kind??null,reviewedAt:review.reviewer?.reviewedAt??null,
     identityKind:review.identity?.kind??null,sourceSha256:review.sourceSha256??null,contractSha256:review.contractSha256??null,
-    contactSheetSha256:sheet?.sha256??null,
+    contactSheetPath:sheet?.path??null,contactSheetSha256:sheet?.sha256??null,
     screenshotCount:screenshots===undefined?null:(Array.isArray(review.sixDesignScreens)?review.sixDesignScreens.length:0),
     note:'Independent visual decision with exact source, reviewed contact sheet, 32/48/64 marks and 18 matching rendered homes; never dealer approval.'};
 }
