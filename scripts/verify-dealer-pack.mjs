@@ -407,6 +407,15 @@ export async function verifyPackLogoAssets({pack,sharp,bundleRoot}) {
     result.status=result.findings.length?'failed':'passed';results.push({...result,sourcePath,sourceSha256,publicPath:asset.publicPath??null,sha256:asset.sha256});
   }
   const qualityDecision=assessLogoQualityDecision({pack,contract});
+  if(qualityDecision.status==='passed'){
+    try{
+      const sheetBytes=pack.files instanceof Map?pack.files.get(qualityDecision.contactSheetPath):
+        fs.readFileSync(inside(pack.directory,qualityDecision.contactSheetPath,{mustExist:true}));
+      const decoder=sharp(sheetBytes,{limitInputPixels:32*1024**2}),sheet=await decoder.metadata();
+      assert(sheet.format==='png'&&sheet.width>=640&&sheet.height>=480&&sheet.width<=6000&&sheet.height<=4000,'Invalid bounded visual contact sheet');
+      await decoder.stats(); // Decode actual PNG pixels; an IHDR-only fake cannot satisfy review.
+    }catch(error){qualityDecision.findings.push('logo-review-contact-sheet-not-decodable');qualityDecision.status='failed';qualityDecision.visualReviewPerformed=false;}
+  }
   return {status:results.every(row=>row.status==='passed')&&qualityDecision.status==='passed'?'passed':'failed',
     technicalStatus:results.every(row=>row.status==='passed')?'passed':'failed',qualityDecision,
     identityStatus:contract.identityStatus??contract.status??contract.approvalStatus??null,creationMethod:contract.creationMethod??null,
