@@ -1,7 +1,7 @@
 /** Manual-quality release decision for source logos and six rendered dealer designs.
  * Technical image checks alone cannot establish legible lettering or correct identity.
  * A missing or incomplete receipt fails CLOSED; a previously issued screenshot receipt
- * must match the actual 18 screenshots captured by native QA on this run.
+ * pins a complete reference grid; each native run hashes and checks its own 18 captures.
  */
 import fs from 'node:fs';
 import path from 'node:path';
@@ -71,25 +71,45 @@ export function assessLogoQualityDecision({pack,contract=pack?.branding,screensh
     else if(bytes.readUInt32BE(16)<640||bytes.readUInt32BE(16)>8192||bytes.readUInt32BE(20)<480||bytes.readUInt32BE(20)>8192)
       findings.push('logo-review-contact-sheet-dimensions');
   }
-  if(screenshots!==undefined){
-    const actual=Array.isArray(screenshots)?screenshots:[],reviewed=review.sixDesignScreens;
-    if(!Array.isArray(reviewed)||reviewed.length!==REVIEW_DESIGNS.length*REVIEW_WIDTHS.length||actual.length!==REVIEW_DESIGNS.length*REVIEW_WIDTHS.length)
-      findings.push('logo-review-six-design-evidence-incomplete');
-    else {
-      const expected=new Map();
-      for(const row of reviewed){
-        const key=row?.key+':'+row?.width;
-        if(!REVIEW_DESIGNS.includes(row?.key)||!REVIEW_WIDTHS.includes(row?.width)||expected.has(key)||!hex64(row.sha256)||row.decision!=='pass'||!utcDate(row.reviewedAt)){
-          findings.push('logo-review-six-design-invalid');continue;
-        }
-        expected.set(key,row);
+  // The committed visual decision binds a reviewed 18-view reference grid to
+  // the exact source, logo contract and contact sheet. It is mandatory even
+  // during preflight, before a native browser exists.
+  const reviewed=review.sixDesignScreens,expected=new Map();
+  if(!Array.isArray(reviewed)||reviewed.length!==REVIEW_DESIGNS.length*REVIEW_WIDTHS.length)
+    findings.push('logo-review-six-design-evidence-incomplete');
+  else {
+    for(const row of reviewed){
+      const key=row?.key+':'+row?.width;
+      if(!REVIEW_DESIGNS.includes(row?.key)||!REVIEW_WIDTHS.includes(row?.width)||expected.has(key)||
+         !hex64(row?.sha256)||row?.decision!=='pass'||!utcDate(row?.reviewedAt)){
+        findings.push('logo-review-six-design-invalid');continue;
       }
-      for(const row of actual){
-        const key=row?.key+':'+row?.width,matched=expected.get(key);
-        if(!matched||row.route!=='home'||matched.sha256!==row.sha256)
-          findings.push('logo-review-six-design-stale:'+key);
-      }
+      expected.set(key,row);
     }
+    for(const design of REVIEW_DESIGNS)for(const width of REVIEW_WIDTHS)
+      if(!expected.has(design+':'+width))findings.push('logo-review-six-design-evidence-incomplete');
+  }
+  // A fresh native run MUST render and hash its own complete 18-image grid.
+  // Full-page browser captures are not reproducible byte-for-byte across runs:
+  // lazy images, hydration, carousels, antialiasing and animation timing vary.
+  // Equating a new run's PNG SHA with an older committed review would force an
+  // unending receipt -> pack change -> rebuild -> new PNG SHA cycle.
+  // The independent visual signoff remains source-bound; actual current-run
+  // pages, identity/logo bytes, welcome flow and visual evidence are checked
+  // in the native verifier, and its own screenshot bytes are authenticated by
+  // the transport/deployment guard. Never infer a NEW human visual review.
+  if(screenshots!==undefined){
+    const actual=Array.isArray(screenshots)?screenshots:[],seen=new Set();
+    if(actual.length!==REVIEW_DESIGNS.length*REVIEW_WIDTHS.length)
+      findings.push('logo-review-run-screenshots-incomplete');
+    for(const row of actual){
+      const key=row?.key+':'+row?.width;
+      if(!expected.has(key)||seen.has(key)||row?.route!=='home'||!hex64(row?.sha256))
+        findings.push('logo-review-run-screenshot-invalid:'+key);
+      seen.add(key);
+    }
+    for(const design of REVIEW_DESIGNS)for(const width of REVIEW_WIDTHS)
+      if(!seen.has(design+':'+width))findings.push('logo-review-run-screenshots-incomplete');
   }
   return {status:findings.length?'failed':'passed',findings:[...new Set(findings)],
     dealerApproval:false,visualReviewPerformed:findings.length===0,
@@ -97,5 +117,6 @@ export function assessLogoQualityDecision({pack,contract=pack?.branding,screensh
     identityKind:review.identity?.kind??null,sourceSha256:review.sourceSha256??null,contractSha256:review.contractSha256??null,
     contactSheetPath:sheet?.path??null,contactSheetSha256:sheet?.sha256??null,
     screenshotCount:screenshots===undefined?null:(Array.isArray(review.sixDesignScreens)?review.sixDesignScreens.length:0),
-    note:'Independent visual decision with exact source, reviewed contact sheet, 32/48/64 marks and 18 matching rendered homes; never dealer approval.'};
+    currentRunHumanReview:false,runScreenshotBinding:screenshots===undefined?'not-captured':'current-run-authenticated',
+    note:'Source/contract-bound independent visual decision and 18 reviewed reference homes; every native run authenticates its own 18 fresh rendered homes. PNG bytes are not cross-run signatures; no new human or dealer approval is implied.'};
 }
