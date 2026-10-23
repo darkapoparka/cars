@@ -25,7 +25,7 @@
     },
     "mark": {
       "path": "branding/generated-mark-light.png",
-      "sha256": "39aa8d26fc5737df85116078ffd9ef2a2b1fb73127f514216bf2cfd3efb0b8cc",
+      "sha256": "674f9f9e7cce09278aef76e00b9ea2c4162ece93689b6116b9e709b60041d247",
       "generation": {
         "tool": "image_gen.imagegen",
         "generationId": "exec-7eb55f9a-c242-4424-b6ae-c4a5767bc7f7",
@@ -33,11 +33,11 @@
         "derivedFrom": {
           "path": "branding/generated-on-light.png",
           "sha256": "88c8e792d89035d9c30b7bfe79aa10f257173bed2eb83eaa1ba994973fb97647",
-          "operation": "crop-left-symbol",
+          "operation": "crop-reviewed-compact-symbol",
           "crop": {
-            "left": 0,
+            "left": 70,
             "top": 0,
-            "width": 315,
+            "width": 155,
             "height": 146
           }
         }
@@ -45,7 +45,7 @@
     },
     "markOnDark": {
       "path": "branding/generated-mark-dark.png",
-      "sha256": "ad55c10c24fa783b9b6261e7e727e6ec836eadae7648d3bd5f8b936e6ba76bf7",
+      "sha256": "f0fa6d620678b0649d77f01806698335c831b4566231cc277e901fff2ff5e6ac",
       "generation": {
         "tool": "image_gen.imagegen",
         "generationId": "exec-ecdfaaac-c70a-4269-b280-2e824d32d104",
@@ -53,11 +53,11 @@
         "derivedFrom": {
           "path": "branding/generated-on-dark.png",
           "sha256": "f776e35d28aec063d22151a484799376788bc6318c0e9d430ebdd8032d6a9e1b",
-          "operation": "crop-left-symbol",
+          "operation": "crop-reviewed-compact-symbol",
           "crop": {
-            "left": 0,
+            "left": 70,
             "top": 0,
-            "width": 315,
+            "width": 155,
             "height": 147
           }
         }
@@ -121,7 +121,7 @@
         48,
         64
       ],
-      "notes": "Left symbol cropped from reviewed horizontal variants; native rendering must independently qualify."
+      "notes": "Compact symbol crops visually selected from the reviewed horizontal PNG variants; native small-size and favicon QA remain independent."
     }
   },
   "sourceBlockers": [],

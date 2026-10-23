@@ -49,7 +49,7 @@
     },
     "markOnDark": {
       "path": "branding/generated-mark-dark.png",
-      "sha256": "13c05e6eeb36d6ce4eea088d593a4a35b65536e83ab54abdf88f17a46c3d4ed5",
+      "sha256": "d97bed99081f15f76760dbedb9316b6b9d0a52ed195660ee4720aff81f54c0c1",
       "generation": {
         "tool": "image_gen.imagegen",
         "generationId": "exec-a9f30ff4-b372-464d-aee9-0e29dcb45d4d",
@@ -57,11 +57,11 @@
         "derivedFrom": {
           "path": "branding/generated-on-dark.png",
           "sha256": "4e2fb821e3e11f1749b47b94a2a667a1e6760a07b04c10e7b0a2dbff6df734de",
-          "operation": "crop-left-symbol",
+          "operation": "crop-reviewed-compact-symbol",
           "crop": {
             "left": 0,
             "top": 0,
-            "width": 305,
+            "width": 295,
             "height": 283
           }
         }
@@ -125,7 +125,7 @@
         48,
         64
       ],
-      "notes": "Left symbol cropped from reviewed horizontal variants; native rendering must independently qualify."
+      "notes": "Compact symbol crops visually selected from the reviewed horizontal PNG variants; native small-size and favicon QA remain independent."
     }
   },
   "sourceBlockers": [],
