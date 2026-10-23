@@ -29,7 +29,7 @@
     },
     "mark": {
       "path": "branding/generated-mark-light.png",
-      "sha256": "465314fd463cde72d1b656ec16b52bef3fc28989cc9e898bef4655d1cb714968",
+      "sha256": "6e387b3313c407da303688c078a290b85699c21c0d571c8d1eceeb1427f1cab4",
       "generation": {
         "tool": "image_gen.imagegen",
         "generationId": "exec-6d23575b-e4f2-40d3-bdc4-ba5e3ef541f7",
@@ -41,7 +41,7 @@
           "crop": {
             "left": 0,
             "top": 0,
-            "width": 355,
+            "width": 390,
             "height": 203
           }
         }
@@ -49,7 +49,7 @@
     },
     "markOnDark": {
       "path": "branding/generated-mark-dark.png",
-      "sha256": "7f50ee16487362b67fdfb8583a033e7c6375b36218111d785b4ea480c47f4ee0",
+      "sha256": "5d261cea023f9c31047a60d3ec7719b3fc8d4b8f705624b4907230f423fc1408",
       "generation": {
         "tool": "image_gen.imagegen",
         "generationId": "exec-eae8299a-a472-4b98-9e39-8bd61f0d0754",
@@ -61,7 +61,7 @@
           "crop": {
             "left": 0,
             "top": 0,
-            "width": 355,
+            "width": 390,
             "height": 202
           }
         }

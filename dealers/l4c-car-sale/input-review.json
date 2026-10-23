@@ -3,7 +3,7 @@
   "kind": "cars-dealer-pack-input-review",
   "dealer": "l4c-car-sale",
   "reviewed": true,
-  "reviewedAt": "2026-10-23T00:53:53.823Z",
+  "reviewedAt": "2026-10-23T00:57:16.620Z",
   "review": {
     "kind": "automated",
     "humanReview": false,
@@ -55,11 +55,11 @@
     },
     {
       "path": "branding/generated-mark-dark.png",
-      "sha256": "7f50ee16487362b67fdfb8583a033e7c6375b36218111d785b4ea480c47f4ee0"
+      "sha256": "5d261cea023f9c31047a60d3ec7719b3fc8d4b8f705624b4907230f423fc1408"
     },
     {
       "path": "branding/generated-mark-light.png",
-      "sha256": "465314fd463cde72d1b656ec16b52bef3fc28989cc9e898bef4655d1cb714968"
+      "sha256": "6e387b3313c407da303688c078a290b85699c21c0d571c8d1eceeb1427f1cab4"
     },
     {
       "path": "branding/generated-on-dark.png",
@@ -71,11 +71,11 @@
     },
     {
       "path": "branding/logo-contract.json",
-      "sha256": "f6421dc92c87f513849ef058f46b961c7a456dbbcfeceb0c68b9da8ae62ac45f"
+      "sha256": "70adb763eab0350b5dcff68ebda09ae0de90343796fe752bcaadba0c0b66ef2a"
     },
     {
       "path": "branding/logo-recipe.json",
-      "sha256": "52c4982f7795c64326a074206f7205d52894f63ea3d0eae542f3ef0c328a9c1c"
+      "sha256": "a90b8a464dfb993efc1eebdd3ce11a3f7208c3825ef560663cc1f8cc4e406741"
     },
     {
       "path": "branding/native-generated-on-dark.png",
@@ -87,7 +87,7 @@
     },
     {
       "path": "branding/source.json",
-      "sha256": "3d2ae2e766d39224f4a916bfc0d0fcd8fc48084b642408b5f858d7257374fccb"
+      "sha256": "0d74b140bf727b654675d97538aec4734b0e2d063f722403ba8d3b3f82853ca4"
     },
     {
       "path": "business-facts.json",
@@ -99,7 +99,7 @@
     },
     {
       "path": "copy-review.json",
-      "sha256": "9c60d044087c59dd4b1e54090fa3d5967a39f9551feb4099529481bb88c2e53c"
+      "sha256": "3be061c211f0f75143991e762f95afd446b71b322e90c4183150061efeb8cdc7"
     },
     {
       "path": "dealer-stock/template-demo-1.webp",
@@ -115,11 +115,11 @@
     },
     {
       "path": "dealer.json",
-      "sha256": "9cf536561a465490a3db8fc59d68ef4e8c2c371aea0c3ddb3b65c8c6450dd5f6"
+      "sha256": "df4a115104d62e779b8d878ffe67d733e60425e642a1b9c48795d9eb54f3ec86"
     },
     {
       "path": "identity-review.json",
-      "sha256": "a0b4688124fd0404d95c3b2ca897ad57b464d5855dd64d0423c55781d10f0c91"
+      "sha256": "42c596f5bb3c223c87e1c7a43c78504917f385525cc46d2c0b5dd8cd341080ea"
     },
     {
       "path": "locale.json",
@@ -131,7 +131,7 @@
     },
     {
       "path": "qualification.json",
-      "sha256": "3d22411ec71d3ae0b4d19eeac8b3321261f82db173d4616f9cb5a99ad32a1e7c"
+      "sha256": "68d1f1e5fed9a42ffbffb2efc4ef02d01eaebf0f8a3c4e0bd9cb6287051617ce"
     },
     {
       "path": "source-evidence.json",

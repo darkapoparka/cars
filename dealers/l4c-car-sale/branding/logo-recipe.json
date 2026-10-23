@@ -34,23 +34,23 @@
     "zlib-ng": "2.3.3",
     "sharp": "0.35.5"
   },
-  "sourceSha256": "3d2ae2e766d39224f4a916bfc0d0fcd8fc48084b642408b5f858d7257374fccb",
-  "contractSha256": "f6421dc92c87f513849ef058f46b961c7a456dbbcfeceb0c68b9da8ae62ac45f",
+  "sourceSha256": "0d74b140bf727b654675d97538aec4734b0e2d063f722403ba8d3b3f82853ca4",
+  "contractSha256": "70adb763eab0350b5dcff68ebda09ae0de90343796fe752bcaadba0c0b66ef2a",
   "outputs": [
     {
       "path": "branding/app-icon.png",
-      "bytes": 61585,
-      "sha256": "987216fecbd79b0d6f26d124f87fbb713239312a733c65bbd6272d82070c0eef"
+      "bytes": 57810,
+      "sha256": "498619d23b7d7d7fc71bafe337243e11f240b2a285e78eb2f119d841c9fd009f"
     },
     {
       "path": "branding/logo-mark-on-dark.png",
-      "bytes": 72716,
-      "sha256": "4a58bceecb4f9cbbb4969bb996832b55a1661e8cb4485b04ef6bcb54cccdb171"
+      "bytes": 67228,
+      "sha256": "ab85dcfb050b396a664b25620072bfd27ef4ffa5765d0c160af225051e708062"
     },
     {
       "path": "branding/logo-mark.png",
-      "bytes": 61585,
-      "sha256": "987216fecbd79b0d6f26d124f87fbb713239312a733c65bbd6272d82070c0eef"
+      "bytes": 57810,
+      "sha256": "498619d23b7d7d7fc71bafe337243e11f240b2a285e78eb2f119d841c9fd009f"
     },
     {
       "path": "branding/logo-master.png",
@@ -74,13 +74,13 @@
     },
     {
       "path": "dealer-brand/app-icon.png",
-      "bytes": 61585,
-      "sha256": "987216fecbd79b0d6f26d124f87fbb713239312a733c65bbd6272d82070c0eef"
+      "bytes": 57810,
+      "sha256": "498619d23b7d7d7fc71bafe337243e11f240b2a285e78eb2f119d841c9fd009f"
     },
     {
       "path": "dealer-brand/favicon.ico",
-      "bytes": 5484,
-      "sha256": "b4313d3d0242fe4d15437997ff964f8fdc87bb49a7226fbfc6871281f1cd48bd"
+      "bytes": 5221,
+      "sha256": "ea5bdfeb149a45b62a5e79fa44439172c619b0469d8a07c150bd105d1d757e18"
     },
     {
       "path": "dealer-brand/logo-on-accent.png",
@@ -114,13 +114,13 @@
     },
     {
       "path": "dealer-brand/mark-on-dark.webp",
-      "bytes": 49290,
-      "sha256": "8b7fe8f171aa0895cfd0e34ef9479071821c004e8060d6c8ef3dc11940e615dd"
+      "bytes": 47890,
+      "sha256": "ca278664c4b01d83a8caf6865cd9dc56a1298ca69af49671b5d0118e61d24bb0"
     },
     {
       "path": "dealer-brand/mark-on-light.webp",
-      "bytes": 40422,
-      "sha256": "fcd63ac3752d00619ac67f7c5a275f681cb8b0575941328be3355225f67a45ea"
+      "bytes": 40956,
+      "sha256": "117ecebdbdc06918a0df9f35d464cb5666ef2e076dc46fe2b8fea48855dc7110"
     }
   ]
 }
