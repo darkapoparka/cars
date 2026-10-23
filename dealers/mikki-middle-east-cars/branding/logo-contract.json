@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "dealer": "mikki-middle-east-cars",
+  "reviewed": true,
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "fab3d968657a966bcf358eb1d652706ffb78c9381aab2121adae12821cea3be8",
+      "sourceSha256": "a2c2fd2bd81767783ccb03aadfcd95f4267c4f2ffe45ad42cda1b2b8e8bc7d4d"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "0f51a90163af9c84c9ce04ce8cd29f70cad586d5cc4d7d4790c4b02aa2fe9916",
+      "sourceSha256": "03aa9aad78208b0c440d60dae6a9512d11d5e889db52e141449c6473f06a9944"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "0f51a90163af9c84c9ce04ce8cd29f70cad586d5cc4d7d4790c4b02aa2fe9916",
+      "sourceSha256": "03aa9aad78208b0c440d60dae6a9512d11d5e889db52e141449c6473f06a9944"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "a2c2fd2bd81767783ccb03aadfcd95f4267c4f2ffe45ad42cda1b2b8e8bc7d4d",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-8181fb90-de3a-4a42-8cc0-047692db167b",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "5d214c072ba59b3f10d56b00ffc1491d3c0fcd45c96083f102548aef7a858757",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-8181fb90-de3a-4a42-8cc0-047692db167b",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "a2c2fd2bd81767783ccb03aadfcd95f4267c4f2ffe45ad42cda1b2b8e8bc7d4d",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 285,
+          "height": 264
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "7e4b35948fdf5eae063fb94d3816376ae6968ea42bc8ad0e4a7ad313df770f45"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "a2c2fd2bd81767783ccb03aadfcd95f4267c4f2ffe45ad42cda1b2b8e8bc7d4d",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-8181fb90-de3a-4a42-8cc0-047692db167b",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/mikki-middle-east-cars/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "03aa9aad78208b0c440d60dae6a9512d11d5e889db52e141449c6473f06a9944",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-9a7fd514-bd5c-40e6-8d80-61632671329a",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/mikki-middle-east-cars/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "03aa9aad78208b0c440d60dae6a9512d11d5e889db52e141449c6473f06a9944",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-9a7fd514-bd5c-40e6-8d80-61632671329a",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/mikki-middle-east-cars/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "a2c2fd2bd81767783ccb03aadfcd95f4267c4f2ffe45ad42cda1b2b8e8bc7d4d",
+      "sha256": "a2c2fd2bd81767783ccb03aadfcd95f4267c4f2ffe45ad42cda1b2b8e8bc7d4d",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 264
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "03aa9aad78208b0c440d60dae6a9512d11d5e889db52e141449c6473f06a9944",
+      "sha256": "03aa9aad78208b0c440d60dae6a9512d11d5e889db52e141449c6473f06a9944",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 265
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "03aa9aad78208b0c440d60dae6a9512d11d5e889db52e141449c6473f06a9944",
+      "sha256": "03aa9aad78208b0c440d60dae6a9512d11d5e889db52e141449c6473f06a9944",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 265
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "3b008f0c5492c6de81ae0127983dac45dfe9bcd258ec4a0b283cdd382e585715",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-8181fb90-de3a-4a42-8cc0-047692db167b",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "a2c2fd2bd81767783ccb03aadfcd95f4267c4f2ffe45ad42cda1b2b8e8bc7d4d",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 285,
+            "height": 264
+          }
+        }
+      },
+      "sourceReference": "dealers/mikki-middle-east-cars/branding/generated-mark-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "29710f91e126dccce4d7d006e5c0e7b8160e7b3f8e65e0bb863b9b052f14e939",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-9a7fd514-bd5c-40e6-8d80-61632671329a",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "03aa9aad78208b0c440d60dae6a9512d11d5e889db52e141449c6473f06a9944",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 285,
+            "height": 265
+          }
+        }
+      },
+      "sourceReference": "dealers/mikki-middle-east-cars/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "5d214c072ba59b3f10d56b00ffc1491d3c0fcd45c96083f102548aef7a858757",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-8181fb90-de3a-4a42-8cc0-047692db167b",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "a2c2fd2bd81767783ccb03aadfcd95f4267c4f2ffe45ad42cda1b2b8e8bc7d4d",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 285,
+            "height": 264
+          }
+        }
+      },
+      "sourceReference": "dealers/mikki-middle-east-cars/branding/generated-mark-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "7e4b35948fdf5eae063fb94d3816376ae6968ea42bc8ad0e4a7ad313df770f45",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-8181fb90-de3a-4a42-8cc0-047692db167b",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "a2c2fd2bd81767783ccb03aadfcd95f4267c4f2ffe45ad42cda1b2b8e8bc7d4d",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 285,
+            "height": 264
+          }
+        }
+      },
+      "sourceReference": "dealers/mikki-middle-east-cars/branding/generated-mark-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "3d88eba1f48cc2b38780a9e9feaa7ab4c1a72de7cc62450c53f7d52b3c1cbd3e",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-9a7fd514-bd5c-40e6-8d80-61632671329a",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "03aa9aad78208b0c440d60dae6a9512d11d5e889db52e141449c6473f06a9944",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 285,
+          "height": 265
+        }
+      }
+    }
+  }
+}

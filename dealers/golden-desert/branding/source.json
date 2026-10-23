@@ -1,0 +1,143 @@
+{
+  "schemaVersion": 1,
+  "dealer": "golden-desert",
+  "status": "reviewed-imagegen-proposal",
+  "realLogoFirst": true,
+  "publicSources": [
+    {
+      "url": "https://www.dubicars.com/dealers/sharjah-golden-desert-3242",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "originals": [],
+  "creationMethod": "imagegen-proposal",
+  "dealerApproved": false,
+  "generatedInputs": {
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "master": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "d2a81310678fc30298fdca8013ed83aa1983d3c188e6dfc7f31ca812ba6040b4",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-41a5c3ce-796d-4c2e-a5b5-6c3bc22d4b1c",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark-light.png",
+      "sha256": "50d1ac676e884b23640dd41109ccd4f9d0473d09164b0823577b8113b1ec90c2",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-41a5c3ce-796d-4c2e-a5b5-6c3bc22d4b1c",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "d2a81310678fc30298fdca8013ed83aa1983d3c188e6dfc7f31ca812ba6040b4",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 285,
+            "height": 172
+          }
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-dark.png",
+      "sha256": "7733b0a2d6d327c1fbb9a0805d1938300109c15720f701f5b084e393b980853d",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a736ec01-f9d2-466b-935f-9db155f98f08",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "71fd089eaff7a018f4bdc76662e1cf1bc230cf294a08472589334c7de744d201",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 285,
+            "height": 174
+          }
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "d2a81310678fc30298fdca8013ed83aa1983d3c188e6dfc7f31ca812ba6040b4",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-41a5c3ce-796d-4c2e-a5b5-6c3bc22d4b1c",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "71fd089eaff7a018f4bdc76662e1cf1bc230cf294a08472589334c7de744d201",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-a736ec01-f9d2-466b-935f-9db155f98f08",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "71fd089eaff7a018f4bdc76662e1cf1bc230cf294a08472589334c7de744d201",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-a736ec01-f9d2-466b-935f-9db155f98f08",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewKind": "agent-visual-review",
+      "humanReview": false,
+      "dealerApproval": false,
+      "backgrounds": {
+        "onLight": "#ffffff",
+        "onDark": "#111113",
+        "onAccent": "#c40101"
+      },
+      "wordmarkWidths": [
+        220,
+        240
+      ],
+      "notes": "Exact reviewed Image Gen pair; native masters and generation provenance retained. Compact rasters cropped from the actual left symbol."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-22T23:42:46.338Z",
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#c40101"
+      ],
+      "widths": [
+        32,
+        48,
+        64
+      ],
+      "notes": "Left symbol cropped from reviewed horizontal variants; native rendering must independently qualify."
+    }
+  },
+  "sourceBlockers": [],
+  "artworkProvenance": {
+    "path": "branding/artwork-provenance.json",
+    "sha256": "75d72772e13c6b2c6bbeee94bcda7d691805354f87c09bdb4e1578a65346afed",
+    "manifestSha256": "d25e9cee768a885052ac0a8df220d843c9b9c6f6f120d722705bead1cc99e694",
+    "nativeMasters": [
+      {
+        "path": "branding/native-generated-on-light.png",
+        "sha256": "0dcef6e7cf2b1bef0d34888eaeb71b07f3b4c6e4dc19d8b5613014c8f6b15bea"
+      },
+      {
+        "path": "branding/native-generated-on-dark.png",
+        "sha256": "588ddbeccdf2a0fd65fd24c8efc1bee34cc529916d29d2be92b60c2f9e873599"
+      }
+    ]
+  }
+}

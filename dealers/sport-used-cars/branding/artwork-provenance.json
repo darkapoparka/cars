@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "ae-sharjah-sport-used-cars",
+  "slug": null,
+  "artworkDirectory": "ae-sharjah-sport-used-cars",
+  "name": "Sport Used Cars",
+  "renderedName": "Sport Used Cars",
+  "kind": "independent-website-logo-proposal",
+  "dealerApproved": false,
+  "ownerApproved": false,
+  "sourceEvidence": [
+    {
+      "url": "https://www.dubicars.com/dealers/sharjah-sport-used-cars-812",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://sportusedcars-shj.com/",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "retainedOriginalsUnchanged": true,
+  "variants": {
+    "on-light": {
+      "path": "logo-on-light.png",
+      "sha256": "2fb1a4fad1f59634fb5af3f422d8de1b667c66b623826088592f15496b32cfad",
+      "width": 1024,
+      "height": 239,
+      "transparentFraction": 0.618413310669456,
+      "master": {
+        "path": "generated-on-light.png",
+        "sha256": "044edfdec62664ffbe4eb68b5ee0dc01aef5b76867935f40e5f2336354852568",
+        "width": 2073,
+        "height": 758
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-9244ddc2-7d27-4f63-ab3f-845d23d152f3",
+        "prompt": "Create one professional horizontal automotive dealership logo proposal for Sport Used Cars. Required exact text, uppercase: SPORT USED CARS. Every word must be present and spelled precisely; use sensible primary name and smaller descriptor hierarchy without tiny lettering. Produce a polished original identity with a clever rounded negative-space monogram, with an open confident silhouette. Initials S may inform the emblem. Emblem left, full clear name to the right, compact and balanced for a website header. Avoid overused shield and generic car silhouettes; no manufacturer badges. Clean modern lettering with careful kerning and strong legibility. All text is deep charcoal black, appropriate on a white/light header. One restrained red or gold accent may appear inside the emblem only; no pale text. Flat crisp edges, a small number of solid shapes, no chrome, no lighting, no shadow, no texture, no gradient. Genuine transparent alpha background, isolated logo with no background box, no grid, no checkerboard painted into pixels. No slogan, contact info, website, watermark, mockup, photograph, extra concept, or duplicate logo. Deliver exactly one horizontal full logo. This is an independent website identity proposal, not a claim of adopted branding.",
+        "reference": null
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 0,
+          "top": 127,
+          "width": 2073,
+          "height": 484
+        }
+      }
+    },
+    "on-dark": {
+      "path": "logo-on-dark.png",
+      "sha256": "3804d78c27723dd70d85ba79df9c1513a0a4c3d5a489eb8c8a15a93b2e270bfd",
+      "width": 1024,
+      "height": 242,
+      "transparentFraction": 0.5130827091942148,
+      "master": {
+        "path": "generated-on-dark.png",
+        "sha256": "7199583f4d0402931b788292ceb54caa6271efc47c4304c6465bf26aa96e21a7",
+        "width": 2073,
+        "height": 759
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-2326fadb-46dd-4012-9aa9-9d628edfa364",
+        "prompt": "Create the matching light-on-dark production variant of the exact supplied logo. Preserve precisely the same emblem, geometry, spelling, word count, typographic hierarchy, proportions, layout and spacing. Required exact text: SPORT USED CARS. Change EVERY letter, including all secondary descriptor words and legal suffixes, to solid white so it is legible over a dark or red website header. Change the charcoal portions of the emblem to white. Retain the small red/gold emblem accent only if it contrasts clearly against a dark header. True transparent alpha background; do not paint a dark rectangle or checkerboard. Flat clean edges, no glows, shadows, bevels, textures, gradients, new artwork, new icon, extra text or mockup. Deliver one horizontal matching logo, fully legible.",
+        "reference": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-9244ddc2-7d27-4f63-ab3f-845d23d152f3.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 0,
+          "top": 123,
+          "width": 2073,
+          "height": 490
+        }
+      }
+    }
+  },
+  "review": {
+    "status": "artwork-visually-reviewed",
+    "alpha": "all exports measured as genuine transparent nonempty PNGs",
+    "spelling": "English wordmark inspected; source-bound display aliases retained",
+    "compact": "Horizontal logos only. Interactive 32/48/64px gallery preview is provided; separate compact/favicon artwork remains part of dealer-pack preparation.",
+    "sixDesigns": "not-yet-integrated-or-rendered",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "reviewer": "Codex visual inspection",
+    "header": "All 196 paired PNGs inspected at 240x64 on white, #111113 and #c40101",
+    "evidence": "final-review-12.png"
+  },
+  "releaseReady": false,
+  "artworkHolds": [],
+  "artworkReadyForIntegration": true
+}
