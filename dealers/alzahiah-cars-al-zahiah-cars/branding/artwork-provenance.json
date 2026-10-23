@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "ae-dubai-alzahiah-cars",
+  "slug": "alzahiah-cars-al-zahiah-cars",
+  "artworkDirectory": "alzahiah-cars-al-zahiah-cars",
+  "name": "Alzahiah Cars (Al Zahiah Cars)",
+  "renderedName": "Alzahiah Cars",
+  "kind": "independent-website-logo-proposal",
+  "dealerApproved": false,
+  "ownerApproved": false,
+  "sourceEvidence": [
+    {
+      "url": "https://auto.ae/alzahiah/",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.arabwheels.ae/used-cars/dealers/al-zahiah-cars-showroom-in-uae",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "retainedOriginalsUnchanged": true,
+  "variants": {
+    "on-light": {
+      "path": "logo-on-light.png",
+      "sha256": "f9899346b19b1ab7992d93ee0e3adb7c922719797db2a30536c9d99d24dfc889",
+      "width": 1024,
+      "height": 301,
+      "transparentFraction": 0.739235101744186,
+      "master": {
+        "path": "generated-on-light.png",
+        "sha256": "cf62232682a0b798e88144ba6835569bc299b081af9c25fd9b62cd2fbda99327",
+        "width": 2091,
+        "height": 752
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-86e13d49-2df8-406f-9d12-2ba0a41cb2b2",
+        "prompt": "Create one professional horizontal automotive dealership logo proposal for Alzahiah Cars. Required exact text, uppercase: ALZAHIAH CARS. Every word must be present and spelled precisely; use sensible primary name and smaller descriptor hierarchy without tiny lettering. Produce a polished original identity with a clever rounded negative-space monogram, with an open confident silhouette. Initials A may inform the emblem. Emblem left, full clear name to the right, compact and balanced for a website header. Avoid overused shield and generic car silhouettes; no manufacturer badges. Clean modern lettering with careful kerning and strong legibility. All text is deep charcoal black, appropriate on a white/light header. One restrained red or gold accent may appear inside the emblem only; no pale text. Flat crisp edges, a small number of solid shapes, no chrome, no lighting, no shadow, no texture, no gradient. Genuine transparent alpha background, isolated logo with no background box, no grid, no checkerboard painted into pixels. No slogan, contact info, website, watermark, mockup, photograph, extra concept, or duplicate logo. Deliver exactly one horizontal full logo. This is an independent website identity proposal, not a claim of adopted branding.",
+        "reference": null
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 0,
+          "top": 64,
+          "width": 2091,
+          "height": 614
+        }
+      }
+    },
+    "on-dark": {
+      "path": "logo-on-dark.png",
+      "sha256": "5981d04a8ef6f1c4cedb1c410bb2ebc1faea75159aa0eb191b1afbeb9da28323",
+      "width": 1024,
+      "height": 302,
+      "transparentFraction": 0.6646801272764901,
+      "master": {
+        "path": "generated-on-dark.png",
+        "sha256": "1c24ca93f881af4a8a415b85b304098e0fbd6a02fbcb91a6c47fd8e98bfec239",
+        "width": 2092,
+        "height": 752
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-4b05e9df-dddd-4c1a-8152-ba2e4d7d7f04",
+        "prompt": "Create the matching light-on-dark production variant of the exact supplied logo. Preserve precisely the same emblem, geometry, spelling, word count, typographic hierarchy, proportions, layout and spacing. Required exact text: ALZAHIAH CARS. Change EVERY letter, including all secondary descriptor words and legal suffixes, to solid white so it is legible over a dark or red website header. Change the charcoal portions of the emblem to white. Retain the small red/gold emblem accent only if it contrasts clearly against a dark header. True transparent alpha background; do not paint a dark rectangle or checkerboard. Flat clean edges, no glows, shadows, bevels, textures, gradients, new artwork, new icon, extra text or mockup. Deliver one horizontal matching logo, fully legible.",
+        "reference": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-86e13d49-2df8-406f-9d12-2ba0a41cb2b2.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 0,
+          "top": 61,
+          "width": 2092,
+          "height": 617
+        }
+      }
+    }
+  },
+  "review": {
+    "status": "artwork-visually-reviewed",
+    "alpha": "all exports measured as genuine transparent nonempty PNGs",
+    "spelling": "English wordmark inspected; source-bound display aliases retained",
+    "compact": "Horizontal logos only. Interactive 32/48/64px gallery preview is provided; separate compact/favicon artwork remains part of dealer-pack preparation.",
+    "sixDesigns": "not-yet-integrated-or-rendered",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "reviewer": "Codex visual inspection",
+    "header": "All 196 paired PNGs inspected at 240x64 on white, #111113 and #c40101",
+    "evidence": "final-review-06.png"
+  },
+  "releaseReady": false,
+  "artworkHolds": [],
+  "artworkReadyForIntegration": true
+}

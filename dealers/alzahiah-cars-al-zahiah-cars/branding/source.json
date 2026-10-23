@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "dealer": "alzahiah-cars-al-zahiah-cars",
-  "status": "research-required",
+  "status": "reviewed-imagegen-proposal",
   "realLogoFirst": true,
   "publicSources": [
     {
@@ -14,7 +14,134 @@
     }
   ],
   "originals": [],
-  "creationMethod": null,
+  "creationMethod": "imagegen-proposal",
   "dealerApproved": false,
-  "generatedInputs": null
+  "generatedInputs": {
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "master": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "f9899346b19b1ab7992d93ee0e3adb7c922719797db2a30536c9d99d24dfc889",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-86e13d49-2df8-406f-9d12-2ba0a41cb2b2",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark-light.png",
+      "sha256": "46c5f3d1dd53e88d1079c02fde31e0cb16b97ccb586c442ae9bd4d7ff1d99697",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-86e13d49-2df8-406f-9d12-2ba0a41cb2b2",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "f9899346b19b1ab7992d93ee0e3adb7c922719797db2a30536c9d99d24dfc889",
+          "operation": "crop-and-mask-reviewed-left-A-away-from-wordmark",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 400,
+            "height": 301
+          }
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-dark.png",
+      "sha256": "8a871e644a96af5e3bc027ca890306ff7cfccb5b5a7a6addacc7557f7e615f6b",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-4b05e9df-dddd-4c1a-8152-ba2e4d7d7f04",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "5981d04a8ef6f1c4cedb1c410bb2ebc1faea75159aa0eb191b1afbeb9da28323",
+          "operation": "crop-and-mask-reviewed-left-A-away-from-wordmark",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 400,
+            "height": 302
+          }
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "f9899346b19b1ab7992d93ee0e3adb7c922719797db2a30536c9d99d24dfc889",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-86e13d49-2df8-406f-9d12-2ba0a41cb2b2",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "5981d04a8ef6f1c4cedb1c410bb2ebc1faea75159aa0eb191b1afbeb9da28323",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-4b05e9df-dddd-4c1a-8152-ba2e4d7d7f04",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "5981d04a8ef6f1c4cedb1c410bb2ebc1faea75159aa0eb191b1afbeb9da28323",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-4b05e9df-dddd-4c1a-8152-ba2e4d7d7f04",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewKind": "agent-visual-review",
+      "humanReview": false,
+      "dealerApproval": false,
+      "backgrounds": {
+        "onLight": "#ffffff",
+        "onDark": "#111113",
+        "onAccent": "#c40101"
+      },
+      "wordmarkWidths": [
+        220,
+        240
+      ],
+      "notes": "Exact reviewed Image Gen pair; native masters and generation provenance retained. Compact rasters cropped from the actual left symbol."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-22T23:42:46.338Z",
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#c40101"
+      ],
+      "widths": [
+        32,
+        48,
+        64
+      ],
+      "notes": "Left A symbol cropped from reviewed horizontal variants; neighboring wordmark pixels in x>=333,y<205 are masked. Native rendering must independently qualify."
+    }
+  },
+  "sourceBlockers": [],
+  "artworkProvenance": {
+    "path": "branding/artwork-provenance.json",
+    "sha256": "ed226a0ea94bd0e1a3a4b29241672809f0bd7af43a7500264b7eff89ff4dbec7",
+    "manifestSha256": "d25e9cee768a885052ac0a8df220d843c9b9c6f6f120d722705bead1cc99e694",
+    "nativeMasters": [
+      {
+        "path": "branding/native-generated-on-light.png",
+        "sha256": "cf62232682a0b798e88144ba6835569bc299b081af9c25fd9b62cd2fbda99327"
+      },
+      {
+        "path": "branding/native-generated-on-dark.png",
+        "sha256": "1c24ca93f881af4a8a415b85b304098e0fbd6a02fbcb91a6c47fd8e98bfec239"
+      }
+    ]
+  }
 }

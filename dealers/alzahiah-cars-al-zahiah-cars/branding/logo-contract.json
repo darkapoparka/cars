@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "dealer": "alzahiah-cars-al-zahiah-cars",
+  "reviewed": true,
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "c3e2ac32eddf70e465ee6bfeec7cf686c17e3005ec4ca159819730909bcb565a",
+      "sourceSha256": "f9899346b19b1ab7992d93ee0e3adb7c922719797db2a30536c9d99d24dfc889"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "cbf0e36d8fdfe65bdc7b40f68716bb922324b23c0464e3260d3b3d023c553e2d",
+      "sourceSha256": "5981d04a8ef6f1c4cedb1c410bb2ebc1faea75159aa0eb191b1afbeb9da28323"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "cbf0e36d8fdfe65bdc7b40f68716bb922324b23c0464e3260d3b3d023c553e2d",
+      "sourceSha256": "5981d04a8ef6f1c4cedb1c410bb2ebc1faea75159aa0eb191b1afbeb9da28323"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "f9899346b19b1ab7992d93ee0e3adb7c922719797db2a30536c9d99d24dfc889",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-86e13d49-2df8-406f-9d12-2ba0a41cb2b2",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "63a15a9bfc45176f28da5762101f234ca52e95a608d3cacefe9121c546fbd083",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-86e13d49-2df8-406f-9d12-2ba0a41cb2b2",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "f9899346b19b1ab7992d93ee0e3adb7c922719797db2a30536c9d99d24dfc889",
+        "operation": "crop-and-mask-reviewed-left-A-away-from-wordmark",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 400,
+          "height": 301
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "0377c1d8cefee9c6a9a7c4c17805fa5e47d9aa5bbfae86fd339ef23f8bd034b6"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "f9899346b19b1ab7992d93ee0e3adb7c922719797db2a30536c9d99d24dfc889",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-86e13d49-2df8-406f-9d12-2ba0a41cb2b2",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/alzahiah-cars-al-zahiah-cars/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "5981d04a8ef6f1c4cedb1c410bb2ebc1faea75159aa0eb191b1afbeb9da28323",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-4b05e9df-dddd-4c1a-8152-ba2e4d7d7f04",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/alzahiah-cars-al-zahiah-cars/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "5981d04a8ef6f1c4cedb1c410bb2ebc1faea75159aa0eb191b1afbeb9da28323",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-4b05e9df-dddd-4c1a-8152-ba2e4d7d7f04",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/alzahiah-cars-al-zahiah-cars/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "f9899346b19b1ab7992d93ee0e3adb7c922719797db2a30536c9d99d24dfc889",
+      "sha256": "f9899346b19b1ab7992d93ee0e3adb7c922719797db2a30536c9d99d24dfc889",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 301
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "5981d04a8ef6f1c4cedb1c410bb2ebc1faea75159aa0eb191b1afbeb9da28323",
+      "sha256": "5981d04a8ef6f1c4cedb1c410bb2ebc1faea75159aa0eb191b1afbeb9da28323",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 302
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "5981d04a8ef6f1c4cedb1c410bb2ebc1faea75159aa0eb191b1afbeb9da28323",
+      "sha256": "5981d04a8ef6f1c4cedb1c410bb2ebc1faea75159aa0eb191b1afbeb9da28323",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 302
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "e69f69029b7700d0b6de9a3d538506fdaac3f1bb6a3362413861f56e9c0a6315",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-86e13d49-2df8-406f-9d12-2ba0a41cb2b2",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "f9899346b19b1ab7992d93ee0e3adb7c922719797db2a30536c9d99d24dfc889",
+          "operation": "crop-and-mask-reviewed-left-A-away-from-wordmark",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 400,
+            "height": 301
+          }
+        }
+      },
+      "sourceReference": "dealers/alzahiah-cars-al-zahiah-cars/branding/generated-mark-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "24706fbc8eac336f353428cb76659d98098a9b5b66de20b6bff11439fc9e4ded",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-4b05e9df-dddd-4c1a-8152-ba2e4d7d7f04",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "5981d04a8ef6f1c4cedb1c410bb2ebc1faea75159aa0eb191b1afbeb9da28323",
+          "operation": "crop-and-mask-reviewed-left-A-away-from-wordmark",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 400,
+            "height": 302
+          }
+        }
+      },
+      "sourceReference": "dealers/alzahiah-cars-al-zahiah-cars/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "63a15a9bfc45176f28da5762101f234ca52e95a608d3cacefe9121c546fbd083",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-86e13d49-2df8-406f-9d12-2ba0a41cb2b2",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "f9899346b19b1ab7992d93ee0e3adb7c922719797db2a30536c9d99d24dfc889",
+          "operation": "crop-and-mask-reviewed-left-A-away-from-wordmark",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 400,
+            "height": 301
+          }
+        }
+      },
+      "sourceReference": "dealers/alzahiah-cars-al-zahiah-cars/branding/generated-mark-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "0377c1d8cefee9c6a9a7c4c17805fa5e47d9aa5bbfae86fd339ef23f8bd034b6",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-86e13d49-2df8-406f-9d12-2ba0a41cb2b2",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "f9899346b19b1ab7992d93ee0e3adb7c922719797db2a30536c9d99d24dfc889",
+          "operation": "crop-and-mask-reviewed-left-A-away-from-wordmark",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 400,
+            "height": 301
+          }
+        }
+      },
+      "sourceReference": "dealers/alzahiah-cars-al-zahiah-cars/branding/generated-mark-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "1bd4d810cd7e18d38f08f0668703a10fd79e1cc46366d71501efed49a5c7741e",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-4b05e9df-dddd-4c1a-8152-ba2e4d7d7f04",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "5981d04a8ef6f1c4cedb1c410bb2ebc1faea75159aa0eb191b1afbeb9da28323",
+        "operation": "crop-and-mask-reviewed-left-A-away-from-wordmark",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 400,
+          "height": 302
+        }
+      }
+    }
+  }
+}
