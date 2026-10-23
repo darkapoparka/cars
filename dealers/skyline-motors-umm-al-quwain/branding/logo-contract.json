@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "dealer": "skyline-motors-umm-al-quwain",
+  "reviewed": true,
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "ca275b3a423d3033666d0a630f21b47ce648fcab92e7bbd8184460ca60626308",
+      "sourceSha256": "616e08d514de5bda0b474e2c19e1b6ab13f42ca2815139ee7d53be5cbd9b0219"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "9cdb378e3df757bb52afea5fb7c6c07c87f4f28a1087cf3b030911e1794c86ab",
+      "sourceSha256": "44fa36c884473ba8bbad1c1624bd535dbb3efda84ad0853b44542ed5c29199fc"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "9cdb378e3df757bb52afea5fb7c6c07c87f4f28a1087cf3b030911e1794c86ab",
+      "sourceSha256": "44fa36c884473ba8bbad1c1624bd535dbb3efda84ad0853b44542ed5c29199fc"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "616e08d514de5bda0b474e2c19e1b6ab13f42ca2815139ee7d53be5cbd9b0219",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-1b8e99bf-59c1-43c4-a5ae-64fdee48a466",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "a803b6bce26dfe465a7fde73dbd0384a14593aadb79603dd898c8b6b82113bef",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-1b8e99bf-59c1-43c4-a5ae-64fdee48a466",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "616e08d514de5bda0b474e2c19e1b6ab13f42ca2815139ee7d53be5cbd9b0219",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 260,
+          "height": 251
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "5dc62f9faf596c2738edfca913a729425ce4fd3d172a93e62dd6a517d8fa671f"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "616e08d514de5bda0b474e2c19e1b6ab13f42ca2815139ee7d53be5cbd9b0219",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1b8e99bf-59c1-43c4-a5ae-64fdee48a466",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/skyline-motors-umm-al-quwain/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "44fa36c884473ba8bbad1c1624bd535dbb3efda84ad0853b44542ed5c29199fc",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-09746053-bbe5-4864-8075-781330b4d6e6",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/skyline-motors-umm-al-quwain/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "44fa36c884473ba8bbad1c1624bd535dbb3efda84ad0853b44542ed5c29199fc",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-09746053-bbe5-4864-8075-781330b4d6e6",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/skyline-motors-umm-al-quwain/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "616e08d514de5bda0b474e2c19e1b6ab13f42ca2815139ee7d53be5cbd9b0219",
+      "sha256": "616e08d514de5bda0b474e2c19e1b6ab13f42ca2815139ee7d53be5cbd9b0219",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 251
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "44fa36c884473ba8bbad1c1624bd535dbb3efda84ad0853b44542ed5c29199fc",
+      "sha256": "44fa36c884473ba8bbad1c1624bd535dbb3efda84ad0853b44542ed5c29199fc",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 253
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "44fa36c884473ba8bbad1c1624bd535dbb3efda84ad0853b44542ed5c29199fc",
+      "sha256": "44fa36c884473ba8bbad1c1624bd535dbb3efda84ad0853b44542ed5c29199fc",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 253
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "a55aa7e48476a3f27204659eee7a5b2dcbef49cd4ca87a9d127e5fc1645391ce",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1b8e99bf-59c1-43c4-a5ae-64fdee48a466",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "616e08d514de5bda0b474e2c19e1b6ab13f42ca2815139ee7d53be5cbd9b0219",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 260,
+            "height": 251
+          }
+        }
+      },
+      "sourceReference": "dealers/skyline-motors-umm-al-quwain/branding/generated-mark-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "d8ca623704734ddcd3237282f7c8256a1e7be2909a4fdfe8c836107c38394eb4",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-09746053-bbe5-4864-8075-781330b4d6e6",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "44fa36c884473ba8bbad1c1624bd535dbb3efda84ad0853b44542ed5c29199fc",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 260,
+            "height": 253
+          }
+        }
+      },
+      "sourceReference": "dealers/skyline-motors-umm-al-quwain/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "a803b6bce26dfe465a7fde73dbd0384a14593aadb79603dd898c8b6b82113bef",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1b8e99bf-59c1-43c4-a5ae-64fdee48a466",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "616e08d514de5bda0b474e2c19e1b6ab13f42ca2815139ee7d53be5cbd9b0219",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 260,
+            "height": 251
+          }
+        }
+      },
+      "sourceReference": "dealers/skyline-motors-umm-al-quwain/branding/generated-mark-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "5dc62f9faf596c2738edfca913a729425ce4fd3d172a93e62dd6a517d8fa671f",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1b8e99bf-59c1-43c4-a5ae-64fdee48a466",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "616e08d514de5bda0b474e2c19e1b6ab13f42ca2815139ee7d53be5cbd9b0219",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 260,
+            "height": 251
+          }
+        }
+      },
+      "sourceReference": "dealers/skyline-motors-umm-al-quwain/branding/generated-mark-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "364ac5c75a122a38548ce6bc10fa6497ad15f9158fc8deb12e2d8ba5c44f0253",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-09746053-bbe5-4864-8075-781330b4d6e6",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "44fa36c884473ba8bbad1c1624bd535dbb3efda84ad0853b44542ed5c29199fc",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 260,
+          "height": 253
+        }
+      }
+    }
+  }
+}

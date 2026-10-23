@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "ae-umm-al-quwain-speed-motors-26",
+  "slug": null,
+  "artworkDirectory": "ae-umm-al-quwain-speed-motors-26",
+  "name": "Speed Motors Used Cars Trading (26)",
+  "renderedName": "Speed Motors Used Cars Trading",
+  "kind": "independent-website-logo-proposal",
+  "dealerApproved": false,
+  "ownerApproved": false,
+  "sourceEvidence": [
+    {
+      "url": "https://ae.opensooq.com/en/shops/shop-71385778",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://ae.opensooq.com/en/search/288823486",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.instagram.com/speed_motors26/",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.dubicars.com/ar/2026-toyota-corolla-cross-997514.html",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://coparking.ch/en/United-Arab-Emirates/car-dealers/794",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://linktr.ee/uaq_cars",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "retainedOriginalsUnchanged": true,
+  "variants": {
+    "on-light": {
+      "path": "logo-on-light.png",
+      "sha256": "eb2c1b81655e0ffc8d62496799a578f93e8067790b2f0c2a8dda5044b59e3c1f",
+      "width": 1024,
+      "height": 215,
+      "transparentFraction": 0.6223065043604651,
+      "master": {
+        "path": "generated-on-light.png",
+        "sha256": "b2972c18ff58bb718559c39405f36a4c1a4a93eaf4ccc60883233b6888bc0798",
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-5102ce4c-6790-4e56-9cd0-158717d7c4ee",
+        "prompt": "Create one professional horizontal automotive dealership logo proposal for Speed Motors Used Cars Trading. Required exact text, uppercase: SPEED MOTORS USED CARS TRADING. Every word must be present and spelled precisely; use sensible primary name and smaller descriptor hierarchy without tiny lettering. Produce a polished original identity with a distinctive custom typographic ligature in a refined square emblem. Initials S may inform the emblem. Emblem left, full clear name to the right, compact and balanced for a website header. Avoid overused shield and generic car silhouettes; no manufacturer badges. Clean modern lettering with careful kerning and strong legibility. All text is deep charcoal black, appropriate on a white/light header. One restrained red or gold accent may appear inside the emblem only; no pale text. Flat crisp edges, a small number of solid shapes, no chrome, no lighting, no shadow, no texture, no gradient. Genuine transparent alpha background, isolated logo with no background box, no grid, no checkerboard painted into pixels. No slogan, contact info, website, watermark, mockup, photograph, extra concept, or duplicate logo. Deliver exactly one horizontal full logo. This is an independent website identity proposal, not a claim of adopted branding.",
+        "reference": null
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 10,
+          "top": 131,
+          "width": 2154,
+          "height": 452
+        }
+      }
+    },
+    "on-dark": {
+      "path": "logo-on-dark.png",
+      "sha256": "5cf9efad9c87295cd669963bfa861d17d2b50b08f723c7635ea72f98b370e356",
+      "width": 1024,
+      "height": 216,
+      "transparentFraction": 0.5027081524884259,
+      "master": {
+        "path": "generated-on-dark.png",
+        "sha256": "a726fdd2d7868acac73bf414a531ea927035f8e8f270d8deafee086d6d3337cd",
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-1e6a7678-947d-40aa-ae92-c0361f5182db",
+        "prompt": "Create the matching light-on-dark production variant of the exact supplied logo. Preserve precisely the same emblem, geometry, spelling, word count, typographic hierarchy, proportions, layout and spacing. Required exact text: SPEED MOTORS USED CARS TRADING. Change EVERY letter, including all secondary descriptor words and legal suffixes, to solid white so it is legible over a dark or red website header. Change the charcoal portions of the emblem to white. Retain the small red/gold emblem accent only if it contrasts clearly against a dark header. True transparent alpha background; do not paint a dark rectangle or checkerboard. Flat clean edges, no glows, shadows, bevels, textures, gradients, new artwork, new icon, extra text or mockup. Deliver one horizontal matching logo, fully legible.",
+        "reference": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-5102ce4c-6790-4e56-9cd0-158717d7c4ee.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 10,
+          "top": 128,
+          "width": 2153,
+          "height": 454
+        }
+      }
+    }
+  },
+  "review": {
+    "status": "artwork-visually-reviewed",
+    "alpha": "all exports measured as genuine transparent nonempty PNGs",
+    "spelling": "English wordmark inspected; source-bound display aliases retained",
+    "compact": "Horizontal logos only. Interactive 32/48/64px gallery preview is provided; separate compact/favicon artwork remains part of dealer-pack preparation.",
+    "sixDesigns": "not-yet-integrated-or-rendered",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "reviewer": "Codex visual inspection",
+    "header": "All 196 paired PNGs inspected at 240x64 on white, #111113 and #c40101",
+    "evidence": "final-review-13.png"
+  },
+  "releaseReady": false,
+  "artworkHolds": [],
+  "artworkReadyForIntegration": true
+}

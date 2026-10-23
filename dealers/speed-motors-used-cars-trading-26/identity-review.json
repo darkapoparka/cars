@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": true,
+  "reviewedAt": "2026-10-23T04:19:03.089Z",
+  "dealer": "speed-motors-used-cars-trading-26",
+  "dealerId": "ae-umm-al-quwain-speed-motors-26",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "method": "Automated exact registry/pack identity, canonical hosting and batch comparison; retained public source fields were structurally checked, not human-approved.",
+  "sources": [
+    {
+      "url": "https://ae.opensooq.com/en/shops/shop-71385778",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://ae.opensooq.com/en/search/288823486",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.instagram.com/speed_motors26/",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.dubicars.com/ar/2026-toyota-corolla-cross-997514.html",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://coparking.ch/en/United-Arab-Emirates/car-dealers/794",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://linktr.ee/uaq_cars",
+      "observedAt": "2026-10-18"
+    }
+  ]
+}

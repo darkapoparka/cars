@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "slug": "super-1-cars-showroom",
+  "dealerId": "ae-umm-al-quwain-super-1-cars-showroom",
+  "business": {
+    "name": "Super 1 Cars Showroom",
+    "city": "Umm al-Quwain",
+    "region": "Umm al-Quwain",
+    "countryCode": "AE",
+    "currency": "AED",
+    "distanceUnit": "km",
+    "locale": "en-AE",
+    "address": "Original dealer Information tab says Um Al Quwain; cars alternate Emirates Modern Industrial UAQ, Souq Al Haraj Sharjah and Al Ain; exact showroom and stock location to confirm",
+    "phone": "",
+    "phoneDisplay": "",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://ae.opensooq.com/en/shops/shop-55282418",
+    "hours": "",
+    "sourceUrl": "https://ae.opensooq.com/en/shops/shop-55282418",
+    "observedAt": "2026-10-18",
+    "inventoryNotice": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://ae.opensooq.com/en/shops/shop-55282418",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://ae.opensooq.com/en/search/288539464",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    }
+  ]
+}
