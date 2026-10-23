@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "ae-ajman-alwan-international-car",
+  "slug": "alwan-international-car",
+  "artworkDirectory": "alwan-international-car",
+  "name": "Alwan International Car",
+  "renderedName": "Alwan International Car",
+  "kind": "independent-website-logo-proposal",
+  "dealerApproved": false,
+  "ownerApproved": false,
+  "sourceEvidence": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/alwan-international-car",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/3332-volkswagen-jetta-15-at-158-hp-r-line",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.alwan-international.com/homear.aspx",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "retainedOriginalsUnchanged": true,
+  "variants": {
+    "on-light": {
+      "path": "logo-on-light.png",
+      "sha256": "57e17d48a45e51ff3eb097c976c4a69107aecd43eb6db8e145fe84732c174526",
+      "width": 1024,
+      "height": 243,
+      "transparentFraction": 0.644848733281893,
+      "master": {
+        "path": "generated-on-light.png",
+        "sha256": "3332a44e082f68727b4e1ed2986a7462f78017a69cbea93d741d94d76d81f007",
+        "width": 2114,
+        "height": 744
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-143e322e-5be0-4dd4-aa6a-6b11c5a72c9f",
+        "prompt": "Use case: logo-brand. ONE polished original independent car-dealer website-proposal logo. Exact full text: \"ALWAN INTERNATIONAL CAR\". Create an original abstract folded geometric emblem with only two or three broad flat shapes; warm contemporary typography. For any initial-based symbol use the meaningful distinctive initials \"AI\", rather than a generic Al-prefix A. Avoid the repeated A-plus-road-swoosh formula. Emblem at left, full exact name to right, thoughtfully arranged over one or two readable lines. All lettering, including any small descriptor, must be dark charcoal or black for excellent contrast on WHITE; an optional restrained accent may appear in the emblem only. Crisp flat vector-like geometry, large open counters, strong readable type, professional and distinctive. Real alpha-transparent background, no background block or fake checkerboard. No photo, car-manufacturer emblem, stock car silhouette, generic shield, chrome, gradients, shadows, texture, watermark, slogan, unrelated decoration or mockup. Wide horizontal lockup, framed close with a small transparent margin, readable at 240px wide; symbol should survive 32px. Exact spelling and all words. Only one logo, never a presentation board. Proposed identity, not claimed official/adopted.",
+        "reference": null
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 25,
+          "top": 138,
+          "width": 2025,
+          "height": 480
+        }
+      }
+    },
+    "on-dark": {
+      "path": "logo-on-dark.png",
+      "sha256": "9a8379b078b867b23343eb9fdaed5906e76f79dd179e41aea645db42b7d84327",
+      "width": 1024,
+      "height": 240,
+      "transparentFraction": 0.523974609375,
+      "master": {
+        "path": "generated-on-dark.png",
+        "sha256": "ac69befda0c531cca3b518326a2a4a41116e676a39b2235323e3dafcdfd0c93c",
+        "width": 2113,
+        "height": 744
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-90eac06c-8f90-4bbc-b669-ffac2a915150",
+        "prompt": "Make the matching ON-DARK version of the supplied ALWAN INTERNATIONAL CAR logo. Preserve its exact identity, symbol geometry, lettering, complete name, line breaks, optical spacing and proportions. Every letter of the full name and descriptor must be solid clean WHITE, not colored or gray. Existing restrained emblem accent may remain only if visible; keep all primary ink white. Genuine alpha transparency and open counters, smooth clean edges. No background panel, no checkerboard, no new wording, design, texture, distress, shadow, watermark or decoration. One matching white/light-ink horizontal logo for dark and red headers. Exact name: ALWAN INTERNATIONAL CAR.",
+        "reference": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-143e322e-5be0-4dd4-aa6a-6b11c5a72c9f.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 20,
+          "top": 129,
+          "width": 2010,
+          "height": 471
+        }
+      }
+    }
+  },
+  "review": {
+    "status": "artwork-visually-reviewed",
+    "alpha": "all exports measured as genuine transparent nonempty PNGs",
+    "spelling": "English wordmark inspected; source-bound display aliases retained",
+    "compact": "Horizontal logos only. Interactive 32/48/64px gallery preview is provided; separate compact/favicon artwork remains part of dealer-pack preparation.",
+    "sixDesigns": "not-yet-integrated-or-rendered",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "reviewer": "Codex visual inspection",
+    "header": "All 196 paired PNGs inspected at 240x64 on white, #111113 and #c40101",
+    "evidence": "final-review-04.png"
+  },
+  "releaseReady": false,
+  "artworkHolds": [],
+  "artworkReadyForIntegration": true
+}

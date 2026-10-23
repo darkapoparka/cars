@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Five Stars Motors",
     "publicOrigin": "https://five-stars-motors.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "bf20c0873d2ecb3ba99c9f9af90ec0c49d21571fb68b141534a1b0e1d93cecd3",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "21f7d5df28a3590eba455c3c0cdab72565dbf27b1e9f714a2ef7ea28b1770b2e"
+    }
   }
 }

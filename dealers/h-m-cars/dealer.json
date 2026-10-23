@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "H M Cars",
     "publicOrigin": "https://h-m-cars.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "a837442f75adaad6256b85de17a65f36a8af31702f5d73785a41509d60ce564c",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "b5ed2718f00c9e6d050d53bf6bfb208720d60d9896172efa1cb3d2a5ebf3fac0"
+    }
   }
 }

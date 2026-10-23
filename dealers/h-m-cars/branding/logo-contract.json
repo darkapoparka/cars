@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "dealer": "h-m-cars",
+  "reviewed": true,
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "3298f946df735a917d3e1889270d8fbac20b6f1b4fbe0bf24f049f07f90e5596",
+      "sourceSha256": "a837442f75adaad6256b85de17a65f36a8af31702f5d73785a41509d60ce564c"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "67c47d2b449adecfcaa7a9ac5e2fbcfaffb4693a4df9fda03ab04df04d4947d1",
+      "sourceSha256": "7f74ee814376dc14ff84ad8226ea20fa66a185c0688b73a4afbb4ff1c98a3e63"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "67c47d2b449adecfcaa7a9ac5e2fbcfaffb4693a4df9fda03ab04df04d4947d1",
+      "sourceSha256": "7f74ee814376dc14ff84ad8226ea20fa66a185c0688b73a4afbb4ff1c98a3e63"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "a837442f75adaad6256b85de17a65f36a8af31702f5d73785a41509d60ce564c",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-8c1ad0bb-155f-478d-a81d-718ba4ed2383",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "b5ed2718f00c9e6d050d53bf6bfb208720d60d9896172efa1cb3d2a5ebf3fac0",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-8c1ad0bb-155f-478d-a81d-718ba4ed2383",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "a837442f75adaad6256b85de17a65f36a8af31702f5d73785a41509d60ce564c",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 350,
+          "height": 249
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "b9124f44184d6f636efa404335d1a2926910c62ca3e1035105ae18d6ea8a4a5a"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "a837442f75adaad6256b85de17a65f36a8af31702f5d73785a41509d60ce564c",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-8c1ad0bb-155f-478d-a81d-718ba4ed2383",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/h-m-cars/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "7f74ee814376dc14ff84ad8226ea20fa66a185c0688b73a4afbb4ff1c98a3e63",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-63e8257a-cefa-4e51-840e-b20b0590ea10",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/h-m-cars/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "7f74ee814376dc14ff84ad8226ea20fa66a185c0688b73a4afbb4ff1c98a3e63",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-63e8257a-cefa-4e51-840e-b20b0590ea10",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/h-m-cars/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "a837442f75adaad6256b85de17a65f36a8af31702f5d73785a41509d60ce564c",
+      "sha256": "a837442f75adaad6256b85de17a65f36a8af31702f5d73785a41509d60ce564c",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 249
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "7f74ee814376dc14ff84ad8226ea20fa66a185c0688b73a4afbb4ff1c98a3e63",
+      "sha256": "7f74ee814376dc14ff84ad8226ea20fa66a185c0688b73a4afbb4ff1c98a3e63",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 251
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "7f74ee814376dc14ff84ad8226ea20fa66a185c0688b73a4afbb4ff1c98a3e63",
+      "sha256": "7f74ee814376dc14ff84ad8226ea20fa66a185c0688b73a4afbb4ff1c98a3e63",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 251
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "3284a7d165477f9c1f34ddc747b46300809490b4534a2ff58ec98fe982f7513b",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-8c1ad0bb-155f-478d-a81d-718ba4ed2383",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "a837442f75adaad6256b85de17a65f36a8af31702f5d73785a41509d60ce564c",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 350,
+            "height": 249
+          }
+        }
+      },
+      "sourceReference": "dealers/h-m-cars/branding/generated-mark-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "35049b8c945a281bacc66e24365edd647a8d834e566a2acadfa522e6e4f07edf",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-63e8257a-cefa-4e51-840e-b20b0590ea10",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "7f74ee814376dc14ff84ad8226ea20fa66a185c0688b73a4afbb4ff1c98a3e63",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 350,
+            "height": 251
+          }
+        }
+      },
+      "sourceReference": "dealers/h-m-cars/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "b5ed2718f00c9e6d050d53bf6bfb208720d60d9896172efa1cb3d2a5ebf3fac0",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-8c1ad0bb-155f-478d-a81d-718ba4ed2383",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "a837442f75adaad6256b85de17a65f36a8af31702f5d73785a41509d60ce564c",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 350,
+            "height": 249
+          }
+        }
+      },
+      "sourceReference": "dealers/h-m-cars/branding/generated-mark-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "b9124f44184d6f636efa404335d1a2926910c62ca3e1035105ae18d6ea8a4a5a",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-8c1ad0bb-155f-478d-a81d-718ba4ed2383",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "a837442f75adaad6256b85de17a65f36a8af31702f5d73785a41509d60ce564c",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 350,
+            "height": 249
+          }
+        }
+      },
+      "sourceReference": "dealers/h-m-cars/branding/generated-mark-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "058ff756ecf96c08a59bc969e8554b3a96be601b2cadb058a802e81b22bc8ef1",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-63e8257a-cefa-4e51-840e-b20b0590ea10",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "7f74ee814376dc14ff84ad8226ea20fa66a185c0688b73a4afbb4ff1c98a3e63",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 350,
+          "height": 251
+        }
+      }
+    }
+  }
+}

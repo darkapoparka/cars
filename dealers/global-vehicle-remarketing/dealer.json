@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Global Vehicle Remarketing",
     "publicOrigin": "https://global-vehicle-remarketing.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "dfae70f072eec48bc568656495d08e07ce5a9b9dc42517cdd73a177d7a2e0b5d",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "a78922fcfffa4e9d181e2abd1d356c3f4d2f8b7426e9296ce9842b8aa128611b"
+    }
   }
 }

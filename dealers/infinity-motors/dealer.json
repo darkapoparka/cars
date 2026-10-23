@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Infinity Motors",
     "publicOrigin": "https://infinity-motors.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "39f8f61fb23e90caa4687efb59c87f971d03fcc279627a97ab214e1b0fbbe0be",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "b7d53191f29261c138d7dde12d6c20e01bb3e851274c9c0c6d8dc877d4846210"
+    }
   }
 }

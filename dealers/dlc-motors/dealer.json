@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "DLC Motors",
     "publicOrigin": "https://dlc-motors.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "8b9aeff773c6d8e74ebe5d70d4dbe52f1a2d29aeccefdb631a91f5a9de454028",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "493dfd0712a0dcc9f3d5584b9380a2db9059e1bf82f849bd6ba1a03a8e623e4b"
+    }
   }
 }

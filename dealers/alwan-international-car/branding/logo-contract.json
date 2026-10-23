@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "dealer": "alwan-international-car",
+  "reviewed": true,
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "8e0330d486d7210aaabf53d6d71de709d8f34f0be6431f3046d07d42ec5f288d",
+      "sourceSha256": "57e17d48a45e51ff3eb097c976c4a69107aecd43eb6db8e145fe84732c174526"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "65da04fe534ba7c9c754ead075e6c03c5f479019a50fa8636f3f0ffda4a79bf9",
+      "sourceSha256": "9a8379b078b867b23343eb9fdaed5906e76f79dd179e41aea645db42b7d84327"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "65da04fe534ba7c9c754ead075e6c03c5f479019a50fa8636f3f0ffda4a79bf9",
+      "sourceSha256": "9a8379b078b867b23343eb9fdaed5906e76f79dd179e41aea645db42b7d84327"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "57e17d48a45e51ff3eb097c976c4a69107aecd43eb6db8e145fe84732c174526",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-143e322e-5be0-4dd4-aa6a-6b11c5a72c9f",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "c60eee1ced7f1b92b6ccad4ffeab919406650989c31a2d9236e1e9b5aa89b9bd",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-143e322e-5be0-4dd4-aa6a-6b11c5a72c9f",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "57e17d48a45e51ff3eb097c976c4a69107aecd43eb6db8e145fe84732c174526",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 350,
+          "height": 243
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "b0e2f79e89595f70350a8e11937a63bfc83ffeb31d136b08a2a4e3d81b4e1d59"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "57e17d48a45e51ff3eb097c976c4a69107aecd43eb6db8e145fe84732c174526",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-143e322e-5be0-4dd4-aa6a-6b11c5a72c9f",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/alwan-international-car/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "9a8379b078b867b23343eb9fdaed5906e76f79dd179e41aea645db42b7d84327",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-90eac06c-8f90-4bbc-b669-ffac2a915150",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/alwan-international-car/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "9a8379b078b867b23343eb9fdaed5906e76f79dd179e41aea645db42b7d84327",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-90eac06c-8f90-4bbc-b669-ffac2a915150",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/alwan-international-car/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "57e17d48a45e51ff3eb097c976c4a69107aecd43eb6db8e145fe84732c174526",
+      "sha256": "57e17d48a45e51ff3eb097c976c4a69107aecd43eb6db8e145fe84732c174526",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 243
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "9a8379b078b867b23343eb9fdaed5906e76f79dd179e41aea645db42b7d84327",
+      "sha256": "9a8379b078b867b23343eb9fdaed5906e76f79dd179e41aea645db42b7d84327",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 240
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "9a8379b078b867b23343eb9fdaed5906e76f79dd179e41aea645db42b7d84327",
+      "sha256": "9a8379b078b867b23343eb9fdaed5906e76f79dd179e41aea645db42b7d84327",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 240
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "8e74012d47cbfe2b3dcbf6ee311d7a17de644ec8ad4a1f0e58af968937e58c54",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-143e322e-5be0-4dd4-aa6a-6b11c5a72c9f",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "57e17d48a45e51ff3eb097c976c4a69107aecd43eb6db8e145fe84732c174526",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 350,
+            "height": 243
+          }
+        }
+      },
+      "sourceReference": "dealers/alwan-international-car/branding/generated-mark-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "b2a455a9b86772ba0267ae1e55cae6223652b82f5517ea24423c3d1def26242f",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-90eac06c-8f90-4bbc-b669-ffac2a915150",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "9a8379b078b867b23343eb9fdaed5906e76f79dd179e41aea645db42b7d84327",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 350,
+            "height": 240
+          }
+        }
+      },
+      "sourceReference": "dealers/alwan-international-car/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "c60eee1ced7f1b92b6ccad4ffeab919406650989c31a2d9236e1e9b5aa89b9bd",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-143e322e-5be0-4dd4-aa6a-6b11c5a72c9f",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "57e17d48a45e51ff3eb097c976c4a69107aecd43eb6db8e145fe84732c174526",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 350,
+            "height": 243
+          }
+        }
+      },
+      "sourceReference": "dealers/alwan-international-car/branding/generated-mark-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "b0e2f79e89595f70350a8e11937a63bfc83ffeb31d136b08a2a4e3d81b4e1d59",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-143e322e-5be0-4dd4-aa6a-6b11c5a72c9f",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "57e17d48a45e51ff3eb097c976c4a69107aecd43eb6db8e145fe84732c174526",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 350,
+            "height": 243
+          }
+        }
+      },
+      "sourceReference": "dealers/alwan-international-car/branding/generated-mark-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "2e3224ccbc3023d221384544623b0c4f7c9f7a41f67017cf6b876c88bb56afa5",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-90eac06c-8f90-4bbc-b669-ffac2a915150",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "9a8379b078b867b23343eb9fdaed5906e76f79dd179e41aea645db42b7d84327",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 350,
+          "height": 240
+        }
+      }
+    }
+  }
+}

@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Alwan International Car",
     "publicOrigin": "https://alwan-international-car.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "57e17d48a45e51ff3eb097c976c4a69107aecd43eb6db8e145fe84732c174526",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "c60eee1ced7f1b92b6ccad4ffeab919406650989c31a2d9236e1e9b5aa89b9bd"
+    }
   }
 }

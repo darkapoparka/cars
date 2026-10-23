@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "dealer": "amazon-213-car-showroom",
+  "reviewed": true,
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "a4060ec82367654cbac19e0385341760494b38ccc5ca34f57ebadbf73c243937",
+      "sourceSha256": "79ad3348d09167203b584cfc626a0fa9343b55ee5f18783ec70a45d8fa290443"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "eac5610a0b1cba476750e8d2456f83ece7be6a17e0b03cfc47341db6fff7a7f8",
+      "sourceSha256": "e46b1745e8067c5785587fa2da29cf46f3975e16368114c1e1f10b6d98fafc34"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "eac5610a0b1cba476750e8d2456f83ece7be6a17e0b03cfc47341db6fff7a7f8",
+      "sourceSha256": "e46b1745e8067c5785587fa2da29cf46f3975e16368114c1e1f10b6d98fafc34"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "79ad3348d09167203b584cfc626a0fa9343b55ee5f18783ec70a45d8fa290443",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-4eae5d24-3508-4d79-8216-8ed1b5bd622f",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "ada8c06bbe45ce7eb46e130c6f3a4e556bb57cb0ebb1ca3a70508390987265c1",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-4eae5d24-3508-4d79-8216-8ed1b5bd622f",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "79ad3348d09167203b584cfc626a0fa9343b55ee5f18783ec70a45d8fa290443",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 300,
+          "height": 194
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "3aa6844b047fa19f930aaea3adaf69c1c94fd3e984669e6a7acbb47746dfad97"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "79ad3348d09167203b584cfc626a0fa9343b55ee5f18783ec70a45d8fa290443",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-4eae5d24-3508-4d79-8216-8ed1b5bd622f",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/amazon-213-car-showroom/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "e46b1745e8067c5785587fa2da29cf46f3975e16368114c1e1f10b6d98fafc34",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-032fc62f-3162-46ab-8de2-d3f5e69d42c7",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/amazon-213-car-showroom/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "e46b1745e8067c5785587fa2da29cf46f3975e16368114c1e1f10b6d98fafc34",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-032fc62f-3162-46ab-8de2-d3f5e69d42c7",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/amazon-213-car-showroom/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "79ad3348d09167203b584cfc626a0fa9343b55ee5f18783ec70a45d8fa290443",
+      "sha256": "79ad3348d09167203b584cfc626a0fa9343b55ee5f18783ec70a45d8fa290443",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 194
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "e46b1745e8067c5785587fa2da29cf46f3975e16368114c1e1f10b6d98fafc34",
+      "sha256": "e46b1745e8067c5785587fa2da29cf46f3975e16368114c1e1f10b6d98fafc34",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 196
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "e46b1745e8067c5785587fa2da29cf46f3975e16368114c1e1f10b6d98fafc34",
+      "sha256": "e46b1745e8067c5785587fa2da29cf46f3975e16368114c1e1f10b6d98fafc34",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 196
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "c432ed41dd04307cc12ba8970015962a7cf6a14247eab201dea0682d2fe8dae8",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-4eae5d24-3508-4d79-8216-8ed1b5bd622f",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "79ad3348d09167203b584cfc626a0fa9343b55ee5f18783ec70a45d8fa290443",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 300,
+            "height": 194
+          }
+        }
+      },
+      "sourceReference": "dealers/amazon-213-car-showroom/branding/generated-mark-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "7e09a2cea41bfcd99771878627d1a70db49f1819e76a64e7cdd36780006017aa",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-032fc62f-3162-46ab-8de2-d3f5e69d42c7",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "e46b1745e8067c5785587fa2da29cf46f3975e16368114c1e1f10b6d98fafc34",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 300,
+            "height": 196
+          }
+        }
+      },
+      "sourceReference": "dealers/amazon-213-car-showroom/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "ada8c06bbe45ce7eb46e130c6f3a4e556bb57cb0ebb1ca3a70508390987265c1",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-4eae5d24-3508-4d79-8216-8ed1b5bd622f",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "79ad3348d09167203b584cfc626a0fa9343b55ee5f18783ec70a45d8fa290443",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 300,
+            "height": 194
+          }
+        }
+      },
+      "sourceReference": "dealers/amazon-213-car-showroom/branding/generated-mark-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "3aa6844b047fa19f930aaea3adaf69c1c94fd3e984669e6a7acbb47746dfad97",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-4eae5d24-3508-4d79-8216-8ed1b5bd622f",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "79ad3348d09167203b584cfc626a0fa9343b55ee5f18783ec70a45d8fa290443",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 300,
+            "height": 194
+          }
+        }
+      },
+      "sourceReference": "dealers/amazon-213-car-showroom/branding/generated-mark-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "7c4094cc6a91dc4943b904a52052a6f846b753070a8e9b370b260c31d363af7f",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-032fc62f-3162-46ab-8de2-d3f5e69d42c7",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "e46b1745e8067c5785587fa2da29cf46f3975e16368114c1e1f10b6d98fafc34",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 300,
+          "height": 196
+        }
+      }
+    }
+  }
+}

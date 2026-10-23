@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Horizon International Used Cars Trading FZE",
     "publicOrigin": "https://horizon-international-used-cars-trading-fze.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "1947868db183b811bcac7cd1711ca1f4ad22fcfd7b30888638d141737b24b587",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "a374c9f5f07d1d984f79f43a2955e429e51f79ad2889a49c0d581cced8324593"
+    }
   }
 }

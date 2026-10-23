@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "ae-ajman-master-motors",
+  "slug": "master-motors",
+  "artworkDirectory": "master-motors",
+  "name": "Master Motors",
+  "renderedName": "Master Motors",
+  "kind": "independent-website-logo-proposal",
+  "dealerApproved": false,
+  "ownerApproved": false,
+  "sourceEvidence": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/master-motors",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/13253-gmc-yukon-62-at-rwd-420-hp-denali",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "retainedOriginalsUnchanged": true,
+  "variants": {
+    "on-light": {
+      "path": "logo-on-light.png",
+      "sha256": "fe2755df1c479f3930447d3ea637704543325edc18cf2d15f67f6a07c89baab8",
+      "width": 1024,
+      "height": 259,
+      "transparentFraction": 0.604167923503861,
+      "master": {
+        "path": "generated-on-light.png",
+        "sha256": "e9a1cf4c34d392f74484432ee8945ad578d0742ae65049955dbf9fdc4a5c8be5",
+        "width": 1999,
+        "height": 786
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-5e07cd44-509e-4eaf-ad29-6acba61b205f",
+        "prompt": "Create one professional horizontal automotive dealership logo proposal for Master Motors. Required exact text, uppercase: MASTER MOTORS. Every word must be present and spelled precisely; use sensible primary name and smaller descriptor hierarchy without tiny lettering. Produce a polished original identity with a distinctive custom typographic ligature in a refined square emblem. Initials M may inform the emblem. Emblem left, full clear name to the right, compact and balanced for a website header. Avoid overused shield and generic car silhouettes; no manufacturer badges. Clean modern lettering with careful kerning and strong legibility. All text is deep charcoal black, appropriate on a white/light header. One restrained red or gold accent may appear inside the emblem only; no pale text. Flat crisp edges, a small number of solid shapes, no chrome, no lighting, no shadow, no texture, no gradient. Genuine transparent alpha background, isolated logo with no background box, no grid, no checkerboard painted into pixels. No slogan, contact info, website, watermark, mockup, photograph, extra concept, or duplicate logo. Deliver exactly one horizontal full logo. This is an independent website identity proposal, not a claim of adopted branding.",
+        "reference": null
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 39,
+          "top": 135,
+          "width": 1925,
+          "height": 486
+        }
+      }
+    },
+    "on-dark": {
+      "path": "logo-on-dark.png",
+      "sha256": "6ebe7c246f50f2d00b1f49ed80aaf4c548a96f00a01275f3bfa7a7094e007f70",
+      "width": 1024,
+      "height": 257,
+      "transparentFraction": 0.42890473005836577,
+      "master": {
+        "path": "generated-on-dark.png",
+        "sha256": "3b05f6c7ed0131a779241eb2b97735949a6061ecf72e4d326a93011334518950",
+        "width": 1999,
+        "height": 786
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-7df60f6a-4625-4d0f-aa18-dab20272adc5",
+        "prompt": "Create the matching light-on-dark production variant of the exact supplied logo. Preserve precisely the same emblem, geometry, spelling, word count, typographic hierarchy, proportions, layout and spacing. Required exact text: MASTER MOTORS. Change EVERY letter, including all secondary descriptor words and legal suffixes, to solid white so it is legible over a dark or red website header. Change the charcoal portions of the emblem to white. Retain the small red/gold emblem accent only if it contrasts clearly against a dark header. True transparent alpha background; do not paint a dark rectangle or checkerboard. Flat clean edges, no glows, shadows, bevels, textures, gradients, new artwork, new icon, extra text or mockup. Deliver one horizontal matching logo, fully legible.",
+        "reference": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-5e07cd44-509e-4eaf-ad29-6acba61b205f.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 38,
+          "top": 132,
+          "width": 1917,
+          "height": 482
+        }
+      }
+    }
+  },
+  "review": {
+    "status": "artwork-visually-reviewed",
+    "alpha": "all exports measured as genuine transparent nonempty PNGs",
+    "spelling": "English wordmark inspected; source-bound display aliases retained",
+    "compact": "Horizontal logos only. Interactive 32/48/64px gallery preview is provided; separate compact/favicon artwork remains part of dealer-pack preparation.",
+    "sixDesigns": "not-yet-integrated-or-rendered",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "reviewer": "Codex visual inspection",
+    "header": "All 196 paired PNGs inspected at 240x64 on white, #111113 and #c40101",
+    "evidence": "final-review-04.png"
+  },
+  "releaseReady": false,
+  "artworkHolds": [],
+  "artworkReadyForIntegration": true
+}
