@@ -591,7 +591,8 @@ test('logo QA binds distinct source PNG and lossless public WebP bytes and real 
   identity:{kind:'retained-dealer-identity',exactDealerNameVerified:true,dealerAdoptionClaimed:false},
   sourceSha256:sha256(source),contractSha256:sha256(fs.readFileSync(path.join(directory,'branding/logo-contract.json'))),
   contactSheet:{path:'branding/qa/logo-contact-sheet.png',sha256:sha256(sheet)},
-  surfacesReviewed:['onLight','onDark','onAccent'],smallSizesReviewed:[32,48,64],checks,
+  surfacesReviewed:['onLight','onDark','onAccent'],smallSizesReviewed:[32,48,64],checks:qualityChecks,
+  sixDesignScreens:SIX_DESIGN_KEYS.flatMap(key=>[320,390,1280].map(width=>({key,width,sha256:sha256(Buffer.from('reviewed-reference-'+key+'-'+width)),decision:'pass',reviewedAt:'2026-10-22T10:00:00Z'}))),
   notes:['Reviewed native favicon scale and transparent light/dark/accent surfaces with the exact retained identity.']};
  put(directory,'branding/logo-quality-review.json',review);
  const original=await verifyPackLogoAssets({pack,sharp,bundleRoot});assert.equal(original.status,'passed',JSON.stringify(original.qualityDecision));
