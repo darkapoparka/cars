@@ -1,0 +1,165 @@
+{
+  "schemaVersion": 1,
+  "slug": "lujain-used-cars-trading",
+  "dealerId": "ae-sharjah-lujain-used-cars-trading",
+  "repository": "darkapoparka/cars",
+  "defaultBranch": "main",
+  "sourceFormat": "dealer-pack",
+  "sourcePath": "dealers/lujain-used-cars-trading",
+  "templateLock": "dealers/templates.lock.json",
+  "language": "en",
+  "variants": [
+    {
+      "key": "auto-best",
+      "base": "",
+      "entry": "/"
+    },
+    {
+      "key": "modern",
+      "base": "/variant-2",
+      "entry": "/variant-2/cars"
+    },
+    {
+      "key": "import",
+      "base": "/variant-3",
+      "entry": "/variant-3/"
+    },
+    {
+      "key": "app",
+      "base": "/variant-4",
+      "entry": "/variant-4/"
+    },
+    {
+      "key": "mobile",
+      "base": "/variant-5",
+      "entry": "/variant-5/"
+    },
+    {
+      "key": "karento-best",
+      "base": "/variant-6",
+      "entry": "/variant-6/"
+    }
+  ],
+  "extraAssets": [
+    "dealer-stock",
+    "dealer-brand",
+    "branding"
+  ],
+  "packaging": {
+    "version": "5"
+  },
+  "templateRevisions": {
+    "auto-best": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+    "modern": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+    "import": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+    "app": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+    "mobile": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+    "karento-best": "5d052ea655714f3d0ca3656daa7dbff411e2f747"
+  },
+  "templateSources": {
+    "auto-best": {
+      "repository": "darkapoparka/cars",
+      "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+      "path": "templates/auto-best",
+      "tree": "cbd21f5e0b794a0cbf52bf36fdf07b25fb0bb499",
+      "digest": "90760c4c73d46ebf976a06e923171f31fc716661f69d25d864342ea856002279"
+    },
+    "modern": {
+      "repository": "darkapoparka/cars",
+      "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+      "path": "templates/modern",
+      "tree": "e1285aeebcf21730a064db00779a679e64e9d3ca",
+      "digest": "965f1003f5292e99adc72afb738d676436bdc27e7da7ec0264d2872d149a23b5"
+    },
+    "import": {
+      "repository": "darkapoparka/cars",
+      "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+      "path": "templates/import",
+      "tree": "87950ec43fdb33fd85dbf6d6b6160e1a779777c6",
+      "digest": "3c1fe9e9adef074aa7ca2e774ef8a0d955c77e527b7939418ab408e87659e50d"
+    },
+    "app": {
+      "repository": "darkapoparka/cars",
+      "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+      "path": "templates/app",
+      "tree": "ad5b8acf793545b0082cfb33e37c7a97da63ec36",
+      "digest": "524f71647d6bafa4320173f73658fce39b48bf0508171480475b980dc3565b65"
+    },
+    "mobile": {
+      "repository": "darkapoparka/cars",
+      "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+      "path": "templates/mobile",
+      "tree": "9dadfcad37e2b8909cc39d7758db3fca1cd5cf61",
+      "digest": "c85e58c9e747e68d0911f6bd4827a643b8a538dc1ea5eb7d29a78c3252585ef1"
+    },
+    "karento-best": {
+      "repository": "darkapoparka/cars",
+      "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+      "path": "templates/karento-best",
+      "tree": "9c2ab0e1c84f2ffbb0f20dbba757dea36d88808f",
+      "digest": "1f32f03af52daee41861d53d66bafcf3147d001f5a0a9840afbe9b6fb128a8c9"
+    }
+  },
+  "appVariant": {
+    "schemaVersion": 1,
+    "format": "app-preview-v1",
+    "source": {
+      "repository": "darkapoparka/cars",
+      "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+      "path": "templates/app",
+      "tree": "ad5b8acf793545b0082cfb33e37c7a97da63ec36",
+      "digest": "524f71647d6bafa4320173f73658fce39b48bf0508171480475b980dc3565b65"
+    }
+  },
+  "localization": {
+    "schemaVersion": 1,
+    "dealerId": "ae-sharjah-lujain-used-cars-trading",
+    "defaultLocale": "en",
+    "enabledLocales": [
+      "en",
+      "bg"
+    ],
+    "dealerCountry": "AE",
+    "inventoryCurrency": "AED"
+  },
+  "branding": {
+    "schemaVersion": 1,
+    "required": true,
+    "policy": "template-default",
+    "contract": ".cars-branding.json",
+    "surfaceBindingsVersion": 1
+  },
+  "cloudflare": {
+    "workerPrefix": "cars-lujain-used-cars-trading"
+  },
+  "pack": {
+    "schemaVersion": 2,
+    "source": "leads/expansion-2026-10-18",
+    "observedAt": "2026-10-18",
+    "proposal": true,
+    "dealerApproved": false,
+    "providerWrites": false,
+    "identity": {
+      "requestedSlug": "lujain-used-cars-trading",
+      "canonicalSlug": "lujain-used-cars-trading",
+      "dealerId": "ae-sharjah-lujain-used-cars-trading"
+    },
+    "batch": {
+      "number": 4,
+      "assignmentId": "cars-expansion-2026-10-19",
+      "leadId": "ae-sharjah-lujain-used-cars-trading",
+      "position": 359
+    }
+  },
+  "shareIdentity": {
+    "name": "Lujain Used Cars Trading",
+    "publicOrigin": "https://lujain-used-cars-trading.webpreviews.site",
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "6b3699be1b3b909c7c73a37cedae98226871b41cd27fd6614329c39f3c877221",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "2a4262bd0d4c38ca9c3e5f854d07d25f9174b5fc250e070bbcc5fac9936c4836"
+    }
+  }
+}

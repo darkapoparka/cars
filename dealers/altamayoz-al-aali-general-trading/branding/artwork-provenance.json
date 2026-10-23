@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "ae-sharjah-altamayoz-al-aali-general-trading",
+  "slug": null,
+  "artworkDirectory": "ae-sharjah-altamayoz-al-aali-general-trading",
+  "name": "Altamayoz Al Aali General Trading",
+  "renderedName": "Altamayoz Al Aali General Trading",
+  "kind": "independent-website-logo-proposal",
+  "dealerApproved": false,
+  "ownerApproved": false,
+  "sourceEvidence": [
+    {
+      "url": "https://www.dubicars.com/dealers/sharjah-altamayoz-al-aali-generalading-1556",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "retainedOriginalsUnchanged": true,
+  "variants": {
+    "on-light": {
+      "path": "logo-on-light.png",
+      "sha256": "8a47c500e3cd1486f781ccbf2def7e3ad19ba2b99797b64c384d2944f6163de3",
+      "width": 1024,
+      "height": 230,
+      "transparentFraction": 0.7381029211956521,
+      "master": {
+        "path": "generated-on-light.png",
+        "sha256": "0443a595eee4e92e5238583f19d59007b33da07d6d0c8c73aaf4fb1185796e5f",
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-9d85cbac-8fc3-487e-af6a-e4b04a12ce62",
+        "prompt": "Create one professional horizontal automotive dealership logo proposal for Altamayoz Al Aali General Trading. Required exact text, uppercase: ALTAMAYOZ AL AALI GENERAL TRADING. Every word must be present and spelled precisely; use sensible primary name and smaller descriptor hierarchy without tiny lettering. Produce a polished original identity with a distinctive custom typographic ligature in a refined square emblem. Initials AA may inform the emblem. Emblem left, full clear name to the right, compact and balanced for a website header. Avoid overused shield and generic car silhouettes; no manufacturer badges. Clean modern lettering with careful kerning and strong legibility. All text is deep charcoal black, appropriate on a white/light header. One restrained red or gold accent may appear inside the emblem only; no pale text. Flat crisp edges, a small number of solid shapes, no chrome, no lighting, no shadow, no texture, no gradient. Genuine transparent alpha background, isolated logo with no background box, no grid, no checkerboard painted into pixels. No slogan, contact info, website, watermark, mockup, photograph, extra concept, or duplicate logo. Deliver exactly one horizontal full logo. This is an independent website identity proposal, not a claim of adopted branding.",
+        "reference": null
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 8,
+          "top": 116,
+          "width": 2156,
+          "height": 485
+        }
+      }
+    },
+    "on-dark": {
+      "path": "logo-on-dark.png",
+      "sha256": "a8795257adebf383a33ef034b8d6e92dfcb7b7779bb275d4e9e6dbc28bf8a424",
+      "width": 1024,
+      "height": 232,
+      "transparentFraction": 0.626410122575431,
+      "master": {
+        "path": "generated-on-dark.png",
+        "sha256": "af8adadf967a432235f9f9567fd690f957afedbce226cb492a4896eb426400ca",
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-8fb14d11-c7da-4c6e-91db-64bb41dac958",
+        "prompt": "Create the matching light-on-dark production variant of the exact supplied logo. Preserve precisely the same emblem, geometry, spelling, word count, typographic hierarchy, proportions, layout and spacing. Required exact text: ALTAMAYOZ AL AALI GENERAL TRADING. Change EVERY letter, including all secondary descriptor words and legal suffixes, to solid white so it is legible over a dark or red website header. Change the charcoal portions of the emblem to white. Retain the small red/gold emblem accent only if it contrasts clearly against a dark header. True transparent alpha background; do not paint a dark rectangle or checkerboard. Flat clean edges, no glows, shadows, bevels, textures, gradients, new artwork, new icon, extra text or mockup. Deliver one horizontal matching logo, fully legible.",
+        "reference": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-9d85cbac-8fc3-487e-af6a-e4b04a12ce62.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 7,
+          "top": 113,
+          "width": 2158,
+          "height": 489
+        }
+      }
+    }
+  },
+  "review": {
+    "status": "artwork-visually-reviewed",
+    "alpha": "all exports measured as genuine transparent nonempty PNGs",
+    "spelling": "English wordmark inspected; source-bound display aliases retained",
+    "compact": "Horizontal logos only. Interactive 32/48/64px gallery preview is provided; separate compact/favicon artwork remains part of dealer-pack preparation.",
+    "sixDesigns": "not-yet-integrated-or-rendered",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "reviewer": "Codex visual inspection",
+    "header": "All 196 paired PNGs inspected at 240x64 on white, #111113 and #c40101",
+    "evidence": "final-review-10.png"
+  },
+  "releaseReady": false,
+  "artworkHolds": [],
+  "artworkReadyForIntegration": true
+}
