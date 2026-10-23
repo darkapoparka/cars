@@ -3,7 +3,7 @@
   "kind": "cars-dealer-pack-input-review",
   "dealer": "islandwide-auto-sales-llc",
   "reviewed": true,
-  "reviewedAt": "2026-10-23T03:47:05.249Z",
+  "reviewedAt": "2026-10-23T04:13:49.871Z",
   "review": {
     "kind": "automated",
     "humanReview": false,
@@ -51,7 +51,7 @@
     },
     {
       "path": "branding/generated-mark-light.png",
-      "sha256": "4e972650d46879044494ce6cffc2b6cdce590453b118795ad7aed81a27a8e840"
+      "sha256": "51bc466002917aa59e9f8d56e049524bd0f675b8c8a7c54e4ccb2fef06751aa4"
     },
     {
       "path": "branding/generated-on-dark.png",
@@ -59,15 +59,15 @@
     },
     {
       "path": "branding/generated-on-light.png",
-      "sha256": "8c8d9fb2dd830fb7d3b7a3dd87a7ec6b404cd60e7ea894d0270d3654d358b032"
+      "sha256": "5322afb6bb1060ac122663dda9c93bba381f5a8e320d19abbf80bb71c4c83bb3"
     },
     {
       "path": "branding/logo-contract.json",
-      "sha256": "2217136c74f0eb2de822a323062c5e7dba7e42f5ae34af983aeab7b22053b972"
+      "sha256": "de61bc6ca34374904f7ee0f3c2489783acb8a45a4ceeb87e2f94b39f51c124ac"
     },
     {
       "path": "branding/logo-recipe.json",
-      "sha256": "fd843eaaee242b5adc961b9646867f27e8abab0ada6c73bec4c95193dd5b723d"
+      "sha256": "e568928ba293e27c4e842abf2f42debc3a603b8b212f00dc89e185acd3cd12cf"
     },
     {
       "path": "branding/native-generated-on-dark.png",
@@ -78,8 +78,12 @@
       "sha256": "18e876b04b86287ad51e02c39f512e33643ef01971727e5e344f0c54cc31b93f"
     },
     {
+      "path": "branding/reviewed-on-light.png",
+      "sha256": "8c8d9fb2dd830fb7d3b7a3dd87a7ec6b404cd60e7ea894d0270d3654d358b032"
+    },
+    {
       "path": "branding/source.json",
-      "sha256": "e35a313960feb0f22796edadef7cf14aa910b07c0237e746c36168cbe866dcc7"
+      "sha256": "20665060d050eed3677146df98e0967a313bd3fdb514d56558d6fbfcdd9f1a05"
     },
     {
       "path": "business-facts.json",
@@ -87,7 +91,7 @@
     },
     {
       "path": "copy-review.json",
-      "sha256": "39682849d240756935bd90810fe4ad100c472c25700ebebba63ff417d8c56d24"
+      "sha256": "b5b4a534948d705c89d052f69fa3888085cddc3fef144478617553ffd1929467"
     },
     {
       "path": "dealer-stock/template-demo-1.webp",
@@ -103,11 +107,11 @@
     },
     {
       "path": "dealer.json",
-      "sha256": "2cb3c40a436f7589c609f8157efc6c689158585b852b61b0af241ac55651b876"
+      "sha256": "76d8b0a18366c9ea7133239ebe550d1b2d1453b0b1cd270d01f892e46e668edc"
     },
     {
       "path": "identity-review.json",
-      "sha256": "1b2ec9a7e2d68b15ff2ec037001359cd353788c5dd6f10ffaaa80a60dd4de71d"
+      "sha256": "0fafa6b305cbfcdc32b6e0ed6fc1dedaee20a09ace42085690f00f0045a25a21"
     },
     {
       "path": "locale.json",
@@ -119,7 +123,7 @@
     },
     {
       "path": "qualification.json",
-      "sha256": "529e2e8403607ec392557bf942af4728c374bf259697b99842891936fab4d599"
+      "sha256": "c4f66297acad4cdf864de0347ab48268c7345fef3f3976a36fbf6f06e7e44f5c"
     },
     {
       "path": "source-evidence.json",

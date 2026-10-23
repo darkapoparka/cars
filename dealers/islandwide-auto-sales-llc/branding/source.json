@@ -36,35 +36,35 @@
     "reviewedAt": "2026-10-22T23:42:46.338Z",
     "master": {
       "path": "branding/generated-on-light.png",
-      "sha256": "8c8d9fb2dd830fb7d3b7a3dd87a7ec6b404cd60e7ea894d0270d3654d358b032",
+      "sha256": "5322afb6bb1060ac122663dda9c93bba381f5a8e320d19abbf80bb71c4c83bb3",
       "generation": {
         "tool": "image_gen.imagegen",
         "generationId": "exec-31cd80f1-4c26-4e8a-8d4d-a8358fb929fb",
-        "modelVersion": null
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/reviewed-on-light.png",
+          "sha256": "8c8d9fb2dd830fb7d3b7a3dd87a7ec6b404cd60e7ea894d0270d3654d358b032",
+          "operation": "darken-reviewed-neon-outline-for-white-surface",
+          "colorTransform": "yellow-green ink channel scale 0.36/0.34/0.34"
+        }
       }
     },
     "mark": {
       "path": "branding/generated-mark-light.png",
-      "sha256": "4e972650d46879044494ce6cffc2b6cdce590453b118795ad7aed81a27a8e840",
+      "sha256": "51bc466002917aa59e9f8d56e049524bd0f675b8c8a7c54e4ccb2fef06751aa4",
       "generation": {
         "tool": "image_gen.imagegen",
         "generationId": "exec-31cd80f1-4c26-4e8a-8d4d-a8358fb929fb",
         "modelVersion": null,
         "derivedFrom": {
           "path": "branding/generated-on-light.png",
-          "sha256": "8c8d9fb2dd830fb7d3b7a3dd87a7ec6b404cd60e7ea894d0270d3654d358b032",
-          "operation": "crop-and-pad-reviewed-wordmark-initial-for-compact",
-          "crop": {
+          "sha256": "5322afb6bb1060ac122663dda9c93bba381f5a8e320d19abbf80bb71c4c83bb3",
+          "operation": "isolate-reviewed-initial-and-darken-matching-neon-outline-for-white-compact",
+          "originalCrop": {
             "left": 15,
             "top": 18,
             "width": 160,
             "height": 211
-          },
-          "canvas": {
-            "width": 230,
-            "height": 281,
-            "offsetX": 35,
-            "offsetY": 35
           }
         }
       }
@@ -98,11 +98,17 @@
     "surfaces": {
       "onLight": {
         "path": "branding/generated-on-light.png",
-        "sha256": "8c8d9fb2dd830fb7d3b7a3dd87a7ec6b404cd60e7ea894d0270d3654d358b032",
+        "sha256": "5322afb6bb1060ac122663dda9c93bba381f5a8e320d19abbf80bb71c4c83bb3",
         "generation": {
           "tool": "image_gen.imagegen",
           "generationId": "exec-31cd80f1-4c26-4e8a-8d4d-a8358fb929fb",
-          "modelVersion": null
+          "modelVersion": null,
+          "derivedFrom": {
+            "path": "branding/reviewed-on-light.png",
+            "sha256": "8c8d9fb2dd830fb7d3b7a3dd87a7ec6b404cd60e7ea894d0270d3654d358b032",
+            "operation": "darken-reviewed-neon-outline-for-white-surface",
+            "colorTransform": "yellow-green ink channel scale 0.36/0.34/0.34"
+          }
         }
       },
       "onDark": {
@@ -138,7 +144,7 @@
         220,
         240
       ],
-      "notes": "Exact reviewed Image Gen pair; native masters and generation provenance retained. Compact rasters cropped from the actual left symbol."
+      "notes": "Original reviewed light artwork retained byte for byte. Selected light export darkens neon outline pixels for white header; native qualification still required."
     },
     "compactMarkReview": {
       "reviewed": true,
@@ -153,7 +159,7 @@
         48,
         64
       ],
-      "notes": "Initial letters isolated from exact reviewed light and dark wordmark PNGs; native favicon contrast and padding qualify independently."
+      "notes": "Matching initial outlined ink darkened for white-surface compact and favicon; native QA required."
     }
   },
   "sourceBlockers": [],
@@ -169,6 +175,13 @@
       {
         "path": "branding/native-generated-on-dark.png",
         "sha256": "8b7ac1ed62a6ea0726bfdc121b19e307fd1e755499d2ddaba89804d65d670683"
+      }
+    ],
+    "reviewedExports": [
+      {
+        "path": "branding/reviewed-on-light.png",
+        "sha256": "8c8d9fb2dd830fb7d3b7a3dd87a7ec6b404cd60e7ea894d0270d3654d358b032",
+        "manifestRole": "on-light"
       }
     ]
   }
