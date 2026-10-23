@@ -23,6 +23,11 @@ const clean=value=>String(value??'').normalize('NFKD').replace(/\p{M}/gu,'').toL
 const digits=value=>String(value??'').replace(/\D/g,'');
 const business=facts=>facts?.business??facts??{};
 const includesName=(text,name)=>clean(name).length>=3&&(' '+clean(text)+' ').includes(' '+clean(name)+' ');
+const includesNameOutsideOwnName=(text,name,ownNames)=>{
+  let value=' '+clean(text)+' ';
+  for(const own of [...new Set(ownNames.map(clean).filter(Boolean))].sort((a,b)=>b.length-a.length))value=value.replaceAll(' '+own+' ',' ');
+  return clean(name).length>=3&&value.includes(' '+clean(name)+' ');
+};
 const visibleText=value=>String(value??'').replace(/\s+/g,' ').trim();
 const completeIdentityContext=(text,context)=>context?.schemaVersion===1&&context.status==='complete'&&Array.isArray(context.segments)&&context.segments.length>0&&context.segments.length<=4096&&context.segments.every(row=>typeof row.text==='string'&&typeof row.owner==='string'&&['body','vehicle-fact','vehicle-title'].includes(row.channel))&&visibleText(context.segments.map(row=>row.text).join('\n'))===visibleText(text);
 const nativeVehicleOwners=new Set(['modern','auto-best','import','import-site','signature','signature-mobile']);
@@ -215,7 +220,7 @@ export function findForeignIdentity({text,phones=[],ownSlug,ownFacts,ownStock,fl
   const observedPhones=[...phones,...visiblePhones];
   for(const record of fleet.records){
     if(record.slug===ownSlug)continue;
-    for(const name of record.names)if(!ownNames.some(value=>clean(value)===clean(name))){const segment=segments.find(row=>includesName(row.text,name)&&!(complete&&sourcedVehicleText(row,ownStock)));if(segment)hits.push({dealer:record.slug,type:'name',value:name,context:context(segment,name)});}
+    for(const name of record.names)if(!ownNames.some(value=>clean(value)===clean(name))){const segment=segments.find(row=>includesNameOutsideOwnName(row.text,name,ownNames)&&!(complete&&sourcedVehicleText(row,ownStock)));if(segment)hits.push({dealer:record.slug,type:'name',value:name,context:context(segment,name)});}
     for(const phone of record.phones)if(!samePhone(phone,own.phone)&&observedPhones.some(value=>samePhone(value,phone)))hits.push({dealer:record.slug,type:'phone',value:phone});
   }
   return hits.filter((row,index)=>hits.findIndex(other=>other.dealer===row.dealer&&other.type===row.type&&other.value===row.value)===index);
