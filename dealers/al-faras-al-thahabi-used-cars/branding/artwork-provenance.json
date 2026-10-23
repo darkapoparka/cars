@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "ae-sharjah-al-faras-al-thahabi-used-cars",
+  "slug": "al-faras-al-thahabi-used-cars",
+  "artworkDirectory": "al-faras-al-thahabi-used-cars",
+  "name": "Al Faras Al Thahabi Used Cars",
+  "renderedName": "Al Faras Al Thahabi Used Cars",
+  "kind": "independent-website-logo-proposal",
+  "dealerApproved": false,
+  "ownerApproved": false,
+  "sourceEvidence": [
+    {
+      "url": "https://auto.ae/alfarasalthahabiusedcars/",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://dubai.dubizzle.com/motors/used-cars/mercedes-benz/glc-class/2026/02/21/mercedes-benz-glc-300-amg-2025-fully-loade-2-623---8765b57c9d8b4e49b4a4e758ceeb3f97/",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "retainedOriginalsUnchanged": true,
+  "variants": {
+    "on-light": {
+      "path": "logo-on-light.png",
+      "sha256": "5e57ed6ab09743b438396f0a6ba5b4312bf95c5b81e789c3b1a72386f1b510f4",
+      "width": 1024,
+      "height": 321,
+      "transparentFraction": 0.7646788600077882,
+      "master": {
+        "path": "generated-on-light.png",
+        "sha256": "b85ca21fe55e6a958fcb5d570cb61fc76245f4869f86d6db788fc54e9eb59262",
+        "width": 2073,
+        "height": 758
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-105c487b-a55d-4284-8b98-58f159fe8474",
+        "prompt": "Create one professional horizontal automotive dealership logo proposal for Al Faras Al Thahabi Used Cars. Required exact text, uppercase: AL FARAS AL THAHABI USED CARS. Every word must be present and spelled precisely; use sensible primary name and smaller descriptor hierarchy without tiny lettering. Produce a polished original identity with a restrained architectural emblem with two or three interlocking geometric forms. Initials FT may inform the emblem. Emblem left, full clear name to the right, compact and balanced for a website header. Avoid overused shield and generic car silhouettes; no manufacturer badges. Clean modern lettering with careful kerning and strong legibility. All text is deep charcoal black, appropriate on a white/light header. One restrained red or gold accent may appear inside the emblem only; no pale text. Flat crisp edges, a small number of solid shapes, no chrome, no lighting, no shadow, no texture, no gradient. Genuine transparent alpha background, isolated logo with no background box, no grid, no checkerboard painted into pixels. No slogan, contact info, website, watermark, mockup, photograph, extra concept, or duplicate logo. Deliver exactly one horizontal full logo. This is an independent website identity proposal, not a claim of adopted branding.",
+        "reference": null
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 77,
+          "top": 72,
+          "width": 1978,
+          "height": 620
+        }
+      }
+    },
+    "on-dark": {
+      "path": "logo-on-dark.png",
+      "sha256": "669fe6067c3b1e8d0e256a0af8ef9a939179722366b1f9d9849b1158061fa8de",
+      "width": 1024,
+      "height": 318,
+      "transparentFraction": 0.7135263119103774,
+      "master": {
+        "path": "generated-on-dark.png",
+        "sha256": "fd520ab0dc74e7abe0c8ae67bbd3165ee7b565e0db07422a1be9b3684da5c7d4",
+        "width": 2073,
+        "height": 759
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-6a80c677-14c1-43ee-8217-3c6be328a54b",
+        "prompt": "Create the matching light-on-dark production variant of the exact supplied logo. Preserve precisely the same emblem, geometry, spelling, word count, typographic hierarchy, proportions, layout and spacing. Required exact text: AL FARAS AL THAHABI USED CARS. Change EVERY letter, including all secondary descriptor words and legal suffixes, to solid white so it is legible over a dark or red website header. Change the charcoal portions of the emblem to white. Retain the small red/gold emblem accent only if it contrasts clearly against a dark header. True transparent alpha background; do not paint a dark rectangle or checkerboard. Flat clean edges, no glows, shadows, bevels, textures, gradients, new artwork, new icon, extra text or mockup. Deliver one horizontal matching logo, fully legible.",
+        "reference": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-105c487b-a55d-4284-8b98-58f159fe8474.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 62,
+          "top": 74,
+          "width": 1988,
+          "height": 617
+        }
+      }
+    }
+  },
+  "review": {
+    "status": "artwork-visually-reviewed",
+    "alpha": "all exports measured as genuine transparent nonempty PNGs",
+    "spelling": "English wordmark inspected; source-bound display aliases retained",
+    "compact": "Horizontal logos only. Interactive 32/48/64px gallery preview is provided; separate compact/favicon artwork remains part of dealer-pack preparation.",
+    "sixDesigns": "not-yet-integrated-or-rendered",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "reviewer": "Codex visual inspection",
+    "header": "All 196 paired PNGs inspected at 240x64 on white, #111113 and #c40101",
+    "evidence": "final-review-09.png"
+  },
+  "releaseReady": false,
+  "artworkHolds": [],
+  "artworkReadyForIntegration": true
+}

@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Al Faras Al Thahabi Used Cars",
     "publicOrigin": "https://al-faras-al-thahabi-used-cars.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "5e57ed6ab09743b438396f0a6ba5b4312bf95c5b81e789c3b1a72386f1b510f4",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "77fb4c7b29ab3ad9e64d632328f1d772828fd4b39fe1d1a739ba06c5e0c0a3e5"
+    }
   }
 }
