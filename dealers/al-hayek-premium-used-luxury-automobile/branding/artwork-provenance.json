@@ -1,0 +1,117 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "ae-dubai-al-hayek-premium-used-luxury-automobile",
+  "slug": "al-hayek-premium-used-luxury-automobile",
+  "artworkDirectory": "al-hayek-premium-used-luxury-automobile",
+  "name": "Al Hayek Premium Used Luxury Automobile",
+  "renderedName": "Al Hayek Premium Motors",
+  "kind": "reference-guided-website-logo-proposal",
+  "dealerApproved": false,
+  "ownerApproved": false,
+  "sourceEvidence": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/al-hayek-premium-used-luxury-automobile",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/12988-rolls-royce-cullinan-68-at-4wd-571-hp-black-badge",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.dubicars.com/dealers/dubai-al-hayek-premium-motors-2703",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.dubicars.com/dealers/dubai-al-hayek-premium-motors-2703",
+      "observedAt": "2026-10-21"
+    },
+    {
+      "url": "https://artsmileybiz.com/wallpaper-services-dubai-uae/",
+      "observedAt": "2026-10-21"
+    },
+    {
+      "url": "https://www.dubicars.com/news/al-hayek-premium-motors-dubicars-partnership.html",
+      "observedAt": "2026-10-21"
+    }
+  ],
+  "retainedOriginalsUnchanged": true,
+  "variants": {
+    "on-light": {
+      "path": "logo-on-light.png",
+      "sha256": "61b4648d721c28538e8f2c16c0b60ec038a39a570dee53fdbf086f73dad8b1e8",
+      "width": 1024,
+      "height": 241,
+      "transparentFraction": 0.7442946058091287,
+      "master": {
+        "path": "generated-on-light.png",
+        "sha256": "3bc7ac943c2dd2911e84300ae3b11fd59d66f2e011ce92424c4e1d374acf6f72",
+        "width": 1838,
+        "height": 856
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-d578bb00-b044-47ee-8266-97e68a3d47d4",
+        "prompt": "Create one professional transparent horizontal website logo by refining the supplied dealer logo reference. Keep the reference white hexagonal P emblem recognizable, converted to charcoal for a light header. To its right set AL HAYEK prominent, with PREMIUM MOTORS clearly below. This is an explicit website wordmark adaptation of the supplied PREMIUM MOTORS brand reference, not a claim that this new wording is adopted. Required exact English words, with accurate spelling: AL HAYEK PREMIUM MOTORS. Maintain the reference's recognizable identity and proportion while making it legible and polished at a 220px wide website header. Use a sensible primary name and descriptor hierarchy. All text deep charcoal black for white/light backgrounds; retain restrained reference accent colors in the emblem only. Genuine transparent alpha, isolated logo, tightly balanced wide composition. Flat crisp shapes, no chrome, bevel, shadow, glow, texture, gradients, background rectangle or checkerboard, photo, mockup, contact details, website, slogan, watermark, multiple concepts or duplicate. Deliver exactly one logo. This is a reference-guided artwork proposal, not proof of business adoption.",
+        "reference": "L:\\CODEX\\cars\\leads\\branding\\pending-20261023\\_references\\al-hayek-original.jpg"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 12,
+          "top": 210,
+          "width": 1824,
+          "height": 429
+        }
+      }
+    },
+    "on-dark": {
+      "path": "logo-on-dark.png",
+      "sha256": "09939d69d7871ad63ce94bba9519adb85c178ba8c82e7c01d0375d4042388950",
+      "width": 1024,
+      "height": 241,
+      "transparentFraction": 0.6192378760373444,
+      "master": {
+        "path": "generated-on-dark.png",
+        "sha256": "25cc20774dbb0fe23cf9afc685dbaae21de917686bd8d63a97129fd26b2c2a06",
+        "width": 1838,
+        "height": 856
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-cf2a16f1-1c9e-4030-8755-f55a718509a0",
+        "prompt": "Create the matching light-on-dark production variant of the exact supplied logo. Preserve precisely the same emblem, geometry, spelling, word count, typographic hierarchy, proportions, layout and spacing. Required exact text: AL HAYEK PREMIUM MOTORS. Change EVERY letter, including all secondary descriptor words and legal suffixes, to solid white so it is legible over a dark or red website header. Change the charcoal portions of the emblem to white. Retain the small red/gold emblem accent only if it contrasts clearly against a dark header. True transparent alpha background; do not paint a dark rectangle or checkerboard. Flat clean edges, no glows, shadows, bevels, textures, gradients, new artwork, new icon, extra text or mockup. Deliver one horizontal matching logo, fully legible.",
+        "reference": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-d578bb00-b044-47ee-8266-97e68a3d47d4.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 13,
+          "top": 210,
+          "width": 1822,
+          "height": 429
+        }
+      }
+    }
+  },
+  "review": {
+    "status": "artwork-visually-reviewed",
+    "alpha": "all exports measured as genuine transparent nonempty PNGs",
+    "spelling": "English wordmark inspected; source-bound display aliases retained",
+    "compact": "Horizontal logos only. Interactive 32/48/64px gallery preview is provided; separate compact/favicon artwork remains part of dealer-pack preparation.",
+    "sixDesigns": "not-yet-integrated-or-rendered",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "reviewer": "Codex visual inspection",
+    "header": "All 196 paired PNGs inspected at 240x64 on white, #111113 and #c40101",
+    "evidence": "final-review-05.png"
+  },
+  "releaseReady": false,
+  "originalReference": {
+    "path": "_references/al-hayek-premium-used-luxury-automobile.jpg",
+    "sha256": "8c2c60b564e75959cf4f8b0365081a2a608170dba77ca283f852929ff16eaecc",
+    "sourceUrl": "https://artsmileybiz.com/wp-content/uploads/2024/05/Al-Hayek-Premium-Motors_150x150px.jpg",
+    "observedAt": "2026-10-23",
+    "adaptation": "English website adaptation; original retained unchanged; adoption not claimed"
+  },
+  "artworkHolds": [],
+  "artworkReadyForIntegration": true
+}
