@@ -204,6 +204,11 @@ test('six-family package integrates source receipts, common identity, final seal
   const selector = output.get('auto-best/static/preview-switcher.js').toString();
   assert.match(selector,/START CARS PROPOSAL INTRODUCTION/);
   assert.match(selector,/proposal-dashboards-panel/);
+  // The actual bundled six-design switcher, not just its source CSS, must
+  // carry the corrected Import layout before another dealer build is qualified.
+  assert.ok(selector.includes('dialog[data-locale-dialog] > form{box-sizing:border-box!important;padding:0 24px 24px!important}'));
+  assert.ok(selector.includes('dialog[data-locale-dialog] > form{padding-inline:16px!important}'));
+  assert.ok(selector.includes('dialog[data-locale-dialog] .cars-locale-select-arrow,dialog[data-locale-dialog] [data-locale-country-chevron]{display:none!important}'));
   assert.match(selector,/"dealerId":"publisher-fixture"/);
   assert.doesNotThrow(()=>new vm.Script(selector));
   const share = JSON.parse(output.get('.cars-dealer-share.json'));
