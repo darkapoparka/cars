@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "dealer": "first-choice-auto-sales",
-  "status": "research-required",
+  "status": "reviewed-imagegen-proposal",
   "realLogoFirst": true,
   "publicSources": [
     {
@@ -30,7 +30,146 @@
     }
   ],
   "originals": [],
-  "creationMethod": null,
+  "creationMethod": "imagegen-proposal",
   "dealerApproved": false,
-  "generatedInputs": null
+  "generatedInputs": {
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "master": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "f8e6685f517ec838c284f3373db3d18baedcf524af2c72ea8605a0e104c5d685",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-d89a8c13-420c-44fa-9cba-a9892db44c11",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark-light.png",
+      "sha256": "2074a389c46b949a0d2bc28a8514ef60f725f8b5d983e3bf37ecdaff34f14621",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-d89a8c13-420c-44fa-9cba-a9892db44c11",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "f8e6685f517ec838c284f3373db3d18baedcf524af2c72ea8605a0e104c5d685",
+          "operation": "crop-and-pad-reviewed-wordmark-initial-for-compact",
+          "crop": {
+            "left": 19,
+            "top": 181,
+            "width": 97,
+            "height": 89
+          },
+          "canvas": {
+            "width": 167,
+            "height": 159,
+            "offsetX": 35,
+            "offsetY": 35
+          }
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-dark.png",
+      "sha256": "1a201df12f0769d6f2d6d0f0ba534e529bff77494d2584dad054196fdb181af0",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-f65e7915-0b3b-48b8-94e3-c49bbe832e6d",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "798e938c85752a4c9b40719d926675783653267d342c9ef33d8ac9c550e5e5f5",
+          "operation": "crop-and-pad-reviewed-wordmark-initial-for-compact",
+          "crop": {
+            "left": 19,
+            "top": 181,
+            "width": 97,
+            "height": 89
+          },
+          "canvas": {
+            "width": 167,
+            "height": 159,
+            "offsetX": 35,
+            "offsetY": 35
+          }
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "f8e6685f517ec838c284f3373db3d18baedcf524af2c72ea8605a0e104c5d685",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-d89a8c13-420c-44fa-9cba-a9892db44c11",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "798e938c85752a4c9b40719d926675783653267d342c9ef33d8ac9c550e5e5f5",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-f65e7915-0b3b-48b8-94e3-c49bbe832e6d",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "798e938c85752a4c9b40719d926675783653267d342c9ef33d8ac9c550e5e5f5",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-f65e7915-0b3b-48b8-94e3-c49bbe832e6d",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewKind": "agent-visual-review",
+      "humanReview": false,
+      "dealerApproval": false,
+      "backgrounds": {
+        "onLight": "#ffffff",
+        "onDark": "#111113",
+        "onAccent": "#c40101"
+      },
+      "wordmarkWidths": [
+        220,
+        240
+      ],
+      "notes": "Exact reviewed Image Gen pair; native masters and generation provenance retained. Compact rasters cropped from the actual left symbol."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-22T23:42:46.338Z",
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#c40101"
+      ],
+      "widths": [
+        32,
+        48,
+        64
+      ],
+      "notes": "Initial letters isolated from exact reviewed light and dark wordmark PNGs; native favicon contrast and padding qualify independently."
+    }
+  },
+  "sourceBlockers": [],
+  "artworkProvenance": {
+    "path": "branding/artwork-provenance.json",
+    "sha256": "3da747b9c728e722b522e447497340e5841df5d40253c7842aa91ac68a8ef9eb",
+    "manifestSha256": "d25e9cee768a885052ac0a8df220d843c9b9c6f6f120d722705bead1cc99e694",
+    "nativeMasters": [
+      {
+        "path": "branding/native-generated-on-light.png",
+        "sha256": "0db21edccfedd24508b02b11c326f2ab93fcaa1007eb2a2af9b5c0bf36f5ab9f"
+      },
+      {
+        "path": "branding/native-generated-on-dark.png",
+        "sha256": "1ec3b040e1444723b750baf9c37a4e51075840a290c9da8311885959ee72a9d4"
+      }
+    ]
+  }
 }

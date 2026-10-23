@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Al Ward Used Cars Trading",
     "publicOrigin": "https://al-ward-used-cars-trading.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "79c2c78308c1391751a03bce40b00e7a004df572fef79aa2ebcb5413597f14cc",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "51ae27a49f3649be7a0d3b71c93d129bc220353fb800502d98149c2d25eaa9bd"
+    }
   }
 }

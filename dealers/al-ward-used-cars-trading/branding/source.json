@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "dealer": "al-ward-used-cars-trading",
-  "status": "research-required",
+  "status": "reviewed-imagegen-proposal",
   "realLogoFirst": true,
   "publicSources": [
     {
@@ -10,7 +10,146 @@
     }
   ],
   "originals": [],
-  "creationMethod": null,
+  "creationMethod": "imagegen-proposal",
   "dealerApproved": false,
-  "generatedInputs": null
+  "generatedInputs": {
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "master": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "79c2c78308c1391751a03bce40b00e7a004df572fef79aa2ebcb5413597f14cc",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-22748c0f-8170-4684-b383-40cf78db67a9",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark-light.png",
+      "sha256": "fa8014ad4082bcf8b2595d8b6ec0d681389856db6f8a8d70be907c2fb44994e6",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-22748c0f-8170-4684-b383-40cf78db67a9",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "79c2c78308c1391751a03bce40b00e7a004df572fef79aa2ebcb5413597f14cc",
+          "operation": "crop-and-pad-reviewed-wordmark-initial-for-compact",
+          "crop": {
+            "left": 190,
+            "top": 18,
+            "width": 100,
+            "height": 207
+          },
+          "canvas": {
+            "width": 170,
+            "height": 277,
+            "offsetX": 35,
+            "offsetY": 35
+          }
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-dark.png",
+      "sha256": "d933546f3414bf12d5905c072035aa584c95c2f435abeebe4ab715ffc360aa6e",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-0c380c37-9c47-42e3-8ece-22454c38db67",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "483d5cd0db404700812ed8f2ba279a4a8a51ad6fd0f06b4e96fd3c8fa7ced8ad",
+          "operation": "crop-and-pad-reviewed-wordmark-initial-for-compact",
+          "crop": {
+            "left": 190,
+            "top": 18,
+            "width": 100,
+            "height": 207
+          },
+          "canvas": {
+            "width": 170,
+            "height": 277,
+            "offsetX": 35,
+            "offsetY": 35
+          }
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "79c2c78308c1391751a03bce40b00e7a004df572fef79aa2ebcb5413597f14cc",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-22748c0f-8170-4684-b383-40cf78db67a9",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "483d5cd0db404700812ed8f2ba279a4a8a51ad6fd0f06b4e96fd3c8fa7ced8ad",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-0c380c37-9c47-42e3-8ece-22454c38db67",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "483d5cd0db404700812ed8f2ba279a4a8a51ad6fd0f06b4e96fd3c8fa7ced8ad",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-0c380c37-9c47-42e3-8ece-22454c38db67",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewKind": "agent-visual-review",
+      "humanReview": false,
+      "dealerApproval": false,
+      "backgrounds": {
+        "onLight": "#ffffff",
+        "onDark": "#111113",
+        "onAccent": "#c40101"
+      },
+      "wordmarkWidths": [
+        220,
+        240
+      ],
+      "notes": "Exact reviewed Image Gen pair; native masters and generation provenance retained. Compact rasters cropped from the actual left symbol."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-22T23:42:46.338Z",
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#c40101"
+      ],
+      "widths": [
+        32,
+        48,
+        64
+      ],
+      "notes": "Initial letters isolated from exact reviewed light and dark wordmark PNGs; native favicon contrast and padding qualify independently."
+    }
+  },
+  "sourceBlockers": [],
+  "artworkProvenance": {
+    "path": "branding/artwork-provenance.json",
+    "sha256": "57689753a0bfb060a05faeab516979736d21acec982f6e43a9daa19cbb7f76f2",
+    "manifestSha256": "d25e9cee768a885052ac0a8df220d843c9b9c6f6f120d722705bead1cc99e694",
+    "nativeMasters": [
+      {
+        "path": "branding/native-generated-on-light.png",
+        "sha256": "55e8b4350d25881f17a343d6c7db9224aac456d50c6cce93d22542767f1dd105"
+      },
+      {
+        "path": "branding/native-generated-on-dark.png",
+        "sha256": "15eabddf231e28a3f2853f31686f0cf93fed70ecfdd681f7f4e3314601360ee4"
+      }
+    ]
+  }
 }
