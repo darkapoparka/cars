@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Al Asalh Used Cars",
     "publicOrigin": "https://al-asalh-used-cars.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "b3b86c4ff6292a5e1b77bd906b6fb09c6bb1f3eb8cd932cf0b98f1c19c3bf8b6",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "0673d05df2e23ce6838018c030382dea8b6cd7c835fd97a7ab03704b75e946a8"
+    }
   }
 }

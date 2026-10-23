@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "ae-sharjah-abdo-al-muthannna-used-cars",
+  "slug": "abdo-al-muthannna-used-cars",
+  "artworkDirectory": "abdo-al-muthannna-used-cars",
+  "name": "Abdo Al Muthannna Used Cars",
+  "renderedName": "Abdo Al Muthannna Used Cars",
+  "kind": "independent-website-logo-proposal",
+  "dealerApproved": false,
+  "ownerApproved": false,
+  "sourceEvidence": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/abdo-al-muthannna-used-cars",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/6838-nissan-rogue-15-cvt-204-hp-sv",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "retainedOriginalsUnchanged": true,
+  "variants": {
+    "on-light": {
+      "path": "logo-on-light.png",
+      "sha256": "c04b92e0a52e0faaec16886e7b3ea5b4b3cf3975e2dee909a12616fd991b6aa1",
+      "width": 1024,
+      "height": 207,
+      "transparentFraction": 0.7207974788647343,
+      "master": {
+        "path": "generated-on-light.png",
+        "sha256": "47cc7ec592789ef1c0d4afe1ef0b9eddd0136b324add569597482475613ef867",
+        "width": 2170,
+        "height": 725
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-231a5822-92ca-4e5e-a352-e0af52aa4879",
+        "prompt": "Correct exactly one spelling error in this supplied dealer logo and make the matching dark-ink-on-light variant. The exact required text is ABDO AL MUTHANNNA with USED CARS underneath. MUTHANNNA has THREE consecutive N letters, spelled M U T H A N N N A; do not autocorrect to MUTHANNA with two Ns. Keep the existing AM emblem and red swoosh, typeface, balanced horizontal layout and word hierarchy. Every word charcoal black for white backgrounds; keep the red emblem accent. Flat crisp shapes, genuine transparent alpha background, no painted background, no glow, shadow, gradient, texture, extra concepts, contact information or slogan. One corrected horizontal logo only. Name verified from the dealer's public listing https://licenseplate.ae/cars/dealer/abdo-al-muthannna-used-cars .",
+        "reference": "L:/CODEX/cars/leads/branding/pending-20261023/abdo-al-muthannna-used-cars/logo-on-dark.png",
+        "referenceSnapshot": {
+          "path": "correction-input-on-dark.png",
+          "sha256": "6f5e56350ef210a4e6a051abfc67062368d809bb118a7ad0d5a2ae8c85020235",
+          "sameBytesAsToolInput": true,
+          "nativeOriginal": {
+            "path": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-8ad1bcf2-edae-4635-ac82-9e524ddfaa41.png",
+            "sha256": "5d263ec5ec12534a05e2aee6b6a8501bd4687a9fa4f76f974d06cf4a447fc478"
+          },
+          "note": "Exact input snapshot retained after correction. Re-export from unchanged native original matches recorded pre-correction PNG SHA256."
+        },
+        "referencePathMeaning": "Original tool input working filename, later overwritten by corrected export. referenceSnapshot retains the exact input bytes."
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 0,
+          "top": 138,
+          "width": 2170,
+          "height": 439
+        }
+      }
+    },
+    "on-dark": {
+      "path": "logo-on-dark.png",
+      "sha256": "f97b5a94a52044febf0a9d239cc4cec5f1b51ef2907a6dce1346b44c44a2631b",
+      "width": 1024,
+      "height": 208,
+      "transparentFraction": 0.6077129657451923,
+      "master": {
+        "path": "generated-on-dark.png",
+        "sha256": "20229a8aceda6bfbd1091e079abef66e984c52b607329ca252ab7b3b907fd96d",
+        "width": 2170,
+        "height": 725
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-05146a4f-e31a-4907-9f18-e0bec0f773c8",
+        "prompt": "Create the matching light-on-dark production variant of the exact supplied logo. Preserve precisely the same emblem, geometry, spelling, word count, typographic hierarchy, proportions, layout and spacing. Required exact text: ABDO AL MUTHANNNA USED CARS. Change EVERY letter, including all secondary descriptor words and legal suffixes, to solid white so it is legible over a dark or red website header. Change the charcoal portions of the emblem to white. Retain the small red/gold emblem accent only if it contrasts clearly against a dark header. True transparent alpha background; do not paint a dark rectangle or checkerboard. Flat clean edges, no glows, shadows, bevels, textures, gradients, new artwork, new icon, extra text or mockup. Deliver one horizontal matching logo, fully legible.",
+        "reference": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-231a5822-92ca-4e5e-a352-e0af52aa4879.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 0,
+          "top": 137,
+          "width": 2170,
+          "height": 440
+        }
+      }
+    }
+  },
+  "review": {
+    "status": "artwork-visually-reviewed",
+    "alpha": "all exports measured as genuine transparent nonempty PNGs",
+    "spelling": "English wordmark inspected; source-bound display aliases retained",
+    "compact": "Horizontal logos only. Interactive 32/48/64px gallery preview is provided; separate compact/favicon artwork remains part of dealer-pack preparation.",
+    "sixDesigns": "not-yet-integrated-or-rendered",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "reviewer": "Codex visual inspection",
+    "header": "All 196 paired PNGs inspected at 240x64 on white, #111113 and #c40101",
+    "evidence": "final-review-08.png"
+  },
+  "releaseReady": false,
+  "artworkHolds": [],
+  "artworkReadyForIntegration": true
+}
