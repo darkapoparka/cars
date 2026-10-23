@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "ae-ajman-f8-motors-used-cars",
+  "slug": "f8-motors-used-cars",
+  "artworkDirectory": "f8-motors-used-cars",
+  "name": "F8 Motors Used Cars",
+  "renderedName": "F8 Motors",
+  "kind": "reference-guided-website-logo-proposal",
+  "dealerApproved": false,
+  "ownerApproved": false,
+  "sourceEvidence": [
+    {
+      "url": "https://www.oneclickdrive.com/company/ajman/f8-motors-used-cars",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "retainedOriginalsUnchanged": true,
+  "variants": {
+    "on-light": {
+      "path": "logo-on-light.png",
+      "sha256": "1d570bb071faab2289456b65b0c5d6963dd5b0b7c0bbfb06c0f97da6a04050c4",
+      "width": 1024,
+      "height": 414,
+      "transparentFraction": 0.5985313820954107,
+      "master": {
+        "path": "generated-on-light.png",
+        "sha256": "3d279fe68c78cf143ed377add74a203704dad8c3b7251eab307649b56b7282e5",
+        "width": 1973,
+        "height": 797
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-7092884c-3b38-410f-b837-ba3199fc99f8",
+        "prompt": "Correct the light-background color treatment of the supplied logo while preserving its recognizable emblem, typeface, exact geometry, word spacing and layout. Exact required wording: F8 MOTORS. EVERY letter must be opaque deep charcoal black, including every secondary word, colored AL prefix, descriptor and legal suffix. Do not leave any gold, blue, red or white LETTERS. The F and the 8 are letters and must BOTH be charcoal, with MOTORS charcoal beneath. This is the monochrome F8 website variant. Genuine transparent alpha, no background, no glow, shadow, gradient, texture, checkerboard, frame, mockup, watermark, extra concepts or altered spelling. One crisp horizontal production logo only.",
+        "reference": "L:/CODEX/cars/leads/branding/pending-20261023/f8-motors-used-cars/logo-on-light.png",
+        "referenceSnapshot": {
+          "path": "correction-input-on-light.png",
+          "sha256": "91752efecef328adcaea635ee09dec603802ff5792cdb7ab018f10ea52cf5431",
+          "sameBytesAsToolInput": true,
+          "nativeOriginal": {
+            "path": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-ae36d5d5-16a7-403d-88fd-c09f285df91f.png",
+            "sha256": "1ca753dd4346b68e9b03ca098798b2a632d13196fde2a6d2f74d52e4b1e180cb"
+          },
+          "note": "Exact input snapshot retained after correction. Re-export from unchanged native original matches recorded pre-correction PNG SHA256."
+        },
+        "referencePathMeaning": "Original tool input working filename, later overwritten by corrected export. referenceSnapshot retains the exact input bytes."
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 1973,
+          "height": 797
+        }
+      }
+    },
+    "on-dark": {
+      "path": "logo-on-dark.png",
+      "sha256": "eba24ec045e6ee92a1a64b8e313c2b4b99397e89f3bebcdbf53ca4807722973a",
+      "width": 1024,
+      "height": 413,
+      "transparentFraction": 0.47368956189467315,
+      "master": {
+        "path": "generated-on-dark.png",
+        "sha256": "b150f245e54127c320821d5628dbcb77b2706e813668f96f860cdbdfd5bb94c4",
+        "width": 1974,
+        "height": 797
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-8587b6b1-679b-401f-9efa-efad78c7d4a4",
+        "prompt": "Create the matching light-on-dark production variant of the exact supplied logo. Preserve precisely the same emblem, geometry, spelling, word count, typographic hierarchy, proportions, layout and spacing. Required exact text: F8 MOTORS. Change EVERY letter, including all secondary descriptor words and legal suffixes, to solid white so it is legible over a dark or red website header. Change the charcoal portions of the emblem to white. Retain the small red/gold emblem accent only if it contrasts clearly against a dark header. True transparent alpha background; do not paint a dark rectangle or checkerboard. Flat clean edges, no glows, shadows, bevels, textures, gradients, new artwork, new icon, extra text or mockup. Deliver one horizontal matching logo, fully legible. Treat F and 8 as the actual wordmark: BOTH the F and the 8 and MOTORS must be solid WHITE, absolutely no red F. Every part of the F8 identity should be monochrome white so it reads on #c40101 red headers as well as black. No colored letters.",
+        "reference": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-7092884c-3b38-410f-b837-ba3199fc99f8.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 1974,
+          "height": 797
+        }
+      }
+    }
+  },
+  "review": {
+    "status": "artwork-visually-reviewed",
+    "alpha": "all exports measured as genuine transparent nonempty PNGs",
+    "spelling": "English wordmark inspected; source-bound display aliases retained",
+    "compact": "Horizontal logos only. Interactive 32/48/64px gallery preview is provided; separate compact/favicon artwork remains part of dealer-pack preparation.",
+    "sixDesigns": "not-yet-integrated-or-rendered",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "reviewer": "Codex visual inspection",
+    "header": "All 196 paired PNGs inspected at 240x64 on white, #111113 and #c40101",
+    "evidence": "final-review-04.png",
+    "correctionEvidence": "final-corrections-review.png"
+  },
+  "releaseReady": false,
+  "originalReference": {
+    "path": "_references/f8-motors-used-cars.png",
+    "sha256": "2c2b3817b71769298cb7ae5084f6eeac3b94f5f8ba402ebb4259f70d0b940a73",
+    "sourceUrl": "https://static.oneclickdrive.com/application/views/img/company/f8-motors.png",
+    "observedAt": "2026-10-23",
+    "adaptation": "English website adaptation; original retained unchanged; adoption not claimed"
+  },
+  "artworkHolds": [],
+  "artworkReadyForIntegration": true
+}

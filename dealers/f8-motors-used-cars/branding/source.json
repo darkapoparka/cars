@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "dealer": "f8-motors-used-cars",
-  "status": "research-required",
+  "status": "reviewed-imagegen-proposal",
   "realLogoFirst": true,
   "publicSources": [
     {
@@ -10,7 +10,166 @@
     }
   ],
   "originals": [],
-  "creationMethod": null,
+  "creationMethod": "imagegen-proposal",
   "dealerApproved": false,
-  "generatedInputs": null
+  "generatedInputs": {
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "master": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "1d570bb071faab2289456b65b0c5d6963dd5b0b7c0bbfb06c0f97da6a04050c4",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-7092884c-3b38-410f-b837-ba3199fc99f8",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark-light.png",
+      "sha256": "f12fefafa9cedb50ee33a451691b123fb5494457c3364201c62ed74b60760afb",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-7092884c-3b38-410f-b837-ba3199fc99f8",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "1d570bb071faab2289456b65b0c5d6963dd5b0b7c0bbfb06c0f97da6a04050c4",
+          "operation": "isolate-largest-reviewed-F8-eight-component-for-square-compact",
+          "selection": {
+            "alphaThreshold": 96,
+            "minPixels": 50000,
+            "selectedPixels": 66432,
+            "antialiasNeighborPixels": 1
+          },
+          "crop": {
+            "left": 494,
+            "top": 60,
+            "width": 530,
+            "height": 255
+          },
+          "resized": {
+            "width": 350,
+            "height": 300
+          },
+          "canvas": {
+            "width": 400,
+            "height": 400,
+            "offsetX": 25,
+            "offsetY": 50
+          }
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-dark.png",
+      "sha256": "ab081904274af67ed5e235332c7f70ea39fd1933cf32169dc1b44e640d8e78e5",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-8587b6b1-679b-401f-9efa-efad78c7d4a4",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "eba24ec045e6ee92a1a64b8e313c2b4b99397e89f3bebcdbf53ca4807722973a",
+          "operation": "isolate-largest-reviewed-F8-eight-component-for-square-compact",
+          "selection": {
+            "alphaThreshold": 96,
+            "minPixels": 50000,
+            "selectedPixels": 65118,
+            "antialiasNeighborPixels": 1
+          },
+          "crop": {
+            "left": 494,
+            "top": 60,
+            "width": 530,
+            "height": 255
+          },
+          "resized": {
+            "width": 350,
+            "height": 300
+          },
+          "canvas": {
+            "width": 400,
+            "height": 400,
+            "offsetX": 25,
+            "offsetY": 50
+          }
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "1d570bb071faab2289456b65b0c5d6963dd5b0b7c0bbfb06c0f97da6a04050c4",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-7092884c-3b38-410f-b837-ba3199fc99f8",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "eba24ec045e6ee92a1a64b8e313c2b4b99397e89f3bebcdbf53ca4807722973a",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-8587b6b1-679b-401f-9efa-efad78c7d4a4",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "eba24ec045e6ee92a1a64b8e313c2b4b99397e89f3bebcdbf53ca4807722973a",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-8587b6b1-679b-401f-9efa-efad78c7d4a4",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewKind": "agent-visual-review",
+      "humanReview": false,
+      "dealerApproval": false,
+      "backgrounds": {
+        "onLight": "#ffffff",
+        "onDark": "#111113",
+        "onAccent": "#c40101"
+      },
+      "wordmarkWidths": [
+        220,
+        240
+      ],
+      "notes": "Exact reviewed Image Gen pair; native masters and generation provenance retained. Compact rasters cropped from the actual left symbol."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-22T23:42:46.338Z",
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#c40101"
+      ],
+      "widths": [
+        32,
+        48,
+        64
+      ],
+      "notes": "Complete compact glyph/emblem isolated from reviewed horizontal PNG pairs; native 32/64px and favicon QA remain independent."
+    }
+  },
+  "sourceBlockers": [],
+  "artworkProvenance": {
+    "path": "branding/artwork-provenance.json",
+    "sha256": "e7e504c5ac17ec54592a09d981cf428ed469e82ef495f26f25201d189050c91c",
+    "manifestSha256": "d25e9cee768a885052ac0a8df220d843c9b9c6f6f120d722705bead1cc99e694",
+    "nativeMasters": [
+      {
+        "path": "branding/native-generated-on-light.png",
+        "sha256": "3d279fe68c78cf143ed377add74a203704dad8c3b7251eab307649b56b7282e5"
+      },
+      {
+        "path": "branding/native-generated-on-dark.png",
+        "sha256": "b150f245e54127c320821d5628dbcb77b2706e813668f96f860cdbdfd5bb94c4"
+      }
+    ]
+  }
 }

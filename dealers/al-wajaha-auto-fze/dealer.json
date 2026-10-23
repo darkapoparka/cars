@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Al Wajaha Auto FZE",
     "publicOrigin": "https://al-wajaha-auto-fze.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "bb25fc7a9c0ff2b1ba899d03e454e07907e2c8e2f5306b8ee568cdf37cb75ef8",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "f9f61a86bdee9a6c0a950064acf780c1a9be1db17986685cced0e39e9c44e0fc"
+    }
   }
 }

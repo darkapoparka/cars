@@ -29,7 +29,7 @@
     },
     "mark": {
       "path": "branding/generated-mark-light.png",
-      "sha256": "eb554b66ec6cf630f96a091ebdbc000ca77a00856f996a73aeb50bc5597cf1fc",
+      "sha256": "e6f3c83a1840640311c1c3ceb617a7dc9733a82eb39509812d1e715519d0d910",
       "generation": {
         "tool": "image_gen.imagegen",
         "generationId": "exec-8034a04b-a8e2-41f4-ba7c-4d037608bdab",
@@ -37,7 +37,7 @@
         "derivedFrom": {
           "path": "branding/generated-on-light.png",
           "sha256": "79828ef7e1fc9de1d739da0c561e0a7cb1cf7a77559da38c5e1f190b31806e07",
-          "operation": "crop-left-symbol",
+          "operation": "crop-reviewed-al-qeyada-symbol-and-darken-gold-for-white-compact",
           "crop": {
             "left": 0,
             "top": 0,
@@ -125,7 +125,7 @@
         48,
         64
       ],
-      "notes": "Left symbol cropped from reviewed horizontal variants; native rendering must independently qualify."
+      "notes": "Reviewed Al Qeyada symbol retained; compact-only gold darkened for white favicon contrast. Horizontal light/dark originals unchanged; native 32/64px and browser QA independently required."
     }
   },
   "sourceBlockers": [],

@@ -50,7 +50,7 @@
   },
   "mark": {
     "path": "branding/logo-mark.png",
-    "sha256": "ca44ec97fc3d56abc7e85b35a7c018ca35a08a04aa5afc773fae7fa87620597c",
+    "sha256": "9f3640fc8ef705913412be5fe3fa5b53fbbb817c5f2a1e57ad500f3218265cdc",
     "generation": {
       "tool": "image_gen.imagegen",
       "generationId": "exec-8034a04b-a8e2-41f4-ba7c-4d037608bdab",
@@ -58,7 +58,7 @@
       "derivedFrom": {
         "path": "branding/generated-on-light.png",
         "sha256": "79828ef7e1fc9de1d739da0c561e0a7cb1cf7a77559da38c5e1f190b31806e07",
-        "operation": "crop-left-symbol",
+        "operation": "crop-reviewed-al-qeyada-symbol-and-darken-gold-for-white-compact",
         "crop": {
           "left": 0,
           "top": 0,
@@ -70,7 +70,7 @@
   },
   "favicon": {
     "path": "dealer-brand/favicon.ico",
-    "sha256": "f4f7c15981fd6a22e4a706535796bf6a93249f265a72c818b70d250d516a783c"
+    "sha256": "2d307a5634dd20d1666eda5039e54be2604b1549b961056c7356857d84770172"
   },
   "surfaces": {
     "onLight": {
@@ -148,7 +148,7 @@
   "supplemental": {
     "mark-on-light.webp": {
       "path": "dealer-brand/mark-on-light.webp",
-      "sha256": "fd8a7385ee43c3869f9a13bad03d139af779fe77b17454f44952cb1dfae75b04",
+      "sha256": "997180f7057cbf8ded84ac2d81eb4f8daa87e939d4eb1d3ef97b67e80ff8e32e",
       "generation": {
         "tool": "image_gen.imagegen",
         "generationId": "exec-8034a04b-a8e2-41f4-ba7c-4d037608bdab",
@@ -156,7 +156,7 @@
         "derivedFrom": {
           "path": "branding/generated-on-light.png",
           "sha256": "79828ef7e1fc9de1d739da0c561e0a7cb1cf7a77559da38c5e1f190b31806e07",
-          "operation": "crop-left-symbol",
+          "operation": "crop-reviewed-al-qeyada-symbol-and-darken-gold-for-white-compact",
           "crop": {
             "left": 0,
             "top": 0,
@@ -190,7 +190,7 @@
     },
     "app-icon.png": {
       "path": "dealer-brand/app-icon.png",
-      "sha256": "ca44ec97fc3d56abc7e85b35a7c018ca35a08a04aa5afc773fae7fa87620597c",
+      "sha256": "9f3640fc8ef705913412be5fe3fa5b53fbbb817c5f2a1e57ad500f3218265cdc",
       "generation": {
         "tool": "image_gen.imagegen",
         "generationId": "exec-8034a04b-a8e2-41f4-ba7c-4d037608bdab",
@@ -198,7 +198,7 @@
         "derivedFrom": {
           "path": "branding/generated-on-light.png",
           "sha256": "79828ef7e1fc9de1d739da0c561e0a7cb1cf7a77559da38c5e1f190b31806e07",
-          "operation": "crop-left-symbol",
+          "operation": "crop-reviewed-al-qeyada-symbol-and-darken-gold-for-white-compact",
           "crop": {
             "left": 0,
             "top": 0,
@@ -211,7 +211,7 @@
     },
     "favicon.ico": {
       "path": "dealer-brand/favicon.ico",
-      "sha256": "f4f7c15981fd6a22e4a706535796bf6a93249f265a72c818b70d250d516a783c",
+      "sha256": "2d307a5634dd20d1666eda5039e54be2604b1549b961056c7356857d84770172",
       "generation": {
         "tool": "image_gen.imagegen",
         "generationId": "exec-8034a04b-a8e2-41f4-ba7c-4d037608bdab",
@@ -219,7 +219,7 @@
         "derivedFrom": {
           "path": "branding/generated-on-light.png",
           "sha256": "79828ef7e1fc9de1d739da0c561e0a7cb1cf7a77559da38c5e1f190b31806e07",
-          "operation": "crop-left-symbol",
+          "operation": "crop-reviewed-al-qeyada-symbol-and-darken-gold-for-white-compact",
           "crop": {
             "left": 0,
             "top": 0,
