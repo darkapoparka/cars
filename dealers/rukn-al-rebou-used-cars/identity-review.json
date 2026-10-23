@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": true,
+  "reviewedAt": "2026-10-23T05:06:14.110Z",
+  "dealer": "rukn-al-rebou-used-cars",
+  "dealerId": "ae-sharjah-rukn-al-rebou-used-cars",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "method": "Automated exact registry/pack identity, canonical hosting and batch comparison; retained public source fields were structurally checked, not human-approved.",
+  "sources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/rukn-al-rebou-used-cars",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/4472-mercedes-benz-cla-250-7g-dct-224-hp-cla-250-amg",
+      "observedAt": "2026-10-18"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "dealer": "khaled-al-fares-used-cars-llc",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://auto.ae/khaledalfares/",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Volkswagen/Golf-R-/?id=187146",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    }
+  ],
+  "liveFetchPerformed": false
+}

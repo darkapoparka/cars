@@ -1,0 +1,147 @@
+{
+  "schemaVersion": 1,
+  "dealer": "khaled-al-fares-used-cars-llc",
+  "status": "reviewed-imagegen-proposal",
+  "realLogoFirst": true,
+  "publicSources": [
+    {
+      "url": "https://auto.ae/khaledalfares/",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Volkswagen/Golf-R-/?id=187146",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "originals": [],
+  "creationMethod": "imagegen-proposal",
+  "dealerApproved": false,
+  "generatedInputs": {
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "master": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "9773691d0731ac9eb5ebdabcf35b87fabe6d7b355d9c73839b4adc32fd20a17f",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-599e2285-08bc-42e8-b776-38a6785a8c61",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark-light.png",
+      "sha256": "93d0be5ee4a603b9e5b21d8bc11f974ebed1d06b9b9db76b0f614a95ade3fcc9",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-599e2285-08bc-42e8-b776-38a6785a8c61",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "9773691d0731ac9eb5ebdabcf35b87fabe6d7b355d9c73839b4adc32fd20a17f",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 215,
+            "height": 233
+          }
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-dark.png",
+      "sha256": "de67ba6a60b03e50689a3e229c764f6556817211fd46ccbbd000d9897e607aba",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-58516ae0-a294-499d-bbc2-9a5257bd45d5",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "b0721d30e6386d81b56d67aea6639656d3485723e23c2b12c00a71b22146974c",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 215,
+            "height": 233
+          }
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "9773691d0731ac9eb5ebdabcf35b87fabe6d7b355d9c73839b4adc32fd20a17f",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-599e2285-08bc-42e8-b776-38a6785a8c61",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "b0721d30e6386d81b56d67aea6639656d3485723e23c2b12c00a71b22146974c",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-58516ae0-a294-499d-bbc2-9a5257bd45d5",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "b0721d30e6386d81b56d67aea6639656d3485723e23c2b12c00a71b22146974c",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-58516ae0-a294-499d-bbc2-9a5257bd45d5",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewKind": "agent-visual-review",
+      "humanReview": false,
+      "dealerApproval": false,
+      "backgrounds": {
+        "onLight": "#ffffff",
+        "onDark": "#111113",
+        "onAccent": "#c40101"
+      },
+      "wordmarkWidths": [
+        220,
+        240
+      ],
+      "notes": "Exact reviewed Image Gen pair; native masters and generation provenance retained. Compact rasters cropped from the actual left symbol."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-22T23:42:46.338Z",
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#c40101"
+      ],
+      "widths": [
+        32,
+        48,
+        64
+      ],
+      "notes": "Left symbol cropped from reviewed horizontal variants; native rendering must independently qualify."
+    }
+  },
+  "sourceBlockers": [],
+  "artworkProvenance": {
+    "path": "branding/artwork-provenance.json",
+    "sha256": "fd2ca8db14720064ca73e4722ef7cf76613289b7a2de96d8bc83d277423307f9",
+    "manifestSha256": "d25e9cee768a885052ac0a8df220d843c9b9c6f6f120d722705bead1cc99e694",
+    "nativeMasters": [
+      {
+        "path": "branding/native-generated-on-light.png",
+        "sha256": "df0db33a3f63e975da9a59f83373a8672d40821bce034a53128b650a7a9ddb7b"
+      },
+      {
+        "path": "branding/native-generated-on-dark.png",
+        "sha256": "bc200e3661e7f197e8b1a92ce7d0a39db336853906f83d4aaa0b116ed137f4e2"
+      }
+    ]
+  }
+}

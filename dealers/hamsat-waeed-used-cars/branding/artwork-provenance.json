@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "ae-sharjah-hamsat-waeed-used-cars",
+  "slug": null,
+  "artworkDirectory": "ae-sharjah-hamsat-waeed-used-cars",
+  "name": "Hamsat Waeed Used Cars",
+  "renderedName": "Hamsat Waeed Used Cars",
+  "kind": "independent-website-logo-proposal",
+  "dealerApproved": false,
+  "ownerApproved": false,
+  "sourceEvidence": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/hamsat-waeed-used-cars",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/6694-byd-fangchengbao-leopard-5-15-cvt-awd-687-hp-ultra",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "retainedOriginalsUnchanged": true,
+  "variants": {
+    "on-light": {
+      "path": "logo-on-light.png",
+      "sha256": "4c34644e4d7b879d3152a5ff143888b0a7a0d41abfd7c04ddaf409abf4e93cd6",
+      "width": 1024,
+      "height": 310,
+      "transparentFraction": 0.7584740423387096,
+      "master": {
+        "path": "generated-on-light.png",
+        "sha256": "12096e75c1d6020c2ae4761d2f7232d9c896c11b7d2908335f4339f68196f1b1",
+        "width": 2057,
+        "height": 764
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-3f15524d-5618-4a64-92ea-d91593caf5d8",
+        "prompt": "Create one professional horizontal automotive dealership logo proposal for Hamsat Waeed Used Cars. Required exact text, uppercase: HAMSAT WAEED USED CARS. Every word must be present and spelled precisely; use sensible primary name and smaller descriptor hierarchy without tiny lettering. Produce a polished original identity with a clever rounded negative-space monogram, with an open confident silhouette. Initials HW may inform the emblem. Emblem left, full clear name to the right, compact and balanced for a website header. Avoid overused shield and generic car silhouettes; no manufacturer badges. Clean modern lettering with careful kerning and strong legibility. All text is deep charcoal black, appropriate on a white/light header. One restrained red or gold accent may appear inside the emblem only; no pale text. Flat crisp edges, a small number of solid shapes, no chrome, no lighting, no shadow, no texture, no gradient. Genuine transparent alpha background, isolated logo with no background box, no grid, no checkerboard painted into pixels. No slogan, contact info, website, watermark, mockup, photograph, extra concept, or duplicate logo. Deliver exactly one horizontal full logo. This is an independent website identity proposal, not a claim of adopted branding.",
+        "reference": null
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 10,
+          "top": 72,
+          "width": 2043,
+          "height": 619
+        }
+      }
+    },
+    "on-dark": {
+      "path": "logo-on-dark.png",
+      "sha256": "2511df168ae96cf693cf00c2eb48699634386e97e599f726ad2ff57cb65ea478",
+      "width": 1024,
+      "height": 310,
+      "transparentFraction": 0.6625945060483871,
+      "master": {
+        "path": "generated-on-dark.png",
+        "sha256": "4a7e51a275adb318338d1c7a8577462562f0ab8b7efb52b6fc047d9408c620a5",
+        "width": 2057,
+        "height": 764
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-cff95262-72ef-4269-8822-e280cc9fc3a1",
+        "prompt": "Create the matching light-on-dark production variant of the exact supplied logo. Preserve precisely the same emblem, geometry, spelling, word count, typographic hierarchy, proportions, layout and spacing. Required exact text: HAMSAT WAEED USED CARS. Change EVERY letter, including all secondary descriptor words and legal suffixes, to solid white so it is legible over a dark or red website header. Change the charcoal portions of the emblem to white. Retain the small red/gold emblem accent only if it contrasts clearly against a dark header. True transparent alpha background; do not paint a dark rectangle or checkerboard. Flat clean edges, no glows, shadows, bevels, textures, gradients, new artwork, new icon, extra text or mockup. Deliver one horizontal matching logo, fully legible.",
+        "reference": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-3f15524d-5618-4a64-92ea-d91593caf5d8.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 8,
+          "top": 68,
+          "width": 2039,
+          "height": 617
+        }
+      }
+    }
+  },
+  "review": {
+    "status": "artwork-visually-reviewed",
+    "alpha": "all exports measured as genuine transparent nonempty PNGs",
+    "spelling": "English wordmark inspected; source-bound display aliases retained",
+    "compact": "Horizontal logos only. Interactive 32/48/64px gallery preview is provided; separate compact/favicon artwork remains part of dealer-pack preparation.",
+    "sixDesigns": "not-yet-integrated-or-rendered",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "reviewer": "Codex visual inspection",
+    "header": "All 196 paired PNGs inspected at 240x64 on white, #111113 and #c40101",
+    "evidence": "final-review-11.png"
+  },
+  "releaseReady": false,
+  "artworkHolds": [],
+  "artworkReadyForIntegration": true
+}

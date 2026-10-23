@@ -1,0 +1,147 @@
+{
+  "schemaVersion": 1,
+  "dealer": "hamsat-waeed-used-cars",
+  "status": "reviewed-imagegen-proposal",
+  "realLogoFirst": true,
+  "publicSources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/hamsat-waeed-used-cars",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/6694-byd-fangchengbao-leopard-5-15-cvt-awd-687-hp-ultra",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "originals": [],
+  "creationMethod": "imagegen-proposal",
+  "dealerApproved": false,
+  "generatedInputs": {
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "master": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "4c34644e4d7b879d3152a5ff143888b0a7a0d41abfd7c04ddaf409abf4e93cd6",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-3f15524d-5618-4a64-92ea-d91593caf5d8",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark-light.png",
+      "sha256": "78bfd676daeca58fb9a082649d3715da863bf31d141aedd537e07490db358443",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-3f15524d-5618-4a64-92ea-d91593caf5d8",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "4c34644e4d7b879d3152a5ff143888b0a7a0d41abfd7c04ddaf409abf4e93cd6",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 280,
+            "height": 310
+          }
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-dark.png",
+      "sha256": "3cf4156c3d3031d3b1e6040afa3a6abfd5fd1ee410fa1d16bd66c09ca47fa564",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-cff95262-72ef-4269-8822-e280cc9fc3a1",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "2511df168ae96cf693cf00c2eb48699634386e97e599f726ad2ff57cb65ea478",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 280,
+            "height": 310
+          }
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "4c34644e4d7b879d3152a5ff143888b0a7a0d41abfd7c04ddaf409abf4e93cd6",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-3f15524d-5618-4a64-92ea-d91593caf5d8",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "2511df168ae96cf693cf00c2eb48699634386e97e599f726ad2ff57cb65ea478",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-cff95262-72ef-4269-8822-e280cc9fc3a1",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "2511df168ae96cf693cf00c2eb48699634386e97e599f726ad2ff57cb65ea478",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-cff95262-72ef-4269-8822-e280cc9fc3a1",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewKind": "agent-visual-review",
+      "humanReview": false,
+      "dealerApproval": false,
+      "backgrounds": {
+        "onLight": "#ffffff",
+        "onDark": "#111113",
+        "onAccent": "#c40101"
+      },
+      "wordmarkWidths": [
+        220,
+        240
+      ],
+      "notes": "Exact reviewed Image Gen pair; native masters and generation provenance retained. Compact rasters cropped from the actual left symbol."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-22T23:42:46.338Z",
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#c40101"
+      ],
+      "widths": [
+        32,
+        48,
+        64
+      ],
+      "notes": "Left symbol cropped from reviewed horizontal variants; native rendering must independently qualify."
+    }
+  },
+  "sourceBlockers": [],
+  "artworkProvenance": {
+    "path": "branding/artwork-provenance.json",
+    "sha256": "55589712b3c99c1227d672e1589fa4ee3c8ef4f781611b106346e8397580c0cf",
+    "manifestSha256": "d25e9cee768a885052ac0a8df220d843c9b9c6f6f120d722705bead1cc99e694",
+    "nativeMasters": [
+      {
+        "path": "branding/native-generated-on-light.png",
+        "sha256": "12096e75c1d6020c2ae4761d2f7232d9c896c11b7d2908335f4339f68196f1b1"
+      },
+      {
+        "path": "branding/native-generated-on-dark.png",
+        "sha256": "4a7e51a275adb318338d1c7a8577462562f0ab8b7efb52b6fc047d9408c620a5"
+      }
+    ]
+  }
+}

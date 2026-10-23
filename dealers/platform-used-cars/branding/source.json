@@ -1,0 +1,147 @@
+{
+  "schemaVersion": 1,
+  "dealer": "platform-used-cars",
+  "status": "reviewed-imagegen-proposal",
+  "realLogoFirst": true,
+  "publicSources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/platform-used-cars",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/4453-land-rover-defender-hybrid-phev-defender-p400e-with-404-110-hse-p400",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "originals": [],
+  "creationMethod": "imagegen-proposal",
+  "dealerApproved": false,
+  "generatedInputs": {
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "master": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "2154e5d9d81558265b4004b3d65aaf44e03f021954f5e550ce951bec9f5656fc",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-793d94e6-3819-45c4-9ad1-da63f09a6c39",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark-light.png",
+      "sha256": "c554b670a0f2170129b7f05523ff45350603eee0e5643fd00baa05398fb58aa7",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-793d94e6-3819-45c4-9ad1-da63f09a6c39",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "2154e5d9d81558265b4004b3d65aaf44e03f021954f5e550ce951bec9f5656fc",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 230,
+            "height": 255
+          }
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-dark.png",
+      "sha256": "94cab995b6d1c4768e4b832f058832284f05ce3e4263ea8f6de0d136b95cbd5a",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-ca908062-edf5-4c46-a04d-66cf89688ff2",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "d96c914c86eedd7282c75e4ce885ae4e7a42894be33e45f2ec2b0eeb7c6a1875",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 230,
+            "height": 254
+          }
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "2154e5d9d81558265b4004b3d65aaf44e03f021954f5e550ce951bec9f5656fc",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-793d94e6-3819-45c4-9ad1-da63f09a6c39",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "d96c914c86eedd7282c75e4ce885ae4e7a42894be33e45f2ec2b0eeb7c6a1875",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-ca908062-edf5-4c46-a04d-66cf89688ff2",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "d96c914c86eedd7282c75e4ce885ae4e7a42894be33e45f2ec2b0eeb7c6a1875",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-ca908062-edf5-4c46-a04d-66cf89688ff2",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewKind": "agent-visual-review",
+      "humanReview": false,
+      "dealerApproval": false,
+      "backgrounds": {
+        "onLight": "#ffffff",
+        "onDark": "#111113",
+        "onAccent": "#c40101"
+      },
+      "wordmarkWidths": [
+        220,
+        240
+      ],
+      "notes": "Exact reviewed Image Gen pair; native masters and generation provenance retained. Compact rasters cropped from the actual left symbol."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-22T23:42:46.338Z",
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#c40101"
+      ],
+      "widths": [
+        32,
+        48,
+        64
+      ],
+      "notes": "Left symbol cropped from reviewed horizontal variants; native rendering must independently qualify."
+    }
+  },
+  "sourceBlockers": [],
+  "artworkProvenance": {
+    "path": "branding/artwork-provenance.json",
+    "sha256": "a9bb5ec368296b27840684fa44f139b787095182e121125719a655fd6e721088",
+    "manifestSha256": "d25e9cee768a885052ac0a8df220d843c9b9c6f6f120d722705bead1cc99e694",
+    "nativeMasters": [
+      {
+        "path": "branding/native-generated-on-light.png",
+        "sha256": "85f58990e2b698dc6e58a4e89af2cb1e1db07dea4f36018b0a49fb259315fce3"
+      },
+      {
+        "path": "branding/native-generated-on-dark.png",
+        "sha256": "41eff8269921ef318d9ac90f6588a17c6f9e644777e9b45ce1a46c1578879716"
+      }
+    ]
+  }
+}

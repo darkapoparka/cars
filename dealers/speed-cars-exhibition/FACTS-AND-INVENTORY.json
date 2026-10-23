@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "dealer": "speed-cars-exhibition",
+  "businessFacts": "business-facts.json",
+  "stock": "stock.json",
+  "inventoryKind": "illustrative-not-dealer-stock",
+  "inventoryNotice": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
+  "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+  "sources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/speed-cars-exhb",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/13193-soueast-s06-15-amt-156-hp-luxury",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    }
+  ]
+}

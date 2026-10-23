@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "dealer": "armani-naixa-global",
+  "reviewed": true,
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "ea01336425e88de44828efbb972bee79de0ff3b6d0f5a963cb7dc09fe9095706",
+      "sourceSha256": "589bcf2ce9bb817b7e5b98e56d2d807f76bb4f6bc2a581dee1c422f266f9703f"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "958aee87b74a61f03a2a157ad0ee944cb34d4faa2a8d2f969f9d8dded80f1180",
+      "sourceSha256": "122c72a8f3da9f3c1bab183a6adec34bc71dfd359a463265dd1efd0d7fffb8cf"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "958aee87b74a61f03a2a157ad0ee944cb34d4faa2a8d2f969f9d8dded80f1180",
+      "sourceSha256": "122c72a8f3da9f3c1bab183a6adec34bc71dfd359a463265dd1efd0d7fffb8cf"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "589bcf2ce9bb817b7e5b98e56d2d807f76bb4f6bc2a581dee1c422f266f9703f",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-0f14c5d0-29fc-4418-96c8-d4ee5bb991e3",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "162b5ba11cd99e5e4f86bdf0e8549e5b16ecfa0ed7eba0a08b4a0de9cd5c6da1",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-0f14c5d0-29fc-4418-96c8-d4ee5bb991e3",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "589bcf2ce9bb817b7e5b98e56d2d807f76bb4f6bc2a581dee1c422f266f9703f",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 335,
+          "height": 232
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "1d9e594c9e3c573eb39436a60d519bdded9d8965447a32dbca9638803024af19"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "589bcf2ce9bb817b7e5b98e56d2d807f76bb4f6bc2a581dee1c422f266f9703f",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-0f14c5d0-29fc-4418-96c8-d4ee5bb991e3",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/armani-naixa-global/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "122c72a8f3da9f3c1bab183a6adec34bc71dfd359a463265dd1efd0d7fffb8cf",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-9838945c-0253-4991-a05f-9f3de001aac9",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/armani-naixa-global/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "122c72a8f3da9f3c1bab183a6adec34bc71dfd359a463265dd1efd0d7fffb8cf",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-9838945c-0253-4991-a05f-9f3de001aac9",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/armani-naixa-global/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "589bcf2ce9bb817b7e5b98e56d2d807f76bb4f6bc2a581dee1c422f266f9703f",
+      "sha256": "589bcf2ce9bb817b7e5b98e56d2d807f76bb4f6bc2a581dee1c422f266f9703f",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 232
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "122c72a8f3da9f3c1bab183a6adec34bc71dfd359a463265dd1efd0d7fffb8cf",
+      "sha256": "122c72a8f3da9f3c1bab183a6adec34bc71dfd359a463265dd1efd0d7fffb8cf",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 233
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "122c72a8f3da9f3c1bab183a6adec34bc71dfd359a463265dd1efd0d7fffb8cf",
+      "sha256": "122c72a8f3da9f3c1bab183a6adec34bc71dfd359a463265dd1efd0d7fffb8cf",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 233
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "27392a160946f04a520273e5c79da77f2515544878d253dfca5cc2ec250bc582",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-0f14c5d0-29fc-4418-96c8-d4ee5bb991e3",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "589bcf2ce9bb817b7e5b98e56d2d807f76bb4f6bc2a581dee1c422f266f9703f",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 335,
+            "height": 232
+          }
+        }
+      },
+      "sourceReference": "dealers/armani-naixa-global/branding/generated-mark-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "4dda9817a67ed8a48351188205efbcd896b105f57e16742d517937926bdc0fa2",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-9838945c-0253-4991-a05f-9f3de001aac9",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "122c72a8f3da9f3c1bab183a6adec34bc71dfd359a463265dd1efd0d7fffb8cf",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 335,
+            "height": 233
+          }
+        }
+      },
+      "sourceReference": "dealers/armani-naixa-global/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "162b5ba11cd99e5e4f86bdf0e8549e5b16ecfa0ed7eba0a08b4a0de9cd5c6da1",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-0f14c5d0-29fc-4418-96c8-d4ee5bb991e3",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "589bcf2ce9bb817b7e5b98e56d2d807f76bb4f6bc2a581dee1c422f266f9703f",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 335,
+            "height": 232
+          }
+        }
+      },
+      "sourceReference": "dealers/armani-naixa-global/branding/generated-mark-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "1d9e594c9e3c573eb39436a60d519bdded9d8965447a32dbca9638803024af19",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-0f14c5d0-29fc-4418-96c8-d4ee5bb991e3",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "589bcf2ce9bb817b7e5b98e56d2d807f76bb4f6bc2a581dee1c422f266f9703f",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 335,
+            "height": 232
+          }
+        }
+      },
+      "sourceReference": "dealers/armani-naixa-global/branding/generated-mark-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "f8f1ce83fab96fc7cdb9c6d2f88a0a596e756d00525ee02d8fb520d2725197e6",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-9838945c-0253-4991-a05f-9f3de001aac9",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "122c72a8f3da9f3c1bab183a6adec34bc71dfd359a463265dd1efd0d7fffb8cf",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 335,
+          "height": 233
+        }
+      }
+    }
+  }
+}

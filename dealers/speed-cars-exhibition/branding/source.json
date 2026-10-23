@@ -1,0 +1,147 @@
+{
+  "schemaVersion": 1,
+  "dealer": "speed-cars-exhibition",
+  "status": "reviewed-imagegen-proposal",
+  "realLogoFirst": true,
+  "publicSources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/speed-cars-exhb",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/13193-soueast-s06-15-amt-156-hp-luxury",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "originals": [],
+  "creationMethod": "imagegen-proposal",
+  "dealerApproved": false,
+  "generatedInputs": {
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "master": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "9974b998750d7e8eb94943bf9e595a415145966002476a34ba223bf5dee590a1",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-d0334921-7969-4857-a3e1-ed34f59d2ec6",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark-light.png",
+      "sha256": "7a69cbce49b02e9c9c5a68468ee619aa61f518c013a2565ea28eee148cdaff02",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-d0334921-7969-4857-a3e1-ed34f59d2ec6",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "9974b998750d7e8eb94943bf9e595a415145966002476a34ba223bf5dee590a1",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 285,
+            "height": 215
+          }
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-dark.png",
+      "sha256": "4e2cec913e1cc5e93339fc7708850e0d48bc56088d8b91c2ad5af370fcda4c45",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-4fd98ecb-2cbb-4c9c-a4b0-10ca5f1e5986",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "11a889fabf9ebff1e9a6b455274137c9d98709b2cc96a03813375815486b8e19",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 285,
+            "height": 214
+          }
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "9974b998750d7e8eb94943bf9e595a415145966002476a34ba223bf5dee590a1",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-d0334921-7969-4857-a3e1-ed34f59d2ec6",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "11a889fabf9ebff1e9a6b455274137c9d98709b2cc96a03813375815486b8e19",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-4fd98ecb-2cbb-4c9c-a4b0-10ca5f1e5986",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "11a889fabf9ebff1e9a6b455274137c9d98709b2cc96a03813375815486b8e19",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-4fd98ecb-2cbb-4c9c-a4b0-10ca5f1e5986",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewKind": "agent-visual-review",
+      "humanReview": false,
+      "dealerApproval": false,
+      "backgrounds": {
+        "onLight": "#ffffff",
+        "onDark": "#111113",
+        "onAccent": "#c40101"
+      },
+      "wordmarkWidths": [
+        220,
+        240
+      ],
+      "notes": "Exact reviewed Image Gen pair; native masters and generation provenance retained. Compact rasters cropped from the actual left symbol."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-22T23:42:46.338Z",
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#c40101"
+      ],
+      "widths": [
+        32,
+        48,
+        64
+      ],
+      "notes": "Left symbol cropped from reviewed horizontal variants; native rendering must independently qualify."
+    }
+  },
+  "sourceBlockers": [],
+  "artworkProvenance": {
+    "path": "branding/artwork-provenance.json",
+    "sha256": "658b9a7623e7801c5c06dab8fccd9202ce22692b44c28c8969e8c3ee28b4d811",
+    "manifestSha256": "d25e9cee768a885052ac0a8df220d843c9b9c6f6f120d722705bead1cc99e694",
+    "nativeMasters": [
+      {
+        "path": "branding/native-generated-on-light.png",
+        "sha256": "bff5419ed3a0c8cb1285d28600cf01222fee61997ac207b58443ff3cdf4cda0f"
+      },
+      {
+        "path": "branding/native-generated-on-dark.png",
+        "sha256": "12a6acdab65e62fcaaeb5d9a11ee2097f45ad7b3ad562c132197fb4eacc472e6"
+      }
+    ]
+  }
+}
