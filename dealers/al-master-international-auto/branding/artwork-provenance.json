@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "ae-abu-dhabi-al-master-international-auto",
+  "slug": "al-master-international-auto",
+  "artworkDirectory": "al-master-international-auto",
+  "name": "Al Master International Auto",
+  "renderedName": "Al Master International Auto",
+  "kind": "independent-website-logo-proposal",
+  "dealerApproved": false,
+  "ownerApproved": false,
+  "sourceEvidence": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/al-master-international-auto",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/5395-toyota-land-cruiser-prado-40-at-4wd-249-hp-txl",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "retainedOriginalsUnchanged": true,
+  "variants": {
+    "on-light": {
+      "path": "logo-on-light.png",
+      "sha256": "f52ed0d02e42469fd0c8e97470b9cf858385853c7b4a0594664d74ec7baf4a10",
+      "width": 1024,
+      "height": 215,
+      "transparentFraction": 0.6679278706395348,
+      "master": {
+        "path": "generated-on-light.png",
+        "sha256": "307a164193c7d9a0c2e49c2cd6306c340c83b674ff885fac10ac2eb939cccf56",
+        "width": 2170,
+        "height": 725
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-9589ec44-bb94-43e9-b9c2-7bd52adb8a8e",
+        "prompt": "Correct the light-background color treatment of the supplied logo while preserving its recognizable emblem, typeface, exact geometry, word spacing and layout. Exact required wording: AL MASTER INTERNATIONAL AUTO. EVERY letter must be opaque deep charcoal black, including every secondary word, colored AL prefix, descriptor and legal suffix. Do not leave any gold, blue, red or white LETTERS. A small red/gold/blue accent is permitted only INSIDE the emblem, never in any wordmark lettering. Genuine transparent alpha, no background, no glow, shadow, gradient, texture, checkerboard, frame, mockup, watermark, extra concepts or altered spelling. One crisp horizontal production logo only.",
+        "reference": "L:/CODEX/cars/leads/branding/pending-20261023/al-master-international-auto/logo-on-light.png",
+        "referenceSnapshot": {
+          "path": "correction-input-on-light.png",
+          "sha256": "b1a3b1a0e0a648bd31a263689352f426ceb8faaa13061db7ef8755123337c7e0",
+          "sameBytesAsToolInput": true,
+          "nativeOriginal": {
+            "path": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-9782e3c9-360a-494b-86a3-913b6e1e4a01.png",
+            "sha256": "986973d026529a0b5cd94c813781e383421afbe89bee454151da86a498f16985"
+          },
+          "note": "Exact input snapshot retained after correction. Re-export from unchanged native original matches recorded pre-correction PNG SHA256."
+        },
+        "referencePathMeaning": "Original tool input working filename, later overwritten by corrected export. referenceSnapshot retains the exact input bytes."
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 0,
+          "top": 133,
+          "width": 2170,
+          "height": 456
+        }
+      }
+    },
+    "on-dark": {
+      "path": "logo-on-dark.png",
+      "sha256": "4957c3431e2d8a911012cfad769bebae65d2be0e1b7d177e82913109df19a288",
+      "width": 1024,
+      "height": 215,
+      "transparentFraction": 0.5200899345930232,
+      "master": {
+        "path": "generated-on-dark.png",
+        "sha256": "110a94bd2d9b6e60f37634aae3100e8154f9c6df86e505c4ca8ce801c3d08ff2",
+        "width": 2170,
+        "height": 725
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-26571fbd-d28f-4b14-b6de-4e81b2c645f9",
+        "prompt": "Create the matching light-on-dark production variant of the exact supplied logo. Preserve precisely the same emblem, geometry, spelling, word count, typographic hierarchy, proportions, layout and spacing. Required exact text: AL MASTER INTERNATIONAL AUTO. Change EVERY letter, including all secondary descriptor words and legal suffixes, to solid white so it is legible over a dark or red website header. Change the charcoal portions of the emblem to white. Retain the small red/gold emblem accent only if it contrasts clearly against a dark header. True transparent alpha background; do not paint a dark rectangle or checkerboard. Flat clean edges, no glows, shadows, bevels, textures, gradients, new artwork, new icon, extra text or mockup. Deliver one horizontal matching logo, fully legible.",
+        "reference": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-9589ec44-bb94-43e9-b9c2-7bd52adb8a8e.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 0,
+          "top": 132,
+          "width": 2170,
+          "height": 456
+        }
+      }
+    }
+  },
+  "review": {
+    "status": "artwork-visually-reviewed",
+    "alpha": "all exports measured as genuine transparent nonempty PNGs",
+    "spelling": "English wordmark inspected; source-bound display aliases retained",
+    "compact": "Horizontal logos only. Interactive 32/48/64px gallery preview is provided; separate compact/favicon artwork remains part of dealer-pack preparation.",
+    "sixDesigns": "not-yet-integrated-or-rendered",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "reviewer": "Codex visual inspection",
+    "header": "All 196 paired PNGs inspected at 240x64 on white, #111113 and #c40101",
+    "evidence": "final-review-02.png",
+    "correctionEvidence": "final-corrections-review.png"
+  },
+  "releaseReady": false,
+  "artworkHolds": [],
+  "artworkReadyForIntegration": true
+}

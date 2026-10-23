@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-lulu-cars-showroom",
+  "reviewed": true,
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "6358ce0e13f1015d227f307bde078a1ebb1c7379a3099cf34d5910a6c1075fe0",
+      "sourceSha256": "1b5d3de9deb7e84db739f516c950284ee4277f2056b99057917923c60fbc2cc3"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "0a9fcea0c2c59ba002c356b1005e9cda90ba4e722aba60e2ed814d472c01cec1",
+      "sourceSha256": "dab5e18506b7fc210782e77793bd941503cf6a4c5cfc26e7b39799a25a61125e"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "0a9fcea0c2c59ba002c356b1005e9cda90ba4e722aba60e2ed814d472c01cec1",
+      "sourceSha256": "dab5e18506b7fc210782e77793bd941503cf6a4c5cfc26e7b39799a25a61125e"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "1b5d3de9deb7e84db739f516c950284ee4277f2056b99057917923c60fbc2cc3",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-190b2b73-0588-4755-a8e5-f0a3049697dd",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "139049613f77a1c26d268ef90197a1255d137170ffe74b053047841b4dc1f78d",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-190b2b73-0588-4755-a8e5-f0a3049697dd",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "1b5d3de9deb7e84db739f516c950284ee4277f2056b99057917923c60fbc2cc3",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 365,
+          "height": 216
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "35f82d3e66fbf7699726ea661237d7d02a1d292c82b3a5db7e031826f7949533"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "1b5d3de9deb7e84db739f516c950284ee4277f2056b99057917923c60fbc2cc3",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-190b2b73-0588-4755-a8e5-f0a3049697dd",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-lulu-cars-showroom/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "dab5e18506b7fc210782e77793bd941503cf6a4c5cfc26e7b39799a25a61125e",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-8bd49d21-ee6d-4e7f-b392-7d59ed4616a6",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-lulu-cars-showroom/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "dab5e18506b7fc210782e77793bd941503cf6a4c5cfc26e7b39799a25a61125e",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-8bd49d21-ee6d-4e7f-b392-7d59ed4616a6",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-lulu-cars-showroom/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "1b5d3de9deb7e84db739f516c950284ee4277f2056b99057917923c60fbc2cc3",
+      "sha256": "1b5d3de9deb7e84db739f516c950284ee4277f2056b99057917923c60fbc2cc3",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 216
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "dab5e18506b7fc210782e77793bd941503cf6a4c5cfc26e7b39799a25a61125e",
+      "sha256": "dab5e18506b7fc210782e77793bd941503cf6a4c5cfc26e7b39799a25a61125e",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 217
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "dab5e18506b7fc210782e77793bd941503cf6a4c5cfc26e7b39799a25a61125e",
+      "sha256": "dab5e18506b7fc210782e77793bd941503cf6a4c5cfc26e7b39799a25a61125e",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 217
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "9eae8b2d62b9952507ae34faf02082e652161e5fde0c5f862f593742f0465896",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-190b2b73-0588-4755-a8e5-f0a3049697dd",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "1b5d3de9deb7e84db739f516c950284ee4277f2056b99057917923c60fbc2cc3",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 365,
+            "height": 216
+          }
+        }
+      },
+      "sourceReference": "dealers/al-lulu-cars-showroom/branding/generated-mark-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "db372de8faefcced08432ad7017799983f747f8aa6885790c753af381ec0e0ca",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-8bd49d21-ee6d-4e7f-b392-7d59ed4616a6",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "dab5e18506b7fc210782e77793bd941503cf6a4c5cfc26e7b39799a25a61125e",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 365,
+            "height": 217
+          }
+        }
+      },
+      "sourceReference": "dealers/al-lulu-cars-showroom/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "139049613f77a1c26d268ef90197a1255d137170ffe74b053047841b4dc1f78d",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-190b2b73-0588-4755-a8e5-f0a3049697dd",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "1b5d3de9deb7e84db739f516c950284ee4277f2056b99057917923c60fbc2cc3",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 365,
+            "height": 216
+          }
+        }
+      },
+      "sourceReference": "dealers/al-lulu-cars-showroom/branding/generated-mark-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "35f82d3e66fbf7699726ea661237d7d02a1d292c82b3a5db7e031826f7949533",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-190b2b73-0588-4755-a8e5-f0a3049697dd",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "1b5d3de9deb7e84db739f516c950284ee4277f2056b99057917923c60fbc2cc3",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 365,
+            "height": 216
+          }
+        }
+      },
+      "sourceReference": "dealers/al-lulu-cars-showroom/branding/generated-mark-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "9405e899f28e7e3ba11869d02b8eeedbc17c951c147d72a916a8f98bb4bf8421",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-8bd49d21-ee6d-4e7f-b392-7d59ed4616a6",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "dab5e18506b7fc210782e77793bd941503cf6a4c5cfc26e7b39799a25a61125e",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 365,
+          "height": 217
+        }
+      }
+    }
+  }
+}

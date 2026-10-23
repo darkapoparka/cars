@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Al Fateh Used Automobiles",
     "publicOrigin": "https://al-fateh-used-automobiles.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "fb2c106f989a9766140c5557ce99464644ba6a3ddefb7167387e2056fb92d111",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "513f6e85810ab0407125deb2bea78120b1a6b9fe27c01a71ba590ea9f5a76c82"
+    }
   }
 }

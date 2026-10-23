@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "ae-abu-dhabi-al-fateh-used-automobiles",
+  "slug": "al-fateh-used-automobiles",
+  "artworkDirectory": "al-fateh-used-automobiles",
+  "name": "Al Fateh Used Automobiles",
+  "renderedName": "Al Fateh Used Automobiles",
+  "kind": "independent-website-logo-proposal",
+  "dealerApproved": false,
+  "ownerApproved": false,
+  "sourceEvidence": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/al-fateh-used-automobiles",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/5145-toyota-land-cruiser-35-at-4wd-415-hp-gxr",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "retainedOriginalsUnchanged": true,
+  "variants": {
+    "on-light": {
+      "path": "logo-on-light.png",
+      "sha256": "fb2c106f989a9766140c5557ce99464644ba6a3ddefb7167387e2056fb92d111",
+      "width": 1024,
+      "height": 231,
+      "transparentFraction": 0.6277225378787878,
+      "master": {
+        "path": "generated-on-light.png",
+        "sha256": "d9274128489c79f4478182b71ec4f7b46a45bb4591401ed882d77f2ee59b89fa",
+        "width": 1983,
+        "height": 793
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-d2459514-5972-4ecc-b851-9b0d0bf65635",
+        "prompt": "Use case: logo-brand. Create ONE agency-quality horizontal logo for an independent car-dealer website proposal. Exact text: \"AL FATEH USED AUTOMOBILES\". Use a simple abstract folded-path emblem subtly related to the name, with broad flat shapes, exceptional negative space and a distinct silhouette. The business name is the core identity: keep all words spelled correctly; use a clear main line and, when useful, a readable second line for the descriptor, not a tiny slogan. Place the original simple compact symbol at left, complete exact wordmark at right. Dark/charcoal primary ink for WHITE website headers, optional restrained single-color accent only if it strengthens this identity. Crisp flat vector-like edges, clear geometry, professional credible dealership branding and excellent optical letter spacing. No car manufacturer's emblem, shield cliché, generic car silhouette, photorealistic vehicle, chrome, gradients, shadows, texture, background panel, checkerboard, mockup, watermark, unrelated decoration or invented tagline. True alpha-transparent background. A wide landscape logo tightly and comfortably framed with approximately 5% transparent margins, not a tiny logo on a poster. Distinctive enough to stand apart from other dealers, and readable at 240px wide. This is a generated independent proposal, not a claim of official adoption. Only one logo.",
+        "reference": null
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 1,
+          "top": 173,
+          "width": 1964,
+          "height": 444
+        }
+      }
+    },
+    "on-dark": {
+      "path": "logo-on-dark.png",
+      "sha256": "50dca41dc55564137dde9502030c52b5614d689e98fdb3924f7e8df0e263691d",
+      "width": 1024,
+      "height": 231,
+      "transparentFraction": 0.5047644412878788,
+      "master": {
+        "path": "generated-on-dark.png",
+        "sha256": "01d48e23922f726479e2f5d7618c2d4627d3d7491bd837187044d307f8824198",
+        "width": 1983,
+        "height": 793
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-a0c4b6e6-b4f5-45e8-9818-8efd967f78ea",
+        "prompt": "Create the matching light-ink variant for DARK website headers of the supplied \"AL FATEH USED AUTOMOBILES\" logo. Preserve the exact complete name, spelling, logo symbol, overall silhouette, arrangement, relative scale, typography and letter spacing. Change the dark primary foreground ink to clean pure white; preserve a restrained existing color accent only when it stays visible against a deep dark or red header. Genuine alpha transparency, open counters and smooth clean edges. No background block, no new logo, no new lettering, no added slogan, texture, distress, shadow, watermark or checkerboard. This must be the SAME identity, simply its readable on-dark counterpart. Only one transparent horizontal logo.",
+        "reference": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-d2459514-5972-4ecc-b851-9b0d0bf65635.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 2,
+          "top": 173,
+          "width": 1965,
+          "height": 444
+        }
+      }
+    }
+  },
+  "review": {
+    "status": "artwork-visually-reviewed",
+    "alpha": "all exports measured as genuine transparent nonempty PNGs",
+    "spelling": "English wordmark inspected; source-bound display aliases retained",
+    "compact": "Horizontal logos only. Interactive 32/48/64px gallery preview is provided; separate compact/favicon artwork remains part of dealer-pack preparation.",
+    "sixDesigns": "not-yet-integrated-or-rendered",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "reviewer": "Codex visual inspection",
+    "header": "All 196 paired PNGs inspected at 240x64 on white, #111113 and #c40101",
+    "evidence": "final-review-02.png"
+  },
+  "releaseReady": false,
+  "artworkHolds": [],
+  "artworkReadyForIntegration": true
+}

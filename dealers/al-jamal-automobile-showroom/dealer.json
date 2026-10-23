@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Al Jamal Automobile Showroom",
     "publicOrigin": "https://al-jamal-automobile-showroom.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "9cc532322b17dff08e49abd71f401473547250622936b363a08a7ff27a561dd5",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "8d1d7b6147474327f4e9dc540d12b43fb2741e10315f8a4cb653e465aa3d70da"
+    }
   }
 }

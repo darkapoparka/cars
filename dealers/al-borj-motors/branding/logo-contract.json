@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-borj-motors",
+  "reviewed": true,
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "54605e6bb2cc735b2513bcfd4bb0c34f22431d46bb384f6272b1b68aea69a78a",
+      "sourceSha256": "e7f9ca24eede94bc5c61b4cef1f6b6da2d9bafdffb35d9044fddfad075c0a0bd"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "eec9cc5efd776a2fd0761264ee826c888d7800442f7c4cdfa8f606fd2c429c3c",
+      "sourceSha256": "804d9303e1c24098bcd417405420b3304c5bf26d0cc9e59a9e7be822e30bef28"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "eec9cc5efd776a2fd0761264ee826c888d7800442f7c4cdfa8f606fd2c429c3c",
+      "sourceSha256": "804d9303e1c24098bcd417405420b3304c5bf26d0cc9e59a9e7be822e30bef28"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "e7f9ca24eede94bc5c61b4cef1f6b6da2d9bafdffb35d9044fddfad075c0a0bd",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-8262c48e-03c4-4cf0-90ba-aec8b6105786",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "8b2185f38f902bffbbab633aaf74589bcfb675d38b887057efdfb7bd2f13158b",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-8262c48e-03c4-4cf0-90ba-aec8b6105786",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "e7f9ca24eede94bc5c61b4cef1f6b6da2d9bafdffb35d9044fddfad075c0a0bd",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 390,
+          "height": 213
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "6f104ca137f182b787ed948631b6eac3237ab2d89482bcaad7dcdf50f75928bf"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "e7f9ca24eede94bc5c61b4cef1f6b6da2d9bafdffb35d9044fddfad075c0a0bd",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-8262c48e-03c4-4cf0-90ba-aec8b6105786",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-borj-motors/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "804d9303e1c24098bcd417405420b3304c5bf26d0cc9e59a9e7be822e30bef28",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-eeafcb12-7f20-4bf3-ada5-cfb591b8ab01",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-borj-motors/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "804d9303e1c24098bcd417405420b3304c5bf26d0cc9e59a9e7be822e30bef28",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-eeafcb12-7f20-4bf3-ada5-cfb591b8ab01",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-borj-motors/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "e7f9ca24eede94bc5c61b4cef1f6b6da2d9bafdffb35d9044fddfad075c0a0bd",
+      "sha256": "e7f9ca24eede94bc5c61b4cef1f6b6da2d9bafdffb35d9044fddfad075c0a0bd",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 213
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "804d9303e1c24098bcd417405420b3304c5bf26d0cc9e59a9e7be822e30bef28",
+      "sha256": "804d9303e1c24098bcd417405420b3304c5bf26d0cc9e59a9e7be822e30bef28",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 213
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "804d9303e1c24098bcd417405420b3304c5bf26d0cc9e59a9e7be822e30bef28",
+      "sha256": "804d9303e1c24098bcd417405420b3304c5bf26d0cc9e59a9e7be822e30bef28",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 213
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "9f733b9c145d3b0ae02517d70ed1bfb0e3bd9ecdd8031f6cf9d0a6424b1b497e",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-8262c48e-03c4-4cf0-90ba-aec8b6105786",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "e7f9ca24eede94bc5c61b4cef1f6b6da2d9bafdffb35d9044fddfad075c0a0bd",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 390,
+            "height": 213
+          }
+        }
+      },
+      "sourceReference": "dealers/al-borj-motors/branding/generated-mark-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "62382751b2f897aebe1702b5e26da14bf34a37bbacd8b1636aa094820a7da701",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-eeafcb12-7f20-4bf3-ada5-cfb591b8ab01",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "804d9303e1c24098bcd417405420b3304c5bf26d0cc9e59a9e7be822e30bef28",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 390,
+            "height": 213
+          }
+        }
+      },
+      "sourceReference": "dealers/al-borj-motors/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "8b2185f38f902bffbbab633aaf74589bcfb675d38b887057efdfb7bd2f13158b",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-8262c48e-03c4-4cf0-90ba-aec8b6105786",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "e7f9ca24eede94bc5c61b4cef1f6b6da2d9bafdffb35d9044fddfad075c0a0bd",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 390,
+            "height": 213
+          }
+        }
+      },
+      "sourceReference": "dealers/al-borj-motors/branding/generated-mark-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "6f104ca137f182b787ed948631b6eac3237ab2d89482bcaad7dcdf50f75928bf",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-8262c48e-03c4-4cf0-90ba-aec8b6105786",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "e7f9ca24eede94bc5c61b4cef1f6b6da2d9bafdffb35d9044fddfad075c0a0bd",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 390,
+            "height": 213
+          }
+        }
+      },
+      "sourceReference": "dealers/al-borj-motors/branding/generated-mark-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "f6090ba858626a74e1d24d27d167d305721573056872fcb858497644e4833192",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-eeafcb12-7f20-4bf3-ada5-cfb591b8ab01",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "804d9303e1c24098bcd417405420b3304c5bf26d0cc9e59a9e7be822e30bef28",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 390,
+          "height": 213
+        }
+      }
+    }
+  }
+}

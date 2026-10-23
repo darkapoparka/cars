@@ -33,7 +33,7 @@
     },
     "mark": {
       "path": "branding/generated-mark-light.png",
-      "sha256": "9e07dfb2e5d33a9ea96f13afaad8cc7cb12d2bd0d522e2fd6b5e8550e3dcce16",
+      "sha256": "1a63816e40791fb2f5e4a7ac6853761d8dca6d53b33f8135cb7ea30011734f4b",
       "generation": {
         "tool": "image_gen.imagegen",
         "generationId": "exec-2f0cf711-0eec-42e6-87ef-79a0831b05c1",
@@ -41,19 +41,19 @@
         "derivedFrom": {
           "path": "branding/generated-on-light.png",
           "sha256": "9143a2ca6f23b05f40e1c392342e7912de15cd1c4cd194ec5e31265da7bf64fa",
-          "operation": "crop-left-symbol",
+          "operation": "crop-first-digit-compact-symbol",
           "crop": {
-            "left": 0,
-            "top": 0,
-            "width": 430,
-            "height": 182
+            "left": 15,
+            "top": 20,
+            "width": 165,
+            "height": 145
           }
         }
       }
     },
     "markOnDark": {
       "path": "branding/generated-mark-dark.png",
-      "sha256": "1f3f4ebb956008a14ab2a924a8bb6e5ff7826ca7bed9236476490c1bf71959b8",
+      "sha256": "08d089d9fbd8a008376ca482f51fdc7dda5c099d6d96516e334ea6fdc1adfc3e",
       "generation": {
         "tool": "image_gen.imagegen",
         "generationId": "exec-989b403b-65e7-4871-b903-a98b34b25df6",
@@ -61,12 +61,12 @@
         "derivedFrom": {
           "path": "branding/generated-on-dark.png",
           "sha256": "e50203e45309e37b597e889f7788de78bb9ea8b15a38053648bdc082b0407b9d",
-          "operation": "crop-left-symbol",
+          "operation": "crop-first-digit-compact-symbol",
           "crop": {
-            "left": 0,
-            "top": 0,
-            "width": 430,
-            "height": 183
+            "left": 15,
+            "top": 20,
+            "width": 165,
+            "height": 145
           }
         }
       }
@@ -129,7 +129,7 @@
         48,
         64
       ],
-      "notes": "Left symbol cropped from reviewed horizontal variants; native rendering must independently qualify."
+      "notes": "Square-like first 3 digit extracted from exact reviewed 322 artwork for favicon and compact consumers; horizontal 322 pair remains original. Cropped symbol still requires independent 32/48/64px native QA."
     }
   },
   "sourceBlockers": [],

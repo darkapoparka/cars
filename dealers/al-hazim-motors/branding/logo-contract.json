@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-hazim-motors",
+  "reviewed": true,
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "4531d7d7ed62bf70efa7431447c67f6e2c28e6552023b2eef3461c71d624c9fc",
+      "sourceSha256": "384cbd63f41ad9242d57e025a3992a2c2811c2f6239bdaa9843a18710214a841"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "c58a2143d2b8770d22f9cc781ea33cd482a54a55808fe87e244017cfb6732c7c",
+      "sourceSha256": "a0d9bbcbfd556659bb15b015de4b5b50619e49481b21b4a0dc7ad5c96369615b"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "c58a2143d2b8770d22f9cc781ea33cd482a54a55808fe87e244017cfb6732c7c",
+      "sourceSha256": "a0d9bbcbfd556659bb15b015de4b5b50619e49481b21b4a0dc7ad5c96369615b"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "384cbd63f41ad9242d57e025a3992a2c2811c2f6239bdaa9843a18710214a841",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-0e5aaf30-2b9d-4103-88ab-ac738a772341",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "6452b61a27eda03e606de1073513a8b8378e03b399e3f7d5f8c76ffc79aef737",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-0e5aaf30-2b9d-4103-88ab-ac738a772341",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "384cbd63f41ad9242d57e025a3992a2c2811c2f6239bdaa9843a18710214a841",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 336,
+          "height": 224
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "e61518c19d654c8b231ba2a2cb21e1328cb4204ba950aa8febffb818bbe0f3d8"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "384cbd63f41ad9242d57e025a3992a2c2811c2f6239bdaa9843a18710214a841",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-0e5aaf30-2b9d-4103-88ab-ac738a772341",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-hazim-motors/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "a0d9bbcbfd556659bb15b015de4b5b50619e49481b21b4a0dc7ad5c96369615b",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-9c0710cc-c095-42c9-8155-ec1bf7772b27",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-hazim-motors/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "a0d9bbcbfd556659bb15b015de4b5b50619e49481b21b4a0dc7ad5c96369615b",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-9c0710cc-c095-42c9-8155-ec1bf7772b27",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-hazim-motors/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "384cbd63f41ad9242d57e025a3992a2c2811c2f6239bdaa9843a18710214a841",
+      "sha256": "384cbd63f41ad9242d57e025a3992a2c2811c2f6239bdaa9843a18710214a841",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 224
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "a0d9bbcbfd556659bb15b015de4b5b50619e49481b21b4a0dc7ad5c96369615b",
+      "sha256": "a0d9bbcbfd556659bb15b015de4b5b50619e49481b21b4a0dc7ad5c96369615b",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 224
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "a0d9bbcbfd556659bb15b015de4b5b50619e49481b21b4a0dc7ad5c96369615b",
+      "sha256": "a0d9bbcbfd556659bb15b015de4b5b50619e49481b21b4a0dc7ad5c96369615b",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 224
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "02c61a18bf80fcf8410bc97092f44ec2f40b4ceec3e42d7fd76db64d41c423d1",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-0e5aaf30-2b9d-4103-88ab-ac738a772341",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "384cbd63f41ad9242d57e025a3992a2c2811c2f6239bdaa9843a18710214a841",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 336,
+            "height": 224
+          }
+        }
+      },
+      "sourceReference": "dealers/al-hazim-motors/branding/generated-mark-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "fcf4b4b0d8287b68a188fed634d793a257d59c9109229e7a5aab049388e88b5a",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-9c0710cc-c095-42c9-8155-ec1bf7772b27",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "a0d9bbcbfd556659bb15b015de4b5b50619e49481b21b4a0dc7ad5c96369615b",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 336,
+            "height": 224
+          }
+        }
+      },
+      "sourceReference": "dealers/al-hazim-motors/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "6452b61a27eda03e606de1073513a8b8378e03b399e3f7d5f8c76ffc79aef737",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-0e5aaf30-2b9d-4103-88ab-ac738a772341",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "384cbd63f41ad9242d57e025a3992a2c2811c2f6239bdaa9843a18710214a841",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 336,
+            "height": 224
+          }
+        }
+      },
+      "sourceReference": "dealers/al-hazim-motors/branding/generated-mark-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "e61518c19d654c8b231ba2a2cb21e1328cb4204ba950aa8febffb818bbe0f3d8",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-0e5aaf30-2b9d-4103-88ab-ac738a772341",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "384cbd63f41ad9242d57e025a3992a2c2811c2f6239bdaa9843a18710214a841",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 336,
+            "height": 224
+          }
+        }
+      },
+      "sourceReference": "dealers/al-hazim-motors/branding/generated-mark-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "0af5af0dccb14b2e834e7f262c7c71f1ea012a62e07dde733c4a01fe592cea8a",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-9c0710cc-c095-42c9-8155-ec1bf7772b27",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "a0d9bbcbfd556659bb15b015de4b5b50619e49481b21b4a0dc7ad5c96369615b",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 336,
+          "height": 224
+        }
+      }
+    }
+  }
+}

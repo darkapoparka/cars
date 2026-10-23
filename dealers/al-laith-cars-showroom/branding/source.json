@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "dealer": "al-laith-cars-showroom",
-  "status": "research-required",
+  "status": "reviewed-imagegen-proposal",
   "realLogoFirst": true,
   "publicSources": [
     {
@@ -14,7 +14,146 @@
     }
   ],
   "originals": [],
-  "creationMethod": null,
+  "creationMethod": "imagegen-proposal",
   "dealerApproved": false,
-  "generatedInputs": null
+  "generatedInputs": {
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "master": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "caa09f4f72e96afb875f6db837b1c1069404198e86263e4b5acc138a929ea42e",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-d7a8e394-109c-4206-bada-bb63a3c28bc7",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark-light.png",
+      "sha256": "12e822d190fd9647da359fbba76b1e9391f7b78557810e3b73b94b9933b33a2d",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-d7a8e394-109c-4206-bada-bb63a3c28bc7",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "caa09f4f72e96afb875f6db837b1c1069404198e86263e4b5acc138a929ea42e",
+          "operation": "crop-left-symbol-and-mask-adjacent-wordmark",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 375,
+            "height": 209
+          },
+          "mask": {
+            "left": 350,
+            "top": 0,
+            "width": 25,
+            "height": 145
+          }
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-dark.png",
+      "sha256": "0735df4d6eb92a522ab427780c4fca989a7db00b720b958aad4cf04c14570fbb",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-43a7cc51-b240-4f59-86d6-8a2ffa9bf27e",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "371dba35ec5da221c5af1aa7161c04059b7bfb0634155b1b27325216c34e3374",
+          "operation": "crop-left-symbol-and-mask-adjacent-wordmark",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 375,
+            "height": 210
+          },
+          "mask": {
+            "left": 350,
+            "top": 0,
+            "width": 25,
+            "height": 145
+          }
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "caa09f4f72e96afb875f6db837b1c1069404198e86263e4b5acc138a929ea42e",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-d7a8e394-109c-4206-bada-bb63a3c28bc7",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "371dba35ec5da221c5af1aa7161c04059b7bfb0634155b1b27325216c34e3374",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-43a7cc51-b240-4f59-86d6-8a2ffa9bf27e",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "371dba35ec5da221c5af1aa7161c04059b7bfb0634155b1b27325216c34e3374",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-43a7cc51-b240-4f59-86d6-8a2ffa9bf27e",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewKind": "agent-visual-review",
+      "humanReview": false,
+      "dealerApproval": false,
+      "backgrounds": {
+        "onLight": "#ffffff",
+        "onDark": "#111113",
+        "onAccent": "#c40101"
+      },
+      "wordmarkWidths": [
+        220,
+        240
+      ],
+      "notes": "Exact reviewed Image Gen pair; native masters and generation provenance retained. Compact rasters cropped from the actual left symbol."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-22T23:42:46.338Z",
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#c40101"
+      ],
+      "widths": [
+        32,
+        48,
+        64
+      ],
+      "notes": "AL monogram retained through the right baseline; adjacent wordmark pixels cleared above it. Exact raster derivation and 32/48/64px rendering require independent native qualification."
+    }
+  },
+  "sourceBlockers": [],
+  "artworkProvenance": {
+    "path": "branding/artwork-provenance.json",
+    "sha256": "0b8ce1159d773f8a9c79920e9afe4deb3511f286c15f0c617acec0ce666971ed",
+    "manifestSha256": "d25e9cee768a885052ac0a8df220d843c9b9c6f6f120d722705bead1cc99e694",
+    "nativeMasters": [
+      {
+        "path": "branding/native-generated-on-light.png",
+        "sha256": "841a7ec6855e91e1bc5edd49b91fda90d874192a409291ad61e09bc0726d50d3"
+      },
+      {
+        "path": "branding/native-generated-on-dark.png",
+        "sha256": "ba720181e5e01697baf79b89abba0686f03babb232759d513f5d5155f2081ac3"
+      }
+    ]
+  }
 }

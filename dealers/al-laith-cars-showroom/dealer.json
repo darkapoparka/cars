@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Al Laith Cars Showroom",
     "publicOrigin": "https://al-laith-cars-showroom.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "caa09f4f72e96afb875f6db837b1c1069404198e86263e4b5acc138a929ea42e",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "ce36d95a5c18553b7d72831016fb846e9b06ece5f531f127a59ae510263d4b58"
+    }
   }
 }

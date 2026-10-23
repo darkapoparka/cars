@@ -3,7 +3,7 @@
   "kind": "cars-dealer-pack-input-review",
   "dealer": "322-budget-auto-sales-llc",
   "reviewed": true,
-  "reviewedAt": "2026-10-23T01:08:52.242Z",
+  "reviewedAt": "2026-10-23T01:29:56.707Z",
   "review": {
     "kind": "automated",
     "humanReview": false,
@@ -47,11 +47,11 @@
     },
     {
       "path": "branding/generated-mark-dark.png",
-      "sha256": "1f3f4ebb956008a14ab2a924a8bb6e5ff7826ca7bed9236476490c1bf71959b8"
+      "sha256": "08d089d9fbd8a008376ca482f51fdc7dda5c099d6d96516e334ea6fdc1adfc3e"
     },
     {
       "path": "branding/generated-mark-light.png",
-      "sha256": "9e07dfb2e5d33a9ea96f13afaad8cc7cb12d2bd0d522e2fd6b5e8550e3dcce16"
+      "sha256": "1a63816e40791fb2f5e4a7ac6853761d8dca6d53b33f8135cb7ea30011734f4b"
     },
     {
       "path": "branding/generated-on-dark.png",
@@ -63,11 +63,11 @@
     },
     {
       "path": "branding/logo-contract.json",
-      "sha256": "48c2012f4fd1187fca22cd752795bb9ef72adf57c91866610fc095f8abc96b9d"
+      "sha256": "0bac6754f4751092a590f63ca45c39c3b8012a9fd144d3a80d2245bcfd0c6047"
     },
     {
       "path": "branding/logo-recipe.json",
-      "sha256": "eec8afe4d21a31a8c6a09c6bb6464d64bb0307cb44be7208fb77473f34ef65f9"
+      "sha256": "d3878d06260d59272607fdf05047f91d292e4615f7c7b09ed1bf857e3f7882f5"
     },
     {
       "path": "branding/native-generated-on-dark.png",
@@ -79,7 +79,7 @@
     },
     {
       "path": "branding/source.json",
-      "sha256": "9602e5bd2cdc8e2d3a21bcc51c9793e33dcbed29226fe44ebcbe93b4522dfffb"
+      "sha256": "6382010b739b07dd26d3a3617a6a1d89480e889a4ab94d892dc82088eda8ee95"
     },
     {
       "path": "business-facts.json",
@@ -87,7 +87,7 @@
     },
     {
       "path": "copy-review.json",
-      "sha256": "100a63944fd0a38f04494461bd5d689249e00b2f6ca15c8aac60bea7e9a48d0b"
+      "sha256": "2f87f040f6f1aebcaeda99cfea730631eacf15188c0531908f60b51b5ded642c"
     },
     {
       "path": "dealer-stock/template-demo-1.webp",
@@ -103,11 +103,11 @@
     },
     {
       "path": "dealer.json",
-      "sha256": "050d8acaa5f6275f327530b254df31e1a44d397ba31379453e741b9f88acb8d0"
+      "sha256": "9b7ca3b61e1a284ff29d2ec47282b0450cc6dfd6018c2187b8ab4bc3bcfeadd1"
     },
     {
       "path": "identity-review.json",
-      "sha256": "ab8c5591f423fcb59a928f636c390b943ab369f031e5bf71bf596e54d3a6d6e3"
+      "sha256": "6da7d40bf11d924ac49c2a593f2a918f1d7b1876cfc5612249684d409dc47a88"
     },
     {
       "path": "locale.json",
@@ -119,7 +119,7 @@
     },
     {
       "path": "qualification.json",
-      "sha256": "597eb93868438a626d6afc03ef2520cb08b3ec369dbf3f93baac5d619579ff30"
+      "sha256": "9ba22c2795f28a7bd7e362726dc12f62727cbd7b33d4acbf411b878310f8240b"
     },
     {
       "path": "source-evidence.json",
