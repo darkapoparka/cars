@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": true,
+  "reviewedAt": "2026-10-23T03:53:13.665Z",
+  "dealer": "al-saqr-al-mutaliq-used-car",
+  "dealerId": "ae-sharjah-al-saqr-al-mutaliq-used-car",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "method": "Automated exact registry/pack identity, canonical hosting and batch comparison; retained public source fields were structurally checked, not human-approved.",
+  "sources": [
+    {
+      "url": "https://auto.ae/alsaqr/",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://maps.yango.com/org/al_saqr_al_mutaliq/9985065220/",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.drivearabia.com/cars-for-sale/uae/geely/emgrand/2025-geely-emgrand-gf-gcc-specs-aea1aaa00d1b4d3c87eba90ad4abaf27/",
+      "observedAt": "2026-10-18"
+    }
+  ]
+}
