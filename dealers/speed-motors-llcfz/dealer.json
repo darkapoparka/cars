@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Speed Motors LLCFZ",
     "publicOrigin": "https://speed-motors-llcfz.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "0a2e9d5b9871c1059e01844ef1c3b2b6d2e941d79e3900b877f6d3b3c12ec819",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "79d920871c44ed2f2c89d8151b8c59df908fe90581f168a64ddbbf15f5c00cec"
+    }
   }
 }

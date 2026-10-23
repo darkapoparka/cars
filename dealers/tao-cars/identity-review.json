@@ -1,19 +1,19 @@
 {
   "schemaVersion": 1,
   "kind": "cars-new-dealer-identity-review",
-  "reviewed": false,
-  "reviewedAt": null,
+  "reviewed": true,
+  "reviewedAt": "2026-10-23T02:28:37.791Z",
   "dealer": "tao-cars",
   "dealerId": "ae-dubai-tao-cars",
   "repository": "darkapoparka/cars",
   "existingIdentityFound": false,
   "sourceOwnership": "cars-canonical",
   "review": {
-    "kind": "pending",
+    "kind": "automated",
     "humanReview": false,
     "dealerApproval": false
   },
-  "method": "Draft identity only; run automated pack input review before building.",
+  "method": "Automated exact registry/pack identity, canonical hosting and batch comparison; retained public source fields were structurally checked, not human-approved.",
   "sources": [
     {
       "url": "https://www.dubicars.com/dealers/dubai-tao-cars-3170",

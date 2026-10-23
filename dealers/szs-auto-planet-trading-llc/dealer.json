@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "SZS Auto Planet Trading LLC",
     "publicOrigin": "https://szs-auto-planet-trading-llc.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "a199c97eac0d4779a9f066dd5aabb6bf3dc0080010048ed8472bc978c8373f0f",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "b3dd031c8bac17b1823f4b1d90af225a976a5b80926c3c2f22a3e593e79c4be1"
+    }
   }
 }

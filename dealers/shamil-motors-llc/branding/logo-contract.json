@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "dealer": "shamil-motors-llc",
+  "reviewed": true,
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "d36e72ce23f71639bda6d7d12edd47a4f785f43e7cbb50dd62cb58abdecce61b",
+      "sourceSha256": "f6d9e1d4c1030d8fd0faab195b21472ce36ce82d661d37feed234f209fab501c"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "bba62794314e9efc96edc12d706fa529c063959808e5d7bcdc3d315004101a44",
+      "sourceSha256": "9f9212cdc3feb2104973b3c41456e2fb50c0f0f5821fccc9c2ff9203795a1b06"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "bba62794314e9efc96edc12d706fa529c063959808e5d7bcdc3d315004101a44",
+      "sourceSha256": "9f9212cdc3feb2104973b3c41456e2fb50c0f0f5821fccc9c2ff9203795a1b06"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "f6d9e1d4c1030d8fd0faab195b21472ce36ce82d661d37feed234f209fab501c",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-d96f9414-4278-48e1-bd3d-21131e955827",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "9b572ac630fbffb2321541eeee0d581c8012c91f17d588b270815bcab5849f44",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-d96f9414-4278-48e1-bd3d-21131e955827",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "f6d9e1d4c1030d8fd0faab195b21472ce36ce82d661d37feed234f209fab501c",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 230,
+          "height": 259
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "6d0b8408b15cb491fdf302fac80c39af7926872d68d83983205d5a756a5eb191"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "f6d9e1d4c1030d8fd0faab195b21472ce36ce82d661d37feed234f209fab501c",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-d96f9414-4278-48e1-bd3d-21131e955827",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/shamil-motors-llc/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "9f9212cdc3feb2104973b3c41456e2fb50c0f0f5821fccc9c2ff9203795a1b06",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-db8c6e88-5dc9-4415-8a60-d23efcbbec33",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/shamil-motors-llc/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "9f9212cdc3feb2104973b3c41456e2fb50c0f0f5821fccc9c2ff9203795a1b06",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-db8c6e88-5dc9-4415-8a60-d23efcbbec33",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/shamil-motors-llc/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "f6d9e1d4c1030d8fd0faab195b21472ce36ce82d661d37feed234f209fab501c",
+      "sha256": "f6d9e1d4c1030d8fd0faab195b21472ce36ce82d661d37feed234f209fab501c",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 259
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "9f9212cdc3feb2104973b3c41456e2fb50c0f0f5821fccc9c2ff9203795a1b06",
+      "sha256": "9f9212cdc3feb2104973b3c41456e2fb50c0f0f5821fccc9c2ff9203795a1b06",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 261
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "9f9212cdc3feb2104973b3c41456e2fb50c0f0f5821fccc9c2ff9203795a1b06",
+      "sha256": "9f9212cdc3feb2104973b3c41456e2fb50c0f0f5821fccc9c2ff9203795a1b06",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 261
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "b26ddb9441e5d089e6c7dcd7e2c99c075f3984db09ef7e5601118576c717317d",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-d96f9414-4278-48e1-bd3d-21131e955827",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "f6d9e1d4c1030d8fd0faab195b21472ce36ce82d661d37feed234f209fab501c",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 230,
+            "height": 259
+          }
+        }
+      },
+      "sourceReference": "dealers/shamil-motors-llc/branding/generated-mark-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "33cdfc4d4c13455c812f499e751dc4c2c2a263747202eeefdd7bb2fd4ade3814",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-db8c6e88-5dc9-4415-8a60-d23efcbbec33",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "9f9212cdc3feb2104973b3c41456e2fb50c0f0f5821fccc9c2ff9203795a1b06",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 230,
+            "height": 261
+          }
+        }
+      },
+      "sourceReference": "dealers/shamil-motors-llc/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "9b572ac630fbffb2321541eeee0d581c8012c91f17d588b270815bcab5849f44",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-d96f9414-4278-48e1-bd3d-21131e955827",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "f6d9e1d4c1030d8fd0faab195b21472ce36ce82d661d37feed234f209fab501c",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 230,
+            "height": 259
+          }
+        }
+      },
+      "sourceReference": "dealers/shamil-motors-llc/branding/generated-mark-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "6d0b8408b15cb491fdf302fac80c39af7926872d68d83983205d5a756a5eb191",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-d96f9414-4278-48e1-bd3d-21131e955827",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "f6d9e1d4c1030d8fd0faab195b21472ce36ce82d661d37feed234f209fab501c",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 230,
+            "height": 259
+          }
+        }
+      },
+      "sourceReference": "dealers/shamil-motors-llc/branding/generated-mark-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "4fc282aa8ff512425ac3089ed1c5d8443b4baddcd8e907496c351476925047d5",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-db8c6e88-5dc9-4415-8a60-d23efcbbec33",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "9f9212cdc3feb2104973b3c41456e2fb50c0f0f5821fccc9c2ff9203795a1b06",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 230,
+          "height": 261
+        }
+      }
+    }
+  }
+}

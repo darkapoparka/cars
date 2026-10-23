@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "dealer": "speed-motors-llcfz",
+  "reviewed": true,
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "9b51f47894bfcdaab75821a840d8b5b30de515d3e96d626b50fc578b15d6acf2",
+      "sourceSha256": "0a2e9d5b9871c1059e01844ef1c3b2b6d2e941d79e3900b877f6d3b3c12ec819"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "6e02f61cf93c64119dbd6bd628f8435c088f91e81b744274f7ebff29a78b4efe",
+      "sourceSha256": "bf9b02826f88c9d0ada4d6dde7a17c8402c5a295cb92a80ab32346921030ce83"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "6e02f61cf93c64119dbd6bd628f8435c088f91e81b744274f7ebff29a78b4efe",
+      "sourceSha256": "bf9b02826f88c9d0ada4d6dde7a17c8402c5a295cb92a80ab32346921030ce83"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "0a2e9d5b9871c1059e01844ef1c3b2b6d2e941d79e3900b877f6d3b3c12ec819",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-3a1d5b91-fc3c-4ace-a1be-d934da39cac3",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "79d920871c44ed2f2c89d8151b8c59df908fe90581f168a64ddbbf15f5c00cec",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-3a1d5b91-fc3c-4ace-a1be-d934da39cac3",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "0a2e9d5b9871c1059e01844ef1c3b2b6d2e941d79e3900b877f6d3b3c12ec819",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 355,
+          "height": 300
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "59a9e79dfdac3cecf8691750f2411105d19f87a86854cd9eb1e1394253650af3"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "0a2e9d5b9871c1059e01844ef1c3b2b6d2e941d79e3900b877f6d3b3c12ec819",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-3a1d5b91-fc3c-4ace-a1be-d934da39cac3",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/speed-motors-llcfz/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "bf9b02826f88c9d0ada4d6dde7a17c8402c5a295cb92a80ab32346921030ce83",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-845ab45e-80a9-4219-a26b-9c01b12d0961",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/speed-motors-llcfz/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "bf9b02826f88c9d0ada4d6dde7a17c8402c5a295cb92a80ab32346921030ce83",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-845ab45e-80a9-4219-a26b-9c01b12d0961",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/speed-motors-llcfz/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "0a2e9d5b9871c1059e01844ef1c3b2b6d2e941d79e3900b877f6d3b3c12ec819",
+      "sha256": "0a2e9d5b9871c1059e01844ef1c3b2b6d2e941d79e3900b877f6d3b3c12ec819",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 300
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "bf9b02826f88c9d0ada4d6dde7a17c8402c5a295cb92a80ab32346921030ce83",
+      "sha256": "bf9b02826f88c9d0ada4d6dde7a17c8402c5a295cb92a80ab32346921030ce83",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 302
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "bf9b02826f88c9d0ada4d6dde7a17c8402c5a295cb92a80ab32346921030ce83",
+      "sha256": "bf9b02826f88c9d0ada4d6dde7a17c8402c5a295cb92a80ab32346921030ce83",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 302
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "301ef0b62a303481b36d129da9e8edc135c81c8b9661e1700cc5d524630b43f5",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-3a1d5b91-fc3c-4ace-a1be-d934da39cac3",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "0a2e9d5b9871c1059e01844ef1c3b2b6d2e941d79e3900b877f6d3b3c12ec819",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 355,
+            "height": 300
+          }
+        }
+      },
+      "sourceReference": "dealers/speed-motors-llcfz/branding/generated-mark-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "19649661e0365b9c349231db724257d2478fe7c0053ed5990142c9682509ffaa",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-845ab45e-80a9-4219-a26b-9c01b12d0961",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "bf9b02826f88c9d0ada4d6dde7a17c8402c5a295cb92a80ab32346921030ce83",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 355,
+            "height": 302
+          }
+        }
+      },
+      "sourceReference": "dealers/speed-motors-llcfz/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "79d920871c44ed2f2c89d8151b8c59df908fe90581f168a64ddbbf15f5c00cec",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-3a1d5b91-fc3c-4ace-a1be-d934da39cac3",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "0a2e9d5b9871c1059e01844ef1c3b2b6d2e941d79e3900b877f6d3b3c12ec819",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 355,
+            "height": 300
+          }
+        }
+      },
+      "sourceReference": "dealers/speed-motors-llcfz/branding/generated-mark-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "59a9e79dfdac3cecf8691750f2411105d19f87a86854cd9eb1e1394253650af3",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-3a1d5b91-fc3c-4ace-a1be-d934da39cac3",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "0a2e9d5b9871c1059e01844ef1c3b2b6d2e941d79e3900b877f6d3b3c12ec819",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 355,
+            "height": 300
+          }
+        }
+      },
+      "sourceReference": "dealers/speed-motors-llcfz/branding/generated-mark-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "ed54bd1fa2d7deec1fd221abfc022f26aca2f3417606423ba8bdce3506862430",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-845ab45e-80a9-4219-a26b-9c01b12d0961",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "bf9b02826f88c9d0ada4d6dde7a17c8402c5a295cb92a80ab32346921030ce83",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 355,
+          "height": 302
+        }
+      }
+    }
+  }
+}

@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Sinolink New Automobile Trading DWC-LLC",
     "publicOrigin": "https://sinolink-new-automobile-trading-dwc-llc.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "7109ba4514ed50273823fb24950ea01391f121acf5b61a82f1e41122a4e39e57",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "d284391a1dcfacc650cd295307a2d82e20f9f4507c5ada3770ba12f450a305f1"
+    }
   }
 }

@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Three Camels Trading",
     "publicOrigin": "https://three-camels-trading.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "363021a5bfe1ffc416d9600aba46ab385215cdfe393e65feb713c08cba52794c",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "106bbbd2c4c31c0feb0ce80d1b7a63d535be2c90665df4eb648e4e9cec9ddb05"
+    }
   }
 }

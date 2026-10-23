@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "ae-dubai-three-camels-trading",
+  "slug": "three-camels-trading",
+  "artworkDirectory": "three-camels-trading",
+  "name": "Three Camels Trading",
+  "renderedName": "Three Camels Trading",
+  "kind": "independent-website-logo-proposal",
+  "dealerApproved": false,
+  "ownerApproved": false,
+  "sourceEvidence": [
+    {
+      "url": "https://www.dubicars.com/dealers/dubai-three-camels-trading-3021",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "retainedOriginalsUnchanged": true,
+  "variants": {
+    "on-light": {
+      "path": "logo-on-light.png",
+      "sha256": "363021a5bfe1ffc416d9600aba46ab385215cdfe393e65feb713c08cba52794c",
+      "width": 1024,
+      "height": 259,
+      "transparentFraction": 0.7144403052606177,
+      "master": {
+        "path": "generated-on-light.png",
+        "sha256": "94ff293d6abcec75999902bb9c2fb025f8b1afb6f3964e75c41f4bda7a02ddfd",
+        "width": 2126,
+        "height": 740
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-cc1f0ab8-3caf-4b1a-9034-027ed3b8d017",
+        "prompt": "Create one professional horizontal automotive dealership logo proposal for Three Camels Trading. Required exact text, uppercase: THREE CAMELS TRADING. Every word must be present and spelled precisely; use sensible primary name and smaller descriptor hierarchy without tiny lettering. Produce a polished original identity with a minimal memorable geometric symbol related to the distinctive name. Initials TC may inform the emblem. Emblem left, full clear name to the right, compact and balanced for a website header. Avoid overused shield and generic car silhouettes; no manufacturer badges. Clean modern lettering with careful kerning and strong legibility. All text is deep charcoal black, appropriate on a white/light header. One restrained red or gold accent may appear inside the emblem only; no pale text. Flat crisp edges, a small number of solid shapes, no chrome, no lighting, no shadow, no texture, no gradient. Genuine transparent alpha background, isolated logo with no background box, no grid, no checkerboard painted into pixels. No slogan, contact info, website, watermark, mockup, photograph, extra concept, or duplicate logo. Deliver exactly one horizontal full logo. This is an independent website identity proposal, not a claim of adopted branding.",
+        "reference": null
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 2,
+          "top": 101,
+          "width": 2124,
+          "height": 537
+        }
+      }
+    },
+    "on-dark": {
+      "path": "logo-on-dark.png",
+      "sha256": "fa762f54552beddb1bdb2fb2b5abf886f8edad3bbc5a6509d50cc0e6a881f447",
+      "width": 1024,
+      "height": 259,
+      "transparentFraction": 0.6456510919401545,
+      "master": {
+        "path": "generated-on-dark.png",
+        "sha256": "81b7640238ad6738484c47fc99867ac4b1ae318aeba216f6fce8e7d2bebe3454",
+        "width": 2126,
+        "height": 740
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-16a1461d-12a5-4855-ad2d-b8e481118183",
+        "prompt": "Create the matching light-on-dark production variant of the exact supplied logo. Preserve precisely the same emblem, geometry, spelling, word count, typographic hierarchy, proportions, layout and spacing. Required exact text: THREE CAMELS TRADING. Change EVERY letter, including all secondary descriptor words and legal suffixes, to solid white so it is legible over a dark or red website header. Change the charcoal portions of the emblem to white. Retain the small red/gold emblem accent only if it contrasts clearly against a dark header. True transparent alpha background; do not paint a dark rectangle or checkerboard. Flat clean edges, no glows, shadows, bevels, textures, gradients, new artwork, new icon, extra text or mockup. Deliver one horizontal matching logo, fully legible.",
+        "reference": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-cc1f0ab8-3caf-4b1a-9034-027ed3b8d017.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 4,
+          "top": 98,
+          "width": 2121,
+          "height": 537
+        }
+      }
+    }
+  },
+  "review": {
+    "status": "artwork-visually-reviewed",
+    "alpha": "all exports measured as genuine transparent nonempty PNGs",
+    "spelling": "English wordmark inspected; source-bound display aliases retained",
+    "compact": "Horizontal logos only. Interactive 32/48/64px gallery preview is provided; separate compact/favicon artwork remains part of dealer-pack preparation.",
+    "sixDesigns": "not-yet-integrated-or-rendered",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "reviewer": "Codex visual inspection",
+    "header": "All 196 paired PNGs inspected at 240x64 on white, #111113 and #c40101",
+    "evidence": "final-review-07.png"
+  },
+  "releaseReady": false,
+  "artworkHolds": [],
+  "artworkReadyForIntegration": true
+}
