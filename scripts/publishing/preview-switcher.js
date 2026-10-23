@@ -19,6 +19,15 @@
         presentation.dataset.carsLocalePresentation = 'compact-v1';
         presentation.textContent = `
           dialog[data-locale-dialog][open]{position:fixed!important;inset:auto!important;top:50%!important;left:50%!important;transform:translate(-50%,-50%)!important;display:block!important;box-sizing:border-box;width:min(420px,calc(100vw - 32px))!important;max-width:calc(100vw - 32px)!important;height:auto!important;max-height:calc(100dvh - 32px - env(safe-area-inset-top,0px) - env(safe-area-inset-bottom,0px))!important;margin:0!important;padding:0!important;overflow-y:auto!important;overscroll-behavior:contain;border:1px solid #ececee!important;border-radius:24px!important;background:#fff!important;color:#1d1e22!important;box-shadow:0 16px 64px #0002!important}
+          /* Native Import renders locale fields directly inside the dialog, rather than
+             the wrapped Auto Best/Modern composition. Give that existing form the same
+             compact spacing and typography without relocating framework-owned controls. */
+          dialog[data-locale-dialog][open]:has(> h2#cars-locale-title){padding:26px 24px 24px!important;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif!important}
+          dialog[data-locale-dialog]:has(> h2#cars-locale-title)>h2#cars-locale-title{margin:0 26px 12px!important;color:#1d1e22!important;font-size:22px!important;line-height:28px!important;font-weight:600!important;text-align:center!important;overflow-wrap:anywhere}
+          dialog[data-locale-dialog]:has(> h2#cars-locale-title)>p.cars-locale-eyebrow{margin:0 24px 10px!important;text-align:center!important}
+          dialog[data-locale-dialog]:has(> h2#cars-locale-title)>p#cars-locale-description,dialog[data-locale-dialog]:has(> h2#cars-locale-title)>p.cars-locale-suggestion{margin:0 0 12px!important;padding:0!important;color:#65666d!important;font-size:13px!important;line-height:19px!important;text-align:center!important}
+          dialog[data-locale-dialog]:has(> h2#cars-locale-title)>form{display:grid!important;min-width:0!important;font-family:inherit!important}
+          @media(max-width:360px){dialog[data-locale-dialog][open]:has(> h2#cars-locale-title){padding:24px 16px 18px!important}dialog[data-locale-dialog]:has(> h2#cars-locale-title)>h2#cars-locale-title{font-size:20px!important;line-height:26px!important}}
           dialog[data-locale-dialog]::backdrop{background:rgba(12,12,16,.3)!important;backdrop-filter:blur(2px)}
           dialog[data-locale-dialog] .cars-locale-header,dialog[data-locale-dialog]>div>div:has(#locale-preferences-title){position:relative;display:block!important;padding:26px 24px 14px!important;border:0!important;text-align:center}
           dialog[data-locale-dialog] .cars-locale-header h2,dialog[data-locale-dialog] #locale-preferences-title{margin:0 20px!important;color:inherit;font-size:22px!important;line-height:28px!important;font-weight:600!important;text-align:center;overflow-wrap:anywhere}
