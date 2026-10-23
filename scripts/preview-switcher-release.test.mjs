@@ -460,6 +460,15 @@ test('six-design packages inject the native locale presentation once without ano
   // A source template may already render its own chevron. Compact mode must not
   // paint a second one on top of the shared select background icon.
   assert.ok(presentation.textContent.includes('dialog[data-locale-dialog] .cars-locale-select-arrow,dialog[data-locale-dialog] [data-locale-country-chevron]{display:none!important}'));
+  assert.equal((presentation.textContent.match(/background-image:url\\("data:image\\/svg\\+xml/g)??[]).length,1,
+    'Compact mode paints one shared SVG arrow, not one per native template');
+  // Import renders its labelled fields directly under dialog rather than inside
+  // the wrapped Auto Best/Modern containers. The shared modal must also style
+  // its direct heading, explanatory paragraphs, form and 320px inset.
+  assert.ok(presentation.textContent.includes('dialog[data-locale-dialog][open]:has(> h2#cars-locale-title){padding:26px 24px 24px!important;'));
+  assert.ok(presentation.textContent.includes('dialog[data-locale-dialog]:has(> h2#cars-locale-title)>h2#cars-locale-title{margin:0 26px 12px!important;'));
+  assert.ok(presentation.textContent.includes('dialog[data-locale-dialog]:has(> h2#cars-locale-title)>form{display:grid!important;min-width:0!important;font-family:inherit!important}'));
+  assert.ok(presentation.textContent.includes('@media(max-width:360px){dialog[data-locale-dialog][open]:has(> h2#cars-locale-title){padding:24px 16px 18px!important}'));
   assert.equal(r.timers.length, 0);
   vm.runInContext(r.script, r.context, { timeout: 1000 });
   assert.equal(r.document.head.children.length, 1);
