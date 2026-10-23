@@ -2,27 +2,27 @@
   "schemaVersion": 1,
   "dealer": "al-fajr-automobile-showroom",
   "reviewed": true,
-  "reviewedAt": "2026-10-21T13:21:21.538210Z",
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
   "status": "independent-proposal-not-dealer-approved",
-  "creationMethod": "retained-public-original-reviewed-white-matte-solid-ink",
+  "creationMethod": "imagegen-proposal",
   "assets": {
     "onLight": {
       "sourcePath": "branding/logo-on-light.png",
       "publicPath": "/dealer-brand/logo-on-light.webp",
-      "sha256": "05b3f5e88fd3fcc0118f29021551abfa3e0d077dd1630ff3bdec3ebb0a49d728",
-      "sourceSha256": "5ce9ae601f427ba7921817910424cb67cf2e60a39aef1ca804adcc2df1736ccd"
+      "sha256": "9e4365ced3d2a221423b7774217474d6cbbb88996f1b56822df1072fa4121cda",
+      "sourceSha256": "e19c31d139b133187d31d5385c8a48ec53cba16b2f5f2c5ccec0a2f278a4e9be"
     },
     "onDark": {
       "sourcePath": "branding/logo-on-dark.png",
       "publicPath": "/dealer-brand/logo-on-dark.webp",
-      "sha256": "00c3c35ce5bd93afc576b81d7f678d411791c9bb68100d9aebb66282b30e3b17",
-      "sourceSha256": "9d64bfa4057fe4630b1d2076a4f439f6159efc0804c1c9fa14a8b27f361dbe49"
+      "sha256": "db4f1eeee5ed90b179e79256d51d583d56b7ac3300129c1a263c715f7e8759a6",
+      "sourceSha256": "3cfd7236f28f1bedbbe4ea0346de737bf1bc632653979beacb86bcc2b99e69e9"
     },
     "onAccent": {
       "sourcePath": "branding/logo-on-accent.png",
       "publicPath": "/dealer-brand/logo-on-accent.webp",
-      "sha256": "00c3c35ce5bd93afc576b81d7f678d411791c9bb68100d9aebb66282b30e3b17",
-      "sourceSha256": "9d64bfa4057fe4630b1d2076a4f439f6159efc0804c1c9fa14a8b27f361dbe49"
+      "sha256": "db4f1eeee5ed90b179e79256d51d583d56b7ac3300129c1a263c715f7e8759a6",
+      "sourceSha256": "3cfd7236f28f1bedbbe4ea0346de737bf1bc632653979beacb86bcc2b99e69e9"
     }
   },
   "surfaceBackgrounds": {
@@ -41,428 +41,222 @@
   },
   "master": {
     "path": "branding/logo-master.png",
-    "sha256": "5ce9ae601f427ba7921817910424cb67cf2e60a39aef1ca804adcc2df1736ccd",
-    "retainedSource": {
-      "kind": "retained-reviewed-raster",
-      "reference": "dealers/al-fajr-automobile-showroom/branding/public-original-dubizzle-20261021.webp",
-      "sha256": "44fdfdf1eb11226e562a255daa1bfcdfa916207b97ad719c54bec2485ffb9222",
-      "reviewReference": "dealers/al-fajr-automobile-showroom/branding/source.json",
-      "reviewSha256": "99255c961da6f5d1bc7d54c4d8191b56c041e20270876464201aac8c9e30d216",
-      "sourceUrl": "https://dbz-images.dubizzle.com/profiles/auto_agency/Al_Fajr_Logo.PNG",
-      "observedAt": "2026-10-21",
-      "exportTreatment": {
-        "kind": "reviewed-white-matte-solid-ink-v1",
-        "ink": "solid-black",
-        "sourceSha256": "44fdfdf1eb11226e562a255daa1bfcdfa916207b97ad719c54bec2485ffb9222",
-        "background": "#ffffff",
-        "derivedTransparency": true,
-        "originalAlphaPreserved": false,
-        "matteReviewSha256": "20e0d47622a3b56dd23e8bb31951d728d497f0467ca3d57e7d1b96d55ec3fac9",
-        "newGeometry": false
-      }
+    "sha256": "e19c31d139b133187d31d5385c8a48ec53cba16b2f5f2c5ccec0a2f278a4e9be",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-f33a4f99-e067-424f-9f97-63234a2fd874",
+      "modelVersion": null
     }
   },
   "mark": {
     "path": "branding/logo-mark.png",
-    "sha256": "bd733dc7c54f9bc218cf96db30c0c40a87b8b3bd887204f30b59d926a214102f",
-    "retainedSource": {
-      "kind": "retained-reviewed-raster",
-      "reference": "dealers/al-fajr-automobile-showroom/branding/public-original-dubizzle-20261021.webp",
-      "sha256": "44fdfdf1eb11226e562a255daa1bfcdfa916207b97ad719c54bec2485ffb9222",
-      "reviewReference": "dealers/al-fajr-automobile-showroom/branding/source.json",
-      "reviewSha256": "99255c961da6f5d1bc7d54c4d8191b56c041e20270876464201aac8c9e30d216",
-      "sourceUrl": "https://dbz-images.dubizzle.com/profiles/auto_agency/Al_Fajr_Logo.PNG",
-      "observedAt": "2026-10-21",
-      "exportTreatment": {
-        "kind": "reviewed-white-matte-solid-ink-v1",
-        "ink": "solid-black",
-        "sourceSha256": "44fdfdf1eb11226e562a255daa1bfcdfa916207b97ad719c54bec2485ffb9222",
-        "background": "#ffffff",
-        "derivedTransparency": true,
-        "originalAlphaPreserved": false,
-        "matteReviewSha256": "20e0d47622a3b56dd23e8bb31951d728d497f0467ca3d57e7d1b96d55ec3fac9",
-        "newGeometry": false
+    "sha256": "ac41be55953a0d7e6639d8ed362788b2fead6e42ee91f9bb0cc3273ccf2ca280",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-f33a4f99-e067-424f-9f97-63234a2fd874",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "e19c31d139b133187d31d5385c8a48ec53cba16b2f5f2c5ccec0a2f278a4e9be",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 130,
+          "height": 165
+        }
       }
     }
   },
   "favicon": {
     "path": "dealer-brand/favicon.ico",
-    "sha256": "459c190111a8486c09882225174b0f27430813b5e2969945cf72324a6f15874e"
+    "sha256": "d1e4d115e865b60d52e17ec760460bcecda10d019bc1c7734cb6cce21f559ad7"
   },
   "surfaces": {
     "onLight": {
       "path": "branding/logo-on-light.png",
-      "sha256": "5ce9ae601f427ba7921817910424cb67cf2e60a39aef1ca804adcc2df1736ccd",
-      "retainedSource": {
-        "kind": "retained-reviewed-raster",
-        "reference": "dealers/al-fajr-automobile-showroom/branding/public-original-dubizzle-20261021.webp",
-        "sha256": "44fdfdf1eb11226e562a255daa1bfcdfa916207b97ad719c54bec2485ffb9222",
-        "reviewReference": "dealers/al-fajr-automobile-showroom/branding/source.json",
-        "reviewSha256": "99255c961da6f5d1bc7d54c4d8191b56c041e20270876464201aac8c9e30d216",
-        "sourceUrl": "https://dbz-images.dubizzle.com/profiles/auto_agency/Al_Fajr_Logo.PNG",
-        "observedAt": "2026-10-21",
-        "exportTreatment": {
-          "kind": "reviewed-white-matte-solid-ink-v1",
-          "ink": "solid-black",
-          "sourceSha256": "44fdfdf1eb11226e562a255daa1bfcdfa916207b97ad719c54bec2485ffb9222",
-          "background": "#ffffff",
-          "derivedTransparency": true,
-          "originalAlphaPreserved": false,
-          "matteReviewSha256": "20e0d47622a3b56dd23e8bb31951d728d497f0467ca3d57e7d1b96d55ec3fac9",
-          "newGeometry": false
-        }
+      "sha256": "e19c31d139b133187d31d5385c8a48ec53cba16b2f5f2c5ccec0a2f278a4e9be",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-f33a4f99-e067-424f-9f97-63234a2fd874",
+        "modelVersion": null
       },
-      "sourceReference": "dealers/al-fajr-automobile-showroom/branding/public-original-dubizzle-20261021.webp"
+      "sourceReference": "dealers/al-fajr-automobile-showroom/branding/generated-on-light.png"
     },
     "onDark": {
       "path": "branding/logo-on-dark.png",
-      "sha256": "9d64bfa4057fe4630b1d2076a4f439f6159efc0804c1c9fa14a8b27f361dbe49",
-      "retainedSource": {
-        "kind": "retained-reviewed-raster",
-        "reference": "dealers/al-fajr-automobile-showroom/branding/public-original-dubizzle-20261021.webp",
-        "sha256": "44fdfdf1eb11226e562a255daa1bfcdfa916207b97ad719c54bec2485ffb9222",
-        "reviewReference": "dealers/al-fajr-automobile-showroom/branding/source.json",
-        "reviewSha256": "99255c961da6f5d1bc7d54c4d8191b56c041e20270876464201aac8c9e30d216",
-        "sourceUrl": "https://dbz-images.dubizzle.com/profiles/auto_agency/Al_Fajr_Logo.PNG",
-        "observedAt": "2026-10-21",
-        "exportTreatment": {
-          "kind": "reviewed-white-matte-solid-ink-v1",
-          "ink": "solid-white",
-          "sourceSha256": "44fdfdf1eb11226e562a255daa1bfcdfa916207b97ad719c54bec2485ffb9222",
-          "background": "#ffffff",
-          "derivedTransparency": true,
-          "originalAlphaPreserved": false,
-          "matteReviewSha256": "20e0d47622a3b56dd23e8bb31951d728d497f0467ca3d57e7d1b96d55ec3fac9",
-          "newGeometry": false
-        }
+      "sha256": "3cfd7236f28f1bedbbe4ea0346de737bf1bc632653979beacb86bcc2b99e69e9",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-bef3dfd3-e9e8-4f9b-9405-7c22d8e6230c",
+        "modelVersion": null
       },
-      "sourceReference": "dealers/al-fajr-automobile-showroom/branding/public-original-dubizzle-20261021.webp"
+      "sourceReference": "dealers/al-fajr-automobile-showroom/branding/generated-on-dark.png"
     },
     "onAccent": {
       "path": "branding/logo-on-accent.png",
-      "sha256": "9d64bfa4057fe4630b1d2076a4f439f6159efc0804c1c9fa14a8b27f361dbe49",
-      "retainedSource": {
-        "kind": "retained-reviewed-raster",
-        "reference": "dealers/al-fajr-automobile-showroom/branding/public-original-dubizzle-20261021.webp",
-        "sha256": "44fdfdf1eb11226e562a255daa1bfcdfa916207b97ad719c54bec2485ffb9222",
-        "reviewReference": "dealers/al-fajr-automobile-showroom/branding/source.json",
-        "reviewSha256": "99255c961da6f5d1bc7d54c4d8191b56c041e20270876464201aac8c9e30d216",
-        "sourceUrl": "https://dbz-images.dubizzle.com/profiles/auto_agency/Al_Fajr_Logo.PNG",
-        "observedAt": "2026-10-21",
-        "exportTreatment": {
-          "kind": "reviewed-white-matte-solid-ink-v1",
-          "ink": "solid-white",
-          "sourceSha256": "44fdfdf1eb11226e562a255daa1bfcdfa916207b97ad719c54bec2485ffb9222",
-          "background": "#ffffff",
-          "derivedTransparency": true,
-          "originalAlphaPreserved": false,
-          "matteReviewSha256": "20e0d47622a3b56dd23e8bb31951d728d497f0467ca3d57e7d1b96d55ec3fac9",
-          "newGeometry": false
-        }
+      "sha256": "3cfd7236f28f1bedbbe4ea0346de737bf1bc632653979beacb86bcc2b99e69e9",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-bef3dfd3-e9e8-4f9b-9405-7c22d8e6230c",
+        "modelVersion": null
       },
-      "sourceReference": "dealers/al-fajr-automobile-showroom/branding/public-original-dubizzle-20261021.webp"
+      "sourceReference": "dealers/al-fajr-automobile-showroom/branding/generated-on-dark.png"
     }
   },
   "transforms": {
     "onLight": {
-      "operation": "reviewed-white-matte-crop-and-resize",
-      "sourceSha256": "44fdfdf1eb11226e562a255daa1bfcdfa916207b97ad719c54bec2485ffb9222",
-      "sha256": "5ce9ae601f427ba7921817910424cb67cf2e60a39aef1ca804adcc2df1736ccd",
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "e19c31d139b133187d31d5385c8a48ec53cba16b2f5f2c5ccec0a2f278a4e9be",
+      "sha256": "e19c31d139b133187d31d5385c8a48ec53cba16b2f5f2c5ccec0a2f278a4e9be",
       "crop": {
         "left": 0,
-        "top": 13,
-        "width": 504,
-        "height": 147
+        "top": 0,
+        "width": 1024,
+        "height": 165
       },
-      "rasterTreatment": {
-        "kind": "reviewed-white-matte-solid-ink-v1",
-        "ink": "solid-black",
-        "background": "#ffffff",
-        "whiteNoiseCeiling": 5,
-        "alphaRule": "preserve original opaque foreground alpha; only source pixels within five RGB levels of white become transparent",
-        "originalAlphaUnchangedBeforeCropAndResize": false,
-        "originalWasFullyOpaque": true,
-        "derivedTransparency": true,
-        "originalWidth": 520,
-        "originalHeight": 160,
-        "whiteCanvasPixels": 67239,
-        "borderWhiteFraction": 1,
-        "derivedPixelSha256": "d1c8c34d113f52490b80aca1816d5b981a8866582eb766e3c0c4034a9f6aa45c",
-        "newGeometry": false
-      },
-      "sourcePath": "branding/public-original-dubizzle-20261021.webp",
+      "sourcePath": "branding/generated-on-light.png",
       "outputPath": "branding/logo-on-light.png"
     },
     "onDark": {
-      "operation": "reviewed-white-matte-crop-and-resize",
-      "sourceSha256": "44fdfdf1eb11226e562a255daa1bfcdfa916207b97ad719c54bec2485ffb9222",
-      "sha256": "9d64bfa4057fe4630b1d2076a4f439f6159efc0804c1c9fa14a8b27f361dbe49",
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "3cfd7236f28f1bedbbe4ea0346de737bf1bc632653979beacb86bcc2b99e69e9",
+      "sha256": "3cfd7236f28f1bedbbe4ea0346de737bf1bc632653979beacb86bcc2b99e69e9",
       "crop": {
         "left": 0,
-        "top": 13,
-        "width": 504,
-        "height": 147
+        "top": 0,
+        "width": 1024,
+        "height": 168
       },
-      "rasterTreatment": {
-        "kind": "reviewed-white-matte-solid-ink-v1",
-        "ink": "solid-white",
-        "background": "#ffffff",
-        "whiteNoiseCeiling": 5,
-        "alphaRule": "preserve original opaque foreground alpha; only source pixels within five RGB levels of white become transparent",
-        "originalAlphaUnchangedBeforeCropAndResize": false,
-        "originalWasFullyOpaque": true,
-        "derivedTransparency": true,
-        "originalWidth": 520,
-        "originalHeight": 160,
-        "whiteCanvasPixels": 67239,
-        "borderWhiteFraction": 1,
-        "derivedPixelSha256": "ee92352993c5bc98d145f43bbbc10f54854edb9e0607bf42adb19b42f1c9f1e2",
-        "newGeometry": false
-      },
-      "sourcePath": "branding/public-original-dubizzle-20261021.webp",
+      "sourcePath": "branding/generated-on-dark.png",
       "outputPath": "branding/logo-on-dark.png"
     },
     "onAccent": {
-      "operation": "reviewed-white-matte-crop-and-resize",
-      "sourceSha256": "44fdfdf1eb11226e562a255daa1bfcdfa916207b97ad719c54bec2485ffb9222",
-      "sha256": "9d64bfa4057fe4630b1d2076a4f439f6159efc0804c1c9fa14a8b27f361dbe49",
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "3cfd7236f28f1bedbbe4ea0346de737bf1bc632653979beacb86bcc2b99e69e9",
+      "sha256": "3cfd7236f28f1bedbbe4ea0346de737bf1bc632653979beacb86bcc2b99e69e9",
       "crop": {
         "left": 0,
-        "top": 13,
-        "width": 504,
-        "height": 147
+        "top": 0,
+        "width": 1024,
+        "height": 168
       },
-      "rasterTreatment": {
-        "kind": "reviewed-white-matte-solid-ink-v1",
-        "ink": "solid-white",
-        "background": "#ffffff",
-        "whiteNoiseCeiling": 5,
-        "alphaRule": "preserve original opaque foreground alpha; only source pixels within five RGB levels of white become transparent",
-        "originalAlphaUnchangedBeforeCropAndResize": false,
-        "originalWasFullyOpaque": true,
-        "derivedTransparency": true,
-        "originalWidth": 520,
-        "originalHeight": 160,
-        "whiteCanvasPixels": 67239,
-        "borderWhiteFraction": 1,
-        "derivedPixelSha256": "ee92352993c5bc98d145f43bbbc10f54854edb9e0607bf42adb19b42f1c9f1e2",
-        "newGeometry": false
-      },
-      "sourcePath": "branding/public-original-dubizzle-20261021.webp",
+      "sourcePath": "branding/generated-on-dark.png",
       "outputPath": "branding/logo-on-accent.png"
-    },
-    "master": {
-      "operation": "reviewed-white-matte-crop-and-resize",
-      "sourceSha256": "44fdfdf1eb11226e562a255daa1bfcdfa916207b97ad719c54bec2485ffb9222",
-      "sha256": "5ce9ae601f427ba7921817910424cb67cf2e60a39aef1ca804adcc2df1736ccd",
-      "crop": {
-        "left": 0,
-        "top": 13,
-        "width": 504,
-        "height": 147
-      },
-      "rasterTreatment": {
-        "kind": "reviewed-white-matte-solid-ink-v1",
-        "ink": "solid-black",
-        "background": "#ffffff",
-        "whiteNoiseCeiling": 5,
-        "alphaRule": "preserve original opaque foreground alpha; only source pixels within five RGB levels of white become transparent",
-        "originalAlphaUnchangedBeforeCropAndResize": false,
-        "originalWasFullyOpaque": true,
-        "derivedTransparency": true,
-        "originalWidth": 520,
-        "originalHeight": 160,
-        "whiteCanvasPixels": 67239,
-        "borderWhiteFraction": 1,
-        "derivedPixelSha256": "d1c8c34d113f52490b80aca1816d5b981a8866582eb766e3c0c4034a9f6aa45c",
-        "newGeometry": false
-      },
-      "sourcePath": "branding/public-original-dubizzle-20261021.webp"
-    },
-    "mark": {
-      "operation": "reviewed-white-matte-crop-and-resize",
-      "sourceSha256": "44fdfdf1eb11226e562a255daa1bfcdfa916207b97ad719c54bec2485ffb9222",
-      "sha256": "bd733dc7c54f9bc218cf96db30c0c40a87b8b3bd887204f30b59d926a214102f",
-      "crop": {
-        "left": 0,
-        "top": 13,
-        "width": 504,
-        "height": 147
-      },
-      "rasterTreatment": {
-        "kind": "reviewed-white-matte-solid-ink-v1",
-        "ink": "solid-black",
-        "background": "#ffffff",
-        "whiteNoiseCeiling": 5,
-        "alphaRule": "preserve original opaque foreground alpha; only source pixels within five RGB levels of white become transparent",
-        "originalAlphaUnchangedBeforeCropAndResize": false,
-        "originalWasFullyOpaque": true,
-        "derivedTransparency": true,
-        "originalWidth": 520,
-        "originalHeight": 160,
-        "whiteCanvasPixels": 67239,
-        "borderWhiteFraction": 1,
-        "derivedPixelSha256": "d1c8c34d113f52490b80aca1816d5b981a8866582eb766e3c0c4034a9f6aa45c",
-        "newGeometry": false
-      },
-      "sourcePath": "branding/public-original-dubizzle-20261021.webp"
-    },
-    "markOnDark": {
-      "operation": "reviewed-white-matte-crop-and-resize",
-      "sourceSha256": "44fdfdf1eb11226e562a255daa1bfcdfa916207b97ad719c54bec2485ffb9222",
-      "sha256": "65bfd562fd4a19b161c3ab969ee2d4e1cf77278829a4663e54cb61c92054079b",
-      "crop": {
-        "left": 0,
-        "top": 13,
-        "width": 504,
-        "height": 147
-      },
-      "rasterTreatment": {
-        "kind": "reviewed-white-matte-solid-ink-v1",
-        "ink": "solid-white",
-        "background": "#ffffff",
-        "whiteNoiseCeiling": 5,
-        "alphaRule": "preserve original opaque foreground alpha; only source pixels within five RGB levels of white become transparent",
-        "originalAlphaUnchangedBeforeCropAndResize": false,
-        "originalWasFullyOpaque": true,
-        "derivedTransparency": true,
-        "originalWidth": 520,
-        "originalHeight": 160,
-        "whiteCanvasPixels": 67239,
-        "borderWhiteFraction": 1,
-        "derivedPixelSha256": "ee92352993c5bc98d145f43bbbc10f54854edb9e0607bf42adb19b42f1c9f1e2",
-        "newGeometry": false
-      },
-      "sourcePath": "branding/public-original-dubizzle-20261021.webp"
     }
   },
   "supplemental": {
     "mark-on-light.webp": {
       "path": "dealer-brand/mark-on-light.webp",
-      "sha256": "12b45a0d299071fbb014ab39c678638d2e094b0fcd0ff477288043fdb6b724dc",
-      "retainedSource": {
-        "kind": "retained-reviewed-raster",
-        "reference": "dealers/al-fajr-automobile-showroom/branding/public-original-dubizzle-20261021.webp",
-        "sha256": "44fdfdf1eb11226e562a255daa1bfcdfa916207b97ad719c54bec2485ffb9222",
-        "reviewReference": "dealers/al-fajr-automobile-showroom/branding/source.json",
-        "reviewSha256": "99255c961da6f5d1bc7d54c4d8191b56c041e20270876464201aac8c9e30d216",
-        "sourceUrl": "https://dbz-images.dubizzle.com/profiles/auto_agency/Al_Fajr_Logo.PNG",
-        "observedAt": "2026-10-21",
-        "exportTreatment": {
-          "kind": "reviewed-white-matte-solid-ink-v1",
-          "ink": "solid-black",
-          "sourceSha256": "44fdfdf1eb11226e562a255daa1bfcdfa916207b97ad719c54bec2485ffb9222",
-          "background": "#ffffff",
-          "derivedTransparency": true,
-          "originalAlphaPreserved": false,
-          "matteReviewSha256": "20e0d47622a3b56dd23e8bb31951d728d497f0467ca3d57e7d1b96d55ec3fac9",
-          "newGeometry": false
+      "sha256": "1551b27ef285390c8aedc697f74fee2eaa5ab55cb05a4e3bf5c4f8310bd8236f",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-f33a4f99-e067-424f-9f97-63234a2fd874",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "e19c31d139b133187d31d5385c8a48ec53cba16b2f5f2c5ccec0a2f278a4e9be",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 130,
+            "height": 165
+          }
         }
       },
-      "sourceReference": "dealers/al-fajr-automobile-showroom/branding/public-original-dubizzle-20261021.webp"
+      "sourceReference": "dealers/al-fajr-automobile-showroom/branding/generated-mark-light.png"
     },
     "mark-on-dark.webp": {
       "path": "dealer-brand/mark-on-dark.webp",
-      "sha256": "2c59f10d43d8903a121ee1887c5d34e77d7d3b0b832937ee7db2fa0573755e22",
-      "retainedSource": {
-        "kind": "retained-reviewed-raster",
-        "reference": "dealers/al-fajr-automobile-showroom/branding/public-original-dubizzle-20261021.webp",
-        "sha256": "44fdfdf1eb11226e562a255daa1bfcdfa916207b97ad719c54bec2485ffb9222",
-        "reviewReference": "dealers/al-fajr-automobile-showroom/branding/source.json",
-        "reviewSha256": "99255c961da6f5d1bc7d54c4d8191b56c041e20270876464201aac8c9e30d216",
-        "sourceUrl": "https://dbz-images.dubizzle.com/profiles/auto_agency/Al_Fajr_Logo.PNG",
-        "observedAt": "2026-10-21",
-        "exportTreatment": {
-          "kind": "reviewed-white-matte-solid-ink-v1",
-          "ink": "solid-white",
-          "sourceSha256": "44fdfdf1eb11226e562a255daa1bfcdfa916207b97ad719c54bec2485ffb9222",
-          "background": "#ffffff",
-          "derivedTransparency": true,
-          "originalAlphaPreserved": false,
-          "matteReviewSha256": "20e0d47622a3b56dd23e8bb31951d728d497f0467ca3d57e7d1b96d55ec3fac9",
-          "newGeometry": false
+      "sha256": "bd5fda36e9cca5b82ff01817381b45269e11f9449de1af7ddfc75e0e78adc82b",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-bef3dfd3-e9e8-4f9b-9405-7c22d8e6230c",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "3cfd7236f28f1bedbbe4ea0346de737bf1bc632653979beacb86bcc2b99e69e9",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 130,
+            "height": 168
+          }
         }
       },
-      "sourceReference": "dealers/al-fajr-automobile-showroom/branding/public-original-dubizzle-20261021.webp"
+      "sourceReference": "dealers/al-fajr-automobile-showroom/branding/generated-mark-dark.png"
     },
     "app-icon.png": {
       "path": "dealer-brand/app-icon.png",
-      "sha256": "bd733dc7c54f9bc218cf96db30c0c40a87b8b3bd887204f30b59d926a214102f",
-      "retainedSource": {
-        "kind": "retained-reviewed-raster",
-        "reference": "dealers/al-fajr-automobile-showroom/branding/public-original-dubizzle-20261021.webp",
-        "sha256": "44fdfdf1eb11226e562a255daa1bfcdfa916207b97ad719c54bec2485ffb9222",
-        "reviewReference": "dealers/al-fajr-automobile-showroom/branding/source.json",
-        "reviewSha256": "99255c961da6f5d1bc7d54c4d8191b56c041e20270876464201aac8c9e30d216",
-        "sourceUrl": "https://dbz-images.dubizzle.com/profiles/auto_agency/Al_Fajr_Logo.PNG",
-        "observedAt": "2026-10-21",
-        "exportTreatment": {
-          "kind": "reviewed-white-matte-solid-ink-v1",
-          "ink": "solid-black",
-          "sourceSha256": "44fdfdf1eb11226e562a255daa1bfcdfa916207b97ad719c54bec2485ffb9222",
-          "background": "#ffffff",
-          "derivedTransparency": true,
-          "originalAlphaPreserved": false,
-          "matteReviewSha256": "20e0d47622a3b56dd23e8bb31951d728d497f0467ca3d57e7d1b96d55ec3fac9",
-          "newGeometry": false
+      "sha256": "ac41be55953a0d7e6639d8ed362788b2fead6e42ee91f9bb0cc3273ccf2ca280",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-f33a4f99-e067-424f-9f97-63234a2fd874",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "e19c31d139b133187d31d5385c8a48ec53cba16b2f5f2c5ccec0a2f278a4e9be",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 130,
+            "height": 165
+          }
         }
       },
-      "sourceReference": "dealers/al-fajr-automobile-showroom/branding/public-original-dubizzle-20261021.webp"
+      "sourceReference": "dealers/al-fajr-automobile-showroom/branding/generated-mark-light.png"
     },
     "favicon.ico": {
       "path": "dealer-brand/favicon.ico",
-      "sha256": "459c190111a8486c09882225174b0f27430813b5e2969945cf72324a6f15874e",
-      "retainedSource": {
-        "kind": "retained-reviewed-raster",
-        "reference": "dealers/al-fajr-automobile-showroom/branding/public-original-dubizzle-20261021.webp",
-        "sha256": "44fdfdf1eb11226e562a255daa1bfcdfa916207b97ad719c54bec2485ffb9222",
-        "reviewReference": "dealers/al-fajr-automobile-showroom/branding/source.json",
-        "reviewSha256": "99255c961da6f5d1bc7d54c4d8191b56c041e20270876464201aac8c9e30d216",
-        "sourceUrl": "https://dbz-images.dubizzle.com/profiles/auto_agency/Al_Fajr_Logo.PNG",
-        "observedAt": "2026-10-21",
-        "exportTreatment": {
-          "kind": "reviewed-white-matte-solid-ink-v1",
-          "ink": "solid-black",
-          "sourceSha256": "44fdfdf1eb11226e562a255daa1bfcdfa916207b97ad719c54bec2485ffb9222",
-          "background": "#ffffff",
-          "derivedTransparency": true,
-          "originalAlphaPreserved": false,
-          "matteReviewSha256": "20e0d47622a3b56dd23e8bb31951d728d497f0467ca3d57e7d1b96d55ec3fac9",
-          "newGeometry": false
+      "sha256": "d1e4d115e865b60d52e17ec760460bcecda10d019bc1c7734cb6cce21f559ad7",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-f33a4f99-e067-424f-9f97-63234a2fd874",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "e19c31d139b133187d31d5385c8a48ec53cba16b2f5f2c5ccec0a2f278a4e9be",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 130,
+            "height": 165
+          }
         }
       },
-      "sourceReference": "dealers/al-fajr-automobile-showroom/branding/public-original-dubizzle-20261021.webp"
+      "sourceReference": "dealers/al-fajr-automobile-showroom/branding/generated-mark-light.png"
     }
   },
   "markOnDarkReady": true,
   "originalArtworkPreserved": true,
   "visualReview": {
     "reviewed": true,
-    "reviewedAt": "2026-10-21T13:21:21.538210Z",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
     "source": "branding/source.json",
     "spelling": "agent-visual-review",
     "dealerApproval": false
   },
   "markOnDark": {
     "path": "branding/logo-mark-on-dark.png",
-    "sha256": "65bfd562fd4a19b161c3ab969ee2d4e1cf77278829a4663e54cb61c92054079b",
-    "retainedSource": {
-      "kind": "retained-reviewed-raster",
-      "reference": "dealers/al-fajr-automobile-showroom/branding/public-original-dubizzle-20261021.webp",
-      "sha256": "44fdfdf1eb11226e562a255daa1bfcdfa916207b97ad719c54bec2485ffb9222",
-      "reviewReference": "dealers/al-fajr-automobile-showroom/branding/source.json",
-      "reviewSha256": "99255c961da6f5d1bc7d54c4d8191b56c041e20270876464201aac8c9e30d216",
-      "sourceUrl": "https://dbz-images.dubizzle.com/profiles/auto_agency/Al_Fajr_Logo.PNG",
-      "observedAt": "2026-10-21",
-      "exportTreatment": {
-        "kind": "reviewed-white-matte-solid-ink-v1",
-        "ink": "solid-white",
-        "sourceSha256": "44fdfdf1eb11226e562a255daa1bfcdfa916207b97ad719c54bec2485ffb9222",
-        "background": "#ffffff",
-        "derivedTransparency": true,
-        "originalAlphaPreserved": false,
-        "matteReviewSha256": "20e0d47622a3b56dd23e8bb31951d728d497f0467ca3d57e7d1b96d55ec3fac9",
-        "newGeometry": false
+    "sha256": "4e029377283b1684ba0a352c63b84d2daad8b8fd52d77bf2bae6ccdb364ea629",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-bef3dfd3-e9e8-4f9b-9405-7c22d8e6230c",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "3cfd7236f28f1bedbbe4ea0346de737bf1bc632653979beacb86bcc2b99e69e9",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 130,
+          "height": 168
+        }
       }
     }
   }

@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Speed Car Motors",
     "publicOrigin": "https://speed-car-motors.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "7825a21bcbee811506b3f96f3dbed75189f9b02e6b096aaa80a9631568b9694a",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "562730b49fc180b7431b946bc8c10c4e6ec539bc71a9bc46682869cce28aa015"
+    }
   }
 }

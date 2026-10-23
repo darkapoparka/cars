@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "F11 Motors",
     "publicOrigin": "https://f11-motors.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "3fe0dc1b1b59f910bc5a10c7f9a75968f40b796b7fe975ab675ae94c4d0045f2",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "8b9ff32307cbcb5c6049bd5a5a49eff333686362c64e64592a5d1534a0c03346"
+    }
   }
 }

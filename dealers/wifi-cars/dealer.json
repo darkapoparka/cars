@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "WiFi Cars",
     "publicOrigin": "https://wifi-cars.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "87e6b09fdb9093a02b7a77843ea82f244afa0b41febcb2e71c0f79b82211eba0",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "4313b0e3cf5db4fb157affbac01c48cf52d2571f2df3497c13b63a20570a5e66"
+    }
   }
 }
