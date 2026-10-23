@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "dealer": "us-motors",
+  "reviewed": true,
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "33ab26e67cc517efa4ae90599d2d75adf05a1dedc807a370a32123e04927fc67",
+      "sourceSha256": "20bc63809bbcd638900a23349ba411ffa2e1b38c70c092c58dc871df3f937918"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "e95fce6ac82c8b02b929afa6d951e9dbe97b5806ad85b5761435bbe870c37425",
+      "sourceSha256": "b607eb803eba86ec613abb7cddef1b290aacfda8671ed9a1f4e9770b94c6001a"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "e95fce6ac82c8b02b929afa6d951e9dbe97b5806ad85b5761435bbe870c37425",
+      "sourceSha256": "b607eb803eba86ec613abb7cddef1b290aacfda8671ed9a1f4e9770b94c6001a"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "20bc63809bbcd638900a23349ba411ffa2e1b38c70c092c58dc871df3f937918",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-7ef8c296-e37b-49a6-8ec4-631737f81a37",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "b8f77cab0dd73e2c24f6711939cd1bbcdf9aaf80a55316a2f1b215c842423efb",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-7ef8c296-e37b-49a6-8ec4-631737f81a37",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "20bc63809bbcd638900a23349ba411ffa2e1b38c70c092c58dc871df3f937918",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 435,
+          "height": 298
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "de6240f0b5ccd5715c1c21a16bc830cbfa5f662117f000b436fa46bca6bef035"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "20bc63809bbcd638900a23349ba411ffa2e1b38c70c092c58dc871df3f937918",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-7ef8c296-e37b-49a6-8ec4-631737f81a37",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/us-motors/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "b607eb803eba86ec613abb7cddef1b290aacfda8671ed9a1f4e9770b94c6001a",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-d339bfd8-59b7-42e8-b298-1e2b4adf5b4b",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/us-motors/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "b607eb803eba86ec613abb7cddef1b290aacfda8671ed9a1f4e9770b94c6001a",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-d339bfd8-59b7-42e8-b298-1e2b4adf5b4b",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/us-motors/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "20bc63809bbcd638900a23349ba411ffa2e1b38c70c092c58dc871df3f937918",
+      "sha256": "20bc63809bbcd638900a23349ba411ffa2e1b38c70c092c58dc871df3f937918",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 298
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "b607eb803eba86ec613abb7cddef1b290aacfda8671ed9a1f4e9770b94c6001a",
+      "sha256": "b607eb803eba86ec613abb7cddef1b290aacfda8671ed9a1f4e9770b94c6001a",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 300
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "b607eb803eba86ec613abb7cddef1b290aacfda8671ed9a1f4e9770b94c6001a",
+      "sha256": "b607eb803eba86ec613abb7cddef1b290aacfda8671ed9a1f4e9770b94c6001a",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 300
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "6396125f25abc29848af5e9794b0807ab1ad40ac9fad9cfc513a6bafe426f33c",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-7ef8c296-e37b-49a6-8ec4-631737f81a37",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "20bc63809bbcd638900a23349ba411ffa2e1b38c70c092c58dc871df3f937918",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 435,
+            "height": 298
+          }
+        }
+      },
+      "sourceReference": "dealers/us-motors/branding/generated-mark-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "5a7ff5bcb444346934135bd214003404758e9912f23e8db03fe717187ffb237a",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-d339bfd8-59b7-42e8-b298-1e2b4adf5b4b",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "b607eb803eba86ec613abb7cddef1b290aacfda8671ed9a1f4e9770b94c6001a",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 435,
+            "height": 300
+          }
+        }
+      },
+      "sourceReference": "dealers/us-motors/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "b8f77cab0dd73e2c24f6711939cd1bbcdf9aaf80a55316a2f1b215c842423efb",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-7ef8c296-e37b-49a6-8ec4-631737f81a37",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "20bc63809bbcd638900a23349ba411ffa2e1b38c70c092c58dc871df3f937918",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 435,
+            "height": 298
+          }
+        }
+      },
+      "sourceReference": "dealers/us-motors/branding/generated-mark-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "de6240f0b5ccd5715c1c21a16bc830cbfa5f662117f000b436fa46bca6bef035",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-7ef8c296-e37b-49a6-8ec4-631737f81a37",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "20bc63809bbcd638900a23349ba411ffa2e1b38c70c092c58dc871df3f937918",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 435,
+            "height": 298
+          }
+        }
+      },
+      "sourceReference": "dealers/us-motors/branding/generated-mark-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "73b913d177d44b13e8bb294e23971d37db80f776b19890584638ab6dd5869b26",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-d339bfd8-59b7-42e8-b298-1e2b4adf5b4b",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "b607eb803eba86ec613abb7cddef1b290aacfda8671ed9a1f4e9770b94c6001a",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 435,
+          "height": 300
+        }
+      }
+    }
+  }
+}

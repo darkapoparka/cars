@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "ae-dubai-verona-used-cars",
+  "slug": "verona-used-cars",
+  "artworkDirectory": "verona-used-cars",
+  "name": "Verona Used Cars",
+  "renderedName": "Verona Used Cars",
+  "kind": "independent-website-logo-proposal",
+  "dealerApproved": false,
+  "ownerApproved": false,
+  "sourceEvidence": [
+    {
+      "url": "https://www.dubicars.com/dealers/dubai-verona-used-cars-3202",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "retainedOriginalsUnchanged": true,
+  "variants": {
+    "on-light": {
+      "path": "logo-on-light.png",
+      "sha256": "246118dfc6e5b72bd4a93f6d12ddf735cf5811a76f02e191d71eaa576908bdd2",
+      "width": 1024,
+      "height": 253,
+      "transparentFraction": 0.6348003643774703,
+      "master": {
+        "path": "generated-on-light.png",
+        "sha256": "246bda25ff857615aeaf4e2a4b69188152cb9e6382e1705dc5cb8ff68c701d2b",
+        "width": 2076,
+        "height": 758
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-4e0ea992-3344-4115-9ec3-339e83421589",
+        "prompt": "Create one professional horizontal automotive dealership logo proposal for Verona Used Cars. Required exact text, uppercase: VERONA USED CARS. Every word must be present and spelled precisely; use sensible primary name and smaller descriptor hierarchy without tiny lettering. Produce a polished original identity with a distinctive custom typographic ligature in a refined square emblem. Initials V may inform the emblem. Emblem left, full clear name to the right, compact and balanced for a website header. Avoid overused shield and generic car silhouettes; no manufacturer badges. Clean modern lettering with careful kerning and strong legibility. All text is deep charcoal black, appropriate on a white/light header. One restrained red or gold accent may appear inside the emblem only; no pale text. Flat crisp edges, a small number of solid shapes, no chrome, no lighting, no shadow, no texture, no gradient. Genuine transparent alpha background, isolated logo with no background box, no grid, no checkerboard painted into pixels. No slogan, contact info, website, watermark, mockup, photograph, extra concept, or duplicate logo. Deliver exactly one horizontal full logo. This is an independent website identity proposal, not a claim of adopted branding.",
+        "reference": null
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 63,
+          "top": 136,
+          "width": 1970,
+          "height": 487
+        }
+      }
+    },
+    "on-dark": {
+      "path": "logo-on-dark.png",
+      "sha256": "2a9a1fa44710c9ec9ca0603ec25e2a16ea7bef9c31c4b17dd2d08ed2c566d7f1",
+      "width": 1024,
+      "height": 251,
+      "transparentFraction": 0.49738545816733065,
+      "master": {
+        "path": "generated-on-dark.png",
+        "sha256": "f993f9df192ae1f206f547273c0798bb16517aeb1065f8872bd90e5fd5f3ded5",
+        "width": 2076,
+        "height": 757
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-d007b97f-1f49-4957-8de0-2b9cd28b3e45",
+        "prompt": "Create the matching light-on-dark production variant of the exact supplied logo. Preserve precisely the same emblem, geometry, spelling, word count, typographic hierarchy, proportions, layout and spacing. Required exact text: VERONA USED CARS. Change EVERY letter, including all secondary descriptor words and legal suffixes, to solid white so it is legible over a dark or red website header. Change the charcoal portions of the emblem to white. Retain the small red/gold emblem accent only if it contrasts clearly against a dark header. True transparent alpha background; do not paint a dark rectangle or checkerboard. Flat clean edges, no glows, shadows, bevels, textures, gradients, new artwork, new icon, extra text or mockup. Deliver one horizontal matching logo, fully legible.",
+        "reference": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-4e0ea992-3344-4115-9ec3-339e83421589.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 62,
+          "top": 133,
+          "width": 1940,
+          "height": 476
+        }
+      }
+    }
+  },
+  "review": {
+    "status": "artwork-visually-reviewed",
+    "alpha": "all exports measured as genuine transparent nonempty PNGs",
+    "spelling": "English wordmark inspected; source-bound display aliases retained",
+    "compact": "Horizontal logos only. Interactive 32/48/64px gallery preview is provided; separate compact/favicon artwork remains part of dealer-pack preparation.",
+    "sixDesigns": "not-yet-integrated-or-rendered",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "reviewer": "Codex visual inspection",
+    "header": "All 196 paired PNGs inspected at 240x64 on white, #111113 and #c40101",
+    "evidence": "final-review-08.png"
+  },
+  "releaseReady": false,
+  "artworkHolds": [],
+  "artworkReadyForIntegration": true
+}

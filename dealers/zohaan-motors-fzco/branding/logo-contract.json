@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "dealer": "zohaan-motors-fzco",
+  "reviewed": true,
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "47f4938cf8978265a151b67b23a8f1a606357699141252f268f6f30a7854a1e0",
+      "sourceSha256": "8d407de0195f9455b5a7368002f9aa982ffc8617d2dec9161a2172703f1b3ab9"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "c0fda831a9917f4ad05524f15c4775aec24d8c2d77915665392c80ac2f0bbdd0",
+      "sourceSha256": "02bbdb03c7bf0d5aa1b63187378c010699c6176358a4c74da6f7079c8a12f37a"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "c0fda831a9917f4ad05524f15c4775aec24d8c2d77915665392c80ac2f0bbdd0",
+      "sourceSha256": "02bbdb03c7bf0d5aa1b63187378c010699c6176358a4c74da6f7079c8a12f37a"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "8d407de0195f9455b5a7368002f9aa982ffc8617d2dec9161a2172703f1b3ab9",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-67eba4e6-b84e-46c8-b0c7-84abcf9dd068",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "356356b5489964b03384d54dbe8c3a635e9941ea3d357f8c78605a5750f3e92e",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-67eba4e6-b84e-46c8-b0c7-84abcf9dd068",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "8d407de0195f9455b5a7368002f9aa982ffc8617d2dec9161a2172703f1b3ab9",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 304,
+          "height": 309
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "1c59e37e4b7c0a0e20f463d4839997b10da3a0e3c9ad67283c3affe4f2b52369"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "8d407de0195f9455b5a7368002f9aa982ffc8617d2dec9161a2172703f1b3ab9",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-67eba4e6-b84e-46c8-b0c7-84abcf9dd068",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/zohaan-motors-fzco/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "02bbdb03c7bf0d5aa1b63187378c010699c6176358a4c74da6f7079c8a12f37a",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-384e711c-71ce-4c4b-877c-4eb1cc0bc2fb",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/zohaan-motors-fzco/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "02bbdb03c7bf0d5aa1b63187378c010699c6176358a4c74da6f7079c8a12f37a",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-384e711c-71ce-4c4b-877c-4eb1cc0bc2fb",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/zohaan-motors-fzco/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "8d407de0195f9455b5a7368002f9aa982ffc8617d2dec9161a2172703f1b3ab9",
+      "sha256": "8d407de0195f9455b5a7368002f9aa982ffc8617d2dec9161a2172703f1b3ab9",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 309
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "02bbdb03c7bf0d5aa1b63187378c010699c6176358a4c74da6f7079c8a12f37a",
+      "sha256": "02bbdb03c7bf0d5aa1b63187378c010699c6176358a4c74da6f7079c8a12f37a",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 315
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "02bbdb03c7bf0d5aa1b63187378c010699c6176358a4c74da6f7079c8a12f37a",
+      "sha256": "02bbdb03c7bf0d5aa1b63187378c010699c6176358a4c74da6f7079c8a12f37a",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 315
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "71c2d233b7cf7a50a8a0fd4f7a2403a7ac44fcd76981b90ba4adf6fae28464a4",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-67eba4e6-b84e-46c8-b0c7-84abcf9dd068",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "8d407de0195f9455b5a7368002f9aa982ffc8617d2dec9161a2172703f1b3ab9",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 304,
+            "height": 309
+          }
+        }
+      },
+      "sourceReference": "dealers/zohaan-motors-fzco/branding/generated-mark-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "380f888f95269262863c9b376f2d3e26c13014d0d996bfcada0171984c4c0ab9",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-384e711c-71ce-4c4b-877c-4eb1cc0bc2fb",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "02bbdb03c7bf0d5aa1b63187378c010699c6176358a4c74da6f7079c8a12f37a",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 304,
+            "height": 315
+          }
+        }
+      },
+      "sourceReference": "dealers/zohaan-motors-fzco/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "356356b5489964b03384d54dbe8c3a635e9941ea3d357f8c78605a5750f3e92e",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-67eba4e6-b84e-46c8-b0c7-84abcf9dd068",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "8d407de0195f9455b5a7368002f9aa982ffc8617d2dec9161a2172703f1b3ab9",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 304,
+            "height": 309
+          }
+        }
+      },
+      "sourceReference": "dealers/zohaan-motors-fzco/branding/generated-mark-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "1c59e37e4b7c0a0e20f463d4839997b10da3a0e3c9ad67283c3affe4f2b52369",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-67eba4e6-b84e-46c8-b0c7-84abcf9dd068",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "8d407de0195f9455b5a7368002f9aa982ffc8617d2dec9161a2172703f1b3ab9",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 304,
+            "height": 309
+          }
+        }
+      },
+      "sourceReference": "dealers/zohaan-motors-fzco/branding/generated-mark-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "4d5537670b1a52011dbd22cc4a121e76fcea034a09b0d8ad970869bbf716b5db",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-384e711c-71ce-4c4b-877c-4eb1cc0bc2fb",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "02bbdb03c7bf0d5aa1b63187378c010699c6176358a4c74da6f7079c8a12f37a",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 304,
+          "height": 315
+        }
+      }
+    }
+  }
+}

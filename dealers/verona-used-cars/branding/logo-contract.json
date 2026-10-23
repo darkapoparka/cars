@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "dealer": "verona-used-cars",
+  "reviewed": true,
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "d5d1ac1a561f8e69f8a22333780c3d64163dff3c9c0fb251d5720bfebde29f72",
+      "sourceSha256": "246118dfc6e5b72bd4a93f6d12ddf735cf5811a76f02e191d71eaa576908bdd2"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "6f8053314c51961dc6ea985518480c2e1812277ff7d54dc80f7d1b8602d00b3a",
+      "sourceSha256": "2a9a1fa44710c9ec9ca0603ec25e2a16ea7bef9c31c4b17dd2d08ed2c566d7f1"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "6f8053314c51961dc6ea985518480c2e1812277ff7d54dc80f7d1b8602d00b3a",
+      "sourceSha256": "2a9a1fa44710c9ec9ca0603ec25e2a16ea7bef9c31c4b17dd2d08ed2c566d7f1"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "246118dfc6e5b72bd4a93f6d12ddf735cf5811a76f02e191d71eaa576908bdd2",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-4e0ea992-3344-4115-9ec3-339e83421589",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "1455d48d8433912d1d43d72fc9b39ef0967ddd1299793f6fe8ca33023be56596",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-4e0ea992-3344-4115-9ec3-339e83421589",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "246118dfc6e5b72bd4a93f6d12ddf735cf5811a76f02e191d71eaa576908bdd2",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 235,
+          "height": 253
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "10e1f39315b0fe359ea7cd059e0cdf935f997c2160134cc497bb0fa0353a3291"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "246118dfc6e5b72bd4a93f6d12ddf735cf5811a76f02e191d71eaa576908bdd2",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-4e0ea992-3344-4115-9ec3-339e83421589",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/verona-used-cars/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "2a9a1fa44710c9ec9ca0603ec25e2a16ea7bef9c31c4b17dd2d08ed2c566d7f1",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-d007b97f-1f49-4957-8de0-2b9cd28b3e45",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/verona-used-cars/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "2a9a1fa44710c9ec9ca0603ec25e2a16ea7bef9c31c4b17dd2d08ed2c566d7f1",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-d007b97f-1f49-4957-8de0-2b9cd28b3e45",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/verona-used-cars/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "246118dfc6e5b72bd4a93f6d12ddf735cf5811a76f02e191d71eaa576908bdd2",
+      "sha256": "246118dfc6e5b72bd4a93f6d12ddf735cf5811a76f02e191d71eaa576908bdd2",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 253
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "2a9a1fa44710c9ec9ca0603ec25e2a16ea7bef9c31c4b17dd2d08ed2c566d7f1",
+      "sha256": "2a9a1fa44710c9ec9ca0603ec25e2a16ea7bef9c31c4b17dd2d08ed2c566d7f1",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 251
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "2a9a1fa44710c9ec9ca0603ec25e2a16ea7bef9c31c4b17dd2d08ed2c566d7f1",
+      "sha256": "2a9a1fa44710c9ec9ca0603ec25e2a16ea7bef9c31c4b17dd2d08ed2c566d7f1",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 251
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "017b57366139ee9a31e012bb249158296c9d3f7c75b96e86f3ddab288f852a64",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-4e0ea992-3344-4115-9ec3-339e83421589",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "246118dfc6e5b72bd4a93f6d12ddf735cf5811a76f02e191d71eaa576908bdd2",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 235,
+            "height": 253
+          }
+        }
+      },
+      "sourceReference": "dealers/verona-used-cars/branding/generated-mark-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "9d7b9e8e903bfceb5647478a180d145e4fb1249a7db1015da83be9c67c466116",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-d007b97f-1f49-4957-8de0-2b9cd28b3e45",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "2a9a1fa44710c9ec9ca0603ec25e2a16ea7bef9c31c4b17dd2d08ed2c566d7f1",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 235,
+            "height": 251
+          }
+        }
+      },
+      "sourceReference": "dealers/verona-used-cars/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "1455d48d8433912d1d43d72fc9b39ef0967ddd1299793f6fe8ca33023be56596",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-4e0ea992-3344-4115-9ec3-339e83421589",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "246118dfc6e5b72bd4a93f6d12ddf735cf5811a76f02e191d71eaa576908bdd2",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 235,
+            "height": 253
+          }
+        }
+      },
+      "sourceReference": "dealers/verona-used-cars/branding/generated-mark-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "10e1f39315b0fe359ea7cd059e0cdf935f997c2160134cc497bb0fa0353a3291",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-4e0ea992-3344-4115-9ec3-339e83421589",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "246118dfc6e5b72bd4a93f6d12ddf735cf5811a76f02e191d71eaa576908bdd2",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 235,
+            "height": 253
+          }
+        }
+      },
+      "sourceReference": "dealers/verona-used-cars/branding/generated-mark-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "df206c893f602c4c713848a33d82c1182a323c3cffc956b938e2c12ab0018635",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-d007b97f-1f49-4957-8de0-2b9cd28b3e45",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "2a9a1fa44710c9ec9ca0603ec25e2a16ea7bef9c31c4b17dd2d08ed2c566d7f1",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 235,
+          "height": 251
+        }
+      }
+    }
+  }
+}

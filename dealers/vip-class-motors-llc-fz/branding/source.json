@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "dealer": "vip-class-motors-llc-fz",
-  "status": "research-required",
+  "status": "reviewed-imagegen-proposal",
   "realLogoFirst": true,
   "publicSources": [
     {
@@ -10,7 +10,148 @@
     }
   ],
   "originals": [],
-  "creationMethod": null,
+  "creationMethod": "imagegen-proposal",
   "dealerApproved": false,
-  "generatedInputs": null
+  "generatedInputs": {
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "master": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "dc242fc0eaf95b9b31bc7bdfc9cfc3c0b7b1ef10fef201b4d20e0a522fb95d55",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-bce946ed-8aaf-4ff8-bb7e-c80ef9c6ab57",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark-light.png",
+      "sha256": "7192e0805accd5d0cb1db4858e75ddedf1dcd9dc98115ddd9bf105ab62621172",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-bce946ed-8aaf-4ff8-bb7e-c80ef9c6ab57",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "dc242fc0eaf95b9b31bc7bdfc9cfc3c0b7b1ef10fef201b4d20e0a522fb95d55",
+          "operation": "isolate-reviewed-left-emblem-connected-components",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 435,
+            "height": 315
+          },
+          "selection": {
+            "alphaThreshold": 96,
+            "minXBefore": 300,
+            "minPixels": 20,
+            "antialiasNeighborPixels": 1,
+            "components": 6
+          }
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-dark.png",
+      "sha256": "8fef9b73fc4a3d289e702d65c64a1519d58eda8d130cc03df892ebcb3f9d80d2",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-05a00633-23f2-49f9-b095-81343ad782da",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "f62d7cc837d01464f6ff451af7c9302f19407bc0bcffdf7f5684f14db111cb78",
+          "operation": "isolate-reviewed-left-emblem-connected-components",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 435,
+            "height": 320
+          },
+          "selection": {
+            "alphaThreshold": 96,
+            "minXBefore": 300,
+            "minPixels": 20,
+            "antialiasNeighborPixels": 1,
+            "components": 6
+          }
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "dc242fc0eaf95b9b31bc7bdfc9cfc3c0b7b1ef10fef201b4d20e0a522fb95d55",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-bce946ed-8aaf-4ff8-bb7e-c80ef9c6ab57",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "f62d7cc837d01464f6ff451af7c9302f19407bc0bcffdf7f5684f14db111cb78",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-05a00633-23f2-49f9-b095-81343ad782da",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "f62d7cc837d01464f6ff451af7c9302f19407bc0bcffdf7f5684f14db111cb78",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-05a00633-23f2-49f9-b095-81343ad782da",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewKind": "agent-visual-review",
+      "humanReview": false,
+      "dealerApproval": false,
+      "backgrounds": {
+        "onLight": "#ffffff",
+        "onDark": "#111113",
+        "onAccent": "#c40101"
+      },
+      "wordmarkWidths": [
+        220,
+        240
+      ],
+      "notes": "Exact reviewed Image Gen pair; native masters and generation provenance retained. Compact rasters cropped from the actual left symbol."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-22T23:42:46.338Z",
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#c40101"
+      ],
+      "widths": [
+        32,
+        48,
+        64
+      ],
+      "notes": "Left emblem components selected from reviewed horizontal PNG pair, adjacent lettering excluded; native compact/favicon QA independent."
+    }
+  },
+  "sourceBlockers": [],
+  "artworkProvenance": {
+    "path": "branding/artwork-provenance.json",
+    "sha256": "9a9fbfa64ec2b1fd24187ab1f8c832d9b15cbc272efbcf56a90a0a7f6d534308",
+    "manifestSha256": "d25e9cee768a885052ac0a8df220d843c9b9c6f6f120d722705bead1cc99e694",
+    "nativeMasters": [
+      {
+        "path": "branding/native-generated-on-light.png",
+        "sha256": "5789af2870818ae7ca728aebac4659ea9552391f3dedfe8f411b002e09b4a86a"
+      },
+      {
+        "path": "branding/native-generated-on-dark.png",
+        "sha256": "5a348c65a1811e5ec07f0357b002771111613262a04dc9dd213dcdf1ed22ed4b"
+      }
+    ]
+  }
 }

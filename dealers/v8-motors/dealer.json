@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "V8 Motors",
     "publicOrigin": "https://v8-motors.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "8bbc47fb414e99d10c0aaa1ddc681a36ecfb3487f8424f1b3cc24c3108aa9a96",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "1eb78a70cd76676c6c6fd91458edb09d03096bdbbd0a15215946c46f76057ddf"
+    }
   }
 }

@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "ae-dubai-zohaan-motors-fzco",
+  "slug": "zohaan-motors-fzco",
+  "artworkDirectory": "zohaan-motors-fzco",
+  "name": "Zohaan Motors FZCO",
+  "renderedName": "Zohaan Motors FZCO",
+  "kind": "independent-website-logo-proposal",
+  "dealerApproved": false,
+  "ownerApproved": false,
+  "sourceEvidence": [
+    {
+      "url": "https://www.dubicars.com/dealers/dubai-zohaan-motors-fzco-3146",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "retainedOriginalsUnchanged": true,
+  "variants": {
+    "on-light": {
+      "path": "logo-on-light.png",
+      "sha256": "8d407de0195f9455b5a7368002f9aa982ffc8617d2dec9161a2172703f1b3ab9",
+      "width": 1024,
+      "height": 309,
+      "transparentFraction": 0.7224571450242718,
+      "master": {
+        "path": "generated-on-light.png",
+        "sha256": "732c07e451e2170e979b07963ca6dc07d4fcbcf3031b6c599f54399808286034",
+        "width": 2146,
+        "height": 733
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-67eba4e6-b84e-46c8-b0c7-84abcf9dd068",
+        "prompt": "Create one professional horizontal automotive dealership logo proposal for Zohaan Motors FZCO. Required exact text, uppercase: ZOHAAN MOTORS FZCO. Every word must be present and spelled precisely; use sensible primary name and smaller descriptor hierarchy without tiny lettering. Produce a polished original identity with a clever rounded negative-space monogram, with an open confident silhouette. Initials ZF may inform the emblem. Emblem left, full clear name to the right, compact and balanced for a website header. Avoid overused shield and generic car silhouettes; no manufacturer badges. Clean modern lettering with careful kerning and strong legibility. All text is deep charcoal black, appropriate on a white/light header. One restrained red or gold accent may appear inside the emblem only; no pale text. Flat crisp edges, a small number of solid shapes, no chrome, no lighting, no shadow, no texture, no gradient. Genuine transparent alpha background, isolated logo with no background box, no grid, no checkerboard painted into pixels. No slogan, contact info, website, watermark, mockup, photograph, extra concept, or duplicate logo. Deliver exactly one horizontal full logo. This is an independent website identity proposal, not a claim of adopted branding.",
+        "reference": null
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 21,
+          "top": 40,
+          "width": 2110,
+          "height": 637
+        }
+      }
+    },
+    "on-dark": {
+      "path": "logo-on-dark.png",
+      "sha256": "02bbdb03c7bf0d5aa1b63187378c010699c6176358a4c74da6f7079c8a12f37a",
+      "width": 1024,
+      "height": 315,
+      "transparentFraction": 0.5973741319444444,
+      "master": {
+        "path": "generated-on-dark.png",
+        "sha256": "6f6c1abf1086a202c73df0a105c710c8b636463b3a50d7748f74a7b01c876ce3",
+        "width": 2146,
+        "height": 733
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-384e711c-71ce-4c4b-877c-4eb1cc0bc2fb",
+        "prompt": "Create the matching light-on-dark production variant of the exact supplied logo. Preserve precisely the same emblem, geometry, spelling, word count, typographic hierarchy, proportions, layout and spacing. Required exact text: ZOHAAN MOTORS FZCO. Change EVERY letter, including all secondary descriptor words and legal suffixes, to solid white so it is legible over a dark or red website header. Change the charcoal portions of the emblem to white. Retain the small red/gold emblem accent only if it contrasts clearly against a dark header. True transparent alpha background; do not paint a dark rectangle or checkerboard. Flat clean edges, no glows, shadows, bevels, textures, gradients, new artwork, new icon, extra text or mockup. Deliver one horizontal matching logo, fully legible.",
+        "reference": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-67eba4e6-b84e-46c8-b0c7-84abcf9dd068.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 22,
+          "top": 32,
+          "width": 2103,
+          "height": 647
+        }
+      }
+    }
+  },
+  "review": {
+    "status": "artwork-visually-reviewed",
+    "alpha": "all exports measured as genuine transparent nonempty PNGs",
+    "spelling": "English wordmark inspected; source-bound display aliases retained",
+    "compact": "Horizontal logos only. Interactive 32/48/64px gallery preview is provided; separate compact/favicon artwork remains part of dealer-pack preparation.",
+    "sixDesigns": "not-yet-integrated-or-rendered",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "reviewer": "Codex visual inspection",
+    "header": "All 196 paired PNGs inspected at 240x64 on white, #111113 and #c40101",
+    "evidence": "final-review-08.png"
+  },
+  "releaseReady": false,
+  "artworkHolds": [],
+  "artworkReadyForIntegration": true
+}

@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "ae-dubai-us-motors",
+  "slug": "us-motors",
+  "artworkDirectory": "us-motors",
+  "name": "US Motors",
+  "renderedName": "US Motors",
+  "kind": "reference-guided-website-logo-proposal",
+  "dealerApproved": false,
+  "ownerApproved": false,
+  "sourceEvidence": [
+    {
+      "url": "https://www.oneclickdrive.com/company/dubai/us-motors",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "retainedOriginalsUnchanged": true,
+  "variants": {
+    "on-light": {
+      "path": "logo-on-light.png",
+      "sha256": "20bc63809bbcd638900a23349ba411ffa2e1b38c70c092c58dc871df3f937918",
+      "width": 1024,
+      "height": 298,
+      "transparentFraction": 0.5908301436661074,
+      "master": {
+        "path": "generated-on-light.png",
+        "sha256": "9cec294c1274a51fc16a1b3bbeecd96a85cbefa31d2cc106d086dee8b3e0cca0",
+        "width": 1838,
+        "height": 856
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-7ef8c296-e37b-49a6-8ec4-631737f81a37",
+        "prompt": "Create one professional transparent horizontal website logo by refining the supplied dealer logo reference. Preserve the reference gold circular sun behind the black car silhouette, simplify to two or three flat shapes, remove all manufacturer badges. Add a bold clean US MOTORS wordmark at the right. Avoid detailed wheels/headlights, shading or stock icon texture. Required exact English words, with accurate spelling: US MOTORS. Maintain the reference's recognizable identity and proportion while making it legible and polished at a 220px wide website header. Use a sensible primary name and descriptor hierarchy. All text deep charcoal black for white/light backgrounds; retain restrained reference accent colors in the emblem only. Genuine transparent alpha, isolated logo, tightly balanced wide composition. Flat crisp shapes, no chrome, bevel, shadow, glow, texture, gradients, background rectangle or checkerboard, photo, mockup, contact details, website, slogan, watermark, multiple concepts or duplicate. Deliver exactly one logo. This is a reference-guided artwork proposal, not proof of business adoption.",
+        "reference": "C:/Users/radev/AppData/Local/Temp/cars-astra-public-brand-evidence-20261021/us-motors-oneclick-original-0.jpg"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 20,
+          "top": 149,
+          "width": 1797,
+          "height": 523
+        }
+      }
+    },
+    "on-dark": {
+      "path": "logo-on-dark.png",
+      "sha256": "b607eb803eba86ec613abb7cddef1b290aacfda8671ed9a1f4e9770b94c6001a",
+      "width": 1024,
+      "height": 300,
+      "transparentFraction": 0.6060774739583333,
+      "master": {
+        "path": "generated-on-dark.png",
+        "sha256": "142e1d03f52e61175861a55639635c4eab47928dc6dee798dae2428d35375518",
+        "width": 1838,
+        "height": 856
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-d339bfd8-59b7-42e8-b298-1e2b4adf5b4b",
+        "prompt": "Create the matching light-on-dark production variant of the exact supplied logo. Preserve precisely the same emblem, geometry, spelling, word count, typographic hierarchy, proportions, layout and spacing. Required exact text: US MOTORS. Change EVERY letter, including all secondary descriptor words and legal suffixes, to solid white so it is legible over a dark or red website header. Change the charcoal portions of the emblem to white. Retain the small red/gold emblem accent only if it contrasts clearly against a dark header. True transparent alpha background; do not paint a dark rectangle or checkerboard. Flat clean edges, no glows, shadows, bevels, textures, gradients, new artwork, new icon, extra text or mockup. Deliver one horizontal matching logo, fully legible.",
+        "reference": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-7ef8c296-e37b-49a6-8ec4-631737f81a37.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 21,
+          "top": 146,
+          "width": 1797,
+          "height": 526
+        }
+      }
+    }
+  },
+  "review": {
+    "status": "artwork-visually-reviewed",
+    "alpha": "all exports measured as genuine transparent nonempty PNGs",
+    "spelling": "English wordmark inspected; source-bound display aliases retained",
+    "compact": "Horizontal logos only. Interactive 32/48/64px gallery preview is provided; separate compact/favicon artwork remains part of dealer-pack preparation.",
+    "sixDesigns": "not-yet-integrated-or-rendered",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "reviewer": "Codex visual inspection",
+    "header": "All 196 paired PNGs inspected at 240x64 on white, #111113 and #c40101",
+    "evidence": "final-review-07.png"
+  },
+  "releaseReady": false,
+  "originalReference": {
+    "path": "_references/us-motors.jpg",
+    "sha256": "08c604b55747751253b5d3a868bdbf6cdc47d3aa710af2e0bb5a890483f30a5a",
+    "sourceUrl": "https://static.oneclickdrive.com/application/views/img/company/11.jpg",
+    "observedAt": "2026-10-23",
+    "adaptation": "English website adaptation; original retained unchanged; adoption not claimed"
+  },
+  "artworkHolds": [],
+  "artworkReadyForIntegration": true
+}

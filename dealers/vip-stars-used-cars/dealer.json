@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "VIP Stars Used Cars",
     "publicOrigin": "https://vip-stars-used-cars.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "8e6fa5ee7e0ca915b4338bb4bfc081c1af3c1f13357f85e2aafb0d7e69dc809e",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "8df19f63137186d103417ef444664344076133eb3fe3a4cb4356819d7860c3bf"
+    }
   }
 }

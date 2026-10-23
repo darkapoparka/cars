@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "VIP Class Motors LLC FZ",
     "publicOrigin": "https://vip-class-motors-llc-fz.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "dc242fc0eaf95b9b31bc7bdfc9cfc3c0b7b1ef10fef201b4d20e0a522fb95d55",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "4a61ffda7024442eeabd851181b1fda98e134591dd8f85b3e117d97299116166"
+    }
   }
 }

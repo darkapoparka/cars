@@ -1,0 +1,305 @@
+{
+  "schemaVersion": 1,
+  "dealer": "v8-motors",
+  "reviewed": true,
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "46ea39f7488f1025b191f2d9583a9dbb0020d9af312e394ce3aae7ff7e198e68",
+      "sourceSha256": "8bbc47fb414e99d10c0aaa1ddc681a36ecfb3487f8424f1b3cc24c3108aa9a96"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "d15bfd5001d7cc4bb71a503e63ad8899df6e61df8f5be13d3992e7f03f83b5e5",
+      "sourceSha256": "0a6506f7a3df98ecf9c5b9235104d3df8d36b74fb3c2c12eb5492de9f55e2371"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "d15bfd5001d7cc4bb71a503e63ad8899df6e61df8f5be13d3992e7f03f83b5e5",
+      "sourceSha256": "0a6506f7a3df98ecf9c5b9235104d3df8d36b74fb3c2c12eb5492de9f55e2371"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "8bbc47fb414e99d10c0aaa1ddc681a36ecfb3487f8424f1b3cc24c3108aa9a96",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-497d1b01-516d-4f04-b075-e83caab45a42",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "1eb78a70cd76676c6c6fd91458edb09d03096bdbbd0a15215946c46f76057ddf",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-497d1b01-516d-4f04-b075-e83caab45a42",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "8bbc47fb414e99d10c0aaa1ddc681a36ecfb3487f8424f1b3cc24c3108aa9a96",
+        "operation": "isolate-reviewed-left-emblem-connected-components",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 270,
+          "height": 194
+        },
+        "selection": {
+          "alphaThreshold": 96,
+          "minXBefore": 248,
+          "minPixels": 20,
+          "antialiasNeighborPixels": 1,
+          "components": 5
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "b6bc3ba3b004e5cb1ab9792042318390db7aa2a870e123d8b92cc4a321c98338"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "8bbc47fb414e99d10c0aaa1ddc681a36ecfb3487f8424f1b3cc24c3108aa9a96",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-497d1b01-516d-4f04-b075-e83caab45a42",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/v8-motors/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "0a6506f7a3df98ecf9c5b9235104d3df8d36b74fb3c2c12eb5492de9f55e2371",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-08793e68-37e1-4a7b-9eb9-6555772ad531",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/v8-motors/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "0a6506f7a3df98ecf9c5b9235104d3df8d36b74fb3c2c12eb5492de9f55e2371",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-08793e68-37e1-4a7b-9eb9-6555772ad531",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/v8-motors/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "8bbc47fb414e99d10c0aaa1ddc681a36ecfb3487f8424f1b3cc24c3108aa9a96",
+      "sha256": "8bbc47fb414e99d10c0aaa1ddc681a36ecfb3487f8424f1b3cc24c3108aa9a96",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 194
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "0a6506f7a3df98ecf9c5b9235104d3df8d36b74fb3c2c12eb5492de9f55e2371",
+      "sha256": "0a6506f7a3df98ecf9c5b9235104d3df8d36b74fb3c2c12eb5492de9f55e2371",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 199
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "0a6506f7a3df98ecf9c5b9235104d3df8d36b74fb3c2c12eb5492de9f55e2371",
+      "sha256": "0a6506f7a3df98ecf9c5b9235104d3df8d36b74fb3c2c12eb5492de9f55e2371",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 199
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "60978bf06df28534a2fa666ee43656c4922ca6c9e4003c86857dd7be9604606a",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-497d1b01-516d-4f04-b075-e83caab45a42",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "8bbc47fb414e99d10c0aaa1ddc681a36ecfb3487f8424f1b3cc24c3108aa9a96",
+          "operation": "isolate-reviewed-left-emblem-connected-components",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 270,
+            "height": 194
+          },
+          "selection": {
+            "alphaThreshold": 96,
+            "minXBefore": 248,
+            "minPixels": 20,
+            "antialiasNeighborPixels": 1,
+            "components": 5
+          }
+        }
+      },
+      "sourceReference": "dealers/v8-motors/branding/generated-mark-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "00067d16c69d4d12a73ca7a02ab1ed1d6fd918ce1d93db916087681740e8d945",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-08793e68-37e1-4a7b-9eb9-6555772ad531",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "0a6506f7a3df98ecf9c5b9235104d3df8d36b74fb3c2c12eb5492de9f55e2371",
+          "operation": "isolate-reviewed-left-emblem-connected-components",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 270,
+            "height": 199
+          },
+          "selection": {
+            "alphaThreshold": 96,
+            "minXBefore": 248,
+            "minPixels": 20,
+            "antialiasNeighborPixels": 1,
+            "components": 6
+          }
+        }
+      },
+      "sourceReference": "dealers/v8-motors/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "1eb78a70cd76676c6c6fd91458edb09d03096bdbbd0a15215946c46f76057ddf",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-497d1b01-516d-4f04-b075-e83caab45a42",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "8bbc47fb414e99d10c0aaa1ddc681a36ecfb3487f8424f1b3cc24c3108aa9a96",
+          "operation": "isolate-reviewed-left-emblem-connected-components",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 270,
+            "height": 194
+          },
+          "selection": {
+            "alphaThreshold": 96,
+            "minXBefore": 248,
+            "minPixels": 20,
+            "antialiasNeighborPixels": 1,
+            "components": 5
+          }
+        }
+      },
+      "sourceReference": "dealers/v8-motors/branding/generated-mark-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "b6bc3ba3b004e5cb1ab9792042318390db7aa2a870e123d8b92cc4a321c98338",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-497d1b01-516d-4f04-b075-e83caab45a42",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "8bbc47fb414e99d10c0aaa1ddc681a36ecfb3487f8424f1b3cc24c3108aa9a96",
+          "operation": "isolate-reviewed-left-emblem-connected-components",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 270,
+            "height": 194
+          },
+          "selection": {
+            "alphaThreshold": 96,
+            "minXBefore": 248,
+            "minPixels": 20,
+            "antialiasNeighborPixels": 1,
+            "components": 5
+          }
+        }
+      },
+      "sourceReference": "dealers/v8-motors/branding/generated-mark-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "68271416328278ba212f1745d01e8c92b57d98b180e976f0ca566e41e96d77c1",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-08793e68-37e1-4a7b-9eb9-6555772ad531",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "0a6506f7a3df98ecf9c5b9235104d3df8d36b74fb3c2c12eb5492de9f55e2371",
+        "operation": "isolate-reviewed-left-emblem-connected-components",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 270,
+          "height": 199
+        },
+        "selection": {
+          "alphaThreshold": 96,
+          "minXBefore": 248,
+          "minPixels": 20,
+          "antialiasNeighborPixels": 1,
+          "components": 6
+        }
+      }
+    }
+  }
+}

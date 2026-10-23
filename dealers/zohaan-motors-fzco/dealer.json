@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Zohaan Motors FZCO",
     "publicOrigin": "https://zohaan-motors-fzco.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "8d407de0195f9455b5a7368002f9aa982ffc8617d2dec9161a2172703f1b3ab9",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "356356b5489964b03384d54dbe8c3a635e9941ea3d357f8c78605a5750f3e92e"
+    }
   }
 }

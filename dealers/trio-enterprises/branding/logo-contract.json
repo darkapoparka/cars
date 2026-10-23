@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "dealer": "trio-enterprises",
+  "reviewed": true,
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "3a9f39a68522e687c545f50f136328221013ebd4ff65f7aec0f042b118d9c65d",
+      "sourceSha256": "0368fcce5f2e50072c0ccd8e8876247853e1b9a4da5619db89d11e71b45add52"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "d235e2b43094d9d7f1c9928897d26f4a1278798e8bfa4750b4c92dac8c495736",
+      "sourceSha256": "20d200c35bfa70e6e10a1f59593d1608487532e707bca73117b51b744e6558dd"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "d235e2b43094d9d7f1c9928897d26f4a1278798e8bfa4750b4c92dac8c495736",
+      "sourceSha256": "20d200c35bfa70e6e10a1f59593d1608487532e707bca73117b51b744e6558dd"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "0368fcce5f2e50072c0ccd8e8876247853e1b9a4da5619db89d11e71b45add52",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-7a668bed-8078-426d-8e05-b57198a4e503",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "580fede518c6533ed30541e66a13dd7b2941b7abf8b53deceafe58b3f2d0af24",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-7a668bed-8078-426d-8e05-b57198a4e503",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "0368fcce5f2e50072c0ccd8e8876247853e1b9a4da5619db89d11e71b45add52",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 325,
+          "height": 331
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "c74b415200b849c8ef05cf8c8383e679300a4c7f9ca9486ed283a17f29844c0c"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "0368fcce5f2e50072c0ccd8e8876247853e1b9a4da5619db89d11e71b45add52",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-7a668bed-8078-426d-8e05-b57198a4e503",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/trio-enterprises/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "20d200c35bfa70e6e10a1f59593d1608487532e707bca73117b51b744e6558dd",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-df1a9dfd-7f71-43b9-be24-8cc7c8e4814f",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/trio-enterprises/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "20d200c35bfa70e6e10a1f59593d1608487532e707bca73117b51b744e6558dd",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-df1a9dfd-7f71-43b9-be24-8cc7c8e4814f",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/trio-enterprises/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "0368fcce5f2e50072c0ccd8e8876247853e1b9a4da5619db89d11e71b45add52",
+      "sha256": "0368fcce5f2e50072c0ccd8e8876247853e1b9a4da5619db89d11e71b45add52",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 331
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "20d200c35bfa70e6e10a1f59593d1608487532e707bca73117b51b744e6558dd",
+      "sha256": "20d200c35bfa70e6e10a1f59593d1608487532e707bca73117b51b744e6558dd",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 331
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "20d200c35bfa70e6e10a1f59593d1608487532e707bca73117b51b744e6558dd",
+      "sha256": "20d200c35bfa70e6e10a1f59593d1608487532e707bca73117b51b744e6558dd",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 331
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "0566a36ed3cf02731cded8944a30c75dc7e9998370a03869c4408ee1da56b80a",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-7a668bed-8078-426d-8e05-b57198a4e503",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "0368fcce5f2e50072c0ccd8e8876247853e1b9a4da5619db89d11e71b45add52",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 325,
+            "height": 331
+          }
+        }
+      },
+      "sourceReference": "dealers/trio-enterprises/branding/generated-mark-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "eb8014ee5a5f27610c5b1635c9f28744bc8449f2450e70778305ba8cd78ee351",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-df1a9dfd-7f71-43b9-be24-8cc7c8e4814f",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "20d200c35bfa70e6e10a1f59593d1608487532e707bca73117b51b744e6558dd",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 325,
+            "height": 331
+          }
+        }
+      },
+      "sourceReference": "dealers/trio-enterprises/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "580fede518c6533ed30541e66a13dd7b2941b7abf8b53deceafe58b3f2d0af24",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-7a668bed-8078-426d-8e05-b57198a4e503",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "0368fcce5f2e50072c0ccd8e8876247853e1b9a4da5619db89d11e71b45add52",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 325,
+            "height": 331
+          }
+        }
+      },
+      "sourceReference": "dealers/trio-enterprises/branding/generated-mark-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "c74b415200b849c8ef05cf8c8383e679300a4c7f9ca9486ed283a17f29844c0c",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-7a668bed-8078-426d-8e05-b57198a4e503",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "0368fcce5f2e50072c0ccd8e8876247853e1b9a4da5619db89d11e71b45add52",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 325,
+            "height": 331
+          }
+        }
+      },
+      "sourceReference": "dealers/trio-enterprises/branding/generated-mark-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "70bcd7b1d8ea5988f06d7edc20b5d2a82fd01e4aab786c686b91cb255c40391f",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-df1a9dfd-7f71-43b9-be24-8cc7c8e4814f",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "20d200c35bfa70e6e10a1f59593d1608487532e707bca73117b51b744e6558dd",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 325,
+          "height": 331
+        }
+      }
+    }
+  }
+}
