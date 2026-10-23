@@ -460,7 +460,7 @@ test('six-design packages inject the native locale presentation once without ano
   // A source template may already render its own chevron. Compact mode must not
   // paint a second one on top of the shared select background icon.
   assert.ok(presentation.textContent.includes('dialog[data-locale-dialog] .cars-locale-select-arrow,dialog[data-locale-dialog] [data-locale-country-chevron]{display:none!important}'));
-  assert.equal((presentation.textContent.match(/background-image:url\\("data:image\\/svg\\+xml/g)??[]).length,1,
+  assert.equal(presentation.textContent.split('background-image:url("data:image/svg+xml').length - 1, 1,
     'Compact mode paints one shared SVG arrow, not one per native template');
   // Import renders its labelled fields directly under dialog rather than inside
   // the wrapped Auto Best/Modern containers. The shared modal must also style
