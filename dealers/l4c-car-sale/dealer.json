@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "L4C Car Sale",
     "publicOrigin": "https://l4c-car-sale.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "5efa5b221e9b4fdc958cca1c8fcc9a867a06fcc4ae1dd7ceb79f024c7e681576",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "987216fecbd79b0d6f26d124f87fbb713239312a733c65bbd6272d82070c0eef"
+    }
   }
 }

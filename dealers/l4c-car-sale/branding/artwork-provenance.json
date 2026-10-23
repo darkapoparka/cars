@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "gb-west-bromwich-l4c-car-sale",
+  "slug": "l4c-car-sale",
+  "name": "L4C Car Sale",
+  "kind": "independent-website-logo-proposal",
+  "dealerApproved": false,
+  "ownerApproved": false,
+  "sourceEvidence": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/Kobani-Motors",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.cazoo.co.uk/dealers/l4c-car-sale-19538/",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "retainedOriginalsUnchanged": true,
+  "variants": {
+    "on-light": {
+      "path": "logo-on-light.png",
+      "sha256": "5efa5b221e9b4fdc958cca1c8fcc9a867a06fcc4ae1dd7ceb79f024c7e681576",
+      "master": {
+        "path": "generated-on-light.png",
+        "sha256": "9f1cf7993e5a4c0c631af050d4e8b30687aa5b2a0e14ffb68a3c3636751df3f5",
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputFile": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-6d23575b-e4f2-40d3-bdc4-ba5e3ef541f7.png",
+        "outputReference": "exec-6d23575b-e4f2-40d3-bdc4-ba5e3ef541f7",
+        "prompt": "Use case: logo-brand. Create ONE final-quality transparent dark-ink horizontal logo for the exact name L4C CAR SALE, an independent automotive website proposal. A distinctive bold L4C geometric letter-symbol on the left, with one clever shared-stem construction and open counters; easily recognizable as L4C at 32px, no microscopic details. Full exact text L4C CAR SALE on the right in confident, clean, optically spaced contemporary sans-serif uppercase lettering, one horizontal line, a balanced natural composition. Solid black/charcoal artwork, crisp vector-like edges and restrained professional design. No car silhouette, generic road swoosh, shield, circular enclosure, manufacturer icon, gradient, fake chrome, texture, shadow, watermark, extra slogan, mockup or presentation board. True alpha transparency with no background shape or checkerboard. Wide landscape canvas, artwork occupying most of width and height with small approximately 5% outer margins. Preserve exact text and number 4. Only one logo, not a grid.",
+        "reference": null
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 3,
+          "top": 135,
+          "width": 2169,
+          "height": 429
+        }
+      },
+      "metadata": {
+        "format": "png",
+        "mediaType": "image/png",
+        "size": 72804,
+        "width": 1024,
+        "height": 203,
+        "space": "srgb",
+        "channels": 4,
+        "depth": "uchar",
+        "density": 72,
+        "isProgressive": false,
+        "isPalette": false,
+        "bitsPerSample": 8,
+        "hasProfile": false,
+        "hasAlpha": true,
+        "autoOrient": {
+          "width": 1024,
+          "height": 203
+        }
+      }
+    },
+    "on-dark": {
+      "path": "logo-on-dark.png",
+      "sha256": "0749650ae1409ebfabd59244038e4fc72876e163bef6ce25d2fc6f91ac57861d",
+      "master": {
+        "path": "generated-on-dark.png",
+        "sha256": "7c5822e64015d6ab97ee0c1440741f30d1bafd3aac577a6289d890044415917b",
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputFile": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-eae8299a-a472-4b98-9e39-8bd61f0d0754.png",
+        "outputReference": "exec-eae8299a-a472-4b98-9e39-8bd61f0d0754",
+        "prompt": "Create the clean matching light-ink version of the supplied logo for dark website headers. Exact text L4C CAR SALE; slash means an existing line break, do not add a slash character. Preserve the existing symbol, typography, text line positions, spacing and overall shape closely. Foreground must be clean smooth solid pure white with normal anti-aliased edges. All letter interiors are solid smooth ink; absolutely no distress, grain, scratch marks, cutout fragments, holes, stippling, texture or black outline. Genuine alpha-transparent background with open counters, no backdrop or checkerboard. No gradients, lighting, shadow, extra text, border or mockup. One polished white horizontal logo only, use the reference identity. Keep a wide landscape composition with roughly 5% transparent padding.",
+        "reference": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-6d23575b-e4f2-40d3-bdc4-ba5e3ef541f7.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 2,
+          "top": 135,
+          "width": 2169,
+          "height": 428
+        }
+      },
+      "metadata": {
+        "format": "png",
+        "mediaType": "image/png",
+        "size": 80040,
+        "width": 1024,
+        "height": 202,
+        "space": "srgb",
+        "channels": 4,
+        "depth": "uchar",
+        "density": 72,
+        "isProgressive": false,
+        "isPalette": false,
+        "bitsPerSample": 8,
+        "hasProfile": false,
+        "hasAlpha": true,
+        "autoOrient": {
+          "width": 1024,
+          "height": 202
+        }
+      }
+    }
+  },
+  "review": {
+    "alpha": "all exports measured as genuine transparent nonempty PNGs",
+    "spelling": "English wordmark inspected; source-bound display aliases retained",
+    "header": "All 196 paired PNGs inspected at 240x64 on white, #111113 and #c40101",
+    "compact": "Horizontal logos only. Interactive 32/48/64px gallery preview is provided; separate compact/favicon artwork remains part of dealer-pack preparation.",
+    "sixDesigns": "not yet integrated or rendered",
+    "status": "artwork-visually-reviewed",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "reviewer": "Codex visual inspection",
+    "evidence": "final-review-01.png"
+  },
+  "releaseReady": false,
+  "artworkHolds": [],
+  "artworkReadyForIntegration": true
+}
