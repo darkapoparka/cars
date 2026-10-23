@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": false,
+  "reviewedAt": null,
+  "dealer": "speed-line-used-cars",
+  "dealerId": "ae-sharjah-speed-line-used-cars",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "review": {
+    "kind": "pending",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "method": "Draft identity only; run automated pack input review before building.",
+  "sources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/speed-line-used-cars",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/13054-jetour-x50-15-amt-147-hp-premium",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://auto.ae/speedline/",
+      "observedAt": "2026-10-18"
+    }
+  ]
+}
