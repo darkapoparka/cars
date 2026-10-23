@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "ae-sharjah-al-rukin-al-saudi-used-cars",
+  "slug": null,
+  "artworkDirectory": "ae-sharjah-al-rukin-al-saudi-used-cars",
+  "name": "Al Rukin Al Saudi Used Cars Trading",
+  "renderedName": "Al Rukin Al Saudi Used Cars Trading",
+  "kind": "independent-website-logo-proposal",
+  "dealerApproved": false,
+  "ownerApproved": false,
+  "sourceEvidence": [
+    {
+      "url": "https://auto.ae/alrukinalsaudi/",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://2gis.ae/sharjah/firm/70000001096950291",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "retainedOriginalsUnchanged": true,
+  "variants": {
+    "on-light": {
+      "path": "logo-on-light.png",
+      "sha256": "5280119fe11cbef281374acd05400f3718ec227a6f0c35c2a996a8e200c428bf",
+      "width": 1024,
+      "height": 214,
+      "transparentFraction": 0.6988582432827103,
+      "master": {
+        "path": "generated-on-light.png",
+        "sha256": "888fdb5cc4bf74b237faeb094a9cb288c6c2e8fd6e894dbc3c45b896bb06ebdd",
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-c9c7b85c-8794-4813-8e8c-6560cd2ba4fe",
+        "prompt": "Create one professional horizontal automotive dealership logo proposal for Al Rukin Al Saudi Used Cars Trading. Required exact text, uppercase: AL RUKIN AL SAUDI USED CARS TRADING. Every word must be present and spelled precisely; use sensible primary name and smaller descriptor hierarchy without tiny lettering. Produce a polished original identity with a clever rounded negative-space monogram, with an open confident silhouette. Initials RS may inform the emblem. Emblem left, full clear name to the right, compact and balanced for a website header. Avoid overused shield and generic car silhouettes; no manufacturer badges. Clean modern lettering with careful kerning and strong legibility. All text is deep charcoal black, appropriate on a white/light header. One restrained red or gold accent may appear inside the emblem only; no pale text. Flat crisp edges, a small number of solid shapes, no chrome, no lighting, no shadow, no texture, no gradient. Genuine transparent alpha background, isolated logo with no background box, no grid, no checkerboard painted into pixels. No slogan, contact info, website, watermark, mockup, photograph, extra concept, or duplicate logo. Deliver exactly one horizontal full logo. This is an independent website identity proposal, not a claim of adopted branding.",
+        "reference": null
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 0,
+          "top": 130,
+          "width": 2172,
+          "height": 454
+        }
+      }
+    },
+    "on-dark": {
+      "path": "logo-on-dark.png",
+      "sha256": "4898e08c5bd3cad44f8cc29dcad7c16b0632be7489b28eca3a6e0ae5deb79f3d",
+      "width": 1024,
+      "height": 215,
+      "transparentFraction": 0.569467659883721,
+      "master": {
+        "path": "generated-on-dark.png",
+        "sha256": "19f0109e87cf707a3d797b29a7766c4c5e2f2a31100a0baa44e1e71d98f2de25",
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-4a7ab749-535c-4e89-a590-71c96df21792",
+        "prompt": "Create the matching light-on-dark production variant of the exact supplied logo. Preserve precisely the same emblem, geometry, spelling, word count, typographic hierarchy, proportions, layout and spacing. Required exact text: AL RUKIN AL SAUDI USED CARS TRADING. Change EVERY letter, including all secondary descriptor words and legal suffixes, to solid white so it is legible over a dark or red website header. Change the charcoal portions of the emblem to white. Retain the small red/gold emblem accent only if it contrasts clearly against a dark header. True transparent alpha background; do not paint a dark rectangle or checkerboard. Flat clean edges, no glows, shadows, bevels, textures, gradients, new artwork, new icon, extra text or mockup. Deliver one horizontal matching logo, fully legible.",
+        "reference": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-c9c7b85c-8794-4813-8e8c-6560cd2ba4fe.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 0,
+          "top": 125,
+          "width": 2172,
+          "height": 455
+        }
+      }
+    }
+  },
+  "review": {
+    "status": "artwork-visually-reviewed",
+    "alpha": "all exports measured as genuine transparent nonempty PNGs",
+    "spelling": "English wordmark inspected; source-bound display aliases retained",
+    "compact": "Horizontal logos only. Interactive 32/48/64px gallery preview is provided; separate compact/favicon artwork remains part of dealer-pack preparation.",
+    "sixDesigns": "not-yet-integrated-or-rendered",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "reviewer": "Codex visual inspection",
+    "header": "All 196 paired PNGs inspected at 240x64 on white, #111113 and #c40101",
+    "evidence": "final-review-10.png"
+  },
+  "releaseReady": false,
+  "artworkHolds": [],
+  "artworkReadyForIntegration": true
+}

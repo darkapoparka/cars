@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "dealer": "ayman-khamis-motors-automobiles-trading-fze",
+  "reviewed": true,
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "ff9c5fd4d8a65f25344404efdf9631e2bdd4c971fb49fed289885ab548985e85",
+      "sourceSha256": "5c93d302f9f4f3761fa52b504cfe551b1484af2e69be935435b9baa46f055b39"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "83c355550b723bf4c04e51435682903fe606bd332effcee1e93d38372f1b8e48",
+      "sourceSha256": "e164180b6350237b66f0c32157de581374c2d8834d98930ae56102cd818c2a81"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "83c355550b723bf4c04e51435682903fe606bd332effcee1e93d38372f1b8e48",
+      "sourceSha256": "e164180b6350237b66f0c32157de581374c2d8834d98930ae56102cd818c2a81"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "5c93d302f9f4f3761fa52b504cfe551b1484af2e69be935435b9baa46f055b39",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-1a6d3679-18b4-4e82-98c6-a49ee9bb3634",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "6de46f6d5fb89214709b72233fdc3ea53d6648318c3ecbdccec6618b26d54831",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-1a6d3679-18b4-4e82-98c6-a49ee9bb3634",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "5c93d302f9f4f3761fa52b504cfe551b1484af2e69be935435b9baa46f055b39",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 260,
+          "height": 191
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "e4877dc1fb5de02f2e07400cdaee413b7903353b38f11020537fec41de4c8c86"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "5c93d302f9f4f3761fa52b504cfe551b1484af2e69be935435b9baa46f055b39",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1a6d3679-18b4-4e82-98c6-a49ee9bb3634",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/ayman-khamis-motors-automobiles-trading-fze/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "e164180b6350237b66f0c32157de581374c2d8834d98930ae56102cd818c2a81",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a1e1c249-dc07-4562-92e2-78ea4e4f74f8",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/ayman-khamis-motors-automobiles-trading-fze/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "e164180b6350237b66f0c32157de581374c2d8834d98930ae56102cd818c2a81",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a1e1c249-dc07-4562-92e2-78ea4e4f74f8",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/ayman-khamis-motors-automobiles-trading-fze/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "5c93d302f9f4f3761fa52b504cfe551b1484af2e69be935435b9baa46f055b39",
+      "sha256": "5c93d302f9f4f3761fa52b504cfe551b1484af2e69be935435b9baa46f055b39",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 191
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "e164180b6350237b66f0c32157de581374c2d8834d98930ae56102cd818c2a81",
+      "sha256": "e164180b6350237b66f0c32157de581374c2d8834d98930ae56102cd818c2a81",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 192
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "e164180b6350237b66f0c32157de581374c2d8834d98930ae56102cd818c2a81",
+      "sha256": "e164180b6350237b66f0c32157de581374c2d8834d98930ae56102cd818c2a81",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 192
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "fe5b3fe3e213010699c69e6a22a53fa1f98582d813999effff040f8dc6013719",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1a6d3679-18b4-4e82-98c6-a49ee9bb3634",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "5c93d302f9f4f3761fa52b504cfe551b1484af2e69be935435b9baa46f055b39",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 260,
+            "height": 191
+          }
+        }
+      },
+      "sourceReference": "dealers/ayman-khamis-motors-automobiles-trading-fze/branding/generated-mark-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "599da597c01a4fa4739dc596abfad010a051c44a4f6cb5ca9f99cdc74b10a8fb",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a1e1c249-dc07-4562-92e2-78ea4e4f74f8",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "e164180b6350237b66f0c32157de581374c2d8834d98930ae56102cd818c2a81",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 260,
+            "height": 192
+          }
+        }
+      },
+      "sourceReference": "dealers/ayman-khamis-motors-automobiles-trading-fze/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "6de46f6d5fb89214709b72233fdc3ea53d6648318c3ecbdccec6618b26d54831",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1a6d3679-18b4-4e82-98c6-a49ee9bb3634",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "5c93d302f9f4f3761fa52b504cfe551b1484af2e69be935435b9baa46f055b39",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 260,
+            "height": 191
+          }
+        }
+      },
+      "sourceReference": "dealers/ayman-khamis-motors-automobiles-trading-fze/branding/generated-mark-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "e4877dc1fb5de02f2e07400cdaee413b7903353b38f11020537fec41de4c8c86",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1a6d3679-18b4-4e82-98c6-a49ee9bb3634",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "5c93d302f9f4f3761fa52b504cfe551b1484af2e69be935435b9baa46f055b39",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 260,
+            "height": 191
+          }
+        }
+      },
+      "sourceReference": "dealers/ayman-khamis-motors-automobiles-trading-fze/branding/generated-mark-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "9f54632e40f5e7381276a28bf03de988871adb21fecf4d45de05ad0e60667df0",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-a1e1c249-dc07-4562-92e2-78ea4e4f74f8",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "e164180b6350237b66f0c32157de581374c2d8834d98930ae56102cd818c2a81",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 260,
+          "height": 192
+        }
+      }
+    }
+  }
+}

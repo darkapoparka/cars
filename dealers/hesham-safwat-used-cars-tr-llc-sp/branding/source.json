@@ -1,0 +1,147 @@
+{
+  "schemaVersion": 1,
+  "dealer": "hesham-safwat-used-cars-tr-llc-sp",
+  "status": "reviewed-imagegen-proposal",
+  "realLogoFirst": true,
+  "publicSources": [
+    {
+      "url": "https://auto.ae/heshamsafwatusedcars/",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/8279-kia-pegas-14-at-95-hp-lx",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "originals": [],
+  "creationMethod": "imagegen-proposal",
+  "dealerApproved": false,
+  "generatedInputs": {
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "master": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "3396039fcab21907152e5ddf91f508191fd07b4be16a94cc63f7f46a6547c80e",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-ee60d08c-c80b-4528-bcd4-ef2653a8576c",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark-light.png",
+      "sha256": "d20aee36cdb12d53325dc53397c78ebd49ea07863761e2aac740ce3b6d4bc391",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-ee60d08c-c80b-4528-bcd4-ef2653a8576c",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "3396039fcab21907152e5ddf91f508191fd07b4be16a94cc63f7f46a6547c80e",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 305,
+            "height": 217
+          }
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-dark.png",
+      "sha256": "2ed13b6c3cf8e93221999ec5b94e4bf88b6fa0496f84754c59a1b9366cefb447",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-9c9e8547-0d22-4eab-9a95-6ea91966a024",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "e009d14a5f80ae4f76bafc4b584887db981fe6c6db61977aa80c86bde496dac1",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 305,
+            "height": 214
+          }
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "3396039fcab21907152e5ddf91f508191fd07b4be16a94cc63f7f46a6547c80e",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-ee60d08c-c80b-4528-bcd4-ef2653a8576c",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "e009d14a5f80ae4f76bafc4b584887db981fe6c6db61977aa80c86bde496dac1",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-9c9e8547-0d22-4eab-9a95-6ea91966a024",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "e009d14a5f80ae4f76bafc4b584887db981fe6c6db61977aa80c86bde496dac1",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-9c9e8547-0d22-4eab-9a95-6ea91966a024",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewKind": "agent-visual-review",
+      "humanReview": false,
+      "dealerApproval": false,
+      "backgrounds": {
+        "onLight": "#ffffff",
+        "onDark": "#111113",
+        "onAccent": "#c40101"
+      },
+      "wordmarkWidths": [
+        220,
+        240
+      ],
+      "notes": "Exact reviewed Image Gen pair; native masters and generation provenance retained. Compact rasters cropped from the actual left symbol."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-22T23:42:46.338Z",
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#c40101"
+      ],
+      "widths": [
+        32,
+        48,
+        64
+      ],
+      "notes": "Left symbol cropped from reviewed horizontal variants; native rendering must independently qualify."
+    }
+  },
+  "sourceBlockers": [],
+  "artworkProvenance": {
+    "path": "branding/artwork-provenance.json",
+    "sha256": "697342654e134224895fbdf5b34f1d0af2e8a00f729581edd25b42860f1aafed",
+    "manifestSha256": "d25e9cee768a885052ac0a8df220d843c9b9c6f6f120d722705bead1cc99e694",
+    "nativeMasters": [
+      {
+        "path": "branding/native-generated-on-light.png",
+        "sha256": "10dbf7a2ecac689246e2674d84e89154766a439a0559ce00df1bda5f1592e1a1"
+      },
+      {
+        "path": "branding/native-generated-on-dark.png",
+        "sha256": "9f1c172c09b219f3bfd54cd5e7c9f2d163e0b6706d9f0d95e2c03553f95ab8ae"
+      }
+    ]
+  }
+}

@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Tao Cars",
     "publicOrigin": "https://tao-cars.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "f267557b9a373bbafa5621b9cd6dff59d2a4e1eda9f2e5d076cb68406afce1c6",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "13f712fd0b35a7e88277dab3f4977c533a81babc2f6dc15c7331f809d0924c11"
+    }
   }
 }

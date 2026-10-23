@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "dealer": "ginza-motors",
+  "reviewed": true,
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "abce61c07a2ab6ac7b2f03a9501107e8bc440bf76f2413013e5fb026b0024755",
+      "sourceSha256": "b08fee62dcdbb7247cba5a9693f3a4733bae899a25e1076a31233add5c3d9f25"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "b29576c5043e9df5acd6b63e4c2f1fb224234d62296cdaf966578315c37e0b0f",
+      "sourceSha256": "32e922642228a1085ef3a5716092ca27228eb6bf8e27d393baa701f4e699397e"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "b29576c5043e9df5acd6b63e4c2f1fb224234d62296cdaf966578315c37e0b0f",
+      "sourceSha256": "32e922642228a1085ef3a5716092ca27228eb6bf8e27d393baa701f4e699397e"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "b08fee62dcdbb7247cba5a9693f3a4733bae899a25e1076a31233add5c3d9f25",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-15200351-15c6-4473-899e-bb55449c2e21",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "3456c58b423ab2c63121e66bff2fc2c0c2f3dbc320ab21af3d14f2f0a2815050",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-15200351-15c6-4473-899e-bb55449c2e21",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "b08fee62dcdbb7247cba5a9693f3a4733bae899a25e1076a31233add5c3d9f25",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 300,
+          "height": 331
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "b3c314ca0d1bf126c9da10be01827a4075e9aa0d3ed0b791621b38ecfcb6eada"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "b08fee62dcdbb7247cba5a9693f3a4733bae899a25e1076a31233add5c3d9f25",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-15200351-15c6-4473-899e-bb55449c2e21",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/ginza-motors/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "32e922642228a1085ef3a5716092ca27228eb6bf8e27d393baa701f4e699397e",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-3e0d45c5-e3a1-4d6b-a634-ab613793261d",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/ginza-motors/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "32e922642228a1085ef3a5716092ca27228eb6bf8e27d393baa701f4e699397e",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-3e0d45c5-e3a1-4d6b-a634-ab613793261d",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/ginza-motors/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "b08fee62dcdbb7247cba5a9693f3a4733bae899a25e1076a31233add5c3d9f25",
+      "sha256": "b08fee62dcdbb7247cba5a9693f3a4733bae899a25e1076a31233add5c3d9f25",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 331
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "32e922642228a1085ef3a5716092ca27228eb6bf8e27d393baa701f4e699397e",
+      "sha256": "32e922642228a1085ef3a5716092ca27228eb6bf8e27d393baa701f4e699397e",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 328
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "32e922642228a1085ef3a5716092ca27228eb6bf8e27d393baa701f4e699397e",
+      "sha256": "32e922642228a1085ef3a5716092ca27228eb6bf8e27d393baa701f4e699397e",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 328
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "8a8c8731df9e5c00d49ae63e822cb6d9a2c37a4136a2d7f9ebdbcfb78c6e64f5",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-15200351-15c6-4473-899e-bb55449c2e21",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "b08fee62dcdbb7247cba5a9693f3a4733bae899a25e1076a31233add5c3d9f25",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 300,
+            "height": 331
+          }
+        }
+      },
+      "sourceReference": "dealers/ginza-motors/branding/generated-mark-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "3a1bb62b8d40624989d11a80d1b20584e8ff0d59eca81a378a4cf0c7c44cf9f3",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-3e0d45c5-e3a1-4d6b-a634-ab613793261d",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "32e922642228a1085ef3a5716092ca27228eb6bf8e27d393baa701f4e699397e",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 300,
+            "height": 328
+          }
+        }
+      },
+      "sourceReference": "dealers/ginza-motors/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "3456c58b423ab2c63121e66bff2fc2c0c2f3dbc320ab21af3d14f2f0a2815050",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-15200351-15c6-4473-899e-bb55449c2e21",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "b08fee62dcdbb7247cba5a9693f3a4733bae899a25e1076a31233add5c3d9f25",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 300,
+            "height": 331
+          }
+        }
+      },
+      "sourceReference": "dealers/ginza-motors/branding/generated-mark-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "b3c314ca0d1bf126c9da10be01827a4075e9aa0d3ed0b791621b38ecfcb6eada",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-15200351-15c6-4473-899e-bb55449c2e21",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "b08fee62dcdbb7247cba5a9693f3a4733bae899a25e1076a31233add5c3d9f25",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 300,
+            "height": 331
+          }
+        }
+      },
+      "sourceReference": "dealers/ginza-motors/branding/generated-mark-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "aa80462eb9be9aac947f6952b736c4bcf2e7541ab6b903da37eb6503588bc682",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-3e0d45c5-e3a1-4d6b-a634-ab613793261d",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "32e922642228a1085ef3a5716092ca27228eb6bf8e27d393baa701f4e699397e",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 300,
+          "height": 328
+        }
+      }
+    }
+  }
+}

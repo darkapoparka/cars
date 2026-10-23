@@ -1,0 +1,261 @@
+{
+  "schemaVersion": 1,
+  "dealer": "ahmad-alnajem-used-cars",
+  "reviewed": true,
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "095daba2b0124a0e14cddcd7f92c948f2523a73d309935fe5f91fdedde476ecd",
+      "sourceSha256": "b01777e0ef2b534c3f8c1bf6a9a429ef3998e10fd9cfa788ccf8341b4ffdcb83"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "e2707fcd7d21c69baeb392988fa9e417a4bfbc507ea599bf80c9fa900f5e7788",
+      "sourceSha256": "f9c3537ee535bf9f501a8ee40710d0304688e49094f0c75822ad6a525e7fe18d"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "e2707fcd7d21c69baeb392988fa9e417a4bfbc507ea599bf80c9fa900f5e7788",
+      "sourceSha256": "f9c3537ee535bf9f501a8ee40710d0304688e49094f0c75822ad6a525e7fe18d"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "b01777e0ef2b534c3f8c1bf6a9a429ef3998e10fd9cfa788ccf8341b4ffdcb83",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-01e023b1-534c-492c-b6f5-b94df1fa1917",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "fc39fdd7ed4b6896acc267a7d51729c69850c996c50de43e8df719906268ef3b",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-01e023b1-534c-492c-b6f5-b94df1fa1917",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "b01777e0ef2b534c3f8c1bf6a9a429ef3998e10fd9cfa788ccf8341b4ffdcb83",
+        "operation": "crop-reviewed-wordmark-initial-A",
+        "crop": {
+          "left": 18,
+          "top": 257,
+          "width": 95,
+          "height": 72
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "5f4bdc06d63235f274d4ed07adb97cf80a25a05b3ffedbbad8db36649ecd02de"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "b01777e0ef2b534c3f8c1bf6a9a429ef3998e10fd9cfa788ccf8341b4ffdcb83",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-01e023b1-534c-492c-b6f5-b94df1fa1917",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/ahmad-alnajem-used-cars/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "f9c3537ee535bf9f501a8ee40710d0304688e49094f0c75822ad6a525e7fe18d",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-d954e84a-2301-4cca-8163-9e52168d68c0",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/ahmad-alnajem-used-cars/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "f9c3537ee535bf9f501a8ee40710d0304688e49094f0c75822ad6a525e7fe18d",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-d954e84a-2301-4cca-8163-9e52168d68c0",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/ahmad-alnajem-used-cars/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "b01777e0ef2b534c3f8c1bf6a9a429ef3998e10fd9cfa788ccf8341b4ffdcb83",
+      "sha256": "b01777e0ef2b534c3f8c1bf6a9a429ef3998e10fd9cfa788ccf8341b4ffdcb83",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 403
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "f9c3537ee535bf9f501a8ee40710d0304688e49094f0c75822ad6a525e7fe18d",
+      "sha256": "f9c3537ee535bf9f501a8ee40710d0304688e49094f0c75822ad6a525e7fe18d",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 404
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "f9c3537ee535bf9f501a8ee40710d0304688e49094f0c75822ad6a525e7fe18d",
+      "sha256": "f9c3537ee535bf9f501a8ee40710d0304688e49094f0c75822ad6a525e7fe18d",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 404
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "32613587a19881b49ef75c946ceac7f1b4e37ee66623391c0e626eb6b35cf30a",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-01e023b1-534c-492c-b6f5-b94df1fa1917",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "b01777e0ef2b534c3f8c1bf6a9a429ef3998e10fd9cfa788ccf8341b4ffdcb83",
+          "operation": "crop-reviewed-wordmark-initial-A",
+          "crop": {
+            "left": 18,
+            "top": 257,
+            "width": 95,
+            "height": 72
+          }
+        }
+      },
+      "sourceReference": "dealers/ahmad-alnajem-used-cars/branding/generated-mark-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "87617b7a09c35167b732622a93b6c599c87d068ff64788ff891bb178b3c47583",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-d954e84a-2301-4cca-8163-9e52168d68c0",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/reviewed-mark-dark.png",
+          "sha256": "312a7fa4bf482bba04299b4e5619b5d4e7633111c4dfdc69b2c3ad905c538fee",
+          "maskFrom": {
+            "path": "branding/generated-mark-light.png",
+            "sha256": "2980477ab99382060d442b10b086cccabae86e47d0974f73fc8e08228b961f1d"
+          },
+          "operation": "isolate-exact-reviewed-initial-A-shape-and-repair-dark-compact-speckle",
+          "ink": "light-contrast-245-neutral"
+        }
+      },
+      "sourceReference": "dealers/ahmad-alnajem-used-cars/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "fc39fdd7ed4b6896acc267a7d51729c69850c996c50de43e8df719906268ef3b",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-01e023b1-534c-492c-b6f5-b94df1fa1917",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "b01777e0ef2b534c3f8c1bf6a9a429ef3998e10fd9cfa788ccf8341b4ffdcb83",
+          "operation": "crop-reviewed-wordmark-initial-A",
+          "crop": {
+            "left": 18,
+            "top": 257,
+            "width": 95,
+            "height": 72
+          }
+        }
+      },
+      "sourceReference": "dealers/ahmad-alnajem-used-cars/branding/generated-mark-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "5f4bdc06d63235f274d4ed07adb97cf80a25a05b3ffedbbad8db36649ecd02de",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-01e023b1-534c-492c-b6f5-b94df1fa1917",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "b01777e0ef2b534c3f8c1bf6a9a429ef3998e10fd9cfa788ccf8341b4ffdcb83",
+          "operation": "crop-reviewed-wordmark-initial-A",
+          "crop": {
+            "left": 18,
+            "top": 257,
+            "width": 95,
+            "height": 72
+          }
+        }
+      },
+      "sourceReference": "dealers/ahmad-alnajem-used-cars/branding/generated-mark-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "aa88775fc818dfa9661e1c3baf4e06ef6d67c9dcb0fdca3280c279245a5d041e",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-d954e84a-2301-4cca-8163-9e52168d68c0",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/reviewed-mark-dark.png",
+        "sha256": "312a7fa4bf482bba04299b4e5619b5d4e7633111c4dfdc69b2c3ad905c538fee",
+        "maskFrom": {
+          "path": "branding/generated-mark-light.png",
+          "sha256": "2980477ab99382060d442b10b086cccabae86e47d0974f73fc8e08228b961f1d"
+        },
+        "operation": "isolate-exact-reviewed-initial-A-shape-and-repair-dark-compact-speckle",
+        "ink": "light-contrast-245-neutral"
+      }
+    }
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "us-hi-maui-islandwide-auto-sales",
+  "slug": "islandwide-auto-sales-llc",
+  "name": "Islandwide Auto Sales LLC",
+  "kind": "published-reference-logo-refinement-proposal",
+  "dealerApproved": false,
+  "ownerApproved": false,
+  "sourceEvidence": [
+    {
+      "url": "https://www.islandwideautosales.com/",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.islandwideautosales.com/inventory",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.islandwideautosales.com/about",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.islandwideautosales.com/product-page/pre-owned-upfitted-2024-ford-f-550-4wd-9ft-flatbed-cab-chassis",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.islandwideautosales.com/product-page/2012-ford-f-450-diesel-4x4-utility-service-truck",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.islandwideautosales.com/product-page/sale-2016-ford-f-550-8ft-heavy-duty-stainless-steel-dump-bed",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "retainedOriginalsUnchanged": true,
+  "variants": {
+    "on-light": {
+      "path": "logo-on-light.png",
+      "sha256": "8c8d9fb2dd830fb7d3b7a3dd87a7ec6b404cd60e7ea894d0270d3654d358b032",
+      "master": {
+        "path": "generated-on-light.png",
+        "sha256": "18e876b04b86287ad51e02c39f512e33643ef01971727e5e344f0c54cc31b93f",
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-31cd80f1-4c26-4e8a-8d4d-a8358fb929fb",
+        "prompt": "Use case: identity-preserve logo refinement. The provided image is the published reference for this dealership. Exact text: \"ISLANDWIDE AUTO SALES LLC\". Respect the recognizable tall condensed ISLANDWIDE / AUTO SALES lettering in the supplied original. Create a clean horizontal website-logo export rather than a license plate: retain the lettering character and the exact dealer name, remove the plate shape, screws, phone and URL. Use primarily dark lettering and at most a small lime accent inspired by the source. No unrelated icon or invented slogan.. Horizontal logo for LIGHT website surfaces, with clear dark/charcoal foreground lettering, legible name hierarchy, large useful symbol if present, generous counters and crisp edges. Genuine alpha transparency. A polished final logo, not a poster or mockup. No extra text, fake checkerboard, background rectangle, watermark, shadows, fake chrome, gradients or texture. No tiny slogan, no misspelled words. Prefer a balanced landscape lockup that remains readable at 240px wide, framed close to the artwork with a small transparent margin. One logo only. This output is a proposed website asset, not a claim of dealer adoption.",
+        "reference": "C:/Users/radev/AppData/Local/Temp/cars-astra-public-brand-evidence-20261021/islandwide-header.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 11,
+          "top": 10,
+          "width": 2157,
+          "height": 714
+        }
+      }
+    },
+    "on-dark": {
+      "path": "logo-on-dark.png",
+      "sha256": "0e630b1013f5c72cb7f83544fa872dd480452896b743288ab623f268af92e8fc",
+      "master": {
+        "path": "generated-on-dark.png",
+        "sha256": "8b7ac1ed62a6ea0726bfdc121b19e307fd1e755499d2ddaba89804d65d670683",
+        "width": 2171,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-bdfa882d-8852-45e4-9ae6-42ef9711bd9e",
+        "prompt": "Create the matching light-ink variant for DARK website surfaces of the supplied Islandwide Auto Sales LLC logo. Preserve exact wording, spelling, symbol, composition, typography, spacing and proportions. Change dark name/foreground elements to clean solid white; preserve recognizable genuine source accents where they remain clear against #111113 and deep red. Transparent alpha background; no background block, mockup, texture, distressed edges, new decorations or extra text. This must remain the same logo, simply its readable on-dark counterpart. Exact text: ISLANDWIDE AUTO SALES LLC. Whole design with enough clear transparent margin.",
+        "reference": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-31cd80f1-4c26-4e8a-8d4d-a8358fb929fb.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 9,
+          "top": 7,
+          "width": 2139,
+          "height": 717
+        }
+      }
+    }
+  },
+  "review": {
+    "status": "artwork-visually-reviewed",
+    "compact": "Horizontal logos only. Interactive 32/48/64px gallery preview is provided; separate compact/favicon artwork remains part of dealer-pack preparation.",
+    "sixDesigns": "not-yet-integrated-or-rendered",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "reviewer": "Codex visual inspection",
+    "alpha": "all exports measured as genuine transparent nonempty PNGs",
+    "spelling": "English wordmark inspected; source-bound display aliases retained",
+    "header": "All 196 paired PNGs inspected at 240x64 on white, #111113 and #c40101",
+    "evidence": "final-review-01.png"
+  },
+  "releaseReady": false,
+  "artworkHolds": [],
+  "originalReference": {
+    "path": "_references/islandwide-auto-sales-llc.png",
+    "sha256": "518efda9d0bc2a784d70f41e8d7f6f4e2573eefa89363156bea3ffe49b3b4868",
+    "sourcePage": "https://www.islandwideautosales.com/",
+    "observedAt": "2026-10-23",
+    "adaptation": "Published brand reference refined for an English website; original retained unchanged; adoption not claimed"
+  },
+  "artworkReadyForIntegration": true
+}

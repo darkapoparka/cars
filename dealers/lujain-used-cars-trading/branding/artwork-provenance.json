@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "ae-sharjah-lujain-used-cars-trading",
+  "slug": null,
+  "artworkDirectory": "ae-sharjah-lujain-used-cars-trading",
+  "name": "Lujain Used Cars Trading",
+  "renderedName": "Lujain Used Cars Trading",
+  "kind": "independent-website-logo-proposal",
+  "dealerApproved": false,
+  "ownerApproved": false,
+  "sourceEvidence": [
+    {
+      "url": "https://ae.opensooq.com/en/shops/shop-48219714",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://ae.opensooq.com/en/search/287793450",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "retainedOriginalsUnchanged": true,
+  "variants": {
+    "on-light": {
+      "path": "logo-on-light.png",
+      "sha256": "6b3699be1b3b909c7c73a37cedae98226871b41cd27fd6614329c39f3c877221",
+      "width": 1024,
+      "height": 315,
+      "transparentFraction": 0.7146577380952381,
+      "master": {
+        "path": "generated-on-light.png",
+        "sha256": "5a52e2bd9bdb868eb4b640359e409a97ef9922647cf3c11828de926c83d4e5a6",
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-48787a12-7dd8-4a30-a4ae-828227c59fd8",
+        "prompt": "Create one professional horizontal automotive dealership logo proposal for Lujain Used Cars Trading. Required exact text, uppercase: LUJAIN USED CARS TRADING. Every word must be present and spelled precisely; use sensible primary name and smaller descriptor hierarchy without tiny lettering. Produce a polished original identity with a restrained architectural emblem with two or three interlocking geometric forms. Initials L may inform the emblem. Emblem left, full clear name to the right, compact and balanced for a website header. Avoid overused shield and generic car silhouettes; no manufacturer badges. Clean modern lettering with careful kerning and strong legibility. All text is deep charcoal black, appropriate on a white/light header. One restrained red or gold accent may appear inside the emblem only; no pale text. Flat crisp edges, a small number of solid shapes, no chrome, no lighting, no shadow, no texture, no gradient. Genuine transparent alpha background, isolated logo with no background box, no grid, no checkerboard painted into pixels. No slogan, contact info, website, watermark, mockup, photograph, extra concept, or duplicate logo. Deliver exactly one horizontal full logo. This is an independent website identity proposal, not a claim of adopted branding.",
+        "reference": null
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 86,
+          "top": 55,
+          "width": 2004,
+          "height": 616
+        }
+      }
+    },
+    "on-dark": {
+      "path": "logo-on-dark.png",
+      "sha256": "7856d04f7492c74b91f92fc2e5ae1f7e0affe4b04ba86dfa95d51063234eb178",
+      "width": 1024,
+      "height": 317,
+      "transparentFraction": 0.5911283763801262,
+      "master": {
+        "path": "generated-on-dark.png",
+        "sha256": "caf547d64d20214f1f5d6d8f2c1f19481c2cff3af832809d9b85a9757764818a",
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-f2d358ab-8ab7-4977-b59b-3daf88d80b26",
+        "prompt": "Create the matching light-on-dark production variant of the exact supplied logo. Preserve precisely the same emblem, geometry, spelling, word count, typographic hierarchy, proportions, layout and spacing. Required exact text: LUJAIN USED CARS TRADING. Change EVERY letter, including all secondary descriptor words and legal suffixes, to solid white so it is legible over a dark or red website header. Change the charcoal portions of the emblem to white. Retain the small red/gold emblem accent only if it contrasts clearly against a dark header. True transparent alpha background; do not paint a dark rectangle or checkerboard. Flat clean edges, no glows, shadows, bevels, textures, gradients, new artwork, new icon, extra text or mockup. Deliver one horizontal matching logo, fully legible.",
+        "reference": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-48787a12-7dd8-4a30-a4ae-828227c59fd8.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 86,
+          "top": 52,
+          "width": 2005,
+          "height": 621
+        }
+      }
+    }
+  },
+  "review": {
+    "status": "artwork-visually-reviewed",
+    "alpha": "all exports measured as genuine transparent nonempty PNGs",
+    "spelling": "English wordmark inspected; source-bound display aliases retained",
+    "compact": "Horizontal logos only. Interactive 32/48/64px gallery preview is provided; separate compact/favicon artwork remains part of dealer-pack preparation.",
+    "sixDesigns": "not-yet-integrated-or-rendered",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "reviewer": "Codex visual inspection",
+    "header": "All 196 paired PNGs inspected at 240x64 on white, #111113 and #c40101",
+    "evidence": "final-review-11.png"
+  },
+  "releaseReady": false,
+  "artworkHolds": [],
+  "artworkReadyForIntegration": true
+}

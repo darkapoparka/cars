@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "slug": "sahm-al-najah-used-cars-trading",
+  "dealerId": "ae-sharjah-sahm-al-najah-used-cars",
+  "business": {
+    "name": "Sahm Al Najah Used Cars Trading",
+    "city": "Sharjah",
+    "region": "Sharjah",
+    "countryCode": "AE",
+    "currency": "AED",
+    "distanceUnit": "km",
+    "locale": "en-AE",
+    "address": "",
+    "phone": "",
+    "phoneDisplay": "",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://ae.opensooq.com/en/shops/shop-66288306",
+    "hours": "",
+    "sourceUrl": "https://ae.opensooq.com/en/shops/shop-66288306",
+    "observedAt": "2026-10-23",
+    "inventoryNotice": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://ae.opensooq.com/en/shops/shop-66288306",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    }
+  ]
+}

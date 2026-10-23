@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": true,
+  "reviewedAt": "2026-10-23T04:07:26.294Z",
+  "dealer": "impala-used-cars-al-ghazal",
+  "dealerId": "ae-sharjah-impala-used-cars-al-ghazal",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "method": "Automated exact registry/pack identity, canonical hosting and batch comparison; retained public source fields were structurally checked, not human-approved.",
+  "sources": [
+    {
+      "url": "https://uae.yallamotor.com/auto-companies/impala-used-cars-al-ghazal-9065",
+      "observedAt": "2026-10-18"
+    }
+  ]
+}

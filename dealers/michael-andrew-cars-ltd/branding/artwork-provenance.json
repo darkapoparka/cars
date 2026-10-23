@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "gb-huddersfield-michael-andrew-cars",
+  "slug": "michael-andrew-cars-ltd",
+  "name": "Michael Andrew Cars Ltd",
+  "kind": "independent-website-logo-proposal",
+  "dealerApproved": false,
+  "ownerApproved": false,
+  "sourceEvidence": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/Michael-Andrew-Cars-Ltd",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.autotrader.co.uk/dealers/yorkshire/huddersfield/michael-andrew-cars-limited-10051135",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "retainedOriginalsUnchanged": true,
+  "variants": {
+    "on-light": {
+      "path": "logo-on-light.png",
+      "sha256": "4717f9e73f6a9d97cf8cafa95a9cd950751f8c53b9ad5758f633f157b03c5596",
+      "master": {
+        "path": "generated-on-light.png",
+        "sha256": "a22470937dfb27c778f7d127179803cde2755ec44c403be13c5dea829ba6946e",
+        "width": 2163,
+        "height": 727
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputFile": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-fea49522-7f63-48d8-ae91-55c80b8362bc.png",
+        "outputReference": "exec-fea49522-7f63-48d8-ae91-55c80b8362bc",
+        "prompt": "Use case: logo-brand. Asset: transparent dark-ink logo master for an independent car-dealer website proposal. Exact text: MICHAEL ANDREW, with CARS LTD as a second line at a meaningful readable size. Create ONE polished horizontal identity. At left use a tailored original MA ligature: two bold upright stems and a simple peaked central negative space, clear at favicon scale. At right elegant, precisely spaced modern sans-serif uppercase wordmark; confident, uncluttered, high-quality independent dealership identity. Dark charcoal/black solid ink only, crisp flat vector-style geometry. No car drawing, speed swoosh, shield, circle enclosure, manufacturer emblem, gradient, metallic effect, fine hairlines, texture, shadow, tagline, watermark or background rectangle. True alpha-transparent background, never a fake checkerboard. Wide landscape canvas tightly but comfortably framed at approximately 5% transparent outer margin; symbol and full exact name should occupy most available area. One logo only, no presentation board.",
+        "reference": null
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 38,
+          "top": 127,
+          "width": 2079,
+          "height": 462
+        }
+      },
+      "metadata": {
+        "format": "png",
+        "mediaType": "image/png",
+        "size": 88275,
+        "width": 1024,
+        "height": 228,
+        "space": "srgb",
+        "channels": 4,
+        "depth": "uchar",
+        "density": 72,
+        "isProgressive": false,
+        "isPalette": false,
+        "bitsPerSample": 8,
+        "hasProfile": false,
+        "hasAlpha": true,
+        "autoOrient": {
+          "width": 1024,
+          "height": 228
+        }
+      }
+    },
+    "on-dark": {
+      "path": "logo-on-dark.png",
+      "sha256": "269c63015ce6b16cab2ade31e87f672b4c70eddaf6eb1413c232682984bc30c5",
+      "master": {
+        "path": "generated-on-dark.png",
+        "sha256": "f80b02aa5c859cae1b81e3e6fd692cd037cb39741d4b48f6a7c309446622f5e0",
+        "width": 2163,
+        "height": 727
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputFile": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-b4b25fe6-0db3-482b-b91f-e3a96c37a587.png",
+        "outputReference": "exec-b4b25fe6-0db3-482b-b91f-e3a96c37a587",
+        "prompt": "Create the clean matching light-ink version of the supplied logo for dark website headers. Exact text MICHAEL ANDREW / CARS LTD; slash means an existing line break, do not add a slash character. Preserve the existing symbol, typography, text line positions, spacing and overall shape closely. Foreground must be clean smooth solid pure white with normal anti-aliased edges. All letter interiors are solid smooth ink; absolutely no distress, grain, scratch marks, cutout fragments, holes, stippling, texture or black outline. Genuine alpha-transparent background with open counters, no backdrop or checkerboard. No gradients, lighting, shadow, extra text, border or mockup. One polished white horizontal logo only, use the reference identity. Keep a wide landscape composition with roughly 5% transparent padding.",
+        "reference": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-fea49522-7f63-48d8-ae91-55c80b8362bc.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 36,
+          "top": 123,
+          "width": 2067,
+          "height": 457
+        }
+      },
+      "metadata": {
+        "format": "png",
+        "mediaType": "image/png",
+        "size": 94895,
+        "width": 1024,
+        "height": 226,
+        "space": "srgb",
+        "channels": 4,
+        "depth": "uchar",
+        "density": 72,
+        "isProgressive": false,
+        "isPalette": false,
+        "bitsPerSample": 8,
+        "hasProfile": false,
+        "hasAlpha": true,
+        "autoOrient": {
+          "width": 1024,
+          "height": 226
+        }
+      }
+    }
+  },
+  "review": {
+    "alpha": "all exports measured as genuine transparent nonempty PNGs",
+    "spelling": "English wordmark inspected; source-bound display aliases retained",
+    "header": "All 196 paired PNGs inspected at 240x64 on white, #111113 and #c40101",
+    "compact": "Horizontal logos only. Interactive 32/48/64px gallery preview is provided; separate compact/favicon artwork remains part of dealer-pack preparation.",
+    "sixDesigns": "not yet integrated or rendered",
+    "status": "artwork-visually-reviewed",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "reviewer": "Codex visual inspection",
+    "evidence": "final-review-01.png"
+  },
+  "releaseReady": false,
+  "artworkHolds": [],
+  "artworkReadyForIntegration": true
+}

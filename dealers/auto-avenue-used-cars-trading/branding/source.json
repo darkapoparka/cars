@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "dealer": "auto-avenue-used-cars-trading",
-  "status": "research-required",
+  "status": "reviewed-imagegen-proposal",
   "realLogoFirst": true,
   "publicSources": [
     {
@@ -10,7 +10,134 @@
     }
   ],
   "originals": [],
-  "creationMethod": null,
+  "creationMethod": "imagegen-proposal",
   "dealerApproved": false,
-  "generatedInputs": null
+  "generatedInputs": {
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "master": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "bb89ff821fd6ffd632895be5262231012a087e6dfbdb9f36fb392a564bc0b422",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-066fc381-0dbb-4f8a-8426-86feab95a7fd",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark-light.png",
+      "sha256": "9a2c17160dfe25c5c27759cf45dad95d2493fc3b6e558168c55a8a42ba077c1c",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-066fc381-0dbb-4f8a-8426-86feab95a7fd",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "bb89ff821fd6ffd632895be5262231012a087e6dfbdb9f36fb392a564bc0b422",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 220,
+            "height": 238
+          }
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-dark.png",
+      "sha256": "d6330d38476fa98c9771087eebff255b7b01b2186b00d0709dba1fb60897d9e0",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-e9ac59a4-c1c5-473a-873c-e23b5ca1ec5a",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "56b637c2d598e59646544323a5239eb590cf8eb9870f4ad40be8b2cb4e852c50",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 220,
+            "height": 237
+          }
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "bb89ff821fd6ffd632895be5262231012a087e6dfbdb9f36fb392a564bc0b422",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-066fc381-0dbb-4f8a-8426-86feab95a7fd",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "56b637c2d598e59646544323a5239eb590cf8eb9870f4ad40be8b2cb4e852c50",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-e9ac59a4-c1c5-473a-873c-e23b5ca1ec5a",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "56b637c2d598e59646544323a5239eb590cf8eb9870f4ad40be8b2cb4e852c50",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-e9ac59a4-c1c5-473a-873c-e23b5ca1ec5a",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewKind": "agent-visual-review",
+      "humanReview": false,
+      "dealerApproval": false,
+      "backgrounds": {
+        "onLight": "#ffffff",
+        "onDark": "#111113",
+        "onAccent": "#c40101"
+      },
+      "wordmarkWidths": [
+        220,
+        240
+      ],
+      "notes": "Exact reviewed Image Gen pair; native masters and generation provenance retained. Compact rasters cropped from the actual left symbol."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-22T23:42:46.338Z",
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#c40101"
+      ],
+      "widths": [
+        32,
+        48,
+        64
+      ],
+      "notes": "Left symbol cropped from reviewed horizontal variants; native rendering must independently qualify."
+    }
+  },
+  "sourceBlockers": [],
+  "artworkProvenance": {
+    "path": "branding/artwork-provenance.json",
+    "sha256": "b920b24e19171ac6731e8479af911cc408f1b5bbaceaa8f7e7ff3b675aae4242",
+    "manifestSha256": "d25e9cee768a885052ac0a8df220d843c9b9c6f6f120d722705bead1cc99e694",
+    "nativeMasters": [
+      {
+        "path": "branding/native-generated-on-light.png",
+        "sha256": "e193343cd7b7c4e0a70eee867a8db2f5966276d85a85fb0abf5705542f347105"
+      },
+      {
+        "path": "branding/native-generated-on-dark.png",
+        "sha256": "651ac552e2ce710f751601343e0ebd90e8121994f01fa309a8fa0cc80e811690"
+      }
+    ]
+  }
 }

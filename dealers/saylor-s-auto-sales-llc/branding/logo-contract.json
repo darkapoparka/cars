@@ -1,0 +1,299 @@
+{
+  "schemaVersion": 1,
+  "dealer": "saylor-s-auto-sales-llc",
+  "reviewed": true,
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "1f0246847c3aac10479491bf61731ee6085663a9a0057cf021d58a6e865f7878",
+      "sourceSha256": "4d7b43845bebcbdf47a7f50bdad41f0753a2f318e2ab3a179e28850c96b6be0e"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "25ef00916e1f8cada7111e4d802ab0c2343a4e555407f3b52cb27dc1c7922f05",
+      "sourceSha256": "e7901f28b03430c7d980751d5efec7fa70c3af05608916a0a55bbdde8de9a1de"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "25ef00916e1f8cada7111e4d802ab0c2343a4e555407f3b52cb27dc1c7922f05",
+      "sourceSha256": "e7901f28b03430c7d980751d5efec7fa70c3af05608916a0a55bbdde8de9a1de"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "4d7b43845bebcbdf47a7f50bdad41f0753a2f318e2ab3a179e28850c96b6be0e",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-a69d9251-39f1-4f54-9ac6-b967da955aba",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "8b3cb4344c0ad16a26b8e933f0082d81414c8cbe00e2419f9354870810d3b9b5",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-a69d9251-39f1-4f54-9ac6-b967da955aba",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "4d7b43845bebcbdf47a7f50bdad41f0753a2f318e2ab3a179e28850c96b6be0e",
+        "operation": "crop-left-symbol-and-mask-adjacent-wordmark",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 360,
+          "height": 277
+        },
+        "mask": {
+          "left": 310,
+          "top": 65,
+          "width": 50,
+          "height": 212
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "8a6d48d5bd9d341e209821a08137a737a9453efc158c0724c5e9a2ca58600365"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "4d7b43845bebcbdf47a7f50bdad41f0753a2f318e2ab3a179e28850c96b6be0e",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a69d9251-39f1-4f54-9ac6-b967da955aba",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/saylor-s-auto-sales-llc/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "e7901f28b03430c7d980751d5efec7fa70c3af05608916a0a55bbdde8de9a1de",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1036c11c-febe-4a33-a958-831bd6e149ec",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/saylor-s-auto-sales-llc/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "e7901f28b03430c7d980751d5efec7fa70c3af05608916a0a55bbdde8de9a1de",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1036c11c-febe-4a33-a958-831bd6e149ec",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/saylor-s-auto-sales-llc/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "4d7b43845bebcbdf47a7f50bdad41f0753a2f318e2ab3a179e28850c96b6be0e",
+      "sha256": "4d7b43845bebcbdf47a7f50bdad41f0753a2f318e2ab3a179e28850c96b6be0e",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 277
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "e7901f28b03430c7d980751d5efec7fa70c3af05608916a0a55bbdde8de9a1de",
+      "sha256": "e7901f28b03430c7d980751d5efec7fa70c3af05608916a0a55bbdde8de9a1de",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 280
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "e7901f28b03430c7d980751d5efec7fa70c3af05608916a0a55bbdde8de9a1de",
+      "sha256": "e7901f28b03430c7d980751d5efec7fa70c3af05608916a0a55bbdde8de9a1de",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 280
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "7fc14ef935b32e804a33a4dc2dbf90acd02b07d9c53b02399fb09354296043b2",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a69d9251-39f1-4f54-9ac6-b967da955aba",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "4d7b43845bebcbdf47a7f50bdad41f0753a2f318e2ab3a179e28850c96b6be0e",
+          "operation": "crop-left-symbol-and-mask-adjacent-wordmark",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 360,
+            "height": 277
+          },
+          "mask": {
+            "left": 310,
+            "top": 65,
+            "width": 50,
+            "height": 212
+          }
+        }
+      },
+      "sourceReference": "dealers/saylor-s-auto-sales-llc/branding/generated-mark-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "91f74cdda07a7e49aac5cdf9d1f354f502ed8c5930630d54dc4fb952f5f318fb",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1036c11c-febe-4a33-a958-831bd6e149ec",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "e7901f28b03430c7d980751d5efec7fa70c3af05608916a0a55bbdde8de9a1de",
+          "operation": "crop-left-symbol-and-mask-adjacent-wordmark",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 360,
+            "height": 280
+          },
+          "mask": {
+            "left": 310,
+            "top": 65,
+            "width": 50,
+            "height": 215
+          }
+        }
+      },
+      "sourceReference": "dealers/saylor-s-auto-sales-llc/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "8b3cb4344c0ad16a26b8e933f0082d81414c8cbe00e2419f9354870810d3b9b5",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a69d9251-39f1-4f54-9ac6-b967da955aba",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "4d7b43845bebcbdf47a7f50bdad41f0753a2f318e2ab3a179e28850c96b6be0e",
+          "operation": "crop-left-symbol-and-mask-adjacent-wordmark",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 360,
+            "height": 277
+          },
+          "mask": {
+            "left": 310,
+            "top": 65,
+            "width": 50,
+            "height": 212
+          }
+        }
+      },
+      "sourceReference": "dealers/saylor-s-auto-sales-llc/branding/generated-mark-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "8a6d48d5bd9d341e209821a08137a737a9453efc158c0724c5e9a2ca58600365",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a69d9251-39f1-4f54-9ac6-b967da955aba",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "4d7b43845bebcbdf47a7f50bdad41f0753a2f318e2ab3a179e28850c96b6be0e",
+          "operation": "crop-left-symbol-and-mask-adjacent-wordmark",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 360,
+            "height": 277
+          },
+          "mask": {
+            "left": 310,
+            "top": 65,
+            "width": 50,
+            "height": 212
+          }
+        }
+      },
+      "sourceReference": "dealers/saylor-s-auto-sales-llc/branding/generated-mark-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "210dcca8abd85e4f1cffef7f4f8674811d06027c4a9cffb3371cbd9dfe552e69",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-1036c11c-febe-4a33-a958-831bd6e149ec",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "e7901f28b03430c7d980751d5efec7fa70c3af05608916a0a55bbdde8de9a1de",
+        "operation": "crop-left-symbol-and-mask-adjacent-wordmark",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 360,
+          "height": 280
+        },
+        "mask": {
+          "left": 310,
+          "top": 65,
+          "width": 50,
+          "height": 215
+        }
+      }
+    }
+  }
+}

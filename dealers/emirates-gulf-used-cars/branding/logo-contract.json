@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "dealer": "emirates-gulf-used-cars",
+  "reviewed": true,
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "c0adc3e9854ecda6240583e4296a08c49bb743408894c10e587770a1e61cf63f",
+      "sourceSha256": "2c2ea11c328a86d312f5e5cca59fb1e1271464fa938ec58f8aead69fff9d6f87"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "eccad9f6190abac2d40d610f6fac3926cf40445f911bb2d7c01850d0da88b476",
+      "sourceSha256": "bb10f9b7485e4f3f281bc65a40465197c1180f2245694f76efa928e5ee241a56"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "eccad9f6190abac2d40d610f6fac3926cf40445f911bb2d7c01850d0da88b476",
+      "sourceSha256": "bb10f9b7485e4f3f281bc65a40465197c1180f2245694f76efa928e5ee241a56"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "2c2ea11c328a86d312f5e5cca59fb1e1271464fa938ec58f8aead69fff9d6f87",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-7efc6ce1-4888-440e-bad6-0fe93ff00492",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "b4fa92bcc9a26ed9ca5ed2680010bea211d08ddd1bab9ce285d536f4b7c7a575",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-7efc6ce1-4888-440e-bad6-0fe93ff00492",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "2c2ea11c328a86d312f5e5cca59fb1e1271464fa938ec58f8aead69fff9d6f87",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 255,
+          "height": 239
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "5c334005cacd86f09c849981d3d3bc5aa7343534ef9e1c4bc3366fcef0f0d918"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "2c2ea11c328a86d312f5e5cca59fb1e1271464fa938ec58f8aead69fff9d6f87",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-7efc6ce1-4888-440e-bad6-0fe93ff00492",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/emirates-gulf-used-cars/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "bb10f9b7485e4f3f281bc65a40465197c1180f2245694f76efa928e5ee241a56",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1f2de05b-2b28-430a-8df0-1bf9e20c76cf",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/emirates-gulf-used-cars/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "bb10f9b7485e4f3f281bc65a40465197c1180f2245694f76efa928e5ee241a56",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1f2de05b-2b28-430a-8df0-1bf9e20c76cf",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/emirates-gulf-used-cars/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "2c2ea11c328a86d312f5e5cca59fb1e1271464fa938ec58f8aead69fff9d6f87",
+      "sha256": "2c2ea11c328a86d312f5e5cca59fb1e1271464fa938ec58f8aead69fff9d6f87",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 239
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "bb10f9b7485e4f3f281bc65a40465197c1180f2245694f76efa928e5ee241a56",
+      "sha256": "bb10f9b7485e4f3f281bc65a40465197c1180f2245694f76efa928e5ee241a56",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 240
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "bb10f9b7485e4f3f281bc65a40465197c1180f2245694f76efa928e5ee241a56",
+      "sha256": "bb10f9b7485e4f3f281bc65a40465197c1180f2245694f76efa928e5ee241a56",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 240
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "3996be392ff2f42d8c5d575ae6247538005c12b83f4b9afa4437f6efef469c88",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-7efc6ce1-4888-440e-bad6-0fe93ff00492",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "2c2ea11c328a86d312f5e5cca59fb1e1271464fa938ec58f8aead69fff9d6f87",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 255,
+            "height": 239
+          }
+        }
+      },
+      "sourceReference": "dealers/emirates-gulf-used-cars/branding/generated-mark-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "a11ca874b3e4671231d2ca3b1750e584c9e24684adb650637e2aabbd4f766205",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1f2de05b-2b28-430a-8df0-1bf9e20c76cf",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "bb10f9b7485e4f3f281bc65a40465197c1180f2245694f76efa928e5ee241a56",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 255,
+            "height": 240
+          }
+        }
+      },
+      "sourceReference": "dealers/emirates-gulf-used-cars/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "b4fa92bcc9a26ed9ca5ed2680010bea211d08ddd1bab9ce285d536f4b7c7a575",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-7efc6ce1-4888-440e-bad6-0fe93ff00492",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "2c2ea11c328a86d312f5e5cca59fb1e1271464fa938ec58f8aead69fff9d6f87",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 255,
+            "height": 239
+          }
+        }
+      },
+      "sourceReference": "dealers/emirates-gulf-used-cars/branding/generated-mark-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "5c334005cacd86f09c849981d3d3bc5aa7343534ef9e1c4bc3366fcef0f0d918",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-7efc6ce1-4888-440e-bad6-0fe93ff00492",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "2c2ea11c328a86d312f5e5cca59fb1e1271464fa938ec58f8aead69fff9d6f87",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 255,
+            "height": 239
+          }
+        }
+      },
+      "sourceReference": "dealers/emirates-gulf-used-cars/branding/generated-mark-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "011b8928210700a779e08d442fccf51ae67bd87f077a4b056dfe182cad210994",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-1f2de05b-2b28-430a-8df0-1bf9e20c76cf",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "bb10f9b7485e4f3f281bc65a40465197c1180f2245694f76efa928e5ee241a56",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 255,
+          "height": 240
+        }
+      }
+    }
+  }
+}

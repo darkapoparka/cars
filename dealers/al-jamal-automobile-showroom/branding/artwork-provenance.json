@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "ae-abu-dhabi-al-jamal-automobile-showroom",
+  "slug": "al-jamal-automobile-showroom",
+  "artworkDirectory": "al-jamal-automobile-showroom",
+  "name": "Al Jamal Automobile Showroom",
+  "renderedName": "Al Jamal Automobile Showroom",
+  "kind": "independent-website-logo-proposal",
+  "dealerApproved": false,
+  "ownerApproved": false,
+  "sourceEvidence": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/al-jamal-automobile-showroom",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/5239-toyota-corolla-16-cvt-132-hp-xli",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "retainedOriginalsUnchanged": true,
+  "variants": {
+    "on-light": {
+      "path": "logo-on-light.png",
+      "sha256": "9cc532322b17dff08e49abd71f401473547250622936b363a08a7ff27a561dd5",
+      "width": 1024,
+      "height": 228,
+      "transparentFraction": 0.6982593201754386,
+      "master": {
+        "path": "generated-on-light.png",
+        "sha256": "1d6a1ffc58c520227df9c3e0aaf62dc61354b7270e22899ebeb194aa18a43032",
+        "width": 2170,
+        "height": 725
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-08ab3f9e-c574-4952-ae88-a7e3606dce86",
+        "prompt": "Correct the light-background color treatment of the supplied logo while preserving its recognizable emblem, typeface, exact geometry, word spacing and layout. Exact required wording: AL JAMAL AUTOMOBILE SHOWROOM. EVERY letter must be opaque deep charcoal black, including every secondary word, colored AL prefix, descriptor and legal suffix. Do not leave any gold, blue, red or white LETTERS. A small red/gold/blue accent is permitted only INSIDE the emblem, never in any wordmark lettering. Genuine transparent alpha, no background, no glow, shadow, gradient, texture, checkerboard, frame, mockup, watermark, extra concepts or altered spelling. One crisp horizontal production logo only.",
+        "reference": "L:/CODEX/cars/leads/branding/pending-20261023/al-jamal-automobile-showroom/logo-on-light.png",
+        "referenceSnapshot": {
+          "path": "correction-input-on-light.png",
+          "sha256": "e0bd179697a3028777027f0319a5ef7d682460d3f80ac8e5d8a9ff5a7b0b1cd7",
+          "sameBytesAsToolInput": true,
+          "nativeOriginal": {
+            "path": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-d2e17f72-a01f-4933-8fac-38da13644e12.png",
+            "sha256": "02e99e89689df1114e20a7bbf615a782387ec04800c740703592dba7d3c654f6"
+          },
+          "note": "Exact input snapshot retained after correction. Re-export from unchanged native original matches recorded pre-correction PNG SHA256."
+        },
+        "referencePathMeaning": "Original tool input working filename, later overwritten by corrected export. referenceSnapshot retains the exact input bytes."
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 0,
+          "top": 120,
+          "width": 2146,
+          "height": 477
+        }
+      }
+    },
+    "on-dark": {
+      "path": "logo-on-dark.png",
+      "sha256": "e77646e95e8b0fefecf4467707cc440e62f3a6f8697b22da6f8e9a8506e92cd8",
+      "width": 1024,
+      "height": 230,
+      "transparentFraction": 0.5909774116847826,
+      "master": {
+        "path": "generated-on-dark.png",
+        "sha256": "5b96f535ff478f8680bce9f8e441548ca0f171ab8eaabf9844a61580a4d5ad56",
+        "width": 2169,
+        "height": 725
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-09185c15-dc7f-4ae6-8074-d9ad7f502072",
+        "prompt": "Create the matching light-on-dark production variant of the exact supplied logo. Preserve precisely the same emblem, geometry, spelling, word count, typographic hierarchy, proportions, layout and spacing. Required exact text: AL JAMAL AUTOMOBILE SHOWROOM. Change EVERY letter, including all secondary descriptor words and legal suffixes, to solid white so it is legible over a dark or red website header. Change the charcoal portions of the emblem to white. Retain the small red/gold emblem accent only if it contrasts clearly against a dark header. True transparent alpha background; do not paint a dark rectangle or checkerboard. Flat clean edges, no glows, shadows, bevels, textures, gradients, new artwork, new icon, extra text or mockup. Deliver one horizontal matching logo, fully legible.",
+        "reference": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-08ab3f9e-c574-4952-ae88-a7e3606dce86.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 0,
+          "top": 107,
+          "width": 2130,
+          "height": 479
+        }
+      }
+    }
+  },
+  "review": {
+    "status": "artwork-visually-reviewed",
+    "alpha": "all exports measured as genuine transparent nonempty PNGs",
+    "spelling": "English wordmark inspected; source-bound display aliases retained",
+    "compact": "Horizontal logos only. Interactive 32/48/64px gallery preview is provided; separate compact/favicon artwork remains part of dealer-pack preparation.",
+    "sixDesigns": "not-yet-integrated-or-rendered",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "reviewer": "Codex visual inspection",
+    "header": "All 196 paired PNGs inspected at 240x64 on white, #111113 and #c40101",
+    "evidence": "final-review-02.png",
+    "correctionEvidence": "final-corrections-review.png"
+  },
+  "releaseReady": false,
+  "artworkHolds": [],
+  "artworkReadyForIntegration": true
+}

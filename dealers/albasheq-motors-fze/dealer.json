@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Albasheq Motors FZE",
     "publicOrigin": "https://albasheq-motors-fze.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "f2dd0d848f4a2000bc970f47439fa265aa9f128463e75c479078a0fff8edddc5",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "856befb13779d8a708de2f59234bf4efa9839bb9bbc5b4df66267b3e1e05b705"
+    }
   }
 }

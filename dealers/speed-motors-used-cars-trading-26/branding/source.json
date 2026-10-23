@@ -1,0 +1,163 @@
+{
+  "schemaVersion": 1,
+  "dealer": "speed-motors-used-cars-trading-26",
+  "status": "reviewed-imagegen-proposal",
+  "realLogoFirst": true,
+  "publicSources": [
+    {
+      "url": "https://ae.opensooq.com/en/shops/shop-71385778",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://ae.opensooq.com/en/search/288823486",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.instagram.com/speed_motors26/",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.dubicars.com/ar/2026-toyota-corolla-cross-997514.html",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://coparking.ch/en/United-Arab-Emirates/car-dealers/794",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://linktr.ee/uaq_cars",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "originals": [],
+  "creationMethod": "imagegen-proposal",
+  "dealerApproved": false,
+  "generatedInputs": {
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "master": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "eb2c1b81655e0ffc8d62496799a578f93e8067790b2f0c2a8dda5044b59e3c1f",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-5102ce4c-6790-4e56-9cd0-158717d7c4ee",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark-light.png",
+      "sha256": "a3383380ac540682ec0825ea5b4e0dc74d63a69c0a8ed36a67644a4caf45f6df",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-5102ce4c-6790-4e56-9cd0-158717d7c4ee",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "eb2c1b81655e0ffc8d62496799a578f93e8067790b2f0c2a8dda5044b59e3c1f",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 220,
+            "height": 215
+          }
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-dark.png",
+      "sha256": "7b2c840971bebc763459230fb7dda52cb7191bf4afc01e16b0099b39d0807bd5",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1e6a7678-947d-40aa-ae92-c0361f5182db",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "5cf9efad9c87295cd669963bfa861d17d2b50b08f723c7635ea72f98b370e356",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 220,
+            "height": 216
+          }
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "eb2c1b81655e0ffc8d62496799a578f93e8067790b2f0c2a8dda5044b59e3c1f",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-5102ce4c-6790-4e56-9cd0-158717d7c4ee",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "5cf9efad9c87295cd669963bfa861d17d2b50b08f723c7635ea72f98b370e356",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-1e6a7678-947d-40aa-ae92-c0361f5182db",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "5cf9efad9c87295cd669963bfa861d17d2b50b08f723c7635ea72f98b370e356",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-1e6a7678-947d-40aa-ae92-c0361f5182db",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewKind": "agent-visual-review",
+      "humanReview": false,
+      "dealerApproval": false,
+      "backgrounds": {
+        "onLight": "#ffffff",
+        "onDark": "#111113",
+        "onAccent": "#c40101"
+      },
+      "wordmarkWidths": [
+        220,
+        240
+      ],
+      "notes": "Exact reviewed Image Gen pair; native masters and generation provenance retained. Compact rasters cropped from the actual left symbol."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-22T23:42:46.338Z",
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#c40101"
+      ],
+      "widths": [
+        32,
+        48,
+        64
+      ],
+      "notes": "Left symbol cropped from reviewed horizontal variants; native rendering must independently qualify."
+    }
+  },
+  "sourceBlockers": [],
+  "artworkProvenance": {
+    "path": "branding/artwork-provenance.json",
+    "sha256": "bd1e028de4c8b760d8061ea819908a2b701d63c81dd20c81559dd28252e3ab3d",
+    "manifestSha256": "d25e9cee768a885052ac0a8df220d843c9b9c6f6f120d722705bead1cc99e694",
+    "nativeMasters": [
+      {
+        "path": "branding/native-generated-on-light.png",
+        "sha256": "b2972c18ff58bb718559c39405f36a4c1a4a93eaf4ccc60883233b6888bc0798"
+      },
+      {
+        "path": "branding/native-generated-on-dark.png",
+        "sha256": "a726fdd2d7868acac73bf414a531ea927035f8e8f270d8deafee086d6d3337cd"
+      }
+    ]
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "ae-ajman-alwajaha-auto",
+  "slug": "alwajaha-auto",
+  "name": "Alwajaha Auto",
+  "kind": "corrected-imagegen-website-logo-proposal",
+  "dealerApproved": false,
+  "ownerApproved": false,
+  "sourceEvidence": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/alwajaha-auto",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/3123-mg-5-15-cvt-114-hp-classic",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://auto.ae/alwajahaauto/",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "originalHandoff": {
+    "manifestSha256": "d25e9cee768a885052ac0a8df220d843c9b9c6f6f120d722705bead1cc99e694",
+    "onLightSha256": "02e3673ed41f14f0d23d36b204ae7ce45f37cbd28449238c78c36f6923c8cd1c",
+    "onDarkSha256": "6f5f8aa08d40a9295116cb13c426148ff432178fba4080d0af8e9dbd23f9e90f",
+    "reason": "Original on-dark export had visible alpha holes and distressed lettering; the original handoff remains retained unchanged."
+  },
+  "variants": {
+    "on-light": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "4b538fb3fabcdf7635f4c838d29ef82c43f401084eefd2465c3deab919b21a70",
+      "master": {
+        "path": "branding/native-generated-on-light.png",
+        "sha256": "630d76f8edb0701da99777aaee99cc8ac2ed005e5933ed751756b1247cd5d96b"
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-b9de40a9-cc60-477e-86a8-80b4d39df40c",
+        "prompt": "Edit the matching ALWAJAHA AUTO light-surface logo on a uniform white canvas: identical geometric A monogram, gold inner slash, wording and spacing; only dark ink changes. No texture, holes or added text."
+      },
+      "export": {
+        "operation": "reviewed-flat-white-canvas-alpha-extraction-and-trim",
+        "threshold": 5
+      }
+    },
+    "on-dark": {
+      "path": "branding/generated-on-dark.png",
+      "sha256": "9f14d00b621bff73ae95d86b5ceb983a4cbd3f06726eb222b517fa7adb51db05",
+      "master": {
+        "path": "branding/native-generated-on-dark.png",
+        "sha256": "2a33b758328140ef28ad6f004774a9de1bba6c9ba964b3977774cd2637ccf9ef"
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-b56af99d-f130-424d-a6a9-7e533b574906",
+        "prompt": "Create ALWAJAHA AUTO horizontal website logo in crisp white on uniform black canvas with a large geometric A monogram and small gold slash; exact words, solid fills, no texture."
+      },
+      "export": {
+        "operation": "reviewed-flat-black-canvas-alpha-extraction-and-trim",
+        "threshold": 5
+      }
+    }
+  },
+  "review": {
+    "status": "artwork-visually-reviewed",
+    "reviewedAt": "2026-10-23T04:11:58.162Z",
+    "reviewer": "Codex visual inspection",
+    "backgrounds": [
+      "#ffffff",
+      "#111113",
+      "#c40101"
+    ],
+    "wordmarkWidths": [
+      220,
+      240
+    ],
+    "compactWidths": [
+      32,
+      48,
+      64
+    ],
+    "dealerApproval": false,
+    "notes": "Replacement pair and left symbol inspected; native opaque Image Gen masters and derived transparent PNGs retained."
+  },
+  "releaseReady": false,
+  "artworkHolds": []
+}

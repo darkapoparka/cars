@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "ae-ajman-h-m-cars",
+  "slug": "h-m-cars",
+  "artworkDirectory": "h-m-cars",
+  "name": "H M Cars",
+  "renderedName": "H M Cars",
+  "kind": "independent-website-logo-proposal",
+  "dealerApproved": false,
+  "ownerApproved": false,
+  "sourceEvidence": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/h-m-cars",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/3199-toyota-rav4-20-cvt-196-hp-other",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://hm-cars.com/en/contact-us",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "retainedOriginalsUnchanged": true,
+  "variants": {
+    "on-light": {
+      "path": "logo-on-light.png",
+      "sha256": "a837442f75adaad6256b85de17a65f36a8af31702f5d73785a41509d60ce564c",
+      "width": 1024,
+      "height": 249,
+      "transparentFraction": 0.7307864269578314,
+      "master": {
+        "path": "generated-on-light.png",
+        "sha256": "a4a53fb9a5ad64c0ac15acce1fec0055e104784c063843abe57607cdec4d4c57",
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-8c1ad0bb-155f-478d-a81d-718ba4ed2383",
+        "prompt": "Create one professional horizontal automotive dealership logo proposal for H M Cars. Required exact text, uppercase: H M CARS. Every word must be present and spelled precisely; use sensible primary name and smaller descriptor hierarchy without tiny lettering. Produce a polished original identity with a minimal memorable geometric symbol related to the distinctive name. Initials HM may inform the emblem. Emblem left, full clear name to the right, compact and balanced for a website header. Avoid overused shield and generic car silhouettes; no manufacturer badges. Clean modern lettering with careful kerning and strong legibility. All text is deep charcoal black, appropriate on a white/light header. One restrained red or gold accent may appear inside the emblem only; no pale text. Flat crisp edges, a small number of solid shapes, no chrome, no lighting, no shadow, no texture, no gradient. Genuine transparent alpha background, isolated logo with no background box, no grid, no checkerboard painted into pixels. No slogan, contact info, website, watermark, mockup, photograph, extra concept, or duplicate logo. Deliver exactly one horizontal full logo. This is an independent website identity proposal, not a claim of adopted branding.",
+        "reference": null
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 89,
+          "top": 116,
+          "width": 2056,
+          "height": 499
+        }
+      }
+    },
+    "on-dark": {
+      "path": "logo-on-dark.png",
+      "sha256": "7f74ee814376dc14ff84ad8226ea20fa66a185c0688b73a4afbb4ff1c98a3e63",
+      "width": 1024,
+      "height": 251,
+      "transparentFraction": 0.6722290525398407,
+      "master": {
+        "path": "generated-on-dark.png",
+        "sha256": "05ce2e0f457c7ab736ed8bfa175bc8fb615cd608b0b0de61ab8b8e3d595f9e0b",
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-63e8257a-cefa-4e51-840e-b20b0590ea10",
+        "prompt": "Create the matching light-on-dark production variant of the exact supplied logo. Preserve precisely the same emblem, geometry, spelling, word count, typographic hierarchy, proportions, layout and spacing. Required exact text: H M CARS. Change EVERY letter, including all secondary descriptor words and legal suffixes, to solid white so it is legible over a dark or red website header. Change the charcoal portions of the emblem to white. Retain the small red/gold emblem accent only if it contrasts clearly against a dark header. True transparent alpha background; do not paint a dark rectangle or checkerboard. Flat clean edges, no glows, shadows, bevels, textures, gradients, new artwork, new icon, extra text or mockup. Deliver one horizontal matching logo, fully legible.",
+        "reference": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-8c1ad0bb-155f-478d-a81d-718ba4ed2383.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 75,
+          "top": 112,
+          "width": 2062,
+          "height": 505
+        }
+      }
+    }
+  },
+  "review": {
+    "status": "artwork-visually-reviewed",
+    "alpha": "all exports measured as genuine transparent nonempty PNGs",
+    "spelling": "English wordmark inspected; source-bound display aliases retained",
+    "compact": "Horizontal logos only. Interactive 32/48/64px gallery preview is provided; separate compact/favicon artwork remains part of dealer-pack preparation.",
+    "sixDesigns": "not-yet-integrated-or-rendered",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "reviewer": "Codex visual inspection",
+    "header": "All 196 paired PNGs inspected at 240x64 on white, #111113 and #c40101",
+    "evidence": "final-review-04.png"
+  },
+  "releaseReady": false,
+  "artworkHolds": [],
+  "artworkReadyForIntegration": true
+}

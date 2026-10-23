@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Abo Saif",
     "publicOrigin": "https://abo-saif.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "e90f1180507de5a977230ff4bb5ba98b2d771e2e46f7cb790d59d39116aba05d",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "53b17346920155ea916dfca470ed18d62b5340d242b0e7a649ea2c3b8f9dc816"
+    }
   }
 }

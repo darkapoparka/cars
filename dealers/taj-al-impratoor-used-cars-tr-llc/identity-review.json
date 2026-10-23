@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": true,
+  "reviewedAt": "2026-10-23T04:07:07.861Z",
+  "dealer": "taj-al-impratoor-used-cars-tr-llc",
+  "dealerId": "ae-sharjah-taj-al-impratoor-used-cars-tr-llc",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "method": "Automated exact registry/pack identity, canonical hosting and batch comparison; retained public source fields were structurally checked, not human-approved.",
+  "sources": [
+    {
+      "url": "https://auto.ae/tajalimpratoor/",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://sharrai.ae/car/mercedes-benz-g-class-2023/87350161",
+      "observedAt": "2026-10-18"
+    }
+  ]
+}

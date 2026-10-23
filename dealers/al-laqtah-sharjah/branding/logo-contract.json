@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-laqtah-sharjah",
+  "reviewed": true,
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "dc7933e3c5b58d5f7e862568da5bd086dd8005b41fa53d1dcbd09b6624a019cd",
+      "sourceSha256": "d3d16802b581d18693ecbf7c510ee3f3ae7f2b249ab21d461310a7eb4240ca29"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "6b46a2eb25d7bdba95fb1674f839a54fd76b61cbcf9404c45c7cb84507282fba",
+      "sourceSha256": "024fd949de6fd8f7af682d6b1911ed6c0166d974e82387ba8203f426db62efca"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "6b46a2eb25d7bdba95fb1674f839a54fd76b61cbcf9404c45c7cb84507282fba",
+      "sourceSha256": "024fd949de6fd8f7af682d6b1911ed6c0166d974e82387ba8203f426db62efca"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "d3d16802b581d18693ecbf7c510ee3f3ae7f2b249ab21d461310a7eb4240ca29",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-4aa5d9eb-ef24-4d2f-89b2-c663b6500404",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "11a26e4066355ba1ae734b5ef97e41cfb94e992b9750a18ab286ac557dbf2c39",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-4aa5d9eb-ef24-4d2f-89b2-c663b6500404",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "d3d16802b581d18693ecbf7c510ee3f3ae7f2b249ab21d461310a7eb4240ca29",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 270,
+          "height": 281
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "f818418aac9e2cc1ddb0819f3cb5e5f9badd4f035f3d73fb371f9a6adb05dcc4"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "d3d16802b581d18693ecbf7c510ee3f3ae7f2b249ab21d461310a7eb4240ca29",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-4aa5d9eb-ef24-4d2f-89b2-c663b6500404",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-laqtah-sharjah/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "024fd949de6fd8f7af682d6b1911ed6c0166d974e82387ba8203f426db62efca",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-6f97395d-3903-40cb-a67c-85340e90f314",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-laqtah-sharjah/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "024fd949de6fd8f7af682d6b1911ed6c0166d974e82387ba8203f426db62efca",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-6f97395d-3903-40cb-a67c-85340e90f314",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-laqtah-sharjah/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "d3d16802b581d18693ecbf7c510ee3f3ae7f2b249ab21d461310a7eb4240ca29",
+      "sha256": "d3d16802b581d18693ecbf7c510ee3f3ae7f2b249ab21d461310a7eb4240ca29",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 281
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "024fd949de6fd8f7af682d6b1911ed6c0166d974e82387ba8203f426db62efca",
+      "sha256": "024fd949de6fd8f7af682d6b1911ed6c0166d974e82387ba8203f426db62efca",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 282
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "024fd949de6fd8f7af682d6b1911ed6c0166d974e82387ba8203f426db62efca",
+      "sha256": "024fd949de6fd8f7af682d6b1911ed6c0166d974e82387ba8203f426db62efca",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 282
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "1a42afed88e1d5771cd781d7741850717cdae63e02fe8f5c40c0483ea1dbc29a",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-4aa5d9eb-ef24-4d2f-89b2-c663b6500404",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "d3d16802b581d18693ecbf7c510ee3f3ae7f2b249ab21d461310a7eb4240ca29",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 270,
+            "height": 281
+          }
+        }
+      },
+      "sourceReference": "dealers/al-laqtah-sharjah/branding/generated-mark-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "5ccc955477251bee6efd82c71cce593c834a0ee74309c83e7017a8f6d2192c98",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-6f97395d-3903-40cb-a67c-85340e90f314",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "024fd949de6fd8f7af682d6b1911ed6c0166d974e82387ba8203f426db62efca",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 270,
+            "height": 282
+          }
+        }
+      },
+      "sourceReference": "dealers/al-laqtah-sharjah/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "11a26e4066355ba1ae734b5ef97e41cfb94e992b9750a18ab286ac557dbf2c39",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-4aa5d9eb-ef24-4d2f-89b2-c663b6500404",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "d3d16802b581d18693ecbf7c510ee3f3ae7f2b249ab21d461310a7eb4240ca29",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 270,
+            "height": 281
+          }
+        }
+      },
+      "sourceReference": "dealers/al-laqtah-sharjah/branding/generated-mark-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "f818418aac9e2cc1ddb0819f3cb5e5f9badd4f035f3d73fb371f9a6adb05dcc4",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-4aa5d9eb-ef24-4d2f-89b2-c663b6500404",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "d3d16802b581d18693ecbf7c510ee3f3ae7f2b249ab21d461310a7eb4240ca29",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 270,
+            "height": 281
+          }
+        }
+      },
+      "sourceReference": "dealers/al-laqtah-sharjah/branding/generated-mark-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "875e155f2adcc06d2946a01fdc4663e33a6365c2e05464499c2c953a1e72d889",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-6f97395d-3903-40cb-a67c-85340e90f314",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "024fd949de6fd8f7af682d6b1911ed6c0166d974e82387ba8203f426db62efca",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 270,
+          "height": 282
+        }
+      }
+    }
+  }
+}

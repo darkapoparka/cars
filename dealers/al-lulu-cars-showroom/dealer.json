@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Al Lulu Cars Showroom",
     "publicOrigin": "https://al-lulu-cars-showroom.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "1b5d3de9deb7e84db739f516c950284ee4277f2056b99057917923c60fbc2cc3",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "3a4778057b8a03c6c30d5fb1e157e6de7ad47f7562878f9527cd311054272872"
+    }
   }
 }

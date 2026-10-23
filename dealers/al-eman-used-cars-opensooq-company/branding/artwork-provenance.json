@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "ae-sharjah-al-eman-opensooq",
+  "slug": "al-eman-used-cars-opensooq-company",
+  "artworkDirectory": "al-eman-used-cars-opensooq-company",
+  "name": "Al Eman Used Cars (OpenSooq company)",
+  "renderedName": "Al Eman Used Cars",
+  "kind": "independent-website-logo-proposal",
+  "dealerApproved": false,
+  "ownerApproved": false,
+  "sourceEvidence": [
+    {
+      "url": "https://ae.opensooq.com/en/shops/shop-66913328",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "retainedOriginalsUnchanged": true,
+  "variants": {
+    "on-light": {
+      "path": "logo-on-light.png",
+      "sha256": "fb01ce56e7f3adfb4ba50457c96de7d795c4d62d10ee1be80d3f73899ea94aec",
+      "width": 1024,
+      "height": 289,
+      "transparentFraction": 0.7206896085640139,
+      "master": {
+        "path": "generated-on-light.png",
+        "sha256": "757fa045ed18f3054eaf2a27e86f837cac20eb8bacfd9089471af65d947b460a",
+        "width": 2048,
+        "height": 768
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-5573538f-22cb-453b-ba88-57d750cceacb",
+        "prompt": "Create one professional horizontal automotive dealership logo proposal for Al Eman Used Cars. Required exact text, uppercase: AL EMAN USED CARS. Every word must be present and spelled precisely; use sensible primary name and smaller descriptor hierarchy without tiny lettering. Produce a polished original identity with a minimal memorable geometric symbol related to the distinctive name. Initials E may inform the emblem. Emblem left, full clear name to the right, compact and balanced for a website header. Avoid overused shield and generic car silhouettes; no manufacturer badges. Clean modern lettering with careful kerning and strong legibility. All text is deep charcoal black, appropriate on a white/light header. One restrained red or gold accent may appear inside the emblem only; no pale text. Flat crisp edges, a small number of solid shapes, no chrome, no lighting, no shadow, no texture, no gradient. Genuine transparent alpha background, isolated logo with no background box, no grid, no checkerboard painted into pixels. No slogan, contact info, website, watermark, mockup, photograph, extra concept, or duplicate logo. Deliver exactly one horizontal full logo. This is an independent website identity proposal, not a claim of adopted branding.",
+        "reference": null
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 26,
+          "top": 104,
+          "width": 1979,
+          "height": 558
+        }
+      }
+    },
+    "on-dark": {
+      "path": "logo-on-dark.png",
+      "sha256": "65fdc1c890653fb6c9dbe96c63e9a3b1216b7509e258867ada2e31dcb2038f7b",
+      "width": 1024,
+      "height": 288,
+      "transparentFraction": 0.595611572265625,
+      "master": {
+        "path": "generated-on-dark.png",
+        "sha256": "557354966c47ad2ec612c00b6e395c71a6a8017b0008ac34df51048cef299ba8",
+        "width": 2048,
+        "height": 768
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-d417e805-0688-4751-9c96-ad07d7e0eaf4",
+        "prompt": "Create the matching light-on-dark production variant of the exact supplied logo. Preserve precisely the same emblem, geometry, spelling, word count, typographic hierarchy, proportions, layout and spacing. Required exact text: AL EMAN USED CARS. Change EVERY letter, including all secondary descriptor words and legal suffixes, to solid white so it is legible over a dark or red website header. Change the charcoal portions of the emblem to white. Retain the small red/gold emblem accent only if it contrasts clearly against a dark header. True transparent alpha background; do not paint a dark rectangle or checkerboard. Flat clean edges, no glows, shadows, bevels, textures, gradients, new artwork, new icon, extra text or mockup. Deliver one horizontal matching logo, fully legible.",
+        "reference": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-5573538f-22cb-453b-ba88-57d750cceacb.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 26,
+          "top": 104,
+          "width": 1980,
+          "height": 557
+        }
+      }
+    }
+  },
+  "review": {
+    "status": "artwork-visually-reviewed",
+    "alpha": "all exports measured as genuine transparent nonempty PNGs",
+    "spelling": "English wordmark inspected; source-bound display aliases retained",
+    "compact": "Horizontal logos only. Interactive 32/48/64px gallery preview is provided; separate compact/favicon artwork remains part of dealer-pack preparation.",
+    "sixDesigns": "not-yet-integrated-or-rendered",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "reviewer": "Codex visual inspection",
+    "header": "All 196 paired PNGs inspected at 240x64 on white, #111113 and #c40101",
+    "evidence": "final-review-09.png"
+  },
+  "releaseReady": false,
+  "artworkHolds": [],
+  "artworkReadyForIntegration": true
+}

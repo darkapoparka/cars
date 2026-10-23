@@ -1,0 +1,143 @@
+{
+  "schemaVersion": 1,
+  "dealer": "emirates-gulf-used-cars",
+  "status": "reviewed-imagegen-proposal",
+  "realLogoFirst": true,
+  "publicSources": [
+    {
+      "url": "https://www.dubicars.com/dealers/sharjah-emirates-gulf-used-cars-753",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "originals": [],
+  "creationMethod": "imagegen-proposal",
+  "dealerApproved": false,
+  "generatedInputs": {
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "master": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "2c2ea11c328a86d312f5e5cca59fb1e1271464fa938ec58f8aead69fff9d6f87",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-7efc6ce1-4888-440e-bad6-0fe93ff00492",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark-light.png",
+      "sha256": "60b6ea34773f60a8f0ce63a943e7253f3eab88383e9f71a657e0253b0f3c377f",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-7efc6ce1-4888-440e-bad6-0fe93ff00492",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "2c2ea11c328a86d312f5e5cca59fb1e1271464fa938ec58f8aead69fff9d6f87",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 255,
+            "height": 239
+          }
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-dark.png",
+      "sha256": "06614b56df37ea5628fb41b033b968352ace7b7b8c6555f5afe77abd512abd5b",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1f2de05b-2b28-430a-8df0-1bf9e20c76cf",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "bb10f9b7485e4f3f281bc65a40465197c1180f2245694f76efa928e5ee241a56",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 255,
+            "height": 240
+          }
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "2c2ea11c328a86d312f5e5cca59fb1e1271464fa938ec58f8aead69fff9d6f87",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-7efc6ce1-4888-440e-bad6-0fe93ff00492",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "bb10f9b7485e4f3f281bc65a40465197c1180f2245694f76efa928e5ee241a56",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-1f2de05b-2b28-430a-8df0-1bf9e20c76cf",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "bb10f9b7485e4f3f281bc65a40465197c1180f2245694f76efa928e5ee241a56",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-1f2de05b-2b28-430a-8df0-1bf9e20c76cf",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewKind": "agent-visual-review",
+      "humanReview": false,
+      "dealerApproval": false,
+      "backgrounds": {
+        "onLight": "#ffffff",
+        "onDark": "#111113",
+        "onAccent": "#c40101"
+      },
+      "wordmarkWidths": [
+        220,
+        240
+      ],
+      "notes": "Exact reviewed Image Gen pair; native masters and generation provenance retained. Compact rasters cropped from the actual left symbol."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-22T23:42:46.338Z",
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#c40101"
+      ],
+      "widths": [
+        32,
+        48,
+        64
+      ],
+      "notes": "Left symbol cropped from reviewed horizontal variants; native rendering must independently qualify."
+    }
+  },
+  "sourceBlockers": [],
+  "artworkProvenance": {
+    "path": "branding/artwork-provenance.json",
+    "sha256": "57d0b589d540acb6d684a12d58727154edf0a5f4bd7c46feaf93dad2beb64346",
+    "manifestSha256": "d25e9cee768a885052ac0a8df220d843c9b9c6f6f120d722705bead1cc99e694",
+    "nativeMasters": [
+      {
+        "path": "branding/native-generated-on-light.png",
+        "sha256": "54ef96f1c46da4a51a87b2ff6f681e35308537a698208eb39d9fb154fa3ba3d1"
+      },
+      {
+        "path": "branding/native-generated-on-dark.png",
+        "sha256": "0f684c35ad28ad6b28d159535cd712726bfb3dcd75b7109b1f65233b95b5b56a"
+      }
+    ]
+  }
+}

@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Top1 Motors",
     "publicOrigin": "https://top1-motors.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "8011779a0e6ad00c6229a432b9ca8847c174c5e4aa9693e0113d3350941d41b7",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "69232a814d8149812a0c61e0941b14a188a71ec36e600216f1549fcf2ee873b4"
+    }
   }
 }

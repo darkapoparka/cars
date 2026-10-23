@@ -1,0 +1,157 @@
+{
+  "schemaVersion": 1,
+  "dealer": "titanium-used-cars",
+  "status": "reviewed-imagegen-proposal",
+  "realLogoFirst": true,
+  "publicSources": [
+    {
+      "url": "https://www.dubicars.com/dealers/sharjah-titanium-used-cars-2450",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "originals": [],
+  "creationMethod": "imagegen-proposal",
+  "dealerApproved": false,
+  "generatedInputs": {
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "master": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "16f848d50f11b5997348468e832e44aab275578c4c891e9b2b420b9a9eeb140b",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a924af16-9d3f-4a6e-9b9a-e49d2b290583",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark-light.png",
+      "sha256": "9a127e3981ec9f4d520c160f8bc441d9c24c0cd5eb91f2444c5e7a51a8609073",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a924af16-9d3f-4a6e-9b9a-e49d2b290583",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "16f848d50f11b5997348468e832e44aab275578c4c891e9b2b420b9a9eeb140b",
+          "operation": "isolate-reviewed-left-emblem-components",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 285,
+            "height": 238
+          },
+          "selection": {
+            "alphaThreshold": 128,
+            "minXBefore": 240,
+            "minPixels": 40,
+            "antialiasNeighborPixels": 1,
+            "components": 3
+          }
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-dark.png",
+      "sha256": "47e5c6bea1dc2fb48e8bafb6d59a03c19d271275a6568536f38ce615be895546",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-ae7c4699-3d0a-4d6f-9b9b-9bdbb8cc441b",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "9088d7bcafc10ce19fd9e956c3c9996feeea65261f757bc3214977a22a3e2759",
+          "operation": "isolate-reviewed-left-emblem-components",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 285,
+            "height": 240
+          },
+          "selection": {
+            "alphaThreshold": 128,
+            "minXBefore": 240,
+            "minPixels": 40,
+            "antialiasNeighborPixels": 1,
+            "components": 3
+          }
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "16f848d50f11b5997348468e832e44aab275578c4c891e9b2b420b9a9eeb140b",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-a924af16-9d3f-4a6e-9b9a-e49d2b290583",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "9088d7bcafc10ce19fd9e956c3c9996feeea65261f757bc3214977a22a3e2759",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-ae7c4699-3d0a-4d6f-9b9b-9bdbb8cc441b",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "9088d7bcafc10ce19fd9e956c3c9996feeea65261f757bc3214977a22a3e2759",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-ae7c4699-3d0a-4d6f-9b9b-9bdbb8cc441b",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewKind": "agent-visual-review",
+      "humanReview": false,
+      "dealerApproval": false,
+      "backgrounds": {
+        "onLight": "#ffffff",
+        "onDark": "#111113",
+        "onAccent": "#c40101"
+      },
+      "wordmarkWidths": [
+        220,
+        240
+      ],
+      "notes": "Exact reviewed Image Gen pair; native masters and generation provenance retained. Compact rasters cropped from the actual left symbol."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-22T23:42:46.338Z",
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#c40101"
+      ],
+      "widths": [
+        32,
+        48,
+        64
+      ],
+      "notes": "Compact emblem isolated from exact reviewed PNGs without neighboring wordmark letters; native compact and favicon QA independent."
+    }
+  },
+  "sourceBlockers": [],
+  "artworkProvenance": {
+    "path": "branding/artwork-provenance.json",
+    "sha256": "f7b90db767e4e4761fd01c6c68ba905c2a47a452088df94e8ba765a107f02fa8",
+    "manifestSha256": "d25e9cee768a885052ac0a8df220d843c9b9c6f6f120d722705bead1cc99e694",
+    "nativeMasters": [
+      {
+        "path": "branding/native-generated-on-light.png",
+        "sha256": "2dc4d2f66a01d21bdcd70b330d8fb9cdd4f60d08fe781bbb7ffa5b39552df189"
+      },
+      {
+        "path": "branding/native-generated-on-dark.png",
+        "sha256": "44d5b6c79cd8d3363ce5e967b73d6870b6265ace289534bdaa013c4bff823f96"
+      }
+    ]
+  }
+}

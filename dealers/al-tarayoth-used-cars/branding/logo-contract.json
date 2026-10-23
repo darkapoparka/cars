@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-tarayoth-used-cars",
+  "reviewed": true,
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "48c84833e990b504aa3229ffd460b5175fad7b2a8ea40e7733652e91381ad334",
+      "sourceSha256": "b5507021528487ceb5521e79b4e957c088dfcbb26897fdda887caf28eac2b82d"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "59b4b145c79152ae9335d54c61952ed21897f6d22311c63841444c0216eb7fb9",
+      "sourceSha256": "f6404779181d21a6e4b0ef13fdd829e9375e514d22fe3db42801ec1830f6e733"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "59b4b145c79152ae9335d54c61952ed21897f6d22311c63841444c0216eb7fb9",
+      "sourceSha256": "f6404779181d21a6e4b0ef13fdd829e9375e514d22fe3db42801ec1830f6e733"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "b5507021528487ceb5521e79b4e957c088dfcbb26897fdda887caf28eac2b82d",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-06d1293d-57b3-4b83-96cd-e1b97845ed22",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "1afa5d05abb341cc9c2fef96c8f2a82c827632574df3cce067e311afb58507d7",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-06d1293d-57b3-4b83-96cd-e1b97845ed22",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "b5507021528487ceb5521e79b4e957c088dfcbb26897fdda887caf28eac2b82d",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 235,
+          "height": 253
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "30b3f5ce28a44d159bec9e2089a6ee9e5e05b3bf304e63405b6d951562eec278"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "b5507021528487ceb5521e79b4e957c088dfcbb26897fdda887caf28eac2b82d",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-06d1293d-57b3-4b83-96cd-e1b97845ed22",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-tarayoth-used-cars/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "f6404779181d21a6e4b0ef13fdd829e9375e514d22fe3db42801ec1830f6e733",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-80940e76-4727-4991-91d5-62ee778d2599",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-tarayoth-used-cars/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "f6404779181d21a6e4b0ef13fdd829e9375e514d22fe3db42801ec1830f6e733",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-80940e76-4727-4991-91d5-62ee778d2599",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-tarayoth-used-cars/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "b5507021528487ceb5521e79b4e957c088dfcbb26897fdda887caf28eac2b82d",
+      "sha256": "b5507021528487ceb5521e79b4e957c088dfcbb26897fdda887caf28eac2b82d",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 253
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "f6404779181d21a6e4b0ef13fdd829e9375e514d22fe3db42801ec1830f6e733",
+      "sha256": "f6404779181d21a6e4b0ef13fdd829e9375e514d22fe3db42801ec1830f6e733",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 249
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "f6404779181d21a6e4b0ef13fdd829e9375e514d22fe3db42801ec1830f6e733",
+      "sha256": "f6404779181d21a6e4b0ef13fdd829e9375e514d22fe3db42801ec1830f6e733",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 249
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "da7ad8a01da9d81216cf096f79dc2665c9af23ad196d7c746c33b5404d6089e5",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-06d1293d-57b3-4b83-96cd-e1b97845ed22",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "b5507021528487ceb5521e79b4e957c088dfcbb26897fdda887caf28eac2b82d",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 235,
+            "height": 253
+          }
+        }
+      },
+      "sourceReference": "dealers/al-tarayoth-used-cars/branding/generated-mark-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "f0e6c9b383cade69a8809913bc19c73773f6715c16ea844310fbe649279a4cf1",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-80940e76-4727-4991-91d5-62ee778d2599",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "f6404779181d21a6e4b0ef13fdd829e9375e514d22fe3db42801ec1830f6e733",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 235,
+            "height": 249
+          }
+        }
+      },
+      "sourceReference": "dealers/al-tarayoth-used-cars/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "1afa5d05abb341cc9c2fef96c8f2a82c827632574df3cce067e311afb58507d7",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-06d1293d-57b3-4b83-96cd-e1b97845ed22",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "b5507021528487ceb5521e79b4e957c088dfcbb26897fdda887caf28eac2b82d",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 235,
+            "height": 253
+          }
+        }
+      },
+      "sourceReference": "dealers/al-tarayoth-used-cars/branding/generated-mark-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "30b3f5ce28a44d159bec9e2089a6ee9e5e05b3bf304e63405b6d951562eec278",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-06d1293d-57b3-4b83-96cd-e1b97845ed22",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "b5507021528487ceb5521e79b4e957c088dfcbb26897fdda887caf28eac2b82d",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 235,
+            "height": 253
+          }
+        }
+      },
+      "sourceReference": "dealers/al-tarayoth-used-cars/branding/generated-mark-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "4334c10dd85bd4cc3427735d1b3db6dfb2fa4653ea9579de6e67390f5d42bbb0",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-80940e76-4727-4991-91d5-62ee778d2599",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "f6404779181d21a6e4b0ef13fdd829e9375e514d22fe3db42801ec1830f6e733",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 235,
+          "height": 249
+        }
+      }
+    }
+  }
+}

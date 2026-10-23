@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "dealer": "tawhib-cars-trading",
+  "reviewed": true,
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "7bd2e9c9716c7ab9981ca3fdb5ed82905ba840d5f322b09b4fd2b369f6d41d5d",
+      "sourceSha256": "1070814c05da7570aab91ac9ab27dbaed3a3727dc5e19ee49721f7f12cc22e12"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "ebcfeb93840f14fb1e70ec52d041b190cc361ea39690b1ade712a7deb8051d4d",
+      "sourceSha256": "36d3163014166618a1c76628ef9f84cbf941862846f367583cebd3d4ebfeea82"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "ebcfeb93840f14fb1e70ec52d041b190cc361ea39690b1ade712a7deb8051d4d",
+      "sourceSha256": "36d3163014166618a1c76628ef9f84cbf941862846f367583cebd3d4ebfeea82"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "1070814c05da7570aab91ac9ab27dbaed3a3727dc5e19ee49721f7f12cc22e12",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-f2997493-412b-4f76-8b97-3a6f7f021ead",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "1e030dab608eda54de22aea6a5947257aa40de92c0023e3b330285da0354f2e0",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-f2997493-412b-4f76-8b97-3a6f7f021ead",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "1070814c05da7570aab91ac9ab27dbaed3a3727dc5e19ee49721f7f12cc22e12",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 270,
+          "height": 271
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "ea9b1d7600b806b4722036e562bc9099ffd168fbda1418597a186c2976277830"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "1070814c05da7570aab91ac9ab27dbaed3a3727dc5e19ee49721f7f12cc22e12",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-f2997493-412b-4f76-8b97-3a6f7f021ead",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/tawhib-cars-trading/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "36d3163014166618a1c76628ef9f84cbf941862846f367583cebd3d4ebfeea82",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-303832ab-317e-4397-91ed-ed7694def009",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/tawhib-cars-trading/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "36d3163014166618a1c76628ef9f84cbf941862846f367583cebd3d4ebfeea82",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-303832ab-317e-4397-91ed-ed7694def009",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/tawhib-cars-trading/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "1070814c05da7570aab91ac9ab27dbaed3a3727dc5e19ee49721f7f12cc22e12",
+      "sha256": "1070814c05da7570aab91ac9ab27dbaed3a3727dc5e19ee49721f7f12cc22e12",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 271
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "36d3163014166618a1c76628ef9f84cbf941862846f367583cebd3d4ebfeea82",
+      "sha256": "36d3163014166618a1c76628ef9f84cbf941862846f367583cebd3d4ebfeea82",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 272
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "36d3163014166618a1c76628ef9f84cbf941862846f367583cebd3d4ebfeea82",
+      "sha256": "36d3163014166618a1c76628ef9f84cbf941862846f367583cebd3d4ebfeea82",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 272
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "60d5c51d0914f24ae689f9775913ca1dc801dda98a3f51f1fdd48489b3884488",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-f2997493-412b-4f76-8b97-3a6f7f021ead",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "1070814c05da7570aab91ac9ab27dbaed3a3727dc5e19ee49721f7f12cc22e12",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 270,
+            "height": 271
+          }
+        }
+      },
+      "sourceReference": "dealers/tawhib-cars-trading/branding/generated-mark-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "ab82758460283cb5a3483887da82d7a92f499fba0c8ccf5a2e57e1cae6fedd08",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-303832ab-317e-4397-91ed-ed7694def009",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "36d3163014166618a1c76628ef9f84cbf941862846f367583cebd3d4ebfeea82",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 270,
+            "height": 272
+          }
+        }
+      },
+      "sourceReference": "dealers/tawhib-cars-trading/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "1e030dab608eda54de22aea6a5947257aa40de92c0023e3b330285da0354f2e0",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-f2997493-412b-4f76-8b97-3a6f7f021ead",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "1070814c05da7570aab91ac9ab27dbaed3a3727dc5e19ee49721f7f12cc22e12",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 270,
+            "height": 271
+          }
+        }
+      },
+      "sourceReference": "dealers/tawhib-cars-trading/branding/generated-mark-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "ea9b1d7600b806b4722036e562bc9099ffd168fbda1418597a186c2976277830",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-f2997493-412b-4f76-8b97-3a6f7f021ead",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "1070814c05da7570aab91ac9ab27dbaed3a3727dc5e19ee49721f7f12cc22e12",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 270,
+            "height": 271
+          }
+        }
+      },
+      "sourceReference": "dealers/tawhib-cars-trading/branding/generated-mark-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "54d986e534a902edbbb87935ca9ad13d5ab46aa42c13454658ea8469b42941dc",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-303832ab-317e-4397-91ed-ed7694def009",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "36d3163014166618a1c76628ef9f84cbf941862846f367583cebd3d4ebfeea82",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 270,
+          "height": 272
+        }
+      }
+    }
+  }
+}

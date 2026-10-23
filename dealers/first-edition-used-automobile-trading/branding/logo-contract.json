@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "dealer": "first-edition-used-automobile-trading",
+  "reviewed": true,
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "e699a54a76de1460832fb57549812b2fb04f6e9d1b670ca9a82ebd3d9b4b1922",
+      "sourceSha256": "0a7a8861c2a387493138ba7b6618b87c2c46aabc4a1628758973606161099b2e"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "4bc148b38c346ee07a0c0b9389a6e0d12801f71b4ba340ca7e54eb57814a84b7",
+      "sourceSha256": "8b56ca2fa0878d5c3cc96596bac7053fd2faf4e089e2bdd5795782372afd23ea"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "4bc148b38c346ee07a0c0b9389a6e0d12801f71b4ba340ca7e54eb57814a84b7",
+      "sourceSha256": "8b56ca2fa0878d5c3cc96596bac7053fd2faf4e089e2bdd5795782372afd23ea"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "0a7a8861c2a387493138ba7b6618b87c2c46aabc4a1628758973606161099b2e",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-3412bc89-d66e-45af-b243-fb81ab33c036",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "79cd2cc9d52f6a918bfcfa035b146900bf2c76e665a1dd172841418104dabaf2",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-3412bc89-d66e-45af-b243-fb81ab33c036",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "0a7a8861c2a387493138ba7b6618b87c2c46aabc4a1628758973606161099b2e",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 230,
+          "height": 230
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "230d45fd48036cd408954b368293c89d6689b6ecec2bf8adba59d79e368b5434"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "0a7a8861c2a387493138ba7b6618b87c2c46aabc4a1628758973606161099b2e",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-3412bc89-d66e-45af-b243-fb81ab33c036",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/first-edition-used-automobile-trading/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "8b56ca2fa0878d5c3cc96596bac7053fd2faf4e089e2bdd5795782372afd23ea",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-977be979-3bc7-45d7-b2b2-65bbb4bb1b3d",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/first-edition-used-automobile-trading/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "8b56ca2fa0878d5c3cc96596bac7053fd2faf4e089e2bdd5795782372afd23ea",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-977be979-3bc7-45d7-b2b2-65bbb4bb1b3d",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/first-edition-used-automobile-trading/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "0a7a8861c2a387493138ba7b6618b87c2c46aabc4a1628758973606161099b2e",
+      "sha256": "0a7a8861c2a387493138ba7b6618b87c2c46aabc4a1628758973606161099b2e",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 230
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "8b56ca2fa0878d5c3cc96596bac7053fd2faf4e089e2bdd5795782372afd23ea",
+      "sha256": "8b56ca2fa0878d5c3cc96596bac7053fd2faf4e089e2bdd5795782372afd23ea",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 232
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "8b56ca2fa0878d5c3cc96596bac7053fd2faf4e089e2bdd5795782372afd23ea",
+      "sha256": "8b56ca2fa0878d5c3cc96596bac7053fd2faf4e089e2bdd5795782372afd23ea",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 232
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "d4ff8d55023d3227288e1719f9e360f2b4daf950cf46a6f6bc7f14573ca982e2",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-3412bc89-d66e-45af-b243-fb81ab33c036",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "0a7a8861c2a387493138ba7b6618b87c2c46aabc4a1628758973606161099b2e",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 230,
+            "height": 230
+          }
+        }
+      },
+      "sourceReference": "dealers/first-edition-used-automobile-trading/branding/generated-mark-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "da6accd4c2663527e5d08448927b68a84463c9614ee867c7b1eb3c9c6bbf5a20",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-977be979-3bc7-45d7-b2b2-65bbb4bb1b3d",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "8b56ca2fa0878d5c3cc96596bac7053fd2faf4e089e2bdd5795782372afd23ea",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 230,
+            "height": 232
+          }
+        }
+      },
+      "sourceReference": "dealers/first-edition-used-automobile-trading/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "79cd2cc9d52f6a918bfcfa035b146900bf2c76e665a1dd172841418104dabaf2",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-3412bc89-d66e-45af-b243-fb81ab33c036",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "0a7a8861c2a387493138ba7b6618b87c2c46aabc4a1628758973606161099b2e",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 230,
+            "height": 230
+          }
+        }
+      },
+      "sourceReference": "dealers/first-edition-used-automobile-trading/branding/generated-mark-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "230d45fd48036cd408954b368293c89d6689b6ecec2bf8adba59d79e368b5434",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-3412bc89-d66e-45af-b243-fb81ab33c036",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "0a7a8861c2a387493138ba7b6618b87c2c46aabc4a1628758973606161099b2e",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 230,
+            "height": 230
+          }
+        }
+      },
+      "sourceReference": "dealers/first-edition-used-automobile-trading/branding/generated-mark-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "38dc5a0952a0d4ba1917ca1d01c7247a2537a7a5e3574c886cfc6a05d13561aa",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-977be979-3bc7-45d7-b2b2-65bbb4bb1b3d",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "8b56ca2fa0878d5c3cc96596bac7053fd2faf4e089e2bdd5795782372afd23ea",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 230,
+          "height": 232
+        }
+      }
+    }
+  }
+}

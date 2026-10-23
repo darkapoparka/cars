@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "slug": "khaled-al-fares-used-cars-llc",
+  "dealerId": "ae-sharjah-khaled-al-fares-used-cars",
+  "business": {
+    "name": "Khaled Al Fares Used Cars LLC",
+    "city": "Sharjah",
+    "region": "Sharjah",
+    "countryCode": "AE",
+    "currency": "AED",
+    "distanceUnit": "km",
+    "locale": "en-AE",
+    "address": "",
+    "phone": "+971542340520",
+    "phoneDisplay": "+971542340520",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://auto.ae/khaledalfares/",
+    "hours": "",
+    "sourceUrl": "https://auto.ae/khaledalfares/",
+    "observedAt": "2026-10-18",
+    "inventoryNotice": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://auto.ae/khaledalfares/",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Volkswagen/Golf-R-/?id=187146",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    }
+  ]
+}

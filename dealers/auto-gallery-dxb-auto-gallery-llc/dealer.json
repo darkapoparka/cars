@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Auto Gallery DXB (Auto Gallery LLC)",
     "publicOrigin": "https://auto-gallery-dxb-auto-gallery-llc.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "5c2c6ba6bc8cf5342c07fe8006dff4f5429376063d7fe5949c5d0b6722951680",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "61e54203942ec6910baae9c24e808b0fcf0a4bdc1ce59c40341cad243dc015ed"
+    }
   }
 }

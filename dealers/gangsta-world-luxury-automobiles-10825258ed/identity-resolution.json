@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-identity-resolution",
+  "dealerId": "ae-dubai-gangsta-world-luxury-automobiles-trading-llc-fz",
+  "slug": "gangsta-world-luxury-automobiles-10825258ed",
+  "recordedAt": "2026-10-23",
+  "status": "resolved-with-public-marketplace-evidence",
+  "previousHold": "Reference graphic says Gangsta Paradise; canonical lead says Gangsta World. Confirm alias before integration.",
+  "conclusion": "OneClickDrive attributes the Maybach S680 listing to Gangsta World Luxury Automobiles Trading LLC FZ. Its seller-written description calls the same Al Quoz showroom Gangsta Paradise Cars. The Paradise graphic is a reference alias, while the proposed horizontal art spells the canonical World name. This is an evidence-based alias inference, not dealer approval.",
+  "evidence": [
+    {
+      "url": "https://www.oneclickdrive.com/company/dubai/gangsta-world-luxury-automobiles-trading-llc-fz",
+      "observedAt": "2026-10-23",
+      "supports": "named legal seller and Al Quoz branch"
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/Mercedes-Benz/Maybach-S680/?id=54214",
+      "observedAt": "2026-10-23",
+      "supports": "same legal seller, dealer-authored Paradise alias, same Al Quoz premises"
+    }
+  ],
+  "dealerApproval": false
+}

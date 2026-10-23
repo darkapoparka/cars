@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "dealer": "us-motors",
-  "status": "research-required",
+  "status": "reviewed-imagegen-proposal",
   "realLogoFirst": true,
   "publicSources": [
     {
@@ -10,7 +10,129 @@
     }
   ],
   "originals": [],
-  "creationMethod": null,
+  "creationMethod": "imagegen-proposal",
   "dealerApproved": false,
-  "generatedInputs": null
+  "generatedInputs": {
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "master": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "20bc63809bbcd638900a23349ba411ffa2e1b38c70c092c58dc871df3f937918",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-7ef8c296-e37b-49a6-8ec4-631737f81a37",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark-light.png",
+      "sha256": "b3f69b4be5bea2a3ef7fd78607504bd1812231e506d5fefd22f38e5c2fd15fa6",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-7ef8c296-e37b-49a6-8ec4-631737f81a37",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "20bc63809bbcd638900a23349ba411ffa2e1b38c70c092c58dc871df3f937918",
+          "operation": "darken-reviewed-gold-for-white-compact-favicon",
+          "outputColor": "#643908"
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-dark.png",
+      "sha256": "5e6d40ea746bc4a4be38c0881919e259b95931f841c0b401bfd7f06f3b17992f",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-d339bfd8-59b7-42e8-b298-1e2b4adf5b4b",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "b607eb803eba86ec613abb7cddef1b290aacfda8671ed9a1f4e9770b94c6001a",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 435,
+            "height": 300
+          }
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "20bc63809bbcd638900a23349ba411ffa2e1b38c70c092c58dc871df3f937918",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-7ef8c296-e37b-49a6-8ec4-631737f81a37",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "b607eb803eba86ec613abb7cddef1b290aacfda8671ed9a1f4e9770b94c6001a",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-d339bfd8-59b7-42e8-b298-1e2b4adf5b4b",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "b607eb803eba86ec613abb7cddef1b290aacfda8671ed9a1f4e9770b94c6001a",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-d339bfd8-59b7-42e8-b298-1e2b4adf5b4b",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewKind": "agent-visual-review",
+      "humanReview": false,
+      "dealerApproval": false,
+      "backgrounds": {
+        "onLight": "#ffffff",
+        "onDark": "#111113",
+        "onAccent": "#c40101"
+      },
+      "wordmarkWidths": [
+        220,
+        240
+      ],
+      "notes": "Exact reviewed Image Gen pair; native masters and generation provenance retained. Compact rasters cropped from the actual left symbol."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-22T23:42:46.338Z",
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#c40101"
+      ],
+      "widths": [
+        32,
+        48,
+        64
+      ],
+      "notes": "Original horizontal artwork unchanged; compact amber contrast corrected from its pixels. Native favicon and browser QA independent."
+    }
+  },
+  "sourceBlockers": [],
+  "artworkProvenance": {
+    "path": "branding/artwork-provenance.json",
+    "sha256": "a230cdd760e0cfee216b3f0cf1dcdd531f6ebf1a7e9eef0134f6c840a721abc2",
+    "manifestSha256": "d25e9cee768a885052ac0a8df220d843c9b9c6f6f120d722705bead1cc99e694",
+    "nativeMasters": [
+      {
+        "path": "branding/native-generated-on-light.png",
+        "sha256": "9cec294c1274a51fc16a1b3bbeecd96a85cbefa31d2cc106d086dee8b3e0cca0"
+      },
+      {
+        "path": "branding/native-generated-on-dark.png",
+        "sha256": "142e1d03f52e61175861a55639635c4eab47928dc6dee798dae2428d35375518"
+      }
+    ]
+  }
 }

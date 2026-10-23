@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "ae-ras-al-khaimah-texas-used-auto-trading",
+  "slug": "texas-used-auto-trading",
+  "artworkDirectory": "texas-used-auto-trading",
+  "name": "Texas Used Auto Trading",
+  "renderedName": "Texas Used Auto Trading",
+  "kind": "independent-website-logo-proposal",
+  "dealerApproved": false,
+  "ownerApproved": false,
+  "sourceEvidence": [
+    {
+      "url": "https://www.instagram.com/texas__cars/",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.instagram.com/texas__cars/p/DeJQ2VTiH5N/",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.instagram.com/texas__cars/p/DeO-gjxiDPg/",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.instagram.com/texas__cars/p/DeYjw7ZCM5Y/",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.instagram.com/texas__cars/reel/DedrnzaIQC4/",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.waze.com/live-map/directions/ae/ras-al-khaimah/ras-al-khaimah/tksas-ltjarh-alsyarat-almstamlh-texas-used-auto-trading?to=place.ChIJ7ZGIJ9XZ9T4RtfzsIJ4ShCo",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.arabwheels.ae/used-cars/dealers/texas-used-auto-trading-showroom-in-uae",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "retainedOriginalsUnchanged": true,
+  "variants": {
+    "on-light": {
+      "path": "logo-on-light.png",
+      "sha256": "c661e29be48c3c612c4998ecbc60886e42db581677ab4639e731ada2bc267686",
+      "width": 1024,
+      "height": 253,
+      "transparentFraction": 0.6449905817687747,
+      "master": {
+        "path": "generated-on-light.png",
+        "sha256": "12491d188a895f68d1f16f63349161427fc99d3e7aa148ebfb4c8e099f4a3980",
+        "width": 2070,
+        "height": 760
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-1457dbf4-9ec6-4a10-ad72-a535f78ac9bc",
+        "prompt": "Create one professional horizontal automotive dealership logo proposal for Texas Used Auto Trading. Required exact text, uppercase: TEXAS USED AUTO TRADING. Every word must be present and spelled precisely; use sensible primary name and smaller descriptor hierarchy without tiny lettering. Produce a polished original identity with a distinctive custom typographic ligature in a refined square emblem. Initials T may inform the emblem. Emblem left, full clear name to the right, compact and balanced for a website header. Avoid overused shield and generic car silhouettes; no manufacturer badges. Clean modern lettering with careful kerning and strong legibility. All text is deep charcoal black, appropriate on a white/light header. One restrained red or gold accent may appear inside the emblem only; no pale text. Flat crisp edges, a small number of solid shapes, no chrome, no lighting, no shadow, no texture, no gradient. Genuine transparent alpha background, isolated logo with no background box, no grid, no checkerboard painted into pixels. No slogan, contact info, website, watermark, mockup, photograph, extra concept, or duplicate logo. Deliver exactly one horizontal full logo. This is an independent website identity proposal, not a claim of adopted branding.",
+        "reference": null
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 79,
+          "top": 141,
+          "width": 1912,
+          "height": 472
+        }
+      }
+    },
+    "on-dark": {
+      "path": "logo-on-dark.png",
+      "sha256": "07e0e50e1d8942f131631af6d606f5e418d4151a4a79185a8e6c1571d78a2540",
+      "width": 1024,
+      "height": 253,
+      "transparentFraction": 0.5039409893774703,
+      "master": {
+        "path": "generated-on-dark.png",
+        "sha256": "5f3b4e31a47bb7ec229491a20360b4588d7d76f388475eef14c87d8184e4829e",
+        "width": 2069,
+        "height": 760
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-5c3b6196-5e37-4c84-897b-df603e3b8e77",
+        "prompt": "Create the matching light-on-dark production variant of the exact supplied logo. Preserve precisely the same emblem, geometry, spelling, word count, typographic hierarchy, proportions, layout and spacing. Required exact text: TEXAS USED AUTO TRADING. Change EVERY letter, including all secondary descriptor words and legal suffixes, to solid white so it is legible over a dark or red website header. Change the charcoal portions of the emblem to white. Retain the small red/gold emblem accent only if it contrasts clearly against a dark header. True transparent alpha background; do not paint a dark rectangle or checkerboard. Flat clean edges, no glows, shadows, bevels, textures, gradients, new artwork, new icon, extra text or mockup. Deliver one horizontal matching logo, fully legible.",
+        "reference": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-1457dbf4-9ec6-4a10-ad72-a535f78ac9bc.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 79,
+          "top": 135,
+          "width": 1902,
+          "height": 469
+        }
+      }
+    }
+  },
+  "review": {
+    "status": "artwork-visually-reviewed",
+    "alpha": "all exports measured as genuine transparent nonempty PNGs",
+    "spelling": "English wordmark inspected; source-bound display aliases retained",
+    "compact": "Horizontal logos only. Interactive 32/48/64px gallery preview is provided; separate compact/favicon artwork remains part of dealer-pack preparation.",
+    "sixDesigns": "not-yet-integrated-or-rendered",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "reviewer": "Codex visual inspection",
+    "header": "All 196 paired PNGs inspected at 240x64 on white, #111113 and #c40101",
+    "evidence": "final-review-08.png"
+  },
+  "releaseReady": false,
+  "artworkHolds": [],
+  "artworkReadyForIntegration": true
+}

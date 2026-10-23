@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "ae-dubai-trio-enterprises",
+  "slug": "trio-enterprises",
+  "artworkDirectory": "trio-enterprises",
+  "name": "Trio Enterprises",
+  "renderedName": "Trio Enterprises",
+  "kind": "independent-website-logo-proposal",
+  "dealerApproved": false,
+  "ownerApproved": false,
+  "sourceEvidence": [
+    {
+      "url": "https://www.dubicars.com/dealers/dubai-trio-enterprises-2929",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "retainedOriginalsUnchanged": true,
+  "variants": {
+    "on-light": {
+      "path": "logo-on-light.png",
+      "sha256": "0368fcce5f2e50072c0ccd8e8876247853e1b9a4da5619db89d11e71b45add52",
+      "width": 1024,
+      "height": 331,
+      "transparentFraction": 0.6721493816087614,
+      "master": {
+        "path": "generated-on-light.png",
+        "sha256": "74bb7c9c8995387697f20f0a627f08163de4e1262d99473b0797e050546b8abe",
+        "width": 2081,
+        "height": 755
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-7a668bed-8078-426d-8e05-b57198a4e503",
+        "prompt": "Create one professional horizontal automotive dealership logo proposal for Trio Enterprises. Required exact text, uppercase: TRIO ENTERPRISES. Every word must be present and spelled precisely; use sensible primary name and smaller descriptor hierarchy without tiny lettering. Produce a polished original identity with a clever rounded negative-space monogram, with an open confident silhouette. Initials TE may inform the emblem. Emblem left, full clear name to the right, compact and balanced for a website header. Avoid overused shield and generic car silhouettes; no manufacturer badges. Clean modern lettering with careful kerning and strong legibility. All text is deep charcoal black, appropriate on a white/light header. One restrained red or gold accent may appear inside the emblem only; no pale text. Flat crisp edges, a small number of solid shapes, no chrome, no lighting, no shadow, no texture, no gradient. Genuine transparent alpha background, isolated logo with no background box, no grid, no checkerboard painted into pixels. No slogan, contact info, website, watermark, mockup, photograph, extra concept, or duplicate logo. Deliver exactly one horizontal full logo. This is an independent website identity proposal, not a claim of adopted branding.",
+        "reference": null
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 55,
+          "top": 48,
+          "width": 1958,
+          "height": 632
+        }
+      }
+    },
+    "on-dark": {
+      "path": "logo-on-dark.png",
+      "sha256": "20d200c35bfa70e6e10a1f59593d1608487532e707bca73117b51b744e6558dd",
+      "width": 1024,
+      "height": 331,
+      "transparentFraction": 0.5216938491314199,
+      "master": {
+        "path": "generated-on-dark.png",
+        "sha256": "0cecdbb40b523709ef5868a2e163ccf2820af883c3d4081dfb25d0a6f47c6d9c",
+        "width": 2083,
+        "height": 755
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-df1a9dfd-7f71-43b9-be24-8cc7c8e4814f",
+        "prompt": "Create the matching light-on-dark production variant of the exact supplied logo. Preserve precisely the same emblem, geometry, spelling, word count, typographic hierarchy, proportions, layout and spacing. Required exact text: TRIO ENTERPRISES. Change EVERY letter, including all secondary descriptor words and legal suffixes, to solid white so it is legible over a dark or red website header. Change the charcoal portions of the emblem to white. Retain the small red/gold emblem accent only if it contrasts clearly against a dark header. True transparent alpha background; do not paint a dark rectangle or checkerboard. Flat clean edges, no glows, shadows, bevels, textures, gradients, new artwork, new icon, extra text or mockup. Deliver one horizontal matching logo, fully legible.",
+        "reference": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-7a668bed-8078-426d-8e05-b57198a4e503.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 54,
+          "top": 42,
+          "width": 1948,
+          "height": 630
+        }
+      }
+    }
+  },
+  "review": {
+    "status": "artwork-visually-reviewed",
+    "alpha": "all exports measured as genuine transparent nonempty PNGs",
+    "spelling": "English wordmark inspected; source-bound display aliases retained",
+    "compact": "Horizontal logos only. Interactive 32/48/64px gallery preview is provided; separate compact/favicon artwork remains part of dealer-pack preparation.",
+    "sixDesigns": "not-yet-integrated-or-rendered",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "reviewer": "Codex visual inspection",
+    "header": "All 196 paired PNGs inspected at 240x64 on white, #111113 and #c40101",
+    "evidence": "final-review-07.png"
+  },
+  "releaseReady": false,
+  "artworkHolds": [],
+  "artworkReadyForIntegration": true
+}

@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "ae-sharjah-khaled-al-fares-used-cars",
+  "slug": null,
+  "artworkDirectory": "ae-sharjah-khaled-al-fares-used-cars",
+  "name": "Khaled Al Fares Used Cars LLC",
+  "renderedName": "Khaled Al Fares Used Cars LLC",
+  "kind": "independent-website-logo-proposal",
+  "dealerApproved": false,
+  "ownerApproved": false,
+  "sourceEvidence": [
+    {
+      "url": "https://auto.ae/khaledalfares/",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Volkswagen/Golf-R-/?id=187146",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "retainedOriginalsUnchanged": true,
+  "variants": {
+    "on-light": {
+      "path": "logo-on-light.png",
+      "sha256": "9773691d0731ac9eb5ebdabcf35b87fabe6d7b355d9c73839b4adc32fd20a17f",
+      "width": 1024,
+      "height": 233,
+      "transparentFraction": 0.6841889082618026,
+      "master": {
+        "path": "generated-on-light.png",
+        "sha256": "df0db33a3f63e975da9a59f83373a8672d40821bce034a53128b650a7a9ddb7b",
+        "width": 2164,
+        "height": 727
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-599e2285-08bc-42e8-b776-38a6785a8c61",
+        "prompt": "Create one professional horizontal automotive dealership logo proposal for Khaled Al Fares Used Cars LLC. Required exact text, uppercase: KHALED AL FARES USED CARS LLC. Every word must be present and spelled precisely; use sensible primary name and smaller descriptor hierarchy without tiny lettering. Produce a polished original identity with a distinctive custom typographic ligature in a refined square emblem. Initials KF may inform the emblem. Emblem left, full clear name to the right, compact and balanced for a website header. Avoid overused shield and generic car silhouettes; no manufacturer badges. Clean modern lettering with careful kerning and strong legibility. All text is deep charcoal black, appropriate on a white/light header. One restrained red or gold accent may appear inside the emblem only; no pale text. Flat crisp edges, a small number of solid shapes, no chrome, no lighting, no shadow, no texture, no gradient. Genuine transparent alpha background, isolated logo with no background box, no grid, no checkerboard painted into pixels. No slogan, contact info, website, watermark, mockup, photograph, extra concept, or duplicate logo. Deliver exactly one horizontal full logo. This is an independent website identity proposal, not a claim of adopted branding.",
+        "reference": null
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 0,
+          "top": 117,
+          "width": 2164,
+          "height": 492
+        }
+      }
+    },
+    "on-dark": {
+      "path": "logo-on-dark.png",
+      "sha256": "b0721d30e6386d81b56d67aea6639656d3485723e23c2b12c00a71b22146974c",
+      "width": 1024,
+      "height": 233,
+      "transparentFraction": 0.547700677306867,
+      "master": {
+        "path": "generated-on-dark.png",
+        "sha256": "bc200e3661e7f197e8b1a92ce7d0a39db336853906f83d4aaa0b116ed137f4e2",
+        "width": 2164,
+        "height": 727
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-58516ae0-a294-499d-bbc2-9a5257bd45d5",
+        "prompt": "Create the matching light-on-dark production variant of the exact supplied logo. Preserve precisely the same emblem, geometry, spelling, word count, typographic hierarchy, proportions, layout and spacing. Required exact text: KHALED AL FARES USED CARS LLC. Change EVERY letter, including all secondary descriptor words and legal suffixes, to solid white so it is legible over a dark or red website header. Change the charcoal portions of the emblem to white. Retain the small red/gold emblem accent only if it contrasts clearly against a dark header. True transparent alpha background; do not paint a dark rectangle or checkerboard. Flat clean edges, no glows, shadows, bevels, textures, gradients, new artwork, new icon, extra text or mockup. Deliver one horizontal matching logo, fully legible.",
+        "reference": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-599e2285-08bc-42e8-b776-38a6785a8c61.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 0,
+          "top": 116,
+          "width": 2157,
+          "height": 490
+        }
+      }
+    }
+  },
+  "review": {
+    "status": "artwork-visually-reviewed",
+    "alpha": "all exports measured as genuine transparent nonempty PNGs",
+    "spelling": "English wordmark inspected; source-bound display aliases retained",
+    "compact": "Horizontal logos only. Interactive 32/48/64px gallery preview is provided; separate compact/favicon artwork remains part of dealer-pack preparation.",
+    "sixDesigns": "not-yet-integrated-or-rendered",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "reviewer": "Codex visual inspection",
+    "header": "All 196 paired PNGs inspected at 240x64 on white, #111113 and #c40101",
+    "evidence": "final-review-11.png"
+  },
+  "releaseReady": false,
+  "artworkHolds": [],
+  "artworkReadyForIntegration": true
+}

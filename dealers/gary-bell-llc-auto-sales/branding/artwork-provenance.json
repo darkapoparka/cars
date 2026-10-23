@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "us-ms-forest-gary-bell-auto-sales",
+  "slug": "gary-bell-llc-auto-sales",
+  "artworkDirectory": "gary-bell-llc-auto-sales",
+  "name": "Gary Bell LLC Auto Sales",
+  "renderedName": "Gary Bell LLC Auto Sales",
+  "kind": "independent-website-logo-proposal",
+  "dealerApproved": false,
+  "ownerApproved": false,
+  "sourceEvidence": [
+    {
+      "url": "https://www.facebook.com/garybellllc/",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.facebook.com/garybellllc/posts/pfbid02LoDVnkFuvzKHJQntgtdu6XZ5zykLadGgeTa7LE2ybguXJc8bDjHd1SkYwG11xRWUl",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.autoyas.com/US/Forest/968049259915973/Gary-Bell%2CLLC-Auto-Sales",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://reviews.birdeye.com/gary-bell-llc-166695832851680",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "retainedOriginalsUnchanged": true,
+  "variants": {
+    "on-light": {
+      "path": "logo-on-light.png",
+      "sha256": "c23efefc507572c2db8ecee9357832d772f5101509f76e6cb70abb8ea2a9cb19",
+      "width": 1024,
+      "height": 228,
+      "transparentFraction": 0.6600534539473685,
+      "master": {
+        "path": "generated-on-light.png",
+        "sha256": "55361befbeeb220052dc32e17f810ea2a7f52546cbf3973a01a801a270432af4",
+        "width": 2170,
+        "height": 725
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-81c171ac-3056-4ec0-835d-b8ff883be0f8",
+        "prompt": "Correct the light-background color treatment of the supplied logo while preserving its recognizable emblem, typeface, exact geometry, word spacing and layout. Exact required wording: GARY BELL LLC AUTO SALES. EVERY letter must be opaque deep charcoal black, including every secondary word, colored AL prefix, descriptor and legal suffix. Do not leave any gold, blue, red or white LETTERS. A small red/gold/blue accent is permitted only INSIDE the emblem, never in any wordmark lettering. Genuine transparent alpha, no background, no glow, shadow, gradient, texture, checkerboard, frame, mockup, watermark, extra concepts or altered spelling. One crisp horizontal production logo only.",
+        "reference": "L:/CODEX/cars/leads/branding/pending-20261023/gary-bell-llc-auto-sales/logo-on-light.png",
+        "referenceSnapshot": {
+          "path": "correction-input-on-light.png",
+          "sha256": "7665f361030b16d640406178d77d45e19c1bc0512b3fac610551fc011e0ed7c9",
+          "sameBytesAsToolInput": true,
+          "nativeOriginal": {
+            "path": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-4a6ec4d0-cc79-461c-8683-be3496b3859b.png",
+            "sha256": "1e17ca74b6105e09a27947a11eab7e8566ca19dadd6a22de306a16a2395ff65a"
+          },
+          "note": "Exact input snapshot retained after correction. Re-export from unchanged native original matches recorded pre-correction PNG SHA256."
+        },
+        "referencePathMeaning": "Original tool input working filename, later overwritten by corrected export. referenceSnapshot retains the exact input bytes."
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 0,
+          "top": 119,
+          "width": 2170,
+          "height": 484
+        }
+      }
+    },
+    "on-dark": {
+      "path": "logo-on-dark.png",
+      "sha256": "9b9d0f2da18c7b45fd3eebcdf87feee765a4e24438f5f665b04b8ba6ec1477ef",
+      "width": 1024,
+      "height": 230,
+      "transparentFraction": 0.5308466372282609,
+      "master": {
+        "path": "generated-on-dark.png",
+        "sha256": "948c4ed8998be900f3075e797135353aed61159d7035c681a35119b9c4f3c77d",
+        "width": 2169,
+        "height": 725
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-aa20a216-b930-4ba2-8db5-757f7eb79c40",
+        "prompt": "Create the matching light-on-dark production variant of the exact supplied logo. Preserve precisely the same emblem, geometry, spelling, word count, typographic hierarchy, proportions, layout and spacing. Required exact text: GARY BELL LLC AUTO SALES. Change EVERY letter, including all secondary descriptor words and legal suffixes, to solid white so it is legible over a dark or red website header. Change the charcoal portions of the emblem to white. Retain the small red/gold emblem accent only if it contrasts clearly against a dark header. True transparent alpha background; do not paint a dark rectangle or checkerboard. Flat clean edges, no glows, shadows, bevels, textures, gradients, new artwork, new icon, extra text or mockup. Deliver one horizontal matching logo, fully legible.",
+        "reference": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-81c171ac-3056-4ec0-835d-b8ff883be0f8.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 0,
+          "top": 117,
+          "width": 2169,
+          "height": 488
+        }
+      }
+    }
+  },
+  "review": {
+    "status": "artwork-visually-reviewed",
+    "alpha": "all exports measured as genuine transparent nonempty PNGs",
+    "spelling": "English wordmark inspected; source-bound display aliases retained",
+    "compact": "Horizontal logos only. Interactive 32/48/64px gallery preview is provided; separate compact/favicon artwork remains part of dealer-pack preparation.",
+    "sixDesigns": "not-yet-integrated-or-rendered",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "reviewer": "Codex visual inspection",
+    "header": "All 196 paired PNGs inspected at 240x64 on white, #111113 and #c40101",
+    "evidence": "final-review-01.png",
+    "correctionEvidence": "final-corrections-review.png"
+  },
+  "releaseReady": false,
+  "artworkHolds": [],
+  "artworkReadyForIntegration": true
+}

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "dealer": "al-nashama-motors",
-  "status": "research-required",
+  "status": "reviewed-imagegen-proposal",
   "realLogoFirst": true,
   "publicSources": [
     {
@@ -18,7 +18,134 @@
     }
   ],
   "originals": [],
-  "creationMethod": null,
+  "creationMethod": "imagegen-proposal",
   "dealerApproved": false,
-  "generatedInputs": null
+  "generatedInputs": {
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "master": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "b205762f9d56b12f5b88786d427766a1183e31e8a8d9a168077f2e89f6637943",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-24314be3-f103-4e78-9bd6-489a8a2bfe04",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark-light.png",
+      "sha256": "8b327cf0b36508484dcc04e6bdc32ffad80ef3207c38759c1510688c6388a696",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-24314be3-f103-4e78-9bd6-489a8a2bfe04",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "b205762f9d56b12f5b88786d427766a1183e31e8a8d9a168077f2e89f6637943",
+          "operation": "crop-wordmark-initial-compact-symbol",
+          "crop": {
+            "left": 260,
+            "top": 40,
+            "width": 95,
+            "height": 100
+          }
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-dark.png",
+      "sha256": "39c3a2ae299d8eefa9f2265a3c339f062ee088c3c3df2ffa076768f5c2c9852d",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-ffa04efc-24d3-46d0-a8d4-a26a26e65dec",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "2f51d949032c67e045881ecbe2f24dc452582c996e23f00131dec15bbd7c13e8",
+          "operation": "crop-wordmark-initial-compact-symbol",
+          "crop": {
+            "left": 260,
+            "top": 40,
+            "width": 95,
+            "height": 100
+          }
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "b205762f9d56b12f5b88786d427766a1183e31e8a8d9a168077f2e89f6637943",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-24314be3-f103-4e78-9bd6-489a8a2bfe04",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "2f51d949032c67e045881ecbe2f24dc452582c996e23f00131dec15bbd7c13e8",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-ffa04efc-24d3-46d0-a8d4-a26a26e65dec",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "2f51d949032c67e045881ecbe2f24dc452582c996e23f00131dec15bbd7c13e8",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-ffa04efc-24d3-46d0-a8d4-a26a26e65dec",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewKind": "agent-visual-review",
+      "humanReview": false,
+      "dealerApproval": false,
+      "backgrounds": {
+        "onLight": "#ffffff",
+        "onDark": "#111113",
+        "onAccent": "#c40101"
+      },
+      "wordmarkWidths": [
+        220,
+        240
+      ],
+      "notes": "Exact reviewed Image Gen pair; native masters and generation provenance retained. Compact rasters cropped from the actual left symbol."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-22T23:42:46.338Z",
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#c40101"
+      ],
+      "widths": [
+        32,
+        48,
+        64
+      ],
+      "notes": "Standalone A initial cropped from reviewed horizontal artwork for 32px legibility after native favicon QA failure; native QA must independently pass."
+    }
+  },
+  "sourceBlockers": [],
+  "artworkProvenance": {
+    "path": "branding/artwork-provenance.json",
+    "sha256": "cc10661d35182db04fb9020aa538140ee51230ca9da901b680d1809fb15a41a9",
+    "manifestSha256": "d25e9cee768a885052ac0a8df220d843c9b9c6f6f120d722705bead1cc99e694",
+    "nativeMasters": [
+      {
+        "path": "branding/native-generated-on-light.png",
+        "sha256": "2545f539ff4ca32e6a4500ecb8d3c3bdf7446bf002689583e9224d5124fe90f3"
+      },
+      {
+        "path": "branding/native-generated-on-dark.png",
+        "sha256": "330a6b96d25b769038cee3b4b5ea8d327789a9c2a8d400e37b9299cb873c6156"
+      }
+    ]
+  }
 }

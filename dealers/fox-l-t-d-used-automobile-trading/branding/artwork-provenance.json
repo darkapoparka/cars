@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "ae-dubai-fox-l-t-d-used-automobile-trading",
+  "slug": "fox-l-t-d-used-automobile-trading",
+  "artworkDirectory": "fox-l-t-d-used-automobile-trading",
+  "name": "FOX L T D Used Automobile Trading",
+  "renderedName": "FOX L T D Used Automobile Trading",
+  "kind": "independent-website-logo-proposal",
+  "dealerApproved": false,
+  "ownerApproved": false,
+  "sourceEvidence": [
+    {
+      "url": "https://www.dubicars.com/dealers/dubai-fox-l-t-d-used-automobile-trading-2607",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "retainedOriginalsUnchanged": true,
+  "variants": {
+    "on-light": {
+      "path": "logo-on-light.png",
+      "sha256": "d4956bea70f5bf9697e244b46bd4a42ffb48f5f80835d949ec2fdca06b2cac0f",
+      "width": 1024,
+      "height": 294,
+      "transparentFraction": 0.7254331420068028,
+      "master": {
+        "path": "generated-on-light.png",
+        "sha256": "54cf24726780530cdc920db2b79e393b5c0b7a3eb95c44412faa9a78c3bc21e2",
+        "width": 2167,
+        "height": 726
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-695b1d44-6263-43a1-a044-acaf6c6aaebe",
+        "prompt": "Create one professional horizontal automotive dealership logo proposal for FOX L T D Used Automobile Trading. Required exact text, uppercase: FOX L T D USED AUTOMOBILE TRADING. Every word must be present and spelled precisely; use sensible primary name and smaller descriptor hierarchy without tiny lettering. Produce a polished original identity with a clever rounded negative-space monogram, with an open confident silhouette. Initials FL may inform the emblem. Emblem left, full clear name to the right, compact and balanced for a website header. Avoid overused shield and generic car silhouettes; no manufacturer badges. Clean modern lettering with careful kerning and strong legibility. All text is deep charcoal black, appropriate on a white/light header. One restrained red or gold accent may appear inside the emblem only; no pale text. Flat crisp edges, a small number of solid shapes, no chrome, no lighting, no shadow, no texture, no gradient. Genuine transparent alpha background, isolated logo with no background box, no grid, no checkerboard painted into pixels. No slogan, contact info, website, watermark, mockup, photograph, extra concept, or duplicate logo. Deliver exactly one horizontal full logo. This is an independent website identity proposal, not a claim of adopted branding.",
+        "reference": null
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 93,
+          "top": 54,
+          "width": 1986,
+          "height": 571
+        }
+      }
+    },
+    "on-dark": {
+      "path": "logo-on-dark.png",
+      "sha256": "50b55837b904f046375ebdbfe26cbf2ce1d4d218de839ad4fad36f8d0d96d73a",
+      "width": 1024,
+      "height": 295,
+      "transparentFraction": 0.6239108845338983,
+      "master": {
+        "path": "generated-on-dark.png",
+        "sha256": "6e3ef373c7732bfe9c7616f8b83f084f486fd654a75c2c3caabfa6fa574a7a11",
+        "width": 2167,
+        "height": 726
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-2965fc64-7e5b-4828-8d2c-571812187e35",
+        "prompt": "Create the matching light-on-dark production variant of the exact supplied logo. Preserve precisely the same emblem, geometry, spelling, word count, typographic hierarchy, proportions, layout and spacing. Required exact text: FOX L T D USED AUTOMOBILE TRADING. Change EVERY letter, including all secondary descriptor words and legal suffixes, to solid white so it is legible over a dark or red website header. Change the charcoal portions of the emblem to white. Retain the small red/gold emblem accent only if it contrasts clearly against a dark header. True transparent alpha background; do not paint a dark rectangle or checkerboard. Flat clean edges, no glows, shadows, bevels, textures, gradients, new artwork, new icon, extra text or mockup. Deliver one horizontal matching logo, fully legible.",
+        "reference": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-695b1d44-6263-43a1-a044-acaf6c6aaebe.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 92,
+          "top": 51,
+          "width": 1977,
+          "height": 569
+        }
+      }
+    }
+  },
+  "review": {
+    "status": "artwork-visually-reviewed",
+    "alpha": "all exports measured as genuine transparent nonempty PNGs",
+    "spelling": "English wordmark inspected; source-bound display aliases retained",
+    "compact": "Horizontal logos only. Interactive 32/48/64px gallery preview is provided; separate compact/favicon artwork remains part of dealer-pack preparation.",
+    "sixDesigns": "not-yet-integrated-or-rendered",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "reviewer": "Codex visual inspection",
+    "header": "All 196 paired PNGs inspected at 240x64 on white, #111113 and #c40101",
+    "evidence": "final-review-07.png"
+  },
+  "releaseReady": false,
+  "artworkHolds": [],
+  "artworkReadyForIntegration": true
+}

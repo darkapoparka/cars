@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Al Eman Used Cars (OpenSooq company)",
     "publicOrigin": "https://al-eman-used-cars-opensooq-company.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "fb01ce56e7f3adfb4ba50457c96de7d795c4d62d10ee1be80d3f73899ea94aec",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "76a35114dfb0bbd88733a055a8e65b74a063ac033ca299cebc7c5806b6a7a87f"
+    }
   }
 }

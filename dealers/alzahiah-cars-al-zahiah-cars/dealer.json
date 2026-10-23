@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Alzahiah Cars (Al Zahiah Cars)",
     "publicOrigin": "https://alzahiah-cars-al-zahiah-cars.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "f9899346b19b1ab7992d93ee0e3adb7c922719797db2a30536c9d99d24dfc889",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "63a15a9bfc45176f28da5762101f234ca52e95a608d3cacefe9121c546fbd083"
+    }
   }
 }

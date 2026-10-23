@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "S M P Motors",
     "publicOrigin": "https://s-m-p-motors.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "88c8e792d89035d9c30b7bfe79aa10f257173bed2eb83eaa1ba994973fb97647",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "5f0436008c0b70581ad007cbee28054ff272c84a64a773149295129daebee905"
+    }
   }
 }

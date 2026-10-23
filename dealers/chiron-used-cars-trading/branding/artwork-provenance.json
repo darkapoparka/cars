@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "ae-dubai-chiron-used-cars-trading",
+  "slug": "chiron-used-cars-trading",
+  "artworkDirectory": "chiron-used-cars-trading",
+  "name": "Chiron Used Cars Trading",
+  "renderedName": "Chiron Used Cars Trading",
+  "kind": "independent-website-logo-proposal",
+  "dealerApproved": false,
+  "ownerApproved": false,
+  "sourceEvidence": [
+    {
+      "url": "https://www.dubicars.com/dealers/dubai-chiron-used-cars-trading-1978",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://adlisting.scan-uae.com/Directory/details/chiron-used-cars-trading-llc",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://chironusedcars.ae/",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "retainedOriginalsUnchanged": true,
+  "variants": {
+    "on-light": {
+      "path": "logo-on-light.png",
+      "sha256": "78661702cd5ca0825cb495f5b2ab1ede2e18be6982c181889ba05f86199b15f8",
+      "width": 1024,
+      "height": 268,
+      "transparentFraction": 0.6103552063899254,
+      "master": {
+        "path": "generated-on-light.png",
+        "sha256": "70446b4ae49cfe0455a7556fa64f90ac50f2ba5335e308abc39ee980ca3e412d",
+        "width": 2079,
+        "height": 756
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-a13175dd-d2ee-466b-befc-45cfae479f50",
+        "prompt": "Create one professional horizontal automotive dealership logo proposal for Chiron Used Cars Trading. Required exact text, uppercase: CHIRON USED CARS TRADING. Every word must be present and spelled precisely; use sensible primary name and smaller descriptor hierarchy without tiny lettering. Produce a polished original identity with a distinctive custom typographic ligature in a refined square emblem. Initials C may inform the emblem. Emblem left, full clear name to the right, compact and balanced for a website header. Avoid overused shield and generic car silhouettes; no manufacturer badges. Clean modern lettering with careful kerning and strong legibility. All text is deep charcoal black, appropriate on a white/light header. One restrained red or gold accent may appear inside the emblem only; no pale text. Flat crisp edges, a small number of solid shapes, no chrome, no lighting, no shadow, no texture, no gradient. Genuine transparent alpha background, isolated logo with no background box, no grid, no checkerboard painted into pixels. No slogan, contact info, website, watermark, mockup, photograph, extra concept, or duplicate logo. Deliver exactly one horizontal full logo. This is an independent website identity proposal, not a claim of adopted branding.",
+        "reference": null
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 57,
+          "top": 126,
+          "width": 1966,
+          "height": 515
+        }
+      }
+    },
+    "on-dark": {
+      "path": "logo-on-dark.png",
+      "sha256": "f4e3272116a34bb8792ec0fccd0a1ac4503440b65add3d1649d7c5f2403959db",
+      "width": 1024,
+      "height": 268,
+      "transparentFraction": 0.42749387826492535,
+      "master": {
+        "path": "generated-on-dark.png",
+        "sha256": "3f335f36744a5ec260682b3fdcc9d9770491838900d3f15104b28da8d871b310",
+        "width": 2079,
+        "height": 756
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-e87fa8c0-7717-43d3-8daa-7f65a13b7649",
+        "prompt": "Create the matching light-on-dark production variant of the exact supplied logo. Preserve precisely the same emblem, geometry, spelling, word count, typographic hierarchy, proportions, layout and spacing. Required exact text: CHIRON USED CARS TRADING. Change EVERY letter, including all secondary descriptor words and legal suffixes, to solid white so it is legible over a dark or red website header. Change the charcoal portions of the emblem to white. Retain the small red/gold emblem accent only if it contrasts clearly against a dark header. True transparent alpha background; do not paint a dark rectangle or checkerboard. Flat clean edges, no glows, shadows, bevels, textures, gradients, new artwork, new icon, extra text or mockup. Deliver one horizontal matching logo, fully legible.",
+        "reference": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-a13175dd-d2ee-466b-befc-45cfae479f50.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 55,
+          "top": 121,
+          "width": 1961,
+          "height": 514
+        }
+      }
+    }
+  },
+  "review": {
+    "status": "artwork-visually-reviewed",
+    "alpha": "all exports measured as genuine transparent nonempty PNGs",
+    "spelling": "English wordmark inspected; source-bound display aliases retained",
+    "compact": "Horizontal logos only. Interactive 32/48/64px gallery preview is provided; separate compact/favicon artwork remains part of dealer-pack preparation.",
+    "sixDesigns": "not-yet-integrated-or-rendered",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "reviewer": "Codex visual inspection",
+    "header": "All 196 paired PNGs inspected at 240x64 on white, #111113 and #c40101",
+    "evidence": "final-review-06.png"
+  },
+  "releaseReady": false,
+  "artworkHolds": [],
+  "artworkReadyForIntegration": true
+}

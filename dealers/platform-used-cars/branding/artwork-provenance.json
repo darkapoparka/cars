@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "ae-sharjah-platform-used-cars",
+  "slug": null,
+  "artworkDirectory": "ae-sharjah-platform-used-cars",
+  "name": "Platform Used Cars",
+  "renderedName": "Platform Used Cars",
+  "kind": "independent-website-logo-proposal",
+  "dealerApproved": false,
+  "ownerApproved": false,
+  "sourceEvidence": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/platform-used-cars",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/4453-land-rover-defender-hybrid-phev-defender-p400e-with-404-110-hse-p400",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "retainedOriginalsUnchanged": true,
+  "variants": {
+    "on-light": {
+      "path": "logo-on-light.png",
+      "sha256": "2154e5d9d81558265b4004b3d65aaf44e03f021954f5e550ce951bec9f5656fc",
+      "width": 1024,
+      "height": 255,
+      "transparentFraction": 0.651516544117647,
+      "master": {
+        "path": "generated-on-light.png",
+        "sha256": "85f58990e2b698dc6e58a4e89af2cb1e1db07dea4f36018b0a49fb259315fce3",
+        "width": 2048,
+        "height": 768
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-793d94e6-3819-45c4-9ad1-da63f09a6c39",
+        "prompt": "Create one professional horizontal automotive dealership logo proposal for Platform Used Cars. Required exact text, uppercase: PLATFORM USED CARS. Every word must be present and spelled precisely; use sensible primary name and smaller descriptor hierarchy without tiny lettering. Produce a polished original identity with a distinctive custom typographic ligature in a refined square emblem. Initials P may inform the emblem. Emblem left, full clear name to the right, compact and balanced for a website header. Avoid overused shield and generic car silhouettes; no manufacturer badges. Clean modern lettering with careful kerning and strong legibility. All text is deep charcoal black, appropriate on a white/light header. One restrained red or gold accent may appear inside the emblem only; no pale text. Flat crisp edges, a small number of solid shapes, no chrome, no lighting, no shadow, no texture, no gradient. Genuine transparent alpha background, isolated logo with no background box, no grid, no checkerboard painted into pixels. No slogan, contact info, website, watermark, mockup, photograph, extra concept, or duplicate logo. Deliver exactly one horizontal full logo. This is an independent website identity proposal, not a claim of adopted branding.",
+        "reference": null
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 16,
+          "top": 134,
+          "width": 2015,
+          "height": 502
+        }
+      }
+    },
+    "on-dark": {
+      "path": "logo-on-dark.png",
+      "sha256": "d96c914c86eedd7282c75e4ce885ae4e7a42894be33e45f2ec2b0eeb7c6a1875",
+      "width": 1024,
+      "height": 254,
+      "transparentFraction": 0.48172982283464566,
+      "master": {
+        "path": "generated-on-dark.png",
+        "sha256": "41eff8269921ef318d9ac90f6588a17c6f9e644777e9b45ce1a46c1578879716",
+        "width": 2048,
+        "height": 768
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-ca908062-edf5-4c46-a04d-66cf89688ff2",
+        "prompt": "Create the matching light-on-dark production variant of the exact supplied logo. Preserve precisely the same emblem, geometry, spelling, word count, typographic hierarchy, proportions, layout and spacing. Required exact text: PLATFORM USED CARS. Change EVERY letter, including all secondary descriptor words and legal suffixes, to solid white so it is legible over a dark or red website header. Change the charcoal portions of the emblem to white. Retain the small red/gold emblem accent only if it contrasts clearly against a dark header. True transparent alpha background; do not paint a dark rectangle or checkerboard. Flat clean edges, no glows, shadows, bevels, textures, gradients, new artwork, new icon, extra text or mockup. Deliver one horizontal matching logo, fully legible.",
+        "reference": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-793d94e6-3819-45c4-9ad1-da63f09a6c39.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 19,
+          "top": 135,
+          "width": 2010,
+          "height": 498
+        }
+      }
+    }
+  },
+  "review": {
+    "status": "artwork-visually-reviewed",
+    "alpha": "all exports measured as genuine transparent nonempty PNGs",
+    "spelling": "English wordmark inspected; source-bound display aliases retained",
+    "compact": "Horizontal logos only. Interactive 32/48/64px gallery preview is provided; separate compact/favicon artwork remains part of dealer-pack preparation.",
+    "sixDesigns": "not-yet-integrated-or-rendered",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "reviewer": "Codex visual inspection",
+    "header": "All 196 paired PNGs inspected at 240x64 on white, #111113 and #c40101",
+    "evidence": "final-review-12.png"
+  },
+  "releaseReady": false,
+  "artworkHolds": [],
+  "artworkReadyForIntegration": true
+}

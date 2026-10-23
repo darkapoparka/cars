@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Abdo Al Muthannna Used Cars",
     "publicOrigin": "https://abdo-al-muthannna-used-cars.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "c04b92e0a52e0faaec16886e7b3ea5b4b3cf3975e2dee909a12616fd991b6aa1",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "a1e59e7a57cac1bf55e94b387750d5c4210fc0c3d82c4c64cc6fc796fb69deb2"
+    }
   }
 }

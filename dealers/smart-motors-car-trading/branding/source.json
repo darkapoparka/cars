@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "dealer": "smart-motors-car-trading",
-  "status": "research-required",
+  "status": "reviewed-imagegen-proposal",
   "realLogoFirst": true,
   "publicSources": [
     {
@@ -14,7 +14,146 @@
     }
   ],
   "originals": [],
-  "creationMethod": null,
+  "creationMethod": "imagegen-proposal",
   "dealerApproved": false,
-  "generatedInputs": null
+  "generatedInputs": {
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "master": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "cf9168d56d0e8fbf76cd3d7ab80e4430cbcdc4876cd45a4bc9d03f17e228040a",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-123f504d-9bcb-4537-bf53-5da866c71a30",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark-light.png",
+      "sha256": "94d79051f01bd38d1ff43724c09caf145d8f959f56ea09f1604b73e418339aec",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-123f504d-9bcb-4537-bf53-5da866c71a30",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "cf9168d56d0e8fbf76cd3d7ab80e4430cbcdc4876cd45a4bc9d03f17e228040a",
+          "operation": "crop-wordmark-initial-with-transparent-padding",
+          "crop": {
+            "left": 332,
+            "top": 65,
+            "width": 116,
+            "height": 95
+          },
+          "padding": {
+            "top": 15,
+            "bottom": 15,
+            "left": 15,
+            "right": 15
+          }
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-dark.png",
+      "sha256": "37c18c9d6161be9c8e3506c5dd362b48d82e3dd0bafb1069c0150a8a0c2332dd",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-f27c6794-5e10-47d8-929a-90638d10426e",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "536bb916bbfecdbb2695697f52a09c264afb960df1b64909075b54d4da56b603",
+          "operation": "crop-wordmark-initial-with-transparent-padding",
+          "crop": {
+            "left": 332,
+            "top": 65,
+            "width": 116,
+            "height": 95
+          },
+          "padding": {
+            "top": 15,
+            "bottom": 15,
+            "left": 15,
+            "right": 15
+          }
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "cf9168d56d0e8fbf76cd3d7ab80e4430cbcdc4876cd45a4bc9d03f17e228040a",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-123f504d-9bcb-4537-bf53-5da866c71a30",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "536bb916bbfecdbb2695697f52a09c264afb960df1b64909075b54d4da56b603",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-f27c6794-5e10-47d8-929a-90638d10426e",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "536bb916bbfecdbb2695697f52a09c264afb960df1b64909075b54d4da56b603",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-f27c6794-5e10-47d8-929a-90638d10426e",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewKind": "agent-visual-review",
+      "humanReview": false,
+      "dealerApproval": false,
+      "backgrounds": {
+        "onLight": "#ffffff",
+        "onDark": "#111113",
+        "onAccent": "#c40101"
+      },
+      "wordmarkWidths": [
+        220,
+        240
+      ],
+      "notes": "Exact reviewed Image Gen pair; native masters and generation provenance retained. Compact rasters cropped from the actual left symbol."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-22T23:42:46.338Z",
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#c40101"
+      ],
+      "widths": [
+        32,
+        48,
+        64
+      ],
+      "notes": "S initial cropped and transparently padded from reviewed horizontal artwork for favicon contrast, pending independent native QA."
+    }
+  },
+  "sourceBlockers": [],
+  "artworkProvenance": {
+    "path": "branding/artwork-provenance.json",
+    "sha256": "01b7b67e212be3bea10fc77f9d5a903b6146c8b29cdcb28db2a294cdcb80c310",
+    "manifestSha256": "d25e9cee768a885052ac0a8df220d843c9b9c6f6f120d722705bead1cc99e694",
+    "nativeMasters": [
+      {
+        "path": "branding/native-generated-on-light.png",
+        "sha256": "f1d1495a0a5b5e6303fa117a04895e2cd1d4843f15c7d4f047e2b8242cf1afe5"
+      },
+      {
+        "path": "branding/native-generated-on-dark.png",
+        "sha256": "9184bf07e046603ee4d66de47a8e65348322da8c1897519a89a3bc637a1a8d63"
+      }
+    ]
+  }
 }

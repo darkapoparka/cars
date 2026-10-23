@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "dealer": "three-camels-trading",
-  "status": "research-required",
+  "status": "reviewed-imagegen-proposal",
   "realLogoFirst": true,
   "publicSources": [
     {
@@ -10,7 +10,134 @@
     }
   ],
   "originals": [],
-  "creationMethod": null,
+  "creationMethod": "imagegen-proposal",
   "dealerApproved": false,
-  "generatedInputs": null
+  "generatedInputs": {
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "master": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "363021a5bfe1ffc416d9600aba46ab385215cdfe393e65feb713c08cba52794c",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-cc1f0ab8-3caf-4b1a-9034-027ed3b8d017",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark-light.png",
+      "sha256": "9f0f2505f0d4bc7c982c27a13d7d9f66b1e7f6653263e02addaee4a50390e611",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-cc1f0ab8-3caf-4b1a-9034-027ed3b8d017",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "363021a5bfe1ffc416d9600aba46ab385215cdfe393e65feb713c08cba52794c",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 325,
+            "height": 259
+          }
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-dark.png",
+      "sha256": "6ff7b496c90d8859a74954c04c5e55ab65176bf4c50cae490b2d4e4929043fd5",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-16a1461d-12a5-4855-ad2d-b8e481118183",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "fa762f54552beddb1bdb2fb2b5abf886f8edad3bbc5a6509d50cc0e6a881f447",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 325,
+            "height": 259
+          }
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "363021a5bfe1ffc416d9600aba46ab385215cdfe393e65feb713c08cba52794c",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-cc1f0ab8-3caf-4b1a-9034-027ed3b8d017",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "fa762f54552beddb1bdb2fb2b5abf886f8edad3bbc5a6509d50cc0e6a881f447",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-16a1461d-12a5-4855-ad2d-b8e481118183",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "fa762f54552beddb1bdb2fb2b5abf886f8edad3bbc5a6509d50cc0e6a881f447",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-16a1461d-12a5-4855-ad2d-b8e481118183",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewKind": "agent-visual-review",
+      "humanReview": false,
+      "dealerApproval": false,
+      "backgrounds": {
+        "onLight": "#ffffff",
+        "onDark": "#111113",
+        "onAccent": "#c40101"
+      },
+      "wordmarkWidths": [
+        220,
+        240
+      ],
+      "notes": "Exact reviewed Image Gen pair; native masters and generation provenance retained. Compact rasters cropped from the actual left symbol."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-22T23:42:46.338Z",
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#c40101"
+      ],
+      "widths": [
+        32,
+        48,
+        64
+      ],
+      "notes": "Left symbol cropped from reviewed horizontal variants; native rendering must independently qualify."
+    }
+  },
+  "sourceBlockers": [],
+  "artworkProvenance": {
+    "path": "branding/artwork-provenance.json",
+    "sha256": "1c4ced433079a8d5bcc1cd46e360f9ac9578ed6fa20de8d00ee016a1b676ca65",
+    "manifestSha256": "d25e9cee768a885052ac0a8df220d843c9b9c6f6f120d722705bead1cc99e694",
+    "nativeMasters": [
+      {
+        "path": "branding/native-generated-on-light.png",
+        "sha256": "94ff293d6abcec75999902bb9c2fb025f8b1afb6f3964e75c41f4bda7a02ddfd"
+      },
+      {
+        "path": "branding/native-generated-on-dark.png",
+        "sha256": "81b7640238ad6738484c47fc99867ac4b1ae318aeba216f6fce8e7d2bebe3454"
+      }
+    ]
+  }
 }

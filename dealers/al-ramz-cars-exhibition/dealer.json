@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Al Ramz Cars Exhibition",
     "publicOrigin": "https://al-ramz-cars-exhibition.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "ce5f70510e1602303a22e54b13ebf18af005ec10ce67dccf6bbca8997d10505d",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "9542f577e8fbcd22b3cbd26a733cdabad3fbf1bdb306c145f1215d848ea56a75"
+    }
   }
 }

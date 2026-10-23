@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "ae-sharjah-al-ahd-used-cars",
+  "slug": "al-ahd-used-cars",
+  "artworkDirectory": "al-ahd-used-cars",
+  "name": "Al Ahd Used Cars",
+  "renderedName": "Al Ahd Used Cars",
+  "kind": "reference-guided-website-logo-proposal",
+  "dealerApproved": false,
+  "ownerApproved": false,
+  "sourceEvidence": [
+    {
+      "url": "https://www.oneclickdrive.com/company/sharjah/al-ahd-used-cars",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "retainedOriginalsUnchanged": true,
+  "variants": {
+    "on-light": {
+      "path": "logo-on-light.png",
+      "sha256": "59499daeebf6f6eed0ad2fa8ca872c1ef1eceaff090bd368d30efb16ace7d83e",
+      "width": 1024,
+      "height": 333,
+      "transparentFraction": 0.6181288710585585,
+      "master": {
+        "path": "generated-on-light.png",
+        "sha256": "61fce8d0b67584506286381d39d5b55e9aae83344518b8cc8ff3db8a39a1d100",
+        "width": 2056,
+        "height": 765
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-da48eb49-74cd-4c1e-81c0-bcd3d0be4078",
+        "prompt": "Create one professional transparent horizontal website logo by refining the supplied dealer logo reference. Preserve the supplied outline shield and small red classic convertible motif, simplified to crisp flat shapes. Use the supplied serif character for AL AHD, with USED CARS clear below, emblem left and lettering right. No chrome or photographic detail. Required exact English words, with accurate spelling: AL AHD USED CARS. Maintain the reference's recognizable identity and proportion while making it legible and polished at a 220px wide website header. Use a sensible primary name and descriptor hierarchy. All text deep charcoal black for white/light backgrounds; retain restrained reference accent colors in the emblem only. Genuine transparent alpha, isolated logo, tightly balanced wide composition. Flat crisp shapes, no chrome, bevel, shadow, glow, texture, gradients, background rectangle or checkerboard, photo, mockup, contact details, website, slogan, watermark, multiple concepts or duplicate. Deliver exactly one logo. This is a reference-guided artwork proposal, not proof of business adoption.",
+        "reference": "C:/Users/radev/AppData/Local/Temp/cars-astra-public-brand-evidence-20261021/al-ahd-used-cars-oneclick-original-0.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 0,
+          "top": 43,
+          "width": 2037,
+          "height": 662
+        }
+      }
+    },
+    "on-dark": {
+      "path": "logo-on-dark.png",
+      "sha256": "258268b2766b5f0b698ae5c37f922c37f8ff35dc6a200e0e75e05a036e14f7ec",
+      "width": 1024,
+      "height": 333,
+      "transparentFraction": 0.5170825121996997,
+      "master": {
+        "path": "generated-on-dark.png",
+        "sha256": "8b092268ef27b9d613173e7579bfc2fc3d589bd78f3de5aa9a8b2ba564cf3479",
+        "width": 2056,
+        "height": 765
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-be65d0b6-f571-44f4-9752-b5644647e72d",
+        "prompt": "Create the matching light-on-dark production variant of the exact supplied logo. Preserve precisely the same emblem, geometry, spelling, word count, typographic hierarchy, proportions, layout and spacing. Required exact text: AL AHD USED CARS. Change EVERY letter, including all secondary descriptor words and legal suffixes, to solid white so it is legible over a dark or red website header. Change the charcoal portions of the emblem to white. Retain the small red/gold emblem accent only if it contrasts clearly against a dark header. True transparent alpha background; do not paint a dark rectangle or checkerboard. Flat clean edges, no glows, shadows, bevels, textures, gradients, new artwork, new icon, extra text or mockup. Deliver one horizontal matching logo, fully legible.",
+        "reference": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-da48eb49-74cd-4c1e-81c0-bcd3d0be4078.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 0,
+          "top": 43,
+          "width": 2045,
+          "height": 665
+        }
+      }
+    }
+  },
+  "review": {
+    "status": "artwork-visually-reviewed",
+    "alpha": "all exports measured as genuine transparent nonempty PNGs",
+    "spelling": "English wordmark inspected; source-bound display aliases retained",
+    "compact": "Horizontal logos only. Interactive 32/48/64px gallery preview is provided; separate compact/favicon artwork remains part of dealer-pack preparation.",
+    "sixDesigns": "not-yet-integrated-or-rendered",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "reviewer": "Codex visual inspection",
+    "header": "All 196 paired PNGs inspected at 240x64 on white, #111113 and #c40101",
+    "evidence": "final-review-08.png"
+  },
+  "releaseReady": false,
+  "originalReference": {
+    "path": "_references/al-ahd-used-cars.png",
+    "sha256": "951623c2221ad06ad4abc1eb08fc6df481d1321008560599d8fb6db16c96b945",
+    "sourceUrl": "https://static.oneclickdrive.com/application/views/img/company/alahd.png",
+    "observedAt": "2026-10-23",
+    "adaptation": "English website adaptation; original retained unchanged; adoption not claimed"
+  },
+  "artworkHolds": [],
+  "artworkReadyForIntegration": true
+}

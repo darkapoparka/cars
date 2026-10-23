@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "dealer": "sahm-al-najah-used-cars-trading",
+  "missing": [
+    {
+      "field": "business.address",
+      "required": false,
+      "reason": "Sharjah dealer profile and UAQ vehicle locations differ; exact premises unconfirmed."
+    },
+    {
+      "field": "business.phone",
+      "required": false,
+      "reason": "No usable sourced value in the retained public business record."
+    },
+    {
+      "field": "business.email",
+      "required": false,
+      "reason": "No usable sourced value in the retained public business record."
+    },
+    {
+      "field": "business.website",
+      "required": false,
+      "reason": "No usable sourced value in the retained public business record."
+    },
+    {
+      "field": "business.hours",
+      "required": false,
+      "reason": "No usable sourced value in the retained public business record."
+    },
+    {
+      "field": "prices",
+      "required": false,
+      "reason": "All listing prices are omitted under the public-repository scope."
+    }
+  ],
+  "blocking": []
+}

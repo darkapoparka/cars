@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "dealer": "islandwide-auto-sales-llc",
-  "status": "research-required",
+  "status": "reviewed-imagegen-proposal",
   "realLogoFirst": true,
   "publicSources": [
     {
@@ -30,7 +30,159 @@
     }
   ],
   "originals": [],
-  "creationMethod": null,
+  "creationMethod": "imagegen-proposal",
   "dealerApproved": false,
-  "generatedInputs": null
+  "generatedInputs": {
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "master": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "5322afb6bb1060ac122663dda9c93bba381f5a8e320d19abbf80bb71c4c83bb3",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-31cd80f1-4c26-4e8a-8d4d-a8358fb929fb",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/reviewed-on-light.png",
+          "sha256": "8c8d9fb2dd830fb7d3b7a3dd87a7ec6b404cd60e7ea894d0270d3654d358b032",
+          "operation": "darken-reviewed-neon-outline-for-white-surface",
+          "colorTransform": "yellow-green ink channel scale 0.36/0.34/0.34"
+        }
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark-light.png",
+      "sha256": "51bc466002917aa59e9f8d56e049524bd0f675b8c8a7c54e4ccb2fef06751aa4",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-31cd80f1-4c26-4e8a-8d4d-a8358fb929fb",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "5322afb6bb1060ac122663dda9c93bba381f5a8e320d19abbf80bb71c4c83bb3",
+          "operation": "isolate-reviewed-initial-and-darken-matching-neon-outline-for-white-compact",
+          "originalCrop": {
+            "left": 15,
+            "top": 18,
+            "width": 160,
+            "height": 211
+          }
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-dark.png",
+      "sha256": "0caa3bb8a3fc0bf98348ad86cd67a565ac865db57493407d0fa12336d96e91ab",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-bdfa882d-8852-45e4-9ae6-42ef9711bd9e",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "0e630b1013f5c72cb7f83544fa872dd480452896b743288ab623f268af92e8fc",
+          "operation": "crop-and-pad-reviewed-wordmark-initial-for-compact",
+          "crop": {
+            "left": 15,
+            "top": 18,
+            "width": 160,
+            "height": 211
+          },
+          "canvas": {
+            "width": 230,
+            "height": 281,
+            "offsetX": 35,
+            "offsetY": 35
+          }
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "5322afb6bb1060ac122663dda9c93bba381f5a8e320d19abbf80bb71c4c83bb3",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-31cd80f1-4c26-4e8a-8d4d-a8358fb929fb",
+          "modelVersion": null,
+          "derivedFrom": {
+            "path": "branding/reviewed-on-light.png",
+            "sha256": "8c8d9fb2dd830fb7d3b7a3dd87a7ec6b404cd60e7ea894d0270d3654d358b032",
+            "operation": "darken-reviewed-neon-outline-for-white-surface",
+            "colorTransform": "yellow-green ink channel scale 0.36/0.34/0.34"
+          }
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "0e630b1013f5c72cb7f83544fa872dd480452896b743288ab623f268af92e8fc",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-bdfa882d-8852-45e4-9ae6-42ef9711bd9e",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "0e630b1013f5c72cb7f83544fa872dd480452896b743288ab623f268af92e8fc",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-bdfa882d-8852-45e4-9ae6-42ef9711bd9e",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewKind": "agent-visual-review",
+      "humanReview": false,
+      "dealerApproval": false,
+      "backgrounds": {
+        "onLight": "#ffffff",
+        "onDark": "#111113",
+        "onAccent": "#c40101"
+      },
+      "wordmarkWidths": [
+        220,
+        240
+      ],
+      "notes": "Original reviewed light artwork retained byte for byte. Selected light export darkens neon outline pixels for white header; native qualification still required."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-22T23:42:46.338Z",
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#c40101"
+      ],
+      "widths": [
+        32,
+        48,
+        64
+      ],
+      "notes": "Matching initial outlined ink darkened for white-surface compact and favicon; native QA required."
+    }
+  },
+  "sourceBlockers": [],
+  "artworkProvenance": {
+    "path": "branding/artwork-provenance.json",
+    "sha256": "d6ee096fa8e0ee18c32564295d72cb8c76fffe5be72bf689517dbf0917fe8458",
+    "manifestSha256": "d25e9cee768a885052ac0a8df220d843c9b9c6f6f120d722705bead1cc99e694",
+    "nativeMasters": [
+      {
+        "path": "branding/native-generated-on-light.png",
+        "sha256": "18e876b04b86287ad51e02c39f512e33643ef01971727e5e344f0c54cc31b93f"
+      },
+      {
+        "path": "branding/native-generated-on-dark.png",
+        "sha256": "8b7ac1ed62a6ea0726bfdc121b19e307fd1e755499d2ddaba89804d65d670683"
+      }
+    ],
+    "reviewedExports": [
+      {
+        "path": "branding/reviewed-on-light.png",
+        "sha256": "8c8d9fb2dd830fb7d3b7a3dd87a7ec6b404cd60e7ea894d0270d3654d358b032",
+        "manifestRole": "on-light"
+      }
+    ]
+  }
 }

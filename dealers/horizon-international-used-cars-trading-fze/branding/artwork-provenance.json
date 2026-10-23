@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "ae-ajman-horizon-international-used-cars",
+  "slug": "horizon-international-used-cars-trading-fze",
+  "artworkDirectory": "horizon-international-used-cars-trading-fze",
+  "name": "Horizon International Used Cars Trading FZE",
+  "renderedName": "Horizon International Used Cars Trading FZE",
+  "kind": "independent-website-logo-proposal",
+  "dealerApproved": false,
+  "ownerApproved": false,
+  "sourceEvidence": [
+    {
+      "url": "https://auto.ae/horizoninternational/",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.arabwheels.ae/used-cars/dealers/horizon-international-used-cars-showroom-in-uae/",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "retainedOriginalsUnchanged": true,
+  "variants": {
+    "on-light": {
+      "path": "logo-on-light.png",
+      "sha256": "1947868db183b811bcac7cd1711ca1f4ad22fcfd7b30888638d141737b24b587",
+      "width": 1024,
+      "height": 287,
+      "transparentFraction": 0.6215565113240418,
+      "master": {
+        "path": "generated-on-light.png",
+        "sha256": "48725480f44340ee91485d0bc4999129770195fffecad2b77fae94aa7ba15380",
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-3a40d44b-e616-4343-b02f-c9d8e76d45d0",
+        "prompt": "Create one professional horizontal automotive dealership logo proposal for Horizon International Used Cars Trading FZE. Required exact text, uppercase: HORIZON INTERNATIONAL USED CARS TRADING FZE. Every word must be present and spelled precisely; use sensible primary name and smaller descriptor hierarchy without tiny lettering. Produce a polished original identity with a clever rounded negative-space monogram, with an open confident silhouette. Initials HI may inform the emblem. Emblem left, full clear name to the right, compact and balanced for a website header. Avoid overused shield and generic car silhouettes; no manufacturer badges. Clean modern lettering with careful kerning and strong legibility. All text is deep charcoal black, appropriate on a white/light header. One restrained red or gold accent may appear inside the emblem only; no pale text. Flat crisp edges, a small number of solid shapes, no chrome, no lighting, no shadow, no texture, no gradient. Genuine transparent alpha background, isolated logo with no background box, no grid, no checkerboard painted into pixels. No slogan, contact info, website, watermark, mockup, photograph, extra concept, or duplicate logo. Deliver exactly one horizontal full logo. This is an independent website identity proposal, not a claim of adopted branding.",
+        "reference": null
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 34,
+          "top": 69,
+          "width": 2120,
+          "height": 595
+        }
+      }
+    },
+    "on-dark": {
+      "path": "logo-on-dark.png",
+      "sha256": "6b39838cc1f03e2d4c2b1bc728933c363fc7332c93e2497dfc65d1e1f3bacc3c",
+      "width": 1024,
+      "height": 293,
+      "transparentFraction": 0.4454158223122867,
+      "master": {
+        "path": "generated-on-dark.png",
+        "sha256": "c68555faa8de2aa60da75f6c5bf030bd8d3a45166af23f970a524ffa06f5ef54",
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-d8f0f538-9f63-41e2-a550-5279ef173514",
+        "prompt": "Create the matching light-on-dark production variant of the exact supplied logo. Preserve precisely the same emblem, geometry, spelling, word count, typographic hierarchy, proportions, layout and spacing. Required exact text: HORIZON INTERNATIONAL USED CARS TRADING FZE. Change EVERY letter, including all secondary descriptor words and legal suffixes, to solid white so it is legible over a dark or red website header. Change the charcoal portions of the emblem to white. Retain the small red/gold emblem accent only if it contrasts clearly against a dark header. True transparent alpha background; do not paint a dark rectangle or checkerboard. Flat clean edges, no glows, shadows, bevels, textures, gradients, new artwork, new icon, extra text or mockup. Deliver one horizontal matching logo, fully legible.",
+        "reference": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-3a40d44b-e616-4343-b02f-c9d8e76d45d0.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 26,
+          "top": 62,
+          "width": 2108,
+          "height": 604
+        }
+      }
+    }
+  },
+  "review": {
+    "status": "artwork-visually-reviewed",
+    "alpha": "all exports measured as genuine transparent nonempty PNGs",
+    "spelling": "English wordmark inspected; source-bound display aliases retained",
+    "compact": "Horizontal logos only. Interactive 32/48/64px gallery preview is provided; separate compact/favicon artwork remains part of dealer-pack preparation.",
+    "sixDesigns": "not-yet-integrated-or-rendered",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "reviewer": "Codex visual inspection",
+    "header": "All 196 paired PNGs inspected at 240x64 on white, #111113 and #c40101",
+    "evidence": "final-review-04.png"
+  },
+  "releaseReady": false,
+  "artworkHolds": [],
+  "artworkReadyForIntegration": true
+}

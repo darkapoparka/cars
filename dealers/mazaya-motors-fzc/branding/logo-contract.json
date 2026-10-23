@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "dealer": "mazaya-motors-fzc",
+  "reviewed": true,
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "2a08735c1d12dde9a82c65baeb06efa1b2d2a396d61025a9207383c78bcb614d",
+      "sourceSha256": "82db61bf15aa7fb00baedb5408bf74621d143c052f4a1ac6229f018323734014"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "2affa76d6fb8d85d005cfa152b8f40eed192be54a3acd7749b1228a452fbd1c3",
+      "sourceSha256": "3a335933ecd9bca39ffb278370f0f3f65d3eac1d7bb880923a70ea41d11ec56e"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "2affa76d6fb8d85d005cfa152b8f40eed192be54a3acd7749b1228a452fbd1c3",
+      "sourceSha256": "3a335933ecd9bca39ffb278370f0f3f65d3eac1d7bb880923a70ea41d11ec56e"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "82db61bf15aa7fb00baedb5408bf74621d143c052f4a1ac6229f018323734014",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-3f95e3c9-3292-4a38-8f79-8d8566d35719",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "ae1e3c26ea8f3e7117c440bb694d7688feae8894d6a3b21c69fcb96ac62cece3",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-3f95e3c9-3292-4a38-8f79-8d8566d35719",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "82db61bf15aa7fb00baedb5408bf74621d143c052f4a1ac6229f018323734014",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 295,
+          "height": 238
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "49281858c1cf332094b2a173c5112249733197df48395e718cc52152c5f1cfbc"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "82db61bf15aa7fb00baedb5408bf74621d143c052f4a1ac6229f018323734014",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-3f95e3c9-3292-4a38-8f79-8d8566d35719",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/mazaya-motors-fzc/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "3a335933ecd9bca39ffb278370f0f3f65d3eac1d7bb880923a70ea41d11ec56e",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-2d0f35d5-060c-4df6-8a15-086695f4a4f3",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/mazaya-motors-fzc/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "3a335933ecd9bca39ffb278370f0f3f65d3eac1d7bb880923a70ea41d11ec56e",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-2d0f35d5-060c-4df6-8a15-086695f4a4f3",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/mazaya-motors-fzc/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "82db61bf15aa7fb00baedb5408bf74621d143c052f4a1ac6229f018323734014",
+      "sha256": "82db61bf15aa7fb00baedb5408bf74621d143c052f4a1ac6229f018323734014",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 238
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "3a335933ecd9bca39ffb278370f0f3f65d3eac1d7bb880923a70ea41d11ec56e",
+      "sha256": "3a335933ecd9bca39ffb278370f0f3f65d3eac1d7bb880923a70ea41d11ec56e",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 239
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "3a335933ecd9bca39ffb278370f0f3f65d3eac1d7bb880923a70ea41d11ec56e",
+      "sha256": "3a335933ecd9bca39ffb278370f0f3f65d3eac1d7bb880923a70ea41d11ec56e",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 239
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "c23ce800d1108740b781ba604686f9f4e0cfca057dbc63f8ca95c5c96e2bbfa6",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-3f95e3c9-3292-4a38-8f79-8d8566d35719",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "82db61bf15aa7fb00baedb5408bf74621d143c052f4a1ac6229f018323734014",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 295,
+            "height": 238
+          }
+        }
+      },
+      "sourceReference": "dealers/mazaya-motors-fzc/branding/generated-mark-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "2e3a7549613f7c39a1f348460317c70f9dca07afdddbfc37224ae2ea311a3d1d",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-2d0f35d5-060c-4df6-8a15-086695f4a4f3",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "3a335933ecd9bca39ffb278370f0f3f65d3eac1d7bb880923a70ea41d11ec56e",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 295,
+            "height": 239
+          }
+        }
+      },
+      "sourceReference": "dealers/mazaya-motors-fzc/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "ae1e3c26ea8f3e7117c440bb694d7688feae8894d6a3b21c69fcb96ac62cece3",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-3f95e3c9-3292-4a38-8f79-8d8566d35719",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "82db61bf15aa7fb00baedb5408bf74621d143c052f4a1ac6229f018323734014",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 295,
+            "height": 238
+          }
+        }
+      },
+      "sourceReference": "dealers/mazaya-motors-fzc/branding/generated-mark-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "49281858c1cf332094b2a173c5112249733197df48395e718cc52152c5f1cfbc",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-3f95e3c9-3292-4a38-8f79-8d8566d35719",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "82db61bf15aa7fb00baedb5408bf74621d143c052f4a1ac6229f018323734014",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 295,
+            "height": 238
+          }
+        }
+      },
+      "sourceReference": "dealers/mazaya-motors-fzc/branding/generated-mark-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "66373f152e260f7e55e3f0ece589947d571c1e35f3e31e924edfe9e6faa9cc76",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-2d0f35d5-060c-4df6-8a15-086695f4a4f3",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "3a335933ecd9bca39ffb278370f0f3f65d3eac1d7bb880923a70ea41d11ec56e",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 295,
+          "height": 239
+        }
+      }
+    }
+  }
+}

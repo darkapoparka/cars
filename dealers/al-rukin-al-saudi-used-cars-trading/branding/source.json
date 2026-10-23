@@ -1,0 +1,147 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-rukin-al-saudi-used-cars-trading",
+  "status": "reviewed-imagegen-proposal",
+  "realLogoFirst": true,
+  "publicSources": [
+    {
+      "url": "https://auto.ae/alrukinalsaudi/",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://2gis.ae/sharjah/firm/70000001096950291",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "originals": [],
+  "creationMethod": "imagegen-proposal",
+  "dealerApproved": false,
+  "generatedInputs": {
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "master": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "5280119fe11cbef281374acd05400f3718ec227a6f0c35c2a996a8e200c428bf",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-c9c7b85c-8794-4813-8e8c-6560cd2ba4fe",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark-light.png",
+      "sha256": "73b68990efcc5d7e5ad25aa7b58af7fb3f1483813dc205154e226e966704afbb",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-c9c7b85c-8794-4813-8e8c-6560cd2ba4fe",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "5280119fe11cbef281374acd05400f3718ec227a6f0c35c2a996a8e200c428bf",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 275,
+            "height": 214
+          }
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-dark.png",
+      "sha256": "994fc9ab6cdbdea4671852785f866b0892b0fc78ccebc2b08585b8b561a3a76e",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-4a7ab749-535c-4e89-a590-71c96df21792",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "4898e08c5bd3cad44f8cc29dcad7c16b0632be7489b28eca3a6e0ae5deb79f3d",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 275,
+            "height": 215
+          }
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "5280119fe11cbef281374acd05400f3718ec227a6f0c35c2a996a8e200c428bf",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-c9c7b85c-8794-4813-8e8c-6560cd2ba4fe",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "4898e08c5bd3cad44f8cc29dcad7c16b0632be7489b28eca3a6e0ae5deb79f3d",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-4a7ab749-535c-4e89-a590-71c96df21792",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "4898e08c5bd3cad44f8cc29dcad7c16b0632be7489b28eca3a6e0ae5deb79f3d",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-4a7ab749-535c-4e89-a590-71c96df21792",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewKind": "agent-visual-review",
+      "humanReview": false,
+      "dealerApproval": false,
+      "backgrounds": {
+        "onLight": "#ffffff",
+        "onDark": "#111113",
+        "onAccent": "#c40101"
+      },
+      "wordmarkWidths": [
+        220,
+        240
+      ],
+      "notes": "Exact reviewed Image Gen pair; native masters and generation provenance retained. Compact rasters cropped from the actual left symbol."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-22T23:42:46.338Z",
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#c40101"
+      ],
+      "widths": [
+        32,
+        48,
+        64
+      ],
+      "notes": "Left symbol cropped from reviewed horizontal variants; native rendering must independently qualify."
+    }
+  },
+  "sourceBlockers": [],
+  "artworkProvenance": {
+    "path": "branding/artwork-provenance.json",
+    "sha256": "3a87f06cff3248a05af7fa33adf0936bafb6eb9d9f8a7c2bda74a6ffa6697966",
+    "manifestSha256": "d25e9cee768a885052ac0a8df220d843c9b9c6f6f120d722705bead1cc99e694",
+    "nativeMasters": [
+      {
+        "path": "branding/native-generated-on-light.png",
+        "sha256": "888fdb5cc4bf74b237faeb094a9cb288c6c2e8fd6e894dbc3c45b896bb06ebdd"
+      },
+      {
+        "path": "branding/native-generated-on-dark.png",
+        "sha256": "19f0109e87cf707a3d797b29a7766c4c5e2f2a31100a0baa44e1e71d98f2de25"
+      }
+    ]
+  }
+}

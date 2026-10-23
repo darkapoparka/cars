@@ -1,0 +1,151 @@
+{
+  "schemaVersion": 1,
+  "dealer": "ali-gad-ali-used-cars",
+  "status": "reviewed-imagegen-proposal",
+  "realLogoFirst": true,
+  "publicSources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/ali-gad-ali-used-cars",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/6778-hyundai-sonata-25-at-191-hp-other",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://auto.ae/ar/aligadali/",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "originals": [],
+  "creationMethod": "imagegen-proposal",
+  "dealerApproved": false,
+  "generatedInputs": {
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "master": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "63941ecfacf65990556a0f9ae9ba971f140de567330748552ec4ffa1a982ada1",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-6a54c198-8739-47c2-9454-780efbc92bdd",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark-light.png",
+      "sha256": "ae81c0d589abf5386e3f58a60c9fd2c02f9e17ae0789c6ea05f129bc82abc507",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-6a54c198-8739-47c2-9454-780efbc92bdd",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "63941ecfacf65990556a0f9ae9ba971f140de567330748552ec4ffa1a982ada1",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 320,
+            "height": 238
+          }
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-dark.png",
+      "sha256": "a874de65f267a4f0ccbf0068fc46e4f918649ad8541143c74cbd7f11f0fa9c1f",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-6fa294db-dbfe-4b2a-bd11-7a42349b133a",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "4f6f793cc92a642f1a38458bfb85105e978856db4e2d2fe266ed703076e4ac4a",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 320,
+            "height": 237
+          }
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "63941ecfacf65990556a0f9ae9ba971f140de567330748552ec4ffa1a982ada1",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-6a54c198-8739-47c2-9454-780efbc92bdd",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "4f6f793cc92a642f1a38458bfb85105e978856db4e2d2fe266ed703076e4ac4a",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-6fa294db-dbfe-4b2a-bd11-7a42349b133a",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "4f6f793cc92a642f1a38458bfb85105e978856db4e2d2fe266ed703076e4ac4a",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-6fa294db-dbfe-4b2a-bd11-7a42349b133a",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewKind": "agent-visual-review",
+      "humanReview": false,
+      "dealerApproval": false,
+      "backgrounds": {
+        "onLight": "#ffffff",
+        "onDark": "#111113",
+        "onAccent": "#c40101"
+      },
+      "wordmarkWidths": [
+        220,
+        240
+      ],
+      "notes": "Exact reviewed Image Gen pair; native masters and generation provenance retained. Compact rasters cropped from the actual left symbol."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-22T23:42:46.338Z",
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#c40101"
+      ],
+      "widths": [
+        32,
+        48,
+        64
+      ],
+      "notes": "Left symbol cropped from reviewed horizontal variants; native rendering must independently qualify."
+    }
+  },
+  "sourceBlockers": [],
+  "artworkProvenance": {
+    "path": "branding/artwork-provenance.json",
+    "sha256": "89b9866dec84b628b8b274e7436b42c938d16a2c86f5ea15dc22aa814ac32b5d",
+    "manifestSha256": "d25e9cee768a885052ac0a8df220d843c9b9c6f6f120d722705bead1cc99e694",
+    "nativeMasters": [
+      {
+        "path": "branding/native-generated-on-light.png",
+        "sha256": "65205c2606db3e3e024cc00d6f70e6b1ad4b8f8da823e9de79ce00dfcc58d8a0"
+      },
+      {
+        "path": "branding/native-generated-on-dark.png",
+        "sha256": "03fee0790abb5c9c83855e60ff2daca6c9f039b8edce7ab7c3a063b54c7556db"
+      }
+    ]
+  }
+}

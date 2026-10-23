@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "dealer": "alhilal-motors",
-  "status": "research-required",
+  "status": "reviewed-imagegen-proposal",
   "realLogoFirst": true,
   "publicSources": [
     {
@@ -18,7 +18,134 @@
     }
   ],
   "originals": [],
-  "creationMethod": null,
+  "creationMethod": "imagegen-proposal",
   "dealerApproved": false,
-  "generatedInputs": null
+  "generatedInputs": {
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "master": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "6100652438c001797b53676af2d1886efc215d5f51641760fcc38f87e40b0b77",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-9e6c1210-deb3-4b79-b333-ae19c15f54b1",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark-light.png",
+      "sha256": "d848d2c32d935604b0fec998316f55c86f4eba02d53e479a516b1b8174433be1",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-9e6c1210-deb3-4b79-b333-ae19c15f54b1",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "6100652438c001797b53676af2d1886efc215d5f51641760fcc38f87e40b0b77",
+          "operation": "crop-wordmark-initial-compact-symbol",
+          "crop": {
+            "left": 315,
+            "top": 100,
+            "width": 118,
+            "height": 135
+          }
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-dark.png",
+      "sha256": "300c1215e813063f6b48cdbc50dbb01c176f855908d42b7726fb1a512c26d674",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-b374bd30-665e-4acb-b59a-cd31898b2c80",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "b99b4d37d4cbff60edeb0c5e753807610b9cd6c972b19fcb1a6cc69b187eb7d8",
+          "operation": "crop-wordmark-initial-compact-symbol",
+          "crop": {
+            "left": 315,
+            "top": 100,
+            "width": 118,
+            "height": 135
+          }
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "6100652438c001797b53676af2d1886efc215d5f51641760fcc38f87e40b0b77",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-9e6c1210-deb3-4b79-b333-ae19c15f54b1",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "b99b4d37d4cbff60edeb0c5e753807610b9cd6c972b19fcb1a6cc69b187eb7d8",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-b374bd30-665e-4acb-b59a-cd31898b2c80",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "b99b4d37d4cbff60edeb0c5e753807610b9cd6c972b19fcb1a6cc69b187eb7d8",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-b374bd30-665e-4acb-b59a-cd31898b2c80",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewKind": "agent-visual-review",
+      "humanReview": false,
+      "dealerApproval": false,
+      "backgrounds": {
+        "onLight": "#ffffff",
+        "onDark": "#111113",
+        "onAccent": "#c40101"
+      },
+      "wordmarkWidths": [
+        220,
+        240
+      ],
+      "notes": "Exact reviewed Image Gen pair; native masters and generation provenance retained. Compact rasters cropped from the actual left symbol."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-22T23:42:46.338Z",
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#c40101"
+      ],
+      "widths": [
+        32,
+        48,
+        64
+      ],
+      "notes": "Dark A initial cropped from reviewed horizontal artwork for 32px legibility after native white-surface favicon contrast failure; native QA must independently pass."
+    }
+  },
+  "sourceBlockers": [],
+  "artworkProvenance": {
+    "path": "branding/artwork-provenance.json",
+    "sha256": "012dd3a8b76ddc73823cf0c4b54972f04a7e58f8b95812d1e5fe08e9f5bf5bcf",
+    "manifestSha256": "d25e9cee768a885052ac0a8df220d843c9b9c6f6f120d722705bead1cc99e694",
+    "nativeMasters": [
+      {
+        "path": "branding/native-generated-on-light.png",
+        "sha256": "e3bd7b45a190f0c2237c3f1d99395e72244fdaab693ba59d08adb9555edf759e"
+      },
+      {
+        "path": "branding/native-generated-on-dark.png",
+        "sha256": "2b912c737fbe706e2cf1fa913fa299b63b37dfa20fda26f69c89f34e15b70ced"
+      }
+    ]
+  }
 }

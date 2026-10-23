@@ -3,7 +3,7 @@
   "kind": "cars-dealer-pack-input-review",
   "dealer": "al-fajr-automobile-showroom",
   "reviewed": true,
-  "reviewedAt": "2026-10-21T13:22:29.655Z",
+  "reviewedAt": "2026-10-23T02:57:22.745Z",
   "review": {
     "kind": "automated",
     "humanReview": false,
@@ -42,12 +42,40 @@
       "sha256": "ff86fa09505c6f10665c84aa63819bbc412d13e9819cfeea344f9c4aa1fcc94d"
     },
     {
+      "path": "branding/artwork-provenance.json",
+      "sha256": "b995512bee10f7a2ea007d35b8d6a52e7e1fcfad0e7f66ef26743784dc3c2b38"
+    },
+    {
+      "path": "branding/generated-mark-dark.png",
+      "sha256": "36ef9bb0581b9a277ae5e6ecb4cf1d89f7eb3921dc1cc847ca9908265b7f3544"
+    },
+    {
+      "path": "branding/generated-mark-light.png",
+      "sha256": "21d320802b97a636bb669beb01d9c763a3559e0b4d22fb1a44def6cc1b36aa56"
+    },
+    {
+      "path": "branding/generated-on-dark.png",
+      "sha256": "3cfd7236f28f1bedbbe4ea0346de737bf1bc632653979beacb86bcc2b99e69e9"
+    },
+    {
+      "path": "branding/generated-on-light.png",
+      "sha256": "e19c31d139b133187d31d5385c8a48ec53cba16b2f5f2c5ccec0a2f278a4e9be"
+    },
+    {
       "path": "branding/logo-contract.json",
-      "sha256": "cf0b6f86c0ad68a7a3f4cbf32fc96cbbd33590d0428574d5f13cca4f14a6e3c1"
+      "sha256": "f458fb25b727161fceba3171c8b0c53dfc9011796203908c0144ea81beab7738"
     },
     {
       "path": "branding/logo-recipe.json",
-      "sha256": "258759723676314e13c3ff34a8e68122a240fb4d210c6cd6d9c6b9dfd17a8da2"
+      "sha256": "da298a2afc010b4cfc241968b549303defb67d0bbb73fd051f941aec8ae91ae6"
+    },
+    {
+      "path": "branding/native-generated-on-dark.png",
+      "sha256": "53dff366e403d9029f62958553bde91caf82f681f14d374d5c6e74f37120d397"
+    },
+    {
+      "path": "branding/native-generated-on-light.png",
+      "sha256": "711101c0a099646687e9608fb31a650c9abb5c1bcf83b98b7d83b1ebce669224"
     },
     {
       "path": "branding/public-original-dubizzle-20261021.webp",
@@ -59,7 +87,7 @@
     },
     {
       "path": "branding/source.json",
-      "sha256": "99255c961da6f5d1bc7d54c4d8191b56c041e20270876464201aac8c9e30d216"
+      "sha256": "2e039bf894dc1fa80df339111e85ce7aa7fab0aa721494437cec9fbc5b15a61a"
     },
     {
       "path": "business-facts.json",
@@ -67,7 +95,7 @@
     },
     {
       "path": "copy-review.json",
-      "sha256": "64e111aff2ebbe94653476dfdd4c68218e1ce908ab6b4339129005e33763b012"
+      "sha256": "1fdaa1e5c5890e609de1b8f73f74061f7ba56b3f086d2c0086694d1cd30f0a67"
     },
     {
       "path": "dealer-stock/public-5062-1.webp",
@@ -95,11 +123,11 @@
     },
     {
       "path": "dealer.json",
-      "sha256": "d6328d6f36830fae892b16b1c0fe1e05e134aa171e7b9290f0d11020a0391a9a"
+      "sha256": "79f7312e9393d0abdba275c08939fb8a511c4b6c9116fe9e3cae53b1091fee4c"
     },
     {
       "path": "identity-review.json",
-      "sha256": "8b8128cac5f856f75290e54d75b338dd47673c8325e1d4632cc84707814b531e"
+      "sha256": "6aa767bbfd774d6b41c3e3e531386e46d83d71c25a64ca6e59c5d97e0fff8b4c"
     },
     {
       "path": "locale.json",
@@ -111,7 +139,7 @@
     },
     {
       "path": "qualification.json",
-      "sha256": "f4a871b38bc28a8bcb399489e392e0b5bfc476f8c060db987655e7450c097c3b"
+      "sha256": "0f36340f89cef31c602f9544053c4d75d8ec4e75a71d965812f6aeed62d2527a"
     },
     {
       "path": "source-evidence.json",

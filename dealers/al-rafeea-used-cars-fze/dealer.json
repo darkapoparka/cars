@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Al Rafeea Used Cars FZE",
     "publicOrigin": "https://al-rafeea-used-cars-fze.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "633be7c9b974b0db2f4fde909909c2797f1f50df9802ab2688c4412e77c137a2",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "1065a779b98e42092fe14e0bda503b62d4ae5824cd221538213b3dd86d355af4"
+    }
   }
 }

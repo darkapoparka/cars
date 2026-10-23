@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "First Edition Used Automobile Trading",
     "publicOrigin": "https://first-edition-used-automobile-trading.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "0a7a8861c2a387493138ba7b6618b87c2c46aabc4a1628758973606161099b2e",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "79cd2cc9d52f6a918bfcfa035b146900bf2c76e665a1dd172841418104dabaf2"
+    }
   }
 }

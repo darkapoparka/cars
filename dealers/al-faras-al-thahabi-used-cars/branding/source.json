@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "dealer": "al-faras-al-thahabi-used-cars",
-  "status": "research-required",
+  "status": "reviewed-imagegen-proposal",
   "realLogoFirst": true,
   "publicSources": [
     {
@@ -14,7 +14,146 @@
     }
   ],
   "originals": [],
-  "creationMethod": null,
+  "creationMethod": "imagegen-proposal",
   "dealerApproved": false,
-  "generatedInputs": null
+  "generatedInputs": {
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "master": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "5e57ed6ab09743b438396f0a6ba5b4312bf95c5b81e789c3b1a72386f1b510f4",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-105c487b-a55d-4284-8b98-58f159fe8474",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark-light.png",
+      "sha256": "f21e90ade07e13c4e3e7cba0cad33ff6380f34f2b12ade6db701e0ae81169d91",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-105c487b-a55d-4284-8b98-58f159fe8474",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "5e57ed6ab09743b438396f0a6ba5b4312bf95c5b81e789c3b1a72386f1b510f4",
+          "operation": "crop-left-symbol-and-mask-adjacent-wordmark",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 330,
+            "height": 321
+          },
+          "mask": {
+            "left": 235,
+            "top": 120,
+            "width": 95,
+            "height": 201
+          }
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-dark.png",
+      "sha256": "7ecec42b7f41b4ed2ce1f4c355d7a783ed58de4377a31129f7b42ae47e18fcfa",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-6a80c677-14c1-43ee-8217-3c6be328a54b",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "669fe6067c3b1e8d0e256a0af8ef9a939179722366b1f9d9849b1158061fa8de",
+          "operation": "crop-left-symbol-and-mask-adjacent-wordmark",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 330,
+            "height": 318
+          },
+          "mask": {
+            "left": 235,
+            "top": 120,
+            "width": 95,
+            "height": 198
+          }
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "5e57ed6ab09743b438396f0a6ba5b4312bf95c5b81e789c3b1a72386f1b510f4",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-105c487b-a55d-4284-8b98-58f159fe8474",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "669fe6067c3b1e8d0e256a0af8ef9a939179722366b1f9d9849b1158061fa8de",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-6a80c677-14c1-43ee-8217-3c6be328a54b",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "669fe6067c3b1e8d0e256a0af8ef9a939179722366b1f9d9849b1158061fa8de",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-6a80c677-14c1-43ee-8217-3c6be328a54b",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewKind": "agent-visual-review",
+      "humanReview": false,
+      "dealerApproval": false,
+      "backgrounds": {
+        "onLight": "#ffffff",
+        "onDark": "#111113",
+        "onAccent": "#c40101"
+      },
+      "wordmarkWidths": [
+        220,
+        240
+      ],
+      "notes": "Exact reviewed Image Gen pair; native masters and generation provenance retained. Compact rasters cropped from the actual left symbol."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-22T23:42:46.338Z",
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#c40101"
+      ],
+      "widths": [
+        32,
+        48,
+        64
+      ],
+      "notes": "Symbol cropped from exact reviewed image pair; adjacent wordmark pixels masked to retain full gold T. Native compact and favicon rendering must independently qualify."
+    }
+  },
+  "sourceBlockers": [],
+  "artworkProvenance": {
+    "path": "branding/artwork-provenance.json",
+    "sha256": "badad4e1d5f2aa6b91b50b5b702bf23055d2db8571a1ba421a050f76ecb5ed0e",
+    "manifestSha256": "d25e9cee768a885052ac0a8df220d843c9b9c6f6f120d722705bead1cc99e694",
+    "nativeMasters": [
+      {
+        "path": "branding/native-generated-on-light.png",
+        "sha256": "b85ca21fe55e6a958fcb5d570cb61fc76245f4869f86d6db788fc54e9eb59262"
+      },
+      {
+        "path": "branding/native-generated-on-dark.png",
+        "sha256": "fd520ab0dc74e7abe0c8ae67bbd3165ee7b565e0db07422a1be9b3684da5c7d4"
+      }
+    ]
+  }
 }

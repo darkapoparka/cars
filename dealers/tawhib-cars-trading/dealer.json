@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Tawhib Cars Trading",
     "publicOrigin": "https://tawhib-cars-trading.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "1070814c05da7570aab91ac9ab27dbaed3a3727dc5e19ee49721f7f12cc22e12",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "1e030dab608eda54de22aea6a5947257aa40de92c0023e3b330285da0354f2e0"
+    }
   }
 }

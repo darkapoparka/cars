@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Shamil Motors LLC",
     "publicOrigin": "https://shamil-motors-llc.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "f6d9e1d4c1030d8fd0faab195b21472ce36ce82d661d37feed234f209fab501c",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "9b572ac630fbffb2321541eeee0d581c8012c91f17d588b270815bcab5849f44"
+    }
   }
 }

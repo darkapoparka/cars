@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Style Motors",
     "publicOrigin": "https://style-motors.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "42d6fb48c52869a50b758e4e5cff43c93cf88c8f645b4985e22be2fe9fa4d4a3",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "d26de50dc838946f1023af9cb58929f0f21dd5a0e4992fd025cf0dcb24b39fb2"
+    }
   }
 }

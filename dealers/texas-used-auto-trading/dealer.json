@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Texas Used Auto Trading",
     "publicOrigin": "https://texas-used-auto-trading.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "c661e29be48c3c612c4998ecbc60886e42db581677ab4639e731ada2bc267686",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "7c9d4d0e19e9d74c07a21c636cbc44b89a3fa10d8d6b2912df36bf28f5b07904"
+    }
   }
 }

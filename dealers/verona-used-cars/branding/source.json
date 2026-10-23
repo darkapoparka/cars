@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "dealer": "verona-used-cars",
-  "status": "research-required",
+  "status": "reviewed-imagegen-proposal",
   "realLogoFirst": true,
   "publicSources": [
     {
@@ -10,7 +10,134 @@
     }
   ],
   "originals": [],
-  "creationMethod": null,
+  "creationMethod": "imagegen-proposal",
   "dealerApproved": false,
-  "generatedInputs": null
+  "generatedInputs": {
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "master": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "246118dfc6e5b72bd4a93f6d12ddf735cf5811a76f02e191d71eaa576908bdd2",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-4e0ea992-3344-4115-9ec3-339e83421589",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark-light.png",
+      "sha256": "1c16481ccc36467ab62253013a2818af87e83703dcce512ae24e78573462407d",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-4e0ea992-3344-4115-9ec3-339e83421589",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "246118dfc6e5b72bd4a93f6d12ddf735cf5811a76f02e191d71eaa576908bdd2",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 235,
+            "height": 253
+          }
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-dark.png",
+      "sha256": "34c756593b572fa87308b0057fa69cbbfe2b6fdedeb4d0508bcb0f42720b9d74",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-d007b97f-1f49-4957-8de0-2b9cd28b3e45",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "2a9a1fa44710c9ec9ca0603ec25e2a16ea7bef9c31c4b17dd2d08ed2c566d7f1",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 235,
+            "height": 251
+          }
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "246118dfc6e5b72bd4a93f6d12ddf735cf5811a76f02e191d71eaa576908bdd2",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-4e0ea992-3344-4115-9ec3-339e83421589",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "2a9a1fa44710c9ec9ca0603ec25e2a16ea7bef9c31c4b17dd2d08ed2c566d7f1",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-d007b97f-1f49-4957-8de0-2b9cd28b3e45",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "2a9a1fa44710c9ec9ca0603ec25e2a16ea7bef9c31c4b17dd2d08ed2c566d7f1",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-d007b97f-1f49-4957-8de0-2b9cd28b3e45",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewKind": "agent-visual-review",
+      "humanReview": false,
+      "dealerApproval": false,
+      "backgrounds": {
+        "onLight": "#ffffff",
+        "onDark": "#111113",
+        "onAccent": "#c40101"
+      },
+      "wordmarkWidths": [
+        220,
+        240
+      ],
+      "notes": "Exact reviewed Image Gen pair; native masters and generation provenance retained. Compact rasters cropped from the actual left symbol."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-22T23:42:46.338Z",
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#c40101"
+      ],
+      "widths": [
+        32,
+        48,
+        64
+      ],
+      "notes": "Left symbol cropped from reviewed horizontal variants; native rendering must independently qualify."
+    }
+  },
+  "sourceBlockers": [],
+  "artworkProvenance": {
+    "path": "branding/artwork-provenance.json",
+    "sha256": "964efaf72fbb0bbaa38a5c3aee63c38aa57824df1a3b759d75751933440bc371",
+    "manifestSha256": "d25e9cee768a885052ac0a8df220d843c9b9c6f6f120d722705bead1cc99e694",
+    "nativeMasters": [
+      {
+        "path": "branding/native-generated-on-light.png",
+        "sha256": "246bda25ff857615aeaf4e2a4b69188152cb9e6382e1705dc5cb8ff68c701d2b"
+      },
+      {
+        "path": "branding/native-generated-on-dark.png",
+        "sha256": "f993f9df192ae1f206f547273c0798bb16517aeb1065f8872bd90e5fd5f3ded5"
+      }
+    ]
+  }
 }

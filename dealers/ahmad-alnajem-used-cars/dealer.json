@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Ahmad Alnajem Used Cars",
     "publicOrigin": "https://ahmad-alnajem-used-cars.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "b01777e0ef2b534c3f8c1bf6a9a429ef3998e10fd9cfa788ccf8341b4ffdcb83",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "fc39fdd7ed4b6896acc267a7d51729c69850c996c50de43e8df719906268ef3b"
+    }
   }
 }

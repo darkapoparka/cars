@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Shabir Motors",
     "publicOrigin": "https://shabir-motors.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "01fbf8fea5d100eab6985dbd8c5728da701333e9ab92afdd611a9599fb20715c",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "5389f3f7d61688584c31fdb2c54e666af14c8605516c0e6e950f205175099f5c"
+    }
   }
 }

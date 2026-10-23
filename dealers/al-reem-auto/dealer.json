@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Al Reem Auto",
     "publicOrigin": "https://al-reem-auto.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "4b23462fbb66c611785845ecd14fbc8e23273d1c59997947bee936b36c13d2ea",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "a0f97ca674ee2ae2c5246e41b56319e96fb4b6eb4224517945578795ce016b21"
+    }
   }
 }

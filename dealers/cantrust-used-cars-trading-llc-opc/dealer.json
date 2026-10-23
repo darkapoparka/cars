@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Cantrust Used Cars Trading LLC OPC",
     "publicOrigin": "https://cantrust-used-cars-trading-llc-opc.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "59b6ff5fc706ac82fe17e06b4f9f49a46265cc04732960ff68de4703f0192c7b",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "618eda8907656e4a92466b161b6ec099ae836f613e882967d9512badc93e166e"
+    }
   }
 }

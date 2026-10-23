@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "ae-sharjah-speedline-used-car-trading",
+  "slug": "speedline-used-car-trading",
+  "artworkDirectory": "speedline-used-car-trading",
+  "name": "Speedline Used Car Trading",
+  "renderedName": "Speedline Used Car Trading",
+  "kind": "independent-website-logo-proposal",
+  "dealerApproved": false,
+  "ownerApproved": false,
+  "sourceEvidence": [
+    {
+      "url": "https://ayshei.com/v-shop/speedline_used_car_trading/inventory",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://ayshei.com/ads/detail/4648161046-mercedes-benz-c200-coupe-2022-gcc-specs-low-mileage-pristine-condition",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "retainedOriginalsUnchanged": true,
+  "variants": {
+    "on-light": {
+      "path": "logo-on-light.png",
+      "sha256": "8f280ded115166f9de820d42568ebb32c0b53bb706e0d698527a2889ed12e111",
+      "width": 1024,
+      "height": 215,
+      "transparentFraction": 0.6113190406976744,
+      "master": {
+        "path": "generated-on-light.png",
+        "sha256": "0cb2d2f10c23ff66f365e8cc05193909c52851521c0ab710135b5b0772cff4e7",
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-a71be858-2f14-47fa-94f7-4c0b5af351d7",
+        "prompt": "Create one professional horizontal automotive dealership logo proposal for Speedline Used Car Trading. Required exact text, uppercase: SPEEDLINE USED CAR TRADING. Every word must be present and spelled precisely; use sensible primary name and smaller descriptor hierarchy without tiny lettering. Produce a polished original identity with a minimal memorable geometric symbol related to the distinctive name. Initials S may inform the emblem. Emblem left, full clear name to the right, compact and balanced for a website header. Avoid overused shield and generic car silhouettes; no manufacturer badges. Clean modern lettering with careful kerning and strong legibility. All text is deep charcoal black, appropriate on a white/light header. One restrained red or gold accent may appear inside the emblem only; no pale text. Flat crisp edges, a small number of solid shapes, no chrome, no lighting, no shadow, no texture, no gradient. Genuine transparent alpha background, isolated logo with no background box, no grid, no checkerboard painted into pixels. No slogan, contact info, website, watermark, mockup, photograph, extra concept, or duplicate logo. Deliver exactly one horizontal full logo. This is an independent website identity proposal, not a claim of adopted branding.",
+        "reference": null
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 0,
+          "top": 128,
+          "width": 2172,
+          "height": 455
+        }
+      }
+    },
+    "on-dark": {
+      "path": "logo-on-dark.png",
+      "sha256": "89044183ce93896148f06da5d8b99c9e96d5c0d427e9bca998eb695a54b4f490",
+      "width": 1024,
+      "height": 216,
+      "transparentFraction": 0.5155797887731481,
+      "master": {
+        "path": "generated-on-dark.png",
+        "sha256": "954572e112f8e27e5c01f9bba87118f1f49c26ac12126a4f79dee678563a3a8f",
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-06965904-b008-4741-a45b-ee05c3f0f976",
+        "prompt": "Create the matching light-on-dark production variant of the exact supplied logo. Preserve precisely the same emblem, geometry, spelling, word count, typographic hierarchy, proportions, layout and spacing. Required exact text: SPEEDLINE USED CAR TRADING. Change EVERY letter, including all secondary descriptor words and legal suffixes, to solid white so it is legible over a dark or red website header. Change the charcoal portions of the emblem to white. Retain the small red/gold emblem accent only if it contrasts clearly against a dark header. True transparent alpha background; do not paint a dark rectangle or checkerboard. Flat clean edges, no glows, shadows, bevels, textures, gradients, new artwork, new icon, extra text or mockup. Deliver one horizontal matching logo, fully legible.",
+        "reference": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-a71be858-2f14-47fa-94f7-4c0b5af351d7.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 0,
+          "top": 126,
+          "width": 2172,
+          "height": 459
+        }
+      }
+    }
+  },
+  "review": {
+    "status": "artwork-visually-reviewed",
+    "alpha": "all exports measured as genuine transparent nonempty PNGs",
+    "spelling": "English wordmark inspected; source-bound display aliases retained",
+    "compact": "Horizontal logos only. Interactive 32/48/64px gallery preview is provided; separate compact/favicon artwork remains part of dealer-pack preparation.",
+    "sixDesigns": "not-yet-integrated-or-rendered",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "reviewer": "Codex visual inspection",
+    "header": "All 196 paired PNGs inspected at 240x64 on white, #111113 and #c40101",
+    "evidence": "final-review-12.png"
+  },
+  "releaseReady": false,
+  "artworkHolds": [],
+  "artworkReadyForIntegration": true
+}

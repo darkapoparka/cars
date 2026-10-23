@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "dealer": "al-fajr-automobile-showroom",
-  "status": "reviewed-public-original",
+  "status": "reviewed-imagegen-proposal",
   "realLogoFirst": true,
   "publicSources": [
     {
@@ -32,7 +32,7 @@
       "format": "JPEG",
       "width": 1500,
       "height": 1499,
-      "transparentPixelFraction": 0.0,
+      "transparentPixelFraction": 0,
       "acceptedAsPreparedArtwork": false,
       "reason": "The profile image is a photograph of the Al Fajr storefront and sign, not a standalone transparent logo original."
     },
@@ -54,157 +54,134 @@
       "qualityCaveat": "The public original is served as a 520 by 160 WebP despite its PNG URL. Letter edges are soft in the original; exports retain original geometry and do not redraw the text."
     }
   ],
-  "creationMethod": "retained-public-original-reviewed-white-matte-solid-ink",
+  "creationMethod": "imagegen-proposal",
   "dealerApproved": false,
   "sourceBlockers": [],
-  "reviewedInputs": {
-    "reviewedAt": "2026-10-21T13:21:21.538210Z",
+  "artworkProvenance": {
+    "path": "branding/artwork-provenance.json",
+    "sha256": "b995512bee10f7a2ea007d35b8d6a52e7e1fcfad0e7f66ef26743784dc3c2b38",
+    "manifestSha256": "d25e9cee768a885052ac0a8df220d843c9b9c6f6f120d722705bead1cc99e694",
+    "nativeMasters": [
+      {
+        "path": "branding/native-generated-on-light.png",
+        "sha256": "711101c0a099646687e9608fb31a650c9abb5c1bcf83b98b7d83b1ebce669224"
+      },
+      {
+        "path": "branding/native-generated-on-dark.png",
+        "sha256": "53dff366e403d9029f62958553bde91caf82f681f14d374d5c6e74f37120d397"
+      }
+    ]
+  },
+  "generatedInputs": {
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "master": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "e19c31d139b133187d31d5385c8a48ec53cba16b2f5f2c5ccec0a2f278a4e9be",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-f33a4f99-e067-424f-9f97-63234a2fd874",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark-light.png",
+      "sha256": "21d320802b97a636bb669beb01d9c763a3559e0b4d22fb1a44def6cc1b36aa56",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-f33a4f99-e067-424f-9f97-63234a2fd874",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "e19c31d139b133187d31d5385c8a48ec53cba16b2f5f2c5ccec0a2f278a4e9be",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 130,
+            "height": 165
+          }
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-dark.png",
+      "sha256": "36ef9bb0581b9a277ae5e6ecb4cf1d89f7eb3921dc1cc847ca9908265b7f3544",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-bef3dfd3-e9e8-4f9b-9405-7c22d8e6230c",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "3cfd7236f28f1bedbbe4ea0346de737bf1bc632653979beacb86bcc2b99e69e9",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 130,
+            "height": 168
+          }
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "e19c31d139b133187d31d5385c8a48ec53cba16b2f5f2c5ccec0a2f278a4e9be",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-f33a4f99-e067-424f-9f97-63234a2fd874",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "3cfd7236f28f1bedbbe4ea0346de737bf1bc632653979beacb86bcc2b99e69e9",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-bef3dfd3-e9e8-4f9b-9405-7c22d8e6230c",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "3cfd7236f28f1bedbbe4ea0346de737bf1bc632653979beacb86bcc2b99e69e9",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-bef3dfd3-e9e8-4f9b-9405-7c22d8e6230c",
+          "modelVersion": null
+        }
+      }
+    },
     "surfaceReview": {
       "reviewed": true,
       "reviewKind": "agent-visual-review",
       "humanReview": false,
       "dealerApproval": false,
-      "finding": "Monochrome surfaces derive from the exact public original. Original source bytes are retained; only explicitly reviewed canvas pixels receive derived transparency, with no new geometry."
+      "backgrounds": {
+        "onLight": "#ffffff",
+        "onDark": "#111113",
+        "onAccent": "#c40101"
+      },
+      "wordmarkWidths": [
+        220,
+        240
+      ],
+      "notes": "Exact reviewed Image Gen pair; native masters and generation provenance retained. Compact rasters cropped from the actual left symbol."
     },
-    "master": {
-      "path": "branding/public-original-dubizzle-20261021.webp",
-      "sha256": "44fdfdf1eb11226e562a255daa1bfcdfa916207b97ad719c54bec2485ffb9222",
-      "rasterTreatment": "reviewed-white-matte-black",
-      "retainedSource": {
-        "kind": "retained-original-raster",
-        "sha256": "44fdfdf1eb11226e562a255daa1bfcdfa916207b97ad719c54bec2485ffb9222",
-        "url": "https://dbz-images.dubizzle.com/profiles/auto_agency/Al_Fajr_Logo.PNG",
-        "observedAt": "2026-10-21"
-      },
-      "matteReview": {
-        "kind": "reviewed-flat-white-canvas",
-        "reviewed": true,
-        "reviewKind": "agent-visual-review",
-        "humanReview": false,
-        "dealerApproval": false,
-        "background": "#ffffff",
-        "noWhiteForegroundArtwork": true,
-        "sourceSha256": "44fdfdf1eb11226e562a255daa1bfcdfa916207b97ad719c54bec2485ffb9222",
-        "reviewedAt": "2026-10-21T13:21:21.538210Z",
-        "finding": "The exact public seller logo contains black Arabic and English lettering on a flat white canvas. White areas are background and open letter counters, with no white foreground drawing. The source listing explicitly identifies Al Fajr Automobile Showroom and links this logo; source lettering is preserved without retyping or Arabic-expert approval."
-      }
-    },
-    "mark": {
-      "path": "branding/public-original-dubizzle-20261021.webp",
-      "sha256": "44fdfdf1eb11226e562a255daa1bfcdfa916207b97ad719c54bec2485ffb9222",
-      "rasterTreatment": "reviewed-white-matte-black",
-      "retainedSource": {
-        "kind": "retained-original-raster",
-        "sha256": "44fdfdf1eb11226e562a255daa1bfcdfa916207b97ad719c54bec2485ffb9222",
-        "url": "https://dbz-images.dubizzle.com/profiles/auto_agency/Al_Fajr_Logo.PNG",
-        "observedAt": "2026-10-21"
-      },
-      "matteReview": {
-        "kind": "reviewed-flat-white-canvas",
-        "reviewed": true,
-        "reviewKind": "agent-visual-review",
-        "humanReview": false,
-        "dealerApproval": false,
-        "background": "#ffffff",
-        "noWhiteForegroundArtwork": true,
-        "sourceSha256": "44fdfdf1eb11226e562a255daa1bfcdfa916207b97ad719c54bec2485ffb9222",
-        "reviewedAt": "2026-10-21T13:21:21.538210Z",
-        "finding": "The exact public seller logo contains black Arabic and English lettering on a flat white canvas. White areas are background and open letter counters, with no white foreground drawing. The source listing explicitly identifies Al Fajr Automobile Showroom and links this logo; source lettering is preserved without retyping or Arabic-expert approval."
-      }
-    },
-    "markOnDark": {
-      "path": "branding/public-original-dubizzle-20261021.webp",
-      "sha256": "44fdfdf1eb11226e562a255daa1bfcdfa916207b97ad719c54bec2485ffb9222",
-      "rasterTreatment": "reviewed-white-matte-white",
-      "retainedSource": {
-        "kind": "retained-original-raster",
-        "sha256": "44fdfdf1eb11226e562a255daa1bfcdfa916207b97ad719c54bec2485ffb9222",
-        "url": "https://dbz-images.dubizzle.com/profiles/auto_agency/Al_Fajr_Logo.PNG",
-        "observedAt": "2026-10-21"
-      },
-      "matteReview": {
-        "kind": "reviewed-flat-white-canvas",
-        "reviewed": true,
-        "reviewKind": "agent-visual-review",
-        "humanReview": false,
-        "dealerApproval": false,
-        "background": "#ffffff",
-        "noWhiteForegroundArtwork": true,
-        "sourceSha256": "44fdfdf1eb11226e562a255daa1bfcdfa916207b97ad719c54bec2485ffb9222",
-        "reviewedAt": "2026-10-21T13:21:21.538210Z",
-        "finding": "The exact public seller logo contains black Arabic and English lettering on a flat white canvas. White areas are background and open letter counters, with no white foreground drawing. The source listing explicitly identifies Al Fajr Automobile Showroom and links this logo; source lettering is preserved without retyping or Arabic-expert approval."
-      }
-    },
-    "surfaces": {
-      "onLight": {
-        "path": "branding/public-original-dubizzle-20261021.webp",
-        "sha256": "44fdfdf1eb11226e562a255daa1bfcdfa916207b97ad719c54bec2485ffb9222",
-        "rasterTreatment": "reviewed-white-matte-black",
-        "retainedSource": {
-          "kind": "retained-original-raster",
-          "sha256": "44fdfdf1eb11226e562a255daa1bfcdfa916207b97ad719c54bec2485ffb9222",
-          "url": "https://dbz-images.dubizzle.com/profiles/auto_agency/Al_Fajr_Logo.PNG",
-          "observedAt": "2026-10-21"
-        },
-        "matteReview": {
-          "kind": "reviewed-flat-white-canvas",
-          "reviewed": true,
-          "reviewKind": "agent-visual-review",
-          "humanReview": false,
-          "dealerApproval": false,
-          "background": "#ffffff",
-          "noWhiteForegroundArtwork": true,
-          "sourceSha256": "44fdfdf1eb11226e562a255daa1bfcdfa916207b97ad719c54bec2485ffb9222",
-          "reviewedAt": "2026-10-21T13:21:21.538210Z",
-          "finding": "The exact public seller logo contains black Arabic and English lettering on a flat white canvas. White areas are background and open letter counters, with no white foreground drawing. The source listing explicitly identifies Al Fajr Automobile Showroom and links this logo; source lettering is preserved without retyping or Arabic-expert approval."
-        }
-      },
-      "onDark": {
-        "path": "branding/public-original-dubizzle-20261021.webp",
-        "sha256": "44fdfdf1eb11226e562a255daa1bfcdfa916207b97ad719c54bec2485ffb9222",
-        "rasterTreatment": "reviewed-white-matte-white",
-        "retainedSource": {
-          "kind": "retained-original-raster",
-          "sha256": "44fdfdf1eb11226e562a255daa1bfcdfa916207b97ad719c54bec2485ffb9222",
-          "url": "https://dbz-images.dubizzle.com/profiles/auto_agency/Al_Fajr_Logo.PNG",
-          "observedAt": "2026-10-21"
-        },
-        "matteReview": {
-          "kind": "reviewed-flat-white-canvas",
-          "reviewed": true,
-          "reviewKind": "agent-visual-review",
-          "humanReview": false,
-          "dealerApproval": false,
-          "background": "#ffffff",
-          "noWhiteForegroundArtwork": true,
-          "sourceSha256": "44fdfdf1eb11226e562a255daa1bfcdfa916207b97ad719c54bec2485ffb9222",
-          "reviewedAt": "2026-10-21T13:21:21.538210Z",
-          "finding": "The exact public seller logo contains black Arabic and English lettering on a flat white canvas. White areas are background and open letter counters, with no white foreground drawing. The source listing explicitly identifies Al Fajr Automobile Showroom and links this logo; source lettering is preserved without retyping or Arabic-expert approval."
-        }
-      },
-      "onAccent": {
-        "path": "branding/public-original-dubizzle-20261021.webp",
-        "sha256": "44fdfdf1eb11226e562a255daa1bfcdfa916207b97ad719c54bec2485ffb9222",
-        "rasterTreatment": "reviewed-white-matte-white",
-        "retainedSource": {
-          "kind": "retained-original-raster",
-          "sha256": "44fdfdf1eb11226e562a255daa1bfcdfa916207b97ad719c54bec2485ffb9222",
-          "url": "https://dbz-images.dubizzle.com/profiles/auto_agency/Al_Fajr_Logo.PNG",
-          "observedAt": "2026-10-21"
-        },
-        "matteReview": {
-          "kind": "reviewed-flat-white-canvas",
-          "reviewed": true,
-          "reviewKind": "agent-visual-review",
-          "humanReview": false,
-          "dealerApproval": false,
-          "background": "#ffffff",
-          "noWhiteForegroundArtwork": true,
-          "sourceSha256": "44fdfdf1eb11226e562a255daa1bfcdfa916207b97ad719c54bec2485ffb9222",
-          "reviewedAt": "2026-10-21T13:21:21.538210Z",
-          "finding": "The exact public seller logo contains black Arabic and English lettering on a flat white canvas. White areas are background and open letter counters, with no white foreground drawing. The source listing explicitly identifies Al Fajr Automobile Showroom and links this logo; source lettering is preserved without retyping or Arabic-expert approval."
-        }
-      }
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-22T23:42:46.338Z",
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#c40101"
+      ],
+      "widths": [
+        32,
+        48,
+        64
+      ],
+      "notes": "Left symbol cropped from reviewed horizontal variants; native rendering must independently qualify."
     }
   }
 }

@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "ae-sharjah-taj-al-sultan-used-cars",
+  "slug": null,
+  "artworkDirectory": "ae-sharjah-taj-al-sultan-used-cars",
+  "name": "Taj Al Sultan Used Cars TR LLC SP",
+  "renderedName": "Taj Al Sultan Used Cars TR LLC SP",
+  "kind": "independent-website-logo-proposal",
+  "dealerApproved": false,
+  "ownerApproved": false,
+  "sourceEvidence": [
+    {
+      "url": "https://auto.ae/tajalsultan/",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.arabwheels.ae/used-cars/dealers/taj-al-sultan-used-cars-tr-llc-s-p-showroom-in-uae/",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "retainedOriginalsUnchanged": true,
+  "variants": {
+    "on-light": {
+      "path": "logo-on-light.png",
+      "sha256": "861b60b0ac1bce87d627bbda757d24bacfee300133d8bef7d6c4efb8645958cf",
+      "width": 1024,
+      "height": 281,
+      "transparentFraction": 0.7262219194839857,
+      "master": {
+        "path": "generated-on-light.png",
+        "sha256": "fa6cbf699f1218991c0dbe92ef77297e2acde7f4df4b75b7968e2f648d46c7fe",
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-1f98ceba-0ee2-48de-9f41-7ab259ffbef5",
+        "prompt": "Create one professional horizontal automotive dealership logo proposal for Taj Al Sultan Used Cars TR LLC SP. Required exact text, uppercase: TAJ AL SULTAN USED CARS TR LLC SP. Every word must be present and spelled precisely; use sensible primary name and smaller descriptor hierarchy without tiny lettering. Produce a polished original identity with a distinctive custom typographic ligature in a refined square emblem. Initials TS may inform the emblem. Emblem left, full clear name to the right, compact and balanced for a website header. Avoid overused shield and generic car silhouettes; no manufacturer badges. Clean modern lettering with careful kerning and strong legibility. All text is deep charcoal black, appropriate on a white/light header. One restrained red or gold accent may appear inside the emblem only; no pale text. Flat crisp edges, a small number of solid shapes, no chrome, no lighting, no shadow, no texture, no gradient. Genuine transparent alpha background, isolated logo with no background box, no grid, no checkerboard painted into pixels. No slogan, contact info, website, watermark, mockup, photograph, extra concept, or duplicate logo. Deliver exactly one horizontal full logo. This is an independent website identity proposal, not a claim of adopted branding.",
+        "reference": null
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 13,
+          "top": 49,
+          "width": 2151,
+          "height": 591
+        }
+      }
+    },
+    "on-dark": {
+      "path": "logo-on-dark.png",
+      "sha256": "3040ceb06df3a61972c54e7b6bdb4e2c47b89b715b2cfa751fbc7752b053bc2d",
+      "width": 1024,
+      "height": 281,
+      "transparentFraction": 0.6038145017793595,
+      "master": {
+        "path": "generated-on-dark.png",
+        "sha256": "e3251d8dbd9e20b1aea4a5bcdcf6812bfac95a60696382eb8ffafe19ac10dd3b",
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-6d862980-bf42-473b-bc87-533601a77493",
+        "prompt": "Create the matching light-on-dark production variant of the exact supplied logo. Preserve precisely the same emblem, geometry, spelling, word count, typographic hierarchy, proportions, layout and spacing. Required exact text: TAJ AL SULTAN USED CARS TR LLC SP. Change EVERY letter, including all secondary descriptor words and legal suffixes, to solid white so it is legible over a dark or red website header. Change the charcoal portions of the emblem to white. Retain the small red/gold emblem accent only if it contrasts clearly against a dark header. True transparent alpha background; do not paint a dark rectangle or checkerboard. Flat clean edges, no glows, shadows, bevels, textures, gradients, new artwork, new icon, extra text or mockup. Deliver one horizontal matching logo, fully legible.",
+        "reference": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-1f98ceba-0ee2-48de-9f41-7ab259ffbef5.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 15,
+          "top": 46,
+          "width": 2151,
+          "height": 590
+        }
+      }
+    }
+  },
+  "review": {
+    "status": "artwork-visually-reviewed",
+    "alpha": "all exports measured as genuine transparent nonempty PNGs",
+    "spelling": "English wordmark inspected; source-bound display aliases retained",
+    "compact": "Horizontal logos only. Interactive 32/48/64px gallery preview is provided; separate compact/favicon artwork remains part of dealer-pack preparation.",
+    "sixDesigns": "not-yet-integrated-or-rendered",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "reviewer": "Codex visual inspection",
+    "header": "All 196 paired PNGs inspected at 240x64 on white, #111113 and #c40101",
+    "evidence": "final-review-12.png"
+  },
+  "releaseReady": false,
+  "artworkHolds": [],
+  "artworkReadyForIntegration": true
+}

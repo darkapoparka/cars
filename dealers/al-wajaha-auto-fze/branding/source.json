@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "dealer": "al-wajaha-auto-fze",
-  "status": "research-required",
+  "status": "reviewed-imagegen-proposal",
   "realLogoFirst": true,
   "publicSources": [
     {
@@ -14,7 +14,146 @@
     }
   ],
   "originals": [],
-  "creationMethod": null,
+  "creationMethod": "imagegen-proposal",
   "dealerApproved": false,
-  "generatedInputs": null
+  "generatedInputs": {
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "master": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "bb25fc7a9c0ff2b1ba899d03e454e07907e2c8e2f5306b8ee568cdf37cb75ef8",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-257bcfa5-9c35-48c4-ad31-5ee8e5e8858d",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark-light.png",
+      "sha256": "f569c8f57da0adf6af872e6aaaf4f20082595ebcaad295268bb0ea64de8ad31a",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-257bcfa5-9c35-48c4-ad31-5ee8e5e8858d",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "bb25fc7a9c0ff2b1ba899d03e454e07907e2c8e2f5306b8ee568cdf37cb75ef8",
+          "operation": "isolate-reviewed-wordmark-initial-A-for-square-compact",
+          "crop": {
+            "left": 412,
+            "top": 25,
+            "width": 92,
+            "height": 90
+          },
+          "canvas": {
+            "width": 128,
+            "height": 128,
+            "offsetX": 18,
+            "offsetY": 19
+          }
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-dark.png",
+      "sha256": "4f8de22bbf4685728575f107d82587d92a4d3a578e2e17abb1002440d925cd57",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-d472a1ea-98c3-440c-a7fd-4512c3d36d0a",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "db4ec18f578bce67c44a52590a52747f97e91ef59bf65c7cea6c8813776e55e2",
+          "operation": "isolate-reviewed-wordmark-initial-A-for-square-compact",
+          "crop": {
+            "left": 412,
+            "top": 25,
+            "width": 92,
+            "height": 90
+          },
+          "canvas": {
+            "width": 128,
+            "height": 128,
+            "offsetX": 18,
+            "offsetY": 19
+          }
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "bb25fc7a9c0ff2b1ba899d03e454e07907e2c8e2f5306b8ee568cdf37cb75ef8",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-257bcfa5-9c35-48c4-ad31-5ee8e5e8858d",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "db4ec18f578bce67c44a52590a52747f97e91ef59bf65c7cea6c8813776e55e2",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-d472a1ea-98c3-440c-a7fd-4512c3d36d0a",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "db4ec18f578bce67c44a52590a52747f97e91ef59bf65c7cea6c8813776e55e2",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-d472a1ea-98c3-440c-a7fd-4512c3d36d0a",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewKind": "agent-visual-review",
+      "humanReview": false,
+      "dealerApproval": false,
+      "backgrounds": {
+        "onLight": "#ffffff",
+        "onDark": "#111113",
+        "onAccent": "#c40101"
+      },
+      "wordmarkWidths": [
+        220,
+        240
+      ],
+      "notes": "Exact reviewed Image Gen pair; native masters and generation provenance retained. Compact rasters cropped from the actual left symbol."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-22T23:42:46.338Z",
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#c40101"
+      ],
+      "widths": [
+        32,
+        48,
+        64
+      ],
+      "notes": "Complete compact glyph/emblem isolated from reviewed horizontal PNG pairs; native 32/64px and favicon QA remain independent."
+    }
+  },
+  "sourceBlockers": [],
+  "artworkProvenance": {
+    "path": "branding/artwork-provenance.json",
+    "sha256": "58fa6505b9510422225b3ffde9637f2c53066db158b5489d819f48300d56db16",
+    "manifestSha256": "d25e9cee768a885052ac0a8df220d843c9b9c6f6f120d722705bead1cc99e694",
+    "nativeMasters": [
+      {
+        "path": "branding/native-generated-on-light.png",
+        "sha256": "efa7f0369f5ac1a6c706108af5a81758b76e32fe9ebbb1b0bbaab20bb3df9d2a"
+      },
+      {
+        "path": "branding/native-generated-on-dark.png",
+        "sha256": "d3143d1b7e2f0553e92e62f0066a85f6d5c1a232dcce7cbef25c22729213efb8"
+      }
+    ]
+  }
 }

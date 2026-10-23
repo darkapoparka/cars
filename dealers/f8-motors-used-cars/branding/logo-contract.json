@@ -1,0 +1,359 @@
+{
+  "schemaVersion": 1,
+  "dealer": "f8-motors-used-cars",
+  "reviewed": true,
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "e55f7ee9fc56bc57f35d14973083ec93e39a9716822b8a1b7ffac45d8c61cbd8",
+      "sourceSha256": "1d570bb071faab2289456b65b0c5d6963dd5b0b7c0bbfb06c0f97da6a04050c4"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "2be5f1506eece62d8e44510f3f638a4b31577fb485109a1a405f94d4b7706552",
+      "sourceSha256": "eba24ec045e6ee92a1a64b8e313c2b4b99397e89f3bebcdbf53ca4807722973a"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "2be5f1506eece62d8e44510f3f638a4b31577fb485109a1a405f94d4b7706552",
+      "sourceSha256": "eba24ec045e6ee92a1a64b8e313c2b4b99397e89f3bebcdbf53ca4807722973a"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "1d570bb071faab2289456b65b0c5d6963dd5b0b7c0bbfb06c0f97da6a04050c4",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-7092884c-3b38-410f-b837-ba3199fc99f8",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "278f4a040d4154a12d4f97db3b9a13dcf9095dd1f47b2bcc9b75b7af32175f8b",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-7092884c-3b38-410f-b837-ba3199fc99f8",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "1d570bb071faab2289456b65b0c5d6963dd5b0b7c0bbfb06c0f97da6a04050c4",
+        "operation": "isolate-largest-reviewed-F8-eight-component-for-square-compact",
+        "selection": {
+          "alphaThreshold": 96,
+          "minPixels": 50000,
+          "selectedPixels": 66432,
+          "antialiasNeighborPixels": 1
+        },
+        "crop": {
+          "left": 494,
+          "top": 60,
+          "width": 530,
+          "height": 255
+        },
+        "resized": {
+          "width": 350,
+          "height": 300
+        },
+        "canvas": {
+          "width": 400,
+          "height": 400,
+          "offsetX": 25,
+          "offsetY": 50
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "0d00e285784af76b0325c36ef6e9eda986b6be2750d15088d8fb5485648a2527"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "1d570bb071faab2289456b65b0c5d6963dd5b0b7c0bbfb06c0f97da6a04050c4",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-7092884c-3b38-410f-b837-ba3199fc99f8",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/f8-motors-used-cars/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "eba24ec045e6ee92a1a64b8e313c2b4b99397e89f3bebcdbf53ca4807722973a",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-8587b6b1-679b-401f-9efa-efad78c7d4a4",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/f8-motors-used-cars/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "eba24ec045e6ee92a1a64b8e313c2b4b99397e89f3bebcdbf53ca4807722973a",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-8587b6b1-679b-401f-9efa-efad78c7d4a4",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/f8-motors-used-cars/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "1d570bb071faab2289456b65b0c5d6963dd5b0b7c0bbfb06c0f97da6a04050c4",
+      "sha256": "1d570bb071faab2289456b65b0c5d6963dd5b0b7c0bbfb06c0f97da6a04050c4",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 414
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "eba24ec045e6ee92a1a64b8e313c2b4b99397e89f3bebcdbf53ca4807722973a",
+      "sha256": "eba24ec045e6ee92a1a64b8e313c2b4b99397e89f3bebcdbf53ca4807722973a",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 413
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "eba24ec045e6ee92a1a64b8e313c2b4b99397e89f3bebcdbf53ca4807722973a",
+      "sha256": "eba24ec045e6ee92a1a64b8e313c2b4b99397e89f3bebcdbf53ca4807722973a",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 413
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "f1bb589a8727e1b3b9840c55e1d95e4963a403e04af7374d8aed3c1c862c42e3",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-7092884c-3b38-410f-b837-ba3199fc99f8",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "1d570bb071faab2289456b65b0c5d6963dd5b0b7c0bbfb06c0f97da6a04050c4",
+          "operation": "isolate-largest-reviewed-F8-eight-component-for-square-compact",
+          "selection": {
+            "alphaThreshold": 96,
+            "minPixels": 50000,
+            "selectedPixels": 66432,
+            "antialiasNeighborPixels": 1
+          },
+          "crop": {
+            "left": 494,
+            "top": 60,
+            "width": 530,
+            "height": 255
+          },
+          "resized": {
+            "width": 350,
+            "height": 300
+          },
+          "canvas": {
+            "width": 400,
+            "height": 400,
+            "offsetX": 25,
+            "offsetY": 50
+          }
+        }
+      },
+      "sourceReference": "dealers/f8-motors-used-cars/branding/generated-mark-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "af4f159a06c1a864bbc56930ca83db43ed41239ac6af7100102aee13c6fac4b4",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-8587b6b1-679b-401f-9efa-efad78c7d4a4",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "eba24ec045e6ee92a1a64b8e313c2b4b99397e89f3bebcdbf53ca4807722973a",
+          "operation": "isolate-largest-reviewed-F8-eight-component-for-square-compact",
+          "selection": {
+            "alphaThreshold": 96,
+            "minPixels": 50000,
+            "selectedPixels": 65118,
+            "antialiasNeighborPixels": 1
+          },
+          "crop": {
+            "left": 494,
+            "top": 60,
+            "width": 530,
+            "height": 255
+          },
+          "resized": {
+            "width": 350,
+            "height": 300
+          },
+          "canvas": {
+            "width": 400,
+            "height": 400,
+            "offsetX": 25,
+            "offsetY": 50
+          }
+        }
+      },
+      "sourceReference": "dealers/f8-motors-used-cars/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "278f4a040d4154a12d4f97db3b9a13dcf9095dd1f47b2bcc9b75b7af32175f8b",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-7092884c-3b38-410f-b837-ba3199fc99f8",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "1d570bb071faab2289456b65b0c5d6963dd5b0b7c0bbfb06c0f97da6a04050c4",
+          "operation": "isolate-largest-reviewed-F8-eight-component-for-square-compact",
+          "selection": {
+            "alphaThreshold": 96,
+            "minPixels": 50000,
+            "selectedPixels": 66432,
+            "antialiasNeighborPixels": 1
+          },
+          "crop": {
+            "left": 494,
+            "top": 60,
+            "width": 530,
+            "height": 255
+          },
+          "resized": {
+            "width": 350,
+            "height": 300
+          },
+          "canvas": {
+            "width": 400,
+            "height": 400,
+            "offsetX": 25,
+            "offsetY": 50
+          }
+        }
+      },
+      "sourceReference": "dealers/f8-motors-used-cars/branding/generated-mark-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "0d00e285784af76b0325c36ef6e9eda986b6be2750d15088d8fb5485648a2527",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-7092884c-3b38-410f-b837-ba3199fc99f8",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "1d570bb071faab2289456b65b0c5d6963dd5b0b7c0bbfb06c0f97da6a04050c4",
+          "operation": "isolate-largest-reviewed-F8-eight-component-for-square-compact",
+          "selection": {
+            "alphaThreshold": 96,
+            "minPixels": 50000,
+            "selectedPixels": 66432,
+            "antialiasNeighborPixels": 1
+          },
+          "crop": {
+            "left": 494,
+            "top": 60,
+            "width": 530,
+            "height": 255
+          },
+          "resized": {
+            "width": 350,
+            "height": 300
+          },
+          "canvas": {
+            "width": 400,
+            "height": 400,
+            "offsetX": 25,
+            "offsetY": 50
+          }
+        }
+      },
+      "sourceReference": "dealers/f8-motors-used-cars/branding/generated-mark-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "77f2f89e20b3695406ba2b3226bb07398950b51224837e0b11336380f2aa4a86",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-8587b6b1-679b-401f-9efa-efad78c7d4a4",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "eba24ec045e6ee92a1a64b8e313c2b4b99397e89f3bebcdbf53ca4807722973a",
+        "operation": "isolate-largest-reviewed-F8-eight-component-for-square-compact",
+        "selection": {
+          "alphaThreshold": 96,
+          "minPixels": 50000,
+          "selectedPixels": 65118,
+          "antialiasNeighborPixels": 1
+        },
+        "crop": {
+          "left": 494,
+          "top": 60,
+          "width": 530,
+          "height": 255
+        },
+        "resized": {
+          "width": 350,
+          "height": 300
+        },
+        "canvas": {
+          "width": 400,
+          "height": 400,
+          "offsetX": 25,
+          "offsetY": 50
+        }
+      }
+    }
+  }
+}

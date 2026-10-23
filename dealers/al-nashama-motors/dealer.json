@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Al Nashama Motors",
     "publicOrigin": "https://al-nashama-motors.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "b205762f9d56b12f5b88786d427766a1183e31e8a8d9a168077f2e89f6637943",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "82d57fbc2bd630a29939a04082069f298e47cffa15a26521a8bc260f6f3db00a"
+    }
   }
 }

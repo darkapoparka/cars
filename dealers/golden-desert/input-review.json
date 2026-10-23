@@ -1,0 +1,140 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-input-review",
+  "dealer": "golden-desert",
+  "reviewed": true,
+  "reviewedAt": "2026-10-23T04:36:20.567Z",
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "checks": [
+    "canonical-hosting-and-preserved-fleet-collisions",
+    "assigned-expansion-lead",
+    "public-fact-schema-and-price-omission",
+    "personal-contact-screen",
+    "retained-stock-media",
+    "companion-copy-source-binding",
+    "immutable-template-release-and-native-QA-parent",
+    "reviewed-artwork-provenance-and-regenerated-logo-hashes"
+  ],
+  "sourceArtworkReview": "Retained artwork review is separate provenance; this command does not perform visual, Arabic-expert or dealer approval.",
+  "copyReview": "Automated structure, stock hash, source text and complete EN/BG rows; no new human translation approval is inferred.",
+  "contacts": {
+    "schemaVersion": 1,
+    "kind": "cars-automated-public-contact-screen",
+    "dealer": "golden-desert",
+    "method": "heuristic; no claim that unflagged values cannot be personal",
+    "flags": [],
+    "blocking": []
+  },
+  "batch": {
+    "number": 4,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "ae-sharjah-golden-desert",
+    "position": 349
+  },
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "inputs": [
+    {
+      "path": "FACTS-AND-INVENTORY.json",
+      "sha256": "f047bd2387a587d6be4ee66934fec036be11868134fa8ba95c76a28e740959f2"
+    },
+    {
+      "path": "branding/artwork-provenance.json",
+      "sha256": "75d72772e13c6b2c6bbeee94bcda7d691805354f87c09bdb4e1578a65346afed"
+    },
+    {
+      "path": "branding/generated-mark-dark.png",
+      "sha256": "7733b0a2d6d327c1fbb9a0805d1938300109c15720f701f5b084e393b980853d"
+    },
+    {
+      "path": "branding/generated-mark-light.png",
+      "sha256": "464c76547ff363ec9de04e83392253939da2c3285b6f67c89c8531277895257e"
+    },
+    {
+      "path": "branding/generated-on-dark.png",
+      "sha256": "71fd089eaff7a018f4bdc76662e1cf1bc230cf294a08472589334c7de744d201"
+    },
+    {
+      "path": "branding/generated-on-light.png",
+      "sha256": "d2a81310678fc30298fdca8013ed83aa1983d3c188e6dfc7f31ca812ba6040b4"
+    },
+    {
+      "path": "branding/logo-contract.json",
+      "sha256": "0d65bf028329d00fc6eb1eec3f6d377e1971493482eb153e95316d15bf720f27"
+    },
+    {
+      "path": "branding/logo-recipe.json",
+      "sha256": "2fe6f8f7c7086def6da87eb0bd0194f2648f9801bc977ec725de599fda8edd6b"
+    },
+    {
+      "path": "branding/native-generated-on-dark.png",
+      "sha256": "588ddbeccdf2a0fd65fd24c8efc1bee34cc529916d29d2be92b60c2f9e873599"
+    },
+    {
+      "path": "branding/native-generated-on-light.png",
+      "sha256": "0dcef6e7cf2b1bef0d34888eaeb71b07f3b4c6e4dc19d8b5613014c8f6b15bea"
+    },
+    {
+      "path": "branding/reviewed-mark-light.png",
+      "sha256": "50d1ac676e884b23640dd41109ccd4f9d0473d09164b0823577b8113b1ec90c2"
+    },
+    {
+      "path": "branding/source.json",
+      "sha256": "a65b3c5d06d188efea46b5562c07dbefaa6e6f0844057fc3ecfcb4f5dc5faa43"
+    },
+    {
+      "path": "business-facts.json",
+      "sha256": "0ad39e43b2c8c5513fb5c49d87db0ca414038a4dc3bcd17c4fe487c44394e760"
+    },
+    {
+      "path": "copy-review.json",
+      "sha256": "5a87b51c09e9f134fec13f4d8cbd1e884baa498a6a49ad0822e1582be9121f23"
+    },
+    {
+      "path": "dealer-stock/template-demo-1.webp",
+      "sha256": "945e6864218ab3bd5fbd415336b212ecfde645685033f8506836f906885d447c"
+    },
+    {
+      "path": "dealer-stock/template-demo-2.webp",
+      "sha256": "17689ab880bf47de81ef467c34d639223f39f0c1ebe68c90d0aaf70e3dcc6333"
+    },
+    {
+      "path": "dealer-stock/template-demo-3.webp",
+      "sha256": "d644dec8e1ef280a702dccac267a2367f0ab823e40373e1299b156e7723b3b1f"
+    },
+    {
+      "path": "dealer.json",
+      "sha256": "89e8dff8431c498a7f4445774ac19c27448a9e52162f648de2cd40f497c1c136"
+    },
+    {
+      "path": "identity-review.json",
+      "sha256": "a6390fd90aad04c04e94f9c8062a0e54da23a964f3d0c1e747007c45ac15c2cf"
+    },
+    {
+      "path": "locale.json",
+      "sha256": "49765f970d948e63572779790e29bc6d6f895eda6bdd2c0167f331707a4e96af"
+    },
+    {
+      "path": "missing-facts.json",
+      "sha256": "f67ebe11b792f5f33c512a73fb9e41fee3a0a5c43032ba4b0c4eec130e0d2f90"
+    },
+    {
+      "path": "qualification.json",
+      "sha256": "6629920d61a7e02f7790be744132b13018295b08c41a48835e185e965b4ed33e"
+    },
+    {
+      "path": "source-evidence.json",
+      "sha256": "8c8330e4cc2fea768f2d05772561113389d7dd659e74f933930ce9ff851efb80"
+    },
+    {
+      "path": "stock.json",
+      "sha256": "10af7c76f7d6cd903b69eba1ac74df1ab915473ff38848b0fa35258577d0f55b"
+    }
+  ],
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "providerWrites": 0
+}

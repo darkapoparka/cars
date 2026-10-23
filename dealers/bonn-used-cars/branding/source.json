@@ -1,0 +1,147 @@
+{
+  "schemaVersion": 1,
+  "dealer": "bonn-used-cars",
+  "status": "reviewed-imagegen-proposal",
+  "realLogoFirst": true,
+  "publicSources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/bonn-used-cars",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/7478-rox-01-15-at-awd-476-hp-vip",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "originals": [],
+  "creationMethod": "imagegen-proposal",
+  "dealerApproved": false,
+  "generatedInputs": {
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "master": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "b51b3a05208babb8d9f6f1b8aef6ce3708a44828384de83e740afea91021dda5",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-7a1957e1-5dda-4db4-8f95-be52bec2027d",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark-light.png",
+      "sha256": "d862d1f2834bbf487648cacbdc2218bc4844e22d9f87636621e29270d3704bef",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-7a1957e1-5dda-4db4-8f95-be52bec2027d",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "b51b3a05208babb8d9f6f1b8aef6ce3708a44828384de83e740afea91021dda5",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 285,
+            "height": 291
+          }
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-dark.png",
+      "sha256": "313bdfce3264562c34a2331e58401a94abc76d4e3e4045419c2bbd2479b48f6a",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-8f2004fb-8dee-4afb-94b0-6300d62124d9",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "bda9dff997d2a76d12ee47b4a43c7dd124dd28de8a00291fb1f630a33f81cb1b",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 285,
+            "height": 292
+          }
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "b51b3a05208babb8d9f6f1b8aef6ce3708a44828384de83e740afea91021dda5",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-7a1957e1-5dda-4db4-8f95-be52bec2027d",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "bda9dff997d2a76d12ee47b4a43c7dd124dd28de8a00291fb1f630a33f81cb1b",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-8f2004fb-8dee-4afb-94b0-6300d62124d9",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "bda9dff997d2a76d12ee47b4a43c7dd124dd28de8a00291fb1f630a33f81cb1b",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-8f2004fb-8dee-4afb-94b0-6300d62124d9",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewKind": "agent-visual-review",
+      "humanReview": false,
+      "dealerApproval": false,
+      "backgrounds": {
+        "onLight": "#ffffff",
+        "onDark": "#111113",
+        "onAccent": "#c40101"
+      },
+      "wordmarkWidths": [
+        220,
+        240
+      ],
+      "notes": "Exact reviewed Image Gen pair; native masters and generation provenance retained. Compact rasters cropped from the actual left symbol."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-22T23:42:46.338Z",
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#c40101"
+      ],
+      "widths": [
+        32,
+        48,
+        64
+      ],
+      "notes": "Left symbol cropped from reviewed horizontal variants; native rendering must independently qualify."
+    }
+  },
+  "sourceBlockers": [],
+  "artworkProvenance": {
+    "path": "branding/artwork-provenance.json",
+    "sha256": "be44863341070d3a5af82e50a60d7c54bc63b79cef615ec2ba2fc89883d9de2a",
+    "manifestSha256": "d25e9cee768a885052ac0a8df220d843c9b9c6f6f120d722705bead1cc99e694",
+    "nativeMasters": [
+      {
+        "path": "branding/native-generated-on-light.png",
+        "sha256": "9483269b6e6e380508d489cf0b42cd5310183fd8426736d2f09eb7bfc7697ad4"
+      },
+      {
+        "path": "branding/native-generated-on-dark.png",
+        "sha256": "c36d8b30a4e2e9f4657efe0dab929d1d71d4497c3ddbe24f2be71ebc725b0f58"
+      }
+    ]
+  }
+}

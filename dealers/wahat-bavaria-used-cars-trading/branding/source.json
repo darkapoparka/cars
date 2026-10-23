@@ -1,0 +1,143 @@
+{
+  "schemaVersion": 1,
+  "dealer": "wahat-bavaria-used-cars-trading",
+  "status": "reviewed-imagegen-proposal",
+  "realLogoFirst": true,
+  "publicSources": [
+    {
+      "url": "https://www.dubicars.com/dealers/sharjah-wahat-bavaria-used-cars-trading-2145",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "originals": [],
+  "creationMethod": "imagegen-proposal",
+  "dealerApproved": false,
+  "generatedInputs": {
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "master": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "e465e399249338f4bda85f513bc5363f818b0db3549d4c7445e9cf72cdf1c0fa",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1a3eb58c-faf0-4c68-914a-2c7a2c81bab5",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark-light.png",
+      "sha256": "42e994b7a6e615ffd9b8fb87fcf8a5cac3a806e03c14b19b624326cf185b4efd",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1a3eb58c-faf0-4c68-914a-2c7a2c81bab5",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "e465e399249338f4bda85f513bc5363f818b0db3549d4c7445e9cf72cdf1c0fa",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 325,
+            "height": 187
+          }
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-dark.png",
+      "sha256": "d682e3faa6e25532d1a14817bcb6bb817d528a4cccea13ce0b9de6a53fe729ba",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-96fd8ba2-14bf-4a98-81ce-eb2f7e195f45",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "d6dac807b5a02d29fa740f171b28acd4cbe25430d3989e8ef8b650964e5fee68",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 325,
+            "height": 188
+          }
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "e465e399249338f4bda85f513bc5363f818b0db3549d4c7445e9cf72cdf1c0fa",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-1a3eb58c-faf0-4c68-914a-2c7a2c81bab5",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "d6dac807b5a02d29fa740f171b28acd4cbe25430d3989e8ef8b650964e5fee68",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-96fd8ba2-14bf-4a98-81ce-eb2f7e195f45",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "d6dac807b5a02d29fa740f171b28acd4cbe25430d3989e8ef8b650964e5fee68",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-96fd8ba2-14bf-4a98-81ce-eb2f7e195f45",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewKind": "agent-visual-review",
+      "humanReview": false,
+      "dealerApproval": false,
+      "backgrounds": {
+        "onLight": "#ffffff",
+        "onDark": "#111113",
+        "onAccent": "#c40101"
+      },
+      "wordmarkWidths": [
+        220,
+        240
+      ],
+      "notes": "Exact reviewed Image Gen pair; native masters and generation provenance retained. Compact rasters cropped from the actual left symbol."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-22T23:42:46.338Z",
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#c40101"
+      ],
+      "widths": [
+        32,
+        48,
+        64
+      ],
+      "notes": "Left symbol cropped from reviewed horizontal variants; native rendering must independently qualify."
+    }
+  },
+  "sourceBlockers": [],
+  "artworkProvenance": {
+    "path": "branding/artwork-provenance.json",
+    "sha256": "ccdd314a335196da424cd5122d2796c4402d63a072d1b90bbc69862917e47a22",
+    "manifestSha256": "d25e9cee768a885052ac0a8df220d843c9b9c6f6f120d722705bead1cc99e694",
+    "nativeMasters": [
+      {
+        "path": "branding/native-generated-on-light.png",
+        "sha256": "dee22a1d670e835a9ba364bdd8d85310cab5e865be4c6426be8596088c9f7e18"
+      },
+      {
+        "path": "branding/native-generated-on-dark.png",
+        "sha256": "ae20e6b53d0075065d2be55ca912dc8b28ff58c22455d384161e56ee2d09dfe2"
+      }
+    ]
+  }
+}

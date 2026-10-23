@@ -15,9 +15,12 @@
     },
     {
       "url": "https://www.oneclickdrive.com/company/sharjah/ahmad-alnajem-used-cars",
-      "observedAt": "2026-10-18",
+      "observedAt": "2026-10-23",
       "supports": [
-        "retained-public-business-research"
+        "dealer-name",
+        "showroom-address",
+        "public-phone",
+        "hours"
       ]
     }
   ],

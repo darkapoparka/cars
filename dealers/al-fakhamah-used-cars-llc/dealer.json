@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Al Fakhamah Used Cars LLC",
     "publicOrigin": "https://al-fakhamah-used-cars-llc.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "be31e1d8478d962a8b67a2531c57272156a3b87966d322c82e0c68a4264e3d9d",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "d52012af942848244e79444f98ea67556113c0525e77341c5169b01c14609045"
+    }
   }
 }

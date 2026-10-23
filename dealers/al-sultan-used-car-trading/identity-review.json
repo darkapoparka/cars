@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": true,
+  "reviewedAt": "2026-10-23T04:57:32.146Z",
+  "dealer": "al-sultan-used-car-trading",
+  "dealerId": "ae-umm-al-quwain-al-sultan-used-car-trading",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "method": "Automated exact registry/pack identity, canonical hosting and batch comparison; retained public source fields were structurally checked, not human-approved.",
+  "sources": [
+    {
+      "url": "https://www.instagram.com/alsultan.cars/",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.instagram.com/alsultan.cars/p/DepI_knjscV/",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.instagram.com/alsultan.cars/p/DemTO27DsmE/",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.instagram.com/alsultan.cars/p/DemLof8DsRe/",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://linktr.ee/uaq_cars",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://maps.yango.com/en-ae/org/180936149781/",
+      "observedAt": "2026-10-18"
+    }
+  ]
+}

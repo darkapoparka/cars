@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "ae-ajman-al-rafeea-used-cars-fze",
+  "slug": "al-rafeea-used-cars-fze",
+  "artworkDirectory": "al-rafeea-used-cars-fze",
+  "name": "Al Rafeea Used Cars FZE",
+  "renderedName": "Al Rafeea Used Cars FZE",
+  "kind": "independent-website-logo-proposal",
+  "dealerApproved": false,
+  "ownerApproved": false,
+  "sourceEvidence": [
+    {
+      "url": "https://sooq-cars.com/ae/en/ready/cars/2156094",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "retainedOriginalsUnchanged": true,
+  "variants": {
+    "on-light": {
+      "path": "logo-on-light.png",
+      "sha256": "633be7c9b974b0db2f4fde909909c2797f1f50df9802ab2688c4412e77c137a2",
+      "width": 1024,
+      "height": 222,
+      "transparentFraction": 0.6495548282657657,
+      "master": {
+        "path": "generated-on-light.png",
+        "sha256": "201ad4dff10efa9b7b9e801d017461f71d254cca7fab2ab8315f72bebbccee24",
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-7f9421d8-908f-4c53-8294-37a393c56395",
+        "prompt": "Use case: logo-brand. ONE polished original independent car-dealer website-proposal logo. Exact full text: \"AL RAFEEA USED CARS FZE\". Create a clever custom ligature using shared stems, restrained upright lettering and excellent optical spacing. For any initial-based symbol use the meaningful distinctive initials \"RF\", rather than a generic Al-prefix A. Avoid the repeated A-plus-road-swoosh formula. Emblem at left, full exact name to right, thoughtfully arranged over one or two readable lines. All lettering, including any small descriptor, must be dark charcoal or black for excellent contrast on WHITE; an optional restrained accent may appear in the emblem only. Crisp flat vector-like geometry, large open counters, strong readable type, professional and distinctive. Real alpha-transparent background, no background block or fake checkerboard. No photo, car-manufacturer emblem, stock car silhouette, generic shield, chrome, gradients, shadows, texture, watermark, slogan, unrelated decoration or mockup. Wide horizontal lockup, framed close with a small transparent margin, readable at 240px wide; symbol should survive 32px. Exact spelling and all words. Only one logo, never a presentation board. Proposed identity, not claimed official/adopted.",
+        "reference": null
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 60,
+          "top": 142,
+          "width": 2070,
+          "height": 448
+        }
+      }
+    },
+    "on-dark": {
+      "path": "logo-on-dark.png",
+      "sha256": "ba4222886756c356703b2ed7fe53fcba3cc0b3bfc9c604607cd96a9717d51c17",
+      "width": 1024,
+      "height": 221,
+      "transparentFraction": 0.5210115596719457,
+      "master": {
+        "path": "generated-on-dark.png",
+        "sha256": "f21faff40eb958e2d750e4add8364a1fbdfbeb74e6c156ae65ad1c70dea625b6",
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-1fc36cb3-e85f-4b6c-80ec-97c0613b3bbf",
+        "prompt": "Make the matching ON-DARK version of the supplied AL RAFEEA USED CARS FZE logo. Preserve its exact identity, symbol geometry, lettering, complete name, line breaks, optical spacing and proportions. Every letter of the full name and descriptor must be solid clean WHITE, not colored or gray. Existing restrained emblem accent may remain only if visible; keep all primary ink white. Genuine alpha transparency and open counters, smooth clean edges. No background panel, no checkerboard, no new wording, design, texture, distress, shadow, watermark or decoration. One matching white/light-ink horizontal logo for dark and red headers. Exact name: AL RAFEEA USED CARS FZE.",
+        "reference": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-7f9421d8-908f-4c53-8294-37a393c56395.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 55,
+          "top": 141,
+          "width": 2051,
+          "height": 443
+        }
+      }
+    }
+  },
+  "review": {
+    "status": "artwork-visually-reviewed",
+    "alpha": "all exports measured as genuine transparent nonempty PNGs",
+    "spelling": "English wordmark inspected; source-bound display aliases retained",
+    "compact": "Horizontal logos only. Interactive 32/48/64px gallery preview is provided; separate compact/favicon artwork remains part of dealer-pack preparation.",
+    "sixDesigns": "not-yet-integrated-or-rendered",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "reviewer": "Codex visual inspection",
+    "header": "All 196 paired PNGs inspected at 240x64 on white, #111113 and #c40101",
+    "evidence": "final-review-03.png"
+  },
+  "releaseReady": false,
+  "artworkHolds": [],
+  "artworkReadyForIntegration": true
+}

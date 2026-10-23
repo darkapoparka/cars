@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Trio Enterprises",
     "publicOrigin": "https://trio-enterprises.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "0368fcce5f2e50072c0ccd8e8876247853e1b9a4da5619db89d11e71b45add52",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "580fede518c6533ed30541e66a13dd7b2941b7abf8b53deceafe58b3f2d0af24"
+    }
   }
 }

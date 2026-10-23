@@ -1,0 +1,124 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "gb-windsor-wyze-motors",
+  "slug": "wyze-motors-ltd",
+  "name": "Wyze Motors Ltd",
+  "kind": "independent-website-logo-proposal",
+  "dealerApproved": false,
+  "ownerApproved": false,
+  "sourceEvidence": [
+    {
+      "url": "https://www.autotrader.co.uk/dealers/berkshire/windsor/wyze-motors-ltd-10042486",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "retainedOriginalsUnchanged": true,
+  "variants": {
+    "on-light": {
+      "path": "logo-on-light.png",
+      "sha256": "e2a0ff566543d13942cfc7bb13d15282c9a0920e93372ead9b7137191bb4d1fa",
+      "master": {
+        "path": "generated-on-light.png",
+        "sha256": "7abef99148c52d6645036ffb43434e157d84457cb03c4e2891339504ada107a1",
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputFile": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-8146edd5-d2e1-4e6d-93ed-6a16d6826537.png",
+        "outputReference": "exec-8146edd5-d2e1-4e6d-93ed-6a16d6826537",
+        "prompt": "Use case: logo-brand. Create ONE beautifully simple, original horizontal logo for an independent dealer website proposal. Exact text WYZE MOTORS LTD in clearly legible, confident uppercase geometric sans-serif, balanced optical letter spacing. At left, a distinct bold open W symbol built from two folded angular strokes, clever negative space, absolutely simple enough for a 32px app icon. Do not use a bird, car silhouette, shield, enclosing circle or generic manufacturer badge. Solid dark charcoal ink, crisp vector-clean edges; professional and restrained, no thin hairlines or tiny slogans. Full name to right of symbol, large and well balanced. True alpha-transparent background. No background panel, fake checkerboard, gradients, chrome, texture, shadow, watermark, mockup or extra text. Wide landscape composition framed close to the artwork with only approximately 5% transparent outer padding. This is a proposed identity, not an official adopted dealer mark. One logo only.",
+        "reference": null
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 0,
+          "top": 167,
+          "width": 2172,
+          "height": 395
+        }
+      },
+      "metadata": {
+        "format": "png",
+        "mediaType": "image/png",
+        "size": 61632,
+        "width": 1024,
+        "height": 186,
+        "space": "srgb",
+        "channels": 4,
+        "depth": "uchar",
+        "density": 72,
+        "isProgressive": false,
+        "isPalette": false,
+        "bitsPerSample": 8,
+        "hasProfile": false,
+        "hasAlpha": true,
+        "autoOrient": {
+          "width": 1024,
+          "height": 186
+        }
+      }
+    },
+    "on-dark": {
+      "path": "logo-on-dark.png",
+      "sha256": "9699741f7788121d797136a373d54833db1c3c003fed61ac41b6e8f6238194a5",
+      "master": {
+        "path": "generated-on-dark.png",
+        "sha256": "c6fd4ac60661bb40dcab875a611b6909b5134cb3b5c9f111c3bc3aff4d5059d7",
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputFile": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-d5a6dab4-d2d2-4dde-bb58-d80b666f1e30.png",
+        "outputReference": "exec-d5a6dab4-d2d2-4dde-bb58-d80b666f1e30",
+        "prompt": "Create the matching white-ink on-dark variant of this WYZE MOTORS LTD logo. Keep its exact distinctive folded W, complete name, typography, letter spacing, size relationship, layout and proportions unchanged. White foreground ink only on genuine alpha-transparent background, keeping smooth clean edges and open counters. No background panel, shadow, texture, distress, gradients, extra text or watermark. Preserve exact text WYZE MOTORS LTD. One professional horizontal logo only; no mockup. Keep the existing identity.",
+        "reference": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-8146edd5-d2e1-4e6d-93ed-6a16d6826537.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 0,
+          "top": 161,
+          "width": 2172,
+          "height": 393
+        }
+      },
+      "metadata": {
+        "format": "png",
+        "mediaType": "image/png",
+        "size": 64428,
+        "width": 1024,
+        "height": 185,
+        "space": "srgb",
+        "channels": 4,
+        "depth": "uchar",
+        "density": 72,
+        "isProgressive": false,
+        "isPalette": false,
+        "bitsPerSample": 8,
+        "hasProfile": false,
+        "hasAlpha": true,
+        "autoOrient": {
+          "width": 1024,
+          "height": 185
+        }
+      }
+    }
+  },
+  "review": {
+    "alpha": "all exports measured as genuine transparent nonempty PNGs",
+    "spelling": "English wordmark inspected; source-bound display aliases retained",
+    "header": "All 196 paired PNGs inspected at 240x64 on white, #111113 and #c40101",
+    "compact": "Horizontal logos only. Interactive 32/48/64px gallery preview is provided; separate compact/favicon artwork remains part of dealer-pack preparation.",
+    "sixDesigns": "not yet integrated or rendered",
+    "status": "artwork-visually-reviewed",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "reviewer": "Codex visual inspection",
+    "evidence": "final-review-01.png"
+  },
+  "releaseReady": false,
+  "artworkHolds": [],
+  "artworkReadyForIntegration": true
+}

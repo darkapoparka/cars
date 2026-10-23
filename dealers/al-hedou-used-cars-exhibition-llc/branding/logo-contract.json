@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-hedou-used-cars-exhibition-llc",
+  "reviewed": true,
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "469e48c7af3d5e3b640060bc20d81059f2c2d8a59ff846e826078dab85f10a84",
+      "sourceSha256": "45b82c104559acbd3c47f4204803c47678a67aa90c8364ae9ec43ab3f52d3a63"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "3bc143da0e3da9d4fa8ac67ace124db5b449d22d6f33b635fb87f0e3f65c399e",
+      "sourceSha256": "0c73695edc5348d7de506983a0c3bb142963f25827f6162146e337f87ef41b97"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "3bc143da0e3da9d4fa8ac67ace124db5b449d22d6f33b635fb87f0e3f65c399e",
+      "sourceSha256": "0c73695edc5348d7de506983a0c3bb142963f25827f6162146e337f87ef41b97"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "45b82c104559acbd3c47f4204803c47678a67aa90c8364ae9ec43ab3f52d3a63",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-d0eeba1e-c0cc-4cfe-b925-f7a884a70116",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "96f83ae80f12930c840d5a9b276f7fc40e7391df73d4276b27654b93e1a2541a",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-d0eeba1e-c0cc-4cfe-b925-f7a884a70116",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "45b82c104559acbd3c47f4204803c47678a67aa90c8364ae9ec43ab3f52d3a63",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 239,
+          "height": 268
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "4f7b65732597b2bb8ed0c15c225c87723ce9db47fbfeae3932536f24a5bb5ffb"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "45b82c104559acbd3c47f4204803c47678a67aa90c8364ae9ec43ab3f52d3a63",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-d0eeba1e-c0cc-4cfe-b925-f7a884a70116",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-hedou-used-cars-exhibition-llc/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "0c73695edc5348d7de506983a0c3bb142963f25827f6162146e337f87ef41b97",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-88dde2fc-1b04-48e3-9db2-2fa5f143a469",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-hedou-used-cars-exhibition-llc/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "0c73695edc5348d7de506983a0c3bb142963f25827f6162146e337f87ef41b97",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-88dde2fc-1b04-48e3-9db2-2fa5f143a469",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-hedou-used-cars-exhibition-llc/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "45b82c104559acbd3c47f4204803c47678a67aa90c8364ae9ec43ab3f52d3a63",
+      "sha256": "45b82c104559acbd3c47f4204803c47678a67aa90c8364ae9ec43ab3f52d3a63",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 268
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "0c73695edc5348d7de506983a0c3bb142963f25827f6162146e337f87ef41b97",
+      "sha256": "0c73695edc5348d7de506983a0c3bb142963f25827f6162146e337f87ef41b97",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 269
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "0c73695edc5348d7de506983a0c3bb142963f25827f6162146e337f87ef41b97",
+      "sha256": "0c73695edc5348d7de506983a0c3bb142963f25827f6162146e337f87ef41b97",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 269
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "b0d44ebf09c47264042736a941b38334e6f0efb8ff113078ef9bbacb3520152c",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-d0eeba1e-c0cc-4cfe-b925-f7a884a70116",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "45b82c104559acbd3c47f4204803c47678a67aa90c8364ae9ec43ab3f52d3a63",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 239,
+            "height": 268
+          }
+        }
+      },
+      "sourceReference": "dealers/al-hedou-used-cars-exhibition-llc/branding/generated-mark-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "6e8e5c49d06eb4deea0a3d26b39a1909deb075d506f2a02692b4e815cb14c0c9",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-88dde2fc-1b04-48e3-9db2-2fa5f143a469",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "0c73695edc5348d7de506983a0c3bb142963f25827f6162146e337f87ef41b97",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 239,
+            "height": 269
+          }
+        }
+      },
+      "sourceReference": "dealers/al-hedou-used-cars-exhibition-llc/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "96f83ae80f12930c840d5a9b276f7fc40e7391df73d4276b27654b93e1a2541a",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-d0eeba1e-c0cc-4cfe-b925-f7a884a70116",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "45b82c104559acbd3c47f4204803c47678a67aa90c8364ae9ec43ab3f52d3a63",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 239,
+            "height": 268
+          }
+        }
+      },
+      "sourceReference": "dealers/al-hedou-used-cars-exhibition-llc/branding/generated-mark-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "4f7b65732597b2bb8ed0c15c225c87723ce9db47fbfeae3932536f24a5bb5ffb",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-d0eeba1e-c0cc-4cfe-b925-f7a884a70116",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "45b82c104559acbd3c47f4204803c47678a67aa90c8364ae9ec43ab3f52d3a63",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 239,
+            "height": 268
+          }
+        }
+      },
+      "sourceReference": "dealers/al-hedou-used-cars-exhibition-llc/branding/generated-mark-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "f6664aeb8dd86e8dfe94d21db26b3b1f9678a810866f97ef510bc4af352ec1a4",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-88dde2fc-1b04-48e3-9db2-2fa5f143a469",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "0c73695edc5348d7de506983a0c3bb142963f25827f6162146e337f87ef41b97",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 239,
+          "height": 269
+        }
+      }
+    }
+  }
+}

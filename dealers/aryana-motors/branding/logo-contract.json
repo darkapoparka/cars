@@ -1,0 +1,305 @@
+{
+  "schemaVersion": 1,
+  "dealer": "aryana-motors",
+  "reviewed": true,
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "ea7947a1af44c1296073a28dcb03ac9bda4b13e4c970c30e863fe405f8379ec7",
+      "sourceSha256": "2684e03c045e226656e849d23e02169117676f4b4414725ee4446e2d9208b90e"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "c5ecf4642d92d6b46e8ebaa63751830eb57c50141760b8a06255d7ccde5924b2",
+      "sourceSha256": "1379c13e3f18502ffc5dd3b9e726ec358122f2544d801120f014f4f9e01febfe"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "c5ecf4642d92d6b46e8ebaa63751830eb57c50141760b8a06255d7ccde5924b2",
+      "sourceSha256": "1379c13e3f18502ffc5dd3b9e726ec358122f2544d801120f014f4f9e01febfe"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "2684e03c045e226656e849d23e02169117676f4b4414725ee4446e2d9208b90e",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-0e2de06b-157e-4c29-b21e-59169e7f5fa0",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "02b37c07556e464b21735aea82653bd182a36d69226aec0bb417f2c4f5742bc3",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-0e2de06b-157e-4c29-b21e-59169e7f5fa0",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "2684e03c045e226656e849d23e02169117676f4b4414725ee4446e2d9208b90e",
+        "operation": "isolate-reviewed-A-symbol-connected-components",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 340,
+          "height": 263
+        },
+        "selection": {
+          "alphaThreshold": 96,
+          "minXBefore": 304,
+          "minPixels": 20,
+          "antialiasNeighborPixels": 1,
+          "components": 4
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "e4c3b8eed1710af7364d0c21da2ed2f379fb6098e3507b1f96bfefda999cbe3a"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "2684e03c045e226656e849d23e02169117676f4b4414725ee4446e2d9208b90e",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-0e2de06b-157e-4c29-b21e-59169e7f5fa0",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/aryana-motors/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "1379c13e3f18502ffc5dd3b9e726ec358122f2544d801120f014f4f9e01febfe",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-88bf1dc7-c220-4fb6-b2e2-84cd228c9b93",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/aryana-motors/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "1379c13e3f18502ffc5dd3b9e726ec358122f2544d801120f014f4f9e01febfe",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-88bf1dc7-c220-4fb6-b2e2-84cd228c9b93",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/aryana-motors/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "2684e03c045e226656e849d23e02169117676f4b4414725ee4446e2d9208b90e",
+      "sha256": "2684e03c045e226656e849d23e02169117676f4b4414725ee4446e2d9208b90e",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 263
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "1379c13e3f18502ffc5dd3b9e726ec358122f2544d801120f014f4f9e01febfe",
+      "sha256": "1379c13e3f18502ffc5dd3b9e726ec358122f2544d801120f014f4f9e01febfe",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 263
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "1379c13e3f18502ffc5dd3b9e726ec358122f2544d801120f014f4f9e01febfe",
+      "sha256": "1379c13e3f18502ffc5dd3b9e726ec358122f2544d801120f014f4f9e01febfe",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 263
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "f0b7e109c00c45bfda7508f10ec8d3682db8329b623b8a99c4ee2098915cee88",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-0e2de06b-157e-4c29-b21e-59169e7f5fa0",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "2684e03c045e226656e849d23e02169117676f4b4414725ee4446e2d9208b90e",
+          "operation": "isolate-reviewed-A-symbol-connected-components",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 340,
+            "height": 263
+          },
+          "selection": {
+            "alphaThreshold": 96,
+            "minXBefore": 304,
+            "minPixels": 20,
+            "antialiasNeighborPixels": 1,
+            "components": 4
+          }
+        }
+      },
+      "sourceReference": "dealers/aryana-motors/branding/generated-mark-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "bcec4eea7eced9cc1bc41aeb68e4932d422e217db47e7411c43b524552288fe9",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-88bf1dc7-c220-4fb6-b2e2-84cd228c9b93",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "1379c13e3f18502ffc5dd3b9e726ec358122f2544d801120f014f4f9e01febfe",
+          "operation": "isolate-reviewed-A-symbol-connected-components",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 340,
+            "height": 263
+          },
+          "selection": {
+            "alphaThreshold": 96,
+            "minXBefore": 304,
+            "minPixels": 20,
+            "antialiasNeighborPixels": 1,
+            "components": 4
+          }
+        }
+      },
+      "sourceReference": "dealers/aryana-motors/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "02b37c07556e464b21735aea82653bd182a36d69226aec0bb417f2c4f5742bc3",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-0e2de06b-157e-4c29-b21e-59169e7f5fa0",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "2684e03c045e226656e849d23e02169117676f4b4414725ee4446e2d9208b90e",
+          "operation": "isolate-reviewed-A-symbol-connected-components",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 340,
+            "height": 263
+          },
+          "selection": {
+            "alphaThreshold": 96,
+            "minXBefore": 304,
+            "minPixels": 20,
+            "antialiasNeighborPixels": 1,
+            "components": 4
+          }
+        }
+      },
+      "sourceReference": "dealers/aryana-motors/branding/generated-mark-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "e4c3b8eed1710af7364d0c21da2ed2f379fb6098e3507b1f96bfefda999cbe3a",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-0e2de06b-157e-4c29-b21e-59169e7f5fa0",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "2684e03c045e226656e849d23e02169117676f4b4414725ee4446e2d9208b90e",
+          "operation": "isolate-reviewed-A-symbol-connected-components",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 340,
+            "height": 263
+          },
+          "selection": {
+            "alphaThreshold": 96,
+            "minXBefore": 304,
+            "minPixels": 20,
+            "antialiasNeighborPixels": 1,
+            "components": 4
+          }
+        }
+      },
+      "sourceReference": "dealers/aryana-motors/branding/generated-mark-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "7b34fbdd2332e075af7b6bd6ac802ef493df0e649e5c4fb1c2073694164be18c",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-88bf1dc7-c220-4fb6-b2e2-84cd228c9b93",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "1379c13e3f18502ffc5dd3b9e726ec358122f2544d801120f014f4f9e01febfe",
+        "operation": "isolate-reviewed-A-symbol-connected-components",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 340,
+          "height": 263
+        },
+        "selection": {
+          "alphaThreshold": 96,
+          "minXBefore": 304,
+          "minPixels": 20,
+          "antialiasNeighborPixels": 1,
+          "components": 4
+        }
+      }
+    }
+  }
+}

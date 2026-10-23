@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "slug": "al-masah-al-malakia",
+  "dealerId": "ae-sharjah-al-masah-al-malakia",
+  "business": {
+    "name": "Al Masah Al Malakia",
+    "city": "Sharjah",
+    "region": "Sharjah",
+    "countryCode": "AE",
+    "currency": "AED",
+    "distanceUnit": "km",
+    "locale": "en-AE",
+    "address": "",
+    "phone": "+971585990118",
+    "phoneDisplay": "+971585990118",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://auto.ae/almasahalmalakia/",
+    "hours": "",
+    "sourceUrl": "https://auto.ae/almasahalmalakia/",
+    "observedAt": "2026-10-18",
+    "inventoryNotice": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://auto.ae/almasahalmalakia/",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://uae.yallamotor.com/auto-companies/al-masah-al-malakia-used-cars-9026",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    }
+  ]
+}

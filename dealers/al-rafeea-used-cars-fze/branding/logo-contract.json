@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-rafeea-used-cars-fze",
+  "reviewed": true,
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "3224f7504d0bf77125837b25bb8d8ede7e844df8c17a1b95a53e2f8067c8a228",
+      "sourceSha256": "633be7c9b974b0db2f4fde909909c2797f1f50df9802ab2688c4412e77c137a2"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "85839c4a973c1538237c9f0eda505be68b296b08cf8172ce5a64d51482e30b18",
+      "sourceSha256": "ba4222886756c356703b2ed7fe53fcba3cc0b3bfc9c604607cd96a9717d51c17"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "85839c4a973c1538237c9f0eda505be68b296b08cf8172ce5a64d51482e30b18",
+      "sourceSha256": "ba4222886756c356703b2ed7fe53fcba3cc0b3bfc9c604607cd96a9717d51c17"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "633be7c9b974b0db2f4fde909909c2797f1f50df9802ab2688c4412e77c137a2",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-7f9421d8-908f-4c53-8294-37a393c56395",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "1065a779b98e42092fe14e0bda503b62d4ae5824cd221538213b3dd86d355af4",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-7f9421d8-908f-4c53-8294-37a393c56395",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "633be7c9b974b0db2f4fde909909c2797f1f50df9802ab2688c4412e77c137a2",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 300,
+          "height": 222
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "f5499e053b35cf1522d224fdb0d36305171e2ffb5808940fb34b063bf14697d0"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "633be7c9b974b0db2f4fde909909c2797f1f50df9802ab2688c4412e77c137a2",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-7f9421d8-908f-4c53-8294-37a393c56395",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-rafeea-used-cars-fze/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "ba4222886756c356703b2ed7fe53fcba3cc0b3bfc9c604607cd96a9717d51c17",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1fc36cb3-e85f-4b6c-80ec-97c0613b3bbf",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-rafeea-used-cars-fze/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "ba4222886756c356703b2ed7fe53fcba3cc0b3bfc9c604607cd96a9717d51c17",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1fc36cb3-e85f-4b6c-80ec-97c0613b3bbf",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-rafeea-used-cars-fze/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "633be7c9b974b0db2f4fde909909c2797f1f50df9802ab2688c4412e77c137a2",
+      "sha256": "633be7c9b974b0db2f4fde909909c2797f1f50df9802ab2688c4412e77c137a2",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 222
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "ba4222886756c356703b2ed7fe53fcba3cc0b3bfc9c604607cd96a9717d51c17",
+      "sha256": "ba4222886756c356703b2ed7fe53fcba3cc0b3bfc9c604607cd96a9717d51c17",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 221
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "ba4222886756c356703b2ed7fe53fcba3cc0b3bfc9c604607cd96a9717d51c17",
+      "sha256": "ba4222886756c356703b2ed7fe53fcba3cc0b3bfc9c604607cd96a9717d51c17",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 221
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "4c1c9b27c967a52139fbfb07c284152ba8bcb8975088c2499858879b86518448",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-7f9421d8-908f-4c53-8294-37a393c56395",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "633be7c9b974b0db2f4fde909909c2797f1f50df9802ab2688c4412e77c137a2",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 300,
+            "height": 222
+          }
+        }
+      },
+      "sourceReference": "dealers/al-rafeea-used-cars-fze/branding/generated-mark-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "f68a53870c093bec5bc7ea1d6a2d7a871e45a6da9d7582b358bdc2e9712305bf",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1fc36cb3-e85f-4b6c-80ec-97c0613b3bbf",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "ba4222886756c356703b2ed7fe53fcba3cc0b3bfc9c604607cd96a9717d51c17",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 300,
+            "height": 221
+          }
+        }
+      },
+      "sourceReference": "dealers/al-rafeea-used-cars-fze/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "1065a779b98e42092fe14e0bda503b62d4ae5824cd221538213b3dd86d355af4",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-7f9421d8-908f-4c53-8294-37a393c56395",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "633be7c9b974b0db2f4fde909909c2797f1f50df9802ab2688c4412e77c137a2",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 300,
+            "height": 222
+          }
+        }
+      },
+      "sourceReference": "dealers/al-rafeea-used-cars-fze/branding/generated-mark-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "f5499e053b35cf1522d224fdb0d36305171e2ffb5808940fb34b063bf14697d0",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-7f9421d8-908f-4c53-8294-37a393c56395",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "633be7c9b974b0db2f4fde909909c2797f1f50df9802ab2688c4412e77c137a2",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 300,
+            "height": 222
+          }
+        }
+      },
+      "sourceReference": "dealers/al-rafeea-used-cars-fze/branding/generated-mark-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "1918192a24d1034af87a62b071638c5c785df61c49ac4673e30a1551e7ee80f0",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-1fc36cb3-e85f-4b6c-80ec-97c0613b3bbf",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "ba4222886756c356703b2ed7fe53fcba3cc0b3bfc9c604607cd96a9717d51c17",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 300,
+          "height": 221
+        }
+      }
+    }
+  }
+}

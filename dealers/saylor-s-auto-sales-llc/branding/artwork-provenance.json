@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "us-ky-harlan-saylors-auto-sales",
+  "slug": "saylor-s-auto-sales-llc",
+  "name": "Saylor's Auto Sales LLC",
+  "kind": "independent-website-logo-proposal",
+  "dealerApproved": false,
+  "ownerApproved": false,
+  "sourceEvidence": [
+    {
+      "url": "https://www.facebook.com/saylorsautosales/",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.facebook.com/saylorsautosales/posts/pfbid02HewjtVc4Uz4s8jFDsgrek8tXD9zMPvxA8PVX41fgZKrmGJhfvYuRx3hPvS2CCTGtl",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.facebook.com/saylorsautosales/posts/pfbid02sNEzBpjtAxRQstKZbLY4fStSynFtnfjVBdTTLiJWMV8pLkCnDf1udPBUQ7nXGjRPl",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.facebook.com/saylorsautosales/posts/pfbid0Wu2A4KCGyhzBRRCbkc18a94fDXMvFwR9uCLrDvxC2yXUttCWoqeLm8PTKJSgaTvvl",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.autoyas.com/US/Harlan/1773065826347274/Saylor%27s-Auto-Sales-LLC",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.enigma.com/directory/ky/harlan/",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "retainedOriginalsUnchanged": true,
+  "variants": {
+    "on-light": {
+      "path": "logo-on-light.png",
+      "sha256": "4d7b43845bebcbdf47a7f50bdad41f0753a2f318e2ab3a179e28850c96b6be0e",
+      "master": {
+        "path": "generated-on-light.png",
+        "sha256": "53b73d0071e4cee6f559d8d5603aa2c212b9d8562bf35250107fd961ae533da2",
+        "width": 2017,
+        "height": 780
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-a69d9251-39f1-4f54-9ac6-b967da955aba",
+        "prompt": "Use case: logo-brand. Create one professional original independent website-proposal logo. Exact text: \"SAYLOR'S AUTO SALES LLC\". a distinctive original flowing but bold S symbol with one clean cut and a balanced friendly contemporary sans-serif wordmark; broad strong strokes, understated independent dealership. Horizontal logo for LIGHT website surfaces, with clear dark/charcoal foreground lettering, legible name hierarchy, large useful symbol if present, generous counters and crisp edges. Genuine alpha transparency. A polished final logo, not a poster or mockup. No extra text, fake checkerboard, background rectangle, watermark, shadows, fake chrome, gradients or texture. No tiny slogan, no misspelled words. Prefer a balanced landscape lockup that remains readable at 240px wide, framed close to the artwork with a small transparent margin. One logo only. This output is a proposed website asset, not a claim of dealer adoption.",
+        "reference": null
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 11,
+          "top": 129,
+          "width": 2006,
+          "height": 542
+        }
+      }
+    },
+    "on-dark": {
+      "path": "logo-on-dark.png",
+      "sha256": "e7901f28b03430c7d980751d5efec7fa70c3af05608916a0a55bbdde8de9a1de",
+      "master": {
+        "path": "generated-on-dark.png",
+        "sha256": "be146a518f4fd730c4385f418288112d2f1a1130bf41f0f420936637f4e6924f",
+        "width": 2016,
+        "height": 780
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-1036c11c-febe-4a33-a958-831bd6e149ec",
+        "prompt": "Create the matching light-ink variant for DARK website surfaces of the supplied Saylor's Auto Sales LLC logo. Preserve exact wording, spelling, symbol, composition, typography, spacing and proportions. Change dark name/foreground elements to clean solid white; preserve recognizable genuine source accents where they remain clear against #111113 and deep red. Transparent alpha background; no background block, mockup, texture, distressed edges, new decorations or extra text. This must remain the same logo, simply its readable on-dark counterpart. Exact text: SAYLOR'S AUTO SALES LLC. Whole design with enough clear transparent margin.",
+        "reference": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-a69d9251-39f1-4f54-9ac6-b967da955aba.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 4,
+          "top": 124,
+          "width": 1990,
+          "height": 545
+        }
+      }
+    }
+  },
+  "review": {
+    "status": "artwork-visually-reviewed",
+    "compact": "Horizontal logos only. Interactive 32/48/64px gallery preview is provided; separate compact/favicon artwork remains part of dealer-pack preparation.",
+    "sixDesigns": "not-yet-integrated-or-rendered",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "reviewer": "Codex visual inspection",
+    "alpha": "all exports measured as genuine transparent nonempty PNGs",
+    "spelling": "English wordmark inspected; source-bound display aliases retained",
+    "header": "All 196 paired PNGs inspected at 240x64 on white, #111113 and #c40101",
+    "evidence": "final-review-01.png"
+  },
+  "releaseReady": false,
+  "artworkHolds": [],
+  "artworkReadyForIntegration": true
+}

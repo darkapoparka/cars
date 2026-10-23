@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Mazaya Motors FZC",
     "publicOrigin": "https://mazaya-motors-fzc.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "82db61bf15aa7fb00baedb5408bf74621d143c052f4a1ac6229f018323734014",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "ae1e3c26ea8f3e7117c440bb694d7688feae8894d6a3b21c69fcb96ac62cece3"
+    }
   }
 }

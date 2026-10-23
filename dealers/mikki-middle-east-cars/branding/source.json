@@ -1,0 +1,143 @@
+{
+  "schemaVersion": 1,
+  "dealer": "mikki-middle-east-cars",
+  "status": "reviewed-imagegen-proposal",
+  "realLogoFirst": true,
+  "publicSources": [
+    {
+      "url": "https://www.dubicars.com/dealers/sharjah-mikki-middle-east-cars-2534",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "originals": [],
+  "creationMethod": "imagegen-proposal",
+  "dealerApproved": false,
+  "generatedInputs": {
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "master": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "a2c2fd2bd81767783ccb03aadfcd95f4267c4f2ffe45ad42cda1b2b8e8bc7d4d",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-8181fb90-de3a-4a42-8cc0-047692db167b",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark-light.png",
+      "sha256": "794c600c21093d523c9a1b7ffc3f9efef55216810f1e549da8d91f1281709e18",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-8181fb90-de3a-4a42-8cc0-047692db167b",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "a2c2fd2bd81767783ccb03aadfcd95f4267c4f2ffe45ad42cda1b2b8e8bc7d4d",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 285,
+            "height": 264
+          }
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-dark.png",
+      "sha256": "6a9fb6639a6714524373a054cc4b458097a126fed878211dba53fc6ff1f9ab0b",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-9a7fd514-bd5c-40e6-8d80-61632671329a",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "03aa9aad78208b0c440d60dae6a9512d11d5e889db52e141449c6473f06a9944",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 285,
+            "height": 265
+          }
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "a2c2fd2bd81767783ccb03aadfcd95f4267c4f2ffe45ad42cda1b2b8e8bc7d4d",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-8181fb90-de3a-4a42-8cc0-047692db167b",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "03aa9aad78208b0c440d60dae6a9512d11d5e889db52e141449c6473f06a9944",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-9a7fd514-bd5c-40e6-8d80-61632671329a",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "03aa9aad78208b0c440d60dae6a9512d11d5e889db52e141449c6473f06a9944",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-9a7fd514-bd5c-40e6-8d80-61632671329a",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewKind": "agent-visual-review",
+      "humanReview": false,
+      "dealerApproval": false,
+      "backgrounds": {
+        "onLight": "#ffffff",
+        "onDark": "#111113",
+        "onAccent": "#c40101"
+      },
+      "wordmarkWidths": [
+        220,
+        240
+      ],
+      "notes": "Exact reviewed Image Gen pair; native masters and generation provenance retained. Compact rasters cropped from the actual left symbol."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-22T23:42:46.338Z",
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#c40101"
+      ],
+      "widths": [
+        32,
+        48,
+        64
+      ],
+      "notes": "Left symbol cropped from reviewed horizontal variants; native rendering must independently qualify."
+    }
+  },
+  "sourceBlockers": [],
+  "artworkProvenance": {
+    "path": "branding/artwork-provenance.json",
+    "sha256": "5164f2432e5ad1306b9cd2d15b642a2a1cccc51306647e22d72fd0eb6dab967c",
+    "manifestSha256": "d25e9cee768a885052ac0a8df220d843c9b9c6f6f120d722705bead1cc99e694",
+    "nativeMasters": [
+      {
+        "path": "branding/native-generated-on-light.png",
+        "sha256": "e7a5b424e0cc8ee34c0c793f54659a77524f15f1d632113dc2c2a5d35e83ab11"
+      },
+      {
+        "path": "branding/native-generated-on-dark.png",
+        "sha256": "70c83877337ce88dd3b6ab160151bda644d2f5c83691fb4bd7cfef8e90ab44d7"
+      }
+    ]
+  }
+}

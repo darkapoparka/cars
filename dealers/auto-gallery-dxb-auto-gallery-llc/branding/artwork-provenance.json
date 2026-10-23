@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "ae-dubai-auto-gallery-dxb",
+  "slug": "auto-gallery-dxb-auto-gallery-llc",
+  "artworkDirectory": "auto-gallery-dxb-auto-gallery-llc",
+  "name": "Auto Gallery DXB (Auto Gallery LLC)",
+  "renderedName": "Auto Gallery DXB",
+  "kind": "independent-website-logo-proposal",
+  "dealerApproved": false,
+  "ownerApproved": false,
+  "sourceEvidence": [
+    {
+      "url": "https://www.autogallerydxb.com/",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://auto.ae/ru/autogallerydxb/",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "retainedOriginalsUnchanged": true,
+  "variants": {
+    "on-light": {
+      "path": "logo-on-light.png",
+      "sha256": "5c2c6ba6bc8cf5342c07fe8006dff4f5429376063d7fe5949c5d0b6722951680",
+      "width": 1024,
+      "height": 150,
+      "transparentFraction": 0.7243359375,
+      "master": {
+        "path": "generated-on-light.png",
+        "sha256": "ef2ca100c9455b897a17b862c2e564e3e89930237a1f33cd99d4ea1937c8b64c",
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-6866c946-90b9-4ca6-b3f5-54feb55c5a1e",
+        "prompt": "Create one professional horizontal automotive dealership logo proposal for Auto Gallery DXB. Required exact text, uppercase: AUTO GALLERY DXB. Every word must be present and spelled precisely; use sensible primary name and smaller descriptor hierarchy without tiny lettering. Produce a polished original identity with a minimal memorable geometric symbol related to the distinctive name. Initials GD may inform the emblem. Emblem left, full clear name to the right, compact and balanced for a website header. Avoid overused shield and generic car silhouettes; no manufacturer badges. Clean modern lettering with careful kerning and strong legibility. All text is deep charcoal black, appropriate on a white/light header. One restrained red or gold accent may appear inside the emblem only; no pale text. Flat crisp edges, a small number of solid shapes, no chrome, no lighting, no shadow, no texture, no gradient. Genuine transparent alpha background, isolated logo with no background box, no grid, no checkerboard painted into pixels. No slogan, contact info, website, watermark, mockup, photograph, extra concept, or duplicate logo. Deliver exactly one horizontal full logo. This is an independent website identity proposal, not a claim of adopted branding.",
+        "reference": null
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 0,
+          "top": 193,
+          "width": 2172,
+          "height": 318
+        }
+      }
+    },
+    "on-dark": {
+      "path": "logo-on-dark.png",
+      "sha256": "9c7f617c3561e5c03713718513903f1e33c008842d16c7cf652fb7f41cc7dbd5",
+      "width": 1024,
+      "height": 151,
+      "transparentFraction": 0.6653624275662252,
+      "master": {
+        "path": "generated-on-dark.png",
+        "sha256": "bbee318b6d0259695b218fd1d62eba140f38e0f6c2ec8f7d36c25a22f003f51c",
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-158b1c51-0b75-437a-826e-12357a8debe1",
+        "prompt": "Create the matching light-on-dark production variant of the exact supplied logo. Preserve precisely the same emblem, geometry, spelling, word count, typographic hierarchy, proportions, layout and spacing. Required exact text: AUTO GALLERY DXB. Change EVERY letter, including all secondary descriptor words and legal suffixes, to solid white so it is legible over a dark or red website header. Change the charcoal portions of the emblem to white. Retain the small red/gold emblem accent only if it contrasts clearly against a dark header. True transparent alpha background; do not paint a dark rectangle or checkerboard. Flat clean edges, no glows, shadows, bevels, textures, gradients, new artwork, new icon, extra text or mockup. Deliver one horizontal matching logo, fully legible.",
+        "reference": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-6866c946-90b9-4ca6-b3f5-54feb55c5a1e.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 0,
+          "top": 191,
+          "width": 2172,
+          "height": 320
+        }
+      }
+    }
+  },
+  "review": {
+    "status": "artwork-visually-reviewed",
+    "alpha": "all exports measured as genuine transparent nonempty PNGs",
+    "spelling": "English wordmark inspected; source-bound display aliases retained",
+    "compact": "Horizontal logos only. Interactive 32/48/64px gallery preview is provided; separate compact/favicon artwork remains part of dealer-pack preparation.",
+    "sixDesigns": "not-yet-integrated-or-rendered",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "reviewer": "Codex visual inspection",
+    "header": "All 196 paired PNGs inspected at 240x64 on white, #111113 and #c40101",
+    "evidence": "final-review-06.png"
+  },
+  "releaseReady": false,
+  "artworkHolds": [],
+  "artworkReadyForIntegration": true
+}

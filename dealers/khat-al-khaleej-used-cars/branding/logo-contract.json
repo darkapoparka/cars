@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "dealer": "khat-al-khaleej-used-cars",
+  "reviewed": true,
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "47147cd974bd5a6b23ef82acdcff3a93ede2450c8020e509463746ae4c8591d1",
+      "sourceSha256": "289395f9b3b7d3ad2da594a47198c8786f5127c47f14303db19e33a487751a75"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "4525039fbb1b0903dd03b713680030d412722c2be27dd3fcead7dfb57682511e",
+      "sourceSha256": "1e5766b9bf57b150cf51d7bb0c0268ec04f80fd069e90e2d2689d88c184db486"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "4525039fbb1b0903dd03b713680030d412722c2be27dd3fcead7dfb57682511e",
+      "sourceSha256": "1e5766b9bf57b150cf51d7bb0c0268ec04f80fd069e90e2d2689d88c184db486"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "289395f9b3b7d3ad2da594a47198c8786f5127c47f14303db19e33a487751a75",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-cb381af1-c572-42ed-95df-f1445476993b",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "c652e2e59eb38ce09d92a518c645c960db270fba3a160163048c7a2af8548929",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-cb381af1-c572-42ed-95df-f1445476993b",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "289395f9b3b7d3ad2da594a47198c8786f5127c47f14303db19e33a487751a75",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 325,
+          "height": 208
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "74dd84090b2ff0ed59d8dbf5a6727397334102af1383cf40ddea835b788e3905"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "289395f9b3b7d3ad2da594a47198c8786f5127c47f14303db19e33a487751a75",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-cb381af1-c572-42ed-95df-f1445476993b",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/khat-al-khaleej-used-cars/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "1e5766b9bf57b150cf51d7bb0c0268ec04f80fd069e90e2d2689d88c184db486",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-c114c6d2-18a0-45fa-ab24-dbe9faed0de1",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/khat-al-khaleej-used-cars/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "1e5766b9bf57b150cf51d7bb0c0268ec04f80fd069e90e2d2689d88c184db486",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-c114c6d2-18a0-45fa-ab24-dbe9faed0de1",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/khat-al-khaleej-used-cars/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "289395f9b3b7d3ad2da594a47198c8786f5127c47f14303db19e33a487751a75",
+      "sha256": "289395f9b3b7d3ad2da594a47198c8786f5127c47f14303db19e33a487751a75",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 208
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "1e5766b9bf57b150cf51d7bb0c0268ec04f80fd069e90e2d2689d88c184db486",
+      "sha256": "1e5766b9bf57b150cf51d7bb0c0268ec04f80fd069e90e2d2689d88c184db486",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 210
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "1e5766b9bf57b150cf51d7bb0c0268ec04f80fd069e90e2d2689d88c184db486",
+      "sha256": "1e5766b9bf57b150cf51d7bb0c0268ec04f80fd069e90e2d2689d88c184db486",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 210
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "2cdc5646fc18817144575926f53ea1afac70c31cf5d2f0c880f374f9d8c9d5c3",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-cb381af1-c572-42ed-95df-f1445476993b",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "289395f9b3b7d3ad2da594a47198c8786f5127c47f14303db19e33a487751a75",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 325,
+            "height": 208
+          }
+        }
+      },
+      "sourceReference": "dealers/khat-al-khaleej-used-cars/branding/generated-mark-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "7dfda5b4fc067268a9873d8ce760bb3290d0f83a2eb7e742756235959ab92f89",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-c114c6d2-18a0-45fa-ab24-dbe9faed0de1",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "1e5766b9bf57b150cf51d7bb0c0268ec04f80fd069e90e2d2689d88c184db486",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 325,
+            "height": 210
+          }
+        }
+      },
+      "sourceReference": "dealers/khat-al-khaleej-used-cars/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "c652e2e59eb38ce09d92a518c645c960db270fba3a160163048c7a2af8548929",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-cb381af1-c572-42ed-95df-f1445476993b",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "289395f9b3b7d3ad2da594a47198c8786f5127c47f14303db19e33a487751a75",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 325,
+            "height": 208
+          }
+        }
+      },
+      "sourceReference": "dealers/khat-al-khaleej-used-cars/branding/generated-mark-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "74dd84090b2ff0ed59d8dbf5a6727397334102af1383cf40ddea835b788e3905",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-cb381af1-c572-42ed-95df-f1445476993b",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "289395f9b3b7d3ad2da594a47198c8786f5127c47f14303db19e33a487751a75",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 325,
+            "height": 208
+          }
+        }
+      },
+      "sourceReference": "dealers/khat-al-khaleej-used-cars/branding/generated-mark-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "a7a5c928a7122e1b0987011e6a08225a97d233839496f14b2d1a30379132c209",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-c114c6d2-18a0-45fa-ab24-dbe9faed0de1",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "1e5766b9bf57b150cf51d7bb0c0268ec04f80fd069e90e2d2689d88c184db486",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 325,
+          "height": 210
+        }
+      }
+    }
+  }
+}

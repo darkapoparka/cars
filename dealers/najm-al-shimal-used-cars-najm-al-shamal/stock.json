@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "dealer": "najm-al-shimal-used-cars-najm-al-shamal",
+  "kind": "illustrative-not-dealer-stock",
+  "dealerStock": false,
+  "observedAt": "2026-10-23T04:05:15.254Z",
+  "disclosure": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
+  "templateDemo": {
+    "source": {
+      "repository": "darkapoparka/cars",
+      "revision": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+      "path": "templates/auto-best",
+      "tree": "cbd21f5e0b794a0cbf52bf36fdf07b25fb0bb499",
+      "digest": "90760c4c73d46ebf976a06e923171f31fc716661f69d25d864342ea856002279"
+    },
+    "catalog": {
+      "path": "src/lib/data/inventory.ts",
+      "sha256": "0773df106db41c0ba784f21ef40e944009b6cf171679ddf6f1b9515003318605"
+    },
+    "bindings": {
+      "path": "src/lib/config/lead-site.ts",
+      "sha256": "4d868efd64c7a1a6c055ed20903c342fdb44ae10745590a4fbcd0b446659b743"
+    }
+  },
+  "records": [
+    {
+      "id": "template-demo-auto-best-1",
+      "title": "Audi RS 6 Avant",
+      "make": "Audi",
+      "model": "RS 6 Avant",
+      "year": 2024,
+      "bodyType": "Wagon",
+      "currency": "AED",
+      "mileageOnRequest": true,
+      "images": [
+        "/dealer-stock/template-demo-1.webp"
+      ],
+      "sourceUrl": "https://github.com/darkapoparka/cars/blob/5d052ea655714f3d0ca3656daa7dbff411e2f747/templates/auto-best/src/lib/data/inventory.ts",
+      "observedAt": "2026-10-23T04:05:15.254Z",
+      "availability": "Illustrative template example; not dealer stock.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "description": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "template-demo-auto-best-2",
+      "title": "Mercedes-Benz GLE Coupé",
+      "make": "Mercedes-Benz",
+      "model": "GLE Coupé",
+      "year": 2021,
+      "bodyType": "SUV",
+      "currency": "AED",
+      "mileageOnRequest": true,
+      "images": [
+        "/dealer-stock/template-demo-2.webp"
+      ],
+      "sourceUrl": "https://github.com/darkapoparka/cars/blob/5d052ea655714f3d0ca3656daa7dbff411e2f747/templates/auto-best/src/lib/data/inventory.ts",
+      "observedAt": "2026-10-23T04:05:15.254Z",
+      "availability": "Illustrative template example; not dealer stock.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "description": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview."
+    },
+    {
+      "id": "template-demo-auto-best-3",
+      "title": "Audi RS Q8",
+      "make": "Audi",
+      "model": "RS Q8",
+      "year": 2021,
+      "bodyType": "SUV",
+      "currency": "AED",
+      "mileageOnRequest": true,
+      "images": [
+        "/dealer-stock/template-demo-3.webp"
+      ],
+      "sourceUrl": "https://github.com/darkapoparka/cars/blob/5d052ea655714f3d0ca3656daa7dbff411e2f747/templates/auto-best/src/lib/data/inventory.ts",
+      "observedAt": "2026-10-23T04:05:15.254Z",
+      "availability": "Illustrative template example; not dealer stock.",
+      "priceOnRequest": true,
+      "priceAmount": null,
+      "description": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview."
+    }
+  ]
+}

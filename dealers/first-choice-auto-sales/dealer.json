@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "First Choice Auto Sales",
     "publicOrigin": "https://first-choice-auto-sales.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "f8e6685f517ec838c284f3373db3d18baedcf524af2c72ea8605a0e104c5d685",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "e02c840276bb8b78a2e9f08774b8d82f6d1b35d564ef7ac9bd8f1b20114fcc63"
+    }
   }
 }

@@ -1,0 +1,151 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-saqr-al-mutaliq-used-car",
+  "status": "reviewed-imagegen-proposal",
+  "realLogoFirst": true,
+  "publicSources": [
+    {
+      "url": "https://auto.ae/alsaqr/",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://maps.yango.com/org/al_saqr_al_mutaliq/9985065220/",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.drivearabia.com/cars-for-sale/uae/geely/emgrand/2025-geely-emgrand-gf-gcc-specs-aea1aaa00d1b4d3c87eba90ad4abaf27/",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "originals": [],
+  "creationMethod": "imagegen-proposal",
+  "dealerApproved": false,
+  "generatedInputs": {
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "master": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "87b4a0d36086bfb2978cbf67b2ed09cbc0e1ac7ccd2f54ef5f748fbf9f68bf2c",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-0e942533-08fa-47ef-9411-57c574879972",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark-light.png",
+      "sha256": "efe2efec4650443f3edd48cfc0a59070fe9e2724974365fd0755749acfedb1df",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-0e942533-08fa-47ef-9411-57c574879972",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "87b4a0d36086bfb2978cbf67b2ed09cbc0e1ac7ccd2f54ef5f748fbf9f68bf2c",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 385,
+            "height": 314
+          }
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-dark.png",
+      "sha256": "5148390b6410874f71cb814dbc83497beb699518aed83fa0ba891a5b1709b1f2",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-822e8dfb-d7eb-46f7-ab30-d7880a6b1ad1",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "85abf184dcb8eeb6f1aa54de2f80954bf110e62e8fe3bee45c5065e1e10c4d2b",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 385,
+            "height": 314
+          }
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "87b4a0d36086bfb2978cbf67b2ed09cbc0e1ac7ccd2f54ef5f748fbf9f68bf2c",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-0e942533-08fa-47ef-9411-57c574879972",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "85abf184dcb8eeb6f1aa54de2f80954bf110e62e8fe3bee45c5065e1e10c4d2b",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-822e8dfb-d7eb-46f7-ab30-d7880a6b1ad1",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "85abf184dcb8eeb6f1aa54de2f80954bf110e62e8fe3bee45c5065e1e10c4d2b",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-822e8dfb-d7eb-46f7-ab30-d7880a6b1ad1",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewKind": "agent-visual-review",
+      "humanReview": false,
+      "dealerApproval": false,
+      "backgrounds": {
+        "onLight": "#ffffff",
+        "onDark": "#111113",
+        "onAccent": "#c40101"
+      },
+      "wordmarkWidths": [
+        220,
+        240
+      ],
+      "notes": "Exact reviewed Image Gen pair; native masters and generation provenance retained. Compact rasters cropped from the actual left symbol."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-22T23:42:46.338Z",
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#c40101"
+      ],
+      "widths": [
+        32,
+        48,
+        64
+      ],
+      "notes": "Left symbol cropped from reviewed horizontal variants; native rendering must independently qualify."
+    }
+  },
+  "sourceBlockers": [],
+  "artworkProvenance": {
+    "path": "branding/artwork-provenance.json",
+    "sha256": "7a12ff54e5df0da549b0cdf08ff902e3f632615d83b482dd0cac9feb7ccb92f7",
+    "manifestSha256": "d25e9cee768a885052ac0a8df220d843c9b9c6f6f120d722705bead1cc99e694",
+    "nativeMasters": [
+      {
+        "path": "branding/native-generated-on-light.png",
+        "sha256": "450654ab992dfb31fd0dc51e865c5024d15709a6754b0979c8903cf654422210"
+      },
+      {
+        "path": "branding/native-generated-on-dark.png",
+        "sha256": "65890d6da62f8e805ec4d5db0c7c3e20a804b47e241483556de08679a2a676d6"
+      }
+    ]
+  }
+}

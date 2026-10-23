@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "dealer": "gangsta-world-luxury-automobiles-10825258ed",
-  "status": "research-required",
+  "status": "reviewed-imagegen-proposal",
   "realLogoFirst": true,
   "publicSources": [
     {
@@ -10,7 +10,138 @@
     }
   ],
   "originals": [],
-  "creationMethod": null,
+  "creationMethod": "imagegen-proposal",
   "dealerApproved": false,
-  "generatedInputs": null
+  "generatedInputs": {
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "master": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "98178fc4a68c661b655efe5f0fbde053e6295be40ce11b8e67a75411efdcf051",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-d0ffa8bb-38a6-4a1e-8cc3-0ff4cf106d62",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark-light.png",
+      "sha256": "08b363ea73cb471122e3d9d0786e7a3acba44631e70dc42920259d08b4699800",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-d0ffa8bb-38a6-4a1e-8cc3-0ff4cf106d62",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/reviewed-mark-light.png",
+          "sha256": "4cb68660e932e971405590a493d3888711033a3c5812f6839446bb8a6a519efc",
+          "operation": "isolate-reviewed-palm-ring-and-darken-gold-for-white-compact-surface",
+          "mask": "x>=220 retain original gold pixels only",
+          "colorTransform": "multiply source RGB by 0.52, preserve alpha and geometry"
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-dark.png",
+      "sha256": "04a5eca379816c9fddc3b882120280b5d14ae0dee2ee2418a3bb32c94a318bf4",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-448a2f33-d607-42bb-a974-c47951ac91c2",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/reviewed-mark-dark.png",
+          "sha256": "1ee798a3edbb4671082c46d6a7ce4b073f82163230cd2f1b2788800b171ffe3e",
+          "operation": "isolate-gold-palm-ring-from-neighboring-wordmark-at-right-edge",
+          "mask": "x>=220 retain original gold pixels only"
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "98178fc4a68c661b655efe5f0fbde053e6295be40ce11b8e67a75411efdcf051",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-d0ffa8bb-38a6-4a1e-8cc3-0ff4cf106d62",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "15f3724e3081513a9c85496a4d63555882f0f66ba0148a55f510beaff9377771",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-448a2f33-d607-42bb-a974-c47951ac91c2",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "15f3724e3081513a9c85496a4d63555882f0f66ba0148a55f510beaff9377771",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-448a2f33-d607-42bb-a974-c47951ac91c2",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewKind": "agent-visual-review",
+      "humanReview": false,
+      "dealerApproval": false,
+      "backgrounds": {
+        "onLight": "#ffffff",
+        "onDark": "#111113",
+        "onAccent": "#c40101"
+      },
+      "wordmarkWidths": [
+        220,
+        240
+      ],
+      "notes": "Exact reviewed Image Gen pair; native masters and generation provenance retained. Compact rasters cropped from the actual left symbol."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-22T23:42:46.338Z",
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#c40101"
+      ],
+      "widths": [
+        32,
+        48,
+        64
+      ],
+      "notes": "Light compact gold palm-ring is darkened from exact retained reviewed mark for white/favicon contrast; dark compact remains original gold. Source geometry and alpha retained."
+    }
+  },
+  "sourceBlockers": [],
+  "artworkProvenance": {
+    "path": "branding/artwork-provenance.json",
+    "sha256": "e21fb4a9424b7c2e9201ce1c1b723ed7e5d067db79781578a60b4d10c8ca7393",
+    "manifestSha256": "d25e9cee768a885052ac0a8df220d843c9b9c6f6f120d722705bead1cc99e694",
+    "nativeMasters": [
+      {
+        "path": "branding/native-generated-on-light.png",
+        "sha256": "7378bf5bd335e5e9bec9a791031284b5007e0ac393b920ecd106010cd57c544e"
+      },
+      {
+        "path": "branding/native-generated-on-dark.png",
+        "sha256": "16c83e88ef8a388802a3fd554301e8462782355819128ad228e84e37712a9b29"
+      }
+    ],
+    "identityResolution": {
+      "path": "identity-resolution.json",
+      "sha256": "9332730f18df830571648ebd20c7287f04b94792b647d11dfbb24c605203fcf1",
+      "recordedAt": "2026-10-23"
+    },
+    "reviewedCompactLight": {
+      "path": "branding/reviewed-mark-light.png",
+      "sha256": "4cb68660e932e971405590a493d3888711033a3c5812f6839446bb8a6a519efc"
+    },
+    "reviewedCompactDark": {
+      "path": "branding/reviewed-mark-dark.png",
+      "sha256": "1ee798a3edbb4671082c46d6a7ce4b073f82163230cd2f1b2788800b171ffe3e"
+    }
+  }
 }

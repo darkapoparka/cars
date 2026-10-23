@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Amazon 213 Car Showroom",
     "publicOrigin": "https://amazon-213-car-showroom.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "79ad3348d09167203b584cfc626a0fa9343b55ee5f18783ec70a45d8fa290443",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "ada8c06bbe45ce7eb46e130c6f3a4e556bb57cb0ebb1ca3a70508390987265c1"
+    }
   }
 }

@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-nujoom-al-malakiah-used-cars",
+  "reviewed": true,
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "1d8195f59ef78a8193749fc16d6707b40ede2ecd0fbbf52a4f90e3e965c6e3f6",
+      "sourceSha256": "538b1a6ab2b86bc72f8c6497a1c3ed98bc997dfc181b8acdd9ddbef024c8d389"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "d697d684adb1db3f97810ff3e0c4c3762c9034e868e3ba7bfaa473e6978c436b",
+      "sourceSha256": "1c135a6db6d76feda9593e172b74923a13ae5cb29c749b71725de1a9e8e0eafe"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "d697d684adb1db3f97810ff3e0c4c3762c9034e868e3ba7bfaa473e6978c436b",
+      "sourceSha256": "1c135a6db6d76feda9593e172b74923a13ae5cb29c749b71725de1a9e8e0eafe"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "538b1a6ab2b86bc72f8c6497a1c3ed98bc997dfc181b8acdd9ddbef024c8d389",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-402c7f92-1eba-4457-bb8a-9aea3d8c28a6",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "224bb842f3cbcef3b929fbf89a5b53a392e309f0b8ee60ee610b9a853604dae7",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-402c7f92-1eba-4457-bb8a-9aea3d8c28a6",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "538b1a6ab2b86bc72f8c6497a1c3ed98bc997dfc181b8acdd9ddbef024c8d389",
+        "operation": "crop-reviewed-left-NM-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 292,
+          "height": 296
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "640c0c7d6cbff90f7334306bf1a4e735c5215a2d4229b901fc786f37f16af92f"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "538b1a6ab2b86bc72f8c6497a1c3ed98bc997dfc181b8acdd9ddbef024c8d389",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-402c7f92-1eba-4457-bb8a-9aea3d8c28a6",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-nujoom-al-malakiah-used-cars/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "1c135a6db6d76feda9593e172b74923a13ae5cb29c749b71725de1a9e8e0eafe",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-7adf104d-247d-40bf-bffd-673183b62a73",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-nujoom-al-malakiah-used-cars/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "1c135a6db6d76feda9593e172b74923a13ae5cb29c749b71725de1a9e8e0eafe",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-7adf104d-247d-40bf-bffd-673183b62a73",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-nujoom-al-malakiah-used-cars/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "538b1a6ab2b86bc72f8c6497a1c3ed98bc997dfc181b8acdd9ddbef024c8d389",
+      "sha256": "538b1a6ab2b86bc72f8c6497a1c3ed98bc997dfc181b8acdd9ddbef024c8d389",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 296
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "1c135a6db6d76feda9593e172b74923a13ae5cb29c749b71725de1a9e8e0eafe",
+      "sha256": "1c135a6db6d76feda9593e172b74923a13ae5cb29c749b71725de1a9e8e0eafe",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 296
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "1c135a6db6d76feda9593e172b74923a13ae5cb29c749b71725de1a9e8e0eafe",
+      "sha256": "1c135a6db6d76feda9593e172b74923a13ae5cb29c749b71725de1a9e8e0eafe",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 296
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "85e01e356857e50eb6918a242d7df64d24c691f998ab891b744a31e971d7c009",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-402c7f92-1eba-4457-bb8a-9aea3d8c28a6",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "538b1a6ab2b86bc72f8c6497a1c3ed98bc997dfc181b8acdd9ddbef024c8d389",
+          "operation": "crop-reviewed-left-NM-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 292,
+            "height": 296
+          }
+        }
+      },
+      "sourceReference": "dealers/al-nujoom-al-malakiah-used-cars/branding/generated-mark-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "7d3d4a9bd250d09a2d2e1b870782536c07a0ab1885d58bc5255bcf2f4a5164a4",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-7adf104d-247d-40bf-bffd-673183b62a73",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "1c135a6db6d76feda9593e172b74923a13ae5cb29c749b71725de1a9e8e0eafe",
+          "operation": "crop-reviewed-left-NM-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 292,
+            "height": 296
+          }
+        }
+      },
+      "sourceReference": "dealers/al-nujoom-al-malakiah-used-cars/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "224bb842f3cbcef3b929fbf89a5b53a392e309f0b8ee60ee610b9a853604dae7",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-402c7f92-1eba-4457-bb8a-9aea3d8c28a6",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "538b1a6ab2b86bc72f8c6497a1c3ed98bc997dfc181b8acdd9ddbef024c8d389",
+          "operation": "crop-reviewed-left-NM-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 292,
+            "height": 296
+          }
+        }
+      },
+      "sourceReference": "dealers/al-nujoom-al-malakiah-used-cars/branding/generated-mark-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "640c0c7d6cbff90f7334306bf1a4e735c5215a2d4229b901fc786f37f16af92f",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-402c7f92-1eba-4457-bb8a-9aea3d8c28a6",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "538b1a6ab2b86bc72f8c6497a1c3ed98bc997dfc181b8acdd9ddbef024c8d389",
+          "operation": "crop-reviewed-left-NM-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 292,
+            "height": 296
+          }
+        }
+      },
+      "sourceReference": "dealers/al-nujoom-al-malakiah-used-cars/branding/generated-mark-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "0c0cbea6456b835944e38e44b460865a535e628ff6c323438ded2dc8ad6760a4",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-7adf104d-247d-40bf-bffd-673183b62a73",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "1c135a6db6d76feda9593e172b74923a13ae5cb29c749b71725de1a9e8e0eafe",
+        "operation": "crop-reviewed-left-NM-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 292,
+          "height": 296
+        }
+      }
+    }
+  }
+}

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "dealer": "al-anwar-al-khamsa-used-cars",
-  "status": "research-required",
+  "status": "reviewed-imagegen-proposal",
   "realLogoFirst": true,
   "publicSources": [
     {
@@ -14,7 +14,133 @@
     }
   ],
   "originals": [],
-  "creationMethod": null,
+  "creationMethod": "imagegen-proposal",
   "dealerApproved": false,
-  "generatedInputs": null
+  "generatedInputs": {
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "master": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "258d6c7852d4ffd39468efb337666ec545a66e054544b98f03ea56ae8162d48c",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-e0d355a2-a39c-4d73-8f0c-fa777ab7c547",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark-light.png",
+      "sha256": "5f7add47a7c1a79e02f3af0654fa14d4e5c3b4a662df68fd25e5fe457cfed499",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-e0d355a2-a39c-4d73-8f0c-fa777ab7c547",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/reviewed-mark-light.png",
+          "sha256": "2d648734b61e94d2f813390b6fee43605e94678e399979e563594b05c7fc60b1",
+          "operation": "darken-reviewed-gold-ink-for-white-compact-and-favicon",
+          "colorTransform": "gold RGB scale 0.52/0.43/0.45"
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-dark.png",
+      "sha256": "3738cad7d2070934f5a45018d494824478cdf8ac6425106b1f4bd974ebad636d",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-0b647b49-a29d-478b-b8fb-aa8d5611e377",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "16236ebe552dc745fc54785882c56c988497bce88283fca0198c37bab720457c",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 280,
+            "height": 220
+          }
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "258d6c7852d4ffd39468efb337666ec545a66e054544b98f03ea56ae8162d48c",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-e0d355a2-a39c-4d73-8f0c-fa777ab7c547",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "16236ebe552dc745fc54785882c56c988497bce88283fca0198c37bab720457c",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-0b647b49-a29d-478b-b8fb-aa8d5611e377",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "16236ebe552dc745fc54785882c56c988497bce88283fca0198c37bab720457c",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-0b647b49-a29d-478b-b8fb-aa8d5611e377",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewKind": "agent-visual-review",
+      "humanReview": false,
+      "dealerApproval": false,
+      "backgrounds": {
+        "onLight": "#ffffff",
+        "onDark": "#111113",
+        "onAccent": "#c40101"
+      },
+      "wordmarkWidths": [
+        220,
+        240
+      ],
+      "notes": "Exact reviewed Image Gen pair; native masters and generation provenance retained. Compact rasters cropped from the actual left symbol."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-22T23:42:46.338Z",
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#c40101"
+      ],
+      "widths": [
+        32,
+        48,
+        64
+      ],
+      "notes": "Original reviewed compact retained byte for byte. Selected gold on white darkened from exact pixels for native compact/favicon contrast; full horizontal artwork unchanged."
+    }
+  },
+  "sourceBlockers": [],
+  "artworkProvenance": {
+    "path": "branding/artwork-provenance.json",
+    "sha256": "0e7c76df3697921ac2e21be58f11e9fd730f3a7975edcf57f4dbec113b2f3696",
+    "manifestSha256": "d25e9cee768a885052ac0a8df220d843c9b9c6f6f120d722705bead1cc99e694",
+    "nativeMasters": [
+      {
+        "path": "branding/native-generated-on-light.png",
+        "sha256": "7edd8549a8283b2f534e3142c90dc677256cd2eba1ed5e24604e3421db147fe6"
+      },
+      {
+        "path": "branding/native-generated-on-dark.png",
+        "sha256": "74987ce06d63fa6a91eb3b21b536736833f89f559e064dd74328a2b0c228c38c"
+      }
+    ],
+    "reviewedCompact": {
+      "path": "branding/reviewed-mark-light.png",
+      "sha256": "2d648734b61e94d2f813390b6fee43605e94678e399979e563594b05c7fc60b1"
+    }
+  }
 }

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "dealer": "al-eman-used-cars-opensooq-company",
-  "status": "research-required",
+  "status": "reviewed-imagegen-proposal",
   "realLogoFirst": true,
   "publicSources": [
     {
@@ -10,7 +10,132 @@
     }
   ],
   "originals": [],
-  "creationMethod": null,
+  "creationMethod": "imagegen-proposal",
   "dealerApproved": false,
-  "generatedInputs": null
+  "generatedInputs": {
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "master": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "fb01ce56e7f3adfb4ba50457c96de7d795c4d62d10ee1be80d3f73899ea94aec",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-5573538f-22cb-453b-ba88-57d750cceacb",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark-light.png",
+      "sha256": "52d7ff76ae23c83ebdb57292d9b273452acd75797c570d668c214bf449129b0f",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-5573538f-22cb-453b-ba88-57d750cceacb",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/reviewed-mark-light.png",
+          "sha256": "48c4c5bb82336326eae16cf2986c1c4a7728b67a562092cb80265cb912351f45",
+          "operation": "fade-trailing-reviewed-gold-sweep-at-compact-crop-boundary",
+          "mask": "gold-pixels-x255-to-300; preserve-initial-black-or-white-ink"
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-dark.png",
+      "sha256": "4bb60281d6c7084aabf97d7ae3f5f34b8104fba0a7df546477e6feed8ef461a4",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-d417e805-0688-4751-9c96-ad07d7e0eaf4",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/reviewed-mark-dark.png",
+          "sha256": "a99b3d0cad0d6452670b99ad5927acdf85b2cd6c88b1d8bbf794fbb1aed323e3",
+          "operation": "fade-trailing-reviewed-gold-sweep-at-compact-crop-boundary",
+          "mask": "gold-pixels-x255-to-300; preserve-initial-black-or-white-ink"
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "fb01ce56e7f3adfb4ba50457c96de7d795c4d62d10ee1be80d3f73899ea94aec",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-5573538f-22cb-453b-ba88-57d750cceacb",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "65fdc1c890653fb6c9dbe96c63e9a3b1216b7509e258867ada2e31dcb2038f7b",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-d417e805-0688-4751-9c96-ad07d7e0eaf4",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "65fdc1c890653fb6c9dbe96c63e9a3b1216b7509e258867ada2e31dcb2038f7b",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-d417e805-0688-4751-9c96-ad07d7e0eaf4",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewKind": "agent-visual-review",
+      "humanReview": false,
+      "dealerApproval": false,
+      "backgrounds": {
+        "onLight": "#ffffff",
+        "onDark": "#111113",
+        "onAccent": "#c40101"
+      },
+      "wordmarkWidths": [
+        220,
+        240
+      ],
+      "notes": "Exact reviewed Image Gen pair; native masters and generation provenance retained. Compact rasters cropped from the actual left symbol."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-22T23:42:46.338Z",
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#c40101"
+      ],
+      "widths": [
+        32,
+        48,
+        64
+      ],
+      "notes": "Exact left symbol cropped from reviewed artwork; the long gold sweep is tapered within compact mark to avoid a hard clipped end. Original crops retained byte for byte."
+    }
+  },
+  "sourceBlockers": [],
+  "artworkProvenance": {
+    "path": "branding/artwork-provenance.json",
+    "sha256": "fefb789d046f45dfa2fccfade439c18962252ec0aa19f88c7f51a263f24368d6",
+    "manifestSha256": "d25e9cee768a885052ac0a8df220d843c9b9c6f6f120d722705bead1cc99e694",
+    "nativeMasters": [
+      {
+        "path": "branding/native-generated-on-light.png",
+        "sha256": "757fa045ed18f3054eaf2a27e86f837cac20eb8bacfd9089471af65d947b460a"
+      },
+      {
+        "path": "branding/native-generated-on-dark.png",
+        "sha256": "557354966c47ad2ec612c00b6e395c71a6a8017b0008ac34df51048cef299ba8"
+      }
+    ],
+    "reviewedCompactLight": {
+      "path": "branding/reviewed-mark-light.png",
+      "sha256": "48c4c5bb82336326eae16cf2986c1c4a7728b67a562092cb80265cb912351f45"
+    },
+    "reviewedCompactDark": {
+      "path": "branding/reviewed-mark-dark.png",
+      "sha256": "a99b3d0cad0d6452670b99ad5927acdf85b2cd6c88b1d8bbf794fbb1aed323e3"
+    }
+  }
 }

@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Autogems Used Cars",
     "publicOrigin": "https://autogems-used-cars.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "55ddd1a22b54ff12204c726db2f2ac9ffc54dce93741957b649170805ece291e",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "5bb8190be6a19722faf555c07f573c7d0bb28ca4964713f1edac008e52c49174"
+    }
   }
 }

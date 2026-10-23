@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "ae-dubai-first-edition-used-automobile-trading",
+  "slug": "first-edition-used-automobile-trading",
+  "artworkDirectory": "first-edition-used-automobile-trading",
+  "name": "First Edition Used Automobile Trading",
+  "renderedName": "First Edition Used Automobile Trading",
+  "kind": "independent-website-logo-proposal",
+  "dealerApproved": false,
+  "ownerApproved": false,
+  "sourceEvidence": [
+    {
+      "url": "https://www.dubicars.com/dealers/dubai-first-edition-used-automobile-trading-2139?page=1",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.linkedin.com/company/first-edition-motors/",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "http://www.1-firstedition.com/",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.drivearabia.com/ar/cars-for-sale/uae/chevrolet/corvette/2026-ll-chevrolet-corvette-ll-gcc-ll-warranty-and-b81ec172f5b647f8abf8e1ac48b5e2af/",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "retainedOriginalsUnchanged": true,
+  "variants": {
+    "on-light": {
+      "path": "logo-on-light.png",
+      "sha256": "0a7a8861c2a387493138ba7b6618b87c2c46aabc4a1628758973606161099b2e",
+      "width": 1024,
+      "height": 230,
+      "transparentFraction": 0.692964504076087,
+      "master": {
+        "path": "generated-on-light.png",
+        "sha256": "1ab195800c39990072cef8da0e6646d6de54621d61343b559279a107e999bb1b",
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-3412bc89-d66e-45af-b243-fb81ab33c036",
+        "prompt": "Create one professional horizontal automotive dealership logo proposal for First Edition Used Automobile Trading. Required exact text, uppercase: FIRST EDITION USED AUTOMOBILE TRADING. Every word must be present and spelled precisely; use sensible primary name and smaller descriptor hierarchy without tiny lettering. Produce a polished original identity with a distinctive custom typographic ligature in a refined square emblem. Initials FE may inform the emblem. Emblem left, full clear name to the right, compact and balanced for a website header. Avoid overused shield and generic car silhouettes; no manufacturer badges. Clean modern lettering with careful kerning and strong legibility. All text is deep charcoal black, appropriate on a white/light header. One restrained red or gold accent may appear inside the emblem only; no pale text. Flat crisp edges, a small number of solid shapes, no chrome, no lighting, no shadow, no texture, no gradient. Genuine transparent alpha background, isolated logo with no background box, no grid, no checkerboard painted into pixels. No slogan, contact info, website, watermark, mockup, photograph, extra concept, or duplicate logo. Deliver exactly one horizontal full logo. This is an independent website identity proposal, not a claim of adopted branding.",
+        "reference": null
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 18,
+          "top": 121,
+          "width": 2137,
+          "height": 480
+        }
+      }
+    },
+    "on-dark": {
+      "path": "logo-on-dark.png",
+      "sha256": "8b56ca2fa0878d5c3cc96596bac7053fd2faf4e089e2bdd5795782372afd23ea",
+      "width": 1024,
+      "height": 232,
+      "transparentFraction": 0.5575161637931034,
+      "master": {
+        "path": "generated-on-dark.png",
+        "sha256": "4343139084d0f70704899b101ce63f5193c0e3ed0875a55faa3f85e5ce200d39",
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-977be979-3bc7-45d7-b2b2-65bbb4bb1b3d",
+        "prompt": "Create the matching light-on-dark production variant of the exact supplied logo. Preserve precisely the same emblem, geometry, spelling, word count, typographic hierarchy, proportions, layout and spacing. Required exact text: FIRST EDITION USED AUTOMOBILE TRADING. Change EVERY letter, including all secondary descriptor words and legal suffixes, to solid white so it is legible over a dark or red website header. Change the charcoal portions of the emblem to white. Retain the small red/gold emblem accent only if it contrasts clearly against a dark header. True transparent alpha background; do not paint a dark rectangle or checkerboard. Flat clean edges, no glows, shadows, bevels, textures, gradients, new artwork, new icon, extra text or mockup. Deliver one horizontal matching logo, fully legible.",
+        "reference": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-3412bc89-d66e-45af-b243-fb81ab33c036.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 20,
+          "top": 117,
+          "width": 2130,
+          "height": 483
+        }
+      }
+    }
+  },
+  "review": {
+    "status": "artwork-visually-reviewed",
+    "alpha": "all exports measured as genuine transparent nonempty PNGs",
+    "spelling": "English wordmark inspected; source-bound display aliases retained",
+    "compact": "Horizontal logos only. Interactive 32/48/64px gallery preview is provided; separate compact/favicon artwork remains part of dealer-pack preparation.",
+    "sixDesigns": "not-yet-integrated-or-rendered",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "reviewer": "Codex visual inspection",
+    "header": "All 196 paired PNGs inspected at 240x64 on white, #111113 and #c40101",
+    "evidence": "final-review-06.png"
+  },
+  "releaseReady": false,
+  "artworkHolds": [],
+  "artworkReadyForIntegration": true
+}

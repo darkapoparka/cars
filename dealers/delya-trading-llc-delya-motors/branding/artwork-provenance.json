@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "ae-dubai-delya-trading-llc",
+  "slug": "delya-trading-llc-delya-motors",
+  "artworkDirectory": "delya-trading-llc-delya-motors",
+  "name": "Delya Trading LLC (Delya Motors)",
+  "renderedName": "Delya Trading LLC",
+  "kind": "independent-website-logo-proposal",
+  "dealerApproved": false,
+  "ownerApproved": false,
+  "sourceEvidence": [
+    {
+      "url": "https://www.dubicars.com/dealer-showroom/dubai-delya-trading-llc-3364",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "retainedOriginalsUnchanged": true,
+  "variants": {
+    "on-light": {
+      "path": "logo-on-light.png",
+      "sha256": "177daf209e07cdb4cb5ba610bc90712ded8c7aea1b8166e0ce76af2a1e07e3a0",
+      "width": 1024,
+      "height": 266,
+      "transparentFraction": 0.6423872180451128,
+      "master": {
+        "path": "generated-on-light.png",
+        "sha256": "a0eba43a330121aef471a1f0664a45cc6feb526b5efa639918a2abc8e6cd8e66",
+        "width": 2056,
+        "height": 765
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-bee8222f-1d3f-4923-9e17-1fe59cb822e9",
+        "prompt": "Create one professional horizontal automotive dealership logo proposal for Delya Trading LLC. Required exact text, uppercase: DELYA TRADING LLC. Every word must be present and spelled precisely; use sensible primary name and smaller descriptor hierarchy without tiny lettering. Produce a polished original identity with a minimal memorable geometric symbol related to the distinctive name. Initials D may inform the emblem. Emblem left, full clear name to the right, compact and balanced for a website header. Avoid overused shield and generic car silhouettes; no manufacturer badges. Clean modern lettering with careful kerning and strong legibility. All text is deep charcoal black, appropriate on a white/light header. One restrained red or gold accent may appear inside the emblem only; no pale text. Flat crisp edges, a small number of solid shapes, no chrome, no lighting, no shadow, no texture, no gradient. Genuine transparent alpha background, isolated logo with no background box, no grid, no checkerboard painted into pixels. No slogan, contact info, website, watermark, mockup, photograph, extra concept, or duplicate logo. Deliver exactly one horizontal full logo. This is an independent website identity proposal, not a claim of adopted branding.",
+        "reference": null
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 54,
+          "top": 126,
+          "width": 1949,
+          "height": 507
+        }
+      }
+    },
+    "on-dark": {
+      "path": "logo-on-dark.png",
+      "sha256": "74ea95cc7759d0a132b110cc7645c7d1db75d03a42a7a850c03c01f5483e48a9",
+      "width": 1024,
+      "height": 271,
+      "transparentFraction": 0.5026846459870848,
+      "master": {
+        "path": "generated-on-dark.png",
+        "sha256": "f637d36cfba3ec4c6105e84c7b1a7174c72ee95ac65edd8d413ae6ab449d53b7",
+        "width": 2056,
+        "height": 765
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-37aff774-684a-4f1d-93c1-3c8b7c27acba",
+        "prompt": "Create the matching light-on-dark production variant of the exact supplied logo. Preserve precisely the same emblem, geometry, spelling, word count, typographic hierarchy, proportions, layout and spacing. Required exact text: DELYA TRADING LLC. Change EVERY letter, including all secondary descriptor words and legal suffixes, to solid white so it is legible over a dark or red website header. Change the charcoal portions of the emblem to white. Retain the small red/gold emblem accent only if it contrasts clearly against a dark header. True transparent alpha background; do not paint a dark rectangle or checkerboard. Flat clean edges, no glows, shadows, bevels, textures, gradients, new artwork, new icon, extra text or mockup. Deliver one horizontal matching logo, fully legible.",
+        "reference": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-bee8222f-1d3f-4923-9e17-1fe59cb822e9.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 51,
+          "top": 120,
+          "width": 1941,
+          "height": 513
+        }
+      }
+    }
+  },
+  "review": {
+    "status": "artwork-visually-reviewed",
+    "alpha": "all exports measured as genuine transparent nonempty PNGs",
+    "spelling": "English wordmark inspected; source-bound display aliases retained",
+    "compact": "Horizontal logos only. Interactive 32/48/64px gallery preview is provided; separate compact/favicon artwork remains part of dealer-pack preparation.",
+    "sixDesigns": "not-yet-integrated-or-rendered",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "reviewer": "Codex visual inspection",
+    "header": "All 196 paired PNGs inspected at 240x64 on white, #111113 and #c40101",
+    "evidence": "final-review-06.png"
+  },
+  "releaseReady": false,
+  "artworkHolds": [],
+  "artworkReadyForIntegration": true
+}

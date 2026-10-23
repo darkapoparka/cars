@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Al Shaheen Motors Showroom",
     "publicOrigin": "https://al-shaheen-motors-showroom.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "ff9ca01f757b24eb61bab8892a829a03c50483495eddf90198354f6754a81aef",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "b7f82b454d4ffb2fcdccad2c8e1aff8148cb0400023cc7db36e90ff822681c4b"
+    }
   }
 }

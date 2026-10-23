@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-input-review",
+  "dealer": "merly-motors-llc",
+  "reviewed": true,
+  "reviewedAt": "2026-10-23T01:21:59.304Z",
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "checks": [
+    "canonical-hosting-and-preserved-fleet-collisions",
+    "assigned-expansion-lead",
+    "public-fact-schema-and-price-omission",
+    "personal-contact-screen",
+    "retained-stock-media",
+    "companion-copy-source-binding",
+    "immutable-template-release-and-native-QA-parent",
+    "reviewed-artwork-provenance-and-regenerated-logo-hashes"
+  ],
+  "sourceArtworkReview": "Retained artwork review is separate provenance; this command does not perform visual, Arabic-expert or dealer approval.",
+  "copyReview": "Automated structure, stock hash, source text and complete EN/BG rows; no new human translation approval is inferred.",
+  "contacts": {
+    "schemaVersion": 1,
+    "kind": "cars-automated-public-contact-screen",
+    "dealer": "merly-motors-llc",
+    "method": "heuristic; no claim that unflagged values cannot be personal",
+    "flags": [],
+    "blocking": []
+  },
+  "batch": {
+    "number": 2,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "us-ga-cartersville-merly-motors",
+    "position": 110
+  },
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "inputs": [
+    {
+      "path": "FACTS-AND-INVENTORY.json",
+      "sha256": "5242a306a4461482052383faf3c856377b5f34c1d4a20da47b75f7b5e77a671b"
+    },
+    {
+      "path": "branding/artwork-provenance.json",
+      "sha256": "179f15c93b917033e7905aa0792b96849f815a37464c06b27c2e0d2ac8eb0ac1"
+    },
+    {
+      "path": "branding/generated-mark-dark.png",
+      "sha256": "d9749112084a1b35d7d66ccf44f206ebac341e15545bfa7d34dcdc97d933bd05"
+    },
+    {
+      "path": "branding/generated-mark-light.png",
+      "sha256": "96c30f9b0f3b519de0707ab950576670f9f844dec13b321d1be9230a93b2302a"
+    },
+    {
+      "path": "branding/generated-on-dark.png",
+      "sha256": "ed2326fa09eaaff38081e2864f3560e8cb1780afedbcbfbc6a19c526aaba3bf9"
+    },
+    {
+      "path": "branding/generated-on-light.png",
+      "sha256": "6671f3b221f76fdc7c78f1b9dcf3a7bbdc43636f8f01aaa1ac8ac9552a2952b1"
+    },
+    {
+      "path": "branding/logo-contract.json",
+      "sha256": "cb39751b78a4f7b384a0bf979aeaaa4597dea7baeac87d551567449d9f4d2cdb"
+    },
+    {
+      "path": "branding/logo-recipe.json",
+      "sha256": "543946d98372a7ba16ecd4e08c1e2fdb1e6a25c07666a89275a69c300838bce1"
+    },
+    {
+      "path": "branding/native-generated-on-dark.png",
+      "sha256": "4afc01b20788d0e0f475d569443a3c10fec7fc1624db319ef0df32269301c0e3"
+    },
+    {
+      "path": "branding/native-generated-on-light.png",
+      "sha256": "51f6e1fe939a875ea7df084ba6c7bada1d572bd48aced8bdd4b8e330636ac9f3"
+    },
+    {
+      "path": "branding/source.json",
+      "sha256": "f4a65fca3f69507d4b49bcedcdc4ef4c84be0b8392932efa8bb8e5127176767b"
+    },
+    {
+      "path": "business-facts.json",
+      "sha256": "e9872a55fbb6dbc9ed5d0f3116da934dd3e52ec3a856fe843f9ad86366658dab"
+    },
+    {
+      "path": "copy-review.json",
+      "sha256": "95d4ee9961063b24c1bb49e04435e55facc277c0087eb7746decf047f6065025"
+    },
+    {
+      "path": "dealer-stock/template-demo-1.webp",
+      "sha256": "945e6864218ab3bd5fbd415336b212ecfde645685033f8506836f906885d447c"
+    },
+    {
+      "path": "dealer-stock/template-demo-2.webp",
+      "sha256": "17689ab880bf47de81ef467c34d639223f39f0c1ebe68c90d0aaf70e3dcc6333"
+    },
+    {
+      "path": "dealer-stock/template-demo-3.webp",
+      "sha256": "d644dec8e1ef280a702dccac267a2367f0ab823e40373e1299b156e7723b3b1f"
+    },
+    {
+      "path": "dealer.json",
+      "sha256": "b21d04f774665d51da3e0c9e3198aed19b10e6481b91b6530645b4dc4e79d009"
+    },
+    {
+      "path": "identity-review.json",
+      "sha256": "2a2ff5da73d56c636d3becdc014f3e9aa410edc900531f5068b8e78be2ced999"
+    },
+    {
+      "path": "locale.json",
+      "sha256": "a6ab0d7cc10654d7bca845982895ec3c5853820398842cacca3938f653acfac6"
+    },
+    {
+      "path": "missing-facts.json",
+      "sha256": "9270f7d273a36eeaf56c6c5e22b4240716c5e4a89af641ee5c7954ebd180df9b"
+    },
+    {
+      "path": "qualification.json",
+      "sha256": "76c9626b68fcb30616b2297e4a99909b3eaf46166de2d09b5405ecc7d9c1c5e2"
+    },
+    {
+      "path": "source-evidence.json",
+      "sha256": "a27a0b95acb5037330198750acd4dd4567e135d82a035181bbc999561ec592f7"
+    },
+    {
+      "path": "stock.json",
+      "sha256": "3e52b371e2a88247aef2fcc4a84e373f0439bcdebf308ab8756798988c520d79"
+    }
+  ],
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "providerWrites": 0
+}

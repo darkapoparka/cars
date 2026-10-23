@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "dealer": "lujain-used-cars-trading",
+  "reviewed": true,
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "b4ac9056308f3ed6b254f5d5411c365f7ff8943a91a105ef82b68b160f9e606f",
+      "sourceSha256": "6b3699be1b3b909c7c73a37cedae98226871b41cd27fd6614329c39f3c877221"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "6617b65144da4dc675ab1e878f0536faab5b262072decf7db6a50fb6a29e94b8",
+      "sourceSha256": "7856d04f7492c74b91f92fc2e5ae1f7e0affe4b04ba86dfa95d51063234eb178"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "6617b65144da4dc675ab1e878f0536faab5b262072decf7db6a50fb6a29e94b8",
+      "sourceSha256": "7856d04f7492c74b91f92fc2e5ae1f7e0affe4b04ba86dfa95d51063234eb178"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "6b3699be1b3b909c7c73a37cedae98226871b41cd27fd6614329c39f3c877221",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-48787a12-7dd8-4a30-a4ae-828227c59fd8",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "2a4262bd0d4c38ca9c3e5f854d07d25f9174b5fc250e070bbcc5fac9936c4836",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-48787a12-7dd8-4a30-a4ae-828227c59fd8",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "6b3699be1b3b909c7c73a37cedae98226871b41cd27fd6614329c39f3c877221",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 230,
+          "height": 315
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "8978721b4da5aba3e9b8c44a4bd5c616fb82d5f3a422a3aed70624eca61d9076"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "6b3699be1b3b909c7c73a37cedae98226871b41cd27fd6614329c39f3c877221",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-48787a12-7dd8-4a30-a4ae-828227c59fd8",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/lujain-used-cars-trading/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "7856d04f7492c74b91f92fc2e5ae1f7e0affe4b04ba86dfa95d51063234eb178",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-f2d358ab-8ab7-4977-b59b-3daf88d80b26",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/lujain-used-cars-trading/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "7856d04f7492c74b91f92fc2e5ae1f7e0affe4b04ba86dfa95d51063234eb178",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-f2d358ab-8ab7-4977-b59b-3daf88d80b26",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/lujain-used-cars-trading/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "6b3699be1b3b909c7c73a37cedae98226871b41cd27fd6614329c39f3c877221",
+      "sha256": "6b3699be1b3b909c7c73a37cedae98226871b41cd27fd6614329c39f3c877221",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 315
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "7856d04f7492c74b91f92fc2e5ae1f7e0affe4b04ba86dfa95d51063234eb178",
+      "sha256": "7856d04f7492c74b91f92fc2e5ae1f7e0affe4b04ba86dfa95d51063234eb178",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 317
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "7856d04f7492c74b91f92fc2e5ae1f7e0affe4b04ba86dfa95d51063234eb178",
+      "sha256": "7856d04f7492c74b91f92fc2e5ae1f7e0affe4b04ba86dfa95d51063234eb178",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 317
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "5b4ccde2293dab3aee0d90778fc2123a89fc85b39235f1d748797c70836bef80",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-48787a12-7dd8-4a30-a4ae-828227c59fd8",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "6b3699be1b3b909c7c73a37cedae98226871b41cd27fd6614329c39f3c877221",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 230,
+            "height": 315
+          }
+        }
+      },
+      "sourceReference": "dealers/lujain-used-cars-trading/branding/generated-mark-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "2b784ba00dc37ff56860a667480efcaa79d0a866ad0aa556871ac1968a013be1",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-f2d358ab-8ab7-4977-b59b-3daf88d80b26",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "7856d04f7492c74b91f92fc2e5ae1f7e0affe4b04ba86dfa95d51063234eb178",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 230,
+            "height": 317
+          }
+        }
+      },
+      "sourceReference": "dealers/lujain-used-cars-trading/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "2a4262bd0d4c38ca9c3e5f854d07d25f9174b5fc250e070bbcc5fac9936c4836",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-48787a12-7dd8-4a30-a4ae-828227c59fd8",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "6b3699be1b3b909c7c73a37cedae98226871b41cd27fd6614329c39f3c877221",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 230,
+            "height": 315
+          }
+        }
+      },
+      "sourceReference": "dealers/lujain-used-cars-trading/branding/generated-mark-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "8978721b4da5aba3e9b8c44a4bd5c616fb82d5f3a422a3aed70624eca61d9076",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-48787a12-7dd8-4a30-a4ae-828227c59fd8",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "6b3699be1b3b909c7c73a37cedae98226871b41cd27fd6614329c39f3c877221",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 230,
+            "height": 315
+          }
+        }
+      },
+      "sourceReference": "dealers/lujain-used-cars-trading/branding/generated-mark-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "e07a08e9552890694f6ac28b302c3f4eeea7d5c85bc4dd0a30b20c1ef6db1990",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-f2d358ab-8ab7-4977-b59b-3daf88d80b26",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "7856d04f7492c74b91f92fc2e5ae1f7e0affe4b04ba86dfa95d51063234eb178",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 230,
+          "height": 317
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "us-mn-lakeland-gasper-auto-sales",
+  "slug": "gasper-auto-sales-llc",
+  "artworkDirectory": "gasper-auto-sales-llc",
+  "name": "Gasper Auto Sales LLC",
+  "renderedName": "Gasper Auto Sales LLC",
+  "kind": "independent-website-logo-proposal",
+  "dealerApproved": false,
+  "ownerApproved": false,
+  "sourceEvidence": [
+    {
+      "url": "https://www.facebook.com/profile.php?id=100057612182407",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.facebook.com/permalink.php?story_fbid=pfbid08yGXs1feGtrUBMQEXZboY3nNevo2TvQSCDo48K3zRBieKiu97itXvaZdtPx7r4kFl&id=100057612182407",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.autoyas.com/US/Lakeland/259372398095957/Gasper-Auto-Sales-LLC",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://ci.lakeland.mn.us/vertical/sites/%7BF87BEF79-D520-4F87-86D1-CB82984CEB20%7D/uploads/February_21_2023.pdf",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "retainedOriginalsUnchanged": true,
+  "variants": {
+    "on-light": {
+      "path": "logo-on-light.png",
+      "sha256": "3be9136194bf9e08750ebea78f47b117bc4e3cec478bfc33b2eb654151a19ab4",
+      "width": 1024,
+      "height": 199,
+      "transparentFraction": 0.6090952810929648,
+      "master": {
+        "path": "generated-on-light.png",
+        "sha256": "51eeddad96d2c7a93018b90f4cb6470bf40407e6eaeb8b652ba320695e748b71",
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-952f4a60-f334-4c82-bb54-05fbe3bbb0ff",
+        "prompt": "Use case: logo-brand. Create ONE agency-quality horizontal logo for an independent car-dealer website proposal. Exact text: \"GASPER AUTO SALES LLC\". Use a distinctive bold geometric monogram using the meaningful initials in this exact name; original shared-stem design with generous open counters. The business name is the core identity: keep all words spelled correctly; use a clear main line and, when useful, a readable second line for the descriptor, not a tiny slogan. Place the original simple compact symbol at left, complete exact wordmark at right. Dark/charcoal primary ink for WHITE website headers, optional restrained single-color accent only if it strengthens this identity. Crisp flat vector-like edges, clear geometry, professional credible dealership branding and excellent optical letter spacing. No car manufacturer's emblem, shield cliché, generic car silhouette, photorealistic vehicle, chrome, gradients, shadows, texture, background panel, checkerboard, mockup, watermark, unrelated decoration or invented tagline. True alpha-transparent background. A wide landscape logo tightly and comfortably framed with approximately 5% transparent margins, not a tiny logo on a poster. Distinctive enough to stand apart from other dealers, and readable at 240px wide. This is a generated independent proposal, not a claim of official adoption. Only one logo.",
+        "reference": null
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 27,
+          "top": 147,
+          "width": 2118,
+          "height": 412
+        }
+      }
+    },
+    "on-dark": {
+      "path": "logo-on-dark.png",
+      "sha256": "81402f228ccf36ce9caa16ad1d32454c08f0abc63f34b271cbaf9e781f302a5c",
+      "width": 1024,
+      "height": 200,
+      "transparentFraction": 0.419150390625,
+      "master": {
+        "path": "generated-on-dark.png",
+        "sha256": "e8cd4a72ea4b248312cd64c86e5ec767167fd682e4c3ba771b1fe82ea6094846",
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-099173db-36b2-4248-8765-b0ae2d3bdc01",
+        "prompt": "Create the matching light-ink variant for DARK website headers of the supplied \"GASPER AUTO SALES LLC\" logo. Preserve the exact complete name, spelling, logo symbol, overall silhouette, arrangement, relative scale, typography and letter spacing. Change the dark primary foreground ink to clean pure white; preserve a restrained existing color accent only when it stays visible against a deep dark or red header. Genuine alpha transparency, open counters and smooth clean edges. No background block, no new logo, no new lettering, no added slogan, texture, distress, shadow, watermark or checkerboard. This must be the SAME identity, simply its readable on-dark counterpart. Only one transparent horizontal logo.",
+        "reference": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-952f4a60-f334-4c82-bb54-05fbe3bbb0ff.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 26,
+          "top": 143,
+          "width": 2097,
+          "height": 409
+        }
+      }
+    }
+  },
+  "review": {
+    "status": "artwork-visually-reviewed",
+    "alpha": "all exports measured as genuine transparent nonempty PNGs",
+    "spelling": "English wordmark inspected; source-bound display aliases retained",
+    "compact": "Horizontal logos only. Interactive 32/48/64px gallery preview is provided; separate compact/favicon artwork remains part of dealer-pack preparation.",
+    "sixDesigns": "not-yet-integrated-or-rendered",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "reviewer": "Codex visual inspection",
+    "header": "All 196 paired PNGs inspected at 240x64 on white, #111113 and #c40101",
+    "evidence": "final-review-01.png"
+  },
+  "releaseReady": false,
+  "artworkHolds": [],
+  "artworkReadyForIntegration": true
+}

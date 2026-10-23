@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Al Hazim Motors",
     "publicOrigin": "https://al-hazim-motors.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "384cbd63f41ad9242d57e025a3992a2c2811c2f6239bdaa9843a18710214a841",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "6452b61a27eda03e606de1073513a8b8378e03b399e3f7d5f8c76ffc79aef737"
+    }
   }
 }

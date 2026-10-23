@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Al Bahrain Used Cars",
     "publicOrigin": "https://al-bahrain-used-cars.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "eaf692c8a70a879ee2b0abe5200cc28be53a257ac311b6ec9c6ed23efcc33853",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "9b3b7e60d1523d080d1931d5f92fc8839a40445050d097f6d469903ceeb85b20"
+    }
   }
 }

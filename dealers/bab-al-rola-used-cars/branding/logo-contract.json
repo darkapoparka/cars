@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "dealer": "bab-al-rola-used-cars",
+  "reviewed": true,
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "964032dbb66c0097cd26cfc61834d46a745694262deaa529bd7a17858e9c0a3d",
+      "sourceSha256": "1696c7afc292249f0b93a0ae84e3ef289780c3affa5c5a35fb29e1b3d08c7973"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "62b80090ba6b567e049a144f62e88592b9db432f181c2eee318b9102969da3bd",
+      "sourceSha256": "5b9060b80fd8f77d6ee5df3b9f5dac6123a6e346e9d45b1d59710c33ca81e0ca"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "62b80090ba6b567e049a144f62e88592b9db432f181c2eee318b9102969da3bd",
+      "sourceSha256": "5b9060b80fd8f77d6ee5df3b9f5dac6123a6e346e9d45b1d59710c33ca81e0ca"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "1696c7afc292249f0b93a0ae84e3ef289780c3affa5c5a35fb29e1b3d08c7973",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-eeb9b072-6c9d-4e00-bc90-82aa2ee2c596",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "d19eb79e12e965ad90a933fba45973ed842467e79fe0c1f16b8ace49ff0a9669",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-eeb9b072-6c9d-4e00-bc90-82aa2ee2c596",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "1696c7afc292249f0b93a0ae84e3ef289780c3affa5c5a35fb29e1b3d08c7973",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 295,
+          "height": 238
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "33314883f8a71ccff8605a288f5272b89f7337e63887ebde35d35fb34039c230"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "1696c7afc292249f0b93a0ae84e3ef289780c3affa5c5a35fb29e1b3d08c7973",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-eeb9b072-6c9d-4e00-bc90-82aa2ee2c596",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/bab-al-rola-used-cars/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "5b9060b80fd8f77d6ee5df3b9f5dac6123a6e346e9d45b1d59710c33ca81e0ca",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-c05dd9c2-fc99-4e6b-af83-ea9242cc7a7d",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/bab-al-rola-used-cars/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "5b9060b80fd8f77d6ee5df3b9f5dac6123a6e346e9d45b1d59710c33ca81e0ca",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-c05dd9c2-fc99-4e6b-af83-ea9242cc7a7d",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/bab-al-rola-used-cars/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "1696c7afc292249f0b93a0ae84e3ef289780c3affa5c5a35fb29e1b3d08c7973",
+      "sha256": "1696c7afc292249f0b93a0ae84e3ef289780c3affa5c5a35fb29e1b3d08c7973",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 238
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "5b9060b80fd8f77d6ee5df3b9f5dac6123a6e346e9d45b1d59710c33ca81e0ca",
+      "sha256": "5b9060b80fd8f77d6ee5df3b9f5dac6123a6e346e9d45b1d59710c33ca81e0ca",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 240
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "5b9060b80fd8f77d6ee5df3b9f5dac6123a6e346e9d45b1d59710c33ca81e0ca",
+      "sha256": "5b9060b80fd8f77d6ee5df3b9f5dac6123a6e346e9d45b1d59710c33ca81e0ca",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 240
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "740a7045e7e508cc0cbbc53e3f7deb0917410675be1df0c853d35160b2d8782b",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-eeb9b072-6c9d-4e00-bc90-82aa2ee2c596",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "1696c7afc292249f0b93a0ae84e3ef289780c3affa5c5a35fb29e1b3d08c7973",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 295,
+            "height": 238
+          }
+        }
+      },
+      "sourceReference": "dealers/bab-al-rola-used-cars/branding/generated-mark-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "ef3d6f64b3915f6da7d3db74a05b5c6891cc391d23598cf30ea6a006b4a1c771",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-c05dd9c2-fc99-4e6b-af83-ea9242cc7a7d",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "5b9060b80fd8f77d6ee5df3b9f5dac6123a6e346e9d45b1d59710c33ca81e0ca",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 295,
+            "height": 240
+          }
+        }
+      },
+      "sourceReference": "dealers/bab-al-rola-used-cars/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "d19eb79e12e965ad90a933fba45973ed842467e79fe0c1f16b8ace49ff0a9669",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-eeb9b072-6c9d-4e00-bc90-82aa2ee2c596",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "1696c7afc292249f0b93a0ae84e3ef289780c3affa5c5a35fb29e1b3d08c7973",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 295,
+            "height": 238
+          }
+        }
+      },
+      "sourceReference": "dealers/bab-al-rola-used-cars/branding/generated-mark-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "33314883f8a71ccff8605a288f5272b89f7337e63887ebde35d35fb34039c230",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-eeb9b072-6c9d-4e00-bc90-82aa2ee2c596",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "1696c7afc292249f0b93a0ae84e3ef289780c3affa5c5a35fb29e1b3d08c7973",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 295,
+            "height": 238
+          }
+        }
+      },
+      "sourceReference": "dealers/bab-al-rola-used-cars/branding/generated-mark-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "df67e2f100036f0d5bdf6500adccbd85f76d22d27ebc60edc4028719d6e80ae1",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-c05dd9c2-fc99-4e6b-af83-ea9242cc7a7d",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "5b9060b80fd8f77d6ee5df3b9f5dac6123a6e346e9d45b1d59710c33ca81e0ca",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 295,
+          "height": 240
+        }
+      }
+    }
+  }
+}

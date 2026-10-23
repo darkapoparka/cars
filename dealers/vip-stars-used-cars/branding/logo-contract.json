@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "dealer": "vip-stars-used-cars",
+  "reviewed": true,
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "b0bb43d2310310c87b185b9858a4d81037bd914f409de3ef121261230f129a21",
+      "sourceSha256": "8e6fa5ee7e0ca915b4338bb4bfc081c1af3c1f13357f85e2aafb0d7e69dc809e"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "4388cd5795f916d21f4481b5cfae8bbfd2cf39576b8e45290f64daaa32d6e19b",
+      "sourceSha256": "ca3d9cbd1e06790d69c1afc768a497dbd6829b98e6d8379cdb83eaddb0e28570"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "4388cd5795f916d21f4481b5cfae8bbfd2cf39576b8e45290f64daaa32d6e19b",
+      "sourceSha256": "ca3d9cbd1e06790d69c1afc768a497dbd6829b98e6d8379cdb83eaddb0e28570"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "8e6fa5ee7e0ca915b4338bb4bfc081c1af3c1f13357f85e2aafb0d7e69dc809e",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-6fab5fcb-a301-42fb-aae1-ad2841779cf0",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "8df19f63137186d103417ef444664344076133eb3fe3a4cb4356819d7860c3bf",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-6fab5fcb-a301-42fb-aae1-ad2841779cf0",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "8e6fa5ee7e0ca915b4338bb4bfc081c1af3c1f13357f85e2aafb0d7e69dc809e",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 338,
+          "height": 252
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "9f0dbbac933e7fd4e7e690bb2cdb8efc2865aa4dd0f6813474a706edb206ac92"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "8e6fa5ee7e0ca915b4338bb4bfc081c1af3c1f13357f85e2aafb0d7e69dc809e",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-6fab5fcb-a301-42fb-aae1-ad2841779cf0",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/vip-stars-used-cars/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "ca3d9cbd1e06790d69c1afc768a497dbd6829b98e6d8379cdb83eaddb0e28570",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-4f63ec54-f98e-49c2-b6ad-6a55e04ab8ae",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/vip-stars-used-cars/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "ca3d9cbd1e06790d69c1afc768a497dbd6829b98e6d8379cdb83eaddb0e28570",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-4f63ec54-f98e-49c2-b6ad-6a55e04ab8ae",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/vip-stars-used-cars/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "8e6fa5ee7e0ca915b4338bb4bfc081c1af3c1f13357f85e2aafb0d7e69dc809e",
+      "sha256": "8e6fa5ee7e0ca915b4338bb4bfc081c1af3c1f13357f85e2aafb0d7e69dc809e",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 252
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "ca3d9cbd1e06790d69c1afc768a497dbd6829b98e6d8379cdb83eaddb0e28570",
+      "sha256": "ca3d9cbd1e06790d69c1afc768a497dbd6829b98e6d8379cdb83eaddb0e28570",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 256
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "ca3d9cbd1e06790d69c1afc768a497dbd6829b98e6d8379cdb83eaddb0e28570",
+      "sha256": "ca3d9cbd1e06790d69c1afc768a497dbd6829b98e6d8379cdb83eaddb0e28570",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 256
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "d5c854b1da2304f0f53a3758614e9a4a7a18735032ffc5fe10336890abeafc9d",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-6fab5fcb-a301-42fb-aae1-ad2841779cf0",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "8e6fa5ee7e0ca915b4338bb4bfc081c1af3c1f13357f85e2aafb0d7e69dc809e",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 338,
+            "height": 252
+          }
+        }
+      },
+      "sourceReference": "dealers/vip-stars-used-cars/branding/generated-mark-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "c992fc9743b5c56e5754394e18109baeccf21302afe18bfd996beb64efcae0f6",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-4f63ec54-f98e-49c2-b6ad-6a55e04ab8ae",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "ca3d9cbd1e06790d69c1afc768a497dbd6829b98e6d8379cdb83eaddb0e28570",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 338,
+            "height": 256
+          }
+        }
+      },
+      "sourceReference": "dealers/vip-stars-used-cars/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "8df19f63137186d103417ef444664344076133eb3fe3a4cb4356819d7860c3bf",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-6fab5fcb-a301-42fb-aae1-ad2841779cf0",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "8e6fa5ee7e0ca915b4338bb4bfc081c1af3c1f13357f85e2aafb0d7e69dc809e",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 338,
+            "height": 252
+          }
+        }
+      },
+      "sourceReference": "dealers/vip-stars-used-cars/branding/generated-mark-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "9f0dbbac933e7fd4e7e690bb2cdb8efc2865aa4dd0f6813474a706edb206ac92",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-6fab5fcb-a301-42fb-aae1-ad2841779cf0",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "8e6fa5ee7e0ca915b4338bb4bfc081c1af3c1f13357f85e2aafb0d7e69dc809e",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 338,
+            "height": 252
+          }
+        }
+      },
+      "sourceReference": "dealers/vip-stars-used-cars/branding/generated-mark-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "64e5f6bd32ac8d1750508a0d3ac567039a755e3906163cb38cc5ac216b18a241",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-4f63ec54-f98e-49c2-b6ad-6a55e04ab8ae",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "ca3d9cbd1e06790d69c1afc768a497dbd6829b98e6d8379cdb83eaddb0e28570",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 338,
+          "height": 256
+        }
+      }
+    }
+  }
+}

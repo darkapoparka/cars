@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "dealer": "switch-cars-f-z-e",
+  "reviewed": true,
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "8eacadefdc22bc5e0007045a4f08f27a97f40bd384c374a3cda194f1aa67ed39",
+      "sourceSha256": "14ff7974c02a24a517d945a4caaa728d588109412b4c7183dd911e97329160af"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "bab13a9571e02327ff0d39aeccee7bf5bf0a129a33dd7977361430c1610710ac",
+      "sourceSha256": "940d2564f374ac96def4e235335e97522b2e3f9ae53e818a311d580bc6c0659a"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "bab13a9571e02327ff0d39aeccee7bf5bf0a129a33dd7977361430c1610710ac",
+      "sourceSha256": "940d2564f374ac96def4e235335e97522b2e3f9ae53e818a311d580bc6c0659a"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "14ff7974c02a24a517d945a4caaa728d588109412b4c7183dd911e97329160af",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-be52801a-f0bc-40cb-a1d6-d4eb81b7f99e",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "35ddd82fcede3212af92a1aa2268224f2eac257a8b1af9854fe7da4374632296",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-be52801a-f0bc-40cb-a1d6-d4eb81b7f99e",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "14ff7974c02a24a517d945a4caaa728d588109412b4c7183dd911e97329160af",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 235,
+          "height": 150
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "4a6d4fdc0b1ff5f94bba7124aeda81c405fe5c9245eed578fd3fafc7e035e60e"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "14ff7974c02a24a517d945a4caaa728d588109412b4c7183dd911e97329160af",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-be52801a-f0bc-40cb-a1d6-d4eb81b7f99e",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/switch-cars-f-z-e/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "940d2564f374ac96def4e235335e97522b2e3f9ae53e818a311d580bc6c0659a",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-2934c543-8a61-4e8b-a7b3-2a7ab6f73599",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/switch-cars-f-z-e/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "940d2564f374ac96def4e235335e97522b2e3f9ae53e818a311d580bc6c0659a",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-2934c543-8a61-4e8b-a7b3-2a7ab6f73599",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/switch-cars-f-z-e/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "14ff7974c02a24a517d945a4caaa728d588109412b4c7183dd911e97329160af",
+      "sha256": "14ff7974c02a24a517d945a4caaa728d588109412b4c7183dd911e97329160af",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 150
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "940d2564f374ac96def4e235335e97522b2e3f9ae53e818a311d580bc6c0659a",
+      "sha256": "940d2564f374ac96def4e235335e97522b2e3f9ae53e818a311d580bc6c0659a",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 149
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "940d2564f374ac96def4e235335e97522b2e3f9ae53e818a311d580bc6c0659a",
+      "sha256": "940d2564f374ac96def4e235335e97522b2e3f9ae53e818a311d580bc6c0659a",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 149
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "2a038548d4ff285886e1c1a96de5614831adac3e8a80c58a33ccca54722134b3",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-be52801a-f0bc-40cb-a1d6-d4eb81b7f99e",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "14ff7974c02a24a517d945a4caaa728d588109412b4c7183dd911e97329160af",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 235,
+            "height": 150
+          }
+        }
+      },
+      "sourceReference": "dealers/switch-cars-f-z-e/branding/generated-mark-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "52c9387acd4b29928e6ed86a082c1411d94ebc65f3198989ef8037acfe1c1667",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-2934c543-8a61-4e8b-a7b3-2a7ab6f73599",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "940d2564f374ac96def4e235335e97522b2e3f9ae53e818a311d580bc6c0659a",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 235,
+            "height": 149
+          }
+        }
+      },
+      "sourceReference": "dealers/switch-cars-f-z-e/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "35ddd82fcede3212af92a1aa2268224f2eac257a8b1af9854fe7da4374632296",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-be52801a-f0bc-40cb-a1d6-d4eb81b7f99e",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "14ff7974c02a24a517d945a4caaa728d588109412b4c7183dd911e97329160af",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 235,
+            "height": 150
+          }
+        }
+      },
+      "sourceReference": "dealers/switch-cars-f-z-e/branding/generated-mark-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "4a6d4fdc0b1ff5f94bba7124aeda81c405fe5c9245eed578fd3fafc7e035e60e",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-be52801a-f0bc-40cb-a1d6-d4eb81b7f99e",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "14ff7974c02a24a517d945a4caaa728d588109412b4c7183dd911e97329160af",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 235,
+            "height": 150
+          }
+        }
+      },
+      "sourceReference": "dealers/switch-cars-f-z-e/branding/generated-mark-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "faea5b88b5119a666254b42c86f73daf825a258de9564f284a772a04f8c0041d",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-2934c543-8a61-4e8b-a7b3-2a7ab6f73599",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "940d2564f374ac96def4e235335e97522b2e3f9ae53e818a311d580bc6c0659a",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 235,
+          "height": 149
+        }
+      }
+    }
+  }
+}

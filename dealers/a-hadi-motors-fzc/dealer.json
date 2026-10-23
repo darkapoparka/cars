@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "A Hadi Motors FZC",
     "publicOrigin": "https://a-hadi-motors-fzc.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "25a850910ff82565405630630d36757a1f237a7b96822019760c11144f39d061",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "da5d37f7486c8db237516ebeae50c2f818c3486c9f55cca738d7652eb3dd7ee6"
+    }
   }
 }

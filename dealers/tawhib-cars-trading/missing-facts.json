@@ -3,6 +3,11 @@
   "dealer": "tawhib-cars-trading",
   "missing": [
     {
+      "field": "business.address",
+      "required": false,
+      "reason": "Exact showroom address is not confirmed by the named public source."
+    },
+    {
       "field": "business.phone",
       "required": false,
       "reason": "No usable sourced value in the retained public business record."

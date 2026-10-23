@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-behar-used-cars",
+  "reviewed": true,
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "9aeace739b3b3586c0e1d3fd6ade595b04d0d6af479cba3bf2c7e0a9e2d17ee7",
+      "sourceSha256": "f5d7950b26ce33c282111a2d134ab7443757ce074a3682a3e609c1e36f98cff6"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "8f1dd45617cdee9acce7d12dcec0c9054fccc73607e2571b0bd24335d6d927ab",
+      "sourceSha256": "8a55e77d6df440f436967fd57a9094b05504ed2977ad203379822dce6caa3935"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "8f1dd45617cdee9acce7d12dcec0c9054fccc73607e2571b0bd24335d6d927ab",
+      "sourceSha256": "8a55e77d6df440f436967fd57a9094b05504ed2977ad203379822dce6caa3935"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "f5d7950b26ce33c282111a2d134ab7443757ce074a3682a3e609c1e36f98cff6",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-eb423ba8-075a-4f72-a391-cb110dc0081d",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "8ab0faffc3e8c8a34bbe59d576c6b66d0a8c388503c506555217238769f14537",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-eb423ba8-075a-4f72-a391-cb110dc0081d",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "f5d7950b26ce33c282111a2d134ab7443757ce074a3682a3e609c1e36f98cff6",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 280,
+          "height": 285
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "b3cb9092abc08a42d493ef98b4f5635bd3fcf1161455ae2470f65c3956fcac45"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "f5d7950b26ce33c282111a2d134ab7443757ce074a3682a3e609c1e36f98cff6",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-eb423ba8-075a-4f72-a391-cb110dc0081d",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-behar-used-cars/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "8a55e77d6df440f436967fd57a9094b05504ed2977ad203379822dce6caa3935",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-48d0e4a1-ce7a-441d-8994-13f38fe473e0",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-behar-used-cars/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "8a55e77d6df440f436967fd57a9094b05504ed2977ad203379822dce6caa3935",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-48d0e4a1-ce7a-441d-8994-13f38fe473e0",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-behar-used-cars/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "f5d7950b26ce33c282111a2d134ab7443757ce074a3682a3e609c1e36f98cff6",
+      "sha256": "f5d7950b26ce33c282111a2d134ab7443757ce074a3682a3e609c1e36f98cff6",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 285
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "8a55e77d6df440f436967fd57a9094b05504ed2977ad203379822dce6caa3935",
+      "sha256": "8a55e77d6df440f436967fd57a9094b05504ed2977ad203379822dce6caa3935",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 285
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "8a55e77d6df440f436967fd57a9094b05504ed2977ad203379822dce6caa3935",
+      "sha256": "8a55e77d6df440f436967fd57a9094b05504ed2977ad203379822dce6caa3935",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 285
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "0381eafc856310296fa3510fd91a57f66ca90ddc15e51b47c9fa4858f4d46021",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-eb423ba8-075a-4f72-a391-cb110dc0081d",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "f5d7950b26ce33c282111a2d134ab7443757ce074a3682a3e609c1e36f98cff6",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 280,
+            "height": 285
+          }
+        }
+      },
+      "sourceReference": "dealers/al-behar-used-cars/branding/generated-mark-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "5889191feb508de655db253248349b4d74f8d5d0ab933d79f8b814233f226734",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-48d0e4a1-ce7a-441d-8994-13f38fe473e0",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "8a55e77d6df440f436967fd57a9094b05504ed2977ad203379822dce6caa3935",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 280,
+            "height": 285
+          }
+        }
+      },
+      "sourceReference": "dealers/al-behar-used-cars/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "8ab0faffc3e8c8a34bbe59d576c6b66d0a8c388503c506555217238769f14537",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-eb423ba8-075a-4f72-a391-cb110dc0081d",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "f5d7950b26ce33c282111a2d134ab7443757ce074a3682a3e609c1e36f98cff6",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 280,
+            "height": 285
+          }
+        }
+      },
+      "sourceReference": "dealers/al-behar-used-cars/branding/generated-mark-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "b3cb9092abc08a42d493ef98b4f5635bd3fcf1161455ae2470f65c3956fcac45",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-eb423ba8-075a-4f72-a391-cb110dc0081d",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "f5d7950b26ce33c282111a2d134ab7443757ce074a3682a3e609c1e36f98cff6",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 280,
+            "height": 285
+          }
+        }
+      },
+      "sourceReference": "dealers/al-behar-used-cars/branding/generated-mark-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "c263772cdfd3c0a5b2c805faaaa965a3ccac409afca6be9672553306c3dcb2f8",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-48d0e4a1-ce7a-441d-8994-13f38fe473e0",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "8a55e77d6df440f436967fd57a9094b05504ed2977ad203379822dce6caa3935",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 280,
+          "height": 285
+        }
+      }
+    }
+  }
+}

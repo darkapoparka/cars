@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": true,
+  "reviewedAt": "2026-10-23T05:03:26.230Z",
+  "dealer": "ali-used-cars",
+  "dealerId": "ae-sharjah-ali-used-cars",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "method": "Automated exact registry/pack identity, canonical hosting and batch comparison; retained public source fields were structurally checked, not human-approved.",
+  "sources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/ali-used-cars-llc-sp",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/3942-mercedes-benz-glc-20-at-4wd-258-hp-glc-300",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://auto.ae/ar/alicars/",
+      "observedAt": "2026-10-18"
+    }
+  ]
+}

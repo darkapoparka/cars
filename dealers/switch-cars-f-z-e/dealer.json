@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Switch Cars F.Z.E",
     "publicOrigin": "https://switch-cars-f-z-e.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "14ff7974c02a24a517d945a4caaa728d588109412b4c7183dd911e97329160af",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "35ddd82fcede3212af92a1aa2268224f2eac257a8b1af9854fe7da4374632296"
+    }
   }
 }

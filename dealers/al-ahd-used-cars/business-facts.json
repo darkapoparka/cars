@@ -10,15 +10,15 @@
     "currency": "AED",
     "distanceUnit": "km",
     "locale": "en-AE",
-    "address": "",
+    "address": "801/265 1, Al Ruqa Al Hamra, Sharjah, UAE",
     "phone": "",
     "phoneDisplay": "",
     "email": "",
     "website": "",
     "stockUrl": "https://www.oneclickdrive.com/company/sharjah/al-ahd-used-cars",
-    "hours": "",
+    "hours": "Monday–Friday 9:00am–6:00pm; Saturday and Sunday closed",
     "sourceUrl": "https://www.oneclickdrive.com/company/sharjah/al-ahd-used-cars",
-    "observedAt": "2026-10-18",
+    "observedAt": "2026-10-23",
     "inventoryNotice": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
     "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
     "logo": "/dealer-brand/logo-on-light.png",
@@ -28,9 +28,11 @@
   "sources": [
     {
       "url": "https://www.oneclickdrive.com/company/sharjah/al-ahd-used-cars",
-      "observedAt": "2026-10-18",
+      "observedAt": "2026-10-23",
       "supports": [
-        "retained-public-business-research"
+        "dealer-name",
+        "branch-address",
+        "shop-timings"
       ]
     }
   ]

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "dealer": "al-qeyada-motors",
-  "status": "research-required",
+  "status": "reviewed-imagegen-proposal",
   "realLogoFirst": true,
   "publicSources": [
     {
@@ -14,7 +14,134 @@
     }
   ],
   "originals": [],
-  "creationMethod": null,
+  "creationMethod": "imagegen-proposal",
   "dealerApproved": false,
-  "generatedInputs": null
+  "generatedInputs": {
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "master": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "79828ef7e1fc9de1d739da0c561e0a7cb1cf7a77559da38c5e1f190b31806e07",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-8034a04b-a8e2-41f4-ba7c-4d037608bdab",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark-light.png",
+      "sha256": "e6f3c83a1840640311c1c3ceb617a7dc9733a82eb39509812d1e715519d0d910",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-8034a04b-a8e2-41f4-ba7c-4d037608bdab",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "79828ef7e1fc9de1d739da0c561e0a7cb1cf7a77559da38c5e1f190b31806e07",
+          "operation": "crop-reviewed-al-qeyada-symbol-and-darken-gold-for-white-compact",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 315,
+            "height": 243
+          }
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-dark.png",
+      "sha256": "695d393854b22dd38073c3c85edb5c1593c54f356ef944c25279e68db807ced9",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-ef48911e-cf5c-4119-8a4f-8f29762722a4",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "02eed70da869d6d348d3006427e97103e4ee6b5fe36d05fe608627f881c7a329",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 315,
+            "height": 245
+          }
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "79828ef7e1fc9de1d739da0c561e0a7cb1cf7a77559da38c5e1f190b31806e07",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-8034a04b-a8e2-41f4-ba7c-4d037608bdab",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "02eed70da869d6d348d3006427e97103e4ee6b5fe36d05fe608627f881c7a329",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-ef48911e-cf5c-4119-8a4f-8f29762722a4",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "02eed70da869d6d348d3006427e97103e4ee6b5fe36d05fe608627f881c7a329",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-ef48911e-cf5c-4119-8a4f-8f29762722a4",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewKind": "agent-visual-review",
+      "humanReview": false,
+      "dealerApproval": false,
+      "backgrounds": {
+        "onLight": "#ffffff",
+        "onDark": "#111113",
+        "onAccent": "#c40101"
+      },
+      "wordmarkWidths": [
+        220,
+        240
+      ],
+      "notes": "Exact reviewed Image Gen pair; native masters and generation provenance retained. Compact rasters cropped from the actual left symbol."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-22T23:42:46.338Z",
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#c40101"
+      ],
+      "widths": [
+        32,
+        48,
+        64
+      ],
+      "notes": "Reviewed Al Qeyada symbol retained; compact-only gold darkened for white favicon contrast. Horizontal light/dark originals unchanged; native 32/64px and browser QA independently required."
+    }
+  },
+  "sourceBlockers": [],
+  "artworkProvenance": {
+    "path": "branding/artwork-provenance.json",
+    "sha256": "2ac69392bc3b0553718dbc5354cda74dbe0dacfeed130c00f11dee1e67a998fc",
+    "manifestSha256": "d25e9cee768a885052ac0a8df220d843c9b9c6f6f120d722705bead1cc99e694",
+    "nativeMasters": [
+      {
+        "path": "branding/native-generated-on-light.png",
+        "sha256": "71685ba2a8f5f26d3cc55f2eb4ad0f258f91c79d366cfbe3569f0189a464a0ff"
+      },
+      {
+        "path": "branding/native-generated-on-dark.png",
+        "sha256": "d2a9884b5c9788ad45689647618f5fff6cbdf20e2f4f3680bfa3ec05dd19a996"
+      }
+    ]
+  }
 }

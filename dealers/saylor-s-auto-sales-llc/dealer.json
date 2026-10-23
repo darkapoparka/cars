@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Saylor's Auto Sales LLC",
     "publicOrigin": "https://saylor-s-auto-sales-llc.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "4d7b43845bebcbdf47a7f50bdad41f0753a2f318e2ab3a179e28850c96b6be0e",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "8b3cb4344c0ad16a26b8e933f0082d81414c8cbe00e2419f9354870810d3b9b5"
+    }
   }
 }

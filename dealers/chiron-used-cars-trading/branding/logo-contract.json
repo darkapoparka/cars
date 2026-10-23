@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "dealer": "chiron-used-cars-trading",
+  "reviewed": true,
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "0149743611d6463bc819b5e853e9bdbfe198bf2a37efe223437b1c40bf6fa185",
+      "sourceSha256": "78661702cd5ca0825cb495f5b2ab1ede2e18be6982c181889ba05f86199b15f8"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "36d728e2223ca674bdca8dd9fecf0f2124e693df78edc01a6fa4a2cd6057456c",
+      "sourceSha256": "f4e3272116a34bb8792ec0fccd0a1ac4503440b65add3d1649d7c5f2403959db"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "36d728e2223ca674bdca8dd9fecf0f2124e693df78edc01a6fa4a2cd6057456c",
+      "sourceSha256": "f4e3272116a34bb8792ec0fccd0a1ac4503440b65add3d1649d7c5f2403959db"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "78661702cd5ca0825cb495f5b2ab1ede2e18be6982c181889ba05f86199b15f8",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-a13175dd-d2ee-466b-befc-45cfae479f50",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "acbeb57369ffefcbd062a9f18fc886fa90e08c1ce6da434e3c378a587211bd4e",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-a13175dd-d2ee-466b-befc-45cfae479f50",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "78661702cd5ca0825cb495f5b2ab1ede2e18be6982c181889ba05f86199b15f8",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 255,
+          "height": 268
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "160affbe6a1c60b52334cfb19710974ecb2a9254d57480a2b4ad40a970dd30ba"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "78661702cd5ca0825cb495f5b2ab1ede2e18be6982c181889ba05f86199b15f8",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a13175dd-d2ee-466b-befc-45cfae479f50",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/chiron-used-cars-trading/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "f4e3272116a34bb8792ec0fccd0a1ac4503440b65add3d1649d7c5f2403959db",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-e87fa8c0-7717-43d3-8daa-7f65a13b7649",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/chiron-used-cars-trading/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "f4e3272116a34bb8792ec0fccd0a1ac4503440b65add3d1649d7c5f2403959db",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-e87fa8c0-7717-43d3-8daa-7f65a13b7649",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/chiron-used-cars-trading/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "78661702cd5ca0825cb495f5b2ab1ede2e18be6982c181889ba05f86199b15f8",
+      "sha256": "78661702cd5ca0825cb495f5b2ab1ede2e18be6982c181889ba05f86199b15f8",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 268
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "f4e3272116a34bb8792ec0fccd0a1ac4503440b65add3d1649d7c5f2403959db",
+      "sha256": "f4e3272116a34bb8792ec0fccd0a1ac4503440b65add3d1649d7c5f2403959db",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 268
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "f4e3272116a34bb8792ec0fccd0a1ac4503440b65add3d1649d7c5f2403959db",
+      "sha256": "f4e3272116a34bb8792ec0fccd0a1ac4503440b65add3d1649d7c5f2403959db",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 268
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "1d1028093289cd1b7366028c873617851d937294acf960d45466ef01e66b4320",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a13175dd-d2ee-466b-befc-45cfae479f50",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "78661702cd5ca0825cb495f5b2ab1ede2e18be6982c181889ba05f86199b15f8",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 255,
+            "height": 268
+          }
+        }
+      },
+      "sourceReference": "dealers/chiron-used-cars-trading/branding/generated-mark-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "0af907462bf2d00642a9bc7ebcdd50914f6d5739547ceb6041d237fdfb01b6cf",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-e87fa8c0-7717-43d3-8daa-7f65a13b7649",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "f4e3272116a34bb8792ec0fccd0a1ac4503440b65add3d1649d7c5f2403959db",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 255,
+            "height": 268
+          }
+        }
+      },
+      "sourceReference": "dealers/chiron-used-cars-trading/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "acbeb57369ffefcbd062a9f18fc886fa90e08c1ce6da434e3c378a587211bd4e",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a13175dd-d2ee-466b-befc-45cfae479f50",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "78661702cd5ca0825cb495f5b2ab1ede2e18be6982c181889ba05f86199b15f8",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 255,
+            "height": 268
+          }
+        }
+      },
+      "sourceReference": "dealers/chiron-used-cars-trading/branding/generated-mark-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "160affbe6a1c60b52334cfb19710974ecb2a9254d57480a2b4ad40a970dd30ba",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a13175dd-d2ee-466b-befc-45cfae479f50",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "78661702cd5ca0825cb495f5b2ab1ede2e18be6982c181889ba05f86199b15f8",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 255,
+            "height": 268
+          }
+        }
+      },
+      "sourceReference": "dealers/chiron-used-cars-trading/branding/generated-mark-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "5462876f400c1e61b6e781f30969f161c8fbe91108ba29f796eb09dba4bf0854",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-e87fa8c0-7717-43d3-8daa-7f65a13b7649",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "f4e3272116a34bb8792ec0fccd0a1ac4503440b65add3d1649d7c5f2403959db",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 255,
+          "height": 268
+        }
+      }
+    }
+  }
+}

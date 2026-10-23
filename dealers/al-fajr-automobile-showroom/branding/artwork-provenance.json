@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "ae-abu-dhabi-al-fajr-automobile-showroom",
+  "slug": "al-fajr-automobile-showroom",
+  "artworkDirectory": "al-fajr-automobile-showroom",
+  "name": "Al Fajr Automobile Showroom",
+  "renderedName": "Al Fajr Cars",
+  "kind": "reference-guided-website-logo-proposal",
+  "dealerApproved": false,
+  "ownerApproved": false,
+  "sourceEvidence": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/al-fajr-automobile-showroom",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/5062-nissan-patrol-35-at-awd-495-hp-le-platinum",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://auto.ae/ar/alfajrautomobileshowroom/",
+      "observedAt": "2026-10-21"
+    },
+    {
+      "url": "https://uae.dubizzle.com/motors/used-cars/nissan/patrol/2026/09/02/-3-647---1e17176143da45c18c854e6e61761ed2/",
+      "observedAt": "2026-10-21"
+    }
+  ],
+  "retainedOriginalsUnchanged": true,
+  "variants": {
+    "on-light": {
+      "path": "logo-on-light.png",
+      "sha256": "e19c31d139b133187d31d5385c8a48ec53cba16b2f5f2c5ccec0a2f278a4e9be",
+      "width": 1024,
+      "height": 165,
+      "transparentFraction": 0.7976976799242425,
+      "master": {
+        "path": "generated-on-light.png",
+        "sha256": "711101c0a099646687e9608fb31a650c9abb5c1bcf83b98b7d83b1ebce669224",
+        "width": 2170,
+        "height": 725
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-f33a4f99-e067-424f-9f97-63234a2fd874",
+        "prompt": "Create one professional transparent horizontal website logo by refining the supplied dealer logo reference. Preserve the source AL FAJR CARS typographic identity as an elegant compact horizontal wordmark. Exact text AL FAJR CARS, slightly heavier clean lettering for header legibility. No invented emblem. Omit Arabic in this English website adaptation rather than generating incorrect Arabic. Required exact English words, with accurate spelling: AL FAJR CARS. Maintain the reference's recognizable identity and proportion while making it legible and polished at a 220px wide website header. Use a sensible primary name and descriptor hierarchy. All text deep charcoal black for white/light backgrounds; retain restrained reference accent colors in the emblem only. Genuine transparent alpha, isolated logo, tightly balanced wide composition. Flat crisp shapes, no chrome, bevel, shadow, glow, texture, gradients, background rectangle or checkerboard, photo, mockup, contact details, website, slogan, watermark, multiple concepts or duplicate. Deliver exactly one logo. This is a reference-guided artwork proposal, not proof of business adoption.",
+        "reference": "L:\\CODEX\\cars\\leads\\branding\\pending-20261023\\_references\\al-fajr-original.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 8,
+          "top": 207,
+          "width": 2139,
+          "height": 344
+        }
+      }
+    },
+    "on-dark": {
+      "path": "logo-on-dark.png",
+      "sha256": "3cfd7236f28f1bedbbe4ea0346de737bf1bc632653979beacb86bcc2b99e69e9",
+      "width": 1024,
+      "height": 168,
+      "transparentFraction": 0.7254464285714286,
+      "master": {
+        "path": "generated-on-dark.png",
+        "sha256": "53dff366e403d9029f62958553bde91caf82f681f14d374d5c6e74f37120d397",
+        "width": 2170,
+        "height": 725
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-bef3dfd3-e9e8-4f9b-9405-7c22d8e6230c",
+        "prompt": "Create the matching light-on-dark production variant of the exact supplied logo. Preserve precisely the same emblem, geometry, spelling, word count, typographic hierarchy, proportions, layout and spacing. Required exact text: AL FAJR CARS. Change EVERY letter, including all secondary descriptor words and legal suffixes, to solid white so it is legible over a dark or red website header. Change the charcoal portions of the emblem to white. Retain the small red/gold emblem accent only if it contrasts clearly against a dark header. True transparent alpha background; do not paint a dark rectangle or checkerboard. Flat clean edges, no glows, shadows, bevels, textures, gradients, new artwork, new icon, extra text or mockup. Deliver one horizontal matching logo, fully legible.",
+        "reference": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-f33a4f99-e067-424f-9f97-63234a2fd874.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 7,
+          "top": 203,
+          "width": 2130,
+          "height": 349
+        }
+      }
+    }
+  },
+  "review": {
+    "status": "artwork-visually-reviewed",
+    "alpha": "all exports measured as genuine transparent nonempty PNGs",
+    "spelling": "English wordmark inspected; source-bound display aliases retained",
+    "compact": "Horizontal logos only. Interactive 32/48/64px gallery preview is provided; separate compact/favicon artwork remains part of dealer-pack preparation.",
+    "sixDesigns": "not-yet-integrated-or-rendered",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "reviewer": "Codex visual inspection",
+    "header": "All 196 paired PNGs inspected at 240x64 on white, #111113 and #c40101",
+    "evidence": "final-review-02.png"
+  },
+  "releaseReady": false,
+  "originalReference": {
+    "path": "_references/al-fajr-automobile-showroom.png",
+    "sha256": "44fdfdf1eb11226e562a255daa1bfcdfa916207b97ad719c54bec2485ffb9222",
+    "sourceUrl": "https://dbz-images.dubizzle.com/profiles/auto_agency/Al_Fajr_Logo.PNG",
+    "observedAt": "2026-10-23",
+    "adaptation": "English website adaptation; original retained unchanged; adoption not claimed"
+  },
+  "artworkHolds": [],
+  "artworkReadyForIntegration": true
+}

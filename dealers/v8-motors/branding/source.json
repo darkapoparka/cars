@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "dealer": "v8-motors",
-  "status": "research-required",
+  "status": "reviewed-imagegen-proposal",
   "realLogoFirst": true,
   "publicSources": [
     {
@@ -10,7 +10,148 @@
     }
   ],
   "originals": [],
-  "creationMethod": null,
+  "creationMethod": "imagegen-proposal",
   "dealerApproved": false,
-  "generatedInputs": null
+  "generatedInputs": {
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "master": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "8bbc47fb414e99d10c0aaa1ddc681a36ecfb3487f8424f1b3cc24c3108aa9a96",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-497d1b01-516d-4f04-b075-e83caab45a42",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark-light.png",
+      "sha256": "de6f0618a2dcf17126705ac044bd9915890ac025d7f57f9248ab30d5c34fc58f",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-497d1b01-516d-4f04-b075-e83caab45a42",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "8bbc47fb414e99d10c0aaa1ddc681a36ecfb3487f8424f1b3cc24c3108aa9a96",
+          "operation": "isolate-reviewed-left-emblem-connected-components",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 270,
+            "height": 194
+          },
+          "selection": {
+            "alphaThreshold": 96,
+            "minXBefore": 248,
+            "minPixels": 20,
+            "antialiasNeighborPixels": 1,
+            "components": 5
+          }
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-dark.png",
+      "sha256": "cd2244268d2c9dba4ee7e34f62c68415de485a3a8451c389bb430fb3dbc4d9f2",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-08793e68-37e1-4a7b-9eb9-6555772ad531",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "0a6506f7a3df98ecf9c5b9235104d3df8d36b74fb3c2c12eb5492de9f55e2371",
+          "operation": "isolate-reviewed-left-emblem-connected-components",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 270,
+            "height": 199
+          },
+          "selection": {
+            "alphaThreshold": 96,
+            "minXBefore": 248,
+            "minPixels": 20,
+            "antialiasNeighborPixels": 1,
+            "components": 6
+          }
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "8bbc47fb414e99d10c0aaa1ddc681a36ecfb3487f8424f1b3cc24c3108aa9a96",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-497d1b01-516d-4f04-b075-e83caab45a42",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "0a6506f7a3df98ecf9c5b9235104d3df8d36b74fb3c2c12eb5492de9f55e2371",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-08793e68-37e1-4a7b-9eb9-6555772ad531",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "0a6506f7a3df98ecf9c5b9235104d3df8d36b74fb3c2c12eb5492de9f55e2371",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-08793e68-37e1-4a7b-9eb9-6555772ad531",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewKind": "agent-visual-review",
+      "humanReview": false,
+      "dealerApproval": false,
+      "backgrounds": {
+        "onLight": "#ffffff",
+        "onDark": "#111113",
+        "onAccent": "#c40101"
+      },
+      "wordmarkWidths": [
+        220,
+        240
+      ],
+      "notes": "Exact reviewed Image Gen pair; native masters and generation provenance retained. Compact rasters cropped from the actual left symbol."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-22T23:42:46.338Z",
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#c40101"
+      ],
+      "widths": [
+        32,
+        48,
+        64
+      ],
+      "notes": "Left emblem components selected from reviewed horizontal PNG pair, adjacent lettering excluded; native compact/favicon QA independent."
+    }
+  },
+  "sourceBlockers": [],
+  "artworkProvenance": {
+    "path": "branding/artwork-provenance.json",
+    "sha256": "509a247483b579c638afd21dffd5271ddee42e8973d134d3334534bba7789d10",
+    "manifestSha256": "d25e9cee768a885052ac0a8df220d843c9b9c6f6f120d722705bead1cc99e694",
+    "nativeMasters": [
+      {
+        "path": "branding/native-generated-on-light.png",
+        "sha256": "b6bb6f0e025ba86231362e708f08677bdc0f08c597928bc783287d6e3f921b8b"
+      },
+      {
+        "path": "branding/native-generated-on-dark.png",
+        "sha256": "4f77ef19dbb66d5e7575460faf8b81f39543df5cb8f295c74f40a89f77a06744"
+      }
+    ]
+  }
 }

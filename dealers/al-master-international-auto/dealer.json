@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Al Master International Auto",
     "publicOrigin": "https://al-master-international-auto.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "f52ed0d02e42469fd0c8e97470b9cf858385853c7b4a0594664d74ec7baf4a10",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "a27fedabea0f164d4ff7edea529d436fe0af54638d09bf0f54cd8e2eae9ae287"
+    }
   }
 }

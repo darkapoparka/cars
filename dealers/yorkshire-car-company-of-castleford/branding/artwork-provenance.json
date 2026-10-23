@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "gb-castleford-yorkshire-car-company",
+  "slug": "yorkshire-car-company-of-castleford",
+  "name": "Yorkshire Car Company of Castleford",
+  "kind": "independent-website-logo-proposal",
+  "dealerApproved": false,
+  "ownerApproved": false,
+  "sourceEvidence": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/Yorkshire-Car-Company-Of-Castleford?menu=1",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.cazoo.co.uk/dealers/yorkshire-car-company-99510/",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "retainedOriginalsUnchanged": true,
+  "variants": {
+    "on-light": {
+      "path": "logo-on-light.png",
+      "sha256": "c505a017672d90c46880089b07674a70a3484525797d2abaa7657c8de3d194e0",
+      "master": {
+        "path": "generated-on-light.png",
+        "sha256": "f049b55d53d5f4cd2e98eb3b8428e53f086000546bb9697e834559e8391918c6",
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputFile": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-dbcb485b-7a17-496f-bcc9-5cb72ec37822.png",
+        "outputReference": "exec-dbcb485b-7a17-496f-bcc9-5cb72ec37822",
+        "prompt": "Use case: logo-brand. Create ONE professional original website-proposal horizontal dealership logo with an authentic alpha-transparent background, dark charcoal ink only. Exact text: YORKSHIRE CAR COMPANY on a confident main line, OF CASTLEFORD on a clearly legible secondary line (not tiny). On the left, create a distinctive abstract Y formed by three bold clean paths, subtle upright forward momentum and generous open counters; no car silhouette, shield, crest, circle enclosure, manufacturer badge or generic stock icon. Contemporary warm geometric sans lettering, excellent spacing, restrained and credible regional car company. Whole composition optically balanced, strong symbol, readable exact name, crisp flat vector-like edges. No gradient, texture, shadow, metallic effect, watermark, extra slogan, photo, mockup, background shape or checkerboard. Artwork large within a wide landscape canvas, with only about 5% transparent outer padding. Symbol should survive 32px use and wordmark be clear in a header. Proposed identity, not official adopted branding. Only one logo.",
+        "reference": null
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 0,
+          "top": 95,
+          "width": 2172,
+          "height": 539
+        }
+      },
+      "metadata": {
+        "format": "png",
+        "mediaType": "image/png",
+        "size": 75770,
+        "width": 1024,
+        "height": 254,
+        "space": "srgb",
+        "channels": 4,
+        "depth": "uchar",
+        "density": 72,
+        "isProgressive": false,
+        "isPalette": false,
+        "bitsPerSample": 8,
+        "hasProfile": false,
+        "hasAlpha": true,
+        "autoOrient": {
+          "width": 1024,
+          "height": 254
+        }
+      }
+    },
+    "on-dark": {
+      "path": "logo-on-dark.png",
+      "sha256": "f9fa8bfa2b61730f6b905218ff025e2acc755791980f10a278e927254c811d05",
+      "master": {
+        "path": "generated-on-dark.png",
+        "sha256": "c3c447b06f0928de0f36e65ff2a728cd5a07a89b3d698970b1d2bb7aa2e04093",
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputFile": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-7ba21d5a-1f5a-4962-84e0-4596369dab97.png",
+        "outputReference": "exec-7ba21d5a-1f5a-4962-84e0-4596369dab97",
+        "prompt": "Create the clean matching light-ink version of the supplied logo for dark website headers. Exact text YORKSHIRE CAR COMPANY / OF CASTLEFORD; slash means an existing line break, do not add a slash character. Preserve the existing symbol, typography, text line positions, spacing and overall shape closely. Foreground must be clean smooth solid pure white with normal anti-aliased edges. All letter interiors are solid smooth ink; absolutely no distress, grain, scratch marks, cutout fragments, holes, stippling, texture or black outline. Genuine alpha-transparent background with open counters, no backdrop or checkerboard. No gradients, lighting, shadow, extra text, border or mockup. One polished white horizontal logo only, use the reference identity. Keep a wide landscape composition with roughly 5% transparent padding.",
+        "reference": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-dbcb485b-7a17-496f-bcc9-5cb72ec37822.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 0,
+          "top": 92,
+          "width": 2172,
+          "height": 541
+        }
+      },
+      "metadata": {
+        "format": "png",
+        "mediaType": "image/png",
+        "size": 79491,
+        "width": 1024,
+        "height": 255,
+        "space": "srgb",
+        "channels": 4,
+        "depth": "uchar",
+        "density": 72,
+        "isProgressive": false,
+        "isPalette": false,
+        "bitsPerSample": 8,
+        "hasProfile": false,
+        "hasAlpha": true,
+        "autoOrient": {
+          "width": 1024,
+          "height": 255
+        }
+      }
+    }
+  },
+  "review": {
+    "alpha": "all exports measured as genuine transparent nonempty PNGs",
+    "spelling": "English wordmark inspected; source-bound display aliases retained",
+    "header": "All 196 paired PNGs inspected at 240x64 on white, #111113 and #c40101",
+    "compact": "Horizontal logos only. Interactive 32/48/64px gallery preview is provided; separate compact/favicon artwork remains part of dealer-pack preparation.",
+    "sixDesigns": "not yet integrated or rendered",
+    "status": "artwork-visually-reviewed",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "reviewer": "Codex visual inspection",
+    "evidence": "final-review-01.png"
+  },
+  "releaseReady": false,
+  "artworkHolds": [],
+  "artworkReadyForIntegration": true
+}

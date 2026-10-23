@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "ae-ajman-amazon-213-car-showroom",
+  "slug": "amazon-213-car-showroom",
+  "artworkDirectory": "amazon-213-car-showroom",
+  "name": "Amazon 213 Car Showroom",
+  "renderedName": "Amazon 213 Car Showroom",
+  "kind": "independent-website-logo-proposal",
+  "dealerApproved": false,
+  "ownerApproved": false,
+  "sourceEvidence": [
+    {
+      "url": "https://ae.opensooq.com/en/shops/shop-74997803",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://ae.opensooq.com/en/search/288825714",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "retainedOriginalsUnchanged": true,
+  "variants": {
+    "on-light": {
+      "path": "logo-on-light.png",
+      "sha256": "79ad3348d09167203b584cfc626a0fa9343b55ee5f18783ec70a45d8fa290443",
+      "width": 1024,
+      "height": 194,
+      "transparentFraction": 0.687842300257732,
+      "master": {
+        "path": "generated-on-light.png",
+        "sha256": "9029c96de7c8cf3474b370c97a7e43397cd9d64bf79878eb76c2583970bae96d",
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-4eae5d24-3508-4d79-8216-8ed1b5bd622f",
+        "prompt": "Use case: logo-brand. ONE polished original independent car-dealer website-proposal logo. Exact full text: \"AMAZON 213 CAR SHOWROOM\". Create a clever custom ligature using shared stems, restrained upright lettering and excellent optical spacing. For any initial-based symbol use the meaningful distinctive initials \"A2\", rather than a generic Al-prefix A. Avoid the repeated A-plus-road-swoosh formula. Emblem at left, full exact name to right, thoughtfully arranged over one or two readable lines. All lettering, including any small descriptor, must be dark charcoal or black for excellent contrast on WHITE; an optional restrained accent may appear in the emblem only. Crisp flat vector-like geometry, large open counters, strong readable type, professional and distinctive. Real alpha-transparent background, no background block or fake checkerboard. No photo, car-manufacturer emblem, stock car silhouette, generic shield, chrome, gradients, shadows, texture, watermark, slogan, unrelated decoration or mockup. Wide horizontal lockup, framed close with a small transparent margin, readable at 240px wide; symbol should survive 32px. Exact spelling and all words. Only one logo, never a presentation board. Proposed identity, not claimed official/adopted.",
+        "reference": null
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 0,
+          "top": 170,
+          "width": 2164,
+          "height": 409
+        }
+      }
+    },
+    "on-dark": {
+      "path": "logo-on-dark.png",
+      "sha256": "e46b1745e8067c5785587fa2da29cf46f3975e16368114c1e1f10b6d98fafc34",
+      "width": 1024,
+      "height": 196,
+      "transparentFraction": 0.5437310666454082,
+      "master": {
+        "path": "generated-on-dark.png",
+        "sha256": "d9d83a71e7af95fe32a323e594d985a0c12818ee5ce169dc98bab2ea416b8b69",
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-032fc62f-3162-46ab-8de2-d3f5e69d42c7",
+        "prompt": "Make the matching ON-DARK version of the supplied AMAZON 213 CAR SHOWROOM logo. Preserve its exact identity, symbol geometry, lettering, complete name, line breaks, optical spacing and proportions. Every letter of the full name and descriptor must be solid clean WHITE, not colored or gray. Existing restrained emblem accent may remain only if visible; keep all primary ink white. Genuine alpha transparency and open counters, smooth clean edges. No background panel, no checkerboard, no new wording, design, texture, distress, shadow, watermark or decoration. One matching white/light-ink horizontal logo for dark and red headers. Exact name: AMAZON 213 CAR SHOWROOM.",
+        "reference": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-4eae5d24-3508-4d79-8216-8ed1b5bd622f.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 0,
+          "top": 169,
+          "width": 2133,
+          "height": 409
+        }
+      }
+    }
+  },
+  "review": {
+    "status": "artwork-visually-reviewed",
+    "alpha": "all exports measured as genuine transparent nonempty PNGs",
+    "spelling": "English wordmark inspected; source-bound display aliases retained",
+    "compact": "Horizontal logos only. Interactive 32/48/64px gallery preview is provided; separate compact/favicon artwork remains part of dealer-pack preparation.",
+    "sixDesigns": "not-yet-integrated-or-rendered",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "reviewer": "Codex visual inspection",
+    "header": "All 196 paired PNGs inspected at 240x64 on white, #111113 and #c40101",
+    "evidence": "final-review-04.png"
+  },
+  "releaseReady": false,
+  "artworkHolds": [],
+  "artworkReadyForIntegration": true
+}

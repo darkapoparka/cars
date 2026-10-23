@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "dealer": "sinolink-new-automobile-trading-dwc-llc",
-  "status": "research-required",
+  "status": "reviewed-imagegen-proposal",
   "realLogoFirst": true,
   "publicSources": [
     {
@@ -10,7 +10,134 @@
     }
   ],
   "originals": [],
-  "creationMethod": null,
+  "creationMethod": "imagegen-proposal",
   "dealerApproved": false,
-  "generatedInputs": null
+  "generatedInputs": {
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "master": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "7109ba4514ed50273823fb24950ea01391f121acf5b61a82f1e41122a4e39e57",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-efda2758-80bb-4385-a7d2-62a8cf6fffea",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark-light.png",
+      "sha256": "2081cbf0f11db02e87d405220cc9e38abbfa94be13985077e1ecbaab36618fa8",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-efda2758-80bb-4385-a7d2-62a8cf6fffea",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "7109ba4514ed50273823fb24950ea01391f121acf5b61a82f1e41122a4e39e57",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 260,
+            "height": 223
+          }
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-dark.png",
+      "sha256": "149723a6865cae3225190eedc50a1b65ecc687bd9b3d797ee1a0e95279f4055c",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-2a3afc6c-0fc5-4764-8f4c-2a5c7e0280df",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "3802f392c9c198858f14d24a655726fd2bb7eb200752b4094a7072537481ad2d",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 260,
+            "height": 223
+          }
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "7109ba4514ed50273823fb24950ea01391f121acf5b61a82f1e41122a4e39e57",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-efda2758-80bb-4385-a7d2-62a8cf6fffea",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "3802f392c9c198858f14d24a655726fd2bb7eb200752b4094a7072537481ad2d",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-2a3afc6c-0fc5-4764-8f4c-2a5c7e0280df",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "3802f392c9c198858f14d24a655726fd2bb7eb200752b4094a7072537481ad2d",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-2a3afc6c-0fc5-4764-8f4c-2a5c7e0280df",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewKind": "agent-visual-review",
+      "humanReview": false,
+      "dealerApproval": false,
+      "backgrounds": {
+        "onLight": "#ffffff",
+        "onDark": "#111113",
+        "onAccent": "#c40101"
+      },
+      "wordmarkWidths": [
+        220,
+        240
+      ],
+      "notes": "Exact reviewed Image Gen pair; native masters and generation provenance retained. Compact rasters cropped from the actual left symbol."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-22T23:42:46.338Z",
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#c40101"
+      ],
+      "widths": [
+        32,
+        48,
+        64
+      ],
+      "notes": "Left symbol cropped from reviewed horizontal variants; native rendering must independently qualify."
+    }
+  },
+  "sourceBlockers": [],
+  "artworkProvenance": {
+    "path": "branding/artwork-provenance.json",
+    "sha256": "7f317e39a9629b3021fcd7ab1758b0966f5015940ea83780cd9f5283400779ba",
+    "manifestSha256": "d25e9cee768a885052ac0a8df220d843c9b9c6f6f120d722705bead1cc99e694",
+    "nativeMasters": [
+      {
+        "path": "branding/native-generated-on-light.png",
+        "sha256": "623f20cd66fec48510602c94fcdb76a26ab44aaabd12c7f318fe87748f3a95b6"
+      },
+      {
+        "path": "branding/native-generated-on-dark.png",
+        "sha256": "9f01405360e24d635a50b0133e1bcdb4b3d242e166f279d98d4dd5a7785f82e8"
+      }
+    ]
+  }
 }

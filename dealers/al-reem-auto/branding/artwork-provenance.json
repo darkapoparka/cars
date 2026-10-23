@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "ae-dubai-al-reem-auto",
+  "slug": "al-reem-auto",
+  "artworkDirectory": "al-reem-auto",
+  "name": "Al Reem Auto",
+  "renderedName": "Al Reem Auto",
+  "kind": "independent-website-logo-proposal",
+  "dealerApproved": false,
+  "ownerApproved": false,
+  "sourceEvidence": [
+    {
+      "url": "https://www.dubicars.com/dealers/dubai-al-reem-auto-2797",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "retainedOriginalsUnchanged": true,
+  "variants": {
+    "on-light": {
+      "path": "logo-on-light.png",
+      "sha256": "4b23462fbb66c611785845ecd14fbc8e23273d1c59997947bee936b36c13d2ea",
+      "width": 1024,
+      "height": 219,
+      "transparentFraction": 0.7272358376141552,
+      "master": {
+        "path": "generated-on-light.png",
+        "sha256": "f09c7050ef8e867ea0e8e12ae157bd703e64bff765b288e799a21e3aa5481c4d",
+        "width": 2163,
+        "height": 727
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-365adf45-8f24-47e7-8f9b-35c0800141b1",
+        "prompt": "Create one professional horizontal automotive dealership logo proposal for Al Reem Auto. Required exact text, uppercase: AL REEM AUTO. Every word must be present and spelled precisely; use sensible primary name and smaller descriptor hierarchy without tiny lettering. Produce a polished original identity with a distinctive custom typographic ligature in a refined square emblem. Initials R may inform the emblem. Emblem left, full clear name to the right, compact and balanced for a website header. Avoid overused shield and generic car silhouettes; no manufacturer badges. Clean modern lettering with careful kerning and strong legibility. All text is deep charcoal black, appropriate on a white/light header. One restrained red or gold accent may appear inside the emblem only; no pale text. Flat crisp edges, a small number of solid shapes, no chrome, no lighting, no shadow, no texture, no gradient. Genuine transparent alpha background, isolated logo with no background box, no grid, no checkerboard painted into pixels. No slogan, contact info, website, watermark, mockup, photograph, extra concept, or duplicate logo. Deliver exactly one horizontal full logo. This is an independent website identity proposal, not a claim of adopted branding.",
+        "reference": null
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 43,
+          "top": 130,
+          "width": 2083,
+          "height": 446
+        }
+      }
+    },
+    "on-dark": {
+      "path": "logo-on-dark.png",
+      "sha256": "7fc317baa2ae9f11704ff86c05b9a4b1e6ac7ca69bbd688d5d28e1d9c607248c",
+      "width": 1024,
+      "height": 221,
+      "transparentFraction": 0.6726792279411765,
+      "master": {
+        "path": "generated-on-dark.png",
+        "sha256": "cf3277d8d277df5ef540c2afe88898552d131d62eb42673ae4b520f5629f29f1",
+        "width": 2163,
+        "height": 727
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-33470fe7-b303-4714-ae1c-ed8b140cf77c",
+        "prompt": "Create the matching light-on-dark production variant of the exact supplied logo. Preserve precisely the same emblem, geometry, spelling, word count, typographic hierarchy, proportions, layout and spacing. Required exact text: AL REEM AUTO. Change EVERY letter, including all secondary descriptor words and legal suffixes, to solid white so it is legible over a dark or red website header. Change the charcoal portions of the emblem to white. Retain the small red/gold emblem accent only if it contrasts clearly against a dark header. True transparent alpha background; do not paint a dark rectangle or checkerboard. Flat clean edges, no glows, shadows, bevels, textures, gradients, new artwork, new icon, extra text or mockup. Deliver one horizontal matching logo, fully legible.",
+        "reference": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-365adf45-8f24-47e7-8f9b-35c0800141b1.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 43,
+          "top": 123,
+          "width": 2058,
+          "height": 444
+        }
+      }
+    }
+  },
+  "review": {
+    "status": "artwork-visually-reviewed",
+    "alpha": "all exports measured as genuine transparent nonempty PNGs",
+    "spelling": "English wordmark inspected; source-bound display aliases retained",
+    "compact": "Horizontal logos only. Interactive 32/48/64px gallery preview is provided; separate compact/favicon artwork remains part of dealer-pack preparation.",
+    "sixDesigns": "not-yet-integrated-or-rendered",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "reviewer": "Codex visual inspection",
+    "header": "All 196 paired PNGs inspected at 240x64 on white, #111113 and #c40101",
+    "evidence": "final-review-06.png"
+  },
+  "releaseReady": false,
+  "artworkHolds": [],
+  "artworkReadyForIntegration": true
+}

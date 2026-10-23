@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "dealer": "altamayoz-al-aali-general-trading",
+  "reviewed": true,
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "5aef32dbd6c742097022a2a4be1bfa290da4f5c37787034ec2e1a413eb7956d4",
+      "sourceSha256": "8a47c500e3cd1486f781ccbf2def7e3ad19ba2b99797b64c384d2944f6163de3"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "96ffd0c995469c84eeb9d083633f4804913bce4b1e426322fa6fee4e12aa1ae7",
+      "sourceSha256": "a8795257adebf383a33ef034b8d6e92dfcb7b7779bb275d4e9e6dbc28bf8a424"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "96ffd0c995469c84eeb9d083633f4804913bce4b1e426322fa6fee4e12aa1ae7",
+      "sourceSha256": "a8795257adebf383a33ef034b8d6e92dfcb7b7779bb275d4e9e6dbc28bf8a424"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "8a47c500e3cd1486f781ccbf2def7e3ad19ba2b99797b64c384d2944f6163de3",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-9d85cbac-8fc3-487e-af6a-e4b04a12ce62",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "875eb8009ba5337482ec7ed3d9fa327a6af511a69ed48295940297457842af32",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-9d85cbac-8fc3-487e-af6a-e4b04a12ce62",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "8a47c500e3cd1486f781ccbf2def7e3ad19ba2b99797b64c384d2944f6163de3",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 250,
+          "height": 230
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "51dff8e3b9364b9833434278cfe541e29f6c4a363b154e1eed768eaa2f637a66"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "8a47c500e3cd1486f781ccbf2def7e3ad19ba2b99797b64c384d2944f6163de3",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-9d85cbac-8fc3-487e-af6a-e4b04a12ce62",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/altamayoz-al-aali-general-trading/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "a8795257adebf383a33ef034b8d6e92dfcb7b7779bb275d4e9e6dbc28bf8a424",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-8fb14d11-c7da-4c6e-91db-64bb41dac958",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/altamayoz-al-aali-general-trading/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "a8795257adebf383a33ef034b8d6e92dfcb7b7779bb275d4e9e6dbc28bf8a424",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-8fb14d11-c7da-4c6e-91db-64bb41dac958",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/altamayoz-al-aali-general-trading/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "8a47c500e3cd1486f781ccbf2def7e3ad19ba2b99797b64c384d2944f6163de3",
+      "sha256": "8a47c500e3cd1486f781ccbf2def7e3ad19ba2b99797b64c384d2944f6163de3",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 230
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "a8795257adebf383a33ef034b8d6e92dfcb7b7779bb275d4e9e6dbc28bf8a424",
+      "sha256": "a8795257adebf383a33ef034b8d6e92dfcb7b7779bb275d4e9e6dbc28bf8a424",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 232
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "a8795257adebf383a33ef034b8d6e92dfcb7b7779bb275d4e9e6dbc28bf8a424",
+      "sha256": "a8795257adebf383a33ef034b8d6e92dfcb7b7779bb275d4e9e6dbc28bf8a424",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 232
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "3ff39df94ef6f7e68ab7657b35f4d937a453e33eac6531e69cb408a0e8633cdb",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-9d85cbac-8fc3-487e-af6a-e4b04a12ce62",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "8a47c500e3cd1486f781ccbf2def7e3ad19ba2b99797b64c384d2944f6163de3",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 250,
+            "height": 230
+          }
+        }
+      },
+      "sourceReference": "dealers/altamayoz-al-aali-general-trading/branding/generated-mark-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "e68c7efa4eb6ccae4cab5d4608df4e71072d69f140d72d9f51f9f78db24d3cc8",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-8fb14d11-c7da-4c6e-91db-64bb41dac958",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "a8795257adebf383a33ef034b8d6e92dfcb7b7779bb275d4e9e6dbc28bf8a424",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 250,
+            "height": 232
+          }
+        }
+      },
+      "sourceReference": "dealers/altamayoz-al-aali-general-trading/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "875eb8009ba5337482ec7ed3d9fa327a6af511a69ed48295940297457842af32",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-9d85cbac-8fc3-487e-af6a-e4b04a12ce62",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "8a47c500e3cd1486f781ccbf2def7e3ad19ba2b99797b64c384d2944f6163de3",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 250,
+            "height": 230
+          }
+        }
+      },
+      "sourceReference": "dealers/altamayoz-al-aali-general-trading/branding/generated-mark-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "51dff8e3b9364b9833434278cfe541e29f6c4a363b154e1eed768eaa2f637a66",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-9d85cbac-8fc3-487e-af6a-e4b04a12ce62",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "8a47c500e3cd1486f781ccbf2def7e3ad19ba2b99797b64c384d2944f6163de3",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 250,
+            "height": 230
+          }
+        }
+      },
+      "sourceReference": "dealers/altamayoz-al-aali-general-trading/branding/generated-mark-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "a82273a33afb9fe3f1390439467309f7e12349c2ff6f488056a83ca675e9cc28",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-8fb14d11-c7da-4c6e-91db-64bb41dac958",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "a8795257adebf383a33ef034b8d6e92dfcb7b7779bb275d4e9e6dbc28bf8a424",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 250,
+          "height": 232
+        }
+      }
+    }
+  }
+}

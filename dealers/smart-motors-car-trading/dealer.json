@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Smart Motors Car Trading",
     "publicOrigin": "https://smart-motors-car-trading.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "cf9168d56d0e8fbf76cd3d7ab80e4430cbcdc4876cd45a4bc9d03f17e228040a",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "eb4c4f943d0ddaa41eb7a651ad9f34537be3b5ca9bf5cbe6ea532f3024dc9902"
+    }
   }
 }

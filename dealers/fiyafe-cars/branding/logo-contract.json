@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "dealer": "fiyafe-cars",
+  "reviewed": true,
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "4632cf700af1a06ef3ee3eb768d6d284446e62f1d7828155f444aabd7e83a39d",
+      "sourceSha256": "2b89d95520917e94429d163fe4992dc5107815cdcb8cccb86406b0961ea097bc"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "a11f22e7090066de888c49955f8c1d06f35cb69a6a9d146a14b1092771333a18",
+      "sourceSha256": "f156076de60fa16c8c3ddef8b6578e794b72ed0c0ecbba2661bcf6663af95d32"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "a11f22e7090066de888c49955f8c1d06f35cb69a6a9d146a14b1092771333a18",
+      "sourceSha256": "f156076de60fa16c8c3ddef8b6578e794b72ed0c0ecbba2661bcf6663af95d32"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "2b89d95520917e94429d163fe4992dc5107815cdcb8cccb86406b0961ea097bc",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-9de1450a-86ee-4749-b5ce-e038360ec171",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "9008f60f23e108bfeab1363a40d509fc732763bc48f0e8fdc6e27d20ce7c8e04",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-9de1450a-86ee-4749-b5ce-e038360ec171",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "2b89d95520917e94429d163fe4992dc5107815cdcb8cccb86406b0961ea097bc",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 260,
+          "height": 212
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "32e0269c79ebab466f81ea58f8f6b1ecf7ed8f9293de1edb0876e6f9a722f1ae"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "2b89d95520917e94429d163fe4992dc5107815cdcb8cccb86406b0961ea097bc",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-9de1450a-86ee-4749-b5ce-e038360ec171",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/fiyafe-cars/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "f156076de60fa16c8c3ddef8b6578e794b72ed0c0ecbba2661bcf6663af95d32",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-4f75054f-44cd-4ff3-8687-da807f13a26a",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/fiyafe-cars/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "f156076de60fa16c8c3ddef8b6578e794b72ed0c0ecbba2661bcf6663af95d32",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-4f75054f-44cd-4ff3-8687-da807f13a26a",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/fiyafe-cars/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "2b89d95520917e94429d163fe4992dc5107815cdcb8cccb86406b0961ea097bc",
+      "sha256": "2b89d95520917e94429d163fe4992dc5107815cdcb8cccb86406b0961ea097bc",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 212
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "f156076de60fa16c8c3ddef8b6578e794b72ed0c0ecbba2661bcf6663af95d32",
+      "sha256": "f156076de60fa16c8c3ddef8b6578e794b72ed0c0ecbba2661bcf6663af95d32",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 211
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "f156076de60fa16c8c3ddef8b6578e794b72ed0c0ecbba2661bcf6663af95d32",
+      "sha256": "f156076de60fa16c8c3ddef8b6578e794b72ed0c0ecbba2661bcf6663af95d32",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 211
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "32fda8e2cab0af14018e410017d1c4286475ff242dcf8a941164cc58bbc3eb20",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-9de1450a-86ee-4749-b5ce-e038360ec171",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "2b89d95520917e94429d163fe4992dc5107815cdcb8cccb86406b0961ea097bc",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 260,
+            "height": 212
+          }
+        }
+      },
+      "sourceReference": "dealers/fiyafe-cars/branding/generated-mark-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "c13230c7b79fbcaa90b1bef2b3240ea985d89eb3993a7a1db6afd0c08e93dd6f",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-4f75054f-44cd-4ff3-8687-da807f13a26a",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "f156076de60fa16c8c3ddef8b6578e794b72ed0c0ecbba2661bcf6663af95d32",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 260,
+            "height": 211
+          }
+        }
+      },
+      "sourceReference": "dealers/fiyafe-cars/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "9008f60f23e108bfeab1363a40d509fc732763bc48f0e8fdc6e27d20ce7c8e04",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-9de1450a-86ee-4749-b5ce-e038360ec171",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "2b89d95520917e94429d163fe4992dc5107815cdcb8cccb86406b0961ea097bc",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 260,
+            "height": 212
+          }
+        }
+      },
+      "sourceReference": "dealers/fiyafe-cars/branding/generated-mark-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "32e0269c79ebab466f81ea58f8f6b1ecf7ed8f9293de1edb0876e6f9a722f1ae",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-9de1450a-86ee-4749-b5ce-e038360ec171",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "2b89d95520917e94429d163fe4992dc5107815cdcb8cccb86406b0961ea097bc",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 260,
+            "height": 212
+          }
+        }
+      },
+      "sourceReference": "dealers/fiyafe-cars/branding/generated-mark-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "a2770c1287ddc48e1c3940914e805b4ec91ddd4904479b9f1950da404f4937dd",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-4f75054f-44cd-4ff3-8687-da807f13a26a",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "f156076de60fa16c8c3ddef8b6578e794b72ed0c0ecbba2661bcf6663af95d32",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 260,
+          "height": 211
+        }
+      }
+    }
+  }
+}

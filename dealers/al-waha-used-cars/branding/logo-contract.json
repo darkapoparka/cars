@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-waha-used-cars",
+  "reviewed": true,
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "6f15cae1944b51c85fe00dea10ea10fc660d70e5dcf12ca933cd6debc4f8f5ab",
+      "sourceSha256": "9f0da7583aed7b66446171c797230f4bbe8784764d436b47fbc1a5005683f628"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "3febffd39bd9c9bb3c8a81a22780af5fbc05d13b4bbeed1cd107d9db45fb6f3f",
+      "sourceSha256": "3ec183ab47867a46d8a39a7b7228944729d89d72e443e77c4e326b80e9f9d12f"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "3febffd39bd9c9bb3c8a81a22780af5fbc05d13b4bbeed1cd107d9db45fb6f3f",
+      "sourceSha256": "3ec183ab47867a46d8a39a7b7228944729d89d72e443e77c4e326b80e9f9d12f"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "9f0da7583aed7b66446171c797230f4bbe8784764d436b47fbc1a5005683f628",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-7033552b-9370-4970-8600-705fe382a03f",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "27046544fb75fdc138a7b8f5623abd8150bdfd361282f2d42b3247ec91042a58",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-7033552b-9370-4970-8600-705fe382a03f",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "9f0da7583aed7b66446171c797230f4bbe8784764d436b47fbc1a5005683f628",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 340,
+          "height": 232
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "3b9a438e8637b95b327587235b0349ff702e0eecf4f73b78a2c696e26cffb6fc"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "9f0da7583aed7b66446171c797230f4bbe8784764d436b47fbc1a5005683f628",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-7033552b-9370-4970-8600-705fe382a03f",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-waha-used-cars/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "3ec183ab47867a46d8a39a7b7228944729d89d72e443e77c4e326b80e9f9d12f",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a7a37e00-ed92-49c4-a3cf-efb7806b834a",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-waha-used-cars/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "3ec183ab47867a46d8a39a7b7228944729d89d72e443e77c4e326b80e9f9d12f",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a7a37e00-ed92-49c4-a3cf-efb7806b834a",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-waha-used-cars/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "9f0da7583aed7b66446171c797230f4bbe8784764d436b47fbc1a5005683f628",
+      "sha256": "9f0da7583aed7b66446171c797230f4bbe8784764d436b47fbc1a5005683f628",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 232
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "3ec183ab47867a46d8a39a7b7228944729d89d72e443e77c4e326b80e9f9d12f",
+      "sha256": "3ec183ab47867a46d8a39a7b7228944729d89d72e443e77c4e326b80e9f9d12f",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 234
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "3ec183ab47867a46d8a39a7b7228944729d89d72e443e77c4e326b80e9f9d12f",
+      "sha256": "3ec183ab47867a46d8a39a7b7228944729d89d72e443e77c4e326b80e9f9d12f",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 234
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "4a4391a6a325932fb8a75df7c92db9b128854bf44f3709c29e3eaef050a15d32",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-7033552b-9370-4970-8600-705fe382a03f",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "9f0da7583aed7b66446171c797230f4bbe8784764d436b47fbc1a5005683f628",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 340,
+            "height": 232
+          }
+        }
+      },
+      "sourceReference": "dealers/al-waha-used-cars/branding/generated-mark-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "c765285ffb239985c70c8113a83ae95ec3b8d6c67d9504968da9caceb3807c1d",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a7a37e00-ed92-49c4-a3cf-efb7806b834a",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "3ec183ab47867a46d8a39a7b7228944729d89d72e443e77c4e326b80e9f9d12f",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 340,
+            "height": 234
+          }
+        }
+      },
+      "sourceReference": "dealers/al-waha-used-cars/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "27046544fb75fdc138a7b8f5623abd8150bdfd361282f2d42b3247ec91042a58",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-7033552b-9370-4970-8600-705fe382a03f",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "9f0da7583aed7b66446171c797230f4bbe8784764d436b47fbc1a5005683f628",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 340,
+            "height": 232
+          }
+        }
+      },
+      "sourceReference": "dealers/al-waha-used-cars/branding/generated-mark-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "3b9a438e8637b95b327587235b0349ff702e0eecf4f73b78a2c696e26cffb6fc",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-7033552b-9370-4970-8600-705fe382a03f",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "9f0da7583aed7b66446171c797230f4bbe8784764d436b47fbc1a5005683f628",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 340,
+            "height": 232
+          }
+        }
+      },
+      "sourceReference": "dealers/al-waha-used-cars/branding/generated-mark-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "404d9d445b1fe3c0fc645841be406b9cb92293e69515d7be9c0bda6240683143",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-a7a37e00-ed92-49c4-a3cf-efb7806b834a",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "3ec183ab47867a46d8a39a7b7228944729d89d72e443e77c4e326b80e9f9d12f",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 340,
+          "height": 234
+        }
+      }
+    }
+  }
+}

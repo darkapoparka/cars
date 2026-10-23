@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "dealer": "around-the-world-automobile-showroom-llc",
+  "reviewed": true,
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "e0aeb1df62afc9427f26892ee1886a2b548c93bfd938336f7a5787e4d57b04fa",
+      "sourceSha256": "7a7a3d9b26b211c00101a68f868b59d0695dd03fd8ab0061e8176a50ffc1b92c"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "b59e326e4cd4a4427bc884b958329d5bf6c721391b50614e556270d573dc214b",
+      "sourceSha256": "6fc1c6adf57636ef8caa8d10b572966ff22778607fe984fe492d876b2df1e795"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "b59e326e4cd4a4427bc884b958329d5bf6c721391b50614e556270d573dc214b",
+      "sourceSha256": "6fc1c6adf57636ef8caa8d10b572966ff22778607fe984fe492d876b2df1e795"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "7a7a3d9b26b211c00101a68f868b59d0695dd03fd8ab0061e8176a50ffc1b92c",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-2e6af22f-3835-43cb-bf6a-94770d19bd7d",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "01e9f17f4bd5f1353af794e2666dca89685b36d38968870c4828c19461ad6401",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-2e6af22f-3835-43cb-bf6a-94770d19bd7d",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "7a7a3d9b26b211c00101a68f868b59d0695dd03fd8ab0061e8176a50ffc1b92c",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 260,
+          "height": 209
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "c359671b82c6b9215e9fe0b1445517f916a9ce1dc2d4591d7df0f76b1f22dda2"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "7a7a3d9b26b211c00101a68f868b59d0695dd03fd8ab0061e8176a50ffc1b92c",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-2e6af22f-3835-43cb-bf6a-94770d19bd7d",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/around-the-world-automobile-showroom-llc/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "6fc1c6adf57636ef8caa8d10b572966ff22778607fe984fe492d876b2df1e795",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-e17eadde-937b-453c-b5aa-2adae05b9dab",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/around-the-world-automobile-showroom-llc/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "6fc1c6adf57636ef8caa8d10b572966ff22778607fe984fe492d876b2df1e795",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-e17eadde-937b-453c-b5aa-2adae05b9dab",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/around-the-world-automobile-showroom-llc/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "7a7a3d9b26b211c00101a68f868b59d0695dd03fd8ab0061e8176a50ffc1b92c",
+      "sha256": "7a7a3d9b26b211c00101a68f868b59d0695dd03fd8ab0061e8176a50ffc1b92c",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 209
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "6fc1c6adf57636ef8caa8d10b572966ff22778607fe984fe492d876b2df1e795",
+      "sha256": "6fc1c6adf57636ef8caa8d10b572966ff22778607fe984fe492d876b2df1e795",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 212
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "6fc1c6adf57636ef8caa8d10b572966ff22778607fe984fe492d876b2df1e795",
+      "sha256": "6fc1c6adf57636ef8caa8d10b572966ff22778607fe984fe492d876b2df1e795",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 212
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "abe48726da75c822e6ad765188a95eec831abf7b3e0724a17d3be50ee937cece",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-2e6af22f-3835-43cb-bf6a-94770d19bd7d",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "7a7a3d9b26b211c00101a68f868b59d0695dd03fd8ab0061e8176a50ffc1b92c",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 260,
+            "height": 209
+          }
+        }
+      },
+      "sourceReference": "dealers/around-the-world-automobile-showroom-llc/branding/generated-mark-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "760c1dcfbff11c82a4a306a315eec8f6ade98c5b8c1782b66a8d0a0cfd28b4f9",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-e17eadde-937b-453c-b5aa-2adae05b9dab",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "6fc1c6adf57636ef8caa8d10b572966ff22778607fe984fe492d876b2df1e795",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 260,
+            "height": 212
+          }
+        }
+      },
+      "sourceReference": "dealers/around-the-world-automobile-showroom-llc/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "01e9f17f4bd5f1353af794e2666dca89685b36d38968870c4828c19461ad6401",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-2e6af22f-3835-43cb-bf6a-94770d19bd7d",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "7a7a3d9b26b211c00101a68f868b59d0695dd03fd8ab0061e8176a50ffc1b92c",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 260,
+            "height": 209
+          }
+        }
+      },
+      "sourceReference": "dealers/around-the-world-automobile-showroom-llc/branding/generated-mark-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "c359671b82c6b9215e9fe0b1445517f916a9ce1dc2d4591d7df0f76b1f22dda2",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-2e6af22f-3835-43cb-bf6a-94770d19bd7d",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "7a7a3d9b26b211c00101a68f868b59d0695dd03fd8ab0061e8176a50ffc1b92c",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 260,
+            "height": 209
+          }
+        }
+      },
+      "sourceReference": "dealers/around-the-world-automobile-showroom-llc/branding/generated-mark-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "9defc9ece6afc9caded0c0bc5242f9f75ed86fc527a5f0866ef9831c2d3de233",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-e17eadde-937b-453c-b5aa-2adae05b9dab",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "6fc1c6adf57636ef8caa8d10b572966ff22778607fe984fe492d876b2df1e795",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 260,
+          "height": 212
+        }
+      }
+    }
+  }
+}

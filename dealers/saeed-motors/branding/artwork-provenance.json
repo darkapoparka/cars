@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "ae-ajman-saeed-motors",
+  "slug": "saeed-motors",
+  "artworkDirectory": "saeed-motors",
+  "name": "Saeed Motors",
+  "renderedName": "Saeed Motors",
+  "kind": "reference-guided-website-logo-proposal",
+  "dealerApproved": false,
+  "ownerApproved": false,
+  "sourceEvidence": [
+    {
+      "url": "https://www.oneclickdrive.com/company/ajman/saeed-motors",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "retainedOriginalsUnchanged": true,
+  "variants": {
+    "on-light": {
+      "path": "logo-on-light.png",
+      "sha256": "43e04bfe20cae4abc15ef7ac704ec092774ea01d48a7f5d2f689c074e47966b4",
+      "width": 1024,
+      "height": 317,
+      "transparentFraction": 0.7078691837539433,
+      "master": {
+        "path": "generated-on-light.png",
+        "sha256": "3d79da45c25458575cc56af51ed7c45f8aa2c37733c67f36fcb8171a2b4af3ab",
+        "width": 2087,
+        "height": 754
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-b4ae948b-2496-441a-b709-f74f6fbe6389",
+        "prompt": "Create one professional transparent horizontal website logo by refining the supplied dealer logo reference. Refine the supplied car, road and gear emblem into a small number of clean flat geometric blue and gold shapes. Keep the recognizable circular road/gear idea, remove 3D chrome and lighting and any vehicle manufacturer star/badge. Place clear SAEED MOTORS at the right. Omit the tiny old slogan and 103 and bilingual microtext. Required exact English words, with accurate spelling: SAEED MOTORS. Maintain the reference's recognizable identity and proportion while making it legible and polished at a 220px wide website header. Use a sensible primary name and descriptor hierarchy. All text deep charcoal black for white/light backgrounds; retain restrained reference accent colors in the emblem only. Genuine transparent alpha, isolated logo, tightly balanced wide composition. Flat crisp shapes, no chrome, bevel, shadow, glow, texture, gradients, background rectangle or checkerboard, photo, mockup, contact details, website, slogan, watermark, multiple concepts or duplicate. Deliver exactly one logo. This is a reference-guided artwork proposal, not proof of business adoption.",
+        "reference": "C:/Users/radev/AppData/Local/Temp/cars-astra-public-brand-evidence-20261021/saeed-motors-oneclick-original-0.jpg"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 57,
+          "top": 95,
+          "width": 2013,
+          "height": 624
+        }
+      }
+    },
+    "on-dark": {
+      "path": "logo-on-dark.png",
+      "sha256": "5378a7f358d460bff8d3b7c49e1ec04a14c0879c28384c99c78afbba5c854fa7",
+      "width": 1024,
+      "height": 319,
+      "transparentFraction": 0.6751904143808778,
+      "master": {
+        "path": "generated-on-dark.png",
+        "sha256": "8cbf0475853cf859fcd8195740724d478833976d97db0ea9339358eeb6b3c94c",
+        "width": 2086,
+        "height": 754
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-029ef030-5143-4c22-b1e2-d734524fbd76",
+        "prompt": "Create the matching light-on-dark production variant of the exact supplied logo. Preserve precisely the same emblem, geometry, spelling, word count, typographic hierarchy, proportions, layout and spacing. Required exact text: SAEED MOTORS. Change EVERY letter, including all secondary descriptor words and legal suffixes, to solid white so it is legible over a dark or red website header. Change the charcoal portions of the emblem to white. Retain the small red/gold emblem accent only if it contrasts clearly against a dark header. True transparent alpha background; do not paint a dark rectangle or checkerboard. Flat clean edges, no glows, shadows, bevels, textures, gradients, new artwork, new icon, extra text or mockup. Deliver one horizontal matching logo, fully legible.",
+        "reference": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-b4ae948b-2496-441a-b709-f74f6fbe6389.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 55,
+          "top": 76,
+          "width": 1994,
+          "height": 622
+        }
+      }
+    }
+  },
+  "review": {
+    "status": "artwork-visually-reviewed",
+    "alpha": "all exports measured as genuine transparent nonempty PNGs",
+    "spelling": "English wordmark inspected; source-bound display aliases retained",
+    "compact": "Horizontal logos only. Interactive 32/48/64px gallery preview is provided; separate compact/favicon artwork remains part of dealer-pack preparation.",
+    "sixDesigns": "not-yet-integrated-or-rendered",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "reviewer": "Codex visual inspection",
+    "header": "All 196 paired PNGs inspected at 240x64 on white, #111113 and #c40101",
+    "evidence": "final-review-04.png"
+  },
+  "releaseReady": false,
+  "originalReference": {
+    "path": "_references/saeed-motors.jpg",
+    "sha256": "cb71d1c497ca5dee610bd3b0a27d61cc02e73216d47593f6be93725ec2ef74f2",
+    "sourceUrl": "https://static.oneclickdrive.com/application/views/img/company/WhatsApp_Image_2026-02-12_at_3.10_.56_PM_.jpeg",
+    "observedAt": "2026-10-23",
+    "adaptation": "English website adaptation; original retained unchanged; adoption not claimed"
+  },
+  "artworkHolds": [],
+  "artworkReadyForIntegration": true
+}

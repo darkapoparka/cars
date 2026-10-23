@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "ae-sharjah-bonn-used-cars",
+  "slug": null,
+  "artworkDirectory": "ae-sharjah-bonn-used-cars",
+  "name": "Bonn Used Cars",
+  "renderedName": "Bonn Used Cars",
+  "kind": "independent-website-logo-proposal",
+  "dealerApproved": false,
+  "ownerApproved": false,
+  "sourceEvidence": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/bonn-used-cars",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/7478-rox-01-15-at-awd-476-hp-vip",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "retainedOriginalsUnchanged": true,
+  "variants": {
+    "on-light": {
+      "path": "logo-on-light.png",
+      "sha256": "b51b3a05208babb8d9f6f1b8aef6ce3708a44828384de83e740afea91021dda5",
+      "width": 1024,
+      "height": 291,
+      "transparentFraction": 0.5493684224656358,
+      "master": {
+        "path": "generated-on-light.png",
+        "sha256": "9483269b6e6e380508d489cf0b42cd5310183fd8426736d2f09eb7bfc7697ad4",
+        "width": 2161,
+        "height": 728
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-7a1957e1-5dda-4db4-8f95-be52bec2027d",
+        "prompt": "Create one professional horizontal automotive dealership logo proposal for Bonn Used Cars. Required exact text, uppercase: BONN USED CARS. Every word must be present and spelled precisely; use sensible primary name and smaller descriptor hierarchy without tiny lettering. Produce a polished original identity with a distinctive custom typographic ligature in a refined square emblem. Initials B may inform the emblem. Emblem left, full clear name to the right, compact and balanced for a website header. Avoid overused shield and generic car silhouettes; no manufacturer badges. Clean modern lettering with careful kerning and strong legibility. All text is deep charcoal black, appropriate on a white/light header. One restrained red or gold accent may appear inside the emblem only; no pale text. Flat crisp edges, a small number of solid shapes, no chrome, no lighting, no shadow, no texture, no gradient. Genuine transparent alpha background, isolated logo with no background box, no grid, no checkerboard painted into pixels. No slogan, contact info, website, watermark, mockup, photograph, extra concept, or duplicate logo. Deliver exactly one horizontal full logo. This is an independent website identity proposal, not a claim of adopted branding.",
+        "reference": null
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 72,
+          "top": 74,
+          "width": 2020,
+          "height": 574
+        }
+      }
+    },
+    "on-dark": {
+      "path": "logo-on-dark.png",
+      "sha256": "bda9dff997d2a76d12ee47b4a43c7dd124dd28de8a00291fb1f630a33f81cb1b",
+      "width": 1024,
+      "height": 292,
+      "transparentFraction": 0.4256340967465753,
+      "master": {
+        "path": "generated-on-dark.png",
+        "sha256": "c36d8b30a4e2e9f4657efe0dab929d1d71d4497c3ddbe24f2be71ebc725b0f58",
+        "width": 2160,
+        "height": 728
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-8f2004fb-8dee-4afb-94b0-6300d62124d9",
+        "prompt": "Create the matching light-on-dark production variant of the exact supplied logo. Preserve precisely the same emblem, geometry, spelling, word count, typographic hierarchy, proportions, layout and spacing. Required exact text: BONN USED CARS. Change EVERY letter, including all secondary descriptor words and legal suffixes, to solid white so it is legible over a dark or red website header. Change the charcoal portions of the emblem to white. Retain the small red/gold emblem accent only if it contrasts clearly against a dark header. True transparent alpha background; do not paint a dark rectangle or checkerboard. Flat clean edges, no glows, shadows, bevels, textures, gradients, new artwork, new icon, extra text or mockup. Deliver one horizontal matching logo, fully legible.",
+        "reference": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-7a1957e1-5dda-4db4-8f95-be52bec2027d.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 72,
+          "top": 71,
+          "width": 2015,
+          "height": 574
+        }
+      }
+    }
+  },
+  "review": {
+    "status": "artwork-visually-reviewed",
+    "alpha": "all exports measured as genuine transparent nonempty PNGs",
+    "spelling": "English wordmark inspected; source-bound display aliases retained",
+    "compact": "Horizontal logos only. Interactive 32/48/64px gallery preview is provided; separate compact/favicon artwork remains part of dealer-pack preparation.",
+    "sixDesigns": "not-yet-integrated-or-rendered",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "reviewer": "Codex visual inspection",
+    "header": "All 196 paired PNGs inspected at 240x64 on white, #111113 and #c40101",
+    "evidence": "final-review-10.png"
+  },
+  "releaseReady": false,
+  "artworkHolds": [],
+  "artworkReadyForIntegration": true
+}

@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "ae-sharjah-al-behar-used-cars",
+  "slug": "al-behar-used-cars",
+  "artworkDirectory": "al-behar-used-cars",
+  "name": "Al Behar Used Cars",
+  "renderedName": "Al Behar Used Cars",
+  "kind": "independent-website-logo-proposal",
+  "dealerApproved": false,
+  "ownerApproved": false,
+  "sourceEvidence": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/al-behar-used-cars-exhb-llc-sp",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/4457-nissan-patrol-38-at-4wd-316-hp-se-platinum",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "retainedOriginalsUnchanged": true,
+  "variants": {
+    "on-light": {
+      "path": "logo-on-light.png",
+      "sha256": "f5d7950b26ce33c282111a2d134ab7443757ce074a3682a3e609c1e36f98cff6",
+      "width": 1024,
+      "height": 285,
+      "transparentFraction": 0.648876096491228,
+      "master": {
+        "path": "generated-on-light.png",
+        "sha256": "ecfa51f01f57e1a8e3e1b4b148536cc1174aa3db87381ead841a296d2b08581f",
+        "width": 1959,
+        "height": 803
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-eb423ba8-075a-4f72-a391-cb110dc0081d",
+        "prompt": "Create one professional horizontal automotive dealership logo proposal for Al Behar Used Cars. Required exact text, uppercase: AL BEHAR USED CARS. Every word must be present and spelled precisely; use sensible primary name and smaller descriptor hierarchy without tiny lettering. Produce a polished original identity with a distinctive custom typographic ligature in a refined square emblem. Initials B may inform the emblem. Emblem left, full clear name to the right, compact and balanced for a website header. Avoid overused shield and generic car silhouettes; no manufacturer badges. Clean modern lettering with careful kerning and strong legibility. All text is deep charcoal black, appropriate on a white/light header. One restrained red or gold accent may appear inside the emblem only; no pale text. Flat crisp edges, a small number of solid shapes, no chrome, no lighting, no shadow, no texture, no gradient. Genuine transparent alpha background, isolated logo with no background box, no grid, no checkerboard painted into pixels. No slogan, contact info, website, watermark, mockup, photograph, extra concept, or duplicate logo. Deliver exactly one horizontal full logo. This is an independent website identity proposal, not a claim of adopted branding.",
+        "reference": null
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 20,
+          "top": 129,
+          "width": 1925,
+          "height": 536
+        }
+      }
+    },
+    "on-dark": {
+      "path": "logo-on-dark.png",
+      "sha256": "8a55e77d6df440f436967fd57a9094b05504ed2977ad203379822dce6caa3935",
+      "width": 1024,
+      "height": 285,
+      "transparentFraction": 0.5352967379385964,
+      "master": {
+        "path": "generated-on-dark.png",
+        "sha256": "c832291edfc13a12724f2b0ca967728a2d28b8c6f798f55d963e1f63d690e076",
+        "width": 1958,
+        "height": 803
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-48d0e4a1-ce7a-441d-8994-13f38fe473e0",
+        "prompt": "Create the matching light-on-dark production variant of the exact supplied logo. Preserve precisely the same emblem, geometry, spelling, word count, typographic hierarchy, proportions, layout and spacing. Required exact text: AL BEHAR USED CARS. Change EVERY letter, including all secondary descriptor words and legal suffixes, to solid white so it is legible over a dark or red website header. Change the charcoal portions of the emblem to white. Retain the small red/gold emblem accent only if it contrasts clearly against a dark header. True transparent alpha background; do not paint a dark rectangle or checkerboard. Flat clean edges, no glows, shadows, bevels, textures, gradients, new artwork, new icon, extra text or mockup. Deliver one horizontal matching logo, fully legible.",
+        "reference": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-eb423ba8-075a-4f72-a391-cb110dc0081d.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 15,
+          "top": 128,
+          "width": 1935,
+          "height": 538
+        }
+      }
+    }
+  },
+  "review": {
+    "status": "artwork-visually-reviewed",
+    "alpha": "all exports measured as genuine transparent nonempty PNGs",
+    "spelling": "English wordmark inspected; source-bound display aliases retained",
+    "compact": "Horizontal logos only. Interactive 32/48/64px gallery preview is provided; separate compact/favicon artwork remains part of dealer-pack preparation.",
+    "sixDesigns": "not-yet-integrated-or-rendered",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "reviewer": "Codex visual inspection",
+    "header": "All 196 paired PNGs inspected at 240x64 on white, #111113 and #c40101",
+    "evidence": "final-review-09.png"
+  },
+  "releaseReady": false,
+  "artworkHolds": [],
+  "artworkReadyForIntegration": true
+}

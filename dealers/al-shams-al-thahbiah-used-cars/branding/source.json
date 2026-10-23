@@ -1,0 +1,149 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-shams-al-thahbiah-used-cars",
+  "status": "reviewed-imagegen-proposal",
+  "realLogoFirst": true,
+  "publicSources": [
+    {
+      "url": "https://www.dubicars.com/dealers/sharjah-al-shams-al-thahbiah-used-cars-2477",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "originals": [],
+  "creationMethod": "imagegen-proposal",
+  "dealerApproved": false,
+  "generatedInputs": {
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "master": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "f61818503d69f812d33492214ce9eadaccbfb73a0059e28ab45be0300ac50421",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-c4296dd8-1aea-419b-a485-be331d615305",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark-light.png",
+      "sha256": "c32815e5876259ca238a4eb8e7baf4964445b0a1ca98980bdefd94eb236fcab0",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-c4296dd8-1aea-419b-a485-be331d615305",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/reviewed-mark-light.png",
+          "sha256": "4cf6255eac704549030d32b1c69edd9a084e6ccfeec4e42f90cdef790b87692b",
+          "operation": "darken-reviewed-gold-ink-for-white-compact-favicon",
+          "colorTransform": "gold channel scale 0.42/0.35/0.4"
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-dark.png",
+      "sha256": "71ce6264e980c590b5cbb61d44e293c573595ec1632e557113d58d59d115ed69",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a4666cbf-3309-486f-91cd-6faa89a5366c",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "d65d7f4608595504e038d9d51cbe13968c19d651637d8fbe76399fbc850a5544",
+          "operation": "isolate-reviewed-arc-S-symbol-components",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 350,
+            "height": 288
+          },
+          "selection": {
+            "alphaThreshold": 128,
+            "minXBefore": 300,
+            "minPixels": 40,
+            "antialiasNeighborPixels": 1,
+            "components": 5
+          }
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "f61818503d69f812d33492214ce9eadaccbfb73a0059e28ab45be0300ac50421",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-c4296dd8-1aea-419b-a485-be331d615305",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "d65d7f4608595504e038d9d51cbe13968c19d651637d8fbe76399fbc850a5544",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-a4666cbf-3309-486f-91cd-6faa89a5366c",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "d65d7f4608595504e038d9d51cbe13968c19d651637d8fbe76399fbc850a5544",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-a4666cbf-3309-486f-91cd-6faa89a5366c",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewKind": "agent-visual-review",
+      "humanReview": false,
+      "dealerApproval": false,
+      "backgrounds": {
+        "onLight": "#ffffff",
+        "onDark": "#111113",
+        "onAccent": "#c40101"
+      },
+      "wordmarkWidths": [
+        220,
+        240
+      ],
+      "notes": "Exact reviewed Image Gen pair; native masters and generation provenance retained. Compact rasters cropped from the actual left symbol."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-22T23:42:46.338Z",
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#c40101"
+      ],
+      "widths": [
+        32,
+        48,
+        64
+      ],
+      "notes": "Original reviewed compact retained byte for byte. Selected white-surface gold darkened from exact pixels for native favicon contrast."
+    }
+  },
+  "sourceBlockers": [],
+  "artworkProvenance": {
+    "path": "branding/artwork-provenance.json",
+    "sha256": "5bb715b403439e9686c84abfdde2c9379e85748e25f6123e19d373077467154a",
+    "manifestSha256": "d25e9cee768a885052ac0a8df220d843c9b9c6f6f120d722705bead1cc99e694",
+    "nativeMasters": [
+      {
+        "path": "branding/native-generated-on-light.png",
+        "sha256": "e23723cc7360f2235581768ca9b92d7bd63faf5652996e483800cd22418c2b65"
+      },
+      {
+        "path": "branding/native-generated-on-dark.png",
+        "sha256": "0795df8b8dd7cf87fff91f28c7c9ded66e0e7a0e8ff2ef2ee5a6389450fdb31b"
+      }
+    ],
+    "reviewedCompact": {
+      "path": "branding/reviewed-mark-light.png",
+      "sha256": "4cf6255eac704549030d32b1c69edd9a084e6ccfeec4e42f90cdef790b87692b"
+    }
+  }
+}

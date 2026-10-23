@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-sabah-used-cars-trading",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae-supplement-2.json",
+    "sha256": "aee92b9d3407b408d84113272c67358d98517f397cfbfe76fb223f15ba8a093e"
+  },
+  "publicSources": [
+    {
+      "url": "https://ae.opensooq.com/en/shops/shop-63569675",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://ae.opensooq.com/en/search/287743964",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    }
+  ],
+  "liveFetchPerformed": false
+}

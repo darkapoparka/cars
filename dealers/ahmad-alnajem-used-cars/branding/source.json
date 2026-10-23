@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "dealer": "ahmad-alnajem-used-cars",
-  "status": "research-required",
+  "status": "reviewed-imagegen-proposal",
   "realLogoFirst": true,
   "publicSources": [
     {
@@ -14,7 +14,137 @@
     }
   ],
   "originals": [],
-  "creationMethod": null,
+  "creationMethod": "imagegen-proposal",
   "dealerApproved": false,
-  "generatedInputs": null
+  "generatedInputs": {
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "master": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "b01777e0ef2b534c3f8c1bf6a9a429ef3998e10fd9cfa788ccf8341b4ffdcb83",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-01e023b1-534c-492c-b6f5-b94df1fa1917",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark-light.png",
+      "sha256": "2980477ab99382060d442b10b086cccabae86e47d0974f73fc8e08228b961f1d",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-01e023b1-534c-492c-b6f5-b94df1fa1917",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "b01777e0ef2b534c3f8c1bf6a9a429ef3998e10fd9cfa788ccf8341b4ffdcb83",
+          "operation": "crop-reviewed-wordmark-initial-A",
+          "crop": {
+            "left": 18,
+            "top": 257,
+            "width": 95,
+            "height": 72
+          }
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-dark.png",
+      "sha256": "610988de0d69eefaae47601c2be4e4a9e2cd5f1603c695afde5022723abb338d",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-d954e84a-2301-4cca-8163-9e52168d68c0",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/reviewed-mark-dark.png",
+          "sha256": "312a7fa4bf482bba04299b4e5619b5d4e7633111c4dfdc69b2c3ad905c538fee",
+          "maskFrom": {
+            "path": "branding/generated-mark-light.png",
+            "sha256": "2980477ab99382060d442b10b086cccabae86e47d0974f73fc8e08228b961f1d"
+          },
+          "operation": "isolate-exact-reviewed-initial-A-shape-and-repair-dark-compact-speckle",
+          "ink": "light-contrast-245-neutral"
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "b01777e0ef2b534c3f8c1bf6a9a429ef3998e10fd9cfa788ccf8341b4ffdcb83",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-01e023b1-534c-492c-b6f5-b94df1fa1917",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "f9c3537ee535bf9f501a8ee40710d0304688e49094f0c75822ad6a525e7fe18d",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-d954e84a-2301-4cca-8163-9e52168d68c0",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "f9c3537ee535bf9f501a8ee40710d0304688e49094f0c75822ad6a525e7fe18d",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-d954e84a-2301-4cca-8163-9e52168d68c0",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewKind": "agent-visual-review",
+      "humanReview": false,
+      "dealerApproval": false,
+      "backgrounds": {
+        "onLight": "#ffffff",
+        "onDark": "#111113",
+        "onAccent": "#c40101"
+      },
+      "wordmarkWidths": [
+        220,
+        240
+      ],
+      "notes": "Exact reviewed Image Gen pair; native masters and generation provenance retained. Compact rasters cropped from the actual left symbol."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-22T23:42:46.338Z",
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#c40101"
+      ],
+      "widths": [
+        32,
+        48,
+        64
+      ],
+      "notes": "Initial A cropped from exact reviewed wordmark; dark compact uses its on-light alpha shape to remove speckle, with bright neutral ink. Unmodified reviewed on-dark compact retained."
+    }
+  },
+  "sourceBlockers": [],
+  "artworkProvenance": {
+    "path": "branding/artwork-provenance.json",
+    "sha256": "06dffc3b5d6807ff7ed776e62e9b351adef1ca342f61864db98efd4962c89823",
+    "manifestSha256": "d25e9cee768a885052ac0a8df220d843c9b9c6f6f120d722705bead1cc99e694",
+    "nativeMasters": [
+      {
+        "path": "branding/native-generated-on-light.png",
+        "sha256": "e0a754de2896dde725d9ad34010257757da8232ae902973bd412570ea6a50bcc"
+      },
+      {
+        "path": "branding/native-generated-on-dark.png",
+        "sha256": "91a2bb0f8f606a8d8439a95e1aa6749fc8caddf8e9492c788451e9b338d4fbb4"
+      }
+    ],
+    "reviewedCompactDark": {
+      "path": "branding/reviewed-mark-dark.png",
+      "sha256": "312a7fa4bf482bba04299b4e5619b5d4e7633111c4dfdc69b2c3ad905c538fee"
+    }
+  }
 }

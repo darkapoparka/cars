@@ -1,0 +1,243 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-jars-aldhahabi-used-cars-trading",
+  "reviewed": true,
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "142a1e300699a40832451d21c8ed2571616f16e6f97b12b3c8be012fa17828eb",
+      "sourceSha256": "23078f7605e918bf911d69d05b0346a29dcba7dc1209f00384e247fcaf18e833"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "4b1ca8e9aeaa5f39f72d844a5999fcfe7535f81ecb2f4766033ac2bc0e9a9fdd",
+      "sourceSha256": "0bee2f362b153ae9d00fb3fc257755077b63c617b6436964a887fefb2b1c09e5"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "4b1ca8e9aeaa5f39f72d844a5999fcfe7535f81ecb2f4766033ac2bc0e9a9fdd",
+      "sourceSha256": "0bee2f362b153ae9d00fb3fc257755077b63c617b6436964a887fefb2b1c09e5"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "23078f7605e918bf911d69d05b0346a29dcba7dc1209f00384e247fcaf18e833",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-fae1679c-956a-4d43-a0d1-36ce594f69bd",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "952df25e99ed851c442bee08b62014e9c68c43669d87ba7ed1493e9581296f9e",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-fae1679c-956a-4d43-a0d1-36ce594f69bd",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "23078f7605e918bf911d69d05b0346a29dcba7dc1209f00384e247fcaf18e833",
+        "operation": "darken-reviewed-gold-for-white-compact",
+        "outputColor": "#643707"
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "2f4368c4afd0b7ad2a060c231d9717cd94d3464fd39d77a19585903fe4cba3eb"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "23078f7605e918bf911d69d05b0346a29dcba7dc1209f00384e247fcaf18e833",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-fae1679c-956a-4d43-a0d1-36ce594f69bd",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-jars-aldhahabi-used-cars-trading/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "0bee2f362b153ae9d00fb3fc257755077b63c617b6436964a887fefb2b1c09e5",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-0a1d281e-8265-4244-ac47-cf0be4d314b8",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-jars-aldhahabi-used-cars-trading/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "0bee2f362b153ae9d00fb3fc257755077b63c617b6436964a887fefb2b1c09e5",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-0a1d281e-8265-4244-ac47-cf0be4d314b8",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-jars-aldhahabi-used-cars-trading/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "23078f7605e918bf911d69d05b0346a29dcba7dc1209f00384e247fcaf18e833",
+      "sha256": "23078f7605e918bf911d69d05b0346a29dcba7dc1209f00384e247fcaf18e833",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 307
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "0bee2f362b153ae9d00fb3fc257755077b63c617b6436964a887fefb2b1c09e5",
+      "sha256": "0bee2f362b153ae9d00fb3fc257755077b63c617b6436964a887fefb2b1c09e5",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 305
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "0bee2f362b153ae9d00fb3fc257755077b63c617b6436964a887fefb2b1c09e5",
+      "sha256": "0bee2f362b153ae9d00fb3fc257755077b63c617b6436964a887fefb2b1c09e5",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 305
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "2e9c0c96594a3c63f783552fc1e729df39f465ce78998a62420331752b3b3626",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-fae1679c-956a-4d43-a0d1-36ce594f69bd",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "23078f7605e918bf911d69d05b0346a29dcba7dc1209f00384e247fcaf18e833",
+          "operation": "darken-reviewed-gold-for-white-compact",
+          "outputColor": "#643707"
+        }
+      },
+      "sourceReference": "dealers/al-jars-aldhahabi-used-cars-trading/branding/generated-mark-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "025a4124bf855e53e2d5dc9dd259f8edf1ba86aa2937cf3a6f3e4bd34afef1e1",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-0a1d281e-8265-4244-ac47-cf0be4d314b8",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "0bee2f362b153ae9d00fb3fc257755077b63c617b6436964a887fefb2b1c09e5",
+          "operation": "crop-reviewed-right-car-badge",
+          "crop": {
+            "left": 690,
+            "top": 20,
+            "width": 225,
+            "height": 230
+          }
+        }
+      },
+      "sourceReference": "dealers/al-jars-aldhahabi-used-cars-trading/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "952df25e99ed851c442bee08b62014e9c68c43669d87ba7ed1493e9581296f9e",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-fae1679c-956a-4d43-a0d1-36ce594f69bd",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "23078f7605e918bf911d69d05b0346a29dcba7dc1209f00384e247fcaf18e833",
+          "operation": "darken-reviewed-gold-for-white-compact",
+          "outputColor": "#643707"
+        }
+      },
+      "sourceReference": "dealers/al-jars-aldhahabi-used-cars-trading/branding/generated-mark-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "2f4368c4afd0b7ad2a060c231d9717cd94d3464fd39d77a19585903fe4cba3eb",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-fae1679c-956a-4d43-a0d1-36ce594f69bd",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "23078f7605e918bf911d69d05b0346a29dcba7dc1209f00384e247fcaf18e833",
+          "operation": "darken-reviewed-gold-for-white-compact",
+          "outputColor": "#643707"
+        }
+      },
+      "sourceReference": "dealers/al-jars-aldhahabi-used-cars-trading/branding/generated-mark-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "d883090bacfb7ce37e23b1cf4701125d9925cc8318e1a863118d927ea47a0718",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-0a1d281e-8265-4244-ac47-cf0be4d314b8",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "0bee2f362b153ae9d00fb3fc257755077b63c617b6436964a887fefb2b1c09e5",
+        "operation": "crop-reviewed-right-car-badge",
+        "crop": {
+          "left": 690,
+          "top": 20,
+          "width": 225,
+          "height": 230
+        }
+      }
+    }
+  }
+}

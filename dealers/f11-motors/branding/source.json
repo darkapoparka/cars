@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "dealer": "f11-motors",
-  "status": "research-required",
+  "status": "reviewed-imagegen-proposal",
   "realLogoFirst": true,
   "publicSources": [
     {
@@ -14,7 +14,146 @@
     }
   ],
   "originals": [],
-  "creationMethod": null,
+  "creationMethod": "imagegen-proposal",
   "dealerApproved": false,
-  "generatedInputs": null
+  "generatedInputs": {
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "master": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "3fe0dc1b1b59f910bc5a10c7f9a75968f40b796b7fe975ab675ae94c4d0045f2",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-ef8b1054-3845-4526-b462-d379bfb65ac3",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark-light.png",
+      "sha256": "cb7b97aec6875467648e540a59b724921c792d491e33905b85bf0590e414a6ca",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-ef8b1054-3845-4526-b462-d379bfb65ac3",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "3fe0dc1b1b59f910bc5a10c7f9a75968f40b796b7fe975ab675ae94c4d0045f2",
+          "operation": "isolate-reviewed-symbol-connected-components",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 310,
+            "height": 256
+          },
+          "selection": {
+            "alphaThreshold": 96,
+            "minXBefore": 250,
+            "minPixels": 20,
+            "antialiasNeighborPixels": 1
+          }
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-dark.png",
+      "sha256": "bb4232f76c13ae64ce7e9d712155074155b95adf9e276cd3367368971ca70e52",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-81a2e224-7c8a-46a5-9e35-b9204302837e",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "455823f367e20e9763e0dda38c77cfae5829e43b0dc8bf3ec0ea8b024b0224af",
+          "operation": "isolate-reviewed-symbol-connected-components",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 310,
+            "height": 257
+          },
+          "selection": {
+            "alphaThreshold": 96,
+            "minXBefore": 250,
+            "minPixels": 20,
+            "antialiasNeighborPixels": 1
+          }
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "3fe0dc1b1b59f910bc5a10c7f9a75968f40b796b7fe975ab675ae94c4d0045f2",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-ef8b1054-3845-4526-b462-d379bfb65ac3",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "455823f367e20e9763e0dda38c77cfae5829e43b0dc8bf3ec0ea8b024b0224af",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-81a2e224-7c8a-46a5-9e35-b9204302837e",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "455823f367e20e9763e0dda38c77cfae5829e43b0dc8bf3ec0ea8b024b0224af",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-81a2e224-7c8a-46a5-9e35-b9204302837e",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewKind": "agent-visual-review",
+      "humanReview": false,
+      "dealerApproval": false,
+      "backgrounds": {
+        "onLight": "#ffffff",
+        "onDark": "#111113",
+        "onAccent": "#c40101"
+      },
+      "wordmarkWidths": [
+        220,
+        240
+      ],
+      "notes": "Exact reviewed Image Gen pair; native masters and generation provenance retained. Compact rasters cropped from the actual left symbol."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-22T23:42:46.338Z",
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#c40101"
+      ],
+      "widths": [
+        32,
+        48,
+        64
+      ],
+      "notes": "Compact symbol components selected from the reviewed PNG pair; adjacent wordmark lettering excluded. Native compact and favicon QA remain independent."
+    }
+  },
+  "sourceBlockers": [],
+  "artworkProvenance": {
+    "path": "branding/artwork-provenance.json",
+    "sha256": "e0b3f36733ac960b183f989a12627766ff837323ad99dc597de7d97142566e92",
+    "manifestSha256": "d25e9cee768a885052ac0a8df220d843c9b9c6f6f120d722705bead1cc99e694",
+    "nativeMasters": [
+      {
+        "path": "branding/native-generated-on-light.png",
+        "sha256": "b245f010d1a5a305353f750bfe9bc9e712ddb692a0b9f9524189c536e889de27"
+      },
+      {
+        "path": "branding/native-generated-on-dark.png",
+        "sha256": "f5f4b961ded8fd59955e42dfd30c95d5e5c6125431ad6fb2d2d08197fd878145"
+      }
+    ]
+  }
 }

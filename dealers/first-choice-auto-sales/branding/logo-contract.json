@@ -1,0 +1,299 @@
+{
+  "schemaVersion": 1,
+  "dealer": "first-choice-auto-sales",
+  "reviewed": true,
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "e1144ef0034ede5bb32d7a788409f75e96535fa0306c5949e6eb54d99ee55ede",
+      "sourceSha256": "f8e6685f517ec838c284f3373db3d18baedcf524af2c72ea8605a0e104c5d685"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "c3369a33589fea04f6a26cb0934991c1981557106c1861f94677dfd572e2ff90",
+      "sourceSha256": "798e938c85752a4c9b40719d926675783653267d342c9ef33d8ac9c550e5e5f5"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "c3369a33589fea04f6a26cb0934991c1981557106c1861f94677dfd572e2ff90",
+      "sourceSha256": "798e938c85752a4c9b40719d926675783653267d342c9ef33d8ac9c550e5e5f5"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "f8e6685f517ec838c284f3373db3d18baedcf524af2c72ea8605a0e104c5d685",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-d89a8c13-420c-44fa-9cba-a9892db44c11",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "e02c840276bb8b78a2e9f08774b8d82f6d1b35d564ef7ac9bd8f1b20114fcc63",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-d89a8c13-420c-44fa-9cba-a9892db44c11",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "f8e6685f517ec838c284f3373db3d18baedcf524af2c72ea8605a0e104c5d685",
+        "operation": "crop-and-pad-reviewed-wordmark-initial-for-compact",
+        "crop": {
+          "left": 19,
+          "top": 181,
+          "width": 97,
+          "height": 89
+        },
+        "canvas": {
+          "width": 167,
+          "height": 159,
+          "offsetX": 35,
+          "offsetY": 35
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "f3a4bd282cb10ba8aa716e49c86d8127e385fcaf82177fd03c8ddc899cc78f9a"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "f8e6685f517ec838c284f3373db3d18baedcf524af2c72ea8605a0e104c5d685",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-d89a8c13-420c-44fa-9cba-a9892db44c11",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/first-choice-auto-sales/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "798e938c85752a4c9b40719d926675783653267d342c9ef33d8ac9c550e5e5f5",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-f65e7915-0b3b-48b8-94e3-c49bbe832e6d",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/first-choice-auto-sales/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "798e938c85752a4c9b40719d926675783653267d342c9ef33d8ac9c550e5e5f5",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-f65e7915-0b3b-48b8-94e3-c49bbe832e6d",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/first-choice-auto-sales/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "f8e6685f517ec838c284f3373db3d18baedcf524af2c72ea8605a0e104c5d685",
+      "sha256": "f8e6685f517ec838c284f3373db3d18baedcf524af2c72ea8605a0e104c5d685",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 345
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "798e938c85752a4c9b40719d926675783653267d342c9ef33d8ac9c550e5e5f5",
+      "sha256": "798e938c85752a4c9b40719d926675783653267d342c9ef33d8ac9c550e5e5f5",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 343
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "798e938c85752a4c9b40719d926675783653267d342c9ef33d8ac9c550e5e5f5",
+      "sha256": "798e938c85752a4c9b40719d926675783653267d342c9ef33d8ac9c550e5e5f5",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 343
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "22799080f5e02d034a6b583f0635eb4e19521590c21dd9f209bf5155d7b69f32",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-d89a8c13-420c-44fa-9cba-a9892db44c11",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "f8e6685f517ec838c284f3373db3d18baedcf524af2c72ea8605a0e104c5d685",
+          "operation": "crop-and-pad-reviewed-wordmark-initial-for-compact",
+          "crop": {
+            "left": 19,
+            "top": 181,
+            "width": 97,
+            "height": 89
+          },
+          "canvas": {
+            "width": 167,
+            "height": 159,
+            "offsetX": 35,
+            "offsetY": 35
+          }
+        }
+      },
+      "sourceReference": "dealers/first-choice-auto-sales/branding/generated-mark-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "ae177cc93c3a174f52087f4dcae32226eea50e8e8abbd9fe98093e80c258e7dc",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-f65e7915-0b3b-48b8-94e3-c49bbe832e6d",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "798e938c85752a4c9b40719d926675783653267d342c9ef33d8ac9c550e5e5f5",
+          "operation": "crop-and-pad-reviewed-wordmark-initial-for-compact",
+          "crop": {
+            "left": 19,
+            "top": 181,
+            "width": 97,
+            "height": 89
+          },
+          "canvas": {
+            "width": 167,
+            "height": 159,
+            "offsetX": 35,
+            "offsetY": 35
+          }
+        }
+      },
+      "sourceReference": "dealers/first-choice-auto-sales/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "e02c840276bb8b78a2e9f08774b8d82f6d1b35d564ef7ac9bd8f1b20114fcc63",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-d89a8c13-420c-44fa-9cba-a9892db44c11",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "f8e6685f517ec838c284f3373db3d18baedcf524af2c72ea8605a0e104c5d685",
+          "operation": "crop-and-pad-reviewed-wordmark-initial-for-compact",
+          "crop": {
+            "left": 19,
+            "top": 181,
+            "width": 97,
+            "height": 89
+          },
+          "canvas": {
+            "width": 167,
+            "height": 159,
+            "offsetX": 35,
+            "offsetY": 35
+          }
+        }
+      },
+      "sourceReference": "dealers/first-choice-auto-sales/branding/generated-mark-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "f3a4bd282cb10ba8aa716e49c86d8127e385fcaf82177fd03c8ddc899cc78f9a",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-d89a8c13-420c-44fa-9cba-a9892db44c11",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "f8e6685f517ec838c284f3373db3d18baedcf524af2c72ea8605a0e104c5d685",
+          "operation": "crop-and-pad-reviewed-wordmark-initial-for-compact",
+          "crop": {
+            "left": 19,
+            "top": 181,
+            "width": 97,
+            "height": 89
+          },
+          "canvas": {
+            "width": 167,
+            "height": 159,
+            "offsetX": 35,
+            "offsetY": 35
+          }
+        }
+      },
+      "sourceReference": "dealers/first-choice-auto-sales/branding/generated-mark-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "fd0300acbdc3a0b0d16ef40f3c53f1a84685ec03c1ea43fb155968fee3fd1073",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-f65e7915-0b3b-48b8-94e3-c49bbe832e6d",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "798e938c85752a4c9b40719d926675783653267d342c9ef33d8ac9c550e5e5f5",
+        "operation": "crop-and-pad-reviewed-wordmark-initial-for-compact",
+        "crop": {
+          "left": 19,
+          "top": 181,
+          "width": 97,
+          "height": 89
+        },
+        "canvas": {
+          "width": 167,
+          "height": 159,
+          "offsetX": 35,
+          "offsetY": 35
+        }
+      }
+    }
+  }
+}

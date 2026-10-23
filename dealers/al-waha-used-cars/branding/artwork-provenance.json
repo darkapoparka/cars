@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "ae-ajman-al-waha-used-cars",
+  "slug": "al-waha-used-cars",
+  "artworkDirectory": "al-waha-used-cars",
+  "name": "Al Waha Used Cars",
+  "renderedName": "Al Waha Used Cars",
+  "kind": "independent-website-logo-proposal",
+  "dealerApproved": false,
+  "ownerApproved": false,
+  "sourceEvidence": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/al-waha-used-cars",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/3007-chevrolet-impala-36-at-309-hp-ltz",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "retainedOriginalsUnchanged": true,
+  "variants": {
+    "on-light": {
+      "path": "logo-on-light.png",
+      "sha256": "9f0da7583aed7b66446171c797230f4bbe8784764d436b47fbc1a5005683f628",
+      "width": 1024,
+      "height": 232,
+      "transparentFraction": 0.6681118669181034,
+      "master": {
+        "path": "generated-on-light.png",
+        "sha256": "f4b10ffc5785d46144f9844e6313c485f5011bdd2a321d62a13877e7cea4b4a2",
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-7033552b-9370-4970-8600-705fe382a03f",
+        "prompt": "Use case: logo-brand. ONE polished original independent car-dealer website-proposal logo. Exact full text: \"AL WAHA USED CARS\". Create a very simple confident emblem inspired by the distinctive name, compact and easily recognizable; sophisticated clean sans-serif wordmark. For any initial-based symbol use the meaningful distinctive initials \"W\", rather than a generic Al-prefix A. Avoid the repeated A-plus-road-swoosh formula. Emblem at left, full exact name to right, thoughtfully arranged over one or two readable lines. All lettering, including any small descriptor, must be dark charcoal or black for excellent contrast on WHITE; an optional restrained accent may appear in the emblem only. Crisp flat vector-like geometry, large open counters, strong readable type, professional and distinctive. Real alpha-transparent background, no background block or fake checkerboard. No photo, car-manufacturer emblem, stock car silhouette, generic shield, chrome, gradients, shadows, texture, watermark, slogan, unrelated decoration or mockup. Wide horizontal lockup, framed close with a small transparent margin, readable at 240px wide; symbol should survive 32px. Exact spelling and all words. Only one logo, never a presentation board. Proposed identity, not claimed official/adopted.",
+        "reference": null
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 49,
+          "top": 125,
+          "width": 2086,
+          "height": 473
+        }
+      }
+    },
+    "on-dark": {
+      "path": "logo-on-dark.png",
+      "sha256": "3ec183ab47867a46d8a39a7b7228944729d89d72e443e77c4e326b80e9f9d12f",
+      "width": 1024,
+      "height": 234,
+      "transparentFraction": 0.5758129674145299,
+      "master": {
+        "path": "generated-on-dark.png",
+        "sha256": "2714137a59c4b9e119cfb375c76f6bb1b94ec531cf70a373eaa300370f416ba7",
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-a7a37e00-ed92-49c4-a3cf-efb7806b834a",
+        "prompt": "Make the matching ON-DARK version of the supplied AL WAHA USED CARS logo. Preserve its exact identity, symbol geometry, lettering, complete name, line breaks, optical spacing and proportions. Every letter of the full name and descriptor must be solid clean WHITE, not colored or gray. Existing restrained emblem accent may remain only if visible; keep all primary ink white. Genuine alpha transparency and open counters, smooth clean edges. No background panel, no checkerboard, no new wording, design, texture, distress, shadow, watermark or decoration. One matching white/light-ink horizontal logo for dark and red headers. Exact name: AL WAHA USED CARS.",
+        "reference": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-7033552b-9370-4970-8600-705fe382a03f.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 50,
+          "top": 121,
+          "width": 2087,
+          "height": 477
+        }
+      }
+    }
+  },
+  "review": {
+    "status": "artwork-visually-reviewed",
+    "alpha": "all exports measured as genuine transparent nonempty PNGs",
+    "spelling": "English wordmark inspected; source-bound display aliases retained",
+    "compact": "Horizontal logos only. Interactive 32/48/64px gallery preview is provided; separate compact/favicon artwork remains part of dealer-pack preparation.",
+    "sixDesigns": "not-yet-integrated-or-rendered",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "reviewer": "Codex visual inspection",
+    "header": "All 196 paired PNGs inspected at 240x64 on white, #111113 and #c40101",
+    "evidence": "final-review-03.png"
+  },
+  "releaseReady": false,
+  "artworkHolds": [],
+  "artworkReadyForIntegration": true
+}

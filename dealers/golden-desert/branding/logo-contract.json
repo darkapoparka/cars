@@ -1,0 +1,243 @@
+{
+  "schemaVersion": 1,
+  "dealer": "golden-desert",
+  "reviewed": true,
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "f5738e9032e0b4c65524354b0317d140256821b566e7f6005af9f8246314f381",
+      "sourceSha256": "d2a81310678fc30298fdca8013ed83aa1983d3c188e6dfc7f31ca812ba6040b4"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "ba11b52fb3eac7cf65fd76487b14360c932e1c7abed512e678ce32f4219ff9af",
+      "sourceSha256": "71fd089eaff7a018f4bdc76662e1cf1bc230cf294a08472589334c7de744d201"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "ba11b52fb3eac7cf65fd76487b14360c932e1c7abed512e678ce32f4219ff9af",
+      "sourceSha256": "71fd089eaff7a018f4bdc76662e1cf1bc230cf294a08472589334c7de744d201"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "d2a81310678fc30298fdca8013ed83aa1983d3c188e6dfc7f31ca812ba6040b4",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-41a5c3ce-796d-4c2e-a5b5-6c3bc22d4b1c",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "a409fb703243cb8524c51d7a3576cf1db1fb98024a4fa423b75eb76ab93965ca",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-41a5c3ce-796d-4c2e-a5b5-6c3bc22d4b1c",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/reviewed-mark-light.png",
+        "sha256": "50d1ac676e884b23640dd41109ccd4f9d0473d09164b0823577b8113b1ec90c2",
+        "operation": "darken-reviewed-gold-ink-for-white-compact-favicon",
+        "colorTransform": "gold channel scale 0.42/0.35/0.4"
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "e4aca1f9046bc5d60894565db76bb02a56364df2c45539ed28417cab003b2f62"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "d2a81310678fc30298fdca8013ed83aa1983d3c188e6dfc7f31ca812ba6040b4",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-41a5c3ce-796d-4c2e-a5b5-6c3bc22d4b1c",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/golden-desert/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "71fd089eaff7a018f4bdc76662e1cf1bc230cf294a08472589334c7de744d201",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a736ec01-f9d2-466b-935f-9db155f98f08",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/golden-desert/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "71fd089eaff7a018f4bdc76662e1cf1bc230cf294a08472589334c7de744d201",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a736ec01-f9d2-466b-935f-9db155f98f08",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/golden-desert/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "d2a81310678fc30298fdca8013ed83aa1983d3c188e6dfc7f31ca812ba6040b4",
+      "sha256": "d2a81310678fc30298fdca8013ed83aa1983d3c188e6dfc7f31ca812ba6040b4",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 172
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "71fd089eaff7a018f4bdc76662e1cf1bc230cf294a08472589334c7de744d201",
+      "sha256": "71fd089eaff7a018f4bdc76662e1cf1bc230cf294a08472589334c7de744d201",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 174
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "71fd089eaff7a018f4bdc76662e1cf1bc230cf294a08472589334c7de744d201",
+      "sha256": "71fd089eaff7a018f4bdc76662e1cf1bc230cf294a08472589334c7de744d201",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 174
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "f52ec52f49b6e83cc4555c48523691f098bbaac9cb58ce4096b4c9ced8caa264",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-41a5c3ce-796d-4c2e-a5b5-6c3bc22d4b1c",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/reviewed-mark-light.png",
+          "sha256": "50d1ac676e884b23640dd41109ccd4f9d0473d09164b0823577b8113b1ec90c2",
+          "operation": "darken-reviewed-gold-ink-for-white-compact-favicon",
+          "colorTransform": "gold channel scale 0.42/0.35/0.4"
+        }
+      },
+      "sourceReference": "dealers/golden-desert/branding/generated-mark-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "4d9ccac7ceb3c0feb0b3b0115443a7d71f159f645e48e1d87b18202899fdb503",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a736ec01-f9d2-466b-935f-9db155f98f08",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "71fd089eaff7a018f4bdc76662e1cf1bc230cf294a08472589334c7de744d201",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 285,
+            "height": 174
+          }
+        }
+      },
+      "sourceReference": "dealers/golden-desert/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "a409fb703243cb8524c51d7a3576cf1db1fb98024a4fa423b75eb76ab93965ca",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-41a5c3ce-796d-4c2e-a5b5-6c3bc22d4b1c",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/reviewed-mark-light.png",
+          "sha256": "50d1ac676e884b23640dd41109ccd4f9d0473d09164b0823577b8113b1ec90c2",
+          "operation": "darken-reviewed-gold-ink-for-white-compact-favicon",
+          "colorTransform": "gold channel scale 0.42/0.35/0.4"
+        }
+      },
+      "sourceReference": "dealers/golden-desert/branding/generated-mark-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "e4aca1f9046bc5d60894565db76bb02a56364df2c45539ed28417cab003b2f62",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-41a5c3ce-796d-4c2e-a5b5-6c3bc22d4b1c",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/reviewed-mark-light.png",
+          "sha256": "50d1ac676e884b23640dd41109ccd4f9d0473d09164b0823577b8113b1ec90c2",
+          "operation": "darken-reviewed-gold-ink-for-white-compact-favicon",
+          "colorTransform": "gold channel scale 0.42/0.35/0.4"
+        }
+      },
+      "sourceReference": "dealers/golden-desert/branding/generated-mark-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "b24b0c33e4b2a45754e4b79f6fe8c908d4cde328a73af7dc8b513cc78e59cdb4",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-a736ec01-f9d2-466b-935f-9db155f98f08",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "71fd089eaff7a018f4bdc76662e1cf1bc230cf294a08472589334c7de744d201",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 285,
+          "height": 174
+        }
+      }
+    }
+  }
+}

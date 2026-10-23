@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Abdulla Al Jaberi Used Cars",
     "publicOrigin": "https://abdulla-al-jaberi-used-cars.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "36cde6da3917641599b0a351601555bfcca2bbb864ed612d5a777bc96d74560c",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "32153bdddfc1c8085b0486b63e977a83df04cbb7a9cb185b5128a9d38efb07b1"
+    }
   }
 }

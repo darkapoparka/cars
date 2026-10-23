@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "dealer": "saeed-motors",
-  "status": "research-required",
+  "status": "reviewed-imagegen-proposal",
   "realLogoFirst": true,
   "publicSources": [
     {
@@ -10,7 +10,155 @@
     }
   ],
   "originals": [],
-  "creationMethod": null,
+  "creationMethod": "imagegen-proposal",
   "dealerApproved": false,
-  "generatedInputs": null
+  "generatedInputs": {
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "master": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "43e04bfe20cae4abc15ef7ac704ec092774ea01d48a7f5d2f689c074e47966b4",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-b4ae948b-2496-441a-b709-f74f6fbe6389",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark-light.png",
+      "sha256": "5acefab21cb2c50b5b930e89dd64762ef8b7801779c186e67a51715e30753f18",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-b4ae948b-2496-441a-b709-f74f6fbe6389",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "43e04bfe20cae4abc15ef7ac704ec092774ea01d48a7f5d2f689c074e47966b4",
+          "operation": "darken-reviewed-gold-and-light-details-for-white-compact",
+          "outputColors": {
+            "gold": "#643908",
+            "light": "#2b3650"
+          }
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-dark.png",
+      "sha256": "2813b8c208ec2db55266b3ce42795b19c6839c2d373eea6e49dfc72ec9a1a498",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-029ef030-5143-4c22-b1e2-d734524fbd76",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "677a0342f4fb72400a49d7dc08e4d172fafb78390822bfa270990303f3771559",
+          "operation": "lift-reviewed-compact-navy-for-dark-contrast",
+          "selection": {
+            "luminanceBelow": 125
+          },
+          "outputColor": "#e8efff"
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "43e04bfe20cae4abc15ef7ac704ec092774ea01d48a7f5d2f689c074e47966b4",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-b4ae948b-2496-441a-b709-f74f6fbe6389",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "677a0342f4fb72400a49d7dc08e4d172fafb78390822bfa270990303f3771559",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-029ef030-5143-4c22-b1e2-d734524fbd76",
+          "modelVersion": null,
+          "derivedFrom": {
+            "path": "branding/reviewed-on-dark.png",
+            "sha256": "5378a7f358d460bff8d3b7c49e1ec04a14c0879c28384c99c78afbba5c854fa7",
+            "operation": "lift-dark-navy-ink-for-dark-and-red-surface-contrast",
+            "selection": {
+              "luminanceBelow": 125
+            },
+            "outputColor": "#e8efff"
+          }
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "677a0342f4fb72400a49d7dc08e4d172fafb78390822bfa270990303f3771559",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-029ef030-5143-4c22-b1e2-d734524fbd76",
+          "modelVersion": null,
+          "derivedFrom": {
+            "path": "branding/reviewed-on-dark.png",
+            "sha256": "5378a7f358d460bff8d3b7c49e1ec04a14c0879c28384c99c78afbba5c854fa7",
+            "operation": "lift-dark-navy-ink-for-dark-and-red-surface-contrast",
+            "selection": {
+              "luminanceBelow": 125
+            },
+            "outputColor": "#e8efff"
+          }
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewKind": "agent-visual-review",
+      "humanReview": false,
+      "dealerApproval": false,
+      "backgrounds": {
+        "onLight": "#ffffff",
+        "onDark": "#111113",
+        "onAccent": "#c40101"
+      },
+      "wordmarkWidths": [
+        220,
+        240
+      ],
+      "notes": "Exact reviewed Image Gen pair; native masters and generation provenance retained. Compact rasters cropped from the actual left symbol."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-22T23:42:46.338Z",
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#c40101"
+      ],
+      "widths": [
+        32,
+        48,
+        64
+      ],
+      "notes": "Reviewed source exports retained; dark/accent variant navy lifted for contrast. Compact only gold and white details darkened on light and navy lifted on dark. Native/browser QA independent."
+    }
+  },
+  "sourceBlockers": [],
+  "artworkProvenance": {
+    "path": "branding/artwork-provenance.json",
+    "sha256": "adfd65abb789d954ba45e58526cdf949b564d1f31d9ccc1095c3d54cd20af26d",
+    "manifestSha256": "d25e9cee768a885052ac0a8df220d843c9b9c6f6f120d722705bead1cc99e694",
+    "nativeMasters": [
+      {
+        "path": "branding/native-generated-on-light.png",
+        "sha256": "3d79da45c25458575cc56af51ed7c45f8aa2c37733c67f36fcb8171a2b4af3ab"
+      },
+      {
+        "path": "branding/native-generated-on-dark.png",
+        "sha256": "8cbf0475853cf859fcd8195740724d478833976d97db0ea9339358eeb6b3c94c"
+      }
+    ],
+    "reviewedExports": [
+      {
+        "path": "branding/reviewed-on-dark.png",
+        "sha256": "5378a7f358d460bff8d3b7c49e1ec04a14c0879c28384c99c78afbba5c854fa7",
+        "manifestRole": "on-dark"
+      }
+    ]
+  }
 }

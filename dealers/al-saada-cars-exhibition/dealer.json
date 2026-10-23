@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Al Saada Cars Exhibition",
     "publicOrigin": "https://al-saada-cars-exhibition.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "7fbbfcb81bd49fb42969e2e4cd8ee0046e6b31f2dd0b6db0a5deb3088500dead",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "8760d02556b4300c418d7349d7f301c6cce6a2152fc205dfdbeff72aa86d4977"
+    }
   }
 }

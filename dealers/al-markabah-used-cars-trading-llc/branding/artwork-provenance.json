@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "ae-umm-al-quwain-al-markabah-used-cars",
+  "slug": null,
+  "artworkDirectory": "ae-umm-al-quwain-al-markabah-used-cars",
+  "name": "Al Markabah Used Cars Trading LLC",
+  "renderedName": "Al Markabah Used Cars Trading LLC",
+  "kind": "independent-website-logo-proposal",
+  "dealerApproved": false,
+  "ownerApproved": false,
+  "sourceEvidence": [
+    {
+      "url": "https://ae.opensooq.com/en/shops/shop-18008673",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://ae.opensooq.com/en/search/288522796",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://coparking.ch/en/United-Arab-Emirates/car-dealers/783",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://uae.autotraders.ae/used-cars/bmw/x4/m/2019/bmw-x4-2019-160938",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://linktr.ee/uaq_cars",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "retainedOriginalsUnchanged": true,
+  "variants": {
+    "on-light": {
+      "path": "logo-on-light.png",
+      "sha256": "0e5849b15ee441187d4e221f60d4c1ae97bd1ce319394ab567807e5b8522df56",
+      "width": 1024,
+      "height": 221,
+      "transparentFraction": 0.6834302531108597,
+      "master": {
+        "path": "generated-on-light.png",
+        "sha256": "76dbbc432cf632c75e086f56323256453cc12ff1e4d19fcc5e02669aa146bf73",
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-69b983a5-7b85-4cbe-b8b1-6f9158a346e1",
+        "prompt": "Create one professional horizontal automotive dealership logo proposal for Al Markabah Used Cars Trading LLC. Required exact text, uppercase: AL MARKABAH USED CARS TRADING LLC. Every word must be present and spelled precisely; use sensible primary name and smaller descriptor hierarchy without tiny lettering. Produce a polished original identity with a minimal memorable geometric symbol related to the distinctive name. Initials M may inform the emblem. Emblem left, full clear name to the right, compact and balanced for a website header. Avoid overused shield and generic car silhouettes; no manufacturer badges. Clean modern lettering with careful kerning and strong legibility. All text is deep charcoal black, appropriate on a white/light header. One restrained red or gold accent may appear inside the emblem only; no pale text. Flat crisp edges, a small number of solid shapes, no chrome, no lighting, no shadow, no texture, no gradient. Genuine transparent alpha background, isolated logo with no background box, no grid, no checkerboard painted into pixels. No slogan, contact info, website, watermark, mockup, photograph, extra concept, or duplicate logo. Deliver exactly one horizontal full logo. This is an independent website identity proposal, not a claim of adopted branding.",
+        "reference": null
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 24,
+          "top": 135,
+          "width": 2127,
+          "height": 460
+        }
+      }
+    },
+    "on-dark": {
+      "path": "logo-on-dark.png",
+      "sha256": "b1516c1a24f1137c8fd3c0490819e806dafe44b2510c7c1b8fa34a9eaa504dae",
+      "width": 1024,
+      "height": 221,
+      "transparentFraction": 0.5830608385180995,
+      "master": {
+        "path": "generated-on-dark.png",
+        "sha256": "5e40edd679abdf2f404d70f7d460ce99519b38ebcef187955a671343fb2332dd",
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-ccfbc3da-d0cf-49e5-a33e-6a578e2fb8f2",
+        "prompt": "Create the matching light-on-dark production variant of the exact supplied logo. Preserve precisely the same emblem, geometry, spelling, word count, typographic hierarchy, proportions, layout and spacing. Required exact text: AL MARKABAH USED CARS TRADING LLC. Change EVERY letter, including all secondary descriptor words and legal suffixes, to solid white so it is legible over a dark or red website header. Change the charcoal portions of the emblem to white. Retain the small red/gold emblem accent only if it contrasts clearly against a dark header. True transparent alpha background; do not paint a dark rectangle or checkerboard. Flat clean edges, no glows, shadows, bevels, textures, gradients, new artwork, new icon, extra text or mockup. Deliver one horizontal matching logo, fully legible.",
+        "reference": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-69b983a5-7b85-4cbe-b8b1-6f9158a346e1.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 20,
+          "top": 134,
+          "width": 2134,
+          "height": 461
+        }
+      }
+    }
+  },
+  "review": {
+    "status": "artwork-visually-reviewed",
+    "alpha": "all exports measured as genuine transparent nonempty PNGs",
+    "spelling": "English wordmark inspected; source-bound display aliases retained",
+    "compact": "Horizontal logos only. Interactive 32/48/64px gallery preview is provided; separate compact/favicon artwork remains part of dealer-pack preparation.",
+    "sixDesigns": "not-yet-integrated-or-rendered",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "reviewer": "Codex visual inspection",
+    "header": "All 196 paired PNGs inspected at 240x64 on white, #111113 and #c40101",
+    "evidence": "final-review-12.png"
+  },
+  "releaseReady": false,
+  "artworkHolds": [],
+  "artworkReadyForIntegration": true
+}

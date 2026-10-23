@@ -1,0 +1,147 @@
+{
+  "schemaVersion": 1,
+  "dealer": "khat-al-khaleej-used-cars",
+  "status": "reviewed-imagegen-proposal",
+  "realLogoFirst": true,
+  "publicSources": [
+    {
+      "url": "https://auto.ae/khatalkhaleej/",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://licenseplate.ae/ar/cars/listing/7575-hyundai-tucson-20-at-193-hp-other",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "originals": [],
+  "creationMethod": "imagegen-proposal",
+  "dealerApproved": false,
+  "generatedInputs": {
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "master": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "289395f9b3b7d3ad2da594a47198c8786f5127c47f14303db19e33a487751a75",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-cb381af1-c572-42ed-95df-f1445476993b",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark-light.png",
+      "sha256": "a1ecbca31949ac1dd039a1c94606bbfcef2616afa2420a4078c18165f2864bbe",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-cb381af1-c572-42ed-95df-f1445476993b",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "289395f9b3b7d3ad2da594a47198c8786f5127c47f14303db19e33a487751a75",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 325,
+            "height": 208
+          }
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-dark.png",
+      "sha256": "8b4ff581dd78f3da8789e893474468a0e45647bb18340e563e62cc5301565cf6",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-c114c6d2-18a0-45fa-ab24-dbe9faed0de1",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "1e5766b9bf57b150cf51d7bb0c0268ec04f80fd069e90e2d2689d88c184db486",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 325,
+            "height": 210
+          }
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "289395f9b3b7d3ad2da594a47198c8786f5127c47f14303db19e33a487751a75",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-cb381af1-c572-42ed-95df-f1445476993b",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "1e5766b9bf57b150cf51d7bb0c0268ec04f80fd069e90e2d2689d88c184db486",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-c114c6d2-18a0-45fa-ab24-dbe9faed0de1",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "1e5766b9bf57b150cf51d7bb0c0268ec04f80fd069e90e2d2689d88c184db486",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-c114c6d2-18a0-45fa-ab24-dbe9faed0de1",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewKind": "agent-visual-review",
+      "humanReview": false,
+      "dealerApproval": false,
+      "backgrounds": {
+        "onLight": "#ffffff",
+        "onDark": "#111113",
+        "onAccent": "#c40101"
+      },
+      "wordmarkWidths": [
+        220,
+        240
+      ],
+      "notes": "Exact reviewed Image Gen pair; native masters and generation provenance retained. Compact rasters cropped from the actual left symbol."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-22T23:42:46.338Z",
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#c40101"
+      ],
+      "widths": [
+        32,
+        48,
+        64
+      ],
+      "notes": "Left symbol cropped from reviewed horizontal variants; native rendering must independently qualify."
+    }
+  },
+  "sourceBlockers": [],
+  "artworkProvenance": {
+    "path": "branding/artwork-provenance.json",
+    "sha256": "c00ca2697ce4f8ecf0d989f58fa18ecea6e77301db6e739082e59a4173a49f80",
+    "manifestSha256": "d25e9cee768a885052ac0a8df220d843c9b9c6f6f120d722705bead1cc99e694",
+    "nativeMasters": [
+      {
+        "path": "branding/native-generated-on-light.png",
+        "sha256": "8b2e19704f9b2dda9ab01b3fd650d375170a7ddd513d4105a3caca7d79b6fc38"
+      },
+      {
+        "path": "branding/native-generated-on-dark.png",
+        "sha256": "ca13b9430a976699feb03966770b80f2f845e124358d3384d2761522bb8b71a8"
+      }
+    ]
+  }
+}

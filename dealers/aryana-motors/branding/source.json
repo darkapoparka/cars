@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "dealer": "aryana-motors",
-  "status": "research-required",
+  "status": "reviewed-imagegen-proposal",
   "realLogoFirst": true,
   "publicSources": [
     {
@@ -22,7 +22,148 @@
     }
   ],
   "originals": [],
-  "creationMethod": null,
+  "creationMethod": "imagegen-proposal",
   "dealerApproved": false,
-  "generatedInputs": null
+  "generatedInputs": {
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "master": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "2684e03c045e226656e849d23e02169117676f4b4414725ee4446e2d9208b90e",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-0e2de06b-157e-4c29-b21e-59169e7f5fa0",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark-light.png",
+      "sha256": "da8907c75aff37e1f70d61b1df0d24ab85666385c70475fb2f50c5257976a64d",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-0e2de06b-157e-4c29-b21e-59169e7f5fa0",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "2684e03c045e226656e849d23e02169117676f4b4414725ee4446e2d9208b90e",
+          "operation": "isolate-reviewed-A-symbol-connected-components",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 340,
+            "height": 263
+          },
+          "selection": {
+            "alphaThreshold": 96,
+            "minXBefore": 304,
+            "minPixels": 20,
+            "antialiasNeighborPixels": 1,
+            "components": 4
+          }
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-dark.png",
+      "sha256": "fea33d534e9fbaea0fe9149cb0b14151aa5ca6d82752ef1f9b613c8436765299",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-88bf1dc7-c220-4fb6-b2e2-84cd228c9b93",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "1379c13e3f18502ffc5dd3b9e726ec358122f2544d801120f014f4f9e01febfe",
+          "operation": "isolate-reviewed-A-symbol-connected-components",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 340,
+            "height": 263
+          },
+          "selection": {
+            "alphaThreshold": 96,
+            "minXBefore": 304,
+            "minPixels": 20,
+            "antialiasNeighborPixels": 1,
+            "components": 4
+          }
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "2684e03c045e226656e849d23e02169117676f4b4414725ee4446e2d9208b90e",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-0e2de06b-157e-4c29-b21e-59169e7f5fa0",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "1379c13e3f18502ffc5dd3b9e726ec358122f2544d801120f014f4f9e01febfe",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-88bf1dc7-c220-4fb6-b2e2-84cd228c9b93",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "1379c13e3f18502ffc5dd3b9e726ec358122f2544d801120f014f4f9e01febfe",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-88bf1dc7-c220-4fb6-b2e2-84cd228c9b93",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewKind": "agent-visual-review",
+      "humanReview": false,
+      "dealerApproval": false,
+      "backgrounds": {
+        "onLight": "#ffffff",
+        "onDark": "#111113",
+        "onAccent": "#c40101"
+      },
+      "wordmarkWidths": [
+        220,
+        240
+      ],
+      "notes": "Exact reviewed Image Gen pair; native masters and generation provenance retained. Compact rasters cropped from the actual left symbol."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-22T23:42:46.338Z",
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#c40101"
+      ],
+      "widths": [
+        32,
+        48,
+        64
+      ],
+      "notes": "Compact artwork derived from actual reviewed light/dark PNGs and visually checked; native 32/64px and favicon QA remain independent."
+    }
+  },
+  "sourceBlockers": [],
+  "artworkProvenance": {
+    "path": "branding/artwork-provenance.json",
+    "sha256": "19f2c4dc8a81ace083f886ccc27df2ccc734a5fd7e357990824d39c34dc38591",
+    "manifestSha256": "d25e9cee768a885052ac0a8df220d843c9b9c6f6f120d722705bead1cc99e694",
+    "nativeMasters": [
+      {
+        "path": "branding/native-generated-on-light.png",
+        "sha256": "ade6c51c9b527a74f2c418f80cdd4c9ce8e6ee6eb2e6cbd497cd98611f7c0c0a"
+      },
+      {
+        "path": "branding/native-generated-on-dark.png",
+        "sha256": "74ef93c6d1b0448fca83ac67fe6e8bc937e8171d4c7535cd11ca52fe973368d5"
+      }
+    ]
+  }
 }

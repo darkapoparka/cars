@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "dealer": "somer-ibrahim-cars",
-  "status": "research-required",
+  "status": "reviewed-imagegen-proposal",
   "realLogoFirst": true,
   "publicSources": [
     {
@@ -14,7 +14,134 @@
     }
   ],
   "originals": [],
-  "creationMethod": null,
+  "creationMethod": "imagegen-proposal",
   "dealerApproved": false,
-  "generatedInputs": null
+  "generatedInputs": {
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "master": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "94dd6e6c7e706ce4e94e2d908550d3d5b3cb0dd7ecd18e573545a16746adc933",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-faa7721d-e283-4791-bff6-138278746270",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark-light.png",
+      "sha256": "55c6d7fd52d8fe71611dfae2149db1ea3572ababbd09cb15c19509339118f1e8",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-faa7721d-e283-4791-bff6-138278746270",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "94dd6e6c7e706ce4e94e2d908550d3d5b3cb0dd7ecd18e573545a16746adc933",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 230,
+            "height": 259
+          }
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-dark.png",
+      "sha256": "e4874bff6853110d228daf1af57ad405f11078e0689b7f5230e2a40776f47a8a",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-39c7c374-db33-400f-b01b-45ae29beb424",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "60c9ac3351cc73fc3d337cda40f5133f5fc96a961dc07a113b741f7c8d6a1ec8",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 230,
+            "height": 262
+          }
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "94dd6e6c7e706ce4e94e2d908550d3d5b3cb0dd7ecd18e573545a16746adc933",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-faa7721d-e283-4791-bff6-138278746270",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "60c9ac3351cc73fc3d337cda40f5133f5fc96a961dc07a113b741f7c8d6a1ec8",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-39c7c374-db33-400f-b01b-45ae29beb424",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "60c9ac3351cc73fc3d337cda40f5133f5fc96a961dc07a113b741f7c8d6a1ec8",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-39c7c374-db33-400f-b01b-45ae29beb424",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewKind": "agent-visual-review",
+      "humanReview": false,
+      "dealerApproval": false,
+      "backgrounds": {
+        "onLight": "#ffffff",
+        "onDark": "#111113",
+        "onAccent": "#c40101"
+      },
+      "wordmarkWidths": [
+        220,
+        240
+      ],
+      "notes": "Exact reviewed Image Gen pair; native masters and generation provenance retained. Compact rasters cropped from the actual left symbol."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-22T23:42:46.338Z",
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#c40101"
+      ],
+      "widths": [
+        32,
+        48,
+        64
+      ],
+      "notes": "Left symbol cropped from reviewed horizontal variants; native rendering must independently qualify."
+    }
+  },
+  "sourceBlockers": [],
+  "artworkProvenance": {
+    "path": "branding/artwork-provenance.json",
+    "sha256": "1d04a2279ebf15b7b9567196fcbfd9f7cd4640a440241a15760a68494589b46a",
+    "manifestSha256": "d25e9cee768a885052ac0a8df220d843c9b9c6f6f120d722705bead1cc99e694",
+    "nativeMasters": [
+      {
+        "path": "branding/native-generated-on-light.png",
+        "sha256": "a3e1d68ac5832c7b3d816ef50a3c48b75fbbbb3bcd5873455f5898e6bd5e1fcd"
+      },
+      {
+        "path": "branding/native-generated-on-dark.png",
+        "sha256": "77d57adfb8c702be5101cc43010e4f914571a0c20bf53dd09c8182ceab211c65"
+      }
+    ]
+  }
 }

@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "dealer": "gasper-auto-sales-llc",
+  "reviewed": true,
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "0098be6e4b6c0afd53b88d27541f370288aa4288d8f3afcf7123b1cbd61859c6",
+      "sourceSha256": "3be9136194bf9e08750ebea78f47b117bc4e3cec478bfc33b2eb654151a19ab4"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "2dd2d5d757bbedfb855afb7cad1e4fe0ef8c7b75030e96b717cd16c844106cc5",
+      "sourceSha256": "81402f228ccf36ce9caa16ad1d32454c08f0abc63f34b271cbaf9e781f302a5c"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "2dd2d5d757bbedfb855afb7cad1e4fe0ef8c7b75030e96b717cd16c844106cc5",
+      "sourceSha256": "81402f228ccf36ce9caa16ad1d32454c08f0abc63f34b271cbaf9e781f302a5c"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "3be9136194bf9e08750ebea78f47b117bc4e3cec478bfc33b2eb654151a19ab4",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-952f4a60-f334-4c82-bb54-05fbe3bbb0ff",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "4d694983485d385477e1649e57b6fc4c56aa9d7a756606c7083bfc9376e5a65e",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-952f4a60-f334-4c82-bb54-05fbe3bbb0ff",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "3be9136194bf9e08750ebea78f47b117bc4e3cec478bfc33b2eb654151a19ab4",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 370,
+          "height": 199
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "67f6bd7e73efa6eb421cecd062d10f76968d4d66cfaa60333a9865e11ef08216"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "3be9136194bf9e08750ebea78f47b117bc4e3cec478bfc33b2eb654151a19ab4",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-952f4a60-f334-4c82-bb54-05fbe3bbb0ff",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/gasper-auto-sales-llc/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "81402f228ccf36ce9caa16ad1d32454c08f0abc63f34b271cbaf9e781f302a5c",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-099173db-36b2-4248-8765-b0ae2d3bdc01",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/gasper-auto-sales-llc/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "81402f228ccf36ce9caa16ad1d32454c08f0abc63f34b271cbaf9e781f302a5c",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-099173db-36b2-4248-8765-b0ae2d3bdc01",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/gasper-auto-sales-llc/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "3be9136194bf9e08750ebea78f47b117bc4e3cec478bfc33b2eb654151a19ab4",
+      "sha256": "3be9136194bf9e08750ebea78f47b117bc4e3cec478bfc33b2eb654151a19ab4",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 199
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "81402f228ccf36ce9caa16ad1d32454c08f0abc63f34b271cbaf9e781f302a5c",
+      "sha256": "81402f228ccf36ce9caa16ad1d32454c08f0abc63f34b271cbaf9e781f302a5c",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 200
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "81402f228ccf36ce9caa16ad1d32454c08f0abc63f34b271cbaf9e781f302a5c",
+      "sha256": "81402f228ccf36ce9caa16ad1d32454c08f0abc63f34b271cbaf9e781f302a5c",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 200
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "3c63af264fdb588f32ad6d1c6e7f308d99c6899593605b0bf65f369da32b630e",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-952f4a60-f334-4c82-bb54-05fbe3bbb0ff",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "3be9136194bf9e08750ebea78f47b117bc4e3cec478bfc33b2eb654151a19ab4",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 370,
+            "height": 199
+          }
+        }
+      },
+      "sourceReference": "dealers/gasper-auto-sales-llc/branding/generated-mark-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "bfef4b9252490c4c9471b63412354d9d24e5978b52c10c94a00f0876b3be1188",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-099173db-36b2-4248-8765-b0ae2d3bdc01",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "81402f228ccf36ce9caa16ad1d32454c08f0abc63f34b271cbaf9e781f302a5c",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 370,
+            "height": 200
+          }
+        }
+      },
+      "sourceReference": "dealers/gasper-auto-sales-llc/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "4d694983485d385477e1649e57b6fc4c56aa9d7a756606c7083bfc9376e5a65e",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-952f4a60-f334-4c82-bb54-05fbe3bbb0ff",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "3be9136194bf9e08750ebea78f47b117bc4e3cec478bfc33b2eb654151a19ab4",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 370,
+            "height": 199
+          }
+        }
+      },
+      "sourceReference": "dealers/gasper-auto-sales-llc/branding/generated-mark-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "67f6bd7e73efa6eb421cecd062d10f76968d4d66cfaa60333a9865e11ef08216",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-952f4a60-f334-4c82-bb54-05fbe3bbb0ff",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "3be9136194bf9e08750ebea78f47b117bc4e3cec478bfc33b2eb654151a19ab4",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 370,
+            "height": 199
+          }
+        }
+      },
+      "sourceReference": "dealers/gasper-auto-sales-llc/branding/generated-mark-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "f099bac54eee168fabdd1f96d4ab913da608ef65b3281bd3ec6a1ac3f4bb9a04",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-099173db-36b2-4248-8765-b0ae2d3bdc01",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "81402f228ccf36ce9caa16ad1d32454c08f0abc63f34b271cbaf9e781f302a5c",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 370,
+          "height": 200
+        }
+      }
+    }
+  }
+}

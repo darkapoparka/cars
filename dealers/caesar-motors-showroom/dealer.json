@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Caesar Motors Showroom",
     "publicOrigin": "https://caesar-motors-showroom.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "e7138f65078ef23181b0589cfccd24680fb0180fa6978829a64dcf951f995990",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "3b610d915dcc55a3b1cdc9d9addb47f445d449b3be05045724e81c2ba8d81b42"
+    }
   }
 }

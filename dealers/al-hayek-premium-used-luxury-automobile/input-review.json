@@ -3,7 +3,7 @@
   "kind": "cars-dealer-pack-input-review",
   "dealer": "al-hayek-premium-used-luxury-automobile",
   "reviewed": true,
-  "reviewedAt": "2026-10-21T13:24:20.226Z",
+  "reviewedAt": "2026-10-23T00:35:09.513Z",
   "review": {
     "kind": "automated",
     "humanReview": false,
@@ -42,12 +42,40 @@
       "sha256": "07201d2fa7d013928131bd15251452230ae6290c36f08f6ddc1814cacb8121b8"
     },
     {
+      "path": "branding/artwork-provenance.json",
+      "sha256": "9a229757dbcb6e37b52f5ec354f2cc8b87b87fbf4a378cf090177702677559f1"
+    },
+    {
+      "path": "branding/generated-mark-dark.png",
+      "sha256": "eb7ef2d5f335324a724f17738a91ec5cc015f34580c2fedd84da364c05c98f9f"
+    },
+    {
+      "path": "branding/generated-mark-light.png",
+      "sha256": "d4d93f1cb11663df85059503e2907929be8856cb7c6459947517f02d49815847"
+    },
+    {
+      "path": "branding/generated-on-dark.png",
+      "sha256": "09939d69d7871ad63ce94bba9519adb85c178ba8c82e7c01d0375d4042388950"
+    },
+    {
+      "path": "branding/generated-on-light.png",
+      "sha256": "61b4648d721c28538e8f2c16c0b60ec038a39a570dee53fdbf086f73dad8b1e8"
+    },
+    {
       "path": "branding/logo-contract.json",
-      "sha256": "48ebc58697eff1fcaa1c5aaf4744860ab1ae0729f6c131af0486ae4bf2a780f9"
+      "sha256": "3c274c8f13013fe602d626fd2adec2a065523e8e6ba8137846e17585effd02a1"
     },
     {
       "path": "branding/logo-recipe.json",
-      "sha256": "cb3474f432d39dad778b2e98001a0e033b47df85117c562424a1dd5bcff1d45e"
+      "sha256": "ad10b629e665a5dbd938b196f598904ca00bc523d9d5a844dd36dd9e786aaadf"
+    },
+    {
+      "path": "branding/native-generated-on-dark.png",
+      "sha256": "25cc20774dbb0fe23cf9afc685dbaae21de917686bd8d63a97129fd26b2c2a06"
+    },
+    {
+      "path": "branding/native-generated-on-light.png",
+      "sha256": "3bc7ac943c2dd2911e84300ae3b11fd59d66f2e011ce92424c4e1d374acf6f72"
     },
     {
       "path": "branding/public-original-artsmiley-20261021.jpg",
@@ -59,7 +87,7 @@
     },
     {
       "path": "branding/source.json",
-      "sha256": "73885eabb893226e501518855c5341ba84ebf3d991c363db8589f82181ea57ce"
+      "sha256": "5e9825ef1c5a663c8cab1c6b2b415bdc6b7dfe88e32450452bbf6028587c9d79"
     },
     {
       "path": "business-facts.json",
@@ -67,7 +95,7 @@
     },
     {
       "path": "copy-review.json",
-      "sha256": "86366163b9855b676bcf533fa8a92f6fe6753c191dd5cc800a5fd2feccc0ed40"
+      "sha256": "e87d5cef1a0abdcfad61109bf3e86b8b82ffe0a979cc66540c0b5714fa308ae9"
     },
     {
       "path": "dealer-stock/public-12988-1.webp",
@@ -95,11 +123,11 @@
     },
     {
       "path": "dealer.json",
-      "sha256": "6afb7c95584541fa94a90f92360d796e9b68530e253866b74b6aa5d4b9429a3c"
+      "sha256": "71977beea214278c7031957e61f0dbd5e1bf523c5732e7bd3c8e62456feb8613"
     },
     {
       "path": "identity-review.json",
-      "sha256": "d4f11fb0f7fdfda62fdb7620fe9aff9e2a8c87e9dff7776f736bba5e15b48852"
+      "sha256": "504f6b3a517cdd00bd3eb36b225f5d27df2538f9f2fd96c9ca083cbe8dc75e67"
     },
     {
       "path": "locale.json",
@@ -111,7 +139,7 @@
     },
     {
       "path": "qualification.json",
-      "sha256": "c2642a940e98dfd3358890d2e2087517b0f65d56482aa62b8c36e949c6c6d0fb"
+      "sha256": "0c7fd6e5cf5e6e731167584230b0578731f704ba09549304abbb75f02cecee7b"
     },
     {
       "path": "source-evidence.json",

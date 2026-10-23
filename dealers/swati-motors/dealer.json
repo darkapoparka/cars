@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Swati Motors",
     "publicOrigin": "https://swati-motors.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "c87f6c06280f1b49bc9a1c4ab1c78a15f114137bfd3973157b4c27e3bac6e3ba",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "e4c853cea633a3adbb305dd75e43869022cc71b89251e15743b5986204e460f8"
+    }
   }
 }

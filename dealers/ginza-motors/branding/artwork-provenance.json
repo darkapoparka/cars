@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "ae-dubai-ginza-motors",
+  "slug": "ginza-motors",
+  "artworkDirectory": "ginza-motors",
+  "name": "Ginza Motors",
+  "renderedName": "Ginza Motors",
+  "kind": "independent-website-logo-proposal",
+  "dealerApproved": false,
+  "ownerApproved": false,
+  "sourceEvidence": [
+    {
+      "url": "https://www.dubicars.com/dealers/dubai-ginza-motors-2641",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "retainedOriginalsUnchanged": true,
+  "variants": {
+    "on-light": {
+      "path": "logo-on-light.png",
+      "sha256": "b08fee62dcdbb7247cba5a9693f3a4733bae899a25e1076a31233add5c3d9f25",
+      "width": 1024,
+      "height": 331,
+      "transparentFraction": 0.7020894307024169,
+      "master": {
+        "path": "generated-on-light.png",
+        "sha256": "c7eb8cb4981e723a928febd66b043859ad356b2a922776a9a82da42edd2b733f",
+        "width": 2103,
+        "height": 748
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-15200351-15c6-4473-899e-bb55449c2e21",
+        "prompt": "Create one professional horizontal automotive dealership logo proposal for Ginza Motors. Required exact text, uppercase: GINZA MOTORS. Every word must be present and spelled precisely; use sensible primary name and smaller descriptor hierarchy without tiny lettering. Produce a polished original identity with a restrained architectural emblem with two or three interlocking geometric forms. Initials G may inform the emblem. Emblem left, full clear name to the right, compact and balanced for a website header. Avoid overused shield and generic car silhouettes; no manufacturer badges. Clean modern lettering with careful kerning and strong legibility. All text is deep charcoal black, appropriate on a white/light header. One restrained red or gold accent may appear inside the emblem only; no pale text. Flat crisp edges, a small number of solid shapes, no chrome, no lighting, no shadow, no texture, no gradient. Genuine transparent alpha background, isolated logo with no background box, no grid, no checkerboard painted into pixels. No slogan, contact info, website, watermark, mockup, photograph, extra concept, or duplicate logo. Deliver exactly one horizontal full logo. This is an independent website identity proposal, not a claim of adopted branding.",
+        "reference": null
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 112,
+          "top": 58,
+          "width": 1925,
+          "height": 622
+        }
+      }
+    },
+    "on-dark": {
+      "path": "logo-on-dark.png",
+      "sha256": "32e922642228a1085ef3a5716092ca27228eb6bf8e27d393baa701f4e699397e",
+      "width": 1024,
+      "height": 328,
+      "transparentFraction": 0.6010355135289634,
+      "master": {
+        "path": "generated-on-dark.png",
+        "sha256": "d135528688d0b4e2803c6c82f41c1663b3ec1c7ca3426c8b9c2c697677667030",
+        "width": 2101,
+        "height": 748
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-3e0d45c5-e3a1-4d6b-a634-ab613793261d",
+        "prompt": "Create the matching light-on-dark production variant of the exact supplied logo. Preserve precisely the same emblem, geometry, spelling, word count, typographic hierarchy, proportions, layout and spacing. Required exact text: GINZA MOTORS. Change EVERY letter, including all secondary descriptor words and legal suffixes, to solid white so it is legible over a dark or red website header. Change the charcoal portions of the emblem to white. Retain the small red/gold emblem accent only if it contrasts clearly against a dark header. True transparent alpha background; do not paint a dark rectangle or checkerboard. Flat clean edges, no glows, shadows, bevels, textures, gradients, new artwork, new icon, extra text or mockup. Deliver one horizontal matching logo, fully legible.",
+        "reference": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-15200351-15c6-4473-899e-bb55449c2e21.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 84,
+          "top": 59,
+          "width": 1967,
+          "height": 631
+        }
+      }
+    }
+  },
+  "review": {
+    "status": "artwork-visually-reviewed",
+    "alpha": "all exports measured as genuine transparent nonempty PNGs",
+    "spelling": "English wordmark inspected; source-bound display aliases retained",
+    "compact": "Horizontal logos only. Interactive 32/48/64px gallery preview is provided; separate compact/favicon artwork remains part of dealer-pack preparation.",
+    "sixDesigns": "not-yet-integrated-or-rendered",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "reviewer": "Codex visual inspection",
+    "header": "All 196 paired PNGs inspected at 240x64 on white, #111113 and #c40101",
+    "evidence": "final-review-07.png"
+  },
+  "releaseReady": false,
+  "artworkHolds": [],
+  "artworkReadyForIntegration": true
+}

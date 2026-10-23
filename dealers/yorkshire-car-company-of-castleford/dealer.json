@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Yorkshire Car Company of Castleford",
     "publicOrigin": "https://yorkshire-car-company-of-castleford.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "c505a017672d90c46880089b07674a70a3484525797d2abaa7657c8de3d194e0",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "ff84e8555a90a968c1ed8e0555933d6ee2a359aed5f3af4251ffffb489e50f3a"
+    }
   }
 }

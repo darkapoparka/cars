@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-saada-cars-exhibition",
+  "reviewed": true,
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "9f8eab9c6c1645f00adf1565d232074f225c0ae213249bb2692dffc593a82a29",
+      "sourceSha256": "7fbbfcb81bd49fb42969e2e4cd8ee0046e6b31f2dd0b6db0a5deb3088500dead"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "032b1661ed54c2ef0399ea3ebf2d6dbf4f29b7cde2fad0346869905fbb762cf6",
+      "sourceSha256": "dd90b69c165cc77a0e140c8a6051e1a4cd5a90d13767cf9fb51f520897d16865"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "032b1661ed54c2ef0399ea3ebf2d6dbf4f29b7cde2fad0346869905fbb762cf6",
+      "sourceSha256": "dd90b69c165cc77a0e140c8a6051e1a4cd5a90d13767cf9fb51f520897d16865"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "7fbbfcb81bd49fb42969e2e4cd8ee0046e6b31f2dd0b6db0a5deb3088500dead",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-cb27a41a-e732-42d9-8ad1-661df458106e",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "8760d02556b4300c418d7349d7f301c6cce6a2152fc205dfdbeff72aa86d4977",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-cb27a41a-e732-42d9-8ad1-661df458106e",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "7fbbfcb81bd49fb42969e2e4cd8ee0046e6b31f2dd0b6db0a5deb3088500dead",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 335,
+          "height": 229
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "f59a735b7b1df4c6f296eba7ccf9bd25792e375a27bd8beadfb9e8515257196f"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "7fbbfcb81bd49fb42969e2e4cd8ee0046e6b31f2dd0b6db0a5deb3088500dead",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-cb27a41a-e732-42d9-8ad1-661df458106e",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-saada-cars-exhibition/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "dd90b69c165cc77a0e140c8a6051e1a4cd5a90d13767cf9fb51f520897d16865",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-ee043ba9-5344-4527-b42b-bfb8af3df09c",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-saada-cars-exhibition/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "dd90b69c165cc77a0e140c8a6051e1a4cd5a90d13767cf9fb51f520897d16865",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-ee043ba9-5344-4527-b42b-bfb8af3df09c",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-saada-cars-exhibition/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "7fbbfcb81bd49fb42969e2e4cd8ee0046e6b31f2dd0b6db0a5deb3088500dead",
+      "sha256": "7fbbfcb81bd49fb42969e2e4cd8ee0046e6b31f2dd0b6db0a5deb3088500dead",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 229
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "dd90b69c165cc77a0e140c8a6051e1a4cd5a90d13767cf9fb51f520897d16865",
+      "sha256": "dd90b69c165cc77a0e140c8a6051e1a4cd5a90d13767cf9fb51f520897d16865",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 228
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "dd90b69c165cc77a0e140c8a6051e1a4cd5a90d13767cf9fb51f520897d16865",
+      "sha256": "dd90b69c165cc77a0e140c8a6051e1a4cd5a90d13767cf9fb51f520897d16865",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 228
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "77f121377cddbc069c0f5a071a42371b85428e9383a698dc5d27d1d21b79e263",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-cb27a41a-e732-42d9-8ad1-661df458106e",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "7fbbfcb81bd49fb42969e2e4cd8ee0046e6b31f2dd0b6db0a5deb3088500dead",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 335,
+            "height": 229
+          }
+        }
+      },
+      "sourceReference": "dealers/al-saada-cars-exhibition/branding/generated-mark-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "8fa579ca4f98ac8ed16283629b2d905afad6a5860cec63df25603fd0b676e6e3",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-ee043ba9-5344-4527-b42b-bfb8af3df09c",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "dd90b69c165cc77a0e140c8a6051e1a4cd5a90d13767cf9fb51f520897d16865",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 335,
+            "height": 228
+          }
+        }
+      },
+      "sourceReference": "dealers/al-saada-cars-exhibition/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "8760d02556b4300c418d7349d7f301c6cce6a2152fc205dfdbeff72aa86d4977",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-cb27a41a-e732-42d9-8ad1-661df458106e",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "7fbbfcb81bd49fb42969e2e4cd8ee0046e6b31f2dd0b6db0a5deb3088500dead",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 335,
+            "height": 229
+          }
+        }
+      },
+      "sourceReference": "dealers/al-saada-cars-exhibition/branding/generated-mark-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "f59a735b7b1df4c6f296eba7ccf9bd25792e375a27bd8beadfb9e8515257196f",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-cb27a41a-e732-42d9-8ad1-661df458106e",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "7fbbfcb81bd49fb42969e2e4cd8ee0046e6b31f2dd0b6db0a5deb3088500dead",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 335,
+            "height": 229
+          }
+        }
+      },
+      "sourceReference": "dealers/al-saada-cars-exhibition/branding/generated-mark-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "b991fa20dd3d8020231eda2c209a67710956e64c4ac835753362ba88f966fd68",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-ee043ba9-5344-4527-b42b-bfb8af3df09c",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "dd90b69c165cc77a0e140c8a6051e1a4cd5a90d13767cf9fb51f520897d16865",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 335,
+          "height": 228
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "dealer": "nabel-al-esawi-used-cars",
+  "reviewed": true,
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "9bb8f9f149bb7f91740f98522cdeb68782965ed323f7c9c943b203c43befbd11",
+      "sourceSha256": "e2820a1bb52e0e5355ded8cb954301049bd790b483ecceb6987cb64012cc4c8d"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "d0fefd040f63e44bd53b76a452c3998e696cebf2ea8729d7d8258bfb20197669",
+      "sourceSha256": "f7a081b6c6b7a6b90bef23bf91d485a199f9d1a4f2aa48f83c2898dc849ac591"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "d0fefd040f63e44bd53b76a452c3998e696cebf2ea8729d7d8258bfb20197669",
+      "sourceSha256": "f7a081b6c6b7a6b90bef23bf91d485a199f9d1a4f2aa48f83c2898dc849ac591"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "e2820a1bb52e0e5355ded8cb954301049bd790b483ecceb6987cb64012cc4c8d",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-c539ae19-3e62-479b-b5c7-0cba5bb53127",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "4859942e41b7718af12880bf528a2fa78cd02fa2c478ee98215dda52d3fce21b",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-c539ae19-3e62-479b-b5c7-0cba5bb53127",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "e2820a1bb52e0e5355ded8cb954301049bd790b483ecceb6987cb64012cc4c8d",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 300,
+          "height": 180
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "1803db25c7ab1712ddf630ede9aa6e6091a7492db135724374d1b3fac553ba2a"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "e2820a1bb52e0e5355ded8cb954301049bd790b483ecceb6987cb64012cc4c8d",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-c539ae19-3e62-479b-b5c7-0cba5bb53127",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/nabel-al-esawi-used-cars/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "f7a081b6c6b7a6b90bef23bf91d485a199f9d1a4f2aa48f83c2898dc849ac591",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-eb240492-bffa-49f8-90bf-5105c5e7d966",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/nabel-al-esawi-used-cars/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "f7a081b6c6b7a6b90bef23bf91d485a199f9d1a4f2aa48f83c2898dc849ac591",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-eb240492-bffa-49f8-90bf-5105c5e7d966",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/nabel-al-esawi-used-cars/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "e2820a1bb52e0e5355ded8cb954301049bd790b483ecceb6987cb64012cc4c8d",
+      "sha256": "e2820a1bb52e0e5355ded8cb954301049bd790b483ecceb6987cb64012cc4c8d",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 180
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "f7a081b6c6b7a6b90bef23bf91d485a199f9d1a4f2aa48f83c2898dc849ac591",
+      "sha256": "f7a081b6c6b7a6b90bef23bf91d485a199f9d1a4f2aa48f83c2898dc849ac591",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 182
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "f7a081b6c6b7a6b90bef23bf91d485a199f9d1a4f2aa48f83c2898dc849ac591",
+      "sha256": "f7a081b6c6b7a6b90bef23bf91d485a199f9d1a4f2aa48f83c2898dc849ac591",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 182
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "1de3cd09849416e52795d83bba1069d542b35696d9d9a5767d1eea6c191dd78d",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-c539ae19-3e62-479b-b5c7-0cba5bb53127",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "e2820a1bb52e0e5355ded8cb954301049bd790b483ecceb6987cb64012cc4c8d",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 300,
+            "height": 180
+          }
+        }
+      },
+      "sourceReference": "dealers/nabel-al-esawi-used-cars/branding/generated-mark-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "87284f09fa9a732c48faccac58b730216275da0a42bd2fad8bb84a13e428bfc4",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-eb240492-bffa-49f8-90bf-5105c5e7d966",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "f7a081b6c6b7a6b90bef23bf91d485a199f9d1a4f2aa48f83c2898dc849ac591",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 300,
+            "height": 182
+          }
+        }
+      },
+      "sourceReference": "dealers/nabel-al-esawi-used-cars/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "4859942e41b7718af12880bf528a2fa78cd02fa2c478ee98215dda52d3fce21b",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-c539ae19-3e62-479b-b5c7-0cba5bb53127",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "e2820a1bb52e0e5355ded8cb954301049bd790b483ecceb6987cb64012cc4c8d",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 300,
+            "height": 180
+          }
+        }
+      },
+      "sourceReference": "dealers/nabel-al-esawi-used-cars/branding/generated-mark-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "1803db25c7ab1712ddf630ede9aa6e6091a7492db135724374d1b3fac553ba2a",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-c539ae19-3e62-479b-b5c7-0cba5bb53127",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "e2820a1bb52e0e5355ded8cb954301049bd790b483ecceb6987cb64012cc4c8d",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 300,
+            "height": 180
+          }
+        }
+      },
+      "sourceReference": "dealers/nabel-al-esawi-used-cars/branding/generated-mark-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "a85101ee1d1fadb8f9dde962c13639cf373ea63427220bd58ca29cfca6f4e19c",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-eb240492-bffa-49f8-90bf-5105c5e7d966",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "f7a081b6c6b7a6b90bef23bf91d485a199f9d1a4f2aa48f83c2898dc849ac591",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 300,
+          "height": 182
+        }
+      }
+    }
+  }
+}

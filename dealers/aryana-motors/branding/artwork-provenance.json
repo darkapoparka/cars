@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "ae-dubai-aryana-motors",
+  "slug": "aryana-motors",
+  "artworkDirectory": "aryana-motors",
+  "name": "Aryana Motors",
+  "renderedName": "Aryana Motors",
+  "kind": "independent-website-logo-proposal",
+  "dealerApproved": false,
+  "ownerApproved": false,
+  "sourceEvidence": [
+    {
+      "url": "https://www.dubicars.com/dealers/dubai-aryana-motors-267",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.aryanamotors.com/",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.aryanamotorsfzco.com/",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://auto.ae/aryanamotorsfzco/",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "retainedOriginalsUnchanged": true,
+  "variants": {
+    "on-light": {
+      "path": "logo-on-light.png",
+      "sha256": "2684e03c045e226656e849d23e02169117676f4b4414725ee4446e2d9208b90e",
+      "width": 1024,
+      "height": 263,
+      "transparentFraction": 0.7328934470057035,
+      "master": {
+        "path": "generated-on-light.png",
+        "sha256": "ade6c51c9b527a74f2c418f80cdd4c9ce8e6ee6eb2e6cbd497cd98611f7c0c0a",
+        "width": 2146,
+        "height": 733
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-0e2de06b-157e-4c29-b21e-59169e7f5fa0",
+        "prompt": "Create one professional horizontal automotive dealership logo proposal for Aryana Motors. Required exact text, uppercase: ARYANA MOTORS. Every word must be present and spelled precisely; use sensible primary name and smaller descriptor hierarchy without tiny lettering. Produce a polished original identity with a restrained architectural emblem with two or three interlocking geometric forms. Initials A may inform the emblem. Emblem left, full clear name to the right, compact and balanced for a website header. Avoid overused shield and generic car silhouettes; no manufacturer badges. Clean modern lettering with careful kerning and strong legibility. All text is deep charcoal black, appropriate on a white/light header. One restrained red or gold accent may appear inside the emblem only; no pale text. Flat crisp edges, a small number of solid shapes, no chrome, no lighting, no shadow, no texture, no gradient. Genuine transparent alpha background, isolated logo with no background box, no grid, no checkerboard painted into pixels. No slogan, contact info, website, watermark, mockup, photograph, extra concept, or duplicate logo. Deliver exactly one horizontal full logo. This is an independent website identity proposal, not a claim of adopted branding.",
+        "reference": null
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 78,
+          "top": 96,
+          "width": 2027,
+          "height": 521
+        }
+      }
+    },
+    "on-dark": {
+      "path": "logo-on-dark.png",
+      "sha256": "1379c13e3f18502ffc5dd3b9e726ec358122f2544d801120f014f4f9e01febfe",
+      "width": 1024,
+      "height": 263,
+      "transparentFraction": 0.6268343037072244,
+      "master": {
+        "path": "generated-on-dark.png",
+        "sha256": "74ef93c6d1b0448fca83ac67fe6e8bc937e8171d4c7535cd11ca52fe973368d5",
+        "width": 2146,
+        "height": 733
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-88bf1dc7-c220-4fb6-b2e2-84cd228c9b93",
+        "prompt": "Create the matching light-on-dark production variant of the exact supplied logo. Preserve precisely the same emblem, geometry, spelling, word count, typographic hierarchy, proportions, layout and spacing. Required exact text: ARYANA MOTORS. Change EVERY letter, including all secondary descriptor words and legal suffixes, to solid white so it is legible over a dark or red website header. Change the charcoal portions of the emblem to white. Retain the small red/gold emblem accent only if it contrasts clearly against a dark header. True transparent alpha background; do not paint a dark rectangle or checkerboard. Flat clean edges, no glows, shadows, bevels, textures, gradients, new artwork, new icon, extra text or mockup. Deliver one horizontal matching logo, fully legible.",
+        "reference": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-0e2de06b-157e-4c29-b21e-59169e7f5fa0.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 79,
+          "top": 92,
+          "width": 2000,
+          "height": 514
+        }
+      }
+    }
+  },
+  "review": {
+    "status": "artwork-visually-reviewed",
+    "alpha": "all exports measured as genuine transparent nonempty PNGs",
+    "spelling": "English wordmark inspected; source-bound display aliases retained",
+    "compact": "Horizontal logos only. Interactive 32/48/64px gallery preview is provided; separate compact/favicon artwork remains part of dealer-pack preparation.",
+    "sixDesigns": "not-yet-integrated-or-rendered",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "reviewer": "Codex visual inspection",
+    "header": "All 196 paired PNGs inspected at 240x64 on white, #111113 and #c40101",
+    "evidence": "final-review-06.png"
+  },
+  "releaseReady": false,
+  "artworkHolds": [],
+  "artworkReadyForIntegration": true
+}

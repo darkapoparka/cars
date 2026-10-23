@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Alta Class Motors",
     "publicOrigin": "https://alta-class-motors.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "6a8b1d1e805f685977bb85bfc50d2868ede71edfa2738cada7539a3c60ea59ab",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "6e6ea675c4d991d8c1add7cd96da8948903d8aac10ce6e5d5ac7a96b823e8c47"
+    }
   }
 }

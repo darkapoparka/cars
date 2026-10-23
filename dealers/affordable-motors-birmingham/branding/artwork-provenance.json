@@ -1,0 +1,132 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "gb-birmingham-affordable-motors",
+  "slug": "affordable-motors-birmingham",
+  "name": "Affordable Motors Birmingham",
+  "kind": "independent-website-logo-proposal",
+  "dealerApproved": false,
+  "ownerApproved": false,
+  "sourceEvidence": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/Affordable-motors",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.cargurus.co.uk/Cars/m-Affordable-Motors-Birmingham-sp525539",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.pistonheads.com/buy/dealer/1005138",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "retainedOriginalsUnchanged": true,
+  "variants": {
+    "on-light": {
+      "path": "logo-on-light.png",
+      "sha256": "13b30e90bfc9616cb555bb7e77438cabeedb1509ee6bc4a9cf10231d3978c4fa",
+      "master": {
+        "path": "generated-on-light.png",
+        "sha256": "a04456ca0ddb34f2859a7429bad958cefff3efd178bf7c0987d222253571691b",
+        "width": 2135,
+        "height": 736
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputFile": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-1d598849-ddb6-4ec4-bd75-e921d7fe0230.png",
+        "outputReference": "exec-1d598849-ddb6-4ec4-bd75-e921d7fe0230",
+        "prompt": "Use case: logo-brand. Asset type: final transparent PNG logo master for an independent car-dealer website proposal, on-light variant. Text verbatim: \"AFFORDABLE MOTORS\" on one strong line and \"BIRMINGHAM\" on a clearly readable second line. Create ONE polished horizontal logo, a distinctive compact AM monogram to the left of the complete name. The AM should be an original, very simple interlocking geometric symbol with generous open counters and a subtle forward-road idea; do not put the letters inside a shield, circle or box. Dark charcoal/black ink only. Confident contemporary sans-serif lettering with excellent optical spacing; Birmingham large enough to read in a website header, never tiny. Vector-clean flat edges, no hairlines, no car silhouette, no photorealistic vehicle, no gradients, no metallic effects, no shadow, no mockup, no background shape, no watermark, no extra slogan, no other logos. This is a proposed identity, not official adopted branding. True alpha-transparent canvas, no checkerboard pattern. Wide landscape composition close to 3:1 aspect ratio; whole logo comfortably within the image with roughly 5% transparent outer margins, large visible artwork rather than a tiny logo in an enormous canvas. Keep monogram easily recognizable at 32px, wordmark readable at 220px wide. Render the exact text correctly. One logo only.",
+        "reference": null
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 0,
+          "top": 184,
+          "width": 2135,
+          "height": 359
+        }
+      },
+      "metadata": {
+        "format": "png",
+        "mediaType": "image/png",
+        "size": 82609,
+        "width": 1024,
+        "height": 172,
+        "space": "srgb",
+        "channels": 4,
+        "depth": "uchar",
+        "density": 72,
+        "isProgressive": false,
+        "isPalette": false,
+        "bitsPerSample": 8,
+        "hasProfile": false,
+        "hasAlpha": true,
+        "autoOrient": {
+          "width": 1024,
+          "height": 172
+        }
+      }
+    },
+    "on-dark": {
+      "path": "logo-on-dark.png",
+      "sha256": "2bfea7f9fe09c8737f84564203d590ac78445750bbbecaf915d2bc306e895e58",
+      "master": {
+        "path": "generated-on-dark.png",
+        "sha256": "a9c5fe6766e0a95472552b2409af9bbb2b3e4212696c96f2b5adbef1012d8573",
+        "width": 2135,
+        "height": 736
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputFile": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-1895f9ab-832a-4fb3-8f1d-7d0aa0ecdb5d.png",
+        "outputReference": "exec-1895f9ab-832a-4fb3-8f1d-7d0aa0ecdb5d",
+        "prompt": "Edit the supplied AFFORDABLE MOTORS BIRMINGHAM logo into its matching white-ink variant for dark website headers. Preserve the exact AM symbol, road cutout, lettering, line arrangement, optical spacing and proportions. Change only the dark foreground ink to pure opaque white, keeping original anti-aliased alpha edges. True transparent background throughout; no dark background, no rectangle, no texture, no shadow, no gradients, no extra text. Keep exact spelling AFFORDABLE MOTORS and BIRMINGHAM. One matching horizontal logo only. Bring the transparent canvas close to the artwork with small 5% outer padding.",
+        "reference": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-1d598849-ddb6-4ec4-bd75-e921d7fe0230.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 0,
+          "top": 184,
+          "width": 2133,
+          "height": 357
+        }
+      },
+      "metadata": {
+        "format": "png",
+        "mediaType": "image/png",
+        "size": 86511,
+        "width": 1024,
+        "height": 171,
+        "space": "srgb",
+        "channels": 4,
+        "depth": "uchar",
+        "density": 72,
+        "isProgressive": false,
+        "isPalette": false,
+        "bitsPerSample": 8,
+        "hasProfile": false,
+        "hasAlpha": true,
+        "autoOrient": {
+          "width": 1024,
+          "height": 171
+        }
+      }
+    }
+  },
+  "review": {
+    "alpha": "all exports measured as genuine transparent nonempty PNGs",
+    "spelling": "English wordmark inspected; source-bound display aliases retained",
+    "header": "All 196 paired PNGs inspected at 240x64 on white, #111113 and #c40101",
+    "compact": "Horizontal logos only. Interactive 32/48/64px gallery preview is provided; separate compact/favicon artwork remains part of dealer-pack preparation.",
+    "sixDesigns": "not yet integrated or rendered",
+    "status": "artwork-visually-reviewed",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "reviewer": "Codex visual inspection",
+    "evidence": "final-review-01.png"
+  },
+  "releaseReady": false,
+  "artworkHolds": [],
+  "artworkReadyForIntegration": true
+}

@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-reem-auto",
+  "reviewed": true,
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "93a540ffe9d8f14cb02835445fbd0facb4ce27efae76475bb4fa490e7ebf68cf",
+      "sourceSha256": "4b23462fbb66c611785845ecd14fbc8e23273d1c59997947bee936b36c13d2ea"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "486161635bc2bf2f390237506fdef5ad3fe1180afd4b129aa1134810222d8daa",
+      "sourceSha256": "7fc317baa2ae9f11704ff86c05b9a4b1e6ac7ca69bbd688d5d28e1d9c607248c"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "486161635bc2bf2f390237506fdef5ad3fe1180afd4b129aa1134810222d8daa",
+      "sourceSha256": "7fc317baa2ae9f11704ff86c05b9a4b1e6ac7ca69bbd688d5d28e1d9c607248c"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "4b23462fbb66c611785845ecd14fbc8e23273d1c59997947bee936b36c13d2ea",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-365adf45-8f24-47e7-8f9b-35c0800141b1",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "a0f97ca674ee2ae2c5246e41b56319e96fb4b6eb4224517945578795ce016b21",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-365adf45-8f24-47e7-8f9b-35c0800141b1",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "4b23462fbb66c611785845ecd14fbc8e23273d1c59997947bee936b36c13d2ea",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 225,
+          "height": 219
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "b8685959f84180793f84c19bc569336c016b66d5ee0d88bd80a1a9c4c26778c8"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "4b23462fbb66c611785845ecd14fbc8e23273d1c59997947bee936b36c13d2ea",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-365adf45-8f24-47e7-8f9b-35c0800141b1",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-reem-auto/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "7fc317baa2ae9f11704ff86c05b9a4b1e6ac7ca69bbd688d5d28e1d9c607248c",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-33470fe7-b303-4714-ae1c-ed8b140cf77c",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-reem-auto/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "7fc317baa2ae9f11704ff86c05b9a4b1e6ac7ca69bbd688d5d28e1d9c607248c",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-33470fe7-b303-4714-ae1c-ed8b140cf77c",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-reem-auto/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "4b23462fbb66c611785845ecd14fbc8e23273d1c59997947bee936b36c13d2ea",
+      "sha256": "4b23462fbb66c611785845ecd14fbc8e23273d1c59997947bee936b36c13d2ea",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 219
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "7fc317baa2ae9f11704ff86c05b9a4b1e6ac7ca69bbd688d5d28e1d9c607248c",
+      "sha256": "7fc317baa2ae9f11704ff86c05b9a4b1e6ac7ca69bbd688d5d28e1d9c607248c",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 221
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "7fc317baa2ae9f11704ff86c05b9a4b1e6ac7ca69bbd688d5d28e1d9c607248c",
+      "sha256": "7fc317baa2ae9f11704ff86c05b9a4b1e6ac7ca69bbd688d5d28e1d9c607248c",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 221
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "1a0e473c1c0d088b36ede30e1a56a7caab9eb94a97d00c7aea4d4899313dbedc",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-365adf45-8f24-47e7-8f9b-35c0800141b1",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "4b23462fbb66c611785845ecd14fbc8e23273d1c59997947bee936b36c13d2ea",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 225,
+            "height": 219
+          }
+        }
+      },
+      "sourceReference": "dealers/al-reem-auto/branding/generated-mark-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "f815f971cc4764542df08a59c708350746b0c1847edb5de9249bfd1f126b9a91",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-33470fe7-b303-4714-ae1c-ed8b140cf77c",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "7fc317baa2ae9f11704ff86c05b9a4b1e6ac7ca69bbd688d5d28e1d9c607248c",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 225,
+            "height": 221
+          }
+        }
+      },
+      "sourceReference": "dealers/al-reem-auto/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "a0f97ca674ee2ae2c5246e41b56319e96fb4b6eb4224517945578795ce016b21",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-365adf45-8f24-47e7-8f9b-35c0800141b1",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "4b23462fbb66c611785845ecd14fbc8e23273d1c59997947bee936b36c13d2ea",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 225,
+            "height": 219
+          }
+        }
+      },
+      "sourceReference": "dealers/al-reem-auto/branding/generated-mark-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "b8685959f84180793f84c19bc569336c016b66d5ee0d88bd80a1a9c4c26778c8",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-365adf45-8f24-47e7-8f9b-35c0800141b1",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "4b23462fbb66c611785845ecd14fbc8e23273d1c59997947bee936b36c13d2ea",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 225,
+            "height": 219
+          }
+        }
+      },
+      "sourceReference": "dealers/al-reem-auto/branding/generated-mark-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "0b905489699304ab3e55017aef194ef429fea1228444871a880f26528fdabc9b",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-33470fe7-b303-4714-ae1c-ed8b140cf77c",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "7fc317baa2ae9f11704ff86c05b9a4b1e6ac7ca69bbd688d5d28e1d9c607248c",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 225,
+          "height": 221
+        }
+      }
+    }
+  }
+}

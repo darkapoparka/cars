@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-saqr-al-mutaliq-used-car",
+  "reviewed": true,
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "00a49a377452e6bf389fe3cf20416c3c8bf2ba2ce6cc2b7b653cf2c77d6e26eb",
+      "sourceSha256": "87b4a0d36086bfb2978cbf67b2ed09cbc0e1ac7ccd2f54ef5f748fbf9f68bf2c"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "a7defdd58e9f6ec5db4e409c2d1a1c976d989951b1ff73d62980c0f3eb616b00",
+      "sourceSha256": "85abf184dcb8eeb6f1aa54de2f80954bf110e62e8fe3bee45c5065e1e10c4d2b"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "a7defdd58e9f6ec5db4e409c2d1a1c976d989951b1ff73d62980c0f3eb616b00",
+      "sourceSha256": "85abf184dcb8eeb6f1aa54de2f80954bf110e62e8fe3bee45c5065e1e10c4d2b"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "87b4a0d36086bfb2978cbf67b2ed09cbc0e1ac7ccd2f54ef5f748fbf9f68bf2c",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-0e942533-08fa-47ef-9411-57c574879972",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "5beda48f02b9a89dfd655c7e74f1e289ad70f012553af4de60620bfbdf830266",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-0e942533-08fa-47ef-9411-57c574879972",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "87b4a0d36086bfb2978cbf67b2ed09cbc0e1ac7ccd2f54ef5f748fbf9f68bf2c",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 385,
+          "height": 314
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "c6a459eabbbe4f418abef72b8f722fab950d22d6972d8281d70a2da7dab21727"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "87b4a0d36086bfb2978cbf67b2ed09cbc0e1ac7ccd2f54ef5f748fbf9f68bf2c",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-0e942533-08fa-47ef-9411-57c574879972",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-saqr-al-mutaliq-used-car/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "85abf184dcb8eeb6f1aa54de2f80954bf110e62e8fe3bee45c5065e1e10c4d2b",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-822e8dfb-d7eb-46f7-ab30-d7880a6b1ad1",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-saqr-al-mutaliq-used-car/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "85abf184dcb8eeb6f1aa54de2f80954bf110e62e8fe3bee45c5065e1e10c4d2b",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-822e8dfb-d7eb-46f7-ab30-d7880a6b1ad1",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-saqr-al-mutaliq-used-car/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "87b4a0d36086bfb2978cbf67b2ed09cbc0e1ac7ccd2f54ef5f748fbf9f68bf2c",
+      "sha256": "87b4a0d36086bfb2978cbf67b2ed09cbc0e1ac7ccd2f54ef5f748fbf9f68bf2c",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 314
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "85abf184dcb8eeb6f1aa54de2f80954bf110e62e8fe3bee45c5065e1e10c4d2b",
+      "sha256": "85abf184dcb8eeb6f1aa54de2f80954bf110e62e8fe3bee45c5065e1e10c4d2b",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 314
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "85abf184dcb8eeb6f1aa54de2f80954bf110e62e8fe3bee45c5065e1e10c4d2b",
+      "sha256": "85abf184dcb8eeb6f1aa54de2f80954bf110e62e8fe3bee45c5065e1e10c4d2b",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 314
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "37c25e7d9542bb0699ed6588dee2777b61bf2831415de67949842ef7ca2251c7",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-0e942533-08fa-47ef-9411-57c574879972",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "87b4a0d36086bfb2978cbf67b2ed09cbc0e1ac7ccd2f54ef5f748fbf9f68bf2c",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 385,
+            "height": 314
+          }
+        }
+      },
+      "sourceReference": "dealers/al-saqr-al-mutaliq-used-car/branding/generated-mark-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "672f01a505658c2862a6d420e538fc4b11aeadb7279de5690566d93bb42b776c",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-822e8dfb-d7eb-46f7-ab30-d7880a6b1ad1",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "85abf184dcb8eeb6f1aa54de2f80954bf110e62e8fe3bee45c5065e1e10c4d2b",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 385,
+            "height": 314
+          }
+        }
+      },
+      "sourceReference": "dealers/al-saqr-al-mutaliq-used-car/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "5beda48f02b9a89dfd655c7e74f1e289ad70f012553af4de60620bfbdf830266",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-0e942533-08fa-47ef-9411-57c574879972",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "87b4a0d36086bfb2978cbf67b2ed09cbc0e1ac7ccd2f54ef5f748fbf9f68bf2c",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 385,
+            "height": 314
+          }
+        }
+      },
+      "sourceReference": "dealers/al-saqr-al-mutaliq-used-car/branding/generated-mark-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "c6a459eabbbe4f418abef72b8f722fab950d22d6972d8281d70a2da7dab21727",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-0e942533-08fa-47ef-9411-57c574879972",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "87b4a0d36086bfb2978cbf67b2ed09cbc0e1ac7ccd2f54ef5f748fbf9f68bf2c",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 385,
+            "height": 314
+          }
+        }
+      },
+      "sourceReference": "dealers/al-saqr-al-mutaliq-used-car/branding/generated-mark-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "421d4d196bee8a4689916841783eb8863dfea77716946c3b105d5e00c84a0c08",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-822e8dfb-d7eb-46f7-ab30-d7880a6b1ad1",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "85abf184dcb8eeb6f1aa54de2f80954bf110e62e8fe3bee45c5065e1e10c4d2b",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 385,
+          "height": 314
+        }
+      }
+    }
+  }
+}

@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "VTC Motors",
     "publicOrigin": "https://vtc-motors.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "70bb90d82ca77c65f53d246bba1c05e3f1130576b588a2d78ee32db656edbb30",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "a6862433edd45675bf586a439e1298f2743bcc987e5e3e4e4a86874f4b6cb378"
+    }
   }
 }

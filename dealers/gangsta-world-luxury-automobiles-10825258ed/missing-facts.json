@@ -3,11 +3,6 @@
   "dealer": "gangsta-world-luxury-automobiles-10825258ed",
   "missing": [
     {
-      "field": "business.address",
-      "required": false,
-      "reason": "No usable sourced value in the retained public business record."
-    },
-    {
       "field": "business.phone",
       "required": false,
       "reason": "No usable sourced value in the retained public business record."

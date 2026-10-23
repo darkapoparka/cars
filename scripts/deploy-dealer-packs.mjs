@@ -132,6 +132,17 @@ export async function drainPackDeployments({store,provider,owner,root=ROOT,bundl
     const current=await store.read();validatePackQueue(current.state);
     if(current.state.active)return {status:'queued',reason:'another executor owns the non-expiring account claim',active:current.state.active,results,pending:current.state.order.filter(id=>current.state.requests[id].status==='queued').length};
     const id=current.state.order.find(key=>current.state.requests[key].status==='queued'&&(!selected||selected.has(key)));if(!id)break;
+    // Do not consume a durable request if the authenticated Actions API is
+    // temporarily unavailable. The exact source run is also read by materialize;
+    // this read warms that same authenticated resolver cache before the claim.
+    if(readGithub){
+      const request=current.state.requests[id].request,runId=request.buildArtifact?.runId;
+      assert(Number.isSafeInteger(runId)&&runId>0,'Queued request is missing an exact source run');
+      let probe;try{probe=await readGithub({method:'GET',path:'/repos/'+PACK_QUEUE_REPOSITORY+'/actions/runs/'+runId});}
+      catch{return {status:'queued',reason:'Authenticated build source API unavailable before claim',results,pending:current.state.order.filter(key=>current.state.requests[key].status==='queued').length};}
+      if(probe.status!==200)return {status:'queued',reason:'Authenticated build source API unavailable before claim',results,pending:current.state.order.filter(key=>current.state.requests[key].status==='queued').length};
+      assert(probe.body?.id===runId&&probe.body.head_sha===request.sourceCommit,'Queued source run identity changed before claim');
+    }
     const claimed=await claimPackDeployment(store,{owner,requestId:id});if(!claimed.value.claimed)continue;
     const resolve=inspectCandidate??(async request=>inspectExactPackDeployment({root,slug:request.slug,bundleRoot,batch:request.batch,queue:(await store.read()).state,registry,readGithub,request}));
     const result=await executeQueuedPackDeployment({store,claim:claimed.value.claim,provider,inspectCandidate:resolve,registry,verifyHosted});results.push(result);

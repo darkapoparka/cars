@@ -1,0 +1,147 @@
+{
+  "schemaVersion": 1,
+  "dealer": "rukn-al-rebou-used-cars",
+  "status": "reviewed-imagegen-proposal",
+  "realLogoFirst": true,
+  "publicSources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/rukn-al-rebou-used-cars",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/4472-mercedes-benz-cla-250-7g-dct-224-hp-cla-250-amg",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "originals": [],
+  "creationMethod": "imagegen-proposal",
+  "dealerApproved": false,
+  "generatedInputs": {
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "master": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "ac9ad2efedf81371335a9ffe6d554e8db60619e10910efa434d37617730f8d5e",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-2e8dab71-1134-42cb-9e77-5ce11b10e28a",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark-light.png",
+      "sha256": "5b5f1b1c0ecf4c573cc3a977b451b48d5cec15718fdad1faec4eb45811c8d1fc",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-2e8dab71-1134-42cb-9e77-5ce11b10e28a",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "ac9ad2efedf81371335a9ffe6d554e8db60619e10910efa434d37617730f8d5e",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 260,
+            "height": 204
+          }
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-dark.png",
+      "sha256": "4600bc1eafa520f05ee41fc9f6c4c4549be2f998af73e915a6f52486ed2bf831",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-50fdc4a8-2324-4926-a86e-583323eaac8e",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "58d634d9ff5b2e6541d31e26adaab3c0bd68eaddfa1614af8a3717360b35f95f",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 260,
+            "height": 205
+          }
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "ac9ad2efedf81371335a9ffe6d554e8db60619e10910efa434d37617730f8d5e",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-2e8dab71-1134-42cb-9e77-5ce11b10e28a",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "58d634d9ff5b2e6541d31e26adaab3c0bd68eaddfa1614af8a3717360b35f95f",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-50fdc4a8-2324-4926-a86e-583323eaac8e",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "58d634d9ff5b2e6541d31e26adaab3c0bd68eaddfa1614af8a3717360b35f95f",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-50fdc4a8-2324-4926-a86e-583323eaac8e",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewKind": "agent-visual-review",
+      "humanReview": false,
+      "dealerApproval": false,
+      "backgrounds": {
+        "onLight": "#ffffff",
+        "onDark": "#111113",
+        "onAccent": "#c40101"
+      },
+      "wordmarkWidths": [
+        220,
+        240
+      ],
+      "notes": "Exact reviewed Image Gen pair; native masters and generation provenance retained. Compact rasters cropped from the actual left symbol."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-22T23:42:46.338Z",
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#c40101"
+      ],
+      "widths": [
+        32,
+        48,
+        64
+      ],
+      "notes": "Left symbol cropped from reviewed horizontal variants; native rendering must independently qualify."
+    }
+  },
+  "sourceBlockers": [],
+  "artworkProvenance": {
+    "path": "branding/artwork-provenance.json",
+    "sha256": "85e34ae9e8d9bae4f324f9e1f287c4a2283c600cef9107053c7b1de751ac57dc",
+    "manifestSha256": "d25e9cee768a885052ac0a8df220d843c9b9c6f6f120d722705bead1cc99e694",
+    "nativeMasters": [
+      {
+        "path": "branding/native-generated-on-light.png",
+        "sha256": "003d00b9848834baaf7cc0114533289f8f33794b92af3a485a9c61a4024b7a0f"
+      },
+      {
+        "path": "branding/native-generated-on-dark.png",
+        "sha256": "04b7a1904b0e8f85feea2940d89d60c1480205ced7bd2246fe0ae59653e5e272"
+      }
+    ]
+  }
+}

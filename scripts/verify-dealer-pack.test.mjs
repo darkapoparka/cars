@@ -624,3 +624,20 @@ test('CI failure summary retains the concrete verification error without needing
  assert.equal(summary.checks[0].failure,full.checks[0].details.slice(0,1600));assert(summary.checks[0].failure.length>15);
  assert.equal(full.providerWrites,0);
 });
+
+test('an exact owned name containing a neighboring dealer name is not a foreign identity',()=>{
+ const ownFacts={business:{name:'Ali Gad Ali Used Cars',phone:''}},fleet={records:[{slug:'ali-used-cars',names:['Ali Used Cars'],phones:[]}]};
+ const inspect=text=>findForeignIdentity({text,ownSlug:'ali-gad-ali-used-cars',ownFacts,fleet});
+ assert.deepEqual(inspect('© 2026 Ali Gad Ali Used Cars\nIndependent showroom concept'),[]);
+ const leaks=inspect('© 2026 Ali Gad Ali Used Cars\nVisit Ali Used Cars for another dealer');
+ assert(leaks.some(row=>row.dealer==='ali-used-cars'&&row.type==='name'));
+});
+
+test('adjacent own-name metadata repeats preserve foreign dealer detection',()=>{
+ const ownFacts={business:{name:'Ali Gad Ali Used Cars',phone:''}},fleet={records:[{slug:'ali-used-cars',names:['Ali Used Cars'],phones:[]}]};
+ const metadata='Ali Gad Ali Used Cars — Showroom concept in Sharjah\nAli Gad Ali Used Cars\nAli Gad Ali Used Cars';
+ const inspect=value=>findForeignIdentity({text:'',ownSlug:'ali-gad-ali-used-cars',ownFacts,fleet,
+  additionalText:[{channel:'metadata',owner:'page title, descriptions and structured data',text:value}]});
+ assert.deepEqual(inspect(metadata),[]);
+ assert(inspect(metadata+'\nAli Used Cars is a separate dealer').some(row=>row.dealer==='ali-used-cars'&&row.type==='name'));
+});

@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "dealer": "ali-gad-ali-used-cars",
+  "reviewed": true,
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "41df28b4cd58db7f21fc340bfe8fd4f5e28f78b8017e507d95e08967784a6281",
+      "sourceSha256": "63941ecfacf65990556a0f9ae9ba971f140de567330748552ec4ffa1a982ada1"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "60f97e84afa85800451d1f17059423a5a02d76b49e6a469e18d508a1d4f57db5",
+      "sourceSha256": "4f6f793cc92a642f1a38458bfb85105e978856db4e2d2fe266ed703076e4ac4a"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "60f97e84afa85800451d1f17059423a5a02d76b49e6a469e18d508a1d4f57db5",
+      "sourceSha256": "4f6f793cc92a642f1a38458bfb85105e978856db4e2d2fe266ed703076e4ac4a"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "63941ecfacf65990556a0f9ae9ba971f140de567330748552ec4ffa1a982ada1",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-6a54c198-8739-47c2-9454-780efbc92bdd",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "96ca728aa9aae292aa0f13fdcc4e5142d550017ce50797ebc3884b2b1c589758",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-6a54c198-8739-47c2-9454-780efbc92bdd",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "63941ecfacf65990556a0f9ae9ba971f140de567330748552ec4ffa1a982ada1",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 320,
+          "height": 238
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "ab58c654ca58492abe81947da6d298f78a6a04cd52b01aa8abafcf145769438f"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "63941ecfacf65990556a0f9ae9ba971f140de567330748552ec4ffa1a982ada1",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-6a54c198-8739-47c2-9454-780efbc92bdd",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/ali-gad-ali-used-cars/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "4f6f793cc92a642f1a38458bfb85105e978856db4e2d2fe266ed703076e4ac4a",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-6fa294db-dbfe-4b2a-bd11-7a42349b133a",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/ali-gad-ali-used-cars/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "4f6f793cc92a642f1a38458bfb85105e978856db4e2d2fe266ed703076e4ac4a",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-6fa294db-dbfe-4b2a-bd11-7a42349b133a",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/ali-gad-ali-used-cars/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "63941ecfacf65990556a0f9ae9ba971f140de567330748552ec4ffa1a982ada1",
+      "sha256": "63941ecfacf65990556a0f9ae9ba971f140de567330748552ec4ffa1a982ada1",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 238
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "4f6f793cc92a642f1a38458bfb85105e978856db4e2d2fe266ed703076e4ac4a",
+      "sha256": "4f6f793cc92a642f1a38458bfb85105e978856db4e2d2fe266ed703076e4ac4a",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 237
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "4f6f793cc92a642f1a38458bfb85105e978856db4e2d2fe266ed703076e4ac4a",
+      "sha256": "4f6f793cc92a642f1a38458bfb85105e978856db4e2d2fe266ed703076e4ac4a",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 237
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "8e9bae010758318e628b86e4ee740b6d9e6f2c6aa08723f83187356f8a0e51b2",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-6a54c198-8739-47c2-9454-780efbc92bdd",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "63941ecfacf65990556a0f9ae9ba971f140de567330748552ec4ffa1a982ada1",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 320,
+            "height": 238
+          }
+        }
+      },
+      "sourceReference": "dealers/ali-gad-ali-used-cars/branding/generated-mark-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "7e75f3f6435ed2705decf019298a1d39b18d9640e84750e8485807cc55e88299",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-6fa294db-dbfe-4b2a-bd11-7a42349b133a",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "4f6f793cc92a642f1a38458bfb85105e978856db4e2d2fe266ed703076e4ac4a",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 320,
+            "height": 237
+          }
+        }
+      },
+      "sourceReference": "dealers/ali-gad-ali-used-cars/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "96ca728aa9aae292aa0f13fdcc4e5142d550017ce50797ebc3884b2b1c589758",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-6a54c198-8739-47c2-9454-780efbc92bdd",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "63941ecfacf65990556a0f9ae9ba971f140de567330748552ec4ffa1a982ada1",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 320,
+            "height": 238
+          }
+        }
+      },
+      "sourceReference": "dealers/ali-gad-ali-used-cars/branding/generated-mark-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "ab58c654ca58492abe81947da6d298f78a6a04cd52b01aa8abafcf145769438f",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-6a54c198-8739-47c2-9454-780efbc92bdd",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "63941ecfacf65990556a0f9ae9ba971f140de567330748552ec4ffa1a982ada1",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 320,
+            "height": 238
+          }
+        }
+      },
+      "sourceReference": "dealers/ali-gad-ali-used-cars/branding/generated-mark-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "9df3b6154ebc4e16a86cca7cb6026f75e2b2f982d4e4973e0c6054806f9ff67e",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-6fa294db-dbfe-4b2a-bd11-7a42349b133a",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "4f6f793cc92a642f1a38458bfb85105e978856db4e2d2fe266ed703076e4ac4a",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 320,
+          "height": 237
+        }
+      }
+    }
+  }
+}

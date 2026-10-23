@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Master Motors",
     "publicOrigin": "https://master-motors.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "fe2755df1c479f3930447d3ea637704543325edc18cf2d15f67f6a07c89baab8",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "b9a2d15945d4d5c0a92592a354a2a2c7fdbc15fff0135ee3dc8dcde332c90baf"
+    }
   }
 }

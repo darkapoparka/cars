@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Verona Used Cars",
     "publicOrigin": "https://verona-used-cars.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "246118dfc6e5b72bd4a93f6d12ddf735cf5811a76f02e191d71eaa576908bdd2",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "1455d48d8433912d1d43d72fc9b39ef0967ddd1299793f6fe8ca33023be56596"
+    }
   }
 }

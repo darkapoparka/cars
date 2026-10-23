@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Alarabi Motors",
     "publicOrigin": "https://alarabi-motors.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "f37ceff37ad1cc25b1e07bcf7ea63cbe103205ecede9db53883867c679690e35",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "9667db6de5071ddea0301ec2d9bd0c26c1e3f1bded833699d77672b362ef233e"
+    }
   }
 }

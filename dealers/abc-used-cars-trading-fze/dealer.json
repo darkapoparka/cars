@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "ABC Used Cars Trading FZE",
     "publicOrigin": "https://abc-used-cars-trading-fze.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "220dcebcb2ccbb54d71246a66c6054aed5bf7253e63107372493140980616b22",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "154ce396d457019188a98d2c8965a9b7451d483f9468406b8d8e3430fde6c1a8"
+    }
   }
 }

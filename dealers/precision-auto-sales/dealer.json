@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Precision Auto Sales",
     "publicOrigin": "https://precision-auto-sales.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "e954153257af0a9b84839d02a5d958c42dc48ad0a476786e47c8b25265d51b76",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "267d5b6940f956007fd9e5c1fe279bc9e0c41c7435ec33e94e4771f849912b43"
+    }
   }
 }

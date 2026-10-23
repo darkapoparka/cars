@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "dealer": "master-motors",
+  "reviewed": true,
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "82a4963c09af40120a3bd31a53c17a7525edb56164e553800b79e8318dfddcb1",
+      "sourceSha256": "fe2755df1c479f3930447d3ea637704543325edc18cf2d15f67f6a07c89baab8"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "1a481c0ef90375f1a334b2c63f8bf3b828b9dfa21255fa07f2eac5acbb9e4bd6",
+      "sourceSha256": "6ebe7c246f50f2d00b1f49ed80aaf4c548a96f00a01275f3bfa7a7094e007f70"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "1a481c0ef90375f1a334b2c63f8bf3b828b9dfa21255fa07f2eac5acbb9e4bd6",
+      "sourceSha256": "6ebe7c246f50f2d00b1f49ed80aaf4c548a96f00a01275f3bfa7a7094e007f70"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "fe2755df1c479f3930447d3ea637704543325edc18cf2d15f67f6a07c89baab8",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-5e07cd44-509e-4eaf-ad29-6acba61b205f",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "b9a2d15945d4d5c0a92592a354a2a2c7fdbc15fff0135ee3dc8dcde332c90baf",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-5e07cd44-509e-4eaf-ad29-6acba61b205f",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "fe2755df1c479f3930447d3ea637704543325edc18cf2d15f67f6a07c89baab8",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 255,
+          "height": 259
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "11338ad74e15263e387b34bfe7655f8d28fd64f482b066b67bfc49b8a1f3456a"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "fe2755df1c479f3930447d3ea637704543325edc18cf2d15f67f6a07c89baab8",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-5e07cd44-509e-4eaf-ad29-6acba61b205f",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/master-motors/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "6ebe7c246f50f2d00b1f49ed80aaf4c548a96f00a01275f3bfa7a7094e007f70",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-7df60f6a-4625-4d0f-aa18-dab20272adc5",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/master-motors/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "6ebe7c246f50f2d00b1f49ed80aaf4c548a96f00a01275f3bfa7a7094e007f70",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-7df60f6a-4625-4d0f-aa18-dab20272adc5",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/master-motors/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "fe2755df1c479f3930447d3ea637704543325edc18cf2d15f67f6a07c89baab8",
+      "sha256": "fe2755df1c479f3930447d3ea637704543325edc18cf2d15f67f6a07c89baab8",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 259
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "6ebe7c246f50f2d00b1f49ed80aaf4c548a96f00a01275f3bfa7a7094e007f70",
+      "sha256": "6ebe7c246f50f2d00b1f49ed80aaf4c548a96f00a01275f3bfa7a7094e007f70",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 257
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "6ebe7c246f50f2d00b1f49ed80aaf4c548a96f00a01275f3bfa7a7094e007f70",
+      "sha256": "6ebe7c246f50f2d00b1f49ed80aaf4c548a96f00a01275f3bfa7a7094e007f70",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 257
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "aacb3aeca7e77f1132d9ecbc5558280bf82faa7723d4afe35c6a7b3497207984",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-5e07cd44-509e-4eaf-ad29-6acba61b205f",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "fe2755df1c479f3930447d3ea637704543325edc18cf2d15f67f6a07c89baab8",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 255,
+            "height": 259
+          }
+        }
+      },
+      "sourceReference": "dealers/master-motors/branding/generated-mark-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "abb9a0a04943d3954a5a3cfdf7a17a79921696265a94cf64e90f708701d13791",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-7df60f6a-4625-4d0f-aa18-dab20272adc5",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "6ebe7c246f50f2d00b1f49ed80aaf4c548a96f00a01275f3bfa7a7094e007f70",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 255,
+            "height": 257
+          }
+        }
+      },
+      "sourceReference": "dealers/master-motors/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "b9a2d15945d4d5c0a92592a354a2a2c7fdbc15fff0135ee3dc8dcde332c90baf",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-5e07cd44-509e-4eaf-ad29-6acba61b205f",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "fe2755df1c479f3930447d3ea637704543325edc18cf2d15f67f6a07c89baab8",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 255,
+            "height": 259
+          }
+        }
+      },
+      "sourceReference": "dealers/master-motors/branding/generated-mark-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "11338ad74e15263e387b34bfe7655f8d28fd64f482b066b67bfc49b8a1f3456a",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-5e07cd44-509e-4eaf-ad29-6acba61b205f",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "fe2755df1c479f3930447d3ea637704543325edc18cf2d15f67f6a07c89baab8",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 255,
+            "height": 259
+          }
+        }
+      },
+      "sourceReference": "dealers/master-motors/branding/generated-mark-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "87a60903c2ab6e5929391edbd25771c9152727ef97f198d7e87796a6017b16a3",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-7df60f6a-4625-4d0f-aa18-dab20272adc5",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "6ebe7c246f50f2d00b1f49ed80aaf4c548a96f00a01275f3bfa7a7094e007f70",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 255,
+          "height": 257
+        }
+      }
+    }
+  }
+}

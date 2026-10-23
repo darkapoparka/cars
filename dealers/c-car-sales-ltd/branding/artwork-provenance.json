@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "gb-wolverhampton-c-car-sales",
+  "slug": "c-car-sales-ltd",
+  "name": "C-Car Sales Ltd",
+  "kind": "independent-website-logo-proposal",
+  "dealerApproved": false,
+  "ownerApproved": false,
+  "sourceEvidence": [
+    {
+      "url": "https://showroom.ebaymotorspro.co.uk/ccarsales-ltd?extendedFilter=1&menu=1",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.cazoo.co.uk/dealers/c-car-sales-ltd-97867/",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "retainedOriginalsUnchanged": true,
+  "variants": {
+    "on-light": {
+      "path": "logo-on-light.png",
+      "sha256": "7476a0b6605ea425bf2ad69d727bb7f60c027a164dd519f27376cd91975baecc",
+      "master": {
+        "path": "generated-on-light.png",
+        "sha256": "42dfd7fdd0d2dd46ba03466c8c23519db8457a5a0df0f05602725116b58299cc",
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-53410b99-26da-4beb-9e70-579ecca9c649",
+        "prompt": "Use case: logo-brand. Create one professional original independent website-proposal logo. Exact text: \"C-CAR SALES LTD\". a bold open C symbol with a subtle inset forward arrow made by negative space; clean distinctive geometry, no enclosure. Horizontal logo for LIGHT website surfaces, with clear dark/charcoal foreground lettering, legible name hierarchy, large useful symbol if present, generous counters and crisp edges. Genuine alpha transparency. A polished final logo, not a poster or mockup. No extra text, fake checkerboard, background rectangle, watermark, shadows, fake chrome, gradients or texture. No tiny slogan, no misspelled words. Prefer a balanced landscape lockup that remains readable at 240px wide, framed close to the artwork with a small transparent margin. One logo only. This output is a proposed website asset, not a claim of dealer adoption.",
+        "reference": null
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 0,
+          "top": 123,
+          "width": 2172,
+          "height": 480
+        }
+      }
+    },
+    "on-dark": {
+      "path": "logo-on-dark.png",
+      "sha256": "6744886188497ee248773ebdfcdb82cdf3bdf47ce07dac97f25558348420ad23",
+      "master": {
+        "path": "generated-on-dark.png",
+        "sha256": "737895fe4284937c1693229fd1c04c54247affa1ed3570bca26ea48b80330308",
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-2aa409ec-86b3-4a5a-86f0-bfadd3f7b34a",
+        "prompt": "Create the matching light-ink variant for DARK website surfaces of the supplied C-Car Sales Ltd logo. Preserve exact wording, spelling, symbol, composition, typography, spacing and proportions. Change dark name/foreground elements to clean solid white; preserve recognizable genuine source accents where they remain clear against #111113 and deep red. Transparent alpha background; no background block, mockup, texture, distressed edges, new decorations or extra text. This must remain the same logo, simply its readable on-dark counterpart. Exact text: C-CAR SALES LTD. Whole design with enough clear transparent margin.",
+        "reference": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-53410b99-26da-4beb-9e70-579ecca9c649.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 0,
+          "top": 122,
+          "width": 2172,
+          "height": 480
+        }
+      }
+    }
+  },
+  "review": {
+    "status": "artwork-visually-reviewed",
+    "compact": "Horizontal logos only. Interactive 32/48/64px gallery preview is provided; separate compact/favicon artwork remains part of dealer-pack preparation.",
+    "sixDesigns": "not-yet-integrated-or-rendered",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "reviewer": "Codex visual inspection",
+    "alpha": "all exports measured as genuine transparent nonempty PNGs",
+    "spelling": "English wordmark inspected; source-bound display aliases retained",
+    "header": "All 196 paired PNGs inspected at 240x64 on white, #111113 and #c40101",
+    "evidence": "final-review-01.png"
+  },
+  "releaseReady": false,
+  "artworkHolds": [],
+  "artworkReadyForIntegration": true
+}

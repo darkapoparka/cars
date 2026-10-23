@@ -1,0 +1,147 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-hedou-used-cars-exhibition-llc",
+  "status": "reviewed-imagegen-proposal",
+  "realLogoFirst": true,
+  "publicSources": [
+    {
+      "url": "https://auto.ae/alhedou/",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-sharjah/Hyundai/Tucson-SE/?id=26713",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "originals": [],
+  "creationMethod": "imagegen-proposal",
+  "dealerApproved": false,
+  "generatedInputs": {
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "master": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "45b82c104559acbd3c47f4204803c47678a67aa90c8364ae9ec43ab3f52d3a63",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-d0eeba1e-c0cc-4cfe-b925-f7a884a70116",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark-light.png",
+      "sha256": "be1af8ebcac1f42bb366a203ac6ca9912421f4d2265d478dfd3e205874786765",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-d0eeba1e-c0cc-4cfe-b925-f7a884a70116",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "45b82c104559acbd3c47f4204803c47678a67aa90c8364ae9ec43ab3f52d3a63",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 239,
+            "height": 268
+          }
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-dark.png",
+      "sha256": "c331460e14b0c7c2da7e1f72c6720db24a9cab3f0bfc15f8f44efce9b6bf971f",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-88dde2fc-1b04-48e3-9db2-2fa5f143a469",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "0c73695edc5348d7de506983a0c3bb142963f25827f6162146e337f87ef41b97",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 239,
+            "height": 269
+          }
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "45b82c104559acbd3c47f4204803c47678a67aa90c8364ae9ec43ab3f52d3a63",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-d0eeba1e-c0cc-4cfe-b925-f7a884a70116",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "0c73695edc5348d7de506983a0c3bb142963f25827f6162146e337f87ef41b97",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-88dde2fc-1b04-48e3-9db2-2fa5f143a469",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "0c73695edc5348d7de506983a0c3bb142963f25827f6162146e337f87ef41b97",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-88dde2fc-1b04-48e3-9db2-2fa5f143a469",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewKind": "agent-visual-review",
+      "humanReview": false,
+      "dealerApproval": false,
+      "backgrounds": {
+        "onLight": "#ffffff",
+        "onDark": "#111113",
+        "onAccent": "#c40101"
+      },
+      "wordmarkWidths": [
+        220,
+        240
+      ],
+      "notes": "Exact reviewed Image Gen pair; native masters and generation provenance retained. Compact rasters cropped from the actual left symbol."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-22T23:42:46.338Z",
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#c40101"
+      ],
+      "widths": [
+        32,
+        48,
+        64
+      ],
+      "notes": "Left symbol cropped from reviewed horizontal variants; native rendering must independently qualify."
+    }
+  },
+  "sourceBlockers": [],
+  "artworkProvenance": {
+    "path": "branding/artwork-provenance.json",
+    "sha256": "f7c342f543a2df952ef72d548047fb73e4d5066be3b199dd4132dbecbf6e3296",
+    "manifestSha256": "d25e9cee768a885052ac0a8df220d843c9b9c6f6f120d722705bead1cc99e694",
+    "nativeMasters": [
+      {
+        "path": "branding/native-generated-on-light.png",
+        "sha256": "99725aa411b6e17e6fc5c14d6a017b9a9f9b5c8f95db9ffb57988ca36561ab9b"
+      },
+      {
+        "path": "branding/native-generated-on-dark.png",
+        "sha256": "ef1505e76f595718d41eed93666a80cc1520b38c7e1364bea9ac43bab0334bfe"
+      }
+    ]
+  }
+}

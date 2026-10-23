@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Al Jars Aldhahabi Used Cars Trading",
     "publicOrigin": "https://al-jars-aldhahabi-used-cars-trading.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "23078f7605e918bf911d69d05b0346a29dcba7dc1209f00384e247fcaf18e833",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "952df25e99ed851c442bee08b62014e9c68c43669d87ba7ed1493e9581296f9e"
+    }
   }
 }

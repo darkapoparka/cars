@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Super Class Cars Showroom",
     "publicOrigin": "https://super-class-cars-showroom.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "9c469662976239a405eaee58cb083cdf2a1834a106e98917ff3a9f02ad9e32ea",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "1b7b8672470acb3aa8339b06ac4694b3ce6b8be1471f286f5bb60ad860c3b8a1"
+    }
   }
 }

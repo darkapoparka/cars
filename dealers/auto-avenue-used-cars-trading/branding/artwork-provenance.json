@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "ae-dubai-auto-avenue-used-cars-trading",
+  "slug": "auto-avenue-used-cars-trading",
+  "artworkDirectory": "auto-avenue-used-cars-trading",
+  "name": "Auto Avenue Used Cars Trading",
+  "renderedName": "Auto Avenue Used Cars Trading",
+  "kind": "independent-website-logo-proposal",
+  "dealerApproved": false,
+  "ownerApproved": false,
+  "sourceEvidence": [
+    {
+      "url": "https://www.dubicars.com/dealers/dubai-auto-avenue-used-cars-trading-2366",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "retainedOriginalsUnchanged": true,
+  "variants": {
+    "on-light": {
+      "path": "logo-on-light.png",
+      "sha256": "bb89ff821fd6ffd632895be5262231012a087e6dfbdb9f36fb392a564bc0b422",
+      "width": 1024,
+      "height": 238,
+      "transparentFraction": 0.6742876838235294,
+      "master": {
+        "path": "generated-on-light.png",
+        "sha256": "e193343cd7b7c4e0a70eee867a8db2f5966276d85a85fb0abf5705542f347105",
+        "width": 2146,
+        "height": 733
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-066fc381-0dbb-4f8a-8426-86feab95a7fd",
+        "prompt": "Create one professional horizontal automotive dealership logo proposal for Auto Avenue Used Cars Trading. Required exact text, uppercase: AUTO AVENUE USED CARS TRADING. Every word must be present and spelled precisely; use sensible primary name and smaller descriptor hierarchy without tiny lettering. Produce a polished original identity with a distinctive custom typographic ligature in a refined square emblem. Initials A may inform the emblem. Emblem left, full clear name to the right, compact and balanced for a website header. Avoid overused shield and generic car silhouettes; no manufacturer badges. Clean modern lettering with careful kerning and strong legibility. All text is deep charcoal black, appropriate on a white/light header. One restrained red or gold accent may appear inside the emblem only; no pale text. Flat crisp edges, a small number of solid shapes, no chrome, no lighting, no shadow, no texture, no gradient. Genuine transparent alpha background, isolated logo with no background box, no grid, no checkerboard painted into pixels. No slogan, contact info, website, watermark, mockup, photograph, extra concept, or duplicate logo. Deliver exactly one horizontal full logo. This is an independent website identity proposal, not a claim of adopted branding.",
+        "reference": null
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 2,
+          "top": 125,
+          "width": 2133,
+          "height": 496
+        }
+      }
+    },
+    "on-dark": {
+      "path": "logo-on-dark.png",
+      "sha256": "56b637c2d598e59646544323a5239eb590cf8eb9870f4ad40be8b2cb4e852c50",
+      "width": 1024,
+      "height": 237,
+      "transparentFraction": 0.5417902821729957,
+      "master": {
+        "path": "generated-on-dark.png",
+        "sha256": "651ac552e2ce710f751601343e0ebd90e8121994f01fa309a8fa0cc80e811690",
+        "width": 2146,
+        "height": 733
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-e9ac59a4-c1c5-473a-873c-e23b5ca1ec5a",
+        "prompt": "Create the matching light-on-dark production variant of the exact supplied logo. Preserve precisely the same emblem, geometry, spelling, word count, typographic hierarchy, proportions, layout and spacing. Required exact text: AUTO AVENUE USED CARS TRADING. Change EVERY letter, including all secondary descriptor words and legal suffixes, to solid white so it is legible over a dark or red website header. Change the charcoal portions of the emblem to white. Retain the small red/gold emblem accent only if it contrasts clearly against a dark header. True transparent alpha background; do not paint a dark rectangle or checkerboard. Flat clean edges, no glows, shadows, bevels, textures, gradients, new artwork, new icon, extra text or mockup. Deliver one horizontal matching logo, fully legible.",
+        "reference": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-066fc381-0dbb-4f8a-8426-86feab95a7fd.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 2,
+          "top": 121,
+          "width": 2121,
+          "height": 491
+        }
+      }
+    }
+  },
+  "review": {
+    "status": "artwork-visually-reviewed",
+    "alpha": "all exports measured as genuine transparent nonempty PNGs",
+    "spelling": "English wordmark inspected; source-bound display aliases retained",
+    "compact": "Horizontal logos only. Interactive 32/48/64px gallery preview is provided; separate compact/favicon artwork remains part of dealer-pack preparation.",
+    "sixDesigns": "not-yet-integrated-or-rendered",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "reviewer": "Codex visual inspection",
+    "header": "All 196 paired PNGs inspected at 240x64 on white, #111113 and #c40101",
+    "evidence": "final-review-06.png"
+  },
+  "releaseReady": false,
+  "artworkHolds": [],
+  "artworkReadyForIntegration": true
+}

@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "US Motors",
     "publicOrigin": "https://us-motors.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "20bc63809bbcd638900a23349ba411ffa2e1b38c70c092c58dc871df3f937918",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "1eeabb0b4839d02c6b06957cc3ee6f15bc7f333da732a6c9b2ad033ab18478a7"
+    }
   }
 }

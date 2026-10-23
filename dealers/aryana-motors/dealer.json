@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Aryana Motors",
     "publicOrigin": "https://aryana-motors.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "2684e03c045e226656e849d23e02169117676f4b4414725ee4446e2d9208b90e",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "02b37c07556e464b21735aea82653bd182a36d69226aec0bb417f2c4f5742bc3"
+    }
   }
 }

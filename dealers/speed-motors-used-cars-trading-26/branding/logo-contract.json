@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "dealer": "speed-motors-used-cars-trading-26",
+  "reviewed": true,
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "1e54183f9772be263de68af786de4aa04ee8d60f81cd8f87f5c2e2c377e49597",
+      "sourceSha256": "eb2c1b81655e0ffc8d62496799a578f93e8067790b2f0c2a8dda5044b59e3c1f"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "7ec98e7dfa94b9011d8dcbd5b230349c1f2a697709f4e82c5eec1693d1da0c51",
+      "sourceSha256": "5cf9efad9c87295cd669963bfa861d17d2b50b08f723c7635ea72f98b370e356"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "7ec98e7dfa94b9011d8dcbd5b230349c1f2a697709f4e82c5eec1693d1da0c51",
+      "sourceSha256": "5cf9efad9c87295cd669963bfa861d17d2b50b08f723c7635ea72f98b370e356"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "eb2c1b81655e0ffc8d62496799a578f93e8067790b2f0c2a8dda5044b59e3c1f",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-5102ce4c-6790-4e56-9cd0-158717d7c4ee",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "ad681fba54644a78b03fdbe30d4e9db75309dc4f59da27edcbab80773d17cabd",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-5102ce4c-6790-4e56-9cd0-158717d7c4ee",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "eb2c1b81655e0ffc8d62496799a578f93e8067790b2f0c2a8dda5044b59e3c1f",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 220,
+          "height": 215
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "2ae4a34f4117f85873f2b153cf9526336be8eb8f6fcaf4829ba0307801542c67"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "eb2c1b81655e0ffc8d62496799a578f93e8067790b2f0c2a8dda5044b59e3c1f",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-5102ce4c-6790-4e56-9cd0-158717d7c4ee",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/speed-motors-used-cars-trading-26/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "5cf9efad9c87295cd669963bfa861d17d2b50b08f723c7635ea72f98b370e356",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1e6a7678-947d-40aa-ae92-c0361f5182db",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/speed-motors-used-cars-trading-26/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "5cf9efad9c87295cd669963bfa861d17d2b50b08f723c7635ea72f98b370e356",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1e6a7678-947d-40aa-ae92-c0361f5182db",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/speed-motors-used-cars-trading-26/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "eb2c1b81655e0ffc8d62496799a578f93e8067790b2f0c2a8dda5044b59e3c1f",
+      "sha256": "eb2c1b81655e0ffc8d62496799a578f93e8067790b2f0c2a8dda5044b59e3c1f",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 215
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "5cf9efad9c87295cd669963bfa861d17d2b50b08f723c7635ea72f98b370e356",
+      "sha256": "5cf9efad9c87295cd669963bfa861d17d2b50b08f723c7635ea72f98b370e356",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 216
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "5cf9efad9c87295cd669963bfa861d17d2b50b08f723c7635ea72f98b370e356",
+      "sha256": "5cf9efad9c87295cd669963bfa861d17d2b50b08f723c7635ea72f98b370e356",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 216
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "7b45cac73125589f3fc41215134a14ba4a1eb9729131023320daa2b0bc317a63",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-5102ce4c-6790-4e56-9cd0-158717d7c4ee",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "eb2c1b81655e0ffc8d62496799a578f93e8067790b2f0c2a8dda5044b59e3c1f",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 220,
+            "height": 215
+          }
+        }
+      },
+      "sourceReference": "dealers/speed-motors-used-cars-trading-26/branding/generated-mark-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "6236ca916d0c0c7369f4eafcc370cbb6cc3d8bf15657449f53d9d60b16a7110e",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1e6a7678-947d-40aa-ae92-c0361f5182db",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "5cf9efad9c87295cd669963bfa861d17d2b50b08f723c7635ea72f98b370e356",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 220,
+            "height": 216
+          }
+        }
+      },
+      "sourceReference": "dealers/speed-motors-used-cars-trading-26/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "ad681fba54644a78b03fdbe30d4e9db75309dc4f59da27edcbab80773d17cabd",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-5102ce4c-6790-4e56-9cd0-158717d7c4ee",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "eb2c1b81655e0ffc8d62496799a578f93e8067790b2f0c2a8dda5044b59e3c1f",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 220,
+            "height": 215
+          }
+        }
+      },
+      "sourceReference": "dealers/speed-motors-used-cars-trading-26/branding/generated-mark-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "2ae4a34f4117f85873f2b153cf9526336be8eb8f6fcaf4829ba0307801542c67",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-5102ce4c-6790-4e56-9cd0-158717d7c4ee",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "eb2c1b81655e0ffc8d62496799a578f93e8067790b2f0c2a8dda5044b59e3c1f",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 220,
+            "height": 215
+          }
+        }
+      },
+      "sourceReference": "dealers/speed-motors-used-cars-trading-26/branding/generated-mark-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "b9710737ae2464e554d80236f41b096443b6fd601f120545dbf7caf9e8ffd7d4",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-1e6a7678-947d-40aa-ae92-c0361f5182db",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "5cf9efad9c87295cd669963bfa861d17d2b50b08f723c7635ea72f98b370e356",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 220,
+          "height": 216
+        }
+      }
+    }
+  }
+}

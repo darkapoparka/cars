@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "dealer": "top1-motors",
+  "reviewed": true,
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "f386df07adf90af1e5b266fdf3769539518355d8366581e9b0a29d4bcc62a34f",
+      "sourceSha256": "8011779a0e6ad00c6229a432b9ca8847c174c5e4aa9693e0113d3350941d41b7"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "33cce8dfc6c97ca9a313508f67fec54b0cde573be0c8a0685651f0c191c711b6",
+      "sourceSha256": "dabca17841850c5807afd90a08a45092e1c385459a90d184398161ad57b69b90"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "33cce8dfc6c97ca9a313508f67fec54b0cde573be0c8a0685651f0c191c711b6",
+      "sourceSha256": "dabca17841850c5807afd90a08a45092e1c385459a90d184398161ad57b69b90"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "8011779a0e6ad00c6229a432b9ca8847c174c5e4aa9693e0113d3350941d41b7",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-e25156b7-7c2a-451d-b7b1-76d5861e2aff",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "69232a814d8149812a0c61e0941b14a188a71ec36e600216f1549fcf2ee873b4",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-e25156b7-7c2a-451d-b7b1-76d5861e2aff",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "8011779a0e6ad00c6229a432b9ca8847c174c5e4aa9693e0113d3350941d41b7",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 310,
+          "height": 326
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "44936b0ffb19a2cb9219a87d6c9ad7026c7cb0a66b5753ef172fd09f358a7cf5"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "8011779a0e6ad00c6229a432b9ca8847c174c5e4aa9693e0113d3350941d41b7",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-e25156b7-7c2a-451d-b7b1-76d5861e2aff",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/top1-motors/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "dabca17841850c5807afd90a08a45092e1c385459a90d184398161ad57b69b90",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-8d1fce91-a825-4c2a-8093-54efe12e7c7e",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/top1-motors/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "dabca17841850c5807afd90a08a45092e1c385459a90d184398161ad57b69b90",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-8d1fce91-a825-4c2a-8093-54efe12e7c7e",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/top1-motors/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "8011779a0e6ad00c6229a432b9ca8847c174c5e4aa9693e0113d3350941d41b7",
+      "sha256": "8011779a0e6ad00c6229a432b9ca8847c174c5e4aa9693e0113d3350941d41b7",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 326
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "dabca17841850c5807afd90a08a45092e1c385459a90d184398161ad57b69b90",
+      "sha256": "dabca17841850c5807afd90a08a45092e1c385459a90d184398161ad57b69b90",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 327
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "dabca17841850c5807afd90a08a45092e1c385459a90d184398161ad57b69b90",
+      "sha256": "dabca17841850c5807afd90a08a45092e1c385459a90d184398161ad57b69b90",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 327
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "f4b52a54e958db2cffde37f859ec5e7b278a17d900a3d03c0339ddc0fcc88c9d",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-e25156b7-7c2a-451d-b7b1-76d5861e2aff",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "8011779a0e6ad00c6229a432b9ca8847c174c5e4aa9693e0113d3350941d41b7",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 310,
+            "height": 326
+          }
+        }
+      },
+      "sourceReference": "dealers/top1-motors/branding/generated-mark-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "d57aa6737c7956c413911b17a9762b883ba8ccaeb9adaff418f8a79f1a975be7",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-8d1fce91-a825-4c2a-8093-54efe12e7c7e",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "dabca17841850c5807afd90a08a45092e1c385459a90d184398161ad57b69b90",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 310,
+            "height": 327
+          }
+        }
+      },
+      "sourceReference": "dealers/top1-motors/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "69232a814d8149812a0c61e0941b14a188a71ec36e600216f1549fcf2ee873b4",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-e25156b7-7c2a-451d-b7b1-76d5861e2aff",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "8011779a0e6ad00c6229a432b9ca8847c174c5e4aa9693e0113d3350941d41b7",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 310,
+            "height": 326
+          }
+        }
+      },
+      "sourceReference": "dealers/top1-motors/branding/generated-mark-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "44936b0ffb19a2cb9219a87d6c9ad7026c7cb0a66b5753ef172fd09f358a7cf5",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-e25156b7-7c2a-451d-b7b1-76d5861e2aff",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "8011779a0e6ad00c6229a432b9ca8847c174c5e4aa9693e0113d3350941d41b7",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 310,
+            "height": 326
+          }
+        }
+      },
+      "sourceReference": "dealers/top1-motors/branding/generated-mark-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "57f966c02c8c726bb2a0a966a6aafebc465127c923c5c44522ffdb938a76ed76",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-8d1fce91-a825-4c2a-8093-54efe12e7c7e",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "dabca17841850c5807afd90a08a45092e1c385459a90d184398161ad57b69b90",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 310,
+          "height": 327
+        }
+      }
+    }
+  }
+}

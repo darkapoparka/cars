@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Someet Motors FZE",
     "publicOrigin": "https://someet-motors-fze.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "9f9185648b5b8f672cddb3aa07943575e085fdf1e127bda3485d1ed14401de82",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "a3ac8be555c2ece9849bbc163b2612407ba0ecb40ee5546406caf813ce6a4c2f"
+    }
   }
 }

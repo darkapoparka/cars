@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "dealer": "alwan-international-car",
-  "status": "research-required",
+  "status": "reviewed-imagegen-proposal",
   "realLogoFirst": true,
   "publicSources": [
     {
@@ -18,7 +18,134 @@
     }
   ],
   "originals": [],
-  "creationMethod": null,
+  "creationMethod": "imagegen-proposal",
   "dealerApproved": false,
-  "generatedInputs": null
+  "generatedInputs": {
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "master": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "57e17d48a45e51ff3eb097c976c4a69107aecd43eb6db8e145fe84732c174526",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-143e322e-5be0-4dd4-aa6a-6b11c5a72c9f",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark-light.png",
+      "sha256": "fcec9201972f37cf44f56edb89aa0ea53fdd995f92fabc0f0e6a6ba7ce43d9fd",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-143e322e-5be0-4dd4-aa6a-6b11c5a72c9f",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "57e17d48a45e51ff3eb097c976c4a69107aecd43eb6db8e145fe84732c174526",
+          "operation": "isolate-reviewed-gold-symbol-and-darken-for-white-compact",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 335,
+            "height": 243
+          }
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-dark.png",
+      "sha256": "74c519c399c90706d009d1950749f133c1204543a2833f1fefe1c4c148bb8be0",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-90eac06c-8f90-4bbc-b669-ffac2a915150",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "9a8379b078b867b23343eb9fdaed5906e76f79dd179e41aea645db42b7d84327",
+          "operation": "isolate-reviewed-gold-symbol-for-dark-compact",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 335,
+            "height": 240
+          }
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "57e17d48a45e51ff3eb097c976c4a69107aecd43eb6db8e145fe84732c174526",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-143e322e-5be0-4dd4-aa6a-6b11c5a72c9f",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "9a8379b078b867b23343eb9fdaed5906e76f79dd179e41aea645db42b7d84327",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-90eac06c-8f90-4bbc-b669-ffac2a915150",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "9a8379b078b867b23343eb9fdaed5906e76f79dd179e41aea645db42b7d84327",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-90eac06c-8f90-4bbc-b669-ffac2a915150",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewKind": "agent-visual-review",
+      "humanReview": false,
+      "dealerApproval": false,
+      "backgrounds": {
+        "onLight": "#ffffff",
+        "onDark": "#111113",
+        "onAccent": "#c40101"
+      },
+      "wordmarkWidths": [
+        220,
+        240
+      ],
+      "notes": "Exact reviewed Image Gen pair; native masters and generation provenance retained. Compact rasters cropped from the actual left symbol."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-22T23:42:46.338Z",
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#c40101"
+      ],
+      "widths": [
+        32,
+        48,
+        64
+      ],
+      "notes": "Alwan gold A isolated from the reviewed horizontal artwork; compact-only light export darkens gold for white favicon contrast. Native QA independently determines acceptance."
+    }
+  },
+  "sourceBlockers": [],
+  "artworkProvenance": {
+    "path": "branding/artwork-provenance.json",
+    "sha256": "2a2ba5b23a88c0c0f4da092ebb2e673211ed5e709dd386b2d1e621bd2a95dd4f",
+    "manifestSha256": "d25e9cee768a885052ac0a8df220d843c9b9c6f6f120d722705bead1cc99e694",
+    "nativeMasters": [
+      {
+        "path": "branding/native-generated-on-light.png",
+        "sha256": "3332a44e082f68727b4e1ed2986a7462f78017a69cbea93d741d94d76d81f007"
+      },
+      {
+        "path": "branding/native-generated-on-dark.png",
+        "sha256": "ac69befda0c531cca3b518326a2a4a41116e676a39b2235323e3dafcdfd0c93c"
+      }
+    ]
+  }
 }

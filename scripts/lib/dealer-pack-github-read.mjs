@@ -46,7 +46,7 @@ export async function runPackGithubRead({operation,resource='repository',artifac
     };
     const read={
       async get(url,{headers,redirect='manual',object=false}={}){
-        state.stage=object?'object-response':'api-response';state.startedAt=transportClock();state.timeoutMs=object?180000:30000;state.responseStatus=null;
+        state.stage=object?'object-response':'api-response';state.startedAt=transportClock();state.timeoutMs=object?480000:30000;state.responseStatus=null;
         let response;
         try{response=await fetchImpl(url,{method:'GET',headers,redirect,signal:AbortSignal.timeout(state.timeoutMs)});state.responseStatus=response.status;}
         catch(error){throw failure(error);}

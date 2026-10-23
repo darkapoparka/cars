@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Al Borj Motors",
     "publicOrigin": "https://al-borj-motors.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "e7f9ca24eede94bc5c61b4cef1f6b6da2d9bafdffb35d9044fddfad075c0a0bd",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "8b2185f38f902bffbbab633aaf74589bcfb675d38b887057efdfb7bd2f13158b"
+    }
   }
 }

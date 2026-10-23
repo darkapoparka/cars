@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "dealer": "al-hayek-premium-used-luxury-automobile",
-  "status": "reviewed-public-original",
+  "status": "reviewed-imagegen-proposal",
   "realLogoFirst": true,
   "publicSources": [
     {
@@ -40,7 +40,7 @@
       "format": "JPEG",
       "width": 400,
       "height": 248,
-      "transparentPixelFraction": 0.0,
+      "transparentPixelFraction": 0,
       "acceptedAsPreparedArtwork": false,
       "reason": "The profile displays Premium Motors artwork; the retained JPEG is opaque and cannot satisfy the unchanged transparent artwork gate."
     },
@@ -62,157 +62,134 @@
       "qualityCaveat": "The genuine source is a 150 by 150 raster. Exact matte exports keep a recognizable Premium Motors shield and wordmark but show jagged/bold edges and limited legibility of the small MOTORS line at enlarged display sizes. No redrawing, sharpening or lettering replacement is performed."
     }
   ],
-  "creationMethod": "retained-public-original-reviewed-black-matte-solid-ink",
+  "creationMethod": "imagegen-proposal",
   "dealerApproved": false,
   "sourceBlockers": [],
-  "reviewedInputs": {
-    "reviewedAt": "2026-10-21T13:21:21.538210Z",
+  "artworkProvenance": {
+    "path": "branding/artwork-provenance.json",
+    "sha256": "9a229757dbcb6e37b52f5ec354f2cc8b87b87fbf4a378cf090177702677559f1",
+    "manifestSha256": "d25e9cee768a885052ac0a8df220d843c9b9c6f6f120d722705bead1cc99e694",
+    "nativeMasters": [
+      {
+        "path": "branding/native-generated-on-light.png",
+        "sha256": "3bc7ac943c2dd2911e84300ae3b11fd59d66f2e011ce92424c4e1d374acf6f72"
+      },
+      {
+        "path": "branding/native-generated-on-dark.png",
+        "sha256": "25cc20774dbb0fe23cf9afc685dbaae21de917686bd8d63a97129fd26b2c2a06"
+      }
+    ]
+  },
+  "generatedInputs": {
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "master": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "61b4648d721c28538e8f2c16c0b60ec038a39a570dee53fdbf086f73dad8b1e8",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-d578bb00-b044-47ee-8266-97e68a3d47d4",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark-light.png",
+      "sha256": "d4d93f1cb11663df85059503e2907929be8856cb7c6459947517f02d49815847",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-d578bb00-b044-47ee-8266-97e68a3d47d4",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "61b4648d721c28538e8f2c16c0b60ec038a39a570dee53fdbf086f73dad8b1e8",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 206,
+            "height": 241
+          }
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-dark.png",
+      "sha256": "eb7ef2d5f335324a724f17738a91ec5cc015f34580c2fedd84da364c05c98f9f",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-cf2a16f1-1c9e-4030-8755-f55a718509a0",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "09939d69d7871ad63ce94bba9519adb85c178ba8c82e7c01d0375d4042388950",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 206,
+            "height": 241
+          }
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "61b4648d721c28538e8f2c16c0b60ec038a39a570dee53fdbf086f73dad8b1e8",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-d578bb00-b044-47ee-8266-97e68a3d47d4",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "09939d69d7871ad63ce94bba9519adb85c178ba8c82e7c01d0375d4042388950",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-cf2a16f1-1c9e-4030-8755-f55a718509a0",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "09939d69d7871ad63ce94bba9519adb85c178ba8c82e7c01d0375d4042388950",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-cf2a16f1-1c9e-4030-8755-f55a718509a0",
+          "modelVersion": null
+        }
+      }
+    },
     "surfaceReview": {
       "reviewed": true,
       "reviewKind": "agent-visual-review",
       "humanReview": false,
       "dealerApproval": false,
-      "finding": "Monochrome surfaces derive from the exact public original. Original source bytes are retained; only explicitly reviewed canvas pixels receive derived transparency, with no new geometry. Actual white, dark and red surface exports were inspected; the source resolution produces visibly jagged edges and fragile small text, recorded in the quality caveat."
+      "backgrounds": {
+        "onLight": "#ffffff",
+        "onDark": "#111113",
+        "onAccent": "#c40101"
+      },
+      "wordmarkWidths": [
+        220,
+        240
+      ],
+      "notes": "Exact reviewed Image Gen pair; native masters and generation provenance retained. Compact rasters cropped from the actual left symbol."
     },
-    "master": {
-      "path": "branding/public-original-artsmiley-20261021.jpg",
-      "sha256": "8c2c60b564e75959cf4f8b0365081a2a608170dba77ca283f852929ff16eaecc",
-      "rasterTreatment": "reviewed-black-matte-black",
-      "retainedSource": {
-        "kind": "retained-original-raster",
-        "sha256": "8c2c60b564e75959cf4f8b0365081a2a608170dba77ca283f852929ff16eaecc",
-        "url": "https://artsmileybiz.com/wp-content/uploads/2024/05/Al-Hayek-Premium-Motors_150x150px.jpg",
-        "observedAt": "2026-10-21"
-      },
-      "matteReview": {
-        "kind": "reviewed-flat-black-canvas",
-        "reviewed": true,
-        "reviewKind": "agent-visual-review",
-        "humanReview": false,
-        "dealerApproval": false,
-        "background": "#000000",
-        "noBlackForegroundArtwork": true,
-        "sourceSha256": "8c2c60b564e75959cf4f8b0365081a2a608170dba77ca283f852929ff16eaecc",
-        "reviewedAt": "2026-10-21T13:21:21.538210Z",
-        "finding": "The exact public original contains a white Premium Motors shield and wordmark on a flat black canvas. The shield, letter shapes and underline match the independently retained DubiCars dealer logo; black areas are the canvas and open counters, with no black foreground drawing. Source is a third-party client portfolio, not a claim of dealer approval."
-      }
-    },
-    "mark": {
-      "path": "branding/public-original-artsmiley-20261021.jpg",
-      "sha256": "8c2c60b564e75959cf4f8b0365081a2a608170dba77ca283f852929ff16eaecc",
-      "rasterTreatment": "reviewed-black-matte-black",
-      "retainedSource": {
-        "kind": "retained-original-raster",
-        "sha256": "8c2c60b564e75959cf4f8b0365081a2a608170dba77ca283f852929ff16eaecc",
-        "url": "https://artsmileybiz.com/wp-content/uploads/2024/05/Al-Hayek-Premium-Motors_150x150px.jpg",
-        "observedAt": "2026-10-21"
-      },
-      "matteReview": {
-        "kind": "reviewed-flat-black-canvas",
-        "reviewed": true,
-        "reviewKind": "agent-visual-review",
-        "humanReview": false,
-        "dealerApproval": false,
-        "background": "#000000",
-        "noBlackForegroundArtwork": true,
-        "sourceSha256": "8c2c60b564e75959cf4f8b0365081a2a608170dba77ca283f852929ff16eaecc",
-        "reviewedAt": "2026-10-21T13:21:21.538210Z",
-        "finding": "The exact public original contains a white Premium Motors shield and wordmark on a flat black canvas. The shield, letter shapes and underline match the independently retained DubiCars dealer logo; black areas are the canvas and open counters, with no black foreground drawing. Source is a third-party client portfolio, not a claim of dealer approval."
-      }
-    },
-    "markOnDark": {
-      "path": "branding/public-original-artsmiley-20261021.jpg",
-      "sha256": "8c2c60b564e75959cf4f8b0365081a2a608170dba77ca283f852929ff16eaecc",
-      "rasterTreatment": "reviewed-black-matte-white",
-      "retainedSource": {
-        "kind": "retained-original-raster",
-        "sha256": "8c2c60b564e75959cf4f8b0365081a2a608170dba77ca283f852929ff16eaecc",
-        "url": "https://artsmileybiz.com/wp-content/uploads/2024/05/Al-Hayek-Premium-Motors_150x150px.jpg",
-        "observedAt": "2026-10-21"
-      },
-      "matteReview": {
-        "kind": "reviewed-flat-black-canvas",
-        "reviewed": true,
-        "reviewKind": "agent-visual-review",
-        "humanReview": false,
-        "dealerApproval": false,
-        "background": "#000000",
-        "noBlackForegroundArtwork": true,
-        "sourceSha256": "8c2c60b564e75959cf4f8b0365081a2a608170dba77ca283f852929ff16eaecc",
-        "reviewedAt": "2026-10-21T13:21:21.538210Z",
-        "finding": "The exact public original contains a white Premium Motors shield and wordmark on a flat black canvas. The shield, letter shapes and underline match the independently retained DubiCars dealer logo; black areas are the canvas and open counters, with no black foreground drawing. Source is a third-party client portfolio, not a claim of dealer approval."
-      }
-    },
-    "surfaces": {
-      "onLight": {
-        "path": "branding/public-original-artsmiley-20261021.jpg",
-        "sha256": "8c2c60b564e75959cf4f8b0365081a2a608170dba77ca283f852929ff16eaecc",
-        "rasterTreatment": "reviewed-black-matte-black",
-        "retainedSource": {
-          "kind": "retained-original-raster",
-          "sha256": "8c2c60b564e75959cf4f8b0365081a2a608170dba77ca283f852929ff16eaecc",
-          "url": "https://artsmileybiz.com/wp-content/uploads/2024/05/Al-Hayek-Premium-Motors_150x150px.jpg",
-          "observedAt": "2026-10-21"
-        },
-        "matteReview": {
-          "kind": "reviewed-flat-black-canvas",
-          "reviewed": true,
-          "reviewKind": "agent-visual-review",
-          "humanReview": false,
-          "dealerApproval": false,
-          "background": "#000000",
-          "noBlackForegroundArtwork": true,
-          "sourceSha256": "8c2c60b564e75959cf4f8b0365081a2a608170dba77ca283f852929ff16eaecc",
-          "reviewedAt": "2026-10-21T13:21:21.538210Z",
-          "finding": "The exact public original contains a white Premium Motors shield and wordmark on a flat black canvas. The shield, letter shapes and underline match the independently retained DubiCars dealer logo; black areas are the canvas and open counters, with no black foreground drawing. Source is a third-party client portfolio, not a claim of dealer approval."
-        }
-      },
-      "onDark": {
-        "path": "branding/public-original-artsmiley-20261021.jpg",
-        "sha256": "8c2c60b564e75959cf4f8b0365081a2a608170dba77ca283f852929ff16eaecc",
-        "rasterTreatment": "reviewed-black-matte-white",
-        "retainedSource": {
-          "kind": "retained-original-raster",
-          "sha256": "8c2c60b564e75959cf4f8b0365081a2a608170dba77ca283f852929ff16eaecc",
-          "url": "https://artsmileybiz.com/wp-content/uploads/2024/05/Al-Hayek-Premium-Motors_150x150px.jpg",
-          "observedAt": "2026-10-21"
-        },
-        "matteReview": {
-          "kind": "reviewed-flat-black-canvas",
-          "reviewed": true,
-          "reviewKind": "agent-visual-review",
-          "humanReview": false,
-          "dealerApproval": false,
-          "background": "#000000",
-          "noBlackForegroundArtwork": true,
-          "sourceSha256": "8c2c60b564e75959cf4f8b0365081a2a608170dba77ca283f852929ff16eaecc",
-          "reviewedAt": "2026-10-21T13:21:21.538210Z",
-          "finding": "The exact public original contains a white Premium Motors shield and wordmark on a flat black canvas. The shield, letter shapes and underline match the independently retained DubiCars dealer logo; black areas are the canvas and open counters, with no black foreground drawing. Source is a third-party client portfolio, not a claim of dealer approval."
-        }
-      },
-      "onAccent": {
-        "path": "branding/public-original-artsmiley-20261021.jpg",
-        "sha256": "8c2c60b564e75959cf4f8b0365081a2a608170dba77ca283f852929ff16eaecc",
-        "rasterTreatment": "reviewed-black-matte-white",
-        "retainedSource": {
-          "kind": "retained-original-raster",
-          "sha256": "8c2c60b564e75959cf4f8b0365081a2a608170dba77ca283f852929ff16eaecc",
-          "url": "https://artsmileybiz.com/wp-content/uploads/2024/05/Al-Hayek-Premium-Motors_150x150px.jpg",
-          "observedAt": "2026-10-21"
-        },
-        "matteReview": {
-          "kind": "reviewed-flat-black-canvas",
-          "reviewed": true,
-          "reviewKind": "agent-visual-review",
-          "humanReview": false,
-          "dealerApproval": false,
-          "background": "#000000",
-          "noBlackForegroundArtwork": true,
-          "sourceSha256": "8c2c60b564e75959cf4f8b0365081a2a608170dba77ca283f852929ff16eaecc",
-          "reviewedAt": "2026-10-21T13:21:21.538210Z",
-          "finding": "The exact public original contains a white Premium Motors shield and wordmark on a flat black canvas. The shield, letter shapes and underline match the independently retained DubiCars dealer logo; black areas are the canvas and open counters, with no black foreground drawing. Source is a third-party client portfolio, not a claim of dealer approval."
-        }
-      }
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-22T23:42:46.338Z",
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#c40101"
+      ],
+      "widths": [
+        32,
+        48,
+        64
+      ],
+      "notes": "Left symbol cropped from reviewed horizontal variants; native rendering must independently qualify."
     }
   }
 }

@@ -1,0 +1,147 @@
+{
+  "schemaVersion": 1,
+  "dealer": "najm-al-shimal-used-cars-najm-al-shamal",
+  "status": "reviewed-imagegen-proposal",
+  "realLogoFirst": true,
+  "publicSources": [
+    {
+      "url": "https://auto.ae/najmalshamal/",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/8518-nissan-sentra-20-cvt-149-hp-s",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "originals": [],
+  "creationMethod": "imagegen-proposal",
+  "dealerApproved": false,
+  "generatedInputs": {
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "master": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "7af192af9c5a3e3ed68dd371fd9e30fdf26d073e6ec78eabd5c81cbd4b71f7f2",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-20ca0c35-4efc-4052-bbe2-7b8bf9482128",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark-light.png",
+      "sha256": "8c8d799c28cdaeb97437b0fe4d27988d94c4cac61ded71f1a2291f7e26198aa4",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-20ca0c35-4efc-4052-bbe2-7b8bf9482128",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "7af192af9c5a3e3ed68dd371fd9e30fdf26d073e6ec78eabd5c81cbd4b71f7f2",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 305,
+            "height": 215
+          }
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-dark.png",
+      "sha256": "1d4c1e086e3b1028b239a9ee6ca8dbac80e170e624526fbb94163864ba2066bd",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-2c6746f8-7d30-4a31-9121-faa0fa6ab865",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "e79122566d8e57134a511b566b93515947ba0ca3c4445c32bd4a22a104d3ab2c",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 305,
+            "height": 219
+          }
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "7af192af9c5a3e3ed68dd371fd9e30fdf26d073e6ec78eabd5c81cbd4b71f7f2",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-20ca0c35-4efc-4052-bbe2-7b8bf9482128",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "e79122566d8e57134a511b566b93515947ba0ca3c4445c32bd4a22a104d3ab2c",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-2c6746f8-7d30-4a31-9121-faa0fa6ab865",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "e79122566d8e57134a511b566b93515947ba0ca3c4445c32bd4a22a104d3ab2c",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-2c6746f8-7d30-4a31-9121-faa0fa6ab865",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewKind": "agent-visual-review",
+      "humanReview": false,
+      "dealerApproval": false,
+      "backgrounds": {
+        "onLight": "#ffffff",
+        "onDark": "#111113",
+        "onAccent": "#c40101"
+      },
+      "wordmarkWidths": [
+        220,
+        240
+      ],
+      "notes": "Exact reviewed Image Gen pair; native masters and generation provenance retained. Compact rasters cropped from the actual left symbol."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-22T23:42:46.338Z",
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#c40101"
+      ],
+      "widths": [
+        32,
+        48,
+        64
+      ],
+      "notes": "Left symbol cropped from reviewed horizontal variants; native rendering must independently qualify."
+    }
+  },
+  "sourceBlockers": [],
+  "artworkProvenance": {
+    "path": "branding/artwork-provenance.json",
+    "sha256": "994cdcba13f40428b150c99860312bff5ae649c0c5c0f558048e75cc8dc2cad4",
+    "manifestSha256": "d25e9cee768a885052ac0a8df220d843c9b9c6f6f120d722705bead1cc99e694",
+    "nativeMasters": [
+      {
+        "path": "branding/native-generated-on-light.png",
+        "sha256": "815bc1f43ff8865201d8e91a3ab5260e1c1fc54bb63ae2cf7414715b6e68bc3f"
+      },
+      {
+        "path": "branding/native-generated-on-dark.png",
+        "sha256": "62b3793dd09219a7f7355c3f53078160dde7133055c74c5c0fb846bc006791cc"
+      }
+    ]
+  }
+}

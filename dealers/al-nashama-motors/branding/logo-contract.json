@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-nashama-motors",
+  "reviewed": true,
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "ccb271a16ad258d80aa857e896c52ccad46e256a914f967b87af2762046b8c13",
+      "sourceSha256": "b205762f9d56b12f5b88786d427766a1183e31e8a8d9a168077f2e89f6637943"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "b34834f7642d239d842cc89381152d55725eb9aeb3908b7aa8fe50ffccd61de5",
+      "sourceSha256": "2f51d949032c67e045881ecbe2f24dc452582c996e23f00131dec15bbd7c13e8"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "b34834f7642d239d842cc89381152d55725eb9aeb3908b7aa8fe50ffccd61de5",
+      "sourceSha256": "2f51d949032c67e045881ecbe2f24dc452582c996e23f00131dec15bbd7c13e8"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "b205762f9d56b12f5b88786d427766a1183e31e8a8d9a168077f2e89f6637943",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-24314be3-f103-4e78-9bd6-489a8a2bfe04",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "82d57fbc2bd630a29939a04082069f298e47cffa15a26521a8bc260f6f3db00a",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-24314be3-f103-4e78-9bd6-489a8a2bfe04",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "b205762f9d56b12f5b88786d427766a1183e31e8a8d9a168077f2e89f6637943",
+        "operation": "crop-wordmark-initial-compact-symbol",
+        "crop": {
+          "left": 260,
+          "top": 40,
+          "width": 95,
+          "height": 100
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "4c7ee2a36e31eceeedd76e1f8113e7963631328cab515d8911649ed99900b2d5"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "b205762f9d56b12f5b88786d427766a1183e31e8a8d9a168077f2e89f6637943",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-24314be3-f103-4e78-9bd6-489a8a2bfe04",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-nashama-motors/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "2f51d949032c67e045881ecbe2f24dc452582c996e23f00131dec15bbd7c13e8",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-ffa04efc-24d3-46d0-a8d4-a26a26e65dec",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-nashama-motors/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "2f51d949032c67e045881ecbe2f24dc452582c996e23f00131dec15bbd7c13e8",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-ffa04efc-24d3-46d0-a8d4-a26a26e65dec",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-nashama-motors/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "b205762f9d56b12f5b88786d427766a1183e31e8a8d9a168077f2e89f6637943",
+      "sha256": "b205762f9d56b12f5b88786d427766a1183e31e8a8d9a168077f2e89f6637943",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 229
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "2f51d949032c67e045881ecbe2f24dc452582c996e23f00131dec15bbd7c13e8",
+      "sha256": "2f51d949032c67e045881ecbe2f24dc452582c996e23f00131dec15bbd7c13e8",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 227
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "2f51d949032c67e045881ecbe2f24dc452582c996e23f00131dec15bbd7c13e8",
+      "sha256": "2f51d949032c67e045881ecbe2f24dc452582c996e23f00131dec15bbd7c13e8",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 227
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "9f78682ade326ed56e7243943f335a9222c1f00ff0a6bf3c81066f015d622576",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-24314be3-f103-4e78-9bd6-489a8a2bfe04",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "b205762f9d56b12f5b88786d427766a1183e31e8a8d9a168077f2e89f6637943",
+          "operation": "crop-wordmark-initial-compact-symbol",
+          "crop": {
+            "left": 260,
+            "top": 40,
+            "width": 95,
+            "height": 100
+          }
+        }
+      },
+      "sourceReference": "dealers/al-nashama-motors/branding/generated-mark-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "f3d381228ca46611c85f0a6656344fa9839ea53edc0e8ae8bc9c679378529749",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-ffa04efc-24d3-46d0-a8d4-a26a26e65dec",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "2f51d949032c67e045881ecbe2f24dc452582c996e23f00131dec15bbd7c13e8",
+          "operation": "crop-wordmark-initial-compact-symbol",
+          "crop": {
+            "left": 260,
+            "top": 40,
+            "width": 95,
+            "height": 100
+          }
+        }
+      },
+      "sourceReference": "dealers/al-nashama-motors/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "82d57fbc2bd630a29939a04082069f298e47cffa15a26521a8bc260f6f3db00a",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-24314be3-f103-4e78-9bd6-489a8a2bfe04",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "b205762f9d56b12f5b88786d427766a1183e31e8a8d9a168077f2e89f6637943",
+          "operation": "crop-wordmark-initial-compact-symbol",
+          "crop": {
+            "left": 260,
+            "top": 40,
+            "width": 95,
+            "height": 100
+          }
+        }
+      },
+      "sourceReference": "dealers/al-nashama-motors/branding/generated-mark-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "4c7ee2a36e31eceeedd76e1f8113e7963631328cab515d8911649ed99900b2d5",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-24314be3-f103-4e78-9bd6-489a8a2bfe04",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "b205762f9d56b12f5b88786d427766a1183e31e8a8d9a168077f2e89f6637943",
+          "operation": "crop-wordmark-initial-compact-symbol",
+          "crop": {
+            "left": 260,
+            "top": 40,
+            "width": 95,
+            "height": 100
+          }
+        }
+      },
+      "sourceReference": "dealers/al-nashama-motors/branding/generated-mark-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "293195b676accbae17e0f7f6e20c92823d1af675829ed175152040d82c140b37",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-ffa04efc-24d3-46d0-a8d4-a26a26e65dec",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "2f51d949032c67e045881ecbe2f24dc452582c996e23f00131dec15bbd7c13e8",
+        "operation": "crop-wordmark-initial-compact-symbol",
+        "crop": {
+          "left": 260,
+          "top": 40,
+          "width": 95,
+          "height": 100
+        }
+      }
+    }
+  }
+}

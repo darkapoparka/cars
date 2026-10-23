@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "us-pa-woodland-322-budget-auto-sales",
+  "slug": "322-budget-auto-sales-llc",
+  "artworkDirectory": "322-budget-auto-sales-llc",
+  "name": "322 Budget Auto Sales LLC",
+  "renderedName": "322 Budget Auto Sales LLC",
+  "kind": "independent-website-logo-proposal",
+  "dealerApproved": false,
+  "ownerApproved": false,
+  "sourceEvidence": [
+    {
+      "url": "https://www.budgetautosalesllc.com/",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.budgetautosalesllc.com/pre-owned",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.budgetautosalesllc.com/general-1-2",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "retainedOriginalsUnchanged": true,
+  "variants": {
+    "on-light": {
+      "path": "logo-on-light.png",
+      "sha256": "9143a2ca6f23b05f40e1c392342e7912de15cd1c4cd194ec5e31265da7bf64fa",
+      "width": 1024,
+      "height": 182,
+      "transparentFraction": 0.5676832932692307,
+      "master": {
+        "path": "generated-on-light.png",
+        "sha256": "cd73c8fb0ee1c6219dba8977e504bbdb6a9689ec0b999ff8a276470c29f901cb",
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-2f0cf711-0eec-42e6-87ef-79a0831b05c1",
+        "prompt": "Use case: logo-brand. Create ONE agency-quality horizontal logo for an independent car-dealer website proposal. Exact text: \"322 BUDGET AUTO SALES LLC\". Use an original minimal emblem built around the distinctive name or its initial/numeral; optically balanced, recognizable at 32px, never a stock manufacturer badge. The business name is the core identity: keep all words spelled correctly; use a clear main line and, when useful, a readable second line for the descriptor, not a tiny slogan. Place the original simple compact symbol at left, complete exact wordmark at right. Dark/charcoal primary ink for WHITE website headers, optional restrained single-color accent only if it strengthens this identity. Crisp flat vector-like edges, clear geometry, professional credible dealership branding and excellent optical letter spacing. No car manufacturer's emblem, shield cliché, generic car silhouette, photorealistic vehicle, chrome, gradients, shadows, texture, background panel, checkerboard, mockup, watermark, unrelated decoration or invented tagline. True alpha-transparent background. A wide landscape logo tightly and comfortably framed with approximately 5% transparent margins, not a tiny logo on a poster. Distinctive enough to stand apart from other dealers, and readable at 240px wide. This is a generated independent proposal, not a claim of official adoption. Only one logo.",
+        "reference": null
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 7,
+          "top": 181,
+          "width": 2165,
+          "height": 385
+        }
+      }
+    },
+    "on-dark": {
+      "path": "logo-on-dark.png",
+      "sha256": "e50203e45309e37b597e889f7788de78bb9ea8b15a38053648bdc082b0407b9d",
+      "width": 1024,
+      "height": 183,
+      "transparentFraction": 0.4481034409153005,
+      "master": {
+        "path": "generated-on-dark.png",
+        "sha256": "03a504b3d7219587acee63441059c731c616e28d06cba0d80a157fd29d275ad8",
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-989b403b-65e7-4871-b903-a98b34b25df6",
+        "prompt": "Create the matching light-ink variant for DARK website headers of the supplied \"322 BUDGET AUTO SALES LLC\" logo. Preserve the exact complete name, spelling, logo symbol, overall silhouette, arrangement, relative scale, typography and letter spacing. Change the dark primary foreground ink to clean pure white; preserve a restrained existing color accent only when it stays visible against a deep dark or red header. Genuine alpha transparency, open counters and smooth clean edges. No background block, no new logo, no new lettering, no added slogan, texture, distress, shadow, watermark or checkerboard. This must be the SAME identity, simply its readable on-dark counterpart. Only one transparent horizontal logo.",
+        "reference": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-2f0cf711-0eec-42e6-87ef-79a0831b05c1.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 4,
+          "top": 179,
+          "width": 2168,
+          "height": 388
+        }
+      }
+    }
+  },
+  "review": {
+    "status": "artwork-visually-reviewed",
+    "alpha": "all exports measured as genuine transparent nonempty PNGs",
+    "spelling": "English wordmark inspected; source-bound display aliases retained",
+    "compact": "Horizontal logos only. Interactive 32/48/64px gallery preview is provided; separate compact/favicon artwork remains part of dealer-pack preparation.",
+    "sixDesigns": "not-yet-integrated-or-rendered",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "reviewer": "Codex visual inspection",
+    "header": "All 196 paired PNGs inspected at 240x64 on white, #111113 and #c40101",
+    "evidence": "final-review-01.png"
+  },
+  "releaseReady": false,
+  "artworkHolds": [],
+  "artworkReadyForIntegration": true
+}

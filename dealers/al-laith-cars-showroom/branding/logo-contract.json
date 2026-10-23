@@ -1,0 +1,299 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-laith-cars-showroom",
+  "reviewed": true,
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "4cd391c8d94b437acaea0c0a8606d6e72da843724e3fbcd5b4cbfe1bcf574b68",
+      "sourceSha256": "caa09f4f72e96afb875f6db837b1c1069404198e86263e4b5acc138a929ea42e"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "8eb50fe42a00820c7b5bc563ba83fc57e015ab7d02739a51df6201776b2ee40b",
+      "sourceSha256": "371dba35ec5da221c5af1aa7161c04059b7bfb0634155b1b27325216c34e3374"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "8eb50fe42a00820c7b5bc563ba83fc57e015ab7d02739a51df6201776b2ee40b",
+      "sourceSha256": "371dba35ec5da221c5af1aa7161c04059b7bfb0634155b1b27325216c34e3374"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "caa09f4f72e96afb875f6db837b1c1069404198e86263e4b5acc138a929ea42e",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-d7a8e394-109c-4206-bada-bb63a3c28bc7",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "ce36d95a5c18553b7d72831016fb846e9b06ece5f531f127a59ae510263d4b58",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-d7a8e394-109c-4206-bada-bb63a3c28bc7",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "caa09f4f72e96afb875f6db837b1c1069404198e86263e4b5acc138a929ea42e",
+        "operation": "crop-left-symbol-and-mask-adjacent-wordmark",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 375,
+          "height": 209
+        },
+        "mask": {
+          "left": 350,
+          "top": 0,
+          "width": 25,
+          "height": 145
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "6b2f4d303d284274bd271d0465abe7f278dc8930f1964eac6eab810f2d32c019"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "caa09f4f72e96afb875f6db837b1c1069404198e86263e4b5acc138a929ea42e",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-d7a8e394-109c-4206-bada-bb63a3c28bc7",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-laith-cars-showroom/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "371dba35ec5da221c5af1aa7161c04059b7bfb0634155b1b27325216c34e3374",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-43a7cc51-b240-4f59-86d6-8a2ffa9bf27e",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-laith-cars-showroom/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "371dba35ec5da221c5af1aa7161c04059b7bfb0634155b1b27325216c34e3374",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-43a7cc51-b240-4f59-86d6-8a2ffa9bf27e",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-laith-cars-showroom/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "caa09f4f72e96afb875f6db837b1c1069404198e86263e4b5acc138a929ea42e",
+      "sha256": "caa09f4f72e96afb875f6db837b1c1069404198e86263e4b5acc138a929ea42e",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 209
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "371dba35ec5da221c5af1aa7161c04059b7bfb0634155b1b27325216c34e3374",
+      "sha256": "371dba35ec5da221c5af1aa7161c04059b7bfb0634155b1b27325216c34e3374",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 210
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "371dba35ec5da221c5af1aa7161c04059b7bfb0634155b1b27325216c34e3374",
+      "sha256": "371dba35ec5da221c5af1aa7161c04059b7bfb0634155b1b27325216c34e3374",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 210
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "6417aa91dc5c2f3351ea8b849d1f4e106c164be8ba5a813d9ebb70d98641cf7a",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-d7a8e394-109c-4206-bada-bb63a3c28bc7",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "caa09f4f72e96afb875f6db837b1c1069404198e86263e4b5acc138a929ea42e",
+          "operation": "crop-left-symbol-and-mask-adjacent-wordmark",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 375,
+            "height": 209
+          },
+          "mask": {
+            "left": 350,
+            "top": 0,
+            "width": 25,
+            "height": 145
+          }
+        }
+      },
+      "sourceReference": "dealers/al-laith-cars-showroom/branding/generated-mark-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "48aa23f818ca3324a54f9a1bae41cce1cc68a2ad677f42f19171f4fcf226a348",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-43a7cc51-b240-4f59-86d6-8a2ffa9bf27e",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "371dba35ec5da221c5af1aa7161c04059b7bfb0634155b1b27325216c34e3374",
+          "operation": "crop-left-symbol-and-mask-adjacent-wordmark",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 375,
+            "height": 210
+          },
+          "mask": {
+            "left": 350,
+            "top": 0,
+            "width": 25,
+            "height": 145
+          }
+        }
+      },
+      "sourceReference": "dealers/al-laith-cars-showroom/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "ce36d95a5c18553b7d72831016fb846e9b06ece5f531f127a59ae510263d4b58",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-d7a8e394-109c-4206-bada-bb63a3c28bc7",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "caa09f4f72e96afb875f6db837b1c1069404198e86263e4b5acc138a929ea42e",
+          "operation": "crop-left-symbol-and-mask-adjacent-wordmark",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 375,
+            "height": 209
+          },
+          "mask": {
+            "left": 350,
+            "top": 0,
+            "width": 25,
+            "height": 145
+          }
+        }
+      },
+      "sourceReference": "dealers/al-laith-cars-showroom/branding/generated-mark-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "6b2f4d303d284274bd271d0465abe7f278dc8930f1964eac6eab810f2d32c019",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-d7a8e394-109c-4206-bada-bb63a3c28bc7",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "caa09f4f72e96afb875f6db837b1c1069404198e86263e4b5acc138a929ea42e",
+          "operation": "crop-left-symbol-and-mask-adjacent-wordmark",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 375,
+            "height": 209
+          },
+          "mask": {
+            "left": 350,
+            "top": 0,
+            "width": 25,
+            "height": 145
+          }
+        }
+      },
+      "sourceReference": "dealers/al-laith-cars-showroom/branding/generated-mark-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "1b00cc26f0e5c1ceed48d2127092fc208400d924925d9c5b55c893bce1a27bdc",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-43a7cc51-b240-4f59-86d6-8a2ffa9bf27e",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "371dba35ec5da221c5af1aa7161c04059b7bfb0634155b1b27325216c34e3374",
+        "operation": "crop-left-symbol-and-mask-adjacent-wordmark",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 375,
+          "height": 210
+        },
+        "mask": {
+          "left": 350,
+          "top": 0,
+          "width": 25,
+          "height": 145
+        }
+      }
+    }
+  }
+}

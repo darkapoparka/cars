@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "dealer": "merly-motors-llc",
+  "reviewed": true,
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "00c31e394ca6fbae6d495f1a8879e804428bb82ba39964a06a9be25ff8ac14b9",
+      "sourceSha256": "6671f3b221f76fdc7c78f1b9dcf3a7bbdc43636f8f01aaa1ac8ac9552a2952b1"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "1dac034bfd16aaabf29a79cd848f0a1faa09e5bd88b098f0cb9ff67706c2a823",
+      "sourceSha256": "ed2326fa09eaaff38081e2864f3560e8cb1780afedbcbfbc6a19c526aaba3bf9"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "1dac034bfd16aaabf29a79cd848f0a1faa09e5bd88b098f0cb9ff67706c2a823",
+      "sourceSha256": "ed2326fa09eaaff38081e2864f3560e8cb1780afedbcbfbc6a19c526aaba3bf9"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "6671f3b221f76fdc7c78f1b9dcf3a7bbdc43636f8f01aaa1ac8ac9552a2952b1",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-5e44d398-9fc3-49f7-870e-1340b47fd553",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "24ccca6d62b6237292e8b84cb39d88d64ee2acd70ca96e2cfea55e71b9d30988",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-5e44d398-9fc3-49f7-870e-1340b47fd553",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "6671f3b221f76fdc7c78f1b9dcf3a7bbdc43636f8f01aaa1ac8ac9552a2952b1",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 425,
+          "height": 252
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "17b8e9bbf1f2cdd3233ba41c56cc27104ad1980e33995a29269ec6b0371db68b"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "6671f3b221f76fdc7c78f1b9dcf3a7bbdc43636f8f01aaa1ac8ac9552a2952b1",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-5e44d398-9fc3-49f7-870e-1340b47fd553",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/merly-motors-llc/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "ed2326fa09eaaff38081e2864f3560e8cb1780afedbcbfbc6a19c526aaba3bf9",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-5c249bcf-7a3f-47ea-97fa-54490aebfe66",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/merly-motors-llc/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "ed2326fa09eaaff38081e2864f3560e8cb1780afedbcbfbc6a19c526aaba3bf9",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-5c249bcf-7a3f-47ea-97fa-54490aebfe66",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/merly-motors-llc/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "6671f3b221f76fdc7c78f1b9dcf3a7bbdc43636f8f01aaa1ac8ac9552a2952b1",
+      "sha256": "6671f3b221f76fdc7c78f1b9dcf3a7bbdc43636f8f01aaa1ac8ac9552a2952b1",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 252
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "ed2326fa09eaaff38081e2864f3560e8cb1780afedbcbfbc6a19c526aaba3bf9",
+      "sha256": "ed2326fa09eaaff38081e2864f3560e8cb1780afedbcbfbc6a19c526aaba3bf9",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 252
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "ed2326fa09eaaff38081e2864f3560e8cb1780afedbcbfbc6a19c526aaba3bf9",
+      "sha256": "ed2326fa09eaaff38081e2864f3560e8cb1780afedbcbfbc6a19c526aaba3bf9",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 252
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "6660668979c1ccd3a713b0e8ea38c3a81ac4ed8d78b8e8ba6d167c7c3473bc10",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-5e44d398-9fc3-49f7-870e-1340b47fd553",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "6671f3b221f76fdc7c78f1b9dcf3a7bbdc43636f8f01aaa1ac8ac9552a2952b1",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 425,
+            "height": 252
+          }
+        }
+      },
+      "sourceReference": "dealers/merly-motors-llc/branding/generated-mark-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "d1896a1cf9d980e98afa0c437470286994e5647dcbba370ca3c9daaa26b3a61c",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-5c249bcf-7a3f-47ea-97fa-54490aebfe66",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "ed2326fa09eaaff38081e2864f3560e8cb1780afedbcbfbc6a19c526aaba3bf9",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 425,
+            "height": 252
+          }
+        }
+      },
+      "sourceReference": "dealers/merly-motors-llc/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "24ccca6d62b6237292e8b84cb39d88d64ee2acd70ca96e2cfea55e71b9d30988",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-5e44d398-9fc3-49f7-870e-1340b47fd553",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "6671f3b221f76fdc7c78f1b9dcf3a7bbdc43636f8f01aaa1ac8ac9552a2952b1",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 425,
+            "height": 252
+          }
+        }
+      },
+      "sourceReference": "dealers/merly-motors-llc/branding/generated-mark-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "17b8e9bbf1f2cdd3233ba41c56cc27104ad1980e33995a29269ec6b0371db68b",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-5e44d398-9fc3-49f7-870e-1340b47fd553",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "6671f3b221f76fdc7c78f1b9dcf3a7bbdc43636f8f01aaa1ac8ac9552a2952b1",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 425,
+            "height": 252
+          }
+        }
+      },
+      "sourceReference": "dealers/merly-motors-llc/branding/generated-mark-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "33e3a9a2dfcf5e3f20d73debb043d4371fe5fbc0a3700bd57cae8ade3d092b19",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-5c249bcf-7a3f-47ea-97fa-54490aebfe66",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "ed2326fa09eaaff38081e2864f3560e8cb1780afedbcbfbc6a19c526aaba3bf9",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 425,
+          "height": 252
+        }
+      }
+    }
+  }
+}

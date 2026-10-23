@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Islandwide Auto Sales LLC",
     "publicOrigin": "https://islandwide-auto-sales-llc.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "5322afb6bb1060ac122663dda9c93bba381f5a8e320d19abbf80bb71c4c83bb3",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "cef1fd367ef186c03d589a61ba426ed777f0cf3d20a8213fbb608c5960d20c2d"
+    }
   }
 }

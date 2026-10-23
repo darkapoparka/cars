@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "ae-ajman-mazaya-motors-fzc",
+  "slug": "mazaya-motors-fzc",
+  "artworkDirectory": "mazaya-motors-fzc",
+  "name": "Mazaya Motors FZC",
+  "renderedName": "Mazaya Motors FZC",
+  "kind": "independent-website-logo-proposal",
+  "dealerApproved": false,
+  "ownerApproved": false,
+  "sourceEvidence": [
+    {
+      "url": "https://auto.ae/mazayamotors/",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.dubicars.com/dealers/ajman-mazaya-motors-fzc-3373",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "retainedOriginalsUnchanged": true,
+  "variants": {
+    "on-light": {
+      "path": "logo-on-light.png",
+      "sha256": "82db61bf15aa7fb00baedb5408bf74621d143c052f4a1ac6229f018323734014",
+      "width": 1024,
+      "height": 238,
+      "transparentFraction": 0.6954150800945378,
+      "master": {
+        "path": "generated-on-light.png",
+        "sha256": "4fcae111a8d604852fbd051efe16bc447e38c1a5abc40a5256267020f735d606",
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-3f95e3c9-3292-4a38-8f79-8d8566d35719",
+        "prompt": "Create one professional horizontal automotive dealership logo proposal for Mazaya Motors FZC. Required exact text, uppercase: MAZAYA MOTORS FZC. Every word must be present and spelled precisely; use sensible primary name and smaller descriptor hierarchy without tiny lettering. Produce a polished original identity with a minimal memorable geometric symbol related to the distinctive name. Initials M may inform the emblem. Emblem left, full clear name to the right, compact and balanced for a website header. Avoid overused shield and generic car silhouettes; no manufacturer badges. Clean modern lettering with careful kerning and strong legibility. All text is deep charcoal black, appropriate on a white/light header. One restrained red or gold accent may appear inside the emblem only; no pale text. Flat crisp edges, a small number of solid shapes, no chrome, no lighting, no shadow, no texture, no gradient. Genuine transparent alpha background, isolated logo with no background box, no grid, no checkerboard painted into pixels. No slogan, contact info, website, watermark, mockup, photograph, extra concept, or duplicate logo. Deliver exactly one horizontal full logo. This is an independent website identity proposal, not a claim of adopted branding.",
+        "reference": null
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 26,
+          "top": 99,
+          "width": 2146,
+          "height": 499
+        }
+      }
+    },
+    "on-dark": {
+      "path": "logo-on-dark.png",
+      "sha256": "3a335933ecd9bca39ffb278370f0f3f65d3eac1d7bb880923a70ea41d11ec56e",
+      "width": 1024,
+      "height": 239,
+      "transparentFraction": 0.5685228164225942,
+      "master": {
+        "path": "generated-on-dark.png",
+        "sha256": "56090c6b14dd6ab5c5bb69eba4ceaad1d07f7c1a24f9bc75fff8d6407110af73",
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-2d0f35d5-060c-4df6-8a15-086695f4a4f3",
+        "prompt": "Create the matching light-on-dark production variant of the exact supplied logo. Preserve precisely the same emblem, geometry, spelling, word count, typographic hierarchy, proportions, layout and spacing. Required exact text: MAZAYA MOTORS FZC. Change EVERY letter, including all secondary descriptor words and legal suffixes, to solid white so it is legible over a dark or red website header. Change the charcoal portions of the emblem to white. Retain the small red/gold emblem accent only if it contrasts clearly against a dark header. True transparent alpha background; do not paint a dark rectangle or checkerboard. Flat clean edges, no glows, shadows, bevels, textures, gradients, new artwork, new icon, extra text or mockup. Deliver one horizontal matching logo, fully legible.",
+        "reference": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-3f95e3c9-3292-4a38-8f79-8d8566d35719.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 27,
+          "top": 99,
+          "width": 2145,
+          "height": 500
+        }
+      }
+    }
+  },
+  "review": {
+    "status": "artwork-visually-reviewed",
+    "alpha": "all exports measured as genuine transparent nonempty PNGs",
+    "spelling": "English wordmark inspected; source-bound display aliases retained",
+    "compact": "Horizontal logos only. Interactive 32/48/64px gallery preview is provided; separate compact/favicon artwork remains part of dealer-pack preparation.",
+    "sixDesigns": "not-yet-integrated-or-rendered",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "reviewer": "Codex visual inspection",
+    "header": "All 196 paired PNGs inspected at 240x64 on white, #111113 and #c40101",
+    "evidence": "final-review-04.png"
+  },
+  "releaseReady": false,
+  "artworkHolds": [],
+  "artworkReadyForIntegration": true
+}

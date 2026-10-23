@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "ae-sharjah-korean-city-used-car",
+  "slug": null,
+  "artworkDirectory": "ae-sharjah-korean-city-used-car",
+  "name": "Korean City Used Car",
+  "renderedName": "Korean City Used Car",
+  "kind": "independent-website-logo-proposal",
+  "dealerApproved": false,
+  "ownerApproved": false,
+  "sourceEvidence": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/korean-city-used-car",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/7373-jaguar-e-pace-p250-at-awd-249-hp-p250",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "retainedOriginalsUnchanged": true,
+  "variants": {
+    "on-light": {
+      "path": "logo-on-light.png",
+      "sha256": "2346d86317dffba2a5af6b6c0f3227e78da07b258ec306fd2e7ab14e686dc6e2",
+      "width": 1024,
+      "height": 199,
+      "transparentFraction": 0.6366058809673367,
+      "master": {
+        "path": "generated-on-light.png",
+        "sha256": "bcd8585a4a6b146e674f2c1507d5809292e4a70f31efecaedcf02d2bf31597ec",
+        "width": 2146,
+        "height": 733
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-e9dc6103-2fe1-4b97-aab5-a73a6a9c6adb",
+        "prompt": "Create one professional horizontal automotive dealership logo proposal for Korean City Used Car. Required exact text, uppercase: KOREAN CITY USED CAR. Every word must be present and spelled precisely; use sensible primary name and smaller descriptor hierarchy without tiny lettering. Produce a polished original identity with a clever rounded negative-space monogram, with an open confident silhouette. Initials KC may inform the emblem. Emblem left, full clear name to the right, compact and balanced for a website header. Avoid overused shield and generic car silhouettes; no manufacturer badges. Clean modern lettering with careful kerning and strong legibility. All text is deep charcoal black, appropriate on a white/light header. One restrained red or gold accent may appear inside the emblem only; no pale text. Flat crisp edges, a small number of solid shapes, no chrome, no lighting, no shadow, no texture, no gradient. Genuine transparent alpha background, isolated logo with no background box, no grid, no checkerboard painted into pixels. No slogan, contact info, website, watermark, mockup, photograph, extra concept, or duplicate logo. Deliver exactly one horizontal full logo. This is an independent website identity proposal, not a claim of adopted branding.",
+        "reference": null
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 39,
+          "top": 174,
+          "width": 2077,
+          "height": 404
+        }
+      }
+    },
+    "on-dark": {
+      "path": "logo-on-dark.png",
+      "sha256": "3a0187f5091b41ec574de6e22a7dd8576e5a1c311f404d693bb3d667f1670f05",
+      "width": 1024,
+      "height": 201,
+      "transparentFraction": 0.526425489738806,
+      "master": {
+        "path": "generated-on-dark.png",
+        "sha256": "8fb77d4fff15bef10a0de09b19449cf6f6ad68b835d5ebd889ee8a7df0f1daa4",
+        "width": 2146,
+        "height": 733
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-d831e390-4d87-41d0-bfe7-bb40505cc82b",
+        "prompt": "Create the matching light-on-dark production variant of the exact supplied logo. Preserve precisely the same emblem, geometry, spelling, word count, typographic hierarchy, proportions, layout and spacing. Required exact text: KOREAN CITY USED CAR. Change EVERY letter, including all secondary descriptor words and legal suffixes, to solid white so it is legible over a dark or red website header. Change the charcoal portions of the emblem to white. Retain the small red/gold emblem accent only if it contrasts clearly against a dark header. True transparent alpha background; do not paint a dark rectangle or checkerboard. Flat clean edges, no glows, shadows, bevels, textures, gradients, new artwork, new icon, extra text or mockup. Deliver one horizontal matching logo, fully legible.",
+        "reference": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-e9dc6103-2fe1-4b97-aab5-a73a6a9c6adb.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 39,
+          "top": 170,
+          "width": 2065,
+          "height": 406
+        }
+      }
+    }
+  },
+  "review": {
+    "status": "artwork-visually-reviewed",
+    "alpha": "all exports measured as genuine transparent nonempty PNGs",
+    "spelling": "English wordmark inspected; source-bound display aliases retained",
+    "compact": "Horizontal logos only. Interactive 32/48/64px gallery preview is provided; separate compact/favicon artwork remains part of dealer-pack preparation.",
+    "sixDesigns": "not-yet-integrated-or-rendered",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "reviewer": "Codex visual inspection",
+    "header": "All 196 paired PNGs inspected at 240x64 on white, #111113 and #c40101",
+    "evidence": "final-review-11.png"
+  },
+  "releaseReady": false,
+  "artworkHolds": [],
+  "artworkReadyForIntegration": true
+}

@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "C-Car Sales Ltd",
     "publicOrigin": "https://c-car-sales-ltd.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "7476a0b6605ea425bf2ad69d727bb7f60c027a164dd519f27376cd91975baecc",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "7cf97984f550549d34c6dfd1dfc967ccf4ef3b593460269d1ec258febafc15ab"
+    }
   }
 }

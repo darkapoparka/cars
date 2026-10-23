@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Somer Ibrahim Cars",
     "publicOrigin": "https://somer-ibrahim-cars.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "94dd6e6c7e706ce4e94e2d908550d3d5b3cb0dd7ecd18e573545a16746adc933",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "7e4fd4ea87e90b1a95634458e77a97ba9eb11f4cfea8f377e40c452c8f042df9"
+    }
   }
 }

@@ -1,0 +1,269 @@
+{
+  "schemaVersion": 1,
+  "dealer": "vip-class-motors-llc-fz",
+  "reviewed": true,
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "9965bc797569667fbacaed4df75da97137679783f006b8f337ed37d1829cf639",
+      "sourceSha256": "56bd65ccdb3090e67bfcc8118fb64d56541f4cf6a511ea5ae67a89b5dad34f9f"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "a951f8018fa9ede7ef1fd8519187d4c1e116cb9ebe825a63f8d0d996775c4d87",
+      "sourceSha256": "f62d7cc837d01464f6ff451af7c9302f19407bc0bcffdf7f5684f14db111cb78"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "a951f8018fa9ede7ef1fd8519187d4c1e116cb9ebe825a63f8d0d996775c4d87",
+      "sourceSha256": "f62d7cc837d01464f6ff451af7c9302f19407bc0bcffdf7f5684f14db111cb78"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "56bd65ccdb3090e67bfcc8118fb64d56541f4cf6a511ea5ae67a89b5dad34f9f",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-bce946ed-8aaf-4ff8-bb7e-c80ef9c6ab57",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/reviewed-on-light.png",
+        "sha256": "dc242fc0eaf95b9b31bc7bdfc9cfc3c0b7b1ef10fef201b4d20e0a522fb95d55",
+        "operation": "darken-reviewed-gold-ink-for-white-surface-contrast",
+        "outputColor": "#603404"
+      }
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "689d462175513d7059fa57050af85e7da8d8f054b8c467cdca9a69ae7a47ffd4",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-bce946ed-8aaf-4ff8-bb7e-c80ef9c6ab57",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "56bd65ccdb3090e67bfcc8118fb64d56541f4cf6a511ea5ae67a89b5dad34f9f",
+        "operation": "crop-left-reviewed-VIP-symbol-and-darken-gold-for-white-compact",
+        "outputColor": "#603404"
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "dd1e8736ca5476a83aaf5d321c194d19060cf5a7e053f9e678d5a60fec33d9e4"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "56bd65ccdb3090e67bfcc8118fb64d56541f4cf6a511ea5ae67a89b5dad34f9f",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-bce946ed-8aaf-4ff8-bb7e-c80ef9c6ab57",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/reviewed-on-light.png",
+          "sha256": "dc242fc0eaf95b9b31bc7bdfc9cfc3c0b7b1ef10fef201b4d20e0a522fb95d55",
+          "operation": "darken-reviewed-gold-ink-for-white-surface-contrast",
+          "outputColor": "#603404"
+        }
+      },
+      "sourceReference": "dealers/vip-class-motors-llc-fz/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "f62d7cc837d01464f6ff451af7c9302f19407bc0bcffdf7f5684f14db111cb78",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-05a00633-23f2-49f9-b095-81343ad782da",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/vip-class-motors-llc-fz/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "f62d7cc837d01464f6ff451af7c9302f19407bc0bcffdf7f5684f14db111cb78",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-05a00633-23f2-49f9-b095-81343ad782da",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/vip-class-motors-llc-fz/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "56bd65ccdb3090e67bfcc8118fb64d56541f4cf6a511ea5ae67a89b5dad34f9f",
+      "sha256": "56bd65ccdb3090e67bfcc8118fb64d56541f4cf6a511ea5ae67a89b5dad34f9f",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 315
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "f62d7cc837d01464f6ff451af7c9302f19407bc0bcffdf7f5684f14db111cb78",
+      "sha256": "f62d7cc837d01464f6ff451af7c9302f19407bc0bcffdf7f5684f14db111cb78",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 320
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "f62d7cc837d01464f6ff451af7c9302f19407bc0bcffdf7f5684f14db111cb78",
+      "sha256": "f62d7cc837d01464f6ff451af7c9302f19407bc0bcffdf7f5684f14db111cb78",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 320
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "b1e2b9d3ba4afbc36821b4a527deee978224087ffa7007dc72505bed3e260dfb",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-bce946ed-8aaf-4ff8-bb7e-c80ef9c6ab57",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "56bd65ccdb3090e67bfcc8118fb64d56541f4cf6a511ea5ae67a89b5dad34f9f",
+          "operation": "crop-left-reviewed-VIP-symbol-and-darken-gold-for-white-compact",
+          "outputColor": "#603404"
+        }
+      },
+      "sourceReference": "dealers/vip-class-motors-llc-fz/branding/generated-mark-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "e0012e3949ad30d2692794b432988e4e1fa7d674172317a736e2fd1feded1331",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-05a00633-23f2-49f9-b095-81343ad782da",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "f62d7cc837d01464f6ff451af7c9302f19407bc0bcffdf7f5684f14db111cb78",
+          "operation": "isolate-reviewed-left-emblem-connected-components",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 435,
+            "height": 320
+          },
+          "selection": {
+            "alphaThreshold": 96,
+            "minXBefore": 300,
+            "minPixels": 20,
+            "antialiasNeighborPixels": 1,
+            "components": 6
+          }
+        }
+      },
+      "sourceReference": "dealers/vip-class-motors-llc-fz/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "689d462175513d7059fa57050af85e7da8d8f054b8c467cdca9a69ae7a47ffd4",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-bce946ed-8aaf-4ff8-bb7e-c80ef9c6ab57",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "56bd65ccdb3090e67bfcc8118fb64d56541f4cf6a511ea5ae67a89b5dad34f9f",
+          "operation": "crop-left-reviewed-VIP-symbol-and-darken-gold-for-white-compact",
+          "outputColor": "#603404"
+        }
+      },
+      "sourceReference": "dealers/vip-class-motors-llc-fz/branding/generated-mark-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "dd1e8736ca5476a83aaf5d321c194d19060cf5a7e053f9e678d5a60fec33d9e4",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-bce946ed-8aaf-4ff8-bb7e-c80ef9c6ab57",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "56bd65ccdb3090e67bfcc8118fb64d56541f4cf6a511ea5ae67a89b5dad34f9f",
+          "operation": "crop-left-reviewed-VIP-symbol-and-darken-gold-for-white-compact",
+          "outputColor": "#603404"
+        }
+      },
+      "sourceReference": "dealers/vip-class-motors-llc-fz/branding/generated-mark-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "74114d4fa69f8069e8f5f0141dbd0ec77133d3f0ecfc56bbe6ec530153fd5451",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-05a00633-23f2-49f9-b095-81343ad782da",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "f62d7cc837d01464f6ff451af7c9302f19407bc0bcffdf7f5684f14db111cb78",
+        "operation": "isolate-reviewed-left-emblem-connected-components",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 435,
+          "height": 320
+        },
+        "selection": {
+          "alphaThreshold": 96,
+          "minXBefore": 300,
+          "minPixels": 20,
+          "antialiasNeighborPixels": 1,
+          "components": 6
+        }
+      }
+    }
+  }
+}

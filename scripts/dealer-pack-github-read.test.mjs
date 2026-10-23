@@ -85,7 +85,7 @@ test('interrupted artifact streams restart the whole pinned download and remove 
     return new Response(bytes);
   }});
   assert.equal(apiRequests,2);assert.equal(objectRequests,2);assert.deepEqual(fs.readFileSync(file),bytes);assert.equal(fs.existsSync(out+'.partial'),false);
-  assert.deepEqual(control.waits,[1000]);assert.equal(control.diagnostics[0].stage,'object-body');assert.equal(control.diagnostics[0].artifactId,44);assert.equal(control.diagnostics[0].bytesReceived,7);assert.equal(control.diagnostics[0].expectedBytes,bytes.length);assert.equal(control.diagnostics[0].timeoutMs,180000);
+  assert.deepEqual(control.waits,[1000]);assert.equal(control.diagnostics[0].stage,'object-body');assert.equal(control.diagnostics[0].artifactId,44);assert.equal(control.diagnostics[0].bytesReceived,7);assert.equal(control.diagnostics[0].expectedBytes,bytes.length);assert.equal(control.diagnostics[0].timeoutMs,480000);
   for(const row of calls){assert.equal(row.options.method,'GET');assert.equal(row.options.headers.Range,undefined);if(row.url.startsWith('https://api.github.com/'))assert.equal(row.options.headers.Authorization,'Bearer '+token);else{assert.equal(row.options.headers.Authorization,undefined);assert.equal(row.options.redirect,'error');}}
   cleanDiagnostic(control.diagnostics);
 });

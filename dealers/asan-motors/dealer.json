@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Asan Motors",
     "publicOrigin": "https://asan-motors.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "f3384d30e5e9c08c0743d19e3561d95cca3aad78e8348e1da65158b17582085b",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "11c1813ac0039f89ee2d68cb7f028eb45913b2a6b843a9c0e05fc16d5d170da0"
+    }
   }
 }

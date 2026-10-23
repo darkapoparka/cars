@@ -1,0 +1,161 @@
+{
+  "schemaVersion": 1,
+  "dealer": "sport-used-cars",
+  "status": "reviewed-imagegen-proposal",
+  "realLogoFirst": true,
+  "publicSources": [
+    {
+      "url": "https://www.dubicars.com/dealers/sharjah-sport-used-cars-812",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://sportusedcars-shj.com/",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "originals": [],
+  "creationMethod": "imagegen-proposal",
+  "dealerApproved": false,
+  "generatedInputs": {
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "master": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "2fb1a4fad1f59634fb5af3f422d8de1b667c66b623826088592f15496b32cfad",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-9244ddc2-7d27-4f63-ab3f-845d23d152f3",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark-light.png",
+      "sha256": "e23886d30dd5b2b17a37d3bce4afa27bc8712cfec1bade7f97ccff744b808580",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-9244ddc2-7d27-4f63-ab3f-845d23d152f3",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "2fb1a4fad1f59634fb5af3f422d8de1b667c66b623826088592f15496b32cfad",
+          "operation": "isolate-reviewed-left-emblem-components",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 350,
+            "height": 239
+          },
+          "selection": {
+            "alphaThreshold": 128,
+            "minXBefore": 300,
+            "minPixels": 40,
+            "antialiasNeighborPixels": 1,
+            "components": 4
+          }
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-dark.png",
+      "sha256": "d7070e4fb85275369ea6d7daef7e1660d3b05555c754409e81af0a4211f05ac9",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-2326fadb-46dd-4012-9aa9-9d628edfa364",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "3804d78c27723dd70d85ba79df9c1513a0a4c3d5a489eb8c8a15a93b2e270bfd",
+          "operation": "isolate-reviewed-left-emblem-components",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 350,
+            "height": 242
+          },
+          "selection": {
+            "alphaThreshold": 128,
+            "minXBefore": 300,
+            "minPixels": 40,
+            "antialiasNeighborPixels": 1,
+            "components": 4
+          }
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "2fb1a4fad1f59634fb5af3f422d8de1b667c66b623826088592f15496b32cfad",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-9244ddc2-7d27-4f63-ab3f-845d23d152f3",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "3804d78c27723dd70d85ba79df9c1513a0a4c3d5a489eb8c8a15a93b2e270bfd",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-2326fadb-46dd-4012-9aa9-9d628edfa364",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "3804d78c27723dd70d85ba79df9c1513a0a4c3d5a489eb8c8a15a93b2e270bfd",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-2326fadb-46dd-4012-9aa9-9d628edfa364",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewKind": "agent-visual-review",
+      "humanReview": false,
+      "dealerApproval": false,
+      "backgrounds": {
+        "onLight": "#ffffff",
+        "onDark": "#111113",
+        "onAccent": "#c40101"
+      },
+      "wordmarkWidths": [
+        220,
+        240
+      ],
+      "notes": "Exact reviewed Image Gen pair; native masters and generation provenance retained. Compact rasters cropped from the actual left symbol."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-22T23:42:46.338Z",
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#c40101"
+      ],
+      "widths": [
+        32,
+        48,
+        64
+      ],
+      "notes": "Compact emblem isolated from exact reviewed PNGs without neighboring wordmark letters; native compact and favicon QA independent."
+    }
+  },
+  "sourceBlockers": [],
+  "artworkProvenance": {
+    "path": "branding/artwork-provenance.json",
+    "sha256": "e7d024bde8c4b40c88efd5cf67d3fbd5840467943db499ebe84da7e59f53b957",
+    "manifestSha256": "d25e9cee768a885052ac0a8df220d843c9b9c6f6f120d722705bead1cc99e694",
+    "nativeMasters": [
+      {
+        "path": "branding/native-generated-on-light.png",
+        "sha256": "044edfdec62664ffbe4eb68b5ee0dc01aef5b76867935f40e5f2336354852568"
+      },
+      {
+        "path": "branding/native-generated-on-dark.png",
+        "sha256": "7199583f4d0402931b788292ceb54caa6271efc47c4304c6465bf26aa96e21a7"
+      }
+    ]
+  }
+}

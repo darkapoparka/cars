@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-master-international-auto",
+  "reviewed": true,
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "a1c10542ce145742419520bf1691535cdcfad2f095340ce4b4e2d0865d2f31ca",
+      "sourceSha256": "f52ed0d02e42469fd0c8e97470b9cf858385853c7b4a0594664d74ec7baf4a10"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "54a6defbef531490a4273049449c29a83732430c9533d92010e3a2168b03092f",
+      "sourceSha256": "4957c3431e2d8a911012cfad769bebae65d2be0e1b7d177e82913109df19a288"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "54a6defbef531490a4273049449c29a83732430c9533d92010e3a2168b03092f",
+      "sourceSha256": "4957c3431e2d8a911012cfad769bebae65d2be0e1b7d177e82913109df19a288"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "f52ed0d02e42469fd0c8e97470b9cf858385853c7b4a0594664d74ec7baf4a10",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-9589ec44-bb94-43e9-b9c2-7bd52adb8a8e",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "a27fedabea0f164d4ff7edea529d436fe0af54638d09bf0f54cd8e2eae9ae287",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-9589ec44-bb94-43e9-b9c2-7bd52adb8a8e",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "f52ed0d02e42469fd0c8e97470b9cf858385853c7b4a0594664d74ec7baf4a10",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 337,
+          "height": 215
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "b224567eeb9fb1f860a2b6293d2731408762ca9b01bfdfba3d89757cf44d2e8a"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "f52ed0d02e42469fd0c8e97470b9cf858385853c7b4a0594664d74ec7baf4a10",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-9589ec44-bb94-43e9-b9c2-7bd52adb8a8e",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-master-international-auto/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "4957c3431e2d8a911012cfad769bebae65d2be0e1b7d177e82913109df19a288",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-26571fbd-d28f-4b14-b6de-4e81b2c645f9",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-master-international-auto/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "4957c3431e2d8a911012cfad769bebae65d2be0e1b7d177e82913109df19a288",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-26571fbd-d28f-4b14-b6de-4e81b2c645f9",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-master-international-auto/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "f52ed0d02e42469fd0c8e97470b9cf858385853c7b4a0594664d74ec7baf4a10",
+      "sha256": "f52ed0d02e42469fd0c8e97470b9cf858385853c7b4a0594664d74ec7baf4a10",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 215
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "4957c3431e2d8a911012cfad769bebae65d2be0e1b7d177e82913109df19a288",
+      "sha256": "4957c3431e2d8a911012cfad769bebae65d2be0e1b7d177e82913109df19a288",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 215
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "4957c3431e2d8a911012cfad769bebae65d2be0e1b7d177e82913109df19a288",
+      "sha256": "4957c3431e2d8a911012cfad769bebae65d2be0e1b7d177e82913109df19a288",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 215
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "d8fafcdb916b0902af0f376c738d0a6b44d4ae99bb237d224118c25c7d6fb733",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-9589ec44-bb94-43e9-b9c2-7bd52adb8a8e",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "f52ed0d02e42469fd0c8e97470b9cf858385853c7b4a0594664d74ec7baf4a10",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 337,
+            "height": 215
+          }
+        }
+      },
+      "sourceReference": "dealers/al-master-international-auto/branding/generated-mark-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "38a60a865cd7202982626d767c6b93801bc80f7b7d515af787cb848dc09fa02b",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-26571fbd-d28f-4b14-b6de-4e81b2c645f9",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "4957c3431e2d8a911012cfad769bebae65d2be0e1b7d177e82913109df19a288",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 337,
+            "height": 215
+          }
+        }
+      },
+      "sourceReference": "dealers/al-master-international-auto/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "a27fedabea0f164d4ff7edea529d436fe0af54638d09bf0f54cd8e2eae9ae287",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-9589ec44-bb94-43e9-b9c2-7bd52adb8a8e",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "f52ed0d02e42469fd0c8e97470b9cf858385853c7b4a0594664d74ec7baf4a10",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 337,
+            "height": 215
+          }
+        }
+      },
+      "sourceReference": "dealers/al-master-international-auto/branding/generated-mark-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "b224567eeb9fb1f860a2b6293d2731408762ca9b01bfdfba3d89757cf44d2e8a",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-9589ec44-bb94-43e9-b9c2-7bd52adb8a8e",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "f52ed0d02e42469fd0c8e97470b9cf858385853c7b4a0594664d74ec7baf4a10",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 337,
+            "height": 215
+          }
+        }
+      },
+      "sourceReference": "dealers/al-master-international-auto/branding/generated-mark-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "e9dc7c6c0212e16c070481141a0c06ad4913b5dc0752d3652421eacf7def3ea7",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-26571fbd-d28f-4b14-b6de-4e81b2c645f9",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "4957c3431e2d8a911012cfad769bebae65d2be0e1b7d177e82913109df19a288",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 337,
+          "height": 215
+        }
+      }
+    }
+  }
+}
