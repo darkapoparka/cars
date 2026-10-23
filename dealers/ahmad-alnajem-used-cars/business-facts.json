@@ -10,15 +10,15 @@
     "currency": "AED",
     "distanceUnit": "km",
     "locale": "en-AE",
-    "address": "Souq Al Haraj and SAIF, Sharjah in current ads; exact showroom unconfirmed",
+    "address": "Showroom #303, Souq Al Haraj, Al Ruqa Al Hamra, Sharjah, UAE",
     "phone": "+971527911800",
     "phoneDisplay": "+971527911800",
     "email": "",
     "website": "",
     "stockUrl": "https://ae.opensooq.com/en/shops/shop-10216703",
-    "hours": "",
+    "hours": "Monday-Friday 9:00am-6:00pm; Saturday and Sunday closed",
     "sourceUrl": "https://ae.opensooq.com/en/shops/shop-10216703",
-    "observedAt": "2026-10-18",
+    "observedAt": "2026-10-23",
     "inventoryNotice": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
     "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
     "logo": "/dealer-brand/logo-on-light.png",
@@ -35,9 +35,12 @@
     },
     {
       "url": "https://www.oneclickdrive.com/company/sharjah/ahmad-alnajem-used-cars",
-      "observedAt": "2026-10-18",
+      "observedAt": "2026-10-23",
       "supports": [
-        "retained-public-business-research"
+        "dealer-name",
+        "showroom-address",
+        "public-phone",
+        "hours"
       ]
     }
   ]
