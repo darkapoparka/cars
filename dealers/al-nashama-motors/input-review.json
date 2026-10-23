@@ -3,7 +3,7 @@
   "kind": "cars-dealer-pack-input-review",
   "dealer": "al-nashama-motors",
   "reviewed": true,
-  "reviewedAt": "2026-10-23T01:39:38.201Z",
+  "reviewedAt": "2026-10-23T02:01:15.219Z",
   "review": {
     "kind": "automated",
     "humanReview": false,
@@ -47,11 +47,11 @@
     },
     {
       "path": "branding/generated-mark-dark.png",
-      "sha256": "88811d3700a42b0681ef766da8c713ea758dace0e1984de71f01d8d5cc090d01"
+      "sha256": "39c3a2ae299d8eefa9f2265a3c339f062ee088c3c3df2ffa076768f5c2c9852d"
     },
     {
       "path": "branding/generated-mark-light.png",
-      "sha256": "e10adc866ba36d49a78bbe8c21e14ff3ff65356a0e64920e84e9d8c4ea7001dc"
+      "sha256": "8b327cf0b36508484dcc04e6bdc32ffad80ef3207c38759c1510688c6388a696"
     },
     {
       "path": "branding/generated-on-dark.png",
@@ -63,11 +63,11 @@
     },
     {
       "path": "branding/logo-contract.json",
-      "sha256": "7f28d1077340806923dd070bfedc1f004d64e9857ba876bbffd965e9054aeb9b"
+      "sha256": "ce18da41941ae5af29be1683c4acc875d57e4a8bc67e2202bdf0abc60b70d0f7"
     },
     {
       "path": "branding/logo-recipe.json",
-      "sha256": "7f1cd038e30b477276b937c03acafc7e511dde0dadcccb2b58cf6aa8652ad664"
+      "sha256": "1b10bf6d4719ff9686be6352fd0b939b86d83b9f7c2b744611c546fa17cb8b4d"
     },
     {
       "path": "branding/native-generated-on-dark.png",
@@ -79,7 +79,7 @@
     },
     {
       "path": "branding/source.json",
-      "sha256": "9a7dc8d9db427ca9074a3223cfd14f91548b34615023565deb8bce66ee3edd1b"
+      "sha256": "9a18511a0f1c8f0008604af4c745ca7f98fecfa0b821610cb71c009266b130ef"
     },
     {
       "path": "business-facts.json",
@@ -87,7 +87,7 @@
     },
     {
       "path": "copy-review.json",
-      "sha256": "b30fc4e378c89261c508c0fe83161a741bf0d9a883fe002184b9350fac1480be"
+      "sha256": "82ba95daa345352432babbad0879551eccbbc9153ba4b9072b8e4a5d9646d337"
     },
     {
       "path": "dealer-stock/template-demo-1.webp",
@@ -103,11 +103,11 @@
     },
     {
       "path": "dealer.json",
-      "sha256": "ff1520329689855f8f3871ee2226f09b490a24c0fc38a3f4cf3bf044824dd057"
+      "sha256": "194e84f6b2238728807747f1ceacacc2362b1e4263bce8b08c9971e8dcb9b80d"
     },
     {
       "path": "identity-review.json",
-      "sha256": "779a1fd3d7b0317b719d3273cbfaf295ad18785048c306930b4b976bc3a192f8"
+      "sha256": "44082008affdfd646a6d3017416577ccf698c3b596919e09b5d6a2fbd12b9418"
     },
     {
       "path": "locale.json",
@@ -119,7 +119,7 @@
     },
     {
       "path": "qualification.json",
-      "sha256": "7a0c86c12bcfc4f636a50e8f40ccb6334bf958954eb7f6bd47af881f3fd0a557"
+      "sha256": "89b1ce04fe1fbb8a94a74494a3966554fa868503c0b103305b6afd971fc62822"
     },
     {
       "path": "source-evidence.json",

@@ -50,7 +50,7 @@
   },
   "mark": {
     "path": "branding/logo-mark.png",
-    "sha256": "e4f64a5b3ce5a04e073325a0212307d06a827097d7d0305fbd488fb3a41a4a5d",
+    "sha256": "82d57fbc2bd630a29939a04082069f298e47cffa15a26521a8bc260f6f3db00a",
     "generation": {
       "tool": "image_gen.imagegen",
       "generationId": "exec-24314be3-f103-4e78-9bd6-489a8a2bfe04",
@@ -58,19 +58,19 @@
       "derivedFrom": {
         "path": "branding/generated-on-light.png",
         "sha256": "b205762f9d56b12f5b88786d427766a1183e31e8a8d9a168077f2e89f6637943",
-        "operation": "crop-left-symbol",
+        "operation": "crop-wordmark-initial-compact-symbol",
         "crop": {
-          "left": 0,
-          "top": 0,
-          "width": 260,
-          "height": 229
+          "left": 260,
+          "top": 40,
+          "width": 95,
+          "height": 100
         }
       }
     }
   },
   "favicon": {
     "path": "dealer-brand/favicon.ico",
-    "sha256": "910d70c6a6a005ca8c02ff03cfee39306b45063465ce44ea82bc5fc773961acf"
+    "sha256": "4c7ee2a36e31eceeedd76e1f8113e7963631328cab515d8911649ed99900b2d5"
   },
   "surfaces": {
     "onLight": {
@@ -148,7 +148,7 @@
   "supplemental": {
     "mark-on-light.webp": {
       "path": "dealer-brand/mark-on-light.webp",
-      "sha256": "007561d203d5f00d952cf08e2c0b309d6d79c402056128768d9d495d22f10d5e",
+      "sha256": "9f78682ade326ed56e7243943f335a9222c1f00ff0a6bf3c81066f015d622576",
       "generation": {
         "tool": "image_gen.imagegen",
         "generationId": "exec-24314be3-f103-4e78-9bd6-489a8a2bfe04",
@@ -156,12 +156,12 @@
         "derivedFrom": {
           "path": "branding/generated-on-light.png",
           "sha256": "b205762f9d56b12f5b88786d427766a1183e31e8a8d9a168077f2e89f6637943",
-          "operation": "crop-left-symbol",
+          "operation": "crop-wordmark-initial-compact-symbol",
           "crop": {
-            "left": 0,
-            "top": 0,
-            "width": 260,
-            "height": 229
+            "left": 260,
+            "top": 40,
+            "width": 95,
+            "height": 100
           }
         }
       },
@@ -169,7 +169,7 @@
     },
     "mark-on-dark.webp": {
       "path": "dealer-brand/mark-on-dark.webp",
-      "sha256": "8c69234d4cb20413a897d405f9a5cc497794e1bc0ce1ffd18e338050982c399b",
+      "sha256": "f3d381228ca46611c85f0a6656344fa9839ea53edc0e8ae8bc9c679378529749",
       "generation": {
         "tool": "image_gen.imagegen",
         "generationId": "exec-ffa04efc-24d3-46d0-a8d4-a26a26e65dec",
@@ -177,12 +177,12 @@
         "derivedFrom": {
           "path": "branding/generated-on-dark.png",
           "sha256": "2f51d949032c67e045881ecbe2f24dc452582c996e23f00131dec15bbd7c13e8",
-          "operation": "crop-left-symbol",
+          "operation": "crop-wordmark-initial-compact-symbol",
           "crop": {
-            "left": 0,
-            "top": 0,
-            "width": 260,
-            "height": 227
+            "left": 260,
+            "top": 40,
+            "width": 95,
+            "height": 100
           }
         }
       },
@@ -190,7 +190,7 @@
     },
     "app-icon.png": {
       "path": "dealer-brand/app-icon.png",
-      "sha256": "e4f64a5b3ce5a04e073325a0212307d06a827097d7d0305fbd488fb3a41a4a5d",
+      "sha256": "82d57fbc2bd630a29939a04082069f298e47cffa15a26521a8bc260f6f3db00a",
       "generation": {
         "tool": "image_gen.imagegen",
         "generationId": "exec-24314be3-f103-4e78-9bd6-489a8a2bfe04",
@@ -198,12 +198,12 @@
         "derivedFrom": {
           "path": "branding/generated-on-light.png",
           "sha256": "b205762f9d56b12f5b88786d427766a1183e31e8a8d9a168077f2e89f6637943",
-          "operation": "crop-left-symbol",
+          "operation": "crop-wordmark-initial-compact-symbol",
           "crop": {
-            "left": 0,
-            "top": 0,
-            "width": 260,
-            "height": 229
+            "left": 260,
+            "top": 40,
+            "width": 95,
+            "height": 100
           }
         }
       },
@@ -211,7 +211,7 @@
     },
     "favicon.ico": {
       "path": "dealer-brand/favicon.ico",
-      "sha256": "910d70c6a6a005ca8c02ff03cfee39306b45063465ce44ea82bc5fc773961acf",
+      "sha256": "4c7ee2a36e31eceeedd76e1f8113e7963631328cab515d8911649ed99900b2d5",
       "generation": {
         "tool": "image_gen.imagegen",
         "generationId": "exec-24314be3-f103-4e78-9bd6-489a8a2bfe04",
@@ -219,12 +219,12 @@
         "derivedFrom": {
           "path": "branding/generated-on-light.png",
           "sha256": "b205762f9d56b12f5b88786d427766a1183e31e8a8d9a168077f2e89f6637943",
-          "operation": "crop-left-symbol",
+          "operation": "crop-wordmark-initial-compact-symbol",
           "crop": {
-            "left": 0,
-            "top": 0,
-            "width": 260,
-            "height": 229
+            "left": 260,
+            "top": 40,
+            "width": 95,
+            "height": 100
           }
         }
       },
@@ -242,7 +242,7 @@
   },
   "markOnDark": {
     "path": "branding/logo-mark-on-dark.png",
-    "sha256": "f9e18ede3a083d4128d48cee8410c2f1a04aa1a663d2641177068b90ba3fd72e",
+    "sha256": "293195b676accbae17e0f7f6e20c92823d1af675829ed175152040d82c140b37",
     "generation": {
       "tool": "image_gen.imagegen",
       "generationId": "exec-ffa04efc-24d3-46d0-a8d4-a26a26e65dec",
@@ -250,12 +250,12 @@
       "derivedFrom": {
         "path": "branding/generated-on-dark.png",
         "sha256": "2f51d949032c67e045881ecbe2f24dc452582c996e23f00131dec15bbd7c13e8",
-        "operation": "crop-left-symbol",
+        "operation": "crop-wordmark-initial-compact-symbol",
         "crop": {
-          "left": 0,
-          "top": 0,
-          "width": 260,
-          "height": 227
+          "left": 260,
+          "top": 40,
+          "width": 95,
+          "height": 100
         }
       }
     }
