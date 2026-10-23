@@ -3,7 +3,7 @@
   "kind": "cars-dealer-pack-input-review",
   "dealer": "gangsta-world-luxury-automobiles-10825258ed",
   "reviewed": true,
-  "reviewedAt": "2026-10-23T05:35:58.584Z",
+  "reviewedAt": "2026-10-23T05:58:22.250Z",
   "review": {
     "kind": "automated",
     "humanReview": false,
@@ -51,7 +51,7 @@
     },
     {
       "path": "branding/generated-mark-light.png",
-      "sha256": "7c66d3dcad12d26d703361708f1dd23b4f769f46bfee0fea797bde8d546e28dd"
+      "sha256": "08b363ea73cb471122e3d9d0786e7a3acba44631e70dc42920259d08b4699800"
     },
     {
       "path": "branding/generated-on-dark.png",
@@ -63,11 +63,11 @@
     },
     {
       "path": "branding/logo-contract.json",
-      "sha256": "59a7262bef2c34319f4069b12eb071bdae0f7ef0dc2eb7b0713d79908bd3341c"
+      "sha256": "de44a0ca910d348814a04adfa56e1a7176a2e0e281ed17472cabfe8d0ab6d111"
     },
     {
       "path": "branding/logo-recipe.json",
-      "sha256": "4fbc3cc33f983504756b2c0dd0a3d1614a9d9a0ff105906a0117fda87c1bfbf9"
+      "sha256": "7820607b882f28e370defebd9ea6080d3c2e80c775aabd939c7a21ff96731fae"
     },
     {
       "path": "branding/native-generated-on-dark.png",
@@ -87,7 +87,7 @@
     },
     {
       "path": "branding/source.json",
-      "sha256": "9b13940c06beeeb0677eaaa89b0d6e71fb23626d493562eca494f3daf71b93e9"
+      "sha256": "5619889b5fe8641ec6e1f104016f89db2604566ca5ed00a68bd2dc82a389f075"
     },
     {
       "path": "business-facts.json",
@@ -95,7 +95,7 @@
     },
     {
       "path": "copy-review.json",
-      "sha256": "983e6bc590e03235d2d5e0ae61ab051d4aa7f0cd2e4e1a22be996d59ec6d3ebf"
+      "sha256": "726f4114c8bf53944d10646eff6c12e2879c647cbb79e0e50d86b2144edc4b0a"
     },
     {
       "path": "dealer-stock/template-demo-1.webp",
@@ -111,7 +111,7 @@
     },
     {
       "path": "dealer.json",
-      "sha256": "0dd37e7ab6d6f317df8114193fc5574cfe27802442e553c9c719e70fe3afa30e"
+      "sha256": "2d6cb7c7b0d7f1b90c36bc48a12c5198e03b6e06245437f32174da67049bfbb5"
     },
     {
       "path": "identity-resolution.json",
@@ -119,7 +119,7 @@
     },
     {
       "path": "identity-review.json",
-      "sha256": "dd7c0bafd718bb6dde2c8efa3940b89a679fb7618c2f1fa816bd25c4f2313a1a"
+      "sha256": "284850ff254725f6fe8279962a826686107e6c295ccdba84e109241d7544c060"
     },
     {
       "path": "locale.json",
@@ -131,7 +131,7 @@
     },
     {
       "path": "qualification.json",
-      "sha256": "ffa486951cb2e1da756ea36f62d232bee2cccb8f1f5e0a8bae03ff32925e2f88"
+      "sha256": "ca513a15bc83b15d1ecd5d21145bdc196d133e428f9635f1808efaa6922790c2"
     },
     {
       "path": "source-evidence.json",

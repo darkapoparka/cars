@@ -50,7 +50,7 @@
   },
   "mark": {
     "path": "branding/logo-mark.png",
-    "sha256": "badd825901a789f5bd1b28e39d38015ecf7d8fd349df68790814537a85962c25",
+    "sha256": "da5f564865944b71969b41718bd7a957ad2cbca90dae46809aa61f252ca0ec3e",
     "generation": {
       "tool": "image_gen.imagegen",
       "generationId": "exec-d0ffa8bb-38a6-4a1e-8cc3-0ff4cf106d62",
@@ -58,14 +58,15 @@
       "derivedFrom": {
         "path": "branding/reviewed-mark-light.png",
         "sha256": "4cb68660e932e971405590a493d3888711033a3c5812f6839446bb8a6a519efc",
-        "operation": "isolate-gold-palm-ring-from-neighboring-wordmark-at-right-edge",
-        "mask": "x>=220 retain original gold pixels only"
+        "operation": "isolate-reviewed-palm-ring-and-darken-gold-for-white-compact-surface",
+        "mask": "x>=220 retain original gold pixels only",
+        "colorTransform": "multiply source RGB by 0.52, preserve alpha and geometry"
       }
     }
   },
   "favicon": {
     "path": "dealer-brand/favicon.ico",
-    "sha256": "1562af5e4311c93ec814695507cc69e570d807402c55f7d151f15414ad13904b"
+    "sha256": "d3ace222566876d676b102fb29203daf140e1db955ae4f1877fb9144d0200125"
   },
   "surfaces": {
     "onLight": {
@@ -143,7 +144,7 @@
   "supplemental": {
     "mark-on-light.webp": {
       "path": "dealer-brand/mark-on-light.webp",
-      "sha256": "67c22ea2e27697c019cec8c4068861e57d12ea5bc70a21fe68df0b8d2bd2c507",
+      "sha256": "a364c1203abd3556e72599ae67b09e3417f1eda67db751a2b89a58da38482c88",
       "generation": {
         "tool": "image_gen.imagegen",
         "generationId": "exec-d0ffa8bb-38a6-4a1e-8cc3-0ff4cf106d62",
@@ -151,8 +152,9 @@
         "derivedFrom": {
           "path": "branding/reviewed-mark-light.png",
           "sha256": "4cb68660e932e971405590a493d3888711033a3c5812f6839446bb8a6a519efc",
-          "operation": "isolate-gold-palm-ring-from-neighboring-wordmark-at-right-edge",
-          "mask": "x>=220 retain original gold pixels only"
+          "operation": "isolate-reviewed-palm-ring-and-darken-gold-for-white-compact-surface",
+          "mask": "x>=220 retain original gold pixels only",
+          "colorTransform": "multiply source RGB by 0.52, preserve alpha and geometry"
         }
       },
       "sourceReference": "dealers/gangsta-world-luxury-automobiles-10825258ed/branding/generated-mark-light.png"
@@ -175,7 +177,7 @@
     },
     "app-icon.png": {
       "path": "dealer-brand/app-icon.png",
-      "sha256": "badd825901a789f5bd1b28e39d38015ecf7d8fd349df68790814537a85962c25",
+      "sha256": "da5f564865944b71969b41718bd7a957ad2cbca90dae46809aa61f252ca0ec3e",
       "generation": {
         "tool": "image_gen.imagegen",
         "generationId": "exec-d0ffa8bb-38a6-4a1e-8cc3-0ff4cf106d62",
@@ -183,15 +185,16 @@
         "derivedFrom": {
           "path": "branding/reviewed-mark-light.png",
           "sha256": "4cb68660e932e971405590a493d3888711033a3c5812f6839446bb8a6a519efc",
-          "operation": "isolate-gold-palm-ring-from-neighboring-wordmark-at-right-edge",
-          "mask": "x>=220 retain original gold pixels only"
+          "operation": "isolate-reviewed-palm-ring-and-darken-gold-for-white-compact-surface",
+          "mask": "x>=220 retain original gold pixels only",
+          "colorTransform": "multiply source RGB by 0.52, preserve alpha and geometry"
         }
       },
       "sourceReference": "dealers/gangsta-world-luxury-automobiles-10825258ed/branding/generated-mark-light.png"
     },
     "favicon.ico": {
       "path": "dealer-brand/favicon.ico",
-      "sha256": "1562af5e4311c93ec814695507cc69e570d807402c55f7d151f15414ad13904b",
+      "sha256": "d3ace222566876d676b102fb29203daf140e1db955ae4f1877fb9144d0200125",
       "generation": {
         "tool": "image_gen.imagegen",
         "generationId": "exec-d0ffa8bb-38a6-4a1e-8cc3-0ff4cf106d62",
@@ -199,8 +202,9 @@
         "derivedFrom": {
           "path": "branding/reviewed-mark-light.png",
           "sha256": "4cb68660e932e971405590a493d3888711033a3c5812f6839446bb8a6a519efc",
-          "operation": "isolate-gold-palm-ring-from-neighboring-wordmark-at-right-edge",
-          "mask": "x>=220 retain original gold pixels only"
+          "operation": "isolate-reviewed-palm-ring-and-darken-gold-for-white-compact-surface",
+          "mask": "x>=220 retain original gold pixels only",
+          "colorTransform": "multiply source RGB by 0.52, preserve alpha and geometry"
         }
       },
       "sourceReference": "dealers/gangsta-world-luxury-automobiles-10825258ed/branding/generated-mark-light.png"
