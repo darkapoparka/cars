@@ -3,7 +3,7 @@
   "kind": "cars-dealer-pack-input-review",
   "dealer": "golden-desert",
   "reviewed": true,
-  "reviewedAt": "2026-10-23T03:58:42.165Z",
+  "reviewedAt": "2026-10-23T04:36:20.567Z",
   "review": {
     "kind": "automated",
     "humanReview": false,
@@ -51,7 +51,7 @@
     },
     {
       "path": "branding/generated-mark-light.png",
-      "sha256": "50d1ac676e884b23640dd41109ccd4f9d0473d09164b0823577b8113b1ec90c2"
+      "sha256": "464c76547ff363ec9de04e83392253939da2c3285b6f67c89c8531277895257e"
     },
     {
       "path": "branding/generated-on-dark.png",
@@ -63,11 +63,11 @@
     },
     {
       "path": "branding/logo-contract.json",
-      "sha256": "bb56416073494ffe23b5c35313b3fe4011019b40b430a2c6161beeec9db7daa9"
+      "sha256": "0d65bf028329d00fc6eb1eec3f6d377e1971493482eb153e95316d15bf720f27"
     },
     {
       "path": "branding/logo-recipe.json",
-      "sha256": "7dedfd582df03904d0ff2fb1dce8f7f816e0f2cae0a88847ce15f992f98b4a6e"
+      "sha256": "2fe6f8f7c7086def6da87eb0bd0194f2648f9801bc977ec725de599fda8edd6b"
     },
     {
       "path": "branding/native-generated-on-dark.png",
@@ -78,8 +78,12 @@
       "sha256": "0dcef6e7cf2b1bef0d34888eaeb71b07f3b4c6e4dc19d8b5613014c8f6b15bea"
     },
     {
+      "path": "branding/reviewed-mark-light.png",
+      "sha256": "50d1ac676e884b23640dd41109ccd4f9d0473d09164b0823577b8113b1ec90c2"
+    },
+    {
       "path": "branding/source.json",
-      "sha256": "21f40d340870638e50b8740c528a827b5e940c9541a548353451790c073dbfea"
+      "sha256": "a65b3c5d06d188efea46b5562c07dbefaa6e6f0844057fc3ecfcb4f5dc5faa43"
     },
     {
       "path": "business-facts.json",
@@ -87,7 +91,7 @@
     },
     {
       "path": "copy-review.json",
-      "sha256": "28a644e9c45755f1491e524cbd7880d66f89d2b6f8d63a676ab4a5642a140810"
+      "sha256": "5a87b51c09e9f134fec13f4d8cbd1e884baa498a6a49ad0822e1582be9121f23"
     },
     {
       "path": "dealer-stock/template-demo-1.webp",
@@ -103,11 +107,11 @@
     },
     {
       "path": "dealer.json",
-      "sha256": "988efc7601673101b93b5957fb4b49bd257cea58116e7e94457b2d23b1a571c3"
+      "sha256": "89e8dff8431c498a7f4445774ac19c27448a9e52162f648de2cd40f497c1c136"
     },
     {
       "path": "identity-review.json",
-      "sha256": "304fca0b084bad9c797a2b2f7ed454824a816844782efbf6478c17a83373b213"
+      "sha256": "a6390fd90aad04c04e94f9c8062a0e54da23a964f3d0c1e747007c45ac15c2cf"
     },
     {
       "path": "locale.json",
@@ -119,7 +123,7 @@
     },
     {
       "path": "qualification.json",
-      "sha256": "9402dafa19b1e904eed70ad38eb166fc3d19879eea6ed46feddf78e9b57df91e"
+      "sha256": "6629920d61a7e02f7790be744132b13018295b08c41a48835e185e965b4ed33e"
     },
     {
       "path": "source-evidence.json",
