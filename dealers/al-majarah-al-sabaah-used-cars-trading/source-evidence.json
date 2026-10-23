@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-majarah-al-sabaah-used-cars-trading",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae-supplement.json",
+    "sha256": "ea2d396ef7a8a73326f488e53858ac60b4a0324d553ccba34b566b5ec5e91f2a"
+  },
+  "publicSources": [
+    {
+      "url": "https://licenseplate.ae/ar/cars/dealer/al-majarah-al-sabaah-used-cars",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/ar/cars/listing/12959-audi-a7-30-l-340-hp-gasoline-robot-four-wheel-drive-4wd-s-line",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://uaq.dubizzle.com/motors/used-cars/bmw/4-series/2026/04/05/bmw-4-series-420i-m-sport-2025-korean-spec-15-148---0d2dbd78db82471bb429b53b867ebe9c/",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://auto.ae/ar/almajarahalsabaahusedcars/",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://2gis.ae/dubai/firm/70000001097458178",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    }
+  ],
+  "liveFetchPerformed": false
+}

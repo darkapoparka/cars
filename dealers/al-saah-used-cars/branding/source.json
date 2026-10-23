@@ -1,0 +1,151 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-saah-used-cars",
+  "status": "reviewed-imagegen-proposal",
+  "realLogoFirst": true,
+  "publicSources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/al-saah-used-cars",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/1291-mitsubishi-pajero-38-at-243-hp-gls-top-line",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.alsaah.ae/en/contact",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "originals": [],
+  "creationMethod": "imagegen-proposal",
+  "dealerApproved": false,
+  "generatedInputs": {
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "master": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "ef586f005abaef09fe66dab5e5e43957684d409ab375536f4d81e5bf1604c934",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-844b1d36-ac01-44c8-a728-db467e4589ab",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark-light.png",
+      "sha256": "3ab9b9ead583df88d99c60d649d5314fba09d2ac6f361aa4f063a851770e4d06",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-844b1d36-ac01-44c8-a728-db467e4589ab",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "ef586f005abaef09fe66dab5e5e43957684d409ab375536f4d81e5bf1604c934",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 290,
+            "height": 308
+          }
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-dark.png",
+      "sha256": "4720aa8e4d6f8bea1868cb2a0ea6457b72f940f56875601a5ff2e0da6f8712af",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-eca46634-af7b-443e-b27a-42be3e556d5e",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "9c7247d68f0513ed0e25c91296187f3ded2e7e0d65645cc9d062326c7c9f7c7c",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 290,
+            "height": 309
+          }
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "ef586f005abaef09fe66dab5e5e43957684d409ab375536f4d81e5bf1604c934",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-844b1d36-ac01-44c8-a728-db467e4589ab",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "9c7247d68f0513ed0e25c91296187f3ded2e7e0d65645cc9d062326c7c9f7c7c",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-eca46634-af7b-443e-b27a-42be3e556d5e",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "9c7247d68f0513ed0e25c91296187f3ded2e7e0d65645cc9d062326c7c9f7c7c",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-eca46634-af7b-443e-b27a-42be3e556d5e",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewKind": "agent-visual-review",
+      "humanReview": false,
+      "dealerApproval": false,
+      "backgrounds": {
+        "onLight": "#ffffff",
+        "onDark": "#111113",
+        "onAccent": "#c40101"
+      },
+      "wordmarkWidths": [
+        220,
+        240
+      ],
+      "notes": "Exact reviewed Image Gen pair; native masters and generation provenance retained. Compact rasters cropped from the actual left symbol."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-22T23:42:46.338Z",
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#c40101"
+      ],
+      "widths": [
+        32,
+        48,
+        64
+      ],
+      "notes": "Left symbol cropped from reviewed horizontal variants; native rendering must independently qualify."
+    }
+  },
+  "sourceBlockers": [],
+  "artworkProvenance": {
+    "path": "branding/artwork-provenance.json",
+    "sha256": "0cd476f72e7c7d32b590816452b2f6c043a415a71da7bdbe44972e9763e37964",
+    "manifestSha256": "d25e9cee768a885052ac0a8df220d843c9b9c6f6f120d722705bead1cc99e694",
+    "nativeMasters": [
+      {
+        "path": "branding/native-generated-on-light.png",
+        "sha256": "cf7b077950b68809a16caf0fa0cf748d30459fb13216099894e4a1f0d6bd870f"
+      },
+      {
+        "path": "branding/native-generated-on-dark.png",
+        "sha256": "986d7fa19ae9999ec4c0874313d2f7a53b0658b5917fb2778365dfd837abbf3d"
+      }
+    ]
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "ae-sharjah-car-bazaar",
+  "slug": null,
+  "artworkDirectory": "ae-sharjah-car-bazaar",
+  "name": "Car Bazaar",
+  "renderedName": "Car Bazaar",
+  "kind": "independent-website-logo-proposal",
+  "dealerApproved": false,
+  "ownerApproved": false,
+  "sourceEvidence": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/car-bazaar",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/7064-mercedes-benz-glc-class-300-9g-tronic-4matic-258-hp-glc-300",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.oneclickdrive.com/ar/company/dubai/car-bazaar-fzc",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "retainedOriginalsUnchanged": true,
+  "variants": {
+    "on-light": {
+      "path": "logo-on-light.png",
+      "sha256": "b0f839132d67ca9fc1b500086d0661e2483a2b2bf3161a40f3e05f2643e26b5e",
+      "width": 1024,
+      "height": 198,
+      "transparentFraction": 0.7212999131944444,
+      "master": {
+        "path": "generated-on-light.png",
+        "sha256": "92ca1dcad3dbf6ea1e3070dc1d537487c768801ce0c6d43a5b8a36b75050ed1f",
+        "width": 2170,
+        "height": 725
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-44f73ccb-f3bc-4306-a819-33e5986f84d4",
+        "prompt": "Create one professional horizontal automotive dealership logo proposal for Car Bazaar. Required exact text, uppercase: CAR BAZAAR. Every word must be present and spelled precisely; use sensible primary name and smaller descriptor hierarchy without tiny lettering. Produce a polished original identity with a minimal memorable geometric symbol related to the distinctive name. Initials B may inform the emblem. Emblem left, full clear name to the right, compact and balanced for a website header. Avoid overused shield and generic car silhouettes; no manufacturer badges. Clean modern lettering with careful kerning and strong legibility. All text is deep charcoal black, appropriate on a white/light header. One restrained red or gold accent may appear inside the emblem only; no pale text. Flat crisp edges, a small number of solid shapes, no chrome, no lighting, no shadow, no texture, no gradient. Genuine transparent alpha background, isolated logo with no background box, no grid, no checkerboard painted into pixels. No slogan, contact info, website, watermark, mockup, photograph, extra concept, or duplicate logo. Deliver exactly one horizontal full logo. This is an independent website identity proposal, not a claim of adopted branding.",
+        "reference": null
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 0,
+          "top": 152,
+          "width": 2170,
+          "height": 420
+        }
+      }
+    },
+    "on-dark": {
+      "path": "logo-on-dark.png",
+      "sha256": "4ac68fbd02a97c6a390dab66a059b4ab84dfa2fb2ae46792604b582fe1c0d968",
+      "width": 1024,
+      "height": 198,
+      "transparentFraction": 0.65347320864899,
+      "master": {
+        "path": "generated-on-dark.png",
+        "sha256": "eeba2876d4525df6120f1a4994e03e854b7f8ac3c26912fe5139c74a5f0f1f14",
+        "width": 2169,
+        "height": 725
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-2adf7baa-3294-486f-9cae-47712e7c4d92",
+        "prompt": "Create the matching light-on-dark production variant of the exact supplied logo. Preserve precisely the same emblem, geometry, spelling, word count, typographic hierarchy, proportions, layout and spacing. Required exact text: CAR BAZAAR. Change EVERY letter, including all secondary descriptor words and legal suffixes, to solid white so it is legible over a dark or red website header. Change the charcoal portions of the emblem to white. Retain the small red/gold emblem accent only if it contrasts clearly against a dark header. True transparent alpha background; do not paint a dark rectangle or checkerboard. Flat clean edges, no glows, shadows, bevels, textures, gradients, new artwork, new icon, extra text or mockup. Deliver one horizontal matching logo, fully legible.",
+        "reference": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-44f73ccb-f3bc-4306-a819-33e5986f84d4.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 0,
+          "top": 147,
+          "width": 2167,
+          "height": 419
+        }
+      }
+    }
+  },
+  "review": {
+    "status": "artwork-visually-reviewed",
+    "alpha": "all exports measured as genuine transparent nonempty PNGs",
+    "spelling": "English wordmark inspected; source-bound display aliases retained",
+    "compact": "Horizontal logos only. Interactive 32/48/64px gallery preview is provided; separate compact/favicon artwork remains part of dealer-pack preparation.",
+    "sixDesigns": "not-yet-integrated-or-rendered",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "reviewer": "Codex visual inspection",
+    "header": "All 196 paired PNGs inspected at 240x64 on white, #111113 and #c40101",
+    "evidence": "final-review-10.png"
+  },
+  "releaseReady": false,
+  "artworkHolds": [],
+  "artworkReadyForIntegration": true
+}

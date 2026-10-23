@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-majarah-al-sabaah-used-cars-trading",
+  "reviewed": true,
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "856165183410447061315ef51efdb646664351c9b22afa176529d42fdcfdc82e",
+      "sourceSha256": "bc18d3b85ccd7e796904c3adea844423aafc76165bbd43cadc7d01a5be16e1f0"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "cd7c8467393ac3d6ad0d269a6f9a2f88bc23e970c02ae7ac717f665eac39d9cc",
+      "sourceSha256": "e9f66ed9167235553f5324e170209d00beb7b0f8ac0bbaa9e0584f4afb5c07d2"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "cd7c8467393ac3d6ad0d269a6f9a2f88bc23e970c02ae7ac717f665eac39d9cc",
+      "sourceSha256": "e9f66ed9167235553f5324e170209d00beb7b0f8ac0bbaa9e0584f4afb5c07d2"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "bc18d3b85ccd7e796904c3adea844423aafc76165bbd43cadc7d01a5be16e1f0",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-65551b2c-a583-4017-b7d9-f49c4f44f15c",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "537531271e7a6e595a1df2b7031ae5adf7cb0c852316d2ab2a0a4e4ad20be4cc",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-65551b2c-a583-4017-b7d9-f49c4f44f15c",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "bc18d3b85ccd7e796904c3adea844423aafc76165bbd43cadc7d01a5be16e1f0",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 235,
+          "height": 224
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "d49ea2ca0b93f65f92ba3be3463f46e5696085e4775f925cb0fe31781c337fc6"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "bc18d3b85ccd7e796904c3adea844423aafc76165bbd43cadc7d01a5be16e1f0",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-65551b2c-a583-4017-b7d9-f49c4f44f15c",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-majarah-al-sabaah-used-cars-trading/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "e9f66ed9167235553f5324e170209d00beb7b0f8ac0bbaa9e0584f4afb5c07d2",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-86fa6a68-843b-4e30-9535-31109e6eb675",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-majarah-al-sabaah-used-cars-trading/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "e9f66ed9167235553f5324e170209d00beb7b0f8ac0bbaa9e0584f4afb5c07d2",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-86fa6a68-843b-4e30-9535-31109e6eb675",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-majarah-al-sabaah-used-cars-trading/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "bc18d3b85ccd7e796904c3adea844423aafc76165bbd43cadc7d01a5be16e1f0",
+      "sha256": "bc18d3b85ccd7e796904c3adea844423aafc76165bbd43cadc7d01a5be16e1f0",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 224
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "e9f66ed9167235553f5324e170209d00beb7b0f8ac0bbaa9e0584f4afb5c07d2",
+      "sha256": "e9f66ed9167235553f5324e170209d00beb7b0f8ac0bbaa9e0584f4afb5c07d2",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 227
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "e9f66ed9167235553f5324e170209d00beb7b0f8ac0bbaa9e0584f4afb5c07d2",
+      "sha256": "e9f66ed9167235553f5324e170209d00beb7b0f8ac0bbaa9e0584f4afb5c07d2",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 227
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "fd97cd7e8f15c130b588c56029b6b70950f6767faa592a1cc6b0209851f3b3e0",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-65551b2c-a583-4017-b7d9-f49c4f44f15c",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "bc18d3b85ccd7e796904c3adea844423aafc76165bbd43cadc7d01a5be16e1f0",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 235,
+            "height": 224
+          }
+        }
+      },
+      "sourceReference": "dealers/al-majarah-al-sabaah-used-cars-trading/branding/generated-mark-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "5089ecd44e9e2eaebbaf6ab3de9c65face78785f12888fd38fd0af02bdfd50bc",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-86fa6a68-843b-4e30-9535-31109e6eb675",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "e9f66ed9167235553f5324e170209d00beb7b0f8ac0bbaa9e0584f4afb5c07d2",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 235,
+            "height": 227
+          }
+        }
+      },
+      "sourceReference": "dealers/al-majarah-al-sabaah-used-cars-trading/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "537531271e7a6e595a1df2b7031ae5adf7cb0c852316d2ab2a0a4e4ad20be4cc",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-65551b2c-a583-4017-b7d9-f49c4f44f15c",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "bc18d3b85ccd7e796904c3adea844423aafc76165bbd43cadc7d01a5be16e1f0",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 235,
+            "height": 224
+          }
+        }
+      },
+      "sourceReference": "dealers/al-majarah-al-sabaah-used-cars-trading/branding/generated-mark-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "d49ea2ca0b93f65f92ba3be3463f46e5696085e4775f925cb0fe31781c337fc6",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-65551b2c-a583-4017-b7d9-f49c4f44f15c",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "bc18d3b85ccd7e796904c3adea844423aafc76165bbd43cadc7d01a5be16e1f0",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 235,
+            "height": 224
+          }
+        }
+      },
+      "sourceReference": "dealers/al-majarah-al-sabaah-used-cars-trading/branding/generated-mark-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "1452bfb7ebb29cef6e9a8c4f3a32b35fec7863b128f3b35a9c001020234a1b50",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-86fa6a68-843b-4e30-9535-31109e6eb675",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "e9f66ed9167235553f5324e170209d00beb7b0f8ac0bbaa9e0584f4afb5c07d2",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 235,
+          "height": 227
+        }
+      }
+    }
+  }
+}

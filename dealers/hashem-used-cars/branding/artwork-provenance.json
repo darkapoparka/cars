@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "ae-sharjah-hashem-used-cars",
+  "slug": null,
+  "artworkDirectory": "ae-sharjah-hashem-used-cars",
+  "name": "Hashem Used Cars",
+  "renderedName": "Hashem Used Cars",
+  "kind": "independent-website-logo-proposal",
+  "dealerApproved": false,
+  "ownerApproved": false,
+  "sourceEvidence": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/hashem-used-cars",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/7016-toyota-land-cruiser-35-at-4wd-415-hp-gxr",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.heshamhashem.com/about",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "retainedOriginalsUnchanged": true,
+  "variants": {
+    "on-light": {
+      "path": "logo-on-light.png",
+      "sha256": "2532c067cdd143cc100d984abe49e510f2a3b914f19ba9fe559ee479550dbd30",
+      "width": 1024,
+      "height": 288,
+      "transparentFraction": 0.67779541015625,
+      "master": {
+        "path": "generated-on-light.png",
+        "sha256": "62d5758c320fd951686b86c4beec187f8dd15a4408fa3896b2e2e5706ae2e7d0",
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-4d6336d9-3f5b-4aa9-a06b-ad03068520fe",
+        "prompt": "Create one professional horizontal automotive dealership logo proposal for Hashem Used Cars. Required exact text, uppercase: HASHEM USED CARS. Every word must be present and spelled precisely; use sensible primary name and smaller descriptor hierarchy without tiny lettering. Produce a polished original identity with a restrained architectural emblem with two or three interlocking geometric forms. Initials H may inform the emblem. Emblem left, full clear name to the right, compact and balanced for a website header. Avoid overused shield and generic car silhouettes; no manufacturer badges. Clean modern lettering with careful kerning and strong legibility. All text is deep charcoal black, appropriate on a white/light header. One restrained red or gold accent may appear inside the emblem only; no pale text. Flat crisp edges, a small number of solid shapes, no chrome, no lighting, no shadow, no texture, no gradient. Genuine transparent alpha background, isolated logo with no background box, no grid, no checkerboard painted into pixels. No slogan, contact info, website, watermark, mockup, photograph, extra concept, or duplicate logo. Deliver exactly one horizontal full logo. This is an independent website identity proposal, not a claim of adopted branding.",
+        "reference": null
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 79,
+          "top": 66,
+          "width": 2053,
+          "height": 578
+        }
+      }
+    },
+    "on-dark": {
+      "path": "logo-on-dark.png",
+      "sha256": "cfdad0154ab2975d7241c06e092983cd3f2d958110f0f4f78b360e96f020694e",
+      "width": 1024,
+      "height": 288,
+      "transparentFraction": 0.5595126681857638,
+      "master": {
+        "path": "generated-on-dark.png",
+        "sha256": "da68caceac34b2db125a9fc2ba2e95eeb145dc74c44b7750d68a7bf893639c51",
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-8c87873e-3560-4f89-80ee-4ee0c72c67b9",
+        "prompt": "Create the matching light-on-dark production variant of the exact supplied logo. Preserve precisely the same emblem, geometry, spelling, word count, typographic hierarchy, proportions, layout and spacing. Required exact text: HASHEM USED CARS. Change EVERY letter, including all secondary descriptor words and legal suffixes, to solid white so it is legible over a dark or red website header. Change the charcoal portions of the emblem to white. Retain the small red/gold emblem accent only if it contrasts clearly against a dark header. True transparent alpha background; do not paint a dark rectangle or checkerboard. Flat clean edges, no glows, shadows, bevels, textures, gradients, new artwork, new icon, extra text or mockup. Deliver one horizontal matching logo, fully legible.",
+        "reference": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-4d6336d9-3f5b-4aa9-a06b-ad03068520fe.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 61,
+          "top": 62,
+          "width": 2056,
+          "height": 579
+        }
+      }
+    }
+  },
+  "review": {
+    "status": "artwork-visually-reviewed",
+    "alpha": "all exports measured as genuine transparent nonempty PNGs",
+    "spelling": "English wordmark inspected; source-bound display aliases retained",
+    "compact": "Horizontal logos only. Interactive 32/48/64px gallery preview is provided; separate compact/favicon artwork remains part of dealer-pack preparation.",
+    "sixDesigns": "not-yet-integrated-or-rendered",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "reviewer": "Codex visual inspection",
+    "header": "All 196 paired PNGs inspected at 240x64 on white, #111113 and #c40101",
+    "evidence": "final-review-11.png"
+  },
+  "releaseReady": false,
+  "artworkHolds": [],
+  "artworkReadyForIntegration": true
+}

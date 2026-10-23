@@ -1,0 +1,151 @@
+{
+  "schemaVersion": 1,
+  "dealer": "car-bazaar",
+  "status": "reviewed-imagegen-proposal",
+  "realLogoFirst": true,
+  "publicSources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/car-bazaar",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/7064-mercedes-benz-glc-class-300-9g-tronic-4matic-258-hp-glc-300",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.oneclickdrive.com/ar/company/dubai/car-bazaar-fzc",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "originals": [],
+  "creationMethod": "imagegen-proposal",
+  "dealerApproved": false,
+  "generatedInputs": {
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "master": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "b0f839132d67ca9fc1b500086d0661e2483a2b2bf3161a40f3e05f2643e26b5e",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-44f73ccb-f3bc-4306-a819-33e5986f84d4",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark-light.png",
+      "sha256": "e004f2685a8dd12492e9c1a51e4621f96129d8202f1e8eec1832ee05dcbfbf39",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-44f73ccb-f3bc-4306-a819-33e5986f84d4",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "b0f839132d67ca9fc1b500086d0661e2483a2b2bf3161a40f3e05f2643e26b5e",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 240,
+            "height": 198
+          }
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-dark.png",
+      "sha256": "262ff7bd532007beb7c3a6be5b8bf7e292df76c2f02940a88a37d5675307d148",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-2adf7baa-3294-486f-9cae-47712e7c4d92",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "4ac68fbd02a97c6a390dab66a059b4ab84dfa2fb2ae46792604b582fe1c0d968",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 240,
+            "height": 198
+          }
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "b0f839132d67ca9fc1b500086d0661e2483a2b2bf3161a40f3e05f2643e26b5e",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-44f73ccb-f3bc-4306-a819-33e5986f84d4",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "4ac68fbd02a97c6a390dab66a059b4ab84dfa2fb2ae46792604b582fe1c0d968",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-2adf7baa-3294-486f-9cae-47712e7c4d92",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "4ac68fbd02a97c6a390dab66a059b4ab84dfa2fb2ae46792604b582fe1c0d968",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-2adf7baa-3294-486f-9cae-47712e7c4d92",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewKind": "agent-visual-review",
+      "humanReview": false,
+      "dealerApproval": false,
+      "backgrounds": {
+        "onLight": "#ffffff",
+        "onDark": "#111113",
+        "onAccent": "#c40101"
+      },
+      "wordmarkWidths": [
+        220,
+        240
+      ],
+      "notes": "Exact reviewed Image Gen pair; native masters and generation provenance retained. Compact rasters cropped from the actual left symbol."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-22T23:42:46.338Z",
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#c40101"
+      ],
+      "widths": [
+        32,
+        48,
+        64
+      ],
+      "notes": "Left symbol cropped from reviewed horizontal variants; native rendering must independently qualify."
+    }
+  },
+  "sourceBlockers": [],
+  "artworkProvenance": {
+    "path": "branding/artwork-provenance.json",
+    "sha256": "062656fc63bde3c767388fe5cc13a75489943709553a6b29fcb10ff3f026a053",
+    "manifestSha256": "d25e9cee768a885052ac0a8df220d843c9b9c6f6f120d722705bead1cc99e694",
+    "nativeMasters": [
+      {
+        "path": "branding/native-generated-on-light.png",
+        "sha256": "92ca1dcad3dbf6ea1e3070dc1d537487c768801ce0c6d43a5b8a36b75050ed1f"
+      },
+      {
+        "path": "branding/native-generated-on-dark.png",
+        "sha256": "eeba2876d4525df6120f1a4994e03e854b7f8ac3c26912fe5139c74a5f0f1f14"
+      }
+    ]
+  }
+}

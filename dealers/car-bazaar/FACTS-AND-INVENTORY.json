@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "dealer": "car-bazaar",
+  "businessFacts": "business-facts.json",
+  "stock": "stock.json",
+  "inventoryKind": "illustrative-not-dealer-stock",
+  "inventoryNotice": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
+  "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+  "sources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/car-bazaar",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/7064-mercedes-benz-glc-class-300-9g-tronic-4matic-258-hp-glc-300",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/ar/company/dubai/car-bazaar-fzc",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    }
+  ]
+}
