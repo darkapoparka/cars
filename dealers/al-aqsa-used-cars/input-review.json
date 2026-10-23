@@ -3,7 +3,7 @@
   "kind": "cars-dealer-pack-input-review",
   "dealer": "al-aqsa-used-cars",
   "reviewed": true,
-  "reviewedAt": "2026-10-23T04:39:57.897Z",
+  "reviewedAt": "2026-10-23T05:02:26.107Z",
   "review": {
     "kind": "automated",
     "humanReview": false,
@@ -51,7 +51,7 @@
     },
     {
       "path": "branding/generated-mark-light.png",
-      "sha256": "5657d218517da0023dfcb25ac1f6e89a4d711b7c0ac22bd91b6cb9f01838e1a3"
+      "sha256": "50fcd995fa06230a7e616403fab674625ea1af2aeafe0e426a30b8e47cea9d07"
     },
     {
       "path": "branding/generated-on-dark.png",
@@ -63,11 +63,11 @@
     },
     {
       "path": "branding/logo-contract.json",
-      "sha256": "15cce3a631983f54c7fb4025ad0a767c36ceb2fc366ece543be163ca1c63adff"
+      "sha256": "ea58fe60706b6b5f56e5a84583637f88258dde6e7a7328bd148f70a99e36308d"
     },
     {
       "path": "branding/logo-recipe.json",
-      "sha256": "dae55962541d5100cc2fcaa6c67fcf7da6be1a2c70e2e1f42171fffecb47fcae"
+      "sha256": "4bd3cf0cf9efb1104a9c0b4c333a2d35c5699efc5563060d5e289bc50f79a8c4"
     },
     {
       "path": "branding/native-generated-on-dark.png",
@@ -78,8 +78,12 @@
       "sha256": "4209afa025f889c5b9b745aaa57aa1ae6ac07ac167989beb11ffada423b12628"
     },
     {
+      "path": "branding/reviewed-mark-light.png",
+      "sha256": "5657d218517da0023dfcb25ac1f6e89a4d711b7c0ac22bd91b6cb9f01838e1a3"
+    },
+    {
       "path": "branding/source.json",
-      "sha256": "1acb4714b1419e80ef3b394911237e83f24fa0bb1434346d58ccbaa60d8adbc8"
+      "sha256": "7f07c42bb2824d25661809873f9f5bc81eef4c6f0183a5fce5ba555046993db2"
     },
     {
       "path": "business-facts.json",
@@ -87,7 +91,7 @@
     },
     {
       "path": "copy-review.json",
-      "sha256": "7b5c556b2526a5d9509e778d207ddece5268df49ca2c2abe625946e9a852261f"
+      "sha256": "8e7116ff9974b62cfdd13e979b491dc43635328be089b684465fdd1347edb112"
     },
     {
       "path": "dealer-stock/template-demo-1.webp",
@@ -103,11 +107,11 @@
     },
     {
       "path": "dealer.json",
-      "sha256": "94fa08bd161eeffbcc61544adfb3cf1f17b2bfec489b8341b24f8f94bca17dd8"
+      "sha256": "2b463c8aac867182e8f58615489eb31798c906847ed5cc7611dc65081e20f625"
     },
     {
       "path": "identity-review.json",
-      "sha256": "05d93891845cac8b8b34cfc21bf8107c92a83b2813abe7e6e8f1327af46e8885"
+      "sha256": "71e688250cd2bba19510a525ddeff5f4b83fa5b4eaaa73aca4ad252f82f54672"
     },
     {
       "path": "locale.json",
@@ -119,7 +123,7 @@
     },
     {
       "path": "qualification.json",
-      "sha256": "f1c6a6934ba9d14af82d87ae3aaa0a7da5aa9c9e3571bb249f4f68e5584ac0a8"
+      "sha256": "6f79bfe95beafad8f3ec4a4e8c75b904e6abbfe9d41908eb0af59449d38a006f"
     },
     {
       "path": "source-evidence.json",

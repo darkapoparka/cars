@@ -50,27 +50,23 @@
   },
   "mark": {
     "path": "branding/logo-mark.png",
-    "sha256": "3d14e261098454ab0d5c539659453ab2fba0a74ddc004c25e24ea3f32ca52bd0",
+    "sha256": "3ce84418acc404315aa05ae158396909e77868b7b0c174bf47e438f878e80274",
     "generation": {
       "tool": "image_gen.imagegen",
       "generationId": "exec-95b77e7f-a7fe-435f-9073-86839b567d4e",
       "modelVersion": null,
       "derivedFrom": {
-        "path": "branding/generated-on-light.png",
-        "sha256": "9d9f37d752391592e7436fcfe1a092e8870d3e4304d2b3adf194e273243e5ad3",
-        "operation": "crop-left-symbol",
-        "crop": {
-          "left": 0,
-          "top": 0,
-          "width": 300,
-          "height": 316
-        }
+        "path": "branding/reviewed-mark-light.png",
+        "sha256": "5657d218517da0023dfcb25ac1f6e89a4d711b7c0ac22bd91b6cb9f01838e1a3",
+        "operation": "darken-white-outer-ring-for-white-compact",
+        "selection": "RGB channels above 155 beyond 35% minimum dimension radius",
+        "replacement": "#191919"
       }
     }
   },
   "favicon": {
     "path": "dealer-brand/favicon.ico",
-    "sha256": "6fe66740847818393f3fcdf88b8fb8dce3a5cc56148da09484429d221cb941b5"
+    "sha256": "35723cf83a0980aface777208b16f656c6d0e5d2ad93bc1501d958a0c2decc73"
   },
   "surfaces": {
     "onLight": {
@@ -148,21 +144,17 @@
   "supplemental": {
     "mark-on-light.webp": {
       "path": "dealer-brand/mark-on-light.webp",
-      "sha256": "b542bb1e5a21c161a5df055f0de7372b1eb372ac4fad281e69299c52ab80ef11",
+      "sha256": "27528d8d6d068ee5c43669241835b69cd77d0cfbe2c4cc8024368debd659f433",
       "generation": {
         "tool": "image_gen.imagegen",
         "generationId": "exec-95b77e7f-a7fe-435f-9073-86839b567d4e",
         "modelVersion": null,
         "derivedFrom": {
-          "path": "branding/generated-on-light.png",
-          "sha256": "9d9f37d752391592e7436fcfe1a092e8870d3e4304d2b3adf194e273243e5ad3",
-          "operation": "crop-left-symbol",
-          "crop": {
-            "left": 0,
-            "top": 0,
-            "width": 300,
-            "height": 316
-          }
+          "path": "branding/reviewed-mark-light.png",
+          "sha256": "5657d218517da0023dfcb25ac1f6e89a4d711b7c0ac22bd91b6cb9f01838e1a3",
+          "operation": "darken-white-outer-ring-for-white-compact",
+          "selection": "RGB channels above 155 beyond 35% minimum dimension radius",
+          "replacement": "#191919"
         }
       },
       "sourceReference": "dealers/al-aqsa-used-cars/branding/generated-mark-light.png"
@@ -190,42 +182,34 @@
     },
     "app-icon.png": {
       "path": "dealer-brand/app-icon.png",
-      "sha256": "3d14e261098454ab0d5c539659453ab2fba0a74ddc004c25e24ea3f32ca52bd0",
+      "sha256": "3ce84418acc404315aa05ae158396909e77868b7b0c174bf47e438f878e80274",
       "generation": {
         "tool": "image_gen.imagegen",
         "generationId": "exec-95b77e7f-a7fe-435f-9073-86839b567d4e",
         "modelVersion": null,
         "derivedFrom": {
-          "path": "branding/generated-on-light.png",
-          "sha256": "9d9f37d752391592e7436fcfe1a092e8870d3e4304d2b3adf194e273243e5ad3",
-          "operation": "crop-left-symbol",
-          "crop": {
-            "left": 0,
-            "top": 0,
-            "width": 300,
-            "height": 316
-          }
+          "path": "branding/reviewed-mark-light.png",
+          "sha256": "5657d218517da0023dfcb25ac1f6e89a4d711b7c0ac22bd91b6cb9f01838e1a3",
+          "operation": "darken-white-outer-ring-for-white-compact",
+          "selection": "RGB channels above 155 beyond 35% minimum dimension radius",
+          "replacement": "#191919"
         }
       },
       "sourceReference": "dealers/al-aqsa-used-cars/branding/generated-mark-light.png"
     },
     "favicon.ico": {
       "path": "dealer-brand/favicon.ico",
-      "sha256": "6fe66740847818393f3fcdf88b8fb8dce3a5cc56148da09484429d221cb941b5",
+      "sha256": "35723cf83a0980aface777208b16f656c6d0e5d2ad93bc1501d958a0c2decc73",
       "generation": {
         "tool": "image_gen.imagegen",
         "generationId": "exec-95b77e7f-a7fe-435f-9073-86839b567d4e",
         "modelVersion": null,
         "derivedFrom": {
-          "path": "branding/generated-on-light.png",
-          "sha256": "9d9f37d752391592e7436fcfe1a092e8870d3e4304d2b3adf194e273243e5ad3",
-          "operation": "crop-left-symbol",
-          "crop": {
-            "left": 0,
-            "top": 0,
-            "width": 300,
-            "height": 316
-          }
+          "path": "branding/reviewed-mark-light.png",
+          "sha256": "5657d218517da0023dfcb25ac1f6e89a4d711b7c0ac22bd91b6cb9f01838e1a3",
+          "operation": "darken-white-outer-ring-for-white-compact",
+          "selection": "RGB channels above 155 beyond 35% minimum dimension radius",
+          "replacement": "#191919"
         }
       },
       "sourceReference": "dealers/al-aqsa-used-cars/branding/generated-mark-light.png"
