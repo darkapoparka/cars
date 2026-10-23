@@ -788,6 +788,14 @@ test('Import direct-child locale fields receive compact gutters without changing
   assert.match(css, /dialog\[data-locale-dialog\] > :is\(#cars-locale-description,\.cars-locale-suggestion\)\{box-sizing:border-box!important/);
   assert.ok(css.includes('dialog[data-locale-dialog] > form{box-sizing:border-box!important;padding:0 24px 24px!important}'));
   assert.ok(css.includes('dialog[data-locale-dialog] > form{padding-inline:16px!important}'));
+  // The common #cars-locale-description reset has equal specificity to the
+  // direct-child :is(#cars-locale-description,...) selector. The latter MUST
+  // appear later, including its <=360px media override, or computed inset=0.
+  const reset = css.indexOf('dialog[data-locale-dialog] #cars-locale-description,dialog[data-locale-dialog] .cars-locale-suggestion');
+  const flatIntro = css.indexOf('dialog[data-locale-dialog] > :is(#cars-locale-description,.cars-locale-suggestion){');
+  const narrowIntro = css.indexOf('@media(max-width:360px){dialog[data-locale-dialog] > :is(#cars-locale-description,.cars-locale-suggestion)');
+  assert(reset >= 0 && flatIntro > reset && narrowIntro > reset,
+    'The reviewed Import intro gutter must win the equal-specificity !important reset on desktop and narrow screens');
   assert.equal((css.match(/dialog\[data-locale-dialog\] \.cars-locale-select-arrow,dialog\[data-locale-dialog\] \[data-locale-country-chevron\]\{display:none!important\}/g) ?? []).length, 1,
     'Keep the one CSS-background arrow; native SVG remains hidden even if its markup exists');
   assert.match(css, /dialog\[data-locale-dialog\] select\{appearance:none!important;padding-right:40px!important;background-image:url/);
