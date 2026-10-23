@@ -774,3 +774,21 @@ for (const name of ['deploy-autobest-release', 'fix-autobest-contact-localizatio
     if (name === 'deploy-autobest-release') assert.doesNotMatch(workflow, /deploy --prod --force/);
   });
 }
+
+test('Import direct-child locale fields receive compact gutters without changing the single-arrow owner', () => {
+  const r = render(sixHomesConfiguration());
+  const presentation = r.document.head.children.find(node => node.dataset?.carsLocalePresentation === 'compact-v1');
+  assert(presentation, 'Native compact styling must be bundled once');
+  const css = presentation.textContent;
+  // Import renders its intro, labels and form directly in <dialog>. The
+  // Auto Best and Modern wrappers already own their padding; avoid applying
+  // competing global form spacing or modifying the native controls.
+  assert.match(css, /dialog\[data-locale-dialog\] > \.cars-locale-eyebrow\{box-sizing:border-box!important/);
+  assert.match(css, /dialog\[data-locale-dialog\] > #cars-locale-title\{box-sizing:border-box!important/);
+  assert.match(css, /dialog\[data-locale-dialog\] > :is\(#cars-locale-description,\.cars-locale-suggestion\)\{box-sizing:border-box!important/);
+  assert.ok(css.includes('dialog[data-locale-dialog] > form{box-sizing:border-box!important;padding:0 24px 24px!important}'));
+  assert.ok(css.includes('dialog[data-locale-dialog] > form{padding-inline:16px!important}'));
+  assert.equal((css.match(/dialog\[data-locale-dialog\] \.cars-locale-select-arrow,dialog\[data-locale-dialog\] \[data-locale-country-chevron\]\{display:none!important\}/g) ?? []).length, 1,
+    'Keep the one CSS-background arrow; native SVG remains hidden even if its markup exists');
+  assert.match(css, /dialog\[data-locale-dialog\] select\{appearance:none!important;padding-right:40px!important;background-image:url/);
+});
