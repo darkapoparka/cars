@@ -8,9 +8,11 @@
   "publicSources": [
     {
       "url": "https://www.oneclickdrive.com/company/sharjah/al-ahd-used-cars",
-      "observedAt": "2026-10-18",
+      "observedAt": "2026-10-23",
       "supports": [
-        "retained-public-business-research"
+        "dealer-name",
+        "branch-address",
+        "shop-timings"
       ]
     }
   ],
