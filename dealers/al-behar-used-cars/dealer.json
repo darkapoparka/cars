@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Al Behar Used Cars",
     "publicOrigin": "https://al-behar-used-cars.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "f5d7950b26ce33c282111a2d134ab7443757ce074a3682a3e609c1e36f98cff6",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "8ab0faffc3e8c8a34bbe59d576c6b66d0a8c388503c506555217238769f14537"
+    }
   }
 }

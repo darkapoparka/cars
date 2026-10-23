@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "ae-sharjah-abo-saif",
+  "slug": "abo-saif",
+  "artworkDirectory": "abo-saif",
+  "name": "Abo Saif",
+  "renderedName": "Abo Saif",
+  "kind": "independent-website-logo-proposal",
+  "dealerApproved": false,
+  "ownerApproved": false,
+  "sourceEvidence": [
+    {
+      "url": "https://auto.ae/abosaif/",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "retainedOriginalsUnchanged": true,
+  "variants": {
+    "on-light": {
+      "path": "logo-on-light.png",
+      "sha256": "e90f1180507de5a977230ff4bb5ba98b2d771e2e46f7cb790d59d39116aba05d",
+      "width": 1024,
+      "height": 232,
+      "transparentFraction": 0.6929468615301724,
+      "master": {
+        "path": "generated-on-light.png",
+        "sha256": "abeb5ee6dc4e39c8d918770d6f49339cc5b601b34ab1ecee89964aeceec6cc41",
+        "width": 1983,
+        "height": 793
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-86134489-90f3-4d7f-bef9-bd284ad32561",
+        "prompt": "Create one professional horizontal automotive dealership logo proposal for Abo Saif. Required exact text, uppercase: ABO SAIF. Every word must be present and spelled precisely; use sensible primary name and smaller descriptor hierarchy without tiny lettering. Produce a polished original identity with a restrained architectural emblem with two or three interlocking geometric forms. Initials AS may inform the emblem. Emblem left, full clear name to the right, compact and balanced for a website header. Avoid overused shield and generic car silhouettes; no manufacturer badges. Clean modern lettering with careful kerning and strong legibility. All text is deep charcoal black, appropriate on a white/light header. One restrained red or gold accent may appear inside the emblem only; no pale text. Flat crisp edges, a small number of solid shapes, no chrome, no lighting, no shadow, no texture, no gradient. Genuine transparent alpha background, isolated logo with no background box, no grid, no checkerboard painted into pixels. No slogan, contact info, website, watermark, mockup, photograph, extra concept, or duplicate logo. Deliver exactly one horizontal full logo. This is an independent website identity proposal, not a claim of adopted branding.",
+        "reference": null
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 2,
+          "top": 175,
+          "width": 1981,
+          "height": 448
+        }
+      }
+    },
+    "on-dark": {
+      "path": "logo-on-dark.png",
+      "sha256": "9d1a1d2abc31a03fa37e1739cf1b3e6d186eee15c01478a335292c24e37928b7",
+      "width": 1024,
+      "height": 233,
+      "transparentFraction": 0.6088888143776824,
+      "master": {
+        "path": "generated-on-dark.png",
+        "sha256": "4d62c4111cf761ef1894520896c451efef8ca8bee24e2330ad03f58fcd30f8a5",
+        "width": 1983,
+        "height": 793
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-ac9b5bbd-fdc1-4c84-8acd-7a047523146c",
+        "prompt": "Create the matching light-on-dark production variant of the exact supplied logo. Preserve precisely the same emblem, geometry, spelling, word count, typographic hierarchy, proportions, layout and spacing. Required exact text: ABO SAIF. Change EVERY letter, including all secondary descriptor words and legal suffixes, to solid white so it is legible over a dark or red website header. Change the charcoal portions of the emblem to white. Retain the small red/gold emblem accent only if it contrasts clearly against a dark header. True transparent alpha background; do not paint a dark rectangle or checkerboard. Flat clean edges, no glows, shadows, bevels, textures, gradients, new artwork, new icon, extra text or mockup. Deliver one horizontal matching logo, fully legible.",
+        "reference": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-86134489-90f3-4d7f-bef9-bd284ad32561.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 2,
+          "top": 174,
+          "width": 1981,
+          "height": 450
+        }
+      }
+    }
+  },
+  "review": {
+    "status": "artwork-visually-reviewed",
+    "alpha": "all exports measured as genuine transparent nonempty PNGs",
+    "spelling": "English wordmark inspected; source-bound display aliases retained",
+    "compact": "Horizontal logos only. Interactive 32/48/64px gallery preview is provided; separate compact/favicon artwork remains part of dealer-pack preparation.",
+    "sixDesigns": "not-yet-integrated-or-rendered",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "reviewer": "Codex visual inspection",
+    "header": "All 196 paired PNGs inspected at 240x64 on white, #111113 and #c40101",
+    "evidence": "final-review-08.png"
+  },
+  "releaseReady": false,
+  "artworkHolds": [],
+  "artworkReadyForIntegration": true
+}

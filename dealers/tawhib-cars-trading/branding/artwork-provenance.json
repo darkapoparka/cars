@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "ae-sharjah-ajman-tawhib-cars-trading",
+  "slug": "tawhib-cars-trading",
+  "artworkDirectory": "tawhib-cars-trading",
+  "name": "Tawhib Cars Trading",
+  "renderedName": "Tawhib Cars Trading",
+  "kind": "independent-website-logo-proposal",
+  "dealerApproved": false,
+  "ownerApproved": false,
+  "sourceEvidence": [
+    {
+      "url": "https://ae.opensooq.com/en/shops/shop-46363162",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "retainedOriginalsUnchanged": true,
+  "variants": {
+    "on-light": {
+      "path": "logo-on-light.png",
+      "sha256": "1070814c05da7570aab91ac9ab27dbaed3a3727dc5e19ee49721f7f12cc22e12",
+      "width": 1024,
+      "height": 271,
+      "transparentFraction": 0.6539185020756457,
+      "master": {
+        "path": "generated-on-light.png",
+        "sha256": "f522310932dd2b35ddee2b9be37190c45190db39928bc92676585d1af85c67b6",
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-f2997493-412b-4f76-8b97-3a6f7f021ead",
+        "prompt": "Create one professional horizontal automotive dealership logo proposal for Tawhib Cars Trading. Required exact text, uppercase: TAWHIB CARS TRADING. Every word must be present and spelled precisely; use sensible primary name and smaller descriptor hierarchy without tiny lettering. Produce a polished original identity with a distinctive custom typographic ligature in a refined square emblem. Initials T may inform the emblem. Emblem left, full clear name to the right, compact and balanced for a website header. Avoid overused shield and generic car silhouettes; no manufacturer badges. Clean modern lettering with careful kerning and strong legibility. All text is deep charcoal black, appropriate on a white/light header. One restrained red or gold accent may appear inside the emblem only; no pale text. Flat crisp edges, a small number of solid shapes, no chrome, no lighting, no shadow, no texture, no gradient. Genuine transparent alpha background, isolated logo with no background box, no grid, no checkerboard painted into pixels. No slogan, contact info, website, watermark, mockup, photograph, extra concept, or duplicate logo. Deliver exactly one horizontal full logo. This is an independent website identity proposal, not a claim of adopted branding.",
+        "reference": null
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 32,
+          "top": 81,
+          "width": 2122,
+          "height": 562
+        }
+      }
+    },
+    "on-dark": {
+      "path": "logo-on-dark.png",
+      "sha256": "36d3163014166618a1c76628ef9f84cbf941862846f367583cebd3d4ebfeea82",
+      "width": 1024,
+      "height": 272,
+      "transparentFraction": 0.53265380859375,
+      "master": {
+        "path": "generated-on-dark.png",
+        "sha256": "b99e21ccb310fec94838214b63317a7db12a59ad6000338fed4266281fdabaf5",
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-303832ab-317e-4397-91ed-ed7694def009",
+        "prompt": "Create the matching light-on-dark production variant of the exact supplied logo. Preserve precisely the same emblem, geometry, spelling, word count, typographic hierarchy, proportions, layout and spacing. Required exact text: TAWHIB CARS TRADING. Change EVERY letter, including all secondary descriptor words and legal suffixes, to solid white so it is legible over a dark or red website header. Change the charcoal portions of the emblem to white. Retain the small red/gold emblem accent only if it contrasts clearly against a dark header. True transparent alpha background; do not paint a dark rectangle or checkerboard. Flat clean edges, no glows, shadows, bevels, textures, gradients, new artwork, new icon, extra text or mockup. Deliver one horizontal matching logo, fully legible.",
+        "reference": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-f2997493-412b-4f76-8b97-3a6f7f021ead.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 32,
+          "top": 79,
+          "width": 2126,
+          "height": 565
+        }
+      }
+    }
+  },
+  "review": {
+    "status": "artwork-visually-reviewed",
+    "alpha": "all exports measured as genuine transparent nonempty PNGs",
+    "spelling": "English wordmark inspected; source-bound display aliases retained",
+    "compact": "Horizontal logos only. Interactive 32/48/64px gallery preview is provided; separate compact/favicon artwork remains part of dealer-pack preparation.",
+    "sixDesigns": "not-yet-integrated-or-rendered",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "reviewer": "Codex visual inspection",
+    "header": "All 196 paired PNGs inspected at 240x64 on white, #111113 and #c40101",
+    "evidence": "final-review-08.png"
+  },
+  "releaseReady": false,
+  "artworkHolds": [],
+  "artworkReadyForIntegration": true
+}
