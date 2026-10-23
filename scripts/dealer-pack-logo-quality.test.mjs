@@ -68,7 +68,7 @@ test('forged signoff, changed source, missing review, or screenshot drift is not
 test('rendered review refuses screenshots from another dealer or an incomplete width/design grid',()=>{
  const {pack,screenshots}=fixture();screenshots[7].key='another-dealer';
  const result=assessLogoQualityDecision({pack,screenshots});
- assert.equal(result.status,'failed');assert(result.findings.some(value=>value.includes('logo-review-six-design-stale')));
+ assert.equal(result.status,'failed');assert(result.findings.some(value=>value.includes('logo-review-run-screenshot-invalid')));
 });
 
 test('reference grid rejects duplicated keys and invalid hashes without native screenshots',()=>{
