@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "ae-dubai-gangsta-world-luxury-automobiles-trading-llc-fz",
+  "slug": "gangsta-world-luxury-automobiles-10825258ed",
+  "artworkDirectory": "gangsta-world-luxury-automobiles-10825258ed",
+  "name": "Gangsta World Luxury Automobiles Trading LLC FZ",
+  "renderedName": "Gangsta World Luxury Automobiles",
+  "kind": "reference-guided-website-logo-proposal",
+  "dealerApproved": false,
+  "ownerApproved": false,
+  "sourceEvidence": [
+    {
+      "url": "https://www.oneclickdrive.com/company/dubai/gangsta-world-luxury-automobiles-trading-llc-fz",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "retainedOriginalsUnchanged": true,
+  "variants": {
+    "on-light": {
+      "path": "logo-on-light.png",
+      "sha256": "98178fc4a68c661b655efe5f0fbde053e6295be40ce11b8e67a75411efdcf051",
+      "width": 1024,
+      "height": 273,
+      "transparentFraction": 0.6508628090659341,
+      "master": {
+        "path": "generated-on-light.png",
+        "sha256": "7378bf5bd335e5e9bec9a791031284b5007e0ac393b920ecd106010cd57c544e",
+        "width": 2170,
+        "height": 725
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-d0ffa8bb-38a6-4a1e-8cc3-0ff4cf106d62",
+        "prompt": "Correct the light-background color treatment of the supplied logo while preserving its recognizable emblem, typeface, exact geometry, word spacing and layout. Exact required wording: GANGSTA WORLD LUXURY AUTOMOBILES. EVERY letter must be opaque deep charcoal black, including every secondary word, colored AL prefix, descriptor and legal suffix. Do not leave any gold, blue, red or white LETTERS. Change the white/outlined Gangsta World script to solid CHARCOAL lettering, no white fill or white outline. Preserve gold palm emblem, with clear LUXURY AUTOMOBILES below. Genuine transparent alpha, no background, no glow, shadow, gradient, texture, checkerboard, frame, mockup, watermark, extra concepts or altered spelling. One crisp horizontal production logo only.",
+        "reference": "L:/CODEX/cars/leads/branding/pending-20261023/gangsta-world-luxury-automobiles-10825258ed/logo-on-light.png",
+        "referenceSnapshot": {
+          "path": "correction-input-on-light.png",
+          "sha256": "66d47431bea461b872f6e3d43c3691e0ba6c172786e3fa2e578433cbcbfaa0a2",
+          "sameBytesAsToolInput": true,
+          "nativeOriginal": {
+            "path": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-9b10fad3-f347-49aa-80d9-cc2a6005b3d2.png",
+            "sha256": "c49e7c24c825fb3364d737b8cb30e48baca552becc72fe41e9f253cd1e8a246e"
+          },
+          "note": "Exact input snapshot retained after correction. Re-export from unchanged native original matches recorded pre-correction PNG SHA256."
+        },
+        "referencePathMeaning": "Original tool input working filename, later overwritten by corrected export. referenceSnapshot retains the exact input bytes."
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 14,
+          "top": 57,
+          "width": 2148,
+          "height": 573
+        }
+      }
+    },
+    "on-dark": {
+      "path": "logo-on-dark.png",
+      "sha256": "15f3724e3081513a9c85496a4d63555882f0f66ba0148a55f510beaff9377771",
+      "width": 1024,
+      "height": 275,
+      "transparentFraction": 0.5421484375,
+      "master": {
+        "path": "generated-on-dark.png",
+        "sha256": "16c83e88ef8a388802a3fd554301e8462782355819128ad228e84e37712a9b29",
+        "width": 2170,
+        "height": 725
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-448a2f33-d607-42bb-a974-c47951ac91c2",
+        "prompt": "Create the matching light-on-dark production variant of the exact supplied logo. Preserve precisely the same emblem, geometry, spelling, word count, typographic hierarchy, proportions, layout and spacing. Required exact text: GANGSTA WORLD LUXURY AUTOMOBILES. Change EVERY letter, including all secondary descriptor words and legal suffixes, to solid white so it is legible over a dark or red website header. Change the charcoal portions of the emblem to white. Retain the small red/gold emblem accent only if it contrasts clearly against a dark header. True transparent alpha background; do not paint a dark rectangle or checkerboard. Flat clean edges, no glows, shadows, bevels, textures, gradients, new artwork, new icon, extra text or mockup. Deliver one horizontal matching logo, fully legible.",
+        "reference": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-d0ffa8bb-38a6-4a1e-8cc3-0ff4cf106d62.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 14,
+          "top": 54,
+          "width": 2151,
+          "height": 578
+        }
+      }
+    }
+  },
+  "review": {
+    "status": "artwork-visually-reviewed",
+    "alpha": "all exports measured as genuine transparent nonempty PNGs",
+    "spelling": "English wordmark inspected; source-bound display aliases retained",
+    "compact": "Horizontal logos only. Interactive 32/48/64px gallery preview is provided; separate compact/favicon artwork remains part of dealer-pack preparation.",
+    "sixDesigns": "not-yet-integrated-or-rendered",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "reviewer": "Codex visual inspection",
+    "header": "All 196 paired PNGs inspected at 240x64 on white, #111113 and #c40101",
+    "evidence": "final-review-07.png",
+    "correctionEvidence": "final-corrections-review.png"
+  },
+  "releaseReady": false,
+  "originalReference": {
+    "path": "_references/gangsta-world-luxury-automobiles-10825258ed.png",
+    "sha256": "2a0d1392555de34f16cb35b41d0f408d9a4b32ddf348215fb67052a16fa58941",
+    "sourceUrl": "https://static.oneclickdrive.com/application/views/img/company/gangsta-paradise.png",
+    "observedAt": "2026-10-23",
+    "adaptation": "English website adaptation; original retained unchanged; adoption not claimed"
+  },
+  "artworkHolds": [
+    "Reference graphic says Gangsta Paradise; canonical lead says Gangsta World. This adapted proposal is retained, and the alias must be confirmed before integration."
+  ],
+  "artworkReadyForIntegration": false
+}

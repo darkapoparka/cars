@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Gangsta World Luxury Automobiles Trading LLC FZ",
     "publicOrigin": "https://gangsta-world-luxury-automobiles-10825258ed.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "98178fc4a68c661b655efe5f0fbde053e6295be40ce11b8e67a75411efdcf051",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "badd825901a789f5bd1b28e39d38015ecf7d8fd349df68790814537a85962c25"
+    }
   }
 }

@@ -1,19 +1,19 @@
 {
   "schemaVersion": 1,
   "kind": "cars-new-dealer-identity-review",
-  "reviewed": false,
-  "reviewedAt": null,
+  "reviewed": true,
+  "reviewedAt": "2026-10-23T05:35:58.584Z",
   "dealer": "gangsta-world-luxury-automobiles-10825258ed",
   "dealerId": "ae-dubai-gangsta-world-luxury-automobiles-trading-llc-fz",
   "repository": "darkapoparka/cars",
   "existingIdentityFound": false,
   "sourceOwnership": "cars-canonical",
   "review": {
-    "kind": "pending",
+    "kind": "automated",
     "humanReview": false,
     "dealerApproval": false
   },
-  "method": "Draft identity only; run automated pack input review before building.",
+  "method": "Automated exact registry/pack identity, canonical hosting and batch comparison; retained public source fields were structurally checked, not human-approved.",
   "sources": [
     {
       "url": "https://www.oneclickdrive.com/company/dubai/gangsta-world-luxury-automobiles-trading-llc-fz",

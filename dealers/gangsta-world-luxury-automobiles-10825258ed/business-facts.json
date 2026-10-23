@@ -10,7 +10,7 @@
     "currency": "AED",
     "distanceUnit": "km",
     "locale": "en-AE",
-    "address": "",
+    "address": "4th St, Al Quoz Industrial Area 3, Dubai, UAE",
     "phone": "",
     "phoneDisplay": "",
     "email": "",
@@ -18,7 +18,7 @@
     "stockUrl": "https://www.oneclickdrive.com/company/dubai/gangsta-world-luxury-automobiles-trading-llc-fz",
     "hours": "",
     "sourceUrl": "https://www.oneclickdrive.com/company/dubai/gangsta-world-luxury-automobiles-trading-llc-fz",
-    "observedAt": "2026-10-18",
+    "observedAt": "2026-10-23",
     "inventoryNotice": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
     "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
     "logo": "/dealer-brand/logo-on-light.png",
@@ -28,9 +28,20 @@
   "sources": [
     {
       "url": "https://www.oneclickdrive.com/company/dubai/gangsta-world-luxury-automobiles-trading-llc-fz",
-      "observedAt": "2026-10-18",
+      "observedAt": "2026-10-23",
       "supports": [
-        "retained-public-business-research"
+        "legal-seller-name",
+        "Dubai-branch-address",
+        "stock"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/Mercedes-Benz/Maybach-S680/?id=54214",
+      "observedAt": "2026-10-23",
+      "supports": [
+        "legal-seller-attribution",
+        "dealer-authored-Gangsta-Paradise-alias",
+        "matching-Al-Quoz-premises"
       ]
     }
   ]

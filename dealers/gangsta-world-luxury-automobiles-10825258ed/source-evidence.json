@@ -8,9 +8,20 @@
   "publicSources": [
     {
       "url": "https://www.oneclickdrive.com/company/dubai/gangsta-world-luxury-automobiles-trading-llc-fz",
-      "observedAt": "2026-10-18",
+      "observedAt": "2026-10-23",
       "supports": [
-        "retained-public-business-research"
+        "legal-seller-name",
+        "Dubai-branch-address",
+        "stock"
+      ]
+    },
+    {
+      "url": "https://www.oneclickdrive.com/details/index/search-usedcar-dubai/Mercedes-Benz/Maybach-S680/?id=54214",
+      "observedAt": "2026-10-23",
+      "supports": [
+        "legal-seller-attribution",
+        "dealer-authored-Gangsta-Paradise-alias",
+        "matching-Al-Quoz-premises"
       ]
     }
   ],
