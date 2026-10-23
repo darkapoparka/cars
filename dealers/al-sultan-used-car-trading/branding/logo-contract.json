@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-sultan-used-car-trading",
+  "reviewed": true,
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "6933413333d0e1314856e70b8e940f831085a916ec9c6405cbd1d2e016f3f781",
+      "sourceSha256": "37769e9eca8769f10e73352b6717b0f4ad38873b8180b19b78ef7be5246b41f2"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "86c7df2da533dedc44f1a48a473f7743d3c9dc139ca5120c8f3c54bf718e8bf7",
+      "sourceSha256": "06fccf71812a3e95d3244fa9e27cd8d33be84108a6d609fdca0e056e6ea3f69b"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "86c7df2da533dedc44f1a48a473f7743d3c9dc139ca5120c8f3c54bf718e8bf7",
+      "sourceSha256": "06fccf71812a3e95d3244fa9e27cd8d33be84108a6d609fdca0e056e6ea3f69b"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "37769e9eca8769f10e73352b6717b0f4ad38873b8180b19b78ef7be5246b41f2",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-f7a65846-757e-4ece-adaa-9ca23ea7ebd8",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "30ccf8d643adfa5f3e58659d73819394f48b4573ed4af5b528052fc3d28cf05b",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-f7a65846-757e-4ece-adaa-9ca23ea7ebd8",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "37769e9eca8769f10e73352b6717b0f4ad38873b8180b19b78ef7be5246b41f2",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 280,
+          "height": 323
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "9be62dcc58004fb3cd281c27ad9e28e1710b4e8c2411cecb288ab85c3c558e81"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "37769e9eca8769f10e73352b6717b0f4ad38873b8180b19b78ef7be5246b41f2",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-f7a65846-757e-4ece-adaa-9ca23ea7ebd8",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-sultan-used-car-trading/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "06fccf71812a3e95d3244fa9e27cd8d33be84108a6d609fdca0e056e6ea3f69b",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-97e74a5c-4051-4769-b916-25a5bc3151fb",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-sultan-used-car-trading/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "06fccf71812a3e95d3244fa9e27cd8d33be84108a6d609fdca0e056e6ea3f69b",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-97e74a5c-4051-4769-b916-25a5bc3151fb",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-sultan-used-car-trading/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "37769e9eca8769f10e73352b6717b0f4ad38873b8180b19b78ef7be5246b41f2",
+      "sha256": "37769e9eca8769f10e73352b6717b0f4ad38873b8180b19b78ef7be5246b41f2",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 323
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "06fccf71812a3e95d3244fa9e27cd8d33be84108a6d609fdca0e056e6ea3f69b",
+      "sha256": "06fccf71812a3e95d3244fa9e27cd8d33be84108a6d609fdca0e056e6ea3f69b",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 323
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "06fccf71812a3e95d3244fa9e27cd8d33be84108a6d609fdca0e056e6ea3f69b",
+      "sha256": "06fccf71812a3e95d3244fa9e27cd8d33be84108a6d609fdca0e056e6ea3f69b",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 323
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "411a69dd831cf030bb9620c0fefe82bfc5dd2e0e9f2b9df194ec59babde5e860",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-f7a65846-757e-4ece-adaa-9ca23ea7ebd8",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "37769e9eca8769f10e73352b6717b0f4ad38873b8180b19b78ef7be5246b41f2",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 280,
+            "height": 323
+          }
+        }
+      },
+      "sourceReference": "dealers/al-sultan-used-car-trading/branding/generated-mark-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "d158a9aea310978528b879eb1e8ac6a2f83a5b29d44d741fdf160e6383eb62c7",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-97e74a5c-4051-4769-b916-25a5bc3151fb",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "06fccf71812a3e95d3244fa9e27cd8d33be84108a6d609fdca0e056e6ea3f69b",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 280,
+            "height": 323
+          }
+        }
+      },
+      "sourceReference": "dealers/al-sultan-used-car-trading/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "30ccf8d643adfa5f3e58659d73819394f48b4573ed4af5b528052fc3d28cf05b",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-f7a65846-757e-4ece-adaa-9ca23ea7ebd8",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "37769e9eca8769f10e73352b6717b0f4ad38873b8180b19b78ef7be5246b41f2",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 280,
+            "height": 323
+          }
+        }
+      },
+      "sourceReference": "dealers/al-sultan-used-car-trading/branding/generated-mark-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "9be62dcc58004fb3cd281c27ad9e28e1710b4e8c2411cecb288ab85c3c558e81",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-f7a65846-757e-4ece-adaa-9ca23ea7ebd8",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "37769e9eca8769f10e73352b6717b0f4ad38873b8180b19b78ef7be5246b41f2",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 280,
+            "height": 323
+          }
+        }
+      },
+      "sourceReference": "dealers/al-sultan-used-car-trading/branding/generated-mark-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "5056bff2ccb59169818ce8e53564b122d28a0d7b6f56bbc45f41141342b2222b",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-97e74a5c-4051-4769-b916-25a5bc3151fb",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "06fccf71812a3e95d3244fa9e27cd8d33be84108a6d609fdca0e056e6ea3f69b",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 280,
+          "height": 323
+        }
+      }
+    }
+  }
+}

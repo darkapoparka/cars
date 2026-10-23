@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-sabah-used-cars-trading",
+  "reviewed": true,
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "3ae6442c8156e75e62640050bdf11b1fa751a320564c32575607caec4ad60ac4",
+      "sourceSha256": "318b50c0a28329a4e3c0c93aa11ed1e2dd03dda4cfc74f26526f958dbd943059"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "28df6ecc85bf52f4d9b2e490663482f6493babffac6f58e24e123851f3097605",
+      "sourceSha256": "430d3a7c80a9239cac1601189d478d7fd94eaec5b2b9f20ec1c9e6044ca97526"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "28df6ecc85bf52f4d9b2e490663482f6493babffac6f58e24e123851f3097605",
+      "sourceSha256": "430d3a7c80a9239cac1601189d478d7fd94eaec5b2b9f20ec1c9e6044ca97526"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "318b50c0a28329a4e3c0c93aa11ed1e2dd03dda4cfc74f26526f958dbd943059",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-66cb8c6b-bb0c-407d-be70-2d6a7815d9ce",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "2c331a9ea4de598cead15506410f0c5065f73abf63fc8231cc861fa47b4f381d",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-66cb8c6b-bb0c-407d-be70-2d6a7815d9ce",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "318b50c0a28329a4e3c0c93aa11ed1e2dd03dda4cfc74f26526f958dbd943059",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 245,
+          "height": 266
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "34d0f7c77120eb59968c0ef4f2a8f7d1a4ec143527310b2e1345aabd8e9b028a"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "318b50c0a28329a4e3c0c93aa11ed1e2dd03dda4cfc74f26526f958dbd943059",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-66cb8c6b-bb0c-407d-be70-2d6a7815d9ce",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-sabah-used-cars-trading/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "430d3a7c80a9239cac1601189d478d7fd94eaec5b2b9f20ec1c9e6044ca97526",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-18dd7e89-e4f1-4ae9-b3a1-83e18903be17",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-sabah-used-cars-trading/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "430d3a7c80a9239cac1601189d478d7fd94eaec5b2b9f20ec1c9e6044ca97526",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-18dd7e89-e4f1-4ae9-b3a1-83e18903be17",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-sabah-used-cars-trading/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "318b50c0a28329a4e3c0c93aa11ed1e2dd03dda4cfc74f26526f958dbd943059",
+      "sha256": "318b50c0a28329a4e3c0c93aa11ed1e2dd03dda4cfc74f26526f958dbd943059",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 266
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "430d3a7c80a9239cac1601189d478d7fd94eaec5b2b9f20ec1c9e6044ca97526",
+      "sha256": "430d3a7c80a9239cac1601189d478d7fd94eaec5b2b9f20ec1c9e6044ca97526",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 267
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "430d3a7c80a9239cac1601189d478d7fd94eaec5b2b9f20ec1c9e6044ca97526",
+      "sha256": "430d3a7c80a9239cac1601189d478d7fd94eaec5b2b9f20ec1c9e6044ca97526",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 267
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "c7ae0f7c6dd7aa8efeb737ebb1c6bc33c83fe6a2eb3cb97436e41822472cd70e",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-66cb8c6b-bb0c-407d-be70-2d6a7815d9ce",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "318b50c0a28329a4e3c0c93aa11ed1e2dd03dda4cfc74f26526f958dbd943059",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 245,
+            "height": 266
+          }
+        }
+      },
+      "sourceReference": "dealers/al-sabah-used-cars-trading/branding/generated-mark-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "c064886c442064784799141fd8f96cfbc7c4405386e55232854a6f0bea30a212",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-18dd7e89-e4f1-4ae9-b3a1-83e18903be17",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "430d3a7c80a9239cac1601189d478d7fd94eaec5b2b9f20ec1c9e6044ca97526",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 245,
+            "height": 267
+          }
+        }
+      },
+      "sourceReference": "dealers/al-sabah-used-cars-trading/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "2c331a9ea4de598cead15506410f0c5065f73abf63fc8231cc861fa47b4f381d",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-66cb8c6b-bb0c-407d-be70-2d6a7815d9ce",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "318b50c0a28329a4e3c0c93aa11ed1e2dd03dda4cfc74f26526f958dbd943059",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 245,
+            "height": 266
+          }
+        }
+      },
+      "sourceReference": "dealers/al-sabah-used-cars-trading/branding/generated-mark-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "34d0f7c77120eb59968c0ef4f2a8f7d1a4ec143527310b2e1345aabd8e9b028a",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-66cb8c6b-bb0c-407d-be70-2d6a7815d9ce",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "318b50c0a28329a4e3c0c93aa11ed1e2dd03dda4cfc74f26526f958dbd943059",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 245,
+            "height": 266
+          }
+        }
+      },
+      "sourceReference": "dealers/al-sabah-used-cars-trading/branding/generated-mark-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "ad4b36fa78acb4f5c866720da176bdc20cfccb50d49f3fce489e10011aa41282",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-18dd7e89-e4f1-4ae9-b3a1-83e18903be17",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "430d3a7c80a9239cac1601189d478d7fd94eaec5b2b9f20ec1c9e6044ca97526",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 245,
+          "height": 267
+        }
+      }
+    }
+  }
+}

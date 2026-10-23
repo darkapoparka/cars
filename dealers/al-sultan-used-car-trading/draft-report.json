@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "type": "cars-dealer-pack-draft",
+  "slug": "al-sultan-used-car-trading",
+  "dealerId": "ae-umm-al-quwain-al-sultan-used-car-trading",
+  "status": "draft",
+  "buildReady": false,
+  "providerWrites": 0,
+  "createdAt": "2026-10-23T04:20:15.122Z",
+  "inventoryKind": "illustrative-not-dealer-stock",
+  "inventoryRecords": 3,
+  "logoReady": false,
+  "missingFacts": [
+    {
+      "field": "business.email",
+      "required": false,
+      "reason": "No usable sourced value in the retained public business record."
+    },
+    {
+      "field": "business.website",
+      "required": false,
+      "reason": "No usable sourced value in the retained public business record."
+    },
+    {
+      "field": "business.hours",
+      "required": false,
+      "reason": "No usable sourced value in the retained public business record."
+    },
+    {
+      "field": "prices",
+      "required": false,
+      "reason": "All listing prices are omitted under the public-repository scope."
+    }
+  ],
+  "contactScreen": {
+    "schemaVersion": 1,
+    "kind": "cars-automated-public-contact-screen",
+    "dealer": "al-sultan-used-car-trading",
+    "method": "heuristic; no claim that unflagged values cannot be personal",
+    "flags": [],
+    "blocking": []
+  },
+  "blocking": [
+    "branding.reviewed-assets",
+    "automated-input-review"
+  ],
+  "stockAcquisition": "maintained-disclosed-demo",
+  "liveListingFetchPerformed": false,
+  "next": "Retain public listing snapshots with --stock/--media-root when available; review source artwork, prepare the logo, then run dealer-pack review. Automated input review does not imply human, dealer or hosted approval."
+}

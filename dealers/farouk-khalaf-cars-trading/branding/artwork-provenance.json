@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "ae-sharjah-farouk-khalaf-cars-trading",
+  "slug": null,
+  "artworkDirectory": "ae-sharjah-farouk-khalaf-cars-trading",
+  "name": "Farouk Khalaf Cars Trading",
+  "renderedName": "Farouk Khalaf Cars Trading",
+  "kind": "independent-website-logo-proposal",
+  "dealerApproved": false,
+  "ownerApproved": false,
+  "sourceEvidence": [
+    {
+      "url": "https://ae.opensooq.com/en/shops/shop-69676222",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "retainedOriginalsUnchanged": true,
+  "variants": {
+    "on-light": {
+      "path": "logo-on-light.png",
+      "sha256": "8a1ff6320aa0d8a7752fd3f4ce5d1683c4d3436fb4070278376f755b73e3bd2d",
+      "width": 1024,
+      "height": 233,
+      "transparentFraction": 0.6927600254828327,
+      "master": {
+        "path": "generated-on-light.png",
+        "sha256": "f4c7f2656ee7b1e1114872cea0ef864315d8a7d90741de721276ed170cbba6c3",
+        "width": 2167,
+        "height": 726
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-f65b0f25-1365-4652-acfa-020db9381027",
+        "prompt": "Create one professional horizontal automotive dealership logo proposal for Farouk Khalaf Cars Trading. Required exact text, uppercase: FAROUK KHALAF CARS TRADING. Every word must be present and spelled precisely; use sensible primary name and smaller descriptor hierarchy without tiny lettering. Produce a polished original identity with a distinctive custom typographic ligature in a refined square emblem. Initials FK may inform the emblem. Emblem left, full clear name to the right, compact and balanced for a website header. Avoid overused shield and generic car silhouettes; no manufacturer badges. Clean modern lettering with careful kerning and strong legibility. All text is deep charcoal black, appropriate on a white/light header. One restrained red or gold accent may appear inside the emblem only; no pale text. Flat crisp edges, a small number of solid shapes, no chrome, no lighting, no shadow, no texture, no gradient. Genuine transparent alpha background, isolated logo with no background box, no grid, no checkerboard painted into pixels. No slogan, contact info, website, watermark, mockup, photograph, extra concept, or duplicate logo. Deliver exactly one horizontal full logo. This is an independent website identity proposal, not a claim of adopted branding.",
+        "reference": null
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 66,
+          "top": 117,
+          "width": 2067,
+          "height": 470
+        }
+      }
+    },
+    "on-dark": {
+      "path": "logo-on-dark.png",
+      "sha256": "688319ce17ae59609a142918bd4dde36b62075ba0d0a6942283ccba09c47abe9",
+      "width": 1024,
+      "height": 233,
+      "transparentFraction": 0.5549515490879828,
+      "master": {
+        "path": "generated-on-dark.png",
+        "sha256": "0cfc41335ac52b5df729735e25d8f7c8ac464ccda344141a370d5ab2bf49b757",
+        "width": 2167,
+        "height": 726
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-08c33c30-930a-4516-9081-00796e8d8c06",
+        "prompt": "Create the matching light-on-dark production variant of the exact supplied logo. Preserve precisely the same emblem, geometry, spelling, word count, typographic hierarchy, proportions, layout and spacing. Required exact text: FAROUK KHALAF CARS TRADING. Change EVERY letter, including all secondary descriptor words and legal suffixes, to solid white so it is legible over a dark or red website header. Change the charcoal portions of the emblem to white. Retain the small red/gold emblem accent only if it contrasts clearly against a dark header. True transparent alpha background; do not paint a dark rectangle or checkerboard. Flat clean edges, no glows, shadows, bevels, textures, gradients, new artwork, new icon, extra text or mockup. Deliver one horizontal matching logo, fully legible.",
+        "reference": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-f65b0f25-1365-4652-acfa-020db9381027.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 7,
+          "top": 115,
+          "width": 2154,
+          "height": 491
+        }
+      }
+    }
+  },
+  "review": {
+    "status": "artwork-visually-reviewed",
+    "alpha": "all exports measured as genuine transparent nonempty PNGs",
+    "spelling": "English wordmark inspected; source-bound display aliases retained",
+    "compact": "Horizontal logos only. Interactive 32/48/64px gallery preview is provided; separate compact/favicon artwork remains part of dealer-pack preparation.",
+    "sixDesigns": "not-yet-integrated-or-rendered",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "reviewer": "Codex visual inspection",
+    "header": "All 196 paired PNGs inspected at 240x64 on white, #111113 and #c40101",
+    "evidence": "final-review-11.png"
+  },
+  "releaseReady": false,
+  "artworkHolds": [],
+  "artworkReadyForIntegration": true
+}

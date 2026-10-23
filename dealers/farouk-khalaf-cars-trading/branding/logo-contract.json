@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "dealer": "farouk-khalaf-cars-trading",
+  "reviewed": true,
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "db7170db5d058049d068da426161ee640caa00a91293359d315eae976b03e78a",
+      "sourceSha256": "8a1ff6320aa0d8a7752fd3f4ce5d1683c4d3436fb4070278376f755b73e3bd2d"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "59dd351195e656b86dd70c9e55cd300e5271576ee24f1eeb7e5c3a9c6ef7c192",
+      "sourceSha256": "688319ce17ae59609a142918bd4dde36b62075ba0d0a6942283ccba09c47abe9"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "59dd351195e656b86dd70c9e55cd300e5271576ee24f1eeb7e5c3a9c6ef7c192",
+      "sourceSha256": "688319ce17ae59609a142918bd4dde36b62075ba0d0a6942283ccba09c47abe9"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "8a1ff6320aa0d8a7752fd3f4ce5d1683c4d3436fb4070278376f755b73e3bd2d",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-f65b0f25-1365-4652-acfa-020db9381027",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "d2da7fbb4c2b2a64c71fa6d4e17cf8284ebeb930475f2624e0086988328d994e",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-f65b0f25-1365-4652-acfa-020db9381027",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "8a1ff6320aa0d8a7752fd3f4ce5d1683c4d3436fb4070278376f755b73e3bd2d",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 225,
+          "height": 233
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "2327594cca1700431944e5abe02fd0190f2f6e962b8265745d17257d1f4dd522"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "8a1ff6320aa0d8a7752fd3f4ce5d1683c4d3436fb4070278376f755b73e3bd2d",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-f65b0f25-1365-4652-acfa-020db9381027",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/farouk-khalaf-cars-trading/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "688319ce17ae59609a142918bd4dde36b62075ba0d0a6942283ccba09c47abe9",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-08c33c30-930a-4516-9081-00796e8d8c06",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/farouk-khalaf-cars-trading/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "688319ce17ae59609a142918bd4dde36b62075ba0d0a6942283ccba09c47abe9",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-08c33c30-930a-4516-9081-00796e8d8c06",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/farouk-khalaf-cars-trading/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "8a1ff6320aa0d8a7752fd3f4ce5d1683c4d3436fb4070278376f755b73e3bd2d",
+      "sha256": "8a1ff6320aa0d8a7752fd3f4ce5d1683c4d3436fb4070278376f755b73e3bd2d",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 233
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "688319ce17ae59609a142918bd4dde36b62075ba0d0a6942283ccba09c47abe9",
+      "sha256": "688319ce17ae59609a142918bd4dde36b62075ba0d0a6942283ccba09c47abe9",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 233
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "688319ce17ae59609a142918bd4dde36b62075ba0d0a6942283ccba09c47abe9",
+      "sha256": "688319ce17ae59609a142918bd4dde36b62075ba0d0a6942283ccba09c47abe9",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 233
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "17a20f20ac3a7109653cff3eb21112ef6cf2b26796e449b1687c8c0e87622e78",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-f65b0f25-1365-4652-acfa-020db9381027",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "8a1ff6320aa0d8a7752fd3f4ce5d1683c4d3436fb4070278376f755b73e3bd2d",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 225,
+            "height": 233
+          }
+        }
+      },
+      "sourceReference": "dealers/farouk-khalaf-cars-trading/branding/generated-mark-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "57edf59baef8196835572e89a008558a807ecd0720bb43ec8044a9a8570e401e",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-08c33c30-930a-4516-9081-00796e8d8c06",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "688319ce17ae59609a142918bd4dde36b62075ba0d0a6942283ccba09c47abe9",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 225,
+            "height": 233
+          }
+        }
+      },
+      "sourceReference": "dealers/farouk-khalaf-cars-trading/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "d2da7fbb4c2b2a64c71fa6d4e17cf8284ebeb930475f2624e0086988328d994e",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-f65b0f25-1365-4652-acfa-020db9381027",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "8a1ff6320aa0d8a7752fd3f4ce5d1683c4d3436fb4070278376f755b73e3bd2d",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 225,
+            "height": 233
+          }
+        }
+      },
+      "sourceReference": "dealers/farouk-khalaf-cars-trading/branding/generated-mark-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "2327594cca1700431944e5abe02fd0190f2f6e962b8265745d17257d1f4dd522",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-f65b0f25-1365-4652-acfa-020db9381027",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "8a1ff6320aa0d8a7752fd3f4ce5d1683c4d3436fb4070278376f755b73e3bd2d",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 225,
+            "height": 233
+          }
+        }
+      },
+      "sourceReference": "dealers/farouk-khalaf-cars-trading/branding/generated-mark-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "887ad6146ee1f6813ebcb497d1928015d2c639413e432c750284a0a544b8bfd1",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-08c33c30-930a-4516-9081-00796e8d8c06",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "688319ce17ae59609a142918bd4dde36b62075ba0d0a6942283ccba09c47abe9",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 225,
+          "height": 233
+        }
+      }
+    }
+  }
+}
