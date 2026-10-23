@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "dealer": "n3-motors",
+  "reviewed": true,
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "d1f322e9cc9f6b3ae7ba1fa0e1f444f6519700bf9168136c90d48b414afad7e0",
+      "sourceSha256": "3618050e8d3dc2ef59d49e5cec3c78f504b8d6c588fcc1573462c425d096bf77"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "5e777995811270429c879911d5f3f53890c949ab97ab7beeeceb69dc610b95a5",
+      "sourceSha256": "93f886f4777059cbe7607167903b30b2055b471326e62fec265d6f8fac157623"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "5e777995811270429c879911d5f3f53890c949ab97ab7beeeceb69dc610b95a5",
+      "sourceSha256": "93f886f4777059cbe7607167903b30b2055b471326e62fec265d6f8fac157623"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "3618050e8d3dc2ef59d49e5cec3c78f504b8d6c588fcc1573462c425d096bf77",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-1dd22afe-c015-4f0a-94fd-f7b31f9097e1",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "c1f1484da0f8bc32842ead2e5ee8bfece3476b71a204c8494c5f6068a7dc0bb3",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-1dd22afe-c015-4f0a-94fd-f7b31f9097e1",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "3618050e8d3dc2ef59d49e5cec3c78f504b8d6c588fcc1573462c425d096bf77",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 273,
+          "height": 221
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "6fd3e80604249f7978795f6c57cd6e45a0186aa53ddb6579d6346c0d2cb77d64"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "3618050e8d3dc2ef59d49e5cec3c78f504b8d6c588fcc1573462c425d096bf77",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1dd22afe-c015-4f0a-94fd-f7b31f9097e1",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/n3-motors/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "93f886f4777059cbe7607167903b30b2055b471326e62fec265d6f8fac157623",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-c09a9c00-ff92-404a-b9cc-6edbd6b69048",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/n3-motors/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "93f886f4777059cbe7607167903b30b2055b471326e62fec265d6f8fac157623",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-c09a9c00-ff92-404a-b9cc-6edbd6b69048",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/n3-motors/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "3618050e8d3dc2ef59d49e5cec3c78f504b8d6c588fcc1573462c425d096bf77",
+      "sha256": "3618050e8d3dc2ef59d49e5cec3c78f504b8d6c588fcc1573462c425d096bf77",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 221
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "93f886f4777059cbe7607167903b30b2055b471326e62fec265d6f8fac157623",
+      "sha256": "93f886f4777059cbe7607167903b30b2055b471326e62fec265d6f8fac157623",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 224
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "93f886f4777059cbe7607167903b30b2055b471326e62fec265d6f8fac157623",
+      "sha256": "93f886f4777059cbe7607167903b30b2055b471326e62fec265d6f8fac157623",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 224
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "1211577c8ba761f04859d9efea3f368c18f02e03b6fea996920f595fed7d4ee6",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1dd22afe-c015-4f0a-94fd-f7b31f9097e1",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "3618050e8d3dc2ef59d49e5cec3c78f504b8d6c588fcc1573462c425d096bf77",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 273,
+            "height": 221
+          }
+        }
+      },
+      "sourceReference": "dealers/n3-motors/branding/generated-mark-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "05da09de2d9e364964a97c48b31f1bca73324b00145cbe9eddb79c76121b1911",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-c09a9c00-ff92-404a-b9cc-6edbd6b69048",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "93f886f4777059cbe7607167903b30b2055b471326e62fec265d6f8fac157623",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 273,
+            "height": 224
+          }
+        }
+      },
+      "sourceReference": "dealers/n3-motors/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "c1f1484da0f8bc32842ead2e5ee8bfece3476b71a204c8494c5f6068a7dc0bb3",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1dd22afe-c015-4f0a-94fd-f7b31f9097e1",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "3618050e8d3dc2ef59d49e5cec3c78f504b8d6c588fcc1573462c425d096bf77",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 273,
+            "height": 221
+          }
+        }
+      },
+      "sourceReference": "dealers/n3-motors/branding/generated-mark-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "6fd3e80604249f7978795f6c57cd6e45a0186aa53ddb6579d6346c0d2cb77d64",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1dd22afe-c015-4f0a-94fd-f7b31f9097e1",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "3618050e8d3dc2ef59d49e5cec3c78f504b8d6c588fcc1573462c425d096bf77",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 273,
+            "height": 221
+          }
+        }
+      },
+      "sourceReference": "dealers/n3-motors/branding/generated-mark-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "ec4cece42fd6620bbe60fe20762c621de34f770107dbb4c1f6828a21459cf6a1",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-c09a9c00-ff92-404a-b9cc-6edbd6b69048",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "93f886f4777059cbe7607167903b30b2055b471326e62fec265d6f8fac157623",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 273,
+          "height": 224
+        }
+      }
+    }
+  }
+}

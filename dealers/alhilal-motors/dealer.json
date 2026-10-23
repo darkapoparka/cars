@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Alhilal Motors",
     "publicOrigin": "https://alhilal-motors.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "6100652438c001797b53676af2d1886efc215d5f51641760fcc38f87e40b0b77",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "f240044572789e639d8303ddba9d6345d86e0eb9969b8be1d5506fe1cf0a0018"
+    }
   }
 }

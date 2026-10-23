@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "ae-abu-dhabi-super-class-cars-showroom",
+  "slug": "super-class-cars-showroom",
+  "artworkDirectory": "super-class-cars-showroom",
+  "name": "Super Class Cars Showroom",
+  "renderedName": "Super Class Cars Showroom",
+  "kind": "independent-website-logo-proposal",
+  "dealerApproved": false,
+  "ownerApproved": false,
+  "sourceEvidence": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/super-class-cars-showroom",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/5046-nissan-patrol-56-405-hp-automatic-transmission-le-titanium",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "retainedOriginalsUnchanged": true,
+  "variants": {
+    "on-light": {
+      "path": "logo-on-light.png",
+      "sha256": "9c469662976239a405eaee58cb083cdf2a1834a106e98917ff3a9f02ad9e32ea",
+      "width": 1024,
+      "height": 166,
+      "transparentFraction": 0.6781461784638554,
+      "master": {
+        "path": "generated-on-light.png",
+        "sha256": "74245b82a0b976951f39ded340166c8e2d5f13fca5a63257a311262c70e7ac02",
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-db57a7ff-6bae-4e4e-81c6-a9b1df9cbd6b",
+        "prompt": "Use case: logo-brand. ONE polished original independent car-dealer website-proposal logo. Exact full text: \"SUPER CLASS CARS SHOWROOM\". Create a very simple confident emblem inspired by the distinctive name, compact and easily recognizable; sophisticated clean sans-serif wordmark. For any initial-based symbol use the meaningful distinctive initials \"SC\", rather than a generic Al-prefix A. Avoid the repeated A-plus-road-swoosh formula. Emblem at left, full exact name to right, thoughtfully arranged over one or two readable lines. All lettering, including any small descriptor, must be dark charcoal or black for excellent contrast on WHITE; an optional restrained accent may appear in the emblem only. Crisp flat vector-like geometry, large open counters, strong readable type, professional and distinctive. Real alpha-transparent background, no background block or fake checkerboard. No photo, car-manufacturer emblem, stock car silhouette, generic shield, chrome, gradients, shadows, texture, watermark, slogan, unrelated decoration or mockup. Wide horizontal lockup, framed close with a small transparent margin, readable at 240px wide; symbol should survive 32px. Exact spelling and all words. Only one logo, never a presentation board. Proposed identity, not claimed official/adopted.",
+        "reference": null
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 57,
+          "top": 199,
+          "width": 2069,
+          "height": 336
+        }
+      }
+    },
+    "on-dark": {
+      "path": "logo-on-dark.png",
+      "sha256": "6908ea22fb9c3b86bcb5e8f04487110b5ca565ca4ef64149938641930917f319",
+      "width": 1024,
+      "height": 168,
+      "transparentFraction": 0.5875360398065477,
+      "master": {
+        "path": "generated-on-dark.png",
+        "sha256": "ed35c421e0beabfbc184678e4ed2686cc2da062be3f7536fb989c567f0ebbd70",
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-c37f4f2a-7743-456f-b44a-286fddc1810c",
+        "prompt": "Make the matching ON-DARK version of the supplied SUPER CLASS CARS SHOWROOM logo. Preserve its exact identity, symbol geometry, lettering, complete name, line breaks, optical spacing and proportions. Every letter of the full name and descriptor must be solid clean WHITE, not colored or gray. Existing restrained emblem accent may remain only if visible; keep all primary ink white. Genuine alpha transparency and open counters, smooth clean edges. No background panel, no checkerboard, no new wording, design, texture, distress, shadow, watermark or decoration. One matching white/light-ink horizontal logo for dark and red headers. Exact name: SUPER CLASS CARS SHOWROOM.",
+        "reference": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-db57a7ff-6bae-4e4e-81c6-a9b1df9cbd6b.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 55,
+          "top": 193,
+          "width": 2065,
+          "height": 339
+        }
+      }
+    }
+  },
+  "review": {
+    "status": "artwork-visually-reviewed",
+    "alpha": "all exports measured as genuine transparent nonempty PNGs",
+    "spelling": "English wordmark inspected; source-bound display aliases retained",
+    "compact": "Horizontal logos only. Interactive 32/48/64px gallery preview is provided; separate compact/favicon artwork remains part of dealer-pack preparation.",
+    "sixDesigns": "not-yet-integrated-or-rendered",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "reviewer": "Codex visual inspection",
+    "header": "All 196 paired PNGs inspected at 240x64 on white, #111113 and #c40101",
+    "evidence": "final-review-03.png"
+  },
+  "releaseReady": false,
+  "artworkHolds": [],
+  "artworkReadyForIntegration": true
+}

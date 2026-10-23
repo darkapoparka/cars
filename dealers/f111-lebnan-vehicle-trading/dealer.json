@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "F111 Lebnan Vehicle Trading",
     "publicOrigin": "https://f111-lebnan-vehicle-trading.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "f28130a6f4587fce6e05beb6c4ec722ac7e580e13600c665b5298777eef026f3",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "13204b680b7be6b5cb081abf3935e01a5e4e25c5bfce3ccebbb4915dfeb8db3e"
+    }
   }
 }

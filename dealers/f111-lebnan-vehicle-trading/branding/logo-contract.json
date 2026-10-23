@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "dealer": "f111-lebnan-vehicle-trading",
+  "reviewed": true,
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "60b9d563950fbffe09cb1a809bc01401c748a78d8eb62a8df0fd164708fd50cb",
+      "sourceSha256": "f28130a6f4587fce6e05beb6c4ec722ac7e580e13600c665b5298777eef026f3"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "421157ff0056b055b3f51ad0993d990680609f1f8cb6c35d603c5165da588f3e",
+      "sourceSha256": "54312ae6393dd20930856406916b99655c6cb95c89599fac8a5dbdd7c20480ab"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "421157ff0056b055b3f51ad0993d990680609f1f8cb6c35d603c5165da588f3e",
+      "sourceSha256": "54312ae6393dd20930856406916b99655c6cb95c89599fac8a5dbdd7c20480ab"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "f28130a6f4587fce6e05beb6c4ec722ac7e580e13600c665b5298777eef026f3",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-8d067b7b-30c5-4e25-97b0-729a1c143a50",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "13204b680b7be6b5cb081abf3935e01a5e4e25c5bfce3ccebbb4915dfeb8db3e",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-8d067b7b-30c5-4e25-97b0-729a1c143a50",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "f28130a6f4587fce6e05beb6c4ec722ac7e580e13600c665b5298777eef026f3",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 250,
+          "height": 234
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "a5abfa323c42f0d9e5cf60728a96cdb89273e7d1a5f7418e2ea1a065311a2299"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "f28130a6f4587fce6e05beb6c4ec722ac7e580e13600c665b5298777eef026f3",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-8d067b7b-30c5-4e25-97b0-729a1c143a50",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/f111-lebnan-vehicle-trading/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "54312ae6393dd20930856406916b99655c6cb95c89599fac8a5dbdd7c20480ab",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-42f29ce4-62ef-4eba-9e42-7ca252c113d4",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/f111-lebnan-vehicle-trading/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "54312ae6393dd20930856406916b99655c6cb95c89599fac8a5dbdd7c20480ab",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-42f29ce4-62ef-4eba-9e42-7ca252c113d4",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/f111-lebnan-vehicle-trading/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "f28130a6f4587fce6e05beb6c4ec722ac7e580e13600c665b5298777eef026f3",
+      "sha256": "f28130a6f4587fce6e05beb6c4ec722ac7e580e13600c665b5298777eef026f3",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 234
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "54312ae6393dd20930856406916b99655c6cb95c89599fac8a5dbdd7c20480ab",
+      "sha256": "54312ae6393dd20930856406916b99655c6cb95c89599fac8a5dbdd7c20480ab",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 235
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "54312ae6393dd20930856406916b99655c6cb95c89599fac8a5dbdd7c20480ab",
+      "sha256": "54312ae6393dd20930856406916b99655c6cb95c89599fac8a5dbdd7c20480ab",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 235
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "6d1bc36606bb5b7798224da86c2d06a41926617c85017570d7de575678301128",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-8d067b7b-30c5-4e25-97b0-729a1c143a50",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "f28130a6f4587fce6e05beb6c4ec722ac7e580e13600c665b5298777eef026f3",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 250,
+            "height": 234
+          }
+        }
+      },
+      "sourceReference": "dealers/f111-lebnan-vehicle-trading/branding/generated-mark-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "0b34545de36bc98656b8c037a06e867d08fdf119df92296bbcc523b2bf1b3849",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-42f29ce4-62ef-4eba-9e42-7ca252c113d4",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "54312ae6393dd20930856406916b99655c6cb95c89599fac8a5dbdd7c20480ab",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 250,
+            "height": 235
+          }
+        }
+      },
+      "sourceReference": "dealers/f111-lebnan-vehicle-trading/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "13204b680b7be6b5cb081abf3935e01a5e4e25c5bfce3ccebbb4915dfeb8db3e",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-8d067b7b-30c5-4e25-97b0-729a1c143a50",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "f28130a6f4587fce6e05beb6c4ec722ac7e580e13600c665b5298777eef026f3",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 250,
+            "height": 234
+          }
+        }
+      },
+      "sourceReference": "dealers/f111-lebnan-vehicle-trading/branding/generated-mark-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "a5abfa323c42f0d9e5cf60728a96cdb89273e7d1a5f7418e2ea1a065311a2299",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-8d067b7b-30c5-4e25-97b0-729a1c143a50",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "f28130a6f4587fce6e05beb6c4ec722ac7e580e13600c665b5298777eef026f3",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 250,
+            "height": 234
+          }
+        }
+      },
+      "sourceReference": "dealers/f111-lebnan-vehicle-trading/branding/generated-mark-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "6f2094ff148e44301fc932a6685a1e2bc9e80480c443a7d6e51f69dedfa36433",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-42f29ce4-62ef-4eba-9e42-7ca252c113d4",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "54312ae6393dd20930856406916b99655c6cb95c89599fac8a5dbdd7c20480ab",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 250,
+          "height": 235
+        }
+      }
+    }
+  }
+}

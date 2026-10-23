@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "ae-abu-dhabi-n3-motors",
+  "slug": "n3-motors",
+  "artworkDirectory": "n3-motors",
+  "name": "N3 Motors",
+  "renderedName": "N3 Motors",
+  "kind": "independent-website-logo-proposal",
+  "dealerApproved": false,
+  "ownerApproved": false,
+  "sourceEvidence": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/n3-motors-llc-spc",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/5748-nissan-patrol-35-at-awd-495-hp-le-t2",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "retainedOriginalsUnchanged": true,
+  "variants": {
+    "on-light": {
+      "path": "logo-on-light.png",
+      "sha256": "3618050e8d3dc2ef59d49e5cec3c78f504b8d6c588fcc1573462c425d096bf77",
+      "width": 1024,
+      "height": 221,
+      "transparentFraction": 0.667504772341629,
+      "master": {
+        "path": "generated-on-light.png",
+        "sha256": "3684a11c9c4fa6e2ede93b21b2d6250ef664f029dc0f8dc4ccfad3d02c95abcd",
+        "width": 2146,
+        "height": 733
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-1dd22afe-c015-4f0a-94fd-f7b31f9097e1",
+        "prompt": "Use case: logo-brand. ONE polished original independent car-dealer website-proposal logo. Exact full text: \"N3 MOTORS\". Create a bold rounded negative-space monogram with generous open counters; upright refined sans-serif typography. For any initial-based symbol use the meaningful distinctive initials \"N\", rather than a generic Al-prefix A. Avoid the repeated A-plus-road-swoosh formula. Emblem at left, full exact name to right, thoughtfully arranged over one or two readable lines. All lettering, including any small descriptor, must be dark charcoal or black for excellent contrast on WHITE; an optional restrained accent may appear in the emblem only. Crisp flat vector-like geometry, large open counters, strong readable type, professional and distinctive. Real alpha-transparent background, no background block or fake checkerboard. No photo, car-manufacturer emblem, stock car silhouette, generic shield, chrome, gradients, shadows, texture, watermark, slogan, unrelated decoration or mockup. Wide horizontal lockup, framed close with a small transparent margin, readable at 240px wide; symbol should survive 32px. Exact spelling and all words. Only one logo, never a presentation board. Proposed identity, not claimed official/adopted.",
+        "reference": null
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 18,
+          "top": 128,
+          "width": 2128,
+          "height": 459
+        }
+      }
+    },
+    "on-dark": {
+      "path": "logo-on-dark.png",
+      "sha256": "93f886f4777059cbe7607167903b30b2055b471326e62fec265d6f8fac157623",
+      "width": 1024,
+      "height": 224,
+      "transparentFraction": 0.56817626953125,
+      "master": {
+        "path": "generated-on-dark.png",
+        "sha256": "7a629ae14c19cc7416da47d9b2dacc81cca81467a2f931453839d9ecc441ac86",
+        "width": 2146,
+        "height": 733
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-c09a9c00-ff92-404a-b9cc-6edbd6b69048",
+        "prompt": "Make the matching ON-DARK version of the supplied N3 MOTORS logo. Preserve its exact identity, symbol geometry, lettering, complete name, line breaks, optical spacing and proportions. Every letter of the full name and descriptor must be solid clean WHITE, not colored or gray. Existing restrained emblem accent may remain only if visible; keep all primary ink white. Genuine alpha transparency and open counters, smooth clean edges. No background panel, no checkerboard, no new wording, design, texture, distress, shadow, watermark or decoration. One matching white/light-ink horizontal logo for dark and red headers. Exact name: N3 MOTORS.",
+        "reference": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-1dd22afe-c015-4f0a-94fd-f7b31f9097e1.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 17,
+          "top": 124,
+          "width": 2128,
+          "height": 465
+        }
+      }
+    }
+  },
+  "review": {
+    "status": "artwork-visually-reviewed",
+    "alpha": "all exports measured as genuine transparent nonempty PNGs",
+    "spelling": "English wordmark inspected; source-bound display aliases retained",
+    "compact": "Horizontal logos only. Interactive 32/48/64px gallery preview is provided; separate compact/favicon artwork remains part of dealer-pack preparation.",
+    "sixDesigns": "not-yet-integrated-or-rendered",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "reviewer": "Codex visual inspection",
+    "header": "All 196 paired PNGs inspected at 240x64 on white, #111113 and #c40101",
+    "evidence": "final-review-03.png"
+  },
+  "releaseReady": false,
+  "artworkHolds": [],
+  "artworkReadyForIntegration": true
+}

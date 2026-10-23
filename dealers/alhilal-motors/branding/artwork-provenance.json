@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "ae-ajman-alhilal-motors",
+  "slug": "alhilal-motors",
+  "artworkDirectory": "alhilal-motors",
+  "name": "Alhilal Motors",
+  "renderedName": "Alhilal Motors",
+  "kind": "independent-website-logo-proposal",
+  "dealerApproved": false,
+  "ownerApproved": false,
+  "sourceEvidence": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/alhilal-motors-fzc",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/12910-genesis-gv70-35-at-4wd-379-hp-sport-prestige",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://auto.ae/ru/alhilalmotors/",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "retainedOriginalsUnchanged": true,
+  "variants": {
+    "on-light": {
+      "path": "logo-on-light.png",
+      "sha256": "6100652438c001797b53676af2d1886efc215d5f51641760fcc38f87e40b0b77",
+      "width": 1024,
+      "height": 322,
+      "transparentFraction": 0.7465577688276398,
+      "master": {
+        "path": "generated-on-light.png",
+        "sha256": "e3bd7b45a190f0c2237c3f1d99395e72244fdaab693ba59d08adb9555edf759e",
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-9e6c1210-deb3-4b79-b333-ae19c15f54b1",
+        "prompt": "Use case: logo-brand. ONE polished original independent car-dealer website-proposal logo. Exact full text: \"ALHILAL MOTORS\". Create a very simple confident emblem inspired by the distinctive name, compact and easily recognizable; sophisticated clean sans-serif wordmark. For any initial-based symbol use the meaningful distinctive initials \"A\", rather than a generic Al-prefix A. Avoid the repeated A-plus-road-swoosh formula. Emblem at left, full exact name to right, thoughtfully arranged over one or two readable lines. All lettering, including any small descriptor, must be dark charcoal or black for excellent contrast on WHITE; an optional restrained accent may appear in the emblem only. Crisp flat vector-like geometry, large open counters, strong readable type, professional and distinctive. Real alpha-transparent background, no background block or fake checkerboard. No photo, car-manufacturer emblem, stock car silhouette, generic shield, chrome, gradients, shadows, texture, watermark, slogan, unrelated decoration or mockup. Wide horizontal lockup, framed close with a small transparent margin, readable at 240px wide; symbol should survive 32px. Exact spelling and all words. Only one logo, never a presentation board. Proposed identity, not claimed official/adopted.",
+        "reference": null
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 168,
+          "top": 75,
+          "width": 1830,
+          "height": 575
+        }
+      }
+    },
+    "on-dark": {
+      "path": "logo-on-dark.png",
+      "sha256": "b99b4d37d4cbff60edeb0c5e753807610b9cd6c972b19fcb1a6cc69b187eb7d8",
+      "width": 1024,
+      "height": 319,
+      "transparentFraction": 0.669973917515674,
+      "master": {
+        "path": "generated-on-dark.png",
+        "sha256": "2b912c737fbe706e2cf1fa913fa299b63b37dfa20fda26f69c89f34e15b70ced",
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-b374bd30-665e-4acb-b59a-cd31898b2c80",
+        "prompt": "Make the matching ON-DARK version of the supplied ALHILAL MOTORS logo. Preserve its exact identity, symbol geometry, lettering, complete name, line breaks, optical spacing and proportions. Every letter of the full name and descriptor must be solid clean WHITE, not colored or gray. Existing restrained emblem accent may remain only if visible; keep all primary ink white. Genuine alpha transparency and open counters, smooth clean edges. No background panel, no checkerboard, no new wording, design, texture, distress, shadow, watermark or decoration. One matching white/light-ink horizontal logo for dark and red headers. Exact name: ALHILAL MOTORS.",
+        "reference": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-9e6c1210-deb3-4b79-b333-ae19c15f54b1.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 124,
+          "top": 70,
+          "width": 1920,
+          "height": 599
+        }
+      }
+    }
+  },
+  "review": {
+    "status": "artwork-visually-reviewed",
+    "alpha": "all exports measured as genuine transparent nonempty PNGs",
+    "spelling": "English wordmark inspected; source-bound display aliases retained",
+    "compact": "Horizontal logos only. Interactive 32/48/64px gallery preview is provided; separate compact/favicon artwork remains part of dealer-pack preparation.",
+    "sixDesigns": "not-yet-integrated-or-rendered",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "reviewer": "Codex visual inspection",
+    "header": "All 196 paired PNGs inspected at 240x64 on white, #111113 and #c40101",
+    "evidence": "final-review-04.png"
+  },
+  "releaseReady": false,
+  "artworkHolds": [],
+  "artworkReadyForIntegration": true
+}

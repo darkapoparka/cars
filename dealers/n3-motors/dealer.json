@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "N3 Motors",
     "publicOrigin": "https://n3-motors.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "3618050e8d3dc2ef59d49e5cec3c78f504b8d6c588fcc1573462c425d096bf77",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "c1f1484da0f8bc32842ead2e5ee8bfece3476b71a204c8494c5f6068a7dc0bb3"
+    }
   }
 }

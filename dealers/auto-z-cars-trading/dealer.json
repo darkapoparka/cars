@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Auto Z Cars Trading",
     "publicOrigin": "https://auto-z-cars-trading.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "e2ea382b3cc6873b4adeff8ba25f8ae889a45fc379fe611dfb76926c39c7ab32",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "dfed6da7a9e3f02ef6e129b030560490fa6c24551cb0985aa7126f6d99a5972e"
+    }
   }
 }
