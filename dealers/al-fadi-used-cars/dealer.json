@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Al Fadi Used Cars",
     "publicOrigin": "https://al-fadi-used-cars.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "a8631dd1b48166fbf01e5abf04456011097ded38ba86c6d4feaffb357f287d7e",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "d0a64cb9fc150f939f31a5b5bf619ac60759472337338d4b122448b70c3f5c97"
+    }
   }
 }
