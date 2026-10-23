@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Affordable Motors Birmingham",
     "publicOrigin": "https://affordable-motors-birmingham.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "13b30e90bfc9616cb555bb7e77438cabeedb1509ee6bc4a9cf10231d3978c4fa",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "e44c58a4bcaaf979b4e1c26cf538a8f7950e89fe6f1c40df95f4e7854e4f1731"
+    }
   }
 }

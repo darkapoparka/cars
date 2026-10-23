@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "dealer": "affordable-motors-birmingham",
-  "status": "research-required",
+  "status": "reviewed-imagegen-proposal",
   "realLogoFirst": true,
   "publicSources": [
     {
@@ -18,7 +18,134 @@
     }
   ],
   "originals": [],
-  "creationMethod": null,
+  "creationMethod": "imagegen-proposal",
   "dealerApproved": false,
-  "generatedInputs": null
+  "generatedInputs": {
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "master": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "13b30e90bfc9616cb555bb7e77438cabeedb1509ee6bc4a9cf10231d3978c4fa",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1d598849-ddb6-4ec4-bd75-e921d7fe0230",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark-light.png",
+      "sha256": "1eacf34a3de4a279938a24b54e75c29cd56677c0962e3192ea27ada0cb2b70c0",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1d598849-ddb6-4ec4-bd75-e921d7fe0230",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "13b30e90bfc9616cb555bb7e77438cabeedb1509ee6bc4a9cf10231d3978c4fa",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 280,
+            "height": 172
+          }
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-dark.png",
+      "sha256": "3fe84f37c59ea4857749d12e8919390fb7ba6fe6024508eba113eaec93296bec",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1895f9ab-832a-4fb3-8f1d-7d0aa0ecdb5d",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "2bfea7f9fe09c8737f84564203d590ac78445750bbbecaf915d2bc306e895e58",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 280,
+            "height": 171
+          }
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "13b30e90bfc9616cb555bb7e77438cabeedb1509ee6bc4a9cf10231d3978c4fa",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-1d598849-ddb6-4ec4-bd75-e921d7fe0230",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "2bfea7f9fe09c8737f84564203d590ac78445750bbbecaf915d2bc306e895e58",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-1895f9ab-832a-4fb3-8f1d-7d0aa0ecdb5d",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "2bfea7f9fe09c8737f84564203d590ac78445750bbbecaf915d2bc306e895e58",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-1895f9ab-832a-4fb3-8f1d-7d0aa0ecdb5d",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewKind": "agent-visual-review",
+      "humanReview": false,
+      "dealerApproval": false,
+      "backgrounds": {
+        "onLight": "#ffffff",
+        "onDark": "#111113",
+        "onAccent": "#c40101"
+      },
+      "wordmarkWidths": [
+        220,
+        240
+      ],
+      "notes": "Exact reviewed Image Gen pair; native masters and generation provenance retained. Compact rasters cropped from the actual left symbol."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-22T23:42:46.338Z",
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#c40101"
+      ],
+      "widths": [
+        32,
+        48,
+        64
+      ],
+      "notes": "Left symbol cropped from reviewed horizontal variants; native rendering must independently qualify."
+    }
+  },
+  "sourceBlockers": [],
+  "artworkProvenance": {
+    "path": "branding/artwork-provenance.json",
+    "sha256": "2318828002cfec25f8c33cefd6b5e8a9769b11df3d1cdc23577ae54e064ac237",
+    "manifestSha256": "d25e9cee768a885052ac0a8df220d843c9b9c6f6f120d722705bead1cc99e694",
+    "nativeMasters": [
+      {
+        "path": "branding/native-generated-on-light.png",
+        "sha256": "a04456ca0ddb34f2859a7429bad958cefff3efd178bf7c0987d222253571691b"
+      },
+      {
+        "path": "branding/native-generated-on-dark.png",
+        "sha256": "a9c5fe6766e0a95472552b2409af9bbb2b3e4212696c96f2b5adbef1012d8573"
+      }
+    ]
+  }
 }
