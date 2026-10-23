@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "FOX L T D Used Automobile Trading",
     "publicOrigin": "https://fox-l-t-d-used-automobile-trading.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "d4956bea70f5bf9697e244b46bd4a42ffb48f5f80835d949ec2fdca06b2cac0f",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "72738da4b4709baff519dac3f0f2deb09bcf48aa129a70a86b63d96b05d72ab5"
+    }
   }
 }

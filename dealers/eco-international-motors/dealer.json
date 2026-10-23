@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Eco International Motors",
     "publicOrigin": "https://eco-international-motors.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "ecc49327e053529587f49c7f53aff829d43ea5cd791a04c020d62467b883d2c2",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "689cc2446609dcd28b071bcb4f6e389d9bdf604674d51b78aa96607605a27484"
+    }
   }
 }

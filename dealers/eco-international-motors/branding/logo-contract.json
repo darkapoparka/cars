@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "dealer": "eco-international-motors",
+  "reviewed": true,
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "07b3c26f49c54a382813366a7f1e663076dc725c211a32469a2ca0e3b9097468",
+      "sourceSha256": "ecc49327e053529587f49c7f53aff829d43ea5cd791a04c020d62467b883d2c2"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "9b16e09abf79090dc5b1b12dac0b265697d0bc33c10bea5f3a98e019979d68f9",
+      "sourceSha256": "515d291e9053b073e4630bf1f58d311dde9ec75e05bb005019ccd7aa983714b9"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "9b16e09abf79090dc5b1b12dac0b265697d0bc33c10bea5f3a98e019979d68f9",
+      "sourceSha256": "515d291e9053b073e4630bf1f58d311dde9ec75e05bb005019ccd7aa983714b9"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "ecc49327e053529587f49c7f53aff829d43ea5cd791a04c020d62467b883d2c2",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-414e0387-fe5b-42bd-b8ab-9ba8cf25bd33",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "689cc2446609dcd28b071bcb4f6e389d9bdf604674d51b78aa96607605a27484",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-414e0387-fe5b-42bd-b8ab-9ba8cf25bd33",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "ecc49327e053529587f49c7f53aff829d43ea5cd791a04c020d62467b883d2c2",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 275,
+          "height": 284
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "58cdf3b1f192b277b21cb531e557ff07c023cf12ef174c26c9a33d0d4a5fa055"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "ecc49327e053529587f49c7f53aff829d43ea5cd791a04c020d62467b883d2c2",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-414e0387-fe5b-42bd-b8ab-9ba8cf25bd33",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/eco-international-motors/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "515d291e9053b073e4630bf1f58d311dde9ec75e05bb005019ccd7aa983714b9",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-c1ed4bba-5052-4230-81bb-b3280949c1e0",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/eco-international-motors/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "515d291e9053b073e4630bf1f58d311dde9ec75e05bb005019ccd7aa983714b9",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-c1ed4bba-5052-4230-81bb-b3280949c1e0",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/eco-international-motors/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "ecc49327e053529587f49c7f53aff829d43ea5cd791a04c020d62467b883d2c2",
+      "sha256": "ecc49327e053529587f49c7f53aff829d43ea5cd791a04c020d62467b883d2c2",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 284
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "515d291e9053b073e4630bf1f58d311dde9ec75e05bb005019ccd7aa983714b9",
+      "sha256": "515d291e9053b073e4630bf1f58d311dde9ec75e05bb005019ccd7aa983714b9",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 284
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "515d291e9053b073e4630bf1f58d311dde9ec75e05bb005019ccd7aa983714b9",
+      "sha256": "515d291e9053b073e4630bf1f58d311dde9ec75e05bb005019ccd7aa983714b9",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 284
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "b91f2a886c3a8fc0fd2600e454bd7e97c827d4ca26b81f1a1b210766cf4e6eb3",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-414e0387-fe5b-42bd-b8ab-9ba8cf25bd33",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "ecc49327e053529587f49c7f53aff829d43ea5cd791a04c020d62467b883d2c2",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 275,
+            "height": 284
+          }
+        }
+      },
+      "sourceReference": "dealers/eco-international-motors/branding/generated-mark-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "ed7603051ba8cf9f9de55f3f1128ec0ef0e0e574651d116b1a12dae5a386b0e0",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-c1ed4bba-5052-4230-81bb-b3280949c1e0",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "515d291e9053b073e4630bf1f58d311dde9ec75e05bb005019ccd7aa983714b9",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 275,
+            "height": 284
+          }
+        }
+      },
+      "sourceReference": "dealers/eco-international-motors/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "689cc2446609dcd28b071bcb4f6e389d9bdf604674d51b78aa96607605a27484",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-414e0387-fe5b-42bd-b8ab-9ba8cf25bd33",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "ecc49327e053529587f49c7f53aff829d43ea5cd791a04c020d62467b883d2c2",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 275,
+            "height": 284
+          }
+        }
+      },
+      "sourceReference": "dealers/eco-international-motors/branding/generated-mark-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "58cdf3b1f192b277b21cb531e557ff07c023cf12ef174c26c9a33d0d4a5fa055",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-414e0387-fe5b-42bd-b8ab-9ba8cf25bd33",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "ecc49327e053529587f49c7f53aff829d43ea5cd791a04c020d62467b883d2c2",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 275,
+            "height": 284
+          }
+        }
+      },
+      "sourceReference": "dealers/eco-international-motors/branding/generated-mark-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "8711e2d62c5983c311300829fbd0ea84544df1913d400fcd5bb75e8fa3f1eee5",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-c1ed4bba-5052-4230-81bb-b3280949c1e0",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "515d291e9053b073e4630bf1f58d311dde9ec75e05bb005019ccd7aa983714b9",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 275,
+          "height": 284
+        }
+      }
+    }
+  }
+}

@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Ginza Motors",
     "publicOrigin": "https://ginza-motors.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "b08fee62dcdbb7247cba5a9693f3a4733bae899a25e1076a31233add5c3d9f25",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "3456c58b423ab2c63121e66bff2fc2c0c2f3dbc320ab21af3d14f2f0a2815050"
+    }
   }
 }

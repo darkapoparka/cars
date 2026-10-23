@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "dealer": "s-m-p-motors",
+  "reviewed": true,
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "d5fb289e61169d371161dc7df7535abe3401a66699854dfd1f7a83b4f288a6ae",
+      "sourceSha256": "88c8e792d89035d9c30b7bfe79aa10f257173bed2eb83eaa1ba994973fb97647"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "fa14ddc26bfe0272553c6eb78a4d8140622f8ad3684b10446f0ee5f283f9067e",
+      "sourceSha256": "f776e35d28aec063d22151a484799376788bc6318c0e9d430ebdd8032d6a9e1b"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "fa14ddc26bfe0272553c6eb78a4d8140622f8ad3684b10446f0ee5f283f9067e",
+      "sourceSha256": "f776e35d28aec063d22151a484799376788bc6318c0e9d430ebdd8032d6a9e1b"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "88c8e792d89035d9c30b7bfe79aa10f257173bed2eb83eaa1ba994973fb97647",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-7eb55f9a-c242-4424-b6ae-c4a5767bc7f7",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "1367bd6aff96e6e997f45c7d179e1afdfc1a6ab2cbce2700e5aa3990db843244",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-7eb55f9a-c242-4424-b6ae-c4a5767bc7f7",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "88c8e792d89035d9c30b7bfe79aa10f257173bed2eb83eaa1ba994973fb97647",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 315,
+          "height": 146
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "3594b169cb423ab3b2cc0922ebcf4ac9a41513e80706bd191a668e075fd7c2d9"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "88c8e792d89035d9c30b7bfe79aa10f257173bed2eb83eaa1ba994973fb97647",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-7eb55f9a-c242-4424-b6ae-c4a5767bc7f7",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/s-m-p-motors/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "f776e35d28aec063d22151a484799376788bc6318c0e9d430ebdd8032d6a9e1b",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-ecdfaaac-c70a-4269-b280-2e824d32d104",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/s-m-p-motors/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "f776e35d28aec063d22151a484799376788bc6318c0e9d430ebdd8032d6a9e1b",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-ecdfaaac-c70a-4269-b280-2e824d32d104",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/s-m-p-motors/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "88c8e792d89035d9c30b7bfe79aa10f257173bed2eb83eaa1ba994973fb97647",
+      "sha256": "88c8e792d89035d9c30b7bfe79aa10f257173bed2eb83eaa1ba994973fb97647",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 146
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "f776e35d28aec063d22151a484799376788bc6318c0e9d430ebdd8032d6a9e1b",
+      "sha256": "f776e35d28aec063d22151a484799376788bc6318c0e9d430ebdd8032d6a9e1b",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 147
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "f776e35d28aec063d22151a484799376788bc6318c0e9d430ebdd8032d6a9e1b",
+      "sha256": "f776e35d28aec063d22151a484799376788bc6318c0e9d430ebdd8032d6a9e1b",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 147
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "83f1edb3dbc03a359629444b80e686e212b154458c795cd708a6c3f375acac4f",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-7eb55f9a-c242-4424-b6ae-c4a5767bc7f7",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "88c8e792d89035d9c30b7bfe79aa10f257173bed2eb83eaa1ba994973fb97647",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 315,
+            "height": 146
+          }
+        }
+      },
+      "sourceReference": "dealers/s-m-p-motors/branding/generated-mark-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "f4eb3e8b64f9d54650fd60e83d9cc045d1e057e7f92502cf55b289b76d73821e",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-ecdfaaac-c70a-4269-b280-2e824d32d104",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "f776e35d28aec063d22151a484799376788bc6318c0e9d430ebdd8032d6a9e1b",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 315,
+            "height": 147
+          }
+        }
+      },
+      "sourceReference": "dealers/s-m-p-motors/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "1367bd6aff96e6e997f45c7d179e1afdfc1a6ab2cbce2700e5aa3990db843244",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-7eb55f9a-c242-4424-b6ae-c4a5767bc7f7",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "88c8e792d89035d9c30b7bfe79aa10f257173bed2eb83eaa1ba994973fb97647",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 315,
+            "height": 146
+          }
+        }
+      },
+      "sourceReference": "dealers/s-m-p-motors/branding/generated-mark-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "3594b169cb423ab3b2cc0922ebcf4ac9a41513e80706bd191a668e075fd7c2d9",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-7eb55f9a-c242-4424-b6ae-c4a5767bc7f7",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "88c8e792d89035d9c30b7bfe79aa10f257173bed2eb83eaa1ba994973fb97647",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 315,
+            "height": 146
+          }
+        }
+      },
+      "sourceReference": "dealers/s-m-p-motors/branding/generated-mark-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "9506fd377c25b745012edc76fe9016754931f1eec2ff8d101bcd196a4862b573",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-ecdfaaac-c70a-4269-b280-2e824d32d104",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "f776e35d28aec063d22151a484799376788bc6318c0e9d430ebdd8032d6a9e1b",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 315,
+          "height": 147
+        }
+      }
+    }
+  }
+}

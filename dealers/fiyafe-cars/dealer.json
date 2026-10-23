@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Fiyafe Cars",
     "publicOrigin": "https://fiyafe-cars.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "2b89d95520917e94429d163fe4992dc5107815cdcb8cccb86406b0961ea097bc",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "9008f60f23e108bfeab1363a40d509fc732763bc48f0e8fdc6e27d20ce7c8e04"
+    }
   }
 }

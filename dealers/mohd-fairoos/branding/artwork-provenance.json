@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "ae-dubai-mohd-fairoos",
+  "slug": "mohd-fairoos",
+  "artworkDirectory": "mohd-fairoos",
+  "name": "Mohd Fairoos",
+  "renderedName": "Mohd Fairoos",
+  "kind": "independent-website-logo-proposal",
+  "dealerApproved": false,
+  "ownerApproved": false,
+  "sourceEvidence": [
+    {
+      "url": "https://www.dubicars.com/dealers/dubai-mohd-fairoos-2908",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.dubicars.com/2026-toyota-urban-cruiser-2026-model-toyota-urban-cruiser-15l-glx-902280.html",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "retainedOriginalsUnchanged": true,
+  "variants": {
+    "on-light": {
+      "path": "logo-on-light.png",
+      "sha256": "f95c8e176eb8e0fd53cb7eb5787851e0ab5a312d4b801c6a67adf2c80a45b4e8",
+      "width": 1024,
+      "height": 214,
+      "transparentFraction": 0.7097875292056075,
+      "master": {
+        "path": "generated-on-light.png",
+        "sha256": "a3cd7536c1a9f4e4c2ea66bddc118aeed26ccb0dfbe8ff7d1c73244b394c74a1",
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-a1327022-dc5a-4538-a012-6f0f534fa8a1",
+        "prompt": "Create one professional horizontal automotive dealership logo proposal for Mohd Fairoos. Required exact text, uppercase: MOHD FAIROOS. Every word must be present and spelled precisely; use sensible primary name and smaller descriptor hierarchy without tiny lettering. Produce a polished original identity with a distinctive custom typographic ligature in a refined square emblem. Initials MF may inform the emblem. Emblem left, full clear name to the right, compact and balanced for a website header. Avoid overused shield and generic car silhouettes; no manufacturer badges. Clean modern lettering with careful kerning and strong legibility. All text is deep charcoal black, appropriate on a white/light header. One restrained red or gold accent may appear inside the emblem only; no pale text. Flat crisp edges, a small number of solid shapes, no chrome, no lighting, no shadow, no texture, no gradient. Genuine transparent alpha background, isolated logo with no background box, no grid, no checkerboard painted into pixels. No slogan, contact info, website, watermark, mockup, photograph, extra concept, or duplicate logo. Deliver exactly one horizontal full logo. This is an independent website identity proposal, not a claim of adopted branding.",
+        "reference": null
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 0,
+          "top": 131,
+          "width": 2172,
+          "height": 453
+        }
+      }
+    },
+    "on-dark": {
+      "path": "logo-on-dark.png",
+      "sha256": "791e918b9bc1c93507f3002a5fbf55edb13fee72a47a18171ec7791ca9991071",
+      "width": 1024,
+      "height": 213,
+      "transparentFraction": 0.641725352112676,
+      "master": {
+        "path": "generated-on-dark.png",
+        "sha256": "a0e7e66e12603eb4997603e6dc705499d49c37b133b36dbed8d43251327df6ba",
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-b5a97596-143a-48b7-adae-e70d9e7c8b04",
+        "prompt": "Create the matching light-on-dark production variant of the exact supplied logo. Preserve precisely the same emblem, geometry, spelling, word count, typographic hierarchy, proportions, layout and spacing. Required exact text: MOHD FAIROOS. Change EVERY letter, including all secondary descriptor words and legal suffixes, to solid white so it is legible over a dark or red website header. Change the charcoal portions of the emblem to white. Retain the small red/gold emblem accent only if it contrasts clearly against a dark header. True transparent alpha background; do not paint a dark rectangle or checkerboard. Flat clean edges, no glows, shadows, bevels, textures, gradients, new artwork, new icon, extra text or mockup. Deliver one horizontal matching logo, fully legible.",
+        "reference": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-a1327022-dc5a-4538-a012-6f0f534fa8a1.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 0,
+          "top": 123,
+          "width": 2172,
+          "height": 451
+        }
+      }
+    }
+  },
+  "review": {
+    "status": "artwork-visually-reviewed",
+    "alpha": "all exports measured as genuine transparent nonempty PNGs",
+    "spelling": "English wordmark inspected; source-bound display aliases retained",
+    "compact": "Horizontal logos only. Interactive 32/48/64px gallery preview is provided; separate compact/favicon artwork remains part of dealer-pack preparation.",
+    "sixDesigns": "not-yet-integrated-or-rendered",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "reviewer": "Codex visual inspection",
+    "header": "All 196 paired PNGs inspected at 240x64 on white, #111113 and #c40101",
+    "evidence": "final-review-07.png"
+  },
+  "releaseReady": false,
+  "artworkHolds": [],
+  "artworkReadyForIntegration": true
+}
