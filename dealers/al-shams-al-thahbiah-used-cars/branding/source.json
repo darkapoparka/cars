@@ -25,28 +25,16 @@
     },
     "mark": {
       "path": "branding/generated-mark-light.png",
-      "sha256": "4cf6255eac704549030d32b1c69edd9a084e6ccfeec4e42f90cdef790b87692b",
+      "sha256": "c32815e5876259ca238a4eb8e7baf4964445b0a1ca98980bdefd94eb236fcab0",
       "generation": {
         "tool": "image_gen.imagegen",
         "generationId": "exec-c4296dd8-1aea-419b-a485-be331d615305",
         "modelVersion": null,
         "derivedFrom": {
-          "path": "branding/generated-on-light.png",
-          "sha256": "f61818503d69f812d33492214ce9eadaccbfb73a0059e28ab45be0300ac50421",
-          "operation": "isolate-reviewed-arc-S-symbol-components",
-          "crop": {
-            "left": 0,
-            "top": 0,
-            "width": 350,
-            "height": 289
-          },
-          "selection": {
-            "alphaThreshold": 128,
-            "minXBefore": 300,
-            "minPixels": 40,
-            "antialiasNeighborPixels": 1,
-            "components": 5
-          }
+          "path": "branding/reviewed-mark-light.png",
+          "sha256": "4cf6255eac704549030d32b1c69edd9a084e6ccfeec4e42f90cdef790b87692b",
+          "operation": "darken-reviewed-gold-ink-for-white-compact-favicon",
+          "colorTransform": "gold channel scale 0.42/0.35/0.4"
         }
       }
     },
@@ -135,7 +123,7 @@
         48,
         64
       ],
-      "notes": "Arc S isolated from exact reviewed PNGs without neighboring wordmark A; native compact and favicon QA qualify independently."
+      "notes": "Original reviewed compact retained byte for byte. Selected white-surface gold darkened from exact pixels for native favicon contrast."
     }
   },
   "sourceBlockers": [],
@@ -152,6 +140,10 @@
         "path": "branding/native-generated-on-dark.png",
         "sha256": "0795df8b8dd7cf87fff91f28c7c9ded66e0e7a0e8ff2ef2ee5a6389450fdb31b"
       }
-    ]
+    ],
+    "reviewedCompact": {
+      "path": "branding/reviewed-mark-light.png",
+      "sha256": "4cf6255eac704549030d32b1c69edd9a084e6ccfeec4e42f90cdef790b87692b"
+    }
   }
 }
