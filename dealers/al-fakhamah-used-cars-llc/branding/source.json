@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "dealer": "al-fakhamah-used-cars-llc",
-  "status": "research-required",
+  "status": "reviewed-imagegen-proposal",
   "realLogoFirst": true,
   "publicSources": [
     {
@@ -10,7 +10,134 @@
     }
   ],
   "originals": [],
-  "creationMethod": null,
+  "creationMethod": "imagegen-proposal",
   "dealerApproved": false,
-  "generatedInputs": null
+  "generatedInputs": {
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "master": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "be31e1d8478d962a8b67a2531c57272156a3b87966d322c82e0c68a4264e3d9d",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-eacd5768-8fd6-4117-8ce2-872871c16464",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark-light.png",
+      "sha256": "26b23db7903b8738a97a332a873b322a1de80ca3462d80951e07f242a2a84f6b",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-eacd5768-8fd6-4117-8ce2-872871c16464",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "be31e1d8478d962a8b67a2531c57272156a3b87966d322c82e0c68a4264e3d9d",
+          "operation": "crop-initial-letter-from-reviewed-artwork",
+          "crop": {
+            "left": 20,
+            "top": 170,
+            "width": 95,
+            "height": 150
+          }
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-dark.png",
+      "sha256": "71f86d5f56da9963459211efcb050f62b6ed8c4478e1d98d2109c49089b7a7f8",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-e321729d-37bb-4741-a004-b45b8177c344",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "61a881ed376f1924b62217ec1c4e609867b69d096b3ac81a6614c720ee16667d",
+          "operation": "crop-initial-letter-from-reviewed-artwork",
+          "crop": {
+            "left": 20,
+            "top": 170,
+            "width": 95,
+            "height": 150
+          }
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "be31e1d8478d962a8b67a2531c57272156a3b87966d322c82e0c68a4264e3d9d",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-eacd5768-8fd6-4117-8ce2-872871c16464",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "61a881ed376f1924b62217ec1c4e609867b69d096b3ac81a6614c720ee16667d",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-e321729d-37bb-4741-a004-b45b8177c344",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "61a881ed376f1924b62217ec1c4e609867b69d096b3ac81a6614c720ee16667d",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-e321729d-37bb-4741-a004-b45b8177c344",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewKind": "agent-visual-review",
+      "humanReview": false,
+      "dealerApproval": false,
+      "backgrounds": {
+        "onLight": "#ffffff",
+        "onDark": "#111113",
+        "onAccent": "#c40101"
+      },
+      "wordmarkWidths": [
+        220,
+        240
+      ],
+      "notes": "Exact reviewed Image Gen pair; native masters and generation provenance retained. Compact rasters cropped from the actual left symbol."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-22T23:42:46.338Z",
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#c40101"
+      ],
+      "widths": [
+        32,
+        48,
+        64
+      ],
+      "notes": "Initial letter cropped from reviewed horizontal variants; native rendering must independently qualify."
+    }
+  },
+  "sourceBlockers": [],
+  "artworkProvenance": {
+    "path": "branding/artwork-provenance.json",
+    "sha256": "5789a98bc2e5e6fc343e46bdb3aed3cd33412a24324dccbf2be8b913d95001cf",
+    "manifestSha256": "d25e9cee768a885052ac0a8df220d843c9b9c6f6f120d722705bead1cc99e694",
+    "nativeMasters": [
+      {
+        "path": "branding/native-generated-on-light.png",
+        "sha256": "138ce58f35ff784eeb296f2d02c53f7b9bb43562183fe894ddd3a5cf435af1ef"
+      },
+      {
+        "path": "branding/native-generated-on-dark.png",
+        "sha256": "e48ce834730fceddd359423ba4f3f1a8d9fb9c5a64e143b35fc89923c9e2e01b"
+      }
+    ]
+  }
 }
