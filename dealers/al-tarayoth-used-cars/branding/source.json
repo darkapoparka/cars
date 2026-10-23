@@ -1,0 +1,147 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-tarayoth-used-cars",
+  "status": "reviewed-imagegen-proposal",
+  "realLogoFirst": true,
+  "publicSources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/al-tarayoth-used-cars",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/7181-kia-telluride-38-gdi-at-awd-295-hp-ex-x-line",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "originals": [],
+  "creationMethod": "imagegen-proposal",
+  "dealerApproved": false,
+  "generatedInputs": {
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "master": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "b5507021528487ceb5521e79b4e957c088dfcbb26897fdda887caf28eac2b82d",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-06d1293d-57b3-4b83-96cd-e1b97845ed22",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark-light.png",
+      "sha256": "65371495cf0ceb338c1d2b14d4845b04149fce2dd09d5e259cda5e78ecad6f6e",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-06d1293d-57b3-4b83-96cd-e1b97845ed22",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "b5507021528487ceb5521e79b4e957c088dfcbb26897fdda887caf28eac2b82d",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 235,
+            "height": 253
+          }
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-dark.png",
+      "sha256": "ec72ed482d9fd038c27713a09cf5c1c12fda6ee420f4935893c0d6bb8e8caf20",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-80940e76-4727-4991-91d5-62ee778d2599",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "f6404779181d21a6e4b0ef13fdd829e9375e514d22fe3db42801ec1830f6e733",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 235,
+            "height": 249
+          }
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "b5507021528487ceb5521e79b4e957c088dfcbb26897fdda887caf28eac2b82d",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-06d1293d-57b3-4b83-96cd-e1b97845ed22",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "f6404779181d21a6e4b0ef13fdd829e9375e514d22fe3db42801ec1830f6e733",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-80940e76-4727-4991-91d5-62ee778d2599",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "f6404779181d21a6e4b0ef13fdd829e9375e514d22fe3db42801ec1830f6e733",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-80940e76-4727-4991-91d5-62ee778d2599",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewKind": "agent-visual-review",
+      "humanReview": false,
+      "dealerApproval": false,
+      "backgrounds": {
+        "onLight": "#ffffff",
+        "onDark": "#111113",
+        "onAccent": "#c40101"
+      },
+      "wordmarkWidths": [
+        220,
+        240
+      ],
+      "notes": "Exact reviewed Image Gen pair; native masters and generation provenance retained. Compact rasters cropped from the actual left symbol."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-22T23:42:46.338Z",
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#c40101"
+      ],
+      "widths": [
+        32,
+        48,
+        64
+      ],
+      "notes": "Left symbol cropped from reviewed horizontal variants; native rendering must independently qualify."
+    }
+  },
+  "sourceBlockers": [],
+  "artworkProvenance": {
+    "path": "branding/artwork-provenance.json",
+    "sha256": "092dca243df087d7db84205135bb01d8ab26d459054385b21a1c23e4e42ffc66",
+    "manifestSha256": "d25e9cee768a885052ac0a8df220d843c9b9c6f6f120d722705bead1cc99e694",
+    "nativeMasters": [
+      {
+        "path": "branding/native-generated-on-light.png",
+        "sha256": "b4446fedbda1526d9ffe6ac59da49cb2542092308eaefd5f22678376e021b897"
+      },
+      {
+        "path": "branding/native-generated-on-dark.png",
+        "sha256": "0a104a229e9935a23f689e0c0c1774353c86fcb80bc0d26b56d57ff43f449cd2"
+      }
+    ]
+  }
+}

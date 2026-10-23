@@ -1,0 +1,147 @@
+{
+  "schemaVersion": 1,
+  "dealer": "korean-city-used-car",
+  "status": "reviewed-imagegen-proposal",
+  "realLogoFirst": true,
+  "publicSources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/korean-city-used-car",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/7373-jaguar-e-pace-p250-at-awd-249-hp-p250",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "originals": [],
+  "creationMethod": "imagegen-proposal",
+  "dealerApproved": false,
+  "generatedInputs": {
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "master": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "2346d86317dffba2a5af6b6c0f3227e78da07b258ec306fd2e7ab14e686dc6e2",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-e9dc6103-2fe1-4b97-aab5-a73a6a9c6adb",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark-light.png",
+      "sha256": "43b35dd35c0448186b1d89c4630a5c9dd2f7e1018d3ffee0cfca5fbb712fae03",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-e9dc6103-2fe1-4b97-aab5-a73a6a9c6adb",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "2346d86317dffba2a5af6b6c0f3227e78da07b258ec306fd2e7ab14e686dc6e2",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 320,
+            "height": 199
+          }
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-dark.png",
+      "sha256": "ec219a96b14ac5da20f76a4e3cd8a56bb471b7df00854a0c1307fa57e6409605",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-d831e390-4d87-41d0-bfe7-bb40505cc82b",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "3a0187f5091b41ec574de6e22a7dd8576e5a1c311f404d693bb3d667f1670f05",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 320,
+            "height": 201
+          }
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "2346d86317dffba2a5af6b6c0f3227e78da07b258ec306fd2e7ab14e686dc6e2",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-e9dc6103-2fe1-4b97-aab5-a73a6a9c6adb",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "3a0187f5091b41ec574de6e22a7dd8576e5a1c311f404d693bb3d667f1670f05",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-d831e390-4d87-41d0-bfe7-bb40505cc82b",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "3a0187f5091b41ec574de6e22a7dd8576e5a1c311f404d693bb3d667f1670f05",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-d831e390-4d87-41d0-bfe7-bb40505cc82b",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewKind": "agent-visual-review",
+      "humanReview": false,
+      "dealerApproval": false,
+      "backgrounds": {
+        "onLight": "#ffffff",
+        "onDark": "#111113",
+        "onAccent": "#c40101"
+      },
+      "wordmarkWidths": [
+        220,
+        240
+      ],
+      "notes": "Exact reviewed Image Gen pair; native masters and generation provenance retained. Compact rasters cropped from the actual left symbol."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-22T23:42:46.338Z",
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#c40101"
+      ],
+      "widths": [
+        32,
+        48,
+        64
+      ],
+      "notes": "Left symbol cropped from reviewed horizontal variants; native rendering must independently qualify."
+    }
+  },
+  "sourceBlockers": [],
+  "artworkProvenance": {
+    "path": "branding/artwork-provenance.json",
+    "sha256": "a46cd82d8254a65f9b7a35a13b248f913a9eee249a6ca2b4f71955008255a66f",
+    "manifestSha256": "d25e9cee768a885052ac0a8df220d843c9b9c6f6f120d722705bead1cc99e694",
+    "nativeMasters": [
+      {
+        "path": "branding/native-generated-on-light.png",
+        "sha256": "bcd8585a4a6b146e674f2c1507d5809292e4a70f31efecaedcf02d2bf31597ec"
+      },
+      {
+        "path": "branding/native-generated-on-dark.png",
+        "sha256": "8fb77d4fff15bef10a0de09b19449cf6f6ad68b835d5ebd889ee8a7df0f1daa4"
+      }
+    ]
+  }
+}

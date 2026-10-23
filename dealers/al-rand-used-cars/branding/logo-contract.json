@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-rand-used-cars",
+  "reviewed": true,
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "2fb766d10edc5c1f64fe5740e280a158ce2dadc8532b027c660d8fb290eab476",
+      "sourceSha256": "edb41a80219c38d04f2e086014950569f86ad91cfb32919d8cba285908b41fc1"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "1e114af8ca30c05214bc34012d0e857b2cef5257694fe600635ea55007ddf4a9",
+      "sourceSha256": "0695719b978445b319145a89a7bd72b77aa2b19d3ebd739a2da162dd7abb04fd"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "1e114af8ca30c05214bc34012d0e857b2cef5257694fe600635ea55007ddf4a9",
+      "sourceSha256": "0695719b978445b319145a89a7bd72b77aa2b19d3ebd739a2da162dd7abb04fd"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "edb41a80219c38d04f2e086014950569f86ad91cfb32919d8cba285908b41fc1",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-9a99d018-c9b0-4e96-8b46-3862901fe916",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "6e2fe5fab46bae50732248ecfb23204f71f5d24be3f227e08391dcb706463d99",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-9a99d018-c9b0-4e96-8b46-3862901fe916",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "edb41a80219c38d04f2e086014950569f86ad91cfb32919d8cba285908b41fc1",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 300,
+          "height": 238
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "38bada0159a0566010b40e2059d67255be011f3c9e51b6936efada25c149cba8"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "edb41a80219c38d04f2e086014950569f86ad91cfb32919d8cba285908b41fc1",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-9a99d018-c9b0-4e96-8b46-3862901fe916",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-rand-used-cars/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "0695719b978445b319145a89a7bd72b77aa2b19d3ebd739a2da162dd7abb04fd",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-0c7b29d8-a721-4e0a-9396-b6108448ba94",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-rand-used-cars/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "0695719b978445b319145a89a7bd72b77aa2b19d3ebd739a2da162dd7abb04fd",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-0c7b29d8-a721-4e0a-9396-b6108448ba94",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-rand-used-cars/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "edb41a80219c38d04f2e086014950569f86ad91cfb32919d8cba285908b41fc1",
+      "sha256": "edb41a80219c38d04f2e086014950569f86ad91cfb32919d8cba285908b41fc1",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 238
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "0695719b978445b319145a89a7bd72b77aa2b19d3ebd739a2da162dd7abb04fd",
+      "sha256": "0695719b978445b319145a89a7bd72b77aa2b19d3ebd739a2da162dd7abb04fd",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 239
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "0695719b978445b319145a89a7bd72b77aa2b19d3ebd739a2da162dd7abb04fd",
+      "sha256": "0695719b978445b319145a89a7bd72b77aa2b19d3ebd739a2da162dd7abb04fd",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 239
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "632f44fc9676670b0183e9b2fc9c5e3d7d9747d1282831c2704f724b43ba4f62",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-9a99d018-c9b0-4e96-8b46-3862901fe916",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "edb41a80219c38d04f2e086014950569f86ad91cfb32919d8cba285908b41fc1",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 300,
+            "height": 238
+          }
+        }
+      },
+      "sourceReference": "dealers/al-rand-used-cars/branding/generated-mark-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "8b0695f26751fb306c027dcca9995cabd5f0c5d03067516d9308a6cd69dab347",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-0c7b29d8-a721-4e0a-9396-b6108448ba94",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "0695719b978445b319145a89a7bd72b77aa2b19d3ebd739a2da162dd7abb04fd",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 300,
+            "height": 239
+          }
+        }
+      },
+      "sourceReference": "dealers/al-rand-used-cars/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "6e2fe5fab46bae50732248ecfb23204f71f5d24be3f227e08391dcb706463d99",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-9a99d018-c9b0-4e96-8b46-3862901fe916",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "edb41a80219c38d04f2e086014950569f86ad91cfb32919d8cba285908b41fc1",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 300,
+            "height": 238
+          }
+        }
+      },
+      "sourceReference": "dealers/al-rand-used-cars/branding/generated-mark-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "38bada0159a0566010b40e2059d67255be011f3c9e51b6936efada25c149cba8",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-9a99d018-c9b0-4e96-8b46-3862901fe916",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "edb41a80219c38d04f2e086014950569f86ad91cfb32919d8cba285908b41fc1",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 300,
+            "height": 238
+          }
+        }
+      },
+      "sourceReference": "dealers/al-rand-used-cars/branding/generated-mark-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "75f8bb102324a5a0109755e0b8446f31335ccad19a26fe853ad822838c74db99",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-0c7b29d8-a721-4e0a-9396-b6108448ba94",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "0695719b978445b319145a89a7bd72b77aa2b19d3ebd739a2da162dd7abb04fd",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 300,
+          "height": 239
+        }
+      }
+    }
+  }
+}

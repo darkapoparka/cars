@@ -1,0 +1,151 @@
+{
+  "schemaVersion": 1,
+  "dealer": "ali-used-cars",
+  "status": "reviewed-imagegen-proposal",
+  "realLogoFirst": true,
+  "publicSources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/ali-used-cars-llc-sp",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/3942-mercedes-benz-glc-20-at-4wd-258-hp-glc-300",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://auto.ae/ar/alicars/",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "originals": [],
+  "creationMethod": "imagegen-proposal",
+  "dealerApproved": false,
+  "generatedInputs": {
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "master": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "d783b207195610791d3637bbbde93709543eb9c055ea10242de2c9f3208391e4",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-3b5ef836-a8da-4893-aaab-ba8abd247362",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark-light.png",
+      "sha256": "e1a5a89024bcfeb588c213d4f4fa412cf641bbf7345d7116f1dc61b2063f30a4",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-3b5ef836-a8da-4893-aaab-ba8abd247362",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "d783b207195610791d3637bbbde93709543eb9c055ea10242de2c9f3208391e4",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 270,
+            "height": 282
+          }
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-dark.png",
+      "sha256": "ceec474e8a98964b8d3f311398fdc8a7afb44476012640792cad354473709326",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a8154622-3a22-4ced-8158-bf7e7ac36893",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "1ca0d9e3fe7b925ba61deca424d3e3fb5b52c13976474b28740112c0140a90b2",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 270,
+            "height": 283
+          }
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "d783b207195610791d3637bbbde93709543eb9c055ea10242de2c9f3208391e4",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-3b5ef836-a8da-4893-aaab-ba8abd247362",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "1ca0d9e3fe7b925ba61deca424d3e3fb5b52c13976474b28740112c0140a90b2",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-a8154622-3a22-4ced-8158-bf7e7ac36893",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "1ca0d9e3fe7b925ba61deca424d3e3fb5b52c13976474b28740112c0140a90b2",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-a8154622-3a22-4ced-8158-bf7e7ac36893",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewKind": "agent-visual-review",
+      "humanReview": false,
+      "dealerApproval": false,
+      "backgrounds": {
+        "onLight": "#ffffff",
+        "onDark": "#111113",
+        "onAccent": "#c40101"
+      },
+      "wordmarkWidths": [
+        220,
+        240
+      ],
+      "notes": "Exact reviewed Image Gen pair; native masters and generation provenance retained. Compact rasters cropped from the actual left symbol."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-22T23:42:46.338Z",
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#c40101"
+      ],
+      "widths": [
+        32,
+        48,
+        64
+      ],
+      "notes": "Left symbol cropped from reviewed horizontal variants; native rendering must independently qualify."
+    }
+  },
+  "sourceBlockers": [],
+  "artworkProvenance": {
+    "path": "branding/artwork-provenance.json",
+    "sha256": "09077792e95906814a38a33c8d29c34531de21e8959a999c564cdc8f84fd3af7",
+    "manifestSha256": "d25e9cee768a885052ac0a8df220d843c9b9c6f6f120d722705bead1cc99e694",
+    "nativeMasters": [
+      {
+        "path": "branding/native-generated-on-light.png",
+        "sha256": "ad09571a21fee12c2eb22bfc4c1ff09a1e6e28d92d71b6f4c62ebf73f39e7f38"
+      },
+      {
+        "path": "branding/native-generated-on-dark.png",
+        "sha256": "d88169c526c4cf2c1b001fbd4d097258a36465727c23d223c754ffbce4f190d4"
+      }
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 2,
+  "kind": "cars-dealer-pack-qualification",
+  "dealer": "nabel-al-esawi-used-cars",
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "sourceCommit": "5d052ea655714f3d0ca3656daa7dbff411e2f747",
+  "reviewed": true,
+  "reviewedAt": "2026-10-23T05:00:57.017Z",
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "globalReleaseApproval": false
+}

@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": true,
+  "reviewedAt": "2026-10-23T05:00:17.455Z",
+  "dealer": "ali-gad-ali-used-cars",
+  "dealerId": "ae-sharjah-ali-gad-ali-used-cars",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "method": "Automated exact registry/pack identity, canonical hosting and batch comparison; retained public source fields were structurally checked, not human-approved.",
+  "sources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/ali-gad-ali-used-cars",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/6778-hyundai-sonata-25-at-191-hp-other",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://auto.ae/ar/aligadali/",
+      "observedAt": "2026-10-18"
+    }
+  ]
+}

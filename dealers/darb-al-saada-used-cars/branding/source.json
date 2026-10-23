@@ -1,0 +1,147 @@
+{
+  "schemaVersion": 1,
+  "dealer": "darb-al-saada-used-cars",
+  "status": "reviewed-imagegen-proposal",
+  "realLogoFirst": true,
+  "publicSources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/darb-al-saada-used-cars",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/6793-nissan-patrol-56-at-4wd-405-hp-se",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "originals": [],
+  "creationMethod": "imagegen-proposal",
+  "dealerApproved": false,
+  "generatedInputs": {
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "master": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "5849597e9d3de1fad9aa36832d3d6d7bd1ee1c68868169748e55634f0a262990",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-2e37c247-1cd2-4489-9362-0d089052d653",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark-light.png",
+      "sha256": "3b8b3f6c0eabdedd2b78a90cc3fbae0272358b752c9d485f40dff659b6ac9929",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-2e37c247-1cd2-4489-9362-0d089052d653",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "5849597e9d3de1fad9aa36832d3d6d7bd1ee1c68868169748e55634f0a262990",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 290,
+            "height": 196
+          }
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-dark.png",
+      "sha256": "fd45e7fea152d62f577957d805b42f6dbc877f58d467649a24f75c89b8967c20",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-7cf9ea0c-5c2e-42af-b321-3bd1d73b4e61",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "67efbbb0203a56c6ff79e37567b4d4efc7d6637b87fd46064cceeecbca5fd3f6",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 290,
+            "height": 198
+          }
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "5849597e9d3de1fad9aa36832d3d6d7bd1ee1c68868169748e55634f0a262990",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-2e37c247-1cd2-4489-9362-0d089052d653",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "67efbbb0203a56c6ff79e37567b4d4efc7d6637b87fd46064cceeecbca5fd3f6",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-7cf9ea0c-5c2e-42af-b321-3bd1d73b4e61",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "67efbbb0203a56c6ff79e37567b4d4efc7d6637b87fd46064cceeecbca5fd3f6",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-7cf9ea0c-5c2e-42af-b321-3bd1d73b4e61",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewKind": "agent-visual-review",
+      "humanReview": false,
+      "dealerApproval": false,
+      "backgrounds": {
+        "onLight": "#ffffff",
+        "onDark": "#111113",
+        "onAccent": "#c40101"
+      },
+      "wordmarkWidths": [
+        220,
+        240
+      ],
+      "notes": "Exact reviewed Image Gen pair; native masters and generation provenance retained. Compact rasters cropped from the actual left symbol."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-22T23:42:46.338Z",
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#c40101"
+      ],
+      "widths": [
+        32,
+        48,
+        64
+      ],
+      "notes": "Left symbol cropped from reviewed horizontal variants; native rendering must independently qualify."
+    }
+  },
+  "sourceBlockers": [],
+  "artworkProvenance": {
+    "path": "branding/artwork-provenance.json",
+    "sha256": "c9331999bd436875cb9fa6f1720d114bdda1270e8495f31e316a715b6a07652e",
+    "manifestSha256": "d25e9cee768a885052ac0a8df220d843c9b9c6f6f120d722705bead1cc99e694",
+    "nativeMasters": [
+      {
+        "path": "branding/native-generated-on-light.png",
+        "sha256": "45f0ad99618cd539488a60bace706250d57efc982439d2bd4d10d89e84e56569"
+      },
+      {
+        "path": "branding/native-generated-on-dark.png",
+        "sha256": "22010b610c223666baaacb480b4d7ca840a8262cd61d957e7fa4e225c7cf21bb"
+      }
+    ]
+  }
+}

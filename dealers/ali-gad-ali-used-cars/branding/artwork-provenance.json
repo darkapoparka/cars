@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "ae-sharjah-ali-gad-ali-used-cars",
+  "slug": null,
+  "artworkDirectory": "ae-sharjah-ali-gad-ali-used-cars",
+  "name": "Ali Gad Ali Used Cars",
+  "renderedName": "Ali Gad Ali Used Cars",
+  "kind": "independent-website-logo-proposal",
+  "dealerApproved": false,
+  "ownerApproved": false,
+  "sourceEvidence": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/ali-gad-ali-used-cars",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/6778-hyundai-sonata-25-at-191-hp-other",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://auto.ae/ar/aligadali/",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "retainedOriginalsUnchanged": true,
+  "variants": {
+    "on-light": {
+      "path": "logo-on-light.png",
+      "sha256": "63941ecfacf65990556a0f9ae9ba971f140de567330748552ec4ffa1a982ada1",
+      "width": 1024,
+      "height": 238,
+      "transparentFraction": 0.6917262998949579,
+      "master": {
+        "path": "generated-on-light.png",
+        "sha256": "65205c2606db3e3e024cc00d6f70e6b1ad4b8f8da823e9de79ce00dfcc58d8a0",
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-6a54c198-8739-47c2-9454-780efbc92bdd",
+        "prompt": "Create one professional horizontal automotive dealership logo proposal for Ali Gad Ali Used Cars. Required exact text, uppercase: ALI GAD ALI USED CARS. Every word must be present and spelled precisely; use sensible primary name and smaller descriptor hierarchy without tiny lettering. Produce a polished original identity with a minimal memorable geometric symbol related to the distinctive name. Initials AG may inform the emblem. Emblem left, full clear name to the right, compact and balanced for a website header. Avoid overused shield and generic car silhouettes; no manufacturer badges. Clean modern lettering with careful kerning and strong legibility. All text is deep charcoal black, appropriate on a white/light header. One restrained red or gold accent may appear inside the emblem only; no pale text. Flat crisp edges, a small number of solid shapes, no chrome, no lighting, no shadow, no texture, no gradient. Genuine transparent alpha background, isolated logo with no background box, no grid, no checkerboard painted into pixels. No slogan, contact info, website, watermark, mockup, photograph, extra concept, or duplicate logo. Deliver exactly one horizontal full logo. This is an independent website identity proposal, not a claim of adopted branding.",
+        "reference": null
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 30,
+          "top": 112,
+          "width": 2142,
+          "height": 498
+        }
+      }
+    },
+    "on-dark": {
+      "path": "logo-on-dark.png",
+      "sha256": "4f6f793cc92a642f1a38458bfb85105e978856db4e2d2fe266ed703076e4ac4a",
+      "width": 1024,
+      "height": 237,
+      "transparentFraction": 0.5839678929324894,
+      "master": {
+        "path": "generated-on-dark.png",
+        "sha256": "03fee0790abb5c9c83855e60ff2daca6c9f039b8edce7ab7c3a063b54c7556db",
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-6fa294db-dbfe-4b2a-bd11-7a42349b133a",
+        "prompt": "Create the matching light-on-dark production variant of the exact supplied logo. Preserve precisely the same emblem, geometry, spelling, word count, typographic hierarchy, proportions, layout and spacing. Required exact text: ALI GAD ALI USED CARS. Change EVERY letter, including all secondary descriptor words and legal suffixes, to solid white so it is legible over a dark or red website header. Change the charcoal portions of the emblem to white. Retain the small red/gold emblem accent only if it contrasts clearly against a dark header. True transparent alpha background; do not paint a dark rectangle or checkerboard. Flat clean edges, no glows, shadows, bevels, textures, gradients, new artwork, new icon, extra text or mockup. Deliver one horizontal matching logo, fully legible.",
+        "reference": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-6a54c198-8739-47c2-9454-780efbc92bdd.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 19,
+          "top": 105,
+          "width": 2149,
+          "height": 498
+        }
+      }
+    }
+  },
+  "review": {
+    "status": "artwork-visually-reviewed",
+    "alpha": "all exports measured as genuine transparent nonempty PNGs",
+    "spelling": "English wordmark inspected; source-bound display aliases retained",
+    "compact": "Horizontal logos only. Interactive 32/48/64px gallery preview is provided; separate compact/favicon artwork remains part of dealer-pack preparation.",
+    "sixDesigns": "not-yet-integrated-or-rendered",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "reviewer": "Codex visual inspection",
+    "header": "All 196 paired PNGs inspected at 240x64 on white, #111113 and #c40101",
+    "evidence": "final-review-10.png"
+  },
+  "releaseReady": false,
+  "artworkHolds": [],
+  "artworkReadyForIntegration": true
+}

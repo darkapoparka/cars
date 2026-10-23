@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "dealer": "darb-al-saada-used-cars",
+  "reviewed": true,
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "919b5d21df8a60db153aaa0247b154a969bfe10585d63940c7e2b75846d2bd5a",
+      "sourceSha256": "5849597e9d3de1fad9aa36832d3d6d7bd1ee1c68868169748e55634f0a262990"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "89bbd2cdfc6d3bb5a7b3d518b0e50a2aebdfb9a8e0b821253c4bf0b7db2ccb18",
+      "sourceSha256": "67efbbb0203a56c6ff79e37567b4d4efc7d6637b87fd46064cceeecbca5fd3f6"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "89bbd2cdfc6d3bb5a7b3d518b0e50a2aebdfb9a8e0b821253c4bf0b7db2ccb18",
+      "sourceSha256": "67efbbb0203a56c6ff79e37567b4d4efc7d6637b87fd46064cceeecbca5fd3f6"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "5849597e9d3de1fad9aa36832d3d6d7bd1ee1c68868169748e55634f0a262990",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-2e37c247-1cd2-4489-9362-0d089052d653",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "bfef448e6c5bb72b16d3b46e3bb1d21294f148385766ef3e684642e09d4a8bb5",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-2e37c247-1cd2-4489-9362-0d089052d653",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "5849597e9d3de1fad9aa36832d3d6d7bd1ee1c68868169748e55634f0a262990",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 290,
+          "height": 196
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "398880a37910785cc831da3f576820f2edf569694e8b8867bf133be4a65571a0"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "5849597e9d3de1fad9aa36832d3d6d7bd1ee1c68868169748e55634f0a262990",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-2e37c247-1cd2-4489-9362-0d089052d653",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/darb-al-saada-used-cars/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "67efbbb0203a56c6ff79e37567b4d4efc7d6637b87fd46064cceeecbca5fd3f6",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-7cf9ea0c-5c2e-42af-b321-3bd1d73b4e61",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/darb-al-saada-used-cars/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "67efbbb0203a56c6ff79e37567b4d4efc7d6637b87fd46064cceeecbca5fd3f6",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-7cf9ea0c-5c2e-42af-b321-3bd1d73b4e61",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/darb-al-saada-used-cars/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "5849597e9d3de1fad9aa36832d3d6d7bd1ee1c68868169748e55634f0a262990",
+      "sha256": "5849597e9d3de1fad9aa36832d3d6d7bd1ee1c68868169748e55634f0a262990",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 196
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "67efbbb0203a56c6ff79e37567b4d4efc7d6637b87fd46064cceeecbca5fd3f6",
+      "sha256": "67efbbb0203a56c6ff79e37567b4d4efc7d6637b87fd46064cceeecbca5fd3f6",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 198
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "67efbbb0203a56c6ff79e37567b4d4efc7d6637b87fd46064cceeecbca5fd3f6",
+      "sha256": "67efbbb0203a56c6ff79e37567b4d4efc7d6637b87fd46064cceeecbca5fd3f6",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 198
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "c112b774479232c7a467b55dd821737b34b79b13152fc819147887c6577f2bd1",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-2e37c247-1cd2-4489-9362-0d089052d653",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "5849597e9d3de1fad9aa36832d3d6d7bd1ee1c68868169748e55634f0a262990",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 290,
+            "height": 196
+          }
+        }
+      },
+      "sourceReference": "dealers/darb-al-saada-used-cars/branding/generated-mark-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "691978568db84dcf5de5c6d0939c168e889ac4a85ef621d5400892a0cdebb065",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-7cf9ea0c-5c2e-42af-b321-3bd1d73b4e61",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "67efbbb0203a56c6ff79e37567b4d4efc7d6637b87fd46064cceeecbca5fd3f6",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 290,
+            "height": 198
+          }
+        }
+      },
+      "sourceReference": "dealers/darb-al-saada-used-cars/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "bfef448e6c5bb72b16d3b46e3bb1d21294f148385766ef3e684642e09d4a8bb5",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-2e37c247-1cd2-4489-9362-0d089052d653",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "5849597e9d3de1fad9aa36832d3d6d7bd1ee1c68868169748e55634f0a262990",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 290,
+            "height": 196
+          }
+        }
+      },
+      "sourceReference": "dealers/darb-al-saada-used-cars/branding/generated-mark-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "398880a37910785cc831da3f576820f2edf569694e8b8867bf133be4a65571a0",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-2e37c247-1cd2-4489-9362-0d089052d653",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "5849597e9d3de1fad9aa36832d3d6d7bd1ee1c68868169748e55634f0a262990",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 290,
+            "height": 196
+          }
+        }
+      },
+      "sourceReference": "dealers/darb-al-saada-used-cars/branding/generated-mark-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "e4b5504580ce32e583a0fc12381af9334a53e0ee86d3b0891429690bc39bcc19",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-7cf9ea0c-5c2e-42af-b321-3bd1d73b4e61",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "67efbbb0203a56c6ff79e37567b4d4efc7d6637b87fd46064cceeecbca5fd3f6",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 290,
+          "height": 198
+        }
+      }
+    }
+  }
+}

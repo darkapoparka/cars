@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "ae-sharjah-darb-al-saada-used-cars",
+  "slug": null,
+  "artworkDirectory": "ae-sharjah-darb-al-saada-used-cars",
+  "name": "Darb Al Saada Used Cars",
+  "renderedName": "Darb Al Saada Used Cars",
+  "kind": "independent-website-logo-proposal",
+  "dealerApproved": false,
+  "ownerApproved": false,
+  "sourceEvidence": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/darb-al-saada-used-cars",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/6793-nissan-patrol-56-at-4wd-405-hp-se",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "retainedOriginalsUnchanged": true,
+  "variants": {
+    "on-light": {
+      "path": "logo-on-light.png",
+      "sha256": "5849597e9d3de1fad9aa36832d3d6d7bd1ee1c68868169748e55634f0a262990",
+      "width": 1024,
+      "height": 196,
+      "transparentFraction": 0.6862244897959183,
+      "master": {
+        "path": "generated-on-light.png",
+        "sha256": "45f0ad99618cd539488a60bace706250d57efc982439d2bd4d10d89e84e56569",
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-2e37c247-1cd2-4489-9362-0d089052d653",
+        "prompt": "Create one professional horizontal automotive dealership logo proposal for Darb Al Saada Used Cars. Required exact text, uppercase: DARB AL SAADA USED CARS. Every word must be present and spelled precisely; use sensible primary name and smaller descriptor hierarchy without tiny lettering. Produce a polished original identity with a clever rounded negative-space monogram, with an open confident silhouette. Initials DS may inform the emblem. Emblem left, full clear name to the right, compact and balanced for a website header. Avoid overused shield and generic car silhouettes; no manufacturer badges. Clean modern lettering with careful kerning and strong legibility. All text is deep charcoal black, appropriate on a white/light header. One restrained red or gold accent may appear inside the emblem only; no pale text. Flat crisp edges, a small number of solid shapes, no chrome, no lighting, no shadow, no texture, no gradient. Genuine transparent alpha background, isolated logo with no background box, no grid, no checkerboard painted into pixels. No slogan, contact info, website, watermark, mockup, photograph, extra concept, or duplicate logo. Deliver exactly one horizontal full logo. This is an independent website identity proposal, not a claim of adopted branding.",
+        "reference": null
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 0,
+          "top": 159,
+          "width": 2172,
+          "height": 416
+        }
+      }
+    },
+    "on-dark": {
+      "path": "logo-on-dark.png",
+      "sha256": "67efbbb0203a56c6ff79e37567b4d4efc7d6637b87fd46064cceeecbca5fd3f6",
+      "width": 1024,
+      "height": 198,
+      "transparentFraction": 0.5670375631313131,
+      "master": {
+        "path": "generated-on-dark.png",
+        "sha256": "22010b610c223666baaacb480b4d7ca840a8262cd61d957e7fa4e225c7cf21bb",
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-7cf9ea0c-5c2e-42af-b321-3bd1d73b4e61",
+        "prompt": "Create the matching light-on-dark production variant of the exact supplied logo. Preserve precisely the same emblem, geometry, spelling, word count, typographic hierarchy, proportions, layout and spacing. Required exact text: DARB AL SAADA USED CARS. Change EVERY letter, including all secondary descriptor words and legal suffixes, to solid white so it is legible over a dark or red website header. Change the charcoal portions of the emblem to white. Retain the small red/gold emblem accent only if it contrasts clearly against a dark header. True transparent alpha background; do not paint a dark rectangle or checkerboard. Flat clean edges, no glows, shadows, bevels, textures, gradients, new artwork, new icon, extra text or mockup. Deliver one horizontal matching logo, fully legible.",
+        "reference": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-2e37c247-1cd2-4489-9362-0d089052d653.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 0,
+          "top": 156,
+          "width": 2172,
+          "height": 420
+        }
+      }
+    }
+  },
+  "review": {
+    "status": "artwork-visually-reviewed",
+    "alpha": "all exports measured as genuine transparent nonempty PNGs",
+    "spelling": "English wordmark inspected; source-bound display aliases retained",
+    "compact": "Horizontal logos only. Interactive 32/48/64px gallery preview is provided; separate compact/favicon artwork remains part of dealer-pack preparation.",
+    "sixDesigns": "not-yet-integrated-or-rendered",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "reviewer": "Codex visual inspection",
+    "header": "All 196 paired PNGs inspected at 240x64 on white, #111113 and #c40101",
+    "evidence": "final-review-11.png"
+  },
+  "releaseReady": false,
+  "artworkHolds": [],
+  "artworkReadyForIntegration": true
+}
