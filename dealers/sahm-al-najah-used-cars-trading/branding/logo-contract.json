@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "dealer": "sahm-al-najah-used-cars-trading",
+  "reviewed": true,
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "f73e6cf2362738ea342f92fb595dae7ff7effe44acbc63de87cdd3fe3277719c",
+      "sourceSha256": "59a62161f0d432e709b70915c005d3d31015972524c06e7b9481a17ed3521f11"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "1332c19ab34b3e2fc628ce16c35557329f5ad75c57bc515e7365a89684555579",
+      "sourceSha256": "e727ce9d700f363fbb72876d70bd96f9de2c67de3e820e4b14f085f69cd635bb"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "1332c19ab34b3e2fc628ce16c35557329f5ad75c57bc515e7365a89684555579",
+      "sourceSha256": "e727ce9d700f363fbb72876d70bd96f9de2c67de3e820e4b14f085f69cd635bb"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "59a62161f0d432e709b70915c005d3d31015972524c06e7b9481a17ed3521f11",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-5886fc94-3909-4b71-b943-004225d90e69",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "05241a7ea3436816ae5cc1b8ce33055fcb50982f021c167731524bfbffb623c1",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-5886fc94-3909-4b71-b943-004225d90e69",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "59a62161f0d432e709b70915c005d3d31015972524c06e7b9481a17ed3521f11",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 310,
+          "height": 203
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "830e861b900f7ce94575e1599abc100b7361f1f3c970962c00a63166acb3ab93"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "59a62161f0d432e709b70915c005d3d31015972524c06e7b9481a17ed3521f11",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-5886fc94-3909-4b71-b943-004225d90e69",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/sahm-al-najah-used-cars-trading/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "e727ce9d700f363fbb72876d70bd96f9de2c67de3e820e4b14f085f69cd635bb",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-86b6c62d-f88e-4bc0-85cd-3509eb6228ee",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/sahm-al-najah-used-cars-trading/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "e727ce9d700f363fbb72876d70bd96f9de2c67de3e820e4b14f085f69cd635bb",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-86b6c62d-f88e-4bc0-85cd-3509eb6228ee",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/sahm-al-najah-used-cars-trading/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "59a62161f0d432e709b70915c005d3d31015972524c06e7b9481a17ed3521f11",
+      "sha256": "59a62161f0d432e709b70915c005d3d31015972524c06e7b9481a17ed3521f11",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 203
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "e727ce9d700f363fbb72876d70bd96f9de2c67de3e820e4b14f085f69cd635bb",
+      "sha256": "e727ce9d700f363fbb72876d70bd96f9de2c67de3e820e4b14f085f69cd635bb",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 200
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "e727ce9d700f363fbb72876d70bd96f9de2c67de3e820e4b14f085f69cd635bb",
+      "sha256": "e727ce9d700f363fbb72876d70bd96f9de2c67de3e820e4b14f085f69cd635bb",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 200
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "449ea9a251898c77f79b4c3c764ed67746fad1b66b27f38a77bb3843a3c5879b",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-5886fc94-3909-4b71-b943-004225d90e69",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "59a62161f0d432e709b70915c005d3d31015972524c06e7b9481a17ed3521f11",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 310,
+            "height": 203
+          }
+        }
+      },
+      "sourceReference": "dealers/sahm-al-najah-used-cars-trading/branding/generated-mark-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "3f18244d6bc167cf981f30b3bc959f43b359247d5389ef77a672355c5d911a67",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-86b6c62d-f88e-4bc0-85cd-3509eb6228ee",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "e727ce9d700f363fbb72876d70bd96f9de2c67de3e820e4b14f085f69cd635bb",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 310,
+            "height": 200
+          }
+        }
+      },
+      "sourceReference": "dealers/sahm-al-najah-used-cars-trading/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "05241a7ea3436816ae5cc1b8ce33055fcb50982f021c167731524bfbffb623c1",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-5886fc94-3909-4b71-b943-004225d90e69",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "59a62161f0d432e709b70915c005d3d31015972524c06e7b9481a17ed3521f11",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 310,
+            "height": 203
+          }
+        }
+      },
+      "sourceReference": "dealers/sahm-al-najah-used-cars-trading/branding/generated-mark-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "830e861b900f7ce94575e1599abc100b7361f1f3c970962c00a63166acb3ab93",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-5886fc94-3909-4b71-b943-004225d90e69",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "59a62161f0d432e709b70915c005d3d31015972524c06e7b9481a17ed3521f11",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 310,
+            "height": 203
+          }
+        }
+      },
+      "sourceReference": "dealers/sahm-al-najah-used-cars-trading/branding/generated-mark-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "7ee7085f610e63b1bff3f925441791722e1f44077cdf290b798610484bdac298",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-86b6c62d-f88e-4bc0-85cd-3509eb6228ee",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "e727ce9d700f363fbb72876d70bd96f9de2c67de3e820e4b14f085f69cd635bb",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 310,
+          "height": 200
+        }
+      }
+    }
+  }
+}
